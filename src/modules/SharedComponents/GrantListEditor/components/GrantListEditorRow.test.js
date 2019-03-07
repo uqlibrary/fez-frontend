@@ -1,5 +1,4 @@
-import {GrantListEditorRow} from './GrantListEditorRow';
-import GrantListEditorRowWithStyles from './GrantListEditorRow';
+import {GrantListEditorRow, styles} from './GrantListEditorRow';
 
 function setup(testProps, isShallow = true){
     const props = {
@@ -72,11 +71,6 @@ describe('GrantListEditorRow', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should render default view with styles', () => {
-        const wrapper = getElement(GrantListEditorRowWithStyles, {});
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
     it('should set confirmation box ref', () => {
         const wrapper = setup({});
         wrapper.instance().handleConfirmationBoxRef('test');
@@ -115,5 +109,44 @@ describe('GrantListEditorRow', () => {
         const wrapper = setup({onMoveDown: onMoveDownFn});
         wrapper.find('WithStyles(IconButton)').get(1).props.onClick();
         expect(onMoveDownFn).toHaveBeenCalled();
+    });
+
+    it('should have a proper style generator', () => {
+        const theme = {
+            palette: {
+                accent: {
+                    light: 'test1'
+                }
+            },
+            typography: {
+                fontWeightMedium: 'test2',
+                body2: {
+                    fontSize: 'test3'
+                },
+                caption: {
+                    fontSize: 'test4'
+                }
+            }
+        };
+        expect(styles(theme)).toMatchSnapshot();
+
+        delete theme.palette.accent;
+        expect(styles(theme)).toMatchSnapshot();
+
+        delete theme.palette;
+        expect(styles(theme)).toMatchSnapshot();
+    });
+
+    it('should not call certain event handlers if row is disabled', () => {
+        const wrapper = setup({ disabled: true });
+
+        wrapper.instance()._deleteRecord();
+        expect(wrapper.instance().props.onDelete).not.toBeCalled();
+
+        wrapper.instance()._onMoveUp();
+        expect(wrapper.instance().props.onMoveUp).not.toBeCalled();
+
+        wrapper.instance()._onMoveDown();
+        expect(wrapper.instance().props.onMoveDown).not.toBeCalled();
     });
 });

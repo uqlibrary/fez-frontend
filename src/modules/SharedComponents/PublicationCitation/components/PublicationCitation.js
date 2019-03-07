@@ -39,7 +39,7 @@ import NewspaperArticleCitation from './citations/NewspaperArticleCitation';
 import DataCollectionCitation from './citations/DataCollectionCitation';
 import {UnpublishedBufferCitationView} from './citations/partials/UnpublishedBufferCitationView';
 
-const styles = theme => ({
+export const styles = theme => ({
     divider: {
         marginBottom: 12,
         marginTop: 12,
@@ -158,7 +158,8 @@ export class PublicationCitation extends PureComponent {
                     className: `publicationAction buttonOrder${index}`,
                     onClick: () => (this.props.showDefaultActions
                         ? this._handleDefaultActions(action.key)
-                        : action.handleAction(this.props.publication))
+                        : action.handleAction(this.props.publication)
+                    )
                 };
                 return (
                     <Grid item xs={12} sm="auto" key={`action_key_${index}`}>

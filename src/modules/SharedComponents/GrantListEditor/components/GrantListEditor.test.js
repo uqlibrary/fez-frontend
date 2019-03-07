@@ -1,6 +1,5 @@
 import React from 'react';
-import {GrantListEditor} from './GrantListEditor';
-import GrantListEditorWithStyles from './GrantListEditor';
+import {GrantListEditor, styles} from './GrantListEditor';
 import Immutable from 'immutable';
 
 function setup(testProps, isShallow = true){
@@ -24,9 +23,8 @@ describe('GrantListEditor', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should render default view with styles', () => {
-        const wrapper = getElement(GrantListEditorWithStyles, {}, true);
-        expect(toJson(wrapper)).toMatchSnapshot();
+    it('should have a proper style generator', () => {
+        expect(styles()).toMatchSnapshot();
     });
 
     it('should render with default given value', () => {

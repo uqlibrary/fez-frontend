@@ -1,5 +1,98 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`GrantListEditorRow should have a proper style generator 1`] = `
+Object {
+  "hideIcon": Object {
+    "display": "none",
+  },
+  "identifierName": Object {
+    "&:before": Object {
+      "content": "\\"UQ Id: \\"",
+    },
+    "fontSize": "test4",
+    "marginTop": 8,
+  },
+  "identifierSubtitle": Object {
+    "&:before": Object {
+      "content": "\\"UQ Username: \\"",
+    },
+    "fontSize": "test4",
+  },
+  "primary": Object {
+    "fontSize": "test3",
+  },
+  "rowSelected": Object {
+    "backgroundColor": "test1",
+  },
+  "selected": Object {
+    "color": "white !important",
+    "fontWeight": "test2",
+  },
+}
+`;
+
+exports[`GrantListEditorRow should have a proper style generator 2`] = `
+Object {
+  "hideIcon": Object {
+    "display": "none",
+  },
+  "identifierName": Object {
+    "&:before": Object {
+      "content": "\\"UQ Id: \\"",
+    },
+    "fontSize": "test4",
+    "marginTop": 8,
+  },
+  "identifierSubtitle": Object {
+    "&:before": Object {
+      "content": "\\"UQ Username: \\"",
+    },
+    "fontSize": "test4",
+  },
+  "primary": Object {
+    "fontSize": "test3",
+  },
+  "rowSelected": Object {
+    "backgroundColor": undefined,
+  },
+  "selected": Object {
+    "color": "white !important",
+    "fontWeight": "test2",
+  },
+}
+`;
+
+exports[`GrantListEditorRow should have a proper style generator 3`] = `
+Object {
+  "hideIcon": Object {
+    "display": "none",
+  },
+  "identifierName": Object {
+    "&:before": Object {
+      "content": "\\"UQ Id: \\"",
+    },
+    "fontSize": "test4",
+    "marginTop": 8,
+  },
+  "identifierSubtitle": Object {
+    "&:before": Object {
+      "content": "\\"UQ Username: \\"",
+    },
+    "fontSize": "test4",
+  },
+  "primary": Object {
+    "fontSize": "test3",
+  },
+  "rowSelected": Object {
+    "backgroundColor": undefined,
+  },
+  "selected": Object {
+    "color": "white !important",
+    "fontWeight": "test2",
+  },
+}
+`;
+
 exports[`GrantListEditorRow should render default mobile view 1`] = `
 <Fragment>
   <ConfirmDialogBox
@@ -558,21 +651,6 @@ exports[`GrantListEditorRow should render default view 1`] = `
     </WithStyles(Grid)>
   </WithStyles(ListItem)>
 </Fragment>
-`;
-
-exports[`GrantListEditorRow should render default view with styles 1`] = `
-<WithTheme(WithWidth(GrantListEditorRow))
-  classes={
-    Object {
-      "hideIcon": "WithTheme-WithWidth-GrantListEditorRow---hideIcon-3",
-      "identifierName": "WithTheme-WithWidth-GrantListEditorRow---identifierName-5",
-      "identifierSubtitle": "WithTheme-WithWidth-GrantListEditorRow---identifierSubtitle-6",
-      "primary": "WithTheme-WithWidth-GrantListEditorRow---primary-4",
-      "rowSelected": "WithTheme-WithWidth-GrantListEditorRow---rowSelected-1",
-      "selected": "WithTheme-WithWidth-GrantListEditorRow---selected-2",
-    }
-  }
-/>
 `;
 
 exports[`GrantListEditorRow should render given grant data 1`] = `

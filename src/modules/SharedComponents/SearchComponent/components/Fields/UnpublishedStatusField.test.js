@@ -1,4 +1,4 @@
-import UnpublishedStatusField from './UnpublishedStatusField';
+import UnpublishedStatusField, { mapStateToProps } from './UnpublishedStatusField';
 
 function setup(testProps, isShallow = false) {
     const props = {
@@ -39,5 +39,14 @@ describe('UnpublishedStatusField component', () => {
             errorText: 'This field is required'
         });
         expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should have working helper which sets errorText state', () => {
+        const props = {
+            error: true,
+            errorText: 'test1'
+        };
+        const state = {};
+        expect(mapStateToProps(state, props)).toMatchSnapshot();
     });
 });

@@ -124,30 +124,6 @@ exports[`AuthorItem renders  should be linked and disabled 1`] = `
 </WithStyles(Grid)>
 `;
 
-exports[`AuthorItem renders  should be rendered with styles 1`] = `
-<AuthorItem
-  author={
-    Object {
-      "rek_author": "Test user",
-    }
-  }
-  classes={
-    Object {
-      "authorLinkIcon": "AuthorItem-authorLinkIcon-1 authorLinkIcon",
-      "authorOrder": "AuthorItem-authorOrder-3 authorOrder",
-      "buttonBase": "AuthorItem-buttonBase-2 buttonBase",
-    }
-  }
-  index={0}
-  locale={
-    Object {
-      "suffix": " listed [type]",
-    }
-  }
-  type="author"
-/>
-`;
-
 exports[`AuthorItem renders  should be selected 1`] = `
 <WithStyles(Grid)
   item={true}
@@ -270,4 +246,19 @@ exports[`AuthorItem renders  should be unselected and able to select author 1`] 
     </WithStyles(Grid)>
   </WithStyles(Grid)>
 </WithStyles(Grid)>
+`;
+
+exports[`AuthorItem renders  should have a proper style generator 1`] = `
+Object {
+  "authorLinkIcon": Object {
+    "marginRight": 10,
+  },
+  "authorOrder": Object {
+    "marginBottom": 20,
+    "marginLeft": 60,
+  },
+  "buttonBase": Object {
+    "justifyContent": "flex-start",
+  },
+}
 `;

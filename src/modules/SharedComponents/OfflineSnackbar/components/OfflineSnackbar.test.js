@@ -1,5 +1,4 @@
-import {OfflineSnackbar} from './OfflineSnackbar';
-import OfflineSnackbarWithStyles from './OfflineSnackbar';
+import {OfflineSnackbar, styles} from './OfflineSnackbar';
 
 function setup(testProps, isShallow = true) {
     const props = {
@@ -90,8 +89,24 @@ describe('Component OfflineSnackbar', () => {
         expect(componentWillUnmount).toHaveBeenCalled();
     });
 
-    it('should render with style', () => {
-        const wrapper = getElement(OfflineSnackbarWithStyles, {});
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
+    it('should have a proper style generator', () => {
+        const theme = {
+            palette: {
+                success: {
+                    light: 'test1'
+                },
+                error: {
+                    light: 'test2'
+                }
+            }
+        };
+        expect(styles(theme)).toMatchSnapshot();
+
+        delete theme.palette.success;
+        delete theme.palette.error;
+        expect(styles(theme)).toMatchSnapshot();
+
+        delete theme.palette;
+        expect(styles(theme)).toMatchSnapshot();
+    })
 });

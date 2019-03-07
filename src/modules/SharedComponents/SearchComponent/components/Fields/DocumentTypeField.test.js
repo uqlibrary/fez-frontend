@@ -1,6 +1,4 @@
-import DocumentTypeFieldWithStyles from './DocumentTypeField';
-import {DocumentTypeField} from './DocumentTypeField';
-import moment from 'moment';
+import {DocumentTypeField, styles} from './DocumentTypeField';
 
 function setup(testProps, isShallow = true) {
     const props = {
@@ -16,12 +14,6 @@ function setup(testProps, isShallow = true) {
 };
 
 describe('DocumentTypeField component', () => {
-    it('should render default view with styles', () => {
-        const wrapper = getElement(DocumentTypeFieldWithStyles, {onChange: jest.fn()});
-
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
     it('should render default view', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -47,8 +39,38 @@ describe('DocumentTypeField component', () => {
         const wrapper = setup({
             updateDocTypeValues: updateDocTypeValuesFn
         });
-
         wrapper.find('WithStyles(Select)').props().onChange({target: {value: 316}});
         expect(updateDocTypeValuesFn).toHaveBeenCalledWith(316);
+    });
+
+    it('should have a proper style generator', () => {
+        const theme = {
+            typography: {
+                caption: 'test1'
+            },
+            palette: {
+                accent: {
+                    main: 'test2'
+                },
+                white: {
+                    main: 'test3'
+                }
+            }
+        };
+        expect(styles(theme)).toMatchSnapshot();
+
+        delete theme.palette.accent;
+        delete theme.palette.white;
+        expect(styles(theme)).toMatchSnapshot();
+
+        delete theme.palette;
+        expect(styles(theme)).toMatchSnapshot();
+    });
+
+    it('should have the value "0" if docTypes property is empty', () => {
+        const wrapper = setup({
+            docTypes: null
+        });
+        expect(wrapper.find('WithStyles(Select)').prop('value')).toBe('0');
     });
 });
