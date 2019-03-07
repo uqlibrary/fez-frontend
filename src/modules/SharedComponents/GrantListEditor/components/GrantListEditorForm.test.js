@@ -1,4 +1,3 @@
-import React from 'react';
 import {GrantListEditorFormClass} from './GrantListEditorForm';
 import GrantListEditorForm from './GrantListEditorForm';
 

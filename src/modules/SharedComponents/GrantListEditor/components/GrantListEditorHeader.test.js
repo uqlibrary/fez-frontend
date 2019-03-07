@@ -1,5 +1,4 @@
-import {GrantListEditorHeader} from './GrantListEditorHeader';
-import GrantListEditorHeaderWithStyles from './GrantListEditorHeader';
+import {GrantListEditorHeader, styles} from './GrantListEditorHeader';
 
 function setup(testProps, isShallow = true){
     const props = {
@@ -30,9 +29,8 @@ describe('GrantListEditorHeader', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should render default view with styles', () => {
-        const wrapper = getElement(GrantListEditorHeaderWithStyles, {});
-        expect(toJson(wrapper)).toMatchSnapshot();
+    it('should have a proper style generator', () => {
+        expect(styles()).toMatchSnapshot();
     });
 
     it('should set confirmation box ref', () => {

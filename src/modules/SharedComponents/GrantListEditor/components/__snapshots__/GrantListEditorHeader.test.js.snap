@@ -1,5 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`GrantListEditorHeader should have a proper style generator 1`] = `
+Object {
+  "header": Object {
+    "borderBottom": "1px solid rgba(0, 0, 0, 0.2)",
+    "marginTop": 8,
+    "padding": 0,
+    "paddingBottom": 6,
+  },
+  "paddingRight14": Object {
+    "paddingRight": 14,
+  },
+  "paddingRight24": Object {
+    "paddingRight": 24,
+  },
+  "paddingRight36": Object {
+    "paddingRight": 36,
+  },
+  "right": Object {
+    "textAlign": "right",
+  },
+}
+`;
+
 exports[`GrantListEditorHeader should hide grant agency type input 1`] = `
 <Fragment>
   <ConfirmDialogBox
@@ -527,20 +550,6 @@ exports[`GrantListEditorHeader should render default view 1`] = `
     </WithStyles(Grid)>
   </WithStyles(ListItem)>
 </Fragment>
-`;
-
-exports[`GrantListEditorHeader should render default view with styles 1`] = `
-<WithTheme(WithWidth(GrantListEditorHeader))
-  classes={
-    Object {
-      "header": "WithTheme-WithWidth-GrantListEditorHeader---header-2",
-      "paddingRight14": "WithTheme-WithWidth-GrantListEditorHeader---paddingRight14-5",
-      "paddingRight24": "WithTheme-WithWidth-GrantListEditorHeader---paddingRight24-3",
-      "paddingRight36": "WithTheme-WithWidth-GrantListEditorHeader---paddingRight36-4",
-      "right": "WithTheme-WithWidth-GrantListEditorHeader---right-1",
-    }
-  }
-/>
 `;
 
 exports[`GrantListEditorHeader should show confirmation box 1`] = `

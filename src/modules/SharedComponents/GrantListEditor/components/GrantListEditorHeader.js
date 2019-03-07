@@ -107,7 +107,7 @@ export class GrantListEditorHeader extends PureComponent {
     }
 }
 
-const styles = () => ({
+export const styles = () => ({
     right: {
         textAlign: 'right'
     },

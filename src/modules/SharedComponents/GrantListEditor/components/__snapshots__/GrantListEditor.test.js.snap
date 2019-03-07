@@ -297,6 +297,19 @@ exports[`GrantListEditor should delete grant 2`] = `
 </div>
 `;
 
+exports[`GrantListEditor should have a proper style generator 1`] = `
+Object {
+  "list": Object {
+    "maxHeight": 200,
+    "overflow": "hidden",
+    "width": "100%",
+  },
+  "scroll": Object {
+    "overflowY": "scroll",
+  },
+}
+`;
+
 exports[`GrantListEditor should move the grant down 1`] = `
 <div>
   <GrantListEditorForm
@@ -786,18 +799,6 @@ exports[`GrantListEditor should render default view 1`] = `
     required={true}
   />
 </div>
-`;
-
-exports[`GrantListEditor should render default view with styles 1`] = `
-<GrantListEditor
-  classes={
-    Object {
-      "list": "GrantListEditor-list-1",
-      "scroll": "GrantListEditor-scroll-2",
-    }
-  }
-  hideType={false}
-/>
 `;
 
 exports[`GrantListEditor should render error from props 1`] = `

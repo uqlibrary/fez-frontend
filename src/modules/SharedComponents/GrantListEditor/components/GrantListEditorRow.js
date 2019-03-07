@@ -16,7 +16,7 @@ import {ConfirmDialogBox} from 'modules/SharedComponents/Toolbox/ConfirmDialogBo
 import Hidden from '@material-ui/core/Hidden';
 import {ORG_TYPES_LOOKUP} from 'config/general';
 
-const styles = (theme) => ({
+export const styles = (theme) => ({
     rowSelected: {
         backgroundColor: ((theme.palette || {}).accent || {}).light
     },
@@ -86,15 +86,21 @@ export class GrantListEditorRow extends PureComponent {
     };
 
     _deleteRecord = () => {
-        if (!this.props.disabled && this.props.onDelete) this.props.onDelete(this.props.grant, this.props.index);
+        if (!this.props.disabled && this.props.onDelete) {
+            this.props.onDelete(this.props.grant, this.props.index);
+        }
     };
 
     _onMoveUp = () => {
-        if (!this.props.disabled && this.props.onMoveUp) this.props.onMoveUp(this.props.grant, this.props.index);
+        if (!this.props.disabled && this.props.onMoveUp) {
+            this.props.onMoveUp(this.props.grant, this.props.index);
+        }
     };
 
     _onMoveDown = () => {
-        if (!this.props.disabled && this.props.onMoveDown) this.props.onMoveDown(this.props.grant, this.props.index);
+        if (!this.props.disabled && this.props.onMoveDown) {
+            this.props.onMoveDown(this.props.grant, this.props.index);
+        }
     };
 
     getListItemTypoGraphy = (primaryText, secondaryText, primaryClass, secondaryClass) => (
