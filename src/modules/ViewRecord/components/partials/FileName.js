@@ -38,7 +38,7 @@ export class FileName extends PureComponent {
     }
 
     canShowPreview = (mimeType) => {
-        return this.isImage(mimeType);
+        return this.isImage(mimeType) || this.isVideo(mimeType);
         // TODO revert once videos are transcoded to open format #158519502
         // return (this.isImage(mimeType) || this.isVideo(mimeType));
     }

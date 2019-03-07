@@ -5,6 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Hidden from '@material-ui/core/Hidden';
 import Button from '@material-ui/core/Button';
+import ReactJWPlayer from 'react-jw-player';
 
 export default class MediaPreview extends PureComponent {
     static propTypes = {
@@ -57,7 +58,7 @@ export default class MediaPreview extends PureComponent {
 
     render()  {
         const {mediaUrl, previewMediaUrl, mimeType} = this.props;
-        const {videoTitle, imageTitle, browserNotSupportVideoTagMsg} = locale.viewRecord.sections.files.preview;
+        const {videoTitle, imageTitle} = locale.viewRecord.sections.files.preview;
         const isVideo = mimeType.indexOf('video') >= 0;
         const isImage = mimeType.indexOf('image') >= 0;
         const title = isVideo ? videoTitle : imageTitle;
@@ -78,10 +79,12 @@ export default class MediaPreview extends PureComponent {
                     <div style={{padding: 16, margin: 16}} ref={this.mediaPreviewRef}>
                         {
                             isVideo &&
-                            <video controls>
-                                <source src={previewMediaUrl} type={mimeType} />
-                                {browserNotSupportVideoTagMsg}
-                            </video>
+                            <ReactJWPlayer
+                                playerId="previewVideo"
+                                playerScript="https://cdn.jwplayer.com/libraries/VrkpYhtx.js"
+                                file={previewMediaUrl}
+                                isAutoPlay
+                            />
                         }
                         {
                             isImage &&

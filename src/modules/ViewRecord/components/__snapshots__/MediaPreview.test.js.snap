@@ -1842,9 +1842,8 @@ exports[`Media Preview Component  should call open new window on touch tap 1`] =
                             >
                               <Component
                                 close="Close"
-                                errorMessage="Your browser does not support the video tag."
                                 imageTitle="Image preview"
-                                openInNewWindow="Open file in a new window"
+                                openInNewWindow="Open/Download file in a new window"
                                 videoTitle="Video preview"
                               >
                                 <div
@@ -2204,7 +2203,7 @@ exports[`Media Preview Component  should call open new window on touch tap 1`] =
                                                         <span
                                                           className="MuiButton-label-134"
                                                         >
-                                                          Open file in a new window
+                                                          Open/Download file in a new window
                                                         </span>
                                                         <WithStyles(TouchRipple)
                                                           center={false}
@@ -3051,9 +3050,8 @@ exports[`Media Preview Component  should render component 1`] = `
       >
         <Component
           close="Close"
-          errorMessage="Your browser does not support the video tag."
           imageTitle="Image preview"
-          openInNewWindow="Open file in a new window"
+          openInNewWindow="Open/Download file in a new window"
           videoTitle="Video preview"
         />
       </WithStyles(Grid)>
@@ -3074,9 +3072,8 @@ exports[`Media Preview Component  should render component 1`] = `
   >
     <Component
       close="Close"
-      errorMessage="Your browser does not support the video tag."
       imageTitle="Image preview"
-      openInNewWindow="Open file in a new window"
+      openInNewWindow="Open/Download file in a new window"
       videoTitle="Video preview"
     />
   </Hidden>
@@ -4925,9 +4922,8 @@ exports[`Media Preview Component  should render component with image 1`] = `
                             >
                               <Component
                                 close="Close"
-                                errorMessage="Your browser does not support the video tag."
                                 imageTitle="Image preview"
-                                openInNewWindow="Open file in a new window"
+                                openInNewWindow="Open/Download file in a new window"
                                 videoTitle="Video preview"
                               >
                                 <div
@@ -5287,7 +5283,7 @@ exports[`Media Preview Component  should render component with image 1`] = `
                                                         <span
                                                           className="MuiButton-label-134"
                                                         >
-                                                          Open file in a new window
+                                                          Open/Download file in a new window
                                                         </span>
                                                         <WithStyles(TouchRipple)
                                                           center={false}
@@ -8465,9 +8461,8 @@ exports[`Media Preview Component  should render component with video 1`] = `
                             >
                               <Component
                                 close="Close"
-                                errorMessage="Your browser does not support the video tag."
                                 imageTitle="Image preview"
-                                openInNewWindow="Open file in a new window"
+                                openInNewWindow="Open/Download file in a new window"
                                 videoTitle="Video preview"
                               >
                                 <div
@@ -8827,7 +8822,7 @@ exports[`Media Preview Component  should render component with video 1`] = `
                                                         <span
                                                           className="MuiButton-label-134"
                                                         >
-                                                          Open file in a new window
+                                                          Open/Download file in a new window
                                                         </span>
                                                         <WithStyles(TouchRipple)
                                                           center={false}
@@ -9158,14 +9153,49 @@ exports[`Media Preview Component  should render component with video 1`] = `
               }
             }
           >
-            <video
-              controls={true}
+            <ReactJWPlayer
+              aspectRatio="inherit"
+              file="https://test.com/preview_test.jpg"
+              isAutoPlay={true}
+              onAdComplete={[Function]}
+              onAdPause={[Function]}
+              onAdPlay={[Function]}
+              onAdResume={[Function]}
+              onAdSkipped={[Function]}
+              onAutoStart={[Function]}
+              onBuffer={[Function]}
+              onBufferChange={[Function]}
+              onClose={[Function]}
+              onEnterFullScreen={[Function]}
+              onError={[Function]}
+              onExitFullScreen={[Function]}
+              onFiftyPercent={[Function]}
+              onMute={[Function]}
+              onNinetyFivePercent={[Function]}
+              onOneHundredPercent={[Function]}
+              onPause={[Function]}
+              onPlay={[Function]}
+              onReady={[Function]}
+              onResume={[Function]}
+              onSeventyFivePercent={[Function]}
+              onTenSeconds={[Function]}
+              onThirtySeconds={[Function]}
+              onThreeSeconds={[Function]}
+              onTime={[Function]}
+              onTwentyFivePercent={[Function]}
+              onUnmute={[Function]}
+              onVideoLoad={[Function]}
+              playerId="previewVideo"
+              playerScript="https://cdn.jwplayer.com/libraries/VrkpYhtx.js"
+              playlist=""
+              useMultiplePlayerScripts={false}
             >
-              <source
-                src="https://test.com/preview_test.jpg"
-                type="video/mp4"
-              />
-            </video>
+              <div>
+                <div
+                  id="previewVideo"
+                />
+              </div>
+            </ReactJWPlayer>
           </div>
           <Hidden
             implementation="js"
