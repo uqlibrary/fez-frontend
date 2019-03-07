@@ -74,13 +74,14 @@ export default class MediaPreview extends PureComponent {
                 </Grid>
                 {
                     (isVideo || isImage) &&
-                    <div style={{padding: 16, margin: 16}} ref={this.mediaPreviewRef}>
+                    <div style={{padding: 0, margin: 16}} ref={this.mediaPreviewRef}>
                         {
                             isVideo &&
                             <ReactJWPlayer
                                 playerId="previewVideo"
                                 playerScript="https://cdn.jwplayer.com/libraries/VrkpYhtx.js"
                                 file={previewMediaUrl}
+                                onVideoLoad={this.scrollToPreview()}
                                 isAutoPlay
                             />
                         }

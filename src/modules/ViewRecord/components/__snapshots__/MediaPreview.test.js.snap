@@ -5610,7 +5610,7 @@ exports[`Media Preview Component  should render component with image 1`] = `
             style={
               Object {
                 "margin": 16,
-                "padding": 16,
+                "padding": 0,
               }
             }
           >
@@ -9148,7 +9148,7 @@ exports[`Media Preview Component  should render component with video 1`] = `
             style={
               Object {
                 "margin": 16,
-                "padding": 16,
+                "padding": 0,
               }
             }
           >
