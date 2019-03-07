@@ -65,12 +65,32 @@ export class FileUploadDropzone extends PureComponent {
      * @returns Object
      */
     removeDuplicate = (incomingFiles, filesInQueue) => {
+        // Ignore files from incomingFiles which have same name with different extension
+        const uniqueIncomingFiles = incomingFiles.reduce((unique, file) => {
+            const fileNameWithoutExt = file.name.slice(0, file.name.indexOf('.'));
+            unique.fileNames.indexOf(fileNameWithoutExt) === -1
+                ? (unique.fileNames.push(fileNameWithoutExt) && unique.files.push(file))
+                : unique.filesWithSameNameDifferentExt.push(file.name);
+            return unique;
+        }, {fileNames: [], files: [], filesWithSameNameDifferentExt: []});
+
         // Ignore files from incomingFiles which are already in files queue
-        const uniqueFiles = incomingFiles.filter(file => filesInQueue.indexOf(file.name) === -1);
-        const duplicateFiles = incomingFiles.filter(file => filesInQueue.indexOf(file.name) >= 0).map(file => file.name);
+        const uniqueFiles = uniqueIncomingFiles.files.filter(file => filesInQueue.indexOf(file.name) === -1);
+        const duplicateFiles = uniqueIncomingFiles.files.filter(file => filesInQueue.indexOf(file.name) >= 0).map(file => file.name);
+        const filesWithSameNameDifferentExt = uniqueIncomingFiles.files
+            .filter(file =>
+                filesInQueue.indexOf(file.name) === -1 &&
+                filesInQueue
+                    .map(filename => filename.slice(0, filename.indexOf('.')))
+                    .indexOf(file.name.slice(0, file.name.indexOf('.'))) >= 0
+            ).map(file => file.name);
 
         // Return unique files and errors with duplicate file names
-        return {uniqueFiles: uniqueFiles, duplicateFiles: duplicateFiles};
+        return {
+            uniqueFiles: uniqueFiles,
+            duplicateFiles: duplicateFiles,
+            sameFileNameWithDifferentExt: [...uniqueIncomingFiles.filesWithSameNameDifferentExt, ...filesWithSameNameDifferentExt]
+        };
     };
 
     /**
@@ -139,7 +159,7 @@ export class FileUploadDropzone extends PureComponent {
                 const {validFiles, invalidFileNames} = this.removeInvalidFileNames(onlyFiles, fileNameRestrictions);
 
                 // Remove duplicate files from accepted files
-                const {uniqueFiles, duplicateFiles} = this.removeDuplicate(validFiles, filesInQueue);
+                const {uniqueFiles, duplicateFiles, sameFileNameWithDifferentExt} = this.removeDuplicate(validFiles, filesInQueue);
 
                 // Remove files exceeding the max number of files allowed
                 const {limitedFiles, tooManyFiles} = this.removeTooManyFiles(uniqueFiles, fileUploadLimit - filesInQueue.length);
@@ -151,7 +171,8 @@ export class FileUploadDropzone extends PureComponent {
                         notFiles: notFiles,
                         invalidFileNames: invalidFileNames,
                         duplicateFiles: duplicateFiles,
-                        tooManyFiles: tooManyFiles
+                        tooManyFiles: tooManyFiles,
+                        sameFileNameWithDifferentExt: sameFileNameWithDifferentExt
                     }
                 );
             });
