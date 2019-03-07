@@ -1062,11 +1062,11 @@ export default {
         ntroFields: {
             metadata: {
                 help: {
-                    title: 'Non-traditional research output metadata',
+                    title: 'Non-traditional research output data',
                     text: (
                         <React.Fragment>
                             <h3>Quality indicators</h3>
-                            <p>For more information about each quality indicator option, click <a target="_blank" href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836609">here</a></p>
+                            <p>For more information about each quality indicator option, click <b><a style={{fontWeight: 700}} target="_blank" href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836609">here</a></b></p>
                         </React.Fragment>
                     ),
                     buttonLabel: 'OK'
