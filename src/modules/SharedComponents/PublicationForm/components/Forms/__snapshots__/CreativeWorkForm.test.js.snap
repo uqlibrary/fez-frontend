@@ -568,16 +568,46 @@ exports[`CreativeWorkForm renders  should show exhibition content correctly 1`] 
         "contributionStatement": Object {
           "fields": Object {
             "impactStatement": Object {
-              "description": "Remember to enter your statement in three sections: Background, Contribution, Significance",
-              "label": "Creator contribution statement *",
+              "description": <span
+                style={
+                  Object {
+                    "fontWeight": 700,
+                  }
+                }
+              >
+                 - Remember to enter your statement in three sections: Background, Contribution, Significance
+              </span>,
+              "label": <span>
+                Creator research statement* 
+                <span
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                >
+                  (not for public view)
+                </span>
+              </span>,
               "placeholder": "Enter a personal statement (2000 characters or less) that describes the background, contribution and significance of the work for you.",
             },
             "scaleOfWork": Object {
-              "description": "Select the option that desribes the significance of the work for you.",
-              "label": "Scale/Significance of work",
+              "description": "Select the option that best describes the significance of the work.",
+              "label": <span>
+                Scale/Significance of work* 
+                <span
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                >
+                  (not for public view)
+                </span>
+              </span>,
             },
           },
-          "title": "Author/Creator contribution statement (not for public view)",
+          "title": "Author/Creator research statement",
         },
         "grantEditor": Object {
           "title": "Grant details",
@@ -585,8 +615,27 @@ exports[`CreativeWorkForm renders  should show exhibition content correctly 1`] 
         "metadata": Object {
           "fields": Object {
             "abstract": Object {
-              "description": "Remember that this description is for public view",
-              "label": "Abstract/Description (for public view) *",
+              "description": <span
+                style={
+                  Object {
+                    "fontWeight": 700,
+                  }
+                }
+              >
+                 - Remember that this description is for public view
+              </span>,
+              "label": <span>
+                Abstract/Description* 
+                <span
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                >
+                  (for public view)
+                </span>
+              </span>,
               "placeholder": "Enter a brief description (800 characters or less, approximately 100 words) of the work",
             },
             "audienceSize": Object {
@@ -626,7 +675,7 @@ exports[`CreativeWorkForm renders  should show exhibition content correctly 1`] 
               "label": "Volume",
             },
           },
-          "title": "Non-traditional research output metadata",
+          "title": "Non-traditional research output data",
         },
       }
     }

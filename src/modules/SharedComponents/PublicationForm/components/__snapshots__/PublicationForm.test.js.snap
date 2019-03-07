@@ -26,11 +26,16 @@ exports[`Component PublicationForm Shows an alert 1`] = `
       <StandardCard
         help={
           Object {
-            "buttonLabel": "OK",
+            "buttonLabel": "CLOSE",
             "text": <p>
               For more information about each type, click 
               <a
                 href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-tradtional-research-ouptuts"
+                style={
+                  Object {
+                    "fontWeight": 700,
+                  }
+                }
                 target="_blank"
               >
                 here
@@ -447,11 +452,16 @@ exports[`Component PublicationForm Shows an alert 2`] = `
       <StandardCard
         help={
           Object {
-            "buttonLabel": "OK",
+            "buttonLabel": "CLOSE",
             "text": <p>
               For more information about each type, click 
               <a
                 href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-tradtional-research-ouptuts"
+                style={
+                  Object {
+                    "fontWeight": 700,
+                  }
+                }
                 target="_blank"
               >
                 here
@@ -908,11 +918,16 @@ exports[`Component PublicationForm Shows an alert 3`] = `
       <StandardCard
         help={
           Object {
-            "buttonLabel": "OK",
+            "buttonLabel": "CLOSE",
             "text": <p>
               For more information about each type, click 
               <a
                 href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-tradtional-research-ouptuts"
+                style={
+                  Object {
+                    "fontWeight": 700,
+                  }
+                }
                 target="_blank"
               >
                 here
@@ -1369,11 +1384,16 @@ exports[`Component PublicationForm should call componentWillReceiveProps when pr
       <StandardCard
         help={
           Object {
-            "buttonLabel": "OK",
+            "buttonLabel": "CLOSE",
             "text": <p>
               For more information about each type, click 
               <a
                 href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-tradtional-research-ouptuts"
+                style={
+                  Object {
+                    "fontWeight": 700,
+                  }
+                }
                 target="_blank"
               >
                 here
@@ -1790,11 +1810,16 @@ exports[`Component PublicationForm should call componentWillReceiveProps when pr
       <StandardCard
         help={
           Object {
-            "buttonLabel": "OK",
+            "buttonLabel": "CLOSE",
             "text": <p>
               For more information about each type, click 
               <a
                 href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-tradtional-research-ouptuts"
+                style={
+                  Object {
+                    "fontWeight": 700,
+                  }
+                }
                 target="_blank"
               >
                 here
@@ -2224,11 +2249,16 @@ exports[`Component PublicationForm should call componentWillReceiveProps when pr
       <StandardCard
         help={
           Object {
-            "buttonLabel": "OK",
+            "buttonLabel": "CLOSE",
             "text": <p>
               For more information about each type, click 
               <a
                 href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-tradtional-research-ouptuts"
+                style={
+                  Object {
+                    "fontWeight": 700,
+                  }
+                }
                 target="_blank"
               >
                 here
@@ -2671,11 +2701,16 @@ exports[`Component PublicationForm should call componentWillReceiveProps when pr
       <StandardCard
         help={
           Object {
-            "buttonLabel": "OK",
+            "buttonLabel": "CLOSE",
             "text": <p>
               For more information about each type, click 
               <a
                 href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-tradtional-research-ouptuts"
+                style={
+                  Object {
+                    "fontWeight": 700,
+                  }
+                }
                 target="_blank"
               >
                 here

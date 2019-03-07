@@ -2095,7 +2095,7 @@ exports[`RichEditor tests  should render error as one child 1`] = `
                    characters of 
                   10
                    
-                   - test instructions
+                  test instructions
                 </span>
               </Typography>
             </WithStyles(Typography)>
@@ -3695,7 +3695,7 @@ exports[`RichEditor tests  should render error as react children 1`] = `
                    characters of 
                   10
                    
-                   - test instructions
+                  test instructions
                 </span>
               </Typography>
             </WithStyles(Typography)>
@@ -5281,7 +5281,7 @@ exports[`RichEditor tests  should render error showing input length 1`] = `
                    characters of 
                   10
                    
-                   - test instructions
+                  test instructions
                 </span>
               </Typography>
             </WithStyles(Typography)>
@@ -6854,7 +6854,7 @@ exports[`RichEditor tests  should render error showing maxValue and instructions
                    characters of 
                   10
                    
-                   - test instructions
+                  test instructions
                 </span>
               </Typography>
             </WithStyles(Typography)>
