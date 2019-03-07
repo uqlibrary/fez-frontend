@@ -20,21 +20,19 @@ export default class MediaPreview extends PureComponent {
         this.mediaPreviewRef = React.createRef();
     }
 
-    componentDidMount() {
-        this.scrollToPreview();
-    }
-
     openFileInNewWindow = () => {
         window.open(this.props.mediaUrl);
     };
 
     scrollToPreview = () => {
-        !!this.mediaPreviewRef && !!this.mediaPreviewRef.current && !!this.mediaPreviewRef.current.scrollIntoView
-        && this.mediaPreviewRef.current.scrollIntoView({
-            behavior: 'smooth',
-            block: 'center',
-            inline: 'center',
-        });
+        setTimeout(() => {
+            !!this.mediaPreviewRef && !!this.mediaPreviewRef.current && !!this.mediaPreviewRef.current.scrollIntoView
+            && this.mediaPreviewRef.current.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+                inline: 'center',
+            });
+        }, 80);
     };
 
     MediaPreviewButtons = ({openInNewWindow, close}) => {
@@ -91,7 +89,10 @@ export default class MediaPreview extends PureComponent {
                                 <Grid container spacing={32}>
                                     <Grid item xs />
                                     <Grid item xs={'auto'}>
-                                        <img id="previewImage" src={previewMediaUrl} alt={mediaUrl} style={{border: '5px solid black', maxWidth: '100%'}} />
+                                        <img src={previewMediaUrl}
+                                            alt={mediaUrl}
+                                            onLoad={this.scrollToPreview()}
+                                            style={{border: '5px solid black', maxWidth: '100%'}} />
                                     </Grid>
                                     <Grid item xs />
                                 </Grid>

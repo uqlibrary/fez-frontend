@@ -5993,7 +5993,6 @@ exports[`Media Preview Component  should render component with image 1`] = `
                       >
                         <img
                           alt="https://test.com/test.jpg"
-                          id="previewImage"
                           src="https://test.com/preview_test.jpg"
                           style={
                             Object {
