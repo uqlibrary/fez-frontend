@@ -5,6 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import InputLabel from '@material-ui/core/InputLabel';
 import {withStyles} from '@material-ui/core/styles';
 import {DatePickerField} from 'modules/SharedComponents/Toolbox/DatePickerField';
+import {GENERIC_DATE_FORMAT} from 'config/general';
 
 const styles = theme => ({
     title: {
@@ -37,7 +38,7 @@ export class DateRangeField extends PureComponent {
     static defaultProps = {
         className: 'publicationyearrange menuitem',
         disabled: false,
-        format: 'DD/MM/YYYY',
+        format: GENERIC_DATE_FORMAT,
         disableFuture: false
     };
 

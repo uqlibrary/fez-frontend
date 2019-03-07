@@ -6,11 +6,8 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogContent from '@material-ui/core/DialogContent';
-import {withStyles} from '@material-ui/core/styles';
 
-const styles = {};
-
-export class ConfirmDialogBox extends Component {
+export default class ConfirmDialogBox extends Component {
     static propTypes = {
         locale: PropTypes.object,
         onAction: PropTypes.func,
@@ -68,13 +65,13 @@ export class ConfirmDialogBox extends Component {
 
     _onCancelAction() {
         this._hideConfirmation();
+        /* istanbul ignore else */
         if (this.props.onCancelAction) {
             this.props.onCancelAction();
         }
     }
 
     render() {
-        // const {classes} = this.props;
         return (
             <Dialog style={{padding: 6}} open={this.state.isDialogOpen}>
                 <DialogTitle>{this.props.locale.confirmationTitle}</DialogTitle>
@@ -100,5 +97,3 @@ export class ConfirmDialogBox extends Component {
         );
     }
 }
-
-export default withStyles(styles, {withTheme: true})(ConfirmDialogBox);

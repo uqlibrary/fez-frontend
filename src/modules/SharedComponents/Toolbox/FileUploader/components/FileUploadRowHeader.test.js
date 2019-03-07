@@ -1,4 +1,5 @@
 import {FileUploadRowHeader} from './FileUploadRowHeader';
+import FileUploadRowHeaderWithStyles from './FileUploadRowHeader';
 
 const locale = {
     filenameColumn: 'Filename',
@@ -13,21 +14,26 @@ const locale = {
     }
 };
 
-function setup(testProps, isShallow = true) {
-    const props = {
-        onDeleteAll: testProps.onDeleteAll || jest.fn(),
-        classes: {
-            icon: ''
-        },
-        ...testProps
-    };
+const getProps = (testProps = {}) => ({
+    onDeleteAll: testProps.onDeleteAll || jest.fn(),
+    classes: {
+        icon: ''
+    },
+    ...testProps
+});
 
-    return getElement(FileUploadRowHeader, props, isShallow);
+function setup(testProps, isShallow = true) {
+    return getElement(FileUploadRowHeader, getProps(testProps), isShallow);
 }
 
 describe('Component FileUploadRowHeader', () => {
     it('should render with default setup', () => {
         const wrapper = setup({});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render with default setup with styles', () => {
+        const wrapper = getElement(FileUploadRowHeaderWithStyles, getProps());
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -65,5 +71,5 @@ describe('Component FileUploadRowHeader', () => {
         tightWrapper.instance()._showConfirmation();
         wrapper.update();
         expect(JSON.stringify(tightWrapper)).toMatchSnapshot();
-    })
+    });
 });

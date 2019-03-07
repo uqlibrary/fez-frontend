@@ -1,21 +1,22 @@
-import {AdvancedSearchComponent} from './AdvancedSearchComponent';
+import {AdvancedSearchComponent, styles} from './AdvancedSearchComponent';
+import moment from 'moment';
+
+const getProps = (testProps = {}) => ({
+    isLoading: false,
+    yearFilter: {
+        invalid: false
+    },
+    className: 'advanced-search',
+    classes: {},
+
+    onAdvancedSearchRowChange: jest.fn(),
+    onSearch: jest.fn(),
+    updateYearRangeFilter: jest.fn(),
+    ...testProps
+});
 
 function setup(testProps, isShallow = true){
-    const props = {
-        isLoading: false,
-        yearFilter: {
-            invalid: false
-        },
-        className: 'advanced-search',
-        classes: {},
-
-        onAdvancedSearchRowChange: jest.fn(),
-        onSearch: jest.fn(),
-        updateYearRangeFilter: jest.fn(),
-        ...testProps
-    };
-
-    return getElement(AdvancedSearchComponent, props, isShallow);
+    return getElement(AdvancedSearchComponent, getProps(testProps), isShallow);
 }
 
 describe('AdvancedSearchComponent', () => {
@@ -23,6 +24,46 @@ describe('AdvancedSearchComponent', () => {
     it('should render default view', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should have a proper style generator', () => {
+        const theme = {
+            breakpoints: {
+                up: jest.fn(() => 'test1')
+            },
+            palette: {
+                accent: {
+                    main: 'test2',
+                    dark: 'test3'
+                },
+                white: {
+                    main: 'test4'
+                }
+            }
+        };
+        expect(styles(theme)).toMatchSnapshot();
+
+        delete theme.palette.accent;
+        delete theme.palette.white;
+        expect(styles(theme)).toMatchSnapshot();
+
+        delete theme.palette;
+        expect(styles(theme)).toMatchSnapshot();
+    });
+
+    it('should have default event handler props return undefined', () => {
+        const wrapper = setup({});
+        const defaultPropMethodNames = [
+            'onToggleSearchMode',
+            'onToggleMinimise',
+            'onToggleOpenAccess',
+            'onAdvancedSearchRowAdd',
+            'onAdvancedSearchRowRemove',
+            'onAdvancedSearchReset'
+        ];
+        defaultPropMethodNames.forEach(methodName => {
+            expect(wrapper.instance().props[methodName]()).toBeUndefined();
+        });
     });
 
     it('should render minimised view', () => {
@@ -177,4 +218,19 @@ describe('AdvancedSearchComponent', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should render date range fields', () => {
+        const updateDateRangeFn = jest.fn();
+        const wrapper = setup({isOpenAccess: true, showUnpublishedFields: true, updateDateRange: updateDateRangeFn});
+        expect(toJson(wrapper)).toMatchSnapshot();
+
+        wrapper.find('WithStyles(DateRangeField)').get(0).props.onChange({
+            from: moment('10/10/2010', 'DD/MM/YYYY'),
+            to: moment('12/10/2010', 'DD/MM/YYYY')
+        });
+
+        expect(updateDateRangeFn).toHaveBeenCalledWith('rek_created_date', {
+            from: moment('10/10/2010', 'DD/MM/YYYY'),
+            to: moment('12/10/2010', 'DD/MM/YYYY')
+        });
+    });
 });

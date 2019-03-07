@@ -10,7 +10,7 @@ export class DepositAgreement extends PureComponent {
         isDepositAgreementAccepted: PropTypes.bool,
         onChange: PropTypes.func,
         classes: PropTypes.object,
-        depositAgreement: PropTypes.string,
+        depositAgreement: PropTypes.node,
         disabled: PropTypes.bool
     };
 
@@ -62,11 +62,11 @@ const styles = (theme) => ({
         lineHeight: '24px'
     },
     checkboxRoot: {
-        color: theme.status.danger,
+        color: !!theme.status && theme.status.danger || '',
     },
     checkboxChecked: {
-        color: `${theme.palette.primary.main} !important`
+        color: !!theme.palette && `${theme.palette.primary.main} !important` || ''
     }
 });
 
-export default withStyles(styles)(DepositAgreement);
+export default withStyles(styles, {withTheme: true})(DepositAgreement);

@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component DepositAgreement should render default view 1`] = `
+<WithStyles(DepositAgreement)
+  classes={
+    Object {
+      "accepted": "",
+      "error": "",
+      "label": "",
+    }
+  }
+  depositAgreement="test deposit agreement"
+  disabled={false}
+  input={
+    Object {
+      "onChange": [MockFunction],
+    }
+  }
+  isDepositAgreementAccepted={false}
+  onChange={[MockFunction]}
+/>
+`;

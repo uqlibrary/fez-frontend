@@ -12,8 +12,13 @@ import {MemoryRouter} from 'react-router-dom';
 import thunk from 'redux-thunk';
 import configureMockStore from 'redux-mock-store';
 import MockAdapter from 'axios-mock-adapter';
-import {api, mui1theme} from 'config';
+import {api, mui1theme, sessionApi} from 'config';
 import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
+import MuiPickersUtilsProvider from 'material-ui-pickers/utils/MuiPickersUtilsProvider';
+
+jest.mock('material-ui-pickers/utils/moment-utils');
+
+import MomentUtils from 'material-ui-pickers/utils/moment-utils';
 
 const setupStoreForActions = () => {
     const middlewares = [thunk];
@@ -36,6 +41,10 @@ const setupStoreForMount = () => {
 
 const setupMockAdapter = () => {
     return new MockAdapter(api, {delayResponse: 100});
+};
+
+const setupSessionMockAdapter = () => {
+    return new MockAdapter(sessionApi, {delayResponse: 100});
 };
 
 // it's possible to extend expect globally,
@@ -103,7 +112,9 @@ const getElement = (component, props, isShallow = true, requiresStore = false) =
         <Provider store={setupStoreForMount().store}>
             <MemoryRouter initialEntries={[ { pathname: '/', key: 'testKey' } ]}>
                 <MuiThemeProvider theme={mui1theme}>
-                    {React.createElement(component, props)}
+                    <MuiPickersUtilsProvider utils={MomentUtils}>
+                        {React.createElement(component, props)}
+                    </MuiPickersUtilsProvider>
                 </MuiThemeProvider>
             </MemoryRouter>
         </Provider>
@@ -128,7 +139,9 @@ global.mockActionsStore = setupStoreForActions();
 
 // set global mock api
 global.setupMockAdapter = setupMockAdapter;
+global.setupSessionMockAdapter = setupSessionMockAdapter;
 global.mockApi = setupMockAdapter();
+global.mockSessionApi = setupSessionMockAdapter();
 
 // expect extension
 global.toHaveDispatchedActions = toHaveDispatchedActions;

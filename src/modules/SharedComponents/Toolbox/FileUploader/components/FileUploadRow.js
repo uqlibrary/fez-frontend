@@ -44,7 +44,10 @@ export class FileUploadRow extends PureComponent {
     };
 
     _deleteFile = () => {
-        if (this.props.onDelete) this.props.onDelete(this.props.uploadedFile, this.props.index);
+        /* istanbul ignore else */
+        if (this.props.onDelete)  {
+            this.props.onDelete(this.props.uploadedFile, this.props.index);
+        }
     };
 
     calculateFilesizeToDisplay = (size) => {

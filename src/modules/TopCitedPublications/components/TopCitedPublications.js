@@ -13,7 +13,7 @@ import {PublicationsList} from 'modules/SharedComponents/PublicationsList';
 import {HelpIcon} from 'modules/SharedComponents/Toolbox/HelpDrawer';
 import Alert from 'modules/SharedComponents/Toolbox/Alert/components/Alert';
 
-const styles = theme => ({
+export const styles = theme => ({
     tabs: {
         [theme.breakpoints.up('sm')]: {
             margin: '-16px -24px 0px -24px',

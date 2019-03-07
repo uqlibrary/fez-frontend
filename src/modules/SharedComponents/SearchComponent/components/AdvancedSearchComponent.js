@@ -20,7 +20,7 @@ import {withStyles} from '@material-ui/core/styles';
 import Hidden from '@material-ui/core/Hidden';
 import * as validationRules from 'config/validation';
 
-const styles = theme => ({
+export const styles = theme => ({
     sideBar: {
         [theme.breakpoints.up('md')]: {
             paddingLeft: 32,
@@ -33,10 +33,10 @@ const styles = theme => ({
         }
     },
     blueButton: {
-        backgroundColor: theme.palette.accent.main,
-        color: theme.palette.white.main,
+        backgroundColor: ((theme.palette || {}).accent || {}).main,
+        color: ((theme.palette || {}).white || {}).main,
         '&:hover': {
-            backgroundColor: theme.palette.accent.dark,
+            backgroundColor: ((theme.palette || {}).accent || {}).dark,
         }
     }
 });
@@ -116,24 +116,29 @@ export class AdvancedSearchComponent extends PureComponent {
     };
 
     _handleAdvancedSearch = (event) => {
-        if (event) event.preventDefault();
-        if (event && event.key && (event.key !== 'Enter')) return;
+        event.preventDefault();
+        if (event.key && (event.key !== 'Enter')) {
+            return;
+        }
         this.props.onSearch();
     };
 
     _toggleSearchMode = () => {
+        /* istanbul ignore else */
         if (!!this.props.onToggleSearchMode) {
             this.props.onToggleSearchMode();
         }
     };
 
     _toggleMinimise = () => {
+        /* istanbul ignore else */
         if (!!this.props.onToggleMinimise) {
             this.props.onToggleMinimise();
         }
     };
 
     _toggleOpenAccess = () => {
+        /* istanbul ignore else */
         if (!!this.props.onToggleOpenAccess) {
             this.props.onToggleOpenAccess();
         }
@@ -144,18 +149,21 @@ export class AdvancedSearchComponent extends PureComponent {
     };
 
     _addAdvancedSearchRow = () => {
+        /* istanbul ignore else */
         if (!!this.props.onAdvancedSearchRowAdd) {
             this.props.onAdvancedSearchRowAdd();
         }
     };
 
     _removeAdvancedSearchRow = (index) => {
+        /* istanbul ignore else */
         if (!!this.props.onAdvancedSearchRowRemove) {
             this.props.onAdvancedSearchRowRemove(index);
         }
     };
 
     _resetAdvancedSearch = () => {
+        /* istanbul ignore else */
         if (!!this.props.onAdvancedSearchReset) {
             this.props.onAdvancedSearchReset();
         }
@@ -163,6 +171,16 @@ export class AdvancedSearchComponent extends PureComponent {
 
     _handleDateRangeChange = (key) => (value) => {
         this.props.updateDateRange(key, value);
+    };
+
+    _captionProps = () => {
+        return {
+            className: this.props.className,
+            fieldRows: this.props.fieldRows,
+            docTypes: this.props.docTypes,
+            yearFilter: this.props.yearFilter,
+            isOpenAccess: this.props.isOpenAccess
+        };
     };
 
     render() {
@@ -319,7 +337,7 @@ export class AdvancedSearchComponent extends PureComponent {
                     }
                     <Grid container>
                         <Grid item style={{paddingTop: 24}}>
-                            <AdvancedSearchCaption {...this.props} />
+                            <AdvancedSearchCaption {...this._captionProps()} />
                         </Grid>
                     </Grid>
                 </Grid>

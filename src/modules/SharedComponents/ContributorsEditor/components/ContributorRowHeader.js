@@ -105,7 +105,7 @@ export class ContributorRowHeader extends PureComponent {
     }
 }
 
-const styles = () => ({
+export const styles = () => ({
     right: {
         textAlign: 'right'
     },

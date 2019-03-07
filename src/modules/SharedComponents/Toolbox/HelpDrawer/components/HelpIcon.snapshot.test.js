@@ -1,15 +1,16 @@
 import {HelpIcon} from './HelpIcon';
+import HelpIconWithStyles from './HelpIcon';
 
 function setup(testProps, isShallow = true) {
     const props = {
-        ...testProps,
         classes: {},
         theme: {palette:{white:{main: '#FFFFFF'}}},
-        title: testProps.title || 'This is the title',
-        text: testProps.text || 'This is some text',
-        buttonLabel: testProps.buttonLabel || 'This is a button',
-        tooltip: testProps.tooltip || 'This is a tooltip',
-        onClick: testProps.onClick || jest.fn()
+        title: 'This is the title',
+        text: 'This is some text',
+        buttonLabel: 'This is a button',
+        tooltip: 'This is a tooltip',
+        onClick: jest.fn(),
+        ...testProps,
     };
     return getElement(HelpIcon, props, isShallow);
 }
@@ -19,5 +20,19 @@ describe('HelpIcon snapshots tests', () => {
         const wrapper = setup({});
         const tree = toJson(wrapper);
         expect(tree).toMatchSnapshot();
+    });
+
+    it('should set drawer content', () => {
+        const onClickFn = jest.fn();
+        const wrapper = setup({
+            onClick: onClickFn
+        });
+        wrapper.find('WithStyles(IconButton)').simulate('click');
+        expect(onClickFn).toHaveBeenCalledWith('This is the title', 'This is some text', 'This is a button');
+    });
+
+    it('should render with styles', () => {
+        const wrapper = getElement(HelpIconWithStyles, {text: 'This is text'});
+        expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StandardCard component renders with custom colours and full height 1`] = `
+<WithStyles(Card)
+  className="undefined StandardCard"
+  style={
+    Object {
+      "backgroundColor": "#fcc",
+      "color": "#111",
+      "height": "100%",
+    }
+  }
+>
+  <WithStyles(CardHeader)
+    action={false}
+    classes={
+      Object {
+        "root": "purple",
+      }
+    }
+    title="card title"
+    titleTypographyProps={
+      Object {
+        "color": "inherit",
+        "component": "h3",
+        "variant": "h5",
+      }
+    }
+  />
+  <WithStyles(CardContent)
+    className="no-padding"
+  />
+</WithStyles(Card)>
+`;
+
+exports[`StandardCard component renders with title and help button 1`] = `
+<WithStyles(Card)
+  className="testClass StandardCard"
+  style={Object {}}
+>
+  <WithStyles(CardHeader)
+    action={
+      <Connect(WithStyles(HelpIcon))
+        buttonLabel="OK"
+        text="help text"
+        title="help"
+      />
+    }
+    classes={
+      Object {
+        "root": "",
+      }
+    }
+    title="card title"
+    titleTypographyProps={
+      Object {
+        "color": "inherit",
+        "component": "h3",
+        "variant": "h5",
+      }
+    }
+  />
+  <WithStyles(CardContent)
+    className=""
+  />
+</WithStyles(Card)>
+`;
+
+exports[`StandardCard component renders with title and no help icon 1`] = `
+<WithStyles(Card)
+  className="testClass StandardCard"
+  style={Object {}}
+>
+  <WithStyles(CardHeader)
+    action={false}
+    classes={
+      Object {
+        "root": "",
+      }
+    }
+    title="card title"
+    titleTypographyProps={
+      Object {
+        "color": "inherit",
+        "component": "h3",
+        "variant": "h5",
+      }
+    }
+  />
+  <WithStyles(CardContent)
+    className=""
+  />
+</WithStyles(Card)>
+`;

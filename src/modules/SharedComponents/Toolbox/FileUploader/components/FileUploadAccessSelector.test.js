@@ -1,4 +1,5 @@
 import {FileUploadAccessSelector} from './FileUploadAccessSelector';
+import FileUploadAccessSelectorWithStyles from './FileUploadAccessSelector';
 
 function setup(testProps, isShallow = true) {
     const props = {
@@ -44,6 +45,11 @@ describe('Component FileUploadAccessSelector', () => {
     it('should render access condition disabled if disabled flag is set and with value', () => {
         const props = {disabled: true, value: 2};
         const wrapper = setup({...props}, false);
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render with styles', () => {
+        const wrapper = getElement(FileUploadAccessSelectorWithStyles, {});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

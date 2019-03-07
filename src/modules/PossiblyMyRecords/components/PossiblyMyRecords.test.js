@@ -1,5 +1,6 @@
 import PossiblyMyRecords from './PossiblyMyRecords';
 import {routes} from 'config';
+import {render} from 'enzyme';
 
 function setup(testProps, isShallow = true) {
     const props = {
@@ -95,14 +96,23 @@ describe('Component PossiblyMyRecords', () => {
 
     it('should select publication for claiming', () => {
         const actionFunction = jest.fn();
-        const wrapper = setup({ actions: { setClaimPublication: actionFunction, searchPossiblyYourPublications: jest.fn()}});
+        const wrapper = setup({
+            actions: {
+                setClaimPublication: actionFunction,
+                searchPossiblyYourPublications: jest.fn()
+            }
+        });
         wrapper.instance()._claimPublication({pid: 11111});
         expect(actionFunction).toHaveBeenCalled();
     });
 
     it('should load possibly your publications on load', () => {
         const actionFunction = jest.fn();
-        const wrapper = setup({ actions: { searchPossiblyYourPublications: actionFunction}});
+        setup({
+            actions: {
+                searchPossiblyYourPublications: actionFunction
+            }
+        });
         expect(actionFunction).toHaveBeenCalled();
     });
 
@@ -114,16 +124,32 @@ describe('Component PossiblyMyRecords', () => {
 
     it('calls hide publication', () => {
         const actionFunction = jest.fn();
-        const wrapper = setup({ actions: { hideRecord: actionFunction, searchPossiblyYourPublications: jest.fn()}});
+        const wrapper = setup({
+            actions: {
+                hideRecord: actionFunction,
+                searchPossiblyYourPublications: jest.fn()
+            }
+        });
+
+        // test no-op
+        wrapper.instance()._hidePublication();
+        expect(actionFunction).not.toBeCalled();
+
         wrapper.setState({ publicationToHide: {pid: 1111} });
         wrapper.instance()._hidePublication();
         expect(actionFunction).toHaveBeenCalled();
         expect(wrapper.state().publicationToHide).toBeFalsy();
+
     });
 
     it('calls the action to reset error message and status when leaving the page', () => {
         const resetFn = jest.fn();
-        const wrapper = setup({actions: { hideRecordErrorReset: resetFn, searchPossiblyYourPublications: jest.fn()} });
+        const wrapper = setup({
+            actions: {
+                hideRecordErrorReset: resetFn,
+                searchPossiblyYourPublications: jest.fn()
+            }
+        });
         wrapper.unmount();
         expect(resetFn).toHaveBeenCalled();
     });
@@ -144,7 +170,22 @@ describe('Component PossiblyMyRecords', () => {
     });
 
     it('renders active filters', () => {
-        const wrapper = setup({location: {state: {hasPublications: true, activeFacets: {filters: {}, ranges: {Year: {from: 2000, to: 2010}}}}}});
+        const wrapper = setup({
+            location: {
+                state: {
+                    hasPublications: true,
+                    activeFacets: {
+                        filters: {},
+                        ranges: {
+                            Year: {
+                                from: 2000,
+                                to: 2010
+                            }
+                        }
+                    }
+                }
+            }
+        });
         expect(wrapper.state().hasPublications).toEqual(true);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -153,21 +194,55 @@ describe('Component PossiblyMyRecords', () => {
         const wrapper = setup({loadingPossiblePublicationsList: true});
         expect(wrapper.state().hasPublications).toEqual(false);
 
-        wrapper.instance().componentWillReceiveProps({loadingPossiblePublicationsList: false, possiblePublicationsList: [1,2,3], history: {}, location: {}});
+        wrapper.instance().componentWillReceiveProps({
+            loadingPossiblePublicationsList: false,
+            possiblePublicationsList: [1,2,3],
+            history: {},
+            location: {}
+        });
         expect(wrapper.state().hasPublications).toEqual(true);
     });
 
     it('gets publications when user clicks back and state is set', () => {
         const testAction = jest.fn();
-        const wrapper = setup({accountLoading: true, actions: {searchPossiblyYourPublications: testAction}});
+        const wrapper = setup({
+            accountLoading: true,
+            actions: {
+                searchPossiblyYourPublications: testAction
+            }
+        });
 
         wrapper.instance().componentWillReceiveProps({
-            history: {action: 'POP'},
-            location: {pathname: routes.pathConfig.records.possible, state: {hasPublications: true, activeFacets: {filters: {}, ranges: {Year: {from: 2000, to: 2010}}}}}
+            history: {
+                action: 'POP'
+            },
+            location: {
+                pathname: routes.pathConfig.records.possible,
+                state: {
+                    hasPublications: true,
+                    activeFacets: {
+                        filters: {},
+                        ranges: {
+                            Year: {
+                                from: 2000,
+                                to: 2010
+                            }
+                        }
+                    }
+                }
+            }
         });
         expect(testAction).toHaveBeenCalled();
         expect(wrapper.state().hasPublications).toEqual(true);
-        expect(wrapper.state().activeFacets).toEqual({"filters": {}, "ranges": {"Year": {"from": 2000, "to": 2010}}});
+        expect(wrapper.state().activeFacets).toEqual({
+            filters: {},
+            ranges: {
+                Year: {
+                    from: 2000,
+                    to: 2010
+                }
+            }
+        });
 
         wrapper.instance().componentWillReceiveProps({
             history: {action: 'POP'},
@@ -176,6 +251,69 @@ describe('Component PossiblyMyRecords', () => {
 
         expect(wrapper.state().activeFacets).toEqual({filters: {}, ranges: {}});
 
+    });
+
+    it('should push sorted state into page history', () => {
+        const wrapper = setup({});
+        const pushFn = jest.spyOn(wrapper.instance(), 'pushPageHistory');
+        wrapper.instance().sortByChanged('test1', 'test2');
+        const newState = wrapper.state();
+        expect(newState.sortBy).toBe('test1');
+        expect(newState.sortDirection).toBe('test2');
+        expect(pushFn).toHaveBeenCalledTimes(1);
+    });
+
+    it('should push changed page into state and page history', () => {
+        const wrapper = setup({});
+        const pushFn = jest.spyOn(wrapper.instance(), 'pushPageHistory');
+        wrapper.instance().pageChanged('test');
+        const newState = wrapper.state();
+        expect(newState.page).toBe('test');
+        expect(pushFn).toHaveBeenCalledTimes(1);
+    });
+
+    it('should push changed page size into state and page history', () => {
+        const wrapper = setup({});
+        const pushFn = jest.spyOn(wrapper.instance(), 'pushPageHistory');
+        wrapper.instance().pageSizeChanged('test');
+        const newState = wrapper.state();
+        expect(newState.pageSize).toBe('test');
+        expect(newState.page).toBe(1);
+        expect(pushFn).toHaveBeenCalledTimes(1);
+    });
+
+    it('should generate <Alert> when appropriate', () => {
+        const wrapper = setup({});
+        const testFn = wrapper.instance().getAlert;
+
+        expect(testFn({})).toBeNull();
+
+        const test1 = testFn({}, true);
+        expect(test1).toMatchSnapshot();
+
+        const test2 = testFn(
+            {
+                message: (msg) => 'Alert: ' + msg
+            },
+            true,
+            'test message'
+        );
+        expect(test2).toMatchSnapshot();
+    });
+
+    it('should handle larger number of pubs than page size', () => {
+        const wrapper = setup({
+            accountLoading: false,
+            possibleCounts: 21,
+            loadingPossibleCounts: false,
+            possiblePublicationsList: [1],
+            loadingPossiblePublicationsList: false,
+        });
+        wrapper.setState({
+            hasPublications: true
+        });
+        expect(wrapper.find('StandardCard WithStyles(Grid) WithStyles(PublicationsListSorting)').length).toBe(1);
+        expect(wrapper.find('StandardCard WithStyles(Grid) WithStyles(PublicationsListPaging)').length).toBe(2);
     });
 
 });

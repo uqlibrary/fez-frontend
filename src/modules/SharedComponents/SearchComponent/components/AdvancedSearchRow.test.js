@@ -1,18 +1,19 @@
 import {AdvancedSearchRow} from './AdvancedSearchRow';
+import AdvancedSearchRowWithStyles from './AdvancedSearchRow';
+
+const getProps = (testProps = {}) => ({
+    searchField: '0',
+    value: '',
+    disabledFields: [],
+    rowIndex: 0,
+    onSearchRowChange: jest.fn(),
+    onSearchRowDelete: jest.fn(),
+    classes: {},
+    ...testProps
+});
 
 function setup(testProps, isShallow = true){
-    const props = {
-        searchField: '0',
-        value: '',
-        disabledFields: [],
-        rowIndex: 0,
-        onSearchRowChange: jest.fn(),
-        onSearchRowDelete: jest.fn(),
-        classes: {},
-        ...testProps
-    };
-
-    return getElement(AdvancedSearchRow, props, isShallow);
+    return getElement(AdvancedSearchRow, getProps(testProps), isShallow);
 }
 
 describe('AdvancedSearchRow', () => {
@@ -50,5 +51,16 @@ describe('AdvancedSearchRow', () => {
         const wrapper = setup({rowIndex: 3, onSearchRowDelete: testFn});
         wrapper.instance()._deleteRow();
         expect(testFn).toHaveBeenCalledWith(3);
+    });
+
+    it('should render default view with styles', () => {
+        const wrapper = getElement(AdvancedSearchRowWithStyles, getProps());
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render input component and props', () => {
+        const wrapper = setup({});
+        const inputComponent = wrapper.instance().renderInputComponentAndProps()('div', {});
+        expect(inputComponent).toMatchSnapshot();
     });
 });

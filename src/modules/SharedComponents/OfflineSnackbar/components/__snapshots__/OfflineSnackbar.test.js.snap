@@ -188,3 +188,36 @@ exports[`Component OfflineSnackbar renders offline snackbar 1`] = `
   />
 </div>
 `;
+
+exports[`Component OfflineSnackbar should have a proper style generator 1`] = `
+Object {
+  "error": Object {
+    "color": "test2",
+  },
+  "success": Object {
+    "color": "test1",
+  },
+}
+`;
+
+exports[`Component OfflineSnackbar should have a proper style generator 2`] = `
+Object {
+  "error": Object {
+    "color": undefined,
+  },
+  "success": Object {
+    "color": undefined,
+  },
+}
+`;
+
+exports[`Component OfflineSnackbar should have a proper style generator 3`] = `
+Object {
+  "error": Object {
+    "color": undefined,
+  },
+  "success": Object {
+    "color": undefined,
+  },
+}
+`;

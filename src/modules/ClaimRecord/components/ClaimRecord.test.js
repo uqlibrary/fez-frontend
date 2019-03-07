@@ -383,4 +383,63 @@ describe('Component ClaimRecord ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should handle default form submit', () => {
+        const preventDefaultFn = jest.fn();
+        const wrapper = setup({});
+        wrapper.find('form').props().onSubmit({preventDefault: preventDefaultFn});
+        expect(preventDefaultFn).toHaveBeenCalled();
+    });
+
+    it('should validate contributor', () => {
+        const wrapper = setup({
+            initialValues: {
+                get: () => ({
+                    toJS: () => ({
+                        fez_record_search_key_author: ['test']
+                    })
+                })
+            }
+        });
+        wrapper.instance()._contributorValidation('http://test.com');
+    });
+
+    it('should show contributor as linked', () => {
+        const props = {
+            initialValues: Immutable.Map({
+                author: Immutable.Map({aut_id: 410}),
+                publication: Immutable.Map({
+                    ...journalArticle,
+                    fez_record_search_key_contributor_id: [
+                        {
+                            "rek_contributor_id": 410,
+                            "rek_contributor_id_order": 1
+                        },
+                        {
+                            "rek_contributor_id": 0,
+                            "rek_contributor_id_order": 2
+                        }
+                    ]
+                })
+            })
+        };
+
+        const wrapper = setup(props);
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should show alert if submit failed and PID not found', () => {
+        const {rek_pid, journalArticleWithoutPid} = journalArticle;
+        const props = {
+            initialValues: Immutable.Map({
+                author: Immutable.Map({aut_id: 410}),
+                publication: Immutable.Map({
+                    ...journalArticleWithoutPid
+                })
+            }),
+            submitFailed: true
+        };
+
+        const wrapper = setup(props);
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });

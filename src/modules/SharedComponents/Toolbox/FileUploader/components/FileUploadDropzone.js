@@ -2,8 +2,9 @@ import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import Dropzone from 'react-dropzone';
 import Grid from '@material-ui/core/Grid';
-import FileUploadDropzoneStaticContent from './FileUploadDropzoneStaticContent';
 import {withStyles} from '@material-ui/core/styles';
+import FileUploadDropzoneStaticContent from './FileUploadDropzoneStaticContent';
+import {FileNameRestrictions} from './FileUploader';
 
 const styles = () => ({
     hideLabel: {
@@ -31,13 +32,22 @@ export class FileUploadDropzone extends PureComponent {
     static defaultProps = {
         fileUploadLimit: 10,
         filesInQueue: [],
-        fileNameRestrictions: /^(?=^\S*$)(?=^[a-z\d\-_]+\.[^\.]+$)(?=.{1,45}$)(?!(web_|preview_|thumbnail_|stream_|fezacml_|presmd_|\d))[a-z\d\-_\.]+/
+        fileNameRestrictions: FileNameRestrictions
     };
 
     constructor(props) {
         super(props);
         this.dropzoneRef = null;
     }
+
+    onReadFileError = (file, errors, resolve) => () => {
+        errors.push(file.name);
+        return resolve(false);
+    };
+
+    onReadFileLoad = (file, resolve) => () => {
+        resolve(file);
+    };
 
     /**
      * Try to read file and set error for a folder
@@ -48,11 +58,8 @@ export class FileUploadDropzone extends PureComponent {
      */
     readFile = (file, errors, resolve) => {
         const fileReader = new FileReader();
-        fileReader.onerror = () => {
-            errors.push(file.name);
-            return resolve(false);
-        };
-        fileReader.onload = () => resolve(file);
+        fileReader.onerror = this.onReadFileError(file, errors, resolve);
+        fileReader.onload = this.onReadFileLoad(file, resolve);
         const slice = file.slice(0, 10);
         return fileReader.readAsDataURL(slice);
     };

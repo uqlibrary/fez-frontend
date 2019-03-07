@@ -440,7 +440,7 @@ export const getNtroMetadataSearchKeys = (data) => {
         ntroMetadata.fez_record_search_key_significance = data.authors.map((item, index) =>{
             if (selectedAuthorIdIndex === index) {
                 return {
-                    rek_significance: data.significance,
+                    rek_significance: data.significance || 0,
                     rek_significance_order: selectedAuthorIdIndex + 1
                 };
             } else {
@@ -461,7 +461,7 @@ export const getNtroMetadataSearchKeys = (data) => {
                 };
             } else {
                 return {
-                    rek_creator_contribution_statement: locale.global.defaultContibutorStatementMissing,
+                    rek_creator_contribution_statement: locale.global.defaultContributorStatementMissing,
                     rek_creator_contribution_statement_order: index + 1
                 };
             }

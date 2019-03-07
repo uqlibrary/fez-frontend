@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Add record stepper tests should render steps with specific active step 1`] = `
+<WithStyles(Stepper)
+  activeStep={0}
+>
+  <WithStyles(Step)
+    key="stepper_0"
+  >
+    <WithStyles(StepLabel)>
+      <span>
+        Step 1
+      </span>
+    </WithStyles(StepLabel)>
+  </WithStyles(Step)>
+  <WithStyles(Step)
+    key="stepper_1"
+  >
+    <WithStyles(StepLabel)>
+      <span>
+        Step 2
+      </span>
+    </WithStyles(StepLabel)>
+  </WithStyles(Step)>
+  <WithStyles(Step)
+    key="stepper_2"
+  >
+    <WithStyles(StepLabel)>
+      <span>
+        Step 3
+      </span>
+    </WithStyles(StepLabel)>
+  </WithStyles(Step)>
+</WithStyles(Stepper)>
+`;
+
+exports[`Add record stepper tests should render steps with specific active step 2`] = `
+<WithStyles(Stepper)
+  activeStep={1}
+>
+  <WithStyles(Step)
+    key="stepper_0"
+  >
+    <WithStyles(StepLabel)>
+      <span>
+        Step 1
+      </span>
+    </WithStyles(StepLabel)>
+  </WithStyles(Step)>
+  <WithStyles(Step)
+    key="stepper_1"
+  >
+    <WithStyles(StepLabel)>
+      <span>
+        Step 2
+      </span>
+    </WithStyles(StepLabel)>
+  </WithStyles(Step)>
+  <WithStyles(Step)
+    key="stepper_2"
+  >
+    <WithStyles(StepLabel)>
+      <span>
+        Step 3
+      </span>
+    </WithStyles(StepLabel)>
+  </WithStyles(Step)>
+</WithStyles(Stepper)>
+`;
+
+exports[`Add record stepper tests should render steps with specific active step 3`] = `
+<WithStyles(Stepper)
+  activeStep={2}
+>
+  <WithStyles(Step)
+    key="stepper_0"
+  >
+    <WithStyles(StepLabel)>
+      <span>
+        Step 1
+      </span>
+    </WithStyles(StepLabel)>
+  </WithStyles(Step)>
+  <WithStyles(Step)
+    key="stepper_1"
+  >
+    <WithStyles(StepLabel)>
+      <span>
+        Step 2
+      </span>
+    </WithStyles(StepLabel)>
+  </WithStyles(Step)>
+  <WithStyles(Step)
+    key="stepper_2"
+  >
+    <WithStyles(StepLabel)>
+      <span>
+        Step 3
+      </span>
+    </WithStyles(StepLabel)>
+  </WithStyles(Step)>
+</WithStyles(Stepper)>
+`;

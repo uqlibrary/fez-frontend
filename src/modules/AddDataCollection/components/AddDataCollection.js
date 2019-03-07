@@ -55,6 +55,10 @@ export default class AddDataCollection extends Component {
         window.location.reload();
     };
 
+    _handleRef = (ref) => {
+        this.confirmationBox = ref;
+    };
+
     render() {
         const txt = formLocale.addDataset;
         const txtFoR = componentLocale.components.fieldOfResearchForm;
@@ -82,7 +86,7 @@ export default class AddDataCollection extends Component {
             <StandardPage title={formLocale.pageTitle}>
                 <form>
                     <ConfirmDialogBox
-                        onRef={ref => (this.confirmationBox = ref)}
+                        onRef={this._handleRef}
                         onAction={this._navigateToMyDatasets}
                         onCancelAction={this._restartWorkflow}
                         locale={saveConfirmationLocale}

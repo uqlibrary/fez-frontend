@@ -150,4 +150,28 @@ describe('ThesisSubmission test', () => {
         wrapper.instance().openDepositConfirmation();
         expect(testMethod).toHaveBeenCalled();
     });
+
+    it('should trigger openDepositConfirmation() when conditions are met', () => {
+        const wrapper = setup({});
+        wrapper.instance().openDepositConfirmation = jest.fn();
+        wrapper.instance().componentWillReceiveProps({
+            isSessionValid: true,
+            submitting: false
+        });
+        expect(wrapper.instance().openDepositConfirmation).toBeCalled();
+    });
+
+    it('should invoke callback for session check', () => {
+        const wrapper = setup({});
+        wrapper.instance().deposit();
+        expect(wrapper.instance().props.actions.checkSession).toBeCalled();
+    });
+
+    it('should set depositConfirmationBox properly', () => {
+        const wrapper = setup({});
+        wrapper.instance().depositConfirmationBox = null;
+        const test = 'test setDepositConfirmation';
+        wrapper.instance().setDepositConfirmation(test);
+        expect(wrapper.instance().depositConfirmationBox).toEqual(test);
+    });
 });

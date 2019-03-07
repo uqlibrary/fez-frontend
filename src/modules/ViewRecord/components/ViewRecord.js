@@ -30,7 +30,7 @@ export default class ViewRecord extends PureComponent {
     };
 
     componentDidMount() {
-        if (this.props.actions && !this.props.recordToView) {
+        if (this.props.actions.loadRecordToView && !this.props.recordToView) {
             this.props.actions.loadRecordToView(this.props.match.params.pid);
         }
     }
@@ -43,7 +43,8 @@ export default class ViewRecord extends PureComponent {
 
     componentWillUnmount() {
         // clear previously selected record
-        if (this.props.actions) {
+        /* istanbul ignore else */
+        if (this.props.actions.clearRecordToView) {
             this.props.actions.clearRecordToView();
         }
     }
@@ -77,7 +78,7 @@ export default class ViewRecord extends PureComponent {
                         setHideCulturalSensitivityStatement={this.props.actions.setHideCulturalSensitivityStatement} />
                     <Links publication={recordToView}/>
                     <RelatedPublications publication={recordToView} />
-                    <AdditionalInformation publication={recordToView} isNtro={isNtro} />
+                    <AdditionalInformation publication={recordToView} account={this.props.account} isNtro={isNtro} />
                     {
                         isNtro &&
                         <NtroDetails publication={recordToView} account={this.props.account}/>

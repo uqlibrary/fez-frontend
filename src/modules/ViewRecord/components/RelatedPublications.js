@@ -14,7 +14,7 @@ const styles = () => ({
     },
 });
 
-export class RelatedPublications extends PureComponent {
+export class RelatedPublicationsClass extends PureComponent {
     static propTypes = {
         publication: PropTypes.object.isRequired,
         title: PropTypes.string,
@@ -106,4 +106,7 @@ export class RelatedPublications extends PureComponent {
     }
 }
 
-export default withStyles(styles)(RelatedPublications);
+
+const StyledRelatedPublicationsClass = withStyles(styles, {withTheme: true})(RelatedPublicationsClass);
+const RelatedPublications = (props) => <StyledRelatedPublicationsClass {...props}/>;
+export default RelatedPublications;

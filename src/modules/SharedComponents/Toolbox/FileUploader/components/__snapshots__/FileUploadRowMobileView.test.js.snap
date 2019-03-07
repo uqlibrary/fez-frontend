@@ -251,6 +251,36 @@ exports[`Component FileUploadRowMobileView should render default view 1`] = `
 </WithStyles(List)>
 `;
 
+exports[`Component FileUploadRowMobileView should render default view with styles 1`] = `
+<FileUploadRowMobileView
+  accessConditionId={null}
+  classes={
+    Object {
+      "listItem": "FileUploadRowMobileView-listItem-2 listItem",
+      "root": "FileUploadRowMobileView-root-1 root",
+      "secondaryAction": "FileUploadRowMobileView-secondaryAction-3",
+    }
+  }
+  disabled={false}
+  embargoDate="01/01/2017"
+  index={0}
+  locale={
+    Object {
+      "embargoDateClosedAccess": "No date required",
+      "embargoDateColumn": "Embargo date",
+      "fileAccessColumn": "File access",
+      "filenameColumn": "File name",
+    }
+  }
+  name="test.pdf"
+  onAccessConditionChange={[MockFunction]}
+  onDelete={[MockFunction]}
+  onEmbargoDateChange={[MockFunction]}
+  requireOpenAccessStatus={true}
+  size="100 MB"
+/>
+`;
+
 exports[`Component FileUploadRowMobileView should render embargo date picker if access condition is set to open access 1`] = `
 <WithStyles(List)
   classes={

@@ -100,4 +100,19 @@ describe('PublicationsListSorting renders ', () => {
         expect(wrapper.state().exportPublicationsFormat).toEqual(expected);
         expect(testFunction).toHaveBeenCalledWith({exportPublicationsFormat: expected});
     });
+
+    it('component will set state on receiving new props', () => {
+        const wrapper = setup({
+            initPageLength: 5
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+
+        wrapper.setProps({
+            sortBy: 'Publication date',
+            sortDirection: 'test',
+            pageSize: 5,
+            pagingData: {}
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });
