@@ -55,6 +55,50 @@ describe('Component FileUploadDropzone', () => {
         expect(duplicateFiles.length).toEqual(1);
     });
 
+    it('should remove files with same filename but different extension from dropped incoming files', () => {
+        const wrapper = setup({});
+
+        const files = [getMockFile('a.txt'), getMockFile('a.doc'), getMockFile('b.txt')];
+        const {uniqueFiles, duplicateFiles, sameFileNameWithDifferentExt} = wrapper.instance().removeDuplicate(files, []);
+
+        expect(uniqueFiles.length).toEqual(2);
+        expect(duplicateFiles.length).toEqual(0);
+        expect(sameFileNameWithDifferentExt.length).toEqual(1);
+    });
+
+    it('should remove files with same filename but different extension from dropped incoming files and already queued files', () => {
+        const wrapper = setup({});
+
+        const queuedFiles = ['c.txt', 'd.txt', 'b.txt'];
+        const files = [getMockFile('a.txt'), getMockFile('a.doc'), getMockFile('b.txt')];
+        const {uniqueFiles, duplicateFiles, sameFileNameWithDifferentExt} = wrapper.instance().removeDuplicate(files, queuedFiles);
+
+        expect(uniqueFiles.length).toEqual(1);
+        expect(uniqueFiles).toEqual([getMockFile('a.txt')]);
+
+        expect(duplicateFiles.length).toEqual(1);
+        expect(duplicateFiles).toEqual(['b.txt']);
+
+        expect(sameFileNameWithDifferentExt.length).toEqual(1);
+        expect(sameFileNameWithDifferentExt).toEqual(['a.doc']);
+    });
+
+    it('should remove files with same filename but different extension from dropped incoming files and already queued files 2', () => {
+        const wrapper = setup({});
+
+        const queuedFiles = ['c.txt', 'd.txt', 'b.txt'];
+        const files = [getMockFile('a.doc'), getMockFile('d.txt'), getMockFile('b.txt')];
+        const {uniqueFiles, duplicateFiles, sameFileNameWithDifferentExt} = wrapper.instance().removeDuplicate(files, queuedFiles);
+
+        expect(uniqueFiles.length).toEqual(1);
+        expect(uniqueFiles).toEqual([getMockFile('a.doc')]);
+
+        expect(duplicateFiles.length).toEqual(2);
+        expect(duplicateFiles).toEqual(['d.txt', 'b.txt']);
+
+        expect(sameFileNameWithDifferentExt.length).toEqual(0);
+    });
+
     it('should not remove any files if there are no duplicate files', () => {
         const wrapper = setup({});
 
@@ -182,7 +226,7 @@ describe('Component FileUploadDropzone', () => {
             sameFileNameWithDifferentExt: ['g.doc', 'a.doc'],
             invalidFileNames: ['web_d.txt'],
             duplicateFiles: ['b.txt'],
-            tooManyFiles: ['g.txt', 'a.doc']
+            tooManyFiles: ['g.txt']
         };
 
         const accepted = [file_b_dup, file_c, file_d, file_f, file_g, file_a_doc, file_g_doc];
