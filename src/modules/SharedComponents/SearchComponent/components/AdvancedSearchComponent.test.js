@@ -1,5 +1,4 @@
-import {AdvancedSearchComponent} from './AdvancedSearchComponent';
-import AdvancedSearchComponentWithStyles from './AdvancedSearchComponent';
+import {AdvancedSearchComponent, styles} from './AdvancedSearchComponent';
 import moment from 'moment';
 
 const getProps = (testProps = {}) => ({
@@ -27,9 +26,44 @@ describe('AdvancedSearchComponent', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should render default view with styles', () => {
-        const wrapper = getElement(AdvancedSearchComponentWithStyles, getProps());
-        expect(toJson(wrapper)).toMatchSnapshot();
+    it('should have a proper style generator', () => {
+        const theme = {
+            breakpoints: {
+                up: jest.fn(() => 'test1')
+            },
+            palette: {
+                accent: {
+                    main: 'test2',
+                    dark: 'test3'
+                },
+                white: {
+                    main: 'test4'
+                }
+            }
+        };
+        expect(styles(theme)).toMatchSnapshot();
+
+        delete theme.palette.accent;
+        delete theme.palette.white;
+        expect(styles(theme)).toMatchSnapshot();
+
+        delete theme.palette;
+        expect(styles(theme)).toMatchSnapshot();
+    });
+
+    it('should have default event handler props return undefined', () => {
+        const wrapper = setup({});
+        const defaultPropMethodNames = [
+            'onToggleSearchMode',
+            'onToggleMinimise',
+            'onToggleOpenAccess',
+            'onAdvancedSearchRowAdd',
+            'onAdvancedSearchRowRemove',
+            'onAdvancedSearchReset'
+        ];
+        defaultPropMethodNames.forEach(methodName => {
+            expect(wrapper.instance().props[methodName]()).toBeUndefined();
+        });
     });
 
     it('should render minimised view', () => {
