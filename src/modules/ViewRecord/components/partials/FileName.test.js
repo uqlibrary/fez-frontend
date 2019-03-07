@@ -44,7 +44,7 @@ describe('File Name Component ', () => {
         expect(wrapper.instance().canShowPreview('image/jpeg')).toEqual(true);
         // TODO revert once videos are transcoded to open format #158519502
         wrapper = setup({mimeType: 'video/mp4'});
-        expect(wrapper.instance().canShowPreview('video/mp4')).toEqual(false);
+        expect(wrapper.instance().canShowPreview('video/mp4')).toEqual(true);
         wrapper = setup({mimeType: 'octet-stream'});
         expect(wrapper.instance().canShowPreview('octet-stream')).toEqual(false);
         wrapper = setup({mimeType: 'some/text'});
