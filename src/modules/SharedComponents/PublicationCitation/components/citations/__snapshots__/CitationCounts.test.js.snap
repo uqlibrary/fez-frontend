@@ -25858,3 +25858,15 @@ exports[`CitationCounts should render component with no metrics 1`] = `
   </MemoryRouter>
 </Provider>
 `;
+
+exports[`CitationCounts should render open access icon when required 1`] = `
+<OpenAccessIcon
+  embargoDate={null}
+  isOpenAccess={false}
+  showEmbargoText={false}
+>
+  <span
+    className="noOaIcon"
+  />
+</OpenAccessIcon>
+`;
