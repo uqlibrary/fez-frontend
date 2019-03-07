@@ -1,5 +1,48 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`UnpublishedStatusField component should have working helper which sets errorText state 1`] = `
+Object {
+  "error": true,
+  "errorText": true,
+  "hideLabel": false,
+  "itemsList": Array [
+    Object {
+      "text": "Any unpublished",
+      "value": "Any unpublished",
+    },
+    Object {
+      "text": "In Creation",
+      "value": "In Creation",
+    },
+    Object {
+      "text": "In Draft",
+      "value": "In Draft",
+    },
+    Object {
+      "text": "In Review",
+      "value": "In Review",
+    },
+    Object {
+      "text": "Retracted",
+      "value": "Retracted",
+    },
+    Object {
+      "text": "Submitted for Approval",
+      "value": "Submitted for Approval",
+    },
+    Object {
+      "text": "Unpublished",
+      "value": "Unpublished",
+    },
+  ],
+  "itemsLoading": false,
+  "label": undefined,
+  "placeholder": undefined,
+  "required": undefined,
+  "selectedValue": undefined,
+}
+`;
+
 exports[`UnpublishedStatusField component should render default view 1`] = `
 <Provider
   store={
