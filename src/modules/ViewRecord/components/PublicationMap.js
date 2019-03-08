@@ -224,8 +224,6 @@ const PublicationMap = compose(
     }),
     withScriptjs,
     withGoogleMap
-)(
-    <GoogleMapViewComponent />
-);
+)(GoogleMapViewComponent);
 
 export default PublicationMap;
