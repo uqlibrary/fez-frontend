@@ -70,9 +70,12 @@ module.exports = {
                     /node_modules/,
                     /custom_modules/
                 ],
-                use: [
-                    'babel-loader?compact=false',
-                ]
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        compact: false
+                    },
+                }
             },
             {
                 test: /\.json$/,

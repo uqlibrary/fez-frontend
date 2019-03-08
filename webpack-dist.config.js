@@ -183,9 +183,12 @@ const webpackConfig = {
                     resolve(__dirname, 'src'),
                     resolve(__dirname, 'node_modules/uqlibrary-react-toolbox/src')
                 ],
-                use: [
-                    'babel-loader?compact=false',
-                ]
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        compact: false
+                    },
+                }
             },
             {
                 test: /\.scss/,
