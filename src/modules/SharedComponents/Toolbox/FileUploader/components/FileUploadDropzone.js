@@ -72,12 +72,47 @@ export class FileUploadDropzone extends PureComponent {
      * @returns Object
      */
     removeDuplicate = (incomingFiles, filesInQueue) => {
+        // Ignore files from incomingFiles which have same name with different extension
+        const incomingFilesWithoutDuplicateFileName = incomingFiles.reduce((unique, file) => {
+            const fileNameWithoutExt = file.name.slice(0, file.name.indexOf('.'));
+            unique.fileNames.indexOf(fileNameWithoutExt) === -1
+                ? (unique.fileNames.push(fileNameWithoutExt) && unique.incomingFiles.push(file))
+                : unique.filesWithSameNameDifferentExt.push(file.name);
+            return unique;
+        }, {fileNames: [], incomingFiles: [], filesWithSameNameDifferentExt: []});
+
+        const incomingFilesWithoutDuplicate = incomingFilesWithoutDuplicateFileName.incomingFiles
+            .reduce((unique, file) => {
+                if (unique.fileNames.indexOf(file.name) >= 0) {
+                    unique.duplicateFiles.push(file.name);
+                } else {
+                    const fileNameWithoutExt = file.name.slice(0, file.name.indexOf('.'));
+
+                    unique.fileNames
+                        .map(fileName => fileName.slice(0, fileName.indexOf('.')))
+                        .indexOf(fileNameWithoutExt) === -1
+                        ? unique.incomingFiles.push(file)
+                        : unique.filesWithSameNameDifferentExt.push(file.name);
+                }
+
+                return unique;
+            }, {
+                fileNames: filesInQueue,
+                incomingFiles: [],
+                duplicateFiles: [],
+                filesWithSameNameDifferentExt: []
+            });
+
         // Ignore files from incomingFiles which are already in files queue
-        const uniqueFiles = incomingFiles.filter(file => filesInQueue.indexOf(file.name) === -1);
-        const duplicateFiles = incomingFiles.filter(file => filesInQueue.indexOf(file.name) >= 0).map(file => file.name);
+        const uniqueFiles = incomingFilesWithoutDuplicate.incomingFiles.filter(file => filesInQueue.indexOf(file.name) === -1);
+        const duplicateFiles = incomingFilesWithoutDuplicate.incomingFiles.filter(file => filesInQueue.indexOf(file.name) >= 0).map(file => file.name);
 
         // Return unique files and errors with duplicate file names
-        return {uniqueFiles: uniqueFiles, duplicateFiles: duplicateFiles};
+        return {
+            uniqueFiles: uniqueFiles,
+            duplicateFiles: [...duplicateFiles, ...incomingFilesWithoutDuplicate.duplicateFiles],
+            sameFileNameWithDifferentExt: [...incomingFilesWithoutDuplicateFileName.filesWithSameNameDifferentExt, ...incomingFilesWithoutDuplicate.filesWithSameNameDifferentExt]
+        };
     };
 
     /**
@@ -146,7 +181,7 @@ export class FileUploadDropzone extends PureComponent {
                 const {validFiles, invalidFileNames} = this.removeInvalidFileNames(onlyFiles, fileNameRestrictions);
 
                 // Remove duplicate files from accepted files
-                const {uniqueFiles, duplicateFiles} = this.removeDuplicate(validFiles, filesInQueue);
+                const {uniqueFiles, duplicateFiles, sameFileNameWithDifferentExt} = this.removeDuplicate(validFiles, filesInQueue);
 
                 // Remove files exceeding the max number of files allowed
                 const {limitedFiles, tooManyFiles} = this.removeTooManyFiles(uniqueFiles, fileUploadLimit - filesInQueue.length);
@@ -158,7 +193,8 @@ export class FileUploadDropzone extends PureComponent {
                         notFiles: notFiles,
                         invalidFileNames: invalidFileNames,
                         duplicateFiles: duplicateFiles,
-                        tooManyFiles: tooManyFiles
+                        tooManyFiles: tooManyFiles,
+                        sameFileNameWithDifferentExt: sameFileNameWithDifferentExt
                     }
                 );
             });
