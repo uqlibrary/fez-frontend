@@ -132,10 +132,15 @@ describe('Search action creators', () => {
             `${actions.SEARCH_LOADING}@pubmed`,
             `${actions.SEARCH_LOADING}@crossref`,
             actions.SEARCH_SOURCE_COUNT,
+            actions.APP_ALERT_SHOW,
             `${actions.SEARCH_FAILED}@espace`,
+            actions.APP_ALERT_SHOW,
             `${actions.SEARCH_FAILED}@wos`,
+            actions.APP_ALERT_SHOW,
             `${actions.SEARCH_FAILED}@scopus`,
+            actions.APP_ALERT_SHOW,
             `${actions.SEARCH_FAILED}@crossref`,
+            actions.APP_ALERT_SHOW,
             `${actions.SEARCH_FAILED}@pubmed`,
             actions.SEARCH_LOADED
         ];
