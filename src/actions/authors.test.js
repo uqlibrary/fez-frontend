@@ -18,7 +18,7 @@ describe('Action creators for authors', () => {
     afterEach(() => {
         mockApi.reset();
     });
-    
+
     it('dispatches expected actions while searching for authors', async () => {
         const testParam = 'abc';
         const testRequest = {'query': testParam};
@@ -82,6 +82,7 @@ describe('Action creators for authors', () => {
 
         const expectedActions = [
             actions.AUTHORS_LOADING,
+            actions.APP_ALERT_SHOW,
             actions.AUTHORS_LOAD_FAILED
         ];
 
@@ -116,6 +117,7 @@ describe('Action creators for authors', () => {
 
         const expectedActions = [
             actions.CURRENT_AUTHOR_SAVING,
+            actions.APP_ALERT_SHOW,
             actions.CURRENT_AUTHOR_SAVE_FAILED
         ];
 
@@ -194,6 +196,7 @@ describe('Action creators for authors', () => {
 
         const expectedActions = [
             actions.CURRENT_AUTHOR_SAVING,
+            actions.APP_ALERT_SHOW,
             actions.CURRENT_AUTHOR_SAVE_FAILED
         ];
 
@@ -250,6 +253,7 @@ describe('Action creators for authors', () => {
 
         const expectedActions = [
             actions.CURRENT_AUTHOR_SAVING,
+            actions.APP_ALERT_SHOW,
             actions.CURRENT_AUTHOR_SAVE_FAILED
         ];
 

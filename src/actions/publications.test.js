@@ -62,6 +62,7 @@ describe('Publications actions', () => {
 
             const expectedActions = [
                 actions.LATEST_PUBLICATIONS_LOADING,
+                actions.APP_ALERT_SHOW,
                 actions.LATEST_PUBLICATIONS_FAILED
             ];
 
@@ -135,6 +136,7 @@ describe('Publications actions', () => {
 
             const expectedActions = [
                 actions.AUTHOR_PUBLICATIONS_LOADING,
+                actions.APP_ALERT_SHOW,
                 actions.AUTHOR_PUBLICATIONS_FAILED
             ];
 
@@ -183,6 +185,7 @@ describe('Publications actions', () => {
 
             const expectedActions = [
                 actions.TRENDING_PUBLICATIONS_LOADING,
+                actions.APP_ALERT_SHOW,
                 actions.TRENDING_PUBLICATIONS_FAILED
             ];
 
@@ -229,6 +232,7 @@ describe('Publications actions', () => {
 
             const expectedActions = [
                 actions.TOP_CITED_PUBLICATIONS_LOADING,
+                actions.APP_ALERT_SHOW,
                 actions.TOP_CITED_PUBLICATIONS_FAILED,
             ];
 

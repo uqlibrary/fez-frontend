@@ -96,6 +96,7 @@ describe('Search action creators', () => {
             `${actions.SEARCH_LOADED}@wos`,
             `${actions.SEARCH_LOADED}@scopus`,
             `${actions.SEARCH_LOADED}@crossref`,
+            actions.APP_ALERT_SHOW,
             `${actions.SEARCH_FAILED}@pubmed`,
             actions.SEARCH_LOADED
         ];
@@ -230,6 +231,7 @@ describe('Search action creators', () => {
         const expectedActions = [
             actions.SET_SEARCH_QUERY,
             actions.SEARCH_LOADING,
+            actions.APP_ALERT_SHOW,
             actions.SEARCH_FAILED
         ];
 
