@@ -4,6 +4,7 @@ import {setupCache} from 'axios-cache-adapter';
 import {API_URL, SESSION_COOKIE_NAME, TOKEN_NAME, SESSION_USER_GROUP_COOKIE_NAME} from './general';
 import {store} from 'config/store';
 import {logout} from 'actions/account';
+import {showAppAlert} from 'actions/app';
 import locale from 'locale/global';
 import Raven from 'raven-js';
 import param from 'can-param';
@@ -110,7 +111,14 @@ api.interceptors.response.use(response => {
 
     let errorMessage = null;
     if (requestUrl.startsWith(thirdPartyLookupUrlRoot) ) {
-        console.log('Skipping root error resetting for 3rd party api');
+        console.log('skipping root error resetting for 3rd party api');
+    } else if (!!error.message && !!error.response.status && error.response.status === 500) {
+        errorMessage = ((error.response || {}).data || {}).message || locale.global.errorMessages[error.response.status];
+        if (process.env.NODE_ENV === 'test') {
+            global.mockActionsStore.dispatch(showAppAlert(error.response.data));
+        } else {
+            store.dispatch(showAppAlert(error.response.data));
+        }
     } else if (!!error.response && !!error.response.status) {
         errorMessage = locale.global.errorMessages[error.response.status];
     }

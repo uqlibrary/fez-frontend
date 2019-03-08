@@ -123,6 +123,7 @@ describe('Claim publication actions tests ', () => {
             const expectedActions = [
                 actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_LOADING,
                 actions.POSSIBLY_YOUR_PUBLICATIONS_LOADING,
+                actions.APP_ALERT_SHOW,
                 actions.POSSIBLY_YOUR_PUBLICATIONS_FAILED,
                 actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_FAILED
             ];
@@ -211,6 +212,7 @@ describe('Claim publication actions tests ', () => {
 
             const expectedActions = [
                 actions.HIDE_PUBLICATIONS_LOADING,
+                actions.APP_ALERT_SHOW,
                 actions.HIDE_PUBLICATIONS_FAILED
             ];
 
@@ -253,6 +255,47 @@ describe('Claim publication actions tests ', () => {
             };
             const expectedActions = [
                 actions.CLAIM_PUBLICATION_CREATE_FAILED
+            ];
+
+            try {
+                await mockActionsStore.dispatch(claimActions.claimPublication(testRequest));
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            } catch (e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            }
+        });
+
+        it('dispatched expected actions when claiming a publication by author who is assigned to publication already with some author linked', async () => {
+            const testRequest = {
+                ...testClaimRequest,
+                publication: {
+                    ...testClaimRequest.publication,
+                    fez_record_search_key_author_id: [{
+                        "rek_author_id": 111,
+                        "rek_author_id_order": 1
+                    }]
+                },
+                authorLinking: {
+                    authors: [
+                        {
+                            rek_author_id: 111,
+                            rek_author_id_order: 1
+                        }
+                    ]
+                },
+                contributorLinking: {
+                    valid: true,
+                    authors: [
+                        {
+                            rek_author_id: 222,
+                            rek_author_id_order: 1
+                        }
+                    ]
+                }
+            };
+            const expectedActions = [
+                actions.CLAIM_PUBLICATION_CREATE_PROCESSING,
+                actions.CLAIM_PUBLICATION_CREATE_FAILED,
             ];
 
             try {
@@ -308,6 +351,7 @@ describe('Claim publication actions tests ', () => {
 
             const expectedActions = [
                 actions.CLAIM_PUBLICATION_CREATE_PROCESSING,
+                actions.APP_ALERT_SHOW,
                 actions.CLAIM_PUBLICATION_CREATE_FAILED
             ];
 
@@ -503,6 +547,7 @@ describe('Claim publication actions tests ', () => {
             const expectedActions = [
                 actions.CLAIM_PUBLICATION_CREATE_PROCESSING,
                 'FILE_UPLOAD_STARTED',
+                actions.APP_ALERT_SHOW,
                 'FILE_UPLOADED_FAILED@test.jpg',
                 actions.CLAIM_PUBLICATION_CREATE_COMPLETED
             ];

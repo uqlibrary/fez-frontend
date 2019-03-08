@@ -6,7 +6,6 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const WebpackPwaManifest = require("webpack-pwa-manifest");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const ExtractTextPlugin2 = require('extract-text-webpack-plugin');
 const InjectPreloader = require('preloader-html-webpack-plugin');
 const chalk = require('chalk');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
@@ -176,17 +175,16 @@ const webpackConfig = {
             },
             {
                 test: /\.js?$/,
-                exclude: [
-                    /node_modules/,
-                    /custom_modules/
-                ],
                 include: [
                     resolve(__dirname, 'src'),
                     resolve(__dirname, 'node_modules/uqlibrary-react-toolbox/src')
                 ],
-                use: [
-                    'babel-loader',
+                exclude: [
+                    /node_modules/,
+                    /custom_modules/,
+                    '/src/mocks/',
                 ],
+                loader: 'babel-loader',
             },
             {
                 test: /\.scss/,
