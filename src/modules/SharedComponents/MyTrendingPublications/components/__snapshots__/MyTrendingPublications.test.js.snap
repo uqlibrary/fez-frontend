@@ -45,7 +45,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
         <WithStyles(Typography)
           variant="subtitle1"
         >
-          The +plus score indicates the increase in citations over the last month
+          The + (plus) value indicates how much the citation count has increased in the last three months.
         </WithStyles(Typography)>
       </WithStyles(Grid)>
       <WithStyles(Grid)
@@ -59,7 +59,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                 WOS and Scopus
               </h3>
               <p>
-                The large number is the total citation count and the + (plus) value indicates how much the citation count has increased in the last three months.
+                The + (plus) value indicates how much the citation count has increased in the last three months.
               </p>
               <h3>
                 Altmetric score (social media activity)
@@ -919,7 +919,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
         <WithStyles(Typography)
           variant="subtitle1"
         >
-          The +plus score indicates the increase in citations over the last month
+          The + (plus) value indicates how much the citation count has increased in the last three months.
         </WithStyles(Typography)>
       </WithStyles(Grid)>
       <WithStyles(Grid)
@@ -933,7 +933,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                 WOS and Scopus
               </h3>
               <p>
-                The large number is the total citation count and the + (plus) value indicates how much the citation count has increased in the last three months.
+                The + (plus) value indicates how much the citation count has increased in the last three months.
               </p>
               <h3>
                 Altmetric score (social media activity)
@@ -1888,7 +1888,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                 WOS and Scopus
               </h3>
               <p>
-                The large number is the total citation count and the + (plus) value indicates how much the citation count has increased in the last three months.
+                The + (plus) value indicates how much the citation count has increased in the last three months.
               </p>
               <h3>
                 Altmetric score (social media activity)
