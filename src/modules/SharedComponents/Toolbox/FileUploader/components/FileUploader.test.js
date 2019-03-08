@@ -198,21 +198,21 @@ describe('Component FileUploader', () => {
 
         wrapper.instance()._handleDroppedFiles([file_a], {});
         wrapper.update();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const fileData = wrapper.instance().state.filesInQueue[0].fileData;
+        expect(fileData.name).toEqual('a.txt');
+        expect(fileData.lastModified).toEqual(12345678912);
 
         wrapper.instance()._updateFileAccessCondition(file_a, 0, 9);
         wrapper.update();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(wrapper.instance().state.filesInQueue[0].access_condition_id).toEqual(9);
 
         wrapper.instance()._acceptTermsAndConditions(true);
         wrapper.update();
-        expect(toJson(wrapper)).toMatchSnapshot();
-
         expect(wrapper.state().isTermsAndConditionsAccepted).toBeTruthy();
 
         wrapper.instance()._updateFileAccessCondition(file_a, 0, 8);
         wrapper.update();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(wrapper.instance().state.filesInQueue[0].access_condition_id).toEqual(8);
 
         expect(wrapper.state().isTermsAndConditionsAccepted).toBeFalsy();
     });
