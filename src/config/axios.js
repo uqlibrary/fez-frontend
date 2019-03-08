@@ -115,7 +115,7 @@ api.interceptors.response.use(response => {
     } else if (!!error.message && !!error.response.status && error.response.status === 500) {
         errorMessage = ((error.response || {}).data || {}).message || locale.global.errorMessages[error.response.status];
         if (process.env.NODE_ENV === 'test') {
-            // global.mockActionsStore.dispatch(showAppAlert(error.response.data));
+            global.mockActionsStore.dispatch(showAppAlert(error.response.data));
         } else {
             store.dispatch(showAppAlert(error.response.data));
         }

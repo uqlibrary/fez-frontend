@@ -45,6 +45,7 @@ describe('View record actions', () => {
 
             const expectedActions = [
                 actions.VIEW_RECORD_LOADING,
+                actions.APP_ALERT_SHOW,
                 actions.VIEW_RECORD_LOAD_FAILED
             ];
 

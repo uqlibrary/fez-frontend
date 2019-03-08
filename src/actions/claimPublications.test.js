@@ -123,6 +123,7 @@ describe('Claim publication actions tests ', () => {
             const expectedActions = [
                 actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_LOADING,
                 actions.POSSIBLY_YOUR_PUBLICATIONS_LOADING,
+                actions.APP_ALERT_SHOW,
                 actions.POSSIBLY_YOUR_PUBLICATIONS_FAILED,
                 actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_FAILED
             ];
@@ -211,6 +212,7 @@ describe('Claim publication actions tests ', () => {
 
             const expectedActions = [
                 actions.HIDE_PUBLICATIONS_LOADING,
+                actions.APP_ALERT_SHOW,
                 actions.HIDE_PUBLICATIONS_FAILED
             ];
 
@@ -308,6 +310,7 @@ describe('Claim publication actions tests ', () => {
 
             const expectedActions = [
                 actions.CLAIM_PUBLICATION_CREATE_PROCESSING,
+                actions.APP_ALERT_SHOW,
                 actions.CLAIM_PUBLICATION_CREATE_FAILED
             ];
 
@@ -503,6 +506,7 @@ describe('Claim publication actions tests ', () => {
             const expectedActions = [
                 actions.CLAIM_PUBLICATION_CREATE_PROCESSING,
                 'FILE_UPLOAD_STARTED',
+                actions.APP_ALERT_SHOW,
                 'FILE_UPLOADED_FAILED@test.jpg',
                 actions.CLAIM_PUBLICATION_CREATE_COMPLETED
             ];
