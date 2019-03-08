@@ -186,7 +186,9 @@ const webpackConfig = {
                 use: {
                     loader: 'babel-loader',
                     options: {
-                        compact: false
+                        overrides: [{
+                            compact: true,
+                        }],
                     },
                 }
             },
