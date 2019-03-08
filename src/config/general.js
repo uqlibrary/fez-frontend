@@ -977,10 +977,6 @@ export const unpublishedBufferActionUrls = [
         url: (pid) => `${APP_URL}workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=230&href=%2Fmy_fez_traditional.php`
     },
     {
-        label: 'Manage thesis assessor access',
-        url: (pid) => `${APP_URL}workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=293&href=%2Fmy_fez_traditional.php`
-    },
-    {
         label: 'Delete selected record',
         url: (pid) => `${APP_URL}workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=225&href=%2Fmy_fez_traditional.php`
     }

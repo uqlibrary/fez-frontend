@@ -80,7 +80,6 @@ export default class RichEditor extends PureComponent {
                 }
             });
         }
-        console.log(this.props);
         return (
             <React.Fragment>
                 <span>

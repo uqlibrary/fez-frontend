@@ -1,7 +1,5 @@
 import {UnpublishedBufferCitationView} from './UnpublishedBufferCitationView';
 
-import {unpublishedBufferActionUrls} from 'config/general';
-
 function setup(testProps, isShallow = true) {
     // build full props list required by the component
     const props = {
@@ -48,11 +46,11 @@ describe('UnpublishedBufferCitationView test button click sets value', () => {
     });
 
     it('should load menu correctly', () => {
-        const wrapper = setup({}, false);
+        const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
 
-        let menu = wrapper.find('#long-menu');
-        expect(menu.length).toEqual(unpublishedBufferActionUrls.length);
+        let menu = wrapper.find('WithStyles(MenuItem)');
+        expect(menu.length).toEqual(5);
     });
 
     it('should handle navigateToUrl', () => {
