@@ -1373,16 +1373,6 @@ export default {
             readMoreTitle: 'Click to read more about UQ eSpace',
             readMoreLink: '/contact'
         },
-        shareThis: {
-            facebook: {linkTitle: 'Share this link via Facebook'},
-            mendeley: {linkTitle: 'Share this link via Mendeley'},
-            twitter: {linkTitle: 'Share this link via Twitter'},
-            linkedin: {linkTitle: 'Share this link via LinkedIn'},
-            googleplus: {linkTitle: 'Share this link via Google+'},
-            reddit: {linkTitle: 'Share this link via Reddit'},
-            email: {linkTitle: 'Share this link via Email'},
-            print: {linkTitle: 'Print this record'},
-        },
         fileUploader: {
             label: 'Click here to select files, or drag files into this area to upload'
         }
