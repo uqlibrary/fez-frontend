@@ -71,8 +71,8 @@ module.exports = {
                     /custom_modules/
                 ],
                 use: [
-                    'babel-loader',
-                ],
+                    'babel-loader?compact=false',
+                ]
             },
             {
                 test: /\.json$/,
