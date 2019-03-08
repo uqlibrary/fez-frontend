@@ -1135,6 +1135,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                   "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
                   "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
                   "notFiles": "Invalid files ([fileNames])",
+                  "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
                   "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
                   "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
                 },
