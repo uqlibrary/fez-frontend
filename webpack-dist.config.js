@@ -187,6 +187,7 @@ const webpackConfig = {
                     loader: 'babel-loader',
                     options: {
                         overrides: [{
+                            test: "src/mock/**/*.js",
                             compact: true,
                         }],
                     },
