@@ -68,13 +68,11 @@ module.exports = {
                 ],
                 exclude: [
                     /node_modules/,
-                    /custom_modules/
+                    /custom_modules/,
+                    '/src/mocks/',
                 ],
                 use: {
                     loader: 'babel-loader',
-                    options: {
-                        compact: false
-                    }
                 }
             },
             {
