@@ -620,6 +620,7 @@ exports[`Media Preview Component  should call open new window on touch tap 1`] =
                   }
                 }
               >
+                <span />
                 <WithStyles(Grid)
                   item={true}
                   xs={true}
@@ -3022,6 +3023,7 @@ exports[`Media Preview Component  should render component 1`] = `
       }
     }
   >
+    <span />
     <WithStyles(Grid)
       item={true}
       xs={true}
@@ -3703,6 +3705,7 @@ exports[`Media Preview Component  should render component with image 1`] = `
                   }
                 }
               >
+                <span />
                 <WithStyles(Grid)
                   item={true}
                   xs={true}
@@ -7242,6 +7245,7 @@ exports[`Media Preview Component  should render component with video 1`] = `
                   }
                 }
               >
+                <span />
                 <WithStyles(Grid)
                   item={true}
                   xs={true}
@@ -9149,23 +9153,14 @@ exports[`Media Preview Component  should render component with video 1`] = `
               </div>
             </Grid>
           </WithStyles(Grid)>
-          <div
-            style={
-              Object {
-                "margin": 16,
-                "padding": 16,
-              }
-            }
+          <video
+            controls={true}
           >
-            <video
-              controls={true}
-            >
-              <source
-                src="https://test.com/preview_test.jpg"
-                type="video/mp4"
-              />
-            </video>
-          </div>
+            <source
+              src="https://test.com/preview_test.jpg"
+              type="video/mp4"
+            />
+          </video>
           <Hidden
             implementation="js"
             lgDown={false}

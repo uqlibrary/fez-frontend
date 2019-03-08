@@ -62,6 +62,7 @@ export default class MediaPreview extends PureComponent {
         return (
             <React.Fragment>
                 <Grid container spacing={0} direction={'row'} style={{marginTop: 32}}>
+                    <span ref={this.mediaPreviewRef}/>
                     <Grid item xs>
                         <Typography variant={'h6'} component={'h2'}>{title}</Typography>
                     </Grid>
@@ -72,29 +73,26 @@ export default class MediaPreview extends PureComponent {
                     </Hidden>
                 </Grid>
                 {
-                    (isVideo || isImage) &&
-                    <div style={{padding: 16, margin: 16}} ref={this.mediaPreviewRef}>
-                        {
-                            isVideo &&
-                            <video controls>
-                                <source src={previewMediaUrl} type={mimeType} />
-                                {browserNotSupportVideoTagMsg}
-                            </video>
-                        }
-                        {
-                            isImage &&
-                                <Grid container spacing={32}>
-                                    <Grid item xs />
-                                    <Grid item xs={'auto'}>
-                                        <img src={previewMediaUrl}
-                                            alt={mediaUrl}
-                                            onLoad={this.scrollToPreview()}
-                                            style={{border: '5px solid black', maxWidth: '100%'}} />
-                                    </Grid>
-                                    <Grid item xs />
+                    isVideo &&
+                    <video controls>
+                        <source src={previewMediaUrl} type={mimeType} />
+                        {browserNotSupportVideoTagMsg}
+                    </video>
+                }
+                {
+                    isImage &&
+                        <div style={{padding: 16, margin: 16}}>
+                            <Grid container spacing={32}>
+                                <Grid item xs />
+                                <Grid item xs={'auto'}>
+                                    <img src={previewMediaUrl}
+                                        alt={mediaUrl}
+                                        onLoad={this.scrollToPreview()}
+                                        style={{border: '5px solid black', maxWidth: '100%'}} />
                                 </Grid>
-                        }
-                    </div>
+                                <Grid item xs />
+                            </Grid>
+                        </div>
                 }
                 <Hidden smUp>
                     <this.MediaPreviewButtons {...locale.viewRecord.sections.files.preview}/>
