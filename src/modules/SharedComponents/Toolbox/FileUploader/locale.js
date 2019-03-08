@@ -12,7 +12,8 @@ export default {
         ['invalidFileNames']: 'File(s) ([fileNames]) have invalid file name',
         ['tooBigFiles']: 'File(s) ([fileNames]) exceed maximum allowed upload file size',
         ['tooManyFiles']: 'Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded',
-        ['duplicateFiles']: 'File(s) ([fileNames]) are duplicates and have been ignored'
+        ['duplicateFiles']: 'File(s) ([fileNames]) are duplicates and have been ignored',
+        ['sameFileNameWithDifferentExt']: 'File(s) ([fileNames]) have same name that match with other files with different extension'
     },
     errorTitle: 'Upload Errors',
     successTitle: 'Success',
