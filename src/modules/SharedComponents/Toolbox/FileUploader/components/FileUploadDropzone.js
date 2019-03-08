@@ -83,9 +83,7 @@ export class FileUploadDropzone extends PureComponent {
 
         const incomingFilesWithoutDuplicate = incomingFilesWithoutDuplicateFileName.incomingFiles
             .reduce((unique, file) => {
-                if (unique.fileNames.indexOf(file.name) >= 0) {
-                    unique.duplicateFiles.push(file.name);
-                } else {
+                if (unique.fileNames.indexOf(file.name) === -1) {
                     const fileNameWithoutExt = file.name.slice(0, file.name.indexOf('.'));
 
                     unique.fileNames
@@ -93,13 +91,14 @@ export class FileUploadDropzone extends PureComponent {
                         .indexOf(fileNameWithoutExt) === -1
                         ? unique.incomingFiles.push(file)
                         : unique.filesWithSameNameDifferentExt.push(file.name);
+                } else {
+                    unique.incomingFiles.push(file);
                 }
 
                 return unique;
             }, {
                 fileNames: filesInQueue,
                 incomingFiles: [],
-                duplicateFiles: [],
                 filesWithSameNameDifferentExt: []
             });
 
@@ -110,7 +109,7 @@ export class FileUploadDropzone extends PureComponent {
         // Return unique files and errors with duplicate file names
         return {
             uniqueFiles: uniqueFiles,
-            duplicateFiles: [...duplicateFiles, ...incomingFilesWithoutDuplicate.duplicateFiles],
+            duplicateFiles: duplicateFiles,
             sameFileNameWithDifferentExt: [...incomingFilesWithoutDuplicateFileName.filesWithSameNameDifferentExt, ...incomingFilesWithoutDuplicate.filesWithSameNameDifferentExt]
         };
     };
