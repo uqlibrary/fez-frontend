@@ -76,7 +76,7 @@ describe('Publication\'s map coordinates', () => {
             geoCoords: []
         });
 
-        const component = wrapper.find('withScriptjs(withGoogleMap(Component))');
+        const component = wrapper.find('withScriptjs(withGoogleMap(GoogleMapViewComponent))');
 
         component.props().handleMarkerComplete({
             getPosition: () => ({
