@@ -36,7 +36,6 @@ export default class BookChapterForm extends Component {
         const startPage = formValues && formValues.fez_record_search_key_start_page && formValues.fez_record_search_key_start_page.rek_start_page;
         const endPage = formValues && formValues.fez_record_search_key_end_page && formValues.fez_record_search_key_end_page.rek_end_page;
         const pageError = !!startPage && !!endPage && parseInt(startPage, 10) > parseInt(endPage, 10) ? 'Page range invalid' : '';
-        console.log(startPage, endPage, pageError);
         return (
             <Grid container spacing={24}>
                 <Grid item xs={12}>
