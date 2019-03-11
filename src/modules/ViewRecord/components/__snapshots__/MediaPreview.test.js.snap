@@ -9218,6 +9218,7 @@ exports[`Media Preview Component  should render component with video 1`] = `
               onError={[Function]}
               onExitFullScreen={[Function]}
               onFiftyPercent={[Function]}
+              onMediaError={[Function]}
               onMute={[Function]}
               onNinetyFivePercent={[Function]}
               onOneHundredPercent={[Function]}
@@ -9225,6 +9226,7 @@ exports[`Media Preview Component  should render component with video 1`] = `
               onPlay={[Function]}
               onReady={[Function]}
               onResume={[Function]}
+              onSetupError={[Function]}
               onSeventyFivePercent={[Function]}
               onTenSeconds={[Function]}
               onThirtySeconds={[Function]}
@@ -9234,7 +9236,7 @@ exports[`Media Preview Component  should render component with video 1`] = `
               onUnmute={[Function]}
               onVideoLoad={[Function]}
               playerId="previewVideo"
-              playerScript="https://cdn.jwplayer.com/libraries/VrkpYhtx.js"
+              playerScript="http://cdn.jwplayer.com/libraries/VrkpYhtx.js"
               playlist=""
               useMultiplePlayerScripts={false}
             >
@@ -9726,4 +9728,312 @@ exports[`Media Preview Component  should render component with video 1`] = `
     </Router>
   </MemoryRouter>
 </Provider>
+`;
+
+exports[`Media Preview Component  should render when scrolled to a loaded video 1`] = `
+<Fragment>
+  <WithStyles(Grid)
+    container={true}
+    direction="row"
+    spacing={0}
+    style={
+      Object {
+        "marginTop": 32,
+      }
+    }
+  >
+    <span />
+    <WithStyles(Grid)
+      item={true}
+      xs={true}
+    >
+      <WithStyles(Typography)
+        component="h2"
+        variant="h6"
+      >
+        Video preview
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={true}
+      xsUp={false}
+    >
+      <WithStyles(Grid)
+        item={true}
+      >
+        <Component
+          close="Close"
+          imageTitle="Image preview"
+          openInNewWindow="Open/Download file in a new window"
+          videoTitle="Video preview"
+        />
+      </WithStyles(Grid)>
+    </Hidden>
+  </WithStyles(Grid)>
+  <ReactJWPlayer
+    aspectRatio="inherit"
+    file="https://test.com/preview_test.jpg"
+    isAutoPlay={true}
+    onAdComplete={[Function]}
+    onAdPause={[Function]}
+    onAdPlay={[Function]}
+    onAdResume={[Function]}
+    onAdSkipped={[Function]}
+    onAutoStart={[Function]}
+    onBuffer={[Function]}
+    onBufferChange={[Function]}
+    onClose={[Function]}
+    onEnterFullScreen={[Function]}
+    onError={[Function]}
+    onExitFullScreen={[Function]}
+    onFiftyPercent={[Function]}
+    onMediaError={[Function]}
+    onMute={[Function]}
+    onNinetyFivePercent={[Function]}
+    onOneHundredPercent={[Function]}
+    onPause={[Function]}
+    onPlay={[Function]}
+    onReady={[Function]}
+    onResume={[Function]}
+    onSetupError={[Function]}
+    onSeventyFivePercent={[Function]}
+    onTenSeconds={[Function]}
+    onThirtySeconds={[Function]}
+    onThreeSeconds={[Function]}
+    onTime={[Function]}
+    onTwentyFivePercent={[Function]}
+    onUnmute={[Function]}
+    onVideoLoad={[Function]}
+    playerId="previewVideo"
+    playerScript="http://cdn.jwplayer.com/libraries/VrkpYhtx.js"
+    playlist=""
+    useMultiplePlayerScripts={false}
+  />
+  <Hidden
+    implementation="js"
+    lgDown={false}
+    lgUp={false}
+    mdDown={false}
+    mdUp={false}
+    smDown={false}
+    smUp={true}
+    xlDown={false}
+    xlUp={false}
+    xsDown={false}
+    xsUp={false}
+  >
+    <Component
+      close="Close"
+      imageTitle="Image preview"
+      openInNewWindow="Open/Download file in a new window"
+      videoTitle="Video preview"
+    />
+  </Hidden>
+</Fragment>
+`;
+
+exports[`Media Preview Component  should render when video fails 1`] = `
+<Fragment>
+  <WithStyles(Grid)
+    container={true}
+    direction="row"
+    spacing={0}
+    style={
+      Object {
+        "marginTop": 32,
+      }
+    }
+  >
+    <span />
+    <WithStyles(Grid)
+      item={true}
+      xs={true}
+    >
+      <WithStyles(Typography)
+        component="h2"
+        variant="h6"
+      >
+        Video preview
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={true}
+      xsUp={false}
+    >
+      <WithStyles(Grid)
+        item={true}
+      >
+        <Component
+          close="Close"
+          imageTitle="Image preview"
+          openInNewWindow="Open/Download file in a new window"
+          videoTitle="Video preview"
+        />
+      </WithStyles(Grid)>
+    </Hidden>
+  </WithStyles(Grid)>
+  <div
+    style={
+      Object {
+        "marginBottom": 12,
+        "marginTop": 12,
+      }
+    }
+  >
+    <WithStyles(Alert)
+      message="Please click the download/open in a new window link above to open the original file format. (test failure - 12345)"
+      title="VIDEO PLAYER ERROR"
+      type="error"
+    />
+  </div>
+  <Hidden
+    implementation="js"
+    lgDown={false}
+    lgUp={false}
+    mdDown={false}
+    mdUp={false}
+    smDown={false}
+    smUp={true}
+    xlDown={false}
+    xlUp={false}
+    xsDown={false}
+    xsUp={false}
+  >
+    <Component
+      close="Close"
+      imageTitle="Image preview"
+      openInNewWindow="Open/Download file in a new window"
+      videoTitle="Video preview"
+    />
+  </Hidden>
+</Fragment>
+`;
+
+exports[`Media Preview Component  should render when video fails with no error codes 1`] = `
+<Fragment>
+  <WithStyles(Grid)
+    container={true}
+    direction="row"
+    spacing={0}
+    style={
+      Object {
+        "marginTop": 32,
+      }
+    }
+  >
+    <span />
+    <WithStyles(Grid)
+      item={true}
+      xs={true}
+    >
+      <WithStyles(Typography)
+        component="h2"
+        variant="h6"
+      >
+        Video preview
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={true}
+      xsUp={false}
+    >
+      <WithStyles(Grid)
+        item={true}
+      >
+        <Component
+          close="Close"
+          imageTitle="Image preview"
+          openInNewWindow="Open/Download file in a new window"
+          videoTitle="Video preview"
+        />
+      </WithStyles(Grid)>
+    </Hidden>
+  </WithStyles(Grid)>
+  <ReactJWPlayer
+    aspectRatio="inherit"
+    file="https://test.com/preview_test.jpg"
+    isAutoPlay={true}
+    onAdComplete={[Function]}
+    onAdPause={[Function]}
+    onAdPlay={[Function]}
+    onAdResume={[Function]}
+    onAdSkipped={[Function]}
+    onAutoStart={[Function]}
+    onBuffer={[Function]}
+    onBufferChange={[Function]}
+    onClose={[Function]}
+    onEnterFullScreen={[Function]}
+    onError={[Function]}
+    onExitFullScreen={[Function]}
+    onFiftyPercent={[Function]}
+    onMediaError={[Function]}
+    onMute={[Function]}
+    onNinetyFivePercent={[Function]}
+    onOneHundredPercent={[Function]}
+    onPause={[Function]}
+    onPlay={[Function]}
+    onReady={[Function]}
+    onResume={[Function]}
+    onSetupError={[Function]}
+    onSeventyFivePercent={[Function]}
+    onTenSeconds={[Function]}
+    onThirtySeconds={[Function]}
+    onThreeSeconds={[Function]}
+    onTime={[Function]}
+    onTwentyFivePercent={[Function]}
+    onUnmute={[Function]}
+    onVideoLoad={[Function]}
+    playerId="previewVideo"
+    playerScript="http://cdn.jwplayer.com/libraries/VrkpYhtx.js"
+    playlist=""
+    useMultiplePlayerScripts={false}
+  />
+  <Hidden
+    implementation="js"
+    lgDown={false}
+    lgUp={false}
+    mdDown={false}
+    mdUp={false}
+    smDown={false}
+    smUp={true}
+    xlDown={false}
+    xlUp={false}
+    xsDown={false}
+    xsUp={false}
+  >
+    <Component
+      close="Close"
+      imageTitle="Image preview"
+      openInNewWindow="Open/Download file in a new window"
+      videoTitle="Video preview"
+    />
+  </Hidden>
+</Fragment>
 `;
