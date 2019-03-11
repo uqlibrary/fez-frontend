@@ -64,9 +64,7 @@ exports[`Component OfflineSnackbar renders back online snackbar 1`] = `
             }
           }
         >
-          <pure(LinkIcon)
-            className={undefined}
-          />
+          <pure(LinkIcon) />
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
@@ -116,9 +114,7 @@ exports[`Component OfflineSnackbar renders hidden (open: false) snackbar 1`] = `
             }
           }
         >
-          <pure(LinkIcon)
-            className={undefined}
-          />
+          <pure(LinkIcon) />
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
@@ -168,9 +164,7 @@ exports[`Component OfflineSnackbar renders offline snackbar 1`] = `
             }
           }
         >
-          <pure(LinkOffIcon)
-            className={undefined}
-          />
+          <pure(LinkOffIcon) />
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}

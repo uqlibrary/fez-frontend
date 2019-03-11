@@ -65,4 +65,48 @@ describe('Media Preview Component ', () => {
     //
     //     expect(scrollIntoViewMock).toHaveBeenCalled();
     // });
+
+    it('should update state on change of URL', () => {
+        const wrapper = setup({previewMediaUrl: 'http://www.test.com/test.mov', mimeType: 'video/mp4'});
+        const componentWillReceiveProps = jest.spyOn(wrapper.instance(), 'componentWillReceiveProps');
+        wrapper.setState({videoErrorMsg: 'test', videoErrorCode: 1});
+        const firstState = wrapper.state();
+        wrapper.setProps({previewMediaUrl: 'http://www.test.com/test2.mov', mimeType: 'video/mp4'});
+        const secondState = wrapper.state();
+        expect(componentWillReceiveProps).toBeCalled();
+        expect(firstState).not.toEqual(secondState);
+    });
+
+    it('shouldnt update state on change of mimeType', () => {
+        const wrapper = setup({previewMediaUrl: 'http://www.test.com/test.mov', mimeType: 'video/mp4'});
+        const componentWillReceiveProps = jest.spyOn(wrapper.instance(), 'componentWillReceiveProps');
+        wrapper.setState({videoErrorMsg: 'test', videoErrorCode: 1});
+        const firstState = wrapper.state();
+        wrapper.setProps({previewMediaUrl: 'http://www.test.com/test.mov', mimeType: 'video/mp3'});
+        const secondState = wrapper.state();
+        expect(componentWillReceiveProps).toBeCalled();
+        expect(firstState).toEqual(secondState);
+    });
+
+    it('should render when scrolled to a loaded video', () => {
+        const wrapper = setup({mimeType: 'video/mp4'});
+        wrapper.instance().videoLoaded();
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render when video fails', () => {
+        const wrapper = setup({mimeType: 'video/mp4'});
+        const scrollToPreview = jest.spyOn(wrapper.instance(), 'scrollToPreview');
+        wrapper.instance().videoFailed({message: 'test failure', code: 12345});
+        expect(scrollToPreview).toBeCalled();
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render when video fails with no error codes', () => {
+        const wrapper = setup({mimeType: 'video/mp4'});
+        const scrollToPreview = jest.spyOn(wrapper.instance(), 'scrollToPreview');
+        wrapper.instance().videoFailed({});
+        expect(scrollToPreview).not.toBeCalled();
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });

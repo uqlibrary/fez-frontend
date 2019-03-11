@@ -1,13 +1,14 @@
-import React, {PureComponent} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import locale from 'locale/viewRecord';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Hidden from '@material-ui/core/Hidden';
 import Button from '@material-ui/core/Button';
+import Alert from 'modules/SharedComponents/Toolbox/Alert/components/Alert';
 import ReactJWPlayer from 'react-jw-player';
 
-export default class MediaPreview extends PureComponent {
+export default class MediaPreview extends React.Component {
     static propTypes = {
         mediaUrl: PropTypes.string.isRequired,
         previewMediaUrl: PropTypes.string.isRequired,
@@ -18,6 +19,19 @@ export default class MediaPreview extends PureComponent {
     constructor(props) {
         super(props);
         this.mediaPreviewRef = React.createRef();
+        this.state = {
+            videoErrorMsg: null,
+            videoErrorCode: null
+        };
+    }
+
+    componentWillReceiveProps(nextProps) {
+        if(this.props.previewMediaUrl !== nextProps.previewMediaUrl) {
+            this.setState({
+                videoErrorMsg: null,
+                videoErrorCode: null
+            });
+        }
     }
 
     openFileInNewWindow = () => {
@@ -39,6 +53,21 @@ export default class MediaPreview extends PureComponent {
             inline: 'center',
         });
     }
+
+    videoLoaded = () => {
+        this.scrollToPreview();
+    };
+
+    videoFailed = (event) => {
+        if(event.message && event.code) {
+            this.setState({
+                videoErrorMsg: event.message,
+                videoErrorCode: event.code
+            }, () => {
+                this.scrollToPreview();
+            });
+        }
+    };
 
     MediaPreviewButtons = ({openInNewWindow, close}) => {
         return (
@@ -79,12 +108,20 @@ export default class MediaPreview extends PureComponent {
                     </Hidden>
                 </Grid>
                 {
-                    isVideo &&
+                    isVideo && this.state.videoErrorMsg && this.state.videoErrorCode &&
+                        <div style={{marginTop: 12, marginBottom: 12}}>
+                            <Alert {...locale.viewRecord.videoFailedAlert} message={`${locale.viewRecord.videoFailedAlert.message} (${this.state.videoErrorMsg} - ${this.state.videoErrorCode})`} />
+                        </div>
+                }
+                {
+                    isVideo && !this.state.videoErrorMsg &&
                     <ReactJWPlayer
                         playerId="previewVideo"
-                        playerScript="https://cdn.jwplayer.com/libraries/VrkpYhtx.js"
+                        playerScript="http://cdn.jwplayer.com/libraries/VrkpYhtx.js"
                         file={previewMediaUrl}
-                        onVideoLoad={this.scrollToPreview()}
+                        onVideoLoad={this.videoLoaded}
+                        onSetupError={this.videoFailed}
+                        onMediaError={this.videoFailed}
                         isAutoPlay
                     />
                 }
