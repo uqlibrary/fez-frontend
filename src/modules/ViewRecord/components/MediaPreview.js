@@ -24,15 +24,21 @@ export default class MediaPreview extends PureComponent {
         window.open(this.props.mediaUrl);
     };
 
-    scrollToPreview = () => {
-        setTimeout(() => {
-            !!this.mediaPreviewRef && !!this.mediaPreviewRef.current && !!this.mediaPreviewRef.current.scrollIntoView
-            && this.mediaPreviewRef.current.scrollIntoView({
+    /**
+     * @private
+     */
+    _scrollToPreview = () => {
+        if(((this.mediaPreviewRef || {}).current || {}).scrollIntoView) {
+            this.mediaPreviewRef.current.scrollIntoView({
                 behavior: 'smooth',
                 block: 'start',
                 inline: 'center',
             });
-        }, 80);
+        }
+    };
+
+    scrollToPreview = () => {
+        setTimeout(this._scrollToPreview(), 80);
     };
 
     MediaPreviewButtons = ({openInNewWindow, close}) => {

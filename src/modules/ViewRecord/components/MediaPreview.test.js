@@ -37,4 +37,24 @@ describe('Media Preview Component ', () => {
         wrapper.find('Button').first().find('button').simulate('click');
         expect(open).toHaveBeenCalledTimes(1);
     });
+
+    it('should call the ref\'s method for scrolling into view', () => {
+        const wrapper = setup({});
+        const testFn = jest.fn();
+
+        wrapper.instance().mediaPreviewRef = undefined;
+        wrapper.instance()._scrollToPreview();
+
+        wrapper.instance().mediaPreviewRef = {
+            current: {
+                scrollIntoView: testFn
+            }
+        };
+        wrapper.instance()._scrollToPreview();
+        expect(testFn).toHaveBeenCalledWith({
+            behavior: 'smooth',
+            block: 'start',
+            inline: 'center'
+        });
+    });
 });
