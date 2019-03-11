@@ -46,6 +46,51 @@ exports[`GoogleMapViewComponent component should render component 1`] = `
 </div>
 `;
 
+exports[`GoogleMapViewComponent component should render in read-only mode 1`] = `
+<div>
+  <GoogleMap>
+    <Polygon
+      options={
+        Object {
+          "fillColor": "#FF0000",
+          "fillOpacity": 0.35,
+          "strokeColor": "#FF0000",
+          "strokeOpacity": 0.8,
+          "strokeWeight": 2,
+        }
+      }
+      paths={
+        Array [
+          Object {
+            "lat": [Function],
+            "lng": [Function],
+          },
+          Object {
+            "lat": [Function],
+            "lng": [Function],
+          },
+        ]
+      }
+    />
+  </GoogleMap>
+</div>
+`;
+
+exports[`GoogleMapViewComponent component should render in read-only mode 2`] = `
+<div>
+  <GoogleMap>
+    <Marker
+      position={
+        Object {
+          "lat": [Function],
+          "lng": [Function],
+        }
+      }
+    />
+  </GoogleMap>
+</div>
+`;
+
 exports[`Publication's map coordinates should mount component 1`] = `
 <Provider
   store={
