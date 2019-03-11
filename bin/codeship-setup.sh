@@ -9,8 +9,8 @@ npm -v
 echo "node -v"
 node -v
 
-echo "jest --version"
-jest --version
+#echo "jest --version"
+#jest --version
 
 echo "npm cache clear -f"
 npm cache clear -f
