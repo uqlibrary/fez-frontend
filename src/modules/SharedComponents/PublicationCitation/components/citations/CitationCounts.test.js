@@ -80,4 +80,15 @@ describe('CitationCounts', () => {
         const wrapper = setup({publication, hideViewFullStatisticsLink: true});
         expect(toJson(wrapper)).toMatchSnapshot();
     })
+
+    it('should render open access icon when required', () => {
+        const wrapper = setup({
+            publication: {
+                ...myRecordsList.data[0],
+                calculateOpenAccess: (() => true)
+            }
+        });
+
+        expect(toJson(wrapper.find('OpenAccessIcon'))).toMatchSnapshot();
+    });
 });

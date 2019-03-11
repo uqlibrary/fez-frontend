@@ -174,4 +174,54 @@ describe('MyRecords test', () => {
         expect(push).toHaveBeenCalledWith(routes.pathConfig.records.fix('UQ:111111'));
         expect(setFixRecord).toHaveBeenCalled();
     });
+
+    it('should handle export publications', () => {
+        const exportAuthorPublicationsFn = jest.fn();
+        const wrapper = setup({
+            actions: {
+                exportAuthorPublications: exportAuthorPublicationsFn,
+                searchAuthorPublications: jest.fn()
+            },
+            publicationsList: [1, 2, 3], // myRecordsList.data,
+            publicationsListPagingData: {"total": 147, "per_page": 20, "current_page": 1, "from": 1,"to": 20},
+            publicationsListFacets: {
+                "Display type": {
+                    "doc_count_error_upper_bound": 0,
+                    "sum_other_doc_count": 3,
+                    "buckets": [{"key": 179, "doc_count": 95}, {"key": 130, "doc_count": 34}, {
+                        "key": 177,
+                        "doc_count": 2
+                    }, {"key": 183, "doc_count": 2}, {"key": 174, "doc_count": 1}]
+                },
+                "Keywords": {
+                    "doc_count_error_upper_bound": 0,
+                    "sum_other_doc_count": 641,
+                    "buckets": [{"key": "Brca1", "doc_count": 15}, {
+                        "key": "Oncology",
+                        "doc_count": 15
+                    }, {"key": "Breast cancer", "doc_count": 13}, {
+                        "key": "Genetics & Heredity",
+                        "doc_count": 12
+                    }, {"key": "Biochemistry & Molecular Biology", "doc_count": 10}]
+                }
+            }
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+
+        wrapper.find('WithStyles(PublicationsListSorting)').props().onExportPublications({exportFormat: 'csv'});
+        expect(exportAuthorPublicationsFn).toHaveBeenCalled();
+    });
+
+    it('should get facets for my datasets', () => {
+        const wrapper = setup({
+            actions: {
+                searchAuthorPublications: jest.fn()
+            }
+        });
+
+        const result = wrapper.instance().getMyDatasetFacets({
+            'Display type': 371
+        });
+        expect(result).toEqual({});
+    });
 });

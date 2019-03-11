@@ -7,7 +7,7 @@ import Hidden from '@material-ui/core/Hidden';
 import Typography from '@material-ui/core/Typography';
 import {withStyles} from '@material-ui/core';
 
-const styles = (theme) => ({
+export const styles = (theme) => ({
     filename: {
         ...theme.typography.body2,
     }
@@ -38,9 +38,7 @@ export class FileName extends PureComponent {
     }
 
     canShowPreview = (mimeType) => {
-        return this.isImage(mimeType);
-        // TODO revert once videos are transcoded to open format #158519502
-        // return (this.isImage(mimeType) || this.isVideo(mimeType));
+        return this.isImage(mimeType) || this.isVideo(mimeType);
     }
 
     showPreview = (mediaUrl, previewMediaUrl, mimeType) => (e) => {

@@ -44,6 +44,7 @@ describe('Fix record actions', () => {
 
             const expectedActions = [
                 actions.FIX_RECORD_LOADING,
+                actions.APP_ALERT_SHOW,
                 actions.FIX_RECORD_LOAD_FAILED
             ];
             try {
@@ -353,6 +354,7 @@ describe('Fix record actions', () => {
 
             const expectedActions = [
                 actions.FIX_RECORD_PROCESSING,
+                actions.APP_ALERT_SHOW,
                 actions.FIX_RECORD_FAILED
             ];
 
@@ -533,6 +535,7 @@ describe('Fix record actions', () => {
 
             const expectedActions = [
                 actions.FIX_RECORD_PROCESSING,
+                actions.APP_ALERT_SHOW,
                 actions.FIX_RECORD_FAILED
             ];
 

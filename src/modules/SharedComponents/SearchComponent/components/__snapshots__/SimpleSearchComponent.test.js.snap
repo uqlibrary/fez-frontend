@@ -1,79 +1,56 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SimpleSearchComponent should render default view 1`] = `
-<React.Fragment>
-  <form
-    onSubmit={[Function]}
-    style={
-      Object {
-        "margin": 8,
-      }
-    }
-  >
-    <React.Fragment>
-      <WithStyles(Grid)
-        alignItems="center"
-        container={true}
-        spacing={16}
-      >
-        <WithStyles(Grid)
-          item={true}
-          xs={true}
-        >
-          <TextField
-            aria-label="Enter your search query to search eSpace and then press Enter"
-            error={null}
-            fullWidth={true}
-            label="Search eSpace"
-            onChange={[Function]}
-            onKeyPress={[Function]}
-            placeholder="Enter your search query to search all fields in eSpace"
-            required={false}
-            select={false}
-            type="search"
-            value=""
-            variant="standard"
-          />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          sm="auto"
-          xs={12}
-        >
-          <WithStyles(Button)
-            aria-label="Click to search eSpace"
-            color="primary"
-            disabled={false}
-            fullWidth={true}
-            onClick={[Function]}
-            variant="contained"
-          >
-            Search
-          </WithStyles(Button)>
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          sm="auto"
-          xs={12}
-        >
-          <WithStyles(Button)
-            aria-label="Click to switch to Advanced search"
-            className="advancedButton"
-            fullWidth={true}
-            onClick={[Function]}
-            variant="contained"
-          >
-            Advanced search
-          </WithStyles(Button)>
-        </WithStyles(Grid)>
-      </WithStyles(Grid)>
-    </React.Fragment>
-  </form>
-</React.Fragment>
+exports[`SimpleSearchComponent should have a proper style generator 1`] = `
+Object {
+  "inHeader": Object {
+    "& input[type=\\"search\\"]::-webkit-search-cancel-button": Object {
+      "display": "none",
+    },
+    "backgroundColor": "test2",
+  },
+  "mobileBackArrow": Object {
+    "fill": "test1",
+    "height": 50,
+    "opacity": 0.5,
+    "width": 50,
+  },
+  "mobileBackArrowButton": Object {
+    "height": 70,
+    "width": 70,
+  },
+  "mobileHeader": Object {
+    "backgroundColor": "test2",
+    "height": 70,
+    "left": 0,
+    "position": "absolute",
+    "top": 0,
+    "width": "100%",
+    "zIndex": 100,
+  },
+  "mobileSearchInput": Object {
+    "& input": Object {
+      "fontSize": 32,
+      "fontWeight": "test3",
+      "lineHeight": 1.2,
+      "marginTop": 10,
+      "overflow": "hidden",
+      "textOverflow": "ellipsis",
+    },
+    "height": 70,
+    "width": "99%",
+  },
+  "searchIconMobile": Object {
+    "fill": "test2",
+  },
+  "searchIconPrefix": Object {
+    "fill": "test1",
+    "opacity": 0.66,
+  },
+}
 `;
 
-exports[`SimpleSearchComponent should render show mobile button 1`] = `
-<React.Fragment>
+exports[`SimpleSearchComponent should render default view 1`] = `
+<Fragment>
   <form
     onSubmit={[Function]}
     style={
@@ -82,70 +59,94 @@ exports[`SimpleSearchComponent should render show mobile button 1`] = `
       }
     }
   >
-    <React.Fragment>
+    <WithStyles(Grid)
+      alignItems="center"
+      container={true}
+      spacing={16}
+    >
       <WithStyles(Grid)
-        alignItems="center"
-        container={true}
-        spacing={16}
+        item={true}
+        xs={true}
       >
-        <WithStyles(Grid)
-          item={true}
-          xs={true}
-        >
-          <TextField
-            aria-label="Enter your search query to search eSpace and then press Enter"
-            error={null}
-            fullWidth={true}
-            label="Search eSpace"
-            onChange={[Function]}
-            onKeyPress={[Function]}
-            placeholder="Enter your search query to search all fields in eSpace"
-            required={false}
-            select={false}
-            type="search"
-            value=""
-            variant="standard"
-          />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          sm="auto"
-          xs={12}
-        >
-          <WithStyles(Button)
-            aria-label="Click to search eSpace"
-            color="primary"
-            disabled={false}
-            fullWidth={true}
-            onClick={[Function]}
-            variant="contained"
-          >
-            Search
-          </WithStyles(Button)>
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          sm="auto"
-          xs={12}
-        >
-          <WithStyles(Button)
-            aria-label="Click to switch to Advanced search"
-            className="advancedButton"
-            fullWidth={true}
-            onClick={[Function]}
-            variant="contained"
-          >
-            Advanced search
-          </WithStyles(Button)>
-        </WithStyles(Grid)>
+        <TextField
+          aria-label="Enter your search query to search eSpace and then press Enter"
+          error={null}
+          fullWidth={true}
+          label="Search eSpace"
+          onChange={[Function]}
+          onKeyPress={[Function]}
+          placeholder="Enter your search query to search all fields in eSpace"
+          required={false}
+          select={false}
+          type="search"
+          value=""
+          variant="standard"
+        />
       </WithStyles(Grid)>
-    </React.Fragment>
+      <WithStyles(Grid)
+        item={true}
+        sm="auto"
+        xs={12}
+      >
+        <WithStyles(Button)
+          aria-label="Click to search eSpace"
+          color="primary"
+          disabled={false}
+          fullWidth={true}
+          onClick={[Function]}
+          variant="contained"
+        >
+          Search
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm="auto"
+        xs={12}
+      >
+        <WithStyles(Button)
+          aria-label="Click to switch to Advanced search"
+          className="advancedButton"
+          fullWidth={true}
+          onClick={[Function]}
+          variant="contained"
+        >
+          Advanced search
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
   </form>
-</React.Fragment>
+</Fragment>
+`;
+
+exports[`SimpleSearchComponent should render mobile view 1`] = `
+<Hidden
+  implementation="js"
+  lgDown={false}
+  lgUp={false}
+  mdDown={false}
+  mdUp={false}
+  smDown={false}
+  smUp={true}
+  xlDown={false}
+  xlUp={false}
+  xsDown={false}
+  xsUp={false}
+>
+  <WithStyles(Grid)
+    item={true}
+  >
+    <WithStyles(Button)
+      onClick={[Function]}
+    >
+      <pure(ArrowBackIcon) />
+    </WithStyles(Button)>
+  </WithStyles(Grid)>
+</Hidden>
 `;
 
 exports[`SimpleSearchComponent should render show prefix icon in the search box 1`] = `
-<React.Fragment>
+<Fragment>
   <form
     onSubmit={[Function]}
     style={
@@ -154,24 +155,115 @@ exports[`SimpleSearchComponent should render show prefix icon in the search box 
       }
     }
   >
-    <React.Fragment>
+    <WithStyles(Grid)
+      alignItems="center"
+      container={true}
+      spacing={16}
+    >
+      <WithStyles(Grid)
+        item={true}
+        xs={true}
+      >
+        <TextField
+          aria-label="Enter your search query to search eSpace and then press Enter"
+          error={null}
+          fullWidth={true}
+          label="Search eSpace"
+          onChange={[Function]}
+          onKeyPress={[Function]}
+          placeholder="Enter your search query to search all fields in eSpace"
+          required={false}
+          select={false}
+          type="search"
+          value=""
+          variant="standard"
+        />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm="auto"
+        xs={12}
+      >
+        <WithStyles(Button)
+          aria-label="Click to search eSpace"
+          color="primary"
+          disabled={false}
+          fullWidth={true}
+          onClick={[Function]}
+          variant="contained"
+        >
+          Search
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm="auto"
+        xs={12}
+      >
+        <WithStyles(Button)
+          aria-label="Click to switch to Advanced search"
+          className="advancedButton"
+          fullWidth={true}
+          onClick={[Function]}
+          variant="contained"
+        >
+          Advanced search
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </form>
+</Fragment>
+`;
+
+exports[`SimpleSearchComponent should render with a class "header" for use in AppBar 1`] = `
+<Fragment>
+  <form
+    onSubmit={[Function]}
+    style={
+      Object {
+        "margin": 8,
+      }
+    }
+  >
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={true}
+      xsUp={false}
+    >
       <WithStyles(Grid)
         alignItems="center"
+        className={Object {}}
         container={true}
-        spacing={16}
+        direction="row"
+        spacing={8}
+        wrap="nowrap"
       >
         <WithStyles(Grid)
           item={true}
           xs={true}
         >
           <TextField
+            InputProps={
+              Object {
+                "disableUnderline": true,
+              }
+            }
             aria-label="Enter your search query to search eSpace and then press Enter"
+            autoComplete="search"
             error={null}
             fullWidth={true}
-            label="Search eSpace"
+            label={false}
             onChange={[Function]}
             onKeyPress={[Function]}
-            placeholder="Enter your search query to search all fields in eSpace"
+            placeholder="Search eSpace"
             required={false}
             select={false}
             type="search"
@@ -179,140 +271,45 @@ exports[`SimpleSearchComponent should render show prefix icon in the search box 
             variant="standard"
           />
         </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          sm="auto"
-          xs={12}
-        >
-          <WithStyles(Button)
-            aria-label="Click to search eSpace"
-            color="primary"
-            disabled={false}
-            fullWidth={true}
-            onClick={[Function]}
-            variant="contained"
-          >
-            Search
-          </WithStyles(Button)>
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          sm="auto"
-          xs={12}
-        >
-          <WithStyles(Button)
-            aria-label="Click to switch to Advanced search"
-            className="advancedButton"
-            fullWidth={true}
-            onClick={[Function]}
-            variant="contained"
-          >
-            Advanced search
-          </WithStyles(Button)>
-        </WithStyles(Grid)>
       </WithStyles(Grid)>
-    </React.Fragment>
-  </form>
-</React.Fragment>
-`;
-
-exports[`SimpleSearchComponent should render with a class "header" for use in AppBar 1`] = `
-<React.Fragment>
-  <form
-    onSubmit={[Function]}
-    style={
-      Object {
-        "margin": 8,
-      }
-    }
-  >
-    <React.Fragment>
-      <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
-        smDown={false}
-        smUp={false}
-        xlDown={false}
-        xlUp={false}
-        xsDown={true}
-        xsUp={false}
-      >
-        <WithStyles(Grid)
-          alignItems="center"
-          className={Object {}}
-          container={true}
-          direction="row"
-          spacing={8}
-          wrap="nowrap"
-        >
-          <WithStyles(Grid)
-            item={true}
-            xs={true}
-          >
-            <TextField
-              InputProps={
-                Object {
-                  "disableUnderline": true,
-                }
-              }
-              aria-label="Enter your search query to search eSpace and then press Enter"
-              autoComplete="search"
-              error={null}
-              fullWidth={true}
-              label={false}
-              onChange={[Function]}
-              onKeyPress={[Function]}
-              placeholder="Search eSpace"
-              required={false}
-              select={false}
-              type="search"
-              value=""
-              variant="standard"
-            />
-          </WithStyles(Grid)>
-        </WithStyles(Grid)>
-      </Hidden>
-      <Hidden
-        implementation="js"
-        lgDown={false}
-        lgUp={false}
-        mdDown={false}
-        mdUp={false}
-        smDown={false}
-        smUp={true}
-        xlDown={false}
-        xlUp={false}
-        xsDown={false}
-        xsUp={false}
-      >
-        <WithStyles(Tooltip)
-          TransitionComponent={[Function]}
-          TransitionProps={
-            Object {
-              "timeout": 300,
-            }
+    </Hidden>
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={true}
+      xlDown={false}
+      xlUp={false}
+      xsDown={false}
+      xsUp={false}
+    >
+      <WithStyles(Tooltip)
+        TransitionComponent={[Function]}
+        TransitionProps={
+          Object {
+            "timeout": 300,
           }
-          placement="bottom-end"
-          title="Search eSpace"
+        }
+        placement="bottom-end"
+        title="Search eSpace"
+      >
+        <WithStyles(IconButton)
+          aria-label="Click to search eSpace"
+          onClick={[Function]}
         >
-          <WithStyles(IconButton)
-            aria-label="Click to search eSpace"
-            onClick={[Function]}
-          >
-            <pure(SearchIcon) />
-          </WithStyles(IconButton)>
-        </WithStyles(Tooltip)>
-      </Hidden>
-    </React.Fragment>
+          <pure(SearchIcon) />
+        </WithStyles(IconButton)>
+      </WithStyles(Tooltip)>
+    </Hidden>
   </form>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`SimpleSearchComponent should set search value from prop 1`] = `
-<React.Fragment>
+<Fragment>
   <form
     onSubmit={[Function]}
     style={
@@ -321,64 +318,73 @@ exports[`SimpleSearchComponent should set search value from prop 1`] = `
       }
     }
   >
-    <React.Fragment>
+    <WithStyles(Grid)
+      alignItems="center"
+      container={true}
+      spacing={16}
+    >
       <WithStyles(Grid)
-        alignItems="center"
-        container={true}
-        spacing={16}
+        item={true}
+        xs={true}
       >
-        <WithStyles(Grid)
-          item={true}
-          xs={true}
-        >
-          <TextField
-            aria-label="Enter your search query to search eSpace and then press Enter"
-            error={null}
-            fullWidth={true}
-            label="Search eSpace"
-            onChange={[Function]}
-            onKeyPress={[Function]}
-            placeholder="Enter your search query to search all fields in eSpace"
-            required={false}
-            select={false}
-            type="search"
-            value="i feel lucky"
-            variant="standard"
-          />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          sm="auto"
-          xs={12}
-        >
-          <WithStyles(Button)
-            aria-label="Click to search eSpace"
-            color="primary"
-            disabled={false}
-            fullWidth={true}
-            onClick={[Function]}
-            variant="contained"
-          >
-            Search
-          </WithStyles(Button)>
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          sm="auto"
-          xs={12}
-        >
-          <WithStyles(Button)
-            aria-label="Click to switch to Advanced search"
-            className="advancedButton"
-            fullWidth={true}
-            onClick={[Function]}
-            variant="contained"
-          >
-            Advanced search
-          </WithStyles(Button)>
-        </WithStyles(Grid)>
+        <TextField
+          aria-label="Enter your search query to search eSpace and then press Enter"
+          error={null}
+          fullWidth={true}
+          label="Search eSpace"
+          onChange={[Function]}
+          onKeyPress={[Function]}
+          placeholder="Enter your search query to search all fields in eSpace"
+          required={false}
+          select={false}
+          type="search"
+          value="i feel lucky"
+          variant="standard"
+        />
       </WithStyles(Grid)>
-    </React.Fragment>
+      <WithStyles(Grid)
+        item={true}
+        sm="auto"
+        xs={12}
+      >
+        <WithStyles(Button)
+          aria-label="Click to search eSpace"
+          color="primary"
+          disabled={false}
+          fullWidth={true}
+          onClick={[Function]}
+          variant="contained"
+        >
+          Search
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm="auto"
+        xs={12}
+      >
+        <WithStyles(Button)
+          aria-label="Click to switch to Advanced search"
+          className="advancedButton"
+          fullWidth={true}
+          onClick={[Function]}
+          variant="contained"
+        >
+          Advanced search
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
   </form>
-</React.Fragment>
+</Fragment>
+`;
+
+exports[`SimpleSearchComponent should show prefix icon when in header 1`] = `
+<WithStyles(Grid)
+  item={true}
+  xs="auto"
+>
+  <pure(SearchIcon)
+    className="searchIconPrefix"
+  />
+</WithStyles(Grid)>
 `;

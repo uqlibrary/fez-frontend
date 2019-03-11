@@ -1,6 +1,7 @@
 jest.dontMock('./CreativeWorkForm');
 
 import CreativeWorkForm from './CreativeWorkForm';
+import {NTRO_SUBTYPE_CPEE_EXHIBITION_EVENT} from 'config/general';
 
 function setup(testProps, isShallow = true){
     const props = {
@@ -27,5 +28,14 @@ describe('CreativeWorkForm renders ', () => {
         wrapper.find('Field').forEach(field => {
             expect(field.props().disabled).toEqual(true);
         })
+    });
+
+    it('should show exhibition content correctly', () => {
+        const testProps = {
+            subtype: NTRO_SUBTYPE_CPEE_EXHIBITION_EVENT,
+            isNtro: true
+        };
+        const wrapper = setup(testProps);
+        expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

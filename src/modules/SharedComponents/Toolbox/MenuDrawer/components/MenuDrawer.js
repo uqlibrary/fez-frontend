@@ -109,9 +109,9 @@ export class MenuDrawer extends Component {
         return nextProps.logoImage !== this.props.logoImage
         || nextProps.logoText !== this.props.logoText
         || nextProps.drawerOpen !== this.props.drawerOpen
-        || nextProps.docked !== this.props.docked
         || JSON.stringify(nextProps.locale) !== JSON.stringify(this.props.locale)
-        || JSON.stringify(nextProps.menuItems) !== JSON.stringify(this.props.menuItems);
+        || JSON.stringify(nextProps.menuItems) !== JSON.stringify(this.props.menuItems)
+        || nextProps.docked !== this.props.docked;
     }
 
     focusOnElementId = (elementId) => {

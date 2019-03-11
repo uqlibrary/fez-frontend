@@ -27,7 +27,8 @@ export default {
         googleScholarId: 'Please provide a valid 12 character Google Scholar ID',
         advancedSearchSelectionRequired: 'Please select a field to search',
         dateRange: 'Please provide a valid start/end date range',
-        pageRange: 'Please provide a valid start/end page range'
+        pageRange: 'Please provide a valid start/end page range',
+        remindToAdd: 'Please remember to click ADD to add this item to your list'
     },
     validationErrorsSummary: {
         rek_title: 'Title is required',

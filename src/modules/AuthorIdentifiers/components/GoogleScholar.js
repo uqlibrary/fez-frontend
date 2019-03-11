@@ -61,7 +61,7 @@ export default class GoogleScholar extends PureComponent {
         if (submitFailed && error) {
             alertProps = {
                 ...alertLocale.errorAlert,
-                message: alertLocale.errorAlert.message
+                message: !!alertLocale.errorAlert && alertLocale.errorAlert.message
                     ? alertLocale.errorAlert.message(error)
                     : error
             };

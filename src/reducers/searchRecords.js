@@ -99,6 +99,7 @@ export const deduplicateResults = (list) => {
                             const itemPriority = locale.global.sources[item.sources[0].source].priority; // items current source priority
 
                             // prevent duplicate sources
+                            /* istanbul ignore else */
                             if (!currentItemSources.some((source) => {
                                 return source.source === item.sources[0].source;
                             })) {
@@ -186,9 +187,7 @@ const handlers = {
                 to: action.payload.to,
                 per_page: action.payload.per_page
             },
-            publicationsListFacets: action.payload.hasOwnProperty('filters') && action.payload.filters.hasOwnProperty('facets') && action.payload.filters.facets
-                ? action.payload.filters.facets
-                : {},
+            publicationsListFacets: ( action.payload.filters || {} ).facets || {},
         };
     },
 

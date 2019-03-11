@@ -130,12 +130,12 @@ export class AdvancedSearchCaption extends PureComponent {
             .filter((item) => !!item.value) // Dont render caption until it has a value
             .map((item, index) => {
                 return (
-                    <React.Fragment>
+                    <span key={index}>
                         <span className={classes.and}> {index !== 0 && ' AND '} </span>
                         <span className={classes.title}>{item.title} </span>
                         <span className={classes.combiner}> {item.combiner} </span>
                         <span className={classes.value}> {item.value}</span>
-                    </React.Fragment>
+                    </span>
                 );
             });
     };

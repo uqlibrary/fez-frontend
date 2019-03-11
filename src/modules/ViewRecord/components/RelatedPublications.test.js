@@ -1,5 +1,6 @@
 import {dataCollection} from 'mock/data/testing/records';
-import {RelatedPublications} from "./RelatedPublications";
+import {RelatedPublicationsClass} from "./RelatedPublications";
+import RelatedPublications from "./RelatedPublications";
 
 function setup(testProps, isShallow = true){
     const props = {
@@ -8,7 +9,7 @@ function setup(testProps, isShallow = true){
         title: testProps.title || '',
         ...testProps
     };
-    return getElement(RelatedPublications, props, isShallow);
+    return getElement(RelatedPublicationsClass, props, isShallow);
 }
 
 describe('Related publications Component ', () => {
@@ -17,6 +18,15 @@ describe('Related publications Component ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('.relatedPublications li').length).toEqual(2);
     });
+
+    it('should render component', () => {
+        const wrapper = getElement(RelatedPublications, {
+            publication: dataCollection,
+            title: 'Title'
+        }, false);
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
 
     it('should not render component with empty data', () => {
         const publication = Object.assign({}, dataCollection);
@@ -37,5 +47,28 @@ describe('Related publications Component ', () => {
         const wrapper = setup({publication: publication});
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('.relatedPublications li').length).toEqual(2);
+    });
+
+    it('should render with a publication title', () => {
+        const wrapper = getElement(RelatedPublications, {
+            publication: dataCollection,
+            title: 'A test Title',
+            showPublicationTitle: true
+        }, false);
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render without a parent search key', () => {
+        const wrapper = getElement(RelatedPublications, {
+            publication: dataCollection,
+            title: 'Title',
+            parentSearchKey: {
+                key: 'fez_record_search_key_isderivationof',
+                pid: 'rek_isderivationof',
+                title: 'rek_isderivationof_lookup',
+                order: 'rek_isderivationof_order'
+            }
+        }, false);
+        expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

@@ -1,4 +1,5 @@
-import {Links} from './Links';
+import {LinksClass} from './Links';
+import Links from './Links';
 import {recordLinks} from 'mock/data/testing/records';
 import {openAccessConfig} from 'config';
 import {calculateOpenAccess} from 'middleware/publicationEnhancer';
@@ -8,7 +9,7 @@ function setup(testProps, isShallow = true){
         classes: {header: 'header', link: 'link'},
         publication: testProps.publication || recordLinks,
     };
-    return getElement(Links, props, isShallow);
+    return getElement(LinksClass, props, isShallow);
 }
 
 describe('Component Links ', () => {
@@ -91,6 +92,38 @@ describe('Component Links ', () => {
 
     it('should not render component for empty publication', () => {
         const wrapper = setup({publication: {}});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('Rendering due to a pubmed central id', () => {
+        const wrapper = setup({
+            publication: {
+                fez_record_search_key_pubmed_central_id : {rek_pubmed_central_id: '12345'}
+            }
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('Rendering due to a doi', () => {
+        const wrapper = setup({
+            publication: {
+                fez_record_search_key_doi : {rek_doi: '12345'}
+            }
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('Rendering due to being open access link no doi', () => {
+        const wrapper = setup({
+            publication: {
+                fez_record_search_key_oa_status : {rek_oa_status: 'Link (no DOI)'}
+            }
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('Full mount render', () => {
+        const wrapper = getElement(Links, {publication: recordLinks}, false);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

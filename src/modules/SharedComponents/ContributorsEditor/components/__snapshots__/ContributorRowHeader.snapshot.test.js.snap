@@ -1,8 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component ContributorRowHeader header for contributor editor control with all options 1`] = `
-<React.Fragment>
-  <WithStyles(ConfirmDialogBox)
+<Fragment>
+  <ConfirmDialogBox
+    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -14,10 +15,8 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
     onAction={[MockFunction]}
     onRef={[Function]}
   />
-  <React.Fragment>
-    <br />
-    Step 2 - Select your name from the list below
-  </React.Fragment>
+  <br />
+  Step 2 - Select your name from the list below
   <WithStyles(ListItem)
     classes={
       Object {
@@ -118,12 +117,13 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
       </WithStyles(Tooltip)>
     </WithStyles(ListItemSecondaryAction)>
   </WithStyles(ListItem)>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Component ContributorRowHeader header for contributor editor control with delete all disabled 1`] = `
-<React.Fragment>
-  <WithStyles(ConfirmDialogBox)
+<Fragment>
+  <ConfirmDialogBox
+    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -213,12 +213,13 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
       </WithStyles(Tooltip)>
     </WithStyles(ListItemSecondaryAction)>
   </WithStyles(ListItem)>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Component ContributorRowHeader header for contributor editor control with name and delete all button only 1`] = `
-<React.Fragment>
-  <WithStyles(ConfirmDialogBox)
+<Fragment>
+  <ConfirmDialogBox
+    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -308,12 +309,13 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
       </WithStyles(Tooltip)>
     </WithStyles(ListItemSecondaryAction)>
   </WithStyles(ListItem)>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Component ContributorRowHeader header for creator role 1`] = `
-<React.Fragment>
-  <WithStyles(ConfirmDialogBox)
+<Fragment>
+  <ConfirmDialogBox
+    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -425,5 +427,122 @@ exports[`Component ContributorRowHeader header for creator role 1`] = `
       </WithStyles(Tooltip)>
     </WithStyles(ListItemSecondaryAction)>
   </WithStyles(ListItem)>
-</React.Fragment>
+</Fragment>
+`;
+
+exports[`Component ContributorRowHeader should display infinite class 1`] = `
+<Fragment>
+  <ConfirmDialogBox
+    hideCancelButton={false}
+    locale={
+      Object {
+        "cancelButtonLabel": "No",
+        "confirmButtonLabel": "Yes",
+        "confirmationMessage": "Are you sure you want to delete all records?",
+        "confirmationTitle": "Delete all",
+      }
+    }
+    onAction={[MockFunction]}
+    onRef={[Function]}
+  />
+  <WithStyles(ListItem)
+    classes={
+      Object {
+        "root": undefined,
+      }
+    }
+  >
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={true}
+      xsUp={false}
+    >
+      <WithStyles(ListItemIcon)>
+        <pure(PeopleIcon) />
+      </WithStyles(ListItemIcon)>
+    </Hidden>
+    <WithStyles(ListItemText)
+      secondary="Name as published"
+      secondaryTypographyProps={
+        Object {
+          "variant": "caption",
+        }
+      }
+    />
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={true}
+      xsUp={false}
+    >
+      <WithStyles(ListItemText)
+        classes={
+          Object {
+            "secondary": "undefined test-class-1",
+          }
+        }
+        secondary="Reorder records"
+        secondaryTypographyProps={
+          Object {
+            "variant": "caption",
+          }
+        }
+      />
+    </Hidden>
+    <WithStyles(ListItemSecondaryAction)
+      classes={
+        Object {
+          "root": "test-class-2",
+        }
+      }
+    >
+      <WithStyles(Tooltip)
+        title="Remove all records"
+      >
+        <WithStyles(IconButton)
+          disabled={false}
+          onClick={[Function]}
+        >
+          <pure(DeleteForeverIcon) />
+        </WithStyles(IconButton)>
+      </WithStyles(Tooltip)>
+    </WithStyles(ListItemSecondaryAction)>
+  </WithStyles(ListItem)>
+</Fragment>
+`;
+
+exports[`Component ContributorRowHeader should have a proper style generator 1`] = `
+Object {
+  "header": Object {
+    "borderBottom": "1px solid rgba(0, 0, 0, 0.2)",
+    "marginTop": 8,
+  },
+  "paddingRight14": Object {
+    "paddingRight": 14,
+  },
+  "paddingRight24": Object {
+    "paddingRight": 24,
+  },
+  "paddingRight36": Object {
+    "paddingRight": 36,
+  },
+  "right": Object {
+    "textAlign": "right",
+  },
+}
 `;

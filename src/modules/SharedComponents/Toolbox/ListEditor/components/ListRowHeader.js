@@ -39,6 +39,8 @@ export class ListRowHeader extends Component {
         this.confirmationBox.showConfirmation();
     }
 
+    setConfirmationRef = ref => (this.confirmationBox = ref);
+
     render() {
         const {nameColumn, reorderColumn, deleteAll, deleteAllConfirmation} = this.props.locale;
         const {disabled, hideReorder, classes} = this.props;
@@ -46,7 +48,7 @@ export class ListRowHeader extends Component {
         return (
             <div style={{flexGrow: 1, padding: 8}}>
                 <ConfirmDialogBox
-                    onRef={ref => (this.confirmationBox = ref)}
+                    onRef={this.setConfirmationRef}
                     onAction={this.props.onDeleteAll}
                     locale={deleteAllConfirmation}
                 />

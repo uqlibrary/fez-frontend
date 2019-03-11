@@ -130,6 +130,7 @@
     "react-infinite": "0.13.0",
     "react-json-tree": "0.11.0",
     "react-jss": "^8.6.1",
+    "react-jw-player": "^1.19.0",
     "react-redux": "^5.0.7",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
@@ -233,6 +234,17 @@
       "enzyme"
     ],
     "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/modules/**/*.{js,jsx}",
+      "!src/**/index.js",
+      "!src/**/containers/*.{js,jsx}",
+      "src/modules/Index/*.{js,jsx}",
+      "src/actions/*.{js,jsx}",
+      "src/middleware/*.{js,jsx}",
+      "src/reducers/*.{js,jsx}",
+      "!src/modules/SharedComponents/RichEditor/components/RichEditor.js",
+      "!src/modules/SharedComponents/Toolbox/Charts/components/*.js"
+    ],
     "coverageReporters": [
       "html",
       "text"

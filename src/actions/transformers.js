@@ -107,7 +107,6 @@ export const getRecordFileAttachmentSearchKey = (files, record) => {
 * @returns {Object} formatted {fez_record_search_key_author} for record request
 */
 export const getRecordAuthorsSearchKey = (authors) => {
-    console.log(authors);
     if (!authors || authors.length === 0) return {};
     return {
         fez_record_search_key_author: authors.map((item, index) => (
@@ -170,7 +169,7 @@ export const getRecordAuthorsIdSearchKey = (authors, defaultAuthorId) => {
                 item.hasOwnProperty('rek_author_id') && item.hasOwnProperty('rek_author_id_order')
                     ? item
                     : {
-                        rek_author_id: (item.hasOwnProperty('aut_id') && item.aut_id) || (item.hasOwnProperty('authorId') && item.authorId) || null,
+                        rek_author_id: (item.hasOwnProperty('aut_id') && item.aut_id) || (item.hasOwnProperty('authorId') && item.authorId) || 0,
                         rek_author_id_order: index + 1
                     }
             )
@@ -186,12 +185,11 @@ export const getRecordAuthorAffiliationSearchKey = (authors) => {
             .map(
                 (item, index) => (
                     {
-                        rek_author_affiliation_name: item.orgaff,
+                        rek_author_affiliation_name: item.orgaff || 'University of Queensland',
                         rek_author_affiliation_name_order: index + 1
                     }
                 )
             )
-            .filter(item => item.rek_author_affiliation_name !== '')
     };
 };
 
@@ -203,12 +201,11 @@ export const getRecordAuthorAffiliationTypeSearchKey = (authors) => {
             .map(
                 (item, index) => (
                     {
-                        rek_author_affiliation_type: parseInt(item.orgtype, 10),
+                        rek_author_affiliation_type: !!item.orgtype ? parseInt(item.orgtype, 10) : 453989,
                         rek_author_affiliation_type_order: index + 1
                     }
                 )
             )
-            .filter(item => !isNaN(item.rek_author_affiliation_type))
     };
 };
 
@@ -393,30 +390,6 @@ export const getRecordAbstractDescriptionSearchKey = (abstract = null) => {
     };
 };
 
-// * getGrantsListSearchKey - returns the grant grant details as mapped in search keys
-// Input:
-// "grants":[
-//  {"grantAgencyName":"Funder 1","grantID":"00001","grantAgencyType":"Museum","disabled":false},
-//  {"grantAgencyName":"Funder 2","grantID":"00002","grantAgencyType":"Gallery","disabled":false}
-// ]
-//
-// Output:
-// "fez_record_search_key_grant_agency": [
-//     {
-//         "rek_grant_agency_id": 00001,
-//         "rek_grant_agency_pid": "UQ:123456",
-//         "rek_grant_agency_xsdmf_id": 0,
-//         "rek_grant_agency": "Funder 1",
-//         "rek_grant_agency_order": 1
-//     },
-//     {
-//         "rek_grant_agency_id": 00002,
-//         "rek_grant_agency_pid": "UQ:123456",
-//         "rek_grant_agency_xsdmf_id": 0,
-//         "rek_grant_agency": "Funder 2",
-//         "rek_grant_agency_order": 2
-//     }
-// ]
 export const getGrantsListSearchKey = (grants) => {
     if (!grants || grants.length === 0) return {};
 
@@ -424,26 +397,23 @@ export const getGrantsListSearchKey = (grants) => {
         fez_record_search_key_grant_agency: [
             ...grants
                 .map((item, index) => ({
-                    rek_grant_agency: item.grantAgencyName,
+                    rek_grant_agency: item.grantAgencyName || 'Not set',
                     rek_grant_agency_order: index + 1
                 }))
-                .filter(item => !!item.rek_grant_agency)
         ],
         fez_record_search_key_grant_id: [
             ...grants
                 .map((item, index) => ({
-                    rek_grant_id: item.grantId,
+                    rek_grant_id: item.grantId || 'Not set',
                     rek_grant_id_order: index + 1
                 }))
-                .filter(item => !!item.rek_grant_id)
         ],
         fez_record_search_key_grant_agency_type: [
             ...grants
                 .map((item, index) => ({
-                    rek_grant_agency_type: parseInt(item.grantAgencyType, 10),
+                    rek_grant_agency_type: parseInt(item.grantAgencyType, 10) || 454045, // Vocab value for "Not set"
                     rek_grant_agency_type_order: index + 1
                 }))
-                .filter(item => !!item.rek_grant_agency_type)
         ]
     };
 };
@@ -463,15 +433,14 @@ export const getLanguageSearchKey = (languages) => {
 
 export const getNtroMetadataSearchKeys = (data) => {
     if (!data) return {};
-    const hasAValue = (value) => !!value.rek_author_id && !isNaN(value.rek_author_id);
-    const selectedAuthorIdIndex = getRecordAuthorsIdSearchKey(data.authors).fez_record_search_key_author_id.findIndex(hasAValue);
+    const selectedAuthorIdIndex = data.authors.findIndex(author => author.selected === true);
     const ntroMetadata = {};
 
     if (!!data.significance) {
         ntroMetadata.fez_record_search_key_significance = data.authors.map((item, index) =>{
             if (selectedAuthorIdIndex === index) {
                 return {
-                    rek_significance: data.significance,
+                    rek_significance: data.significance || 0,
                     rek_significance_order: selectedAuthorIdIndex + 1
                 };
             } else {
@@ -492,7 +461,7 @@ export const getNtroMetadataSearchKeys = (data) => {
                 };
             } else {
                 return {
-                    rek_creator_contribution_statement: locale.global.defaultContibutorStatementMissing,
+                    rek_creator_contribution_statement: locale.global.defaultContributorStatementMissing,
                     rek_creator_contribution_statement_order: index + 1
                 };
             }

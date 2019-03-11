@@ -1,4 +1,5 @@
 import { DepositAgreement } from './DepositAgreement';
+import DepositAgreementField from './DepositAgreement';
 
 function setup(testProps, isShallow = true) {
     const props = {
@@ -33,5 +34,12 @@ describe('Component DepositAgreement', () => {
         const wrapper = setup({onChange: testFn});
         wrapper.instance()._handleChange({target: {checked: true}});
         expect(testFn).toHaveBeenCalledWith('on');
+        wrapper.instance()._handleChange({target: {checked: false}});
+        expect(testFn).toHaveBeenCalledWith('off');
+    });
+
+    it('should render DepositAgreement with all styles', () => {
+        const wrapper = getElement(DepositAgreementField, {});
+        expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

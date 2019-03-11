@@ -35,6 +35,6 @@ describe('Component MyTrendingPublications', () => {
     it('should not fetch data if account author details is still loading', () => {
         const testFn = jest.fn();
         setup({accountAuthorDetailsLoading: true, actions: {searchTrendingPublications: testFn}});
-        expect(testFn).toHaveBeenCalledTimes(0);
+        expect(testFn).not.toBeCalled();
     });
 });
