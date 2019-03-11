@@ -62,3 +62,79 @@ exports[`PublicationSearchForm renders  component 1`] = `
   </form>
 </StandardCard>
 `;
+
+exports[`PublicationSearchForm renders  should display with skip search option 1`] = `
+<StandardCard
+  title="Search for your publication"
+>
+  <form
+    onSubmit={[MockFunction]}
+  >
+    <WithStyles(Grid)
+      alignItems="center"
+      container={true}
+      spacing={16}
+    >
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(Typography)
+          gutterBottom={true}
+        >
+          Enter either the publication DOI (e.g. 10.1163/9789004326828), Pubmed Id (e.g. 28131963) or the title of the publication. This will allow us to check whether the record is already in eSpace or is available from another source.
+        </WithStyles(Typography)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm={true}
+        xs={12}
+      >
+        <Field
+          autoComplete="search"
+          autoFocus={true}
+          color="primary"
+          component={[Function]}
+          fullWidth={true}
+          label="Enter DOI, Pubmed Id or Title"
+          name="searchQuery"
+          required={true}
+          validate={
+            Array [
+              [Function],
+            ]
+          }
+        />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm="auto"
+        xs={12}
+      >
+        <WithStyles(Button)
+          color="primary"
+          disabled={false}
+          fullWidth={true}
+          onClick={[MockFunction]}
+          variant="contained"
+        >
+          Search
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm="auto"
+        xs={12}
+      >
+        <WithStyles(Button)
+          fullWidth={true}
+          onClick={[MockFunction]}
+          variant="text"
+        >
+          Skip search
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </form>
+</StandardCard>
+`;

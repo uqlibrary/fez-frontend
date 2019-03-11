@@ -1,12 +1,15 @@
+import {PublicationListLoadingProgressClass} from './PublicationListLoadingProgress';
 import PublicationListLoadingProgress from './PublicationListLoadingProgress';
 
 function setup(testProps, isShallow = true) {
     const props = {
-        ...testProps,
+        classes:{},
+        theme: {},
         loadingPublicationSources: testProps.loadingPublicationSources || {},
-        mobile: testProps.mobile || false
+        mobile: testProps.mobile || false,
+        ...testProps
     };
-    return getElement(PublicationListLoadingProgress, props, isShallow);
+    return getElement(PublicationListLoadingProgressClass, props, isShallow);
 }
 
 describe('Search Dashboard test', () => {
@@ -70,6 +73,26 @@ describe('Search Dashboard test', () => {
         const mobile = true;
 
         const wrapper = setup(loadingPublicationSources, mobile);
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('Full render', () => {
+        const loadingPublicationSources = {
+            loadingPublicationSources: {
+                crossref: false,
+                crossrefCount: 0,
+                pubmed: false,
+                pubmedCount: 12,
+                scopus: false,
+                scopusCount: 4,
+                totalSearchedCount: 0,
+                totalSourcesCount: 4,
+                wos: false,
+                wosCount: 5
+            }
+        };
+
+        const wrapper = getElement(PublicationListLoadingProgress, loadingPublicationSources, false);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

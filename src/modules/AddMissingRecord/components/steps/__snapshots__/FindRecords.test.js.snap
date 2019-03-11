@@ -1,5 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Search record should handle skip search 1`] = `
+<Connect(ReduxForm)
+  locale={
+    Object {
+      "fieldLabels": Object {
+        "search": "Enter DOI, Pubmed Id or Title",
+      },
+      "skip": "Skip search",
+      "submit": "Search",
+      "text": "Enter either the DOI (e.g. 10.1163/9789004326828), Pubmed Id (e.g. 28131963) or the title of work. This will allow us to check whether the record is already in eSpace or is available from another source.",
+      "title": "Search for your works",
+    }
+  }
+  onSkipSearch={[Function]}
+  onSubmit={[Function]}
+/>
+`;
+
 exports[`Search record should render stepper and a publication search form 1`] = `
 <Connect(ReduxForm)
   locale={

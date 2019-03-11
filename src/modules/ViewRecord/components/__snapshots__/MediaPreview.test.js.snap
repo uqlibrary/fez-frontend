@@ -3053,9 +3053,8 @@ exports[`Media Preview Component  should render component 1`] = `
       >
         <Component
           close="Close"
-          errorMessage="Your browser does not support the video tag."
           imageTitle="Image preview"
-          openInNewWindow="Open file in a new window"
+          openInNewWindow="Open/Download file in a new window"
           videoTitle="Video preview"
         />
       </WithStyles(Grid)>
@@ -3076,9 +3075,8 @@ exports[`Media Preview Component  should render component 1`] = `
   >
     <Component
       close="Close"
-      errorMessage="Your browser does not support the video tag."
       imageTitle="Image preview"
-      openInNewWindow="Open file in a new window"
+      openInNewWindow="Open/Download file in a new window"
       videoTitle="Video preview"
     />
   </Hidden>

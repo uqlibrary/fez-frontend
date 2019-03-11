@@ -9,7 +9,7 @@ import RadioButtonUnchecked from '@material-ui/icons/RadioButtonUnchecked';
 import RadioButtonChecked from '@material-ui/icons/RadioButtonChecked';
 import Link from '@material-ui/icons/Link';
 
-const styles = (theme) => ({
+export const styles = (theme) => ({
     authorLinkIcon: {
         marginRight: theme.spacing.unit
     },
@@ -47,7 +47,10 @@ export class AuthorItem extends PureComponent {
      * @private
      */
     _selectAuthor = () => {
-        if (this.props.onAuthorSelected) this.props.onAuthorSelected(this.props.author);
+        /* istanbul ignore else */
+        if (this.props.onAuthorSelected) {
+            this.props.onAuthorSelected(this.props.author);
+        }
     };
 
     /**

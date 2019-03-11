@@ -54,7 +54,25 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider 1`
         sm={12}
         xs={10}
         zeroMinWidth={true}
-      />
+      >
+        <WithStyles(ExternalLink)
+          href="test"
+          openInNewIcon={false}
+          title="test"
+        >
+          <div
+            alt="test"
+            className="test"
+            style={
+              Object {
+                "height": 50,
+                "margin": "8px auto",
+                "width": 160,
+              }
+            }
+          />
+        </WithStyles(ExternalLink)>
+      </WithStyles(Grid)>
       <Hidden
         implementation="js"
         lgDown={false}
@@ -178,7 +196,25 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
         sm={12}
         xs={10}
         zeroMinWidth={true}
-      />
+      >
+        <WithStyles(ExternalLink)
+          href="test"
+          openInNewIcon={false}
+          title="test"
+        >
+          <div
+            alt="test"
+            className="test"
+            style={
+              Object {
+                "height": 50,
+                "margin": "8px auto",
+                "width": 160,
+              }
+            }
+          />
+        </WithStyles(ExternalLink)>
+      </WithStyles(Grid)>
       <Hidden
         implementation="js"
         lgDown={false}
@@ -320,7 +356,25 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
         sm={12}
         xs={10}
         zeroMinWidth={true}
-      />
+      >
+        <WithStyles(ExternalLink)
+          href="test"
+          openInNewIcon={false}
+          title="test"
+        >
+          <div
+            alt="test"
+            className="test"
+            style={
+              Object {
+                "height": 50,
+                "margin": "8px auto",
+                "width": 160,
+              }
+            }
+          />
+        </WithStyles(ExternalLink)>
+      </WithStyles(Grid)>
       <Hidden
         implementation="js"
         lgDown={false}

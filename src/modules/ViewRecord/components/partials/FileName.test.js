@@ -44,7 +44,7 @@ describe('File Name Component ', () => {
         expect(wrapper.instance().canShowPreview('image/jpeg')).toEqual(true);
         // TODO revert once videos are transcoded to open format #158519502
         wrapper = setup({mimeType: 'video/mp4'});
-        expect(wrapper.instance().canShowPreview('video/mp4')).toEqual(false);
+        expect(wrapper.instance().canShowPreview('video/mp4')).toEqual(true);
         wrapper = setup({mimeType: 'octet-stream'});
         expect(wrapper.instance().canShowPreview('octet-stream')).toEqual(false);
         wrapper = setup({mimeType: 'some/text'});
@@ -80,4 +80,13 @@ describe('File Name Component ', () => {
         element.simulate('keyPress');
         expect(onFileSelect).toHaveBeenCalledTimes(1);
     });
+
+    it('should detect videos from mime type', () => {
+        const wrapper = setup({});
+        const test1 = wrapper.instance().isVideo('video/mp4');
+        expect(test1).toBe(true);
+        const test2 = wrapper.instance().isVideo('audio/mp3');
+        expect(test2).toBe(false);
+    });
+
 });

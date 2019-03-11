@@ -56,4 +56,20 @@ describe('Dashboard Author Profile test', () => {
         }, false);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+
+    it('Renders empty div if there is no profile loaded', () => {
+        const wrapper = setup({
+            authorDetails: null,
+            author: null
+        }, false);
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('Renders empty div if there is no profile but profile image exists', () => {
+        const wrapper = setup({
+            authorDetails: {uqr_id: null, image_exists: 1},
+            author: {title: null, aut_fname: null, aut_lname: null, aut_id: null}
+        }, false);
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });

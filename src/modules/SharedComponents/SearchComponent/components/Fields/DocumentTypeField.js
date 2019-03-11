@@ -8,13 +8,13 @@ import FormControl from '@material-ui/core/FormControl';
 import InputLabel from '@material-ui/core/InputLabel';
 import {withStyles} from '@material-ui/core/styles';
 
-const styles = theme => ({
+export const styles = theme => ({
     title: {
         ...theme.typography.caption
     },
     selectedMenuItem: {
-        backgroundColor: `${theme.palette.accent.main} !important`,
-        color: theme.palette.white.main
+        backgroundColor: `${((theme.palette || {}).accent || {}).main || ''} !important`,
+        color: ((theme.palette || {}).white || {}).main || ''
     }
 });
 

@@ -5,6 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Hidden from '@material-ui/core/Hidden';
 import Button from '@material-ui/core/Button';
+import ReactJWPlayer from 'react-jw-player';
 
 export default class MediaPreview extends PureComponent {
     static propTypes = {
@@ -55,7 +56,7 @@ export default class MediaPreview extends PureComponent {
 
     render()  {
         const {mediaUrl, previewMediaUrl, mimeType} = this.props;
-        const {videoTitle, imageTitle, browserNotSupportVideoTagMsg} = locale.viewRecord.sections.files.preview;
+        const {videoTitle, imageTitle} = locale.viewRecord.sections.files.preview;
         const isVideo = mimeType.indexOf('video') >= 0;
         const isImage = mimeType.indexOf('image') >= 0;
         const title = isVideo ? videoTitle : imageTitle;
@@ -74,25 +75,26 @@ export default class MediaPreview extends PureComponent {
                 </Grid>
                 {
                     isVideo &&
-                    <video controls>
-                        <source src={previewMediaUrl} type={mimeType} />
-                        {browserNotSupportVideoTagMsg}
-                    </video>
+                    <ReactJWPlayer
+                        playerId="previewVideo"
+                        playerScript="https://cdn.jwplayer.com/libraries/VrkpYhtx.js"
+                        file={previewMediaUrl}
+                        onVideoLoad={this.scrollToPreview()}
+                        isAutoPlay
+                    />
                 }
                 {
                     isImage &&
-                        <div style={{padding: 16, margin: 16}}>
-                            <Grid container spacing={32}>
-                                <Grid item xs />
-                                <Grid item xs={'auto'}>
-                                    <img src={previewMediaUrl}
-                                        alt={mediaUrl}
-                                        onLoad={this.scrollToPreview()}
-                                        style={{border: '5px solid black', maxWidth: '100%'}} />
-                                </Grid>
-                                <Grid item xs />
+                        <Grid container spacing={32}>
+                            <Grid item xs />
+                            <Grid item xs={'auto'}>
+                                <img src={previewMediaUrl}
+                                    alt={mediaUrl}
+                                    onLoad={this.scrollToPreview()}
+                                    style={{border: '5px solid black', maxWidth: '100%'}} />
                             </Grid>
-                        </div>
+                            <Grid item xs />
+                        </Grid>
                 }
                 <Hidden smUp>
                     <this.MediaPreviewButtons {...locale.viewRecord.sections.files.preview}/>

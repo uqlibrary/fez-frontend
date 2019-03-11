@@ -2,7 +2,8 @@
 
 exports[`FileUploadRow renders with uploaded file 1`] = `
 <Fragment>
-  <WithStyles(ConfirmDialogBox)
+  <ConfirmDialogBox
+    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -15,6 +16,33 @@ exports[`FileUploadRow renders with uploaded file 1`] = `
     onRef={[Function]}
   />
   <WithStyles(FileUploadRowDefaultView)
+    index={0}
+    name="a.txt"
+    onAccessConditionChange={[Function]}
+    onDelete={[Function]}
+    onEmbargoDateChange={[Function]}
+    requireOpenAccessStatus={true}
+    size="100.0B"
+  />
+</Fragment>
+`;
+
+exports[`FileUploadRow should show confirmation and delete file 1`] = `
+<Fragment>
+  <ConfirmDialogBox
+    hideCancelButton={false}
+    locale={
+      Object {
+        "cancelButtonLabel": "No",
+        "confirmButtonLabel": "Yes",
+        "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
+        "confirmationTitle": "Delete file",
+      }
+    }
+    onAction={[Function]}
+    onRef={[Function]}
+  />
+  <WithStyles(FileUploadRowMobileView)
     index={0}
     name="a.txt"
     onAccessConditionChange={[Function]}

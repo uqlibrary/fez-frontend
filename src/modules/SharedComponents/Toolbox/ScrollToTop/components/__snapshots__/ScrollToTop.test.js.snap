@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ScrollToTop component should render given children 1`] = `"Children"`;

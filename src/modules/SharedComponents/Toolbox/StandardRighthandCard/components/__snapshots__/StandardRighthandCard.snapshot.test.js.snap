@@ -1,35 +1,105 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Snapshot tests for StandardRighthandCard component renders StandardRighthandCard with title and help button 1`] = `
-<WithStyles(RighthandCard)
-  help={
-    Object {
-      "buttonLabel": "OK",
-      "text": "Some help text",
-      "title": "Help text",
-    }
-  }
-  title="Title"
-/>
-`;
-
-exports[`Snapshot tests for StandardRighthandCard component renders StandardRighthandCard with title and help button and some content 1`] = `
-<WithStyles(RighthandCard)
-  help={
-    Object {
-      "buttonLabel": "OK",
-      "text": "Some help text",
-      "title": "Help text",
-    }
-  }
-  title="Title"
+exports[`Snapshot tests for RighthandCard component renders with title and help button 1`] = `
+<WithStyles(Grid)
+  container={true}
 >
-  Some content
-</WithStyles(RighthandCard)>
+  <WithStyles(Grid)
+    item={true}
+    xs={true}
+  >
+    <WithStyles(Typography)
+      color="primary"
+      variant="h6"
+    >
+      Title
+    </WithStyles(Typography)>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+  >
+    <Connect(WithStyles(HelpIcon))
+      buttonLabel="OK"
+      text="Some help text"
+      title="Help text"
+    />
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <WithStyles(Divider) />
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  />
+</WithStyles(Grid)>
 `;
 
-exports[`Snapshot tests for StandardRighthandCard component renders StandardRighthandCard with title and no help icon 1`] = `
-<WithStyles(RighthandCard)
-  title="card title"
-/>
+exports[`Snapshot tests for RighthandCard component renders with title and help button and some content 1`] = `
+<WithStyles(Grid)
+  container={true}
+>
+  <WithStyles(Grid)
+    item={true}
+    xs={true}
+  >
+    <WithStyles(Typography)
+      color="primary"
+      variant="h6"
+    >
+      Title
+    </WithStyles(Typography)>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+  >
+    <Connect(WithStyles(HelpIcon))
+      buttonLabel="OK"
+      text="Some help text"
+      title="Help text"
+    />
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <WithStyles(Divider) />
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    Some content
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
+`;
+
+exports[`Snapshot tests for RighthandCard component renders with title and no help icon 1`] = `
+<WithStyles(Grid)
+  container={true}
+>
+  <WithStyles(Grid)
+    item={true}
+    xs={true}
+  >
+    <WithStyles(Typography)
+      color="primary"
+      variant="h6"
+    >
+      card title
+    </WithStyles(Typography)>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <WithStyles(Divider) />
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  />
+</WithStyles(Grid)>
 `;

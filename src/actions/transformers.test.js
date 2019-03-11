@@ -1273,3 +1273,53 @@ describe('getGrantsListSearchKey tests', () => {
         expect(result).toEqual(expected);
     });
 });
+
+describe('getNtroMetadataSearchKeys tests',  () => {
+    it('should get ntro meta data', () => {
+        const result = transformers.getNtroMetadataSearchKeys({
+            authors: [{
+                rek_author_id: 111,
+                selected: false,
+            }, {
+                rek_author_id: 222,
+                selected: false
+            }, {
+                rek_author_id: 333,
+                selected: false
+            }],
+            significance: 'Major',
+            impactStatement: 'test impact statement'
+        });
+
+        expect(result).toMatchObject({
+            fez_record_search_key_significance: [
+                {
+                    rek_significance: 0,
+                    rek_significance_order: 1
+                },
+                {
+                    rek_significance: 0,
+                    rek_significance_order: 2
+                },
+                {
+                    rek_significance: 0,
+                    rek_significance_order: 3
+                }
+            ],
+            fez_record_search_key_creator_contribution_statement: [
+                {
+                    rek_creator_contribution_statement: 'Statement missing.',
+                    rek_creator_contribution_statement_order: 1
+                },
+                {
+                    rek_creator_contribution_statement: 'Statement missing.',
+                    rek_creator_contribution_statement_order: 2
+                },
+                {
+                    rek_creator_contribution_statement: 'Statement missing.',
+                    rek_creator_contribution_statement_order: 3
+                }
+            ]
+        });
+    })
+});

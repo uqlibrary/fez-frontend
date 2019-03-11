@@ -1,4 +1,4 @@
-import {OfflineSnackbar} from './OfflineSnackbar';
+import {OfflineSnackbar, styles} from './OfflineSnackbar';
 
 function setup(testProps, isShallow = true) {
     const props = {
@@ -82,4 +82,31 @@ describe('Component OfflineSnackbar', () => {
         expect(wrapper.state()).toEqual({"online": true, "open": true});
     });
 
+    it('should unmount component', () => {
+        const wrapper = setup({});
+        const componentWillUnmount = jest.spyOn(wrapper.instance(), 'componentWillUnmount');
+        wrapper.unmount();
+        expect(componentWillUnmount).toHaveBeenCalled();
+    });
+
+    it('should have a proper style generator', () => {
+        const theme = {
+            palette: {
+                success: {
+                    light: 'test1'
+                },
+                error: {
+                    light: 'test2'
+                }
+            }
+        };
+        expect(styles(theme)).toMatchSnapshot();
+
+        delete theme.palette.success;
+        delete theme.palette.error;
+        expect(styles(theme)).toMatchSnapshot();
+
+        delete theme.palette;
+        expect(styles(theme)).toMatchSnapshot();
+    })
 });

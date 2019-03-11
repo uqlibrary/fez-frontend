@@ -11,7 +11,6 @@ export default class LookupForm extends Component {
     };
 
     static defaultProps = {
-        isValid: () => '',
         locale: {
             inputFieldLabel: 'Item name',
             inputFieldHint: 'Please type the item name, then select from the list',

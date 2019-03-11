@@ -21,7 +21,8 @@ exports[`Component FileUploadRowHeader should render with access condition and e
   xsDown={false}
   xsUp={false}
 >
-  <WithStyles(ConfirmDialogBox)
+  <ConfirmDialogBox
+    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -123,7 +124,8 @@ exports[`Component FileUploadRowHeader should render with default setup 1`] = `
   xsDown={false}
   xsUp={false}
 >
-  <WithStyles(ConfirmDialogBox)
+  <ConfirmDialogBox
+    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -202,6 +204,32 @@ exports[`Component FileUploadRowHeader should render with default setup 1`] = `
 </Hidden>
 `;
 
+exports[`Component FileUploadRowHeader should render with default setup with styles 1`] = `
+<FileUploadRowHeader
+  classes={
+    Object {
+      "header": "FileUploadRowHeader-header-2",
+      "icon": "FileUploadRowHeader-icon-1",
+    }
+  }
+  locale={
+    Object {
+      "deleteAllFiles": "Remove all files from the upload queue",
+      "deleteAllFilesConfirmation": Object {
+        "cancelButtonLabel": "No",
+        "confirmButtonLabel": "Yes",
+        "confirmationMessage": "Are you sure you want to delete all files?",
+        "confirmationTitle": "Delete all",
+      },
+      "embargoDateColumn": "Embargo release date",
+      "fileAccessColumn": "Access conditions",
+      "filenameColumn": "File name",
+    }
+  }
+  onDeleteAll={[MockFunction]}
+/>
+`;
+
 exports[`Component FileUploadRowHeader should render without access condition even if requireAccessCondition true but default access condition is provided 1`] = `
 <Hidden
   implementation="js"
@@ -221,7 +249,8 @@ exports[`Component FileUploadRowHeader should render without access condition ev
   xsDown={false}
   xsUp={false}
 >
-  <WithStyles(ConfirmDialogBox)
+  <ConfirmDialogBox
+    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "No",

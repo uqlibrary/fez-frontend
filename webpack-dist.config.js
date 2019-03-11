@@ -6,7 +6,6 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const WebpackPwaManifest = require("webpack-pwa-manifest");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const ExtractTextPlugin2 = require('extract-text-webpack-plugin');
 const InjectPreloader = require('preloader-html-webpack-plugin');
 const chalk = require('chalk');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
@@ -42,7 +41,7 @@ const options = {
 const branch = process && process.env && process.env.CI_BRANCH ? process.env.CI_BRANCH : 'development';
 
 // get configuration for the branch
-const config = require('./config').default[branch] || require('./config').default['development'];
+const config = require('./config').default.branch || require('./config').default.development;
 
 // local port to serve production build
 const port = 9000;
@@ -107,6 +106,7 @@ const webpackConfig = {
             clear: false,
         }),
         new ExtractTextPlugin('[name]-[hash].min.css'),
+
         // plugin for passing in data to the js, like what NODE_ENV we are in.
         new webpack.DefinePlugin({
             __DEVELOPMENT__: !process.env.CI_BRANCH,    // always production build on CI
@@ -175,17 +175,16 @@ const webpackConfig = {
             },
             {
                 test: /\.js?$/,
-                exclude: [
-                    /node_modules/,
-                    /custom_modules/
-                ],
                 include: [
                     resolve(__dirname, 'src'),
                     resolve(__dirname, 'node_modules/uqlibrary-react-toolbox/src')
                 ],
-                use: [
-                    'babel-loader',
+                exclude: [
+                    /node_modules/,
+                    /custom_modules/,
+                    '/src/mocks/',
                 ],
+                loader: 'babel-loader',
             },
             {
                 test: /\.scss/,
