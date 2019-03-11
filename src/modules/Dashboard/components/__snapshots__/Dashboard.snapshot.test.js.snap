@@ -490,6 +490,16 @@ exports[`Dashboard test Full mount for styles render 1`] = `
                   },
                 ],
               ],
+              "results": Array [
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+              ],
             }
           }
         >
@@ -527,12 +537,24 @@ exports[`Dashboard test Full mount for styles render 1`] = `
                       "uqresearcher",
                     ],
                   ],
+                  "results": Array [
+                    Object {
+                      "type": "return",
+                      "value": undefined,
+                    },
+                  ],
                 },
                 "loadAuthorPublicationsStats": [MockFunction] {
                   "calls": Array [
                     Array [
                       "uqresearcher",
                     ],
+                  ],
+                  "results": Array [
+                    Object {
+                      "type": "return",
+                      "value": undefined,
+                    },
                   ],
                 },
               }
@@ -580,12 +602,24 @@ exports[`Dashboard test Full mount for styles render 1`] = `
                         "uqresearcher",
                       ],
                     ],
+                    "results": Array [
+                      Object {
+                        "type": "return",
+                        "value": undefined,
+                      },
+                    ],
                   },
                   "loadAuthorPublicationsStats": [MockFunction] {
                     "calls": Array [
                       Array [
                         "uqresearcher",
                       ],
+                    ],
+                    "results": Array [
+                      Object {
+                        "type": "return",
+                        "value": undefined,
+                      },
                     ],
                   },
                 }
@@ -633,12 +667,24 @@ exports[`Dashboard test Full mount for styles render 1`] = `
                           "uqresearcher",
                         ],
                       ],
+                      "results": Array [
+                        Object {
+                          "type": "return",
+                          "value": undefined,
+                        },
+                      ],
                     },
                     "loadAuthorPublicationsStats": [MockFunction] {
                       "calls": Array [
                         Array [
                           "uqresearcher",
                         ],
+                      ],
+                      "results": Array [
+                        Object {
+                          "type": "return",
+                          "value": undefined,
+                        },
                       ],
                     },
                   }
@@ -4636,6 +4682,12 @@ exports[`Dashboard test should get styles for full render 1`] = `
                   },
                 ],
               ],
+              "results": Array [
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+              ],
             }
           }
         >
@@ -4673,12 +4725,24 @@ exports[`Dashboard test should get styles for full render 1`] = `
                       "uqresearcher",
                     ],
                   ],
+                  "results": Array [
+                    Object {
+                      "type": "return",
+                      "value": undefined,
+                    },
+                  ],
                 },
                 "loadAuthorPublicationsStats": [MockFunction] {
                   "calls": Array [
                     Array [
                       "uqresearcher",
                     ],
+                  ],
+                  "results": Array [
+                    Object {
+                      "type": "return",
+                      "value": undefined,
+                    },
                   ],
                 },
               }

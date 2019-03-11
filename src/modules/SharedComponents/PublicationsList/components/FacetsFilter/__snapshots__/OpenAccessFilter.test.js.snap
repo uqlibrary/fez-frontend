@@ -6,10 +6,8 @@ exports[`OpenAccessFilter  should render empty component 1`] = `
   key="date-range"
   nestedItems={
     <WithStyles(FacetsFilterNestedListItem)
-      disabled={undefined}
       isActive={true}
       onFacetClick={[Function]}
-      primaryText={undefined}
     />
   }
   onToggle={[MockFunction]}
@@ -23,10 +21,8 @@ exports[`OpenAccessFilter  should render selected component 1`] = `
   key="date-range"
   nestedItems={
     <WithStyles(FacetsFilterNestedListItem)
-      disabled={undefined}
       isActive={true}
       onFacetClick={[Function]}
-      primaryText={undefined}
     />
   }
   onToggle={[MockFunction]}

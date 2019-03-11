@@ -78,12 +78,30 @@ describe('Files Component ', () => {
 
     it('should render icon for mimeType', () => {
         const wrapper = setup({});
-        expect(shallow(wrapper.instance().renderFileIcon('UQ:1', 'blablabla'))).toMatchSnapshot();
-        expect(shallow(wrapper.instance().renderFileIcon('UQ:1', 'image/jpg'))).toMatchSnapshot();
-        expect(shallow(wrapper.instance().renderFileIcon('UQ:1', 'video/quicktime'))).toMatchSnapshot();
-        expect(shallow(wrapper.instance().renderFileIcon('UQ:1', 'audio/mp3'))).toMatchSnapshot();
-        expect(shallow(wrapper.instance().renderFileIcon('UQ:1', 'app/pdf'))).toMatchSnapshot();
-        expect(shallow(wrapper.instance().renderFileIcon('UQ:1', 'image/jpg', 'test.tiff', 'thumbnail_test.jpg', 'preview_test.jpg', true))).toMatchSnapshot();
+
+        wrapper.instance().renderFileIcon('UQ:1', 'blablabla');
+        wrapper.update();
+        expect(toJson(wrapper)).toMatchSnapshot();
+
+        wrapper.instance().renderFileIcon('UQ:1', 'image/jpg');
+        wrapper.update();
+        expect(toJson(wrapper)).toMatchSnapshot();
+
+        wrapper.instance().renderFileIcon('UQ:1', 'video/quicktime');
+        wrapper.update();
+        expect(toJson(wrapper)).toMatchSnapshot();
+
+        wrapper.instance().renderFileIcon('UQ:1', 'audio/mp3');
+        wrapper.update();
+        expect(toJson(wrapper)).toMatchSnapshot();
+
+        wrapper.instance().renderFileIcon('UQ:1', 'app/pdf');
+        wrapper.update();
+        expect(toJson(wrapper)).toMatchSnapshot();
+
+        wrapper.instance().renderFileIcon('UQ:1', 'image/jpg', 'test.tiff', 'thumbnail_test.jpg', 'preview_test.jpg', true);
+        wrapper.update();
+        expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should set state on showPreview', () => {

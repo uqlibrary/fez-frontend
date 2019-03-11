@@ -15,7 +15,6 @@ exports[`FacetsFilter  components for mock data 1`] = `
       nestedItems={
         Array [
           <WithStyles(FacetsFilterNestedListItem)
-            disabled={undefined}
             index={0}
             isActive={false}
             onFacetClick={[Function]}
@@ -32,35 +31,30 @@ exports[`FacetsFilter  components for mock data 1`] = `
       nestedItems={
         Array [
           <WithStyles(FacetsFilterNestedListItem)
-            disabled={undefined}
             index={0}
             isActive={false}
             onFacetClick={[Function]}
             primaryText="Applied Microbiology and Biotechnology (1)"
           />,
           <WithStyles(FacetsFilterNestedListItem)
-            disabled={undefined}
             index={1}
             isActive={false}
             onFacetClick={[Function]}
             primaryText="Biochemistry (1)"
           />,
           <WithStyles(FacetsFilterNestedListItem)
-            disabled={undefined}
             index={2}
             isActive={false}
             onFacetClick={[Function]}
             primaryText="Bioengineering (1)"
           />,
           <WithStyles(FacetsFilterNestedListItem)
-            disabled={undefined}
             index={3}
             isActive={false}
             onFacetClick={[Function]}
             primaryText="Biomaterials (1)"
           />,
           <WithStyles(FacetsFilterNestedListItem)
-            disabled={undefined}
             index={4}
             isActive={false}
             onFacetClick={[Function]}
@@ -77,7 +71,6 @@ exports[`FacetsFilter  components for mock data 1`] = `
       nestedItems={
         Array [
           <WithStyles(FacetsFilterNestedListItem)
-            disabled={undefined}
             index={0}
             isActive={false}
             onFacetClick={[Function]}
@@ -94,14 +87,12 @@ exports[`FacetsFilter  components for mock data 1`] = `
       nestedItems={
         Array [
           <WithStyles(FacetsFilterNestedListItem)
-            disabled={undefined}
             index={0}
             isActive={false}
             onFacetClick={[Function]}
             primaryText="Metallomics (1)"
           />,
           <WithStyles(FacetsFilterNestedListItem)
-            disabled={undefined}
             index={1}
             isActive={false}
             onFacetClick={[Function]}
@@ -118,7 +109,6 @@ exports[`FacetsFilter  components for mock data 1`] = `
       nestedItems={
         Array [
           <WithStyles(FacetsFilterNestedListItem)
-            disabled={undefined}
             index={0}
             isActive={false}
             onFacetClick={[Function]}
@@ -135,7 +125,6 @@ exports[`FacetsFilter  components for mock data 1`] = `
       nestedItems={
         Array [
           <WithStyles(FacetsFilterNestedListItem)
-            disabled={undefined}
             index={0}
             isActive={false}
             onFacetClick={[Function]}
@@ -183,14 +172,12 @@ exports[`FacetsFilter  components for mock data 2`] = `
       nestedItems={
         Array [
           <WithStyles(FacetsFilterNestedListItem)
-            disabled={undefined}
             index={0}
             isActive={false}
             onFacetClick={[Function]}
             primaryText="Journal Article (2)"
           />,
           <WithStyles(FacetsFilterNestedListItem)
-            disabled={undefined}
             index={1}
             isActive={false}
             onFacetClick={[Function]}
@@ -207,35 +194,30 @@ exports[`FacetsFilter  components for mock data 2`] = `
       nestedItems={
         Array [
           <WithStyles(FacetsFilterNestedListItem)
-            disabled={undefined}
             index={0}
             isActive={false}
             onFacetClick={[Function]}
             primaryText="Applied Microbiology and Biotechnology (1)"
           />,
           <WithStyles(FacetsFilterNestedListItem)
-            disabled={undefined}
             index={1}
             isActive={false}
             onFacetClick={[Function]}
             primaryText="Biochemistry (1)"
           />,
           <WithStyles(FacetsFilterNestedListItem)
-            disabled={undefined}
             index={2}
             isActive={false}
             onFacetClick={[Function]}
             primaryText="Bioengineering (1)"
           />,
           <WithStyles(FacetsFilterNestedListItem)
-            disabled={undefined}
             index={3}
             isActive={false}
             onFacetClick={[Function]}
             primaryText="Biomaterials (1)"
           />,
           <WithStyles(FacetsFilterNestedListItem)
-            disabled={undefined}
             index={4}
             isActive={false}
             onFacetClick={[Function]}
@@ -252,7 +234,6 @@ exports[`FacetsFilter  components for mock data 2`] = `
       nestedItems={
         Array [
           <WithStyles(FacetsFilterNestedListItem)
-            disabled={undefined}
             index={0}
             isActive={false}
             onFacetClick={[Function]}
@@ -269,14 +250,12 @@ exports[`FacetsFilter  components for mock data 2`] = `
       nestedItems={
         Array [
           <WithStyles(FacetsFilterNestedListItem)
-            disabled={undefined}
             index={0}
             isActive={false}
             onFacetClick={[Function]}
             primaryText="Metallomics (1)"
           />,
           <WithStyles(FacetsFilterNestedListItem)
-            disabled={undefined}
             index={1}
             isActive={false}
             onFacetClick={[Function]}
@@ -293,7 +272,6 @@ exports[`FacetsFilter  components for mock data 2`] = `
       nestedItems={
         Array [
           <WithStyles(FacetsFilterNestedListItem)
-            disabled={undefined}
             index={0}
             isActive={false}
             onFacetClick={[Function]}
@@ -310,7 +288,6 @@ exports[`FacetsFilter  components for mock data 2`] = `
       nestedItems={
         Array [
           <WithStyles(FacetsFilterNestedListItem)
-            disabled={undefined}
             index={0}
             isActive={false}
             onFacetClick={[Function]}
@@ -358,7 +335,6 @@ exports[`FacetsFilter  components for mock data activating a facet selection 1`]
       nestedItems={
         Array [
           <WithStyles(FacetsFilterNestedListItem)
-            disabled={undefined}
             index={0}
             isActive={true}
             onFacetClick={[Function]}
@@ -375,35 +351,30 @@ exports[`FacetsFilter  components for mock data activating a facet selection 1`]
       nestedItems={
         Array [
           <WithStyles(FacetsFilterNestedListItem)
-            disabled={undefined}
             index={0}
             isActive={false}
             onFacetClick={[Function]}
             primaryText="Applied Microbiology and Biotechnology (1)"
           />,
           <WithStyles(FacetsFilterNestedListItem)
-            disabled={undefined}
             index={1}
             isActive={true}
             onFacetClick={[Function]}
             primaryText="Biochemistry (1)"
           />,
           <WithStyles(FacetsFilterNestedListItem)
-            disabled={undefined}
             index={2}
             isActive={false}
             onFacetClick={[Function]}
             primaryText="Bioengineering (1)"
           />,
           <WithStyles(FacetsFilterNestedListItem)
-            disabled={undefined}
             index={3}
             isActive={false}
             onFacetClick={[Function]}
             primaryText="Biomaterials (1)"
           />,
           <WithStyles(FacetsFilterNestedListItem)
-            disabled={undefined}
             index={4}
             isActive={false}
             onFacetClick={[Function]}
@@ -420,7 +391,6 @@ exports[`FacetsFilter  components for mock data activating a facet selection 1`]
       nestedItems={
         Array [
           <WithStyles(FacetsFilterNestedListItem)
-            disabled={undefined}
             index={0}
             isActive={false}
             onFacetClick={[Function]}
@@ -437,14 +407,12 @@ exports[`FacetsFilter  components for mock data activating a facet selection 1`]
       nestedItems={
         Array [
           <WithStyles(FacetsFilterNestedListItem)
-            disabled={undefined}
             index={0}
             isActive={false}
             onFacetClick={[Function]}
             primaryText="Metallomics (1)"
           />,
           <WithStyles(FacetsFilterNestedListItem)
-            disabled={undefined}
             index={1}
             isActive={false}
             onFacetClick={[Function]}
@@ -461,7 +429,6 @@ exports[`FacetsFilter  components for mock data activating a facet selection 1`]
       nestedItems={
         Array [
           <WithStyles(FacetsFilterNestedListItem)
-            disabled={undefined}
             index={0}
             isActive={false}
             onFacetClick={[Function]}
@@ -478,7 +445,6 @@ exports[`FacetsFilter  components for mock data activating a facet selection 1`]
       nestedItems={
         Array [
           <WithStyles(FacetsFilterNestedListItem)
-            disabled={undefined}
             index={0}
             isActive={false}
             onFacetClick={[Function]}
@@ -1010,6 +976,12 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                   },
                 ],
               ],
+              "results": Array [
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+              ],
             }
           }
         >
@@ -1202,7 +1174,6 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                       nestedItems={
                         Array [
                           <WithStyles(FacetsFilterNestedListItem)
-                            disabled={undefined}
                             index={0}
                             isActive={true}
                             onFacetClick={[Function]}
@@ -1224,7 +1195,6 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                         nestedItems={
                           Array [
                             <WithStyles(FacetsFilterNestedListItem)
-                              disabled={undefined}
                               index={0}
                               isActive={true}
                               onFacetClick={[Function]}
@@ -2379,35 +2349,30 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                       nestedItems={
                         Array [
                           <WithStyles(FacetsFilterNestedListItem)
-                            disabled={undefined}
                             index={0}
                             isActive={false}
                             onFacetClick={[Function]}
                             primaryText="Applied Microbiology and Biotechnology (1)"
                           />,
                           <WithStyles(FacetsFilterNestedListItem)
-                            disabled={undefined}
                             index={1}
                             isActive={false}
                             onFacetClick={[Function]}
                             primaryText="Biochemistry (1)"
                           />,
                           <WithStyles(FacetsFilterNestedListItem)
-                            disabled={undefined}
                             index={2}
                             isActive={false}
                             onFacetClick={[Function]}
                             primaryText="Bioengineering (1)"
                           />,
                           <WithStyles(FacetsFilterNestedListItem)
-                            disabled={undefined}
                             index={3}
                             isActive={false}
                             onFacetClick={[Function]}
                             primaryText="Biomaterials (1)"
                           />,
                           <WithStyles(FacetsFilterNestedListItem)
-                            disabled={undefined}
                             index={4}
                             isActive={false}
                             onFacetClick={[Function]}
@@ -2429,35 +2394,30 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                         nestedItems={
                           Array [
                             <WithStyles(FacetsFilterNestedListItem)
-                              disabled={undefined}
                               index={0}
                               isActive={false}
                               onFacetClick={[Function]}
                               primaryText="Applied Microbiology and Biotechnology (1)"
                             />,
                             <WithStyles(FacetsFilterNestedListItem)
-                              disabled={undefined}
                               index={1}
                               isActive={false}
                               onFacetClick={[Function]}
                               primaryText="Biochemistry (1)"
                             />,
                             <WithStyles(FacetsFilterNestedListItem)
-                              disabled={undefined}
                               index={2}
                               isActive={false}
                               onFacetClick={[Function]}
                               primaryText="Bioengineering (1)"
                             />,
                             <WithStyles(FacetsFilterNestedListItem)
-                              disabled={undefined}
                               index={3}
                               isActive={false}
                               onFacetClick={[Function]}
                               primaryText="Biomaterials (1)"
                             />,
                             <WithStyles(FacetsFilterNestedListItem)
-                              disabled={undefined}
                               index={4}
                               isActive={false}
                               onFacetClick={[Function]}
@@ -3612,7 +3572,6 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                       nestedItems={
                         Array [
                           <WithStyles(FacetsFilterNestedListItem)
-                            disabled={undefined}
                             index={0}
                             isActive={false}
                             onFacetClick={[Function]}
@@ -3634,7 +3593,6 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                         nestedItems={
                           Array [
                             <WithStyles(FacetsFilterNestedListItem)
-                              disabled={undefined}
                               index={0}
                               isActive={false}
                               onFacetClick={[Function]}
@@ -4789,14 +4747,12 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                       nestedItems={
                         Array [
                           <WithStyles(FacetsFilterNestedListItem)
-                            disabled={undefined}
                             index={0}
                             isActive={false}
                             onFacetClick={[Function]}
                             primaryText="Metallomics (1)"
                           />,
                           <WithStyles(FacetsFilterNestedListItem)
-                            disabled={undefined}
                             index={1}
                             isActive={false}
                             onFacetClick={[Function]}
@@ -4818,14 +4774,12 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                         nestedItems={
                           Array [
                             <WithStyles(FacetsFilterNestedListItem)
-                              disabled={undefined}
                               index={0}
                               isActive={false}
                               onFacetClick={[Function]}
                               primaryText="Metallomics (1)"
                             />,
                             <WithStyles(FacetsFilterNestedListItem)
-                              disabled={undefined}
                               index={1}
                               isActive={false}
                               onFacetClick={[Function]}
@@ -5980,7 +5934,6 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                       nestedItems={
                         Array [
                           <WithStyles(FacetsFilterNestedListItem)
-                            disabled={undefined}
                             index={0}
                             isActive={false}
                             onFacetClick={[Function]}
@@ -6002,7 +5955,6 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                         nestedItems={
                           Array [
                             <WithStyles(FacetsFilterNestedListItem)
-                              disabled={undefined}
                               index={0}
                               isActive={false}
                               onFacetClick={[Function]}
@@ -7157,7 +7109,6 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                       nestedItems={
                         Array [
                           <WithStyles(FacetsFilterNestedListItem)
-                            disabled={undefined}
                             index={0}
                             isActive={false}
                             onFacetClick={[Function]}
@@ -7179,7 +7130,6 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                         nestedItems={
                           Array [
                             <WithStyles(FacetsFilterNestedListItem)
-                              disabled={undefined}
                               index={0}
                               isActive={false}
                               onFacetClick={[Function]}
@@ -8368,7 +8318,6 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                 xs={4}
                               >
                                 <TextField
-                                  disabled={undefined}
                                   fullWidth={true}
                                   label="From"
                                   onChange={[Function]}
@@ -8384,7 +8333,6 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                 xs={4}
                               >
                                 <TextField
-                                  disabled={undefined}
                                   fullWidth={true}
                                   label="To"
                                   onChange={[Function]}
@@ -8439,7 +8387,6 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                   xs={4}
                                 >
                                   <TextField
-                                    disabled={undefined}
                                     fullWidth={true}
                                     label="From"
                                     onChange={[Function]}
@@ -8455,7 +8402,6 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                   xs={4}
                                 >
                                   <TextField
-                                    disabled={undefined}
                                     fullWidth={true}
                                     label="To"
                                     onChange={[Function]}
@@ -10506,6 +10452,12 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                   },
                 ],
               ],
+              "results": Array [
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+              ],
             }
           }
         >
@@ -10698,7 +10650,6 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                       nestedItems={
                         Array [
                           <WithStyles(FacetsFilterNestedListItem)
-                            disabled={undefined}
                             index={0}
                             isActive={true}
                             onFacetClick={[Function]}
@@ -10721,7 +10672,6 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                         nestedItems={
                           Array [
                             <WithStyles(FacetsFilterNestedListItem)
-                              disabled={undefined}
                               index={0}
                               isActive={true}
                               onFacetClick={[Function]}
@@ -12621,35 +12571,30 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                       nestedItems={
                         Array [
                           <WithStyles(FacetsFilterNestedListItem)
-                            disabled={undefined}
                             index={0}
                             isActive={false}
                             onFacetClick={[Function]}
                             primaryText="Applied Microbiology and Biotechnology (1)"
                           />,
                           <WithStyles(FacetsFilterNestedListItem)
-                            disabled={undefined}
                             index={1}
                             isActive={false}
                             onFacetClick={[Function]}
                             primaryText="Biochemistry (1)"
                           />,
                           <WithStyles(FacetsFilterNestedListItem)
-                            disabled={undefined}
                             index={2}
                             isActive={false}
                             onFacetClick={[Function]}
                             primaryText="Bioengineering (1)"
                           />,
                           <WithStyles(FacetsFilterNestedListItem)
-                            disabled={undefined}
                             index={3}
                             isActive={false}
                             onFacetClick={[Function]}
                             primaryText="Biomaterials (1)"
                           />,
                           <WithStyles(FacetsFilterNestedListItem)
-                            disabled={undefined}
                             index={4}
                             isActive={false}
                             onFacetClick={[Function]}
@@ -12671,35 +12616,30 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                         nestedItems={
                           Array [
                             <WithStyles(FacetsFilterNestedListItem)
-                              disabled={undefined}
                               index={0}
                               isActive={false}
                               onFacetClick={[Function]}
                               primaryText="Applied Microbiology and Biotechnology (1)"
                             />,
                             <WithStyles(FacetsFilterNestedListItem)
-                              disabled={undefined}
                               index={1}
                               isActive={false}
                               onFacetClick={[Function]}
                               primaryText="Biochemistry (1)"
                             />,
                             <WithStyles(FacetsFilterNestedListItem)
-                              disabled={undefined}
                               index={2}
                               isActive={false}
                               onFacetClick={[Function]}
                               primaryText="Bioengineering (1)"
                             />,
                             <WithStyles(FacetsFilterNestedListItem)
-                              disabled={undefined}
                               index={3}
                               isActive={false}
                               onFacetClick={[Function]}
                               primaryText="Biomaterials (1)"
                             />,
                             <WithStyles(FacetsFilterNestedListItem)
-                              disabled={undefined}
                               index={4}
                               isActive={false}
                               onFacetClick={[Function]}
@@ -13854,7 +13794,6 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                       nestedItems={
                         Array [
                           <WithStyles(FacetsFilterNestedListItem)
-                            disabled={undefined}
                             index={0}
                             isActive={false}
                             onFacetClick={[Function]}
@@ -13876,7 +13815,6 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                         nestedItems={
                           Array [
                             <WithStyles(FacetsFilterNestedListItem)
-                              disabled={undefined}
                               index={0}
                               isActive={false}
                               onFacetClick={[Function]}
@@ -15031,14 +14969,12 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                       nestedItems={
                         Array [
                           <WithStyles(FacetsFilterNestedListItem)
-                            disabled={undefined}
                             index={0}
                             isActive={false}
                             onFacetClick={[Function]}
                             primaryText="Metallomics (1)"
                           />,
                           <WithStyles(FacetsFilterNestedListItem)
-                            disabled={undefined}
                             index={1}
                             isActive={false}
                             onFacetClick={[Function]}
@@ -15060,14 +14996,12 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                         nestedItems={
                           Array [
                             <WithStyles(FacetsFilterNestedListItem)
-                              disabled={undefined}
                               index={0}
                               isActive={false}
                               onFacetClick={[Function]}
                               primaryText="Metallomics (1)"
                             />,
                             <WithStyles(FacetsFilterNestedListItem)
-                              disabled={undefined}
                               index={1}
                               isActive={false}
                               onFacetClick={[Function]}
@@ -16222,7 +16156,6 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                       nestedItems={
                         Array [
                           <WithStyles(FacetsFilterNestedListItem)
-                            disabled={undefined}
                             index={0}
                             isActive={false}
                             onFacetClick={[Function]}
@@ -16244,7 +16177,6 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                         nestedItems={
                           Array [
                             <WithStyles(FacetsFilterNestedListItem)
-                              disabled={undefined}
                               index={0}
                               isActive={false}
                               onFacetClick={[Function]}
@@ -17399,7 +17331,6 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                       nestedItems={
                         Array [
                           <WithStyles(FacetsFilterNestedListItem)
-                            disabled={undefined}
                             index={0}
                             isActive={false}
                             onFacetClick={[Function]}
@@ -17421,7 +17352,6 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                         nestedItems={
                           Array [
                             <WithStyles(FacetsFilterNestedListItem)
-                              disabled={undefined}
                               index={0}
                               isActive={false}
                               onFacetClick={[Function]}
@@ -18610,7 +18540,6 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                 xs={4}
                               >
                                 <TextField
-                                  disabled={undefined}
                                   fullWidth={true}
                                   label="From"
                                   onChange={[Function]}
@@ -18626,7 +18555,6 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                 xs={4}
                               >
                                 <TextField
-                                  disabled={undefined}
                                   fullWidth={true}
                                   label="To"
                                   onChange={[Function]}
@@ -18681,7 +18609,6 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                   xs={4}
                                 >
                                   <TextField
-                                    disabled={undefined}
                                     fullWidth={true}
                                     label="From"
                                     onChange={[Function]}
@@ -18697,7 +18624,6 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                   xs={4}
                                 >
                                   <TextField
-                                    disabled={undefined}
                                     fullWidth={true}
                                     label="To"
                                     onChange={[Function]}
@@ -20454,35 +20380,30 @@ exports[`FacetsFilter  components for mock data with excluded facets 1`] = `
       nestedItems={
         Array [
           <WithStyles(FacetsFilterNestedListItem)
-            disabled={undefined}
             index={0}
             isActive={false}
             onFacetClick={[Function]}
             primaryText="Applied Microbiology and Biotechnology (1)"
           />,
           <WithStyles(FacetsFilterNestedListItem)
-            disabled={undefined}
             index={1}
             isActive={false}
             onFacetClick={[Function]}
             primaryText="Biochemistry (1)"
           />,
           <WithStyles(FacetsFilterNestedListItem)
-            disabled={undefined}
             index={2}
             isActive={false}
             onFacetClick={[Function]}
             primaryText="Bioengineering (1)"
           />,
           <WithStyles(FacetsFilterNestedListItem)
-            disabled={undefined}
             index={3}
             isActive={false}
             onFacetClick={[Function]}
             primaryText="Biomaterials (1)"
           />,
           <WithStyles(FacetsFilterNestedListItem)
-            disabled={undefined}
             index={4}
             isActive={false}
             onFacetClick={[Function]}
@@ -20499,7 +20420,6 @@ exports[`FacetsFilter  components for mock data with excluded facets 1`] = `
       nestedItems={
         Array [
           <WithStyles(FacetsFilterNestedListItem)
-            disabled={undefined}
             index={0}
             isActive={false}
             onFacetClick={[Function]}
@@ -20516,14 +20436,12 @@ exports[`FacetsFilter  components for mock data with excluded facets 1`] = `
       nestedItems={
         Array [
           <WithStyles(FacetsFilterNestedListItem)
-            disabled={undefined}
             index={0}
             isActive={false}
             onFacetClick={[Function]}
             primaryText="Metallomics (1)"
           />,
           <WithStyles(FacetsFilterNestedListItem)
-            disabled={undefined}
             index={1}
             isActive={false}
             onFacetClick={[Function]}
@@ -20540,7 +20458,6 @@ exports[`FacetsFilter  components for mock data with excluded facets 1`] = `
       nestedItems={
         Array [
           <WithStyles(FacetsFilterNestedListItem)
-            disabled={undefined}
             index={0}
             isActive={false}
             onFacetClick={[Function]}
@@ -20557,7 +20474,6 @@ exports[`FacetsFilter  components for mock data with excluded facets 1`] = `
       nestedItems={
         Array [
           <WithStyles(FacetsFilterNestedListItem)
-            disabled={undefined}
             index={0}
             isActive={false}
             onFacetClick={[Function]}
@@ -21599,7 +21515,6 @@ exports[`FacetsFilter  renders filter for open access 1`] = `
       nestedItems={
         Array [
           <WithStyles(FacetsFilterNestedListItem)
-            disabled={undefined}
             index={0}
             isActive={false}
             onFacetClick={[Function]}
@@ -21616,35 +21531,30 @@ exports[`FacetsFilter  renders filter for open access 1`] = `
       nestedItems={
         Array [
           <WithStyles(FacetsFilterNestedListItem)
-            disabled={undefined}
             index={0}
             isActive={false}
             onFacetClick={[Function]}
             primaryText="Applied Microbiology and Biotechnology (1)"
           />,
           <WithStyles(FacetsFilterNestedListItem)
-            disabled={undefined}
             index={1}
             isActive={false}
             onFacetClick={[Function]}
             primaryText="Biochemistry (1)"
           />,
           <WithStyles(FacetsFilterNestedListItem)
-            disabled={undefined}
             index={2}
             isActive={false}
             onFacetClick={[Function]}
             primaryText="Bioengineering (1)"
           />,
           <WithStyles(FacetsFilterNestedListItem)
-            disabled={undefined}
             index={3}
             isActive={false}
             onFacetClick={[Function]}
             primaryText="Biomaterials (1)"
           />,
           <WithStyles(FacetsFilterNestedListItem)
-            disabled={undefined}
             index={4}
             isActive={false}
             onFacetClick={[Function]}
@@ -21661,7 +21571,6 @@ exports[`FacetsFilter  renders filter for open access 1`] = `
       nestedItems={
         Array [
           <WithStyles(FacetsFilterNestedListItem)
-            disabled={undefined}
             index={0}
             isActive={false}
             onFacetClick={[Function]}
@@ -21678,14 +21587,12 @@ exports[`FacetsFilter  renders filter for open access 1`] = `
       nestedItems={
         Array [
           <WithStyles(FacetsFilterNestedListItem)
-            disabled={undefined}
             index={0}
             isActive={false}
             onFacetClick={[Function]}
             primaryText="Metallomics (1)"
           />,
           <WithStyles(FacetsFilterNestedListItem)
-            disabled={undefined}
             index={1}
             isActive={false}
             onFacetClick={[Function]}
@@ -21702,7 +21609,6 @@ exports[`FacetsFilter  renders filter for open access 1`] = `
       nestedItems={
         Array [
           <WithStyles(FacetsFilterNestedListItem)
-            disabled={undefined}
             index={0}
             isActive={false}
             onFacetClick={[Function]}
@@ -21719,7 +21625,6 @@ exports[`FacetsFilter  renders filter for open access 1`] = `
       nestedItems={
         Array [
           <WithStyles(FacetsFilterNestedListItem)
-            disabled={undefined}
             index={0}
             isActive={false}
             onFacetClick={[Function]}

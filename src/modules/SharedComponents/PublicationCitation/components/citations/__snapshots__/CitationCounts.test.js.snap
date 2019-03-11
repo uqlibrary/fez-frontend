@@ -502,6 +502,24 @@ exports[`CitationCounts should not render View full statistics link on public pa
                   },
                 ],
               ],
+              "results": Array [
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+              ],
             }
           }
         >
@@ -7753,6 +7771,16 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                     "moment": undefined,
                   },
                 ],
+              ],
+              "results": Array [
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
               ],
             }
           }
@@ -16259,6 +16287,20 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                   },
                 ],
               ],
+              "results": Array [
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+              ],
             }
           }
         >
@@ -24420,6 +24462,12 @@ exports[`CitationCounts should render component with no metrics 1`] = `
                     "moment": undefined,
                   },
                 ],
+              ],
+              "results": Array [
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
               ],
             }
           }

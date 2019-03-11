@@ -76,6 +76,10 @@ describe('Component FileUploader', () => {
         wrapper.update();
 
         expect(toJson(wrapper)).toMatchSnapshot();
+        const fileDataA = wrapper.instance().state.filesInQueue[0].fileData;
+        expect(fileDataA.name).toEqual('a.txt');
+        const fileDataB = wrapper.instance().state.filesInQueue[1].fileData;
+        expect(fileDataB.name).toEqual('b.txt');
 
         wrapper.instance()._deleteFile({}, 0);
         wrapper.update();
@@ -87,6 +91,7 @@ describe('Component FileUploader', () => {
         wrapper.update();
 
         expect(toJson(wrapper)).toMatchSnapshot();
+        expect(wrapper.instance().state.filesInQueue.length).toEqual(0);
     });
 
     it('should render rows for uploaded files with access required', () => {
@@ -135,6 +140,9 @@ describe('Component FileUploader', () => {
         wrapper.update();
 
         expect(toJson(wrapper)).toMatchSnapshot();
+        const fileDataA = wrapper.instance().state.filesInQueue[0].fileData;
+        expect(fileDataA.name).toEqual('a.txt');
+        expect(fileDataA.lastModified).toEqual(12345678912);
     });
 
     it('should render rows for uploaded files with access condition dropdown based on quick template Id and require open access', () => {
@@ -150,6 +158,8 @@ describe('Component FileUploader', () => {
         wrapper.update();
 
         expect(toJson(wrapper)).toMatchSnapshot();
+        expect(wrapper.instance().state.filesInQueue[0].fileData.name).toEqual('a.txt');
+        expect(wrapper.instance().state.filesInQueue[1].fileData.name).toEqual('b.txt');
     });
 
     it('should set max files error message', () => {
@@ -176,19 +186,31 @@ describe('Component FileUploader', () => {
 
         wrapper.instance()._handleDroppedFiles([file_a, file_b], {});
         wrapper.update();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const fileDataA = wrapper.instance().state.filesInQueue[0].fileData;
+        expect(fileDataA.name).toEqual('a.txt');
+        expect(fileDataA.lastModified).toEqual(12345678912);
+
+        const fileDataB = wrapper.instance().state.filesInQueue[1].fileData;
+        expect(fileDataB.name).toEqual('b.txt');
+        expect(fileDataB.lastModified).toEqual(12345678912);
 
         wrapper.instance()._updateFileAccessCondition(file_a, 0, 9);
         wrapper.update();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(wrapper.instance().state.filesInQueue[0].access_condition_id).toEqual(9);
 
         wrapper.instance()._updateFileAccessCondition(file_b, 1, 8);
         wrapper.update();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(wrapper.instance().state.filesInQueue[1].access_condition_id).toEqual(8);
 
         wrapper.instance()._handleDroppedFiles([file_c, file_d], {});
         wrapper.update();
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const fileDataC = wrapper.instance().state.filesInQueue[2].fileData;
+        expect(fileDataC.name).toEqual('c.txt');
+        expect(fileDataC.lastModified).toEqual(12345678912);
+
+        const fileDataD = wrapper.instance().state.filesInQueue[3].fileData;
+        expect(fileDataD.name).toEqual('d.txt');
+        expect(fileDataD.lastModified).toEqual(12345678912);
     });
 
     it('should accept terms and condition and reset back to not accepted state if access condition changed back to closed access', () => {
