@@ -1,20 +1,21 @@
-import {AuthorItem} from './AuthorItem';
+import {AuthorItem, styles} from './AuthorItem';
+
+const getProps = (testProps = {}) => ({
+    author: {rek_author: 'Test user'},
+    index: 0,
+    onAuthorSelected: undefined,
+    type: 'author',
+    classes: {
+        authorLinkIcon: 'authorLinkIcon',
+        buttonBase: 'buttonBase',
+        authorOrder: 'authorOrder'
+    },
+    ...testProps
+});
 
 function setup(testProps, isShallow = true) {
     // build full props list required by the component
-    const props = {
-        author: testProps.author || {rek_author: 'Test user'},
-        index: testProps.index || 0,
-        onAuthorSelected: testProps.onAuthorSelected || undefined,
-        type: 'author',
-        classes: {
-            authorLinkIcon: 'authorLinkIcon',
-            buttonBase: 'buttonBase',
-            authorOrder: 'authorOrder'
-        },
-        ...testProps
-    };
-    return getElement(AuthorItem, props, isShallow);
+    return getElement(AuthorItem, getProps(testProps), isShallow);
 }
 
 describe('AuthorItem renders ', () => {
@@ -53,5 +54,14 @@ describe('AuthorItem renders ', () => {
         const wrapper = setup({linked: false, onAuthorSelected: onAuthorSelected});
         wrapper.instance()._selectAuthor();
         expect(onAuthorSelected).toHaveBeenCalled();
-    })
+    });
+
+    it('should have a proper style generator', () => {
+        const theme = {
+            spacing: {
+                unit: 10
+            }
+        };
+        expect(styles(theme)).toMatchSnapshot();
+    });
 });

@@ -1,3 +1,4 @@
+import React from 'react';
 import {AutoCompleteAsyncField} from 'modules/SharedComponents/Toolbox/AutoSuggestField';
 import {connect} from 'react-redux';
 import * as actions from 'actions';
@@ -12,8 +13,8 @@ const mapStateToProps = (state, props) => {
         onChange: (item) => {
             if (!item.id) {
                 !!props.input
-                    ? props.input.onChange({...item, id: item.value})
-                    : props.onChange({...item, id: item.value});
+                    ? props.input.onChange({...item, id: `${parseInt(item.value, 10)}`})
+                    : props.onChange({...item, id: `${parseInt(item.value, 10)}`});
             } else {
                 !!props.input
                     ? props.input.onChange(item)
@@ -36,5 +37,9 @@ const mapDispatchToProps = (dispatch) => (
     }
 );
 
-export const AuthorIdField = connect(mapStateToProps, mapDispatchToProps)(AutoCompleteAsyncField);
+const AuthorIdAutoComplete = connect(mapStateToProps, mapDispatchToProps)(AutoCompleteAsyncField);
+
+export function AuthorIdField(fieldProps) {
+    return <AuthorIdAutoComplete {...fieldProps}/>;
+}
 

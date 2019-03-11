@@ -36,7 +36,7 @@ exports[`ThesisSubmission test should display successfull submission screen 1`] 
         color="primary"
         fullWidth={true}
         onClick={[Function]}
-        variant="raised"
+        variant="contained"
       >
         Return to the Graduate School website
       </WithStyles(Button)>
@@ -81,7 +81,7 @@ exports[`ThesisSubmission test should render hdr thesis submission acknowledgeme
         color="primary"
         fullWidth={true}
         onClick={[Function]}
-        variant="raised"
+        variant="contained"
       >
         Return to the Graduate School website
       </WithStyles(Button)>
@@ -106,7 +106,8 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
       }
       when={true}
     />
-    <WithStyles(ConfirmDialogBox)
+    <ConfirmDialogBox
+      hideCancelButton={false}
       locale={
         Object {
           "cancelButtonLabel": "No, continue editing",
@@ -182,9 +183,22 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
                 disabled={false}
                 itemsList={
                   Array [
-                    "MPhil Thesis",
-                    "PhD Thesis",
-                    "Professional Doctorate",
+                    Object {
+                      "text": "Select a thesis type",
+                      "value": undefined,
+                    },
+                    Object {
+                      "text": "MPhil Thesis",
+                      "value": "MPhil Thesis",
+                    },
+                    Object {
+                      "text": "PhD Thesis",
+                      "value": "PhD Thesis",
+                    },
+                    Object {
+                      "text": "Professional Doctorate",
+                      "value": "Professional Doctorate",
+                    },
                   ]
                 }
                 locale={
@@ -570,7 +584,7 @@ exports[`ThesisSubmission test should render sbs thesis submission acknowledgeme
         color="primary"
         fullWidth={true}
         onClick={[Function]}
-        variant="raised"
+        variant="contained"
       >
         Return to the Graduate School website
       </WithStyles(Button)>
@@ -595,7 +609,8 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
       }
       when={true}
     />
-    <WithStyles(ConfirmDialogBox)
+    <ConfirmDialogBox
+      hideCancelButton={false}
       locale={
         Object {
           "cancelButtonLabel": "No, continue editing",
@@ -671,9 +686,22 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
                 disabled={false}
                 itemsList={
                   Array [
-                    "MPhil Thesis",
-                    "PhD Thesis",
-                    "Professional Doctorate",
+                    Object {
+                      "text": "Select a thesis type",
+                      "value": undefined,
+                    },
+                    Object {
+                      "text": "MPhil Thesis",
+                      "value": "MPhil Thesis",
+                    },
+                    Object {
+                      "text": "PhD Thesis",
+                      "value": "PhD Thesis",
+                    },
+                    Object {
+                      "text": "Professional Doctorate",
+                      "value": "Professional Doctorate",
+                    },
                   ]
                 }
                 locale={

@@ -1,4 +1,5 @@
 import {ListRow} from './ListRow';
+import ListRowWithStyles from './ListRow';
 
 function setup(testProps, isShallow = true) {
     const props = {
@@ -17,6 +18,11 @@ function setup(testProps, isShallow = true) {
 }
 
 describe('ListRow renders ', () => {
+    it('should render default view with styles', () => {
+        const wrapper = getElement(ListRowWithStyles, {index: 0, item: 'one'});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
     it('a row with index and item and delete button', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -56,4 +62,62 @@ describe('ListRow renders ', () => {
         const button = wrapper.find('pure(DeleteIcon)');
         expect(button.length).toBe(1);
     });
+
+    it('should call show confirmation on deleting row', () => {
+        const showConfirmationFn = jest.fn();
+        const wrapper = setup({
+            hideReorder: true
+        });
+        wrapper.instance().confirmationBox = {
+            showConfirmation: showConfirmationFn
+        };
+
+        wrapper.find('WithStyles(IconButton)').props().onClick();
+        expect(showConfirmationFn).toHaveBeenCalled();
+    });
+
+    it('should delete row on confirmation', () => {
+        const onDeleteFn = jest.fn();
+        const wrapper = setup({
+            hideReorder: true,
+            onDelete: onDeleteFn
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+        wrapper.find('ConfirmDialogBox').props().onAction();
+        expect(onDeleteFn).toHaveBeenCalled();
+    });
+
+    it('should move row up', () => {
+        const onMoveUpFn = jest.fn();
+        const wrapper = setup({
+            onMoveUp: onMoveUpFn,
+            canMoveUp: true
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+        wrapper.find('WithStyles(IconButton)').get(0).props.onClick();
+        expect(onMoveUpFn).toHaveBeenCalled();
+    });
+
+    it('should move row down', () => {
+        const onMoveDownFn = jest.fn();
+        const wrapper = setup({
+            onMoveDown: onMoveDownFn,
+            canMoveDown: true
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+        wrapper.find('WithStyles(IconButton)').get(0).props.onClick();
+        expect(onMoveDownFn).toHaveBeenCalled();
+    });
+
+    it('should not call handlers if row is disabled', () => {
+        const wrapper = setup({
+            disabled: true
+        });
+        wrapper.instance().deleteRecord();
+        expect(wrapper.instance().props.onDelete).not.toBeCalled();
+        wrapper.instance().onMoveUp();
+        expect(wrapper.instance().props.onMoveUp).not.toBeCalled();
+        wrapper.instance().onMoveDown();
+        expect(wrapper.instance().props.onMoveDown).not.toBeCalled();
+    })
 });

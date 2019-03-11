@@ -68,6 +68,8 @@ export default class CreativeWorkForm extends Component {
                                     name="fez_record_search_key_place_of_publication.rek_place_of_publication"
                                     type="text"
                                     fullWidth
+                                    required
+                                    validate={[validation.required]}
                                     {...txt.information.fieldLabels.placeOfPublication}
                                 />
                             </Grid>
@@ -78,6 +80,8 @@ export default class CreativeWorkForm extends Component {
                                     name="fez_record_search_key_publisher.rek_publisher"
                                     type="text"
                                     fullWidth
+                                    required
+                                    validate={[validation.required]}
                                     {...txt.information.fieldLabels.publisher}
                                 />
                             </Grid>

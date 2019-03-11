@@ -12,7 +12,10 @@ describe('claimPublication reducer', () => {
         possiblePublicationsFacets: {},
         loadingPossiblePublicationsList: true,
         loadingPossibleCounts: true,
-        publicationsClaimedInProgress: []
+        publicationsClaimedInProgress: [],
+        hidePublicationLoading: true,
+        hidePublicationFailed: false,
+        hidePublicationFailedErrorMessage: null
     };
 
     const publicationData = {
@@ -149,6 +152,37 @@ describe('claimPublication reducer', () => {
             publicationsClaimedInProgress: [...initialState.publicationsClaimedInProgress, mockRecord.pid]
         });
 
+    });
+
+    it('sets error message if hiding of publications has failed', () => {
+        const testMessage = 'Test message';
+        const test = claimPublicationReducer(initialState, {
+            type: 'HIDE_PUBLICATIONS_FAILED',
+            'payload': testMessage
+        });
+        expect(test.hidePublicationLoading).toBe(false);
+        expect(test.hidePublicationFailed).toBe(true);
+        expect(test.hidePublicationFailedErrorMessage).toEqual(testMessage);
+        expect(test).toEqual({
+            ...initialState,
+            hidePublicationLoading: false,
+            hidePublicationFailed: true,
+            hidePublicationFailedErrorMessage: testMessage
+        });
+    });
+
+    it('resets the error about failing to hide publications', () => {
+        const erroredState = {
+            ...initialState,
+            hidePublicationFailed: true,
+            hidePublicationFailedErrorMessage: 'Example message'
+        }
+        const test = claimPublicationReducer(erroredState, {
+            type: actions.HIDE_PUBLICATIONS_FAILED_RESET
+        });
+        expect(test.hidePublicationFailed).toBe(false);
+        expect(test.hidePublicationFailedErrorMessage).toBeNull;
+        expect(test).toEqual(initialState);
     });
 
     it('returns the initialState if an invalid action type is supplied', () => {

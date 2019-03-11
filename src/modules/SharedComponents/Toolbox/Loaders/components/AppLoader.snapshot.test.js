@@ -1,4 +1,5 @@
 import {AppLoader} from './AppLoader';
+import AppLoaderWithStyles from './AppLoader';
 
 function setup(testProps, isShallow = true) {
     const props = {
@@ -37,4 +38,9 @@ describe('Component AppLoader', () => {
         const wrapper = setup({...props});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+
+    it('should render with styles', () => {
+        const wrapper = getElement(AppLoaderWithStyles, {title: 'Test loader'});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    })
 });

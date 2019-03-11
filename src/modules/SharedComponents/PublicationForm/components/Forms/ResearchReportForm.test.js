@@ -5,7 +5,10 @@ import ResearchReportForm from './ResearchReportForm';
 function setup(testProps, isShallow = true){
     const props = {
         ...testProps,
-        submitting: testProps.submitting || false // : PropTypes.bool,
+        submitting: testProps.submitting || false, // : PropTypes.bool,
+        formValues: {
+            get: jest.fn()
+        }
     };
     return getElement(ResearchReportForm, props, isShallow);
 }

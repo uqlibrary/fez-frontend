@@ -37,7 +37,6 @@ export class ContributorForm extends PureComponent {
             creatorRoleLabel: 'Creator role',
             creatorRoleHint: 'Role of the creator in relation to the dataset',
             identifierLabel: 'UQ identifier (if available)',
-            identifierHint: '',
             addButton: 'Add author',
             descriptionStep1: (<div><span className="authorSteps">Step 1 of 2</span> - Please <b>add to a list of contributors below</b>, in the format and order that they are published.</div>),
             descriptionStep1NoStep2: (<div>Please <b>add to a list of contributors below</b>, in the format and order that they are published.</div>)
@@ -63,18 +62,34 @@ export class ContributorForm extends PureComponent {
         // add contributor if user hits 'enter' key on input field
         if(
             this.props.disabled ||
-            (event && event.key && (
-                event.key !== 'Enter' ||
-                this.state.nameAsPublished.length === 0 ||
-                (this.props.showRoleInput && this.state.creatorRole.length === 0)
-            ))
+            (
+                event &&
+                event.key && (
+                    event.key !== 'Enter' ||
+                    !this.state.nameAsPublished ||
+                    this.state.nameAsPublished.trim().length === 0 || (
+                        this.props.showRoleInput &&
+                        this.state.creatorRole.length === 0
+                    ) || (
+                        this.state.affiliation !== 'UQ' &&
+                        this.state.orgaff.trim().length === 0 &&
+                        this.state.orgtype.trim().length === 0
+                    )
+                )
+            )
         ) return;
 
         // pass on the selected contributor
-        this.props.onAdd(
-            {
-                ...this.state.contributor,
-                ...{nameAsPublished: this.state.nameAsPublished, creatorRole: this.state.creatorRole, affiliation: this.state.affiliation, orgaff: this.state.orgaff, orgtype: this.state.orgtype}});
+        this.props.onAdd({
+            ...this.state.contributor,
+            ...{
+                nameAsPublished: this.state.nameAsPublished,
+                creatorRole: this.state.creatorRole,
+                affiliation: this.state.affiliation,
+                orgaff: this.state.orgaff,
+                orgtype: this.state.orgtype
+            }
+        });
 
         // reset internal state
         this.setState({
@@ -94,20 +109,13 @@ export class ContributorForm extends PureComponent {
             nameAsPublished: event.target.value,
             clearRoleInput: false
         });
-    }
+    };
 
     _onRoleChanged = (value) => {
         this.setState({
             creatorRole: value
         });
     };
-    _onAffChanged = (event) => {
-        const value = event.target.value.replace('%', '');
-        this.setState({
-            affiliation: value + '%'
-        });
-    };
-
 
     _onUQIdentifierSelected = (selectedItem) => {
         this.setState({
@@ -117,8 +125,10 @@ export class ContributorForm extends PureComponent {
         });
     };
 
+    /**
+     * @deprecated
+     */
     _onUQIdentifierChanged = (newValue) => {
-        console.log(newValue);
         this.setState({
             uqIdentifier: newValue
         });
@@ -172,12 +182,23 @@ export class ContributorForm extends PureComponent {
                             placeholder={this.props.locale.nameAsPublishedHint}
                             value={this.state.nameAsPublished}
                             onChange={this._onNameChanged}
-                            onKeyPress={this._addContributor}
                             disabled={disabled || isNtro && this.state.affiliation.length === 0}
                             required={this.props.required}
                             autoComplete="off"
-                            error={!!(!isNtro && this.props.required && !this.props.isContributorAssigned && !this.state.nameAsPublished) ||
-                            !!(isNtro && this.state.affiliation && !this.state.nameAsPublished)}
+                            error={
+                                !!(
+                                    !isNtro &&
+                                    this.props.required &&
+                                    !this.props.isContributorAssigned &&
+                                    !this.state.nameAsPublished
+                                ) ||
+                                !!(
+                                    isNtro &&
+                                    this.state.affiliation &&
+                                    !this.state.nameAsPublished ||
+                                    this.state.nameAsPublished.trim().length === 0
+                                )
+                            }
                         />
                     </Grid>
                     {
@@ -186,18 +207,18 @@ export class ContributorForm extends PureComponent {
                             <UqIdField
                                 disabled={disabled || this.state.nameAsPublished.trim().length === 0}
                                 onChange={this._onUQIdentifierSelected}
-                                floatingLabelText="UQ username (if known)"
-                                hintText="eg. uqjsmith"
+                                floatingLabelText="UQ Author ID"
+                                hintText="Type UQ author name to search"
                                 id="identifierField"
                             />
                         </Grid>
                     }
                     {
                         showRoleInput &&
-                        <Grid item xs={12} sm={12} md={showIdentifierLookup && showRoleInput && 3 || 5}>
+                        <Grid item xs={12} sm={12} md={showIdentifierLookup && 3 || 5}>
                             <RoleField
                                 fullWidth
-                                if="creatorRoleField"
+                                id="creatorRoleField"
                                 floatingLabelText={this.props.locale.creatorRoleLabel}
                                 hintText={this.props.locale.creatorRoleHint}
                                 onChange={this._onRoleChanged}
@@ -229,7 +250,7 @@ export class ContributorForm extends PureComponent {
                             disabled={disabled || this.state.nameAsPublished.trim().length === 0 || showRoleInput && this.state.creatorRole.length === 0 || this.state.affiliation === 'NotUQ' && this.state.orgaff === ''}
                             onClick={this._addContributor}
                         >
-                            Add author
+                            {this.props.locale.addButton}
                         </Button>
                     </Grid>
                 </Grid>
@@ -238,9 +259,11 @@ export class ContributorForm extends PureComponent {
     }
 }
 
-const mapStateToProps = (state) => {
+export const mapStateToProps = (state) => {
     return {
-        authorsList: state && state.get('authorsReducer') ? state.get('authorsReducer').authorsList : []
+        authorsList: state && state.get('authorsReducer')
+            ? state.get('authorsReducer').authorsList
+            : []
     };
 };
 

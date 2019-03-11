@@ -1,5 +1,4 @@
 import React, {PureComponent} from 'react';
-import {compose} from 'recompose';
 import PropTypes from 'prop-types';
 import Immutable from 'immutable';
 import {connect} from 'react-redux';
@@ -232,13 +231,15 @@ export class ContributorsEditor extends PureComponent {
     }
 }
 
-const mapStateToProps = (state) => {
+export const mapStateToProps = (state) => {
     return {
-        author: state && state.get('accountReducer') ? state.get('accountReducer').author : null
+        author: state && state.get('accountReducer')
+            ? state.get('accountReducer').author
+            : null
     };
 };
 
-const styles = () => ({
+export const styles = () => ({
     list: {
         maxHeight: 200,
         overflow: 'hidden',
@@ -249,7 +250,4 @@ const styles = () => ({
     }
 });
 
-export default compose(
-    withStyles(styles),
-    connect(mapStateToProps)
-)(ContributorsEditor);
+export default withStyles(styles)(connect(mapStateToProps)(ContributorsEditor));

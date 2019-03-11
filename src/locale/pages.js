@@ -163,6 +163,23 @@ export default {
                         google_scholar: 'Google Scholar',
                         orcid: 'ORCID'
                     },
+                    links: {
+                        linkedUrl: {
+                            publons: 'https://publons.com/author/',
+                            scopus: 'http://www.scopus.com/authid/detail.url?authorId=',
+                            researcher: 'http://www.researcherid.com/rid/',
+                            google_scholar: 'https://scholar.google.com.au/citations?user=',
+                            orcid: 'https://orcid.org/'
+                        },
+                        notLinkedUrl: {
+                            publons: 'http://guides.library.uq.edu.au/for-researchers/researcher-identifier/publons',
+                            scopus: 'http://guides.library.uq.edu.au/for-researchers/researcher-identifier/scopus-authorid',
+                            researcher: 'http://guides.library.uq.edu.au/for-researchers/researcher-identifier/researcherid',
+                            google_scholar: 'http://guides.library.uq.edu.au/for-researchers/researcher-identifier/google-scholar-profile',
+                            // google_scholar: pathConfig.authorIdentifiers.googleScholar.link,
+                            orcid: pathConfig.authorIdentifiers.orcid.link
+                        }
+                    }
                 }
             },
             myLatestPublications: {
@@ -661,8 +678,8 @@ export default {
                 showLoader: true
             }
         },
-        prototype: {
-            title: 'Admin form prototype'
+        unpublished: {
+            title: 'Unpublished buffer'
         }
     }
 };

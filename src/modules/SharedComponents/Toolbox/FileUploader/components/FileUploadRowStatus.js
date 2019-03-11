@@ -64,10 +64,10 @@ export class FileUploadRowStatus extends PureComponent {
     }
 }
 
-const mapStateToProps = (state, ownProps) => {
+export const mapStateToProps = (state, ownProps) => {
     return {
-        progress: state.get('fileUpload')[ownProps.name] || 0,
-        isUploadInProgress: state.get('fileUpload').isUploadInProgress
+        progress: !!state.get('fileUpload') && state.get('fileUpload')[ownProps.name] || 0,
+        isUploadInProgress: !!state.get('fileUpload') && state.get('fileUpload').isUploadInProgress
     };
 };
 

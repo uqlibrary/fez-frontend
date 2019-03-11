@@ -4,9 +4,11 @@ import {setupCache} from 'axios-cache-adapter';
 import {API_URL, SESSION_COOKIE_NAME, TOKEN_NAME, SESSION_USER_GROUP_COOKIE_NAME} from './general';
 import {store} from 'config/store';
 import {logout} from 'actions/account';
+import {showAppAlert} from 'actions/app';
 import locale from 'locale/global';
 import Raven from 'raven-js';
 import param from 'can-param';
+import {pathConfig} from 'config/routes';
 
 export const cache = setupCache({
     maxAge: 15 * 60 * 1000,
@@ -55,8 +57,10 @@ if (process.env.NODE_ENV === 'development' && !!process.env.SESSION_COOKIE_NAME)
 api.isCancel = axios.isCancel; // needed for cancelling requests and the instance created does not have this method
 
 let isGet = null;
+let requestUrl = '';
 api.interceptors.request.use(request => {
     isGet = request.method === 'get';
+    requestUrl = request.baseURL + request.url;
     if (
         (request.url.includes('records/search') || request.url.includes('records/export'))
         && !!request.params && !!request.params.mode && request.params.mode === 'advanced'
@@ -68,13 +72,31 @@ api.interceptors.request.use(request => {
     return request;
 });
 
+const reportToSentry = (error) => {
+    let detailedError = '';
+    if (error.response) {
+        detailedError = 'Data: ' + error.response.data + '; Status: ' + error.response.status + '; Headers: ' + JSON.stringify(error.response.headers);
+    } else {
+        detailedError = 'Something happened in setting up the request that triggered an Error: ' + error.message;
+    }
+    Raven.captureException(error, {extra: {error: detailedError}});
+};
+
 api.interceptors.response.use(response => {
     if (!isGet) {
         return cache.store.clear().then(() => Promise.resolve(response.data));
     }
     return Promise.resolve(response.data);
 }, error => {
-    if (error.response && error.response.status === 403) {
+    const reportHttpStatusToSentry = [422, 500];
+    if (error.response.status && reportHttpStatusToSentry.indexOf(error.response.status) !== -1) {
+        reportToSentry(error);
+    }
+    const thirdPartyLookupUrlRoot = API_URL + pathConfig.admin.thirdPartyTools.substring('/'.length);
+    if (requestUrl.startsWith(thirdPartyLookupUrlRoot) ) {
+        // do nothing here - 403 for tool api lookup is handled in actions/thirdPartyLookupTool.js
+        console.log('Skipping root error handling for 3rd party api');
+    } else if (error.response && error.response.status === 403) {
         if (!!Cookies.get(SESSION_COOKIE_NAME)) {
             Cookies.remove(SESSION_COOKIE_NAME, {path: '/', domain: '.library.uq.edu.au'});
             delete api.defaults.headers.common[TOKEN_NAME];
@@ -88,21 +110,23 @@ api.interceptors.response.use(response => {
     }
 
     let errorMessage = null;
-    let specificError = '';
-    if (!!error.response && !!error.response.status) {
+    if (requestUrl.startsWith(thirdPartyLookupUrlRoot) ) {
+        console.log('skipping root error resetting for 3rd party api');
+    } else if (!!error.message && !!error.response.status && error.response.status === 500) {
+        errorMessage = ((error.response || {}).data || {}).message || locale.global.errorMessages[error.response.status];
+        if (process.env.NODE_ENV === 'test') {
+            global.mockActionsStore.dispatch(showAppAlert(error.response.data));
+        } else {
+            store.dispatch(showAppAlert(error.response.data));
+        }
+    } else if (!!error.response && !!error.response.status) {
         errorMessage = locale.global.errorMessages[error.response.status];
-        specificError = 'Response: ' + error.response + ' Status: ' + error.status;
     }
 
     if (!!errorMessage) {
         return Promise.reject({...errorMessage});
     } else {
-        if (error.response) {
-            specificError = 'Data: ' + error.response.data + ' Status: ' + error.response.status + ' Headers: ' + error.response.headers;
-        } else {
-            specificError = 'Something happened in setting up the request that triggered an Error: ' + error.message;
-        }
-        Raven.captureException(error, {extra: {error: specificError}});
+        reportToSentry(error);
         return Promise.reject(error);
     }
 });

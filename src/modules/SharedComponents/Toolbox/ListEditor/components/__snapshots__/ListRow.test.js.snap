@@ -1,8 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ListRow renders  a row with index and item and delete button 1`] = `
-<React.Fragment>
-  <WithStyles(ConfirmDialogBox)
+<Fragment>
+  <ConfirmDialogBox
+    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -59,12 +60,13 @@ exports[`ListRow renders  a row with index and item and delete button 1`] = `
       </WithStyles(Tooltip)>
     </WithStyles(Grid)>
   </WithStyles(Grid)>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`ListRow renders  a row with index and item set, renders reorder buttons, and delete button 1`] = `
-<React.Fragment>
-  <WithStyles(ConfirmDialogBox)
+<Fragment>
+  <ConfirmDialogBox
+    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -150,5 +152,239 @@ exports[`ListRow renders  a row with index and item set, renders reorder buttons
       </WithStyles(Tooltip)>
     </WithStyles(Grid)>
   </WithStyles(Grid)>
-</React.Fragment>
+</Fragment>
+`;
+
+exports[`ListRow renders  should delete row on confirmation 1`] = `
+<Fragment>
+  <ConfirmDialogBox
+    hideCancelButton={false}
+    locale={
+      Object {
+        "cancelButtonLabel": "No",
+        "confirmButtonLabel": "Yes",
+        "confirmationMessage": "Are you sure you want to delete this item?",
+        "confirmationTitle": "Delete item",
+      }
+    }
+    onAction={[Function]}
+    onRef={[Function]}
+  />
+  <WithStyles(Grid)
+    alignItems="center"
+    container={true}
+    spacing={8}
+  >
+    <WithStyles(Grid)
+      item={true}
+      sm={11}
+      xs={10}
+    >
+      <WithStyles(Typography)
+        variant="body2"
+      >
+        one
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      className="center"
+      item={true}
+      sm={1}
+      xs={2}
+    >
+      <WithStyles(Tooltip)
+        title="Remove this item"
+      >
+        <WithStyles(IconButton)
+          disabled={false}
+          onClick={[Function]}
+        >
+          <pure(DeleteIcon) />
+        </WithStyles(IconButton)>
+      </WithStyles(Tooltip)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</Fragment>
+`;
+
+exports[`ListRow renders  should move row down 1`] = `
+<Fragment>
+  <ConfirmDialogBox
+    hideCancelButton={false}
+    locale={
+      Object {
+        "cancelButtonLabel": "No",
+        "confirmButtonLabel": "Yes",
+        "confirmationMessage": "Are you sure you want to delete this item?",
+        "confirmationTitle": "Delete item",
+      }
+    }
+    onAction={[Function]}
+    onRef={[Function]}
+  />
+  <WithStyles(Grid)
+    alignItems="center"
+    container={true}
+    spacing={8}
+  >
+    <WithStyles(Grid)
+      item={true}
+      sm={6}
+      xs={5}
+    >
+      <WithStyles(Typography)
+        variant="body2"
+      >
+        one
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      className="center"
+      item={true}
+      sm={5}
+      xs={5}
+    >
+      <WithStyles(Grid)
+        container={true}
+        justify="flex-end"
+      >
+        <WithStyles(Grid)
+          item={true}
+        >
+          <WithStyles(Tooltip)
+            title="Move item down the order"
+          >
+            <WithStyles(IconButton)
+              disabled={false}
+              onClick={[Function]}
+            >
+              <pure(KeyboardArrowDownIcon) />
+            </WithStyles(IconButton)>
+          </WithStyles(Tooltip)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      className="center"
+      item={true}
+      sm={1}
+      xs={2}
+    >
+      <WithStyles(Tooltip)
+        title="Remove this item"
+      >
+        <WithStyles(IconButton)
+          disabled={false}
+          onClick={[Function]}
+        >
+          <pure(DeleteIcon) />
+        </WithStyles(IconButton)>
+      </WithStyles(Tooltip)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</Fragment>
+`;
+
+exports[`ListRow renders  should move row up 1`] = `
+<Fragment>
+  <ConfirmDialogBox
+    hideCancelButton={false}
+    locale={
+      Object {
+        "cancelButtonLabel": "No",
+        "confirmButtonLabel": "Yes",
+        "confirmationMessage": "Are you sure you want to delete this item?",
+        "confirmationTitle": "Delete item",
+      }
+    }
+    onAction={[Function]}
+    onRef={[Function]}
+  />
+  <WithStyles(Grid)
+    alignItems="center"
+    container={true}
+    spacing={8}
+  >
+    <WithStyles(Grid)
+      item={true}
+      sm={6}
+      xs={5}
+    >
+      <WithStyles(Typography)
+        variant="body2"
+      >
+        one
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      className="center"
+      item={true}
+      sm={5}
+      xs={5}
+    >
+      <WithStyles(Grid)
+        container={true}
+        justify="flex-end"
+      >
+        <WithStyles(Grid)
+          item={true}
+        >
+          <WithStyles(Tooltip)
+            title="Move item up the order"
+          >
+            <WithStyles(IconButton)
+              disabled={false}
+              onClick={[Function]}
+            >
+              <pure(KeyboardArrowUpIcon) />
+            </WithStyles(IconButton)>
+          </WithStyles(Tooltip)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      className="center"
+      item={true}
+      sm={1}
+      xs={2}
+    >
+      <WithStyles(Tooltip)
+        title="Remove this item"
+      >
+        <WithStyles(IconButton)
+          disabled={false}
+          onClick={[Function]}
+        >
+          <pure(DeleteIcon) />
+        </WithStyles(IconButton)>
+      </WithStyles(Tooltip)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</Fragment>
+`;
+
+exports[`ListRow renders  should render default view with styles 1`] = `
+<ListRow
+  classes={
+    Object {
+      "center": "ListRow-center-1",
+      "row": "ListRow-row-2",
+    }
+  }
+  index={0}
+  item="one"
+  locale={
+    Object {
+      "deleteHint": "Remove this item",
+      "deleteRecordConfirmation": Object {
+        "cancelButtonLabel": "No",
+        "confirmButtonLabel": "Yes",
+        "confirmationMessage": "Are you sure you want to delete this item?",
+        "confirmationTitle": "Delete item",
+      },
+      "moveDownHint": "Move item down the order",
+      "moveUpHint": "Move item up the order",
+    }
+  }
+/>
 `;

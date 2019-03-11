@@ -1,11 +1,11 @@
-import React, {PureComponent} from 'react';
+import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import ExternalLink from 'modules/SharedComponents/ExternalLink/components/ExternalLink';
 import BrokenImage from '@material-ui/icons/BrokenImage';
 import {withStyles} from '@material-ui/core/styles';
 import locale from 'locale/pages';
 
-const styles = () => ({
+export const styles = () => ({
     image: {
         width: '100%',
         '&:hover': {
@@ -17,7 +17,7 @@ const styles = () => ({
     }
 });
 
-class Thumbnail extends PureComponent {
+export class Thumbnail extends Component {
     static propTypes = {
         mediaUrl: PropTypes.string.isRequired,
         previewMediaUrl: PropTypes.string.isRequired,
@@ -26,7 +26,7 @@ class Thumbnail extends PureComponent {
         fileName: PropTypes.string,
         mimeType: PropTypes.string.isRequired,
         onClick: PropTypes.func,
-        classes: PropTypes.object
+        classes: PropTypes.object.isRequired
     };
 
     constructor(props) {
@@ -66,7 +66,7 @@ class Thumbnail extends PureComponent {
             <a
                 onClick={this.showPreview(mediaUrl, previewMediaUrl, mimeType)}
                 onKeyPress={this.showPreview(mediaUrl, previewMediaUrl, mimeType)}
-                title={mediaUrl && txt.thumbnailTitle.replace('[image]', mediaUrl) || null}
+                title={mediaUrl && txt.thumbnailTitle.replace('[image]', mediaUrl) || ''}
             >
                 {
                     !this.state.thumbnailError ?

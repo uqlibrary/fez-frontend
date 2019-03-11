@@ -1,8 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component ContributorRow  Row should be clickable when showContributorAssignment set to true 1`] = `
-<React.Fragment>
-  <WithStyles(ConfirmDialogBox)
+<Fragment>
+  <ConfirmDialogBox
+    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -131,7 +132,7 @@ exports[`Component ContributorRow  Row should be clickable when showContributorA
               noWrap={true}
               variant="caption"
             >
-              null
+              University of Queensland (null)
             </WithStyles(Typography)>
           }
         />
@@ -157,12 +158,13 @@ exports[`Component ContributorRow  Row should be clickable when showContributorA
       </WithStyles(Tooltip)>
     </WithStyles(ListItemSecondaryAction)>
   </WithStyles(ListItem)>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Component ContributorRow  Row should not be clickable when showContributorAssignment set to false 1`] = `
-<React.Fragment>
-  <WithStyles(ConfirmDialogBox)
+<Fragment>
+  <ConfirmDialogBox
+    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -291,7 +293,7 @@ exports[`Component ContributorRow  Row should not be clickable when showContribu
               noWrap={true}
               variant="caption"
             >
-              null
+              University of Queensland (null)
             </WithStyles(Typography)>
           }
         />
@@ -317,12 +319,13 @@ exports[`Component ContributorRow  Row should not be clickable when showContribu
       </WithStyles(Tooltip)>
     </WithStyles(ListItemSecondaryAction)>
   </WithStyles(ListItem)>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Component ContributorRow  a row with index and contributor set, renders only name and delete button 1`] = `
-<React.Fragment>
-  <WithStyles(ConfirmDialogBox)
+<Fragment>
+  <ConfirmDialogBox
+    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -441,12 +444,13 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
       </WithStyles(Tooltip)>
     </WithStyles(ListItemSecondaryAction)>
   </WithStyles(ListItem)>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Component ContributorRow  a row with index and contributor set, renders only name and delete button for mobile view 1`] = `
-<React.Fragment>
-  <WithStyles(ConfirmDialogBox)
+<Fragment>
+  <ConfirmDialogBox
+    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -565,12 +569,13 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
       </WithStyles(Tooltip)>
     </WithStyles(ListItemSecondaryAction)>
   </WithStyles(ListItem)>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Component ContributorRow  a row with index and contributor set, renders reorder buttons, contributor assignment, and delete button 1`] = `
-<React.Fragment>
-  <WithStyles(ConfirmDialogBox)
+<Fragment>
+  <ConfirmDialogBox
+    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -699,7 +704,7 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
               noWrap={true}
               variant="caption"
             >
-              null
+              University of Queensland (null)
             </WithStyles(Typography)>
           }
         />
@@ -759,12 +764,13 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
       </WithStyles(Tooltip)>
     </WithStyles(ListItemSecondaryAction)>
   </WithStyles(ListItem)>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Component ContributorRow  a row with index and contributor with author details set and set as selected 1`] = `
-<React.Fragment>
-  <WithStyles(ConfirmDialogBox)
+<Fragment>
+  <ConfirmDialogBox
+    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -862,6 +868,42 @@ exports[`Component ContributorRow  a row with index and contributor with author 
           }
         />
       </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        md={5}
+        sm={5}
+        xs={10}
+      >
+        <WithStyles(ListItemText)
+          disableTypography={true}
+          primary={
+            <WithStyles(Typography)
+              classes={
+                Object {
+                  "root": "primary selected",
+                }
+              }
+              noWrap={true}
+              variant="body2"
+            >
+              undefined undefined
+            </WithStyles(Typography)>
+          }
+          secondary={
+            <WithStyles(Typography)
+              classes={
+                Object {
+                  "root": " selected",
+                }
+              }
+              noWrap={true}
+              variant="caption"
+            >
+              University of Queensland (undefined)
+            </WithStyles(Typography)>
+          }
+        />
+      </WithStyles(Grid)>
     </WithStyles(Grid)>
     <WithStyles(ListItemSecondaryAction)>
       <WithStyles(Tooltip)
@@ -883,12 +925,13 @@ exports[`Component ContributorRow  a row with index and contributor with author 
       </WithStyles(Tooltip)>
     </WithStyles(ListItemSecondaryAction)>
   </WithStyles(ListItem)>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Component ContributorRow  a row with index and contributor with author details set and set as selected for mobile view 1`] = `
-<React.Fragment>
-  <WithStyles(ConfirmDialogBox)
+<Fragment>
+  <ConfirmDialogBox
+    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -986,6 +1029,42 @@ exports[`Component ContributorRow  a row with index and contributor with author 
           }
         />
       </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        md={5}
+        sm={5}
+        xs={10}
+      >
+        <WithStyles(ListItemText)
+          disableTypography={true}
+          primary={
+            <WithStyles(Typography)
+              classes={
+                Object {
+                  "root": "primary selected",
+                }
+              }
+              noWrap={true}
+              variant="body2"
+            >
+              undefined undefined
+            </WithStyles(Typography)>
+          }
+          secondary={
+            <WithStyles(Typography)
+              classes={
+                Object {
+                  "root": " selected",
+                }
+              }
+              noWrap={true}
+              variant="caption"
+            >
+              University of Queensland (undefined)
+            </WithStyles(Typography)>
+          }
+        />
+      </WithStyles(Grid)>
     </WithStyles(Grid)>
     <WithStyles(ListItemSecondaryAction)>
       <WithStyles(Tooltip)
@@ -1007,12 +1086,13 @@ exports[`Component ContributorRow  a row with index and contributor with author 
       </WithStyles(Tooltip)>
     </WithStyles(ListItemSecondaryAction)>
   </WithStyles(ListItem)>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Component ContributorRow  a row with index and contributor with author details set, contributor author details, and delete button 1`] = `
-<React.Fragment>
-  <WithStyles(ConfirmDialogBox)
+<Fragment>
+  <ConfirmDialogBox
+    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -1110,6 +1190,42 @@ exports[`Component ContributorRow  a row with index and contributor with author 
           }
         />
       </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        md={5}
+        sm={5}
+        xs={10}
+      >
+        <WithStyles(ListItemText)
+          disableTypography={true}
+          primary={
+            <WithStyles(Typography)
+              classes={
+                Object {
+                  "root": "primary ",
+                }
+              }
+              noWrap={true}
+              variant="body2"
+            >
+              Mr Christopher Christoff
+            </WithStyles(Typography)>
+          }
+          secondary={
+            <WithStyles(Typography)
+              classes={
+                Object {
+                  "root": " ",
+                }
+              }
+              noWrap={true}
+              variant="caption"
+            >
+              University of Queensland (null)
+            </WithStyles(Typography)>
+          }
+        />
+      </WithStyles(Grid)>
     </WithStyles(Grid)>
     <WithStyles(ListItemSecondaryAction)>
       <WithStyles(Tooltip)
@@ -1131,12 +1247,13 @@ exports[`Component ContributorRow  a row with index and contributor with author 
       </WithStyles(Tooltip)>
     </WithStyles(ListItemSecondaryAction)>
   </WithStyles(ListItem)>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Component ContributorRow  a row with index and creator with creator role set and set as selected 1`] = `
-<React.Fragment>
-  <WithStyles(ConfirmDialogBox)
+<Fragment>
+  <ConfirmDialogBox
+    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -1291,12 +1408,13 @@ exports[`Component ContributorRow  a row with index and creator with creator rol
       </WithStyles(Tooltip)>
     </WithStyles(ListItemSecondaryAction)>
   </WithStyles(ListItem)>
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`Component ContributorRow  a row with index and creator with creator role set and set as selected for mobile view 1`] = `
-<React.Fragment>
-  <WithStyles(ConfirmDialogBox)
+<Fragment>
+  <ConfirmDialogBox
+    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -1451,5 +1569,857 @@ exports[`Component ContributorRow  a row with index and creator with creator rol
       </WithStyles(Tooltip)>
     </WithStyles(ListItemSecondaryAction)>
   </WithStyles(ListItem)>
-</React.Fragment>
+</Fragment>
+`;
+
+exports[`Component ContributorRow  should assign contributor 1`] = `
+<Fragment>
+  <ConfirmDialogBox
+    hideCancelButton={false}
+    locale={
+      Object {
+        "cancelButtonLabel": "No",
+        "confirmButtonLabel": "Yes",
+        "confirmationMessage": "Are you sure you want to delete this record?",
+        "confirmationTitle": "Delete record",
+      }
+    }
+    onAction={[Function]}
+    onRef={[Function]}
+  />
+  <WithStyles(ListItem)
+    aria-label="Select this record (test) to assign it to you"
+    classes={
+      Object {
+        "root": undefined,
+      }
+    }
+    divider={true}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    style={
+      Object {
+        "cursor": "pointer",
+        "margin": 0,
+        "width": "100%",
+      }
+    }
+    tabIndex={0}
+  >
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={true}
+      xsUp={false}
+    >
+      <WithStyles(ListItemIcon)
+        classes={
+          Object {
+            "root": "selected",
+          }
+        }
+      >
+        <pure(PersonIcon) />
+      </WithStyles(ListItemIcon)>
+    </Hidden>
+    <WithStyles(Grid)
+      classes={
+        Object {
+          "container": "listItem",
+        }
+      }
+      container={true}
+    >
+      <WithStyles(Grid)
+        item={true}
+        md={5}
+        sm={5}
+        xs={10}
+      >
+        <WithStyles(ListItemText)
+          disableTypography={true}
+          primary={
+            <WithStyles(Typography)
+              classes={
+                Object {
+                  "root": "primary selected",
+                }
+              }
+              noWrap={true}
+              variant="body2"
+            >
+              test
+            </WithStyles(Typography)>
+          }
+          secondary={
+            <WithStyles(Typography)
+              classes={
+                Object {
+                  "root": "selected",
+                }
+              }
+              noWrap={true}
+              variant="caption"
+            >
+              First  listed contributor
+            </WithStyles(Typography)>
+          }
+        />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={5}
+      >
+        <WithStyles(ListItemText)
+          disableTypography={true}
+          primary={
+            <WithStyles(Typography)
+              classes={
+                Object {
+                  "root": "primary selected",
+                }
+              }
+              noWrap={true}
+              variant="body2"
+            >
+              undefined
+            </WithStyles(Typography)>
+          }
+          secondary={
+            <WithStyles(Typography)
+              classes={
+                Object {
+                  "root": " selected",
+                }
+              }
+              noWrap={true}
+              variant="caption"
+            >
+              Organisation type: Museum
+            </WithStyles(Typography)>
+          }
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+    <WithStyles(ListItemSecondaryAction)>
+      <WithStyles(Tooltip)
+        title="Remove this record"
+      >
+        <WithStyles(IconButton)
+          aria-label="Remove this record"
+          disabled={false}
+          onClick={[Function]}
+        >
+          <pure(DeleteIcon)
+            classes={
+              Object {
+                "root": "selected",
+              }
+            }
+          />
+        </WithStyles(IconButton)>
+      </WithStyles(Tooltip)>
+    </WithStyles(ListItemSecondaryAction)>
+  </WithStyles(ListItem)>
+</Fragment>
+`;
+
+exports[`Component ContributorRow  should call callback functions on ListItem 1`] = `
+<Fragment>
+  <ConfirmDialogBox
+    hideCancelButton={false}
+    locale={
+      Object {
+        "cancelButtonLabel": "No",
+        "confirmButtonLabel": "Yes",
+        "confirmationMessage": "Are you sure you want to delete this record?",
+        "confirmationTitle": "Delete record",
+      }
+    }
+    onAction={[Function]}
+    onRef={[Function]}
+  />
+  <WithStyles(ListItem)
+    aria-label="Select this record (test) to assign it to you"
+    classes={
+      Object {
+        "root": undefined,
+      }
+    }
+    divider={true}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    style={
+      Object {
+        "cursor": "pointer",
+        "margin": 0,
+        "width": "100%",
+      }
+    }
+    tabIndex={0}
+  >
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={true}
+      xsUp={false}
+    >
+      <WithStyles(ListItemIcon)
+        classes={
+          Object {
+            "root": undefined,
+          }
+        }
+      >
+        <pure(PersonIcon) />
+      </WithStyles(ListItemIcon)>
+    </Hidden>
+    <WithStyles(Grid)
+      classes={
+        Object {
+          "container": undefined,
+        }
+      }
+      container={true}
+    >
+      <WithStyles(Grid)
+        item={true}
+        md={5}
+        sm={5}
+        xs={10}
+      >
+        <WithStyles(ListItemText)
+          disableTypography={true}
+          primary={
+            <WithStyles(Typography)
+              classes={
+                Object {
+                  "root": "undefined undefined",
+                }
+              }
+              noWrap={true}
+              variant="body2"
+            >
+              test
+            </WithStyles(Typography)>
+          }
+          secondary={
+            <WithStyles(Typography)
+              classes={
+                Object {
+                  "root": "undefined",
+                }
+              }
+              noWrap={true}
+              variant="caption"
+            >
+              First  listed contributor
+            </WithStyles(Typography)>
+          }
+        />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        md={5}
+        sm={5}
+        xs={10}
+      >
+        <WithStyles(ListItemText)
+          disableTypography={true}
+          primary={
+            <WithStyles(Typography)
+              classes={
+                Object {
+                  "root": "test-class-1 undefined",
+                }
+              }
+              noWrap={true}
+              variant="body2"
+            >
+              undefined undefined
+            </WithStyles(Typography)>
+          }
+          secondary={
+            <WithStyles(Typography)
+              classes={
+                Object {
+                  "root": "test-class-2 undefined",
+                }
+              }
+              noWrap={true}
+              variant="caption"
+            >
+              University of Queensland (undefined)
+            </WithStyles(Typography)>
+          }
+        />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={5}
+      >
+        <WithStyles(ListItemText)
+          disableTypography={true}
+          primary={
+            <WithStyles(Typography)
+              classes={
+                Object {
+                  "root": "test-class-1 undefined",
+                }
+              }
+              noWrap={true}
+              variant="body2"
+            >
+              undefined
+            </WithStyles(Typography)>
+          }
+          secondary={
+            <WithStyles(Typography)
+              classes={
+                Object {
+                  "root": "test-class-2 undefined",
+                }
+              }
+              noWrap={true}
+              variant="caption"
+            >
+              Organisation type: Museum
+            </WithStyles(Typography)>
+          }
+        />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        md={5}
+        sm={5}
+        xs={10}
+      >
+        <WithStyles(ListItemText)
+          disableTypography={true}
+          primary={
+            <WithStyles(Typography)
+              classes={
+                Object {
+                  "root": "test-class-1 undefined",
+                }
+              }
+              noWrap={true}
+              variant="body2"
+            />
+          }
+          secondary={
+            <WithStyles(Typography)
+              classes={
+                Object {
+                  "root": "test-class-2 undefined",
+                }
+              }
+              noWrap={true}
+              variant="caption"
+            >
+              
+            </WithStyles(Typography)>
+          }
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+    <WithStyles(ListItemSecondaryAction)>
+      <WithStyles(Tooltip)
+        title="Remove this record"
+      >
+        <WithStyles(IconButton)
+          aria-label="Remove this record"
+          disabled={false}
+          onClick={[Function]}
+        >
+          <pure(DeleteIcon)
+            classes={
+              Object {
+                "root": "undefined",
+              }
+            }
+          />
+        </WithStyles(IconButton)>
+      </WithStyles(Tooltip)>
+    </WithStyles(ListItemSecondaryAction)>
+  </WithStyles(ListItem)>
+</Fragment>
+`;
+
+exports[`Component ContributorRow  should have a proper style generator 1`] = `
+Object {
+  "hideIcon": Object {
+    "display": "none",
+  },
+  "identifierName": Object {
+    "&:before": Object {
+      "content": "\\"UQ Id: \\"",
+    },
+    "fontSize": "test4",
+    "marginTop": 8,
+  },
+  "identifierSubtitle": Object {
+    "&:before": Object {
+      "content": "\\"UQ Username: \\"",
+    },
+    "fontSize": "test4",
+  },
+  "listItem": Object {
+    "padding": "0",
+  },
+  "primary": Object {
+    "fontSize": "test3",
+  },
+  "rowSelected": Object {
+    "backgroundColor": "test1",
+  },
+  "selected": Object {
+    "color": "white !important",
+    "fontWeight": "test2",
+  },
+}
+`;
+
+exports[`Component ContributorRow  should have a proper style generator 2`] = `
+Object {
+  "hideIcon": Object {
+    "display": "none",
+  },
+  "identifierName": Object {
+    "&:before": Object {
+      "content": "\\"UQ Id: \\"",
+    },
+    "fontSize": "test4",
+    "marginTop": 8,
+  },
+  "identifierSubtitle": Object {
+    "&:before": Object {
+      "content": "\\"UQ Username: \\"",
+    },
+    "fontSize": "test4",
+  },
+  "listItem": Object {
+    "padding": "0",
+  },
+  "primary": Object {
+    "fontSize": "test3",
+  },
+  "rowSelected": Object {
+    "backgroundColor": undefined,
+  },
+  "selected": Object {
+    "color": "white !important",
+    "fontWeight": "test2",
+  },
+}
+`;
+
+exports[`Component ContributorRow  should have a proper style generator 3`] = `
+Object {
+  "hideIcon": Object {
+    "display": "none",
+  },
+  "identifierName": Object {
+    "&:before": Object {
+      "content": "\\"UQ Id: \\"",
+    },
+    "fontSize": "test4",
+    "marginTop": 8,
+  },
+  "identifierSubtitle": Object {
+    "&:before": Object {
+      "content": "\\"UQ Username: \\"",
+    },
+    "fontSize": "test4",
+  },
+  "listItem": Object {
+    "padding": "0",
+  },
+  "primary": Object {
+    "fontSize": "test3",
+  },
+  "rowSelected": Object {
+    "backgroundColor": undefined,
+  },
+  "selected": Object {
+    "color": "white !important",
+    "fontWeight": "test2",
+  },
+}
+`;
+
+exports[`Component ContributorRow  should render row with UQ affiiliation and missing author title 1`] = `
+<WithStyles(Grid)
+  classes={
+    Object {
+      "container": undefined,
+    }
+  }
+  container={true}
+>
+  <WithStyles(Grid)
+    item={true}
+    md={5}
+    sm={5}
+    xs={10}
+  >
+    <WithStyles(ListItemText)
+      disableTypography={true}
+      primary={
+        <WithStyles(Typography)
+          classes={
+            Object {
+              "root": "undefined undefined",
+            }
+          }
+          noWrap={true}
+          variant="body2"
+        />
+      }
+      secondary={
+        <WithStyles(Typography)
+          classes={
+            Object {
+              "root": "undefined",
+            }
+          }
+          noWrap={true}
+          variant="caption"
+        >
+          First  listed contributor
+        </WithStyles(Typography)>
+      }
+    />
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+    xs={5}
+  >
+    <WithStyles(ListItemText)
+      disableTypography={true}
+      primary={
+        <WithStyles(Typography)
+          classes={
+            Object {
+              "root": "test1 undefined",
+            }
+          }
+          noWrap={true}
+          variant="body2"
+        >
+          University of Queensland
+        </WithStyles(Typography)>
+      }
+      secondary={
+        <WithStyles(Typography)
+          classes={
+            Object {
+              "root": "test2 undefined",
+            }
+          }
+          noWrap={true}
+          variant="caption"
+        >
+          Organisation type: University
+        </WithStyles(Typography)>
+      }
+    />
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
+`;
+
+exports[`Component ContributorRow  should render row with UQ affiiliation and missing author title in non-xs width 1`] = `
+<WithStyles(Grid)
+  classes={
+    Object {
+      "container": undefined,
+    }
+  }
+  container={true}
+>
+  <WithStyles(Grid)
+    item={true}
+    md={5}
+    sm={5}
+    xs={10}
+  >
+    <WithStyles(ListItemText)
+      disableTypography={true}
+      primary={
+        <WithStyles(Typography)
+          classes={
+            Object {
+              "root": "test undefined",
+            }
+          }
+          noWrap={true}
+          variant="body2"
+        />
+      }
+      secondary={
+        <WithStyles(Typography)
+          classes={
+            Object {
+              "root": "undefined",
+            }
+          }
+          noWrap={true}
+          variant="caption"
+        >
+          First  listed contributor
+        </WithStyles(Typography)>
+      }
+    />
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+    xs={5}
+  >
+    <WithStyles(ListItemText)
+      disableTypography={true}
+      primary={
+        <WithStyles(Typography)
+          classes={
+            Object {
+              "root": "test undefined",
+            }
+          }
+          noWrap={true}
+          variant="body2"
+        >
+          University of Queensland
+        </WithStyles(Typography)>
+      }
+      secondary={
+        <WithStyles(Typography)
+          classes={
+            Object {
+              "root": " undefined",
+            }
+          }
+          noWrap={true}
+          variant="caption"
+        >
+          Organisation type: University
+        </WithStyles(Typography)>
+      }
+    />
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
+`;
+
+exports[`Component ContributorRow  should render row with non-UQ affiiliation and missing org type 1`] = `
+<WithStyles(Grid)
+  classes={
+    Object {
+      "container": "listItem",
+    }
+  }
+  container={true}
+>
+  <WithStyles(Grid)
+    item={true}
+    md={5}
+    sm={5}
+    xs={10}
+  >
+    <WithStyles(ListItemText)
+      disableTypography={true}
+      primary={
+        <WithStyles(Typography)
+          classes={
+            Object {
+              "root": "primary undefined",
+            }
+          }
+          noWrap={true}
+          variant="body2"
+        />
+      }
+      secondary={
+        <WithStyles(Typography)
+          classes={
+            Object {
+              "root": "undefined",
+            }
+          }
+          noWrap={true}
+          variant="caption"
+        >
+          First  listed contributor
+        </WithStyles(Typography)>
+      }
+    />
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+    xs={5}
+  >
+    <WithStyles(ListItemText)
+      disableTypography={true}
+      primary={
+        <WithStyles(Typography)
+          classes={
+            Object {
+              "root": "primary undefined",
+            }
+          }
+          noWrap={true}
+          variant="body2"
+        >
+          undefined
+        </WithStyles(Typography)>
+      }
+      secondary={
+        <WithStyles(Typography)
+          classes={
+            Object {
+              "root": " undefined",
+            }
+          }
+          noWrap={true}
+          variant="caption"
+        >
+          
+        </WithStyles(Typography)>
+      }
+    />
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
+`;
+
+exports[`Component ContributorRow  should render with missing aria label if selectHint prop is falsy 1`] = `
+<Fragment>
+  <ConfirmDialogBox
+    hideCancelButton={false}
+    locale={
+      Object {
+        "cancelButtonLabel": "No",
+        "confirmButtonLabel": "Yes",
+        "confirmationMessage": "Are you sure?",
+        "confirmationTitle": "Confirmation",
+      }
+    }
+    onAction={[Function]}
+    onRef={[Function]}
+  />
+  <WithStyles(ListItem)
+    aria-label={null}
+    classes={
+      Object {
+        "root": "",
+      }
+    }
+    divider={true}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    style={
+      Object {
+        "cursor": "pointer",
+        "margin": 0,
+        "width": "100%",
+      }
+    }
+    tabIndex={0}
+  >
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={true}
+      xsUp={false}
+    >
+      <WithStyles(ListItemIcon)
+        classes={
+          Object {
+            "root": "",
+          }
+        }
+      >
+        <pure(PersonOutlinedIcon) />
+      </WithStyles(ListItemIcon)>
+    </Hidden>
+    <WithStyles(Grid)
+      classes={
+        Object {
+          "container": "listItem",
+        }
+      }
+      container={true}
+    >
+      <WithStyles(Grid)
+        item={true}
+        md={5}
+        sm={5}
+        xs={10}
+      >
+        <WithStyles(ListItemText)
+          disableTypography={true}
+          primary={
+            <WithStyles(Typography)
+              classes={
+                Object {
+                  "root": "primary ",
+                }
+              }
+              noWrap={true}
+              variant="body2"
+            >
+              A. Smith
+            </WithStyles(Typography)>
+          }
+          secondary={
+            <WithStyles(Typography)
+              classes={
+                Object {
+                  "root": "",
+                }
+              }
+              noWrap={true}
+              variant="caption"
+            >
+              First undefined
+            </WithStyles(Typography)>
+          }
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+    <WithStyles(ListItemSecondaryAction)>
+      <WithStyles(Tooltip)>
+        <WithStyles(IconButton)
+          disabled={false}
+          onClick={[Function]}
+        >
+          <pure(DeleteIcon)
+            classes={
+              Object {
+                "root": "",
+              }
+            }
+          />
+        </WithStyles(IconButton)>
+      </WithStyles(Tooltip)>
+    </WithStyles(ListItemSecondaryAction)>
+  </WithStyles(ListItem)>
+</Fragment>
 `;

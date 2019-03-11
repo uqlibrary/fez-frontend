@@ -1,7 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Component PublicationYearRangeField should have a proper style generator 1`] = `
+Object {
+  "title": Object {
+    "test1": "test1",
+    "test2": "test2",
+  },
+}
+`;
+
 exports[`Component PublicationYearRangeField should render as expected 1`] = `
-<React.Fragment>
+<Fragment>
   <WithStyles(Grid)
     container={true}
   >
@@ -95,5 +104,7 @@ exports[`Component PublicationYearRangeField should render as expected 1`] = `
       />
     </WithStyles(Grid)>
   </WithStyles(Grid)>
-</React.Fragment>
+</Fragment>
 `;
+
+exports[`Component PublicationYearRangeField should render help text when needed 1`] = `"Invalid year range"`;

@@ -22,7 +22,6 @@ UQ's branding for Fez is UQ eSpace.
 - Build and dev tools: `Webpack`
 - Unit tests: `Jest`
 - E2E tests: TBA
-- Styling: [Bulma](https://bulma.io/)
 
 ## Development
 
@@ -33,7 +32,7 @@ This project is using `npm` for dependency management.  Make sure `npm` is insta
 - `npm run start:mock` - The website is now running on `http://localhost:3000/` on mock data
 - `npm run start:url` - The website is now running on `http://dev-espace.library.uq.edu.au:3000` using staging as a backend (add `dev-espace.library.uq.edu.au` to your /etc/hosts)
 - for Hot Reloading to work in IntelliJ products, turn "safe write" off in the settings
-- to specify a session token use SESSION_COOKIE_NAME env var .ie SESSION_COOKIE_NAME='mysessiontoken' npm run start:url
+- to specify a session token use SESSION_COOKIE_NAME env var .ie SESSION_COOKIE_NAME='mysessiontoken' npm run start:url (you may need to block CORS errors - eg with Moesif Origin & CORS Changer Chrome Extension)
 - `npm run start:build` will run production build version on `http://dev-espace.library.uq.edu.au:9000/` and `http://localhost:9000`
 - `npm run start:build:e2e` will run production build version on `http://localhost:9000` with mock data (async loading is not working since chuncks are not saved, navigate directly to required routes)
 
@@ -47,6 +46,7 @@ There are two ways to run `eslint`:
 
 - Run `npm run eslint` command
 - Run the following in the project root directory to run eslint automatically before every local commit:
+
     ```sh
     ln -sf "../../scripts/pre-commit" ".git/hooks/pre-commit"
     ```
@@ -170,6 +170,8 @@ Jest is used as testing tool for unit tests. Any HTMl markup is to be tested wit
 - run tests `npm test`
 
 Before committing changes, locally run tests and update stapshots (if required). To update snapshots run `npm test -- -u`.
+
+[Code coverage](http://localhost:3000/coverage/index.html) is available (after running npm run)
 
 #### Guidelines
 

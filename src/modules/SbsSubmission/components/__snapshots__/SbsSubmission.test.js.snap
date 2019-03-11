@@ -68,7 +68,8 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
       }
       when={true}
     />
-    <WithStyles(ConfirmDialogBox)
+    <ConfirmDialogBox
+      hideCancelButton={false}
       locale={
         Object {
           "cancelButtonLabel": "No, continue editing",
@@ -144,9 +145,22 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
                 disabled={false}
                 itemsList={
                   Array [
-                    "MPhil Thesis",
-                    "PhD Thesis",
-                    "Professional Doctorate",
+                    Object {
+                      "text": "Select a thesis type",
+                      "value": undefined,
+                    },
+                    Object {
+                      "text": "MPhil Thesis",
+                      "value": "MPhil Thesis",
+                    },
+                    Object {
+                      "text": "PhD Thesis",
+                      "value": "PhD Thesis",
+                    },
+                    Object {
+                      "text": "Professional Doctorate",
+                      "value": "Professional Doctorate",
+                    },
                   ]
                 }
                 locale={
@@ -523,7 +537,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
           disabled={false}
           fullWidth={true}
           onClick={[Function]}
-          variant="raised"
+          variant="contained"
         >
           Cancel
         </WithStyles(Button)>
@@ -537,7 +551,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
           color="primary"
           fullWidth={true}
           onClick={[Function]}
-          variant="raised"
+          variant="contained"
         >
           Deposit your thesis
         </WithStyles(Button)>
@@ -563,7 +577,8 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
       }
       when={true}
     />
-    <WithStyles(ConfirmDialogBox)
+    <ConfirmDialogBox
+      hideCancelButton={false}
       locale={
         Object {
           "cancelButtonLabel": "No, continue editing",
@@ -639,9 +654,22 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
                 disabled={false}
                 itemsList={
                   Array [
-                    "MPhil Thesis",
-                    "PhD Thesis",
-                    "Professional Doctorate",
+                    Object {
+                      "text": "Select a thesis type",
+                      "value": undefined,
+                    },
+                    Object {
+                      "text": "MPhil Thesis",
+                      "value": "MPhil Thesis",
+                    },
+                    Object {
+                      "text": "PhD Thesis",
+                      "value": "PhD Thesis",
+                    },
+                    Object {
+                      "text": "Professional Doctorate",
+                      "value": "Professional Doctorate",
+                    },
                   ]
                 }
                 locale={
@@ -1018,7 +1046,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
           disabled={false}
           fullWidth={true}
           onClick={[Function]}
-          variant="raised"
+          variant="contained"
         >
           Cancel
         </WithStyles(Button)>
@@ -1032,7 +1060,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
           color="primary"
           fullWidth={true}
           onClick={[Function]}
-          variant="raised"
+          variant="contained"
         >
           Deposit your thesis
         </WithStyles(Button)>

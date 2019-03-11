@@ -43,7 +43,7 @@ const styles = theme => ({
     }
 });
 
-export class Dashboard extends PureComponent {
+export class DashboardClass extends PureComponent {
     static propTypes = {
         // account data
         account: PropTypes.object.isRequired,
@@ -142,6 +142,11 @@ export class Dashboard extends PureComponent {
                     <PublicationStats publicationsStats={this.props.publicationsStats}/>
                 </StandardCard>
             ) : null;
+        // console.log('Props', this.props);
+        // console.log('loading', loading);
+        // console.log('this.props.publicationsStats ', !!this.props.publicationsStats);
+        // console.log('this.props.publicationsStats.thomson_citation_count_i.count ', this.props.publicationsStats.thomson_citation_count_i.count);
+        // console.log('this.props.publicationsStats.scopus_citation_count_i.count ', this.props.publicationsStats.scopus_citation_count_i.count);
         return (
             <StandardPage>
                 <Grid container spacing={24}>
@@ -263,4 +268,7 @@ export class Dashboard extends PureComponent {
         );
     }
 }
-export default withStyles(styles, { withTheme: true })(Dashboard);
+
+const StyledDashboard = withStyles(styles, {withTheme: true})(DashboardClass);
+const Dashboard = (props) => <StyledDashboard {...props}/>;
+export default Dashboard;

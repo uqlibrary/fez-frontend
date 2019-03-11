@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Downshift from 'downshift';
 import {withStyles} from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
-import TextField from '@material-ui/core/TextField';
+import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
 import MenuItem from '@material-ui/core/MenuItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Popper from '@material-ui/core/Popper';
@@ -60,7 +60,7 @@ export class AutoCompleteAsyncField extends Component {
         required: false,
         filter: (searchText, key) => {
             const anyKey = isNaN(key) ? key : `${key}`;
-            const regex = new RegExp(`(${searchText.split(' ').join('|')})`, 'gi');
+            const regex = new RegExp(`(${searchText.split(' ').join('|').replace(/[()]/g, '')})`, 'gi');
             return regex.test(anyKey);
         },
         MenuItemComponent: ({suggestion}) => (
@@ -87,10 +87,6 @@ export class AutoCompleteAsyncField extends Component {
         if (this.props.async && this.props.loadSuggestions) {
             this.props.loadSuggestions(this.props.category, event.target.value);
         }
-    };
-
-    handleSelected = (value) => {
-        this.props.onChange(value);
     };
 
     renderInput = ({ inputProps, classes, openMenu, ...other }) => {
@@ -165,9 +161,16 @@ export class AutoCompleteAsyncField extends Component {
         }
     };
 
-    render() {
-        const { classes, itemsList, error, errorText, hintText, floatingLabelText, disabled, maxResults, itemToString, allowFreeText, required, selectedValue } = this.props;
+    handleStateChange = () => (
+        this.props.allowFreeText
+            ? ({inputValue}) => {
+                inputValue !== undefined && this.props.onChange({value: inputValue});
+            }
+            : () => {}
+    );
 
+    render() {
+        const { classes, itemsList, error, errorText, hintText, floatingLabelText, disabled, maxResults, itemToString, required, selectedValue } = this.props;
         const selectedItemProps = this.props.clearInput ? {selectedItem: ''} : {};
 
         return (
@@ -176,12 +179,9 @@ export class AutoCompleteAsyncField extends Component {
                     {...selectedItemProps}
                     defaultInputValue={!!selectedValue && selectedValue.value || ''}
                     stateReducer={this.stateReducer}
-                    onChange={this.handleSelected}
+                    onChange={this.props.onChange}
                     itemToString={itemToString}
-                    onStateChange={allowFreeText
-                        ? ({inputValue}) => !!inputValue && this.props.onChange({value: inputValue})
-                        : () => {}
-                    }
+                    onStateChange={this.handleStateChange()}
                 >
                     {
                         ({ getInputProps, getMenuProps, isOpen, inputValue, getItemProps, selectedItem, highlightedIndex, openMenu }) => {
@@ -194,7 +194,7 @@ export class AutoCompleteAsyncField extends Component {
                                             onChange: this.getSuggestions
                                         }),
                                         error: error,
-                                        helperText: error && errorText || '',
+                                        errorText: error && errorText || '',
                                         placeholder: hintText,
                                         label: floatingLabelText,
                                         value: inputValue,

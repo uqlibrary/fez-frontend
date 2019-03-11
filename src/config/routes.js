@@ -6,7 +6,7 @@ import {defaultQueryParams} from 'config/general';
 const fullPath = process.env.FULL_PATH && process.env.FULL_PATH || 'https://fez-staging.library.uq.edu.au';
 export const pidRegExp = 'UQ:[a-z0-9]+';
 
-const getSearchUrl = ({searchQuery = {all: ''}, activeFacets = {}}) => {
+const getSearchUrl = ({searchQuery = {all: ''}, activeFacets = {}}, searchUrl = '/records/search') => {
     const params = {
         ...defaultQueryParams,
         searchQueryParams: {
@@ -22,12 +22,11 @@ const getSearchUrl = ({searchQuery = {all: ''}, activeFacets = {}}) => {
         params.searchMode = 'advanced';
     }
 
-    return `/records/search?${param(params)}`;
+    return `${searchUrl}?${param(params)}`;
 };
 
 export const pathConfig = {
     index: '/',
-    prototype: '/prototype',
     dashboard: '/dashboard',
     contact: '/contact',
     hdrSubmission: '/rhdsubmission',
@@ -91,7 +90,9 @@ export const pathConfig = {
     },
     admin: {
         masquerade: '/admin/masquerade',
-        legacyEspace: `${fullPath}/my_upo_tools.php`
+        thirdPartyTools: '/tool/lookup',
+        legacyEspace: `${fullPath}/my_upo_tools.php`,
+        unpublished: '/admin/unpublished'
     },
     authorIdentifiers: {
         orcid: {
@@ -113,7 +114,8 @@ export const pathConfig = {
 // a duplicate list of routes for
 const flattedPathConfig = ['/', '/dashboard', '/contact', '/rhdsubmission', '/sbslodge_new', '/records/search',
     '/records/mine', '/records/possible', '/records/claim', '/records/add/find', '/records/add/results', '/records/add/new',
-    '/admin/masquerade', '/prototype', '/author-identifiers/orcid/link', '/author-identifiers/google-scholar/link'];
+    '/admin/masquerade', '/admin/unpublished', '/admin/thirdPartyTools', '/author-identifiers/orcid/link', '/author-identifiers/google-scholar/link'
+];
 
 // TODO: will we even have roles?
 export const roles = {
@@ -198,12 +200,6 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
                 component: components.Index,
                 exact: true,
                 pageTitle: locale.pages.index.title
-            },
-            {
-                path: pathConfig.prototype,
-                component: components.Admin,
-                exact: true,
-                pageTitle: locale.pages.prototype.title
             },
             {
                 path: pathConfig.dashboard,
@@ -291,7 +287,7 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
                 access: [roles.researcher, roles.admin],
                 exact: true,
                 pageTitle: locale.pages.googleScholarLink.title
-            }
+            },
         ] : []),
         ...(account && account.canMasquerade ? [
             {
@@ -300,6 +296,22 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
                 exact: true,
                 access: [roles.admin],
                 pageTitle: locale.pages.masquerade.title
+            },
+            {
+                path: pathConfig.admin.unpublished,
+                render: (props) => components.SearchRecords({...props, isAdvancedSearch: true}),
+                exact: true,
+                access: [roles.admin],
+                pageTitle: locale.pages.unpublished.title
+            }
+        ] : []),
+        ...(account && account.canMasquerade ? [ // this should check if the user is an admin
+            {
+                path: pathConfig.admin.thirdPartyTools,
+                component: components.ThirdPartyLookupTool,
+                exact: true,
+                access: [roles.admin],
+                pageTitle: locale.components.thirdPartyLookupTools.title
             }
         ] : []),
         ...publicPages,
@@ -405,12 +417,17 @@ export const getMenuConfig = (account, disabled) => {
                 ...locale.menu.masquerade,
             },
             {
-                linkTo: pathConfig.admin.legacyEspace,
-                ...locale.menu.legacyEspace
+                // maybe this should be in some admin bit? tbd
+                linkTo: pathConfig.admin.thirdPartyTools,
+                ...locale.menu.thirdPartyLookupTools,
             },
             {
-                linkTo: pathConfig.prototype,
-                ...locale.menu.adminPrototype
+                linkTo: getSearchUrl({searchQuery: {'rek_status': {'value': -4}}}, pathConfig.admin.unpublished),
+                ...locale.menu.unpublished
+            },
+            {
+                linkTo: pathConfig.admin.legacyEspace,
+                ...locale.menu.legacyEspace
             },
             {
                 divider: true,

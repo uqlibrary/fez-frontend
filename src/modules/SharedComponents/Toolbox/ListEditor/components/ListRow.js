@@ -44,15 +44,21 @@ export class ListRow extends PureComponent {
     }
 
     deleteRecord = () => {
-        if (!this.props.disabled && this.props.onDelete) this.props.onDelete(this.props.item, this.props.index);
+        if (!this.props.disabled && this.props.onDelete) {
+            this.props.onDelete(this.props.item, this.props.index);
+        }
     }
 
     onMoveUp = () => {
-        if (!this.props.disabled && this.props.onMoveUp) this.props.onMoveUp(this.props.item, this.props.index);
+        if (!this.props.disabled && this.props.onMoveUp) {
+            this.props.onMoveUp(this.props.item, this.props.index);
+        }
     }
 
     onMoveDown = () => {
-        if (!this.props.disabled && this.props.onMoveDown) this.props.onMoveDown(this.props.item, this.props.index);
+        if (!this.props.disabled && this.props.onMoveDown) {
+            this.props.onMoveDown(this.props.item, this.props.index);
+        }
     }
 
     render() {

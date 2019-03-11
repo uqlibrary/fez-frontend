@@ -14,12 +14,13 @@ import {locale} from 'locale';
 import * as recordForms from '../../PublicationForm/components/Forms';
 import DocumentTypeField from './Fields/DocumentTypeField';
 import PublicationYearRangeField from './Fields/PublicationYearRangeField';
+import DateRangeField from './Fields/DateRangeField';
 import AdvancedSearchCaption from './AdvancedSearchCaption';
 import {withStyles} from '@material-ui/core/styles';
 import Hidden from '@material-ui/core/Hidden';
 import * as validationRules from 'config/validation';
 
-const styles = theme => ({
+export const styles = theme => ({
     sideBar: {
         [theme.breakpoints.up('md')]: {
             paddingLeft: 32,
@@ -32,10 +33,10 @@ const styles = theme => ({
         }
     },
     blueButton: {
-        backgroundColor: theme.palette.accent.main,
-        color: theme.palette.white.main,
+        backgroundColor: ((theme.palette || {}).accent || {}).main,
+        color: ((theme.palette || {}).white || {}).main,
         '&:hover': {
-            backgroundColor: theme.palette.accent.dark,
+            backgroundColor: ((theme.palette || {}).accent || {}).dark,
         }
     }
 });
@@ -52,6 +53,9 @@ export class AdvancedSearchComponent extends PureComponent {
         isOpenAccess: PropTypes.bool,
         isMinimised: PropTypes.bool,
         isLoading: PropTypes.bool,
+        showUnpublishedFields: PropTypes.bool,
+        createdRange: PropTypes.object,
+        updatedRange: PropTypes.object,
 
         // Event handlers
         onToggleSearchMode: PropTypes.func,
@@ -62,6 +66,7 @@ export class AdvancedSearchComponent extends PureComponent {
         onAdvancedSearchReset: PropTypes.func,
         updateDocTypeValues: PropTypes.func,
         updateYearRangeFilter: PropTypes.func,
+        updateDateRange: PropTypes.func,
 
         onAdvancedSearchRowChange: PropTypes.func.isRequired,
         onSearch: PropTypes.func.isRequired,
@@ -79,6 +84,9 @@ export class AdvancedSearchComponent extends PureComponent {
         },
         isMinimised: false,
         isOpenAccess: false,
+        showUnpublishedFields: false,
+        createdRange: {},
+        updatedRange: {},
 
         onToggleSearchMode: () => {},
         onToggleMinimise: () => {},
@@ -108,24 +116,29 @@ export class AdvancedSearchComponent extends PureComponent {
     };
 
     _handleAdvancedSearch = (event) => {
-        if (event) event.preventDefault();
-        if (event && event.key && (event.key !== 'Enter')) return;
+        event.preventDefault();
+        if (event.key && (event.key !== 'Enter')) {
+            return;
+        }
         this.props.onSearch();
     };
 
     _toggleSearchMode = () => {
+        /* istanbul ignore else */
         if (!!this.props.onToggleSearchMode) {
             this.props.onToggleSearchMode();
         }
     };
 
     _toggleMinimise = () => {
+        /* istanbul ignore else */
         if (!!this.props.onToggleMinimise) {
             this.props.onToggleMinimise();
         }
     };
 
     _toggleOpenAccess = () => {
+        /* istanbul ignore else */
         if (!!this.props.onToggleOpenAccess) {
             this.props.onToggleOpenAccess();
         }
@@ -136,21 +149,38 @@ export class AdvancedSearchComponent extends PureComponent {
     };
 
     _addAdvancedSearchRow = () => {
+        /* istanbul ignore else */
         if (!!this.props.onAdvancedSearchRowAdd) {
             this.props.onAdvancedSearchRowAdd();
         }
     };
 
     _removeAdvancedSearchRow = (index) => {
+        /* istanbul ignore else */
         if (!!this.props.onAdvancedSearchRowRemove) {
             this.props.onAdvancedSearchRowRemove(index);
         }
     };
 
     _resetAdvancedSearch = () => {
+        /* istanbul ignore else */
         if (!!this.props.onAdvancedSearchReset) {
             this.props.onAdvancedSearchReset();
         }
+    };
+
+    _handleDateRangeChange = (key) => (value) => {
+        this.props.updateDateRange(key, value);
+    };
+
+    _captionProps = () => {
+        return {
+            className: this.props.className,
+            fieldRows: this.props.fieldRows,
+            docTypes: this.props.docTypes,
+            yearFilter: this.props.yearFilter,
+            isOpenAccess: this.props.isOpenAccess
+        };
     };
 
     render() {
@@ -160,6 +190,7 @@ export class AdvancedSearchComponent extends PureComponent {
         const canAddAnotherField = this.haveAllAdvancedSearchFieldsValidated(this.props.fieldRows)
             && lastFieldAdded.searchField !== '0';
         const alreadyAddedFields = this.props.fieldRows.map(item => item.searchField);
+
         return (
             <form id="advancedSearchForm" onSubmit={this._handleAdvancedSearch} style={{padding: 12}}>
                 <Grid container spacing={24}>
@@ -198,6 +229,7 @@ export class AdvancedSearchComponent extends PureComponent {
                                                         disabledFields={alreadyAddedFields}
                                                         onSearchRowChange={this._handleAdvancedSearchRowChange}
                                                         onSearchRowDelete={this._removeAdvancedSearchRow}
+                                                        showUnpublishedFields={this.props.showUnpublishedFields}
                                                         {...item}
                                                     />
                                                 ))
@@ -220,6 +252,29 @@ export class AdvancedSearchComponent extends PureComponent {
                                                     invalid={this.props.yearFilter.invalid}
                                                 />
                                             </Grid>
+                                            {
+                                                this.props.showUnpublishedFields &&
+                                                <React.Fragment>
+                                                    <Grid item xs={12}>
+                                                        <DateRangeField
+                                                            onChange={this._handleDateRangeChange('rek_created_date')}
+                                                            disabled={this.props.isLoading}
+                                                            disableFuture
+                                                            locale={locale.components.searchComponent.advancedSearch.fieldTypes.rek_created_date}
+                                                            {...this.props.createdRange}
+                                                        />
+                                                    </Grid>
+                                                    <Grid item xs={12}>
+                                                        <DateRangeField
+                                                            onChange={this._handleDateRangeChange('rek_updated_date')}
+                                                            disabled={this.props.isLoading}
+                                                            disableFuture
+                                                            locale={locale.components.searchComponent.advancedSearch.fieldTypes.rek_updated_date}
+                                                            {...this.props.updatedRange}
+                                                        />
+                                                    </Grid>
+                                                </React.Fragment>
+                                            }
                                             <Grid item xs={12}>
                                                 <FormControlLabel
                                                     control={<Checkbox
@@ -282,7 +337,7 @@ export class AdvancedSearchComponent extends PureComponent {
                     }
                     <Grid container>
                         <Grid item style={{paddingTop: 24}}>
-                            <AdvancedSearchCaption {...this.props} />
+                            <AdvancedSearchCaption {...this._captionProps()} />
                         </Grid>
                     </Grid>
                 </Grid>

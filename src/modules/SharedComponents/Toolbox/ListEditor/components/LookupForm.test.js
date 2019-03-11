@@ -16,4 +16,13 @@ describe('LookupForm tests ', () => {
         const wrapper = setup({ });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+
+    it('should add key value item', () => {
+        const onAddFn = jest.fn();
+        const wrapper = setup({
+            onAdd: onAddFn
+        });
+        wrapper.instance().addKeyValueItem('test');
+        expect(onAddFn).toHaveBeenCalledWith('test');
+    });
 });

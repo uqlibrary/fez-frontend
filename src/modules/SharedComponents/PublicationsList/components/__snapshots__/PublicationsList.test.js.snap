@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`PublicationsList renders  renders component with items 1`] = `
-<React.Fragment>
+<Fragment>
   <withRouter(Connect(WithStyles(PublicationCitation)))
     customActions={Array []}
     hideCountDiff={false}
@@ -858,6 +858,7 @@ exports[`PublicationsList renders  renders component with items 1`] = `
     showMetrics={false}
     showSourceCountIcon={false}
     showSources={false}
+    showUnpublishedBufferFields={false}
   />
   <withRouter(Connect(WithStyles(PublicationCitation)))
     customActions={Array []}
@@ -1974,6 +1975,7 @@ exports[`PublicationsList renders  renders component with items 1`] = `
     showMetrics={false}
     showSourceCountIcon={false}
     showSources={false}
+    showUnpublishedBufferFields={false}
   />
   <withRouter(Connect(WithStyles(PublicationCitation)))
     customActions={Array []}
@@ -2926,6 +2928,7 @@ exports[`PublicationsList renders  renders component with items 1`] = `
     showMetrics={false}
     showSourceCountIcon={false}
     showSources={false}
+    showUnpublishedBufferFields={false}
   />
   <withRouter(Connect(WithStyles(PublicationCitation)))
     customActions={Array []}
@@ -3836,6 +3839,7 @@ exports[`PublicationsList renders  renders component with items 1`] = `
     showMetrics={false}
     showSourceCountIcon={false}
     showSources={false}
+    showUnpublishedBufferFields={false}
   />
   <withRouter(Connect(WithStyles(PublicationCitation)))
     customActions={Array []}
@@ -4891,6 +4895,7 @@ exports[`PublicationsList renders  renders component with items 1`] = `
     showMetrics={false}
     showSourceCountIcon={false}
     showSources={false}
+    showUnpublishedBufferFields={false}
   />
   <withRouter(Connect(WithStyles(PublicationCitation)))
     customActions={Array []}
@@ -6081,6 +6086,7 @@ exports[`PublicationsList renders  renders component with items 1`] = `
     showMetrics={false}
     showSourceCountIcon={false}
     showSources={false}
+    showUnpublishedBufferFields={false}
   />
   <withRouter(Connect(WithStyles(PublicationCitation)))
     customActions={Array []}
@@ -6927,6 +6933,7 @@ exports[`PublicationsList renders  renders component with items 1`] = `
     showMetrics={false}
     showSourceCountIcon={false}
     showSources={false}
+    showUnpublishedBufferFields={false}
   />
   <withRouter(Connect(WithStyles(PublicationCitation)))
     customActions={Array []}
@@ -7684,6 +7691,7 @@ exports[`PublicationsList renders  renders component with items 1`] = `
     showMetrics={false}
     showSourceCountIcon={false}
     showSources={false}
+    showUnpublishedBufferFields={false}
   />
   <withRouter(Connect(WithStyles(PublicationCitation)))
     customActions={Array []}
@@ -8654,6 +8662,7 @@ exports[`PublicationsList renders  renders component with items 1`] = `
     showMetrics={false}
     showSourceCountIcon={false}
     showSources={false}
+    showUnpublishedBufferFields={false}
   />
   <withRouter(Connect(WithStyles(PublicationCitation)))
     customActions={Array []}
@@ -10035,6 +10044,7 @@ exports[`PublicationsList renders  renders component with items 1`] = `
     showMetrics={false}
     showSourceCountIcon={false}
     showSources={false}
+    showUnpublishedBufferFields={false}
   />
   <withRouter(Connect(WithStyles(PublicationCitation)))
     customActions={Array []}
@@ -11061,6 +11071,7 @@ exports[`PublicationsList renders  renders component with items 1`] = `
     showMetrics={false}
     showSourceCountIcon={false}
     showSources={false}
+    showUnpublishedBufferFields={false}
   />
   <withRouter(Connect(WithStyles(PublicationCitation)))
     customActions={Array []}
@@ -11806,6 +11817,7 @@ exports[`PublicationsList renders  renders component with items 1`] = `
     showMetrics={false}
     showSourceCountIcon={false}
     showSources={false}
+    showUnpublishedBufferFields={false}
   />
   <withRouter(Connect(WithStyles(PublicationCitation)))
     customActions={Array []}
@@ -12744,6 +12756,7 @@ exports[`PublicationsList renders  renders component with items 1`] = `
     showMetrics={false}
     showSourceCountIcon={false}
     showSources={false}
+    showUnpublishedBufferFields={false}
   />
   <withRouter(Connect(WithStyles(PublicationCitation)))
     customActions={Array []}
@@ -13551,6 +13564,7 @@ exports[`PublicationsList renders  renders component with items 1`] = `
     showMetrics={false}
     showSourceCountIcon={false}
     showSources={false}
+    showUnpublishedBufferFields={false}
   />
   <withRouter(Connect(WithStyles(PublicationCitation)))
     customActions={Array []}
@@ -14410,6 +14424,7 @@ exports[`PublicationsList renders  renders component with items 1`] = `
     showMetrics={false}
     showSourceCountIcon={false}
     showSources={false}
+    showUnpublishedBufferFields={false}
   />
   <withRouter(Connect(WithStyles(PublicationCitation)))
     customActions={Array []}
@@ -15529,6 +15544,7 @@ exports[`PublicationsList renders  renders component with items 1`] = `
     showMetrics={false}
     showSourceCountIcon={false}
     showSources={false}
+    showUnpublishedBufferFields={false}
   />
   <withRouter(Connect(WithStyles(PublicationCitation)))
     customActions={Array []}
@@ -16838,6 +16854,7 @@ exports[`PublicationsList renders  renders component with items 1`] = `
     showMetrics={false}
     showSourceCountIcon={false}
     showSources={false}
+    showUnpublishedBufferFields={false}
   />
   <withRouter(Connect(WithStyles(PublicationCitation)))
     customActions={Array []}
@@ -17810,6 +17827,7 @@ exports[`PublicationsList renders  renders component with items 1`] = `
     showMetrics={false}
     showSourceCountIcon={false}
     showSources={false}
+    showUnpublishedBufferFields={false}
   />
   <withRouter(Connect(WithStyles(PublicationCitation)))
     customActions={Array []}
@@ -18436,6 +18454,7 @@ exports[`PublicationsList renders  renders component with items 1`] = `
     showMetrics={false}
     showSourceCountIcon={false}
     showSources={false}
+    showUnpublishedBufferFields={false}
   />
   <withRouter(Connect(WithStyles(PublicationCitation)))
     customActions={Array []}
@@ -19555,8 +19574,9 @@ exports[`PublicationsList renders  renders component with items 1`] = `
     showMetrics={false}
     showSourceCountIcon={false}
     showSources={false}
+    showUnpublishedBufferFields={false}
   />
-</React.Fragment>
+</Fragment>
 `;
 
-exports[`PublicationsList renders  renders empty component 1`] = `<React.Fragment />`;
+exports[`PublicationsList renders  renders empty component 1`] = `<Fragment />`;

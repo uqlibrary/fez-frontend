@@ -75,15 +75,20 @@ export class AdvancedSearchCaption extends PureComponent {
 
     getSearchFieldData = (fieldRows) => {
         const txt = locale.components.searchComponent.advancedSearch.fieldTypes;
-        return fieldRows
+        const rows = fieldRows
             .filter((item) => item.searchField !== 'rek_display_type')
-            .map((item) => (
-                this.getCleanValue({
-                    title: txt[item.searchField].title,
-                    combiner: txt[item.searchField].combiner,
-                    value: item.value
-                })
-            ));
+            .map((item) => {
+                if (!!txt[item.searchField].captionFn) {
+                    return txt[item.searchField].captionFn(item.value);
+                } else {
+                    return this.getCleanValue({
+                        title: txt[item.searchField].title,
+                        combiner: txt[item.searchField].combiner,
+                        value: item.value
+                    });
+                }
+            });
+        return rows;
     };
 
     getDocTypeData = (docTypes) => {
@@ -125,12 +130,12 @@ export class AdvancedSearchCaption extends PureComponent {
             .filter((item) => !!item.value) // Dont render caption until it has a value
             .map((item, index) => {
                 return (
-                    <React.Fragment>
+                    <span key={index}>
                         <span className={classes.and}> {index !== 0 && ' AND '} </span>
                         <span className={classes.title}>{item.title} </span>
                         <span className={classes.combiner}> {item.combiner} </span>
                         <span className={classes.value}> {item.value}</span>
-                    </React.Fragment>
+                    </span>
                 );
             });
     };

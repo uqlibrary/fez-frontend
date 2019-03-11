@@ -95,12 +95,12 @@ export default {
                 },
                 thomson: {
                     title: 'Web of Science citation count',
-                    subtitle: 'The +plus score indicates the increase in citations over the last month',
+                    subtitle: 'The + (plus) value indicates how much the citation count has increased in the last three months.',
                     order: 1
                 },
                 scopus: {
                     title: 'Scopus citation count',
-                    subtitle: 'The +plus score indicates the increase in citations over the last month',
+                    subtitle: 'The + (plus) value indicates how much the citation count has increased in the last three months.',
                     order: 0
                 }
             }
@@ -111,7 +111,7 @@ export default {
                 <React.Fragment>
                     <h3>WOS and Scopus</h3>
                     <p>
-                        The large number is the total citation count and the + (plus) value indicates how much the citation count has increased in the last three months.
+                        The + (plus) value indicates how much the citation count has increased in the last three months.
                     </p>
                     <h3>Altmetric score (social media activity)</h3>
                     <p>
@@ -147,17 +147,17 @@ export default {
                 order: 0
             },
             scopus: {
-                title: (<span>Hot papers on Scopus</span>),
+                title: (<span>Trending on Scopus</span>),
                 mobileTitle: 'Scopus',
                 heading: 'Scopus citation count',
-                subHeading: 'The +plus score indicates the increase in citations over the three months',
+                subHeading: 'The + (plus) value indicates how much the citation count has increased in the last three months.',
                 order: 1
             },
             thomson: {
                 title: (<span>Trending on Web of science</span>),
                 mobileTitle: 'WOS',
                 heading: 'Web of Science citation count',
-                subHeading: 'The +plus score indicates the increase in citations over the three months',
+                subHeading: 'The + (plus) value indicates how much the citation count has increased in the last three months.',
                 order: 2
             },
             recordsPerSource: 20
@@ -272,6 +272,43 @@ export default {
                     }
                 }
             }
+        },
+        thirdPartyLookupTools: {
+            display: {
+                title: 'Lookup Tools - view raw output from APIs',
+                loadingMessage: 'Loading',
+                tooltip: {
+                    show: 'Show form for',
+                    hide: 'Hide form for'
+                },
+                resultsLabel: 'Results',
+                noResultsFound: {
+                    text: 'No results found'
+                },
+                clearButtonLabel: 'New Search'
+            },
+            forms: [
+                {
+                    apiType: 'incites', // this value should match the 'type' in the path used in api
+                    lookupLabel: 'Incites',
+                    primaryField: {
+                        heading: 'UTs',
+                        fromAria: '',
+                        tip: '',
+                        inputPlaceholder: 'Enter one or more UTs separated by a comma e.g. 000455548800001',
+                    },
+                    secondaryField: {
+                        heading: 'API Key',
+                        fromAria: '',
+                        tip: 'Optional, a default key is provided. Limit: 1,000 queries per day',
+                        inputPlaceholder: 'Enter API key',
+                        reportInOutput: false, // determines if secondaryField will apear in the results page
+                    },
+                    bottomTip: '',
+                    submitButtonLabel: 'Submit to Incites',
+                    isMinimised: false // set this to true when we have more than one form
+                }
+            ],
         },
         typeOfDataForm: {
             field: {
@@ -1025,11 +1062,11 @@ export default {
         ntroFields: {
             metadata: {
                 help: {
-                    title: 'Non-traditional research out metadata',
+                    title: 'Non-traditional research output data',
                     text: (
                         <React.Fragment>
                             <h3>Quality indicators</h3>
-                            <p>For more information about each quality indicator option, click <a target="_blank" href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836609">here</a></p>
+                            <p>For more information about each quality indicator option, click <b><a style={{fontWeight: 700}} target="_blank" href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836609">here</a></b></p>
                         </React.Fragment>
                     ),
                     buttonLabel: 'OK'
@@ -1224,7 +1261,7 @@ export default {
                         combiner: 'is',
                         type: 'AuthorIdLookup',
                         hint: 'Add an author id',
-                        validation: ['required'],
+                        validation: ['required', 'maxLength9'],
                         ariaLabel: 'Begin typing an author ID to select an author from the list'
                     },
                     'rek_contributor_id': {
@@ -1234,7 +1271,7 @@ export default {
                         combiner: 'is',
                         type: 'ContributorIdLookup',
                         hint: 'Add a contributor id',
-                        validation: ['required'],
+                        validation: ['required', 'maxLength9'],
                         ariaLabel: 'Begin typing an contributor ID to select an author from the list'
                     },
                     'rek_org_unit_name': {
@@ -1254,7 +1291,6 @@ export default {
                         combiner: 'is one of',
                         type: null,
                         hint: 'Select document types',
-                        floatingLabelText: 'Test',
                         validation: [],
                         ariaLabel: 'Select multiple publications types to search on'
                     },
@@ -1271,6 +1307,39 @@ export default {
                         toHint: 'Year to',
                         invalidText: 'Invalid year range',
                         ariaLabel: 'Add valid year ranges to search between'
+                    },
+                    'rek_status': {
+                        order: 16,
+                        map: 'Status',
+                        title: 'Status',
+                        combiner: 'is',
+                        type: 'StatusLookup',
+                        hint: 'Select status',
+                        validation: [],
+                        ariaLabel: 'Select a status to search on',
+                        isUnpublishedField: true
+                    },
+                    'rek_created_date': {
+                        order: 22,
+                        title: 'Created date range',
+                        captionTitle: 'Created',
+                        type: null,
+                        combiner: 'between',
+                        ariaLabel: 'Add valid date ranges to search between',
+                        isUnpublishedField: true,
+                        validation: [],
+                        captionFn: (value) => (value.from && value.to && value.from.isBefore(value.to) && {title: 'Created', combiner: 'between', value: `${value.from.format('Do MMMM, YYYY')} and ${value.to.format('Do MMMM, YYYY')}`} || null)
+                    },
+                    'rek_updated_date': {
+                        order: 23,
+                        title: 'Updated date range',
+                        captionTitle: 'Updated',
+                        type: null,
+                        combiner: 'between',
+                        ariaLabel: 'Add valid date ranges to search between',
+                        isUnpublishedField: true,
+                        validation: [],
+                        captionFn: (value) => (value.from && value.to && value.from.isBefore(value.to) && {title: 'Updated', combiner: 'between', value: `${value.from.format('Do MMMM, YYYY')} and ${value.to.format('Do MMMM, YYYY')}`} || null)
                     }
                 },
                 openAccess: {
@@ -1304,19 +1373,8 @@ export default {
             readMoreTitle: 'Click to read more about UQ eSpace',
             readMoreLink: '/contact'
         },
-        shareThis: {
-            facebook: {linkTitle: 'Share this link via Facebook'},
-            mendeley: {linkTitle: 'Share this link via Mendeley'},
-            twitter: {linkTitle: 'Share this link via Twitter'},
-            linkedin: {linkTitle: 'Share this link via LinkedIn'},
-            googleplus: {linkTitle: 'Share this link via Google+'},
-            reddit: {linkTitle: 'Share this link via Reddit'},
-            email: {linkTitle: 'Share this link via Email'},
-            print: {linkTitle: 'Print this record'},
-        },
         fileUploader: {
             label: 'Click here to select files, or drag files into this area to upload'
         }
     }
 };
-

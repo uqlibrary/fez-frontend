@@ -16,7 +16,7 @@ import {withStyles} from '@material-ui/core/styles';
 import Hidden from '@material-ui/core/Hidden';
 import Fade from '@material-ui/core/Fade';
 
-const styles = theme => ({
+export const styles = theme => ({
     searchIconPrefix: {
         fill: theme.palette.secondary.main,
         opacity: 0.66
@@ -121,7 +121,9 @@ export class SimpleSearchComponent extends PureComponent {
             showMobile: !this.state.showMobile
         }, () => {
             if (this.state.showMobile) {
-                document.getElementById('mobileSearchField') && document.getElementById('mobileSearchField').focus();
+                document.getElementById('mobileSearchField') &&
+                /* istanbul ignore next */
+                document.getElementById('mobileSearchField').focus();
             }
         });
     };
@@ -131,6 +133,7 @@ export class SimpleSearchComponent extends PureComponent {
     };
 
     _handleSearchMode = () => {
+        /* istanbul ignore else */
         if (!!this.props.onToggleSearchMode) {
             this.props.onToggleSearchMode();
         }
@@ -186,8 +189,8 @@ export class SimpleSearchComponent extends PureComponent {
                                                 autoComplete={'search'}
                                                 fullWidth
                                                 autoFocus={this.props.autoFocus}
-                                                label={!this.props.isInHeader && txt.searchBoxPlaceholder}
-                                                placeholder={this.props.isInHeader ? txt.searchBoxPlaceholder : txt.searchBoxHint}
+                                                label={false}
+                                                placeholder={txt.searchBoxPlaceholder}
                                                 aria-label={txt.ariaInputLabel}
                                                 onChange={this._handleSearchTextChange}
                                                 onKeyPress={this._handleSearch}
@@ -212,7 +215,7 @@ export class SimpleSearchComponent extends PureComponent {
                                             <div className={classes.mobileHeader}>
                                                 <Grid container spacing={0} direction={'row'} wrap={'nowrap'} alignItems={'stretch'} justify={'center'}>
                                                     {
-                                                        this.props.showMobileSearchButton && this.state.showMobile &&
+                                                        this.props.showMobileSearchButton &&
                                                         <Hidden smUp>
                                                             <Grid item>
                                                                 <Button onClick={this._handleToggleMobile} className={classes.mobileBackArrowButton}>
@@ -227,8 +230,8 @@ export class SimpleSearchComponent extends PureComponent {
                                                             type="search"
                                                             id="mobileSearchField"
                                                             fullWidth
-                                                            label={!this.props.isInHeader && txt.searchBoxPlaceholder}
-                                                            placeholder={this.props.isInHeader ? txt.searchBoxPlaceholder : txt.searchBoxHint}
+                                                            label={false}
+                                                            placeholder={txt.searchBoxPlaceholder}
                                                             aria-label={txt.ariaInputLabel}
                                                             onChange={this._handleSearchTextChange}
                                                             onKeyPress={this._handleSearch}
@@ -250,7 +253,7 @@ export class SimpleSearchComponent extends PureComponent {
                                             type="search"
                                             fullWidth
                                             label={!this.props.isInHeader && txt.searchBoxPlaceholder}
-                                            placeholder={this.props.isInHeader ? txt.searchBoxPlaceholder : txt.searchBoxHint}
+                                            placeholder={txt.searchBoxHint}
                                             aria-label={txt.ariaInputLabel}
                                             onChange={this._handleSearchTextChange}
                                             onKeyPress={this._handleSearch}

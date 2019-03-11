@@ -25,8 +25,9 @@ const styles = (theme) => ({
     }
 });
 
-export class AdditionalInformation extends PureComponent {
+export class AdditionalInformationClass extends PureComponent {
     static propTypes = {
+        account: PropTypes.object,
         publication: PropTypes.object.isRequired,
         classes: PropTypes.object,
         isNtro: PropTypes.bool
@@ -102,10 +103,10 @@ export class AdditionalInformation extends PureComponent {
             case 'rek_doi': return this.renderDoi(data);
             case 'rek_journal_name': return this.renderJournalName();
             case 'rek_publisher': return this.renderLink(routes.pathConfig.list.publisher(data), data);
-            case 'rek_herdc_code': return this.renderLink(routes.pathConfig.list.subject(object[subkey]), data);
+            case 'rek_herdc_code': return this.renderLink(routes.pathConfig.list.herdcStatus(object[subkey]), data);
             case 'rek_herdc_status': return this.renderLink(routes.pathConfig.list.herdcStatus(object[`${subkey}_lookup`]), data);
-            case 'rek_ands_collection_type': return !!data && data || '';
-            case 'rek_access_conditions': return !!data && data || '';
+            case 'rek_ands_collection_type': return !!data && data;
+            case 'rek_access_conditions': return !!data && data;
             case 'rek_series': return this.renderLink(routes.pathConfig.list.series(object[subkey]), object[subkey]);
             case 'rek_license': return this.renderLicense(object[subkey], data);
             case 'rek_org_unit_name': return this.renderLink(routes.pathConfig.list.orgUnitName(data), data);
@@ -123,8 +124,8 @@ export class AdditionalInformation extends PureComponent {
         switch (key) {
             case 'rek_title': return this.renderTitle();
             case 'rek_date': return this.formatPublicationDate(value);
-            case 'rek_start_date': return this.formatPublicationDate(value);
-            case 'rek_end_date': return this.formatPublicationDate(value);
+            // case 'rek_start_date': return this.formatPublicationDate(value);
+            // case 'rek_end_date': return this.formatPublicationDate(value);
             case 'rek_description': return this.renderHTML(value);
             default: return value;
         }
@@ -209,7 +210,7 @@ export class AdditionalInformation extends PureComponent {
     }
 
     getAbstract = (publication) => {
-        return publication.rek_formatted_abstract && publication.rek_formatted_abstract.replace(/&nbsp;/g, ' ') || publication.rek_description && publication.rek_description.replace(/&nbsp;/g, ' ');
+        return this.props.isNtro ? null : publication.rek_formatted_abstract && publication.rek_formatted_abstract.replace(/&nbsp;/g, ' ') || publication.rek_description && publication.rek_description.replace(/&nbsp;/g, ' ') || null;
     }
 
     // TODO: display original contact email for admin users
@@ -235,7 +236,6 @@ export class AdditionalInformation extends PureComponent {
         return field.indexOf(keyPrefix) === 0 ? subkeyPrefix + field.substring(keyPrefix.length) : null;
     }
 
-    // TODO: check for user role
     excludeAdminOnlyFields = (fields) => {
         return fields.filter(item=>!locale.viewRecord.adminFields.includes(item.field));
     }
@@ -248,7 +248,7 @@ export class AdditionalInformation extends PureComponent {
         const displayTypeHeadings = displayType && headings[displayType] ? headings[displayType] : [];
         const footerFields = locale.viewRecord.fields.footer;
         let fields = displayType && locale.viewRecord.fields[displayType] ? locale.viewRecord.fields[displayType].concat(footerFields) : footerFields;
-        fields = this.excludeAdminOnlyFields(fields);
+        fields = this.props.account && this.props.account.canMasquerade ? fields : this.excludeAdminOnlyFields(fields);
 
         fields.sort((field1, field2) => (
             field1.order - field2.order
@@ -280,7 +280,6 @@ export class AdditionalInformation extends PureComponent {
         if (!this.props.publication || !this.props.publication.rek_display_type_lookup) {
             return null;
         }
-
         return (
             <Grid item xs={12}>
                 <StandardCard title={locale.viewRecord.sections.additionalInformation.title}>
@@ -293,4 +292,7 @@ export class AdditionalInformation extends PureComponent {
     }
 }
 
-export default withStyles(styles)(AdditionalInformation);
+
+const StyledAdditionalInformation = withStyles(styles, {withTheme: true})(AdditionalInformationClass);
+const AdditionalInformation = (props) => <StyledAdditionalInformation {...props}/>;
+export default AdditionalInformation;

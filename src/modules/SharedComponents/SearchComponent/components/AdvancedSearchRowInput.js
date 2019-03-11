@@ -1,9 +1,10 @@
 import {PureComponent} from 'react';
 import PropTypes from 'prop-types';
-import TextField from '@material-ui/core/TextField';
 import * as validationRules from 'config/validation';
+import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
 import {AuthorIdField, PublisherField, OrgUnitNameField} from 'modules/SharedComponents/LookupFields';
 import {ThesisSubtypeField, CollectionsSelectField} from 'modules/SharedComponents/PublicationSubtype';
+import UnpublishedStatusField from './Fields/UnpublishedStatusField';
 
 export default class AdvancedSearchRowInput extends PureComponent {
     static propTypes = {
@@ -49,7 +50,7 @@ export default class AdvancedSearchRowInput extends PureComponent {
             inputProps: {
                 ...this.state.inputProps,
                 'error': !!this.runValidationRules(nextProps.value),
-                'helperText': this.runValidationRules(nextProps.value)
+                'errorText': this.runValidationRules(nextProps.value)
             }
         });
     }
@@ -69,6 +70,8 @@ export default class AdvancedSearchRowInput extends PureComponent {
                 return AuthorIdField;
             case 'OrgUnitLookup':
                 return OrgUnitNameField;
+            case 'StatusLookup':
+                return UnpublishedStatusField;
             default:
                 return TextField;
         }
@@ -87,7 +90,7 @@ export default class AdvancedSearchRowInput extends PureComponent {
             'placeholder': this.props.inputField.hint,
             'aria-label': this.props.inputField.ariaLabel,
             'error': !!this.runValidationRules(this.props.value),
-            'helperText': this.runValidationRules(this.props.value),
+            'errorText': this.runValidationRules(this.props.value),
             'label': null,
         };
 
@@ -150,6 +153,14 @@ export default class AdvancedSearchRowInput extends PureComponent {
                     'autoWidth': false,
                     'hideLabel': true,
                     'displayEmpty': true
+                };
+            case 'StatusLookup':
+                return {
+                    ...selectDefaultProps,
+                    'autoWidth': false,
+                    'hideLabel': true,
+                    'displayEmpty': false,
+                    'onChange': (item) => this.props.onChange(item)
                 };
             default: return {};
         }

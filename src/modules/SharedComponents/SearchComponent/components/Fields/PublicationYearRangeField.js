@@ -6,7 +6,7 @@ import InputLabel from '@material-ui/core/InputLabel';
 import locale from 'locale/components';
 import {withStyles} from '@material-ui/core/styles';
 
-const styles = theme => ({
+export const styles = theme => ({
     title: {
         ...theme.typography.caption
     }
@@ -39,11 +39,11 @@ export class PublicationYearRangeField extends PureComponent {
         this.props.updateYearRangeFilter({
             ...this.props.yearFilter,
             [key]: isNaN(intValue) ? 0 : intValue,
-            invalid: !!this.isValidText({...this.props.yearFilter, [key]: isNaN(intValue) ? 0 : intValue})
+            invalid: !!this.isInvalidYear({...this.props.yearFilter, [key]: isNaN(intValue) ? 0 : intValue})
         });
     };
 
-    isValidText = values => {
+    isInvalidYear = values => {
         const from = values.from;
         const to = values.to;
         return (from > to || from > 9999 || to > 9999);

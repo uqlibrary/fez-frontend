@@ -31,7 +31,10 @@ export class FileUploadAccessSelector extends PureComponent {
     };
 
     _onChange = (event) => {
-        if (this.props.onChange) this.props.onChange(event.target.value);
+        /* istanbul ignore else */
+        if (this.props.onChange) {
+            this.props.onChange(event.target.value);
+        }
     };
 
     render() {

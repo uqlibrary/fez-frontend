@@ -6,6 +6,8 @@ function setup(testProps, isShallow = true) {
         publicationsList: [],
         searchLoading: false,
         exportPublicationsLoading: false,
+        isAdvancedSearch: false,
+        isUnpublishedBufferPage: false,
         actions: {
             exportEspacePublications: jest.fn(),
             searchEspacePublications: jest.fn()
@@ -23,6 +25,11 @@ describe('SearchRecords page', () => {
 
     it('should render placeholders', () => {
         const wrapper = setup({});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render advanced search component', () => {
+        const wrapper = setup({isAdvancedSearch: true});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -458,5 +465,34 @@ describe('SearchRecords page', () => {
         const result = ["Scopus document type", "Genre", "Year published", "Published year range", "Title", "Author"];
         wrapper.instance().handleFacetExcludesFromSearchFields(test);
         expect(wrapper.instance().state.advancedSearchFields).toEqual(result)
+    });
+
+    it('should handle empty search query string and should not fail to WSoD', () => {
+        const wrapper = setup();
+        const expected = {
+            "activeFacets": {
+              "filters": {},
+              "ranges": {},
+            },
+            "pageSize": 20,
+            "sortBy": "score",
+            "sortDirection": "Desc",
+        };
+        const result = wrapper.instance().parseSearchQueryStringFromUrl('');
+        expect(result).toEqual(expected);
+    });
+
+    it('should call unmount component', () => {
+        const clearSearchQueryFn = jest.fn();
+        const wrapper = setup({
+            actions: {
+                clearSearchQuery: clearSearchQueryFn,
+                searchEspacePublications: jest.fn()
+            }
+        });
+        const componentWillUnmount = jest.spyOn(wrapper.instance(), 'componentWillUnmount');
+        wrapper.unmount();
+        expect(componentWillUnmount).toHaveBeenCalled();
+        expect(clearSearchQueryFn).toHaveBeenCalled();
     });
 });

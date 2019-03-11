@@ -11,7 +11,7 @@ import {NtroFields} from 'modules/SharedComponents/Toolbox/NtroFields';
 import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
 import {validation} from 'config';
 import {locale} from 'locale';
-import {NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION, NTRO_SUBTYPE_CW_TEXTUAL_WORK} from 'config/general';
+import {NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION} from 'config/general';
 import {default as formLocale} from 'locale/publicationForm';
 
 import Grid from '@material-ui/core/Grid';
@@ -158,7 +158,6 @@ export default class BookForm extends Component {
                         hideSeries
                         hideStartPage
                         hideEndPage
-                        hideExtent={this.props.subtype !== NTRO_SUBTYPE_CW_TEXTUAL_WORK}
                         hideOriginalFormat
                         hideAudienceSize
                     />

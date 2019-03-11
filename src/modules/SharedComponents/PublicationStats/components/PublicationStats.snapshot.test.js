@@ -1,5 +1,6 @@
 import {formattedData} from 'mock/data/testing/publicationStats';
 import {PublicationStats} from './PublicationStats';
+import PublicationStatsWithStyles from './PublicationStats';
 
 function setup(testProps, isShallow = true) {
     // build full props list required by the component
@@ -102,6 +103,11 @@ describe('PublicationStats component', () => {
             }
         };
         const wrapper = setup({publicationsStats: fakeData});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render with styles', () => {
+        const wrapper = getElement(PublicationStatsWithStyles, {});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

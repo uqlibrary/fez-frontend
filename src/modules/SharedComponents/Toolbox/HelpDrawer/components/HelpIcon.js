@@ -23,29 +23,28 @@ export class HelpIcon extends Component {
         title: PropTypes.string,
         text: PropTypes.any.isRequired,
         buttonLabel: PropTypes.string,
-        icon: PropTypes.any,
         tooltip: PropTypes.string,
-        tooltipPlacement: PropTypes.string,
         onClick: PropTypes.func,
         classes: PropTypes.object
     };
 
     static defaultProps = {
-        tooltip: 'Click for more information',
-        tooltipPlacement: 'bottom-end'
+        tooltip: 'Click for more information'
+    };
+
+    setDrawerContent = () => {
+        const {title, text, buttonLabel, onClick} = this.props;
+        onClick(title, text, buttonLabel);
     };
 
     render() {
-        const {classes, title, text, buttonLabel, tooltip, onClick, tooltipPlacement, icon} = this.props;
-        const setDrawerContent = () => {
-            onClick(title, text, buttonLabel);
-        };
+        const {classes, tooltip} = this.props;
         return (
             <Tooltip title={tooltip}
-                placement={tooltipPlacement}
+                placement="bottom-end"
                 TransitionComponent={Fade}>
-                <IconButton onClick={setDrawerContent}>
-                    {icon || <HelpOutline className={classes.helpIcon}/>}
+                <IconButton onClick={this.setDrawerContent}>
+                    <HelpOutline className={classes.helpIcon}/>
                 </IconButton>
             </Tooltip>
         );

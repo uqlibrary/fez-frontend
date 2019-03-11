@@ -1,8 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FileUploadRow renders with uploaded file 1`] = `
-<React.Fragment>
-  <WithStyles(ConfirmDialogBox)
+<Fragment>
+  <ConfirmDialogBox
+    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -23,5 +24,32 @@ exports[`FileUploadRow renders with uploaded file 1`] = `
     requireOpenAccessStatus={true}
     size="100.0B"
   />
-</React.Fragment>
+</Fragment>
+`;
+
+exports[`FileUploadRow should show confirmation and delete file 1`] = `
+<Fragment>
+  <ConfirmDialogBox
+    hideCancelButton={false}
+    locale={
+      Object {
+        "cancelButtonLabel": "No",
+        "confirmButtonLabel": "Yes",
+        "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
+        "confirmationTitle": "Delete file",
+      }
+    }
+    onAction={[Function]}
+    onRef={[Function]}
+  />
+  <WithStyles(FileUploadRowMobileView)
+    index={0}
+    name="a.txt"
+    onAccessConditionChange={[Function]}
+    onDelete={[Function]}
+    onEmbargoDateChange={[Function]}
+    requireOpenAccessStatus={true}
+    size="100.0B"
+  />
+</Fragment>
 `;

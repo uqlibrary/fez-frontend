@@ -69,7 +69,7 @@ const styles = theme => ({
     }
 });
 
-export class App extends PureComponent {
+export class AppClass extends PureComponent {
     static propTypes = {
         account: PropTypes.object,
         author: PropTypes.object,
@@ -164,10 +164,6 @@ export class App extends PureComponent {
 
     setSessionExpiredConfirmation = (ref) => {
         this.sessionExpiredConfirmationBox = ref;
-    };
-
-    hideBrokenImage = () =>{
-        document.getElementById('logo').style.display = 'none';
     };
 
     render() {
@@ -361,4 +357,6 @@ export class App extends PureComponent {
     }
 }
 
-export default withStyles(styles, {withTheme: true})(App);
+const StyledApp = withStyles(styles, {withTheme: true})(AppClass);
+const App = (props) => <StyledApp {...props}/>;
+export default App;

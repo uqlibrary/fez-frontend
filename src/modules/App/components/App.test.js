@@ -1,6 +1,9 @@
-import {App} from './App';
+import {AppClass} from './App';
+import App from './App';
+// import styles from './App';
 import {accounts} from 'mock/data';
 import {routes, AUTH_URL_LOGIN, AUTH_URL_LOGOUT} from 'config';
+import mui1theme from 'config';
 
 function setup(testProps, isShallow = true) {
     const props = {
@@ -28,11 +31,18 @@ function setup(testProps, isShallow = true) {
         };
     };
 
-    return getElement(App, props, isShallow);
+    return getElement(AppClass, props, isShallow);
 }
+
+beforeAll(() => {
+    delete global.window.location;
+    global.window.location = {href: jest.fn(), assign: jest.fn()};
+});
 
 describe('Application component', () => {
     let account, author;
+    const saveLocation = window.location;
+
     beforeEach(() => {
         account =  {
             "id": "uqauthor1",
@@ -45,17 +55,90 @@ describe('Application component', () => {
         };
     });
 
+    afterAll(() => {
+        delete window.location;
+        window.location = saveLocation;
+    });
+
+    it('redirects user to login if not Authorized', () => {
+        const wrapper = setup({});
+        const redirectUserToLogin = jest.spyOn(wrapper.instance(), 'redirectUserToLogin');
+        wrapper.setProps({accountLoading: true, account: null, location: {pathname: '/rhdsubmission'}});
+        expect(redirectUserToLogin).not.toHaveBeenCalled();
+
+        wrapper.setProps({accountLoading: false, account: null, location: {pathname: '/rhdsubmission'}});
+        expect(redirectUserToLogin).toHaveBeenCalled();
+        wrapper.update();
+
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should assign the correct ref to setSessionExpiredConfirmation', () => {
+        const wrapper = setup({});
+
+        wrapper.instance().setSessionExpiredConfirmation('hello');
+        expect(wrapper.instance().sessionExpiredConfirmationBox).toEqual('hello');
+
+    });
+
+    it('when calling redirectToOrcid, it should redirect appropriately if user already received an orcid response', () => {
+        const testFn = jest.fn();
+        const testFn2 = jest.fn();
+        delete global.window.location;
+        global.window.location = { href: 'http://fez-staging.library.uq.edu.au?code=010101', search: '?code=010101', assign: testFn};
+        const wrapper = setup({history: {push: testFn2, location: {pathname: 'test'}}});
+
+        wrapper.instance().redirectToOrcid();
+        expect(testFn).toBeCalledWith('http://fez-staging.library.uq.edu.au/author-identifiers/orcid/link');
+        expect(testFn2).not.toBeCalled();
+
+    });
+
+    it('when calling redirectToOrcid, it should redirect appropriately', () => {
+        const testFn = jest.fn();
+        const testFn2 = jest.fn();
+        delete global.window.location;
+        global.window.location = { href: 'http://fez-staging.library.uq.edu.au?name=none', search: '?name=none', assign: testFn};
+        const wrapper = setup({history: {push: testFn2, location: {pathname: 'test'}}});
+
+        wrapper.instance().redirectToOrcid();
+        expect(testFn).not.toBeCalled();
+        expect(testFn2).toBeCalledWith('/author-identifiers/orcid/link');
+
+    });
+
+    it('should call componentWillUnmount', () => {
+        const wrapper = setup({});
+        const componentWillUnmount = jest.spyOn(wrapper.instance(), 'componentWillUnmount');
+        wrapper.unmount();
+        expect(componentWillUnmount).toHaveBeenCalled();
+    });
+
+    it('Should show confirmation when the session expires', () => {
+        const testFn = jest.fn();
+        const wrapper = setup({isSessionExpired: false});
+        wrapper.instance().sessionExpiredConfirmationBox = {showConfirmation: testFn};
+        wrapper.update();
+        expect(testFn).not.toHaveBeenCalled();
+        wrapper.setProps({isSessionExpired: true});
+        expect(testFn).toHaveBeenCalled();
+    });
+
+    it('Should get the childContext correctly', () => {
+        // current URL is set to testUrl which is set in package.json as http://fez-staging.library.uq.edu.au
+        const wrapper = setup({});
+        expect(wrapper.instance().getChildContext()).toEqual({"isMobile": false, "selectFieldMobileOverrides": {"autoWidth": true, "fullWidth": false, "menuItemStyle": {}, "style": {"width": "100%"}}});
+    });
+
     it('should redirect to login page with correct return url if rhd submission route accessed', () => {
         window.location.assign = jest.fn();
 
         // current URL is set to testUrl which is set in package.json as http://fez-staging.library.uq.edu.au
         const wrapper = setup({});
-        wrapper.instance().theme = {palette:{white:{main: '#FFFFFF'}}};
+        expect(toJson(wrapper)).toMatchSnapshot();
         wrapper.instance().redirectUserToLogin(true, true)();
-
         const currentUrl = window.btoa(window.location.href);
         expect(window.location.assign).toBeCalledWith(expect.stringContaining(currentUrl));
-
         const appUrl = window.btoa('https://fez-staging.library.uq.edu.au/');
         wrapper.instance().redirectUserToLogin(true, false)();
         expect(window.location.assign).toBeCalledWith(expect.stringContaining(appUrl));
@@ -263,4 +346,36 @@ describe('Application component', () => {
             expect(getWrapper(path.pathname).instance().isPublicPage(menuItems)).toEqual(path.isPublic)
         });
     })
+});
+
+describe('Testing wrapped App component', () => {
+
+    it('Mounts', () => {
+        const wrappedProps = {
+            history: {
+                push: jest.fn(),
+                go: jest.fn(),
+                location: {pathname: '/'},
+            },
+            actions: {
+                logout: jest.fn(),
+                loadCurrentAccount: jest.fn(),
+            },
+            account: {name: 'Ky'},
+            location: {pathname: '/'},
+            classes: {},
+            theme: {
+                ...mui1theme,
+                palette: {
+                    primary: {
+                        main: 'red'
+                    }
+                }
+            }
+        };
+        const wrapper = getElement(App, wrappedProps, false);
+        expect(toJson(wrapper)).toMatchSnapshot();
+
+    });
+
 });

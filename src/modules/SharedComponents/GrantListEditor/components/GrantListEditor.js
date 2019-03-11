@@ -37,6 +37,7 @@ export class GrantListEditor extends PureComponent {
 
     componentWillUpdate(nextProps, nextState) {
         // notify parent component when local state has been updated, eg grants added/removed/reordered
+        // istanbul ignore else
         if (this.props.onChange) {
             this.props.onChange(nextState.grants);
         }
@@ -171,7 +172,7 @@ export class GrantListEditor extends PureComponent {
 }
 
 
-const styles = () => ({
+export const styles = () => ({
     list: {
         width: '100%',
         maxHeight: 200,

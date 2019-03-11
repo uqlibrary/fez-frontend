@@ -87,10 +87,11 @@ describe('Validation method', () => {
     });
 
     it('should validate max length', () => {
-        expect(validation.maxLength10('sdjflsjdlfjslsdjflsjdlfjslsdjflsjdlfjslsdjflsjdlfjsl'))
-            .toEqual(locale.validationErrors.maxLength.replace('[max]', 10));
-
+        expect(validation.maxLength10('sdjflsjdlfjslsdjflsjdlfjslsdjflsjdlfjslsdjflsjdlfjsl')).toEqual(locale.validationErrors.maxLength.replace('[max]', 10));
         expect(validation.maxLength10('123')).toEqual(undefined);
+        expect(validation.maxLength10('abc def gji')).toEqual(undefined);
+        expect(validation.maxLength10(1234)).toEqual(undefined);
+        expect(validation.maxLength10(12345678901)).toEqual(locale.validationErrors.maxLength.replace('[max]', 10));
     });
 
     it('should validate doi', () => {

@@ -1,19 +1,18 @@
 import ListEditor from './ListEditor';
 
 function setup(testProps) {
-
     const props = {
-        ...testProps,
-        className: testProps.className || 'testClass', // : PropTypes.string,
-        searchKey: testProps.searchKey || {value: 'value', order: 'order'}, // : PropTypes.object.isRequired,
-        isValid: testProps.isValid || jest.fn(), // PropTypes.func,
-        disabled: testProps.disabled || false, // PropTypes.bool,
-        onChange: testProps.onChange || jest.fn(), // PropTypes.func,
-        formComponent: testProps.formComponent || jest.fn(),
-        inputField: testProps.inputField || jest.fn(),
-        hideReorder: testProps.hideOrder || false,
-        distinctOnly: testProps.distinctOnly || false,
-        errorText: testProps.errorText || ''
+        className: 'testClass', // : PropTypes.string,
+        searchKey: {value: 'value', order: 'order'}, // : PropTypes.object.isRequired,
+        isValid: jest.fn(), // PropTypes.func,
+        disabled: false, // PropTypes.bool,
+        onChange: jest.fn(), // PropTypes.func,
+        formComponent: jest.fn(),
+        inputField: jest.fn(),
+        hideReorder: false,
+        distinctOnly: false,
+        errorText: '',
+        ...testProps
     };
     return getElement(ListEditor, props);
 }
@@ -78,6 +77,8 @@ describe('ListEditor tests ', () => {
         wrapper.instance().moveUpList('two', 1);
         expect(wrapper.state().itemList.length).toEqual(3);
         expect(wrapper.state().itemList[1]).toEqual('one');
+        wrapper.instance().moveUpList('one', 0);
+        expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should move down an item', () => {
@@ -88,6 +89,8 @@ describe('ListEditor tests ', () => {
         wrapper.instance().moveDownList('two', 1);
         expect(wrapper.state().itemList.length).toEqual(3);
         expect(wrapper.state().itemList[1]).toEqual('three');
+        wrapper.instance().moveDownList('three', 2);
+        expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render items individually when comma separated not more than maxCount', () => {
@@ -101,5 +104,58 @@ describe('ListEditor tests ', () => {
         expect(wrapper.state().itemList.length).toEqual(5);
     });
 
+    it('should render input value as itemList', () => {
+        const wrapper = setup({
+            input: {
+                name: 'test',
+                value: [
+                        {
+                            rek_value: 'test 1'
+                        },
+                        {
+                            rek_value: 'test 2'
+                        }
+                    ]
+                }
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 
+    it('should add item and set state', () => {
+        const wrapper = setup({
+            maxCount: 5,
+            distinctOnly: true,
+            locale: {
+                row: {},
+                form: {},
+                header: {}
+            }
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+
+        wrapper.instance().addItem({
+            key: 'test',
+            value: 'test'
+        });
+
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should call default input normaliser function', () => {
+        const wrapper = setup({
+            formComponent: () => <div/>
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+        const result = wrapper.find('formComponent').props().normalize('test');
+        expect(result).toBe('test');
+    });
+
+    it('should not call transformOutput if onChange prop method is not defined', () => {
+        const wrapper = setup({
+            onChange: null
+        });
+        const test = jest.spyOn(wrapper.instance(), 'transformOutput');
+        wrapper.instance().componentWillUpdate({}, {});
+        expect(test).not.toBeCalled();
+    })
 });
