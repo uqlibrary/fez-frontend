@@ -93,34 +93,34 @@ api.interceptors.response.use(response => {
         reportToSentry(error);
     }
     const thirdPartyLookupUrlRoot = API_URL + pathConfig.admin.thirdPartyTools.substring('/'.length);
-    if (requestUrl.startsWith(thirdPartyLookupUrlRoot) ) {
-        // do nothing here - 403 for tool api lookup is handled in actions/thirdPartyLookupTool.js
-        console.log('Skipping root error handling for 3rd party api');
-    } else if (error.response && error.response.status === 403) {
-        if (!!Cookies.get(SESSION_COOKIE_NAME)) {
-            Cookies.remove(SESSION_COOKIE_NAME, {path: '/', domain: '.library.uq.edu.au'});
-            delete api.defaults.headers.common[TOKEN_NAME];
-        }
+    // 403 for tool api lookup is handled in actions/thirdPartyLookupTool.js
+    if (!requestUrl.startsWith(thirdPartyLookupUrlRoot)) {
+        if (error.response && error.response.status === 403) {
+            if (!!Cookies.get(SESSION_COOKIE_NAME)) {
+                Cookies.remove(SESSION_COOKIE_NAME, {path: '/', domain: '.library.uq.edu.au'});
+                delete api.defaults.headers.common[TOKEN_NAME];
+            }
 
-        if (process.env.NODE_ENV === 'test') {
-            global.mockActionsStore.dispatch(logout());
-        } else {
-            store.dispatch(logout());
+            if (process.env.NODE_ENV === 'test') {
+                global.mockActionsStore.dispatch(logout());
+            } else {
+                store.dispatch(logout());
+            }
         }
     }
 
     let errorMessage = null;
-    if (requestUrl.startsWith(thirdPartyLookupUrlRoot) ) {
-        console.log('skipping root error resetting for 3rd party api');
-    } else if (!!error.message && !!error.response.status && error.response.status === 500) {
-        errorMessage = ((error.response || {}).data || {}).message || locale.global.errorMessages[error.response.status];
-        if (process.env.NODE_ENV === 'test') {
-            global.mockActionsStore.dispatch(showAppAlert(error.response.data));
-        } else {
-            store.dispatch(showAppAlert(error.response.data));
+    if (!requestUrl.startsWith(thirdPartyLookupUrlRoot)) {
+        if (!!error.message && !!error.response.status && error.response.status === 500) {
+            errorMessage = ((error.response || {}).data || {}).message || locale.global.errorMessages[error.response.status];
+            if (process.env.NODE_ENV === 'test') {
+                global.mockActionsStore.dispatch(showAppAlert(error.response.data));
+            } else {
+                store.dispatch(showAppAlert(error.response.data));
+            }
+        } else if (!!error.response && !!error.response.status) {
+            errorMessage = locale.global.errorMessages[error.response.status];
         }
-    } else if (!!error.response && !!error.response.status) {
-        errorMessage = locale.global.errorMessages[error.response.status];
     }
 
     if (!!errorMessage) {
