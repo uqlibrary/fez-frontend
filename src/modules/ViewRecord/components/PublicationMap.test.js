@@ -18,6 +18,16 @@ describe('Publication\'s map coordinates', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should mount component', () => {
+        const wrapper = setup({coordinates: '153.021781,-27.489337 152.988274,-27.489337 152.988274,-27.509529 153.021781,-27.509529 153.021781,-27.489337'}, false);
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should mount component in readonly mode', () => {
+        const wrapper = setup({coordinates: '153.021781,-27.489337 152.988274,-27.489337 152.988274,-27.509529 153.021781,-27.509529 153.021781,-27.489337', readOnly: true}, false);
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
     it('should render component with empty coordinates', () => {
         const wrapper = setup({coordinates: ''});
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -66,7 +76,7 @@ describe('Publication\'s map coordinates', () => {
             geoCoords: []
         });
 
-        const component = wrapper.find('withScriptjs(withGoogleMap(Component))');
+        const component = wrapper.find('withScriptjs(withGoogleMap(GoogleMapViewComponent))');
 
         component.props().handleMarkerComplete({
             getPosition: () => ({
