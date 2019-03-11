@@ -1,7 +1,8 @@
 import SearchComponent from './SearchComponent';
 import moment from 'moment';
+import { escapeExpression } from 'handlebars';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps, isShallow = true, requiresStore = false, context = {}) {
     const props = {
         searchQueryParams: {},
 
@@ -30,13 +31,22 @@ function setup(testProps, isShallow = true) {
         ...testProps
     };
 
-    return getElement(SearchComponent, props, isShallow);
+    return getElement(SearchComponent, props, isShallow, requiresStore, context);
 }
 
 describe('SearchComponent', () => {
     it('should render default view', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should set default prop method as expected', () => {
+        const wrapper = getElement(SearchComponent, {
+            history: {
+                push: jest.fn()
+            }
+        }, true);
+        expect(wrapper.instance().props.updateFacetExcludesFromSearchFields()).toBeUndefined();
     });
 
     it('should render with a class "header" for use in AppBar', () => {
@@ -68,6 +78,22 @@ describe('SearchComponent', () => {
         });
         wrapper.update();
         expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should minimise advanced search in mobile context', () => {
+        const props = {
+            history: {
+                push: jest.fn()
+            }
+        };
+        const context = {
+            isMobile: true
+        };
+        const wrapper = setup(props, true, false, context);
+        wrapper.setProps({
+            isAdvancedSearchMinimised: true
+        });
+        expect(wrapper.state().advancedSearch.isMinimised).toBe(true);
     });
 
     it('should display simple search with query string', () => {
@@ -172,6 +198,25 @@ describe('SearchComponent', () => {
                 sortDirection: 'Desc'
             }
         });
+
+        wrapper.setState({
+            isAdvancedSearch: true
+        });
+        expect(
+            wrapper.find('WithStyles(AdvancedSearchComponent)')
+                .props().showUnpublishedFields
+        ).toBe(true);
+    });
+
+    it('should not search is searchQuery is empty', () => {
+        const testFn = jest.fn();
+        const wrapper = setup({
+            actions: {
+                searchEspacePublications: testFn
+            }
+        });
+        wrapper.instance().handleSearch('');
+        expect(testFn).not.toBeCalled();
     });
 
     it('should handle advanced search', () => {
@@ -800,6 +845,32 @@ describe('SearchComponent', () => {
             expect(fieldRows).toEqual([{searchField: '0', value: '', label: ''}]);
         });
 
+        it('should process empty search query', () => {
+            const wrapper = setup({
+                isAdmin: false
+            });
+            expect(
+                wrapper.instance().getFieldRowsFromSearchQuery({
+                    rek_status: '',
+                    rek_updated_date: ''
+                })
+            ).toMatchSnapshot();
+        });
+
+        it('should process missing label', () => {
+            const wrapper = setup({
+                isAdmin: true,
+                isUnpublishedBufferPage: true
+            });
+            expect(
+                wrapper.instance().getFieldRowsFromSearchQuery({
+                    rek_updated_date: {
+                        notLabel: 'test'
+                    }
+                })
+            ).toMatchSnapshot();
+        });
+
         it('should get field rows from search query params', () => {
             const wrapper = setup({});
             const fieldRows = wrapper.instance().getFieldRowsFromSearchQuery({
@@ -897,6 +968,18 @@ describe('SearchComponent', () => {
         });
     });
 
+    describe('parseDateRange', () => {
+        it('should return date range', () => {
+            const wrapper = setup({});
+            expect(wrapper.instance().parseDateRange('[31/01/2019 to 12/02/2019]')).toMatchSnapshot();
+        });
+
+        it('should return empty object in case of invalid input', () => {
+            const wrapper = setup({});
+            expect(wrapper.instance().parseDateRange('')).toEqual({});
+        });
+    });
+
     describe('getDocTypesFromSearchQuery', () => {
         it('should get doc types from search query', () => {
             const wrapper = setup({});
@@ -922,6 +1005,20 @@ describe('SearchComponent', () => {
                 from: '2001',
                 to: '2005'
             });
+        });
+    });
+
+    describe('getSearchQuery', () => {
+        it('should construct search query', () => {
+            const wrapper = setup({});
+            wrapper.setState({
+                advancedSearch: {
+                    isOpenAccess: true
+                }
+            })
+            expect(wrapper.instance().getSearchQuery({
+                all: 'i feel lucky'
+            })).toMatchSnapshot();
         });
     });
 });
