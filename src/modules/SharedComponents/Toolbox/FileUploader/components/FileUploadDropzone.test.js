@@ -299,4 +299,65 @@ describe('Component FileUploadDropzone', () => {
         const file = wrapper.instance().onReadFileLoad({name: 'test'}, jest.fn())();
         expect(file).toBeUndefined();
     });
+
+    it('should allow multipart zip files with valid part format (000 - 999)', () => {
+        const wrapper = setup({
+            fileNameRestrictions: FILE_NAME_RESTRICTION
+        });
+
+        const file_a = getMockFile('test.000.zip');
+        const file_b = getMockFile('test.111.zip');
+        const file_c = getMockFile('test.999.zip');
+        const file_d = getMockFile('test.abc.zip');
+        const file_e = getMockFile('test.89.zip');
+        const file_f = getMockFile('test.222.zip');
+        const file_g = getMockFile('test.0123.zip')
+
+        const files = [file_a, file_b, file_c, file_d, file_e, file_f, file_g];
+
+        const {validFiles, invalidFileNames} = wrapper.instance().removeInvalidFileNames(files, FILE_NAME_RESTRICTION);
+
+        expect(validFiles.length).toEqual(4);
+        expect(invalidFileNames.length).toEqual(3);
+    });
+
+    it('should allow multipart zip files with valid part format (r01 - r999)', () => {
+        const wrapper = setup({
+            fileNameRestrictions: FILE_NAME_RESTRICTION
+        });
+
+        const file_a = getMockFile('test.r00.zip');
+        const file_b = getMockFile('test.r11.zip');
+        const file_c = getMockFile('test.r9.zip');
+        const file_d = getMockFile('test.abc.zip');
+        const file_e = getMockFile('test.89.zip');
+        const file_f = getMockFile('test.r222.zip');
+        const file_g = getMockFile('test.r0222.zip');
+
+        const files = [file_a, file_b, file_c, file_d, file_e, file_f, file_g];
+
+        const {validFiles, invalidFileNames} = wrapper.instance().removeInvalidFileNames(files, FILE_NAME_RESTRICTION);
+
+        expect(validFiles.length).toEqual(3);
+        expect(invalidFileNames.length).toEqual(4);
+    });
+
+    it('should allow multipart zip files with valid part format (part1 - part999)', () => {
+        const wrapper = setup({
+            fileNameRestrictions: FILE_NAME_RESTRICTION
+        });
+
+        const file_a = getMockFile('test.part1.zip');
+        const file_b = getMockFile('test.part8888.zip');
+        const file_c = getMockFile('test.part342.zip');
+        const file_d = getMockFile('test.part33.zip');
+        const file_e = getMockFile('test.rpart89.zip');
+
+        const files = [file_a, file_b, file_c, file_d, file_e];
+
+        const {validFiles, invalidFileNames} = wrapper.instance().removeInvalidFileNames(files, FILE_NAME_RESTRICTION);
+
+        expect(validFiles.length).toEqual(3);
+        expect(invalidFileNames.length).toEqual(2);
+    });
 });
