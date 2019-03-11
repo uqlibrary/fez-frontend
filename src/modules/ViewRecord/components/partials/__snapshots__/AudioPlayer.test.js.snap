@@ -496,6 +496,20 @@ exports[`Audio Player Component  should pause audio 1`] = `
                   },
                 ],
               ],
+              "results": Array [
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+              ],
             }
           }
         >
@@ -1222,6 +1236,12 @@ exports[`Audio Player Component  should play audio via button click 1`] = `
                     "moment": undefined,
                   },
                 ],
+              ],
+              "results": Array [
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
               ],
             }
           }

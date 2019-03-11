@@ -94,7 +94,7 @@ exports[`Component TopCitedPublications should render tabs with xs width properl
         <Connect(WithStyles(HelpIcon))
           buttonLabel="OK"
           text={
-            <UNDEFINED>
+            <React.Fragment>
               <h3>
                 WOS and Scopus
               </h3>
@@ -119,7 +119,7 @@ exports[`Component TopCitedPublications should render tabs with xs width properl
               >
                 https://www.altmetric.com/about-altmetrics/what-are-altmetrics/
               </a>
-            </UNDEFINED>
+            </React.Fragment>
           }
           title="About these metrics"
         />
@@ -1035,7 +1035,7 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
         <Connect(WithStyles(HelpIcon))
           buttonLabel="OK"
           text={
-            <UNDEFINED>
+            <React.Fragment>
               <h3>
                 WOS and Scopus
               </h3>
@@ -1060,7 +1060,7 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
               >
                 https://www.altmetric.com/about-altmetrics/what-are-altmetrics/
               </a>
-            </UNDEFINED>
+            </React.Fragment>
           }
           title="About these metrics"
         />

@@ -21,7 +21,7 @@ describe('Alert component functionality test ', () => {
 
     it('matches snapshot', () => {
         const wrapper = setup({});
-        expect(wrapper).toMatchSnapshot();
+        expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('fires the action when clicking on the message text', () => {
