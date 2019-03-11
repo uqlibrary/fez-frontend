@@ -448,6 +448,7 @@ ShallowWrapper {
         },
       },
     },
+    "context": Object {},
   },
 }
 `;
@@ -1110,6 +1111,7 @@ ShallowWrapper {
         },
       },
     },
+    "context": Object {},
   },
 }
 `;
