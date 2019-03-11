@@ -536,6 +536,16 @@ exports[`Publication's map coordinates should mount component 1`] = `
                   },
                 ],
               ],
+              "results": Array [
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+              ],
             }
           }
         >
@@ -1094,6 +1104,20 @@ exports[`Publication's map coordinates should mount component in readonly mode 1
                     "moment": undefined,
                   },
                 ],
+              ],
+              "results": Array [
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
               ],
             }
           }
@@ -2252,6 +2276,14 @@ exports[`Publication's map coordinates should render component with a marker 1`]
                   "type": "return",
                   "value": undefined,
                 },
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
               ],
             }
           }
@@ -3356,6 +3388,14 @@ exports[`Publication's map coordinates should render component with empty coordi
                 ],
               ],
               "results": Array [
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
                 Object {
                   "type": "return",
                   "value": undefined,

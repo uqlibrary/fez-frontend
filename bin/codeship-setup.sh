@@ -22,3 +22,6 @@ jest --version
 
 npm cache clear -f
 npm ci
+
+echo "jest version"
+jest --version
