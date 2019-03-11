@@ -3,25 +3,20 @@
 # exit if command returns error (non-zero status)
 set -e
 
-echo "npm version"
+echo "npm -v"
 npm -v
 
-echo "node version"
+echo "node -v"
 node -v
 
-echo "jest version"
+echo "jest --version"
 jest --version
 
-#ls -ls ~/.nvm/
-
-#chmod a+x ~/.nvm/
-
-# v11.11.0 currently causing TypeError: Cannot assign to read only property 'Symbol(Symbol.toStringTag)' of object '#<process>' in tests
-#~/.nvm/nvm.sh install v11.10.1
-#node -v
-
+echo "npm cache clear -f"
 npm cache clear -f
+
+echo "npm ci"
 npm ci
 
-echo "jest version"
+echo "jest --version"
 jest --version
