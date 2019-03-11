@@ -99,7 +99,7 @@ exports[`Component TopCitedPublications should render tabs with xs width properl
                 WOS and Scopus
               </h3>
               <p>
-                The large number is the total citation count and the + (plus) value indicates how much the citation count has increased in the last three months.
+                The + (plus) value indicates how much the citation count has increased in the last three months.
               </p>
               <h3>
                 Altmetric score (social media activity)
@@ -1040,7 +1040,7 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
                 WOS and Scopus
               </h3>
               <p>
-                The large number is the total citation count and the + (plus) value indicates how much the citation count has increased in the last three months.
+                The + (plus) value indicates how much the citation count has increased in the last three months.
               </p>
               <h3>
                 Altmetric score (social media activity)
