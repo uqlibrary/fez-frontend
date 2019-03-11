@@ -3,20 +3,17 @@
 # exit if command returns error (non-zero status)
 set -e
 
-echo "npm -v"
+printf "\n npm -v"
 npm -v
 
-echo "node -v"
+printf "\n node -v"
 node -v
 
-#echo "jest --version"
-#jest --version
-
-echo "npm cache clear -f"
+printf "\n npm cache clear -f"
 npm cache clear -f
 
-echo "npm ci"
+printf "\n npm ci"
 npm ci
 
-echo "jest --version"
+printf "\n jest --version"
 jest --version
