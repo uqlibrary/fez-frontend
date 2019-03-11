@@ -1,4 +1,5 @@
-import {FileUploader, FileNameRestrictions} from './FileUploader';
+import {FileUploader} from './FileUploader';
+import {FILE_NAME_RESTRICTION} from '../config';
 import FileUploaderContainer from './FileUploader';
 const moment = require('moment');
 
@@ -7,7 +8,7 @@ const getProps = (testProps = {}) => ({
         fileUploadLimit: 5,
         maxFileSize: 1,
         fileSizeUnit: 'K',
-        fileNameRestrictions: FileNameRestrictions
+        fileNameRestrictions: FILE_NAME_RESTRICTION
     },
     filesInQueue: [],
     // locale: locale,
@@ -46,7 +47,7 @@ describe('Component FileUploader', () => {
                 fileUploadLimit: 5,
                 maxFileSize: 1,
                 fileSizeUnit: 'B',
-                fileNameRestrictions: FileNameRestrictions
+                fileNameRestrictions: FILE_NAME_RESTRICTION
             }
         }), false);
         const tree = toJson(wrapper);
