@@ -1,6 +1,5 @@
 import SearchComponent from './SearchComponent';
 import moment from 'moment';
-import { escapeExpression } from 'handlebars';
 
 function setup(testProps, isShallow = true, requiresStore = false, context = {}) {
     const props = {

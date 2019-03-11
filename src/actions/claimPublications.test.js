@@ -131,6 +131,26 @@ describe('Claim publication actions tests ', () => {
             await mockActionsStore.dispatch(claimActions.searchPossiblyYourPublications(testParams));
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
+
+        it('handles active facets', async () => {
+            const testParams = {
+                activeFacets: {
+                    facet1: 'facet'
+                }
+            };
+            mockApi
+                .onAny()
+                .reply(200, {});
+
+            const expectedActions = [
+                actions.POSSIBLY_YOUR_PUBLICATIONS_LOADING,
+                actions.POSSIBLY_YOUR_PUBLICATIONS_LOADED,
+                actions.POSSIBLY_YOUR_PUBLICATIONS_FACETS_LOADED
+            ];
+
+            await mockActionsStore.dispatch(claimActions.searchPossiblyYourPublications(testParams));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
     });
 
     describe('hideRecord()', () => {
@@ -153,7 +173,7 @@ describe('Claim publication actions tests ', () => {
                 actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_LOADED
             ];
 
-            await mockActionsStore.dispatch(claimActions.hideRecord({record: testRecord, facets: {}}));
+            await mockActionsStore.dispatch(claimActions.hideRecord({record: testRecord}));
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
@@ -620,6 +640,17 @@ describe('Claim publication actions tests ', () => {
             } catch (e) {
                 expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
             }
+
+            delete testRequest.publication.fez_record_search_key_author_id;
+            delete testRequest.publication.fez_record_search_key_contributor_id;
+            mockActionsStore.clearActions();
+            await mockActionsStore.dispatch(claimActions.claimPublication(testRequest));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
+
+        it('should handle requests with file attachments', () => {
+
+        });
+
     });
 });

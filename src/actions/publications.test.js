@@ -4,8 +4,8 @@ import * as actions from './actionTypes';
 import * as repositories from 'repositories';
 import * as publicationsActions from './publications';
 import * as mockData from 'mock/data';
-import {exportPublications} from './exportPublications'
-import {exportFormatToExtension} from 'config/general';
+import { exportPublications } from './exportPublications'
+import { exportFormatToExtension } from 'config/general';
 
 beforeEach(() => {
     exportPublications.mockClear();
@@ -13,7 +13,7 @@ beforeEach(() => {
 
 describe('Publications actions', () => {
     // extend expect to check actions
-    expect.extend({toHaveDispatchedActions});
+    expect.extend({ toHaveDispatchedActions });
 
     beforeEach(() => {
         mockActionsStore = setupStoreForActions();
@@ -28,7 +28,7 @@ describe('Publications actions', () => {
 
         it('dispatches expected actions on successful load', async () => {
             mockApi
-                .onGet(repositories.routes.CURRENT_USER_RECORDS_API({pageSize: 5}).apiUrl)
+                .onGet(repositories.routes.CURRENT_USER_RECORDS_API({ pageSize: 5 }).apiUrl)
                 .reply(200, {});
 
             const expectedActions = [
@@ -143,6 +143,19 @@ describe('Publications actions', () => {
             await mockActionsStore.dispatch(publicationsActions.searchAuthorPublications(testRequest));
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
+
+        it('handles defaults', async () => {
+            mockApi
+                .onAny()
+                .reply(200, {});
+
+            const expectedActions = [
+                actions.AUTHOR_PUBLICATIONS_LOADING,
+                actions.AUTHOR_PUBLICATIONS_LOADED
+            ]
+            await mockActionsStore.dispatch(publicationsActions.searchAuthorPublications({}));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
     });
 
     describe('searchTrendingPublications()', () => {
@@ -196,7 +209,7 @@ describe('Publications actions', () => {
         it('dispatches expected actions if api return 0 publications', async () => {
             mockApi
                 .onAny()
-                .reply(200, {total: 0, data: [], filters: []});
+                .reply(200, { total: 0, data: [], filters: [] });
 
             const expectedActions = [
                 actions.TRENDING_PUBLICATIONS_LOADING,
@@ -243,7 +256,7 @@ describe('Publications actions', () => {
         it('dispatches expected actions if api return 0 publications', async () => {
             mockApi
                 .onAny()
-                .reply(200, {total: 0, data: [], filters: []});
+                .reply(200, { total: 0, data: [], filters: [] });
 
             const expectedActions = [
                 actions.TOP_CITED_PUBLICATIONS_LOADING,
@@ -265,11 +278,28 @@ describe('Publications actions', () => {
                 pageSize: 20,
                 sortBy: 'score',
                 sortDirection: 'Desc',
-                activeFacets: {filters: {}, ranges: {}}
+                activeFacets: { filters: {}, ranges: {} }
             };
 
             publicationsActions.exportAuthorPublications(testRequest);
             expect(exportPublications).toHaveBeenCalledWith(repositories.routes.CURRENT_USER_RECORDS_API(testRequest, 'export'));
+        });
+
+        it('handles defaults', () => {
+            publicationsActions.exportAuthorPublications({});
+            expect(exportPublications).toHaveBeenCalledWith({
+                apiUrl: 'records/export',
+                options: {
+                    params: {
+                        export_to: '',
+                        order_by: 'desc',
+                        page: 1,
+                        per_page: 20,
+                        rule: 'mine',
+                        sort: 'score'
+                    }
+                }
+            });
         });
     });
 });
