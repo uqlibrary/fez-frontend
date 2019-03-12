@@ -121,6 +121,16 @@ describe('Component FileUploadDropzone', () => {
         expect(duplicateFiles.length).toEqual(0);
     });
 
+    it('should not remove any files if multipart zip files have been uploaded', () => {
+        const wrapper = setup({});
+
+        const files = [getMockFile('a.001.zip'), getMockFile('a.002.zip')];
+        const {uniqueFiles, duplicateFiles} = wrapper.instance().removeDuplicate(files, []);
+
+        expect(uniqueFiles.length).toEqual(2);
+        expect(duplicateFiles.length).toEqual(0);
+    });
+
     it('should remove files with invalid names', () => {
         const wrapper = setup({});
 
