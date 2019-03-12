@@ -127,12 +127,25 @@ exports[`Component FileUploader should mount and unmount container and clear fil
               },
             },
             "overrides": Object {
+              "MUIDataTable": Object {
+                "paper": Object {
+                  "boxShadow": "none",
+                  "margin": 0,
+                  "padding": 0,
+                },
+              },
               "MuiFormLabel": Object {
                 "root": Object {
                   "overflow": "hidden",
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
                   "width": "100%",
+                },
+              },
+              "MuiMenuItem": Object {
+                "selected": Object {
+                  "backgroundColor": "#4085C6 !important",
+                  "color": "#FFFFFF",
                 },
               },
             },
@@ -747,12 +760,25 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                         },
                       },
                       "overrides": Object {
+                        "MUIDataTable": Object {
+                          "paper": Object {
+                            "boxShadow": "none",
+                            "margin": 0,
+                            "padding": 0,
+                          },
+                        },
                         "MuiFormLabel": Object {
                           "root": Object {
                             "overflow": "hidden",
                             "textOverflow": "ellipsis",
                             "whiteSpace": "nowrap",
                             "width": "100%",
+                          },
+                        },
+                        "MuiMenuItem": Object {
+                          "selected": Object {
+                            "backgroundColor": "#4085C6 !important",
+                            "color": "#FFFFFF",
                           },
                         },
                       },
@@ -1245,12 +1271,25 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                         },
                       },
                       "overrides": Object {
+                        "MUIDataTable": Object {
+                          "paper": Object {
+                            "boxShadow": "none",
+                            "margin": 0,
+                            "padding": 0,
+                          },
+                        },
                         "MuiFormLabel": Object {
                           "root": Object {
                             "overflow": "hidden",
                             "textOverflow": "ellipsis",
                             "whiteSpace": "nowrap",
                             "width": "100%",
+                          },
+                        },
+                        "MuiMenuItem": Object {
+                          "selected": Object {
+                            "backgroundColor": "#4085C6 !important",
+                            "color": "#FFFFFF",
                           },
                         },
                       },
@@ -2652,12 +2691,25 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                               },
                                                             },
                                                             "overrides": Object {
+                                                              "MUIDataTable": Object {
+                                                                "paper": Object {
+                                                                  "boxShadow": "none",
+                                                                  "margin": 0,
+                                                                  "padding": 0,
+                                                                },
+                                                              },
                                                               "MuiFormLabel": Object {
                                                                 "root": Object {
                                                                   "overflow": "hidden",
                                                                   "textOverflow": "ellipsis",
                                                                   "whiteSpace": "nowrap",
                                                                   "width": "100%",
+                                                                },
+                                                              },
+                                                              "MuiMenuItem": Object {
+                                                                "selected": Object {
+                                                                  "backgroundColor": "#4085C6 !important",
+                                                                  "color": "#FFFFFF",
                                                                 },
                                                               },
                                                             },
@@ -3806,12 +3858,25 @@ exports[`Component FileUploader should mount and unmount container and clear fil
               },
             },
             "overrides": Object {
+              "MUIDataTable": Object {
+                "paper": Object {
+                  "boxShadow": "none",
+                  "margin": 0,
+                  "padding": 0,
+                },
+              },
               "MuiFormLabel": Object {
                 "root": Object {
                   "overflow": "hidden",
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
                   "width": "100%",
+                },
+              },
+              "MuiMenuItem": Object {
+                "selected": Object {
+                  "backgroundColor": "#4085C6 !important",
+                  "color": "#FFFFFF",
                 },
               },
             },
@@ -4426,12 +4491,25 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                         },
                       },
                       "overrides": Object {
+                        "MUIDataTable": Object {
+                          "paper": Object {
+                            "boxShadow": "none",
+                            "margin": 0,
+                            "padding": 0,
+                          },
+                        },
                         "MuiFormLabel": Object {
                           "root": Object {
                             "overflow": "hidden",
                             "textOverflow": "ellipsis",
                             "whiteSpace": "nowrap",
                             "width": "100%",
+                          },
+                        },
+                        "MuiMenuItem": Object {
+                          "selected": Object {
+                            "backgroundColor": "#4085C6 !important",
+                            "color": "#FFFFFF",
                           },
                         },
                       },
@@ -4924,12 +5002,25 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                         },
                       },
                       "overrides": Object {
+                        "MUIDataTable": Object {
+                          "paper": Object {
+                            "boxShadow": "none",
+                            "margin": 0,
+                            "padding": 0,
+                          },
+                        },
                         "MuiFormLabel": Object {
                           "root": Object {
                             "overflow": "hidden",
                             "textOverflow": "ellipsis",
                             "whiteSpace": "nowrap",
                             "width": "100%",
+                          },
+                        },
+                        "MuiMenuItem": Object {
+                          "selected": Object {
+                            "backgroundColor": "#4085C6 !important",
+                            "color": "#FFFFFF",
                           },
                         },
                       },
@@ -6331,12 +6422,25 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                               },
                                                             },
                                                             "overrides": Object {
+                                                              "MUIDataTable": Object {
+                                                                "paper": Object {
+                                                                  "boxShadow": "none",
+                                                                  "margin": 0,
+                                                                  "padding": 0,
+                                                                },
+                                                              },
                                                               "MuiFormLabel": Object {
                                                                 "root": Object {
                                                                   "overflow": "hidden",
                                                                   "textOverflow": "ellipsis",
                                                                   "whiteSpace": "nowrap",
                                                                   "width": "100%",
+                                                                },
+                                                              },
+                                                              "MuiMenuItem": Object {
+                                                                "selected": Object {
+                                                                  "backgroundColor": "#4085C6 !important",
+                                                                  "color": "#FFFFFF",
                                                                 },
                                                               },
                                                             },
