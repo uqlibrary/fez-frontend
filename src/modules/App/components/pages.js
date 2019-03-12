@@ -13,6 +13,7 @@ export const SbsSubmission = (componentProps) => (<Async load={import('modules/S
 export const ViewRecord = () => (<Async load={import('modules/ViewRecord/containers/ViewRecord')} />);
 export const AddDataCollection = () => (<Async load={import('modules/AddDataCollection/containers/AddDataCollection')} />);
 export const ThirdPartyLookupTool = () => (<Async load={import('modules/ThirdPartyLookupTool/containers/ThirdPartyLookupTool')} />);
+export const Prototype = () => (<Async load={import('modules/Admin/containers/Admin')} />);
 
 // always load components
 export {AddMissingRecord, FindRecords, RecordsSearchResults, NewRecord} from 'modules/AddMissingRecord';

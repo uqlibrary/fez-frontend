@@ -92,7 +92,8 @@ export const pathConfig = {
         masquerade: '/admin/masquerade',
         thirdPartyTools: '/tool/lookup',
         legacyEspace: `${fullPath}/my_upo_tools.php`,
-        unpublished: '/admin/unpublished'
+        unpublished: '/admin/unpublished',
+        prototype: '/admin/prototype'
     },
     authorIdentifiers: {
         orcid: {
@@ -114,7 +115,7 @@ export const pathConfig = {
 // a duplicate list of routes for
 const flattedPathConfig = ['/', '/dashboard', '/contact', '/rhdsubmission', '/sbslodge_new', '/records/search',
     '/records/mine', '/records/possible', '/records/claim', '/records/add/find', '/records/add/results', '/records/add/new',
-    '/admin/masquerade', '/admin/unpublished', '/admin/thirdPartyTools', '/author-identifiers/orcid/link', '/author-identifiers/google-scholar/link'
+    '/admin/masquerade', '/admin/unpublished', '/admin/thirdPartyTools', '/admin/prototype', '/author-identifiers/orcid/link', '/author-identifiers/google-scholar/link'
 ];
 
 // TODO: will we even have roles?
@@ -291,6 +292,13 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
         ] : []),
         ...(account && account.canMasquerade ? [
             {
+                path: pathConfig.admin.prototype,
+                component: components.Prototype,
+                exact: true,
+                access: [roles.admin],
+                pageTitle: locale.pages.prototype.title
+            },
+            {
                 path: pathConfig.admin.masquerade,
                 component: components.Masquerade,
                 exact: true,
@@ -412,6 +420,10 @@ export const getMenuConfig = (account, disabled) => {
             }
         ] : []),
         ...(account && account.canMasquerade ? [
+            {
+                linkTo: pathConfig.admin.prototype,
+                ...locale.menu.prototype,
+            },
             {
                 linkTo: pathConfig.admin.masquerade,
                 ...locale.menu.masquerade,

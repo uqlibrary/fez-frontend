@@ -3,7 +3,7 @@ import {reduxForm, getFormValues, getFormSyncErrors} from 'redux-form/immutable'
 import Immutable from 'immutable';
 import Admin from '../components/Admin';
 import {confirmDiscardFormChanges} from 'modules/SharedComponents/ConfirmDiscardFormChanges';
-import {reloadReducerFromLocalStorage} from 'modules/SharedComponents/ReloadReducerFromLocalStorage';
+import {withRouter} from 'react-router';
 
 const FORM_NAME = 'Prototype';
 
@@ -31,5 +31,4 @@ const mapStateToProps = (state) => {
 };
 
 PrototypeContainer = connect(mapStateToProps)(PrototypeContainer);
-
-export default reloadReducerFromLocalStorage()(PrototypeContainer);
+export default withRouter(PrototypeContainer);

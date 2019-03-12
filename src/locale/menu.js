@@ -3,7 +3,7 @@ export default {
         index: {
             primaryText: 'Home',
         },
-        adminPrototype: {
+        prototype: {
             primaryText: 'Admin form prototype'
         },
         myDashboard: {

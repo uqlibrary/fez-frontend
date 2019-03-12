@@ -72,7 +72,7 @@ class Admin extends PureComponent {
         author: PropTypes.object,
         actions: PropTypes.object,
         location: PropTypes.object,
-        history: PropTypes.object.isRequired,
+        history: PropTypes.object,
         classes: PropTypes.object,
         width: PropTypes.any,
         theme: PropTypes.object,

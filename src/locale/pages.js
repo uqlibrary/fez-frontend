@@ -680,6 +680,9 @@ export default {
         },
         unpublished: {
             title: 'Unpublished buffer'
+        },
+        prototype: {
+            title: 'Admin prototype'
         }
     }
 };
