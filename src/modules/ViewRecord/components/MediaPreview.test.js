@@ -38,6 +38,34 @@ describe('Media Preview Component ', () => {
         expect(open).toHaveBeenCalledTimes(1);
     });
 
+    it('should show the preview onload',  () => {
+        jest.useFakeTimers();
+
+        const wrapper = setup({mimeType: 'image/jpeg'});
+        const scrollToMedia = jest.spyOn(wrapper.instance(), 'scrollToMedia');
+        wrapper.instance().scrollToPreview();
+
+        jest.advanceTimersByTime(100);
+
+        expect(scrollToMedia).toHaveBeenCalled();
+    });
+
+    // it('should scroll to the preview',  () => {
+    //     // this isnt working; trying to reset the ref mediaPreviewRef so scrollIntoView exists
+    //     const scrollIntoViewMock = jest.fn();
+    //
+    //     const wrapper = setup({mimeType: 'image/jpeg'});
+    //     console.log(wrapper.instance().mediaPreviewRef.current);
+    //     wrapper.instance().mediaPreviewRef.current = {
+    //         scrollIntoView: scrollIntoViewMock
+    //     };
+    //     wrapper.update();
+    //
+    //     wrapper.scrollToMedia();
+    //
+    //     expect(scrollIntoViewMock).toHaveBeenCalled();
+    // });
+
     it('should update state on change of URL', () => {
         const wrapper = setup({previewMediaUrl: 'http://www.test.com/test.mov', mimeType: 'video/mp4'});
         const componentWillReceiveProps = jest.spyOn(wrapper.instance(), 'componentWillReceiveProps');
@@ -81,6 +109,4 @@ describe('Media Preview Component ', () => {
         expect(scrollToPreview).not.toBeCalled();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
-
-
 });

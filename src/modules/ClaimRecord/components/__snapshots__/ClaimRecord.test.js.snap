@@ -1004,11 +1004,11 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
             "addRecordButtonLabel": "Add another missing record",
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
-            "confirmationMessage": <UNDEFINED>
+            "confirmationMessage": <React.Fragment>
               <p>
                 Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
               </p>
-            </UNDEFINED>,
+            </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
               "message": "Retry uploading files and/or posting edits/changes/comments about this claim via \\"Fix record\\" screen or contact eSpace administrators.",
@@ -1844,11 +1844,11 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
             "addRecordButtonLabel": "Add another missing record",
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
-            "confirmationMessage": <UNDEFINED>
+            "confirmationMessage": <React.Fragment>
               <p>
                 Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
               </p>
-            </UNDEFINED>,
+            </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
               "message": "Retry uploading files and/or posting edits/changes/comments about this claim via \\"Fix record\\" screen or contact eSpace administrators.",
@@ -3050,11 +3050,11 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
             "addRecordButtonLabel": "Add another missing record",
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
-            "confirmationMessage": <UNDEFINED>
+            "confirmationMessage": <React.Fragment>
               <p>
                 Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
               </p>
-            </UNDEFINED>,
+            </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
               "message": "Retry uploading files and/or posting edits/changes/comments about this claim via \\"Fix record\\" screen or contact eSpace administrators.",
@@ -3926,11 +3926,11 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
             "addRecordButtonLabel": "Add another missing record",
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
-            "confirmationMessage": <UNDEFINED>
+            "confirmationMessage": <React.Fragment>
               <p>
                 Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
               </p>
-            </UNDEFINED>,
+            </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
               "message": "Retry uploading files and/or posting edits/changes/comments about this claim via \\"Fix record\\" screen or contact eSpace administrators.",
@@ -5192,11 +5192,11 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
             "addRecordButtonLabel": "Add another missing record",
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
-            "confirmationMessage": <UNDEFINED>
+            "confirmationMessage": <React.Fragment>
               <p>
                 Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
               </p>
-            </UNDEFINED>,
+            </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
               "message": "Retry uploading files and/or posting edits/changes/comments about this claim via \\"Fix record\\" screen or contact eSpace administrators.",
@@ -6568,11 +6568,11 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
             "addRecordButtonLabel": "Add another missing record",
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
-            "confirmationMessage": <UNDEFINED>
+            "confirmationMessage": <React.Fragment>
               <p>
                 Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
               </p>
-            </UNDEFINED>,
+            </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
               "message": "Retry uploading files and/or posting edits/changes/comments about this claim via \\"Fix record\\" screen or contact eSpace administrators.",
@@ -7944,11 +7944,11 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
             "addRecordButtonLabel": "Add another missing record",
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
-            "confirmationMessage": <UNDEFINED>
+            "confirmationMessage": <React.Fragment>
               <p>
                 Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
               </p>
-            </UNDEFINED>,
+            </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
               "message": "Retry uploading files and/or posting edits/changes/comments about this claim via \\"Fix record\\" screen or contact eSpace administrators.",
@@ -9320,11 +9320,11 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
             "addRecordButtonLabel": "Add another missing record",
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
-            "confirmationMessage": <UNDEFINED>
+            "confirmationMessage": <React.Fragment>
               <p>
                 Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
               </p>
-            </UNDEFINED>,
+            </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
               "message": "Retry uploading files and/or posting edits/changes/comments about this claim via \\"Fix record\\" screen or contact eSpace administrators.",
@@ -11739,7 +11739,7 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
             "addRecordButtonLabel": "Add another missing record",
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
-            "confirmationMessage": <UNDEFINED>
+            "confirmationMessage": <React.Fragment>
               <WithStyles(Grid)
                 container={true}
               >
@@ -11758,7 +11758,7 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
               <p>
                 Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
               </p>
-            </UNDEFINED>,
+            </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
               "message": "Retry uploading files and/or posting edits/changes/comments about this claim via \\"Fix record\\" screen or contact eSpace administrators.",
@@ -13130,11 +13130,11 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
             "addRecordButtonLabel": "Add another missing record",
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
-            "confirmationMessage": <UNDEFINED>
+            "confirmationMessage": <React.Fragment>
               <p>
                 Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
               </p>
-            </UNDEFINED>,
+            </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
               "message": "Retry uploading files and/or posting edits/changes/comments about this claim via \\"Fix record\\" screen or contact eSpace administrators.",
@@ -14506,11 +14506,11 @@ exports[`Component ClaimRecord  should return and render alert message depending
             "addRecordButtonLabel": "Add another missing record",
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
-            "confirmationMessage": <UNDEFINED>
+            "confirmationMessage": <React.Fragment>
               <p>
                 Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
               </p>
-            </UNDEFINED>,
+            </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
               "message": "Retry uploading files and/or posting edits/changes/comments about this claim via \\"Fix record\\" screen or contact eSpace administrators.",
@@ -15895,11 +15895,11 @@ exports[`Component ClaimRecord  should return and render alert message depending
             "addRecordButtonLabel": "Add another missing record",
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
-            "confirmationMessage": <UNDEFINED>
+            "confirmationMessage": <React.Fragment>
               <p>
                 Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
               </p>
-            </UNDEFINED>,
+            </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
               "message": "Retry uploading files and/or posting edits/changes/comments about this claim via \\"Fix record\\" screen or contact eSpace administrators.",
@@ -17282,11 +17282,11 @@ exports[`Component ClaimRecord  should return and render alert message depending
             "addRecordButtonLabel": "Add another missing record",
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
-            "confirmationMessage": <UNDEFINED>
+            "confirmationMessage": <React.Fragment>
               <p>
                 Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
               </p>
-            </UNDEFINED>,
+            </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
               "message": "Retry uploading files and/or posting edits/changes/comments about this claim via \\"Fix record\\" screen or contact eSpace administrators.",
@@ -18670,11 +18670,11 @@ exports[`Component ClaimRecord  should return and render alert message depending
             "addRecordButtonLabel": "Add another missing record",
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
-            "confirmationMessage": <UNDEFINED>
+            "confirmationMessage": <React.Fragment>
               <p>
                 Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
               </p>
-            </UNDEFINED>,
+            </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
               "message": "Retry uploading files and/or posting edits/changes/comments about this claim via \\"Fix record\\" screen or contact eSpace administrators.",
@@ -19011,11 +19011,11 @@ exports[`Component ClaimRecord  should return and render alert message depending
             "addRecordButtonLabel": "Add another missing record",
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
-            "confirmationMessage": <UNDEFINED>
+            "confirmationMessage": <React.Fragment>
               <p>
                 Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
               </p>
-            </UNDEFINED>,
+            </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
               "message": "Retry uploading files and/or posting edits/changes/comments about this claim via \\"Fix record\\" screen or contact eSpace administrators.",
@@ -19189,11 +19189,11 @@ exports[`Component ClaimRecord  should show alert if submit failed and PID not f
             "addRecordButtonLabel": "Add another missing record",
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
-            "confirmationMessage": <UNDEFINED>
+            "confirmationMessage": <React.Fragment>
               <p>
                 Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
               </p>
-            </UNDEFINED>,
+            </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
               "message": "Retry uploading files and/or posting edits/changes/comments about this claim via \\"Fix record\\" screen or contact eSpace administrators.",
