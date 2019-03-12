@@ -10,7 +10,6 @@ exports[`Grant Information Component  renderGrantDetail() 1`] = `
 >
   <WithStyles(Grid)
     alignItems="flex-start"
-    className={undefined}
     container={true}
     spacing={16}
   >
@@ -26,14 +25,11 @@ exports[`Grant Information Component  renderGrantDetail() 1`] = `
       />
     </WithStyles(Grid)>
     <WithStyles(Grid)
-      className={undefined}
       item={true}
       sm={9}
       xs={12}
     >
       <Unknown
-        className={undefined}
-        grantAgencyName={undefined}
         grantId={false}
       />
       <WithStyles(Typography)
@@ -954,6 +950,12 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                     "moment": undefined,
                   },
                 ],
+              ],
+              "results": Array [
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
               ],
             }
           }

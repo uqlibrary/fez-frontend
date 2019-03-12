@@ -497,6 +497,12 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                   },
                 ],
               ],
+              "results": Array [
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+              ],
             }
           }
         >
@@ -550,7 +556,6 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                     displayEmpty={true}
                     input={
                       <WithStyles(Input)
-                        autoFocus={undefined}
                         classes={
                           Object {
                             "root": undefined,
@@ -583,7 +588,6 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                       displayEmpty={true}
                       input={
                         <WithStyles(Input)
-                          autoFocus={undefined}
                           classes={
                             Object {
                               "root": undefined,
@@ -2120,6 +2124,16 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                   },
                 ],
               ],
+              "results": Array [
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+              ],
             }
           }
         >
@@ -2172,7 +2186,6 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                     displayEmpty={true}
                     input={
                       <WithStyles(Input)
-                        autoFocus={undefined}
                         classes={
                           Object {
                             "root": undefined,
@@ -2205,7 +2218,6 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                       displayEmpty={true}
                       input={
                         <WithStyles(Input)
-                          autoFocus={undefined}
                           classes={
                             Object {
                               "root": undefined,
@@ -3233,7 +3245,6 @@ exports[`Component FileUploadAccessSelector should render with default setup 1`]
     displayEmpty={true}
     input={
       <WithStyles(Input)
-        autoFocus={undefined}
         classes={
           Object {
             "root": undefined,
@@ -3306,7 +3317,6 @@ exports[`Component FileUploadAccessSelector should render with value 1`] = `
     displayEmpty={true}
     input={
       <WithStyles(Input)
-        autoFocus={undefined}
         classes={
           Object {
             "root": undefined,

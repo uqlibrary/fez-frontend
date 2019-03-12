@@ -1156,7 +1156,6 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
             fileName="ch7409_report.pdf"
             icon={
               <pure(PictureAsPdfIcon)
-                className={undefined}
                 color="secondary"
               />
             }
@@ -1889,25 +1888,12 @@ exports[`Files Component  should render component full mount 1`] = `
               },
             },
             "overrides": Object {
-              "MUIDataTable": Object {
-                "paper": Object {
-                  "boxShadow": "none",
-                  "margin": 0,
-                  "padding": 0,
-                },
-              },
               "MuiFormLabel": Object {
                 "root": Object {
                   "overflow": "hidden",
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
                   "width": "100%",
-                },
-              },
-              "MuiMenuItem": Object {
-                "selected": Object {
-                  "backgroundColor": "#4085C6 !important",
-                  "color": "#FFFFFF",
                 },
               },
             },
@@ -2285,6 +2271,12 @@ exports[`Files Component  should render component full mount 1`] = `
                     "moment": undefined,
                   },
                 ],
+              ],
+              "results": Array [
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
               ],
             }
           }
@@ -5646,9 +5638,8 @@ exports[`Files Component  should render component full mount 1`] = `
                               Object {
                                 "card": "Cards-card-101",
                                 "cardContentNoPadding": "Cards-cardContentNoPadding-102",
-                                "cardHeaderAccent": "Cards-cardHeaderAccent-104",
-                                "cardHeaderPrimary": "Cards-cardHeaderPrimary-103",
-                                "fullHeight": "Cards-fullHeight-105",
+                                "cardHeaderPurple": "Cards-cardHeaderPurple-103",
+                                "fullHeight": "Cards-fullHeight-104",
                               }
                             }
                             theme={
@@ -5698,25 +5689,12 @@ exports[`Files Component  should render component full mount 1`] = `
                                   },
                                 },
                                 "overrides": Object {
-                                  "MUIDataTable": Object {
-                                    "paper": Object {
-                                      "boxShadow": "none",
-                                      "margin": 0,
-                                      "padding": 0,
-                                    },
-                                  },
                                   "MuiFormLabel": Object {
                                     "root": Object {
                                       "overflow": "hidden",
                                       "textOverflow": "ellipsis",
                                       "whiteSpace": "nowrap",
                                       "width": "100%",
-                                    },
-                                  },
-                                  "MuiMenuItem": Object {
-                                    "selected": Object {
-                                      "backgroundColor": "#4085C6 !important",
-                                      "color": "#FFFFFF",
                                     },
                                   },
                                 },
@@ -6093,48 +6071,48 @@ exports[`Files Component  should render component full mount 1`] = `
                                 className="Cards-card-101 StandardCard"
                                 classes={
                                   Object {
-                                    "root": "MuiCard-root-106",
+                                    "root": "MuiCard-root-105",
                                   }
                                 }
                                 raised={false}
                                 style={Object {}}
                               >
                                 <WithStyles(Paper)
-                                  className="MuiCard-root-106 Cards-card-101 StandardCard"
+                                  className="MuiCard-root-105 Cards-card-101 StandardCard"
                                   elevation={1}
                                   style={Object {}}
                                 >
                                   <Paper
-                                    className="MuiCard-root-106 Cards-card-101 StandardCard"
+                                    className="MuiCard-root-105 Cards-card-101 StandardCard"
                                     classes={
                                       Object {
-                                        "elevation0": "MuiPaper-elevation0-109",
-                                        "elevation1": "MuiPaper-elevation1-110",
-                                        "elevation10": "MuiPaper-elevation10-119",
-                                        "elevation11": "MuiPaper-elevation11-120",
-                                        "elevation12": "MuiPaper-elevation12-121",
-                                        "elevation13": "MuiPaper-elevation13-122",
-                                        "elevation14": "MuiPaper-elevation14-123",
-                                        "elevation15": "MuiPaper-elevation15-124",
-                                        "elevation16": "MuiPaper-elevation16-125",
-                                        "elevation17": "MuiPaper-elevation17-126",
-                                        "elevation18": "MuiPaper-elevation18-127",
-                                        "elevation19": "MuiPaper-elevation19-128",
-                                        "elevation2": "MuiPaper-elevation2-111",
-                                        "elevation20": "MuiPaper-elevation20-129",
-                                        "elevation21": "MuiPaper-elevation21-130",
-                                        "elevation22": "MuiPaper-elevation22-131",
-                                        "elevation23": "MuiPaper-elevation23-132",
-                                        "elevation24": "MuiPaper-elevation24-133",
-                                        "elevation3": "MuiPaper-elevation3-112",
-                                        "elevation4": "MuiPaper-elevation4-113",
-                                        "elevation5": "MuiPaper-elevation5-114",
-                                        "elevation6": "MuiPaper-elevation6-115",
-                                        "elevation7": "MuiPaper-elevation7-116",
-                                        "elevation8": "MuiPaper-elevation8-117",
-                                        "elevation9": "MuiPaper-elevation9-118",
-                                        "root": "MuiPaper-root-107",
-                                        "rounded": "MuiPaper-rounded-108",
+                                        "elevation0": "MuiPaper-elevation0-108",
+                                        "elevation1": "MuiPaper-elevation1-109",
+                                        "elevation10": "MuiPaper-elevation10-118",
+                                        "elevation11": "MuiPaper-elevation11-119",
+                                        "elevation12": "MuiPaper-elevation12-120",
+                                        "elevation13": "MuiPaper-elevation13-121",
+                                        "elevation14": "MuiPaper-elevation14-122",
+                                        "elevation15": "MuiPaper-elevation15-123",
+                                        "elevation16": "MuiPaper-elevation16-124",
+                                        "elevation17": "MuiPaper-elevation17-125",
+                                        "elevation18": "MuiPaper-elevation18-126",
+                                        "elevation19": "MuiPaper-elevation19-127",
+                                        "elevation2": "MuiPaper-elevation2-110",
+                                        "elevation20": "MuiPaper-elevation20-128",
+                                        "elevation21": "MuiPaper-elevation21-129",
+                                        "elevation22": "MuiPaper-elevation22-130",
+                                        "elevation23": "MuiPaper-elevation23-131",
+                                        "elevation24": "MuiPaper-elevation24-132",
+                                        "elevation3": "MuiPaper-elevation3-111",
+                                        "elevation4": "MuiPaper-elevation4-112",
+                                        "elevation5": "MuiPaper-elevation5-113",
+                                        "elevation6": "MuiPaper-elevation6-114",
+                                        "elevation7": "MuiPaper-elevation7-115",
+                                        "elevation8": "MuiPaper-elevation8-116",
+                                        "elevation9": "MuiPaper-elevation9-117",
+                                        "root": "MuiPaper-root-106",
+                                        "rounded": "MuiPaper-rounded-107",
                                       }
                                     }
                                     component="div"
@@ -6143,17 +6121,16 @@ exports[`Files Component  should render component full mount 1`] = `
                                     style={Object {}}
                                   >
                                     <div
-                                      className="MuiPaper-root-107 MuiPaper-elevation1-110 MuiPaper-rounded-108 MuiCard-root-106 Cards-card-101 StandardCard"
+                                      className="MuiPaper-root-106 MuiPaper-elevation1-109 MuiPaper-rounded-107 MuiCard-root-105 Cards-card-101 StandardCard"
                                       style={Object {}}
                                     >
                                       <WithStyles(CardHeader)
                                         action={false}
                                         classes={
                                           Object {
-                                            "root": undefined,
+                                            "root": "",
                                           }
                                         }
-                                        style={Object {}}
                                         title="Files"
                                         titleTypographyProps={
                                           Object {
@@ -6167,17 +6144,16 @@ exports[`Files Component  should render component full mount 1`] = `
                                           action={false}
                                           classes={
                                             Object {
-                                              "action": "MuiCardHeader-action-136",
-                                              "avatar": "MuiCardHeader-avatar-135",
-                                              "content": "MuiCardHeader-content-137",
-                                              "root": "MuiCardHeader-root-134",
-                                              "subheader": "MuiCardHeader-subheader-139",
-                                              "title": "MuiCardHeader-title-138",
+                                              "action": "MuiCardHeader-action-135",
+                                              "avatar": "MuiCardHeader-avatar-134",
+                                              "content": "MuiCardHeader-content-136",
+                                              "root": "MuiCardHeader-root-133",
+                                              "subheader": "MuiCardHeader-subheader-138",
+                                              "title": "MuiCardHeader-title-137",
                                             }
                                           }
                                           component="div"
                                           disableTypography={false}
-                                          style={Object {}}
                                           title="Files"
                                           titleTypographyProps={
                                             Object {
@@ -6188,14 +6164,13 @@ exports[`Files Component  should render component full mount 1`] = `
                                           }
                                         >
                                           <div
-                                            className="MuiCardHeader-root-134"
-                                            style={Object {}}
+                                            className="MuiCardHeader-root-133"
                                           >
                                             <div
-                                              className="MuiCardHeader-content-137"
+                                              className="MuiCardHeader-content-136"
                                             >
                                               <WithStyles(Typography)
-                                                className="MuiCardHeader-title-138"
+                                                className="MuiCardHeader-title-137"
                                                 color="inherit"
                                                 component="h3"
                                                 internalDeprecatedVariant={true}
@@ -6203,44 +6178,44 @@ exports[`Files Component  should render component full mount 1`] = `
                                               >
                                                 <Typography
                                                   align="inherit"
-                                                  className="MuiCardHeader-title-138"
+                                                  className="MuiCardHeader-title-137"
                                                   classes={
                                                     Object {
-                                                      "alignCenter": "MuiTypography-alignCenter-163",
-                                                      "alignJustify": "MuiTypography-alignJustify-165",
-                                                      "alignLeft": "MuiTypography-alignLeft-162",
-                                                      "alignRight": "MuiTypography-alignRight-164",
-                                                      "body1": "MuiTypography-body1-149",
-                                                      "body2": "MuiTypography-body2-148",
-                                                      "button": "MuiTypography-button-151",
-                                                      "caption": "MuiTypography-caption-150",
-                                                      "colorError": "MuiTypography-colorError-174",
-                                                      "colorInherit": "MuiTypography-colorInherit-169",
-                                                      "colorPrimary": "MuiTypography-colorPrimary-170",
-                                                      "colorSecondary": "MuiTypography-colorSecondary-171",
-                                                      "colorTextPrimary": "MuiTypography-colorTextPrimary-172",
-                                                      "colorTextSecondary": "MuiTypography-colorTextSecondary-173",
-                                                      "display1": "MuiTypography-display1-144",
-                                                      "display2": "MuiTypography-display2-143",
-                                                      "display3": "MuiTypography-display3-142",
-                                                      "display4": "MuiTypography-display4-141",
-                                                      "gutterBottom": "MuiTypography-gutterBottom-167",
-                                                      "h1": "MuiTypography-h1-152",
-                                                      "h2": "MuiTypography-h2-153",
-                                                      "h3": "MuiTypography-h3-154",
-                                                      "h4": "MuiTypography-h4-155",
-                                                      "h5": "MuiTypography-h5-156",
-                                                      "h6": "MuiTypography-h6-157",
-                                                      "headline": "MuiTypography-headline-145",
-                                                      "noWrap": "MuiTypography-noWrap-166",
-                                                      "overline": "MuiTypography-overline-160",
-                                                      "paragraph": "MuiTypography-paragraph-168",
-                                                      "root": "MuiTypography-root-140",
-                                                      "srOnly": "MuiTypography-srOnly-161",
-                                                      "subheading": "MuiTypography-subheading-147",
-                                                      "subtitle1": "MuiTypography-subtitle1-158",
-                                                      "subtitle2": "MuiTypography-subtitle2-159",
-                                                      "title": "MuiTypography-title-146",
+                                                      "alignCenter": "MuiTypography-alignCenter-162",
+                                                      "alignJustify": "MuiTypography-alignJustify-164",
+                                                      "alignLeft": "MuiTypography-alignLeft-161",
+                                                      "alignRight": "MuiTypography-alignRight-163",
+                                                      "body1": "MuiTypography-body1-148",
+                                                      "body2": "MuiTypography-body2-147",
+                                                      "button": "MuiTypography-button-150",
+                                                      "caption": "MuiTypography-caption-149",
+                                                      "colorError": "MuiTypography-colorError-173",
+                                                      "colorInherit": "MuiTypography-colorInherit-168",
+                                                      "colorPrimary": "MuiTypography-colorPrimary-169",
+                                                      "colorSecondary": "MuiTypography-colorSecondary-170",
+                                                      "colorTextPrimary": "MuiTypography-colorTextPrimary-171",
+                                                      "colorTextSecondary": "MuiTypography-colorTextSecondary-172",
+                                                      "display1": "MuiTypography-display1-143",
+                                                      "display2": "MuiTypography-display2-142",
+                                                      "display3": "MuiTypography-display3-141",
+                                                      "display4": "MuiTypography-display4-140",
+                                                      "gutterBottom": "MuiTypography-gutterBottom-166",
+                                                      "h1": "MuiTypography-h1-151",
+                                                      "h2": "MuiTypography-h2-152",
+                                                      "h3": "MuiTypography-h3-153",
+                                                      "h4": "MuiTypography-h4-154",
+                                                      "h5": "MuiTypography-h5-155",
+                                                      "h6": "MuiTypography-h6-156",
+                                                      "headline": "MuiTypography-headline-144",
+                                                      "noWrap": "MuiTypography-noWrap-165",
+                                                      "overline": "MuiTypography-overline-159",
+                                                      "paragraph": "MuiTypography-paragraph-167",
+                                                      "root": "MuiTypography-root-139",
+                                                      "srOnly": "MuiTypography-srOnly-160",
+                                                      "subheading": "MuiTypography-subheading-146",
+                                                      "subtitle1": "MuiTypography-subtitle1-157",
+                                                      "subtitle2": "MuiTypography-subtitle2-158",
+                                                      "title": "MuiTypography-title-145",
                                                     }
                                                   }
                                                   color="inherit"
@@ -6317,25 +6292,12 @@ exports[`Files Component  should render component full mount 1`] = `
                                                         },
                                                       },
                                                       "overrides": Object {
-                                                        "MUIDataTable": Object {
-                                                          "paper": Object {
-                                                            "boxShadow": "none",
-                                                            "margin": 0,
-                                                            "padding": 0,
-                                                          },
-                                                        },
                                                         "MuiFormLabel": Object {
                                                           "root": Object {
                                                             "overflow": "hidden",
                                                             "textOverflow": "ellipsis",
                                                             "whiteSpace": "nowrap",
                                                             "width": "100%",
-                                                          },
-                                                        },
-                                                        "MuiMenuItem": Object {
-                                                          "selected": Object {
-                                                            "backgroundColor": "#4085C6 !important",
-                                                            "color": "#FFFFFF",
                                                           },
                                                         },
                                                       },
@@ -6705,7 +6667,7 @@ exports[`Files Component  should render component full mount 1`] = `
                                                   variant="h5"
                                                 >
                                                   <h3
-                                                    className="MuiTypography-root-140 MuiTypography-h5-156 MuiTypography-colorInherit-169 MuiCardHeader-title-138"
+                                                    className="MuiTypography-root-139 MuiTypography-h5-155 MuiTypography-colorInherit-168 MuiCardHeader-title-137"
                                                   >
                                                     Files
                                                   </h3>
@@ -6722,13 +6684,13 @@ exports[`Files Component  should render component full mount 1`] = `
                                           className=""
                                           classes={
                                             Object {
-                                              "root": "MuiCardContent-root-175",
+                                              "root": "MuiCardContent-root-174",
                                             }
                                           }
                                           component="div"
                                         >
                                           <div
-                                            className="MuiCardContent-root-175"
+                                            className="MuiCardContent-root-174"
                                           >
                                             <div
                                               style={
@@ -7128,41 +7090,41 @@ exports[`Files Component  should render component full mount 1`] = `
                                                               align="inherit"
                                                               classes={
                                                                 Object {
-                                                                  "alignCenter": "MuiTypography-alignCenter-163",
-                                                                  "alignJustify": "MuiTypography-alignJustify-165",
-                                                                  "alignLeft": "MuiTypography-alignLeft-162",
-                                                                  "alignRight": "MuiTypography-alignRight-164",
-                                                                  "body1": "MuiTypography-body1-149",
-                                                                  "body2": "MuiTypography-body2-148",
-                                                                  "button": "MuiTypography-button-151",
-                                                                  "caption": "MuiTypography-caption-150",
-                                                                  "colorError": "MuiTypography-colorError-174",
-                                                                  "colorInherit": "MuiTypography-colorInherit-169",
-                                                                  "colorPrimary": "MuiTypography-colorPrimary-170",
-                                                                  "colorSecondary": "MuiTypography-colorSecondary-171",
-                                                                  "colorTextPrimary": "MuiTypography-colorTextPrimary-172",
-                                                                  "colorTextSecondary": "MuiTypography-colorTextSecondary-173",
-                                                                  "display1": "MuiTypography-display1-144",
-                                                                  "display2": "MuiTypography-display2-143",
-                                                                  "display3": "MuiTypography-display3-142",
-                                                                  "display4": "MuiTypography-display4-141",
-                                                                  "gutterBottom": "MuiTypography-gutterBottom-167",
-                                                                  "h1": "MuiTypography-h1-152",
-                                                                  "h2": "MuiTypography-h2-153",
-                                                                  "h3": "MuiTypography-h3-154",
-                                                                  "h4": "MuiTypography-h4-155",
-                                                                  "h5": "MuiTypography-h5-156",
-                                                                  "h6": "MuiTypography-h6-157",
-                                                                  "headline": "MuiTypography-headline-145",
-                                                                  "noWrap": "MuiTypography-noWrap-166",
-                                                                  "overline": "MuiTypography-overline-160",
-                                                                  "paragraph": "MuiTypography-paragraph-168",
-                                                                  "root": "MuiTypography-root-140",
-                                                                  "srOnly": "MuiTypography-srOnly-161",
-                                                                  "subheading": "MuiTypography-subheading-147",
-                                                                  "subtitle1": "MuiTypography-subtitle1-158",
-                                                                  "subtitle2": "MuiTypography-subtitle2-159",
-                                                                  "title": "MuiTypography-title-146",
+                                                                  "alignCenter": "MuiTypography-alignCenter-162",
+                                                                  "alignJustify": "MuiTypography-alignJustify-164",
+                                                                  "alignLeft": "MuiTypography-alignLeft-161",
+                                                                  "alignRight": "MuiTypography-alignRight-163",
+                                                                  "body1": "MuiTypography-body1-148",
+                                                                  "body2": "MuiTypography-body2-147",
+                                                                  "button": "MuiTypography-button-150",
+                                                                  "caption": "MuiTypography-caption-149",
+                                                                  "colorError": "MuiTypography-colorError-173",
+                                                                  "colorInherit": "MuiTypography-colorInherit-168",
+                                                                  "colorPrimary": "MuiTypography-colorPrimary-169",
+                                                                  "colorSecondary": "MuiTypography-colorSecondary-170",
+                                                                  "colorTextPrimary": "MuiTypography-colorTextPrimary-171",
+                                                                  "colorTextSecondary": "MuiTypography-colorTextSecondary-172",
+                                                                  "display1": "MuiTypography-display1-143",
+                                                                  "display2": "MuiTypography-display2-142",
+                                                                  "display3": "MuiTypography-display3-141",
+                                                                  "display4": "MuiTypography-display4-140",
+                                                                  "gutterBottom": "MuiTypography-gutterBottom-166",
+                                                                  "h1": "MuiTypography-h1-151",
+                                                                  "h2": "MuiTypography-h2-152",
+                                                                  "h3": "MuiTypography-h3-153",
+                                                                  "h4": "MuiTypography-h4-154",
+                                                                  "h5": "MuiTypography-h5-155",
+                                                                  "h6": "MuiTypography-h6-156",
+                                                                  "headline": "MuiTypography-headline-144",
+                                                                  "noWrap": "MuiTypography-noWrap-165",
+                                                                  "overline": "MuiTypography-overline-159",
+                                                                  "paragraph": "MuiTypography-paragraph-167",
+                                                                  "root": "MuiTypography-root-139",
+                                                                  "srOnly": "MuiTypography-srOnly-160",
+                                                                  "subheading": "MuiTypography-subheading-146",
+                                                                  "subtitle1": "MuiTypography-subtitle1-157",
+                                                                  "subtitle2": "MuiTypography-subtitle2-158",
+                                                                  "title": "MuiTypography-title-145",
                                                                 }
                                                               }
                                                               color="default"
@@ -7237,25 +7199,12 @@ exports[`Files Component  should render component full mount 1`] = `
                                                                     },
                                                                   },
                                                                   "overrides": Object {
-                                                                    "MUIDataTable": Object {
-                                                                      "paper": Object {
-                                                                        "boxShadow": "none",
-                                                                        "margin": 0,
-                                                                        "padding": 0,
-                                                                      },
-                                                                    },
                                                                     "MuiFormLabel": Object {
                                                                       "root": Object {
                                                                         "overflow": "hidden",
                                                                         "textOverflow": "ellipsis",
                                                                         "whiteSpace": "nowrap",
                                                                         "width": "100%",
-                                                                      },
-                                                                    },
-                                                                    "MuiMenuItem": Object {
-                                                                      "selected": Object {
-                                                                        "backgroundColor": "#4085C6 !important",
-                                                                        "color": "#FFFFFF",
                                                                       },
                                                                     },
                                                                   },
@@ -7625,7 +7574,7 @@ exports[`Files Component  should render component full mount 1`] = `
                                                               variant="caption"
                                                             >
                                                               <span
-                                                                className="MuiTypography-root-140 MuiTypography-caption-150 MuiTypography-gutterBottom-167"
+                                                                className="MuiTypography-root-139 MuiTypography-caption-149 MuiTypography-gutterBottom-166"
                                                               >
                                                                 File name
                                                               </span>
@@ -7713,25 +7662,12 @@ exports[`Files Component  should render component full mount 1`] = `
                                                                 },
                                                               },
                                                               "overrides": Object {
-                                                                "MUIDataTable": Object {
-                                                                  "paper": Object {
-                                                                    "boxShadow": "none",
-                                                                    "margin": 0,
-                                                                    "padding": 0,
-                                                                  },
-                                                                },
                                                                 "MuiFormLabel": Object {
                                                                   "root": Object {
                                                                     "overflow": "hidden",
                                                                     "textOverflow": "ellipsis",
                                                                     "whiteSpace": "nowrap",
                                                                     "width": "100%",
-                                                                  },
-                                                                },
-                                                                "MuiMenuItem": Object {
-                                                                  "selected": Object {
-                                                                    "backgroundColor": "#4085C6 !important",
-                                                                    "color": "#FFFFFF",
                                                                   },
                                                                 },
                                                               },
@@ -8249,41 +8185,41 @@ exports[`Files Component  should render component full mount 1`] = `
                                                                       align="inherit"
                                                                       classes={
                                                                         Object {
-                                                                          "alignCenter": "MuiTypography-alignCenter-163",
-                                                                          "alignJustify": "MuiTypography-alignJustify-165",
-                                                                          "alignLeft": "MuiTypography-alignLeft-162",
-                                                                          "alignRight": "MuiTypography-alignRight-164",
-                                                                          "body1": "MuiTypography-body1-149",
-                                                                          "body2": "MuiTypography-body2-148",
-                                                                          "button": "MuiTypography-button-151",
-                                                                          "caption": "MuiTypography-caption-150",
-                                                                          "colorError": "MuiTypography-colorError-174",
-                                                                          "colorInherit": "MuiTypography-colorInherit-169",
-                                                                          "colorPrimary": "MuiTypography-colorPrimary-170",
-                                                                          "colorSecondary": "MuiTypography-colorSecondary-171",
-                                                                          "colorTextPrimary": "MuiTypography-colorTextPrimary-172",
-                                                                          "colorTextSecondary": "MuiTypography-colorTextSecondary-173",
-                                                                          "display1": "MuiTypography-display1-144",
-                                                                          "display2": "MuiTypography-display2-143",
-                                                                          "display3": "MuiTypography-display3-142",
-                                                                          "display4": "MuiTypography-display4-141",
-                                                                          "gutterBottom": "MuiTypography-gutterBottom-167",
-                                                                          "h1": "MuiTypography-h1-152",
-                                                                          "h2": "MuiTypography-h2-153",
-                                                                          "h3": "MuiTypography-h3-154",
-                                                                          "h4": "MuiTypography-h4-155",
-                                                                          "h5": "MuiTypography-h5-156",
-                                                                          "h6": "MuiTypography-h6-157",
-                                                                          "headline": "MuiTypography-headline-145",
-                                                                          "noWrap": "MuiTypography-noWrap-166",
-                                                                          "overline": "MuiTypography-overline-160",
-                                                                          "paragraph": "MuiTypography-paragraph-168",
-                                                                          "root": "MuiTypography-root-140",
-                                                                          "srOnly": "MuiTypography-srOnly-161",
-                                                                          "subheading": "MuiTypography-subheading-147",
-                                                                          "subtitle1": "MuiTypography-subtitle1-158",
-                                                                          "subtitle2": "MuiTypography-subtitle2-159",
-                                                                          "title": "MuiTypography-title-146",
+                                                                          "alignCenter": "MuiTypography-alignCenter-162",
+                                                                          "alignJustify": "MuiTypography-alignJustify-164",
+                                                                          "alignLeft": "MuiTypography-alignLeft-161",
+                                                                          "alignRight": "MuiTypography-alignRight-163",
+                                                                          "body1": "MuiTypography-body1-148",
+                                                                          "body2": "MuiTypography-body2-147",
+                                                                          "button": "MuiTypography-button-150",
+                                                                          "caption": "MuiTypography-caption-149",
+                                                                          "colorError": "MuiTypography-colorError-173",
+                                                                          "colorInherit": "MuiTypography-colorInherit-168",
+                                                                          "colorPrimary": "MuiTypography-colorPrimary-169",
+                                                                          "colorSecondary": "MuiTypography-colorSecondary-170",
+                                                                          "colorTextPrimary": "MuiTypography-colorTextPrimary-171",
+                                                                          "colorTextSecondary": "MuiTypography-colorTextSecondary-172",
+                                                                          "display1": "MuiTypography-display1-143",
+                                                                          "display2": "MuiTypography-display2-142",
+                                                                          "display3": "MuiTypography-display3-141",
+                                                                          "display4": "MuiTypography-display4-140",
+                                                                          "gutterBottom": "MuiTypography-gutterBottom-166",
+                                                                          "h1": "MuiTypography-h1-151",
+                                                                          "h2": "MuiTypography-h2-152",
+                                                                          "h3": "MuiTypography-h3-153",
+                                                                          "h4": "MuiTypography-h4-154",
+                                                                          "h5": "MuiTypography-h5-155",
+                                                                          "h6": "MuiTypography-h6-156",
+                                                                          "headline": "MuiTypography-headline-144",
+                                                                          "noWrap": "MuiTypography-noWrap-165",
+                                                                          "overline": "MuiTypography-overline-159",
+                                                                          "paragraph": "MuiTypography-paragraph-167",
+                                                                          "root": "MuiTypography-root-139",
+                                                                          "srOnly": "MuiTypography-srOnly-160",
+                                                                          "subheading": "MuiTypography-subheading-146",
+                                                                          "subtitle1": "MuiTypography-subtitle1-157",
+                                                                          "subtitle2": "MuiTypography-subtitle2-158",
+                                                                          "title": "MuiTypography-title-145",
                                                                         }
                                                                       }
                                                                       color="default"
@@ -8358,25 +8294,12 @@ exports[`Files Component  should render component full mount 1`] = `
                                                                             },
                                                                           },
                                                                           "overrides": Object {
-                                                                            "MUIDataTable": Object {
-                                                                              "paper": Object {
-                                                                                "boxShadow": "none",
-                                                                                "margin": 0,
-                                                                                "padding": 0,
-                                                                              },
-                                                                            },
                                                                             "MuiFormLabel": Object {
                                                                               "root": Object {
                                                                                 "overflow": "hidden",
                                                                                 "textOverflow": "ellipsis",
                                                                                 "whiteSpace": "nowrap",
                                                                                 "width": "100%",
-                                                                              },
-                                                                            },
-                                                                            "MuiMenuItem": Object {
-                                                                              "selected": Object {
-                                                                                "backgroundColor": "#4085C6 !important",
-                                                                                "color": "#FFFFFF",
                                                                               },
                                                                             },
                                                                           },
@@ -8746,7 +8669,7 @@ exports[`Files Component  should render component full mount 1`] = `
                                                                       variant="caption"
                                                                     >
                                                                       <span
-                                                                        className="MuiTypography-root-140 MuiTypography-caption-150 MuiTypography-gutterBottom-167"
+                                                                        className="MuiTypography-root-139 MuiTypography-caption-149 MuiTypography-gutterBottom-166"
                                                                       >
                                                                         Description
                                                                       </span>
@@ -8842,25 +8765,12 @@ exports[`Files Component  should render component full mount 1`] = `
                                                                 },
                                                               },
                                                               "overrides": Object {
-                                                                "MUIDataTable": Object {
-                                                                  "paper": Object {
-                                                                    "boxShadow": "none",
-                                                                    "margin": 0,
-                                                                    "padding": 0,
-                                                                  },
-                                                                },
                                                                 "MuiFormLabel": Object {
                                                                   "root": Object {
                                                                     "overflow": "hidden",
                                                                     "textOverflow": "ellipsis",
                                                                     "whiteSpace": "nowrap",
                                                                     "width": "100%",
-                                                                  },
-                                                                },
-                                                                "MuiMenuItem": Object {
-                                                                  "selected": Object {
-                                                                    "backgroundColor": "#4085C6 !important",
-                                                                    "color": "#FFFFFF",
                                                                   },
                                                                 },
                                                               },
@@ -9378,41 +9288,41 @@ exports[`Files Component  should render component full mount 1`] = `
                                                                       align="inherit"
                                                                       classes={
                                                                         Object {
-                                                                          "alignCenter": "MuiTypography-alignCenter-163",
-                                                                          "alignJustify": "MuiTypography-alignJustify-165",
-                                                                          "alignLeft": "MuiTypography-alignLeft-162",
-                                                                          "alignRight": "MuiTypography-alignRight-164",
-                                                                          "body1": "MuiTypography-body1-149",
-                                                                          "body2": "MuiTypography-body2-148",
-                                                                          "button": "MuiTypography-button-151",
-                                                                          "caption": "MuiTypography-caption-150",
-                                                                          "colorError": "MuiTypography-colorError-174",
-                                                                          "colorInherit": "MuiTypography-colorInherit-169",
-                                                                          "colorPrimary": "MuiTypography-colorPrimary-170",
-                                                                          "colorSecondary": "MuiTypography-colorSecondary-171",
-                                                                          "colorTextPrimary": "MuiTypography-colorTextPrimary-172",
-                                                                          "colorTextSecondary": "MuiTypography-colorTextSecondary-173",
-                                                                          "display1": "MuiTypography-display1-144",
-                                                                          "display2": "MuiTypography-display2-143",
-                                                                          "display3": "MuiTypography-display3-142",
-                                                                          "display4": "MuiTypography-display4-141",
-                                                                          "gutterBottom": "MuiTypography-gutterBottom-167",
-                                                                          "h1": "MuiTypography-h1-152",
-                                                                          "h2": "MuiTypography-h2-153",
-                                                                          "h3": "MuiTypography-h3-154",
-                                                                          "h4": "MuiTypography-h4-155",
-                                                                          "h5": "MuiTypography-h5-156",
-                                                                          "h6": "MuiTypography-h6-157",
-                                                                          "headline": "MuiTypography-headline-145",
-                                                                          "noWrap": "MuiTypography-noWrap-166",
-                                                                          "overline": "MuiTypography-overline-160",
-                                                                          "paragraph": "MuiTypography-paragraph-168",
-                                                                          "root": "MuiTypography-root-140",
-                                                                          "srOnly": "MuiTypography-srOnly-161",
-                                                                          "subheading": "MuiTypography-subheading-147",
-                                                                          "subtitle1": "MuiTypography-subtitle1-158",
-                                                                          "subtitle2": "MuiTypography-subtitle2-159",
-                                                                          "title": "MuiTypography-title-146",
+                                                                          "alignCenter": "MuiTypography-alignCenter-162",
+                                                                          "alignJustify": "MuiTypography-alignJustify-164",
+                                                                          "alignLeft": "MuiTypography-alignLeft-161",
+                                                                          "alignRight": "MuiTypography-alignRight-163",
+                                                                          "body1": "MuiTypography-body1-148",
+                                                                          "body2": "MuiTypography-body2-147",
+                                                                          "button": "MuiTypography-button-150",
+                                                                          "caption": "MuiTypography-caption-149",
+                                                                          "colorError": "MuiTypography-colorError-173",
+                                                                          "colorInherit": "MuiTypography-colorInherit-168",
+                                                                          "colorPrimary": "MuiTypography-colorPrimary-169",
+                                                                          "colorSecondary": "MuiTypography-colorSecondary-170",
+                                                                          "colorTextPrimary": "MuiTypography-colorTextPrimary-171",
+                                                                          "colorTextSecondary": "MuiTypography-colorTextSecondary-172",
+                                                                          "display1": "MuiTypography-display1-143",
+                                                                          "display2": "MuiTypography-display2-142",
+                                                                          "display3": "MuiTypography-display3-141",
+                                                                          "display4": "MuiTypography-display4-140",
+                                                                          "gutterBottom": "MuiTypography-gutterBottom-166",
+                                                                          "h1": "MuiTypography-h1-151",
+                                                                          "h2": "MuiTypography-h2-152",
+                                                                          "h3": "MuiTypography-h3-153",
+                                                                          "h4": "MuiTypography-h4-154",
+                                                                          "h5": "MuiTypography-h5-155",
+                                                                          "h6": "MuiTypography-h6-156",
+                                                                          "headline": "MuiTypography-headline-144",
+                                                                          "noWrap": "MuiTypography-noWrap-165",
+                                                                          "overline": "MuiTypography-overline-159",
+                                                                          "paragraph": "MuiTypography-paragraph-167",
+                                                                          "root": "MuiTypography-root-139",
+                                                                          "srOnly": "MuiTypography-srOnly-160",
+                                                                          "subheading": "MuiTypography-subheading-146",
+                                                                          "subtitle1": "MuiTypography-subtitle1-157",
+                                                                          "subtitle2": "MuiTypography-subtitle2-158",
+                                                                          "title": "MuiTypography-title-145",
                                                                         }
                                                                       }
                                                                       color="default"
@@ -9487,25 +9397,12 @@ exports[`Files Component  should render component full mount 1`] = `
                                                                             },
                                                                           },
                                                                           "overrides": Object {
-                                                                            "MUIDataTable": Object {
-                                                                              "paper": Object {
-                                                                                "boxShadow": "none",
-                                                                                "margin": 0,
-                                                                                "padding": 0,
-                                                                              },
-                                                                            },
                                                                             "MuiFormLabel": Object {
                                                                               "root": Object {
                                                                                 "overflow": "hidden",
                                                                                 "textOverflow": "ellipsis",
                                                                                 "whiteSpace": "nowrap",
                                                                                 "width": "100%",
-                                                                              },
-                                                                            },
-                                                                            "MuiMenuItem": Object {
-                                                                              "selected": Object {
-                                                                                "backgroundColor": "#4085C6 !important",
-                                                                                "color": "#FFFFFF",
                                                                               },
                                                                             },
                                                                           },
@@ -9875,7 +9772,7 @@ exports[`Files Component  should render component full mount 1`] = `
                                                                       variant="caption"
                                                                     >
                                                                       <span
-                                                                        className="MuiTypography-root-140 MuiTypography-caption-150 MuiTypography-gutterBottom-167"
+                                                                        className="MuiTypography-root-139 MuiTypography-caption-149 MuiTypography-gutterBottom-166"
                                                                       >
                                                                         Size
                                                                       </span>
@@ -9971,25 +9868,12 @@ exports[`Files Component  should render component full mount 1`] = `
                                                                 },
                                                               },
                                                               "overrides": Object {
-                                                                "MUIDataTable": Object {
-                                                                  "paper": Object {
-                                                                    "boxShadow": "none",
-                                                                    "margin": 0,
-                                                                    "padding": 0,
-                                                                  },
-                                                                },
                                                                 "MuiFormLabel": Object {
                                                                   "root": Object {
                                                                     "overflow": "hidden",
                                                                     "textOverflow": "ellipsis",
                                                                     "whiteSpace": "nowrap",
                                                                     "width": "100%",
-                                                                  },
-                                                                },
-                                                                "MuiMenuItem": Object {
-                                                                  "selected": Object {
-                                                                    "backgroundColor": "#4085C6 !important",
-                                                                    "color": "#FFFFFF",
                                                                   },
                                                                 },
                                                               },
@@ -10789,8 +10673,8 @@ exports[`Files Component  should render component full mount 1`] = `
                                                             <Thumbnail
                                                               classes={
                                                                 Object {
-                                                                  "brokenImage": "Thumbnail-brokenImage-177",
-                                                                  "image": "Thumbnail-image-176",
+                                                                  "brokenImage": "Thumbnail-brokenImage-176",
+                                                                  "image": "Thumbnail-image-175",
                                                                 }
                                                               }
                                                               fileName="web_image.jpg"
@@ -10808,7 +10692,7 @@ exports[`Files Component  should render component full mount 1`] = `
                                                               >
                                                                 <img
                                                                   alt="thumbnail_image.jpg"
-                                                                  className="Thumbnail-image-176"
+                                                                  className="Thumbnail-image-175"
                                                                   onError={[Function]}
                                                                   src="http://localhost/view/UQ:676287/thumbnail_image.jpg"
                                                                 />
@@ -10980,7 +10864,7 @@ exports[`Files Component  should render component full mount 1`] = `
                                                               calculatedSize="95.49 KB"
                                                               classes={
                                                                 Object {
-                                                                  "filename": "FileName-filename-178",
+                                                                  "filename": "FileName-filename-177",
                                                                 }
                                                               }
                                                               description="testing image description"
@@ -11055,25 +10939,12 @@ exports[`Files Component  should render component full mount 1`] = `
                                                                     },
                                                                   },
                                                                   "overrides": Object {
-                                                                    "MUIDataTable": Object {
-                                                                      "paper": Object {
-                                                                        "boxShadow": "none",
-                                                                        "margin": 0,
-                                                                        "padding": 0,
-                                                                      },
-                                                                    },
                                                                     "MuiFormLabel": Object {
                                                                       "root": Object {
                                                                         "overflow": "hidden",
                                                                         "textOverflow": "ellipsis",
                                                                         "whiteSpace": "nowrap",
                                                                         "width": "100%",
-                                                                      },
-                                                                    },
-                                                                    "MuiMenuItem": Object {
-                                                                      "selected": Object {
-                                                                        "backgroundColor": "#4085C6 !important",
-                                                                        "color": "#FFFFFF",
                                                                       },
                                                                     },
                                                                   },
@@ -11700,41 +11571,41 @@ exports[`Files Component  should render component full mount 1`] = `
                                                                               align="inherit"
                                                                               classes={
                                                                                 Object {
-                                                                                  "alignCenter": "MuiTypography-alignCenter-163",
-                                                                                  "alignJustify": "MuiTypography-alignJustify-165",
-                                                                                  "alignLeft": "MuiTypography-alignLeft-162",
-                                                                                  "alignRight": "MuiTypography-alignRight-164",
-                                                                                  "body1": "MuiTypography-body1-149",
-                                                                                  "body2": "MuiTypography-body2-148",
-                                                                                  "button": "MuiTypography-button-151",
-                                                                                  "caption": "MuiTypography-caption-150",
-                                                                                  "colorError": "MuiTypography-colorError-174",
-                                                                                  "colorInherit": "MuiTypography-colorInherit-169",
-                                                                                  "colorPrimary": "MuiTypography-colorPrimary-170",
-                                                                                  "colorSecondary": "MuiTypography-colorSecondary-171",
-                                                                                  "colorTextPrimary": "MuiTypography-colorTextPrimary-172",
-                                                                                  "colorTextSecondary": "MuiTypography-colorTextSecondary-173",
-                                                                                  "display1": "MuiTypography-display1-144",
-                                                                                  "display2": "MuiTypography-display2-143",
-                                                                                  "display3": "MuiTypography-display3-142",
-                                                                                  "display4": "MuiTypography-display4-141",
-                                                                                  "gutterBottom": "MuiTypography-gutterBottom-167",
-                                                                                  "h1": "MuiTypography-h1-152",
-                                                                                  "h2": "MuiTypography-h2-153",
-                                                                                  "h3": "MuiTypography-h3-154",
-                                                                                  "h4": "MuiTypography-h4-155",
-                                                                                  "h5": "MuiTypography-h5-156",
-                                                                                  "h6": "MuiTypography-h6-157",
-                                                                                  "headline": "MuiTypography-headline-145",
-                                                                                  "noWrap": "MuiTypography-noWrap-166",
-                                                                                  "overline": "MuiTypography-overline-160",
-                                                                                  "paragraph": "MuiTypography-paragraph-168",
-                                                                                  "root": "MuiTypography-root-140",
-                                                                                  "srOnly": "MuiTypography-srOnly-161",
-                                                                                  "subheading": "MuiTypography-subheading-147",
-                                                                                  "subtitle1": "MuiTypography-subtitle1-158",
-                                                                                  "subtitle2": "MuiTypography-subtitle2-159",
-                                                                                  "title": "MuiTypography-title-146",
+                                                                                  "alignCenter": "MuiTypography-alignCenter-162",
+                                                                                  "alignJustify": "MuiTypography-alignJustify-164",
+                                                                                  "alignLeft": "MuiTypography-alignLeft-161",
+                                                                                  "alignRight": "MuiTypography-alignRight-163",
+                                                                                  "body1": "MuiTypography-body1-148",
+                                                                                  "body2": "MuiTypography-body2-147",
+                                                                                  "button": "MuiTypography-button-150",
+                                                                                  "caption": "MuiTypography-caption-149",
+                                                                                  "colorError": "MuiTypography-colorError-173",
+                                                                                  "colorInherit": "MuiTypography-colorInherit-168",
+                                                                                  "colorPrimary": "MuiTypography-colorPrimary-169",
+                                                                                  "colorSecondary": "MuiTypography-colorSecondary-170",
+                                                                                  "colorTextPrimary": "MuiTypography-colorTextPrimary-171",
+                                                                                  "colorTextSecondary": "MuiTypography-colorTextSecondary-172",
+                                                                                  "display1": "MuiTypography-display1-143",
+                                                                                  "display2": "MuiTypography-display2-142",
+                                                                                  "display3": "MuiTypography-display3-141",
+                                                                                  "display4": "MuiTypography-display4-140",
+                                                                                  "gutterBottom": "MuiTypography-gutterBottom-166",
+                                                                                  "h1": "MuiTypography-h1-151",
+                                                                                  "h2": "MuiTypography-h2-152",
+                                                                                  "h3": "MuiTypography-h3-153",
+                                                                                  "h4": "MuiTypography-h4-154",
+                                                                                  "h5": "MuiTypography-h5-155",
+                                                                                  "h6": "MuiTypography-h6-156",
+                                                                                  "headline": "MuiTypography-headline-144",
+                                                                                  "noWrap": "MuiTypography-noWrap-165",
+                                                                                  "overline": "MuiTypography-overline-159",
+                                                                                  "paragraph": "MuiTypography-paragraph-167",
+                                                                                  "root": "MuiTypography-root-139",
+                                                                                  "srOnly": "MuiTypography-srOnly-160",
+                                                                                  "subheading": "MuiTypography-subheading-146",
+                                                                                  "subtitle1": "MuiTypography-subtitle1-157",
+                                                                                  "subtitle2": "MuiTypography-subtitle2-158",
+                                                                                  "title": "MuiTypography-title-145",
                                                                                 }
                                                                               }
                                                                               color="default"
@@ -11809,25 +11680,12 @@ exports[`Files Component  should render component full mount 1`] = `
                                                                                     },
                                                                                   },
                                                                                   "overrides": Object {
-                                                                                    "MUIDataTable": Object {
-                                                                                      "paper": Object {
-                                                                                        "boxShadow": "none",
-                                                                                        "margin": 0,
-                                                                                        "padding": 0,
-                                                                                      },
-                                                                                    },
                                                                                     "MuiFormLabel": Object {
                                                                                       "root": Object {
                                                                                         "overflow": "hidden",
                                                                                         "textOverflow": "ellipsis",
                                                                                         "whiteSpace": "nowrap",
                                                                                         "width": "100%",
-                                                                                      },
-                                                                                    },
-                                                                                    "MuiMenuItem": Object {
-                                                                                      "selected": Object {
-                                                                                        "backgroundColor": "#4085C6 !important",
-                                                                                        "color": "#FFFFFF",
                                                                                       },
                                                                                     },
                                                                                   },
@@ -12197,7 +12055,7 @@ exports[`Files Component  should render component full mount 1`] = `
                                                                               variant="body2"
                                                                             >
                                                                               <p
-                                                                                className="MuiTypography-root-140 MuiTypography-body2-148"
+                                                                                className="MuiTypography-root-139 MuiTypography-body2-147"
                                                                               >
                                                                                 <a
                                                                                   className="fileName"
@@ -12291,25 +12149,12 @@ exports[`Files Component  should render component full mount 1`] = `
                                                                                 },
                                                                               },
                                                                               "overrides": Object {
-                                                                                "MUIDataTable": Object {
-                                                                                  "paper": Object {
-                                                                                    "boxShadow": "none",
-                                                                                    "margin": 0,
-                                                                                    "padding": 0,
-                                                                                  },
-                                                                                },
                                                                                 "MuiFormLabel": Object {
                                                                                   "root": Object {
                                                                                     "overflow": "hidden",
                                                                                     "textOverflow": "ellipsis",
                                                                                     "whiteSpace": "nowrap",
                                                                                     "width": "100%",
-                                                                                  },
-                                                                                },
-                                                                                "MuiMenuItem": Object {
-                                                                                  "selected": Object {
-                                                                                    "backgroundColor": "#4085C6 !important",
-                                                                                    "color": "#FFFFFF",
                                                                                   },
                                                                                 },
                                                                               },
@@ -12916,25 +12761,12 @@ exports[`Files Component  should render component full mount 1`] = `
                                                                 },
                                                               },
                                                               "overrides": Object {
-                                                                "MUIDataTable": Object {
-                                                                  "paper": Object {
-                                                                    "boxShadow": "none",
-                                                                    "margin": 0,
-                                                                    "padding": 0,
-                                                                  },
-                                                                },
                                                                 "MuiFormLabel": Object {
                                                                   "root": Object {
                                                                     "overflow": "hidden",
                                                                     "textOverflow": "ellipsis",
                                                                     "whiteSpace": "nowrap",
                                                                     "width": "100%",
-                                                                  },
-                                                                },
-                                                                "MuiMenuItem": Object {
-                                                                  "selected": Object {
-                                                                    "backgroundColor": "#4085C6 !important",
-                                                                    "color": "#FFFFFF",
                                                                   },
                                                                 },
                                                               },
@@ -13454,41 +13286,41 @@ exports[`Files Component  should render component full mount 1`] = `
                                                                       align="inherit"
                                                                       classes={
                                                                         Object {
-                                                                          "alignCenter": "MuiTypography-alignCenter-163",
-                                                                          "alignJustify": "MuiTypography-alignJustify-165",
-                                                                          "alignLeft": "MuiTypography-alignLeft-162",
-                                                                          "alignRight": "MuiTypography-alignRight-164",
-                                                                          "body1": "MuiTypography-body1-149",
-                                                                          "body2": "MuiTypography-body2-148",
-                                                                          "button": "MuiTypography-button-151",
-                                                                          "caption": "MuiTypography-caption-150",
-                                                                          "colorError": "MuiTypography-colorError-174",
-                                                                          "colorInherit": "MuiTypography-colorInherit-169",
-                                                                          "colorPrimary": "MuiTypography-colorPrimary-170",
-                                                                          "colorSecondary": "MuiTypography-colorSecondary-171",
-                                                                          "colorTextPrimary": "MuiTypography-colorTextPrimary-172",
-                                                                          "colorTextSecondary": "MuiTypography-colorTextSecondary-173",
-                                                                          "display1": "MuiTypography-display1-144",
-                                                                          "display2": "MuiTypography-display2-143",
-                                                                          "display3": "MuiTypography-display3-142",
-                                                                          "display4": "MuiTypography-display4-141",
-                                                                          "gutterBottom": "MuiTypography-gutterBottom-167",
-                                                                          "h1": "MuiTypography-h1-152",
-                                                                          "h2": "MuiTypography-h2-153",
-                                                                          "h3": "MuiTypography-h3-154",
-                                                                          "h4": "MuiTypography-h4-155",
-                                                                          "h5": "MuiTypography-h5-156",
-                                                                          "h6": "MuiTypography-h6-157",
-                                                                          "headline": "MuiTypography-headline-145",
-                                                                          "noWrap": "MuiTypography-noWrap-166",
-                                                                          "overline": "MuiTypography-overline-160",
-                                                                          "paragraph": "MuiTypography-paragraph-168",
-                                                                          "root": "MuiTypography-root-140",
-                                                                          "srOnly": "MuiTypography-srOnly-161",
-                                                                          "subheading": "MuiTypography-subheading-147",
-                                                                          "subtitle1": "MuiTypography-subtitle1-158",
-                                                                          "subtitle2": "MuiTypography-subtitle2-159",
-                                                                          "title": "MuiTypography-title-146",
+                                                                          "alignCenter": "MuiTypography-alignCenter-162",
+                                                                          "alignJustify": "MuiTypography-alignJustify-164",
+                                                                          "alignLeft": "MuiTypography-alignLeft-161",
+                                                                          "alignRight": "MuiTypography-alignRight-163",
+                                                                          "body1": "MuiTypography-body1-148",
+                                                                          "body2": "MuiTypography-body2-147",
+                                                                          "button": "MuiTypography-button-150",
+                                                                          "caption": "MuiTypography-caption-149",
+                                                                          "colorError": "MuiTypography-colorError-173",
+                                                                          "colorInherit": "MuiTypography-colorInherit-168",
+                                                                          "colorPrimary": "MuiTypography-colorPrimary-169",
+                                                                          "colorSecondary": "MuiTypography-colorSecondary-170",
+                                                                          "colorTextPrimary": "MuiTypography-colorTextPrimary-171",
+                                                                          "colorTextSecondary": "MuiTypography-colorTextSecondary-172",
+                                                                          "display1": "MuiTypography-display1-143",
+                                                                          "display2": "MuiTypography-display2-142",
+                                                                          "display3": "MuiTypography-display3-141",
+                                                                          "display4": "MuiTypography-display4-140",
+                                                                          "gutterBottom": "MuiTypography-gutterBottom-166",
+                                                                          "h1": "MuiTypography-h1-151",
+                                                                          "h2": "MuiTypography-h2-152",
+                                                                          "h3": "MuiTypography-h3-153",
+                                                                          "h4": "MuiTypography-h4-154",
+                                                                          "h5": "MuiTypography-h5-155",
+                                                                          "h6": "MuiTypography-h6-156",
+                                                                          "headline": "MuiTypography-headline-144",
+                                                                          "noWrap": "MuiTypography-noWrap-165",
+                                                                          "overline": "MuiTypography-overline-159",
+                                                                          "paragraph": "MuiTypography-paragraph-167",
+                                                                          "root": "MuiTypography-root-139",
+                                                                          "srOnly": "MuiTypography-srOnly-160",
+                                                                          "subheading": "MuiTypography-subheading-146",
+                                                                          "subtitle1": "MuiTypography-subtitle1-157",
+                                                                          "subtitle2": "MuiTypography-subtitle2-158",
+                                                                          "title": "MuiTypography-title-145",
                                                                         }
                                                                       }
                                                                       color="default"
@@ -13563,25 +13395,12 @@ exports[`Files Component  should render component full mount 1`] = `
                                                                             },
                                                                           },
                                                                           "overrides": Object {
-                                                                            "MUIDataTable": Object {
-                                                                              "paper": Object {
-                                                                                "boxShadow": "none",
-                                                                                "margin": 0,
-                                                                                "padding": 0,
-                                                                              },
-                                                                            },
                                                                             "MuiFormLabel": Object {
                                                                               "root": Object {
                                                                                 "overflow": "hidden",
                                                                                 "textOverflow": "ellipsis",
                                                                                 "whiteSpace": "nowrap",
                                                                                 "width": "100%",
-                                                                              },
-                                                                            },
-                                                                            "MuiMenuItem": Object {
-                                                                              "selected": Object {
-                                                                                "backgroundColor": "#4085C6 !important",
-                                                                                "color": "#FFFFFF",
                                                                               },
                                                                             },
                                                                           },
@@ -13951,7 +13770,7 @@ exports[`Files Component  should render component full mount 1`] = `
                                                                       variant="body2"
                                                                     >
                                                                       <p
-                                                                        className="MuiTypography-root-140 MuiTypography-body2-148 MuiTypography-noWrap-166"
+                                                                        className="MuiTypography-root-139 MuiTypography-body2-147 MuiTypography-noWrap-165"
                                                                       >
                                                                         testing image description
                                                                       </p>
@@ -14047,25 +13866,12 @@ exports[`Files Component  should render component full mount 1`] = `
                                                                 },
                                                               },
                                                               "overrides": Object {
-                                                                "MUIDataTable": Object {
-                                                                  "paper": Object {
-                                                                    "boxShadow": "none",
-                                                                    "margin": 0,
-                                                                    "padding": 0,
-                                                                  },
-                                                                },
                                                                 "MuiFormLabel": Object {
                                                                   "root": Object {
                                                                     "overflow": "hidden",
                                                                     "textOverflow": "ellipsis",
                                                                     "whiteSpace": "nowrap",
                                                                     "width": "100%",
-                                                                  },
-                                                                },
-                                                                "MuiMenuItem": Object {
-                                                                  "selected": Object {
-                                                                    "backgroundColor": "#4085C6 !important",
-                                                                    "color": "#FFFFFF",
                                                                   },
                                                                 },
                                                               },
@@ -14585,41 +14391,41 @@ exports[`Files Component  should render component full mount 1`] = `
                                                                       align="inherit"
                                                                       classes={
                                                                         Object {
-                                                                          "alignCenter": "MuiTypography-alignCenter-163",
-                                                                          "alignJustify": "MuiTypography-alignJustify-165",
-                                                                          "alignLeft": "MuiTypography-alignLeft-162",
-                                                                          "alignRight": "MuiTypography-alignRight-164",
-                                                                          "body1": "MuiTypography-body1-149",
-                                                                          "body2": "MuiTypography-body2-148",
-                                                                          "button": "MuiTypography-button-151",
-                                                                          "caption": "MuiTypography-caption-150",
-                                                                          "colorError": "MuiTypography-colorError-174",
-                                                                          "colorInherit": "MuiTypography-colorInherit-169",
-                                                                          "colorPrimary": "MuiTypography-colorPrimary-170",
-                                                                          "colorSecondary": "MuiTypography-colorSecondary-171",
-                                                                          "colorTextPrimary": "MuiTypography-colorTextPrimary-172",
-                                                                          "colorTextSecondary": "MuiTypography-colorTextSecondary-173",
-                                                                          "display1": "MuiTypography-display1-144",
-                                                                          "display2": "MuiTypography-display2-143",
-                                                                          "display3": "MuiTypography-display3-142",
-                                                                          "display4": "MuiTypography-display4-141",
-                                                                          "gutterBottom": "MuiTypography-gutterBottom-167",
-                                                                          "h1": "MuiTypography-h1-152",
-                                                                          "h2": "MuiTypography-h2-153",
-                                                                          "h3": "MuiTypography-h3-154",
-                                                                          "h4": "MuiTypography-h4-155",
-                                                                          "h5": "MuiTypography-h5-156",
-                                                                          "h6": "MuiTypography-h6-157",
-                                                                          "headline": "MuiTypography-headline-145",
-                                                                          "noWrap": "MuiTypography-noWrap-166",
-                                                                          "overline": "MuiTypography-overline-160",
-                                                                          "paragraph": "MuiTypography-paragraph-168",
-                                                                          "root": "MuiTypography-root-140",
-                                                                          "srOnly": "MuiTypography-srOnly-161",
-                                                                          "subheading": "MuiTypography-subheading-147",
-                                                                          "subtitle1": "MuiTypography-subtitle1-158",
-                                                                          "subtitle2": "MuiTypography-subtitle2-159",
-                                                                          "title": "MuiTypography-title-146",
+                                                                          "alignCenter": "MuiTypography-alignCenter-162",
+                                                                          "alignJustify": "MuiTypography-alignJustify-164",
+                                                                          "alignLeft": "MuiTypography-alignLeft-161",
+                                                                          "alignRight": "MuiTypography-alignRight-163",
+                                                                          "body1": "MuiTypography-body1-148",
+                                                                          "body2": "MuiTypography-body2-147",
+                                                                          "button": "MuiTypography-button-150",
+                                                                          "caption": "MuiTypography-caption-149",
+                                                                          "colorError": "MuiTypography-colorError-173",
+                                                                          "colorInherit": "MuiTypography-colorInherit-168",
+                                                                          "colorPrimary": "MuiTypography-colorPrimary-169",
+                                                                          "colorSecondary": "MuiTypography-colorSecondary-170",
+                                                                          "colorTextPrimary": "MuiTypography-colorTextPrimary-171",
+                                                                          "colorTextSecondary": "MuiTypography-colorTextSecondary-172",
+                                                                          "display1": "MuiTypography-display1-143",
+                                                                          "display2": "MuiTypography-display2-142",
+                                                                          "display3": "MuiTypography-display3-141",
+                                                                          "display4": "MuiTypography-display4-140",
+                                                                          "gutterBottom": "MuiTypography-gutterBottom-166",
+                                                                          "h1": "MuiTypography-h1-151",
+                                                                          "h2": "MuiTypography-h2-152",
+                                                                          "h3": "MuiTypography-h3-153",
+                                                                          "h4": "MuiTypography-h4-154",
+                                                                          "h5": "MuiTypography-h5-155",
+                                                                          "h6": "MuiTypography-h6-156",
+                                                                          "headline": "MuiTypography-headline-144",
+                                                                          "noWrap": "MuiTypography-noWrap-165",
+                                                                          "overline": "MuiTypography-overline-159",
+                                                                          "paragraph": "MuiTypography-paragraph-167",
+                                                                          "root": "MuiTypography-root-139",
+                                                                          "srOnly": "MuiTypography-srOnly-160",
+                                                                          "subheading": "MuiTypography-subheading-146",
+                                                                          "subtitle1": "MuiTypography-subtitle1-157",
+                                                                          "subtitle2": "MuiTypography-subtitle2-158",
+                                                                          "title": "MuiTypography-title-145",
                                                                         }
                                                                       }
                                                                       color="default"
@@ -14694,25 +14500,12 @@ exports[`Files Component  should render component full mount 1`] = `
                                                                             },
                                                                           },
                                                                           "overrides": Object {
-                                                                            "MUIDataTable": Object {
-                                                                              "paper": Object {
-                                                                                "boxShadow": "none",
-                                                                                "margin": 0,
-                                                                                "padding": 0,
-                                                                              },
-                                                                            },
                                                                             "MuiFormLabel": Object {
                                                                               "root": Object {
                                                                                 "overflow": "hidden",
                                                                                 "textOverflow": "ellipsis",
                                                                                 "whiteSpace": "nowrap",
                                                                                 "width": "100%",
-                                                                              },
-                                                                            },
-                                                                            "MuiMenuItem": Object {
-                                                                              "selected": Object {
-                                                                                "backgroundColor": "#4085C6 !important",
-                                                                                "color": "#FFFFFF",
                                                                               },
                                                                             },
                                                                           },
@@ -15082,7 +14875,7 @@ exports[`Files Component  should render component full mount 1`] = `
                                                                       variant="body2"
                                                                     >
                                                                       <p
-                                                                        className="MuiTypography-root-140 MuiTypography-body2-148 MuiTypography-noWrap-166"
+                                                                        className="MuiTypography-root-139 MuiTypography-body2-147 MuiTypography-noWrap-165"
                                                                       >
                                                                         95.49 KB
                                                                       </p>
@@ -15178,25 +14971,12 @@ exports[`Files Component  should render component full mount 1`] = `
                                                                 },
                                                               },
                                                               "overrides": Object {
-                                                                "MUIDataTable": Object {
-                                                                  "paper": Object {
-                                                                    "boxShadow": "none",
-                                                                    "margin": 0,
-                                                                    "padding": 0,
-                                                                  },
-                                                                },
                                                                 "MuiFormLabel": Object {
                                                                   "root": Object {
                                                                     "overflow": "hidden",
                                                                     "textOverflow": "ellipsis",
                                                                     "whiteSpace": "nowrap",
                                                                     "width": "100%",
-                                                                  },
-                                                                },
-                                                                "MuiMenuItem": Object {
-                                                                  "selected": Object {
-                                                                    "backgroundColor": "#4085C6 !important",
-                                                                    "color": "#FFFFFF",
                                                                   },
                                                                 },
                                                               },
@@ -16041,390 +15821,1567 @@ exports[`Files Component  should render cultural message 1`] = `
 `;
 
 exports[`Files Component  should render icon for mimeType 1`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <pure(InsertDriveFileIcon)
-    className={undefined}
-    color="secondary"
-  />,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateError": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "function",
-    "props": Object {
-      "className": undefined,
-      "color": "secondary",
-    },
-    "ref": null,
-    "rendered": null,
-    "type": [Function],
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "function",
-      "props": Object {
-        "className": undefined,
-        "color": "secondary",
-      },
-      "ref": null,
-      "rendered": null,
-      "type": [Function],
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
-          },
-          "getDerivedStateFromProps": true,
-          "getSnapshotBeforeUpdate": true,
-          "setState": Object {
-            "skipsComponentDidUpdateOnNullish": true,
-          },
-        },
-      },
-    },
-  },
-}
+<WithStyles(Grid)
+  item={true}
+  xs={12}
+>
+  <StandardCard
+    title="Files"
+  >
+    <div
+      style={
+        Object {
+          "padding": 8,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="center"
+        className="header"
+        container={true}
+        direction="row"
+        spacing={16}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={1}
+        >
+           
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          sm={4}
+        >
+          <WithStyles(Typography)
+            gutterBottom={true}
+            variant="caption"
+          >
+            File name
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={4}
+          >
+            <WithStyles(Typography)
+              gutterBottom={true}
+              variant="caption"
+            >
+              Description
+            </WithStyles(Typography)>
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={true}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={false}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            md={2}
+          >
+            <WithStyles(Typography)
+              gutterBottom={true}
+              variant="caption"
+            >
+              Size
+            </WithStyles(Typography)>
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={true}
+          />
+        </Hidden>
+      </WithStyles(Grid)>
+    </div>
+    <div
+      key="0"
+      style={
+        Object {
+          "padding": 8,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="center"
+        className="header"
+        container={true}
+        direction="row"
+        key="file-0"
+        spacing={16}
+        wrap="nowrap"
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={1}
+        >
+          <WithStyles(Thumbnail)
+            fileName="web_image.jpg"
+            mediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+            mimeType="image/jpeg"
+            onClick={[Function]}
+            previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
+            thumbnailFileName="thumbnail_image.jpg"
+            thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
+          />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          sm={4}
+        >
+          <WithStyles(FileName)
+            allowDownload={true}
+            calculatedSize="95.49 KB"
+            description="testing image description"
+            fileName="image.jpg"
+            icon={
+              <WithStyles(Thumbnail)
+                fileName="web_image.jpg"
+                mediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+                mimeType="image/jpeg"
+                onClick={[Function]}
+                previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
+                thumbnailFileName="thumbnail_image.jpg"
+                thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
+              />
+            }
+            mediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+            mimeType="image/jpeg"
+            onFileSelect={[Function]}
+            openAccessStatus={
+              Object {
+                "embargoDate": null,
+                "isOpenAccess": true,
+                "openAccessStatusId": 453695,
+              }
+            }
+            pid="UQ:676287"
+            previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
+            thumbnailFileName="thumbnail_image.jpg"
+          />
+        </WithStyles(Grid)>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={4}
+          >
+            <WithStyles(Typography)
+              noWrap={true}
+              variant="body2"
+            >
+              testing image description
+            </WithStyles(Typography)>
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={true}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={false}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={2}
+          >
+            <WithStyles(Typography)
+              noWrap={true}
+              variant="body2"
+            >
+              95.49 KB
+            </WithStyles(Typography)>
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={true}
+            style={
+              Object {
+                "textAlign": "right",
+              }
+            }
+          >
+            <OpenAccessIcon
+              embargoDate={null}
+              isOpenAccess={true}
+              openAccessStatusId={453695}
+              showEmbargoText={false}
+            />
+          </WithStyles(Grid)>
+        </Hidden>
+      </WithStyles(Grid)>
+    </div>
+  </StandardCard>
+</WithStyles(Grid)>
 `;
 
 exports[`Files Component  should render icon for mimeType 2`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <pure(ImageIcon)
-    className={undefined}
-    color="secondary"
-  />,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateError": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "function",
-    "props": Object {
-      "className": undefined,
-      "color": "secondary",
-    },
-    "ref": null,
-    "rendered": null,
-    "type": [Function],
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "function",
-      "props": Object {
-        "className": undefined,
-        "color": "secondary",
-      },
-      "ref": null,
-      "rendered": null,
-      "type": [Function],
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
-          },
-          "getDerivedStateFromProps": true,
-          "getSnapshotBeforeUpdate": true,
-          "setState": Object {
-            "skipsComponentDidUpdateOnNullish": true,
-          },
-        },
-      },
-    },
-  },
-}
+<WithStyles(Grid)
+  item={true}
+  xs={12}
+>
+  <StandardCard
+    title="Files"
+  >
+    <div
+      style={
+        Object {
+          "padding": 8,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="center"
+        className="header"
+        container={true}
+        direction="row"
+        spacing={16}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={1}
+        >
+           
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          sm={4}
+        >
+          <WithStyles(Typography)
+            gutterBottom={true}
+            variant="caption"
+          >
+            File name
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={4}
+          >
+            <WithStyles(Typography)
+              gutterBottom={true}
+              variant="caption"
+            >
+              Description
+            </WithStyles(Typography)>
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={true}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={false}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            md={2}
+          >
+            <WithStyles(Typography)
+              gutterBottom={true}
+              variant="caption"
+            >
+              Size
+            </WithStyles(Typography)>
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={true}
+          />
+        </Hidden>
+      </WithStyles(Grid)>
+    </div>
+    <div
+      key="0"
+      style={
+        Object {
+          "padding": 8,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="center"
+        className="header"
+        container={true}
+        direction="row"
+        key="file-0"
+        spacing={16}
+        wrap="nowrap"
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={1}
+        >
+          <WithStyles(Thumbnail)
+            fileName="web_image.jpg"
+            mediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+            mimeType="image/jpeg"
+            onClick={[Function]}
+            previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
+            thumbnailFileName="thumbnail_image.jpg"
+            thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
+          />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          sm={4}
+        >
+          <WithStyles(FileName)
+            allowDownload={true}
+            calculatedSize="95.49 KB"
+            description="testing image description"
+            fileName="image.jpg"
+            icon={
+              <WithStyles(Thumbnail)
+                fileName="web_image.jpg"
+                mediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+                mimeType="image/jpeg"
+                onClick={[Function]}
+                previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
+                thumbnailFileName="thumbnail_image.jpg"
+                thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
+              />
+            }
+            mediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+            mimeType="image/jpeg"
+            onFileSelect={[Function]}
+            openAccessStatus={
+              Object {
+                "embargoDate": null,
+                "isOpenAccess": true,
+                "openAccessStatusId": 453695,
+              }
+            }
+            pid="UQ:676287"
+            previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
+            thumbnailFileName="thumbnail_image.jpg"
+          />
+        </WithStyles(Grid)>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={4}
+          >
+            <WithStyles(Typography)
+              noWrap={true}
+              variant="body2"
+            >
+              testing image description
+            </WithStyles(Typography)>
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={true}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={false}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={2}
+          >
+            <WithStyles(Typography)
+              noWrap={true}
+              variant="body2"
+            >
+              95.49 KB
+            </WithStyles(Typography)>
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={true}
+            style={
+              Object {
+                "textAlign": "right",
+              }
+            }
+          >
+            <OpenAccessIcon
+              embargoDate={null}
+              isOpenAccess={true}
+              openAccessStatusId={453695}
+              showEmbargoText={false}
+            />
+          </WithStyles(Grid)>
+        </Hidden>
+      </WithStyles(Grid)>
+    </div>
+  </StandardCard>
+</WithStyles(Grid)>
 `;
 
 exports[`Files Component  should render icon for mimeType 3`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <pure(VideocamIcon)
-    className={undefined}
-    color="secondary"
-  />,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateError": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "function",
-    "props": Object {
-      "className": undefined,
-      "color": "secondary",
-    },
-    "ref": null,
-    "rendered": null,
-    "type": [Function],
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "function",
-      "props": Object {
-        "className": undefined,
-        "color": "secondary",
-      },
-      "ref": null,
-      "rendered": null,
-      "type": [Function],
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
-          },
-          "getDerivedStateFromProps": true,
-          "getSnapshotBeforeUpdate": true,
-          "setState": Object {
-            "skipsComponentDidUpdateOnNullish": true,
-          },
-        },
-      },
-    },
-  },
-}
+<WithStyles(Grid)
+  item={true}
+  xs={12}
+>
+  <StandardCard
+    title="Files"
+  >
+    <div
+      style={
+        Object {
+          "padding": 8,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="center"
+        className="header"
+        container={true}
+        direction="row"
+        spacing={16}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={1}
+        >
+           
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          sm={4}
+        >
+          <WithStyles(Typography)
+            gutterBottom={true}
+            variant="caption"
+          >
+            File name
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={4}
+          >
+            <WithStyles(Typography)
+              gutterBottom={true}
+              variant="caption"
+            >
+              Description
+            </WithStyles(Typography)>
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={true}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={false}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            md={2}
+          >
+            <WithStyles(Typography)
+              gutterBottom={true}
+              variant="caption"
+            >
+              Size
+            </WithStyles(Typography)>
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={true}
+          />
+        </Hidden>
+      </WithStyles(Grid)>
+    </div>
+    <div
+      key="0"
+      style={
+        Object {
+          "padding": 8,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="center"
+        className="header"
+        container={true}
+        direction="row"
+        key="file-0"
+        spacing={16}
+        wrap="nowrap"
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={1}
+        >
+          <WithStyles(Thumbnail)
+            fileName="web_image.jpg"
+            mediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+            mimeType="image/jpeg"
+            onClick={[Function]}
+            previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
+            thumbnailFileName="thumbnail_image.jpg"
+            thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
+          />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          sm={4}
+        >
+          <WithStyles(FileName)
+            allowDownload={true}
+            calculatedSize="95.49 KB"
+            description="testing image description"
+            fileName="image.jpg"
+            icon={
+              <WithStyles(Thumbnail)
+                fileName="web_image.jpg"
+                mediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+                mimeType="image/jpeg"
+                onClick={[Function]}
+                previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
+                thumbnailFileName="thumbnail_image.jpg"
+                thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
+              />
+            }
+            mediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+            mimeType="image/jpeg"
+            onFileSelect={[Function]}
+            openAccessStatus={
+              Object {
+                "embargoDate": null,
+                "isOpenAccess": true,
+                "openAccessStatusId": 453695,
+              }
+            }
+            pid="UQ:676287"
+            previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
+            thumbnailFileName="thumbnail_image.jpg"
+          />
+        </WithStyles(Grid)>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={4}
+          >
+            <WithStyles(Typography)
+              noWrap={true}
+              variant="body2"
+            >
+              testing image description
+            </WithStyles(Typography)>
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={true}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={false}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={2}
+          >
+            <WithStyles(Typography)
+              noWrap={true}
+              variant="body2"
+            >
+              95.49 KB
+            </WithStyles(Typography)>
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={true}
+            style={
+              Object {
+                "textAlign": "right",
+              }
+            }
+          >
+            <OpenAccessIcon
+              embargoDate={null}
+              isOpenAccess={true}
+              openAccessStatusId={453695}
+              showEmbargoText={false}
+            />
+          </WithStyles(Grid)>
+        </Hidden>
+      </WithStyles(Grid)>
+    </div>
+  </StandardCard>
+</WithStyles(Grid)>
 `;
 
 exports[`Files Component  should render icon for mimeType 4`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <pure(VolumeUpIcon)
-    className={undefined}
-    color="secondary"
-  />,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateError": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "function",
-    "props": Object {
-      "className": undefined,
-      "color": "secondary",
-    },
-    "ref": null,
-    "rendered": null,
-    "type": [Function],
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "function",
-      "props": Object {
-        "className": undefined,
-        "color": "secondary",
-      },
-      "ref": null,
-      "rendered": null,
-      "type": [Function],
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
-          },
-          "getDerivedStateFromProps": true,
-          "getSnapshotBeforeUpdate": true,
-          "setState": Object {
-            "skipsComponentDidUpdateOnNullish": true,
-          },
-        },
-      },
-    },
-  },
-}
+<WithStyles(Grid)
+  item={true}
+  xs={12}
+>
+  <StandardCard
+    title="Files"
+  >
+    <div
+      style={
+        Object {
+          "padding": 8,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="center"
+        className="header"
+        container={true}
+        direction="row"
+        spacing={16}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={1}
+        >
+           
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          sm={4}
+        >
+          <WithStyles(Typography)
+            gutterBottom={true}
+            variant="caption"
+          >
+            File name
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={4}
+          >
+            <WithStyles(Typography)
+              gutterBottom={true}
+              variant="caption"
+            >
+              Description
+            </WithStyles(Typography)>
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={true}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={false}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            md={2}
+          >
+            <WithStyles(Typography)
+              gutterBottom={true}
+              variant="caption"
+            >
+              Size
+            </WithStyles(Typography)>
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={true}
+          />
+        </Hidden>
+      </WithStyles(Grid)>
+    </div>
+    <div
+      key="0"
+      style={
+        Object {
+          "padding": 8,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="center"
+        className="header"
+        container={true}
+        direction="row"
+        key="file-0"
+        spacing={16}
+        wrap="nowrap"
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={1}
+        >
+          <WithStyles(Thumbnail)
+            fileName="web_image.jpg"
+            mediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+            mimeType="image/jpeg"
+            onClick={[Function]}
+            previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
+            thumbnailFileName="thumbnail_image.jpg"
+            thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
+          />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          sm={4}
+        >
+          <WithStyles(FileName)
+            allowDownload={true}
+            calculatedSize="95.49 KB"
+            description="testing image description"
+            fileName="image.jpg"
+            icon={
+              <WithStyles(Thumbnail)
+                fileName="web_image.jpg"
+                mediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+                mimeType="image/jpeg"
+                onClick={[Function]}
+                previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
+                thumbnailFileName="thumbnail_image.jpg"
+                thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
+              />
+            }
+            mediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+            mimeType="image/jpeg"
+            onFileSelect={[Function]}
+            openAccessStatus={
+              Object {
+                "embargoDate": null,
+                "isOpenAccess": true,
+                "openAccessStatusId": 453695,
+              }
+            }
+            pid="UQ:676287"
+            previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
+            thumbnailFileName="thumbnail_image.jpg"
+          />
+        </WithStyles(Grid)>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={4}
+          >
+            <WithStyles(Typography)
+              noWrap={true}
+              variant="body2"
+            >
+              testing image description
+            </WithStyles(Typography)>
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={true}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={false}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={2}
+          >
+            <WithStyles(Typography)
+              noWrap={true}
+              variant="body2"
+            >
+              95.49 KB
+            </WithStyles(Typography)>
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={true}
+            style={
+              Object {
+                "textAlign": "right",
+              }
+            }
+          >
+            <OpenAccessIcon
+              embargoDate={null}
+              isOpenAccess={true}
+              openAccessStatusId={453695}
+              showEmbargoText={false}
+            />
+          </WithStyles(Grid)>
+        </Hidden>
+      </WithStyles(Grid)>
+    </div>
+  </StandardCard>
+</WithStyles(Grid)>
 `;
 
 exports[`Files Component  should render icon for mimeType 5`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <pure(PictureAsPdfIcon)
-    className={undefined}
-    color="secondary"
-  />,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateError": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "function",
-    "props": Object {
-      "className": undefined,
-      "color": "secondary",
-    },
-    "ref": null,
-    "rendered": null,
-    "type": [Function],
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "function",
-      "props": Object {
-        "className": undefined,
-        "color": "secondary",
-      },
-      "ref": null,
-      "rendered": null,
-      "type": [Function],
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
-          },
-          "getDerivedStateFromProps": true,
-          "getSnapshotBeforeUpdate": true,
-          "setState": Object {
-            "skipsComponentDidUpdateOnNullish": true,
-          },
-        },
-      },
-    },
-  },
-}
+<WithStyles(Grid)
+  item={true}
+  xs={12}
+>
+  <StandardCard
+    title="Files"
+  >
+    <div
+      style={
+        Object {
+          "padding": 8,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="center"
+        className="header"
+        container={true}
+        direction="row"
+        spacing={16}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={1}
+        >
+           
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          sm={4}
+        >
+          <WithStyles(Typography)
+            gutterBottom={true}
+            variant="caption"
+          >
+            File name
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={4}
+          >
+            <WithStyles(Typography)
+              gutterBottom={true}
+              variant="caption"
+            >
+              Description
+            </WithStyles(Typography)>
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={true}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={false}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            md={2}
+          >
+            <WithStyles(Typography)
+              gutterBottom={true}
+              variant="caption"
+            >
+              Size
+            </WithStyles(Typography)>
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={true}
+          />
+        </Hidden>
+      </WithStyles(Grid)>
+    </div>
+    <div
+      key="0"
+      style={
+        Object {
+          "padding": 8,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="center"
+        className="header"
+        container={true}
+        direction="row"
+        key="file-0"
+        spacing={16}
+        wrap="nowrap"
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={1}
+        >
+          <WithStyles(Thumbnail)
+            fileName="web_image.jpg"
+            mediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+            mimeType="image/jpeg"
+            onClick={[Function]}
+            previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
+            thumbnailFileName="thumbnail_image.jpg"
+            thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
+          />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          sm={4}
+        >
+          <WithStyles(FileName)
+            allowDownload={true}
+            calculatedSize="95.49 KB"
+            description="testing image description"
+            fileName="image.jpg"
+            icon={
+              <WithStyles(Thumbnail)
+                fileName="web_image.jpg"
+                mediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+                mimeType="image/jpeg"
+                onClick={[Function]}
+                previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
+                thumbnailFileName="thumbnail_image.jpg"
+                thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
+              />
+            }
+            mediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+            mimeType="image/jpeg"
+            onFileSelect={[Function]}
+            openAccessStatus={
+              Object {
+                "embargoDate": null,
+                "isOpenAccess": true,
+                "openAccessStatusId": 453695,
+              }
+            }
+            pid="UQ:676287"
+            previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
+            thumbnailFileName="thumbnail_image.jpg"
+          />
+        </WithStyles(Grid)>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={4}
+          >
+            <WithStyles(Typography)
+              noWrap={true}
+              variant="body2"
+            >
+              testing image description
+            </WithStyles(Typography)>
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={true}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={false}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={2}
+          >
+            <WithStyles(Typography)
+              noWrap={true}
+              variant="body2"
+            >
+              95.49 KB
+            </WithStyles(Typography)>
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={true}
+            style={
+              Object {
+                "textAlign": "right",
+              }
+            }
+          >
+            <OpenAccessIcon
+              embargoDate={null}
+              isOpenAccess={true}
+              openAccessStatusId={453695}
+              showEmbargoText={false}
+            />
+          </WithStyles(Grid)>
+        </Hidden>
+      </WithStyles(Grid)>
+    </div>
+  </StandardCard>
+</WithStyles(Grid)>
 `;
 
 exports[`Files Component  should render icon for mimeType 6`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <WithStyles(Thumbnail)
-    fileName="test.tiff"
-    mediaUrl="http://localhost/view/UQ:1/test.tiff"
-    mimeType="image/jpg"
-    onClick={[Function]}
-    previewMediaUrl="http://localhost/view/UQ:1/preview_test.jpg"
-    thumbnailFileName="thumbnail_test.jpg"
-    thumbnailMediaUrl="http://localhost/view/UQ:1/thumbnail_test.jpg"
-  />,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateError": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "class",
-    "props": Object {
-      "classes": Object {
-        "brokenImage": "Thumbnail-brokenImage-180",
-        "image": "Thumbnail-image-179",
-      },
-      "fileName": "test.tiff",
-      "mediaUrl": "http://localhost/view/UQ:1/test.tiff",
-      "mimeType": "image/jpg",
-      "onClick": [Function],
-      "previewMediaUrl": "http://localhost/view/UQ:1/preview_test.jpg",
-      "thumbnailFileName": "thumbnail_test.jpg",
-      "thumbnailMediaUrl": "http://localhost/view/UQ:1/thumbnail_test.jpg",
-    },
-    "ref": null,
-    "rendered": null,
-    "type": [Function],
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "class",
-      "props": Object {
-        "classes": Object {
-          "brokenImage": "Thumbnail-brokenImage-180",
-          "image": "Thumbnail-image-179",
-        },
-        "fileName": "test.tiff",
-        "mediaUrl": "http://localhost/view/UQ:1/test.tiff",
-        "mimeType": "image/jpg",
-        "onClick": [Function],
-        "previewMediaUrl": "http://localhost/view/UQ:1/preview_test.jpg",
-        "thumbnailFileName": "thumbnail_test.jpg",
-        "thumbnailMediaUrl": "http://localhost/view/UQ:1/thumbnail_test.jpg",
-      },
-      "ref": null,
-      "rendered": null,
-      "type": [Function],
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
-          },
-          "getDerivedStateFromProps": true,
-          "getSnapshotBeforeUpdate": true,
-          "setState": Object {
-            "skipsComponentDidUpdateOnNullish": true,
-          },
-        },
-      },
-    },
-  },
-}
+<WithStyles(Grid)
+  item={true}
+  xs={12}
+>
+  <StandardCard
+    title="Files"
+  >
+    <div
+      style={
+        Object {
+          "padding": 8,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="center"
+        className="header"
+        container={true}
+        direction="row"
+        spacing={16}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={1}
+        >
+           
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          sm={4}
+        >
+          <WithStyles(Typography)
+            gutterBottom={true}
+            variant="caption"
+          >
+            File name
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={4}
+          >
+            <WithStyles(Typography)
+              gutterBottom={true}
+              variant="caption"
+            >
+              Description
+            </WithStyles(Typography)>
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={true}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={false}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            md={2}
+          >
+            <WithStyles(Typography)
+              gutterBottom={true}
+              variant="caption"
+            >
+              Size
+            </WithStyles(Typography)>
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={true}
+          />
+        </Hidden>
+      </WithStyles(Grid)>
+    </div>
+    <div
+      key="0"
+      style={
+        Object {
+          "padding": 8,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="center"
+        className="header"
+        container={true}
+        direction="row"
+        key="file-0"
+        spacing={16}
+        wrap="nowrap"
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={1}
+        >
+          <WithStyles(Thumbnail)
+            fileName="web_image.jpg"
+            mediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+            mimeType="image/jpeg"
+            onClick={[Function]}
+            previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
+            thumbnailFileName="thumbnail_image.jpg"
+            thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
+          />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          sm={4}
+        >
+          <WithStyles(FileName)
+            allowDownload={true}
+            calculatedSize="95.49 KB"
+            description="testing image description"
+            fileName="image.jpg"
+            icon={
+              <WithStyles(Thumbnail)
+                fileName="web_image.jpg"
+                mediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+                mimeType="image/jpeg"
+                onClick={[Function]}
+                previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
+                thumbnailFileName="thumbnail_image.jpg"
+                thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
+              />
+            }
+            mediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+            mimeType="image/jpeg"
+            onFileSelect={[Function]}
+            openAccessStatus={
+              Object {
+                "embargoDate": null,
+                "isOpenAccess": true,
+                "openAccessStatusId": 453695,
+              }
+            }
+            pid="UQ:676287"
+            previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
+            thumbnailFileName="thumbnail_image.jpg"
+          />
+        </WithStyles(Grid)>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={4}
+          >
+            <WithStyles(Typography)
+              noWrap={true}
+              variant="body2"
+            >
+              testing image description
+            </WithStyles(Typography)>
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={true}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={false}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={2}
+          >
+            <WithStyles(Typography)
+              noWrap={true}
+              variant="body2"
+            >
+              95.49 KB
+            </WithStyles(Typography)>
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={true}
+            style={
+              Object {
+                "textAlign": "right",
+              }
+            }
+          >
+            <OpenAccessIcon
+              embargoDate={null}
+              isOpenAccess={true}
+              openAccessStatusId={453695}
+              showEmbargoText={false}
+            />
+          </WithStyles(Grid)>
+        </Hidden>
+      </WithStyles(Grid)>
+    </div>
+  </StandardCard>
+</WithStyles(Grid)>
 `;

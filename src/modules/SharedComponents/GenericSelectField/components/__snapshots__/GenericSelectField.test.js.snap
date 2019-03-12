@@ -497,6 +497,12 @@ exports[`GenericSelectField  Full mount  should render 1`] = `
                   },
                 ],
               ],
+              "results": Array [
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+              ],
             }
           }
         >
@@ -507,6 +513,12 @@ exports[`GenericSelectField  Full mount  should render 1`] = `
                   Array [
                     1234,
                   ],
+                ],
+                "results": Array [
+                  Object {
+                    "type": "return",
+                    "value": undefined,
+                  },
                 ],
               }
             }
@@ -519,6 +531,12 @@ exports[`GenericSelectField  Full mount  should render 1`] = `
                     Array [
                       1234,
                     ],
+                  ],
+                  "results": Array [
+                    Object {
+                      "type": "return",
+                      "value": undefined,
+                    },
                   ],
                 }
               }
@@ -540,6 +558,12 @@ exports[`GenericSelectField  Full mount  should render 1`] = `
                       Array [
                         1234,
                       ],
+                    ],
+                    "results": Array [
+                      Object {
+                        "type": "return",
+                        "value": undefined,
+                      },
                     ],
                   }
                 }

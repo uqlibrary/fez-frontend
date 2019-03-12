@@ -503,6 +503,16 @@ exports[`Component FileUploadDropzone should open files selection dialog 1`] = `
                   },
                 ],
               ],
+              "results": Array [
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+              ],
             }
           }
         >
@@ -2721,6 +2731,12 @@ exports[`Component FileUploadDropzone should render disabled component 1`] = `
                     "moment": undefined,
                   },
                 ],
+              ],
+              "results": Array [
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
               ],
             }
           }

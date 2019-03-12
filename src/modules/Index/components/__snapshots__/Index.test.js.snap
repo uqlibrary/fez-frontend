@@ -13,6 +13,16 @@ exports[`Index page should render placeholders 1`] = `
             [Function],
           ],
         ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
+        ],
       },
       "getState": [MockFunction] {
         "calls": Array [
@@ -20,6 +30,24 @@ exports[`Index page should render placeholders 1`] = `
           Array [],
           Array [],
           Array [],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
         ],
       },
       "subscribe": [MockFunction] {
@@ -30,6 +58,16 @@ exports[`Index page should render placeholders 1`] = `
           Array [
             [Function],
           ],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
         ],
       },
     }
@@ -521,6 +559,12 @@ exports[`Index page should render placeholders 1`] = `
                     "moment": undefined,
                   },
                 ],
+              ],
+              "results": Array [
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
               ],
             }
           }

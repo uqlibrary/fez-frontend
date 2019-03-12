@@ -4635,6 +4635,16 @@ exports[`Testing wrapped App component Mounts 1`] = `
             [Function],
           ],
         ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
+        ],
       },
       "getState": [MockFunction] {
         "calls": Array [
@@ -4650,6 +4660,56 @@ exports[`Testing wrapped App component Mounts 1`] = `
           Array [],
           Array [],
           Array [],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
         ],
       },
       "subscribe": [MockFunction] {
@@ -4672,6 +4732,32 @@ exports[`Testing wrapped App component Mounts 1`] = `
           Array [
             [Function],
           ],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
         ],
       },
     }
@@ -5164,6 +5250,12 @@ exports[`Testing wrapped App component Mounts 1`] = `
                   },
                 ],
               ],
+              "results": Array [
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+              ],
             }
           }
         >
@@ -5178,6 +5270,12 @@ exports[`Testing wrapped App component Mounts 1`] = `
                 "loadCurrentAccount": [MockFunction] {
                   "calls": Array [
                     Array [],
+                  ],
+                  "results": Array [
+                    Object {
+                      "type": "return",
+                      "value": undefined,
+                    },
                   ],
                 },
                 "logout": [MockFunction],
@@ -5220,6 +5318,12 @@ exports[`Testing wrapped App component Mounts 1`] = `
                     "calls": Array [
                       Array [],
                     ],
+                    "results": Array [
+                      Object {
+                        "type": "return",
+                        "value": undefined,
+                      },
+                    ],
                   },
                   "logout": [MockFunction],
                 }
@@ -5260,6 +5364,12 @@ exports[`Testing wrapped App component Mounts 1`] = `
                     "loadCurrentAccount": [MockFunction] {
                       "calls": Array [
                         Array [],
+                      ],
+                      "results": Array [
+                        Object {
+                          "type": "return",
+                          "value": undefined,
+                        },
                       ],
                     },
                     "logout": [MockFunction],

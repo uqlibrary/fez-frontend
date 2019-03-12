@@ -1,815 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component FileUploader should accept terms and condition and reset back to not accepted state if access condition changed back to closed access 1`] = `
-<Fragment>
-  <WithStyles(Typography)
-    gutterBottom={true}
-    variant="body2"
-  >
-    You may add up to 5 files (max 1KB each)
-  </WithStyles(Typography)>
-  <WithStyles(FileUploadDropzone)
-    fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
-    fileUploadLimit={5}
-    filesInQueue={
-      Array [
-        "a.txt",
-      ]
-    }
-    locale={
-      Object {
-        "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
-        "errorTitle": "Upload Errors",
-        "fileUploadInstruction": <p>
-          Click here to select files, or drag files into this area to upload
-        </p>,
-        "fileUploadRestrictionHeading": "File upload restrictions",
-        "fileUploadRestrictions": <div>
-          Please ensure your files:
-          <ul>
-            <li>
-              begin with a letter and are less than 45 characters long
-            </li>
-            <li>
-              contain only upper and lowercase alphanumeric characters, and underscores
-            </li>
-            <li>
-              have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
-            </li>
-            <li>
-              are uploaded individually and not inside a folder
-            </li>
-          </ul>
-        </div>,
-        "fileUploadRow": Object {
-          "defaultView": Object {
-            "embargoDateClosedAccess": "No date required",
-          },
-          "deleteHint": "Remove this file",
-          "deleteRecordConfirmation": Object {
-            "cancelButtonLabel": "No",
-            "confirmButtonLabel": "Yes",
-            "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
-            "confirmationTitle": "Delete file",
-          },
-          "embargoDateClosedAccess": "No date required",
-          "embargoDateColumn": "Embargo date",
-          "fileAccessColumn": "File access",
-          "fileUploadRowAccessSelector": Object {
-            "accessSelectOptionsText": Object {
-              "8": "Closed Access",
-              "9": "Open Access",
-            },
-            "errorMessage": "This field is required",
-            "initialValue": "Select access conditions",
-          },
-          "filenameColumn": "File name",
-          "mobileView": Object {
-            "embargoDateClosedAccess": "No date required",
-            "embargoDateColumn": "Embargo date",
-            "fileAccessColumn": "File access",
-            "filenameColumn": "File name",
-          },
-          "uploadInProgressText": "Uploading...",
-        },
-        "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
-        "ntroSpecificInstructions": <span>
-          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program, music score, recording, scholarly review, front matter (book, catalogue) or full chapter.  
-          <a
-            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836613"
-            target="_blank"
-          >
-            More information
-          </a>
-          .
-        </span>,
-        "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
-        "successTitle": "Success",
-        "validation": Object {
-          "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
-          "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
-          "notFiles": "Invalid files ([fileNames])",
-          "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
-          "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
-          "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
-        },
-      }
-    }
-    maxSize={1000}
-    onDrop={[Function]}
-  />
-  <WithStyles(Alert)
-    message="Successfully added 1 file(s) to upload queue."
-    title="Success"
-    type="done"
-  />
-  <div
-    style={
-      Object {
-        "flexGrow": 1,
-        "padding": 8,
-      }
-    }
-  >
-    <WithStyles(Grid)
-      container={true}
-      display="column"
-      spacing={16}
-    >
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <WithStyles(FileUploadRowHeader)
-          onDeleteAll={[Function]}
-          requireOpenAccessStatus={true}
-        />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <WithTheme(WithWidth(FileUploadRow))
-          fileSizeUnit="K"
-          focusOnIndex={0}
-          index={0}
-          key="a.txt"
-          locale={
-            Object {
-              "defaultView": Object {
-                "embargoDateClosedAccess": "No date required",
-              },
-              "deleteHint": "Remove this file",
-              "deleteRecordConfirmation": Object {
-                "cancelButtonLabel": "No",
-                "confirmButtonLabel": "Yes",
-                "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
-                "confirmationTitle": "Delete file",
-              },
-              "embargoDateClosedAccess": "No date required",
-              "embargoDateColumn": "Embargo date",
-              "fileAccessColumn": "File access",
-              "fileUploadRowAccessSelector": Object {
-                "accessSelectOptionsText": Object {
-                  "8": "Closed Access",
-                  "9": "Open Access",
-                },
-                "errorMessage": "This field is required",
-                "initialValue": "Select access conditions",
-              },
-              "filenameColumn": "File name",
-              "mobileView": Object {
-                "embargoDateClosedAccess": "No date required",
-                "embargoDateColumn": "Embargo date",
-                "fileAccessColumn": "File access",
-                "filenameColumn": "File name",
-              },
-              "uploadInProgressText": "Uploading...",
-            }
-          }
-          onAccessConditionChange={[Function]}
-          onDelete={[Function]}
-          onEmbargoDateChange={[Function]}
-          requireOpenAccessStatus={true}
-          uploadedFile={
-            Object {
-              "fileData": File {
-                Symbol(impl): FileImpl {
-                  "_buffer": Object {
-                    "data": Array [],
-                    "type": "Buffer",
-                  },
-                  "lastModified": 12345678912,
-                  "name": "a.txt",
-                  "type": "",
-                  Symbol(wrapper): [Circular],
-                },
-              },
-              "name": "a.txt",
-              "size": 0,
-            }
-          }
-        />
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-  </div>
-</Fragment>
-`;
-
-exports[`Component FileUploader should accept terms and condition and reset back to not accepted state if access condition changed back to closed access 2`] = `
-<Fragment>
-  <WithStyles(Typography)
-    gutterBottom={true}
-    variant="body2"
-  >
-    You may add up to 5 files (max 1KB each)
-  </WithStyles(Typography)>
-  <WithStyles(FileUploadDropzone)
-    fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
-    fileUploadLimit={5}
-    filesInQueue={
-      Array [
-        "a.txt",
-      ]
-    }
-    locale={
-      Object {
-        "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
-        "errorTitle": "Upload Errors",
-        "fileUploadInstruction": <p>
-          Click here to select files, or drag files into this area to upload
-        </p>,
-        "fileUploadRestrictionHeading": "File upload restrictions",
-        "fileUploadRestrictions": <div>
-          Please ensure your files:
-          <ul>
-            <li>
-              begin with a letter and are less than 45 characters long
-            </li>
-            <li>
-              contain only upper and lowercase alphanumeric characters, and underscores
-            </li>
-            <li>
-              have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
-            </li>
-            <li>
-              are uploaded individually and not inside a folder
-            </li>
-          </ul>
-        </div>,
-        "fileUploadRow": Object {
-          "defaultView": Object {
-            "embargoDateClosedAccess": "No date required",
-          },
-          "deleteHint": "Remove this file",
-          "deleteRecordConfirmation": Object {
-            "cancelButtonLabel": "No",
-            "confirmButtonLabel": "Yes",
-            "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
-            "confirmationTitle": "Delete file",
-          },
-          "embargoDateClosedAccess": "No date required",
-          "embargoDateColumn": "Embargo date",
-          "fileAccessColumn": "File access",
-          "fileUploadRowAccessSelector": Object {
-            "accessSelectOptionsText": Object {
-              "8": "Closed Access",
-              "9": "Open Access",
-            },
-            "errorMessage": "This field is required",
-            "initialValue": "Select access conditions",
-          },
-          "filenameColumn": "File name",
-          "mobileView": Object {
-            "embargoDateClosedAccess": "No date required",
-            "embargoDateColumn": "Embargo date",
-            "fileAccessColumn": "File access",
-            "filenameColumn": "File name",
-          },
-          "uploadInProgressText": "Uploading...",
-        },
-        "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
-        "ntroSpecificInstructions": <span>
-          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program, music score, recording, scholarly review, front matter (book, catalogue) or full chapter.  
-          <a
-            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836613"
-            target="_blank"
-          >
-            More information
-          </a>
-          .
-        </span>,
-        "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
-        "successTitle": "Success",
-        "validation": Object {
-          "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
-          "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
-          "notFiles": "Invalid files ([fileNames])",
-          "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
-          "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
-          "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
-        },
-      }
-    }
-    maxSize={1000}
-    onDrop={[Function]}
-  />
-  <WithStyles(Alert)
-    message="Successfully added 1 file(s) to upload queue."
-    title="Success"
-    type="done"
-  />
-  <div
-    style={
-      Object {
-        "flexGrow": 1,
-        "padding": 8,
-      }
-    }
-  >
-    <WithStyles(Grid)
-      container={true}
-      display="column"
-      spacing={16}
-    >
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <WithStyles(FileUploadRowHeader)
-          onDeleteAll={[Function]}
-          requireOpenAccessStatus={true}
-        />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <WithTheme(WithWidth(FileUploadRow))
-          fileSizeUnit="K"
-          focusOnIndex={0}
-          index={0}
-          key="a.txt"
-          locale={
-            Object {
-              "defaultView": Object {
-                "embargoDateClosedAccess": "No date required",
-              },
-              "deleteHint": "Remove this file",
-              "deleteRecordConfirmation": Object {
-                "cancelButtonLabel": "No",
-                "confirmButtonLabel": "Yes",
-                "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
-                "confirmationTitle": "Delete file",
-              },
-              "embargoDateClosedAccess": "No date required",
-              "embargoDateColumn": "Embargo date",
-              "fileAccessColumn": "File access",
-              "fileUploadRowAccessSelector": Object {
-                "accessSelectOptionsText": Object {
-                  "8": "Closed Access",
-                  "9": "Open Access",
-                },
-                "errorMessage": "This field is required",
-                "initialValue": "Select access conditions",
-              },
-              "filenameColumn": "File name",
-              "mobileView": Object {
-                "embargoDateClosedAccess": "No date required",
-                "embargoDateColumn": "Embargo date",
-                "fileAccessColumn": "File access",
-                "filenameColumn": "File name",
-              },
-              "uploadInProgressText": "Uploading...",
-            }
-          }
-          onAccessConditionChange={[Function]}
-          onDelete={[Function]}
-          onEmbargoDateChange={[Function]}
-          requireOpenAccessStatus={true}
-          uploadedFile={
-            Object {
-              "access_condition_id": 9,
-              "date": "2020-01-01T10:00:00-00:15",
-              "fileData": File {
-                Symbol(impl): FileImpl {
-                  "_buffer": Object {
-                    "data": Array [],
-                    "type": "Buffer",
-                  },
-                  "lastModified": 12345678912,
-                  "name": "a.txt",
-                  "type": "",
-                  Symbol(wrapper): [Circular],
-                },
-              },
-              "name": "a.txt",
-              "size": 0,
-            }
-          }
-        />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <WithStyles(FileUploadTermsAndConditions)
-          accessTermsAndConditions="I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators."
-          isTermsAndConditionsAccepted={false}
-          onAcceptTermsAndConditions={[Function]}
-        />
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-  </div>
-</Fragment>
-`;
-
-exports[`Component FileUploader should accept terms and condition and reset back to not accepted state if access condition changed back to closed access 3`] = `
-<Fragment>
-  <WithStyles(Typography)
-    gutterBottom={true}
-    variant="body2"
-  >
-    You may add up to 5 files (max 1KB each)
-  </WithStyles(Typography)>
-  <WithStyles(FileUploadDropzone)
-    fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
-    fileUploadLimit={5}
-    filesInQueue={
-      Array [
-        "a.txt",
-      ]
-    }
-    locale={
-      Object {
-        "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
-        "errorTitle": "Upload Errors",
-        "fileUploadInstruction": <p>
-          Click here to select files, or drag files into this area to upload
-        </p>,
-        "fileUploadRestrictionHeading": "File upload restrictions",
-        "fileUploadRestrictions": <div>
-          Please ensure your files:
-          <ul>
-            <li>
-              begin with a letter and are less than 45 characters long
-            </li>
-            <li>
-              contain only upper and lowercase alphanumeric characters, and underscores
-            </li>
-            <li>
-              have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
-            </li>
-            <li>
-              are uploaded individually and not inside a folder
-            </li>
-          </ul>
-        </div>,
-        "fileUploadRow": Object {
-          "defaultView": Object {
-            "embargoDateClosedAccess": "No date required",
-          },
-          "deleteHint": "Remove this file",
-          "deleteRecordConfirmation": Object {
-            "cancelButtonLabel": "No",
-            "confirmButtonLabel": "Yes",
-            "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
-            "confirmationTitle": "Delete file",
-          },
-          "embargoDateClosedAccess": "No date required",
-          "embargoDateColumn": "Embargo date",
-          "fileAccessColumn": "File access",
-          "fileUploadRowAccessSelector": Object {
-            "accessSelectOptionsText": Object {
-              "8": "Closed Access",
-              "9": "Open Access",
-            },
-            "errorMessage": "This field is required",
-            "initialValue": "Select access conditions",
-          },
-          "filenameColumn": "File name",
-          "mobileView": Object {
-            "embargoDateClosedAccess": "No date required",
-            "embargoDateColumn": "Embargo date",
-            "fileAccessColumn": "File access",
-            "filenameColumn": "File name",
-          },
-          "uploadInProgressText": "Uploading...",
-        },
-        "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
-        "ntroSpecificInstructions": <span>
-          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program, music score, recording, scholarly review, front matter (book, catalogue) or full chapter.  
-          <a
-            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836613"
-            target="_blank"
-          >
-            More information
-          </a>
-          .
-        </span>,
-        "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
-        "successTitle": "Success",
-        "validation": Object {
-          "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
-          "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
-          "notFiles": "Invalid files ([fileNames])",
-          "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
-          "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
-          "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
-        },
-      }
-    }
-    maxSize={1000}
-    onDrop={[Function]}
-  />
-  <WithStyles(Alert)
-    message="Successfully added 1 file(s) to upload queue."
-    title="Success"
-    type="done"
-  />
-  <div
-    style={
-      Object {
-        "flexGrow": 1,
-        "padding": 8,
-      }
-    }
-  >
-    <WithStyles(Grid)
-      container={true}
-      display="column"
-      spacing={16}
-    >
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <WithStyles(FileUploadRowHeader)
-          onDeleteAll={[Function]}
-          requireOpenAccessStatus={true}
-        />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <WithTheme(WithWidth(FileUploadRow))
-          fileSizeUnit="K"
-          focusOnIndex={0}
-          index={0}
-          key="a.txt"
-          locale={
-            Object {
-              "defaultView": Object {
-                "embargoDateClosedAccess": "No date required",
-              },
-              "deleteHint": "Remove this file",
-              "deleteRecordConfirmation": Object {
-                "cancelButtonLabel": "No",
-                "confirmButtonLabel": "Yes",
-                "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
-                "confirmationTitle": "Delete file",
-              },
-              "embargoDateClosedAccess": "No date required",
-              "embargoDateColumn": "Embargo date",
-              "fileAccessColumn": "File access",
-              "fileUploadRowAccessSelector": Object {
-                "accessSelectOptionsText": Object {
-                  "8": "Closed Access",
-                  "9": "Open Access",
-                },
-                "errorMessage": "This field is required",
-                "initialValue": "Select access conditions",
-              },
-              "filenameColumn": "File name",
-              "mobileView": Object {
-                "embargoDateClosedAccess": "No date required",
-                "embargoDateColumn": "Embargo date",
-                "fileAccessColumn": "File access",
-                "filenameColumn": "File name",
-              },
-              "uploadInProgressText": "Uploading...",
-            }
-          }
-          onAccessConditionChange={[Function]}
-          onDelete={[Function]}
-          onEmbargoDateChange={[Function]}
-          requireOpenAccessStatus={true}
-          uploadedFile={
-            Object {
-              "access_condition_id": 9,
-              "date": "2020-01-01T10:00:00-00:15",
-              "fileData": File {
-                Symbol(impl): FileImpl {
-                  "_buffer": Object {
-                    "data": Array [],
-                    "type": "Buffer",
-                  },
-                  "lastModified": 12345678912,
-                  "name": "a.txt",
-                  "type": "",
-                  Symbol(wrapper): [Circular],
-                },
-              },
-              "name": "a.txt",
-              "size": 0,
-            }
-          }
-        />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <WithStyles(FileUploadTermsAndConditions)
-          accessTermsAndConditions="I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators."
-          isTermsAndConditionsAccepted={true}
-          onAcceptTermsAndConditions={[Function]}
-        />
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-  </div>
-</Fragment>
-`;
-
-exports[`Component FileUploader should accept terms and condition and reset back to not accepted state if access condition changed back to closed access 4`] = `
-<Fragment>
-  <WithStyles(Typography)
-    gutterBottom={true}
-    variant="body2"
-  >
-    You may add up to 5 files (max 1KB each)
-  </WithStyles(Typography)>
-  <WithStyles(FileUploadDropzone)
-    fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
-    fileUploadLimit={5}
-    filesInQueue={
-      Array [
-        "a.txt",
-      ]
-    }
-    locale={
-      Object {
-        "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
-        "errorTitle": "Upload Errors",
-        "fileUploadInstruction": <p>
-          Click here to select files, or drag files into this area to upload
-        </p>,
-        "fileUploadRestrictionHeading": "File upload restrictions",
-        "fileUploadRestrictions": <div>
-          Please ensure your files:
-          <ul>
-            <li>
-              begin with a letter and are less than 45 characters long
-            </li>
-            <li>
-              contain only upper and lowercase alphanumeric characters, and underscores
-            </li>
-            <li>
-              have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
-            </li>
-            <li>
-              are uploaded individually and not inside a folder
-            </li>
-          </ul>
-        </div>,
-        "fileUploadRow": Object {
-          "defaultView": Object {
-            "embargoDateClosedAccess": "No date required",
-          },
-          "deleteHint": "Remove this file",
-          "deleteRecordConfirmation": Object {
-            "cancelButtonLabel": "No",
-            "confirmButtonLabel": "Yes",
-            "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
-            "confirmationTitle": "Delete file",
-          },
-          "embargoDateClosedAccess": "No date required",
-          "embargoDateColumn": "Embargo date",
-          "fileAccessColumn": "File access",
-          "fileUploadRowAccessSelector": Object {
-            "accessSelectOptionsText": Object {
-              "8": "Closed Access",
-              "9": "Open Access",
-            },
-            "errorMessage": "This field is required",
-            "initialValue": "Select access conditions",
-          },
-          "filenameColumn": "File name",
-          "mobileView": Object {
-            "embargoDateClosedAccess": "No date required",
-            "embargoDateColumn": "Embargo date",
-            "fileAccessColumn": "File access",
-            "filenameColumn": "File name",
-          },
-          "uploadInProgressText": "Uploading...",
-        },
-        "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
-        "ntroSpecificInstructions": <span>
-          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program, music score, recording, scholarly review, front matter (book, catalogue) or full chapter.  
-          <a
-            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836613"
-            target="_blank"
-          >
-            More information
-          </a>
-          .
-        </span>,
-        "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
-        "successTitle": "Success",
-        "validation": Object {
-          "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
-          "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
-          "notFiles": "Invalid files ([fileNames])",
-          "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
-          "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
-          "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
-        },
-      }
-    }
-    maxSize={1000}
-    onDrop={[Function]}
-  />
-  <WithStyles(Alert)
-    message="Successfully added 1 file(s) to upload queue."
-    title="Success"
-    type="done"
-  />
-  <div
-    style={
-      Object {
-        "flexGrow": 1,
-        "padding": 8,
-      }
-    }
-  >
-    <WithStyles(Grid)
-      container={true}
-      display="column"
-      spacing={16}
-    >
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <WithStyles(FileUploadRowHeader)
-          onDeleteAll={[Function]}
-          requireOpenAccessStatus={true}
-        />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <WithTheme(WithWidth(FileUploadRow))
-          fileSizeUnit="K"
-          focusOnIndex={0}
-          index={0}
-          key="a.txt"
-          locale={
-            Object {
-              "defaultView": Object {
-                "embargoDateClosedAccess": "No date required",
-              },
-              "deleteHint": "Remove this file",
-              "deleteRecordConfirmation": Object {
-                "cancelButtonLabel": "No",
-                "confirmButtonLabel": "Yes",
-                "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
-                "confirmationTitle": "Delete file",
-              },
-              "embargoDateClosedAccess": "No date required",
-              "embargoDateColumn": "Embargo date",
-              "fileAccessColumn": "File access",
-              "fileUploadRowAccessSelector": Object {
-                "accessSelectOptionsText": Object {
-                  "8": "Closed Access",
-                  "9": "Open Access",
-                },
-                "errorMessage": "This field is required",
-                "initialValue": "Select access conditions",
-              },
-              "filenameColumn": "File name",
-              "mobileView": Object {
-                "embargoDateClosedAccess": "No date required",
-                "embargoDateColumn": "Embargo date",
-                "fileAccessColumn": "File access",
-                "filenameColumn": "File name",
-              },
-              "uploadInProgressText": "Uploading...",
-            }
-          }
-          onAccessConditionChange={[Function]}
-          onDelete={[Function]}
-          onEmbargoDateChange={[Function]}
-          requireOpenAccessStatus={true}
-          uploadedFile={
-            Object {
-              "access_condition_id": 8,
-              "date": null,
-              "fileData": File {
-                Symbol(impl): FileImpl {
-                  "_buffer": Object {
-                    "data": Array [],
-                    "type": "Buffer",
-                  },
-                  "lastModified": 12345678912,
-                  "name": "a.txt",
-                  "type": "",
-                  Symbol(wrapper): [Circular],
-                },
-              },
-              "name": "a.txt",
-              "size": 0,
-            }
-          }
-        />
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-  </div>
-</Fragment>
-`;
-
 exports[`Component FileUploader should mount and unmount container and clear file uploader 1`] = `
 <Provider
   store={
@@ -820,12 +10,28 @@ exports[`Component FileUploader should mount and unmount container and clear fil
           Array [],
           Array [],
         ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+        ],
       },
       "subscribe": [MockFunction] {
         "calls": Array [
           Array [
             [Function],
           ],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
         ],
       },
     }
@@ -921,25 +127,12 @@ exports[`Component FileUploader should mount and unmount container and clear fil
               },
             },
             "overrides": Object {
-              "MUIDataTable": Object {
-                "paper": Object {
-                  "boxShadow": "none",
-                  "margin": 0,
-                  "padding": 0,
-                },
-              },
               "MuiFormLabel": Object {
                 "root": Object {
                   "overflow": "hidden",
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
                   "width": "100%",
-                },
-              },
-              "MuiMenuItem": Object {
-                "selected": Object {
-                  "backgroundColor": "#4085C6 !important",
-                  "color": "#FFFFFF",
                 },
               },
             },
@@ -1318,6 +511,12 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                   },
                 ],
               ],
+              "results": Array [
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+              ],
             }
           }
         >
@@ -1325,7 +524,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
             fileNameRestrictions={/\\.\\+/}
             fileRestrictionsConfig={
               Object {
-                "fileNameRestrictions": /\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/,
+                "fileNameRestrictions": /\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\(\\\\\\.\\\\d\\{3\\}\\|\\\\\\.r\\\\d\\{2,3\\}\\|\\\\\\.part\\\\d\\{1,3\\}\\)\\?\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/,
                 "fileSizeUnit": "B",
                 "fileUploadLimit": 5,
                 "maxFileSize": 1,
@@ -1339,7 +538,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
               fileNameRestrictions={/\\.\\+/}
               fileRestrictionsConfig={
                 Object {
-                  "fileNameRestrictions": /\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/,
+                  "fileNameRestrictions": /\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\(\\\\\\.\\\\d\\{3\\}\\|\\\\\\.r\\\\d\\{2,3\\}\\|\\\\\\.part\\\\d\\{1,3\\}\\)\\?\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/,
                   "fileSizeUnit": "B",
                   "fileUploadLimit": 5,
                   "maxFileSize": 1,
@@ -1366,6 +565,9 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                       </li>
                       <li>
                         have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                      </li>
+                      <li>
+                        two periods are allowed for multipart zip files.  Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
                       </li>
                       <li>
                         are uploaded individually and not inside a folder
@@ -1545,25 +747,12 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                         },
                       },
                       "overrides": Object {
-                        "MUIDataTable": Object {
-                          "paper": Object {
-                            "boxShadow": "none",
-                            "margin": 0,
-                            "padding": 0,
-                          },
-                        },
                         "MuiFormLabel": Object {
                           "root": Object {
                             "overflow": "hidden",
                             "textOverflow": "ellipsis",
                             "whiteSpace": "nowrap",
                             "width": "100%",
-                          },
-                        },
-                        "MuiMenuItem": Object {
-                          "selected": Object {
-                            "backgroundColor": "#4085C6 !important",
-                            "color": "#FFFFFF",
                           },
                         },
                       },
@@ -2056,25 +1245,12 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                         },
                       },
                       "overrides": Object {
-                        "MUIDataTable": Object {
-                          "paper": Object {
-                            "boxShadow": "none",
-                            "margin": 0,
-                            "padding": 0,
-                          },
-                        },
                         "MuiFormLabel": Object {
                           "root": Object {
                             "overflow": "hidden",
                             "textOverflow": "ellipsis",
                             "whiteSpace": "nowrap",
                             "width": "100%",
-                          },
-                        },
-                        "MuiMenuItem": Object {
-                          "selected": Object {
-                            "backgroundColor": "#4085C6 !important",
-                            "color": "#FFFFFF",
                           },
                         },
                       },
@@ -2460,7 +1636,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                 </Typography>
               </WithStyles(Typography)>
               <WithStyles(FileUploadDropzone)
-                fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
+                fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\(\\\\\\.\\\\d\\{3\\}\\|\\\\\\.r\\\\d\\{2,3\\}\\|\\\\\\.part\\\\d\\{1,3\\}\\)\\?\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
                 fileUploadLimit={5}
                 filesInQueue={Array []}
                 locale={
@@ -2482,6 +1658,9 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                         </li>
                         <li>
                           have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                        </li>
+                        <li>
+                          two periods are allowed for multipart zip files.  Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
                         </li>
                         <li>
                           are uploaded individually and not inside a folder
@@ -2551,7 +1730,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                       "hideLabel": "FileUploadDropzone-hideLabel-36",
                     }
                   }
-                  fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
+                  fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\(\\\\\\.\\\\d\\{3\\}\\|\\\\\\.r\\\\d\\{2,3\\}\\|\\\\\\.part\\\\d\\{1,3\\}\\)\\?\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
                   fileUploadLimit={5}
                   filesInQueue={Array []}
                   locale={
@@ -2573,6 +1752,9 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                           </li>
                           <li>
                             have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                          </li>
+                          <li>
+                            two periods are allowed for multipart zip files.  Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
                           </li>
                           <li>
                             are uploaded individually and not inside a folder
@@ -2947,6 +2129,9 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                 have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
                                               </li>
                                               <li>
+                                                two periods are allowed for multipart zip files.  Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
+                                              </li>
+                                              <li>
                                                 are uploaded individually and not inside a folder
                                               </li>
                                             </ul>
@@ -3034,6 +2219,9 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                 </li>
                                                 <li>
                                                   have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                                                </li>
+                                                <li>
+                                                  two periods are allowed for multipart zip files.  Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
                                                 </li>
                                                 <li>
                                                   are uploaded individually and not inside a folder
@@ -3464,25 +2652,12 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                               },
                                                             },
                                                             "overrides": Object {
-                                                              "MUIDataTable": Object {
-                                                                "paper": Object {
-                                                                  "boxShadow": "none",
-                                                                  "margin": 0,
-                                                                  "padding": 0,
-                                                                },
-                                                              },
                                                               "MuiFormLabel": Object {
                                                                 "root": Object {
                                                                   "overflow": "hidden",
                                                                   "textOverflow": "ellipsis",
                                                                   "whiteSpace": "nowrap",
                                                                   "width": "100%",
-                                                                },
-                                                              },
-                                                              "MuiMenuItem": Object {
-                                                                "selected": Object {
-                                                                  "backgroundColor": "#4085C6 !important",
-                                                                  "color": "#FFFFFF",
                                                                 },
                                                               },
                                                             },
@@ -3868,6 +3043,9 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                         </li>
                                                         <li>
                                                           have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                                                        </li>
+                                                        <li>
+                                                          two periods are allowed for multipart zip files.  Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
                                                         </li>
                                                         <li>
                                                           are uploaded individually and not inside a folder
@@ -4499,11 +3677,27 @@ exports[`Component FileUploader should mount and unmount container and clear fil
             },
           ],
         ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
+        ],
       },
       "getState": [MockFunction] {
         "calls": Array [
           Array [],
           Array [],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
         ],
       },
       "subscribe": [MockFunction] {
@@ -4511,6 +3705,12 @@ exports[`Component FileUploader should mount and unmount container and clear fil
           Array [
             [Function],
           ],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
         ],
       },
     }
@@ -4606,25 +3806,12 @@ exports[`Component FileUploader should mount and unmount container and clear fil
               },
             },
             "overrides": Object {
-              "MUIDataTable": Object {
-                "paper": Object {
-                  "boxShadow": "none",
-                  "margin": 0,
-                  "padding": 0,
-                },
-              },
               "MuiFormLabel": Object {
                 "root": Object {
                   "overflow": "hidden",
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
                   "width": "100%",
-                },
-              },
-              "MuiMenuItem": Object {
-                "selected": Object {
-                  "backgroundColor": "#4085C6 !important",
-                  "color": "#FFFFFF",
                 },
               },
             },
@@ -5003,6 +4190,12 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                   },
                 ],
               ],
+              "results": Array [
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+              ],
             }
           }
         >
@@ -5010,7 +4203,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
             fileNameRestrictions={/\\.\\+/}
             fileRestrictionsConfig={
               Object {
-                "fileNameRestrictions": /\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/,
+                "fileNameRestrictions": /\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\(\\\\\\.\\\\d\\{3\\}\\|\\\\\\.r\\\\d\\{2,3\\}\\|\\\\\\.part\\\\d\\{1,3\\}\\)\\?\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/,
                 "fileSizeUnit": "B",
                 "fileUploadLimit": 5,
                 "maxFileSize": 1,
@@ -5024,7 +4217,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
               fileNameRestrictions={/\\.\\+/}
               fileRestrictionsConfig={
                 Object {
-                  "fileNameRestrictions": /\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/,
+                  "fileNameRestrictions": /\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\(\\\\\\.\\\\d\\{3\\}\\|\\\\\\.r\\\\d\\{2,3\\}\\|\\\\\\.part\\\\d\\{1,3\\}\\)\\?\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/,
                   "fileSizeUnit": "B",
                   "fileUploadLimit": 5,
                   "maxFileSize": 1,
@@ -5051,6 +4244,9 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                       </li>
                       <li>
                         have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                      </li>
+                      <li>
+                        two periods are allowed for multipart zip files.  Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
                       </li>
                       <li>
                         are uploaded individually and not inside a folder
@@ -5230,25 +4426,12 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                         },
                       },
                       "overrides": Object {
-                        "MUIDataTable": Object {
-                          "paper": Object {
-                            "boxShadow": "none",
-                            "margin": 0,
-                            "padding": 0,
-                          },
-                        },
                         "MuiFormLabel": Object {
                           "root": Object {
                             "overflow": "hidden",
                             "textOverflow": "ellipsis",
                             "whiteSpace": "nowrap",
                             "width": "100%",
-                          },
-                        },
-                        "MuiMenuItem": Object {
-                          "selected": Object {
-                            "backgroundColor": "#4085C6 !important",
-                            "color": "#FFFFFF",
                           },
                         },
                       },
@@ -5741,25 +4924,12 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                         },
                       },
                       "overrides": Object {
-                        "MUIDataTable": Object {
-                          "paper": Object {
-                            "boxShadow": "none",
-                            "margin": 0,
-                            "padding": 0,
-                          },
-                        },
                         "MuiFormLabel": Object {
                           "root": Object {
                             "overflow": "hidden",
                             "textOverflow": "ellipsis",
                             "whiteSpace": "nowrap",
                             "width": "100%",
-                          },
-                        },
-                        "MuiMenuItem": Object {
-                          "selected": Object {
-                            "backgroundColor": "#4085C6 !important",
-                            "color": "#FFFFFF",
                           },
                         },
                       },
@@ -6145,7 +5315,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                 </Typography>
               </WithStyles(Typography)>
               <WithStyles(FileUploadDropzone)
-                fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
+                fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\(\\\\\\.\\\\d\\{3\\}\\|\\\\\\.r\\\\d\\{2,3\\}\\|\\\\\\.part\\\\d\\{1,3\\}\\)\\?\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
                 fileUploadLimit={5}
                 filesInQueue={Array []}
                 locale={
@@ -6167,6 +5337,9 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                         </li>
                         <li>
                           have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                        </li>
+                        <li>
+                          two periods are allowed for multipart zip files.  Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
                         </li>
                         <li>
                           are uploaded individually and not inside a folder
@@ -6236,7 +5409,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                       "hideLabel": "FileUploadDropzone-hideLabel-36",
                     }
                   }
-                  fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
+                  fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\(\\\\\\.\\\\d\\{3\\}\\|\\\\\\.r\\\\d\\{2,3\\}\\|\\\\\\.part\\\\d\\{1,3\\}\\)\\?\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
                   fileUploadLimit={5}
                   filesInQueue={Array []}
                   locale={
@@ -6258,6 +5431,9 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                           </li>
                           <li>
                             have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                          </li>
+                          <li>
+                            two periods are allowed for multipart zip files.  Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
                           </li>
                           <li>
                             are uploaded individually and not inside a folder
@@ -6632,6 +5808,9 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                 have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
                                               </li>
                                               <li>
+                                                two periods are allowed for multipart zip files.  Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
+                                              </li>
+                                              <li>
                                                 are uploaded individually and not inside a folder
                                               </li>
                                             </ul>
@@ -6719,6 +5898,9 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                 </li>
                                                 <li>
                                                   have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                                                </li>
+                                                <li>
+                                                  two periods are allowed for multipart zip files.  Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
                                                 </li>
                                                 <li>
                                                   are uploaded individually and not inside a folder
@@ -7149,25 +6331,12 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                               },
                                                             },
                                                             "overrides": Object {
-                                                              "MUIDataTable": Object {
-                                                                "paper": Object {
-                                                                  "boxShadow": "none",
-                                                                  "margin": 0,
-                                                                  "padding": 0,
-                                                                },
-                                                              },
                                                               "MuiFormLabel": Object {
                                                                 "root": Object {
                                                                   "overflow": "hidden",
                                                                   "textOverflow": "ellipsis",
                                                                   "whiteSpace": "nowrap",
                                                                   "width": "100%",
-                                                                },
-                                                              },
-                                                              "MuiMenuItem": Object {
-                                                                "selected": Object {
-                                                                  "backgroundColor": "#4085C6 !important",
-                                                                  "color": "#FFFFFF",
                                                                 },
                                                               },
                                                             },
@@ -7553,6 +6722,9 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                         </li>
                                                         <li>
                                                           have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                                                        </li>
+                                                        <li>
+                                                          two periods are allowed for multipart zip files.  Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
                                                         </li>
                                                         <li>
                                                           are uploaded individually and not inside a folder
@@ -8172,1172 +7344,6 @@ exports[`Component FileUploader should mount and unmount container and clear fil
 </Provider>
 `;
 
-exports[`Component FileUploader should not reset file access or embargo date info when second lot of files dropped 1`] = `
-<Fragment>
-  <WithStyles(Typography)
-    gutterBottom={true}
-    variant="body2"
-  >
-    You may add up to 5 files (max 1KB each)
-  </WithStyles(Typography)>
-  <WithStyles(FileUploadDropzone)
-    fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
-    fileUploadLimit={5}
-    filesInQueue={
-      Array [
-        "a.txt",
-        "b.txt",
-      ]
-    }
-    locale={
-      Object {
-        "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
-        "errorTitle": "Upload Errors",
-        "fileUploadInstruction": <p>
-          Click here to select files, or drag files into this area to upload
-        </p>,
-        "fileUploadRestrictionHeading": "File upload restrictions",
-        "fileUploadRestrictions": <div>
-          Please ensure your files:
-          <ul>
-            <li>
-              begin with a letter and are less than 45 characters long
-            </li>
-            <li>
-              contain only upper and lowercase alphanumeric characters, and underscores
-            </li>
-            <li>
-              have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
-            </li>
-            <li>
-              are uploaded individually and not inside a folder
-            </li>
-          </ul>
-        </div>,
-        "fileUploadRow": Object {
-          "defaultView": Object {
-            "embargoDateClosedAccess": "No date required",
-          },
-          "deleteHint": "Remove this file",
-          "deleteRecordConfirmation": Object {
-            "cancelButtonLabel": "No",
-            "confirmButtonLabel": "Yes",
-            "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
-            "confirmationTitle": "Delete file",
-          },
-          "embargoDateClosedAccess": "No date required",
-          "embargoDateColumn": "Embargo date",
-          "fileAccessColumn": "File access",
-          "fileUploadRowAccessSelector": Object {
-            "accessSelectOptionsText": Object {
-              "8": "Closed Access",
-              "9": "Open Access",
-            },
-            "errorMessage": "This field is required",
-            "initialValue": "Select access conditions",
-          },
-          "filenameColumn": "File name",
-          "mobileView": Object {
-            "embargoDateClosedAccess": "No date required",
-            "embargoDateColumn": "Embargo date",
-            "fileAccessColumn": "File access",
-            "filenameColumn": "File name",
-          },
-          "uploadInProgressText": "Uploading...",
-        },
-        "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
-        "ntroSpecificInstructions": <span>
-          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program, music score, recording, scholarly review, front matter (book, catalogue) or full chapter.  
-          <a
-            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836613"
-            target="_blank"
-          >
-            More information
-          </a>
-          .
-        </span>,
-        "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
-        "successTitle": "Success",
-        "validation": Object {
-          "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
-          "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
-          "notFiles": "Invalid files ([fileNames])",
-          "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
-          "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
-          "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
-        },
-      }
-    }
-    maxSize={1000}
-    onDrop={[Function]}
-  />
-  <WithStyles(Alert)
-    message="Successfully added 2 file(s) to upload queue."
-    title="Success"
-    type="done"
-  />
-  <div
-    style={
-      Object {
-        "flexGrow": 1,
-        "padding": 8,
-      }
-    }
-  >
-    <WithStyles(Grid)
-      container={true}
-      display="column"
-      spacing={16}
-    >
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <WithStyles(FileUploadRowHeader)
-          onDeleteAll={[Function]}
-          requireOpenAccessStatus={false}
-        />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <WithTheme(WithWidth(FileUploadRow))
-          fileSizeUnit="K"
-          focusOnIndex={0}
-          index={0}
-          key="a.txt"
-          locale={
-            Object {
-              "defaultView": Object {
-                "embargoDateClosedAccess": "No date required",
-              },
-              "deleteHint": "Remove this file",
-              "deleteRecordConfirmation": Object {
-                "cancelButtonLabel": "No",
-                "confirmButtonLabel": "Yes",
-                "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
-                "confirmationTitle": "Delete file",
-              },
-              "embargoDateClosedAccess": "No date required",
-              "embargoDateColumn": "Embargo date",
-              "fileAccessColumn": "File access",
-              "fileUploadRowAccessSelector": Object {
-                "accessSelectOptionsText": Object {
-                  "8": "Closed Access",
-                  "9": "Open Access",
-                },
-                "errorMessage": "This field is required",
-                "initialValue": "Select access conditions",
-              },
-              "filenameColumn": "File name",
-              "mobileView": Object {
-                "embargoDateClosedAccess": "No date required",
-                "embargoDateColumn": "Embargo date",
-                "fileAccessColumn": "File access",
-                "filenameColumn": "File name",
-              },
-              "uploadInProgressText": "Uploading...",
-            }
-          }
-          onAccessConditionChange={[Function]}
-          onDelete={[Function]}
-          onEmbargoDateChange={[Function]}
-          requireOpenAccessStatus={false}
-          uploadedFile={
-            Object {
-              "fileData": File {
-                Symbol(impl): FileImpl {
-                  "_buffer": Object {
-                    "data": Array [],
-                    "type": "Buffer",
-                  },
-                  "lastModified": 12345678912,
-                  "name": "a.txt",
-                  "type": "",
-                  Symbol(wrapper): [Circular],
-                },
-              },
-              "name": "a.txt",
-              "size": 0,
-            }
-          }
-        />
-        <WithTheme(WithWidth(FileUploadRow))
-          fileSizeUnit="K"
-          focusOnIndex={0}
-          index={1}
-          key="b.txt"
-          locale={
-            Object {
-              "defaultView": Object {
-                "embargoDateClosedAccess": "No date required",
-              },
-              "deleteHint": "Remove this file",
-              "deleteRecordConfirmation": Object {
-                "cancelButtonLabel": "No",
-                "confirmButtonLabel": "Yes",
-                "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
-                "confirmationTitle": "Delete file",
-              },
-              "embargoDateClosedAccess": "No date required",
-              "embargoDateColumn": "Embargo date",
-              "fileAccessColumn": "File access",
-              "fileUploadRowAccessSelector": Object {
-                "accessSelectOptionsText": Object {
-                  "8": "Closed Access",
-                  "9": "Open Access",
-                },
-                "errorMessage": "This field is required",
-                "initialValue": "Select access conditions",
-              },
-              "filenameColumn": "File name",
-              "mobileView": Object {
-                "embargoDateClosedAccess": "No date required",
-                "embargoDateColumn": "Embargo date",
-                "fileAccessColumn": "File access",
-                "filenameColumn": "File name",
-              },
-              "uploadInProgressText": "Uploading...",
-            }
-          }
-          onAccessConditionChange={[Function]}
-          onDelete={[Function]}
-          onEmbargoDateChange={[Function]}
-          requireOpenAccessStatus={false}
-          uploadedFile={
-            Object {
-              "fileData": File {
-                Symbol(impl): FileImpl {
-                  "_buffer": Object {
-                    "data": Array [],
-                    "type": "Buffer",
-                  },
-                  "lastModified": 12345678912,
-                  "name": "b.txt",
-                  "type": "",
-                  Symbol(wrapper): [Circular],
-                },
-              },
-              "name": "b.txt",
-              "size": 0,
-            }
-          }
-        />
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-  </div>
-</Fragment>
-`;
-
-exports[`Component FileUploader should not reset file access or embargo date info when second lot of files dropped 2`] = `
-<Fragment>
-  <WithStyles(Typography)
-    gutterBottom={true}
-    variant="body2"
-  >
-    You may add up to 5 files (max 1KB each)
-  </WithStyles(Typography)>
-  <WithStyles(FileUploadDropzone)
-    fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
-    fileUploadLimit={5}
-    filesInQueue={
-      Array [
-        "a.txt",
-        "b.txt",
-      ]
-    }
-    locale={
-      Object {
-        "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
-        "errorTitle": "Upload Errors",
-        "fileUploadInstruction": <p>
-          Click here to select files, or drag files into this area to upload
-        </p>,
-        "fileUploadRestrictionHeading": "File upload restrictions",
-        "fileUploadRestrictions": <div>
-          Please ensure your files:
-          <ul>
-            <li>
-              begin with a letter and are less than 45 characters long
-            </li>
-            <li>
-              contain only upper and lowercase alphanumeric characters, and underscores
-            </li>
-            <li>
-              have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
-            </li>
-            <li>
-              are uploaded individually and not inside a folder
-            </li>
-          </ul>
-        </div>,
-        "fileUploadRow": Object {
-          "defaultView": Object {
-            "embargoDateClosedAccess": "No date required",
-          },
-          "deleteHint": "Remove this file",
-          "deleteRecordConfirmation": Object {
-            "cancelButtonLabel": "No",
-            "confirmButtonLabel": "Yes",
-            "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
-            "confirmationTitle": "Delete file",
-          },
-          "embargoDateClosedAccess": "No date required",
-          "embargoDateColumn": "Embargo date",
-          "fileAccessColumn": "File access",
-          "fileUploadRowAccessSelector": Object {
-            "accessSelectOptionsText": Object {
-              "8": "Closed Access",
-              "9": "Open Access",
-            },
-            "errorMessage": "This field is required",
-            "initialValue": "Select access conditions",
-          },
-          "filenameColumn": "File name",
-          "mobileView": Object {
-            "embargoDateClosedAccess": "No date required",
-            "embargoDateColumn": "Embargo date",
-            "fileAccessColumn": "File access",
-            "filenameColumn": "File name",
-          },
-          "uploadInProgressText": "Uploading...",
-        },
-        "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
-        "ntroSpecificInstructions": <span>
-          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program, music score, recording, scholarly review, front matter (book, catalogue) or full chapter.  
-          <a
-            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836613"
-            target="_blank"
-          >
-            More information
-          </a>
-          .
-        </span>,
-        "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
-        "successTitle": "Success",
-        "validation": Object {
-          "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
-          "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
-          "notFiles": "Invalid files ([fileNames])",
-          "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
-          "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
-          "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
-        },
-      }
-    }
-    maxSize={1000}
-    onDrop={[Function]}
-  />
-  <WithStyles(Alert)
-    message="Successfully added 2 file(s) to upload queue."
-    title="Success"
-    type="done"
-  />
-  <div
-    style={
-      Object {
-        "flexGrow": 1,
-        "padding": 8,
-      }
-    }
-  >
-    <WithStyles(Grid)
-      container={true}
-      display="column"
-      spacing={16}
-    >
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <WithStyles(FileUploadRowHeader)
-          onDeleteAll={[Function]}
-          requireOpenAccessStatus={false}
-        />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <WithTheme(WithWidth(FileUploadRow))
-          fileSizeUnit="K"
-          focusOnIndex={0}
-          index={0}
-          key="a.txt"
-          locale={
-            Object {
-              "defaultView": Object {
-                "embargoDateClosedAccess": "No date required",
-              },
-              "deleteHint": "Remove this file",
-              "deleteRecordConfirmation": Object {
-                "cancelButtonLabel": "No",
-                "confirmButtonLabel": "Yes",
-                "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
-                "confirmationTitle": "Delete file",
-              },
-              "embargoDateClosedAccess": "No date required",
-              "embargoDateColumn": "Embargo date",
-              "fileAccessColumn": "File access",
-              "fileUploadRowAccessSelector": Object {
-                "accessSelectOptionsText": Object {
-                  "8": "Closed Access",
-                  "9": "Open Access",
-                },
-                "errorMessage": "This field is required",
-                "initialValue": "Select access conditions",
-              },
-              "filenameColumn": "File name",
-              "mobileView": Object {
-                "embargoDateClosedAccess": "No date required",
-                "embargoDateColumn": "Embargo date",
-                "fileAccessColumn": "File access",
-                "filenameColumn": "File name",
-              },
-              "uploadInProgressText": "Uploading...",
-            }
-          }
-          onAccessConditionChange={[Function]}
-          onDelete={[Function]}
-          onEmbargoDateChange={[Function]}
-          requireOpenAccessStatus={false}
-          uploadedFile={
-            Object {
-              "access_condition_id": 9,
-              "date": "2020-01-01T10:00:00-00:15",
-              "fileData": File {
-                Symbol(impl): FileImpl {
-                  "_buffer": Object {
-                    "data": Array [],
-                    "type": "Buffer",
-                  },
-                  "lastModified": 12345678912,
-                  "name": "a.txt",
-                  "type": "",
-                  Symbol(wrapper): [Circular],
-                },
-              },
-              "name": "a.txt",
-              "size": 0,
-            }
-          }
-        />
-        <WithTheme(WithWidth(FileUploadRow))
-          fileSizeUnit="K"
-          focusOnIndex={0}
-          index={1}
-          key="b.txt"
-          locale={
-            Object {
-              "defaultView": Object {
-                "embargoDateClosedAccess": "No date required",
-              },
-              "deleteHint": "Remove this file",
-              "deleteRecordConfirmation": Object {
-                "cancelButtonLabel": "No",
-                "confirmButtonLabel": "Yes",
-                "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
-                "confirmationTitle": "Delete file",
-              },
-              "embargoDateClosedAccess": "No date required",
-              "embargoDateColumn": "Embargo date",
-              "fileAccessColumn": "File access",
-              "fileUploadRowAccessSelector": Object {
-                "accessSelectOptionsText": Object {
-                  "8": "Closed Access",
-                  "9": "Open Access",
-                },
-                "errorMessage": "This field is required",
-                "initialValue": "Select access conditions",
-              },
-              "filenameColumn": "File name",
-              "mobileView": Object {
-                "embargoDateClosedAccess": "No date required",
-                "embargoDateColumn": "Embargo date",
-                "fileAccessColumn": "File access",
-                "filenameColumn": "File name",
-              },
-              "uploadInProgressText": "Uploading...",
-            }
-          }
-          onAccessConditionChange={[Function]}
-          onDelete={[Function]}
-          onEmbargoDateChange={[Function]}
-          requireOpenAccessStatus={false}
-          uploadedFile={
-            Object {
-              "fileData": File {
-                Symbol(impl): FileImpl {
-                  "_buffer": Object {
-                    "data": Array [],
-                    "type": "Buffer",
-                  },
-                  "lastModified": 12345678912,
-                  "name": "b.txt",
-                  "type": "",
-                  Symbol(wrapper): [Circular],
-                },
-              },
-              "name": "b.txt",
-              "size": 0,
-            }
-          }
-        />
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-  </div>
-</Fragment>
-`;
-
-exports[`Component FileUploader should not reset file access or embargo date info when second lot of files dropped 3`] = `
-<Fragment>
-  <WithStyles(Typography)
-    gutterBottom={true}
-    variant="body2"
-  >
-    You may add up to 5 files (max 1KB each)
-  </WithStyles(Typography)>
-  <WithStyles(FileUploadDropzone)
-    fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
-    fileUploadLimit={5}
-    filesInQueue={
-      Array [
-        "a.txt",
-        "b.txt",
-      ]
-    }
-    locale={
-      Object {
-        "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
-        "errorTitle": "Upload Errors",
-        "fileUploadInstruction": <p>
-          Click here to select files, or drag files into this area to upload
-        </p>,
-        "fileUploadRestrictionHeading": "File upload restrictions",
-        "fileUploadRestrictions": <div>
-          Please ensure your files:
-          <ul>
-            <li>
-              begin with a letter and are less than 45 characters long
-            </li>
-            <li>
-              contain only upper and lowercase alphanumeric characters, and underscores
-            </li>
-            <li>
-              have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
-            </li>
-            <li>
-              are uploaded individually and not inside a folder
-            </li>
-          </ul>
-        </div>,
-        "fileUploadRow": Object {
-          "defaultView": Object {
-            "embargoDateClosedAccess": "No date required",
-          },
-          "deleteHint": "Remove this file",
-          "deleteRecordConfirmation": Object {
-            "cancelButtonLabel": "No",
-            "confirmButtonLabel": "Yes",
-            "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
-            "confirmationTitle": "Delete file",
-          },
-          "embargoDateClosedAccess": "No date required",
-          "embargoDateColumn": "Embargo date",
-          "fileAccessColumn": "File access",
-          "fileUploadRowAccessSelector": Object {
-            "accessSelectOptionsText": Object {
-              "8": "Closed Access",
-              "9": "Open Access",
-            },
-            "errorMessage": "This field is required",
-            "initialValue": "Select access conditions",
-          },
-          "filenameColumn": "File name",
-          "mobileView": Object {
-            "embargoDateClosedAccess": "No date required",
-            "embargoDateColumn": "Embargo date",
-            "fileAccessColumn": "File access",
-            "filenameColumn": "File name",
-          },
-          "uploadInProgressText": "Uploading...",
-        },
-        "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
-        "ntroSpecificInstructions": <span>
-          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program, music score, recording, scholarly review, front matter (book, catalogue) or full chapter.  
-          <a
-            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836613"
-            target="_blank"
-          >
-            More information
-          </a>
-          .
-        </span>,
-        "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
-        "successTitle": "Success",
-        "validation": Object {
-          "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
-          "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
-          "notFiles": "Invalid files ([fileNames])",
-          "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
-          "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
-          "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
-        },
-      }
-    }
-    maxSize={1000}
-    onDrop={[Function]}
-  />
-  <WithStyles(Alert)
-    message="Successfully added 2 file(s) to upload queue."
-    title="Success"
-    type="done"
-  />
-  <div
-    style={
-      Object {
-        "flexGrow": 1,
-        "padding": 8,
-      }
-    }
-  >
-    <WithStyles(Grid)
-      container={true}
-      display="column"
-      spacing={16}
-    >
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <WithStyles(FileUploadRowHeader)
-          onDeleteAll={[Function]}
-          requireOpenAccessStatus={false}
-        />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <WithTheme(WithWidth(FileUploadRow))
-          fileSizeUnit="K"
-          focusOnIndex={0}
-          index={0}
-          key="a.txt"
-          locale={
-            Object {
-              "defaultView": Object {
-                "embargoDateClosedAccess": "No date required",
-              },
-              "deleteHint": "Remove this file",
-              "deleteRecordConfirmation": Object {
-                "cancelButtonLabel": "No",
-                "confirmButtonLabel": "Yes",
-                "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
-                "confirmationTitle": "Delete file",
-              },
-              "embargoDateClosedAccess": "No date required",
-              "embargoDateColumn": "Embargo date",
-              "fileAccessColumn": "File access",
-              "fileUploadRowAccessSelector": Object {
-                "accessSelectOptionsText": Object {
-                  "8": "Closed Access",
-                  "9": "Open Access",
-                },
-                "errorMessage": "This field is required",
-                "initialValue": "Select access conditions",
-              },
-              "filenameColumn": "File name",
-              "mobileView": Object {
-                "embargoDateClosedAccess": "No date required",
-                "embargoDateColumn": "Embargo date",
-                "fileAccessColumn": "File access",
-                "filenameColumn": "File name",
-              },
-              "uploadInProgressText": "Uploading...",
-            }
-          }
-          onAccessConditionChange={[Function]}
-          onDelete={[Function]}
-          onEmbargoDateChange={[Function]}
-          requireOpenAccessStatus={false}
-          uploadedFile={
-            Object {
-              "access_condition_id": 9,
-              "date": "2020-01-01T10:00:00-00:15",
-              "fileData": File {
-                Symbol(impl): FileImpl {
-                  "_buffer": Object {
-                    "data": Array [],
-                    "type": "Buffer",
-                  },
-                  "lastModified": 12345678912,
-                  "name": "a.txt",
-                  "type": "",
-                  Symbol(wrapper): [Circular],
-                },
-              },
-              "name": "a.txt",
-              "size": 0,
-            }
-          }
-        />
-        <WithTheme(WithWidth(FileUploadRow))
-          fileSizeUnit="K"
-          focusOnIndex={0}
-          index={1}
-          key="b.txt"
-          locale={
-            Object {
-              "defaultView": Object {
-                "embargoDateClosedAccess": "No date required",
-              },
-              "deleteHint": "Remove this file",
-              "deleteRecordConfirmation": Object {
-                "cancelButtonLabel": "No",
-                "confirmButtonLabel": "Yes",
-                "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
-                "confirmationTitle": "Delete file",
-              },
-              "embargoDateClosedAccess": "No date required",
-              "embargoDateColumn": "Embargo date",
-              "fileAccessColumn": "File access",
-              "fileUploadRowAccessSelector": Object {
-                "accessSelectOptionsText": Object {
-                  "8": "Closed Access",
-                  "9": "Open Access",
-                },
-                "errorMessage": "This field is required",
-                "initialValue": "Select access conditions",
-              },
-              "filenameColumn": "File name",
-              "mobileView": Object {
-                "embargoDateClosedAccess": "No date required",
-                "embargoDateColumn": "Embargo date",
-                "fileAccessColumn": "File access",
-                "filenameColumn": "File name",
-              },
-              "uploadInProgressText": "Uploading...",
-            }
-          }
-          onAccessConditionChange={[Function]}
-          onDelete={[Function]}
-          onEmbargoDateChange={[Function]}
-          requireOpenAccessStatus={false}
-          uploadedFile={
-            Object {
-              "access_condition_id": 8,
-              "date": null,
-              "fileData": File {
-                Symbol(impl): FileImpl {
-                  "_buffer": Object {
-                    "data": Array [],
-                    "type": "Buffer",
-                  },
-                  "lastModified": 12345678912,
-                  "name": "b.txt",
-                  "type": "",
-                  Symbol(wrapper): [Circular],
-                },
-              },
-              "name": "b.txt",
-              "size": 0,
-            }
-          }
-        />
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-  </div>
-</Fragment>
-`;
-
-exports[`Component FileUploader should not reset file access or embargo date info when second lot of files dropped 4`] = `
-<Fragment>
-  <WithStyles(Typography)
-    gutterBottom={true}
-    variant="body2"
-  >
-    You may add up to 5 files (max 1KB each)
-  </WithStyles(Typography)>
-  <WithStyles(FileUploadDropzone)
-    fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
-    fileUploadLimit={5}
-    filesInQueue={
-      Array [
-        "a.txt",
-        "b.txt",
-        "c.txt",
-        "d.txt",
-      ]
-    }
-    locale={
-      Object {
-        "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
-        "errorTitle": "Upload Errors",
-        "fileUploadInstruction": <p>
-          Click here to select files, or drag files into this area to upload
-        </p>,
-        "fileUploadRestrictionHeading": "File upload restrictions",
-        "fileUploadRestrictions": <div>
-          Please ensure your files:
-          <ul>
-            <li>
-              begin with a letter and are less than 45 characters long
-            </li>
-            <li>
-              contain only upper and lowercase alphanumeric characters, and underscores
-            </li>
-            <li>
-              have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
-            </li>
-            <li>
-              are uploaded individually and not inside a folder
-            </li>
-          </ul>
-        </div>,
-        "fileUploadRow": Object {
-          "defaultView": Object {
-            "embargoDateClosedAccess": "No date required",
-          },
-          "deleteHint": "Remove this file",
-          "deleteRecordConfirmation": Object {
-            "cancelButtonLabel": "No",
-            "confirmButtonLabel": "Yes",
-            "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
-            "confirmationTitle": "Delete file",
-          },
-          "embargoDateClosedAccess": "No date required",
-          "embargoDateColumn": "Embargo date",
-          "fileAccessColumn": "File access",
-          "fileUploadRowAccessSelector": Object {
-            "accessSelectOptionsText": Object {
-              "8": "Closed Access",
-              "9": "Open Access",
-            },
-            "errorMessage": "This field is required",
-            "initialValue": "Select access conditions",
-          },
-          "filenameColumn": "File name",
-          "mobileView": Object {
-            "embargoDateClosedAccess": "No date required",
-            "embargoDateColumn": "Embargo date",
-            "fileAccessColumn": "File access",
-            "filenameColumn": "File name",
-          },
-          "uploadInProgressText": "Uploading...",
-        },
-        "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
-        "ntroSpecificInstructions": <span>
-          You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program, music score, recording, scholarly review, front matter (book, catalogue) or full chapter.  
-          <a
-            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836613"
-            target="_blank"
-          >
-            More information
-          </a>
-          .
-        </span>,
-        "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
-        "successTitle": "Success",
-        "validation": Object {
-          "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
-          "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
-          "notFiles": "Invalid files ([fileNames])",
-          "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
-          "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
-          "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
-        },
-      }
-    }
-    maxSize={1000}
-    onDrop={[Function]}
-  />
-  <WithStyles(Alert)
-    message="Successfully added 4 file(s) to upload queue."
-    title="Success"
-    type="done"
-  />
-  <div
-    style={
-      Object {
-        "flexGrow": 1,
-        "padding": 8,
-      }
-    }
-  >
-    <WithStyles(Grid)
-      container={true}
-      display="column"
-      spacing={16}
-    >
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <WithStyles(FileUploadRowHeader)
-          onDeleteAll={[Function]}
-          requireOpenAccessStatus={false}
-        />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <WithTheme(WithWidth(FileUploadRow))
-          fileSizeUnit="K"
-          focusOnIndex={2}
-          index={0}
-          key="a.txt"
-          locale={
-            Object {
-              "defaultView": Object {
-                "embargoDateClosedAccess": "No date required",
-              },
-              "deleteHint": "Remove this file",
-              "deleteRecordConfirmation": Object {
-                "cancelButtonLabel": "No",
-                "confirmButtonLabel": "Yes",
-                "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
-                "confirmationTitle": "Delete file",
-              },
-              "embargoDateClosedAccess": "No date required",
-              "embargoDateColumn": "Embargo date",
-              "fileAccessColumn": "File access",
-              "fileUploadRowAccessSelector": Object {
-                "accessSelectOptionsText": Object {
-                  "8": "Closed Access",
-                  "9": "Open Access",
-                },
-                "errorMessage": "This field is required",
-                "initialValue": "Select access conditions",
-              },
-              "filenameColumn": "File name",
-              "mobileView": Object {
-                "embargoDateClosedAccess": "No date required",
-                "embargoDateColumn": "Embargo date",
-                "fileAccessColumn": "File access",
-                "filenameColumn": "File name",
-              },
-              "uploadInProgressText": "Uploading...",
-            }
-          }
-          onAccessConditionChange={[Function]}
-          onDelete={[Function]}
-          onEmbargoDateChange={[Function]}
-          requireOpenAccessStatus={false}
-          uploadedFile={
-            Object {
-              "access_condition_id": 9,
-              "date": "2020-01-01T10:00:00-00:15",
-              "fileData": File {
-                Symbol(impl): FileImpl {
-                  "_buffer": Object {
-                    "data": Array [],
-                    "type": "Buffer",
-                  },
-                  "lastModified": 12345678912,
-                  "name": "a.txt",
-                  "type": "",
-                  Symbol(wrapper): [Circular],
-                },
-              },
-              "name": "a.txt",
-              "size": 0,
-            }
-          }
-        />
-        <WithTheme(WithWidth(FileUploadRow))
-          fileSizeUnit="K"
-          focusOnIndex={2}
-          index={1}
-          key="b.txt"
-          locale={
-            Object {
-              "defaultView": Object {
-                "embargoDateClosedAccess": "No date required",
-              },
-              "deleteHint": "Remove this file",
-              "deleteRecordConfirmation": Object {
-                "cancelButtonLabel": "No",
-                "confirmButtonLabel": "Yes",
-                "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
-                "confirmationTitle": "Delete file",
-              },
-              "embargoDateClosedAccess": "No date required",
-              "embargoDateColumn": "Embargo date",
-              "fileAccessColumn": "File access",
-              "fileUploadRowAccessSelector": Object {
-                "accessSelectOptionsText": Object {
-                  "8": "Closed Access",
-                  "9": "Open Access",
-                },
-                "errorMessage": "This field is required",
-                "initialValue": "Select access conditions",
-              },
-              "filenameColumn": "File name",
-              "mobileView": Object {
-                "embargoDateClosedAccess": "No date required",
-                "embargoDateColumn": "Embargo date",
-                "fileAccessColumn": "File access",
-                "filenameColumn": "File name",
-              },
-              "uploadInProgressText": "Uploading...",
-            }
-          }
-          onAccessConditionChange={[Function]}
-          onDelete={[Function]}
-          onEmbargoDateChange={[Function]}
-          requireOpenAccessStatus={false}
-          uploadedFile={
-            Object {
-              "access_condition_id": 8,
-              "date": null,
-              "fileData": File {
-                Symbol(impl): FileImpl {
-                  "_buffer": Object {
-                    "data": Array [],
-                    "type": "Buffer",
-                  },
-                  "lastModified": 12345678912,
-                  "name": "b.txt",
-                  "type": "",
-                  Symbol(wrapper): [Circular],
-                },
-              },
-              "name": "b.txt",
-              "size": 0,
-            }
-          }
-        />
-        <WithTheme(WithWidth(FileUploadRow))
-          fileSizeUnit="K"
-          focusOnIndex={2}
-          index={2}
-          key="c.txt"
-          locale={
-            Object {
-              "defaultView": Object {
-                "embargoDateClosedAccess": "No date required",
-              },
-              "deleteHint": "Remove this file",
-              "deleteRecordConfirmation": Object {
-                "cancelButtonLabel": "No",
-                "confirmButtonLabel": "Yes",
-                "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
-                "confirmationTitle": "Delete file",
-              },
-              "embargoDateClosedAccess": "No date required",
-              "embargoDateColumn": "Embargo date",
-              "fileAccessColumn": "File access",
-              "fileUploadRowAccessSelector": Object {
-                "accessSelectOptionsText": Object {
-                  "8": "Closed Access",
-                  "9": "Open Access",
-                },
-                "errorMessage": "This field is required",
-                "initialValue": "Select access conditions",
-              },
-              "filenameColumn": "File name",
-              "mobileView": Object {
-                "embargoDateClosedAccess": "No date required",
-                "embargoDateColumn": "Embargo date",
-                "fileAccessColumn": "File access",
-                "filenameColumn": "File name",
-              },
-              "uploadInProgressText": "Uploading...",
-            }
-          }
-          onAccessConditionChange={[Function]}
-          onDelete={[Function]}
-          onEmbargoDateChange={[Function]}
-          requireOpenAccessStatus={false}
-          uploadedFile={
-            Object {
-              "fileData": File {
-                Symbol(impl): FileImpl {
-                  "_buffer": Object {
-                    "data": Array [],
-                    "type": "Buffer",
-                  },
-                  "lastModified": 12345678912,
-                  "name": "c.txt",
-                  "type": "",
-                  Symbol(wrapper): [Circular],
-                },
-              },
-              "name": "c.txt",
-              "size": 0,
-            }
-          }
-        />
-        <WithTheme(WithWidth(FileUploadRow))
-          fileSizeUnit="K"
-          focusOnIndex={2}
-          index={3}
-          key="d.txt"
-          locale={
-            Object {
-              "defaultView": Object {
-                "embargoDateClosedAccess": "No date required",
-              },
-              "deleteHint": "Remove this file",
-              "deleteRecordConfirmation": Object {
-                "cancelButtonLabel": "No",
-                "confirmButtonLabel": "Yes",
-                "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
-                "confirmationTitle": "Delete file",
-              },
-              "embargoDateClosedAccess": "No date required",
-              "embargoDateColumn": "Embargo date",
-              "fileAccessColumn": "File access",
-              "fileUploadRowAccessSelector": Object {
-                "accessSelectOptionsText": Object {
-                  "8": "Closed Access",
-                  "9": "Open Access",
-                },
-                "errorMessage": "This field is required",
-                "initialValue": "Select access conditions",
-              },
-              "filenameColumn": "File name",
-              "mobileView": Object {
-                "embargoDateClosedAccess": "No date required",
-                "embargoDateColumn": "Embargo date",
-                "fileAccessColumn": "File access",
-                "filenameColumn": "File name",
-              },
-              "uploadInProgressText": "Uploading...",
-            }
-          }
-          onAccessConditionChange={[Function]}
-          onDelete={[Function]}
-          onEmbargoDateChange={[Function]}
-          requireOpenAccessStatus={false}
-          uploadedFile={
-            Object {
-              "fileData": File {
-                Symbol(impl): FileImpl {
-                  "_buffer": Object {
-                    "data": Array [],
-                    "type": "Buffer",
-                  },
-                  "lastModified": 12345678912,
-                  "name": "d.txt",
-                  "type": "",
-                  Symbol(wrapper): [Circular],
-                },
-              },
-              "name": "d.txt",
-              "size": 0,
-            }
-          }
-        />
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-  </div>
-</Fragment>
-`;
-
 exports[`Component FileUploader should render default component 1`] = `
 <Fragment>
   <WithStyles(Typography)
@@ -9347,7 +7353,7 @@ exports[`Component FileUploader should render default component 1`] = `
     You may add up to 5 files (max 1KB each)
   </WithStyles(Typography)>
   <WithStyles(FileUploadDropzone)
-    fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
+    fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\(\\\\\\.\\\\d\\{3\\}\\|\\\\\\.r\\\\d\\{2,3\\}\\|\\\\\\.part\\\\d\\{1,3\\}\\)\\?\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
     fileUploadLimit={5}
     filesInQueue={Array []}
     locale={
@@ -9369,6 +7375,9 @@ exports[`Component FileUploader should render default component 1`] = `
             </li>
             <li>
               have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+            </li>
+            <li>
+              two periods are allowed for multipart zip files.  Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
             </li>
             <li>
               are uploaded individually and not inside a folder
@@ -9445,7 +7454,7 @@ exports[`Component FileUploader should render disabled component 1`] = `
   </WithStyles(Typography)>
   <WithStyles(FileUploadDropzone)
     disabled={true}
-    fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
+    fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\(\\\\\\.\\\\d\\{3\\}\\|\\\\\\.r\\\\d\\{2,3\\}\\|\\\\\\.part\\\\d\\{1,3\\}\\)\\?\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
     fileUploadLimit={5}
     filesInQueue={Array []}
     locale={
@@ -9467,6 +7476,9 @@ exports[`Component FileUploader should render disabled component 1`] = `
             </li>
             <li>
               have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+            </li>
+            <li>
+              two periods are allowed for multipart zip files.  Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
             </li>
             <li>
               are uploaded individually and not inside a folder
@@ -9542,7 +7554,7 @@ exports[`Component FileUploader should render rows for uploaded files 1`] = `
     You may add up to 5 files (max 1KB each)
   </WithStyles(Typography)>
   <WithStyles(FileUploadDropzone)
-    fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
+    fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\(\\\\\\.\\\\d\\{3\\}\\|\\\\\\.r\\\\d\\{2,3\\}\\|\\\\\\.part\\\\d\\{1,3\\}\\)\\?\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
     fileUploadLimit={5}
     filesInQueue={Array []}
     locale={
@@ -9564,6 +7576,9 @@ exports[`Component FileUploader should render rows for uploaded files 1`] = `
             </li>
             <li>
               have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+            </li>
+            <li>
+              two periods are allowed for multipart zip files.  Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
             </li>
             <li>
               are uploaded individually and not inside a folder
@@ -9639,7 +7654,7 @@ exports[`Component FileUploader should render rows for uploaded files 2`] = `
     You may add up to 5 files (max 1KB each)
   </WithStyles(Typography)>
   <WithStyles(FileUploadDropzone)
-    fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
+    fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\(\\\\\\.\\\\d\\{3\\}\\|\\\\\\.r\\\\d\\{2,3\\}\\|\\\\\\.part\\\\d\\{1,3\\}\\)\\?\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
     fileUploadLimit={5}
     filesInQueue={
       Array [
@@ -9666,6 +7681,9 @@ exports[`Component FileUploader should render rows for uploaded files 2`] = `
             </li>
             <li>
               have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+            </li>
+            <li>
+              two periods are allowed for multipart zip files.  Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
             </li>
             <li>
               are uploaded individually and not inside a folder
@@ -9804,18 +7822,7 @@ exports[`Component FileUploader should render rows for uploaded files 2`] = `
           requireOpenAccessStatus={false}
           uploadedFile={
             Object {
-              "fileData": File {
-                Symbol(impl): FileImpl {
-                  "_buffer": Object {
-                    "data": Array [],
-                    "type": "Buffer",
-                  },
-                  "lastModified": 12345678912,
-                  "name": "a.txt",
-                  "type": "",
-                  Symbol(wrapper): [Circular],
-                },
-              },
+              "fileData": File {},
               "name": "a.txt",
               "size": 0,
             }
@@ -9865,18 +7872,7 @@ exports[`Component FileUploader should render rows for uploaded files 2`] = `
           requireOpenAccessStatus={false}
           uploadedFile={
             Object {
-              "fileData": File {
-                Symbol(impl): FileImpl {
-                  "_buffer": Object {
-                    "data": Array [],
-                    "type": "Buffer",
-                  },
-                  "lastModified": 12345678912,
-                  "name": "b.txt",
-                  "type": "",
-                  Symbol(wrapper): [Circular],
-                },
-              },
+              "fileData": File {},
               "name": "b.txt",
               "size": 0,
             }
@@ -9897,7 +7893,7 @@ exports[`Component FileUploader should render rows for uploaded files 3`] = `
     You may add up to 5 files (max 1KB each)
   </WithStyles(Typography)>
   <WithStyles(FileUploadDropzone)
-    fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
+    fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\(\\\\\\.\\\\d\\{3\\}\\|\\\\\\.r\\\\d\\{2,3\\}\\|\\\\\\.part\\\\d\\{1,3\\}\\)\\?\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
     fileUploadLimit={5}
     filesInQueue={
       Array [
@@ -9923,6 +7919,9 @@ exports[`Component FileUploader should render rows for uploaded files 3`] = `
             </li>
             <li>
               have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+            </li>
+            <li>
+              two periods are allowed for multipart zip files.  Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
             </li>
             <li>
               are uploaded individually and not inside a folder
@@ -10061,18 +8060,7 @@ exports[`Component FileUploader should render rows for uploaded files 3`] = `
           requireOpenAccessStatus={false}
           uploadedFile={
             Object {
-              "fileData": File {
-                Symbol(impl): FileImpl {
-                  "_buffer": Object {
-                    "data": Array [],
-                    "type": "Buffer",
-                  },
-                  "lastModified": 12345678912,
-                  "name": "b.txt",
-                  "type": "",
-                  Symbol(wrapper): [Circular],
-                },
-              },
+              "fileData": File {},
               "name": "b.txt",
               "size": 0,
             }
@@ -10093,7 +8081,7 @@ exports[`Component FileUploader should render rows for uploaded files 4`] = `
     You may add up to 5 files (max 1KB each)
   </WithStyles(Typography)>
   <WithStyles(FileUploadDropzone)
-    fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
+    fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\(\\\\\\.\\\\d\\{3\\}\\|\\\\\\.r\\\\d\\{2,3\\}\\|\\\\\\.part\\\\d\\{1,3\\}\\)\\?\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
     fileUploadLimit={5}
     filesInQueue={Array []}
     locale={
@@ -10115,6 +8103,9 @@ exports[`Component FileUploader should render rows for uploaded files 4`] = `
             </li>
             <li>
               have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+            </li>
+            <li>
+              two periods are allowed for multipart zip files.  Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
             </li>
             <li>
               are uploaded individually and not inside a folder
@@ -10190,7 +8181,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     You may add up to 5 files (max 1KB each)
   </WithStyles(Typography)>
   <WithStyles(FileUploadDropzone)
-    fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
+    fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\(\\\\\\.\\\\d\\{3\\}\\|\\\\\\.r\\\\d\\{2,3\\}\\|\\\\\\.part\\\\d\\{1,3\\}\\)\\?\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
     fileUploadLimit={5}
     filesInQueue={Array []}
     locale={
@@ -10212,6 +8203,9 @@ exports[`Component FileUploader should render rows for uploaded files with acces
             </li>
             <li>
               have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+            </li>
+            <li>
+              two periods are allowed for multipart zip files.  Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
             </li>
             <li>
               are uploaded individually and not inside a folder
@@ -10287,7 +8281,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     You may add up to 5 files (max 1KB each)
   </WithStyles(Typography)>
   <WithStyles(FileUploadDropzone)
-    fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
+    fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\(\\\\\\.\\\\d\\{3\\}\\|\\\\\\.r\\\\d\\{2,3\\}\\|\\\\\\.part\\\\d\\{1,3\\}\\)\\?\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
     fileUploadLimit={5}
     filesInQueue={
       Array [
@@ -10314,6 +8308,9 @@ exports[`Component FileUploader should render rows for uploaded files with acces
             </li>
             <li>
               have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+            </li>
+            <li>
+              two periods are allowed for multipart zip files.  Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
             </li>
             <li>
               are uploaded individually and not inside a folder
@@ -10454,18 +8451,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           uploadedFile={
             Object {
               "access_condition_id": 3,
-              "fileData": File {
-                Symbol(impl): FileImpl {
-                  "_buffer": Object {
-                    "data": Array [],
-                    "type": "Buffer",
-                  },
-                  "lastModified": 12345678912,
-                  "name": "a.txt",
-                  "type": "",
-                  Symbol(wrapper): [Circular],
-                },
-              },
+              "fileData": File {},
               "name": "a.txt",
               "size": 0,
             }
@@ -10517,18 +8503,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           uploadedFile={
             Object {
               "access_condition_id": 3,
-              "fileData": File {
-                Symbol(impl): FileImpl {
-                  "_buffer": Object {
-                    "data": Array [],
-                    "type": "Buffer",
-                  },
-                  "lastModified": 12345678912,
-                  "name": "b.txt",
-                  "type": "",
-                  Symbol(wrapper): [Circular],
-                },
-              },
+              "fileData": File {},
               "name": "b.txt",
               "size": 0,
             }
@@ -10549,7 +8524,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     You may add up to 5 files (max 1KB each)
   </WithStyles(Typography)>
   <WithStyles(FileUploadDropzone)
-    fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
+    fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\(\\\\\\.\\\\d\\{3\\}\\|\\\\\\.r\\\\d\\{2,3\\}\\|\\\\\\.part\\\\d\\{1,3\\}\\)\\?\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
     fileUploadLimit={5}
     filesInQueue={Array []}
     locale={
@@ -10571,6 +8546,9 @@ exports[`Component FileUploader should render rows for uploaded files with acces
             </li>
             <li>
               have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+            </li>
+            <li>
+              two periods are allowed for multipart zip files.  Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
             </li>
             <li>
               are uploaded individually and not inside a folder
@@ -10646,7 +8624,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     You may add up to 5 files (max 1KB each)
   </WithStyles(Typography)>
   <WithStyles(FileUploadDropzone)
-    fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
+    fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\(\\\\\\.\\\\d\\{3\\}\\|\\\\\\.r\\\\d\\{2,3\\}\\|\\\\\\.part\\\\d\\{1,3\\}\\)\\?\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
     fileUploadLimit={5}
     filesInQueue={
       Array [
@@ -10673,6 +8651,9 @@ exports[`Component FileUploader should render rows for uploaded files with acces
             </li>
             <li>
               have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+            </li>
+            <li>
+              two periods are allowed for multipart zip files.  Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
             </li>
             <li>
               are uploaded individually and not inside a folder
@@ -10811,18 +8792,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           requireOpenAccessStatus={true}
           uploadedFile={
             Object {
-              "fileData": File {
-                Symbol(impl): FileImpl {
-                  "_buffer": Object {
-                    "data": Array [],
-                    "type": "Buffer",
-                  },
-                  "lastModified": 12345678912,
-                  "name": "a.txt",
-                  "type": "",
-                  Symbol(wrapper): [Circular],
-                },
-              },
+              "fileData": File {},
               "name": "a.txt",
               "size": 0,
             }
@@ -10872,18 +8842,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           requireOpenAccessStatus={true}
           uploadedFile={
             Object {
-              "fileData": File {
-                Symbol(impl): FileImpl {
-                  "_buffer": Object {
-                    "data": Array [],
-                    "type": "Buffer",
-                  },
-                  "lastModified": 12345678912,
-                  "name": "b.txt",
-                  "type": "",
-                  Symbol(wrapper): [Circular],
-                },
-              },
+              "fileData": File {},
               "name": "b.txt",
               "size": 0,
             }
@@ -10904,7 +8863,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     You may add up to 5 files (max 1KB each)
   </WithStyles(Typography)>
   <WithStyles(FileUploadDropzone)
-    fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
+    fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\(\\\\\\.\\\\d\\{3\\}\\|\\\\\\.r\\\\d\\{2,3\\}\\|\\\\\\.part\\\\d\\{1,3\\}\\)\\?\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
     fileUploadLimit={5}
     filesInQueue={
       Array [
@@ -10931,6 +8890,9 @@ exports[`Component FileUploader should render rows for uploaded files with acces
             </li>
             <li>
               have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+            </li>
+            <li>
+              two periods are allowed for multipart zip files.  Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
             </li>
             <li>
               are uploaded individually and not inside a folder
@@ -11071,18 +9033,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
             Object {
               "access_condition_id": 8,
               "date": null,
-              "fileData": File {
-                Symbol(impl): FileImpl {
-                  "_buffer": Object {
-                    "data": Array [],
-                    "type": "Buffer",
-                  },
-                  "lastModified": 12345678912,
-                  "name": "a.txt",
-                  "type": "",
-                  Symbol(wrapper): [Circular],
-                },
-              },
+              "fileData": File {},
               "name": "a.txt",
               "size": 0,
             }
@@ -11132,18 +9083,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           requireOpenAccessStatus={true}
           uploadedFile={
             Object {
-              "fileData": File {
-                Symbol(impl): FileImpl {
-                  "_buffer": Object {
-                    "data": Array [],
-                    "type": "Buffer",
-                  },
-                  "lastModified": 12345678912,
-                  "name": "b.txt",
-                  "type": "",
-                  Symbol(wrapper): [Circular],
-                },
-              },
+              "fileData": File {},
               "name": "b.txt",
               "size": 0,
             }
@@ -11164,7 +9104,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     You may add up to 5 files (max 1KB each)
   </WithStyles(Typography)>
   <WithStyles(FileUploadDropzone)
-    fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
+    fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\(\\\\\\.\\\\d\\{3\\}\\|\\\\\\.r\\\\d\\{2,3\\}\\|\\\\\\.part\\\\d\\{1,3\\}\\)\\?\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
     fileUploadLimit={5}
     filesInQueue={
       Array [
@@ -11191,6 +9131,9 @@ exports[`Component FileUploader should render rows for uploaded files with acces
             </li>
             <li>
               have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+            </li>
+            <li>
+              two periods are allowed for multipart zip files.  Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
             </li>
             <li>
               are uploaded individually and not inside a folder
@@ -11331,18 +9274,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
             Object {
               "access_condition_id": 9,
               "date": "2020-01-01T10:00:00-00:15",
-              "fileData": File {
-                Symbol(impl): FileImpl {
-                  "_buffer": Object {
-                    "data": Array [],
-                    "type": "Buffer",
-                  },
-                  "lastModified": 12345678912,
-                  "name": "a.txt",
-                  "type": "",
-                  Symbol(wrapper): [Circular],
-                },
-              },
+              "fileData": File {},
               "name": "a.txt",
               "size": 0,
             }
@@ -11392,18 +9324,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           requireOpenAccessStatus={true}
           uploadedFile={
             Object {
-              "fileData": File {
-                Symbol(impl): FileImpl {
-                  "_buffer": Object {
-                    "data": Array [],
-                    "type": "Buffer",
-                  },
-                  "lastModified": 12345678912,
-                  "name": "b.txt",
-                  "type": "",
-                  Symbol(wrapper): [Circular],
-                },
-              },
+              "fileData": File {},
               "name": "b.txt",
               "size": 0,
             }
@@ -11434,7 +9355,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     You may add up to 5 files (max 1KB each)
   </WithStyles(Typography)>
   <WithStyles(FileUploadDropzone)
-    fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
+    fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\(\\\\\\.\\\\d\\{3\\}\\|\\\\\\.r\\\\d\\{2,3\\}\\|\\\\\\.part\\\\d\\{1,3\\}\\)\\?\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
     fileUploadLimit={5}
     filesInQueue={
       Array [
@@ -11461,6 +9382,9 @@ exports[`Component FileUploader should render rows for uploaded files with acces
             </li>
             <li>
               have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+            </li>
+            <li>
+              two periods are allowed for multipart zip files.  Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
             </li>
             <li>
               are uploaded individually and not inside a folder
@@ -11601,18 +9525,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
             Object {
               "access_condition_id": 9,
               "date": "2017-10-10T00:00:00-00:15",
-              "fileData": File {
-                Symbol(impl): FileImpl {
-                  "_buffer": Object {
-                    "data": Array [],
-                    "type": "Buffer",
-                  },
-                  "lastModified": 12345678912,
-                  "name": "a.txt",
-                  "type": "",
-                  Symbol(wrapper): [Circular],
-                },
-              },
+              "fileData": File {},
               "name": "a.txt",
               "size": 0,
             }
@@ -11662,18 +9575,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           requireOpenAccessStatus={true}
           uploadedFile={
             Object {
-              "fileData": File {
-                Symbol(impl): FileImpl {
-                  "_buffer": Object {
-                    "data": Array [],
-                    "type": "Buffer",
-                  },
-                  "lastModified": 12345678912,
-                  "name": "b.txt",
-                  "type": "",
-                  Symbol(wrapper): [Circular],
-                },
-              },
+              "fileData": File {},
               "name": "b.txt",
               "size": 0,
             }
@@ -11704,7 +9606,7 @@ exports[`Component FileUploader should render rows for uploaded files with defau
     You may add up to 5 files (max 1KB each)
   </WithStyles(Typography)>
   <WithStyles(FileUploadDropzone)
-    fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
+    fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\(\\\\\\.\\\\d\\{3\\}\\|\\\\\\.r\\\\d\\{2,3\\}\\|\\\\\\.part\\\\d\\{1,3\\}\\)\\?\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
     fileUploadLimit={5}
     filesInQueue={Array []}
     locale={
@@ -11726,6 +9628,9 @@ exports[`Component FileUploader should render rows for uploaded files with defau
             </li>
             <li>
               have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+            </li>
+            <li>
+              two periods are allowed for multipart zip files.  Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
             </li>
             <li>
               are uploaded individually and not inside a folder
@@ -11801,7 +9706,7 @@ exports[`Component FileUploader should render rows for uploaded files with defau
     You may add up to 5 files (max 1KB each)
   </WithStyles(Typography)>
   <WithStyles(FileUploadDropzone)
-    fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
+    fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\(\\\\\\.\\\\d\\{3\\}\\|\\\\\\.r\\\\d\\{2,3\\}\\|\\\\\\.part\\\\d\\{1,3\\}\\)\\?\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
     fileUploadLimit={5}
     filesInQueue={
       Array [
@@ -11828,6 +9733,9 @@ exports[`Component FileUploader should render rows for uploaded files with defau
             </li>
             <li>
               have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+            </li>
+            <li>
+              two periods are allowed for multipart zip files.  Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
             </li>
             <li>
               are uploaded individually and not inside a folder
@@ -11968,18 +9876,7 @@ exports[`Component FileUploader should render rows for uploaded files with defau
           uploadedFile={
             Object {
               "access_condition_id": 3,
-              "fileData": File {
-                Symbol(impl): FileImpl {
-                  "_buffer": Object {
-                    "data": Array [],
-                    "type": "Buffer",
-                  },
-                  "lastModified": 12345678912,
-                  "name": "a.txt",
-                  "type": "",
-                  Symbol(wrapper): [Circular],
-                },
-              },
+              "fileData": File {},
               "name": "a.txt",
               "size": 0,
             }
@@ -12031,18 +9928,7 @@ exports[`Component FileUploader should render rows for uploaded files with defau
           uploadedFile={
             Object {
               "access_condition_id": 3,
-              "fileData": File {
-                Symbol(impl): FileImpl {
-                  "_buffer": Object {
-                    "data": Array [],
-                    "type": "Buffer",
-                  },
-                  "lastModified": 12345678912,
-                  "name": "b.txt",
-                  "type": "",
-                  Symbol(wrapper): [Circular],
-                },
-              },
+              "fileData": File {},
               "name": "b.txt",
               "size": 0,
             }

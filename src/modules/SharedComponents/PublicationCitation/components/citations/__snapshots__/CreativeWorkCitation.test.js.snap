@@ -503,6 +503,16 @@ exports[`CreativeWorkCitation renders  component with a mock espace record 1`] =
                   },
                 ],
               ],
+              "results": Array [
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+              ],
             }
           }
         >
@@ -2756,6 +2766,12 @@ exports[`CreativeWorkCitation renders  component with empty publication 1`] = `
                     "moment": undefined,
                   },
                 ],
+              ],
+              "results": Array [
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
               ],
             }
           }

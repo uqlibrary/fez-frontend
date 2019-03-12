@@ -905,6 +905,16 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                   },
                 ],
               ],
+              "results": Array [
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+              ],
             }
           }
         >
@@ -1763,6 +1773,20 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
                   },
                 ],
               ],
+              "results": Array [
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+              ],
             }
           }
         >
@@ -1793,6 +1817,12 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
                   Array [
                     null,
                   ],
+                ],
+                "results": Array [
+                  Object {
+                    "type": "return",
+                    "value": undefined,
+                  },
                 ],
               }
             }
@@ -2657,6 +2687,24 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                   },
                 ],
               ],
+              "results": Array [
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+              ],
             }
           }
         >
@@ -2702,6 +2750,12 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                   Array [
                     null,
                   ],
+                ],
+                "results": Array [
+                  Object {
+                    "type": "return",
+                    "value": undefined,
+                  },
                 ],
               }
             }
@@ -3544,6 +3598,24 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                   },
                 ],
               ],
+              "results": Array [
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+              ],
             }
           }
         >
@@ -3589,6 +3661,12 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                   Array [
                     null,
                   ],
+                ],
+                "results": Array [
+                  Object {
+                    "type": "return",
+                    "value": undefined,
+                  },
                 ],
               }
             }
@@ -4440,6 +4518,12 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
                     "moment": undefined,
                   },
                 ],
+              ],
+              "results": Array [
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
               ],
             }
           }

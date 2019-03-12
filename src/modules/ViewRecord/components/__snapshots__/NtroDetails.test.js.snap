@@ -497,6 +497,12 @@ exports[`NtroDetails  rendered full mount 1`] = `
                   },
                 ],
               ],
+              "results": Array [
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+              ],
             }
           }
         >

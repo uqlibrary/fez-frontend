@@ -549,6 +549,16 @@ exports[`Publication's map coordinates should mount component 1`] = `
                   },
                 ],
               ],
+              "results": Array [
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+              ],
             }
           }
         >
@@ -1121,6 +1131,20 @@ exports[`Publication's map coordinates should mount component in readonly mode 1
                   },
                 ],
               ],
+              "results": Array [
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+              ],
             }
           }
         >
@@ -1282,6 +1306,24 @@ exports[`Publication's map coordinates should not render in read only mode 2`] =
           "-27.489337,153.021781 -27.489337,153.021781 -27.489337,153.021781 -27.489337,153.021781 -27.489337,153.021781",
         ],
       ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
     }
   }
   onDrawingManagerMounted={[Function]}
@@ -1354,6 +1396,24 @@ exports[`Publication's map coordinates should not render in read only mode 3`] =
         Array [
           "-27.489337,153.021781 -27.489337,153.021781 -27.489337,153.021781 -27.489337,153.021781 -27.489337,153.021781",
         ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
       ],
     }
   }
@@ -1428,6 +1488,24 @@ exports[`Publication's map coordinates should not render in read only mode 4`] =
           "-27.489337,153.021781 -27.489337,153.021781 -27.489337,153.021781 -27.489337,153.021781 -27.489337,153.021781",
         ],
       ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
     }
   }
   onDrawingManagerMounted={[Function]}
@@ -1501,6 +1579,24 @@ exports[`Publication's map coordinates should not render in read only mode 5`] =
           "-27.489337,153.021781 -27.489337,153.021781 -27.489337,153.021781 -27.489337,153.021781 -27.489337,153.021781",
         ],
       ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
     }
   }
   onDrawingManagerMounted={[Function]}
@@ -1565,6 +1661,28 @@ exports[`Publication's map coordinates should not render in read only mode 6`] =
           "-27.489337,153.021781 -27.489337,153.021781",
         ],
       ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
     }
   }
   onDrawingManagerMounted={[Function]}
@@ -1625,6 +1743,32 @@ exports[`Publication's map coordinates should not render in read only mode 7`] =
         Array [
           "-27.489337,153.021781 -27.489337,153.021781",
         ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
       ],
     }
   }
@@ -2157,6 +2301,28 @@ exports[`Publication's map coordinates should render component with a marker 1`]
                     "moment": undefined,
                   },
                 ],
+              ],
+              "results": Array [
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
               ],
             }
           }
@@ -2701,6 +2867,12 @@ exports[`Publication's map coordinates should render component with a selected a
                     "moment": undefined,
                   },
                 ],
+              ],
+              "results": Array [
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
               ],
             }
           }
@@ -3279,6 +3451,24 @@ exports[`Publication's map coordinates should render component with empty coordi
                     "moment": undefined,
                   },
                 ],
+              ],
+              "results": Array [
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
               ],
             }
           }

@@ -326,6 +326,12 @@ exports[`Component GoogleScholar  should handle keyboard form submit event 1`] =
         "calls": Array [
           Array [],
         ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+        ],
       },
       "subscribe": [MockFunction],
     }
@@ -817,6 +823,12 @@ exports[`Component GoogleScholar  should handle keyboard form submit event 1`] =
                     "moment": undefined,
                   },
                 ],
+              ],
+              "results": Array [
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
               ],
             }
           }
