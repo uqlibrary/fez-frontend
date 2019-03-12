@@ -484,6 +484,12 @@ exports[`MenuDrawer Snapshot should create component 1`] = `
                   },
                 ],
               ],
+              "results": Array [
+                Object {
+                  "type": "return",
+                  "value": undefined,
+                },
+              ],
             }
           }
         >
