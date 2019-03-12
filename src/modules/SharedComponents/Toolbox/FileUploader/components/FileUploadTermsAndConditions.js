@@ -62,7 +62,7 @@ const styles = (theme) => ({
         paddingTop: 10
     },
     checkboxRoot: {
-        color: theme.status.danger,
+        color: (theme.status || {}).danger,
     },
     checkboxChecked: {
         color: `${theme.palette.primary.main} !important`

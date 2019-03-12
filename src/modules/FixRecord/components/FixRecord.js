@@ -71,7 +71,7 @@ export default class FixRecord extends PureComponent {
 
     componentWillUnmount() {
         // clear previously selected recordToFix for a fix
-        if (this.props.actions) this.props.actions.clearFixRecord();
+        this.props.actions.clearFixRecord();
     }
 
     isLoggedInUserLinked = (author, recordToFix, searchKey, subkey) => {

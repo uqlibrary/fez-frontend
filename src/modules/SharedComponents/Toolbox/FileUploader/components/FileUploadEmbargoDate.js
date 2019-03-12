@@ -5,6 +5,7 @@ import { withStyles } from '@material-ui/core/styles';
 import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 import Event from '@material-ui/icons/Event';
+import {GENERIC_DATE_FORMAT} from 'config/general';
 
 
 export class FileUploadEmbargoDate extends PureComponent {
@@ -36,7 +37,7 @@ export class FileUploadEmbargoDate extends PureComponent {
 
         return (
             <DatePicker
-                format="DD/MM/YYYY"
+                format={GENERIC_DATE_FORMAT}
                 minDate={this.props.minDate}
                 value={this.props.value}
                 onChange={this._onChange}

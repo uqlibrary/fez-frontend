@@ -4,6 +4,7 @@ import {setupCache} from 'axios-cache-adapter';
 import {API_URL, SESSION_COOKIE_NAME, TOKEN_NAME, SESSION_USER_GROUP_COOKIE_NAME} from './general';
 import {store} from 'config/store';
 import {logout} from 'actions/account';
+import {showAppAlert} from 'actions/app';
 import locale from 'locale/global';
 import Raven from 'raven-js';
 import param from 'can-param';
@@ -88,13 +89,13 @@ api.interceptors.response.use(response => {
     return Promise.resolve(response.data);
 }, error => {
     const reportHttpStatusToSentry = [422, 500];
-    if (error.response.status && reportHttpStatusToSentry.indexOf(error.response.status) !== -1) {
+    if (error && error.response && error.response.status && reportHttpStatusToSentry.indexOf(error.response.status) !== -1) {
         reportToSentry(error);
     }
     const thirdPartyLookupUrlRoot = API_URL + pathConfig.admin.thirdPartyTools.substring('/'.length);
     if (requestUrl.startsWith(thirdPartyLookupUrlRoot) ) {
         // do nothing here - 403 for tool api lookup is handled in actions/thirdPartyLookupTool.js
-        console.log('skipping root error handling for 3rd party api');
+        console.log('Skipping root error handling for 3rd party api');
     } else if (error.response && error.response.status === 403) {
         if (!!Cookies.get(SESSION_COOKIE_NAME)) {
             Cookies.remove(SESSION_COOKIE_NAME, {path: '/', domain: '.library.uq.edu.au'});
@@ -111,6 +112,13 @@ api.interceptors.response.use(response => {
     let errorMessage = null;
     if (requestUrl.startsWith(thirdPartyLookupUrlRoot) ) {
         console.log('skipping root error resetting for 3rd party api');
+    } else if (!!error.message && !!error.response.status && error.response.status === 500) {
+        errorMessage = ((error.response || {}).data || {}).message || locale.global.errorMessages[error.response.status];
+        if (process.env.NODE_ENV === 'test') {
+            global.mockActionsStore.dispatch(showAppAlert(error.response.data));
+        } else {
+            store.dispatch(showAppAlert(error.response.data));
+        }
     } else if (!!error.response && !!error.response.status) {
         errorMessage = locale.global.errorMessages[error.response.status];
     }

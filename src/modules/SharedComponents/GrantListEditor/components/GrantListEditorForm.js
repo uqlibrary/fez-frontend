@@ -20,7 +20,7 @@ const styles = () => ({
     }
 });
 
-export class GrantListEditorForm extends PureComponent {
+export class GrantListEditorFormClass extends PureComponent {
     static propTypes = {
         onAdd: PropTypes.func.isRequired,
         errorText: PropTypes.string,
@@ -176,4 +176,6 @@ export class GrantListEditorForm extends PureComponent {
     }
 }
 
-export default withStyles(styles)(GrantListEditorForm);
+const StyledGrantListEditorFormClass = withStyles(styles, {withTheme: true})(GrantListEditorFormClass);
+const GrantListEditorForm = (props) => <StyledGrantListEditorFormClass {...props}/>;
+export default GrantListEditorForm;

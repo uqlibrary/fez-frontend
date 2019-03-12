@@ -32,16 +32,18 @@ export class HelpIcon extends Component {
         tooltip: 'Click for more information'
     };
 
+    setDrawerContent = () => {
+        const {title, text, buttonLabel, onClick} = this.props;
+        onClick(title, text, buttonLabel);
+    };
+
     render() {
-        const {classes, title, text, buttonLabel, tooltip, onClick} = this.props;
-        const setDrawerContent = () => {
-            onClick(title, text, buttonLabel);
-        };
+        const {classes, tooltip} = this.props;
         return (
             <Tooltip title={tooltip}
                 placement="bottom-end"
                 TransitionComponent={Fade}>
-                <IconButton onClick={setDrawerContent}>
+                <IconButton onClick={this.setDrawerContent}>
                     <HelpOutline className={classes.helpIcon}/>
                 </IconButton>
             </Tooltip>

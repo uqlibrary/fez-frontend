@@ -68,7 +68,8 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
       }
       when={true}
     />
-    <WithStyles(ConfirmDialogBox)
+    <ConfirmDialogBox
+      hideCancelButton={false}
       locale={
         Object {
           "cancelButtonLabel": "No, continue editing",
@@ -576,7 +577,8 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
       }
       when={true}
     />
-    <WithStyles(ConfirmDialogBox)
+    <ConfirmDialogBox
+      hideCancelButton={false}
       locale={
         Object {
           "cancelButtonLabel": "No, continue editing",

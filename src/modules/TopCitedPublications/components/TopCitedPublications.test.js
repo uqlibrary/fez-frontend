@@ -16,8 +16,17 @@ function setup(testProps, isShallow = true){
 
 describe('Component TopCitedPublications', () => {
     it('should render top cited publications', () => {
-        const testFn = jest.fn();
-        const wrapper = setup({topCitedPublicationsList: transformTrendingPublicationsMetricsData(trendingPublications), actions: {searchTopCitedPublications: testFn}});
+        const wrapper = setup({
+            topCitedPublicationsList: transformTrendingPublicationsMetricsData(trendingPublications)
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render tabs with xs width properly', () => {
+        const wrapper = setup({
+            topCitedPublicationsList: transformTrendingPublicationsMetricsData(trendingPublications),
+            width: 'xs'
+        });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -34,4 +43,12 @@ describe('Component TopCitedPublications', () => {
             actions: {searchTopCitedPublications: testFn}});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+
+    it('should set state on tab change', () => {
+        const wrapper = setup({});
+        const test = 'Testing handleTabChange';
+        wrapper.instance().handleTabChange(null, test);
+        expect(wrapper.state().topCitedTab).toBe(test);
+    });
+
 });

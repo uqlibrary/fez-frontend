@@ -1,38 +1,39 @@
-import TextField from './TextField';
+import {TextFieldWrapper} from './TextField';
 import filterProps from '../../helpers/_filterProps';
 
 function setup(testProps, isShallow = true) {
     const props = {...testProps};
-    const consolidatedProps = filterProps(props, TextField.propTypes);
-    return getElement(TextField, consolidatedProps, isShallow);
+    const consolidatedProps = filterProps(props, TextFieldWrapper.propTypes);
+    return getElement(TextFieldWrapper, consolidatedProps, isShallow);
 }
 
 describe('TextFieldWrapper snapshots tests', () => {
+
+    const testProps = {
+        name: 'testField',
+        type: 'text',
+        fullWidth: true,
+        floatingLabelText: 'This is a test textfield component'
+    };
+
     it('renders TextField component', () => {
-        const props =
-            {
-                name: 'testField',
-                type: 'text',
-                fullWidth: true,
-                floatingLabelText: 'This is a test textfield component'
-            };
-
-        const wrapper = setup(props);
-        const tree = toJson(wrapper);
-        expect(tree).toMatchSnapshot();
+        const wrapper = setup(testProps);
+        expect(toJson(wrapper)).toMatchSnapshot();
     });
-    it('renders TextField component appending a class', () => {
-        const props =
-            {
-                name: 'testField',
-                type: 'text',
-                fullWidth: true,
-                floatingLabelText: 'This is a test textfield component',
-                className: 'requiredField'
-            };
 
-        const wrapper = setup(props);
-        const tree = toJson(wrapper);
-        expect(tree).toMatchSnapshot();
+    it('renders TextField component appending a class', () => {
+        const wrapper = setup({
+            ...testProps,
+            className: 'requiredField'
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('renders TextField component with shrink:true', () => {
+        const wrapper = setup({
+            ...testProps,
+            floatinglabelfixed: true
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

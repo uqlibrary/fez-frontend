@@ -1,4 +1,4 @@
-import {ContributorRow} from './ContributorRow';
+import {ContributorRow, styles} from './ContributorRow';
 
 import {authorsSearch} from 'mock/data';
 
@@ -34,6 +34,15 @@ describe('Component ContributorRow ', () => {
         const wrapper = setup({index: 0});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+
+    it('should render with missing aria label if selectHint prop is falsy', () => {
+        const wrapper = setup({
+            locale: {
+                selectHint: ''
+            }
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    })
 
     it('a row with index and contributor set, renders only name and delete button for mobile view', () => {
         const wrapper = setup({index: 0, width: 'xs'});
@@ -130,9 +139,23 @@ describe('Component ContributorRow ', () => {
     it('should add the contributor when it is not yet selected', () => {
         const testFunction = jest.fn();
 
-        const wrapper = setup({index: 0, disabled: false, contributor: {selected: false, nameAsPublished: "J. Smith"}, onContributorAssigned: testFunction});
+        const wrapper = setup({
+            index: 0,
+            disabled: false,
+            contributor: {
+                selected: false,
+                nameAsPublished: "J. Smith"
+            },
+            onContributorAssigned: testFunction
+        });
         wrapper.instance()._assignContributor();
         expect(testFunction).toBeCalledWith({selected: false, nameAsPublished: "J. Smith"}, 0);
+
+        // no-op if disabled
+        wrapper.setProps({ disabled: true });
+        testFunction.mockClear();
+        wrapper.instance()._assignContributor();
+        expect(testFunction).not.toBeCalled();
     });
 
     it('should remove the contributor assigned when it is already selected', () => {
@@ -160,6 +183,10 @@ describe('Component ContributorRow ', () => {
         wrapper.instance()._assignContributor = testFunction;
         wrapper.instance()._onContributorAssignedKeyboard({key: 'Enter'});
         expect(testFunction).toBeCalled();
+
+        testFunction.mockClear();
+        wrapper.instance()._onContributorAssignedKeyboard({key: 'A'});
+        expect(testFunction).not.toBeCalled();
     });
 
     it('Row should be clickable when showContributorAssignment set to true', () => {
@@ -188,5 +215,147 @@ describe('Component ContributorRow ', () => {
         wrapper.instance().confirmationBox = {showConfirmation: testFunction};
         wrapper.instance()._showConfirmation();
         expect(testFunction).toBeCalled();
+    });
+
+    it('should delete record', () => {
+        const onDeleteFn = jest.fn();
+        const wrapper = setup({
+            disabled: false,
+            onDelete: onDeleteFn,
+            contributor: {
+                nameAsPublished: 'test'
+            },
+            index: 0
+        });
+        wrapper.instance()._deleteRecord();
+        expect(onDeleteFn).toHaveBeenCalled();
+    });
+
+    it('should not call certain prop methods if disabled prop is set', () => {
+        const wrapper = setup({
+            disabled: true,
+            onDelete: jest.fn(),
+            onMoveUp: jest.fn(),
+            onMoveDown: jest.fn()
+        });
+        wrapper.instance()._deleteRecord();
+        expect(wrapper.instance().props.onDelete).not.toBeCalled();
+        wrapper.instance()._onMoveUp();
+        expect(wrapper.instance().props.onMoveUp).not.toBeCalled();
+        wrapper.instance()._onMoveDown();
+        expect(wrapper.instance().props.onMoveDown).not.toBeCalled();
+    });
+
+    it('should assign contributor', () => {
+        const wrapper = setup({
+            showContributorAssignment: true,
+            disabledContributorAssignment: false,
+            contributor: {
+                nameAsPublished: 'test',
+                selected: true,
+                affiliation: 'NotUQ',
+                orgtype: '453983'
+            },
+        });
+
+        const blurFn = jest.fn();
+        wrapper.find('WithStyles(ListItem)').props().onClick({currentTarget: {blur: blurFn}});
+        expect(blurFn).toHaveBeenCalled();
+
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should call callback functions on ListItem', () => {
+        const wrapper = setup({
+            showIdentifierLookup: true,
+            showContributorAssignment: false,
+            showRoleInput: true,
+            disabledContributorAssignment: false,
+            contributor: {
+                nameAsPublished: 'test',
+                selected: true,
+                affiliation: 'NotUQ',
+                orgtype: '453983'
+            },
+            width: 'xs',
+            classes: {
+                identifierName: 'test-class-1',
+                identifierSubtitle: 'test-class-2'
+            }
+        });
+
+        wrapper.find('WithStyles(ListItem)').props().onClick();
+        wrapper.find('WithStyles(ListItem)').props().onKeyDown();
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should have a proper style generator', () => {
+        const theme = {
+            palette: {
+                accent: {
+                    light: 'test1'
+                }
+            },
+            typography: {
+                fontWeightMedium: 'test2',
+                body2: {
+                    fontSize: 'test3'
+                },
+                caption: {
+                    fontSize: 'test4'
+                }
+            }
+        };
+        expect(styles(theme)).toMatchSnapshot();
+
+        delete theme.palette.accent;
+        expect(styles(theme)).toMatchSnapshot();
+
+        delete theme.palette;
+        expect(styles(theme)).toMatchSnapshot();
+    });
+
+    it('should render row with non-UQ affiiliation and missing org type', () => {
+        const wrapper = setup({
+            contributor: {
+                orgtype: 'test',
+                affiliation: 'NOTUQ'
+            }
+        });
+        expect(
+            wrapper.instance().getContributorRowText()
+        ).toMatchSnapshot();
+    });
+
+    it('should render row with UQ affiiliation and missing author title', () => {
+        const wrapper = setup({
+            contributor: {
+                affiliation: 'UQ',
+                aut_title: ''
+            },
+            width: 'xs',
+            classes: {
+                identifierName: 'test1',
+                identifierSubtitle: 'test2'
+            }
+        });
+        expect(
+            wrapper.instance().getContributorRowText()
+        ).toMatchSnapshot();
+    });
+
+    it('should render row with UQ affiiliation and missing author title in non-xs width', () => {
+        const wrapper = setup({
+            contributor: {
+                affiliation: 'UQ',
+                aut_title: ''
+            },
+            classes: {
+                primary: 'test'
+            }
+        });
+        expect(
+            wrapper.instance().getContributorRowText()
+        ).toMatchSnapshot();
     });
 });

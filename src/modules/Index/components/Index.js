@@ -6,7 +6,7 @@ import {WhatIsEspace} from 'modules/SharedComponents/WhatIsEspace';
 import {withStyles} from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 
-class Index extends PureComponent {
+class IndexComponent extends PureComponent {
     render() {
         return (
             <StandardPage>
@@ -29,4 +29,7 @@ class Index extends PureComponent {
         );
     }
 }
-export default withStyles(null, {withTheme: true})(Index);
+
+const StyledIndex = withStyles(null, {withTheme: true})(IndexComponent);
+const Index = (props) => <StyledIndex {...props}/>;
+export default Index;

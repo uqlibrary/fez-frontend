@@ -4,6 +4,8 @@ import * as actions from './actionTypes';
 import * as repositories from 'repositories';
 import * as accountActions from './account';
 
+jest.mock('raven-js');
+
 describe('Account action creators', () => {
     // extend expect to check actions
     expect.extend({toHaveDispatchedActions});
@@ -13,11 +15,13 @@ describe('Account action creators', () => {
         MockDate.set('2020-01-01T00:00:00.000Z', 10);
         mockActionsStore = setupStoreForActions();
         mockApi = setupMockAdapter();
+        mockSessionApi = setupSessionMockAdapter();
     });
 
     afterEach(() => {
         MockDate.reset();
         mockApi.reset();
+        mockSessionApi.reset();
     });
 
     it('should dispatch expected actions on successful fetch of user details', async () => {
@@ -98,6 +102,10 @@ describe('Account action creators', () => {
     });
 
     it('should dispatch expected actions if account, author loaded, but author details failed via loadCurrentAccount()', async () => {
+        process.env = {
+            ENABLE_LOG: true
+        };
+
         mockApi
             .onGet(repositories.routes.CURRENT_ACCOUNT_API().apiUrl)
             .reply(200, accounts.uqresearcher)
@@ -125,4 +133,52 @@ describe('Account action creators', () => {
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
+    it('should dispatch expected action for google and other bots', async () => {
+        global.navigator.__defineGetter__('userAgent', function() {
+            return 'Googlebot' // customized user agent
+        });
+
+        const expectedActions = [
+            actions.CURRENT_ACCOUNT_ANONYMOUS
+        ];
+        await mockActionsStore.dispatch(accountActions.loadCurrentAccount());
+        expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+    });
+
+    it('should check session and dispatch session valid action', async () => {
+        mockSessionApi
+            .onGet(repositories.routes.CURRENT_ACCOUNT_API().apiUrl)
+            .reply(200, accounts.uqresearcher)
+            .onAny()
+            .reply(404, {});
+
+        const expectedActions = [
+            actions.CURRENT_ACCOUNT_SESSION_VALID,
+        ];
+
+        await mockActionsStore.dispatch(accountActions.checkSession());
+        expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+    });
+
+    it('should check session and dispatch session expired action', async () => {
+        mockSessionApi
+            .onGet(repositories.routes.CURRENT_ACCOUNT_API().apiUrl)
+            .reply(403, {});
+
+        const expectedActions = [
+            actions.CURRENT_ACCOUNT_SESSION_EXPIRED,
+        ];
+
+        await mockActionsStore.dispatch(accountActions.checkSession());
+        expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+    });
+
+    it('should dispatch clear session expire action', async () => {
+        const expectedActions = [
+            actions.CLEAR_CURRENT_ACCOUNT_SESSION_FLAG,
+        ];
+
+        await mockActionsStore.dispatch(accountActions.clearSessionExpiredFlag());
+        expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+    });
 });

@@ -96,6 +96,7 @@ describe('Export publications actions', () => {
 
             const expectedActions = [
                 actions.EXPORT_PUBLICATIONS_LOADING,
+                actions.APP_ALERT_SHOW,
                 actions.EXPORT_PUBLICATIONS_FAILED
             ];
 

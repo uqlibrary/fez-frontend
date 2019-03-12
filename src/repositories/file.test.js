@@ -34,6 +34,7 @@ describe('File repository tests ', () => {
             .reply(500);
 
         const expectedActions = [
+            'APP_ALERT_SHOW',
             'FILE_UPLOADED_FAILED@a.txt'
         ];
 

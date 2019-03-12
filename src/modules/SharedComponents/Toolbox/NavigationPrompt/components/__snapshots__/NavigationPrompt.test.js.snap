@@ -1,5 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`NavigationPrompt component should call componentWillUnmount and unblock method 1`] = `<div />`;
+
 exports[`NavigationPrompt component should not 1`] = `<div />`;
 
 exports[`NavigationPrompt component should render 1`] = `
@@ -11,6 +13,12 @@ exports[`NavigationPrompt component should render 1`] = `
           Array [
             [Function],
           ],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
         ],
       },
     }

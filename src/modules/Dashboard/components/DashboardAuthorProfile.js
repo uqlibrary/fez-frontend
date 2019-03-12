@@ -1,7 +1,5 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
-import {HelpIcon} from 'modules/SharedComponents/Toolbox/HelpDrawer';
-import locale from 'locale/pages';
 import DashboardAuthorDetails from './DashboardAuthorDetails';
 import DashboardArticleCount from '../containers/DashboardArticleCount';
 import DashboardResearcherIds from './DashboardResearcherIds';
@@ -30,7 +28,6 @@ class DashboardAuthorProfile extends PureComponent {
     };
 
     render() {
-        const txt = locale.pages.dashboard.header;
         const {author, authorDetails, history, classes} = this.props;
         if (!authorDetails) {
             return <div className="AuthorProfile empty" />;
@@ -39,12 +36,6 @@ class DashboardAuthorProfile extends PureComponent {
         return (
             <Card className={classes.wrapper}>
                 <Grid container spacing={24} alignContent={'center'} alignItems={'center'} justify={'center'}>
-                    {
-                        txt.help &&
-                        <div className="is-pulled-right">
-                            <HelpIcon {...txt.help} />
-                        </div>
-                    }
                     {/* Profile avatar */}
                     {
                         authorDetails.image_exists === 1 &&

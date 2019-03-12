@@ -21,7 +21,7 @@ describe('Alert component functionality test ', () => {
 
     it('matches snapshot', () => {
         const wrapper = setup({});
-        expect(wrapper).toMatchSnapshot();
+        expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('fires the action when clicking on the message text', () => {
@@ -70,4 +70,45 @@ describe('Alert component functionality test ', () => {
         expect(dismissFunc).toHaveBeenCalled();
     });
 
+    it('should render correct icon based on type "error_outline"', () => {
+        const wrapper = setup({
+            type: 'error_outline'
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+    it('should render correct icon based on type "info"', () => {
+        const wrapper = setup({
+            type: 'info'
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+    it('should render correct icon based on type "info_outline"', () => {
+        const wrapper = setup({
+            type: 'info_outline'
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+    it('should render correct icon based on type "help"', () => {
+        const wrapper = setup({
+            type: 'help'
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+    it('should render correct icon based on type "help_outline"', () => {
+        const wrapper = setup({
+            type: 'help_outline'
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+    it('should render correct icon based on type "done"', () => {
+        const wrapper = setup({
+            type: 'done'
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render correct icon for default', () => {
+        const wrapper = setup({type: null});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });

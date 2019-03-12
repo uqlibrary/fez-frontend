@@ -30,6 +30,29 @@ describe('publication enhancer', () => {
         }));
     });
 
+    it('should should calculate open access', () => {
+        const publication = {rek_pid: 'UQ:1234', rek_title: 'Title', rek_description: 'Description', rek_formatted_title: null, rek_formatted_abstract: 'Abstract'};
+        const next = jest.fn((action) => {
+            const result = action.payload.calculateOpenAccess();
+            expect(result).toEqual({
+                isOpenAccess: false,
+                embargoDate: null,
+                openAccessStatusId: null
+            });
+        });
+        publicationEnhancer()(next)({type: 'FIX_RECORD_LOADED', payload: publication});
+    });
+
+    it('should should not calculate open access', () => {
+        const publication = {rek_title: 'Title', rek_description: 'Description', rek_formatted_title: null, rek_formatted_abstract: 'Abstract'};
+        const next = jest.fn((action) => {
+
+            const result = action.payload.calculateOpenAccess();
+            expect(result).toBeNull();
+        });
+        publicationEnhancer()(next)({type: 'FIX_RECORD_LOADED', payload: publication});
+    });
+
     it('should add a method to a list of publication to calculate open access', () => {
         const payload = {data: [
                 {rek_pid: 'UQ:1234', rek_title: 'Title', rek_description: 'Description', rek_formatted_abstract: 'Abstract'},

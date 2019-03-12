@@ -20,7 +20,7 @@ const styles = (theme) => ({
     }
 });
 
-export class PublicationDetails extends PureComponent {
+export class PublicationDetailsClass extends PureComponent {
     static propTypes = {
         publication: PropTypes.object.isRequired,
         classes: PropTypes.object
@@ -85,4 +85,7 @@ export class PublicationDetails extends PureComponent {
     }
 }
 
-export default withStyles(styles)(PublicationDetails);
+const StyledPublicationDetailsClass = withStyles(styles, {withTheme: true})(PublicationDetailsClass);
+const PublicationDetails = (props) => <StyledPublicationDetailsClass {...props}/>;
+export default PublicationDetails;
+

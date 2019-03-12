@@ -33,9 +33,8 @@ export default {
                 preview: {
                     videoTitle: 'Video preview',
                     imageTitle: 'Image preview',
-                    openInNewWindow: 'Open file in a new window',
+                    openInNewWindow: 'Open/Download file in a new window',
                     close: 'Close',
-                    errorMessage: 'Your browser does not support the video tag.'
                 }
             },
             links: {
@@ -2561,5 +2560,10 @@ export default {
             'fez_record_search_key_herdc_status',
             'fez_record_search_key_institutional_status'
         ],
+        videoFailedAlert: {
+            type: 'error',
+            title: 'VIDEO PLAYER ERROR',
+            message: 'Please click the download/open in a new window link above to open the original file format.'
+        }
     },
 };

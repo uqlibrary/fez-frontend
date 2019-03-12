@@ -14,7 +14,7 @@ const styles = theme => ({
     }
 });
 
-export class PublicationListLoadingProgress extends PureComponent {
+export class PublicationListLoadingProgressClass extends PureComponent {
     static propTypes = {
         loadingPublicationSources: PropTypes.object.isRequired,
         classes: PropTypes.object
@@ -66,5 +66,6 @@ export class PublicationListLoadingProgress extends PureComponent {
     }
 }
 
-export default withStyles(styles, {withTheme: true})(PublicationListLoadingProgress);
-
+const StyledPublicationListLoadingProgressClass = withStyles(styles, {withTheme: true})(PublicationListLoadingProgressClass);
+const PublicationListLoadingProgress = (props) => <StyledPublicationListLoadingProgressClass {...props}/>;
+export default PublicationListLoadingProgress;

@@ -757,3 +757,248 @@ exports[`MyRecords test renders no results 1`] = `
   </WithStyles(Grid)>
 </StandardPage>
 `;
+
+exports[`MyRecords test should handle export publications 1`] = `
+<StandardPage
+  title="My research"
+>
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
+  >
+    <WithStyles(Grid)
+      item={true}
+      md={9}
+      xs={12}
+    >
+      <StandardCard
+        noHeader={true}
+      >
+        <span>
+          Displaying records 1 to 20 of 147 total records. 
+        </span>
+        <WithStyles(Grid)
+          container={true}
+          spacing={16}
+        >
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <span>
+              Add to this list by 
+              <a
+                href="/records/possible"
+              >
+                claiming a work
+              </a>
+               or 
+              <a
+                href="/records/add/find"
+              >
+                adding a missing work
+              </a>
+              .
+            </span>
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(PublicationsListSorting)
+              disabled={false}
+              initPageLength={20}
+              onExportPublications={[Function]}
+              onPageSizeChanged={[Function]}
+              onSortByChanged={[Function]}
+              pageSize={20}
+              pagingData={
+                Object {
+                  "current_page": 1,
+                  "from": 1,
+                  "per_page": 20,
+                  "to": 20,
+                  "total": 147,
+                }
+              }
+              sortBy="published_date"
+              sortDirection="Desc"
+            />
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(PublicationsListPaging)
+              disabled={false}
+              loading={false}
+              onPageChanged={[Function]}
+              pagingData={
+                Object {
+                  "current_page": 1,
+                  "from": 1,
+                  "per_page": 20,
+                  "to": 20,
+                  "total": 147,
+                }
+              }
+            />
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <PublicationsList
+              hideCountDiff={false}
+              publicationsList={
+                Array [
+                  1,
+                  2,
+                  3,
+                ]
+              }
+              publicationsListSubset={Array []}
+              showDefaultActions={true}
+              showMetrics={false}
+              showSourceCountIcon={false}
+              showSources={false}
+              showUnpublishedBufferFields={false}
+              subsetCustomActions={Array []}
+            />
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(PublicationsListPaging)
+              disabled={false}
+              loading={false}
+              onPageChanged={[Function]}
+              pagingData={
+                Object {
+                  "current_page": 1,
+                  "from": 1,
+                  "per_page": 20,
+                  "to": 20,
+                  "total": 147,
+                }
+              }
+            />
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+      </StandardCard>
+    </WithStyles(Grid)>
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={true}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={false}
+      xsUp={false}
+    >
+      <WithStyles(Grid)
+        item={true}
+        md={3}
+      >
+        <StandardRighthandCard
+          title="Refine results"
+        >
+          <FacetsFilter
+            activeFacets={
+              Object {
+                "filters": Object {},
+                "ranges": Object {},
+              }
+            }
+            disabled={false}
+            excludeFacetsList={
+              Array [
+                "Scopus document type",
+                "Genre",
+                "Year published",
+              ]
+            }
+            facetsData={
+              Object {
+                "Display type": Object {
+                  "buckets": Array [
+                    Object {
+                      "doc_count": 95,
+                      "key": 179,
+                    },
+                    Object {
+                      "doc_count": 34,
+                      "key": 130,
+                    },
+                    Object {
+                      "doc_count": 2,
+                      "key": 177,
+                    },
+                    Object {
+                      "doc_count": 2,
+                      "key": 183,
+                    },
+                    Object {
+                      "doc_count": 1,
+                      "key": 174,
+                    },
+                  ],
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 3,
+                },
+                "Keywords": Object {
+                  "buckets": Array [
+                    Object {
+                      "doc_count": 15,
+                      "key": "Brca1",
+                    },
+                    Object {
+                      "doc_count": 15,
+                      "key": "Oncology",
+                    },
+                    Object {
+                      "doc_count": 13,
+                      "key": "Breast cancer",
+                    },
+                    Object {
+                      "doc_count": 12,
+                      "key": "Genetics & Heredity",
+                    },
+                    Object {
+                      "doc_count": 10,
+                      "key": "Biochemistry & Molecular Biology",
+                    },
+                  ],
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 641,
+                },
+              }
+            }
+            isMyDataSetPage={false}
+            lookupFacetsList={
+              Object {
+                "Author": "Author (lookup)",
+                "Collection": "Collection (lookup)",
+                "Subject": "Subject (lookup)",
+              }
+            }
+            onFacetsChanged={[Function]}
+            renameFacetsList={
+              Object {
+                "Display type": "Work type",
+                "Subtype": "Work subtype",
+              }
+            }
+            showOpenAccessFilter={true}
+          />
+        </StandardRighthandCard>
+      </WithStyles(Grid)>
+    </Hidden>
+  </WithStyles(Grid)>
+</StandardPage>
+`;

@@ -12,7 +12,7 @@ const styles = (theme) => ({
         borderBottom: `1px solid ${theme.palette.secondary.light}`,
     }
 });
-export class GrantInformation extends PureComponent {
+export class GrantInformationClass extends PureComponent {
     static propTypes = {
         publication: PropTypes.object.isRequired,
         classes: PropTypes.object
@@ -67,7 +67,7 @@ export class GrantInformation extends PureComponent {
         return grantData && grantData.filter(grantData=>grantData[orderSubkey] === order)[0];
     }
 
-    renderGrants = (publication, includeFundingText = true) => {
+    renderGrants = (publication, includeFundingText) => {
         const grantAgencies = publication.fez_record_search_key_grant_agency;
         const grantIds = publication.fez_record_search_key_grant_id;
         const grantTexts = publication.fez_record_search_key_grant_text;
@@ -109,4 +109,6 @@ export class GrantInformation extends PureComponent {
     }
 }
 
-export default withStyles(styles)(GrantInformation);
+const StyledGrantInformation = withStyles(styles, {withTheme: true})(GrantInformationClass);
+const GrantInformation = (props) => <StyledGrantInformation {...props}/>;
+export default GrantInformation;

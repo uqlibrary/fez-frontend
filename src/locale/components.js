@@ -95,12 +95,12 @@ export default {
                 },
                 thomson: {
                     title: 'Web of Science citation count',
-                    subtitle: 'The +plus score indicates the increase in citations over the last month',
+                    subtitle: 'The + (plus) value indicates how much the citation count has increased in the last three months.',
                     order: 1
                 },
                 scopus: {
                     title: 'Scopus citation count',
-                    subtitle: 'The +plus score indicates the increase in citations over the last month',
+                    subtitle: 'The + (plus) value indicates how much the citation count has increased in the last three months.',
                     order: 0
                 }
             }
@@ -111,7 +111,7 @@ export default {
                 <React.Fragment>
                     <h3>WOS and Scopus</h3>
                     <p>
-                        The large number is the total citation count and the + (plus) value indicates how much the citation count has increased in the last three months.
+                        The + (plus) value indicates how much the citation count has increased in the last three months.
                     </p>
                     <h3>Altmetric score (social media activity)</h3>
                     <p>
@@ -150,14 +150,14 @@ export default {
                 title: (<span>Trending on Scopus</span>),
                 mobileTitle: 'Scopus',
                 heading: 'Scopus citation count',
-                subHeading: 'The +plus score indicates the increase in citations over the three months',
+                subHeading: 'The + (plus) value indicates how much the citation count has increased in the last three months.',
                 order: 1
             },
             thomson: {
                 title: (<span>Trending on Web of science</span>),
                 mobileTitle: 'WOS',
                 heading: 'Web of Science citation count',
-                subHeading: 'The +plus score indicates the increase in citations over the three months',
+                subHeading: 'The + (plus) value indicates how much the citation count has increased in the last three months.',
                 order: 2
             },
             recordsPerSource: 20
@@ -274,10 +274,22 @@ export default {
             }
         },
         thirdPartyLookupTools: {
-            title: 'Lookup Tools - view raw output from APIs',
-            forms: {
-                incites: {
-                    lookupType: 'incites', // this value should match the 'type' in the path used in api
+            display: {
+                title: 'Lookup Tools - view raw output from APIs',
+                loadingMessage: 'Loading',
+                tooltip: {
+                    show: 'Show form for',
+                    hide: 'Hide form for'
+                },
+                resultsLabel: 'Results',
+                noResultsFound: {
+                    text: 'No results found'
+                },
+                clearButtonLabel: 'New Search'
+            },
+            forms: [
+                {
+                    apiType: 'incites', // this value should match the 'type' in the path used in api
                     lookupLabel: 'Incites',
                     primaryField: {
                         heading: 'UTs',
@@ -294,17 +306,9 @@ export default {
                     },
                     bottomTip: '',
                     submitButtonLabel: 'Submit to Incites',
-                },
-            },
-            tooltip: {
-                show: 'Show form',
-                hide: 'Hide form'
-            },
-            resultsLabel: 'Results',
-            noResultsFound: {
-                text: 'No results found'
-            },
-            clearButtonLabel: 'New Search'
+                    isMinimised: false // set this to true when we have more than one form
+                }
+            ],
         },
         typeOfDataForm: {
             field: {
@@ -1368,16 +1372,6 @@ export default {
             readMoreLabel: ' read more',
             readMoreTitle: 'Click to read more about UQ eSpace',
             readMoreLink: '/contact'
-        },
-        shareThis: {
-            facebook: {linkTitle: 'Share this link via Facebook'},
-            mendeley: {linkTitle: 'Share this link via Mendeley'},
-            twitter: {linkTitle: 'Share this link via Twitter'},
-            linkedin: {linkTitle: 'Share this link via LinkedIn'},
-            googleplus: {linkTitle: 'Share this link via Google+'},
-            reddit: {linkTitle: 'Share this link via Reddit'},
-            email: {linkTitle: 'Share this link via Email'},
-            print: {linkTitle: 'Print this record'},
         },
         fileUploader: {
             label: 'Click here to select files, or drag files into this area to upload'
