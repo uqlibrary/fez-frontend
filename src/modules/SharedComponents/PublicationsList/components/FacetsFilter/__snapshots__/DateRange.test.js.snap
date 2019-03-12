@@ -6,7 +6,6 @@ exports[`Date range  should render component with values set 1`] = `
   key="date-range"
   nestedItems={
     <WithStyles(FacetsFilterNestedListItem)
-      disabled={undefined}
       isActive={true}
       onFacetClick={[Function]}
       primaryText="2010 - 2016"
@@ -111,7 +110,6 @@ exports[`Date range  should render empty component 1`] = `
           xs={4}
         >
           <TextField
-            disabled={undefined}
             fullWidth={true}
             label="From"
             onChange={[Function]}
@@ -127,7 +125,6 @@ exports[`Date range  should render empty component 1`] = `
           xs={4}
         >
           <TextField
-            disabled={undefined}
             fullWidth={true}
             label="To"
             onChange={[Function]}

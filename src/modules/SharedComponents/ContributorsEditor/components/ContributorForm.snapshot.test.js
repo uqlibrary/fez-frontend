@@ -158,12 +158,12 @@ describe('Component ContributorForm', () => {
 
     it('should display org affiliation selector if affiliation is NotUQ', () => {
         const wrapper = setup({});
-        expect(wrapper).toMatchSnapshot();
+        expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('NonUqOrgAffiliationFormSection').length).toBe(0);
         wrapper.setState({
             affiliation: 'NotUQ'
         });
-        expect(wrapper).toMatchSnapshot();
+        expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('NonUqOrgAffiliationFormSection').length).toBe(1);
 
         wrapper.find('NonUqOrgAffiliationFormSection').props().onOrgAffiliationChange({target: {value: 'test'}});

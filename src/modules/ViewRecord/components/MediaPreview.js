@@ -1,13 +1,14 @@
-import React, {PureComponent} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import locale from 'locale/viewRecord';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Hidden from '@material-ui/core/Hidden';
 import Button from '@material-ui/core/Button';
+import Alert from 'modules/SharedComponents/Toolbox/Alert/components/Alert';
 import ReactJWPlayer from 'react-jw-player';
 
-export default class MediaPreview extends PureComponent {
+export default class MediaPreview extends React.Component {
     static propTypes = {
         mediaUrl: PropTypes.string.isRequired,
         previewMediaUrl: PropTypes.string.isRequired,
@@ -18,6 +19,19 @@ export default class MediaPreview extends PureComponent {
     constructor(props) {
         super(props);
         this.mediaPreviewRef = React.createRef();
+        this.state = {
+            videoErrorMsg: null,
+            videoErrorCode: null
+        };
+    }
+
+    componentWillReceiveProps(nextProps) {
+        if(this.props.previewMediaUrl !== nextProps.previewMediaUrl) {
+            this.setState({
+                videoErrorMsg: null,
+                videoErrorCode: null
+            });
+        }
     }
 
     openFileInNewWindow = () => {
@@ -26,13 +40,33 @@ export default class MediaPreview extends PureComponent {
 
     scrollToPreview = () => {
         setTimeout(() => {
-            !!this.mediaPreviewRef && !!this.mediaPreviewRef.current && !!this.mediaPreviewRef.current.scrollIntoView
-            && this.mediaPreviewRef.current.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start',
-                inline: 'center',
-            });
+            this.scrollToMedia();
         }, 80);
+    };
+
+    scrollToMedia() {
+        /* istanbul ignore next */
+        !!this.mediaPreviewRef && !!this.mediaPreviewRef.current && !!this.mediaPreviewRef.current.scrollIntoView
+        && this.mediaPreviewRef.current.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+            inline: 'center',
+        });
+    }
+
+    videoLoaded = () => {
+        this.scrollToPreview();
+    };
+
+    videoFailed = (event) => {
+        if(event.message && event.code) {
+            this.setState({
+                videoErrorMsg: event.message,
+                videoErrorCode: event.code
+            }, () => {
+                this.scrollToPreview();
+            });
+        }
     };
 
     MediaPreviewButtons = ({openInNewWindow, close}) => {
@@ -63,6 +97,7 @@ export default class MediaPreview extends PureComponent {
         return (
             <React.Fragment>
                 <Grid container spacing={0} direction={'row'} style={{marginTop: 32}}>
+                    <span ref={this.mediaPreviewRef}/>
                     <Grid item xs>
                         <Typography variant={'h6'} component={'h2'}>{title}</Typography>
                     </Grid>
@@ -73,32 +108,35 @@ export default class MediaPreview extends PureComponent {
                     </Hidden>
                 </Grid>
                 {
-                    (isVideo || isImage) &&
-                    <div style={{padding: 0, margin: 16}} ref={this.mediaPreviewRef}>
-                        {
-                            isVideo &&
-                            <ReactJWPlayer
-                                playerId="previewVideo"
-                                playerScript="https://cdn.jwplayer.com/libraries/VrkpYhtx.js"
-                                file={previewMediaUrl}
-                                onVideoLoad={this.scrollToPreview()}
-                                isAutoPlay
-                            />
-                        }
-                        {
-                            isImage &&
-                                <Grid container spacing={32}>
-                                    <Grid item xs />
-                                    <Grid item xs={'auto'}>
-                                        <img src={previewMediaUrl}
-                                            alt={mediaUrl}
-                                            onLoad={this.scrollToPreview()}
-                                            style={{border: '5px solid black', maxWidth: '100%'}} />
-                                    </Grid>
-                                    <Grid item xs />
-                                </Grid>
-                        }
-                    </div>
+                    isVideo && this.state.videoErrorMsg && this.state.videoErrorCode &&
+                        <div style={{marginTop: 12, marginBottom: 12}}>
+                            <Alert {...locale.viewRecord.videoFailedAlert} message={`${locale.viewRecord.videoFailedAlert.message} (${this.state.videoErrorMsg} - ${this.state.videoErrorCode})`} />
+                        </div>
+                }
+                {
+                    isVideo && !this.state.videoErrorMsg &&
+                    <ReactJWPlayer
+                        playerId="previewVideo"
+                        playerScript="http://cdn.jwplayer.com/libraries/VrkpYhtx.js"
+                        file={previewMediaUrl}
+                        onVideoLoad={this.videoLoaded}
+                        onSetupError={this.videoFailed}
+                        onMediaError={this.videoFailed}
+                        isAutoPlay
+                    />
+                }
+                {
+                    isImage &&
+                        <Grid container spacing={32}>
+                            <Grid item xs />
+                            <Grid item xs={'auto'}>
+                                <img src={previewMediaUrl}
+                                    alt={mediaUrl}
+                                    onLoad={this.scrollToPreview()}
+                                    style={{border: '5px solid black', maxWidth: '100%'}} />
+                            </Grid>
+                            <Grid item xs />
+                        </Grid>
                 }
                 <Hidden smUp>
                     <this.MediaPreviewButtons {...locale.viewRecord.sections.files.preview}/>

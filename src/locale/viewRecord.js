@@ -2560,5 +2560,10 @@ export default {
             'fez_record_search_key_herdc_status',
             'fez_record_search_key_institutional_status'
         ],
+        videoFailedAlert: {
+            type: 'error',
+            title: 'VIDEO PLAYER ERROR',
+            message: 'Please click the download/open in a new window link above to open the original file format.'
+        }
     },
 };

@@ -6029,7 +6029,6 @@ Array [
     <WithStyles(Button)
       className="publicationAction buttonOrder0"
       color="primary"
-      disabled={undefined}
       fullWidth={true}
       onClick={[Function]}
       variant="contained"

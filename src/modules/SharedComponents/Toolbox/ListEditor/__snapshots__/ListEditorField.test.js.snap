@@ -22,7 +22,6 @@ exports[`ListEditorField function should return <FreeTextListEditor> with specif
 
 exports[`ListEditorField function should return <FreeTextListEditor> with specified props 2`] = `
 <FreeTextListEditor
-  error={undefined}
   errorText={null}
   input={
     Object {
