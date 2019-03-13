@@ -58,6 +58,7 @@ export default {
                         <li>Supporting the deposit of open access publications to make UQ research globally accessible</li>
                         <li>Preserving and making digitised materials accessible to the world including HDR theses, photographs, audio materials, videos, manuscripts and other original works.</li>
                     </ul>
+                    <p>You can also read the <a href="https://espace.library.uq.edu.au/view/UQ:295655/eSpaceScopeandPolicy.pdf">UQ eSpace Scope and Policy</a>.</p>
                 </StandardCard>
             )
         },
