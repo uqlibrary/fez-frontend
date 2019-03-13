@@ -39,8 +39,12 @@ export default class BookForm extends Component {
     render() {
         const txt = formLocale.book;
         const editors = this.props.formValues && this.props.formValues.get('editors');
+        console.log('editors');
+        console.log(editors);
         const editorSelected = !!editors && editors.filter((editor) => editor.selected).length > 0;
         const authors = this.props.formValues && this.props.formValues.get('authors');
+        console.log('authors');
+        console.log(authors);
         const authorSelected = !!authors && authors.filter((author) => author.selected).length > 0;
         return (
             <Grid container spacing={24}>
@@ -123,29 +127,36 @@ export default class BookForm extends Component {
                         </Grid>
                     </StandardCard>
                 </Grid>
-                <Grid item xs={12}>
-                    <StandardCard title={txt.authors.title} help={txt.authors.help}>
-                        <Field
-                            component={ContributorsEditorField}
-                            name="authors"
-                            locale={txt.authors.field}
-                            showContributorAssignment={!editorSelected}
-                            required
-                            disabled={this.props.submitting}
-                            isNtro={this.props.isNtro}
-                        />
-                    </StandardCard>
-                </Grid>
-                <Grid item xs={12}>
-                    <StandardCard title={txt.editors.title} help={txt.editors.help}>
-                        <Field
-                            component={ContributorsEditorField}
-                            showContributorAssignment={!authorSelected}
-                            name="editors"
-                            locale={txt.editors.field}
-                            disabled={this.props.submitting} />
-                    </StandardCard>
-                </Grid>
+                {
+                    this.props.subtype !== 'Edited book' &&
+                    (!this.props.formValues || !this.props.formValues.get('editors') || this.props.formValues.get('editors').length === 0) &&
+                    <Grid item xs={12}>
+                        <StandardCard title={txt.authors.title} help={txt.authors.help}>
+                            <Field
+                                component={ContributorsEditorField}
+                                name="authors"
+                                locale={txt.authors.field}
+                                showContributorAssignment={!editorSelected}
+                                required
+                                disabled={this.props.submitting}
+                                isNtro={this.props.isNtro}
+                            />
+                        </StandardCard>
+                    </Grid>
+                }
+                {
+                    (!this.props.formValues || !this.props.formValues.get('authors') || this.props.formValues.get('authors').length === 0) &&
+                    <Grid item xs={12}>
+                        <StandardCard title={txt.editors.title} help={txt.editors.help}>
+                            <Field
+                                component={ContributorsEditorField}
+                                showContributorAssignment={!authorSelected}
+                                name="editors"
+                                locale={txt.editors.field}
+                                disabled={this.props.submitting} />
+                        </StandardCard>
+                    </Grid>
+                }
                 {
                     this.props.isNtro &&
                     <NtroFields
