@@ -111,6 +111,7 @@ export const NTRO_SUBTYPE_RREB_INDUSTRY = 'Research Report for an External Body 
 export const NTRO_SUBTYPE_RREB_NOT_FOR_PROFIT = 'Research Report for an External Body - Not-for-profit';
 export const NTRO_SUBTYPE_RREB_OTHER = 'Research Report for an External Body - Other';
 export const SUBTYPE_RR_INTERNAL_OTHER = 'Research Report - Internal or Other';
+export const SUBTYPE_EDITED_BOOK = 'Edited book';
 
 export const CW_NTRO_SUBTYPES = [
     NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
@@ -215,7 +216,7 @@ export const publicationTypes = (components) => [
         subtypes: [
             'Research book (original research)',
             'Textbook',
-            'Edited book',
+            SUBTYPE_EDITED_BOOK,
             'Reference work, encyclopaedia, manual or handbook',
             NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
             NTRO_SUBTYPE_CW_TEXTUAL_WORK,

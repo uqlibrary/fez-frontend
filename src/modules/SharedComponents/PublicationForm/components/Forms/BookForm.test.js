@@ -1,7 +1,7 @@
 jest.dontMock('./BookForm');
 
 import BookForm from './BookForm';
-import {NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION} from 'config/general';
+import {NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION, SUBTYPE_EDITED_BOOK} from 'config/general';
 
 function setup(testProps, isShallow = true){
     const props = {
@@ -51,6 +51,18 @@ describe('BookForm renders ', () => {
                 }
             }
         });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should hide author when is edited book', () => {
+        const wrapper = setup({subtype: SUBTYPE_EDITED_BOOK});
+        expect(wrapper.find('Field').length).toEqual(11);
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should show author when is not edited book', () => {
+        const wrapper = setup({});
+        expect(wrapper.find('Field').length).toEqual(12);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

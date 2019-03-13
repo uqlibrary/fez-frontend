@@ -11,7 +11,7 @@ import {NtroFields} from 'modules/SharedComponents/Toolbox/NtroFields';
 import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
 import {validation} from 'config';
 import {locale} from 'locale';
-import {NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION} from 'config/general';
+import {NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION, SUBTYPE_EDITED_BOOK} from 'config/general';
 import {default as formLocale} from 'locale/publicationForm';
 
 import Grid from '@material-ui/core/Grid';
@@ -39,12 +39,8 @@ export default class BookForm extends Component {
     render() {
         const txt = formLocale.book;
         const editors = this.props.formValues && this.props.formValues.get('editors');
-        console.log('editors');
-        console.log(editors);
         const editorSelected = !!editors && editors.filter((editor) => editor.selected).length > 0;
         const authors = this.props.formValues && this.props.formValues.get('authors');
-        console.log('authors');
-        console.log(authors);
         const authorSelected = !!authors && authors.filter((author) => author.selected).length > 0;
         return (
             <Grid container spacing={24}>
@@ -128,7 +124,7 @@ export default class BookForm extends Component {
                     </StandardCard>
                 </Grid>
                 {
-                    this.props.subtype !== 'Edited book' &&
+                    this.props.subtype !== SUBTYPE_EDITED_BOOK &&
                     (!this.props.formValues || !this.props.formValues.get('editors') || this.props.formValues.get('editors').length === 0) &&
                     <Grid item xs={12}>
                         <StandardCard title={txt.authors.title} help={txt.authors.help}>
