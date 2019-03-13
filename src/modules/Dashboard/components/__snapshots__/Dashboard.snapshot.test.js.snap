@@ -492,11 +492,11 @@ exports[`Dashboard test Full mount for styles render 1`] = `
               ],
               "results": Array [
                 Object {
-                  "type": "return",
+                  "isThrow": false,
                   "value": undefined,
                 },
                 Object {
-                  "type": "return",
+                  "isThrow": false,
                   "value": undefined,
                 },
               ],
@@ -539,7 +539,7 @@ exports[`Dashboard test Full mount for styles render 1`] = `
                   ],
                   "results": Array [
                     Object {
-                      "type": "return",
+                      "isThrow": false,
                       "value": undefined,
                     },
                   ],
@@ -552,7 +552,7 @@ exports[`Dashboard test Full mount for styles render 1`] = `
                   ],
                   "results": Array [
                     Object {
-                      "type": "return",
+                      "isThrow": false,
                       "value": undefined,
                     },
                   ],
@@ -604,7 +604,7 @@ exports[`Dashboard test Full mount for styles render 1`] = `
                     ],
                     "results": Array [
                       Object {
-                        "type": "return",
+                        "isThrow": false,
                         "value": undefined,
                       },
                     ],
@@ -617,7 +617,7 @@ exports[`Dashboard test Full mount for styles render 1`] = `
                     ],
                     "results": Array [
                       Object {
-                        "type": "return",
+                        "isThrow": false,
                         "value": undefined,
                       },
                     ],
@@ -669,7 +669,7 @@ exports[`Dashboard test Full mount for styles render 1`] = `
                       ],
                       "results": Array [
                         Object {
-                          "type": "return",
+                          "isThrow": false,
                           "value": undefined,
                         },
                       ],
@@ -682,7 +682,7 @@ exports[`Dashboard test Full mount for styles render 1`] = `
                       ],
                       "results": Array [
                         Object {
-                          "type": "return",
+                          "isThrow": false,
                           "value": undefined,
                         },
                       ],
@@ -4684,7 +4684,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
               ],
               "results": Array [
                 Object {
-                  "type": "return",
+                  "isThrow": false,
                   "value": undefined,
                 },
               ],
@@ -4727,7 +4727,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                   ],
                   "results": Array [
                     Object {
-                      "type": "return",
+                      "isThrow": false,
                       "value": undefined,
                     },
                   ],
@@ -4740,7 +4740,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                   ],
                   "results": Array [
                     Object {
-                      "type": "return",
+                      "isThrow": false,
                       "value": undefined,
                     },
                   ],
