@@ -126,6 +126,12 @@ describe('AddDataCollection test', () => {
             submitSucceeded: true
         });
         expect(showConfirmationFn).toHaveBeenCalled();
+
+        showConfirmationFn.mockClear();
+        wrapper.setProps({
+            submitSucceeded: true
+        });
+        expect(showConfirmationFn).not.toBeCalled();
     });
 
     it('should set confirmation box ref', () => {
