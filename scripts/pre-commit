@@ -42,13 +42,15 @@ if ! $PASS; then
   exit 1
 fi
 
-printf "\n\e[32mRunning Jest...\e[0m\n"
+# printf "\n\e[32mRunning Jest...\e[0m\n"
 
-npm test -- --ci --findRelatedTests $STAGED_FILES
+# npm test -- --ci --findRelatedTests $STAGED_FILES
 
-if [[ "$?" != 0 ]]; then
-  printf "\e[31mEither Jest tests failed, or code coverage is not complete. Please fix and try again.\e[0m\n"
-  exit 2
-else
-  printf "\n\e[92mNo issues found. Proceeding with commit...\e[0m\n\n"
-fi
+# if [[ "$?" != 0 ]]; then
+#   printf "\e[31mEither Jest tests failed, or code coverage is not complete. Please fix and try again.\e[0m\n"
+#   exit 2
+# else
+
+printf "\n\e[92mNo issues found. Proceeding with commit...\e[0m\n\n"
+
+# fi
