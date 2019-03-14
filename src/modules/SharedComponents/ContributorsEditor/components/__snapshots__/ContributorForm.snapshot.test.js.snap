@@ -283,11 +283,11 @@ exports[`Component ContributorForm should render connected component 1`] = `
         ],
         "results": Array [
           Object {
-            "type": "return",
+            "isThrow": false,
             "value": Immutable.Map {},
           },
           Object {
-            "type": "return",
+            "isThrow": false,
             "value": Immutable.Map {},
           },
         ],
@@ -300,7 +300,7 @@ exports[`Component ContributorForm should render connected component 1`] = `
         ],
         "results": Array [
           Object {
-            "type": "return",
+            "isThrow": false,
             "value": undefined,
           },
         ],
@@ -797,7 +797,7 @@ exports[`Component ContributorForm should render connected component 1`] = `
               ],
               "results": Array [
                 Object {
-                  "type": "return",
+                  "isThrow": false,
                   "value": undefined,
                 },
               ],

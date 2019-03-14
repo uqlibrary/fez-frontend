@@ -505,11 +505,11 @@ exports[`Journal Name Component test  should render with empty props 1`] = `
               ],
               "results": Array [
                 Object {
-                  "type": "return",
+                  "isThrow": false,
                   "value": undefined,
                 },
                 Object {
-                  "type": "return",
+                  "isThrow": false,
                   "value": undefined,
                 },
               ],
@@ -1027,7 +1027,7 @@ exports[`Journal Name Component test  should render with journal article 1`] = `
               ],
               "results": Array [
                 Object {
-                  "type": "return",
+                  "isThrow": false,
                   "value": undefined,
                 },
               ],
@@ -3589,15 +3589,15 @@ exports[`Journal Name Component test  should render without era journal listed 1
               ],
               "results": Array [
                 Object {
-                  "type": "return",
+                  "isThrow": false,
                   "value": undefined,
                 },
                 Object {
-                  "type": "return",
+                  "isThrow": false,
                   "value": undefined,
                 },
                 Object {
-                  "type": "return",
+                  "isThrow": false,
                   "value": undefined,
                 },
               ],
@@ -6141,19 +6141,19 @@ exports[`Journal Name Component test  should render without sherpa romeo 1`] = `
               ],
               "results": Array [
                 Object {
-                  "type": "return",
+                  "isThrow": false,
                   "value": undefined,
                 },
                 Object {
-                  "type": "return",
+                  "isThrow": false,
                   "value": undefined,
                 },
                 Object {
-                  "type": "return",
+                  "isThrow": false,
                   "value": undefined,
                 },
                 Object {
-                  "type": "return",
+                  "isThrow": false,
                   "value": undefined,
                 },
               ],

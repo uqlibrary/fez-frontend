@@ -505,11 +505,11 @@ exports[`ImageDocumentCitation renders  component with a mock espace record 1`] 
               ],
               "results": Array [
                 Object {
-                  "type": "return",
+                  "isThrow": false,
                   "value": undefined,
                 },
                 Object {
-                  "type": "return",
+                  "isThrow": false,
                   "value": undefined,
                 },
               ],
@@ -2212,7 +2212,7 @@ exports[`ImageDocumentCitation renders  component with empty publication 1`] = `
               ],
               "results": Array [
                 Object {
-                  "type": "return",
+                  "isThrow": false,
                   "value": undefined,
                 },
               ],

@@ -505,11 +505,11 @@ exports[`BookCitation renders  component with a mock espace record 1`] = `
               ],
               "results": Array [
                 Object {
-                  "type": "return",
+                  "isThrow": false,
                   "value": undefined,
                 },
                 Object {
-                  "type": "return",
+                  "isThrow": false,
                   "value": undefined,
                 },
               ],
@@ -2544,19 +2544,19 @@ exports[`BookCitation renders  component with an empty doi view  1`] = `
               ],
               "results": Array [
                 Object {
-                  "type": "return",
+                  "isThrow": false,
                   "value": undefined,
                 },
                 Object {
-                  "type": "return",
+                  "isThrow": false,
                   "value": undefined,
                 },
                 Object {
-                  "type": "return",
+                  "isThrow": false,
                   "value": undefined,
                 },
                 Object {
-                  "type": "return",
+                  "isThrow": false,
                   "value": undefined,
                 },
               ],
@@ -4702,7 +4702,7 @@ exports[`BookCitation renders  component with empty publication 1`] = `
               ],
               "results": Array [
                 Object {
-                  "type": "return",
+                  "isThrow": false,
                   "value": undefined,
                 },
               ],
@@ -5761,15 +5761,15 @@ exports[`BookCitation renders  should render citation for edited book record 1`]
               ],
               "results": Array [
                 Object {
-                  "type": "return",
+                  "isThrow": false,
                   "value": undefined,
                 },
                 Object {
-                  "type": "return",
+                  "isThrow": false,
                   "value": undefined,
                 },
                 Object {
-                  "type": "return",
+                  "isThrow": false,
                   "value": undefined,
                 },
               ],

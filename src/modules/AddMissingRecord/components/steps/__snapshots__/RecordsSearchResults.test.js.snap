@@ -437,6 +437,7 @@ exports[`Search record results should render a single claimable item with no aut
             xs={12}
           >
             <WithStyles(Button)
+              buttonRef={[Function]}
               color="primary"
               fullWidth={true}
               onClick={[Function]}
@@ -689,6 +690,7 @@ exports[`Search record results should render a single unclaimable item with no a
             xs={12}
           >
             <WithStyles(Button)
+              buttonRef={[Function]}
               color="primary"
               fullWidth={true}
               onClick={[Function]}
@@ -1230,7 +1232,7 @@ exports[`Search record results should render a single unclaimable item with no a
               ],
               "results": Array [
                 Object {
-                  "type": "return",
+                  "isThrow": false,
                   "value": undefined,
                 },
               ],
@@ -4723,12 +4725,14 @@ exports[`Search record results should render a single unclaimable item with no a
                                           className="MuiGrid-item-2 MuiGrid-grid-xs-12-41 MuiGrid-grid-sm-auto-42"
                                         >
                                           <WithStyles(Button)
+                                            buttonRef={[Function]}
                                             color="primary"
                                             fullWidth={true}
                                             onClick={[Function]}
                                             variant="contained"
                                           >
                                             <Button
+                                              buttonRef={[Function]}
                                               classes={
                                                 Object {
                                                   "colorInherit": "MuiButton-colorInherit-194",
@@ -4771,6 +4775,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                               variant="contained"
                                             >
                                               <WithStyles(ButtonBase)
+                                                buttonRef={[Function]}
                                                 className="MuiButton-root-173 MuiButton-contained-184 MuiButton-containedPrimary-185 MuiButton-raised-187 MuiButton-raisedPrimary-188 MuiButton-fullWidth-198"
                                                 component="button"
                                                 disabled={false}
@@ -4780,6 +4785,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                                 type="button"
                                               >
                                                 <ButtonBase
+                                                  buttonRef={[Function]}
                                                   centerRipple={false}
                                                   className="MuiButton-root-173 MuiButton-contained-184 MuiButton-containedPrimary-185 MuiButton-raised-187 MuiButton-raisedPrimary-188 MuiButton-fullWidth-198"
                                                   classes={
@@ -7198,6 +7204,7 @@ exports[`Search record results should render publications list with one publicat
             xs={12}
           >
             <WithStyles(Button)
+              buttonRef={[Function]}
               color="primary"
               fullWidth={true}
               onClick={[Function]}
@@ -7389,6 +7396,7 @@ exports[`Search record results should render stepper and no results 1`] = `
             xs={12}
           >
             <WithStyles(Button)
+              buttonRef={[Function]}
               color="primary"
               fullWidth={true}
               onClick={[Function]}

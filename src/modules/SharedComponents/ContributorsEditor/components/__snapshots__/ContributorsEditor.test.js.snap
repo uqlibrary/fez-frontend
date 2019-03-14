@@ -12,11 +12,11 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
         ],
         "results": Array [
           Object {
-            "type": "return",
+            "isThrow": false,
             "value": Immutable.Map {},
           },
           Object {
-            "type": "return",
+            "isThrow": false,
             "value": Immutable.Map {},
           },
         ],
@@ -29,7 +29,7 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
         ],
         "results": Array [
           Object {
-            "type": "return",
+            "isThrow": false,
             "value": undefined,
           },
         ],
@@ -526,7 +526,7 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
               ],
               "results": Array [
                 Object {
-                  "type": "return",
+                  "isThrow": false,
                   "value": undefined,
                 },
               ],

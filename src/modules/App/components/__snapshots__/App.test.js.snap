@@ -4637,11 +4637,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
         ],
         "results": Array [
           Object {
-            "type": "return",
+            "isThrow": false,
             "value": undefined,
           },
           Object {
-            "type": "return",
+            "isThrow": false,
             "value": undefined,
           },
         ],
@@ -4663,51 +4663,51 @@ exports[`Testing wrapped App component Mounts 1`] = `
         ],
         "results": Array [
           Object {
-            "type": "return",
+            "isThrow": false,
             "value": Immutable.Map {},
           },
           Object {
-            "type": "return",
+            "isThrow": false,
             "value": Immutable.Map {},
           },
           Object {
-            "type": "return",
+            "isThrow": false,
             "value": Immutable.Map {},
           },
           Object {
-            "type": "return",
+            "isThrow": false,
             "value": Immutable.Map {},
           },
           Object {
-            "type": "return",
+            "isThrow": false,
             "value": Immutable.Map {},
           },
           Object {
-            "type": "return",
+            "isThrow": false,
             "value": Immutable.Map {},
           },
           Object {
-            "type": "return",
+            "isThrow": false,
             "value": Immutable.Map {},
           },
           Object {
-            "type": "return",
+            "isThrow": false,
             "value": Immutable.Map {},
           },
           Object {
-            "type": "return",
+            "isThrow": false,
             "value": Immutable.Map {},
           },
           Object {
-            "type": "return",
+            "isThrow": false,
             "value": Immutable.Map {},
           },
           Object {
-            "type": "return",
+            "isThrow": false,
             "value": Immutable.Map {},
           },
           Object {
-            "type": "return",
+            "isThrow": false,
             "value": Immutable.Map {},
           },
         ],
@@ -4735,27 +4735,27 @@ exports[`Testing wrapped App component Mounts 1`] = `
         ],
         "results": Array [
           Object {
-            "type": "return",
+            "isThrow": false,
             "value": undefined,
           },
           Object {
-            "type": "return",
+            "isThrow": false,
             "value": undefined,
           },
           Object {
-            "type": "return",
+            "isThrow": false,
             "value": undefined,
           },
           Object {
-            "type": "return",
+            "isThrow": false,
             "value": undefined,
           },
           Object {
-            "type": "return",
+            "isThrow": false,
             "value": undefined,
           },
           Object {
-            "type": "return",
+            "isThrow": false,
             "value": undefined,
           },
         ],
@@ -5252,7 +5252,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
               ],
               "results": Array [
                 Object {
-                  "type": "return",
+                  "isThrow": false,
                   "value": undefined,
                 },
               ],
@@ -5273,7 +5273,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                   ],
                   "results": Array [
                     Object {
-                      "type": "return",
+                      "isThrow": false,
                       "value": undefined,
                     },
                   ],
@@ -5320,7 +5320,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                     ],
                     "results": Array [
                       Object {
-                        "type": "return",
+                        "isThrow": false,
                         "value": undefined,
                       },
                     ],
@@ -5367,7 +5367,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                       ],
                       "results": Array [
                         Object {
-                          "type": "return",
+                          "isThrow": false,
                           "value": undefined,
                         },
                       ],

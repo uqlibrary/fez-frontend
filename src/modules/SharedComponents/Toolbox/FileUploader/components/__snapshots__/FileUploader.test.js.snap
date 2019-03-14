@@ -12,11 +12,11 @@ exports[`Component FileUploader should mount and unmount container and clear fil
         ],
         "results": Array [
           Object {
-            "type": "return",
+            "isThrow": false,
             "value": Immutable.Map {},
           },
           Object {
-            "type": "return",
+            "isThrow": false,
             "value": Immutable.Map {},
           },
         ],
@@ -29,7 +29,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
         ],
         "results": Array [
           Object {
-            "type": "return",
+            "isThrow": false,
             "value": undefined,
           },
         ],
@@ -526,7 +526,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
               ],
               "results": Array [
                 Object {
-                  "type": "return",
+                  "isThrow": false,
                   "value": undefined,
                 },
               ],
@@ -3731,7 +3731,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
         ],
         "results": Array [
           Object {
-            "type": "return",
+            "isThrow": false,
             "value": undefined,
           },
         ],
@@ -3743,11 +3743,11 @@ exports[`Component FileUploader should mount and unmount container and clear fil
         ],
         "results": Array [
           Object {
-            "type": "return",
+            "isThrow": false,
             "value": Immutable.Map {},
           },
           Object {
-            "type": "return",
+            "isThrow": false,
             "value": Immutable.Map {},
           },
         ],
@@ -3760,7 +3760,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
         ],
         "results": Array [
           Object {
-            "type": "return",
+            "isThrow": false,
             "value": undefined,
           },
         ],
@@ -4257,7 +4257,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
               ],
               "results": Array [
                 Object {
-                  "type": "return",
+                  "isThrow": false,
                   "value": undefined,
                 },
               ],
@@ -7926,7 +7926,18 @@ exports[`Component FileUploader should render rows for uploaded files 2`] = `
           requireOpenAccessStatus={false}
           uploadedFile={
             Object {
-              "fileData": File {},
+              "fileData": File {
+                Symbol(impl): FileImpl {
+                  "_buffer": Object {
+                    "data": Array [],
+                    "type": "Buffer",
+                  },
+                  "lastModified": 12345678912,
+                  "name": "a.txt",
+                  "type": "",
+                  Symbol(wrapper): [Circular],
+                },
+              },
               "name": "a.txt",
               "size": 0,
             }
@@ -7976,7 +7987,18 @@ exports[`Component FileUploader should render rows for uploaded files 2`] = `
           requireOpenAccessStatus={false}
           uploadedFile={
             Object {
-              "fileData": File {},
+              "fileData": File {
+                Symbol(impl): FileImpl {
+                  "_buffer": Object {
+                    "data": Array [],
+                    "type": "Buffer",
+                  },
+                  "lastModified": 12345678912,
+                  "name": "b.txt",
+                  "type": "",
+                  Symbol(wrapper): [Circular],
+                },
+              },
               "name": "b.txt",
               "size": 0,
             }
@@ -8164,7 +8186,18 @@ exports[`Component FileUploader should render rows for uploaded files 3`] = `
           requireOpenAccessStatus={false}
           uploadedFile={
             Object {
-              "fileData": File {},
+              "fileData": File {
+                Symbol(impl): FileImpl {
+                  "_buffer": Object {
+                    "data": Array [],
+                    "type": "Buffer",
+                  },
+                  "lastModified": 12345678912,
+                  "name": "b.txt",
+                  "type": "",
+                  Symbol(wrapper): [Circular],
+                },
+              },
               "name": "b.txt",
               "size": 0,
             }
@@ -8555,7 +8588,18 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           uploadedFile={
             Object {
               "access_condition_id": 3,
-              "fileData": File {},
+              "fileData": File {
+                Symbol(impl): FileImpl {
+                  "_buffer": Object {
+                    "data": Array [],
+                    "type": "Buffer",
+                  },
+                  "lastModified": 12345678912,
+                  "name": "a.txt",
+                  "type": "",
+                  Symbol(wrapper): [Circular],
+                },
+              },
               "name": "a.txt",
               "size": 0,
             }
@@ -8607,7 +8651,18 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           uploadedFile={
             Object {
               "access_condition_id": 3,
-              "fileData": File {},
+              "fileData": File {
+                Symbol(impl): FileImpl {
+                  "_buffer": Object {
+                    "data": Array [],
+                    "type": "Buffer",
+                  },
+                  "lastModified": 12345678912,
+                  "name": "b.txt",
+                  "type": "",
+                  Symbol(wrapper): [Circular],
+                },
+              },
               "name": "b.txt",
               "size": 0,
             }
@@ -8896,7 +8951,18 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           requireOpenAccessStatus={true}
           uploadedFile={
             Object {
-              "fileData": File {},
+              "fileData": File {
+                Symbol(impl): FileImpl {
+                  "_buffer": Object {
+                    "data": Array [],
+                    "type": "Buffer",
+                  },
+                  "lastModified": 12345678912,
+                  "name": "a.txt",
+                  "type": "",
+                  Symbol(wrapper): [Circular],
+                },
+              },
               "name": "a.txt",
               "size": 0,
             }
@@ -8946,7 +9012,18 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           requireOpenAccessStatus={true}
           uploadedFile={
             Object {
-              "fileData": File {},
+              "fileData": File {
+                Symbol(impl): FileImpl {
+                  "_buffer": Object {
+                    "data": Array [],
+                    "type": "Buffer",
+                  },
+                  "lastModified": 12345678912,
+                  "name": "b.txt",
+                  "type": "",
+                  Symbol(wrapper): [Circular],
+                },
+              },
               "name": "b.txt",
               "size": 0,
             }
@@ -9137,7 +9214,18 @@ exports[`Component FileUploader should render rows for uploaded files with acces
             Object {
               "access_condition_id": 8,
               "date": null,
-              "fileData": File {},
+              "fileData": File {
+                Symbol(impl): FileImpl {
+                  "_buffer": Object {
+                    "data": Array [],
+                    "type": "Buffer",
+                  },
+                  "lastModified": 12345678912,
+                  "name": "a.txt",
+                  "type": "",
+                  Symbol(wrapper): [Circular],
+                },
+              },
               "name": "a.txt",
               "size": 0,
             }
@@ -9187,7 +9275,18 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           requireOpenAccessStatus={true}
           uploadedFile={
             Object {
-              "fileData": File {},
+              "fileData": File {
+                Symbol(impl): FileImpl {
+                  "_buffer": Object {
+                    "data": Array [],
+                    "type": "Buffer",
+                  },
+                  "lastModified": 12345678912,
+                  "name": "b.txt",
+                  "type": "",
+                  Symbol(wrapper): [Circular],
+                },
+              },
               "name": "b.txt",
               "size": 0,
             }
@@ -9378,7 +9477,18 @@ exports[`Component FileUploader should render rows for uploaded files with acces
             Object {
               "access_condition_id": 9,
               "date": "2020-01-01T10:00:00-00:15",
-              "fileData": File {},
+              "fileData": File {
+                Symbol(impl): FileImpl {
+                  "_buffer": Object {
+                    "data": Array [],
+                    "type": "Buffer",
+                  },
+                  "lastModified": 12345678912,
+                  "name": "a.txt",
+                  "type": "",
+                  Symbol(wrapper): [Circular],
+                },
+              },
               "name": "a.txt",
               "size": 0,
             }
@@ -9428,7 +9538,18 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           requireOpenAccessStatus={true}
           uploadedFile={
             Object {
-              "fileData": File {},
+              "fileData": File {
+                Symbol(impl): FileImpl {
+                  "_buffer": Object {
+                    "data": Array [],
+                    "type": "Buffer",
+                  },
+                  "lastModified": 12345678912,
+                  "name": "b.txt",
+                  "type": "",
+                  Symbol(wrapper): [Circular],
+                },
+              },
               "name": "b.txt",
               "size": 0,
             }
@@ -9629,7 +9750,18 @@ exports[`Component FileUploader should render rows for uploaded files with acces
             Object {
               "access_condition_id": 9,
               "date": "2017-10-10T00:00:00-00:15",
-              "fileData": File {},
+              "fileData": File {
+                Symbol(impl): FileImpl {
+                  "_buffer": Object {
+                    "data": Array [],
+                    "type": "Buffer",
+                  },
+                  "lastModified": 12345678912,
+                  "name": "a.txt",
+                  "type": "",
+                  Symbol(wrapper): [Circular],
+                },
+              },
               "name": "a.txt",
               "size": 0,
             }
@@ -9679,7 +9811,18 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           requireOpenAccessStatus={true}
           uploadedFile={
             Object {
-              "fileData": File {},
+              "fileData": File {
+                Symbol(impl): FileImpl {
+                  "_buffer": Object {
+                    "data": Array [],
+                    "type": "Buffer",
+                  },
+                  "lastModified": 12345678912,
+                  "name": "b.txt",
+                  "type": "",
+                  Symbol(wrapper): [Circular],
+                },
+              },
               "name": "b.txt",
               "size": 0,
             }
@@ -9980,7 +10123,18 @@ exports[`Component FileUploader should render rows for uploaded files with defau
           uploadedFile={
             Object {
               "access_condition_id": 3,
-              "fileData": File {},
+              "fileData": File {
+                Symbol(impl): FileImpl {
+                  "_buffer": Object {
+                    "data": Array [],
+                    "type": "Buffer",
+                  },
+                  "lastModified": 12345678912,
+                  "name": "a.txt",
+                  "type": "",
+                  Symbol(wrapper): [Circular],
+                },
+              },
               "name": "a.txt",
               "size": 0,
             }
@@ -10032,7 +10186,18 @@ exports[`Component FileUploader should render rows for uploaded files with defau
           uploadedFile={
             Object {
               "access_condition_id": 3,
-              "fileData": File {},
+              "fileData": File {
+                Symbol(impl): FileImpl {
+                  "_buffer": Object {
+                    "data": Array [],
+                    "type": "Buffer",
+                  },
+                  "lastModified": 12345678912,
+                  "name": "b.txt",
+                  "type": "",
+                  Symbol(wrapper): [Circular],
+                },
+              },
               "name": "b.txt",
               "size": 0,
             }

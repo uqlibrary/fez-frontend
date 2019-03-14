@@ -499,7 +499,7 @@ exports[`RichEditor tests  should render component 1`] = `
               ],
               "results": Array [
                 Object {
-                  "type": "return",
+                  "isThrow": false,
                   "value": undefined,
                 },
               ],
@@ -510,6 +510,13 @@ exports[`RichEditor tests  should render component 1`] = `
             className=""
             disabled={false}
             height={100}
+            inputRef={
+              Object {
+                "current": <div
+                  class=""
+                />,
+              }
+            }
             onChange={[MockFunction]}
             returnSingleValue={false}
             value=""
@@ -1061,31 +1068,31 @@ exports[`RichEditor tests  should render error as one child 1`] = `
               ],
               "results": Array [
                 Object {
-                  "type": "return",
+                  "isThrow": false,
                   "value": undefined,
                 },
                 Object {
-                  "type": "return",
+                  "isThrow": false,
                   "value": undefined,
                 },
                 Object {
-                  "type": "return",
+                  "isThrow": false,
                   "value": undefined,
                 },
                 Object {
-                  "type": "return",
+                  "isThrow": false,
                   "value": undefined,
                 },
                 Object {
-                  "type": "return",
+                  "isThrow": false,
                   "value": undefined,
                 },
                 Object {
-                  "type": "return",
+                  "isThrow": false,
                   "value": undefined,
                 },
                 Object {
-                  "type": "return",
+                  "isThrow": false,
                   "value": undefined,
                 },
               ],
@@ -1096,6 +1103,13 @@ exports[`RichEditor tests  should render error as one child 1`] = `
             className=""
             disabled={false}
             height={100}
+            inputRef={
+              Object {
+                "current": <div
+                  class=""
+                />,
+              }
+            }
             instructions="test instructions"
             maxValue={10}
             meta={
@@ -1117,7 +1131,7 @@ exports[`RichEditor tests  should render error as one child 1`] = `
                   ],
                   "results": Array [
                     Object {
-                      "type": "return",
+                      "isThrow": false,
                       "value": undefined,
                     },
                   ],
@@ -2730,27 +2744,27 @@ exports[`RichEditor tests  should render error as react children 1`] = `
               ],
               "results": Array [
                 Object {
-                  "type": "return",
+                  "isThrow": false,
                   "value": undefined,
                 },
                 Object {
-                  "type": "return",
+                  "isThrow": false,
                   "value": undefined,
                 },
                 Object {
-                  "type": "return",
+                  "isThrow": false,
                   "value": undefined,
                 },
                 Object {
-                  "type": "return",
+                  "isThrow": false,
                   "value": undefined,
                 },
                 Object {
-                  "type": "return",
+                  "isThrow": false,
                   "value": undefined,
                 },
                 Object {
-                  "type": "return",
+                  "isThrow": false,
                   "value": undefined,
                 },
               ],
@@ -2761,6 +2775,13 @@ exports[`RichEditor tests  should render error as react children 1`] = `
             className=""
             disabled={false}
             height={100}
+            inputRef={
+              Object {
+                "current": <div
+                  class=""
+                />,
+              }
+            }
             instructions="test instructions"
             maxValue={10}
             meta={
@@ -2784,7 +2805,7 @@ exports[`RichEditor tests  should render error as react children 1`] = `
                   ],
                   "results": Array [
                     Object {
-                      "type": "return",
+                      "isThrow": false,
                       "value": undefined,
                     },
                   ],
@@ -4395,23 +4416,23 @@ exports[`RichEditor tests  should render error showing input length 1`] = `
               ],
               "results": Array [
                 Object {
-                  "type": "return",
+                  "isThrow": false,
                   "value": undefined,
                 },
                 Object {
-                  "type": "return",
+                  "isThrow": false,
                   "value": undefined,
                 },
                 Object {
-                  "type": "return",
+                  "isThrow": false,
                   "value": undefined,
                 },
                 Object {
-                  "type": "return",
+                  "isThrow": false,
                   "value": undefined,
                 },
                 Object {
-                  "type": "return",
+                  "isThrow": false,
                   "value": undefined,
                 },
               ],
@@ -4422,6 +4443,13 @@ exports[`RichEditor tests  should render error showing input length 1`] = `
             className=""
             disabled={false}
             height={100}
+            inputRef={
+              Object {
+                "current": <div
+                  class=""
+                />,
+              }
+            }
             instructions="test instructions"
             maxValue={10}
             meta={
@@ -4441,7 +4469,7 @@ exports[`RichEditor tests  should render error showing input length 1`] = `
                   ],
                   "results": Array [
                     Object {
-                      "type": "return",
+                      "isThrow": false,
                       "value": undefined,
                     },
                   ],
@@ -6042,19 +6070,19 @@ exports[`RichEditor tests  should render error showing maxValue and instructions
               ],
               "results": Array [
                 Object {
-                  "type": "return",
+                  "isThrow": false,
                   "value": undefined,
                 },
                 Object {
-                  "type": "return",
+                  "isThrow": false,
                   "value": undefined,
                 },
                 Object {
-                  "type": "return",
+                  "isThrow": false,
                   "value": undefined,
                 },
                 Object {
-                  "type": "return",
+                  "isThrow": false,
                   "value": undefined,
                 },
               ],
@@ -6065,6 +6093,13 @@ exports[`RichEditor tests  should render error showing maxValue and instructions
             className=""
             disabled={false}
             height={100}
+            inputRef={
+              Object {
+                "current": <div
+                  class=""
+                />,
+              }
+            }
             instructions="test instructions"
             maxValue={10}
             meta={
@@ -7660,11 +7695,11 @@ exports[`RichEditor tests  should render given title and description 1`] = `
               ],
               "results": Array [
                 Object {
-                  "type": "return",
+                  "isThrow": false,
                   "value": undefined,
                 },
                 Object {
-                  "type": "return",
+                  "isThrow": false,
                   "value": undefined,
                 },
               ],
@@ -7676,6 +7711,13 @@ exports[`RichEditor tests  should render given title and description 1`] = `
             description="This is test description"
             disabled={false}
             height={100}
+            inputRef={
+              Object {
+                "current": <div
+                  class=""
+                />,
+              }
+            }
             onChange={[MockFunction]}
             returnSingleValue={false}
             title="This is test title"
@@ -9222,15 +9264,15 @@ exports[`RichEditor tests  should render given title and description with error 
               ],
               "results": Array [
                 Object {
-                  "type": "return",
+                  "isThrow": false,
                   "value": undefined,
                 },
                 Object {
-                  "type": "return",
+                  "isThrow": false,
                   "value": undefined,
                 },
                 Object {
-                  "type": "return",
+                  "isThrow": false,
                   "value": undefined,
                 },
               ],
@@ -9242,6 +9284,13 @@ exports[`RichEditor tests  should render given title and description with error 
             description="This is description with error"
             disabled={false}
             height={100}
+            inputRef={
+              Object {
+                "current": <div
+                  class=""
+                />,
+              }
+            }
             meta={
               Object {
                 "error": "This field is required",
