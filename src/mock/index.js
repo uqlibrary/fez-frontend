@@ -1,3 +1,4 @@
+/* eslint-disable */
 import {api, sessionApi} from 'config';
 import MockAdapter from 'axios-mock-adapter';
 import Cookies from 'js-cookie';
@@ -76,7 +77,6 @@ mock
         else if (config.params.source === 'crossref' && config.params.title) return [200, mockData.externalTitleSearchResultsList];
         else if (config.params.source === 'crossref' && config.params.doi) return [200, mockData.externalDoiSearchResultList];
         else if (config.params.source === 'pubmed' && config.params.id) return [200, mockData.externalPubMedSearchResultsList];
-        return [500, []];
     })
     .onGet(routes.CURRENT_USER_RECORDS_API({}).apiUrl).reply(config => {
         // AUTHOR_PUBLICATIONS_STATS_ONLY_API
