@@ -22,7 +22,7 @@ describe('DocumentTypeField component', () => {
     it('should render disabled view', () => {
         const wrapper = setup({disabled: true});
         expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('WithStyles(Select)').props().disabled).toBeTruthy();
+        expect(wrapper.find('WithStyles(WithFormControlContext(Select))').props().disabled).toBeTruthy();
     });
 
     it('should render with given document types selected by default', () => {
@@ -39,7 +39,7 @@ describe('DocumentTypeField component', () => {
         const wrapper = setup({
             updateDocTypeValues: updateDocTypeValuesFn
         });
-        wrapper.find('WithStyles(Select)').props().onChange({target: {value: 316}});
+        wrapper.find('WithStyles(WithFormControlContext(Select))').props().onChange({target: {value: 316}});
         expect(updateDocTypeValuesFn).toHaveBeenCalledWith(316);
     });
 
@@ -71,6 +71,6 @@ describe('DocumentTypeField component', () => {
         const wrapper = setup({
             docTypes: null
         });
-        expect(wrapper.find('WithStyles(Select)').prop('value')).toBe('0');
+        expect(wrapper.find('WithStyles(WithFormControlContext(Select))').prop('value')).toBe('0');
     });
 });

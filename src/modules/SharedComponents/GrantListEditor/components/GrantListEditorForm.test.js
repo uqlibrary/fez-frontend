@@ -57,7 +57,7 @@ describe('GrantListEditorForm', () => {
             grantId: '1234'
         });
         expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('WithStyles(FormHelperText)').length).toEqual(1);
+        expect(wrapper.find('WithStyles(WithFormControlContext(FormHelperText))').length).toEqual(1);
     });
 
     it('should add grant', () => {

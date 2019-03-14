@@ -80,7 +80,7 @@ export class ThirdPartyLookupForm extends PureComponent {
                     <StandardCard noHeader>
                         <Grid container spacing={24}>
                             <Grid item style={{flexGrow: 1, width: 1}}>
-                                <Typography variant={'headline'}>{lookupLabel}</Typography>
+                                <Typography variant="h5">{lookupLabel}</Typography>
                             </Grid>
                             <Grid item>
                                 <IconButton

@@ -97,7 +97,7 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
         }
       >
         <WithStyles(Typography)
-          variant="headline"
+          variant="h5"
         >
           Advanced search
         </WithStyles(Typography)>
@@ -178,7 +178,7 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
             item={true}
             xs={12}
           >
-            <WithStyles(FormControlLabel)
+            <WithStyles(WithFormControlContext(FormControlLabel))
               control={
                 <WithStyles(Checkbox)
                   aria-label="Check to search for publications with are only open access / full text"
@@ -358,7 +358,7 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
         }
       >
         <WithStyles(Typography)
-          variant="headline"
+          variant="h5"
         >
           Advanced search
         </WithStyles(Typography)>
@@ -439,7 +439,7 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
             item={true}
             xs={12}
           >
-            <WithStyles(FormControlLabel)
+            <WithStyles(WithFormControlContext(FormControlLabel))
               control={
                 <WithStyles(Checkbox)
                   aria-label="Check to search for publications with are only open access / full text"
@@ -619,7 +619,7 @@ exports[`AdvancedSearchComponent should render advanced search row based on prop
         }
       >
         <WithStyles(Typography)
-          variant="headline"
+          variant="h5"
         >
           Advanced search
         </WithStyles(Typography)>
@@ -694,7 +694,7 @@ exports[`AdvancedSearchComponent should render advanced search row based on prop
             item={true}
             xs={12}
           >
-            <WithStyles(FormControlLabel)
+            <WithStyles(WithFormControlContext(FormControlLabel))
               control={
                 <WithStyles(Checkbox)
                   aria-label="Check to search for publications with are only open access / full text"
@@ -868,7 +868,7 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
         }
       >
         <WithStyles(Typography)
-          variant="headline"
+          variant="h5"
         >
           Advanced search
         </WithStyles(Typography)>
@@ -949,7 +949,7 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
             item={true}
             xs={12}
           >
-            <WithStyles(FormControlLabel)
+            <WithStyles(WithFormControlContext(FormControlLabel))
               control={
                 <WithStyles(Checkbox)
                   aria-label="Check to search for publications with are only open access / full text"
@@ -1129,7 +1129,7 @@ exports[`AdvancedSearchComponent should render date range fields 1`] = `
         }
       >
         <WithStyles(Typography)
-          variant="headline"
+          variant="h5"
         >
           Advanced search
         </WithStyles(Typography)>
@@ -1251,7 +1251,7 @@ exports[`AdvancedSearchComponent should render date range fields 1`] = `
             item={true}
             xs={12}
           >
-            <WithStyles(FormControlLabel)
+            <WithStyles(WithFormControlContext(FormControlLabel))
               control={
                 <WithStyles(Checkbox)
                   aria-label="Check to search for publications with are only open access / full text"
@@ -1426,7 +1426,7 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
         }
       >
         <WithStyles(Typography)
-          variant="headline"
+          variant="h5"
         >
           Advanced search
         </WithStyles(Typography)>
@@ -1502,7 +1502,7 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
             item={true}
             xs={12}
           >
-            <WithStyles(FormControlLabel)
+            <WithStyles(WithFormControlContext(FormControlLabel))
               control={
                 <WithStyles(Checkbox)
                   aria-label="Check to search for publications with are only open access / full text"
@@ -1677,7 +1677,7 @@ exports[`AdvancedSearchComponent should render default view with open access che
         }
       >
         <WithStyles(Typography)
-          variant="headline"
+          variant="h5"
         >
           Advanced search
         </WithStyles(Typography)>
@@ -1753,7 +1753,7 @@ exports[`AdvancedSearchComponent should render default view with open access che
             item={true}
             xs={12}
           >
-            <WithStyles(FormControlLabel)
+            <WithStyles(WithFormControlContext(FormControlLabel))
               control={
                 <WithStyles(Checkbox)
                   aria-label="Check to search for publications with are only open access / full text"
@@ -1928,7 +1928,7 @@ exports[`AdvancedSearchComponent should render minimised view 1`] = `
         }
       >
         <WithStyles(Typography)
-          variant="headline"
+          variant="h5"
         >
           Advanced search
         </WithStyles(Typography)>
@@ -2007,7 +2007,7 @@ exports[`AdvancedSearchComponent should toggle minimised view for advanced searc
         }
       >
         <WithStyles(Typography)
-          variant="headline"
+          variant="h5"
         >
           Advanced search
         </WithStyles(Typography)>
@@ -2083,7 +2083,7 @@ exports[`AdvancedSearchComponent should toggle minimised view for advanced searc
             item={true}
             xs={12}
           >
-            <WithStyles(FormControlLabel)
+            <WithStyles(WithFormControlContext(FormControlLabel))
               control={
                 <WithStyles(Checkbox)
                   aria-label="Check to search for publications with are only open access / full text"

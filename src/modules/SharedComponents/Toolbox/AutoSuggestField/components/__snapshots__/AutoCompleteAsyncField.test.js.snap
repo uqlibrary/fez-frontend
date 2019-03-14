@@ -78,11 +78,12 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
     value="tes"
   />
   <div>
-    <WithTheme(Popper)
+    <Popper
       disablePortal={true}
       id="downshift-popper"
       open={true}
       placement="bottom-start"
+      transition={false}
     >
       <WithStyles(Paper)
         className="paper"
@@ -136,7 +137,7 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
           />
         </WithStyles(MenuItem)>
       </WithStyles(Paper)>
-    </WithTheme(Popper)>
+    </Popper>
   </div>
 </div>
 `;
@@ -164,11 +165,12 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
     value="123"
   />
   <div>
-    <WithTheme(Popper)
+    <Popper
       disablePortal={true}
       id="downshift-popper"
       open={true}
       placement="bottom-start"
+      transition={false}
     >
       <WithStyles(Paper)
         className="paper"
@@ -201,7 +203,7 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
           />
         </WithStyles(MenuItem)>
       </WithStyles(Paper)>
-    </WithTheme(Popper)>
+    </Popper>
   </div>
 </div>
 `;
@@ -211,11 +213,13 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
   button={true}
   classes={
     Object {
+      "gutters": "MuiMenuItem-gutters-36",
       "root": "MuiMenuItem-root-35",
-      "selected": "MuiMenuItem-selected-36",
+      "selected": "MuiMenuItem-selected-37",
     }
   }
   component="li"
+  disableGutters={false}
   role="menuitem"
   selected={false}
   style={
@@ -275,9 +279,9 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
     placeholder={null}
     value="123"
   />
-  <WithStyles(FormHelperText)>
+  <WithStyles(WithFormControlContext(FormHelperText))>
     This field is required
-  </WithStyles(FormHelperText)>
+  </WithStyles(WithFormControlContext(FormHelperText))>
 </WithStyles(FormControl)>
 `;
 
@@ -304,11 +308,12 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
     value="123"
   />
   <div>
-    <WithTheme(Popper)
+    <Popper
       disablePortal={true}
       id="downshift-popper"
       open={true}
       placement="bottom-start"
+      transition={false}
     >
       <WithStyles(Paper)
         className="paper"
@@ -341,7 +346,7 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
           />
         </WithStyles(MenuItem)>
       </WithStyles(Paper)>
-    </WithTheme(Popper)>
+    </Popper>
   </div>
 </div>
 `;
@@ -454,7 +459,7 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
         }
       }
     >
-      <MuiThemeProvider
+      <MuiThemeProviderOld
         theme={
           Object {
             "breakpoints": Object {
@@ -518,7 +523,7 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                 },
               },
               "MuiMenuItem": Object {
-                "selected": Object {
+                "&$selected": Object {
                   "backgroundColor": "#4085C6 !important",
                   "color": "#FFFFFF",
                 },
@@ -619,30 +624,30 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
             "props": Object {},
             "shadows": Array [
               "none",
-              "0px 1px 3px 0px rgba(0, 0, 0, 0.2),0px 1px 1px 0px rgba(0, 0, 0, 0.14),0px 2px 1px -1px rgba(0, 0, 0, 0.12)",
-              "0px 1px 5px 0px rgba(0, 0, 0, 0.2),0px 2px 2px 0px rgba(0, 0, 0, 0.14),0px 3px 1px -2px rgba(0, 0, 0, 0.12)",
-              "0px 1px 8px 0px rgba(0, 0, 0, 0.2),0px 3px 4px 0px rgba(0, 0, 0, 0.14),0px 3px 3px -2px rgba(0, 0, 0, 0.12)",
-              "0px 2px 4px -1px rgba(0, 0, 0, 0.2),0px 4px 5px 0px rgba(0, 0, 0, 0.14),0px 1px 10px 0px rgba(0, 0, 0, 0.12)",
-              "0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 5px 8px 0px rgba(0, 0, 0, 0.14),0px 1px 14px 0px rgba(0, 0, 0, 0.12)",
-              "0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 6px 10px 0px rgba(0, 0, 0, 0.14),0px 1px 18px 0px rgba(0, 0, 0, 0.12)",
-              "0px 4px 5px -2px rgba(0, 0, 0, 0.2),0px 7px 10px 1px rgba(0, 0, 0, 0.14),0px 2px 16px 1px rgba(0, 0, 0, 0.12)",
-              "0px 5px 5px -3px rgba(0, 0, 0, 0.2),0px 8px 10px 1px rgba(0, 0, 0, 0.14),0px 3px 14px 2px rgba(0, 0, 0, 0.12)",
-              "0px 5px 6px -3px rgba(0, 0, 0, 0.2),0px 9px 12px 1px rgba(0, 0, 0, 0.14),0px 3px 16px 2px rgba(0, 0, 0, 0.12)",
-              "0px 6px 6px -3px rgba(0, 0, 0, 0.2),0px 10px 14px 1px rgba(0, 0, 0, 0.14),0px 4px 18px 3px rgba(0, 0, 0, 0.12)",
-              "0px 6px 7px -4px rgba(0, 0, 0, 0.2),0px 11px 15px 1px rgba(0, 0, 0, 0.14),0px 4px 20px 3px rgba(0, 0, 0, 0.12)",
-              "0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 12px 17px 2px rgba(0, 0, 0, 0.14),0px 5px 22px 4px rgba(0, 0, 0, 0.12)",
-              "0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 13px 19px 2px rgba(0, 0, 0, 0.14),0px 5px 24px 4px rgba(0, 0, 0, 0.12)",
-              "0px 7px 9px -4px rgba(0, 0, 0, 0.2),0px 14px 21px 2px rgba(0, 0, 0, 0.14),0px 5px 26px 4px rgba(0, 0, 0, 0.12)",
-              "0px 8px 9px -5px rgba(0, 0, 0, 0.2),0px 15px 22px 2px rgba(0, 0, 0, 0.14),0px 6px 28px 5px rgba(0, 0, 0, 0.12)",
-              "0px 8px 10px -5px rgba(0, 0, 0, 0.2),0px 16px 24px 2px rgba(0, 0, 0, 0.14),0px 6px 30px 5px rgba(0, 0, 0, 0.12)",
-              "0px 8px 11px -5px rgba(0, 0, 0, 0.2),0px 17px 26px 2px rgba(0, 0, 0, 0.14),0px 6px 32px 5px rgba(0, 0, 0, 0.12)",
-              "0px 9px 11px -5px rgba(0, 0, 0, 0.2),0px 18px 28px 2px rgba(0, 0, 0, 0.14),0px 7px 34px 6px rgba(0, 0, 0, 0.12)",
-              "0px 9px 12px -6px rgba(0, 0, 0, 0.2),0px 19px 29px 2px rgba(0, 0, 0, 0.14),0px 7px 36px 6px rgba(0, 0, 0, 0.12)",
-              "0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 20px 31px 3px rgba(0, 0, 0, 0.14),0px 8px 38px 7px rgba(0, 0, 0, 0.12)",
-              "0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 21px 33px 3px rgba(0, 0, 0, 0.14),0px 8px 40px 7px rgba(0, 0, 0, 0.12)",
-              "0px 10px 14px -6px rgba(0, 0, 0, 0.2),0px 22px 35px 3px rgba(0, 0, 0, 0.14),0px 8px 42px 7px rgba(0, 0, 0, 0.12)",
-              "0px 11px 14px -7px rgba(0, 0, 0, 0.2),0px 23px 36px 3px rgba(0, 0, 0, 0.14),0px 9px 44px 8px rgba(0, 0, 0, 0.12)",
-              "0px 11px 15px -7px rgba(0, 0, 0, 0.2),0px 24px 38px 3px rgba(0, 0, 0, 0.14),0px 9px 46px 8px rgba(0, 0, 0, 0.12)",
+              "0px 1px 3px 0px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 2px 1px -1px rgba(0,0,0,0.12)",
+              "0px 1px 5px 0px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 3px 1px -2px rgba(0,0,0,0.12)",
+              "0px 1px 8px 0px rgba(0,0,0,0.2),0px 3px 4px 0px rgba(0,0,0,0.14),0px 3px 3px -2px rgba(0,0,0,0.12)",
+              "0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12)",
+              "0px 3px 5px -1px rgba(0,0,0,0.2),0px 5px 8px 0px rgba(0,0,0,0.14),0px 1px 14px 0px rgba(0,0,0,0.12)",
+              "0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12)",
+              "0px 4px 5px -2px rgba(0,0,0,0.2),0px 7px 10px 1px rgba(0,0,0,0.14),0px 2px 16px 1px rgba(0,0,0,0.12)",
+              "0px 5px 5px -3px rgba(0,0,0,0.2),0px 8px 10px 1px rgba(0,0,0,0.14),0px 3px 14px 2px rgba(0,0,0,0.12)",
+              "0px 5px 6px -3px rgba(0,0,0,0.2),0px 9px 12px 1px rgba(0,0,0,0.14),0px 3px 16px 2px rgba(0,0,0,0.12)",
+              "0px 6px 6px -3px rgba(0,0,0,0.2),0px 10px 14px 1px rgba(0,0,0,0.14),0px 4px 18px 3px rgba(0,0,0,0.12)",
+              "0px 6px 7px -4px rgba(0,0,0,0.2),0px 11px 15px 1px rgba(0,0,0,0.14),0px 4px 20px 3px rgba(0,0,0,0.12)",
+              "0px 7px 8px -4px rgba(0,0,0,0.2),0px 12px 17px 2px rgba(0,0,0,0.14),0px 5px 22px 4px rgba(0,0,0,0.12)",
+              "0px 7px 8px -4px rgba(0,0,0,0.2),0px 13px 19px 2px rgba(0,0,0,0.14),0px 5px 24px 4px rgba(0,0,0,0.12)",
+              "0px 7px 9px -4px rgba(0,0,0,0.2),0px 14px 21px 2px rgba(0,0,0,0.14),0px 5px 26px 4px rgba(0,0,0,0.12)",
+              "0px 8px 9px -5px rgba(0,0,0,0.2),0px 15px 22px 2px rgba(0,0,0,0.14),0px 6px 28px 5px rgba(0,0,0,0.12)",
+              "0px 8px 10px -5px rgba(0,0,0,0.2),0px 16px 24px 2px rgba(0,0,0,0.14),0px 6px 30px 5px rgba(0,0,0,0.12)",
+              "0px 8px 11px -5px rgba(0,0,0,0.2),0px 17px 26px 2px rgba(0,0,0,0.14),0px 6px 32px 5px rgba(0,0,0,0.12)",
+              "0px 9px 11px -5px rgba(0,0,0,0.2),0px 18px 28px 2px rgba(0,0,0,0.14),0px 7px 34px 6px rgba(0,0,0,0.12)",
+              "0px 9px 12px -6px rgba(0,0,0,0.2),0px 19px 29px 2px rgba(0,0,0,0.14),0px 7px 36px 6px rgba(0,0,0,0.12)",
+              "0px 10px 13px -6px rgba(0,0,0,0.2),0px 20px 31px 3px rgba(0,0,0,0.14),0px 8px 38px 7px rgba(0,0,0,0.12)",
+              "0px 10px 13px -6px rgba(0,0,0,0.2),0px 21px 33px 3px rgba(0,0,0,0.14),0px 8px 40px 7px rgba(0,0,0,0.12)",
+              "0px 10px 14px -6px rgba(0,0,0,0.2),0px 22px 35px 3px rgba(0,0,0,0.14),0px 8px 42px 7px rgba(0,0,0,0.12)",
+              "0px 11px 14px -7px rgba(0,0,0,0.2),0px 23px 36px 3px rgba(0,0,0,0.14),0px 9px 44px 8px rgba(0,0,0,0.12)",
+              "0px 11px 15px -7px rgba(0,0,0,0.2),0px 24px 38px 3px rgba(0,0,0,0.14),0px 9px 46px 8px rgba(0,0,0,0.12)",
             ],
             "shape": Object {
               "borderRadius": 4,
@@ -712,7 +717,7 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                 "fontSize": "0.875rem",
                 "fontWeight": 400,
                 "letterSpacing": "0.02857em",
-                "lineHeight": 1.5,
+                "lineHeight": 1.75,
                 "textTransform": "uppercase",
               },
               "buttonNext": Object {
@@ -721,7 +726,7 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                 "fontSize": "0.875rem",
                 "fontWeight": 400,
                 "letterSpacing": "0.02857em",
-                "lineHeight": 1.5,
+                "lineHeight": 1.75,
                 "textTransform": "uppercase",
               },
               "caption": Object {
@@ -1145,7 +1150,7 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                                   placeholder={null}
                                   value=""
                                 >
-                                  <WithStyles(InputBase)
+                                  <WithStyles(WithFormControlContext(InputBase))
                                     aria-activedescendant={null}
                                     aria-autocomplete="list"
                                     aria-controls={null}
@@ -1180,7 +1185,7 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                                     type="text"
                                     value=""
                                   >
-                                    <InputBase
+                                    <WithFormControlContext(InputBase)
                                       aria-activedescendant={null}
                                       aria-autocomplete="list"
                                       aria-controls={null}
@@ -1219,32 +1224,88 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                                       type="text"
                                       value=""
                                     >
-                                      <div
+                                      <InputBase
                                         aria-activedescendant={null}
                                         aria-autocomplete="list"
                                         aria-controls={null}
                                         aria-labelledby="downshift-1-label"
-                                        className="MuiInputBase-root-18 MuiInput-root-5 inputRoot MuiInput-underline-9 MuiInputBase-fullWidth-27 MuiInput-fullWidth-12 MuiInputBase-formControl-19 MuiInput-formControl-6"
-                                        onClick={[Function]}
+                                        autoComplete="off"
+                                        classes={
+                                          Object {
+                                            "adornedEnd": "MuiInputBase-adornedEnd-23",
+                                            "adornedStart": "MuiInputBase-adornedStart-22",
+                                            "disabled": "MuiInputBase-disabled-21 MuiInput-disabled-8",
+                                            "error": "MuiInputBase-error-24 MuiInput-error-10",
+                                            "focused": "MuiInputBase-focused-20 MuiInput-focused-7",
+                                            "formControl": "MuiInputBase-formControl-19 MuiInput-formControl-6",
+                                            "fullWidth": "MuiInputBase-fullWidth-27 MuiInput-fullWidth-12",
+                                            "input": "MuiInputBase-input-28 MuiInput-input-13",
+                                            "inputAdornedEnd": "MuiInputBase-inputAdornedEnd-34",
+                                            "inputAdornedStart": "MuiInputBase-inputAdornedStart-33",
+                                            "inputMarginDense": "MuiInputBase-inputMarginDense-29 MuiInput-inputMarginDense-14",
+                                            "inputMultiline": "MuiInputBase-inputMultiline-30 MuiInput-inputMultiline-15",
+                                            "inputType": "MuiInputBase-inputType-31 MuiInput-inputType-16",
+                                            "inputTypeSearch": "MuiInputBase-inputTypeSearch-32 MuiInput-inputTypeSearch-17",
+                                            "marginDense": "MuiInputBase-marginDense-25",
+                                            "multiline": "MuiInputBase-multiline-26 MuiInput-multiline-11",
+                                            "root": "MuiInputBase-root-18 MuiInput-root-5 inputRoot MuiInput-underline-9",
+                                          }
+                                        }
+                                        fullWidth={true}
+                                        id="downshift-1-input"
+                                        inputComponent="input"
+                                        inputRef={[Function]}
+                                        muiFormControl={
+                                          Object {
+                                            "adornedStart": false,
+                                            "disabled": false,
+                                            "error": false,
+                                            "filled": false,
+                                            "focused": false,
+                                            "margin": "none",
+                                            "onBlur": [Function],
+                                            "onEmpty": [Function],
+                                            "onFilled": [Function],
+                                            "onFocus": [Function],
+                                            "required": true,
+                                            "variant": "standard",
+                                          }
+                                        }
+                                        multiline={false}
+                                        onBlur={[Function]}
+                                        onChange={[Function]}
+                                        onKeyDown={[Function]}
+                                        placeholder={null}
+                                        type="text"
+                                        value=""
                                       >
-                                        <input
-                                          aria-invalid={false}
-                                          autoComplete="off"
-                                          className="MuiInputBase-input-28 MuiInput-input-13"
-                                          disabled={false}
-                                          id="downshift-1-input"
-                                          onBlur={[Function]}
-                                          onChange={[Function]}
-                                          onFocus={[Function]}
-                                          onKeyDown={[Function]}
-                                          placeholder={null}
-                                          required={true}
-                                          type="text"
-                                          value=""
-                                        />
-                                      </div>
-                                    </InputBase>
-                                  </WithStyles(InputBase)>
+                                        <div
+                                          aria-activedescendant={null}
+                                          aria-autocomplete="list"
+                                          aria-controls={null}
+                                          aria-labelledby="downshift-1-label"
+                                          className="MuiInputBase-root-18 MuiInput-root-5 inputRoot MuiInput-underline-9 MuiInputBase-fullWidth-27 MuiInput-fullWidth-12 MuiInputBase-formControl-19 MuiInput-formControl-6"
+                                          onClick={[Function]}
+                                        >
+                                          <input
+                                            aria-invalid={false}
+                                            autoComplete="off"
+                                            className="MuiInputBase-input-28 MuiInput-input-13"
+                                            disabled={false}
+                                            id="downshift-1-input"
+                                            onBlur={[Function]}
+                                            onChange={[Function]}
+                                            onFocus={[Function]}
+                                            onKeyDown={[Function]}
+                                            placeholder={null}
+                                            required={true}
+                                            type="text"
+                                            value=""
+                                          />
+                                        </div>
+                                      </InputBase>
+                                    </WithFormControlContext(InputBase)>
+                                  </WithStyles(WithFormControlContext(InputBase))>
                                 </Input>
                               </WithStyles(Input)>
                             </div>
@@ -1258,7 +1319,7 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
             </div>
           </AutoCompleteAsyncField>
         </MuiPickersUtilsProvider>
-      </MuiThemeProvider>
+      </MuiThemeProviderOld>
     </Router>
   </MemoryRouter>
 </Provider>
@@ -1316,7 +1377,7 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
         }
       }
     >
-      <MuiThemeProvider
+      <MuiThemeProviderOld
         theme={
           Object {
             "breakpoints": Object {
@@ -1380,7 +1441,7 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
                 },
               },
               "MuiMenuItem": Object {
-                "selected": Object {
+                "&$selected": Object {
                   "backgroundColor": "#4085C6 !important",
                   "color": "#FFFFFF",
                 },
@@ -1481,30 +1542,30 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
             "props": Object {},
             "shadows": Array [
               "none",
-              "0px 1px 3px 0px rgba(0, 0, 0, 0.2),0px 1px 1px 0px rgba(0, 0, 0, 0.14),0px 2px 1px -1px rgba(0, 0, 0, 0.12)",
-              "0px 1px 5px 0px rgba(0, 0, 0, 0.2),0px 2px 2px 0px rgba(0, 0, 0, 0.14),0px 3px 1px -2px rgba(0, 0, 0, 0.12)",
-              "0px 1px 8px 0px rgba(0, 0, 0, 0.2),0px 3px 4px 0px rgba(0, 0, 0, 0.14),0px 3px 3px -2px rgba(0, 0, 0, 0.12)",
-              "0px 2px 4px -1px rgba(0, 0, 0, 0.2),0px 4px 5px 0px rgba(0, 0, 0, 0.14),0px 1px 10px 0px rgba(0, 0, 0, 0.12)",
-              "0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 5px 8px 0px rgba(0, 0, 0, 0.14),0px 1px 14px 0px rgba(0, 0, 0, 0.12)",
-              "0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 6px 10px 0px rgba(0, 0, 0, 0.14),0px 1px 18px 0px rgba(0, 0, 0, 0.12)",
-              "0px 4px 5px -2px rgba(0, 0, 0, 0.2),0px 7px 10px 1px rgba(0, 0, 0, 0.14),0px 2px 16px 1px rgba(0, 0, 0, 0.12)",
-              "0px 5px 5px -3px rgba(0, 0, 0, 0.2),0px 8px 10px 1px rgba(0, 0, 0, 0.14),0px 3px 14px 2px rgba(0, 0, 0, 0.12)",
-              "0px 5px 6px -3px rgba(0, 0, 0, 0.2),0px 9px 12px 1px rgba(0, 0, 0, 0.14),0px 3px 16px 2px rgba(0, 0, 0, 0.12)",
-              "0px 6px 6px -3px rgba(0, 0, 0, 0.2),0px 10px 14px 1px rgba(0, 0, 0, 0.14),0px 4px 18px 3px rgba(0, 0, 0, 0.12)",
-              "0px 6px 7px -4px rgba(0, 0, 0, 0.2),0px 11px 15px 1px rgba(0, 0, 0, 0.14),0px 4px 20px 3px rgba(0, 0, 0, 0.12)",
-              "0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 12px 17px 2px rgba(0, 0, 0, 0.14),0px 5px 22px 4px rgba(0, 0, 0, 0.12)",
-              "0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 13px 19px 2px rgba(0, 0, 0, 0.14),0px 5px 24px 4px rgba(0, 0, 0, 0.12)",
-              "0px 7px 9px -4px rgba(0, 0, 0, 0.2),0px 14px 21px 2px rgba(0, 0, 0, 0.14),0px 5px 26px 4px rgba(0, 0, 0, 0.12)",
-              "0px 8px 9px -5px rgba(0, 0, 0, 0.2),0px 15px 22px 2px rgba(0, 0, 0, 0.14),0px 6px 28px 5px rgba(0, 0, 0, 0.12)",
-              "0px 8px 10px -5px rgba(0, 0, 0, 0.2),0px 16px 24px 2px rgba(0, 0, 0, 0.14),0px 6px 30px 5px rgba(0, 0, 0, 0.12)",
-              "0px 8px 11px -5px rgba(0, 0, 0, 0.2),0px 17px 26px 2px rgba(0, 0, 0, 0.14),0px 6px 32px 5px rgba(0, 0, 0, 0.12)",
-              "0px 9px 11px -5px rgba(0, 0, 0, 0.2),0px 18px 28px 2px rgba(0, 0, 0, 0.14),0px 7px 34px 6px rgba(0, 0, 0, 0.12)",
-              "0px 9px 12px -6px rgba(0, 0, 0, 0.2),0px 19px 29px 2px rgba(0, 0, 0, 0.14),0px 7px 36px 6px rgba(0, 0, 0, 0.12)",
-              "0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 20px 31px 3px rgba(0, 0, 0, 0.14),0px 8px 38px 7px rgba(0, 0, 0, 0.12)",
-              "0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 21px 33px 3px rgba(0, 0, 0, 0.14),0px 8px 40px 7px rgba(0, 0, 0, 0.12)",
-              "0px 10px 14px -6px rgba(0, 0, 0, 0.2),0px 22px 35px 3px rgba(0, 0, 0, 0.14),0px 8px 42px 7px rgba(0, 0, 0, 0.12)",
-              "0px 11px 14px -7px rgba(0, 0, 0, 0.2),0px 23px 36px 3px rgba(0, 0, 0, 0.14),0px 9px 44px 8px rgba(0, 0, 0, 0.12)",
-              "0px 11px 15px -7px rgba(0, 0, 0, 0.2),0px 24px 38px 3px rgba(0, 0, 0, 0.14),0px 9px 46px 8px rgba(0, 0, 0, 0.12)",
+              "0px 1px 3px 0px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 2px 1px -1px rgba(0,0,0,0.12)",
+              "0px 1px 5px 0px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 3px 1px -2px rgba(0,0,0,0.12)",
+              "0px 1px 8px 0px rgba(0,0,0,0.2),0px 3px 4px 0px rgba(0,0,0,0.14),0px 3px 3px -2px rgba(0,0,0,0.12)",
+              "0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12)",
+              "0px 3px 5px -1px rgba(0,0,0,0.2),0px 5px 8px 0px rgba(0,0,0,0.14),0px 1px 14px 0px rgba(0,0,0,0.12)",
+              "0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12)",
+              "0px 4px 5px -2px rgba(0,0,0,0.2),0px 7px 10px 1px rgba(0,0,0,0.14),0px 2px 16px 1px rgba(0,0,0,0.12)",
+              "0px 5px 5px -3px rgba(0,0,0,0.2),0px 8px 10px 1px rgba(0,0,0,0.14),0px 3px 14px 2px rgba(0,0,0,0.12)",
+              "0px 5px 6px -3px rgba(0,0,0,0.2),0px 9px 12px 1px rgba(0,0,0,0.14),0px 3px 16px 2px rgba(0,0,0,0.12)",
+              "0px 6px 6px -3px rgba(0,0,0,0.2),0px 10px 14px 1px rgba(0,0,0,0.14),0px 4px 18px 3px rgba(0,0,0,0.12)",
+              "0px 6px 7px -4px rgba(0,0,0,0.2),0px 11px 15px 1px rgba(0,0,0,0.14),0px 4px 20px 3px rgba(0,0,0,0.12)",
+              "0px 7px 8px -4px rgba(0,0,0,0.2),0px 12px 17px 2px rgba(0,0,0,0.14),0px 5px 22px 4px rgba(0,0,0,0.12)",
+              "0px 7px 8px -4px rgba(0,0,0,0.2),0px 13px 19px 2px rgba(0,0,0,0.14),0px 5px 24px 4px rgba(0,0,0,0.12)",
+              "0px 7px 9px -4px rgba(0,0,0,0.2),0px 14px 21px 2px rgba(0,0,0,0.14),0px 5px 26px 4px rgba(0,0,0,0.12)",
+              "0px 8px 9px -5px rgba(0,0,0,0.2),0px 15px 22px 2px rgba(0,0,0,0.14),0px 6px 28px 5px rgba(0,0,0,0.12)",
+              "0px 8px 10px -5px rgba(0,0,0,0.2),0px 16px 24px 2px rgba(0,0,0,0.14),0px 6px 30px 5px rgba(0,0,0,0.12)",
+              "0px 8px 11px -5px rgba(0,0,0,0.2),0px 17px 26px 2px rgba(0,0,0,0.14),0px 6px 32px 5px rgba(0,0,0,0.12)",
+              "0px 9px 11px -5px rgba(0,0,0,0.2),0px 18px 28px 2px rgba(0,0,0,0.14),0px 7px 34px 6px rgba(0,0,0,0.12)",
+              "0px 9px 12px -6px rgba(0,0,0,0.2),0px 19px 29px 2px rgba(0,0,0,0.14),0px 7px 36px 6px rgba(0,0,0,0.12)",
+              "0px 10px 13px -6px rgba(0,0,0,0.2),0px 20px 31px 3px rgba(0,0,0,0.14),0px 8px 38px 7px rgba(0,0,0,0.12)",
+              "0px 10px 13px -6px rgba(0,0,0,0.2),0px 21px 33px 3px rgba(0,0,0,0.14),0px 8px 40px 7px rgba(0,0,0,0.12)",
+              "0px 10px 14px -6px rgba(0,0,0,0.2),0px 22px 35px 3px rgba(0,0,0,0.14),0px 8px 42px 7px rgba(0,0,0,0.12)",
+              "0px 11px 14px -7px rgba(0,0,0,0.2),0px 23px 36px 3px rgba(0,0,0,0.14),0px 9px 44px 8px rgba(0,0,0,0.12)",
+              "0px 11px 15px -7px rgba(0,0,0,0.2),0px 24px 38px 3px rgba(0,0,0,0.14),0px 9px 46px 8px rgba(0,0,0,0.12)",
             ],
             "shape": Object {
               "borderRadius": 4,
@@ -1574,7 +1635,7 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
                 "fontSize": "0.875rem",
                 "fontWeight": 400,
                 "letterSpacing": "0.02857em",
-                "lineHeight": 1.5,
+                "lineHeight": 1.75,
                 "textTransform": "uppercase",
               },
               "buttonNext": Object {
@@ -1583,7 +1644,7 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
                 "fontSize": "0.875rem",
                 "fontWeight": 400,
                 "letterSpacing": "0.02857em",
-                "lineHeight": 1.5,
+                "lineHeight": 1.75,
                 "textTransform": "uppercase",
               },
               "caption": Object {
@@ -2031,7 +2092,7 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
                                   placeholder={null}
                                   value=""
                                 >
-                                  <WithStyles(InputBase)
+                                  <WithStyles(WithFormControlContext(InputBase))
                                     aria-activedescendant={null}
                                     aria-autocomplete="list"
                                     aria-controls={null}
@@ -2066,7 +2127,7 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
                                     type="text"
                                     value=""
                                   >
-                                    <InputBase
+                                    <WithFormControlContext(InputBase)
                                       aria-activedescendant={null}
                                       aria-autocomplete="list"
                                       aria-controls={null}
@@ -2105,32 +2166,88 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
                                       type="text"
                                       value=""
                                     >
-                                      <div
+                                      <InputBase
                                         aria-activedescendant={null}
                                         aria-autocomplete="list"
                                         aria-controls={null}
                                         aria-labelledby="downshift-2-label"
-                                        className="MuiInputBase-root-18 MuiInput-root-5 inputRoot MuiInput-underline-9 MuiInputBase-fullWidth-27 MuiInput-fullWidth-12 MuiInputBase-formControl-19 MuiInput-formControl-6"
-                                        onClick={[Function]}
+                                        autoComplete="off"
+                                        classes={
+                                          Object {
+                                            "adornedEnd": "MuiInputBase-adornedEnd-23",
+                                            "adornedStart": "MuiInputBase-adornedStart-22",
+                                            "disabled": "MuiInputBase-disabled-21 MuiInput-disabled-8",
+                                            "error": "MuiInputBase-error-24 MuiInput-error-10",
+                                            "focused": "MuiInputBase-focused-20 MuiInput-focused-7",
+                                            "formControl": "MuiInputBase-formControl-19 MuiInput-formControl-6",
+                                            "fullWidth": "MuiInputBase-fullWidth-27 MuiInput-fullWidth-12",
+                                            "input": "MuiInputBase-input-28 MuiInput-input-13",
+                                            "inputAdornedEnd": "MuiInputBase-inputAdornedEnd-34",
+                                            "inputAdornedStart": "MuiInputBase-inputAdornedStart-33",
+                                            "inputMarginDense": "MuiInputBase-inputMarginDense-29 MuiInput-inputMarginDense-14",
+                                            "inputMultiline": "MuiInputBase-inputMultiline-30 MuiInput-inputMultiline-15",
+                                            "inputType": "MuiInputBase-inputType-31 MuiInput-inputType-16",
+                                            "inputTypeSearch": "MuiInputBase-inputTypeSearch-32 MuiInput-inputTypeSearch-17",
+                                            "marginDense": "MuiInputBase-marginDense-25",
+                                            "multiline": "MuiInputBase-multiline-26 MuiInput-multiline-11",
+                                            "root": "MuiInputBase-root-18 MuiInput-root-5 inputRoot MuiInput-underline-9",
+                                          }
+                                        }
+                                        fullWidth={true}
+                                        id="downshift-2-input"
+                                        inputComponent="input"
+                                        inputRef={[Function]}
+                                        muiFormControl={
+                                          Object {
+                                            "adornedStart": false,
+                                            "disabled": false,
+                                            "error": false,
+                                            "filled": false,
+                                            "focused": false,
+                                            "margin": "none",
+                                            "onBlur": [Function],
+                                            "onEmpty": [Function],
+                                            "onFilled": [Function],
+                                            "onFocus": [Function],
+                                            "required": false,
+                                            "variant": "standard",
+                                          }
+                                        }
+                                        multiline={false}
+                                        onBlur={[Function]}
+                                        onChange={[Function]}
+                                        onKeyDown={[Function]}
+                                        placeholder={null}
+                                        type="text"
+                                        value=""
                                       >
-                                        <input
-                                          aria-invalid={false}
-                                          autoComplete="off"
-                                          className="MuiInputBase-input-28 MuiInput-input-13"
-                                          disabled={false}
-                                          id="downshift-2-input"
-                                          onBlur={[Function]}
-                                          onChange={[Function]}
-                                          onFocus={[Function]}
-                                          onKeyDown={[Function]}
-                                          placeholder={null}
-                                          required={false}
-                                          type="text"
-                                          value=""
-                                        />
-                                      </div>
-                                    </InputBase>
-                                  </WithStyles(InputBase)>
+                                        <div
+                                          aria-activedescendant={null}
+                                          aria-autocomplete="list"
+                                          aria-controls={null}
+                                          aria-labelledby="downshift-2-label"
+                                          className="MuiInputBase-root-18 MuiInput-root-5 inputRoot MuiInput-underline-9 MuiInputBase-fullWidth-27 MuiInput-fullWidth-12 MuiInputBase-formControl-19 MuiInput-formControl-6"
+                                          onClick={[Function]}
+                                        >
+                                          <input
+                                            aria-invalid={false}
+                                            autoComplete="off"
+                                            className="MuiInputBase-input-28 MuiInput-input-13"
+                                            disabled={false}
+                                            id="downshift-2-input"
+                                            onBlur={[Function]}
+                                            onChange={[Function]}
+                                            onFocus={[Function]}
+                                            onKeyDown={[Function]}
+                                            placeholder={null}
+                                            required={false}
+                                            type="text"
+                                            value=""
+                                          />
+                                        </div>
+                                      </InputBase>
+                                    </WithFormControlContext(InputBase)>
+                                  </WithStyles(WithFormControlContext(InputBase))>
                                 </Input>
                               </WithStyles(Input)>
                             </div>
@@ -2144,7 +2261,7 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
             </div>
           </AutoCompleteAsyncField>
         </MuiPickersUtilsProvider>
-      </MuiThemeProvider>
+      </MuiThemeProviderOld>
     </Router>
   </MemoryRouter>
 </Provider>
@@ -2224,7 +2341,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
         }
       }
     >
-      <MuiThemeProvider
+      <MuiThemeProviderOld
         theme={
           Object {
             "breakpoints": Object {
@@ -2288,7 +2405,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                 },
               },
               "MuiMenuItem": Object {
-                "selected": Object {
+                "&$selected": Object {
                   "backgroundColor": "#4085C6 !important",
                   "color": "#FFFFFF",
                 },
@@ -2389,30 +2506,30 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
             "props": Object {},
             "shadows": Array [
               "none",
-              "0px 1px 3px 0px rgba(0, 0, 0, 0.2),0px 1px 1px 0px rgba(0, 0, 0, 0.14),0px 2px 1px -1px rgba(0, 0, 0, 0.12)",
-              "0px 1px 5px 0px rgba(0, 0, 0, 0.2),0px 2px 2px 0px rgba(0, 0, 0, 0.14),0px 3px 1px -2px rgba(0, 0, 0, 0.12)",
-              "0px 1px 8px 0px rgba(0, 0, 0, 0.2),0px 3px 4px 0px rgba(0, 0, 0, 0.14),0px 3px 3px -2px rgba(0, 0, 0, 0.12)",
-              "0px 2px 4px -1px rgba(0, 0, 0, 0.2),0px 4px 5px 0px rgba(0, 0, 0, 0.14),0px 1px 10px 0px rgba(0, 0, 0, 0.12)",
-              "0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 5px 8px 0px rgba(0, 0, 0, 0.14),0px 1px 14px 0px rgba(0, 0, 0, 0.12)",
-              "0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 6px 10px 0px rgba(0, 0, 0, 0.14),0px 1px 18px 0px rgba(0, 0, 0, 0.12)",
-              "0px 4px 5px -2px rgba(0, 0, 0, 0.2),0px 7px 10px 1px rgba(0, 0, 0, 0.14),0px 2px 16px 1px rgba(0, 0, 0, 0.12)",
-              "0px 5px 5px -3px rgba(0, 0, 0, 0.2),0px 8px 10px 1px rgba(0, 0, 0, 0.14),0px 3px 14px 2px rgba(0, 0, 0, 0.12)",
-              "0px 5px 6px -3px rgba(0, 0, 0, 0.2),0px 9px 12px 1px rgba(0, 0, 0, 0.14),0px 3px 16px 2px rgba(0, 0, 0, 0.12)",
-              "0px 6px 6px -3px rgba(0, 0, 0, 0.2),0px 10px 14px 1px rgba(0, 0, 0, 0.14),0px 4px 18px 3px rgba(0, 0, 0, 0.12)",
-              "0px 6px 7px -4px rgba(0, 0, 0, 0.2),0px 11px 15px 1px rgba(0, 0, 0, 0.14),0px 4px 20px 3px rgba(0, 0, 0, 0.12)",
-              "0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 12px 17px 2px rgba(0, 0, 0, 0.14),0px 5px 22px 4px rgba(0, 0, 0, 0.12)",
-              "0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 13px 19px 2px rgba(0, 0, 0, 0.14),0px 5px 24px 4px rgba(0, 0, 0, 0.12)",
-              "0px 7px 9px -4px rgba(0, 0, 0, 0.2),0px 14px 21px 2px rgba(0, 0, 0, 0.14),0px 5px 26px 4px rgba(0, 0, 0, 0.12)",
-              "0px 8px 9px -5px rgba(0, 0, 0, 0.2),0px 15px 22px 2px rgba(0, 0, 0, 0.14),0px 6px 28px 5px rgba(0, 0, 0, 0.12)",
-              "0px 8px 10px -5px rgba(0, 0, 0, 0.2),0px 16px 24px 2px rgba(0, 0, 0, 0.14),0px 6px 30px 5px rgba(0, 0, 0, 0.12)",
-              "0px 8px 11px -5px rgba(0, 0, 0, 0.2),0px 17px 26px 2px rgba(0, 0, 0, 0.14),0px 6px 32px 5px rgba(0, 0, 0, 0.12)",
-              "0px 9px 11px -5px rgba(0, 0, 0, 0.2),0px 18px 28px 2px rgba(0, 0, 0, 0.14),0px 7px 34px 6px rgba(0, 0, 0, 0.12)",
-              "0px 9px 12px -6px rgba(0, 0, 0, 0.2),0px 19px 29px 2px rgba(0, 0, 0, 0.14),0px 7px 36px 6px rgba(0, 0, 0, 0.12)",
-              "0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 20px 31px 3px rgba(0, 0, 0, 0.14),0px 8px 38px 7px rgba(0, 0, 0, 0.12)",
-              "0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 21px 33px 3px rgba(0, 0, 0, 0.14),0px 8px 40px 7px rgba(0, 0, 0, 0.12)",
-              "0px 10px 14px -6px rgba(0, 0, 0, 0.2),0px 22px 35px 3px rgba(0, 0, 0, 0.14),0px 8px 42px 7px rgba(0, 0, 0, 0.12)",
-              "0px 11px 14px -7px rgba(0, 0, 0, 0.2),0px 23px 36px 3px rgba(0, 0, 0, 0.14),0px 9px 44px 8px rgba(0, 0, 0, 0.12)",
-              "0px 11px 15px -7px rgba(0, 0, 0, 0.2),0px 24px 38px 3px rgba(0, 0, 0, 0.14),0px 9px 46px 8px rgba(0, 0, 0, 0.12)",
+              "0px 1px 3px 0px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 2px 1px -1px rgba(0,0,0,0.12)",
+              "0px 1px 5px 0px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 3px 1px -2px rgba(0,0,0,0.12)",
+              "0px 1px 8px 0px rgba(0,0,0,0.2),0px 3px 4px 0px rgba(0,0,0,0.14),0px 3px 3px -2px rgba(0,0,0,0.12)",
+              "0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12)",
+              "0px 3px 5px -1px rgba(0,0,0,0.2),0px 5px 8px 0px rgba(0,0,0,0.14),0px 1px 14px 0px rgba(0,0,0,0.12)",
+              "0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12)",
+              "0px 4px 5px -2px rgba(0,0,0,0.2),0px 7px 10px 1px rgba(0,0,0,0.14),0px 2px 16px 1px rgba(0,0,0,0.12)",
+              "0px 5px 5px -3px rgba(0,0,0,0.2),0px 8px 10px 1px rgba(0,0,0,0.14),0px 3px 14px 2px rgba(0,0,0,0.12)",
+              "0px 5px 6px -3px rgba(0,0,0,0.2),0px 9px 12px 1px rgba(0,0,0,0.14),0px 3px 16px 2px rgba(0,0,0,0.12)",
+              "0px 6px 6px -3px rgba(0,0,0,0.2),0px 10px 14px 1px rgba(0,0,0,0.14),0px 4px 18px 3px rgba(0,0,0,0.12)",
+              "0px 6px 7px -4px rgba(0,0,0,0.2),0px 11px 15px 1px rgba(0,0,0,0.14),0px 4px 20px 3px rgba(0,0,0,0.12)",
+              "0px 7px 8px -4px rgba(0,0,0,0.2),0px 12px 17px 2px rgba(0,0,0,0.14),0px 5px 22px 4px rgba(0,0,0,0.12)",
+              "0px 7px 8px -4px rgba(0,0,0,0.2),0px 13px 19px 2px rgba(0,0,0,0.14),0px 5px 24px 4px rgba(0,0,0,0.12)",
+              "0px 7px 9px -4px rgba(0,0,0,0.2),0px 14px 21px 2px rgba(0,0,0,0.14),0px 5px 26px 4px rgba(0,0,0,0.12)",
+              "0px 8px 9px -5px rgba(0,0,0,0.2),0px 15px 22px 2px rgba(0,0,0,0.14),0px 6px 28px 5px rgba(0,0,0,0.12)",
+              "0px 8px 10px -5px rgba(0,0,0,0.2),0px 16px 24px 2px rgba(0,0,0,0.14),0px 6px 30px 5px rgba(0,0,0,0.12)",
+              "0px 8px 11px -5px rgba(0,0,0,0.2),0px 17px 26px 2px rgba(0,0,0,0.14),0px 6px 32px 5px rgba(0,0,0,0.12)",
+              "0px 9px 11px -5px rgba(0,0,0,0.2),0px 18px 28px 2px rgba(0,0,0,0.14),0px 7px 34px 6px rgba(0,0,0,0.12)",
+              "0px 9px 12px -6px rgba(0,0,0,0.2),0px 19px 29px 2px rgba(0,0,0,0.14),0px 7px 36px 6px rgba(0,0,0,0.12)",
+              "0px 10px 13px -6px rgba(0,0,0,0.2),0px 20px 31px 3px rgba(0,0,0,0.14),0px 8px 38px 7px rgba(0,0,0,0.12)",
+              "0px 10px 13px -6px rgba(0,0,0,0.2),0px 21px 33px 3px rgba(0,0,0,0.14),0px 8px 40px 7px rgba(0,0,0,0.12)",
+              "0px 10px 14px -6px rgba(0,0,0,0.2),0px 22px 35px 3px rgba(0,0,0,0.14),0px 8px 42px 7px rgba(0,0,0,0.12)",
+              "0px 11px 14px -7px rgba(0,0,0,0.2),0px 23px 36px 3px rgba(0,0,0,0.14),0px 9px 44px 8px rgba(0,0,0,0.12)",
+              "0px 11px 15px -7px rgba(0,0,0,0.2),0px 24px 38px 3px rgba(0,0,0,0.14),0px 9px 46px 8px rgba(0,0,0,0.12)",
             ],
             "shape": Object {
               "borderRadius": 4,
@@ -2482,7 +2599,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                 "fontSize": "0.875rem",
                 "fontWeight": 400,
                 "letterSpacing": "0.02857em",
-                "lineHeight": 1.5,
+                "lineHeight": 1.75,
                 "textTransform": "uppercase",
               },
               "buttonNext": Object {
@@ -2491,7 +2608,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                 "fontSize": "0.875rem",
                 "fontWeight": 400,
                 "letterSpacing": "0.02857em",
-                "lineHeight": 1.5,
+                "lineHeight": 1.75,
                 "textTransform": "uppercase",
               },
               "caption": Object {
@@ -2964,7 +3081,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                   placeholder={null}
                                   value=""
                                 >
-                                  <WithStyles(InputBase)
+                                  <WithStyles(WithFormControlContext(InputBase))
                                     aria-activedescendant={null}
                                     aria-autocomplete="list"
                                     aria-controls={null}
@@ -2999,7 +3116,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                     type="text"
                                     value=""
                                   >
-                                    <InputBase
+                                    <WithFormControlContext(InputBase)
                                       aria-activedescendant={null}
                                       aria-autocomplete="list"
                                       aria-controls={null}
@@ -3038,32 +3155,88 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                       type="text"
                                       value=""
                                     >
-                                      <div
+                                      <InputBase
                                         aria-activedescendant={null}
                                         aria-autocomplete="list"
                                         aria-controls={null}
                                         aria-labelledby="downshift-3-label"
-                                        className="MuiInputBase-root-18 MuiInput-root-5 inputRoot MuiInput-underline-9 MuiInputBase-fullWidth-27 MuiInput-fullWidth-12 MuiInputBase-formControl-19 MuiInput-formControl-6"
-                                        onClick={[Function]}
+                                        autoComplete="off"
+                                        classes={
+                                          Object {
+                                            "adornedEnd": "MuiInputBase-adornedEnd-23",
+                                            "adornedStart": "MuiInputBase-adornedStart-22",
+                                            "disabled": "MuiInputBase-disabled-21 MuiInput-disabled-8",
+                                            "error": "MuiInputBase-error-24 MuiInput-error-10",
+                                            "focused": "MuiInputBase-focused-20 MuiInput-focused-7",
+                                            "formControl": "MuiInputBase-formControl-19 MuiInput-formControl-6",
+                                            "fullWidth": "MuiInputBase-fullWidth-27 MuiInput-fullWidth-12",
+                                            "input": "MuiInputBase-input-28 MuiInput-input-13",
+                                            "inputAdornedEnd": "MuiInputBase-inputAdornedEnd-34",
+                                            "inputAdornedStart": "MuiInputBase-inputAdornedStart-33",
+                                            "inputMarginDense": "MuiInputBase-inputMarginDense-29 MuiInput-inputMarginDense-14",
+                                            "inputMultiline": "MuiInputBase-inputMultiline-30 MuiInput-inputMultiline-15",
+                                            "inputType": "MuiInputBase-inputType-31 MuiInput-inputType-16",
+                                            "inputTypeSearch": "MuiInputBase-inputTypeSearch-32 MuiInput-inputTypeSearch-17",
+                                            "marginDense": "MuiInputBase-marginDense-25",
+                                            "multiline": "MuiInputBase-multiline-26 MuiInput-multiline-11",
+                                            "root": "MuiInputBase-root-18 MuiInput-root-5 inputRoot MuiInput-underline-9",
+                                          }
+                                        }
+                                        fullWidth={true}
+                                        id="downshift-3-input"
+                                        inputComponent="input"
+                                        inputRef={[Function]}
+                                        muiFormControl={
+                                          Object {
+                                            "adornedStart": false,
+                                            "disabled": false,
+                                            "error": false,
+                                            "filled": false,
+                                            "focused": false,
+                                            "margin": "none",
+                                            "onBlur": [Function],
+                                            "onEmpty": [Function],
+                                            "onFilled": [Function],
+                                            "onFocus": [Function],
+                                            "required": false,
+                                            "variant": "standard",
+                                          }
+                                        }
+                                        multiline={false}
+                                        onBlur={[Function]}
+                                        onChange={[Function]}
+                                        onKeyDown={[Function]}
+                                        placeholder={null}
+                                        type="text"
+                                        value=""
                                       >
-                                        <input
-                                          aria-invalid={false}
-                                          autoComplete="off"
-                                          className="MuiInputBase-input-28 MuiInput-input-13"
-                                          disabled={false}
-                                          id="downshift-3-input"
-                                          onBlur={[Function]}
-                                          onChange={[Function]}
-                                          onFocus={[Function]}
-                                          onKeyDown={[Function]}
-                                          placeholder={null}
-                                          required={false}
-                                          type="text"
-                                          value=""
-                                        />
-                                      </div>
-                                    </InputBase>
-                                  </WithStyles(InputBase)>
+                                        <div
+                                          aria-activedescendant={null}
+                                          aria-autocomplete="list"
+                                          aria-controls={null}
+                                          aria-labelledby="downshift-3-label"
+                                          className="MuiInputBase-root-18 MuiInput-root-5 inputRoot MuiInput-underline-9 MuiInputBase-fullWidth-27 MuiInput-fullWidth-12 MuiInputBase-formControl-19 MuiInput-formControl-6"
+                                          onClick={[Function]}
+                                        >
+                                          <input
+                                            aria-invalid={false}
+                                            autoComplete="off"
+                                            className="MuiInputBase-input-28 MuiInput-input-13"
+                                            disabled={false}
+                                            id="downshift-3-input"
+                                            onBlur={[Function]}
+                                            onChange={[Function]}
+                                            onFocus={[Function]}
+                                            onKeyDown={[Function]}
+                                            placeholder={null}
+                                            required={false}
+                                            type="text"
+                                            value=""
+                                          />
+                                        </div>
+                                      </InputBase>
+                                    </WithFormControlContext(InputBase)>
+                                  </WithStyles(WithFormControlContext(InputBase))>
                                 </Input>
                               </WithStyles(Input)>
                             </div>
@@ -3077,7 +3250,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
             </div>
           </AutoCompleteAsyncField>
         </MuiPickersUtilsProvider>
-      </MuiThemeProvider>
+      </MuiThemeProviderOld>
     </Router>
   </MemoryRouter>
 </Provider>
@@ -3135,7 +3308,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
         }
       }
     >
-      <MuiThemeProvider
+      <MuiThemeProviderOld
         theme={
           Object {
             "breakpoints": Object {
@@ -3199,7 +3372,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                 },
               },
               "MuiMenuItem": Object {
-                "selected": Object {
+                "&$selected": Object {
                   "backgroundColor": "#4085C6 !important",
                   "color": "#FFFFFF",
                 },
@@ -3300,30 +3473,30 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
             "props": Object {},
             "shadows": Array [
               "none",
-              "0px 1px 3px 0px rgba(0, 0, 0, 0.2),0px 1px 1px 0px rgba(0, 0, 0, 0.14),0px 2px 1px -1px rgba(0, 0, 0, 0.12)",
-              "0px 1px 5px 0px rgba(0, 0, 0, 0.2),0px 2px 2px 0px rgba(0, 0, 0, 0.14),0px 3px 1px -2px rgba(0, 0, 0, 0.12)",
-              "0px 1px 8px 0px rgba(0, 0, 0, 0.2),0px 3px 4px 0px rgba(0, 0, 0, 0.14),0px 3px 3px -2px rgba(0, 0, 0, 0.12)",
-              "0px 2px 4px -1px rgba(0, 0, 0, 0.2),0px 4px 5px 0px rgba(0, 0, 0, 0.14),0px 1px 10px 0px rgba(0, 0, 0, 0.12)",
-              "0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 5px 8px 0px rgba(0, 0, 0, 0.14),0px 1px 14px 0px rgba(0, 0, 0, 0.12)",
-              "0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 6px 10px 0px rgba(0, 0, 0, 0.14),0px 1px 18px 0px rgba(0, 0, 0, 0.12)",
-              "0px 4px 5px -2px rgba(0, 0, 0, 0.2),0px 7px 10px 1px rgba(0, 0, 0, 0.14),0px 2px 16px 1px rgba(0, 0, 0, 0.12)",
-              "0px 5px 5px -3px rgba(0, 0, 0, 0.2),0px 8px 10px 1px rgba(0, 0, 0, 0.14),0px 3px 14px 2px rgba(0, 0, 0, 0.12)",
-              "0px 5px 6px -3px rgba(0, 0, 0, 0.2),0px 9px 12px 1px rgba(0, 0, 0, 0.14),0px 3px 16px 2px rgba(0, 0, 0, 0.12)",
-              "0px 6px 6px -3px rgba(0, 0, 0, 0.2),0px 10px 14px 1px rgba(0, 0, 0, 0.14),0px 4px 18px 3px rgba(0, 0, 0, 0.12)",
-              "0px 6px 7px -4px rgba(0, 0, 0, 0.2),0px 11px 15px 1px rgba(0, 0, 0, 0.14),0px 4px 20px 3px rgba(0, 0, 0, 0.12)",
-              "0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 12px 17px 2px rgba(0, 0, 0, 0.14),0px 5px 22px 4px rgba(0, 0, 0, 0.12)",
-              "0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 13px 19px 2px rgba(0, 0, 0, 0.14),0px 5px 24px 4px rgba(0, 0, 0, 0.12)",
-              "0px 7px 9px -4px rgba(0, 0, 0, 0.2),0px 14px 21px 2px rgba(0, 0, 0, 0.14),0px 5px 26px 4px rgba(0, 0, 0, 0.12)",
-              "0px 8px 9px -5px rgba(0, 0, 0, 0.2),0px 15px 22px 2px rgba(0, 0, 0, 0.14),0px 6px 28px 5px rgba(0, 0, 0, 0.12)",
-              "0px 8px 10px -5px rgba(0, 0, 0, 0.2),0px 16px 24px 2px rgba(0, 0, 0, 0.14),0px 6px 30px 5px rgba(0, 0, 0, 0.12)",
-              "0px 8px 11px -5px rgba(0, 0, 0, 0.2),0px 17px 26px 2px rgba(0, 0, 0, 0.14),0px 6px 32px 5px rgba(0, 0, 0, 0.12)",
-              "0px 9px 11px -5px rgba(0, 0, 0, 0.2),0px 18px 28px 2px rgba(0, 0, 0, 0.14),0px 7px 34px 6px rgba(0, 0, 0, 0.12)",
-              "0px 9px 12px -6px rgba(0, 0, 0, 0.2),0px 19px 29px 2px rgba(0, 0, 0, 0.14),0px 7px 36px 6px rgba(0, 0, 0, 0.12)",
-              "0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 20px 31px 3px rgba(0, 0, 0, 0.14),0px 8px 38px 7px rgba(0, 0, 0, 0.12)",
-              "0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 21px 33px 3px rgba(0, 0, 0, 0.14),0px 8px 40px 7px rgba(0, 0, 0, 0.12)",
-              "0px 10px 14px -6px rgba(0, 0, 0, 0.2),0px 22px 35px 3px rgba(0, 0, 0, 0.14),0px 8px 42px 7px rgba(0, 0, 0, 0.12)",
-              "0px 11px 14px -7px rgba(0, 0, 0, 0.2),0px 23px 36px 3px rgba(0, 0, 0, 0.14),0px 9px 44px 8px rgba(0, 0, 0, 0.12)",
-              "0px 11px 15px -7px rgba(0, 0, 0, 0.2),0px 24px 38px 3px rgba(0, 0, 0, 0.14),0px 9px 46px 8px rgba(0, 0, 0, 0.12)",
+              "0px 1px 3px 0px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 2px 1px -1px rgba(0,0,0,0.12)",
+              "0px 1px 5px 0px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 3px 1px -2px rgba(0,0,0,0.12)",
+              "0px 1px 8px 0px rgba(0,0,0,0.2),0px 3px 4px 0px rgba(0,0,0,0.14),0px 3px 3px -2px rgba(0,0,0,0.12)",
+              "0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12)",
+              "0px 3px 5px -1px rgba(0,0,0,0.2),0px 5px 8px 0px rgba(0,0,0,0.14),0px 1px 14px 0px rgba(0,0,0,0.12)",
+              "0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12)",
+              "0px 4px 5px -2px rgba(0,0,0,0.2),0px 7px 10px 1px rgba(0,0,0,0.14),0px 2px 16px 1px rgba(0,0,0,0.12)",
+              "0px 5px 5px -3px rgba(0,0,0,0.2),0px 8px 10px 1px rgba(0,0,0,0.14),0px 3px 14px 2px rgba(0,0,0,0.12)",
+              "0px 5px 6px -3px rgba(0,0,0,0.2),0px 9px 12px 1px rgba(0,0,0,0.14),0px 3px 16px 2px rgba(0,0,0,0.12)",
+              "0px 6px 6px -3px rgba(0,0,0,0.2),0px 10px 14px 1px rgba(0,0,0,0.14),0px 4px 18px 3px rgba(0,0,0,0.12)",
+              "0px 6px 7px -4px rgba(0,0,0,0.2),0px 11px 15px 1px rgba(0,0,0,0.14),0px 4px 20px 3px rgba(0,0,0,0.12)",
+              "0px 7px 8px -4px rgba(0,0,0,0.2),0px 12px 17px 2px rgba(0,0,0,0.14),0px 5px 22px 4px rgba(0,0,0,0.12)",
+              "0px 7px 8px -4px rgba(0,0,0,0.2),0px 13px 19px 2px rgba(0,0,0,0.14),0px 5px 24px 4px rgba(0,0,0,0.12)",
+              "0px 7px 9px -4px rgba(0,0,0,0.2),0px 14px 21px 2px rgba(0,0,0,0.14),0px 5px 26px 4px rgba(0,0,0,0.12)",
+              "0px 8px 9px -5px rgba(0,0,0,0.2),0px 15px 22px 2px rgba(0,0,0,0.14),0px 6px 28px 5px rgba(0,0,0,0.12)",
+              "0px 8px 10px -5px rgba(0,0,0,0.2),0px 16px 24px 2px rgba(0,0,0,0.14),0px 6px 30px 5px rgba(0,0,0,0.12)",
+              "0px 8px 11px -5px rgba(0,0,0,0.2),0px 17px 26px 2px rgba(0,0,0,0.14),0px 6px 32px 5px rgba(0,0,0,0.12)",
+              "0px 9px 11px -5px rgba(0,0,0,0.2),0px 18px 28px 2px rgba(0,0,0,0.14),0px 7px 34px 6px rgba(0,0,0,0.12)",
+              "0px 9px 12px -6px rgba(0,0,0,0.2),0px 19px 29px 2px rgba(0,0,0,0.14),0px 7px 36px 6px rgba(0,0,0,0.12)",
+              "0px 10px 13px -6px rgba(0,0,0,0.2),0px 20px 31px 3px rgba(0,0,0,0.14),0px 8px 38px 7px rgba(0,0,0,0.12)",
+              "0px 10px 13px -6px rgba(0,0,0,0.2),0px 21px 33px 3px rgba(0,0,0,0.14),0px 8px 40px 7px rgba(0,0,0,0.12)",
+              "0px 10px 14px -6px rgba(0,0,0,0.2),0px 22px 35px 3px rgba(0,0,0,0.14),0px 8px 42px 7px rgba(0,0,0,0.12)",
+              "0px 11px 14px -7px rgba(0,0,0,0.2),0px 23px 36px 3px rgba(0,0,0,0.14),0px 9px 44px 8px rgba(0,0,0,0.12)",
+              "0px 11px 15px -7px rgba(0,0,0,0.2),0px 24px 38px 3px rgba(0,0,0,0.14),0px 9px 46px 8px rgba(0,0,0,0.12)",
             ],
             "shape": Object {
               "borderRadius": 4,
@@ -3393,7 +3566,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                 "fontSize": "0.875rem",
                 "fontWeight": 400,
                 "letterSpacing": "0.02857em",
-                "lineHeight": 1.5,
+                "lineHeight": 1.75,
                 "textTransform": "uppercase",
               },
               "buttonNext": Object {
@@ -3402,7 +3575,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                 "fontSize": "0.875rem",
                 "fontWeight": 400,
                 "letterSpacing": "0.02857em",
-                "lineHeight": 1.5,
+                "lineHeight": 1.75,
                 "textTransform": "uppercase",
               },
               "caption": Object {
@@ -3875,7 +4048,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                   placeholder={null}
                                   value=""
                                 >
-                                  <WithStyles(InputBase)
+                                  <WithStyles(WithFormControlContext(InputBase))
                                     aria-activedescendant={null}
                                     aria-autocomplete="list"
                                     aria-controls={null}
@@ -3910,7 +4083,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                     type="text"
                                     value=""
                                   >
-                                    <InputBase
+                                    <WithFormControlContext(InputBase)
                                       aria-activedescendant={null}
                                       aria-autocomplete="list"
                                       aria-controls={null}
@@ -3949,32 +4122,88 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                       type="text"
                                       value=""
                                     >
-                                      <div
+                                      <InputBase
                                         aria-activedescendant={null}
                                         aria-autocomplete="list"
                                         aria-controls={null}
                                         aria-labelledby="downshift-3-label"
-                                        className="MuiInputBase-root-18 MuiInput-root-5 inputRoot MuiInput-underline-9 MuiInputBase-fullWidth-27 MuiInput-fullWidth-12 MuiInputBase-focused-20 MuiInput-focused-7 MuiInputBase-formControl-19 MuiInput-formControl-6"
-                                        onClick={[Function]}
+                                        autoComplete="off"
+                                        classes={
+                                          Object {
+                                            "adornedEnd": "MuiInputBase-adornedEnd-23",
+                                            "adornedStart": "MuiInputBase-adornedStart-22",
+                                            "disabled": "MuiInputBase-disabled-21 MuiInput-disabled-8",
+                                            "error": "MuiInputBase-error-24 MuiInput-error-10",
+                                            "focused": "MuiInputBase-focused-20 MuiInput-focused-7",
+                                            "formControl": "MuiInputBase-formControl-19 MuiInput-formControl-6",
+                                            "fullWidth": "MuiInputBase-fullWidth-27 MuiInput-fullWidth-12",
+                                            "input": "MuiInputBase-input-28 MuiInput-input-13",
+                                            "inputAdornedEnd": "MuiInputBase-inputAdornedEnd-34",
+                                            "inputAdornedStart": "MuiInputBase-inputAdornedStart-33",
+                                            "inputMarginDense": "MuiInputBase-inputMarginDense-29 MuiInput-inputMarginDense-14",
+                                            "inputMultiline": "MuiInputBase-inputMultiline-30 MuiInput-inputMultiline-15",
+                                            "inputType": "MuiInputBase-inputType-31 MuiInput-inputType-16",
+                                            "inputTypeSearch": "MuiInputBase-inputTypeSearch-32 MuiInput-inputTypeSearch-17",
+                                            "marginDense": "MuiInputBase-marginDense-25",
+                                            "multiline": "MuiInputBase-multiline-26 MuiInput-multiline-11",
+                                            "root": "MuiInputBase-root-18 MuiInput-root-5 inputRoot MuiInput-underline-9",
+                                          }
+                                        }
+                                        fullWidth={true}
+                                        id="downshift-3-input"
+                                        inputComponent="input"
+                                        inputRef={[Function]}
+                                        muiFormControl={
+                                          Object {
+                                            "adornedStart": false,
+                                            "disabled": false,
+                                            "error": false,
+                                            "filled": false,
+                                            "focused": true,
+                                            "margin": "none",
+                                            "onBlur": [Function],
+                                            "onEmpty": [Function],
+                                            "onFilled": [Function],
+                                            "onFocus": [Function],
+                                            "required": false,
+                                            "variant": "standard",
+                                          }
+                                        }
+                                        multiline={false}
+                                        onBlur={[Function]}
+                                        onChange={[Function]}
+                                        onKeyDown={[Function]}
+                                        placeholder={null}
+                                        type="text"
+                                        value=""
                                       >
-                                        <input
-                                          aria-invalid={false}
-                                          autoComplete="off"
-                                          className="MuiInputBase-input-28 MuiInput-input-13"
-                                          disabled={false}
-                                          id="downshift-3-input"
-                                          onBlur={[Function]}
-                                          onChange={[Function]}
-                                          onFocus={[Function]}
-                                          onKeyDown={[Function]}
-                                          placeholder={null}
-                                          required={false}
-                                          type="text"
-                                          value=""
-                                        />
-                                      </div>
-                                    </InputBase>
-                                  </WithStyles(InputBase)>
+                                        <div
+                                          aria-activedescendant={null}
+                                          aria-autocomplete="list"
+                                          aria-controls={null}
+                                          aria-labelledby="downshift-3-label"
+                                          className="MuiInputBase-root-18 MuiInput-root-5 inputRoot MuiInput-underline-9 MuiInputBase-fullWidth-27 MuiInput-fullWidth-12 MuiInputBase-focused-20 MuiInput-focused-7 MuiInputBase-formControl-19 MuiInput-formControl-6"
+                                          onClick={[Function]}
+                                        >
+                                          <input
+                                            aria-invalid={false}
+                                            autoComplete="off"
+                                            className="MuiInputBase-input-28 MuiInput-input-13"
+                                            disabled={false}
+                                            id="downshift-3-input"
+                                            onBlur={[Function]}
+                                            onChange={[Function]}
+                                            onFocus={[Function]}
+                                            onKeyDown={[Function]}
+                                            placeholder={null}
+                                            required={false}
+                                            type="text"
+                                            value=""
+                                          />
+                                        </div>
+                                      </InputBase>
+                                    </WithFormControlContext(InputBase)>
+                                  </WithStyles(WithFormControlContext(InputBase))>
                                 </Input>
                               </WithStyles(Input)>
                             </div>
@@ -3988,7 +4217,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
             </div>
           </AutoCompleteAsyncField>
         </MuiPickersUtilsProvider>
-      </MuiThemeProvider>
+      </MuiThemeProviderOld>
     </Router>
   </MemoryRouter>
 </Provider>
@@ -4074,7 +4303,7 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
         }
       }
     >
-      <MuiThemeProvider
+      <MuiThemeProviderOld
         theme={
           Object {
             "breakpoints": Object {
@@ -4138,7 +4367,7 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
                 },
               },
               "MuiMenuItem": Object {
-                "selected": Object {
+                "&$selected": Object {
                   "backgroundColor": "#4085C6 !important",
                   "color": "#FFFFFF",
                 },
@@ -4239,30 +4468,30 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
             "props": Object {},
             "shadows": Array [
               "none",
-              "0px 1px 3px 0px rgba(0, 0, 0, 0.2),0px 1px 1px 0px rgba(0, 0, 0, 0.14),0px 2px 1px -1px rgba(0, 0, 0, 0.12)",
-              "0px 1px 5px 0px rgba(0, 0, 0, 0.2),0px 2px 2px 0px rgba(0, 0, 0, 0.14),0px 3px 1px -2px rgba(0, 0, 0, 0.12)",
-              "0px 1px 8px 0px rgba(0, 0, 0, 0.2),0px 3px 4px 0px rgba(0, 0, 0, 0.14),0px 3px 3px -2px rgba(0, 0, 0, 0.12)",
-              "0px 2px 4px -1px rgba(0, 0, 0, 0.2),0px 4px 5px 0px rgba(0, 0, 0, 0.14),0px 1px 10px 0px rgba(0, 0, 0, 0.12)",
-              "0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 5px 8px 0px rgba(0, 0, 0, 0.14),0px 1px 14px 0px rgba(0, 0, 0, 0.12)",
-              "0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 6px 10px 0px rgba(0, 0, 0, 0.14),0px 1px 18px 0px rgba(0, 0, 0, 0.12)",
-              "0px 4px 5px -2px rgba(0, 0, 0, 0.2),0px 7px 10px 1px rgba(0, 0, 0, 0.14),0px 2px 16px 1px rgba(0, 0, 0, 0.12)",
-              "0px 5px 5px -3px rgba(0, 0, 0, 0.2),0px 8px 10px 1px rgba(0, 0, 0, 0.14),0px 3px 14px 2px rgba(0, 0, 0, 0.12)",
-              "0px 5px 6px -3px rgba(0, 0, 0, 0.2),0px 9px 12px 1px rgba(0, 0, 0, 0.14),0px 3px 16px 2px rgba(0, 0, 0, 0.12)",
-              "0px 6px 6px -3px rgba(0, 0, 0, 0.2),0px 10px 14px 1px rgba(0, 0, 0, 0.14),0px 4px 18px 3px rgba(0, 0, 0, 0.12)",
-              "0px 6px 7px -4px rgba(0, 0, 0, 0.2),0px 11px 15px 1px rgba(0, 0, 0, 0.14),0px 4px 20px 3px rgba(0, 0, 0, 0.12)",
-              "0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 12px 17px 2px rgba(0, 0, 0, 0.14),0px 5px 22px 4px rgba(0, 0, 0, 0.12)",
-              "0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 13px 19px 2px rgba(0, 0, 0, 0.14),0px 5px 24px 4px rgba(0, 0, 0, 0.12)",
-              "0px 7px 9px -4px rgba(0, 0, 0, 0.2),0px 14px 21px 2px rgba(0, 0, 0, 0.14),0px 5px 26px 4px rgba(0, 0, 0, 0.12)",
-              "0px 8px 9px -5px rgba(0, 0, 0, 0.2),0px 15px 22px 2px rgba(0, 0, 0, 0.14),0px 6px 28px 5px rgba(0, 0, 0, 0.12)",
-              "0px 8px 10px -5px rgba(0, 0, 0, 0.2),0px 16px 24px 2px rgba(0, 0, 0, 0.14),0px 6px 30px 5px rgba(0, 0, 0, 0.12)",
-              "0px 8px 11px -5px rgba(0, 0, 0, 0.2),0px 17px 26px 2px rgba(0, 0, 0, 0.14),0px 6px 32px 5px rgba(0, 0, 0, 0.12)",
-              "0px 9px 11px -5px rgba(0, 0, 0, 0.2),0px 18px 28px 2px rgba(0, 0, 0, 0.14),0px 7px 34px 6px rgba(0, 0, 0, 0.12)",
-              "0px 9px 12px -6px rgba(0, 0, 0, 0.2),0px 19px 29px 2px rgba(0, 0, 0, 0.14),0px 7px 36px 6px rgba(0, 0, 0, 0.12)",
-              "0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 20px 31px 3px rgba(0, 0, 0, 0.14),0px 8px 38px 7px rgba(0, 0, 0, 0.12)",
-              "0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 21px 33px 3px rgba(0, 0, 0, 0.14),0px 8px 40px 7px rgba(0, 0, 0, 0.12)",
-              "0px 10px 14px -6px rgba(0, 0, 0, 0.2),0px 22px 35px 3px rgba(0, 0, 0, 0.14),0px 8px 42px 7px rgba(0, 0, 0, 0.12)",
-              "0px 11px 14px -7px rgba(0, 0, 0, 0.2),0px 23px 36px 3px rgba(0, 0, 0, 0.14),0px 9px 44px 8px rgba(0, 0, 0, 0.12)",
-              "0px 11px 15px -7px rgba(0, 0, 0, 0.2),0px 24px 38px 3px rgba(0, 0, 0, 0.14),0px 9px 46px 8px rgba(0, 0, 0, 0.12)",
+              "0px 1px 3px 0px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 2px 1px -1px rgba(0,0,0,0.12)",
+              "0px 1px 5px 0px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 3px 1px -2px rgba(0,0,0,0.12)",
+              "0px 1px 8px 0px rgba(0,0,0,0.2),0px 3px 4px 0px rgba(0,0,0,0.14),0px 3px 3px -2px rgba(0,0,0,0.12)",
+              "0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12)",
+              "0px 3px 5px -1px rgba(0,0,0,0.2),0px 5px 8px 0px rgba(0,0,0,0.14),0px 1px 14px 0px rgba(0,0,0,0.12)",
+              "0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12)",
+              "0px 4px 5px -2px rgba(0,0,0,0.2),0px 7px 10px 1px rgba(0,0,0,0.14),0px 2px 16px 1px rgba(0,0,0,0.12)",
+              "0px 5px 5px -3px rgba(0,0,0,0.2),0px 8px 10px 1px rgba(0,0,0,0.14),0px 3px 14px 2px rgba(0,0,0,0.12)",
+              "0px 5px 6px -3px rgba(0,0,0,0.2),0px 9px 12px 1px rgba(0,0,0,0.14),0px 3px 16px 2px rgba(0,0,0,0.12)",
+              "0px 6px 6px -3px rgba(0,0,0,0.2),0px 10px 14px 1px rgba(0,0,0,0.14),0px 4px 18px 3px rgba(0,0,0,0.12)",
+              "0px 6px 7px -4px rgba(0,0,0,0.2),0px 11px 15px 1px rgba(0,0,0,0.14),0px 4px 20px 3px rgba(0,0,0,0.12)",
+              "0px 7px 8px -4px rgba(0,0,0,0.2),0px 12px 17px 2px rgba(0,0,0,0.14),0px 5px 22px 4px rgba(0,0,0,0.12)",
+              "0px 7px 8px -4px rgba(0,0,0,0.2),0px 13px 19px 2px rgba(0,0,0,0.14),0px 5px 24px 4px rgba(0,0,0,0.12)",
+              "0px 7px 9px -4px rgba(0,0,0,0.2),0px 14px 21px 2px rgba(0,0,0,0.14),0px 5px 26px 4px rgba(0,0,0,0.12)",
+              "0px 8px 9px -5px rgba(0,0,0,0.2),0px 15px 22px 2px rgba(0,0,0,0.14),0px 6px 28px 5px rgba(0,0,0,0.12)",
+              "0px 8px 10px -5px rgba(0,0,0,0.2),0px 16px 24px 2px rgba(0,0,0,0.14),0px 6px 30px 5px rgba(0,0,0,0.12)",
+              "0px 8px 11px -5px rgba(0,0,0,0.2),0px 17px 26px 2px rgba(0,0,0,0.14),0px 6px 32px 5px rgba(0,0,0,0.12)",
+              "0px 9px 11px -5px rgba(0,0,0,0.2),0px 18px 28px 2px rgba(0,0,0,0.14),0px 7px 34px 6px rgba(0,0,0,0.12)",
+              "0px 9px 12px -6px rgba(0,0,0,0.2),0px 19px 29px 2px rgba(0,0,0,0.14),0px 7px 36px 6px rgba(0,0,0,0.12)",
+              "0px 10px 13px -6px rgba(0,0,0,0.2),0px 20px 31px 3px rgba(0,0,0,0.14),0px 8px 38px 7px rgba(0,0,0,0.12)",
+              "0px 10px 13px -6px rgba(0,0,0,0.2),0px 21px 33px 3px rgba(0,0,0,0.14),0px 8px 40px 7px rgba(0,0,0,0.12)",
+              "0px 10px 14px -6px rgba(0,0,0,0.2),0px 22px 35px 3px rgba(0,0,0,0.14),0px 8px 42px 7px rgba(0,0,0,0.12)",
+              "0px 11px 14px -7px rgba(0,0,0,0.2),0px 23px 36px 3px rgba(0,0,0,0.14),0px 9px 44px 8px rgba(0,0,0,0.12)",
+              "0px 11px 15px -7px rgba(0,0,0,0.2),0px 24px 38px 3px rgba(0,0,0,0.14),0px 9px 46px 8px rgba(0,0,0,0.12)",
             ],
             "shape": Object {
               "borderRadius": 4,
@@ -4332,7 +4561,7 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
                 "fontSize": "0.875rem",
                 "fontWeight": 400,
                 "letterSpacing": "0.02857em",
-                "lineHeight": 1.5,
+                "lineHeight": 1.75,
                 "textTransform": "uppercase",
               },
               "buttonNext": Object {
@@ -4341,7 +4570,7 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
                 "fontSize": "0.875rem",
                 "fontWeight": 400,
                 "letterSpacing": "0.02857em",
-                "lineHeight": 1.5,
+                "lineHeight": 1.75,
                 "textTransform": "uppercase",
               },
               "caption": Object {
@@ -4755,7 +4984,7 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
                                   placeholder={null}
                                   value=""
                                 >
-                                  <WithStyles(InputBase)
+                                  <WithStyles(WithFormControlContext(InputBase))
                                     aria-activedescendant={null}
                                     aria-autocomplete="list"
                                     aria-controls={null}
@@ -4790,7 +5019,7 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
                                     type="text"
                                     value=""
                                   >
-                                    <InputBase
+                                    <WithFormControlContext(InputBase)
                                       aria-activedescendant={null}
                                       aria-autocomplete="list"
                                       aria-controls={null}
@@ -4829,32 +5058,88 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
                                       type="text"
                                       value=""
                                     >
-                                      <div
+                                      <InputBase
                                         aria-activedescendant={null}
                                         aria-autocomplete="list"
                                         aria-controls={null}
                                         aria-labelledby="downshift-0-label"
-                                        className="MuiInputBase-root-18 MuiInput-root-5 inputRoot MuiInput-underline-9 MuiInputBase-disabled-21 MuiInput-disabled-8 MuiInputBase-fullWidth-27 MuiInput-fullWidth-12 MuiInputBase-formControl-19 MuiInput-formControl-6"
-                                        onClick={[Function]}
+                                        autoComplete="off"
+                                        classes={
+                                          Object {
+                                            "adornedEnd": "MuiInputBase-adornedEnd-23",
+                                            "adornedStart": "MuiInputBase-adornedStart-22",
+                                            "disabled": "MuiInputBase-disabled-21 MuiInput-disabled-8",
+                                            "error": "MuiInputBase-error-24 MuiInput-error-10",
+                                            "focused": "MuiInputBase-focused-20 MuiInput-focused-7",
+                                            "formControl": "MuiInputBase-formControl-19 MuiInput-formControl-6",
+                                            "fullWidth": "MuiInputBase-fullWidth-27 MuiInput-fullWidth-12",
+                                            "input": "MuiInputBase-input-28 MuiInput-input-13",
+                                            "inputAdornedEnd": "MuiInputBase-inputAdornedEnd-34",
+                                            "inputAdornedStart": "MuiInputBase-inputAdornedStart-33",
+                                            "inputMarginDense": "MuiInputBase-inputMarginDense-29 MuiInput-inputMarginDense-14",
+                                            "inputMultiline": "MuiInputBase-inputMultiline-30 MuiInput-inputMultiline-15",
+                                            "inputType": "MuiInputBase-inputType-31 MuiInput-inputType-16",
+                                            "inputTypeSearch": "MuiInputBase-inputTypeSearch-32 MuiInput-inputTypeSearch-17",
+                                            "marginDense": "MuiInputBase-marginDense-25",
+                                            "multiline": "MuiInputBase-multiline-26 MuiInput-multiline-11",
+                                            "root": "MuiInputBase-root-18 MuiInput-root-5 inputRoot MuiInput-underline-9",
+                                          }
+                                        }
+                                        fullWidth={true}
+                                        id="downshift-0-input"
+                                        inputComponent="input"
+                                        inputRef={[Function]}
+                                        muiFormControl={
+                                          Object {
+                                            "adornedStart": false,
+                                            "disabled": true,
+                                            "error": false,
+                                            "filled": false,
+                                            "focused": false,
+                                            "margin": "none",
+                                            "onBlur": [Function],
+                                            "onEmpty": [Function],
+                                            "onFilled": [Function],
+                                            "onFocus": [Function],
+                                            "required": false,
+                                            "variant": "standard",
+                                          }
+                                        }
+                                        multiline={false}
+                                        onBlur={[Function]}
+                                        onChange={[Function]}
+                                        onKeyDown={[Function]}
+                                        placeholder={null}
+                                        type="text"
+                                        value=""
                                       >
-                                        <input
-                                          aria-invalid={false}
-                                          autoComplete="off"
-                                          className="MuiInputBase-input-28 MuiInput-input-13 MuiInputBase-disabled-21 MuiInput-disabled-8"
-                                          disabled={true}
-                                          id="downshift-0-input"
-                                          onBlur={[Function]}
-                                          onChange={[Function]}
-                                          onFocus={[Function]}
-                                          onKeyDown={[Function]}
-                                          placeholder={null}
-                                          required={false}
-                                          type="text"
-                                          value=""
-                                        />
-                                      </div>
-                                    </InputBase>
-                                  </WithStyles(InputBase)>
+                                        <div
+                                          aria-activedescendant={null}
+                                          aria-autocomplete="list"
+                                          aria-controls={null}
+                                          aria-labelledby="downshift-0-label"
+                                          className="MuiInputBase-root-18 MuiInput-root-5 inputRoot MuiInput-underline-9 MuiInputBase-disabled-21 MuiInput-disabled-8 MuiInputBase-fullWidth-27 MuiInput-fullWidth-12 MuiInputBase-formControl-19 MuiInput-formControl-6"
+                                          onClick={[Function]}
+                                        >
+                                          <input
+                                            aria-invalid={false}
+                                            autoComplete="off"
+                                            className="MuiInputBase-input-28 MuiInput-input-13 MuiInputBase-disabled-21 MuiInput-disabled-8"
+                                            disabled={true}
+                                            id="downshift-0-input"
+                                            onBlur={[Function]}
+                                            onChange={[Function]}
+                                            onFocus={[Function]}
+                                            onKeyDown={[Function]}
+                                            placeholder={null}
+                                            required={false}
+                                            type="text"
+                                            value=""
+                                          />
+                                        </div>
+                                      </InputBase>
+                                    </WithFormControlContext(InputBase)>
+                                  </WithStyles(WithFormControlContext(InputBase))>
                                 </Input>
                               </WithStyles(Input)>
                             </div>
@@ -4868,7 +5153,7 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
             </div>
           </AutoCompleteAsyncField>
         </MuiPickersUtilsProvider>
-      </MuiThemeProvider>
+      </MuiThemeProviderOld>
     </Router>
   </MemoryRouter>
 </Provider>
