@@ -99,7 +99,8 @@ class Admin extends PureComponent {
                 showAdd: false,
                 buttonAction: 'Add new item'
             },
-            overrideSecurity: false
+            overrideSecurity: false,
+            overrideDatastreamSecurity: false
         };
     }
 
@@ -181,6 +182,13 @@ class Admin extends PureComponent {
         this.setState({
             ...this.state,
             overrideSecurity: !this.state.overrideSecurity
+        });
+    }
+
+    toggleSecurityDatastreamOverride = () => {
+        this.setState({
+            ...this.state,
+            overrideDatastreamSecurity: !this.state.overrideDatastreamSecurity
         });
     }
 
@@ -315,6 +323,12 @@ class Admin extends PureComponent {
         };
 
         const communitySecurity = [
+            {value: 'A', label: 'Policy A', id: 'PolicyAID', name: 'Policy A', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id aliquam sapien. Aliquam rhoncus congue consectetur. Aenean sed sapien ipsum. Sed lectus mauris, mollis et dolor vitae, rutrum lobortis risus. Aenean a nisl non felis pretium tincidunt id sit amet augue. Aenean ac quam non libero malesuada vulputate. Integer commodo lacus quis egestas varius. Etiam dapibus mollis feugiat. Aliquam pellentesque nunc ac libero feugiat laoreet. In hac habitasse platea dictumst. Duis sagittis lorem id vestibulum maximus. Nullam vel libero eu eros faucibus venenatis. Vestibulum interdum porttitor ipsum sed fringilla. Sed enim lacus, faucibus vel tincidunt euismod, euismod vitae turpis.'},
+            {value: 'B', label: 'Policy B', id: 'PolicyBID', name: 'Policy B', description: 'Suspendisse pellentesque libero eget molestie vehicula. Vestibulum eget purus euismod, imperdiet massa non, vulputate lectus. Sed mi mi, placerat ultricies purus nec, sollicitudin fringilla odio. Aliquam erat volutpat. Vestibulum at augue sed arcu condimentum finibus id et dolor.'},
+            {value: 'C', label: 'Policy C', id: 'PolicyCID', name: 'Policy C', description: 'Mauris pulvinar tortor eu lectus facilisis, ut ultricies risus elementum. Aenean ac sem quis enim molestie egestas ut id sem. Nulla nibh elit, efficitur fermentum nisl et, semper ultrices quam. Aenean in sollicitudin mi. Cras ultricies eros quis maximus pellentesque. Mauris justo mi, aliquet vitae nisl et, tristique pulvinar risus.'},
+        ];
+
+        const PidDatastreamSecurity = [
             {value: 'A', label: 'Policy A', id: 'PolicyAID', name: 'Policy A', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id aliquam sapien. Aliquam rhoncus congue consectetur. Aenean sed sapien ipsum. Sed lectus mauris, mollis et dolor vitae, rutrum lobortis risus. Aenean a nisl non felis pretium tincidunt id sit amet augue. Aenean ac quam non libero malesuada vulputate. Integer commodo lacus quis egestas varius. Etiam dapibus mollis feugiat. Aliquam pellentesque nunc ac libero feugiat laoreet. In hac habitasse platea dictumst. Duis sagittis lorem id vestibulum maximus. Nullam vel libero eu eros faucibus venenatis. Vestibulum interdum porttitor ipsum sed fringilla. Sed enim lacus, faucibus vel tincidunt euismod, euismod vitae turpis.'},
             {value: 'B', label: 'Policy B', id: 'PolicyBID', name: 'Policy B', description: 'Suspendisse pellentesque libero eget molestie vehicula. Vestibulum eget purus euismod, imperdiet massa non, vulputate lectus. Sed mi mi, placerat ultricies purus nec, sollicitudin fringilla odio. Aliquam erat volutpat. Vestibulum at augue sed arcu condimentum finibus id et dolor.'},
             {value: 'C', label: 'Policy C', id: 'PolicyCID', name: 'Policy C', description: 'Mauris pulvinar tortor eu lectus facilisis, ut ultricies risus elementum. Aenean ac sem quis enim molestie egestas ut id sem. Nulla nibh elit, efficitur fermentum nisl et, semper ultrices quam. Aenean in sollicitudin mi. Cras ultricies eros quis maximus pellentesque. Mauris justo mi, aliquet vitae nisl et, tristique pulvinar risus.'},
@@ -1333,6 +1347,46 @@ class Admin extends PureComponent {
                                                                     </Grid>
                                                                 </Grid>
                                                             }
+                                                            <Grid item>
+                                                                <FormControlLabel
+                                                                    control={<Checkbox
+                                                                        checked={this.state.overrideDatastreamSecurity}
+                                                                        onChange={this.toggleSecurityDatastreamOverride}
+                                                                    />}
+                                                                    label="Override inherited datastream security (detailed below)."
+                                                                />
+                                                                {
+                                                                    this.state.overrideDatastreamSecurity &&
+                                                                    <Field
+                                                                        component={SelectField}
+                                                                        name="ovveridePidDatastreamSecurity"
+                                                                        value={this.props.formValues.get('ovveridePidDatastreamSecurity')}
+                                                                        label="Datasteam policy"
+                                                                        required
+                                                                        validation={[validation.required]}>
+                                                                        <MenuItem value="" disabled>Select a security
+                                                                            policy to apply to this PIDs
+                                                                            datastream</MenuItem>
+                                                                        {PidDatastreamSecurity.map((item, index) => {
+                                                                            return <MenuItem key={index} value={item.value}>{item.label}</MenuItem>;
+                                                                        })}
+                                                                    </Field>
+                                                                }
+                                                                {
+                                                                    this.props.formValues.get('ovveridePidDatastreamSecurity') &&
+                                                                    <Grid item xs={12} style={{
+                                                                        marginTop: 24,
+                                                                        padding: 24,
+                                                                        backgroundColor: 'rgba(0,0,0,0.05)'
+                                                                    }}>
+                                                                        <Typography variant="h6" style={{marginTop: -8}}>Selected record level datastream security policy details</Typography>
+                                                                        <Grid container spacing={8} style={{marginTop: 8}}>
+                                                                            <Grid item xs={2}><b>Name (ID):</b></Grid>
+                                                                            <Grid item xs={10}>{PidDatastreamSecurity[this.findWithAttr(PidDatastreamSecurity, 'value', this.props.formValues.get('ovveridePidDatastreamSecurity'))].name} ({PidDatastreamSecurity[this.findWithAttr(PidDatastreamSecurity, 'value', this.props.formValues.get('ovveridePidDatastreamSecurity'))].id})</Grid>
+                                                                        </Grid>
+                                                                    </Grid>
+                                                                }
+                                                            </Grid>
                                                         </React.Fragment>
                                                 }
                                             </StandardCard>
