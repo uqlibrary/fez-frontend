@@ -136,74 +136,6 @@ exports[`AuthorLinking should call componentDidMount life cycle method with auth
 </div>
 `;
 
-exports[`AuthorLinking should render component if authorList has more authors than linkedAuthorIdList 1`] = `
-<div>
-  <WithStyles(Grid)
-    container={true}
-  >
-    <WithStyles(Grid)
-      className="infiniteContainer"
-      item={true}
-    >
-      <Infinite
-        className=""
-        containerHeight={200}
-        displayBottomUpwards={false}
-        elementHeight={73}
-        handleScroll={[Function]}
-        infiniteLoadBeginEdgeOffset={50}
-        isInfiniteLoading={false}
-        loadingSpinnerDelegate={<div />}
-        onInfiniteLoad={[Function]}
-        styles={Object {}}
-        timeScrollStateLastsForAfterUserScrolls={150}
-        useWindowAsScrollContainer={false}
-      >
-        <WithStyles(Grid)
-          container={true}
-          key="0"
-        >
-          <WithStyles(AuthorItem)
-            author={
-              Object {
-                "rek_author": "Overgaard, Nana H.",
-                "rek_author_id": null,
-                "rek_author_order": 1,
-                "rek_author_pid": "UQ:111111",
-              }
-            }
-            disabled={false}
-            index={0}
-            key="0"
-            linked={false}
-            onAuthorSelected={[Function]}
-            selected={null}
-            type="author"
-          />
-          <WithStyles(AuthorItem)
-            author={
-              Object {
-                "rek_author": "Cruz, Jazmina L.",
-                "rek_author_id": null,
-                "rek_author_order": 2,
-                "rek_author_pid": "UQ:111111",
-              }
-            }
-            disabled={false}
-            index={1}
-            key="1"
-            linked={false}
-            onAuthorSelected={[Function]}
-            selected={null}
-            type="author"
-          />
-        </WithStyles(Grid)>
-      </Infinite>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
-</div>
-`;
-
 exports[`AuthorLinking should maintain question if onchange prop is missing 1`] = `
 <div>
   <WithStyles(Grid)
@@ -337,7 +269,7 @@ exports[`AuthorLinking should maintain question if onchange prop is missing 2`] 
       </Infinite>
     </WithStyles(Grid)>
   </WithStyles(Grid)>
-  <WithStyles(FormControlLabel)
+  <WithStyles(WithFormControlContext(FormControlLabel))
     classes={
       Object {
         "root": undefined,
@@ -369,5 +301,73 @@ exports[`AuthorLinking should maintain question if onchange prop is missing 2`] 
       </WithStyles(Typography)>
     }
   />
+</div>
+`;
+
+exports[`AuthorLinking should render component if authorList has more authors than linkedAuthorIdList 1`] = `
+<div>
+  <WithStyles(Grid)
+    container={true}
+  >
+    <WithStyles(Grid)
+      className="infiniteContainer"
+      item={true}
+    >
+      <Infinite
+        className=""
+        containerHeight={200}
+        displayBottomUpwards={false}
+        elementHeight={73}
+        handleScroll={[Function]}
+        infiniteLoadBeginEdgeOffset={50}
+        isInfiniteLoading={false}
+        loadingSpinnerDelegate={<div />}
+        onInfiniteLoad={[Function]}
+        styles={Object {}}
+        timeScrollStateLastsForAfterUserScrolls={150}
+        useWindowAsScrollContainer={false}
+      >
+        <WithStyles(Grid)
+          container={true}
+          key="0"
+        >
+          <WithStyles(AuthorItem)
+            author={
+              Object {
+                "rek_author": "Overgaard, Nana H.",
+                "rek_author_id": null,
+                "rek_author_order": 1,
+                "rek_author_pid": "UQ:111111",
+              }
+            }
+            disabled={false}
+            index={0}
+            key="0"
+            linked={false}
+            onAuthorSelected={[Function]}
+            selected={null}
+            type="author"
+          />
+          <WithStyles(AuthorItem)
+            author={
+              Object {
+                "rek_author": "Cruz, Jazmina L.",
+                "rek_author_id": null,
+                "rek_author_order": 2,
+                "rek_author_pid": "UQ:111111",
+              }
+            }
+            disabled={false}
+            index={1}
+            key="1"
+            linked={false}
+            onAuthorSelected={[Function]}
+            selected={null}
+            type="author"
+          />
+        </WithStyles(Grid)>
+      </Infinite>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
 </div>
 `;

@@ -18,6 +18,9 @@ function setup(testProps, isShallow = true) {
     const props = {
         onChange: jest.fn(), // PropTypes.func.isRequired,
         disabled: false,
+        inputRef: {
+            current: <div />
+        },
         ...testProps,
     };
 

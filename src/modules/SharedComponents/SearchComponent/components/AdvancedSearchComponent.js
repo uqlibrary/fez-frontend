@@ -196,7 +196,7 @@ export class AdvancedSearchComponent extends PureComponent {
                 <Grid container spacing={24}>
                     <Grid container spacing={40}>
                         <Grid item style={{flexGrow: 1, width: 1}}>
-                            <Typography variant={'headline'}>{txt.advancedSearch.title}</Typography>
+                            <Typography variant="h5">{txt.advancedSearch.title}</Typography>
                         </Grid>
                         <Grid item>
                             <IconButton

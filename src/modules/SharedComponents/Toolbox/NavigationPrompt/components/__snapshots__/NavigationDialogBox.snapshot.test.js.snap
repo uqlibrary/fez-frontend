@@ -91,18 +91,21 @@ exports[`NavigationDialogBox component should render 1`] = `
               }
             >
               <Dialog
+                PaperComponent={[Function]}
                 TransitionComponent={[Function]}
                 classes={
                   Object {
-                    "paper": "MuiDialog-paper-4",
-                    "paperFullScreen": "MuiDialog-paperFullScreen-12",
-                    "paperFullWidth": "MuiDialog-paperFullWidth-11",
-                    "paperScrollBody": "MuiDialog-paperScrollBody-6",
-                    "paperScrollPaper": "MuiDialog-paperScrollPaper-5",
-                    "paperWidthLg": "MuiDialog-paperWidthLg-10",
-                    "paperWidthMd": "MuiDialog-paperWidthMd-9",
-                    "paperWidthSm": "MuiDialog-paperWidthSm-8",
-                    "paperWidthXs": "MuiDialog-paperWidthXs-7",
+                    "container": "MuiDialog-container-4",
+                    "paper": "MuiDialog-paper-5",
+                    "paperFullScreen": "MuiDialog-paperFullScreen-14",
+                    "paperFullWidth": "MuiDialog-paperFullWidth-13",
+                    "paperScrollBody": "MuiDialog-paperScrollBody-7",
+                    "paperScrollPaper": "MuiDialog-paperScrollPaper-6",
+                    "paperWidthLg": "MuiDialog-paperWidthLg-11",
+                    "paperWidthMd": "MuiDialog-paperWidthMd-10",
+                    "paperWidthSm": "MuiDialog-paperWidthSm-9",
+                    "paperWidthXl": "MuiDialog-paperWidthXl-12",
+                    "paperWidthXs": "MuiDialog-paperWidthXs-8",
                     "root": "MuiDialog-root-1",
                     "scrollBody": "MuiDialog-scrollBody-3",
                     "scrollPaper": "MuiDialog-scrollPaper-2",
@@ -136,7 +139,8 @@ exports[`NavigationDialogBox component should render 1`] = `
                       },
                     }
                   }
-                  className="MuiDialog-root-1 MuiDialog-scrollPaper-2"
+                  className="MuiDialog-root-1"
+                  closeAfterTransition={true}
                   disableBackdropClick={false}
                   disableEscapeKeyDown={false}
                   open={false}
@@ -157,13 +161,14 @@ exports[`NavigationDialogBox component should render 1`] = `
                         },
                       }
                     }
-                    className="MuiDialog-root-1 MuiDialog-scrollPaper-2"
+                    className="MuiDialog-root-1"
                     classes={
                       Object {
-                        "hidden": "MuiModal-hidden-14",
-                        "root": "MuiModal-root-13",
+                        "hidden": "MuiModal-hidden-16",
+                        "root": "MuiModal-root-15",
                       }
                     }
+                    closeAfterTransition={true}
                     disableAutoFocus={false}
                     disableBackdropClick={false}
                     disableEnforceFocus={false}
@@ -174,7 +179,6 @@ exports[`NavigationDialogBox component should render 1`] = `
                     keepMounted={false}
                     manager={
                       ModalManager {
-                        "containers": Array [],
                         "data": Array [],
                         "handleContainerOverflow": true,
                         "hideSiblingNodes": true,

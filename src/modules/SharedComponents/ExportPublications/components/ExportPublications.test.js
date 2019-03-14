@@ -28,7 +28,7 @@ describe('Export Publications renders', () => {
         const mockOnChange = jest.fn();
         const wrapper = setup({onChange: mockOnChange});
         expect(toJson(wrapper)).toMatchSnapshot();
-        wrapper.find('WithStyles(Select)').simulate('change', {target: {value: expected}});
+        wrapper.find('WithStyles(WithFormControlContext(Select))').simulate('change', {target: {value: expected}});
         expect(mockOnChange.mock.calls.length).toBe(1);
     });
 
