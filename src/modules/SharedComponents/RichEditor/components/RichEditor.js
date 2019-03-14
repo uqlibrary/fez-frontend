@@ -1,6 +1,5 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
-// import ReactDOM from 'react-dom';
 import Typography from '@material-ui/core/Typography';
 import 'ckeditor';
 
