@@ -24877,7 +24877,7 @@ exports[`NtroDetails  should show admin only fields when admin user 1`] = `
       data="Not set"
       heading="Scale/Significance of work"
       key="1"
-      subheading="(Someone else)"
+      subheading="()"
     />
     <Component
       data="Not set"
@@ -24905,7 +24905,7 @@ exports[`NtroDetails  should show admin only fields when admin user 1`] = `
       }
       heading="Creator contribution statement"
       key="1"
-      subheading="(Someone else)"
+      subheading=""
     />
     <Component
       data={
