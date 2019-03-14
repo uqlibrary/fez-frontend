@@ -1064,7 +1064,7 @@ export default {
                 title: 'NTRO entry requirements',
                 body: (
                     <React.Fragment>
-                        <p>To enter an NTRO document, you must include the following:</p>
+                        <p>In order to submit a non-traditional research output, or update an existing work, you must have:</p>
                         <ul>
                             <li>An author/creator research statement of up to 2000 characters (approx. 250 - 300 words) that includes the background, contribution and significance of the work. <b>This is not for public view.</b></li>
                             <li>An abstract/description of the work of up to 800 characters (approx. 100 words). <b>This is for public view.</b></li>

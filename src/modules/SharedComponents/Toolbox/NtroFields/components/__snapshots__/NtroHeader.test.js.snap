@@ -9,7 +9,7 @@ exports[`Component NtroHeader should render default view 1`] = `
     title="NTRO entry requirements"
   >
     <p>
-      To enter an NTRO document, you must include the following:
+      In order to submit a non-traditional research output, or update an existing work, you must have:
     </p>
     <ul>
       <li>
