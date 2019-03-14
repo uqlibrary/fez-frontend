@@ -18,11 +18,11 @@ exports[`Component PublicationYearRangeField should render as expected 1`] = `
       item={true}
       xs={12}
     >
-      <WithStyles(InputLabel)
+      <WithStyles(WithFormControlContext(InputLabel))
         shrink={true}
       >
         Published year range
-      </WithStyles(InputLabel)>
+      </WithStyles(WithFormControlContext(InputLabel))>
     </WithStyles(Grid)>
   </WithStyles(Grid)>
   <WithStyles(Grid)

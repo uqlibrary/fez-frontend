@@ -14,11 +14,10 @@ import configureMockStore from 'redux-mock-store';
 import MockAdapter from 'axios-mock-adapter';
 import {api, mui1theme, sessionApi} from 'config';
 import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
-import MuiPickersUtilsProvider from 'material-ui-pickers/utils/MuiPickersUtilsProvider';
+import MuiPickersUtilsProvider from 'material-ui-pickers/MuiPickersUtilsProvider';
 
-jest.mock('material-ui-pickers/utils/moment-utils');
-
-import MomentUtils from 'material-ui-pickers/utils/moment-utils';
+jest.mock('@date-io/moment');
+import MomentUtils from '@date-io/moment';
 
 const setupStoreForActions = () => {
     const middlewares = [thunk];
