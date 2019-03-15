@@ -50,21 +50,25 @@ describe('Media Preview Component ', () => {
         expect(scrollToMedia).toHaveBeenCalled();
     });
 
-    // it('should scroll to the preview',  () => {
-    //     // this isnt working; trying to reset the ref mediaPreviewRef so scrollIntoView exists
-    //     const scrollIntoViewMock = jest.fn();
-    //
-    //     const wrapper = setup({mimeType: 'image/jpeg'});
-    //     console.log(wrapper.instance().mediaPreviewRef.current);
-    //     wrapper.instance().mediaPreviewRef.current = {
-    //         scrollIntoView: scrollIntoViewMock
-    //     };
-    //     wrapper.update();
-    //
-    //     wrapper.scrollToMedia();
-    //
-    //     expect(scrollIntoViewMock).toHaveBeenCalled();
-    // });
+    it('should call the ref\'s method for scrolling into view', () => {
+        const wrapper = setup({});
+        const testFn = jest.fn();
+
+        wrapper.instance().mediaPreviewRef = undefined;
+        wrapper.instance().scrollToMedia();
+
+        wrapper.instance().mediaPreviewRef = {
+            current: {
+                scrollIntoView: testFn
+            }
+        };
+        wrapper.instance().scrollToMedia();
+        expect(testFn).toHaveBeenCalledWith({
+            behavior: 'smooth',
+            block: 'start',
+            inline: 'center'
+        });
+    });
 
     it('should update state on change of URL', () => {
         const wrapper = setup({previewMediaUrl: 'http://www.test.com/test.mov', mimeType: 'video/mp4'});

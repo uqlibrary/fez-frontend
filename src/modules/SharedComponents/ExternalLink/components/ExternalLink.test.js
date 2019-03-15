@@ -1,4 +1,4 @@
-import ExternalLink from './ExternalLink';
+import {ExternalLink} from './ExternalLink';
 
 function setup(testProps, isShallow = true) {
     // build full props list required by the component
@@ -18,4 +18,5 @@ describe('ExternalLink test ', () => {
         const wrapper = setup({href: 'www.google.com', text: 'Google', openInNewIcon: false});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+
 });

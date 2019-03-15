@@ -383,7 +383,21 @@ describe('Search action creators', () => {
             };
 
             searchActions.exportEspacePublications(testRequest);
-            expect(exportPublications).toHaveBeenCalledWith(repositories.routes.SEARCH_INTERNAL_RECORDS_API(testRequest, 'export'));
+            expect(exportPublications).toHaveBeenCalledWith(
+                repositories.routes.SEARCH_INTERNAL_RECORDS_API(testRequest, 'export')
+            );
+        });
+    });
+
+    describe('exportEspacePublications', () => {
+        it('should call records API with no facets if none provided', () => {
+            const testRequest = {
+                activeFacets: false
+            };
+            searchActions.exportEspacePublications(testRequest);
+            expect(exportPublications).toHaveBeenCalledWith(
+                repositories.routes.SEARCH_INTERNAL_RECORDS_API(testRequest, 'export')
+            );
         });
     });
 });

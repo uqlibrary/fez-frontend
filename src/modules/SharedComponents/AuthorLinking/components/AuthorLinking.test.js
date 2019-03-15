@@ -210,6 +210,9 @@ describe('layout', () => {
         wrapper.instance().getAuthorsToRender();
         wrapper.update();
         expect(toJson(wrapper)).toMatchSnapshot();
+
+        wrapper.instance().context.isMobile = true;
+        expect(wrapper.instance().getAuthorsToRender([])).toEqual([]);
     });
 
     it('should handle missing search keys properly', () => {

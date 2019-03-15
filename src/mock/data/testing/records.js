@@ -13030,7 +13030,7 @@ export const ntro2 = {
             rek_author_id: 32126452,
             rek_author_pid: "UQ:ec5ce03",
             rek_author_xsdmf_id: null,
-            rek_author: "Someone else",
+            rek_author: "",
             rek_author_order: 2
         },
         {

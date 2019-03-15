@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`PublicationsList renders  renders component with items 1`] = `
+exports[`PublicationsList renders component with items 1`] = `
 <Fragment>
   <withRouter(Connect(WithStyles(PublicationCitation)))
     customActions={Array []}
@@ -19579,4 +19579,4 @@ exports[`PublicationsList renders  renders component with items 1`] = `
 </Fragment>
 `;
 
-exports[`PublicationsList renders  renders empty component 1`] = `<Fragment />`;
+exports[`PublicationsList renders empty component 1`] = `<Fragment />`;

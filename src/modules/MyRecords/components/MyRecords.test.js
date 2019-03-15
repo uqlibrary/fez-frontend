@@ -1,5 +1,5 @@
 import MyRecords from './MyRecords';
-import {routes} from 'config';
+import {routes, general} from 'config';
 import {locale} from 'locale';
 
 function setup(testProps, isShallow = true) {
@@ -223,5 +223,17 @@ describe('MyRecords test', () => {
             'Display type': 371
         });
         expect(result).toEqual({});
+    });
+
+    it('component has displayable facets', () => {
+        const testAction = jest.fn();
+        const wrapper = setup({actions: {searchAuthorPublications: testAction}});
+
+        wrapper.instance().facetsChanged({'filters': {'Display type': general.PUBLICATION_TYPE_CREATIVE_WORK}});
+
+        expect(wrapper.state().activeFacets).toEqual({"filters": {"Display type": general.PUBLICATION_TYPE_CREATIVE_WORK}});
+        expect(wrapper.state().page).toEqual(1);
+        expect(testAction).toHaveBeenCalled();
+        expect(toJson(wrapper)).toMatchSnapshot();
     });
 });
