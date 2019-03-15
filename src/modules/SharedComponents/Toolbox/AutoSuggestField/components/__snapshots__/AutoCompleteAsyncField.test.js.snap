@@ -374,6 +374,27 @@ exports[`AutoCompleteAsyncField component should call given filter function on i
 </div>
 `;
 
+exports[`AutoCompleteAsyncField component should have a proper style generator 1`] = `
+Object {
+  "container": Object {
+    "flexGrow": 1,
+    "position": "relative",
+  },
+  "inputRoot": Object {
+    "flexWrap": "wrap",
+  },
+  "paper": Object {
+    "maxHeight": 250,
+    "overflowY": "scroll",
+    "position": "absolute",
+    "zIndex": 999,
+  },
+  "root": Object {
+    "flexGrow": 1,
+  },
+}
+`;
+
 exports[`AutoCompleteAsyncField component should render 1`] = `
 <div
   className="root"

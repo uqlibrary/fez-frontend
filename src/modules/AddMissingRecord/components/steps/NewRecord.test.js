@@ -84,4 +84,20 @@ describe('Add new record', () => {
         expect(toJson(wrapper.find('ConfirmDialogBox'))).toMatchSnapshot();
     });
 
+    it('should render with missing author information', () => {
+        const wrapper = setup({
+            author: {}
+        });
+
+        expect(toJson(wrapper.find('PublicationForm'))).toMatchSnapshot();
+    });
+
+    it('should render alert about file uploading or issue error', () => {
+        const wrapper = setup({
+            author: {},
+            newRecordFileUploadingOrIssueError: true
+        });
+
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });

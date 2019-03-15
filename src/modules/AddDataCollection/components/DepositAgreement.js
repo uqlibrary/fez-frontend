@@ -50,7 +50,7 @@ export class DepositAgreement extends PureComponent {
     }
 }
 
-const styles = (theme) => ({
+export const styles = (theme) => ({
     root: {
         alignItems: 'flex-start',
         margin: 0
@@ -62,7 +62,7 @@ const styles = (theme) => ({
         lineHeight: '24px'
     },
     checkboxRoot: {
-        color: !!theme.status && theme.status.danger || '',
+        color: (theme.status || {}).danger || '',
     },
     checkboxChecked: {
         color: !!theme.palette && `${theme.palette.primary.main} !important` || ''

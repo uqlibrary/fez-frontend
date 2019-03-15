@@ -30,12 +30,10 @@ describe('PublicationsListSorting renders ', () => {
             from: 0,
             to: 0,
             total: 0,
-            per_page: 20,
             current_page: 1
         };
         const wrapper = setup({pagingData: data});
         expect(toJson(wrapper)).toMatchSnapshot();
-        // expect(wrapper.find('.publicationsListSorting.empty').length).toBe(1);
     });
 
     it('component with non-empty paging data', () => {

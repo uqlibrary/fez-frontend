@@ -170,7 +170,7 @@ export default class FacetsFilter extends PureComponent {
                             return publicationType.id === rawFacet.buckets[index].key;
                         });
                         return {
-                            title: publicationTypeIndex > -1 ? publicationTypes()[publicationTypeIndex].name : 'Unknown',
+                            title: publicationTypeIndex > -1 ? publicationTypes()[publicationTypeIndex].name : /* istanbul ignore next */ 'Unknown',
                             key: item.key,
                             count: item.doc_count
                         };

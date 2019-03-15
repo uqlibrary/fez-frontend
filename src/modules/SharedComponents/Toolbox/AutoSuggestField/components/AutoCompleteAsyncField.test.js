@@ -1,4 +1,4 @@
-import {AutoCompleteAsyncField} from './AutoCompleteAsyncField';
+import { AutoCompleteAsyncField, styles } from './AutoCompleteAsyncField';
 import Downshift from 'downshift';
 
 function setup(testProps, isShallow = true) {
@@ -39,23 +39,23 @@ describe('AutoCompleteAsyncField component', () => {
     });
 
     it('should render with disabled flag set to true', () => {
-        const wrapper = setup({disabled: true}, false);
+        const wrapper = setup({ disabled: true }, false);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render as required field', () => {
-        const wrapper = setup({required: true}, false);
+        const wrapper = setup({ required: true }, false);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render with an input which allows free text input', () => {
-        const wrapper = setup({required: true, allowFreeText: true});
+        const wrapper = setup({ required: true, allowFreeText: true });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render autosuggest field and call action creator', () => {
         const testFunction = jest.fn();
-        const wrapper = setup({loadSuggestions: testFunction, async: false}, false);
+        const wrapper = setup({ loadSuggestions: testFunction, async: false }, false);
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(testFunction).toBeCalled();
     });
@@ -84,23 +84,53 @@ describe('AutoCompleteAsyncField component', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should render with textInputRef set', () => {
+        const filterFn = jest.fn((searchText, key) => searchText === key);
+        const wrapper = setup({
+            itemsList: [{
+                id: null,
+                value: ''
+            }],
+            filter: filterFn
+        });
+        wrapper.instance().textInputRef = {
+            clientWidth: 50
+        };
+        const childrenFn = wrapper.find('Downshift').props().children;
+        const renderedChild = childrenFn({
+            getInputProps: () => ({ onChange: wrapper.instance().getSuggestions }),
+            getMenuProps: jest.fn(),
+            isOpen: true,
+            inputValue: 10
+        });
+        const childElement = getElement(renderedChild.type, renderedChild.props);
+        expect(childElement.find('WithStyles(Paper)').props().style.width).toBe(50);
+    });
+
+    it('should have a proper style generator', () => {
+        expect(styles()).toMatchSnapshot();
+    });
+
     it('should call stateReducer function on state change as free text field', () => {
-        const onChangeFn = jest.fn(({value}) => expect(value).toEqual('test'));
-        const wrapper = setup({required: true, allowFreeText: true, onChange: onChangeFn});
+        const onChangeFn = jest.fn(({ value }) => expect(value).toEqual('test'));
+        const wrapper = setup({ required: true, allowFreeText: true, onChange: onChangeFn });
         const stateChangeFn = wrapper.instance().handleStateChange();
-        stateChangeFn({inputValue: 'test'});
+        stateChangeFn({ inputValue: 'test' });
         expect(onChangeFn).toHaveBeenCalled();
     });
 
     it('should call stateReducer function on state change as non free text field', () => {
-        const wrapper = setup({required: true, allowFreeText: false});
+        const wrapper = setup({ required: true, allowFreeText: false });
         const stateChangeFn = wrapper.instance().handleStateChange();
         expect(stateChangeFn()).toEqual(undefined);
     });
 
     it('should test stateReducer function correctly when free text input is allowed on blurInput event', () => {
-        const wrapper = setup({required: true, allowFreeText: true});
-        const result = wrapper.instance().stateReducer({inputValue: 'Test'}, {type: Downshift.stateChangeTypes.blurInput, a: 'test', b: 'testing'});
+        const wrapper = setup({ required: true, allowFreeText: true });
+        const result = wrapper.instance().stateReducer(
+            { inputValue: 'Test' },
+            { type: Downshift.stateChangeTypes.blurInput, a: 'test', b: 'testing' }
+        );
         expect(result).toEqual({
             inputValue: 'Test',
             type: Downshift.stateChangeTypes.blurInput,
@@ -110,8 +140,11 @@ describe('AutoCompleteAsyncField component', () => {
     });
 
     it('should test stateReducer function correctly when free text input is allowed on itemMouseEnter event', () => {
-        const wrapper = setup({required: true, allowFreeText: true});
-        const result = wrapper.instance().stateReducer({inputValue: 'Test'}, {type: Downshift.stateChangeTypes.itemMouseEnter, a: 'test', b: 'testing'});
+        const wrapper = setup({ required: true, allowFreeText: true });
+        const result = wrapper.instance().stateReducer(
+            { inputValue: 'Test' },
+            { type: Downshift.stateChangeTypes.itemMouseEnter, a: 'test', b: 'testing' }
+        );
         expect(result).toEqual({
             type: Downshift.stateChangeTypes.itemMouseEnter,
             a: 'test',
@@ -120,8 +153,11 @@ describe('AutoCompleteAsyncField component', () => {
     });
 
     it('should test stateReducer function correctly when free text input is not allowed on blurInput/clickItem/keyDownEnter/mouseUp event', () => {
-        const wrapper = setup({required: true});
-        const result = wrapper.instance().stateReducer({inputValue: 'Test'}, {type: Downshift.stateChangeTypes.blurInput, a: 'test', b: 'testing'});
+        const wrapper = setup({ required: true });
+        const result = wrapper.instance().stateReducer(
+            { inputValue: 'Test' },
+            { type: Downshift.stateChangeTypes.blurInput, a: 'test', b: 'testing' }
+        );
         expect(result).toEqual({
             inputValue: '',
             type: Downshift.stateChangeTypes.blurInput,
@@ -129,7 +165,10 @@ describe('AutoCompleteAsyncField component', () => {
             b: 'testing'
         });
 
-        const result1 = wrapper.instance().stateReducer({inputValue: 'Test'}, {type: Downshift.stateChangeTypes.clickItem, a: 'test', b: 'testing'});
+        const result1 = wrapper.instance().stateReducer(
+            { inputValue: 'Test' },
+            { type: Downshift.stateChangeTypes.clickItem, a: 'test', b: 'testing' }
+        );
         expect(result1).toEqual({
             inputValue: '',
             type: Downshift.stateChangeTypes.clickItem,
@@ -137,7 +176,10 @@ describe('AutoCompleteAsyncField component', () => {
             b: 'testing'
         });
 
-        const result2 = wrapper.instance().stateReducer({inputValue: 'Test'}, {type: Downshift.stateChangeTypes.keyDownEnter, a: 'test', b: 'testing'});
+        const result2 = wrapper.instance().stateReducer(
+            { inputValue: 'Test' },
+            { type: Downshift.stateChangeTypes.keyDownEnter, a: 'test', b: 'testing' }
+        );
         expect(result2).toEqual({
             inputValue: '',
             type: Downshift.stateChangeTypes.keyDownEnter,
@@ -145,7 +187,10 @@ describe('AutoCompleteAsyncField component', () => {
             b: 'testing'
         });
 
-        const result3 = wrapper.instance().stateReducer({inputValue: 'Test'}, {type: Downshift.stateChangeTypes.mouseUp, a: 'test', b: 'testing'});
+        const result3 = wrapper.instance().stateReducer(
+            { inputValue: 'Test' },
+            { type: Downshift.stateChangeTypes.mouseUp, a: 'test', b: 'testing' }
+        );
         expect(result3).toEqual({
             inputValue: '',
             type: Downshift.stateChangeTypes.mouseUp,
@@ -153,7 +198,10 @@ describe('AutoCompleteAsyncField component', () => {
             b: 'testing'
         });
 
-        const result4 = wrapper.instance().stateReducer({inputValue: 'Test'}, {type: Downshift.stateChangeTypes.blurButton, a: 'test', b: 'testing'});
+        const result4 = wrapper.instance().stateReducer(
+            { inputValue: 'Test' },
+            { type: Downshift.stateChangeTypes.blurButton, a: 'test', b: 'testing'
+        });
         expect(result4).toEqual({
             type: Downshift.stateChangeTypes.blurButton,
             a: 'test',
@@ -162,13 +210,13 @@ describe('AutoCompleteAsyncField component', () => {
     });
 
     it('should render default MenuItemComponent', () => {
-        const wrapper = setup({required: true, allowFreeText: true});
+        const wrapper = setup({ required: true, allowFreeText: true });
         const menuItemResult = wrapper.instance().renderSuggestion({
-            suggestion: {value: 'Testing menu item'},
+            suggestion: { value: 'Testing menu item' },
             index: 0,
             itemProps: {},
             highlightedIndex: 0,
-            selectedItem: {value: 'Testing'}
+            selectedItem: { value: 'Testing' }
         });
         expect(menuItemResult).toMatchSnapshot();
     });
@@ -183,14 +231,22 @@ describe('AutoCompleteAsyncField component', () => {
             category: 'testing'
         });
 
-        wrapper.instance().getSuggestions({target: {value: 'tes'}});
+        wrapper.instance().getSuggestions({ target: { value: 'tes' } });
         expect(loadSuggestionsFn).toHaveBeenCalledWith('testing', 'tes');
+
+        // Should not try to load suggestions if async
+        wrapper.setProps({
+            async: false
+        });
+        loadSuggestionsFn.mockClear();
+        wrapper.instance().getSuggestions({ target: { value: 'tes' } });
+        expect(loadSuggestionsFn).not.toBeCalled();
     });
 
     it('should call given filter function on itemsList', () => {
         const itemsList = [
-            {value: 'test 1', id: 123},
-            {value: 'test 2', id: 456}
+            { value: 'test 1', id: 123 },
+            { value: 'test 2', id: 456 }
         ];
 
         const filterFn = jest.fn((searchText, key) => searchText === key);
@@ -205,7 +261,7 @@ describe('AutoCompleteAsyncField component', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
         const childrenFn = wrapper.find('Downshift').props().children;
         childrenFn({
-            getInputProps: () => ({onChange: wrapper.instance().getSuggestions}),
+            getInputProps: () => ({ onChange: wrapper.instance().getSuggestions }),
             isOpen: true,
             getMenuProps: jest.fn(),
             inputValue: 'tes',
@@ -217,8 +273,8 @@ describe('AutoCompleteAsyncField component', () => {
 
     it('should call filter function on itemsList', () => {
         const itemsList = [
-            {value: 'test 1', id: 123},
-            {value: 'test 2', id: 456}
+            { value: 'test 1', id: 123 },
+            { value: 'test 2', id: 456 }
         ];
         const wrapper = setup({
             required: true,
@@ -227,7 +283,7 @@ describe('AutoCompleteAsyncField component', () => {
             async: true,
             maxResults: 7,
             clearInput: true,
-            selectedValue: {value: 'test 1', id: 123},
+            selectedValue: { value: 'test 1', id: 123 },
             error: true,
             errorText: 'This field is required'
         });
@@ -239,7 +295,7 @@ describe('AutoCompleteAsyncField component', () => {
         const childrenFn = ChildComponent.props().children;
 
         const childrens1 = childrenFn({
-            getInputProps: () => ({onChange: wrapper.instance().getSuggestions}),
+            getInputProps: () => ({ onChange: wrapper.instance().getSuggestions }),
             isOpen: true,
             getMenuProps: jest.fn(),
             inputValue: 'tes',
@@ -272,7 +328,7 @@ describe('AutoCompleteAsyncField component', () => {
             inputValue: '123',
             getItemProps: jest.fn(),
             highlightedIndex: 1,
-            selectedItem: {value: 'test 1', id: 123}
+            selectedItem: { value: 'test 1', id: 123 }
         });
 
         const ThirdRenderedChildren = getElement(childrens3.type, childrens3.props);
