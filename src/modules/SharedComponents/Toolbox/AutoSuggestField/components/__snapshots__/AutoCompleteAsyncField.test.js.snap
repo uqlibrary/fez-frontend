@@ -95,7 +95,7 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
       >
         <WithStyles(MenuItem)
           button={true}
-          key="test 1"
+          key="123"
           selected={false}
           style={
             Object {
@@ -116,7 +116,7 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
         </WithStyles(MenuItem)>
         <WithStyles(MenuItem)
           button={true}
-          key="test 2"
+          key="456"
           selected={false}
           style={
             Object {
@@ -181,7 +181,7 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
       >
         <WithStyles(MenuItem)
           button={true}
-          key="test 1"
+          key="123"
           selected={false}
           style={
             Object {
@@ -321,7 +321,7 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
       >
         <WithStyles(MenuItem)
           button={true}
-          key="test 1"
+          key="123"
           selected={false}
           style={
             Object {

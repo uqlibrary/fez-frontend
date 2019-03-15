@@ -118,7 +118,7 @@ export class AutoCompleteAsyncField extends Component {
             <MenuItem
                 button
                 {...itemProps}
-                key={suggestion.value}
+                key={suggestion.key || suggestion.id || suggestion.value}
                 selected={isHighlighted}
                 style={{
                     fontWeight: isSelected ? 500 : 400,
