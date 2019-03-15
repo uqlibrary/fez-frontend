@@ -14,7 +14,7 @@ export function loadAuthorPublicationsStats(userName) {
                 let topPublicationTypes = [];
                 let years = [];
 
-                if (response !== null && response.hasOwnProperty('filters') && response.filters.hasOwnProperty('facets')) {
+                if (((response || {}).filters || {}).facets) {
                     data = response.filters.facets.hasOwnProperty('Year published') && response.filters.facets['Year published'].buckets;
                     topPublicationTypes = transformer.getPublicationsPerType(data, 4);
                     years = transformer.getPublicationsPerYearCategories(data);

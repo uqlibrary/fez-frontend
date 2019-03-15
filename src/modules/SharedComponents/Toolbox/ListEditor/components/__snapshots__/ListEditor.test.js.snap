@@ -1,5 +1,59 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`ListEditor tests  should add an object item and set state 1`] = `
+<div
+  className="testClass"
+>
+  <mockConstructor
+    disabled={false}
+    errorText=""
+    inputField={[MockFunction]}
+    isValid={[MockFunction]}
+    locale={Object {}}
+    normalize={[Function]}
+    onAdd={[Function]}
+  />
+</div>
+`;
+
+exports[`ListEditor tests  should add an object item and set state 2`] = `
+<div
+  className="testClass"
+>
+  <mockConstructor
+    disabled={false}
+    errorText=""
+    inputField={[MockFunction]}
+    isValid={[MockFunction]}
+    locale={Object {}}
+    normalize={[Function]}
+    onAdd={[Function]}
+  />
+  <WithStyles(ListRowHeader)
+    disabled={false}
+    hideReorder={true}
+    onDeleteAll={[Function]}
+  />
+  <WithStyles(ListRow)
+    canMoveDown={false}
+    canMoveUp={false}
+    disabled={false}
+    hideReorder={false}
+    index={0}
+    item={
+      Object {
+        "id": "test",
+        "value": "test",
+      }
+    }
+    key="0"
+    onDelete={[Function]}
+    onMoveDown={[Function]}
+    onMoveUp={[Function]}
+  />
+</div>
+`;
+
 exports[`ListEditor tests  should add item and set state 1`] = `
 <div
   className="testClass"
