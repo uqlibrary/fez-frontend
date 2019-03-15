@@ -401,7 +401,8 @@ export default class AddDataCollection extends Component {
                                     disabled={this.props.submitting}
                                     locale={{form: txt.information.optionalDatasetDetails.fieldLabels.relatedDatasets}}
                                     height={50}
-                                    validate={[validation.required]}/>
+                                    validate={[validation.requiredList]}
+                                />
                             </StandardCard>
                         </Grid>
                         <Grid item xs={12}>
