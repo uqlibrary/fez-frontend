@@ -189,7 +189,7 @@ exports[`FreeTextForm tests  rendering reminder to add input 1`] = `
   >
     <WithStyles(Button)
       color="primary"
-      disabled={true}
+      disabled={false}
       fullWidth={true}
       onClick={[Function]}
       variant="contained"
