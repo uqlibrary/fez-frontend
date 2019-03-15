@@ -189,7 +189,7 @@ exports[`FreeTextForm tests  rendering reminder to add input 1`] = `
   >
     <WithStyles(Button)
       color="primary"
-      disabled={false}
+      disabled={true}
       fullWidth={true}
       onClick={[Function]}
       variant="contained"
@@ -287,7 +287,7 @@ exports[`FreeTextForm tests  should focus on textField after item is added 1`] =
   >
     <WithStyles(Button)
       color="primary"
-      disabled={false}
+      disabled={true}
       fullWidth={true}
       onClick={[Function]}
       variant="contained"
