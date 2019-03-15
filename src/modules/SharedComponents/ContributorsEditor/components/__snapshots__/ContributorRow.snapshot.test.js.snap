@@ -1702,7 +1702,7 @@ exports[`Component ContributorRow  should assign contributor 1`] = `
               noWrap={true}
               variant="caption"
             >
-              Organisation type: Museum
+              Organisation type: Library/Museum/Public Gallery
             </WithStyles(Typography)>
           }
         />
@@ -1897,7 +1897,7 @@ exports[`Component ContributorRow  should call callback functions on ListItem 1`
               noWrap={true}
               variant="caption"
             >
-              Organisation type: Museum
+              Organisation type: Library/Museum/Public Gallery
             </WithStyles(Typography)>
           }
         />
