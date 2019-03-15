@@ -76,7 +76,7 @@ describe('Audio Player Component ', () => {
 
     });
 
-    xit('should set component state to playing', () => {
+    it('should set component state to playing', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
         wrapper.setState({isPlaying: true});
