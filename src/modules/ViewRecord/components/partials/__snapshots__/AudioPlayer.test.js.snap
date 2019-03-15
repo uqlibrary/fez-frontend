@@ -1485,3 +1485,59 @@ exports[`Audio Player Component  should render component 1`] = `
   </WithStyles(IconButton)>
 </div>
 `;
+
+exports[`Audio Player Component  should set component state to playing 1`] = `
+<div>
+  <audio
+    id="audioPlayer"
+  >
+    <source
+      src="http://localhost/view/UQ:676287/UQ676287_OA.pdf"
+      type="audio/mp3"
+    />
+  </audio>
+  <WithStyles(IconButton)
+    aria-label="Click to play audio file UQ676287_OA.pdf"
+    id="playButton"
+    onClick={[Function]}
+    style={
+      Object {
+        "marginBottom": -10,
+        "marginTop": -10,
+      }
+    }
+  >
+    <pure(PlayArrowIcon)
+      className="play"
+    />
+  </WithStyles(IconButton)>
+</div>
+`;
+
+exports[`Audio Player Component  should set component state to playing 2`] = `
+<div>
+  <audio
+    id="audioPlayer"
+  >
+    <source
+      src="http://localhost/view/UQ:676287/UQ676287_OA.pdf"
+      type="audio/mp3"
+    />
+  </audio>
+  <WithStyles(IconButton)
+    aria-label="Click to pause audio file UQ676287_OA.pdf"
+    id="pauseButton"
+    onClick={[Function]}
+    style={
+      Object {
+        "marginBottom": -10,
+        "marginTop": -10,
+      }
+    }
+  >
+    <pure(PauseIcon)
+      className="pause"
+    />
+  </WithStyles(IconButton)>
+</div>
+`;

@@ -287,5 +287,12 @@ describe('PublicationsListPaging renders ', () => {
         expect(wrapper.instance().renderPageButtons().length).toEqual(4);
     });
 
-
+    it('should render buttons with zero total pages', () => {
+        const wrapper = setup({});
+        wrapper.setState({
+            total: null
+        });
+        expect(wrapper.instance().renderButton('test')).toMatchSnapshot();
+        expect(wrapper.instance().renderPageButtons()).toEqual([]);
+    });
 });

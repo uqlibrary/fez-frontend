@@ -130,6 +130,15 @@ describe('Application component', () => {
         expect(wrapper.instance().getChildContext()).toEqual({"isMobile": false, "selectFieldMobileOverrides": {"autoWidth": true, "fullWidth": false, "menuItemStyle": {}, "style": {"width": "100%"}}});
     });
 
+    it('Should display mobile correctly', () => {
+        // current URL is set to testUrl which is set in package.json as http://fez-staging.library.uq.edu.au
+        const wrapper = setup({});
+        wrapper.setState({ isMobile: 'true' });
+        wrapper.instance().getChildContext();
+        wrapper.update();
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
     it('should redirect to login page with correct return url if rhd submission route accessed', () => {
         window.location.assign = jest.fn();
 

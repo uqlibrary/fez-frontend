@@ -126,6 +126,8 @@ describe('Component Orcid ', () => {
             const alert = wrapper.instance().getAlert({...testCase.parameters});
             expect(alert.props.title).toEqual(testCase.expected);
         });
+
+        expect(wrapper.instance().getAlert({})).toBeNull();
     });
 
     it('should set ref of confirmation box', () => {

@@ -1,5 +1,6 @@
 import SearchRecords from './SearchRecords';
 import {routes} from 'config';
+import {locale} from 'locale';
 
 function setup(testProps, isShallow = true) {
     const props = {
@@ -59,6 +60,39 @@ describe('SearchRecords page', () => {
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+
+    it('should run constructor without valid search location', () => {
+        const wrapper = setup({
+            location: {
+                search: 'test'
+            }
+        });
+        expect(wrapper.state()).toMatchSnapshot();
+    });
+
+    it('should render when paging', () => {
+        const wrapper = setup({
+            publicationsList: [1,2],
+            publicationsListPagingData: {
+                from: 10,
+                to: 20,
+                total: 100
+            }
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should not try to parse empty search location in componentWillReceiveProps lifecycle method', () => {
+        const wrapper = setup({});
+        const testFn = jest.fn();
+        wrapper.instance().parseSearchQueryStringFromUrl = testFn;
+        wrapper.setProps({
+            location: {
+                search: ''
+            }
+        });
+        expect(testFn).not.toBeCalled();
+    })
 
     it('should show available filters or selected filters if publicationsListFacets returned (even if there are no results)', () => {
         const wrapper = setup({
@@ -226,6 +260,21 @@ describe('SearchRecords page', () => {
         expect(testPushFn).toHaveBeenCalled();
     });
 
+    it('should set history to unpublished path if pathname matches it', () => {
+        const wrapper = setup({
+            history: {
+                push: jest.fn((history) => {
+                    expect(history.pathname).toBe(routes.pathConfig.admin.unpublished);
+                })
+            },
+            location: {
+                pathname: routes.pathConfig.admin.unpublished,
+                search: ''
+            }
+        });
+        wrapper.instance().updateHistoryAndSearch();
+    });
+
     it('should call updateSearch() method if query search parameters with searchQueryParams key found', () => {
         const testAction = jest.fn();
         const wrapper = setup({
@@ -259,6 +308,12 @@ describe('SearchRecords page', () => {
                 ranges: {}
             }
         });
+    });
+
+    it('should parse properly when activeFacets.showOpenAccessOnly is not present in url', () => {
+        const wrapper = setup({});
+        const test = wrapper.instance().parseSearchQueryStringFromUrl('activeFacets%5Btest1%5D=test2');
+        expect(test).toMatchSnapshot();
     });
 
     it('should correctly parse search query string from location search (default filters + publication type facet + title', () => {
@@ -464,8 +519,39 @@ describe('SearchRecords page', () => {
         const test = [{"searchField":"rek_title","value":"Test","label":""},{"searchField":"rek_author","value":"Ky Lane","label":""}];
         const result = ["Scopus document type", "Genre", "Year published", "Published year range", "Title", "Author"];
         wrapper.instance().handleFacetExcludesFromSearchFields(test);
-        expect(wrapper.instance().state.advancedSearchFields).toEqual(result)
+        expect(wrapper.instance().state.advancedSearchFields).toEqual(result);
+
+        // handle null input
+        wrapper.setState({
+            advancedSearchFields: []
+        });
+        wrapper.instance().handleFacetExcludesFromSearchFields(null);
+        expect(wrapper.instance().state.advancedSearchFields.length).toBe(0);
+
+        // handle searchField entry not having the searchField property
+        wrapper.instance().handleFacetExcludesFromSearchFields({
+            test: {}
+        });
+        expect(
+            wrapper.instance().state.advancedSearchFields.length
+        ).toBe(
+            locale.pages.searchRecords.facetsFilter.excludeFacetsList.length
+        );
+
+        // handle fieldType.map being falsy
+        wrapper.instance().handleFacetExcludesFromSearchFields({
+            test: {
+                searchField: '0'
+            }
+        });
+        expect(
+            wrapper.instance().state.advancedSearchFields.length
+        ).toBe(
+            locale.pages.searchRecords.facetsFilter.excludeFacetsList.length
+        );
+
     });
+
 
     it('should handle empty search query string and should not fail to WSoD', () => {
         const wrapper = setup();

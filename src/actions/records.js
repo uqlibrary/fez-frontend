@@ -196,17 +196,14 @@ export function submitThesis(data) {
         };
 
         // delete extra form values from request object
-        if (recordRequest.authors) delete recordRequest.authors;
-        if (recordRequest.editors) delete recordRequest.editors;
-        if (recordRequest.currentAuthor) delete recordRequest.currentAuthor;
-        if (recordRequest.supervisors) delete recordRequest.supervisors;
-        if (recordRequest.fieldOfResearch) delete recordRequest.fieldOfResearch;
-        /* istanbul ignore else */
-        if (recordRequest.files) delete recordRequest.files;
-        /* istanbul ignore else */
-        if (recordRequest.thesisTitle) delete recordRequest.thesisTitle;
-        /* istanbul ignore else */
-        if (recordRequest.thesisAbstract) delete recordRequest.thesisAbstract;
+        recordRequest.authors && (delete recordRequest.authors);
+        recordRequest.editors && (delete recordRequest.editors);
+        recordRequest.currentAuthor && (delete recordRequest.currentAuthor);
+        recordRequest.supervisors && (delete recordRequest.supervisors);
+        recordRequest.fieldOfResearch && (delete recordRequest.fieldOfResearch);
+        recordRequest.files && (delete recordRequest.files);
+        recordRequest.thesisTitle && (delete recordRequest.thesisTitle);
+        recordRequest.thesisAbstract && (delete recordRequest.thesisAbstract);
 
         let newRecord = null;
         const hasFilesToUpload = data.files && data.files.queue && data.files.queue.length > 0;

@@ -1,5 +1,113 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`MyRecords test component has displayable facets 1`] = `
+<StandardPage
+  title="My research"
+>
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <StandardCard
+        text={
+          <div>
+            We were unable to find any results. You may be able to 
+            <a
+              href="/records/possible"
+            >
+              claim works we think may be yours
+            </a>
+             or 
+            <a
+              href="/records/add/find"
+            >
+              add a missing publication
+            </a>
+          </div>
+        }
+        title="No works found"
+      >
+        <div>
+          We were unable to find any results. You may be able to 
+          <a
+            href="/records/possible"
+          >
+            claim works we think may be yours
+          </a>
+           or 
+          <a
+            href="/records/add/find"
+          >
+            add a missing publication
+          </a>
+        </div>
+      </StandardCard>
+    </WithStyles(Grid)>
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={true}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={false}
+      xsUp={false}
+    >
+      <WithStyles(Grid)
+        item={true}
+        md={3}
+      >
+        <StandardRighthandCard
+          title="Refine results"
+        >
+          <FacetsFilter
+            activeFacets={
+              Object {
+                "filters": Object {
+                  "Display type": 313,
+                },
+              }
+            }
+            disabled={false}
+            excludeFacetsList={
+              Array [
+                "Scopus document type",
+                "Genre",
+                "Year published",
+              ]
+            }
+            facetsData={Object {}}
+            isMyDataSetPage={false}
+            lookupFacetsList={
+              Object {
+                "Author": "Author (lookup)",
+                "Collection": "Collection (lookup)",
+                "Subject": "Subject (lookup)",
+              }
+            }
+            onFacetsChanged={[Function]}
+            renameFacetsList={
+              Object {
+                "Display type": "Work type",
+                "Subtype": "Work subtype",
+              }
+            }
+            showOpenAccessFilter={true}
+          />
+        </StandardRighthandCard>
+      </WithStyles(Grid)>
+    </Hidden>
+  </WithStyles(Grid)>
+</StandardPage>
+`;
+
 exports[`MyRecords test renders active filters 1`] = `
 <StandardPage
   title="My research"

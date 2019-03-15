@@ -11,7 +11,7 @@ function setup(testProps, isShallow = true){
     return getElement(PublicationsList, props, isShallow);
 }
 
-describe('PublicationsList renders ', () => {
+describe('PublicationsList', () => {
     it('renders empty component', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -20,5 +20,20 @@ describe('PublicationsList renders ', () => {
     it('renders component with items', () => {
         const wrapper = setup({publicationsList: myRecordsList.data});
         expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('renders component with custom subset actions', () => {
+        const test = [];
+        const wrapper = setup({
+            publicationsListSubset: [
+                'test'
+            ],
+            subsetCustomActions: test
+        });
+        expect(
+            wrapper.instance().renderPublicationCitation(0, {
+                rek_pid: 'test'
+            }).props.customActions
+        ).toBe(test);
     });
 });
