@@ -114,7 +114,7 @@ export class FreeTextForm extends Component {
                         children={addButtonLabel}
                         disabled={
                             disabled ||
-                            // !this.props.isValid(this.state.itemName) ||
+                            this.props.isValid(this.state.itemName) !== '' ||
                             this.state.itemName.trim().length === 0 ||
                             !!inputLength
                         }
