@@ -1,3 +1,4 @@
+import * as transformers from './transformers';
 import * as claimActions  from './claimPublications';
 import * as actions from './actionTypes';
 import * as repositories from 'repositories';
@@ -403,7 +404,6 @@ describe('Claim publication actions tests ', () => {
         });
 
         it('dispatched expected actions when claiming a publication from external source', async () => {
-            const testParams = {pid: testClaimRequest.publication.rek_pid};
             const testRequest = {
                 ...testClaimRequest,
                 publication: {
@@ -432,7 +432,6 @@ describe('Claim publication actions tests ', () => {
         });
 
         it('dispatched expected actions claiming a publication with files', async () => {
-            const testParams = {pid: testClaimRequest.publication.rek_pid};
             const files = {
                 "files": {
                     "queue": [{
@@ -456,6 +455,42 @@ describe('Claim publication actions tests ', () => {
 
             await mockActionsStore.dispatch(claimActions.claimPublication({...testClaimRequest, ...files}));
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+
+        it('should get file attachment search key when file attachments are present', async () => {
+
+            const testFn = jest.spyOn(transformers, 'getRecordFileAttachmentSearchKey');
+            const publication = {
+                rek_pid: null
+            };
+            const files = {
+                "files": {
+                    "queue": [{
+                        "date": "2017-12-12T13:39:12+10:00",
+                        "access_condition_id": 9,
+                        "name": 'test.jpg'
+                    }]
+                }
+            };
+
+            mockApi
+                .onAny()
+                .reply(200,['http://upload.file.here/test.jpg']);
+
+            const expectedActions = [
+                actions.CLAIM_PUBLICATION_CREATE_PROCESSING,
+                'FILE_UPLOAD_STARTED',
+                'FILE_UPLOAD_PROGRESS@test.jpg',
+                actions.CLAIM_PUBLICATION_CREATE_COMPLETED
+            ];
+
+            await mockActionsStore.dispatch(claimActions.claimPublication({
+                ...testClaimRequest,
+                publication,
+                ...files
+            }));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            expect(testFn).toBeCalledWith(files.files.queue, publication);
         });
 
         it('dispatched expected actions claiming a publication with comments', async () => {
@@ -646,10 +681,6 @@ describe('Claim publication actions tests ', () => {
             mockActionsStore.clearActions();
             await mockActionsStore.dispatch(claimActions.claimPublication(testRequest));
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
-        });
-
-        it('should handle requests with file attachments', () => {
-
         });
 
     });

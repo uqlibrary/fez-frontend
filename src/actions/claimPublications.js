@@ -186,7 +186,7 @@ export function claimPublication(data) {
 
         if (data.authorLinking && data.authorLinking.authors) {
             recordAuthorsIdSearchKeys = transformers.getRecordAuthorsIdSearchKey(
-                data.authorLinking ? data.authorLinking.authors : null,
+                data.authorLinking.authors,
                 data.author.aut_id
             );
         }
@@ -197,7 +197,7 @@ export function claimPublication(data) {
             data.contributorLinking.authors
         ) {
             recordContributorsIdSearchKeys = transformers.getRecordContributorsIdSearchKey(
-                data.contributorLinking ? data.contributorLinking.authors : null,
+                data.contributorLinking.authors,
                 data.author.aut_id
             );
         }
@@ -232,7 +232,7 @@ export function claimPublication(data) {
             .then(() => !data.publication.rek_pid ? post(routes.NEW_RECORD_API(), createRecordRequest) : null)
             // update pid of newly saved record
             .then((newRecord) => {
-                if (!data.publication.rek_pid) {
+                if ((newRecord || {}).data && !data.publication.rek_pid) {
                     data.publication.rek_pid = newRecord.data.rek_pid;
                 }
                 return null;
