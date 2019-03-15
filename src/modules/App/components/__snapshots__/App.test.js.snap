@@ -1,5 +1,334 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Application component Should display mobile correctly 1`] = `
+<WithStyles(Grid)
+  container={true}
+>
+  <withRouter(Connect(Meta))
+    routesConfig={
+      Array [
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "eSpace",
+          "path": "/",
+        },
+        Object {
+          "pageTitle": "Contact UQ eSpace",
+          "path": "/contact",
+          "render": [Function],
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": undefined,
+          "path": "/view/:pid(UQ:[a-z0-9]+)",
+          "regExPath": "/view/(UQ:[a-z0-9]+)",
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "eSpace search",
+          "path": "/records/search",
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "eSpace",
+          "path": "/dashboard",
+        },
+        Object {
+          "pageTitle": "Page not found",
+          "render": [Function],
+        },
+      ]
+    }
+  />
+  <WithStyles(AppBar)
+    className="AppBar"
+    color="primary"
+    position="fixed"
+  >
+    <WithStyles(Toolbar)
+      style={
+        Object {
+          "height": "70px",
+        }
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="center"
+        container={true}
+        direction="row"
+        justify="flex-start"
+        spacing={8}
+        wrap="nowrap"
+      >
+        <WithStyles(Grid)
+          item={true}
+        >
+          <WithStyles(Tooltip)
+            TransitionComponent={[Function]}
+            placement="bottom-end"
+            title="Main navigation"
+          >
+            <WithStyles(IconButton)
+              aria-label="Click to open the main navigation"
+              onClick={[Function]}
+              style={
+                Object {
+                  "marginLeft": "-12px",
+                  "marginRight": "12px",
+                }
+              }
+            >
+              <pure(MenuIcon)
+                style={
+                  Object {
+                    "color": "white",
+                  }
+                }
+              />
+            </WithStyles(IconButton)>
+          </WithStyles(Tooltip)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          style={
+            Object {
+              "paddingLeft": 0,
+            }
+          }
+          xs={true}
+        >
+          <WithStyles(Grid)
+            alignItems="center"
+            container={true}
+            justify="flex-start"
+            spacing={16}
+            wrap="nowrap"
+          >
+            <Hidden
+              implementation="js"
+              lgDown={false}
+              lgUp={false}
+              mdDown={false}
+              mdUp={false}
+              smDown={false}
+              smUp={false}
+              xlDown={false}
+              xlUp={false}
+              xsDown={true}
+              xsUp={false}
+            >
+              <WithStyles(Grid)
+                item={true}
+              >
+                <div
+                  aria-label="University of Queensland"
+                  className="smallLogo"
+                  id="logo"
+                  style={
+                    Object {
+                      "height": 66,
+                      "width": 60,
+                    }
+                  }
+                />
+              </WithStyles(Grid)>
+            </Hidden>
+            <WithStyles(Grid)
+              item={true}
+              style={
+                Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                }
+              }
+              xs="auto"
+            >
+              <WithStyles(Typography)
+                component="h1"
+                noWrap={true}
+                variant="h5"
+              >
+                <a
+                  className="appTitle"
+                  href="/"
+                  style={
+                    Object {
+                      "color": "#FFFFFF",
+                    }
+                  }
+                  title="Click to return to the eSpace home page"
+                >
+                  UQ eSpace 
+                </a>
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          sm={4}
+          xs={2}
+        >
+          <withRouter(Connect(SearchComponent))
+            autoFocus={false}
+            isInHeader={true}
+            showMobileSearchButton={true}
+            showPrefixIcon={true}
+          />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+        >
+          <WithStyles(AuthButton)
+            ariaLabel="Click to log in to eSpace"
+            isAuthorizedUser={false}
+            onClick={[Function]}
+            signInTooltipText="Log in"
+            signOutTooltipText=""
+          />
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </WithStyles(Toolbar)>
+  </WithStyles(AppBar)>
+  <WithStyles(MenuDrawer)
+    docked={false}
+    drawerOpen={false}
+    history={
+      Object {
+        "location": Object {},
+      }
+    }
+    isMobile="true"
+    locale={
+      Object {
+        "closeMenuLabel": "Close menu",
+        "skipNavAriaLabel": "Click to skip, or tab to progress to the navigation",
+        "skipNavTitle": "Skip Navigation",
+      }
+    }
+    logoImage="largeLogo"
+    logoLink="http://www.uq.edu.au"
+    logoText="University of Queensland"
+    menuItems={
+      Array [
+        Object {
+          "linkTo": "/",
+          "primaryText": "Home",
+          "public": true,
+        },
+        Object {
+          "linkTo": "/records/search",
+          "primaryText": "Search eSpace",
+          "public": true,
+          "secondaryText": "",
+        },
+        Object {
+          "linkTo": "https://guides.library.uq.edu.au/for-researchers/research-publications-guide",
+          "primaryText": "Help",
+          "public": true,
+        },
+        Object {
+          "linkTo": "/contact",
+          "primaryText": "Contact",
+          "public": true,
+          "secondaryText": "",
+        },
+      ]
+    }
+    onToggleDrawer={[Function]}
+  />
+  <div
+    className="content-container"
+    style={Object {}}
+  >
+    <ConfirmDialogBox
+      hideCancelButton={true}
+      locale={
+        Object {
+          "cancelButtonLabel": "Cancel",
+          "confirmButtonLabel": "Redirect to login",
+          "confirmationMessage": "Your session has expired. Follow the login prompt to return to your submission form. You must upload your files again to successfully deposit your thesis, even if you have already uploaded your files.",
+          "confirmationTitle": "Session Expired",
+        }
+      }
+      onRef={[Function]}
+    />
+    <WithStyles(Grid)
+      alignContent="center"
+      alignItems="center"
+      container={true}
+      justify="center"
+    >
+      <WithStyles(Grid)
+        item={true}
+        style={
+          Object {
+            "marginBottom": 0,
+            "marginTop": 0,
+          }
+        }
+      >
+        <WithStyles(Alert)
+          action={[Function]}
+          actionButtonLabel="Click to login"
+          message="Login to UQ eSpace for full search results and more services."
+          title="You are not logged in"
+          type="info_outline"
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+    <Connect(AppAlert) />
+    <Switch>
+      <Route
+        component={[Function]}
+        exact={true}
+        key="route_0"
+        pageTitle="eSpace"
+        path="/"
+      />
+      <Route
+        key="route_1"
+        pageTitle="Contact UQ eSpace"
+        path="/contact"
+        render={[Function]}
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        key="route_2"
+        path="/view/:pid(UQ:[a-z0-9]+)"
+        regExPath="/view/(UQ:[a-z0-9]+)"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        key="route_3"
+        pageTitle="eSpace search"
+        path="/records/search"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        key="route_4"
+        pageTitle="eSpace"
+        path="/dashboard"
+      />
+      <Route
+        key="route_5"
+        pageTitle="Page not found"
+        render={[Function]}
+      />
+    </Switch>
+  </div>
+  <Connect(WithStyles(HelpDrawer)) />
+  <WithStyles(OfflineSnackbar) />
+</WithStyles(Grid)>
+`;
+
 exports[`Application component redirects user to login if not Authorized 1`] = `<div />`;
 
 exports[`Application component should redirect to login page with correct return url if rhd submission route accessed 1`] = `

@@ -798,4 +798,18 @@ describe('FacetsFilter ', () => {
         const wrapper = setup({});
         expect(wrapper.instance().isFacetFilterActive(activeFacets, 'Display type', 134)).toBeTruthy();
     });
+
+    it('renders lookup facets', () => {
+        const testProps = {
+            facetsData: possibleUnclaimedList.filters.facets,
+            showOpenAccessFilter: true,
+            lookupFacetsList: {
+                'Author': 'Author (lookup)',
+                'Collection': 'Collection (lookup)',
+                'Subject': 'Subject (lookup)'
+            }
+        };
+        const wrapper = setup(testProps);
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });

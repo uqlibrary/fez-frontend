@@ -63,4 +63,11 @@ describe('Component NewsFeed', () => {
         wrapper.instance().componentDidMount();
         expect(loadFn).toHaveBeenCalled();
     });
+
+    it('should show new count if above set limit', () => {
+        const wrapper = setup({
+            showNewsCount: 1
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });

@@ -41,7 +41,9 @@ export default class NewRecord extends PureComponent {
 
     render() {
         // wait for author to load before rendering
-        if (!this.props.author) return (<span />);
+        if (!this.props.author) {
+            return (<span />);
+        }
 
         const txt = locale.pages.addRecord;
         const {rawSearchQuery} = this.props;
@@ -50,8 +52,8 @@ export default class NewRecord extends PureComponent {
         const initialValues = {
             currentAuthor: [
                 {
-                    'nameAsPublished': this.props.author ? this.props.author.aut_display_name : '',
-                    'authorId': this.props.author ? this.props.author.aut_id : ''
+                    'nameAsPublished': this.props.author.aut_display_name ? this.props.author.aut_display_name : '',
+                    'authorId': this.props.author.aut_id ? this.props.author.aut_id : ''
                 }
             ],
             rek_title: rawSearchQuery || ''

@@ -440,7 +440,7 @@ export const getNtroMetadataSearchKeys = (data) => {
         ntroMetadata.fez_record_search_key_significance = data.authors.map((item, index) =>{
             if (selectedAuthorIdIndex === index) {
                 return {
-                    rek_significance: data.significance || 0,
+                    rek_significance: data.significance,
                     rek_significance_order: selectedAuthorIdIndex + 1
                 };
             } else {

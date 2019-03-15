@@ -102,7 +102,18 @@ GoogleMapViewComponent.propTypes = {
     onPlacesChanged: PropTypes.func,
     handleMarkerComplete: PropTypes.func,
     handlePolygonComplete: PropTypes.func,
-    handleRectangleComplete: PropTypes.func,
+    handleRectangleComplete: PropTypes.func
+};
+
+export const getDefaultCenter = (geoCoords) => {
+    const minLngPoint = geoCoords.reduce((min, point) => point.lng < min ? point.lng : min, geoCoords[0].lng);
+    const maxLngPoint = geoCoords.reduce((max, point) => point.lng > max ? point.lng : max, geoCoords[0].lng);
+    const minLatPoint = geoCoords.reduce((min, point) => point.lat < min ? point.lat : min, geoCoords[0].lat);
+    const maxLatPoint = geoCoords.reduce((max, point) => point.lat > max ? point.lat : max, geoCoords[0].lat);
+    return {
+        lng: (maxLngPoint + minLngPoint) / 2,
+        lat: (minLatPoint + maxLatPoint) / 2
+    };
 };
 
 const PublicationMap = compose(
@@ -119,20 +130,12 @@ const PublicationMap = compose(
                 }
             ));
 
-            let defaultCenter;
-            if (geoCoords) {
-                const minLngPoint = geoCoords.reduce((min, point) => point.lng < min ? point.lng : min, geoCoords[0].lng);
-                const maxLngPoint = geoCoords.reduce((max, point) => point.lng > max ? point.lng : max, geoCoords[0].lng);
-                const minLatPoint = geoCoords.reduce((min, point) => point.lat < min ? point.lat : min, geoCoords[0].lat);
-                const maxLatPoint = geoCoords.reduce((max, point) => point.lat > max ? point.lat : max, geoCoords[0].lat);
-                defaultCenter = {lng: (maxLngPoint + minLngPoint) / 2, lat: (minLatPoint + maxLatPoint) / 2};
-            } else {
-                defaultCenter = {lng: 153.013346, lat: -27.499412};
-            }
+            const defaultCenter = (geoCoords) ? getDefaultCenter(geoCoords) : {lng: 153.013346, lat: -27.499412};
             const pointZoom = 7;
             const polygonZoom = 13;
 
             const updateState = (geoCoords, currentOverlay) => {
+                /* istanbul ignore else */
                 if (!!this.state.currentOverlay) {
                     this.state.currentOverlay.setMap(null);
                 }
@@ -218,7 +221,13 @@ const PublicationMap = compose(
         },
         componentWillUpdate(nextProps, nextState) {
             if (!!this.props.onChange) {
-                this.props.onChange(nextState.geoCoords.map(coord => (`${this.trimCoordinates(coord.lng)},${this.trimCoordinates(coord.lat)}`)).join(' '));
+                this.props.onChange(
+                    nextState.geoCoords.map(
+                        coord => (
+                            `${this.trimCoordinates(coord.lng)},${this.trimCoordinates(coord.lat)}`
+                        )
+                    ).join(' ')
+                );
             }
         }
     }),

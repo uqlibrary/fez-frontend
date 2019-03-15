@@ -219,9 +219,11 @@ class SearchRecords extends PureComponent {
         if(searchFields) {
             const importedFacetExcludes = [];
             Object.keys(searchFields).map((key) => {
-                const facetToHide = locale.components.searchComponent.advancedSearch.fieldTypes[searchFields[key].searchField].map;
-                if(facetToHide) {
-                    importedFacetExcludes.push(facetToHide);
+                if (searchFields[key].searchField) {
+                    const fieldType = locale.components.searchComponent.advancedSearch.fieldTypes[searchFields[key].searchField];
+                    if (fieldType.map) {
+                        importedFacetExcludes.push(fieldType.map);
+                    }
                 }
             });
             this.setState({
