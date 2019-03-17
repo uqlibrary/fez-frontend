@@ -1,15 +1,17 @@
 import React from 'react';
 import {default as componentLocale} from 'locale/components';
-import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
+import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
 import Grid from '@material-ui/core/Grid';
 
 const NtroHeader = ({}) => {
     const txt = componentLocale.components.ntroFields.header;
     return (
         <Grid item xs={12}>
-            <StandardCard title={txt.title}>
-                {txt.body}
-            </StandardCard>
+            <Alert
+                title={txt.title}
+                message={txt.body}
+                type="info_outline"
+            />
         </Grid>
     );
 };
