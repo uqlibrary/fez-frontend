@@ -93,7 +93,7 @@ export class TopCitedPublicationsClass extends PureComponent {
                             classes={{indicator: classes.tabIndicator}}
                             value={this.state.topCitedTab}
                             onChange={this.handleTabChange}
-                            fullWidth
+                            variant="fullWidth"
                             centered
                         >
                             {/* Tabs */}

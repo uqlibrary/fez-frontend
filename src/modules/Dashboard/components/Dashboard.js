@@ -241,7 +241,7 @@ export class DashboardClass extends PureComponent {
                                     classes={{indicator: classes.tabIndicator}}
                                     value={this.state.dashboardPubsTabs}
                                     onChange={this.handleTabChange}
-                                    fullWidth
+                                    variant="fullWidth"
                                     centered>
                                     {this.props.showLatestPublicationsTab && <Tab className={classes.tab} key={1} label={txt.myLatestPublications.title} value={1}/>}
                                     {this.props.showTrendingPublicationsTab && <Tab className={classes.tab} key={2} label={txt.myTrendingPublications.title} value={2}/>}

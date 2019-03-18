@@ -1443,8 +1443,7 @@ export const refereedsources = [
     {value: '453637', label: 'Not peer reviewed'},
 ];
 export const openaccess = [
-    {value: '', label: 'Please choose an option'},
-    {value: '453692" selected="selected', label: 'Not yet assessed'},
+    {value: '453692', label: 'Not yet assessed'},
     {value: '453693', label: 'DOI'},
     {value: '453694', label: 'Link (no DOI)'},
     {value: '453695', label: 'File (Publisher version)'},
