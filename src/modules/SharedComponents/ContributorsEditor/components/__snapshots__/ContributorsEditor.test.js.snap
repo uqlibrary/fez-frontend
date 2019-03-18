@@ -545,6 +545,7 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
           >
             <div>
               <Connect(ContributorForm)
+                hasContributors={false}
                 isContributorAssigned={false}
                 isNtro={true}
                 onAdd={[Function]}
@@ -562,6 +563,7 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                     }
                   }
                   authorsList={Array []}
+                  hasContributors={false}
                   isContributorAssigned={false}
                   isNtro={true}
                   locale={
@@ -2085,7 +2087,7 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                               <WithStyles(TextFieldWrapper)
                                 autoComplete="off"
                                 disabled={true}
-                                error={true}
+                                error={false}
                                 fullWidth={true}
                                 id="nameAsPublishedField"
                                 label="Name as published"
@@ -2098,7 +2100,7 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                                   autoComplete="off"
                                   classes={Object {}}
                                   disabled={true}
-                                  error={true}
+                                  error={false}
                                   fullWidth={true}
                                   id="nameAsPublishedField"
                                   label="Name as published"
@@ -2112,7 +2114,7 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                                     autoComplete="off"
                                     classes={Object {}}
                                     disabled={true}
-                                    error={true}
+                                    error={false}
                                     fullWidth={true}
                                     id="Name as published"
                                     label="Name as published"
@@ -2126,7 +2128,7 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                                     <WithStyles(FormControl)
                                       classes={Object {}}
                                       disabled={true}
-                                      error={true}
+                                      error={false}
                                       fullWidth={true}
                                       required={false}
                                       variant="standard"
@@ -2142,7 +2144,7 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                                         }
                                         component="div"
                                         disabled={true}
-                                        error={true}
+                                        error={false}
                                         fullWidth={true}
                                         margin="none"
                                         required={false}
@@ -2192,7 +2194,7 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                                                   htmlFor="Name as published"
                                                 >
                                                   <label
-                                                    className="MuiFormLabel-root-109 MuiFormLabel-disabled-111 MuiFormLabel-error-112 MuiInputLabel-root-102 MuiInputLabel-formControl-103 MuiInputLabel-animated-106"
+                                                    className="MuiFormLabel-root-109 MuiFormLabel-disabled-111 MuiInputLabel-root-102 MuiInputLabel-formControl-103 MuiInputLabel-animated-106"
                                                     data-shrink={false}
                                                     htmlFor="Name as published"
                                                   >
@@ -2296,11 +2298,11 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                                                   value=""
                                                 >
                                                   <div
-                                                    className="MuiInputBase-root-136 MuiInput-root-123 MuiInput-underline-127 MuiInputBase-disabled-139 MuiInput-disabled-126 MuiInputBase-error-142 MuiInput-error-128 MuiInputBase-fullWidth-145 MuiInput-fullWidth-130 MuiInputBase-formControl-137 MuiInput-formControl-124"
+                                                    className="MuiInputBase-root-136 MuiInput-root-123 MuiInput-underline-127 MuiInputBase-disabled-139 MuiInput-disabled-126 MuiInputBase-fullWidth-145 MuiInput-fullWidth-130 MuiInputBase-formControl-137 MuiInput-formControl-124"
                                                     onClick={[Function]}
                                                   >
                                                     <input
-                                                      aria-invalid={true}
+                                                      aria-invalid={false}
                                                       autoComplete="off"
                                                       className="MuiInputBase-input-146 MuiInput-input-131 MuiInputBase-disabled-139 MuiInput-disabled-126"
                                                       disabled={true}
@@ -2592,6 +2594,7 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
 exports[`ContributorsEditor tests  rendering full component with a defined className 1`] = `
 <div>
   <Connect(ContributorForm)
+    hasContributors={false}
     isContributorAssigned={false}
     isNtro={false}
     onAdd={[Function]}
@@ -2605,6 +2608,7 @@ exports[`ContributorsEditor tests  rendering full component with a defined class
 exports[`ContributorsEditor tests  rendering full component with identifier lookup 1`] = `
 <div>
   <Connect(ContributorForm)
+    hasContributors={false}
     isContributorAssigned={false}
     isNtro={false}
     onAdd={[Function]}
@@ -2618,6 +2622,7 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
 exports[`ContributorsEditor tests  rendering full component with role input 1`] = `
 <div>
   <Connect(ContributorForm)
+    hasContributors={false}
     isContributorAssigned={false}
     isNtro={false}
     onAdd={[Function]}
@@ -2631,6 +2636,7 @@ exports[`ContributorsEditor tests  rendering full component with role input 1`] 
 exports[`ContributorsEditor tests  renders 3 contributor rows with no infinite scroll 1`] = `
 <div>
   <Connect(ContributorForm)
+    hasContributors={true}
     isContributorAssigned={true}
     isNtro={false}
     onAdd={[Function]}
@@ -2734,6 +2740,7 @@ exports[`ContributorsEditor tests  renders 3 contributor rows with no infinite s
 exports[`ContributorsEditor tests  renders 4 contributor rows wrapped in an infinite scroll 1`] = `
 <div>
   <Connect(ContributorForm)
+    hasContributors={true}
     isContributorAssigned={true}
     isNtro={false}
     onAdd={[Function]}
@@ -2856,6 +2863,7 @@ exports[`ContributorsEditor tests  renders 4 contributor rows wrapped in an infi
 exports[`ContributorsEditor tests  renders no contributor rows with no infinite scroll 1`] = `
 <div>
   <Connect(ContributorForm)
+    hasContributors={false}
     isContributorAssigned={false}
     isNtro={false}
     onAdd={[Function]}
@@ -2869,6 +2877,7 @@ exports[`ContributorsEditor tests  renders no contributor rows with no infinite 
 exports[`ContributorsEditor tests  should get contributors from props and input value set as an Immutable list 1`] = `
 <div>
   <Connect(ContributorForm)
+    hasContributors={true}
     isContributorAssigned={true}
     isNtro={false}
     onAdd={[Function]}
@@ -2953,6 +2962,7 @@ exports[`ContributorsEditor tests  should get contributors from props and input 
 exports[`ContributorsEditor tests  should get contributors from props and input value set as an array 1`] = `
 <div>
   <Connect(ContributorForm)
+    hasContributors={true}
     isContributorAssigned={true}
     isNtro={false}
     onAdd={[Function]}
@@ -3056,6 +3066,7 @@ exports[`ContributorsEditor tests  should not move contributor down 1`] = `
     1="e"
     2="s"
     3="t"
+    hasContributors={false}
     isContributorAssigned={false}
     isNtro={false}
     onAdd={[Function]}
@@ -3069,6 +3080,7 @@ exports[`ContributorsEditor tests  should not move contributor down 1`] = `
 exports[`ContributorsEditor tests  should render error as html 1`] = `
 <div>
   <Connect(ContributorForm)
+    hasContributors={false}
     isContributorAssigned={false}
     isNtro={false}
     onAdd={[Function]}
@@ -3092,6 +3104,7 @@ exports[`ContributorsEditor tests  should render error as html 1`] = `
 exports[`ContributorsEditor tests  should render error as one child 1`] = `
 <div>
   <Connect(ContributorForm)
+    hasContributors={false}
     isContributorAssigned={false}
     isNtro={false}
     onAdd={[Function]}
@@ -3111,6 +3124,7 @@ exports[`ContributorsEditor tests  should render error as one child 1`] = `
 exports[`ContributorsEditor tests  should show validation error 1`] = `
 <div>
   <Connect(ContributorForm)
+    hasContributors={false}
     isContributorAssigned={false}
     isNtro={false}
     onAdd={[Function]}
