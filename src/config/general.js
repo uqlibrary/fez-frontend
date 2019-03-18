@@ -659,8 +659,8 @@ export const ORG_TYPE_ID_OTHER = '453990';
 export const ORG_TYPE_NOT_SET = '454045';
 
 export const ORG_TYPES_LOOKUP = {
-    [ORG_TYPE_ID_MUSEUM]: 'Museum',
-    [ORG_TYPE_ID_GALLERY]: 'Gallery',
+    [ORG_TYPE_ID_MUSEUM]: 'Library/Museum/Public Gallery',
+    [ORG_TYPE_ID_GALLERY]: 'Commercial Gallery',
     [ORG_TYPE_ID_GOVERNMENT]: 'Government',
     [ORG_TYPE_ID_NGO]: 'NGO',
     [ORG_TYPE_ID_FOUNDATION]: 'Foundation',
@@ -670,12 +670,9 @@ export const ORG_TYPES_LOOKUP = {
     [ORG_TYPE_NOT_SET]: 'Not set',
 };
 
-/**
- * @todo Merge grantAgencyTypes and orgAffiliationTypes if possible
- */
 export const grantAgencyTypes = [
-    'Museum',
-    'Gallery',
+    'Library/Museum/Public Gallery',
+    'Commercial Gallery',
     'Government',
     'NGO',
     'Foundation',
@@ -686,8 +683,8 @@ export const grantAgencyTypes = [
 ];
 
 export const orgAffiliationTypes = [
-    {value: '453983', text: 'Museum'},
-    {value: '453984', text: 'Gallery'},
+    {value: '453983', text: 'Library/Museum/Public Gallery'},
+    {value: '453984', text: 'Commercial Gallery'},
     {value: '453985', text: 'Government'},
     {value: '453986', text: 'NGO'},
     {value: '453987', text: 'Foundation'},

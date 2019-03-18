@@ -1069,3 +1069,18 @@ exports[`PublicationsListPaging renders  component with styles 1`] = `
   }
 />
 `;
+
+exports[`PublicationsListPaging renders  should render buttons with zero total pages 1`] = `
+<WithStyles(Button)
+  aria-label="Click to select page test of 0 result pages"
+  className=""
+  color="default"
+  disabled={false}
+  id="pageButton"
+  onClick={[Function]}
+  size="small"
+  variant="text"
+>
+  test
+</WithStyles(Button)>
+`;

@@ -1,10 +1,11 @@
 import PublicationForm from './PublicationForm';
 import Immutable from 'immutable';
 import {JournalArticleForm, BookForm, GenericDocumentForm, ResearchReportForm} from './Forms';
+import {validation} from 'config';
 
 function setup(testProps, isShallow = true) {
     const props = {
-        "array": {
+        array: {
             insert: jest.fn(),
             move: jest.fn(),
             pop: jest.fn(),
@@ -20,8 +21,8 @@ function setup(testProps, isShallow = true) {
         blur: jest.fn(),
         change: jest.fn(),
         clearAsyncError: jest.fn(),
-        "anyTouched": true,
-        "asyncValidating": false,
+        anyTouched: true,
+        asyncValidating: false,
         asyncValidate: jest.fn(),
         clearFields: jest.fn(),
         clearSubmitErrors: jest.fn(),
@@ -35,13 +36,13 @@ function setup(testProps, isShallow = true) {
         submit: jest.fn(),
         untouch: jest.fn(),
         clearSubmit: jest.fn(),
-        "dirty": true,
-        "form": "form",
-        "initialized": false,
-        "invalid": false,
-        "submitFailed": false,
-        "submitSucceeded": false,
-        "valid": true,
+        dirty: true,
+        form: "form",
+        initialized: false,
+        invalid: false,
+        submitFailed: false,
+        submitSucceeded: false,
+        valid: true,
         pure: true,
         // above are common immutable default props
         formValues: testProps.initialValues ? Immutable.Map(testProps.initialValues) : Immutable.Map({}),
@@ -256,6 +257,19 @@ describe('Component PublicationForm', () => {
         expect(changeFormType).toHaveBeenCalled();
         expect(toJson(wrapper)).toMatchSnapshot();
 
+    });
+
+    it('should require file upload for ntro fields', () => {
+        const wrapper = setup({
+            formComponent: JournalArticleForm,
+            isNtro: true
+        });
+        expect(
+            wrapper.find({ name: 'files' }).props().validate
+        ).toEqual([
+            validation.fileUploadRequired,
+            validation.validFileUpload
+        ]);
     });
 
 });

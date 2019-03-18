@@ -93,17 +93,19 @@ const toHaveAnyOrderDispatchedActions = (actions, expectedActions) => {
 // expect(store.getActions()).toHaveDispatchedActions(expectedActions);
 
 // get a mounted or shallow element
-const getElement = (component, props, isShallow = true, requiresStore = false) => {
+const getElement = (component, props, isShallow = true, requiresStore = false, context = {}) => {
     if (isShallow) {
         if (requiresStore) {
             return shallow(
                 <Provider store={setupStoreForMount().store}>
                     {React.createElement(component, props)}
-                </Provider>
+                </Provider>,
+                {context}
             );
         } else {
             return shallow(
-                React.createElement(component, props)
+                React.createElement(component, props),
+                {context}
             );
         }
     }

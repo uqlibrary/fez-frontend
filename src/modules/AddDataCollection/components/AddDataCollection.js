@@ -351,9 +351,9 @@ export default class AddDataCollection extends Component {
                                     <Grid item xs={12}>
                                         <Field
                                             component={ListEditorField}
-                                            name="fez_record_search_key_keyword"
+                                            name="fez_record_search_key_keywords"
                                             maxCount={10}
-                                            searchKey={{value: 'rek_keyword', order: 'rek_keyword_order'}}
+                                            searchKey={{value: 'rek_keywords', order: 'rek_keywords_order'}}
                                             locale={locale.components.keywordsForm.field}
                                             disabled={this.props.submitting}/>
                                     </Grid>
@@ -401,7 +401,7 @@ export default class AddDataCollection extends Component {
                                     disabled={this.props.submitting}
                                     locale={{form: txt.information.optionalDatasetDetails.fieldLabels.relatedDatasets}}
                                     height={50}
-                                    validate={[validation.required]}/>
+                                />
                             </StandardCard>
                         </Grid>
                         <Grid item xs={12}>

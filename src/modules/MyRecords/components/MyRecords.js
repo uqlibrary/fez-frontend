@@ -124,7 +124,7 @@ export default class MyRecords extends PureComponent {
 
     hasDisplayableFilters = (activeFilters) => {
         const localFilters = this.getMyDatasetFacets(activeFilters);
-        return localFilters.filters && Object.keys(localFilters).length > 0;
+        return localFilters && Object.keys(localFilters).length > 0;
     }
 
     getMyDatasetFacets = (activeFilters) => {

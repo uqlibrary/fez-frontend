@@ -63,8 +63,9 @@ export default class ListsEditor extends Component {
             && (this.props.maxCount === 0 || this.state.itemList.length < this.props.maxCount)
             && (!this.props.distinctOnly || this.state.itemList.indexOf(item) === -1)) {
             // If when the item is submitted, there is no maxCount, its not exceeding the maxCount, is distinct and isnt already in the list...
-            if (!!item.key && !!item.value) {
+            if ((!!item.key && !!item.value) || (!!item.id && !!item.value)) {
                 // Item is an object with {key: 'something', value: 'something} - as per FoR codes
+                // OR item is an object with {id: 'PID:1234', value: 'Label'} - as per related datasets
                 this.setState({
                     itemList: [...this.state.itemList, item]
                 });

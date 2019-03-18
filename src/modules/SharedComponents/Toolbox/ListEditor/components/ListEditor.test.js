@@ -35,6 +35,13 @@ describe('ListEditor tests ', () => {
         expect(wrapper.state().itemList.length).toEqual(1);
     });
 
+    it('should render an object item to the list', () => {
+        const wrapper = setup({ });
+        expect(wrapper.state().itemList.length).toEqual(0);
+        wrapper.instance().addItem({id: 'test', value: 'test value'});
+        expect(wrapper.state().itemList.length).toEqual(1);
+    });
+
     it('should render items not more than maxCount', () => {
         const wrapper = setup({ maxCount: 1 });
         expect(wrapper.state().itemList.length).toEqual(0);
@@ -158,4 +165,26 @@ describe('ListEditor tests ', () => {
         wrapper.instance().componentWillUpdate({}, {});
         expect(test).not.toBeCalled();
     })
+
+    it('should add an object item and set state', () => {
+        const wrapper = setup({
+            maxCount: 5,
+            distinctOnly: true,
+            locale: {
+                row: {},
+                form: {},
+                header: {}
+            }
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+
+        wrapper.instance().addItem({
+            id: 'test',
+            value: 'test'
+        });
+
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+
 });

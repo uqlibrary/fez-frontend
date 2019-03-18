@@ -158,7 +158,7 @@
     "start:build": "cross-env NODE_ENV=production URL=dev-espace.library.uq.edu.au NODE_OPTIONS='--max-old-space-size=2048' webpack-dev-server --config=./webpack-dist.config --disable-host-check",
     "start:build:e2e": "cross-env NODE_ENV=production URL=localhost USE_MOCK=true NODE_OPTIONS='--max-old-space-size=2048' webpack-dev-server --config=./webpack-dist.config",
     "test": "cross-env NODE_ENV=test FULL_PATH=http://localhost jest",
-    "test:watch": "npm run test -- --watch",
+    "test:watch": "npm run test -- --watch --onlyChanged",
     "test:update": "npm run test -- --updateSnapshot",
     "test-unit": "node $NODE_DEBUG_OPTION ./node_modules/lab/bin/lab ./test/unit --pattern \"^[^_]\"",
     "eslint": "eslint 'src/**/*.js' --quiet"
@@ -255,6 +255,14 @@
       "html",
       "text"
     ],
+    "coverageThreshold": {
+      "global": {
+        "statements": 0,
+        "branches": 0,
+        "functions": 0,
+        "lines": 0
+      }
+    },
     "modulePaths": [
       "<rootDir>/src",
       "<rootDir>/eslint-plugin-uqlibrary"

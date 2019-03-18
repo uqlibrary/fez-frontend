@@ -19,7 +19,7 @@ exports[`Component ContributorForm should display org affiliation selector if af
       <WithStyles(TextFieldWrapper)
         autoComplete="off"
         disabled={false}
-        error={true}
+        error={false}
         fullWidth={true}
         id="nameAsPublishedField"
         onChange={[Function]}
@@ -67,7 +67,7 @@ exports[`Component ContributorForm should display org affiliation selector if af
       <WithStyles(TextFieldWrapper)
         autoComplete="off"
         disabled={false}
-        error={true}
+        error={false}
         fullWidth={true}
         id="nameAsPublishedField"
         onChange={[Function]}
@@ -167,7 +167,7 @@ exports[`Component ContributorForm should handle affiliation change 1`] = `
       <WithStyles(TextFieldWrapper)
         autoComplete="off"
         disabled={true}
-        error={true}
+        error={false}
         fullWidth={true}
         id="nameAsPublishedField"
         onChange={[Function]}
@@ -242,7 +242,7 @@ exports[`Component ContributorForm should render NTRO fields 1`] = `
       <WithStyles(TextFieldWrapper)
         autoComplete="off"
         disabled={true}
-        error={true}
+        error={false}
         fullWidth={true}
         id="nameAsPublishedField"
         onChange={[Function]}
@@ -828,14 +828,14 @@ exports[`Component ContributorForm should render connected component 1`] = `
                     >
                       Step 1 of 2
                     </span>
-                     - Please 
+                     - Please
                     <b>
                       add to a list of contributors below
                     </b>
                     , in the format and order that they are published.
                   </div>,
                   "descriptionStep1NoStep2": <div>
-                    Please 
+                    Please
                     <b>
                       add to a list of contributors below
                     </b>
@@ -850,7 +850,7 @@ exports[`Component ContributorForm should render connected component 1`] = `
               required={false}
             >
               <div>
-                Please 
+                Please
                 <b>
                   add to a list of contributors below
                 </b>
@@ -1124,7 +1124,7 @@ exports[`Component ContributorForm should render connected component 1`] = `
                         >
                           <WithStyles(TextFieldWrapper)
                             autoComplete="off"
-                            error={true}
+                            error={false}
                             fullWidth={true}
                             id="nameAsPublishedField"
                             label="Name as published"
@@ -1136,7 +1136,7 @@ exports[`Component ContributorForm should render connected component 1`] = `
                             <TextFieldWrapper
                               autoComplete="off"
                               classes={Object {}}
-                              error={true}
+                              error={false}
                               fullWidth={true}
                               id="nameAsPublishedField"
                               label="Name as published"
@@ -1149,7 +1149,7 @@ exports[`Component ContributorForm should render connected component 1`] = `
                                 InputLabelProps={null}
                                 autoComplete="off"
                                 classes={Object {}}
-                                error={true}
+                                error={false}
                                 fullWidth={true}
                                 id="Name as published"
                                 label="Name as published"
@@ -1162,7 +1162,7 @@ exports[`Component ContributorForm should render connected component 1`] = `
                               >
                                 <WithStyles(FormControl)
                                   classes={Object {}}
-                                  error={true}
+                                  error={false}
                                   fullWidth={true}
                                   required={false}
                                   variant="standard"
@@ -1178,7 +1178,7 @@ exports[`Component ContributorForm should render connected component 1`] = `
                                     }
                                     component="div"
                                     disabled={false}
-                                    error={true}
+                                    error={false}
                                     fullWidth={true}
                                     margin="none"
                                     required={false}
@@ -1256,19 +1256,8 @@ exports[`Component ContributorForm should render connected component 1`] = `
                                               data-shrink={false}
                                               htmlFor="Name as published"
                                             >
-                                              <WithFormControlContext(FormLabel)
-                                                className="MuiInputLabel-root-102 MuiInputLabel-formControl-107 MuiInputLabel-animated-110"
-                                                classes={
-                                                  Object {
-                                                    "asterisk": "MuiFormLabel-asterisk-119",
-                                                    "disabled": "MuiFormLabel-disabled-115 MuiInputLabel-disabled-104",
-                                                    "error": "MuiFormLabel-error-116 MuiInputLabel-error-105",
-                                                    "filled": "MuiFormLabel-filled-117",
-                                                    "focused": "MuiFormLabel-focused-114 MuiInputLabel-focused-103",
-                                                    "required": "MuiFormLabel-required-118 MuiInputLabel-required-106",
-                                                    "root": "MuiFormLabel-root-113",
-                                                  }
-                                                }
+                                              <label
+                                                className="MuiFormLabel-root-109 MuiInputLabel-root-102 MuiInputLabel-formControl-103 MuiInputLabel-animated-106"
                                                 data-shrink={false}
                                                 htmlFor="Name as published"
                                               >
@@ -1411,76 +1400,27 @@ exports[`Component ContributorForm should render connected component 1`] = `
                                               type="text"
                                               value=""
                                             >
-                                              <InputBase
-                                                autoComplete="off"
-                                                classes={
-                                                  Object {
-                                                    "adornedEnd": "MuiInputBase-adornedEnd-138",
-                                                    "adornedStart": "MuiInputBase-adornedStart-137",
-                                                    "disabled": "MuiInputBase-disabled-136 MuiInput-disabled-123",
-                                                    "error": "MuiInputBase-error-139 MuiInput-error-125",
-                                                    "focused": "MuiInputBase-focused-135 MuiInput-focused-122",
-                                                    "formControl": "MuiInputBase-formControl-134 MuiInput-formControl-121",
-                                                    "fullWidth": "MuiInputBase-fullWidth-142 MuiInput-fullWidth-127",
-                                                    "input": "MuiInputBase-input-143 MuiInput-input-128",
-                                                    "inputAdornedEnd": "MuiInputBase-inputAdornedEnd-149",
-                                                    "inputAdornedStart": "MuiInputBase-inputAdornedStart-148",
-                                                    "inputMarginDense": "MuiInputBase-inputMarginDense-144 MuiInput-inputMarginDense-129",
-                                                    "inputMultiline": "MuiInputBase-inputMultiline-145 MuiInput-inputMultiline-130",
-                                                    "inputType": "MuiInputBase-inputType-146 MuiInput-inputType-131",
-                                                    "inputTypeSearch": "MuiInputBase-inputTypeSearch-147 MuiInput-inputTypeSearch-132",
-                                                    "marginDense": "MuiInputBase-marginDense-140",
-                                                    "multiline": "MuiInputBase-multiline-141 MuiInput-multiline-126",
-                                                    "root": "MuiInputBase-root-133 MuiInput-root-120 MuiInput-underline-124",
-                                                  }
-                                                }
-                                                fullWidth={true}
-                                                id="Name as published"
-                                                inputComponent="input"
-                                                muiFormControl={
-                                                  Object {
-                                                    "adornedStart": false,
-                                                    "disabled": false,
-                                                    "error": true,
-                                                    "filled": false,
-                                                    "focused": false,
-                                                    "margin": "none",
-                                                    "onBlur": [Function],
-                                                    "onEmpty": [Function],
-                                                    "onFilled": [Function],
-                                                    "onFocus": [Function],
-                                                    "required": false,
-                                                    "variant": "standard",
-                                                  }
-                                                }
-                                                multiline={false}
-                                                onChange={[Function]}
-                                                placeholder="Please type the name exactly as published"
-                                                type="text"
-                                                value=""
+                                              <div
+                                                className="MuiInputBase-root-129 MuiInput-root-116 MuiInput-underline-120 MuiInputBase-fullWidth-138 MuiInput-fullWidth-123 MuiInputBase-formControl-130 MuiInput-formControl-117"
+                                                onClick={[Function]}
                                               >
-                                                <div
-                                                  className="MuiInputBase-root-133 MuiInput-root-120 MuiInput-underline-124 MuiInputBase-error-139 MuiInput-error-125 MuiInputBase-fullWidth-142 MuiInput-fullWidth-127 MuiInputBase-formControl-134 MuiInput-formControl-121"
-                                                  onClick={[Function]}
-                                                >
-                                                  <input
-                                                    aria-invalid={true}
-                                                    autoComplete="off"
-                                                    className="MuiInputBase-input-143 MuiInput-input-128"
-                                                    disabled={false}
-                                                    id="Name as published"
-                                                    onBlur={[Function]}
-                                                    onChange={[Function]}
-                                                    onFocus={[Function]}
-                                                    placeholder="Please type the name exactly as published"
-                                                    required={false}
-                                                    type="text"
-                                                    value=""
-                                                  />
-                                                </div>
-                                              </InputBase>
-                                            </WithFormControlContext(InputBase)>
-                                          </WithStyles(WithFormControlContext(InputBase))>
+                                                <input
+                                                  aria-invalid={false}
+                                                  autoComplete="off"
+                                                  className="MuiInputBase-input-139 MuiInput-input-124"
+                                                  disabled={false}
+                                                  id="Name as published"
+                                                  onBlur={[Function]}
+                                                  onChange={[Function]}
+                                                  onFocus={[Function]}
+                                                  placeholder="Please type the name exactly as published"
+                                                  required={false}
+                                                  type="text"
+                                                  value=""
+                                                />
+                                              </div>
+                                            </InputBase>
+                                          </WithStyles(InputBase)>
                                         </Input>
                                       </WithStyles(Input)>
                                     </div>
@@ -1772,7 +1712,7 @@ exports[`Component ContributorForm should render display name field and identifi
       <WithStyles(TextFieldWrapper)
         autoComplete="off"
         disabled={false}
-        error={true}
+        error={false}
         fullWidth={true}
         id="nameAsPublishedField"
         onChange={[Function]}
@@ -1833,7 +1773,7 @@ exports[`Component ContributorForm should render display name field and role fie
       <WithStyles(TextFieldWrapper)
         autoComplete="off"
         disabled={false}
-        error={true}
+        error={false}
         fullWidth={true}
         id="nameAsPublishedField"
         onChange={[Function]}
@@ -1898,7 +1838,7 @@ exports[`Component ContributorForm should render display name field only 1`] = `
       <WithStyles(TextFieldWrapper)
         autoComplete="off"
         disabled={false}
-        error={true}
+        error={false}
         fullWidth={true}
         id="nameAsPublishedField"
         onChange={[Function]}
@@ -1947,7 +1887,7 @@ exports[`Component ContributorForm should show contributor assignment 1`] = `
       <WithStyles(TextFieldWrapper)
         autoComplete="off"
         disabled={false}
-        error={true}
+        error={false}
         fullWidth={true}
         id="nameAsPublishedField"
         onChange={[Function]}
@@ -2022,7 +1962,7 @@ exports[`Component ContributorForm should show error regarding affiliation type 
       <WithStyles(TextFieldWrapper)
         autoComplete="off"
         disabled={true}
-        error={true}
+        error={false}
         fullWidth={true}
         id="nameAsPublishedField"
         onChange={[Function]}
