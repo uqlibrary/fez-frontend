@@ -52,7 +52,10 @@ export class PublicationsListPaging extends Component {
     }
 
     pageChanged = (newPage) => {
-        if (this.props.onPageChanged) this.props.onPageChanged(newPage);
+        /* istanbul ignore else */
+        if (this.props.onPageChanged) {
+            this.props.onPageChanged(newPage);
+        }
     };
 
     renderButton = (key) => {

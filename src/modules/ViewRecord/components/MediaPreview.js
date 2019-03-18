@@ -45,13 +45,13 @@ export default class MediaPreview extends React.Component {
     };
 
     scrollToMedia() {
-        /* istanbul ignore next */
-        !!this.mediaPreviewRef && !!this.mediaPreviewRef.current && !!this.mediaPreviewRef.current.scrollIntoView
-        && this.mediaPreviewRef.current.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start',
-            inline: 'center',
-        });
+        if(((this.mediaPreviewRef || {}).current || {}).scrollIntoView) {
+            this.mediaPreviewRef.current.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+                inline: 'center',
+            });
+        }
     }
 
     videoLoaded = () => {

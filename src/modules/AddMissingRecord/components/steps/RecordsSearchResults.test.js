@@ -1,12 +1,6 @@
 import RecordsSearchResults from './RecordsSearchResults';
 import {accounts} from 'mock/data/account';
 
-jest.mock('react-dom', () => ({
-    findDOMNode: () => ({
-        focus: jest.fn()
-    })
-}));
-
 function setup(testProps, isShallow = true) {
     const props = {
         history: {},
@@ -33,20 +27,41 @@ describe('Search record results', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should call componentWillReceiveProps lifecycle method', () => {
-
+    it('should call componentDidUpdate lifecycle method and focus on create new record button if no publications found', () => {
+        const focusFn = jest.fn();
         const wrapper = setup({
             history: {}
         });
-        wrapper.instance().showNewRecordButton = true;
-        const componentWillReceiveProps = jest.spyOn(wrapper.instance(), 'componentWillReceiveProps');
+        wrapper.instance()._setRef({
+            focus: focusFn
+        });
+        const componentDidUpdate = jest.spyOn(wrapper.instance(), 'componentDidUpdate');
 
         wrapper.setProps({
             publicationsList: []
         });
         wrapper.update();
 
-        expect(componentWillReceiveProps).toHaveBeenCalled();
+        expect(componentDidUpdate).toHaveBeenCalled();
+        expect(focusFn).toHaveBeenCalled();
+    });
+
+    it('should call componentDidUpdate lifecycle method and should not focus on create new record button', () => {
+        const focusFn = jest.fn();
+        const wrapper = setup({
+            history: {}
+        });
+        wrapper.instance()._setRef({
+            focus: focusFn
+        });
+        const componentDidUpdate = jest.spyOn(wrapper.instance(), 'componentDidUpdate');
+
+        wrapper.setProps({
+            publicationsList: ['test', 'test']
+        });
+
+        expect(componentDidUpdate).toHaveBeenCalled();
+        expect(focusFn).not.toHaveBeenCalled();
     });
 
     it('should navigate to find on cancel workflow', () => {

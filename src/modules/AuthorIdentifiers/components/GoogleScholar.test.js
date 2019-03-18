@@ -138,6 +138,15 @@ describe('Component GoogleScholar ', () => {
         expect(wrapper.instance().props.history.push).toHaveBeenCalled();
     });
 
+    it('should not redirect to dashboard if submit success state has not changed', () => {
+        const wrapper = setup({});
+        wrapper.instance().componentWillReceiveProps({
+            submitSucceeded: wrapper.instance().props.submitSucceeded
+        });
+        const testFn = jest.spyOn(wrapper.instance(), '_navigateToDashboard');
+        expect(testFn).not.toBeCalled();
+    });
+
     it('should reset author update state when component is unmounted', () => {
         const wrapper = setup({});
         wrapper.instance().componentWillUnmount();
@@ -153,6 +162,10 @@ describe('Component GoogleScholar ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
         wrapper.find('form').simulate('keyDown', {key: 'Enter'});
         expect(handleSubmitFn).toHaveBeenCalled();
+
+        handleSubmitFn.mockClear();
+        wrapper.find('form').simulate('keyDown', {key: 'A'});
+        expect(handleSubmitFn).not.toBeCalled();
     });
 
     it('should get correct alert message', () => {

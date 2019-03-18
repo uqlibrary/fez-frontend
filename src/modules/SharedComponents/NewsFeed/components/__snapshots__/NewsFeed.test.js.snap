@@ -194,3 +194,72 @@ exports[`Component NewsFeed should render news feed 1`] = `
   </div>
 </StandardCard>
 `;
+
+exports[`Component NewsFeed should show new count if above set limit 1`] = `
+<StandardCard
+  darkHeader={true}
+  title="Latest news"
+>
+  <div
+    key="0"
+    style={
+      Object {
+        "padding": "8px 0px",
+      }
+    }
+  >
+    <WithStyles(Grid)
+      container={true}
+      key="newsItem-0"
+      spacing={16}
+    >
+      <WithStyles(Grid)
+        item={true}
+        xs="auto"
+      >
+        <WithStyles(Grid)
+          alignContent="center"
+          alignItems="center"
+          container={true}
+          direction="column"
+          justify="center"
+          spacing={0}
+        >
+          <WithStyles(Grid)
+            className="day"
+            item={true}
+          >
+            15
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            className="month"
+            item={true}
+          >
+            Dec
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            className="year"
+            item={true}
+          >
+            2018
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={true}
+      >
+        <WithStyles(Typography)
+          variant="body2"
+        >
+          <b>
+            Outage
+          </b>
+           
+          There will be a 30 minute outage from 12:00-12:30pm on Wednesday 22/8/17 to upgrade the eSpace database. Apologies for this inconvenience.
+        </WithStyles(Typography)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </div>
+</StandardCard>
+`;

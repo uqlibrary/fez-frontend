@@ -45,6 +45,7 @@ export class NewsFeed extends PureComponent {
     };
 
     componentDidMount() {
+        /* istanbul ignore else */
         if (this.props.actions && this.props.actions.loadNewsFeed) {
             this.props.actions.loadNewsFeed();
         }
@@ -58,7 +59,10 @@ export class NewsFeed extends PureComponent {
             return null;
         }
 
-        const allowedHtmlConfig = { ALLOWED_TAGS: ['p', 'strong', 'i', 'u', 's', 'strike', 'sup', 'sub', 'em', 'br', 'b', 'sup', 'sub'], ALLOWED_ATTR: [] };
+        const allowedHtmlConfig = {
+            ALLOWED_TAGS: ['p', 'strong', 'i', 'u', 's', 'strike', 'sup', 'sub', 'em', 'br', 'b', 'sup', 'sub'],
+            ALLOWED_ATTR: []
+        };
         const subNewsFeed = this.props.newsFeedList
             .slice(0,
                 this.props.newsFeedList.length > this.props.showNewsCount

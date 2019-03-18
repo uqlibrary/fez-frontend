@@ -192,6 +192,7 @@ export class ContributorsEditor extends PureComponent {
                     showContributorAssignment={showContributorAssignment}
                     isContributorAssigned={this.state.contributors.length > 0}
                     isNtro={isNtro}
+                    hasContributors={!!this.state.contributors.length > 0}
                     {...(this.props.locale && this.props.locale.form ? this.props.locale.form : {})}
                 />
                 {

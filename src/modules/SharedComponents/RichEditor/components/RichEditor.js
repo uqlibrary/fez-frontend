@@ -1,6 +1,5 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
-import ReactDOM from 'react-dom';
 import Typography from '@material-ui/core/Typography';
 import 'ckeditor';
 
@@ -16,7 +15,8 @@ export default class RichEditor extends PureComponent {
         maxValue: PropTypes.number,
         instructions: PropTypes.any,
         title: PropTypes.any,
-        description: PropTypes.any
+        description: PropTypes.any,
+        inputRef: PropTypes.object
     };
 
     static defaultProps = {
@@ -30,7 +30,7 @@ export default class RichEditor extends PureComponent {
     componentDidMount() {
         if (window.CKEDITOR) {
             this.editorInstance = window.CKEDITOR.appendTo(
-                ReactDOM.findDOMNode(this),
+                this.props.inputRef.current,
                 {
                     removeButtons: 'Cut,Copy,Paste,Undo,Redo,Anchor',
                     height: this.props.height,
@@ -92,7 +92,7 @@ export default class RichEditor extends PureComponent {
                             <Typography color={this.props.meta && this.props.meta.error && 'error'} variant={'caption'}>{this.props.description}</Typography>
                     }
                 </span>
-                <div className={this.props.className} />
+                <div className={this.props.className} ref={this.props.inputRef} />
                 {
                     this.props.meta && this.props.meta.error &&
                         <Typography color="error" variant="caption" component={'span'} style={{display: 'inline-block'}}>

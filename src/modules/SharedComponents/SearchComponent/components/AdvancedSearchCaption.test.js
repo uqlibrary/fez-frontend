@@ -44,9 +44,24 @@ describe('Component AdvancedSearchCaption', () => {
 
     it('getCleanValue should return expected with props', () => {
         const wrapper = setup();
-        const test = { "title": "Thesis type", "combiner": "is one of", "value": ["B.A. Thesis", "B.Sc Thesis", "Bachelor's Thesis"] };
-        const result = { "combiner": "is one of", "title": "Thesis type", "value": "B.A. Thesis, B.Sc Thesis or Bachelor's Thesis" };
+        const test = {
+            "title": "Thesis type",
+            "combiner": "is one of",
+            "value": [
+                "B.A. Thesis",
+                "B.Sc Thesis",
+                "Bachelor's Thesis"
+            ]
+        };
+        const result = {
+            "combiner": "is one of",
+            "title": "Thesis type",
+            "value": "B.A. Thesis, B.Sc Thesis or Bachelor's Thesis"
+        };
         expect(wrapper.instance().getCleanValue(test)).toEqual(result);
+        expect(wrapper.instance().getCleanValue({ value: ['test'] })).toEqual({
+            value: 'test'
+        });
     });
 
     it('getSearchFieldData should return expected with props', () => {

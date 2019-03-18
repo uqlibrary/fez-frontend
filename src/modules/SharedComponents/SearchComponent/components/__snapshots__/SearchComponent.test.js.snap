@@ -1,5 +1,51 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`SearchComponent getFieldRowsFromSearchQuery should process empty search query 1`] = `
+Array [
+  Object {
+    "label": "",
+    "searchField": "0",
+    "value": "",
+  },
+]
+`;
+
+exports[`SearchComponent getFieldRowsFromSearchQuery should process missing label 1`] = `
+Array [
+  Object {
+    "label": "",
+    "searchField": "rek_updated_date",
+    "value": Object {},
+  },
+]
+`;
+
+exports[`SearchComponent getSearchQuery should construct search query 1`] = `
+Object {
+  "activeFacets": Object {
+    "filters": Object {},
+    "ranges": Object {},
+    "showOpenAccessOnly": true,
+  },
+  "page": 1,
+  "pageSize": 20,
+  "searchMode": "advanced",
+  "searchQueryParams": Object {
+    "all": "i feel lucky",
+    "rek_display_type": undefined,
+  },
+  "sortBy": "score",
+  "sortDirection": "Desc",
+}
+`;
+
+exports[`SearchComponent parseDateRange should return date range 1`] = `
+Object {
+  "from": "2019-01-30T14:00:00.000Z",
+  "to": "2019-02-11T14:00:00.000Z",
+}
+`;
+
 exports[`SearchComponent should add one row for advanced search 1`] = `
 <Fragment>
   <WithStyles(AdvancedSearchComponent)
