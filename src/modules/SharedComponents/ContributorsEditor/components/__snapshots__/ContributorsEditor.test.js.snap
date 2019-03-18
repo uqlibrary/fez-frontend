@@ -545,7 +545,6 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
           >
             <div>
               <Connect(ContributorForm)
-                hasContributors={false}
                 isContributorAssigned={false}
                 isNtro={true}
                 onAdd={[Function]}
@@ -563,7 +562,6 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                     }
                   }
                   authorsList={Array []}
-                  hasContributors={false}
                   isContributorAssigned={false}
                   isNtro={true}
                   locale={
@@ -2594,7 +2592,6 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
 exports[`ContributorsEditor tests  rendering full component with a defined className 1`] = `
 <div>
   <Connect(ContributorForm)
-    hasContributors={false}
     isContributorAssigned={false}
     isNtro={false}
     onAdd={[Function]}
@@ -2608,7 +2605,6 @@ exports[`ContributorsEditor tests  rendering full component with a defined class
 exports[`ContributorsEditor tests  rendering full component with identifier lookup 1`] = `
 <div>
   <Connect(ContributorForm)
-    hasContributors={false}
     isContributorAssigned={false}
     isNtro={false}
     onAdd={[Function]}
@@ -2622,7 +2618,6 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
 exports[`ContributorsEditor tests  rendering full component with role input 1`] = `
 <div>
   <Connect(ContributorForm)
-    hasContributors={false}
     isContributorAssigned={false}
     isNtro={false}
     onAdd={[Function]}
@@ -2636,7 +2631,6 @@ exports[`ContributorsEditor tests  rendering full component with role input 1`] 
 exports[`ContributorsEditor tests  renders 3 contributor rows with no infinite scroll 1`] = `
 <div>
   <Connect(ContributorForm)
-    hasContributors={true}
     isContributorAssigned={true}
     isNtro={false}
     onAdd={[Function]}
@@ -2740,7 +2734,6 @@ exports[`ContributorsEditor tests  renders 3 contributor rows with no infinite s
 exports[`ContributorsEditor tests  renders 4 contributor rows wrapped in an infinite scroll 1`] = `
 <div>
   <Connect(ContributorForm)
-    hasContributors={true}
     isContributorAssigned={true}
     isNtro={false}
     onAdd={[Function]}
@@ -2863,7 +2856,6 @@ exports[`ContributorsEditor tests  renders 4 contributor rows wrapped in an infi
 exports[`ContributorsEditor tests  renders no contributor rows with no infinite scroll 1`] = `
 <div>
   <Connect(ContributorForm)
-    hasContributors={false}
     isContributorAssigned={false}
     isNtro={false}
     onAdd={[Function]}
@@ -2877,7 +2869,6 @@ exports[`ContributorsEditor tests  renders no contributor rows with no infinite 
 exports[`ContributorsEditor tests  should get contributors from props and input value set as an Immutable list 1`] = `
 <div>
   <Connect(ContributorForm)
-    hasContributors={true}
     isContributorAssigned={true}
     isNtro={false}
     onAdd={[Function]}
@@ -2962,7 +2953,6 @@ exports[`ContributorsEditor tests  should get contributors from props and input 
 exports[`ContributorsEditor tests  should get contributors from props and input value set as an array 1`] = `
 <div>
   <Connect(ContributorForm)
-    hasContributors={true}
     isContributorAssigned={true}
     isNtro={false}
     onAdd={[Function]}
@@ -3066,7 +3056,6 @@ exports[`ContributorsEditor tests  should not move contributor down 1`] = `
     1="e"
     2="s"
     3="t"
-    hasContributors={false}
     isContributorAssigned={false}
     isNtro={false}
     onAdd={[Function]}
@@ -3080,7 +3069,6 @@ exports[`ContributorsEditor tests  should not move contributor down 1`] = `
 exports[`ContributorsEditor tests  should render error as html 1`] = `
 <div>
   <Connect(ContributorForm)
-    hasContributors={false}
     isContributorAssigned={false}
     isNtro={false}
     onAdd={[Function]}
@@ -3104,7 +3092,6 @@ exports[`ContributorsEditor tests  should render error as html 1`] = `
 exports[`ContributorsEditor tests  should render error as one child 1`] = `
 <div>
   <Connect(ContributorForm)
-    hasContributors={false}
     isContributorAssigned={false}
     isNtro={false}
     onAdd={[Function]}
@@ -3124,7 +3111,6 @@ exports[`ContributorsEditor tests  should render error as one child 1`] = `
 exports[`ContributorsEditor tests  should show validation error 1`] = `
 <div>
   <Connect(ContributorForm)
-    hasContributors={false}
     isContributorAssigned={false}
     isNtro={false}
     onAdd={[Function]}
