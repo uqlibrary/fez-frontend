@@ -26,7 +26,7 @@ import {mui1theme as theme} from 'config';
 const styles = theme => ({
     tabs: {
         [theme.breakpoints.up('sm')]: {
-            margin: '-16px -24px',
+            margin: '-16px -16px',
         },
         [theme.breakpoints.down('xs')]: {
             margin: -16
@@ -142,11 +142,6 @@ export class DashboardClass extends PureComponent {
                     <PublicationStats publicationsStats={this.props.publicationsStats}/>
                 </StandardCard>
             ) : null;
-        // console.log('Props', this.props);
-        // console.log('loading', loading);
-        // console.log('this.props.publicationsStats ', !!this.props.publicationsStats);
-        // console.log('this.props.publicationsStats.thomson_citation_count_i.count ', this.props.publicationsStats.thomson_citation_count_i.count);
-        // console.log('this.props.publicationsStats.scopus_citation_count_i.count ', this.props.publicationsStats.scopus_citation_count_i.count);
         return (
             <StandardPage>
                 <Grid container spacing={24}>

@@ -16,7 +16,7 @@ import Alert from 'modules/SharedComponents/Toolbox/Alert/components/Alert';
 export const styles = theme => ({
     tabs: {
         [theme.breakpoints.up('sm')]: {
-            margin: '-16px -24px 0px -24px',
+            margin: '-16px -16px 0px -16px',
         },
         [theme.breakpoints.down('xs')]: {
             margin: '-16px -16px 0px -16px',
