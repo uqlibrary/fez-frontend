@@ -875,11 +875,11 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                   }
                 }
                 maxCount={10}
-                name="fez_record_search_key_keyword"
+                name="fez_record_search_key_keywords"
                 searchKey={
                   Object {
-                    "order": "rek_keyword_order",
-                    "value": "rek_keyword",
+                    "order": "rek_keywords_order",
+                    "value": "rek_keywords",
                   }
                 }
               />
@@ -2062,11 +2062,11 @@ exports[`AddDataCollection test should render data set form 1`] = `
                   }
                 }
                 maxCount={10}
-                name="fez_record_search_key_keyword"
+                name="fez_record_search_key_keywords"
                 searchKey={
                   Object {
-                    "order": "rek_keyword_order",
-                    "value": "rek_keyword",
+                    "order": "rek_keywords_order",
+                    "value": "rek_keywords",
                   }
                 }
               />
