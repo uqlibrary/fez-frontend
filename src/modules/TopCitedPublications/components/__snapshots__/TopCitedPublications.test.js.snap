@@ -34,9 +34,9 @@ exports[`Component TopCitedPublications should render tabs with xs width properl
           "indicator": undefined,
         }
       }
-      fullWidth={true}
       onChange={[Function]}
       value="altmetric"
+      variant="fullWidth"
     >
       <WithStyles(Tab)
         key="altmetric"
@@ -963,9 +963,9 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
           "indicator": undefined,
         }
       }
-      fullWidth={true}
       onChange={[Function]}
       value="altmetric"
+      variant="fullWidth"
     >
       <WithStyles(Tab)
         key="altmetric"
