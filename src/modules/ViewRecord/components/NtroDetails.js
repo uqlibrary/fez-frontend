@@ -56,6 +56,12 @@ export class NtroDetailsClass extends PureComponent {
         if (!general.NTRO_SUBTYPES.includes(subType)) {
             return null;
         }
+        console.log('this.props.account');
+        console.log(this.props.account);
+        console.log('publication.fez_record_search_key_creator_contribution_statement');
+        console.log(publication.fez_record_search_key_creator_contribution_statement);
+        console.log('publication.fez_record_search_key_significance');
+        console.log(publication.fez_record_search_key_significance);
         return (
             <Grid item xs={12}>
                 <StandardCard title={locale.viewRecord.sections.ntro.title}>
