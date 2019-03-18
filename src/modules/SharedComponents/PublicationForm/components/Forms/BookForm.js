@@ -125,7 +125,7 @@ export default class BookForm extends Component {
                 </Grid>
                 {
                     this.props.subtype !== SUBTYPE_EDITED_BOOK &&
-                    (!this.props.formValues || !this.props.formValues.get('editors') || this.props.formValues.get('editors').length === 0) &&
+                    (!editors || editors.length === 0) &&
                     <Grid item xs={12}>
                         <StandardCard title={txt.authors.title} help={txt.authors.help}>
                             <Field
@@ -141,7 +141,7 @@ export default class BookForm extends Component {
                     </Grid>
                 }
                 {
-                    (!this.props.formValues || !this.props.formValues.get('authors') || this.props.formValues.get('authors').length === 0) &&
+                    (!authors || authors.length === 0) &&
                     <Grid item xs={12}>
                         <StandardCard title={txt.editors.title} help={txt.editors.help}>
                             <Field
