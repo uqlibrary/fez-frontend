@@ -186,19 +186,9 @@ export class ContributorForm extends PureComponent {
                             required={this.props.required}
                             autoComplete="off"
                             error={
-                                !!(
-                                    !isNtro &&
-                                    this.props.required &&
-                                    !this.props.isContributorAssigned &&
-                                    !this.state.nameAsPublished
-                                ) ||
-                                !!(
-                                    isNtro &&
-                                    this.state.affiliation &&
-                                    !this.state.nameAsPublished ||
-                                    this.state.nameAsPublished.trim().length === 0
-                                )
-                            }
+                                !!(!isNtro && this.props.required && !this.props.isContributorAssigned && this.state.nameAsPublished.trim().length === 0)
+                                ||
+                                !!(isNtro && this.state.affiliation && !this.props.isContributorAssigned && this.state.nameAsPublished.trim().length === 0)}
                         />
                     </Grid>
                     {
@@ -247,7 +237,9 @@ export class ContributorForm extends PureComponent {
                             variant="contained"
                             fullWidth
                             color="primary"
-                            disabled={disabled || this.state.nameAsPublished.trim().length === 0 || showRoleInput && this.state.creatorRole.length === 0 || this.state.affiliation === 'NotUQ' && this.state.orgaff === ''}
+                            disabled={disabled || this.state.nameAsPublished.trim().length === 0
+                            || (showRoleInput && this.state.creatorRole.trim().length === 0)
+                            || (this.state.affiliation === 'NotUQ' && (this.state.orgaff.trim().length === 0 || this.state.orgtype.trim().length === 0))}
                             onClick={this._addContributor}
                         >
                             {this.props.locale.addButton}
