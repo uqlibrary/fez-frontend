@@ -11,7 +11,7 @@ import {NtroFields} from 'modules/SharedComponents/Toolbox/NtroFields';
 import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
 import {validation} from 'config';
 import {locale} from 'locale';
-import {NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION} from 'config/general';
+import {NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION, SUBTYPE_EDITED_BOOK} from 'config/general';
 import {default as formLocale} from 'locale/publicationForm';
 
 import Grid from '@material-ui/core/Grid';
@@ -123,29 +123,36 @@ export default class BookForm extends Component {
                         </Grid>
                     </StandardCard>
                 </Grid>
-                <Grid item xs={12}>
-                    <StandardCard title={txt.authors.title} help={txt.authors.help}>
-                        <Field
-                            component={ContributorsEditorField}
-                            name="authors"
-                            locale={txt.authors.field}
-                            showContributorAssignment={!editorSelected}
-                            required
-                            disabled={this.props.submitting}
-                            isNtro={this.props.isNtro}
-                        />
-                    </StandardCard>
-                </Grid>
-                <Grid item xs={12}>
-                    <StandardCard title={txt.editors.title} help={txt.editors.help}>
-                        <Field
-                            component={ContributorsEditorField}
-                            showContributorAssignment={!authorSelected}
-                            name="editors"
-                            locale={txt.editors.field}
-                            disabled={this.props.submitting} />
-                    </StandardCard>
-                </Grid>
+                {
+                    this.props.subtype !== SUBTYPE_EDITED_BOOK &&
+                    (!editors || editors.length === 0) &&
+                    <Grid item xs={12}>
+                        <StandardCard title={txt.authors.title} help={txt.authors.help}>
+                            <Field
+                                component={ContributorsEditorField}
+                                name="authors"
+                                locale={txt.authors.field}
+                                showContributorAssignment={!editorSelected}
+                                required
+                                disabled={this.props.submitting}
+                                isNtro={this.props.isNtro}
+                            />
+                        </StandardCard>
+                    </Grid>
+                }
+                {
+                    (!authors || authors.length === 0) &&
+                    <Grid item xs={12}>
+                        <StandardCard title={txt.editors.title} help={txt.editors.help}>
+                            <Field
+                                component={ContributorsEditorField}
+                                showContributorAssignment={!authorSelected}
+                                name="editors"
+                                locale={txt.editors.field}
+                                disabled={this.props.submitting} />
+                        </StandardCard>
+                    </Grid>
+                }
                 {
                     this.props.isNtro &&
                     <NtroFields
