@@ -63,7 +63,6 @@ export class NtroDetailsClass extends PureComponent {
                     {
                         publication.fez_record_search_key_significance &&
                         publication.fez_record_search_key_significance.length > 0 &&
-                        this.props.account && !!this.props.account.canMasquerade &&
                         publication.fez_record_search_key_significance.map((item, index) => {
                             return (
                                 <this.ViewNtroRow
