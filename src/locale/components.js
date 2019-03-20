@@ -1064,24 +1064,22 @@ export default {
                 title: 'Non-traditional research output (NTRO) requirements',
                 body: (
                     <React.Fragment>
-                        <p>You have selected an NTRO work type. In order to submit it or update an existing work, you must include:</p>
-                        <ul>
-                            <li>An author/creator research statement of up to 2000 characters that includes the background, contribution and significance of the work. <b>This is not for public view.</b></li>
-                            <li>An abstract/description of the work of up to 800 characters. This is for public view.</li>
-                            <li>At least one evidence file, e.g. <ul><li>a .pdf, .mp4, .tiff or .wav copy of the work itself,</li><li>a representation of the work or</li><li>a review of the work.</li></ul></li>
-                        </ul>
+                        <p>In order to submit this NTRO work type or update an existing NTRO work, you must include:</p>
+                        <ol>
+                            <li>A creator research statement of up to 2000 characters (250 – 300 words) that includes the background, contribution and significance of the work. It must be substantiated by the 'Major' or ‘Minor’ Scale/Significance option that you select on the form. <b>This is not for public view.</b></li>
+                            <li>An abstract/description of the work, up to 800 characters (approx. 100 words). This is for public view.</li>
+                            <li>At least one evidence file, e.g. a .pdf, .mp4, .tiff or .wav copy, representation or review of the work.</li>
+                        </ol>
 
-                        <p>Note:</p>
-                        <ul>
-                            <li>A research statement can be updated at any time via the REQUEST CORRECTION button for the work.</li>
-                            <li>If you identify your work as 'Minor', your statement can be a brief explanation that the work is in progress or part of a larger body of work.</li>
-                        </ul>
+                        <p>Note:<br/>
+                            A research statement can be updated at any time via the REQUEST CORRECTION button for the work.
+                        </p>
                     </React.Fragment>
                 )
             },
             metadata: {
                 help: {
-                    title: 'NTRO data',
+                    title: 'Non-traditional research output data',
                     text: (
                         <React.Fragment>
                             <h3>Quality indicators</h3>
