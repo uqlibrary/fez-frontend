@@ -41,7 +41,6 @@ export const setupStoreForMount = () => {
 };
 
 const setupMockAdapter = () => {
-    console.log('setupMockAdapter');
     return new MockAdapter(api, {delayResponse: 100});
 };
 

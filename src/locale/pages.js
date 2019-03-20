@@ -1,6 +1,6 @@
 import React from 'react';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
-import {pathConfig} from 'config/pathConfig';
+import {pathConfig} from 'config/routes';
 import locale from 'locale/components';
 
 /*

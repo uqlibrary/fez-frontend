@@ -857,14 +857,14 @@ exports[`AddDataCollection form should allow user to submit the form 11`] = `
                               <label
 -                               class=\\"MuiFormLabel-root-242 MuiFormLabel-required-247 MuiInputLabel-root-235 MuiInputLabel-formControl-236 MuiInputLabel-animated-239\\"
 -                               data-shrink=\\"false\\"
-+                               class=\\"MuiFormLabel-root-242 MuiFormLabel-filled-246 MuiFormLabel-required-247 MuiInputLabel-root-235 MuiInputLabel-formControl-236 MuiInputLabel-animated-239 MuiInputLabel-shrink-238\\"
++                               class=\\"MuiFormLabel-root-242 MuiFormLabel-focused-243 MuiFormLabel-required-247 MuiInputLabel-root-235 MuiInputLabel-formControl-236 MuiInputLabel-animated-239 MuiInputLabel-shrink-238\\"
 +                               data-shrink=\\"true\\"
                                 for=\\"Enter creator's role\\"
                               >
                                 Enter creator's role
                                 <span
                                   class=\\"MuiFormLabel-asterisk-248\\"
-@@ -925,10 +926,11 @@
+@@ -925,23 +926,188 @@
                                    *
                                 </span>
                               </label>
@@ -872,18 +872,18 @@ exports[`AddDataCollection form should allow user to submit the form 11`] = `
                                 aria-autocomplete=\\"list\\"
 +                               aria-controls=\\"downshift-2-menu\\"
                                 aria-labelledby=\\"downshift-2-label\\"
-                                class=\\"MuiInputBase-root-262 MuiInput-root-249 AutoCompleteAsyncField-inputRoot-282 MuiInput-underline-253 MuiInputBase-fullWidth-271 MuiInput-fullWidth-256 MuiInputBase-formControl-263 MuiInput-formControl-250\\"
+-                               class=\\"MuiInputBase-root-262 MuiInput-root-249 AutoCompleteAsyncField-inputRoot-282 MuiInput-underline-253 MuiInputBase-fullWidth-271 MuiInput-fullWidth-256 MuiInputBase-formControl-263 MuiInput-formControl-250\\"
++                               class=\\"MuiInputBase-root-262 MuiInput-root-249 AutoCompleteAsyncField-inputRoot-282 MuiInput-underline-253 MuiInputBase-fullWidth-271 MuiInput-fullWidth-256 MuiInputBase-focused-264 MuiInput-focused-251 MuiInputBase-formControl-263 MuiInput-formControl-250\\"
                               >
                                 <input
                                   aria-invalid=\\"false\\"
-@@ -936,32 +938,198 @@
+                                  autocomplete=\\"off\\"
                                   class=\\"MuiInputBase-input-272 MuiInput-input-257\\"
                                   id=\\"downshift-2-input\\"
                                   placeholder=\\"Select role from list or type the role of the creator in relation to the dataset\\"
                                   required=\\"\\"
                                   type=\\"text\\"
--                                 value=\\"\\"
-+                                 value=\\"test\\"
+                                  value=\\"\\"
 +                               />
 +                             </div>
 +                           </div>
@@ -1043,7 +1043,7 @@ exports[`AddDataCollection form should allow user to submit the form 11`] = `
 +                                     >
 +                                       Technician
 +                                     </span>
-                                    </div>
++                                   </div>
 +                                   <span
 +                                     class=\\"MuiTouchRipple-root-224\\"
 +                                   />
@@ -1053,30 +1053,5 @@ exports[`AddDataCollection form should allow user to submit the form 11`] = `
                             </div>
                           </div>
                         </div>
-+                     </div>
-                      <div
-                        class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
-                        style=\\"margin-bottom: 8px;\\"
-                      >
-                        <button
--                         class=\\"MuiButtonBase-root-212 MuiButtonBase-disabled-213 MuiButton-root-296 MuiButton-contained-307 MuiButton-containedPrimary-308 MuiButton-raised-310 MuiButton-raisedPrimary-311 MuiButton-disabled-316 MuiButton-fullWidth-321\\"
--                         disabled=\\"\\"
--                         tabindex=\\"-1\\"
-+                         class=\\"MuiButtonBase-root-212 MuiButton-root-296 MuiButton-contained-307 MuiButton-containedPrimary-308 MuiButton-raised-310 MuiButton-raisedPrimary-311 MuiButton-fullWidth-321\\"
-+                         tabindex=\\"0\\"
-                          type=\\"button\\"
-                        >
-                          <span
-                            class=\\"MuiButton-label-297\\"
-                          >
-                            Add creator
-                          </span>
-+                         <span
-+                           class=\\"MuiTouchRipple-root-224\\"
-+                         />
-                        </button>
-                      </div>
-                    </div>
-                    <span
-                      class=\\"MuiTypography-root-152 MuiTypography-caption-162 MuiTypography-colorError-186\\""
+                      </div>"
 `;

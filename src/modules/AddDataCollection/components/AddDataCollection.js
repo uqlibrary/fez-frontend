@@ -21,8 +21,7 @@ import {AuthorIdField} from 'modules/SharedComponents/LookupFields';
 import {RelatedDatasetAndPublicationListField} from 'modules/SharedComponents/LookupFields';
 import {default as Divider} from 'modules/SharedComponents/Toolbox/Divider';
 
-import {routes} from 'config';
-import * as validation from 'config/validation';
+import {routes, validation} from 'config';
 import componentLocale from 'locale/components';
 import {default as formLocale} from 'locale/publicationForm';
 import {locale} from 'locale';

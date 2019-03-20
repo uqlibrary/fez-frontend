@@ -239,7 +239,7 @@
       "react",
       "enzyme"
     ],
-    "collectCoverage": false,
+    "collectCoverage": true,
     "collectCoverageFrom": [
       "src/modules/**/*.{js,jsx}",
       "!src/**/index.js",
@@ -263,15 +263,10 @@
         "lines": 100
       }
     },
-    "moduleDirectories": [
-      "node_modules",
-      "src",
-      "utils",
-      "<rootDir>"
-    ],
     "modulePaths": [
       "<rootDir>/src",
-      "<rootDir>/eslint-plugin-uqlibrary"
+      "<rootDir>/eslint-plugin-uqlibrary",
+      "<rootDir>/utils"
     ],
     "moduleNameMapper": {
       "\\.(css|scss|sass)$": "<rootDir>/__mocks__/styles.js",
