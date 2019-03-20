@@ -68,25 +68,14 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
         >
           <Field
             component={[Function]}
-            description="Enter a personal statement (2000 characters or less) that describes the background, contribution and significance of the work for you."
+            description="Remember to include substantiation of your Major or Minor Scale/Significance claim above."
             disabled={true}
             fullWidth={true}
-            instructions={
-              <span
-                style={
-                  Object {
-                    "fontWeight": 700,
-                  }
-                }
-              >
-                 - Remember to enter your statement in three sections: Background, Contribution, Significance
-              </span>
-            }
             maxValue={2000}
             name="impactStatement"
             title={
               <span>
-                Creator research statement* 
+                Creator research statement*. Include Background, Contribution and Significance 
                 <span
                   style={
                     Object {
@@ -141,7 +130,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
           "title": "Non-traditional research output data",
         }
       }
-      title="Non-traditional research output data"
+      title="NTRO data"
     >
       <WithStyles(Grid)
         container={true}
@@ -153,20 +142,9 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
         >
           <Field
             component={[Function]}
-            description="Enter a brief description (800 characters or less, approximately 100 words) of the work"
+            description="Enter a brief description of the work"
             disabled={true}
             fullWidth={true}
-            instructions={
-              <span
-                style={
-                  Object {
-                    "fontWeight": 700,
-                  }
-                }
-              >
-                 - Remember that this description is for public view
-              </span>
-            }
             maxValue={800}
             name="ntroAbstract"
             title={
@@ -600,25 +578,14 @@ exports[`Component NtroFields should render contribution statement fields as wel
         >
           <Field
             component={[Function]}
-            description="Enter a personal statement (2000 characters or less) that describes the background, contribution and significance of the work for you."
+            description="Remember to include substantiation of your Major or Minor Scale/Significance claim above."
             disabled={false}
             fullWidth={true}
-            instructions={
-              <span
-                style={
-                  Object {
-                    "fontWeight": 700,
-                  }
-                }
-              >
-                 - Remember to enter your statement in three sections: Background, Contribution, Significance
-              </span>
-            }
             maxValue={2000}
             name="impactStatement"
             title={
               <span>
-                Creator research statement* 
+                Creator research statement*. Include Background, Contribution and Significance 
                 <span
                   style={
                     Object {
@@ -673,7 +640,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
           "title": "Non-traditional research output data",
         }
       }
-      title="Non-traditional research output data"
+      title="NTRO data"
     >
       <WithStyles(Grid)
         container={true}
@@ -685,20 +652,9 @@ exports[`Component NtroFields should render contribution statement fields as wel
         >
           <Field
             component={[Function]}
-            description="Enter a brief description (800 characters or less, approximately 100 words) of the work"
+            description="Enter a brief description of the work"
             disabled={false}
             fullWidth={true}
-            instructions={
-              <span
-                style={
-                  Object {
-                    "fontWeight": 700,
-                  }
-                }
-              >
-                 - Remember that this description is for public view
-              </span>
-            }
             maxValue={800}
             name="ntroAbstract"
             title={
@@ -1098,7 +1054,7 @@ exports[`Component NtroFields should render default view 1`] = `
           "title": "Non-traditional research output data",
         }
       }
-      title="Non-traditional research output data"
+      title="NTRO data"
     >
       <WithStyles(Grid)
         container={true}
@@ -1110,20 +1066,9 @@ exports[`Component NtroFields should render default view 1`] = `
         >
           <Field
             component={[Function]}
-            description="Enter a brief description (800 characters or less, approximately 100 words) of the work"
+            description="Enter a brief description of the work"
             disabled={false}
             fullWidth={true}
-            instructions={
-              <span
-                style={
-                  Object {
-                    "fontWeight": 700,
-                  }
-                }
-              >
-                 - Remember that this description is for public view
-              </span>
-            }
             maxValue={800}
             name="ntroAbstract"
             title={
@@ -1557,25 +1502,14 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
         >
           <Field
             component={[Function]}
-            description="Enter a personal statement (2000 characters or less) that describes the background, contribution and significance of the work for you."
+            description="Remember to include substantiation of your Major or Minor Scale/Significance claim above."
             disabled={false}
             fullWidth={true}
-            instructions={
-              <span
-                style={
-                  Object {
-                    "fontWeight": 700,
-                  }
-                }
-              >
-                 - Remember to enter your statement in three sections: Background, Contribution, Significance
-              </span>
-            }
             maxValue={2000}
             name="impactStatement"
             title={
               <span>
-                Creator research statement* 
+                Creator research statement*. Include Background, Contribution and Significance 
                 <span
                   style={
                     Object {
@@ -1630,7 +1564,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
           "title": "Non-traditional research output data",
         }
       }
-      title="Non-traditional research output data"
+      title="NTRO data"
     >
       <WithStyles(Grid)
         container={true}
@@ -1642,20 +1576,9 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
         >
           <Field
             component={[Function]}
-            description="Enter a brief description (800 characters or less, approximately 100 words) of the work"
+            description="Enter a brief description of the work"
             disabled={false}
             fullWidth={true}
-            instructions={
-              <span
-                style={
-                  Object {
-                    "fontWeight": 700,
-                  }
-                }
-              >
-                 - Remember that this description is for public view
-              </span>
-            }
             maxValue={800}
             name="ntroAbstract"
             title={
