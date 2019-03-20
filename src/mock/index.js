@@ -175,6 +175,7 @@ mock
     // .reply(500, ['ERROR in EXISTING_RECORD_API'])
     .onGet(new RegExp(escapeRegExp(routes.VOCABULARIES_API({id: '.*'}).apiUrl)))
     .reply((config) => {
+        console.log('test');
         const vocabId = config.url.substring(config.url.indexOf('/') + 1);
         return [200, mockData.vocabulariesList[vocabId]];
     })
