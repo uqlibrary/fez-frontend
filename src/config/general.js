@@ -882,7 +882,7 @@ export const QUALITY_INDICATORS = [
     {text: 'Repeat performances, reproductions, republications or re-exhibitions', value: 454037},
     {text: 'Selected for use by nationally recognised outlet or entity', value: 454038},
     {text: 'Selected for use by internationally recognised outlet or entity', value: 454039},
-    {text: 'Other (add details to Author/Creator contribution statement)', value: 454040}
+    {text: 'Other (add details to Author/Creator research statement)', value: 454040}
 ];
 
 export const AUDIENCE_SIZE = [
