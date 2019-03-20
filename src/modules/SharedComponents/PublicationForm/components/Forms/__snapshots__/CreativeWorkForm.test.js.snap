@@ -568,8 +568,17 @@ exports[`CreativeWorkForm renders  should show exhibition content correctly 1`] 
         "contributionStatement": Object {
           "fields": Object {
             "impactStatement": Object {
+              "description": <span
+                style={
+                  Object {
+                    "fontWeight": 700,
+                  }
+                }
+              >
+                 - Remember to enter your statement in three sections: Background, Contribution, Significance
+              </span>,
               "label": <span>
-                Creator research statement*. Include Background, Contribution and Significance 
+                Creator research statement* 
                 <span
                   style={
                     Object {
@@ -580,7 +589,7 @@ exports[`CreativeWorkForm renders  should show exhibition content correctly 1`] 
                   (not for public view)
                 </span>
               </span>,
-              "placeholder": "Remember to include substantiation of your Major or Minor Scale/Significance claim above.",
+              "placeholder": "Enter a personal statement (2000 characters or less) that describes the background, contribution and significance of the work for you.",
             },
             "scaleOfWork": Object {
               "description": "Select the option that best describes the significance of the work.",
@@ -606,6 +615,15 @@ exports[`CreativeWorkForm renders  should show exhibition content correctly 1`] 
         "metadata": Object {
           "fields": Object {
             "abstract": Object {
+              "description": <span
+                style={
+                  Object {
+                    "fontWeight": 700,
+                  }
+                }
+              >
+                 - Remember that this description is for public view
+              </span>,
               "label": <span>
                 Abstract/Description* 
                 <span
@@ -618,7 +636,7 @@ exports[`CreativeWorkForm renders  should show exhibition content correctly 1`] 
                   (for public view)
                 </span>
               </span>,
-              "placeholder": "Enter a brief description of the work",
+              "placeholder": "Enter a brief description (800 characters or less, approximately 100 words) of the work",
             },
             "audienceSize": Object {
               "label": "Audience size",
@@ -657,7 +675,7 @@ exports[`CreativeWorkForm renders  should show exhibition content correctly 1`] 
               "label": "Volume",
             },
           },
-          "title": "NTRO data",
+          "title": "Non-traditional research output data",
         },
       }
     }
