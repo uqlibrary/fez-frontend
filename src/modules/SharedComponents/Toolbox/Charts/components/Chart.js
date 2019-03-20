@@ -1,6 +1,5 @@
 import React from 'react';
 import {PropTypes} from 'prop-types';
-import {findDOMNode} from 'react-dom';
 import Highcharts from 'highcharts';
 import 'highcharts-exporting';
 
@@ -13,13 +12,14 @@ class Chart extends React.Component {
     constructor(props) {
         super(props);
         this.chart = null;
+        this.chartRef = React.createRef();
         this.printMedia = window.matchMedia && window.matchMedia('print') || null;
     }
 
     componentDidMount() {
-        if (this.refs && this.refs.chart) {
+        if (!!this.chartRef.current) {
             this.chart = new Highcharts.Chart(
-                findDOMNode(this.refs.chart),
+                this.chartRef.current,
                 this.props.chartOptions
             );
 
@@ -44,7 +44,7 @@ class Chart extends React.Component {
 
     render() {
         return (
-            <div className={this.props.className} ref="chart" />
+            <div className={this.props.className} ref={this.chartRef} />
         );
     }
 }

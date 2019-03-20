@@ -187,6 +187,21 @@ describe('Component ContributorForm', () => {
         expect(wrapper.find('WithStyles(Button)').props().disabled).toBeTruthy();
     });
 
+    it('should not disable button', () => {
+        const wrapper = setup({
+            disabled: false,
+            showRoleInput: true
+        });
+        wrapper.setState({
+            nameAsPublished: 'test',
+            creatorRole: 'role',
+            affiliation: 'NotUQ',
+            orgaff: 'test',
+            orgtype: 'test'
+        });
+        expect(wrapper.find('WithStyles(Button)').props().disabled).toBeFalsy();
+    });
+
     it('should render connected component', () => {
         const wrapper = getElement(ConnectedContributorForm, {onAdd: jest.fn()}, false);
         expect(toJson(wrapper)).toMatchSnapshot();

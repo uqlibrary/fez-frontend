@@ -76,7 +76,7 @@ export default class SearchComponent extends PureComponent {
                 isMinimised: props.isAdvancedSearchMinimised,
                 isOpenAccess: props.isOpenAccessInAdvancedMode || false,
                 docTypes: this.getDocTypesFromSearchQuery(props.searchQueryParams),
-                yearFilter: this.getYearRangeFromActiveFacets(props.activeFacets) || {},
+                yearFilter: this.getYearRangeFromActiveFacets(props.activeFacets),
                 ...this.getDateRangeFromSearchQuery(props.searchQueryParams)
             }
         };
@@ -90,11 +90,8 @@ export default class SearchComponent extends PureComponent {
             this.setState({
                 isAdvancedSearch: nextProps.isAdvancedSearch,
                 simpleSearch: {
-                    searchText: (
-                        !!nextProps.searchQueryParams.all
-                        && !!nextProps.searchQueryParams.all.value
-                        && nextProps.searchQueryParams.all.value
-                    )
+                    searchText:
+                    (nextProps.searchQueryParams.all || {}).value
                     || (typeof nextProps.searchQueryParams.all === 'string') && nextProps.searchQueryParams.all
                     || ''
                 },
@@ -102,7 +99,7 @@ export default class SearchComponent extends PureComponent {
                     fieldRows: this.getFieldRowsFromSearchQuery(nextProps.searchQueryParams),
                     isMinimised: this.context.isMobile && nextProps.isAdvancedSearchMinimised || false,
                     isOpenAccess: nextProps.isOpenAccessInAdvancedMode || false,
-                    docTypes: this.getDocTypesFromSearchQuery(nextProps.searchQueryParams) || [],
+                    docTypes: this.getDocTypesFromSearchQuery(nextProps.searchQueryParams),
                     yearFilter: {
                         from: this.state.advancedSearch.yearFilter.from,
                         to: this.state.advancedSearch.yearFilter.to,
@@ -173,7 +170,10 @@ export default class SearchComponent extends PureComponent {
     };
 
     parseDateRange = (range) => {
-        const parts = range.indexOf(' to ') > 0 ? range.substring(1, range.length - 1).split(' to ') : [];
+        if (range.indexOf(' to ') < 1) {
+            return {};
+        }
+        const parts = range.substring(1, range.length - 1).split(' to ');
         return {
             from: moment(parts[0], GENERIC_DATE_FORMAT),
             to: moment(parts[1], GENERIC_DATE_FORMAT)

@@ -1,4 +1,5 @@
-import {FreeTextForm} from './FreeTextForm';
+import {FreeTextFormClass} from './FreeTextForm';
+import FreeTextForm from './FreeTextForm';
 
 function setup(testProps, isShallow = true) {
     const props = {
@@ -12,12 +13,13 @@ function setup(testProps, isShallow = true) {
         classes: {
             remindToAdd: ''
         },
+        theme: {},
         errorText: 'This field is required',
         normalize: value => value,
-        isValid: jest.fn(() => true),
+        // isValid: jest.fn(() => ''),
         ...testProps
     };
-    return getElement(FreeTextForm, props, isShallow);
+    return getElement(FreeTextFormClass, props, isShallow);
 }
 
 describe('FreeTextForm tests ', () => {
@@ -30,6 +32,25 @@ describe('FreeTextForm tests ', () => {
         });
         wrapper2.instance().setState({itemName: '123456'});
         expect(toJson(wrapper2)).toMatchSnapshot();
+    });
+
+    it('rendering active form full mount', () => {
+        const wrapper = getElement(FreeTextForm, {
+            onAdd: jest.fn(),
+            disabled: false,
+            locale: {
+                inputFieldLabel: 'Item name',
+                inputFieldHint: 'Please type the item name',
+                addButtonLabel: 'Add'
+            },
+            classes: {
+                remindToAdd: ''
+            },
+            theme: {},
+            errorText: 'This field is required',
+            normalize: value => value,
+        }, false);
+        expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('rendering disabled form', () => {
@@ -84,17 +105,55 @@ describe('FreeTextForm tests ', () => {
         expect(wrapper.instance().props.onAdd).not.toBeCalled();
     });
 
-    it('should focus on textField after item is added', () => {
-        const focusFn = jest.fn();
-        const wrapper = setup({});
-        wrapper.instance().textField = {
-            focus: focusFn
-        };
-        wrapper.setState({itemName: 'one'});
-        expect(toJson(wrapper)).toMatchSnapshot();
+    it('should not fire onAdd when itemName is empty', () => {
+        const testFn = jest.fn();
+        const wrapper = setup({isValid: () => '', onAdd: testFn, disabled: false});
+        wrapper.setState({itemName: ''});
 
+        wrapper.instance().addItem({key: 'Space'});
+        expect(testFn).not.toHaveBeenCalled();
+    });
+
+    it('should not fire onAdd when disabled', () => {
+        const testFn = jest.fn();
+        const wrapper = setup({isValid: () => '', onAdd: testFn, disabled: true});
+        wrapper.setState({itemName: 'Test'});
         wrapper.instance().addItem({key: 'Enter'});
-        expect(focusFn).toHaveBeenCalled();
+        expect(testFn).not.toHaveBeenCalled();
+    });
+
+    it('should not fire onAdd when itemName is empty', () => {
+        const testFn = jest.fn();
+        const wrapper = setup({isValid: () => '', onAdd: testFn, disabled: false});
+        wrapper.setState({itemName: ''});
+        wrapper.instance().addItem({key: 'Enter'});
+        expect(testFn).not.toHaveBeenCalled();
+    });
+
+    it('should fire onAdd when itemName is valid and Enter is pressed', () => {
+        const testFn = jest.fn();
+        const wrapper = setup({isValid: () => '', onAdd: testFn, disabled: false});
+        wrapper.setState({itemName: 'Test'});
+        wrapper.instance().addItem({key: 'Enter'});
+        expect(testFn).toHaveBeenCalledWith('Test');
+    });
+
+    it('should fire onAdd when itemName is valid and Enter is pressed', () => {
+        const testFn = jest.fn();
+        const wrapper = setup({onAdd: testFn, disabled: false});
+        wrapper.setState({itemName: ''});
+        wrapper.instance().addItem({key: 'Enter'});
+        expect(testFn).not.toHaveBeenCalled();
+    });
+
+    it('should fire ref focus when all is OK', () => {
+        const testFn = jest.fn();
+        const refFn = jest.fn();
+        const wrapper = setup({isValid: () => '', onAdd: testFn, disabled: false});
+        wrapper.setState({itemName: 'Test'});
+        wrapper.instance().textField = {focus: refFn};
+        wrapper.instance().addItem({key: 'Enter'});
+        expect(refFn).toHaveBeenCalled();
     });
 
     it('should display error about input length', () => {

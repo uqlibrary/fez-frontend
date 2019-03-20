@@ -33,7 +33,7 @@ export function searchPossiblyYourPublications({activeFacets = {}, page = 1, pag
 
                 dispatch({
                     type: actions.POSSIBLY_YOUR_PUBLICATIONS_FACETS_LOADED,
-                    payload: response.filters && response.filters.facets ? response.filters.facets : {}
+                    payload: (response.filters || {}).facets || {}
                 });
 
                 if (Object.keys(activeFacets).length === 0) {
@@ -156,11 +156,15 @@ export function clearClaimPublication() {
  * @returns {promise} - this method is used by redux form onSubmit which requires Promise resolve/reject as a return
  */
 export function claimPublication(data) {
-    const isAuthorLinked = data.publication.fez_record_search_key_author_id && data.publication.fez_record_search_key_author_id.length > 0 &&
-        data.publication.fez_record_search_key_author_id.filter(authorId => authorId.rek_author_id === data.author.aut_id).length > 0;
+    const isAuthorLinked =
+        (data.publication.fez_record_search_key_author_id || []).filter(
+            authorId => authorId.rek_author_id === data.author.aut_id
+        ).length > 0;
 
-    const isContributorLinked = data.publication.fez_record_search_key_contributor_id && data.publication.fez_record_search_key_contributor_id.length > 0 &&
-        data.publication.fez_record_search_key_contributor_id.filter(authorId => authorId.rek_contributor_id === data.author.aut_id).length > 0;
+    const isContributorLinked =
+        (data.publication.fez_record_search_key_contributor_id || []).filter(
+            authorId => authorId.rek_contributor_id === data.author.aut_id
+        ).length > 0;
 
     // do not try to claim record if it's internal record and already assigned to the current author
     if (data.publication.rek_pid && (isAuthorLinked || isContributorLinked)) {
@@ -173,7 +177,7 @@ export function claimPublication(data) {
         };
     }
 
-    const hasFilesToUpload = data.files && data.files.queue && data.files.queue.length > 0;
+    const hasFilesToUpload = ((data.files || {}).queue || []).length > 0;
     return dispatch => {
         dispatch({type: actions.CLAIM_PUBLICATION_CREATE_PROCESSING});
 
@@ -181,11 +185,21 @@ export function claimPublication(data) {
         let recordContributorsIdSearchKeys = {};
 
         if (data.authorLinking && data.authorLinking.authors) {
-            recordAuthorsIdSearchKeys = transformers.getRecordAuthorsIdSearchKey(data.authorLinking ? data.authorLinking.authors : null, data.author.aut_id);
+            recordAuthorsIdSearchKeys = transformers.getRecordAuthorsIdSearchKey(
+                data.authorLinking.authors,
+                data.author.aut_id
+            );
         }
 
-        if (data.contributorLinking && data.contributorLinking.valid && data.contributorLinking.authors) {
-            recordContributorsIdSearchKeys = transformers.getRecordContributorsIdSearchKey(data.contributorLinking ? data.contributorLinking.authors : null, data.author.aut_id);
+        if (
+            data.contributorLinking &&
+            data.contributorLinking.valid &&
+            data.contributorLinking.authors
+        ) {
+            recordContributorsIdSearchKeys = transformers.getRecordContributorsIdSearchKey(
+                data.contributorLinking.authors,
+                data.author.aut_id
+            );
         }
 
         // claim record from external source
@@ -218,7 +232,7 @@ export function claimPublication(data) {
             .then(() => !data.publication.rek_pid ? post(routes.NEW_RECORD_API(), createRecordRequest) : null)
             // update pid of newly saved record
             .then((newRecord) => {
-                if (!data.publication.rek_pid) {
+                if ((newRecord || {}).data && !data.publication.rek_pid) {
                     data.publication.rek_pid = newRecord.data.rek_pid;
                 }
                 return null;

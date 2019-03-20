@@ -111,6 +111,7 @@ export const NTRO_SUBTYPE_RREB_INDUSTRY = 'Research Report for an External Body 
 export const NTRO_SUBTYPE_RREB_NOT_FOR_PROFIT = 'Research Report for an External Body - Not-for-profit';
 export const NTRO_SUBTYPE_RREB_OTHER = 'Research Report for an External Body - Other';
 export const SUBTYPE_RR_INTERNAL_OTHER = 'Research Report - Internal or Other';
+export const SUBTYPE_EDITED_BOOK = 'Edited book';
 
 export const CW_NTRO_SUBTYPES = [
     NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
@@ -215,7 +216,7 @@ export const publicationTypes = (components) => [
         subtypes: [
             'Research book (original research)',
             'Textbook',
-            'Edited book',
+            SUBTYPE_EDITED_BOOK,
             'Reference work, encyclopaedia, manual or handbook',
             NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
             NTRO_SUBTYPE_CW_TEXTUAL_WORK,
@@ -659,8 +660,8 @@ export const ORG_TYPE_ID_OTHER = '453990';
 export const ORG_TYPE_NOT_SET = '454045';
 
 export const ORG_TYPES_LOOKUP = {
-    [ORG_TYPE_ID_MUSEUM]: 'Museum',
-    [ORG_TYPE_ID_GALLERY]: 'Gallery',
+    [ORG_TYPE_ID_MUSEUM]: 'Library/Museum/Public Gallery',
+    [ORG_TYPE_ID_GALLERY]: 'Commercial Gallery',
     [ORG_TYPE_ID_GOVERNMENT]: 'Government',
     [ORG_TYPE_ID_NGO]: 'NGO',
     [ORG_TYPE_ID_FOUNDATION]: 'Foundation',
@@ -670,12 +671,9 @@ export const ORG_TYPES_LOOKUP = {
     [ORG_TYPE_NOT_SET]: 'Not set',
 };
 
-/**
- * @todo Merge grantAgencyTypes and orgAffiliationTypes if possible
- */
 export const grantAgencyTypes = [
-    'Museum',
-    'Gallery',
+    'Library/Museum/Public Gallery',
+    'Commercial Gallery',
     'Government',
     'NGO',
     'Foundation',
@@ -686,8 +684,8 @@ export const grantAgencyTypes = [
 ];
 
 export const orgAffiliationTypes = [
-    {value: '453983', text: 'Museum'},
-    {value: '453984', text: 'Gallery'},
+    {value: '453983', text: 'Library/Museum/Public Gallery'},
+    {value: '453984', text: 'Commercial Gallery'},
     {value: '453985', text: 'Government'},
     {value: '453986', text: 'NGO'},
     {value: '453987', text: 'Foundation'},

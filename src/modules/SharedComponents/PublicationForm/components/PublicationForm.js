@@ -43,16 +43,26 @@ export default class PublicationForm extends Component {
             ...(this.publicationTypes.filter((item) => {
                 return item.isFavourite;
             }).map((item, index) => {
-                return <MenuItem value={item.id} key={'fav_' + index} disabled={!item.formComponent}>{item.name}</MenuItem>;
+                return (
+                    <MenuItem value={item.id} key={'fav_' + index} disabled={!item.formComponent}>
+                        {item.name}
+                    </MenuItem>
+                );
             })),
             ...[<Divider key="div_0"/>],
             ...this.publicationTypes.filter((item) => {
                 return item.hasFormComponent;
             }).map((item, index) => {
-                return <MenuItem value={item.id} key={index} disabled={!item.formComponent}>{item.name}</MenuItem>;
+                return (
+                    <MenuItem value={item.id} key={index} disabled={!item.formComponent}>
+                        {item.name}
+                    </MenuItem>
+                );
             }),
             ...NEW_DOCTYPES_OPTIONS.map((item, index) => (
-                <MenuItem value={item} key={`ntro-${index}`}>{!!DOCTYPE_SUBTYPE_MAPPING[item] ? DOCTYPE_SUBTYPE_MAPPING[item].name : item}</MenuItem>
+                <MenuItem value={item} key={`ntro-${index}`}>
+                    {!!DOCTYPE_SUBTYPE_MAPPING[item] ? DOCTYPE_SUBTYPE_MAPPING[item].name : item}
+                </MenuItem>
             ))
         ];
     }
@@ -76,7 +86,10 @@ export default class PublicationForm extends Component {
     }
 
     _handleDefaultSubmit = (event) => {
-        if(event) event.preventDefault();
+        /* istanbul ignore else */
+        if(event) {
+            event.preventDefault();
+        }
     };
 
     render() {

@@ -1623,12 +1623,12 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                 <WithStyles(MenuItem)
                                                   value="453983"
                                                 >
-                                                  Museum
+                                                  Library/Museum/Public Gallery
                                                 </WithStyles(MenuItem)>,
                                                 <WithStyles(MenuItem)
                                                   value="453984"
                                                 >
-                                                  Gallery
+                                                  Commercial Gallery
                                                 </WithStyles(MenuItem)>,
                                                 <WithStyles(MenuItem)
                                                   value="453985"
@@ -1720,12 +1720,12 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                   <WithStyles(MenuItem)
                                                     value="453983"
                                                   >
-                                                    Museum
+                                                    Library/Museum/Public Gallery
                                                   </WithStyles(MenuItem)>,
                                                   <WithStyles(MenuItem)
                                                     value="453984"
                                                   >
-                                                    Gallery
+                                                    Commercial Gallery
                                                   </WithStyles(MenuItem)>,
                                                   <WithStyles(MenuItem)
                                                     value="453985"
@@ -1818,12 +1818,12 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                     <WithStyles(MenuItem)
                                                       value="453983"
                                                     >
-                                                      Museum
+                                                      Library/Museum/Public Gallery
                                                     </WithStyles(MenuItem)>,
                                                     <WithStyles(MenuItem)
                                                       value="453984"
                                                     >
-                                                      Gallery
+                                                      Commercial Gallery
                                                     </WithStyles(MenuItem)>,
                                                     <WithStyles(MenuItem)
                                                       value="453985"
@@ -1922,12 +1922,12 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                       <WithStyles(MenuItem)
                                                         value="453983"
                                                       >
-                                                        Museum
+                                                        Library/Museum/Public Gallery
                                                       </WithStyles(MenuItem)>,
                                                       <WithStyles(MenuItem)
                                                         value="453984"
                                                       >
-                                                        Gallery
+                                                        Commercial Gallery
                                                       </WithStyles(MenuItem)>,
                                                       <WithStyles(MenuItem)
                                                         value="453985"
@@ -4466,12 +4466,12 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                             <WithStyles(MenuItem)
                                               value="453983"
                                             >
-                                              Museum
+                                              Library/Museum/Public Gallery
                                             </WithStyles(MenuItem)>,
                                             <WithStyles(MenuItem)
                                               value="453984"
                                             >
-                                              Gallery
+                                              Commercial Gallery
                                             </WithStyles(MenuItem)>,
                                             <WithStyles(MenuItem)
                                               value="453985"
@@ -4563,12 +4563,12 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                               <WithStyles(MenuItem)
                                                 value="453983"
                                               >
-                                                Museum
+                                                Library/Museum/Public Gallery
                                               </WithStyles(MenuItem)>,
                                               <WithStyles(MenuItem)
                                                 value="453984"
                                               >
-                                                Gallery
+                                                Commercial Gallery
                                               </WithStyles(MenuItem)>,
                                               <WithStyles(MenuItem)
                                                 value="453985"
@@ -4661,12 +4661,12 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                                 <WithStyles(MenuItem)
                                                   value="453983"
                                                 >
-                                                  Museum
+                                                  Library/Museum/Public Gallery
                                                 </WithStyles(MenuItem)>,
                                                 <WithStyles(MenuItem)
                                                   value="453984"
                                                 >
-                                                  Gallery
+                                                  Commercial Gallery
                                                 </WithStyles(MenuItem)>,
                                                 <WithStyles(MenuItem)
                                                   value="453985"
@@ -4765,12 +4765,12 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                                   <WithStyles(MenuItem)
                                                     value="453983"
                                                   >
-                                                    Museum
+                                                    Library/Museum/Public Gallery
                                                   </WithStyles(MenuItem)>,
                                                   <WithStyles(MenuItem)
                                                     value="453984"
                                                   >
-                                                    Gallery
+                                                    Commercial Gallery
                                                   </WithStyles(MenuItem)>,
                                                   <WithStyles(MenuItem)
                                                     value="453985"
@@ -5837,13 +5837,13 @@ exports[`GrantListEditorForm should set grant agency type as a required input if
             key="0"
             value="453983"
           >
-            Museum
+            Library/Museum/Public Gallery
           </WithStyles(MenuItem)>
           <WithStyles(MenuItem)
             key="1"
             value="453984"
           >
-            Gallery
+            Commercial Gallery
           </WithStyles(MenuItem)>
           <WithStyles(MenuItem)
             key="2"
@@ -5971,13 +5971,13 @@ exports[`GrantListEditorForm should set grant agency type as a required input if
             key="0"
             value="453983"
           >
-            Museum
+            Library/Museum/Public Gallery
           </WithStyles(MenuItem)>
           <WithStyles(MenuItem)
             key="1"
             value="453984"
           >
-            Gallery
+            Commercial Gallery
           </WithStyles(MenuItem)>
           <WithStyles(MenuItem)
             key="2"
@@ -6110,13 +6110,13 @@ exports[`GrantListEditorForm should set grant agency type as a required input if
             key="0"
             value="453983"
           >
-            Museum
+            Library/Museum/Public Gallery
           </WithStyles(MenuItem)>
           <WithStyles(MenuItem)
             key="1"
             value="453984"
           >
-            Gallery
+            Commercial Gallery
           </WithStyles(MenuItem)>
           <WithStyles(MenuItem)
             key="2"

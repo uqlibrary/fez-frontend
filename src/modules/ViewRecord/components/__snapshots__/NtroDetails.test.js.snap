@@ -24146,6 +24146,18 @@ exports[`NtroDetails  renders contribution statement not as an admin 1`] = `
     title="Non-traditional research output metadata"
   >
     <Component
+      data="Major"
+      heading="Scale/Significance of work"
+      key="0"
+      subheading="(Ky Lane)"
+    />
+    <Component
+      data="Not set"
+      heading="Scale/Significance of work"
+      key="1"
+      subheading="(Someone else)"
+    />
+    <Component
       data={
         Array [
           "A statement",
@@ -24662,6 +24674,24 @@ exports[`NtroDetails  should render component with record 1`] = `
     title="Non-traditional research output metadata"
   >
     <Component
+      data="Major"
+      heading="Scale/Significance of work"
+      key="0"
+      subheading="(Ky Lane)"
+    />
+    <Component
+      data="Not set"
+      heading="Scale/Significance of work"
+      key="1"
+      subheading="()"
+    />
+    <Component
+      data="Not set"
+      heading="Scale/Significance of work"
+      key="2"
+      subheading="(the third guy)"
+    />
+    <Component
       data={
         Array [
           <p>
@@ -24803,6 +24833,18 @@ exports[`NtroDetails  should render default fields for record with missing looku
     title="Non-traditional research output metadata"
   >
     <Component
+      data="Not set"
+      heading="Scale/Significance of work"
+      key="0"
+      subheading="(Ky Lane)"
+    />
+    <Component
+      data="Not set"
+      heading="Scale/Significance of work"
+      key="1"
+      subheading="(Someone else)"
+    />
+    <Component
       data="This is an abstract"
       heading="Abstract/Description"
     />
@@ -24877,7 +24919,7 @@ exports[`NtroDetails  should show admin only fields when admin user 1`] = `
       data="Not set"
       heading="Scale/Significance of work"
       key="1"
-      subheading="(Someone else)"
+      subheading="()"
     />
     <Component
       data="Not set"
@@ -24905,7 +24947,7 @@ exports[`NtroDetails  should show admin only fields when admin user 1`] = `
       }
       heading="Creator contribution statement"
       key="1"
-      subheading="(Someone else)"
+      subheading=""
     />
     <Component
       data={

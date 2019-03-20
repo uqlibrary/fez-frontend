@@ -23,7 +23,7 @@ export default class Meta extends PureComponent {
             dompurify.sanitize(object[alternateKey], {ALLOWED_TAGS: ['']}).replace(/\s/g, '');
         const text = !!object[key] && object[key].length > 0 && object[key] || sanitisedFormattedText && object[alternateKey];
         return text.length > 0 &&
-            text.replace(/[&<>]/g, (replace) => (replaceHtmlChars[replace] || replace));
+            text.replace(/[&<>]/g, (replace) => (replaceHtmlChars[replace] || /* istanbul ignore next */ replace));
     };
 
     getMetaTagContent = (object, key, url, dateFormat) => {
