@@ -38,7 +38,7 @@ export default class JournalArticleForm extends Component {
                                 <Field
                                     component={TextField}
                                     disabled={this.props.submitting}
-                                    autoFocus
+                                    autoFocus={!this.props.isNtro}
                                     name="rek_title"
                                     type="text"
                                     rows={1}
