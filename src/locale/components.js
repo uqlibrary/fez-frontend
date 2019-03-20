@@ -1397,6 +1397,38 @@ export default {
         },
         fileUploader: {
             label: 'Click here to select files, or drag files into this area to upload'
+        },
+        securitySection: {
+            adminWarning: {
+                message: 'This section is to be handled by admins only - changes made to these sections may inadvertantly hide or show records in error - please make sure you know what you\'re doing.',
+                title: 'Warning'
+            },
+            community: {
+                prompt: 'Select a security policy to apply',
+                fieldLabel: '',
+                selectedTitle: 'Selected community record security policy details',
+                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id aliquam sapien. Aliquam rhoncus congue consectetur. Aenean sed sapien ipsum.',
+            },
+            collection: {
+                prompt: 'Select a security policy to apply',
+                fieldLabel: '',
+                dataStreamFieldLabel: (<span>
+                    Collection policy to apply to the <b>datastream</b> of this PID
+                </span>),
+                selectedTitle: 'Selected collection record security policy details',
+                dataStreamSelectedTitle: (<span>
+                    Selected collection <b>datastream</b> security policy details
+                </span>),
+                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id aliquam sapien. Aliquam rhoncus congue consectetur. Aenean sed sapien ipsum.',
+            },
+            record: {
+                prompt: 'Select a security policy to apply',
+                fieldLabel: '',
+                dataStreamFieldLabel: '',
+                selectedTitle: 'Selected record level security policy details',
+                dataStreamSelectedTitle: 'Selected record level datastream security policy details',
+                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id aliquam sapien. Aliquam rhoncus congue consectetur. Aenean sed sapien ipsum.',
+            }
         }
     }
 };
