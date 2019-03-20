@@ -63,7 +63,7 @@ export default {
                 default: 'Abstract',
                 'Journal': 'Summary/Description',
                 'Data Collection': 'Dataset description',
-                'Design': 'Project description'
+                'Design': 'Abstract/Description'
             },
             ntro: {
                 title: 'Non-traditional research output metadata',
