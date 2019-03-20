@@ -257,30 +257,6 @@ exports[`Application component Should display mobile correctly 1`] = `
       }
       onRef={[Function]}
     />
-    <WithStyles(Grid)
-      alignContent="center"
-      alignItems="center"
-      container={true}
-      justify="center"
-    >
-      <WithStyles(Grid)
-        item={true}
-        style={
-          Object {
-            "marginBottom": 0,
-            "marginTop": 0,
-          }
-        }
-      >
-        <WithStyles(Alert)
-          action={[Function]}
-          actionButtonLabel="Click to login"
-          message="Login to UQ eSpace for full search results and more services."
-          title="You are not logged in"
-          type="info_outline"
-        />
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
     <Connect(AppAlert) />
     <Switch>
       <Route

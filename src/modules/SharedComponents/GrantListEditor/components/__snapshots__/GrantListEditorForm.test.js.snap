@@ -1835,75 +1835,17 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                         input={<WithStyles(Input) />}
                                         muiFormControl={
                                           Object {
-                                            "IconComponent": [Function],
-                                            "MenuProps": undefined,
-                                            "SelectDisplayProps": undefined,
-                                            "autoWidth": false,
-                                            "children": Array [
-                                              <WithStyles(MenuItem)
-                                                disabled={true}
-                                                value=""
-                                              />,
-                                              Array [
-                                                <WithStyles(MenuItem)
-                                                  value="453983"
-                                                >
-                                                  Library/Museum/Public Gallery
-                                                </WithStyles(MenuItem)>,
-                                                <WithStyles(MenuItem)
-                                                  value="453984"
-                                                >
-                                                  Commercial Gallery
-                                                </WithStyles(MenuItem)>,
-                                                <WithStyles(MenuItem)
-                                                  value="453985"
-                                                >
-                                                  Government
-                                                </WithStyles(MenuItem)>,
-                                                <WithStyles(MenuItem)
-                                                  value="453986"
-                                                >
-                                                  NGO
-                                                </WithStyles(MenuItem)>,
-                                                <WithStyles(MenuItem)
-                                                  value="453987"
-                                                >
-                                                  Foundation
-                                                </WithStyles(MenuItem)>,
-                                                <WithStyles(MenuItem)
-                                                  value="453988"
-                                                >
-                                                  Corporate/Industry
-                                                </WithStyles(MenuItem)>,
-                                                <WithStyles(MenuItem)
-                                                  value="453989"
-                                                >
-                                                  University
-                                                </WithStyles(MenuItem)>,
-                                                <WithStyles(MenuItem)
-                                                  value="453990"
-                                                >
-                                                  Other
-                                                </WithStyles(MenuItem)>,
-                                                null,
-                                              ],
-                                            ],
-                                            "classes": Object {
-                                              "disabled": "MuiSelect-disabled-160",
-                                              "filled": "MuiSelect-filled-157",
-                                              "icon": "MuiSelect-icon-161",
-                                              "outlined": "MuiSelect-outlined-158",
-                                              "root": "MuiSelect-root-155",
-                                              "select": "MuiSelect-select-156",
-                                              "selectMenu": "MuiSelect-selectMenu-159",
-                                            },
-                                            "displayEmpty": false,
-                                            "multiple": false,
-                                            "onClose": undefined,
-                                            "onOpen": undefined,
-                                            "open": undefined,
-                                            "renderValue": undefined,
-                                            "type": undefined,
+                                            "adornedStart": false,
+                                            "disabled": false,
+                                            "error": false,
+                                            "filled": false,
+                                            "focused": false,
+                                            "margin": "none",
+                                            "onBlur": [Function],
+                                            "onEmpty": [Function],
+                                            "onFilled": [Function],
+                                            "onFocus": [Function],
+                                            "required": true,
                                             "variant": "standard",
                                           }
                                         }
@@ -2229,12 +2171,12 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                         <WithStyles(MenuItem)
                                                           value="453983"
                                                         >
-                                                          Museum
+                                                          Library/Museum/Public Gallery
                                                         </WithStyles(MenuItem)>,
                                                         <WithStyles(MenuItem)
                                                           value="453984"
                                                         >
-                                                          Gallery
+                                                          Commercial Gallery
                                                         </WithStyles(MenuItem)>,
                                                         <WithStyles(MenuItem)
                                                           value="453985"
@@ -2333,12 +2275,12 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                           <WithStyles(MenuItem)
                                                             value="453983"
                                                           >
-                                                            Museum
+                                                            Library/Museum/Public Gallery
                                                           </WithStyles(MenuItem)>,
                                                           <WithStyles(MenuItem)
                                                             value="453984"
                                                           >
-                                                            Gallery
+                                                            Commercial Gallery
                                                           </WithStyles(MenuItem)>,
                                                           <WithStyles(MenuItem)
                                                             value="453985"
@@ -5122,75 +5064,17 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                     input={<WithStyles(Input) />}
                                     muiFormControl={
                                       Object {
-                                        "IconComponent": [Function],
-                                        "MenuProps": undefined,
-                                        "SelectDisplayProps": undefined,
-                                        "autoWidth": false,
-                                        "children": Array [
-                                          <WithStyles(MenuItem)
-                                            disabled={true}
-                                            value=""
-                                          />,
-                                          Array [
-                                            <WithStyles(MenuItem)
-                                              value="453983"
-                                            >
-                                              Library/Museum/Public Gallery
-                                            </WithStyles(MenuItem)>,
-                                            <WithStyles(MenuItem)
-                                              value="453984"
-                                            >
-                                              Commercial Gallery
-                                            </WithStyles(MenuItem)>,
-                                            <WithStyles(MenuItem)
-                                              value="453985"
-                                            >
-                                              Government
-                                            </WithStyles(MenuItem)>,
-                                            <WithStyles(MenuItem)
-                                              value="453986"
-                                            >
-                                              NGO
-                                            </WithStyles(MenuItem)>,
-                                            <WithStyles(MenuItem)
-                                              value="453987"
-                                            >
-                                              Foundation
-                                            </WithStyles(MenuItem)>,
-                                            <WithStyles(MenuItem)
-                                              value="453988"
-                                            >
-                                              Corporate/Industry
-                                            </WithStyles(MenuItem)>,
-                                            <WithStyles(MenuItem)
-                                              value="453989"
-                                            >
-                                              University
-                                            </WithStyles(MenuItem)>,
-                                            <WithStyles(MenuItem)
-                                              value="453990"
-                                            >
-                                              Other
-                                            </WithStyles(MenuItem)>,
-                                            null,
-                                          ],
-                                        ],
-                                        "classes": Object {
-                                          "disabled": "MuiSelect-disabled-160",
-                                          "filled": "MuiSelect-filled-157",
-                                          "icon": "MuiSelect-icon-161",
-                                          "outlined": "MuiSelect-outlined-158",
-                                          "root": "MuiSelect-root-155",
-                                          "select": "MuiSelect-select-156",
-                                          "selectMenu": "MuiSelect-selectMenu-159",
-                                        },
-                                        "displayEmpty": false,
-                                        "multiple": false,
-                                        "onClose": undefined,
-                                        "onOpen": undefined,
-                                        "open": undefined,
-                                        "renderValue": undefined,
-                                        "type": undefined,
+                                        "adornedStart": false,
+                                        "disabled": false,
+                                        "error": false,
+                                        "filled": false,
+                                        "focused": false,
+                                        "margin": "none",
+                                        "onBlur": [Function],
+                                        "onEmpty": [Function],
+                                        "onFilled": [Function],
+                                        "onFocus": [Function],
+                                        "required": true,
                                         "variant": "standard",
                                       }
                                     }
@@ -5516,12 +5400,12 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                                     <WithStyles(MenuItem)
                                                       value="453983"
                                                     >
-                                                      Museum
+                                                      Library/Museum/Public Gallery
                                                     </WithStyles(MenuItem)>,
                                                     <WithStyles(MenuItem)
                                                       value="453984"
                                                     >
-                                                      Gallery
+                                                      Commercial Gallery
                                                     </WithStyles(MenuItem)>,
                                                     <WithStyles(MenuItem)
                                                       value="453985"
@@ -5620,12 +5504,12 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                                       <WithStyles(MenuItem)
                                                         value="453983"
                                                       >
-                                                        Museum
+                                                        Library/Museum/Public Gallery
                                                       </WithStyles(MenuItem)>,
                                                       <WithStyles(MenuItem)
                                                         value="453984"
                                                       >
-                                                        Gallery
+                                                        Commercial Gallery
                                                       </WithStyles(MenuItem)>,
                                                       <WithStyles(MenuItem)
                                                         value="453985"

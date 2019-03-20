@@ -588,14 +588,14 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                         >
                           Step 1 of 2
                         </span>
-                         - Please
+                         - Please 
                         <b>
                           add to a list of contributors below
                         </b>
                         , in the format and order that they are published.
                       </div>,
                       "descriptionStep1NoStep2": <div>
-                        Please
+                        Please 
                         <b>
                           add to a list of contributors below
                         </b>
@@ -613,7 +613,7 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                   showRoleInput={false}
                 >
                   <div>
-                    Please
+                    Please 
                     <b>
                       add to a list of contributors below
                     </b>
@@ -2426,7 +2426,7 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                                                   Object {
                                                     "adornedStart": false,
                                                     "disabled": true,
-                                                    "error": true,
+                                                    "error": false,
                                                     "filled": false,
                                                     "focused": false,
                                                     "margin": "none",
@@ -2452,8 +2452,19 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                                                   data-shrink={false}
                                                   htmlFor="Name as published"
                                                 >
-                                                  <label
-                                                    className="MuiFormLabel-root-109 MuiFormLabel-disabled-111 MuiInputLabel-root-102 MuiInputLabel-formControl-103 MuiInputLabel-animated-106"
+                                                  <WithFormControlContext(FormLabel)
+                                                    className="MuiInputLabel-root-102 MuiInputLabel-formControl-107 MuiInputLabel-animated-110"
+                                                    classes={
+                                                      Object {
+                                                        "asterisk": "MuiFormLabel-asterisk-119",
+                                                        "disabled": "MuiFormLabel-disabled-115 MuiInputLabel-disabled-104",
+                                                        "error": "MuiFormLabel-error-116 MuiInputLabel-error-105",
+                                                        "filled": "MuiFormLabel-filled-117",
+                                                        "focused": "MuiFormLabel-focused-114 MuiInputLabel-focused-103",
+                                                        "required": "MuiFormLabel-required-118 MuiInputLabel-required-106",
+                                                        "root": "MuiFormLabel-root-113",
+                                                      }
+                                                    }
                                                     data-shrink={false}
                                                     htmlFor="Name as published"
                                                   >
@@ -2477,7 +2488,7 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                                                         Object {
                                                           "adornedStart": false,
                                                           "disabled": true,
-                                                          "error": true,
+                                                          "error": false,
                                                           "filled": false,
                                                           "focused": false,
                                                           "margin": "none",
@@ -2491,7 +2502,7 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                                                       }
                                                     >
                                                       <label
-                                                        className="MuiFormLabel-root-113 MuiFormLabel-disabled-115 MuiInputLabel-disabled-104 MuiFormLabel-error-116 MuiInputLabel-error-105 MuiInputLabel-root-102 MuiInputLabel-formControl-107 MuiInputLabel-animated-110"
+                                                        className="MuiFormLabel-root-113 MuiFormLabel-disabled-115 MuiInputLabel-disabled-104 MuiInputLabel-root-102 MuiInputLabel-formControl-107 MuiInputLabel-animated-110"
                                                         data-shrink={false}
                                                         htmlFor="Name as published"
                                                       >
@@ -2596,27 +2607,76 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                                                   type="text"
                                                   value=""
                                                 >
-                                                  <div
-                                                    className="MuiInputBase-root-136 MuiInput-root-123 MuiInput-underline-127 MuiInputBase-disabled-139 MuiInput-disabled-126 MuiInputBase-fullWidth-145 MuiInput-fullWidth-130 MuiInputBase-formControl-137 MuiInput-formControl-124"
-                                                    onClick={[Function]}
+                                                  <InputBase
+                                                    autoComplete="off"
+                                                    classes={
+                                                      Object {
+                                                        "adornedEnd": "MuiInputBase-adornedEnd-145",
+                                                        "adornedStart": "MuiInputBase-adornedStart-144",
+                                                        "disabled": "MuiInputBase-disabled-143 MuiInput-disabled-130",
+                                                        "error": "MuiInputBase-error-146 MuiInput-error-132",
+                                                        "focused": "MuiInputBase-focused-142 MuiInput-focused-129",
+                                                        "formControl": "MuiInputBase-formControl-141 MuiInput-formControl-128",
+                                                        "fullWidth": "MuiInputBase-fullWidth-149 MuiInput-fullWidth-134",
+                                                        "input": "MuiInputBase-input-150 MuiInput-input-135",
+                                                        "inputAdornedEnd": "MuiInputBase-inputAdornedEnd-156",
+                                                        "inputAdornedStart": "MuiInputBase-inputAdornedStart-155",
+                                                        "inputMarginDense": "MuiInputBase-inputMarginDense-151 MuiInput-inputMarginDense-136",
+                                                        "inputMultiline": "MuiInputBase-inputMultiline-152 MuiInput-inputMultiline-137",
+                                                        "inputType": "MuiInputBase-inputType-153 MuiInput-inputType-138",
+                                                        "inputTypeSearch": "MuiInputBase-inputTypeSearch-154 MuiInput-inputTypeSearch-139",
+                                                        "marginDense": "MuiInputBase-marginDense-147",
+                                                        "multiline": "MuiInputBase-multiline-148 MuiInput-multiline-133",
+                                                        "root": "MuiInputBase-root-140 MuiInput-root-127 MuiInput-underline-131",
+                                                      }
+                                                    }
+                                                    fullWidth={true}
+                                                    id="Name as published"
+                                                    inputComponent="input"
+                                                    muiFormControl={
+                                                      Object {
+                                                        "adornedStart": false,
+                                                        "disabled": true,
+                                                        "error": false,
+                                                        "filled": false,
+                                                        "focused": false,
+                                                        "margin": "none",
+                                                        "onBlur": [Function],
+                                                        "onEmpty": [Function],
+                                                        "onFilled": [Function],
+                                                        "onFocus": [Function],
+                                                        "required": false,
+                                                        "variant": "standard",
+                                                      }
+                                                    }
+                                                    multiline={false}
+                                                    onChange={[Function]}
+                                                    placeholder="Please type the name exactly as published"
+                                                    type="text"
+                                                    value=""
                                                   >
-                                                    <input
-                                                      aria-invalid={false}
-                                                      autoComplete="off"
-                                                      className="MuiInputBase-input-146 MuiInput-input-131 MuiInputBase-disabled-139 MuiInput-disabled-126"
-                                                      disabled={true}
-                                                      id="Name as published"
-                                                      onBlur={[Function]}
-                                                      onChange={[Function]}
-                                                      onFocus={[Function]}
-                                                      placeholder="Please type the name exactly as published"
-                                                      required={false}
-                                                      type="text"
-                                                      value=""
-                                                    />
-                                                  </div>
-                                                </InputBase>
-                                              </WithStyles(InputBase)>
+                                                    <div
+                                                      className="MuiInputBase-root-140 MuiInput-root-127 MuiInput-underline-131 MuiInputBase-disabled-143 MuiInput-disabled-130 MuiInputBase-fullWidth-149 MuiInput-fullWidth-134 MuiInputBase-formControl-141 MuiInput-formControl-128"
+                                                      onClick={[Function]}
+                                                    >
+                                                      <input
+                                                        aria-invalid={false}
+                                                        autoComplete="off"
+                                                        className="MuiInputBase-input-150 MuiInput-input-135 MuiInputBase-disabled-143 MuiInput-disabled-130"
+                                                        disabled={true}
+                                                        id="Name as published"
+                                                        onBlur={[Function]}
+                                                        onChange={[Function]}
+                                                        onFocus={[Function]}
+                                                        placeholder="Please type the name exactly as published"
+                                                        required={false}
+                                                        type="text"
+                                                        value=""
+                                                      />
+                                                    </div>
+                                                  </InputBase>
+                                                </WithFormControlContext(InputBase)>
+                                              </WithStyles(WithFormControlContext(InputBase))>
                                             </Input>
                                           </WithStyles(Input)>
                                         </div>
