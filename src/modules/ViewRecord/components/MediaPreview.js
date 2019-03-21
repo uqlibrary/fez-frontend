@@ -117,7 +117,7 @@ export default class MediaPreview extends React.Component {
                     isVideo && !this.state.videoErrorMsg &&
                     <ReactJWPlayer
                         playerId="previewVideo"
-                        playerScript="http://cdn.jwplayer.com/libraries/VrkpYhtx.js"
+                        playerScript="https://cdn.jwplayer.com/libraries/VrkpYhtx.js"
                         file={previewMediaUrl}
                         onVideoLoad={this.videoLoaded}
                         onSetupError={this.videoFailed}
