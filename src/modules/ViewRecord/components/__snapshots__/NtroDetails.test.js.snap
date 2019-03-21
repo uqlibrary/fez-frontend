@@ -6707,7 +6707,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                   </p>,
                                                 ]
                                               }
-                                              heading="Creator contribution statement"
+                                              heading="Creator research statement"
                                               key="0"
                                               subheading="(Ky Lane)"
                                             >
@@ -7472,7 +7472,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                                 <span
                                                                   className="MuiTypography-root-138 MuiTypography-body2-146"
                                                                 >
-                                                                  Creator contribution statement
+                                                                  Creator research statement
                                                                 </span>
                                                               </Typography>
                                                             </WithStyles(Typography)>
@@ -8629,7 +8629,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                   "Statement missing.",
                                                 ]
                                               }
-                                              heading="Creator contribution statement"
+                                              heading="Creator research statement"
                                               key="1"
                                               subheading="(Someone else)"
                                             >
@@ -9394,7 +9394,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                                 <span
                                                                   className="MuiTypography-root-138 MuiTypography-body2-146"
                                                                 >
-                                                                  Creator contribution statement
+                                                                  Creator research statement
                                                                 </span>
                                                               </Typography>
                                                             </WithStyles(Typography)>
@@ -23347,7 +23347,7 @@ exports[`NtroDetails  renders ISMN correctly 1`] = `
           </p>,
         ]
       }
-      heading="Creator contribution statement"
+      heading="Creator research statement"
       key="0"
       subheading="(Ky Lane)"
     />
@@ -23357,7 +23357,7 @@ exports[`NtroDetails  renders ISMN correctly 1`] = `
           "Statement missing.",
         ]
       }
-      heading="Creator contribution statement"
+      heading="Creator research statement"
       key="1"
       subheading="(Someone else)"
     />
@@ -23484,7 +23484,7 @@ exports[`NtroDetails  renders ISRC correctly 1`] = `
           </p>,
         ]
       }
-      heading="Creator contribution statement"
+      heading="Creator research statement"
       key="0"
       subheading="(Ky Lane)"
     />
@@ -23494,7 +23494,7 @@ exports[`NtroDetails  renders ISRC correctly 1`] = `
           "Statement missing.",
         ]
       }
-      heading="Creator contribution statement"
+      heading="Creator research statement"
       key="1"
       subheading="(Someone else)"
     />
@@ -23631,7 +23631,7 @@ exports[`NtroDetails  renders audience size correctly 1`] = `
           </p>,
         ]
       }
-      heading="Creator contribution statement"
+      heading="Creator research statement"
       key="0"
       subheading="(Ky Lane)"
     />
@@ -23641,7 +23641,7 @@ exports[`NtroDetails  renders audience size correctly 1`] = `
           "Statement missing.",
         ]
       }
-      heading="Creator contribution statement"
+      heading="Creator research statement"
       key="1"
       subheading="(Someone else)"
     />
@@ -23768,7 +23768,7 @@ exports[`NtroDetails  renders audience size correctly 2`] = `
           </p>,
         ]
       }
-      heading="Creator contribution statement"
+      heading="Creator research statement"
       key="0"
       subheading="(Ky Lane)"
     />
@@ -23778,7 +23778,7 @@ exports[`NtroDetails  renders audience size correctly 2`] = `
           "Statement missing.",
         ]
       }
-      heading="Creator contribution statement"
+      heading="Creator research statement"
       key="1"
       subheading="(Someone else)"
     />
@@ -23905,7 +23905,7 @@ exports[`NtroDetails  renders component as expected 1`] = `
           </p>,
         ]
       }
-      heading="Creator contribution statement"
+      heading="Creator research statement"
       key="0"
       subheading="(Ky Lane)"
     />
@@ -23915,7 +23915,7 @@ exports[`NtroDetails  renders component as expected 1`] = `
           "Statement missing.",
         ]
       }
-      heading="Creator contribution statement"
+      heading="Creator research statement"
       key="1"
       subheading="(Someone else)"
     />
@@ -24036,13 +24036,13 @@ exports[`NtroDetails  renders contribution statement as an admin with a blank st
           "A statement",
         ]
       }
-      heading="Creator contribution statement"
+      heading="Creator research statement"
       key="0"
       subheading="(Ky Lane)"
     />
     <Component
       data={null}
-      heading="Creator contribution statement"
+      heading="Creator research statement"
       key="1"
       subheading="(Someone else)"
     />
@@ -24163,7 +24163,7 @@ exports[`NtroDetails  renders contribution statement not as an admin 1`] = `
           "A statement",
         ]
       }
-      heading="Creator contribution statement"
+      heading="Creator research statement"
       key="0"
       subheading="(Ky Lane)"
     />
@@ -24286,7 +24286,7 @@ exports[`NtroDetails  renders minor significance 1`] = `
           </p>,
         ]
       }
-      heading="Creator contribution statement"
+      heading="Creator research statement"
       key="0"
       subheading="(Ky Lane)"
     />
@@ -24296,7 +24296,7 @@ exports[`NtroDetails  renders minor significance 1`] = `
           "Statement missing.",
         ]
       }
-      heading="Creator contribution statement"
+      heading="Creator research statement"
       key="1"
       subheading="(Someone else)"
     />
@@ -24421,7 +24421,7 @@ exports[`NtroDetails  renders start/end page correctly due to correct doc/sub ty
           </p>,
         ]
       }
-      heading="Creator contribution statement"
+      heading="Creator research statement"
       key="0"
       subheading="(Ky Lane)"
     />
@@ -24431,7 +24431,7 @@ exports[`NtroDetails  renders start/end page correctly due to correct doc/sub ty
           "Statement missing.",
         ]
       }
-      heading="Creator contribution statement"
+      heading="Creator research statement"
       key="1"
       subheading="(Someone else)"
     />
@@ -24564,7 +24564,7 @@ exports[`NtroDetails  renders the abstract according to html or plain 1`] = `
           </p>,
         ]
       }
-      heading="Creator contribution statement"
+      heading="Creator research statement"
       key="0"
       subheading="(Ky Lane)"
     />
@@ -24574,7 +24574,7 @@ exports[`NtroDetails  renders the abstract according to html or plain 1`] = `
           "Statement missing.",
         ]
       }
-      heading="Creator contribution statement"
+      heading="Creator research statement"
       key="1"
       subheading="(Someone else)"
     />
@@ -24699,7 +24699,7 @@ exports[`NtroDetails  should render component with record 1`] = `
           </p>,
         ]
       }
-      heading="Creator contribution statement"
+      heading="Creator research statement"
       key="0"
       subheading="(Ky Lane)"
     />
@@ -24935,7 +24935,7 @@ exports[`NtroDetails  should show admin only fields when admin user 1`] = `
           </p>,
         ]
       }
-      heading="Creator contribution statement"
+      heading="Creator research statement"
       key="0"
       subheading="(Ky Lane)"
     />
@@ -24945,7 +24945,7 @@ exports[`NtroDetails  should show admin only fields when admin user 1`] = `
           "Statement missing.",
         ]
       }
-      heading="Creator contribution statement"
+      heading="Creator research statement"
       key="1"
       subheading=""
     />

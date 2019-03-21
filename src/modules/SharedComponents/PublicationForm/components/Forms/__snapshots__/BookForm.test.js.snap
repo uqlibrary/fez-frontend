@@ -1734,17 +1734,8 @@ exports[`BookForm renders  component with 4 input fields for NTRO 1`] = `
         "contributionStatement": Object {
           "fields": Object {
             "impactStatement": Object {
-              "description": <span
-                style={
-                  Object {
-                    "fontWeight": 700,
-                  }
-                }
-              >
-                 - Remember to enter your statement in three sections: Background, Contribution, Significance
-              </span>,
               "label": <span>
-                Creator research statement* 
+                Creator research statement*. Include Background, Contribution and Significance 
                 <span
                   style={
                     Object {
@@ -1755,7 +1746,7 @@ exports[`BookForm renders  component with 4 input fields for NTRO 1`] = `
                   (not for public view)
                 </span>
               </span>,
-              "placeholder": "Enter a personal statement (2000 characters or less) that describes the background, contribution and significance of the work for you.",
+              "placeholder": "Remember to include substantiation of your Major or Minor Scale/Significance claim above.",
             },
             "scaleOfWork": Object {
               "description": "Select the option that best describes the significance of the work.",
@@ -1806,15 +1797,6 @@ exports[`BookForm renders  component with 4 input fields for NTRO 1`] = `
         "metadata": Object {
           "fields": Object {
             "abstract": Object {
-              "description": <span
-                style={
-                  Object {
-                    "fontWeight": 700,
-                  }
-                }
-              >
-                 - Remember that this description is for public view
-              </span>,
               "label": <span>
                 Abstract/Description* 
                 <span
@@ -1827,7 +1809,7 @@ exports[`BookForm renders  component with 4 input fields for NTRO 1`] = `
                   (for public view)
                 </span>
               </span>,
-              "placeholder": "Enter a brief description (800 characters or less, approximately 100 words) of the work",
+              "placeholder": "Enter a brief description of the work",
             },
             "audienceSize": Object {
               "label": "Audience size",
@@ -1866,7 +1848,7 @@ exports[`BookForm renders  component with 4 input fields for NTRO 1`] = `
               "label": "Volume",
             },
           },
-          "title": "Non-traditional research output data",
+          "title": "NTRO data",
         },
       }
     }
