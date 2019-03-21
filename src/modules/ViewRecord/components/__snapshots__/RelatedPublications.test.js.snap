@@ -11516,7 +11516,7 @@ exports[`Related publications Component  should render with a publication title 
 </Provider>
 `;
 
-exports[`Related publications Component  should render without a parent search key 1`] = `
+exports[`Related publications Component  should render without a child search key 1`] = `
 <Provider
   store={
     Object {
@@ -17027,7 +17027,7 @@ exports[`Related publications Component  should render without a parent search k
 </Provider>
 `;
 
-exports[`Related publications Component  should render without a parent search key 2`] = `
+exports[`Related publications Component  should render without a parent search key 1`] = `
 <Provider
   store={
     Object {
