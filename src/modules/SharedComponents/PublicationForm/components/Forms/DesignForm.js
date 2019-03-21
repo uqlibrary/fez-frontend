@@ -39,7 +39,7 @@ export default class DesignForm extends Component {
                                 <Field
                                     component={TextField}
                                     disabled={this.props.submitting}
-                                    autoFocus
+                                    autoFocus={!this.props.isNtro}
                                     name="rek_title"
                                     type="text"
                                     fullWidth
