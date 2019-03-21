@@ -1060,6 +1060,23 @@ export default {
             title: 'Latest news'
         },
         ntroFields: {
+            header: {
+                title: 'Non-traditional research output (NTRO) requirements',
+                body: (
+                    <React.Fragment>
+                        <p>In order to submit this NTRO work type or update an existing NTRO work, you must include:</p>
+                        <ol>
+                            <li>A creator research statement of up to 2000 characters (250 – 300 words) that includes the background, contribution and significance of the work. It must be substantiated by the 'Major' or ‘Minor’ Scale/Significance option that you select on the form. <b>This is not for public view.</b></li>
+                            <li>An abstract/description of the work, up to 800 characters (approx. 100 words). This is for public view.</li>
+                            <li>At least one evidence file, e.g. a .pdf, .mp4, .tiff or .wav copy, representation or review of the work.</li>
+                        </ol>
+
+                        <p>Note:<br/>
+                            A research statement can be updated at any time via the REQUEST CORRECTION button for the work.
+                        </p>
+                    </React.Fragment>
+                )
+            },
             metadata: {
                 help: {
                     title: 'Non-traditional research output data',
