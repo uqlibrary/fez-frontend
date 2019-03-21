@@ -1,4 +1,4 @@
-import {trendingPublications} from 'mock/data/testing/trendingPublications';
+import {trendingPublications, trendingPublicationsWithNoSources} from 'mock/data/testing/trendingPublications';
 import {MyTrendingPublications} from './MyTrendingPublications';
 import {transformTrendingPublicationsMetricsData} from 'actions/academicDataTransformers';
 import mui1theme from 'config';
@@ -18,6 +18,11 @@ function setup(testProps, isShallow = true){
 describe('Component MyTrendingPublications', () => {
     it('should render trending publications', () => {
         const wrapper = setup({trendingPublicationsList: transformTrendingPublicationsMetricsData(trendingPublications)});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should not render trending publications when there are no matching source counts in the api response', () => {
+        const wrapper = setup({trendingPublicationsList: transformTrendingPublicationsMetricsData(trendingPublicationsWithNoSources)});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
