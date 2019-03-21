@@ -9266,7 +9266,7 @@ exports[`Media Preview Component  should render component with video 1`] = `
               onUnmute={[Function]}
               onVideoLoad={[Function]}
               playerId="previewVideo"
-              playerScript="http://cdn.jwplayer.com/libraries/VrkpYhtx.js"
+              playerScript="https://cdn.jwplayer.com/libraries/VrkpYhtx.js"
               playlist=""
               useMultiplePlayerScripts={false}
             >
@@ -9844,7 +9844,7 @@ exports[`Media Preview Component  should render when scrolled to a loaded video 
     onUnmute={[Function]}
     onVideoLoad={[Function]}
     playerId="previewVideo"
-    playerScript="http://cdn.jwplayer.com/libraries/VrkpYhtx.js"
+    playerScript="https://cdn.jwplayer.com/libraries/VrkpYhtx.js"
     playlist=""
     useMultiplePlayerScripts={false}
   />
@@ -10041,7 +10041,7 @@ exports[`Media Preview Component  should render when video fails with no error c
     onUnmute={[Function]}
     onVideoLoad={[Function]}
     playerId="previewVideo"
-    playerScript="http://cdn.jwplayer.com/libraries/VrkpYhtx.js"
+    playerScript="https://cdn.jwplayer.com/libraries/VrkpYhtx.js"
     playlist=""
     useMultiplePlayerScripts={false}
   />
