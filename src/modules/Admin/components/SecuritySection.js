@@ -13,7 +13,7 @@ import { SelectField } from 'modules/SharedComponents/Toolbox/SelectField';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { FormValuesContextConsumer } from 'context';
 
-import SecurityCard, { getIndexWithAttr, renderPolicyDesc } from './SecurityCard';
+import SecurityCard, { renderPolicyDesc, renderPolicyItems } from './SecurityCard';
 
 import { validation } from 'config';
 import { TOP_LEVEL_SECURITY_POLICIES, DATA_STREAM_SECURITY_POLICIES } from 'config/general';
@@ -85,17 +85,12 @@ export const SecuritySection = ({ disabled }) => {
                                                 name="collectionSecurity"
                                                 label="Collection policy to apply to this PID"
                                                 required
-                                                validation={[validation.required]}>
+                                                validation={[validation.required]}
+                                            >
                                                 <MenuItem value="" disabled>
                                                     {text.collection.prompt}
                                                 </MenuItem>
-                                                {TOP_LEVEL_SECURITY_POLICIES.map((item, index) => {
-                                                    return (
-                                                        <MenuItem key={index} value={item.value}>
-                                                            {item.label}
-                                                        </MenuItem>
-                                                    );
-                                                })}
+                                                {renderPolicyItems()}
                                             </Field>
                                         </Grid>
                                         {
@@ -119,28 +114,21 @@ export const SecuritySection = ({ disabled }) => {
                                     </Grid>
 
                                     <Grid container spacing={8} style={{ marginTop: 16 }}>
-                                        {false &&
-                                            <Grid item xs={12}>
-                                                <Field
-                                                    component={SelectField}
-                                                    disabled={disabled}
-                                                    name="collectionDataSecurity"
-                                                    label={text.collection.dataStreamFieldLabel}
-                                                    required
-                                                    validation={[validation.required]}>
-                                                    <MenuItem value="" disabled>
-                                                        {text.collection.prompt}
-                                                    </MenuItem>
-                                                    {TOP_LEVEL_SECURITY_POLICIES.map((item, index) => {
-                                                        return (
-                                                            <MenuItem key={index} value={item.value}>
-                                                                {item.label}
-                                                            </MenuItem>
-                                                        );
-                                                    })}
-                                                </Field>
-                                            </Grid>
-                                        }
+                                        <Grid item xs={12}>
+                                            <Field
+                                                component={SelectField}
+                                                disabled={disabled}
+                                                name="collectionDataSecurity"
+                                                label={text.collection.dataStreamFieldLabel}
+                                                required
+                                                validation={[validation.required]}
+                                            >
+                                                <MenuItem value="" disabled>
+                                                    {text.collection.prompt}
+                                                </MenuItem>
+                                                {renderPolicyItems()}
+                                            </Field>
+                                        </Grid>
                                         {
                                             formValues.get('collectionDataSecurity') &&
                                             <Grid item xs={12} style={{
@@ -169,7 +157,7 @@ export const SecuritySection = ({ disabled }) => {
                                     <Grid container spacing={8}>
                                         <Grid item xs={12}>
                                             <Typography variant="body2" component="p">
-                                                text.collection
+                                                {text.collection.prompt}
                                             </Typography>
                                         </Grid>
                                         <Grid container spacing={8}>
@@ -184,9 +172,16 @@ export const SecuritySection = ({ disabled }) => {
                                             </Grid>
                                         </Grid>
                                         {
-                                            formValues.get('collectionDataSecurity') && !overrideSecurity ?
-                                                <Grid item xs={12} style={{ marginTop: 24, padding: 24, backgroundColor: 'rgba(0,0,0,0.05)' }}>
-                                                    <Typography variant="h6" style={{ marginTop: -8 }}>Inherited security policy details</Typography>
+                                            formValues.get('collectionDataSecurity') &&
+                                            !overrideSecurity ?
+                                                <Grid item xs={12} style={{
+                                                    marginTop: 24,
+                                                    padding: 24,
+                                                    backgroundColor: 'rgba(0,0,0,0.05)'
+                                                }}>
+                                                    <Typography variant="h6" style={{ marginTop: -8 }}>
+                                                        Inherited security policy details
+                                                    </Typography>
                                                     <Grid container spacing={8} style={{ marginTop: 8 }}>
                                                         <Grid item xs={2}><b>Collection:</b></Grid>
                                                         <Grid item xs={5}>UQ:12345</Grid>
@@ -202,7 +197,11 @@ export const SecuritySection = ({ disabled }) => {
                                                 :
                                                 <Grid item xs={12} style={{ marginTop: 24, padding: 24, backgroundColor: 'rgba(0,0,0,0.05)' }}>
                                                     <Typography variant="h6" style={{ marginTop: -8 }}>Override datastream security policy details</Typography>
-                                                    <Grid container spacing={8} alignContent="flex-end" alignItems="flex-end" style={{ borderBottom: '1px solid rgba(0,0,0,0.1)', paddingBottom: 8, paddingTop: 8 }}>
+                                                    <Grid container spacing={8} alignContent="flex-end" alignItems="flex-end" style={{
+                                                        borderBottom: '1px solid rgba(0,0,0,0.1)',
+                                                        paddingBottom: 8,
+                                                        paddingTop: 8
+                                                    }}>
                                                         <Grid item xs={2}>Filename:</Grid>
                                                         <Grid item xs={4}>Test_1.PDF</Grid>
                                                         <Grid item xs={6}>
@@ -213,10 +212,9 @@ export const SecuritySection = ({ disabled }) => {
                                                                 value={formValues.get('filePolicy1')}
                                                                 label={<span>Security policy for this file to override inheritance</span>}
                                                                 required
-                                                                validation={[validation.required]}>
-                                                                {TOP_LEVEL_SECURITY_POLICIES.map((item, index) => {
-                                                                    return <MenuItem key={index} value={item.value}>{item.label}</MenuItem>;
-                                                                })}
+                                                                validation={[validation.required]}
+                                                            >
+                                                                {renderPolicyItems()}
                                                             </Field>
                                                         </Grid>
                                                     </Grid>
@@ -234,14 +232,9 @@ export const SecuritySection = ({ disabled }) => {
                                                                 name="filePolicy2"
                                                                 label={<span>Security policy for this file to override inheritance</span>}
                                                                 required
-                                                                validation={[validation.required]}>
-                                                                {TOP_LEVEL_SECURITY_POLICIES.map((item, index) => {
-                                                                    return (
-                                                                        <MenuItem key={index} value={item.value}>
-                                                                            {item.label}
-                                                                        </MenuItem>
-                                                                    );
-                                                                })}
+                                                                validation={[validation.required]}
+                                                            >
+                                                                {renderPolicyItems()}
                                                             </Field>
                                                         </Grid>
                                                     </Grid>
@@ -270,7 +263,9 @@ export const SecuritySection = ({ disabled }) => {
                                     {!collectionSecurity && formValues.get('collectionSecurity')
                                         ?
                                         <Grid item xs={12} style={{ marginTop: 24, padding: 24, backgroundColor: 'rgba(0,0,0,0.05)' }}>
-                                            <Typography variant="h6" style={{ marginTop: -8 }}>Inherited security policy details</Typography>
+                                            <Typography variant="h6" style={{ marginTop: -8 }}>
+                                                Inherited security policy details
+                                            </Typography>
                                             <Grid container spacing={8} style={{ marginTop: 8 }}>
                                                 <Grid item xs={2}><b>Collection:</b></Grid>
                                                 <Grid item xs={5}>UQ:12345</Grid>
@@ -289,13 +284,12 @@ export const SecuritySection = ({ disabled }) => {
                                                     name="overrideSecurity"
                                                     label="Policy to apply to override this PID`s inherited security"
                                                     required
-                                                    validation={[validation.required]}>
-                                                    <MenuItem value="" disabled>Select a security
-                                                        policy
-                                                        to apply</MenuItem>
-                                                    {TOP_LEVEL_SECURITY_POLICIES.map((item, index) => {
-                                                        return <MenuItem key={index} value={item.value}>{item.label}</MenuItem>;
-                                                    })}
+                                                    validation={[validation.required]}
+                                                >
+                                                    <MenuItem value="" disabled>
+                                                        Select a security policy to apply
+                                                    </MenuItem>
+                                                    {renderPolicyItems()}
                                                 </Field>
                                             </Grid>
                                             {
@@ -305,29 +299,13 @@ export const SecuritySection = ({ disabled }) => {
                                                     padding: 24,
                                                     backgroundColor: 'rgba(0,0,0,0.05)'
                                                 }}>
-                                                    <Typography variant="h6" style={{ marginTop: -8 }}>Selected
-                                                        record level security policy
-                                                            details</Typography>
+                                                    <Typography variant="h6" style={{ marginTop: -8 }}>
+                                                        Selected record level security policy details
+                                                    </Typography>
                                                     <Grid container spacing={8} style={{ marginTop: 8 }}>
                                                         <Grid item xs={2}><b>Name (ID):</b></Grid>
                                                         <Grid item xs={10}>
-                                                            {
-                                                                TOP_LEVEL_SECURITY_POLICIES[
-                                                                    getIndexWithAttr(
-                                                                        TOP_LEVEL_SECURITY_POLICIES,
-                                                                        'value',
-                                                                        formValues.get('overrideSecurity')
-                                                                    )
-                                                                ].name
-                                                            } ({
-                                                                TOP_LEVEL_SECURITY_POLICIES[
-                                                                    getIndexWithAttr(
-                                                                        TOP_LEVEL_SECURITY_POLICIES,
-                                                                        'value',
-                                                                        formValues.get('overrideSecurity')
-                                                                    )
-                                                                ].id
-                                                            })
+                                                            {renderPolicyDesc(formValues.get('overrideSecurity'))}
                                                         </Grid>
                                                     </Grid>
                                                 </Grid>
@@ -336,7 +314,12 @@ export const SecuritySection = ({ disabled }) => {
                                                 <FormControlLabel
                                                     control={<Checkbox
                                                         checked={overrideDatastreamSecurity}
-                                                        onChange={handleSecurity(setOverrideDatastreamSecurity, overrideDatastreamSecurity)}
+                                                        onChange={
+                                                            handleSecurity(
+                                                                setOverrideDatastreamSecurity,
+                                                                overrideDatastreamSecurity
+                                                            )
+                                                        }
                                                     />}
                                                     label="Override inherited datastream security (detailed below)."
                                                 />
@@ -344,32 +327,33 @@ export const SecuritySection = ({ disabled }) => {
                                                     overrideDatastreamSecurity &&
                                                     <Field
                                                         component={SelectField}
-                                                        name="ovveridePidDatastreamSecurity"
-                                                        value={formValues.get('ovveridePidDatastreamSecurity')}
+                                                        name="overridePidDatastreamSecurity"
+                                                        value={formValues.get('overridePidDatastreamSecurity')}
                                                         label="Datasteam policy"
                                                         required
-                                                        validation={[validation.required]}>
-                                                        <MenuItem value="" disabled>Select a security
-                                                            policy to apply to this PIDs
-                                                            datastream</MenuItem>
-                                                        {DATA_STREAM_SECURITY_POLICIES.map((item, index) => {
-                                                            return <MenuItem key={index} value={item.value}>{item.label}</MenuItem>;
-                                                        })}
+                                                        validation={[validation.required]}
+                                                    >
+                                                        <MenuItem value="" disabled>
+                                                            Select a security policy to apply to this PIDs datastream
+                                                        </MenuItem>
+                                                        {renderPolicyItems(DATA_STREAM_SECURITY_POLICIES)}
                                                     </Field>
                                                 }
                                                 {
-                                                    formValues.get('ovveridePidDatastreamSecurity') &&
+                                                    formValues.get('overridePidDatastreamSecurity') &&
                                                     <Grid item xs={12} style={{
                                                         marginTop: 24,
                                                         padding: 24,
                                                         backgroundColor: 'rgba(0,0,0,0.05)'
                                                     }}>
-                                                        <Typography variant="h6" style={{ marginTop: -8 }}>Selected record level datastream security policy details</Typography>
+                                                        <Typography variant="h6" style={{ marginTop: -8 }}>
+                                                            Selected record level datastream security policy details
+                                                        </Typography>
                                                         <Grid container spacing={8} style={{ marginTop: 8 }}>
                                                             <Grid item xs={2}><b>Name (ID):</b></Grid>
                                                             <Grid item xs={10}>
                                                                 {renderPolicyDesc(
-                                                                    formValues.get('ovveridePidDatastreamSecurity'),
+                                                                    formValues.get('overridePidDatastreamSecurity'),
                                                                     DATA_STREAM_SECURITY_POLICIES
                                                                 )}
                                                             </Grid>

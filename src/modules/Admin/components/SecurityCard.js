@@ -12,21 +12,29 @@ import { SelectField } from 'modules/SharedComponents/Toolbox/SelectField';
 import { validation } from 'config';
 import { TOP_LEVEL_SECURITY_POLICIES } from 'config/general';
 
-export const getIndexWithAttr = (array, attr, value) => array.map(item => item[attr]).indexOf(value);
+export const getIndexWithAttr = (array, attr, value) => (
+    array.map(item => item[attr]).indexOf(value)
+);
 
 export const renderPolicyDesc = (selectedPolicyKey, policyArray = TOP_LEVEL_SECURITY_POLICIES) => {
     const policyDesc = policyArray[
-        getIndexWithAttr(
-            policyArray,
-            'value',
-            selectedPolicyKey
-        )
+        getIndexWithAttr(policyArray, 'value', selectedPolicyKey)
     ];
     return (
         <React.Fragment>
             {policyDesc.name} ({policyDesc.id})
         </React.Fragment>
     );
+};
+
+export const renderPolicyItems = (policyList = TOP_LEVEL_SECURITY_POLICIES) => {
+    return policyList.map((item, index) => {
+        return (
+            <MenuItem key={index} value={item.value}>
+                {item.label}
+            </MenuItem>
+        );
+    });
 };
 
 export const SecurityCard = ({ disabled, cardType, fieldID, text, selectedPolicyKey = '' }) => {
@@ -53,16 +61,7 @@ export const SecurityCard = ({ disabled, cardType, fieldID, text, selectedPolicy
                         <MenuItem value="" disabled>
                             {text.prompt}
                         </MenuItem>
-                        {TOP_LEVEL_SECURITY_POLICIES.map((item, index) => {
-                            return (
-                                <MenuItem
-                                    key={index}
-                                    value={item.value}
-                                >
-                                    {item.label}
-                                </MenuItem>
-                            );
-                        })}
+                        {renderPolicyItems()}
                     </Field>
                 </Grid>
                 {selectedPolicyKey &&
