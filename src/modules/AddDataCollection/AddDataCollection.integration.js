@@ -1,14 +1,12 @@
 import React from 'react';
 import {createMemoryHistory} from 'history';
 import * as repositories from 'repositories';
-import * as accountActions from 'actions/account';
-import {Link, Route, Router, Switch} from 'react-router-dom';
-import {accounts, currentAuthor, authorDetails} from 'mock/data/account';
-import AddDataCollection from './AddDataCollection';
+import {Router} from 'react-router-dom';
+import AddDataCollection from './containers/AddDataCollection';
 import { toMatchDiffSnapshot } from 'snapshot-diff';
 const {getByTestId} = require('test-utils');
 import {rtlRender, fireEvent, act, waitForElement, cleanup} from 'test-utils';
-import {searchKeyList} from 'mock/data/searchKeys';
+import {searchKeyList} from 'mock/data';
 
 function renderWithRouter(
     ui,
@@ -16,19 +14,18 @@ function renderWithRouter(
   ) {
     return {
         ...rtlRender(<Router history={history}>{ui}</Router>),
-        // adding `history` to the returned utilities to allow us
-        // to reference it in our tests (just try to avoid using
-        // this to test implementation details).
         history,
     }
 }
 
-afterEach(() => cleanup);
 
 describe('AddDataCollection form', () => {
+
     beforeEach(() => {
         expect.extend({ toMatchDiffSnapshot });
     });
+
+    afterEach(() => cleanup);
 
     it('should allow user to submit the form', async () => {
         const testId = 451780;
@@ -317,11 +314,13 @@ describe('AddDataCollection form', () => {
             .reply(200, returnedApiData);
 
         const route = '/data-collections/add';
-        const {container, asFragment, getByPlaceholderText} = renderWithRouter(<AddDataCollection />, {route});
+        const {container, asFragment, getByText} = renderWithRouter(<AddDataCollection />, {route});
 
         const firstRender = asFragment();
 
-        // console.log(fireEvent);
+        const submitButton = getByTestId(container, 'submit-data-collection');
+        expect(submitButton).toHaveAttribute('disabled');
+
         fireEvent.click(getByTestId(container, 'deposit-agreement'));
         const secondRender = asFragment();
         expect(firstRender).toMatchDiffSnapshot(secondRender);
@@ -357,18 +356,35 @@ describe('AddDataCollection form', () => {
 
         fireEvent.change(getByTestId(container, 'downshift-1-input'), {target: {value: 'Math'}});
         const forCodesList = await waitForElement(() => getByTestId(container, 'downshift-1-menu'), {container});
+        fireEvent.click(getByTestId(forCodesList, 'downshift-1-item-0'));
         const tenthRender = asFragment();
         expect(ninthRender).toMatchDiffSnapshot(tenthRender);
-
-        fireEvent.select(getByTestId(forCodesList, 'downshift-1-item-0'));
-        const eleventhRender = asFragment();
-        expect(tenthRender).toMatchDiffSnapshot(eleventhRender);
 
         fireEvent.change(getByTestId(container, 'nameAsPublishedField'), {target: {value: 'test'}});
         fireEvent.focus(getByTestId(container, 'downshift-2-input'));
         const creatorRoleList = getByTestId(container, 'downshift-2-menu');
-        fireEvent.select(getByTestId(creatorRoleList, 'downshift-2-item-0'));
-        const twelvthRender = asFragment();
-        expect(eleventhRender).toMatchDiffSnapshot(twelvthRender);
+        fireEvent.click(getByTestId(creatorRoleList, 'downshift-2-item-1'));
+        fireEvent.click(getByText(/add creator/i));
+        const eleventRender = asFragment();
+        expect(tenthRender).toMatchDiffSnapshot(eleventRender);
+
+        fireEvent.click(getByTestId(container, 'data-collection-access-selector'));
+        waitForElement(() => getByTestId(container, 'menu-'));
+        fireEvent.click(getByText(/mediated access/i));
+        const twelfthRender = asFragment();
+        expect(eleventRender).toMatchDiffSnapshot(twelfthRender);
+
+        fireEvent.click(getByTestId(container, 'data-collection-license-selector'));
+        waitForElement(() => getByTestId(container, 'menu-'));
+        fireEvent.click(getByText(/Creative Commons Attribution \(only\) http:\/\/creativecommons.org\/licenses\/by\/3.0\/deed.en_US/i));
+        const thirteenthRender = asFragment();
+        expect(twelfthRender).toMatchDiffSnapshot(thirteenthRender);
+
+        fireEvent.change(getByTestId(container, 'Project name'), {target: {value: 'test project'}});
+        fireEvent.change(getByTestId(container, 'Project description'), {target: {value: 'test description'}});
+        const fourteenthRender = asFragment();
+        expect(thirteenthRender).toMatchDiffSnapshot(fourteenthRender);
+
+        expect(submitButton).not.toHaveAttribute('disabled');
     });
 });

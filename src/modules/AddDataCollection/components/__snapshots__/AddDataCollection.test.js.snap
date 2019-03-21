@@ -485,6 +485,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
               <Field
                 component={[Function]}
                 disabled={false}
+                id="data-collection-access-selector"
                 label="Access conditions"
                 name="fez_record_search_key_access_conditions.rek_access_conditions"
                 required={true}
@@ -504,6 +505,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
               <Field
                 component={[Function]}
                 disabled={false}
+                id="data-collection-license-selector"
                 label="Licensing and terms of access"
                 name="fez_record_search_key_license.rek_license"
                 required={true}
@@ -1182,6 +1184,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="submit-data-collection"
           onClick={[MockFunction]}
           variant="contained"
         >
@@ -1672,6 +1675,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
               <Field
                 component={[Function]}
                 disabled={false}
+                id="data-collection-access-selector"
                 label="Access conditions"
                 name="fez_record_search_key_access_conditions.rek_access_conditions"
                 required={true}
@@ -1691,6 +1695,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
               <Field
                 component={[Function]}
                 disabled={false}
+                id="data-collection-license-selector"
                 label="Licensing and terms of access"
                 name="fez_record_search_key_license.rek_license"
                 required={true}
@@ -2369,6 +2374,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="submit-data-collection"
           onClick={[MockFunction]}
           variant="contained"
         >

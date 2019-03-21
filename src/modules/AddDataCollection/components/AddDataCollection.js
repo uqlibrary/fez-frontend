@@ -238,6 +238,7 @@ export default class AddDataCollection extends Component {
                                     <Grid item xs={12} sm={12} md={4}>
                                         <Field
                                             component={AccessSelectorField}
+                                            id="data-collection-access-selector"
                                             name="fez_record_search_key_access_conditions.rek_access_conditions"
                                             required
                                             validate={[validation.required]}
@@ -248,6 +249,7 @@ export default class AddDataCollection extends Component {
                                     <Grid item xs={12} sm={12} md={4}>
                                         <Field
                                             component={LicenseSelectorField}
+                                            id="data-collection-license-selector"
                                             name="fez_record_search_key_license.rek_license"
                                             required
                                             validate={[validation.required]}
@@ -462,6 +464,7 @@ export default class AddDataCollection extends Component {
                         </Grid>
                         <Grid item xs={12} sm="auto">
                             <Button
+                                id="submit-data-collection"
                                 variant="contained"
                                 color="primary"
                                 fullWidth
