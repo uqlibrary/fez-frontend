@@ -129,7 +129,7 @@ exports[`BookChapterForm renders  component 1`] = `
     <StandardCard
       help={
         Object {
-          "buttonLabel": "OK",
+          "buttonLabel": "CLOSE",
           "text": <p>
             For more information about identification of author/creator/designer, click 
             <a
@@ -710,7 +710,7 @@ exports[`BookChapterForm renders  shows an error when end page is less than star
     <StandardCard
       help={
         Object {
-          "buttonLabel": "OK",
+          "buttonLabel": "CLOSE",
           "text": <p>
             For more information about identification of author/creator/designer, click 
             <a

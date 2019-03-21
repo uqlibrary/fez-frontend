@@ -12,7 +12,7 @@ exports[`VideoDocumentForm renders  component 1`] = `
     <StandardCard
       help={
         Object {
-          "buttonLabel": "OK",
+          "buttonLabel": "CLOSE",
           "text": <div>
             <p>
               <b>
@@ -230,7 +230,7 @@ exports[`VideoDocumentForm renders  component 1`] = `
     <StandardCard
       help={
         Object {
-          "buttonLabel": "OK",
+          "buttonLabel": "CLOSE",
           "text": "This is the contributor, and may be different to the creator, e.g. interviewee, performer (if not self-produced). Type contributors in the order and form they appear on the work or associated material. Examples of associated material are programs or promotional material. Additional boxes will appear for more contributors.",
           "title": "Contributors",
         }
@@ -384,7 +384,7 @@ exports[`VideoDocumentForm renders  component should render contributor assignme
     <StandardCard
       help={
         Object {
-          "buttonLabel": "OK",
+          "buttonLabel": "CLOSE",
           "text": <div>
             <p>
               <b>
@@ -602,7 +602,7 @@ exports[`VideoDocumentForm renders  component should render contributor assignme
     <StandardCard
       help={
         Object {
-          "buttonLabel": "OK",
+          "buttonLabel": "CLOSE",
           "text": "This is the contributor, and may be different to the creator, e.g. interviewee, performer (if not self-produced). Type contributors in the order and form they appear on the work or associated material. Examples of associated material are programs or promotional material. Additional boxes will appear for more contributors.",
           "title": "Contributors",
         }
