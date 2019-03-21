@@ -34,19 +34,23 @@ export const SecuritySection = ({ disabled }) => {
                     <Field
                         component={SelectField}
                         name="level"
-                        label="Use this interface as a..."
+                        label={text.admin.field.label}
                         disabled={disabled}
                         required
                         validation={[validation.required]}
                     >
-                        <MenuItem value="Superadmin" >Super admin</MenuItem>
-                        <MenuItem value="Admin" >Admin</MenuItem>
+                        <MenuItem value="Superadmin" >
+                            {text.admin.field.menuItemText.superAdmin}
+                        </MenuItem>
+                        <MenuItem value="Admin" >
+                            {text.admin.field.menuItemText.admin}
+                        </MenuItem>
                     </Field>
                     <br /><br />
                     <Alert
                         type="warning"
-                        title={text.adminWarning.title}
-                        message={text.adminWarning.message}
+                        title={text.admin.warning.title}
+                        message={text.admin.warning.message}
                     />
                 </Grid>
             </Grid>

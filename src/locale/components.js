@@ -1399,9 +1399,18 @@ export default {
             label: 'Click here to select files, or drag files into this area to upload'
         },
         securitySection: {
-            adminWarning: {
-                message: 'This section is to be handled by admins only - changes made to these sections may inadvertantly hide or show records in error - please make sure you know what you\'re doing.',
-                title: 'Warning'
+            admin: {
+                field: {
+                    label: 'Use this interface as a...',
+                    menuItemText: {
+                        superAdmin: 'Super admin',
+                        admin: 'Admin'
+                    },
+                },
+                warning: {
+                    message: 'This section is to be handled by admins only - changes made to these sections may inadvertantly hide or show records in error - please make sure you know what you\'re doing.',
+                    title: 'Warning'
+                }
             },
             community: {
                 prompt: 'Select a security policy to apply',
