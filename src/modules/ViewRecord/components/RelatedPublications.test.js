@@ -1,4 +1,4 @@
-import {dataCollection} from 'mock/data/testing/records';
+import {dataCollection, recordWithRelatedItems} from 'mock/data/testing/records';
 import {RelatedPublicationsClass} from "./RelatedPublications";
 import RelatedPublications from "./RelatedPublications";
 
@@ -58,9 +58,24 @@ describe('Related publications Component ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should render without a parent search key', () => {
+    it('should render without a child search key', () => {
         const wrapper = getElement(RelatedPublications, {
             publication: dataCollection,
+            title: 'Title',
+            parentSearchKey: {
+                key: 'fez_record_search_key_isderivationof',
+                pid: 'rek_isderivationof',
+                title: 'rek_isderivationof_lookup',
+                order: 'rek_isderivationof_order'
+            }
+        }, false);
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render without a parent search key', () => {
+        console.log(recordWithRelatedItems);
+        const wrapper = getElement(RelatedPublications, {
+            publication: recordWithRelatedItems,
             title: 'Title',
             parentSearchKey: {
                 key: 'fez_record_search_key_isderivationof',

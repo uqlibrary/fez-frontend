@@ -13,7 +13,7 @@ IMPORTANT: if currently text contains placeholders, eg any characters in square 
 help: {
     title: 'About these metrics',
     text: (<div></div>),
-    buttonLabel: 'OK'
+    buttonLabel: 'CLOSE'
 }
 - text can be plain or formatted HTML component with links/tags/etc
 - if help is not required, delete help: {} fully (including closing '},')
