@@ -68,6 +68,16 @@ export default class NtroFields extends React.PureComponent {
                         placeholder: 'Enter a personal statement (2000 characters or less) that describes the background, contribution and significance of the work for you.',
                         description: (<span style={{fontWeight: 700}}> - Remember to enter your statement in three sections: Background, Contribution, Significance</span>)
                     },
+                },
+                help: {
+                    title: 'Author/Creator research statement',
+                    text: (
+                        <React.Fragment>
+                            <h3>Creator research statement</h3>
+                            <p>For more information about the research statement, click  <b><a style={{fontWeight: 700}} target="_blank" href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836548">here</a></b></p>
+                        </React.Fragment>
+                    ),
+                    buttonLabel: 'OK'
                 }
             },
             metadata: {
@@ -164,7 +174,7 @@ export default class NtroFields extends React.PureComponent {
                 {
                     this.props.showContributionStatement &&
                     <Grid item xs={12}>
-                        <StandardCard title={contributionStatement.title}>
+                        <StandardCard title={contributionStatement.title} help={contributionStatement.help}>
                             <Grid container spacing={8}>
                                 <Grid item xs={12}>
                                     <Typography>{contributionStatement.fields.scaleOfWork.description}</Typography>
