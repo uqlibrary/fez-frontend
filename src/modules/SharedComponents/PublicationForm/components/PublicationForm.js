@@ -6,6 +6,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Divider from '@material-ui/core/Divider';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
+import {NtroHeader} from 'modules/SharedComponents/Toolbox/NtroFields';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {SelectField} from 'modules/SharedComponents/Toolbox/SelectField';
 import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
@@ -133,6 +134,10 @@ export default class PublicationForm extends Component {
                     {
                         !!this.props.formComponent &&
                         <React.Fragment>
+                            {
+                                !!this.props.isNtro &&
+                                <NtroHeader/>
+                            }
                             <Grid item xs={12}>
                                 <this.props.formComponent
                                     formValues={this.props.formValues}

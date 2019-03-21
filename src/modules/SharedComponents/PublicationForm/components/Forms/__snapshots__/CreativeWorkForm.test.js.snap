@@ -337,7 +337,7 @@ exports[`CreativeWorkForm renders  should show exhibition content correctly 1`] 
           xs={12}
         >
           <Field
-            autoFocus={true}
+            autoFocus={false}
             component={[Function]}
             disabled={false}
             fullWidth={true}
