@@ -18,7 +18,7 @@ fi
 
 # Run integration tests
 # Enable for master/staging
-if [[ (${CI_BRANCH} === 'feature-integration-tests')]]; then
+if [[ (${CI_BRANCH} == 'feature-integration-tests')]]; then
     echo "Running integration test..."
     npm run test:integration
 fi
