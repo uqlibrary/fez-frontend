@@ -34,7 +34,7 @@ export class HelpDrawer extends Component {
         classes: PropTypes.object
     };
     static defaultProps = {
-        buttonLabel: 'OK'
+        buttonLabel: 'CLOSE'
     };
 
     render() {

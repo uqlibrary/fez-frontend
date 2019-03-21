@@ -5,7 +5,7 @@ exports[`Component Masquerade Should render form as expected 1`] = `
   <StandardCard
     help={
       Object {
-        "buttonLabel": "OK",
+        "buttonLabel": "CLOSE",
         "text": <div>
           Masquerade as another user...
         </div>,
@@ -73,7 +73,7 @@ exports[`Component Masquerade Should render readonly description 1`] = `
   <StandardCard
     help={
       Object {
-        "buttonLabel": "OK",
+        "buttonLabel": "CLOSE",
         "text": <div>
           Masquerade as another user...
         </div>,
