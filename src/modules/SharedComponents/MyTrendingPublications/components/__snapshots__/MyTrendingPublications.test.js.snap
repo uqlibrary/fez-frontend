@@ -1,5 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Component MyTrendingPublications should not render trending publications when there are no matching source counts in the api response 1`] = `
+<div
+  className="empty"
+/>
+`;
+
 exports[`Component MyTrendingPublications should render loading indicator 1`] = `
 <WithStyles(Grid)
   alignItems="center"

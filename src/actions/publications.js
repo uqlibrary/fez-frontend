@@ -119,7 +119,7 @@ export function searchTrendingPublications(recordsPerSource = 5) {
                 } else {
                     dispatch({
                         type: actions.TRENDING_PUBLICATIONS_LOADED,
-                        payload: response
+                        payload: {data: []},
                     });
                 }
             })
