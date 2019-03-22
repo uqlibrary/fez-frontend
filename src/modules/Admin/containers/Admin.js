@@ -2,6 +2,7 @@ import {connect} from 'react-redux';
 import {reduxForm, getFormValues, getFormSyncErrors} from 'redux-form/immutable';
 import Immutable from 'immutable';
 import Admin from '../components/Admin';
+import { securityAssignments } from '../components/MockData';
 import {confirmDiscardFormChanges} from 'modules/SharedComponents/ConfirmDiscardFormChanges';
 import {withRouter} from 'react-router';
 import Cookies from 'js-cookie';
@@ -24,8 +25,8 @@ const mapStateToProps = (state) => {
         formErrors: formErrors,
         disableSubmit: formErrors && !(formErrors instanceof Immutable.Map),
         initialValues: {
-            communitySecurity: 'A',
-            collectionSecurity: 'B',
+            communitySecurity: securityAssignments[0].policyID,
+            collectionSecurity: 2,
             collection: [],
             subject: []
         },

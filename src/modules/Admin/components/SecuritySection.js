@@ -14,6 +14,7 @@ import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { FormValuesContextConsumer } from 'context';
 
 import SecurityCard, { renderPolicyDesc, renderPolicyItems } from './SecurityCard';
+import { securityAssignments } from './MockData';
 
 import { validation } from 'config';
 import { TOP_LEVEL_SECURITY_POLICIES, DATA_STREAM_SECURITY_POLICIES } from 'config/general';
@@ -26,6 +27,10 @@ export const SecuritySection = ({ disabled }) => {
     const [overrideSecurity, setOverrideSecurity] = useState(false);
     const [overrideDatastreamSecurity, setOverrideDatastreamSecurity] = useState(false);
     const handleSecurity = (handler, security) => () => handler(!security);
+
+    const securityCommunity = {
+        ...securityAssignments[0]
+    };
 
     return (
         <React.Fragment>
@@ -64,11 +69,8 @@ export const SecuritySection = ({ disabled }) => {
                                 <SecurityCard
                                     disabled={disabled}
                                     selectedPolicyKey={formValues.get('communitySecurity')}
-                                    cardType={'Community'}
-                                    text={{
-                                        ...text.community,
-                                        entryName: 'UQ:12345'
-                                    }}
+                                    entity={securityCommunity}
+                                    text={text.community}
                                     fieldID={'communitySecurity'}
                                 />
                             </Grid>
@@ -176,8 +178,7 @@ export const SecuritySection = ({ disabled }) => {
                                             </Grid>
                                         </Grid>
                                         {
-                                            formValues.get('collectionDataSecurity') &&
-                                            !overrideSecurity ?
+                                            formValues.get('collectionDataSecurity') && !overrideSecurity ?
                                                 <Grid item xs={12} style={{
                                                     marginTop: 24,
                                                     padding: 24,
@@ -191,16 +192,22 @@ export const SecuritySection = ({ disabled }) => {
                                                         <Grid item xs={5}>UQ:12345</Grid>
                                                         <Grid item xs={5}>UQ:67890</Grid>
                                                         <Grid item xs={2}><b>Policy:</b></Grid>
-                                                        <Grid item xs={5}>{renderPolicyDesc('B')}</Grid>
-                                                        <Grid item xs={5}>{renderPolicyDesc('C')}</Grid>
+                                                        <Grid item xs={5}>{renderPolicyDesc(2)}</Grid>
+                                                        <Grid item xs={5}>{renderPolicyDesc(3)}</Grid>
                                                         <Grid item xs={2}><b>Description:</b></Grid>
                                                         <Grid item xs={5}>{TOP_LEVEL_SECURITY_POLICIES[1].description}</Grid>
                                                         <Grid item xs={5}>{TOP_LEVEL_SECURITY_POLICIES[2].description}</Grid>
                                                     </Grid>
                                                 </Grid>
                                                 :
-                                                <Grid item xs={12} style={{ marginTop: 24, padding: 24, backgroundColor: 'rgba(0,0,0,0.05)' }}>
-                                                    <Typography variant="h6" style={{ marginTop: -8 }}>Override datastream security policy details</Typography>
+                                                <Grid item xs={12} style={{
+                                                    marginTop: 24,
+                                                    padding: 24,
+                                                    backgroundColor: 'rgba(0,0,0,0.05)'
+                                                }}>
+                                                    <Typography variant="h6" style={{ marginTop: -8 }}>
+                                                        Override datastream security policy details
+                                                    </Typography>
                                                     <Grid container spacing={8} alignContent="flex-end" alignItems="flex-end" style={{
                                                         borderBottom: '1px solid rgba(0,0,0,0.1)',
                                                         paddingBottom: 8,
@@ -266,7 +273,11 @@ export const SecuritySection = ({ disabled }) => {
                                     }
                                     {!collectionSecurity && formValues.get('collectionSecurity')
                                         ?
-                                        <Grid item xs={12} style={{ marginTop: 24, padding: 24, backgroundColor: 'rgba(0,0,0,0.05)' }}>
+                                        <Grid item xs={12} style={{
+                                            marginTop: 24,
+                                            padding: 24,
+                                            backgroundColor: 'rgba(0,0,0,0.05)'
+                                        }}>
                                             <Typography variant="h6" style={{ marginTop: -8 }}>
                                                 Inherited security policy details
                                             </Typography>
@@ -275,8 +286,8 @@ export const SecuritySection = ({ disabled }) => {
                                                 <Grid item xs={5}>UQ:12345</Grid>
                                                 <Grid item xs={5}>UQ:67890</Grid>
                                                 <Grid item xs={2}><b>Policy:</b></Grid>
-                                                <Grid item xs={5}>{renderPolicyDesc('B')}</Grid>
-                                                <Grid item xs={5}>{renderPolicyDesc('C')}</Grid>
+                                                <Grid item xs={5}>{renderPolicyDesc(2)}</Grid>
+                                                <Grid item xs={5}>{renderPolicyDesc(3)}</Grid>
                                             </Grid>
                                         </Grid>
                                         :

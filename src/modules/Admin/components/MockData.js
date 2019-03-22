@@ -1503,3 +1503,6 @@ export const qindex = [
     {value: '450041', label: 'M Reference Entry in Dictionary/Encyclopaedia'},
     {value: '450042', label: 'MX Reference Entry in Dictionary/Encyclopaedia - Other Public Output'}
 ];
+export const securityAssignments = [
+    { pid: 'UQ:123456', type: 'Community', policyID: 1 }
+];

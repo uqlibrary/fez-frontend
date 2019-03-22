@@ -28,19 +28,19 @@ export const renderPolicyDesc = (selectedPolicyKey, policyArray = TOP_LEVEL_SECU
 };
 
 export const renderPolicyItems = (policyList = TOP_LEVEL_SECURITY_POLICIES) => {
-    return policyList.map((item, index) => {
+    return policyList.map((policy, index) => {
         return (
-            <MenuItem key={index} value={item.value}>
-                {item.label}
+            <MenuItem key={index} value={policy.value}>
+                {policy.label}
             </MenuItem>
         );
     });
 };
 
-export const SecurityCard = ({ disabled, cardType, fieldID, text, selectedPolicyKey = '' }) => {
+export const SecurityCard = ({ disabled, entity, fieldID, text, selectedPolicyKey = 0 }) => {
     const title = (
         <span>
-            <b>{cardType}</b> level security - {text.entryName}
+            <b>{entity.type}</b> level security - {entity.pid}
         </span>
     );
     return (
@@ -52,9 +52,11 @@ export const SecurityCard = ({ disabled, cardType, fieldID, text, selectedPolicy
                     </Typography>
                 </Grid>
                 <Grid item xs={12}>
-                    <Field component={SelectField} disabled={disabled}
+                    <Field
+                        component={SelectField}
+                        disabled={disabled}
                         name={fieldID}
-                        label={`${cardType} policy to apply to this PID`}
+                        label={`${entity.type} policy to apply to this PID`}
                         required
                         validation={[validation.required]}
                     >
@@ -87,8 +89,8 @@ export const SecurityCard = ({ disabled, cardType, fieldID, text, selectedPolicy
 
 SecurityCard.propTypes = {
     disabled: PropTypes.bool,
-    cardType: PropTypes.string,
-    selectedPolicyKey: PropTypes.string,
+    entity: PropTypes.object,
+    selectedPolicyKey: PropTypes.number,
     text: PropTypes.object,
     fieldID: PropTypes.string
 };
