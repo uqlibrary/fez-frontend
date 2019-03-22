@@ -1079,7 +1079,7 @@ export default {
             },
             metadata: {
                 help: {
-                    title: 'Non-traditional research output data',
+                    title: 'NTRO data',
                     text: (
                         <React.Fragment>
                             <h3>Quality indicators</h3>
