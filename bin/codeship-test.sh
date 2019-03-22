@@ -2,11 +2,11 @@
 
 export TZ='Australia/Brisbane'
 
-printf "\nA. ---- RUNNING ESLint ---\n"
+printf "\n---- RUNNING ESLint ---\n"
 printf "\n$ npm run eslint\n"
 npm run eslint
 
-printf "\nB. --- RUNNING JEST ---\n"
+printf "\n--- RUNNING JEST ---\n"
 # Not running code coverage check for feature branches.
 # Running in series with `runInBand` to avoid CodeShip VM running out of memory
 if [[ ($CI_BRANCH == "master" || $CI_BRANCH == "staging" || $CI_BRANCH == "production") ]]; then
