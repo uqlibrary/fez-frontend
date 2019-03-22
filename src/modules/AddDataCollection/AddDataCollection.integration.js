@@ -1,27 +1,12 @@
 /* eslint-disable */
 import React from 'react';
-import {createMemoryHistory} from 'history';
 import * as repositories from 'repositories';
-import {Router} from 'react-router-dom';
 import AddDataCollection from './containers/AddDataCollection';
-import { toMatchDiffSnapshot } from 'snapshot-diff';
 const {getByTestId} = require('test-utils');
-import {rtlRender, fireEvent, waitForElement, cleanup} from 'test-utils';
+import {fireEvent, waitForElement, cleanup, renderWithRouter} from 'test-utils';
 import {searchKeyList} from 'mock/data';
 
-function renderWithRouter(ui, {route = '/', history = createMemoryHistory({initialEntries: [route]})} = {}) {
-    return {
-        ...rtlRender(<Router history={history}>{ui}</Router>),
-        history,
-    };
-}
-
-
 describe('AddDataCollection form', () => {
-    beforeEach(() => {
-        expect.extend({ toMatchDiffSnapshot });
-    });
-
     afterEach(() => cleanup);
 
     it('should allow user to submit the form', async () => {
