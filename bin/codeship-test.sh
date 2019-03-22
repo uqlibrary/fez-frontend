@@ -2,16 +2,19 @@
 
 export TZ='Australia/Brisbane'
 
-echo "Running ESLint..."
+printf "\n ---- RUNNING ESLint ---\n"
+printf"\n$ npm run eslint\n"
 npm run eslint
 
-echo "Running Jest..."
+printf "\n--- RUNNING JEST ---\n"
 # Not running code coverage check for feature branches.
 # Running in series with `runInBand` to avoid CodeShip VM running out of memory
-if [[ (${CI_BRANCH} == "master" || ${CI_BRANCH} == "staging" || ${CI_BRANCH} == "production") ]]; then
-    echo "(Includes code coverage check)"
+if [[ ($CI_BRANCH == "master" || $CI_BRANCH == "staging" || $CI_BRANCH == "production") ]]; then
+    printf "\n# $CI_BRANCH build INCLUDES code coverage check\n"
+    printf "\n$ npm test -- --ci --runInBand\n"
     npm test -- --ci --runInBand
 else
-    echo "(Skipping code coverage check)"
+    printf "\n# Build of feature branch $CI_BRANCH SKIPS code coverage check\n"
+    printf "\n$ npm test -- --ci --runInBand --no-coverage\n"
     npm test -- --ci --runInBand --no-coverage
 fi
