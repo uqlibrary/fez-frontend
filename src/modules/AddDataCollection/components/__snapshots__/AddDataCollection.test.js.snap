@@ -998,6 +998,11 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                 "value": "rek_isdatasetof",
               }
             }
+            validate={
+              Array [
+                [Function],
+              ]
+            }
           />
         </StandardCard>
       </WithStyles(Grid)>
@@ -2187,6 +2192,11 @@ exports[`AddDataCollection test should render data set form 1`] = `
                 "order": "rek_isdatasetof_order",
                 "value": "rek_isdatasetof",
               }
+            }
+            validate={
+              Array [
+                [Function],
+              ]
             }
           />
         </StandardCard>
