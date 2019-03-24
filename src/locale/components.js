@@ -1437,7 +1437,8 @@ export default {
                 selectedTitle: 'Selected record level security policy details',
                 dataStreamSelectedTitle: 'Selected record level datastream security policy details',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id aliquam sapien. Aliquam rhoncus congue consectetur. Aenean sed sapien ipsum.',
-            }
+            },
+            submit: 'Submit'
         }
     }
 };

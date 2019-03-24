@@ -1,5 +1,13 @@
-import {post, patch} from 'repositories/generic';
-import {NEW_RECORD_API, EXISTING_RECORD_API, RECORDS_ISSUES_API} from 'repositories/routes';
+import {get, post, patch} from 'repositories/generic';
+import {
+    NEW_RECORD_API,
+    EXISTING_RECORD_API,
+    RECORDS_ISSUES_API,
+    COMMUNITIES_SECURITY_POLICY_API,
+    // COLLECTIONS_SECURITY_POLICY_API,
+    // RECORDS_SECURITY_POLICY_API,
+    // DATASTREAMS_SECURITY_POLICY_API
+} from 'repositories/routes';
 import {putUploadFiles} from 'repositories';
 import * as transformers from './transformers';
 import {NEW_RECORD_DEFAULT_VALUES} from 'config/general';
@@ -253,7 +261,6 @@ export function submitThesis(data) {
     };
 }
 
-
 /**
  * Clear new record
  * @returns {action}
@@ -265,3 +272,50 @@ export function clearNewRecord() {
         });
     };
 }
+
+export function getCommunitySecurity({ id }) {
+    return dispatch => {
+        dispatch({type: actions.SECURITY_POLICY_LOADING});
+        return get(COMMUNITIES_SECURITY_POLICY_API({ id }))
+            .then(response => {
+                dispatch({
+                    type: actions.SECURITY_POLICY_LOADED,
+                    payload: response.data ? response.data : {}
+                });
+                return Promise.resolve(response.data ? response.data : {});
+            })
+            .catch(error => {
+                dispatch({
+                    type: actions.SECURITY_POLICY_LOAD_FAILED,
+                    payload: error.message
+                });
+                return Promise.reject(error);
+            })
+        ;
+    };
+}
+
+export function updateCommunitySecurity(data) {
+    return dispatch => {
+        dispatch({type: actions.SECURITY_POLICY_SAVING});
+        return post(COMMUNITIES_SECURITY_POLICY_API(), data)
+            .then((response) => {
+                dispatch({
+                    type: actions.SECURITY_POLICY_SAVED,
+                    payload: {
+                        policy: response.data ? response.data : {}
+                    }
+                });
+                return Promise.resolve(response.data ? response.data : {});
+            })
+            .catch(error => {
+                dispatch({
+                    type: actions.SECURITY_POLICY_SAVE_FAILED,
+                    payload: error.message
+                });
+                return Promise.reject(error);
+            })
+        ;
+    };
+}
+

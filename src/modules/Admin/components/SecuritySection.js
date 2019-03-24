@@ -6,6 +6,7 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import MenuItem from '@material-ui/core/MenuItem';
 import Checkbox from '@material-ui/core/Checkbox';
+import Button from '@material-ui/core/Button';
 
 import FormControlLabel from '@material-ui/core/FormControlLabel/FormControlLabel';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
@@ -22,7 +23,7 @@ import { locale } from 'locale';
 
 const text = locale.components.securitySection;
 
-export const SecuritySection = ({ disabled }) => {
+export const SecuritySection = ({ disabled, actions }) => {
     const [collectionSecurity, setCollectionSecurity] = useState(false);
     const [overrideSecurity, setOverrideSecurity] = useState(false);
     const [overrideDatastreamSecurity, setOverrideDatastreamSecurity] = useState(false);
@@ -30,6 +31,10 @@ export const SecuritySection = ({ disabled }) => {
 
     const securityCommunity = {
         ...securityAssignments[0]
+    };
+
+    const handleClick = (data) => {
+        actions.updateCommunitySecurity(data);
     };
 
     return (
@@ -381,6 +386,25 @@ export const SecuritySection = ({ disabled }) => {
                                 </StandardCard>
                             </Grid>
                         }
+                        {
+                            formValues.get('level') &&
+                            formValues.get('communitySecurity') &&
+                            <Grid item xs={12} sm="auto">
+                                <Button
+                                    style={{whiteSpace: 'nowrap'}}
+                                    variant="contained"
+                                    color="primary"
+                                    fullWidth
+                                    onClick={
+                                        handleClick({
+                                            ...securityCommunity,
+                                            policyID: formValues.get('communitySecurity')
+                                        })
+                                    }
+                                    children={text.submit}
+                                />
+                            </Grid>
+                        }
                     </React.Fragment>
                 )}
             </FormValuesContextConsumer>
@@ -389,7 +413,8 @@ export const SecuritySection = ({ disabled }) => {
 };
 
 SecuritySection.propTypes = {
-    disabled: PropTypes.bool
+    disabled: PropTypes.bool,
+    actions: PropTypes.object
 };
 
 export default React.memo(SecuritySection);

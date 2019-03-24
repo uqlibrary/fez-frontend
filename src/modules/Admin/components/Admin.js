@@ -1,4 +1,3 @@
-/* disable eslint */
 import React, {Component, useState, useEffect} from 'react';
 import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
@@ -75,7 +74,7 @@ const styles = theme => ({
     }
 });
 
-export function AdminInterface({classes, submitting, isTabbed}) {
+export function AdminInterface({ classes, submitting, isTabbed, actions }) {
     const [tabbed, setTabbed] = useState(isTabbed);
     const [currentTabValue, setCurrentTabValue] = useState(0);
     const theme = useTheme();
@@ -324,7 +323,7 @@ export function AdminInterface({classes, submitting, isTabbed}) {
                                     </TabContainer>
                                     <TabContainer value={6} currentTab={currentTabValue} tabbed={tabbed}>
                                         <StandardCard title="Security" primaryHeader={!!tabbed} squareTop={!!tabbed}>
-                                            <SecuritySection disabled={submitting}/>
+                                            <SecuritySection disabled={submitting} actions={actions}/>
                                         </StandardCard>
                                     </TabContainer>
                                 </Grid>
@@ -340,7 +339,8 @@ export function AdminInterface({classes, submitting, isTabbed}) {
 AdminInterface.propTypes = {
     classes: PropTypes.object,
     submitting: PropTypes.bool,
-    isTabbed: PropTypes.bool
+    isTabbed: PropTypes.bool,
+    actions: PropTypes.object
 };
 
 class Admin extends Component {
@@ -468,7 +468,11 @@ class Admin extends Component {
     render() {
         return (
             <FormValuesContextProvider value={{formValues: this.props.formValues}}>
-                <AdminInterface classes={this.props.classes} isTabbed={this.props.tabbed} />
+                <AdminInterface
+                    classes={this.props.classes}
+                    isTabbed={this.props.tabbed}
+                    actions={this.props.actions}
+                />
             </FormValuesContextProvider>
         );
 

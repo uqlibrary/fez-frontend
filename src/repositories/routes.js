@@ -251,3 +251,19 @@ export const THIRD_PARTY_LOOKUP_API_1FIELD = ({type, field1}) => (
 export const THIRD_PARTY_LOOKUP_API_2FIELD = ({type, field1, field2}) => (
     {apiUrl: `tool/lookup/${type}/${field1}/${field2}`}
 );
+
+export const COMMUNITIES_SECURITY_POLICY_API = ({ id }) => (
+    {apiUrl: `communities/${id}`}
+);
+
+export const COLLECTIONS_SECURITY_POLICY_API = ({ id }) => (
+    {apiUrl: `collections/${id}`}
+);
+
+export const RECORDS_SECURITY_POLICY_API = ({ id }) => (
+    {apiUrl: `records/${id}`}
+);
+
+export const DATASTREAMS_SECURITY_POLICY_API = ({ id, dsid }) => (
+    {apiUrl: `datastreams/${id}/${dsid}`}
+);
