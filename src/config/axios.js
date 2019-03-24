@@ -73,10 +73,10 @@ api.interceptors.request.use(request => {
 });
 
 const reportToSentry = (error) => {
-    let detailedError = '';
-    if (error.response) {
+    let detailedError = 'Something happened in setting up the request that triggered an error, but no details were available';
+    if (!!error.response && !!error.response.data && !!error.response.status && !!error.response.headers) {
         detailedError = 'Data: ' + error.response.data + '; Status: ' + error.response.status + '; Headers: ' + JSON.stringify(error.response.headers);
-    } else {
+    } else if (!!error.message) {
         detailedError = 'Something happened in setting up the request that triggered an Error: ' + error.message;
     }
     Raven.captureException(error, {extra: {error: detailedError}});
@@ -89,13 +89,13 @@ api.interceptors.response.use(response => {
     return Promise.resolve(response.data);
 }, error => {
     const reportHttpStatusToSentry = [422, 500];
-    if (error && error.response && error.response.status && reportHttpStatusToSentry.indexOf(error.response.status) !== -1) {
+    if (!!error.response && !!error.response.status && reportHttpStatusToSentry.indexOf(error.response.status) !== -1) {
         reportToSentry(error);
     }
     const thirdPartyLookupUrlRoot = API_URL + pathConfig.admin.thirdPartyTools.substring('/'.length);
     // 403 for tool api lookup is handled in actions/thirdPartyLookupTool.js
     if (!requestUrl.startsWith(thirdPartyLookupUrlRoot)) {
-        if (error.response && error.response.status === 403) {
+        if (!!error.response && !!error.response.status && error.response.status === 403) {
             if (!!Cookies.get(SESSION_COOKIE_NAME)) {
                 Cookies.remove(SESSION_COOKIE_NAME, {path: '/', domain: '.library.uq.edu.au'});
                 delete api.defaults.headers.common[TOKEN_NAME];
@@ -111,7 +111,7 @@ api.interceptors.response.use(response => {
 
     let errorMessage = null;
     if (!requestUrl.startsWith(thirdPartyLookupUrlRoot)) {
-        if (!!error.message && !!error.response.status && error.response.status === 500) {
+        if (!!error.message && !!error.response && !!error.response.status && error.response.status === 500) {
             errorMessage = ((error.response || {}).data || {}).message || locale.global.errorMessages[error.response.status];
             if (process.env.NODE_ENV === 'test') {
                 global.mockActionsStore.dispatch(showAppAlert(error.response.data));
