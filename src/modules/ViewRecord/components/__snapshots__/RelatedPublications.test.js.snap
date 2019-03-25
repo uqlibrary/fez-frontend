@@ -1330,7 +1330,7 @@ exports[`Related publications Component  should render component 2`] = `
                 "rek_subtype_xsdmf_id": null,
                 "rek_thomson_citation_count": null,
                 "rek_thomson_citation_count_xsdmf_id": null,
-                "rek_title": "CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material",
+                "rek_title": "Data collection mock testing record",
                 "rek_title_xsdmf_id": 16197,
                 "rek_updated_date": "2017-02-01T03:50:57Z",
                 "rek_updated_date_xsdmf_id": 528,
@@ -2088,7 +2088,7 @@ exports[`Related publications Component  should render component 2`] = `
                   "rek_subtype_xsdmf_id": null,
                   "rek_thomson_citation_count": null,
                   "rek_thomson_citation_count_xsdmf_id": null,
-                  "rek_title": "CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material",
+                  "rek_title": "Data collection mock testing record",
                   "rek_title_xsdmf_id": 16197,
                   "rek_updated_date": "2017-02-01T03:50:57Z",
                   "rek_updated_date_xsdmf_id": 528,
@@ -2859,7 +2859,7 @@ exports[`Related publications Component  should render component 2`] = `
                     "rek_subtype_xsdmf_id": null,
                     "rek_thomson_citation_count": null,
                     "rek_thomson_citation_count_xsdmf_id": null,
-                    "rek_title": "CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material",
+                    "rek_title": "Data collection mock testing record",
                     "rek_title_xsdmf_id": 16197,
                     "rek_updated_date": "2017-02-01T03:50:57Z",
                     "rek_updated_date_xsdmf_id": 528,
@@ -6791,7 +6791,7 @@ exports[`Related publications Component  should render with a publication title 
                 "rek_subtype_xsdmf_id": null,
                 "rek_thomson_citation_count": null,
                 "rek_thomson_citation_count_xsdmf_id": null,
-                "rek_title": "CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material",
+                "rek_title": "Data collection mock testing record",
                 "rek_title_xsdmf_id": 16197,
                 "rek_updated_date": "2017-02-01T03:50:57Z",
                 "rek_updated_date_xsdmf_id": 528,
@@ -7558,7 +7558,7 @@ exports[`Related publications Component  should render with a publication title 
                   "rek_subtype_xsdmf_id": null,
                   "rek_thomson_citation_count": null,
                   "rek_thomson_citation_count_xsdmf_id": null,
-                  "rek_title": "CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material",
+                  "rek_title": "Data collection mock testing record",
                   "rek_title_xsdmf_id": 16197,
                   "rek_updated_date": "2017-02-01T03:50:57Z",
                   "rek_updated_date_xsdmf_id": 528,
@@ -8338,7 +8338,7 @@ exports[`Related publications Component  should render with a publication title 
                     "rek_subtype_xsdmf_id": null,
                     "rek_thomson_citation_count": null,
                     "rek_thomson_citation_count_xsdmf_id": null,
-                    "rek_title": "CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material",
+                    "rek_title": "Data collection mock testing record",
                     "rek_title_xsdmf_id": 16197,
                     "rek_updated_date": "2017-02-01T03:50:57Z",
                     "rek_updated_date_xsdmf_id": 528,
@@ -10461,7 +10461,7 @@ exports[`Related publications Component  should render with a publication title 
                                                     <p
                                                       className="MuiTypography-root-137 MuiTypography-body2-145"
                                                     >
-                                                      CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material
+                                                      Data collection mock testing record
                                                       <b>
                                                          (Current Record)
                                                       </b>
@@ -12792,7 +12792,7 @@ exports[`Related publications Component  should render without a parent search k
                 "rek_subtype_xsdmf_id": null,
                 "rek_thomson_citation_count": null,
                 "rek_thomson_citation_count_xsdmf_id": null,
-                "rek_title": "CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material",
+                "rek_title": "Data collection mock testing record",
                 "rek_title_xsdmf_id": 16197,
                 "rek_updated_date": "2017-02-01T03:50:57Z",
                 "rek_updated_date_xsdmf_id": 528,
@@ -13566,7 +13566,7 @@ exports[`Related publications Component  should render without a parent search k
                   "rek_subtype_xsdmf_id": null,
                   "rek_thomson_citation_count": null,
                   "rek_thomson_citation_count_xsdmf_id": null,
-                  "rek_title": "CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material",
+                  "rek_title": "Data collection mock testing record",
                   "rek_title_xsdmf_id": 16197,
                   "rek_updated_date": "2017-02-01T03:50:57Z",
                   "rek_updated_date_xsdmf_id": 528,
@@ -14353,7 +14353,7 @@ exports[`Related publications Component  should render without a parent search k
                     "rek_subtype_xsdmf_id": null,
                     "rek_thomson_citation_count": null,
                     "rek_thomson_citation_count_xsdmf_id": null,
-                    "rek_title": "CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material",
+                    "rek_title": "Data collection mock testing record",
                     "rek_title_xsdmf_id": 16197,
                     "rek_updated_date": "2017-02-01T03:50:57Z",
                     "rek_updated_date_xsdmf_id": 528,
