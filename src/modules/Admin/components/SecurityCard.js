@@ -92,7 +92,7 @@ SecurityCard.propTypes = {
     entity: PropTypes.object,
     selectedPolicyKey: PropTypes.number,
     text: PropTypes.object,
-    fieldID: PropTypes.string
+    fieldID: PropTypes.string,
 };
 
 export default React.memo(SecurityCard);

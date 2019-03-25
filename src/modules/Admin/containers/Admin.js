@@ -1,18 +1,25 @@
 import {connect} from 'react-redux';
-import { reduxForm, getFormValues, getFormSyncErrors } from 'redux-form/immutable';
-import { updateCommunitySecurity } from 'actions/records';
+import { reduxForm, getFormValues, getFormSyncErrors, SubmissionError } from 'redux-form/immutable';
+import { updateCommunitySecurity } from 'actions';
 import Immutable from 'immutable';
 import Admin from '../components/Admin';
 import { securityAssignments } from '../components/MockData';
 import {confirmDiscardFormChanges} from 'modules/SharedComponents/ConfirmDiscardFormChanges';
 import {withRouter} from 'react-router';
 import Cookies from 'js-cookie';
-import {bindActionCreators} from 'redux';
 
 const FORM_NAME = 'Prototype';
 
+const onSubmit = (values, dispatch) => {
+    return dispatch(updateCommunitySecurity({...values.toJS()}))
+        .catch(error => {
+            throw new SubmissionError({_error: error});
+        });
+};
+
 let PrototypeContainer = reduxForm({
-    form: FORM_NAME
+    form: FORM_NAME,
+    onSubmit
 })(confirmDiscardFormChanges(Admin, FORM_NAME));
 
 const mapStateToProps = (state) => {
@@ -31,9 +38,5 @@ const mapStateToProps = (state) => {
     };
 };
 
-const mapDispatchToProps = (dispatch) => ({
-    actions: bindActionCreators({ updateCommunitySecurity }, dispatch)
-});
-
-PrototypeContainer = connect(mapStateToProps, mapDispatchToProps)(PrototypeContainer);
+PrototypeContainer = connect(mapStateToProps)(PrototypeContainer);
 export default withRouter(PrototypeContainer);

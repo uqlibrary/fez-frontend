@@ -74,7 +74,7 @@ const styles = theme => ({
     }
 });
 
-export function AdminInterface({ classes, submitting, isTabbed, actions }) {
+export function AdminInterface({ classes, submitting, isTabbed, actions, handleSubmit }) {
     const [tabbed, setTabbed] = useState(isTabbed);
     const [currentTabValue, setCurrentTabValue] = useState(0);
     const theme = useTheme();
@@ -214,12 +214,6 @@ export function AdminInterface({ classes, submitting, isTabbed, actions }) {
     //     customToolbar: () => <div />
     // };
 
-    // const communitySecurity = [
-    //     {value: 'A', label: 'Policy A', id: 'PolicyAID', name: 'Policy A', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id aliquam sapien. Aliquam rhoncus congue consectetur. Aenean sed sapien ipsum. Sed lectus mauris, mollis et dolor vitae, rutrum lobortis risus. Aenean a nisl non felis pretium tincidunt id sit amet augue. Aenean ac quam non libero malesuada vulputate. Integer commodo lacus quis egestas varius. Etiam dapibus mollis feugiat. Aliquam pellentesque nunc ac libero feugiat laoreet. In hac habitasse platea dictumst. Duis sagittis lorem id vestibulum maximus. Nullam vel libero eu eros faucibus venenatis. Vestibulum interdum porttitor ipsum sed fringilla. Sed enim lacus, faucibus vel tincidunt euismod, euismod vitae turpis.'},
-    //     {value: 'B', label: 'Policy B', id: 'PolicyBID', name: 'Policy B', description: 'Suspendisse pellentesque libero eget molestie vehicula. Vestibulum eget purus euismod, imperdiet massa non, vulputate lectus. Sed mi mi, placerat ultricies purus nec, sollicitudin fringilla odio. Aliquam erat volutpat. Vestibulum at augue sed arcu condimentum finibus id et dolor.'},
-    //     {value: 'C', label: 'Policy C', id: 'PolicyCID', name: 'Policy C', description: 'Mauris pulvinar tortor eu lectus facilisis, ut ultricies risus elementum. Aenean ac sem quis enim molestie egestas ut id sem. Nulla nibh elit, efficitur fermentum nisl et, semper ultrices quam. Aenean in sollicitudin mi. Cras ultricies eros quis maximus pellentesque. Mauris justo mi, aliquet vitae nisl et, tristique pulvinar risus.'},
-    // ];
-
     return (
         <StandardPage>
             <TabbedContextProvider value={{tabbed: isMobileView ? false : tabbed, toggleTabbed: handleToggle}}>
@@ -323,7 +317,7 @@ export function AdminInterface({ classes, submitting, isTabbed, actions }) {
                                     </TabContainer>
                                     <TabContainer value={6} currentTab={currentTabValue} tabbed={tabbed}>
                                         <StandardCard title="Security" primaryHeader={!!tabbed} squareTop={!!tabbed}>
-                                            <SecuritySection disabled={submitting} actions={actions}/>
+                                            <SecuritySection disabled={submitting} actions={actions} handleSubmit={handleSubmit}/>
                                         </StandardCard>
                                     </TabContainer>
                                 </Grid>
@@ -340,7 +334,8 @@ AdminInterface.propTypes = {
     classes: PropTypes.object,
     submitting: PropTypes.bool,
     isTabbed: PropTypes.bool,
-    actions: PropTypes.object
+    actions: PropTypes.object,
+    handleSubmit: PropTypes.func
 };
 
 class Admin extends Component {
@@ -355,7 +350,8 @@ class Admin extends Component {
         submitting: PropTypes.any,
         disableSubmit: PropTypes.any,
         formValues: PropTypes.any,
-        tabbed: PropTypes.bool
+        tabbed: PropTypes.bool,
+        handleSubmit: PropTypes.func
     };
 
     constructor(props) {
@@ -472,6 +468,7 @@ class Admin extends Component {
                     classes={this.props.classes}
                     isTabbed={this.props.tabbed}
                     actions={this.props.actions}
+                    handleSubmit={this.props.handleSubmit}
                 />
             </FormValuesContextProvider>
         );

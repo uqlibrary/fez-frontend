@@ -23,7 +23,7 @@ import { locale } from 'locale';
 
 const text = locale.components.securitySection;
 
-export const SecuritySection = ({ disabled, actions }) => {
+export const SecuritySection = ({ disabled, handleSubmit }) => {
     const [collectionSecurity, setCollectionSecurity] = useState(false);
     const [overrideSecurity, setOverrideSecurity] = useState(false);
     const [overrideDatastreamSecurity, setOverrideDatastreamSecurity] = useState(false);
@@ -31,10 +31,6 @@ export const SecuritySection = ({ disabled, actions }) => {
 
     const securityCommunity = {
         ...securityAssignments[0]
-    };
-
-    const handleClick = (data) => {
-        actions.updateCommunitySecurity(data);
     };
 
     return (
@@ -395,13 +391,8 @@ export const SecuritySection = ({ disabled, actions }) => {
                                     variant="contained"
                                     color="primary"
                                     fullWidth
-                                    onClick={
-                                        handleClick({
-                                            ...securityCommunity,
-                                            policyID: formValues.get('communitySecurity')
-                                        })
-                                    }
                                     children={text.submit}
+                                    onClick={handleSubmit}
                                 />
                             </Grid>
                         }
@@ -414,7 +405,7 @@ export const SecuritySection = ({ disabled, actions }) => {
 
 SecuritySection.propTypes = {
     disabled: PropTypes.bool,
-    actions: PropTypes.object
+    handleSubmit: PropTypes.func
 };
 
 export default React.memo(SecuritySection);

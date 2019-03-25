@@ -12,6 +12,7 @@ import {putUploadFiles} from 'repositories';
 import * as transformers from './transformers';
 import {NEW_RECORD_DEFAULT_VALUES} from 'config/general';
 import * as actions from './actionTypes';
+import { securityAssignments } from 'modules/Admin/components/MockData';
 
 /**
  * Save a new record involves up to three steps: create a new record, upload files, update record with uploaded files.
@@ -295,10 +296,14 @@ export function getCommunitySecurity({ id }) {
     };
 }
 
-export function updateCommunitySecurity(data) {
+export function updateCommunitySecurity({ communitySecurity }) {
+    const data = {
+        id: securityAssignments[0].pid,
+        rek_security_policy: communitySecurity
+    };
     return dispatch => {
         dispatch({type: actions.SECURITY_POLICY_SAVING});
-        return post(COMMUNITIES_SECURITY_POLICY_API(), data)
+        return patch(COMMUNITIES_SECURITY_POLICY_API(data))
             .then((response) => {
                 dispatch({
                     type: actions.SECURITY_POLICY_SAVED,
