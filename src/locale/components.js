@@ -26,7 +26,7 @@ export default {
             // help: {
             //     title: 'Refining your results',
             //     text: 'Help about ....',
-            //     buttonLabel: 'Ok'
+            //     buttonLabel: 'CLOSE'
             // },
         },
         publicationStats: {
@@ -126,7 +126,7 @@ export default {
                         https://www.altmetric.com/about-altmetrics/what-are-altmetrics/
                     </a>
                 </React.Fragment>),
-            buttonLabel: 'OK'
+            buttonLabel: 'CLOSE'
         },
         myLatestPublications: {
             loading: 'Loading your latest publications',
@@ -395,7 +395,7 @@ export default {
             // help: {
             //     title: 'ISBN value',
             //     text: 'Acceptable ISBN formats are....',
-            //     buttonLabel: 'OK'
+            //     buttonLabel: 'CLOSE'
             // },
             field: {
                 form: {
@@ -440,7 +440,7 @@ export default {
             // help: {
             //     title: 'ISSN value',
             //     text: 'Acceptable ISSN formats are....',
-            //     buttonLabel: 'OK'
+            //     buttonLabel: 'CLOSE'
             // },
             field: {
                 form: {
@@ -485,7 +485,7 @@ export default {
             // help: {
             //     title: 'ISMN value',
             //     text: 'Acceptable ISMN formats are....',
-            //     buttonLabel: 'OK'
+            //     buttonLabel: 'CLOSE'
             // },
             field: {
                 form: {
@@ -530,7 +530,7 @@ export default {
             // help: {
             //     title: 'ISRC value',
             //     text: 'Acceptable ISRC formats are....',
-            //     buttonLabel: 'OK'
+            //     buttonLabel: 'CLOSE'
             // },
             field: {
                 form: {
@@ -578,7 +578,7 @@ export default {
                 text: (
                     <p>For more information about identification of author/creator/designer, click <a target="_blank" href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836546">here</a></p>
                 ),
-                buttonLabel: 'OK'
+                buttonLabel: 'CLOSE'
             },
             field: {
                 form: {
@@ -640,7 +640,7 @@ export default {
             // help: {
             //     title: 'Editors',
             //     text: 'some help',
-            //     buttonLabel: 'OK'
+            //     buttonLabel: 'CLOSE'
             // },
             field: {
                 form: {
@@ -699,7 +699,7 @@ export default {
             // help: {
             //     title: 'Creators',
             //     text: 'some help',
-            //     buttonLabel: 'OK'
+            //     buttonLabel: 'CLOSE'
             // },
             description: 'Please provide a list of creators (e.g. producer or performer if self-produced) and then select your name from the list.',
             descriptionCreatorOrContributor: 'Please provide a list of creators (e.g. producer or performer if self-produced) and then select your name once from the list of creators or contributors.',
@@ -766,7 +766,7 @@ export default {
                 text: (
                     <p>For more information about identification of author/creator/designer, click <a target="_blank" href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836546">here</a></p>
                 ),
-                buttonLabel: 'OK'
+                buttonLabel: 'CLOSE'
             },
             field: {
                 form: {
@@ -825,7 +825,7 @@ export default {
             // help: {
             //     title: 'Supervisors help',
             //     text: 'Enter supervisor names e.g. first name, last name. Additional boxes will appear for more supervisors.',
-            //     buttonLabel: 'OK'
+            //     buttonLabel: 'CLOSE'
             // },
             description: 'Please provide a list of supervisors and then select your name from the list.',
             field: {
@@ -885,7 +885,7 @@ export default {
             // help: {
             //     title: 'Supervisors help',
             //     text: 'Enter supervisor names e.g. first name, last name. Additional boxes will appear for more supervisors.',
-            //     buttonLabel: 'OK'
+            //     buttonLabel: 'CLOSE'
             // },
             field: {
                 form: {
@@ -936,7 +936,7 @@ export default {
             help: {
                 title: 'Contributors',
                 text: 'This is the contributor, and may be different to the creator, e.g. interviewee, performer (if not self-produced). Type contributors in the order and form they appear on the work or associated material. Examples of associated material are programs or promotional material. Additional boxes will appear for more contributors.',
-                buttonLabel: 'OK'
+                buttonLabel: 'CLOSE'
             },
             field: {
                 form: {
@@ -996,7 +996,7 @@ export default {
             // help: {
             //     title: 'Field of research',
             //     text: 'more info',
-            //     buttonLabel: 'OK'
+            //     buttonLabel: 'CLOSE'
             // },
             field: {
                 form: {
@@ -1084,14 +1084,14 @@ export default {
             },
             metadata: {
                 help: {
-                    title: 'Non-traditional research output data',
+                    title: 'NTRO data',
                     text: (
                         <React.Fragment>
                             <h3>Quality indicators</h3>
                             <p>For more information about each quality indicator option, click <b><a style={{fontWeight: 700}} target="_blank" href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836609">here</a></b></p>
                         </React.Fragment>
                     ),
-                    buttonLabel: 'OK'
+                    buttonLabel: 'CLOSE'
                 }
             }
         },

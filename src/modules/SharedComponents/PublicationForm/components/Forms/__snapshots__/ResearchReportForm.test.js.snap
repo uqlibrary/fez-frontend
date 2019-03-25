@@ -171,7 +171,7 @@ exports[`ResearchReportForm renders  component 1`] = `
     <StandardCard
       help={
         Object {
-          "buttonLabel": "OK",
+          "buttonLabel": "CLOSE",
           "text": <p>
             For more information about identification of author/creator/designer, click 
             <a
@@ -674,7 +674,7 @@ exports[`ResearchReportForm renders  should render validation required 1`] = `
     <StandardCard
       help={
         Object {
-          "buttonLabel": "OK",
+          "buttonLabel": "CLOSE",
           "text": <p>
             For more information about identification of author/creator/designer, click 
             <a

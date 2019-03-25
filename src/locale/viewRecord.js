@@ -343,7 +343,7 @@ export default {
             'Working Paper': {},
             'NTRO': {
                 significance: 'Scale/Significance of work',
-                impactStatement: 'Creator contribution statement',
+                impactStatement: 'Creator research statement',
                 ntroAbstract: 'Abstract/Description',
                 fez_record_search_key_ismn: 'ISMN',
                 fez_record_search_key_isrc: 'ISRC',
