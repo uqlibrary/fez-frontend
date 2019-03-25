@@ -213,8 +213,19 @@ mock
     .reply(200, {data: {...mockData.record}})
     // .reply(500, ['ERROR IN EXISTING_RECORD_API'])
     .onPatch(new RegExp(escapeRegExp(routes.AUTHOR_API({authorId: '.*'}).apiUrl)))
-    .reply(200, {...mockData.currentAuthor.uqresearcher})
+    .reply(200, {...mockData.currentAuthor.uqresearcher});
     // .reply(500, {message: 'error - failed PATCH AUTHOR_API'})
+
+mock
+    .onPatch(new RegExp(escapeRegExp(routes.COMMUNITIES_SECURITY_POLICY_API({
+        id: '.*',
+        rek_security_policy: '.*'
+    }).apiUrl)))
+    .reply(200, {data: {...mockData.record}});
+;
+
+// Default response. Put all mocks above this block.
+mock
     .onAny().reply((config) => {
         console.log('url not found...');
         console.log(config);
