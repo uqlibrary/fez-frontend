@@ -73,7 +73,6 @@ describe('Related publications Component ', () => {
     });
 
     it('should render without a parent search key', () => {
-        console.log(recordWithRelatedItems);
         const wrapper = getElement(RelatedPublications, {
             publication: recordWithRelatedItems,
             title: 'Title',
