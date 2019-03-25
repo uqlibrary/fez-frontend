@@ -25,6 +25,7 @@ describe('BookForm renders ', () => {
     it('component with 4 input fields for NTRO', () => {
         const wrapper = setup({isNtro: true});
         expect(wrapper.find('NtroFields').dive().find('Field').length).toEqual(5);
+        expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('component with 5 input fields for NTRO with musical composition subtype', () => {
@@ -63,6 +64,11 @@ describe('BookForm renders ', () => {
     it('should show author when is not edited book', () => {
         const wrapper = setup({});
         expect(wrapper.find('Field').length).toEqual(12);
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('component should render non ntro book', () => {
+        const wrapper = setup({isNtro: false});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

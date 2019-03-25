@@ -51,7 +51,7 @@ export default class ResearchReportForm extends Component {
                             <Grid item xs={12}>
                                 <Field
                                     component={TextField}
-                                    autoFocus
+                                    autoFocus={!this.props.isNtro}
                                     disabled={this.props.submitting}
                                     name="rek_title"
                                     required
