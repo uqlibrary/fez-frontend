@@ -24,16 +24,20 @@ import {thesisSubmissionSubtypes} from 'config/general';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
+import {routes} from 'config';
 
 export default class ThesisSubmission extends Component {
     static propTypes = {
         ...propTypes, // all redux-form props
+        actions: PropTypes.object.isRequired,
+        history: PropTypes.object.isRequired,
         author: PropTypes.object,
         isHdrThesis: PropTypes.bool, // HDR thesis if true or SBS thesis if false
         disableSubmit: PropTypes.bool,
         fileAccessId: PropTypes.number,
-        actions: PropTypes.object,
-        isSessionValid: PropTypes.bool
+        isSessionValid: PropTypes.bool,
+        newRecordFileUploadingOrIssueError: PropTypes.bool,
+        newRecord: PropTypes.object
     };
 
     static contextTypes = {
@@ -74,6 +78,14 @@ export default class ThesisSubmission extends Component {
         this.depositConfirmationBox = ref;
     };
 
+    fixRecord = () => {
+        console.log(this.props.newRecord);
+        if (this.props.newRecord) {
+            this.props.history.push(routes.pathConfig.records.fix(this.props.newRecord.rek_pid));
+            this.props.actions.setFixRecord(this.props.newRecord);
+        }
+    };
+
     render() {
         const txt = formLocale.thesis;
         const txtFoR = locale.components.fieldOfResearchForm;
@@ -83,6 +95,15 @@ export default class ThesisSubmission extends Component {
             return (
                 <StandardPage title={this.props.isHdrThesis ? formLocale.thesisSubmission.hdrTitle : formLocale.thesisSubmission.sbsTitle}>
                     <Grid container spacing={24}>
+                        {
+                            this.props.newRecordFileUploadingOrIssueError &&
+                            <Grid item xs={12}>
+                                <Alert
+                                    {...formLocale.thesisSubmission.fileUpload.failedAlertLocale}
+                                    action={this.fixRecord}
+                                />
+                            </Grid>
+                        }
                         <Grid item xs={12}>
                             <StandardCard title={formLocale.thesisSubmission.afterSubmitTitle}>
                                 <Typography>{formLocale.thesisSubmission.afterSubmitText}</Typography>

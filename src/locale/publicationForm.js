@@ -1139,6 +1139,12 @@ export default {
             //     text: 'file help...',
             //     buttonLabel: 'CLOSE'
             // },
+            failedAlertLocale: {
+                type: 'error',
+                title: 'FILE UPLOAD ERROR',
+                message: 'There was an issue uploading your thesis files. The record has been submitted and recorded, you will need to resubmit your files by clicking the RESUBMIT FILES button - or contact the eSpace team.',
+                actionButtonLabel: 'RESUBMIT FILES'
+            },
             locale: {
                 instructions: '',
                 accessTermsAndConditions: 'I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.',

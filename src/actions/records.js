@@ -216,7 +216,6 @@ export function submitThesis(data) {
                 return response;
             })
             .then(() =>(hasFilesToUpload ? putUploadFiles(newRecord.rek_pid, data.files.queue, dispatch) : newRecord))
-            // .then(() =>(hasFilesToUpload ?  putUploadFiles(`UQ:${author.aut_student_username}`, data.files.queue, dispatch) // to upload files renamed to student ID
             .then(() => (hasFilesToUpload ? patch(EXISTING_RECORD_API({pid: newRecord.rek_pid}), recordPatch) : newRecord))
             .then(() => (data.comments ? post(RECORDS_ISSUES_API({pid: newRecord.rek_pid}), {issue: 'Notes from creator of the new record: ' +  data.comments}) : newRecord))
             .then((response) => {
