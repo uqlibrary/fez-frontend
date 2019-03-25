@@ -154,7 +154,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
               </b>
             </p>
           </React.Fragment>,
-          "title": "Non-traditional research output data",
+          "title": "NTRO data",
         }
       }
       title="NTRO data"
@@ -691,7 +691,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
               </b>
             </p>
           </React.Fragment>,
-          "title": "Non-traditional research output data",
+          "title": "NTRO data",
         }
       }
       title="NTRO data"
@@ -1105,7 +1105,7 @@ exports[`Component NtroFields should render default view 1`] = `
               </b>
             </p>
           </React.Fragment>,
-          "title": "Non-traditional research output data",
+          "title": "NTRO data",
         }
       }
       title="NTRO data"
@@ -1642,7 +1642,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
               </b>
             </p>
           </React.Fragment>,
-          "title": "Non-traditional research output data",
+          "title": "NTRO data",
         }
       }
       title="NTRO data"
