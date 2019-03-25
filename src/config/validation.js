@@ -107,7 +107,7 @@ export const validFileUpload = value => {
 };
 
 export const fileUploadRequired = value => {
-    return value === undefined || value.queue.length === 0 ? locale.validationErrors.fileUploadRequired : undefined;
+    return value === undefined || (value.queue || {}).length === 0 ? locale.validationErrors.fileUploadRequired : undefined;
 };
 
 export const fileUploadNotRequiredForMediated = (value, values) => {

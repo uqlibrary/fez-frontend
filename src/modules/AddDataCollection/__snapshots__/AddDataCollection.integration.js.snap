@@ -44,7 +44,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
                               <p>
                                 1.   I am the creator or co-creator of this dataset, or otherwise authorised to deposit or describe it;
                               </p>
-@@ -1886,13 +1886,10 @@
+@@ -1901,13 +1901,10 @@
                           Validation - 
                         </b>
                         <span>
@@ -118,7 +118,7 @@ exports[`AddDataCollection form should allow user to submit the form 2`] = `
                     <div
                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-12-57\\"
                     >
-@@ -1886,13 +1881,10 @@
+@@ -1901,13 +1896,10 @@
                           Validation - 
                         </b>
                         <span>
@@ -192,7 +192,7 @@ exports[`AddDataCollection form should allow user to submit the form 3`] = `
                     <div
                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-6-51\\"
                     >
-@@ -1881,13 +1876,10 @@
+@@ -1896,13 +1891,10 @@
                           Validation - 
                         </b>
                         <span>
@@ -265,7 +265,7 @@ exports[`AddDataCollection form should allow user to submit the form 4`] = `
                     <div
                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-6-51\\"
                     >
-@@ -1876,13 +1869,10 @@
+@@ -1891,13 +1884,10 @@
                           Validation - 
                         </b>
                         <span>
@@ -465,7 +465,7 @@ exports[`AddDataCollection form should allow user to submit the form 5`] = `
                     >
                       <div
                         aria-describedby=\\"Contact email-helper-text\\"
-@@ -1869,13 +1985,10 @@
+@@ -1884,13 +2000,10 @@
                           Validation - 
                         </b>
                         <span>
@@ -586,7 +586,7 @@ exports[`AddDataCollection form should allow user to submit the form 8`] = `
                     <div
                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-12-57\\"
                     >
-@@ -1985,13 +1978,10 @@
+@@ -2000,13 +1993,10 @@
                           Validation - 
                         </b>
                         <span>
@@ -753,7 +753,7 @@ exports[`AddDataCollection form should allow user to submit the form 9`] = `
                     </div>
                   </div>
                 </div>
-@@ -1978,13 +2075,10 @@
+@@ -1993,13 +2090,10 @@
                           Validation - 
                         </b>
                         <span>
@@ -1065,7 +1065,7 @@ exports[`AddDataCollection form should allow user to submit the form 10`] = `
             >
               <div
                 class=\\"MuiPaper-root-119 MuiPaper-elevation1-122 MuiPaper-rounded-120 MuiCard-root-118 Cards-card-114 StandardCard\\"
-@@ -2075,13 +2285,10 @@
+@@ -2090,13 +2300,10 @@
                           Validation - 
                         </b>
                         <span>
@@ -1149,7 +1149,7 @@ exports[`AddDataCollection form should allow user to submit the form 11`] = `
                     <div
                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-12-57 MuiGrid-grid-md-4-63\\"
                     >
-@@ -2285,24 +2278,18 @@
+@@ -2300,24 +2293,18 @@
                           Validation - 
                         </b>
                         <span>
@@ -1244,7 +1244,7 @@ exports[`AddDataCollection form should allow user to submit the form 12`] = `
                     <div
                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-12-57 MuiGrid-grid-md-4-63\\"
                     >
-@@ -2278,13 +2271,10 @@
+@@ -2293,13 +2286,10 @@
                           Validation - 
                         </b>
                         <span>
@@ -1368,7 +1368,7 @@ exports[`AddDataCollection form should allow user to submit the form 13`] = `
                     >
                       <div>
                         <div
-@@ -2217,72 +2207,12 @@
+@@ -2232,72 +2222,12 @@
                             autocomplete=\\"off\\"
                             id=\\"Uploader\\"
                             multiple=\\"\\"
@@ -1441,7 +1441,7 @@ exports[`AddDataCollection form should allow user to submit the form 13`] = `
                   </div>
                 </div>
               </div>
-@@ -2314,21 +2244,23 @@
+@@ -2329,21 +2259,23 @@
             </div>
             <div
               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-auto-44\\"

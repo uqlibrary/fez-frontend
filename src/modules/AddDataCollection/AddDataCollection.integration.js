@@ -3,7 +3,7 @@ import React from 'react';
 import * as repositories from 'repositories';
 import AddDataCollection from './containers/AddDataCollection';
 const {getByTestId} = require('test-utils');
-import {fireEvent, waitForElement, cleanup, renderWithRouter} from 'test-utils';
+import {fireEvent, waitForElement, cleanup, renderWithRouter, withRedux} from 'test-utils';
 import {searchKeyList} from 'mock/data';
 
 describe('AddDataCollection form', () => {
@@ -296,7 +296,7 @@ describe('AddDataCollection form', () => {
             .reply(200, returnedApiData);
 
         const route = '/data-collections/add';
-        const {container, asFragment, getByText} = renderWithRouter(<AddDataCollection />, {route});
+        const {container, asFragment, getByText} = renderWithRouter(withRedux()(<AddDataCollection/>), {route});
 
         const firstRender = asFragment();
 

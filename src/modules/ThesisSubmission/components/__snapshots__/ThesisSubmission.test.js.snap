@@ -181,6 +181,7 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
               <Field
                 component={[Function]}
                 disabled={false}
+                id="thesis-subtype"
                 itemsList={
                   Array [
                     Object {
@@ -394,6 +395,7 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
                 "form": Object {
                   "locale": Object {
                     "addButtonLabel": "Add",
+                    "id": "keywords-input",
                     "inputFieldHint": "Type keywords",
                     "inputFieldLabel": "Keywords",
                   },
@@ -537,6 +539,7 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="submit-thesis"
           onClick={[Function]}
           variant="contained"
         >
@@ -684,6 +687,7 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
               <Field
                 component={[Function]}
                 disabled={false}
+                id="thesis-subtype"
                 itemsList={
                   Array [
                     Object {
@@ -897,6 +901,7 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
                 "form": Object {
                   "locale": Object {
                     "addButtonLabel": "Add",
+                    "id": "keywords-input",
                     "inputFieldHint": "Type keywords",
                     "inputFieldLabel": "Keywords",
                   },
@@ -1040,6 +1045,7 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="submit-thesis"
           onClick={[Function]}
           variant="contained"
         >

@@ -602,6 +602,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     "form": Object {
                       "locale": Object {
                         "addButtonLabel": "Add",
+                        "id": "funding-body-input",
                         "inputFieldHint": "Type the name of the funding body(s) associated with your research e.g. ARC, NHMRC",
                         "inputFieldLabel": "Funding body",
                       },
@@ -656,6 +657,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     "form": Object {
                       "locale": Object {
                         "addButtonLabel": "Add",
+                        "id": "grant-id-input",
                         "inputFieldHint": "Type grantID",
                         "inputFieldLabel": "Grant IDs",
                       },
@@ -724,6 +726,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     "form": Object {
                       "locale": Object {
                         "addButtonLabel": "Add",
+                        "id": "type-of-data-input",
                         "inputFieldHint": "Type type of data",
                         "inputFieldLabel": "Type of data",
                       },
@@ -784,6 +787,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     "form": Object {
                       "locale": Object {
                         "addButtonLabel": "Add",
+                        "id": "software-required-input",
                         "inputFieldHint": "Type software required",
                         "inputFieldLabel": "Software required",
                       },
@@ -844,6 +848,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     "form": Object {
                       "locale": Object {
                         "addButtonLabel": "Add",
+                        "id": "keywords-input",
                         "inputFieldHint": "Type keywords",
                         "inputFieldLabel": "Keywords",
                       },
@@ -1792,6 +1797,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     "form": Object {
                       "locale": Object {
                         "addButtonLabel": "Add",
+                        "id": "funding-body-input",
                         "inputFieldHint": "Type the name of the funding body(s) associated with your research e.g. ARC, NHMRC",
                         "inputFieldLabel": "Funding body",
                       },
@@ -1846,6 +1852,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     "form": Object {
                       "locale": Object {
                         "addButtonLabel": "Add",
+                        "id": "grant-id-input",
                         "inputFieldHint": "Type grantID",
                         "inputFieldLabel": "Grant IDs",
                       },
@@ -1914,6 +1921,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     "form": Object {
                       "locale": Object {
                         "addButtonLabel": "Add",
+                        "id": "type-of-data-input",
                         "inputFieldHint": "Type type of data",
                         "inputFieldLabel": "Type of data",
                       },
@@ -1974,6 +1982,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     "form": Object {
                       "locale": Object {
                         "addButtonLabel": "Add",
+                        "id": "software-required-input",
                         "inputFieldHint": "Type software required",
                         "inputFieldLabel": "Software required",
                       },
@@ -2034,6 +2043,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     "form": Object {
                       "locale": Object {
                         "addButtonLabel": "Add",
+                        "id": "keywords-input",
                         "inputFieldHint": "Type keywords",
                         "inputFieldLabel": "Keywords",
                       },
