@@ -74,7 +74,7 @@ const styles = theme => ({
     }
 });
 
-export function AdminInterface({ classes, submitting, isTabbed, actions, handleSubmit }) {
+export function AdminInterface({ classes, submitting, isTabbed, handleSubmit }) {
     const [tabbed, setTabbed] = useState(isTabbed);
     const [currentTabValue, setCurrentTabValue] = useState(0);
     const theme = useTheme();
@@ -317,7 +317,7 @@ export function AdminInterface({ classes, submitting, isTabbed, actions, handleS
                                     </TabContainer>
                                     <TabContainer value={6} currentTab={currentTabValue} tabbed={tabbed}>
                                         <StandardCard title="Security" primaryHeader={!!tabbed} squareTop={!!tabbed}>
-                                            <SecuritySection disabled={submitting} actions={actions} handleSubmit={handleSubmit}/>
+                                            <SecuritySection disabled={submitting} handleSubmit={handleSubmit}/>
                                         </StandardCard>
                                     </TabContainer>
                                 </Grid>
@@ -334,7 +334,6 @@ AdminInterface.propTypes = {
     classes: PropTypes.object,
     submitting: PropTypes.bool,
     isTabbed: PropTypes.bool,
-    actions: PropTypes.object,
     handleSubmit: PropTypes.func
 };
 
@@ -467,7 +466,6 @@ class Admin extends Component {
                 <AdminInterface
                     classes={this.props.classes}
                     isTabbed={this.props.tabbed}
-                    actions={this.props.actions}
                     handleSubmit={this.props.handleSubmit}
                 />
             </FormValuesContextProvider>
