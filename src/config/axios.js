@@ -73,10 +73,10 @@ api.interceptors.request.use(request => {
 });
 
 const reportToSentry = (error) => {
-    let detailedError = 'Something happened in setting up the request that triggered an error, but no details were available';
-    if (!!error.response && !!error.response.data && !!error.response.status && !!error.response.headers) {
+    let detailedError = '';
+    if (error.response) {
         detailedError = 'Data: ' + error.response.data + '; Status: ' + error.response.status + '; Headers: ' + JSON.stringify(error.response.headers);
-    } else if (!!error.message) {
+    } else {
         detailedError = 'Something happened in setting up the request that triggered an Error: ' + error.message;
     }
     Raven.captureException(error, {extra: {error: detailedError}});
@@ -88,46 +88,38 @@ api.interceptors.response.use(response => {
     }
     return Promise.resolve(response.data);
 }, error => {
-    const loggableErrorStatus = [422, 500];
-    if (!!error.response && !!error.response.status && loggableErrorStatus.indexOf(error.response.status) !== -1) {
+    const reportHttpStatusToSentry = [422, 500];
+    if (error && error.response && error.response.status && reportHttpStatusToSentry.indexOf(error.response.status) !== -1) {
         reportToSentry(error);
     }
-
     const thirdPartyLookupUrlRoot = API_URL + pathConfig.admin.thirdPartyTools.substring('/'.length);
-    let errorMessage = null;
-    if (requestUrl.startsWith(thirdPartyLookupUrlRoot)) {
-        console.log('Skipping root error handling for 3rd party api'); // errors for tool api lookup are handled in actions/thirdPartyLookupTool.js
-    } else {
-        if (!!error.response && (!!error.response.status || error.response.status === 0)) { // a completely bad response from api comes through as a http status code zero
-            errorMessage = locale.global.errorMessages.generic;
-            if (error.response.status === 403) {
-                if (!!Cookies.get(SESSION_COOKIE_NAME)) {
-                    Cookies.remove(SESSION_COOKIE_NAME, {path: '/', domain: '.library.uq.edu.au'});
-                    delete api.defaults.headers.common[TOKEN_NAME];
-                }
+    // 403 for tool api lookup is handled in actions/thirdPartyLookupTool.js
+    if (!requestUrl.startsWith(thirdPartyLookupUrlRoot)) {
+        if (error.response && error.response.status === 403) {
+            if (!!Cookies.get(SESSION_COOKIE_NAME)) {
+                Cookies.remove(SESSION_COOKIE_NAME, {path: '/', domain: '.library.uq.edu.au'});
+                delete api.defaults.headers.common[TOKEN_NAME];
+            }
 
-                if (process.env.NODE_ENV === 'test') {
-                    global.mockActionsStore.dispatch(logout());
-                } else {
-                    store.dispatch(logout());
-                }
-
-                errorMessage = locale.global.errorMessages[error.response.status];
-            } else if (!!error.message && loggableErrorStatus.indexOf(error.response.status) !== -1) {
-                errorMessage = ((error.response || {}).data || {}).message || locale.global.errorMessages[error.response.status];
-            } else if (!!locale.global.errorMessages[error.response.status]) {
-                errorMessage = locale.global.errorMessages[error.response.status];
+            if (process.env.NODE_ENV === 'test') {
+                global.mockActionsStore.dispatch(logout());
             } else {
-                errorMessage = locale.global.errorMessages.genericAlternate; // slightly different message, purely for future debugging
+                store.dispatch(logout());
             }
+        }
+    }
 
-            if (error.response.status !== 403 && error.response.status !== 404) {
-                if (process.env.NODE_ENV === 'test') {
-                    global.mockActionsStore.dispatch(showAppAlert(error.response.data));
-                } else {
-                    store.dispatch(showAppAlert(error.response.data));
-                }
+    let errorMessage = null;
+    if (!requestUrl.startsWith(thirdPartyLookupUrlRoot)) {
+        if (!!error.message && !!error.response.status && error.response.status === 500) {
+            errorMessage = ((error.response || {}).data || {}).message || locale.global.errorMessages[error.response.status];
+            if (process.env.NODE_ENV === 'test') {
+                global.mockActionsStore.dispatch(showAppAlert(error.response.data));
+            } else {
+                store.dispatch(showAppAlert(error.response.data));
             }
+        } else if (!!error.response && !!error.response.status) {
+            errorMessage = locale.global.errorMessages[error.response.status];
         }
     }
 
