@@ -285,8 +285,7 @@ const returnedApiData = {
 };
 
 describe('AddDataCollection form', () => {
-    afterEach(() => cleanup);
-
+    afterEach(cleanup);
     it('should allow user to submit the form', async () => {
         const testId = 451780;
 
@@ -305,128 +304,59 @@ describe('AddDataCollection form', () => {
         expect(submitButton).toHaveAttribute('disabled');
 
         fireEvent.click(getByTestId(container, 'deposit-agreement'));
-        const secondRender = asFragment();
-        expect(firstRender).toMatchDiffSnapshot(secondRender);
-
         fireEvent.change(getByTestId(container, 'Dataset name'), {target: {value: 'testing'}});
-        const thirdRender = asFragment();
-        expect(secondRender).toMatchDiffSnapshot(thirdRender);
-
         fireEvent.change(getByTestId(container, 'Dataset description'), {target: {value: 'testing'}});
-        const forthRender = asFragment();
-        expect(thirdRender).toMatchDiffSnapshot(forthRender);
-
         fireEvent.change(getByTestId(container, 'Contact name'), {target: {value: 'testing'}});
-        const fifthRender = asFragment();
-        expect(forthRender).toMatchDiffSnapshot(fifthRender);
 
         fireEvent.change(getByTestId(container, 'downshift-0-input'), {target: {value: 'te'}});
         const contactIdList = await waitForElement(() => getByTestId(container, 'downshift-0-menu'), {container});
-        const sixthRender = asFragment();
-        expect(fifthRender).toMatchDiffSnapshot(sixthRender);
-
         fireEvent.select(getByTestId(contactIdList, 'downshift-0-item-0'));
-        const seventhRender = asFragment();
-        expect(sixthRender).toMatchDiffSnapshot(seventhRender);
-
-        fireEvent.change(getByTestId(container, 'Contact email'), {target: {value: 'testing'}});
-        const eighthRender = asFragment();
-        expect(seventhRender).toMatchDiffSnapshot(eighthRender);
 
         fireEvent.change(getByTestId(container, 'Contact email'), {target: {value: 'testing@test.com'}});
-        const ninthRender = asFragment();
-        expect(eighthRender).toMatchDiffSnapshot(ninthRender);
+        fireEvent.change(getByTestId(container, 'year'), {target: {value: '2018'}});
 
         fireEvent.change(getByTestId(container, 'downshift-1-input'), {target: {value: 'Math'}});
         const forCodesList = await waitForElement(() => getByTestId(container, 'downshift-1-menu'), {container});
         fireEvent.click(getByTestId(forCodesList, 'downshift-1-item-0'));
-        const tenthRender = asFragment();
-        expect(ninthRender).toMatchDiffSnapshot(tenthRender);
 
         fireEvent.change(getByTestId(container, 'nameAsPublishedField'), {target: {value: 'test'}});
+
         fireEvent.focus(getByTestId(container, 'downshift-2-input'));
         const creatorRoleList = getByTestId(container, 'downshift-2-menu');
         fireEvent.click(getByTestId(creatorRoleList, 'downshift-2-item-1'));
         fireEvent.click(getByText(/add creator/i));
-        const eleventRender = asFragment();
-        expect(tenthRender).toMatchDiffSnapshot(eleventRender);
 
         fireEvent.click(getByTestId(container, 'data-collection-access-selector'));
         waitForElement(() => getByTestId(container, 'menu-'));
         fireEvent.click(getByText(/mediated access/i));
-        const twelfthRender = asFragment();
-        expect(eleventRender).toMatchDiffSnapshot(twelfthRender);
 
         fireEvent.click(getByTestId(container, 'data-collection-license-selector'));
         waitForElement(() => getByTestId(container, 'menu-'));
         fireEvent.click(getByText(/Creative Commons Attribution \(only\) http:\/\/creativecommons.org\/licenses\/by\/3.0\/deed.en_US/i));
-        const thirteenthRender = asFragment();
-        expect(twelfthRender).toMatchDiffSnapshot(thirteenthRender);
 
         fireEvent.change(getByTestId(container, 'Project name'), {target: {value: 'test project'}});
         fireEvent.change(getByTestId(container, 'Project description'), {target: {value: 'test description'}});
-        const fourteenthRender = asFragment();
-        expect(thirteenthRender).toMatchDiffSnapshot(fourteenthRender);
 
         expect(submitButton).not.toHaveAttribute('disabled');
-    });
 
-    it('should not allow user to submit the form if deposit agreement field was checked and unchecked', async () => {
-        const testId = 451780;
-
-        mockApi
-            .onGet(repositories.routes.SEARCH_AUTHOR_LOOKUP_API({searchQuery: 'test', searchKey: 'author'}).apiUrl)
-            .reply(200, searchKeyList.author)
-            .onGet(repositories.routes.VOCABULARIES_API({id: testId}).apiUrl)
-            .reply(200, returnedApiData);
-
-        const route = '/data-collections/add';
-        const {container, asFragment, getByText} = renderWithRouter(withRedux()(<AddDataCollection/>), {route});
-
-        const firstRender = asFragment();
-
-        const submitButton = getByTestId(container, 'submit-data-collection');
+        fireEvent.change(getByTestId(container, 'Contact email'), {target: {value: 'testing'}});
+        expect(container).toHaveTextContent(/email address is not valid/i);
+        expect(container).toHaveTextContent(/contact email is required/i);
         expect(submitButton).toHaveAttribute('disabled');
-
-        // Accept deposit agreement
-        fireEvent.click(getByTestId(container, 'deposit-agreement'));
-
-        // Set deposit agreement to not accepted state again
-        fireEvent.click(getByTestId(container, 'deposit-agreement'));
-
-        fireEvent.change(getByTestId(container, 'Dataset name'), {target: {value: 'testing'}});
-        fireEvent.change(getByTestId(container, 'Dataset description'), {target: {value: 'testing'}});
-        fireEvent.change(getByTestId(container, 'Contact name'), {target: {value: 'testing'}});
-
-        fireEvent.change(getByTestId(container, 'downshift-0-input'), {target: {value: 'te'}});
-        const contactIdList = await waitForElement(() => getByTestId(container, 'downshift-0-menu'), {container});
-        fireEvent.select(getByTestId(contactIdList, 'downshift-0-item-0'));
 
         fireEvent.change(getByTestId(container, 'Contact email'), {target: {value: 'testing@test.com'}});
+        expect(container).not.toHaveTextContent(/email address is not valid/i);
+        expect(container).not.toHaveTextContent(/contact email is required/i);
+        expect(submitButton).not.toHaveAttribute('disabled');
 
-        fireEvent.change(getByTestId(container, 'downshift-1-input'), {target: {value: 'Math'}});
-        const forCodesList = await waitForElement(() => getByTestId(container, 'downshift-1-menu'), {container});
-        fireEvent.click(getByTestId(forCodesList, 'downshift-1-item-0'));
-
-        fireEvent.change(getByTestId(container, 'nameAsPublishedField'), {target: {value: 'test'}});
-
-        fireEvent.focus(getByTestId(container, 'downshift-2-input'));
-        const creatorRoleList = getByTestId(container, 'downshift-2-menu');
-        fireEvent.click(getByTestId(creatorRoleList, 'downshift-2-item-1'));
-        fireEvent.click(getByText(/add creator/i));
-
-        fireEvent.click(getByTestId(container, 'data-collection-access-selector'));
-        waitForElement(() => getByTestId(container, 'menu-'));
-        fireEvent.click(getByText(/mediated access/i));
-
-        fireEvent.click(getByTestId(container, 'data-collection-license-selector'));
-        waitForElement(() => getByTestId(container, 'menu-'));
-        fireEvent.click(getByText(/Creative Commons Attribution \(only\) http:\/\/creativecommons.org\/licenses\/by\/3.0\/deed.en_US/i));
-
-        fireEvent.change(getByTestId(container, 'Project name'), {target: {value: 'test project'}});
-        fireEvent.change(getByTestId(container, 'Project description'), {target: {value: 'test description'}});
-
+        fireEvent.click(getByTestId(container, 'deposit-agreement'));
+        expect(container).toHaveTextContent(/you are required to accept deposit agreement/i);
         expect(submitButton).toHaveAttribute('disabled');
+
+        fireEvent.click(getByTestId(container, 'deposit-agreement'));
+        expect(container).not.toHaveTextContent(/you are required to accept deposit agreement/i);
+        expect(submitButton).not.toHaveAttribute('disabled');
+
         expect(firstRender).toMatchDiffSnapshot(asFragment());
     });
 });

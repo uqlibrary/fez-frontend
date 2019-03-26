@@ -44,28 +44,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
                               <p>
                                 1.   I am the creator or co-creator of this dataset, or otherwise authorised to deposit or describe it;
                               </p>
-@@ -1901,13 +1901,10 @@
-                          Validation - 
-                        </b>
-                        <span>
-                          Form cannot be submitted until all fields are valid. Please review all input fields.
-                          <ul>
--                           <li>
--                             You are required to accept deposit agreement
--                           </li>
-                            <li>
-                              Title is required
-                            </li>
-                            <li>
-                              Description is required"
-`;
-
-exports[`AddDataCollection form should allow user to submit the form 2`] = `
-"Snapshot Diff:
-- First value
-+ Second value
-
-@@ -130,44 +130,39 @@
+@@ -130,215 +130,307 @@
                   >
                     <div
                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-12-57\\"
@@ -103,44 +82,18 @@ exports[`AddDataCollection form should allow user to submit the form 2`] = `
                             required=\\"\\"
                             rows=\\"1\\"
 -                         />
-+                         >
-+                           testing
-+                         </textarea>
-                        </div>
+-                       </div>
 -                       <p
 -                         class=\\"MuiFormHelperText-root-360 MuiFormHelperText-error-361 MuiFormHelperText-required-367\\"
 -                         id=\\"Dataset name-helper-text\\"
--                       >
+                          >
 -                         This field is required
 -                       </p>
++                           testing
++                         </textarea>
+                        </div>
                       </div>
-                    </div>
-                    <div
-                      class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-12-57\\"
-                    >
-@@ -1901,13 +1896,10 @@
-                          Validation - 
-                        </b>
-                        <span>
-                          Form cannot be submitted until all fields are valid. Please review all input fields.
-                          <ul>
--                           <li>
--                             Title is required
--                           </li>
-                            <li>
-                              Description is required
-                            </li>
-                            <li>
-                              Contact name is required"
-`;
-
-exports[`AddDataCollection form should allow user to submit the form 3`] = `
-"Snapshot Diff:
-- First value
-+ Second value
-
-@@ -165,44 +165,39 @@
-                    </div>
++                   </div>
                     <div
                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-12-57\\"
                     >
@@ -177,44 +130,18 @@ exports[`AddDataCollection form should allow user to submit the form 3`] = `
                             required=\\"\\"
                             rows=\\"1\\"
 -                         />
-+                         >
-+                           testing
-+                         </textarea>
-                        </div>
+-                       </div>
 -                       <p
 -                         class=\\"MuiFormHelperText-root-360 MuiFormHelperText-error-361 MuiFormHelperText-required-367\\"
 -                         id=\\"Dataset description-helper-text\\"
--                       >
+                          >
 -                         This field is required
 -                       </p>
++                           testing
++                         </textarea>
+                        </div>
                       </div>
-                    </div>
-                    <div
-                      class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-6-51\\"
-                    >
-@@ -1896,13 +1891,10 @@
-                          Validation - 
-                        </b>
-                        <span>
-                          Form cannot be submitted until all fields are valid. Please review all input fields.
-                          <ul>
--                           <li>
--                             Description is required
--                           </li>
-                            <li>
-                              Contact name is required
-                            </li>
-                            <li>
-                              ID for contact name is required"
-`;
-
-exports[`AddDataCollection form should allow user to submit the form 4`] = `
-"Snapshot Diff:
-- First value
-+ Second value
-
-@@ -200,45 +200,38 @@
-                    </div>
++                   </div>
                     <div
                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-6-51\\"
                     >
@@ -264,29 +191,6 @@ exports[`AddDataCollection form should allow user to submit the form 4`] = `
                     </div>
                     <div
                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-6-51\\"
-                    >
-@@ -1891,13 +1884,10 @@
-                          Validation - 
-                        </b>
-                        <span>
-                          Form cannot be submitted until all fields are valid. Please review all input fields.
-                          <ul>
--                           <li>
--                             Contact name is required
--                           </li>
-                            <li>
-                              ID for contact name is required
-                            </li>
-                            <li>
-                              Contact email is required"
-`;
-
-exports[`AddDataCollection form should allow user to submit the form 5`] = `
-"Snapshot Diff:
-- First value
-+ Second value
-
-@@ -237,52 +237,168 @@
                     >
                       <div
                         class=\\"AutoCompleteAsyncField-root-279\\"
@@ -371,7 +275,7 @@ exports[`AddDataCollection form should allow user to submit the form 5`] = `
 +                                 </div>
 +                                 <span
 +                                   class=\\"MuiTouchRipple-root-224\\"
-+                                 />
+                                  />
 +                               </li>
 +                               <li
 +                                 aria-selected=\\"false\\"
@@ -394,10 +298,10 @@ exports[`AddDataCollection form should allow user to submit the form 5`] = `
 +                                   >
 +                                     352995
 +                                   </p>
-+                                 </div>
+                                  </div>
 +                                 <span
 +                                   class=\\"MuiTouchRipple-root-224\\"
-                                  />
++                                 />
 +                               </li>
 +                               <li
 +                                 aria-selected=\\"false\\"
@@ -415,12 +319,14 @@ exports[`AddDataCollection form should allow user to submit the form 5`] = `
 +                                   >
 +                                     O'Donoghue, Steven (uqsodono)
 +                                   </span>
-+                                   <p
+                                    <p
+-                             class=\\"MuiFormHelperText-root-360 MuiFormHelperText-error-361\\"
+-                             id=\\"Contact name ID-helper-text\\"
 +                                     class=\\"MuiTypography-root-152 MuiTypography-body2-160 MuiTypography-colorTextSecondary-185 MuiListItemText-secondary-399\\"
 +                                   >
 +                                     75121
 +                                   </p>
-                                  </div>
++                                 </div>
 +                                 <span
 +                                   class=\\"MuiTouchRipple-root-224\\"
 +                                 />
@@ -438,15 +344,13 @@ exports[`AddDataCollection form should allow user to submit the form 5`] = `
 +                                 >
 +                                   <span
 +                                     class=\\"MuiTypography-root-152 MuiTypography-body1-161 MuiListItemText-primary-398\\"
-+                                   >
-+                                     Wallis, Steven C. (uqswallis)
-+                                   </span>
-                                    <p
--                             class=\\"MuiFormHelperText-root-360 MuiFormHelperText-error-361\\"
--                             id=\\"Contact name ID-helper-text\\"
-+                                     class=\\"MuiTypography-root-152 MuiTypography-body2-160 MuiTypography-colorTextSecondary-185 MuiListItemText-secondary-399\\"
                                     >
 -                             This field is required
++                                     Wallis, Steven C. (uqswallis)
++                                   </span>
++                                   <p
++                                     class=\\"MuiTypography-root-152 MuiTypography-body2-160 MuiTypography-colorTextSecondary-185 MuiListItemText-secondary-399\\"
++                                   >
 +                                     75875
                                     </p>
 +                                 </div>
@@ -455,87 +359,10 @@ exports[`AddDataCollection form should allow user to submit the form 5`] = `
 +                                 />
 +                               </li>
 +                             </div>
-                            </div>
++                           </div>
                           </div>
                         </div>
                       </div>
-+                   </div>
-                    <div
-                      class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-12-57\\"
-                    >
-                      <div
-                        aria-describedby=\\"Contact email-helper-text\\"
-@@ -1884,13 +2000,10 @@
-                          Validation - 
-                        </b>
-                        <span>
-                          Form cannot be submitted until all fields are valid. Please review all input fields.
-                          <ul>
--                           <li>
--                             ID for contact name is required
--                           </li>
-                            <li>
-                              Contact email is required
-                            </li>
-                            <li>
-                              Field of research (FoR) codes are required"
-`;
-
-exports[`AddDataCollection form should allow user to submit the form 6`] = `
-"Snapshot Diff:
-Compared values have no visual difference."
-`;
-
-exports[`AddDataCollection form should allow user to submit the form 7`] = `
-"Snapshot Diff:
-- First value
-+ Second value
-
-@@ -403,12 +403,12 @@
-                      <div
-                        aria-describedby=\\"Contact email-helper-text\\"
-                        class=\\"MuiFormControl-root-231 MuiFormControl-fullWidth-234\\"
-                      >
-                        <label
--                         class=\\"MuiFormLabel-root-242 MuiFormLabel-error-245 MuiFormLabel-required-247 MuiInputLabel-root-235 MuiInputLabel-formControl-236 MuiInputLabel-animated-239\\"
--                         data-shrink=\\"false\\"
-+                         class=\\"MuiFormLabel-root-242 MuiFormLabel-error-245 MuiFormLabel-filled-246 MuiFormLabel-required-247 MuiInputLabel-root-235 MuiInputLabel-formControl-236 MuiInputLabel-animated-239 MuiInputLabel-shrink-238\\"
-+                         data-shrink=\\"true\\"
-                          for=\\"Contact email\\"
-                        >
-                          Contact email
-                          <span
-                            class=\\"MuiFormLabel-asterisk-248 MuiFormLabel-error-245\\"
-@@ -425,18 +425,18 @@
-                            id=\\"Contact email\\"
-                            name=\\"contact.contactEmail\\"
-                            placeholder=\\"Type the email address of primary contact for this dataset\\"
-                            required=\\"\\"
-                            type=\\"text\\"
--                           value=\\"\\"
-+                           value=\\"testing\\"
-                          />
-                        </div>
-                        <p
--                         class=\\"MuiFormHelperText-root-360 MuiFormHelperText-error-361 MuiFormHelperText-required-367\\"
-+                         class=\\"MuiFormHelperText-root-360 MuiFormHelperText-error-361 MuiFormHelperText-filled-366 MuiFormHelperText-required-367\\"
-                          id=\\"Contact email-helper-text\\"
-                        >
--                         This field is required
-+                         Email address is not valid
-                        </p>
-                      </div>
-                    </div>
-                    <div
-                      class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-12-57\\""
-`;
-
-exports[`AddDataCollection form should allow user to submit the form 8`] = `
-"Snapshot Diff:
-- First value
-+ Second value
-
-@@ -399,45 +399,38 @@
                     </div>
                     <div
                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-12-57\\"
@@ -545,9 +372,10 @@ exports[`AddDataCollection form should allow user to submit the form 8`] = `
                         class=\\"MuiFormControl-root-231 MuiFormControl-fullWidth-234\\"
                       >
                         <label
--                         class=\\"MuiFormLabel-root-242 MuiFormLabel-error-245 MuiFormLabel-filled-246 MuiFormLabel-required-247 MuiInputLabel-root-235 MuiInputLabel-formControl-236 MuiInputLabel-animated-239 MuiInputLabel-shrink-238\\"
+-                         class=\\"MuiFormLabel-root-242 MuiFormLabel-error-245 MuiFormLabel-required-247 MuiInputLabel-root-235 MuiInputLabel-formControl-236 MuiInputLabel-animated-239\\"
+-                         data-shrink=\\"false\\"
 +                         class=\\"MuiFormLabel-root-242 MuiFormLabel-filled-246 MuiFormLabel-required-247 MuiInputLabel-root-235 MuiInputLabel-formControl-236 MuiInputLabel-animated-239 MuiInputLabel-shrink-238\\"
-                          data-shrink=\\"true\\"
++                         data-shrink=\\"true\\"
                           for=\\"Contact email\\"
                         >
                           Contact email
@@ -571,43 +399,105 @@ exports[`AddDataCollection form should allow user to submit the form 8`] = `
                             placeholder=\\"Type the email address of primary contact for this dataset\\"
                             required=\\"\\"
                             type=\\"text\\"
--                           value=\\"testing\\"
+-                           value=\\"\\"
 +                           value=\\"testing@test.com\\"
                           />
                         </div>
 -                       <p
--                         class=\\"MuiFormHelperText-root-360 MuiFormHelperText-error-361 MuiFormHelperText-filled-366 MuiFormHelperText-required-367\\"
+-                         class=\\"MuiFormHelperText-root-360 MuiFormHelperText-error-361 MuiFormHelperText-required-367\\"
 -                         id=\\"Contact email-helper-text\\"
 -                       >
--                         Email address is not valid
+-                         This field is required
 -                       </p>
                       </div>
                     </div>
                     <div
                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-12-57\\"
                     >
-@@ -2000,13 +1993,10 @@
-                          Validation - 
-                        </b>
-                        <span>
-                          Form cannot be submitted until all fields are valid. Please review all input fields.
-                          <ul>
--                           <li>
--                             Contact email is required
--                           </li>
-                            <li>
-                              Field of research (FoR) codes are required
-                            </li>
-                            <li>
-                              Author/creator names are required"
-`;
-
-exports[`AddDataCollection form should allow user to submit the form 9`] = `
-"Snapshot Diff:
-- First value
-+ Second value
-
-@@ -665,41 +665,138 @@
+@@ -403,17 +495,17 @@
+                      >
+                        <div
+                          class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
+                        >
+                          <label
+-                           class=\\"MuiFormLabel-root-242 MuiFormLabel-error-245 MuiFormLabel-required-247 MuiInputLabel-root-235 MuiInputLabel-animated-239 MuiInputLabel-shrink-238\\"
++                           class=\\"MuiFormLabel-root-242 MuiFormLabel-required-247 MuiInputLabel-root-235 MuiInputLabel-animated-239 MuiInputLabel-shrink-238\\"
+                            data-shrink=\\"true\\"
+                            style=\\"zoom: 0.75;\\"
+                          >
+                            Publication year
+                            <span
+-                             class=\\"MuiFormLabel-asterisk-248 MuiFormLabel-error-245\\"
++                             class=\\"MuiFormLabel-asterisk-248\\"
+                            >
+                               *
+                            </span>
+                          </label>
+                        </div>
+@@ -435,14 +527,14 @@
+                              </label>
+                              <div
+                                class=\\"MuiFormControl-root-231 MuiFormControl-fullWidth-234\\"
+                              >
+                                <div
+-                                 class=\\"MuiInputBase-root-262 MuiInput-root-249 MuiInput-underline-253 MuiInputBase-error-268 MuiInput-error-254 MuiInputBase-fullWidth-271 MuiInput-fullWidth-256 MuiInputBase-formControl-263 MuiInput-formControl-250\\"
++                                 class=\\"MuiInputBase-root-262 MuiInput-root-249 MuiInput-underline-253 MuiInputBase-fullWidth-271 MuiInput-fullWidth-256 MuiInputBase-formControl-263 MuiInput-formControl-250\\"
+                                >
+                                  <input
+-                                   aria-invalid=\\"true\\"
++                                   aria-invalid=\\"false\\"
+                                    class=\\"MuiInputBase-input-272 MuiInput-input-257\\"
+                                    id=\\"day\\"
+                                    label=\\"day\\"
+                                    maxlength=\\"2\\"
+                                    name=\\"day\\"
+@@ -450,15 +542,10 @@
+                                    type=\\"text\\"
+                                    value=\\"\\"
+                                  />
+                                </div>
+                              </div>
+-                             <p
+-                               class=\\"MuiFormHelperText-root-360 MuiFormHelperText-error-361\\"
+-                             >
+-                               Year required
+-                             </p>
+                            </div>
+                            <div
+                              class=\\"MuiGrid-item-4 MuiGrid-grid-xs-4-35\\"
+                            >
+                              <label
+@@ -466,11 +553,11 @@
+                                for=\\"month\\"
+                              >
+                                Month
+                              </label>
+                              <div
+-                               class=\\"MuiInputBase-root-262 MuiInput-root-249 MuiInput-underline-253 MuiInputBase-error-268 MuiInput-error-254\\"
++                               class=\\"MuiInputBase-root-262 MuiInput-root-249 MuiInput-underline-253\\"
+                                style=\\"width: 100%;\\"
+                              >
+                                <div
+                                  class=\\"MuiSelect-root-285\\"
+                                >
+@@ -515,14 +602,14 @@
+                              </label>
+                              <div
+                                class=\\"MuiFormControl-root-231 MuiFormControl-fullWidth-234\\"
+                              >
+                                <div
+-                                 class=\\"MuiInputBase-root-262 MuiInput-root-249 MuiInput-underline-253 MuiInputBase-error-268 MuiInput-error-254 MuiInputBase-fullWidth-271 MuiInput-fullWidth-256 MuiInputBase-formControl-263 MuiInput-formControl-250\\"
++                                 class=\\"MuiInputBase-root-262 MuiInput-root-249 MuiInput-underline-253 MuiInputBase-fullWidth-271 MuiInput-fullWidth-256 MuiInputBase-formControl-263 MuiInput-formControl-250\\"
+                                >
+                                  <input
+-                                   aria-invalid=\\"true\\"
++                                   aria-invalid=\\"false\\"
+                                    class=\\"MuiInputBase-input-272 MuiInput-input-257\\"
+                                    id=\\"year\\"
+                                    label=\\"year\\"
+                                    maxlength=\\"4\\"
+                                    name=\\"year\\"
+@@ -578,41 +665,138 @@
                         aria-labelledby=\\"downshift-1-label\\"
                         class=\\"AutoCompleteAsyncField-container-280\\"
                         role=\\"combobox\\"
@@ -684,7 +574,7 @@ exports[`AddDataCollection form should allow user to submit the form 9`] = `
 +                               />
 +                               <path
 +                                 d=\\"M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12l1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z\\"
-+                               />
+                                />
 +                               <path
 +                                 d=\\"M0 0h24v24H0z\\"
 +                                 fill=\\"none\\"
@@ -693,11 +583,11 @@ exports[`AddDataCollection form should allow user to submit the form 9`] = `
 +                           </span>
 +                           <span
 +                             class=\\"MuiTouchRipple-root-224\\"
-                            />
++                           />
 +                         </button>
-                        </div>
++                       </div>
 +                     </div>
-+                   </div>
+                    </div>
 +                   <div
 +                     style=\\"padding: 8px;\\"
 +                   >
@@ -753,28 +643,7 @@ exports[`AddDataCollection form should allow user to submit the form 9`] = `
                     </div>
                   </div>
                 </div>
-@@ -1993,13 +2090,10 @@
-                          Validation - 
-                        </b>
-                        <span>
-                          Form cannot be submitted until all fields are valid. Please review all input fields.
-                          <ul>
--                           <li>
--                             Field of research (FoR) codes are required
--                           </li>
-                            <li>
-                              Author/creator names are required
-                            </li>
-                            <li>
-                              Access condition is required"
-`;
-
-exports[`AddDataCollection form should allow user to submit the form 10`] = `
-"Snapshot Diff:
-- First value
-+ Second value
-
-@@ -841,26 +841,26 @@
+@@ -657,26 +841,26 @@
                       >
                         <div
                           class=\\"MuiFormControl-root-231 MuiFormControl-fullWidth-234\\"
@@ -805,7 +674,7 @@ exports[`AddDataCollection form should allow user to submit the form 10`] = `
                               id=\\"nameAsPublishedField\\"
                               placeholder=\\"Type the name exactly as published\\"
                               required=\\"\\"
-@@ -885,12 +885,12 @@
+@@ -701,12 +885,12 @@
                           >
                             <div
                               class=\\"MuiFormControl-root-231 MuiFormControl-fullWidth-234\\"
@@ -820,7 +689,7 @@ exports[`AddDataCollection form should allow user to submit the form 10`] = `
                                 Enter creator's role
                                 <span
                                   class=\\"MuiFormLabel-asterisk-248\\"
-@@ -899,11 +899,11 @@
+@@ -715,11 +899,11 @@
                                 </span>
                               </label>
                               <div
@@ -833,12 +702,16 @@ exports[`AddDataCollection form should allow user to submit the form 10`] = `
                                   aria-invalid=\\"false\\"
                                   autocomplete=\\"off\\"
                                   class=\\"MuiInputBase-input-272 MuiInput-input-257\\"
-@@ -934,19 +934,229 @@
+@@ -746,24 +930,234 @@
+                        >
+                          <span
+                            class=\\"MuiButton-label-297\\"
+                          >
                             Add creator
-                          </span>
-                        </button>
-                      </div>
-                    </div>
++                         </span>
++                       </button>
++                     </div>
++                   </div>
 +                   <div
 +                     class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-8-25\\"
 +                   >
@@ -876,12 +749,11 @@ exports[`AddDataCollection form should allow user to submit the form 10`] = `
 +                             <div
 +                               class=\\"MuiListItemText-root-395\\"
 +                             >
-                                <span
--                     class=\\"MuiTypography-root-152 MuiTypography-caption-162 MuiTypography-colorError-186\\"
++                               <span
 +                                 class=\\"MuiTypography-root-152 MuiTypography-caption-162 MuiTypography-colorTextSecondary-185 MuiListItemText-secondary-399\\"
 +                               >
 +                                 Creator's name as published
-+                               </span>
+                                </span>
 +                             </div>
 +                             <div
 +                               class=\\"MuiListItemText-root-395\\"
@@ -937,8 +809,8 @@ exports[`AddDataCollection form should allow user to submit the form 10`] = `
 +                               <span
 +                                 class=\\"MuiTouchRipple-root-224\\"
 +                               />
-+                             </button>
-+                           </div>
+                              </button>
+                            </div>
 +                         </li>
 +                       </ul>
 +                     </div>
@@ -977,7 +849,7 @@ exports[`AddDataCollection form should allow user to submit the form 10`] = `
 +                                   />
 +                                 </g>
 +                               </svg>
-+                             </div>
+                              </div>
 +                             <div
 +                               class=\\"MuiGrid-container-3 WithTheme-WithWidth-ContributorRow---listItem-416\\"
 +                             >
@@ -992,11 +864,13 @@ exports[`AddDataCollection form should allow user to submit the form 10`] = `
 +                                   >
 +                                     test
 +                                   </p>
-+                                   <span
+                                    <span
+-                     class=\\"MuiTypography-root-152 MuiTypography-caption-162 MuiTypography-colorError-186\\"
 +                                     class=\\"MuiTypography-root-152 MuiTypography-caption-162 MuiTypography-noWrap-178\\"
-+                                   >
+                                    >
+-                     This field is required
 +                                     First  listed creator
-+                                   </span>
+                                    </span>
 +                                 </div>
 +                               </div>
 +                               <div
@@ -1013,11 +887,11 @@ exports[`AddDataCollection form should allow user to submit the form 10`] = `
 +                                   <span
 +                                     class=\\"MuiTypography-root-152   MuiTypography-caption-162 MuiTypography-noWrap-178\\"
 +                                   />
-+                                 </div>
-+                               </div>
-+                             </div>
-+                           </div>
-+                           <div
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div
 +                             class=\\"MuiListItemSecondaryAction-root-415\\"
 +                           >
 +                             <button
@@ -1036,8 +910,7 @@ exports[`AddDataCollection form should allow user to submit the form 10`] = `
 +                                   focusable=\\"false\\"
 +                                   role=\\"presentation\\"
 +                                   viewBox=\\"0 0 24 24\\"
-                                  >
--                     This field is required
++                                 >
 +                                   <path
 +                                     d=\\"M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z\\"
 +                                   />
@@ -1046,47 +919,27 @@ exports[`AddDataCollection form should allow user to submit the form 10`] = `
 +                                     fill=\\"none\\"
 +                                   />
 +                                 </svg>
-                                </span>
++                               </span>
 +                               <span
 +                                 class=\\"MuiTouchRipple-root-224\\"
 +                               />
 +                             </button>
-                            </div>
++                           </div>
 +                         </li>
 +                       </ul>
-                      </div>
-                    </div>
-                  </div>
++                     </div>
++                   </div>
++                 </div>
 +               </div>
 +             </div>
 +           </div>
-            <div
++           <div
               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
             >
               <div
                 class=\\"MuiPaper-root-119 MuiPaper-elevation1-122 MuiPaper-rounded-120 MuiCard-root-118 Cards-card-114 StandardCard\\"
-@@ -2090,13 +2300,10 @@
-                          Validation - 
-                        </b>
-                        <span>
-                          Form cannot be submitted until all fields are valid. Please review all input fields.
-                          <ul>
--                           <li>
--                             Author/creator names are required
--                           </li>
-                            <li>
-                              Access condition is required
-                            </li>
-                            <li>
-                              Licensing and terms of access is required"
-`;
-
-exports[`AddDataCollection form should allow user to submit the form 11`] = `
-"Snapshot Diff:
-- First value
-+ Second value
-
-@@ -1218,22 +1218,22 @@
+              >
+@@ -824,22 +1218,22 @@
                     >
                       <div
                         class=\\"MuiFormControl-root-231 MuiFormControl-fullWidth-234\\"
@@ -1113,7 +966,7 @@ exports[`AddDataCollection form should allow user to submit the form 11`] = `
                             class=\\"MuiSelect-root-285\\"
                           >
                             <div
-@@ -1242,17 +1242,15 @@
+@@ -848,17 +1242,15 @@
                               class=\\"MuiSelect-select-286 MuiSelect-selectMenu-289 MuiInputBase-input-272 MuiInput-input-257\\"
                               id=\\"data-collection-access-selector\\"
                               role=\\"button\\"
@@ -1133,7 +986,7 @@ exports[`AddDataCollection form should allow user to submit the form 11`] = `
                               aria-hidden=\\"true\\"
                               class=\\"MuiSvgIcon-root-215 MuiSelect-icon-291\\"
                               focusable=\\"false\\"
-@@ -1263,15 +1261,10 @@
+@@ -869,36 +1261,31 @@
                                 d=\\"M7 10l5 5 5-5z\\"
                               />
                             </svg>
@@ -1148,40 +1001,6 @@ exports[`AddDataCollection form should allow user to submit the form 11`] = `
                     </div>
                     <div
                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-12-57 MuiGrid-grid-md-4-63\\"
-                    >
-@@ -2300,24 +2293,18 @@
-                          Validation - 
-                        </b>
-                        <span>
-                          Form cannot be submitted until all fields are valid. Please review all input fields.
-                          <ul>
--                           <li>
--                             Access condition is required
--                           </li>
-                            <li>
-                              Licensing and terms of access is required
-                            </li>
-                            <li>
-                              Project name is required
-                            </li>
-                            <li>
-                              Project description is required
--                           </li>
--                           <li>
--                             File submission to be completed
-                            </li>
-                          </ul>
-                        </span>
-                      </div>
-                    </div>"
-`;
-
-exports[`AddDataCollection form should allow user to submit the form 12`] = `
-"Snapshot Diff:
-- First value
-+ Second value
-
-@@ -1270,22 +1270,22 @@
                     >
                       <div
                         class=\\"MuiFormControl-root-231 MuiFormControl-fullWidth-234\\"
@@ -1208,7 +1027,7 @@ exports[`AddDataCollection form should allow user to submit the form 12`] = `
                             class=\\"MuiSelect-root-285\\"
                           >
                             <div
-@@ -1294,17 +1294,15 @@
+@@ -907,17 +1294,15 @@
                               class=\\"MuiSelect-select-286 MuiSelect-selectMenu-289 MuiInputBase-input-272 MuiInput-input-257\\"
                               id=\\"data-collection-license-selector\\"
                               role=\\"button\\"
@@ -1228,7 +1047,7 @@ exports[`AddDataCollection form should allow user to submit the form 12`] = `
                               aria-hidden=\\"true\\"
                               class=\\"MuiSvgIcon-root-215 MuiSelect-icon-291\\"
                               focusable=\\"false\\"
-@@ -1315,15 +1313,10 @@
+@@ -928,15 +1313,10 @@
                                 d=\\"M7 10l5 5 5-5z\\"
                               />
                             </svg>
@@ -1244,28 +1063,7 @@ exports[`AddDataCollection form should allow user to submit the form 12`] = `
                     <div
                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-12-57 MuiGrid-grid-md-4-63\\"
                     >
-@@ -2293,13 +2286,10 @@
-                          Validation - 
-                        </b>
-                        <span>
-                          Form cannot be submitted until all fields are valid. Please review all input fields.
-                          <ul>
--                           <li>
--                             Licensing and terms of access is required
--                           </li>
-                            <li>
-                              Project name is required
-                            </li>
-                            <li>
-                              Project description is required"
-`;
-
-exports[`AddDataCollection form should allow user to submit the form 13`] = `
-"Snapshot Diff:
-- First value
-+ Second value
-
-@@ -1376,86 +1376,76 @@
+@@ -996,84 +1376,74 @@
                   >
                     <div
                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
@@ -1312,9 +1110,9 @@ exports[`AddDataCollection form should allow user to submit the form 13`] = `
 -                       </p>
 +                           test project
 +                         </textarea>
-                        </div>
++                       </div>
                       </div>
-+                   </div>
+                    </div>
                     <div
                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
                     >
@@ -1360,15 +1158,13 @@ exports[`AddDataCollection form should allow user to submit the form 13`] = `
 -                       </p>
 +                           test description
 +                         </textarea>
-                        </div>
++                       </div>
                       </div>
-+                   </div>
+                    </div>
                     <div
                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
                     >
-                      <div>
-                        <div
-@@ -2232,72 +2222,12 @@
+@@ -1852,108 +2222,12 @@
                             autocomplete=\\"off\\"
                             id=\\"Uploader\\"
                             multiple=\\"\\"
@@ -1412,10 +1208,10 @@ exports[`AddDataCollection form should allow user to submit the form 13`] = `
 -                         <path
 -                           d=\\"M0 0h24v24H0z\\"
 -                           fill=\\"none\\"
--                         />
+                          />
 -                         <path
 -                           d=\\"M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z\\"
-                          />
+-                         />
 -                       </svg>
                         </div>
 -                     <div
@@ -1429,10 +1225,46 @@ exports[`AddDataCollection form should allow user to submit the form 13`] = `
 -                         Form cannot be submitted until all fields are valid. Please review all input fields.
 -                         <ul>
 -                           <li>
+-                             You are required to accept deposit agreement
+-                           </li>
+-                           <li>
+-                             Title is required
+-                           </li>
+-                           <li>
+-                             Description is required
+-                           </li>
+-                           <li>
+-                             Contact name is required
+-                           </li>
+-                           <li>
+-                             ID for contact name is required
+-                           </li>
+-                           <li>
+-                             Contact email is required
+-                           </li>
+-                           <li>
+-                             Publication date is required
+-                           </li>
+-                           <li>
+-                             Field of research (FoR) codes are required
+-                           </li>
+-                           <li>
+-                             Author/creator names are required
+-                           </li>
+-                           <li>
+-                             Access condition is required
+-                           </li>
+-                           <li>
+-                             Licensing and terms of access is required
+-                           </li>
+-                           <li>
 -                             Project name is required
 -                           </li>
 -                           <li>
 -                             Project description is required
+-                           </li>
+-                           <li>
+-                             File submission to be completed
 -                           </li>
 -                         </ul>
 -                       </span>
@@ -1441,7 +1273,7 @@ exports[`AddDataCollection form should allow user to submit the form 13`] = `
                   </div>
                 </div>
               </div>
-@@ -2329,21 +2259,23 @@
+@@ -1985,21 +2259,23 @@
             </div>
             <div
               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-auto-44\\"
