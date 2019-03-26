@@ -11,18 +11,15 @@ printf "\n--- RUNNING UNIT TESTS ---\n"
 # Running in series with `runInBand` to avoid CodeShip VM running out of memory
 if [[ ($CI_BRANCH == "master" || $CI_BRANCH == "staging" || $CI_BRANCH == "production") ]]; then
     printf "(\"$CI_BRANCH\" build INCLUDES code coverage check)\n"
-    printf "\n$ npm test -- --ci --runInBand\n"
-    npm test -- --ci --runInBand
+    printf "\n$ npm run test:unit -- --ci --runInBand\n"
+    npm run test:unit -- --ci --runInBand
 else
     printf "(Build of feature branch \"$CI_BRANCH\" SKIPS code coverage check)\n"
-    printf "\n$ npm test -- --ci --runInBand --no-coverage\n"
-    npm test -- --ci --runInBand --no-coverage
+    printf "\n$ npm run test:unit -- --ci --runInBand --no-coverage\n"
+    npm run test:unit -- --ci --runInBand --no-coverage
 fi
 
-printf "\n--- RUNNING INTEGRATION TESTS ---\n"
 # Run integration tests
-# Enable for master/staging
-if [[ (${CI_BRANCH} == 'feature-integration-tests')]]; then
-    printf "\n$ npm run test:integration\n"
-    npm run test:integration
-fi
+printf "\n--- RUNNING INTEGRATION TESTS ---\n"
+printf "\n$ npm run test:integration\n"
+npm run test:integration
