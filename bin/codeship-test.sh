@@ -6,7 +6,7 @@ printf "\n---- RUNNING ESLint ---\n"
 printf "\n$ npm run eslint\n"
 npm run eslint
 
-printf "\n--- RUNNING JEST ---\n"
+printf "\n--- RUNNING UNIT TESTS ---\n"
 # Not running code coverage check for feature branches.
 # Running in series with `runInBand` to avoid CodeShip VM running out of memory
 if [[ ($CI_BRANCH == "master" || $CI_BRANCH == "staging" || $CI_BRANCH == "production") ]]; then
@@ -19,9 +19,10 @@ else
     npm test -- --ci --runInBand --no-coverage
 fi
 
+printf "\n--- RUNNING INTEGRATION TESTS ---\n"
 # Run integration tests
 # Enable for master/staging
 if [[ (${CI_BRANCH} == 'feature-integration-tests')]]; then
-    echo "Running integration test..."
+    printf "\n$ npm run test:integration\n"
     npm run test:integration
 fi
