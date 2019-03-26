@@ -28,7 +28,7 @@ export class FreeTextFormClass extends Component {
     };
 
     static defaultProps = {
-        isValid: () => '',
+        isValid: () => false,
         remindToAdd: false,
         maxInputLength: 2000,
         locale: {
