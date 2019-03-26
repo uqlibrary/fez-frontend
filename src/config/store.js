@@ -14,12 +14,12 @@ export const history = process.env.USE_MOCK || process.env.BRANCH === 'productio
     ? createBrowserHistory()
     : createHashHistory();
 
-const getStore = () => {
+export const getStore = (initialState = Immutable.Map()) => {
     const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
     return createStore(
         connectRouter(history)(rootReducer),
-        Immutable.Map(),
+        initialState,
         composeEnhancer(
             applyMiddleware(
                 routerMiddleware(history),
