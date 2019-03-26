@@ -958,11 +958,7 @@ export const LANGUAGE = [
 
 export const unpublishedBufferActionUrls = [
     {
-        label: 'More options',
-        url: (pid) => `${APP_URL}workflow/list_workflows2.php?pid=${pid}`
-    },
-    {
-        label: 'Update selected record - Generic',
+        label: 'Edit selected record',
         url: (pid) => `${APP_URL}workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=289&href=%2Fmy_fez_traditional.php`
     },
     {
@@ -976,5 +972,9 @@ export const unpublishedBufferActionUrls = [
     {
         label: 'Delete selected record',
         url: (pid) => `${APP_URL}workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=225&href=%2Fmy_fez_traditional.php`
+    },
+    {
+        label: 'More options',
+        url: (pid) => `${APP_URL}workflow/list_workflows2.php?pid=${pid}`
     }
 ];
