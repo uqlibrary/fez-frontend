@@ -20,6 +20,7 @@ exports[`FreeTextForm tests  rendering active form 1`] = `
       error={true}
       fullWidth={true}
       helperText="This field is required"
+      id=""
       inputRef={[Function]}
       label="Item name"
       onChange={[Function]}
@@ -40,6 +41,7 @@ exports[`FreeTextForm tests  rendering active form 1`] = `
       color="primary"
       disabled={true}
       fullWidth={true}
+      id="add-items"
       onClick={[Function]}
       variant="contained"
     >
@@ -69,6 +71,7 @@ exports[`FreeTextForm tests  rendering active form 2`] = `
       error={true}
       fullWidth={true}
       helperText="Limited to 5 characters"
+      id=""
       inputRef={[Function]}
       label="Item name"
       onChange={[Function]}
@@ -89,6 +92,7 @@ exports[`FreeTextForm tests  rendering active form 2`] = `
       color="primary"
       disabled={true}
       fullWidth={true}
+      id="add-items"
       onClick={[Function]}
       variant="contained"
     >
@@ -925,6 +929,7 @@ exports[`FreeTextForm tests  rendering active form full mount 1`] = `
                               error={true}
                               fullWidth={true}
                               helperText="This field is required"
+                              id=""
                               inputRef={[Function]}
                               label="Item name"
                               onChange={[Function]}
@@ -965,7 +970,9 @@ exports[`FreeTextForm tests  rendering active form full mount 1`] = `
                                     className="MuiFormControl-root-100 MuiFormControl-fullWidth-103"
                                     onKeyPress={[Function]}
                                   >
-                                    <WithStyles(InputLabel)>
+                                    <WithStyles(InputLabel)
+                                      htmlFor=""
+                                    >
                                       <InputLabel
                                         classes={
                                           Object {
@@ -979,10 +986,12 @@ exports[`FreeTextForm tests  rendering active form full mount 1`] = `
                                           }
                                         }
                                         disableAnimation={false}
+                                        htmlFor=""
                                       >
                                         <WithStyles(FormLabel)
                                           className="MuiInputLabel-root-104 MuiInputLabel-formControl-105 MuiInputLabel-animated-108"
                                           data-shrink={false}
+                                          htmlFor=""
                                         >
                                           <FormLabel
                                             className="MuiInputLabel-root-104 MuiInputLabel-formControl-105 MuiInputLabel-animated-108"
@@ -999,10 +1008,12 @@ exports[`FreeTextForm tests  rendering active form full mount 1`] = `
                                             }
                                             component="label"
                                             data-shrink={false}
+                                            htmlFor=""
                                           >
                                             <label
                                               className="MuiFormLabel-root-111 MuiFormLabel-error-114 MuiInputLabel-root-104 MuiInputLabel-formControl-105 MuiInputLabel-animated-108"
                                               data-shrink={false}
+                                              htmlFor=""
                                             >
                                               Item name
                                             </label>
@@ -1012,6 +1023,7 @@ exports[`FreeTextForm tests  rendering active form full mount 1`] = `
                                     </WithStyles(InputLabel)>
                                     <WithStyles(Input)
                                       fullWidth={true}
+                                      id=""
                                       inputRef={[Function]}
                                       onChange={[Function]}
                                       placeholder="Please type the item name"
@@ -1036,6 +1048,7 @@ exports[`FreeTextForm tests  rendering active form full mount 1`] = `
                                           }
                                         }
                                         fullWidth={true}
+                                        id=""
                                         inputRef={[Function]}
                                         onChange={[Function]}
                                         placeholder="Please type the item name"
@@ -1060,6 +1073,7 @@ exports[`FreeTextForm tests  rendering active form full mount 1`] = `
                                             }
                                           }
                                           fullWidth={true}
+                                          id=""
                                           inputComponent="input"
                                           inputRef={[Function]}
                                           multiline={false}
@@ -1091,6 +1105,7 @@ exports[`FreeTextForm tests  rendering active form full mount 1`] = `
                                               }
                                             }
                                             fullWidth={true}
+                                            id=""
                                             inputComponent="input"
                                             inputRef={[Function]}
                                             multiline={false}
@@ -1107,6 +1122,7 @@ exports[`FreeTextForm tests  rendering active form full mount 1`] = `
                                                 aria-invalid={true}
                                                 className="MuiInputBase-input-141 MuiInput-input-126"
                                                 disabled={false}
+                                                id=""
                                                 onBlur={[Function]}
                                                 onChange={[Function]}
                                                 onFocus={[Function]}
@@ -1280,6 +1296,7 @@ exports[`FreeTextForm tests  rendering active form full mount 1`] = `
                               color="primary"
                               disabled={true}
                               fullWidth={true}
+                              id="add-items"
                               onClick={[Function]}
                               variant="contained"
                             >
@@ -1319,6 +1336,7 @@ exports[`FreeTextForm tests  rendering active form full mount 1`] = `
                                 disableFocusRipple={false}
                                 disabled={true}
                                 fullWidth={true}
+                                id="add-items"
                                 mini={false}
                                 onClick={[Function]}
                                 size="medium"
@@ -1331,6 +1349,7 @@ exports[`FreeTextForm tests  rendering active form full mount 1`] = `
                                   disabled={true}
                                   focusRipple={true}
                                   focusVisibleClassName="MuiButton-focusVisible-175"
+                                  id="add-items"
                                   onClick={[Function]}
                                   type="button"
                                 >
@@ -1350,6 +1369,7 @@ exports[`FreeTextForm tests  rendering active form full mount 1`] = `
                                     disabled={true}
                                     focusRipple={true}
                                     focusVisibleClassName="MuiButton-focusVisible-175"
+                                    id="add-items"
                                     onClick={[Function]}
                                     tabIndex="0"
                                     type="button"
@@ -1357,6 +1377,7 @@ exports[`FreeTextForm tests  rendering active form full mount 1`] = `
                                     <button
                                       className="MuiButtonBase-root-182 MuiButtonBase-disabled-183 MuiButton-root-156 MuiButton-contained-167 MuiButton-containedPrimary-168 MuiButton-raised-170 MuiButton-raisedPrimary-171 MuiButton-disabled-176 MuiButton-fullWidth-181"
                                       disabled={true}
+                                      id="add-items"
                                       onBlur={[Function]}
                                       onClick={[Function]}
                                       onFocus={[Function]}
@@ -1417,6 +1438,7 @@ exports[`FreeTextForm tests  rendering disabled form 1`] = `
       error={true}
       fullWidth={true}
       helperText="This field is required"
+      id=""
       inputRef={[Function]}
       label="Item name"
       onChange={[Function]}
@@ -1437,6 +1459,7 @@ exports[`FreeTextForm tests  rendering disabled form 1`] = `
       color="primary"
       disabled={true}
       fullWidth={true}
+      id="add-items"
       onClick={[Function]}
       variant="contained"
     >
@@ -1466,6 +1489,7 @@ exports[`FreeTextForm tests  rendering reminder to add input 1`] = `
       error={true}
       fullWidth={true}
       helperText="This field is required"
+      id=""
       inputRef={[Function]}
       onChange={[Function]}
       onKeyPress={[Function]}
@@ -1490,6 +1514,7 @@ exports[`FreeTextForm tests  rendering reminder to add input 1`] = `
       color="primary"
       disabled={true}
       fullWidth={true}
+      id="add-items"
       onClick={[Function]}
       variant="contained"
     >
@@ -1519,6 +1544,7 @@ exports[`FreeTextForm tests  should display error about input length 1`] = `
       error={true}
       fullWidth={true}
       helperText="This field is required - Limited to 3 characters"
+      id=""
       inputRef={[Function]}
       label="Item name"
       onChange={[Function]}
@@ -1539,6 +1565,7 @@ exports[`FreeTextForm tests  should display error about input length 1`] = `
       color="primary"
       disabled={true}
       fullWidth={true}
+      id="add-items"
       onClick={[Function]}
       variant="contained"
     >

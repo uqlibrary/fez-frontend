@@ -93,8 +93,8 @@ export default class ThesisSubmission extends Component {
                         <Grid item xs/>
                         <Grid item>
                             <Button
-                                variant={'contained'}
-                                color={'primary'}
+                                variant="contained"
+                                color="primary"
                                 fullWidth
                                 children={formLocale.thesisSubmission.afterSubmit}
                                 onClick={this.afterSubmit}/>
@@ -155,6 +155,7 @@ export default class ThesisSubmission extends Component {
                                     <Grid item xs={12} sm={6}>
                                         <Field
                                             component={ThesisSubtypeField}
+                                            id="thesis-subtype"
                                             itemsList={thesisSubmissionSubtypes}
                                             name="rek_genre_type"
                                             disabled={this.props.submitting}
@@ -247,18 +248,19 @@ export default class ThesisSubmission extends Component {
                     </Grid>
                     <Grid container spacing={16}>
                         <Grid item xs={false} sm />
-                        <Grid item xs={12} sm={'auto'}>
+                        <Grid item xs={12} sm="auto">
                             <Button
-                                variant={'contained'}
+                                variant="contained"
                                 fullWidth
                                 children={formLocale.thesisSubmission.cancel}
                                 disabled={this.props.submitting}
                                 onClick={this.cancelSubmit}/>
                         </Grid>
-                        <Grid item xs={12} sm={'auto'}>
+                        <Grid item xs={12} sm="auto">
                             <Button
-                                variant={'contained'}
-                                color={'primary'}
+                                variant="contained"
+                                id="submit-thesis"
+                                color="primary"
                                 fullWidth
                                 children={formLocale.thesisSubmission.submit}
                                 onClick={this.deposit}
