@@ -34,6 +34,8 @@ let ThesisSubmissionContainer = reduxForm({
 })(confirmDiscardFormChanges(ThesisSubmission, FORM_NAME));
 
 const mapStateToProps = (state, props) => {
+    //  Get any initial values set during redux store initialisation
+    const initialValuesSetInRedux = !!state.get('form') && (state.get('form').toJS()[FORM_NAME] || {}).values || {};
     const currentAuthor = state && state.get('accountReducer') ? state.get('accountReducer').author : null;
     const isSessionValid = state && state.get('accountReducer') ? state.get('accountReducer').isSessionExpired === false : null;
 
@@ -42,6 +44,7 @@ const mapStateToProps = (state, props) => {
 
     const today = new Date();
     const initialValues = {
+        ...initialValuesSetInRedux,
         rek_date: `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`,
         currentAuthor: [
             {
