@@ -5,7 +5,7 @@ import Cookies from 'js-cookie';
 import {SESSION_COOKIE_NAME} from 'config';
 import * as routes from 'repositories/routes';
 import * as mockData from './data';
-import * as testingMockData from './data/testing/records';
+import * as mockTestingData from './data/testing/records';
 
 const queryString = require('query-string');
 const mock = new MockAdapter(api, {delayResponse: 200});
@@ -161,6 +161,10 @@ mock
     .reply(200, mockData.lookupToolIncites)
     .onGet(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({pid: '.*'}).apiUrl)))
     .reply(config => {
+        // Data collection
+        if (config.url.indexOf('UQ:407731') >= 0) {
+            return [200, {data: {...mockTestingData.dataCollection}}];
+        }
         if (config.url.indexOf('UQ:164935') >= 0) {
             return [200, {data: {...mockData.recordWithMap}}];
         }
@@ -184,7 +188,7 @@ mock
     // .reply(500, ["Server error: `POST https://sandbox.orcid.org/oauth/token` resulted in a `500 Internal Server Error` response:\n{\"error\":\"server_error\",\"error_description\":\"Redirect URI mismatch.\"}\n"])
     .onGet(new RegExp(escapeRegExp(routes.FILE_UPLOAD_API({pid: '.*', fileName: '.*'}).apiUrl)))
     .reply(200, ['s3-ap-southeast-2.amazonaws.com']);
-    // .reply(0);
+// .reply(500, {message: 'error - failed GET FILE_UPLOAD_API'});
 
 
 mock
@@ -200,7 +204,7 @@ mock
     .reply(200, {data: {}})
     // .reply(500, ['ERROR HIDE_POSSIBLE_RECORD_API'])
     .onPost(new RegExp(escapeRegExp(routes.NEW_RECORD_API().apiUrl)))
-    .reply(200, {data: {...testingMockData.thesis}});
+    .reply(200, {data: {rek_pid: 'UQ:1111111'}}); // TODO: add actual record to data return!!!
 // .reply(500, {message: 'error - failed NEW_RECORD_API'});
 // .reply(403, {message: 'Session expired'});
 

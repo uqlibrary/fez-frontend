@@ -79,13 +79,14 @@ export class FreeTextFormClass extends Component {
 
     render() {
         const {classes, locale, errorText, disabled} = this.props;
-        const{inputFieldLabel, inputFieldHint, remindToAdd, addButtonLabel} = locale;
+        const{inputFieldLabel, inputFieldHint, remindToAdd, addButtonLabel, id} = locale;
         const inputLength = this.state.itemName && this.state.itemName.length > this.props.maxInputLength && `Limited to ${this.props.maxInputLength} characters`;
         return (
             <Grid container spacing={16} display="row" alignItems="center">
                 <Grid item style={{flexGrow: 1}}>
                     <TextField
                         fullWidth
+                        id={!!id && id || ''}
                         inputRef={(node) => {this.textField = node;}}
                         label={inputFieldLabel}
                         placeholder={inputFieldHint}
@@ -111,6 +112,7 @@ export class FreeTextFormClass extends Component {
                 <Grid item xs={12} sm={2}>
                     <Button
                         fullWidth
+                        id="add-items"
                         color="primary"
                         variant="contained"
                         children={addButtonLabel}

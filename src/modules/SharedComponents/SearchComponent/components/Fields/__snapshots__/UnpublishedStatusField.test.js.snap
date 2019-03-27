@@ -1191,6 +1191,11 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                             </InputLabel>
                           </WithStyles(InputLabel)>
                           <WithStyles(Select)
+                            SelectDisplayProps={
+                              Object {
+                                "id": undefined,
+                              }
+                            }
                             autoWidth={false}
                             disabled={false}
                             multiple={false}
@@ -1199,6 +1204,11 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                           >
                             <Select
                               IconComponent={[Function]}
+                              SelectDisplayProps={
+                                Object {
+                                  "id": undefined,
+                                }
+                              }
                               autoWidth={false}
                               classes={
                                 Object {
@@ -1226,7 +1236,9 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                   Object {
                                     "IconComponent": [Function],
                                     "MenuProps": undefined,
-                                    "SelectDisplayProps": undefined,
+                                    "SelectDisplayProps": Object {
+                                      "id": undefined,
+                                    },
                                     "autoWidth": false,
                                     "children": Array [
                                       false,
@@ -1396,7 +1408,9 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                     Object {
                                       "IconComponent": [Function],
                                       "MenuProps": undefined,
-                                      "SelectDisplayProps": undefined,
+                                      "SelectDisplayProps": Object {
+                                        "id": undefined,
+                                      },
                                       "autoWidth": false,
                                       "children": Array [
                                         false,
@@ -1567,7 +1581,9 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                       Object {
                                         "IconComponent": [Function],
                                         "MenuProps": undefined,
-                                        "SelectDisplayProps": undefined,
+                                        "SelectDisplayProps": Object {
+                                          "id": undefined,
+                                        },
                                         "autoWidth": false,
                                         "children": Array [
                                           false,
@@ -1744,7 +1760,9 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                         Object {
                                           "IconComponent": [Function],
                                           "MenuProps": undefined,
-                                          "SelectDisplayProps": undefined,
+                                          "SelectDisplayProps": Object {
+                                            "id": undefined,
+                                          },
                                           "autoWidth": false,
                                           "children": Array [
                                             false,
@@ -1898,6 +1916,11 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                       >
                                         <SelectInput
                                           IconComponent={[Function]}
+                                          SelectDisplayProps={
+                                            Object {
+                                              "id": undefined,
+                                            }
+                                          }
                                           aria-invalid={false}
                                           autoWidth={false}
                                           className="MuiInputBase-input-50 MuiInput-input-35"
@@ -3789,6 +3812,11 @@ exports[`UnpublishedStatusField component should render error message from redux
                             </InputLabel>
                           </WithStyles(InputLabel)>
                           <WithStyles(Select)
+                            SelectDisplayProps={
+                              Object {
+                                "id": undefined,
+                              }
+                            }
                             autoWidth={false}
                             disabled={false}
                             multiple={false}
@@ -3797,6 +3825,11 @@ exports[`UnpublishedStatusField component should render error message from redux
                           >
                             <Select
                               IconComponent={[Function]}
+                              SelectDisplayProps={
+                                Object {
+                                  "id": undefined,
+                                }
+                              }
                               autoWidth={false}
                               classes={
                                 Object {
@@ -3824,7 +3857,9 @@ exports[`UnpublishedStatusField component should render error message from redux
                                   Object {
                                     "IconComponent": [Function],
                                     "MenuProps": undefined,
-                                    "SelectDisplayProps": undefined,
+                                    "SelectDisplayProps": Object {
+                                      "id": undefined,
+                                    },
                                     "autoWidth": false,
                                     "children": Array [
                                       false,
@@ -3994,7 +4029,9 @@ exports[`UnpublishedStatusField component should render error message from redux
                                     Object {
                                       "IconComponent": [Function],
                                       "MenuProps": undefined,
-                                      "SelectDisplayProps": undefined,
+                                      "SelectDisplayProps": Object {
+                                        "id": undefined,
+                                      },
                                       "autoWidth": false,
                                       "children": Array [
                                         false,
@@ -4165,7 +4202,9 @@ exports[`UnpublishedStatusField component should render error message from redux
                                       Object {
                                         "IconComponent": [Function],
                                         "MenuProps": undefined,
-                                        "SelectDisplayProps": undefined,
+                                        "SelectDisplayProps": Object {
+                                          "id": undefined,
+                                        },
                                         "autoWidth": false,
                                         "children": Array [
                                           false,
@@ -4342,7 +4381,9 @@ exports[`UnpublishedStatusField component should render error message from redux
                                         Object {
                                           "IconComponent": [Function],
                                           "MenuProps": undefined,
-                                          "SelectDisplayProps": undefined,
+                                          "SelectDisplayProps": Object {
+                                            "id": undefined,
+                                          },
                                           "autoWidth": false,
                                           "children": Array [
                                             false,
@@ -4496,6 +4537,11 @@ exports[`UnpublishedStatusField component should render error message from redux
                                       >
                                         <SelectInput
                                           IconComponent={[Function]}
+                                          SelectDisplayProps={
+                                            Object {
+                                              "id": undefined,
+                                            }
+                                          }
                                           aria-invalid={true}
                                           autoWidth={false}
                                           className="MuiInputBase-input-50 MuiInput-input-35"
@@ -6400,6 +6446,11 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                             </InputLabel>
                           </WithStyles(InputLabel)>
                           <WithStyles(Select)
+                            SelectDisplayProps={
+                              Object {
+                                "id": undefined,
+                              }
+                            }
                             autoWidth={false}
                             disabled={false}
                             multiple={false}
@@ -6408,6 +6459,11 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                           >
                             <Select
                               IconComponent={[Function]}
+                              SelectDisplayProps={
+                                Object {
+                                  "id": undefined,
+                                }
+                              }
                               autoWidth={false}
                               classes={
                                 Object {
@@ -6435,7 +6491,9 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                   Object {
                                     "IconComponent": [Function],
                                     "MenuProps": undefined,
-                                    "SelectDisplayProps": undefined,
+                                    "SelectDisplayProps": Object {
+                                      "id": undefined,
+                                    },
                                     "autoWidth": false,
                                     "children": Array [
                                       false,
@@ -6605,7 +6663,9 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                     Object {
                                       "IconComponent": [Function],
                                       "MenuProps": undefined,
-                                      "SelectDisplayProps": undefined,
+                                      "SelectDisplayProps": Object {
+                                        "id": undefined,
+                                      },
                                       "autoWidth": false,
                                       "children": Array [
                                         false,
@@ -6776,7 +6836,9 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                       Object {
                                         "IconComponent": [Function],
                                         "MenuProps": undefined,
-                                        "SelectDisplayProps": undefined,
+                                        "SelectDisplayProps": Object {
+                                          "id": undefined,
+                                        },
                                         "autoWidth": false,
                                         "children": Array [
                                           false,
@@ -6953,7 +7015,9 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                         Object {
                                           "IconComponent": [Function],
                                           "MenuProps": undefined,
-                                          "SelectDisplayProps": undefined,
+                                          "SelectDisplayProps": Object {
+                                            "id": undefined,
+                                          },
                                           "autoWidth": false,
                                           "children": Array [
                                             false,
@@ -7107,6 +7171,11 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                       >
                                         <SelectInput
                                           IconComponent={[Function]}
+                                          SelectDisplayProps={
+                                            Object {
+                                              "id": undefined,
+                                            }
+                                          }
                                           aria-invalid={false}
                                           autoWidth={false}
                                           className="MuiInputBase-input-50 MuiInput-input-35"
@@ -8991,6 +9060,11 @@ exports[`UnpublishedStatusField component should render with value selected from
                             </InputLabel>
                           </WithStyles(InputLabel)>
                           <WithStyles(Select)
+                            SelectDisplayProps={
+                              Object {
+                                "id": undefined,
+                              }
+                            }
                             autoWidth={false}
                             disabled={false}
                             multiple={false}
@@ -8999,6 +9073,11 @@ exports[`UnpublishedStatusField component should render with value selected from
                           >
                             <Select
                               IconComponent={[Function]}
+                              SelectDisplayProps={
+                                Object {
+                                  "id": undefined,
+                                }
+                              }
                               autoWidth={false}
                               classes={
                                 Object {
@@ -9026,7 +9105,9 @@ exports[`UnpublishedStatusField component should render with value selected from
                                   Object {
                                     "IconComponent": [Function],
                                     "MenuProps": undefined,
-                                    "SelectDisplayProps": undefined,
+                                    "SelectDisplayProps": Object {
+                                      "id": undefined,
+                                    },
                                     "autoWidth": false,
                                     "children": Array [
                                       false,
@@ -9196,7 +9277,9 @@ exports[`UnpublishedStatusField component should render with value selected from
                                     Object {
                                       "IconComponent": [Function],
                                       "MenuProps": undefined,
-                                      "SelectDisplayProps": undefined,
+                                      "SelectDisplayProps": Object {
+                                        "id": undefined,
+                                      },
                                       "autoWidth": false,
                                       "children": Array [
                                         false,
@@ -9367,7 +9450,9 @@ exports[`UnpublishedStatusField component should render with value selected from
                                       Object {
                                         "IconComponent": [Function],
                                         "MenuProps": undefined,
-                                        "SelectDisplayProps": undefined,
+                                        "SelectDisplayProps": Object {
+                                          "id": undefined,
+                                        },
                                         "autoWidth": false,
                                         "children": Array [
                                           false,
@@ -9544,7 +9629,9 @@ exports[`UnpublishedStatusField component should render with value selected from
                                         Object {
                                           "IconComponent": [Function],
                                           "MenuProps": undefined,
-                                          "SelectDisplayProps": undefined,
+                                          "SelectDisplayProps": Object {
+                                            "id": undefined,
+                                          },
                                           "autoWidth": false,
                                           "children": Array [
                                             false,
@@ -9698,6 +9785,11 @@ exports[`UnpublishedStatusField component should render with value selected from
                                       >
                                         <SelectInput
                                           IconComponent={[Function]}
+                                          SelectDisplayProps={
+                                            Object {
+                                              "id": undefined,
+                                            }
+                                          }
                                           aria-invalid={false}
                                           autoWidth={false}
                                           className="MuiInputBase-input-50 MuiInput-input-35"

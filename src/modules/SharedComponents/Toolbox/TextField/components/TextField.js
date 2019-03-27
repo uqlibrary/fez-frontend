@@ -16,7 +16,7 @@ export const TextFieldWrapper = props => {
         <Fragment>
             <TextField {...filteredProps}
                 helperText={helperText}
-                id={props.label || ''}
+                id={props.id || props.label || ''}
                 InputLabelProps={filteredProps.floatinglabelfixed ? {shrink: true} : null}
             />
         </Fragment>
