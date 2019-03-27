@@ -236,7 +236,7 @@ export function submitThesis(data) {
                     // Hard to mock this call in jest - so we skip it if testing
                     /* istanbul ignore next */
                     if(process.env.NODE_ENV !== 'test') {
-                        post(RECORDS_ISSUES_API({pid: newRecord.rek_pid}), {issue: 'Test'});
+                        post(RECORDS_ISSUES_API({pid: newRecord.rek_pid}), {issue: 'The submitter had issues uploading files on this record: ' + newRecord});
                     }
                     dispatch({
                         type: actions.CREATE_RECORD_SUCCESS,
