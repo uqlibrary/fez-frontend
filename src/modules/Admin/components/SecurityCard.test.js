@@ -1,4 +1,4 @@
-import { getIndexWithAttr, renderPolicyDesc, renderPolicyItems, SecurityCard } from './SecurityCard';
+import { renderPolicyDesc, renderPolicyItems, SecurityCard } from './SecurityCard';
 
 function setup(testProps, isShallow = true) {
     const props = {
@@ -25,14 +25,6 @@ describe('SecurityCard component', () => {
         { name: 'test2Name', id: 'test2ID', value: 2, label: 'test2Label' },
         { name: 'test3Name', id: 'test3ID', value: 3, label: 'test3Label' },
     ];
-
-    it('should find index in object array with attribute value', () => {
-        const testArray = [
-            { key1: 'value1', 'key2': 'value2' },
-            { key1: 'value3', 'key2': 'value4' },
-        ];
-        expect(getIndexWithAttr(testArray, 'key1', 'value3')).toBe(1);
-    });
 
     it('should render policy description as expected', () => {
         const test1 = renderPolicyDesc(2);

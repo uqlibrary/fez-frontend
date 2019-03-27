@@ -12,14 +12,10 @@ import { SelectField } from 'modules/SharedComponents/Toolbox/SelectField';
 import { validation } from 'config';
 import { TOP_LEVEL_SECURITY_POLICIES } from 'config/general';
 
-export const getIndexWithAttr = (array, attr, value) => (
-    array.map(item => item[attr]).indexOf(value)
-);
-
 export const renderPolicyDesc = (selectedPolicyKey, policyArray = TOP_LEVEL_SECURITY_POLICIES) => {
-    const policyDesc = policyArray[
-        getIndexWithAttr(policyArray, 'value', selectedPolicyKey)
-    ];
+    const policyDesc = policyArray.find(
+        policy => policy.value === selectedPolicyKey
+    );
     return (
         <React.Fragment>
             {policyDesc.name} ({policyDesc.id})
