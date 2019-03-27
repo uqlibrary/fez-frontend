@@ -273,10 +273,10 @@ export function clearNewRecord() {
     };
 }
 
-export function getCommunitySecurity({ id }) {
+export function getCommunitySecurity({ pid }) {
     return dispatch => {
         dispatch({type: actions.SECURITY_POLICY_LOADING});
-        return get(COMMUNITIES_SECURITY_POLICY_API({ id }))
+        return get(COMMUNITIES_SECURITY_POLICY_API({ pid }))
             .then(response => {
                 dispatch({
                     type: actions.SECURITY_POLICY_LOADED,
@@ -296,13 +296,13 @@ export function getCommunitySecurity({ id }) {
 }
 
 export function updateCommunitySecurity({ pid, communitySecurity }) {
-    const data = {
-        rek_pid: pid,
-        rek_security_policy: communitySecurity
+    const request = {
+        ...transformers.getPidSearchKey(pid),
+        ...transformers.getSecurityPolicySearchKey(communitySecurity)
     };
     return dispatch => {
         dispatch({type: actions.SECURITY_POLICY_SAVING});
-        return patch(COMMUNITIES_SECURITY_POLICY_API(data))
+        return patch(COMMUNITIES_SECURITY_POLICY_API(request))
             .then((response) => {
                 dispatch({
                     type: actions.SECURITY_POLICY_SAVED,

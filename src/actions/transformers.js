@@ -15,6 +15,14 @@ const getIssueValues = (data) => {
 
 const getIssuesRequest = (text) => ({issue: text});
 
+export const getPidSearchKey = value => ({
+    rek_pid: value
+});
+
+export const getSecurityPolicySearchKey = value => ({
+    rek_security_policy: value
+});
+
 /* getFixIssueRequest - returns fix record issue request object
 * @returns {Object} issue request
 */
