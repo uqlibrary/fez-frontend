@@ -11,10 +11,12 @@ import Cookies from 'js-cookie';
 const FORM_NAME = 'Prototype';
 
 const onSubmit = (values, dispatch) => {
-    return dispatch(updateCommunitySecurity({...values.toJS()}))
-        .catch(error => {
-            throw new SubmissionError({_error: error});
-        });
+    return dispatch(updateCommunitySecurity({
+        pid: securityAssignments[0].pid,
+        ...values.toJS()
+    })).catch(error => {
+        throw new SubmissionError({_error: error});
+    });
 };
 
 let PrototypeContainer = reduxForm({
