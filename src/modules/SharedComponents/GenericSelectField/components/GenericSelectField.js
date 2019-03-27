@@ -40,7 +40,8 @@ export class GenericSelectFieldClass extends Component {
         hideLabel: PropTypes.bool,
         displayEmpty: PropTypes.bool,
 
-        classes: PropTypes.object
+        classes: PropTypes.object,
+        id: PropTypes.string
     };
 
     static defaultProps = {
@@ -144,6 +145,9 @@ export class GenericSelectFieldClass extends Component {
                     aria-label={this.props.ariaLabel}
                     autoWidth={this.props.autoWidth}
                     multiple={this.props.multiple}
+                    SelectDisplayProps={{
+                        id: this.props.id
+                    }}
                 >
                     {this.renderMenuItems()}
                 </Select>

@@ -45,9 +45,7 @@ const AddDataCollectionContainer = reduxForm({
 const mapStateToProps = (state) => {
     const formErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});
 
-    const today = new Date();
     const initialValues = {
-        rek_date: `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`,
         ...NEW_DATASET_DEFAULT_VALUES
     };
 

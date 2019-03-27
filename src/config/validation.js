@@ -77,6 +77,9 @@ export const isValidPublicationTitle = value => {
 // Generic
 export const required = value => value ? undefined : locale.validationErrors.required;
 
+// Check if copyright/agreement is checked
+export const requireChecked = value => value === 'on' ? undefined : locale.validationErrors.requireChecked;
+
 export const requiredList = value => {
     if(value instanceof Immutable.List) {
         return value.toJS() && value.toJS().length > 0 ? undefined : locale.validationErrors.required;
@@ -107,7 +110,7 @@ export const validFileUpload = value => {
 };
 
 export const fileUploadRequired = value => {
-    return value === undefined || value.queue.length === 0 ? locale.validationErrors.fileUploadRequired : undefined;
+    return value === undefined || (value.queue || {}).length === 0 ? locale.validationErrors.fileUploadRequired : undefined;
 };
 
 export const fileUploadNotRequiredForMediated = (value, values) => {

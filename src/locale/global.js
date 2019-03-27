@@ -73,11 +73,16 @@ export default {
                 message: 'The requested page could not be found.',
                 status: 404
             },
+            422: {
+                message: 'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',
+                status: 500
+            },
             500: {
                 message: 'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',
                 status: 500
             },
             generic: 'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',
+            genericAlternate: 'Error has occurred during request and request cant be processed. Please contact eSpace administrators or try again later.',
         },
         notRegisteredAuthorAlert: {
             title: 'You are not registered in UQ eSpace as an author',

@@ -485,6 +485,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
               <Field
                 component={[Function]}
                 disabled={false}
+                id="data-collection-access-selector"
                 label="Access conditions"
                 name="fez_record_search_key_access_conditions.rek_access_conditions"
                 required={true}
@@ -504,6 +505,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
               <Field
                 component={[Function]}
                 disabled={false}
+                id="data-collection-license-selector"
                 label="Licensing and terms of access"
                 name="fez_record_search_key_license.rek_license"
                 required={true}
@@ -600,6 +602,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     "form": Object {
                       "locale": Object {
                         "addButtonLabel": "Add",
+                        "id": "funding-body-input",
                         "inputFieldHint": "Type the name of the funding body(s) associated with your research e.g. ARC, NHMRC",
                         "inputFieldLabel": "Funding body",
                       },
@@ -654,6 +657,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     "form": Object {
                       "locale": Object {
                         "addButtonLabel": "Add",
+                        "id": "grant-id-input",
                         "inputFieldHint": "Type grantID",
                         "inputFieldLabel": "Grant IDs",
                       },
@@ -722,6 +726,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     "form": Object {
                       "locale": Object {
                         "addButtonLabel": "Add",
+                        "id": "type-of-data-input",
                         "inputFieldHint": "Type type of data",
                         "inputFieldLabel": "Type of data",
                       },
@@ -782,6 +787,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     "form": Object {
                       "locale": Object {
                         "addButtonLabel": "Add",
+                        "id": "software-required-input",
                         "inputFieldHint": "Type software required",
                         "inputFieldLabel": "Software required",
                       },
@@ -842,6 +848,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     "form": Object {
                       "locale": Object {
                         "addButtonLabel": "Add",
+                        "id": "keywords-input",
                         "inputFieldHint": "Type keywords",
                         "inputFieldLabel": "Keywords",
                       },
@@ -1182,6 +1189,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="submit-data-collection"
           onClick={[MockFunction]}
           variant="contained"
         >
@@ -1672,6 +1680,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
               <Field
                 component={[Function]}
                 disabled={false}
+                id="data-collection-access-selector"
                 label="Access conditions"
                 name="fez_record_search_key_access_conditions.rek_access_conditions"
                 required={true}
@@ -1691,6 +1700,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
               <Field
                 component={[Function]}
                 disabled={false}
+                id="data-collection-license-selector"
                 label="Licensing and terms of access"
                 name="fez_record_search_key_license.rek_license"
                 required={true}
@@ -1787,6 +1797,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     "form": Object {
                       "locale": Object {
                         "addButtonLabel": "Add",
+                        "id": "funding-body-input",
                         "inputFieldHint": "Type the name of the funding body(s) associated with your research e.g. ARC, NHMRC",
                         "inputFieldLabel": "Funding body",
                       },
@@ -1841,6 +1852,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     "form": Object {
                       "locale": Object {
                         "addButtonLabel": "Add",
+                        "id": "grant-id-input",
                         "inputFieldHint": "Type grantID",
                         "inputFieldLabel": "Grant IDs",
                       },
@@ -1909,6 +1921,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     "form": Object {
                       "locale": Object {
                         "addButtonLabel": "Add",
+                        "id": "type-of-data-input",
                         "inputFieldHint": "Type type of data",
                         "inputFieldLabel": "Type of data",
                       },
@@ -1969,6 +1982,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     "form": Object {
                       "locale": Object {
                         "addButtonLabel": "Add",
+                        "id": "software-required-input",
                         "inputFieldHint": "Type software required",
                         "inputFieldLabel": "Software required",
                       },
@@ -2029,6 +2043,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     "form": Object {
                       "locale": Object {
                         "addButtonLabel": "Add",
+                        "id": "keywords-input",
                         "inputFieldHint": "Type keywords",
                         "inputFieldLabel": "Keywords",
                       },
@@ -2369,6 +2384,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="submit-data-collection"
           onClick={[MockFunction]}
           variant="contained"
         >
