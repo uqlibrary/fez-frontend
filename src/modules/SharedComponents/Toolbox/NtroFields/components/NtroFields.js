@@ -57,26 +57,34 @@ export default class NtroFields extends React.PureComponent {
         showContributionStatement: false,
         locale: {
             contributionStatement: {
-                title: 'Author/Creator contribution statement (not for public view)',
+                title: 'Author/Creator research statement',
                 fields: {
                     scaleOfWork: {
-                        label: 'Scale/Significance of work',
-                        description: 'Select the option that desribes the significance of the work for you.',
+                        label: (<span>Scale/Significance of work* <span style={{fontWeight: 700}}>(not for public view)</span></span>),
+                        description: 'Select the option that best describes the significance of the work.',
                     },
                     impactStatement: {
-                        label: 'Creator contribution statement *',
-                        placeholder: 'Enter a personal statement (2000 characters or less) that describes the background, contribution and significance of the work for you.',
-                        description: 'Remember to enter your statement in three sections: Background, Contribution, Significance'
+                        label: (<span>Creator research statement*. Include Background, Contribution and Significance <span style={{fontWeight: 700}}>(not for public view)</span></span>),
+                        placeholder: 'Remember to include substantiation of your Major or Minor Scale/Significance claim above.'
                     },
+                },
+                help: {
+                    title: 'Author/Creator research statement',
+                    text: (
+                        <React.Fragment>
+                            <h3>Creator research statement</h3>
+                            <p>For more information about the research statement, click  <b><a style={{fontWeight: 700}} target="_blank" href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836548">here</a></b></p>
+                        </React.Fragment>
+                    ),
+                    buttonLabel: 'CLOSE'
                 }
             },
             metadata: {
-                title: 'Non-traditional research output metadata',
+                title: 'NTRO data',
                 fields: {
                     abstract: {
-                        label: 'Abstract/Description (for public view) *',
-                        placeholder: 'Enter a brief description (800 characters or less, approximately 100 words) of the work',
-                        description: 'Remember that this description is for public view',
+                        label: (<span>Abstract/Description* <span style={{fontWeight: 700}}>(for public view)</span></span>),
+                        placeholder: 'Enter a brief description of the work',
                     },
                     series: {
                         floatingLabelText: 'Series',
@@ -164,7 +172,7 @@ export default class NtroFields extends React.PureComponent {
                 {
                     this.props.showContributionStatement &&
                     <Grid item xs={12}>
-                        <StandardCard title={contributionStatement.title}>
+                        <StandardCard title={contributionStatement.title} help={contributionStatement.help}>
                             <Grid container spacing={8}>
                                 <Grid item xs={12}>
                                     <Typography>{contributionStatement.fields.scaleOfWork.description}</Typography>
@@ -188,7 +196,6 @@ export default class NtroFields extends React.PureComponent {
                                         title={contributionStatement.fields.impactStatement.label}
                                         description={contributionStatement.fields.impactStatement.placeholder}
                                         maxValue={2000}
-                                        instructions={contributionStatement.fields.impactStatement.description}
                                         disabled={this.props.submitting}
                                         validate={[validation.required, validation.maxLengthWithWhitespace(2000)]}
                                     />
@@ -208,7 +215,6 @@ export default class NtroFields extends React.PureComponent {
                                     title={metadata.fields.abstract.label}
                                     description={metadata.fields.abstract.placeholder}
                                     maxValue={800}
-                                    instructions={metadata.fields.abstract.description}
                                     disabled={this.props.submitting}
                                     validate={[validation.required, validation.maxLengthWithWhitespace(800)]}/>
                             </Grid>

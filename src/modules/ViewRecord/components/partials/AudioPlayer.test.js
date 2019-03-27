@@ -17,7 +17,26 @@ describe('Audio Player Component ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should play audio', () => {
+    it('should set playing state via audioPlayerPlay()', async () => {
+        const wrapper = setup({}, true);
+
+        // Without promise
+        wrapper.instance().audioPlayerPlay();
+        expect(wrapper.state().isPlaying).toBe(true);
+
+        // reset
+        wrapper.instance().setState({isPlaying: false});
+        expect(wrapper.state().isPlaying).toBe(false);
+
+        // with promise
+        wrapper.instance().audioPlayerRef = {
+            play: () => Promise.resolve()
+        };
+        await wrapper.instance().audioPlayerPlay();
+        expect(wrapper.state().isPlaying).toBe(true);
+    });
+
+    it('should play audio via button click', () => {
         const wrapper = setup({}, false);
         expect(toJson(wrapper)).toMatchSnapshot();
         const element = wrapper.find('PlayArrowIcon.play');
@@ -28,19 +47,33 @@ describe('Audio Player Component ', () => {
         expect(play).toHaveBeenCalledTimes(1);
     });
 
-    it('should pause audio', () => {
+    it('should play audio', () => {
         const shallowWrapper = setup({});
         shallowWrapper.setState({isPlaying: true});
         expect(toJson(shallowWrapper)).toMatchSnapshot();
+    });
 
-        const wrapper = getElement(() => shallowWrapper.instance(), shallowWrapper.instance().props, false);
+    it('should pause audio', () => {
+        const wrapper = getElement(AudioPlayer, {pid: journalArticle.rek_pid,
+            fileName: journalArticle.fez_record_search_key_file_attachment_name[2].rek_file_attachment_name,
+            mimeType: 'audio/mp3'}, false);
+        wrapper.setState({isPlaying: true});
+        wrapper.update();
         expect(toJson(wrapper)).toMatchSnapshot();
-        const element = wrapper.find('PauseIcon.pause');
-        const audio = wrapper.find('audio');
+        const playElement = wrapper.find('WithStyles(IconButton)#playButton');
+        const audio = wrapper.find('#audioPlayer');
         const pause = jest.fn();
+        const play = jest.fn();
         audio.getDOMNode().pause = pause;
-        element.simulate('click');
+        audio.getDOMNode().play = play;
+        playElement.simulate('click');
+        expect(pause).toHaveBeenCalledTimes(0);
+        expect(play).toHaveBeenCalledTimes(1);
+        const pauseElement = wrapper.find('WithStyles(IconButton)#pauseButton');
+        pauseElement.simulate('click');
         expect(pause).toHaveBeenCalledTimes(1);
+        expect(play).toHaveBeenCalledTimes(1);
+
     });
 
     it('should set component state to playing', () => {

@@ -35,7 +35,7 @@ export default class BookChapterForm extends Component {
         const formValues = this.props.formValues && this.props.formValues.toJS();
         const startPage = formValues && formValues.fez_record_search_key_start_page && formValues.fez_record_search_key_start_page.rek_start_page;
         const endPage = formValues && formValues.fez_record_search_key_end_page && formValues.fez_record_search_key_end_page.rek_end_page;
-        const pageError = !!startPage && !!endPage && startPage > endPage ? 'Page range invalid' : '';
+        const pageError = !!startPage && !!endPage && parseInt(startPage, 10) > parseInt(endPage, 10) ? 'Page range invalid' : '';
         return (
             <Grid container spacing={24}>
                 <Grid item xs={12}>
@@ -44,7 +44,7 @@ export default class BookChapterForm extends Component {
                             <Grid item xs={12}>
                                 <Field
                                     component={TextField}
-                                    autoFocus
+                                    autoFocus={!this.props.isNtro}
                                     disabled={this.props.submitting}
                                     name="rek_title"
                                     required

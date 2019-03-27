@@ -1,4 +1,4 @@
-import {trendingPublications} from 'mock/data/testing/trendingPublications';
+import {trendingPublications, trendingPublicationsWithNoSources} from 'mock/data/testing/trendingPublications';
 import {MyTrendingPublications} from './MyTrendingPublications';
 import {transformTrendingPublicationsMetricsData} from 'actions/academicDataTransformers';
 import mui1theme from 'config';
@@ -21,6 +21,11 @@ describe('Component MyTrendingPublications', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should not render trending publications when there are no matching source counts in the api response', () => {
+        const wrapper = setup({trendingPublicationsList: transformTrendingPublicationsMetricsData(trendingPublicationsWithNoSources)});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
     it('should render loading indicator', () => {
         const wrapper = setup({loadingTrendingPublications: true});
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -35,6 +40,6 @@ describe('Component MyTrendingPublications', () => {
     it('should not fetch data if account author details is still loading', () => {
         const testFn = jest.fn();
         setup({accountAuthorDetailsLoading: true, actions: {searchTrendingPublications: testFn}});
-        expect(testFn).toHaveBeenCalledTimes(0);
+        expect(testFn).not.toBeCalled();
     });
 });

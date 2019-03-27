@@ -1,5 +1,4 @@
 import React, {PureComponent} from 'react';
-import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
@@ -41,11 +40,15 @@ export default class RecordsSearchResults extends PureComponent {
         loadingPublicationSources: {}
     };
 
-    componentWillReceiveProps(nextProps) {
-        if (this.showNewRecordButton && nextProps.publicationsList.length === 0) {
-            ReactDOM.findDOMNode(this.showNewRecordButton).focus();
+    componentDidUpdate() {
+        if (this.showNewRecordButton && this.props.publicationsList.length === 0) {
+            this.showNewRecordButton.focus();
         }
     }
+
+    _setRef = (node) => {
+        this.showNewRecordButton = node;
+    };
 
     _showNewRecordForm = () => {
         this.props.history.push(pathConfig.records.add.new);
@@ -189,7 +192,7 @@ export default class RecordsSearchResults extends PureComponent {
                                             variant={'contained'}
                                             color="primary"
                                             onClick={this._showNewRecordForm}
-                                            ref={(node) => {this.showNewRecordButton = node;}}
+                                            buttonRef={this._setRef}
                                         >
                                             {searchResultsTxt.submit}
                                         </Button>

@@ -99,6 +99,7 @@ describe('Academic action creators', () => {
             actions.AUTHOR_PUBLICATIONS_COUNT_PER_TYPE_LOADED,
             actions.AUTHOR_PUBLICATIONS_COUNT_TOTAL_LOADED,
             actions.AUTHOR_PUBLICATIONS_BY_YEAR_LOADED,
+            actions.APP_ALERT_SHOW,
             actions.AUTHOR_PUBLICATIONS_STATS_LOADED
         ];
 
@@ -115,6 +116,10 @@ describe('Academic action creators', () => {
 
         const expectedActions = [
             actions.AUTHOR_PUBLICATIONS_STATS_LOADING,
+            actions.AUTHOR_PUBLICATIONS_COUNT_PER_TYPE_LOADED,
+            actions.AUTHOR_PUBLICATIONS_COUNT_TOTAL_LOADED,
+            actions.AUTHOR_PUBLICATIONS_BY_YEAR_LOADED,
+            actions.APP_ALERT_SHOW,
             actions.AUTHOR_PUBLICATIONS_STATS_FAILED
         ];
 

@@ -42,13 +42,13 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with both
           key="453983"
           value="453983"
         >
-          Museum
+          Library/Museum/Public Gallery
         </WithStyles(MenuItem)>
         <WithStyles(MenuItem)
           key="453984"
           value="453984"
         >
-          Gallery
+          Commercial Gallery
         </WithStyles(MenuItem)>
         <WithStyles(MenuItem)
           key="453985"
@@ -134,13 +134,13 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with defa
           key="453983"
           value="453983"
         >
-          Museum
+          Library/Museum/Public Gallery
         </WithStyles(MenuItem)>
         <WithStyles(MenuItem)
           key="453984"
           value="453984"
         >
-          Gallery
+          Commercial Gallery
         </WithStyles(MenuItem)>
         <WithStyles(MenuItem)
           key="453985"
@@ -226,13 +226,13 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with orga
           key="453983"
           value="453983"
         >
-          Museum
+          Library/Museum/Public Gallery
         </WithStyles(MenuItem)>
         <WithStyles(MenuItem)
           key="453984"
           value="453984"
         >
-          Gallery
+          Commercial Gallery
         </WithStyles(MenuItem)>
         <WithStyles(MenuItem)
           key="453985"
@@ -318,13 +318,13 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with orga
           key="453983"
           value="453983"
         >
-          Museum
+          Library/Museum/Public Gallery
         </WithStyles(MenuItem)>
         <WithStyles(MenuItem)
           key="453984"
           value="453984"
         >
-          Gallery
+          Commercial Gallery
         </WithStyles(MenuItem)>
         <WithStyles(MenuItem)
           key="453985"

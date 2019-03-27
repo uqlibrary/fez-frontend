@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import locale from 'locale/viewRecord';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
@@ -35,7 +34,7 @@ const styles = (theme) => ({
     },
 });
 
-export class Files extends Component {
+export class FilesClass extends Component {
     static propTypes = {
         publication: PropTypes.object.isRequired,
         hideCulturalSensitivityStatement: PropTypes.bool,
@@ -99,11 +98,6 @@ export class Files extends Component {
                 mimeType: mimeType
             }
         });
-
-        setTimeout(() => {
-            const files = ReactDOM.findDOMNode(this.refs.files);
-            files && window.scrollTo(0, (files.offsetTop + files.scrollHeight - 30));
-        }, 80);
     }
 
     formatBytes = (bytes) => {
@@ -267,7 +261,6 @@ export class Files extends Component {
                     {
                         this.state.preview.mediaUrl && this.state.preview.mimeType &&
                         <MediaPreview
-                            ref="mediaPreview"
                             mediaUrl={this.state.preview.mediaUrl}
                             previewMediaUrl={this.state.preview.previewMediaUrl}
                             mimeType={this.state.preview.mimeType}
@@ -279,4 +272,6 @@ export class Files extends Component {
     }
 }
 
-export default withStyles(styles)(Files);
+const StyledFilesClass = withStyles(styles, {withTheme: true})(FilesClass);
+const Files = (props) => <StyledFilesClass {...props}/>;
+export default Files;

@@ -4,7 +4,7 @@ import param from 'can-param';
 
 import Snackbar from '@material-ui/core/Snackbar';
 import {routes} from 'config';
-import {defaultQueryParams, UNPUBLISHED_STATUS_MAP, UNPUBLISHED_STATUS_TEXT_MAP} from 'config/general';
+import {defaultQueryParams, UNPUBLISHED_STATUS_MAP, UNPUBLISHED_STATUS_TEXT_MAP, GENERIC_DATE_FORMAT} from 'config/general';
 import {locale} from 'locale';
 
 import SimpleSearchComponent from './SimpleSearchComponent';
@@ -76,7 +76,7 @@ export default class SearchComponent extends PureComponent {
                 isMinimised: props.isAdvancedSearchMinimised,
                 isOpenAccess: props.isOpenAccessInAdvancedMode || false,
                 docTypes: this.getDocTypesFromSearchQuery(props.searchQueryParams),
-                yearFilter: this.getYearRangeFromActiveFacets(props.activeFacets) || {},
+                yearFilter: this.getYearRangeFromActiveFacets(props.activeFacets),
                 ...this.getDateRangeFromSearchQuery(props.searchQueryParams)
             }
         };
@@ -90,11 +90,8 @@ export default class SearchComponent extends PureComponent {
             this.setState({
                 isAdvancedSearch: nextProps.isAdvancedSearch,
                 simpleSearch: {
-                    searchText: (
-                        !!nextProps.searchQueryParams.all
-                        && !!nextProps.searchQueryParams.all.value
-                        && nextProps.searchQueryParams.all.value
-                    )
+                    searchText:
+                    (nextProps.searchQueryParams.all || {}).value
                     || (typeof nextProps.searchQueryParams.all === 'string') && nextProps.searchQueryParams.all
                     || ''
                 },
@@ -102,7 +99,7 @@ export default class SearchComponent extends PureComponent {
                     fieldRows: this.getFieldRowsFromSearchQuery(nextProps.searchQueryParams),
                     isMinimised: this.context.isMobile && nextProps.isAdvancedSearchMinimised || false,
                     isOpenAccess: nextProps.isOpenAccessInAdvancedMode || false,
-                    docTypes: this.getDocTypesFromSearchQuery(nextProps.searchQueryParams) || [],
+                    docTypes: this.getDocTypesFromSearchQuery(nextProps.searchQueryParams),
                     yearFilter: {
                         from: this.state.advancedSearch.yearFilter.from,
                         to: this.state.advancedSearch.yearFilter.to,
@@ -173,10 +170,13 @@ export default class SearchComponent extends PureComponent {
     };
 
     parseDateRange = (range) => {
-        const parts = range.indexOf(' to ') > 0 ? range.substring(1, range.length - 1).split(' to ') : [];
+        if (range.indexOf(' to ') < 1) {
+            return {};
+        }
+        const parts = range.substring(1, range.length - 1).split(' to ');
         return {
-            from: moment(parts[0], 'DD/MM/YYYY'),
-            to: moment(parts[1], 'DD/MM/YYYY')
+            from: moment(parts[0], GENERIC_DATE_FORMAT),
+            to: moment(parts[1], GENERIC_DATE_FORMAT)
         };
     };
 
@@ -391,7 +391,7 @@ export default class SearchComponent extends PureComponent {
                         ...searchQueries,
                         [searchField]: {
                             ...rest,
-                            label: `[${item.value.from.format('DD/MM/YYYY')} to ${item.value.to.format('DD/MM/YYYY')}]`,
+                            label: `[${item.value.from.format(GENERIC_DATE_FORMAT)} to ${item.value.to.format(GENERIC_DATE_FORMAT)}]`,
                             value: rangeValue
                         }
                     };

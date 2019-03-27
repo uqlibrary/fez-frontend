@@ -18,6 +18,9 @@ ruleTester.run("no-uql-token", rule, {
         },
         {
             code: "api.defaults.headers.common[TOKEN_NAME] = 'abc123';"
+        },
+        {
+            code: "api.default = 'something'"
         }
     ],
 

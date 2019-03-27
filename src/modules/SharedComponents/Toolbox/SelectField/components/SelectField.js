@@ -6,7 +6,6 @@ import FormHelperText from '@material-ui/core/FormHelperText';
 
 import PropTypes from 'prop-types';
 import propFilter from '../../helpers/_filterProps';
-import {HelpIcon} from '../../HelpDrawer';
 
 const SelectFieldWrapper = props => {
     const filteredProps = propFilter({...props, forceError: true}, Select.propTypes);
@@ -25,7 +24,6 @@ const SelectFieldWrapper = props => {
                     <FormHelperText>{helperText}</FormHelperText>
                 }
             </FormControl>
-            {props.help && props.help.text && <HelpIcon {...props.help} />}
         </React.Fragment>
     );
 };

@@ -1,3 +1,4 @@
+import React from 'react';
 import {AutoCompleteAsyncField} from 'modules/SharedComponents/Toolbox/AutoSuggestField';
 import {connect} from 'react-redux';
 import * as actions from 'actions';
@@ -36,5 +37,9 @@ const mapDispatchToProps = (dispatch) => (
     }
 );
 
-export const AuthorIdField = connect(mapStateToProps, mapDispatchToProps)(AutoCompleteAsyncField);
+const AuthorIdAutoComplete = connect(mapStateToProps, mapDispatchToProps)(AutoCompleteAsyncField);
+
+export function AuthorIdField(fieldProps) {
+    return <AuthorIdAutoComplete {...fieldProps}/>;
+}
 

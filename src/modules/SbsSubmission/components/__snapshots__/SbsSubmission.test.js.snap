@@ -68,7 +68,8 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
       }
       when={true}
     />
-    <WithStyles(ConfirmDialogBox)
+    <ConfirmDialogBox
+      hideCancelButton={false}
       locale={
         Object {
           "cancelButtonLabel": "No, continue editing",
@@ -393,6 +394,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
                 "form": Object {
                   "locale": Object {
                     "addButtonLabel": "Add",
+                    "id": "keywords-input",
                     "inputFieldHint": "Type keywords",
                     "inputFieldLabel": "Keywords",
                   },
@@ -476,7 +478,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
                 </p>,
                 "fileUploadRestrictionHeading": "File upload restrictions",
                 "fileUploadRestrictions": <div>
-                  Maximum file size is 5Gb. 
+                  Maximum file size is 8Gb. 
                   <br />
                   PDF files must be saved using the following naming structure 
                   <b>
@@ -576,7 +578,8 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
       }
       when={true}
     />
-    <WithStyles(ConfirmDialogBox)
+    <ConfirmDialogBox
+      hideCancelButton={false}
       locale={
         Object {
           "cancelButtonLabel": "No, continue editing",
@@ -901,6 +904,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
                 "form": Object {
                   "locale": Object {
                     "addButtonLabel": "Add",
+                    "id": "keywords-input",
                     "inputFieldHint": "Type keywords",
                     "inputFieldLabel": "Keywords",
                   },
@@ -984,7 +988,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
                 </p>,
                 "fileUploadRestrictionHeading": "File upload restrictions",
                 "fileUploadRestrictions": <div>
-                  Maximum file size is 5Gb. 
+                  Maximum file size is 8Gb. 
                   <br />
                   PDF files must be saved using the following naming structure 
                   <b>

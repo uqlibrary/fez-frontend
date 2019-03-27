@@ -45,6 +45,16 @@ describe('Component AddMissingRecord', () => {
         expect(wrapper.instance().getStepperIndex(props.location.pathname)).toEqual(1);
     });
 
+    it('should return 0 when landing on invalid location with tokens not equal to 3', () => {
+        const props = {
+            rawSearchQuery: 'This is a test',
+            location: { pathname: `${routes.pathConfig.records.add.results}/test` },
+            addRecordStep: () => <span />
+        };
+        const wrapper = setup({...props});
+        expect(wrapper.instance().getStepperIndex(props.location.pathname)).toEqual(0);
+    });
+
     it('method getStepperIndex should return step [2] and Stepper should render the 3rd step', () => {
         const props = {
             location: { pathname: routes.pathConfig.records.add.new },

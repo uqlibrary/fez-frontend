@@ -12,8 +12,14 @@ import {MemoryRouter} from 'react-router-dom';
 import thunk from 'redux-thunk';
 import configureMockStore from 'redux-mock-store';
 import MockAdapter from 'axios-mock-adapter';
-import {api, mui1theme} from 'config';
+import {mui1theme} from 'config';
+import {api, sessionApi} from 'config/axios';
 import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
+import MuiPickersUtilsProvider from 'material-ui-pickers/utils/MuiPickersUtilsProvider';
+
+jest.mock('material-ui-pickers/utils/moment-utils');
+
+import MomentUtils from 'material-ui-pickers/utils/moment-utils';
 
 const setupStoreForActions = () => {
     const middlewares = [thunk];
@@ -21,7 +27,7 @@ const setupStoreForActions = () => {
     return mockStore({});
 };
 
-const setupStoreForMount = () => {
+export const setupStoreForMount = () => {
     const initialState = Immutable.Map();
 
     const store = {
@@ -36,6 +42,10 @@ const setupStoreForMount = () => {
 
 const setupMockAdapter = () => {
     return new MockAdapter(api, {delayResponse: 100});
+};
+
+const setupSessionMockAdapter = () => {
+    return new MockAdapter(sessionApi, {delayResponse: 100});
 };
 
 // it's possible to extend expect globally,
@@ -85,17 +95,29 @@ const toHaveAnyOrderDispatchedActions = (actions, expectedActions) => {
 // expect(store.getActions()).toHaveDispatchedActions(expectedActions);
 
 // get a mounted or shallow element
-const getElement = (component, props, isShallow = true) => {
+const getElement = (component, props, isShallow = true, requiresStore = false, context = {}) => {
     if (isShallow) {
-        return shallow(
-            React.createElement(component, props)
-        );
+        if (requiresStore) {
+            return shallow(
+                <Provider store={setupStoreForMount().store}>
+                    {React.createElement(component, props)}
+                </Provider>,
+                {context}
+            );
+        } else {
+            return shallow(
+                React.createElement(component, props),
+                {context}
+            );
+        }
     }
     return mount(
         <Provider store={setupStoreForMount().store}>
             <MemoryRouter initialEntries={[ { pathname: '/', key: 'testKey' } ]}>
                 <MuiThemeProvider theme={mui1theme}>
-                    {React.createElement(component, props)}
+                    <MuiPickersUtilsProvider utils={MomentUtils}>
+                        {React.createElement(component, props)}
+                    </MuiPickersUtilsProvider>
                 </MuiThemeProvider>
             </MemoryRouter>
         </Provider>
@@ -120,7 +142,9 @@ global.mockActionsStore = setupStoreForActions();
 
 // set global mock api
 global.setupMockAdapter = setupMockAdapter;
+global.setupSessionMockAdapter = setupSessionMockAdapter;
 global.mockApi = setupMockAdapter();
+global.mockSessionApi = setupSessionMockAdapter();
 
 // expect extension
 global.toHaveDispatchedActions = toHaveDispatchedActions;

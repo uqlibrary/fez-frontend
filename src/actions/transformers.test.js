@@ -1,5 +1,5 @@
 import * as transformers from './transformers';
-import {APP_URL} from 'config';
+
 const moment = require('moment');
 
 describe('getRecordLinkSearchKey test ', () => {
@@ -46,11 +46,9 @@ describe('getRecordFileAttachmentSearchKey test ', () => {
     });
 
     it('should return empty request object structure if no files are provided', () => {
-        const files = [];
-        const record = {};
-        const expected = {};
-        const result = transformers.getRecordFileAttachmentSearchKey(files, record);
-        expect(result).toEqual(expected);
+        expect(
+            transformers.getRecordFileAttachmentSearchKey([], {})
+        ).toEqual({});
     });
 
     it('should return request object structure for files with various open access status', () => {
@@ -272,7 +270,7 @@ describe('getFixIssueRequest test ', () => {
         input.author.aut_org_username = 'uqjsmith';
         input.comments = 'Some comments...';
         input.rek_link = 'http://www.test.com';
-        input.files = {queue: [{name: '1.jpg'},{name: '2.jpg'}]};
+        input.files = {queue: [{name: '1.jpg'}, {name: '2.jpg'}]};
 
         const expected = ["Added comments: Some comments...", "Added link: http://www.test.com", "Added files: 1.jpg, 2.jpg"];
         const result = transformers.getFixIssueRequest(input);
@@ -455,10 +453,7 @@ describe('unclaimRecord[Author/Contributor]SearchKey test ', () => {
 describe('getRecordSubjectSearchKey test ', () => {
 
     it('should return empty subject object', () => {
-        const input = [];
-        const expected = {};
-        const result = transformers.getRecordSubjectSearchKey(input);
-        expect(result).toEqual(expected);
+        expect(transformers.getRecordSubjectSearchKey()).toEqual({});
     });
 
     it('should return subject list based on input', () => {
@@ -491,10 +486,7 @@ describe('getRecordSubjectSearchKey test ', () => {
 describe('getRecordSupervisorsSearchKey test ', () => {
 
     it('should return empty supervisors object', () => {
-        const input = [];
-        const expected = {};
-        const result = transformers.getRecordSupervisorsSearchKey(input);
-        expect(result).toEqual(expected);
+        expect(transformers.getRecordSupervisorsSearchKey()).toEqual({});
     });
 
     it('should construct supervisor object from data', () => {
@@ -528,10 +520,7 @@ describe('getRecordSupervisorsSearchKey test ', () => {
 describe('getRecordAuthorsSearchKey test ', () => {
 
     it('should return empty request object', () => {
-        const input = [];
-        const expected = {};
-        const result = transformers.getRecordAuthorsSearchKey(input);
-        expect(result).toEqual(expected);
+        expect(transformers.getRecordAuthorsSearchKey()).toEqual({});
     });
 
     it('should return authors name object', () => {
@@ -564,10 +553,7 @@ describe('getRecordAuthorsSearchKey test ', () => {
 describe('getRecordAuthorsIdSearchKey test ', () => {
 
     it('should return empty authors object', () => {
-        const input = [];
-        const expected = {};
-        const result = transformers.getRecordAuthorsIdSearchKey(input);
-        expect(result).toEqual(expected);
+        expect(transformers.getRecordAuthorsIdSearchKey()).toEqual({});
     });
 
     it('should return authors object from authors control data', () => {
@@ -577,14 +563,7 @@ describe('getRecordAuthorsIdSearchKey test ', () => {
             {nameAsPublished: "Smith C.", disabled: false, selected: false, authorId: null},
             {nameAsPublished: "Smith D.", disabled: false, selected: false, aut_id: 1001}
         ];
-        const expected = {
-            fez_record_search_key_author_id: [
-                {rek_author_id: null, rek_author_id_order: 1},
-                {rek_author_id: 100, rek_author_id_order: 2},
-                {rek_author_id: null, rek_author_id_order: 3},
-                {rek_author_id: 1001, rek_author_id_order: 4}
-            ]
-        };
+        const expected = {"fez_record_search_key_author_id": [{"rek_author_id": 0, "rek_author_id_order": 1}, {"rek_author_id": 100, "rek_author_id_order": 2}, {"rek_author_id": 0, "rek_author_id_order": 3}, {"rek_author_id": 1001, "rek_author_id_order": 4}]};
         const result = transformers.getRecordAuthorsIdSearchKey(input);
         expect(result).toEqual(expected);
     });
@@ -623,10 +602,7 @@ describe('getRecordAuthorsIdSearchKey test ', () => {
 describe('getRecordContributorsSearchKey test ', () => {
 
     it('should return empty contributors object', () => {
-        const input = [];
-        const expected = {};
-        const result = transformers.getRecordContributorsSearchKey(input);
-        expect(result).toEqual(expected);
+        expect(transformers.getRecordContributorsSearchKey()).toEqual({});
     });
 
     it('should return populated contributors object', () => {
@@ -662,10 +638,7 @@ describe('getRecordContributorsSearchKey test ', () => {
 describe('getRecordContributorsIdSearchKey test ', () => {
 
     it('should return empty contributors request object', () => {
-        const input = [];
-        const expected = {};
-        const result = transformers.getRecordContributorsIdSearchKey(input);
-        expect(result).toEqual(expected);
+        expect(transformers.getRecordContributorsIdSearchKey()).toEqual({});
     });
 
     it('should construct contributors id object from component data', () => {
@@ -725,7 +698,6 @@ describe('getAuthorIdentifierOrcidPatchRequest() ', () => {
     it('should return empty request', () => {
         const authorId = null;
         const orcidId = '1234-1234-1234';
-        const data = {};
 
         const expected = {};
         const result = transformers.getAuthorIdentifierOrcidPatchRequest(authorId, orcidId);
@@ -771,10 +743,7 @@ describe('getAuthorIdentifierOrcidPatchRequest() ', () => {
 
 describe('getDatasetCreatorRolesSearchKey tests', () => {
     it('should return empty object', () => {
-        const input = [];
-        const expected = {};
-        const result = transformers.getDatasetCreatorRolesSearchKey(input);
-        expect(result).toEqual(expected);
+        expect(transformers.getDatasetCreatorRolesSearchKey()).toEqual({});
     });
 
     it('should return search key with data', () => {
@@ -806,10 +775,7 @@ describe('getDatasetCreatorRolesSearchKey tests', () => {
 
 describe('getDatasetContactDetailSearchKeys tests', () => {
     it('should return empty object', () => {
-        const input = null;
-        const expected = {};
-        const result = transformers.getDatasetContactDetailSearchKeys(input);
-        expect(result).toEqual(expected);
+        expect(transformers.getDatasetContactDetailSearchKeys()).toEqual({});
     });
 
     it('should return search key with data', () => {
@@ -899,10 +865,7 @@ describe('getDatasetContactDetailSearchKeys tests', () => {
 
 describe('getGeographicAreaSearchKey tests', () => {
     it('should return empty object', () => {
-        const input = null;
-        const expected = {};
-        const result = transformers.getGeographicAreaSearchKey(input);
-        expect(result).toEqual(expected);
+        expect(transformers.getGeographicAreaSearchKey()).toEqual({});
     });
 
     it('should return search key with data', () => {
@@ -920,10 +883,7 @@ describe('getGeographicAreaSearchKey tests', () => {
 
 describe('getRecordAuthorAffiliationSearchKey tests', () => {
     it('should return an empty object', () => {
-        const input = null;
-        const expected = {};
-        const result = transformers.getRecordAuthorAffiliationSearchKey(input);
-        expect(result).toEqual(expected);
+        expect(transformers.getRecordAuthorAffiliationSearchKey()).toEqual({});
     });
 
     it('should return search key with data', () => {
@@ -1028,15 +988,19 @@ describe('getRecordAuthorAffiliationSearchKey tests', () => {
             }
         ];
         const expected = {
-            fez_record_search_key_author_affiliation_name: [
-                {
-                    rek_author_affiliation_name: 'Test organisation',
-                    rek_author_affiliation_name_order: 2
-                },
-                {
-                    rek_author_affiliation_name: 'Some Organisation',
-                    rek_author_affiliation_name_order: 3
-                }
+            "fez_record_search_key_author_affiliation_name": [{
+                "rek_author_affiliation_name": "University of Queensland",
+                "rek_author_affiliation_name_order": 1
+            }, {
+                "rek_author_affiliation_name": "Test organisation",
+                "rek_author_affiliation_name_order": 2
+            }, {
+                "rek_author_affiliation_name": "Some Organisation",
+                "rek_author_affiliation_name_order": 3
+            }, {
+                "rek_author_affiliation_name": "University of Queensland",
+                "rek_author_affiliation_name_order": 4
+            }
             ]
         };
         const result = transformers.getRecordAuthorAffiliationSearchKey(input);
@@ -1046,10 +1010,7 @@ describe('getRecordAuthorAffiliationSearchKey tests', () => {
 
 describe('getRecordAuthorAffiliationTypeSearchKey tests', () => {
     it('should return an empty object', () => {
-        const input = null;
-        const expected = {};
-        const result = transformers.getRecordAuthorAffiliationTypeSearchKey(input);
-        expect(result).toEqual(expected);
+        expect(transformers.getRecordAuthorAffiliationTypeSearchKey()).toEqual({});
     });
 
     it('should return search key with data', () => {
@@ -1154,16 +1115,16 @@ describe('getRecordAuthorAffiliationTypeSearchKey tests', () => {
             }
         ];
         const expected = {
-            fez_record_search_key_author_affiliation_type: [
-                {
-                    rek_author_affiliation_type: 453983,
-                    rek_author_affiliation_type_order: 2
-                },
-                {
-                    rek_author_affiliation_type: 453987,
-                    rek_author_affiliation_type_order: 3
-                }
-            ]
+            "fez_record_search_key_author_affiliation_type": [{
+                "rek_author_affiliation_type": 453989,
+                "rek_author_affiliation_type_order": 1
+            }, {
+                "rek_author_affiliation_type": 453983,
+                "rek_author_affiliation_type_order": 2
+            }, {
+                "rek_author_affiliation_type": 453987,
+                "rek_author_affiliation_type_order": 3
+            }, {"rek_author_affiliation_type": 453989, "rek_author_affiliation_type_order": 4}]
         };
         const result = transformers.getRecordAuthorAffiliationTypeSearchKey(input);
         expect(result).toEqual(expected);
@@ -1172,10 +1133,7 @@ describe('getRecordAuthorAffiliationTypeSearchKey tests', () => {
 
 describe('getRecordAbstractDescriptionSearchKey tests', () => {
     it('should return empty object', () => {
-        const input = null;
-        const expected = {};
-        const result = transformers.getRecordAbstractDescriptionSearchKey(input);
-        expect(result).toEqual(expected);
+        expect(transformers.getRecordAbstractDescriptionSearchKey()).toEqual({});
     });
 
     it('should return search key with data', () => {
@@ -1194,10 +1152,7 @@ describe('getRecordAbstractDescriptionSearchKey tests', () => {
 
 describe('getGrantsListSearchKey tests', () => {
     it('should return empty object', () => {
-        const input = null;
-        const expected = {};
-        const result = transformers.getGrantsListSearchKey(input);
-        expect(result).toEqual(expected);
+        expect(transformers.getGrantsListSearchKey()).toEqual({});
     });
 
     it('should return search key with data', () => {
@@ -1249,42 +1204,79 @@ describe('getGrantsListSearchKey tests', () => {
         ];
 
         const expected = {
-            fez_record_search_key_grant_agency: [
-                {
-                    rek_grant_agency: 'test',
-                    rek_grant_agency_order: 1
-                },
-                {
-                    rek_grant_agency: 'testing',
-                    rek_grant_agency_order: 2
-                },
-                {
-                    rek_grant_agency: 'tested',
-                    rek_grant_agency_order: 3
-                }
-            ],
-            fez_record_search_key_grant_id: [
-                {
-                    rek_grant_id: 'test123',
-                    rek_grant_id_order: 1
-                },
-                {
-                    rek_grant_id: 'testing123',
-                    rek_grant_id_order: 2
-                }
-            ],
-            fez_record_search_key_grant_agency_type: [
-                {
-                    rek_grant_agency_type: 12345,
-                    rek_grant_agency_type_order: 2
-                },
-                {
-                    rek_grant_agency_type: 56465,
-                    rek_grant_agency_type_order: 3
-                }
-            ],
+            "fez_record_search_key_grant_agency": [{
+                "rek_grant_agency": "test",
+                "rek_grant_agency_order": 1
+            }, {"rek_grant_agency": "testing", "rek_grant_agency_order": 2}, {
+                "rek_grant_agency": "tested",
+                "rek_grant_agency_order": 3
+            }],
+            "fez_record_search_key_grant_agency_type": [{
+                "rek_grant_agency_type": 454045,
+                "rek_grant_agency_type_order": 1
+            }, {"rek_grant_agency_type": 12345, "rek_grant_agency_type_order": 2}, {
+                "rek_grant_agency_type": 56465,
+                "rek_grant_agency_type_order": 3
+            }],
+            "fez_record_search_key_grant_id": [{
+                "rek_grant_id": "test123",
+                "rek_grant_id_order": 1
+            }, {"rek_grant_id": "testing123", "rek_grant_id_order": 2}, {
+                "rek_grant_id": "Not set",
+                "rek_grant_id_order": 3
+            }]
         };
         const result = transformers.getGrantsListSearchKey(input);
         expect(result).toEqual(expected);
     });
-})
+});
+
+describe('getNtroMetadataSearchKeys tests',  () => {
+    it('should get ntro meta data', () => {
+        const result = transformers.getNtroMetadataSearchKeys({
+            authors: [{
+                rek_author_id: 111,
+                selected: false,
+            }, {
+                rek_author_id: 222,
+                selected: false
+            }, {
+                rek_author_id: 333,
+                selected: false
+            }],
+            significance: 'Major',
+            impactStatement: 'test impact statement'
+        });
+
+        expect(result).toMatchObject({
+            fez_record_search_key_significance: [
+                {
+                    rek_significance: 0,
+                    rek_significance_order: 1
+                },
+                {
+                    rek_significance: 0,
+                    rek_significance_order: 2
+                },
+                {
+                    rek_significance: 0,
+                    rek_significance_order: 3
+                }
+            ],
+            fez_record_search_key_creator_contribution_statement: [
+                {
+                    rek_creator_contribution_statement: 'Statement missing.',
+                    rek_creator_contribution_statement_order: 1
+                },
+                {
+                    rek_creator_contribution_statement: 'Statement missing.',
+                    rek_creator_contribution_statement_order: 2
+                },
+                {
+                    rek_creator_contribution_statement: 'Statement missing.',
+                    rek_creator_contribution_statement_order: 3
+                }
+            ]
+        });
+    })
+});

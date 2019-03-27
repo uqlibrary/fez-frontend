@@ -18,12 +18,12 @@ function getSearch(source, searchQuery) {
  */
 export function collectionsList() {
     return dispatch => {
-        dispatch({type: `${actions.SEARCH_COLLECTION_LOADING}`});
+        dispatch({type: actions.SEARCH_COLLECTION_LOADING});
         return get(SEARCH_INTERNAL_RECORDS_API({searchMode: 'advanced', searchQueryParams: {rek_object_type: 2}, pageSize: 999, sortBy: 'title', sortDirection: 'asc'}))
             .then((response) => {
-                dispatch({type: `${actions.SEARCH_COLLECTION_LOADED}`, payload: response.data});
+                dispatch({type: actions.SEARCH_COLLECTION_LOADED, payload: response.data});
             }, (error) => {
-                dispatch({type: `${actions.SEARCH_COLLECTION_FAILED}`, payload: error.message});
+                dispatch({type: actions.SEARCH_COLLECTION_FAILED, payload: error.message});
             });
     };
 }
@@ -109,11 +109,6 @@ export function searchPublications(searchQuery) {
                     payload: {
                         data: flattenedResults
                     }
-                });
-            }, error => {
-                dispatch({
-                    type: actions.SEARCH_FAILED,
-                    payload: error.message
                 });
             });
     };

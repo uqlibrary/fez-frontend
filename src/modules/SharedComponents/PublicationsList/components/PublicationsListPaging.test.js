@@ -1,25 +1,32 @@
 import {PublicationsListPaging} from './PublicationsListPaging';
+import PublicationsListPagingWithStyles from './PublicationsListPaging';
+
+const getProps = (testProps = {}) => ({
+    classes: {},
+    pagingData: {
+        from: 0,
+        to: 0,
+        total: 0,
+        per_page: 20,
+        current_page: 1
+    },
+    disabled: false,
+    onPageChanged: jest.fn(),
+    ...testProps
+});
 
 function setup(testProps, isShallow = true) {
-    const props = {
-        classes: {},
-        pagingData: testProps.pagingData || {
-            from: testProps.from || 0,
-            to: testProps.to || 0,
-            total: testProps.total || 0,
-            per_page: testProps.per_page || 20,
-            current_page: testProps.current_page || 1
-        },
-        disabled: testProps.disabled || false,
-        onPageChanged: testProps.onPageChanged || jest.fn(),
-        ...testProps
-    };
-    return getElement(PublicationsListPaging, props, isShallow);
+    return getElement(PublicationsListPaging, getProps(testProps), isShallow);
 }
 
 describe('PublicationsListPaging renders ', () => {
     it('component with empty paging data', () => {
         const wrapper = setup({});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('component with styles', () => {
+        const wrapper = getElement(PublicationsListPagingWithStyles, getProps());
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -280,5 +287,12 @@ describe('PublicationsListPaging renders ', () => {
         expect(wrapper.instance().renderPageButtons().length).toEqual(4);
     });
 
-
+    it('should render buttons with zero total pages', () => {
+        const wrapper = setup({});
+        wrapper.setState({
+            total: null
+        });
+        expect(wrapper.instance().renderButton('test')).toMatchSnapshot();
+        expect(wrapper.instance().renderPageButtons()).toEqual([]);
+    });
 });

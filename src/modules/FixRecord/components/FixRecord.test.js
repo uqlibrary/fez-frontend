@@ -169,4 +169,37 @@ describe('Component FixRecord', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
 
     });
+
+    it('_handleDefaultSubmit()', () => {
+        const wrapper = setup({recordToFix: mockRecordToFix, publicationToFixFileUploadingError: false});
+        const testFN = jest.fn();
+        const event = {preventDefault: testFN};
+        wrapper.instance()._handleDefaultSubmit(event);
+        expect(testFN).toHaveBeenCalled();
+
+    });
+
+    it('_handleDefaultSubmit()', () => {
+        const wrapper = setup({recordToFix: mockRecordToFix, publicationToFixFileUploadingError: false});
+        wrapper.instance()._handleDefaultSubmit();
+        expect(toJson(wrapper)).toMatchSnapshot();
+
+    });
+
+    it('componentWillReceiveProps()', () => {
+        const wrapper = setup({submitSucceeded: true, recordToFix: mockRecordToFix, publicationToFixFileUploadingError: false});
+        const nextProps = {submitSucceeded: true};
+        wrapper.instance().componentWillReceiveProps(nextProps);
+        expect(toJson(wrapper)).toMatchSnapshot();
+
+    });
+
+    it('componentWillUnmount()', () => {
+        const testFN = jest.fn();
+        const wrapper = setup({actions: {clearFixRecord: testFN}, submitSucceeded: true, recordToFix: mockRecordToFix, publicationToFixFileUploadingError: false});
+        wrapper.instance().componentWillUnmount();
+        expect(testFN).toHaveBeenCalled();
+
+    });
+
 });

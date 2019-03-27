@@ -14,7 +14,7 @@ const styles = theme => ({
     }
 });
 
-export class GenericSelectField extends Component {
+export class GenericSelectFieldClass extends Component {
     static propTypes = {
         onChange: PropTypes.func,
         itemsList: PropTypes.array,
@@ -40,7 +40,8 @@ export class GenericSelectField extends Component {
         hideLabel: PropTypes.bool,
         displayEmpty: PropTypes.bool,
 
-        classes: PropTypes.object
+        classes: PropTypes.object,
+        id: PropTypes.string
     };
 
     static defaultProps = {
@@ -70,10 +71,10 @@ export class GenericSelectField extends Component {
 
     _itemSelected = (event) => {
         let value = event.target.value;
-        if(value[0] === -1 && value.length > 1) {
-            value.shift();
-        } else if (value === [-1]) {
+        if (value[0] === -1 && value.length === 1) {
             value = '';
+        } else if(value[0] === -1 && value.length > 1) {
+            value.shift();
         }
         this.props.onChange(value);
     };
@@ -91,11 +92,28 @@ export class GenericSelectField extends Component {
         }
     };
 
-    render() {
+    newValue = () => {
+        if(this.props.multiple) {
+            if(this.props.hideLabel) {
+                return this.props.selectedValue && this.props.selectedValue.length > 0 && this.props.selectedValue || [-1];
+            } else {
+                return this.props.selectedValue && this.props.selectedValue.length > 0 && this.props.selectedValue || [];
+            }
+        } else {
+            if(this.props.hideLabel) {
+                return this.props.selectedValue && this.props.selectedValue.length > 0 && this.props.selectedValue || '-1';
+            } else{
+                return this.props.selectedValue || '';
+            }
+        }
+    };
+
+    loadingIndicationText = () => this.props.itemsLoading ? this.props.loadingHint : this.props.hintText;
+
+    renderMenuItems = () => {
         const {classes} = this.props;
-        const loadingIndicationText = this.props.itemsLoading ? this.props.loadingHint : this.props.hintText;
-        const renderMenuItems = [
-            this.props.hideLabel && <MenuItem value={-1} key={0} style={{display: 'block'}} disabled>{loadingIndicationText}</MenuItem>,
+        return [
+            this.props.hideLabel && <MenuItem value={-1} key={0} style={{display: 'block'}} disabled>{this.loadingIndicationText()}</MenuItem>,
             ...this.props.itemsList.map((item, index) => {
                 return (
                     <MenuItem
@@ -110,22 +128,9 @@ export class GenericSelectField extends Component {
                 );
             })
         ];
-        const newValue = () => {
-            if(this.props.multiple) {
-                if(this.props.hideLabel) {
-                    return this.props.selectedValue && this.props.selectedValue.length > 0 && this.props.selectedValue || [-1];
-                } else {
-                    return this.props.selectedValue && this.props.selectedValue.length > 0 && this.props.selectedValue || [];
-                }
-            } else {
-                if(this.props.hideLabel) {
-                    return this.props.selectedValue && this.props.selectedValue.length > 0 && this.props.selectedValue || '-1';
-                } else{
-                    return this.props.selectedValue || '';
-                }
-            }
-        };
+    }
 
+    render() {
         return (
             <FormControl fullWidth required={this.props.required} error={!!this.props.error}>
                 {
@@ -133,15 +138,18 @@ export class GenericSelectField extends Component {
                     <InputLabel>{this.props.locale.label}</InputLabel>
                 }
                 <Select
-                    value={newValue()}
+                    value={this.newValue()}
                     displayEmpty={this.props.displayEmpty}
                     onChange={this._itemSelected}
-                    disabled={this.props.disabled || this.props.itemsLoading}
+                    disabled={this.props.disabled || !!this.props.itemsLoading}
                     aria-label={this.props.ariaLabel}
                     autoWidth={this.props.autoWidth}
                     multiple={this.props.multiple}
+                    SelectDisplayProps={{
+                        id: this.props.id
+                    }}
                 >
-                    {renderMenuItems}
+                    {this.renderMenuItems()}
                 </Select>
                 {
                     !!this.props.error &&
@@ -152,5 +160,6 @@ export class GenericSelectField extends Component {
     }
 }
 
-export default withStyles(styles, {withTheme: true})(GenericSelectField);
-
+const StyledGenericSelectField = withStyles(styles, {withTheme: true})(GenericSelectFieldClass);
+const GenericSelectField = (props) => <StyledGenericSelectField {...props}/>;
+export default GenericSelectField;

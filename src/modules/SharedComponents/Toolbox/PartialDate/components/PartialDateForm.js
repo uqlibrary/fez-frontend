@@ -80,7 +80,9 @@ export class PartialDateForm extends Component {
     }
 
     componentWillUpdate(nextProps, nextState) {
-        if (this.props.onChange) this.props.onChange(this._setDate(nextState));
+        if (this.props.onChange) {
+            this.props.onChange(this._setDate(nextState));
+        }
     }
 
     _validate = (state) => {
@@ -90,7 +92,7 @@ export class PartialDateForm extends Component {
         if (this.props.allowPartial) {
             valid = !!year && moment(state).isValid();
         } else {
-            valid = !!day && !!month && !!year && moment(state).isValid() && !isNaN(day);
+            valid = !!day && (month !== null) && !!year && moment(state).isValid();
         }
         return valid;
     };
@@ -99,7 +101,9 @@ export class PartialDateForm extends Component {
         const {day, month, year} = state;
         const {locale} = this.props;
 
-        this.errors.year = this.props.floatingTitleRequired && this.props.allowPartial && !year && 'Year required' || !!year && isNaN(year) && locale.validationMessage.year  || '';
+        this.errors.year = this.props.floatingTitleRequired && this.props.allowPartial && !year && 'Year required' ||
+            !!year && isNaN(year) && locale.validationMessage.year ||
+            '';
 
         if (this.props.allowPartial) {
             this.errors.month = (year && month < 0) ? locale.validationMessage.month : '';
@@ -115,13 +119,7 @@ export class PartialDateForm extends Component {
 
         this._displayErrors(date, valid);
 
-        if (valid) {
-            if (this.props.allowPartial) {
-                date.month = date.month < 0 ? 0 : date.month;
-            }
-            return moment(date).format(this.props.dateFormat);
-        }
-        return '';
+        return valid ? moment(date).format(this.props.dateFormat) : '';
     };
 
     _isNumber = (event) => {

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Available Versions Component  should render component 1`] = `
-<WithStyles(RelatedPublications)
+<RelatedPublications
   childrenSearchKey={
     Object {
       "key": "fez_record_search_key_has_derivations",
@@ -765,7 +765,7 @@ exports[`Available Versions Component  should render component 1`] = `
       "rek_subtype_xsdmf_id": null,
       "rek_thomson_citation_count": null,
       "rek_thomson_citation_count_xsdmf_id": null,
-      "rek_title": "CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material",
+      "rek_title": "Data collection mock testing record",
       "rek_title_xsdmf_id": 16197,
       "rek_updated_date": "2017-02-01T03:50:57Z",
       "rek_updated_date_xsdmf_id": 528,

@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GrantListEditorField should render default component 1`] = `
+<WithStyles(GrantListEditor)
+  input={
+    Object {
+      "onChange": [MockFunction],
+    }
+  }
+  onChange={[MockFunction]}
+/>
+`;

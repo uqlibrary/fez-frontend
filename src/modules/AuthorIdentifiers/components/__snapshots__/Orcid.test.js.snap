@@ -4,7 +4,8 @@ exports[`Component Orcid  should display error if ORCID url redirect STATE respo
 <StandardPage
   title="Link ORCID ID to UQ eSpace"
 >
-  <WithStyles(ConfirmDialogBox)
+  <ConfirmDialogBox
+    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "Cancel",
@@ -101,14 +102,12 @@ exports[`Component Orcid  should display error if ORCID url redirect STATE respo
           component="span"
           gutterBottom={true}
         >
-          <React.Fragment>
-            <p>
-              This option enables you to create a new ORCID iD and link it with UQ.
-            </p>
-            <p>
-              Use this option if you are unsure if you already have an ORCID iD. It will detect matches to your name and email from the ORCID registry and prompt you to log in to avoid creating a new ORCID iD.
-            </p>
-          </React.Fragment>
+          <p>
+            This option enables you to create a new ORCID iD and link it with UQ.
+          </p>
+          <p>
+            Use this option if you are unsure if you already have an ORCID iD. It will detect matches to your name and email from the ORCID registry and prompt you to log in to avoid creating a new ORCID iD.
+          </p>
         </WithStyles(Typography)>
         <WithStyles(Grid)
           container={true}
@@ -158,7 +157,8 @@ exports[`Component Orcid  should display error if author update failed 1`] = `
 <StandardPage
   title="Link ORCID ID to UQ eSpace"
 >
-  <WithStyles(ConfirmDialogBox)
+  <ConfirmDialogBox
+    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "Cancel",
@@ -255,14 +255,12 @@ exports[`Component Orcid  should display error if author update failed 1`] = `
           component="span"
           gutterBottom={true}
         >
-          <React.Fragment>
-            <p>
-              This option enables you to create a new ORCID iD and link it with UQ.
-            </p>
-            <p>
-              Use this option if you are unsure if you already have an ORCID iD. It will detect matches to your name and email from the ORCID registry and prompt you to log in to avoid creating a new ORCID iD.
-            </p>
-          </React.Fragment>
+          <p>
+            This option enables you to create a new ORCID iD and link it with UQ.
+          </p>
+          <p>
+            Use this option if you are unsure if you already have an ORCID iD. It will detect matches to your name and email from the ORCID registry and prompt you to log in to avoid creating a new ORCID iD.
+          </p>
         </WithStyles(Typography)>
         <WithStyles(Grid)
           container={true}
@@ -312,7 +310,8 @@ exports[`Component Orcid  should render form uf account/author is set 1`] = `
 <StandardPage
   title="Link ORCID ID to UQ eSpace"
 >
-  <WithStyles(ConfirmDialogBox)
+  <ConfirmDialogBox
+    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "Cancel",
@@ -402,14 +401,12 @@ exports[`Component Orcid  should render form uf account/author is set 1`] = `
           component="span"
           gutterBottom={true}
         >
-          <React.Fragment>
-            <p>
-              This option enables you to create a new ORCID iD and link it with UQ.
-            </p>
-            <p>
-              Use this option if you are unsure if you already have an ORCID iD. It will detect matches to your name and email from the ORCID registry and prompt you to log in to avoid creating a new ORCID iD.
-            </p>
-          </React.Fragment>
+          <p>
+            This option enables you to create a new ORCID iD and link it with UQ.
+          </p>
+          <p>
+            Use this option if you are unsure if you already have an ORCID iD. It will detect matches to your name and email from the ORCID registry and prompt you to log in to avoid creating a new ORCID iD.
+          </p>
         </WithStyles(Typography)>
         <WithStyles(Grid)
           container={true}

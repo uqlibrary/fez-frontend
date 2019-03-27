@@ -3,7 +3,7 @@ import locale from 'locale/validationErrors';
 import Immutable from 'immutable';
 
 // Max Length
-export const maxLength = max => value => value && value.replace(/\s/g, '').length > max ? locale.validationErrors.maxLength.replace('[max]', max) : undefined;
+export const maxLength = max => value => value && value.toString().replace(/\s/g, '').length > max ? locale.validationErrors.maxLength.replace('[max]', max) : undefined;
 export const maxLengthWithWhitespace = max => value => value && (value.plainText && value.plainText.length > max) || (!value.plainText && value.length > max + 7) ? locale.validationErrors.maxLength.replace('[max]', max) : undefined;
 export const maxLength9 = maxLength(9);
 export const maxLength10 = maxLength(10);
@@ -77,6 +77,9 @@ export const isValidPublicationTitle = value => {
 // Generic
 export const required = value => value ? undefined : locale.validationErrors.required;
 
+// Check if copyright/agreement is checked
+export const requireChecked = value => value === 'on' ? undefined : locale.validationErrors.requireChecked;
+
 export const requiredList = value => {
     if(value instanceof Immutable.List) {
         return value.toJS() && value.toJS().length > 0 ? undefined : locale.validationErrors.required;
@@ -107,7 +110,7 @@ export const validFileUpload = value => {
 };
 
 export const fileUploadRequired = value => {
-    return value === undefined || value.queue.length === 0 ? locale.validationErrors.fileUploadRequired : undefined;
+    return value === undefined || (value.queue || {}).length === 0 ? locale.validationErrors.fileUploadRequired : undefined;
 };
 
 export const fileUploadNotRequiredForMediated = (value, values) => {

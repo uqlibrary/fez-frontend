@@ -21,7 +21,7 @@ import {AuthorIdField} from 'modules/SharedComponents/LookupFields';
 import {RelatedDatasetAndPublicationListField} from 'modules/SharedComponents/LookupFields';
 import {default as Divider} from 'modules/SharedComponents/Toolbox/Divider';
 
-import {validation, routes} from 'config';
+import {routes, validation} from 'config';
 import componentLocale from 'locale/components';
 import {default as formLocale} from 'locale/publicationForm';
 import {locale} from 'locale';
@@ -55,6 +55,10 @@ export default class AddDataCollection extends Component {
         window.location.reload();
     };
 
+    _handleRef = (ref) => {
+        this.confirmationBox = ref;
+    };
+
     render() {
         const txt = formLocale.addDataset;
         const txtFoR = componentLocale.components.fieldOfResearchForm;
@@ -82,7 +86,7 @@ export default class AddDataCollection extends Component {
             <StandardPage title={formLocale.pageTitle}>
                 <form>
                     <ConfirmDialogBox
-                        onRef={ref => (this.confirmationBox = ref)}
+                        onRef={this._handleRef}
                         onAction={this._navigateToMyDatasets}
                         onCancelAction={this._restartWorkflow}
                         locale={saveConfirmationLocale}
@@ -97,7 +101,7 @@ export default class AddDataCollection extends Component {
                                             depositAgreement={txt.information.agreement.text}
                                             name="rek_copyright"
                                             required
-                                            validate={[validation.required]}
+                                            validate={[validation.requireChecked]}
                                             disabled={this.props.submitting}
                                         />
                                     </Grid>
@@ -234,6 +238,7 @@ export default class AddDataCollection extends Component {
                                     <Grid item xs={12} sm={12} md={4}>
                                         <Field
                                             component={AccessSelectorField}
+                                            id="data-collection-access-selector"
                                             name="fez_record_search_key_access_conditions.rek_access_conditions"
                                             required
                                             validate={[validation.required]}
@@ -244,6 +249,7 @@ export default class AddDataCollection extends Component {
                                     <Grid item xs={12} sm={12} md={4}>
                                         <Field
                                             component={LicenseSelectorField}
+                                            id="data-collection-license-selector"
                                             name="fez_record_search_key_license.rek_license"
                                             required
                                             validate={[validation.required]}
@@ -347,9 +353,9 @@ export default class AddDataCollection extends Component {
                                     <Grid item xs={12}>
                                         <Field
                                             component={ListEditorField}
-                                            name="fez_record_search_key_keyword"
+                                            name="fez_record_search_key_keywords"
                                             maxCount={10}
-                                            searchKey={{value: 'rek_keyword', order: 'rek_keyword_order'}}
+                                            searchKey={{value: 'rek_keywords', order: 'rek_keywords_order'}}
                                             locale={locale.components.keywordsForm.field}
                                             disabled={this.props.submitting}/>
                                     </Grid>
@@ -397,7 +403,7 @@ export default class AddDataCollection extends Component {
                                     disabled={this.props.submitting}
                                     locale={{form: txt.information.optionalDatasetDetails.fieldLabels.relatedDatasets}}
                                     height={50}
-                                    validate={[validation.required]}/>
+                                />
                             </StandardCard>
                         </Grid>
                         <Grid item xs={12}>
@@ -458,6 +464,7 @@ export default class AddDataCollection extends Component {
                         </Grid>
                         <Grid item xs={12} sm="auto">
                             <Button
+                                id="submit-data-collection"
                                 variant="contained"
                                 color="primary"
                                 fullWidth

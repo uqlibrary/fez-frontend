@@ -43,7 +43,7 @@ const styles = theme => ({
     }
 });
 
-export class Dashboard extends PureComponent {
+export class DashboardClass extends PureComponent {
     static propTypes = {
         // account data
         account: PropTypes.object.isRequired,
@@ -263,4 +263,7 @@ export class Dashboard extends PureComponent {
         );
     }
 }
-export default withStyles(styles, { withTheme: true })(Dashboard);
+
+const StyledDashboard = withStyles(styles, {withTheme: true})(DashboardClass);
+const Dashboard = (props) => <StyledDashboard {...props}/>;
+export default Dashboard;

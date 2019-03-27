@@ -2,9 +2,9 @@ import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import Dropzone from 'react-dropzone';
 import Grid from '@material-ui/core/Grid';
-import FileUploadDropzoneStaticContent from './FileUploadDropzoneStaticContent';
-import InputLabel from '@material-ui/core/InputLabel';
 import {withStyles} from '@material-ui/core/styles';
+import FileUploadDropzoneStaticContent from './FileUploadDropzoneStaticContent';
+import {FILE_NAME_RESTRICTION} from '../config';
 
 const styles = () => ({
     hideLabel: {
@@ -32,13 +32,22 @@ export class FileUploadDropzone extends PureComponent {
     static defaultProps = {
         fileUploadLimit: 10,
         filesInQueue: [],
-        fileNameRestrictions: /^(?=^\S*$)(?=^[a-z\d\-_]+\.[^\.]+$)(?=.{1,45}$)(?!(web_|preview_|thumbnail_|stream_|fezacml_|presmd_|\d))[a-z\d\-_\.]+/
+        fileNameRestrictions: FILE_NAME_RESTRICTION
     };
 
     constructor(props) {
         super(props);
         this.dropzoneRef = null;
     }
+
+    onReadFileError = (file, errors, resolve) => () => {
+        errors.push(file.name);
+        return resolve(false);
+    };
+
+    onReadFileLoad = (file, resolve) => () => {
+        resolve(file);
+    };
 
     /**
      * Try to read file and set error for a folder
@@ -49,11 +58,8 @@ export class FileUploadDropzone extends PureComponent {
      */
     readFile = (file, errors, resolve) => {
         const fileReader = new FileReader();
-        fileReader.onerror = () => {
-            errors.push(file.name);
-            return resolve(false);
-        };
-        fileReader.onload = () => resolve(file);
+        fileReader.onerror = this.onReadFileError(file, errors, resolve);
+        fileReader.onload = this.onReadFileLoad(file, resolve);
         const slice = file.slice(0, 10);
         return fileReader.readAsDataURL(slice);
     };
@@ -66,12 +72,46 @@ export class FileUploadDropzone extends PureComponent {
      * @returns Object
      */
     removeDuplicate = (incomingFiles, filesInQueue) => {
+        // Ignore files from incomingFiles which have same name with different extension
+        const incomingFilesWithoutDuplicateFileName = incomingFiles.reduce((unique, file) => {
+            const fileNameWithoutExt = file.name.slice(0, file.name.lastIndexOf('.'));
+            unique.fileNames.indexOf(fileNameWithoutExt) === -1
+                ? (unique.fileNames.push(fileNameWithoutExt) && unique.incomingFiles.push(file))
+                : unique.filesWithSameNameDifferentExt.push(file.name);
+            return unique;
+        }, {fileNames: [], incomingFiles: [], filesWithSameNameDifferentExt: []});
+
+        const incomingFilesWithoutDuplicate = incomingFilesWithoutDuplicateFileName.incomingFiles
+            .reduce((unique, file) => {
+                if (unique.fileNames.indexOf(file.name) === -1) {
+                    const fileNameWithoutExt = file.name.slice(0, file.name.lastIndexOf('.'));
+
+                    unique.fileNames
+                        .map(fileName => fileName.slice(0, fileName.lastIndexOf('.')))
+                        .indexOf(fileNameWithoutExt) === -1
+                        ? unique.incomingFiles.push(file)
+                        : unique.filesWithSameNameDifferentExt.push(file.name);
+                } else {
+                    unique.incomingFiles.push(file);
+                }
+
+                return unique;
+            }, {
+                fileNames: filesInQueue,
+                incomingFiles: [],
+                filesWithSameNameDifferentExt: []
+            });
+
         // Ignore files from incomingFiles which are already in files queue
-        const uniqueFiles = incomingFiles.filter(file => filesInQueue.indexOf(file.name) === -1);
-        const duplicateFiles = incomingFiles.filter(file => filesInQueue.indexOf(file.name) >= 0).map(file => file.name);
+        const uniqueFiles = incomingFilesWithoutDuplicate.incomingFiles.filter(file => filesInQueue.indexOf(file.name) === -1);
+        const duplicateFiles = incomingFilesWithoutDuplicate.incomingFiles.filter(file => filesInQueue.indexOf(file.name) >= 0).map(file => file.name);
 
         // Return unique files and errors with duplicate file names
-        return {uniqueFiles: uniqueFiles, duplicateFiles: duplicateFiles};
+        return {
+            uniqueFiles: uniqueFiles,
+            duplicateFiles: duplicateFiles,
+            sameFileNameWithDifferentExt: [...incomingFilesWithoutDuplicateFileName.filesWithSameNameDifferentExt, ...incomingFilesWithoutDuplicate.filesWithSameNameDifferentExt]
+        };
     };
 
     /**
@@ -140,7 +180,7 @@ export class FileUploadDropzone extends PureComponent {
                 const {validFiles, invalidFileNames} = this.removeInvalidFileNames(onlyFiles, fileNameRestrictions);
 
                 // Remove duplicate files from accepted files
-                const {uniqueFiles, duplicateFiles} = this.removeDuplicate(validFiles, filesInQueue);
+                const {uniqueFiles, duplicateFiles, sameFileNameWithDifferentExt} = this.removeDuplicate(validFiles, filesInQueue);
 
                 // Remove files exceeding the max number of files allowed
                 const {limitedFiles, tooManyFiles} = this.removeTooManyFiles(uniqueFiles, fileUploadLimit - filesInQueue.length);
@@ -152,7 +192,8 @@ export class FileUploadDropzone extends PureComponent {
                         notFiles: notFiles,
                         invalidFileNames: invalidFileNames,
                         duplicateFiles: duplicateFiles,
-                        tooManyFiles: tooManyFiles
+                        tooManyFiles: tooManyFiles,
+                        sameFileNameWithDifferentExt: sameFileNameWithDifferentExt
                     }
                 );
             });
@@ -171,7 +212,6 @@ export class FileUploadDropzone extends PureComponent {
             <Grid container>
                 <Grid item xs={12}>
                     <div tabIndex="0" onKeyPress={this._onKeyPress}>
-                        <InputLabel htmlFor="Uploader" className={this.props.classes.hideLabel}>Month</InputLabel>
                         <Dropzone
                             inputProps={{id: 'Uploader'}}
                             ref={(ref) => {this.dropzoneRef = ref;}}

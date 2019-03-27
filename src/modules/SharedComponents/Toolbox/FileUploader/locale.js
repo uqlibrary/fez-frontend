@@ -12,7 +12,8 @@ export default {
         ['invalidFileNames']: 'File(s) ([fileNames]) have invalid file name',
         ['tooBigFiles']: 'File(s) ([fileNames]) exceed maximum allowed upload file size',
         ['tooManyFiles']: 'Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded',
-        ['duplicateFiles']: 'File(s) ([fileNames]) are duplicates and have been ignored'
+        ['duplicateFiles']: 'File(s) ([fileNames]) are duplicates and have been ignored',
+        ['sameFileNameWithDifferentExt']: 'File(s) ([fileNames]) have same name that match with other files with different extension'
     },
     errorTitle: 'Upload Errors',
     successTitle: 'Success',
@@ -25,6 +26,7 @@ export default {
                 <li>begin with a letter and are less than 45 characters long</li>
                 <li>contain only upper and lowercase alphanumeric characters, and underscores</li>
                 <li>have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.</li>
+                <li>two periods are allowed for multipart zip files.  Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”</li>
                 <li>are uploaded individually and not inside a folder</li>
             </ul>
         </div>

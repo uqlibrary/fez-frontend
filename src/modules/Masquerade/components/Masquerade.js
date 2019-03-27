@@ -30,7 +30,7 @@ export default class Masquerade extends PureComponent {
         });
 
         const redirectUrl = `${window.location.protocol}//${window.location.hostname}${routes.pathConfig.dashboard}`;
-        window.location.href = `https://auth.library.uq.edu.au/masquerade?user=${this.state.userName}&return=${window.btoa(redirectUrl)}`;
+        window.location.assign(`https://auth.library.uq.edu.au/masquerade?user=${this.state.userName}&return=${window.btoa(redirectUrl)}`);
     };
 
     _usernameChanged = (event) => {

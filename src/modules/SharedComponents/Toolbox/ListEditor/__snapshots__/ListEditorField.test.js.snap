@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListEditorField function should return <FreeTextListEditor> with specified props 1`] = `
+<FreeTextListEditor
+  error="test1"
+  errorText="test1"
+  input={
+    Object {
+      "onChange": [MockFunction],
+    }
+  }
+  maxInputLength={100}
+  meta={
+    Object {
+      "error": "test1",
+    }
+  }
+  onChange={[MockFunction]}
+  remindToAdd="test2"
+/>
+`;
+
+exports[`ListEditorField function should return <FreeTextListEditor> with specified props 2`] = `
+<FreeTextListEditor
+  errorText={null}
+  input={
+    Object {
+      "onChange": [MockFunction],
+    }
+  }
+  maxInputLength={100}
+  onChange={[MockFunction]}
+  remindToAdd="test2"
+/>
+`;

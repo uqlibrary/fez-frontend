@@ -1,6 +1,8 @@
 import ClaimRecord from './ClaimRecord';
 import Immutable from 'immutable';
 import {journalArticle, dataCollection} from 'mock/data/testing/records';
+import {validation} from 'config';
+import locale from 'locale/forms';
 
 function setup(testProps, isShallow = true) {
     const props = {
@@ -66,6 +68,24 @@ describe('Component ClaimRecord ', () => {
         const wrapper = setup({});
         expect(wrapper.find('Field').length).toEqual(4);
         expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render when claiming from "Add missing record" page', () => {
+        const wrapper = setup({
+            initialValues: {
+                get: () => ({
+                    toJS: () => ({
+                        sources: {}
+                    })
+                })
+            }
+        });
+
+        expect(
+            wrapper.find('ConfirmDialogBox').props().locale.cancelButtonLabel
+        ).toBe(
+            locale.forms.claimPublicationForm.successWorkflowConfirmation.addRecordButtonLabel
+        );
     });
 
     it('should render publication citation, error message if publication has PID and it was claimed by current author already', () => {
@@ -271,22 +291,76 @@ describe('Component ClaimRecord ', () => {
     it('should return and render alert message depending on form status', () => {
         const testCases = [
             {
-                parameters: {submitting: true, alertLocale: {progressAlert: {title: 'submitting', message: 'submitting', type: 'info', showLoader: true }}}
+                parameters: {
+                    submitting: true,
+                    alertLocale: {
+                        progressAlert: {
+                            title: 'submitting',
+                            message: 'submitting',
+                            type: 'info',
+                            showLoader: true
+                        }
+                    }
+                }
             },
             {
-                parameters: {submitSucceeded: true, alertLocale: {successAlert: {title: 'submitSucceeded', message: 'submitSucceeded', type: 'done' }}}
+                parameters: {
+                    submitSucceeded: true,
+                    alertLocale: {
+                        successAlert: {
+                            title: 'submitSucceeded',
+                            message: 'submitSucceeded',
+                            type: 'done'
+                        }
+                    }
+                }
             },
             {
-                parameters: {submitFailed: true, error: 'This is an error', alertLocale: {errorAlert: {title: 'submitFailed', message: jest.fn(), type: 'error' }}}
+                parameters: {
+                    submitFailed: true,
+                    error: 'This is an error',
+                    alertLocale: {
+                        errorAlert: {
+                            title: 'submitFailed',
+                            message: jest.fn(),
+                            type: 'error'
+                        }
+                    }
+                }
             },
             {
-                parameters: {dirty: true, invalid: true, error: null, formErrors: {rek_title: 'one', rek_date: 'two'}, alertLocale: {validationAlert: {title: 'validationError', message: 'validationError', type: 'warning'}}}
+                parameters: {
+                    dirty: true,
+                    invalid: true,
+                    error: null,
+                    formErrors: {
+                        rek_title: 'one',
+                        rek_date: 'two'
+                    },
+                    alertLocale: {
+                        validationAlert: {
+                            title: 'validationError',
+                            message: 'validationError',
+                            type: 'warning'
+                        }
+                    }
+                }
             },
             {
-                parameters: {error: 'The given data was invalid.', initialValues: Immutable.Map({
-                    publication: Immutable.Map({rek_pid: null}),
-                    author: Immutable.Map({aut_id: 410})
-                }), alertLocale: {publicationFailedToClaimAlert: {title: 'External pub api error', message: 'External pub api error', type: 'error'}}}
+                parameters: {
+                    error: 'The given data was invalid.',
+                    initialValues: Immutable.Map({
+                        publication: Immutable.Map({rek_pid: null}),
+                        author: Immutable.Map({aut_id: 410})
+                    }),
+                    alertLocale: {
+                        publicationFailedToClaimAlert: {
+                            title: 'External pub api error',
+                            message: 'External pub api error',
+                            type: 'error'
+                        }
+                    }
+                }
             }
         ];
 
@@ -383,4 +457,73 @@ describe('Component ClaimRecord ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should handle default form submit', () => {
+        const preventDefaultFn = jest.fn();
+        const wrapper = setup({});
+        wrapper.find('form').props().onSubmit({preventDefault: preventDefaultFn});
+        expect(preventDefaultFn).toHaveBeenCalled();
+    });
+
+    it('should validate contributor', () => {
+        const validateFunction = jest.spyOn(validation, 'isValidContributorLink');
+        const getInitialValues = authorArray => ({
+            get: () => ({
+                toJS: () => ({
+                    fez_record_search_key_author: authorArray
+                })
+            })
+        });
+        const wrapper = setup({
+            initialValues: getInitialValues(['test'])
+        });
+        const testLink = 'http://test.com';
+        wrapper.instance()._contributorValidation(testLink);
+        expect(validateFunction).toBeCalledWith(testLink);
+
+        wrapper.setProps({
+            initialValues: getInitialValues([])
+        });
+        wrapper.instance()._contributorValidation(testLink);
+        expect(validateFunction).toBeCalledWith(testLink, true);
+    });
+
+    it('should show contributor as linked', () => {
+        const props = {
+            initialValues: Immutable.Map({
+                author: Immutable.Map({aut_id: 410}),
+                publication: Immutable.Map({
+                    ...journalArticle,
+                    fez_record_search_key_contributor_id: [
+                        {
+                            "rek_contributor_id": 410,
+                            "rek_contributor_id_order": 1
+                        },
+                        {
+                            "rek_contributor_id": 0,
+                            "rek_contributor_id_order": 2
+                        }
+                    ]
+                })
+            })
+        };
+
+        const wrapper = setup(props);
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should show alert if submit failed and PID not found', () => {
+        const {rek_pid, journalArticleWithoutPid} = journalArticle;
+        const props = {
+            initialValues: Immutable.Map({
+                author: Immutable.Map({aut_id: 410}),
+                publication: Immutable.Map({
+                    ...journalArticleWithoutPid
+                })
+            }),
+            submitFailed: true
+        };
+
+        const wrapper = setup(props);
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });

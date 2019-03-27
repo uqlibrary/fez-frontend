@@ -852,7 +852,7 @@ exports[`Meta Component  should render component with data collection 1`] = `
   encodeSpecialCharacters={true}
 >
   <title>
-    CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material - UQ eSpace 
+    Data collection mock testing record - UQ eSpace 
   </title>
   <link
     href="http://purl.org/DC/elements/1.0/"
@@ -875,12 +875,12 @@ exports[`Meta Component  should render component with data collection 1`] = `
     name="DC.Subject"
   />
   <meta
-    content="CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material"
+    content="Data collection mock testing record"
     key="DC.Title-3"
     name="DC.Title"
   />
   <meta
-    content="CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material"
+    content="Data collection mock testing record"
     key="citation_title-4"
     name="citation_title"
   />

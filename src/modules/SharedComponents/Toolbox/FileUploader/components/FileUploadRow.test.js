@@ -50,4 +50,27 @@ describe('FileUploadRow', () => {
         wrapper.instance()._updateEmbargoDate(new Date(2016));
         expect(testFunction).toHaveBeenCalledWith(file, 0, new Date(2016));
     });
+
+    it('should show confirmation and delete file', () => {
+        const onDeleteFn = jest.fn();
+        const showConfirmationFn = jest.fn();
+        const wrapper = setup({
+            width: 'xs',
+            onDelete: onDeleteFn
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+
+        wrapper.find('WithStyles(FileUploadRowMobileView)').props().onDelete();
+        expect(showConfirmationFn).not.toBeCalled();
+
+        wrapper.find('ConfirmDialogBox').props().onRef({
+            showConfirmation: showConfirmationFn
+        });
+
+        wrapper.find('WithStyles(FileUploadRowMobileView)').props().onDelete();
+        expect(showConfirmationFn).toHaveBeenCalled();
+
+        wrapper.find('ConfirmDialogBox').props().onAction();
+        expect(onDeleteFn).toHaveBeenCalled();
+    });
 });

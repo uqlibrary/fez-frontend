@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import Downshift from 'downshift';
 import {withStyles} from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
-import TextField from '@material-ui/core/TextField';
+import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
 import MenuItem from '@material-ui/core/MenuItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Popper from '@material-ui/core/Popper';
 
-const styles = () => ({
+export const styles = () => ({
     root: {
         flexGrow: 1,
     },
@@ -89,10 +89,6 @@ export class AutoCompleteAsyncField extends Component {
         }
     };
 
-    handleSelected = (value) => {
-        this.props.onChange(value);
-    };
-
     renderInput = ({ inputProps, classes, openMenu, ...other }) => {
         return (
             <TextField
@@ -122,7 +118,7 @@ export class AutoCompleteAsyncField extends Component {
             <MenuItem
                 button
                 {...itemProps}
-                key={suggestion.value}
+                key={suggestion.key || suggestion.id || suggestion.value}
                 selected={isHighlighted}
                 style={{
                     fontWeight: isSelected ? 500 : 400,
@@ -183,7 +179,7 @@ export class AutoCompleteAsyncField extends Component {
                     {...selectedItemProps}
                     defaultInputValue={!!selectedValue && selectedValue.value || ''}
                     stateReducer={this.stateReducer}
-                    onChange={this.handleSelected}
+                    onChange={this.props.onChange}
                     itemToString={itemToString}
                     onStateChange={this.handleStateChange()}
                 >
@@ -198,7 +194,7 @@ export class AutoCompleteAsyncField extends Component {
                                             onChange: this.getSuggestions
                                         }),
                                         error: error,
-                                        helperText: error && errorText || '',
+                                        errorText: error && errorText || '',
                                         placeholder: hintText,
                                         label: floatingLabelText,
                                         value: inputValue,
@@ -209,10 +205,16 @@ export class AutoCompleteAsyncField extends Component {
                                     {isOpen && itemsList.length > 0 ? (
                                         <div {...getMenuProps()}>
                                             <Popper disablePortal id="downshift-popper" open anchorEl={this.textInputRef} placement="bottom-start">
-                                                <Paper className={classes.paper} square style={{width: this.textInputRef ? this.textInputRef.clientWidth : null}}>
+                                                <Paper className={classes.paper} square style={{
+                                                    width: this.textInputRef ? this.textInputRef.clientWidth : null
+                                                }}>
                                                     {
                                                         itemsList
-                                                            .filter(suggestion => this.props.filter(inputValue, isNaN(inputValue) ? suggestion.value : suggestion.id || suggestion.value.toString()))
+                                                            .filter(suggestion => this.props.filter(
+                                                                inputValue,
+                                                                isNaN(inputValue) ? suggestion.value : suggestion.id ||
+                                                                    suggestion.value.toString()
+                                                            ))
                                                             .slice(0, maxResults).map((suggestion, index) => {
                                                                 return !!suggestion && this.renderSuggestion({
                                                                     suggestion,

@@ -14,10 +14,10 @@ import {NtroFields} from 'modules/SharedComponents/Toolbox/NtroFields';
 import {validation} from 'config';
 import {locale} from 'locale';
 import {default as formLocale} from 'locale/publicationForm';
+import {NTRO_SUBTYPE_RREB_PUBLIC_SECTOR, NTRO_SUBTYPE_RREB_INDUSTRY, NTRO_SUBTYPE_RREB_NOT_FOR_PROFIT, NTRO_SUBTYPE_RREB_OTHER } from 'config/general';
 
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import {NTRO_SUBTYPE_RREB_PUBLIC_SECTOR, NTRO_SUBTYPE_RREB_INDUSTRY, NTRO_SUBTYPE_RREB_NOT_FOR_PROFIT, NTRO_SUBTYPE_RREB_OTHER } from 'config/general';
 
 export default class ResearchReportForm extends Component {
     static propTypes = {
@@ -51,7 +51,7 @@ export default class ResearchReportForm extends Component {
                             <Grid item xs={12}>
                                 <Field
                                     component={TextField}
-                                    autoFocus
+                                    autoFocus={!this.props.isNtro}
                                     disabled={this.props.submitting}
                                     name="rek_title"
                                     required

@@ -6,6 +6,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Divider from '@material-ui/core/Divider';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
+import {NtroHeader} from 'modules/SharedComponents/Toolbox/NtroFields';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {SelectField} from 'modules/SharedComponents/Toolbox/SelectField';
 import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
@@ -42,16 +43,26 @@ export default class PublicationForm extends Component {
             ...(this.publicationTypes.filter((item) => {
                 return item.isFavourite;
             }).map((item, index) => {
-                return <MenuItem value={item.id} key={'fav_' + index} disabled={!item.formComponent}>{item.name}</MenuItem>;
+                return (
+                    <MenuItem value={item.id} key={'fav_' + index} disabled={!item.formComponent}>
+                        {item.name}
+                    </MenuItem>
+                );
             })),
             ...[<Divider key="div_0"/>],
             ...this.publicationTypes.filter((item) => {
                 return item.hasFormComponent;
             }).map((item, index) => {
-                return <MenuItem value={item.id} key={index} disabled={!item.formComponent}>{item.name}</MenuItem>;
+                return (
+                    <MenuItem value={item.id} key={index} disabled={!item.formComponent}>
+                        {item.name}
+                    </MenuItem>
+                );
             }),
             ...NEW_DOCTYPES_OPTIONS.map((item, index) => (
-                <MenuItem value={item} key={`ntro-${index}`}>{!!DOCTYPE_SUBTYPE_MAPPING[item] ? DOCTYPE_SUBTYPE_MAPPING[item].name : item}</MenuItem>
+                <MenuItem value={item} key={`ntro-${index}`}>
+                    {!!DOCTYPE_SUBTYPE_MAPPING[item] ? DOCTYPE_SUBTYPE_MAPPING[item].name : item}
+                </MenuItem>
             ))
         ];
     }
@@ -75,7 +86,10 @@ export default class PublicationForm extends Component {
     }
 
     _handleDefaultSubmit = (event) => {
-        if(event) event.preventDefault();
+        /* istanbul ignore else */
+        if(event) {
+            event.preventDefault();
+        }
     };
 
     render() {
@@ -120,6 +134,10 @@ export default class PublicationForm extends Component {
                     {
                         !!this.props.formComponent &&
                         <React.Fragment>
+                            {
+                                !!this.props.isNtro &&
+                                <NtroHeader/>
+                            }
                             <Grid item xs={12}>
                                 <this.props.formComponent
                                     formValues={this.props.formValues}

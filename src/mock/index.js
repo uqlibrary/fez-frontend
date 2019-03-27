@@ -1,9 +1,11 @@
+/* eslint-disable */
 import {api, sessionApi} from 'config';
 import MockAdapter from 'axios-mock-adapter';
 import Cookies from 'js-cookie';
 import {SESSION_COOKIE_NAME} from 'config';
 import * as routes from 'repositories/routes';
 import * as mockData from './data';
+import * as mockTestingData from './data/testing/records';
 
 const queryString = require('query-string');
 const mock = new MockAdapter(api, {delayResponse: 200});
@@ -76,7 +78,6 @@ mock
         else if (config.params.source === 'crossref' && config.params.title) return [200, mockData.externalTitleSearchResultsList];
         else if (config.params.source === 'crossref' && config.params.doi) return [200, mockData.externalDoiSearchResultList];
         else if (config.params.source === 'pubmed' && config.params.id) return [200, mockData.externalPubMedSearchResultsList];
-        return [500, []];
     })
     .onGet(routes.CURRENT_USER_RECORDS_API({}).apiUrl).reply(config => {
         // AUTHOR_PUBLICATIONS_STATS_ONLY_API
@@ -160,6 +161,10 @@ mock
     .reply(200, mockData.lookupToolIncites)
     .onGet(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({pid: '.*'}).apiUrl)))
     .reply(config => {
+        // Data collection
+        if (config.url.indexOf('UQ:407731') >= 0) {
+            return [200, {data: {...mockTestingData.dataCollection}}];
+        }
         if (config.url.indexOf('UQ:164935') >= 0) {
             return [200, {data: {...mockData.recordWithMap}}];
         }

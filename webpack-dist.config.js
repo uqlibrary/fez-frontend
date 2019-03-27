@@ -3,52 +3,45 @@
 const {resolve} = require('path');
 const webpack = require('webpack');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const WebpackPwaManifest = require("webpack-pwa-manifest");
+const WebpackPwaManifest = require('webpack-pwa-manifest');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-// const OfflinePlugin = require('offline-plugin'); // turn off for staging while co-existing with legacy
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const InjectPreloader = require('preloader-html-webpack-plugin');
 const chalk = require('chalk');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const WebpackStrip = require('strip-loader');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-const RobotstxtPlugin = require('robotstxt-webpack-plugin').default;
+const RobotstxtPlugin = require('robotstxt-webpack-plugin');
 
 const options = {
     policy: [
         {
             userAgent: "*",
-            crawlDelay: 10,
             allow: [
-                "/data/*?*Signature=*&Key-Pair-Id=*"
+                "/$",
+                "/index.html$",
+                "/contact$",
+                "/view/*",
+                "/data/*?*Signature=*&Key-Pair-Id=*",
+                "/assets/*.svg",
+                "/sitemap/*.xml",
+                "/list-by-year/*.html",
+                "/*.js",
+                "/*.css"
             ],
             disallow: [
-                "/login.php",
-                "/stat_details.php",
-                "/stats.php",
-                "/history.php",
-                "/adv_search.php",
-                "/list.php",
-                "/oai.php",
-                "/collection/",
-                "/community/",
-                "/flviewer/",
-                "/records/search",
-                "/documentation/",
-                "/data/",
-                "/list/",
-                "/RHDThesesByAltmetricScore"
-            ],
+                "/"
+            ]
         }
     ],
     sitemap: "https://espace.library.uq.edu.au/sitemap/sitemap-index.xml"
-}
+};
 
 // get branch name for current build, if running build locally CI_BRANCH is not set (it's set in codeship)
 const branch = process && process.env && process.env.CI_BRANCH ? process.env.CI_BRANCH : 'development';
 
 // get configuration for the branch
-const config = require('./config').default[branch] || require('./config').default['development'];
+const config = require('./config').default[branch] || require('./config').default.development;
 
 // local port to serve production build
 const port = 9000;
@@ -112,7 +105,11 @@ const webpackConfig = {
             format: `  building webpack... [:bar] ${chalk.green.bold(':percent')} (It took :elapsed seconds to build)\n`,
             clear: false,
         }),
-        new ExtractTextPlugin('[name]-[hash].min.css'),
+        // new ExtractTextPlugin('[name]-[hash].min.css'),
+        new MiniCssExtractPlugin({
+            filename: '[name]-[hash].min.css'
+        }),
+
         // plugin for passing in data to the js, like what NODE_ENV we are in.
         new webpack.DefinePlugin({
             __DEVELOPMENT__: !process.env.CI_BRANCH,    // always production build on CI
@@ -150,7 +147,7 @@ const webpackConfig = {
             analyzerMode: config.environment === 'production' ? 'disabled' : 'static',
             openAnalyzer: !process.env.CI_BRANCH
         }),
-        new RobotstxtPlugin(options)
+        new RobotstxtPlugin(options),
     ],
     optimization: {
         splitChunks: {
@@ -181,24 +178,24 @@ const webpackConfig = {
             },
             {
                 test: /\.js?$/,
-                exclude: [
-                    /node_modules/,
-                    /custom_modules/
-                ],
                 include: [
                     resolve(__dirname, 'src'),
                     resolve(__dirname, 'node_modules/uqlibrary-react-toolbox/src')
                 ],
-                use: [
-                    'babel-loader',
+                exclude: [
+                    /node_modules/,
+                    /custom_modules/,
+                    '/src/mocks/',
                 ],
+                loader: 'babel-loader',
             },
             {
                 test: /\.scss/,
-                use: ExtractTextPlugin.extract({
-                    fallback: "style-loader",
-                    use: "css-loader!sass-loader",
-                }),
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    "css-loader",
+                    "sass-loader"
+                ]
             },
             {
                 test: /\.(jpe?g|png|gif|svg)$/i,

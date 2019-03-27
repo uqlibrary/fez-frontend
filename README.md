@@ -16,13 +16,12 @@ UQ's branding for Fez is UQ eSpace.
 
 ## Technology
 
-- Code: `React (~0.16), Javascript (ES2015 - Babel), Immutable, SASS`
+- Code: `React (~16.8), Javascript (ES2015 - Babel), Immutable, SASS`
 - State: `Redux, ReduxForm`
 - Design: `Google Material Design` - [Material UI](https://v0.material-ui.com/#/components/app-bar)
 - Build and dev tools: `Webpack`
 - Unit tests: `Jest`
 - E2E tests: TBA
-- Styling: [Bulma](https://bulma.io/)
 
 ## Development
 
@@ -47,6 +46,7 @@ There are two ways to run `eslint`:
 
 - Run `npm run eslint` command
 - Run the following in the project root directory to run eslint automatically before every local commit:
+
     ```sh
     ln -sf "../../scripts/pre-commit" ".git/hooks/pre-commit"
     ```
@@ -170,6 +170,8 @@ Jest is used as testing tool for unit tests. Any HTMl markup is to be tested wit
 - run tests `npm test`
 
 Before committing changes, locally run tests and update stapshots (if required). To update snapshots run `npm test -- -u`.
+
+[Code coverage](http://localhost:3000/coverage/index.html) is available (after running npm run)
 
 #### Guidelines
 

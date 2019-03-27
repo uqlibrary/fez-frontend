@@ -69,7 +69,7 @@ exports[`PreprintForm renders  component 1`] = `
     <StandardCard
       help={
         Object {
-          "buttonLabel": "OK",
+          "buttonLabel": "CLOSE",
           "text": <p>
             For more information about identification of author/creator/designer, click 
             <a

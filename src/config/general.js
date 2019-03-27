@@ -15,6 +15,7 @@ export const SESSION_COOKIE_NAME = 'UQLID';
 export const SESSION_USER_GROUP_COOKIE_NAME = 'UQLID_USER_GROUP';
 export const TOKEN_NAME = 'X-Uql-Token';
 export const BASE_DN = 'ou=Staff,ou=People,o=The University of Queensland,c=AU';
+export const GENERIC_DATE_FORMAT = 'DD/MM/YYYY';
 
 // URLS - values are set in webpack build
 export const API_URL = getValue(process.env.API_URL) || 'https://api.library.uq.edu.au/staging/';
@@ -110,6 +111,7 @@ export const NTRO_SUBTYPE_RREB_INDUSTRY = 'Research Report for an External Body 
 export const NTRO_SUBTYPE_RREB_NOT_FOR_PROFIT = 'Research Report for an External Body - Not-for-profit';
 export const NTRO_SUBTYPE_RREB_OTHER = 'Research Report for an External Body - Other';
 export const SUBTYPE_RR_INTERNAL_OTHER = 'Research Report - Internal or Other';
+export const SUBTYPE_EDITED_BOOK = 'Edited book';
 
 export const CW_NTRO_SUBTYPES = [
     NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
@@ -185,9 +187,13 @@ export const NTRO_SUBTYPES_CATEGORY_CODE = {
     [NTRO_SUBTYPE_CPEE_OTHER]: 'CW4',
     [NTRO_SUBTYPE_RREB_PUBLIC_SECTOR]: 'CW5',
     [NTRO_SUBTYPE_RREB_INDUSTRY]: 'CW5',
-    [NTRO_SUBTYPE_RREB_NOT_FOR_PROFIT]: 'CW5',
-    [NTRO_SUBTYPE_RREB_OTHER]: 'CW5'
+    [NTRO_SUBTYPE_RREB_NOT_FOR_PROFIT]: 'CW5'
 };
+
+const DOCUMENT_TYPE_JOURNAL_ARTICLE = 'Journal Article';
+const DOCUMENT_TYPE_BOOK_CHAPTER = 'Book Chapter';
+const DOCUMENT_TYPE_BOOK = 'Book';
+const DOCUMENT_TYPE_RESEARCH_REPORT = 'Research Report';
 
 export const publicationTypes = (components) => [
     {
@@ -200,7 +206,7 @@ export const publicationTypes = (components) => [
     },
     {
         id: PUBLICATION_TYPE_BOOK,
-        name: 'Book',
+        name: DOCUMENT_TYPE_BOOK,
         class: 'Uqlibrary\\FezCore\\Types\\Book',
         isFavourite: true,
         formComponent: components ? components.BookForm : null,
@@ -209,7 +215,7 @@ export const publicationTypes = (components) => [
         subtypes: [
             'Research book (original research)',
             'Textbook',
-            'Edited book',
+            SUBTYPE_EDITED_BOOK,
             'Reference work, encyclopaedia, manual or handbook',
             NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
             NTRO_SUBTYPE_CW_TEXTUAL_WORK,
@@ -221,7 +227,7 @@ export const publicationTypes = (components) => [
     },
     {
         id: PUBLICATION_TYPE_BOOK_CHAPTER,
-        name: 'Book Chapter',
+        name: DOCUMENT_TYPE_BOOK_CHAPTER,
         class: 'Uqlibrary\\FezCore\\Types\\BookChapter',
         isFavourite: true,
         formComponent: components ? components.BookChapterForm : null,
@@ -331,7 +337,7 @@ export const publicationTypes = (components) => [
     },
     {
         id: PUBLICATION_TYPE_JOURNAL_ARTICLE,
-        name: 'Journal Article',
+        name: DOCUMENT_TYPE_JOURNAL_ARTICLE,
         class: 'Uqlibrary\\FezCore\\Types\\JournalArticle',
         isFavourite: true,
         formComponent: components ? components.JournalArticleForm : null,
@@ -386,7 +392,7 @@ export const publicationTypes = (components) => [
     },
     {
         id: PUBLICATION_TYPE_RESEARCH_REPORT,
-        name: 'Research Report',
+        name: DOCUMENT_TYPE_RESEARCH_REPORT,
         class: 'Uqlibrary\\FezCore\\Types\\ResearchReport',
         formComponent: components ? components.ResearchReportForm : null,
         citationComponent: components ? components.ResearchReportCitation : null,
@@ -567,13 +573,13 @@ export const SUBMITTED_FOR_APPROVAL = 3;
 export const UNPUBLISHED = 1;
 
 export const UNPUBLISHED_STATUS = [
-    'Any unpublished',
-    'In Creation',
-    'In Draft',
-    'In Review',
-    'Retracted',
-    'Submitted for Approval',
-    'Unpublished'
+    {value: 'Any unpublished', text: 'Any unpublished'},
+    {value: 'In Creation', text: 'In Creation'},
+    {value: 'In Draft', text: 'In Draft'},
+    {value: 'In Review', text: 'In Review'},
+    {value: 'Retracted', text: 'Retracted'},
+    {value: 'Submitted for Approval', text: 'Submitted for Approval'},
+    {value: 'Unpublished', text: 'Unpublished'}
 ];
 
 export const UNPUBLISHED_STATUS_MAP = {
@@ -650,41 +656,42 @@ export const ORG_TYPE_ID_FOUNDATION = '453987';
 export const ORG_TYPE_ID_CORPORATE = '453988';
 export const ORG_TYPE_ID_UNIVERSITY = '453989';
 export const ORG_TYPE_ID_OTHER = '453990';
+export const ORG_TYPE_NOT_SET = '454045';
 
 export const ORG_TYPES_LOOKUP = {
-    [ORG_TYPE_ID_MUSEUM]: 'Museum',
-    [ORG_TYPE_ID_GALLERY]: 'Gallery',
+    [ORG_TYPE_ID_MUSEUM]: 'Library/Museum/Public Gallery',
+    [ORG_TYPE_ID_GALLERY]: 'Commercial Gallery',
     [ORG_TYPE_ID_GOVERNMENT]: 'Government',
     [ORG_TYPE_ID_NGO]: 'NGO',
     [ORG_TYPE_ID_FOUNDATION]: 'Foundation',
     [ORG_TYPE_ID_CORPORATE]: 'Corporate/Industry',
     [ORG_TYPE_ID_UNIVERSITY]: 'University',
     [ORG_TYPE_ID_OTHER]: 'Other',
+    [ORG_TYPE_NOT_SET]: 'Not set',
 };
 
-/**
- * @todo Merge grantAgencyTypes and orgAffiliationTypes if possible
- */
 export const grantAgencyTypes = [
-    'Museum',
-    'Gallery',
+    'Library/Museum/Public Gallery',
+    'Commercial Gallery',
     'Government',
     'NGO',
     'Foundation',
     'Corporate/Industry',
     'University',
     'Other',
+    'Not set'
 ];
 
 export const orgAffiliationTypes = [
-    {value: '453983', text: 'Museum'},
-    {value: '453984', text: 'Gallery'},
+    {value: '453983', text: 'Library/Museum/Public Gallery'},
+    {value: '453984', text: 'Commercial Gallery'},
     {value: '453985', text: 'Government'},
     {value: '453986', text: 'NGO'},
     {value: '453987', text: 'Foundation'},
     {value: '453988', text: 'Corporate/Industry'},
     {value: '453989', text: 'University'},
-    {value: '453990', text: 'Other'}
+    {value: '453990', text: 'Other'},
+    {value: '454045', text: 'Not set'}
 ];
 
 export const NEW_DOCTYPES_OPTIONS = [
@@ -874,7 +881,7 @@ export const QUALITY_INDICATORS = [
     {text: 'Repeat performances, reproductions, republications or re-exhibitions', value: 454037},
     {text: 'Selected for use by nationally recognised outlet or entity', value: 454038},
     {text: 'Selected for use by internationally recognised outlet or entity', value: 454039},
-    {text: 'Other (add details to Author/Creator contribution statement)', value: 454040}
+    {text: 'Other (add details to Author/Creator research statement)', value: 454040}
 ];
 
 export const AUDIENCE_SIZE = [
@@ -951,27 +958,23 @@ export const LANGUAGE = [
 
 export const unpublishedBufferActionUrls = [
     {
-        label: 'More options',
-        url: (pid) => `https://espace.library.uq.edu.au/workflow/list_workflows2.php?pid=${pid}`
-    },
-    {
-        label: 'Update selected record - Generic',
-        url: (pid) => `https://espace.library.uq.edu.au/workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=289&href=%2Fmy_fez_traditional.php`
+        label: 'Edit selected record',
+        url: (pid) => `${APP_URL}workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=289&href=%2Fmy_fez_traditional.php`
     },
     {
         label: 'Edit author affiliations',
-        url: (pid) => `https://espace.library.uq.edu.au/workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=229&href=%2Fmy_fez_traditional.php`
+        url: (pid) => `${APP_URL}workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=229&href=%2Fmy_fez_traditional.php`
     },
     {
         label: 'Edit security for selected record',
-        url: (pid) => `https://espace.library.uq.edu.au/workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=230&href=%2Fmy_fez_traditional.php`
-    },
-    {
-        label: 'Manage thesis assessor access',
-        url: (pid) => `https://espace.library.uq.edu.au/workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=293&href=%2Fmy_fez_traditional.php`
+        url: (pid) => `${APP_URL}workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=230&href=%2Fmy_fez_traditional.php`
     },
     {
         label: 'Delete selected record',
-        url: (pid) => `https://espace.library.uq.edu.au/workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=225&href=%2Fmy_fez_traditional.php`
+        url: (pid) => `${APP_URL}workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=225&href=%2Fmy_fez_traditional.php`
+    },
+    {
+        label: 'More options',
+        url: (pid) => `${APP_URL}workflow/list_workflows2.php?pid=${pid}`
     }
 ];

@@ -109,7 +109,7 @@ export class AuthorLinking extends PureComponent {
     /**
      * Build authors list
      */
-    getAuthorsToRender = ({authorList, linkedAuthorIdList, disabled} = {}, {selectedAuthor = {}} = {}) => {
+    getAuthorsToRender = ({authorList = [], linkedAuthorIdList = [], disabled = false} = {}, {selectedAuthor = {}} = {}) => {
         const authors = authorList.map((author, index) => {
             const linked = (
                 linkedAuthorIdList.length > 0 &&
@@ -131,7 +131,6 @@ export class AuthorLinking extends PureComponent {
                 />
             );
         });
-
 
         if (this.context.isMobile) {
             return authors;
@@ -185,17 +184,14 @@ export class AuthorLinking extends PureComponent {
         const {value, order, type} = searchKey;
         return {
             [`rek_${type}_id_id`]: null,
-            [`rek_${type}_id_pid`]: author[`rek_${type}_pid`] || null,
+            [`rek_${type}_id_pid`]: author !== null && author[`rek_${type}_pid`] || null,
             [value]: authorId,
-            [order]: author[`rek_${type}_order`]
+            [order]: author !== null && author[`rek_${type}_order`] || null
         };
     };
 
     /**
      * Select and transform author to be linked
-     *
-     * @param author
-     * @private
      */
     _selectAuthor = (author) => {
         const selectedAuthor = this.transformToAuthorOrderId(this.props.loggedInAuthor.aut_id, author, this.props.searchKey);

@@ -10,7 +10,13 @@ import {general} from 'config';
 import ReactHtmlParser from 'react-html-parser';
 import {pathConfig} from 'config/routes';
 import {Link} from 'react-router-dom';
-import {NTRO_SUBTYPE_CW_TEXTUAL_WORK} from 'config/general';
+import {
+    NTRO_SUBTYPE_CW_TEXTUAL_WORK,
+    DOCUMENT_TYPE_JOURNAL_ARTICLE,
+    DOCUMENT_TYPE_BOOK_CHAPTER,
+    DOCUMENT_TYPE_BOOK,
+    DOCUMENT_TYPE_RESEARCH_REPORT
+} from 'config/general';
 
 const styles = (theme) => ({
     gridRow: {
@@ -23,7 +29,7 @@ const styles = (theme) => ({
     }
 });
 
-export class NtroDetails extends PureComponent {
+export class NtroDetailsClass extends PureComponent {
     static propTypes = {
         publication: PropTypes.object.isRequired,
         classes: PropTypes.object,
@@ -55,32 +61,31 @@ export class NtroDetails extends PureComponent {
                 <StandardCard title={locale.viewRecord.sections.ntro.title}>
                     {/* Scale of work */}
                     {
-                        publication.fez_record_search_key_significance && publication.fez_record_search_key_significance.length > 0 &&
+                        publication.fez_record_search_key_significance &&
+                        publication.fez_record_search_key_significance.length > 0 &&
                         publication.fez_record_search_key_significance.map((item, index) => {
-                            if((item.rek_significance === 0 || item.rek_significance === '0' || !item.rek_significance) && !this.props.account.canMasquerade) { return null; } else {
-                                return (
-                                    <this.ViewNtroRow
-                                        key={index}
-                                        heading={`${locale.viewRecord.headings.NTRO.significance}`}
-                                        subheading={`(${publication.fez_record_search_key_author[index].rek_author})`}
-                                        data={item.rek_significance === general.SIGNIFICANCE_MINOR && 'Minor'
-                                        || item.rek_significance === general.SIGNIFICANCE_MAJOR && 'Major' || 'Not set'}
-                                    />
-                                );
-                            }
+                            return (
+                                <this.ViewNtroRow
+                                    key={index}
+                                    heading={`${locale.viewRecord.headings.NTRO.significance}`}
+                                    subheading={`(${publication.fez_record_search_key_author[index].rek_author})`}
+                                    data={(item.rek_significance !== 0 && item.rek_significance !== '0' && !!item.rek_significance && item.rek_significance_lookup) || 'Not set'}
+                                />
+                            );
                         })
                     }
                     {/* Contribution statement */}
                     {
                         publication.fez_record_search_key_creator_contribution_statement && publication.fez_record_search_key_creator_contribution_statement.length > 0 &&
                         publication.fez_record_search_key_creator_contribution_statement.map((item, index) => {
-                            if(this.props.account.canMasquerade || item.rek_creator_contribution_statement !== global.global.defaultContibutorStatementMissing && item.rek_creator_contribution_statement.trim().length > 0) {
+                            if(this.props.account && !!this.props.account.canMasquerade ||
+                                item.rek_creator_contribution_statement !== global.global.defaultContributorStatementMissing && item.rek_creator_contribution_statement.trim().length > 0) {
                                 return (
                                     <this.ViewNtroRow
                                         className={this.props.classes.richTextParagraphFix}
                                         key={index}
                                         heading={locale.viewRecord.headings.NTRO.impactStatement}
-                                        subheading={`(${publication.fez_record_search_key_author[index].rek_author})`}
+                                        subheading={publication.fez_record_search_key_author[index].rek_author ? `(${publication.fez_record_search_key_author[index].rek_author})` : ''}
                                         data={item.rek_creator_contribution_statement && item.rek_creator_contribution_statement.trim().length !== 0 && ReactHtmlParser(item.rek_creator_contribution_statement) || null}
                                     />
                                 );
@@ -150,7 +155,7 @@ export class NtroDetails extends PureComponent {
                     }
                     {/* Volume number */}
                     {
-                        docType !== 'Journal Article' && subType !== NTRO_SUBTYPE_CW_TEXTUAL_WORK
+                        docType !== DOCUMENT_TYPE_JOURNAL_ARTICLE && subType !== NTRO_SUBTYPE_CW_TEXTUAL_WORK
                         && publication.fez_record_search_key_volume_number && publication.fez_record_search_key_volume_number.rek_volume_number &&
                         <this.ViewNtroRow
                             heading={locale.viewRecord.headings.NTRO.rek_volume_number}
@@ -159,7 +164,7 @@ export class NtroDetails extends PureComponent {
                     }
                     {/* Issue number */}
                     {
-                        docType !== 'Journal Article' && subType !== NTRO_SUBTYPE_CW_TEXTUAL_WORK
+                        docType !== DOCUMENT_TYPE_JOURNAL_ARTICLE && subType !== NTRO_SUBTYPE_CW_TEXTUAL_WORK
                         && publication.fez_record_search_key_issue_number && publication.fez_record_search_key_issue_number.rek_issue_number &&
                         <this.ViewNtroRow
                             heading={locale.viewRecord.headings.NTRO.rek_issue_number}
@@ -168,8 +173,8 @@ export class NtroDetails extends PureComponent {
                     }
                     {/* Start page */}
                     {
-                        docType !== 'Journal Article' && subType !== NTRO_SUBTYPE_CW_TEXTUAL_WORK
-                        && docType !== 'Book Chapter' && publication.fez_record_search_key_start_page && publication.fez_record_search_key_start_page.rek_start_page &&
+                        docType !== DOCUMENT_TYPE_JOURNAL_ARTICLE && subType !== NTRO_SUBTYPE_CW_TEXTUAL_WORK && docType !== DOCUMENT_TYPE_BOOK_CHAPTER
+                        && publication.fez_record_search_key_start_page && publication.fez_record_search_key_start_page.rek_start_page &&
                         <this.ViewNtroRow
                             heading={locale.viewRecord.headings.NTRO.rek_start_page}
                             data={publication.fez_record_search_key_start_page.rek_start_page}
@@ -177,8 +182,8 @@ export class NtroDetails extends PureComponent {
                     }
                     {/* End page */}
                     {
-                        docType !== 'Journal Article' && subType !== NTRO_SUBTYPE_CW_TEXTUAL_WORK
-                        && docType !== 'Book Chapter' && publication.fez_record_search_key_end_page && publication.fez_record_search_key_end_page.rek_end_page &&
+                        docType !== DOCUMENT_TYPE_JOURNAL_ARTICLE && subType !== NTRO_SUBTYPE_CW_TEXTUAL_WORK
+                        && docType !== DOCUMENT_TYPE_BOOK_CHAPTER && publication.fez_record_search_key_end_page && publication.fez_record_search_key_end_page.rek_end_page &&
                         <this.ViewNtroRow
                             heading={locale.viewRecord.headings.NTRO.rek_end_page}
                             data={publication.fez_record_search_key_end_page.rek_end_page}
@@ -186,9 +191,9 @@ export class NtroDetails extends PureComponent {
                     }
                     {/* Total pages */}
                     {
-                        docType !== 'Book Chapter'
-                        && (docType !== 'Book' && subType !== NTRO_SUBTYPE_CW_TEXTUAL_WORK)
-                        && docType !== 'Research Report'
+                        docType !== DOCUMENT_TYPE_BOOK_CHAPTER
+                        && (docType !== DOCUMENT_TYPE_BOOK && subType !== NTRO_SUBTYPE_CW_TEXTUAL_WORK)
+                        && docType !== DOCUMENT_TYPE_RESEARCH_REPORT
                         && publication.fez_record_search_key_total_pages && publication.fez_record_search_key_total_pages.rek_total_pages &&
                         <this.ViewNtroRow
                             heading={locale.viewRecord.headings.NTRO.rek_total_pages}
@@ -201,14 +206,15 @@ export class NtroDetails extends PureComponent {
                         publication.fez_record_search_key_language && publication.fez_record_search_key_language.length > 0 &&
                         <this.ViewNtroRow
                             heading={locale.viewRecord.headings.NTRO.rek_language}
-                            data={publication.fez_record_search_key_language.map((item1, index) => {
-                                return general.LANGUAGE.map((item2) => {
-                                    return item1.rek_language === item2.value &&
-                                        <span key={index}>
-                                            {item2.text}
-                                            {publication.fez_record_search_key_language.length > 1 && index < publication.fez_record_search_key_language.length - 1 && ', '}
-                                        </span>;
-                                });
+                            data={publication.fez_record_search_key_language.map((item, index) => {
+                                return (<span key={index}>
+                                    {
+                                        general.LANGUAGE
+                                            .filter(language => { return item.rek_language === language.value; })
+                                            .map(language => { return language.text; })
+                                    }
+                                    {publication.fez_record_search_key_language.length > 1 && index < publication.fez_record_search_key_language.length - 1 && ', '}
+                                </span>);
                             })
                             }
                         />
@@ -227,9 +233,7 @@ export class NtroDetails extends PureComponent {
                         publication.fez_record_search_key_audience_size && publication.fez_record_search_key_audience_size.rek_audience_size &&
                         <this.ViewNtroRow
                             heading={locale.viewRecord.headings.NTRO.rek_audience_size}
-                            data={general.AUDIENCE_SIZE.map((item) => {
-                                return item.value === publication.fez_record_search_key_audience_size.rek_audience_size && item.text;
-                            })}
+                            data={publication.fez_record_search_key_audience_size.rek_audience_size_lookup || 'Not set'}
                         />
                     }
                     {/* Quality indicators */}
@@ -237,16 +241,15 @@ export class NtroDetails extends PureComponent {
                         publication.fez_record_search_key_quality_indicator && publication.fez_record_search_key_quality_indicator.length > 0 &&
                         <this.ViewNtroRow
                             heading={locale.viewRecord.headings.NTRO.qualityIndicators}
-                            data={publication.fez_record_search_key_quality_indicator.map((item1, index) => {
-                                return general.QUALITY_INDICATORS.map((item2) => {
-                                    return item1.rek_quality_indicator === item2.value &&
-                                        <span key={index}>
-                                            {item2.text}
-                                            {publication.fez_record_search_key_quality_indicator.length > 1 && index < publication.fez_record_search_key_quality_indicator.length - 1 && ', '}
-                                        </span>;
-                                });
-                            })
-                            }
+                            data={publication.fez_record_search_key_quality_indicator.map((item, index) => {
+                                return (
+                                    <span key={index}>
+                                        {item.rek_quality_indicator_lookup || 'Not set'}
+                                        {publication.fez_record_search_key_quality_indicator.length > 1 && index < publication.fez_record_search_key_quality_indicator.length - 1 && ', '}
+                                    </span>
+                                );
+                            })}
+
                         />
                     }
                 </StandardCard>
@@ -255,4 +258,6 @@ export class NtroDetails extends PureComponent {
     }
 }
 
-export default withStyles(styles)(NtroDetails);
+const StyledNtroDetailsClass = withStyles(styles, {withTheme: true})(NtroDetailsClass);
+const NtroDetails = (props) => <StyledNtroDetailsClass {...props}/>;
+export default NtroDetails;

@@ -14,7 +14,7 @@ IMPORTANT: if currently text contains placeholders, eg any characters in square 
 help: {
     title: 'About these metrics',
     text: (<div></div>),
-    buttonLabel: 'OK'
+    buttonLabel: 'CLOSE'
 }
 - text can be plain or formatted HTML component with links/tags/etc
 - if help is not required, delete help: {} fully (including closing '},')
@@ -58,6 +58,7 @@ export default {
                         <li>Supporting the deposit of open access publications to make UQ research globally accessible</li>
                         <li>Preserving and making digitised materials accessible to the world including HDR theses, photographs, audio materials, videos, manuscripts and other original works.</li>
                     </ul>
+                    <p>You can also read the <a href="https://espace.library.uq.edu.au/view/UQ:295655/eSpaceScopeandPolicy.pdf">UQ eSpace Scope and Policy</a>.</p>
                 </StandardCard>
             )
         },
@@ -85,7 +86,7 @@ export default {
                         </p>
                     </div>
                 ),
-                buttonLabel: 'OK'
+                buttonLabel: 'CLOSE'
             }
         },
         notFound: {
@@ -141,7 +142,7 @@ export default {
                 // help: {
                 //     title: 'Your dashboard',
                 //     text: 'Your profile help....',
-                //     buttonLabel: 'OK'
+                //     buttonLabel: 'CLOSE'
                 // },
                 dashboardArticleCount: {
                     yearSeparator: ' to ',
@@ -163,6 +164,23 @@ export default {
                         google_scholar: 'Google Scholar',
                         orcid: 'ORCID'
                     },
+                    links: {
+                        linkedUrl: {
+                            publons: 'https://publons.com/author/',
+                            scopus: 'http://www.scopus.com/authid/detail.url?authorId=',
+                            researcher: 'http://www.researcherid.com/rid/',
+                            google_scholar: 'https://scholar.google.com.au/citations?user=',
+                            orcid: 'https://orcid.org/'
+                        },
+                        notLinkedUrl: {
+                            publons: 'http://guides.library.uq.edu.au/for-researchers/researcher-identifier/publons',
+                            scopus: 'http://guides.library.uq.edu.au/for-researchers/researcher-identifier/scopus-authorid',
+                            researcher: 'http://guides.library.uq.edu.au/for-researchers/researcher-identifier/researcherid',
+                            google_scholar: 'http://guides.library.uq.edu.au/for-researchers/researcher-identifier/google-scholar-profile',
+                            // google_scholar: pathConfig.authorIdentifiers.googleScholar.link,
+                            orcid: pathConfig.authorIdentifiers.orcid.link
+                        }
+                    }
                 }
             },
             myLatestPublications: {
@@ -271,7 +289,7 @@ export default {
                 // help: {
                 //     title: 'No matching records found',
                 //     text: 'Why search didn\'t return any items....',
-                //     buttonLabel: 'Ok'
+                //     buttonLabel: 'CLOSE'
                 // }
             },
             searchResults: {
@@ -280,7 +298,7 @@ export default {
                 // help: {
                 //     title: 'Possibly your publications',
                 //     text: 'Help about ....',
-                //     buttonLabel: 'Ok'
+                //     buttonLabel: 'CLOSE'
                 // },
                 hide: 'Not mine',
                 claim: 'Claim this work',
@@ -318,7 +336,7 @@ export default {
                 // help: {
                 //     title: 'Search for your publication',
                 //     text: 'Help about search....',
-                //     buttonLabel: 'Ok'
+                //     buttonLabel: 'CLOSE'
                 // },
                 fieldLabels: {
                     search: 'Enter DOI, Pubmed Id or Title'
@@ -333,7 +351,7 @@ export default {
                     // help: {
                     //     title: 'No matching records found',
                     //     text: 'Why search didn\'t return any items....',
-                    //     buttonLabel: 'Ok'
+                    //     buttonLabel: 'CLOSE'
                     // }
                 },
                 searchResults: {
@@ -343,7 +361,7 @@ export default {
                     // help: {
                     //     title: 'Possible matches found',
                     //     text: 'Why search displays these items....',
-                    //     buttonLabel: 'Ok'
+                    //     buttonLabel: 'CLOSE'
                     // },
                     searchDashboard: {
                         title: 'Repository search',
@@ -469,7 +487,7 @@ export default {
                         Masquerade as another user...
                     </div>
                 ),
-                buttonLabel: 'OK'
+                buttonLabel: 'CLOSE'
             },
             description: (account) => account && account.canMasqueradeType && account.canMasqueradeType === 'readonly' ?
                 (<p>
@@ -506,7 +524,7 @@ export default {
                         </ol>
                     </div>
                 ),
-                buttonLabel: 'OK'
+                buttonLabel: 'CLOSE'
             },
             labels: {
                 submit: 'Save Google Scholar ID',
@@ -634,7 +652,7 @@ export default {
                             record</p>
                     </div>
                 ),
-                buttonLabel: 'OK'
+                buttonLabel: 'CLOSE'
             },
             linkOrcid: {
                 title: 'I already have an ORCID iD',

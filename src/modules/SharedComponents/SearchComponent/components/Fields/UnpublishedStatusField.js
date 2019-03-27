@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import {GenericSelectField} from 'modules/SharedComponents/GenericSelectField';
 import {UNPUBLISHED_STATUS} from 'config/general';
 
-const mapStateToProps = (state, props) => {
+export const mapStateToProps = (state, props) => {
     return {
         selectedValue: props.input ? props.input.value : props.value,
         itemsList: props.itemsList || UNPUBLISHED_STATUS,
@@ -12,7 +12,7 @@ const mapStateToProps = (state, props) => {
         label: props.label,
         placeholder: props.placeholder,
         required: props.required,
-        errorText: !!props.meta && props.meta.error || props.error && !!props.errorText && props.errorText || '',
+        errorText: !!props.meta && props.meta.error || props.error && !!props.errorText || '',
         error: !!props.meta && !!props.meta.error || props.error || false
     };
 };

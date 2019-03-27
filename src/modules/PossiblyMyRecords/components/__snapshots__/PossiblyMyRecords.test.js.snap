@@ -135,7 +135,8 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
 <StandardPage
   title="Claim possible works"
 >
-  <WithStyles(ConfirmDialogBox)
+  <ConfirmDialogBox
+    hideCancelButton={false}
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -159,69 +160,67 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
       <StandardCard
         noHeader={true}
       >
-        <React.Fragment>
-          <WithStyles(Grid)
-            item={true}
-            xs={true}
-          >
-            <WithStyles(Typography)>
-              3 out of 5 potential match(es) displayed. Select any item to claim it as your work.
-            </WithStyles(Typography)>
-          </WithStyles(Grid)>
-          <WithStyles(Grid)
-            item={true}
-            style={
-              Object {
-                "marginTop": 16,
-              }
+        <WithStyles(Grid)
+          item={true}
+          xs={true}
+        >
+          <WithStyles(Typography)>
+            3 out of 5 potential match(es) displayed. Select any item to claim it as your work.
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          style={
+            Object {
+              "marginTop": 16,
             }
+          }
+          xs={true}
+        >
+          <WithStyles(Grid)
+            item={true}
             xs={true}
           >
-            <WithStyles(Grid)
-              item={true}
-              xs={true}
-            >
-              <PublicationsList
-                customActions={
-                  Array [
-                    Object {
-                      "handleAction": [Function],
-                      "label": "Claim this work",
-                      "primary": true,
-                    },
-                    Object {
-                      "handleAction": [Function],
-                      "label": "Not mine",
-                    },
-                  ]
-                }
-                hideCountDiff={false}
-                publicationsList={
-                  Array [
-                    1,
-                    2,
-                    3,
-                  ]
-                }
-                publicationsListSubset={Array []}
-                showDefaultActions={false}
-                showMetrics={false}
-                showSourceCountIcon={false}
-                showSources={false}
-                showUnpublishedBufferFields={false}
-                subsetCustomActions={
-                  Array [
-                    Object {
-                      "disabled": true,
-                      "label": "In progress",
-                      "primary": false,
-                    },
-                  ]
-                }
-              />
-            </WithStyles(Grid)>
+            <PublicationsList
+              customActions={
+                Array [
+                  Object {
+                    "handleAction": [Function],
+                    "label": "Claim this work",
+                    "primary": true,
+                  },
+                  Object {
+                    "handleAction": [Function],
+                    "label": "Not mine",
+                  },
+                ]
+              }
+              hideCountDiff={false}
+              publicationsList={
+                Array [
+                  1,
+                  2,
+                  3,
+                ]
+              }
+              publicationsListSubset={Array []}
+              showDefaultActions={false}
+              showMetrics={false}
+              showSourceCountIcon={false}
+              showSources={false}
+              showUnpublishedBufferFields={false}
+              subsetCustomActions={
+                Array [
+                  Object {
+                    "disabled": true,
+                    "label": "In progress",
+                    "primary": false,
+                  },
+                ]
+              }
+            />
           </WithStyles(Grid)>
-        </React.Fragment>
+        </WithStyles(Grid)>
       </StandardCard>
     </WithStyles(Grid)>
     <Hidden
@@ -432,3 +431,15 @@ exports[`Component PossiblyMyRecords renders no results 1`] = `
 `;
 
 exports[`Component PossiblyMyRecords renders nothing while account is loading 1`] = `""`;
+
+exports[`Component PossiblyMyRecords should generate <Alert> when appropriate 1`] = `
+<WithStyles(Alert)
+  message={null}
+/>
+`;
+
+exports[`Component PossiblyMyRecords should generate <Alert> when appropriate 2`] = `
+<WithStyles(Alert)
+  message="Alert: test message"
+/>
+`;

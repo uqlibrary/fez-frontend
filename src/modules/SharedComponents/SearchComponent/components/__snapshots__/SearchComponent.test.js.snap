@@ -1,7 +1,53 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`SearchComponent getFieldRowsFromSearchQuery should process empty search query 1`] = `
+Array [
+  Object {
+    "label": "",
+    "searchField": "0",
+    "value": "",
+  },
+]
+`;
+
+exports[`SearchComponent getFieldRowsFromSearchQuery should process missing label 1`] = `
+Array [
+  Object {
+    "label": "",
+    "searchField": "rek_updated_date",
+    "value": Object {},
+  },
+]
+`;
+
+exports[`SearchComponent getSearchQuery should construct search query 1`] = `
+Object {
+  "activeFacets": Object {
+    "filters": Object {},
+    "ranges": Object {},
+    "showOpenAccessOnly": true,
+  },
+  "page": 1,
+  "pageSize": 20,
+  "searchMode": "advanced",
+  "searchQueryParams": Object {
+    "all": "i feel lucky",
+    "rek_display_type": undefined,
+  },
+  "sortBy": "score",
+  "sortDirection": "Desc",
+}
+`;
+
+exports[`SearchComponent parseDateRange should return date range 1`] = `
+Object {
+  "from": "2019-01-30T14:00:00.000Z",
+  "to": "2019-02-11T14:00:00.000Z",
+}
+`;
+
 exports[`SearchComponent should add one row for advanced search 1`] = `
-<React.Fragment>
+<Fragment>
   <WithStyles(AdvancedSearchComponent)
     docTypes={Array []}
     fieldRows={
@@ -40,11 +86,11 @@ exports[`SearchComponent should add one row for advanced search 1`] = `
     message=""
     open={false}
   />
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`SearchComponent should add one row for advanced search 2`] = `
-<React.Fragment>
+<Fragment>
   <WithStyles(AdvancedSearchComponent)
     docTypes={Array []}
     fieldRows={
@@ -87,11 +133,11 @@ exports[`SearchComponent should add one row for advanced search 2`] = `
     message=""
     open={false}
   />
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`SearchComponent should display simple search with query string 1`] = `
-<React.Fragment>
+<Fragment>
   <WithStyles(SimpleSearchComponent)
     isInHeader={false}
     onInvalidSearch={[Function]}
@@ -115,11 +161,11 @@ exports[`SearchComponent should display simple search with query string 1`] = `
     message=""
     open={false}
   />
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`SearchComponent should display simple search with query string 2`] = `
-<React.Fragment>
+<Fragment>
   <WithStyles(SimpleSearchComponent)
     isInHeader={false}
     onInvalidSearch={[Function]}
@@ -143,11 +189,11 @@ exports[`SearchComponent should display simple search with query string 2`] = `
     message=""
     open={false}
   />
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`SearchComponent should handle simple search text change 1`] = `
-<React.Fragment>
+<Fragment>
   <WithStyles(SimpleSearchComponent)
     isInHeader={false}
     onInvalidSearch={[Function]}
@@ -171,11 +217,11 @@ exports[`SearchComponent should handle simple search text change 1`] = `
     message=""
     open={false}
   />
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`SearchComponent should remove one row from advanced search 1`] = `
-<React.Fragment>
+<Fragment>
   <WithStyles(AdvancedSearchComponent)
     docTypes={Array []}
     fieldRows={
@@ -224,11 +270,11 @@ exports[`SearchComponent should remove one row from advanced search 1`] = `
     message=""
     open={false}
   />
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`SearchComponent should remove one row from advanced search 2`] = `
-<React.Fragment>
+<Fragment>
   <WithStyles(AdvancedSearchComponent)
     docTypes={Array []}
     fieldRows={
@@ -272,11 +318,11 @@ exports[`SearchComponent should remove one row from advanced search 2`] = `
     message=""
     open={false}
   />
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`SearchComponent should render default view 1`] = `
-<React.Fragment>
+<Fragment>
   <WithStyles(SimpleSearchComponent)
     isInHeader={false}
     onInvalidSearch={[Function]}
@@ -300,11 +346,11 @@ exports[`SearchComponent should render default view 1`] = `
     message=""
     open={false}
   />
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`SearchComponent should render default view with advanced search 1`] = `
-<React.Fragment>
+<Fragment>
   <WithStyles(AdvancedSearchComponent)
     docTypes={Array []}
     fieldRows={
@@ -343,11 +389,11 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
     message=""
     open={false}
   />
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`SearchComponent should render simple search even if it says is advanced, if in header 1`] = `
-<React.Fragment>
+<Fragment>
   <WithStyles(SimpleSearchComponent)
     isInHeader={true}
     onInvalidSearch={[Function]}
@@ -371,11 +417,11 @@ exports[`SearchComponent should render simple search even if it says is advanced
     message=""
     open={false}
   />
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`SearchComponent should render with a class "header" for use in AppBar 1`] = `
-<React.Fragment>
+<Fragment>
   <WithStyles(SimpleSearchComponent)
     isInHeader={true}
     onInvalidSearch={[Function]}
@@ -399,11 +445,11 @@ exports[`SearchComponent should render with a class "header" for use in AppBar 1
     message=""
     open={false}
   />
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`SearchComponent should reset advanced search 1`] = `
-<React.Fragment>
+<Fragment>
   <WithStyles(AdvancedSearchComponent)
     docTypes={Array []}
     fieldRows={
@@ -447,11 +493,11 @@ exports[`SearchComponent should reset advanced search 1`] = `
     message=""
     open={false}
   />
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`SearchComponent should reset advanced search 2`] = `
-<React.Fragment>
+<Fragment>
   <WithStyles(AdvancedSearchComponent)
     docTypes={Array []}
     fieldRows={
@@ -493,11 +539,11 @@ exports[`SearchComponent should reset advanced search 2`] = `
     message=""
     open={false}
   />
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`SearchComponent should toggle advanced search to minimised view 1`] = `
-<React.Fragment>
+<Fragment>
   <WithStyles(AdvancedSearchComponent)
     docTypes={Array []}
     fieldRows={
@@ -536,11 +582,11 @@ exports[`SearchComponent should toggle advanced search to minimised view 1`] = `
     message=""
     open={false}
   />
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`SearchComponent should toggle advanced search to minimised view 2`] = `
-<React.Fragment>
+<Fragment>
   <WithStyles(AdvancedSearchComponent)
     docTypes={Array []}
     fieldRows={
@@ -579,11 +625,11 @@ exports[`SearchComponent should toggle advanced search to minimised view 2`] = `
     message=""
     open={false}
   />
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`SearchComponent should toggle open access for advanced search 1`] = `
-<React.Fragment>
+<Fragment>
   <WithStyles(AdvancedSearchComponent)
     docTypes={Array []}
     fieldRows={
@@ -622,11 +668,11 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
     message=""
     open={false}
   />
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`SearchComponent should toggle open access for advanced search 2`] = `
-<React.Fragment>
+<Fragment>
   <WithStyles(AdvancedSearchComponent)
     docTypes={Array []}
     fieldRows={
@@ -665,11 +711,11 @@ exports[`SearchComponent should toggle open access for advanced search 2`] = `
     message=""
     open={false}
   />
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`SearchComponent should toggle search to minimised view of advanced search 1`] = `
-<React.Fragment>
+<Fragment>
   <WithStyles(SimpleSearchComponent)
     isInHeader={false}
     onInvalidSearch={[Function]}
@@ -693,11 +739,11 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
     message=""
     open={false}
   />
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`SearchComponent should toggle search to minimised view of advanced search 2`] = `
-<React.Fragment>
+<Fragment>
   <WithStyles(AdvancedSearchComponent)
     docTypes={Array []}
     fieldRows={
@@ -741,11 +787,11 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
     message=""
     open={false}
   />
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`SearchComponent should update advanced search row on search text changed 1`] = `
-<React.Fragment>
+<Fragment>
   <WithStyles(AdvancedSearchComponent)
     docTypes={Array []}
     fieldRows={
@@ -784,11 +830,11 @@ exports[`SearchComponent should update advanced search row on search text change
     message=""
     open={false}
   />
-</React.Fragment>
+</Fragment>
 `;
 
 exports[`SearchComponent should update advanced search row on search text changed 2`] = `
-<React.Fragment>
+<Fragment>
   <WithStyles(AdvancedSearchComponent)
     docTypes={Array []}
     fieldRows={
@@ -827,5 +873,327 @@ exports[`SearchComponent should update advanced search row on search text change
     message=""
     open={false}
   />
-</React.Fragment>
+</Fragment>
+`;
+
+exports[`SearchComponent should update date range filter 1`] = `
+<Fragment>
+  <WithStyles(AdvancedSearchComponent)
+    docTypes={Array []}
+    fieldRows={
+      Array [
+        Object {
+          "label": "",
+          "searchField": "0",
+          "value": "",
+        },
+      ]
+    }
+    isMinimised={false}
+    isOpenAccess={false}
+    onAdvancedSearchReset={[Function]}
+    onAdvancedSearchRowAdd={[Function]}
+    onAdvancedSearchRowChange={[Function]}
+    onAdvancedSearchRowRemove={[Function]}
+    onSearch={[Function]}
+    onToggleMinimise={[Function]}
+    onToggleOpenAccess={[Function]}
+    onToggleSearchMode={[Function]}
+    showUnpublishedFields={false}
+    updateDateRange={[Function]}
+    updateDocTypeValues={[Function]}
+    updateYearRangeFilter={[Function]}
+    yearFilter={Object {}}
+  />
+  <WithStyles(Snackbar)
+    anchorOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "bottom",
+      }
+    }
+    autoHideDuration={5000}
+    message=""
+    open={false}
+  />
+</Fragment>
+`;
+
+exports[`SearchComponent should update date range filter 2`] = `
+<Fragment>
+  <WithStyles(AdvancedSearchComponent)
+    docTypes={Array []}
+    fieldRows={
+      Array [
+        Object {
+          "label": "",
+          "searchField": "0",
+          "value": "",
+        },
+        Object {
+          "label": "",
+          "searchField": "rek_created_date",
+          "value": "[2000 - 2001]",
+        },
+      ]
+    }
+    isMinimised={false}
+    isOpenAccess={false}
+    onAdvancedSearchReset={[Function]}
+    onAdvancedSearchRowAdd={[Function]}
+    onAdvancedSearchRowChange={[Function]}
+    onAdvancedSearchRowRemove={[Function]}
+    onSearch={[Function]}
+    onToggleMinimise={[Function]}
+    onToggleOpenAccess={[Function]}
+    onToggleSearchMode={[Function]}
+    showUnpublishedFields={false}
+    updateDateRange={[Function]}
+    updateDocTypeValues={[Function]}
+    updateYearRangeFilter={[Function]}
+    yearFilter={Object {}}
+  />
+  <WithStyles(Snackbar)
+    anchorOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "bottom",
+      }
+    }
+    autoHideDuration={5000}
+    message=""
+    open={false}
+  />
+</Fragment>
+`;
+
+exports[`SearchComponent should update date range filter 3`] = `
+<Fragment>
+  <WithStyles(AdvancedSearchComponent)
+    docTypes={Array []}
+    fieldRows={
+      Array [
+        Object {
+          "label": "",
+          "searchField": "0",
+          "value": "",
+        },
+        Object {
+          "label": "",
+          "searchField": "rek_created_date",
+          "value": "[2000 - 2005]",
+        },
+      ]
+    }
+    isMinimised={false}
+    isOpenAccess={false}
+    onAdvancedSearchReset={[Function]}
+    onAdvancedSearchRowAdd={[Function]}
+    onAdvancedSearchRowChange={[Function]}
+    onAdvancedSearchRowRemove={[Function]}
+    onSearch={[Function]}
+    onToggleMinimise={[Function]}
+    onToggleOpenAccess={[Function]}
+    onToggleSearchMode={[Function]}
+    showUnpublishedFields={false}
+    updateDateRange={[Function]}
+    updateDocTypeValues={[Function]}
+    updateYearRangeFilter={[Function]}
+    yearFilter={Object {}}
+  />
+  <WithStyles(Snackbar)
+    anchorOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "bottom",
+      }
+    }
+    autoHideDuration={5000}
+    message=""
+    open={false}
+  />
+</Fragment>
+`;
+
+exports[`SearchComponent should update doc type values 1`] = `
+<Fragment>
+  <WithStyles(AdvancedSearchComponent)
+    docTypes={Array []}
+    fieldRows={
+      Array [
+        Object {
+          "label": "",
+          "searchField": "0",
+          "value": "",
+        },
+      ]
+    }
+    isMinimised={false}
+    isOpenAccess={false}
+    onAdvancedSearchReset={[Function]}
+    onAdvancedSearchRowAdd={[Function]}
+    onAdvancedSearchRowChange={[Function]}
+    onAdvancedSearchRowRemove={[Function]}
+    onSearch={[Function]}
+    onToggleMinimise={[Function]}
+    onToggleOpenAccess={[Function]}
+    onToggleSearchMode={[Function]}
+    showUnpublishedFields={false}
+    updateDateRange={[Function]}
+    updateDocTypeValues={[Function]}
+    updateYearRangeFilter={[Function]}
+    yearFilter={Object {}}
+  />
+  <WithStyles(Snackbar)
+    anchorOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "bottom",
+      }
+    }
+    autoHideDuration={5000}
+    message=""
+    open={false}
+  />
+</Fragment>
+`;
+
+exports[`SearchComponent should update doc type values 2`] = `
+<Fragment>
+  <WithStyles(AdvancedSearchComponent)
+    docTypes={
+      Array [
+        317,
+        123,
+      ]
+    }
+    fieldRows={
+      Array [
+        Object {
+          "label": "",
+          "searchField": "0",
+          "value": "",
+        },
+      ]
+    }
+    isMinimised={false}
+    isOpenAccess={false}
+    onAdvancedSearchReset={[Function]}
+    onAdvancedSearchRowAdd={[Function]}
+    onAdvancedSearchRowChange={[Function]}
+    onAdvancedSearchRowRemove={[Function]}
+    onSearch={[Function]}
+    onToggleMinimise={[Function]}
+    onToggleOpenAccess={[Function]}
+    onToggleSearchMode={[Function]}
+    showUnpublishedFields={false}
+    updateDateRange={[Function]}
+    updateDocTypeValues={[Function]}
+    updateYearRangeFilter={[Function]}
+    yearFilter={Object {}}
+  />
+  <WithStyles(Snackbar)
+    anchorOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "bottom",
+      }
+    }
+    autoHideDuration={5000}
+    message=""
+    open={false}
+  />
+</Fragment>
+`;
+
+exports[`SearchComponent should update year range filter 1`] = `
+<Fragment>
+  <WithStyles(AdvancedSearchComponent)
+    docTypes={Array []}
+    fieldRows={
+      Array [
+        Object {
+          "label": "",
+          "searchField": "0",
+          "value": "",
+        },
+      ]
+    }
+    isMinimised={false}
+    isOpenAccess={false}
+    onAdvancedSearchReset={[Function]}
+    onAdvancedSearchRowAdd={[Function]}
+    onAdvancedSearchRowChange={[Function]}
+    onAdvancedSearchRowRemove={[Function]}
+    onSearch={[Function]}
+    onToggleMinimise={[Function]}
+    onToggleOpenAccess={[Function]}
+    onToggleSearchMode={[Function]}
+    showUnpublishedFields={false}
+    updateDateRange={[Function]}
+    updateDocTypeValues={[Function]}
+    updateYearRangeFilter={[Function]}
+    yearFilter={Object {}}
+  />
+  <WithStyles(Snackbar)
+    anchorOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "bottom",
+      }
+    }
+    autoHideDuration={5000}
+    message=""
+    open={false}
+  />
+</Fragment>
+`;
+
+exports[`SearchComponent should update year range filter 2`] = `
+<Fragment>
+  <WithStyles(AdvancedSearchComponent)
+    docTypes={Array []}
+    fieldRows={
+      Array [
+        Object {
+          "label": "",
+          "searchField": "0",
+          "value": "",
+        },
+      ]
+    }
+    isMinimised={false}
+    isOpenAccess={false}
+    onAdvancedSearchReset={[Function]}
+    onAdvancedSearchRowAdd={[Function]}
+    onAdvancedSearchRowChange={[Function]}
+    onAdvancedSearchRowRemove={[Function]}
+    onSearch={[Function]}
+    onToggleMinimise={[Function]}
+    onToggleOpenAccess={[Function]}
+    onToggleSearchMode={[Function]}
+    showUnpublishedFields={false}
+    updateDateRange={[Function]}
+    updateDocTypeValues={[Function]}
+    updateYearRangeFilter={[Function]}
+    yearFilter={
+      Object {
+        "from": "2000",
+        "to": "2003",
+        "valid": true,
+      }
+    }
+  />
+  <WithStyles(Snackbar)
+    anchorOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "bottom",
+      }
+    }
+    autoHideDuration={5000}
+    message=""
+    open={false}
+  />
+</Fragment>
 `;

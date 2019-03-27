@@ -38,46 +38,56 @@ export class ThirdPartyLookupTool extends PureComponent {
         this.state = {
             primaryValue: '',
             secondaryValue: '',
+            formDisplay: {},
         };
     }
 
-    recordInputs = (primaryValue, secondaryValue) => {
+    recordInputs = (primaryValue, secondaryValue, formDisplay) => {
         this.state.primaryValue = primaryValue;
         this.state.secondaryValue = secondaryValue;
+        this.state.formDisplay = formDisplay;
     };
 
     render() {
+        const localeContent = locale.components.thirdPartyLookupTools.display;
         return (
-            <StandardPage title={locale.components.thirdPartyLookupTools.title}>
+            <StandardPage title={localeContent.title}>
                 {
                     this.props.loadingResults &&
-                    <InlineLoader message={locale.components.thirdPartyLookupTools.loadingMessage ? locale.components.thirdPartyLookupTools.loadingMessage : 'Loading'}/>
+                    <InlineLoader message={localeContent.loadingMessage}/>
                 }
                 {
-                    !this.props.loadingResults && !!this.props.lookupResults && this.props.lookupResults.length > 0 &&
+                    // this still needs work because we have to pass the specific form details for display
+                    // pass through with the results? or via sendInputsToResultComponent ?
+                    !this.props.loadingResults &&
+                    !!this.props.lookupResults && this.props.lookupResults.length > 0 &&
                     <ThirdPartyLookupFormResult
                         lookupResults={this.props.lookupResults}
                         actions={this.props.actions}
-                        localeform={locale.components.thirdPartyLookupTools.forms.incites}
+                        formDisplay={this.state.formDisplay}
                         primaryValue={this.state.primaryValue}
                         secondaryValue={this.state.secondaryValue}
+                        locale={localeContent}
                     />
                 }
 
                 {
-                    !this.props.loadingResults && !!this.props.lookupResults && this.props.lookupResults.length === 0 &&
+                    !this.props.loadingResults &&
+                    !!this.props.lookupResults && this.props.lookupResults.length === 0 &&
+                    !!locale.components.thirdPartyLookupTools.forms && locale.components.thirdPartyLookupTools.forms.length > 0 &&
                     <Fragment>
-
-                        {/* incites */}
-                        <ThirdPartyLookupForm
-                            isMinimised={false}
-                            localeform={locale.components.thirdPartyLookupTools.forms.incites}
-                            actions={this.props.actions}
-                            sendInputsToResultComponent={this.recordInputs} // function
-                        />
-
-                        {/* put more forms here */}
-
+                        {
+                            locale.components.thirdPartyLookupTools.forms.map((form) => (
+                                <ThirdPartyLookupForm
+                                    key={form.apiType}
+                                    locale={localeContent}
+                                    localeform={form}
+                                    actions={this.props.actions}
+                                    sendInputsToResultComponent={this.recordInputs} // function
+                                    isMinimised={!!form.isMinimised}
+                                />
+                            ))
+                        }
                     </Fragment>
                 }
             </StandardPage>

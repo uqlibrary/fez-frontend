@@ -9,6 +9,11 @@ fi
 
 PASS=true
 
+# Enable nvm if available
+if [ -f ~/.nvm/nvm.sh ]; then
+  source ~/.nvm/nvm.sh
+fi
+
 printf "\n\e[32mRunning ESLint...\e[0m\n\n"
 
 # Check for eslint
@@ -35,6 +40,17 @@ if ! $PASS; then
   printf "\n\e[31m\e[1mCOMMIT FAILED.\e[0m \e[31mYour commit contains files that should pass ESLint but do not.\e[0m"
   printf "\n\e[31mPlease fix the ESLint errors and try again.\e[0m\n"
   exit 1
-else
-  printf "\n\e[92mNo issues found. Proceeding with commit...\e[0m\n\n"
 fi
+
+# printf "\n\e[32mRunning Jest...\e[0m\n"
+
+# npm test -- --ci --findRelatedTests $STAGED_FILES
+
+# if [[ "$?" != 0 ]]; then
+#   printf "\e[31mEither Jest tests failed, or code coverage is not complete. Please fix and try again.\e[0m\n"
+#   exit 2
+# else
+
+printf "\n\e[92mNo issues found. Proceeding with commit...\e[0m\n\n"
+
+# fi

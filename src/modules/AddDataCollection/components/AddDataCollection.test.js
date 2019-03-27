@@ -88,15 +88,62 @@ describe('AddDataCollection test', () => {
         expect(wrapper.find('WithStyles(Button)').length).toEqual(2);
 
         wrapper.find('WithStyles(Button)').forEach(field => {
-            if (field.props().label == formLocale.addDataset.submit) {
+            if (field.props().label === formLocale.addDataset.submit) {
                 expect(field.props().disabled).toEqual(false);
             }
         })
     });
 
-    it.skip('should redirect to cancel page', () => {
-        window.location.assign = jest.fn();
-        const wrapper = setup({}).instance()._restartWorkflow();
-        expect(window.location.assign).toBeCalledWith(expect.stringContaining(formLocale.addDataset.cancelLink));
+    it('should redirect to cancel page', () => {
+        window.location.reload = jest.fn();
+        setup({}).instance()._restartWorkflow();
+        expect(window.location.reload).toHaveBeenCalled();
+    });
+
+    it('should navigate to my datasets url', () => {
+        const clearNewRecordFn = jest.fn();
+        const pushFn = jest.fn();
+        const wrapper = setup({
+            actions: {
+                clearNewRecord: clearNewRecordFn
+            },
+            history: {
+                push: pushFn
+            }
+        });
+
+        wrapper.instance()._navigateToMyDatasets();
+
+        expect(clearNewRecordFn).toHaveBeenCalled();
+        expect(pushFn).toHaveBeenCalledWith('/data-collections/mine');
+    });
+
+    it('should show confirmation on form submitted', () => {
+        const showConfirmationFn = jest.fn();
+        const wrapper = setup({});
+        wrapper.instance().confirmationBox = {showConfirmation: showConfirmationFn};
+        wrapper.setProps({
+            submitSucceeded: true
+        });
+        expect(showConfirmationFn).toHaveBeenCalled();
+
+        showConfirmationFn.mockClear();
+        wrapper.setProps({
+            submitSucceeded: true
+        });
+        expect(showConfirmationFn).not.toBeCalled();
+    });
+
+    it('should set confirmation box ref', () => {
+        const wrapper = setup({});
+        wrapper.instance()._handleRef({ref: 'test'});
+        expect(wrapper.instance().confirmationBox).toEqual({ref: 'test'});
+    });
+
+    it('should get save confirmation locale correctly', () => {
+        const wrapper = setup({
+            newRecordFileUploadingOrIssueError: true
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

@@ -1,4 +1,4 @@
-import { DepositAgreement } from './DepositAgreement';
+import { DepositAgreement, styles } from './DepositAgreement';
 
 function setup(testProps, isShallow = true) {
     const props = {
@@ -33,5 +33,25 @@ describe('Component DepositAgreement', () => {
         const wrapper = setup({onChange: testFn});
         wrapper.instance()._handleChange({target: {checked: true}});
         expect(testFn).toHaveBeenCalledWith('on');
+        wrapper.instance()._handleChange({target: {checked: false}});
+        expect(testFn).toHaveBeenCalledWith('off');
+    });
+
+    it('should have a proper style generator', () => {
+        const theme = {
+            status: {
+                danger: 'test1'
+            },
+            palette: {
+                primary: {
+                    main: 'test2'
+                }
+            }
+        }
+        expect(styles(theme)).toMatchSnapshot();
+
+        delete theme.status;
+        delete theme.palette;
+        expect(styles(theme)).toMatchSnapshot();
     });
 });

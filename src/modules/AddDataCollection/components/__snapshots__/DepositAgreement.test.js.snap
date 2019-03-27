@@ -1,5 +1,47 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Component DepositAgreement should have a proper style generator 1`] = `
+Object {
+  "checkboxChecked": Object {
+    "color": "test2 !important",
+  },
+  "checkboxRoot": Object {
+    "color": "test1",
+  },
+  "label": Object {
+    "fontSize": 16,
+    "fontWeight": 300,
+    "lineHeight": "24px",
+    "textAlign": "justify",
+  },
+  "root": Object {
+    "alignItems": "flex-start",
+    "margin": 0,
+  },
+}
+`;
+
+exports[`Component DepositAgreement should have a proper style generator 2`] = `
+Object {
+  "checkboxChecked": Object {
+    "color": "",
+  },
+  "checkboxRoot": Object {
+    "color": "",
+  },
+  "label": Object {
+    "fontSize": 16,
+    "fontWeight": 300,
+    "lineHeight": "24px",
+    "textAlign": "justify",
+  },
+  "root": Object {
+    "alignItems": "flex-start",
+    "margin": 0,
+  },
+}
+`;
+
 exports[`Component DepositAgreement should render checked if deposit agreement accepted 1`] = `
 <WithStyles(FormControlLabel)
   classes={
@@ -16,6 +58,7 @@ exports[`Component DepositAgreement should render checked if deposit agreement a
           "root": undefined,
         }
       }
+      id="deposit-agreement"
       onChange={[Function]}
     />
   }
@@ -52,6 +95,7 @@ exports[`Component DepositAgreement should render default view 1`] = `
           "root": undefined,
         }
       }
+      id="deposit-agreement"
       onChange={[Function]}
     />
   }

@@ -4,6 +4,7 @@ import {setupCache} from 'axios-cache-adapter';
 import {API_URL, SESSION_COOKIE_NAME, TOKEN_NAME, SESSION_USER_GROUP_COOKIE_NAME} from './general';
 import {store} from 'config/store';
 import {logout} from 'actions/account';
+import {showAppAlert} from 'actions/app';
 import locale from 'locale/global';
 import Raven from 'raven-js';
 import param from 'can-param';
@@ -71,45 +72,61 @@ api.interceptors.request.use(request => {
     return request;
 });
 
+const reportToSentry = (error) => {
+    let detailedError = '';
+    if (error.response) {
+        detailedError = 'Data: ' + error.response.data + '; Status: ' + error.response.status + '; Headers: ' + JSON.stringify(error.response.headers);
+    } else {
+        detailedError = 'Something happened in setting up the request that triggered an Error: ' + error.message;
+    }
+    Raven.captureException(error, {extra: {error: detailedError}});
+};
+
 api.interceptors.response.use(response => {
     if (!isGet) {
         return cache.store.clear().then(() => Promise.resolve(response.data));
     }
     return Promise.resolve(response.data);
 }, error => {
-    const thirdPartyLookupUrlRoot = API_URL + pathConfig.thirdPartyTools.lookup.substring('/'.length);
-    if (requestUrl.startsWith(thirdPartyLookupUrlRoot) ) {
-        // do nothing here - 403 for tool api lookup is handled in actions/thirdPartyLookupTool.js
-        console.log('skipping root 403 handling for 3rd party api');
-    } else if (error.response && error.response.status === 403) {
-        if (!!Cookies.get(SESSION_COOKIE_NAME)) {
-            Cookies.remove(SESSION_COOKIE_NAME, {path: '/', domain: '.library.uq.edu.au'});
-            delete api.defaults.headers.common[TOKEN_NAME];
-        }
+    const reportHttpStatusToSentry = [422, 500];
+    if (error && error.response && error.response.status && reportHttpStatusToSentry.indexOf(error.response.status) !== -1) {
+        reportToSentry(error);
+    }
+    const thirdPartyLookupUrlRoot = API_URL + pathConfig.admin.thirdPartyTools.substring('/'.length);
+    // 403 for tool api lookup is handled in actions/thirdPartyLookupTool.js
+    if (!requestUrl.startsWith(thirdPartyLookupUrlRoot)) {
+        if (error.response && error.response.status === 403) {
+            if (!!Cookies.get(SESSION_COOKIE_NAME)) {
+                Cookies.remove(SESSION_COOKIE_NAME, {path: '/', domain: '.library.uq.edu.au'});
+                delete api.defaults.headers.common[TOKEN_NAME];
+            }
 
-        if (process.env.NODE_ENV === 'test') {
-            global.mockActionsStore.dispatch(logout());
-        } else {
-            store.dispatch(logout());
+            if (process.env.NODE_ENV === 'test') {
+                global.mockActionsStore.dispatch(logout());
+            } else {
+                store.dispatch(logout());
+            }
         }
     }
 
     let errorMessage = null;
-    let specificError = '';
-    if (!!error.response && !!error.response.status) {
-        errorMessage = locale.global.errorMessages[error.response.status];
-        specificError = 'Response: ' + error.response + ' Status: ' + error.status;
+    if (!requestUrl.startsWith(thirdPartyLookupUrlRoot)) {
+        if (!!error.message && !!error.response.status && error.response.status === 500) {
+            errorMessage = ((error.response || {}).data || {}).message || locale.global.errorMessages[error.response.status];
+            if (process.env.NODE_ENV === 'test') {
+                global.mockActionsStore.dispatch(showAppAlert(error.response.data));
+            } else {
+                store.dispatch(showAppAlert(error.response.data));
+            }
+        } else if (!!error.response && !!error.response.status) {
+            errorMessage = locale.global.errorMessages[error.response.status];
+        }
     }
 
     if (!!errorMessage) {
         return Promise.reject({...errorMessage});
     } else {
-        if (error.response) {
-            specificError = 'Data: ' + error.response.data + ' Status: ' + error.response.status + ' Headers: ' + error.response.headers;
-        } else {
-            specificError = 'Something happened in setting up the request that triggered an Error: ' + error.message;
-        }
-        Raven.captureException(error, {extra: {error: specificError}});
+        reportToSentry(error);
         return Promise.reject(error);
     }
 });

@@ -14,7 +14,7 @@ const styles = theme => ({
     }
 });
 
-export class FreeTextForm extends Component {
+export class FreeTextFormClass extends Component {
     static propTypes = {
         onAdd: PropTypes.func.isRequired,
         isValid: PropTypes.func,
@@ -50,7 +50,9 @@ export class FreeTextForm extends Component {
         // add item if user hits 'enter' key on input field
         if (this.props.disabled
             || this.props.isValid(this.state.itemName) !== ''
-            || (event && event.key && (event.key !== 'Enter' || this.state.itemName.length === 0))) {
+            || (event && event.key && event.key !== 'Enter')
+            || this.state.itemName.length === 0
+        ) {
             return;
         }
 
@@ -63,7 +65,10 @@ export class FreeTextForm extends Component {
         });
 
         // move focus to name as published text field after item was added
-        if (this.textField) this.textField.focus();
+        /* istanbul if ignore */
+        if (this.textField) {
+            this.textField.focus();
+        }
     };
 
     onNameChanged = (event) => {
@@ -74,22 +79,23 @@ export class FreeTextForm extends Component {
 
     render() {
         const {classes, locale, errorText, disabled} = this.props;
-        const{inputFieldLabel, inputFieldHint, remindToAdd, addButtonLabel} = locale;
-        const inputLength = this.state.itemName.length > this.props.maxInputLength && `Limited to ${this.props.maxInputLength} characters`;
+        const{inputFieldLabel, inputFieldHint, remindToAdd, addButtonLabel, id} = locale;
+        const inputLength = this.state.itemName && this.state.itemName.length > this.props.maxInputLength && `Limited to ${this.props.maxInputLength} characters`;
         return (
             <Grid container spacing={16} display="row" alignItems="center">
                 <Grid item style={{flexGrow: 1}}>
                     <TextField
                         fullWidth
+                        id={!!id && id || ''}
                         inputRef={(node) => {this.textField = node;}}
                         label={inputFieldLabel}
                         placeholder={inputFieldHint}
                         value={this.state.itemName}
                         onChange={this.onNameChanged}
                         onKeyPress={this.addItem}
-                        error={!!errorText || !!this.props.isValid(this.state.itemName) || inputLength}
+                        error={!!errorText || this.props.isValid(this.state.itemName) || !!inputLength}
                         helperText={this.props.isValid(this.state.itemName) || errorText || inputLength
-                            ? `${!!errorText ? errorText : ''} ${!!errorText && !!inputLength ? ' - ' : ''} ${!!inputLength ? inputLength : ''} ${this.props.isValid(this.state.itemName)}`
+                            ? `${!!errorText ? errorText : ''}${!!errorText && !!inputLength ? ' - ' : ''}${!!inputLength ? inputLength : ''}`
                             : null}
                         disabled={disabled}
                     />
@@ -106,10 +112,16 @@ export class FreeTextForm extends Component {
                 <Grid item xs={12} sm={2}>
                     <Button
                         fullWidth
+                        id="add-items"
                         color="primary"
                         variant="contained"
                         children={addButtonLabel}
-                        disabled={disabled || this.props.isValid(this.state.itemName) !== '' || this.state.itemName.trim().length === 0 || !!inputLength}
+                        disabled={
+                            disabled ||
+                            this.props.isValid(this.state.itemName) !== '' ||
+                            this.state.itemName.trim().length === 0 ||
+                            !!inputLength
+                        }
                         onClick={this.addItem}
                     />
                 </Grid>
@@ -118,4 +130,6 @@ export class FreeTextForm extends Component {
     }
 }
 
-export default withStyles(styles, {withTheme: true})(FreeTextForm);
+const StyledFreeTextFormClass = withStyles(styles, {withTheme: true})(FreeTextFormClass);
+const FreeTextForm = (props) => <StyledFreeTextFormClass {...props}/>;
+export default FreeTextForm;

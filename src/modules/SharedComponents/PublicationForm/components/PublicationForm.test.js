@@ -1,10 +1,11 @@
 import PublicationForm from './PublicationForm';
 import Immutable from 'immutable';
 import {JournalArticleForm, BookForm, GenericDocumentForm, ResearchReportForm} from './Forms';
+import {validation} from 'config';
 
 function setup(testProps, isShallow = true) {
     const props = {
-        "array": {
+        array: {
             insert: jest.fn(),
             move: jest.fn(),
             pop: jest.fn(),
@@ -20,8 +21,8 @@ function setup(testProps, isShallow = true) {
         blur: jest.fn(),
         change: jest.fn(),
         clearAsyncError: jest.fn(),
-        "anyTouched": true,
-        "asyncValidating": false,
+        anyTouched: true,
+        asyncValidating: false,
         asyncValidate: jest.fn(),
         clearFields: jest.fn(),
         clearSubmitErrors: jest.fn(),
@@ -35,13 +36,13 @@ function setup(testProps, isShallow = true) {
         submit: jest.fn(),
         untouch: jest.fn(),
         clearSubmit: jest.fn(),
-        "dirty": true,
-        "form": "form",
-        "initialized": false,
-        "invalid": false,
-        "submitFailed": false,
-        "submitSucceeded": false,
-        "valid": true,
+        dirty: true,
+        form: "form",
+        initialized: false,
+        invalid: false,
+        submitFailed: false,
+        submitSucceeded: false,
+        valid: true,
         pure: true,
         // above are common immutable default props
         formValues: testProps.initialValues ? Immutable.Map(testProps.initialValues) : Immutable.Map({}),
@@ -175,6 +176,100 @@ describe('Component PublicationForm', () => {
             submitSucceeded: true
         });
         expect(testMethod).toHaveBeenCalled();
+    });
+
+    it('_handleDefaultSubmit', () => {
+        const event = {preventDefault: jest.fn()};
+        const wrapper = setup({initialValues: {}});
+        wrapper.instance()._handleDefaultSubmit(event);
+        expect(event.preventDefault).toHaveBeenCalled();
+    });
+
+    it('Shows an alert', () => {
+        const wrapper = setup({
+            initialValues: {},
+            formComponent: null,
+            changeFormType: jest.fn(),
+            error: 'There is an error',
+            formErrors: ['error']
+        });
+        // export const getErrorAlertProps = ({dirty = false, submitting = false, error, formErrors, submitSucceeded = false, alertLocale = {}}) => {
+        expect(toJson(wrapper)).toMatchSnapshot();
+        wrapper.setProps({formComponent: () => 'test'});
+        expect(toJson(wrapper)).toMatchSnapshot();
+        wrapper.setProps({submitSucceeded: true});
+        expect(toJson(wrapper)).toMatchSnapshot();
+
+    });
+
+    it('should call componentWillReceiveProps when props change', () => {
+        const changeDisplayType = jest.fn();
+        const changeFormType = jest.fn();
+        const wrapper = setup({initialValues: {}, changeDisplayType: changeDisplayType, changeFormType: changeFormType});
+        const componentWillReceiveProps = jest.spyOn(wrapper.instance(), 'componentWillReceiveProps');
+        wrapper.setProps({
+            "submitSucceeded": true,
+            "hasSubtypes": false,
+            "subtypes": null,
+            "formComponent": null,
+            "isNtro": false,
+            "hasDefaultDocTypeSubType": false,
+            "docTypeSubTypeCombo": null,
+        });
+        expect(componentWillReceiveProps).toHaveBeenCalled();
+        // Testing conditional paths
+        expect(toJson(wrapper)).toMatchSnapshot();
+        wrapper.setProps({
+            "submitSucceeded": true,
+            "hasSubtypes": true,
+            "subtypes": null,
+            "formComponent": null,
+            "isNtro": false,
+            "hasDefaultDocTypeSubType": false,
+            "docTypeSubTypeCombo": null,
+        });
+        expect(componentWillReceiveProps).toHaveBeenCalled();
+        expect(toJson(wrapper)).toMatchSnapshot();
+
+        wrapper.setProps({
+            "submitSucceeded": true,
+            "hasSubtypes": true,
+            "subtypes": ['test', 'test2'],
+            "formComponent": null,
+            "isNtro": false,
+            "hasDefaultDocTypeSubType": false,
+            "docTypeSubTypeCombo": null,
+        });
+        expect(componentWillReceiveProps).toHaveBeenCalled();
+        expect(toJson(wrapper)).toMatchSnapshot();
+
+        wrapper.setProps({
+            "submitSucceeded": true,
+            "hasSubtypes": true,
+            "subtypes": ['test', 'test2'],
+            "formComponent": null,
+            "isNtro": true,
+            "hasDefaultDocTypeSubType": true,
+            "docTypeSubTypeCombo": null,
+        });
+        expect(componentWillReceiveProps).toHaveBeenCalled();
+        expect(changeDisplayType).toHaveBeenCalled();
+        expect(changeFormType).toHaveBeenCalled();
+        expect(toJson(wrapper)).toMatchSnapshot();
+
+    });
+
+    it('should require file upload for ntro fields', () => {
+        const wrapper = setup({
+            formComponent: JournalArticleForm,
+            isNtro: true
+        });
+        expect(
+            wrapper.find({ name: 'files' }).props().validate
+        ).toEqual([
+            validation.fileUploadRequired,
+            validation.validFileUpload
+        ]);
     });
 
 });

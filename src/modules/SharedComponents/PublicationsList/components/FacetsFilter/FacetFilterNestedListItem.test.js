@@ -19,17 +19,22 @@ function setup(testProps, isShallow = true) {
 
 describe('Facet filter nested list item ', () => {
     it('should render default filter view', () => {
-        const wrapper = setup({primaryText: 'Test filter'});
+        const wrapper = setup({ primaryText: 'Test filter' });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render active filter view', () => {
-        const wrapper = setup({primaryText: 'Test filter', isActive: true});
+        const wrapper = setup({ primaryText: 'Test filter', isActive: true });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render disabled filter view', () => {
-        const wrapper = setup({primaryText: 'Test filter', isActive: true, disabled: true});
+        const wrapper = setup({ primaryText: 'Test filter', isActive: true, disabled: true });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render inactive filter view', () => {
+        const wrapper = setup({ primaryText: 'Test filter', isActive: false }, false);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

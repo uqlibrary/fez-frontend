@@ -11,7 +11,7 @@ export default {
                 // help: {
                 //     title: 'Claiming a publication',
                 //     text: 'Enter the text that will help people here',
-                //     buttonLabel: 'OK'
+                //     buttonLabel: 'CLOSE'
                 // }
             },
             authorLinking: {
@@ -20,7 +20,7 @@ export default {
                 // help: {
                 //     title: 'Author linking',
                 //     text: '...',
-                //     buttonLabel: 'OK'
+                //     buttonLabel: 'CLOSE'
                 // }
             },
             contributorLinking: {
@@ -29,7 +29,7 @@ export default {
                 // help: {
                 //     title: 'Editor linking',
                 //     text: '...',
-                //     buttonLabel: 'OK'
+                //     buttonLabel: 'CLOSE'
                 // }
             },
             comments: {
@@ -37,7 +37,7 @@ export default {
                 // help: {
                 //     title: 'Additional information',
                 //     text: '...',
-                //     buttonLabel: 'OK'
+                //     buttonLabel: 'CLOSE'
                 // },
                 fieldLabels: {
                     comments: 'Type edits/changes/comments here',
@@ -49,7 +49,7 @@ export default {
                 // help: {
                 //     title: 'Files',
                 //     text: '...',
-                //     buttonLabel: 'OK'
+                //     buttonLabel: 'CLOSE'
                 // }
             },
             cancelWorkflowConfirmation: {
@@ -111,7 +111,7 @@ export default {
             // help: {
             //     title: 'Unclaim a record',
             //     text: 'Enter the text that will help people here',
-            //     buttonLabel: 'OK'
+            //     buttonLabel: 'CLOSE'
             // },
             successWorkflowConfirmation: {
                 confirmationTitle: 'Unclaim a record',
@@ -131,7 +131,7 @@ export default {
                 // help: {
                 //     title: 'Request a change',
                 //     text: '...',
-                //     buttonLabel: 'OK'
+                //     buttonLabel: 'CLOSE'
                 // },
                 fieldLabels: {
                     comments: 'Describe the problem with this record, eg record is a duplicate, or suggested changes',
@@ -146,7 +146,7 @@ export default {
                 // help: {
                 //     title: 'Upload files',
                 //     text: '...',
-                //     buttonLabel: 'OK'
+                //     buttonLabel: 'CLOSE'
                 // }
             },
             cancelWorkflowConfirmation: {

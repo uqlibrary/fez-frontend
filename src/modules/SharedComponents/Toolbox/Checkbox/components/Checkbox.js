@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 
 import Checkbox from '@material-ui/core/Checkbox';
 import propFilter from '../../helpers/_filterProps';
-import {HelpIcon} from '../../HelpDrawer';
 
 const CheckboxWrapper = props => {
     const filteredProps = propFilter(props, Checkbox.propTypes);
@@ -12,9 +11,6 @@ const CheckboxWrapper = props => {
     return (
         <div style={{position: 'relative', width: '100%'}} className={props.meta && props.meta.error ? 'error-checkbox' : {}}>
             <Checkbox {...filteredProps} />
-            {props.help && props.help.text && (
-                <HelpIcon {...props.help} />
-            )}
         </div>
     );
 };

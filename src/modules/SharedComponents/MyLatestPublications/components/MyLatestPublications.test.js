@@ -1,5 +1,5 @@
 import {latestPubsPayload} from 'mock/data/testing/latestPublications';
-import {MyLatestPublications} from './MyLatestPublications';
+import {MyLatestPublications, styles} from './MyLatestPublications';
 
 function setup(testProps, isShallow = true){
     const props = {
@@ -33,6 +33,28 @@ describe('Component MyLatestPublications', () => {
     it('should not fetch data if account author details is still loading', () => {
         const testFn = jest.fn();
         setup({accountAuthorDetailsLoading: true, actions: {searchLatestPublications: testFn}});
-        expect(testFn).toHaveBeenCalledTimes(0);
+        expect(testFn).not.toBeCalled();
+    });
+
+    it('_viewMyResearch method', () => {
+        const testFn = jest.fn();
+        const wrapper = setup({history: {push: testFn}});
+        wrapper.instance()._viewMyResearch();
+        expect(testFn).toHaveBeenCalledWith('/records/mine');
+    });
+
+    it('should have a proper style generator', () => {
+        const theme = {
+            palette: {
+                accent: {
+                    main: 'test1',
+                    dark: 'test2'
+                },
+                white: {
+                    main: 'test3'
+                }
+            }
+        }
+        expect(styles(theme)).toMatchSnapshot();
     });
 });
