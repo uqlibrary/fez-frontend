@@ -2,7 +2,6 @@ import * as actions from './actionTypes';
 import * as repositories from 'repositories';
 import * as recordActions from './records';
 import {record} from "mock/data";
-import {locale} from 'locale';
 
 describe('Record action creators', () => {
     // extend expect to check actions
@@ -1169,6 +1168,133 @@ describe('Record action creators', () => {
 
             await mockActionsStore.dispatch(recordActions.clearNewRecord());
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+    });
+
+    describe('getCommunitySecurity()', () => {
+        it('dispatches expected actions on successful get', async () => {
+            const testInput = {
+                pid: 'UQ:396321'
+            };
+
+            mockApi
+                .onGet(repositories.routes.COMMUNITIES_SECURITY_POLICY_API(testInput).apiUrl)
+                .reply(200, {data: record});
+
+            const expectedActions = [
+                actions.SECURITY_POLICY_LOADING,
+                actions.SECURITY_POLICY_LOADED
+            ];
+
+            await mockActionsStore.dispatch(recordActions.getCommunitySecurity(testInput));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+
+        });
+
+        it('dispatches expected actions on missing data in response', async () => {
+            const testInput = {
+                pid: 'UQ:123456'
+            };
+
+            mockApi
+                .onGet(repositories.routes.COMMUNITIES_SECURITY_POLICY_API(testInput).apiUrl)
+                .reply(200, {});
+
+            const expectedActions = [
+                actions.SECURITY_POLICY_LOADING,
+                actions.SECURITY_POLICY_LOADED
+            ];
+
+            await mockActionsStore.dispatch(recordActions.getCommunitySecurity(testInput));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+
+        it('dispatches expected actions on missing request data', async () => {
+            const testInput = {};
+
+            mockApi
+                .onGet(repositories.routes.COMMUNITIES_SECURITY_POLICY_API(testInput).apiUrl)
+                .reply(500);
+
+            const expectedActions = [
+                actions.SECURITY_POLICY_LOADING,
+                actions.APP_ALERT_SHOW,
+                actions.SECURITY_POLICY_LOAD_FAILED
+            ];
+
+            let requestFailed = false;
+            try {
+                await mockActionsStore.dispatch(recordActions.getCommunitySecurity(testInput));
+            } catch(exception) {
+                expect(exception.status).toBe(500);
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+                requestFailed = true;
+            }
+            expect(requestFailed).toBe(true);
+        });
+    });
+
+    describe('updateCommunitySecurity()', () => {
+        it('dispatches expected actions on successful update', async () => {
+            const testInput = {
+                pid: 'UQ:396321',
+                communitySecurity: 2
+            };
+
+            mockApi
+                .onPatch(repositories.routes.COMMUNITIES_SECURITY_POLICY_API(testInput).apiUrl)
+                .reply(200, {data: record});
+
+            const expectedActions = [
+                actions.SECURITY_POLICY_SAVING,
+                actions.SECURITY_POLICY_SAVED
+            ];
+
+            await mockActionsStore.dispatch(recordActions.updateCommunitySecurity(testInput));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+
+        });
+
+        it('dispatches expected actions on missing data in response', async () => {
+            const testInput = {
+                pid: 'UQ:123456'
+            };
+
+            mockApi
+                .onPatch(repositories.routes.COMMUNITIES_SECURITY_POLICY_API(testInput).apiUrl)
+                .reply(200, {});
+
+            const expectedActions = [
+                actions.SECURITY_POLICY_SAVING,
+                actions.SECURITY_POLICY_SAVED
+            ];
+
+            await mockActionsStore.dispatch(recordActions.updateCommunitySecurity(testInput));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+
+        it('dispatches expected actions on missing request data', async () => {
+            const testInput = {};
+
+            mockApi
+                .onPatch(repositories.routes.COMMUNITIES_SECURITY_POLICY_API(testInput).apiUrl)
+                .reply(500);
+
+            const expectedActions = [
+                actions.SECURITY_POLICY_SAVING,
+                actions.APP_ALERT_SHOW,
+                actions.SECURITY_POLICY_SAVE_FAILED
+            ];
+
+            let requestFailed = false;
+            try {
+                await mockActionsStore.dispatch(recordActions.updateCommunitySecurity(testInput));
+            } catch(exception) {
+                expect(exception.status).toBe(500);
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+                requestFailed = true;
+            }
+            expect(requestFailed).toBe(true);
         });
     });
 
