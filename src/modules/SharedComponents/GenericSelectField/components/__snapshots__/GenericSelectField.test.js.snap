@@ -1157,6 +1157,11 @@ exports[`GenericSelectField  Full mount  should render 1`] = `
                         </WithFormControlContext(InputLabel)>
                       </WithStyles(WithFormControlContext(InputLabel))>
                       <WithStyles(WithFormControlContext(Select))
+                        SelectDisplayProps={
+                          Object {
+                            "id": undefined,
+                          }
+                        }
                         autoWidth={false}
                         disabled={false}
                         multiple={false}
@@ -1164,6 +1169,11 @@ exports[`GenericSelectField  Full mount  should render 1`] = `
                         value=""
                       >
                         <WithFormControlContext(Select)
+                          SelectDisplayProps={
+                            Object {
+                              "id": undefined,
+                            }
+                          }
                           autoWidth={false}
                           classes={
                             Object {
@@ -1183,6 +1193,11 @@ exports[`GenericSelectField  Full mount  should render 1`] = `
                         >
                           <Select
                             IconComponent={[Function]}
+                            SelectDisplayProps={
+                              Object {
+                                "id": undefined,
+                              }
+                            }
                             autoWidth={false}
                             classes={
                               Object {
@@ -1226,7 +1241,9 @@ exports[`GenericSelectField  Full mount  should render 1`] = `
                                 Object {
                                   "IconComponent": [Function],
                                   "MenuProps": undefined,
-                                  "SelectDisplayProps": undefined,
+                                  "SelectDisplayProps": Object {
+                                    "id": undefined,
+                                  },
                                   "autoWidth": false,
                                   "children": Array [
                                     undefined,
@@ -1277,7 +1294,9 @@ exports[`GenericSelectField  Full mount  should render 1`] = `
                                   Object {
                                     "IconComponent": [Function],
                                     "MenuProps": undefined,
-                                    "SelectDisplayProps": undefined,
+                                    "SelectDisplayProps": Object {
+                                      "id": undefined,
+                                    },
                                     "autoWidth": false,
                                     "children": Array [
                                       undefined,
@@ -1329,7 +1348,9 @@ exports[`GenericSelectField  Full mount  should render 1`] = `
                                     Object {
                                       "IconComponent": [Function],
                                       "MenuProps": undefined,
-                                      "SelectDisplayProps": undefined,
+                                      "SelectDisplayProps": Object {
+                                        "id": undefined,
+                                      },
                                       "autoWidth": false,
                                       "children": Array [
                                         undefined,
@@ -1387,7 +1408,9 @@ exports[`GenericSelectField  Full mount  should render 1`] = `
                                       Object {
                                         "IconComponent": [Function],
                                         "MenuProps": undefined,
-                                        "SelectDisplayProps": undefined,
+                                        "SelectDisplayProps": Object {
+                                          "id": undefined,
+                                        },
                                         "autoWidth": false,
                                         "children": Array [
                                           undefined,
@@ -1445,7 +1468,9 @@ exports[`GenericSelectField  Full mount  should render 1`] = `
                                         Object {
                                           "IconComponent": [Function],
                                           "MenuProps": undefined,
-                                          "SelectDisplayProps": undefined,
+                                          "SelectDisplayProps": Object {
+                                            "id": undefined,
+                                          },
                                           "autoWidth": false,
                                           "children": Array [
                                             undefined,
@@ -1496,6 +1521,11 @@ exports[`GenericSelectField  Full mount  should render 1`] = `
                                       >
                                         <SelectInput
                                           IconComponent={[Function]}
+                                          SelectDisplayProps={
+                                            Object {
+                                              "id": undefined,
+                                            }
+                                          }
                                           aria-invalid={false}
                                           autoWidth={false}
                                           className="MuiInputBase-input-54 MuiInput-input-39"
@@ -2217,6 +2247,11 @@ exports[`GenericSelectField  Methods  Shows an error 1`] = `
     Select item
   </WithStyles(WithFormControlContext(InputLabel))>
   <WithStyles(WithFormControlContext(Select))
+    SelectDisplayProps={
+      Object {
+        "id": undefined,
+      }
+    }
     autoWidth={false}
     disabled={false}
     multiple={false}
@@ -2293,6 +2328,11 @@ exports[`GenericSelectField  should render  snapshots for  loading items 1`] = `
     Select item
   </WithStyles(WithFormControlContext(InputLabel))>
   <WithStyles(WithFormControlContext(Select))
+    SelectDisplayProps={
+      Object {
+        "id": undefined,
+      }
+    }
     autoWidth={false}
     disabled={true}
     multiple={false}
@@ -2363,6 +2403,11 @@ exports[`GenericSelectField  should render  snapshots for  loading items 2`] = `
   fullWidth={true}
 >
   <WithStyles(WithFormControlContext(Select))
+    SelectDisplayProps={
+      Object {
+        "id": undefined,
+      }
+    }
     autoWidth={false}
     disabled={false}
     multiple={false}
@@ -2446,6 +2491,11 @@ exports[`GenericSelectField  should render  snapshots for  no items 1`] = `
     Select item
   </WithStyles(WithFormControlContext(InputLabel))>
   <WithStyles(WithFormControlContext(Select))
+    SelectDisplayProps={
+      Object {
+        "id": undefined,
+      }
+    }
     autoWidth={false}
     disabled={false}
     multiple={false}
@@ -2464,6 +2514,11 @@ exports[`GenericSelectField  should render  snapshots for  one item 1`] = `
     Select item
   </WithStyles(WithFormControlContext(InputLabel))>
   <WithStyles(WithFormControlContext(Select))
+    SelectDisplayProps={
+      Object {
+        "id": undefined,
+      }
+    }
     autoWidth={false}
     disabled={false}
     multiple={false}

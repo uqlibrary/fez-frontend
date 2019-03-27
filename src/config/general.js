@@ -111,6 +111,7 @@ export const NTRO_SUBTYPE_RREB_INDUSTRY = 'Research Report for an External Body 
 export const NTRO_SUBTYPE_RREB_NOT_FOR_PROFIT = 'Research Report for an External Body - Not-for-profit';
 export const NTRO_SUBTYPE_RREB_OTHER = 'Research Report for an External Body - Other';
 export const SUBTYPE_RR_INTERNAL_OTHER = 'Research Report - Internal or Other';
+export const SUBTYPE_EDITED_BOOK = 'Edited book';
 
 export const CW_NTRO_SUBTYPES = [
     NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
@@ -186,8 +187,7 @@ export const NTRO_SUBTYPES_CATEGORY_CODE = {
     [NTRO_SUBTYPE_CPEE_OTHER]: 'CW4',
     [NTRO_SUBTYPE_RREB_PUBLIC_SECTOR]: 'CW5',
     [NTRO_SUBTYPE_RREB_INDUSTRY]: 'CW5',
-    [NTRO_SUBTYPE_RREB_NOT_FOR_PROFIT]: 'CW5',
-    [NTRO_SUBTYPE_RREB_OTHER]: 'CW5'
+    [NTRO_SUBTYPE_RREB_NOT_FOR_PROFIT]: 'CW5'
 };
 
 const DOCUMENT_TYPE_JOURNAL_ARTICLE = 'Journal Article';
@@ -215,7 +215,7 @@ export const publicationTypes = (components) => [
         subtypes: [
             'Research book (original research)',
             'Textbook',
-            'Edited book',
+            SUBTYPE_EDITED_BOOK,
             'Reference work, encyclopaedia, manual or handbook',
             NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
             NTRO_SUBTYPE_CW_TEXTUAL_WORK,
@@ -881,7 +881,7 @@ export const QUALITY_INDICATORS = [
     {text: 'Repeat performances, reproductions, republications or re-exhibitions', value: 454037},
     {text: 'Selected for use by nationally recognised outlet or entity', value: 454038},
     {text: 'Selected for use by internationally recognised outlet or entity', value: 454039},
-    {text: 'Other (add details to Author/Creator contribution statement)', value: 454040}
+    {text: 'Other (add details to Author/Creator research statement)', value: 454040}
 ];
 
 export const AUDIENCE_SIZE = [
@@ -958,11 +958,7 @@ export const LANGUAGE = [
 
 export const unpublishedBufferActionUrls = [
     {
-        label: 'More options',
-        url: (pid) => `${APP_URL}workflow/list_workflows2.php?pid=${pid}`
-    },
-    {
-        label: 'Update selected record - Generic',
+        label: 'Edit selected record',
         url: (pid) => `${APP_URL}workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=289&href=%2Fmy_fez_traditional.php`
     },
     {
@@ -976,5 +972,9 @@ export const unpublishedBufferActionUrls = [
     {
         label: 'Delete selected record',
         url: (pid) => `${APP_URL}workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=225&href=%2Fmy_fez_traditional.php`
+    },
+    {
+        label: 'More options',
+        url: (pid) => `${APP_URL}workflow/list_workflows2.php?pid=${pid}`
     }
 ];

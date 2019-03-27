@@ -60,23 +60,27 @@ export class RelatedPublicationsClass extends PureComponent {
     }
 
     renderSubList = (subList, searchKey) => {
-        return (
-            subList.filter(item => (
-                item[searchKey.title] && item[searchKey.title].trim().length > 0
-            )).sort((item1, item2) => (
-                item1[searchKey.order] - item2[searchKey.order]
-            )).map((item, index)=> {
-                return (
-                    <li key={`${searchKey.key}-${index}`}>
-                        <Typography variant="body2">
-                            {
-                                this.renderTitle(item, searchKey)
-                            }
-                        </Typography>
-                    </li>
-                );
-            })
-        );
+        if(subList && searchKey) {
+            return (
+                subList.filter(item => (
+                    item[searchKey.title] && item[searchKey.title].trim().length > 0
+                )).sort((item1, item2) => (
+                    item1[searchKey.order] - item2[searchKey.order]
+                )).map((item, index) => {
+                    return (
+                        <li key={`${searchKey.key}-${index}`}>
+                            <Typography variant="body2">
+                                {
+                                    this.renderTitle(item, searchKey)
+                                }
+                            </Typography>
+                        </li>
+                    );
+                })
+            );
+        } else {
+            return null;
+        }
     }
 
     renderTitle = (item, searchKey) => {

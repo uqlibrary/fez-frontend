@@ -29,6 +29,7 @@ export class DepositAgreement extends PureComponent {
                 disabled={disabled}
                 control={
                     <Checkbox
+                        id="deposit-agreement"
                         checked={isDepositAgreementAccepted}
                         onChange={this._handleChange}
                         classes={{root: classes.checkboxRoot, checked: classes.checkboxChecked}}

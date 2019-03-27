@@ -18,7 +18,7 @@ exports[`Component GoogleScholar  should display submission error if saving fail
         <StandardCard
           help={
             Object {
-              "buttonLabel": "OK",
+              "buttonLabel": "CLOSE",
               "text": <div>
                 <h3>
                   How to create Google Scholar profile?
@@ -176,7 +176,7 @@ exports[`Component GoogleScholar  should display submission in progress alert 1`
         <StandardCard
           help={
             Object {
-              "buttonLabel": "OK",
+              "buttonLabel": "CLOSE",
               "text": <div>
                 <h3>
                   How to create Google Scholar profile?
@@ -2401,7 +2401,7 @@ exports[`Component GoogleScholar  should handle keyboard form submit event 1`] =
                                             <StandardCard
                                               help={
                                                 Object {
-                                                  "buttonLabel": "OK",
+                                                  "buttonLabel": "CLOSE",
                                                   "text": <div>
                                                     <h3>
                                                       How to create Google Scholar profile?
@@ -2432,7 +2432,7 @@ exports[`Component GoogleScholar  should handle keyboard form submit event 1`] =
                                               <WithStyles(Cards)
                                                 help={
                                                   Object {
-                                                    "buttonLabel": "OK",
+                                                    "buttonLabel": "CLOSE",
                                                     "text": <div>
                                                       <h3>
                                                         How to create Google Scholar profile?
@@ -2472,7 +2472,7 @@ exports[`Component GoogleScholar  should handle keyboard form submit event 1`] =
                                                   }
                                                   help={
                                                     Object {
-                                                      "buttonLabel": "OK",
+                                                      "buttonLabel": "CLOSE",
                                                       "text": <div>
                                                         <h3>
                                                           How to create Google Scholar profile?
@@ -2996,7 +2996,7 @@ exports[`Component GoogleScholar  should handle keyboard form submit event 1`] =
                                                             <WithStyles(CardHeader)
                                                               action={
                                                                 <Connect(WithStyles(HelpIcon))
-                                                                  buttonLabel="OK"
+                                                                  buttonLabel="CLOSE"
                                                                   text={
                                                                     <div>
                                                                       <h3>
@@ -3042,7 +3042,7 @@ exports[`Component GoogleScholar  should handle keyboard form submit event 1`] =
                                                               <CardHeader
                                                                 action={
                                                                   <Connect(WithStyles(HelpIcon))
-                                                                    buttonLabel="OK"
+                                                                    buttonLabel="CLOSE"
                                                                     text={
                                                                       <div>
                                                                         <h3>
@@ -3623,7 +3623,7 @@ exports[`Component GoogleScholar  should handle keyboard form submit event 1`] =
                                                                     className="MuiCardHeader-action-171"
                                                                   >
                                                                     <Connect(WithStyles(HelpIcon))
-                                                                      buttonLabel="OK"
+                                                                      buttonLabel="CLOSE"
                                                                       text={
                                                                         <div>
                                                                           <h3>
@@ -3651,7 +3651,7 @@ exports[`Component GoogleScholar  should handle keyboard form submit event 1`] =
                                                                       title="About Google Scholar"
                                                                     >
                                                                       <WithStyles(HelpIcon)
-                                                                        buttonLabel="OK"
+                                                                        buttonLabel="CLOSE"
                                                                         onClick={[Function]}
                                                                         text={
                                                                           <div>
@@ -3680,7 +3680,7 @@ exports[`Component GoogleScholar  should handle keyboard form submit event 1`] =
                                                                         title="About Google Scholar"
                                                                       >
                                                                         <HelpIcon
-                                                                          buttonLabel="OK"
+                                                                          buttonLabel="CLOSE"
                                                                           classes={
                                                                             Object {
                                                                               "helpIcon": "HelpIcon-helpIcon-175",
@@ -6591,7 +6591,7 @@ exports[`Component GoogleScholar  should render form if author doesn't have goog
         <StandardCard
           help={
             Object {
-              "buttonLabel": "OK",
+              "buttonLabel": "CLOSE",
               "text": <div>
                 <h3>
                   How to create Google Scholar profile?
@@ -6743,7 +6743,7 @@ exports[`Component GoogleScholar  should render form if author has google schola
         <StandardCard
           help={
             Object {
-              "buttonLabel": "OK",
+              "buttonLabel": "CLOSE",
               "text": <div>
                 <h3>
                   How to create Google Scholar profile?

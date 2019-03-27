@@ -63,7 +63,6 @@ export class NtroDetailsClass extends PureComponent {
                     {
                         publication.fez_record_search_key_significance &&
                         publication.fez_record_search_key_significance.length > 0 &&
-                        this.props.account && !!this.props.account.canMasquerade &&
                         publication.fez_record_search_key_significance.map((item, index) => {
                             return (
                                 <this.ViewNtroRow
@@ -79,7 +78,7 @@ export class NtroDetailsClass extends PureComponent {
                     {
                         publication.fez_record_search_key_creator_contribution_statement && publication.fez_record_search_key_creator_contribution_statement.length > 0 &&
                         publication.fez_record_search_key_creator_contribution_statement.map((item, index) => {
-                            if(!!this.props.account.canMasquerade ||
+                            if(this.props.account && !!this.props.account.canMasquerade ||
                                 item.rek_creator_contribution_statement !== global.global.defaultContributorStatementMissing && item.rek_creator_contribution_statement.trim().length > 0) {
                                 return (
                                     <this.ViewNtroRow

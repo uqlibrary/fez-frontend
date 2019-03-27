@@ -58,6 +58,7 @@ exports[`Component DepositAgreement should render checked if deposit agreement a
           "root": undefined,
         }
       }
+      id="deposit-agreement"
       onChange={[Function]}
     />
   }
@@ -94,6 +95,7 @@ exports[`Component DepositAgreement should render default view 1`] = `
           "root": undefined,
         }
       }
+      id="deposit-agreement"
       onChange={[Function]}
     />
   }

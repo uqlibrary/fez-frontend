@@ -2346,7 +2346,7 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                                     disabled={true}
                                     error={false}
                                     fullWidth={true}
-                                    id="Name as published"
+                                    id="nameAsPublishedField"
                                     label="Name as published"
                                     onChange={[Function]}
                                     placeholder="Please type the name exactly as published"
@@ -2384,7 +2384,7 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                                           className="MuiFormControl-root-98 MuiFormControl-fullWidth-101"
                                         >
                                           <WithStyles(WithFormControlContext(InputLabel))
-                                            htmlFor="Name as published"
+                                            htmlFor="nameAsPublishedField"
                                           >
                                             <WithFormControlContext(InputLabel)
                                               classes={
@@ -2402,7 +2402,7 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                                                   "shrink": "MuiInputLabel-shrink-109",
                                                 }
                                               }
-                                              htmlFor="Name as published"
+                                              htmlFor="nameAsPublishedField"
                                             >
                                               <InputLabel
                                                 classes={
@@ -2421,7 +2421,7 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                                                   }
                                                 }
                                                 disableAnimation={false}
-                                                htmlFor="Name as published"
+                                                htmlFor="nameAsPublishedField"
                                                 muiFormControl={
                                                   Object {
                                                     "adornedStart": false,
@@ -2450,7 +2450,7 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                                                     }
                                                   }
                                                   data-shrink={false}
-                                                  htmlFor="Name as published"
+                                                  htmlFor="nameAsPublishedField"
                                                 >
                                                   <WithFormControlContext(FormLabel)
                                                     className="MuiInputLabel-root-102 MuiInputLabel-formControl-107 MuiInputLabel-animated-110"
@@ -2466,7 +2466,7 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                                                       }
                                                     }
                                                     data-shrink={false}
-                                                    htmlFor="Name as published"
+                                                    htmlFor="nameAsPublishedField"
                                                   >
                                                     <FormLabel
                                                       className="MuiInputLabel-root-102 MuiInputLabel-formControl-107 MuiInputLabel-animated-110"
@@ -2483,7 +2483,7 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                                                       }
                                                       component="label"
                                                       data-shrink={false}
-                                                      htmlFor="Name as published"
+                                                      htmlFor="nameAsPublishedField"
                                                       muiFormControl={
                                                         Object {
                                                           "adornedStart": false,
@@ -2504,7 +2504,7 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                                                       <label
                                                         className="MuiFormLabel-root-113 MuiFormLabel-disabled-115 MuiInputLabel-disabled-104 MuiInputLabel-root-102 MuiInputLabel-formControl-107 MuiInputLabel-animated-110"
                                                         data-shrink={false}
-                                                        htmlFor="Name as published"
+                                                        htmlFor="nameAsPublishedField"
                                                       >
                                                         Name as published
                                                       </label>
@@ -2517,7 +2517,7 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                                           <WithStyles(Input)
                                             autoComplete="off"
                                             fullWidth={true}
-                                            id="Name as published"
+                                            id="nameAsPublishedField"
                                             onChange={[Function]}
                                             placeholder="Please type the name exactly as published"
                                             value=""
@@ -2542,7 +2542,7 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                                                 }
                                               }
                                               fullWidth={true}
-                                              id="Name as published"
+                                              id="nameAsPublishedField"
                                               onChange={[Function]}
                                               placeholder="Please type the name exactly as published"
                                               value=""
@@ -2567,7 +2567,7 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                                                   }
                                                 }
                                                 fullWidth={true}
-                                                id="Name as published"
+                                                id="nameAsPublishedField"
                                                 inputComponent="input"
                                                 multiline={false}
                                                 onChange={[Function]}
@@ -2599,7 +2599,7 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                                                     }
                                                   }
                                                   fullWidth={true}
-                                                  id="Name as published"
+                                                  id="nameAsPublishedField"
                                                   inputComponent="input"
                                                   multiline={false}
                                                   onChange={[Function]}
@@ -2631,7 +2631,7 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                                                       }
                                                     }
                                                     fullWidth={true}
-                                                    id="Name as published"
+                                                    id="nameAsPublishedField"
                                                     inputComponent="input"
                                                     muiFormControl={
                                                       Object {
@@ -2664,7 +2664,7 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                                                         autoComplete="off"
                                                         className="MuiInputBase-input-150 MuiInput-input-135 MuiInputBase-disabled-143 MuiInput-disabled-130"
                                                         disabled={true}
-                                                        id="Name as published"
+                                                        id="nameAsPublishedField"
                                                         onBlur={[Function]}
                                                         onChange={[Function]}
                                                         onFocus={[Function]}

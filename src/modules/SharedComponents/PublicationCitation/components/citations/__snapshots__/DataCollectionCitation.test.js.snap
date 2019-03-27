@@ -1263,7 +1263,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
                 "rek_subtype_xsdmf_id": null,
                 "rek_thomson_citation_count": null,
                 "rek_thomson_citation_count_xsdmf_id": null,
-                "rek_title": "CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material",
+                "rek_title": "Data collection mock testing record",
                 "rek_title_xsdmf_id": 16197,
                 "rek_updated_date": "2017-02-01T03:50:57Z",
                 "rek_updated_date_xsdmf_id": 528,
@@ -2023,7 +2023,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
                     "rek_subtype_xsdmf_id": null,
                     "rek_thomson_citation_count": null,
                     "rek_thomson_citation_count_xsdmf_id": null,
-                    "rek_title": "CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material",
+                    "rek_title": "Data collection mock testing record",
                     "rek_title_xsdmf_id": 16197,
                     "rek_updated_date": "2017-02-01T03:50:57Z",
                     "rek_updated_date_xsdmf_id": 528,
@@ -2796,7 +2796,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
                       "rek_subtype_xsdmf_id": null,
                       "rek_thomson_citation_count": null,
                       "rek_thomson_citation_count_xsdmf_id": null,
-                      "rek_title": "CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material",
+                      "rek_title": "Data collection mock testing record",
                       "rek_title_xsdmf_id": 16197,
                       "rek_updated_date": "2017-02-01T03:50:57Z",
                       "rek_updated_date_xsdmf_id": 528,
@@ -3344,13 +3344,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
                 className="citationTitle"
                 prefix=" "
                 suffix="."
-                value="CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material"
+                value="Data collection mock testing record"
               >
                 <span
                   className="citationTitle"
                 >
                    
-                  CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material
+                  Data collection mock testing record
                   .
                 </span>
               </CitationTitleView>
@@ -5624,7 +5624,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                 "rek_subtype_xsdmf_id": null,
                 "rek_thomson_citation_count": null,
                 "rek_thomson_citation_count_xsdmf_id": null,
-                "rek_title": "CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material",
+                "rek_title": "Data collection mock testing record",
                 "rek_title_xsdmf_id": 16197,
                 "rek_updated_date": "2017-02-01T03:50:57Z",
                 "rek_updated_date_xsdmf_id": 528,
@@ -6384,7 +6384,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                     "rek_subtype_xsdmf_id": null,
                     "rek_thomson_citation_count": null,
                     "rek_thomson_citation_count_xsdmf_id": null,
-                    "rek_title": "CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material",
+                    "rek_title": "Data collection mock testing record",
                     "rek_title_xsdmf_id": 16197,
                     "rek_updated_date": "2017-02-01T03:50:57Z",
                     "rek_updated_date_xsdmf_id": 528,
@@ -7157,7 +7157,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                       "rek_subtype_xsdmf_id": null,
                       "rek_thomson_citation_count": null,
                       "rek_thomson_citation_count_xsdmf_id": null,
-                      "rek_title": "CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material",
+                      "rek_title": "Data collection mock testing record",
                       "rek_title_xsdmf_id": 16197,
                       "rek_updated_date": "2017-02-01T03:50:57Z",
                       "rek_updated_date_xsdmf_id": 528,
@@ -7701,13 +7701,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                 className="citationTitle"
                 prefix=" "
                 suffix="."
-                value="CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material"
+                value="Data collection mock testing record"
               >
                 <span
                   className="citationTitle"
                 >
                    
-                  CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material
+                  Data collection mock testing record
                   .
                 </span>
               </CitationTitleView>
@@ -14302,7 +14302,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                 "rek_subtype_xsdmf_id": null,
                 "rek_thomson_citation_count": null,
                 "rek_thomson_citation_count_xsdmf_id": null,
-                "rek_title": "CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material",
+                "rek_title": "Data collection mock testing record",
                 "rek_title_xsdmf_id": 16197,
                 "rek_updated_date": "2017-02-01T03:50:57Z",
                 "rek_updated_date_xsdmf_id": 528,
@@ -15026,7 +15026,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                     "rek_subtype_xsdmf_id": null,
                     "rek_thomson_citation_count": null,
                     "rek_thomson_citation_count_xsdmf_id": null,
-                    "rek_title": "CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material",
+                    "rek_title": "Data collection mock testing record",
                     "rek_title_xsdmf_id": 16197,
                     "rek_updated_date": "2017-02-01T03:50:57Z",
                     "rek_updated_date_xsdmf_id": 528,
@@ -15763,7 +15763,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                       "rek_subtype_xsdmf_id": null,
                       "rek_thomson_citation_count": null,
                       "rek_thomson_citation_count_xsdmf_id": null,
-                      "rek_title": "CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material",
+                      "rek_title": "Data collection mock testing record",
                       "rek_title_xsdmf_id": 16197,
                       "rek_updated_date": "2017-02-01T03:50:57Z",
                       "rek_updated_date_xsdmf_id": 528,
@@ -16241,13 +16241,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                 className="citationTitle"
                 prefix=" "
                 suffix="."
-                value="CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material"
+                value="Data collection mock testing record"
               >
                 <span
                   className="citationTitle"
                 >
                    
-                  CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material
+                  Data collection mock testing record
                   .
                 </span>
               </CitationTitleView>
@@ -18551,7 +18551,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                 "rek_subtype_xsdmf_id": null,
                 "rek_thomson_citation_count": null,
                 "rek_thomson_citation_count_xsdmf_id": null,
-                "rek_title": "CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material",
+                "rek_title": "Data collection mock testing record",
                 "rek_title_xsdmf_id": 16197,
                 "rek_updated_date": "2017-02-01T03:50:57Z",
                 "rek_updated_date_xsdmf_id": 528,
@@ -19311,7 +19311,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                     "rek_subtype_xsdmf_id": null,
                     "rek_thomson_citation_count": null,
                     "rek_thomson_citation_count_xsdmf_id": null,
-                    "rek_title": "CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material",
+                    "rek_title": "Data collection mock testing record",
                     "rek_title_xsdmf_id": 16197,
                     "rek_updated_date": "2017-02-01T03:50:57Z",
                     "rek_updated_date_xsdmf_id": 528,
@@ -20084,7 +20084,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                       "rek_subtype_xsdmf_id": null,
                       "rek_thomson_citation_count": null,
                       "rek_thomson_citation_count_xsdmf_id": null,
-                      "rek_title": "CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material",
+                      "rek_title": "Data collection mock testing record",
                       "rek_title_xsdmf_id": 16197,
                       "rek_updated_date": "2017-02-01T03:50:57Z",
                       "rek_updated_date_xsdmf_id": 528,
@@ -20632,13 +20632,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                 className="citationTitle"
                 prefix=" "
                 suffix="."
-                value="CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material"
+                value="Data collection mock testing record"
               >
                 <span
                   className="citationTitle"
                 >
                    
-                  CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material
+                  Data collection mock testing record
                   .
                 </span>
               </CitationTitleView>
@@ -22943,7 +22943,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                 "rek_subtype_xsdmf_id": null,
                 "rek_thomson_citation_count": null,
                 "rek_thomson_citation_count_xsdmf_id": null,
-                "rek_title": "CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material",
+                "rek_title": "Data collection mock testing record",
                 "rek_title_xsdmf_id": 16197,
                 "rek_updated_date": "2017-02-01T03:50:57Z",
                 "rek_updated_date_xsdmf_id": 528,
@@ -23698,7 +23698,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                     "rek_subtype_xsdmf_id": null,
                     "rek_thomson_citation_count": null,
                     "rek_thomson_citation_count_xsdmf_id": null,
-                    "rek_title": "CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material",
+                    "rek_title": "Data collection mock testing record",
                     "rek_title_xsdmf_id": 16197,
                     "rek_updated_date": "2017-02-01T03:50:57Z",
                     "rek_updated_date_xsdmf_id": 528,
@@ -24466,7 +24466,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                       "rek_subtype_xsdmf_id": null,
                       "rek_thomson_citation_count": null,
                       "rek_thomson_citation_count_xsdmf_id": null,
-                      "rek_title": "CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material",
+                      "rek_title": "Data collection mock testing record",
                       "rek_title_xsdmf_id": 16197,
                       "rek_updated_date": "2017-02-01T03:50:57Z",
                       "rek_updated_date_xsdmf_id": 528,
@@ -25014,13 +25014,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                 className="citationTitle"
                 prefix=" "
                 suffix="."
-                value="CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material"
+                value="Data collection mock testing record"
               >
                 <span
                   className="citationTitle"
                 >
                    
-                  CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material
+                  Data collection mock testing record
                   .
                 </span>
               </CitationTitleView>
@@ -26366,7 +26366,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                 "rek_subtype_xsdmf_id": null,
                 "rek_thomson_citation_count": null,
                 "rek_thomson_citation_count_xsdmf_id": null,
-                "rek_title": "CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material",
+                "rek_title": "Data collection mock testing record",
                 "rek_title_xsdmf_id": 16197,
                 "rek_updated_date": "2017-02-01T03:50:57Z",
                 "rek_updated_date_xsdmf_id": 528,
@@ -27121,7 +27121,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                     "rek_subtype_xsdmf_id": null,
                     "rek_thomson_citation_count": null,
                     "rek_thomson_citation_count_xsdmf_id": null,
-                    "rek_title": "CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material",
+                    "rek_title": "Data collection mock testing record",
                     "rek_title_xsdmf_id": 16197,
                     "rek_updated_date": "2017-02-01T03:50:57Z",
                     "rek_updated_date_xsdmf_id": 528,
@@ -27889,7 +27889,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                       "rek_subtype_xsdmf_id": null,
                       "rek_thomson_citation_count": null,
                       "rek_thomson_citation_count_xsdmf_id": null,
-                      "rek_title": "CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material",
+                      "rek_title": "Data collection mock testing record",
                       "rek_title_xsdmf_id": 16197,
                       "rek_updated_date": "2017-02-01T03:50:57Z",
                       "rek_updated_date_xsdmf_id": 528,
@@ -28437,13 +28437,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                 className="citationTitle"
                 prefix=" "
                 suffix="."
-                value="CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material"
+                value="Data collection mock testing record"
               >
                 <span
                   className="citationTitle"
                 >
                    
-                  CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes: supplemental material
+                  Data collection mock testing record
                   .
                 </span>
               </CitationTitleView>

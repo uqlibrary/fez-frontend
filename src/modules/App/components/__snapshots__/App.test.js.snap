@@ -20619,7 +20619,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                           title=""
                         >
                           <HelpDrawer
-                            buttonLabel="OK"
+                            buttonLabel="CLOSE"
                             classes={
                               Object {
                                 "button": "HelpDrawer-button-279",

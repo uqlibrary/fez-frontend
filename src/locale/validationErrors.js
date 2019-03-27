@@ -28,7 +28,8 @@ export default {
         advancedSearchSelectionRequired: 'Please select a field to search',
         dateRange: 'Please provide a valid start/end date range',
         pageRange: 'Please provide a valid start/end page range',
-        remindToAdd: 'Please remember to click ADD to add this item to your list'
+        remindToAdd: 'Please remember to click ADD to add this item to your list',
+        requireChecked: 'Please accept deposit agreement'
     },
     validationErrorsSummary: {
         rek_title: 'Title is required',
@@ -75,7 +76,7 @@ export default {
         rek_project_description: 'Project description is required',
         fez_record_search_key_grant_id: 'Grant information is required',
         qualityIndicators: 'Quality indicator is required',
-        impactStatement: 'Creator contribution statement is required',
+        impactStatement: 'Creator research statement is required',
         significance: 'Scale/Significance of work is required',
         dateRange: 'Publication start/end dates are invalid',
         pageRange: 'Please provide a valid start/end page range'

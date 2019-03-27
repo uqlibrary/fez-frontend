@@ -58198,6 +58198,590 @@ export const trendingPublications = {
     "filters": []
 };
 
+export const trendingPublicationsWithNoSources = {
+    "total": 1, "data": [{
+        "rek_pid": "UQ:d8ece17",
+        "rek_title_xsdmf_id": null,
+        "rek_title": "Nutritional status, dietary intake, and health-related quality of life in outpatients with COPD",
+        "rek_description_xsdmf_id": 11441,
+        "rek_description": "Background: Malnutrition is common in patients with COPD; however, little is known about its impacts on health-related quality of life (QoL) among patients with COPD. This study aimed to explore the nutritional status and dietary intake among outpatients with COPD in Vietnam and its possible associations with QoL. Methods: A cross-sectional study was carried out in COPD outpatients visiting the COPD management unit at the National Lung Hospital, Hanoi, Vietnam between May 2017 and July 2017. Consecutive outpatients with a confirmed diagnosis of COPD were recruited with written inform consent. The nutritional status of participants was assessed using Subjective Global Assessment (SGA), and dietary intake via a 24-hour recall interview. The St George Respiratory Questionnaire (SGRQ) for COPD was used to investigate the participants' QoL. Sociodemographic and clinical data were extracted from hospital records. Results: Of 168 COPD outpatients involved in the study, three-quarters (74.4%) were diagnosed as malnourished (SGA B\/C) and 81.5% reported unintentional weight loss. Most of the patients did not meet their estimated energy and protein requirements (85.7% and 89.9%, respectively). Malnutrition was significantly associated with disease severity (P=0.039) and ratio of protein intake to estimated requirement (P=0.005). QoL was low for all levels of malnutrition or disease severity, with well-nourished participants and those with less disease severity having better QoL (P=0.006 and P<0.001, respectively). With an extra meal per day, the odds of having malnutrition decreased 5.6 times (P<0.05) and the total SGRQ reduced 3.61 scores (P<0.05) indicating a better QoL. Conclusion: Malnutrition and weight loss are prevalent among COPD outpatients. Most of the patients had inadequate dietary intake and low QoL. Nutrition counselling including increasing the number of meals per day with a focus on energy-and protein-rich foods may help improving nutritional status and QoL of patients with COPD in Vietnam.",
+        "rek_display_type_xsdmf_id": null,
+        "rek_display_type": 179,
+        "rek_status_xsdmf_id": null,
+        "rek_status": 2,
+        "rek_date_xsdmf_id": 6386,
+        "rek_date": "2019-01-14T00:00:00Z",
+        "rek_object_type_xsdmf_id": null,
+        "rek_object_type": 3,
+        "rek_depositor_xsdmf_id": null,
+        "rek_depositor": 1003338941,
+        "rek_created_date_xsdmf_id": null,
+        "rek_created_date": "2019-03-15T00:07:32Z",
+        "rek_updated_date_xsdmf_id": 3678,
+        "rek_updated_date": "2019-03-20T03:00:24Z",
+        "rek_file_downloads": 0,
+        "rek_citation": "",
+        "rek_genre_xsdmf_id": null,
+        "rek_genre": "Journal Article",
+        "rek_genre_type_xsdmf_id": null,
+        "rek_genre_type": "Article (original research)",
+        "rek_formatted_title_xsdmf_id": null,
+        "rek_formatted_title": null,
+        "rek_formatted_abstract_xsdmf_id": null,
+        "rek_formatted_abstract": null,
+        "rek_depositor_affiliation_xsdmf_id": 11881,
+        "rek_depositor_affiliation": 1247,
+        "rek_thomson_citation_count": 0,
+        "rek_thomson_citation_count_xsdmf_id": null,
+        "rek_subtype_xsdmf_id": null,
+        "rek_subtype": "Article (original research)",
+        "rek_scopus_citation_count": 0,
+        "rek_herdc_notes_xsdmf_id": null,
+        "rek_herdc_notes": null,
+        "rek_scopus_doc_type_xsdmf_id": 12550,
+        "rek_scopus_doc_type": "ar",
+        "rek_wok_doc_type_xsdmf_id": null,
+        "rek_wok_doc_type": "@",
+        "rek_pubmed_doc_type_xsdmf_id": null,
+        "rek_pubmed_doc_type": null,
+        "rek_security_inherited": 1,
+        "rek_altmetric_score": 14,
+        "rek_altmetric_score_xsdmf_id": null,
+        "rek_altmetric_id": 54035076,
+        "rek_altmetric_id_xsdmf_id": null,
+        "rek_copyright_xsdmf_id": 3679,
+        "rek_copyright": "on",
+        "fez_record_search_key_advisory_statement": null,
+        "fez_record_search_key_article_number": null,
+        "fez_record_search_key_assigned_group_id": [],
+        "fez_record_search_key_assigned_user_id": [],
+        "fez_record_search_key_author": [{
+            "rek_author_id": 32269514,
+            "rek_author_pid": "UQ:d8ece17",
+            "rek_author_xsdmf_id": null,
+            "rek_author": "Ha Thanh Nguyen,",
+            "rek_author_order": 1
+        }, {
+            "rek_author_id": 32269515,
+            "rek_author_pid": "UQ:d8ece17",
+            "rek_author_xsdmf_id": null,
+            "rek_author": "Collins, Peter F.",
+            "rek_author_order": 2
+        }, {
+            "rek_author_id": 32269516,
+            "rek_author_pid": "UQ:d8ece17",
+            "rek_author_xsdmf_id": null,
+            "rek_author": "Pavey, Toby G.",
+            "rek_author_order": 3
+        }, {
+            "rek_author_id": 32269517,
+            "rek_author_pid": "UQ:d8ece17",
+            "rek_author_xsdmf_id": null,
+            "rek_author": "Nhung Viet Nguyen,",
+            "rek_author_order": 4
+        }, {
+            "rek_author_id": 32269518,
+            "rek_author_pid": "UQ:d8ece17",
+            "rek_author_xsdmf_id": null,
+            "rek_author": "Tuong Duy Pham,",
+            "rek_author_order": 5
+        }, {
+            "rek_author_id": 32269519,
+            "rek_author_pid": "UQ:d8ece17",
+            "rek_author_xsdmf_id": null,
+            "rek_author": "Gallegos, Danielle L.",
+            "rek_author_order": 6
+        }],
+        "fez_record_search_key_author_affiliation_country": [],
+        "fez_record_search_key_author_affiliation_full_address": [],
+        "fez_record_search_key_author_affiliation_id": [],
+        "fez_record_search_key_author_affiliation_name": [],
+        "fez_record_search_key_author_affiliation_type": [],
+        "fez_record_search_key_author_id": [{
+            "rek_author_id_id": 32331212,
+            "rek_author_id_pid": "UQ:d8ece17",
+            "rek_author_id_xsdmf_id": 6346,
+            "rek_author_id": 0,
+            "rek_author_id_order": 1
+        }, {
+            "rek_author_id_id": 32331213,
+            "rek_author_id_pid": "UQ:d8ece17",
+            "rek_author_id_xsdmf_id": 6346,
+            "rek_author_id": 5573848,
+            "rek_author_id_order": 2,
+            "rek_author_id_lookup": "Peter Collins"
+        }, {
+            "rek_author_id_id": 32331214,
+            "rek_author_id_pid": "UQ:d8ece17",
+            "rek_author_id_xsdmf_id": 6346,
+            "rek_author_id": 0,
+            "rek_author_id_order": 3
+        }, {
+            "rek_author_id_id": 32331215,
+            "rek_author_id_pid": "UQ:d8ece17",
+            "rek_author_id_xsdmf_id": 6346,
+            "rek_author_id": 0,
+            "rek_author_id_order": 4
+        }, {
+            "rek_author_id_id": 32331216,
+            "rek_author_id_pid": "UQ:d8ece17",
+            "rek_author_id_xsdmf_id": 6346,
+            "rek_author_id": 0,
+            "rek_author_id_order": 5
+        }, {
+            "rek_author_id_id": 32331217,
+            "rek_author_id_pid": "UQ:d8ece17",
+            "rek_author_id_xsdmf_id": 6346,
+            "rek_author_id": 0,
+            "rek_author_id_order": 6
+        }],
+        "fez_record_search_key_author_crossref_authenticated": [],
+        "fez_record_search_key_author_crossref_orcid": [],
+        "fez_record_search_key_biosis_id": null,
+        "fez_record_search_key_contributor": [],
+        "fez_record_search_key_contributor_id": [],
+        "fez_record_search_key_corresponding_country": [{
+            "rek_corresponding_country_id": 464324,
+            "rek_corresponding_country_pid": "UQ:d8ece17",
+            "rek_corresponding_country_xsdmf_id": 0,
+            "rek_corresponding_country": "Australia",
+            "rek_corresponding_country_order": 1
+        }, {
+            "rek_corresponding_country_id": 464325,
+            "rek_corresponding_country_pid": "UQ:d8ece17",
+            "rek_corresponding_country_xsdmf_id": 0,
+            "rek_corresponding_country": "Vietnam",
+            "rek_corresponding_country_order": 2
+        }, {
+            "rek_corresponding_country_id": 464326,
+            "rek_corresponding_country_pid": "UQ:d8ece17",
+            "rek_corresponding_country_xsdmf_id": 0,
+            "rek_corresponding_country": "Australia",
+            "rek_corresponding_country_order": 3
+        }, {
+            "rek_corresponding_country_id": 464327,
+            "rek_corresponding_country_pid": "UQ:d8ece17",
+            "rek_corresponding_country_xsdmf_id": 0,
+            "rek_corresponding_country": "Vietnam",
+            "rek_corresponding_country_order": 4
+        }],
+        "fez_record_search_key_corresponding_email": [{
+            "rek_corresponding_email_id": 124572,
+            "rek_corresponding_email_pid": "UQ:d8ece17",
+            "rek_corresponding_email_xsdmf_id": 0,
+            "rek_corresponding_email": "thanhha.nguyen@hdr.qut.edu.au",
+            "rek_corresponding_email_order": 1
+        }, {
+            "rek_corresponding_email_id": 124573,
+            "rek_corresponding_email_pid": "UQ:d8ece17",
+            "rek_corresponding_email_xsdmf_id": 0,
+            "rek_corresponding_email": "thanhha.nguyen@hdr.qut.edu.au",
+            "rek_corresponding_email_order": 2
+        }],
+        "fez_record_search_key_corresponding_name": [{
+            "rek_corresponding_name_id": 162227,
+            "rek_corresponding_name_pid": "UQ:d8ece17",
+            "rek_corresponding_name_xsdmf_id": 0,
+            "rek_corresponding_name": "Ha Thanh Nguyen",
+            "rek_corresponding_name_order": 1
+        }, {
+            "rek_corresponding_name_id": 162228,
+            "rek_corresponding_name_pid": "UQ:d8ece17",
+            "rek_corresponding_name_xsdmf_id": 0,
+            "rek_corresponding_name": "Ha Thanh Nguyen",
+            "rek_corresponding_name_order": 2
+        }],
+        "fez_record_search_key_corresponding_organisation": [{
+            "rek_corresponding_organisation_id": 433827,
+            "rek_corresponding_organisation_pid": "UQ:d8ece17",
+            "rek_corresponding_organisation_xsdmf_id": 0,
+            "rek_corresponding_organisation": "Queensland University of Technology (QUT)",
+            "rek_corresponding_organisation_order": 1
+        }, {
+            "rek_corresponding_organisation_id": 433828,
+            "rek_corresponding_organisation_pid": "UQ:d8ece17",
+            "rek_corresponding_organisation_xsdmf_id": 0,
+            "rek_corresponding_organisation": "Hanoi Medical University",
+            "rek_corresponding_organisation_order": 2
+        }, {
+            "rek_corresponding_organisation_id": 433829,
+            "rek_corresponding_organisation_pid": "UQ:d8ece17",
+            "rek_corresponding_organisation_xsdmf_id": 0,
+            "rek_corresponding_organisation": "Princess Alexandra Hosp",
+            "rek_corresponding_organisation_order": 3
+        }, {
+            "rek_corresponding_organisation_id": 433830,
+            "rek_corresponding_organisation_pid": "UQ:d8ece17",
+            "rek_corresponding_organisation_xsdmf_id": 0,
+            "rek_corresponding_organisation": "Natl Lung Hosp",
+            "rek_corresponding_organisation_order": 4
+        }],
+        "fez_record_search_key_creator_contribution_statement": [],
+        "fez_record_search_key_datastream_policy": null,
+        "fez_record_search_key_date_available": {
+            "rek_date_available_id": 1078942,
+            "rek_date_available_pid": "UQ:d8ece17",
+            "rek_date_available_xsdmf_id": null,
+            "rek_date_available": "2018-01-01T00:00:00Z"
+        },
+        "fez_record_search_key_doi": {
+            "rek_doi_id": 1773152,
+            "rek_doi_pid": "UQ:d8ece17",
+            "rek_doi_xsdmf_id": null,
+            "rek_doi": "10.2147\/COPD.S181322",
+            "fez_altmetric": null
+        },
+        "fez_record_search_key_end_page": {
+            "rek_end_page_id": 5801223,
+            "rek_end_page_pid": "UQ:d8ece17",
+            "rek_end_page_xsdmf_id": null,
+            "rek_end_page": "226"
+        },
+        "fez_record_search_key_file_attachment_access_condition": [],
+        "fez_record_search_key_file_attachment_embargo_date": [],
+        "fez_record_search_key_file_attachment_name": [],
+        "fez_record_search_key_grant_acronym": [],
+        "fez_record_search_key_grant_agency": [],
+        "fez_record_search_key_grant_agency_id": [],
+        "fez_record_search_key_grant_agency_type": [],
+        "fez_record_search_key_grant_id": [],
+        "fez_record_search_key_grant_text": [],
+        "fez_record_search_key_grant_type": [],
+        "fez_record_search_key_herdc_code": {
+            "rek_herdc_code_id": 5001071,
+            "rek_herdc_code_pid": "UQ:d8ece17",
+            "rek_herdc_code_xsdmf_id": null,
+            "rek_herdc_code": 450009,
+            "rek_herdc_code_lookup": "C1"
+        },
+        "fez_record_search_key_herdc_status": {
+            "rek_herdc_status_id": 3861448,
+            "rek_herdc_status_pid": "UQ:d8ece17",
+            "rek_herdc_status_xsdmf_id": null,
+            "rek_herdc_status": 453220,
+            "rek_herdc_status_lookup": "Provisional Code"
+        },
+        "fez_record_search_key_institutional_status": {
+            "rek_institutional_status_id": 3551595,
+            "rek_institutional_status_pid": "UQ:d8ece17",
+            "rek_institutional_status_xsdmf_id": null,
+            "rek_institutional_status": 453224,
+            "rek_institutional_status_lookup": "Non-UQ"
+        },
+        "fez_record_search_key_isbn": [],
+        "fez_record_search_key_isderivationof": [],
+        "fez_record_search_key_isi_loc": {
+            "rek_isi_loc_id": 4088527,
+            "rek_isi_loc_pid": "UQ:d8ece17",
+            "rek_isi_loc_xsdmf_id": null,
+            "rek_isi_loc": "000455509500001",
+            "fez_thomson_citations": null
+        },
+        "fez_record_search_key_ismemberof": [{
+            "rek_ismemberof_id": 12457692,
+            "rek_ismemberof_pid": "UQ:d8ece17",
+            "rek_ismemberof_xsdmf_id": null,
+            "rek_ismemberof": "UQ:3829",
+            "rek_ismemberof_order": 1,
+            "rek_ismemberof_lookup": "School of Human Movement and Nutrition Sciences Publications"
+        }],
+        "fez_record_search_key_ismn": [],
+        "fez_record_search_key_issn": [{
+            "rek_issn_id": 5510685,
+            "rek_issn_pid": "UQ:d8ece17",
+            "rek_issn_xsdmf_id": null,
+            "rek_issn": "1178-2005",
+            "rek_issn_order": 1,
+            "fez_journal_issns": [{
+                "jni_id": 100939,
+                "jni_jnl_id": 61374,
+                "jni_issn": "1178-2005",
+                "jni_issn_order": 2,
+                "fez_journal": {
+                    "jnl_id": 61374,
+                    "jnl_journal_name": "The International Journal of Chronic Obstructive Pulmonary Disease",
+                    "jnl_era_id": 41430,
+                    "jnl_era_year": 2015,
+                    "jnl_created_date": "2014-07-16 00:00:00",
+                    "jnl_updated_date": "2014-07-16 00:00:00",
+                    "jnl_rank": null,
+                    "jnl_foreign_name": ""
+                }
+            }, {
+                "jni_id": 181564,
+                "jni_jnl_id": 110072,
+                "jni_issn": "1178-2005",
+                "jni_issn_order": 2,
+                "fez_journal": {
+                    "jnl_id": 110072,
+                    "jnl_journal_name": "The International Journal of Chronic Obstructive Pulmonary Disease",
+                    "jnl_era_id": 41430,
+                    "jnl_era_year": 2018,
+                    "jnl_created_date": "2017-09-06 00:00:00",
+                    "jnl_updated_date": "2017-09-06 00:00:00",
+                    "jnl_rank": null,
+                    "jnl_foreign_name": ""
+                }
+            }],
+            "fez_sherpa_romeo": {
+                "srm_id": 3666552,
+                "srm_issn": "1178-2005",
+                "srm_journal_name": "International Journal of Chronic Obstructive Pulmonary Disease",
+                "srm_colour": "blue"
+            },
+            "rek_issn_lookup": "blue"
+        }, {
+            "rek_issn_id": 5510686,
+            "rek_issn_pid": "UQ:d8ece17",
+            "rek_issn_xsdmf_id": null,
+            "rek_issn": "1176-9106",
+            "rek_issn_order": 2,
+            "fez_journal_issns": [{
+                "jni_id": 25100,
+                "jni_jnl_id": 15014,
+                "jni_issn": "1176-9106",
+                "jni_issn_order": 1,
+                "fez_journal": {
+                    "jnl_id": 15014,
+                    "jnl_journal_name": "The International Journal of Chronic Obstructive Pulmonary Disease",
+                    "jnl_era_id": 41430,
+                    "jnl_era_year": 2010,
+                    "jnl_created_date": "2010-11-19 00:00:00",
+                    "jnl_updated_date": "2010-11-19 00:00:00",
+                    "jnl_rank": "B",
+                    "jnl_foreign_name": null
+                }
+            }, {
+                "jni_id": 66298,
+                "jni_jnl_id": 40151,
+                "jni_issn": "1176-9106",
+                "jni_issn_order": 1,
+                "fez_journal": {
+                    "jnl_id": 40151,
+                    "jnl_journal_name": "The International Journal of Chronic Obstructive Pulmonary Disease",
+                    "jnl_era_id": 41430,
+                    "jnl_era_year": 2012,
+                    "jnl_created_date": "2011-10-28 00:00:00",
+                    "jnl_updated_date": "2011-10-28 00:00:00",
+                    "jnl_rank": null,
+                    "jnl_foreign_name": ""
+                }
+            }, {
+                "jni_id": 100938,
+                "jni_jnl_id": 61374,
+                "jni_issn": "1176-9106",
+                "jni_issn_order": 1,
+                "fez_journal": {
+                    "jnl_id": 61374,
+                    "jnl_journal_name": "The International Journal of Chronic Obstructive Pulmonary Disease",
+                    "jnl_era_id": 41430,
+                    "jnl_era_year": 2015,
+                    "jnl_created_date": "2014-07-16 00:00:00",
+                    "jnl_updated_date": "2014-07-16 00:00:00",
+                    "jnl_rank": null,
+                    "jnl_foreign_name": ""
+                }
+            }, {
+                "jni_id": 181563,
+                "jni_jnl_id": 110072,
+                "jni_issn": "1176-9106",
+                "jni_issn_order": 1,
+                "fez_journal": {
+                    "jnl_id": 110072,
+                    "jnl_journal_name": "The International Journal of Chronic Obstructive Pulmonary Disease",
+                    "jnl_era_id": 41430,
+                    "jnl_era_year": 2018,
+                    "jnl_created_date": "2017-09-06 00:00:00",
+                    "jnl_updated_date": "2017-09-06 00:00:00",
+                    "jnl_rank": null,
+                    "jnl_foreign_name": ""
+                }
+            }],
+            "fez_sherpa_romeo": {
+                "srm_id": 25793,
+                "srm_issn": "1176-9106",
+                "srm_journal_name": "International Journal of Chronic Obstructive Pulmonary Disease",
+                "srm_colour": "blue"
+            },
+            "rek_issn_lookup": "blue"
+        }],
+        "fez_record_search_key_issue_number": null,
+        "fez_record_search_key_journal_name": {
+            "rek_journal_name_id": 5344444,
+            "rek_journal_name_pid": "UQ:d8ece17",
+            "rek_journal_name_xsdmf_id": null,
+            "rek_journal_name": "The International Journal of Chronic Obstructive Pulmonary Disease"
+        },
+        "fez_record_search_key_keywords": [{
+            "rek_keywords_id": 30833876,
+            "rek_keywords_pid": "UQ:d8ece17",
+            "rek_keywords_xsdmf_id": null,
+            "rek_keywords": "Body weight",
+            "rek_keywords_order": 1
+        }, {
+            "rek_keywords_id": 30833877,
+            "rek_keywords_pid": "UQ:d8ece17",
+            "rek_keywords_xsdmf_id": null,
+            "rek_keywords": "Energy intake",
+            "rek_keywords_order": 2
+        }, {
+            "rek_keywords_id": 30833878,
+            "rek_keywords_pid": "UQ:d8ece17",
+            "rek_keywords_xsdmf_id": null,
+            "rek_keywords": "Protein intake",
+            "rek_keywords_order": 3
+        }, {
+            "rek_keywords_id": 30833879,
+            "rek_keywords_pid": "UQ:d8ece17",
+            "rek_keywords_xsdmf_id": null,
+            "rek_keywords": "SGRQ",
+            "rek_keywords_order": 4
+        }, {
+            "rek_keywords_id": 30833880,
+            "rek_keywords_pid": "UQ:d8ece17",
+            "rek_keywords_xsdmf_id": null,
+            "rek_keywords": "COPD",
+            "rek_keywords_order": 5
+        }, {
+            "rek_keywords_id": 30833881,
+            "rek_keywords_pid": "UQ:d8ece17",
+            "rek_keywords_xsdmf_id": null,
+            "rek_keywords": "Vietnam",
+            "rek_keywords_order": 6
+        }],
+        "fez_record_search_key_language": [{
+            "rek_language_id": 5608691,
+            "rek_language_pid": "UQ:d8ece17",
+            "rek_language_xsdmf_id": null,
+            "rek_language": "eng",
+            "rek_language_order": 1
+        }],
+        "fez_record_search_key_language_of_journal_name": [],
+        "fez_record_search_key_language_of_title": [],
+        "fez_record_search_key_link": [],
+        "fez_record_search_key_link_description": [],
+        "fez_record_search_key_native_script_journal_name": null,
+        "fez_record_search_key_native_script_title": null,
+        "fez_record_search_key_notes": null,
+        "fez_record_search_key_oa_embargo_days": null,
+        "fez_record_search_key_oa_notes": null,
+        "fez_record_search_key_oa_status": {
+            "rek_oa_status_id": 709572,
+            "rek_oa_status_pid": "UQ:d8ece17",
+            "rek_oa_status_xsdmf_id": null,
+            "rek_oa_status": 453693,
+            "rek_oa_status_lookup": "DOI"
+        },
+        "fez_record_search_key_place_of_publication": {
+            "rek_place_of_publication_id": 4438909,
+            "rek_place_of_publication_pid": "UQ:d8ece17",
+            "rek_place_of_publication_xsdmf_id": null,
+            "rek_place_of_publication": "Macclesfield, United Kingdom"
+        },
+        "fez_record_search_key_possible_author_id": [],
+        "fez_record_search_key_publisher": {
+            "rek_publisher_id": 4765060,
+            "rek_publisher_pid": "UQ:d8ece17",
+            "rek_publisher_xsdmf_id": null,
+            "rek_publisher": "Dove Medical Press"
+        },
+        "fez_record_search_key_pubmed_id": null,
+        "fez_record_search_key_pubmed_central_id": null,
+        "fez_record_search_key_quality_indicator": [],
+        "fez_record_search_key_refereed": {
+            "rek_refereed_id": 2863948,
+            "rek_refereed_pid": "UQ:d8ece17",
+            "rek_refereed_xsdmf_id": 7940,
+            "rek_refereed": 0
+        },
+        "fez_record_search_key_refereed_source": {
+            "rek_refereed_source_id": 1554068,
+            "rek_refereed_source_pid": "UQ:d8ece17",
+            "rek_refereed_source_xsdmf_id": null,
+            "rek_refereed_source": "453635",
+            "rek_refereed_source_lookup": "Ulrichs"
+        },
+        "fez_record_search_key_retracted": {
+            "rek_retracted_id": 511326,
+            "rek_retracted_pid": "UQ:d8ece17",
+            "rek_retracted_xsdmf_id": 16603,
+            "rek_retracted": 0
+        },
+        "fez_record_search_key_roman_script_journal_name": null,
+        "fez_record_search_key_roman_script_title": null,
+        "fez_record_search_key_scopus_id": {
+            "rek_scopus_id_id": 2616278,
+            "rek_scopus_id_pid": "UQ:d8ece17",
+            "rek_scopus_id_xsdmf_id": null,
+            "rek_scopus_id": "2-s2.0-85060197860",
+            "fez_scopus_citations": {
+                "sc_eid": "2-s2.0-85060197860",
+                "sc_created": "1552832741",
+                "sc_last_checked": "1552832741",
+                "sc_count": 0,
+                "sc_1d": 0,
+                "sc_2d": 0,
+                "sc_3d": 0,
+                "sc_4d": 0,
+                "sc_5d": 0,
+                "sc_6d": 0,
+                "sc_1w": 0,
+                "sc_1m": 0,
+                "sc_3m": 0,
+                "sc_6m": 0,
+                "sc_1y": 0,
+                "sc_citation_url": "http:\/\/ezproxy.library.uq.edu.au\/login?url=http:\/\/www.scopus.com\/results\/citedbyresults.url?sort=plf-f&src=s&sot=cite&sdt=a&cite=2-s2.0-85060197860"
+            }
+        },
+        "fez_record_search_key_significance": [],
+        "fez_record_search_key_start_page": {
+            "rek_start_page_id": 5881234,
+            "rek_start_page_pid": "UQ:d8ece17",
+            "rek_start_page_xsdmf_id": null,
+            "rek_start_page": "215"
+        },
+        "fez_record_search_key_subject": [],
+        "fez_record_search_key_total_pages": {
+            "rek_total_pages_id": 5848999,
+            "rek_total_pages_pid": "UQ:d8ece17",
+            "rek_total_pages_xsdmf_id": null,
+            "rek_total_pages": "12"
+        },
+        "fez_record_search_key_translated_journal_name": null,
+        "fez_record_search_key_translated_title": null,
+        "fez_record_search_key_volume_number": {
+            "rek_volume_number_id": 5386388,
+            "rek_volume_number_pid": "UQ:d8ece17",
+            "rek_volume_number_xsdmf_id": null,
+            "rek_volume_number": "14"
+        },
+        "fez_record_search_key_wok_doc_types": [{
+            "rek_wok_doc_types_id": 89684,
+            "rek_wok_doc_types_pid": "UQ:d8ece17",
+            "rek_wok_doc_types_xsdmf_id": null,
+            "rek_wok_doc_types": "Article",
+            "rek_wok_doc_types_order": 1
+        }],
+        "fez_record_search_key_zoorec_id": null,
+        "fez_datastream_info": [],
+        "fez_matched_journals": [{
+            "mtj_pid": "UQ:d8ece17",
+            "mtj_jnl_id": 15014,
+            "mtj_status": "A"
+        }, {"mtj_pid": "UQ:d8ece17", "mtj_jnl_id": 40151, "mtj_status": "A"}, {
+            "mtj_pid": "UQ:d8ece17",
+            "mtj_jnl_id": 61374,
+            "mtj_status": "A"
+        }, {"mtj_pid": "UQ:d8ece17", "mtj_jnl_id": 110072, "mtj_status": "A"}],
+        "rek_display_type_lookup": "Journal Article",
+        "rek_pubmed_doc_type_lookup": null,
+        "rek_object_type_lookup": "Record",
+        "rek_scopus_doc_type_lookup": null,
+        "rek_status_lookup": "Published",
+        "rek_wok_doc_type_lookup": null
+    }], "filters": []
+};
+
 export const currentAuthorStats = {
     "total": 313,
     "took": 1605,

@@ -1,0 +1,873 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ThesisSubmission form should allow user to submit thesis 1`] = `
+"Snapshot Diff:
+- First value
++ Second value
+
+@@ -118,15 +118,15 @@
+                              class=\\"MuiSelect-select-238 MuiSelect-selectMenu-241 MuiInputBase-input-229 MuiInput-input-214\\"
+                              id=\\"thesis-subtype\\"
+                              role=\\"button\\"
+                              tabindex=\\"0\\"
+                            >
+-                             Professional Doctorate
++                             PhD Thesis
+                            </div>
+                            <input
+                              type=\\"hidden\\"
+-                             value=\\"Professional Doctorate\\"
++                             value=\\"PhD Thesis\\"
+                            />
+                            <svg
+                              aria-hidden=\\"true\\"
+                              class=\\"MuiSvgIcon-root-244 MuiSelect-icon-243\\"
+                              focusable=\\"false\\"
+@@ -153,47 +153,40 @@
+                          aria-labelledby=\\"downshift-0-label\\"
+                          class=\\"AutoCompleteAsyncField-container-256\\"
+                          role=\\"combobox\\"
+                        >
+                          <div
+-                           aria-describedby=\\"Enrolling unit-helper-text\\"
+                            class=\\"MuiFormControl-root-188 MuiFormControl-fullWidth-191\\"
+                          >
+                            <label
+-                             class=\\"MuiFormLabel-root-199 MuiFormLabel-error-202 MuiFormLabel-required-204 MuiInputLabel-root-192 MuiInputLabel-formControl-193 MuiInputLabel-animated-196\\"
+-                             data-shrink=\\"false\\"
++                             class=\\"MuiFormLabel-root-199 MuiFormLabel-filled-203 MuiFormLabel-required-204 MuiInputLabel-root-192 MuiInputLabel-formControl-193 MuiInputLabel-animated-196 MuiInputLabel-shrink-195\\"
++                             data-shrink=\\"true\\"
+                              for=\\"Enrolling unit\\"
+                            >
+                              Enrolling unit
+                              <span
+-                               class=\\"MuiFormLabel-asterisk-205 MuiFormLabel-error-202\\"
++                               class=\\"MuiFormLabel-asterisk-205\\"
+                              >
+                                 *
+                              </span>
+                            </label>
+                            <div
+                              aria-autocomplete=\\"list\\"
+                              aria-labelledby=\\"downshift-0-label\\"
+-                             class=\\"MuiInputBase-root-219 MuiInput-root-206 AutoCompleteAsyncField-inputRoot-258 MuiInput-underline-210 MuiInputBase-error-225 MuiInput-error-211 MuiInputBase-fullWidth-228 MuiInput-fullWidth-213 MuiInputBase-formControl-220 MuiInput-formControl-207\\"
++                             class=\\"MuiInputBase-root-219 MuiInput-root-206 AutoCompleteAsyncField-inputRoot-258 MuiInput-underline-210 MuiInputBase-fullWidth-228 MuiInput-fullWidth-213 MuiInputBase-formControl-220 MuiInput-formControl-207\\"
+                            >
+                              <input
+-                               aria-invalid=\\"true\\"
++                               aria-invalid=\\"false\\"
+                                autocomplete=\\"off\\"
+                                class=\\"MuiInputBase-input-229 MuiInput-input-214\\"
+                                id=\\"downshift-0-input\\"
+                                placeholder=\\"Enrolling unit, eg. School of Business\\"
+                                required=\\"\\"
+                                type=\\"text\\"
+-                               value=\\"\\"
++                               value=\\"School of Engineering\\"
+                              />
+                            </div>
+-                           <p
+-                             class=\\"MuiFormHelperText-root-304 MuiFormHelperText-error-305 MuiFormHelperText-required-311\\"
+-                             id=\\"Enrolling unit-helper-text\\"
+-                           >
+-                             This field is required
+-                           </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+@@ -247,26 +240,26 @@
+                      >
+                        <div
+                          class=\\"MuiFormControl-root-188 MuiFormControl-fullWidth-191\\"
+                        >
+                          <label
+-                           class=\\"MuiFormLabel-root-199 MuiFormLabel-error-202 MuiFormLabel-required-204 MuiInputLabel-root-192 MuiInputLabel-formControl-193 MuiInputLabel-animated-196\\"
++                           class=\\"MuiFormLabel-root-199 MuiFormLabel-required-204 MuiInputLabel-root-192 MuiInputLabel-formControl-193 MuiInputLabel-animated-196\\"
+                            data-shrink=\\"false\\"
+                            for=\\"nameAsPublishedField\\"
+                          >
+                            Enter each supervisor’s name on a separate line e.g. Firstname Surname
+                            <span
+-                             class=\\"MuiFormLabel-asterisk-205 MuiFormLabel-error-202\\"
++                             class=\\"MuiFormLabel-asterisk-205\\"
+                            >
+                               *
+                            </span>
+                          </label>
+                          <div
+-                           class=\\"MuiInputBase-root-219 MuiInput-root-206 MuiInput-underline-210 MuiInputBase-error-225 MuiInput-error-211 MuiInputBase-fullWidth-228 MuiInput-fullWidth-213 MuiInputBase-formControl-220 MuiInput-formControl-207\\"
++                           class=\\"MuiInputBase-root-219 MuiInput-root-206 MuiInput-underline-210 MuiInputBase-fullWidth-228 MuiInput-fullWidth-213 MuiInputBase-formControl-220 MuiInput-formControl-207\\"
+                          >
+                            <input
+-                             aria-invalid=\\"true\\"
++                             aria-invalid=\\"false\\"
+                              autocomplete=\\"off\\"
+                              class=\\"MuiInputBase-input-229 MuiInput-input-214\\"
+                              id=\\"nameAsPublishedField\\"
+                              placeholder=\\"\\"
+                              required=\\"\\"
+@@ -292,15 +285,200 @@
+                            Add supervisor
+                          </span>
+                        </button>
+                      </div>
+                    </div>
++                   <div
++                     class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-8-25\\"
++                   >
++                     <div
++                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++                     >
++                       <ul
++                         class=\\"MuiList-root-364 MuiList-padding-365\\"
++                       >
++                         <li
++                           class=\\"MuiListItem-container-374\\"
++                         >
++                           <div
++                             class=\\"MuiListItem-root-373 ContributorRowHeader-header-369 MuiListItem-default-376 MuiListItem-gutters-380 MuiListItem-secondaryAction-382\\"
++                           >
++                             <div
++                               class=\\"MuiListItemIcon-root-411\\"
++                             >
++                               <svg
++                                 aria-hidden=\\"true\\"
++                                 class=\\"MuiSvgIcon-root-244\\"
++                                 focusable=\\"false\\"
++                                 role=\\"presentation\\"
++                                 viewBox=\\"0 0 24 24\\"
++                               >
++                                 <path
++                                   d=\\"M0 0h24v24H0z\\"
++                                   fill=\\"none\\"
++                                 />
++                                 <path
++                                   d=\\"M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z\\"
++                                 />
++                               </svg>
++                             </div>
++                             <div
++                               class=\\"MuiListItemText-root-384\\"
++                             >
+                                <span
+-                     class=\\"MuiTypography-root-100 MuiTypography-caption-110 MuiTypography-colorError-134\\"
++                                 class=\\"MuiTypography-root-100 MuiTypography-caption-110 MuiTypography-colorTextSecondary-133 MuiListItemText-secondary-388\\"
+                                >
+-                     Please provide a list of supervisors
++                                 Supervisor's name
++                               </span>
++                             </div>
++                             <div
++                               class=\\"MuiListItemText-root-384\\"
++                             >
++                               <span
++                                 class=\\"MuiTypography-root-100 MuiTypography-caption-110 MuiTypography-colorTextSecondary-133 MuiListItemText-secondary-388 ContributorRowHeader-right-368 ContributorRowHeader-paddingRight24-370\\"
++                               >
++                                 Reorder items
++                               </span>
++                             </div>
++                           </div>
++                           <div
++                             class=\\"MuiListItemSecondaryAction-root-390\\"
++                           >
++                             <button
++                               class=\\"MuiButtonBase-root-287 MuiIconButton-root-398\\"
++                               tabindex=\\"0\\"
++                               title=\\"Remove all items\\"
++                               type=\\"button\\"
++                             >
++                               <span
++                                 class=\\"MuiIconButton-label-403\\"
++                               >
++                                 <svg
++                                   aria-hidden=\\"true\\"
++                                   class=\\"MuiSvgIcon-root-244\\"
++                                   focusable=\\"false\\"
++                                   role=\\"presentation\\"
++                                   viewBox=\\"0 0 24 24\\"
++                                 >
++                                   <path
++                                     d=\\"M0 0h24v24H0V0z\\"
++                                     fill=\\"none\\"
++                                   />
++                                   <path
++                                     d=\\"M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12l1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z\\"
++                                   />
++                                   <path
++                                     d=\\"M0 0h24v24H0z\\"
++                                     fill=\\"none\\"
++                                   />
++                                 </svg>
++                               </span>
++                               <span
++                                 class=\\"MuiTouchRipple-root-297\\"
++                               />
++                             </button>
++                           </div>
++                         </li>
++                       </ul>
++                     </div>
++                     <div
++                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++                     >
++                       <ul
++                         class=\\"MuiList-root-364 Connect-ContributorsEditor--list-259  MuiList-padding-365\\"
++                       >
++                         <li
++                           class=\\"MuiListItem-container-374\\"
++                         >
++                           <div
++                             aria-label=\\"Select this supervisor (test) to assign it as you\\"
++                             class=\\"MuiListItem-root-373 MuiListItem-default-376 MuiListItem-gutters-380 MuiListItem-divider-379 MuiListItem-secondaryAction-382\\"
++                             style=\\"cursor: pointer; width: 98%; margin: 0px 1%;\\"
++                             tabindex=\\"0\\"
++                           >
++                             <div
++                               class=\\"MuiListItemIcon-root-411\\"
++                             >
++                               <svg
++                                 aria-hidden=\\"true\\"
++                                 class=\\"MuiSvgIcon-root-244\\"
++                                 focusable=\\"false\\"
++                                 role=\\"presentation\\"
++                                 viewBox=\\"0 0 24 24\\"
++                               >
++                                 <path
++                                   d=\\"M0 0h24v24H0V0z\\"
++                                   fill=\\"none\\"
++                                 />
++                                 <g>
++                                   <path
++                                     d=\\"M12 6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m0 10c2.7 0 5.8 1.29 6 2H6c.23-.72 3.31-2 6-2m0-12C9.79 4 8 5.79 8 8s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 10c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z\\"
++                                   />
++                                 </g>
++                               </svg>
++                             </div>
++                             <div
++                               class=\\"MuiGrid-container-3 WithTheme-WithWidth-ContributorRow---listItem-404\\"
++                             >
++                               <div
++                                 class=\\"MuiGrid-item-4 MuiGrid-grid-xs-10-41 MuiGrid-grid-sm-5-50 MuiGrid-grid-md-5-64\\"
++                               >
++                                 <div
++                                   class=\\"MuiListItemText-root-384\\"
++                                 >
++                                   <p
++                                     class=\\"MuiTypography-root-100 WithTheme-WithWidth-ContributorRow---primary-408  MuiTypography-body2-108 MuiTypography-noWrap-126\\"
++                                   >
++                                     test
++                                   </p>
++                                   <span
++                                     class=\\"MuiTypography-root-100 MuiTypography-caption-110 MuiTypography-noWrap-126\\"
++                                   >
++                                     First  listed supervisor
++                                   </span>
++                                 </div>
++                               </div>
++                             </div>
++                           </div>
++                           <div
++                             class=\\"MuiListItemSecondaryAction-root-390\\"
++                           >
++                             <button
++                               aria-label=\\"Remove this item\\"
++                               class=\\"MuiButtonBase-root-287 MuiIconButton-root-398\\"
++                               tabindex=\\"0\\"
++                               title=\\"Remove this item\\"
++                               type=\\"button\\"
++                             >
++                               <span
++                                 class=\\"MuiIconButton-label-403\\"
++                               >
++                                 <svg
++                                   aria-hidden=\\"true\\"
++                                   class=\\"MuiSvgIcon-root-244\\"
++                                   focusable=\\"false\\"
++                                   role=\\"presentation\\"
++                                   viewBox=\\"0 0 24 24\\"
++                                 >
++                                   <path
++                                     d=\\"M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z\\"
++                                   />
++                                   <path
++                                     d=\\"M0 0h24v24H0z\\"
++                                     fill=\\"none\\"
++                                   />
++                                 </svg>
+                                </span>
++                               <span
++                                 class=\\"MuiTouchRipple-root-297\\"
++                               />
++                             </button>
++                           </div>
++                         </li>
++                       </ul>
++                     </div>
++                   </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+@@ -340,41 +518,138 @@
+                        aria-labelledby=\\"downshift-1-label\\"
+                        class=\\"AutoCompleteAsyncField-container-256\\"
+                        role=\\"combobox\\"
+                      >
+                        <div
+-                         aria-describedby=\\"Field of research-helper-text\\"
+                          class=\\"MuiFormControl-root-188 MuiFormControl-fullWidth-191\\"
+                        >
+                          <label
+-                           class=\\"MuiFormLabel-root-199 MuiFormLabel-error-202 MuiInputLabel-root-192 MuiInputLabel-formControl-193 MuiInputLabel-animated-196\\"
++                           class=\\"MuiFormLabel-root-199 MuiInputLabel-root-192 MuiInputLabel-formControl-193 MuiInputLabel-animated-196\\"
+                            data-shrink=\\"false\\"
+                            for=\\"Field of research\\"
+                          >
+                            Field of research
+                          </label>
+                          <div
+                            aria-autocomplete=\\"list\\"
+                            aria-labelledby=\\"downshift-1-label\\"
+-                           class=\\"MuiInputBase-root-219 MuiInput-root-206 AutoCompleteAsyncField-inputRoot-258 MuiInput-underline-210 MuiInputBase-error-225 MuiInput-error-211 MuiInputBase-fullWidth-228 MuiInput-fullWidth-213 MuiInputBase-formControl-220 MuiInput-formControl-207\\"
++                           class=\\"MuiInputBase-root-219 MuiInput-root-206 AutoCompleteAsyncField-inputRoot-258 MuiInput-underline-210 MuiInputBase-fullWidth-228 MuiInput-fullWidth-213 MuiInputBase-formControl-220 MuiInput-formControl-207\\"
+                          >
+                            <input
+-                             aria-invalid=\\"true\\"
++                             aria-invalid=\\"false\\"
+                              autocomplete=\\"off\\"
+                              class=\\"MuiInputBase-input-229 MuiInput-input-214\\"
+                              id=\\"downshift-1-input\\"
+                              placeholder=\\"Start typing code or field name and select from list\\"
+                              type=\\"text\\"
+                              value=\\"\\"
+                            />
++                         </div>
++                       </div>
++                     </div>
+                    </div>
++                   <div
++                     style=\\"padding: 8px;\\"
++                   >
++                     <div
++                       class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-16-26 MuiGrid-align-items-xs-center-11 ListRowHeader-header-416\\"
++                     >
++                       <div
++                         class=\\"MuiGrid-item-4 MuiGrid-grid-xs-10-41 MuiGrid-grid-sm-11-56\\"
++                       >
++                         <span
++                           class=\\"MuiTypography-root-100 MuiTypography-caption-110\\"
++                         >
++                           Field of research
++                         </span>
++                       </div>
++                       <div
++                         class=\\"MuiGrid-item-4 MuiGrid-grid-xs-2-33 MuiGrid-grid-sm-1-46 ListRowHeader-center-415\\"
++                       >
++                         <button
++                           class=\\"MuiButtonBase-root-287 MuiIconButton-root-398\\"
++                           tabindex=\\"0\\"
++                           title=\\"Remove all items\\"
++                           type=\\"button\\"
++                         >
++                           <span
++                             class=\\"MuiIconButton-label-403\\"
++                           >
++                             <svg
++                               aria-hidden=\\"true\\"
++                               class=\\"MuiSvgIcon-root-244\\"
++                               focusable=\\"false\\"
++                               role=\\"presentation\\"
++                               viewBox=\\"0 0 24 24\\"
++                             >
++                               <path
++                                 d=\\"M0 0h24v24H0V0z\\"
++                                 fill=\\"none\\"
++                               />
++                               <path
++                                 d=\\"M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12l1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z\\"
++                               />
++                               <path
++                                 d=\\"M0 0h24v24H0z\\"
++                                 fill=\\"none\\"
++                               />
++                             </svg>
++                           </span>
++                           <span
++                             class=\\"MuiTouchRipple-root-297\\"
++                           />
++                         </button>
++                       </div>
++                     </div>
++                   </div>
++                   <div
++                     style=\\"padding: 8px;\\"
++                   >
++                     <div
++                       class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-16-26 MuiGrid-align-items-xs-center-11 ListRow-row-418\\"
++                     >
++                       <div
++                         class=\\"MuiGrid-item-4 MuiGrid-grid-xs-10-41 MuiGrid-grid-sm-11-56\\"
++                       >
+                          <p
+-                           class=\\"MuiFormHelperText-root-304 MuiFormHelperText-error-305\\"
+-                           id=\\"Field of research-helper-text\\"
++                           class=\\"MuiTypography-root-100 MuiTypography-body2-108\\"
+                          >
+-                           Field of research values are required
++                           0101 Pure Mathematics
+                          </p>
++                       </div>
++                       <div
++                         class=\\"MuiGrid-item-4 MuiGrid-grid-xs-2-33 MuiGrid-grid-sm-1-46 ListRow-center-417\\"
++                       >
++                         <button
++                           class=\\"MuiButtonBase-root-287 MuiIconButton-root-398\\"
++                           tabindex=\\"0\\"
++                           title=\\"Remove this item\\"
++                           type=\\"button\\"
++                         >
++                           <span
++                             class=\\"MuiIconButton-label-403\\"
++                           >
++                             <svg
++                               aria-hidden=\\"true\\"
++                               class=\\"MuiSvgIcon-root-244\\"
++                               focusable=\\"false\\"
++                               role=\\"presentation\\"
++                               viewBox=\\"0 0 24 24\\"
++                             >
++                               <path
++                                 d=\\"M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z\\"
++                               />
++                               <path
++                                 d=\\"M0 0h24v24H0z\\"
++                                 fill=\\"none\\"
++                               />
++                             </svg>
++                           </span>
++                           <span
++                             class=\\"MuiTouchRipple-root-297\\"
++                           />
++                         </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+@@ -414,38 +689,31 @@
+                    >
+                      <div
+                        class=\\"MuiGrid-item-4\\"
+                      >
+                        <div
+-                         aria-describedby=\\"keywords-input-helper-text\\"
+                          class=\\"MuiFormControl-root-188 MuiFormControl-fullWidth-191\\"
+                        >
+                          <label
+-                           class=\\"MuiFormLabel-root-199 MuiFormLabel-error-202 MuiInputLabel-root-192 MuiInputLabel-formControl-193 MuiInputLabel-animated-196\\"
+-                           data-shrink=\\"false\\"
++                           class=\\"MuiFormLabel-root-199 MuiFormLabel-focused-200 MuiInputLabel-root-192 MuiInputLabel-formControl-193 MuiInputLabel-animated-196 MuiInputLabel-shrink-195\\"
++                           data-shrink=\\"true\\"
+                            for=\\"keywords-input\\"
+                          >
+                            Keywords
+                          </label>
+                          <div
+-                           class=\\"MuiInputBase-root-219 MuiInput-root-206 MuiInput-underline-210 MuiInputBase-error-225 MuiInput-error-211 MuiInputBase-fullWidth-228 MuiInput-fullWidth-213 MuiInputBase-formControl-220 MuiInput-formControl-207\\"
++                           class=\\"MuiInputBase-root-219 MuiInput-root-206 MuiInput-underline-210 MuiInputBase-fullWidth-228 MuiInput-fullWidth-213 MuiInputBase-focused-221 MuiInput-focused-208 MuiInputBase-formControl-220 MuiInput-formControl-207\\"
+                          >
+                            <input
+-                             aria-invalid=\\"true\\"
++                             aria-invalid=\\"false\\"
+                              class=\\"MuiInputBase-input-229 MuiInput-input-214\\"
+                              id=\\"keywords-input\\"
+                              placeholder=\\"Type keywords\\"
+                              type=\\"text\\"
+                              value=\\"\\"
+                            />
+                          </div>
+-                         <p
+-                           class=\\"MuiFormHelperText-root-304 MuiFormHelperText-error-305\\"
+-                           id=\\"keywords-input-helper-text\\"
+-                         >
+-                           This field is required
+-                         </p>
+                        </div>
+                      </div>
+                      <div
+                        class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-2-47\\"
+                      >
+@@ -458,18 +726,263 @@
+                        >
+                          <span
+                            class=\\"MuiButton-label-262\\"
+                          >
+                            Add
++                         </span>
++                       </button>
++                     </div>
++                   </div>
++                   <div
++                     style=\\"padding: 8px;\\"
++                   >
++                     <div
++                       class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-16-26 MuiGrid-align-items-xs-center-11 ListRowHeader-header-416\\"
++                     >
++                       <div
++                         class=\\"MuiGrid-item-4 MuiGrid-grid-xs-5-36 MuiGrid-grid-sm-6-51\\"
++                       >
++                         <span
++                           class=\\"MuiTypography-root-100 MuiTypography-caption-110\\"
++                         >
++                           Keyword
++                         </span>
++                       </div>
++                       <div
++                         class=\\"MuiGrid-item-4 MuiGrid-grid-xs-5-36 MuiGrid-grid-sm-5-50 ListRowHeader-right-414\\"
++                       >
++                         <span
++                           class=\\"MuiTypography-root-100 MuiTypography-caption-110\\"
++                         >
++                           Reorder keywords
++                         </span>
++                       </div>
++                       <div
++                         class=\\"MuiGrid-item-4 MuiGrid-grid-xs-2-33 MuiGrid-grid-sm-1-46 ListRowHeader-center-415\\"
++                       >
++                         <button
++                           class=\\"MuiButtonBase-root-287 MuiIconButton-root-398\\"
++                           tabindex=\\"0\\"
++                           title=\\"Remove all keywords\\"
++                           type=\\"button\\"
++                         >
++                           <span
++                             class=\\"MuiIconButton-label-403\\"
++                           >
++                             <svg
++                               aria-hidden=\\"true\\"
++                               class=\\"MuiSvgIcon-root-244\\"
++                               focusable=\\"false\\"
++                               role=\\"presentation\\"
++                               viewBox=\\"0 0 24 24\\"
++                             >
++                               <path
++                                 d=\\"M0 0h24v24H0V0z\\"
++                                 fill=\\"none\\"
++                               />
++                               <path
++                                 d=\\"M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12l1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z\\"
++                               />
++                               <path
++                                 d=\\"M0 0h24v24H0z\\"
++                                 fill=\\"none\\"
++                               />
++                             </svg>
++                           </span>
++                           <span
++                             class=\\"MuiTouchRipple-root-297\\"
++                           />
++                         </button>
++                       </div>
++                     </div>
++                   </div>
++                   <div
++                     style=\\"padding: 8px;\\"
++                   >
++                     <div
++                       class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-16-26 MuiGrid-align-items-xs-center-11 ListRow-row-418\\"
++                     >
++                       <div
++                         class=\\"MuiGrid-item-4 MuiGrid-grid-xs-5-36 MuiGrid-grid-sm-6-51\\"
++                       >
++                         <p
++                           class=\\"MuiTypography-root-100 MuiTypography-body2-108\\"
++                         >
++                           test1
++                         </p>
++                       </div>
++                       <div
++                         class=\\"MuiGrid-item-4 MuiGrid-grid-xs-5-36 MuiGrid-grid-sm-5-50 ListRow-center-417\\"
++                       >
++                         <div
++                           class=\\"MuiGrid-container-3 MuiGrid-justify-xs-flex-end-21\\"
++                         >
++                           <div
++                             class=\\"MuiGrid-item-4\\"
++                           >
++                             <button
++                               class=\\"MuiButtonBase-root-287 MuiIconButton-root-398\\"
++                               tabindex=\\"0\\"
++                               title=\\"Move keyword down the order\\"
++                               type=\\"button\\"
++                             >
++                               <span
++                                 class=\\"MuiIconButton-label-403\\"
++                               >
++                                 <svg
++                                   aria-hidden=\\"true\\"
++                                   class=\\"MuiSvgIcon-root-244\\"
++                                   focusable=\\"false\\"
++                                   role=\\"presentation\\"
++                                   viewBox=\\"0 0 24 24\\"
++                                 >
++                                   <path
++                                     d=\\"M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z\\"
++                                   />
++                                   <path
++                                     d=\\"M0 0h24v24H0V0z\\"
++                                     fill=\\"none\\"
++                                   />
++                                 </svg>
++                               </span>
++                               <span
++                                 class=\\"MuiTouchRipple-root-297\\"
++                               />
++                             </button>
++                           </div>
++                         </div>
++                       </div>
++                       <div
++                         class=\\"MuiGrid-item-4 MuiGrid-grid-xs-2-33 MuiGrid-grid-sm-1-46 ListRow-center-417\\"
++                       >
++                         <button
++                           class=\\"MuiButtonBase-root-287 MuiIconButton-root-398\\"
++                           tabindex=\\"0\\"
++                           title=\\"Remove this keyword\\"
++                           type=\\"button\\"
++                         >
++                           <span
++                             class=\\"MuiIconButton-label-403\\"
++                           >
++                             <svg
++                               aria-hidden=\\"true\\"
++                               class=\\"MuiSvgIcon-root-244\\"
++                               focusable=\\"false\\"
++                               role=\\"presentation\\"
++                               viewBox=\\"0 0 24 24\\"
++                             >
++                               <path
++                                 d=\\"M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z\\"
++                               />
++                               <path
++                                 d=\\"M0 0h24v24H0z\\"
++                                 fill=\\"none\\"
++                               />
++                             </svg>
++                           </span>
++                           <span
++                             class=\\"MuiTouchRipple-root-297\\"
++                           />
++                         </button>
++                       </div>
++                     </div>
++                   </div>
++                   <div
++                     style=\\"padding: 8px;\\"
++                   >
++                     <div
++                       class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-16-26 MuiGrid-align-items-xs-center-11 ListRow-row-418\\"
++                     >
++                       <div
++                         class=\\"MuiGrid-item-4 MuiGrid-grid-xs-5-36 MuiGrid-grid-sm-6-51\\"
++                       >
++                         <p
++                           class=\\"MuiTypography-root-100 MuiTypography-body2-108\\"
++                         >
++                           test2
++                         </p>
++                       </div>
++                       <div
++                         class=\\"MuiGrid-item-4 MuiGrid-grid-xs-5-36 MuiGrid-grid-sm-5-50 ListRow-center-417\\"
++                       >
++                         <div
++                           class=\\"MuiGrid-container-3 MuiGrid-justify-xs-flex-end-21\\"
++                         >
++                           <div
++                             class=\\"MuiGrid-item-4\\"
++                           >
++                             <button
++                               class=\\"MuiButtonBase-root-287 MuiIconButton-root-398\\"
++                               tabindex=\\"0\\"
++                               title=\\"Move keyword up the order\\"
++                               type=\\"button\\"
++                             >
++                               <span
++                                 class=\\"MuiIconButton-label-403\\"
++                               >
++                                 <svg
++                                   aria-hidden=\\"true\\"
++                                   class=\\"MuiSvgIcon-root-244\\"
++                                   focusable=\\"false\\"
++                                   role=\\"presentation\\"
++                                   viewBox=\\"0 0 24 24\\"
++                                 >
++                                   <path
++                                     d=\\"M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z\\"
++                                   />
++                                   <path
++                                     d=\\"M0 0h24v24H0z\\"
++                                     fill=\\"none\\"
++                                   />
++                                 </svg>
+                                </span>
++                               <span
++                                 class=\\"MuiTouchRipple-root-297\\"
++                               />
+                              </button>
+                            </div>
+                          </div>
+                        </div>
++                       <div
++                         class=\\"MuiGrid-item-4 MuiGrid-grid-xs-2-33 MuiGrid-grid-sm-1-46 ListRow-center-417\\"
++                       >
++                         <button
++                           class=\\"MuiButtonBase-root-287 MuiIconButton-root-398\\"
++                           tabindex=\\"0\\"
++                           title=\\"Remove this keyword\\"
++                           type=\\"button\\"
++                         >
++                           <span
++                             class=\\"MuiIconButton-label-403\\"
++                           >
++                             <svg
++                               aria-hidden=\\"true\\"
++                               class=\\"MuiSvgIcon-root-244\\"
++                               focusable=\\"false\\"
++                               role=\\"presentation\\"
++                               viewBox=\\"0 0 24 24\\"
++                             >
++                               <path
++                                 d=\\"M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z\\"
++                               />
++                               <path
++                                 d=\\"M0 0h24v24H0z\\"
++                                 fill=\\"none\\"
++                               />
++                             </svg>
++                           </span>
++                           <span
++                             class=\\"MuiTouchRipple-root-297\\"
++                           />
++                         </button>
++                       </div>
++                     </div>
+                    </div>
+                  </div>
+                </div>
++             </div>
++           </div>
+            <div
+              class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
+            >
+              <div
+                class=\\"MuiPaper-root-154 MuiPaper-elevation1-157 MuiPaper-rounded-155 MuiCard-root-153 Cards-card-149 StandardCard\\"
+@@ -579,78 +1092,12 @@
+                            autocomplete=\\"off\\"
+                            id=\\"Uploader\\"
+                            multiple=\\"\\"
+                            style=\\"position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; opacity: 0.00001; pointer-events: none;\\"
+                            type=\\"file\\"
+-                         />
+-                       </div>
+-                     </div>
+-                   </div>
+-                 </div>
+-               </div>
+-             </div>
+-           </div>
+-           <div
+-             class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
+-           >
+-             <div
+-               class=\\"Alert\\"
+-               style=\\"padding: 12px;\\"
+-             >
+-               <div
+-                 class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-24-27 MuiGrid-align-items-xs-flex-start-12 MuiGrid-align-content-xs-center-15 MuiGrid-justify-xs-center-20 Alert-warning-320 Alert-common-312\\"
+-               >
+-                 <div
+-                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-true-45\\"
+-                 >
+-                   <div
+-                     class=\\"MuiGrid-container-3 MuiGrid-align-items-xs-flex-start-12 MuiGrid-align-content-xs-center-15 MuiGrid-justify-xs-center-20\\"
+-                   >
+-                     <div
+-                       class=\\"MuiGrid-item-4 Alert-icon-313\\"
+-                       id=\\"icon\\"
+-                     >
+-                       <svg
+-                         aria-hidden=\\"true\\"
+-                         class=\\"MuiSvgIcon-root-244 icon\\"
+-                         focusable=\\"false\\"
+-                         role=\\"presentation\\"
+-                         viewBox=\\"0 0 24 24\\"
+-                       >
+-                         <path
+-                           d=\\"M0 0h24v24H0z\\"
+-                           fill=\\"none\\"
+-                         />
+-                         <path
+-                           d=\\"M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z\\"
+                          />
+-                       </svg>
+                        </div>
+-                     <div
+-                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31 Alert-text-314\\"
+-                       id=\\"text\\"
+-                     >
+-                       <b>
+-                         Validation - 
+-                       </b>
+-                       <span>
+-                         Form cannot be submitted until all fields are valid. Please review all input fields.
+-                         <ul>
+-                           <li>
+-                             Enrolling unit is required
+-                           </li>
+-                           <li>
+-                             Supervisor names are required
+-                           </li>
+-                           <li>
+-                             Field of research (FoR) codes are required
+-                           </li>
+-                           <li>
+-                             Keywords are required
+-                           </li>
+-                         </ul>
+-                       </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+@@ -682,21 +1129,23 @@
+            </div>
+            <div
+              class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-auto-44\\"
+            >
+              <button
+-               class=\\"MuiButtonBase-root-287 MuiButtonBase-disabled-288 MuiButton-root-261 MuiButton-contained-272 MuiButton-containedPrimary-273 MuiButton-raised-275 MuiButton-raisedPrimary-276 MuiButton-disabled-281 MuiButton-fullWidth-286\\"
+-               disabled=\\"\\"
++               class=\\"MuiButtonBase-root-287 MuiButton-root-261 MuiButton-contained-272 MuiButton-containedPrimary-273 MuiButton-raised-275 MuiButton-raisedPrimary-276 MuiButton-fullWidth-286\\"
+                id=\\"submit-thesis\\"
+-               tabindex=\\"-1\\"
++               tabindex=\\"0\\"
+                type=\\"button\\"
+              >
+                <span
+                  class=\\"MuiButton-label-262\\"
+                >
+                  Deposit your thesis
+                </span>
++               <span
++                 class=\\"MuiTouchRipple-root-297\\"
++               />
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>"
+`;

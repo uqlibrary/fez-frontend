@@ -912,7 +912,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                   error={true}
                                   fullWidth={true}
                                   helperText="This field is required"
-                                  id=""
+                                  id="grantAgencyName"
                                   onChange={[Function]}
                                   required={true}
                                   select={false}
@@ -948,13 +948,15 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                         className="MuiFormControl-root-99 MuiFormControl-fullWidth-102"
                                       >
                                         <WithStyles(Input)
+                                          aria-describedby="grantAgencyName-helper-text"
                                           autoComplete="off"
                                           fullWidth={true}
-                                          id=""
+                                          id="grantAgencyName"
                                           onChange={[Function]}
                                           value=""
                                         >
                                           <Input
+                                            aria-describedby="grantAgencyName-helper-text"
                                             autoComplete="off"
                                             classes={
                                               Object {
@@ -974,11 +976,12 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                               }
                                             }
                                             fullWidth={true}
-                                            id=""
+                                            id="grantAgencyName"
                                             onChange={[Function]}
                                             value=""
                                           >
                                             <WithStyles(WithFormControlContext(InputBase))
+                                              aria-describedby="grantAgencyName-helper-text"
                                               autoComplete="off"
                                               classes={
                                                 Object {
@@ -998,7 +1001,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                 }
                                               }
                                               fullWidth={true}
-                                              id=""
+                                              id="grantAgencyName"
                                               inputComponent="input"
                                               multiline={false}
                                               onChange={[Function]}
@@ -1006,6 +1009,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                               value=""
                                             >
                                               <WithFormControlContext(InputBase)
+                                                aria-describedby="grantAgencyName-helper-text"
                                                 autoComplete="off"
                                                 classes={
                                                   Object {
@@ -1029,7 +1033,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                   }
                                                 }
                                                 fullWidth={true}
-                                                id=""
+                                                id="grantAgencyName"
                                                 inputComponent="input"
                                                 multiline={false}
                                                 onChange={[Function]}
@@ -1037,6 +1041,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                 value=""
                                               >
                                                 <InputBase
+                                                  aria-describedby="grantAgencyName-helper-text"
                                                   autoComplete="off"
                                                   classes={
                                                     Object {
@@ -1060,7 +1065,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                     }
                                                   }
                                                   fullWidth={true}
-                                                  id=""
+                                                  id="grantAgencyName"
                                                   inputComponent="input"
                                                   muiFormControl={
                                                     Object {
@@ -1088,11 +1093,12 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                     onClick={[Function]}
                                                   >
                                                     <input
+                                                      aria-describedby="grantAgencyName-helper-text"
                                                       aria-invalid={true}
                                                       autoComplete="off"
                                                       className="MuiInputBase-input-126 MuiInput-input-111"
                                                       disabled={false}
-                                                      id=""
+                                                      id="grantAgencyName"
                                                       onBlur={[Function]}
                                                       onChange={[Function]}
                                                       onFocus={[Function]}
@@ -1106,7 +1112,9 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                             </WithStyles(WithFormControlContext(InputBase))>
                                           </Input>
                                         </WithStyles(Input)>
-                                        <WithStyles(WithFormControlContext(FormHelperText))>
+                                        <WithStyles(WithFormControlContext(FormHelperText))
+                                          id="grantAgencyName-helper-text"
+                                        >
                                           <WithFormControlContext(FormHelperText)
                                             classes={
                                               Object {
@@ -1120,6 +1128,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                 "root": "MuiFormHelperText-root-133",
                                               }
                                             }
+                                            id="grantAgencyName-helper-text"
                                           >
                                             <FormHelperText
                                               classes={
@@ -1135,6 +1144,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                 }
                                               }
                                               component="p"
+                                              id="grantAgencyName-helper-text"
                                               muiFormControl={
                                                 Object {
                                                   "adornedStart": false,
@@ -1154,6 +1164,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                             >
                                               <p
                                                 className="MuiFormHelperText-root-133 MuiFormHelperText-error-134 MuiFormHelperText-required-140"
+                                                id="grantAgencyName-helper-text"
                                               >
                                                 This field is required
                                               </p>
@@ -1319,7 +1330,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                   disabled={true}
                                   error={false}
                                   fullWidth={true}
-                                  id=""
+                                  id="grantId"
                                   onChange={[Function]}
                                   required={true}
                                   select={false}
@@ -1356,7 +1367,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                       >
                                         <WithStyles(Input)
                                           fullWidth={true}
-                                          id=""
+                                          id="grantId"
                                           onChange={[Function]}
                                           value=""
                                         >
@@ -1379,7 +1390,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                               }
                                             }
                                             fullWidth={true}
-                                            id=""
+                                            id="grantId"
                                             onChange={[Function]}
                                             value=""
                                           >
@@ -1402,7 +1413,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                 }
                                               }
                                               fullWidth={true}
-                                              id=""
+                                              id="grantId"
                                               inputComponent="input"
                                               multiline={false}
                                               onChange={[Function]}
@@ -1432,7 +1443,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                   }
                                                 }
                                                 fullWidth={true}
-                                                id=""
+                                                id="grantId"
                                                 inputComponent="input"
                                                 multiline={false}
                                                 onChange={[Function]}
@@ -1462,7 +1473,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                     }
                                                   }
                                                   fullWidth={true}
-                                                  id=""
+                                                  id="grantId"
                                                   inputComponent="input"
                                                   muiFormControl={
                                                     Object {
@@ -1493,7 +1504,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                       aria-invalid={false}
                                                       className="MuiInputBase-input-126 MuiInput-input-111 MuiInputBase-disabled-119 MuiInput-disabled-106"
                                                       disabled={true}
-                                                      id=""
+                                                      id="grantId"
                                                       onBlur={[Function]}
                                                       onChange={[Function]}
                                                       onFocus={[Function]}
@@ -4141,7 +4152,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                               error={true}
                               fullWidth={true}
                               helperText="This field is required"
-                              id=""
+                              id="grantAgencyName"
                               onChange={[Function]}
                               required={true}
                               select={false}
@@ -4177,13 +4188,15 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                     className="MuiFormControl-root-99 MuiFormControl-fullWidth-102"
                                   >
                                     <WithStyles(Input)
+                                      aria-describedby="grantAgencyName-helper-text"
                                       autoComplete="off"
                                       fullWidth={true}
-                                      id=""
+                                      id="grantAgencyName"
                                       onChange={[Function]}
                                       value=""
                                     >
                                       <Input
+                                        aria-describedby="grantAgencyName-helper-text"
                                         autoComplete="off"
                                         classes={
                                           Object {
@@ -4203,11 +4216,12 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                           }
                                         }
                                         fullWidth={true}
-                                        id=""
+                                        id="grantAgencyName"
                                         onChange={[Function]}
                                         value=""
                                       >
                                         <WithStyles(WithFormControlContext(InputBase))
+                                          aria-describedby="grantAgencyName-helper-text"
                                           autoComplete="off"
                                           classes={
                                             Object {
@@ -4227,7 +4241,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                             }
                                           }
                                           fullWidth={true}
-                                          id=""
+                                          id="grantAgencyName"
                                           inputComponent="input"
                                           multiline={false}
                                           onChange={[Function]}
@@ -4235,6 +4249,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                           value=""
                                         >
                                           <WithFormControlContext(InputBase)
+                                            aria-describedby="grantAgencyName-helper-text"
                                             autoComplete="off"
                                             classes={
                                               Object {
@@ -4258,7 +4273,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                               }
                                             }
                                             fullWidth={true}
-                                            id=""
+                                            id="grantAgencyName"
                                             inputComponent="input"
                                             multiline={false}
                                             onChange={[Function]}
@@ -4266,6 +4281,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                             value=""
                                           >
                                             <InputBase
+                                              aria-describedby="grantAgencyName-helper-text"
                                               autoComplete="off"
                                               classes={
                                                 Object {
@@ -4289,7 +4305,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                                 }
                                               }
                                               fullWidth={true}
-                                              id=""
+                                              id="grantAgencyName"
                                               inputComponent="input"
                                               muiFormControl={
                                                 Object {
@@ -4317,11 +4333,12 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                                 onClick={[Function]}
                                               >
                                                 <input
+                                                  aria-describedby="grantAgencyName-helper-text"
                                                   aria-invalid={true}
                                                   autoComplete="off"
                                                   className="MuiInputBase-input-126 MuiInput-input-111"
                                                   disabled={false}
-                                                  id=""
+                                                  id="grantAgencyName"
                                                   onBlur={[Function]}
                                                   onChange={[Function]}
                                                   onFocus={[Function]}
@@ -4335,7 +4352,9 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                         </WithStyles(WithFormControlContext(InputBase))>
                                       </Input>
                                     </WithStyles(Input)>
-                                    <WithStyles(WithFormControlContext(FormHelperText))>
+                                    <WithStyles(WithFormControlContext(FormHelperText))
+                                      id="grantAgencyName-helper-text"
+                                    >
                                       <WithFormControlContext(FormHelperText)
                                         classes={
                                           Object {
@@ -4349,6 +4368,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                             "root": "MuiFormHelperText-root-133",
                                           }
                                         }
+                                        id="grantAgencyName-helper-text"
                                       >
                                         <FormHelperText
                                           classes={
@@ -4364,6 +4384,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                             }
                                           }
                                           component="p"
+                                          id="grantAgencyName-helper-text"
                                           muiFormControl={
                                             Object {
                                               "adornedStart": false,
@@ -4383,6 +4404,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                         >
                                           <p
                                             className="MuiFormHelperText-root-133 MuiFormHelperText-error-134 MuiFormHelperText-required-140"
+                                            id="grantAgencyName-helper-text"
                                           >
                                             This field is required
                                           </p>
@@ -4548,7 +4570,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                               disabled={true}
                               error={false}
                               fullWidth={true}
-                              id=""
+                              id="grantId"
                               onChange={[Function]}
                               required={true}
                               select={false}
@@ -4585,7 +4607,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                   >
                                     <WithStyles(Input)
                                       fullWidth={true}
-                                      id=""
+                                      id="grantId"
                                       onChange={[Function]}
                                       value=""
                                     >
@@ -4608,7 +4630,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                           }
                                         }
                                         fullWidth={true}
-                                        id=""
+                                        id="grantId"
                                         onChange={[Function]}
                                         value=""
                                       >
@@ -4631,7 +4653,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                             }
                                           }
                                           fullWidth={true}
-                                          id=""
+                                          id="grantId"
                                           inputComponent="input"
                                           multiline={false}
                                           onChange={[Function]}
@@ -4661,7 +4683,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                               }
                                             }
                                             fullWidth={true}
-                                            id=""
+                                            id="grantId"
                                             inputComponent="input"
                                             multiline={false}
                                             onChange={[Function]}
@@ -4691,7 +4713,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                                 }
                                               }
                                               fullWidth={true}
-                                              id=""
+                                              id="grantId"
                                               inputComponent="input"
                                               muiFormControl={
                                                 Object {
@@ -4722,7 +4744,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                                   aria-invalid={false}
                                                   className="MuiInputBase-input-126 MuiInput-input-111 MuiInputBase-disabled-119 MuiInput-disabled-106"
                                                   disabled={true}
-                                                  id=""
+                                                  id="grantId"
                                                   onBlur={[Function]}
                                                   onChange={[Function]}
                                                   onFocus={[Function]}

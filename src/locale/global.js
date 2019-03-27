@@ -13,7 +13,7 @@ IMPORTANT: if currently text contains placeholders, eg any characters in square 
 help: {
     title: 'About these metrics',
     text: (<div></div>),
-    buttonLabel: 'OK'
+    buttonLabel: 'CLOSE'
 }
 - text can be plain or formatted HTML component with links/tags/etc
 - if help is not required, delete help: {} fully (including closing '},')
@@ -73,11 +73,16 @@ export default {
                 message: 'The requested page could not be found.',
                 status: 404
             },
+            422: {
+                message: 'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',
+                status: 500
+            },
             500: {
                 message: 'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',
                 status: 500
             },
             generic: 'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',
+            genericAlternate: 'Error has occurred during request and request cant be processed. Please contact eSpace administrators or try again later.',
         },
         notRegisteredAuthorAlert: {
             title: 'You are not registered in UQ eSpace as an author',

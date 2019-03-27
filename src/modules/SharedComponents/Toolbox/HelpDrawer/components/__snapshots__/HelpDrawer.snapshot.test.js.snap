@@ -156,7 +156,7 @@ exports[`HelpDrawer snapshots tests renders text as react element 1`] = `
 
 exports[`HelpDrawer snapshots tests should render with styles 1`] = `
 <HelpDrawer
-  buttonLabel="OK"
+  buttonLabel="CLOSE"
   classes={
     Object {
       "button": "HelpDrawer-button-3",

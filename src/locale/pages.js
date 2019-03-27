@@ -14,7 +14,7 @@ IMPORTANT: if currently text contains placeholders, eg any characters in square 
 help: {
     title: 'About these metrics',
     text: (<div></div>),
-    buttonLabel: 'OK'
+    buttonLabel: 'CLOSE'
 }
 - text can be plain or formatted HTML component with links/tags/etc
 - if help is not required, delete help: {} fully (including closing '},')
@@ -86,7 +86,7 @@ export default {
                         </p>
                     </div>
                 ),
-                buttonLabel: 'OK'
+                buttonLabel: 'CLOSE'
             }
         },
         notFound: {
@@ -142,7 +142,7 @@ export default {
                 // help: {
                 //     title: 'Your dashboard',
                 //     text: 'Your profile help....',
-                //     buttonLabel: 'OK'
+                //     buttonLabel: 'CLOSE'
                 // },
                 dashboardArticleCount: {
                     yearSeparator: ' to ',
@@ -289,7 +289,7 @@ export default {
                 // help: {
                 //     title: 'No matching records found',
                 //     text: 'Why search didn\'t return any items....',
-                //     buttonLabel: 'Ok'
+                //     buttonLabel: 'CLOSE'
                 // }
             },
             searchResults: {
@@ -298,7 +298,7 @@ export default {
                 // help: {
                 //     title: 'Possibly your publications',
                 //     text: 'Help about ....',
-                //     buttonLabel: 'Ok'
+                //     buttonLabel: 'CLOSE'
                 // },
                 hide: 'Not mine',
                 claim: 'Claim this work',
@@ -336,7 +336,7 @@ export default {
                 // help: {
                 //     title: 'Search for your publication',
                 //     text: 'Help about search....',
-                //     buttonLabel: 'Ok'
+                //     buttonLabel: 'CLOSE'
                 // },
                 fieldLabels: {
                     search: 'Enter DOI, Pubmed Id or Title'
@@ -351,7 +351,7 @@ export default {
                     // help: {
                     //     title: 'No matching records found',
                     //     text: 'Why search didn\'t return any items....',
-                    //     buttonLabel: 'Ok'
+                    //     buttonLabel: 'CLOSE'
                     // }
                 },
                 searchResults: {
@@ -361,7 +361,7 @@ export default {
                     // help: {
                     //     title: 'Possible matches found',
                     //     text: 'Why search displays these items....',
-                    //     buttonLabel: 'Ok'
+                    //     buttonLabel: 'CLOSE'
                     // },
                     searchDashboard: {
                         title: 'Repository search',
@@ -472,7 +472,7 @@ export default {
                         Masquerade as another user...
                     </div>
                 ),
-                buttonLabel: 'OK'
+                buttonLabel: 'CLOSE'
             },
             description: (account) => account && account.canMasqueradeType && account.canMasqueradeType === 'readonly' ?
                 (<p>
@@ -509,7 +509,7 @@ export default {
                         </ol>
                     </div>
                 ),
-                buttonLabel: 'OK'
+                buttonLabel: 'CLOSE'
             },
             labels: {
                 submit: 'Save Google Scholar ID',
@@ -637,7 +637,7 @@ export default {
                             record</p>
                     </div>
                 ),
-                buttonLabel: 'OK'
+                buttonLabel: 'CLOSE'
             },
             linkOrcid: {
                 title: 'I already have an ORCID iD',
