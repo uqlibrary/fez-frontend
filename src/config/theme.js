@@ -70,9 +70,11 @@ export const mui1theme = createMuiTheme({
             }
         },
         MuiMenuItem: {
-            '&$selected': {
-                backgroundColor: '#4085C6 !important',
-                color: '#FFFFFF'
+            root: {
+                '&$selected': {
+                    backgroundColor: '#4085C6 !important',
+                    color: '#FFFFFF'
+                }
             }
         },
         MUIDataTable: {
