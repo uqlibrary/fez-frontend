@@ -478,7 +478,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
                 </p>,
                 "fileUploadRestrictionHeading": "File upload restrictions",
                 "fileUploadRestrictions": <div>
-                  Maximum file size is 5Gb. 
+                  Maximum file size is 8Gb. 
                   <br />
                   PDF files must be saved using the following naming structure 
                   <b>
@@ -988,7 +988,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
                 </p>,
                 "fileUploadRestrictionHeading": "File upload restrictions",
                 "fileUploadRestrictions": <div>
-                  Maximum file size is 5Gb. 
+                  Maximum file size is 8Gb. 
                   <br />
                   PDF files must be saved using the following naming structure 
                   <b>
