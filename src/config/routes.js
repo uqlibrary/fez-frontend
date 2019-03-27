@@ -116,7 +116,7 @@ export const pathConfig = {
 // a duplicate list of routes for
 const flattedPathConfig = ['/', '/dashboard', '/contact', '/rhdsubmission', '/sbslodge_new', '/records/search',
     '/records/mine', '/records/possible', '/records/claim', '/records/add/find', '/records/add/results', '/records/add/new',
-    '/admin/masquerade', 'admin/collection', '/tool/lookup', '/author-identifiers/orcid/link', '/author-identifiers/google-scholar/link'];
+    '/admin/masquerade', 'admin/collection', '/tool/lookup', '/author-identifiers/orcid/link', '/author-identifiers/google-scholar/link',
     '/admin/masquerade', '/admin/unpublished', '/admin/thirdPartyTools', '/author-identifiers/orcid/link', '/author-identifiers/google-scholar/link'
 ];
 

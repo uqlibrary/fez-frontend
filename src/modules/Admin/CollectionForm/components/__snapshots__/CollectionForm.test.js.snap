@@ -53,7 +53,16 @@ exports[`Collection form test should render form 1`] = `
     <NavigationDialogBox
       when={true}
     />
-    <WithStyles(ConfirmDialogBox)
+    <ConfirmDialogBox
+      hideCancelButton={false}
+      locale={
+        Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure?",
+          "confirmationTitle": "Confirmation",
+        }
+      }
       onAction={[MockFunction]}
       onRef={[Function]}
     />
