@@ -1177,9 +1177,14 @@ describe('Record action creators', () => {
                 pid: 'UQ:396321'
             };
 
+            const recordWithSecurityPolicy = {
+                ...record,
+                rek_security_policy: 5
+            };
+
             mockApi
                 .onGet(repositories.routes.COMMUNITIES_SECURITY_POLICY_API(testInput).apiUrl)
-                .reply(200, {data: record});
+                .reply(200, {data: recordWithSecurityPolicy});
 
             const expectedActions = [
                 actions.SECURITY_POLICY_LOADING,
@@ -1198,7 +1203,7 @@ describe('Record action creators', () => {
 
             mockApi
                 .onGet(repositories.routes.COMMUNITIES_SECURITY_POLICY_API(testInput).apiUrl)
-                .reply(200, {});
+                .reply(200, {data: {}});
 
             const expectedActions = [
                 actions.SECURITY_POLICY_LOADING,

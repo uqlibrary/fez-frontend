@@ -278,11 +278,20 @@ export function getCommunitySecurity({ pid }) {
         dispatch({type: actions.SECURITY_POLICY_LOADING});
         return get(COMMUNITIES_SECURITY_POLICY_API({ pid }))
             .then(response => {
+                const data = {};
+                const pidSearchKey = Object.keys(transformers.getPidSearchKey())[0];
+                if (response.data[pidSearchKey]) {
+                    data.pid = response.data[pidSearchKey];
+                }
+                const securityPolicySearchKey = Object.keys(transformers.getSecurityPolicySearchKey())[0];
+                if (response.data[securityPolicySearchKey]) {
+                    data.communitySecurity = response.data[securityPolicySearchKey];
+                }
                 dispatch({
                     type: actions.SECURITY_POLICY_LOADED,
-                    payload: response.data ? response.data : {}
+                    payload: data
                 });
-                return Promise.resolve(response.data ? response.data : {});
+                return Promise.resolve(data);
             })
             .catch(error => {
                 dispatch({
