@@ -5,8 +5,8 @@ import {Router} from 'react-router-dom';
 import {mui1theme} from 'config/theme';
 import {Provider} from 'react-redux';
 import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
-import MuiPickersUtilsProvider from 'material-ui-pickers/utils/MuiPickersUtilsProvider';
-import MomentUtils from 'material-ui-pickers/utils/moment-utils';
+import MuiPickersUtilsProvider from 'material-ui-pickers/MuiPickersUtilsProvider';
+import MomentUtils from '@date-io/moment';
 
 import {getStore} from '../src/config/store';
 import Immutable from 'immutable';
