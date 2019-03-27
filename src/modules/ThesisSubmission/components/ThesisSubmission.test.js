@@ -174,4 +174,15 @@ describe('ThesisSubmission test', () => {
         wrapper.instance().setDepositConfirmation(test);
         expect(wrapper.instance().depositConfirmationBox).toEqual(test);
     });
+
+    it('should reload when told to', () => {
+        const wrapper = setup({initialValues:{}});
+        wrapper.instance().afterFailedSubmit();
+    });
+
+    it('should show the file upload alert', () => {
+        const wrapper = setup({newRecordFileUploadingOrIssueError:true, submitSucceeded: true});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
 });

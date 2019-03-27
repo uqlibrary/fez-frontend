@@ -24,7 +24,6 @@ import {thesisSubmissionSubtypes} from 'config/general';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import {routes} from 'config';
 
 export default class ThesisSubmission extends Component {
     static propTypes = {
@@ -38,10 +37,6 @@ export default class ThesisSubmission extends Component {
         isSessionValid: PropTypes.bool,
         newRecordFileUploadingOrIssueError: PropTypes.bool,
         newRecord: PropTypes.object
-    };
-
-    static contextTypes = {
-        selectFieldMobileOverrides: PropTypes.object
     };
 
     constructor(props) {
@@ -69,6 +64,11 @@ export default class ThesisSubmission extends Component {
         window.location.assign(formLocale.thesisSubmission.afterSubmitLink);
     }
 
+    afterFailedSubmit = () => {
+        // Clears the current state completely and reloads the form
+        window.location.reload();
+    }
+
     openDepositConfirmation = () => {
         this.depositConfirmationBox.showConfirmation();
         this.props.actions.clearSessionExpiredFlag();
@@ -76,14 +76,6 @@ export default class ThesisSubmission extends Component {
 
     setDepositConfirmation = (ref) => {
         this.depositConfirmationBox = ref;
-    };
-
-    fixRecord = () => {
-        console.log(this.props.newRecord);
-        if (this.props.newRecord) {
-            this.props.history.push(routes.pathConfig.records.fix(this.props.newRecord.rek_pid));
-            this.props.actions.setFixRecord(this.props.newRecord);
-        }
     };
 
     render() {
@@ -95,19 +87,24 @@ export default class ThesisSubmission extends Component {
             return (
                 <StandardPage title={this.props.isHdrThesis ? formLocale.thesisSubmission.hdrTitle : formLocale.thesisSubmission.sbsTitle}>
                     <Grid container spacing={24}>
-                        {
-                            this.props.newRecordFileUploadingOrIssueError &&
-                            <Grid item xs={12}>
-                                <Alert
-                                    {...formLocale.thesisSubmission.fileUpload.failedAlertLocale}
-                                    action={this.fixRecord}
-                                />
-                            </Grid>
-                        }
                         <Grid item xs={12}>
-                            <StandardCard title={formLocale.thesisSubmission.afterSubmitTitle}>
-                                <Typography>{formLocale.thesisSubmission.afterSubmitText}</Typography>
-                            </StandardCard>
+                            {
+                                this.props.newRecordFileUploadingOrIssueError ?
+                                    <Grid item xs={12}>
+                                        <Alert
+                                            {...formLocale.thesisSubmission.fileUpload.failedAlertLocale}
+                                            action={this.afterFailedSubmit}
+                                        />
+                                    </Grid>
+                                    :
+                                    <StandardCard title={formLocale.thesisSubmission.afterSubmitTitle}>
+                                        <Grid container spacing={24}>
+                                            <Grid item xs={12}>
+                                                <Typography>{formLocale.thesisSubmission.afterSubmitText}</Typography>
+                                            </Grid>
+                                        </Grid>
+                                    </StandardCard>
+                            }
                         </Grid>
                     </Grid>
                     <Grid container spacing={16}>
@@ -115,7 +112,7 @@ export default class ThesisSubmission extends Component {
                         <Grid item>
                             <Button
                                 variant={'contained'}
-                                color={'primary'}
+                                color={!this.props.newRecordFileUploadingOrIssueError ? 'primary' : 'default'}
                                 fullWidth
                                 children={formLocale.thesisSubmission.afterSubmit}
                                 onClick={this.afterSubmit}/>

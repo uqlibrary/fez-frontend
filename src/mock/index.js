@@ -183,8 +183,8 @@ mock
     .reply(200, {...mockData.authorOrcidDetails})
     // .reply(500, ["Server error: `POST https://sandbox.orcid.org/oauth/token` resulted in a `500 Internal Server Error` response:\n{\"error\":\"server_error\",\"error_description\":\"Redirect URI mismatch.\"}\n"])
     .onGet(new RegExp(escapeRegExp(routes.FILE_UPLOAD_API({pid: '.*', fileName: '.*'}).apiUrl)))
-    // .reply(200, ['s3-ap-southeast-2.amazonaws.com']);
-    .reply(0, null);
+    .reply(200, ['s3-ap-southeast-2.amazonaws.com']);
+    // .reply(0);
 
 
 mock

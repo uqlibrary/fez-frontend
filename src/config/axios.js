@@ -89,7 +89,7 @@ api.interceptors.response.use(response => {
     return Promise.resolve(response.data);
 }, error => {
     const reportHttpStatusToSentry = [422, 500];
-    if (!!error.response && !!error.response.status && reportHttpStatusToSentry.indexOf(error.response.status) !== -1) {
+    if (!!error.response && !!error.response.status && reportHttpStatusToSentry.indexOf(error.response.status) !== -1 && process.env.NODE_ENV !== 'test') {
         reportToSentry(error);
     }
     const thirdPartyLookupUrlRoot = API_URL + pathConfig.admin.thirdPartyTools.substring('/'.length);
