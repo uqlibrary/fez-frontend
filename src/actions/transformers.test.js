@@ -2,6 +2,22 @@ import * as transformers from './transformers';
 
 const moment = require('moment');
 
+describe('getPidSearchKey()', () => {
+    it('should return object with appropriate key', () => {
+        expect(transformers.getPidSearchKey('test')).toEqual({
+            rek_pid: 'test'
+        });
+    });
+});
+
+describe('getSecurityPolicySearchKey()', () => {
+    it('should return object with appropriate key', () => {
+        expect(transformers.getSecurityPolicySearchKey('test')).toEqual({
+            rek_security_policy: 'test'
+        });
+    });
+});
+
 describe('getRecordLinkSearchKey test ', () => {
 
     it('should return request object structure with link', () => {
@@ -746,6 +762,16 @@ describe('getDatasetCreatorRolesSearchKey tests', () => {
         expect(transformers.getDatasetCreatorRolesSearchKey()).toEqual({});
     });
 
+    it('should return empty object in entry if creatorRole key is not set for it', () => {
+        const input = [
+            {test: 'test1'}
+        ];
+        const expected = {
+            fez_record_search_key_author_role: [{}]
+        };
+        expect(transformers.getDatasetCreatorRolesSearchKey(input)).toEqual(expected);
+    });
+
     it('should return search key with data', () => {
         const input = [
             {creatorRole: "Investigator"},
@@ -1193,7 +1219,6 @@ describe('getGrantsListSearchKey tests', () => {
                 grantId: 'test123',
             },
             {
-                grantAgencyName: 'testing',
                 grantId: 'testing123',
                 grantAgencyType: '12345'
             },
@@ -1204,39 +1229,90 @@ describe('getGrantsListSearchKey tests', () => {
         ];
 
         const expected = {
-            "fez_record_search_key_grant_agency": [{
-                "rek_grant_agency": "test",
-                "rek_grant_agency_order": 1
-            }, {"rek_grant_agency": "testing", "rek_grant_agency_order": 2}, {
-                "rek_grant_agency": "tested",
-                "rek_grant_agency_order": 3
-            }],
-            "fez_record_search_key_grant_agency_type": [{
-                "rek_grant_agency_type": 454045,
-                "rek_grant_agency_type_order": 1
-            }, {"rek_grant_agency_type": 12345, "rek_grant_agency_type_order": 2}, {
-                "rek_grant_agency_type": 56465,
-                "rek_grant_agency_type_order": 3
-            }],
-            "fez_record_search_key_grant_id": [{
-                "rek_grant_id": "test123",
-                "rek_grant_id_order": 1
-            }, {"rek_grant_id": "testing123", "rek_grant_id_order": 2}, {
-                "rek_grant_id": "Not set",
-                "rek_grant_id_order": 3
-            }]
+            "fez_record_search_key_grant_agency": [
+                {
+                    "rek_grant_agency": "test",
+                    "rek_grant_agency_order": 1
+                },
+                {
+                    "rek_grant_agency": "Not set",
+                    "rek_grant_agency_order": 2
+                },
+                {
+                    "rek_grant_agency": "tested",
+                    "rek_grant_agency_order": 3
+                }
+            ],
+            "fez_record_search_key_grant_agency_type": [
+                {
+                    "rek_grant_agency_type": 454045,
+                    "rek_grant_agency_type_order": 1
+                },
+                {
+                    "rek_grant_agency_type": 12345,
+                    "rek_grant_agency_type_order": 2
+                },
+                {
+                    "rek_grant_agency_type": 56465,
+                    "rek_grant_agency_type_order": 3
+                }
+            ],
+            "fez_record_search_key_grant_id": [
+                {
+                    "rek_grant_id": "test123",
+                    "rek_grant_id_order": 1
+                },
+                {
+                    "rek_grant_id": "testing123",
+                    "rek_grant_id_order": 2
+                },
+                {
+                    "rek_grant_id": "Not set",
+                    "rek_grant_id_order": 3
+                }
+            ]
         };
         const result = transformers.getGrantsListSearchKey(input);
         expect(result).toEqual(expected);
     });
 });
 
+describe('getLanguageSearchKey()', () => {
+    it('should return empty object if input is falsy or empty array', () => {
+        expect(transformers.getLanguageSearchKey()).toEqual({});
+        expect(transformers.getLanguageSearchKey([])).toEqual({});
+    });
+
+    it('should return lanugage search key', () => {
+        const test = {};
+        expect(transformers.getLanguageSearchKey([test])).toEqual({
+            fez_record_search_key_language: [{
+                rek_language: test,
+                rek_language_order: 1
+            }]
+        });
+    });
+});
+
 describe('getNtroMetadataSearchKeys tests',  () => {
+    it('should return empty object if input is falsy', () => {
+        expect(transformers.getNtroMetadataSearchKeys()).toEqual({});
+    });
+
+    it('should return empty object if authors data is empty', () => {
+        expect(transformers.getNtroMetadataSearchKeys({
+            authors: []
+        })).toEqual({});
+    });
+
     it('should get ntro meta data', () => {
+        const testStatementText = 'test impact statement';
+        const testQualityIndicatorText = 'test quality Indicator'
+
         const result = transformers.getNtroMetadataSearchKeys({
             authors: [{
                 rek_author_id: 111,
-                selected: false,
+                selected: true,
             }, {
                 rek_author_id: 222,
                 selected: false
@@ -1245,13 +1321,16 @@ describe('getNtroMetadataSearchKeys tests',  () => {
                 selected: false
             }],
             significance: 'Major',
-            impactStatement: 'test impact statement'
+            impactStatement: {
+                htmlText: testStatementText
+            },
+            qualityIndicators: [ testQualityIndicatorText ]
         });
 
         expect(result).toMatchObject({
             fez_record_search_key_significance: [
                 {
-                    rek_significance: 0,
+                    rek_significance: 'Major',
                     rek_significance_order: 1
                 },
                 {
@@ -1265,7 +1344,7 @@ describe('getNtroMetadataSearchKeys tests',  () => {
             ],
             fez_record_search_key_creator_contribution_statement: [
                 {
-                    rek_creator_contribution_statement: 'Statement missing.',
+                    rek_creator_contribution_statement: testStatementText,
                     rek_creator_contribution_statement_order: 1
                 },
                 {
@@ -1276,7 +1355,11 @@ describe('getNtroMetadataSearchKeys tests',  () => {
                     rek_creator_contribution_statement: 'Statement missing.',
                     rek_creator_contribution_statement_order: 3
                 }
-            ]
+            ],
+            fez_record_search_key_quality_indicator: [{
+                rek_quality_indicator: testQualityIndicatorText,
+                rek_quality_indicator_order: 1
+            }]
         });
     })
 });

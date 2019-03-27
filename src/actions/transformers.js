@@ -440,7 +440,9 @@ export const getLanguageSearchKey = (languages) => {
 };
 
 export const getNtroMetadataSearchKeys = (data) => {
-    if (!data) return {};
+    if (!data || !data.authors) {
+        return {};
+    }
     const selectedAuthorIdIndex = data.authors.findIndex(author => author.selected === true);
     const ntroMetadata = {};
 
