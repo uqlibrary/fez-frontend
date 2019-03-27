@@ -570,9 +570,11 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                 },
               },
               "MuiMenuItem": Object {
-                "&$selected": Object {
-                  "backgroundColor": "#4085C6 !important",
-                  "color": "#FFFFFF",
+                "root": Object {
+                  "&$selected": Object {
+                    "backgroundColor": "#4085C6 !important",
+                    "color": "#FFFFFF",
+                  },
                 },
               },
             },
@@ -4242,9 +4244,11 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                         },
                       },
                       "MuiMenuItem": Object {
-                        "&$selected": Object {
-                          "backgroundColor": "#4085C6 !important",
-                          "color": "#FFFFFF",
+                        "root": Object {
+                          "&$selected": Object {
+                            "backgroundColor": "#4085C6 !important",
+                            "color": "#FFFFFF",
+                          },
                         },
                       },
                     },
@@ -4816,9 +4820,11 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                     },
                                   },
                                   "MuiMenuItem": Object {
-                                    "&$selected": Object {
-                                      "backgroundColor": "#4085C6 !important",
-                                      "color": "#FFFFFF",
+                                    "root": Object {
+                                      "&$selected": Object {
+                                        "backgroundColor": "#4085C6 !important",
+                                        "color": "#FFFFFF",
+                                      },
                                     },
                                   },
                                 },
@@ -5437,9 +5443,11 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                                           },
                                                         },
                                                         "MuiMenuItem": Object {
-                                                          "&$selected": Object {
-                                                            "backgroundColor": "#4085C6 !important",
-                                                            "color": "#FFFFFF",
+                                                          "root": Object {
+                                                            "&$selected": Object {
+                                                              "backgroundColor": "#4085C6 !important",
+                                                              "color": "#FFFFFF",
+                                                            },
                                                           },
                                                         },
                                                       },
@@ -5971,9 +5979,11 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                                         },
                                                       },
                                                       "MuiMenuItem": Object {
-                                                        "&$selected": Object {
-                                                          "backgroundColor": "#4085C6 !important",
-                                                          "color": "#FFFFFF",
+                                                        "root": Object {
+                                                          "&$selected": Object {
+                                                            "backgroundColor": "#4085C6 !important",
+                                                            "color": "#FFFFFF",
+                                                          },
                                                         },
                                                       },
                                                     },
@@ -7006,9 +7016,11 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                                                                     },
                                                                                   },
                                                                                   "MuiMenuItem": Object {
-                                                                                    "&$selected": Object {
-                                                                                      "backgroundColor": "#4085C6 !important",
-                                                                                      "color": "#FFFFFF",
+                                                                                    "root": Object {
+                                                                                      "&$selected": Object {
+                                                                                        "backgroundColor": "#4085C6 !important",
+                                                                                        "color": "#FFFFFF",
+                                                                                      },
                                                                                     },
                                                                                   },
                                                                                 },
@@ -7647,9 +7659,11 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                                                                     },
                                                                                   },
                                                                                   "MuiMenuItem": Object {
-                                                                                    "&$selected": Object {
-                                                                                      "backgroundColor": "#4085C6 !important",
-                                                                                      "color": "#FFFFFF",
+                                                                                    "root": Object {
+                                                                                      "&$selected": Object {
+                                                                                        "backgroundColor": "#4085C6 !important",
+                                                                                        "color": "#FFFFFF",
+                                                                                      },
                                                                                     },
                                                                                   },
                                                                                 },
@@ -8551,9 +8565,11 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                                                                     },
                                                                                   },
                                                                                   "MuiMenuItem": Object {
-                                                                                    "&$selected": Object {
-                                                                                      "backgroundColor": "#4085C6 !important",
-                                                                                      "color": "#FFFFFF",
+                                                                                    "root": Object {
+                                                                                      "&$selected": Object {
+                                                                                        "backgroundColor": "#4085C6 !important",
+                                                                                        "color": "#FFFFFF",
+                                                                                      },
                                                                                     },
                                                                                   },
                                                                                 },
@@ -9190,9 +9206,11 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                                                                     },
                                                                                   },
                                                                                   "MuiMenuItem": Object {
-                                                                                    "&$selected": Object {
-                                                                                      "backgroundColor": "#4085C6 !important",
-                                                                                      "color": "#FFFFFF",
+                                                                                    "root": Object {
+                                                                                      "&$selected": Object {
+                                                                                        "backgroundColor": "#4085C6 !important",
+                                                                                        "color": "#FFFFFF",
+                                                                                      },
                                                                                     },
                                                                                   },
                                                                                 },
@@ -9709,9 +9727,11 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                                                       },
                                                                     },
                                                                     "MuiMenuItem": Object {
-                                                                      "&$selected": Object {
-                                                                        "backgroundColor": "#4085C6 !important",
-                                                                        "color": "#FFFFFF",
+                                                                      "root": Object {
+                                                                        "&$selected": Object {
+                                                                          "backgroundColor": "#4085C6 !important",
+                                                                          "color": "#FFFFFF",
+                                                                        },
                                                                       },
                                                                     },
                                                                   },
@@ -10748,9 +10768,11 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                                                                     },
                                                                                   },
                                                                                   "MuiMenuItem": Object {
-                                                                                    "&$selected": Object {
-                                                                                      "backgroundColor": "#4085C6 !important",
-                                                                                      "color": "#FFFFFF",
+                                                                                    "root": Object {
+                                                                                      "&$selected": Object {
+                                                                                        "backgroundColor": "#4085C6 !important",
+                                                                                        "color": "#FFFFFF",
+                                                                                      },
                                                                                     },
                                                                                   },
                                                                                 },
@@ -11389,9 +11411,11 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                                                                     },
                                                                                   },
                                                                                   "MuiMenuItem": Object {
-                                                                                    "&$selected": Object {
-                                                                                      "backgroundColor": "#4085C6 !important",
-                                                                                      "color": "#FFFFFF",
+                                                                                    "root": Object {
+                                                                                      "&$selected": Object {
+                                                                                        "backgroundColor": "#4085C6 !important",
+                                                                                        "color": "#FFFFFF",
+                                                                                      },
                                                                                     },
                                                                                   },
                                                                                 },
@@ -12293,9 +12317,11 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                                                                     },
                                                                                   },
                                                                                   "MuiMenuItem": Object {
-                                                                                    "&$selected": Object {
-                                                                                      "backgroundColor": "#4085C6 !important",
-                                                                                      "color": "#FFFFFF",
+                                                                                    "root": Object {
+                                                                                      "&$selected": Object {
+                                                                                        "backgroundColor": "#4085C6 !important",
+                                                                                        "color": "#FFFFFF",
+                                                                                      },
                                                                                     },
                                                                                   },
                                                                                 },
@@ -12932,9 +12958,11 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                                                                     },
                                                                                   },
                                                                                   "MuiMenuItem": Object {
-                                                                                    "&$selected": Object {
-                                                                                      "backgroundColor": "#4085C6 !important",
-                                                                                      "color": "#FFFFFF",
+                                                                                    "root": Object {
+                                                                                      "&$selected": Object {
+                                                                                        "backgroundColor": "#4085C6 !important",
+                                                                                        "color": "#FFFFFF",
+                                                                                      },
                                                                                     },
                                                                                   },
                                                                                 },
@@ -13451,9 +13479,11 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                                                       },
                                                                     },
                                                                     "MuiMenuItem": Object {
-                                                                      "&$selected": Object {
-                                                                        "backgroundColor": "#4085C6 !important",
-                                                                        "color": "#FFFFFF",
+                                                                      "root": Object {
+                                                                        "&$selected": Object {
+                                                                          "backgroundColor": "#4085C6 !important",
+                                                                          "color": "#FFFFFF",
+                                                                        },
                                                                       },
                                                                     },
                                                                   },
@@ -14490,9 +14520,11 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                                                                     },
                                                                                   },
                                                                                   "MuiMenuItem": Object {
-                                                                                    "&$selected": Object {
-                                                                                      "backgroundColor": "#4085C6 !important",
-                                                                                      "color": "#FFFFFF",
+                                                                                    "root": Object {
+                                                                                      "&$selected": Object {
+                                                                                        "backgroundColor": "#4085C6 !important",
+                                                                                        "color": "#FFFFFF",
+                                                                                      },
                                                                                     },
                                                                                   },
                                                                                 },
@@ -15131,9 +15163,11 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                                                                     },
                                                                                   },
                                                                                   "MuiMenuItem": Object {
-                                                                                    "&$selected": Object {
-                                                                                      "backgroundColor": "#4085C6 !important",
-                                                                                      "color": "#FFFFFF",
+                                                                                    "root": Object {
+                                                                                      "&$selected": Object {
+                                                                                        "backgroundColor": "#4085C6 !important",
+                                                                                        "color": "#FFFFFF",
+                                                                                      },
                                                                                     },
                                                                                   },
                                                                                 },
@@ -16035,9 +16069,11 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                                                                     },
                                                                                   },
                                                                                   "MuiMenuItem": Object {
-                                                                                    "&$selected": Object {
-                                                                                      "backgroundColor": "#4085C6 !important",
-                                                                                      "color": "#FFFFFF",
+                                                                                    "root": Object {
+                                                                                      "&$selected": Object {
+                                                                                        "backgroundColor": "#4085C6 !important",
+                                                                                        "color": "#FFFFFF",
+                                                                                      },
                                                                                     },
                                                                                   },
                                                                                 },
@@ -16674,9 +16710,11 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                                                                     },
                                                                                   },
                                                                                   "MuiMenuItem": Object {
-                                                                                    "&$selected": Object {
-                                                                                      "backgroundColor": "#4085C6 !important",
-                                                                                      "color": "#FFFFFF",
+                                                                                    "root": Object {
+                                                                                      "&$selected": Object {
+                                                                                        "backgroundColor": "#4085C6 !important",
+                                                                                        "color": "#FFFFFF",
+                                                                                      },
                                                                                     },
                                                                                   },
                                                                                 },
@@ -17193,9 +17231,11 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                                                       },
                                                                     },
                                                                     "MuiMenuItem": Object {
-                                                                      "&$selected": Object {
-                                                                        "backgroundColor": "#4085C6 !important",
-                                                                        "color": "#FFFFFF",
+                                                                      "root": Object {
+                                                                        "&$selected": Object {
+                                                                          "backgroundColor": "#4085C6 !important",
+                                                                          "color": "#FFFFFF",
+                                                                        },
                                                                       },
                                                                     },
                                                                   },

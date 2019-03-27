@@ -218,9 +218,11 @@ exports[`FreeTextForm tests  rendering active form full mount 1`] = `
                 },
               },
               "MuiMenuItem": Object {
-                "&$selected": Object {
-                  "backgroundColor": "#4085C6 !important",
-                  "color": "#FFFFFF",
+                "root": Object {
+                  "&$selected": Object {
+                    "backgroundColor": "#4085C6 !important",
+                    "color": "#FFFFFF",
+                  },
                 },
               },
             },

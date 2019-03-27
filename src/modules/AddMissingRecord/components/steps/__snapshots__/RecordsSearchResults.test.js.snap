@@ -849,9 +849,11 @@ exports[`Search record results should render a single unclaimable item with no a
                 },
               },
               "MuiMenuItem": Object {
-                "&$selected": Object {
-                  "backgroundColor": "#4085C6 !important",
-                  "color": "#FFFFFF",
+                "root": Object {
+                  "&$selected": Object {
+                    "backgroundColor": "#4085C6 !important",
+                    "color": "#FFFFFF",
+                  },
                 },
               },
             },
@@ -1545,9 +1547,11 @@ exports[`Search record results should render a single unclaimable item with no a
                                 },
                               },
                               "MuiMenuItem": Object {
-                                "&$selected": Object {
-                                  "backgroundColor": "#4085C6 !important",
-                                  "color": "#FFFFFF",
+                                "root": Object {
+                                  "&$selected": Object {
+                                    "backgroundColor": "#4085C6 !important",
+                                    "color": "#FFFFFF",
+                                  },
                                 },
                               },
                             },
@@ -2362,9 +2366,11 @@ exports[`Search record results should render a single unclaimable item with no a
                                             },
                                           },
                                           "MuiMenuItem": Object {
-                                            "&$selected": Object {
-                                              "backgroundColor": "#4085C6 !important",
-                                              "color": "#FFFFFF",
+                                            "root": Object {
+                                              "&$selected": Object {
+                                                "backgroundColor": "#4085C6 !important",
+                                                "color": "#FFFFFF",
+                                              },
                                             },
                                           },
                                         },
@@ -2983,9 +2989,11 @@ exports[`Search record results should render a single unclaimable item with no a
                                                                   },
                                                                 },
                                                                 "MuiMenuItem": Object {
-                                                                  "&$selected": Object {
-                                                                    "backgroundColor": "#4085C6 !important",
-                                                                    "color": "#FFFFFF",
+                                                                  "root": Object {
+                                                                    "&$selected": Object {
+                                                                      "backgroundColor": "#4085C6 !important",
+                                                                      "color": "#FFFFFF",
+                                                                    },
                                                                   },
                                                                 },
                                                               },
@@ -4984,9 +4992,11 @@ exports[`Search record results should render a single unclaimable item with no a
                                 },
                               },
                               "MuiMenuItem": Object {
-                                "&$selected": Object {
-                                  "backgroundColor": "#4085C6 !important",
-                                  "color": "#FFFFFF",
+                                "root": Object {
+                                  "&$selected": Object {
+                                    "backgroundColor": "#4085C6 !important",
+                                    "color": "#FFFFFF",
+                                  },
                                 },
                               },
                             },
@@ -5573,9 +5583,11 @@ exports[`Search record results should render a single unclaimable item with no a
                                               },
                                             },
                                             "MuiMenuItem": Object {
-                                              "&$selected": Object {
-                                                "backgroundColor": "#4085C6 !important",
-                                                "color": "#FFFFFF",
+                                              "root": Object {
+                                                "&$selected": Object {
+                                                  "backgroundColor": "#4085C6 !important",
+                                                  "color": "#FFFFFF",
+                                                },
                                               },
                                             },
                                           },
@@ -6330,9 +6342,11 @@ exports[`Search record results should render a single unclaimable item with no a
                                                               },
                                                             },
                                                             "MuiMenuItem": Object {
-                                                              "&$selected": Object {
-                                                                "backgroundColor": "#4085C6 !important",
-                                                                "color": "#FFFFFF",
+                                                              "root": Object {
+                                                                "&$selected": Object {
+                                                                  "backgroundColor": "#4085C6 !important",
+                                                                  "color": "#FFFFFF",
+                                                                },
                                                               },
                                                             },
                                                           },

@@ -116,9 +116,11 @@ exports[`Journal Name Component test  should render with empty props 1`] = `
                 },
               },
               "MuiMenuItem": Object {
-                "&$selected": Object {
-                  "backgroundColor": "#4085C6 !important",
-                  "color": "#FFFFFF",
+                "root": Object {
+                  "&$selected": Object {
+                    "backgroundColor": "#4085C6 !important",
+                    "color": "#FFFFFF",
+                  },
                 },
               },
             },
@@ -644,9 +646,11 @@ exports[`Journal Name Component test  should render with journal article 1`] = `
                 },
               },
               "MuiMenuItem": Object {
-                "&$selected": Object {
-                  "backgroundColor": "#4085C6 !important",
-                  "color": "#FFFFFF",
+                "root": Object {
+                  "&$selected": Object {
+                    "backgroundColor": "#4085C6 !important",
+                    "color": "#FFFFFF",
+                  },
                 },
               },
             },
@@ -2201,9 +2205,11 @@ exports[`Journal Name Component test  should render with journal article 1`] = `
                             },
                           },
                           "MuiMenuItem": Object {
-                            "&$selected": Object {
-                              "backgroundColor": "#4085C6 !important",
-                              "color": "#FFFFFF",
+                            "root": Object {
+                              "&$selected": Object {
+                                "backgroundColor": "#4085C6 !important",
+                                "color": "#FFFFFF",
+                              },
                             },
                           },
                         },
@@ -2641,9 +2647,11 @@ exports[`Journal Name Component test  should render with journal article 1`] = `
                               },
                             },
                             "MuiMenuItem": Object {
-                              "&$selected": Object {
-                                "backgroundColor": "#4085C6 !important",
-                                "color": "#FFFFFF",
+                              "root": Object {
+                                "&$selected": Object {
+                                  "backgroundColor": "#4085C6 !important",
+                                  "color": "#FFFFFF",
+                                },
                               },
                             },
                           },
@@ -3194,9 +3202,11 @@ exports[`Journal Name Component test  should render without era journal listed 1
                 },
               },
               "MuiMenuItem": Object {
-                "&$selected": Object {
-                  "backgroundColor": "#4085C6 !important",
-                  "color": "#FFFFFF",
+                "root": Object {
+                  "&$selected": Object {
+                    "backgroundColor": "#4085C6 !important",
+                    "color": "#FFFFFF",
+                  },
                 },
               },
             },
@@ -4747,9 +4757,11 @@ exports[`Journal Name Component test  should render without era journal listed 1
                             },
                           },
                           "MuiMenuItem": Object {
-                            "&$selected": Object {
-                              "backgroundColor": "#4085C6 !important",
-                              "color": "#FFFFFF",
+                            "root": Object {
+                              "&$selected": Object {
+                                "backgroundColor": "#4085C6 !important",
+                                "color": "#FFFFFF",
+                              },
                             },
                           },
                         },
@@ -5187,9 +5199,11 @@ exports[`Journal Name Component test  should render without era journal listed 1
                               },
                             },
                             "MuiMenuItem": Object {
-                              "&$selected": Object {
-                                "backgroundColor": "#4085C6 !important",
-                                "color": "#FFFFFF",
+                              "root": Object {
+                                "&$selected": Object {
+                                  "backgroundColor": "#4085C6 !important",
+                                  "color": "#FFFFFF",
+                                },
                               },
                             },
                           },
@@ -5740,9 +5754,11 @@ exports[`Journal Name Component test  should render without sherpa romeo 1`] = `
                 },
               },
               "MuiMenuItem": Object {
-                "&$selected": Object {
-                  "backgroundColor": "#4085C6 !important",
-                  "color": "#FFFFFF",
+                "root": Object {
+                  "&$selected": Object {
+                    "backgroundColor": "#4085C6 !important",
+                    "color": "#FFFFFF",
+                  },
                 },
               },
             },

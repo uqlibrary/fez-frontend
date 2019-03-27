@@ -116,9 +116,11 @@ exports[`RichEditor tests  should render component 1`] = `
                 },
               },
               "MuiMenuItem": Object {
-                "&$selected": Object {
-                  "backgroundColor": "#4085C6 !important",
-                  "color": "#FFFFFF",
+                "root": Object {
+                  "&$selected": Object {
+                    "backgroundColor": "#4085C6 !important",
+                    "color": "#FFFFFF",
+                  },
                 },
               },
             },
@@ -649,9 +651,11 @@ exports[`RichEditor tests  should render error as one child 1`] = `
                 },
               },
               "MuiMenuItem": Object {
-                "&$selected": Object {
-                  "backgroundColor": "#4085C6 !important",
-                  "color": "#FFFFFF",
+                "root": Object {
+                  "&$selected": Object {
+                    "backgroundColor": "#4085C6 !important",
+                    "color": "#FFFFFF",
+                  },
                 },
               },
             },
@@ -1291,9 +1295,11 @@ exports[`RichEditor tests  should render error as one child 1`] = `
                         },
                       },
                       "MuiMenuItem": Object {
-                        "&$selected": Object {
-                          "backgroundColor": "#4085C6 !important",
-                          "color": "#FFFFFF",
+                        "root": Object {
+                          "&$selected": Object {
+                            "backgroundColor": "#4085C6 !important",
+                            "color": "#FFFFFF",
+                          },
                         },
                       },
                     },
@@ -1824,9 +1830,11 @@ exports[`RichEditor tests  should render error as one child 1`] = `
                         },
                       },
                       "MuiMenuItem": Object {
-                        "&$selected": Object {
-                          "backgroundColor": "#4085C6 !important",
-                          "color": "#FFFFFF",
+                        "root": Object {
+                          "&$selected": Object {
+                            "backgroundColor": "#4085C6 !important",
+                            "color": "#FFFFFF",
+                          },
                         },
                       },
                     },
@@ -2335,9 +2343,11 @@ exports[`RichEditor tests  should render error as react children 1`] = `
                 },
               },
               "MuiMenuItem": Object {
-                "&$selected": Object {
-                  "backgroundColor": "#4085C6 !important",
-                  "color": "#FFFFFF",
+                "root": Object {
+                  "&$selected": Object {
+                    "backgroundColor": "#4085C6 !important",
+                    "color": "#FFFFFF",
+                  },
                 },
               },
             },
@@ -2969,9 +2979,11 @@ exports[`RichEditor tests  should render error as react children 1`] = `
                         },
                       },
                       "MuiMenuItem": Object {
-                        "&$selected": Object {
-                          "backgroundColor": "#4085C6 !important",
-                          "color": "#FFFFFF",
+                        "root": Object {
+                          "&$selected": Object {
+                            "backgroundColor": "#4085C6 !important",
+                            "color": "#FFFFFF",
+                          },
                         },
                       },
                     },
@@ -3506,9 +3518,11 @@ exports[`RichEditor tests  should render error as react children 1`] = `
                         },
                       },
                       "MuiMenuItem": Object {
-                        "&$selected": Object {
-                          "backgroundColor": "#4085C6 !important",
-                          "color": "#FFFFFF",
+                        "root": Object {
+                          "&$selected": Object {
+                            "backgroundColor": "#4085C6 !important",
+                            "color": "#FFFFFF",
+                          },
                         },
                       },
                     },
@@ -4017,9 +4031,11 @@ exports[`RichEditor tests  should render error showing input length 1`] = `
                 },
               },
               "MuiMenuItem": Object {
-                "&$selected": Object {
-                  "backgroundColor": "#4085C6 !important",
-                  "color": "#FFFFFF",
+                "root": Object {
+                  "&$selected": Object {
+                    "backgroundColor": "#4085C6 !important",
+                    "color": "#FFFFFF",
+                  },
                 },
               },
             },
@@ -4637,9 +4653,11 @@ exports[`RichEditor tests  should render error showing input length 1`] = `
                         },
                       },
                       "MuiMenuItem": Object {
-                        "&$selected": Object {
-                          "backgroundColor": "#4085C6 !important",
-                          "color": "#FFFFFF",
+                        "root": Object {
+                          "&$selected": Object {
+                            "backgroundColor": "#4085C6 !important",
+                            "color": "#FFFFFF",
+                          },
                         },
                       },
                     },
@@ -5170,9 +5188,11 @@ exports[`RichEditor tests  should render error showing input length 1`] = `
                         },
                       },
                       "MuiMenuItem": Object {
-                        "&$selected": Object {
-                          "backgroundColor": "#4085C6 !important",
-                          "color": "#FFFFFF",
+                        "root": Object {
+                          "&$selected": Object {
+                            "backgroundColor": "#4085C6 !important",
+                            "color": "#FFFFFF",
+                          },
                         },
                       },
                     },
@@ -5681,9 +5701,11 @@ exports[`RichEditor tests  should render error showing maxValue and instructions
                 },
               },
               "MuiMenuItem": Object {
-                "&$selected": Object {
-                  "backgroundColor": "#4085C6 !important",
-                  "color": "#FFFFFF",
+                "root": Object {
+                  "&$selected": Object {
+                    "backgroundColor": "#4085C6 !important",
+                    "color": "#FFFFFF",
+                  },
                 },
               },
             },
@@ -6278,9 +6300,11 @@ exports[`RichEditor tests  should render error showing maxValue and instructions
                         },
                       },
                       "MuiMenuItem": Object {
-                        "&$selected": Object {
-                          "backgroundColor": "#4085C6 !important",
-                          "color": "#FFFFFF",
+                        "root": Object {
+                          "&$selected": Object {
+                            "backgroundColor": "#4085C6 !important",
+                            "color": "#FFFFFF",
+                          },
                         },
                       },
                     },
@@ -6811,9 +6835,11 @@ exports[`RichEditor tests  should render error showing maxValue and instructions
                         },
                       },
                       "MuiMenuItem": Object {
-                        "&$selected": Object {
-                          "backgroundColor": "#4085C6 !important",
-                          "color": "#FFFFFF",
+                        "root": Object {
+                          "&$selected": Object {
+                            "backgroundColor": "#4085C6 !important",
+                            "color": "#FFFFFF",
+                          },
                         },
                       },
                     },
@@ -7322,9 +7348,11 @@ exports[`RichEditor tests  should render given title and description 1`] = `
                 },
               },
               "MuiMenuItem": Object {
-                "&$selected": Object {
-                  "backgroundColor": "#4085C6 !important",
-                  "color": "#FFFFFF",
+                "root": Object {
+                  "&$selected": Object {
+                    "backgroundColor": "#4085C6 !important",
+                    "color": "#FFFFFF",
+                  },
                 },
               },
             },
@@ -7872,9 +7900,11 @@ exports[`RichEditor tests  should render given title and description 1`] = `
                           },
                         },
                         "MuiMenuItem": Object {
-                          "&$selected": Object {
-                            "backgroundColor": "#4085C6 !important",
-                            "color": "#FFFFFF",
+                          "root": Object {
+                            "&$selected": Object {
+                              "backgroundColor": "#4085C6 !important",
+                              "color": "#FFFFFF",
+                            },
                           },
                         },
                       },
@@ -8383,9 +8413,11 @@ exports[`RichEditor tests  should render given title and description 1`] = `
                           },
                         },
                         "MuiMenuItem": Object {
-                          "&$selected": Object {
-                            "backgroundColor": "#4085C6 !important",
-                            "color": "#FFFFFF",
+                          "root": Object {
+                            "&$selected": Object {
+                              "backgroundColor": "#4085C6 !important",
+                              "color": "#FFFFFF",
+                            },
                           },
                         },
                       },
@@ -8889,9 +8921,11 @@ exports[`RichEditor tests  should render given title and description with error 
                 },
               },
               "MuiMenuItem": Object {
-                "&$selected": Object {
-                  "backgroundColor": "#4085C6 !important",
-                  "color": "#FFFFFF",
+                "root": Object {
+                  "&$selected": Object {
+                    "backgroundColor": "#4085C6 !important",
+                    "color": "#FFFFFF",
+                  },
                 },
               },
             },
@@ -9456,9 +9490,11 @@ exports[`RichEditor tests  should render given title and description with error 
                           },
                         },
                         "MuiMenuItem": Object {
-                          "&$selected": Object {
-                            "backgroundColor": "#4085C6 !important",
-                            "color": "#FFFFFF",
+                          "root": Object {
+                            "&$selected": Object {
+                              "backgroundColor": "#4085C6 !important",
+                              "color": "#FFFFFF",
+                            },
                           },
                         },
                       },
@@ -9968,9 +10004,11 @@ exports[`RichEditor tests  should render given title and description with error 
                           },
                         },
                         "MuiMenuItem": Object {
-                          "&$selected": Object {
-                            "backgroundColor": "#4085C6 !important",
-                            "color": "#FFFFFF",
+                          "root": Object {
+                            "&$selected": Object {
+                              "backgroundColor": "#4085C6 !important",
+                              "color": "#FFFFFF",
+                            },
                           },
                         },
                       },
@@ -10497,9 +10535,11 @@ exports[`RichEditor tests  should render given title and description with error 
                         },
                       },
                       "MuiMenuItem": Object {
-                        "&$selected": Object {
-                          "backgroundColor": "#4085C6 !important",
-                          "color": "#FFFFFF",
+                        "root": Object {
+                          "&$selected": Object {
+                            "backgroundColor": "#4085C6 !important",
+                            "color": "#FFFFFF",
+                          },
                         },
                       },
                     },

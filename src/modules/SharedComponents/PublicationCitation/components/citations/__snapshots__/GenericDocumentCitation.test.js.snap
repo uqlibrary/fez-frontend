@@ -116,9 +116,11 @@ exports[`GenericDocumentCitation renders  component when no title 1`] = `
                 },
               },
               "MuiMenuItem": Object {
-                "&$selected": Object {
-                  "backgroundColor": "#4085C6 !important",
-                  "color": "#FFFFFF",
+                "root": Object {
+                  "&$selected": Object {
+                    "backgroundColor": "#4085C6 !important",
+                    "color": "#FFFFFF",
+                  },
                 },
               },
             },
@@ -2036,9 +2038,11 @@ exports[`GenericDocumentCitation renders  component when no title 1`] = `
                           },
                         },
                         "MuiMenuItem": Object {
-                          "&$selected": Object {
-                            "backgroundColor": "#4085C6 !important",
-                            "color": "#FFFFFF",
+                          "root": Object {
+                            "&$selected": Object {
+                              "backgroundColor": "#4085C6 !important",
+                              "color": "#FFFFFF",
+                            },
                           },
                         },
                       },
@@ -2588,9 +2592,11 @@ exports[`GenericDocumentCitation renders  component with a mock espace record 1`
                 },
               },
               "MuiMenuItem": Object {
-                "&$selected": Object {
-                  "backgroundColor": "#4085C6 !important",
-                  "color": "#FFFFFF",
+                "root": Object {
+                  "&$selected": Object {
+                    "backgroundColor": "#4085C6 !important",
+                    "color": "#FFFFFF",
+                  },
                 },
               },
             },
@@ -4491,9 +4497,11 @@ exports[`GenericDocumentCitation renders  component with a mock espace record 1`
                           },
                         },
                         "MuiMenuItem": Object {
-                          "&$selected": Object {
-                            "backgroundColor": "#4085C6 !important",
-                            "color": "#FFFFFF",
+                          "root": Object {
+                            "&$selected": Object {
+                              "backgroundColor": "#4085C6 !important",
+                              "color": "#FFFFFF",
+                            },
                           },
                         },
                       },
@@ -5047,9 +5055,11 @@ exports[`GenericDocumentCitation renders  component with an empty publisher and 
                 },
               },
               "MuiMenuItem": Object {
-                "&$selected": Object {
-                  "backgroundColor": "#4085C6 !important",
-                  "color": "#FFFFFF",
+                "root": Object {
+                  "&$selected": Object {
+                    "backgroundColor": "#4085C6 !important",
+                    "color": "#FFFFFF",
+                  },
                 },
               },
             },
@@ -6966,9 +6976,11 @@ exports[`GenericDocumentCitation renders  component with an empty publisher and 
                           },
                         },
                         "MuiMenuItem": Object {
-                          "&$selected": Object {
-                            "backgroundColor": "#4085C6 !important",
-                            "color": "#FFFFFF",
+                          "root": Object {
+                            "&$selected": Object {
+                              "backgroundColor": "#4085C6 !important",
+                              "color": "#FFFFFF",
+                            },
                           },
                         },
                       },
@@ -7518,9 +7530,11 @@ exports[`GenericDocumentCitation renders  component with empty publication 1`] =
                 },
               },
               "MuiMenuItem": Object {
-                "&$selected": Object {
-                  "backgroundColor": "#4085C6 !important",
-                  "color": "#FFFFFF",
+                "root": Object {
+                  "&$selected": Object {
+                    "backgroundColor": "#4085C6 !important",
+                    "color": "#FFFFFF",
+                  },
                 },
               },
             },
@@ -8007,9 +8021,11 @@ exports[`GenericDocumentCitation renders  component with empty publication 1`] =
                           },
                         },
                         "MuiMenuItem": Object {
-                          "&$selected": Object {
-                            "backgroundColor": "#4085C6 !important",
-                            "color": "#FFFFFF",
+                          "root": Object {
+                            "&$selected": Object {
+                              "backgroundColor": "#4085C6 !important",
+                              "color": "#FFFFFF",
+                            },
                           },
                         },
                       },

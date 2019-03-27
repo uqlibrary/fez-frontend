@@ -443,9 +443,11 @@ exports[`Component GoogleScholar  should handle keyboard form submit event 1`] =
                 },
               },
               "MuiMenuItem": Object {
-                "&$selected": Object {
-                  "backgroundColor": "#4085C6 !important",
-                  "color": "#FFFFFF",
+                "root": Object {
+                  "&$selected": Object {
+                    "backgroundColor": "#4085C6 !important",
+                    "color": "#FFFFFF",
+                  },
                 },
               },
             },
@@ -1005,9 +1007,11 @@ exports[`Component GoogleScholar  should handle keyboard form submit event 1`] =
                           },
                         },
                         "MuiMenuItem": Object {
-                          "&$selected": Object {
-                            "backgroundColor": "#4085C6 !important",
-                            "color": "#FFFFFF",
+                          "root": Object {
+                            "&$selected": Object {
+                              "backgroundColor": "#4085C6 !important",
+                              "color": "#FFFFFF",
+                            },
                           },
                         },
                       },
@@ -1641,9 +1645,11 @@ exports[`Component GoogleScholar  should handle keyboard form submit event 1`] =
                                     },
                                   },
                                   "MuiMenuItem": Object {
-                                    "&$selected": Object {
-                                      "backgroundColor": "#4085C6 !important",
-                                      "color": "#FFFFFF",
+                                    "root": Object {
+                                      "&$selected": Object {
+                                        "backgroundColor": "#4085C6 !important",
+                                        "color": "#FFFFFF",
+                                      },
                                     },
                                   },
                                 },
@@ -2561,9 +2567,11 @@ exports[`Component GoogleScholar  should handle keyboard form submit event 1`] =
                                                           },
                                                         },
                                                         "MuiMenuItem": Object {
-                                                          "&$selected": Object {
-                                                            "backgroundColor": "#4085C6 !important",
-                                                            "color": "#FFFFFF",
+                                                          "root": Object {
+                                                            "&$selected": Object {
+                                                              "backgroundColor": "#4085C6 !important",
+                                                              "color": "#FFFFFF",
+                                                            },
                                                           },
                                                         },
                                                       },
@@ -3240,9 +3248,11 @@ exports[`Component GoogleScholar  should handle keyboard form submit event 1`] =
                                                                                 },
                                                                               },
                                                                               "MuiMenuItem": Object {
-                                                                                "&$selected": Object {
-                                                                                  "backgroundColor": "#4085C6 !important",
-                                                                                  "color": "#FFFFFF",
+                                                                                "root": Object {
+                                                                                  "&$selected": Object {
+                                                                                    "backgroundColor": "#4085C6 !important",
+                                                                                    "color": "#FFFFFF",
+                                                                                  },
                                                                                 },
                                                                               },
                                                                             },
@@ -3774,9 +3784,11 @@ exports[`Component GoogleScholar  should handle keyboard form submit event 1`] =
                                                                                   },
                                                                                 },
                                                                                 "MuiMenuItem": Object {
-                                                                                  "&$selected": Object {
-                                                                                    "backgroundColor": "#4085C6 !important",
-                                                                                    "color": "#FFFFFF",
+                                                                                  "root": Object {
+                                                                                    "&$selected": Object {
+                                                                                      "backgroundColor": "#4085C6 !important",
+                                                                                      "color": "#FFFFFF",
+                                                                                    },
                                                                                   },
                                                                                 },
                                                                               },
@@ -4237,9 +4249,11 @@ exports[`Component GoogleScholar  should handle keyboard form submit event 1`] =
                                                                                       },
                                                                                     },
                                                                                     "MuiMenuItem": Object {
-                                                                                      "&$selected": Object {
-                                                                                        "backgroundColor": "#4085C6 !important",
-                                                                                        "color": "#FFFFFF",
+                                                                                      "root": Object {
+                                                                                        "&$selected": Object {
+                                                                                          "backgroundColor": "#4085C6 !important",
+                                                                                          "color": "#FFFFFF",
+                                                                                        },
                                                                                       },
                                                                                     },
                                                                                   },
@@ -5488,9 +5502,11 @@ exports[`Component GoogleScholar  should handle keyboard form submit event 1`] =
                                                     },
                                                   },
                                                   "MuiMenuItem": Object {
-                                                    "&$selected": Object {
-                                                      "backgroundColor": "#4085C6 !important",
-                                                      "color": "#FFFFFF",
+                                                    "root": Object {
+                                                      "&$selected": Object {
+                                                        "backgroundColor": "#4085C6 !important",
+                                                        "color": "#FFFFFF",
+                                                      },
                                                     },
                                                   },
                                                 },

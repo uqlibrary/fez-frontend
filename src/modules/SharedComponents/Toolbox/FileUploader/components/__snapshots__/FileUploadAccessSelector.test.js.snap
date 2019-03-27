@@ -116,9 +116,11 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                 },
               },
               "MuiMenuItem": Object {
-                "&$selected": Object {
-                  "backgroundColor": "#4085C6 !important",
-                  "color": "#FFFFFF",
+                "root": Object {
+                  "&$selected": Object {
+                    "backgroundColor": "#4085C6 !important",
+                    "color": "#FFFFFF",
+                  },
                 },
               },
             },
@@ -1231,9 +1233,11 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                                     },
                                                   },
                                                   "MuiMenuItem": Object {
-                                                    "&$selected": Object {
-                                                      "backgroundColor": "#4085C6 !important",
-                                                      "color": "#FFFFFF",
+                                                    "root": Object {
+                                                      "&$selected": Object {
+                                                        "backgroundColor": "#4085C6 !important",
+                                                        "color": "#FFFFFF",
+                                                      },
                                                     },
                                                   },
                                                 },
@@ -1912,9 +1916,11 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                 },
               },
               "MuiMenuItem": Object {
-                "&$selected": Object {
-                  "backgroundColor": "#4085C6 !important",
-                  "color": "#FFFFFF",
+                "root": Object {
+                  "&$selected": Object {
+                    "backgroundColor": "#4085C6 !important",
+                    "color": "#FFFFFF",
+                  },
                 },
               },
             },
@@ -3042,9 +3048,11 @@ exports[`Component FileUploadAccessSelector should render access condition disab
                                                     },
                                                   },
                                                   "MuiMenuItem": Object {
-                                                    "&$selected": Object {
-                                                      "backgroundColor": "#4085C6 !important",
-                                                      "color": "#FFFFFF",
+                                                    "root": Object {
+                                                      "&$selected": Object {
+                                                        "backgroundColor": "#4085C6 !important",
+                                                        "color": "#FFFFFF",
+                                                      },
                                                     },
                                                   },
                                                 },

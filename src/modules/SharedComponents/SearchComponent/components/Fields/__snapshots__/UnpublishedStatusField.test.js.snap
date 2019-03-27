@@ -186,9 +186,11 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                 },
               },
               "MuiMenuItem": Object {
-                "&$selected": Object {
-                  "backgroundColor": "#4085C6 !important",
-                  "color": "#FFFFFF",
+                "root": Object {
+                  "&$selected": Object {
+                    "backgroundColor": "#4085C6 !important",
+                    "color": "#FFFFFF",
+                  },
                 },
               },
             },
@@ -777,9 +779,11 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                             },
                           },
                           "MuiMenuItem": Object {
-                            "&$selected": Object {
-                              "backgroundColor": "#4085C6 !important",
-                              "color": "#FFFFFF",
+                            "root": Object {
+                              "&$selected": Object {
+                                "backgroundColor": "#4085C6 !important",
+                                "color": "#FFFFFF",
+                              },
                             },
                           },
                         },
@@ -2458,9 +2462,11 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                                             },
                                                           },
                                                           "MuiMenuItem": Object {
-                                                            "&$selected": Object {
-                                                              "backgroundColor": "#4085C6 !important",
-                                                              "color": "#FFFFFF",
+                                                            "root": Object {
+                                                              "&$selected": Object {
+                                                                "backgroundColor": "#4085C6 !important",
+                                                                "color": "#FFFFFF",
+                                                              },
                                                             },
                                                           },
                                                         },
@@ -3116,9 +3122,11 @@ exports[`UnpublishedStatusField component should render error message from redux
                 },
               },
               "MuiMenuItem": Object {
-                "&$selected": Object {
-                  "backgroundColor": "#4085C6 !important",
-                  "color": "#FFFFFF",
+                "root": Object {
+                  "&$selected": Object {
+                    "backgroundColor": "#4085C6 !important",
+                    "color": "#FFFFFF",
+                  },
                 },
               },
             },
@@ -3752,9 +3760,11 @@ exports[`UnpublishedStatusField component should render error message from redux
                             },
                           },
                           "MuiMenuItem": Object {
-                            "&$selected": Object {
-                              "backgroundColor": "#4085C6 !important",
-                              "color": "#FFFFFF",
+                            "root": Object {
+                              "&$selected": Object {
+                                "backgroundColor": "#4085C6 !important",
+                                "color": "#FFFFFF",
+                              },
                             },
                           },
                         },
@@ -5433,9 +5443,11 @@ exports[`UnpublishedStatusField component should render error message from redux
                                                             },
                                                           },
                                                           "MuiMenuItem": Object {
-                                                            "&$selected": Object {
-                                                              "backgroundColor": "#4085C6 !important",
-                                                              "color": "#FFFFFF",
+                                                            "root": Object {
+                                                              "&$selected": Object {
+                                                                "backgroundColor": "#4085C6 !important",
+                                                                "color": "#FFFFFF",
+                                                              },
                                                             },
                                                           },
                                                         },
@@ -6149,9 +6161,11 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                 },
               },
               "MuiMenuItem": Object {
-                "&$selected": Object {
-                  "backgroundColor": "#4085C6 !important",
-                  "color": "#FFFFFF",
+                "root": Object {
+                  "&$selected": Object {
+                    "backgroundColor": "#4085C6 !important",
+                    "color": "#FFFFFF",
+                  },
                 },
               },
             },
@@ -6772,9 +6786,11 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                             },
                           },
                           "MuiMenuItem": Object {
-                            "&$selected": Object {
-                              "backgroundColor": "#4085C6 !important",
-                              "color": "#FFFFFF",
+                            "root": Object {
+                              "&$selected": Object {
+                                "backgroundColor": "#4085C6 !important",
+                                "color": "#FFFFFF",
+                              },
                             },
                           },
                         },
@@ -8453,9 +8469,11 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                                             },
                                                           },
                                                           "MuiMenuItem": Object {
-                                                            "&$selected": Object {
-                                                              "backgroundColor": "#4085C6 !important",
-                                                              "color": "#FFFFFF",
+                                                            "root": Object {
+                                                              "&$selected": Object {
+                                                                "backgroundColor": "#4085C6 !important",
+                                                                "color": "#FFFFFF",
+                                                              },
                                                             },
                                                           },
                                                         },
@@ -9111,9 +9129,11 @@ exports[`UnpublishedStatusField component should render with value selected from
                 },
               },
               "MuiMenuItem": Object {
-                "&$selected": Object {
-                  "backgroundColor": "#4085C6 !important",
-                  "color": "#FFFFFF",
+                "root": Object {
+                  "&$selected": Object {
+                    "backgroundColor": "#4085C6 !important",
+                    "color": "#FFFFFF",
+                  },
                 },
               },
             },
@@ -9740,9 +9760,11 @@ exports[`UnpublishedStatusField component should render with value selected from
                             },
                           },
                           "MuiMenuItem": Object {
-                            "&$selected": Object {
-                              "backgroundColor": "#4085C6 !important",
-                              "color": "#FFFFFF",
+                            "root": Object {
+                              "&$selected": Object {
+                                "backgroundColor": "#4085C6 !important",
+                                "color": "#FFFFFF",
+                              },
                             },
                           },
                         },
@@ -11421,9 +11443,11 @@ exports[`UnpublishedStatusField component should render with value selected from
                                                             },
                                                           },
                                                           "MuiMenuItem": Object {
-                                                            "&$selected": Object {
-                                                              "backgroundColor": "#4085C6 !important",
-                                                              "color": "#FFFFFF",
+                                                            "root": Object {
+                                                              "&$selected": Object {
+                                                                "backgroundColor": "#4085C6 !important",
+                                                                "color": "#FFFFFF",
+                                                              },
                                                             },
                                                           },
                                                         },

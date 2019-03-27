@@ -179,9 +179,11 @@ exports[`Index page should render placeholders 1`] = `
                 },
               },
               "MuiMenuItem": Object {
-                "&$selected": Object {
-                  "backgroundColor": "#4085C6 !important",
-                  "color": "#FFFFFF",
+                "root": Object {
+                  "&$selected": Object {
+                    "backgroundColor": "#4085C6 !important",
+                    "color": "#FFFFFF",
+                  },
                 },
               },
             },
@@ -636,9 +638,11 @@ exports[`Index page should render placeholders 1`] = `
                         },
                       },
                       "MuiMenuItem": Object {
-                        "&$selected": Object {
-                          "backgroundColor": "#4085C6 !important",
-                          "color": "#FFFFFF",
+                        "root": Object {
+                          "&$selected": Object {
+                            "backgroundColor": "#4085C6 !important",
+                            "color": "#FFFFFF",
+                          },
                         },
                       },
                     },
@@ -1078,9 +1082,11 @@ exports[`Index page should render placeholders 1`] = `
                               },
                             },
                             "MuiMenuItem": Object {
-                              "&$selected": Object {
-                                "backgroundColor": "#4085C6 !important",
-                                "color": "#FFFFFF",
+                              "root": Object {
+                                "&$selected": Object {
+                                  "backgroundColor": "#4085C6 !important",
+                                  "color": "#FFFFFF",
+                                },
                               },
                             },
                           },
@@ -2389,9 +2395,11 @@ exports[`Index page should render placeholders 1`] = `
                                                                   },
                                                                 },
                                                                 "MuiMenuItem": Object {
-                                                                  "&$selected": Object {
-                                                                    "backgroundColor": "#4085C6 !important",
-                                                                    "color": "#FFFFFF",
+                                                                  "root": Object {
+                                                                    "&$selected": Object {
+                                                                      "backgroundColor": "#4085C6 !important",
+                                                                      "color": "#FFFFFF",
+                                                                    },
                                                                   },
                                                                 },
                                                               },
@@ -2964,9 +2972,11 @@ exports[`Index page should render placeholders 1`] = `
                                                                         },
                                                                       },
                                                                       "MuiMenuItem": Object {
-                                                                        "&$selected": Object {
-                                                                          "backgroundColor": "#4085C6 !important",
-                                                                          "color": "#FFFFFF",
+                                                                        "root": Object {
+                                                                          "&$selected": Object {
+                                                                            "backgroundColor": "#4085C6 !important",
+                                                                            "color": "#FFFFFF",
+                                                                          },
                                                                         },
                                                                       },
                                                                     },
@@ -4529,9 +4539,11 @@ exports[`Index page should render placeholders 1`] = `
                                                                           },
                                                                         },
                                                                         "MuiMenuItem": Object {
-                                                                          "&$selected": Object {
-                                                                            "backgroundColor": "#4085C6 !important",
-                                                                            "color": "#FFFFFF",
+                                                                          "root": Object {
+                                                                            "&$selected": Object {
+                                                                              "backgroundColor": "#4085C6 !important",
+                                                                              "color": "#FFFFFF",
+                                                                            },
                                                                           },
                                                                         },
                                                                       },
@@ -5150,9 +5162,11 @@ exports[`Index page should render placeholders 1`] = `
                                                                                                 },
                                                                                               },
                                                                                               "MuiMenuItem": Object {
-                                                                                                "&$selected": Object {
-                                                                                                  "backgroundColor": "#4085C6 !important",
-                                                                                                  "color": "#FFFFFF",
+                                                                                                "root": Object {
+                                                                                                  "&$selected": Object {
+                                                                                                    "backgroundColor": "#4085C6 !important",
+                                                                                                    "color": "#FFFFFF",
+                                                                                                  },
                                                                                                 },
                                                                                               },
                                                                                             },
@@ -5681,9 +5695,11 @@ exports[`Index page should render placeholders 1`] = `
                                                                                               },
                                                                                             },
                                                                                             "MuiMenuItem": Object {
-                                                                                              "&$selected": Object {
-                                                                                                "backgroundColor": "#4085C6 !important",
-                                                                                                "color": "#FFFFFF",
+                                                                                              "root": Object {
+                                                                                                "&$selected": Object {
+                                                                                                  "backgroundColor": "#4085C6 !important",
+                                                                                                  "color": "#FFFFFF",
+                                                                                                },
                                                                                               },
                                                                                             },
                                                                                           },
@@ -6399,9 +6415,11 @@ exports[`Index page should render placeholders 1`] = `
                                                                         },
                                                                       },
                                                                       "MuiMenuItem": Object {
-                                                                        "&$selected": Object {
-                                                                          "backgroundColor": "#4085C6 !important",
-                                                                          "color": "#FFFFFF",
+                                                                        "root": Object {
+                                                                          "&$selected": Object {
+                                                                            "backgroundColor": "#4085C6 !important",
+                                                                            "color": "#FFFFFF",
+                                                                          },
                                                                         },
                                                                       },
                                                                     },

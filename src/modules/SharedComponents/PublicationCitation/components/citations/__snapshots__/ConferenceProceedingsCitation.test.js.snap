@@ -116,9 +116,11 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
                 },
               },
               "MuiMenuItem": Object {
-                "&$selected": Object {
-                  "backgroundColor": "#4085C6 !important",
-                  "color": "#FFFFFF",
+                "root": Object {
+                  "&$selected": Object {
+                    "backgroundColor": "#4085C6 !important",
+                    "color": "#FFFFFF",
+                  },
                 },
               },
             },
@@ -2270,9 +2272,11 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
                             },
                           },
                           "MuiMenuItem": Object {
-                            "&$selected": Object {
-                              "backgroundColor": "#4085C6 !important",
-                              "color": "#FFFFFF",
+                            "root": Object {
+                              "&$selected": Object {
+                                "backgroundColor": "#4085C6 !important",
+                                "color": "#FFFFFF",
+                              },
                             },
                           },
                         },
@@ -2908,9 +2912,11 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
                 },
               },
               "MuiMenuItem": Object {
-                "&$selected": Object {
-                  "backgroundColor": "#4085C6 !important",
-                  "color": "#FFFFFF",
+                "root": Object {
+                  "&$selected": Object {
+                    "backgroundColor": "#4085C6 !important",
+                    "color": "#FFFFFF",
+                  },
                 },
               },
             },
@@ -5084,9 +5090,11 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
                             },
                           },
                           "MuiMenuItem": Object {
-                            "&$selected": Object {
-                              "backgroundColor": "#4085C6 !important",
-                              "color": "#FFFFFF",
+                            "root": Object {
+                              "&$selected": Object {
+                                "backgroundColor": "#4085C6 !important",
+                                "color": "#FFFFFF",
+                              },
                             },
                           },
                         },
@@ -5722,9 +5730,11 @@ exports[`ConferenceProceedingsCitation renders  component with empty publication
                 },
               },
               "MuiMenuItem": Object {
-                "&$selected": Object {
-                  "backgroundColor": "#4085C6 !important",
-                  "color": "#FFFFFF",
+                "root": Object {
+                  "&$selected": Object {
+                    "backgroundColor": "#4085C6 !important",
+                    "color": "#FFFFFF",
+                  },
                 },
               },
             },
@@ -6238,9 +6248,11 @@ exports[`ConferenceProceedingsCitation renders  component with empty publication
                             },
                           },
                           "MuiMenuItem": Object {
-                            "&$selected": Object {
-                              "backgroundColor": "#4085C6 !important",
-                              "color": "#FFFFFF",
+                            "root": Object {
+                              "&$selected": Object {
+                                "backgroundColor": "#4085C6 !important",
+                                "color": "#FFFFFF",
+                              },
                             },
                           },
                         },

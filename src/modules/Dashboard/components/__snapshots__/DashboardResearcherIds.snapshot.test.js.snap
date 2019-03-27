@@ -116,9 +116,11 @@ exports[`Dashboard Rsearcher IDs test Full mount render to test withStyles/Theme
                 },
               },
               "MuiMenuItem": Object {
-                "&$selected": Object {
-                  "backgroundColor": "#4085C6 !important",
-                  "color": "#FFFFFF",
+                "root": Object {
+                  "&$selected": Object {
+                    "backgroundColor": "#4085C6 !important",
+                    "color": "#FFFFFF",
+                  },
                 },
               },
             },
@@ -941,9 +943,11 @@ exports[`Dashboard Rsearcher IDs test Full mount render to test withStyles/Theme
                                         },
                                       },
                                       "MuiMenuItem": Object {
-                                        "&$selected": Object {
-                                          "backgroundColor": "#4085C6 !important",
-                                          "color": "#FFFFFF",
+                                        "root": Object {
+                                          "&$selected": Object {
+                                            "backgroundColor": "#4085C6 !important",
+                                            "color": "#FFFFFF",
+                                          },
                                         },
                                       },
                                     },
@@ -1382,9 +1386,11 @@ exports[`Dashboard Rsearcher IDs test Full mount render to test withStyles/Theme
                                           },
                                         },
                                         "MuiMenuItem": Object {
-                                          "&$selected": Object {
-                                            "backgroundColor": "#4085C6 !important",
-                                            "color": "#FFFFFF",
+                                          "root": Object {
+                                            "&$selected": Object {
+                                              "backgroundColor": "#4085C6 !important",
+                                              "color": "#FFFFFF",
+                                            },
                                           },
                                         },
                                       },
@@ -1978,9 +1984,11 @@ exports[`Dashboard Rsearcher IDs test Full mount render to test withStyles/Theme
                                         },
                                       },
                                       "MuiMenuItem": Object {
-                                        "&$selected": Object {
-                                          "backgroundColor": "#4085C6 !important",
-                                          "color": "#FFFFFF",
+                                        "root": Object {
+                                          "&$selected": Object {
+                                            "backgroundColor": "#4085C6 !important",
+                                            "color": "#FFFFFF",
+                                          },
                                         },
                                       },
                                     },
@@ -2419,9 +2427,11 @@ exports[`Dashboard Rsearcher IDs test Full mount render to test withStyles/Theme
                                           },
                                         },
                                         "MuiMenuItem": Object {
-                                          "&$selected": Object {
-                                            "backgroundColor": "#4085C6 !important",
-                                            "color": "#FFFFFF",
+                                          "root": Object {
+                                            "&$selected": Object {
+                                              "backgroundColor": "#4085C6 !important",
+                                              "color": "#FFFFFF",
+                                            },
                                           },
                                         },
                                       },
@@ -3015,9 +3025,11 @@ exports[`Dashboard Rsearcher IDs test Full mount render to test withStyles/Theme
                                         },
                                       },
                                       "MuiMenuItem": Object {
-                                        "&$selected": Object {
-                                          "backgroundColor": "#4085C6 !important",
-                                          "color": "#FFFFFF",
+                                        "root": Object {
+                                          "&$selected": Object {
+                                            "backgroundColor": "#4085C6 !important",
+                                            "color": "#FFFFFF",
+                                          },
                                         },
                                       },
                                     },
@@ -3456,9 +3468,11 @@ exports[`Dashboard Rsearcher IDs test Full mount render to test withStyles/Theme
                                           },
                                         },
                                         "MuiMenuItem": Object {
-                                          "&$selected": Object {
-                                            "backgroundColor": "#4085C6 !important",
-                                            "color": "#FFFFFF",
+                                          "root": Object {
+                                            "&$selected": Object {
+                                              "backgroundColor": "#4085C6 !important",
+                                              "color": "#FFFFFF",
+                                            },
                                           },
                                         },
                                       },
@@ -4052,9 +4066,11 @@ exports[`Dashboard Rsearcher IDs test Full mount render to test withStyles/Theme
                                         },
                                       },
                                       "MuiMenuItem": Object {
-                                        "&$selected": Object {
-                                          "backgroundColor": "#4085C6 !important",
-                                          "color": "#FFFFFF",
+                                        "root": Object {
+                                          "&$selected": Object {
+                                            "backgroundColor": "#4085C6 !important",
+                                            "color": "#FFFFFF",
+                                          },
                                         },
                                       },
                                     },
@@ -4493,9 +4509,11 @@ exports[`Dashboard Rsearcher IDs test Full mount render to test withStyles/Theme
                                           },
                                         },
                                         "MuiMenuItem": Object {
-                                          "&$selected": Object {
-                                            "backgroundColor": "#4085C6 !important",
-                                            "color": "#FFFFFF",
+                                          "root": Object {
+                                            "&$selected": Object {
+                                              "backgroundColor": "#4085C6 !important",
+                                              "color": "#FFFFFF",
+                                            },
                                           },
                                         },
                                       },
@@ -5089,9 +5107,11 @@ exports[`Dashboard Rsearcher IDs test Full mount render to test withStyles/Theme
                                         },
                                       },
                                       "MuiMenuItem": Object {
-                                        "&$selected": Object {
-                                          "backgroundColor": "#4085C6 !important",
-                                          "color": "#FFFFFF",
+                                        "root": Object {
+                                          "&$selected": Object {
+                                            "backgroundColor": "#4085C6 !important",
+                                            "color": "#FFFFFF",
+                                          },
                                         },
                                       },
                                     },
@@ -5530,9 +5550,11 @@ exports[`Dashboard Rsearcher IDs test Full mount render to test withStyles/Theme
                                           },
                                         },
                                         "MuiMenuItem": Object {
-                                          "&$selected": Object {
-                                            "backgroundColor": "#4085C6 !important",
-                                            "color": "#FFFFFF",
+                                          "root": Object {
+                                            "&$selected": Object {
+                                              "backgroundColor": "#4085C6 !important",
+                                              "color": "#FFFFFF",
+                                            },
                                           },
                                         },
                                       },
@@ -6186,9 +6208,11 @@ exports[`Dashboard Rsearcher IDs test Full mount render to test withStyles/Theme
                                           },
                                         },
                                         "MuiMenuItem": Object {
-                                          "&$selected": Object {
-                                            "backgroundColor": "#4085C6 !important",
-                                            "color": "#FFFFFF",
+                                          "root": Object {
+                                            "&$selected": Object {
+                                              "backgroundColor": "#4085C6 !important",
+                                              "color": "#FFFFFF",
+                                            },
                                           },
                                         },
                                       },

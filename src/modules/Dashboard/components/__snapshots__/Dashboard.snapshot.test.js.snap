@@ -116,9 +116,11 @@ exports[`Dashboard test Full mount for styles render 1`] = `
                 },
               },
               "MuiMenuItem": Object {
-                "&$selected": Object {
-                  "backgroundColor": "#4085C6 !important",
-                  "color": "#FFFFFF",
+                "root": Object {
+                  "&$selected": Object {
+                    "backgroundColor": "#4085C6 !important",
+                    "color": "#FFFFFF",
+                  },
                 },
               },
             },
@@ -789,9 +791,11 @@ exports[`Dashboard test Full mount for styles render 1`] = `
                               },
                             },
                             "MuiMenuItem": Object {
-                              "&$selected": Object {
-                                "backgroundColor": "#4085C6 !important",
-                                "color": "#FFFFFF",
+                              "root": Object {
+                                "&$selected": Object {
+                                  "backgroundColor": "#4085C6 !important",
+                                  "color": "#FFFFFF",
+                                },
                               },
                             },
                           },
@@ -4340,9 +4344,11 @@ exports[`Dashboard test should get styles for full render 1`] = `
                 },
               },
               "MuiMenuItem": Object {
-                "&$selected": Object {
-                  "backgroundColor": "#4085C6 !important",
-                  "color": "#FFFFFF",
+                "root": Object {
+                  "&$selected": Object {
+                    "backgroundColor": "#4085C6 !important",
+                    "color": "#FFFFFF",
+                  },
                 },
               },
             },
@@ -4873,9 +4879,11 @@ exports[`Dashboard test should get styles for full render 1`] = `
                           },
                         },
                         "MuiMenuItem": Object {
-                          "&$selected": Object {
-                            "backgroundColor": "#4085C6 !important",
-                            "color": "#FFFFFF",
+                          "root": Object {
+                            "&$selected": Object {
+                              "backgroundColor": "#4085C6 !important",
+                              "color": "#FFFFFF",
+                            },
                           },
                         },
                       },

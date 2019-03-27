@@ -143,9 +143,11 @@ exports[`Component FileUploadRowStatus should mount the container 1`] = `
                 },
               },
               "MuiMenuItem": Object {
-                "&$selected": Object {
-                  "backgroundColor": "#4085C6 !important",
-                  "color": "#FFFFFF",
+                "root": Object {
+                  "&$selected": Object {
+                    "backgroundColor": "#4085C6 !important",
+                    "color": "#FFFFFF",
+                  },
                 },
               },
             },
@@ -639,9 +641,11 @@ exports[`Component FileUploadRowStatus should mount the container 1`] = `
                           },
                         },
                         "MuiMenuItem": Object {
-                          "&$selected": Object {
-                            "backgroundColor": "#4085C6 !important",
-                            "color": "#FFFFFF",
+                          "root": Object {
+                            "&$selected": Object {
+                              "backgroundColor": "#4085C6 !important",
+                              "color": "#FFFFFF",
+                            },
                           },
                         },
                       },

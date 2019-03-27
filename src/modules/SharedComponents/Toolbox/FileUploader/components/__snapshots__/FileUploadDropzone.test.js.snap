@@ -116,9 +116,11 @@ exports[`Component FileUploadDropzone should open files selection dialog 1`] = `
                 },
               },
               "MuiMenuItem": Object {
-                "&$selected": Object {
-                  "backgroundColor": "#4085C6 !important",
-                  "color": "#FFFFFF",
+                "root": Object {
+                  "&$selected": Object {
+                    "backgroundColor": "#4085C6 !important",
+                    "color": "#FFFFFF",
+                  },
                 },
               },
             },
@@ -1215,9 +1217,11 @@ exports[`Component FileUploadDropzone should open files selection dialog 1`] = `
                                                           },
                                                         },
                                                         "MuiMenuItem": Object {
-                                                          "&$selected": Object {
-                                                            "backgroundColor": "#4085C6 !important",
-                                                            "color": "#FFFFFF",
+                                                          "root": Object {
+                                                            "&$selected": Object {
+                                                              "backgroundColor": "#4085C6 !important",
+                                                              "color": "#FFFFFF",
+                                                            },
                                                           },
                                                         },
                                                       },
@@ -2353,9 +2357,11 @@ exports[`Component FileUploadDropzone should render disabled component 1`] = `
                 },
               },
               "MuiMenuItem": Object {
-                "&$selected": Object {
-                  "backgroundColor": "#4085C6 !important",
-                  "color": "#FFFFFF",
+                "root": Object {
+                  "&$selected": Object {
+                    "backgroundColor": "#4085C6 !important",
+                    "color": "#FFFFFF",
+                  },
                 },
               },
             },
@@ -3443,9 +3449,11 @@ exports[`Component FileUploadDropzone should render disabled component 1`] = `
                                                           },
                                                         },
                                                         "MuiMenuItem": Object {
-                                                          "&$selected": Object {
-                                                            "backgroundColor": "#4085C6 !important",
-                                                            "color": "#FFFFFF",
+                                                          "root": Object {
+                                                            "&$selected": Object {
+                                                              "backgroundColor": "#4085C6 !important",
+                                                              "color": "#FFFFFF",
+                                                            },
                                                           },
                                                         },
                                                       },

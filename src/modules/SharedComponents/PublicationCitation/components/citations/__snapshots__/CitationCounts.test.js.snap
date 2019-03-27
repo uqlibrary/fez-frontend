@@ -116,9 +116,11 @@ exports[`CitationCounts should not render View full statistics link on public pa
                 },
               },
               "MuiMenuItem": Object {
-                "&$selected": Object {
-                  "backgroundColor": "#4085C6 !important",
-                  "color": "#FFFFFF",
+                "root": Object {
+                  "&$selected": Object {
+                    "backgroundColor": "#4085C6 !important",
+                    "color": "#FFFFFF",
+                  },
                 },
               },
             },
@@ -657,9 +659,11 @@ exports[`CitationCounts should not render View full statistics link on public pa
                       },
                     },
                     "MuiMenuItem": Object {
-                      "&$selected": Object {
-                        "backgroundColor": "#4085C6 !important",
-                        "color": "#FFFFFF",
+                      "root": Object {
+                        "&$selected": Object {
+                          "backgroundColor": "#4085C6 !important",
+                          "color": "#FFFFFF",
+                        },
                       },
                     },
                   },
@@ -1356,9 +1360,11 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                       },
                                     },
                                     "MuiMenuItem": Object {
-                                      "&$selected": Object {
-                                        "backgroundColor": "#4085C6 !important",
-                                        "color": "#FFFFFF",
+                                      "root": Object {
+                                        "&$selected": Object {
+                                          "backgroundColor": "#4085C6 !important",
+                                          "color": "#FFFFFF",
+                                        },
                                       },
                                     },
                                   },
@@ -1810,9 +1816,11 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                           },
                                         },
                                         "MuiMenuItem": Object {
-                                          "&$selected": Object {
-                                            "backgroundColor": "#4085C6 !important",
-                                            "color": "#FFFFFF",
+                                          "root": Object {
+                                            "&$selected": Object {
+                                              "backgroundColor": "#4085C6 !important",
+                                              "color": "#FFFFFF",
+                                            },
                                           },
                                         },
                                       },
@@ -2251,9 +2259,11 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                             },
                                           },
                                           "MuiMenuItem": Object {
-                                            "&$selected": Object {
-                                              "backgroundColor": "#4085C6 !important",
-                                              "color": "#FFFFFF",
+                                            "root": Object {
+                                              "&$selected": Object {
+                                                "backgroundColor": "#4085C6 !important",
+                                                "color": "#FFFFFF",
+                                              },
                                             },
                                           },
                                         },
@@ -2714,9 +2724,11 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                       },
                                     },
                                     "MuiMenuItem": Object {
-                                      "&$selected": Object {
-                                        "backgroundColor": "#4085C6 !important",
-                                        "color": "#FFFFFF",
+                                      "root": Object {
+                                        "&$selected": Object {
+                                          "backgroundColor": "#4085C6 !important",
+                                          "color": "#FFFFFF",
+                                        },
                                       },
                                     },
                                   },
@@ -3168,9 +3180,11 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                           },
                                         },
                                         "MuiMenuItem": Object {
-                                          "&$selected": Object {
-                                            "backgroundColor": "#4085C6 !important",
-                                            "color": "#FFFFFF",
+                                          "root": Object {
+                                            "&$selected": Object {
+                                              "backgroundColor": "#4085C6 !important",
+                                              "color": "#FFFFFF",
+                                            },
                                           },
                                         },
                                       },
@@ -3609,9 +3623,11 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                             },
                                           },
                                           "MuiMenuItem": Object {
-                                            "&$selected": Object {
-                                              "backgroundColor": "#4085C6 !important",
-                                              "color": "#FFFFFF",
+                                            "root": Object {
+                                              "&$selected": Object {
+                                                "backgroundColor": "#4085C6 !important",
+                                                "color": "#FFFFFF",
+                                              },
                                             },
                                           },
                                         },
@@ -4072,9 +4088,11 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                       },
                                     },
                                     "MuiMenuItem": Object {
-                                      "&$selected": Object {
-                                        "backgroundColor": "#4085C6 !important",
-                                        "color": "#FFFFFF",
+                                      "root": Object {
+                                        "&$selected": Object {
+                                          "backgroundColor": "#4085C6 !important",
+                                          "color": "#FFFFFF",
+                                        },
                                       },
                                     },
                                   },
@@ -4526,9 +4544,11 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                           },
                                         },
                                         "MuiMenuItem": Object {
-                                          "&$selected": Object {
-                                            "backgroundColor": "#4085C6 !important",
-                                            "color": "#FFFFFF",
+                                          "root": Object {
+                                            "&$selected": Object {
+                                              "backgroundColor": "#4085C6 !important",
+                                              "color": "#FFFFFF",
+                                            },
                                           },
                                         },
                                       },
@@ -4967,9 +4987,11 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                             },
                                           },
                                           "MuiMenuItem": Object {
-                                            "&$selected": Object {
-                                              "backgroundColor": "#4085C6 !important",
-                                              "color": "#FFFFFF",
+                                            "root": Object {
+                                              "&$selected": Object {
+                                                "backgroundColor": "#4085C6 !important",
+                                                "color": "#FFFFFF",
+                                              },
                                             },
                                           },
                                         },
@@ -5430,9 +5452,11 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                       },
                                     },
                                     "MuiMenuItem": Object {
-                                      "&$selected": Object {
-                                        "backgroundColor": "#4085C6 !important",
-                                        "color": "#FFFFFF",
+                                      "root": Object {
+                                        "&$selected": Object {
+                                          "backgroundColor": "#4085C6 !important",
+                                          "color": "#FFFFFF",
+                                        },
                                       },
                                     },
                                   },
@@ -5884,9 +5908,11 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                           },
                                         },
                                         "MuiMenuItem": Object {
-                                          "&$selected": Object {
-                                            "backgroundColor": "#4085C6 !important",
-                                            "color": "#FFFFFF",
+                                          "root": Object {
+                                            "&$selected": Object {
+                                              "backgroundColor": "#4085C6 !important",
+                                              "color": "#FFFFFF",
+                                            },
                                           },
                                         },
                                       },
@@ -6325,9 +6351,11 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                             },
                                           },
                                           "MuiMenuItem": Object {
-                                            "&$selected": Object {
-                                              "backgroundColor": "#4085C6 !important",
-                                              "color": "#FFFFFF",
+                                            "root": Object {
+                                              "&$selected": Object {
+                                                "backgroundColor": "#4085C6 !important",
+                                                "color": "#FFFFFF",
+                                              },
                                             },
                                           },
                                         },
@@ -6943,9 +6971,11 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                   },
                                 },
                                 "MuiMenuItem": Object {
-                                  "&$selected": Object {
-                                    "backgroundColor": "#4085C6 !important",
-                                    "color": "#FFFFFF",
+                                  "root": Object {
+                                    "&$selected": Object {
+                                      "backgroundColor": "#4085C6 !important",
+                                      "color": "#FFFFFF",
+                                    },
                                   },
                                 },
                               },
@@ -7593,9 +7623,11 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                 },
               },
               "MuiMenuItem": Object {
-                "&$selected": Object {
-                  "backgroundColor": "#4085C6 !important",
-                  "color": "#FFFFFF",
+                "root": Object {
+                  "&$selected": Object {
+                    "backgroundColor": "#4085C6 !important",
+                    "color": "#FFFFFF",
+                  },
                 },
               },
             },
@@ -9764,9 +9796,11 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                       },
                     },
                     "MuiMenuItem": Object {
-                      "&$selected": Object {
-                        "backgroundColor": "#4085C6 !important",
-                        "color": "#FFFFFF",
+                      "root": Object {
+                        "&$selected": Object {
+                          "backgroundColor": "#4085C6 !important",
+                          "color": "#FFFFFF",
+                        },
                       },
                     },
                   },
@@ -10463,9 +10497,11 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                       },
                                     },
                                     "MuiMenuItem": Object {
-                                      "&$selected": Object {
-                                        "backgroundColor": "#4085C6 !important",
-                                        "color": "#FFFFFF",
+                                      "root": Object {
+                                        "&$selected": Object {
+                                          "backgroundColor": "#4085C6 !important",
+                                          "color": "#FFFFFF",
+                                        },
                                       },
                                     },
                                   },
@@ -10917,9 +10953,11 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                           },
                                         },
                                         "MuiMenuItem": Object {
-                                          "&$selected": Object {
-                                            "backgroundColor": "#4085C6 !important",
-                                            "color": "#FFFFFF",
+                                          "root": Object {
+                                            "&$selected": Object {
+                                              "backgroundColor": "#4085C6 !important",
+                                              "color": "#FFFFFF",
+                                            },
                                           },
                                         },
                                       },
@@ -11358,9 +11396,11 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                             },
                                           },
                                           "MuiMenuItem": Object {
-                                            "&$selected": Object {
-                                              "backgroundColor": "#4085C6 !important",
-                                              "color": "#FFFFFF",
+                                            "root": Object {
+                                              "&$selected": Object {
+                                                "backgroundColor": "#4085C6 !important",
+                                                "color": "#FFFFFF",
+                                              },
                                             },
                                           },
                                         },
@@ -11821,9 +11861,11 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                       },
                                     },
                                     "MuiMenuItem": Object {
-                                      "&$selected": Object {
-                                        "backgroundColor": "#4085C6 !important",
-                                        "color": "#FFFFFF",
+                                      "root": Object {
+                                        "&$selected": Object {
+                                          "backgroundColor": "#4085C6 !important",
+                                          "color": "#FFFFFF",
+                                        },
                                       },
                                     },
                                   },
@@ -12275,9 +12317,11 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                           },
                                         },
                                         "MuiMenuItem": Object {
-                                          "&$selected": Object {
-                                            "backgroundColor": "#4085C6 !important",
-                                            "color": "#FFFFFF",
+                                          "root": Object {
+                                            "&$selected": Object {
+                                              "backgroundColor": "#4085C6 !important",
+                                              "color": "#FFFFFF",
+                                            },
                                           },
                                         },
                                       },
@@ -12716,9 +12760,11 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                             },
                                           },
                                           "MuiMenuItem": Object {
-                                            "&$selected": Object {
-                                              "backgroundColor": "#4085C6 !important",
-                                              "color": "#FFFFFF",
+                                            "root": Object {
+                                              "&$selected": Object {
+                                                "backgroundColor": "#4085C6 !important",
+                                                "color": "#FFFFFF",
+                                              },
                                             },
                                           },
                                         },
@@ -13179,9 +13225,11 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                       },
                                     },
                                     "MuiMenuItem": Object {
-                                      "&$selected": Object {
-                                        "backgroundColor": "#4085C6 !important",
-                                        "color": "#FFFFFF",
+                                      "root": Object {
+                                        "&$selected": Object {
+                                          "backgroundColor": "#4085C6 !important",
+                                          "color": "#FFFFFF",
+                                        },
                                       },
                                     },
                                   },
@@ -13633,9 +13681,11 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                           },
                                         },
                                         "MuiMenuItem": Object {
-                                          "&$selected": Object {
-                                            "backgroundColor": "#4085C6 !important",
-                                            "color": "#FFFFFF",
+                                          "root": Object {
+                                            "&$selected": Object {
+                                              "backgroundColor": "#4085C6 !important",
+                                              "color": "#FFFFFF",
+                                            },
                                           },
                                         },
                                       },
@@ -14074,9 +14124,11 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                             },
                                           },
                                           "MuiMenuItem": Object {
-                                            "&$selected": Object {
-                                              "backgroundColor": "#4085C6 !important",
-                                              "color": "#FFFFFF",
+                                            "root": Object {
+                                              "&$selected": Object {
+                                                "backgroundColor": "#4085C6 !important",
+                                                "color": "#FFFFFF",
+                                              },
                                             },
                                           },
                                         },
@@ -14673,9 +14725,11 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                       },
                                     },
                                     "MuiMenuItem": Object {
-                                      "&$selected": Object {
-                                        "backgroundColor": "#4085C6 !important",
-                                        "color": "#FFFFFF",
+                                      "root": Object {
+                                        "&$selected": Object {
+                                          "backgroundColor": "#4085C6 !important",
+                                          "color": "#FFFFFF",
+                                        },
                                       },
                                     },
                                   },
@@ -15113,9 +15167,11 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                         },
                                       },
                                       "MuiMenuItem": Object {
-                                        "&$selected": Object {
-                                          "backgroundColor": "#4085C6 !important",
-                                          "color": "#FFFFFF",
+                                        "root": Object {
+                                          "&$selected": Object {
+                                            "backgroundColor": "#4085C6 !important",
+                                            "color": "#FFFFFF",
+                                          },
                                         },
                                       },
                                     },
@@ -15634,9 +15690,11 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                   },
                                 },
                                 "MuiMenuItem": Object {
-                                  "&$selected": Object {
-                                    "backgroundColor": "#4085C6 !important",
-                                    "color": "#FFFFFF",
+                                  "root": Object {
+                                    "&$selected": Object {
+                                      "backgroundColor": "#4085C6 !important",
+                                      "color": "#FFFFFF",
+                                    },
                                   },
                                 },
                               },
@@ -16284,9 +16342,11 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                 },
               },
               "MuiMenuItem": Object {
-                "&$selected": Object {
-                  "backgroundColor": "#4085C6 !important",
-                  "color": "#FFFFFF",
+                "root": Object {
+                  "&$selected": Object {
+                    "backgroundColor": "#4085C6 !important",
+                    "color": "#FFFFFF",
+                  },
                 },
               },
             },
@@ -16813,9 +16873,11 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                       },
                     },
                     "MuiMenuItem": Object {
-                      "&$selected": Object {
-                        "backgroundColor": "#4085C6 !important",
-                        "color": "#FFFFFF",
+                      "root": Object {
+                        "&$selected": Object {
+                          "backgroundColor": "#4085C6 !important",
+                          "color": "#FFFFFF",
+                        },
                       },
                     },
                   },
@@ -17512,9 +17574,11 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                       },
                                     },
                                     "MuiMenuItem": Object {
-                                      "&$selected": Object {
-                                        "backgroundColor": "#4085C6 !important",
-                                        "color": "#FFFFFF",
+                                      "root": Object {
+                                        "&$selected": Object {
+                                          "backgroundColor": "#4085C6 !important",
+                                          "color": "#FFFFFF",
+                                        },
                                       },
                                     },
                                   },
@@ -17966,9 +18030,11 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                           },
                                         },
                                         "MuiMenuItem": Object {
-                                          "&$selected": Object {
-                                            "backgroundColor": "#4085C6 !important",
-                                            "color": "#FFFFFF",
+                                          "root": Object {
+                                            "&$selected": Object {
+                                              "backgroundColor": "#4085C6 !important",
+                                              "color": "#FFFFFF",
+                                            },
                                           },
                                         },
                                       },
@@ -18407,9 +18473,11 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                             },
                                           },
                                           "MuiMenuItem": Object {
-                                            "&$selected": Object {
-                                              "backgroundColor": "#4085C6 !important",
-                                              "color": "#FFFFFF",
+                                            "root": Object {
+                                              "&$selected": Object {
+                                                "backgroundColor": "#4085C6 !important",
+                                                "color": "#FFFFFF",
+                                              },
                                             },
                                           },
                                         },
@@ -18870,9 +18938,11 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                       },
                                     },
                                     "MuiMenuItem": Object {
-                                      "&$selected": Object {
-                                        "backgroundColor": "#4085C6 !important",
-                                        "color": "#FFFFFF",
+                                      "root": Object {
+                                        "&$selected": Object {
+                                          "backgroundColor": "#4085C6 !important",
+                                          "color": "#FFFFFF",
+                                        },
                                       },
                                     },
                                   },
@@ -19324,9 +19394,11 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                           },
                                         },
                                         "MuiMenuItem": Object {
-                                          "&$selected": Object {
-                                            "backgroundColor": "#4085C6 !important",
-                                            "color": "#FFFFFF",
+                                          "root": Object {
+                                            "&$selected": Object {
+                                              "backgroundColor": "#4085C6 !important",
+                                              "color": "#FFFFFF",
+                                            },
                                           },
                                         },
                                       },
@@ -19765,9 +19837,11 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                             },
                                           },
                                           "MuiMenuItem": Object {
-                                            "&$selected": Object {
-                                              "backgroundColor": "#4085C6 !important",
-                                              "color": "#FFFFFF",
+                                            "root": Object {
+                                              "&$selected": Object {
+                                                "backgroundColor": "#4085C6 !important",
+                                                "color": "#FFFFFF",
+                                              },
                                             },
                                           },
                                         },
@@ -20228,9 +20302,11 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                       },
                                     },
                                     "MuiMenuItem": Object {
-                                      "&$selected": Object {
-                                        "backgroundColor": "#4085C6 !important",
-                                        "color": "#FFFFFF",
+                                      "root": Object {
+                                        "&$selected": Object {
+                                          "backgroundColor": "#4085C6 !important",
+                                          "color": "#FFFFFF",
+                                        },
                                       },
                                     },
                                   },
@@ -20682,9 +20758,11 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                           },
                                         },
                                         "MuiMenuItem": Object {
-                                          "&$selected": Object {
-                                            "backgroundColor": "#4085C6 !important",
-                                            "color": "#FFFFFF",
+                                          "root": Object {
+                                            "&$selected": Object {
+                                              "backgroundColor": "#4085C6 !important",
+                                              "color": "#FFFFFF",
+                                            },
                                           },
                                         },
                                       },
@@ -21123,9 +21201,11 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                             },
                                           },
                                           "MuiMenuItem": Object {
-                                            "&$selected": Object {
-                                              "backgroundColor": "#4085C6 !important",
-                                              "color": "#FFFFFF",
+                                            "root": Object {
+                                              "&$selected": Object {
+                                                "backgroundColor": "#4085C6 !important",
+                                                "color": "#FFFFFF",
+                                              },
                                             },
                                           },
                                         },
@@ -21586,9 +21666,11 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                       },
                                     },
                                     "MuiMenuItem": Object {
-                                      "&$selected": Object {
-                                        "backgroundColor": "#4085C6 !important",
-                                        "color": "#FFFFFF",
+                                      "root": Object {
+                                        "&$selected": Object {
+                                          "backgroundColor": "#4085C6 !important",
+                                          "color": "#FFFFFF",
+                                        },
                                       },
                                     },
                                   },
@@ -22040,9 +22122,11 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                           },
                                         },
                                         "MuiMenuItem": Object {
-                                          "&$selected": Object {
-                                            "backgroundColor": "#4085C6 !important",
-                                            "color": "#FFFFFF",
+                                          "root": Object {
+                                            "&$selected": Object {
+                                              "backgroundColor": "#4085C6 !important",
+                                              "color": "#FFFFFF",
+                                            },
                                           },
                                         },
                                       },
@@ -22481,9 +22565,11 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                             },
                                           },
                                           "MuiMenuItem": Object {
-                                            "&$selected": Object {
-                                              "backgroundColor": "#4085C6 !important",
-                                              "color": "#FFFFFF",
+                                            "root": Object {
+                                              "&$selected": Object {
+                                                "backgroundColor": "#4085C6 !important",
+                                                "color": "#FFFFFF",
+                                              },
                                             },
                                           },
                                         },
@@ -23082,9 +23168,11 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                       },
                                     },
                                     "MuiMenuItem": Object {
-                                      "&$selected": Object {
-                                        "backgroundColor": "#4085C6 !important",
-                                        "color": "#FFFFFF",
+                                      "root": Object {
+                                        "&$selected": Object {
+                                          "backgroundColor": "#4085C6 !important",
+                                          "color": "#FFFFFF",
+                                        },
                                       },
                                     },
                                   },
@@ -23522,9 +23610,11 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                         },
                                       },
                                       "MuiMenuItem": Object {
-                                        "&$selected": Object {
-                                          "backgroundColor": "#4085C6 !important",
-                                          "color": "#FFFFFF",
+                                        "root": Object {
+                                          "&$selected": Object {
+                                            "backgroundColor": "#4085C6 !important",
+                                            "color": "#FFFFFF",
+                                          },
                                         },
                                       },
                                     },
@@ -24043,9 +24133,11 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                   },
                                 },
                                 "MuiMenuItem": Object {
-                                  "&$selected": Object {
-                                    "backgroundColor": "#4085C6 !important",
-                                    "color": "#FFFFFF",
+                                  "root": Object {
+                                    "&$selected": Object {
+                                      "backgroundColor": "#4085C6 !important",
+                                      "color": "#FFFFFF",
+                                    },
                                   },
                                 },
                               },
@@ -24693,9 +24785,11 @@ exports[`CitationCounts should render component with no metrics 1`] = `
                 },
               },
               "MuiMenuItem": Object {
-                "&$selected": Object {
-                  "backgroundColor": "#4085C6 !important",
-                  "color": "#FFFFFF",
+                "root": Object {
+                  "&$selected": Object {
+                    "backgroundColor": "#4085C6 !important",
+                    "color": "#FFFFFF",
+                  },
                 },
               },
             },
@@ -25156,9 +25250,11 @@ exports[`CitationCounts should render component with no metrics 1`] = `
                       },
                     },
                     "MuiMenuItem": Object {
-                      "&$selected": Object {
-                        "backgroundColor": "#4085C6 !important",
-                        "color": "#FFFFFF",
+                      "root": Object {
+                        "&$selected": Object {
+                          "backgroundColor": "#4085C6 !important",
+                          "color": "#FFFFFF",
+                        },
                       },
                     },
                   },
@@ -26010,9 +26106,11 @@ exports[`CitationCounts should render component with no metrics 1`] = `
                                   },
                                 },
                                 "MuiMenuItem": Object {
-                                  "&$selected": Object {
-                                    "backgroundColor": "#4085C6 !important",
-                                    "color": "#FFFFFF",
+                                  "root": Object {
+                                    "&$selected": Object {
+                                      "backgroundColor": "#4085C6 !important",
+                                      "color": "#FFFFFF",
+                                    },
                                   },
                                 },
                               },

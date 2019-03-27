@@ -116,9 +116,11 @@ exports[`BookCitation renders  component with a mock espace record 1`] = `
                 },
               },
               "MuiMenuItem": Object {
-                "&$selected": Object {
-                  "backgroundColor": "#4085C6 !important",
-                  "color": "#FFFFFF",
+                "root": Object {
+                  "&$selected": Object {
+                    "backgroundColor": "#4085C6 !important",
+                    "color": "#FFFFFF",
+                  },
                 },
               },
             },
@@ -1506,9 +1508,11 @@ exports[`BookCitation renders  component with a mock espace record 1`] = `
                           },
                         },
                         "MuiMenuItem": Object {
-                          "&$selected": Object {
-                            "backgroundColor": "#4085C6 !important",
-                            "color": "#FFFFFF",
+                          "root": Object {
+                            "&$selected": Object {
+                              "backgroundColor": "#4085C6 !important",
+                              "color": "#FFFFFF",
+                            },
                           },
                         },
                       },
@@ -2143,9 +2147,11 @@ exports[`BookCitation renders  component with an empty doi view  1`] = `
                 },
               },
               "MuiMenuItem": Object {
-                "&$selected": Object {
-                  "backgroundColor": "#4085C6 !important",
-                  "color": "#FFFFFF",
+                "root": Object {
+                  "&$selected": Object {
+                    "backgroundColor": "#4085C6 !important",
+                    "color": "#FFFFFF",
+                  },
                 },
               },
             },
@@ -3681,9 +3687,11 @@ exports[`BookCitation renders  component with an empty doi view  1`] = `
                             },
                           },
                           "MuiMenuItem": Object {
-                            "&$selected": Object {
-                              "backgroundColor": "#4085C6 !important",
-                              "color": "#FFFFFF",
+                            "root": Object {
+                              "&$selected": Object {
+                                "backgroundColor": "#4085C6 !important",
+                                "color": "#FFFFFF",
+                              },
                             },
                           },
                         },
@@ -4319,9 +4327,11 @@ exports[`BookCitation renders  component with empty publication 1`] = `
                 },
               },
               "MuiMenuItem": Object {
-                "&$selected": Object {
-                  "backgroundColor": "#4085C6 !important",
-                  "color": "#FFFFFF",
+                "root": Object {
+                  "&$selected": Object {
+                    "backgroundColor": "#4085C6 !important",
+                    "color": "#FFFFFF",
+                  },
                 },
               },
             },
@@ -4808,9 +4818,11 @@ exports[`BookCitation renders  component with empty publication 1`] = `
                           },
                         },
                         "MuiMenuItem": Object {
-                          "&$selected": Object {
-                            "backgroundColor": "#4085C6 !important",
-                            "color": "#FFFFFF",
+                          "root": Object {
+                            "&$selected": Object {
+                              "backgroundColor": "#4085C6 !important",
+                              "color": "#FFFFFF",
+                            },
                           },
                         },
                       },
@@ -5366,9 +5378,11 @@ exports[`BookCitation renders  should render citation for edited book record 1`]
                 },
               },
               "MuiMenuItem": Object {
-                "&$selected": Object {
-                  "backgroundColor": "#4085C6 !important",
-                  "color": "#FFFFFF",
+                "root": Object {
+                  "&$selected": Object {
+                    "backgroundColor": "#4085C6 !important",
+                    "color": "#FFFFFF",
+                  },
                 },
               },
             },
@@ -6886,9 +6900,11 @@ exports[`BookCitation renders  should render citation for edited book record 1`]
                             },
                           },
                           "MuiMenuItem": Object {
-                            "&$selected": Object {
-                              "backgroundColor": "#4085C6 !important",
-                              "color": "#FFFFFF",
+                            "root": Object {
+                              "&$selected": Object {
+                                "backgroundColor": "#4085C6 !important",
+                                "color": "#FFFFFF",
+                              },
                             },
                           },
                         },

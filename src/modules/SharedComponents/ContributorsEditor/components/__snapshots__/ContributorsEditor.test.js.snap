@@ -143,9 +143,11 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                 },
               },
               "MuiMenuItem": Object {
-                "&$selected": Object {
-                  "backgroundColor": "#4085C6 !important",
-                  "color": "#FFFFFF",
+                "root": Object {
+                  "&$selected": Object {
+                    "backgroundColor": "#4085C6 !important",
+                    "color": "#FFFFFF",
+                  },
                 },
               },
             },
@@ -1681,9 +1683,11 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                                                                         },
                                                                       },
                                                                       "MuiMenuItem": Object {
-                                                                        "&$selected": Object {
-                                                                          "backgroundColor": "#4085C6 !important",
-                                                                          "color": "#FFFFFF",
+                                                                        "root": Object {
+                                                                          "&$selected": Object {
+                                                                            "backgroundColor": "#4085C6 !important",
+                                                                            "color": "#FFFFFF",
+                                                                          },
                                                                         },
                                                                       },
                                                                     },

@@ -608,9 +608,11 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                 },
               },
               "MuiMenuItem": Object {
-                "&$selected": Object {
-                  "backgroundColor": "#4085C6 !important",
-                  "color": "#FFFFFF",
+                "root": Object {
+                  "&$selected": Object {
+                    "backgroundColor": "#4085C6 !important",
+                    "color": "#FFFFFF",
+                  },
                 },
               },
             },
@@ -1382,9 +1384,11 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                                 },
                                               },
                                               "MuiMenuItem": Object {
-                                                "&$selected": Object {
-                                                  "backgroundColor": "#4085C6 !important",
-                                                  "color": "#FFFFFF",
+                                                "root": Object {
+                                                  "&$selected": Object {
+                                                    "backgroundColor": "#4085C6 !important",
+                                                    "color": "#FFFFFF",
+                                                  },
                                                 },
                                               },
                                             },
@@ -1892,9 +1896,11 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                                       },
                                                     },
                                                     "MuiMenuItem": Object {
-                                                      "&$selected": Object {
-                                                        "backgroundColor": "#4085C6 !important",
-                                                        "color": "#FFFFFF",
+                                                      "root": Object {
+                                                        "&$selected": Object {
+                                                          "backgroundColor": "#4085C6 !important",
+                                                          "color": "#FFFFFF",
+                                                        },
                                                       },
                                                     },
                                                   },
@@ -2436,9 +2442,11 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                     },
                                   },
                                   "MuiMenuItem": Object {
-                                    "&$selected": Object {
-                                      "backgroundColor": "#4085C6 !important",
-                                      "color": "#FFFFFF",
+                                    "root": Object {
+                                      "&$selected": Object {
+                                        "backgroundColor": "#4085C6 !important",
+                                        "color": "#FFFFFF",
+                                      },
                                     },
                                   },
                                 },
@@ -3078,9 +3086,11 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                                 },
                                               },
                                               "MuiMenuItem": Object {
-                                                "&$selected": Object {
-                                                  "backgroundColor": "#4085C6 !important",
-                                                  "color": "#FFFFFF",
+                                                "root": Object {
+                                                  "&$selected": Object {
+                                                    "backgroundColor": "#4085C6 !important",
+                                                    "color": "#FFFFFF",
+                                                  },
                                                 },
                                               },
                                             },
@@ -3588,9 +3598,11 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                                       },
                                                     },
                                                     "MuiMenuItem": Object {
-                                                      "&$selected": Object {
-                                                        "backgroundColor": "#4085C6 !important",
-                                                        "color": "#FFFFFF",
+                                                      "root": Object {
+                                                        "&$selected": Object {
+                                                          "backgroundColor": "#4085C6 !important",
+                                                          "color": "#FFFFFF",
+                                                        },
                                                       },
                                                     },
                                                   },
@@ -4132,9 +4144,11 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                     },
                                   },
                                   "MuiMenuItem": Object {
-                                    "&$selected": Object {
-                                      "backgroundColor": "#4085C6 !important",
-                                      "color": "#FFFFFF",
+                                    "root": Object {
+                                      "&$selected": Object {
+                                        "backgroundColor": "#4085C6 !important",
+                                        "color": "#FFFFFF",
+                                      },
                                     },
                                   },
                                 },
@@ -4726,9 +4740,11 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                                 },
                                               },
                                               "MuiMenuItem": Object {
-                                                "&$selected": Object {
-                                                  "backgroundColor": "#4085C6 !important",
-                                                  "color": "#FFFFFF",
+                                                "root": Object {
+                                                  "&$selected": Object {
+                                                    "backgroundColor": "#4085C6 !important",
+                                                    "color": "#FFFFFF",
+                                                  },
                                                 },
                                               },
                                             },
@@ -5236,9 +5252,11 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                                       },
                                                     },
                                                     "MuiMenuItem": Object {
-                                                      "&$selected": Object {
-                                                        "backgroundColor": "#4085C6 !important",
-                                                        "color": "#FFFFFF",
+                                                      "root": Object {
+                                                        "&$selected": Object {
+                                                          "backgroundColor": "#4085C6 !important",
+                                                          "color": "#FFFFFF",
+                                                        },
                                                       },
                                                     },
                                                   },
@@ -5780,9 +5798,11 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                     },
                                   },
                                   "MuiMenuItem": Object {
-                                    "&$selected": Object {
-                                      "backgroundColor": "#4085C6 !important",
-                                      "color": "#FFFFFF",
+                                    "root": Object {
+                                      "&$selected": Object {
+                                        "backgroundColor": "#4085C6 !important",
+                                        "color": "#FFFFFF",
+                                      },
                                     },
                                   },
                                 },
@@ -6386,9 +6406,11 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                                 },
                                               },
                                               "MuiMenuItem": Object {
-                                                "&$selected": Object {
-                                                  "backgroundColor": "#4085C6 !important",
-                                                  "color": "#FFFFFF",
+                                                "root": Object {
+                                                  "&$selected": Object {
+                                                    "backgroundColor": "#4085C6 !important",
+                                                    "color": "#FFFFFF",
+                                                  },
                                                 },
                                               },
                                             },
@@ -6896,9 +6918,11 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                                       },
                                                     },
                                                     "MuiMenuItem": Object {
-                                                      "&$selected": Object {
-                                                        "backgroundColor": "#4085C6 !important",
-                                                        "color": "#FFFFFF",
+                                                      "root": Object {
+                                                        "&$selected": Object {
+                                                          "backgroundColor": "#4085C6 !important",
+                                                          "color": "#FFFFFF",
+                                                        },
                                                       },
                                                     },
                                                   },
@@ -7440,9 +7464,11 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                     },
                                   },
                                   "MuiMenuItem": Object {
-                                    "&$selected": Object {
-                                      "backgroundColor": "#4085C6 !important",
-                                      "color": "#FFFFFF",
+                                    "root": Object {
+                                      "&$selected": Object {
+                                        "backgroundColor": "#4085C6 !important",
+                                        "color": "#FFFFFF",
+                                      },
                                     },
                                   },
                                 },
@@ -8034,9 +8060,11 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                                 },
                                               },
                                               "MuiMenuItem": Object {
-                                                "&$selected": Object {
-                                                  "backgroundColor": "#4085C6 !important",
-                                                  "color": "#FFFFFF",
+                                                "root": Object {
+                                                  "&$selected": Object {
+                                                    "backgroundColor": "#4085C6 !important",
+                                                    "color": "#FFFFFF",
+                                                  },
                                                 },
                                               },
                                             },
@@ -8544,9 +8572,11 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                                       },
                                                     },
                                                     "MuiMenuItem": Object {
-                                                      "&$selected": Object {
-                                                        "backgroundColor": "#4085C6 !important",
-                                                        "color": "#FFFFFF",
+                                                      "root": Object {
+                                                        "&$selected": Object {
+                                                          "backgroundColor": "#4085C6 !important",
+                                                          "color": "#FFFFFF",
+                                                        },
                                                       },
                                                     },
                                                   },
@@ -9088,9 +9118,11 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                     },
                                   },
                                   "MuiMenuItem": Object {
-                                    "&$selected": Object {
-                                      "backgroundColor": "#4085C6 !important",
-                                      "color": "#FFFFFF",
+                                    "root": Object {
+                                      "&$selected": Object {
+                                        "backgroundColor": "#4085C6 !important",
+                                        "color": "#FFFFFF",
+                                      },
                                     },
                                   },
                                 },
@@ -9682,9 +9714,11 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                                 },
                                               },
                                               "MuiMenuItem": Object {
-                                                "&$selected": Object {
-                                                  "backgroundColor": "#4085C6 !important",
-                                                  "color": "#FFFFFF",
+                                                "root": Object {
+                                                  "&$selected": Object {
+                                                    "backgroundColor": "#4085C6 !important",
+                                                    "color": "#FFFFFF",
+                                                  },
                                                 },
                                               },
                                             },
@@ -10192,9 +10226,11 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                                       },
                                                     },
                                                     "MuiMenuItem": Object {
-                                                      "&$selected": Object {
-                                                        "backgroundColor": "#4085C6 !important",
-                                                        "color": "#FFFFFF",
+                                                      "root": Object {
+                                                        "&$selected": Object {
+                                                          "backgroundColor": "#4085C6 !important",
+                                                          "color": "#FFFFFF",
+                                                        },
                                                       },
                                                     },
                                                   },
@@ -10736,9 +10772,11 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                     },
                                   },
                                   "MuiMenuItem": Object {
-                                    "&$selected": Object {
-                                      "backgroundColor": "#4085C6 !important",
-                                      "color": "#FFFFFF",
+                                    "root": Object {
+                                      "&$selected": Object {
+                                        "backgroundColor": "#4085C6 !important",
+                                        "color": "#FFFFFF",
+                                      },
                                     },
                                   },
                                 },
@@ -11445,9 +11483,11 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                                   },
                                                 },
                                                 "MuiMenuItem": Object {
-                                                  "&$selected": Object {
-                                                    "backgroundColor": "#4085C6 !important",
-                                                    "color": "#FFFFFF",
+                                                  "root": Object {
+                                                    "&$selected": Object {
+                                                      "backgroundColor": "#4085C6 !important",
+                                                      "color": "#FFFFFF",
+                                                    },
                                                   },
                                                 },
                                               },
@@ -11955,9 +11995,11 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                                         },
                                                       },
                                                       "MuiMenuItem": Object {
-                                                        "&$selected": Object {
-                                                          "backgroundColor": "#4085C6 !important",
-                                                          "color": "#FFFFFF",
+                                                        "root": Object {
+                                                          "&$selected": Object {
+                                                            "backgroundColor": "#4085C6 !important",
+                                                            "color": "#FFFFFF",
+                                                          },
                                                         },
                                                       },
                                                     },
@@ -12499,9 +12541,11 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                       },
                                     },
                                     "MuiMenuItem": Object {
-                                      "&$selected": Object {
-                                        "backgroundColor": "#4085C6 !important",
-                                        "color": "#FFFFFF",
+                                      "root": Object {
+                                        "&$selected": Object {
+                                          "backgroundColor": "#4085C6 !important",
+                                          "color": "#FFFFFF",
+                                        },
                                       },
                                     },
                                   },
@@ -13414,9 +13458,11 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                 },
               },
               "MuiMenuItem": Object {
-                "&$selected": Object {
-                  "backgroundColor": "#4085C6 !important",
-                  "color": "#FFFFFF",
+                "root": Object {
+                  "&$selected": Object {
+                    "backgroundColor": "#4085C6 !important",
+                    "color": "#FFFFFF",
+                  },
                 },
               },
             },
@@ -14190,9 +14236,11 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                                 },
                                               },
                                               "MuiMenuItem": Object {
-                                                "&$selected": Object {
-                                                  "backgroundColor": "#4085C6 !important",
-                                                  "color": "#FFFFFF",
+                                                "root": Object {
+                                                  "&$selected": Object {
+                                                    "backgroundColor": "#4085C6 !important",
+                                                    "color": "#FFFFFF",
+                                                  },
                                                 },
                                               },
                                             },
@@ -14700,9 +14748,11 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                                       },
                                                     },
                                                     "MuiMenuItem": Object {
-                                                      "&$selected": Object {
-                                                        "backgroundColor": "#4085C6 !important",
-                                                        "color": "#FFFFFF",
+                                                      "root": Object {
+                                                        "&$selected": Object {
+                                                          "backgroundColor": "#4085C6 !important",
+                                                          "color": "#FFFFFF",
+                                                        },
                                                       },
                                                     },
                                                   },
@@ -15246,9 +15296,11 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                     },
                                   },
                                   "MuiMenuItem": Object {
-                                    "&$selected": Object {
-                                      "backgroundColor": "#4085C6 !important",
-                                      "color": "#FFFFFF",
+                                    "root": Object {
+                                      "&$selected": Object {
+                                        "backgroundColor": "#4085C6 !important",
+                                        "color": "#FFFFFF",
+                                      },
                                     },
                                   },
                                 },
@@ -15899,9 +15951,11 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                                                 },
                                                               },
                                                               "MuiMenuItem": Object {
-                                                                "&$selected": Object {
-                                                                  "backgroundColor": "#4085C6 !important",
-                                                                  "color": "#FFFFFF",
+                                                                "root": Object {
+                                                                  "&$selected": Object {
+                                                                    "backgroundColor": "#4085C6 !important",
+                                                                    "color": "#FFFFFF",
+                                                                  },
                                                                 },
                                                               },
                                                             },
@@ -16407,9 +16461,11 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                                                       },
                                                                     },
                                                                     "MuiMenuItem": Object {
-                                                                      "&$selected": Object {
-                                                                        "backgroundColor": "#4085C6 !important",
-                                                                        "color": "#FFFFFF",
+                                                                      "root": Object {
+                                                                        "&$selected": Object {
+                                                                          "backgroundColor": "#4085C6 !important",
+                                                                          "color": "#FFFFFF",
+                                                                        },
                                                                       },
                                                                     },
                                                                   },
@@ -17090,9 +17146,11 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                                 },
                                               },
                                               "MuiMenuItem": Object {
-                                                "&$selected": Object {
-                                                  "backgroundColor": "#4085C6 !important",
-                                                  "color": "#FFFFFF",
+                                                "root": Object {
+                                                  "&$selected": Object {
+                                                    "backgroundColor": "#4085C6 !important",
+                                                    "color": "#FFFFFF",
+                                                  },
                                                 },
                                               },
                                             },
@@ -17600,9 +17658,11 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                                       },
                                                     },
                                                     "MuiMenuItem": Object {
-                                                      "&$selected": Object {
-                                                        "backgroundColor": "#4085C6 !important",
-                                                        "color": "#FFFFFF",
+                                                      "root": Object {
+                                                        "&$selected": Object {
+                                                          "backgroundColor": "#4085C6 !important",
+                                                          "color": "#FFFFFF",
+                                                        },
                                                       },
                                                     },
                                                   },
@@ -18144,9 +18204,11 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                     },
                                   },
                                   "MuiMenuItem": Object {
-                                    "&$selected": Object {
-                                      "backgroundColor": "#4085C6 !important",
-                                      "color": "#FFFFFF",
+                                    "root": Object {
+                                      "&$selected": Object {
+                                        "backgroundColor": "#4085C6 !important",
+                                        "color": "#FFFFFF",
+                                      },
                                     },
                                   },
                                 },
@@ -18738,9 +18800,11 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                                 },
                                               },
                                               "MuiMenuItem": Object {
-                                                "&$selected": Object {
-                                                  "backgroundColor": "#4085C6 !important",
-                                                  "color": "#FFFFFF",
+                                                "root": Object {
+                                                  "&$selected": Object {
+                                                    "backgroundColor": "#4085C6 !important",
+                                                    "color": "#FFFFFF",
+                                                  },
                                                 },
                                               },
                                             },
@@ -19248,9 +19312,11 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                                       },
                                                     },
                                                     "MuiMenuItem": Object {
-                                                      "&$selected": Object {
-                                                        "backgroundColor": "#4085C6 !important",
-                                                        "color": "#FFFFFF",
+                                                      "root": Object {
+                                                        "&$selected": Object {
+                                                          "backgroundColor": "#4085C6 !important",
+                                                          "color": "#FFFFFF",
+                                                        },
                                                       },
                                                     },
                                                   },
@@ -19792,9 +19858,11 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                     },
                                   },
                                   "MuiMenuItem": Object {
-                                    "&$selected": Object {
-                                      "backgroundColor": "#4085C6 !important",
-                                      "color": "#FFFFFF",
+                                    "root": Object {
+                                      "&$selected": Object {
+                                        "backgroundColor": "#4085C6 !important",
+                                        "color": "#FFFFFF",
+                                      },
                                     },
                                   },
                                 },
@@ -20398,9 +20466,11 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                                 },
                                               },
                                               "MuiMenuItem": Object {
-                                                "&$selected": Object {
-                                                  "backgroundColor": "#4085C6 !important",
-                                                  "color": "#FFFFFF",
+                                                "root": Object {
+                                                  "&$selected": Object {
+                                                    "backgroundColor": "#4085C6 !important",
+                                                    "color": "#FFFFFF",
+                                                  },
                                                 },
                                               },
                                             },
@@ -20908,9 +20978,11 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                                       },
                                                     },
                                                     "MuiMenuItem": Object {
-                                                      "&$selected": Object {
-                                                        "backgroundColor": "#4085C6 !important",
-                                                        "color": "#FFFFFF",
+                                                      "root": Object {
+                                                        "&$selected": Object {
+                                                          "backgroundColor": "#4085C6 !important",
+                                                          "color": "#FFFFFF",
+                                                        },
                                                       },
                                                     },
                                                   },
@@ -21452,9 +21524,11 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                     },
                                   },
                                   "MuiMenuItem": Object {
-                                    "&$selected": Object {
-                                      "backgroundColor": "#4085C6 !important",
-                                      "color": "#FFFFFF",
+                                    "root": Object {
+                                      "&$selected": Object {
+                                        "backgroundColor": "#4085C6 !important",
+                                        "color": "#FFFFFF",
+                                      },
                                     },
                                   },
                                 },
@@ -22046,9 +22120,11 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                                 },
                                               },
                                               "MuiMenuItem": Object {
-                                                "&$selected": Object {
-                                                  "backgroundColor": "#4085C6 !important",
-                                                  "color": "#FFFFFF",
+                                                "root": Object {
+                                                  "&$selected": Object {
+                                                    "backgroundColor": "#4085C6 !important",
+                                                    "color": "#FFFFFF",
+                                                  },
                                                 },
                                               },
                                             },
@@ -22556,9 +22632,11 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                                       },
                                                     },
                                                     "MuiMenuItem": Object {
-                                                      "&$selected": Object {
-                                                        "backgroundColor": "#4085C6 !important",
-                                                        "color": "#FFFFFF",
+                                                      "root": Object {
+                                                        "&$selected": Object {
+                                                          "backgroundColor": "#4085C6 !important",
+                                                          "color": "#FFFFFF",
+                                                        },
                                                       },
                                                     },
                                                   },
@@ -23100,9 +23178,11 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                     },
                                   },
                                   "MuiMenuItem": Object {
-                                    "&$selected": Object {
-                                      "backgroundColor": "#4085C6 !important",
-                                      "color": "#FFFFFF",
+                                    "root": Object {
+                                      "&$selected": Object {
+                                        "backgroundColor": "#4085C6 !important",
+                                        "color": "#FFFFFF",
+                                      },
                                     },
                                   },
                                 },
@@ -23694,9 +23774,11 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                                 },
                                               },
                                               "MuiMenuItem": Object {
-                                                "&$selected": Object {
-                                                  "backgroundColor": "#4085C6 !important",
-                                                  "color": "#FFFFFF",
+                                                "root": Object {
+                                                  "&$selected": Object {
+                                                    "backgroundColor": "#4085C6 !important",
+                                                    "color": "#FFFFFF",
+                                                  },
                                                 },
                                               },
                                             },
@@ -24204,9 +24286,11 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                                       },
                                                     },
                                                     "MuiMenuItem": Object {
-                                                      "&$selected": Object {
-                                                        "backgroundColor": "#4085C6 !important",
-                                                        "color": "#FFFFFF",
+                                                      "root": Object {
+                                                        "&$selected": Object {
+                                                          "backgroundColor": "#4085C6 !important",
+                                                          "color": "#FFFFFF",
+                                                        },
                                                       },
                                                     },
                                                   },
@@ -24748,9 +24832,11 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                     },
                                   },
                                   "MuiMenuItem": Object {
-                                    "&$selected": Object {
-                                      "backgroundColor": "#4085C6 !important",
-                                      "color": "#FFFFFF",
+                                    "root": Object {
+                                      "&$selected": Object {
+                                        "backgroundColor": "#4085C6 !important",
+                                        "color": "#FFFFFF",
+                                      },
                                     },
                                   },
                                 },
@@ -25457,9 +25543,11 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                                   },
                                                 },
                                                 "MuiMenuItem": Object {
-                                                  "&$selected": Object {
-                                                    "backgroundColor": "#4085C6 !important",
-                                                    "color": "#FFFFFF",
+                                                  "root": Object {
+                                                    "&$selected": Object {
+                                                      "backgroundColor": "#4085C6 !important",
+                                                      "color": "#FFFFFF",
+                                                    },
                                                   },
                                                 },
                                               },
@@ -25967,9 +26055,11 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                                         },
                                                       },
                                                       "MuiMenuItem": Object {
-                                                        "&$selected": Object {
-                                                          "backgroundColor": "#4085C6 !important",
-                                                          "color": "#FFFFFF",
+                                                        "root": Object {
+                                                          "&$selected": Object {
+                                                            "backgroundColor": "#4085C6 !important",
+                                                            "color": "#FFFFFF",
+                                                          },
                                                         },
                                                       },
                                                     },
@@ -26511,9 +26601,11 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                       },
                                     },
                                     "MuiMenuItem": Object {
-                                      "&$selected": Object {
-                                        "backgroundColor": "#4085C6 !important",
-                                        "color": "#FFFFFF",
+                                      "root": Object {
+                                        "&$selected": Object {
+                                          "backgroundColor": "#4085C6 !important",
+                                          "color": "#FFFFFF",
+                                        },
                                       },
                                     },
                                   },

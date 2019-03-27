@@ -170,9 +170,11 @@ exports[`Facet filter nested list item  should render inactive filter view 1`] =
                 },
               },
               "MuiMenuItem": Object {
-                "&$selected": Object {
-                  "backgroundColor": "#4085C6 !important",
-                  "color": "#FFFFFF",
+                "root": Object {
+                  "&$selected": Object {
+                    "backgroundColor": "#4085C6 !important",
+                    "color": "#FFFFFF",
+                  },
                 },
               },
             },
@@ -763,9 +765,11 @@ exports[`Facet filter nested list item  should render inactive filter view 1`] =
                                       },
                                     },
                                     "MuiMenuItem": Object {
-                                      "&$selected": Object {
-                                        "backgroundColor": "#4085C6 !important",
-                                        "color": "#FFFFFF",
+                                      "root": Object {
+                                        "&$selected": Object {
+                                          "backgroundColor": "#4085C6 !important",
+                                          "color": "#FFFFFF",
+                                        },
                                       },
                                     },
                                   },
@@ -1271,9 +1275,11 @@ exports[`Facet filter nested list item  should render inactive filter view 1`] =
                                             },
                                           },
                                           "MuiMenuItem": Object {
-                                            "&$selected": Object {
-                                              "backgroundColor": "#4085C6 !important",
-                                              "color": "#FFFFFF",
+                                            "root": Object {
+                                              "&$selected": Object {
+                                                "backgroundColor": "#4085C6 !important",
+                                                "color": "#FFFFFF",
+                                              },
                                             },
                                           },
                                         },

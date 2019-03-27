@@ -178,9 +178,11 @@ exports[`GrantListEditorForm should render default view 1`] = `
                 },
               },
               "MuiMenuItem": Object {
-                "&$selected": Object {
-                  "backgroundColor": "#4085C6 !important",
-                  "color": "#FFFFFF",
+                "root": Object {
+                  "&$selected": Object {
+                    "backgroundColor": "#4085C6 !important",
+                    "color": "#FFFFFF",
+                  },
                 },
               },
             },
@@ -2571,9 +2573,11 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                                     },
                                                                   },
                                                                   "MuiMenuItem": Object {
-                                                                    "&$selected": Object {
-                                                                      "backgroundColor": "#4085C6 !important",
-                                                                      "color": "#FFFFFF",
+                                                                    "root": Object {
+                                                                      "&$selected": Object {
+                                                                        "backgroundColor": "#4085C6 !important",
+                                                                        "color": "#FFFFFF",
+                                                                      },
                                                                     },
                                                                   },
                                                                 },
@@ -3440,9 +3444,11 @@ exports[`GrantListEditorForm should render default view 2`] = `
                 },
               },
               "MuiMenuItem": Object {
-                "&$selected": Object {
-                  "backgroundColor": "#4085C6 !important",
-                  "color": "#FFFFFF",
+                "root": Object {
+                  "&$selected": Object {
+                    "backgroundColor": "#4085C6 !important",
+                    "color": "#FFFFFF",
+                  },
                 },
               },
             },
@@ -5811,9 +5817,11 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                                                 },
                                                               },
                                                               "MuiMenuItem": Object {
-                                                                "&$selected": Object {
-                                                                  "backgroundColor": "#4085C6 !important",
-                                                                  "color": "#FFFFFF",
+                                                                "root": Object {
+                                                                  "&$selected": Object {
+                                                                    "backgroundColor": "#4085C6 !important",
+                                                                    "color": "#FFFFFF",
+                                                                  },
                                                                 },
                                                               },
                                                             },

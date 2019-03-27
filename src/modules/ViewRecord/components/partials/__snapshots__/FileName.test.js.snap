@@ -116,9 +116,11 @@ exports[`File Name Component  should display file name link 1`] = `
                 },
               },
               "MuiMenuItem": Object {
-                "&$selected": Object {
-                  "backgroundColor": "#4085C6 !important",
-                  "color": "#FFFFFF",
+                "root": Object {
+                  "&$selected": Object {
+                    "backgroundColor": "#4085C6 !important",
+                    "color": "#FFFFFF",
+                  },
                 },
               },
             },
@@ -857,9 +859,11 @@ exports[`File Name Component  should display file name link 1`] = `
                                     },
                                   },
                                   "MuiMenuItem": Object {
-                                    "&$selected": Object {
-                                      "backgroundColor": "#4085C6 !important",
-                                      "color": "#FFFFFF",
+                                    "root": Object {
+                                      "&$selected": Object {
+                                        "backgroundColor": "#4085C6 !important",
+                                        "color": "#FFFFFF",
+                                      },
                                     },
                                   },
                                 },
@@ -1297,9 +1301,11 @@ exports[`File Name Component  should display file name link 1`] = `
                                       },
                                     },
                                     "MuiMenuItem": Object {
-                                      "&$selected": Object {
-                                        "backgroundColor": "#4085C6 !important",
-                                        "color": "#FFFFFF",
+                                      "root": Object {
+                                        "&$selected": Object {
+                                          "backgroundColor": "#4085C6 !important",
+                                          "color": "#FFFFFF",
+                                        },
                                       },
                                     },
                                   },
@@ -1818,9 +1824,11 @@ exports[`File Name Component  should display file name link 1`] = `
                                 },
                               },
                               "MuiMenuItem": Object {
-                                "&$selected": Object {
-                                  "backgroundColor": "#4085C6 !important",
-                                  "color": "#FFFFFF",
+                                "root": Object {
+                                  "&$selected": Object {
+                                    "backgroundColor": "#4085C6 !important",
+                                    "color": "#FFFFFF",
+                                  },
                                 },
                               },
                             },
@@ -2467,9 +2475,11 @@ exports[`File Name Component  should render audio player 1`] = `
                 },
               },
               "MuiMenuItem": Object {
-                "&$selected": Object {
-                  "backgroundColor": "#4085C6 !important",
-                  "color": "#FFFFFF",
+                "root": Object {
+                  "&$selected": Object {
+                    "backgroundColor": "#4085C6 !important",
+                    "color": "#FFFFFF",
+                  },
                 },
               },
             },
@@ -3218,9 +3228,11 @@ exports[`File Name Component  should render audio player 1`] = `
                                     },
                                   },
                                   "MuiMenuItem": Object {
-                                    "&$selected": Object {
-                                      "backgroundColor": "#4085C6 !important",
-                                      "color": "#FFFFFF",
+                                    "root": Object {
+                                      "&$selected": Object {
+                                        "backgroundColor": "#4085C6 !important",
+                                        "color": "#FFFFFF",
+                                      },
                                     },
                                   },
                                 },
@@ -3658,9 +3670,11 @@ exports[`File Name Component  should render audio player 1`] = `
                                       },
                                     },
                                     "MuiMenuItem": Object {
-                                      "&$selected": Object {
-                                        "backgroundColor": "#4085C6 !important",
-                                        "color": "#FFFFFF",
+                                      "root": Object {
+                                        "&$selected": Object {
+                                          "backgroundColor": "#4085C6 !important",
+                                          "color": "#FFFFFF",
+                                        },
                                       },
                                     },
                                   },
@@ -4179,9 +4193,11 @@ exports[`File Name Component  should render audio player 1`] = `
                                 },
                               },
                               "MuiMenuItem": Object {
-                                "&$selected": Object {
-                                  "backgroundColor": "#4085C6 !important",
-                                  "color": "#FFFFFF",
+                                "root": Object {
+                                  "&$selected": Object {
+                                    "backgroundColor": "#4085C6 !important",
+                                    "color": "#FFFFFF",
+                                  },
                                 },
                               },
                             },
@@ -5040,9 +5056,11 @@ exports[`File Name Component  should render component and display file name only
                 },
               },
               "MuiMenuItem": Object {
-                "&$selected": Object {
-                  "backgroundColor": "#4085C6 !important",
-                  "color": "#FFFFFF",
+                "root": Object {
+                  "&$selected": Object {
+                    "backgroundColor": "#4085C6 !important",
+                    "color": "#FFFFFF",
+                  },
                 },
               },
             },
@@ -5825,9 +5843,11 @@ exports[`File Name Component  should render component and display file name only
                                     },
                                   },
                                   "MuiMenuItem": Object {
-                                    "&$selected": Object {
-                                      "backgroundColor": "#4085C6 !important",
-                                      "color": "#FFFFFF",
+                                    "root": Object {
+                                      "&$selected": Object {
+                                        "backgroundColor": "#4085C6 !important",
+                                        "color": "#FFFFFF",
+                                      },
                                     },
                                   },
                                 },
@@ -6301,9 +6321,11 @@ exports[`File Name Component  should render component and display file name only
                                 },
                               },
                               "MuiMenuItem": Object {
-                                "&$selected": Object {
-                                  "backgroundColor": "#4085C6 !important",
-                                  "color": "#FFFFFF",
+                                "root": Object {
+                                  "&$selected": Object {
+                                    "backgroundColor": "#4085C6 !important",
+                                    "color": "#FFFFFF",
+                                  },
                                 },
                               },
                             },
@@ -6950,9 +6972,11 @@ exports[`File Name Component  should run onFileSelect function on click 1`] = `
                 },
               },
               "MuiMenuItem": Object {
-                "&$selected": Object {
-                  "backgroundColor": "#4085C6 !important",
-                  "color": "#FFFFFF",
+                "root": Object {
+                  "&$selected": Object {
+                    "backgroundColor": "#4085C6 !important",
+                    "color": "#FFFFFF",
+                  },
                 },
               },
             },
@@ -7765,9 +7789,11 @@ exports[`File Name Component  should run onFileSelect function on click 1`] = `
                                     },
                                   },
                                   "MuiMenuItem": Object {
-                                    "&$selected": Object {
-                                      "backgroundColor": "#4085C6 !important",
-                                      "color": "#FFFFFF",
+                                    "root": Object {
+                                      "&$selected": Object {
+                                        "backgroundColor": "#4085C6 !important",
+                                        "color": "#FFFFFF",
+                                      },
                                     },
                                   },
                                 },
@@ -8247,9 +8273,11 @@ exports[`File Name Component  should run onFileSelect function on click 1`] = `
                                 },
                               },
                               "MuiMenuItem": Object {
-                                "&$selected": Object {
-                                  "backgroundColor": "#4085C6 !important",
-                                  "color": "#FFFFFF",
+                                "root": Object {
+                                  "&$selected": Object {
+                                    "backgroundColor": "#4085C6 !important",
+                                    "color": "#FFFFFF",
+                                  },
                                 },
                               },
                             },
@@ -8896,9 +8924,11 @@ exports[`File Name Component  should run onFileSelect function on key press 1`] 
                 },
               },
               "MuiMenuItem": Object {
-                "&$selected": Object {
-                  "backgroundColor": "#4085C6 !important",
-                  "color": "#FFFFFF",
+                "root": Object {
+                  "&$selected": Object {
+                    "backgroundColor": "#4085C6 !important",
+                    "color": "#FFFFFF",
+                  },
                 },
               },
             },
@@ -9721,9 +9751,11 @@ exports[`File Name Component  should run onFileSelect function on key press 1`] 
                                     },
                                   },
                                   "MuiMenuItem": Object {
-                                    "&$selected": Object {
-                                      "backgroundColor": "#4085C6 !important",
-                                      "color": "#FFFFFF",
+                                    "root": Object {
+                                      "&$selected": Object {
+                                        "backgroundColor": "#4085C6 !important",
+                                        "color": "#FFFFFF",
+                                      },
                                     },
                                   },
                                 },
@@ -10203,9 +10235,11 @@ exports[`File Name Component  should run onFileSelect function on key press 1`] 
                                 },
                               },
                               "MuiMenuItem": Object {
-                                "&$selected": Object {
-                                  "backgroundColor": "#4085C6 !important",
-                                  "color": "#FFFFFF",
+                                "root": Object {
+                                  "&$selected": Object {
+                                    "backgroundColor": "#4085C6 !important",
+                                    "color": "#FFFFFF",
+                                  },
                                 },
                               },
                             },

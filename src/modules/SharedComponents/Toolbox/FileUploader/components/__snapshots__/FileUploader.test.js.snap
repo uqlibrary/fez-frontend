@@ -143,9 +143,11 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                 },
               },
               "MuiMenuItem": Object {
-                "&$selected": Object {
-                  "backgroundColor": "#4085C6 !important",
-                  "color": "#FFFFFF",
+                "root": Object {
+                  "&$selected": Object {
+                    "backgroundColor": "#4085C6 !important",
+                    "color": "#FFFFFF",
+                  },
                 },
               },
             },
@@ -778,9 +780,11 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                           },
                         },
                         "MuiMenuItem": Object {
-                          "&$selected": Object {
-                            "backgroundColor": "#4085C6 !important",
-                            "color": "#FFFFFF",
+                          "root": Object {
+                            "&$selected": Object {
+                              "backgroundColor": "#4085C6 !important",
+                              "color": "#FFFFFF",
+                            },
                           },
                         },
                       },
@@ -1291,9 +1295,11 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                           },
                         },
                         "MuiMenuItem": Object {
-                          "&$selected": Object {
-                            "backgroundColor": "#4085C6 !important",
-                            "color": "#FFFFFF",
+                          "root": Object {
+                            "&$selected": Object {
+                              "backgroundColor": "#4085C6 !important",
+                              "color": "#FFFFFF",
+                            },
                           },
                         },
                       },
@@ -2713,9 +2719,11 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                                 },
                                                               },
                                                               "MuiMenuItem": Object {
-                                                                "&$selected": Object {
-                                                                  "backgroundColor": "#4085C6 !important",
-                                                                  "color": "#FFFFFF",
+                                                                "root": Object {
+                                                                  "&$selected": Object {
+                                                                    "backgroundColor": "#4085C6 !important",
+                                                                    "color": "#FFFFFF",
+                                                                  },
                                                                 },
                                                               },
                                                             },
@@ -3880,9 +3888,11 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                 },
               },
               "MuiMenuItem": Object {
-                "&$selected": Object {
-                  "backgroundColor": "#4085C6 !important",
-                  "color": "#FFFFFF",
+                "root": Object {
+                  "&$selected": Object {
+                    "backgroundColor": "#4085C6 !important",
+                    "color": "#FFFFFF",
+                  },
                 },
               },
             },
@@ -4515,9 +4525,11 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                           },
                         },
                         "MuiMenuItem": Object {
-                          "&$selected": Object {
-                            "backgroundColor": "#4085C6 !important",
-                            "color": "#FFFFFF",
+                          "root": Object {
+                            "&$selected": Object {
+                              "backgroundColor": "#4085C6 !important",
+                              "color": "#FFFFFF",
+                            },
                           },
                         },
                       },
@@ -5028,9 +5040,11 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                           },
                         },
                         "MuiMenuItem": Object {
-                          "&$selected": Object {
-                            "backgroundColor": "#4085C6 !important",
-                            "color": "#FFFFFF",
+                          "root": Object {
+                            "&$selected": Object {
+                              "backgroundColor": "#4085C6 !important",
+                              "color": "#FFFFFF",
+                            },
                           },
                         },
                       },
@@ -6450,9 +6464,11 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                                 },
                                                               },
                                                               "MuiMenuItem": Object {
-                                                                "&$selected": Object {
-                                                                  "backgroundColor": "#4085C6 !important",
-                                                                  "color": "#FFFFFF",
+                                                                "root": Object {
+                                                                  "&$selected": Object {
+                                                                    "backgroundColor": "#4085C6 !important",
+                                                                    "color": "#FFFFFF",
+                                                                  },
                                                                 },
                                                               },
                                                             },

@@ -5174,9 +5174,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                 },
               },
               "MuiMenuItem": Object {
-                "&$selected": Object {
-                  "backgroundColor": "#4085C6 !important",
-                  "color": "#FFFFFF",
+                "root": Object {
+                  "&$selected": Object {
+                    "backgroundColor": "#4085C6 !important",
+                    "color": "#FFFFFF",
+                  },
                 },
               },
             },
@@ -6917,9 +6919,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                               },
                                                             },
                                                             "MuiMenuItem": Object {
-                                                              "&$selected": Object {
-                                                                "backgroundColor": "#4085C6 !important",
-                                                                "color": "#FFFFFF",
+                                                              "root": Object {
+                                                                "&$selected": Object {
+                                                                  "backgroundColor": "#4085C6 !important",
+                                                                  "color": "#FFFFFF",
+                                                                },
                                                               },
                                                             },
                                                           },
@@ -7918,9 +7922,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                       },
                                                                     },
                                                                     "MuiMenuItem": Object {
-                                                                      "&$selected": Object {
-                                                                        "backgroundColor": "#4085C6 !important",
-                                                                        "color": "#FFFFFF",
+                                                                      "root": Object {
+                                                                        "&$selected": Object {
+                                                                          "backgroundColor": "#4085C6 !important",
+                                                                          "color": "#FFFFFF",
+                                                                        },
                                                                       },
                                                                     },
                                                                   },
@@ -8733,9 +8739,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                           },
                                                                         },
                                                                         "MuiMenuItem": Object {
-                                                                          "&$selected": Object {
-                                                                            "backgroundColor": "#4085C6 !important",
-                                                                            "color": "#FFFFFF",
+                                                                          "root": Object {
+                                                                            "&$selected": Object {
+                                                                              "backgroundColor": "#4085C6 !important",
+                                                                              "color": "#FFFFFF",
+                                                                            },
                                                                           },
                                                                         },
                                                                       },
@@ -9532,9 +9540,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                       },
                                                                     },
                                                                     "MuiMenuItem": Object {
-                                                                      "&$selected": Object {
-                                                                        "backgroundColor": "#4085C6 !important",
-                                                                        "color": "#FFFFFF",
+                                                                      "root": Object {
+                                                                        "&$selected": Object {
+                                                                          "backgroundColor": "#4085C6 !important",
+                                                                          "color": "#FFFFFF",
+                                                                        },
                                                                       },
                                                                     },
                                                                   },
@@ -10005,9 +10015,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                               },
                                                                             },
                                                                             "MuiMenuItem": Object {
-                                                                              "&$selected": Object {
-                                                                                "backgroundColor": "#4085C6 !important",
-                                                                                "color": "#FFFFFF",
+                                                                              "root": Object {
+                                                                                "&$selected": Object {
+                                                                                  "backgroundColor": "#4085C6 !important",
+                                                                                  "color": "#FFFFFF",
+                                                                                },
                                                                               },
                                                                             },
                                                                           },
@@ -11158,9 +11170,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                               },
                                                                             },
                                                                             "MuiMenuItem": Object {
-                                                                              "&$selected": Object {
-                                                                                "backgroundColor": "#4085C6 !important",
-                                                                                "color": "#FFFFFF",
+                                                                              "root": Object {
+                                                                                "&$selected": Object {
+                                                                                  "backgroundColor": "#4085C6 !important",
+                                                                                  "color": "#FFFFFF",
+                                                                                },
                                                                               },
                                                                             },
                                                                           },
@@ -11809,9 +11823,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                               },
                                                             },
                                                             "MuiMenuItem": Object {
-                                                              "&$selected": Object {
-                                                                "backgroundColor": "#4085C6 !important",
-                                                                "color": "#FFFFFF",
+                                                              "root": Object {
+                                                                "&$selected": Object {
+                                                                  "backgroundColor": "#4085C6 !important",
+                                                                  "color": "#FFFFFF",
+                                                                },
                                                               },
                                                             },
                                                           },
@@ -12283,9 +12299,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                     },
                                                                   },
                                                                   "MuiMenuItem": Object {
-                                                                    "&$selected": Object {
-                                                                      "backgroundColor": "#4085C6 !important",
-                                                                      "color": "#FFFFFF",
+                                                                    "root": Object {
+                                                                      "&$selected": Object {
+                                                                        "backgroundColor": "#4085C6 !important",
+                                                                        "color": "#FFFFFF",
+                                                                      },
                                                                     },
                                                                   },
                                                                 },
@@ -13126,9 +13144,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                   },
                                 },
                                 "MuiMenuItem": Object {
-                                  "&$selected": Object {
-                                    "backgroundColor": "#4085C6 !important",
-                                    "color": "#FFFFFF",
+                                  "root": Object {
+                                    "&$selected": Object {
+                                      "backgroundColor": "#4085C6 !important",
+                                      "color": "#FFFFFF",
+                                    },
                                   },
                                 },
                               },
@@ -13593,9 +13613,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                       },
                                     },
                                     "MuiMenuItem": Object {
-                                      "&$selected": Object {
-                                        "backgroundColor": "#4085C6 !important",
-                                        "color": "#FFFFFF",
+                                      "root": Object {
+                                        "&$selected": Object {
+                                          "backgroundColor": "#4085C6 !important",
+                                          "color": "#FFFFFF",
+                                        },
                                       },
                                     },
                                   },
@@ -14449,9 +14471,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                           },
                                         },
                                         "MuiMenuItem": Object {
-                                          "&$selected": Object {
-                                            "backgroundColor": "#4085C6 !important",
-                                            "color": "#FFFFFF",
+                                          "root": Object {
+                                            "&$selected": Object {
+                                              "backgroundColor": "#4085C6 !important",
+                                              "color": "#FFFFFF",
+                                            },
                                           },
                                         },
                                       },
@@ -14891,9 +14915,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                 },
                                               },
                                               "MuiMenuItem": Object {
-                                                "&$selected": Object {
-                                                  "backgroundColor": "#4085C6 !important",
-                                                  "color": "#FFFFFF",
+                                                "root": Object {
+                                                  "&$selected": Object {
+                                                    "backgroundColor": "#4085C6 !important",
+                                                    "color": "#FFFFFF",
+                                                  },
                                                 },
                                               },
                                             },
@@ -16202,9 +16228,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                     },
                                                                                   },
                                                                                   "MuiMenuItem": Object {
-                                                                                    "&$selected": Object {
-                                                                                      "backgroundColor": "#4085C6 !important",
-                                                                                      "color": "#FFFFFF",
+                                                                                    "root": Object {
+                                                                                      "&$selected": Object {
+                                                                                        "backgroundColor": "#4085C6 !important",
+                                                                                        "color": "#FFFFFF",
+                                                                                      },
                                                                                     },
                                                                                   },
                                                                                 },
@@ -16777,9 +16805,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                           },
                                                                                         },
                                                                                         "MuiMenuItem": Object {
-                                                                                          "&$selected": Object {
-                                                                                            "backgroundColor": "#4085C6 !important",
-                                                                                            "color": "#FFFFFF",
+                                                                                          "root": Object {
+                                                                                            "&$selected": Object {
+                                                                                              "backgroundColor": "#4085C6 !important",
+                                                                                              "color": "#FFFFFF",
+                                                                                            },
                                                                                           },
                                                                                         },
                                                                                       },
@@ -18342,9 +18372,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                             },
                                                                                           },
                                                                                           "MuiMenuItem": Object {
-                                                                                            "&$selected": Object {
-                                                                                              "backgroundColor": "#4085C6 !important",
-                                                                                              "color": "#FFFFFF",
+                                                                                            "root": Object {
+                                                                                              "&$selected": Object {
+                                                                                                "backgroundColor": "#4085C6 !important",
+                                                                                                "color": "#FFFFFF",
+                                                                                              },
                                                                                             },
                                                                                           },
                                                                                         },
@@ -18963,9 +18995,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                                   },
                                                                                                                 },
                                                                                                                 "MuiMenuItem": Object {
-                                                                                                                  "&$selected": Object {
-                                                                                                                    "backgroundColor": "#4085C6 !important",
-                                                                                                                    "color": "#FFFFFF",
+                                                                                                                  "root": Object {
+                                                                                                                    "&$selected": Object {
+                                                                                                                      "backgroundColor": "#4085C6 !important",
+                                                                                                                      "color": "#FFFFFF",
+                                                                                                                    },
                                                                                                                   },
                                                                                                                 },
                                                                                                               },
@@ -19494,9 +19528,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                                 },
                                                                                                               },
                                                                                                               "MuiMenuItem": Object {
-                                                                                                                "&$selected": Object {
-                                                                                                                  "backgroundColor": "#4085C6 !important",
-                                                                                                                  "color": "#FFFFFF",
+                                                                                                                "root": Object {
+                                                                                                                  "&$selected": Object {
+                                                                                                                    "backgroundColor": "#4085C6 !important",
+                                                                                                                    "color": "#FFFFFF",
+                                                                                                                  },
                                                                                                                 },
                                                                                                               },
                                                                                                             },
@@ -20212,9 +20248,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                           },
                                                                                         },
                                                                                         "MuiMenuItem": Object {
-                                                                                          "&$selected": Object {
-                                                                                            "backgroundColor": "#4085C6 !important",
-                                                                                            "color": "#FFFFFF",
+                                                                                          "root": Object {
+                                                                                            "&$selected": Object {
+                                                                                              "backgroundColor": "#4085C6 !important",
+                                                                                              "color": "#FFFFFF",
+                                                                                            },
                                                                                           },
                                                                                         },
                                                                                       },
@@ -20693,9 +20731,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                     },
                                   },
                                   "MuiMenuItem": Object {
-                                    "&$selected": Object {
-                                      "backgroundColor": "#4085C6 !important",
-                                      "color": "#FFFFFF",
+                                    "root": Object {
+                                      "&$selected": Object {
+                                        "backgroundColor": "#4085C6 !important",
+                                        "color": "#FFFFFF",
+                                      },
                                     },
                                   },
                                 },
@@ -21158,9 +21198,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                         },
                                       },
                                       "MuiMenuItem": Object {
-                                        "&$selected": Object {
-                                          "backgroundColor": "#4085C6 !important",
-                                          "color": "#FFFFFF",
+                                        "root": Object {
+                                          "&$selected": Object {
+                                            "backgroundColor": "#4085C6 !important",
+                                            "color": "#FFFFFF",
+                                          },
                                         },
                                       },
                                     },
@@ -21662,9 +21704,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                   },
                                 },
                                 "MuiMenuItem": Object {
-                                  "&$selected": Object {
-                                    "backgroundColor": "#4085C6 !important",
-                                    "color": "#FFFFFF",
+                                  "root": Object {
+                                    "&$selected": Object {
+                                      "backgroundColor": "#4085C6 !important",
+                                      "color": "#FFFFFF",
+                                    },
                                   },
                                 },
                               },

@@ -116,9 +116,11 @@ exports[`MenuDrawer Snapshot should create component 1`] = `
                 },
               },
               "MuiMenuItem": Object {
-                "&$selected": Object {
-                  "backgroundColor": "#4085C6 !important",
-                  "color": "#FFFFFF",
+                "root": Object {
+                  "&$selected": Object {
+                    "backgroundColor": "#4085C6 !important",
+                    "color": "#FFFFFF",
+                  },
                 },
               },
             },
@@ -614,9 +616,11 @@ exports[`MenuDrawer Snapshot should create component 1`] = `
                       },
                     },
                     "MuiMenuItem": Object {
-                      "&$selected": Object {
-                        "backgroundColor": "#4085C6 !important",
-                        "color": "#FFFFFF",
+                      "root": Object {
+                        "&$selected": Object {
+                          "backgroundColor": "#4085C6 !important",
+                          "color": "#FFFFFF",
+                        },
                       },
                     },
                   },
@@ -1078,9 +1082,11 @@ exports[`MenuDrawer Snapshot should create component 1`] = `
                           },
                         },
                         "MuiMenuItem": Object {
-                          "&$selected": Object {
-                            "backgroundColor": "#4085C6 !important",
-                            "color": "#FFFFFF",
+                          "root": Object {
+                            "&$selected": Object {
+                              "backgroundColor": "#4085C6 !important",
+                              "color": "#FFFFFF",
+                            },
                           },
                         },
                       },
