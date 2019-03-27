@@ -3,6 +3,8 @@ import templates from 'locale/templates';
 
 const moment = require('moment');
 
+// Start helpers
+
 const pipe = (...functionsList) => values => functionsList.reduce((attributes, functionItem) => functionItem(attributes), values);
 
 const getIssueValues = (data) => {
@@ -15,19 +17,26 @@ const getIssueValues = (data) => {
 
 const getIssuesRequest = (text) => ({issue: text});
 
-export const getPidSearchKey = value => ({
-    rek_pid: value
-});
-
-export const getSecurityPolicySearchKey = value => ({
-    rek_security_policy: value
-});
-
 /* getFixIssueRequest - returns fix record issue request object
 * @returns {Object} issue request
 */
 export const getFixIssueRequest = pipe(getIssueValues, templates.issues.fixRecord, getIssuesRequest);
 
+// End helpers
+
+// Start Search Key Transformers
+
+export const getPidSearchKey = value => ({
+    rek_pid: value
+});
+
+export const getObjectTypeLookupSearchKey = value => ({
+    rek_object_type_lookup: value
+});
+
+export const getSecurityPolicySearchKey = value => ({
+    rek_security_policy: value
+});
 
 /* getRecordLinkSearchKey - returns link object formatted for record request
 * NOTE: link description is required to save link

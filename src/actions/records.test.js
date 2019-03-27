@@ -1179,7 +1179,8 @@ describe('Record action creators', () => {
 
             const recordWithSecurityPolicy = {
                 ...record,
-                rek_security_policy: 5
+                rek_security_policy: 5,
+                rek_object_type_lookup: 'Community'
             };
 
             mockApi

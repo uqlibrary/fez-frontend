@@ -287,6 +287,10 @@ export function getCommunitySecurity({ pid }) {
                 if (response.data[securityPolicySearchKey]) {
                     data.communitySecurity = response.data[securityPolicySearchKey];
                 }
+                const objectTypeLookup = Object.keys(transformers.getObjectTypeLookupSearchKey())[0];
+                if (response.data[objectTypeLookup]) {
+                    data.type = response.data[objectTypeLookup];
+                }
                 dispatch({
                     type: actions.SECURITY_POLICY_LOADED,
                     payload: data

@@ -64,7 +64,6 @@ export const SecurityCard = ({ disabled, entity, fieldID, text, selectedPolicyKe
                 </Grid>
                 {selectedPolicyKey &&
                     <Grid item xs={12} style={{
-                        marginTop: 24,
                         padding: 24,
                         backgroundColor: 'rgba(0,0,0,0.05)'
                     }}>

@@ -1407,6 +1407,15 @@ export default {
                         admin: 'Admin'
                     },
                 },
+                typeField: {
+                    label: 'Preview form for...',
+                    menuItemText: {
+                        community: 'Community',
+                        collection: 'Collection',
+                        record: 'Record',
+                        dataStream: 'Data Stream'
+                    }
+                },
                 warning: {
                     message: 'This section is to be handled by admins only - changes made to these sections may inadvertantly hide or show records in error - please make sure you know what you\'re doing.',
                     title: 'Warning'
