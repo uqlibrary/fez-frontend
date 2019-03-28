@@ -1139,6 +1139,12 @@ export default {
             //     text: 'file help...',
             //     buttonLabel: 'CLOSE'
             // },
+            failedAlertLocale: {
+                type: 'error',
+                title: 'FILE UPLOAD ERROR',
+                message: 'There was an issue uploading your thesis files. You will need to resubmit your thesis by clicking on the \'Resubmit your thesis\' button.',
+                actionButtonLabel: 'RESUBMIT YOUR THESIS'
+            },
             locale: {
                 instructions: '',
                 accessTermsAndConditions: 'I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.',
@@ -1182,8 +1188,11 @@ export default {
         submit: 'Deposit your thesis',
         afterSubmitLink: 'https://my.uq.edu.au/information-and-services/higher-degree-research/my-thesis/2-thesis-submission',
         afterSubmit: 'Return to the Graduate School website',
+        afterFailedSubmit: 'Resubmit your thesis',
         afterSubmitTitle: 'Your thesis has been deposited',
+        afterFailureTitle: 'Your thesis submission has failed',
         afterSubmitText: 'You will receive an email confirming your thesis deposit shortly.',
+        afterFailureText: 'There was an issue uploading your thesis files. You will need to resubmit your thesis.',
         depositConfirmation: {
             confirmationTitle: 'Thesis deposit',
             confirmationMessage: 'You are about to deposit your thesis with attached files. Are you sure you want to proceed?',

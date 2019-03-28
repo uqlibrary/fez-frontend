@@ -41,8 +41,6 @@ export function loadThirdPartyResults(type, field1, field2) {
                         payload: response.data
                     });
                 }
-
-                // return Promise.resolve(response.data);
             })
             .catch(error => {
                 let message = ['an unspecified error occurred'];
