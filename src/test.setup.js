@@ -12,7 +12,8 @@ import {MemoryRouter} from 'react-router-dom';
 import thunk from 'redux-thunk';
 import configureMockStore from 'redux-mock-store';
 import MockAdapter from 'axios-mock-adapter';
-import {api, mui1theme, sessionApi} from 'config';
+import {mui1theme} from 'config';
+import {api, sessionApi} from 'config/axios';
 import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
 import MuiPickersUtilsProvider from 'material-ui-pickers/utils/MuiPickersUtilsProvider';
 
@@ -26,7 +27,7 @@ const setupStoreForActions = () => {
     return mockStore({});
 };
 
-const setupStoreForMount = () => {
+export const setupStoreForMount = () => {
     const initialState = Immutable.Map();
 
     const store = {

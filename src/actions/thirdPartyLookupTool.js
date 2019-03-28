@@ -45,15 +45,11 @@ export function loadThirdPartyResults(type, field1, field2) {
                 // return Promise.resolve(response.data);
             })
             .catch(error => {
-                let message;
-                if (!!error.response && !!error.response.data && !!error.response.data.data && error.response.data.data.length > 0) {
+                let message = ['an unspecified error occurred'];
+                if (!!error && !!error.response && !!error.response.data && !!error.response.data.data && error.response.data.data.length > 0) {
                     message = [error.response.data.data];
-                } else {
-                    if (!!error.response && !!error.response.data && error.response.data.length > 0) {
-                        message = [error.response.data];
-                    } else {
-                        message = ['an unspecified error occurred'];
-                    }
+                } else if (!!error && !!error.response && !!error.response.data && error.response.data.length > 0) {
+                    message = [error.response.data];
                 }
                 dispatch({
                     type: actions.THIRD_PARTY_LOOKUP_TOOL_LOAD_FAILED,

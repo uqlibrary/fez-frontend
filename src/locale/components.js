@@ -168,7 +168,8 @@ export default {
                     locale: {
                         inputFieldLabel: 'Keywords',
                         inputFieldHint: 'Type keywords',
-                        addButtonLabel: 'Add'
+                        addButtonLabel: 'Add',
+                        id: 'keywords-input'
                     }
                 },
                 header: {
@@ -205,7 +206,8 @@ export default {
                     locale: {
                         inputFieldLabel: 'Funding body',
                         inputFieldHint: 'Type the name of the funding body(s) associated with your research e.g. ARC, NHMRC',
-                        addButtonLabel: 'Add'
+                        addButtonLabel: 'Add',
+                        id: 'funding-body-input'
                     }
                 },
                 header: {
@@ -242,7 +244,8 @@ export default {
                     locale: {
                         inputFieldLabel: 'Grant IDs',
                         inputFieldHint: 'Type grantID',
-                        addButtonLabel: 'Add'
+                        addButtonLabel: 'Add',
+                        id: 'grant-id-input'
                     }
                 },
                 header: {
@@ -316,7 +319,8 @@ export default {
                     locale: {
                         inputFieldLabel: 'Type of data',
                         inputFieldHint: 'Type type of data',
-                        addButtonLabel: 'Add'
+                        addButtonLabel: 'Add',
+                        id: 'type-of-data-input'
                     }
                 },
                 header: {
@@ -353,7 +357,8 @@ export default {
                     locale: {
                         inputFieldLabel: 'Software required',
                         inputFieldHint: 'Type software required',
-                        addButtonLabel: 'Add'
+                        addButtonLabel: 'Add',
+                        id: 'software-required-input'
                     }
                 },
                 header: {
@@ -1079,7 +1084,7 @@ export default {
             },
             metadata: {
                 help: {
-                    title: 'Non-traditional research output data',
+                    title: 'NTRO data',
                     text: (
                         <React.Fragment>
                             <h3>Quality indicators</h3>

@@ -61,31 +61,31 @@ exports[`UnpublishedBufferCitationView test button click sets value should handl
         key="0"
         onClick={[Function]}
       >
-        More options
+        Edit selected record
       </WithStyles(MenuItem)>
       <WithStyles(MenuItem)
         key="1"
         onClick={[Function]}
       >
-        Update selected record - Generic
+        Edit author affiliations
       </WithStyles(MenuItem)>
       <WithStyles(MenuItem)
         key="2"
         onClick={[Function]}
       >
-        Edit author affiliations
+        Edit security for selected record
       </WithStyles(MenuItem)>
       <WithStyles(MenuItem)
         key="3"
         onClick={[Function]}
       >
-        Edit security for selected record
+        Delete selected record
       </WithStyles(MenuItem)>
       <WithStyles(MenuItem)
         key="4"
         onClick={[Function]}
       >
-        Delete selected record
+        More options
       </WithStyles(MenuItem)>
     </WithStyles(Menu)>
   </WithStyles(Grid)>
@@ -153,31 +153,31 @@ exports[`UnpublishedBufferCitationView test button click sets value should handl
         key="0"
         onClick={[Function]}
       >
-        More options
+        Edit selected record
       </WithStyles(MenuItem)>
       <WithStyles(MenuItem)
         key="1"
         onClick={[Function]}
       >
-        Update selected record - Generic
+        Edit author affiliations
       </WithStyles(MenuItem)>
       <WithStyles(MenuItem)
         key="2"
         onClick={[Function]}
       >
-        Edit author affiliations
+        Edit security for selected record
       </WithStyles(MenuItem)>
       <WithStyles(MenuItem)
         key="3"
         onClick={[Function]}
       >
-        Edit security for selected record
+        Delete selected record
       </WithStyles(MenuItem)>
       <WithStyles(MenuItem)
         key="4"
         onClick={[Function]}
       >
-        Delete selected record
+        More options
       </WithStyles(MenuItem)>
     </WithStyles(Menu)>
   </WithStyles(Grid)>
@@ -245,31 +245,31 @@ exports[`UnpublishedBufferCitationView test button click sets value should handl
         key="0"
         onClick={[Function]}
       >
-        More options
+        Edit selected record
       </WithStyles(MenuItem)>
       <WithStyles(MenuItem)
         key="1"
         onClick={[Function]}
       >
-        Update selected record - Generic
+        Edit author affiliations
       </WithStyles(MenuItem)>
       <WithStyles(MenuItem)
         key="2"
         onClick={[Function]}
       >
-        Edit author affiliations
+        Edit security for selected record
       </WithStyles(MenuItem)>
       <WithStyles(MenuItem)
         key="3"
         onClick={[Function]}
       >
-        Edit security for selected record
+        Delete selected record
       </WithStyles(MenuItem)>
       <WithStyles(MenuItem)
         key="4"
         onClick={[Function]}
       >
-        Delete selected record
+        More options
       </WithStyles(MenuItem)>
     </WithStyles(Menu)>
   </WithStyles(Grid)>
@@ -337,31 +337,31 @@ exports[`UnpublishedBufferCitationView test button click sets value should handl
         key="0"
         onClick={[Function]}
       >
-        More options
+        Edit selected record
       </WithStyles(MenuItem)>
       <WithStyles(MenuItem)
         key="1"
         onClick={[Function]}
       >
-        Update selected record - Generic
+        Edit author affiliations
       </WithStyles(MenuItem)>
       <WithStyles(MenuItem)
         key="2"
         onClick={[Function]}
       >
-        Edit author affiliations
+        Edit security for selected record
       </WithStyles(MenuItem)>
       <WithStyles(MenuItem)
         key="3"
         onClick={[Function]}
       >
-        Edit security for selected record
+        Delete selected record
       </WithStyles(MenuItem)>
       <WithStyles(MenuItem)
         key="4"
         onClick={[Function]}
       >
-        Delete selected record
+        More options
       </WithStyles(MenuItem)>
     </WithStyles(Menu)>
   </WithStyles(Grid)>
@@ -429,31 +429,31 @@ exports[`UnpublishedBufferCitationView test button click sets value should handl
         key="0"
         onClick={[Function]}
       >
-        More options
+        Edit selected record
       </WithStyles(MenuItem)>
       <WithStyles(MenuItem)
         key="1"
         onClick={[Function]}
       >
-        Update selected record - Generic
+        Edit author affiliations
       </WithStyles(MenuItem)>
       <WithStyles(MenuItem)
         key="2"
         onClick={[Function]}
       >
-        Edit author affiliations
+        Edit security for selected record
       </WithStyles(MenuItem)>
       <WithStyles(MenuItem)
         key="3"
         onClick={[Function]}
       >
-        Edit security for selected record
+        Delete selected record
       </WithStyles(MenuItem)>
       <WithStyles(MenuItem)
         key="4"
         onClick={[Function]}
       >
-        Delete selected record
+        More options
       </WithStyles(MenuItem)>
     </WithStyles(Menu)>
   </WithStyles(Grid)>
@@ -521,31 +521,31 @@ exports[`UnpublishedBufferCitationView test button click sets value should handl
         key="0"
         onClick={[Function]}
       >
-        More options
+        Edit selected record
       </WithStyles(MenuItem)>
       <WithStyles(MenuItem)
         key="1"
         onClick={[Function]}
       >
-        Update selected record - Generic
+        Edit author affiliations
       </WithStyles(MenuItem)>
       <WithStyles(MenuItem)
         key="2"
         onClick={[Function]}
       >
-        Edit author affiliations
+        Edit security for selected record
       </WithStyles(MenuItem)>
       <WithStyles(MenuItem)
         key="3"
         onClick={[Function]}
       >
-        Edit security for selected record
+        Delete selected record
       </WithStyles(MenuItem)>
       <WithStyles(MenuItem)
         key="4"
         onClick={[Function]}
       >
-        Delete selected record
+        More options
       </WithStyles(MenuItem)>
     </WithStyles(Menu)>
   </WithStyles(Grid)>
@@ -613,31 +613,31 @@ exports[`UnpublishedBufferCitationView test button click sets value should load 
         key="0"
         onClick={[Function]}
       >
-        More options
+        Edit selected record
       </WithStyles(MenuItem)>
       <WithStyles(MenuItem)
         key="1"
         onClick={[Function]}
       >
-        Update selected record - Generic
+        Edit author affiliations
       </WithStyles(MenuItem)>
       <WithStyles(MenuItem)
         key="2"
         onClick={[Function]}
       >
-        Edit author affiliations
+        Edit security for selected record
       </WithStyles(MenuItem)>
       <WithStyles(MenuItem)
         key="3"
         onClick={[Function]}
       >
-        Edit security for selected record
+        Delete selected record
       </WithStyles(MenuItem)>
       <WithStyles(MenuItem)
         key="4"
         onClick={[Function]}
       >
-        Delete selected record
+        More options
       </WithStyles(MenuItem)>
     </WithStyles(Menu)>
   </WithStyles(Grid)>
@@ -705,31 +705,31 @@ exports[`UnpublishedBufferCitationView test button click sets value should rende
         key="0"
         onClick={[Function]}
       >
-        More options
+        Edit selected record
       </WithStyles(MenuItem)>
       <WithStyles(MenuItem)
         key="1"
         onClick={[Function]}
       >
-        Update selected record - Generic
+        Edit author affiliations
       </WithStyles(MenuItem)>
       <WithStyles(MenuItem)
         key="2"
         onClick={[Function]}
       >
-        Edit author affiliations
+        Edit security for selected record
       </WithStyles(MenuItem)>
       <WithStyles(MenuItem)
         key="3"
         onClick={[Function]}
       >
-        Edit security for selected record
+        Delete selected record
       </WithStyles(MenuItem)>
       <WithStyles(MenuItem)
         key="4"
         onClick={[Function]}
       >
-        Delete selected record
+        More options
       </WithStyles(MenuItem)>
     </WithStyles(Menu)>
   </WithStyles(Grid)>

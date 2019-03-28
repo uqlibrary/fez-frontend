@@ -44,7 +44,7 @@ exports[`QualityIndicatorField component should render default view 1`] = `
         "value": 454039,
       },
       Object {
-        "text": "Other (add details to Author/Creator contribution statement)",
+        "text": "Other (add details to Author/Creator research statement)",
         "value": 454040,
       },
     ]
@@ -112,7 +112,7 @@ exports[`QualityIndicatorField component should render with given field props 1`
         "value": 454039,
       },
       Object {
-        "text": "Other (add details to Author/Creator contribution statement)",
+        "text": "Other (add details to Author/Creator research statement)",
         "value": 454040,
       },
     ]
