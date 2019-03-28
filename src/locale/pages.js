@@ -684,6 +684,9 @@ export default {
         },
         prototype: {
             title: 'Admin prototype'
+        },
+        editRecord: {
+            title: 'Record administration'
         }
     }
 };

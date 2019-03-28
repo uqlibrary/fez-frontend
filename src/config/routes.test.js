@@ -36,7 +36,7 @@ describe('Routes method', () => {
 
     it('should return a list of routes for user who can masquerade', () => {
         const testRoutes = routes.getRoutesConfig({components: {}, account: accounts.uqstaff});
-        expect(testRoutes.length).toEqual(24);
+        expect(testRoutes.length).toEqual(25);
     });
 
     it('should return a list of routes for hdr student without ORCID', () => {

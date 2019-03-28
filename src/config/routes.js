@@ -93,7 +93,8 @@ export const pathConfig = {
         thirdPartyTools: '/tool/lookup',
         legacyEspace: `${fullPath}/my_upo_tools.php`,
         unpublished: '/admin/unpublished',
-        prototype: '/admin/prototype'
+        prototype: '/admin/prototype',
+        edit: (pid) => `/admin/edit/${pid}`
     },
     authorIdentifiers: {
         orcid: {
@@ -297,6 +298,13 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
                 exact: true,
                 access: [roles.admin],
                 pageTitle: locale.pages.prototype.title
+            },
+            {
+                path: pathConfig.admin.edit(pid),
+                component: components.Prototype,
+                exact: true,
+                access: [roles.admin],
+                pageTitle: locale.pages.editRecord.title
             },
             {
                 path: pathConfig.admin.masquerade,
