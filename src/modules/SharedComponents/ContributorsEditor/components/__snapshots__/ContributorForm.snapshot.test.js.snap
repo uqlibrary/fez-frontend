@@ -1138,7 +1138,7 @@ exports[`Component ContributorForm should render connected component 1`] = `
                                 classes={Object {}}
                                 error={false}
                                 fullWidth={true}
-                                id="Name as published"
+                                id="nameAsPublishedField"
                                 label="Name as published"
                                 onChange={[Function]}
                                 placeholder="Please type the name exactly as published"
@@ -1175,7 +1175,7 @@ exports[`Component ContributorForm should render connected component 1`] = `
                                       className="MuiFormControl-root-98 MuiFormControl-fullWidth-101"
                                     >
                                       <WithStyles(InputLabel)
-                                        htmlFor="Name as published"
+                                        htmlFor="nameAsPublishedField"
                                       >
                                         <InputLabel
                                           classes={
@@ -1190,12 +1190,12 @@ exports[`Component ContributorForm should render connected component 1`] = `
                                             }
                                           }
                                           disableAnimation={false}
-                                          htmlFor="Name as published"
+                                          htmlFor="nameAsPublishedField"
                                         >
                                           <WithStyles(FormLabel)
                                             className="MuiInputLabel-root-102 MuiInputLabel-formControl-103 MuiInputLabel-animated-106"
                                             data-shrink={false}
-                                            htmlFor="Name as published"
+                                            htmlFor="nameAsPublishedField"
                                           >
                                             <FormLabel
                                               className="MuiInputLabel-root-102 MuiInputLabel-formControl-103 MuiInputLabel-animated-106"
@@ -1212,12 +1212,12 @@ exports[`Component ContributorForm should render connected component 1`] = `
                                               }
                                               component="label"
                                               data-shrink={false}
-                                              htmlFor="Name as published"
+                                              htmlFor="nameAsPublishedField"
                                             >
                                               <label
                                                 className="MuiFormLabel-root-109 MuiInputLabel-root-102 MuiInputLabel-formControl-103 MuiInputLabel-animated-106"
                                                 data-shrink={false}
-                                                htmlFor="Name as published"
+                                                htmlFor="nameAsPublishedField"
                                               >
                                                 Name as published
                                               </label>
@@ -1228,7 +1228,7 @@ exports[`Component ContributorForm should render connected component 1`] = `
                                       <WithStyles(Input)
                                         autoComplete="off"
                                         fullWidth={true}
-                                        id="Name as published"
+                                        id="nameAsPublishedField"
                                         onChange={[Function]}
                                         placeholder="Please type the name exactly as published"
                                         value=""
@@ -1253,7 +1253,7 @@ exports[`Component ContributorForm should render connected component 1`] = `
                                             }
                                           }
                                           fullWidth={true}
-                                          id="Name as published"
+                                          id="nameAsPublishedField"
                                           onChange={[Function]}
                                           placeholder="Please type the name exactly as published"
                                           value=""
@@ -1278,7 +1278,7 @@ exports[`Component ContributorForm should render connected component 1`] = `
                                               }
                                             }
                                             fullWidth={true}
-                                            id="Name as published"
+                                            id="nameAsPublishedField"
                                             inputComponent="input"
                                             multiline={false}
                                             onChange={[Function]}
@@ -1310,7 +1310,7 @@ exports[`Component ContributorForm should render connected component 1`] = `
                                                 }
                                               }
                                               fullWidth={true}
-                                              id="Name as published"
+                                              id="nameAsPublishedField"
                                               inputComponent="input"
                                               multiline={false}
                                               onChange={[Function]}
@@ -1327,7 +1327,7 @@ exports[`Component ContributorForm should render connected component 1`] = `
                                                   autoComplete="off"
                                                   className="MuiInputBase-input-139 MuiInput-input-124"
                                                   disabled={false}
-                                                  id="Name as published"
+                                                  id="nameAsPublishedField"
                                                   onBlur={[Function]}
                                                   onChange={[Function]}
                                                   onFocus={[Function]}
