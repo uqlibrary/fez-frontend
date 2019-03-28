@@ -14,11 +14,11 @@ export const ViewRecord = () => (<Async load={import('modules/ViewRecord/contain
 export const AddDataCollection = () => (<Async load={import('modules/AddDataCollection/containers/AddDataCollection')} />);
 export const ThirdPartyLookupTool = () => (<Async load={import('modules/ThirdPartyLookupTool/containers/ThirdPartyLookupTool')} />);
 export const Prototype = () => (<Async load={import('modules/Admin/containers/Admin')} />);
+export const Admin = (componentProps) => (<Async load={import('modules/Admin/containers/Admin')} componentProps={componentProps} />);
 
 // always load components
 export {AddMissingRecord, FindRecords, RecordsSearchResults, NewRecord} from 'modules/AddMissingRecord';
 export {Index} from 'modules/Index';
-export {Admin} from 'modules/Admin';
 export {Masquerade} from 'modules/Masquerade';
 export {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
 export {SearchRecords} from 'modules/SearchRecords';

@@ -6,6 +6,7 @@ export {default as internalTitleSearchList} from './internalTitleSearchList';
 export {default as internalTitleSearchListNoResults} from './internalTitleSearchListNoResults';
 export {default as recordsTypeList} from './recordsTypeList';
 export {default as record} from './record';
+export {default as communityRecord} from './communityRecord';
 export {default as myRecordsList} from './myRecordsList';
 export {default as possibleUnclaimedList} from './possibleUnclaimedList';
 export {default as MyDatasetList} from './MyDatasetList';

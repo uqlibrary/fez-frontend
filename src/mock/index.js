@@ -174,6 +174,9 @@ mock
         if (config.url.indexOf('UQ:290371') >= 0) {
             return [200, {data: {...mockData.recordWithoutAuthorIds}}];
         }
+        if (config.url.indexOf('UQ:3883') >= 0) {
+            return [200, {data: {...mockData.communityRecord}}];
+        }
         return [200, {data: {...mockData.record}}];
     })
     // .reply(401, '')

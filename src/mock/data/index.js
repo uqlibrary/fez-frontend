@@ -1,7 +1,22 @@
 export {accounts, authorsSearch, currentAuthor, authorDetails} from './account';
-export {externalDoiSearchResultList, externalPubMedSearchResultsList, record, myRecordsList, possibleUnclaimedList,
-    externalTitleSearchResultsList, internalTitleSearchList, recordsTypeList, externalTitleScopusResultsList,
-    recordWithMap, recordWithTiffAndThumbnail, MyDatasetList, internalTitleSearchListNoResults, recordWithoutAuthorIds, collections} from './records';
+export {
+    externalTitleSearchResultsList,
+    externalTitleScopusResultsList,
+    externalDoiSearchResultList,
+    externalPubMedSearchResultsList,
+    internalTitleSearchList,
+    internalTitleSearchListNoResults,
+    recordsTypeList,
+    myRecordsList,
+    possibleUnclaimedList,
+    MyDatasetList,
+    collections,
+    record,
+    recordWithMap,
+    recordWithTiffAndThumbnail,
+    recordWithoutAuthorIds,
+    communityRecord
+} from './records';
 export {vocabulariesList} from './vocabularies';
 export {quickTemplates} from './acml';
 export {hindexResponse, trendingPublications, currentAuthorStats} from './academicStats';

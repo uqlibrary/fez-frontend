@@ -7,39 +7,11 @@ import Tab from '@material-ui/core/Tab';
 import PropTypes from 'prop-types';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-// import KeyboardEventHandler from 'react-keyboard-event-handler';
-// import {TextField as GenericTextField} from '../../SharedComponents/Toolbox/TextField';
-// import {SelectField} from 'modules/SharedComponents/Toolbox/SelectField';
 import Hidden from '@material-ui/core/Hidden';
 import Keyboard from '@material-ui/icons/Keyboard';
 import {HelpIcon} from 'modules/SharedComponents/Toolbox/HelpDrawer';
 import Badge from '@material-ui/core/Badge';
-// import DownshiftMultiple from 'modules/Admin/components/MultiSelectWithChip';
-// import MenuItem from '@material-ui/core/MenuItem';
-// import {RichEditorField} from 'modules/SharedComponents/RichEditor';
-// import DatePicker from 'material-ui-pickers/DatePicker';
-// import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
-// import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
-// import Event from '@material-ui/icons/Event';
-import moment from 'moment';
 import Cookies from 'js-cookie';
-// import {validation} from 'config';
-// import {Field} from 'redux-form/lib/immutable';
-// import {ListEditorField} from 'modules/SharedComponents/Toolbox/ListEditor';
-import {PIDtitle
-    // , collectionItems, subjects, WOSDocTypes, ScopusDocTypes, PubmedDocTypes, subtypes, languages, refereedsources, openaccess, qindex
-} from './MockData';
-// import Button from '@material-ui/core/Button';
-// import MUIDataTable from 'mui-datatables';
-// import IconButton from '@material-ui/core/IconButton';
-// import Edit from '@material-ui/icons/Edit';
-// import PersonAdd from '@material-ui/icons/PersonAdd';
-// import {FileUploadField} from 'modules/SharedComponents/Toolbox/FileUploader';
-// import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
-// import TextField from '@material-ui/core/TextField';
-// import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
-// import Checkbox from '@material-ui/core/Checkbox';
-// import FormControlLabel from '@material-ui/core/FormControlLabel/FormControlLabel';
 const queryString = require('query-string');
 import FormViewToggler from './FormViewToggler';
 import IdentifiersSection from './IdentifiersSection';
@@ -74,7 +46,7 @@ const styles = theme => ({
     }
 });
 
-export function AdminInterface({ classes, submitting, isTabbed, handleSubmit }) {
+export function AdminInterface({ record, classes, submitting, isTabbed, handleSubmit }) {
     const [tabbed, setTabbed] = useState(isTabbed);
     const [currentTabValue, setCurrentTabValue] = useState(0);
     const theme = useTheme();
@@ -214,12 +186,14 @@ export function AdminInterface({ classes, submitting, isTabbed, handleSubmit }) 
     //     customToolbar: () => <div />
     // };
 
+    const title = `${record.rek_pid} ${record.rek_title}`;
+
     return (
         <StandardPage>
             <TabbedContextProvider value={{tabbed: isMobileView ? false : tabbed, toggleTabbed: handleToggle}}>
                 <Grid container direction="row" alignItems="center" style={{marginTop: -24}}>
                     <Grid item xs style={{marginBottom: 12}}>
-                        <Typography variant="h5" color="primary" style={{fontSize: 24}}>{PIDtitle}</Typography>
+                        <Typography variant="h5" color="primary" style={{fontSize: 24}}>{title}</Typography>
                     </Grid>
                     <Hidden xsDown>
                         <Grid item xs="auto">
@@ -334,13 +308,15 @@ AdminInterface.propTypes = {
     classes: PropTypes.object,
     submitting: PropTypes.bool,
     isTabbed: PropTypes.bool,
-    handleSubmit: PropTypes.func
+    handleSubmit: PropTypes.func,
+    record: PropTypes.object
 };
 
 class Admin extends Component {
     static propTypes = {
         account: PropTypes.object,
         author: PropTypes.object,
+        recordToView: PropTypes.object,
         actions: PropTypes.object,
         location: PropTypes.object,
         history: PropTypes.object,
@@ -350,7 +326,8 @@ class Admin extends Component {
         disableSubmit: PropTypes.any,
         formValues: PropTypes.any,
         tabbed: PropTypes.bool,
-        handleSubmit: PropTypes.func
+        handleSubmit: PropTypes.func,
+        match: PropTypes.object
     };
 
     constructor(props) {
@@ -375,99 +352,108 @@ class Admin extends Component {
         };
     }
 
-    handleTabChange = (event, value) => {
-        this.setState({...this.state, tabValue: value});
-    };
-
-    handleFormatChange = () => {
-        this.setState({tabbed: !this.state.tabbed }, () => {
-            Cookies.set('adminFormTabbed', this.state.tabbed ? 'tabbed' : 'fullform');
-        });
-    };
-
-    handleKeyEvent = (key) => {
-        switch (key) {
-            case 'ctrl+shift+left':
-                this.state.tabValue > 0 && this.setState({
-                    ...this.state,
-                    tabValue: this.state.tabValue - 1
-                });
-                break;
-            case 'ctrl+shift+right':
-                this.state.tabValue < 5 && this.setState({
-                    ...this.state,
-                    tabValue: this.state.tabValue + 1
-                });
-                break;
-            case 'ctrl+shift+up':
-                this.setState({
-                    ...this.state,
-                    tabbed: true
-                });
-                break;
-            case 'ctrl+shift+down':
-                this.setState({
-                    ...this.state,
-                    tabbed: false
-                });
-                break;
-            default:
-                break;
+    componentDidMount() {
+        if (!!this.props.match.params.pid && !!this.props.actions.loadRecordToView) {
+            this.props.actions.loadRecordToView(this.props.match.params.pid);
         }
-    };
-
-    handleMultiChipData = (name, data) => {
-        this.setState({
-            [name]: data
-        });
-    };
-
-    handleDatePicker = event => {
-        this.setState({
-            ...this.state,
-            pubDate: moment(event).format()
-        });
-    };
-
-    toggleSecurityOverride = () => {
-        this.setState({
-            ...this.state,
-            overrideSecurity: !this.state.overrideSecurity
-        });
     }
+    // handleTabChange = (event, value) => {
+    //     this.setState({...this.state, tabValue: value});
+    // };
 
-    toggleSecurityDatastreamOverride = () => {
-        this.setState({
-            ...this.state,
-            overrideDatastreamSecurity: !this.state.overrideDatastreamSecurity
-        });
-    }
+    // handleFormatChange = () => {
+    //     this.setState({tabbed: !this.state.tabbed }, () => {
+    //         Cookies.set('adminFormTabbed', this.state.tabbed ? 'tabbed' : 'fullform');
+    //     });
+    // };
 
-    toggleSecurityOverride2 = () => {
-        this.setState({
-            ...this.state,
-            overrideSecurity2: !this.state.overrideSecurity2
-        });
-    }
+    // handleKeyEvent = (key) => {
+    //     switch (key) {
+    //         case 'ctrl+shift+left':
+    //             this.state.tabValue > 0 && this.setState({
+    //                 ...this.state,
+    //                 tabValue: this.state.tabValue - 1
+    //             });
+    //             break;
+    //         case 'ctrl+shift+right':
+    //             this.state.tabValue < 5 && this.setState({
+    //                 ...this.state,
+    //                 tabValue: this.state.tabValue + 1
+    //             });
+    //             break;
+    //         case 'ctrl+shift+up':
+    //             this.setState({
+    //                 ...this.state,
+    //                 tabbed: true
+    //             });
+    //             break;
+    //         case 'ctrl+shift+down':
+    //             this.setState({
+    //                 ...this.state,
+    //                 tabbed: false
+    //             });
+    //             break;
+    //         default:
+    //             break;
+    //     }
+    // };
+
+    // handleMultiChipData = (name, data) => {
+    //     this.setState({
+    //         [name]: data
+    //     });
+    // };
+
+    // handleDatePicker = event => {
+    //     this.setState({
+    //         ...this.state,
+    //         pubDate: moment(event).format()
+    //     });
+    // };
+
+    // toggleSecurityOverride = () => {
+    //     this.setState({
+    //         ...this.state,
+    //         overrideSecurity: !this.state.overrideSecurity
+    //     });
+    // }
+
+    // toggleSecurityDatastreamOverride = () => {
+    //     this.setState({
+    //         ...this.state,
+    //         overrideDatastreamSecurity: !this.state.overrideDatastreamSecurity
+    //     });
+    // }
+
+    // toggleSecurityOverride2 = () => {
+    //     this.setState({
+    //         ...this.state,
+    //         overrideSecurity2: !this.state.overrideSecurity2
+    //     });
+    // }
 
 
-    findWithAttr = (array, attr, value) => {
-        for(let i = 0; i < array.length; i += 1) {
-            if(array[i][attr] === value) {
-                return i;
-            }
-        }
-        return -1;
-    };
+    // findWithAttr = (array, attr, value) => {
+    //     for(let i = 0; i < array.length; i += 1) {
+    //         if(array[i][attr] === value) {
+    //             return i;
+    //         }
+    //     }
+    //     return -1;
+    // };
 
     render() {
         return (
             <FormValuesContextProvider value={{formValues: this.props.formValues}}>
-                <AdminInterface
-                    classes={this.props.classes}
-                    isTabbed={this.props.tabbed}
-                    handleSubmit={this.props.handleSubmit}
-                />
+                {
+                    !!this.props.recordToView &&
+                    <AdminInterface
+                        classes={this.props.classes}
+                        isTabbed={this.props.tabbed}
+                        handleSubmit={this.props.handleSubmit}
+                        record={this.props.recordToView}
+                    />
+                }
             </FormValuesContextProvider>
         );
 

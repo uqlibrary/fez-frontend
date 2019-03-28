@@ -1,12 +1,14 @@
 import {connect} from 'react-redux';
-import { reduxForm, getFormValues, getFormSyncErrors, SubmissionError } from 'redux-form/immutable';
-import { updateCommunitySecurity } from 'actions';
+import {reduxForm, getFormValues, getFormSyncErrors, SubmissionError} from 'redux-form/immutable';
+import {updateCommunitySecurity} from 'actions';
 import Immutable from 'immutable';
 import Admin from '../components/Admin';
-import { securityAssignments } from '../components/MockData';
+import {securityAssignments} from '../components/MockData';
 import {confirmDiscardFormChanges} from 'modules/SharedComponents/ConfirmDiscardFormChanges';
 import {withRouter} from 'react-router';
 import Cookies from 'js-cookie';
+import {bindActionCreators} from 'redux';
+import * as actions from 'actions';
 
 const FORM_NAME = 'Prototype';
 
@@ -24,7 +26,7 @@ let PrototypeContainer = reduxForm({
     onSubmit
 })(confirmDiscardFormChanges(Admin, FORM_NAME));
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state, ownProps) => {
     const formErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});
     return {
         formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
@@ -36,9 +38,16 @@ const mapStateToProps = (state) => {
             collection: [],
             subject: []
         },
-        tabbed: Cookies.get('adminFormTabbed') && !!(Cookies.get('adminFormTabbed') === 'tabbed')
+        tabbed: Cookies.get('adminFormTabbed') && !!(Cookies.get('adminFormTabbed') === 'tabbed'),
+        ...ownProps,
+        ...state.get('viewRecordReducer'),
     };
 };
 
-PrototypeContainer = connect(mapStateToProps)(PrototypeContainer);
+const mapDispatchToProps = (dispatch) => ({
+    actions: bindActionCreators(actions, dispatch)
+});
+
+PrototypeContainer = connect(mapStateToProps, mapDispatchToProps)(PrototypeContainer);
+
 export default withRouter(PrototypeContainer);

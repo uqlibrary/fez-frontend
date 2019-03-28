@@ -301,7 +301,7 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
             },
             {
                 path: pathConfig.admin.edit(pid),
-                component: components.Prototype,
+                component: components.Admin,
                 exact: true,
                 access: [roles.admin],
                 pageTitle: locale.pages.editRecord.title
