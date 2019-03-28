@@ -217,7 +217,6 @@ export function submitThesis(data) {
             })
             .then(() =>(hasFilesToUpload ? putUploadFiles(newRecord.rek_pid, data.files.queue, dispatch) : newRecord))
             .then(() => (hasFilesToUpload ? patch(EXISTING_RECORD_API({pid: newRecord.rek_pid}), recordPatch) : newRecord))
-            .then(() => (data.comments ? post(RECORDS_ISSUES_API({pid: newRecord.rek_pid}), {issue: 'Notes from creator of the new record: ' +  data.comments}) : newRecord))
             .then((response) => {
                 /* istanbul ignore next */
                 dispatch({
@@ -233,11 +232,6 @@ export function submitThesis(data) {
             .catch(error => {
                 // record was created, but file upload or record patch failed or issue post failed
                 if (!!newRecord && !!newRecord.rek_pid) {
-                    // Hard to mock this call in jest - so we skip it if testing
-                    /* istanbul ignore next */
-                    if(process.env.NODE_ENV !== 'test') {
-                        post(RECORDS_ISSUES_API({pid: newRecord.rek_pid}), {issue: 'The submitter had issues uploading files on this record: ' + newRecord});
-                    }
                     dispatch({
                         type: actions.CREATE_RECORD_SUCCESS,
                         payload: {
@@ -245,7 +239,13 @@ export function submitThesis(data) {
                             fileUploadOrIssueFailed: true
                         }
                     });
-                    return Promise.resolve(newRecord);
+                    return post(RECORDS_ISSUES_API({pid: newRecord.rek_pid}), {issue: 'The submitter had issues uploading files on this record: ' + newRecord})
+                        .then(
+                            /* istanbul ignore next */
+                            () => {
+                                return Promise.resolve(newRecord);
+                            }
+                        );
                 }
 
                 dispatch({
