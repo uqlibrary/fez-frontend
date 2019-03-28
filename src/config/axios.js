@@ -13,7 +13,7 @@ import {pathConfig} from 'config/routes';
 export const cache = setupCache({
     maxAge: 15 * 60 * 1000,
     key: (request) => {
-        return request.url + JSON.stringify(request.params);
+        return `${request.url}${JSON.stringify(request.params)}`;
     },
     exclude: {
         query: false,
@@ -57,10 +57,8 @@ if (process.env.NODE_ENV === 'development' && !!process.env.SESSION_COOKIE_NAME)
 api.isCancel = axios.isCancel; // needed for cancelling requests and the instance created does not have this method
 
 let isGet = null;
-let requestUrl = '';
 api.interceptors.request.use(request => {
     isGet = request.method === 'get';
-    requestUrl = request.baseURL + request.url;
     if (
         (request.url.includes('records/search') || request.url.includes('records/export'))
         && !!request.params && !!request.params.mode && request.params.mode === 'advanced'
@@ -75,9 +73,9 @@ api.interceptors.request.use(request => {
 const reportToSentry = (error) => {
     let detailedError = '';
     if (error.response) {
-        detailedError = 'Data: ' + error.response.data + '; Status: ' + error.response.status + '; Headers: ' + JSON.stringify(error.response.headers);
+        detailedError = `Data: ${error.response.data}; Status: ${error.response.status}; Headers: ${JSON.stringify(error.response.headers)}`;
     } else {
-        detailedError = 'Something happened in setting up the request that triggered an Error: ' + error.message;
+        detailedError = `Something happened in setting up the request that triggered an Error: ${error.message}`;
     }
     Raven.captureException(error, {extra: {error: detailedError}});
 };
@@ -92,10 +90,11 @@ api.interceptors.response.use(response => {
     if (error && error.response && error.response.status && reportHttpStatusToSentry.indexOf(error.response.status) !== -1) {
         reportToSentry(error);
     }
-    const thirdPartyLookupUrlRoot = API_URL + pathConfig.admin.thirdPartyTools.substring('/'.length);
+
     // 403 for tool api lookup is handled in actions/thirdPartyLookupTool.js
-    if (!requestUrl.startsWith(thirdPartyLookupUrlRoot)) {
-        if (error.response && error.response.status === 403) {
+    let errorMessage = null;
+    if (!error.config.url.includes(pathConfig.admin.thirdPartyTools.slice(1))) {
+        if (!!error.response && !!error.response.status && error.response.status === 403) {
             if (!!Cookies.get(SESSION_COOKIE_NAME)) {
                 Cookies.remove(SESSION_COOKIE_NAME, {path: '/', domain: '.library.uq.edu.au'});
                 delete api.defaults.headers.common[TOKEN_NAME];
@@ -107,11 +106,8 @@ api.interceptors.response.use(response => {
                 store.dispatch(logout());
             }
         }
-    }
 
-    let errorMessage = null;
-    if (!requestUrl.startsWith(thirdPartyLookupUrlRoot)) {
-        if (!!error.message && !!error.response.status && error.response.status === 500) {
+        if (!!error.message && !!error.response && !!error.response.status && error.response.status === 500) {
             errorMessage = ((error.response || {}).data || {}).message || locale.global.errorMessages[error.response.status];
             if (process.env.NODE_ENV === 'test') {
                 global.mockActionsStore.dispatch(showAppAlert(error.response.data));

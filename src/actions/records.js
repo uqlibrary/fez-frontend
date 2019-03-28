@@ -216,10 +216,9 @@ export function submitThesis(data) {
                 return response;
             })
             .then(() =>(hasFilesToUpload ? putUploadFiles(newRecord.rek_pid, data.files.queue, dispatch) : newRecord))
-            // .then(() =>(hasFilesToUpload ?  putUploadFiles(`UQ:${author.aut_student_username}`, data.files.queue, dispatch) // to upload files renamed to student ID
             .then(() => (hasFilesToUpload ? patch(EXISTING_RECORD_API({pid: newRecord.rek_pid}), recordPatch) : newRecord))
-            .then(() => (data.comments ? post(RECORDS_ISSUES_API({pid: newRecord.rek_pid}), {issue: 'Notes from creator of the new record: ' +  data.comments}) : newRecord))
             .then((response) => {
+                /* istanbul ignore next */
                 dispatch({
                     type: actions.CREATE_RECORD_SUCCESS,
                     payload: {
@@ -227,6 +226,7 @@ export function submitThesis(data) {
                         fileUploadOrIssueFailed: false
                     }
                 });
+                /* istanbul ignore next */
                 return Promise.resolve(response.data ? response.data : newRecord);
             })
             .catch(error => {
@@ -239,15 +239,19 @@ export function submitThesis(data) {
                             fileUploadOrIssueFailed: true
                         }
                     });
-
-                    return Promise.resolve(newRecord);
+                    return post(RECORDS_ISSUES_API({pid: newRecord.rek_pid}), {issue: 'The submitter had issues uploading files on this record: ' + newRecord})
+                        .then(
+                            /* istanbul ignore next */
+                            () => {
+                                return Promise.resolve(newRecord);
+                            }
+                        );
                 }
 
                 dispatch({
                     type: actions.CREATE_RECORD_FAILED,
                     payload: error.message
                 });
-
                 return Promise.reject(error);
             });
     };

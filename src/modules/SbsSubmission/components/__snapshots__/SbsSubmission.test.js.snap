@@ -478,7 +478,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
                 </p>,
                 "fileUploadRestrictionHeading": "File upload restrictions",
                 "fileUploadRestrictions": <div>
-                  Maximum file size is 5Gb. 
+                  Maximum file size is 8Gb. 
                   <br />
                   PDF files must be saved using the following naming structure 
                   <b>
@@ -988,7 +988,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
                 </p>,
                 "fileUploadRestrictionHeading": "File upload restrictions",
                 "fileUploadRestrictions": <div>
-                  Maximum file size is 5Gb. 
+                  Maximum file size is 8Gb. 
                   <br />
                   PDF files must be saved using the following naming structure 
                   <b>
@@ -1069,5 +1069,29 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
       </WithStyles(Grid)>
     </WithStyles(Grid)>
   </form>
+</StandardPage>
+`;
+
+exports[`SbsSubmission test should render sbs thesis submission form 3`] = `
+<StandardPage
+  title="Professional doctorate deposit"
+>
+  <WithStyles(Grid)
+    container={true}
+    spacing={24}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <WithStyles(Alert)
+        action={[Function]}
+        actionButtonLabel="RESUBMIT YOUR THESIS"
+        message="There was an issue uploading your thesis files. You will need to resubmit your thesis by clicking on the 'Resubmit your thesis' button."
+        title="FILE UPLOAD ERROR"
+        type="error"
+      />
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
 </StandardPage>
 `;
