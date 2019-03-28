@@ -65,7 +65,7 @@ describe('Lookup action creators', () => {
 
     it('should dispatch 2 actions on error 403 while fetching a lookup', async () => {
         mockApi
-            .onAny()
+            .onGet(repositories.routes.THIRD_PARTY_LOOKUP_API_1FIELD({type: 'incites', field1: 'dummyUT'}).apiUrl)
             .reply(403, {"data":"[I006] The API Key was invalid. Please use a different key."});
 
         const expectedActions = [
@@ -79,7 +79,7 @@ describe('Lookup action creators', () => {
 
     it('should dispatch 2 actions on non-403 error', async () => {
         mockApi
-            .onAny()
+            .onGet(repositories.routes.THIRD_PARTY_LOOKUP_API_1FIELD({type: 'incites', field1: 'dummyUT'}).apiUrl)
             .reply(500, {"data":"[I008] Incites is not currently available. Support have been advised."});
 
         const expectedActions = [
@@ -93,7 +93,7 @@ describe('Lookup action creators', () => {
 
     it('should dispatch 2 actions on unexpected error', async () => {
         mockApi
-            .onAny()
+            .onGet(repositories.routes.THIRD_PARTY_LOOKUP_API_1FIELD({type: 'incites', field1: 'dummyUT'}).apiUrl)
             .reply(500, "unformatted response was received from Incites");
 
         const expectedActions = [
@@ -107,7 +107,7 @@ describe('Lookup action creators', () => {
 
     it('should dispatch 2 actions on missing error message', async () => {
         mockApi
-            .onAny()
+            .onGet(repositories.routes.THIRD_PARTY_LOOKUP_API_1FIELD({type: 'incites', field1: 'dummuUT'}).apiUrl)
             .reply(500);
 
         const expectedActions = [

@@ -5,7 +5,6 @@ import ThesisSubmission from '../components/ThesisSubmission';
 import {submitThesis, checkSession, clearSessionExpiredFlag} from 'actions';
 import {general} from 'config';
 import {bindActionCreators} from 'redux';
-import {withRouter} from 'react-router-dom';
 import * as actions from 'actions';
 
 import {confirmDiscardFormChanges} from 'modules/SharedComponents/ConfirmDiscardFormChanges';
@@ -81,5 +80,4 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 ThesisSubmissionContainer = connect(mapStateToProps, mapDispatchToProps)(ThesisSubmissionContainer);
-ThesisSubmissionContainer = withRouter(ThesisSubmissionContainer);
 export default reloadReducerFromLocalStorage()(ThesisSubmissionContainer);

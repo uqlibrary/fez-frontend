@@ -29,7 +29,6 @@ export default class ThesisSubmission extends Component {
     static propTypes = {
         ...propTypes, // all redux-form props
         actions: PropTypes.object.isRequired,
-        history: PropTypes.object.isRequired,
         author: PropTypes.object,
         isHdrThesis: PropTypes.bool, // HDR thesis if true or SBS thesis if false
         disableSubmit: PropTypes.bool,
