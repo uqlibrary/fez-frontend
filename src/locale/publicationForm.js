@@ -1155,7 +1155,7 @@ export default {
                 fileUploadRestrictionHeading: 'File upload restrictions',
                 fileUploadRestrictions: (
                     <div>
-                        Maximum file size is 5Gb. <br/>
+                        Maximum file size is 8Gb. <br/>
                         PDF files must be saved using the following naming structure <b>&lt;student number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf</b>.
                         Document name could be thesis, abstract, and etc.
                         For example:
@@ -1223,7 +1223,7 @@ export default {
                 fileUploadRestrictionHeading: 'File upload restrictions',
                 fileUploadRestrictions: (
                     <div>
-                        Maximum file size is 5Gb. <br/>
+                        Maximum file size is 8Gb. <br/>
                         PDF files must be saved using the following naming structure <b>&lt;student number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf</b>.
                         Document name could be thesis, abstract, and etc.
                         For example:
