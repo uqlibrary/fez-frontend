@@ -8,6 +8,7 @@ export {default as recordsTypeList} from './recordsTypeList';
 export {default as record} from './record';
 export {default as communityRecord} from './communityRecord';
 export {default as collectionRecord} from './collectionRecord';
+export {default as recordWithDatastreams} from './recordWithDatastreams';
 export {default as myRecordsList} from './myRecordsList';
 export {default as possibleUnclaimedList} from './possibleUnclaimedList';
 export {default as MyDatasetList} from './MyDatasetList';

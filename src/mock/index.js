@@ -180,6 +180,9 @@ mock
         if (config.url.indexOf('UQ:11398') >= 0) {
             return [200, {data: {...mockData.collectionRecord}}];
         }
+        if (config.url.indexOf('UQ:252236') >= 0) {
+            return [200, {data: {...mockData.recordWithDatastreams}}];
+        }
         return [200, {data: {...mockData.record}}];
     })
     // .reply(401, '')
