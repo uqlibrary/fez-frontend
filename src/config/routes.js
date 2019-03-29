@@ -94,7 +94,10 @@ export const pathConfig = {
         legacyEspace: `${fullPath}/my_upo_tools.php`,
         unpublished: '/admin/unpublished',
         prototype: '/admin/prototype',
-        edit: (pid) => `/admin/edit/${pid}`
+        edit: (pid) => `/admin/edit/${pid}`,
+        editCommunity: (pid) => `/communities/${pid}/edit`,
+        editCollection: (pid) => `/collections/${pid}/edit`,
+        editRecord: (pid) => `/records/${pid}/edit`,
     },
     authorIdentifiers: {
         orcid: {
@@ -301,6 +304,27 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
             },
             {
                 path: pathConfig.admin.edit(pid),
+                component: components.Admin,
+                exact: true,
+                access: [roles.admin],
+                pageTitle: locale.pages.editRecord.title
+            },
+            {
+                path: pathConfig.admin.editCommunity(pid),
+                component: components.Admin,
+                exact: true,
+                access: [roles.admin],
+                pageTitle: locale.pages.editRecord.title
+            },
+            {
+                path: pathConfig.admin.editCollection(pid),
+                component: components.Admin,
+                exact: true,
+                access: [roles.admin],
+                pageTitle: locale.pages.editRecord.title
+            },
+            {
+                path: pathConfig.admin.editRecord(pid),
                 component: components.Admin,
                 exact: true,
                 access: [roles.admin],
