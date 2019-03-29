@@ -4,8 +4,8 @@ import {
     EXISTING_RECORD_API,
     RECORDS_ISSUES_API,
     COMMUNITIES_SECURITY_POLICY_API,
-    // COLLECTIONS_SECURITY_POLICY_API,
-    // RECORDS_SECURITY_POLICY_API,
+    COLLECTIONS_SECURITY_POLICY_API,
+    RECORDS_SECURITY_POLICY_API,
     // DATASTREAMS_SECURITY_POLICY_API
 } from 'repositories/routes';
 import {putUploadFiles} from 'repositories';
@@ -312,14 +312,24 @@ export function getCommunitySecurity({ pid }) {
     };
 }
 
-export function updateCommunitySecurity({ pid, communitySecurity }) {
+export const getSecurityUpdateRoute = (pid, recordType) => {
+    switch (recordType) {
+        case 'Community':
+            return COMMUNITIES_SECURITY_POLICY_API({pid: pid});
+        case 'Collection':
+            return COLLECTIONS_SECURITY_POLICY_API({pid: pid});
+        default:
+            return RECORDS_SECURITY_POLICY_API({pid: pid});
+    }
+};
+
+export function updateSecurity(pid, recordType, data) {
     const request = {
-        ...transformers.getPidSearchKey(pid),
-        ...transformers.getSecurityPolicySearchKey(communitySecurity)
+        ...transformers.getSecurityPolicySearchKey(data)
     };
     return dispatch => {
         dispatch({type: actions.SECURITY_POLICY_SAVING});
-        return patch(COMMUNITIES_SECURITY_POLICY_API(request))
+        return patch(getSecurityUpdateRoute(pid, recordType), request)
             .then((response) => {
                 dispatch({
                     type: actions.SECURITY_POLICY_SAVED,

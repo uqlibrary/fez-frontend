@@ -1,9 +1,8 @@
 import {connect} from 'react-redux';
 import {reduxForm, getFormValues, getFormSyncErrors, SubmissionError} from 'redux-form/immutable';
-import {updateCommunitySecurity} from 'actions';
+import {updateSecurity} from 'actions';
 import Immutable from 'immutable';
 import Admin from '../components/Admin';
-import {securityAssignments} from '../components/MockData';
 import {confirmDiscardFormChanges} from 'modules/SharedComponents/ConfirmDiscardFormChanges';
 import {withRouter} from 'react-router';
 import Cookies from 'js-cookie';
@@ -13,12 +12,11 @@ import * as actions from 'actions';
 const FORM_NAME = 'Prototype';
 
 const onSubmit = (values, dispatch) => {
-    return dispatch(updateCommunitySecurity({
-        pid: securityAssignments[0].pid,
-        ...values.toJS()
-    })).catch(error => {
-        throw new SubmissionError({_error: error});
-    });
+    const {pid, recordType, ...formValues} = values.toJS();
+    return dispatch(updateSecurity(pid, recordType, formValues))
+        .catch(error => {
+            throw new SubmissionError({_error: error});
+        });
 };
 
 let PrototypeContainer = reduxForm({
@@ -33,6 +31,8 @@ const mapStateToProps = (state, ownProps) => {
     if (!!recordToView) {
         initialFormValues = {
             initialValues: {
+                pid: recordToView.rek_pid,
+                recordType: recordToView.rek_object_type_lookup,
                 securityPolicy: recordToView.rek_security_policy,
                 datastreamSecurityPolicy: recordToView.rek_datastream_policy,
                 collection: [],

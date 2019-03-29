@@ -9348,6 +9348,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                               "fixRecord": [Function],
                                                               "getCommunitySecurity": [Function],
                                                               "getSearchLookupApi": [Function],
+                                                              "getSecurityUpdateRoute": [Function],
                                                               "getThirdPartyLookupApiUrl": [Function],
                                                               "hidePossiblyYourPublicationsLure": [Function],
                                                               "hideRecord": [Function],
@@ -9379,8 +9380,8 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                               "showAppAlert": [Function],
                                                               "submitThesis": [Function],
                                                               "unclaimRecord": [Function],
-                                                              "updateCommunitySecurity": [Function],
                                                               "updateCurrentAuthor": [Function],
+                                                              "updateSecurity": [Function],
                                                             }
                                                           }
                                                           autoFocus={true}
@@ -14206,6 +14207,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 "fixRecord": [Function],
                                 "getCommunitySecurity": [Function],
                                 "getSearchLookupApi": [Function],
+                                "getSecurityUpdateRoute": [Function],
                                 "getThirdPartyLookupApiUrl": [Function],
                                 "hidePossiblyYourPublicationsLure": [Function],
                                 "hideRecord": [Function],
@@ -14237,8 +14239,8 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 "showAppAlert": [Function],
                                 "submitThesis": [Function],
                                 "unclaimRecord": [Function],
-                                "updateCommunitySecurity": [Function],
                                 "updateCurrentAuthor": [Function],
+                                "updateSecurity": [Function],
                               }
                             }
                             appAlert={null}
@@ -15868,6 +15870,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "fixRecord": [Function],
                                                                             "getCommunitySecurity": [Function],
                                                                             "getSearchLookupApi": [Function],
+                                                                            "getSecurityUpdateRoute": [Function],
                                                                             "getThirdPartyLookupApiUrl": [Function],
                                                                             "hidePossiblyYourPublicationsLure": [Function],
                                                                             "hideRecord": [Function],
@@ -15899,8 +15902,8 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "showAppAlert": [Function],
                                                                             "submitThesis": [Function],
                                                                             "unclaimRecord": [Function],
-                                                                            "updateCommunitySecurity": [Function],
                                                                             "updateCurrentAuthor": [Function],
+                                                                            "updateSecurity": [Function],
                                                                           }
                                                                         }
                                                                         history={
@@ -15974,6 +15977,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                               "fixRecord": [Function],
                                                                               "getCommunitySecurity": [Function],
                                                                               "getSearchLookupApi": [Function],
+                                                                              "getSecurityUpdateRoute": [Function],
                                                                               "getThirdPartyLookupApiUrl": [Function],
                                                                               "hidePossiblyYourPublicationsLure": [Function],
                                                                               "hideRecord": [Function],
@@ -16005,8 +16009,8 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                               "showAppAlert": [Function],
                                                                               "submitThesis": [Function],
                                                                               "unclaimRecord": [Function],
-                                                                              "updateCommunitySecurity": [Function],
                                                                               "updateCurrentAuthor": [Function],
+                                                                              "updateSecurity": [Function],
                                                                             }
                                                                           }
                                                                           classes={
@@ -16087,6 +16091,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                 "fixRecord": [Function],
                                                                                 "getCommunitySecurity": [Function],
                                                                                 "getSearchLookupApi": [Function],
+                                                                                "getSecurityUpdateRoute": [Function],
                                                                                 "getThirdPartyLookupApiUrl": [Function],
                                                                                 "hidePossiblyYourPublicationsLure": [Function],
                                                                                 "hideRecord": [Function],
@@ -16118,8 +16123,8 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                 "showAppAlert": [Function],
                                                                                 "submitThesis": [Function],
                                                                                 "unclaimRecord": [Function],
-                                                                                "updateCommunitySecurity": [Function],
                                                                                 "updateCurrentAuthor": [Function],
+                                                                                "updateSecurity": [Function],
                                                                               }
                                                                             }
                                                                             classes={
@@ -16634,6 +16639,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                   "fixRecord": [Function],
                                                                                   "getCommunitySecurity": [Function],
                                                                                   "getSearchLookupApi": [Function],
+                                                                                  "getSecurityUpdateRoute": [Function],
                                                                                   "getThirdPartyLookupApiUrl": [Function],
                                                                                   "hidePossiblyYourPublicationsLure": [Function],
                                                                                   "hideRecord": [Function],
@@ -16665,8 +16671,8 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                   "showAppAlert": [Function],
                                                                                   "submitThesis": [Function],
                                                                                   "unclaimRecord": [Function],
-                                                                                  "updateCommunitySecurity": [Function],
                                                                                   "updateCurrentAuthor": [Function],
+                                                                                  "updateSecurity": [Function],
                                                                                 }
                                                                               }
                                                                               classes={
@@ -20098,6 +20104,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                     "fixRecord": [Function],
                                                                                     "getCommunitySecurity": [Function],
                                                                                     "getSearchLookupApi": [Function],
+                                                                                    "getSecurityUpdateRoute": [Function],
                                                                                     "getThirdPartyLookupApiUrl": [Function],
                                                                                     "hidePossiblyYourPublicationsLure": [Function],
                                                                                     "hideRecord": [Function],
@@ -20129,8 +20136,8 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                     "showAppAlert": [Function],
                                                                                     "submitThesis": [Function],
                                                                                     "unclaimRecord": [Function],
-                                                                                    "updateCommunitySecurity": [Function],
                                                                                     "updateCurrentAuthor": [Function],
+                                                                                    "updateSecurity": [Function],
                                                                                   }
                                                                                 }
                                                                               >
@@ -20158,6 +20165,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "fixRecord": [Function],
                                                                                       "getCommunitySecurity": [Function],
                                                                                       "getSearchLookupApi": [Function],
+                                                                                      "getSecurityUpdateRoute": [Function],
                                                                                       "getThirdPartyLookupApiUrl": [Function],
                                                                                       "hidePossiblyYourPublicationsLure": [Function],
                                                                                       "hideRecord": [Function],
@@ -20189,8 +20197,8 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "showAppAlert": [Function],
                                                                                       "submitThesis": [Function],
                                                                                       "unclaimRecord": [Function],
-                                                                                      "updateCommunitySecurity": [Function],
                                                                                       "updateCurrentAuthor": [Function],
+                                                                                      "updateSecurity": [Function],
                                                                                     }
                                                                                   }
                                                                                   classes={

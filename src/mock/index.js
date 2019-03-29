@@ -224,8 +224,7 @@ mock
 
 mock
     .onPatch(new RegExp(escapeRegExp(routes.COMMUNITIES_SECURITY_POLICY_API({
-        id: '.*',
-        rek_security_policy: '.*'
+        pid: '.*'
     }).apiUrl)))
     .reply(200, {data: {...mockData.record}});
 ;

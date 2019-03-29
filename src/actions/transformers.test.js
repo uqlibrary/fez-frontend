@@ -12,8 +12,24 @@ describe('getPidSearchKey()', () => {
 
 describe('getSecurityPolicySearchKey()', () => {
     it('should return object with appropriate key', () => {
-        expect(transformers.getSecurityPolicySearchKey('test')).toEqual({
-            rek_security_policy: 'test'
+        const data = {
+            securityPolicy: 5,
+            datastreamSecurityPolicy: null
+        };
+        expect(transformers.getSecurityPolicySearchKey(data)).toEqual({
+            rek_security_policy: 5
+        });
+    });
+
+    it('should return security policy keys correctly', () => {
+        const data = {
+            securityPolicy: 3,
+            datastreamSecurityPolicy: 2
+        };
+
+        expect(transformers.getSecurityPolicySearchKey(data)).toEqual({
+            rek_security_policy: 3,
+            rek_datastream_policy: 2
         });
     });
 });

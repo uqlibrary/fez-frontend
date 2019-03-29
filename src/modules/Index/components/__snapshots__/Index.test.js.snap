@@ -2031,6 +2031,7 @@ exports[`Index page should render placeholders 1`] = `
                                                           "fixRecord": [Function],
                                                           "getCommunitySecurity": [Function],
                                                           "getSearchLookupApi": [Function],
+                                                          "getSecurityUpdateRoute": [Function],
                                                           "getThirdPartyLookupApiUrl": [Function],
                                                           "hidePossiblyYourPublicationsLure": [Function],
                                                           "hideRecord": [Function],
@@ -2062,8 +2063,8 @@ exports[`Index page should render placeholders 1`] = `
                                                           "showAppAlert": [Function],
                                                           "submitThesis": [Function],
                                                           "unclaimRecord": [Function],
-                                                          "updateCommunitySecurity": [Function],
                                                           "updateCurrentAuthor": [Function],
+                                                          "updateSecurity": [Function],
                                                         }
                                                       }
                                                       history={
@@ -2137,6 +2138,7 @@ exports[`Index page should render placeholders 1`] = `
                                                             "fixRecord": [Function],
                                                             "getCommunitySecurity": [Function],
                                                             "getSearchLookupApi": [Function],
+                                                            "getSecurityUpdateRoute": [Function],
                                                             "getThirdPartyLookupApiUrl": [Function],
                                                             "hidePossiblyYourPublicationsLure": [Function],
                                                             "hideRecord": [Function],
@@ -2168,8 +2170,8 @@ exports[`Index page should render placeholders 1`] = `
                                                             "showAppAlert": [Function],
                                                             "submitThesis": [Function],
                                                             "unclaimRecord": [Function],
-                                                            "updateCommunitySecurity": [Function],
                                                             "updateCurrentAuthor": [Function],
+                                                            "updateSecurity": [Function],
                                                           }
                                                         }
                                                         classes={
@@ -2250,6 +2252,7 @@ exports[`Index page should render placeholders 1`] = `
                                                               "fixRecord": [Function],
                                                               "getCommunitySecurity": [Function],
                                                               "getSearchLookupApi": [Function],
+                                                              "getSecurityUpdateRoute": [Function],
                                                               "getThirdPartyLookupApiUrl": [Function],
                                                               "hidePossiblyYourPublicationsLure": [Function],
                                                               "hideRecord": [Function],
@@ -2281,8 +2284,8 @@ exports[`Index page should render placeholders 1`] = `
                                                               "showAppAlert": [Function],
                                                               "submitThesis": [Function],
                                                               "unclaimRecord": [Function],
-                                                              "updateCommunitySecurity": [Function],
                                                               "updateCurrentAuthor": [Function],
+                                                              "updateSecurity": [Function],
                                                             }
                                                           }
                                                           classes={
@@ -2797,6 +2800,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                 "fixRecord": [Function],
                                                                 "getCommunitySecurity": [Function],
                                                                 "getSearchLookupApi": [Function],
+                                                                "getSecurityUpdateRoute": [Function],
                                                                 "getThirdPartyLookupApiUrl": [Function],
                                                                 "hidePossiblyYourPublicationsLure": [Function],
                                                                 "hideRecord": [Function],
@@ -2828,8 +2832,8 @@ exports[`Index page should render placeholders 1`] = `
                                                                 "showAppAlert": [Function],
                                                                 "submitThesis": [Function],
                                                                 "unclaimRecord": [Function],
-                                                                "updateCommunitySecurity": [Function],
                                                                 "updateCurrentAuthor": [Function],
+                                                                "updateSecurity": [Function],
                                                               }
                                                             }
                                                             classes={
@@ -6261,6 +6265,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                   "fixRecord": [Function],
                                                                   "getCommunitySecurity": [Function],
                                                                   "getSearchLookupApi": [Function],
+                                                                  "getSecurityUpdateRoute": [Function],
                                                                   "getThirdPartyLookupApiUrl": [Function],
                                                                   "hidePossiblyYourPublicationsLure": [Function],
                                                                   "hideRecord": [Function],
@@ -6292,8 +6297,8 @@ exports[`Index page should render placeholders 1`] = `
                                                                   "showAppAlert": [Function],
                                                                   "submitThesis": [Function],
                                                                   "unclaimRecord": [Function],
-                                                                  "updateCommunitySecurity": [Function],
                                                                   "updateCurrentAuthor": [Function],
+                                                                  "updateSecurity": [Function],
                                                                 }
                                                               }
                                                             >
@@ -6321,6 +6326,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                     "fixRecord": [Function],
                                                                     "getCommunitySecurity": [Function],
                                                                     "getSearchLookupApi": [Function],
+                                                                    "getSecurityUpdateRoute": [Function],
                                                                     "getThirdPartyLookupApiUrl": [Function],
                                                                     "hidePossiblyYourPublicationsLure": [Function],
                                                                     "hideRecord": [Function],
@@ -6352,8 +6358,8 @@ exports[`Index page should render placeholders 1`] = `
                                                                     "showAppAlert": [Function],
                                                                     "submitThesis": [Function],
                                                                     "unclaimRecord": [Function],
-                                                                    "updateCommunitySecurity": [Function],
                                                                     "updateCurrentAuthor": [Function],
+                                                                    "updateSecurity": [Function],
                                                                   }
                                                                 }
                                                                 classes={

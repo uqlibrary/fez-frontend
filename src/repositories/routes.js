@@ -252,18 +252,18 @@ export const THIRD_PARTY_LOOKUP_API_2FIELD = ({type, field1, field2}) => (
     {apiUrl: `tool/lookup/${type}/${field1}/${field2}`}
 );
 
-export const COMMUNITIES_SECURITY_POLICY_API = ({ id }) => (
-    {apiUrl: `communities/${id}`}
+export const COMMUNITIES_SECURITY_POLICY_API = ({ pid }) => (
+    {apiUrl: `communities/${pid}`}
 );
 
-export const COLLECTIONS_SECURITY_POLICY_API = ({ id }) => (
-    {apiUrl: `collections/${id}`}
+export const COLLECTIONS_SECURITY_POLICY_API = ({ pid }) => (
+    {apiUrl: `collections/${pid}`}
 );
 
-export const RECORDS_SECURITY_POLICY_API = ({ id }) => (
-    {apiUrl: `records/${id}`}
+export const RECORDS_SECURITY_POLICY_API = ({ pid }) => (
+    {apiUrl: `records/${pid}`}
 );
 
-export const DATASTREAMS_SECURITY_POLICY_API = ({ id, dsid }) => (
-    {apiUrl: `datastreams/${id}/${dsid}`}
+export const DATASTREAMS_SECURITY_POLICY_API = ({ pid, dsid }) => (
+    {apiUrl: `datastreams/${pid}/${dsid}`}
 );

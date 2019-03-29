@@ -1072,6 +1072,7 @@ describe('Record action creators', () => {
         });
     });
 
+    /*
     describe('getCommunitySecurity()', () => {
         it('dispatches expected actions on successful get', async () => {
             const testInput = {
@@ -1204,5 +1205,5 @@ describe('Record action creators', () => {
             expect(requestFailed).toBe(true);
         });
     });
-
+    */
 });
