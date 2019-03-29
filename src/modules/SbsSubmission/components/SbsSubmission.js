@@ -34,7 +34,10 @@ export default class SbsSubmission extends Component {
         disableSubmit: PropTypes.bool,
         fileAccessId: PropTypes.number,
         actions: PropTypes.object,
-        isSessionValid: PropTypes.bool
+        history: PropTypes.object,
+        isSessionValid: PropTypes.bool,
+        newRecordFileUploadingOrIssueError: PropTypes.bool,
+        newRecord: PropTypes.object
     };
 
     static contextTypes = {
@@ -71,6 +74,11 @@ export default class SbsSubmission extends Component {
         this.depositConfirmationBox = ref;
     };
 
+    afterFailedSubmit = () => {
+        // Clears the current state completely and reloads the form
+        window.location.reload();
+    }
+
     render() {
         const txt = formLocale.thesis;
         const txtFoR = locale.components.fieldOfResearchForm;
@@ -80,11 +88,21 @@ export default class SbsSubmission extends Component {
             return (
                 <StandardPage title={formLocale.sbsSubmission.sbsTitle}>
                     <Grid container spacing={24}>
-                        <Grid item xs={12}>
-                            <StandardCard title={formLocale.sbsSubmission.afterSubmitTitle}>
-                                <Typography>{formLocale.sbsSubmission.afterSubmitText}</Typography>
-                            </StandardCard>
-                        </Grid>
+                        {
+                            this.props.newRecordFileUploadingOrIssueError ?
+                                <Grid item xs={12}>
+                                    <Alert
+                                        {...formLocale.thesisSubmission.fileUpload.failedAlertLocale}
+                                        action={this.afterFailedSubmit}
+                                    />
+                                </Grid>
+                                :
+                                <Grid item xs={12}>
+                                    <StandardCard title={formLocale.sbsSubmission.afterSubmitTitle}>
+                                        <Typography>{formLocale.sbsSubmission.afterSubmitText}</Typography>
+                                    </StandardCard>
+                                </Grid>
+                        }
                     </Grid>
                 </StandardPage>
             );
