@@ -15,7 +15,6 @@ import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { FormValuesContextConsumer } from 'context';
 
 import SecurityCard, { renderPolicyDesc, renderPolicyItems } from './SecurityCard';
-import { securityAssignments } from './MockData';
 
 import { validation } from 'config';
 import { TOP_LEVEL_SECURITY_POLICIES, DATA_STREAM_SECURITY_POLICIES } from 'config/general';
@@ -23,170 +22,51 @@ import { locale } from 'locale';
 
 const text = locale.components.securitySection;
 
-export const SecuritySection = ({ disabled, handleSubmit }) => {
+export const SecuritySection = ({ disabled, handleSubmit, recordType }) => {
     const [collectionSecurity, setCollectionSecurity] = useState(false);
     const [overrideSecurity, setOverrideSecurity] = useState(false);
     const [overrideDatastreamSecurity, setOverrideDatastreamSecurity] = useState(false);
     const handleSecurity = (handler, security) => () => handler(!security);
 
-    const securityCommunity = {
-        ...securityAssignments[0]
-    };
-
     return (
-        <React.Fragment>
-            <Grid container spacing={16}>
-                <Grid item xs={12} sm={12}>
-                    <Field
-                        component={SelectField}
-                        name="level"
-                        label={text.admin.field.label}
-                        disabled={disabled}
-                        required
-                        validation={[validation.required]}
-                    >
-                        <MenuItem value="Superadmin" >
-                            {text.admin.field.menuItemText.superAdmin}
-                        </MenuItem>
-                        <MenuItem value="Admin" >
-                            {text.admin.field.menuItemText.admin}
-                        </MenuItem>
-                    </Field>
-                    <br /><br />
-                    <Field
-                        component={SelectField}
-                        name="type"
-                        label={text.admin.typeField.label}
-                        disabled={disabled}
-                        required
-                        validation={[validation.required]}
-                    >
-                        <MenuItem value="community" >
-                            {text.admin.typeField.menuItemText.community}
-                        </MenuItem>
-                        <MenuItem value="collection" >
-                            {text.admin.typeField.menuItemText.collection}
-                        </MenuItem>
-                        <MenuItem value="record" >
-                            {text.admin.typeField.menuItemText.record}
-                        </MenuItem>
-                        <MenuItem value="dataStream" >
-                            {text.admin.typeField.menuItemText.dataStream}
-                        </MenuItem>
-                    </Field>
-                    <br /><br />
-                    <Alert
-                        type="warning"
-                        title={text.admin.warning.title}
-                        message={text.admin.warning.message}
-                    />
-                    <br /><br />
-                </Grid>
+        <Grid container spacing={16}>
+            <Grid item xs={12} sm={12}>
+                <Field
+                    component={SelectField}
+                    name="level"
+                    label={text.admin.field.label}
+                    disabled={disabled}
+                    required
+                    validation={[validation.required]}
+                >
+                    <MenuItem value="Superadmin" >
+                        {text.admin.field.menuItemText.superAdmin}
+                    </MenuItem>
+                    <MenuItem value="Admin" >
+                        {text.admin.field.menuItemText.admin}
+                    </MenuItem>
+                </Field>
+            </Grid>
+            <Grid item xs={12} sm={12}>
+                <Alert
+                    type="warning"
+                    title={text.admin.warning.title}
+                    message={text.admin.warning.message}
+                />
             </Grid>
             <FormValuesContextConsumer>
                 {({ formValues }) => (
                     <React.Fragment>
                         {
                             formValues.get('level') === 'Superadmin' &&
-                            formValues.get('type') === 'community' &&
                             <Grid item xs={12}>
-                                <br /><br />
                                 <SecurityCard
                                     disabled={disabled}
-                                    selectedPolicyKey={formValues.get('communitySecurity')}
-                                    entity={securityCommunity}
-                                    text={text.community}
-                                    fieldID={'communitySecurity'}
+                                    text={text[recordType.toLowerCase()]}
                                 />
                             </Grid>
                         }
                         {
-                            formValues.get('level') === 'Superadmin' &&
-                            formValues.get('type') === 'collection' &&
-                            <Grid item xs={12}>
-                                <StandardCard title={<span><b>Collection</b> level security - UQ:12345</span>} accentHeader>
-                                    <Grid container spacing={8}>
-                                        <Grid item xs={12}>
-                                            <Typography variant="body2" component="p">
-                                                {text.collection.description}
-                                            </Typography>
-                                        </Grid>
-                                        <Grid item xs={12}>
-                                            <Field
-                                                component={SelectField}
-                                                disabled={disabled}
-                                                name="collectionSecurity"
-                                                label="Collection policy to apply to this PID"
-                                                required
-                                                validation={[validation.required]}
-                                            >
-                                                <MenuItem value="" disabled>
-                                                    {text.collection.prompt}
-                                                </MenuItem>
-                                                {renderPolicyItems()}
-                                            </Field>
-                                        </Grid>
-                                        {
-                                            formValues.get('collectionSecurity') &&
-                                            <Grid item xs={12} style={{
-                                                marginTop: 24,
-                                                padding: 24,
-                                                backgroundColor: 'rgba(0,0,0,0.05)'
-                                            }}>
-                                                <Typography variant="h6" style={{ marginTop: -8 }}>
-                                                    {text.collection.selectedTitle}
-                                                </Typography>
-                                                <Grid container spacing={8} style={{ marginTop: 8 }}>
-                                                    <Grid item xs={2}><b>Name (ID):</b></Grid>
-                                                    <Grid item xs={10}>
-                                                        {renderPolicyDesc(formValues.get('collectionSecurity'))}
-                                                    </Grid>
-                                                </Grid>
-                                            </Grid>
-                                        }
-                                    </Grid>
-
-                                    <Grid container spacing={8} style={{ marginTop: 16 }}>
-                                        <Grid item xs={12}>
-                                            <Field
-                                                component={SelectField}
-                                                disabled={disabled}
-                                                name="collectionDataSecurity"
-                                                label={text.collection.dataStreamFieldLabel}
-                                                required
-                                                validation={[validation.required]}
-                                            >
-                                                <MenuItem value="" disabled>
-                                                    {text.collection.prompt}
-                                                </MenuItem>
-                                                {renderPolicyItems()}
-                                            </Field>
-                                        </Grid>
-                                        {
-                                            formValues.get('collectionDataSecurity') &&
-                                            <Grid item xs={12} style={{
-                                                marginTop: 24,
-                                                padding: 24,
-                                                backgroundColor: 'rgba(0,0,0,0.05)'
-                                            }}>
-                                                <Typography variant="h6" style={{ marginTop: -8 }}>
-                                                    {text.collection.dataStreamSelectedTitle}
-                                                </Typography>
-                                                <Grid container spacing={8} style={{ marginTop: 8 }}>
-                                                    <Grid item xs={2}><b>Name (ID):</b></Grid>
-                                                    <Grid item xs={10}>
-                                                        {renderPolicyDesc(formValues.get('collectionDataSecurity'))}
-                                                    </Grid>
-                                                </Grid>
-                                            </Grid>
-                                        }
-                                    </Grid>
-                                </StandardCard>
-                            </Grid>
-                        }
-                        {
-                            formValues.get('collectionDataSecurity') &&
-                            formValues.get('type') === 'collection' &&
                             <Grid item xs={12}>
                                 <StandardCard title={<span><b>Datastream</b> security - UQ:12345</span>} accentHeader>
                                     <Grid container spacing={8}>
@@ -410,8 +290,7 @@ export const SecuritySection = ({ disabled, handleSubmit }) => {
                         }
                         {
                             formValues.get('level') &&
-                            formValues.get('type') &&
-                            <Grid item xs={12} sm="auto">
+                            <Grid item xs={12} sm={12}>
                                 <Button
                                     style={{whiteSpace: 'nowrap'}}
                                     variant="contained"
@@ -425,12 +304,13 @@ export const SecuritySection = ({ disabled, handleSubmit }) => {
                     </React.Fragment>
                 )}
             </FormValuesContextConsumer>
-        </React.Fragment>
+        </Grid>
     );
 };
 
 SecuritySection.propTypes = {
     disabled: PropTypes.bool,
+    recordType: PropTypes.string,
     handleSubmit: PropTypes.func
 };
 

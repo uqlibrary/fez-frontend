@@ -177,6 +177,9 @@ mock
         if (config.url.indexOf('UQ:3883') >= 0) {
             return [200, {data: {...mockData.communityRecord}}];
         }
+        if (config.url.indexOf('UQ:11398') >= 0) {
+            return [200, {data: {...mockData.collectionRecord}}];
+        }
         return [200, {data: {...mockData.record}}];
     })
     // .reply(401, '')

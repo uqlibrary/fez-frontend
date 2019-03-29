@@ -15,7 +15,8 @@ export {
     recordWithMap,
     recordWithTiffAndThumbnail,
     recordWithoutAuthorIds,
-    communityRecord
+    communityRecord,
+    collectionRecord
 } from './records';
 export {vocabulariesList} from './vocabularies';
 export {quickTemplates} from './acml';

@@ -27,18 +27,25 @@ let PrototypeContainer = reduxForm({
 })(confirmDiscardFormChanges(Admin, FORM_NAME));
 
 const mapStateToProps = (state, ownProps) => {
+    const recordToView = state.get('viewRecordReducer').recordToView;
     const formErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});
+    let initialFormValues = null;
+    if (!!recordToView) {
+        initialFormValues = {
+            initialValues: {
+                securityPolicy: recordToView.rek_security_policy,
+                datastreamSecurityPolicy: recordToView.rek_datastream_policy,
+                collection: [],
+                subject: []
+            }
+        };
+    }
     return {
         formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
         formErrors: formErrors,
         disableSubmit: formErrors && !(formErrors instanceof Immutable.Map),
-        initialValues: {
-            communitySecurity: securityAssignments[0].policyID,
-            collectionSecurity: 2,
-            collection: [],
-            subject: []
-        },
         tabbed: Cookies.get('adminFormTabbed') && !!(Cookies.get('adminFormTabbed') === 'tabbed'),
+        ...(!!initialFormValues ? initialFormValues : {}),
         ...ownProps,
         ...state.get('viewRecordReducer'),
     };

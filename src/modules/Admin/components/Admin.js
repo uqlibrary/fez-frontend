@@ -22,7 +22,7 @@ import SecuritySection from './SecuritySection';
 import useTheme from '@material-ui/styles/useTheme';
 import { unstable_useMediaQuery as useMediaQuery } from '@material-ui/core/useMediaQuery';
 import TabContainer from './TabContainer';
-import {TabbedContextProvider, TabbedContextConsumer, FormValuesContextProvider} from 'context';
+import {TabbedContextProvider, TabbedContextConsumer, FormValuesContextProvider, RecordContextProvider, RecordContextConsumer} from 'context';
 
 const styles = theme => ({
     helpIcon: {
@@ -46,7 +46,7 @@ const styles = theme => ({
     }
 });
 
-export function AdminInterface({ record, classes, submitting, isTabbed, handleSubmit }) {
+export function AdminInterface({ classes, submitting, isTabbed, handleSubmit }) {
     const [tabbed, setTabbed] = useState(isTabbed);
     const [currentTabValue, setCurrentTabValue] = useState(0);
     const theme = useTheme();
@@ -186,119 +186,126 @@ export function AdminInterface({ record, classes, submitting, isTabbed, handleSu
     //     customToolbar: () => <div />
     // };
 
-    const title = `${record.rek_pid} ${record.rek_title}`;
 
     return (
         <StandardPage>
             <TabbedContextProvider value={{tabbed: isMobileView ? false : tabbed, toggleTabbed: handleToggle}}>
-                <Grid container direction="row" alignItems="center" style={{marginTop: -24}}>
-                    <Grid item xs style={{marginBottom: 12}}>
-                        <Typography variant="h5" color="primary" style={{fontSize: 24}}>{title}</Typography>
-                    </Grid>
-                    <Hidden xsDown>
-                        <Grid item xs="auto">
-                            <Grid container direction="row" spacing={0} alignItems="center">
-                                <Grid item>
-                                    <FormViewToggler/>
-                                </Grid>
-                                <Grid item>
-                                    <Badge classes={{badge: classes.badgeMargin}} badgeContent="?" color="secondary">
-                                        <HelpIcon
-                                            icon={<Keyboard className={classes.helpIcon} />}
-                                            tooltip="Learn about keyboard shortcuts"
-                                            title="Keyboard shortcuts"
-                                            text={(
-                                                <React.Fragment>
-                                                    <br/>
-                                                    <Typography variant="h6" component="p">Tab navigation</Typography>
-                                                    <p>To navigate tabs while in tabbed mode, hold CTRL and SHIFT and use the LEFT and RIGHT arrow keys.</p>
-                                                    <Typography variant="h6" component="p">Form style</Typography>
-                                                    <p>To switch between tabbed or full form mode, hold CTRL and SHIFT and use the UP and DOWN arrow keys.</p>
-                                                    <p>Your preference is saved as a cookie on this browser and it will remember your preference.</p>
-                                                </React.Fragment>
-                                            )}
-                                            buttonLabel="GOT IT"
-                                        />
-                                    </Badge>
-                                </Grid>
-                            </Grid>
-                        </Grid>
-                        <Grid container spacing={0} direction="row">
-                            {
-                                tabbed &&
-                                    <Grid item xs={12}>
-                                        <Tabs value={currentTabValue}
-                                            variant="fullWidth"
-                                            style={{marginRight: -56, marginLeft: -56}}
-                                            classes={{indicator: classes.tabIndicator}}
-                                            onChange={handleTabChange}
-                                            variant="scrollable"
-                                            scrollButtons="on"
-                                            indicatorColor="primary"
-                                            textColor="primary">
-                                            <Tab label="Identifiers"/>
-                                            <Tab label="Bibliographic"/>
-                                            <Tab label="Admin"/>
-                                            <Tab label="Grant Information"/>
-                                            <Tab label="Author details"/>
-                                            <Tab label="Files"/>
-                                            <Tab label="Security"/>
-                                        </Tabs>
-                                    </Grid>
-                            }
-                        </Grid>
-                    </Hidden>
-                </Grid>
-                {/* --------------- Content here ---------------*/}
-                <TabbedContextConsumer>
+                <RecordContextConsumer>
                     {
-                        ({tabbed}) => (
-                            <form>
-                                <Grid container spacing={16}>
-                                    <TabContainer value={0} currentTab={currentTabValue} tabbed={(tabbed && !isMobileView)}>
-                                        <StandardCard title="Identifiers" primaryHeader={!!(tabbed && !isMobileView)} squareTop={!!(tabbed && !isMobileView)}>
-                                            <IdentifiersSection
-                                                disabled={submitting}
-                                            />
-                                        </StandardCard>
-                                    </TabContainer>
-                                    <TabContainer value={1} currentTab={currentTabValue} tabbed={(tabbed && !isMobileView)}>
-                                        <StandardCard title="Bibliographic" primaryHeader={!!(tabbed && !isMobileView)} squareTop={!!(tabbed && !isMobileView)}>
-                                            <BibliographicSection
-                                                disabled={submitting}
-                                            />
-                                        </StandardCard>
-                                    </TabContainer>
-                                    <TabContainer value={2} currentTab={currentTabValue} tabbed={tabbed}>
-                                        <StandardCard title="Admin" primaryHeader={!!tabbed} squareTop={!!tabbed}>
-                                            <AdminSection disabled={submitting}/>
-                                        </StandardCard>
-                                    </TabContainer>
-                                    <TabContainer value={3} currentTab={currentTabValue} tabbed={tabbed}>
-                                        <StandardCard title="Grant Information" primaryHeader={!!tabbed} squareTop={!!tabbed}>
-                                            <GrantInformationSection disabled={submitting}/>
-                                        </StandardCard>
-                                    </TabContainer>
-                                    <TabContainer value={4} currentTab={currentTabValue} tabbed={tabbed}>
-                                        <StandardCard title="Author details" primaryHeader={!!tabbed} squareTop={!!tabbed}>
-                                            Author details
-                                        </StandardCard>
-                                    </TabContainer>
-                                    <TabContainer value={5} currentTab={currentTabValue} tabbed={tabbed}>
-                                        <StandardCard title="Files" primaryHeader={!!tabbed} squareTop={!!tabbed}>
-                                            Files
-                                        </StandardCard>
-                                    </TabContainer>
-                                    <TabContainer value={6} currentTab={currentTabValue} tabbed={tabbed}>
-                                        <StandardCard title="Security" primaryHeader={!!tabbed} squareTop={!!tabbed}>
-                                            <SecuritySection disabled={submitting} handleSubmit={handleSubmit}/>
-                                        </StandardCard>
-                                    </TabContainer>
+                        ({record}) => (
+                            <React.Fragment>
+                                <Grid container direction="row" alignItems="center" style={{marginTop: -24}}>
+                                    <Grid item xs style={{marginBottom: 12}}>
+                                        <Typography variant="h5" color="primary" style={{fontSize: 24}}>{`${record.rek_pid} ${record.rek_title}`}</Typography>
+                                    </Grid>
+                                    <Hidden xsDown>
+                                        <Grid item xs="auto">
+                                            <Grid container direction="row" spacing={0} alignItems="center">
+                                                <Grid item>
+                                                    <FormViewToggler/>
+                                                </Grid>
+                                                <Grid item>
+                                                    <Badge classes={{badge: classes.badgeMargin}} badgeContent="?" color="secondary">
+                                                        <HelpIcon
+                                                            icon={<Keyboard className={classes.helpIcon} />}
+                                                            tooltip="Learn about keyboard shortcuts"
+                                                            title="Keyboard shortcuts"
+                                                            text={(
+                                                                <React.Fragment>
+                                                                    <br/>
+                                                                    <Typography variant="h6" component="p">Tab navigation</Typography>
+                                                                    <p>To navigate tabs while in tabbed mode, hold CTRL and SHIFT and use the LEFT and RIGHT arrow keys.</p>
+                                                                    <Typography variant="h6" component="p">Form style</Typography>
+                                                                    <p>To switch between tabbed or full form mode, hold CTRL and SHIFT and use the UP and DOWN arrow keys.</p>
+                                                                    <p>Your preference is saved as a cookie on this browser and it will remember your preference.</p>
+                                                                </React.Fragment>
+                                                            )}
+                                                            buttonLabel="GOT IT"
+                                                        />
+                                                    </Badge>
+                                                </Grid>
+                                            </Grid>
+                                        </Grid>
+                                        <Grid container spacing={0} direction="row">
+                                            {
+                                                tabbed &&
+                                                    <Grid item xs={12}>
+                                                        <Tabs value={currentTabValue}
+                                                            variant="fullWidth"
+                                                            style={{marginRight: -56, marginLeft: -56}}
+                                                            classes={{indicator: classes.tabIndicator}}
+                                                            onChange={handleTabChange}
+                                                            variant="scrollable"
+                                                            scrollButtons="on"
+                                                            indicatorColor="primary"
+                                                            textColor="primary">
+                                                            <Tab label="Identifiers"/>
+                                                            <Tab label="Bibliographic"/>
+                                                            <Tab label="Admin"/>
+                                                            <Tab label="Grant Information"/>
+                                                            <Tab label="Author details"/>
+                                                            <Tab label="Files"/>
+                                                            <Tab label="Security"/>
+                                                        </Tabs>
+                                                    </Grid>
+                                            }
+                                        </Grid>
+                                    </Hidden>
                                 </Grid>
-                            </form>
+                                {/* --------------- Content here ---------------*/}
+                                <TabbedContextConsumer>
+                                    {
+                                        ({tabbed}) => (
+                                            <form>
+                                                <Grid container spacing={16}>
+                                                    <TabContainer value={0} currentTab={currentTabValue} tabbed={(tabbed && !isMobileView)}>
+                                                        <StandardCard title="Identifiers" primaryHeader={!!(tabbed && !isMobileView)} squareTop={!!(tabbed && !isMobileView)}>
+                                                            <IdentifiersSection
+                                                                disabled={submitting}
+                                                            />
+                                                        </StandardCard>
+                                                    </TabContainer>
+                                                    <TabContainer value={1} currentTab={currentTabValue} tabbed={(tabbed && !isMobileView)}>
+                                                        <StandardCard title="Bibliographic" primaryHeader={!!(tabbed && !isMobileView)} squareTop={!!(tabbed && !isMobileView)}>
+                                                            <BibliographicSection
+                                                                disabled={submitting}
+                                                            />
+                                                        </StandardCard>
+                                                    </TabContainer>
+                                                    <TabContainer value={2} currentTab={currentTabValue} tabbed={tabbed}>
+                                                        <StandardCard title="Admin" primaryHeader={!!tabbed} squareTop={!!tabbed}>
+                                                            <AdminSection disabled={submitting}/>
+                                                        </StandardCard>
+                                                    </TabContainer>
+                                                    <TabContainer value={3} currentTab={currentTabValue} tabbed={tabbed}>
+                                                        <StandardCard title="Grant Information" primaryHeader={!!tabbed} squareTop={!!tabbed}>
+                                                            <GrantInformationSection disabled={submitting}/>
+                                                        </StandardCard>
+                                                    </TabContainer>
+                                                    <TabContainer value={4} currentTab={currentTabValue} tabbed={tabbed}>
+                                                        <StandardCard title="Author details" primaryHeader={!!tabbed} squareTop={!!tabbed}>
+                                                            Author details
+                                                        </StandardCard>
+                                                    </TabContainer>
+                                                    <TabContainer value={5} currentTab={currentTabValue} tabbed={tabbed}>
+                                                        <StandardCard title="Files" primaryHeader={!!tabbed} squareTop={!!tabbed}>
+                                                            Files
+                                                        </StandardCard>
+                                                    </TabContainer>
+                                                    <TabContainer value={6} currentTab={currentTabValue} tabbed={tabbed}>
+                                                        <StandardCard title="Security" primaryHeader={!!tabbed} squareTop={!!tabbed}>
+                                                            <SecuritySection disabled={submitting} handleSubmit={handleSubmit} recordType={record.rek_object_type_lookup || record.rek_display_type_lookup}/>
+                                                        </StandardCard>
+                                                    </TabContainer>
+                                                </Grid>
+                                            </form>
+                                        )
+                                    }
+                                </TabbedContextConsumer>
+                            </React.Fragment>
                         )
                     }
-                </TabbedContextConsumer>
+                </RecordContextConsumer>
             </TabbedContextProvider>
         </StandardPage>
     );
@@ -447,12 +454,14 @@ class Admin extends Component {
             <FormValuesContextProvider value={{formValues: this.props.formValues}}>
                 {
                     !!this.props.recordToView &&
-                    <AdminInterface
-                        classes={this.props.classes}
-                        isTabbed={this.props.tabbed}
-                        handleSubmit={this.props.handleSubmit}
-                        record={this.props.recordToView}
-                    />
+                    <RecordContextProvider value={{record: this.props.recordToView}}>
+                        <AdminInterface
+                            classes={this.props.classes}
+                            isTabbed={this.props.tabbed}
+                            handleSubmit={this.props.handleSubmit}
+                            record={this.props.recordToView}
+                        />
+                    </RecordContextProvider>
                 }
             </FormValuesContextProvider>
         );
