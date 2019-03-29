@@ -5,6 +5,7 @@ import ThesisSubmission from '../components/ThesisSubmission';
 import {submitThesis, checkSession, clearSessionExpiredFlag} from 'actions';
 import {general} from 'config';
 import {bindActionCreators} from 'redux';
+import * as actions from 'actions';
 
 import {confirmDiscardFormChanges} from 'modules/SharedComponents/ConfirmDiscardFormChanges';
 import {reloadReducerFromLocalStorage} from 'modules/SharedComponents/ReloadReducerFromLocalStorage';
@@ -38,6 +39,8 @@ const mapStateToProps = (state, props) => {
     const initialValuesSetInRedux = !!state.get('form') && (state.get('form').toJS()[FORM_NAME] || {}).values || {};
     const currentAuthor = state && state.get('accountReducer') ? state.get('accountReducer').author : null;
     const isSessionValid = state && state.get('accountReducer') ? state.get('accountReducer').isSessionExpired === false : null;
+    const newRecordFileUploadingOrIssueError = state && state.get('createRecordReducer') ? state.get('createRecordReducer').newRecordFileUploadingOrIssueError : false;
+    const newRecord = state && state.get('createRecordReducer') ? state.get('createRecordReducer').newRecord : null;
 
     // eslint-disable-next-line no-unused-vars
     const {files, ...locallyStoredValues} = !!props.locallyStoredReducer && !!props.locallyStoredReducer.get(FORM_NAME) && props.locallyStoredReducer.get(FORM_NAME).values;
@@ -66,14 +69,15 @@ const mapStateToProps = (state, props) => {
         author: currentAuthor,
         isHdrThesis: props.isHdrThesis,
         fileAccessId: props.isHdrThesis ? general.HDR_THESIS_DEFAULT_VALUES.fileAccessId : general.SBS_THESIS_DEFAULT_VALUES.fileAccessId,
+        newRecordFileUploadingOrIssueError,
+        newRecord,
         isSessionValid
     };
 };
 
 const mapDispatchToProps = (dispatch) => ({
-    actions: bindActionCreators({checkSession, clearSessionExpiredFlag}, dispatch)
+    actions: bindActionCreators({checkSession, clearSessionExpiredFlag, ...actions}, dispatch)
 });
 
 ThesisSubmissionContainer = connect(mapStateToProps, mapDispatchToProps)(ThesisSubmissionContainer);
-
 export default reloadReducerFromLocalStorage()(ThesisSubmissionContainer);
