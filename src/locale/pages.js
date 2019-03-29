@@ -685,8 +685,21 @@ export default {
         prototype: {
             title: 'Admin prototype'
         },
-        editRecord: {
-            title: 'Record administration'
+        edit: {
+            loadingMessage: 'Loading record',
+            community: {
+                title: 'Edit community',
+                loadingMessage: 'Loading community',
+
+            },
+            collection: {
+                title: 'Edit collection',
+                loadingMessage: 'Loading collection',
+            },
+            record: {
+                title: 'Edit record',
+                loadingMessage: 'Loading record',
+            }
         }
     }
 };

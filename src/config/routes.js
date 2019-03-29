@@ -307,28 +307,28 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
                 component: components.Admin,
                 exact: true,
                 access: [roles.admin],
-                pageTitle: locale.pages.editRecord.title
+                pageTitle: locale.pages.edit.record.title
             },
             {
                 path: pathConfig.admin.editCommunity(pid),
                 component: components.Admin,
                 exact: true,
                 access: [roles.admin],
-                pageTitle: locale.pages.editRecord.title
+                pageTitle: locale.pages.edit.community.title
             },
             {
                 path: pathConfig.admin.editCollection(pid),
                 component: components.Admin,
                 exact: true,
                 access: [roles.admin],
-                pageTitle: locale.pages.editRecord.title
+                pageTitle: locale.pages.edit.collection.title
             },
             {
                 path: pathConfig.admin.editRecord(pid),
                 component: components.Admin,
                 exact: true,
                 access: [roles.admin],
-                pageTitle: locale.pages.editRecord.title
+                pageTitle: locale.pages.edit.record.title
             },
             {
                 path: pathConfig.admin.masquerade,

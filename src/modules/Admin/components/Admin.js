@@ -1,28 +1,40 @@
 import React, {Component, useState, useEffect} from 'react';
-import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
-import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
+import PropTypes from 'prop-types';
+import Cookies from 'js-cookie';
+import locale from 'locale/pages';
+
+import useTheme from '@material-ui/styles/useTheme';
 import {withStyles} from '@material-ui/core/styles';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
-import PropTypes from 'prop-types';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Hidden from '@material-ui/core/Hidden';
-import Keyboard from '@material-ui/icons/Keyboard';
-import {HelpIcon} from 'modules/SharedComponents/Toolbox/HelpDrawer';
 import Badge from '@material-ui/core/Badge';
-import Cookies from 'js-cookie';
-const queryString = require('query-string');
+import Keyboard from '@material-ui/icons/Keyboard';
+import {unstable_useMediaQuery as useMediaQuery} from '@material-ui/core/useMediaQuery';
+
+import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
+import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
+import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
+import {HelpIcon} from 'modules/SharedComponents/Toolbox/HelpDrawer';
+
 import FormViewToggler from './FormViewToggler';
 import IdentifiersSection from './IdentifiersSection';
 import BibliographicSection from './BibliographicSection';
 import AdminSection from './AdminSection';
 import GrantInformationSection from './GrantInformationSection';
 import SecuritySection from './SecuritySection';
-import useTheme from '@material-ui/styles/useTheme';
-import { unstable_useMediaQuery as useMediaQuery } from '@material-ui/core/useMediaQuery';
 import TabContainer from './TabContainer';
-import {TabbedContextProvider, TabbedContextConsumer, FormValuesContextProvider, RecordContextProvider, RecordContextConsumer} from 'context';
+import {
+    TabbedContextProvider,
+    TabbedContextConsumer,
+    FormValuesContextProvider,
+    RecordContextProvider,
+    RecordContextConsumer
+} from 'context';
+
+const queryString = require('query-string');
 
 const styles = theme => ({
     helpIcon: {
@@ -242,12 +254,10 @@ AdminInterface.propTypes = {
 
 class Admin extends Component {
     static propTypes = {
-        account: PropTypes.object,
-        author: PropTypes.object,
+        loadingRecordToView: PropTypes.bool,
         recordToView: PropTypes.object,
         actions: PropTypes.object,
         location: PropTypes.object,
-        history: PropTypes.object,
         classes: PropTypes.object,
         theme: PropTypes.object,
         submitting: PropTypes.any,
@@ -287,6 +297,14 @@ class Admin extends Component {
     }
 
     render() {
+        const txt = locale.pages.edit;
+        const {loadingRecordToView, recordToView} = this.props;
+        if(loadingRecordToView) {
+            return <InlineLoader message={txt.loadingMessage}/>;
+        } else if(!recordToView) {
+            return <div className="empty"/>;
+        }
+
         return (
             <FormValuesContextProvider value={{formValues: this.props.formValues}}>
                 {

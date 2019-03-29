@@ -1,16 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Field } from 'redux-form/lib/immutable';
+import {Field} from 'redux-form/lib/immutable';
 
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import MenuItem from '@material-ui/core/MenuItem';
 
-import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
-import { SelectField } from 'modules/SharedComponents/Toolbox/SelectField';
+import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
+import {SelectField} from 'modules/SharedComponents/Toolbox/SelectField';
 
-import { validation } from 'config';
-import { TOP_LEVEL_SECURITY_POLICIES, RECORD_TYPE_COMMUNITY } from 'config/general';
+import {validation} from 'config';
+import {TOP_LEVEL_SECURITY_POLICIES, RECORD_TYPE_COMMUNITY} from 'config/general';
 import {RecordContextConsumer, FormValuesContextConsumer} from 'context';
 
 export const renderPolicyDesc = (selectedPolicyKey, policyArray = TOP_LEVEL_SECURITY_POLICIES) => {
