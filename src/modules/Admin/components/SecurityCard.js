@@ -42,7 +42,7 @@ export const SecurityCard = ({ disabled, text }) => {
     return (
         <RecordContextConsumer>
             {({record}) => {
-                const securityType = record.rek_display_type_lookup || record.rek_object_type_lookup;
+                const securityType = record.rek_object_type_lookup;
                 const title = (
                     <span>
                         <b>{securityType}</b> level security - {record.rek_pid}

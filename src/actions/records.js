@@ -1,4 +1,4 @@
-import {get, post, patch} from 'repositories/generic';
+import {post, patch} from 'repositories/generic';
 import {
     NEW_RECORD_API,
     EXISTING_RECORD_API,
@@ -274,41 +274,6 @@ export function clearNewRecord() {
         dispatch({
             type: actions.CREATE_RECORD_RESET
         });
-    };
-}
-
-export function getCommunitySecurity({ pid }) {
-    return dispatch => {
-        dispatch({type: actions.SECURITY_POLICY_LOADING});
-        return get(COMMUNITIES_SECURITY_POLICY_API({ pid }))
-            .then(response => {
-                const data = {};
-                const pidSearchKey = Object.keys(transformers.getPidSearchKey())[0];
-                if (response.data[pidSearchKey]) {
-                    data.pid = response.data[pidSearchKey];
-                }
-                const securityPolicySearchKey = Object.keys(transformers.getSecurityPolicySearchKey())[0];
-                if (response.data[securityPolicySearchKey]) {
-                    data.communitySecurity = response.data[securityPolicySearchKey];
-                }
-                const objectTypeLookup = Object.keys(transformers.getObjectTypeLookupSearchKey())[0];
-                if (response.data[objectTypeLookup]) {
-                    data.type = response.data[objectTypeLookup];
-                }
-                dispatch({
-                    type: actions.SECURITY_POLICY_LOADED,
-                    payload: data
-                });
-                return Promise.resolve(data);
-            })
-            .catch(error => {
-                dispatch({
-                    type: actions.SECURITY_POLICY_LOAD_FAILED,
-                    payload: error.message
-                });
-                return Promise.reject(error);
-            })
-        ;
     };
 }
 

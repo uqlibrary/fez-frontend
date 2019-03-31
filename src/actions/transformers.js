@@ -25,15 +25,6 @@ export const getFixIssueRequest = pipe(getIssueValues, templates.issues.fixRecor
 // End helpers
 
 // Start Search Key Transformers
-
-export const getPidSearchKey = value => ({
-    rek_pid: value
-});
-
-export const getObjectTypeLookupSearchKey = value => ({
-    rek_object_type_lookup: value
-});
-
 export const getSecurityPolicySearchKey = data => {
     if (!data) return null;
 

@@ -2,14 +2,6 @@ import * as transformers from './transformers';
 
 const moment = require('moment');
 
-describe('getPidSearchKey()', () => {
-    it('should return object with appropriate key', () => {
-        expect(transformers.getPidSearchKey('test')).toEqual({
-            rek_pid: 'test'
-        });
-    });
-});
-
 describe('getSecurityPolicySearchKey()', () => {
     it('should return object with appropriate key', () => {
         const data = {
