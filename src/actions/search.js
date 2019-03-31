@@ -131,8 +131,7 @@ export function getSearchLookupApi(searchQuery, searchKey) {
 export function loadSearchKeyList(searchKey, searchQuery) {
     return dispatch => {
         dispatch({type: `${actions.SEARCH_KEY_LOOKUP_LOADING}@${searchKey}`, payload: searchKey});
-
-        return get(getSearchLookupApi(searchQuery, searchKey))
+        return searchQuery && searchQuery.trim().length > 0 && get(getSearchLookupApi(searchQuery, searchKey))
             .then((response) => {
                 dispatch({type: `${actions.SEARCH_KEY_LOOKUP_LOADED}@${searchKey}`, payload: response.data});
             }, (error) => {

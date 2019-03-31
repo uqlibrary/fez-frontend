@@ -174,4 +174,19 @@ describe('ThesisSubmission test', () => {
         wrapper.instance().setDepositConfirmation(test);
         expect(wrapper.instance().depositConfirmationBox).toEqual(test);
     });
+
+    it('should reload when told to', () => {
+        const reloadFn = jest.fn();
+        delete window.location;
+        global.window.location = {reload: reloadFn};
+        const wrapper = setup({initialValues:{}});
+        wrapper.instance().afterFailedSubmit();
+        expect(reloadFn).toHaveBeenCalled();
+    });
+
+    it('should show the file upload alert', () => {
+        const wrapper = setup({newRecordFileUploadingOrIssueError:true, submitSucceeded: true});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
 });

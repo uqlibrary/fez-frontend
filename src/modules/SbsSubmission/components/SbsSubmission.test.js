@@ -169,5 +169,15 @@ describe('SbsSubmission test', () => {
         expect(wrapper.instance().depositConfirmationBox).toEqual(ref);
     });
 
+    it('should reload when told to', () => {
+        const wrapper = setup({initialValues:{}});
+        wrapper.instance().afterFailedSubmit();
+    });
+
+    it('should render sbs thesis submission form', () => {
+        const wrapper = setup({newRecordFileUploadingOrIssueError: true, submitSucceeded: true});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
 
 });
