@@ -1,8 +1,8 @@
 import {post, patch} from 'repositories/generic';
-import {NEW_RECORD_API, EXISTING_RECORD_API, RECORDS_ISSUES_API} from 'repositories/routes';
+import {NEW_RECORD_API, EXISTING_RECORD_API, RECORDS_ISSUES_API, NEW_COLLECTION_API} from 'repositories/routes';
 import {putUploadFiles} from 'repositories';
 import * as transformers from './transformers';
-import {NEW_RECORD_DEFAULT_VALUES} from 'config/general';
+import {NEW_RECORD_DEFAULT_VALUES, NEW_COLLECTION_DEFAULT_VALUES} from 'config/general';
 import * as actions from './actionTypes';
 
 /**
@@ -252,6 +252,78 @@ export function submitThesis(data) {
                     type: actions.CREATE_RECORD_FAILED,
                     payload: error.message
                 });
+                return Promise.reject(error);
+            });
+    };
+}
+
+
+/**
+ * Save a new collection involves a single request.
+ * If error occurs on any stage failed action is dispatched
+ * @param {object} data to be posted, refer to backend API
+ * @returns {promise} - this method is used by redux form onSubmit which requires Promise resolve/reject as a return
+ */
+export function createCollection(data) {
+    console.log(data);
+
+    //         'rek_title' => 'Record Title',
+    //         'rek_description' => 'Description',
+    //         'rek_status' => 2,
+    //         'rek_display_type' => self::DISPLAY_TYPE_COLLECTION,
+    //         'rek_object_type' => self::OBJECT_TYPE_COLLECTION,
+    //         'rek_date' => '2017-01-01 00:00:00',
+    //         'fez_record_search_key_ismemberof' => [
+    //         [
+    //             'rek_ismemberof' => $communityParentPid,
+    //         'rek_ismemberof_order' => 1
+
+    return dispatch => {
+        dispatch({type: actions.CREATE_COLLECTION_SAVING});
+        // set default values, links
+        const recordRequest = {
+            ...NEW_COLLECTION_DEFAULT_VALUES,
+            ...JSON.parse(JSON.stringify(data)),
+            // ...transformers.getRecordLinkSearchKey(data),
+            // ...transformers.getRecordAuthorsSearchKey(data.authors || data.currentAuthor && [data.currentAuthor[0]] || null),
+            // ...transformers.getRecordAuthorsIdSearchKey(data.authors || data.currentAuthor && [data.currentAuthor[0]] || null),
+            // ...transformers.getRecordContributorsSearchKey(data.editors),
+            // ...transformers.getRecordContributorsIdSearchKey(data.editors),
+            // ...transformers.getRecordSupervisorsSearchKey(data.supervisors),
+            // ...transformers.getRecordSubjectSearchKey(data.fieldOfResearch),
+            // ...transformers.getDatasetContactDetailSearchKeys(data.contact || null),
+            // ...transformers.getGeographicAreaSearchKey(data.geographicArea || null),
+            // ...transformers.getDatasetCreatorRolesSearchKey(data.authors || null),
+            // ...transformers.getRecordAuthorAffiliationSearchKey(data.isNtro && data.authors || null),
+            // ...transformers.getRecordAuthorAffiliationTypeSearchKey(data.isNtro && data.authors || null),
+            // ...transformers.getRecordAbstractDescriptionSearchKey(data.isNtro && data.ntroAbstract || null),
+            // ...transformers.getGrantsListSearchKey(data.isNtro && data.grants || null),
+            // ...transformers.getNtroMetadataSearchKeys(data.isNtro && data || null),
+            // ...transformers.getLanguageSearchKey(data.isNtro && data.languages || null)
+        };
+
+        let newRecord = null;
+
+        return post(NEW_COLLECTION_API(), recordRequest)
+            .then(response => {
+                newRecord = response.data;
+                return response;
+            })
+            .then((response) => {
+                dispatch({
+                    type: actions.CREATE_COLLECTION_SUCCESS,
+                    payload: {
+                        newRecord: response.data ? response.data : newRecord,
+                    }
+                });
+                return Promise.resolve(response.data ? response.data : newRecord);
+            })
+            .catch(error => {
+                dispatch({
+                    type: actions.CREATE_COLLECTION_FAILED,
+                    payload: error.message
+                });
+
                 return Promise.reject(error);
             });
     };

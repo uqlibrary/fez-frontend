@@ -520,6 +520,17 @@ export const NEW_RECORD_DEFAULT_VALUES = {
     ]
 };
 
+export const NEW_COLLECTION_DEFAULT_VALUES = {
+    rek_title: '',
+    rek_description: '',
+    rek_object_type: 2,
+    rek_display_type: 9,
+    rek_status: 2,
+    rek_keywords: [],
+    fez_record_search_key_ismemberof: []
+
+};
+
 export const NEW_DATASET_DEFAULT_VALUES = {
     rek_object_type: 3,
     rek_status: 3,
