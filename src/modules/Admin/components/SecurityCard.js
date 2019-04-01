@@ -4,99 +4,22 @@ import {Field} from 'redux-form/lib/immutable';
 
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import MenuItem from '@material-ui/core/MenuItem';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Checkbox from '@material-ui/core/Checkbox';
 
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
-import {SelectField} from 'modules/SharedComponents/Toolbox/SelectField';
 
-import {validation} from 'config';
-import {TOP_LEVEL_SECURITY_POLICIES, RECORD_TYPE_COLLECTION, RECORD_TYPE_RECORD} from 'config/general';
+import {RECORD_TYPE_COLLECTION, RECORD_TYPE_RECORD} from 'config/general';
 import {RecordContextConsumer, FormValuesContextConsumer} from 'context';
 import {viewRecordsConfig} from 'config';
 import { InheritedSecurityDetails } from './InheritedSecurityDetails';
-
-export const PolicyDescription = ({selectedPolicyKey, policyArray}) => {
-    const policyDesc = policyArray.find(
-        policy => policy.value === selectedPolicyKey
-    );
-    return (
-        <React.Fragment>
-            {policyDesc.name} ({policyDesc.id})
-        </React.Fragment>
-    );
-};
-
-PolicyDescription.propTypes = {
-    selectedPolicyKey: PropTypes.number,
-    policyArray: PropTypes.array
-};
-
-PolicyDescription.defaultProps = {
-    policyArray: TOP_LEVEL_SECURITY_POLICIES
-};
-
-export const renderPolicyItems = (policyList = TOP_LEVEL_SECURITY_POLICIES) => {
-    return policyList.map((policy, index) => {
-        return (
-            <MenuItem key={index} value={policy.value}>
-                {policy.label}
-            </MenuItem>
-        );
-    });
-};
+import {PolicySelector} from './PolicySelector';
+import {OverrideSecurity} from './OverrideSecurity';
+import {SelectedSecurityPolicyDescription} from './SelectedSecurityPolicyDescription';
 
 export const isFileValid = (dataStream) => {
     const {files: {blacklist}} = viewRecordsConfig;
 
     return !dataStream.dsi_dsid.match(blacklist.namePrefixRegex) &&
-        (!dataStream.dsi_label || !dataStream.dsi_label.match(new RegExp(blacklist.descriptionKeywordsRegex, 'gi'))) &&
         dataStream.dsi_state === 'A';
-};
-
-export const OverrideSecurity = ({label, input}) => {
-    return (
-        <FormControlLabel
-            control={<Checkbox
-                onChange={input.onChange}
-            />}
-            label={label}
-        />
-    );
-};
-
-OverrideSecurity.propTypes = {
-    label: PropTypes.string,
-    input: PropTypes.object
-};
-
-export const SelectedSecurityPolicyDescription = ({title, selectedPolicyKey}) => {
-    return (
-        <Grid item xs={12} style={{
-            marginTop: 12,
-            padding: 24,
-            backgroundColor: 'rgba(0,0,0,0.05)'
-        }}>
-            <Typography variant="h6" style={{ marginTop: -8 }}>
-                {title}
-            </Typography>
-            <Grid container spacing={8} style={{ marginTop: 8 }}>
-                <Grid item xs={2}><b>Name (ID):</b></Grid>
-                <Grid item xs={10}>
-                    <PolicyDescription selectedPolicyKey={selectedPolicyKey} />
-                </Grid>
-            </Grid>
-        </Grid>
-    );
-};
-
-SelectedSecurityPolicyDescription.propTypes = {
-    title: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.node
-    ]),
-    selectedPolicyKey: PropTypes.number
 };
 
 export const SecurityCard = ({ disabled, text }) => {
@@ -142,19 +65,13 @@ export const SecurityCard = ({ disabled, text }) => {
                                                     </Typography>
                                                 </Grid>
                                                 <Grid item xs={12}>
-                                                    <Field
-                                                        component={SelectField}
+                                                    <PolicySelector
+                                                        fieldName="rek_security_policy"
+                                                        fieldLabel={`${securityType} policy to apply to this PID`}
+                                                        displayPrompt
+                                                        prompt={text.prompt}
                                                         disabled={disabled}
-                                                        name="rek_security_policy"
-                                                        label={`${securityType} policy to apply to this PID`}
-                                                        required
-                                                        validation={[validation.required]}
-                                                    >
-                                                        <MenuItem value="" disabled>
-                                                            {text.prompt}
-                                                        </MenuItem>
-                                                        {renderPolicyItems()}
-                                                    </Field>
+                                                    />
                                                 </Grid>
                                                 {
                                                     !!formValues.get('rek_security_policy') &&
@@ -170,19 +87,13 @@ export const SecurityCard = ({ disabled, text }) => {
                                     securityType === RECORD_TYPE_COLLECTION &&
                                     <Grid container spacing={8} style={{ marginTop: 16 }}>
                                         <Grid item xs={12}>
-                                            <Field
-                                                component={SelectField}
+                                            <PolicySelector
+                                                fieldName="rek_datastream_policy"
+                                                fieldLabel={text.dataStreamFieldLabel}
+                                                displayPrompt
+                                                prompt={text.prompt}
                                                 disabled={disabled}
-                                                name="rek_datastream_policy"
-                                                label={text.dataStreamFieldLabel}
-                                                required
-                                                validation={[validation.required]}
-                                            >
-                                                <MenuItem value="" disabled>
-                                                    {text.prompt}
-                                                </MenuItem>
-                                                {renderPolicyItems()}
-                                            </Field>
+                                            />
                                         </Grid>
                                         <FormValuesContextConsumer>
                                             {({formValues}) => (
@@ -203,10 +114,9 @@ export const SecurityCard = ({ disabled, text }) => {
                                 <StandardCard title={<span><b>Datastream</b> security - {record.rek_pid}</span>} accentHeader>
                                     <Grid container spacing={8}>
                                         {
-                                            isPolicyInherited ?
-                                                <InheritedSecurityDetails />
-                                                :
-                                                <Grid item xs={12} style={{
+                                            isPolicyInherited
+                                                ? <InheritedSecurityDetails />
+                                                : <Grid item xs={12} style={{
                                                     marginTop: 24,
                                                     padding: 24,
                                                     backgroundColor: 'rgba(0,0,0,0.05)'
@@ -225,16 +135,11 @@ export const SecurityCard = ({ disabled, text }) => {
                                                         <Grid item xs={2}>Filename:</Grid>
                                                         <Grid item xs={4}>Test_1.PDF</Grid>
                                                         <Grid item xs={6}>
-                                                            <Field
-                                                                component={SelectField}
+                                                            <PolicySelector
+                                                                fieldName="filePolicy1"
+                                                                fieldLabel={<span>Security policy for this file to override inheritance</span>}
                                                                 disabled={disabled}
-                                                                name="filePolicy1"
-                                                                label={<span>Security policy for this file to override inheritance</span>}
-                                                                required
-                                                                validation={[validation.required]}
-                                                            >
-                                                                {renderPolicyItems()}
-                                                            </Field>
+                                                            />
                                                         </Grid>
                                                     </Grid>
                                                     <Grid container spacing={8} alignContent="flex-end" alignItems="flex-end" style={{
@@ -245,16 +150,11 @@ export const SecurityCard = ({ disabled, text }) => {
                                                         <Grid item xs={2}>Filename:</Grid>
                                                         <Grid item xs={4}>Test_3.JPG</Grid>
                                                         <Grid item xs={6}>
-                                                            <Field
-                                                                component={SelectField}
+                                                            <PolicySelector
+                                                                fieldName="filePolicy2"
+                                                                fieldLabel={<span>Security policy for this file to override inheritance</span>}
                                                                 disabled={disabled}
-                                                                name="filePolicy2"
-                                                                label={<span>Security policy for this file to override inheritance</span>}
-                                                                required
-                                                                validation={[validation.required]}
-                                                            >
-                                                                {renderPolicyItems()}
-                                                            </Field>
+                                                            />
                                                         </Grid>
                                                     </Grid>
                                                 </Grid>
