@@ -3,7 +3,7 @@ import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 
-import {renderPolicyDesc} from './SecurityCard';
+import {PolicyDescription} from './SecurityCard';
 
 export const InheritedSecurityDetails = () => (
     <Grid item xs={12} style={{
@@ -18,8 +18,8 @@ export const InheritedSecurityDetails = () => (
             <Grid item xs={5}>UQ:12345</Grid>
             <Grid item xs={5}>UQ:67890</Grid>
             <Grid item xs={2}><b>Policy:</b></Grid>
-            <Grid item xs={5}>{renderPolicyDesc(2)}</Grid>
-            <Grid item xs={5}>{renderPolicyDesc(3)}</Grid>
+            <Grid item xs={5}><PolicyDescription selectedPolicyKey={2} /></Grid>
+            <Grid item xs={5}><PolicyDescription selectedPolicyKey={3} /></Grid>
         </Grid>
     </Grid>
 );
