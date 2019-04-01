@@ -33,8 +33,8 @@ const mapStateToProps = (state, ownProps) => {
             initialValues: {
                 pid: recordToView.rek_pid,
                 recordType: recordToView.rek_object_type_lookup,
-                securityPolicy: recordToView.rek_security_policy,
-                datastreamSecurityPolicy: recordToView.rek_datastream_policy,
+                rek_security_policy: recordToView.rek_security_policy,
+                rek_datastream_policy: recordToView.rek_datastream_policy,
                 collection: [],
                 subject: []
             }

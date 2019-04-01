@@ -2,30 +2,6 @@ import * as transformers from './transformers';
 
 const moment = require('moment');
 
-describe('getSecurityPolicySearchKey()', () => {
-    it('should return object with appropriate key', () => {
-        const data = {
-            securityPolicy: 5,
-            datastreamSecurityPolicy: null
-        };
-        expect(transformers.getSecurityPolicySearchKey(data)).toEqual({
-            rek_security_policy: 5
-        });
-    });
-
-    it('should return security policy keys correctly', () => {
-        const data = {
-            securityPolicy: 3,
-            datastreamSecurityPolicy: 2
-        };
-
-        expect(transformers.getSecurityPolicySearchKey(data)).toEqual({
-            rek_security_policy: 3,
-            rek_datastream_policy: 2
-        });
-    });
-});
-
 describe('getRecordLinkSearchKey test ', () => {
 
     it('should return request object structure with link', () => {

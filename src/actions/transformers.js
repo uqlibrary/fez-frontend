@@ -29,13 +29,6 @@ export const getSecurityPolicySearchKey = data => {
     if (!data) return null;
 
     const patchRequest = {};
-    if (!!data.securityPolicy) {
-        patchRequest.rek_security_policy = data.securityPolicy;
-    }
-
-    if (!!data.datastreamSecurityPolicy) {
-        patchRequest.rek_datastream_policy = data.datastreamSecurityPolicy;
-    }
 
     return patchRequest;
 };

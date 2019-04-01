@@ -1,4 +1,4 @@
-import { renderPolicyDesc, renderPolicyItems, SecurityCard } from './SecurityCard';
+import { renderPolicyItems, SecurityCard } from './SecurityCard';
 
 function setup(testProps, isShallow = true) {
     const props = {
@@ -25,15 +25,6 @@ describe('SecurityCard component', () => {
         { name: 'test2Name', id: 'test2ID', value: 2, label: 'test2Label' },
         { name: 'test3Name', id: 'test3ID', value: 3, label: 'test3Label' },
     ];
-
-    it('should render policy description as expected', () => {
-        const test1 = renderPolicyDesc(2);
-        expect(test1).toMatchSnapshot();
-
-        const test2 = renderPolicyDesc(2, policyArray);
-        expect(test2).toMatchSnapshot();
-    });
-
     it('should render policy items as expected', () => {
         const test1 = renderPolicyItems();
         expect(test1).toMatchSnapshot();

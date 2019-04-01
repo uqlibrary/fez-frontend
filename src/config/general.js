@@ -990,3 +990,5 @@ export const TOP_LEVEL_SECURITY_POLICIES = [
 export const DATA_STREAM_SECURITY_POLICIES = TOP_LEVEL_SECURITY_POLICIES;
 
 export const RECORD_TYPE_COMMUNITY = 'Community';
+export const RECORD_TYPE_COLLECTION = 'Collection';
+export const RECORD_TYPE_RECORD = 'Record';

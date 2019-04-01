@@ -229,6 +229,14 @@ mock
     .onPatch(new RegExp(escapeRegExp(routes.COMMUNITIES_SECURITY_POLICY_API({
         pid: '.*'
     }).apiUrl)))
+    .reply(200, {data: {...mockData.record}})
+    .onPatch(new RegExp(escapeRegExp(routes.COLLECTIONS_SECURITY_POLICY_API({
+        pid: '.*'
+    }).apiUrl)))
+    .reply(200, {data: {...mockData.record}})
+    .onPatch(new RegExp(escapeRegExp(routes.RECORDS_SECURITY_POLICY_API({
+        pid: '.*'
+    }).apiUrl)))
     .reply(200, {data: {...mockData.record}});
 ;
 

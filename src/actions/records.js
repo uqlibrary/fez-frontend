@@ -289,12 +289,9 @@ export const getSecurityUpdateRoute = (pid, recordType) => {
 };
 
 export function updateSecurity(pid, recordType, data) {
-    const request = {
-        ...transformers.getSecurityPolicySearchKey(data)
-    };
     return dispatch => {
         dispatch({type: actions.SECURITY_POLICY_SAVING});
-        return patch(getSecurityUpdateRoute(pid, recordType), request)
+        return patch(getSecurityUpdateRoute(pid, recordType), data)
             .then((response) => {
                 dispatch({
                     type: actions.SECURITY_POLICY_SAVED,
