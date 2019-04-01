@@ -30,11 +30,15 @@ export const cache = setupCache({
 
 export const api = axios.create({
     baseURL: API_URL,
-    adapter: process.env.NODE_ENV === 'test' ? undefined : cache.adapter
+    adapter: process.env.NODE_ENV === 'test' ? undefined : cache.adapter,
+    withCredentials: true,
+    crossdomain: true
 });
 
 export const sessionApi = axios.create({
     baseURL: API_URL,
+    withCredentials: true,
+    crossdomain: true
 });
 
 // need to generate a new token for each request otherwise if you try a new request with the old token,
