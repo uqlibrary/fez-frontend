@@ -31,14 +31,12 @@ export const cache = setupCache({
 export const api = axios.create({
     baseURL: API_URL,
     adapter: process.env.NODE_ENV === 'test' ? undefined : cache.adapter,
-    withCredentials: true,
-    crossdomain: true
+    crossdomain: true,
 });
 
 export const sessionApi = axios.create({
     baseURL: API_URL,
-    withCredentials: true,
-    crossdomain: true
+    crossdomain: true,
 });
 
 // need to generate a new token for each request otherwise if you try a new request with the old token,
@@ -95,9 +93,13 @@ api.interceptors.response.use(response => {
         reportToSentry(error);
     }
 
-    // 403 for tool api lookup is handled in actions/thirdPartyLookupTool.js
     let errorMessage = null;
-    if (!error.config.url.includes(pathConfig.admin.thirdPartyTools.slice(1))) {
+    // Capture if the request was cancelled
+    if(api.isCancel(error)) {
+        console.log('The request was cancelled: ', error.message || 'No more information on this cancellation is available');
+        errorMessage = 'The request was cancelled: ' + error.message || 'No more information on this cancellation is available';
+    } else if (!error.config.url.includes(pathConfig.admin.thirdPartyTools.slice(1))) {
+        // 403 for tool api lookup is handled in actions/thirdPartyLookupTool.js
         if (!!error.response && !!error.response.status && error.response.status === 403) {
             if (!!Cookies.get(SESSION_COOKIE_NAME)) {
                 Cookies.remove(SESSION_COOKIE_NAME, {path: '/', domain: '.library.uq.edu.au'});
