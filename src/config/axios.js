@@ -37,14 +37,12 @@ export const api = axios.create({
     adapter: process.env.NODE_ENV === 'test' ? undefined : cache.adapter,
     // withCredentials: true,
     crossdomain: true,
-    origin: 'http://dev-espace.library.uq.edu.au'
 });
 
 export const sessionApi = axios.create({
     baseURL: API_URL,
     // withCredentials: true,
     crossdomain: true,
-    origin: 'http://dev-espace.library.uq.edu.au'
 });
 
 // need to generate a new token for each request otherwise if you try a new request with the old token,
