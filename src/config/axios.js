@@ -28,20 +28,14 @@ export const cache = setupCache({
     },
 });
 
-// Add a dummy api header to send with requests to force the preflight to check its validity
-// axios.defaults.withCredentials = true;
-// api.defaults.headers.common['x-uql-force-options'] = 'true';
-
 export const api = axios.create({
     baseURL: API_URL,
     adapter: process.env.NODE_ENV === 'test' ? undefined : cache.adapter,
-    // withCredentials: true,
     crossdomain: true,
 });
 
 export const sessionApi = axios.create({
     baseURL: API_URL,
-    // withCredentials: true,
     crossdomain: true,
 });
 
