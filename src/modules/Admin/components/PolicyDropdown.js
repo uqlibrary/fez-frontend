@@ -9,7 +9,7 @@ import {SelectField} from 'modules/SharedComponents/Toolbox/SelectField';
 import {validation} from 'config';
 import {TOP_LEVEL_SECURITY_POLICIES} from 'config/general';
 
-export const PolicySelector = React.memo(({fieldName, disabled, fieldLabel, displayPrompt, policyList, prompt}) => (
+export const PolicyDropdown = ({ fieldName, disabled, fieldLabel, displayPrompt, policyList, prompt }) => (
     <Field
         component={SelectField}
         disabled={disabled}
@@ -30,9 +30,9 @@ export const PolicySelector = React.memo(({fieldName, disabled, fieldLabel, disp
             ))
         }
     </Field>
-));
+);
 
-PolicySelector.propTypes = {
+PolicyDropdown.propTypes = {
     disabled: PropTypes.bool,
     fieldName: PropTypes.string,
     fieldLabel: PropTypes.oneOfType([
@@ -44,8 +44,10 @@ PolicySelector.propTypes = {
     prompt: PropTypes.string
 };
 
-PolicySelector.defaultProps = {
+PolicyDropdown.defaultProps = {
     displayPrompt: false,
     policyList: TOP_LEVEL_SECURITY_POLICIES,
     fieldLabel: 'Record level policy to apply to this PID'
 };
+
+export default React.memo(PolicyDropdown);

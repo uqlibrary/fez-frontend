@@ -3,7 +3,7 @@ import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 
-import {PolicyDescription} from './SecurityCard';
+import { PolicyDescription } from './PolicyDescription';
 
 export const InheritedSecurityDetails = () => (
     <Grid item xs={12} style={{
@@ -23,3 +23,6 @@ export const InheritedSecurityDetails = () => (
         </Grid>
     </Grid>
 );
+
+export default InheritedSecurityDetails;
+

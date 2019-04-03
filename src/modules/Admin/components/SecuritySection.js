@@ -9,7 +9,7 @@ import Button from '@material-ui/core/Button';
 import { SelectField } from 'modules/SharedComponents/Toolbox/SelectField';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { FormValuesContextConsumer } from 'context';
-import { SecurityCard } from './SecurityCard';
+import SecurityCard from './SecurityCard';
 
 import { validation } from 'config';
 import { locale } from 'locale';

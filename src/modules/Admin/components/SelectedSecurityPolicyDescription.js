@@ -6,7 +6,7 @@ import Typography from '@material-ui/core/Typography';
 
 import {PolicyDescription} from './PolicyDescription';
 
-export const SelectedSecurityPolicyDescription = React.memo(({title, selectedPolicyKey}) => (
+export const SelectedSecurityPolicyDescription = ({title, selectedPolicyKey}) => (
     <Grid item xs={12} style={{
         marginTop: 12,
         padding: 24,
@@ -22,7 +22,7 @@ export const SelectedSecurityPolicyDescription = React.memo(({title, selectedPol
             </Grid>
         </Grid>
     </Grid>
-));
+);
 
 SelectedSecurityPolicyDescription.propTypes = {
     title: PropTypes.oneOfType([
@@ -31,3 +31,6 @@ SelectedSecurityPolicyDescription.propTypes = {
     ]),
     selectedPolicyKey: PropTypes.number
 };
+
+export default React.memo(SelectedSecurityPolicyDescription);
+
