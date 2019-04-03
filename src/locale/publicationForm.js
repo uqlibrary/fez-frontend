@@ -12,7 +12,8 @@ export default {
         help: {
             title: 'Non-traditional research output types',
             text: (
-                <p>For more information about each type, click <a style={{fontWeight: 700}} target="_blank" href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-tradtional-research-ouptuts">here</a></p>
+                <p>For more information about each type, click <a style={{fontWeight: 700}} target="_blank" href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-tradtional-research-ouptuts">here</a>
+                </p>
             ),
             buttonLabel: 'CLOSE'
         }
@@ -1217,7 +1218,8 @@ export default {
     thesisSubmission: {
         hdrTitle: 'Higher degree by research thesis deposit',
         sbsTitle: 'Professional doctorate deposit',
-        text: (<span>Required fields are marked with <span className="requiredField"><label>&nbsp;</label></span></span>),
+        text: (
+            <span>Required fields are marked with <span className="requiredField"><label>&nbsp;</label></span></span>),
         fileUpload: {
             title: 'Upload files',
             // help: {
@@ -1248,15 +1250,16 @@ export default {
                 fileUploadRestrictions: (
                     <div>
                         Maximum file size is 8Gb. <br/>
-                        PDF files must be saved using the following naming structure <b>&lt;student number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf</b>.
+                        PDF files must be saved using the following naming structure <b>&lt;student
+                        number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf</b>.
                         Document name could be thesis, abstract, and etc.
                         For example:
                         <ul>
                             <li>s1234567_phd_thesis.pdf</li>
                             <li>s1234567_phd_abstract.pdf</li>
                         </ul>
-                        Supplementary audio files are to be in MP 3 format. <br />
-                        Supplementary video files are to be in WMV or AVI format. <br />
+                        Supplementary audio files are to be in MP 3 format. <br/>
+                        Supplementary video files are to be in WMV or AVI format. <br/>
                     </div>
                 ),
                 fileUploadInstruction: (
@@ -1295,7 +1298,8 @@ export default {
     },
     sbsSubmission: {
         sbsTitle: 'Professional doctorate deposit',
-        text: (<span>Required fields are marked with <span className="requiredField"><label>&nbsp;</label></span></span>),
+        text: (
+            <span>Required fields are marked with <span className="requiredField"><label>&nbsp;</label></span></span>),
         fileUpload: {
             title: 'Upload files',
             // help: {
@@ -1319,15 +1323,16 @@ export default {
                 fileUploadRestrictions: (
                     <div>
                         Maximum file size is 8Gb. <br/>
-                        PDF files must be saved using the following naming structure <b>&lt;student number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf</b>.
+                        PDF files must be saved using the following naming structure <b>&lt;student
+                        number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf</b>.
                         Document name could be thesis, abstract, and etc.
                         For example:
                         <ul>
                             <li>s1234567_pd_abstract.pdf</li>
                             <li>s1234567_pd_totalthesis.pdf</li>
                         </ul>
-                        Supplementary audio files are to be in MP 3 format. <br />
-                        Supplementary video files are to be in WMV or AVI format. <br />
+                        Supplementary audio files are to be in MP 3 format. <br/>
+                        Supplementary video files are to be in WMV or AVI format. <br/>
                     </div>
                 ),
                 fileUploadInstruction: (
@@ -1343,7 +1348,9 @@ export default {
         cancel: 'Cancel',
         submit: 'Deposit your thesis',
         afterSubmitTitle: 'Your thesis has been deposited',
-        afterSubmitText: (<p>You have successfully deposited your thesis to UQ eSpace.  You wil receive a confirmation email soon.</p>),
+        afterSubmitText: (
+            <p>You have successfully deposited your thesis to UQ eSpace. You wil receive a confirmation email
+                soon.</p>),
         depositConfirmation: {
             confirmationTitle: 'Thesis deposit',
             confirmationMessage: 'You are about to deposit your thesis with attached files. Are you sure you want to proceed?',
@@ -1365,12 +1372,15 @@ export default {
                 title: 'Deposit agreement',
                 text: (
                     <div>
-                        <p>1.   I am the creator or co-creator of this dataset, or otherwise authorised to deposit or describe it;</p>
-                        <p>2.   I have permission to include any third-party content contained in the dataset;</p>
-                        <p>3.   The dataset is original;</p>
-                        <p>4.   The dataset does not infringe the legal rights of any third-party;</p>
-                        <p>5.   I acknowledge that in depositing the dataset, I grant to UQeSpace a perpetual non-exclusive licence to reproduce it and make it available in any format or language;</p>
-                        <p>6.   The dataset's creator(s) moral rights to be associated with the dataset will be respected by UQeSpace.</p>
+                        <p>1. I am the creator or co-creator of this dataset, or otherwise authorised to deposit or
+                            describe it;</p>
+                        <p>2. I have permission to include any third-party content contained in the dataset;</p>
+                        <p>3. The dataset is original;</p>
+                        <p>4. The dataset does not infringe the legal rights of any third-party;</p>
+                        <p>5. I acknowledge that in depositing the dataset, I grant to UQeSpace a perpetual
+                            non-exclusive licence to reproduce it and make it available in any format or language;</p>
+                        <p>6. The dataset's creator(s) moral rights to be associated with the dataset will be respected
+                            by UQeSpace.</p>
                     </div>
                 )
             },
@@ -1436,7 +1446,10 @@ export default {
                                 <li>Meditated Access</li>
                             </ul>
                             <h3>Licensing and terms of access</h3>
-                            <p>View <a href="https://creativecommons.org/licenses/" target="_blank">Creative Commons Licenses</a> and <a href="http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions" target="_blank">UQ Terms & Conditions</a></p>
+                            <p>View <a href="https://creativecommons.org/licenses/" target="_blank">Creative Commons
+                                Licenses</a> and <a
+                                href="http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions"
+                                target="_blank">UQ Terms & Conditions</a></p>
                         </p>
                     )
                 },
@@ -1536,5 +1549,32 @@ export default {
                 }
             }
         }
+    },
+    addACollection: {
+        title: 'Add a missing collection',
+        help: {},
+        details: {
+            title: 'Collection details',
+            help: {}
+        },
+        formLabels: {
+            ismemberof: {
+                label: 'Member of community/communities',
+                placeholder: 'Select communities this collection is a member of'
+            },
+            title: {
+                label: 'Title of collection',
+                placeholder: 'Type a title for this collection'
+            },
+            keywords: {
+                description: 'Add up to 10 individual keywords, or a comma separated list, that describe the content of the thesis.'
+            }
+        },
+        submit: 'Add collection',
+        cancel: 'Return to the homepage',
+        afterSubmitTitle: 'Collection added successfully',
+        afterSubmitText: 'Your new collection was created successfully.',
+        afterSubmitButton: 'Return to the homepage',
+        addFailedMessage: (error) => (`Your attempt to add this collection has failed (Error: ${error.message}). Please try again later or contact the eSpace team.`)
     }
 };

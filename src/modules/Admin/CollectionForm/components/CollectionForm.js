@@ -6,30 +6,35 @@ import {Field} from 'redux-form/immutable';
 import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
 import {NavigationDialogBox} from 'modules/SharedComponents/Toolbox/NavigationPrompt';
 import {ConfirmDialogBox} from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
-// import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
+import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
 import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {ListEditorField} from 'modules/SharedComponents/Toolbox/ListEditor';
 import {validation} from 'config';
 import locale from 'locale/components';
 import {default as formLocale} from 'locale/publicationForm';
-import {RichEditorField} from 'modules/SharedComponents/RichEditor';
 import {CommunitiesSelectField} from 'modules/SharedComponents/PublicationSubtype';
 
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
+import {pathConfig} from 'config/routes';
 
 export default class CollectionForm extends Component {
     static propTypes = {
         ...propTypes, // all redux-form props
         author: PropTypes.object,
+        account: PropTypes.bool,
         disableSubmit: PropTypes.bool,
         fileAccessId: PropTypes.number,
         actions: PropTypes.object,
         isSessionValid: PropTypes.bool,
         formValues: PropTypes.object,
-        formErrors: PropTypes.object
+        formErrors: PropTypes.object,
+
+        newCollectionSaving: PropTypes.bool,
+        newCollectionError: PropTypes.bool,
+        newRecord: PropTypes.object
     };
 
     static contextTypes = {
@@ -49,37 +54,27 @@ export default class CollectionForm extends Component {
         }
     }
 
-    deposit = () => {
-        this.props.actions.checkSession();
-    }
-
     cancelSubmit = () => {
-        window.location.assign(formLocale.thesisSubmission.cancelLink);
+        window.location.assign(pathConfig.index);
     }
 
     afterSubmit = () => {
-        window.location.assign(formLocale.thesisSubmission.afterSubmitLink);
+        window.location.assign(pathConfig.index);
     }
-
-    openDepositConfirmation = () => {
-        this.depositConfirmationBox.showConfirmation();
-        this.props.actions.clearSessionExpiredFlag();
-    };
 
     setDepositConfirmation = (ref) => {
         this.depositConfirmationBox = ref;
     };
 
     render() {
-        const txt = formLocale.collection;
-
-        if (this.props.submitSucceeded) {
+        const txt = formLocale.addACollection;
+        if (this.props.submitSucceeded && this.props.newRecord) {
             return (
                 <StandardPage title={txt.title}>
                     <Grid container spacing={24}>
                         <Grid item xs={12}>
-                            <StandardCard title={formLocale.thesisSubmission.afterSubmitTitle}>
-                                <Typography>{formLocale.thesisSubmission.afterSubmitText}</Typography>
+                            <StandardCard title={txt.afterSubmitTitle}>
+                                <Typography>{txt.afterSubmitText}</Typography>
                             </StandardCard>
                         </Grid>
                     </Grid>
@@ -87,11 +82,12 @@ export default class CollectionForm extends Component {
                         <Grid item xs/>
                         <Grid item>
                             <Button
-                                variant={'raised'}
+                                variant={'contained'}
                                 color={'primary'}
                                 fullWidth
-                                children={formLocale.thesisSubmission.afterSubmit}
-                                onClick={this.afterSubmit}/>
+                                onClick={this.afterSubmit}>
+                                {txt.afterSubmitButton}
+                            </Button>
                         </Grid>
                     </Grid>
                 </StandardPage>
@@ -106,7 +102,7 @@ export default class CollectionForm extends Component {
                 successAlert: {...formLocale.successAlert},
                 errorAlert: {
                     ...formLocale.errorAlert,
-                    message: formLocale.thesisSubmission.depositFailedMessage
+                    message: formLocale.addACollection.addFailedMessage
                 }
             }});
         return (
@@ -123,14 +119,14 @@ export default class CollectionForm extends Component {
                     />
                     <Grid container spacing={24}>
                         <Grid item xs={12}>
-                            <StandardCard title={txt.information.title} help={txt.information.help}>
+                            <StandardCard title={txt.title} help={txt.help}>
                                 <Grid container spacing={24}>
                                     <Grid item xs={12}>
                                         <Field
                                             component={CommunitiesSelectField}
                                             disabled={this.props.submitting}
-                                            name="community"
-                                            locale={{label: 'Member of community'}}
+                                            name="fez_record_search_key_ismemberof"
+                                            locale={txt.formLabels.ismemberof}
                                             required
                                             multiple
                                             validate={[validation.required]}
@@ -140,22 +136,25 @@ export default class CollectionForm extends Component {
                             </StandardCard>
                         </Grid>
                         {
-                            this.props.formValues.get('community') &&
+                            this.props.formValues.get('fez_record_search_key_ismemberof') && this.props.formValues.get('fez_record_search_key_ismemberof').length > 0 &&
                             <Grid item xs={12}>
-                                <StandardCard title={txt.information.title} help={txt.information.help}>
+                                <StandardCard title={txt.details.title} help={txt.details.help}>
                                     <Grid container spacing={24}>
                                         <Grid item xs={12}>
                                             <Field
-                                                component={RichEditorField}
-                                                name="title"
-                                                title={'Title'}
+                                                component={TextField}
                                                 disabled={this.props.submitting}
-                                                height={50}
-                                                maxLength={800}
-                                                validate={[validation.required]}/>
+                                                autoFocus
+                                                name="rek_title"
+                                                type="text"
+                                                fullWidth
+                                                {...txt.formLabels.title}
+                                                required
+                                                validate={[validation.required]}
+                                            />
                                         </Grid>
                                         <Grid item xs={12}>
-                                            <Typography>{txt.keywords.description}</Typography>
+                                            <Typography>{txt.formLabels.keywords.description}</Typography>
                                             <Field
                                                 component={ListEditorField}
                                                 name="fez_record_search_key_keywords"
@@ -184,18 +183,20 @@ export default class CollectionForm extends Component {
                             <Button
                                 variant={'contained'}
                                 fullWidth
-                                children={formLocale.thesisSubmission.cancel}
                                 disabled={this.props.submitting}
-                                onClick={this.cancelSubmit}/>
+                                onClick={this.cancelSubmit}>
+                                {txt.cancel}
+                            </Button>
                         </Grid>
                         <Grid item xs={12} sm={'auto'}>
                             <Button
                                 variant={'contained'}
                                 color={'primary'}
                                 fullWidth
-                                children={formLocale.thesisSubmission.submit}
-                                onClick={this.deposit}
-                                disabled={this.props.submitting || this.props.disableSubmit}/>
+                                onClick={this.props.handleSubmit}
+                                disabled={this.props.submitting || this.props.disableSubmit}>
+                                {txt.submit}
+                            </Button>
                         </Grid>
                     </Grid>
                 </form>

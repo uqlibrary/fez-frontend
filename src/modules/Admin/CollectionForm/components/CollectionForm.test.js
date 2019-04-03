@@ -87,7 +87,7 @@ describe('Collection form test', () => {
     it('should not ask when redirecting from form with data after successful submit', () => {
         const testMethod = jest.fn();
         const wrapper = setup({dirty: true, submitSucceeded: true});
-        expect(wrapper.find('NavigationDialogBox').length).toEqual(0);
+        expect(wrapper.find('NavigationDialogBox').length).toEqual(1);
     });
 
     it('should display successfull submission screen', () => {
@@ -100,20 +100,12 @@ describe('Collection form test', () => {
     it('should redirect to cancel page', () => {
         window.location.assign = jest.fn();
         const wrapper = setup({}).instance().cancelSubmit();
-        expect(window.location.assign).toBeCalledWith(expect.stringContaining(formLocale.thesisSubmission.cancelLink));
+        expect(window.location.assign).toBeCalledWith('/');
     });
 
     it('should redirect to after submit page', () => {
         window.location.assign = jest.fn();
         const wrapper = setup({}).instance().afterSubmit();
-        expect(window.location.assign).toBeCalledWith(expect.stringContaining(formLocale.thesisSubmission.afterSubmitLink));
-    });
-
-    it('should display confirmation box before submission', () => {
-        const testMethod = jest.fn();
-        const wrapper = setup({});
-        wrapper.instance().depositConfirmationBox = {showConfirmation: testMethod};
-        wrapper.instance().openDepositConfirmation();
-        expect(testMethod).toHaveBeenCalled();
+        expect(window.location.assign).toBeCalledWith('/');
     });
 });

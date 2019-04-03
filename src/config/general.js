@@ -1,4 +1,5 @@
 import locale from 'locale/components';
+import moment from 'moment';
 const converter = require('number-to-words');
 
 const getValue = (value) => (
@@ -521,12 +522,12 @@ export const NEW_RECORD_DEFAULT_VALUES = {
 };
 
 export const NEW_COLLECTION_DEFAULT_VALUES = {
-    rek_title: '',
-    rek_description: '',
     rek_object_type: 2,
     rek_display_type: 9,
     rek_status: 2,
-    rek_keywords: [],
+    rek_title: '',
+    rek_date: moment().format(),
+    fez_record_search_key_keywords: [],
     fez_record_search_key_ismemberof: []
 
 };

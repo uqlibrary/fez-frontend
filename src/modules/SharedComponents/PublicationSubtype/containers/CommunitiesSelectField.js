@@ -6,7 +6,6 @@ import * as actions from 'actions';
 const mapStateToProps = (state, props) => {
     const noHtmlConfig = { ALLOWED_TAGS: [''] };
     const dompurify = require('dompurify');
-
     const translatedItemList = state.get('communitiesReducer') && state.get('communitiesReducer').itemsList.map((item, index) => {
         return {text: dompurify.sanitize(item.rek_title, noHtmlConfig), value: item.rek_pid, index: index + 1};
     });
