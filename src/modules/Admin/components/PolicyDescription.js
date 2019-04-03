@@ -7,11 +7,7 @@ export const PolicyDescription = ({selectedPolicyKey, policyArray}) => {
     const policyDesc = policyArray.find(
         policy => policy.value === selectedPolicyKey
     );
-    return (
-        <React.Fragment>
-            {policyDesc.name} ({policyDesc.id})
-        </React.Fragment>
-    );
+    return ( policyDesc ? `${policyDesc.name} (${policyDesc.id})` : '');
 };
 
 PolicyDescription.propTypes = {

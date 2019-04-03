@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SelectedSecurityPolicyDescription component should render properly 1`] = `
+<WithStyles(Grid)
+  item={true}
+  style={
+    Object {
+      "backgroundColor": "rgba(0,0,0,0.05)",
+      "marginTop": 12,
+      "padding": 24,
+    }
+  }
+  xs={12}
+>
+  <WithStyles(Typography)
+    style={
+      Object {
+        "marginTop": -8,
+      }
+    }
+    variant="h6"
+  >
+    test
+  </WithStyles(Typography)>
+  <WithStyles(Grid)
+    container={true}
+    spacing={8}
+    style={
+      Object {
+        "marginTop": 8,
+      }
+    }
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={2}
+    >
+      <b>
+        Name (ID):
+      </b>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs={10}
+    >
+      <PolicyDescription
+        policyArray={
+          Array [
+            Object {
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id aliquam sapien. Aliquam rhoncus congue consectetur. Aenean sed sapien ipsum. Sed lectus mauris, mollis et dolor vitae, rutrum lobortis risus. Aenean a nisl non felis pretium tincidunt id sit amet augue. Aenean ac quam non libero malesuada vulputate. Integer commodo lacus quis egestas varius. Etiam dapibus mollis feugiat. Aliquam pellentesque nunc ac libero feugiat laoreet. In hac habitasse platea dictumst. Duis sagittis lorem id vestibulum maximus. Nullam vel libero eu eros faucibus venenatis. Vestibulum interdum porttitor ipsum sed fringilla. Sed enim lacus, faucibus vel tincidunt euismod, euismod vitae turpis.",
+              "id": 1,
+              "label": "Administrators",
+              "name": "Administrators",
+              "order": 0,
+              "value": 1,
+            },
+            Object {
+              "description": "Suspendisse pellentesque libero eget molestie vehicula. Vestibulum eget purus euismod, imperdiet massa non, vulputate lectus. Sed mi mi, placerat ultricies purus nec, sollicitudin fringilla odio. Aliquam erat volutpat. Vestibulum at augue sed arcu condimentum finibus id et dolor.",
+              "id": 2,
+              "label": "Theses Assessors",
+              "name": "Theses Assessors",
+              "order": 10,
+              "value": 2,
+            },
+            Object {
+              "description": "Mauris pulvinar tortor eu lectus facilisis, ut ultricies risus elementum. Aenean ac sem quis enim molestie egestas ut id sem. Nulla nibh elit, efficitur fermentum nisl et, semper ultrices quam. Aenean in sollicitudin mi. Cras ultricies eros quis maximus pellentesque. Mauris justo mi, aliquet vitae nisl et, tristique pulvinar risus.",
+              "id": 3,
+              "label": "Evidence Assessors",
+              "name": "Evidence Assessors",
+              "order": 20,
+              "value": 3,
+            },
+            Object {
+              "description": "Sed quis blandit erat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec condimentum feugiat maximus. Donec ullamcorper nulla nec leo elementum dapibus. Ut enim nunc, volutpat quis facilisis sed, congue vel arcu.",
+              "id": 4,
+              "label": "Staff and Students",
+              "name": "Staff and Students",
+              "order": 30,
+              "value": 4,
+            },
+            Object {
+              "description": "Aenean arcu nibh, feugiat ut mauris id, consectetur pulvinar ipsum. Vestibulum ullamcorper dictum tristique. Sed lobortis est in mauris venenatis, quis euismod nunc pellentesque. Cras iaculis a ex nec laoreet. Aliquam sapien arcu, pharetra eget maximus ac, volutpat sit amet libero.",
+              "id": 5,
+              "label": "Public",
+              "name": "Public",
+              "order": 100,
+              "value": 5,
+            },
+          ]
+        }
+        selectedPolicyKey={2}
+      />
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
+`;

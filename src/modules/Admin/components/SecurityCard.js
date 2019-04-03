@@ -22,7 +22,7 @@ export const isFileValid = (dataStream) => {
         dataStream.dsi_state === 'A';
 };
 
-export const RecordContextWrapper =  /* istanbul ignore next */ (props) => (
+const RecordContextWrapper =  /* istanbul ignore next */ (props) => (
     <RecordContextConsumer>
         {({ record }) => (
             <FormContextWrapper {...{ ...props, record }} />
@@ -30,7 +30,7 @@ export const RecordContextWrapper =  /* istanbul ignore next */ (props) => (
     </RecordContextConsumer>
 );
 
-export const FormContextWrapper =  /* istanbul ignore next */ (props) => (
+const FormContextWrapper =  /* istanbul ignore next */ (props) => (
     <FormValuesContextConsumer>
         {({ formValues }) => (
             <SecurityCard {...{

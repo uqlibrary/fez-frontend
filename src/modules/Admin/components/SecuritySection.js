@@ -9,6 +9,7 @@ import Button from '@material-ui/core/Button';
 import { SelectField } from 'modules/SharedComponents/Toolbox/SelectField';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { FormValuesContextConsumer } from 'context';
+import { RECORD_TYPE_RECORD } from 'config/general';
 import SecurityCard from './SecurityCard';
 
 import { validation } from 'config';
@@ -16,13 +17,24 @@ import { locale } from 'locale';
 
 const text = locale.components.securitySection;
 
-export const SecuritySection = ({ disabled, handleSubmit, recordType }) => {
+const FormContextWrapper =  /* istanbul ignore next */ (props) => (
+    <FormValuesContextConsumer>
+        {({ formValues }) => (
+            <SecuritySection {...{
+                ...props,
+                accessLevel: formValues.get('accessLevel')
+            }} />
+        )}
+    </FormValuesContextConsumer>
+);
+
+export const SecuritySection = ({ disabled, handleSubmit, recordType, accessLevel }) => {
     return (
         <Grid container spacing={16}>
             <Grid item xs={12} sm={12}>
                 <Field
                     component={SelectField}
-                    name="level"
+                    name="accessLevel"
                     label={text.admin.field.label}
                     disabled={disabled}
                     required
@@ -43,34 +55,28 @@ export const SecuritySection = ({ disabled, handleSubmit, recordType }) => {
                     message={text.admin.warning.message}
                 />
             </Grid>
-            <FormValuesContextConsumer>
-                {({ formValues }) => (
-                    <React.Fragment>
-                        {
-                            formValues.get('level') === 'Superadmin' &&
-                            <Grid item xs={12}>
-                                <SecurityCard
-                                    disabled={disabled}
-                                    text={text[recordType.toLowerCase()]}
-                                />
-                            </Grid>
-                        }
-                        {
-                            formValues.get('level') &&
-                            <Grid item xs={12} sm={12}>
-                                <Button
-                                    style={{whiteSpace: 'nowrap'}}
-                                    variant="contained"
-                                    color="primary"
-                                    fullWidth
-                                    children={text.submit}
-                                    onClick={handleSubmit}
-                                />
-                            </Grid>
-                        }
-                    </React.Fragment>
-                )}
-            </FormValuesContextConsumer>
+            {
+                accessLevel === 'Superadmin' &&
+                <Grid item xs={12}>
+                    <SecurityCard
+                        disabled={disabled}
+                        text={text[recordType.toLowerCase()]}
+                    />
+                </Grid>
+            }
+            {
+                accessLevel &&
+                <Grid item xs={12} sm={12}>
+                    <Button
+                        style={{whiteSpace: 'nowrap'}}
+                        variant="contained"
+                        color="primary"
+                        fullWidth
+                        children={text.submit}
+                        onClick={handleSubmit}
+                    />
+                </Grid>
+            }
         </Grid>
     );
 };
@@ -78,7 +84,14 @@ export const SecuritySection = ({ disabled, handleSubmit, recordType }) => {
 SecuritySection.propTypes = {
     disabled: PropTypes.bool,
     recordType: PropTypes.string,
-    handleSubmit: PropTypes.func
+    handleSubmit: PropTypes.func,
+    accessLevel: PropTypes.string
 };
 
-export default React.memo(SecuritySection);
+SecuritySection.defaultProps = {
+    disabled: false,
+    recordType: RECORD_TYPE_RECORD,
+    accessLevel: 'Admin'
+};
+
+export default React.memo(FormContextWrapper);

@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PolicyDropdown component should render properly 1`] = `
+<Field
+  component={[Function]}
+  label="Record level policy to apply to this PID"
+  name="test"
+  required={true}
+  validation={
+    Array [
+      [Function],
+    ]
+  }
+>
+  <WithStyles(MenuItem)
+    disabled={true}
+    value=""
+  />
+  <WithStyles(MenuItem)
+    key="0"
+    value={1}
+  >
+    Administrators
+  </WithStyles(MenuItem)>
+  <WithStyles(MenuItem)
+    key="1"
+    value={2}
+  >
+    Theses Assessors
+  </WithStyles(MenuItem)>
+  <WithStyles(MenuItem)
+    key="2"
+    value={3}
+  >
+    Evidence Assessors
+  </WithStyles(MenuItem)>
+  <WithStyles(MenuItem)
+    key="3"
+    value={4}
+  >
+    Staff and Students
+  </WithStyles(MenuItem)>
+  <WithStyles(MenuItem)
+    key="4"
+    value={5}
+  >
+    Public
+  </WithStyles(MenuItem)>
+</Field>
+`;
