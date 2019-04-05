@@ -521,11 +521,22 @@ export const NEW_RECORD_DEFAULT_VALUES = {
     ]
 };
 
+export const NEW_COMMUNITY_DEFAULT_VALUES = {
+    rek_object_type: 1,
+    rek_display_type: 11,
+    rek_status: 2,
+    rek_title: '',
+    rek_description: '',
+    rek_date: moment().format(),
+    fez_record_search_key_keywords: [],
+};
+
 export const NEW_COLLECTION_DEFAULT_VALUES = {
     rek_object_type: 2,
     rek_display_type: 9,
     rek_status: 2,
     rek_title: '',
+    rek_description: '',
     rek_date: moment().format(),
     fez_record_search_key_keywords: [],
     fez_record_search_key_ismemberof: []

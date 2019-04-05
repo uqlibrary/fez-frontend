@@ -7,6 +7,7 @@ export fixRecordReducer from './fixRecord';
 export viewRecordReducer from './viewRecord';
 export createRecordReducer from './createRecord';
 export createCollectionReducer from './createCollection';
+export createCommunityReducer from './createCommunity';
 export publicationsReducer from './publications';
 export exportPublicationsReducer from './exportPublications';
 export searchRecordsReducer from './searchRecords';

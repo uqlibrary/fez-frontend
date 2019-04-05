@@ -49,6 +49,9 @@ export default {
         collectionForm: {
             primaryText: 'Add a missing collection'
         },
+        communityForm: {
+            primaryText: 'Add a missing community'
+        },
         unpublished: {
             primaryText: 'Unpublished buffer'
         }

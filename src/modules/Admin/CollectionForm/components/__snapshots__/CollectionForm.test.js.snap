@@ -8,19 +8,6 @@ exports[`Collection form test should display successfull submission screen 1`] =
     <NavigationDialogBox
       when={false}
     />
-    <ConfirmDialogBox
-      hideCancelButton={false}
-      locale={
-        Object {
-          "cancelButtonLabel": "No",
-          "confirmButtonLabel": "Yes",
-          "confirmationMessage": "Are you sure?",
-          "confirmationTitle": "Confirmation",
-        }
-      }
-      onAction={[MockFunction]}
-      onRef={[Function]}
-    />
     <WithStyles(Grid)
       container={true}
       spacing={24}
@@ -122,19 +109,6 @@ exports[`Collection form test should render form 1`] = `
   <form>
     <NavigationDialogBox
       when={true}
-    />
-    <ConfirmDialogBox
-      hideCancelButton={false}
-      locale={
-        Object {
-          "cancelButtonLabel": "No",
-          "confirmButtonLabel": "Yes",
-          "confirmationMessage": "Are you sure?",
-          "confirmationTitle": "Confirmation",
-        }
-      }
-      onAction={[MockFunction]}
-      onRef={[Function]}
     />
     <WithStyles(Grid)
       container={true}
