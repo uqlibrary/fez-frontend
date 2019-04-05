@@ -61,11 +61,36 @@ function setup(testProps, isShallow = true) {
 }
 
 describe('Collection form test', () => {
-    it('should render form', () => {
+    const { reload } = window.location;
+
+    beforeAll(() => {
+        Object.defineProperty(window.location, 'reload', {
+            configurable: true,
+        });
+        window.location.reload = jest.fn();
+    });
+
+    afterAll(() => {
+        window.location.reload = reload;
+    });
+
+    it('should render form with only the community dropdown', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('Field').length).toEqual(1);
         expect(wrapper.find('WithStyles(Button)').length).toEqual(2);
+    });
+
+    it('should render the full form', () => {
+        const wrapper = setup({formValues: {get: () => {return [1, 2, 3]}}});
+        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(wrapper.find('Field').length).toEqual(4);
+        expect(wrapper.find('WithStyles(Button)').length).toEqual(2);
+    });
+
+    it('should render success panel', () => {
+        const wrapper = setup({submitSucceeded: true, newRecord: {rek_pid: 'UQ:12345'}});
+        expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should not disable submit button if form submit has failed', () => {
@@ -107,5 +132,11 @@ describe('Collection form test', () => {
         window.location.assign = jest.fn();
         const wrapper = setup({}).instance().afterSubmit();
         expect(window.location.assign).toBeCalledWith('/');
+    });
+
+    it('should reload the page', () => {
+        jest.spyOn(window.location, 'reload');
+        const wrapper = setup({}).instance().reloadForm();
+        expect(window.location.reload).toBeCalled();
     });
 });

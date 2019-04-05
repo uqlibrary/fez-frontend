@@ -42,15 +42,6 @@ export default class CollectionForm extends Component {
         super(props);
     }
 
-    componentWillReceiveProps(nextProps) {
-        if (
-            nextProps.isSessionValid &&
-            !nextProps.submitting
-        ) {
-            this.openDepositConfirmation();
-        }
-    }
-
     cancelSubmit = () => {
         window.location.assign(pathConfig.index);
     }

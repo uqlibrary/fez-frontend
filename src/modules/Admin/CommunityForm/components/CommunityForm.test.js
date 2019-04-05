@@ -61,6 +61,18 @@ function setup(testProps, isShallow = true) {
 }
 
 describe('Collection form test', () => {
+
+    beforeAll(() => {
+        Object.defineProperty(window.location, 'reload', {
+            configurable: true,
+        });
+        window.location.reload = jest.fn();
+    });
+
+    afterAll(() => {
+        window.location.reload = reload;
+    });
+
     it('should render form', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -108,4 +120,16 @@ describe('Collection form test', () => {
         const wrapper = setup({}).instance().afterSubmit();
         expect(window.location.assign).toBeCalledWith('/');
     });
+
+    it('should reload the page', () => {
+        jest.spyOn(window.location, 'reload');
+        const wrapper = setup({}).instance().reloadForm();
+        expect(window.location.reload).toBeCalled();
+    });
+
+    it('should render success panel', () => {
+        const wrapper = setup({submitSucceeded: true, newRecord: {rek_pid: 'UQ:12345'}});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
 });

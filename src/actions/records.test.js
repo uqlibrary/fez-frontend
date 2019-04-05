@@ -1073,4 +1073,167 @@ describe('Record action creators', () => {
         });
     });
 
+    describe('createCollection()', () => {
+
+        it('dispatches expected actions on successful save', async () => {
+            const testInput = {
+                    rek_title: 'Test',
+                    fez_record_search_key_ismemberof: ['UQ:12345'],
+                    rek_description: 'Test',
+                    fez_record_search_key_keywords: [
+                        {rek_keywords: 'test 1', rek_keywords_order: 1},
+                        {rek_keywords: 'test 3', rek_keywords_order: 2}
+                    ]
+            };
+            const pidRequest = {pid: 'UQ:67890'};
+
+            mockApi
+                .onPost(repositories.routes.NEW_COLLECTION_API().apiUrl)
+                .reply(200, {data: {...record}})
+
+
+            const expectedActions = [
+                actions.CREATE_COLLECTION_SAVING,
+                actions.CREATE_COLLECTION_SUCCESS
+            ];
+
+            await mockActionsStore.dispatch(recordActions.createCollection(testInput));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+
+        it('dispatches expected actions on failed save', async () => {
+            const testInput = {
+                    rek_title: 'Test',
+                    fez_record_search_key_ismemberof: ['UQ:12345'],
+                    rek_description: 'Test',
+                    fez_record_search_key_keywords: [
+                        {rek_keywords: 'test 1', rek_keywords_order: 1},
+                        {rek_keywords: 'test 3', rek_keywords_order: 2}
+                    ]
+            };
+            const pidRequest = {pid: 'UQ:67890'};
+
+            mockApi
+                .onPost(repositories.routes.NEW_COLLECTION_API().apiUrl)
+                .reply(500, {error: {message: 'FAILED'}});
+
+
+            const expectedActions = [
+                actions.CREATE_COLLECTION_SAVING,
+                actions.APP_ALERT_SHOW,
+                actions.CREATE_COLLECTION_FAILED
+            ];
+
+            try {
+                await mockActionsStore.dispatch(recordActions.createCollection(testInput))
+            } catch (e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            }
+        });
+
+        it('dispatches expected actions on successful save with no keywords', async () => {
+            const testInput = {
+                    rek_title: 'Test',
+                    fez_record_search_key_ismemberof: ['UQ:12345'],
+                    rek_description: 'Test',
+                    fez_record_search_key_keywords: []
+            };
+            const pidRequest = {pid: 'UQ:67890'};
+
+            mockApi
+                .onPost(repositories.routes.NEW_COLLECTION_API().apiUrl)
+                .reply(200, {data: {...record}})
+
+
+            const expectedActions = [
+                actions.CREATE_COLLECTION_SAVING,
+                actions.CREATE_COLLECTION_SUCCESS
+            ];
+
+            await mockActionsStore.dispatch(recordActions.createCollection(testInput));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+
+    });
+
+    describe('createCommunity()', () => {
+
+        it('dispatches expected actions on successful save', async () => {
+            const testInput = {
+                rek_title: 'Test',
+                rek_description: 'Test',
+                fez_record_search_key_keywords: [
+                    {rek_keywords: 'test 1', rek_keywords_order: 1},
+                    {rek_keywords: 'test 3', rek_keywords_order: 2}
+                ]
+            };
+            const pidRequest = {pid: 'UQ:67890'};
+
+            mockApi
+                .onPost(repositories.routes.NEW_COMMUNITY_API().apiUrl)
+                .reply(200, {data: {...record}})
+
+
+            const expectedActions = [
+                actions.CREATE_COMMUNITY_SAVING,
+                actions.CREATE_COMMUNITY_SUCCESS
+            ];
+
+            await mockActionsStore.dispatch(recordActions.createCommunity(testInput));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+
+        it('dispatches expected actions on failed save', async () => {
+            const testInput = {
+                rek_title: 'Test',
+                rek_description: 'Test',
+                fez_record_search_key_keywords: [
+                    {rek_keywords: 'test 1', rek_keywords_order: 1},
+                    {rek_keywords: 'test 3', rek_keywords_order: 2}
+                ]
+            };
+            const pidRequest = {pid: 'UQ:67890'};
+
+            mockApi
+                .onPost(repositories.routes.NEW_COMMUNITY_API().apiUrl)
+                .reply(500, {error: {message: 'FAILED'}});
+
+
+            const expectedActions = [
+                actions.CREATE_COMMUNITY_SAVING,
+                actions.APP_ALERT_SHOW,
+                actions.CREATE_COMMUNITY_FAILED
+            ];
+
+            try {
+                await mockActionsStore.dispatch(recordActions.createCommunity(testInput))
+            } catch (e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            }
+        });
+
+        it('dispatches expected actions on successful save with no keywords', async () => {
+            const testInput = {
+                rek_title: 'Test',
+                rek_description: 'Test',
+                fez_record_search_key_keywords: []
+            };
+            const pidRequest = {pid: 'UQ:67890'};
+
+            mockApi
+                .onPost(repositories.routes.NEW_COMMUNITY_API().apiUrl)
+                .reply(200, {data: {...record}})
+
+
+            const expectedActions = [
+                actions.CREATE_COMMUNITY_SAVING,
+                actions.CREATE_COMMUNITY_SUCCESS
+            ];
+
+            await mockActionsStore.dispatch(recordActions.createCommunity(testInput));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+
+    });
+
 });

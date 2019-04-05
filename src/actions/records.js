@@ -279,18 +279,13 @@ export function createCollection(data, authorId) {
             ],
             rek_depositor: authorId,
         };
-        let newRecord = null;
         return post(NEW_COLLECTION_API(), recordRequest)
-            .then(response => {
-                newRecord = response.data;
-                return response;
-            })
             .then((response) => {
                 dispatch({
                     type: actions.CREATE_COLLECTION_SUCCESS,
-                    payload: response.data ? response.data : newRecord
+                    payload: response.data
                 });
-                return Promise.resolve(response.data ? response.data : newRecord);
+                return Promise.resolve(response.data);
             })
             .catch(error => {
                 dispatch({
@@ -318,18 +313,13 @@ export function createCommunity(data, authorId) {
             ...JSON.parse(JSON.stringify(data)),
             rek_depositor: authorId,
         };
-        let newRecord = null;
         return post(NEW_COMMUNITY_API(), recordRequest)
-            .then(response => {
-                newRecord = response.data;
-                return response;
-            })
             .then((response) => {
                 dispatch({
                     type: actions.CREATE_COMMUNITY_SUCCESS,
-                    payload: response.data ? response.data : newRecord
+                    payload: response.data
                 });
-                return Promise.resolve(response.data ? response.data : newRecord);
+                return Promise.resolve(response.data);
             })
             .catch(error => {
                 dispatch({
