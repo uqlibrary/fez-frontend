@@ -1559,8 +1559,8 @@ export default {
         },
         formLabels: {
             ismemberof: {
-                label: 'Member of community/communities',
-                placeholder: 'Select communities this collection is a member of'
+                label: 'Member of this community',
+                placeholder: 'Select a community this collection is a member of'
             },
             title: {
                 label: 'Title of collection',
