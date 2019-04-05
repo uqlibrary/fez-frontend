@@ -477,12 +477,3 @@ export const getNtroMetadataSearchKeys = (data) => {
 
     return ntroMetadata;
 };
-
-export const getCollectionIsMemberOf = (data) => {
-    if (!data || !data.fez_record_search_key_ismemberof) return {};
-    const ismemberof = data.fez_record_search_key_ismemberof;
-    const formattedIsMemberOf = ismemberof.map((item, index) => {
-        return {rek_ismemberof: item, rek_ismemberof_order: index + 1};
-    });
-    return {fez_record_search_key_ismemberof: formattedIsMemberOf};
-};

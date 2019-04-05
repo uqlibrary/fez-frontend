@@ -271,7 +271,12 @@ export function createCollection(data, authorId) {
         const recordRequest = {
             ...NEW_COLLECTION_DEFAULT_VALUES,
             ...JSON.parse(JSON.stringify(data)),
-            ...transformers.getCollectionIsMemberOf(data),
+            fez_record_search_key_ismemberof: [
+                {
+                    rek_ismemberof: data.fez_record_search_key_ismemberof,
+                    rek_ismemberof_order: 1
+                }
+            ],
             rek_depositor: authorId,
         };
         let newRecord = null;

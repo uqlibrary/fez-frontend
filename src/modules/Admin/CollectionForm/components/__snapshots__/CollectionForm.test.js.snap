@@ -46,8 +46,8 @@ exports[`Collection form test should display successfull submission screen 1`] =
                 disabled={false}
                 locale={
                   Object {
-                    "label": "Member of community/communities",
-                    "placeholder": "Select communities this collection is a member of",
+                    "label": "Member of this community",
+                    "placeholder": "Select a community this collection is a member of",
                   }
                 }
                 name="fez_record_search_key_ismemberof"
@@ -161,8 +161,8 @@ exports[`Collection form test should render form 1`] = `
                 disabled={false}
                 locale={
                   Object {
-                    "label": "Member of community/communities",
-                    "placeholder": "Select communities this collection is a member of",
+                    "label": "Member of this community",
+                    "placeholder": "Select a community this collection is a member of",
                   }
                 }
                 name="fez_record_search_key_ismemberof"
