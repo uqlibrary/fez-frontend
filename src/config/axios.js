@@ -46,13 +46,6 @@ export const sessionApi = axios.create({
     crossdomain: true,
 });
 
-// need to generate a new token for each request otherwise if you try a new request with the old token,
-// axios will appear to cancel your request automatically
-export const generateCancelToken = () => {
-    const CancelToken = axios.CancelToken;
-    return CancelToken.source();
-};
-
 // If there is a local cookie available, then set the api headers for x-uql-token
 if(!!Cookies.get(SESSION_COOKIE_NAME) && !!Cookies.get(SESSION_USER_GROUP_COOKIE_NAME)) {
     api.defaults.headers.common[TOKEN_NAME] = Cookies.get(SESSION_COOKIE_NAME);
