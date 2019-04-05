@@ -1,8 +1,8 @@
 import {post, patch} from 'repositories/generic';
-import {NEW_RECORD_API, EXISTING_RECORD_API, RECORDS_ISSUES_API, NEW_COLLECTION_API} from 'repositories/routes';
+import {NEW_RECORD_API, EXISTING_RECORD_API, RECORDS_ISSUES_API, NEW_COLLECTION_API, NEW_COMMUNITY_API} from 'repositories/routes';
 import {putUploadFiles} from 'repositories';
 import * as transformers from './transformers';
-import {NEW_RECORD_DEFAULT_VALUES, NEW_COLLECTION_DEFAULT_VALUES} from 'config/general';
+import {NEW_RECORD_DEFAULT_VALUES, NEW_COLLECTION_DEFAULT_VALUES, NEW_COMMUNITY_DEFAULT_VALUES} from 'config/general';
 import * as actions from './actionTypes';
 
 /**
@@ -295,6 +295,45 @@ export function createCollection(data, authorId) {
             .catch(error => {
                 dispatch({
                     type: actions.CREATE_COLLECTION_FAILED,
+                    payload: error.message
+                });
+
+                return Promise.reject(error);
+            });
+    };
+}
+
+/**
+ * Save a new community involves a single request.
+ * If error occurs on any stage failed action is dispatched
+ * @param {object} data to be posted, refer to backend API
+ * @returns {promise} - this method is used by redux form onSubmit which requires Promise resolve/reject as a return
+ */
+export function createCommunity(data, authorId) {
+    return dispatch => {
+        dispatch({type: actions.CREATE_COMMUNITY_SAVING});
+        // set default values, links
+        const recordRequest = {
+            ...NEW_COMMUNITY_DEFAULT_VALUES,
+            ...JSON.parse(JSON.stringify(data)),
+            rek_depositor: authorId,
+        };
+        let newRecord = null;
+        return post(NEW_COMMUNITY_API(), recordRequest)
+            .then(response => {
+                newRecord = response.data;
+                return response;
+            })
+            .then((response) => {
+                dispatch({
+                    type: actions.CREATE_COMMUNITY_SUCCESS,
+                    payload: response.data ? response.data : newRecord
+                });
+                return Promise.resolve(response.data ? response.data : newRecord);
+            })
+            .catch(error => {
+                dispatch({
+                    type: actions.CREATE_COMMUNITY_FAILED,
                     payload: error.message
                 });
 

@@ -1615,6 +1615,71 @@ export default {
         afterSubmitTitle: 'Collection added successfully',
         afterSubmitText: 'Your new collection was created successfully.',
         afterSubmitButton: 'Return to the homepage',
+        reloadFormButton: 'Add another collection',
         addFailedMessage: (error) => (`Your attempt to add this collection has failed (Error: ${error.message}). Please try again later or contact the eSpace team.`)
+    },
+    addACommunity: {
+        title: 'Add a missing community',
+        help: {},
+        details: {
+            title: 'Community details',
+            help: {}
+        },
+        formLabels: {
+            title: {
+                label: 'Title of collection',
+                placeholder: 'Type a title for this collection'
+            },
+            description: {
+                label: 'Collection description',
+                placeholder: 'Type a description of this collection.'
+            },
+            keywords: {
+                description: 'Add up to 10 individual keywords, or a comma separated list, that describe the content of the community.',
+                field: {
+                    form: {
+                        locale: {
+                            inputFieldLabel: 'Keywords',
+                            inputFieldHint: 'Type keywords',
+                            addButtonLabel: 'Add',
+                            id: 'keywords-input'
+                        }
+                    },
+                    header: {
+                        locale: {
+                            nameColumn: 'Keyword',
+                            reorderColumn: 'Reorder keywords',
+                            deleteAll: 'Remove all keywords',
+                            deleteAllConfirmation: {
+                                confirmationTitle: 'Delete all',
+                                confirmationMessage: 'Are you sure you want to delete all keywords?',
+                                cancelButtonLabel: 'No',
+                                confirmButtonLabel: 'Yes'
+                            }
+                        }
+                    },
+                    row: {
+                        locale: {
+                            moveUpHint: 'Move keyword up the order',
+                            moveDownHint: 'Move keyword down the order',
+                            deleteHint: 'Remove this keyword',
+                            deleteRecordConfirmation: {
+                                confirmationTitle: 'Delete keyword',
+                                confirmationMessage: 'Are you sure you want to delete this keyword?',
+                                cancelButtonLabel: 'No',
+                                confirmButtonLabel: 'Yes'
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        submit: 'Add community',
+        cancel: 'Cancel and return to the homepage',
+        afterSubmitTitle: 'Community added successfully',
+        afterSubmitText: 'Your new community was created successfully.',
+        afterSubmitButton: 'Return to the homepage',
+        AddAnotherButton: 'Add another community',
+        addFailedMessage: (error) => (`Your attempt to add this community has failed (Error: ${error.message}). Please try again later or contact the eSpace team.`)
     }
 };

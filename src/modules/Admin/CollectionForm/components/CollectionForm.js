@@ -2,10 +2,8 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {propTypes} from 'redux-form/immutable';
 import {Field} from 'redux-form/immutable';
-
 import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
 import {NavigationDialogBox} from 'modules/SharedComponents/Toolbox/NavigationPrompt';
-import {ConfirmDialogBox} from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
 import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
@@ -61,9 +59,9 @@ export default class CollectionForm extends Component {
         window.location.assign(pathConfig.index);
     }
 
-    setDepositConfirmation = (ref) => {
-        this.depositConfirmationBox = ref;
-    };
+    reloadForm = () => {
+        location.reload();
+    }
 
     render() {
         const txt = formLocale.addACollection;
@@ -80,6 +78,13 @@ export default class CollectionForm extends Component {
                     <Grid container spacing={16}>
                         <Grid item xs/>
                         <Grid item>
+                            <Button
+                                variant={'contained'}
+                                fullWidth
+                                onClick={this.reloadForm}>
+                                {txt.reloadFormButton}
+                            </Button>
+                        </Grid><Grid item>
                             <Button
                                 variant={'contained'}
                                 color={'primary'}
@@ -110,12 +115,6 @@ export default class CollectionForm extends Component {
                     <NavigationDialogBox
                         when={this.props.dirty && !this.props.submitSucceeded}
                         txt={txt.cancelWorkflowConfirmation}/>
-
-                    <ConfirmDialogBox
-                        onRef={this.setDepositConfirmation}
-                        onAction={this.props.handleSubmit}
-                        locale={txt.depositConfirmation}
-                    />
                     <Grid container spacing={24}>
                         <Grid item xs={12}>
                             <StandardCard title={txt.title} help={txt.help}>

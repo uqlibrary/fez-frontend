@@ -133,6 +133,10 @@ export const NEW_COLLECTION_API = () => (
     {apiUrl: 'collections'}
 );
 
+export const NEW_COMMUNITY_API = () => (
+    {apiUrl: 'communities'}
+);
+
 // search/list records apis
 export const POSSIBLE_RECORDS_API = (values) => (
     {

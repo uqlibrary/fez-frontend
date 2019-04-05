@@ -465,15 +465,18 @@ export default {
         },
         collection: {
             title: 'Add a missing collection',
-            depositConfirmation: {
-                confirmationTitle: 'Thesis deposit',
-                confirmationMessage: 'You are about to deposit your thesis with attached files. Are you sure you want to proceed?',
-                cancelButtonLabel: 'No, continue editing',
-                confirmButtonLabel: 'Yes, deposit thesis'
-            },
             cancelWorkflowConfirmation: {
-                confirmationTitle: 'Cancel claiming a publication',
-                confirmationMessage: 'Are you sure you want to cancel claiming this work?',
+                confirmationTitle: 'Cancel collection creation',
+                confirmationMessage: 'Are you sure you want to cancel creating this collection?',
+                cancelButtonLabel: 'No',
+                confirmButtonLabel: 'Yes'
+            },
+        },
+        community: {
+            title: 'Add a missing community',
+            cancelWorkflowConfirmation: {
+                confirmationTitle: 'Cancel community creation',
+                confirmationMessage: 'Are you sure you want to cancel creating this community?',
                 cancelButtonLabel: 'No',
                 confirmButtonLabel: 'Yes'
             },
