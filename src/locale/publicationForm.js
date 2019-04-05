@@ -1566,8 +1566,48 @@ export default {
                 label: 'Title of collection',
                 placeholder: 'Type a title for this collection'
             },
+            description: {
+                label: 'Collection description',
+                placeholder: 'Type a description of this collection.'
+            },
             keywords: {
-                description: 'Add up to 10 individual keywords, or a comma separated list, that describe the content of the thesis.'
+                description: 'Add up to 10 individual keywords, or a comma separated list, that describe the content of the collection.',
+                field: {
+                    form: {
+                        locale: {
+                            inputFieldLabel: 'Keywords',
+                            inputFieldHint: 'Type keywords',
+                            addButtonLabel: 'Add',
+                            id: 'keywords-input'
+                        }
+                    },
+                    header: {
+                        locale: {
+                            nameColumn: 'Keyword',
+                            reorderColumn: 'Reorder keywords',
+                            deleteAll: 'Remove all keywords',
+                            deleteAllConfirmation: {
+                                confirmationTitle: 'Delete all',
+                                confirmationMessage: 'Are you sure you want to delete all keywords?',
+                                cancelButtonLabel: 'No',
+                                confirmButtonLabel: 'Yes'
+                            }
+                        }
+                    },
+                    row: {
+                        locale: {
+                            moveUpHint: 'Move keyword up the order',
+                            moveDownHint: 'Move keyword down the order',
+                            deleteHint: 'Remove this keyword',
+                            deleteRecordConfirmation: {
+                                confirmationTitle: 'Delete keyword',
+                                confirmationMessage: 'Are you sure you want to delete this keyword?',
+                                cancelButtonLabel: 'No',
+                                confirmButtonLabel: 'Yes'
+                            }
+                        }
+                    }
+                }
             }
         },
         submit: 'Add collection',

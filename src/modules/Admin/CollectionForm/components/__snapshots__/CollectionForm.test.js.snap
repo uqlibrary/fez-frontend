@@ -50,7 +50,6 @@ exports[`Collection form test should display successfull submission screen 1`] =
                     "placeholder": "Select communities this collection is a member of",
                   }
                 }
-                multiple={true}
                 name="fez_record_search_key_ismemberof"
                 required={true}
                 validate={
@@ -166,7 +165,6 @@ exports[`Collection form test should render form 1`] = `
                     "placeholder": "Select communities this collection is a member of",
                   }
                 }
-                multiple={true}
                 name="fez_record_search_key_ismemberof"
                 required={true}
                 validate={

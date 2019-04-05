@@ -11,7 +11,6 @@ import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {ListEditorField} from 'modules/SharedComponents/Toolbox/ListEditor';
 import {validation} from 'config';
-import locale from 'locale/components';
 import {default as formLocale} from 'locale/publicationForm';
 import {CommunitiesSelectField} from 'modules/SharedComponents/PublicationSubtype';
 
@@ -128,7 +127,6 @@ export default class CollectionForm extends Component {
                                             name="fez_record_search_key_ismemberof"
                                             locale={txt.formLabels.ismemberof}
                                             required
-                                            multiple
                                             validate={[validation.required]}
                                         />
                                     </Grid>
@@ -153,17 +151,31 @@ export default class CollectionForm extends Component {
                                                 validate={[validation.required]}
                                             />
                                         </Grid>
+
+                                        <Grid item xs={12}>
+                                            <Field
+                                                component={TextField}
+                                                disabled={this.props.submitting}
+                                                name="rek_description"
+                                                fullWidth
+                                                multiline
+                                                rows={5}
+                                                {...txt.formLabels.description}
+                                                validate={[validation.required]}
+                                                required
+                                            />
+                                        </Grid>
+
                                         <Grid item xs={12}>
                                             <Typography>{txt.formLabels.keywords.description}</Typography>
                                             <Field
                                                 component={ListEditorField}
                                                 name="fez_record_search_key_keywords"
-                                                required
                                                 maxCount={10}
                                                 validate={[validation.requiredList]}
                                                 maxInputLength={111}
                                                 searchKey={{value: 'rek_keywords', order: 'rek_keywords_order'}}
-                                                locale={locale.components.keywordsForm.field}
+                                                locale={txt.formLabels.keywords.field}
                                                 disabled={this.props.submitting}/>
                                         </Grid>
                                     </Grid>
