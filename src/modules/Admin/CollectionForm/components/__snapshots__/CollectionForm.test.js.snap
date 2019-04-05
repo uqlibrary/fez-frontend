@@ -33,7 +33,7 @@ exports[`Collection form test should display successfull submission screen 1`] =
                 disabled={false}
                 locale={
                   Object {
-                    "label": "Member of this community",
+                    "label": "Select community",
                     "placeholder": "Select a community this collection is a member of",
                   }
                 }
@@ -135,7 +135,7 @@ exports[`Collection form test should render form with only the community dropdow
                 disabled={false}
                 locale={
                   Object {
-                    "label": "Member of this community",
+                    "label": "Select community",
                     "placeholder": "Select a community this collection is a member of",
                   }
                 }
@@ -283,7 +283,7 @@ exports[`Collection form test should render the full form 1`] = `
                 disabled={false}
                 locale={
                   Object {
-                    "label": "Member of this community",
+                    "label": "Select community",
                     "placeholder": "Select a community this collection is a member of",
                   }
                 }

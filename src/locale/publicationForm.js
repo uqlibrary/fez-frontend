@@ -1559,7 +1559,7 @@ export default {
         },
         formLabels: {
             ismemberof: {
-                label: 'Member of this community',
+                label: 'Select community',
                 placeholder: 'Select a community this collection is a member of'
             },
             title: {
