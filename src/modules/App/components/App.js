@@ -327,6 +327,7 @@ export class AppClass extends PureComponent {
                     />
                     {
                         userStatusAlert && false &&
+                        /* istanbul ignore next */
                         <Grid container alignContent="center" justify="center" alignItems="center" >
                             <Grid item className={classes.layoutCard} style={{marginTop: 0, marginBottom: 0}}>
                                 <Alert {...userStatusAlert} />
