@@ -100,6 +100,12 @@ export default {
             message: 'Before you can start using UQ eSpace you have to link your UQ eSpace profile to your ORCID ID.',
             type: 'error_outline'
         },
+        incompleteNTROLure: {
+            title: 'NTRO status',
+            message: 'Some of your NTRO submissions are incomplete',
+            type: 'warning',
+            actionButtonLabel: 'Click here to view'
+        },
         discardFormChangesConfirmation: {
             confirmationTitle: 'Discard changes?',
             confirmationMessage: 'Are you sure you want to navigate away and discard all changes to the form?',

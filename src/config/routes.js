@@ -105,6 +105,11 @@ export const pathConfig = {
             // unlink: '/author-identifiers/google-scholar/link'
         }
     },
+    ntro: {
+        missingEntries: {
+            link: '' // TODO
+        }
+    },
     authorStatistics: {
         url: (id) => `https://app.library.uq.edu.au/#/authors/${id}`
     },
