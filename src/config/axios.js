@@ -10,13 +10,6 @@ import Raven from 'raven-js';
 import param from 'can-param';
 import {pathConfig} from 'config/routes';
 
-// need to generate a new token for each request otherwise if you try a new request with the old token,
-// axios will appear to cancel your request automatically
-export const generateCancelToken = () => {
-    const CancelToken = axios.CancelToken;
-    return CancelToken.source();
-};
-
 export const cache = setupCache({
     maxAge: 15 * 60 * 1000,
     key: (request) => {
@@ -46,6 +39,13 @@ export const sessionApi = axios.create({
     crossdomain: true,
 });
 
+// need to generate a new token for each request otherwise if you try a new request with the old token,
+// axios will appear to cancel your request automatically
+export const generateCancelToken = () => {
+    const CancelToken = axios.CancelToken;
+    return CancelToken.source();
+};
+
 // If there is a local cookie available, then set the api headers for x-uql-token
 if(!!Cookies.get(SESSION_COOKIE_NAME) && !!Cookies.get(SESSION_USER_GROUP_COOKIE_NAME)) {
     api.defaults.headers.common[TOKEN_NAME] = Cookies.get(SESSION_COOKIE_NAME);
@@ -59,17 +59,6 @@ if (process.env.NODE_ENV === 'development' && !!process.env.SESSION_COOKIE_NAME)
 api.isCancel = axios.isCancel; // needed for cancelling requests and the instance created does not have this method
 
 let isGet = null;
-const source = generateCancelToken();
-
-api.interceptors.request.use(config => {
-    if (config.method === 'get') {
-        // serialise the api get call with a cancelToken - and invoke it if 30s timeout happens
-        config.cancelToken = source.token;
-        setTimeout(()=> source.cancel(`(${config.url}) timed out after 30s`), 30000);
-    }
-    return config;
-});
-
 api.interceptors.request.use(request => {
     isGet = request.method === 'get';
     if (
@@ -99,48 +88,43 @@ api.interceptors.response.use(response => {
     }
     return Promise.resolve(response.data);
 }, error => {
-    if (api.isCancel(error)) {
-        console.log('API Request cancelled: ', error.message);
+    const reportHttpStatusToSentry = [422, 500];
+    if (error && error.response && error.response.status && reportHttpStatusToSentry.indexOf(error.response.status) !== -1) {
+        reportToSentry(error);
+    }
+
+    // 403 for tool api lookup is handled in actions/thirdPartyLookupTool.js
+    let errorMessage = null;
+    if (!error.config.url.includes(pathConfig.admin.thirdPartyTools.slice(1))) {
+        if (!!error.response && !!error.response.status && error.response.status === 403) {
+            if (!!Cookies.get(SESSION_COOKIE_NAME)) {
+                Cookies.remove(SESSION_COOKIE_NAME, {path: '/', domain: '.library.uq.edu.au'});
+                delete api.defaults.headers.common[TOKEN_NAME];
+            }
+
+            if (process.env.NODE_ENV === 'test') {
+                global.mockActionsStore.dispatch(logout());
+            } else {
+                store.dispatch(logout());
+            }
+        }
+
+        if (!!error.message && !!error.response && !!error.response.status && error.response.status === 500) {
+            errorMessage = ((error.response || {}).data || {}).message || locale.global.errorMessages[error.response.status];
+            if (process.env.NODE_ENV === 'test') {
+                global.mockActionsStore.dispatch(showAppAlert(error.response.data));
+            } else {
+                store.dispatch(showAppAlert(error.response.data));
+            }
+        } else if (!!error.response && !!error.response.status) {
+            errorMessage = locale.global.errorMessages[error.response.status];
+        }
+    }
+
+    if (!!errorMessage) {
+        return Promise.reject({...errorMessage});
+    } else {
         reportToSentry(error);
         return Promise.reject(error);
-    } else {
-        const reportHttpStatusToSentry = [422, 500];
-        if (error && error.response && error.response.status && reportHttpStatusToSentry.indexOf(error.response.status) !== -1) {
-            reportToSentry(error);
-        }
-
-        let errorMessage = null;
-        if (!error.config.url.includes(pathConfig.admin.thirdPartyTools.slice(1))) {
-            // 403 for tool api lookup is handled in actions/thirdPartyLookupTool.js
-            if (!!error.response && !!error.response.status && error.response.status === 403) {
-                if (!!Cookies.get(SESSION_COOKIE_NAME)) {
-                    Cookies.remove(SESSION_COOKIE_NAME, {path: '/', domain: '.library.uq.edu.au'});
-                    delete api.defaults.headers.common[TOKEN_NAME];
-                }
-
-                if (process.env.NODE_ENV === 'test') {
-                    global.mockActionsStore.dispatch(logout());
-                } else {
-                    store.dispatch(logout());
-                }
-            }
-
-            if (!!error.message && !!error.response && !!error.response.status && error.response.status === 500) {
-                errorMessage = ((error.response || {}).data || {}).message || locale.global.errorMessages[error.response.status];
-                if (process.env.NODE_ENV === 'test') {
-                    global.mockActionsStore.dispatch(showAppAlert(error.response.data));
-                } else {
-                    store.dispatch(showAppAlert(error.response.data));
-                }
-            } else if (!!error.response && !!error.response.status) {
-                errorMessage = locale.global.errorMessages[error.response.status];
-            }
-        }
-        if (!!errorMessage) {
-            return Promise.reject({...errorMessage});
-        } else {
-            reportToSentry(error);
-            return Promise.reject(error);
-        }
     }
 });
