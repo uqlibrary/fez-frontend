@@ -17,5 +17,5 @@ export topCitedPublicationsReducer from './topCitedPublications';
 export newsFeedReducer from './newsFeed';
 export collectionsReducer from './searchCollections';
 export thirdPartyLookupToolReducer from './thirdPartyLookupTool';
-export incompleteNTROReducer from './IncompleteNTRO';
+export incompleteNTROReducer from './incompleteNTRO';
 
