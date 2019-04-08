@@ -42,7 +42,8 @@ export const pathConfig = {
             find: '/records/add/find',
             results: '/records/add/results',
             new: '/records/add/new',
-        }
+        },
+        missing: '' // TODO
     },
     dataset: {
         mine: '/data-collections/mine',

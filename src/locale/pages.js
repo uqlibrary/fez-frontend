@@ -208,6 +208,12 @@ export default {
             publicationTypesCountChart: {
                 title: 'Work types overview'
             },
+            incompleteRecordLure: {
+                title: 'NTRO status',
+                message: 'You have [count] NTRO submission(s) that could be completed',
+                type: 'warning',
+                actionButtonLabel: 'Click here to view'
+            },
         },
         myResearch: {
             pageTitle: 'My research',
