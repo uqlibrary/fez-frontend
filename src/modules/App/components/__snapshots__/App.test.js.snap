@@ -262,11 +262,6 @@ exports[`Application component Should display mobile correctly 1`] = `
       alignItems="center"
       container={true}
       justify="center"
-      style={
-        Object {
-          "marginBottom": 8,
-        }
-      }
     >
       <WithStyles(Grid)
         item={true}
@@ -598,11 +593,6 @@ exports[`Application component should redirect to login page with correct return
       alignItems="center"
       container={true}
       justify="center"
-      style={
-        Object {
-          "marginBottom": 8,
-        }
-      }
     >
       <WithStyles(Grid)
         item={true}
@@ -1092,11 +1082,6 @@ exports[`Application component should render alert if user is not fez author 1`]
       alignItems="center"
       container={true}
       justify="center"
-      style={
-        Object {
-          "marginBottom": 8,
-        }
-      }
     >
       <WithStyles(Grid)
         item={true}
@@ -2226,11 +2211,6 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
       alignItems="center"
       container={true}
       justify="center"
-      style={
-        Object {
-          "marginBottom": 8,
-        }
-      }
     >
       <WithStyles(Grid)
         item={true}
@@ -3350,11 +3330,6 @@ exports[`Application component should render app for account with fez author wit
       alignItems="center"
       container={true}
       justify="center"
-      style={
-        Object {
-          "marginBottom": 8,
-        }
-      }
     >
       <WithStyles(Grid)
         item={true}
@@ -9850,7 +9825,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                               "linkAuthorOrcidId": [Function],
                                                               "loadAuthorPublicationsStats": [Function],
                                                               "loadCurrentAccount": [Function],
-                                                              "loadIncompleteNTROList": [Function],
+                                                              "loadIncompleteRecords": [Function],
                                                               "loadNewsFeed": [Function],
                                                               "loadPublicationList": [Function],
                                                               "loadRecordToFix": [Function],
@@ -14967,7 +14942,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 "linkAuthorOrcidId": [Function],
                                 "loadAuthorPublicationsStats": [Function],
                                 "loadCurrentAccount": [Function],
-                                "loadIncompleteNTROList": [Function],
+                                "loadIncompleteRecords": [Function],
                                 "loadNewsFeed": [Function],
                                 "loadPublicationList": [Function],
                                 "loadRecordToFix": [Function],
@@ -16598,7 +16573,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "linkAuthorOrcidId": [Function],
                                                                             "loadAuthorPublicationsStats": [Function],
                                                                             "loadCurrentAccount": [Function],
-                                                                            "loadIncompleteNTROList": [Function],
+                                                                            "loadIncompleteRecords": [Function],
                                                                             "loadNewsFeed": [Function],
                                                                             "loadPublicationList": [Function],
                                                                             "loadRecordToFix": [Function],
@@ -16703,7 +16678,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                               "linkAuthorOrcidId": [Function],
                                                                               "loadAuthorPublicationsStats": [Function],
                                                                               "loadCurrentAccount": [Function],
-                                                                              "loadIncompleteNTROList": [Function],
+                                                                              "loadIncompleteRecords": [Function],
                                                                               "loadNewsFeed": [Function],
                                                                               "loadPublicationList": [Function],
                                                                               "loadRecordToFix": [Function],
@@ -16815,7 +16790,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                 "linkAuthorOrcidId": [Function],
                                                                                 "loadAuthorPublicationsStats": [Function],
                                                                                 "loadCurrentAccount": [Function],
-                                                                                "loadIncompleteNTROList": [Function],
+                                                                                "loadIncompleteRecords": [Function],
                                                                                 "loadNewsFeed": [Function],
                                                                                 "loadPublicationList": [Function],
                                                                                 "loadRecordToFix": [Function],
@@ -17346,7 +17321,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                   "linkAuthorOrcidId": [Function],
                                                                                   "loadAuthorPublicationsStats": [Function],
                                                                                   "loadCurrentAccount": [Function],
-                                                                                  "loadIncompleteNTROList": [Function],
+                                                                                  "loadIncompleteRecords": [Function],
                                                                                   "loadNewsFeed": [Function],
                                                                                   "loadPublicationList": [Function],
                                                                                   "loadRecordToFix": [Function],
@@ -20741,7 +20716,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                     "linkAuthorOrcidId": [Function],
                                                                                     "loadAuthorPublicationsStats": [Function],
                                                                                     "loadCurrentAccount": [Function],
-                                                                                    "loadIncompleteNTROList": [Function],
+                                                                                    "loadIncompleteRecords": [Function],
                                                                                     "loadNewsFeed": [Function],
                                                                                     "loadPublicationList": [Function],
                                                                                     "loadRecordToFix": [Function],
@@ -20800,7 +20775,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "linkAuthorOrcidId": [Function],
                                                                                       "loadAuthorPublicationsStats": [Function],
                                                                                       "loadCurrentAccount": [Function],
-                                                                                      "loadIncompleteNTROList": [Function],
+                                                                                      "loadIncompleteRecords": [Function],
                                                                                       "loadNewsFeed": [Function],
                                                                                       "loadPublicationList": [Function],
                                                                                       "loadRecordToFix": [Function],

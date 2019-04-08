@@ -208,7 +208,7 @@ export default {
             publicationTypesCountChart: {
                 title: 'Work types overview'
             },
-            incompleteNTROLure: {
+            incompleteRecordLure: {
                 title: 'NTRO status',
                 message: 'You have [count] NTRO submission(s) that could be completed',
                 type: 'warning',

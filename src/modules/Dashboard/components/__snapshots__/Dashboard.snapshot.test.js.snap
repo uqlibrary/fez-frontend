@@ -557,7 +557,7 @@ exports[`Dashboard test Full mount for styles render 1`] = `
                     },
                   ],
                 },
-                "loadIncompleteNTROList": [MockFunction] {
+                "loadIncompleteRecords": [MockFunction] {
                   "calls": Array [
                     Array [],
                   ],
@@ -633,7 +633,7 @@ exports[`Dashboard test Full mount for styles render 1`] = `
                       },
                     ],
                   },
-                  "loadIncompleteNTROList": [MockFunction] {
+                  "loadIncompleteRecords": [MockFunction] {
                     "calls": Array [
                       Array [],
                     ],
@@ -709,7 +709,7 @@ exports[`Dashboard test Full mount for styles render 1`] = `
                         },
                       ],
                     },
-                    "loadIncompleteNTROList": [MockFunction] {
+                    "loadIncompleteRecords": [MockFunction] {
                       "calls": Array [
                         Array [],
                       ],
@@ -4865,7 +4865,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                     },
                   ],
                 },
-                "loadIncompleteNTROList": [MockFunction] {
+                "loadIncompleteRecords": [MockFunction] {
                   "calls": Array [
                     Array [],
                   ],
@@ -4881,8 +4881,8 @@ exports[`Dashboard test should get styles for full render 1`] = `
             classes={Object {}}
             hidePossiblyYourPublicationsLure={false}
             history={Object {}}
-            incompleteNTROList={Array []}
-            loadingIncompleteNTROData={false}
+            incompleteRecordList={Array []}
+            loadingIncompleteRecordData={false}
             loadingPublicationsByYear={false}
             loadingPublicationsStats={false}
             possiblyYourPublicationsCountLoading={false}

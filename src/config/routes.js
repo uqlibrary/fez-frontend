@@ -42,7 +42,8 @@ export const pathConfig = {
             find: '/records/add/find',
             results: '/records/add/results',
             new: '/records/add/new',
-        }
+        },
+        missing: '' // TODO
     },
     dataset: {
         mine: '/data-collections/mine',
@@ -103,11 +104,6 @@ export const pathConfig = {
         googleScholar: {
             link: '/author-identifiers/google-scholar/link',
             // unlink: '/author-identifiers/google-scholar/link'
-        }
-    },
-    ntro: {
-        missingEntries: {
-            link: '' // TODO
         }
     },
     authorStatistics: {

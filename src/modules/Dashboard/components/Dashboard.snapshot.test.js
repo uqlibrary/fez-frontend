@@ -21,10 +21,10 @@ function setup(testProps, isShallow = true) {
         actions: {
             countPossiblyYourPublications: jest.fn(),
             loadAuthorPublicationsStats: jest.fn(),
-            loadIncompleteNTROList: jest.fn(),
+            loadIncompleteRecords: jest.fn(),
         },
-        loadingIncompleteNTROData: false,
-        incompleteNTROList: [],
+        loadingIncompleteRecordData: false,
+        incompleteRecordList: [],
         history: {},
         ...testProps,
     };
@@ -322,7 +322,7 @@ describe('Dashboard test', () => {
             actions: {
                 countPossiblyYourPublications: jest.fn(),
                 loadAuthorPublicationsStats: jest.fn(),
-                loadIncompleteNTROList: jest.fn()
+                loadIncompleteRecords: jest.fn()
             },
             history: {},
         }, false);
@@ -331,16 +331,16 @@ describe('Dashboard test', () => {
 
     it ('displays a lure when the user has incomplete NTRO submissions', () => {
         const wrapper = setup({
-            incompleteNTROList: [1, 2],
+            incompleteRecordList: [1, 2],
             authorDetails: mock.authorDetails.uqresearcher,
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('redirectToNTROlist method', () => {
+    it('redirectToMissingRecordslist method', () => {
         const testFn = jest.fn();
         const wrapper = setup({history: {push: testFn}});
-        wrapper.instance().redirectToNTROlist();
+        wrapper.instance().redirectToMissingRecordslist();
         expect(testFn).toBeCalledWith('');
 
     });

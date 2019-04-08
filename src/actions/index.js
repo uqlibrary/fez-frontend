@@ -12,4 +12,4 @@ export * from './viewRecord';
 export * from './controlledVocabularies';
 export * from './newsFeed';
 export * from './thirdPartyLookupTool';
-export * from './incompleteNTRORecords';
+export * from './incompleteRecords';

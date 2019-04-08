@@ -203,27 +203,27 @@ export class AppClass extends PureComponent {
             return (<div/>);
         }
 
-        let userAccountStatusAlert = null;
+        let userStatusAlert = null;
         if (!this.props.accountLoading && !this.props.account && !isPublicPage) {
             // user is not logged in
-            userAccountStatusAlert = {
+            userStatusAlert = {
                 ...locale.global.loginAlert,
                 action: this.redirectUserToLogin()
             };
         } else if (!isPublicPage && !isAuthorLoading && this.props.account && !this.props.author) {
             // user is logged in, but doesn't have eSpace author identifier
-            userAccountStatusAlert = {
+            userStatusAlert = {
                 ...locale.global.notRegisteredAuthorAlert
             };
         } else if (!isPublicPage && !isAuthorLoading && isOrcidRequired && !isHdrStudent && !isThesisSubmissionPage) {
             // user is logged in, but doesn't have ORCID identifier
-            userAccountStatusAlert = {
+            userStatusAlert = {
                 ...locale.global.noOrcidAlert,
                 action: this.redirectToOrcid
             };
         } else if (!isPublicPage && !isThesisSubmissionPage && !isAuthorLoading && isOrcidRequired && isHdrStudent) {
             // user is logged in, but doesn't have ORCID identifier
-            userAccountStatusAlert = {
+            userStatusAlert = {
                 ...locale.global.forceOrcidLinkAlert
             };
         }
@@ -326,10 +326,10 @@ export class AppClass extends PureComponent {
                         locale={locale.global.sessionExpiredConfirmation}
                     />
                     {
-                        userAccountStatusAlert &&
-                        <Grid container alignContent="center" justify="center" alignItems="center"  style={{marginBottom: 8}}>
+                        userStatusAlert &&
+                        <Grid container alignContent="center" justify="center" alignItems="center">
                             <Grid item className={classes.layoutCard} style={{marginTop: 0, marginBottom: 0}}>
-                                <Alert {...userAccountStatusAlert} />
+                                <Alert {...userStatusAlert} />
                             </Grid>
                         </Grid>
                     }
