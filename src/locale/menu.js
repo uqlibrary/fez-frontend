@@ -19,6 +19,9 @@ export default {
         claimPublication: {
             primaryText: 'Claim possible work'
         },
+        incompleteRecords: {
+            primaryText: 'Fix my incomplete work'
+        },
         addMissingRecord: {
             primaryText: 'Add a missing work'
         },

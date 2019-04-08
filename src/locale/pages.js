@@ -681,6 +681,20 @@ export default {
         },
         unpublished: {
             title: 'Unpublished buffer'
-        }
+        },
+        incompletePublications: {
+            pageTitle: 'Incomplete records',
+            recordCount: 'Displaying incomplete records [recordsFrom] to [recordsTo] of [recordsTotal] total records. ',
+            loadingMessage: 'Searching for incomplete works',
+            noResultsFound: {
+                title: 'No incomplete works found',
+                text: (
+                    <div>
+                        <p>No incomplete works were found for you to rectify.</p>
+                    </div>
+                ),
+            },
+            facetsFilter: {...locale.components.facetsFilter}
+        },
     }
 };

@@ -34,6 +34,7 @@ export const pathConfig = {
     records: {
         mine: '/records/mine',
         possible: '/records/possible',
+        incomplete: '/records/incomplete',
         claim: '/records/claim',
         search: '/records/search',
         view: (pid, includeFullPath = false) => (`${includeFullPath ? fullPath : ''}/view/${pid}`),
@@ -113,7 +114,7 @@ export const pathConfig = {
 
 // a duplicate list of routes for
 const flattedPathConfig = ['/', '/dashboard', '/contact', '/rhdsubmission', '/sbslodge_new', '/records/search',
-    '/records/mine', '/records/possible', '/records/claim', '/records/add/find', '/records/add/results', '/records/add/new',
+    '/records/mine', '/records/possible', '/records/incomplete', '/records/claim', '/records/add/find', '/records/add/results', '/records/add/new',
     '/admin/masquerade', '/admin/unpublished', '/admin/thirdPartyTools', '/author-identifiers/orcid/link', '/author-identifiers/google-scholar/link'
 ];
 
@@ -235,6 +236,13 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
                 access: [roles.researcher, roles.admin],
                 exact: true,
                 pageTitle: locale.pages.claimPublications.title
+            },
+            {
+                path: pathConfig.records.incomplete,
+                component: components.MyIncompleteRecords,
+                access: [roles.researcher, roles.admin],
+                exact: true,
+                pageTitle: locale.pages.incompletePublications.title
             },
             {
                 path: pathConfig.records.claim,
@@ -385,6 +393,10 @@ export const getMenuConfig = (account, disabled) => {
             {
                 linkTo: pathConfig.records.possible,
                 ...locale.menu.claimPublication
+            },
+            {
+                linkTo: pathConfig.records.incomplete,
+                ...locale.menu.incompleteRecords
             },
             {
                 linkTo: pathConfig.records.add.find,

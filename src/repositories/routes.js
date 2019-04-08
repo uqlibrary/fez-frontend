@@ -157,6 +157,18 @@ export const CURRENT_USER_RECORDS_API = (values, route = 'search') => (
         }
     }
 );
+
+export const CURRENT_USER_INCOMPLETE_RECORDS_API = (values, route = 'search') => (
+    {
+        apiUrl: `records/${route}`,
+        options: {
+            params: {
+                rule: 'mine',
+                ...{...getStandardSearchParams(values), ...getOpenAccessSearchParams(values)}
+            }
+        }
+    }
+);
 export const AUTHOR_PUBLICATIONS_STATS_ONLY_API = (values) => (
     {
         apiUrl: 'records/search',
