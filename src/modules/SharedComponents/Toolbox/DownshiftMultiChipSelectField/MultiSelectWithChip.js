@@ -1,6 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import deburr from 'lodash/deburr';
+import keycode from 'keycode';
+import Downshift from 'downshift';
+import { withStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Paper from '@material-ui/core/Paper';
 import MenuItem from '@material-ui/core/MenuItem';
@@ -10,7 +13,8 @@ import Close from '@material-ui/icons/Close';
 import Grid from '@material-ui/core/Grid';
 import Tooltip from '@material-ui/core/Tooltip';
 
-export const renderInput = ({ InputProps, classes, ref, ...other }) => {
+function renderInput(inputProps) {
+    const { InputProps, classes, ref, ...other } = inputProps;
     return (
         <TextField
             InputProps={{
@@ -24,44 +28,11 @@ export const renderInput = ({ InputProps, classes, ref, ...other }) => {
             {...other}
         />
     );
-};
+}
 
-renderInput.propTypes = {
-    InputProps: PropTypes.object,
-    classes: PropTypes.object,
-    ref: PropTypes.object,
-};
-
-export const getSuggestions = (value, suggestions) => {
-    const inputValue = deburr(value.trim()).toLowerCase();
-    const inputLength = inputValue.length;
-    let count = 0;
-
-    return inputLength === 0
-        ? []
-        : suggestions.filter(suggestion => {
-            const keep =
-                count < 5 && suggestion.label
-                    .slice(0, inputLength)
-                    .toLowerCase() === inputValue;
-
-            if (keep) {
-                count += 1;
-            }
-
-            return keep;
-        });
-};
-
-export const renderSuggestion = ({
-    suggestion,
-    index,
-    itemProps,
-    highlightedIndex,
-    selectedItems
-}) => {
+function renderSuggestion({ suggestion, index, itemProps, highlightedIndex, selectedItem }) {
     const isHighlighted = highlightedIndex === index;
-    const isSelected = (selectedItems || []).indexOf(suggestion.label) > -1;
+    const isSelected = (selectedItem || '').indexOf(suggestion.label) > -1;
 
     return (
         <MenuItem
@@ -76,147 +47,215 @@ export const renderSuggestion = ({
             {suggestion.label}
         </MenuItem>
     );
-};
-
+}
 renderSuggestion.propTypes = {
     highlightedIndex: PropTypes.number,
     index: PropTypes.number,
     itemProps: PropTypes.object,
-    selectedItems: PropTypes.array,
+    selectedItem: PropTypes.string,
     suggestion: PropTypes.shape({ label: PropTypes.string }).isRequired,
 };
 
-export const renderSuggestions = ({
-    inputValue,
-    optionsList,
-    getItemProps,
-    highlightedIndex,
-    selectedItems
-}) =>  {
-    const suggestions = getSuggestions(inputValue, optionsList);
-    return suggestions.map((suggestion, index) =>
-        renderSuggestion({
-            highlightedIndex,
-            index,
-            itemProps: getItemProps({ item: suggestion.label }),
-            selectedItems,
-            suggestion,
-        })
-    );
-};
+function getSuggestions(value, suggestions) {
+    const inputValue = deburr(value.trim()).toLowerCase();
+    const inputLength = inputValue.length;
+    let count = 0;
 
-renderSuggestions.propTypes = {
-    inputValue: PropTypes.string,
-    optionsList: PropTypes.array,
-    getItemProps: PropTypes.func,
-    highlightedIndex: PropTypes.number,
-    selectedItems: PropTypes.array,
-};
+    return inputLength === 0
+        ? []
+        : suggestions.filter(suggestion => {
+            const keep =
+                count < 5 && suggestion.label.slice(0, inputLength).toLowerCase() === inputValue;
 
-export const getAdornment = ({ classes, handleDelete, selectedItems }) => {
-    return selectedItems && selectedItems.map(item => (
-        <Chip
-            key={item}
-            tabIndex={-1}
-            label={item}
-            className={classes.chip}
-            onDelete={handleDelete(item)}
-        />
-    ));
-};
+            if (keep) {
+                count += 1;
+            }
 
-getAdornment.propTypes = {
-    selectedItems: PropTypes.array,
-    classes: PropTypes.object,
-    handleDelete: PropTypes.func
-};
+            return keep;
+        });
+}
 
-export class MultiSelectWithChip extends React.Component {
-    static propTypes = {
-        classes: PropTypes.object,
-        getInputProps: PropTypes.func,
-        getItemProps: PropTypes.func,
-        handleClearAll: PropTypes.func,
-        handleDelete: PropTypes.func,
-        handleInputChange: PropTypes.func,
-        handleKeyDown: PropTypes.func,
-        highlightedIndex: PropTypes.number,
-        inputValue: PropTypes.string,
-        isOpen: PropTypes.bool,
-        label: PropTypes.string,
-        optionsList: PropTypes.array,
-        placeholder: PropTypes.string,
-        selectedItems: PropTypes.array,
+class DownshiftMultiple extends React.Component {
+    state = {
+        inputValue: '',
+        selectedItem: this.props.initialValue || [],
+    };
+
+    handleKeyDown = event => {
+        const { inputValue, selectedItem } = this.state;
+        if (selectedItem.length && !inputValue.length && keycode(event) === 'backspace') {
+            this.setState({
+                selectedItem: selectedItem.slice(0, selectedItem.length - 1),
+            });
+        }
+    };
+
+    handleInputChange = event => {
+        this.setState(
+            { inputValue: event.target.value }, () => {
+                this.props.onChange(this.state.selectedItem);
+            });
+    };
+
+    handleChange = item => {
+        let { selectedItem } = this.state;
+        if (selectedItem.indexOf(item) === -1) {
+            selectedItem = [...selectedItem, item];
+        }
+        this.setState({
+            inputValue: '',
+            selectedItem,
+        }, () => {
+            this.props.onChange(this.state.selectedItem);
+        });
+    };
+
+    handleDelete = item => () => {
+        this.setState(state => {
+            const selectedItem = [...state.selectedItem];
+            selectedItem.splice(selectedItem.indexOf(item), 1);
+            return { selectedItem };
+        }, () => {
+            this.props.onChange(this.state.selectedItem);
+        });
+    };
+
+    handleClearAll = () => {
+        this.setState(
+            { selectedItem: [] }, () => {
+                this.props.onChange([]);
+            });
+    };
+
+    sendData = value => {
+        if(value) {
+            this.props.onChange(value);
+        }
     };
 
     render() {
-        const {
-            classes,
-            getInputProps,
-            getItemProps,
-            handleClearAll,
-            handleDelete,
-            handleInputChange,
-            handleKeyDown,
-            highlightedIndex,
-            inputValue,
-            isOpen,
-            label,
-            optionsList,
-            placeholder,
-            selectedItems,
-        } = this.props;
+        const { classes, label, placeholder, optionsList } = this.props;
+        const { inputValue, selectedItem } = this.state;
         return (
-            <div className={classes.container}>
-                <Grid container alignContent={'flex-end'} alignItems={'flex-end'}>
-                    <Grid item xs>
-                        {renderInput({
-                            fullWidth: true,
-                            classes,
-                            InputProps: getInputProps({
-                                startAdornment: getAdornment({
+            <Downshift
+                id="downshift-multiple"
+                inputValue={inputValue}
+                onChange={this.handleChange}
+                selectedItem={selectedItem}
+                itemToString={() => ''}
+            >
+                {({
+                    getInputProps,
+                    getItemProps,
+                    isOpen,
+                    inputValue: inputValue2,
+                    selectedItem: selectedItem2,
+                    highlightedIndex,
+                }) => (
+                    <div className={classes.container}>
+                        <Grid container alignContent={'flex-end'} alignItems={'flex-end'}>
+                            <Grid item xs>
+                                {renderInput({
+                                    fullWidth: true,
                                     classes,
-                                    handleDelete,
-                                    selectedItems
-                                }),
-                                onChange: handleInputChange,
-                                onKeyDown: handleKeyDown,
-                                placeholder: placeholder,
-                            }),
-                            label: label,
-                        })}
-                    </Grid>
-                    {
-                        (selectedItems || []).length > 0 &&
-                        <Grid item xs={'auto'}>
-                            <Tooltip title={'Clear all selections'}>
-                                <IconButton
-                                    color="secondary"
-                                    component="span"
-                                    className={classes.clearAll}
-                                    onClick={handleClearAll}
-                                >
-                                    <Close/>
-                                </IconButton>
-                            </Tooltip>
+                                    InputProps: getInputProps({
+                                        startAdornment: selectedItem.map(item => (
+                                            <Chip
+                                                key={item}
+                                                tabIndex={-1}
+                                                label={item}
+                                                className={classes.chip}
+                                                onDelete={this.handleDelete(item)}
+                                            />
+                                        )),
+                                        onChange: this.handleInputChange,
+                                        onKeyDown: this.handleKeyDown,
+                                        placeholder: placeholder,
+                                    }),
+                                    label: label,
+                                })}
+                            </Grid>
+                            {
+                                this.state.selectedItem.length > 0 &&
+                                <Grid item xs={'auto'}>
+                                    <Tooltip title={'Clear all selections'}>
+                                        <IconButton color="secondary" component="span" className={classes.clearAll} onClick={this.handleClearAll}>
+                                            <Close/>
+                                        </IconButton>
+                                    </Tooltip>
+                                </Grid>
+                            }
+                            {isOpen ? (
+                                <Paper className={classes.paper} square>
+                                    {getSuggestions(inputValue2, optionsList).map((suggestion, index) =>
+                                        renderSuggestion({
+                                            suggestion,
+                                            index,
+                                            itemProps: getItemProps({ item: suggestion.label }),
+                                            highlightedIndex,
+                                            selectedItem: selectedItem2,
+                                        }),
+                                    )}
+                                </Paper>
+                            ) : null}
                         </Grid>
-                    }
-                    {isOpen ? (
-                        <Paper className={classes.paper} square>
-                            {renderSuggestions({
-                                inputValue,
-                                optionsList,
-                                getItemProps,
-                                highlightedIndex,
-                                selectedItems
-                            })}
-                        </Paper>
-                    ) : null}
-                </Grid>
-            </div>
+                    </div>
+                )}
+            </Downshift>
         );
     }
 }
 
-export default MultiSelectWithChip;
+DownshiftMultiple.propTypes = {
+    classes: PropTypes.object.isRequired,
+    optionsList: PropTypes.array.isRequired,
+    placeholder: PropTypes.string,
+    onChange: PropTypes.func,
+    name: PropTypes.string,
+    label: PropTypes.string,
+    initialValue: PropTypes.any
+};
 
+const styles = theme => ({
+    root: {
+        flexGrow: 1,
+        height: 250,
+    },
+    container: {
+        flexGrow: 1,
+        position: 'relative',
+    },
+    paper: {
+        position: 'absolute',
+        zIndex: 1,
+        marginTop: theme.spacing.unit,
+        left: 0,
+        right: 0,
+    },
+    chip: {
+        margin: `${theme.spacing.unit / 2}px ${theme.spacing.unit / 4}px`,
+    },
+    inputRoot: {
+        flexWrap: 'wrap',
+    },
+    inputInput: {
+        width: 'auto',
+        flexGrow: 1,
+        overflow: 'hidden',
+        textOverflow: 'ellipsis'
+    },
+    divider: {
+        height: theme.spacing.unit * 2,
+    },
+    clearAll: {
+        marginBottom: -12,
+        marginTop: 12,
+        marginRight: -12,
+        opacity: 0.66,
+        '&:hover': {
+            opacity: 1
+        }
+    }
+});
+
+export default withStyles(styles)(DownshiftMultiple);

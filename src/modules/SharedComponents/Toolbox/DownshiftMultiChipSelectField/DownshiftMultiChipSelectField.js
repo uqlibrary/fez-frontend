@@ -1,9 +1,9 @@
 import React from 'react';
-import DownshiftMultiple from './DownshiftMultiple';
+import MultiSelectWithChip from './MultiSelectWithChip';
 
 export default function DownshiftMultiChipSelectField(fieldProps) {
     return (
-        <DownshiftMultiple
+        <MultiSelectWithChip
             onChange={fieldProps.input.onChange}
             { ...fieldProps }
         />
