@@ -27,14 +27,29 @@ UQ's branding for Fez is UQ eSpace.
 
 This project is using `npm` for dependency management.  Make sure `npm` is installed on your machine.
 
-- `npm install`
-- `npm run start` - The website is now running on `http://localhost:3000/` on dev api (requires additional setup of uqlibrary/api project)
-- `npm run start:mock` - The website is now running on `http://localhost:3000/` on mock data
-- `npm run start:url` - The website is now running on `http://dev-espace.library.uq.edu.au:3000` using staging as a backend (add `dev-espace.library.uq.edu.au` to your /etc/hosts)
-- for Hot Reloading to work in IntelliJ products, turn "safe write" off in the settings
-- to specify a session token use SESSION_COOKIE_NAME env var .ie SESSION_COOKIE_NAME='mysessiontoken' npm run start:url (you may need to block CORS errors - eg with Moesif Origin & CORS Changer Chrome Extension)
-- `npm run start:build` will run production build version on `http://dev-espace.library.uq.edu.au:9000/` and `http://localhost:9000`
-- `npm run start:build:e2e` will run production build version on `http://localhost:9000` with mock data (async loading is not working since chuncks are not saved, navigate directly to required routes)
+- `npm install` - initial setup
+- `npm ci` - when weird errors happen your local npm probably doesnt match the latest project requirements, this clears & reinstalls npm packages
+- `npm run start`
+    - runs `http://localhost:3000/`
+    - uses dev api for backend (<http://dev-api.library.uq.edu.au:8050/>) (requires additional setup of uqlibrary/api project)
+- `npm run start:mock`
+    - runs `http://localhost:3000/`
+    - uses mock data from src/mock
+- `npm run start:url`
+    - runs `http://dev-espace.library.uq.edu.au:3000/` (add `dev-espace.library.uq.edu.au` to your /etc/hosts)
+    - uses staging data from the aws api (ie <https://api.library.uq.edu.au/staging/>) as a backend
+    - to use logged in: `SESSION_COOKIE_NAME='mysessiontoken' npm run start:url`
+        - ie specify a session token using SESSION_COOKIE_NAME environment variable
+        - you may need to block CORS errors - eg with Moesif Origin & CORS Changer Chrome Extension
+        - session token x-uql-token can easily be found by logging in at <https://www.library.uq.edu.au/> and observing the header value in Network tab of Inspections
+    - for Hot Reloading to work in IntelliJ products, turn "safe write" off in the settings
+- `npm run start:build`
+    - runs production build version on `http://dev-espace.library.uq.edu.au:9000/` and `http://localhost:9000/`
+    - uses PRODUCTION DATA from the aws api (ie <https://api.library.uq.edu.au/v1/>) as a backend!! Careful!!
+- `npm run start:build:e2e`
+    - runs production build version on `http://localhost:9000/`
+    - uses mock data from src/mock
+    - async loading is not working since chuncks are not saved, navigate directly to required routes
 
 Mock data is provided for all pages and actions under `src/mock/`.
 

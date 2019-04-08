@@ -155,10 +155,6 @@ export class AppClass extends PureComponent {
         }
     };
 
-    redirectToNTROlist = () => {
-        this.props.history.push(routes.pathConfig.ntro.missingEntries.link);
-    };
-
     isPublicPage = (menuItems) => (
         menuItems
             .filter(menuItem => this.props.location.pathname === menuItem.linkTo && menuItem.public)
@@ -192,8 +188,6 @@ export class AppClass extends PureComponent {
         const isHdrStudent = !isAuthorLoading && !!this.props.account && !!this.props.author
             && this.props.account.class.indexOf('IS_CURRENT') >= 0
             && this.props.account.class.indexOf('IS_UQ_STUDENT_PLACEMENT') >= 0;
-        const areNTROComplete = false;
-        // do we need to add something here for 'only on the dashbopard page?'
 
         const menuItems = routes.getMenuConfig(this.props.account, isOrcidRequired && isHdrStudent);
         const isPublicPage = this.isPublicPage(menuItems);
@@ -231,13 +225,6 @@ export class AppClass extends PureComponent {
             // user is logged in, but doesn't have ORCID identifier
             userAccountStatusAlert = {
                 ...locale.global.forceOrcidLinkAlert
-            };
-        }
-        let userNTROStatusAlert = null;
-        if (!isPublicPage && !isThesisSubmissionPage && !isAuthorLoading && !areNTROComplete) {
-            userNTROStatusAlert = {
-                ...locale.global.incompleteNTROLure,
-                action: this.redirectToNTROlist
             };
         }
         const routesConfig = routes.getRoutesConfig({
@@ -343,14 +330,6 @@ export class AppClass extends PureComponent {
                         <Grid container alignContent="center" justify="center" alignItems="center"  style={{marginBottom: 8}}>
                             <Grid item className={classes.layoutCard} style={{marginTop: 0, marginBottom: 0}}>
                                 <Alert {...userAccountStatusAlert} />
-                            </Grid>
-                        </Grid>
-                    }
-                    {
-                        userNTROStatusAlert &&
-                        <Grid container alignContent="center" justify="center" alignItems="center" >
-                            <Grid item className={classes.layoutCard} style={{marginTop: 0, marginBottom: 0}}>
-                                <Alert {...userNTROStatusAlert} />
                             </Grid>
                         </Grid>
                     }

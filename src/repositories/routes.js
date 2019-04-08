@@ -251,3 +251,14 @@ export const THIRD_PARTY_LOOKUP_API_1FIELD = ({type, field1}) => (
 export const THIRD_PARTY_LOOKUP_API_2FIELD = ({type, field1, field2}) => (
     {apiUrl: `tool/lookup/${type}/${field1}/${field2}`}
 );
+
+export const INCOMPLETE_NTRO_API = () => {
+    return {
+        apiUrl: 'records/search',
+        options: {
+            params: {
+                rule: 'incomplete'
+            }
+        }
+    };
+};

@@ -61,6 +61,10 @@ export class DashboardClass extends PureComponent {
         possiblyYourPublicationsCountLoading: PropTypes.bool,
         hidePossiblyYourPublicationsLure: PropTypes.bool,
 
+        // NTRO lure
+        loadingIncompleteNTROData: PropTypes.bool,
+        incompleteNTROList: PropTypes.array,
+
         // wos/scopus data
         loadingPublicationsStats: PropTypes.bool,
         publicationsStats: PropTypes.object,
@@ -86,8 +90,10 @@ export class DashboardClass extends PureComponent {
         if (this.props.account && this.props.account.id) {
             this.props.actions.countPossiblyYourPublications(this.props.account.id);
             this.props.actions.loadAuthorPublicationsStats(this.props.account.id);
+            this.props.actions.loadIncompleteNTROList();
         }
     }
+
     _claimYourPublications = () => {
         this.props.history.push(pathConfig.records.possible);
     };
@@ -98,6 +104,10 @@ export class DashboardClass extends PureComponent {
     handleTabChange = (event, value) => {
         this.setState({
             dashboardPubsTabs: value});
+    };
+
+    redirectToNTROlist = () => {
+        this.props.history.push(pathConfig.ntro.missingEntries.link);
     };
 
     render() {
@@ -156,6 +166,21 @@ export class DashboardClass extends PureComponent {
                     {
                         !loading && this.props.authorDetails &&
                         <React.Fragment>
+                            {
+                                !!txt.incompleteNTROLure &&
+                                !this.props.loadingIncompleteNTROData &&
+                                !!this.props.incompleteNTROList && this.props.incompleteNTROList.length > 0 &&
+                                <Grid item xs={12} style={{marginTop: -27}}>
+                                    <Alert
+                                        title={txt.incompleteNTROLure.title}
+                                        message={txt.incompleteNTROLure.message.replace('[count]', this.props.incompleteNTROList.length)}
+                                        // message={txt.incompleteNTROLure.message}
+                                        type={txt.incompleteNTROLure.type}
+                                        actionButtonLabel={txt.incompleteNTROLure.actionButtonLabel}
+                                        action={this.redirectToNTROlist}
+                                    />
+                                </Grid>
+                            }
                             <Grid item xs={12}>
                                 <DashboardAuthorProfile
                                     authorDetails={this.props.authorDetails}
