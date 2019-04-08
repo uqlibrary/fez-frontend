@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DownshiftMultiple component should render properly 1`] = `
+<Downshift
+  defaultHighlightedIndex={null}
+  defaultInputValue=""
+  defaultIsOpen={false}
+  defaultSelectedItem={null}
+  environment={[Window]}
+  getA11yStatusMessage={[Function]}
+  id="downshift-multiple"
+  inputValue=""
+  itemToString={[Function]}
+  onChange={[Function]}
+  onInputValueChange={[Function]}
+  onOuterClick={[Function]}
+  onSelect={[Function]}
+  onStateChange={[Function]}
+  onUserAction={[Function]}
+  scrollIntoView={[Function]}
+  selectedItemChanged={[Function]}
+  selectedItems={Array []}
+  stateReducer={[Function]}
+  suppressRefError={false}
+>
+  <Component />
+</Downshift>
+`;
+
+exports[`styles helper should return styles object as expected 1`] = `
+Object {
+  "chip": Object {
+    "margin": "2px 1px",
+  },
+  "clearAll": Object {
+    "&:hover": Object {
+      "opacity": 1,
+    },
+    "marginBottom": -12,
+    "marginRight": -12,
+    "marginTop": 12,
+    "opacity": 0.66,
+  },
+  "container": Object {
+    "flexGrow": 1,
+    "position": "relative",
+  },
+  "divider": Object {
+    "height": 8,
+  },
+  "inputInput": Object {
+    "flexGrow": 1,
+    "overflow": "hidden",
+    "textOverflow": "ellipsis",
+    "width": "auto",
+  },
+  "inputRoot": Object {
+    "flexWrap": "wrap",
+  },
+  "paper": Object {
+    "left": 0,
+    "marginTop": 4,
+    "position": "absolute",
+    "right": 0,
+    "zIndex": 1,
+  },
+  "root": Object {
+    "flexGrow": 1,
+    "height": 250,
+  },
+}
+`;
