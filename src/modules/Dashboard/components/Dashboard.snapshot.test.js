@@ -20,8 +20,11 @@ function setup(testProps, isShallow = true) {
         possiblyYourPublicationsCountLoading: false,
         actions: {
             countPossiblyYourPublications: jest.fn(),
-            loadAuthorPublicationsStats: jest.fn()
+            loadAuthorPublicationsStats: jest.fn(),
+            loadIncompleteNTROList: jest.fn(),
         },
+        loadingIncompleteNTROData: false,
+        incompleteNTROList: [],
         history: {},
         ...testProps,
     };
@@ -318,11 +321,28 @@ describe('Dashboard test', () => {
             possiblyYourPublicationsCountLoading: false,
             actions: {
                 countPossiblyYourPublications: jest.fn(),
-                loadAuthorPublicationsStats: jest.fn()
+                loadAuthorPublicationsStats: jest.fn(),
+                loadIncompleteNTROList: jest.fn()
             },
             history: {},
         }, false);
         expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it ('displays a lure when the user has incomplete NTRO submissions', () => {
+        const wrapper = setup({
+            incompleteNTROList: [1, 2],
+            authorDetails: mock.authorDetails.uqresearcher,
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('redirectToNTROlist method', () => {
+        const testFn = jest.fn();
+        const wrapper = setup({history: {push: testFn}});
+        wrapper.instance().redirectToNTROlist();
+        expect(testFn).toBeCalledWith('');
+
     });
 
 });
