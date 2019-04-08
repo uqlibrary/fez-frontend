@@ -1627,12 +1627,12 @@ export default {
         },
         formLabels: {
             title: {
-                label: 'Title of collection',
-                placeholder: 'Type a title for this collection'
+                label: 'Title of community',
+                placeholder: 'Type a title for this community'
             },
             description: {
-                label: 'Collection description',
-                placeholder: 'Type a description of this collection.'
+                label: 'Community description',
+                placeholder: 'Type a description of this community.'
             },
             keywords: {
                 description: 'Add up to 10 individual keywords, or a comma separated list, that describe the content of the community.',
