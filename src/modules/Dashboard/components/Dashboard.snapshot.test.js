@@ -341,7 +341,7 @@ describe('Dashboard test', () => {
         const testFn = jest.fn();
         const wrapper = setup({history: {push: testFn}});
         wrapper.instance().redirectToMissingRecordslist();
-        expect(testFn).toBeCalledWith('');
+        expect(testFn).toBeCalledWith('/records/incomplete');
 
     });
 

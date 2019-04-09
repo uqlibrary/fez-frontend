@@ -43,7 +43,7 @@ export const pathConfig = {
             results: '/records/add/results',
             new: '/records/add/new',
         },
-        missing: '' // TODO
+        incomplete: '/records/incomplete'
     },
     dataset: {
         mine: '/data-collections/mine',

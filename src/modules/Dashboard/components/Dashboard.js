@@ -107,7 +107,7 @@ export class DashboardClass extends PureComponent {
     };
 
     redirectToMissingRecordslist = () => {
-        this.props.history.push(pathConfig.records.missing);
+        this.props.history.push(pathConfig.records.incomplete);
     };
 
     render() {
