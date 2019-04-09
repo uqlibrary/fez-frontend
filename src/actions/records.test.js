@@ -2,6 +2,11 @@ import * as actions from './actionTypes';
 import * as repositories from 'repositories';
 import * as recordActions from './records';
 import {record} from "mock/data";
+import {
+    RECORD_TYPE_COMMUNITY,
+    RECORD_TYPE_COLLECTION,
+    RECORD_TYPE_RECORD,
+} from 'config/general';
 
 describe('Record action creators', () => {
     // extend expect to check actions
@@ -1072,16 +1077,15 @@ describe('Record action creators', () => {
         });
     });
 
-    /*
-    describe('updateCommunitySecurity()', () => {
+    describe('updateSecurity()', () => {
+        const testInput = {
+            pid: 'UQ:396321'
+        };
         it('dispatches expected actions on successful update', async () => {
-            const testInput = {
-                pid: 'UQ:396321',
-                communitySecurity: 2
-            };
+            const url = repositories.routes.COMMUNITIES_SECURITY_POLICY_API(testInput).apiUrl;
 
             mockApi
-                .onPatch(repositories.routes.COMMUNITIES_SECURITY_POLICY_API(testInput).apiUrl)
+                .onPatch(url)
                 .reply(200, {data: record});
 
             const expectedActions = [
@@ -1089,18 +1093,19 @@ describe('Record action creators', () => {
                 actions.SECURITY_POLICY_SAVED
             ];
 
-            await mockActionsStore.dispatch(recordActions.updateCommunitySecurity(testInput));
+            await mockActionsStore.dispatch(recordActions.updateSecurity(
+                testInput.pid,
+                RECORD_TYPE_COMMUNITY,
+                2,
+            ));
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
 
         });
 
         it('dispatches expected actions on missing data in response', async () => {
-            const testInput = {
-                pid: 'UQ:123456'
-            };
-
+            const url = repositories.routes.COLLECTIONS_SECURITY_POLICY_API(testInput).apiUrl;
             mockApi
-                .onPatch(repositories.routes.COMMUNITIES_SECURITY_POLICY_API(testInput).apiUrl)
+                .onPatch(url)
                 .reply(200, {});
 
             const expectedActions = [
@@ -1108,15 +1113,13 @@ describe('Record action creators', () => {
                 actions.SECURITY_POLICY_SAVED
             ];
 
-            await mockActionsStore.dispatch(recordActions.updateCommunitySecurity(testInput));
+            await mockActionsStore.dispatch(recordActions.updateSecurity(testInput.pid, RECORD_TYPE_COLLECTION, 2));
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
-        it('dispatches expected actions on missing request data', async () => {
-            const testInput = {};
-
+        it('dispatches expected actions on network failure', async () => {
             mockApi
-                .onPatch(repositories.routes.COMMUNITIES_SECURITY_POLICY_API(testInput).apiUrl)
+                .onAny()
                 .reply(500);
 
             const expectedActions = [
@@ -1127,7 +1130,7 @@ describe('Record action creators', () => {
 
             let requestFailed = false;
             try {
-                await mockActionsStore.dispatch(recordActions.updateCommunitySecurity(testInput));
+                await mockActionsStore.dispatch(recordActions.updateSecurity(testInput.pid, RECORD_TYPE_RECORD));
             } catch(exception) {
                 expect(exception.status).toBe(500);
                 expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
@@ -1135,6 +1138,6 @@ describe('Record action creators', () => {
             }
             expect(requestFailed).toBe(true);
         });
+
     });
-    */
 });

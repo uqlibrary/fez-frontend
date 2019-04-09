@@ -3,21 +3,26 @@ import {
     isFileValid,
     SecuritySelector,
     OverriddenSecuritySelector,
-    DataStreamSecuritySelector
+    DataStreamSecuritySelector,
+    styles
 } from './SecurityCard';
 import { RECORD_TYPE_RECORD } from 'config/general';
 import { communityRecord, collectionRecord, recordWithDatastreams } from 'mock/data/records';
 
 function setup(testProps, isShallow = true) {
     const props = {
+        classes: {},
         disabled: false,
         selectedPolicyKey: 1,
         text: {
             description: 'test1',
-            prompt: 'test2'
+            prompt: 'test2',
+            dataStream: {
+                overridePrompt: 'test3'
+            }
         },
         record: {
-            rek_pid: 'test3',
+            rek_pid: 'test4',
             rek_object_type_lookup: 'Community'
         },
         ...testProps
@@ -128,13 +133,26 @@ describe('DataStreamSecuritySelector component', () => {
         const test = getElement(
             DataStreamSecuritySelector,
             {
-                disabled: false,
                 text: {
-                    prompt: 'test',
-                }
+                    prompt: 'test1',
+                },
+                disabled: false,
+                dsi: {
+                    dsi_dsid: 'test2',
+                    fieldName: 'test3',
+                },
+                classes: {
+                    dataStreamFileBlock: 'test4',
+                },
             },
             true
         );
         expect(toJson(test)).toMatchSnapshot();
+    });
+});
+
+describe('styles helper', () => {
+    it('should return style object as expected', () => {
+        expect(styles()).toMatchSnapshot();
     });
 });

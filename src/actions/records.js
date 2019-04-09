@@ -8,6 +8,10 @@ import {
     RECORDS_SECURITY_POLICY_API,
     // DATASTREAMS_SECURITY_POLICY_API
 } from 'repositories/routes';
+import {
+    RECORD_TYPE_COLLECTION,
+    RECORD_TYPE_COMMUNITY
+} from 'config/general';
 import {putUploadFiles} from 'repositories';
 import * as transformers from './transformers';
 import {NEW_RECORD_DEFAULT_VALUES} from 'config/general';
@@ -279,12 +283,12 @@ export function clearNewRecord() {
 
 export const getSecurityUpdateRoute = (pid, recordType) => {
     switch (recordType) {
-        case 'Community':
-            return COMMUNITIES_SECURITY_POLICY_API({pid: pid});
-        case 'Collection':
-            return COLLECTIONS_SECURITY_POLICY_API({pid: pid});
+        case RECORD_TYPE_COMMUNITY:
+            return COMMUNITIES_SECURITY_POLICY_API({pid});
+        case RECORD_TYPE_COLLECTION:
+            return COLLECTIONS_SECURITY_POLICY_API({pid});
         default:
-            return RECORDS_SECURITY_POLICY_API({pid: pid});
+            return RECORDS_SECURITY_POLICY_API({pid});
     }
 };
 
