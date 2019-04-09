@@ -1446,6 +1446,10 @@ export default {
                 selectedTitle: 'Selected record level security policy details',
                 dataStreamSelectedTitle: 'Selected record level datastream security policy details',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id aliquam sapien. Aliquam rhoncus congue consectetur. Aenean sed sapien ipsum.',
+                dataStream: {
+                    overridePrompt: 'Override datastream security policy details',
+                    overridePolicyPrompt: 'Security policy for this file to override inheritance'
+                },
             },
             submit: 'Submit'
         }

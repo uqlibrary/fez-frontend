@@ -26,7 +26,12 @@ export const PolicyDropdown = ({ fieldName, disabled, fieldLabel, displayPrompt,
         }
         {
             policyList.map((policy, index) => (
-                <MenuItem key={index} value={policy.value}>{policy.label}</MenuItem>
+                <MenuItem
+                    key={index}
+                    value={policy.value}
+                >
+                    {policy.label}
+                </MenuItem>
             ))
         }
     </Field>
@@ -41,7 +46,7 @@ PolicyDropdown.propTypes = {
     ]),
     displayPrompt: PropTypes.bool,
     policyList: PropTypes.array,
-    prompt: PropTypes.string
+    prompt: PropTypes.string,
 };
 
 PolicyDropdown.defaultProps = {

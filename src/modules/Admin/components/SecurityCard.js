@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import { Field } from 'redux-form/lib/immutable';
 
 import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
+import { Typography, Link } from '@material-ui/core';
+import { withStyles } from '@material-ui/core/styles';
 
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 
@@ -22,6 +23,23 @@ export const isFileValid = (dataStream) => {
         dataStream.dsi_state === 'A';
 };
 
+export const styles = () => ({
+    dataStreamSecurity: {
+        marginTop: 24,
+        padding: '24px !important',
+        backgroundColor: 'rgba(0,0,0,0.05)',
+    },
+    dataStreamFileBlock: {
+        borderBottom: '1px solid rgba(0,0,0,0.1)',
+        paddingBottom: 8,
+        paddingTop: 8,
+    },
+    dataStreamFileName: {
+        overflow: 'hidden',
+        textOverflow: 'ellipsis',
+    },
+});
+
 const RecordContextWrapper =  /* istanbul ignore next */ (props) => (
     <RecordContextConsumer>
         {({ record }) => (
@@ -38,11 +56,15 @@ const FormContextWrapper =  /* istanbul ignore next */ (props) => (
                 isSecurityInheritedChecked: formValues.get('rek_security_inherited') !== 0,
                 securityPolicy: formValues.get('rek_security_policy'),
                 dataStreamPolicy: formValues.get('rek_datastream_policy'),
-                selectedPolicyKey: formValues.get('rek_datastream_policy')
+                selectedPolicyKey: formValues.get('rek_datastream_policy'),
             }} />
         )}
     </FormValuesContextConsumer>
 );
+
+FormContextWrapper.propTypes = {
+    record: PropTypes.object
+};
 
 export const SecurityCard = ({
     record,
@@ -51,12 +73,11 @@ export const SecurityCard = ({
     isSecurityInheritedChecked,
     securityPolicy,
     dataStreamPolicy,
-    selectedPolicyKey
+    selectedPolicyKey,
+    classes,
 }) => {
     const securityType = record.rek_object_type_lookup;
-    const dataStreams = !!record.fez_datastream_info
-        && record.fez_datastream_info.length > 0
-        && record.fez_datastream_info.filter(isFileValid);
+    const dataStreams = (record.fez_datastream_info || []).filter(isFileValid);
     const hasDatastreams = dataStreams.length > 0;
     const isPolicyInherited = record.rek_security_inherited === 1;
 
@@ -118,9 +139,23 @@ export const SecurityCard = ({
                     <StandardCard title={<span><b>Datastream</b> security - {record.rek_pid}</span>} accentHeader>
                         <Grid container spacing={8}>
                             {
-                                isPolicyInherited
-                                    ? <InheritedSecurityDetails />
-                                    : <DataStreamSecuritySelector {...{ text, disabled }} />
+                                dataStreams.length &&
+                                <Grid item xs={12} className={classes.dataStreamSecurity}>
+                                    <Typography variant="h6" style={{ marginTop: -8 }}>
+                                        {text.dataStream.overridePrompt}
+                                    </Typography>
+                                    {dataStreams.map((dataStream, index) => (
+                                        <DataStreamSecuritySelector
+                                            {...{
+                                                classes,
+                                                disabled,
+                                                dsi: dataStream,
+                                                text: text.dataStream,
+                                            }}
+                                            key={index}
+                                        />
+                                    ))}
+                                </Grid>
                             }
                         </Grid>
                     </StandardCard>
@@ -137,7 +172,12 @@ SecurityCard.propTypes = {
     isSecurityInheritedChecked: PropTypes.bool,
     securityPolicy: PropTypes.number,
     dataStreamPolicy: PropTypes.number,
-    selectedPolicyKey: PropTypes.number
+    selectedPolicyKey: PropTypes.number,
+    classes: PropTypes.object.isRequired,
+};
+
+SecurityCard.defaultProps = {
+    dataStreamSecurity: {},
 };
 
 export const SecuritySelector = ({ isPolicyInherited, isSecurityInheritedChecked, securityType, ...props }) => (
@@ -190,54 +230,35 @@ OverriddenSecuritySelector.propTypes = {
     securityPolicy: PropTypes.number
 };
 
-export const DataStreamSecuritySelector = ({ text, disabled }) => (
-    <Grid item xs={12} style={{
-        marginTop: 24,
-        padding: 24,
-        backgroundColor: 'rgba(0,0,0,0.05)'
-    }}>
-        <Typography variant="h6" style={{ marginTop: -8 }}>
-            Override datastream security policy details
-        </Typography>
-        <Typography variant="body2" component="p">
-            {text.prompt}
-        </Typography>
-        <Grid container spacing={8} alignContent="flex-end" alignItems="flex-end" style={{
-            borderBottom: '1px solid rgba(0,0,0,0.1)',
-            paddingBottom: 8,
-            paddingTop: 8
-        }}>
-            <Grid item xs={2}>Filename:</Grid>
-            <Grid item xs={4}>Test_1.PDF</Grid>
-            <Grid item xs={6}>
-                <PolicyDropdown
-                    fieldName="filePolicy1"
-                    fieldLabel={<span>Security policy for this file to override inheritance</span>}
-                    disabled={disabled}
-                />
-            </Grid>
+export const DataStreamSecuritySelector = ({ text, disabled, dsi, classes }) => (
+    <Grid
+        container
+        spacing={8}
+        alignContent="flex-end"
+        alignItems="flex-end"
+        className={classes.dataStreamFileBlock}
+    >
+        <Grid item xs={12} sm={6} className={classes.dataStreamFileName}>
+            <Link title={dsi.dsi_dsid}>
+                {dsi.dsi_dsid}
+            </Link>
         </Grid>
-        <Grid container spacing={8} alignContent="flex-end" alignItems="flex-end" style={{
-            borderBottom: '1px solid rgba(0,0,0,0.1)',
-            paddingBottom: 8,
-            paddingTop: 8
-        }}>
-            <Grid item xs={2}>Filename:</Grid>
-            <Grid item xs={4}>Test_3.JPG</Grid>
-            <Grid item xs={6}>
-                <PolicyDropdown
-                    fieldName="filePolicy2"
-                    fieldLabel={<span>Security policy for this file to override inheritance</span>}
-                    disabled={disabled}
-                />
-            </Grid>
+        <Grid item xs={12} sm={6}>
+            <PolicyDropdown
+                fieldName={dsi.fieldName}
+                fieldLabel={text.overridePolicyPrompt}
+                disabled={disabled}
+            />
         </Grid>
     </Grid>
 );
 
 DataStreamSecuritySelector.propTypes = {
     disabled: PropTypes.bool,
-    text: PropTypes.object
+    text: PropTypes.object,
+    dsi: PropTypes.object,
+    classes: PropTypes.object,
 };
 
-export default React.memo(RecordContextWrapper);
+export default React.memo(withStyles(styles)(RecordContextWrapper));
+

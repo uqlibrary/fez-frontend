@@ -290,7 +290,10 @@ export const getSecurityUpdateRoute = (pid, recordType) => {
 
 export function updateSecurity(pid, recordType, data) {
     return dispatch => {
-        dispatch({type: actions.SECURITY_POLICY_SAVING});
+        dispatch({
+            type: actions.SECURITY_POLICY_SAVING,
+            payload: data
+        });
         return patch(getSecurityUpdateRoute(pid, recordType), data)
             .then((response) => {
                 dispatch({

@@ -9,7 +9,7 @@ import Button from '@material-ui/core/Button';
 import { SelectField } from 'modules/SharedComponents/Toolbox/SelectField';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { FormValuesContextConsumer } from 'context';
-import { RECORD_TYPE_RECORD } from 'config/general';
+import { RECORD_TYPE_RECORD, RECORD_TYPE_COLLECTION, RECORD_TYPE_COMMUNITY } from 'config/general';
 import SecurityCard from './SecurityCard';
 
 import { validation } from 'config';
@@ -22,13 +22,22 @@ const FormContextWrapper =  /* istanbul ignore next */ (props) => (
         {({ formValues }) => (
             <SecuritySection {...{
                 ...props,
-                accessLevel: formValues.get('accessLevel')
+                accessLevel: formValues.get('accessLevel'),
             }} />
         )}
     </FormValuesContextConsumer>
 );
 
 export const SecuritySection = ({ disabled, handleSubmit, recordType, accessLevel }) => {
+    let canEdit = false;
+    switch(recordType) {
+        case RECORD_TYPE_COLLECTION:
+        case RECORD_TYPE_COMMUNITY:
+            canEdit = accessLevel === 'Superadmin';
+            break;
+        default:
+            canEdit = ['Admin', 'Superadmin'].indexOf(accessLevel) > -1;
+    }
     return (
         <Grid container spacing={16}>
             <Grid item xs={12} sm={12}>
@@ -56,7 +65,7 @@ export const SecuritySection = ({ disabled, handleSubmit, recordType, accessLeve
                 />
             </Grid>
             {
-                accessLevel === 'Superadmin' &&
+                canEdit &&
                 <Grid item xs={12}>
                     <SecurityCard
                         disabled={disabled}
@@ -65,7 +74,7 @@ export const SecuritySection = ({ disabled, handleSubmit, recordType, accessLeve
                 </Grid>
             }
             {
-                accessLevel &&
+                canEdit &&
                 <Grid item xs={12} sm={12}>
                     <Button
                         style={{whiteSpace: 'nowrap'}}
@@ -85,13 +94,13 @@ SecuritySection.propTypes = {
     disabled: PropTypes.bool,
     recordType: PropTypes.string,
     handleSubmit: PropTypes.func,
-    accessLevel: PropTypes.string
+    accessLevel: PropTypes.string,
 };
 
 SecuritySection.defaultProps = {
     disabled: false,
     recordType: RECORD_TYPE_RECORD,
-    accessLevel: 'Admin'
+    accessLevel: '',
 };
 
 export default React.memo(FormContextWrapper);
