@@ -79,6 +79,14 @@ mock
         else if (config.params.source === 'crossref' && config.params.doi) return [200, mockData.externalDoiSearchResultList];
         else if (config.params.source === 'pubmed' && config.params.id) return [200, mockData.externalPubMedSearchResultsList];
     })
+    .onGet(new RegExp(escapeRegExp(routes.CURRENT_USER_INCOMPLETE_RECORDS_API({
+        page: 1,
+        pageSize: 20,
+        sortBy: '',
+        sortDirection: '',
+        facets: {}
+    }).apiUrl)))
+    .reply(200, mockData.incompleteNTROlist)
     .onGet(routes.CURRENT_USER_RECORDS_API({}).apiUrl).reply(config => {
         // AUTHOR_PUBLICATIONS_STATS_ONLY_API
         if (config.params.rule === 'mine' && !!config.params['filters[stats_only]']) {
@@ -215,6 +223,7 @@ mock
     .onPatch(new RegExp(escapeRegExp(routes.AUTHOR_API({authorId: '.*'}).apiUrl)))
     .reply(200, {...mockData.currentAuthor.uqresearcher})
     // .reply(500, {message: 'error - failed PATCH AUTHOR_API'})
+
     .onAny().reply((config) => {
         console.log('url not found...');
         console.log(config);

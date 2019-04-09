@@ -6,7 +6,7 @@ import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
 import {PublicationsList, PublicationsListPaging, PublicationsListSorting, FacetsFilter} from 'modules/SharedComponents/PublicationsList';
 import locale from 'locale/components';
-import {routes, general} from 'config';
+import {routes} from 'config';
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
 
@@ -102,39 +102,12 @@ export default class MyIncompleteRecords extends PureComponent {
     }
 
     facetsChanged = (activeFacets) => {
-        if (this.props.location.pathname === routes.pathConfig.dataset.mine) {
-            // this is a 'my research dataset' page
-            this.setState(
-                {
-                    activeFacets: this.getMyDatasetFacets(activeFacets),
-                    page: 1
-                }, this.pushPageHistory
-            );
-        } else {
-            this.setState(
-                {
-                    activeFacets: activeFacets,
-                    page: 1
-                }, this.pushPageHistory
-            );
-        }
-    }
-
-    hasDisplayableFilters = (activeFilters) => {
-        const localFilters = this.getMyDatasetFacets(activeFilters);
-        return localFilters && Object.keys(localFilters).length > 0;
-    }
-
-    getMyDatasetFacets = (activeFilters) => {
-        // on a 'my research data' page, we dont want the presence of 'Display type' to decide 'facet changed'
-        const displayType = 'Display type';
-        const localFilters = Object.assign({}, activeFilters);
-        if (Object.keys(localFilters).length > 0 &&
-            localFilters.hasOwnProperty(displayType) &&
-            localFilters[displayType] === general.PUBLICATION_TYPE_DATA_COLLECTION) {
-            delete localFilters[displayType];
-        }
-        return localFilters;
+        this.setState(
+            {
+                activeFacets: activeFacets,
+                page: 1
+            }, this.pushPageHistory
+        );
     }
 
     pushPageHistory = () => {
@@ -146,7 +119,7 @@ export default class MyIncompleteRecords extends PureComponent {
         this.props.actions.searchAuthorPublications({...this.state});
     };
 
-    fixRecord = (item) => {
+    completeRecord = (item) => {
         this.props.history.push(routes.pathConfig.records.fix(item.rek_pid));
         this.props.actions.setFixRecord(item);
     }
@@ -160,6 +133,21 @@ export default class MyIncompleteRecords extends PureComponent {
         const txt = this.props.localePages;
         const pagingData = this.props.publicationsListPagingData;
         const isLoading = this.props.loadingPublicationsList;
+        const inProgress = [
+            {
+                label: 'In progress',
+                disabled: true,
+                primary: false
+            }
+        ];
+
+        const actions = [
+            {
+                label: txt.completeRecordButton,
+                handleAction: this.completeRecord,
+                primary: true
+            }
+        ];
 
         return (
             <StandardPage title={txt.pageTitle}>
@@ -226,7 +214,10 @@ export default class MyIncompleteRecords extends PureComponent {
                                         {
                                             !this.props.exportPublicationsLoading && !this.props.loadingPublicationsList && this.props.publicationsList && this.props.publicationsList.length > 0 &&
                                             <PublicationsList
-                                                publicationsList={this.props.publicationsList} />
+                                                publicationsList={this.props.publicationsList}
+                                                subsetCustomActions={inProgress}
+                                                customActions={actions}
+                                            />
                                         }
                                     </Grid>
                                     <Grid item xs={12}>
@@ -243,7 +234,6 @@ export default class MyIncompleteRecords extends PureComponent {
                     {
                         // show available filters or selected filters (even if there are no results)
                         ((this.props.publicationsListFacets && Object.keys(this.props.publicationsListFacets).length > 0)
-                        || (this.state.activeFacets && this.hasDisplayableFilters(this.state.activeFacets.filters))
                         || (this.state.activeFacets && this.state.activeFacets.ranges && Object.keys(this.state.activeFacets.ranges).length > 0)
                         || (this.state.activeFacets && !!this.state.activeFacets.showOpenAccessOnly)) &&
                             <Hidden smDown>

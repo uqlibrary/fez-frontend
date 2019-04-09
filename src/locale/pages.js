@@ -694,6 +694,7 @@ export default {
                     </div>
                 ),
             },
+            completeRecordButton: 'Complete record',
             facetsFilter: {...locale.components.facetsFilter}
         },
     }

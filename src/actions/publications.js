@@ -102,11 +102,10 @@ export function searchAuthorPublications({page = 1, pageSize = 20, sortBy = 'sco
  * @param {string} author user name
  * @returns {action}
  */
-export function searchAuthorIncompletePublications({page = 1, pageSize = 20, sortBy = 'score', sortDirection = 'Desc', activeFacets = {filters: {}, ranges: {}}}) {
+export function searchAuthorIncompletePublications({page = 1, pageSize = 20, sortBy = 'created date', sortDirection = 'Desc', activeFacets = {filters: {}, ranges: {}}}) {
     console.log('Searching for incomplete records');
     return dispatch => {
         dispatch({type: actions.AUTHOR_INCOMPLETEPUBLICATIONS_LOADING});
-
         return get(routes.CURRENT_USER_INCOMPLETE_RECORDS_API({
             page: page,
             pageSize: pageSize,
@@ -115,6 +114,7 @@ export function searchAuthorIncompletePublications({page = 1, pageSize = 20, sor
             facets: activeFacets
         }))
             .then(response => {
+                console.log(response);
                 dispatch({
                     type: actions.AUTHOR_INCOMPLETEPUBLICATIONS_LOADED,
                     payload: response
