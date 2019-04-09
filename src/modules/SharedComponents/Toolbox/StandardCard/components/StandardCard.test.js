@@ -1,4 +1,4 @@
-import {Cards} from './StandardCard';
+import {StandardCard, Cards} from './StandardCard';
 
 function setup(testProps, isShallow = true) {
     const props = {
@@ -11,7 +11,7 @@ function setup(testProps, isShallow = true) {
     return getElement(Cards, props, isShallow);
 }
 
-describe('StandardCard component', () => {
+describe('Cards component', () => {
 
     it('renders with title and no help icon', () => {
         const wrapper = setup({});
@@ -33,14 +33,38 @@ describe('StandardCard component', () => {
         const wrapper = setup({
             customBackgroundColor: '#fcc',
             customTitleColor: '#111',
+            customTitleBgColor: '#ccc',
             fullHeight: true,
             noPadding: true,
-            darkHeader: true,
+            primaryHeader: true,
             classes: {
                 cardHeaderPurple: 'purple',
-                cardContentNoPadding: 'no-padding'
-            }
+                cardContentNoPadding: 'no-padding',
+                cardHeaderPrimary: '#555',
+            },
         });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('renders with square top and accent header', () => {
+        const wrapper = setup({
+            squareTop: true,
+            accentHeader: true,
+            classes: {
+                cardHeaderAccent: '#333',
+            },
+        });
+
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+});
+
+describe('StandardCard component', () => {
+    it('should render StyledCard with same props', () => {
+        const wrapper = getElement(StandardCard, {
+            test1: 'test1value',
+            test2: 'test2value'
+        }, true);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

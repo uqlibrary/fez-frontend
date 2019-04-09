@@ -86,5 +86,5 @@ export class Cards extends Component {
 }
 
 const StyledCard = withStyles(styles, {withTheme: true})(Cards);
-const StandardCard = (props) => <StyledCard {...props}/>;
+export const StandardCard = (props) => <StyledCard {...props}/>;
 export default StandardCard;

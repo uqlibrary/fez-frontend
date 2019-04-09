@@ -24,15 +24,6 @@ export const getFixIssueRequest = pipe(getIssueValues, templates.issues.fixRecor
 
 // End helpers
 
-// Start Search Key Transformers
-export const getSecurityPolicySearchKey = data => {
-    if (!data) return null;
-
-    const patchRequest = {};
-
-    return patchRequest;
-};
-
 /* getRecordLinkSearchKey - returns link object formatted for record request
 * NOTE: link description is required to save link
 * @param {Object} form data may contain link attribute  {rek_link: {string}}
