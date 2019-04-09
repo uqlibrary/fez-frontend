@@ -6,6 +6,8 @@ export claimPublicationReducer from './claimPublication';
 export fixRecordReducer from './fixRecord';
 export viewRecordReducer from './viewRecord';
 export createRecordReducer from './createRecord';
+export createCollectionReducer from './createCollection';
+export createCommunityReducer from './createCommunity';
 export publicationsReducer from './publications';
 export exportPublicationsReducer from './exportPublications';
 export searchRecordsReducer from './searchRecords';
@@ -16,5 +18,6 @@ export myLatestPublicationsReducer from './myLatestPublications';
 export topCitedPublicationsReducer from './topCitedPublications';
 export newsFeedReducer from './newsFeed';
 export collectionsReducer from './searchCollections';
+export communitiesReducer from './searchCommunities';
 export thirdPartyLookupToolReducer from './thirdPartyLookupTool';
 

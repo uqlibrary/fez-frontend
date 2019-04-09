@@ -66,22 +66,22 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                 depositAgreement={
                   <div>
                     <p>
-                      1.   I am the creator or co-creator of this dataset, or otherwise authorised to deposit or describe it;
+                      1. I am the creator or co-creator of this dataset, or otherwise authorised to deposit or describe it;
                     </p>
                     <p>
-                      2.   I have permission to include any third-party content contained in the dataset;
+                      2. I have permission to include any third-party content contained in the dataset;
                     </p>
                     <p>
-                      3.   The dataset is original;
+                      3. The dataset is original;
                     </p>
                     <p>
-                      4.   The dataset does not infringe the legal rights of any third-party;
+                      4. The dataset does not infringe the legal rights of any third-party;
                     </p>
                     <p>
-                      5.   I acknowledge that in depositing the dataset, I grant to UQeSpace a perpetual non-exclusive licence to reproduce it and make it available in any format or language;
+                      5. I acknowledge that in depositing the dataset, I grant to UQeSpace a perpetual non-exclusive licence to reproduce it and make it available in any format or language;
                     </p>
                     <p>
-                      6.   The dataset's creator(s) moral rights to be associated with the dataset will be respected by UQeSpace.
+                      6. The dataset's creator(s) moral rights to be associated with the dataset will be respected by UQeSpace.
                     </p>
                   </div>
                 }
@@ -1261,22 +1261,22 @@ exports[`AddDataCollection test should render data set form 1`] = `
                 depositAgreement={
                   <div>
                     <p>
-                      1.   I am the creator or co-creator of this dataset, or otherwise authorised to deposit or describe it;
+                      1. I am the creator or co-creator of this dataset, or otherwise authorised to deposit or describe it;
                     </p>
                     <p>
-                      2.   I have permission to include any third-party content contained in the dataset;
+                      2. I have permission to include any third-party content contained in the dataset;
                     </p>
                     <p>
-                      3.   The dataset is original;
+                      3. The dataset is original;
                     </p>
                     <p>
-                      4.   The dataset does not infringe the legal rights of any third-party;
+                      4. The dataset does not infringe the legal rights of any third-party;
                     </p>
                     <p>
-                      5.   I acknowledge that in depositing the dataset, I grant to UQeSpace a perpetual non-exclusive licence to reproduce it and make it available in any format or language;
+                      5. I acknowledge that in depositing the dataset, I grant to UQeSpace a perpetual non-exclusive licence to reproduce it and make it available in any format or language;
                     </p>
                     <p>
-                      6.   The dataset's creator(s) moral rights to be associated with the dataset will be respected by UQeSpace.
+                      6. The dataset's creator(s) moral rights to be associated with the dataset will be respected by UQeSpace.
                     </p>
                   </div>
                 }
