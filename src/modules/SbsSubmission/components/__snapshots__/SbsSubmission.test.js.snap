@@ -17,7 +17,7 @@ exports[`SbsSubmission test should display successfull submission screen 1`] = `
       >
         <WithStyles(Typography)>
           <p>
-            You have successfully deposited your thesis to UQ eSpace.  You wil receive a confirmation email soon.
+            You have successfully deposited your thesis to UQ eSpace. You wil receive a confirmation email soon.
           </p>
         </WithStyles(Typography)>
       </StandardCard>
@@ -43,7 +43,7 @@ exports[`SbsSubmission test should render sbs thesis submission acknowledgement 
       >
         <WithStyles(Typography)>
           <p>
-            You have successfully deposited your thesis to UQ eSpace.  You wil receive a confirmation email soon.
+            You have successfully deposited your thesis to UQ eSpace. You wil receive a confirmation email soon.
           </p>
         </WithStyles(Typography)>
       </StandardCard>
