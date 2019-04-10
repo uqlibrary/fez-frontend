@@ -42,7 +42,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
                           >
                             <div>
                               <p>
-                                1.   I am the creator or co-creator of this dataset, or otherwise authorised to deposit or describe it;
+                                1. I am the creator or co-creator of this dataset, or otherwise authorised to deposit or describe it;
                               </p>
 @@ -130,215 +130,307 @@
                   >

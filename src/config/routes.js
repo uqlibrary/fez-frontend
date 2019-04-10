@@ -31,6 +31,7 @@ export const pathConfig = {
     contact: '/contact',
     hdrSubmission: '/rhdsubmission',
     sbsSubmission: '/habslodge',
+    adminCollection: '/admin/collection',
     records: {
         mine: '/records/mine',
         possible: '/records/possible',
@@ -91,6 +92,8 @@ export const pathConfig = {
     admin: {
         masquerade: '/admin/masquerade',
         thirdPartyTools: '/tool/lookup',
+        collectionForm: '/admin/collection',
+        communityForm: '/admin/community',
         legacyEspace: `${fullPath}/my_upo_tools.php`,
         unpublished: '/admin/unpublished'
     },
@@ -114,6 +117,7 @@ export const pathConfig = {
 // a duplicate list of routes for
 const flattedPathConfig = ['/', '/dashboard', '/contact', '/rhdsubmission', '/sbslodge_new', '/records/search',
     '/records/mine', '/records/possible', '/records/claim', '/records/add/find', '/records/add/results', '/records/add/new',
+    '/admin/masquerade', 'admin/collection', 'admin/community', '/tool/lookup', '/author-identifiers/orcid/link', '/author-identifiers/google-scholar/link',
     '/admin/masquerade', '/admin/unpublished', '/admin/thirdPartyTools', '/author-identifiers/orcid/link', '/author-identifiers/google-scholar/link'
 ];
 
@@ -303,9 +307,21 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
                 exact: true,
                 access: [roles.admin],
                 pageTitle: locale.pages.unpublished.title
-            }
-        ] : []),
-        ...(account && account.canMasquerade ? [ // this should check if the user is an admin
+            },
+            {
+                path: pathConfig.admin.collectionForm,
+                component: components.CollectionForm,
+                exact: true,
+                access: [roles.admin],
+                pageTitle: locale.pages.collection.title
+            },
+            {
+                path: pathConfig.admin.communityForm,
+                component: components.CommunityForm,
+                exact: true,
+                access: [roles.admin],
+                pageTitle: locale.pages.community.title
+            },
             {
                 path: pathConfig.admin.thirdPartyTools,
                 component: components.ThirdPartyLookupTool,
@@ -412,6 +428,14 @@ export const getMenuConfig = (account, disabled) => {
             }
         ] : []),
         ...(account && account.canMasquerade ? [
+            {
+                linkTo: pathConfig.admin.collectionForm,
+                ...locale.menu.collectionForm,
+            },
+            {
+                linkTo: pathConfig.admin.communityForm,
+                ...locale.menu.communityForm,
+            },
             {
                 linkTo: pathConfig.admin.masquerade,
                 ...locale.menu.masquerade,
