@@ -35,6 +35,7 @@ export const pathConfig = {
         mine: '/records/mine',
         possible: '/records/possible',
         incomplete: '/records/incomplete',
+        incompleteFix: (pid) => (`/records/${pid}/incomplete`),
         claim: '/records/claim',
         search: '/records/search',
         view: (pid, includeFullPath = false) => (`${includeFullPath ? fullPath : ''}/view/${pid}`),
@@ -243,6 +244,13 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
                 access: [roles.researcher, roles.admin],
                 exact: true,
                 pageTitle: locale.pages.incompletePublications.title
+            },
+            {
+                path: pathConfig.records.incompleteFix(pid),
+                component: components.MyIncompleteRecord,
+                access: [roles.researcher, roles.admin],
+                exact: true,
+                pageTitle: locale.pages.incompletePublication.title
             },
             {
                 path: pathConfig.records.claim,

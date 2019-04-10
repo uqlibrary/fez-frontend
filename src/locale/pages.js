@@ -697,5 +697,8 @@ export default {
             completeRecordButton: 'Complete record',
             facetsFilter: {...locale.components.facetsFilter}
         },
+        incompletePublication: {
+            title: 'Fix an incomplete record'
+        }
     }
 };
