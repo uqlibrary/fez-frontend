@@ -14,6 +14,7 @@ const mapStateToProps = (state) => {
         ...state.get('academicStatsReducer'),
         ...state.get('appReducer'),
         ...state.get('publicationsReducer'),
+        ...state.get('incompleteRecordReducer'),
         showLatestPublicationsTab: loadingLatestPublications || latestPublicationsList.length > 0,
         showTrendingPublicationsTab: loadingTrendingPublications || trendingPublicationsList.length > 0,
         possiblyYourPublicationsCount: possibleCounts,
