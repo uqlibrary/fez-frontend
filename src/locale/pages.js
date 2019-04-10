@@ -469,6 +469,24 @@ export default {
                 message: (message) => message
             },
         },
+        collection: {
+            title: 'Add a missing collection',
+            cancelWorkflowConfirmation: {
+                confirmationTitle: 'Cancel collection creation',
+                confirmationMessage: 'Are you sure you want to cancel creating this collection?',
+                cancelButtonLabel: 'No',
+                confirmButtonLabel: 'Yes'
+            },
+        },
+        community: {
+            title: 'Add a missing community',
+            cancelWorkflowConfirmation: {
+                confirmationTitle: 'Cancel community creation',
+                confirmationMessage: 'Are you sure you want to cancel creating this community?',
+                cancelButtonLabel: 'No',
+                confirmButtonLabel: 'Yes'
+            },
+        },
         masquerade: {
             title: 'Masquerade',
             help: {

@@ -369,6 +369,34 @@ describe('Search action creators', () => {
         expect(mockActionsStore.getActions()).toHaveAnyOrderDispatchedActions(expectedActions);
     });
 
+    it('should dispatch series of actions on community list', async () => {
+        mockApi
+            .onGet(repositories.routes.SEARCH_INTERNAL_RECORDS_API({}).apiUrl)
+            .reply(200, {data: [1, 2, 3]});
+
+        const expectedActions = [
+            actions.SEARCH_COMMUNITIES_LOADING,
+            actions.SEARCH_COMMUNITIES_LOADED
+        ];
+
+        await mockActionsStore.dispatch(searchActions.communitiesList());
+        expect(mockActionsStore.getActions()).toHaveAnyOrderDispatchedActions(expectedActions);
+    });
+
+    it('should dispatch series of actions on community list fetch error', async () => {
+        mockApi
+            .onGet(repositories.routes.SEARCH_INTERNAL_RECORDS_API({}).apiUrl)
+            .reply(404, {});
+
+        const expectedActions = [
+            actions.SEARCH_COMMUNITIES_LOADING,
+            actions.SEARCH_COMMUNITIES_FAILED
+        ];
+
+        await mockActionsStore.dispatch(searchActions.communitiesList());
+        expect(mockActionsStore.getActions()).toHaveAnyOrderDispatchedActions(expectedActions);
+    });
+
     describe('exportSearchPublications()', () => {
         it('calls exportPublications with expected params', async () => {
 
