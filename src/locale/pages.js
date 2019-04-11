@@ -698,7 +698,8 @@ export default {
             facetsFilter: {...locale.components.facetsFilter}
         },
         incompletePublication: {
-            title: 'Fix an incomplete record'
+            title: 'Fix an incomplete record',
+            submitButtonLabel: 'Submit my completed work'
         }
     }
 };

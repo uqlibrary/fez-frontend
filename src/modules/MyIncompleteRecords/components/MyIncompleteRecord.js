@@ -6,29 +6,25 @@ import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
 import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
 import {PublicationCitation} from 'modules/SharedComponents/PublicationCitation';
 import locale from 'locale/pages';
-// import Files from './Files';
-// import PublicationDetails from './PublicationDetails';
-// import AdditionalInformation from './AdditionalInformation';
-// import GrantInformation from './GrantInformation';
-// import RelatedPublications from './RelatedPublications';
-// import Links from './Links';
-// import NtroDetails from './NtroDetails';
-// import AvailableVersions from './AvailableVersions';
 import ReactHtmlParser from 'react-html-parser';
 import Grid from '@material-ui/core/Grid';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import JSONPretty from 'react-json-pretty';
-// import {general} from 'config';
+import Button from '@material-ui/core/Button';
+import {propTypes} from 'redux-form/immutable';
 
 export default class MyIncompleteRecord extends PureComponent {
     static propTypes = {
+        ...propTypes, // all redux-form props
         recordToView: PropTypes.object,
         loadingRecordToView: PropTypes.bool,
         recordToViewError: PropTypes.string,
         match: PropTypes.object.isRequired,
         actions: PropTypes.object.isRequired,
         hideCulturalSensitivityStatement: PropTypes.bool,
-        account: PropTypes.object
+        account: PropTypes.object,
+        formValues: PropTypes.object,
+        initialValues: PropTypes.object,
     };
 
     componentDidMount() {
@@ -52,9 +48,9 @@ export default class MyIncompleteRecord extends PureComponent {
     }
 
     render() {
-        const txt = locale.pages.viewRecord;
+        console.log(this.props);
+        const txt = locale.pages.incompletePublication;
         const {loadingRecordToView, recordToViewError, recordToView} = this.props;
-        // const isNtro = recordToView && !!general.NTRO_SUBTYPES.includes(recordToView.rek_subtype);
         if(loadingRecordToView) {
             return <InlineLoader message={txt.loadingMessage}/>;
         } else if(recordToViewError) {
@@ -73,11 +69,27 @@ export default class MyIncompleteRecord extends PureComponent {
                         <PublicationCitation publication={recordToView} hideTitle />
                     </Grid>
                 </Grid>
+
                 <Grid container spacing={24}>
                     <Grid item xs>
-                        <StandardCard title={'JSON Object'}>
-                            <JSONPretty data={this.props.recordToView} />
+                        <StandardCard title={`Loaded values for ${recordToView.rek_pid}`}>
+                            <div style={{height: 300, overflow: 'scroll'}}>
+                                <JSONPretty data={this.props.initialValues} />
+                            </div>
                         </StandardCard>
+                    </Grid>
+                </Grid>
+
+                <Grid container spacing={24}>
+                    <Grid item xs />
+                    <Grid item xs={12} sm="auto">
+                        <Button
+                            variant="contained"
+                            color="primary"
+                            fullWidth
+                            children={txt.submitButtonLabel}
+                            onClick={this.props.handleSubmit}
+                            disabled={this.props.submitting || this.props.disableSubmit}/>
                     </Grid>
                 </Grid>
             </StandardPage>
