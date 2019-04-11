@@ -186,9 +186,18 @@ export class ContributorForm extends PureComponent {
                             required={this.props.required}
                             autoComplete="off"
                             error={
-                                !!(!isNtro && this.props.required && !this.props.isContributorAssigned && this.state.nameAsPublished.trim().length === 0)
-                                ||
-                                !!(isNtro && this.state.affiliation && !this.props.isContributorAssigned && this.state.nameAsPublished.trim().length === 0)}
+                                !!(
+                                    !isNtro &&
+                                    this.props.required &&
+                                    !this.props.isContributorAssigned &&
+                                    this.state.nameAsPublished.trim().length === 0
+                                ) || !!(
+                                    isNtro &&
+                                    this.state.affiliation &&
+                                    !this.props.isContributorAssigned &&
+                                    this.state.nameAsPublished.trim().length === 0
+                                )
+                            }
                         />
                     </Grid>
                     {

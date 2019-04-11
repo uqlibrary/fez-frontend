@@ -54,22 +54,24 @@ export const styles = (theme) => ({
 
 export class ContributorRow extends PureComponent {
     static propTypes = {
-        index: PropTypes.number.isRequired,
-        contributor: PropTypes.object.isRequired,
-        canMoveUp: PropTypes.bool,
         canMoveDown: PropTypes.bool,
-        onMoveUp: PropTypes.func,
-        onMoveDown: PropTypes.func,
-        onDelete: PropTypes.func,
-        showIdentifierLookup: PropTypes.bool,
-        showContributorAssignment: PropTypes.bool,
-        disabledContributorAssignment: PropTypes.bool,
-        onContributorAssigned: PropTypes.func,
-        locale: PropTypes.object,
-        disabled: PropTypes.bool,
+        canMoveUp: PropTypes.bool,
         classes: PropTypes.object,
+        contributor: PropTypes.object.isRequired,
+        disabled: PropTypes.bool,
+        disabledContributorAssignment: PropTypes.bool,
+        hideDelete: PropTypes.bool,
+        hideReorder: PropTypes.bool,
+        index: PropTypes.number.isRequired,
+        locale: PropTypes.object,
+        onContributorAssigned: PropTypes.func,
+        onDelete: PropTypes.func,
+        onMoveDown: PropTypes.func,
+        onMoveUp: PropTypes.func,
+        showContributorAssignment: PropTypes.bool,
+        showIdentifierLookup: PropTypes.bool,
+        showRoleInput: PropTypes.bool,
         width: PropTypes.string,
-        showRoleInput: PropTypes.bool
     };
 
     static defaultProps = {
@@ -85,7 +87,9 @@ export class ContributorRow extends PureComponent {
                 cancelButtonLabel: 'No',
                 confirmButtonLabel: 'Yes'
             }
-        }
+        },
+        hideReorder: false,
+        hideDelete: false,
     };
 
     constructor(props) {
@@ -218,10 +222,15 @@ export class ContributorRow extends PureComponent {
 
     render() {
         const {deleteRecordConfirmation, moveUpHint, moveDownHint, deleteHint, selectHint} = this.props.locale;
-        const {contributor, canMoveDown, canMoveUp, disabled, classes} = this.props;
+        const {contributor, canMoveDown, canMoveUp, disabled, classes, hideReorder, hideDelete} = this.props;
 
-
-        const ariaLabel = selectHint && selectHint.indexOf('[name]') > -1 ? selectHint.replace('[name]', contributor.nameAsPublished) : null;
+        const ariaLabel = (
+            selectHint &&
+            selectHint.indexOf('[name]') > -1
+        )
+            ? selectHint.replace('[name]', contributor.nameAsPublished)
+            : null
+        ;
         const disableAssignment = this.props.showContributorAssignment && !this.props.disabledContributorAssignment;
         const selectedClass = contributor.selected ? classes.selected : '';
 
@@ -247,10 +256,15 @@ export class ContributorRow extends PureComponent {
                         </ListItemIcon>
                     </Hidden>
                     {
-                        this.getContributorRowText(this.props.showIdentifierLookup, this.props.showRoleInput, selectedClass)
+                        this.getContributorRowText(
+                            this.props.showIdentifierLookup,
+                            this.props.showRoleInput,
+                            selectedClass
+                        )
                     }
                     <ListItemSecondaryAction>
                         {
+                            !hideReorder &&
                             canMoveUp &&
                             <Tooltip title={moveUpHint}>
                                 <IconButton
@@ -263,6 +277,7 @@ export class ContributorRow extends PureComponent {
                             </Tooltip>
                         }
                         {
+                            !hideReorder &&
                             canMoveDown &&
                             <Tooltip title={moveDownHint}>
                                 <IconButton
@@ -274,15 +289,18 @@ export class ContributorRow extends PureComponent {
                                 </IconButton>
                             </Tooltip>
                         }
-                        <Tooltip title={deleteHint}>
-                            <IconButton
-                                aria-label={deleteHint}
-                                onClick={this._showConfirmation}
-                                disabled={disabled}
-                            >
-                                <Delete classes={{ root: `${selectedClass}` }}/>
-                            </IconButton>
-                        </Tooltip>
+                        {
+                            !hideDelete &&
+                            <Tooltip title={deleteHint}>
+                                <IconButton
+                                    aria-label={deleteHint}
+                                    onClick={this._showConfirmation}
+                                    disabled={disabled}
+                                >
+                                    <Delete classes={{ root: `${selectedClass}` }}/>
+                                </IconButton>
+                            </Tooltip>
+                        }
                     </ListItemSecondaryAction>
                 </ListItem>
             </Fragment>

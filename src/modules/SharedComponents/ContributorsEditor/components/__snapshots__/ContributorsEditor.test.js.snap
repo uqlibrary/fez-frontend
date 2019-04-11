@@ -532,6 +532,8 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                 "scroll": "scroll",
               }
             }
+            hideDelete={false}
+            hideReorder={false}
             isNtro={true}
             locale={
               Object {
@@ -2648,6 +2650,8 @@ exports[`ContributorsEditor tests  renders 3 contributor rows with no infinite s
     >
       <WithStyles(List)>
         <WithStyles(ContributorRowHeader)
+          hideDelete={false}
+          hideReorder={false}
           isInfinite={false}
           isNtro={false}
           onDeleteAll={[Function]}
@@ -2677,6 +2681,8 @@ exports[`ContributorsEditor tests  renders 3 contributor rows with no infinite s
             }
           }
           disabledContributorAssignment={false}
+          hideDelete={false}
+          hideReorder={false}
           index={0}
           key="ContributorRow_0"
           onContributorAssigned={[Function]}
@@ -2696,6 +2702,8 @@ exports[`ContributorsEditor tests  renders 3 contributor rows with no infinite s
             }
           }
           disabledContributorAssignment={false}
+          hideDelete={false}
+          hideReorder={false}
           index={1}
           key="ContributorRow_1"
           onContributorAssigned={[Function]}
@@ -2715,6 +2723,8 @@ exports[`ContributorsEditor tests  renders 3 contributor rows with no infinite s
             }
           }
           disabledContributorAssignment={false}
+          hideDelete={false}
+          hideReorder={false}
           index={2}
           key="ContributorRow_2"
           onContributorAssigned={[Function]}
@@ -2751,6 +2761,8 @@ exports[`ContributorsEditor tests  renders 4 contributor rows wrapped in an infi
     >
       <WithStyles(List)>
         <WithStyles(ContributorRowHeader)
+          hideDelete={false}
+          hideReorder={false}
           isInfinite={true}
           isNtro={false}
           onDeleteAll={[Function]}
@@ -2780,6 +2792,8 @@ exports[`ContributorsEditor tests  renders 4 contributor rows wrapped in an infi
             }
           }
           disabledContributorAssignment={false}
+          hideDelete={false}
+          hideReorder={false}
           index={0}
           key="ContributorRow_0"
           onContributorAssigned={[Function]}
@@ -2799,6 +2813,8 @@ exports[`ContributorsEditor tests  renders 4 contributor rows wrapped in an infi
             }
           }
           disabledContributorAssignment={false}
+          hideDelete={false}
+          hideReorder={false}
           index={1}
           key="ContributorRow_1"
           onContributorAssigned={[Function]}
@@ -2818,6 +2834,8 @@ exports[`ContributorsEditor tests  renders 4 contributor rows wrapped in an infi
             }
           }
           disabledContributorAssignment={false}
+          hideDelete={false}
+          hideReorder={false}
           index={2}
           key="ContributorRow_2"
           onContributorAssigned={[Function]}
@@ -2837,6 +2855,8 @@ exports[`ContributorsEditor tests  renders 4 contributor rows wrapped in an infi
             }
           }
           disabledContributorAssignment={false}
+          hideDelete={false}
+          hideReorder={false}
           index={3}
           key="ContributorRow_3"
           onContributorAssigned={[Function]}
@@ -2886,6 +2906,8 @@ exports[`ContributorsEditor tests  should get contributors from props and input 
     >
       <WithStyles(List)>
         <WithStyles(ContributorRowHeader)
+          hideDelete={false}
+          hideReorder={false}
           isInfinite={false}
           isNtro={false}
           onDeleteAll={[Function]}
@@ -2915,6 +2937,8 @@ exports[`ContributorsEditor tests  should get contributors from props and input 
             }
           }
           disabledContributorAssignment={false}
+          hideDelete={false}
+          hideReorder={false}
           index={0}
           key="ContributorRow_0"
           onContributorAssigned={[Function]}
@@ -2934,6 +2958,8 @@ exports[`ContributorsEditor tests  should get contributors from props and input 
             }
           }
           disabledContributorAssignment={false}
+          hideDelete={false}
+          hideReorder={false}
           index={1}
           key="ContributorRow_1"
           onContributorAssigned={[Function]}
@@ -2970,6 +2996,8 @@ exports[`ContributorsEditor tests  should get contributors from props and input 
     >
       <WithStyles(List)>
         <WithStyles(ContributorRowHeader)
+          hideDelete={false}
+          hideReorder={false}
           isInfinite={false}
           isNtro={false}
           onDeleteAll={[Function]}
@@ -2999,6 +3027,8 @@ exports[`ContributorsEditor tests  should get contributors from props and input 
             }
           }
           disabledContributorAssignment={false}
+          hideDelete={false}
+          hideReorder={false}
           index={0}
           key="ContributorRow_0"
           onContributorAssigned={[Function]}
@@ -3018,6 +3048,8 @@ exports[`ContributorsEditor tests  should get contributors from props and input 
             }
           }
           disabledContributorAssignment={false}
+          hideDelete={false}
+          hideReorder={false}
           index={1}
           key="ContributorRow_1"
           onContributorAssigned={[Function]}

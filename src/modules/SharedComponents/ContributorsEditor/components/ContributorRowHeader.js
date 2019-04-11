@@ -14,23 +14,23 @@ import {withStyles} from '@material-ui/core/styles';
 
 export class ContributorRowHeader extends PureComponent {
     static propTypes = {
+        classes: PropTypes.object,
+        disabled: PropTypes.bool,
+        hideDelete: PropTypes.bool,
+        hideReorder: PropTypes.bool,
+        isInfinite: PropTypes.bool,
+        locale: PropTypes.object,
         onDeleteAll: PropTypes.func.isRequired,
+        showContributorAssignment: PropTypes.bool,
         showIdentifierLookup: PropTypes.bool,
         showRoleInput: PropTypes.bool,
-        showContributorAssignment: PropTypes.bool,
-        locale: PropTypes.object,
-        disabled: PropTypes.bool,
-        isInfinite: PropTypes.bool,
-        classes: PropTypes.object
     };
 
     static defaultProps = {
+        hideDelete: false,
+        hideReorder: false,
         locale: {
             contributorAssignmentColumn: 'Select your name',
-            nameColumn: 'Name as published',
-            identifierColumn: 'UQ identifier',
-            roleColumn: 'Role',
-            reorderColumn: 'Reorder records',
             deleteAll: 'Remove all records',
             deleteAllConfirmation: {
                 confirmationTitle: 'Delete all',
@@ -38,7 +38,11 @@ export class ContributorRowHeader extends PureComponent {
                 cancelButtonLabel: 'No',
                 confirmButtonLabel: 'Yes'
             },
-            descriptionStep2: 'Step 2 - Select your name from the list below'
+            descriptionStep2: 'Step 2 - Select your name from the list below',
+            identifierColumn: 'UQ identifier',
+            nameColumn: 'Name as published',
+            reorderColumn: 'Reorder records',
+            roleColumn: 'Role',
         },
     };
 
@@ -51,20 +55,40 @@ export class ContributorRowHeader extends PureComponent {
     };
 
     render() {
-        const {nameColumn, identifierColumn, reorderColumn, deleteAll, deleteAllConfirmation, roleColumn} = this.props.locale;
-        const {classes, showIdentifierLookup, isInfinite, showRoleInput} = this.props;
+        const {
+            deleteAll,
+            deleteAllConfirmation,
+            descriptionStep2,
+            identifierColumn,
+            nameColumn,
+            reorderColumn,
+            roleColumn,
+        } = this.props.locale;
+
+        const {
+            classes,
+            disabled,
+            hideDelete,
+            hideReorder,
+            isInfinite,
+            onDeleteAll,
+            showContributorAssignment,
+            showIdentifierLookup,
+            showRoleInput,
+        } = this.props;
+
         return (
             <Fragment>
                 <ConfirmDialogBox
                     onRef={ref => (this.confirmationBox = ref)}
-                    onAction={this.props.onDeleteAll}
+                    onAction={onDeleteAll}
                     locale={deleteAllConfirmation}
                 />
                 {
-                    this.props.showContributorAssignment &&
+                    showContributorAssignment &&
                     <Fragment>
                         <br/>
-                        {this.props.locale.descriptionStep2}
+                        {descriptionStep2}
                     </Fragment>
                 }
                 <ListItem classes={{root: classes.header}}>
@@ -86,19 +110,34 @@ export class ContributorRowHeader extends PureComponent {
                             <ListItemText secondary={roleColumn} secondaryTypographyProps={{variant: 'caption'}}/>
                         </Hidden>
                     }
-                    <Hidden xsDown>
-                        <ListItemText secondary={reorderColumn} secondaryTypographyProps={{variant: 'caption'}} classes={{secondary: `${classes.right} ${isInfinite ? classes.paddingRight36 : classes.paddingRight24}`}}/>
-                    </Hidden>
-                    <ListItemSecondaryAction classes={{root: isInfinite ? classes.paddingRight14 : ''}}>
-                        <Tooltip title={deleteAll}>
-                            <IconButton
-                                onClick={this._showConfirmation}
-                                disabled={this.props.disabled}
-                            >
-                                <DeleteForever/>
-                            </IconButton>
-                        </Tooltip>
-                    </ListItemSecondaryAction>
+                    {
+                        !hideReorder &&
+                        <Hidden xsDown>
+                            <ListItemText
+                                secondary={reorderColumn}
+                                secondaryTypographyProps={{variant: 'caption'}}
+                                classes={{
+                                    secondary: `${classes.right} ${
+                                        isInfinite
+                                            ? classes.paddingRight36
+                                            : classes.paddingRight24
+                                    }`
+                                }}/>
+                        </Hidden>
+                    }
+                    {
+                        !hideDelete &&
+                        <ListItemSecondaryAction classes={{root: isInfinite ? classes.paddingRight14 : ''}}>
+                            <Tooltip title={deleteAll}>
+                                <IconButton
+                                    onClick={this._showConfirmation}
+                                    disabled={disabled}
+                                >
+                                    <DeleteForever/>
+                                </IconButton>
+                            </Tooltip>
+                        </ListItemSecondaryAction>
+                    }
                 </ListItem>
             </Fragment>
         );

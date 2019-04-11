@@ -1,50 +1,54 @@
-import React, {PureComponent} from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import Immutable from 'immutable';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 import ContributorRowHeader from './ContributorRowHeader';
 import ContributorRow from './ContributorRow';
 import ContributorForm from './ContributorForm';
-import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
+import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import List from '@material-ui/core/List';
 import Typography from '@material-ui/core/Typography';
-import {withStyles} from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 
 export class ContributorsEditor extends PureComponent {
     static propTypes = {
+        author: PropTypes.object,
+        classes: PropTypes.object,
+        disabled: PropTypes.bool,
+        hideDelete: PropTypes.bool,
+        hideReorder: PropTypes.bool,
+        input: PropTypes.object,
+        isNtro: PropTypes.bool,
+        locale: PropTypes.object,
+        meta: PropTypes.object,
+        onChange: PropTypes.func,
+        required: PropTypes.bool,
+        showContributorAssignment: PropTypes.bool,
         showIdentifierLookup: PropTypes.bool,
         showRoleInput: PropTypes.bool,
-        showContributorAssignment: PropTypes.bool,
-        isNtro: PropTypes.bool,
-        disabled: PropTypes.bool,
-        meta: PropTypes.object,
-        author: PropTypes.object,
-        onChange: PropTypes.func,
-        locale: PropTypes.object,
-        input: PropTypes.object,
-        classes: PropTypes.object,
-        required: PropTypes.bool
     };
 
     static defaultProps = {
-        showIdentifierLookup: false,
-        showRoleInput: false,
-        showContributorAssignment: false,
+        hideDelete: false,
+        hideReorder: false,
         isNtro: false,
         locale: {
             errorTitle: 'Error',
             errorMessage: 'Unable to add an item with the same identifier.'
-        }
+        },
+        showContributorAssignment: false,
+        showIdentifierLookup: false,
+        showRoleInput: false,
     };
 
     constructor(props) {
         super(props);
         this.state = {
             contributors: this.getContributorsFromProps(props),
-            isCurrentAuthorSelected: false,
             errorMessage: '',
-            showIdentifierLookup: false
+            isCurrentAuthorSelected: false,
+            showIdentifierLookup: false,
         };
     }
 
@@ -75,9 +79,12 @@ export class ContributorsEditor extends PureComponent {
             contributor.disabled = !!contributor.aut_id;
 
             this.setState({
-                contributors: [ ...this.state.contributors, contributor],
+                contributors: [...this.state.contributors, contributor],
                 errorMessage: '',
-                isCurrentAuthorSelected: this.state.isCurrentAuthorSelected || (this.props.author && contributor.aut_id === this.props.author.aut_id)
+                isCurrentAuthorSelected: this.state.isCurrentAuthorSelected || (
+                    this.props.author &&
+                    contributor.aut_id === this.props.author.aut_id
+                )
             }, () => {
                 // try to automatically select contributor if they are a current author
                 if (this.props.author && contributor.aut_id === this.props.author.aut_id) {
@@ -112,7 +119,10 @@ export class ContributorsEditor extends PureComponent {
     deleteContributor = (contributor, index) => {
         this.setState({
             contributors: this.state.contributors.filter((_, i) => i !== index),
-            isCurrentAuthorSelected: this.state.isCurrentAuthorSelected && (this.props.author && contributor.aut_id !== this.props.author.aut_id)
+            isCurrentAuthorSelected: this.state.isCurrentAuthorSelected && (
+                this.props.author &&
+                contributor.aut_id !== this.props.author.aut_id
+            )
         });
     }
 
@@ -127,8 +137,14 @@ export class ContributorsEditor extends PureComponent {
         const newContributors = this.state.contributors.map((item, itemIndex) => (
             {
                 ...item,
-                selected: (this.props.author && item.aut_id === this.props.author.aut_id) || index === itemIndex,
-                authorId: (index === itemIndex && this.props.author) ? this.props.author.aut_id : null
+                selected: (
+                    this.props.author &&
+                    item.aut_id === this.props.author.aut_id
+                ) || index === itemIndex,
+                authorId: (
+                    index === itemIndex &&
+                    this.props.author
+                ) ? this.props.author.aut_id : null
             })
         );
         this.setState({
@@ -137,41 +153,61 @@ export class ContributorsEditor extends PureComponent {
     };
 
     render() {
-        const {classes, showIdentifierLookup, showContributorAssignment, disabled, showRoleInput, required, isNtro} = this.props;
-        const {contributors, isCurrentAuthorSelected, errorMessage} = this.state;
+        const {
+            classes,
+            disabled,
+            hideDelete,
+            hideReorder,
+            isNtro,
+            required,
+            showContributorAssignment,
+            showIdentifierLookup,
+            showRoleInput,
+        } = this.props;
+
+        const {
+            contributors,
+            errorMessage,
+            isCurrentAuthorSelected,
+        } = this.state;
 
         const renderContributorsRows = contributors.map((contributor, index) => (
             <ContributorRow
-                key={`ContributorRow_${index}`}
-                index={index}
-                disabled={disabled}
-                contributor={contributor}
+                {...(this.props.locale && this.props.locale.row ? this.props.locale.row : {})}
                 canMoveDown={index !== contributors.length - 1}
                 canMoveUp={index !== 0}
-                onMoveUp={this.moveUpContributor}
-                onMoveDown={this.moveDownContributor}
-                onDelete={this.deleteContributor}
+                contributor={contributor}
+                contributorSuffix={this.props.locale.contributorSuffix}
+                disabled={disabled}
+                disabledContributorAssignment={isCurrentAuthorSelected}
+                hideDelete={hideDelete}
+                hideReorder={hideReorder}
+                index={index}
+                key={`ContributorRow_${index}`}
                 onContributorAssigned={this.assignContributor}
+                onDelete={this.deleteContributor}
+                onMoveDown={this.moveDownContributor}
+                onMoveUp={this.moveUpContributor}
+                showContributorAssignment={showContributorAssignment}
                 showIdentifierLookup={showIdentifierLookup}
                 showRoleInput={showRoleInput}
-                showContributorAssignment={showContributorAssignment}
-                contributorSuffix={this.props.locale.contributorSuffix}
-                disabledContributorAssignment={isCurrentAuthorSelected}
-                {...(this.props.locale && this.props.locale.row ? this.props.locale.row : {})}
             />
         ));
 
         let error = null;
         if (this.props.meta && this.props.meta.error) {
-            error = !!this.props.meta.error.props && React.Children.map(this.props.meta.error.props.children, (child, index) => {
-                if (child.type) {
-                    return React.cloneElement(child, {
-                        key: index
-                    });
-                } else {
-                    return child;
-                }
-            });
+            error = !!this.props.meta.error.props &&
+                React.Children.map(
+                    this.props.meta.error.props.children,
+                    (child, index) => {
+                        return (
+                            child.type
+                                ? React.cloneElement(child, { key: index })
+                                : child
+                        );
+                    }
+                )
+            ;
         }
 
         return (
@@ -181,18 +217,19 @@ export class ContributorsEditor extends PureComponent {
                     <Alert
                         title={this.props.locale.errorTitle}
                         message={errorMessage}
-                        type="warning" />
+                        type="warning"
+                    />
                 }
                 <ContributorForm
-                    onAdd={this.addContributor}
-                    required={required}
+                    {...(this.props.locale && this.props.locale.form ? this.props.locale.form : {})}
                     disabled={disabled}
-                    showRoleInput={showRoleInput}
-                    showIdentifierLookup={showIdentifierLookup}
-                    showContributorAssignment={showContributorAssignment}
                     isContributorAssigned={!!this.state.contributors.length}
                     isNtro={isNtro}
-                    {...(this.props.locale && this.props.locale.form ? this.props.locale.form : {})}
+                    onAdd={this.addContributor}
+                    required={required}
+                    showContributorAssignment={showContributorAssignment}
+                    showIdentifierLookup={showIdentifierLookup}
+                    showRoleInput={showRoleInput}
                 />
                 {
                     contributors.length > 0 &&
@@ -200,19 +237,27 @@ export class ContributorsEditor extends PureComponent {
                         <Grid item xs={12}>
                             <List>
                                 <ContributorRowHeader
-                                    onDeleteAll={this.deleteAllContributors}
+                                    {...(this.props.locale && this.props.locale.header ? this.props.locale.header : {})}
                                     disabled={disabled}
+                                    hideDelete={hideDelete}
+                                    hideReorder={hideReorder}
                                     isInfinite={contributors.length > 3}
                                     isNtro={isNtro}
-                                    showRoleInput={showRoleInput}
-                                    showIdentifierLookup={showIdentifierLookup}
+                                    onDeleteAll={this.deleteAllContributors}
                                     showContributorAssignment={showContributorAssignment}
-                                    {...(this.props.locale && this.props.locale.header ? this.props.locale.header : {})}
+                                    showIdentifierLookup={showIdentifierLookup}
+                                    showRoleInput={showRoleInput}
                                 />
                             </List>
                         </Grid>
                         <Grid item xs={12}>
-                            <List classes={{root: `${classes.list} ${contributors.length > 3 ? classes.scroll : ''}`}}>
+                            <List classes={{
+                                root: `${classes.list} ${
+                                    contributors.length > 3
+                                        ? classes.scroll
+                                        : ''
+                                }`
+                            }}>
                                 {renderContributorsRows}
                             </List>
                         </Grid>

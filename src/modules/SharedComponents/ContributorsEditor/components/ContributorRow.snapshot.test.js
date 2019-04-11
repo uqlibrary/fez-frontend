@@ -50,22 +50,53 @@ describe('Component ContributorRow ', () => {
     });
 
     it('a row with index and contributor with author details set and set as selected', () => {
-        const wrapper = setup({...authorsSearch.data[0], index: 0, showIdentifierLookup: true, contributor: {nameAsPublished: "J. Smith", selected: true}});
+        const wrapper = setup({
+            ...authorsSearch.data[0],
+            index: 0,
+            showIdentifierLookup: true,
+            contributor: {
+                nameAsPublished: "J. Smith",
+                selected: true
+            }
+        });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('a row with index and creator with creator role set and set as selected', () => {
-        const wrapper = setup({...authorsSearch.data[0], index: 0, showRoleInput: true, contributor: {nameAsPublished: "J. Smith", selected: true, creatorRole: 'Investigator'}});
+        const wrapper = setup({...authorsSearch.data[0],
+            index: 0,
+            showRoleInput: true,
+            contributor: {
+                nameAsPublished: "J. Smith",
+                selected: true,
+                creatorRole: 'Investigator'
+            }
+        });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('a row with index and contributor with author details set and set as selected for mobile view', () => {
-        const wrapper = setup({...authorsSearch.data[0], index: 0, showIdentifierLookup: true, contributor: {nameAsPublished: "J. Smith", selected: true}});
+        const wrapper = setup({...authorsSearch.data[0],
+            index: 0,
+            showIdentifierLookup: true,
+            contributor: {
+                nameAsPublished: "J. Smith",
+                selected: true
+            }
+        });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('a row with index and creator with creator role set and set as selected for mobile view', () => {
-        const wrapper = setup({...authorsSearch.data[0], index: 0, showRoleInput: true, contributor: {nameAsPublished: "J. Smith", selected: true, creatorRole: 'Investigator'}});
+        const wrapper = setup({...authorsSearch.data[0],
+            index: 0,
+            showRoleInput: true,
+            contributor: {
+                nameAsPublished: "J. Smith",
+                selected: true,
+                creatorRole: 'Investigator'
+            }
+        });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -122,7 +153,11 @@ describe('Component ContributorRow ', () => {
 
     it('a row with index and contributor set calls assignment function', () => {
         const testFunction = jest.fn();
-        const wrapper = setup({index: 0, showContributorAssignment: true, onContributorAssigned: testFunction}, false);
+        const wrapper = setup({
+            index: 0,
+            showContributorAssignment: true,
+            onContributorAssigned: testFunction
+        }, false);
         wrapper.find('ListItem').simulate('click');
         expect(testFunction).toBeCalled;
     });
@@ -161,7 +196,15 @@ describe('Component ContributorRow ', () => {
     it('should remove the contributor assigned when it is already selected', () => {
         const testFunction = jest.fn();
 
-        const wrapper = setup({index: 0, disabled: false, contributor: {selected: true, nameAsPublished: "J. Smith"}, onContributorAssigned: testFunction});
+        const wrapper = setup({
+            index: 0,
+            disabled: false,
+            contributor: {
+                selected: true,
+                nameAsPublished: "J. Smith"
+            },
+            onContributorAssigned: testFunction
+        });
         wrapper.instance()._assignContributor();
         expect(testFunction).toBeCalledWith(null, null);
     });
@@ -206,7 +249,47 @@ describe('Component ContributorRow ', () => {
         const wrapper = setup({contributor: {nameAsPublished: "J. Smith"}});
         wrapper.instance().shouldComponentUpdate = testFunction;
         wrapper.setProps({contributor: {nameAsPublished: "K. Lane"}});
-        expect(testFunction).toBeCalledWith({"canMoveDown": false, "canMoveUp": false, "classes": {"hideIcon": "hideIcon", "identifierName": "identifierName", "identifierSubtitle": "identifierSubtitle", "listItem": "listItem", "primary": "primary", "selected": "selected"}, "contributor": {"nameAsPublished": "K. Lane"}, "disabled": false, "disabledContributorAssignment": false, "index": 0, "locale": {"deleteHint": "Remove this record", "deleteRecordConfirmation": {"cancelButtonLabel": "No", "confirmButtonLabel": "Yes", "confirmationMessage": "Are you sure you want to delete this record?", "confirmationTitle": "Delete record"}, "moveDownHint": "Move record down the order", "moveUpHint": "Move record up the order", "selectHint": "Select this record ([name]) to assign it to you", "suffix": " listed contributor"}, "showContributorAssignment": false, "showIdentifierLookup": false, "showRoleInput": false, "width": "md"}, {}, {});
+        expect(testFunction).toBeCalledWith(
+            {
+                canMoveDown: false,
+                canMoveUp: false,
+                classes: {
+                    hideIcon: "hideIcon",
+                    identifierName: "identifierName",
+                    identifierSubtitle: "identifierSubtitle",
+                    listItem: "listItem",
+                    primary: "primary",
+                    selected: "selected"
+                },
+                contributor: {
+                    nameAsPublished: "K. Lane"
+                },
+                disabled: false,
+                disabledContributorAssignment: false,
+                hideDelete: false,
+                hideReorder: false,
+                index: 0,
+                locale: {
+                    deleteHint: "Remove this record",
+                    deleteRecordConfirmation: {
+                        cancelButtonLabel: "No",
+                        confirmButtonLabel: "Yes",
+                        confirmationMessage: "Are you sure you want to delete this record?",
+                        confirmationTitle: "Delete record"
+                    },
+                    moveDownHint: "Move record down the order",
+                    moveUpHint: "Move record up the order",
+                    selectHint: "Select this record ([name]) to assign it to you",
+                    suffix: " listed contributor"
+                },
+                showContributorAssignment: false,
+                showIdentifierLookup: false,
+                showRoleInput: false,
+                width: "md"
+            },
+            {},
+            {}
+        );
     });
 
     it('triggers the confirmation box', () => {
