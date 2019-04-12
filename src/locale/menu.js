@@ -20,7 +20,7 @@ export default {
             primaryText: 'Claim possible work'
         },
         incompleteRecords: {
-            primaryText: 'Fix my incomplete work'
+            primaryText: 'My incomplete work'
         },
         addMissingRecord: {
             primaryText: 'Add a missing work'

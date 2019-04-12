@@ -85,7 +85,6 @@ export default class MyIncompleteRecord extends PureComponent {
     };
 
     render() {
-        console.log('LOADING THIS PAGE');
         // console.log(this.props.initialValues.toJS());
         // if author is not linked to this record, abandon form
         // TODO: Uncomment this before going live

@@ -1,5 +1,5 @@
 export {accounts, authorsSearch, currentAuthor, authorDetails} from './account';
-export {externalDoiSearchResultList, externalPubMedSearchResultsList, record, myRecordsList, possibleUnclaimedList, incompleteNTROlist,
+export {externalDoiSearchResultList, externalPubMedSearchResultsList, record, myRecordsList, possibleUnclaimedList, incompleteNTROlist, incompleteNTROrecord,
     externalTitleSearchResultsList, internalTitleSearchList, recordsTypeList, externalTitleScopusResultsList,
     recordWithMap, recordWithTiffAndThumbnail, MyDatasetList, internalTitleSearchListNoResults, recordWithoutAuthorIds, collections} from './records';
 export {vocabulariesList} from './vocabularies';
