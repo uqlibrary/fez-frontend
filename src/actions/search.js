@@ -29,6 +29,22 @@ export function collectionsList() {
 }
 
 /**
+ * loadCommunitiesList - returns records for a list of all communities in eSpace
+ * @returns {Promise}
+ */
+export function communitiesList() {
+    return dispatch => {
+        dispatch({type: `${actions.SEARCH_COMMUNITIES_LOADING}`});
+        return get(SEARCH_INTERNAL_RECORDS_API({searchMode: 'advanced', searchQueryParams: {rek_object_type: 1}, pageSize: 999, sortBy: 'title', sortDirection: 'asc'}))
+            .then((response) => {
+                dispatch({type: `${actions.SEARCH_COMMUNITIES_LOADED}`, payload: response.data});
+            }, (error) => {
+                dispatch({type: `${actions.SEARCH_COMMUNITIES_FAILED}`, payload: error.message});
+            });
+    };
+}
+
+/**
  * createSearchPromise - returns a promise for search in a specific source
  * @param source
  * @param queryString

@@ -14,6 +14,8 @@ export const ThesisSubmission = (componentProps) => (<Async load={import('module
 export const SbsSubmission = (componentProps) => (<Async load={import('modules/SbsSubmission/containers/SbsSubmission')} componentProps={componentProps} />);
 export const ViewRecord = () => (<Async load={import('modules/ViewRecord/containers/ViewRecord')} />);
 export const AddDataCollection = () => (<Async load={import('modules/AddDataCollection/containers/AddDataCollection')} />);
+export const CollectionForm = () => (<Async load={import('modules/Admin/CollectionForm/containers/CollectionForm')} />);
+export const CommunityForm = () => (<Async load={import('modules/Admin/CommunityForm/containers/CommunityForm')} />);
 export const ThirdPartyLookupTool = () => (<Async load={import('modules/ThirdPartyLookupTool/containers/ThirdPartyLookupTool')} />);
 
 // always load components

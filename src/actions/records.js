@@ -1,8 +1,8 @@
 import {post, patch} from 'repositories/generic';
-import {NEW_RECORD_API, EXISTING_RECORD_API, RECORDS_ISSUES_API} from 'repositories/routes';
+import {NEW_RECORD_API, EXISTING_RECORD_API, RECORDS_ISSUES_API, NEW_COLLECTION_API, NEW_COMMUNITY_API} from 'repositories/routes';
 import {putUploadFiles} from 'repositories';
 import * as transformers from './transformers';
-import {NEW_RECORD_DEFAULT_VALUES} from 'config/general';
+import {NEW_RECORD_DEFAULT_VALUES, NEW_COLLECTION_DEFAULT_VALUES, NEW_COMMUNITY_DEFAULT_VALUES} from 'config/general';
 import * as actions from './actionTypes';
 
 /**
@@ -252,6 +252,81 @@ export function submitThesis(data) {
                     type: actions.CREATE_RECORD_FAILED,
                     payload: error.message
                 });
+                return Promise.reject(error);
+            });
+    };
+}
+
+
+/**
+ * Save a new collection involves a single request.
+ * If error occurs on any stage failed action is dispatched
+ * @param {object} data to be posted, refer to backend API
+ * @returns {promise} - this method is used by redux form onSubmit which requires Promise resolve/reject as a return
+ */
+export function createCollection(data, authorId) {
+    return dispatch => {
+        dispatch({type: actions.CREATE_COLLECTION_SAVING});
+        // set default values, links
+        const recordRequest = {
+            ...NEW_COLLECTION_DEFAULT_VALUES,
+            ...JSON.parse(JSON.stringify(data)),
+            fez_record_search_key_ismemberof: [
+                {
+                    rek_ismemberof: data.fez_record_search_key_ismemberof,
+                    rek_ismemberof_order: 1
+                }
+            ],
+            rek_depositor: authorId,
+        };
+        return post(NEW_COLLECTION_API(), recordRequest)
+            .then((response) => {
+                dispatch({
+                    type: actions.CREATE_COLLECTION_SUCCESS,
+                    payload: response.data
+                });
+                return Promise.resolve(response.data);
+            })
+            .catch(error => {
+                dispatch({
+                    type: actions.CREATE_COLLECTION_FAILED,
+                    payload: error.message
+                });
+
+                return Promise.reject(error);
+            });
+    };
+}
+
+/**
+ * Save a new community involves a single request.
+ * If error occurs on any stage failed action is dispatched
+ * @param {object} data to be posted, refer to backend API
+ * @returns {promise} - this method is used by redux form onSubmit which requires Promise resolve/reject as a return
+ */
+export function createCommunity(data, authorId) {
+    return dispatch => {
+        dispatch({type: actions.CREATE_COMMUNITY_SAVING});
+        // set default values, links
+        const recordRequest = {
+            ...NEW_COMMUNITY_DEFAULT_VALUES,
+            ...JSON.parse(JSON.stringify(data)),
+            rek_depositor: authorId,
+        };
+        return post(NEW_COMMUNITY_API(), recordRequest)
+            .then((response) => {
+                dispatch({
+                    type: actions.CREATE_COMMUNITY_SUCCESS,
+                    payload: response.data
+                });
+                return Promise.resolve(response.data);
+            })
+            .catch(error => {
+                dispatch({
+                    type: actions.CREATE_COMMUNITY_FAILED,
+                    payload: error.message
+                });
+
                 return Promise.reject(error);
             });
     };

@@ -79,6 +79,9 @@ export default {
         impactStatement: 'Creator research statement is required',
         significance: 'Scale/Significance of work is required',
         dateRange: 'Publication start/end dates are invalid',
-        pageRange: 'Please provide a valid start/end page range'
+        pageRange: 'Please provide a valid start/end page range',
+        // Collection form validations
+        community: 'You must select a community',
+        title: 'Title is required'
     }
 };
