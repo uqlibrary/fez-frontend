@@ -1,24 +1,15 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import {Field, propTypes} from 'redux-form/immutable';
-// import {Field} from 'redux-form/immutable';
-
 import Button from '@material-ui/core/Button';
-// import MenuItem from '@material-ui/core/MenuItem';
 import Grid from '@material-ui/core/Grid';
-
-// import {SelectField} from 'modules/SharedComponents/Toolbox/SelectField';
 import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
 import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
-// import {ConfirmDialogBox} from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
-// import {NavigationDialogBox} from 'modules/SharedComponents/Toolbox/NavigationPrompt';
 import {FileUploadField} from 'modules/SharedComponents/Toolbox/FileUploader';
 import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
-
 import {PublicationCitation} from 'modules/SharedComponents/PublicationCitation';
-import {routes} from 'config';
 import {default as pagesLocale} from 'locale/pages';
 import {validation} from 'config';
 import JSONPretty from 'react-json-pretty';
@@ -43,18 +34,6 @@ export default class MyIncompleteRecord extends PureComponent {
         errors: PropTypes.object,
         initialValues: PropTypes.object
     };
-
-    static contextTypes = {
-        selectFieldMobileOverrides: PropTypes.object
-    };
-
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            selectedRecordAction: ''
-        };
-    }
 
     componentDidMount() {
         if (this.props.actions && !this.props.recordToFix &&
@@ -86,15 +65,8 @@ export default class MyIncompleteRecord extends PureComponent {
         return isAuthorLinked || isContributorLinked;
     };
 
-    _navigateToMyResearch = () => {
-        this.props.history.push(routes.pathConfig.records.mine);
-    };
-
-    _navigateToDashboard = () => {
-        this.props.history.push(routes.pathConfig.dashboard);
-    };
-
     _cancelFix = () => {
+        console.log('GOING BACK');
         this.props.history.goBack();
     };
 
@@ -113,13 +85,14 @@ export default class MyIncompleteRecord extends PureComponent {
     };
 
     render() {
-        console.log(this.props.initialValues.toJS());
+        console.log('LOADING THIS PAGE');
         // console.log(this.props.initialValues.toJS());
         // if author is not linked to this record, abandon form
-        if (!(this.props.accountAuthorLoading || this.props.loadingRecordToFix) && !this.isAuthorLinked()) {
-            this.props.history.go(-1);
-            return <div />;
-        }
+        // TODO: Uncomment this before going live
+        // if (!(this.props.accountAuthorLoading || this.props.loadingRecordToFix) && !this.isAuthorLinked()) {
+        //     this.props.history.go(-1);
+        //     return <div />;
+        // }
 
         const txt = pagesLocale.pages.incompletePublication;
 

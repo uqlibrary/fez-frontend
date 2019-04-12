@@ -245,7 +245,6 @@ export default class MyIncompleteRecords extends PureComponent {
                                             activeFacets={this.state.activeFacets}
                                             disabled={isLoading}
                                             excludeFacetsList={txt.facetsFilter.excludeFacetsList}
-                                            isMyDataSetPage={this.props.location.pathname === routes.pathConfig.dataset.mine}
                                             renameFacetsList={txt.facetsFilter.renameFacetsList}
                                             lookupFacetsList={txt.facetsFilter.lookupFacetsList}
                                             showOpenAccessFilter/>
