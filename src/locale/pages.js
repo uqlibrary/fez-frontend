@@ -705,6 +705,92 @@ export default {
         },
         unpublished: {
             title: 'Unpublished buffer'
+        },
+        incompletePublications: {
+            pageTitle: 'Incomplete records',
+            recordCount: 'Displaying incomplete records [recordsFrom] to [recordsTo] of [recordsTotal] total records. ',
+            loadingMessage: 'Searching for incomplete works',
+            noResultsFound: {
+                title: 'No incomplete works found',
+                text: (
+                    <div>
+                        <p>No incomplete works were found for you to rectify.</p>
+                    </div>
+                ),
+            },
+            completeRecordButton: 'Complete record',
+            facetsFilter: {...locale.components.facetsFilter}
+        },
+        incompletePublication: {
+            title: 'Fix an incomplete record',
+            submitButtonLabel: 'Submit my completed work',
+            successWorkflowConfirmation: {
+                confirmationTitle: 'Your work has been updated',
+                datasetSuccessConfirmationMessage: (
+                    <p>
+                        Your work has been saved.<br/><br/>
+                        Your item will be published immediately and an UQ eSpace Research Outputs Officer will review the
+                        record.
+                    </p>),
+                fileFailConfirmationAlert: {
+                    title: 'UPLOAD FAILED',
+                    message: 'File upload and/or notes post failed',
+                    type: 'warning'
+                },
+                cancelButtonLabel: 'Fix another record',
+                confirmButtonLabel: 'Go to my research'
+            },
+            fileUpload: {
+                title: 'Upload files',
+                // help: {
+                //     title: 'Upload files',
+                //     text: 'file help...',
+                //     buttonLabel: 'CLOSE'
+                // },
+                failedAlertLocale: {
+                    type: 'error',
+                    title: 'FILE UPLOAD ERROR',
+                    message: 'There was an issue uploading your thesis files. You will need to resubmit your thesis by clicking on the \'Resubmit your thesis\' button.',
+                    actionButtonLabel: 'RESUBMIT YOUR THESIS'
+                },
+                locale: {
+                    instructions: '',
+                    accessTermsAndConditions: 'I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.',
+                    validation: {
+                        ['notFiles']: 'Invalid files ([fileNames])',
+                        ['invalidFileNames']: 'File(s) ([fileNames]) have invalid file name',
+                        ['tooBigFiles']: 'File(s) ([fileNames]) exceed maximum allowed upload file size',
+                        ['tooManyFiles']: 'Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded',
+                        ['duplicateFiles']: 'File(s) ([fileNames]) are duplicates and have been ignored'
+                    },
+                    successTitle: 'Success',
+                    successMessage: 'Successfully added [numberOfFiles] file(s) to upload queue.',
+                    errorTitle: 'Upload Errors',
+                    fileUploadRestrictionHeading: 'File upload restrictions',
+                    fileUploadRestrictions: (
+                        <div>
+                            Maximum file size is 8Gb. <br/>
+                            PDF files must be saved using the following naming structure <b>&lt;student number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf</b>.
+                            Document name could be thesis, abstract, and etc.
+                            For example:
+                            <ul>
+                                <li>s1234567_phd_thesis.pdf</li>
+                                <li>s1234567_phd_abstract.pdf</li>
+                            </ul>
+                            Supplementary audio files are to be in MP 3 format. <br />
+                            Supplementary video files are to be in WMV or AVI format. <br />
+                        </div>
+                    ),
+                    fileUploadInstruction: (
+                        <p>Click here to select files, or drag files into this area to upload</p>
+                    )
+                },
+                text: (
+                    <div>
+                        <span className="requiredField"><label>&nbsp;</label></span>
+                    </div>
+                )
+            },
         }
     }
 };
