@@ -75,11 +75,11 @@ const validate = (values) => {
         errors.dateRange = locale.validationErrors.dateRange;
     }
 
-    // Check start/end pages are alid
+    // Check start/end pages are valid for Book Chapters
     const startPage = data.fez_record_search_key_start_page && data.fez_record_search_key_start_page.rek_start_page;
     const endPage = data.fez_record_search_key_end_page && data.fez_record_search_key_end_page.rek_end_page;
-    if(!!startPage && !!endPage && parseInt(startPage, 10) > parseInt(endPage, 10)) {
-        console.log('ERROR');
+    const docType = data.rek_display_type;
+    if(docType === 177 && ((!startPage || !endPage) || (!!startPage && !!endPage && parseInt(startPage, 10) > parseInt(endPage, 10)))) {
         errors.pageRange = locale.validationErrors.pageRange;
     } else {
         if(errors.pageRange) {
