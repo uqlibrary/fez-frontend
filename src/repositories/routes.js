@@ -177,6 +177,18 @@ export const CURRENT_USER_INCOMPLETE_RECORDS_API = (values, route = 'search') =>
         }
     }
 );
+
+export const INCOMPLETE_RECORDS_API = () => {
+    return {
+        apiUrl: 'records/search',
+        options: {
+            params: {
+                rule: 'incomplete'
+            }
+        }
+    };
+};
+
 export const AUTHOR_PUBLICATIONS_STATS_ONLY_API = (values) => (
     {
         apiUrl: 'records/search',
@@ -272,13 +284,3 @@ export const THIRD_PARTY_LOOKUP_API_2FIELD = ({type, field1, field2}) => (
     {apiUrl: `tool/lookup/${type}/${field1}/${field2}`}
 );
 
-export const INCOMPLETE_RECORD_API = () => {
-    return {
-        apiUrl: 'records/search',
-        options: {
-            params: {
-                rule: 'incomplete'
-            }
-        }
-    };
-};
