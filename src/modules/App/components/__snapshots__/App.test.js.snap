@@ -740,6 +740,26 @@ exports[`Application component should render alert if user is not fez author 1`]
           ],
           "component": [Function],
           "exact": true,
+          "pageTitle": undefined,
+          "path": "/records/incomplete",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "Fix an incomplete record",
+          "path": "/records/:pid(UQ:[a-z0-9]+)/incomplete",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
           "pageTitle": "Claim a work",
           "path": "/records/claim",
         },
@@ -1021,6 +1041,10 @@ exports[`Application component should render alert if user is not fez author 1`]
           "primaryText": "Claim possible work",
         },
         Object {
+          "linkTo": "/records/incomplete",
+          "primaryText": "Fix my incomplete work",
+        },
+        Object {
           "linkTo": "/records/add/find",
           "primaryText": "Add a missing work",
         },
@@ -1194,6 +1218,31 @@ exports[`Application component should render alert if user is not fez author 1`]
         component={[Function]}
         exact={true}
         key="route_8"
+        path="/records/incomplete"
+      />
+      <Route
+        access={
+          Array [
+            "researcher",
+            "admin",
+          ]
+        }
+        component={[Function]}
+        exact={true}
+        key="route_9"
+        pageTitle="Fix an incomplete record"
+        path="/records/:pid(UQ:[a-z0-9]+)/incomplete"
+      />
+      <Route
+        access={
+          Array [
+            "researcher",
+            "admin",
+          ]
+        }
+        component={[Function]}
+        exact={true}
+        key="route_10"
         pageTitle="Claim a work"
         path="/records/claim"
       />
@@ -1206,7 +1255,7 @@ exports[`Application component should render alert if user is not fez author 1`]
         }
         component={[Function]}
         exact={true}
-        key="route_9"
+        key="route_11"
         pageTitle="Request a correction or upload files"
         path="/records/:pid(UQ:[a-z0-9]+)/fix"
         regExPath="/records/(UQ:[a-z0-9]+)/fix"
@@ -1219,7 +1268,7 @@ exports[`Application component should render alert if user is not fez author 1`]
           ]
         }
         exact={true}
-        key="route_10"
+        key="route_12"
         pageTitle="Add a missing work to eSpace"
         path="/records/add/find"
         render={[Function]}
@@ -1232,7 +1281,7 @@ exports[`Application component should render alert if user is not fez author 1`]
           ]
         }
         exact={true}
-        key="route_11"
+        key="route_13"
         pageTitle="Add a missing work to eSpace"
         path="/records/add/results"
         render={[Function]}
@@ -1245,7 +1294,7 @@ exports[`Application component should render alert if user is not fez author 1`]
           ]
         }
         exact={true}
-        key="route_12"
+        key="route_14"
         pageTitle="Add a missing work to eSpace"
         path="/records/add/new"
         render={[Function]}
@@ -1253,7 +1302,7 @@ exports[`Application component should render alert if user is not fez author 1`]
       <Route
         component={[Function]}
         exact={true}
-        key="route_13"
+        key="route_15"
         pageTitle="Link ORCID ID to UQ eSpace"
         path="/author-identifiers/orcid/link"
       />
@@ -1266,19 +1315,19 @@ exports[`Application component should render alert if user is not fez author 1`]
         }
         component={[Function]}
         exact={true}
-        key="route_14"
+        key="route_16"
         pageTitle="Google Scholar identifier"
         path="/author-identifiers/google-scholar/link"
       />
       <Route
         component={[Function]}
         exact={true}
-        key="route_15"
+        key="route_17"
         pageTitle="eSpace"
         path="/"
       />
       <Route
-        key="route_16"
+        key="route_18"
         pageTitle="Contact UQ eSpace"
         path="/contact"
         render={[Function]}
@@ -1286,19 +1335,19 @@ exports[`Application component should render alert if user is not fez author 1`]
       <Route
         component={[Function]}
         exact={true}
-        key="route_17"
+        key="route_19"
         path="/view/:pid(UQ:[a-z0-9]+)"
         regExPath="/view/(UQ:[a-z0-9]+)"
       />
       <Route
         component={[Function]}
         exact={true}
-        key="route_18"
+        key="route_20"
         pageTitle="eSpace search"
         path="/records/search"
       />
       <Route
-        key="route_19"
+        key="route_21"
         pageTitle="Page not found"
         render={[Function]}
       />
@@ -1381,6 +1430,26 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           "exact": true,
           "pageTitle": "Claim possible works",
           "path": "/records/possible",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": undefined,
+          "path": "/records/incomplete",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "Fix an incomplete record",
+          "path": "/records/:pid(UQ:[a-z0-9]+)/incomplete",
         },
         Object {
           "access": Array [
@@ -1670,6 +1739,10 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           "primaryText": "Claim possible work",
         },
         Object {
+          "linkTo": "/records/incomplete",
+          "primaryText": "Fix my incomplete work",
+        },
+        Object {
           "linkTo": "/records/add/find",
           "primaryText": "Add a missing work",
         },
@@ -1821,6 +1894,31 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         component={[Function]}
         exact={true}
         key="route_8"
+        path="/records/incomplete"
+      />
+      <Route
+        access={
+          Array [
+            "researcher",
+            "admin",
+          ]
+        }
+        component={[Function]}
+        exact={true}
+        key="route_9"
+        pageTitle="Fix an incomplete record"
+        path="/records/:pid(UQ:[a-z0-9]+)/incomplete"
+      />
+      <Route
+        access={
+          Array [
+            "researcher",
+            "admin",
+          ]
+        }
+        component={[Function]}
+        exact={true}
+        key="route_10"
         pageTitle="Claim a work"
         path="/records/claim"
       />
@@ -1833,7 +1931,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         }
         component={[Function]}
         exact={true}
-        key="route_9"
+        key="route_11"
         pageTitle="Request a correction or upload files"
         path="/records/:pid(UQ:[a-z0-9]+)/fix"
         regExPath="/records/(UQ:[a-z0-9]+)/fix"
@@ -1846,7 +1944,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           ]
         }
         exact={true}
-        key="route_10"
+        key="route_12"
         pageTitle="Add a missing work to eSpace"
         path="/records/add/find"
         render={[Function]}
@@ -1859,7 +1957,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           ]
         }
         exact={true}
-        key="route_11"
+        key="route_13"
         pageTitle="Add a missing work to eSpace"
         path="/records/add/results"
         render={[Function]}
@@ -1872,7 +1970,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           ]
         }
         exact={true}
-        key="route_12"
+        key="route_14"
         pageTitle="Add a missing work to eSpace"
         path="/records/add/new"
         render={[Function]}
@@ -1880,7 +1978,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
       <Route
         component={[Function]}
         exact={true}
-        key="route_13"
+        key="route_15"
         pageTitle="Link ORCID ID to UQ eSpace"
         path="/author-identifiers/orcid/link"
       />
@@ -1893,19 +1991,19 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         }
         component={[Function]}
         exact={true}
-        key="route_14"
+        key="route_16"
         pageTitle="Google Scholar identifier"
         path="/author-identifiers/google-scholar/link"
       />
       <Route
         component={[Function]}
         exact={true}
-        key="route_15"
+        key="route_17"
         pageTitle="eSpace"
         path="/"
       />
       <Route
-        key="route_16"
+        key="route_18"
         pageTitle="Contact UQ eSpace"
         path="/contact"
         render={[Function]}
@@ -1913,19 +2011,19 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
       <Route
         component={[Function]}
         exact={true}
-        key="route_17"
+        key="route_19"
         path="/view/:pid(UQ:[a-z0-9]+)"
         regExPath="/view/(UQ:[a-z0-9]+)"
       />
       <Route
         component={[Function]}
         exact={true}
-        key="route_18"
+        key="route_20"
         pageTitle="eSpace search"
         path="/records/search"
       />
       <Route
-        key="route_19"
+        key="route_21"
         pageTitle="Page not found"
         render={[Function]}
       />
@@ -2361,6 +2459,26 @@ exports[`Application component should render app for account with fez author wit
           ],
           "component": [Function],
           "exact": true,
+          "pageTitle": undefined,
+          "path": "/records/incomplete",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "Fix an incomplete record",
+          "path": "/records/:pid(UQ:[a-z0-9]+)/incomplete",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
           "pageTitle": "Claim a work",
           "path": "/records/claim",
         },
@@ -2640,6 +2758,10 @@ exports[`Application component should render app for account with fez author wit
         Object {
           "linkTo": "/records/possible",
           "primaryText": "Claim possible work",
+        },
+        Object {
+          "linkTo": "/records/incomplete",
+          "primaryText": "Fix my incomplete work",
         },
         Object {
           "linkTo": "/records/add/find",
@@ -2793,6 +2915,31 @@ exports[`Application component should render app for account with fez author wit
         component={[Function]}
         exact={true}
         key="route_8"
+        path="/records/incomplete"
+      />
+      <Route
+        access={
+          Array [
+            "researcher",
+            "admin",
+          ]
+        }
+        component={[Function]}
+        exact={true}
+        key="route_9"
+        pageTitle="Fix an incomplete record"
+        path="/records/:pid(UQ:[a-z0-9]+)/incomplete"
+      />
+      <Route
+        access={
+          Array [
+            "researcher",
+            "admin",
+          ]
+        }
+        component={[Function]}
+        exact={true}
+        key="route_10"
         pageTitle="Claim a work"
         path="/records/claim"
       />
@@ -2805,7 +2952,7 @@ exports[`Application component should render app for account with fez author wit
         }
         component={[Function]}
         exact={true}
-        key="route_9"
+        key="route_11"
         pageTitle="Request a correction or upload files"
         path="/records/:pid(UQ:[a-z0-9]+)/fix"
         regExPath="/records/(UQ:[a-z0-9]+)/fix"
@@ -2818,7 +2965,7 @@ exports[`Application component should render app for account with fez author wit
           ]
         }
         exact={true}
-        key="route_10"
+        key="route_12"
         pageTitle="Add a missing work to eSpace"
         path="/records/add/find"
         render={[Function]}
@@ -2831,7 +2978,7 @@ exports[`Application component should render app for account with fez author wit
           ]
         }
         exact={true}
-        key="route_11"
+        key="route_13"
         pageTitle="Add a missing work to eSpace"
         path="/records/add/results"
         render={[Function]}
@@ -2844,7 +2991,7 @@ exports[`Application component should render app for account with fez author wit
           ]
         }
         exact={true}
-        key="route_12"
+        key="route_14"
         pageTitle="Add a missing work to eSpace"
         path="/records/add/new"
         render={[Function]}
@@ -2852,7 +2999,7 @@ exports[`Application component should render app for account with fez author wit
       <Route
         component={[Function]}
         exact={true}
-        key="route_13"
+        key="route_15"
         pageTitle="Link ORCID ID to UQ eSpace"
         path="/author-identifiers/orcid/link"
       />
@@ -2865,19 +3012,19 @@ exports[`Application component should render app for account with fez author wit
         }
         component={[Function]}
         exact={true}
-        key="route_14"
+        key="route_16"
         pageTitle="Google Scholar identifier"
         path="/author-identifiers/google-scholar/link"
       />
       <Route
         component={[Function]}
         exact={true}
-        key="route_15"
+        key="route_17"
         pageTitle="eSpace"
         path="/"
       />
       <Route
-        key="route_16"
+        key="route_18"
         pageTitle="Contact UQ eSpace"
         path="/contact"
         render={[Function]}
@@ -2885,19 +3032,19 @@ exports[`Application component should render app for account with fez author wit
       <Route
         component={[Function]}
         exact={true}
-        key="route_17"
+        key="route_19"
         path="/view/:pid(UQ:[a-z0-9]+)"
         regExPath="/view/(UQ:[a-z0-9]+)"
       />
       <Route
         component={[Function]}
         exact={true}
-        key="route_18"
+        key="route_20"
         pageTitle="eSpace search"
         path="/records/search"
       />
       <Route
-        key="route_19"
+        key="route_21"
         pageTitle="Page not found"
         render={[Function]}
       />
@@ -2980,6 +3127,26 @@ exports[`Application component should render app for account with fez author wit
           "exact": true,
           "pageTitle": "Claim possible works",
           "path": "/records/possible",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": undefined,
+          "path": "/records/incomplete",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "Fix an incomplete record",
+          "path": "/records/:pid(UQ:[a-z0-9]+)/incomplete",
         },
         Object {
           "access": Array [
@@ -3267,6 +3434,10 @@ exports[`Application component should render app for account with fez author wit
         Object {
           "linkTo": "/records/possible",
           "primaryText": "Claim possible work",
+        },
+        Object {
+          "linkTo": "/records/incomplete",
+          "primaryText": "Fix my incomplete work",
         },
         Object {
           "linkTo": "/records/add/find",
@@ -3444,6 +3615,31 @@ exports[`Application component should render app for account with fez author wit
         component={[Function]}
         exact={true}
         key="route_8"
+        path="/records/incomplete"
+      />
+      <Route
+        access={
+          Array [
+            "researcher",
+            "admin",
+          ]
+        }
+        component={[Function]}
+        exact={true}
+        key="route_9"
+        pageTitle="Fix an incomplete record"
+        path="/records/:pid(UQ:[a-z0-9]+)/incomplete"
+      />
+      <Route
+        access={
+          Array [
+            "researcher",
+            "admin",
+          ]
+        }
+        component={[Function]}
+        exact={true}
+        key="route_10"
         pageTitle="Claim a work"
         path="/records/claim"
       />
@@ -3456,7 +3652,7 @@ exports[`Application component should render app for account with fez author wit
         }
         component={[Function]}
         exact={true}
-        key="route_9"
+        key="route_11"
         pageTitle="Request a correction or upload files"
         path="/records/:pid(UQ:[a-z0-9]+)/fix"
         regExPath="/records/(UQ:[a-z0-9]+)/fix"
@@ -3469,7 +3665,7 @@ exports[`Application component should render app for account with fez author wit
           ]
         }
         exact={true}
-        key="route_10"
+        key="route_12"
         pageTitle="Add a missing work to eSpace"
         path="/records/add/find"
         render={[Function]}
@@ -3482,7 +3678,7 @@ exports[`Application component should render app for account with fez author wit
           ]
         }
         exact={true}
-        key="route_11"
+        key="route_13"
         pageTitle="Add a missing work to eSpace"
         path="/records/add/results"
         render={[Function]}
@@ -3495,7 +3691,7 @@ exports[`Application component should render app for account with fez author wit
           ]
         }
         exact={true}
-        key="route_12"
+        key="route_14"
         pageTitle="Add a missing work to eSpace"
         path="/records/add/new"
         render={[Function]}
@@ -3503,7 +3699,7 @@ exports[`Application component should render app for account with fez author wit
       <Route
         component={[Function]}
         exact={true}
-        key="route_13"
+        key="route_15"
         pageTitle="Link ORCID ID to UQ eSpace"
         path="/author-identifiers/orcid/link"
       />
@@ -3516,19 +3712,19 @@ exports[`Application component should render app for account with fez author wit
         }
         component={[Function]}
         exact={true}
-        key="route_14"
+        key="route_16"
         pageTitle="Google Scholar identifier"
         path="/author-identifiers/google-scholar/link"
       />
       <Route
         component={[Function]}
         exact={true}
-        key="route_15"
+        key="route_17"
         pageTitle="eSpace"
         path="/"
       />
       <Route
-        key="route_16"
+        key="route_18"
         pageTitle="Contact UQ eSpace"
         path="/contact"
         render={[Function]}
@@ -3536,19 +3732,19 @@ exports[`Application component should render app for account with fez author wit
       <Route
         component={[Function]}
         exact={true}
-        key="route_17"
+        key="route_19"
         path="/view/:pid(UQ:[a-z0-9]+)"
         regExPath="/view/(UQ:[a-z0-9]+)"
       />
       <Route
         component={[Function]}
         exact={true}
-        key="route_18"
+        key="route_20"
         pageTitle="eSpace search"
         path="/records/search"
       />
       <Route
-        key="route_19"
+        key="route_21"
         pageTitle="Page not found"
         render={[Function]}
       />
@@ -3631,6 +3827,26 @@ exports[`Application component should render app for account with fez author wit
           "exact": true,
           "pageTitle": "Claim possible works",
           "path": "/records/possible",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": undefined,
+          "path": "/records/incomplete",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "Fix an incomplete record",
+          "path": "/records/:pid(UQ:[a-z0-9]+)/incomplete",
         },
         Object {
           "access": Array [
@@ -3951,6 +4167,31 @@ exports[`Application component should render app for account with fez author wit
         component={[Function]}
         exact={true}
         key="route_8"
+        path="/records/incomplete"
+      />
+      <Route
+        access={
+          Array [
+            "researcher",
+            "admin",
+          ]
+        }
+        component={[Function]}
+        exact={true}
+        key="route_9"
+        pageTitle="Fix an incomplete record"
+        path="/records/:pid(UQ:[a-z0-9]+)/incomplete"
+      />
+      <Route
+        access={
+          Array [
+            "researcher",
+            "admin",
+          ]
+        }
+        component={[Function]}
+        exact={true}
+        key="route_10"
         pageTitle="Claim a work"
         path="/records/claim"
       />
@@ -3963,7 +4204,7 @@ exports[`Application component should render app for account with fez author wit
         }
         component={[Function]}
         exact={true}
-        key="route_9"
+        key="route_11"
         pageTitle="Request a correction or upload files"
         path="/records/:pid(UQ:[a-z0-9]+)/fix"
         regExPath="/records/(UQ:[a-z0-9]+)/fix"
@@ -3976,7 +4217,7 @@ exports[`Application component should render app for account with fez author wit
           ]
         }
         exact={true}
-        key="route_10"
+        key="route_12"
         pageTitle="Add a missing work to eSpace"
         path="/records/add/find"
         render={[Function]}
@@ -3989,7 +4230,7 @@ exports[`Application component should render app for account with fez author wit
           ]
         }
         exact={true}
-        key="route_11"
+        key="route_13"
         pageTitle="Add a missing work to eSpace"
         path="/records/add/results"
         render={[Function]}
@@ -4002,7 +4243,7 @@ exports[`Application component should render app for account with fez author wit
           ]
         }
         exact={true}
-        key="route_12"
+        key="route_14"
         pageTitle="Add a missing work to eSpace"
         path="/records/add/new"
         render={[Function]}
@@ -4010,7 +4251,7 @@ exports[`Application component should render app for account with fez author wit
       <Route
         component={[Function]}
         exact={true}
-        key="route_13"
+        key="route_15"
         pageTitle="Link ORCID ID to UQ eSpace"
         path="/author-identifiers/orcid/link"
       />
@@ -4023,19 +4264,19 @@ exports[`Application component should render app for account with fez author wit
         }
         component={[Function]}
         exact={true}
-        key="route_14"
+        key="route_16"
         pageTitle="Google Scholar identifier"
         path="/author-identifiers/google-scholar/link"
       />
       <Route
         component={[Function]}
         exact={true}
-        key="route_15"
+        key="route_17"
         pageTitle="eSpace"
         path="/"
       />
       <Route
-        key="route_16"
+        key="route_18"
         pageTitle="Contact UQ eSpace"
         path="/contact"
         render={[Function]}
@@ -4043,19 +4284,19 @@ exports[`Application component should render app for account with fez author wit
       <Route
         component={[Function]}
         exact={true}
-        key="route_17"
+        key="route_19"
         path="/view/:pid(UQ:[a-z0-9]+)"
         regExPath="/view/(UQ:[a-z0-9]+)"
       />
       <Route
         component={[Function]}
         exact={true}
-        key="route_18"
+        key="route_20"
         pageTitle="eSpace search"
         path="/records/search"
       />
       <Route
-        key="route_19"
+        key="route_21"
         pageTitle="Page not found"
         render={[Function]}
       />
@@ -4138,6 +4379,26 @@ exports[`Application component should render application with routing for the us
           "exact": true,
           "pageTitle": "Claim possible works",
           "path": "/records/possible",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": undefined,
+          "path": "/records/incomplete",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "Fix an incomplete record",
+          "path": "/records/:pid(UQ:[a-z0-9]+)/incomplete",
         },
         Object {
           "access": Array [
@@ -4425,6 +4686,10 @@ exports[`Application component should render application with routing for the us
         Object {
           "linkTo": "/records/possible",
           "primaryText": "Claim possible work",
+        },
+        Object {
+          "linkTo": "/records/incomplete",
+          "primaryText": "Fix my incomplete work",
         },
         Object {
           "linkTo": "/records/add/find",
@@ -6018,6 +6283,26 @@ exports[`Testing wrapped App component Mounts 1`] = `
                               ],
                               "component": [Function],
                               "exact": true,
+                              "pageTitle": undefined,
+                              "path": "/records/incomplete",
+                            },
+                            Object {
+                              "access": Array [
+                                "researcher",
+                                "admin",
+                              ],
+                              "component": [Function],
+                              "exact": true,
+                              "pageTitle": "Fix an incomplete record",
+                              "path": "/records/:pid(UQ:[a-z0-9]+)/incomplete",
+                            },
+                            Object {
+                              "access": Array [
+                                "researcher",
+                                "admin",
+                              ],
+                              "component": [Function],
+                              "exact": true,
                               "pageTitle": "Claim a work",
                               "path": "/records/claim",
                             },
@@ -6232,6 +6517,26 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                   ],
                                   "component": [Function],
                                   "exact": true,
+                                  "pageTitle": undefined,
+                                  "path": "/records/incomplete",
+                                },
+                                Object {
+                                  "access": Array [
+                                    "researcher",
+                                    "admin",
+                                  ],
+                                  "component": [Function],
+                                  "exact": true,
+                                  "pageTitle": "Fix an incomplete record",
+                                  "path": "/records/:pid(UQ:[a-z0-9]+)/incomplete",
+                                },
+                                Object {
+                                  "access": Array [
+                                    "researcher",
+                                    "admin",
+                                  ],
+                                  "component": [Function],
+                                  "exact": true,
                                   "pageTitle": "Claim a work",
                                   "path": "/records/claim",
                                 },
@@ -6438,6 +6743,26 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                     "exact": true,
                                     "pageTitle": "Claim possible works",
                                     "path": "/records/possible",
+                                  },
+                                  Object {
+                                    "access": Array [
+                                      "researcher",
+                                      "admin",
+                                    ],
+                                    "component": [Function],
+                                    "exact": true,
+                                    "pageTitle": undefined,
+                                    "path": "/records/incomplete",
+                                  },
+                                  Object {
+                                    "access": Array [
+                                      "researcher",
+                                      "admin",
+                                    ],
+                                    "component": [Function],
+                                    "exact": true,
+                                    "pageTitle": "Fix an incomplete record",
+                                    "path": "/records/:pid(UQ:[a-z0-9]+)/incomplete",
                                   },
                                   Object {
                                     "access": Array [
@@ -9838,6 +10163,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                               "loadVocabulariesList": [Function],
                                                               "logout": [Function],
                                                               "resetSavingAuthorState": [Function],
+                                                              "searchAuthorIncompletePublications": [Function],
                                                               "searchAuthorPublications": [Function],
                                                               "searchAuthors": [Function],
                                                               "searchEspacePublications": [Function],
@@ -13714,6 +14040,10 @@ exports[`Testing wrapped App component Mounts 1`] = `
                               "primaryText": "Claim possible work",
                             },
                             Object {
+                              "linkTo": "/records/incomplete",
+                              "primaryText": "Fix my incomplete work",
+                            },
+                            Object {
                               "linkTo": "/records/add/find",
                               "primaryText": "Add a missing work",
                             },
@@ -13810,6 +14140,10 @@ exports[`Testing wrapped App component Mounts 1`] = `
                               Object {
                                 "linkTo": "/records/possible",
                                 "primaryText": "Claim possible work",
+                              },
+                              Object {
+                                "linkTo": "/records/incomplete",
+                                "primaryText": "Fix my incomplete work",
                               },
                               Object {
                                 "linkTo": "/records/add/find",
@@ -14958,6 +15292,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 "loadVocabulariesList": [Function],
                                 "logout": [Function],
                                 "resetSavingAuthorState": [Function],
+                                "searchAuthorIncompletePublications": [Function],
                                 "searchAuthorPublications": [Function],
                                 "searchAuthors": [Function],
                                 "searchEspacePublications": [Function],
@@ -16592,6 +16927,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "loadVocabulariesList": [Function],
                                                                             "logout": [Function],
                                                                             "resetSavingAuthorState": [Function],
+                                                                            "searchAuthorIncompletePublications": [Function],
                                                                             "searchAuthorPublications": [Function],
                                                                             "searchAuthors": [Function],
                                                                             "searchEspacePublications": [Function],
@@ -16700,6 +17036,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                               "loadVocabulariesList": [Function],
                                                                               "logout": [Function],
                                                                               "resetSavingAuthorState": [Function],
+                                                                              "searchAuthorIncompletePublications": [Function],
                                                                               "searchAuthorPublications": [Function],
                                                                               "searchAuthors": [Function],
                                                                               "searchEspacePublications": [Function],
@@ -16815,6 +17152,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                 "loadVocabulariesList": [Function],
                                                                                 "logout": [Function],
                                                                                 "resetSavingAuthorState": [Function],
+                                                                                "searchAuthorIncompletePublications": [Function],
                                                                                 "searchAuthorPublications": [Function],
                                                                                 "searchAuthors": [Function],
                                                                                 "searchEspacePublications": [Function],
@@ -17349,6 +17687,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                   "loadVocabulariesList": [Function],
                                                                                   "logout": [Function],
                                                                                   "resetSavingAuthorState": [Function],
+                                                                                  "searchAuthorIncompletePublications": [Function],
                                                                                   "searchAuthorPublications": [Function],
                                                                                   "searchAuthors": [Function],
                                                                                   "searchEspacePublications": [Function],
@@ -20747,6 +21086,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                     "loadVocabulariesList": [Function],
                                                                                     "logout": [Function],
                                                                                     "resetSavingAuthorState": [Function],
+                                                                                    "searchAuthorIncompletePublications": [Function],
                                                                                     "searchAuthorPublications": [Function],
                                                                                     "searchAuthors": [Function],
                                                                                     "searchEspacePublications": [Function],
@@ -20809,6 +21149,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "loadVocabulariesList": [Function],
                                                                                       "logout": [Function],
                                                                                       "resetSavingAuthorState": [Function],
+                                                                                      "searchAuthorIncompletePublications": [Function],
                                                                                       "searchAuthorPublications": [Function],
                                                                                       "searchAuthors": [Function],
                                                                                       "searchEspacePublications": [Function],

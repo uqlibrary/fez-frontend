@@ -5,6 +5,8 @@ import Async from 'modules/SharedComponents/Async';
 export const FixRecord = () => (<Async load={import('modules/FixRecord/containers/FixRecord')} />);
 export const ClaimRecord = () => (<Async load={import('modules/ClaimRecord/containers/ClaimRecord')} />);
 export const PossiblyMyRecords = () => (<Async load={import('modules/PossiblyMyRecords/containers/PossiblyMyRecords')} />);
+export const MyIncompleteRecords = () => (<Async load={import('modules/MyIncompleteRecords/containers/MyIncompleteRecords')} />);
+export const MyIncompleteRecord = () => (<Async load={import('modules/MyIncompleteRecords/containers/MyIncompleteRecord')} />);
 export const Dashboard = () => (<Async load={import('modules/Dashboard/containers/Dashboard')} />);
 export const Orcid = () => (<Async load={import('modules/AuthorIdentifiers/containers/Orcid')} />);
 export const GoogleScholar = () => (<Async load={import('modules/AuthorIdentifiers/containers/GoogleScholar')} />);
