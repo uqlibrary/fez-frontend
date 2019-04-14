@@ -209,10 +209,10 @@ export default {
                 title: 'Work types overview'
             },
             incompleteRecordLure: {
-                title: 'NTRO status',
-                message: 'You have [count] NTRO submission(s) that could be completed',
+                title: 'NTRO Data Required',
+                message: 'We have found [count] record[plural] that require[verbEnding] additional data.',
                 type: 'warning',
-                actionButtonLabel: 'Click here to view'
+                actionButtonLabel: 'View and Update'
             },
         },
         myResearch: {

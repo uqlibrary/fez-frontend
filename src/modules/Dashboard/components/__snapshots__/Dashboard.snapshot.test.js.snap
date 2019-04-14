@@ -2649,9 +2649,9 @@ exports[`Dashboard test displays a lure when the user has incomplete NTRO submis
     >
       <WithStyles(Alert)
         action={[Function]}
-        actionButtonLabel="Click here to view"
-        message="You have 2 NTRO submission(s) that could be completed"
-        title="NTRO status"
+        actionButtonLabel="View and Update"
+        message="We have found 2 records that require additional data."
+        title="NTRO Data Required"
         type="warning"
       />
     </WithStyles(Grid)>

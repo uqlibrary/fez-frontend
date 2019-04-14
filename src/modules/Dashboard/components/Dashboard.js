@@ -152,6 +152,10 @@ export class DashboardClass extends PureComponent {
                     <PublicationStats publicationsStats={this.props.publicationsStats}/>
                 </StandardCard>
             ) : null;
+        /* istanbul ignore else */
+        const pluralTextReplacement = this.props.incompleteRecordList && this.props.incompleteRecordList.length > 1 ? 's' : '';
+        /* istanbul ignore else */
+        const verbEndingTextReplacement = this.props.incompleteRecordList && this.props.incompleteRecordList.length > 1 ? '' : 's';
         return (
             <StandardPage>
                 <Grid container spacing={24}>
@@ -173,7 +177,11 @@ export class DashboardClass extends PureComponent {
                                 <Grid item xs={12} style={{marginTop: -27}}>
                                     <Alert
                                         title={txt.incompleteRecordLure.title}
-                                        message={txt.incompleteRecordLure.message.replace('[count]', this.props.incompleteRecordList.length)}
+                                        message={txt.incompleteRecordLure.message
+                                            .replace('[count]', this.props.incompleteRecordList.length)
+                                            .replace('[plural]', pluralTextReplacement)
+                                            .replace('[verbEnding]', verbEndingTextReplacement)
+                                        }
                                         type={txt.incompleteRecordLure.type}
                                         actionButtonLabel={txt.incompleteRecordLure.actionButtonLabel}
                                         action={this.redirectToMissingRecordslist}
