@@ -18,12 +18,12 @@ describe('incompleteRecords actions', () => {
 
     it('should call loading/loaded actions on successful load', async () => {
         mockApi
-            .onGet(repositories.routes.INCOMPLETE_RECORD_API().apiUrl)
+            .onGet(repositories.routes.INCOMPLETE_RECORDS_API().apiUrl)
             .reply(200, incompleteRecordList);
 
         const expectedActions = [
-            actions.INCOMPLETE_RECORD_LOADING,
-            actions.INCOMPLETE_RECORD_LOADED
+            actions.INCOMPLETE_RECORDS_LOADING,
+            actions.INCOMPLETE_RECORDS_LOADED
         ];
 
         await mockActionsStore.dispatch(incompleteRecords.loadIncompleteRecords());
@@ -36,8 +36,8 @@ describe('incompleteRecords actions', () => {
             .reply(404);
 
         const expectedActions = [
-            actions.INCOMPLETE_RECORD_LOADING,
-            actions.INCOMPLETE_RECORD_FAILED
+            actions.INCOMPLETE_RECORDS_LOADING,
+            actions.INCOMPLETE_RECORDS_FAILED
         ];
 
         await mockActionsStore.dispatch(incompleteRecords.loadIncompleteRecords());
