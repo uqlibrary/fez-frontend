@@ -214,7 +214,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
                     "inputFieldHint": "Enter ISMN, e.g. 9790720208015",
                     "inputFieldLabel": "ISMN value",
                     "remindToAdd": <span>
-                      Pleasepress 
+                      Please press 
                       <b>
                         ENTER
                       </b>
@@ -285,7 +285,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
                     "inputFieldHint": "Enter ISRC, e.g. US6R21320619",
                     "inputFieldLabel": "ISRC value",
                     "remindToAdd": <span>
-                      Pleasepress 
+                      Please press 
                       <b>
                         ENTER
                       </b>
@@ -751,7 +751,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
                     "inputFieldHint": "Enter ISMN, e.g. 9790720208015",
                     "inputFieldLabel": "ISMN value",
                     "remindToAdd": <span>
-                      Pleasepress 
+                      Please press 
                       <b>
                         ENTER
                       </b>
@@ -822,7 +822,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
                     "inputFieldHint": "Enter ISRC, e.g. US6R21320619",
                     "inputFieldLabel": "ISRC value",
                     "remindToAdd": <span>
-                      Pleasepress 
+                      Please press 
                       <b>
                         ENTER
                       </b>
@@ -1165,7 +1165,7 @@ exports[`Component NtroFields should render default view 1`] = `
                     "inputFieldHint": "Enter ISMN, e.g. 9790720208015",
                     "inputFieldLabel": "ISMN value",
                     "remindToAdd": <span>
-                      Pleasepress 
+                      Please press 
                       <b>
                         ENTER
                       </b>
@@ -1236,7 +1236,7 @@ exports[`Component NtroFields should render default view 1`] = `
                     "inputFieldHint": "Enter ISRC, e.g. US6R21320619",
                     "inputFieldLabel": "ISRC value",
                     "remindToAdd": <span>
-                      Pleasepress 
+                      Please press 
                       <b>
                         ENTER
                       </b>
@@ -1702,7 +1702,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
                     "inputFieldHint": "Enter ISMN, e.g. 9790720208015",
                     "inputFieldLabel": "ISMN value",
                     "remindToAdd": <span>
-                      Pleasepress 
+                      Please press 
                       <b>
                         ENTER
                       </b>
@@ -1773,7 +1773,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
                     "inputFieldHint": "Enter ISRC, e.g. US6R21320619",
                     "inputFieldLabel": "ISRC value",
                     "remindToAdd": <span>
-                      Pleasepress 
+                      Please press 
                       <b>
                         ENTER
                       </b>

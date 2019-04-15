@@ -356,7 +356,7 @@ exports[`BookForm renders  component 1`] = `
                 "inputFieldHint": "Enter ISBN, e.g. 13 digit: 9780815375296 or 10 digit: 1861972717",
                 "inputFieldLabel": "ISBN value",
                 "remindToAdd": <span>
-                  Pleasepress 
+                  Please press 
                   <b>
                     ENTER
                   </b>
@@ -430,7 +430,7 @@ exports[`BookForm renders  component 1`] = `
                 "inputFieldHint": "Enter ISSN, e.g. 1838-9414",
                 "inputFieldLabel": "ISSN value",
                 "remindToAdd": <span>
-                  Pleasepress 
+                  Please press 
                   <b>
                     ENTER
                   </b>
@@ -690,7 +690,7 @@ exports[`BookForm renders  component should render contributor assignment 1`] = 
                 "inputFieldHint": "Enter ISBN, e.g. 13 digit: 9780815375296 or 10 digit: 1861972717",
                 "inputFieldLabel": "ISBN value",
                 "remindToAdd": <span>
-                  Pleasepress 
+                  Please press 
                   <b>
                     ENTER
                   </b>
@@ -764,7 +764,7 @@ exports[`BookForm renders  component should render contributor assignment 1`] = 
                 "inputFieldHint": "Enter ISSN, e.g. 1838-9414",
                 "inputFieldLabel": "ISSN value",
                 "remindToAdd": <span>
-                  Pleasepress 
+                  Please press 
                   <b>
                     ENTER
                   </b>
@@ -1221,7 +1221,7 @@ exports[`BookForm renders  component should render non ntro book 1`] = `
                 "inputFieldHint": "Enter ISBN, e.g. 13 digit: 9780815375296 or 10 digit: 1861972717",
                 "inputFieldLabel": "ISBN value",
                 "remindToAdd": <span>
-                  Pleasepress 
+                  Please press 
                   <b>
                     ENTER
                   </b>
@@ -1295,7 +1295,7 @@ exports[`BookForm renders  component should render non ntro book 1`] = `
                 "inputFieldHint": "Enter ISSN, e.g. 1838-9414",
                 "inputFieldLabel": "ISSN value",
                 "remindToAdd": <span>
-                  Pleasepress 
+                  Please press 
                   <b>
                     ENTER
                   </b>
@@ -1877,7 +1877,7 @@ exports[`BookForm renders  component with 4 input fields for NTRO 1`] = `
                 "inputFieldHint": "Enter ISBN, e.g. 13 digit: 9780815375296 or 10 digit: 1861972717",
                 "inputFieldLabel": "ISBN value",
                 "remindToAdd": <span>
-                  Pleasepress 
+                  Please press 
                   <b>
                     ENTER
                   </b>
@@ -1951,7 +1951,7 @@ exports[`BookForm renders  component with 4 input fields for NTRO 1`] = `
                 "inputFieldHint": "Enter ISSN, e.g. 1838-9414",
                 "inputFieldLabel": "ISSN value",
                 "remindToAdd": <span>
-                  Pleasepress 
+                  Please press 
                   <b>
                     ENTER
                   </b>
@@ -2301,7 +2301,7 @@ exports[`BookForm renders  should hide author when is edited book 1`] = `
                 "inputFieldHint": "Enter ISBN, e.g. 13 digit: 9780815375296 or 10 digit: 1861972717",
                 "inputFieldLabel": "ISBN value",
                 "remindToAdd": <span>
-                  Pleasepress 
+                  Please press 
                   <b>
                     ENTER
                   </b>
@@ -2375,7 +2375,7 @@ exports[`BookForm renders  should hide author when is edited book 1`] = `
                 "inputFieldHint": "Enter ISSN, e.g. 1838-9414",
                 "inputFieldLabel": "ISSN value",
                 "remindToAdd": <span>
-                  Pleasepress 
+                  Please press 
                   <b>
                     ENTER
                   </b>
@@ -2832,7 +2832,7 @@ exports[`BookForm renders  should show author when is not edited book 1`] = `
                 "inputFieldHint": "Enter ISBN, e.g. 13 digit: 9780815375296 or 10 digit: 1861972717",
                 "inputFieldLabel": "ISBN value",
                 "remindToAdd": <span>
-                  Pleasepress 
+                  Please press 
                   <b>
                     ENTER
                   </b>
@@ -2906,7 +2906,7 @@ exports[`BookForm renders  should show author when is not edited book 1`] = `
                 "inputFieldHint": "Enter ISSN, e.g. 1838-9414",
                 "inputFieldLabel": "ISSN value",
                 "remindToAdd": <span>
-                  Pleasepress 
+                  Please press 
                   <b>
                     ENTER
                   </b>
