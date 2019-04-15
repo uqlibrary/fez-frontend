@@ -1,0 +1,187 @@
+import MyIncompleteRecord from './MyIncompleteRecord';
+import {mockRecordToFix} from 'mock/data/testing/records';
+import Immutable from 'immutable';
+
+function setup(testProps, isShallow = true) {
+    const props = {
+        "array": {
+            insert: jest.fn(),
+            move: jest.fn(),
+            pop: jest.fn(),
+            push: jest.fn(),
+            remove: jest.fn(),
+            removeAll: jest.fn(),
+            shift: jest.fn(),
+            splice: jest.fn(),
+            swap: jest.fn(),
+            unshift: jest.fn(),
+        },
+        autofill: jest.fn(),
+        blur: jest.fn(),
+        change: jest.fn(),
+        clearAsyncError: jest.fn(),
+        "anyTouched": true,
+        "asyncValidating": false,
+        asyncValidate: jest.fn(),
+        clearFields: jest.fn(),
+        clearSubmitErrors: jest.fn(),
+        destroy: jest.fn(),
+        dispatch: jest.fn(),
+        initialize: jest.fn(),
+        reset: jest.fn(),
+        resetSection: jest.fn(),
+        touch: jest.fn(),
+        submit: jest.fn(),
+        untouch: jest.fn(),
+        clearSubmit: jest.fn(),
+        "dirty": true,
+        "form": "form",
+        "initialized": false,
+        "submitFailed": false,
+        "valid": true,
+        pure: true,
+        pristine: true,
+        submitting: false,
+        invalid: false,
+        submitSucceeded: false,
+        recordToFix: testProps.recordToFix,
+        loadingRecordToFix: testProps.loadingRecordToFix || false,
+
+        accountAuthorLoading: testProps.accountAuthorLoading || false,
+        author: testProps.author || {aut_id: 410},
+
+        handleSubmit: testProps.handleSubmit || jest.fn(),
+        initialValues: testProps.initialValues ||
+            Immutable.Map({
+                publication: Immutable.Map(testProps.recordToFix || mockRecordToFix),
+                author: Immutable.Map(testProps.author || {aut_id: 410})
+            }),
+        actions: testProps.actions || {},
+        history: testProps.history || {go: jest.fn()},
+        match: testProps.match || {},
+
+        publicationToFixFileUploadingError: testProps.publicationToFixFileUploadingError || false,
+        ...testProps,
+    };
+    return getElement(MyIncompleteRecord, props, isShallow);
+}
+
+describe('Component MyIncompleteRecord', () => {
+
+    it('should render loader when author is loading', () => {
+        const wrapper = setup({recordToFix: mockRecordToFix, accountAuthorLoading: true});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render loader when record is loading', () => {
+        const wrapper = setup({recordToFix: mockRecordToFix, loadingRecordToFix: true});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    // TODO: un comment this when uncommenting from the compoennt
+    // it('should redirect if author not linked', () => {
+    //     const testMethod = jest.fn();
+    //     const wrapper = setup({author: {aut_id: 1001}, recordToFix: mockRecordToFix, history: {go: testMethod}});
+    //     expect(testMethod).toHaveBeenCalled();
+    // });
+
+    it('should render record citation, two actions in select field and a cancel button', () => {
+        const wrapper = setup({recordToFix: mockRecordToFix});
+        expect(toJson(wrapper)).toMatchSnapshot();
+
+        // expect(wrapper.find('withRouter(Connect(PublicationCitation))').length).toEqual(1);
+    });
+
+    it('should set action for form', () => {
+        const wrapper = setup({recordToFix: mockRecordToFix});
+        wrapper.instance()._actionSelected('', 'fix');
+        expect(wrapper.state().selectedRecordAction).toEqual('fix');
+    });
+
+    it('should set local variables', () => {
+        const wrapper = setup({recordToFix: mockRecordToFix});
+        wrapper.setState({selectedRecordAction: 'unclaim'});
+        wrapper.instance()._setSuccessConfirmation('successBox');
+        expect(wrapper.instance().successConfirmationBox).toEqual('successBox');
+    });
+
+    it('should redirect to other pages', () => {
+        const testMethod = jest.fn();
+        const goBack = jest.fn();
+
+        const wrapper = setup({recordToFix: mockRecordToFix, history: {push: testMethod, goBack: goBack}});
+
+        wrapper.instance()._cancelFix();
+        expect(goBack).toHaveBeenCalled();
+    });
+
+    it('should clear record to fix when leaving the form', () => {
+        const actionFunction = jest.fn();
+        const wrapper = setup({recordToFix: mockRecordToFix, actions: {clearFixRecord: actionFunction}});
+        wrapper.instance().componentWillUnmount();
+        expect(actionFunction).toHaveBeenCalled();
+    });
+
+    it('should load record if record is not loaded', () => {
+        const actionFunction = jest.fn();
+        const wrapper = setup({loadingRecordToFix: false, recordToFix: null, actions: {loadRecordToFix: actionFunction}, match: {params: {pid: 'UQ:1001'}}});
+        wrapper.update;
+        wrapper.instance().componentDidMount();
+        expect(actionFunction).toHaveBeenCalledWith('UQ:1001');
+    });
+
+    it('should display confirmation box after successful submission', () => {
+        const testMethod = jest.fn();
+        const wrapper = setup({recordToFix: mockRecordToFix});
+        wrapper.instance().successConfirmationBox = {showConfirmation: testMethod};
+        wrapper.instance().componentWillReceiveProps({submitSucceeded: true});
+        expect(testMethod).toHaveBeenCalled();
+    });
+
+    it('should render the confirm dialog box with an alert due to a file upload failure', () => {
+        const wrapper = setup({recordToFix: mockRecordToFix, publicationToFixFileUploadingError: true});
+        wrapper.setState({selectedRecordAction: 'fix'});
+        expect(toJson(wrapper)).toMatchSnapshot();
+
+    });
+
+    it('should render the confirm dialog box without an alert due to a file upload success', () => {
+        const wrapper = setup({recordToFix: mockRecordToFix, publicationToFixFileUploadingError: false});
+        wrapper.setState({selectedRecordAction: 'fix'});
+        expect(toJson(wrapper)).toMatchSnapshot();
+
+    });
+
+    it('_handleDefaultSubmit()', () => {
+        const wrapper = setup({recordToFix: mockRecordToFix, publicationToFixFileUploadingError: false});
+        const testFN = jest.fn();
+        const event = {preventDefault: testFN};
+        wrapper.instance()._handleDefaultSubmit(event);
+        expect(testFN).toHaveBeenCalled();
+
+    });
+
+    it('_handleDefaultSubmit()', () => {
+        const wrapper = setup({recordToFix: mockRecordToFix, publicationToFixFileUploadingError: false});
+        wrapper.instance()._handleDefaultSubmit();
+        expect(toJson(wrapper)).toMatchSnapshot();
+
+    });
+
+    it('componentWillReceiveProps()', () => {
+        const wrapper = setup({submitSucceeded: true, recordToFix: mockRecordToFix, publicationToFixFileUploadingError: false});
+        const nextProps = {submitSucceeded: true};
+        wrapper.instance().componentWillReceiveProps(nextProps);
+        expect(toJson(wrapper)).toMatchSnapshot();
+
+    });
+
+    it('componentWillUnmount()', () => {
+        const testFN = jest.fn();
+        const wrapper = setup({actions: {clearFixRecord: testFN}, submitSucceeded: true, recordToFix: mockRecordToFix, publicationToFixFileUploadingError: false});
+        wrapper.instance().componentWillUnmount();
+        expect(testFN).toHaveBeenCalled();
+
+    });
+
+});

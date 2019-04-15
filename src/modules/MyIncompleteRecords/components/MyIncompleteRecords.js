@@ -65,7 +65,7 @@ export default class MyIncompleteRecords extends PureComponent {
             && newProps.location.pathname === this.props.thisUrl) {
             this.setState({...(!!newProps.location.state ? newProps.location.state : this.initState)}, () => {
                 // only will be called when user clicks back on my records page
-                this.props.actions.searchAuthorPublications({...this.state});
+                this.props.actions.searchAuthorIncompletePublications({...this.state});
             });
         }
         // set forever-true flag if user has publications
@@ -116,16 +116,12 @@ export default class MyIncompleteRecords extends PureComponent {
             search: `?ts=${Date.now()}`,
             state: {...this.state}
         });
-        this.props.actions.searchAuthorPublications({...this.state});
+        this.props.actions.searchAuthorIncompletePublications({...this.state});
     };
 
     completeRecord = (item) => {
         this.props.history.push(routes.pathConfig.records.incompleteFix(item.rek_pid));
         this.props.actions.setFixRecord(item);
-    }
-
-    handleExportPublications = (exportFormat) => {
-        this.props.actions.exportAuthorPublications({...exportFormat, ...this.state});
     }
 
     render() {
@@ -195,8 +191,6 @@ export default class MyIncompleteRecords extends PureComponent {
                                             pagingData={pagingData}
                                             onSortByChanged={this.sortByChanged}
                                             onPageSizeChanged={this.pageSizeChanged}
-                                            onExportPublications={this.handleExportPublications}
-                                            canUseExport={this.props.canUseExport}
                                             disabled={isLoading}/>
                                     </Grid>
                                     <Grid item xs={12}>
@@ -209,7 +203,7 @@ export default class MyIncompleteRecords extends PureComponent {
                                     <Grid item xs={12}>
                                         {
                                             isLoading &&
-                                            <div className="is-centered"><InlineLoader message={this.props.loadingPublicationsList ? txt.loadingPagingMessage : txt.exportPublicationsLoadingMessage}/></div>
+                                            <div className="is-centered"><InlineLoader message={this.props.loadingPublicationsList && txt.loadingPagingMessage}/></div>
                                         }
                                         {
                                             !this.props.exportPublicationsLoading && !this.props.loadingPublicationsList && this.props.publicationsList && this.props.publicationsList.length > 0 &&

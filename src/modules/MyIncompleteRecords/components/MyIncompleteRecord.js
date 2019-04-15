@@ -53,20 +53,21 @@ export default class MyIncompleteRecord extends PureComponent {
         this.props.actions.clearFixRecord();
     }
 
-    isLoggedInUserLinked = (author, recordToFix, searchKey, subkey) => {
-        return !!author && !!recordToFix && recordToFix[searchKey] && recordToFix[searchKey].length > 0
-            && recordToFix[searchKey].filter(authorId => authorId[subkey] === author.aut_id).length > 0;
-    };
+    // TODO: Uncomment this before going live
+    // isLoggedInUserLinked = (author, recordToFix, searchKey, subkey) => {
+    //     return !!author && !!recordToFix && recordToFix[searchKey] && recordToFix[searchKey].length > 0
+    //         && recordToFix[searchKey].filter(authorId => authorId[subkey] === author.aut_id).length > 0;
+    // };
 
-    isAuthorLinked = () => {
-        const isAuthorLinked = this.isLoggedInUserLinked(this.props.author, this.props.recordToFix, 'fez_record_search_key_author_id', 'rek_author_id');
-        const isContributorLinked = this.isLoggedInUserLinked(this.props.author, this.props.recordToFix, 'fez_record_search_key_contributor_id', 'rek_contributor_id');
-
-        return isAuthorLinked || isContributorLinked;
-    };
+    // TODO: Uncomment this before going live
+    // isAuthorLinked = () => {
+    //     const isAuthorLinked = this.isLoggedInUserLinked(this.props.author, this.props.recordToFix, 'fez_record_search_key_author_id', 'rek_author_id');
+    //     const isContributorLinked = this.isLoggedInUserLinked(this.props.author, this.props.recordToFix, 'fez_record_search_key_contributor_id', 'rek_contributor_id');
+    //
+    //     return isAuthorLinked || isContributorLinked;
+    // };
 
     _cancelFix = () => {
-        console.log('GOING BACK');
         this.props.history.goBack();
     };
 
@@ -85,7 +86,6 @@ export default class MyIncompleteRecord extends PureComponent {
     };
 
     render() {
-        console.log('LOADING THIS PAGE');
         // console.log(this.props.initialValues.toJS());
         // if author is not linked to this record, abandon form
         // TODO: Uncomment this before going live
@@ -113,7 +113,7 @@ export default class MyIncompleteRecord extends PureComponent {
             </React.Fragment>
         );
         return (
-            <StandardPage title={this.props.recordToFix.rek_title}>
+            <StandardPage title={this.props.recordToFix && this.props.recordToFix.rek_title || ''}>
                 <PublicationCitation publication={this.props.recordToFix} hideTitle/>
                 <form onSubmit={this._handleDefaultSubmit}>
                     <Grid container spacing={24}>
