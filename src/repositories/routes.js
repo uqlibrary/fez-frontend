@@ -171,7 +171,7 @@ export const CURRENT_USER_INCOMPLETE_RECORDS_API = (values, route = 'search') =>
         apiUrl: `records/${route}`,
         options: {
             params: {
-                rule: 'mine',
+                rule: 'incomplete',
                 ...{...getStandardSearchParams(values), ...getOpenAccessSearchParams(values)}
             }
         }
