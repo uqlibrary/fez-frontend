@@ -1042,7 +1042,7 @@ exports[`Application component should render alert if user is not fez author 1`]
         },
         Object {
           "linkTo": "/records/incomplete",
-          "primaryText": "Fix my incomplete work",
+          "primaryText": "My incomplete work",
         },
         Object {
           "linkTo": "/records/add/find",
@@ -1740,7 +1740,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         },
         Object {
           "linkTo": "/records/incomplete",
-          "primaryText": "Fix my incomplete work",
+          "primaryText": "My incomplete work",
         },
         Object {
           "linkTo": "/records/add/find",
@@ -2761,7 +2761,7 @@ exports[`Application component should render app for account with fez author wit
         },
         Object {
           "linkTo": "/records/incomplete",
-          "primaryText": "Fix my incomplete work",
+          "primaryText": "My incomplete work",
         },
         Object {
           "linkTo": "/records/add/find",
@@ -3437,7 +3437,7 @@ exports[`Application component should render app for account with fez author wit
         },
         Object {
           "linkTo": "/records/incomplete",
-          "primaryText": "Fix my incomplete work",
+          "primaryText": "My incomplete work",
         },
         Object {
           "linkTo": "/records/add/find",
@@ -4689,7 +4689,7 @@ exports[`Application component should render application with routing for the us
         },
         Object {
           "linkTo": "/records/incomplete",
-          "primaryText": "Fix my incomplete work",
+          "primaryText": "My incomplete work",
         },
         Object {
           "linkTo": "/records/add/find",
@@ -14041,7 +14041,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                             },
                             Object {
                               "linkTo": "/records/incomplete",
-                              "primaryText": "Fix my incomplete work",
+                              "primaryText": "My incomplete work",
                             },
                             Object {
                               "linkTo": "/records/add/find",
@@ -14143,7 +14143,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                               },
                               Object {
                                 "linkTo": "/records/incomplete",
-                                "primaryText": "Fix my incomplete work",
+                                "primaryText": "My incomplete work",
                               },
                               Object {
                                 "linkTo": "/records/add/find",

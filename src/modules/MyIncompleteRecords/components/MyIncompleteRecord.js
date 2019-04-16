@@ -1,17 +1,17 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
-import {propTypes} from 'redux-form/immutable';
-// import {Field} from 'redux-form/immutable';
+import {Field, propTypes} from 'redux-form/immutable';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
-// import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
+import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
 import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
+import {FileUploadField} from 'modules/SharedComponents/Toolbox/FileUploader';
 import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
 import {PublicationCitation} from 'modules/SharedComponents/PublicationCitation';
 import {default as pagesLocale} from 'locale/pages';
-// import {validation} from 'config';
+import {validation} from 'config';
 import NtroFields from 'modules/SharedComponents/Toolbox/NtroFields/components/NtroFields';
 import {DOCUMENT_TYPE_BOOK, DOCUMENT_TYPE_JOURNAL_ARTICLE, DOCUMENT_TYPE_DESIGN, DOCUMENT_TYPE_RESEARCH_REPORT, CW_NTRO_SUBTYPES, LP_NTRO_SUBTYPES, RRW_NTRO_SUBTYPES, CPEE_NTRO_SUBTYPES, RESEARCH_REPORT_NTRO_SUBTYPES, NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK } from 'config/general';
 import {general} from 'config';
@@ -56,20 +56,21 @@ export default class MyIncompleteRecord extends PureComponent {
         this.props.actions.clearFixRecord();
     }
 
-    isLoggedInUserLinked = (author, recordToFix, searchKey, subkey) => {
-        return !!author && !!recordToFix && recordToFix[searchKey] && recordToFix[searchKey].length > 0
-            && recordToFix[searchKey].filter(authorId => authorId[subkey] === author.aut_id).length > 0;
-    };
+    // TODO: Uncomment this before going live
+    // isLoggedInUserLinked = (author, recordToFix, searchKey, subkey) => {
+    //     return !!author && !!recordToFix && recordToFix[searchKey] && recordToFix[searchKey].length > 0
+    //         && recordToFix[searchKey].filter(authorId => authorId[subkey] === author.aut_id).length > 0;
+    // };
 
-    isAuthorLinked = () => {
-        const isAuthorLinked = this.isLoggedInUserLinked(this.props.author, this.props.recordToFix, 'fez_record_search_key_author_id', 'rek_author_id');
-        const isContributorLinked = this.isLoggedInUserLinked(this.props.author, this.props.recordToFix, 'fez_record_search_key_contributor_id', 'rek_contributor_id');
-
-        return isAuthorLinked || isContributorLinked;
-    };
+    // TODO: Uncomment this before going live
+    // isAuthorLinked = () => {
+    //     const isAuthorLinked = this.isLoggedInUserLinked(this.props.author, this.props.recordToFix, 'fez_record_search_key_author_id', 'rek_author_id');
+    //     const isContributorLinked = this.isLoggedInUserLinked(this.props.author, this.props.recordToFix, 'fez_record_search_key_contributor_id', 'rek_contributor_id');
+    //
+    //     return isAuthorLinked || isContributorLinked;
+    // };
 
     _cancelFix = () => {
-        console.log('GOING BACK');
         this.props.history.goBack();
     };
 
@@ -146,7 +147,7 @@ export default class MyIncompleteRecord extends PureComponent {
         const editGrants = false; // TODO
 
         console.log('LOADING THIS PAGE');
-
+        // console.log(this.props.initialValues.toJS());
         // if author is not linked to this record, abandon form
         // TODO: Uncomment this before going live
         // if (!(this.props.accountAuthorLoading || this.props.loadingRecordToFix) && !this.isAuthorLinked()) {
@@ -165,15 +166,15 @@ export default class MyIncompleteRecord extends PureComponent {
         }
 
         // set confirmation message depending on file upload status
-        // const saveConfirmationLocale = {...txt.successWorkflowConfirmation};
-        // saveConfirmationLocale.confirmationMessage = (
-        //     <React.Fragment>
-        //         {this.props.publicationToFixFileUploadingError && <Alert {...saveConfirmationLocale.fileFailConfirmationAlert} />}
-        //         {saveConfirmationLocale.confirmationMessage}
-        //     </React.Fragment>
-        // );
+        const saveConfirmationLocale = {...txt.successWorkflowConfirmation};
+        saveConfirmationLocale.confirmationMessage = (
+            <React.Fragment>
+                {this.props.publicationToFixFileUploadingError && <Alert {...saveConfirmationLocale.fileFailConfirmationAlert} />}
+                {saveConfirmationLocale.confirmationMessage}
+            </React.Fragment>
+        );
         return (
-            <StandardPage title={`${this.props.recordToFix.rek_title}`}>
+            <StandardPage title={this.props.recordToFix && this.props.recordToFix.rek_title || ''}>
                 <PublicationCitation publication={this.props.recordToFix} hideTitle/>
 
                 {
@@ -199,16 +200,16 @@ export default class MyIncompleteRecord extends PureComponent {
                 <form onSubmit={this._handleDefaultSubmit}>
                     <Grid container spacing={24}>
                         <Grid item xs={12}>
-                            {/* <StandardCard title={`Enter Required Fields for "${this.props.recordToFix.rek_title}"`}>*/}
-                            {/*    <Field*/}
-                            {/*        component={TextField}*/}
-                            {/*        name="rek_title"*/}
-                            {/*        fullWidth*/}
-                            {/*        label={'Title'}*/}
-                            {/*        required*/}
-                            {/*        validate={[validation.required]}*/}
-                            {/*    />*/}
-                            {/* </StandardCard>*/}
+                            <StandardCard title={'Test of initialValues from a PID'}>
+                                <Field
+                                    component={TextField}
+                                    name="rek_title"
+                                    fullWidth
+                                    label={'Title'}
+                                    required
+                                    validate={[validation.required]}
+                                />
+                            </StandardCard>
 
                             {
                                 isNtro &&
@@ -235,18 +236,24 @@ export default class MyIncompleteRecord extends PureComponent {
                                 />
                             }
                         </Grid>
-                        {/* <Grid item xs={12}>*/}
-                        {/*    <StandardCard title={txt.fileUpload.title} help={txt.fileUpload.help}>*/}
-                        {/*        <Field*/}
-                        {/*            name="files"*/}
-                        {/*            component={ FileUploadField }*/}
-                        {/*            disabled={this.props.submitting}*/}
-                        {/*            requireOpenAccessStatus*/}
-                        {/*            validate={[validation.validFileUpload]}*/}
-                        {/*            isNtro*/}
-                        {/*        />*/}
-                        {/*    </StandardCard>*/}
-                        {/* </Grid>*/}
+                        <Grid item xs={12}>
+                            <StandardCard title={'JSON of the initialValues'}>
+                                <JSONPretty id="json-pretty" data={this.props.initialValues} />
+                            </StandardCard>
+                        </Grid>
+                        <Grid item xs={12}>
+                            <StandardCard title={txt.fileUpload.title} help={txt.fileUpload.help}>
+                                <Field
+                                    name="files"
+                                    component={ FileUploadField }
+                                    disabled={this.props.submitting}
+                                    requireOpenAccessStatus
+                                    validate={[validation.validFileUpload]}
+                                    isNtro
+                                />
+                            </StandardCard>
+
+                        </Grid>
                     </Grid>
                     <Grid container spacing={24}>
                         <Grid item xs />
@@ -269,13 +276,6 @@ export default class MyIncompleteRecord extends PureComponent {
                         </Grid>
                     </Grid>
                 </form>
-
-                {/* remove before prod */}
-                <Grid item xs={12}>
-                    <StandardCard title={'JSON of the initialValues'}>
-                        <JSONPretty id="json-pretty" data={this.props.initialValues} />
-                    </StandardCard>
-                </Grid>
             </StandardPage>
         );
     }

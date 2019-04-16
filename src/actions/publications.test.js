@@ -158,6 +158,93 @@ describe('Publications actions', () => {
         });
     });
 
+    describe('searchAuthorIncompletePublications()', () => {
+
+        it('dispatches expected actions on successful search', async () => {
+            const testRequest = {
+                userName: 'uqresearcher',
+                page: 1,
+                pageSize: 20,
+                sortBy: 'score',
+                sortDirection: 'desc',
+                facets: {},
+            };
+
+            mockApi
+                .onGet(repositories.routes.CURRENT_USER_INCOMPLETE_RECORDS_API(testRequest).apiUrl)
+                .reply(200, {});
+
+            const expectedActions = [
+                actions.AUTHOR_INCOMPLETEPUBLICATIONS_LOADING,
+                actions.AUTHOR_INCOMPLETEPUBLICATIONS_LOADED
+            ];
+
+            await mockActionsStore.dispatch(publicationsActions.searchAuthorIncompletePublications(testRequest));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+
+        it('dispatches expected actions for anon user', async () => {
+            const testRequest = {
+                userName: 'uqresearcher',
+                page: 1,
+                pageSize: 20,
+                sortBy: 'score',
+                sortDirection: 'desc',
+                facets: {},
+            };
+
+            mockApi
+                .onAny()
+                .reply(403, {});
+
+            const expectedActions = [
+                actions.AUTHOR_INCOMPLETEPUBLICATIONS_LOADING,
+                actions.CURRENT_ACCOUNT_ANONYMOUS,
+                actions.AUTHOR_INCOMPLETEPUBLICATIONS_FAILED
+            ];
+
+            await mockActionsStore.dispatch(publicationsActions.searchAuthorIncompletePublications(testRequest));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+
+        it('dispatches expected actions if api fails', async () => {
+            const testRequest = {
+                userName: 'uqresearcher',
+                page: 1,
+                pageSize: 20,
+                sortBy: 'score',
+                sortDirection: 'desc',
+                facets: {},
+            };
+
+            mockApi
+                .onAny()
+                .reply(500, {});
+
+            const expectedActions = [
+                actions.AUTHOR_INCOMPLETEPUBLICATIONS_LOADING,
+                actions.APP_ALERT_SHOW,
+                actions.AUTHOR_INCOMPLETEPUBLICATIONS_FAILED
+            ];
+
+            await mockActionsStore.dispatch(publicationsActions.searchAuthorIncompletePublications(testRequest));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+
+        it('handles defaults', async () => {
+            mockApi
+                .onAny()
+                .reply(200, {});
+
+            const expectedActions = [
+                actions.AUTHOR_INCOMPLETEPUBLICATIONS_LOADING,
+                actions.AUTHOR_INCOMPLETEPUBLICATIONS_LOADED
+            ]
+            await mockActionsStore.dispatch(publicationsActions.searchAuthorIncompletePublications({}));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+    });
+
     describe('searchTrendingPublications()', () => {
 
         it('dispatches expected actions on successful request', async () => {
