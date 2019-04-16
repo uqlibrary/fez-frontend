@@ -61,6 +61,10 @@ export class DashboardClass extends PureComponent {
         possiblyYourPublicationsCountLoading: PropTypes.bool,
         hidePossiblyYourPublicationsLure: PropTypes.bool,
 
+        // incomplete Record lure
+        loadingIncompleteRecordData: PropTypes.bool,
+        incompleteRecordList: PropTypes.array,
+
         // wos/scopus data
         loadingPublicationsStats: PropTypes.bool,
         publicationsStats: PropTypes.object,
@@ -86,8 +90,10 @@ export class DashboardClass extends PureComponent {
         if (this.props.account && this.props.account.id) {
             this.props.actions.countPossiblyYourPublications(this.props.account.id);
             this.props.actions.loadAuthorPublicationsStats(this.props.account.id);
+            this.props.actions.loadIncompleteRecords();
         }
     }
+
     _claimYourPublications = () => {
         this.props.history.push(pathConfig.records.possible);
     };
@@ -98,6 +104,10 @@ export class DashboardClass extends PureComponent {
     handleTabChange = (event, value) => {
         this.setState({
             dashboardPubsTabs: value});
+    };
+
+    redirectToMissingRecordslist = () => {
+        this.props.history.push(pathConfig.records.incomplete);
     };
 
     render() {
@@ -142,6 +152,10 @@ export class DashboardClass extends PureComponent {
                     <PublicationStats publicationsStats={this.props.publicationsStats}/>
                 </StandardCard>
             ) : null;
+        /* istanbul ignore else */
+        const pluralTextReplacement = this.props.incompleteRecordList && this.props.incompleteRecordList.length > 1 ? 's' : '';
+        /* istanbul ignore else */
+        const verbEndingTextReplacement = this.props.incompleteRecordList && this.props.incompleteRecordList.length > 1 ? '' : 's';
         return (
             <StandardPage>
                 <Grid container spacing={24}>
@@ -156,6 +170,24 @@ export class DashboardClass extends PureComponent {
                     {
                         !loading && this.props.authorDetails &&
                         <React.Fragment>
+                            {
+                                !!txt.incompleteRecordLure &&
+                                !this.props.loadingIncompleteRecordData &&
+                                !!this.props.incompleteRecordList && this.props.incompleteRecordList.length > 0 &&
+                                <Grid item xs={12} style={{marginTop: -27}}>
+                                    <Alert
+                                        title={txt.incompleteRecordLure.title}
+                                        message={txt.incompleteRecordLure.message
+                                            .replace('[count]', this.props.incompleteRecordList.length)
+                                            .replace('[plural]', pluralTextReplacement)
+                                            .replace('[verbEnding]', verbEndingTextReplacement)
+                                        }
+                                        type={txt.incompleteRecordLure.type}
+                                        actionButtonLabel={txt.incompleteRecordLure.actionButtonLabel}
+                                        action={this.redirectToMissingRecordslist}
+                                    />
+                                </Grid>
+                            }
                             <Grid item xs={12}>
                                 <DashboardAuthorProfile
                                     authorDetails={this.props.authorDetails}

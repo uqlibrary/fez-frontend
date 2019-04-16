@@ -208,6 +208,12 @@ export default {
             publicationTypesCountChart: {
                 title: 'Work types overview'
             },
+            incompleteRecordLure: {
+                title: 'NTRO Data Required',
+                message: 'We have found [count] record[plural] that require[verbEnding] additional data.',
+                type: 'warning',
+                actionButtonLabel: 'View and Update'
+            },
         },
         myResearch: {
             pageTitle: 'My research',
