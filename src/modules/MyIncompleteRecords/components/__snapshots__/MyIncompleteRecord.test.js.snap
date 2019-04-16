@@ -400,6 +400,30 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
       }
     }
   />
+  <p>
+    <b>
+      Display Type
+    </b>
+     (for dev): 
+    Journal Article
+  </p>
+  <p>
+    <b>
+      Subtype
+    </b>
+     (for dev) : 
+    Other
+  </p>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <WithStyles(Alert)
+      message="This record has missing data - enter all fields to give a quality record."
+      title="Missing data"
+      type="info_outline"
+    />
+  </WithStyles(Grid)>
   <form
     onSubmit={[Function]}
   >
@@ -1301,6 +1325,30 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
       }
     }
   />
+  <p>
+    <b>
+      Display Type
+    </b>
+     (for dev): 
+    Journal Article
+  </p>
+  <p>
+    <b>
+      Subtype
+    </b>
+     (for dev) : 
+    Other
+  </p>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <WithStyles(Alert)
+      message="This record has missing data - enter all fields to give a quality record."
+      title="Missing data"
+      type="info_outline"
+    />
+  </WithStyles(Grid)>
   <form
     onSubmit={[Function]}
   >
@@ -2214,6 +2262,30 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
       }
     }
   />
+  <p>
+    <b>
+      Display Type
+    </b>
+     (for dev): 
+    Journal Article
+  </p>
+  <p>
+    <b>
+      Subtype
+    </b>
+     (for dev) : 
+    Other
+  </p>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <WithStyles(Alert)
+      message="This record has missing data - enter all fields to give a quality record."
+      title="Missing data"
+      type="info_outline"
+    />
+  </WithStyles(Grid)>
   <form
     onSubmit={[Function]}
   >
@@ -3115,6 +3187,30 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
       }
     }
   />
+  <p>
+    <b>
+      Display Type
+    </b>
+     (for dev): 
+    Journal Article
+  </p>
+  <p>
+    <b>
+      Subtype
+    </b>
+     (for dev) : 
+    Other
+  </p>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <WithStyles(Alert)
+      message="This record has missing data - enter all fields to give a quality record."
+      title="Missing data"
+      type="info_outline"
+    />
+  </WithStyles(Grid)>
   <form
     onSubmit={[Function]}
   >
@@ -4016,6 +4112,30 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
       }
     }
   />
+  <p>
+    <b>
+      Display Type
+    </b>
+     (for dev): 
+    Journal Article
+  </p>
+  <p>
+    <b>
+      Subtype
+    </b>
+     (for dev) : 
+    Other
+  </p>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <WithStyles(Alert)
+      message="This record has missing data - enter all fields to give a quality record."
+      title="Missing data"
+      type="info_outline"
+    />
+  </WithStyles(Grid)>
   <form
     onSubmit={[Function]}
   >

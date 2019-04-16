@@ -178,14 +178,14 @@ export default class MyIncompleteRecord extends PureComponent {
                 <PublicationCitation publication={this.props.recordToFix} hideTitle/>
 
                 {
-                    // remove before prod
-                    !!this.props.recordToFix.rek_display_type_lookup ?
+                    // remove before going live
+                    !!this.props.recordToFix && !!this.props.recordToFix.rek_display_type_lookup ?
                         <p><b>Display Type</b> (for dev): {this.props.recordToFix.rek_display_type_lookup}</p>
                         : <p><b>Display Type</b> (for dev): missing</p>
                 }
                 {
-                    // remove before prod
-                    !!this.props.recordToFix.rek_subtype ?
+                    // remove before going live
+                    !!this.props.recordToFix && !!this.props.recordToFix.rek_subtype ?
                         <p><b>Subtype</b> (for dev) : {this.props.recordToFix.rek_subtype}</p>
                         : <p><b>Subtype</b> (for dev) : missing</p>
                 }
