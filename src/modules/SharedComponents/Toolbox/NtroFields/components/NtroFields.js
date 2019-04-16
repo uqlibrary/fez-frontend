@@ -37,7 +37,10 @@ export default class NtroFields extends React.PureComponent {
         hideSeries: PropTypes.bool,
         hideGrants: PropTypes.bool,
         hideLanguage: PropTypes.bool,
-        showContributionStatement: PropTypes.bool
+        showContributionStatement: PropTypes.bool,
+        showSignificance: PropTypes.bool,
+        hideAbstract: PropTypes.bool,
+        defaultLanguage: PropTypes.text
     };
 
     static defaultProps = {
@@ -55,6 +58,9 @@ export default class NtroFields extends React.PureComponent {
         hideGrants: false,
         hideLanguage: false,
         showContributionStatement: false,
+        showSignificance: false,
+        hideAbstract: false,
+        defaultLanguage: null,
         locale: {
             contributionStatement: {
                 title: 'Author/Creator research statement',
@@ -170,36 +176,43 @@ export default class NtroFields extends React.PureComponent {
         return (
             <React.Fragment>
                 {
-                    this.props.showContributionStatement &&
+                    (this.props.showContributionStatement || this.props.showSignificance) &&
                     <Grid item xs={12}>
                         <StandardCard title={contributionStatement.title} help={contributionStatement.help}>
                             <Grid container spacing={8}>
-                                <Grid item xs={12}>
-                                    <Typography>{contributionStatement.fields.scaleOfWork.description}</Typography>
-                                    <Field
-                                        component={SelectField}
-                                        disabled={this.props.submitting}
-                                        name="significance"
-                                        label={contributionStatement.fields.scaleOfWork.label}
-                                        required
-                                        validate={[validation.required]}
-                                    >
-                                        <MenuItem value={SIGNIFICANCE_MINOR}>Minor</MenuItem>
-                                        <MenuItem value={SIGNIFICANCE_MAJOR}>Major</MenuItem>
-                                    </Field>
-                                </Grid>
-                                <Grid item xs={12} style={{marginTop: 24}}>
-                                    <Field
-                                        component={RichEditorField}
-                                        name="impactStatement"
-                                        fullWidth
-                                        title={contributionStatement.fields.impactStatement.label}
-                                        description={contributionStatement.fields.impactStatement.placeholder}
-                                        maxValue={2000}
-                                        disabled={this.props.submitting}
-                                        validate={[validation.required, validation.maxLengthWithWhitespace(2000)]}
-                                    />
-                                </Grid>
+                                {
+                                    // in theory, we should show them separately. In practice, they are always incomplete together
+                                    (this.props.showContributionStatement || this.props.showSignificance) &&
+                                    <Grid item xs={12}>
+                                        <Typography>{contributionStatement.fields.scaleOfWork.description}</Typography>
+                                        <Field
+                                            component={SelectField}
+                                            disabled={this.props.submitting}
+                                            name="significance"
+                                            label={contributionStatement.fields.scaleOfWork.label}
+                                            required
+                                            validate={[validation.required]}
+                                        >
+                                            <MenuItem value={SIGNIFICANCE_MINOR}>Minor</MenuItem>
+                                            <MenuItem value={SIGNIFICANCE_MAJOR}>Major</MenuItem>
+                                        </Field>
+                                    </Grid>
+                                }
+                                {
+                                    this.props.showContributionStatement &&
+                                    <Grid item xs={12} style={{marginTop: 24}}>
+                                        <Field
+                                            component={RichEditorField}
+                                            name="impactStatement"
+                                            fullWidth
+                                            title={contributionStatement.fields.impactStatement.label}
+                                            description={contributionStatement.fields.impactStatement.placeholder}
+                                            maxValue={2000}
+                                            disabled={this.props.submitting}
+                                            validate={[validation.required, validation.maxLengthWithWhitespace(2000)]}
+                                        />
+                                    </Grid>
+                                }
                             </Grid>
                         </StandardCard>
                     </Grid>
@@ -208,15 +221,19 @@ export default class NtroFields extends React.PureComponent {
                     <StandardCard title={metadata.title} help={componentLocale.components.ntroFields.metadata.help}>
                         <Grid container spacing={16}>
                             <Grid item xs={12}>
-                                <Field
-                                    component={RichEditorField}
-                                    name="ntroAbstract"
-                                    fullWidth
-                                    title={metadata.fields.abstract.label}
-                                    description={metadata.fields.abstract.placeholder}
-                                    maxValue={800}
-                                    disabled={this.props.submitting}
-                                    validate={[validation.required, validation.maxLengthWithWhitespace(800)]}/>
+                                {
+                                    !this.props.hideAbstract &&
+                                    <Field
+                                        component={RichEditorField}
+                                        name="ntroAbstract"
+                                        fullWidth
+                                        title={metadata.fields.abstract.label}
+                                        description={metadata.fields.abstract.placeholder}
+                                        maxValue={800}
+                                        disabled={this.props.submitting}
+                                        validate={[validation.required, validation.maxLengthWithWhitespace(800)]}
+                                    />
+                                }
                             </Grid>
                             {
                                 !this.props.hideIsmn &&
@@ -374,6 +391,7 @@ export default class NtroFields extends React.PureComponent {
                                         required
                                         multiple
                                         validate={[validation.requiredList]}
+                                        defaultValue={this.props.defaultLanguage}
                                     />
                                 </Grid>
                             }

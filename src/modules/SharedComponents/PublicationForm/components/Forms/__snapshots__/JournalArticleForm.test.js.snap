@@ -230,7 +230,7 @@ exports[`JournalArticleForm renders  component 1`] = `
                 "inputFieldHint": "Enter ISSN, e.g. 1838-9414",
                 "inputFieldLabel": "ISSN value",
                 "remindToAdd": <span>
-                  Pleasepress 
+                  Please press 
                   <b>
                     ENTER
                   </b>

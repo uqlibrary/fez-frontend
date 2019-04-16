@@ -195,6 +195,8 @@ const DOCUMENT_TYPE_JOURNAL_ARTICLE = 'Journal Article';
 const DOCUMENT_TYPE_BOOK_CHAPTER = 'Book Chapter';
 const DOCUMENT_TYPE_BOOK = 'Book';
 const DOCUMENT_TYPE_RESEARCH_REPORT = 'Research Report';
+const DOCUMENT_TYPE_DESIGN = 'Design';
+const DOCUMENT_TYPE_CREATIVE_WORK = 'Creative Work';
 
 export const publicationTypes = (components) => [
     {
@@ -274,7 +276,7 @@ export const publicationTypes = (components) => [
     },
     {
         id: PUBLICATION_TYPE_CREATIVE_WORK,
-        name: 'Creative Work',
+        name: DOCUMENT_TYPE_CREATIVE_WORK,
         class: 'Uqlibrary\\FezCore\\Types\\CreativeWork',
         citationComponent: components ? components.CreativeWorkCitation : null,
         formComponent: components ? components.CreativeWorkForm : null,
@@ -299,7 +301,7 @@ export const publicationTypes = (components) => [
     },
     {
         id: PUBLICATION_TYPE_DESIGN,
-        name: 'Design',
+        name: DOCUMENT_TYPE_DESIGN,
         class: 'Uqlibrary\\FezCore\\Types\\Design',
         citationComponent: components ? components.DesignCitation : null,
         formComponent: components ? components.DesignForm : null,
