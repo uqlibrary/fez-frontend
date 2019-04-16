@@ -40,7 +40,7 @@ export default class NtroFields extends React.PureComponent {
         showContributionStatement: PropTypes.bool,
         showSignificance: PropTypes.bool,
         hideAbstract: PropTypes.bool,
-        defaultLanguage: PropTypes.text
+        defaultLanguage: PropTypes.string
     };
 
     static defaultProps = {
