@@ -772,6 +772,290 @@ exports[`GrantListEditor should move the grant up 3`] = `
 </div>
 `;
 
+exports[`GrantListEditor should not move the grant up at index 0 1`] = `
+<div>
+  <GrantListEditorForm
+    disabled={false}
+    hideType={false}
+    onAdd={[Function]}
+    required={true}
+  />
+  <WithStyles(Grid)
+    container={true}
+    spacing={8}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <WithStyles(List)>
+        <WithStyles(WithTheme(WithWidth(GrantListEditorHeader)))
+          disabled={false}
+          hideType={false}
+          onDeleteAll={[Function]}
+        />
+      </WithStyles(List)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "marginTop": -8,
+        }
+      }
+      xs={12}
+    >
+      <WithStyles(List)
+        classes={
+          Object {
+            "root": "undefined ",
+          }
+        }
+      >
+        <WithStyles(WithTheme(WithWidth(GrantListEditorRow)))
+          canMoveDown={false}
+          canMoveUp={false}
+          grant={
+            Object {
+              "grantAgencyName": "Test 1",
+              "grantAgencyType": "Testing 1",
+              "grantId": "123",
+            }
+          }
+          index={0}
+          key="GrantListRow_0"
+          onDelete={[Function]}
+          onMoveDown={[Function]}
+          onMoveUp={[Function]}
+        />
+      </WithStyles(List)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</div>
+`;
+
+exports[`GrantListEditor should not move the grant up at index 0 2`] = `
+<div>
+  <GrantListEditorForm
+    disabled={false}
+    hideType={false}
+    onAdd={[Function]}
+    required={true}
+  />
+  <WithStyles(Grid)
+    container={true}
+    spacing={8}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <WithStyles(List)>
+        <WithStyles(WithTheme(WithWidth(GrantListEditorHeader)))
+          disabled={false}
+          hideType={false}
+          onDeleteAll={[Function]}
+        />
+      </WithStyles(List)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "marginTop": -8,
+        }
+      }
+      xs={12}
+    >
+      <WithStyles(List)
+        classes={
+          Object {
+            "root": "undefined ",
+          }
+        }
+      >
+        <WithStyles(WithTheme(WithWidth(GrantListEditorRow)))
+          canMoveDown={false}
+          canMoveUp={false}
+          grant={
+            Object {
+              "grantAgencyName": "Test 1",
+              "grantAgencyType": "Testing 1",
+              "grantId": "123",
+            }
+          }
+          index={0}
+          key="GrantListRow_0"
+          onDelete={[Function]}
+          onMoveDown={[Function]}
+          onMoveUp={[Function]}
+        />
+      </WithStyles(List)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</div>
+`;
+
+exports[`GrantListEditor should not move the grant up the disabled grant 1`] = `
+<div>
+  <GrantListEditorForm
+    disabled={false}
+    hideType={false}
+    onAdd={[Function]}
+    required={true}
+  />
+  <WithStyles(Grid)
+    container={true}
+    spacing={8}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <WithStyles(List)>
+        <WithStyles(WithTheme(WithWidth(GrantListEditorHeader)))
+          disabled={false}
+          hideType={false}
+          onDeleteAll={[Function]}
+        />
+      </WithStyles(List)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "marginTop": -8,
+        }
+      }
+      xs={12}
+    >
+      <WithStyles(List)
+        classes={
+          Object {
+            "root": "undefined ",
+          }
+        }
+      >
+        <WithStyles(WithTheme(WithWidth(GrantListEditorRow)))
+          canMoveDown={true}
+          canMoveUp={false}
+          disabled={true}
+          grant={
+            Object {
+              "disabled": true,
+              "grantAgencyName": "Test 1",
+              "grantAgencyType": "Testing 1",
+              "grantId": "123",
+            }
+          }
+          index={0}
+          key="GrantListRow_0"
+          onDelete={[Function]}
+          onMoveDown={[Function]}
+          onMoveUp={[Function]}
+        />
+        <WithStyles(WithTheme(WithWidth(GrantListEditorRow)))
+          canMoveDown={false}
+          canMoveUp={true}
+          grant={
+            Object {
+              "grantAgencyName": "Test 2",
+              "grantAgencyType": "Testing 2",
+              "grantId": "456",
+            }
+          }
+          index={1}
+          key="GrantListRow_1"
+          onDelete={[Function]}
+          onMoveDown={[Function]}
+          onMoveUp={[Function]}
+        />
+      </WithStyles(List)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</div>
+`;
+
+exports[`GrantListEditor should not move the grant up the disabled grant 2`] = `
+<div>
+  <GrantListEditorForm
+    disabled={false}
+    hideType={false}
+    onAdd={[Function]}
+    required={true}
+  />
+  <WithStyles(Grid)
+    container={true}
+    spacing={8}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <WithStyles(List)>
+        <WithStyles(WithTheme(WithWidth(GrantListEditorHeader)))
+          disabled={false}
+          hideType={false}
+          onDeleteAll={[Function]}
+        />
+      </WithStyles(List)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "marginTop": -8,
+        }
+      }
+      xs={12}
+    >
+      <WithStyles(List)
+        classes={
+          Object {
+            "root": "undefined ",
+          }
+        }
+      >
+        <WithStyles(WithTheme(WithWidth(GrantListEditorRow)))
+          canMoveDown={true}
+          canMoveUp={false}
+          disabled={true}
+          grant={
+            Object {
+              "disabled": true,
+              "grantAgencyName": "Test 1",
+              "grantAgencyType": "Testing 1",
+              "grantId": "123",
+            }
+          }
+          index={0}
+          key="GrantListRow_0"
+          onDelete={[Function]}
+          onMoveDown={[Function]}
+          onMoveUp={[Function]}
+        />
+        <WithStyles(WithTheme(WithWidth(GrantListEditorRow)))
+          canMoveDown={false}
+          canMoveUp={true}
+          grant={
+            Object {
+              "grantAgencyName": "Test 2",
+              "grantAgencyType": "Testing 2",
+              "grantId": "456",
+            }
+          }
+          index={1}
+          key="GrantListRow_1"
+          onDelete={[Function]}
+          onMoveDown={[Function]}
+          onMoveUp={[Function]}
+        />
+      </WithStyles(List)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</div>
+`;
+
 exports[`GrantListEditor should render default view 1`] = `
 <div>
   <GrantListEditorForm
