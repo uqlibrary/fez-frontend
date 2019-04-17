@@ -815,7 +815,7 @@ exports[`Component ContributorForm should render connected component 1`] = `
                     >
                       Step 1 of 2
                     </span>
-                     - Please 
+                    - Please 
                     <b>
                       add to a list of contributors below
                     </b>

@@ -1,5 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`ContributorsEditor tests  passes showContributorAssignment prop to ContributorRow as expected 1`] = `
+Array [
+  <WithStyles(WithTheme(WithWidth(ContributorRow)))
+    canMoveDown={false}
+    canMoveUp={false}
+    contributor={
+      Object {
+        "nameAsPublished": 1,
+      }
+    }
+    hideDelete={false}
+    hideReorder={false}
+    index={0}
+    onDelete={[Function]}
+    onMoveDown={[Function]}
+    onMoveUp={[Function]}
+    onSelect={[Function]}
+    showContributorAssignment={true}
+    showIdentifierLookup={false}
+    showRoleInput={false}
+  />,
+]
+`;
+
 exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`] = `
 <Provider
   store={
@@ -577,7 +601,7 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                         >
                           Step 1 of 2
                         </span>
-                         - Please 
+                        - Please 
                         <b>
                           add to a list of contributors below
                         </b>
@@ -2680,15 +2704,14 @@ exports[`ContributorsEditor tests  renders 3 contributor rows with no infinite s
               "nameAsPublished": 1,
             }
           }
-          disabledContributorAssignment={false}
           hideDelete={false}
           hideReorder={false}
           index={0}
           key="ContributorRow_0"
-          onContributorAssigned={[Function]}
           onDelete={[Function]}
           onMoveDown={[Function]}
           onMoveUp={[Function]}
+          onSelect={[Function]}
           showContributorAssignment={false}
           showIdentifierLookup={false}
           showRoleInput={false}
@@ -2701,15 +2724,14 @@ exports[`ContributorsEditor tests  renders 3 contributor rows with no infinite s
               "nameAsPublished": 2,
             }
           }
-          disabledContributorAssignment={false}
           hideDelete={false}
           hideReorder={false}
           index={1}
           key="ContributorRow_1"
-          onContributorAssigned={[Function]}
           onDelete={[Function]}
           onMoveDown={[Function]}
           onMoveUp={[Function]}
+          onSelect={[Function]}
           showContributorAssignment={false}
           showIdentifierLookup={false}
           showRoleInput={false}
@@ -2722,15 +2744,14 @@ exports[`ContributorsEditor tests  renders 3 contributor rows with no infinite s
               "nameAsPublished": 3,
             }
           }
-          disabledContributorAssignment={false}
           hideDelete={false}
           hideReorder={false}
           index={2}
           key="ContributorRow_2"
-          onContributorAssigned={[Function]}
           onDelete={[Function]}
           onMoveDown={[Function]}
           onMoveUp={[Function]}
+          onSelect={[Function]}
           showContributorAssignment={false}
           showIdentifierLookup={false}
           showRoleInput={false}
@@ -2791,15 +2812,14 @@ exports[`ContributorsEditor tests  renders 4 contributor rows wrapped in an infi
               "displayName": 1,
             }
           }
-          disabledContributorAssignment={false}
           hideDelete={false}
           hideReorder={false}
           index={0}
           key="ContributorRow_0"
-          onContributorAssigned={[Function]}
           onDelete={[Function]}
           onMoveDown={[Function]}
           onMoveUp={[Function]}
+          onSelect={[Function]}
           showContributorAssignment={false}
           showIdentifierLookup={false}
           showRoleInput={false}
@@ -2812,15 +2832,14 @@ exports[`ContributorsEditor tests  renders 4 contributor rows wrapped in an infi
               "displayName": 2,
             }
           }
-          disabledContributorAssignment={false}
           hideDelete={false}
           hideReorder={false}
           index={1}
           key="ContributorRow_1"
-          onContributorAssigned={[Function]}
           onDelete={[Function]}
           onMoveDown={[Function]}
           onMoveUp={[Function]}
+          onSelect={[Function]}
           showContributorAssignment={false}
           showIdentifierLookup={false}
           showRoleInput={false}
@@ -2833,15 +2852,14 @@ exports[`ContributorsEditor tests  renders 4 contributor rows wrapped in an infi
               "displayName": 3,
             }
           }
-          disabledContributorAssignment={false}
           hideDelete={false}
           hideReorder={false}
           index={2}
           key="ContributorRow_2"
-          onContributorAssigned={[Function]}
           onDelete={[Function]}
           onMoveDown={[Function]}
           onMoveUp={[Function]}
+          onSelect={[Function]}
           showContributorAssignment={false}
           showIdentifierLookup={false}
           showRoleInput={false}
@@ -2854,15 +2872,14 @@ exports[`ContributorsEditor tests  renders 4 contributor rows wrapped in an infi
               "displayName": 4,
             }
           }
-          disabledContributorAssignment={false}
           hideDelete={false}
           hideReorder={false}
           index={3}
           key="ContributorRow_3"
-          onContributorAssigned={[Function]}
           onDelete={[Function]}
           onMoveDown={[Function]}
           onMoveUp={[Function]}
+          onSelect={[Function]}
           showContributorAssignment={false}
           showIdentifierLookup={false}
           showRoleInput={false}
@@ -2936,15 +2953,14 @@ exports[`ContributorsEditor tests  should get contributors from props and input 
               "displayName": "test 1",
             }
           }
-          disabledContributorAssignment={false}
           hideDelete={false}
           hideReorder={false}
           index={0}
           key="ContributorRow_0"
-          onContributorAssigned={[Function]}
           onDelete={[Function]}
           onMoveDown={[Function]}
           onMoveUp={[Function]}
+          onSelect={[Function]}
           showContributorAssignment={false}
           showIdentifierLookup={false}
           showRoleInput={false}
@@ -2957,15 +2973,14 @@ exports[`ContributorsEditor tests  should get contributors from props and input 
               "displayName": "test 2",
             }
           }
-          disabledContributorAssignment={false}
           hideDelete={false}
           hideReorder={false}
           index={1}
           key="ContributorRow_1"
-          onContributorAssigned={[Function]}
           onDelete={[Function]}
           onMoveDown={[Function]}
           onMoveUp={[Function]}
+          onSelect={[Function]}
           showContributorAssignment={false}
           showIdentifierLookup={false}
           showRoleInput={false}
@@ -3026,15 +3041,14 @@ exports[`ContributorsEditor tests  should get contributors from props and input 
               "displayName": "test 1",
             }
           }
-          disabledContributorAssignment={false}
           hideDelete={false}
           hideReorder={false}
           index={0}
           key="ContributorRow_0"
-          onContributorAssigned={[Function]}
           onDelete={[Function]}
           onMoveDown={[Function]}
           onMoveUp={[Function]}
+          onSelect={[Function]}
           showContributorAssignment={false}
           showIdentifierLookup={false}
           showRoleInput={false}
@@ -3047,15 +3061,14 @@ exports[`ContributorsEditor tests  should get contributors from props and input 
               "displayName": "test 2",
             }
           }
-          disabledContributorAssignment={false}
           hideDelete={false}
           hideReorder={false}
           index={1}
           key="ContributorRow_1"
-          onContributorAssigned={[Function]}
           onDelete={[Function]}
           onMoveDown={[Function]}
           onMoveUp={[Function]}
+          onSelect={[Function]}
           showContributorAssignment={false}
           showIdentifierLookup={false}
           showRoleInput={false}

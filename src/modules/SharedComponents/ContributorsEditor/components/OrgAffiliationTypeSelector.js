@@ -15,9 +15,15 @@ export default function OrgAffilicationTypeSelector({affiliation, onAffiliationC
                 error={error}
                 required
             >
-                <MenuItem value="" disabled>{locale.placeholder}</MenuItem>
+                <MenuItem value="" disabled>
+                    {locale.placeholder}
+                </MenuItem>
                 {
-                    locale.options.map((option) => <MenuItem value={option.key} key={option.key}>{option.value}</MenuItem>)
+                    locale.options.map((option) => (
+                        <MenuItem value={option.key} key={option.key}>
+                            {option.value}
+                        </MenuItem>
+                    ))
                 }
             </Select>
         </FormControl>

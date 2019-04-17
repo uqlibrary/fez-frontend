@@ -1,12 +1,12 @@
-import {ContributorRow, styles} from './ContributorRow';
+import { ContributorRow, styles } from './ContributorRow';
 
-import {authorsSearch} from 'mock/data';
+import { authorsSearch } from 'mock/data';
 
 function setup(testProps, isShallow = true) {
     // build full props list requied by the component
     const props = {
         index: 0,
-        contributor: { nameAsPublished: 'A. Smith'},
+        contributor: { nameAsPublished: 'A. Smith' },
         canMoveUp: false,
         canMoveDown: false,
         showIdentifierLookup: false,
@@ -31,7 +31,9 @@ function setup(testProps, isShallow = true) {
 describe('Component ContributorRow ', () => {
 
     it('a row with index and contributor set, renders only name and delete button', () => {
-        const wrapper = setup({index: 0});
+        const wrapper = setup({
+            index: 0
+        });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -45,7 +47,10 @@ describe('Component ContributorRow ', () => {
     })
 
     it('a row with index and contributor set, renders only name and delete button for mobile view', () => {
-        const wrapper = setup({index: 0, width: 'xs'});
+        const wrapper = setup({
+            index: 0,
+            width: 'xs'
+        });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -63,7 +68,8 @@ describe('Component ContributorRow ', () => {
     });
 
     it('a row with index and creator with creator role set and set as selected', () => {
-        const wrapper = setup({...authorsSearch.data[0],
+        const wrapper = setup({
+            ...authorsSearch.data[0],
             index: 0,
             showRoleInput: true,
             contributor: {
@@ -76,7 +82,8 @@ describe('Component ContributorRow ', () => {
     });
 
     it('a row with index and contributor with author details set and set as selected for mobile view', () => {
-        const wrapper = setup({...authorsSearch.data[0],
+        const wrapper = setup({
+            ...authorsSearch.data[0],
             index: 0,
             showIdentifierLookup: true,
             contributor: {
@@ -88,7 +95,8 @@ describe('Component ContributorRow ', () => {
     });
 
     it('a row with index and creator with creator role set and set as selected for mobile view', () => {
-        const wrapper = setup({...authorsSearch.data[0],
+        const wrapper = setup({
+            ...authorsSearch.data[0],
             index: 0,
             showRoleInput: true,
             contributor: {
@@ -105,7 +113,11 @@ describe('Component ContributorRow ', () => {
             nameAsPublished: "J. Smith",
             ...authorsSearch.data[0]
         };
-        const wrapper = setup({contributor, index: 0, showIdentifierLookup: true});
+        const wrapper = setup({
+            contributor,
+            index: 0,
+            showIdentifierLookup: true
+        });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -114,7 +126,13 @@ describe('Component ContributorRow ', () => {
             nameAsPublished: "J. Smith",
             ...authorsSearch.data[0]
         };
-        const wrapper = setup({contributor, index: 0, canMoveUp: true, canMoveDown: true, showContributorAssignment: true});
+        const wrapper = setup({
+            contributor,
+            index: 0,
+            canMoveUp: true,
+            canMoveDown: true,
+            showContributorAssignment: true
+        });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -124,7 +142,12 @@ describe('Component ContributorRow ', () => {
             nameAsPublished: "J. Smith",
             ...authorsSearch.data[0]
         };
-        const wrapper = setup({contributor, index: 0, canMoveUp: true, onMoveUp: testFunction}, false);
+        const wrapper = setup({
+            contributor,
+            index: 0,
+            canMoveUp: true,
+            onMoveUp: testFunction
+        }, false);
 
         const button = wrapper.find('pure(KeyboardArrowUpIcon)');
         expect(button.length).toBe(1);
@@ -138,7 +161,11 @@ describe('Component ContributorRow ', () => {
 
     it('a row with index and contributor set calls move down function', () => {
         const testFunction = jest.fn();
-        const wrapper = setup({index: 0, canMoveDown: true, onMoveDown: testFunction}, false);
+        const wrapper = setup({
+            index: 0,
+            canMoveDown: true,
+            onMoveDown: testFunction
+        }, false);
 
         const button = wrapper.find('pure(KeyboardArrowDownIcon)');
         expect(button.length).toBe(1);
@@ -156,7 +183,7 @@ describe('Component ContributorRow ', () => {
         const wrapper = setup({
             index: 0,
             showContributorAssignment: true,
-            onContributorAssigned: testFunction
+            onSelect: testFunction
         }, false);
         wrapper.find('ListItem').simulate('click');
         expect(testFunction).toBeCalled;
@@ -164,14 +191,17 @@ describe('Component ContributorRow ', () => {
 
     it('a row with index and contributor set calls delete function', () => {
         const testFunction = jest.fn();
-        const wrapper = setup({index: 0, onDelete: testFunction}, false);
+        const wrapper = setup({
+            index: 0,
+            onDelete: testFunction
+        }, false);
         const button = wrapper.find('pure(DeleteIcon)');
         expect(button.length).toBe(1);
         wrapper.find('pure(DeleteIcon)').simulate('click');
         expect(testFunction).toBeCalled;
     });
 
-    it('should add the contributor when it is not yet selected', () => {
+    it('should select when it is not yet selected', () => {
         const testFunction = jest.fn();
 
         const wrapper = setup({
@@ -181,74 +211,105 @@ describe('Component ContributorRow ', () => {
                 selected: false,
                 nameAsPublished: "J. Smith"
             },
-            onContributorAssigned: testFunction
+            onSelect: testFunction
         });
-        wrapper.instance()._assignContributor();
-        expect(testFunction).toBeCalledWith({selected: false, nameAsPublished: "J. Smith"}, 0);
+        wrapper.instance()._select();
+        expect(testFunction).toBeCalledWith({
+            selected: false,
+            nameAsPublished: "J. Smith"
+        }, 0);
 
         // no-op if disabled
         wrapper.setProps({ disabled: true });
         testFunction.mockClear();
-        wrapper.instance()._assignContributor();
+        wrapper.instance()._select();
         expect(testFunction).not.toBeCalled();
     });
 
-    it('should remove the contributor assigned when it is already selected', () => {
+    it('should deselect when it is already selected', () => {
         const testFunction = jest.fn();
-
-        const wrapper = setup({
+        const testObj = {
             index: 0,
             disabled: false,
             contributor: {
                 selected: true,
                 nameAsPublished: "J. Smith"
             },
-            onContributorAssigned: testFunction
-        });
-        wrapper.instance()._assignContributor();
-        expect(testFunction).toBeCalledWith(null, null);
+            onSelect: testFunction
+        };
+
+        const wrapper = setup(testObj);
+        wrapper.instance()._select();
+        expect(testFunction).toBeCalledWith(testObj.contributor, testObj.index);
     });
 
 
     it('should call the lifecycle method of the component if props change', () => {
         const testFunction = jest.fn();
-        const contributor = {nameAsPublished: "J. Smith", ...authorsSearch.data[0]};
-        const wrapper = setup({contributor, index: 0});
+        const contributor = {
+            nameAsPublished: "J. Smith",
+            ...authorsSearch.data[0]
+        };
+        const wrapper = setup({ contributor, index: 0 });
         wrapper.instance().shouldComponentUpdate = testFunction;
-        wrapper.setProps({nameAsPublished: "Ky Lane"});
+        wrapper.setProps({ nameAsPublished: "Ky Lane" });
         expect(testFunction).toBeCalled();
     });
 
     it('should attempt to assign the current author when keyboard submit', () => {
         const testFunction = jest.fn();
-        const contributor = {nameAsPublished: "J. Smith", ...authorsSearch.data[0]};
-        const wrapper = setup({contributor, index: 0});
-        wrapper.instance()._assignContributor = testFunction;
-        wrapper.instance()._onContributorAssignedKeyboard({key: 'Enter'});
+        const contributor = {
+            nameAsPublished: "J. Smith",
+            ...authorsSearch.data[0]
+        };
+        const wrapper = setup({ contributor, index: 0 });
+        wrapper.instance()._select = testFunction;
+        wrapper.instance()._onSelectKeyboard({ key: 'Enter' });
         expect(testFunction).toBeCalled();
 
         testFunction.mockClear();
-        wrapper.instance()._onContributorAssignedKeyboard({key: 'A'});
+        wrapper.instance()._onSelectKeyboard({ key: 'A' });
         expect(testFunction).not.toBeCalled();
     });
 
     it('Row should be clickable when showContributorAssignment set to true', () => {
-        const contributor = {nameAsPublished: "J. Smith", ...authorsSearch.data[0]};
-        const wrapper = setup({showContributorAssignment: true, contributor, index: 0});
+        const contributor = {
+            nameAsPublished: "J. Smith",
+            ...authorsSearch.data[0]
+        };
+        const wrapper = setup({
+            showContributorAssignment: true,
+            contributor,
+            index: 0
+        });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('Row should not be clickable when showContributorAssignment set to false', () => {
-        const contributor = {nameAsPublished: "J. Smith", ...authorsSearch.data[0]};
-        const wrapper = setup({showContributorAssignment: false, contributor, index: 0});
+        const contributor = {
+            nameAsPublished: "J. Smith",
+            ...authorsSearch.data[0]
+        };
+        const wrapper = setup({
+            showContributorAssignment: false,
+            contributor, index: 0
+        });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should call shouldComponentUpdate when something changes', () => {
         const testFunction = jest.fn();
-        const wrapper = setup({contributor: {nameAsPublished: "J. Smith"}});
+        const wrapper = setup({
+            contributor: {
+                nameAsPublished: "J. Smith"
+            }
+        });
         wrapper.instance().shouldComponentUpdate = testFunction;
-        wrapper.setProps({contributor: {nameAsPublished: "K. Lane"}});
+        wrapper.setProps({
+            contributor: {
+                nameAsPublished: "K. Lane"
+            }
+        });
         expect(testFunction).toBeCalledWith(
             {
                 canMoveDown: false,
@@ -295,7 +356,9 @@ describe('Component ContributorRow ', () => {
     it('triggers the confirmation box', () => {
         const testFunction = jest.fn();
         const wrapper = setup({});
-        wrapper.instance().confirmationBox = {showConfirmation: testFunction};
+        wrapper.instance().confirmationBox = {
+            showConfirmation: testFunction
+        };
         wrapper.instance()._showConfirmation();
         expect(testFunction).toBeCalled();
     });
@@ -310,7 +373,7 @@ describe('Component ContributorRow ', () => {
             },
             index: 0
         });
-        wrapper.instance()._deleteRecord();
+        wrapper.instance()._onDelete();
         expect(onDeleteFn).toHaveBeenCalled();
     });
 
@@ -321,7 +384,7 @@ describe('Component ContributorRow ', () => {
             onMoveUp: jest.fn(),
             onMoveDown: jest.fn()
         });
-        wrapper.instance()._deleteRecord();
+        wrapper.instance()._onDelete();
         expect(wrapper.instance().props.onDelete).not.toBeCalled();
         wrapper.instance()._onMoveUp();
         expect(wrapper.instance().props.onMoveUp).not.toBeCalled();
@@ -342,7 +405,11 @@ describe('Component ContributorRow ', () => {
         });
 
         const blurFn = jest.fn();
-        wrapper.find('WithStyles(ListItem)').props().onClick({currentTarget: {blur: blurFn}});
+        wrapper.find('WithStyles(ListItem)').props().onClick({
+            currentTarget: {
+                blur: blurFn
+            }
+        });
         expect(blurFn).toHaveBeenCalled();
 
         expect(toJson(wrapper)).toMatchSnapshot();

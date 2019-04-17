@@ -26,7 +26,7 @@ export class ContributorForm extends PureComponent {
         showContributorAssignment: PropTypes.bool,
         required: PropTypes.bool,
         isNtro: PropTypes.bool,
-        isContributorAssigned: PropTypes.bool
+        isContributorAssigned: PropTypes.bool,
     };
 
     static defaultProps = {
@@ -38,8 +38,19 @@ export class ContributorForm extends PureComponent {
             creatorRoleHint: 'Role of the creator in relation to the dataset',
             identifierLabel: 'UQ identifier (if available)',
             addButton: 'Add author',
-            descriptionStep1: (<div><span className="authorSteps">Step 1 of 2</span> - Please <b>add to a list of contributors below</b>, in the format and order that they are published.</div>),
-            descriptionStep1NoStep2: (<div>Please <b>add to a list of contributors below</b>, in the format and order that they are published.</div>)
+            descriptionStep1: (
+                <div>
+                    <span className="authorSteps">Step 1 of 2</span>
+                    - Please <b>add to a list of contributors below</b>,
+                    in the format and order that they are published.
+                </div>
+            ),
+            descriptionStep1NoStep2: (
+                <div>
+                    Please <b>add to a list of contributors below</b>,
+                    in the format and order that they are published.
+                </div>
+            )
         }
     };
 
@@ -158,8 +169,17 @@ export class ContributorForm extends PureComponent {
     };
 
     render() {
-        const {showContributorAssignment, showIdentifierLookup, showRoleInput, isNtro, disabled} = this.props;
-        const description = showContributorAssignment ? this.props.locale.descriptionStep1 : this.props.locale.descriptionStep1NoStep2;
+        const {
+            showContributorAssignment,
+            showIdentifierLookup,
+            showRoleInput,
+            isNtro,
+            disabled,
+        } = this.props;
+        const description = showContributorAssignment
+            ? this.props.locale.descriptionStep1
+            : this.props.locale.descriptionStep1NoStep2
+        ;
         return (
             <React.Fragment>
                 {description}
@@ -186,16 +206,9 @@ export class ContributorForm extends PureComponent {
                             required={this.props.required}
                             autoComplete="off"
                             error={
-                                !!(
-                                    !isNtro &&
-                                    this.props.required &&
-                                    !this.props.isContributorAssigned &&
-                                    this.state.nameAsPublished.trim().length === 0
-                                ) || !!(
-                                    isNtro &&
-                                    this.state.affiliation &&
-                                    !this.props.isContributorAssigned &&
-                                    this.state.nameAsPublished.trim().length === 0
+                                !this.props.isContributorAssigned &&
+                                this.state.nameAsPublished.trim().length === 0 && (
+                                    isNtro ? !!this.state.affiliation : !!this.props.required
                                 )
                             }
                         />

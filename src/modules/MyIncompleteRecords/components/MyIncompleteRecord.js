@@ -1,6 +1,7 @@
-import React, {PureComponent} from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import {Field, propTypes} from 'redux-form/immutable';
+import { Field, propTypes } from 'redux-form/immutable';
+
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
@@ -39,8 +40,12 @@ export default class MyIncompleteRecord extends PureComponent {
     };
 
     componentDidMount() {
-        if (this.props.actions && !this.props.recordToFix &&
-            this.props.match.params && this.props.match.params.pid) {
+        if (
+            this.props.actions &&
+            !this.props.recordToFix &&
+            this.props.match.params &&
+            this.props.match.params.pid
+        ) {
             this.props.actions.loadRecordToFix(this.props.match.params.pid);
         }
     }
@@ -91,7 +96,7 @@ export default class MyIncompleteRecord extends PureComponent {
     };
 
     _handleDefaultSubmit = (event) => {
-        if(event) event.preventDefault();
+        if (event) event.preventDefault();
     };
 
     render() {
@@ -104,16 +109,16 @@ export default class MyIncompleteRecord extends PureComponent {
         const txt = pagesLocale.pages.incompletePublication;
         const txtFixForm = formsLocale.forms.fixPublicationForm;
 
-        if(this.props.accountAuthorLoading || this.props.loadingRecordToFix) {
+        if (this.props.accountAuthorLoading || this.props.loadingRecordToFix) {
             return (
                 <React.Fragment>
-                    <InlineLoader message={txt.loadingMessage}/>
+                    <InlineLoader message={txt.loadingMessage} />
                 </React.Fragment>
             );
         }
 
         // set confirmation message depending on file upload status
-        const saveConfirmationLocale = {...txt.successWorkflowConfirmation};
+        const saveConfirmationLocale = { ...txt.successWorkflowConfirmation };
         saveConfirmationLocale.confirmationMessage = (
             <React.Fragment>
                 {this.props.publicationToFixFileUploadingError && <Alert {...saveConfirmationLocale.fileFailConfirmationAlert} />}
@@ -161,7 +166,7 @@ export default class MyIncompleteRecord extends PureComponent {
                             <StandardCard title={txt.fields.fileUpload.title}>
                                 <Field
                                     name="files"
-                                    component={ FileUploadField }
+                                    component={FileUploadField}
                                     disabled={this.props.submitting}
                                     requireOpenAccessStatus
                                     validate={[validation.validFileUpload]}
@@ -179,7 +184,7 @@ export default class MyIncompleteRecord extends PureComponent {
                                 fullWidth
                                 children={txt.cancelButtonLabel}
                                 disabled={this.props.submitting}
-                                onClick={this._cancelFix}/>
+                                onClick={this._cancelFix} />
                         </Grid>
                         <Grid item>
                             <Button
@@ -188,7 +193,7 @@ export default class MyIncompleteRecord extends PureComponent {
                                 fullWidth
                                 children={txt.submitButtonLabel}
                                 onClick={this.props.handleSubmit}
-                                disabled={this.props.submitting || this.props.disableSubmit}/>
+                                disabled={this.props.submitting || this.props.disableSubmit} />
                         </Grid>
                     </Grid>
                 </form>

@@ -64,7 +64,7 @@ export class ContributorRow extends PureComponent {
         hideReorder: PropTypes.bool,
         index: PropTypes.number.isRequired,
         locale: PropTypes.object,
-        onContributorAssigned: PropTypes.func,
+        onSelect: PropTypes.func,
         onDelete: PropTypes.func,
         onMoveDown: PropTypes.func,
         onMoveUp: PropTypes.func,
@@ -100,7 +100,7 @@ export class ContributorRow extends PureComponent {
         this.confirmationBox.showConfirmation();
     };
 
-    _deleteRecord = () => {
+    _onDelete = () => {
         if (!this.props.disabled && this.props.onDelete) {
             this.props.onDelete(this.props.contributor, this.props.index);
         }
@@ -118,32 +118,25 @@ export class ContributorRow extends PureComponent {
         }
     };
 
-    _onContributorAssignedKeyboard = (event) => {
+    _onSelectKeyboard = (event) => {
         if (event.key === 'Enter') {
-            this._assignContributor();
+            this._select();
         }
     };
 
-    _onContributorAssigned = (event) => {
-        this._assignContributor();
+    _onSelect = (event) => {
+        this._select();
         event && event.currentTarget.blur();
     };
 
-    _assignContributor = () => {
-        if(this.props.contributor.selected) {
-            // deselect this contributor
-            if (!this.props.disabled && this.props.onContributorAssigned) {
-                this.props.onContributorAssigned(null, null);
-            }
-        } else {
-            // select this contributor
-            if (!this.props.disabled && this.props.onContributorAssigned) {
-                this.props.onContributorAssigned(this.props.contributor, this.props.index);
-            }
+    _select = () => {
+        const { disabled, onSelect, contributor, index } = this.props;
+        if (!disabled && !!onSelect) {
+            onSelect(contributor, index);
         }
     };
 
-    getListItemTypoGraphy = (primaryText, secondaryText, primaryClass, secondaryClass) => (
+    getListItemTypography = (primaryText, secondaryText, primaryClass, secondaryClass) => (
         <ListItemText
             disableTypography
             primary={
@@ -154,7 +147,8 @@ export class ContributorRow extends PureComponent {
             secondary={
                 <Typography noWrap variant="caption" classes={{ root: secondaryClass }}>
                     {secondaryText}
-                </Typography>}
+                </Typography>
+            }
         />
     );
 
@@ -165,7 +159,7 @@ export class ContributorRow extends PureComponent {
         return (
             <Grid container classes={{container: classes.listItem}}>
                 <Grid item xs={10} sm={5} md={5}>
-                    {this.getListItemTypoGraphy(
+                    {this.getListItemTypography(
                         contributor.nameAsPublished,
                         contributorOrder,
                         `${classes.primary} ${selectedClass}`,
@@ -175,7 +169,7 @@ export class ContributorRow extends PureComponent {
                 {
                     (showIdentifierLookup || !!contributor.aut_title) &&
                     <Grid item xs={10} sm={5} md={5}>
-                        {this.getListItemTypoGraphy(
+                        {this.getListItemTypography(
                             `${contributor.aut_title} ${contributor.aut_display_name}`,
                             `University of Queensland (${contributor.aut_org_username || contributor.aut_student_username})`,
                             `${width === 'xs' ? classes.identifierName : classes.primary} ${selectedClass}`,
@@ -186,7 +180,7 @@ export class ContributorRow extends PureComponent {
                 {
                     contributor.affiliation && contributor.affiliation !== 'UQ' &&
                     <Grid item xs={5}>
-                        {this.getListItemTypoGraphy(
+                        {this.getListItemTypography(
                             `${contributor.orgaff}`,
                             `${ORG_TYPES_LOOKUP[contributor.orgtype] && `Organisation type: ${ORG_TYPES_LOOKUP[contributor.orgtype]}` || ''}`,
                             `${width === 'xs' ? classes.identifierName : classes.primary} ${selectedClass}`,
@@ -197,7 +191,7 @@ export class ContributorRow extends PureComponent {
                 {
                     contributor.affiliation && contributor.affiliation === 'UQ' && !contributor.aut_title &&
                         <Grid item xs={5}>
-                            {this.getListItemTypoGraphy(
+                            {this.getListItemTypography(
                                 'University of Queensland',
                                 'Organisation type: University',
                                 `${width === 'xs' ? classes.identifierName : classes.primary} ${selectedClass}`,
@@ -208,7 +202,7 @@ export class ContributorRow extends PureComponent {
                 {
                     showRoleInput &&
                     <Grid item xs={10} sm={5} md={5}>
-                        {this.getListItemTypoGraphy(
+                        {this.getListItemTypography(
                             contributor.creatorRole,
                             '',
                             `${width === 'xs' ? classes.identifierName : classes.primary} ${selectedClass}`,
@@ -231,14 +225,14 @@ export class ContributorRow extends PureComponent {
             ? selectHint.replace('[name]', contributor.nameAsPublished)
             : null
         ;
-        const disableAssignment = this.props.showContributorAssignment && !this.props.disabledContributorAssignment;
+        const enableSelect = this.props.showContributorAssignment;
         const selectedClass = contributor.selected ? classes.selected : '';
 
         return (
             <Fragment>
                 <ConfirmDialogBox
                     onRef={ref => (this.confirmationBox = ref)}
-                    onAction={this._deleteRecord}
+                    onAction={this._onDelete}
                     locale={deleteRecordConfirmation}
                 />
                 <ListItem
@@ -246,8 +240,8 @@ export class ContributorRow extends PureComponent {
                     divider
                     classes={{root: contributor.selected ? classes.rowSelected : ''}}
                     tabIndex={0}
-                    onClick={disableAssignment ? this._onContributorAssigned : () => {}}
-                    onKeyDown={disableAssignment ? this._onContributorAssignedKeyboard : () => {}}
+                    onClick={enableSelect ? this._onSelect : () => {}}
+                    onKeyDown={enableSelect ? this._onSelectKeyboard : () => {}}
                     aria-label={ariaLabel}
                 >
                     <Hidden xsDown>
