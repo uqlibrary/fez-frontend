@@ -31,11 +31,9 @@ export class GrantListEditor extends PureComponent {
 
     constructor(props) {
         super(props);
-        const grants = this.getGrantsFromProps(props);
         this.state = {
-            grants,
-            errorMessage: '',
-            minIndexForSorting: grants.length
+            grants: this.getGrantsFromProps(props),
+            errorMessage: ''
         };
     }
 
@@ -63,12 +61,16 @@ export class GrantListEditor extends PureComponent {
     }
 
     moveUpGrant = (grant, index) => {
-        if (index === this.state.minIndexForSorting) return;
-        const nextGrant = this.state.grants[index - 1];
+        if (index === 0) return;
+
+        const previousGrant = this.state.grants[index - 1];
+
+        if (previousGrant.hasOwnProperty('disabled') && previousGrant.disabled) return;
+
         this.setState({
             grants: [
                 ...this.state.grants.slice(0, index - 1),
-                grant, nextGrant,
+                grant, previousGrant,
                 ...this.state.grants.slice(index + 1)]
         });
     }
