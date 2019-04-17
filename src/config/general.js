@@ -191,12 +191,12 @@ export const NTRO_SUBTYPES_CATEGORY_CODE = {
     [NTRO_SUBTYPE_RREB_NOT_FOR_PROFIT]: 'CW5'
 };
 
-const DOCUMENT_TYPE_JOURNAL_ARTICLE = 'Journal Article';
-const DOCUMENT_TYPE_BOOK_CHAPTER = 'Book Chapter';
-const DOCUMENT_TYPE_BOOK = 'Book';
-const DOCUMENT_TYPE_RESEARCH_REPORT = 'Research Report';
-const DOCUMENT_TYPE_DESIGN = 'Design';
-const DOCUMENT_TYPE_CREATIVE_WORK = 'Creative Work';
+export const DOCUMENT_TYPE_JOURNAL_ARTICLE = 'Journal Article';
+export const DOCUMENT_TYPE_BOOK_CHAPTER = 'Book Chapter';
+export const DOCUMENT_TYPE_BOOK = 'Book';
+export const DOCUMENT_TYPE_RESEARCH_REPORT = 'Research Report';
+export const DOCUMENT_TYPE_DESIGN = 'Design';
+export const DOCUMENT_TYPE_CREATIVE_WORK = 'Creative Work';
 
 export const publicationTypes = (components) => [
     {

@@ -14,7 +14,7 @@ import {default as pagesLocale} from 'locale/pages';
 import {validation} from 'config';
 import NtroFields from 'modules/SharedComponents/Toolbox/NtroFields/components/NtroFields';
 import {
-    // DOCUMENT_TYPE_DESIGN, DOCUMENT_TYPE_JOURNAL_ARTICLE, DOCUMENT_TYPE_BOOK_CHAPTER, DOCUMENT_TYPE_BOOK, DOCUMENT_TYPE_RESEARCH_REPORT,
+    DOCUMENT_TYPE_DESIGN, DOCUMENT_TYPE_JOURNAL_ARTICLE, DOCUMENT_TYPE_BOOK_CHAPTER, DOCUMENT_TYPE_BOOK, DOCUMENT_TYPE_RESEARCH_REPORT, DOCUMENT_TYPE_CREATIVE_WORK,
     CW_NTRO_SUBTYPES, LP_NTRO_SUBTYPES, RRW_NTRO_SUBTYPES, CPEE_NTRO_SUBTYPES, RESEARCH_REPORT_NTRO_SUBTYPES, NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK
 } from 'config/general';
 import {general} from 'config';
@@ -92,13 +92,6 @@ export default class MyIncompleteRecord extends PureComponent {
     };
 
     render() {
-        const DOCUMENT_TYPE_CREATIVE_WORK = 'Creative Work';
-        const DOCUMENT_TYPE_BOOK_CHAPTER = 'Book Chapter';
-        const DOCUMENT_TYPE_DESIGN = 'Design';
-        const DOCUMENT_TYPE_BOOK = 'Book';
-        const DOCUMENT_TYPE_JOURNAL_ARTICLE = 'Journal Article';
-        const DOCUMENT_TYPE_RESEARCH_REPORT = 'Research Report';
-
         const isNtro = !!this.props.recordToFix && !!this.props.recordToFix.rek_subtype && !!general.NTRO_SUBTYPES.includes(this.props.recordToFix.rek_subtype);
 
         // see https://docs.google.com/spreadsheets/d/1JOWQeFepCs7DWaiMY50yKacxbO_okgolJjeFc2nlMx8/edit#gid=0 for the cross reference of which fields are mandatory on which types
