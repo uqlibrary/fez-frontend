@@ -846,12 +846,14 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
         item={true}
         xs={12}
       >
-        <StandardCard>
+        <StandardCard
+          title="Notes"
+        >
           <Field
             component={[Function]}
             disabled={false}
             fullWidth={true}
-            label="Any other notes about this record update?"
+            label="Notes for this record"
             multiline={true}
             name="notes"
             placeholder="Add any other notes or comments about this record to send to the eSpace team."
@@ -865,14 +867,75 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
         xs={12}
       >
         <StandardCard
-          title="Notes"
+          title="Upload files"
         >
           <Field
             component={[Function]}
             disabled={false}
+            failedAlertLocale={
+              Object {
+                "actionButtonLabel": "RESUBMIT YOUR THESIS",
+                "message": "There was an issue uploading your thesis files. You will need to resubmit your thesis by clicking on the 'Resubmit your thesis' button.",
+                "title": "FILE UPLOAD ERROR",
+                "type": "error",
+              }
+            }
             isNtro={true}
+            locale={
+              Object {
+                "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
+                "errorTitle": "Upload Errors",
+                "fileUploadInstruction": <p>
+                  Click here to select files, or drag files into this area to upload
+                </p>,
+                "fileUploadRestrictionHeading": "File upload restrictions",
+                "fileUploadRestrictions": <div>
+                  Maximum file size is 8Gb. 
+                  <br />
+                  PDF files must be saved using the following naming structure 
+                  <b>
+                    &lt;student number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf
+                  </b>
+                  . Document name could be thesis, abstract, and etc. For example:
+                  <ul>
+                    <li>
+                      s1234567_phd_thesis.pdf
+                    </li>
+                    <li>
+                      s1234567_phd_abstract.pdf
+                    </li>
+                  </ul>
+                  Supplementary audio files are to be in MP 3 format. 
+                  <br />
+                  Supplementary video files are to be in WMV or AVI format. 
+                  <br />
+                </div>,
+                "instructions": "",
+                "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
+                "successTitle": "Success",
+                "validation": Object {
+                  "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
+                  "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
+                  "notFiles": "Invalid files ([fileNames])",
+                  "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
+                  "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
+                },
+              }
+            }
             name="files"
             requireOpenAccessStatus={true}
+            text={
+              <div>
+                <span
+                  className="requiredField"
+                >
+                  <label>
+                     
+                  </label>
+                </span>
+              </div>
+            }
+            title="Upload files"
             validate={
               Array [
                 [Function],
@@ -899,7 +962,7 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
           onClick={[Function]}
           variant="contained"
         >
-          CANCEL
+          Cancel and return to my incomplete records list
         </WithStyles(Button)>
       </WithStyles(Grid)>
       <WithStyles(Grid)
@@ -911,7 +974,7 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
           onClick={[MockFunction]}
           variant="contained"
         >
-          COMPLETE MY RECORD
+          Complete my record
         </WithStyles(Button)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
@@ -1765,12 +1828,14 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
         item={true}
         xs={12}
       >
-        <StandardCard>
+        <StandardCard
+          title="Notes"
+        >
           <Field
             component={[Function]}
             disabled={false}
             fullWidth={true}
-            label="Any other notes about this record update?"
+            label="Notes for this record"
             multiline={true}
             name="notes"
             placeholder="Add any other notes or comments about this record to send to the eSpace team."
@@ -1784,14 +1849,75 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
         xs={12}
       >
         <StandardCard
-          title="Notes"
+          title="Upload files"
         >
           <Field
             component={[Function]}
             disabled={false}
+            failedAlertLocale={
+              Object {
+                "actionButtonLabel": "RESUBMIT YOUR THESIS",
+                "message": "There was an issue uploading your thesis files. You will need to resubmit your thesis by clicking on the 'Resubmit your thesis' button.",
+                "title": "FILE UPLOAD ERROR",
+                "type": "error",
+              }
+            }
             isNtro={true}
+            locale={
+              Object {
+                "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
+                "errorTitle": "Upload Errors",
+                "fileUploadInstruction": <p>
+                  Click here to select files, or drag files into this area to upload
+                </p>,
+                "fileUploadRestrictionHeading": "File upload restrictions",
+                "fileUploadRestrictions": <div>
+                  Maximum file size is 8Gb. 
+                  <br />
+                  PDF files must be saved using the following naming structure 
+                  <b>
+                    &lt;student number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf
+                  </b>
+                  . Document name could be thesis, abstract, and etc. For example:
+                  <ul>
+                    <li>
+                      s1234567_phd_thesis.pdf
+                    </li>
+                    <li>
+                      s1234567_phd_abstract.pdf
+                    </li>
+                  </ul>
+                  Supplementary audio files are to be in MP 3 format. 
+                  <br />
+                  Supplementary video files are to be in WMV or AVI format. 
+                  <br />
+                </div>,
+                "instructions": "",
+                "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
+                "successTitle": "Success",
+                "validation": Object {
+                  "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
+                  "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
+                  "notFiles": "Invalid files ([fileNames])",
+                  "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
+                  "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
+                },
+              }
+            }
             name="files"
             requireOpenAccessStatus={true}
+            text={
+              <div>
+                <span
+                  className="requiredField"
+                >
+                  <label>
+                     
+                  </label>
+                </span>
+              </div>
+            }
+            title="Upload files"
             validate={
               Array [
                 [Function],
@@ -1818,7 +1944,7 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
           onClick={[Function]}
           variant="contained"
         >
-          CANCEL
+          Cancel and return to my incomplete records list
         </WithStyles(Button)>
       </WithStyles(Grid)>
       <WithStyles(Grid)
@@ -1830,7 +1956,7 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
           onClick={[MockFunction]}
           variant="contained"
         >
-          COMPLETE MY RECORD
+          Complete my record
         </WithStyles(Button)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
@@ -2696,12 +2822,14 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
         item={true}
         xs={12}
       >
-        <StandardCard>
+        <StandardCard
+          title="Notes"
+        >
           <Field
             component={[Function]}
             disabled={false}
             fullWidth={true}
-            label="Any other notes about this record update?"
+            label="Notes for this record"
             multiline={true}
             name="notes"
             placeholder="Add any other notes or comments about this record to send to the eSpace team."
@@ -2715,14 +2843,75 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
         xs={12}
       >
         <StandardCard
-          title="Notes"
+          title="Upload files"
         >
           <Field
             component={[Function]}
             disabled={false}
+            failedAlertLocale={
+              Object {
+                "actionButtonLabel": "RESUBMIT YOUR THESIS",
+                "message": "There was an issue uploading your thesis files. You will need to resubmit your thesis by clicking on the 'Resubmit your thesis' button.",
+                "title": "FILE UPLOAD ERROR",
+                "type": "error",
+              }
+            }
             isNtro={true}
+            locale={
+              Object {
+                "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
+                "errorTitle": "Upload Errors",
+                "fileUploadInstruction": <p>
+                  Click here to select files, or drag files into this area to upload
+                </p>,
+                "fileUploadRestrictionHeading": "File upload restrictions",
+                "fileUploadRestrictions": <div>
+                  Maximum file size is 8Gb. 
+                  <br />
+                  PDF files must be saved using the following naming structure 
+                  <b>
+                    &lt;student number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf
+                  </b>
+                  . Document name could be thesis, abstract, and etc. For example:
+                  <ul>
+                    <li>
+                      s1234567_phd_thesis.pdf
+                    </li>
+                    <li>
+                      s1234567_phd_abstract.pdf
+                    </li>
+                  </ul>
+                  Supplementary audio files are to be in MP 3 format. 
+                  <br />
+                  Supplementary video files are to be in WMV or AVI format. 
+                  <br />
+                </div>,
+                "instructions": "",
+                "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
+                "successTitle": "Success",
+                "validation": Object {
+                  "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
+                  "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
+                  "notFiles": "Invalid files ([fileNames])",
+                  "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
+                  "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
+                },
+              }
+            }
             name="files"
             requireOpenAccessStatus={true}
+            text={
+              <div>
+                <span
+                  className="requiredField"
+                >
+                  <label>
+                     
+                  </label>
+                </span>
+              </div>
+            }
+            title="Upload files"
             validate={
               Array [
                 [Function],
@@ -2749,7 +2938,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
           onClick={[Function]}
           variant="contained"
         >
-          CANCEL
+          Cancel and return to my incomplete records list
         </WithStyles(Button)>
       </WithStyles(Grid)>
       <WithStyles(Grid)
@@ -2761,7 +2950,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
           onClick={[MockFunction]}
           variant="contained"
         >
-          COMPLETE MY RECORD
+          Complete my record
         </WithStyles(Button)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
@@ -3615,12 +3804,14 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
         item={true}
         xs={12}
       >
-        <StandardCard>
+        <StandardCard
+          title="Notes"
+        >
           <Field
             component={[Function]}
             disabled={false}
             fullWidth={true}
-            label="Any other notes about this record update?"
+            label="Notes for this record"
             multiline={true}
             name="notes"
             placeholder="Add any other notes or comments about this record to send to the eSpace team."
@@ -3634,14 +3825,75 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
         xs={12}
       >
         <StandardCard
-          title="Notes"
+          title="Upload files"
         >
           <Field
             component={[Function]}
             disabled={false}
+            failedAlertLocale={
+              Object {
+                "actionButtonLabel": "RESUBMIT YOUR THESIS",
+                "message": "There was an issue uploading your thesis files. You will need to resubmit your thesis by clicking on the 'Resubmit your thesis' button.",
+                "title": "FILE UPLOAD ERROR",
+                "type": "error",
+              }
+            }
             isNtro={true}
+            locale={
+              Object {
+                "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
+                "errorTitle": "Upload Errors",
+                "fileUploadInstruction": <p>
+                  Click here to select files, or drag files into this area to upload
+                </p>,
+                "fileUploadRestrictionHeading": "File upload restrictions",
+                "fileUploadRestrictions": <div>
+                  Maximum file size is 8Gb. 
+                  <br />
+                  PDF files must be saved using the following naming structure 
+                  <b>
+                    &lt;student number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf
+                  </b>
+                  . Document name could be thesis, abstract, and etc. For example:
+                  <ul>
+                    <li>
+                      s1234567_phd_thesis.pdf
+                    </li>
+                    <li>
+                      s1234567_phd_abstract.pdf
+                    </li>
+                  </ul>
+                  Supplementary audio files are to be in MP 3 format. 
+                  <br />
+                  Supplementary video files are to be in WMV or AVI format. 
+                  <br />
+                </div>,
+                "instructions": "",
+                "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
+                "successTitle": "Success",
+                "validation": Object {
+                  "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
+                  "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
+                  "notFiles": "Invalid files ([fileNames])",
+                  "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
+                  "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
+                },
+              }
+            }
             name="files"
             requireOpenAccessStatus={true}
+            text={
+              <div>
+                <span
+                  className="requiredField"
+                >
+                  <label>
+                     
+                  </label>
+                </span>
+              </div>
+            }
+            title="Upload files"
             validate={
               Array [
                 [Function],
@@ -3668,7 +3920,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
           onClick={[Function]}
           variant="contained"
         >
-          CANCEL
+          Cancel and return to my incomplete records list
         </WithStyles(Button)>
       </WithStyles(Grid)>
       <WithStyles(Grid)
@@ -3680,7 +3932,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
           onClick={[MockFunction]}
           variant="contained"
         >
-          COMPLETE MY RECORD
+          Complete my record
         </WithStyles(Button)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
@@ -4534,12 +4786,14 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
         item={true}
         xs={12}
       >
-        <StandardCard>
+        <StandardCard
+          title="Notes"
+        >
           <Field
             component={[Function]}
             disabled={false}
             fullWidth={true}
-            label="Any other notes about this record update?"
+            label="Notes for this record"
             multiline={true}
             name="notes"
             placeholder="Add any other notes or comments about this record to send to the eSpace team."
@@ -4553,14 +4807,75 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
         xs={12}
       >
         <StandardCard
-          title="Notes"
+          title="Upload files"
         >
           <Field
             component={[Function]}
             disabled={false}
+            failedAlertLocale={
+              Object {
+                "actionButtonLabel": "RESUBMIT YOUR THESIS",
+                "message": "There was an issue uploading your thesis files. You will need to resubmit your thesis by clicking on the 'Resubmit your thesis' button.",
+                "title": "FILE UPLOAD ERROR",
+                "type": "error",
+              }
+            }
             isNtro={true}
+            locale={
+              Object {
+                "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
+                "errorTitle": "Upload Errors",
+                "fileUploadInstruction": <p>
+                  Click here to select files, or drag files into this area to upload
+                </p>,
+                "fileUploadRestrictionHeading": "File upload restrictions",
+                "fileUploadRestrictions": <div>
+                  Maximum file size is 8Gb. 
+                  <br />
+                  PDF files must be saved using the following naming structure 
+                  <b>
+                    &lt;student number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf
+                  </b>
+                  . Document name could be thesis, abstract, and etc. For example:
+                  <ul>
+                    <li>
+                      s1234567_phd_thesis.pdf
+                    </li>
+                    <li>
+                      s1234567_phd_abstract.pdf
+                    </li>
+                  </ul>
+                  Supplementary audio files are to be in MP 3 format. 
+                  <br />
+                  Supplementary video files are to be in WMV or AVI format. 
+                  <br />
+                </div>,
+                "instructions": "",
+                "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
+                "successTitle": "Success",
+                "validation": Object {
+                  "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
+                  "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
+                  "notFiles": "Invalid files ([fileNames])",
+                  "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
+                  "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
+                },
+              }
+            }
             name="files"
             requireOpenAccessStatus={true}
+            text={
+              <div>
+                <span
+                  className="requiredField"
+                >
+                  <label>
+                     
+                  </label>
+                </span>
+              </div>
+            }
+            title="Upload files"
             validate={
               Array [
                 [Function],
@@ -4587,7 +4902,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
           onClick={[Function]}
           variant="contained"
         >
-          CANCEL
+          Cancel and return to my incomplete records list
         </WithStyles(Button)>
       </WithStyles(Grid)>
       <WithStyles(Grid)
@@ -4599,7 +4914,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
           onClick={[MockFunction]}
           variant="contained"
         >
-          COMPLETE MY RECORD
+          Complete my record
         </WithStyles(Button)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>

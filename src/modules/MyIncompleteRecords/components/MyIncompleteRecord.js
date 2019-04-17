@@ -136,7 +136,7 @@ export default class MyIncompleteRecord extends PureComponent {
                         </Grid>
 
                         <Grid item xs={12}>
-                            <StandardCard>
+                            <StandardCard title={txt.fields.notes.title}>
                                 <Field
                                     component={TextField}
                                     name="notes"
@@ -145,14 +145,14 @@ export default class MyIncompleteRecord extends PureComponent {
                                     fullWidth
                                     multiline
                                     rows={5}
-                                    label={'Any other notes about this record update?'}
-                                    placeholder={'Add any other notes or comments about this record to send to the eSpace team.'}
+                                    label={txt.fields.notes.label}
+                                    placeholder={txt.fields.notes.placeholder}
                                 />
                             </StandardCard>
                         </Grid>
 
                         <Grid item xs={12}>
-                            <StandardCard title={'Notes'}>
+                            <StandardCard title={txt.fields.fileUpload.title}>
                                 <Field
                                     name="files"
                                     component={ FileUploadField }
@@ -160,6 +160,7 @@ export default class MyIncompleteRecord extends PureComponent {
                                     requireOpenAccessStatus
                                     validate={[validation.validFileUpload]}
                                     isNtro
+                                    {...txt.fields.fileUpload}
                                 />
                             </StandardCard>
                         </Grid>
@@ -170,7 +171,7 @@ export default class MyIncompleteRecord extends PureComponent {
                             <Button
                                 variant={'contained'}
                                 fullWidth
-                                children={'CANCEL'}
+                                children={txt.cancelButtonLabel}
                                 disabled={this.props.submitting}
                                 onClick={this._cancelFix}/>
                         </Grid>
@@ -179,7 +180,7 @@ export default class MyIncompleteRecord extends PureComponent {
                                 variant={'contained'}
                                 color={'primary'}
                                 fullWidth
-                                children={'COMPLETE MY RECORD'}
+                                children={txt.submitButtonLabel}
                                 onClick={this.props.handleSubmit}
                                 disabled={this.props.submitting || this.props.disableSubmit}/>
                         </Grid>
