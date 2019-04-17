@@ -20,11 +20,13 @@ export class GrantListEditor extends PureComponent {
         input: PropTypes.object,
         classes: PropTypes.object,
         required: PropTypes.bool,
-        hideType: PropTypes.bool
+        hideType: PropTypes.bool,
+        disableDeleteAllGrants: PropTypes.bool
     };
 
     static defaultProps = {
-        hideType: false
+        hideType: false,
+        disableDeleteAllGrants: false
     };
 
     constructor(props) {
@@ -96,7 +98,7 @@ export class GrantListEditor extends PureComponent {
     }
 
     render() {
-        const {classes, disabled, required} = this.props;
+        const {classes, disabled, required, disableDeleteAllGrants} = this.props;
         const {grants, errorMessage} = this.state;
 
         const renderGrantsRows = grants.map((grant, index) => (
@@ -148,7 +150,7 @@ export class GrantListEditor extends PureComponent {
                             <List>
                                 <GrantListEditorHeader
                                     onDeleteAll={this.deleteAllGrants}
-                                    disabled={disabled}
+                                    disabled={disabled || disableDeleteAllGrants}
                                     hideType={this.props.hideType}
                                 />
                             </List>

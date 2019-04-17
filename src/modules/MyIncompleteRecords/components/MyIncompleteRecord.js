@@ -157,6 +157,7 @@ export default class MyIncompleteRecord extends PureComponent {
                                     component={GrantListEditorField}
                                     name="grants"
                                     disabled={this.props.submitting}
+                                    disableDeleteAllGrants={this.props.disableDeleteAllGrants}
                                 />
                             </StandardCard>
                         </Grid>
