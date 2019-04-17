@@ -748,10 +748,10 @@ exports[`Application component should render alert if user is not fez author 1`]
             "researcher",
             "admin",
           ],
-          "component": [Function],
           "exact": true,
           "pageTitle": "Fix an incomplete record",
           "path": "/records/:pid(UQ:[a-z0-9]+)/incomplete",
+          "render": [Function],
         },
         Object {
           "access": Array [
@@ -1227,11 +1227,11 @@ exports[`Application component should render alert if user is not fez author 1`]
             "admin",
           ]
         }
-        component={[Function]}
         exact={true}
         key="route_9"
         pageTitle="Fix an incomplete record"
         path="/records/:pid(UQ:[a-z0-9]+)/incomplete"
+        render={[Function]}
       />
       <Route
         access={
@@ -1446,10 +1446,10 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             "researcher",
             "admin",
           ],
-          "component": [Function],
           "exact": true,
           "pageTitle": "Fix an incomplete record",
           "path": "/records/:pid(UQ:[a-z0-9]+)/incomplete",
+          "render": [Function],
         },
         Object {
           "access": Array [
@@ -1903,11 +1903,11 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             "admin",
           ]
         }
-        component={[Function]}
         exact={true}
         key="route_9"
         pageTitle="Fix an incomplete record"
         path="/records/:pid(UQ:[a-z0-9]+)/incomplete"
+        render={[Function]}
       />
       <Route
         access={
@@ -2467,10 +2467,10 @@ exports[`Application component should render app for account with fez author wit
             "researcher",
             "admin",
           ],
-          "component": [Function],
           "exact": true,
           "pageTitle": "Fix an incomplete record",
           "path": "/records/:pid(UQ:[a-z0-9]+)/incomplete",
+          "render": [Function],
         },
         Object {
           "access": Array [
@@ -2924,11 +2924,11 @@ exports[`Application component should render app for account with fez author wit
             "admin",
           ]
         }
-        component={[Function]}
         exact={true}
         key="route_9"
         pageTitle="Fix an incomplete record"
         path="/records/:pid(UQ:[a-z0-9]+)/incomplete"
+        render={[Function]}
       />
       <Route
         access={
@@ -3143,10 +3143,10 @@ exports[`Application component should render app for account with fez author wit
             "researcher",
             "admin",
           ],
-          "component": [Function],
           "exact": true,
           "pageTitle": "Fix an incomplete record",
           "path": "/records/:pid(UQ:[a-z0-9]+)/incomplete",
+          "render": [Function],
         },
         Object {
           "access": Array [
@@ -3624,11 +3624,11 @@ exports[`Application component should render app for account with fez author wit
             "admin",
           ]
         }
-        component={[Function]}
         exact={true}
         key="route_9"
         pageTitle="Fix an incomplete record"
         path="/records/:pid(UQ:[a-z0-9]+)/incomplete"
+        render={[Function]}
       />
       <Route
         access={
@@ -3843,10 +3843,10 @@ exports[`Application component should render app for account with fez author wit
             "researcher",
             "admin",
           ],
-          "component": [Function],
           "exact": true,
           "pageTitle": "Fix an incomplete record",
           "path": "/records/:pid(UQ:[a-z0-9]+)/incomplete",
+          "render": [Function],
         },
         Object {
           "access": Array [
@@ -4176,11 +4176,11 @@ exports[`Application component should render app for account with fez author wit
             "admin",
           ]
         }
-        component={[Function]}
         exact={true}
         key="route_9"
         pageTitle="Fix an incomplete record"
         path="/records/:pid(UQ:[a-z0-9]+)/incomplete"
+        render={[Function]}
       />
       <Route
         access={
@@ -4395,10 +4395,10 @@ exports[`Application component should render application with routing for the us
             "researcher",
             "admin",
           ],
-          "component": [Function],
           "exact": true,
           "pageTitle": "Fix an incomplete record",
           "path": "/records/:pid(UQ:[a-z0-9]+)/incomplete",
+          "render": [Function],
         },
         Object {
           "access": Array [
@@ -6291,10 +6291,10 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 "researcher",
                                 "admin",
                               ],
-                              "component": [Function],
                               "exact": true,
                               "pageTitle": "Fix an incomplete record",
                               "path": "/records/:pid(UQ:[a-z0-9]+)/incomplete",
+                              "render": [Function],
                             },
                             Object {
                               "access": Array [
@@ -6525,10 +6525,10 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                     "researcher",
                                     "admin",
                                   ],
-                                  "component": [Function],
                                   "exact": true,
                                   "pageTitle": "Fix an incomplete record",
                                   "path": "/records/:pid(UQ:[a-z0-9]+)/incomplete",
+                                  "render": [Function],
                                 },
                                 Object {
                                   "access": Array [
@@ -6759,10 +6759,10 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                       "researcher",
                                       "admin",
                                     ],
-                                    "component": [Function],
                                     "exact": true,
                                     "pageTitle": "Fix an incomplete record",
                                     "path": "/records/:pid(UQ:[a-z0-9]+)/incomplete",
+                                    "render": [Function],
                                   },
                                   Object {
                                     "access": Array [

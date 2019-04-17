@@ -867,6 +867,20 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
         xs={12}
       >
         <StandardCard
+          title="Grant information"
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            name="grants"
+          />
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
           title="Upload files"
         >
           <Field
@@ -1841,6 +1855,20 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
             placeholder="Add any other notes or comments about this record to send to the eSpace team."
             rows={5}
             type="text"
+          />
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          title="Grant information"
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            name="grants"
           />
         </StandardCard>
       </WithStyles(Grid)>
@@ -2843,6 +2871,20 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
         xs={12}
       >
         <StandardCard
+          title="Grant information"
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            name="grants"
+          />
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
           title="Upload files"
         >
           <Field
@@ -3825,6 +3867,20 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
         xs={12}
       >
         <StandardCard
+          title="Grant information"
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            name="grants"
+          />
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
           title="Upload files"
         >
           <Field
@@ -4799,6 +4855,20 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
             placeholder="Add any other notes or comments about this record to send to the eSpace team."
             rows={5}
             type="text"
+          />
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          title="Grant information"
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            name="grants"
           />
         </StandardCard>
       </WithStyles(Grid)>
