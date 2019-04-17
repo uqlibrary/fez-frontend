@@ -731,6 +731,9 @@ export default {
                     label: 'Notes for this record',
                     placeholder: 'Add any other notes or comments about this record to send to the eSpace team.'
                 },
+                grants: {
+                    title: 'Grant information'
+                },
                 fileUpload: {
                     title: 'Upload files',
                     failedAlertLocale: {
