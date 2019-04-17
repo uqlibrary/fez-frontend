@@ -846,8 +846,26 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
         item={true}
         xs={12}
       >
+        <StandardCard>
+          <Field
+            component={[Function]}
+            disabled={false}
+            fullWidth={true}
+            label="Any other notes about this record update?"
+            multiline={true}
+            name="notes"
+            placeholder="Add any other notes or comments about this record to send to the eSpace team."
+            rows={5}
+            type="text"
+          />
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
         <StandardCard
-          title="Upload files"
+          title="Notes"
         >
           <Field
             component={[Function]}
@@ -1747,8 +1765,26 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
         item={true}
         xs={12}
       >
+        <StandardCard>
+          <Field
+            component={[Function]}
+            disabled={false}
+            fullWidth={true}
+            label="Any other notes about this record update?"
+            multiline={true}
+            name="notes"
+            placeholder="Add any other notes or comments about this record to send to the eSpace team."
+            rows={5}
+            type="text"
+          />
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
         <StandardCard
-          title="Upload files"
+          title="Notes"
         >
           <Field
             component={[Function]}
@@ -2660,8 +2696,26 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
         item={true}
         xs={12}
       >
+        <StandardCard>
+          <Field
+            component={[Function]}
+            disabled={false}
+            fullWidth={true}
+            label="Any other notes about this record update?"
+            multiline={true}
+            name="notes"
+            placeholder="Add any other notes or comments about this record to send to the eSpace team."
+            rows={5}
+            type="text"
+          />
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
         <StandardCard
-          title="Upload files"
+          title="Notes"
         >
           <Field
             component={[Function]}
@@ -3561,8 +3615,26 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
         item={true}
         xs={12}
       >
+        <StandardCard>
+          <Field
+            component={[Function]}
+            disabled={false}
+            fullWidth={true}
+            label="Any other notes about this record update?"
+            multiline={true}
+            name="notes"
+            placeholder="Add any other notes or comments about this record to send to the eSpace team."
+            rows={5}
+            type="text"
+          />
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
         <StandardCard
-          title="Upload files"
+          title="Notes"
         >
           <Field
             component={[Function]}
@@ -4462,8 +4534,26 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
         item={true}
         xs={12}
       >
+        <StandardCard>
+          <Field
+            component={[Function]}
+            disabled={false}
+            fullWidth={true}
+            label="Any other notes about this record update?"
+            multiline={true}
+            name="notes"
+            placeholder="Add any other notes or comments about this record to send to the eSpace team."
+            rows={5}
+            type="text"
+          />
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
         <StandardCard
-          title="Upload files"
+          title="Notes"
         >
           <Field
             component={[Function]}

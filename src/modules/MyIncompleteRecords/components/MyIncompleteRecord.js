@@ -134,8 +134,25 @@ export default class MyIncompleteRecord extends PureComponent {
                                 <JSONPretty id="json-pretty" data={this.props.initialValues} />
                             </StandardCard>
                         </Grid>
+
                         <Grid item xs={12}>
-                            <StandardCard title={txt.fileUpload.title} help={txt.fileUpload.help}>
+                            <StandardCard>
+                                <Field
+                                    component={TextField}
+                                    name="notes"
+                                    type="text"
+                                    disabled={this.props.submitting}
+                                    fullWidth
+                                    multiline
+                                    rows={5}
+                                    label={'Any other notes about this record update?'}
+                                    placeholder={'Add any other notes or comments about this record to send to the eSpace team.'}
+                                />
+                            </StandardCard>
+                        </Grid>
+
+                        <Grid item xs={12}>
+                            <StandardCard title={'Notes'}>
                                 <Field
                                     name="files"
                                     component={ FileUploadField }
