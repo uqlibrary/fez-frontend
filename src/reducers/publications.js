@@ -54,7 +54,6 @@ const handlers = {
     },
 
     [actions.AUTHOR_INCOMPLETEPUBLICATIONS_LOADED]: (state, action) => {
-        console.log(action.payload);
         return {
             ...state,
             publicationsList: action.payload.data,
