@@ -213,7 +213,7 @@ describe('GrantListEditor', () => {
         wrapper.instance().moveUpGrant(grant2, 1);
         expect(toJson(wrapper)).toMatchSnapshot();
 
-        wrapper.instance().moveUpGrant(grant1, 0);
+        wrapper.instance().moveUpGrant(grant1, 1);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

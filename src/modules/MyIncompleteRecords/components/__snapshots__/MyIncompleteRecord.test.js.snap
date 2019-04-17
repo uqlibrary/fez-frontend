@@ -847,6 +847,20 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
         xs={12}
       >
         <StandardCard
+          title="Grant information"
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            name="grants"
+          />
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
           title="Upload files"
         >
           <Field
@@ -1740,6 +1754,20 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
             silent={true}
             space={2}
             themeClassName="__json-pretty__"
+          />
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          title="Grant information"
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            name="grants"
           />
         </StandardCard>
       </WithStyles(Grid)>
@@ -2661,6 +2689,20 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
         xs={12}
       >
         <StandardCard
+          title="Grant information"
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            name="grants"
+          />
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
           title="Upload files"
         >
           <Field
@@ -3562,6 +3604,20 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
         xs={12}
       >
         <StandardCard
+          title="Grant information"
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            name="grants"
+          />
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
           title="Upload files"
         >
           <Field
@@ -4455,6 +4511,20 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
             silent={true}
             space={2}
             themeClassName="__json-pretty__"
+          />
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          title="Grant information"
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            name="grants"
           />
         </StandardCard>
       </WithStyles(Grid)>

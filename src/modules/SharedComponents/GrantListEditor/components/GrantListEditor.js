@@ -29,9 +29,11 @@ export class GrantListEditor extends PureComponent {
 
     constructor(props) {
         super(props);
+        const grants = this.getGrantsFromProps(props);
         this.state = {
-            grants: this.getGrantsFromProps(props),
+            grants,
             errorMessage: '',
+            minIndexForSorting: grants.length
         };
     }
 
@@ -59,7 +61,7 @@ export class GrantListEditor extends PureComponent {
     }
 
     moveUpGrant = (grant, index) => {
-        if (index === 0) return;
+        if (index === this.state.minIndexForSorting) return;
         const nextGrant = this.state.grants[index - 1];
         this.setState({
             grants: [
@@ -101,7 +103,7 @@ export class GrantListEditor extends PureComponent {
             <GrantListEditorRow
                 key={`GrantListRow_${index}`}
                 index={index}
-                disabled={disabled}
+                disabled={disabled || grant && grant.disabled}
                 grant={grant}
                 canMoveDown={index !== grants.length - 1}
                 canMoveUp={index !== 0}

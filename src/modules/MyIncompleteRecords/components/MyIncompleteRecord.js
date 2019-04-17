@@ -13,6 +13,7 @@ import {PublicationCitation} from 'modules/SharedComponents/PublicationCitation'
 import {default as pagesLocale} from 'locale/pages';
 import {validation} from 'config';
 import JSONPretty from 'react-json-pretty';
+import {GrantListEditorField} from 'modules/SharedComponents/GrantListEditor';
 
 export default class MyIncompleteRecord extends PureComponent {
     static propTypes = {
@@ -132,6 +133,15 @@ export default class MyIncompleteRecord extends PureComponent {
                         <Grid item xs={12}>
                             <StandardCard title={'JSON of the initialValues'}>
                                 <JSONPretty id="json-pretty" data={this.props.initialValues} />
+                            </StandardCard>
+                        </Grid>
+                        <Grid item xs={12}>
+                            <StandardCard title="Grant information">
+                                <Field
+                                    component={GrantListEditorField}
+                                    name="grants"
+                                    disabled={this.props.submitting}
+                                />
                             </StandardCard>
                         </Grid>
                         <Grid item xs={12}>
