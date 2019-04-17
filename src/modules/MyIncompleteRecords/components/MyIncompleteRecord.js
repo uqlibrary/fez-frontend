@@ -1,17 +1,15 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
-import {Field, propTypes} from 'redux-form/immutable';
+import {propTypes} from 'redux-form/immutable';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
-import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
 import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
-import {FileUploadField} from 'modules/SharedComponents/Toolbox/FileUploader';
 import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
 import {PublicationCitation} from 'modules/SharedComponents/PublicationCitation';
 import {default as pagesLocale} from 'locale/pages';
-import {validation} from 'config';
+// import {validation} from 'config';
 import NtroFields from 'modules/SharedComponents/Toolbox/NtroFields/components/NtroFields';
 import {
     DOCUMENT_TYPE_DESIGN, DOCUMENT_TYPE_JOURNAL_ARTICLE, DOCUMENT_TYPE_BOOK_CHAPTER, DOCUMENT_TYPE_BOOK, DOCUMENT_TYPE_RESEARCH_REPORT, DOCUMENT_TYPE_CREATIVE_WORK,
@@ -200,17 +198,6 @@ export default class MyIncompleteRecord extends PureComponent {
                 <form onSubmit={this._handleDefaultSubmit}>
                     <Grid container spacing={24}>
                         <Grid item xs={12}>
-                            <StandardCard title={'Test of initialValues from a PID'}>
-                                <Field
-                                    component={TextField}
-                                    name="rek_title"
-                                    fullWidth
-                                    label={'Title'}
-                                    required
-                                    validate={[validation.required]}
-                                />
-                            </StandardCard>
-
                             {
                                 isNtro &&
                                 (editCreatorContributionStatement || editAbstract || editExtent || editAudienceSize || editSignificance || editQualityIndicator || editLanguage || editGrants) &&
@@ -240,19 +227,6 @@ export default class MyIncompleteRecord extends PureComponent {
                             <StandardCard title={'JSON of the initialValues'}>
                                 <JSONPretty id="json-pretty" data={this.props.initialValues} />
                             </StandardCard>
-                        </Grid>
-                        <Grid item xs={12}>
-                            <StandardCard title={txt.fileUpload.title} help={txt.fileUpload.help}>
-                                <Field
-                                    name="files"
-                                    component={ FileUploadField }
-                                    disabled={this.props.submitting}
-                                    requireOpenAccessStatus
-                                    validate={[validation.validFileUpload]}
-                                    isNtro
-                                />
-                            </StandardCard>
-
                         </Grid>
                     </Grid>
                     <Grid container spacing={24}>

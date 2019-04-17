@@ -18,7 +18,7 @@ describe('incompleteRecords actions', () => {
 
     it('should call loading/loaded actions on successful load', async () => {
         mockApi
-            .onGet(repositories.routes.INCOMPLETE_RECORDS_API().apiUrl)
+            .onGet(repositories.routes.CURRENT_USER_INCOMPLETE_RECORDS_API().apiUrl)
             .reply(200, incompleteRecordList);
 
         const expectedActions = [

@@ -178,16 +178,10 @@ export const CURRENT_USER_INCOMPLETE_RECORDS_API = (values, route = 'search') =>
     }
 );
 
-export const INCOMPLETE_RECORDS_API = () => {
-    return {
-        apiUrl: 'records/search',
-        options: {
-            params: {
-                rule: 'incomplete'
-            }
-        }
-    };
-};
+// patch record apis
+export const INCOMPLETE_RECORD_SAVE_API = ({pid}) => (
+    {apiUrl: `records/${pid}`}
+);
 
 export const AUTHOR_PUBLICATIONS_STATS_ONLY_API = (values) => (
     {
@@ -283,4 +277,3 @@ export const THIRD_PARTY_LOOKUP_API_1FIELD = ({type, field1}) => (
 export const THIRD_PARTY_LOOKUP_API_2FIELD = ({type, field1, field2}) => (
     {apiUrl: `tool/lookup/${type}/${field1}/${field2}`}
 );
-

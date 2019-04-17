@@ -477,3 +477,74 @@ export const getNtroMetadataSearchKeys = (data) => {
 
     return ntroMetadata;
 };
+
+/**
+ * only return the changed fields
+ * @param data
+ */
+export const getIncompleteRequestFields = (data) => {
+    console.log('transformer getIncompleteRequestFields');
+    console.log(data);
+
+    const authorId = data.publication.fez_record_search_key_author[0].rek_author_order;
+
+    const result = {};
+
+    if (!!data.ntroAbstract) {
+        result.rek_formatted_abstract = data.ntroAbstract;
+    }
+
+    if (!!data.fez_record_search_key_audience_size && data.fez_record_search_key_audience_size.rek_audience_size) {
+        result.fez_record_search_key_audience_size =
+            {
+                rek_audience_size_pid: data.publication.rek_pid,
+                rek_audience_size: data.fez_record_search_key_audience_size.rek_audience_size
+            };
+    }
+
+    if (!!data.impactStatement && data.impactStatement.htmlText) {
+        result.fez_record_search_key_creator_contribution_statement =
+            [{
+                rek_creator_contribution_statement_pid: data.publication.rek_pid,
+                rek_creator_contribution_statement: data.impactStatement.htmlText,
+                rek_creator_contribution_statement_order: authorId
+            }];
+    }
+
+    if (!!data.languages) {
+        result.fez_record_search_key_language = [{
+            rek_language_pid: data.publication.rek_pid,
+            rek_language: data.languages,
+            rek_language_order: authorId
+        }];
+    }
+
+    if (!!data.qualityIndicators && data.qualityIndicators.length > 0) {
+        result.fez_record_search_key_quality_indicator =
+            [{
+                rek_quality_indicator_pid: data.publication.rek_pid,
+                rek_quality_indicator: data.qualityIndicators[0],
+                rek_quality_indicator_order: authorId
+            }];
+    }
+
+    if (!!data.significance) {
+        result.fez_record_search_key_significance =
+            [{
+                rek_significance_pid: data.publication.rek_pid,
+                rek_significance: data.significance,
+                rek_significance_order: authorId
+            }];
+    }
+
+    if (!!data.fez_record_search_key_total_pages && data.fez_record_search_key_total_pages.rek_total_pages) {
+        result.fez_record_search_key_total_pages =
+            {
+                rek_total_pages_pid: data.publication.rek_pid,
+                rek_total_pages: data.fez_record_search_key_total_pages.rek_total_pages
+            };
+    }
+
+    console.log(result); // #dev
+    return result;
+};
