@@ -247,7 +247,7 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
             },
             {
                 path: pathConfig.records.incompleteFix(pid),
-                component: components.MyIncompleteRecord,
+                render: (props) => components.MyIncompleteRecord({...props, disableInitialGrants: true}),
                 access: [roles.researcher, roles.admin],
                 exact: true,
                 pageTitle: locale.pages.incompletePublication.title
