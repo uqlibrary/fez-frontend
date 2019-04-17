@@ -44,4 +44,17 @@ describe('LanguageField component', () => {
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+
+    it('should render when given a default value field props', () => {
+        const wrapper = setup({
+            label: 'Test label',
+            placeholder: 'Test placeholder',
+            input: {
+                value: ['One', 'Two'],
+                onChange: jest.fn()
+            },
+            defaultValue: "eng"
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });
