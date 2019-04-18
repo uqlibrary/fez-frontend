@@ -61,7 +61,6 @@ export class ContributorRow extends PureComponent {
         classes: PropTypes.object,
         contributor: PropTypes.object.isRequired,
         disabled: PropTypes.bool,
-        disabledContributorAssignment: PropTypes.bool,
         hideDelete: PropTypes.bool,
         hideReorder: PropTypes.bool,
         index: PropTypes.number.isRequired,
@@ -155,7 +154,7 @@ export class ContributorRow extends PureComponent {
     );
 
     getContributorRowText = (showIdentifierLookup, showRoleInput, selectedClass) => {
-        const { index, contributor, classes, width } = this.props;
+        const { index, contributor, classes, width, hideReorder, hideDelete } = this.props;
         const { suffix } = this.props.locale;
         const contributorOrder = `${numberToWords(index + 1)} ${suffix}`;
         return (
@@ -181,7 +180,7 @@ export class ContributorRow extends PureComponent {
                 }
                 {
                     contributor.affiliation && contributor.affiliation !== 'UQ' &&
-                    <Grid item xs={5}>
+                    <Grid item xs={hideReorder && hideDelete ? 12 : 5} md={5}>
                         {this.getListItemTypography(
                             `${contributor.orgaff}`,
                             `${ORG_TYPES_LOOKUP[contributor.orgtype] && `Organisation type: ${ORG_TYPES_LOOKUP[contributor.orgtype]}` || ''}`,
@@ -192,14 +191,14 @@ export class ContributorRow extends PureComponent {
                 }
                 {
                     contributor.affiliation && contributor.affiliation === 'UQ' && !contributor.aut_title &&
-                        <Grid item xs={5}>
-                            {this.getListItemTypography(
+                    <Grid item xs={hideReorder && hideDelete ? 12 : 5} md={5}>
+                        {this.getListItemTypography(
                             locale.global.orgTitle,
-                                'Organisation type: University',
-                                `${width === 'xs' ? classes.identifierName : classes.primary} ${selectedClass}`,
-                                `${width === 'xs' ? classes.identifierSubtitle : ''} ${selectedClass}`
-                            )}
-                        </Grid>
+                            'Organisation type: University',
+                            `${width === 'xs' ? classes.identifierName : classes.primary} ${selectedClass}`,
+                            `${width === 'xs' ? classes.identifierSubtitle : ''} ${selectedClass}`
+                        )}
+                    </Grid>
                 }
                 {
                     showRoleInput &&
@@ -226,7 +225,7 @@ export class ContributorRow extends PureComponent {
         )
             ? selectHint.replace('[name]', contributor.nameAsPublished)
             : null
-        ;
+            ;
         const enableSelect = this.props.showContributorAssignment;
         const selectedClass = contributor.selected ? classes.selected : '';
 

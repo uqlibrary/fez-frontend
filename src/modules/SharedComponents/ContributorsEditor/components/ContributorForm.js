@@ -16,7 +16,7 @@ import NonUqOrgAffiliationFormSection from './NonUqOrgAffiliationFormSection';
 export class ContributorForm extends PureComponent {
     static propTypes = {
         authorsList: PropTypes.array.isRequired,
-        onAdd: PropTypes.func.isRequired,
+        onSubmit: PropTypes.func.isRequired,
         showIdentifierLookup: PropTypes.bool,
         showRoleInput: PropTypes.bool,
         errorText: PropTypes.string,
@@ -27,6 +27,7 @@ export class ContributorForm extends PureComponent {
         required: PropTypes.bool,
         isNtro: PropTypes.bool,
         isContributorAssigned: PropTypes.bool,
+        contributor: PropTypes.object,
     };
 
     static defaultProps = {
@@ -51,7 +52,8 @@ export class ContributorForm extends PureComponent {
                     in the format and order that they are published.
                 </div>
             )
-        }
+        },
+        showIdentifierLookup: false,
     };
 
     constructor(props) {
@@ -61,15 +63,23 @@ export class ContributorForm extends PureComponent {
             nameAsPublished: '',
             creatorRole: '',
             uqIdentifier: '',
+            clearRoleInput: true,
             contributor: {},
             affiliation: '',
             orgaff: '',
             orgtype: '',
-            showIdentifierLookup: false
+            ...props.contributor
         };
     }
 
-    _addContributor = (event) => {
+    componentWillReceiveProps(nextProps) {
+        this.setState({
+            contributor: nextProps.contributor || {},
+            ...nextProps.contributor
+        });
+    }
+
+    _onSubmit = (event) => {
         // add contributor if user hits 'enter' key on input field
         if(
             this.props.disabled ||
@@ -91,16 +101,19 @@ export class ContributorForm extends PureComponent {
         ) return;
 
         // pass on the selected contributor
-        this.props.onAdd({
+        const newContributor = {
             ...this.state.contributor,
             ...{
-                nameAsPublished: this.state.nameAsPublished,
                 creatorRole: this.state.creatorRole,
                 affiliation: this.state.affiliation,
                 orgaff: this.state.orgaff,
                 orgtype: this.state.orgtype
             }
-        });
+        };
+        if (!this.props.contributor) {
+            newContributor.nameAsPublished = this.state.nameAsPublished;
+        }
+        this.props.onSubmit(newContributor);
 
         // reset internal state
         this.setState({
@@ -132,7 +145,7 @@ export class ContributorForm extends PureComponent {
         this.setState({
             contributor: selectedItem
         }, () => {
-            this._addContributor();
+            this._onSubmit();
         });
     };
 
@@ -152,7 +165,7 @@ export class ContributorForm extends PureComponent {
     handleAffiliationChange = (event) => {
         this.setState({
             affiliation: event.target.value,
-            showIdentifierLookup: !!(event.target.value === 'UQ')
+            showIdentifierLookup: event.target.value === 'UQ'
         });
     };
 
@@ -170,16 +183,34 @@ export class ContributorForm extends PureComponent {
 
     render() {
         const {
+            disabled,
+            isContributorAssigned,
+            isNtro,
+            locale,
+            required,
             showContributorAssignment,
             showIdentifierLookup,
             showRoleInput,
-            isNtro,
-            disabled,
         } = this.props;
         const description = showContributorAssignment
-            ? this.props.locale.descriptionStep1
-            : this.props.locale.descriptionStep1NoStep2
+            ? locale.descriptionStep1
+            : locale.descriptionStep1NoStep2
         ;
+        const buttonDisabled = disabled ||
+            (this.state.nameAsPublished || '').trim().length === 0 ||
+            (
+                showRoleInput &&
+                this.state.creatorRole.trim().length === 0
+            ) ||
+            (
+                this.state.affiliation === 'NotUQ' &&
+                (
+                    this.state.orgaff.trim().length === 0 ||
+                    this.state.orgtype.trim().length === 0
+                )
+            )
+        ;
+
         return (
             <React.Fragment>
                 {description}
@@ -190,7 +221,7 @@ export class ContributorForm extends PureComponent {
                             <OrgAffilicationTypeSelector
                                 affiliation={this.state.affiliation}
                                 onAffiliationChange={this.handleAffiliationChange}
-                                error={this.props.required && !this.state.affiliation && !this.props.isContributorAssigned}
+                                error={required && !this.state.affiliation && !isContributorAssigned}
                             />
                         </Grid>
                     }
@@ -198,17 +229,23 @@ export class ContributorForm extends PureComponent {
                         <TextField
                             fullWidth
                             id="nameAsPublishedField"
-                            label={this.props.locale.nameAsPublishedLabel}
-                            placeholder={this.props.locale.nameAsPublishedHint}
+                            label={locale.nameAsPublishedLabel}
+                            placeholder={locale.nameAsPublishedHint}
                             value={this.state.nameAsPublished}
                             onChange={this._onNameChanged}
-                            disabled={disabled || isNtro && this.state.affiliation.length === 0}
-                            required={this.props.required}
+                            disabled={disabled ||
+                                (
+                                    isNtro &&
+                                    this.state.affiliation.length === 0
+                                ) ||
+                                !!(this.props.contributor || {}).nameAsPublished
+                            }
+                            required={required}
                             autoComplete="off"
                             error={
-                                !this.props.isContributorAssigned &&
+                                !isContributorAssigned &&
                                 this.state.nameAsPublished.trim().length === 0 && (
-                                    isNtro ? !!this.state.affiliation : !!this.props.required
+                                    isNtro ? !!this.state.affiliation : !!required
                                 )
                             }
                         />
@@ -217,7 +254,10 @@ export class ContributorForm extends PureComponent {
                         (showIdentifierLookup || this.state.showIdentifierLookup) &&
                         <Grid item xs={12} sm={3}>
                             <UqIdField
-                                disabled={disabled || this.state.nameAsPublished.trim().length === 0}
+                                disabled={disabled ||
+                                    (this.props.contributor || {}).uqIdentifier ||
+                                    (this.state.nameAsPublished || '').trim().length === 0
+                                }
                                 onChange={this._onUQIdentifierSelected}
                                 floatingLabelText="UQ Author ID"
                                 hintText="Type UQ author name to search"
@@ -231,11 +271,11 @@ export class ContributorForm extends PureComponent {
                             <RoleField
                                 fullWidth
                                 id="creatorRoleField"
-                                floatingLabelText={this.props.locale.creatorRoleLabel}
-                                hintText={this.props.locale.creatorRoleHint}
+                                floatingLabelText={locale.creatorRoleLabel}
+                                hintText={locale.creatorRoleHint}
                                 onChange={this._onRoleChanged}
-                                disabled={this.props.disabled}
-                                required={this.props.required}
+                                disabled={disabled}
+                                required={required}
                                 autoComplete="off"
                                 error={this.state.creatorRole.length === 0}
                                 value={this.state.creatorRole}
@@ -247,10 +287,12 @@ export class ContributorForm extends PureComponent {
                         this.state.affiliation === 'NotUQ' &&
                         <Grid item xs={12}>
                             <NonUqOrgAffiliationFormSection
-                                orgAffiliation={this.state.orgaff}
-                                orgType={this.state.orgtype}
+                                orgAffiliation={this.state.orgaff || ''}
+                                orgType={this.state.orgtype || ''}
                                 onOrgAffiliationChange={this.handleOrgAfflicationChange}
                                 onOrgTypeChange={this.handleOrgTypeChange}
+                                disableAffiliationEdit={disabled}
+                                disableOrgTypeEdit={disabled || !!(this.props.contributor || {}).orgtype}
                             />
                         </Grid>
                     }
@@ -259,12 +301,10 @@ export class ContributorForm extends PureComponent {
                             variant="contained"
                             fullWidth
                             color="primary"
-                            disabled={disabled || this.state.nameAsPublished.trim().length === 0
-                            || (showRoleInput && this.state.creatorRole.trim().length === 0)
-                            || (this.state.affiliation === 'NotUQ' && (this.state.orgaff.trim().length === 0 || this.state.orgtype.trim().length === 0))}
-                            onClick={this._addContributor}
+                            disabled={buttonDisabled}
+                            onClick={this._onSubmit}
                         >
-                            {this.props.locale.addButton}
+                            {locale.addButton}
                         </Button>
                     </Grid>
                 </Grid>

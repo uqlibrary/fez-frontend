@@ -17,7 +17,7 @@ export default {
             "rek_formatted_abstract": null,
             "rek_depositor_affiliation": null,
             "rek_thomson_citation_count": null,
-            "rek_subtype": null,
+            "rek_subtype": 'Creative Work - Other',
             "rek_scopus_citation_count": null,
             "rek_herdc_notes": null,
             "rek_scopus_doc_type": null,

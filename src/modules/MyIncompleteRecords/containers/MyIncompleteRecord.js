@@ -63,8 +63,9 @@ const mapStateToProps = (state, ownProps) => {
         initialValues: {
             // Place all of the imported NTRO values from the PID into their form fields here....
             rek_title: importedValues && importedValues.rek_title || null,
-            rek_author_affiliation_name: importedValues && importedValues.rek_author_affiliation_name || null,
-            rek_author_affiliation_type: importedValues && importedValues.rek_author_affiliation_type || null,
+            fez_record_search_key_author: importedValues && importedValues.fez_record_search_key_author || [],
+            fez_record_search_key_author_affiliation_name: importedValues && importedValues.fez_record_search_key_author_affiliation_name || [],
+            fez_record_search_key_author_affiliation_type: importedValues && importedValues.fez_record_search_key_author_affiliation_type || [],
             fez_record_search_key_significance: importedValues && importedValues.fez_record_search_key_significance || null,
             rek_description: importedValues && importedValues.rek_description || null,
             rek_formatted_abstract: importedValues && importedValues.rek_formatted_abstract || null,

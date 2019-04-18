@@ -2,14 +2,20 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import Immutable from 'immutable';
 import { connect } from 'react-redux';
-import ContributorRowHeader from './ContributorRowHeader';
-import ContributorRow from './ContributorRow';
-import ContributorForm from './ContributorForm';
-import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
+// import JSONPretty from 'react-json-pretty';
+
 import List from '@material-ui/core/List';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
+
+import ContributorRowHeader from './ContributorRowHeader';
+import ContributorRow from './ContributorRow';
+import ContributorForm from './ContributorForm';
+import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
+
+import { locale } from 'locale';
+import { leftJoin } from 'helpers/general';
 
 export class ContributorsEditor extends PureComponent {
     static propTypes = {
@@ -27,6 +33,7 @@ export class ContributorsEditor extends PureComponent {
         showContributorAssignment: PropTypes.bool,
         showIdentifierLookup: PropTypes.bool,
         showRoleInput: PropTypes.bool,
+        record: PropTypes.object,
     };
 
     static defaultProps = {
@@ -50,18 +57,68 @@ export class ContributorsEditor extends PureComponent {
             isCurrentAuthorSelected: false,
             showIdentifierLookup: false,
         };
+        if (props.record) {
+            this.state.contributors = this.getContributorData(
+                props.record,
+                this.state.contributors
+            );
+        }
     }
 
-    componentWillUpdate(nextProps, nextState) {
+    componentWillUpdate = (nextProps, nextState) => {
         // notify parent component when local state has been updated, eg contributors added/removed/reordered
         if (this.props.onChange) {
             this.props.onChange(nextState.contributors);
         }
-    }
+    };
+
+    getContributorData = (record, contributors) => {
+        const contributorsArray = contributors || [];
+        const affiliationDataMap = [
+            {
+                infoArray: record.fez_record_search_key_author_affiliation_name,
+                key: 'rek_author_affiliation_name_order'
+            },
+            {
+                infoArray: record.fez_record_search_key_author_affiliation_type,
+                key: 'rek_author_affiliation_type_order'
+            },
+        ];
+
+        const authors = affiliationDataMap.reduce((authors, affiliationData) => {
+            return leftJoin(
+                authors,
+                affiliationData.infoArray,
+                'rek_author_order',
+                affiliationData.key
+            );
+        }, record.fez_record_search_key_author);
+
+        authors.map((author) => {
+            const affiliation = author.rek_author_affiliation_name === locale.global.orgTitle
+                ? 'UQ'
+                : 'NotUQ'
+            ;
+            const contributor = {
+                nameAsPublished: author.rek_author,
+                orgaff: author.rek_author_affiliation_name || '',
+                orgtype: author.rek_author_affiliation_type || '',
+                disabled: false,
+                affiliation,
+                creatorRole: '',
+            };
+            contributorsArray.push(contributor);
+        });
+        return contributorsArray;
+    };
 
     getContributorsFromProps = (props) => {
         if (props.input && props.input.name && props.input.value) {
-            return props.input.value instanceof Immutable.List ? props.input.value.toJS() : props.input.value;
+            return (
+                props.input.value instanceof Immutable.List
+                    ? props.input.value.toJS()
+                    : props.input.value
+            );
         }
 
         return [];
@@ -92,7 +149,22 @@ export class ContributorsEditor extends PureComponent {
                 }
             });
         }
-    }
+    };
+
+    updateContributor = (contributor, index) => {
+        const newContributor = {
+            ...this.state.contributors[index],
+            ...contributor,
+            selected: false,
+        };
+        this.setState({
+            contributors: [
+                ...this.state.contributors.slice(0, index),
+                newContributor,
+                ...this.state.contributors.slice(index + 1)
+            ]
+        });
+    };
 
     moveUpContributor = (contributor, index) => {
         if (index === 0) return;
@@ -134,22 +206,22 @@ export class ContributorsEditor extends PureComponent {
     };
 
     assignContributor = (contributor, index) => {
-        const newContributors = this.state.contributors.map((item, itemIndex) => (
-            {
-                ...item,
-                selected: (
-                    this.props.author &&
-                    item.aut_id === this.props.author.aut_id
-                ) || (
-                    index === itemIndex &&
-                    !contributor.selected
-                ),
-                authorId: (
-                    index === itemIndex &&
-                    this.props.author
-                ) ? this.props.author.aut_id : null
-            })
-        );
+        const newContributors = this.state.contributors.map((item, itemIndex) => ({
+            ...item,
+            selected: (
+                !this.props.record &&
+                this.props.author &&
+                item.aut_id === this.props.author.aut_id
+            ) || (
+                index === itemIndex &&
+                !contributor.selected
+            ),
+            authorId: (
+                !this.props.record &&
+                index === itemIndex &&
+                this.props.author
+            ) ? this.props.author.aut_id : null
+        }));
         this.setState({
             contributors: newContributors
         });
@@ -163,6 +235,7 @@ export class ContributorsEditor extends PureComponent {
             showContributorAssignment,
             showIdentifierLookup,
             showRoleInput,
+            locale
         } = this.props;
 
         const {
@@ -172,11 +245,11 @@ export class ContributorsEditor extends PureComponent {
 
         return contributors.map((contributor, index) => (
             <ContributorRow
-                {...(this.props.locale && this.props.locale.row ? this.props.locale.row : {})}
+                {...((locale || {}).row || {})}
                 canMoveDown={index !== contributors.length - 1}
                 canMoveUp={index !== 0}
                 contributor={contributor}
-                contributorSuffix={this.props.locale.contributorSuffix}
+                contributorSuffix={locale.contributorSuffix}
                 disabled={disabled}
                 hideDelete={hideDelete}
                 hideReorder={hideReorder}
@@ -193,6 +266,29 @@ export class ContributorsEditor extends PureComponent {
         ));
     };
 
+    renderContributorForm = (onSubmit, index) => {
+        const formLocale = {
+            ...((this.props.locale || {}).form || {}).locale,
+            global: {
+                orgTitle: locale.global.orgTitle
+            }
+        };
+        const formProps = {
+            ...this.props,
+            isContributorAssigned: !!this.state.contributors,
+            locale: formLocale,
+            onSubmit: contributor => onSubmit(contributor, index),
+        };
+        if (this.props.record) {
+            formProps.locale.addButton = 'Update author';
+            formProps.contributor = this.state.contributors[index];
+            formProps.showIdentifierLookup = formProps.contributor.affiliation === 'UQ';
+        }
+        return (
+            <ContributorForm {...formProps} />
+        );
+    };
+
     render() {
         const {
             classes,
@@ -200,10 +296,10 @@ export class ContributorsEditor extends PureComponent {
             hideDelete,
             hideReorder,
             isNtro,
-            required,
             showContributorAssignment,
             showIdentifierLookup,
             showRoleInput,
+            record
         } = this.props;
 
         const {
@@ -227,8 +323,11 @@ export class ContributorsEditor extends PureComponent {
             ;
         }
 
+        const selectedContributorIndex = contributors.findIndex(contributor => contributor.selected);
+
         return (
             <div>
+
                 {
                     errorMessage &&
                     <Alert
@@ -237,17 +336,10 @@ export class ContributorsEditor extends PureComponent {
                         type="warning"
                     />
                 }
-                <ContributorForm
-                    {...(this.props.locale && this.props.locale.form ? this.props.locale.form : {})}
-                    disabled={disabled}
-                    isContributorAssigned={!!this.state.contributors.length}
-                    isNtro={isNtro}
-                    onAdd={this.addContributor}
-                    required={required}
-                    showContributorAssignment={showContributorAssignment}
-                    showIdentifierLookup={showIdentifierLookup}
-                    showRoleInput={showRoleInput}
-                />
+                {
+                    !record &&
+                    this.renderContributorForm(this.addContributor)
+                }
                 {
                     contributors.length > 0 &&
                     <Grid container spacing={8}>
@@ -273,6 +365,13 @@ export class ContributorsEditor extends PureComponent {
                             }}>
                                 {this.renderContributorRows()}
                             </List>
+                            {
+                                record &&
+                                selectedContributorIndex > -1 &&
+                                <div style={{marginTop: 24}}>
+                                    {this.renderContributorForm(this.updateContributor, selectedContributorIndex)}
+                                </div>
+                            }
                         </Grid>
                     </Grid>
                 }

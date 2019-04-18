@@ -14,10 +14,17 @@ export default function NonUqOrgAffiliationFormSection({
     orgType,
     onOrgAffiliationChange,
     onOrgTypeChange,
-    locale
+    locale,
+    disableAffiliationEdit,
+    disableOrgTypeEdit,
 }) {
     const options = orgAffiliationTypes.map(option => {
-        return option.value !== '454045' ? <MenuItem value={option.value} key={option.value}>{option.text}</MenuItem> : null;
+        return (option.value !== '454045')
+            ? <MenuItem value={option.value} key={option.value}>
+                {option.text}
+            </MenuItem>
+            : null
+        ;
     });
 
     return (
@@ -30,6 +37,7 @@ export default function NonUqOrgAffiliationFormSection({
                     onChange={onOrgAffiliationChange}
                     label={locale.fields.organisation.inputLabel}
                     placeholder={locale.fields.organisation.placeholder}
+                    disabled={disableAffiliationEdit}
                 />
             </Grid>
             <Grid item xs={6}>
@@ -38,6 +46,7 @@ export default function NonUqOrgAffiliationFormSection({
                     <Select
                         value={orgType}
                         onChange={onOrgTypeChange}
+                        disabled={disableOrgTypeEdit}
                     >
                         <MenuItem disabled>{locale.fields.organisationType.placeholder}</MenuItem>
                         {options}
@@ -53,7 +62,9 @@ NonUqOrgAffiliationFormSection.propTypes = {
     orgType: PropTypes.string,
     onOrgAffiliationChange: PropTypes.func,
     onOrgTypeChange: PropTypes.func,
-    locale: PropTypes.object
+    locale: PropTypes.object,
+    disableAffiliationEdit: PropTypes.bool,
+    disableOrgTypeEdit: PropTypes.bool,
 };
 
 NonUqOrgAffiliationFormSection.defaultProps = {
