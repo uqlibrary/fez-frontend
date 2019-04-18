@@ -12,7 +12,6 @@ import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
 import {PublicationCitation} from 'modules/SharedComponents/PublicationCitation';
 import {default as pagesLocale} from 'locale/pages';
 import {validation} from 'config';
-import JSONPretty from 'react-json-pretty';
 import {GrantListEditorField} from 'modules/SharedComponents/GrantListEditor';
 
 export default class MyIncompleteRecord extends PureComponent {
@@ -32,8 +31,7 @@ export default class MyIncompleteRecord extends PureComponent {
 
         publicationToFixFileUploadingError: PropTypes.bool,
 
-        errors: PropTypes.object,
-        initialValues: PropTypes.object
+        errors: PropTypes.object
     };
 
     componentDidMount() {
@@ -114,28 +112,20 @@ export default class MyIncompleteRecord extends PureComponent {
             </React.Fragment>
         );
         return (
-            <StandardPage title={this.props.recordToFix && this.props.recordToFix.rek_title || ''}>
-                <PublicationCitation publication={this.props.recordToFix} hideTitle/>
+            <StandardPage title={txt.title}>
+                <PublicationCitation publication={this.props.recordToFix} />
                 <form onSubmit={this._handleDefaultSubmit}>
                     <Grid container spacing={24}>
                         <Grid item xs={12}>
-                            <StandardCard title={'Test of initialValues from a PID'}>
+                            <StandardCard title={txt.fields.grants.title}>
                                 <Field
-                                    component={TextField}
-                                    name="rek_title"
-                                    fullWidth
-                                    label={'Title'}
-                                    required
-                                    validate={[validation.required]}
+                                    component={GrantListEditorField}
+                                    name="grants"
+                                    disabled={this.props.submitting}
+                                    disableDeleteAllGrants={this.props.disableDeleteAllGrants}
                                 />
                             </StandardCard>
                         </Grid>
-                        <Grid item xs={12}>
-                            <StandardCard title={'JSON of the initialValues'}>
-                                <JSONPretty id="json-pretty" data={this.props.initialValues} />
-                            </StandardCard>
-                        </Grid>
-
                         <Grid item xs={12}>
                             <StandardCard title={txt.fields.notes.title}>
                                 <Field
@@ -148,16 +138,6 @@ export default class MyIncompleteRecord extends PureComponent {
                                     rows={5}
                                     label={txt.fields.notes.label}
                                     placeholder={txt.fields.notes.placeholder}
-                                />
-                            </StandardCard>
-                        </Grid>
-                        <Grid item xs={12}>
-                            <StandardCard title={txt.fields.grants.title}>
-                                <Field
-                                    component={GrantListEditorField}
-                                    name="grants"
-                                    disabled={this.props.submitting}
-                                    disableDeleteAllGrants={this.props.disableDeleteAllGrants}
                                 />
                             </StandardCard>
                         </Grid>
