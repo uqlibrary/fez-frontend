@@ -249,7 +249,6 @@ export class ContributorsEditor extends PureComponent {
             classes,
             disabled,
             hideDelete,
-            hideReorder,
             isNtro,
             showContributorAssignment,
             showIdentifierLookup,
@@ -304,7 +303,6 @@ export class ContributorsEditor extends PureComponent {
                                     {...((this.props.locale || {}).header || {})}
                                     disabled={disabled}
                                     hideDelete={hideDelete}
-                                    hideReorder={hideReorder}
                                     isInfinite={contributors.length > 3}
                                     isNtro={isNtro}
                                     onDeleteAll={this.deleteAllContributors}

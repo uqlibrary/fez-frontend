@@ -17,7 +17,6 @@ export class ContributorRowHeader extends PureComponent {
         classes: PropTypes.object,
         disabled: PropTypes.bool,
         hideDelete: PropTypes.bool,
-        hideReorder: PropTypes.bool,
         isInfinite: PropTypes.bool,
         locale: PropTypes.object,
         onDeleteAll: PropTypes.func.isRequired,
@@ -69,7 +68,6 @@ export class ContributorRowHeader extends PureComponent {
             classes,
             disabled,
             hideDelete,
-            hideReorder,
             isInfinite,
             onDeleteAll,
             showContributorAssignment,
@@ -110,34 +108,35 @@ export class ContributorRowHeader extends PureComponent {
                             <ListItemText secondary={roleColumn} secondaryTypographyProps={{variant: 'caption'}}/>
                         </Hidden>
                     }
-                    {
-                        !hideReorder &&
-                        <Hidden xsDown>
-                            <ListItemText
-                                secondary={reorderColumn}
-                                secondaryTypographyProps={{variant: 'caption'}}
-                                classes={{
-                                    secondary: `${classes.right} ${
-                                        isInfinite
-                                            ? classes.paddingRight36
-                                            : classes.paddingRight24
-                                    }`
-                                }}/>
-                        </Hidden>
-                    }
-                    {
-                        !hideDelete &&
-                        <ListItemSecondaryAction classes={{root: isInfinite ? classes.paddingRight14 : ''}}>
-                            <Tooltip title={deleteAll}>
+                    <Hidden xsDown>
+                        <ListItemText
+                            secondary={reorderColumn}
+                            secondaryTypographyProps={{variant: 'caption'}}
+                            classes={{
+                                secondary: `${classes.right} ${
+                                    isInfinite
+                                        ? classes.paddingRight36
+                                        : classes.paddingRight24
+                                }`
+                            }}
+                        />
+                    </Hidden>
+                    <ListItemSecondaryAction classes={{root: isInfinite ? classes.paddingRight14 : ''}}>
+                        <Tooltip title={deleteAll}
+                            disableFocusListener={disabled || hideDelete}
+                            disableHoverListener={disabled || hideDelete}
+                            disableTouchListener={disabled || hideDelete}
+                        >
+                            <span>
                                 <IconButton
                                     onClick={this._showConfirmation}
-                                    disabled={disabled}
+                                    disabled={disabled || hideDelete}
                                 >
                                     <DeleteForever/>
                                 </IconButton>
-                            </Tooltip>
-                        </ListItemSecondaryAction>
-                    }
+                            </span>
+                        </Tooltip>
+                    </ListItemSecondaryAction>
                 </ListItem>
             </Fragment>
         );

@@ -154,7 +154,7 @@ export class ContributorRow extends PureComponent {
     );
 
     getContributorRowText = (showIdentifierLookup, showRoleInput, selectedClass) => {
-        const { index, contributor, classes, width, hideReorder, hideDelete } = this.props;
+        const { index, contributor, classes, width } = this.props;
         const { suffix } = this.props.locale;
         const contributorOrder = `${numberToWords(index + 1)} ${suffix}`;
         return (
@@ -180,7 +180,7 @@ export class ContributorRow extends PureComponent {
                 }
                 {
                     contributor.affiliation && contributor.affiliation !== 'UQ' &&
-                    <Grid item xs={hideReorder && hideDelete ? 12 : 5} md={5}>
+                    <Grid item xs={5}>
                         {this.getListItemTypography(
                             `${contributor.orgaff}`,
                             `${ORG_TYPES_LOOKUP[contributor.orgtype] && `Organisation type: ${ORG_TYPES_LOOKUP[contributor.orgtype]}` || ''}`,
@@ -191,7 +191,7 @@ export class ContributorRow extends PureComponent {
                 }
                 {
                     contributor.affiliation && contributor.affiliation === 'UQ' && !contributor.aut_title &&
-                    <Grid item xs={hideReorder && hideDelete ? 12 : 5} md={5}>
+                    <Grid item xs={5}>
                         {this.getListItemTypography(
                             locale.global.orgTitle,
                             'Organisation type: University',
@@ -259,43 +259,56 @@ export class ContributorRow extends PureComponent {
                     }
                     <ListItemSecondaryAction>
                         {
-                            !hideReorder &&
                             canMoveUp &&
-                            <Tooltip title={moveUpHint}>
-                                <IconButton
-                                    onClick={this._onMoveUp}
-                                    disabled={disabled}
-                                    aria-label={moveUpHint}
-                                >
-                                    <KeyboardArrowUp classes={{ root: `${selectedClass}` }} />
-                                </IconButton>
+                            <Tooltip title={moveUpHint}
+                                disableFocusListener={disabled || hideReorder}
+                                disableHoverListener={disabled || hideReorder}
+                                disableTouchListener={disabled || hideReorder}
+                            >
+                                <span>
+                                    <IconButton
+                                        onClick={this._onMoveUp}
+                                        disabled={disabled || hideReorder}
+                                        aria-label={moveUpHint}
+                                    >
+                                        <KeyboardArrowUp classes={{ root: `${selectedClass}` }} />
+                                    </IconButton>
+                                </span>
                             </Tooltip>
                         }
                         {
-                            !hideReorder &&
                             canMoveDown &&
-                            <Tooltip title={moveDownHint}>
-                                <IconButton
-                                    onClick={this._onMoveDown}
-                                    disabled={disabled}
-                                    aria-label={moveDownHint}
-                                >
-                                    <KeyboardArrowDown classes={{ root: `${selectedClass}` }} />
-                                </IconButton>
+                            <Tooltip title={moveDownHint}
+                                disableFocusListener={disabled || hideReorder}
+                                disableHoverListener={disabled || hideReorder}
+                                disableTouchListener={disabled || hideReorder}
+                            >
+                                <span>
+                                    <IconButton
+                                        onClick={this._onMoveDown}
+                                        disabled={disabled || hideReorder}
+                                        aria-label={moveDownHint}
+                                    >
+                                        <KeyboardArrowDown classes={{ root: `${selectedClass}` }} />
+                                    </IconButton>
+                                </span>
                             </Tooltip>
                         }
-                        {
-                            !hideDelete &&
-                            <Tooltip title={deleteHint}>
+                        <Tooltip title={deleteHint}
+                            disableFocusListener={disabled || hideDelete}
+                            disableHoverListener={disabled || hideDelete}
+                            disableTouchListener={disabled || hideDelete}
+                        >
+                            <span>
                                 <IconButton
                                     aria-label={deleteHint}
                                     onClick={this._showConfirmation}
-                                    disabled={disabled}
+                                    disabled={disabled || hideDelete}
                                 >
                                     <Delete classes={{ root: `${selectedClass}` }} />
                                 </IconButton>
-                            </Tooltip>
-                        }
+                            </span>
+                        </Tooltip>
                     </ListItemSecondaryAction>
                 </ListItem>
             </Fragment>
