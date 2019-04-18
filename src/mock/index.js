@@ -79,17 +79,11 @@ mock
         else if (config.params.source === 'crossref' && config.params.doi) return [200, mockData.externalDoiSearchResultList];
         else if (config.params.source === 'pubmed' && config.params.id) return [200, mockData.externalPubMedSearchResultsList];
     })
-    .onGet(new RegExp(escapeRegExp(routes.CURRENT_USER_INCOMPLETE_RECORDS_API({
-        page: 1,
-        pageSize: 20,
-        sortBy: '',
-        sortDirection: '',
-        facets: {}
-    }).apiUrl)))
-    .reply(200, mockData.incompleteNTROlist)
     .onGet(routes.CURRENT_USER_RECORDS_API({}).apiUrl).reply(config => {
         // AUTHOR_PUBLICATIONS_STATS_ONLY_API
-        if (config.params.rule === 'mine' && !!config.params['filters[stats_only]']) {
+        if (config.params.rule === 'incomplete') {
+            return [200, mockData.incompleteNTROlist];
+        } else if (config.params.rule === 'mine' && !!config.params['filters[stats_only]']) {
             return [200, mockData.currentAuthorStats];
         } else if (config.params.rule === 'mine' && config.params['filters[facets][Display+type]'] === 371) {
             // CURRENT_USER_RECORDS_API - myDataset
@@ -200,7 +194,7 @@ mock
     .onGet(new RegExp(escapeRegExp(routes.FILE_UPLOAD_API({pid: '.*', fileName: '.*'}).apiUrl)))
     .reply(200, ['s3-ap-southeast-2.amazonaws.com'])
     // .reply(500, {message: 'error - failed GET FILE_UPLOAD_API'})
-    .onGet(routes.CURRENT_USER_INCOMPLETE_RECORDS_API().apiUrl)
+    .onGet(routes.INCOMPLETE_RECORDS_API().apiUrl)
     .reply(200, mockData.incompleteRecordList)
     // .reply(500, ['ERROR IN EXISTING_RECORD_API'])
     ;

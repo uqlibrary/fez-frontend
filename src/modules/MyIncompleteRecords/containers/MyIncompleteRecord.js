@@ -1,27 +1,21 @@
-import {connect} from 'react-redux';
-import {bindActionCreators} from 'redux';
-import {reduxForm, getFormValues, getFormSyncErrors, SubmissionError, stopSubmit} from 'redux-form/immutable';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { reduxForm, getFormValues, getFormSyncErrors, SubmissionError, stopSubmit } from 'redux-form/immutable';
 import Immutable from 'immutable';
 import MyIncompleteRecord from '../components/MyIncompleteRecord';
-import {withRouter} from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import * as actions from 'actions';
-import {confirmDiscardFormChanges} from 'modules/SharedComponents/ConfirmDiscardFormChanges';
+import { confirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
+import { ORG_TYPE_NOT_SET } from 'config/general';
 
 const FORM_NAME = 'MyIncompleteRecord';
 
 const onSubmit = (values, dispatch, props) => {
-    console.log('MyIncompleteRecord container onSubmit');
-    console.log('values');
-    console.log(values);
-    console.log('props');
-    console.log(props);
     const data = {
         ...values.toJS(),
         publication: {...props.recordToFix},
         author: {...props.author}
     };
-    console.log('data');
-    console.log(data);
     return dispatch(
         actions.patchIncompleteRecord(data))
         .then(() => {
@@ -51,12 +45,15 @@ let MyIncompleteRecordContainer = reduxForm({
     onSubmit
 })(confirmDiscardFormChanges(MyIncompleteRecord, FORM_NAME));
 
-const mapStateToProps = (state) => {
-    console.log('mapStateToProps');
-    console.log('state');
-    console.log(state);
+const mapStateToProps = (state, ownProps) => {
     const formErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});
     const importedValues = state.get('fixRecordReducer') && state.get('fixRecordReducer').recordToFix;
+    const grants = importedValues && importedValues.fez_record_search_key_grant_agency.map((grantAgency, index) => ({
+        grantAgencyName: grantAgency.rek_grant_agency,
+        grantId: importedValues.fez_record_search_key_grant_id && importedValues.fez_record_search_key_grant_id.length > 0 && importedValues.fez_record_search_key_grant_id[index].rek_grant_id || '',
+        grantAgencyType: importedValues.fez_record_search_key_grant_agancy_type && importedValues.fez_record_search_key_grant_agancy_type.length > 0 && importedValues.fez_record_search_key_grant_agency_type[index].rek_grant_agency_type || ORG_TYPE_NOT_SET,
+        disabled: ownProps.disableInitialGrants
+    }));
 
     if (!!importedValues && !!importedValues.fez_record_search_key_author) {
         if (importedValues.fez_record_search_key_author.length === 0 || !importedValues.fez_record_search_key_author[0].rek_author_order) {
@@ -86,15 +83,13 @@ const mapStateToProps = (state) => {
             fez_record_search_key_grant_id: importedValues && importedValues.fez_record_search_key_grant_id || null,
             fez_record_search_key_grant_agency_type: importedValues && importedValues.fez_record_search_key_grant_agency_type || null,
             fez_record_search_key_audience_size: importedValues && importedValues.fez_record_search_key_audience_size || null,
-            fez_record_search_key_creator_contribution_statement: importedValues && importedValues.fez_record_search_key_creator_contribution_statement || null
+            fez_record_search_key_creator_contribution_statement: importedValues && importedValues.fez_record_search_key_creator_contribution_statement || null,
+            grants
         }
     };
 };
 
 function mapDispatchToProps(dispatch) {
-    console.log('mapDispatchToProps');
-    console.log('dispatch');
-    console.log(dispatch);
     return {
         actions: bindActionCreators(actions, dispatch)
     };

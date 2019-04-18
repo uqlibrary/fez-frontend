@@ -142,7 +142,7 @@ export class GrantListEditorRow extends PureComponent {
                     </Grid>
                     <Grid item xs={this.props.width === 'xs' ? 4 : 3}>
                         {this.getListItemTypoGraphy(
-                            `${ORG_TYPES_LOOKUP[grant.grantAgencyType]}`,
+                            `${ORG_TYPES_LOOKUP[grant.grantAgencyType] ? ORG_TYPES_LOOKUP[grant.grantAgencyType] : ''}`,
                             '',
                             `${width === 'xs' ? classes.identifierName : classes.primary} ${selectedClass}`,
                             ''
@@ -207,13 +207,15 @@ export class GrantListEditorRow extends PureComponent {
                                     </Hidden>
                                     <Grid item xs={this.props.width === 'sm' || this.props.width === 'xs' ? 12 : 4} style={{textAlign: 'right'}}>
                                         <Tooltip title={deleteHint}>
-                                            <IconButton
-                                                aria-label={deleteHint}
-                                                onClick={this._showConfirmation}
-                                                disabled={disabled}
-                                            >
-                                                <Delete/>
-                                            </IconButton>
+                                            <div style={{display: 'inline'}}>
+                                                <IconButton
+                                                    aria-label={deleteHint}
+                                                    onClick={this._showConfirmation}
+                                                    disabled={disabled}
+                                                >
+                                                    <Delete/>
+                                                </IconButton>
+                                            </div>
                                         </Tooltip>
                                     </Grid>
                                 </Grid>

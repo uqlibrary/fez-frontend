@@ -1,22 +1,24 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
-import {propTypes} from 'redux-form/immutable';
+import {Field, propTypes} from 'redux-form/immutable';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
+import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
 import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
+import {FileUploadField} from 'modules/SharedComponents/Toolbox/FileUploader';
 import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
 import {PublicationCitation} from 'modules/SharedComponents/PublicationCitation';
 import {default as pagesLocale} from 'locale/pages';
-// import {validation} from 'config';
+import {validation, general} from 'config';
 import NtroFields from 'modules/SharedComponents/Toolbox/NtroFields/components/NtroFields';
 import {
     DOCUMENT_TYPE_DESIGN, DOCUMENT_TYPE_JOURNAL_ARTICLE, DOCUMENT_TYPE_BOOK_CHAPTER, DOCUMENT_TYPE_BOOK, DOCUMENT_TYPE_RESEARCH_REPORT, DOCUMENT_TYPE_CREATIVE_WORK,
     CW_NTRO_SUBTYPES, LP_NTRO_SUBTYPES, RRW_NTRO_SUBTYPES, CPEE_NTRO_SUBTYPES, RESEARCH_REPORT_NTRO_SUBTYPES, NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK
 } from 'config/general';
-import {general} from 'config';
 import JSONPretty from 'react-json-pretty';
+import {GrantListEditorField} from 'modules/SharedComponents/GrantListEditor';
 
 export default class MyIncompleteRecord extends PureComponent {
     static propTypes = {
@@ -228,6 +230,45 @@ export default class MyIncompleteRecord extends PureComponent {
                                 <JSONPretty id="json-pretty" data={this.props.initialValues} />
                             </StandardCard>
                         </Grid>
+
+                        <Grid item xs={12}>
+                            <StandardCard title={txt.fields.notes.title}>
+                                <Field
+                                    component={TextField}
+                                    name="notes"
+                                    type="text"
+                                    disabled={this.props.submitting}
+                                    fullWidth
+                                    multiline
+                                    rows={5}
+                                    label={txt.fields.notes.label}
+                                    placeholder={txt.fields.notes.placeholder}
+                                />
+                            </StandardCard>
+                        </Grid>
+                        <Grid item xs={12}>
+                            <StandardCard title={txt.fields.grants.title}>
+                                <Field
+                                    component={GrantListEditorField}
+                                    name="grants"
+                                    disabled={this.props.submitting}
+                                    disableDeleteAllGrants={this.props.disableDeleteAllGrants}
+                                />
+                            </StandardCard>
+                        </Grid>
+                        <Grid item xs={12}>
+                            <StandardCard title={txt.fields.fileUpload.title}>
+                                <Field
+                                    name="files"
+                                    component={ FileUploadField }
+                                    disabled={this.props.submitting}
+                                    requireOpenAccessStatus
+                                    validate={[validation.validFileUpload]}
+                                    isNtro
+                                    {...txt.fields.fileUpload}
+                                />
+                            </StandardCard>
+                        </Grid>
                     </Grid>
                     <Grid container spacing={24}>
                         <Grid item xs />
@@ -235,7 +276,7 @@ export default class MyIncompleteRecord extends PureComponent {
                             <Button
                                 variant={'contained'}
                                 fullWidth
-                                children={'CANCEL'}
+                                children={txt.cancelButtonLabel}
                                 disabled={this.props.submitting}
                                 onClick={this._cancelFix}/>
                         </Grid>
@@ -244,7 +285,7 @@ export default class MyIncompleteRecord extends PureComponent {
                                 variant={'contained'}
                                 color={'primary'}
                                 fullWidth
-                                children={'COMPLETE MY RECORD'}
+                                children={txt.submitButtonLabel}
                                 onClick={this.props.handleSubmit}
                                 disabled={this.props.submitting || this.props.disableSubmit}/>
                         </Grid>
