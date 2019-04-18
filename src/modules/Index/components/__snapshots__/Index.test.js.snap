@@ -2022,6 +2022,7 @@ exports[`Index page should render placeholders 1`] = `
                                                           "submitThesis": [Function],
                                                           "unclaimRecord": [Function],
                                                           "updateCurrentAuthor": [Function],
+                                                          "updateIncompleteRecord": [Function],
                                                         }
                                                       }
                                                       history={
@@ -2131,6 +2132,7 @@ exports[`Index page should render placeholders 1`] = `
                                                             "submitThesis": [Function],
                                                             "unclaimRecord": [Function],
                                                             "updateCurrentAuthor": [Function],
+                                                            "updateIncompleteRecord": [Function],
                                                           }
                                                         }
                                                         classes={
@@ -2247,6 +2249,7 @@ exports[`Index page should render placeholders 1`] = `
                                                               "submitThesis": [Function],
                                                               "unclaimRecord": [Function],
                                                               "updateCurrentAuthor": [Function],
+                                                              "updateIncompleteRecord": [Function],
                                                             }
                                                           }
                                                           classes={
@@ -2782,6 +2785,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                 "submitThesis": [Function],
                                                                 "unclaimRecord": [Function],
                                                                 "updateCurrentAuthor": [Function],
+                                                                "updateIncompleteRecord": [Function],
                                                               }
                                                             }
                                                             classes={
@@ -6181,6 +6185,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                   "submitThesis": [Function],
                                                                   "unclaimRecord": [Function],
                                                                   "updateCurrentAuthor": [Function],
+                                                                  "updateIncompleteRecord": [Function],
                                                                 }
                                                               }
                                                             >
@@ -6244,6 +6249,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                     "submitThesis": [Function],
                                                                     "unclaimRecord": [Function],
                                                                     "updateCurrentAuthor": [Function],
+                                                                    "updateIncompleteRecord": [Function],
                                                                   }
                                                                 }
                                                                 classes={
