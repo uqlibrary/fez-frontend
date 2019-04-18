@@ -4,20 +4,21 @@ import { Field, propTypes } from 'redux-form/immutable';
 
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
-import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
-import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
-import {NavigationDialogBox} from 'modules/SharedComponents/Toolbox/NavigationPrompt';
-import {ConfirmDialogBox} from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
-import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
-import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
-import {FileUploadField} from 'modules/SharedComponents/Toolbox/FileUploader';
-import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
-import {PublicationCitation} from 'modules/SharedComponents/PublicationCitation';
-import {GrantListEditorField} from 'modules/SharedComponents/GrantListEditor';
 
-import {validation, routes} from 'config';
-import {default as pagesLocale} from 'locale/pages';
-import {default as formsLocale} from 'locale/forms';
+import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
+import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
+import { NavigationDialogBox } from 'modules/SharedComponents/Toolbox/NavigationPrompt';
+import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
+import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
+import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
+import { FileUploadField } from 'modules/SharedComponents/Toolbox/FileUploader';
+import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
+import { PublicationCitation } from 'modules/SharedComponents/PublicationCitation';
+import { GrantListEditorField } from 'modules/SharedComponents/GrantListEditor';
+
+import { validation, routes } from 'config';
+import { default as pagesLocale } from 'locale/pages';
+import { default as formsLocale } from 'locale/forms';
 
 export default class MyIncompleteRecord extends PureComponent {
     static propTypes = {

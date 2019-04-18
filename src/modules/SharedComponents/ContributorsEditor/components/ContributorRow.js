@@ -1,10 +1,10 @@
-import React, {PureComponent, Fragment} from 'react';
+import React, { PureComponent, Fragment } from 'react';
 import PropTypes from 'prop-types';
-import {numberToWords} from 'config';
-import {ORG_TYPES_LOOKUP} from 'config/general';
+import { numberToWords } from 'config';
+import { ORG_TYPES_LOOKUP } from 'config/general';
 import { locale } from 'locale';
 
-import {withStyles} from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 import withWidth from '@material-ui/core/withWidth';
 import Grid from '@material-ui/core/Grid';
 import ListItem from '@material-ui/core/ListItem';
@@ -20,7 +20,7 @@ import PersonOutlined from '@material-ui/icons/PersonOutlined';
 import Delete from '@material-ui/icons/Delete';
 import KeyboardArrowDown from '@material-ui/icons/KeyboardArrowDown';
 import KeyboardArrowUp from '@material-ui/icons/KeyboardArrowUp';
-import {ConfirmDialogBox} from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
+import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 
 export const styles = (theme) => ({
     listItem: {
@@ -155,11 +155,11 @@ export class ContributorRow extends PureComponent {
     );
 
     getContributorRowText = (showIdentifierLookup, showRoleInput, selectedClass) => {
-        const {index, contributor, classes, width} = this.props;
-        const {suffix} = this.props.locale;
+        const { index, contributor, classes, width } = this.props;
+        const { suffix } = this.props.locale;
         const contributorOrder = `${numberToWords(index + 1)} ${suffix}`;
         return (
-            <Grid container classes={{container: classes.listItem}}>
+            <Grid container classes={{ container: classes.listItem }}>
                 <Grid item xs={10} sm={5} md={5}>
                     {this.getListItemTypography(
                         contributor.nameAsPublished,
@@ -217,8 +217,8 @@ export class ContributorRow extends PureComponent {
     };
 
     render() {
-        const {deleteRecordConfirmation, moveUpHint, moveDownHint, deleteHint, selectHint} = this.props.locale;
-        const {contributor, canMoveDown, canMoveUp, disabled, classes, hideReorder, hideDelete} = this.props;
+        const { deleteRecordConfirmation, moveUpHint, moveDownHint, deleteHint, selectHint } = this.props.locale;
+        const { contributor, canMoveDown, canMoveUp, disabled, classes, hideReorder, hideDelete } = this.props;
 
         const ariaLabel = (
             selectHint &&
@@ -238,17 +238,17 @@ export class ContributorRow extends PureComponent {
                     locale={deleteRecordConfirmation}
                 />
                 <ListItem
-                    style={{cursor: 'pointer', width: '98%', margin: '0 1%'}}
+                    style={{ cursor: 'pointer', width: '98%', margin: '0 1%' }}
                     divider
-                    classes={{root: contributor.selected ? classes.rowSelected : ''}}
+                    classes={{ root: contributor.selected ? classes.rowSelected : '' }}
                     tabIndex={0}
-                    onClick={enableSelect ? this._onSelect : () => {}}
-                    onKeyDown={enableSelect ? this._onSelectKeyboard : () => {}}
+                    onClick={enableSelect ? this._onSelect : () => { }}
+                    onKeyDown={enableSelect ? this._onSelectKeyboard : () => { }}
                     aria-label={ariaLabel}
                 >
                     <Hidden xsDown>
-                        <ListItemIcon classes={{root: selectedClass}}>
-                            {contributor.selected ? <Person/> : <PersonOutlined/>}
+                        <ListItemIcon classes={{ root: selectedClass }}>
+                            {contributor.selected ? <Person /> : <PersonOutlined />}
                         </ListItemIcon>
                     </Hidden>
                     {
@@ -268,7 +268,7 @@ export class ContributorRow extends PureComponent {
                                     disabled={disabled}
                                     aria-label={moveUpHint}
                                 >
-                                    <KeyboardArrowUp classes={{ root: `${selectedClass}` }}/>
+                                    <KeyboardArrowUp classes={{ root: `${selectedClass}` }} />
                                 </IconButton>
                             </Tooltip>
                         }
@@ -281,7 +281,7 @@ export class ContributorRow extends PureComponent {
                                     disabled={disabled}
                                     aria-label={moveDownHint}
                                 >
-                                    <KeyboardArrowDown classes={{ root: `${selectedClass}` }}/>
+                                    <KeyboardArrowDown classes={{ root: `${selectedClass}` }} />
                                 </IconButton>
                             </Tooltip>
                         }
@@ -293,7 +293,7 @@ export class ContributorRow extends PureComponent {
                                     onClick={this._showConfirmation}
                                     disabled={disabled}
                                 >
-                                    <Delete classes={{ root: `${selectedClass}` }}/>
+                                    <Delete classes={{ root: `${selectedClass}` }} />
                                 </IconButton>
                             </Tooltip>
                         }
