@@ -171,7 +171,7 @@ export default {
                 "rek_author_affiliation_name_id": null,
                 "rek_author_affiliation_name_pid": "UQ:678742",
                 "rek_author_affiliation_name_order": 1,
-                "rek_author_affiliation_name": "School of Chemistry and Molecular Biosciences | The University of Queensland | St. Lucia | Australia"
+                "rek_author_affiliation_name": "The University of Queensland"
             }, {
                 "rek_author_affiliation_name_id": null,
                 "rek_author_affiliation_name_pid": "UQ:678742",
