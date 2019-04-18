@@ -7,7 +7,7 @@ export const initialState = {
 
 const handlers = {
 
-    [actions.INCOMPLETE_RECORDS_LOADED]: (state, action) => (
+    [actions.AUTHOR_INCOMPLETEPUBLICATIONS_LOADED]: (state, action) => (
         {
             ...state,
             loadingIncompleteRecordList: false,
@@ -15,7 +15,7 @@ const handlers = {
         }
     ),
 
-    [actions.INCOMPLETE_RECORDS_FAILED]: (state) => (
+    [actions.AUTHOR_INCOMPLETEPUBLICATIONS_FAILED]: (state) => (
         {
             ...state,
             loadingIncompleteRecordList: false,
@@ -23,7 +23,7 @@ const handlers = {
         }
     ),
 
-    [actions.INCOMPLETE_RECORDS_LOADING]: (state) => (
+    [actions.AUTHOR_INCOMPLETEPUBLICATIONS_LOADING]: (state) => (
         {
             ...state,
             loadingIncompleteRecordList: true

@@ -1,29 +1,51 @@
 import * as actions from './actionTypes';
 import {get, post} from 'repositories/generic';
-import {INCOMPLETE_RECORD_SAVE_API, CURRENT_USER_INCOMPLETE_RECORDS_API} from 'repositories/routes';
+// import {AUTHOR_INCOMPLETEPUBLICATIONS_SAVE_API} from 'repositories/routes';
 import * as transformers from './transformers';
+import * as routes from 'repositories/routes';
 
 /**
  * Load a list of incomplete NTRO Records from fez
  * @returns {action}
  */
-export function loadIncompleteRecords() {
+export function loadIncompleteRecords({page = 1, pageSize = 20, sortBy = 'created date', sortDirection = 'Desc', activeFacets = {filters: {}, ranges: {}}}) {
     return dispatch => {
-        dispatch({type: actions.INCOMPLETE_RECORDS_LOADING});
+        dispatch({type: actions.AUTHOR_INCOMPLETEPUBLICATIONS_LOADING});
 
-        return get(CURRENT_USER_INCOMPLETE_RECORDS_API())
+        return get(routes.CURRENT_USER_INCOMPLETE_RECORDS_API({
+            page: page,
+            pageSize: pageSize,
+            sortBy: sortBy,
+            sortDirection: sortDirection,
+            facets: activeFacets
+        }))
             .then(response => {
                 dispatch({
-                    type: actions.INCOMPLETE_RECORDS_LOADED,
+                    type: actions.AUTHOR_INCOMPLETEPUBLICATIONS_LOADED,
                     payload: response
                 });
             })
             .catch(error => {
                 dispatch({
-                    type: actions.INCOMPLETE_RECORDS_FAILED,
+                    type: actions.AUTHOR_INCOMPLETEPUBLICATIONS_FAILED,
                     payload: error.message
                 });
             });
+        //
+
+        // return get(CURRENT_USER_INCOMPLETE_RECORDS_API())
+        //     .then(response => {
+        //         dispatch({
+        //             type: actions.INCOMPLETE_RECORDS_LOADED,
+        //             payload: response
+        //         });
+        //     })
+        //     .catch(error => {
+        //         dispatch({
+        //             type: actions.INCOMPLETE_RECORDS_FAILED,
+        //             payload: error.message
+        //         });
+        //     });
     };
 }
 
@@ -41,7 +63,7 @@ export function patchIncompleteRecord(data) {
     // if (!data.publication || !data.author) {
     //     return dispatch => {
     //         dispatch({
-    //             type: actions.INCOMPLETE_RECORD_SAVE_FAILED,
+    //             type: actions.AUTHOR_INCOMPLETEPUBLICATIONS_SAVE_FAILED,
     //             payload: 'Incomplete data for requests'
     //         });
     //
@@ -53,7 +75,7 @@ export function patchIncompleteRecord(data) {
 
     return dispatch => {
         dispatch({
-            type: actions.INCOMPLETE_RECORD_SAVE_PROCESSING,
+            type: actions.AUTHOR_INCOMPLETEPUBLICATIONS_SAVE_PROCESSING,
             payload: data
         });
 
@@ -61,10 +83,10 @@ export function patchIncompleteRecord(data) {
         const createIncompleteRequest = transformers.getIncompleteRequestFields(data);
 
         return Promise.resolve([])
-            .then(()=> (post(INCOMPLETE_RECORD_SAVE_API({pid: data.publication.rek_pid}), createIncompleteRequest)))
+            .then(()=> (post(actions.AUTHOR_INCOMPLETEPUBLICATIONS_SAVE_API({pid: data.publication.rek_pid}), createIncompleteRequest)))
             .then(responses => {
                 dispatch({
-                    type: actions.INCOMPLETE_RECORD_SAVE_SUCCESS,
+                    type: actions.AUTHOR_INCOMPLETEPUBLICATIONS_SAVE_SUCCESS,
                     payload: {
                         pid: data.publication.rek_pid
                     }
@@ -73,7 +95,7 @@ export function patchIncompleteRecord(data) {
             })
             .catch(error => {
                 dispatch({
-                    type: actions.INCOMPLETE_RECORD_SAVE_FAILED,
+                    type: actions.AUTHOR_INCOMPLETEPUBLICATIONS_SAVE_FAILED,
                     payload: error.message
                 });
                 return Promise.reject(error);

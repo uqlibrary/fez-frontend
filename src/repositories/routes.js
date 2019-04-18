@@ -163,7 +163,7 @@ export const CURRENT_USER_RECORDS_API = (values, route = 'search') => (
                 ...{...getStandardSearchParams(values), ...getOpenAccessSearchParams(values)}
             }
         }
-    }
+    }``
 );
 
 export const CURRENT_USER_INCOMPLETE_RECORDS_API = (values, route = 'search') => (
@@ -179,7 +179,7 @@ export const CURRENT_USER_INCOMPLETE_RECORDS_API = (values, route = 'search') =>
 );
 
 // patch record apis
-export const INCOMPLETE_RECORD_SAVE_API = ({pid}) => (
+export const AUTHOR_INCOMPLETEPUBLICATIONS_SAVE_API = ({pid}) => (
     {apiUrl: `records/${pid}`}
 );
 

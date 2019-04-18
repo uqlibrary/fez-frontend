@@ -194,7 +194,7 @@ mock
     .onGet(new RegExp(escapeRegExp(routes.FILE_UPLOAD_API({pid: '.*', fileName: '.*'}).apiUrl)))
     .reply(200, ['s3-ap-southeast-2.amazonaws.com'])
     // .reply(500, {message: 'error - failed GET FILE_UPLOAD_API'})
-    .onGet(routes.INCOMPLETE_RECORDS_API().apiUrl)
+    .onGet(routes.CURRENT_USER_INCOMPLETE_RECORDS_API().apiUrl)
     .reply(200, mockData.incompleteRecordList)
     // .reply(500, ['ERROR IN EXISTING_RECORD_API'])
     ;
