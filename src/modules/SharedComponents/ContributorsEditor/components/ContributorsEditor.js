@@ -2,7 +2,6 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import Immutable from 'immutable';
 import { connect } from 'react-redux';
-// import JSONPretty from 'react-json-pretty';
 
 import List from '@material-ui/core/List';
 import Typography from '@material-ui/core/Typography';
@@ -15,7 +14,6 @@ import ContributorForm from './ContributorForm';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 
 import { locale } from 'locale';
-import { leftJoin } from 'helpers/general';
 
 export class ContributorsEditor extends PureComponent {
     static propTypes = {
@@ -33,7 +31,7 @@ export class ContributorsEditor extends PureComponent {
         showContributorAssignment: PropTypes.bool,
         showIdentifierLookup: PropTypes.bool,
         showRoleInput: PropTypes.bool,
-        record: PropTypes.object,
+        initialValues: PropTypes.object,
     };
 
     static defaultProps = {
@@ -52,16 +50,13 @@ export class ContributorsEditor extends PureComponent {
     constructor(props) {
         super(props);
         this.state = {
-            contributors: this.getContributorsFromProps(props),
+            contributors: this.getContributorsFromProps(props) || [],
             errorMessage: '',
             isCurrentAuthorSelected: false,
             showIdentifierLookup: false,
         };
-        if (props.record) {
-            this.state.contributors = this.getContributorData(
-                props.record,
-                this.state.contributors
-            );
+        if (props.initialValues) {
+            this.state.contributors = props.initialValues.authors || [];
         }
     }
 
@@ -70,46 +65,6 @@ export class ContributorsEditor extends PureComponent {
         if (this.props.onChange) {
             this.props.onChange(nextState.contributors);
         }
-    };
-
-    getContributorData = (record, contributors) => {
-        const contributorsArray = contributors || [];
-        const affiliationDataMap = [
-            {
-                infoArray: record.fez_record_search_key_author_affiliation_name,
-                key: 'rek_author_affiliation_name_order'
-            },
-            {
-                infoArray: record.fez_record_search_key_author_affiliation_type,
-                key: 'rek_author_affiliation_type_order'
-            },
-        ];
-
-        const authors = affiliationDataMap.reduce((authors, affiliationData) => {
-            return leftJoin(
-                authors,
-                affiliationData.infoArray,
-                'rek_author_order',
-                affiliationData.key
-            );
-        }, record.fez_record_search_key_author);
-
-        authors.map((author) => {
-            const affiliation = author.rek_author_affiliation_name === locale.global.orgTitle
-                ? 'UQ'
-                : 'NotUQ'
-            ;
-            const contributor = {
-                nameAsPublished: author.rek_author,
-                orgaff: author.rek_author_affiliation_name || '',
-                orgtype: author.rek_author_affiliation_type || '',
-                disabled: false,
-                affiliation,
-                creatorRole: '',
-            };
-            contributorsArray.push(contributor);
-        });
-        return contributorsArray;
     };
 
     getContributorsFromProps = (props) => {
@@ -209,7 +164,7 @@ export class ContributorsEditor extends PureComponent {
         const newContributors = this.state.contributors.map((item, itemIndex) => ({
             ...item,
             selected: (
-                !this.props.record &&
+                !this.props.initialValues &&
                 this.props.author &&
                 item.aut_id === this.props.author.aut_id
             ) || (
@@ -217,7 +172,7 @@ export class ContributorsEditor extends PureComponent {
                 !contributor.selected
             ),
             authorId: (
-                !this.props.record &&
+                !this.props.initialValues &&
                 index === itemIndex &&
                 this.props.author
             ) ? this.props.author.aut_id : null
@@ -279,7 +234,7 @@ export class ContributorsEditor extends PureComponent {
             locale: formLocale,
             onSubmit: contributor => onSubmit(contributor, index),
         };
-        if (this.props.record) {
+        if (this.props.initialValues) {
             formProps.locale.addButton = 'Update author';
             formProps.contributor = this.state.contributors[index];
             formProps.showIdentifierLookup = formProps.contributor.affiliation === 'UQ';
@@ -299,7 +254,7 @@ export class ContributorsEditor extends PureComponent {
             showContributorAssignment,
             showIdentifierLookup,
             showRoleInput,
-            record
+            initialValues
         } = this.props;
 
         const {
@@ -337,7 +292,7 @@ export class ContributorsEditor extends PureComponent {
                     />
                 }
                 {
-                    !record &&
+                    !initialValues &&
                     this.renderContributorForm(this.addContributor)
                 }
                 {
@@ -366,7 +321,7 @@ export class ContributorsEditor extends PureComponent {
                                 {this.renderContributorRows()}
                             </List>
                             {
-                                record &&
+                                initialValues &&
                                 selectedContributorIndex > -1 &&
                                 <div style={{marginTop: 24}}>
                                     {this.renderContributorForm(this.updateContributor, selectedContributorIndex)}
