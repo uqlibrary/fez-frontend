@@ -40,7 +40,7 @@ const validate = () => {
 
 let MyIncompleteRecordContainer = reduxForm({
     form: FORM_NAME,
-    enableReinitialize: true,
+    // enableReinitialize: true,
     validate,
     onSubmit
 })(confirmDiscardFormChanges(MyIncompleteRecord, FORM_NAME));
@@ -54,13 +54,6 @@ const mapStateToProps = (state, ownProps) => {
         grantAgencyType: importedValues.fez_record_search_key_grant_agancy_type && importedValues.fez_record_search_key_grant_agancy_type.length > 0 && importedValues.fez_record_search_key_grant_agency_type[index].rek_grant_agency_type || ORG_TYPE_NOT_SET,
         disabled: ownProps.disableInitialGrants
     }));
-
-    if (!!importedValues && !!importedValues.fez_record_search_key_author) {
-        if (importedValues.fez_record_search_key_author.length === 0 || !importedValues.fez_record_search_key_author[0].rek_author_order) {
-            // we did not get an author id - handle error
-            // how?
-        }
-    }
 
     return {
         ...state.get('fixRecordReducer'),

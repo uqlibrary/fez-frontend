@@ -73,6 +73,19 @@ export function patchIncompleteRecord(data) {
     console.log('patchIncompleteRecord');
     console.log(data);
 
+    const isAuthorLinked = data.publication.fez_record_search_key_author_id && data.publication.fez_record_search_key_author_id.length > 0 &&
+        data.publication.fez_record_search_key_author_id.filter(authorId => authorId.rek_author_id === data.author.aut_id).length > 0;
+
+    if (!isAuthorLinked) {
+        return dispatch => {
+            dispatch({
+                type: actions.INCOMPLETE_RECORD_SAVE_FAILED,
+                payload: 'Current author is not linked to this record'
+            });
+            return Promise.reject(new Error('Current author is not linked to this record'));
+        };
+    }
+
     return dispatch => {
         dispatch({
             type: actions.AUTHOR_INCOMPLETEPUBLICATIONS_SAVE_PROCESSING,

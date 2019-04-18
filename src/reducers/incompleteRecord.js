@@ -37,5 +37,6 @@ export default function incompleteRecordReducer(state = {...initialState}, actio
     if (!handler) {
         return state;
     }
+    console.log(handler);
     return handler(state, action);
 }
