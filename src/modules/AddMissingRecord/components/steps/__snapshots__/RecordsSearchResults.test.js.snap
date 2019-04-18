@@ -1219,7 +1219,7 @@ exports[`Search record results should render a single unclaimable item with no a
               ],
               "results": Array [
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
               ],

@@ -492,11 +492,11 @@ exports[`DoiCitationView test  should render component with doi 1`] = `
               ],
               "results": Array [
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
               ],
@@ -1921,7 +1921,7 @@ exports[`DoiCitationView test  should render component with empty span 1`] = `
               ],
               "results": Array [
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
               ],
@@ -2440,15 +2440,15 @@ exports[`DoiCitationView test  should render doi without external link 1`] = `
               ],
               "results": Array [
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
               ],

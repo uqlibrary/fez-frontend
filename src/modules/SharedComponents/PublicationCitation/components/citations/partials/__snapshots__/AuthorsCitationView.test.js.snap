@@ -498,15 +498,15 @@ exports[`AuthorsCitationView test  should render component with 1 author 1`] = `
               ],
               "results": Array [
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
               ],
@@ -1079,19 +1079,19 @@ exports[`AuthorsCitationView test  should render component with 2 authors 1`] = 
               ],
               "results": Array [
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
               ],
@@ -1690,23 +1690,23 @@ exports[`AuthorsCitationView test  should render component with 2 authors for pu
               ],
               "results": Array [
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
               ],
@@ -2345,27 +2345,27 @@ exports[`AuthorsCitationView test  should render component with 2 authors for pu
               ],
               "results": Array [
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
               ],
@@ -3008,35 +3008,35 @@ exports[`AuthorsCitationView test  should render component with 3 authors 1`] = 
               ],
               "results": Array [
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
               ],
@@ -3667,31 +3667,31 @@ exports[`AuthorsCitationView test  should render component with 3 authors for pu
               ],
               "results": Array [
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
               ],
@@ -4384,39 +4384,39 @@ exports[`AuthorsCitationView test  should render component with 3 authors with p
               ],
               "results": Array [
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
               ],
@@ -5067,43 +5067,43 @@ exports[`AuthorsCitationView test  should render component with 3 authors with p
               ],
               "results": Array [
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
               ],
@@ -6052,7 +6052,7 @@ exports[`AuthorsCitationView test  should render component with no authors 1`] =
               ],
               "results": Array [
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
               ],
@@ -6587,11 +6587,11 @@ exports[`AuthorsCitationView test  should set class on component with no authors
               ],
               "results": Array [
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
               ],

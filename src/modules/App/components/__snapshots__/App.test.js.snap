@@ -5323,11 +5323,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
         ],
         "results": Array [
           Object {
-            "isThrow": false,
+            "type": "return",
             "value": undefined,
           },
           Object {
-            "isThrow": false,
+            "type": "return",
             "value": undefined,
           },
         ],
@@ -5349,51 +5349,51 @@ exports[`Testing wrapped App component Mounts 1`] = `
         ],
         "results": Array [
           Object {
-            "isThrow": false,
+            "type": "return",
             "value": Immutable.Map {},
           },
           Object {
-            "isThrow": false,
+            "type": "return",
             "value": Immutable.Map {},
           },
           Object {
-            "isThrow": false,
+            "type": "return",
             "value": Immutable.Map {},
           },
           Object {
-            "isThrow": false,
+            "type": "return",
             "value": Immutable.Map {},
           },
           Object {
-            "isThrow": false,
+            "type": "return",
             "value": Immutable.Map {},
           },
           Object {
-            "isThrow": false,
+            "type": "return",
             "value": Immutable.Map {},
           },
           Object {
-            "isThrow": false,
+            "type": "return",
             "value": Immutable.Map {},
           },
           Object {
-            "isThrow": false,
+            "type": "return",
             "value": Immutable.Map {},
           },
           Object {
-            "isThrow": false,
+            "type": "return",
             "value": Immutable.Map {},
           },
           Object {
-            "isThrow": false,
+            "type": "return",
             "value": Immutable.Map {},
           },
           Object {
-            "isThrow": false,
+            "type": "return",
             "value": Immutable.Map {},
           },
           Object {
-            "isThrow": false,
+            "type": "return",
             "value": Immutable.Map {},
           },
         ],
@@ -5421,27 +5421,27 @@ exports[`Testing wrapped App component Mounts 1`] = `
         ],
         "results": Array [
           Object {
-            "isThrow": false,
+            "type": "return",
             "value": undefined,
           },
           Object {
-            "isThrow": false,
+            "type": "return",
             "value": undefined,
           },
           Object {
-            "isThrow": false,
+            "type": "return",
             "value": undefined,
           },
           Object {
-            "isThrow": false,
+            "type": "return",
             "value": undefined,
           },
           Object {
-            "isThrow": false,
+            "type": "return",
             "value": undefined,
           },
           Object {
-            "isThrow": false,
+            "type": "return",
             "value": undefined,
           },
         ],
@@ -5925,7 +5925,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
               ],
               "results": Array [
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
               ],
@@ -5946,7 +5946,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                   ],
                   "results": Array [
                     Object {
-                      "isThrow": false,
+                      "type": "return",
                       "value": undefined,
                     },
                   ],
@@ -5993,7 +5993,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                     ],
                     "results": Array [
                       Object {
-                        "isThrow": false,
+                        "type": "return",
                         "value": undefined,
                       },
                     ],
@@ -6040,7 +6040,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                       ],
                       "results": Array [
                         Object {
-                          "isThrow": false,
+                          "type": "return",
                           "value": undefined,
                         },
                       ],
@@ -10180,6 +10180,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                               "submitThesis": [Function],
                                                               "unclaimRecord": [Function],
                                                               "updateCurrentAuthor": [Function],
+                                                              "updateIncompleteRecord": [Function],
                                                             }
                                                           }
                                                           autoFocus={true}
@@ -15309,6 +15310,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 "submitThesis": [Function],
                                 "unclaimRecord": [Function],
                                 "updateCurrentAuthor": [Function],
+                                "updateIncompleteRecord": [Function],
                               }
                             }
                             appAlert={null}
@@ -16944,6 +16946,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "submitThesis": [Function],
                                                                             "unclaimRecord": [Function],
                                                                             "updateCurrentAuthor": [Function],
+                                                                            "updateIncompleteRecord": [Function],
                                                                           }
                                                                         }
                                                                         history={
@@ -17053,6 +17056,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                               "submitThesis": [Function],
                                                                               "unclaimRecord": [Function],
                                                                               "updateCurrentAuthor": [Function],
+                                                                              "updateIncompleteRecord": [Function],
                                                                             }
                                                                           }
                                                                           classes={
@@ -17169,6 +17173,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                 "submitThesis": [Function],
                                                                                 "unclaimRecord": [Function],
                                                                                 "updateCurrentAuthor": [Function],
+                                                                                "updateIncompleteRecord": [Function],
                                                                               }
                                                                             }
                                                                             classes={
@@ -17704,6 +17709,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                   "submitThesis": [Function],
                                                                                   "unclaimRecord": [Function],
                                                                                   "updateCurrentAuthor": [Function],
+                                                                                  "updateIncompleteRecord": [Function],
                                                                                 }
                                                                               }
                                                                               classes={
@@ -21103,6 +21109,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                     "submitThesis": [Function],
                                                                                     "unclaimRecord": [Function],
                                                                                     "updateCurrentAuthor": [Function],
+                                                                                    "updateIncompleteRecord": [Function],
                                                                                   }
                                                                                 }
                                                                               >
@@ -21166,6 +21173,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "submitThesis": [Function],
                                                                                       "unclaimRecord": [Function],
                                                                                       "updateCurrentAuthor": [Function],
+                                                                                      "updateIncompleteRecord": [Function],
                                                                                     }
                                                                                   }
                                                                                   classes={

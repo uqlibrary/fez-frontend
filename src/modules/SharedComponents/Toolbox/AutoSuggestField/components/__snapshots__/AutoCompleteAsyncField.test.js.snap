@@ -915,11 +915,11 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
               ],
               "results": Array [
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
               ],
@@ -1770,15 +1770,15 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
               ],
               "results": Array [
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
               ],
@@ -1815,7 +1815,7 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
                 ],
                 "results": Array [
                   Object {
-                    "isThrow": false,
+                    "type": "return",
                     "value": undefined,
                   },
                 ],
@@ -2671,19 +2671,19 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
               ],
               "results": Array [
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
               ],
@@ -2735,7 +2735,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                 ],
                 "results": Array [
                   Object {
-                    "isThrow": false,
+                    "type": "return",
                     "value": undefined,
                   },
                 ],
@@ -3569,19 +3569,19 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
               ],
               "results": Array [
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
               ],
@@ -3633,7 +3633,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                 ],
                 "results": Array [
                   Object {
-                    "isThrow": false,
+                    "type": "return",
                     "value": undefined,
                   },
                 ],
@@ -4477,7 +4477,7 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
               ],
               "results": Array [
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
               ],

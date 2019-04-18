@@ -940,7 +940,7 @@ exports[`Grant Information Component  should render component mounted 1`] = `
               ],
               "results": Array [
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
               ],
