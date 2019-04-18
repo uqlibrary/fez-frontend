@@ -16,9 +16,7 @@ const onSubmit = (values, dispatch, props) => {
         publication: {...props.recordToFix},
         author: {...props.author}
     };
-    return dispatch(data.fixAction === 'unclaim'
-        ? actions.unclaimRecord(data)
-        : actions.fixRecord(data))
+    return dispatch(actions.updateIncompleteRecord(data))
         .then(() => {
             // once this promise is resolved form is submitted successfully and will call parent container
             // reported bug to redux-form:
