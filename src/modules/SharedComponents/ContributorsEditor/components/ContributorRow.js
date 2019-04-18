@@ -2,6 +2,8 @@ import React, {PureComponent, Fragment} from 'react';
 import PropTypes from 'prop-types';
 import {numberToWords} from 'config';
 import {ORG_TYPES_LOOKUP} from 'config/general';
+import { locale } from 'locale';
+
 import {withStyles} from '@material-ui/core/styles';
 import withWidth from '@material-ui/core/withWidth';
 import Grid from '@material-ui/core/Grid';
@@ -171,7 +173,7 @@ export class ContributorRow extends PureComponent {
                     <Grid item xs={10} sm={5} md={5}>
                         {this.getListItemTypography(
                             `${contributor.aut_title} ${contributor.aut_display_name}`,
-                            `University of Queensland (${contributor.aut_org_username || contributor.aut_student_username})`,
+                            `${locale.global.orgTitle} (${contributor.aut_org_username || contributor.aut_student_username})`,
                             `${width === 'xs' ? classes.identifierName : classes.primary} ${selectedClass}`,
                             `${width === 'xs' ? classes.identifierSubtitle : ''} ${selectedClass}`
                         )}
@@ -192,7 +194,7 @@ export class ContributorRow extends PureComponent {
                     contributor.affiliation && contributor.affiliation === 'UQ' && !contributor.aut_title &&
                         <Grid item xs={5}>
                             {this.getListItemTypography(
-                                'University of Queensland',
+                            locale.global.orgTitle,
                                 'Organisation type: University',
                                 `${width === 'xs' ? classes.identifierName : classes.primary} ${selectedClass}`,
                                 `${width === 'xs' ? classes.identifierSubtitle : ''} ${selectedClass}`

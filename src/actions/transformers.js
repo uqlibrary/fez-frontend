@@ -185,7 +185,7 @@ export const getRecordAuthorAffiliationSearchKey = (authors) => {
             .map(
                 (item, index) => (
                     {
-                        rek_author_affiliation_name: item.orgaff || 'University of Queensland',
+                        rek_author_affiliation_name: item.orgaff || locale.global.orgTitle,
                         rek_author_affiliation_name_order: index + 1
                     }
                 )
