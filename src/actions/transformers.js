@@ -483,17 +483,10 @@ export const getNtroMetadataSearchKeys = (data) => {
  * @param data
  */
 export const getIncompleteRequestFields = (data) => {
-    console.log('transformer getIncompleteRequestFields');
-    console.log(data);
-    console.log('data.author.aut_id = ', data.author.aut_id);
-    console.log('data.publication.fez_record_search_key_author_id');
-    console.log(data.publication.fez_record_search_key_author_id);
-    console.log(data.publication.fez_record_search_key_author_id.filter(authorId => authorId.rek_author_id === data.author.aut_id));
-
     const author = data.publication.fez_record_search_key_author_id.filter(authorId => authorId.rek_author_id === data.author.aut_id);
-    console.log('author: ', author);
+
+    // TODO test with author uqrdav10 on record UQ:720334 (he isnt first on that record)
     const authorIdOrder = author[0].rek_author_id_order;
-    console.log('authorIdOrder = ', authorIdOrder);
 
     const result = {};
 
@@ -524,19 +517,26 @@ export const getIncompleteRequestFields = (data) => {
             }];
     }
 
+    // TODO multiple entries for the same author?  Confirm this is how the data works
     if (!!data.languages) {
-        result.fez_record_search_key_language = [{
-            rek_language: data.languages[0],  // TODO, this is wrong
-            rek_language_order: authorIdOrder
-        }];
+        result.fez_record_search_key_language =
+            data.qualityIndicators.map((item) => {
+                return {
+                    rek_language: item,
+                    rek_language_order: authorIdOrder
+                };
+            });
     }
 
+    // TODO multiple entries for the same author?  Confirm this is how the data works
     if (!!data.qualityIndicators && data.qualityIndicators.length > 0) {
         result.fez_record_search_key_quality_indicator =
-            [{
-                rek_quality_indicator: data.qualityIndicators[0],
-                rek_quality_indicator_order: authorIdOrder
-            }];
+            data.qualityIndicators.map((item) => {
+                return {
+                    rek_quality_indicator: item,
+                    rek_quality_indicator_order: authorIdOrder
+                };
+            });
     }
 
     if (!!data.significance) {
@@ -554,6 +554,5 @@ export const getIncompleteRequestFields = (data) => {
             };
     }
 
-    console.log(result); // #dev
     return result;
 };

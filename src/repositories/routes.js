@@ -163,10 +163,10 @@ export const CURRENT_USER_RECORDS_API = (values, route = 'search') => (
                 ...{...getStandardSearchParams(values), ...getOpenAccessSearchParams(values)}
             }
         }
-    }``
+    }
 );
 
-export const CURRENT_USER_INCOMPLETE_RECORDS_API = (values, route = 'search') => (
+export const CURRENT_USER_INCOMPLETE_RECORDS_API = (values = {}, route = 'search') => (
     {
         apiUrl: `records/${route}`,
         options: {

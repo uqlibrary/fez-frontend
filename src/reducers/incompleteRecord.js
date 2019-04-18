@@ -32,11 +32,9 @@ const handlers = {
 };
 
 export default function incompleteRecordReducer(state = {...initialState}, action) {
-    console.log('incompleteRecordReducer action = ', action);
     const handler = handlers[action.type];
     if (!handler) {
         return state;
     }
-    console.log(handler);
     return handler(state, action);
 }

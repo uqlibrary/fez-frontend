@@ -144,10 +144,8 @@ export default class MyIncompleteRecord extends PureComponent {
         const editExtent = (isDocumentType1 || isDocumentType2) &&
             (!this.props.recordToFix || !this.props.recordToFix.fez_record_search_key_total_pages || !this.props.recordToFix.fez_record_search_key_total_pages.rek_total_pages);
 
-        const editGrants = false; // TODO
+        // console.log('LOADING THIS PAGE');
 
-        console.log('LOADING THIS PAGE');
-        // console.log(this.props.initialValues.toJS());
         // if author is not linked to this record, abandon form
         // TODO: Uncomment this before going live
         // if (!(this.props.accountAuthorLoading || this.props.loadingRecordToFix) && !this.isAuthorLinked()) {
@@ -178,13 +176,13 @@ export default class MyIncompleteRecord extends PureComponent {
                 <PublicationCitation publication={this.props.recordToFix} hideTitle/>
 
                 {
-                    // remove before going live
+                    // TODO remove before going live
                     !!this.props.recordToFix && !!this.props.recordToFix.rek_display_type_lookup ?
                         <p><b>Display Type</b> (for dev): {this.props.recordToFix.rek_display_type_lookup}</p>
                         : <p><b>Display Type</b> (for dev): missing</p>
                 }
                 {
-                    // remove before going live
+                    // TODO remove before going live
                     !!this.props.recordToFix && !!this.props.recordToFix.rek_subtype ?
                         <p><b>Subtype</b> (for dev) : {this.props.recordToFix.rek_subtype}</p>
                         : <p><b>Subtype</b> (for dev) : missing</p>
@@ -202,7 +200,7 @@ export default class MyIncompleteRecord extends PureComponent {
                         <Grid item xs={12}>
                             {
                                 isNtro &&
-                                (editCreatorContributionStatement || editAbstract || editExtent || editAudienceSize || editSignificance || editQualityIndicator || editLanguage || editGrants) &&
+                                (editCreatorContributionStatement || editAbstract || editExtent || editAudienceSize || editSignificance || editQualityIndicator || editLanguage) &&
                                 <NtroFields
                                     submitting={this.props.submitting}
                                     showContributionStatement={editCreatorContributionStatement}
@@ -221,7 +219,7 @@ export default class MyIncompleteRecord extends PureComponent {
                                     hideLanguage={!editLanguage}
                                     defaultLanguage={defaultLanguage}
                                     hideSeries
-                                    hideGrants={!editGrants}
+                                    hideGrants
                                 />
                             }
                         </Grid>

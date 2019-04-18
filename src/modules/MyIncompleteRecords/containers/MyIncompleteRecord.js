@@ -16,6 +16,7 @@ const onSubmit = (values, dispatch, props) => {
         publication: {...props.recordToFix},
         author: {...props.author}
     };
+
     return dispatch(
         actions.patchIncompleteRecord(data))
         .then(() => {
@@ -40,7 +41,7 @@ const validate = () => {
 
 let MyIncompleteRecordContainer = reduxForm({
     form: FORM_NAME,
-    // enableReinitialize: true,
+    enableReinitialize: true,
     validate,
     onSubmit
 })(confirmDiscardFormChanges(MyIncompleteRecord, FORM_NAME));
