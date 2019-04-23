@@ -429,6 +429,7 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
         }
       }
       onAction={[Function]}
+      onCancelAction={[Function]}
       onRef={[Function]}
     />
     <WithStyles(Grid)
@@ -1018,6 +1019,7 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
         }
       }
       onAction={[Function]}
+      onCancelAction={[Function]}
       onRef={[Function]}
     />
     <WithStyles(Grid)
@@ -1619,6 +1621,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
         }
       }
       onAction={[Function]}
+      onCancelAction={[Function]}
       onRef={[Function]}
     />
     <WithStyles(Grid)
@@ -2214,6 +2217,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
         }
       }
       onAction={[Function]}
+      onCancelAction={[Function]}
       onRef={[Function]}
     />
     <WithStyles(Grid)
@@ -2803,6 +2807,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
         }
       }
       onAction={[Function]}
+      onCancelAction={[Function]}
       onRef={[Function]}
     />
     <WithStyles(Grid)

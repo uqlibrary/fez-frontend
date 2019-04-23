@@ -60,19 +60,21 @@ export default class MyIncompleteRecord extends PureComponent {
         this.props.history.push(routes.pathConfig.records.incomplete);
     };
 
-    // TODO: Uncomment this before going live
-    // isLoggedInUserLinked = (author, recordToFix, searchKey, subkey) => {
-    //     return !!author && !!recordToFix && recordToFix[searchKey] && recordToFix[searchKey].length > 0
-    //         && recordToFix[searchKey].filter(authorId => authorId[subkey] === author.aut_id).length > 0;
-    // };
+    _navigateToDashboard = () => {
+        this.props.history.push(routes.pathConfig.dashboard);
+    };
 
-    // TODO: Uncomment this before going live
-    // isAuthorLinked = () => {
-    //     const isAuthorLinked = this.isLoggedInUserLinked(this.props.author, this.props.recordToFix, 'fez_record_search_key_author_id', 'rek_author_id');
-    //     const isContributorLinked = this.isLoggedInUserLinked(this.props.author, this.props.recordToFix, 'fez_record_search_key_contributor_id', 'rek_contributor_id');
-    //
-    //     return isAuthorLinked || isContributorLinked;
-    // };
+    isLoggedInUserLinked = (author, recordToFix, searchKey, subkey) => {
+        return !!author && !!recordToFix && recordToFix[searchKey] && recordToFix[searchKey].length > 0
+            && recordToFix[searchKey].filter(authorId => authorId[subkey] === author.aut_id).length > 0;
+    };
+
+    isAuthorLinked = () => {
+        const isAuthorLinked = this.isLoggedInUserLinked(this.props.author, this.props.recordToFix, 'fez_record_search_key_author_id', 'rek_author_id');
+        const isContributorLinked = this.isLoggedInUserLinked(this.props.author, this.props.recordToFix, 'fez_record_search_key_contributor_id', 'rek_contributor_id');
+
+        return isAuthorLinked || isContributorLinked;
+    };
 
     _cancelFix = () => {
         this.props.history.goBack();
@@ -93,13 +95,11 @@ export default class MyIncompleteRecord extends PureComponent {
     };
 
     render() {
-        // console.log(this.props.initialValues.toJS());
         // if author is not linked to this record, abandon form
-        // TODO: Uncomment this before going live
-        // if (!(this.props.accountAuthorLoading || this.props.loadingRecordToFix) && !this.isAuthorLinked()) {
-        //     this.props.history.go(-1);
-        //     return <div />;
-        // }
+        if (!(this.props.accountAuthorLoading || this.props.loadingRecordToFix) && !this.isAuthorLinked()) {
+            this.props.history.go(-1);
+            return <div />;
+        }
 
         const txt = pagesLocale.pages.incompletePublication;
         const txtFixForm = formsLocale.forms.fixPublicationForm;
@@ -127,8 +127,8 @@ export default class MyIncompleteRecord extends PureComponent {
                     <NavigationDialogBox when={this.props.dirty && !this.props.submitSucceeded} txt={txtFixForm.cancelWorkflowConfirmation} />
                     <ConfirmDialogBox
                         onRef={this._setSuccessConfirmation}
-                        onAction={this._navigateToMyIncomplete}
-                        onCancelAction={this._navigateToDashboard}
+                        onCancelAction={this._navigateToMyIncomplete}
+                        onAction={this._navigateToDashboard}
                         locale={saveConfirmationLocale}
                     />
                     <Grid container spacing={24}>
