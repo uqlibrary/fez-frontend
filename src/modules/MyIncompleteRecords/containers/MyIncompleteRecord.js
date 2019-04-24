@@ -62,8 +62,8 @@ const mapStateToProps = (state, ownProps) => {
 
         const affiliationDataMap = [
             {
-                infoArray: importedValues.fez_record_search_key_author_id,
-                key: 'rek_author_id_order'
+                infoArray: importedValues.fez_record_search_key_author,
+                key: 'rek_author_order'
             },
             {
                 infoArray: importedValues.fez_record_search_key_author_affiliation_name,
@@ -79,10 +79,10 @@ const mapStateToProps = (state, ownProps) => {
             return leftJoin(
                 authors,
                 affiliationData.infoArray,
-                'rek_author_order',
+                'rek_author_id_order',
                 affiliationData.key
             );
-        }, importedValues.fez_record_search_key_author);
+        }, importedValues.fez_record_search_key_author_id);
 
         mergedAffiliationsArray.map((author) => {
             const affiliation = author.rek_author_affiliation_name === locale.global.orgTitle
@@ -93,6 +93,7 @@ const mapStateToProps = (state, ownProps) => {
                 nameAsPublished: author.rek_author,
                 orgaff: author.rek_author_affiliation_name || '',
                 orgtype: author.rek_author_affiliation_type || '',
+                uqIdentifier: author.rek_author_id,
                 disabled: false,
                 affiliation,
                 creatorRole: '',

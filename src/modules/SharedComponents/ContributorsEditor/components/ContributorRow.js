@@ -70,8 +70,6 @@ export class ContributorRow extends PureComponent {
         onMoveDown: PropTypes.func,
         onMoveUp: PropTypes.func,
         showContributorAssignment: PropTypes.bool,
-        showIdentifierLookup: PropTypes.bool,
-        showRoleInput: PropTypes.bool,
         width: PropTypes.string,
     };
 
@@ -153,7 +151,7 @@ export class ContributorRow extends PureComponent {
         />
     );
 
-    getContributorRowText = (showIdentifierLookup, showRoleInput, selectedClass) => {
+    getContributorRowText = (selectedClass) => {
         const { index, contributor, classes, width } = this.props;
         const { suffix } = this.props.locale;
         const contributorOrder = `${numberToWords(index + 1)} ${suffix}`;
@@ -168,7 +166,7 @@ export class ContributorRow extends PureComponent {
                     )}
                 </Grid>
                 {
-                    (showIdentifierLookup || !!contributor.aut_title) &&
+                    !!contributor.aut_title &&
                     <Grid item xs={10} sm={5} md={5}>
                         {this.getListItemTypography(
                             `${contributor.aut_title} ${contributor.aut_display_name}`,
@@ -201,7 +199,7 @@ export class ContributorRow extends PureComponent {
                     </Grid>
                 }
                 {
-                    showRoleInput &&
+                    contributor.creatorRole &&
                     <Grid item xs={10} sm={5} md={5}>
                         {this.getListItemTypography(
                             contributor.creatorRole,
@@ -250,13 +248,7 @@ export class ContributorRow extends PureComponent {
                             {contributor.selected ? <Person /> : <PersonOutlined />}
                         </ListItemIcon>
                     </Hidden>
-                    {
-                        this.getContributorRowText(
-                            this.props.showIdentifierLookup,
-                            this.props.showRoleInput,
-                            selectedClass
-                        )
-                    }
+                    {this.getContributorRowText(selectedClass)}
                     <ListItemSecondaryAction>
                         {
                             canMoveUp &&

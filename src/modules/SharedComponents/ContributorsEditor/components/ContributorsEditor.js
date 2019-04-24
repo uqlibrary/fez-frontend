@@ -188,9 +188,7 @@ export class ContributorsEditor extends PureComponent {
             hideDelete,
             hideReorder,
             showContributorAssignment,
-            showIdentifierLookup,
-            showRoleInput,
-            locale
+            locale,
         } = this.props;
 
         const {
@@ -215,8 +213,6 @@ export class ContributorsEditor extends PureComponent {
                 onMoveDown={this.moveDownContributor}
                 onMoveUp={this.moveUpContributor}
                 showContributorAssignment={showContributorAssignment && !isCurrentAuthorSelected}
-                showIdentifierLookup={showIdentifierLookup}
-                showRoleInput={showRoleInput}
             />
         ));
     };
@@ -228,17 +224,23 @@ export class ContributorsEditor extends PureComponent {
                 orgTitle: locale.global.orgTitle
             }
         };
+
         const formProps = {
             ...this.props,
             isContributorAssigned: !!this.state.contributors,
             locale: formLocale,
             onSubmit: contributor => onSubmit(contributor, index),
         };
+
+        const contributor = this.state.contributors[index];
+
         if (this.props.initialValues) {
             formProps.locale.addButton = 'Update author';
-            formProps.contributor = this.state.contributors[index];
+            formProps.contributor = contributor;
             formProps.showIdentifierLookup = formProps.contributor.affiliation === 'UQ';
+            formProps.initialValues = this.props.initialValues.authors[index];
         }
+
         return (
             <ContributorForm {...formProps} />
         );

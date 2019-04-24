@@ -228,10 +228,16 @@ export default {
                 "rek_author_affiliation_name_order": 12,
                 "rek_author_affiliation_name": "School of Chemistry and Molecular Biosciences | The University of Queensland | St. Lucia | Australia"
             }],
+            "fez_record_search_key_author_affiliation_type": [{
+                "rek_author_affiliation_type_id": null,
+                "rek_author_affiliation_type_pid": "UQ:678742",
+                "rek_author_affiliation_type_order": 1,
+                "rek_author_affiliation_type": 453989
+            }],
             "fez_record_search_key_author_id": [{
                 "rek_author_id_id": null,
                 "rek_author_id_pid": "UQ:678742",
-                "rek_author_id": 0,
+                "rek_author_id": 5000,
                 "rek_author_id_order": 1
             }, {
                 "rek_author_id_id": null,

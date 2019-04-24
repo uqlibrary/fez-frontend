@@ -28,10 +28,13 @@ export class ContributorForm extends PureComponent {
         isNtro: PropTypes.bool,
         isContributorAssigned: PropTypes.bool,
         contributor: PropTypes.object,
+        initialValues: PropTypes.object,
+        affiliation: PropTypes.string,
     };
 
     static defaultProps = {
         required: false,
+        contributor: {},
         locale: {
             nameAsPublishedLabel: 'Name as published',
             nameAsPublishedHint: 'Please type the name exactly as published',
@@ -68,15 +71,19 @@ export class ContributorForm extends PureComponent {
             affiliation: '',
             orgaff: '',
             orgtype: '',
+            ...props,
             ...props.contributor
         };
     }
 
     componentWillReceiveProps(nextProps) {
-        this.setState({
-            contributor: nextProps.contributor || {},
-            ...nextProps.contributor
-        });
+        if (this.props.contributor !== nextProps.contributor) {
+            this.setState({
+                ...nextProps,
+                ...nextProps.contributor,
+                contributor: nextProps.contributor || {},
+            });
+        }
     }
 
     _onSubmit = (event) => {
@@ -104,15 +111,14 @@ export class ContributorForm extends PureComponent {
         const newContributor = {
             ...this.state.contributor,
             ...{
+                nameAsPublished: this.state.nameAsPublished,
                 creatorRole: this.state.creatorRole,
                 affiliation: this.state.affiliation,
                 orgaff: this.state.orgaff,
-                orgtype: this.state.orgtype
+                orgtype: this.state.orgtype,
+                uqIdentifier: this.state.contributor.aut_id,
             }
         };
-        if (!this.props.contributor) {
-            newContributor.nameAsPublished = this.state.nameAsPublished;
-        }
         this.props.onSubmit(newContributor);
 
         // reset internal state
@@ -149,27 +155,19 @@ export class ContributorForm extends PureComponent {
         });
     };
 
-    /**
-     * @deprecated
-     */
-    _onUQIdentifierChanged = (newValue) => {
-        this.setState({
-            uqIdentifier: newValue
-        });
-
-        if (newValue.trim().length > 1) {
-            this.props.actions.searchAuthors(newValue, (item) => { return !!item.aut_org_username; });
-        }
-    };
-
     handleAffiliationChange = (event) => {
-        this.setState({
+        const newState = {
             affiliation: event.target.value,
-            showIdentifierLookup: event.target.value === 'UQ'
-        });
+            showIdentifierLookup: (event.target.value === 'UQ')
+        };
+        if (event.target.value === 'NotUQ') {
+            newState.uqIdentifier = '';
+            newState.orgaff = this.props.contributor.orgaff;
+        }
+        this.setState(newState);
     };
 
-    handleOrgAfflicationChange = (event) => {
+    handleOrgAffliationChange = (event) => {
         this.setState({
             orgaff: event.target.value
         });
@@ -184,6 +182,7 @@ export class ContributorForm extends PureComponent {
     render() {
         const {
             disabled,
+            initialValues,
             isContributorAssigned,
             isNtro,
             locale,
@@ -192,10 +191,12 @@ export class ContributorForm extends PureComponent {
             showIdentifierLookup,
             showRoleInput,
         } = this.props;
+
         const description = showContributorAssignment
             ? locale.descriptionStep1
             : locale.descriptionStep1NoStep2
         ;
+
         const buttonDisabled = disabled ||
             (this.state.nameAsPublished || '').trim().length === 0 ||
             (
@@ -205,8 +206,8 @@ export class ContributorForm extends PureComponent {
             (
                 this.state.affiliation === 'NotUQ' &&
                 (
-                    this.state.orgaff.trim().length === 0 ||
-                    this.state.orgtype.trim().length === 0
+                    (this.state.orgaff || '').trim().length === 0 ||
+                    (this.state.orgtype || '').trim().length === 0
                 )
             )
         ;
@@ -222,6 +223,7 @@ export class ContributorForm extends PureComponent {
                                 affiliation={this.state.affiliation}
                                 onAffiliationChange={this.handleAffiliationChange}
                                 error={required && !this.state.affiliation && !isContributorAssigned}
+                                disabled={(initialValues || {}).affiliation === 'UQ'}
                             />
                         </Grid>
                     }
@@ -251,14 +253,15 @@ export class ContributorForm extends PureComponent {
                         />
                     </Grid>
                     {
-                        (showIdentifierLookup || this.state.showIdentifierLookup) &&
+                        this.state.showIdentifierLookup &&
                         <Grid item xs={12} sm={3}>
                             <UqIdField
                                 disabled={disabled ||
-                                    (this.props.contributor || {}).uqIdentifier ||
+                                    !!(initialValues || {}).uqIdentifier ||
                                     (this.state.nameAsPublished || '').trim().length === 0
                                 }
                                 onChange={this._onUQIdentifierSelected}
+                                value={String(this.state.uqIdentifier || '')}
                                 floatingLabelText="UQ Author ID"
                                 hintText="Type UQ author name to search"
                                 id="identifierField"
@@ -289,10 +292,10 @@ export class ContributorForm extends PureComponent {
                             <NonUqOrgAffiliationFormSection
                                 orgAffiliation={this.state.orgaff || ''}
                                 orgType={this.state.orgtype || ''}
-                                onOrgAffiliationChange={this.handleOrgAfflicationChange}
+                                onOrgAffiliationChange={this.handleOrgAffliationChange}
                                 onOrgTypeChange={this.handleOrgTypeChange}
                                 disableAffiliationEdit={disabled}
-                                disableOrgTypeEdit={disabled || !!(this.props.contributor || {}).orgtype}
+                                disableOrgTypeEdit={disabled || !!(initialValues || {}).orgtype}
                             />
                         </Grid>
                     }
