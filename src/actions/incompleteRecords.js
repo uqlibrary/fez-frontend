@@ -1,7 +1,7 @@
 import * as actions from './actionTypes';
 import * as transformers from './transformers';
-import { get, patch, post } from 'repositories/generic';
-import { INCOMPLETE_RECORDS_API, EXISTING_RECORD_API, RECORDS_ISSUES_API } from 'repositories/routes';
+import { get, patch } from 'repositories/generic';
+import { INCOMPLETE_RECORDS_API, EXISTING_RECORD_API } from 'repositories/routes';
 import { putUploadFiles } from 'repositories';
 
 /**
@@ -73,21 +73,19 @@ export function updateIncompleteRecord(data) {
 
         // if user updated links/added files - update record
         let patchRecordRequest = null;
-        if (hasFilesToUpload || data.rek_link) {
-            patchRecordRequest = {
-                rek_pid: data.publication.rek_pid,
-                ...transformers.getRecordLinkSearchKey(data),
-                ...transformers.getRecordFileAttachmentSearchKey(data.files ? data.files.queue : [], data.publication)
-            };
-        }
+        patchRecordRequest = {
+            rek_pid: data.publication.rek_pid,
+            ...transformers.getGrantsListSearchKey(data.grants),
+            ...transformers.getRecordFileAttachmentSearchKey(data.files ? data.files.queue : [], data.publication)
+        };
 
         // create request for issue notification
-        const createIssueRequest = transformers.getFixIssueRequest(data);
+        // const createIssueRequest = transformers.getFixIssueRequest(data);
 
         return Promise.resolve([])
             .then(()=> (hasFilesToUpload ? putUploadFiles(data.publication.rek_pid, data.files.queue, dispatch) : null))
-            .then(()=> (hasFilesToUpload || data.rek_link ? patch(EXISTING_RECORD_API({pid: data.publication.rek_pid}), patchRecordRequest) : null))
-            .then(()=> (post(RECORDS_ISSUES_API({pid: data.publication.rek_pid}), createIssueRequest)))
+            .then(()=> (patch(EXISTING_RECORD_API({pid: data.publication.rek_pid}), patchRecordRequest)))
+            // .then(()=> (post(RECORDS_ISSUES_API({pid: data.publication.rek_pid}), createIssueRequest)))
             .then(responses => {
                 dispatch({
                     type: actions.FIX_RECORD_SUCCESS,
