@@ -183,12 +183,16 @@ export const getRecordAuthorAffiliationSearchKey = (authors) => {
     return {
         fez_record_search_key_author_affiliation_name: authors
             .map(
-                (item, index) => (
-                    {
-                        rek_author_affiliation_name: item.orgaff || locale.global.orgTitle,
-                        rek_author_affiliation_name_order: index + 1
+                (item, index) => {
+                    let orgaff = item.orgaff;
+                    if (!orgaff || item.affiliation === 'UQ') {
+                        orgaff = locale.global.orgTitle;
                     }
-                )
+                    return {
+                        rek_author_affiliation_name: orgaff,
+                        rek_author_affiliation_name_order: index + 1
+                    };
+                }
             )
     };
 };
@@ -199,12 +203,16 @@ export const getRecordAuthorAffiliationTypeSearchKey = (authors) => {
     return {
         fez_record_search_key_author_affiliation_type: authors
             .map(
-                (item, index) => (
-                    {
-                        rek_author_affiliation_type: !!item.orgtype ? parseInt(item.orgtype, 10) : 453989,
+                (item, index) => {
+                    const orgtype = (!!item.orgtype && item.affiliation === 'UQ')
+                        ? parseInt(item.orgtype, 10)
+                        : 453989
+                    ;
+                    return {
+                        rek_author_affiliation_type: orgtype,
                         rek_author_affiliation_type_order: index + 1
-                    }
-                )
+                    };
+                }
             )
     };
 };

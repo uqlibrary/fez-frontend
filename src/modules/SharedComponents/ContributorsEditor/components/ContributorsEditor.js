@@ -13,8 +13,6 @@ import ContributorRow from './ContributorRow';
 import ContributorForm from './ContributorForm';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 
-import { locale } from 'locale';
-
 export class ContributorsEditor extends PureComponent {
     static propTypes = {
         author: PropTypes.object,
@@ -218,17 +216,10 @@ export class ContributorsEditor extends PureComponent {
     };
 
     renderContributorForm = (onSubmit, index) => {
-        const formLocale = {
-            ...((this.props.locale || {}).form || {}).locale,
-            global: {
-                orgTitle: locale.global.orgTitle
-            }
-        };
-
         const formProps = {
             ...this.props,
             isContributorAssigned: !!this.state.contributors,
-            locale: formLocale,
+            locale: ((this.props.locale || {}).form || {}).locale,
             onSubmit: contributor => onSubmit(contributor, index),
         };
 
