@@ -125,7 +125,7 @@ exports[`Application component Should display mobile correctly 1`] = `
                 item={true}
               >
                 <div
-                  aria-label="University of Queensland"
+                  aria-label="The University of Queensland"
                   className="smallLogo"
                   id="logo"
                   style={
@@ -212,7 +212,7 @@ exports[`Application component Should display mobile correctly 1`] = `
     }
     logoImage="largeLogo"
     logoLink="http://www.uq.edu.au"
-    logoText="University of Queensland"
+    logoText="The University of Queensland"
     menuItems={
       Array [
         Object {
@@ -456,7 +456,7 @@ exports[`Application component should redirect to login page with correct return
                 item={true}
               >
                 <div
-                  aria-label="University of Queensland"
+                  aria-label="The University of Queensland"
                   className="smallLogo"
                   id="logo"
                   style={
@@ -543,7 +543,7 @@ exports[`Application component should redirect to login page with correct return
     }
     logoImage="largeLogo"
     logoLink="http://www.uq.edu.au"
-    logoText="University of Queensland"
+    logoText="The University of Queensland"
     menuItems={
       Array [
         Object {
@@ -932,7 +932,7 @@ exports[`Application component should render alert if user is not fez author 1`]
                 item={true}
               >
                 <div
-                  aria-label="University of Queensland"
+                  aria-label="The University of Queensland"
                   className="smallLogo"
                   id="logo"
                   style={
@@ -1019,7 +1019,7 @@ exports[`Application component should render alert if user is not fez author 1`]
     }
     logoImage="largeLogo"
     logoLink="http://www.uq.edu.au"
-    logoText="University of Queensland"
+    logoText="The University of Queensland"
     menuItems={
       Array [
         Object {
@@ -1630,7 +1630,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                 item={true}
               >
                 <div
-                  aria-label="University of Queensland"
+                  aria-label="The University of Queensland"
                   className="smallLogo"
                   id="logo"
                   style={
@@ -1717,7 +1717,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
     }
     logoImage="largeLogo"
     logoLink="http://www.uq.edu.au"
-    logoText="University of Queensland"
+    logoText="The University of Queensland"
     menuItems={
       Array [
         Object {
@@ -2163,7 +2163,7 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
                 item={true}
               >
                 <div
-                  aria-label="University of Queensland"
+                  aria-label="The University of Queensland"
                   className="smallLogo"
                   id="logo"
                   style={
@@ -2250,7 +2250,7 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
     }
     logoImage="largeLogo"
     logoLink="http://www.uq.edu.au"
-    logoText="University of Queensland"
+    logoText="The University of Queensland"
     menuItems={
       Array [
         Object {
@@ -2651,7 +2651,7 @@ exports[`Application component should render app for account with fez author wit
                 item={true}
               >
                 <div
-                  aria-label="University of Queensland"
+                  aria-label="The University of Queensland"
                   className="smallLogo"
                   id="logo"
                   style={
@@ -2738,7 +2738,7 @@ exports[`Application component should render app for account with fez author wit
     }
     logoImage="largeLogo"
     logoLink="http://www.uq.edu.au"
-    logoText="University of Queensland"
+    logoText="The University of Queensland"
     menuItems={
       Array [
         Object {
@@ -3327,7 +3327,7 @@ exports[`Application component should render app for account with fez author wit
                 item={true}
               >
                 <div
-                  aria-label="University of Queensland"
+                  aria-label="The University of Queensland"
                   className="smallLogo"
                   id="logo"
                   style={
@@ -3414,7 +3414,7 @@ exports[`Application component should render app for account with fez author wit
     }
     logoImage="largeLogo"
     logoLink="http://www.uq.edu.au"
-    logoText="University of Queensland"
+    logoText="The University of Queensland"
     menuItems={
       Array [
         Object {
@@ -3999,7 +3999,7 @@ exports[`Application component should render app for account with fez author wit
                 item={true}
               >
                 <div
-                  aria-label="University of Queensland"
+                  aria-label="The University of Queensland"
                   className="smallLogo"
                   id="logo"
                   style={
@@ -4579,7 +4579,7 @@ exports[`Application component should render application with routing for the us
                 item={true}
               >
                 <div
-                  aria-label="University of Queensland"
+                  aria-label="The University of Queensland"
                   className="smallLogo"
                   id="logo"
                   style={
@@ -4666,7 +4666,7 @@ exports[`Application component should render application with routing for the us
     }
     logoImage="largeLogo"
     logoLink="http://www.uq.edu.au"
-    logoText="University of Queensland"
+    logoText="The University of Queensland"
     menuItems={
       Array [
         Object {
@@ -4883,7 +4883,7 @@ exports[`Application component should render for anon user 1`] = `
                 item={true}
               >
                 <div
-                  aria-label="University of Queensland"
+                  aria-label="The University of Queensland"
                   className="smallLogo"
                   id="logo"
                   style={
@@ -4970,7 +4970,7 @@ exports[`Application component should render for anon user 1`] = `
     }
     logoImage="largeLogo"
     logoLink="http://www.uq.edu.au"
-    logoText="University of Queensland"
+    logoText="The University of Queensland"
     menuItems={
       Array [
         Object {
@@ -5074,7 +5074,7 @@ exports[`Application component should render loading screen while account is loa
   >
     <WithStyles(AppLoader)
       logoImage="largeLogo"
-      logoText="University of Queensland"
+      logoText="The University of Queensland"
       title="UQ eSpace "
     />
   </WithStyles(Grid)>
@@ -5182,7 +5182,7 @@ exports[`Application component should render thesis submission for HDR without m
                 item={true}
               >
                 <div
-                  aria-label="University of Queensland"
+                  aria-label="The University of Queensland"
                   className="smallLogo"
                   id="logo"
                   style={
@@ -9249,7 +9249,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                       className="MuiGrid-item-7"
                                                                     >
                                                                       <div
-                                                                        aria-label="University of Queensland"
+                                                                        aria-label="The University of Queensland"
                                                                         className="smallLogo"
                                                                         id="logo"
                                                                         style={
@@ -14019,7 +14019,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                         }
                         logoImage="largeLogo"
                         logoLink="http://www.uq.edu.au"
-                        logoText="University of Queensland"
+                        logoText="The University of Queensland"
                         menuItems={
                           Array [
                             Object {
@@ -14121,7 +14121,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                           }
                           logoImage="largeLogo"
                           logoLink="http://www.uq.edu.au"
-                          logoText="University of Queensland"
+                          logoText="The University of Queensland"
                           menuItems={
                             Array [
                               Object {

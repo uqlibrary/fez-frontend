@@ -80,6 +80,8 @@ exports[`Component ContributorForm should display org affiliation selector if af
       xs={12}
     >
       <NonUqOrgAffiliationFormSection
+        disableAffiliationEdit={false}
+        disableOrgTypeEdit={false}
         locale={
           Object {
             "fields": Object {
@@ -139,6 +141,7 @@ exports[`Component ContributorForm should handle affiliation change 1`] = `
     >
       <OrgAffilicationTypeSelector
         affiliation=""
+        disabled={false}
         error={false}
         locale={
           Object {
@@ -214,6 +217,7 @@ exports[`Component ContributorForm should render NTRO fields 1`] = `
     >
       <OrgAffilicationTypeSelector
         affiliation=""
+        disabled={false}
         error={false}
         locale={
           Object {
@@ -804,6 +808,7 @@ exports[`Component ContributorForm should render connected component 1`] = `
                 }
               }
               authorsList={Array []}
+              contributor={Object {}}
               locale={
                 Object {
                   "addButton": "Add author",
@@ -834,7 +839,9 @@ exports[`Component ContributorForm should render connected component 1`] = `
                 }
               }
               onAdd={[MockFunction]}
+              onSubmit={[Function]}
               required={false}
+              showIdentifierLookup={false}
             >
               <div>
                 Please 
@@ -1111,6 +1118,7 @@ exports[`Component ContributorForm should render connected component 1`] = `
                         >
                           <WithStyles(TextFieldWrapper)
                             autoComplete="off"
+                            disabled={false}
                             error={false}
                             fullWidth={true}
                             id="nameAsPublishedField"
@@ -1123,6 +1131,7 @@ exports[`Component ContributorForm should render connected component 1`] = `
                             <TextFieldWrapper
                               autoComplete="off"
                               classes={Object {}}
+                              disabled={false}
                               error={false}
                               fullWidth={true}
                               id="nameAsPublishedField"
@@ -1136,6 +1145,7 @@ exports[`Component ContributorForm should render connected component 1`] = `
                                 InputLabelProps={null}
                                 autoComplete="off"
                                 classes={Object {}}
+                                disabled={false}
                                 error={false}
                                 fullWidth={true}
                                 id="nameAsPublishedField"
@@ -1149,6 +1159,7 @@ exports[`Component ContributorForm should render connected component 1`] = `
                               >
                                 <WithStyles(FormControl)
                                   classes={Object {}}
+                                  disabled={false}
                                   error={false}
                                   fullWidth={true}
                                   required={false}
@@ -1648,6 +1659,7 @@ exports[`Component ContributorForm should render display name field and identifi
         hintText="Type UQ author name to search"
         id="identifierField"
         onChange={[Function]}
+        value=""
       />
     </WithStyles(Grid)>
     <WithStyles(Grid)
@@ -1706,6 +1718,7 @@ exports[`Component ContributorForm should render display name field and role fie
     >
       <Connect(WithStyles(AutoCompleteAsyncField))
         autoComplete="off"
+        clearInput={true}
         disabled={false}
         error={true}
         fullWidth={true}
@@ -1851,6 +1864,7 @@ exports[`Component ContributorForm should show error regarding affiliation type 
     >
       <OrgAffilicationTypeSelector
         affiliation=""
+        disabled={false}
         error={true}
         locale={
           Object {

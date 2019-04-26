@@ -28,7 +28,7 @@ function setup(testProps, isShallow = true) {
     return getElement(ContributorRow, props, isShallow);
 }
 
-describe('Component ContributorRow ', () => {
+describe('Component ContributorRow', () => {
 
     it('a row with index and contributor set, renders only name and delete button', () => {
         const wrapper = setup({

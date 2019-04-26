@@ -57,6 +57,7 @@ export class ContributorForm extends PureComponent {
             )
         },
         showIdentifierLookup: false,
+        onSubmit: () => {},
     };
 
     constructor(props) {

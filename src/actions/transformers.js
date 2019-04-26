@@ -204,7 +204,7 @@ export const getRecordAuthorAffiliationTypeSearchKey = (authors) => {
         fez_record_search_key_author_affiliation_type: authors
             .map(
                 (item, index) => {
-                    const orgtype = (!!item.orgtype && item.affiliation === 'UQ')
+                    const orgtype = (!!item.orgtype && item.affiliation === 'NotUQ')
                         ? parseInt(item.orgtype, 10)
                         : 453989
                     ;

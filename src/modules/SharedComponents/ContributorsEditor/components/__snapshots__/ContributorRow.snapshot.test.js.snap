@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component ContributorRow  Row should be clickable when showContributorAssignment set to true 1`] = `
+exports[`Component ContributorRow Row should be clickable when showContributorAssignment set to true 1`] = `
 <Fragment>
   <ConfirmDialogBox
     hideCancelButton={false}
@@ -119,7 +119,7 @@ exports[`Component ContributorRow  Row should be clickable when showContributorA
               noWrap={true}
               variant="body2"
             >
-              Mr Christopher Christoff
+              Professor J Researcher
             </WithStyles(Typography)>
           }
           secondary={
@@ -132,7 +132,7 @@ exports[`Component ContributorRow  Row should be clickable when showContributorA
               noWrap={true}
               variant="caption"
             >
-              University of Queensland (null)
+              The University of Queensland (uqresearcher)
             </WithStyles(Typography)>
           }
         />
@@ -140,28 +140,33 @@ exports[`Component ContributorRow  Row should be clickable when showContributorA
     </WithStyles(Grid)>
     <WithStyles(ListItemSecondaryAction)>
       <WithStyles(Tooltip)
+        disableFocusListener={false}
+        disableHoverListener={false}
+        disableTouchListener={false}
         title="Remove this record"
       >
-        <WithStyles(IconButton)
-          aria-label="Remove this record"
-          disabled={false}
-          onClick={[Function]}
-        >
-          <pure(DeleteIcon)
-            classes={
-              Object {
-                "root": "",
+        <span>
+          <WithStyles(IconButton)
+            aria-label="Remove this record"
+            disabled={false}
+            onClick={[Function]}
+          >
+            <pure(DeleteIcon)
+              classes={
+                Object {
+                  "root": "",
+                }
               }
-            }
-          />
-        </WithStyles(IconButton)>
+            />
+          </WithStyles(IconButton)>
+        </span>
       </WithStyles(Tooltip)>
     </WithStyles(ListItemSecondaryAction)>
   </WithStyles(ListItem)>
 </Fragment>
 `;
 
-exports[`Component ContributorRow  Row should not be clickable when showContributorAssignment set to false 1`] = `
+exports[`Component ContributorRow Row should not be clickable when showContributorAssignment set to false 1`] = `
 <Fragment>
   <ConfirmDialogBox
     hideCancelButton={false}
@@ -280,7 +285,7 @@ exports[`Component ContributorRow  Row should not be clickable when showContribu
               noWrap={true}
               variant="body2"
             >
-              Mr Christopher Christoff
+              Professor J Researcher
             </WithStyles(Typography)>
           }
           secondary={
@@ -293,7 +298,7 @@ exports[`Component ContributorRow  Row should not be clickable when showContribu
               noWrap={true}
               variant="caption"
             >
-              University of Queensland (null)
+              The University of Queensland (uqresearcher)
             </WithStyles(Typography)>
           }
         />
@@ -301,28 +306,33 @@ exports[`Component ContributorRow  Row should not be clickable when showContribu
     </WithStyles(Grid)>
     <WithStyles(ListItemSecondaryAction)>
       <WithStyles(Tooltip)
+        disableFocusListener={false}
+        disableHoverListener={false}
+        disableTouchListener={false}
         title="Remove this record"
       >
-        <WithStyles(IconButton)
-          aria-label="Remove this record"
-          disabled={false}
-          onClick={[Function]}
-        >
-          <pure(DeleteIcon)
-            classes={
-              Object {
-                "root": "",
+        <span>
+          <WithStyles(IconButton)
+            aria-label="Remove this record"
+            disabled={false}
+            onClick={[Function]}
+          >
+            <pure(DeleteIcon)
+              classes={
+                Object {
+                  "root": "",
+                }
               }
-            }
-          />
-        </WithStyles(IconButton)>
+            />
+          </WithStyles(IconButton)>
+        </span>
       </WithStyles(Tooltip)>
     </WithStyles(ListItemSecondaryAction)>
   </WithStyles(ListItem)>
 </Fragment>
 `;
 
-exports[`Component ContributorRow  a row with index and contributor set, renders only name and delete button 1`] = `
+exports[`Component ContributorRow a row with index and contributor set, renders only name and delete button 1`] = `
 <Fragment>
   <ConfirmDialogBox
     hideCancelButton={false}
@@ -426,28 +436,33 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
     </WithStyles(Grid)>
     <WithStyles(ListItemSecondaryAction)>
       <WithStyles(Tooltip)
+        disableFocusListener={false}
+        disableHoverListener={false}
+        disableTouchListener={false}
         title="Remove this record"
       >
-        <WithStyles(IconButton)
-          aria-label="Remove this record"
-          disabled={false}
-          onClick={[Function]}
-        >
-          <pure(DeleteIcon)
-            classes={
-              Object {
-                "root": "",
+        <span>
+          <WithStyles(IconButton)
+            aria-label="Remove this record"
+            disabled={false}
+            onClick={[Function]}
+          >
+            <pure(DeleteIcon)
+              classes={
+                Object {
+                  "root": "",
+                }
               }
-            }
-          />
-        </WithStyles(IconButton)>
+            />
+          </WithStyles(IconButton)>
+        </span>
       </WithStyles(Tooltip)>
     </WithStyles(ListItemSecondaryAction)>
   </WithStyles(ListItem)>
 </Fragment>
 `;
 
-exports[`Component ContributorRow  a row with index and contributor set, renders only name and delete button for mobile view 1`] = `
+exports[`Component ContributorRow a row with index and contributor set, renders only name and delete button for mobile view 1`] = `
 <Fragment>
   <ConfirmDialogBox
     hideCancelButton={false}
@@ -551,28 +566,33 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
     </WithStyles(Grid)>
     <WithStyles(ListItemSecondaryAction)>
       <WithStyles(Tooltip)
+        disableFocusListener={false}
+        disableHoverListener={false}
+        disableTouchListener={false}
         title="Remove this record"
       >
-        <WithStyles(IconButton)
-          aria-label="Remove this record"
-          disabled={false}
-          onClick={[Function]}
-        >
-          <pure(DeleteIcon)
-            classes={
-              Object {
-                "root": "",
+        <span>
+          <WithStyles(IconButton)
+            aria-label="Remove this record"
+            disabled={false}
+            onClick={[Function]}
+          >
+            <pure(DeleteIcon)
+              classes={
+                Object {
+                  "root": "",
+                }
               }
-            }
-          />
-        </WithStyles(IconButton)>
+            />
+          </WithStyles(IconButton)>
+        </span>
       </WithStyles(Tooltip)>
     </WithStyles(ListItemSecondaryAction)>
   </WithStyles(ListItem)>
 </Fragment>
 `;
 
-exports[`Component ContributorRow  a row with index and contributor set, renders reorder buttons, contributor assignment, and delete button 1`] = `
+exports[`Component ContributorRow a row with index and contributor set, renders reorder buttons, contributor assignment, and delete button 1`] = `
 <Fragment>
   <ConfirmDialogBox
     hideCancelButton={false}
@@ -691,7 +711,7 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
               noWrap={true}
               variant="body2"
             >
-              Mr Christopher Christoff
+              Professor J Researcher
             </WithStyles(Typography)>
           }
           secondary={
@@ -704,7 +724,7 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
               noWrap={true}
               variant="caption"
             >
-              University of Queensland (null)
+              The University of Queensland (uqresearcher)
             </WithStyles(Typography)>
           }
         />
@@ -712,62 +732,77 @@ exports[`Component ContributorRow  a row with index and contributor set, renders
     </WithStyles(Grid)>
     <WithStyles(ListItemSecondaryAction)>
       <WithStyles(Tooltip)
+        disableFocusListener={false}
+        disableHoverListener={false}
+        disableTouchListener={false}
         title="Move record up the order"
       >
-        <WithStyles(IconButton)
-          aria-label="Move record up the order"
-          disabled={false}
-          onClick={[Function]}
-        >
-          <pure(KeyboardArrowUpIcon)
-            classes={
-              Object {
-                "root": "",
+        <span>
+          <WithStyles(IconButton)
+            aria-label="Move record up the order"
+            disabled={false}
+            onClick={[Function]}
+          >
+            <pure(KeyboardArrowUpIcon)
+              classes={
+                Object {
+                  "root": "",
+                }
               }
-            }
-          />
-        </WithStyles(IconButton)>
+            />
+          </WithStyles(IconButton)>
+        </span>
       </WithStyles(Tooltip)>
       <WithStyles(Tooltip)
+        disableFocusListener={false}
+        disableHoverListener={false}
+        disableTouchListener={false}
         title="Move record down the order"
       >
-        <WithStyles(IconButton)
-          aria-label="Move record down the order"
-          disabled={false}
-          onClick={[Function]}
-        >
-          <pure(KeyboardArrowDownIcon)
-            classes={
-              Object {
-                "root": "",
+        <span>
+          <WithStyles(IconButton)
+            aria-label="Move record down the order"
+            disabled={false}
+            onClick={[Function]}
+          >
+            <pure(KeyboardArrowDownIcon)
+              classes={
+                Object {
+                  "root": "",
+                }
               }
-            }
-          />
-        </WithStyles(IconButton)>
+            />
+          </WithStyles(IconButton)>
+        </span>
       </WithStyles(Tooltip)>
       <WithStyles(Tooltip)
+        disableFocusListener={false}
+        disableHoverListener={false}
+        disableTouchListener={false}
         title="Remove this record"
       >
-        <WithStyles(IconButton)
-          aria-label="Remove this record"
-          disabled={false}
-          onClick={[Function]}
-        >
-          <pure(DeleteIcon)
-            classes={
-              Object {
-                "root": "",
+        <span>
+          <WithStyles(IconButton)
+            aria-label="Remove this record"
+            disabled={false}
+            onClick={[Function]}
+          >
+            <pure(DeleteIcon)
+              classes={
+                Object {
+                  "root": "",
+                }
               }
-            }
-          />
-        </WithStyles(IconButton)>
+            />
+          </WithStyles(IconButton)>
+        </span>
       </WithStyles(Tooltip)>
     </WithStyles(ListItemSecondaryAction)>
   </WithStyles(ListItem)>
 </Fragment>
 `;
 
-exports[`Component ContributorRow  a row with index and contributor with author details set and set as selected 1`] = `
+exports[`Component ContributorRow a row with index and contributor with author details set and set as selected 1`] = `
 <Fragment>
   <ConfirmDialogBox
     hideCancelButton={false}
@@ -868,67 +903,36 @@ exports[`Component ContributorRow  a row with index and contributor with author 
           }
         />
       </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        md={5}
-        sm={5}
-        xs={10}
-      >
-        <WithStyles(ListItemText)
-          disableTypography={true}
-          primary={
-            <WithStyles(Typography)
-              classes={
-                Object {
-                  "root": "primary selected",
-                }
-              }
-              noWrap={true}
-              variant="body2"
-            >
-              undefined undefined
-            </WithStyles(Typography)>
-          }
-          secondary={
-            <WithStyles(Typography)
-              classes={
-                Object {
-                  "root": " selected",
-                }
-              }
-              noWrap={true}
-              variant="caption"
-            >
-              University of Queensland (undefined)
-            </WithStyles(Typography)>
-          }
-        />
-      </WithStyles(Grid)>
     </WithStyles(Grid)>
     <WithStyles(ListItemSecondaryAction)>
       <WithStyles(Tooltip)
+        disableFocusListener={false}
+        disableHoverListener={false}
+        disableTouchListener={false}
         title="Remove this record"
       >
-        <WithStyles(IconButton)
-          aria-label="Remove this record"
-          disabled={false}
-          onClick={[Function]}
-        >
-          <pure(DeleteIcon)
-            classes={
-              Object {
-                "root": "selected",
+        <span>
+          <WithStyles(IconButton)
+            aria-label="Remove this record"
+            disabled={false}
+            onClick={[Function]}
+          >
+            <pure(DeleteIcon)
+              classes={
+                Object {
+                  "root": "selected",
+                }
               }
-            }
-          />
-        </WithStyles(IconButton)>
+            />
+          </WithStyles(IconButton)>
+        </span>
       </WithStyles(Tooltip)>
     </WithStyles(ListItemSecondaryAction)>
   </WithStyles(ListItem)>
 </Fragment>
 `;
 
-exports[`Component ContributorRow  a row with index and contributor with author details set and set as selected for mobile view 1`] = `
+exports[`Component ContributorRow a row with index and contributor with author details set and set as selected for mobile view 1`] = `
 <Fragment>
   <ConfirmDialogBox
     hideCancelButton={false}
@@ -1029,67 +1033,36 @@ exports[`Component ContributorRow  a row with index and contributor with author 
           }
         />
       </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        md={5}
-        sm={5}
-        xs={10}
-      >
-        <WithStyles(ListItemText)
-          disableTypography={true}
-          primary={
-            <WithStyles(Typography)
-              classes={
-                Object {
-                  "root": "primary selected",
-                }
-              }
-              noWrap={true}
-              variant="body2"
-            >
-              undefined undefined
-            </WithStyles(Typography)>
-          }
-          secondary={
-            <WithStyles(Typography)
-              classes={
-                Object {
-                  "root": " selected",
-                }
-              }
-              noWrap={true}
-              variant="caption"
-            >
-              University of Queensland (undefined)
-            </WithStyles(Typography)>
-          }
-        />
-      </WithStyles(Grid)>
     </WithStyles(Grid)>
     <WithStyles(ListItemSecondaryAction)>
       <WithStyles(Tooltip)
+        disableFocusListener={false}
+        disableHoverListener={false}
+        disableTouchListener={false}
         title="Remove this record"
       >
-        <WithStyles(IconButton)
-          aria-label="Remove this record"
-          disabled={false}
-          onClick={[Function]}
-        >
-          <pure(DeleteIcon)
-            classes={
-              Object {
-                "root": "selected",
+        <span>
+          <WithStyles(IconButton)
+            aria-label="Remove this record"
+            disabled={false}
+            onClick={[Function]}
+          >
+            <pure(DeleteIcon)
+              classes={
+                Object {
+                  "root": "selected",
+                }
               }
-            }
-          />
-        </WithStyles(IconButton)>
+            />
+          </WithStyles(IconButton)>
+        </span>
       </WithStyles(Tooltip)>
     </WithStyles(ListItemSecondaryAction)>
   </WithStyles(ListItem)>
 </Fragment>
 `;
 
-exports[`Component ContributorRow  a row with index and contributor with author details set, contributor author details, and delete button 1`] = `
+exports[`Component ContributorRow a row with index and contributor with author details set, contributor author details, and delete button 1`] = `
 <Fragment>
   <ConfirmDialogBox
     hideCancelButton={false}
@@ -1208,7 +1181,7 @@ exports[`Component ContributorRow  a row with index and contributor with author 
               noWrap={true}
               variant="body2"
             >
-              Mr Christopher Christoff
+              Professor J Researcher
             </WithStyles(Typography)>
           }
           secondary={
@@ -1221,7 +1194,7 @@ exports[`Component ContributorRow  a row with index and contributor with author 
               noWrap={true}
               variant="caption"
             >
-              University of Queensland (null)
+              The University of Queensland (uqresearcher)
             </WithStyles(Typography)>
           }
         />
@@ -1229,28 +1202,33 @@ exports[`Component ContributorRow  a row with index and contributor with author 
     </WithStyles(Grid)>
     <WithStyles(ListItemSecondaryAction)>
       <WithStyles(Tooltip)
+        disableFocusListener={false}
+        disableHoverListener={false}
+        disableTouchListener={false}
         title="Remove this record"
       >
-        <WithStyles(IconButton)
-          aria-label="Remove this record"
-          disabled={false}
-          onClick={[Function]}
-        >
-          <pure(DeleteIcon)
-            classes={
-              Object {
-                "root": "",
+        <span>
+          <WithStyles(IconButton)
+            aria-label="Remove this record"
+            disabled={false}
+            onClick={[Function]}
+          >
+            <pure(DeleteIcon)
+              classes={
+                Object {
+                  "root": "",
+                }
               }
-            }
-          />
-        </WithStyles(IconButton)>
+            />
+          </WithStyles(IconButton)>
+        </span>
       </WithStyles(Tooltip)>
     </WithStyles(ListItemSecondaryAction)>
   </WithStyles(ListItem)>
 </Fragment>
 `;
 
-exports[`Component ContributorRow  a row with index and creator with creator role set and set as selected 1`] = `
+exports[`Component ContributorRow a row with index and creator with creator role set and set as selected 1`] = `
 <Fragment>
   <ConfirmDialogBox
     hideCancelButton={false}
@@ -1390,28 +1368,33 @@ exports[`Component ContributorRow  a row with index and creator with creator rol
     </WithStyles(Grid)>
     <WithStyles(ListItemSecondaryAction)>
       <WithStyles(Tooltip)
+        disableFocusListener={false}
+        disableHoverListener={false}
+        disableTouchListener={false}
         title="Remove this record"
       >
-        <WithStyles(IconButton)
-          aria-label="Remove this record"
-          disabled={false}
-          onClick={[Function]}
-        >
-          <pure(DeleteIcon)
-            classes={
-              Object {
-                "root": "selected",
+        <span>
+          <WithStyles(IconButton)
+            aria-label="Remove this record"
+            disabled={false}
+            onClick={[Function]}
+          >
+            <pure(DeleteIcon)
+              classes={
+                Object {
+                  "root": "selected",
+                }
               }
-            }
-          />
-        </WithStyles(IconButton)>
+            />
+          </WithStyles(IconButton)>
+        </span>
       </WithStyles(Tooltip)>
     </WithStyles(ListItemSecondaryAction)>
   </WithStyles(ListItem)>
 </Fragment>
 `;
 
-exports[`Component ContributorRow  a row with index and creator with creator role set and set as selected for mobile view 1`] = `
+exports[`Component ContributorRow a row with index and creator with creator role set and set as selected for mobile view 1`] = `
 <Fragment>
   <ConfirmDialogBox
     hideCancelButton={false}
@@ -1551,28 +1534,33 @@ exports[`Component ContributorRow  a row with index and creator with creator rol
     </WithStyles(Grid)>
     <WithStyles(ListItemSecondaryAction)>
       <WithStyles(Tooltip)
+        disableFocusListener={false}
+        disableHoverListener={false}
+        disableTouchListener={false}
         title="Remove this record"
       >
-        <WithStyles(IconButton)
-          aria-label="Remove this record"
-          disabled={false}
-          onClick={[Function]}
-        >
-          <pure(DeleteIcon)
-            classes={
-              Object {
-                "root": "selected",
+        <span>
+          <WithStyles(IconButton)
+            aria-label="Remove this record"
+            disabled={false}
+            onClick={[Function]}
+          >
+            <pure(DeleteIcon)
+              classes={
+                Object {
+                  "root": "selected",
+                }
               }
-            }
-          />
-        </WithStyles(IconButton)>
+            />
+          </WithStyles(IconButton)>
+        </span>
       </WithStyles(Tooltip)>
     </WithStyles(ListItemSecondaryAction)>
   </WithStyles(ListItem)>
 </Fragment>
 `;
 
-exports[`Component ContributorRow  should assign contributor 1`] = `
+exports[`Component ContributorRow should assign contributor 1`] = `
 <Fragment>
   <ConfirmDialogBox
     hideCancelButton={false}
@@ -1710,28 +1698,33 @@ exports[`Component ContributorRow  should assign contributor 1`] = `
     </WithStyles(Grid)>
     <WithStyles(ListItemSecondaryAction)>
       <WithStyles(Tooltip)
+        disableFocusListener={false}
+        disableHoverListener={false}
+        disableTouchListener={false}
         title="Remove this record"
       >
-        <WithStyles(IconButton)
-          aria-label="Remove this record"
-          disabled={false}
-          onClick={[Function]}
-        >
-          <pure(DeleteIcon)
-            classes={
-              Object {
-                "root": "selected",
+        <span>
+          <WithStyles(IconButton)
+            aria-label="Remove this record"
+            disabled={false}
+            onClick={[Function]}
+          >
+            <pure(DeleteIcon)
+              classes={
+                Object {
+                  "root": "selected",
+                }
               }
-            }
-          />
-        </WithStyles(IconButton)>
+            />
+          </WithStyles(IconButton)>
+        </span>
       </WithStyles(Tooltip)>
     </WithStyles(ListItemSecondaryAction)>
   </WithStyles(ListItem)>
 </Fragment>
 `;
 
-exports[`Component ContributorRow  should call callback functions on ListItem 1`] = `
+exports[`Component ContributorRow should call callback functions on ListItem 1`] = `
 <Fragment>
   <ConfirmDialogBox
     hideCancelButton={false}
@@ -1834,42 +1827,6 @@ exports[`Component ContributorRow  should call callback functions on ListItem 1`
       </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
-        md={5}
-        sm={5}
-        xs={10}
-      >
-        <WithStyles(ListItemText)
-          disableTypography={true}
-          primary={
-            <WithStyles(Typography)
-              classes={
-                Object {
-                  "root": "test-class-1 undefined",
-                }
-              }
-              noWrap={true}
-              variant="body2"
-            >
-              undefined undefined
-            </WithStyles(Typography)>
-          }
-          secondary={
-            <WithStyles(Typography)
-              classes={
-                Object {
-                  "root": "test-class-2 undefined",
-                }
-              }
-              noWrap={true}
-              variant="caption"
-            >
-              University of Queensland (undefined)
-            </WithStyles(Typography)>
-          }
-        />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
         xs={5}
       >
         <WithStyles(ListItemText)
@@ -1902,65 +1859,36 @@ exports[`Component ContributorRow  should call callback functions on ListItem 1`
           }
         />
       </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        md={5}
-        sm={5}
-        xs={10}
-      >
-        <WithStyles(ListItemText)
-          disableTypography={true}
-          primary={
-            <WithStyles(Typography)
-              classes={
-                Object {
-                  "root": "test-class-1 undefined",
-                }
-              }
-              noWrap={true}
-              variant="body2"
-            />
-          }
-          secondary={
-            <WithStyles(Typography)
-              classes={
-                Object {
-                  "root": "test-class-2 undefined",
-                }
-              }
-              noWrap={true}
-              variant="caption"
-            >
-              
-            </WithStyles(Typography)>
-          }
-        />
-      </WithStyles(Grid)>
     </WithStyles(Grid)>
     <WithStyles(ListItemSecondaryAction)>
       <WithStyles(Tooltip)
+        disableFocusListener={false}
+        disableHoverListener={false}
+        disableTouchListener={false}
         title="Remove this record"
       >
-        <WithStyles(IconButton)
-          aria-label="Remove this record"
-          disabled={false}
-          onClick={[Function]}
-        >
-          <pure(DeleteIcon)
-            classes={
-              Object {
-                "root": "undefined",
+        <span>
+          <WithStyles(IconButton)
+            aria-label="Remove this record"
+            disabled={false}
+            onClick={[Function]}
+          >
+            <pure(DeleteIcon)
+              classes={
+                Object {
+                  "root": "undefined",
+                }
               }
-            }
-          />
-        </WithStyles(IconButton)>
+            />
+          </WithStyles(IconButton)>
+        </span>
       </WithStyles(Tooltip)>
     </WithStyles(ListItemSecondaryAction)>
   </WithStyles(ListItem)>
 </Fragment>
 `;
 
-exports[`Component ContributorRow  should have a proper style generator 1`] = `
+exports[`Component ContributorRow should have a proper style generator 1`] = `
 Object {
   "hideIcon": Object {
     "display": "none",
@@ -1994,7 +1922,7 @@ Object {
 }
 `;
 
-exports[`Component ContributorRow  should have a proper style generator 2`] = `
+exports[`Component ContributorRow should have a proper style generator 2`] = `
 Object {
   "hideIcon": Object {
     "display": "none",
@@ -2028,7 +1956,7 @@ Object {
 }
 `;
 
-exports[`Component ContributorRow  should have a proper style generator 3`] = `
+exports[`Component ContributorRow should have a proper style generator 3`] = `
 Object {
   "hideIcon": Object {
     "display": "none",
@@ -2062,7 +1990,7 @@ Object {
 }
 `;
 
-exports[`Component ContributorRow  should render row with UQ affiiliation and missing author title 1`] = `
+exports[`Component ContributorRow should render row with UQ affiiliation and missing author title 1`] = `
 <WithStyles(Grid)
   classes={
     Object {
@@ -2121,7 +2049,7 @@ exports[`Component ContributorRow  should render row with UQ affiiliation and mi
           noWrap={true}
           variant="body2"
         >
-          University of Queensland
+          The University of Queensland
         </WithStyles(Typography)>
       }
       secondary={
@@ -2142,7 +2070,7 @@ exports[`Component ContributorRow  should render row with UQ affiiliation and mi
 </WithStyles(Grid)>
 `;
 
-exports[`Component ContributorRow  should render row with UQ affiiliation and missing author title in non-xs width 1`] = `
+exports[`Component ContributorRow should render row with UQ affiiliation and missing author title in non-xs width 1`] = `
 <WithStyles(Grid)
   classes={
     Object {
@@ -2201,7 +2129,7 @@ exports[`Component ContributorRow  should render row with UQ affiiliation and mi
           noWrap={true}
           variant="body2"
         >
-          University of Queensland
+          The University of Queensland
         </WithStyles(Typography)>
       }
       secondary={
@@ -2222,7 +2150,7 @@ exports[`Component ContributorRow  should render row with UQ affiiliation and mi
 </WithStyles(Grid)>
 `;
 
-exports[`Component ContributorRow  should render row with non-UQ affiiliation and missing org type 1`] = `
+exports[`Component ContributorRow should render row with non-UQ affiiliation and missing org type 1`] = `
 <WithStyles(Grid)
   classes={
     Object {
@@ -2302,7 +2230,7 @@ exports[`Component ContributorRow  should render row with non-UQ affiiliation an
 </WithStyles(Grid)>
 `;
 
-exports[`Component ContributorRow  should render with missing aria label if selectHint prop is falsy 1`] = `
+exports[`Component ContributorRow should render with missing aria label if selectHint prop is falsy 1`] = `
 <Fragment>
   <ConfirmDialogBox
     hideCancelButton={false}
@@ -2405,19 +2333,25 @@ exports[`Component ContributorRow  should render with missing aria label if sele
       </WithStyles(Grid)>
     </WithStyles(Grid)>
     <WithStyles(ListItemSecondaryAction)>
-      <WithStyles(Tooltip)>
-        <WithStyles(IconButton)
-          disabled={false}
-          onClick={[Function]}
-        >
-          <pure(DeleteIcon)
-            classes={
-              Object {
-                "root": "",
+      <WithStyles(Tooltip)
+        disableFocusListener={false}
+        disableHoverListener={false}
+        disableTouchListener={false}
+      >
+        <span>
+          <WithStyles(IconButton)
+            disabled={false}
+            onClick={[Function]}
+          >
+            <pure(DeleteIcon)
+              classes={
+                Object {
+                  "root": "",
+                }
               }
-            }
-          />
-        </WithStyles(IconButton)>
+            />
+          </WithStyles(IconButton)>
+        </span>
       </WithStyles(Tooltip)>
     </WithStyles(ListItemSecondaryAction)>
   </WithStyles(ListItem)>

@@ -26,7 +26,7 @@ describe('Component ContributorForm', () => {
     });
 
     it('should render display name field and identifier field', () => {
-        const wrapper = setup({ showIdentifierLookup: true});
+        const wrapper = setup({ showIdentifierLookup: true });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -40,28 +40,12 @@ describe('Component ContributorForm', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('loads authors when value is changed', () => {
-        const testFunction = jest.fn((value, cb) => {
-            expect(cb({aut_org_username: 'test'})).toBeTruthy();
-        });
-        const wrapper = setup({showIdentifierLookup: true, actions: { searchAuthors: testFunction }});
-        wrapper.instance()._onUQIdentifierChanged('smith');
-        expect(testFunction).toBeCalled();
-    });
-
     it('sets display name of a contributor ', () => {
         const testFunction = jest.fn();
         const wrapper = setup({ showIdentifierLookup: true, actions: { searchAuthors: testFunction } });
         expect(wrapper.state.nameAsPublished).toBeFalsy();
         wrapper.instance()._onNameChanged({target: {value: 'J. Smith'}});
         expect(wrapper.state().nameAsPublished).toEqual('J. Smith');
-    });
-
-    it('selects author identifier, calls add contributor ', () => {
-        const testFunction = jest.fn();
-        const wrapper = setup({ showIdentifierLookup: true, onAdd: testFunction });
-        wrapper.instance()._onUQIdentifierSelected(authorsSearch.data[0], 0);
-        expect(testFunction).toBeCalled();
     });
 
     it('should not add contributor if key is not Enter', () => {
@@ -72,7 +56,7 @@ describe('Component ContributorForm', () => {
         wrapper.setState({
             nameAsPublished: 'testing'
         });
-        wrapper.instance()._addContributor({key: 'Esc'});
+        wrapper.instance()._onSubmit({key: 'Esc'});
         expect(onAddFn).not.toBeCalled();
     });
 
@@ -84,7 +68,7 @@ describe('Component ContributorForm', () => {
         wrapper.setState({
             nameAsPublished: ''
         });
-        wrapper.instance()._addContributor({key: 'Enter'});
+        wrapper.instance()._onSubmit({key: 'Enter'});
         expect(onAddFn).not.toBeCalled();
     });
 
@@ -98,7 +82,7 @@ describe('Component ContributorForm', () => {
             nameAsPublished: 'test',
             creatorRole: ''
         });
-        wrapper.instance()._addContributor({key: 'Enter'});
+        wrapper.instance()._onSubmit({key: 'Enter'});
         expect(onAddFn).not.toBeCalled();
     });
 
@@ -113,7 +97,7 @@ describe('Component ContributorForm', () => {
             orgaff: '',
             orgtype: ''
         });
-        wrapper.instance()._addContributor({key: 'Enter'});
+        wrapper.instance()._onSubmit({key: 'Enter'});
         expect(onAddFn).not.toBeCalled();
     });
 
@@ -228,16 +212,6 @@ describe('Component ContributorForm', () => {
         })).toEqual({
             authorsList: []
         });
-    });
-
-    it('should not search authors if new UQ idenitifier value is too short', () => {
-        const wrapper = setup({
-            actions: {
-                searchAuthors: jest.fn()
-            }
-        });
-        wrapper.instance()._onUQIdentifierChanged('a');
-        expect(wrapper.instance().props.actions.searchAuthors).not.toBeCalled();
     });
 
     it('should render narrower grid at md breakpoint if showIdentifierLookup is true', () => {
