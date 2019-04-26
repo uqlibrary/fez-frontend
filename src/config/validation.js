@@ -111,10 +111,6 @@ export const authorAffiliationComplete = (authors) => {
                 (author.orgaff || '').trim().length === 0 ||
                 (author.orgtype || '').trim().length === 0
             )
-        ) ||
-        (
-            author.affiliation === 'UQ' &&
-            !author.uqIdentifier
         )
     )) ? locale.validationErrors.authorAffiliationIncomplete : undefined;
 };

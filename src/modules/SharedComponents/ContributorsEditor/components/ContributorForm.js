@@ -15,7 +15,6 @@ import NonUqOrgAffiliationFormSection from './NonUqOrgAffiliationFormSection';
 
 export class ContributorForm extends PureComponent {
     static propTypes = {
-        authorsList: PropTypes.array.isRequired,
         onSubmit: PropTypes.func.isRequired,
         showIdentifierLookup: PropTypes.bool,
         showRoleInput: PropTypes.bool,
@@ -317,18 +316,10 @@ export class ContributorForm extends PureComponent {
     }
 }
 
-export const mapStateToProps = (state) => {
-    return {
-        authorsList: state && state.get('authorsReducer')
-            ? state.get('authorsReducer').authorsList
-            : []
-    };
-};
-
 function mapDispatchToProps(dispatch) {
     return {
         actions: bindActionCreators(actions, dispatch)
     };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(ContributorForm);
+export default connect(null, mapDispatchToProps)(ContributorForm);

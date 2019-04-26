@@ -129,9 +129,9 @@ export class ContributorRow extends PureComponent {
     };
 
     _select = () => {
-        const { disabled, onSelect, contributor, index } = this.props;
+        const { disabled, onSelect, index } = this.props;
         if (!disabled && !!onSelect) {
-            onSelect(contributor, index);
+            onSelect(index);
         }
     };
 

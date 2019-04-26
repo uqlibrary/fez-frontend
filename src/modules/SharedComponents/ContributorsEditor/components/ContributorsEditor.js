@@ -29,7 +29,6 @@ export class ContributorsEditor extends PureComponent {
         showContributorAssignment: PropTypes.bool,
         showIdentifierLookup: PropTypes.bool,
         showRoleInput: PropTypes.bool,
-        initialValues: PropTypes.object,
     };
 
     static defaultProps = {
@@ -53,9 +52,6 @@ export class ContributorsEditor extends PureComponent {
             isCurrentAuthorSelected: false,
             showIdentifierLookup: false,
         };
-        if (props.initialValues) {
-            this.state.contributors = props.initialValues.authors || [];
-        }
     }
 
     componentWillUpdate = (nextProps, nextState) => {
@@ -98,7 +94,11 @@ export class ContributorsEditor extends PureComponent {
             }, () => {
                 // try to automatically select contributor if they are a current author
                 if (this.props.author && contributor.aut_id === this.props.author.aut_id) {
-                    this.assignContributor(contributor, this.state.contributors.length - 1);
+                    const index = this.state.contributors.length - 1;
+                    this.props.meta.initial
+                        ? this.chooseToEdit(index)
+                        : this.chooseSelf(index)
+                    ;
                 }
             });
         }
@@ -158,22 +158,30 @@ export class ContributorsEditor extends PureComponent {
         });
     };
 
-    assignContributor = (contributor, index) => {
+    chooseSelf = (index) => {
         const newContributors = this.state.contributors.map((item, itemIndex) => ({
             ...item,
             selected: (
-                !this.props.initialValues &&
                 this.props.author &&
                 item.aut_id === this.props.author.aut_id
-            ) || (
-                index === itemIndex &&
-                !contributor.selected
             ),
             authorId: (
-                !this.props.initialValues &&
                 index === itemIndex &&
                 this.props.author
             ) ? this.props.author.aut_id : null
+        }));
+        this.setState({
+            contributors: newContributors
+        });
+    }
+
+    chooseToEdit = (index) => {
+        const newContributors = this.state.contributors.map((item, itemIndex) => ({
+            ...item,
+            selected: (
+                index === itemIndex &&
+                !item.selected
+            )
         }));
         this.setState({
             contributors: newContributors
@@ -187,6 +195,7 @@ export class ContributorsEditor extends PureComponent {
             hideReorder,
             showContributorAssignment,
             locale,
+            meta,
         } = this.props;
 
         const {
@@ -206,7 +215,7 @@ export class ContributorsEditor extends PureComponent {
                 hideReorder={hideReorder}
                 index={index}
                 key={`ContributorRow_${index}`}
-                onSelect={this.assignContributor}
+                onSelect={ meta.initial ? this.chooseToEdit : this.chooseSelf }
                 onDelete={this.deleteContributor}
                 onMoveDown={this.moveDownContributor}
                 onMoveUp={this.moveUpContributor}
@@ -225,11 +234,11 @@ export class ContributorsEditor extends PureComponent {
 
         const contributor = this.state.contributors[index];
 
-        if (this.props.initialValues) {
+        if (this.props.meta.initial) {
             formProps.locale.addButton = 'Update author';
             formProps.contributor = contributor;
             formProps.showIdentifierLookup = formProps.contributor.affiliation === 'UQ';
-            formProps.initialValues = this.props.initialValues.authors[index];
+            formProps.initialValues = this.props.meta.initial[index];
         }
 
         return (
@@ -243,10 +252,10 @@ export class ContributorsEditor extends PureComponent {
             disabled,
             hideDelete,
             isNtro,
+            meta,
             showContributorAssignment,
             showIdentifierLookup,
             showRoleInput,
-            initialValues
         } = this.props;
 
         const {
@@ -255,10 +264,10 @@ export class ContributorsEditor extends PureComponent {
         } = this.state;
 
         let error = null;
-        if ((this.props.meta || {}).error) {
-            error = !!this.props.meta.error.props &&
+        if ((meta || {}).error) {
+            error = !!meta.error.props &&
                 React.Children.map(
-                    this.props.meta.error.props.children,
+                    meta.error.props.children,
                     (child, index) => {
                         return (
                             child.type
@@ -284,7 +293,7 @@ export class ContributorsEditor extends PureComponent {
                     />
                 }
                 {
-                    !initialValues &&
+                    !meta.initial &&
                     this.renderContributorForm(this.addContributor)
                 }
                 {
@@ -312,7 +321,7 @@ export class ContributorsEditor extends PureComponent {
                                 {this.renderContributorRows()}
                             </List>
                             {
-                                initialValues &&
+                                meta.initial &&
                                 selectedContributorIndex > -1 &&
                                 <div style={{marginTop: 24}}>
                                     {this.renderContributorForm(this.updateContributor, selectedContributorIndex)}
@@ -322,10 +331,10 @@ export class ContributorsEditor extends PureComponent {
                     </Grid>
                 }
                 {
-                    (this.props.meta || {}).error &&
+                    (meta || {}).error &&
                     <Typography color="error" variant="caption">
                         {
-                            error || this.props.meta.error
+                            error || meta.error
                         }
                     </Typography>
                 }
