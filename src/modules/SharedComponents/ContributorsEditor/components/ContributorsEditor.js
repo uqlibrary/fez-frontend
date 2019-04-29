@@ -52,6 +52,7 @@ export class ContributorsEditor extends PureComponent {
             isCurrentAuthorSelected: false,
             showIdentifierLookup: false,
         };
+        this.editMode = !!((props.meta || {}).initial || []).length;
     }
 
     componentWillUpdate = (nextProps, nextState) => {
@@ -95,7 +96,7 @@ export class ContributorsEditor extends PureComponent {
                 // try to automatically select contributor if they are a current author
                 if (this.props.author && contributor.aut_id === this.props.author.aut_id) {
                     const index = this.state.contributors.length - 1;
-                    this.props.meta.initial
+                    this.editMode
                         ? this.chooseToEdit(index)
                         : this.chooseSelf(index)
                     ;
@@ -195,7 +196,6 @@ export class ContributorsEditor extends PureComponent {
             hideReorder,
             showContributorAssignment,
             locale,
-            meta,
         } = this.props;
 
         const {
@@ -215,7 +215,7 @@ export class ContributorsEditor extends PureComponent {
                 hideReorder={hideReorder}
                 index={index}
                 key={`ContributorRow_${index}`}
-                onSelect={ meta.initial ? this.chooseToEdit : this.chooseSelf }
+                onSelect={ this.editMode ? this.chooseToEdit : this.chooseSelf }
                 onDelete={this.deleteContributor}
                 onMoveDown={this.moveDownContributor}
                 onMoveUp={this.moveUpContributor}
@@ -234,7 +234,7 @@ export class ContributorsEditor extends PureComponent {
 
         const contributor = this.state.contributors[index];
 
-        if (this.props.meta.initial) {
+        if (this.editMode) {
             formProps.locale.addButton = 'Update author';
             formProps.contributor = contributor;
             formProps.showIdentifierLookup = false;
@@ -283,7 +283,6 @@ export class ContributorsEditor extends PureComponent {
 
         return (
             <div>
-
                 {
                     errorMessage &&
                     <Alert
@@ -293,7 +292,7 @@ export class ContributorsEditor extends PureComponent {
                     />
                 }
                 {
-                    !meta.initial &&
+                    !this.editMode &&
                     this.renderContributorForm(this.addContributor)
                 }
                 {
@@ -321,7 +320,7 @@ export class ContributorsEditor extends PureComponent {
                                 {this.renderContributorRows()}
                             </List>
                             {
-                                meta.initial &&
+                                this.editMode &&
                                 selectedContributorIndex > -1 &&
                                 <div style={{marginTop: 24}}>
                                     {this.renderContributorForm(this.updateContributor, selectedContributorIndex)}
