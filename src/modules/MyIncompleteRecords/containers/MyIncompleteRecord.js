@@ -9,6 +9,7 @@ import { confirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDisca
 import { ORG_TYPE_NOT_SET } from 'config/general';
 import { leftJoin } from 'helpers/general';
 import { locale } from 'locale';
+import { general } from 'config';
 
 const FORM_NAME = 'MyIncompleteRecord';
 
@@ -85,18 +86,21 @@ const mapStateToProps = (state, ownProps) => {
         }, importedValues.fez_record_search_key_author_id);
 
         mergedAffiliationsArray.map((author) => {
-            const affiliation = author.rek_author_affiliation_name === locale.global.orgTitle
-                ? 'UQ'
-                : 'NotUQ'
-            ;
+            const isUQ = author.rek_author_affiliation_name === locale.global.orgTitle;
+            const affiliation = isUQ ? 'UQ' : 'NotUQ';
+            const orgtype = isUQ ? general.ORG_TYPE_ID_UNIVERSITY : (
+                author.rek_author_affiliation_type
+                    && String(author.rek_author_affiliation_type)
+                || ''
+            );
             const contributor = {
-                nameAsPublished: author.rek_author,
-                orgaff: author.rek_author_affiliation_name || '',
-                orgtype: author.rek_author_affiliation_type || '',
-                uqIdentifier: author.rek_author_id,
-                disabled: false,
                 affiliation,
                 creatorRole: '',
+                disabled: false,
+                nameAsPublished: author.rek_author,
+                orgaff: author.rek_author_affiliation_name || '',
+                orgtype,
+                uqIdentifier: author.rek_author_affiliation_type && String(author.rek_author_id) || '',
             };
             authors.push(contributor);
         });

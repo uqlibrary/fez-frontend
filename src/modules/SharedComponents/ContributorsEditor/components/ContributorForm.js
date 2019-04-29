@@ -1,16 +1,17 @@
-import React, {PureComponent} from 'react';
+import React, { PureComponent } from 'react';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
+
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
-import {UqIdField} from 'modules/SharedComponents/LookupFields';
-import {RoleField} from 'modules/SharedComponents/LookupFields';
 
-import {connect} from 'react-redux';
-import {bindActionCreators} from 'redux';
+import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
+import { UqIdField, RoleField } from 'modules/SharedComponents/LookupFields';
+
 import * as actions from 'actions/authors';
 
-import OrgAffilicationTypeSelector from './OrgAffiliationTypeSelector';
+import OrgAffiliationTypeSelector from './OrgAffiliationTypeSelector';
 import NonUqOrgAffiliationFormSection from './NonUqOrgAffiliationFormSection';
 
 export class ContributorForm extends PureComponent {
@@ -56,7 +57,7 @@ export class ContributorForm extends PureComponent {
             )
         },
         showIdentifierLookup: false,
-        onSubmit: () => {},
+        onSubmit: () => { },
     };
 
     constructor(props) {
@@ -88,7 +89,7 @@ export class ContributorForm extends PureComponent {
 
     _onSubmit = (event) => {
         // add contributor if user hits 'enter' key on input field
-        if(
+        if (
             this.props.disabled ||
             (
                 event &&
@@ -158,11 +159,13 @@ export class ContributorForm extends PureComponent {
     handleAffiliationChange = (event) => {
         const newState = {
             affiliation: event.target.value,
-            showIdentifierLookup: (event.target.value === 'UQ')
+            showIdentifierLookup: !this.props.initialValues && (event.target.value === 'UQ')
         };
+        if (event.target.value === 'UQ') {
+            newState.orgaff = '';
+        }
         if (event.target.value === 'NotUQ') {
             newState.uqIdentifier = '';
-            newState.orgaff = this.props.contributor.orgaff;
         }
         this.setState(newState);
     };
@@ -182,7 +185,6 @@ export class ContributorForm extends PureComponent {
     render() {
         const {
             disabled,
-            initialValues,
             isContributorAssigned,
             isNtro,
             locale,
@@ -195,7 +197,7 @@ export class ContributorForm extends PureComponent {
         const description = showContributorAssignment
             ? locale.descriptionStep1
             : locale.descriptionStep1NoStep2
-        ;
+            ;
 
         const buttonDisabled = disabled ||
             (this.state.nameAsPublished || '').trim().length === 0 ||
@@ -210,20 +212,20 @@ export class ContributorForm extends PureComponent {
                     (this.state.orgtype || '').trim().length === 0
                 )
             )
-        ;
+            ;
 
         return (
             <React.Fragment>
                 {description}
-                <Grid container spacing={8} style={{marginTop: 8}}>
+                <Grid container spacing={8} style={{ marginTop: 8 }}>
                     {
                         isNtro &&
                         <Grid item xs={12} sm={2}>
-                            <OrgAffilicationTypeSelector
+                            <OrgAffiliationTypeSelector
                                 affiliation={this.state.affiliation}
                                 onAffiliationChange={this.handleAffiliationChange}
                                 error={required && !this.state.affiliation && !isContributorAssigned}
-                                disabled={(initialValues || {}).affiliation === 'UQ'}
+                                disabled={disabled}
                             />
                         </Grid>
                     }
@@ -240,7 +242,7 @@ export class ContributorForm extends PureComponent {
                                     isNtro &&
                                     this.state.affiliation.length === 0
                                 ) ||
-                                !!(this.props.contributor || {}).nameAsPublished
+                                !!(this.props.initialValues || {}).nameAsPublished
                             }
                             required={required}
                             autoComplete="off"
@@ -257,11 +259,10 @@ export class ContributorForm extends PureComponent {
                         <Grid item xs={12} sm={3}>
                             <UqIdField
                                 disabled={disabled ||
-                                    !!(initialValues || {}).uqIdentifier ||
                                     (this.state.nameAsPublished || '').trim().length === 0
                                 }
                                 onChange={this._onUQIdentifierSelected}
-                                value={String(this.state.uqIdentifier || '')}
+                                value={this.state.uqIdentifier || ''}
                                 floatingLabelText="UQ Author ID"
                                 hintText="Type UQ author name to search"
                                 id="identifierField"
@@ -295,11 +296,11 @@ export class ContributorForm extends PureComponent {
                                 onOrgAffiliationChange={this.handleOrgAffliationChange}
                                 onOrgTypeChange={this.handleOrgTypeChange}
                                 disableAffiliationEdit={disabled}
-                                disableOrgTypeEdit={disabled || !!(initialValues || {}).orgtype}
+                                disableOrgTypeEdit={disabled}
                             />
                         </Grid>
                     }
-                    <Grid item xs={12} style={{marginBottom: 8}}>
+                    <Grid item xs={12} style={{ marginBottom: 8 }}>
                         <Button
                             variant="contained"
                             fullWidth

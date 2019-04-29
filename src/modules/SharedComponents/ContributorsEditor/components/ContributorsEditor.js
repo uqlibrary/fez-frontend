@@ -237,8 +237,8 @@ export class ContributorsEditor extends PureComponent {
         if (this.props.meta.initial) {
             formProps.locale.addButton = 'Update author';
             formProps.contributor = contributor;
-            formProps.showIdentifierLookup = formProps.contributor.affiliation === 'UQ';
-            formProps.initialValues = this.props.meta.initial[index];
+            formProps.showIdentifierLookup = false;
+            formProps.initialValues = this.props.meta.initial.toJS()[index];
         }
 
         return (

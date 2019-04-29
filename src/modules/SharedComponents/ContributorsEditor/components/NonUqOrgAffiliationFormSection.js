@@ -41,7 +41,7 @@ export default function NonUqOrgAffiliationFormSection({
                 />
             </Grid>
             <Grid item xs={6}>
-                <FormControl fullWidth>
+                <FormControl required fullWidth>
                     <InputLabel>{locale.fields.organisationType.inputLabel}</InputLabel>
                     <Select
                         value={orgType}

@@ -173,7 +173,6 @@ export default class MyIncompleteRecord extends PureComponent {
                                     required
                                     showContributorAssignment
                                     validate={[validation.authorAffiliationComplete]}
-                                    initialValues={this.props.initialValues.toJS()}
                                 />
                             </StandardCard>
                         </Grid>

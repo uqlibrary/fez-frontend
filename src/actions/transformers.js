@@ -1,5 +1,6 @@
 import locale from 'locale/global';
 import templates from 'locale/templates';
+import { general } from 'config';
 
 const moment = require('moment');
 
@@ -206,7 +207,7 @@ export const getRecordAuthorAffiliationTypeSearchKey = (authors) => {
                 (item, index) => {
                     const orgtype = (!!item.orgtype && item.affiliation === 'NotUQ')
                         ? parseInt(item.orgtype, 10)
-                        : 453989
+                        : parseInt(general.ORG_TYPE_ID_UNIVERSITY, 10)
                     ;
                     return {
                         rek_author_affiliation_type: orgtype,
