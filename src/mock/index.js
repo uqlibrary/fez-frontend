@@ -82,7 +82,7 @@ mock
     .onGet(routes.CURRENT_USER_RECORDS_API({}).apiUrl).reply(config => {
         // AUTHOR_PUBLICATIONS_STATS_ONLY_API
         if (config.params.rule === 'incomplete') {
-            return [200, mockData.incompleteNTROlist];
+            return [200, mockData.incompleteRecordList];
         } else if (config.params.rule === 'mine' && !!config.params['filters[stats_only]']) {
             return [200, mockData.currentAuthorStats];
         } else if (config.params.rule === 'mine' && config.params['filters[facets][Display+type]'] === 371) {
@@ -163,6 +163,9 @@ mock
     .reply(200, mockData.lookupToolIncites)
     .onGet(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({pid: '.*'}).apiUrl)))
     .reply(config => {
+        if (config.url.indexOf('UQ:6de77b0') >= 0) {
+            return [200, {data: {...mockData.incompleteNTROrecordUqrdav10}}];
+        }
         if (config.url.indexOf('UQ:678742') >= 0) {
             return [200, {data: {...mockData.incompleteNTROrecord}}];
         }
