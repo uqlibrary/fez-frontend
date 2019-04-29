@@ -166,18 +166,6 @@ export const CURRENT_USER_RECORDS_API = (values, route = 'search') => (
     }
 );
 
-export const CURRENT_USER_INCOMPLETE_RECORDS_API = (values, route = 'search') => (
-    {
-        apiUrl: `records/${route}`,
-        options: {
-            params: {
-                rule: 'incomplete',
-                ...{...getStandardSearchParams(values), ...getOpenAccessSearchParams(values)}
-            }
-        }
-    }
-);
-
 export const INCOMPLETE_RECORDS_API = () => {
     return {
         apiUrl: 'records/search',

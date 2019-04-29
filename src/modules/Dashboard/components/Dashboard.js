@@ -90,7 +90,9 @@ export class DashboardClass extends PureComponent {
         if (this.props.account && this.props.account.id) {
             this.props.actions.countPossiblyYourPublications(this.props.account.id);
             this.props.actions.loadAuthorPublicationsStats(this.props.account.id);
-            this.props.actions.loadIncompleteRecords();
+            if(!this.props.incompleteRecordList) {
+                this.props.actions.loadIncompleteRecords();
+            }
         }
     }
 

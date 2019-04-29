@@ -105,7 +105,7 @@ export function searchAuthorPublications({page = 1, pageSize = 20, sortBy = 'sco
 export function searchAuthorIncompletePublications({page = 1, pageSize = 20, sortBy = 'created date', sortDirection = 'Desc', activeFacets = {filters: {}, ranges: {}}}) {
     return dispatch => {
         dispatch({type: actions.AUTHOR_INCOMPLETEPUBLICATIONS_LOADING});
-        return get(routes.CURRENT_USER_INCOMPLETE_RECORDS_API({
+        return get(routes.INCOMPLETE_RECORDS_API({
             page: page,
             pageSize: pageSize,
             sortBy: sortBy,

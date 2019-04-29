@@ -707,7 +707,7 @@ export default {
             title: 'Unpublished buffer'
         },
         incompletePublications: {
-            pageTitle: 'Incomplete records',
+            pageTitle: 'Incomplete works',
             recordCount: 'Displaying incomplete records [recordsFrom] to [recordsTo] of [recordsTotal] total records. ',
             loadingMessage: 'Searching for incomplete works',
             noResultsFound: {

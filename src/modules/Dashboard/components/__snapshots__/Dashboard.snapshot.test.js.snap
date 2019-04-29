@@ -4865,17 +4865,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                     },
                   ],
                 },
-                "loadIncompleteRecords": [MockFunction] {
-                  "calls": Array [
-                    Array [],
-                  ],
-                  "results": Array [
-                    Object {
-                      "isThrow": false,
-                      "value": undefined,
-                    },
-                  ],
-                },
+                "loadIncompleteRecords": [MockFunction],
               }
             }
             classes={Object {}}

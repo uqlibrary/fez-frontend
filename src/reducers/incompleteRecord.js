@@ -1,7 +1,7 @@
 import * as actions from 'actions/actionTypes';
 
 export const initialState = {
-    incompleteRecordList: [],
+    incompleteRecordList: null,
     loadingIncompleteRecordList: true,
 };
 
@@ -19,13 +19,14 @@ const handlers = {
         {
             ...state,
             loadingIncompleteRecordList: false,
-            incompleteRecordList: [],
+            incompleteRecordList: null,
         }
     ),
 
     [actions.INCOMPLETE_RECORDS_LOADING]: (state) => (
         {
             ...state,
+            incompleteRecordList: null,
             loadingIncompleteRecordList: true
         }
     ),
