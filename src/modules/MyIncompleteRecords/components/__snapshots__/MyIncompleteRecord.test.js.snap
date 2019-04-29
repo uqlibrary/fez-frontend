@@ -137,16 +137,6 @@ exports[`Cards will display correct empty fields for a Exhibition Creative Work 
      (for dev) : 
     Curated or Produced Exhibition or Event - Exhibition or Event
   </p>
-  <WithStyles(Grid)
-    item={true}
-    xs={12}
-  >
-    <WithStyles(Alert)
-      message="This record has missing data - enter all fields to give a quality record."
-      title="Missing data"
-      type="info_outline"
-    />
-  </WithStyles(Grid)>
   <form
     onSubmit={[Function]}
   >
@@ -184,6 +174,16 @@ exports[`Cards will display correct empty fields for a Exhibition Creative Work 
       container={true}
       spacing={24}
     >
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(Alert)
+          message="This record has missing data - enter all fields to give a quality record."
+          title="Missing data"
+          type="info_outline"
+        />
+      </WithStyles(Grid)>
       <NtroFields
         defaultLanguage="eng"
         hideAbstract={false}
@@ -618,16 +618,6 @@ exports[`Cards will display correct empty fields for a Live Performance of Music
      (for dev) : 
     Live Performance of Creative Work - Music
   </p>
-  <WithStyles(Grid)
-    item={true}
-    xs={12}
-  >
-    <WithStyles(Alert)
-      message="This record has missing data - enter all fields to give a quality record."
-      title="Missing data"
-      type="info_outline"
-    />
-  </WithStyles(Grid)>
   <form
     onSubmit={[Function]}
   >
@@ -665,6 +655,16 @@ exports[`Cards will display correct empty fields for a Live Performance of Music
       container={true}
       spacing={24}
     >
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(Alert)
+          message="This record has missing data - enter all fields to give a quality record."
+          title="Missing data"
+          type="info_outline"
+        />
+      </WithStyles(Grid)>
       <NtroFields
         defaultLanguage="eng"
         hideAbstract={false}
@@ -1099,16 +1099,6 @@ exports[`Cards will display correct empty fields for a Musical Creative work 1`]
      (for dev) : 
     Creative Work - Musical Composition
   </p>
-  <WithStyles(Grid)
-    item={true}
-    xs={12}
-  >
-    <WithStyles(Alert)
-      message="This record has missing data - enter all fields to give a quality record."
-      title="Missing data"
-      type="info_outline"
-    />
-  </WithStyles(Grid)>
   <form
     onSubmit={[Function]}
   >
@@ -1146,6 +1136,16 @@ exports[`Cards will display correct empty fields for a Musical Creative work 1`]
       container={true}
       spacing={24}
     >
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(Alert)
+          message="This record has missing data - enter all fields to give a quality record."
+          title="Missing data"
+          type="info_outline"
+        />
+      </WithStyles(Grid)>
       <NtroFields
         defaultLanguage="eng"
         hideAbstract={false}
@@ -1580,16 +1580,6 @@ exports[`Cards will display correct empty fields for a Public Sector Research Re
      (for dev) : 
     Research Report for an External Body - Public Sector
   </p>
-  <WithStyles(Grid)
-    item={true}
-    xs={12}
-  >
-    <WithStyles(Alert)
-      message="This record has missing data - enter all fields to give a quality record."
-      title="Missing data"
-      type="info_outline"
-    />
-  </WithStyles(Grid)>
   <form
     onSubmit={[Function]}
   >
@@ -1627,6 +1617,16 @@ exports[`Cards will display correct empty fields for a Public Sector Research Re
       container={true}
       spacing={24}
     >
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(Alert)
+          message="This record has missing data - enter all fields to give a quality record."
+          title="Missing data"
+          type="info_outline"
+        />
+      </WithStyles(Grid)>
       <NtroFields
         defaultLanguage="eng"
         hideAbstract={false}
@@ -2061,16 +2061,6 @@ exports[`Cards will display correct empty fields for a Textual Book work 1`] = `
      (for dev) : 
     Creative Work - Textual
   </p>
-  <WithStyles(Grid)
-    item={true}
-    xs={12}
-  >
-    <WithStyles(Alert)
-      message="This record has missing data - enter all fields to give a quality record."
-      title="Missing data"
-      type="info_outline"
-    />
-  </WithStyles(Grid)>
   <form
     onSubmit={[Function]}
   >
@@ -2108,6 +2098,16 @@ exports[`Cards will display correct empty fields for a Textual Book work 1`] = `
       container={true}
       spacing={24}
     >
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(Alert)
+          message="This record has missing data - enter all fields to give a quality record."
+          title="Missing data"
+          type="info_outline"
+        />
+      </WithStyles(Grid)>
       <NtroFields
         defaultLanguage="eng"
         hideAbstract={false}
@@ -2549,16 +2549,6 @@ exports[`Cards will display correct empty fields for a Textual Book work with la
      (for dev) : 
     Creative Work - Textual
   </p>
-  <WithStyles(Grid)
-    item={true}
-    xs={12}
-  >
-    <WithStyles(Alert)
-      message="This record has missing data - enter all fields to give a quality record."
-      title="Missing data"
-      type="info_outline"
-    />
-  </WithStyles(Grid)>
   <form
     onSubmit={[Function]}
   >
@@ -2596,6 +2586,16 @@ exports[`Cards will display correct empty fields for a Textual Book work with la
       container={true}
       spacing={24}
     >
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(Alert)
+          message="This record has missing data - enter all fields to give a quality record."
+          title="Missing data"
+          type="info_outline"
+        />
+      </WithStyles(Grid)>
       <NtroFields
         defaultLanguage="chi"
         hideAbstract={false}
@@ -3030,16 +3030,6 @@ exports[`Cards will display correct empty fields for a Website Creative work 1`]
      (for dev) : 
     Recorded or Rendered Creative Work - Web Exhibition
   </p>
-  <WithStyles(Grid)
-    item={true}
-    xs={12}
-  >
-    <WithStyles(Alert)
-      message="This record has missing data - enter all fields to give a quality record."
-      title="Missing data"
-      type="info_outline"
-    />
-  </WithStyles(Grid)>
   <form
     onSubmit={[Function]}
   >
@@ -3077,6 +3067,16 @@ exports[`Cards will display correct empty fields for a Website Creative work 1`]
       container={true}
       spacing={24}
     >
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(Alert)
+          message="This record has missing data - enter all fields to give a quality record."
+          title="Missing data"
+          type="info_outline"
+        />
+      </WithStyles(Grid)>
       <NtroFields
         defaultLanguage="eng"
         hideAbstract={false}
@@ -3511,16 +3511,6 @@ exports[`Cards will display correct empty fields for an Architectural Design wor
      (for dev) : 
     Creative Work - Design/Architectural
   </p>
-  <WithStyles(Grid)
-    item={true}
-    xs={12}
-  >
-    <WithStyles(Alert)
-      message="This record has missing data - enter all fields to give a quality record."
-      title="Missing data"
-      type="info_outline"
-    />
-  </WithStyles(Grid)>
   <form
     onSubmit={[Function]}
   >
@@ -3558,6 +3548,16 @@ exports[`Cards will display correct empty fields for an Architectural Design wor
       container={true}
       spacing={24}
     >
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(Alert)
+          message="This record has missing data - enter all fields to give a quality record."
+          title="Missing data"
+          type="info_outline"
+        />
+      </WithStyles(Grid)>
       <NtroFields
         defaultLanguage="eng"
         hideAbstract={false}
@@ -4050,16 +4050,6 @@ exports[`Cards will display empty where nothing is incomplete 1`] = `
      (for dev) : 
     Curated or Produced Exhibition or Event - Exhibition or Event
   </p>
-  <WithStyles(Grid)
-    item={true}
-    xs={12}
-  >
-    <WithStyles(Alert)
-      message="This record has missing data - enter all fields to give a quality record."
-      title="Missing data"
-      type="info_outline"
-    />
-  </WithStyles(Grid)>
   <form
     onSubmit={[Function]}
   >
@@ -4097,6 +4087,16 @@ exports[`Cards will display empty where nothing is incomplete 1`] = `
       container={true}
       spacing={24}
     >
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(Alert)
+          message="This record has missing data - enter all fields to give a quality record."
+          title="Missing data"
+          type="info_outline"
+        />
+      </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
         xs={12}
@@ -4664,16 +4664,6 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
      (for dev) : 
     Other
   </p>
-  <WithStyles(Grid)
-    item={true}
-    xs={12}
-  >
-    <WithStyles(Alert)
-      message="This record has missing data - enter all fields to give a quality record."
-      title="Missing data"
-      type="info_outline"
-    />
-  </WithStyles(Grid)>
   <form
     onSubmit={[Function]}
   >
@@ -4711,6 +4701,16 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
       container={true}
       spacing={24}
     >
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(Alert)
+          message="This record has missing data - enter all fields to give a quality record."
+          title="Missing data"
+          type="info_outline"
+        />
+      </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
         xs={12}
@@ -5278,16 +5278,6 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
      (for dev) : 
     Other
   </p>
-  <WithStyles(Grid)
-    item={true}
-    xs={12}
-  >
-    <WithStyles(Alert)
-      message="This record has missing data - enter all fields to give a quality record."
-      title="Missing data"
-      type="info_outline"
-    />
-  </WithStyles(Grid)>
   <form
     onSubmit={[Function]}
   >
@@ -5325,6 +5315,16 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
       container={true}
       spacing={24}
     >
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(Alert)
+          message="This record has missing data - enter all fields to give a quality record."
+          title="Missing data"
+          type="info_outline"
+        />
+      </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
         xs={12}
@@ -5904,16 +5904,6 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
      (for dev) : 
     Other
   </p>
-  <WithStyles(Grid)
-    item={true}
-    xs={12}
-  >
-    <WithStyles(Alert)
-      message="This record has missing data - enter all fields to give a quality record."
-      title="Missing data"
-      type="info_outline"
-    />
-  </WithStyles(Grid)>
   <form
     onSubmit={[Function]}
   >
@@ -5951,6 +5941,16 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
       container={true}
       spacing={24}
     >
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(Alert)
+          message="This record has missing data - enter all fields to give a quality record."
+          title="Missing data"
+          type="info_outline"
+        />
+      </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
         xs={12}
@@ -6518,16 +6518,6 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
      (for dev) : 
     Other
   </p>
-  <WithStyles(Grid)
-    item={true}
-    xs={12}
-  >
-    <WithStyles(Alert)
-      message="This record has missing data - enter all fields to give a quality record."
-      title="Missing data"
-      type="info_outline"
-    />
-  </WithStyles(Grid)>
   <form
     onSubmit={[Function]}
   >
@@ -6571,6 +6561,16 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
       container={true}
       spacing={24}
     >
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(Alert)
+          message="This record has missing data - enter all fields to give a quality record."
+          title="Missing data"
+          type="info_outline"
+        />
+      </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
         xs={12}
@@ -7138,16 +7138,6 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
      (for dev) : 
     Other
   </p>
-  <WithStyles(Grid)
-    item={true}
-    xs={12}
-  >
-    <WithStyles(Alert)
-      message="This record has missing data - enter all fields to give a quality record."
-      title="Missing data"
-      type="info_outline"
-    />
-  </WithStyles(Grid)>
   <form
     onSubmit={[Function]}
   >
@@ -7185,6 +7175,16 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
       container={true}
       spacing={24}
     >
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(Alert)
+          message="This record has missing data - enter all fields to give a quality record."
+          title="Missing data"
+          type="info_outline"
+        />
+      </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
         xs={12}
