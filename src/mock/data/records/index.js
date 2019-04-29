@@ -15,5 +15,4 @@ export {default as MyDatasetList} from './MyDatasetList';
 export {default as recordWithTiffAndThumbnail} from './recordWithTiffAndThumbnail';
 export {default as recordWithoutAuthorIds} from './recordWithoutAuthorIds';
 export {default as collections} from './collections';
-export {default as incompleteRecordList} from './incompleteRecordList';
 

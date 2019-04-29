@@ -3,7 +3,7 @@ export {externalDoiSearchResultList, externalPubMedSearchResultsList, record, my
     incompleteNTROlist, incompleteNTROrecord, incompleteNTROrecordUqrdav10,
     externalTitleSearchResultsList, internalTitleSearchList, recordsTypeList, externalTitleScopusResultsList,
     recordWithMap, recordWithTiffAndThumbnail, MyDatasetList, internalTitleSearchListNoResults, recordWithoutAuthorIds,
-    collections, incompleteRecordList} from './records';
+    collections} from './records';
 export {vocabulariesList} from './vocabularies';
 export {quickTemplates} from './acml';
 export {hindexResponse, trendingPublications, currentAuthorStats} from './academicStats';

@@ -1,7 +1,7 @@
 import * as actions from './actionTypes';
 import * as repositories from 'repositories';
 import * as incompleteRecords from './incompleteRecords';
-import * as incompleteRecordList from 'mock/data/records/incompleteRecordList';
+import * as incompleteRecordList from 'mock/data/records/incompleteNTROlist';
 import * as mockData from "../mock/data/testing/records";
 
 // extend expect to check actions
