@@ -373,6 +373,14 @@ export default {
                 "rek_grant_id_order": 1,
                 "rek_grant_id": "APP1084778"
             }],
+            "fez_record_search_key_grant_agency_type": [{
+                "rek_grant_agency_type": 453986,
+                "rek_grant_agency_type_id": 123,
+                "rek_grant_agency_type_lookup": "NGO",
+                "rek_grant_agency_type_order": 1,
+                "rek_grant_agency_type_pid": "UQ:678742",
+                "rek_grant_agency_type_xsdmf_id": null,
+            }],
             "fez_record_search_key_grant_text": [],
             "fez_record_search_key_herdc_code": null,
             "fez_record_search_key_herdc_status": null,

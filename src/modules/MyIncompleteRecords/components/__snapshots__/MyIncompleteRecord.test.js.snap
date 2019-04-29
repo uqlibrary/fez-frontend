@@ -402,6 +402,36 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
   <form
     onSubmit={[Function]}
   >
+    <NavigationDialogBox
+      txt={
+        Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to cancel this request?",
+          "confirmationTitle": "Cancel request",
+        }
+      }
+      when={true}
+    />
+    <ConfirmDialogBox
+      hideCancelButton={false}
+      locale={
+        Object {
+          "cancelButtonLabel": "Complete another record",
+          "confirmButtonLabel": "Go to my incomplete research list",
+          "confirmationMessage": <React.Fragment />,
+          "confirmationTitle": "Your work has been updated",
+          "fileFailConfirmationAlert": Object {
+            "message": "File upload and/or notes post failed",
+            "title": "UPLOAD FAILED",
+            "type": "warning",
+          },
+        }
+      }
+      onAction={[Function]}
+      onCancelAction={[Function]}
+      onRef={[Function]}
+    />
     <WithStyles(Grid)
       container={true}
       spacing={24}
@@ -962,6 +992,36 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
   <form
     onSubmit={[Function]}
   >
+    <NavigationDialogBox
+      txt={
+        Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to cancel this request?",
+          "confirmationTitle": "Cancel request",
+        }
+      }
+      when={false}
+    />
+    <ConfirmDialogBox
+      hideCancelButton={false}
+      locale={
+        Object {
+          "cancelButtonLabel": "Complete another record",
+          "confirmButtonLabel": "Go to my incomplete research list",
+          "confirmationMessage": <React.Fragment />,
+          "confirmationTitle": "Your work has been updated",
+          "fileFailConfirmationAlert": Object {
+            "message": "File upload and/or notes post failed",
+            "title": "UPLOAD FAILED",
+            "type": "warning",
+          },
+        }
+      }
+      onAction={[Function]}
+      onCancelAction={[Function]}
+      onRef={[Function]}
+    />
     <WithStyles(Grid)
       container={true}
       spacing={24}
@@ -1534,6 +1594,36 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
   <form
     onSubmit={[Function]}
   >
+    <NavigationDialogBox
+      txt={
+        Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to cancel this request?",
+          "confirmationTitle": "Cancel request",
+        }
+      }
+      when={true}
+    />
+    <ConfirmDialogBox
+      hideCancelButton={false}
+      locale={
+        Object {
+          "cancelButtonLabel": "Complete another record",
+          "confirmButtonLabel": "Go to my incomplete research list",
+          "confirmationMessage": <React.Fragment />,
+          "confirmationTitle": "Your work has been updated",
+          "fileFailConfirmationAlert": Object {
+            "message": "File upload and/or notes post failed",
+            "title": "UPLOAD FAILED",
+            "type": "warning",
+          },
+        }
+      }
+      onAction={[Function]}
+      onCancelAction={[Function]}
+      onRef={[Function]}
+    />
     <WithStyles(Grid)
       container={true}
       spacing={24}
@@ -2094,6 +2184,42 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
   <form
     onSubmit={[Function]}
   >
+    <NavigationDialogBox
+      txt={
+        Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to cancel this request?",
+          "confirmationTitle": "Cancel request",
+        }
+      }
+      when={true}
+    />
+    <ConfirmDialogBox
+      hideCancelButton={false}
+      locale={
+        Object {
+          "cancelButtonLabel": "Complete another record",
+          "confirmButtonLabel": "Go to my incomplete research list",
+          "confirmationMessage": <React.Fragment>
+            <WithStyles(Alert)
+              message="File upload and/or notes post failed"
+              title="UPLOAD FAILED"
+              type="warning"
+            />
+          </React.Fragment>,
+          "confirmationTitle": "Your work has been updated",
+          "fileFailConfirmationAlert": Object {
+            "message": "File upload and/or notes post failed",
+            "title": "UPLOAD FAILED",
+            "type": "warning",
+          },
+        }
+      }
+      onAction={[Function]}
+      onCancelAction={[Function]}
+      onRef={[Function]}
+    />
     <WithStyles(Grid)
       container={true}
       spacing={24}
@@ -2654,6 +2780,36 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
   <form
     onSubmit={[Function]}
   >
+    <NavigationDialogBox
+      txt={
+        Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to cancel this request?",
+          "confirmationTitle": "Cancel request",
+        }
+      }
+      when={true}
+    />
+    <ConfirmDialogBox
+      hideCancelButton={false}
+      locale={
+        Object {
+          "cancelButtonLabel": "Complete another record",
+          "confirmButtonLabel": "Go to my incomplete research list",
+          "confirmationMessage": <React.Fragment />,
+          "confirmationTitle": "Your work has been updated",
+          "fileFailConfirmationAlert": Object {
+            "message": "File upload and/or notes post failed",
+            "title": "UPLOAD FAILED",
+            "type": "warning",
+          },
+        }
+      }
+      onAction={[Function]}
+      onCancelAction={[Function]}
+      onRef={[Function]}
+    />
     <WithStyles(Grid)
       container={true}
       spacing={24}
