@@ -171,7 +171,11 @@ exports[`GrantListEditorHeader should hide grant agency type input 1`] = `
                 }
               }
             >
-              <WithStyles(Tooltip)>
+              <WithStyles(Tooltip)
+                disableFocusListener={false}
+                disableHoverListener={false}
+                disableTouchListener={false}
+              >
                 <div
                   style={
                     Object {
@@ -361,7 +365,11 @@ exports[`GrantListEditorHeader should render default mobile view 1`] = `
                 }
               }
             >
-              <WithStyles(Tooltip)>
+              <WithStyles(Tooltip)
+                disableFocusListener={false}
+                disableHoverListener={false}
+                disableTouchListener={false}
+              >
                 <div
                   style={
                     Object {
@@ -551,7 +559,11 @@ exports[`GrantListEditorHeader should render default view 1`] = `
                 }
               }
             >
-              <WithStyles(Tooltip)>
+              <WithStyles(Tooltip)
+                disableFocusListener={false}
+                disableHoverListener={false}
+                disableTouchListener={false}
+              >
                 <div
                   style={
                     Object {
@@ -741,7 +753,11 @@ exports[`GrantListEditorHeader should show confirmation box 1`] = `
                 }
               }
             >
-              <WithStyles(Tooltip)>
+              <WithStyles(Tooltip)
+                disableFocusListener={false}
+                disableHoverListener={false}
+                disableTouchListener={false}
+              >
                 <div
                   style={
                     Object {

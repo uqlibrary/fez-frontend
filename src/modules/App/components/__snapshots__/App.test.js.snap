@@ -10162,7 +10162,6 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                               "loadThirdPartyResults": [Function],
                                                               "loadVocabulariesList": [Function],
                                                               "logout": [Function],
-                                                              "patchIncompleteRecord": [Function],
                                                               "resetSavingAuthorState": [Function],
                                                               "searchAuthorIncompletePublications": [Function],
                                                               "searchAuthorPublications": [Function],
@@ -10181,6 +10180,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                               "submitThesis": [Function],
                                                               "unclaimRecord": [Function],
                                                               "updateCurrentAuthor": [Function],
+                                                              "updateIncompleteRecord": [Function],
                                                             }
                                                           }
                                                           autoFocus={true}
@@ -15292,7 +15292,6 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 "loadThirdPartyResults": [Function],
                                 "loadVocabulariesList": [Function],
                                 "logout": [Function],
-                                "patchIncompleteRecord": [Function],
                                 "resetSavingAuthorState": [Function],
                                 "searchAuthorIncompletePublications": [Function],
                                 "searchAuthorPublications": [Function],
@@ -15311,6 +15310,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 "submitThesis": [Function],
                                 "unclaimRecord": [Function],
                                 "updateCurrentAuthor": [Function],
+                                "updateIncompleteRecord": [Function],
                               }
                             }
                             appAlert={null}
@@ -16928,7 +16928,6 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "loadThirdPartyResults": [Function],
                                                                             "loadVocabulariesList": [Function],
                                                                             "logout": [Function],
-                                                                            "patchIncompleteRecord": [Function],
                                                                             "resetSavingAuthorState": [Function],
                                                                             "searchAuthorIncompletePublications": [Function],
                                                                             "searchAuthorPublications": [Function],
@@ -16947,6 +16946,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "submitThesis": [Function],
                                                                             "unclaimRecord": [Function],
                                                                             "updateCurrentAuthor": [Function],
+                                                                            "updateIncompleteRecord": [Function],
                                                                           }
                                                                         }
                                                                         history={
@@ -17038,7 +17038,6 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                               "loadThirdPartyResults": [Function],
                                                                               "loadVocabulariesList": [Function],
                                                                               "logout": [Function],
-                                                                              "patchIncompleteRecord": [Function],
                                                                               "resetSavingAuthorState": [Function],
                                                                               "searchAuthorIncompletePublications": [Function],
                                                                               "searchAuthorPublications": [Function],
@@ -17057,6 +17056,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                               "submitThesis": [Function],
                                                                               "unclaimRecord": [Function],
                                                                               "updateCurrentAuthor": [Function],
+                                                                              "updateIncompleteRecord": [Function],
                                                                             }
                                                                           }
                                                                           classes={
@@ -17155,7 +17155,6 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                 "loadThirdPartyResults": [Function],
                                                                                 "loadVocabulariesList": [Function],
                                                                                 "logout": [Function],
-                                                                                "patchIncompleteRecord": [Function],
                                                                                 "resetSavingAuthorState": [Function],
                                                                                 "searchAuthorIncompletePublications": [Function],
                                                                                 "searchAuthorPublications": [Function],
@@ -17174,6 +17173,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                 "submitThesis": [Function],
                                                                                 "unclaimRecord": [Function],
                                                                                 "updateCurrentAuthor": [Function],
+                                                                                "updateIncompleteRecord": [Function],
                                                                               }
                                                                             }
                                                                             classes={
@@ -17691,7 +17691,6 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                   "loadThirdPartyResults": [Function],
                                                                                   "loadVocabulariesList": [Function],
                                                                                   "logout": [Function],
-                                                                                  "patchIncompleteRecord": [Function],
                                                                                   "resetSavingAuthorState": [Function],
                                                                                   "searchAuthorIncompletePublications": [Function],
                                                                                   "searchAuthorPublications": [Function],
@@ -17710,6 +17709,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                   "submitThesis": [Function],
                                                                                   "unclaimRecord": [Function],
                                                                                   "updateCurrentAuthor": [Function],
+                                                                                  "updateIncompleteRecord": [Function],
                                                                                 }
                                                                               }
                                                                               classes={
@@ -21091,7 +21091,6 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                     "loadThirdPartyResults": [Function],
                                                                                     "loadVocabulariesList": [Function],
                                                                                     "logout": [Function],
-                                                                                    "patchIncompleteRecord": [Function],
                                                                                     "resetSavingAuthorState": [Function],
                                                                                     "searchAuthorIncompletePublications": [Function],
                                                                                     "searchAuthorPublications": [Function],
@@ -21110,6 +21109,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                     "submitThesis": [Function],
                                                                                     "unclaimRecord": [Function],
                                                                                     "updateCurrentAuthor": [Function],
+                                                                                    "updateIncompleteRecord": [Function],
                                                                                   }
                                                                                 }
                                                                               >
@@ -21155,7 +21155,6 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "loadThirdPartyResults": [Function],
                                                                                       "loadVocabulariesList": [Function],
                                                                                       "logout": [Function],
-                                                                                      "patchIncompleteRecord": [Function],
                                                                                       "resetSavingAuthorState": [Function],
                                                                                       "searchAuthorIncompletePublications": [Function],
                                                                                       "searchAuthorPublications": [Function],
@@ -21174,6 +21173,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "submitThesis": [Function],
                                                                                       "unclaimRecord": [Function],
                                                                                       "updateCurrentAuthor": [Function],
+                                                                                      "updateIncompleteRecord": [Function],
                                                                                     }
                                                                                   }
                                                                                   classes={

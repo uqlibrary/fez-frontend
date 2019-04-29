@@ -16,9 +16,7 @@ const onSubmit = (values, dispatch, props) => {
         publication: {...props.recordToFix},
         author: {...props.author}
     };
-
-    return dispatch(
-        actions.patchIncompleteRecord(data))
+    return dispatch(actions.updateIncompleteRecord(data))
         .then(() => {
             // following from fixRecord...
             // once this promise is resolved form is submitted successfully and will call parent container
@@ -52,9 +50,10 @@ const mapStateToProps = (state, ownProps) => {
     const grants = importedValues && importedValues.fez_record_search_key_grant_agency.map((grantAgency, index) => ({
         grantAgencyName: grantAgency.rek_grant_agency,
         grantId: importedValues.fez_record_search_key_grant_id && importedValues.fez_record_search_key_grant_id.length > 0 && importedValues.fez_record_search_key_grant_id[index].rek_grant_id || '',
-        grantAgencyType: importedValues.fez_record_search_key_grant_agancy_type && importedValues.fez_record_search_key_grant_agancy_type.length > 0 && importedValues.fez_record_search_key_grant_agency_type[index].rek_grant_agency_type || ORG_TYPE_NOT_SET,
+        grantAgencyType: importedValues.fez_record_search_key_grant_agency_type && importedValues.fez_record_search_key_grant_agency_type.length > 0 && importedValues.fez_record_search_key_grant_agency_type[index].rek_grant_agency_type || ORG_TYPE_NOT_SET,
         disabled: ownProps.disableInitialGrants
     }));
+
 
     return {
         ...state.get('fixRecordReducer'),

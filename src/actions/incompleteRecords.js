@@ -1,8 +1,8 @@
 import * as actions from './actionTypes';
-import {get, post} from 'repositories/generic';
 import * as transformers from './transformers';
-import * as routes from 'repositories/routes';
-import {AUTHOR_INCOMPLETEPUBLICATIONS_SAVE_API} from 'repositories/routes';
+import { get, patch } from 'repositories/generic';
+import { CURRENT_USER_INCOMPLETE_RECORDS_API, EXISTING_RECORD_API } from 'repositories/routes';
+import { putUploadFiles } from 'repositories';
 
 /**
  * Load a list of incomplete NTRO Records from fez
@@ -12,7 +12,7 @@ export function loadIncompleteRecords() {
     return dispatch => {
         dispatch({type: actions.AUTHOR_INCOMPLETEPUBLICATIONS_LOADING});
 
-        return get(routes.CURRENT_USER_INCOMPLETE_RECORDS_API())
+        return get(CURRENT_USER_INCOMPLETE_RECORDS_API())
             .then(response => {
                 dispatch({
                     type: actions.AUTHOR_INCOMPLETEPUBLICATIONS_LOADED,
@@ -28,20 +28,21 @@ export function loadIncompleteRecords() {
     };
 }
 
+
 /**
- * Fix record request: patch record, send issue to espace admins:
- *      update record with uploaded files, url
+ * Update incomplete record request: patch record, send issue to espace admins:
+ *      update record with uploaded files, other field data
  *      send issue message to notify espace team
  *      upload files,
  * If error occurs on any stage failed action is displayed
  * @param {object} data to be posted, refer to backend API data: {publication, author, files}
  * @returns {promise} - this method is used by redux form onSubmit which requires Promise resolve/reject as a return
  */
-export function patchIncompleteRecord(data) {
+export function updateIncompleteRecord(data) {
     if (!data.publication || !data.author) {
         return dispatch => {
             dispatch({
-                type: actions.AUTHOR_INCOMPLETEPUBLICATIONS_SAVE_FAILED,
+                type: actions.FIX_RECORD_FAILED,
                 payload: 'Incomplete data for requests'
             });
 
@@ -49,14 +50,18 @@ export function patchIncompleteRecord(data) {
         };
     }
 
-    const isAuthorLinked = !!data.author.aut_id &&
-        !!data.publication.fez_record_search_key_author_id && data.publication.fez_record_search_key_author_id.length > 0 &&
+    const isAuthorLinked = data.publication.fez_record_search_key_author_id && data.publication.fez_record_search_key_author_id.length > 0 &&
         data.publication.fez_record_search_key_author_id.filter(authorId => authorId.rek_author_id === data.author.aut_id).length > 0;
 
-    if (!isAuthorLinked) {
+    const isContributorLinked = data.publication.fez_record_search_key_contributor_id && data.publication.fez_record_search_key_contributor_id.length > 0 &&
+        data.publication.fez_record_search_key_contributor_id.filter(contributorId => contributorId.rek_contributor_id === data.author.aut_id).length > 0;
+
+    const hasFilesToUpload = data.files && data.files.queue && data.files.queue.length > 0;
+
+    if (!isAuthorLinked && !isContributorLinked) {
         return dispatch => {
             dispatch({
-                type: actions.AUTHOR_INCOMPLETEPUBLICATIONS_SAVE_FAILED,
+                type: actions.FIX_RECORD_FAILED,
                 payload: 'Current author is not linked to this record'
             });
             return Promise.reject(new Error('Current author is not linked to this record'));
@@ -64,19 +69,27 @@ export function patchIncompleteRecord(data) {
     }
 
     return dispatch => {
-        dispatch({
-            type: actions.AUTHOR_INCOMPLETEPUBLICATIONS_SAVE_PROCESSING,
-            payload: data
-        });
+        dispatch({type: actions.FIX_RECORD_PROCESSING});
 
-        // create request for notification
-        const createIncompleteRequest = transformers.getIncompleteRequestFields(data);
+        // if user updated links/added files - update record
+        let patchRecordRequest = null;
+        patchRecordRequest = {
+            rek_pid: data.publication.rek_pid,
+            ...transformers.getIncompleteRequestFields(data),
+            ...transformers.getGrantsListSearchKey(data.grants),
+            ...transformers.getRecordFileAttachmentSearchKey(data.files ? data.files.queue : [], data.publication)
+        };
+
+        // create request for issue notification
+        // const createIssueRequest = transformers.getFixIssueRequest(data);
 
         return Promise.resolve([])
-            .then(()=> (post(AUTHOR_INCOMPLETEPUBLICATIONS_SAVE_API({pid: data.publication.rek_pid}), createIncompleteRequest)))
+            .then(()=> (hasFilesToUpload ? putUploadFiles(data.publication.rek_pid, data.files.queue, dispatch) : null))
+            .then(()=> (patch(EXISTING_RECORD_API({pid: data.publication.rek_pid}), patchRecordRequest)))
+            // .then(()=> (post(RECORDS_ISSUES_API({pid: data.publication.rek_pid}), createIssueRequest)))
             .then(responses => {
                 dispatch({
-                    type: actions.AUTHOR_INCOMPLETEPUBLICATIONS_SAVE_SUCCESS,
+                    type: actions.FIX_RECORD_SUCCESS,
                     payload: {
                         pid: data.publication.rek_pid
                     }
@@ -85,7 +98,7 @@ export function patchIncompleteRecord(data) {
             })
             .catch(error => {
                 dispatch({
-                    type: actions.AUTHOR_INCOMPLETEPUBLICATIONS_SAVE_FAILED,
+                    type: actions.FIX_RECORD_FAILED,
                     payload: error.message
                 });
                 return Promise.reject(error);

@@ -5,6 +5,8 @@ import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
 import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
+import {NavigationDialogBox} from 'modules/SharedComponents/Toolbox/NavigationPrompt';
+import {ConfirmDialogBox} from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
 import {FileUploadField} from 'modules/SharedComponents/Toolbox/FileUploader';
@@ -17,8 +19,10 @@ import {
     DOCUMENT_TYPE_DESIGN, DOCUMENT_TYPE_JOURNAL_ARTICLE, DOCUMENT_TYPE_BOOK_CHAPTER, DOCUMENT_TYPE_BOOK, DOCUMENT_TYPE_RESEARCH_REPORT, DOCUMENT_TYPE_CREATIVE_WORK,
     CW_NTRO_SUBTYPES, LP_NTRO_SUBTYPES, RRW_NTRO_SUBTYPES, CPEE_NTRO_SUBTYPES, RESEARCH_REPORT_NTRO_SUBTYPES, NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK
 } from 'config/general';
-import JSONPretty from 'react-json-pretty';
 import {GrantListEditorField} from 'modules/SharedComponents/GrantListEditor';
+
+import {routes} from 'config';
+import {default as formsLocale} from 'locale/forms';
 
 export default class MyIncompleteRecord extends PureComponent {
     static propTypes = {
@@ -37,8 +41,7 @@ export default class MyIncompleteRecord extends PureComponent {
 
         publicationToFixFileUploadingError: PropTypes.bool,
 
-        errors: PropTypes.object,
-        initialValues: PropTypes.object
+        errors: PropTypes.object
     };
 
     componentDidMount() {
@@ -59,19 +62,25 @@ export default class MyIncompleteRecord extends PureComponent {
         this.props.actions.clearFixRecord();
     }
 
-    // TODO: Uncomment this before going live
-    // isLoggedInUserLinked = (author, recordToFix, searchKey, subkey) => {
-    //     return !!author && !!recordToFix && recordToFix[searchKey] && recordToFix[searchKey].length > 0
-    //         && recordToFix[searchKey].filter(authorId => authorId[subkey] === author.aut_id).length > 0;
-    // };
+    _navigateToMyIncomplete = () => {
+        this.props.history.push(routes.pathConfig.records.incomplete);
+    };
 
-    // TODO: Uncomment this before going live
-    // isAuthorLinked = () => {
-    //     const isAuthorLinked = this.isLoggedInUserLinked(this.props.author, this.props.recordToFix, 'fez_record_search_key_author_id', 'rek_author_id');
-    //     const isContributorLinked = this.isLoggedInUserLinked(this.props.author, this.props.recordToFix, 'fez_record_search_key_contributor_id', 'rek_contributor_id');
-    //
-    //     return isAuthorLinked || isContributorLinked;
-    // };
+    _navigateToDashboard = () => {
+        this.props.history.push(routes.pathConfig.dashboard);
+    };
+
+    isLoggedInUserLinked = (author, recordToFix, searchKey, subkey) => {
+        return !!author && !!recordToFix && recordToFix[searchKey] && recordToFix[searchKey].length > 0
+            && recordToFix[searchKey].filter(authorId => authorId[subkey] === author.aut_id).length > 0;
+    };
+
+    isAuthorLinked = () => {
+        const isAuthorLinked = this.isLoggedInUserLinked(this.props.author, this.props.recordToFix, 'fez_record_search_key_author_id', 'rek_author_id');
+        const isContributorLinked = this.isLoggedInUserLinked(this.props.author, this.props.recordToFix, 'fez_record_search_key_contributor_id', 'rek_contributor_id');
+
+        return isAuthorLinked || isContributorLinked;
+    };
 
     _cancelFix = () => {
         this.props.history.goBack();
@@ -147,13 +156,13 @@ export default class MyIncompleteRecord extends PureComponent {
         // console.log('LOADING THIS PAGE');
 
         // if author is not linked to this record, abandon form
-        // TODO: Uncomment this before going live
-        // if (!(this.props.accountAuthorLoading || this.props.loadingRecordToFix) && !this.isAuthorLinked()) {
-        //     this.props.history.go(-1);
-        //     return <div />;
-        // }
+        if (!(this.props.accountAuthorLoading || this.props.loadingRecordToFix) && !this.isAuthorLinked()) {
+            this.props.history.go(-1);
+            return <div />;
+        }
 
         const txt = pagesLocale.pages.incompletePublication;
+        const txtFixForm = formsLocale.forms.fixPublicationForm;
 
         if(this.props.accountAuthorLoading || this.props.loadingRecordToFix) {
             return (
@@ -172,9 +181,8 @@ export default class MyIncompleteRecord extends PureComponent {
             </React.Fragment>
         );
         return (
-            <StandardPage title={this.props.recordToFix && this.props.recordToFix.rek_title || ''}>
-                <PublicationCitation publication={this.props.recordToFix} hideTitle/>
-
+            <StandardPage title={txt.title}>
+                <PublicationCitation publication={this.props.recordToFix} />
                 {
                     // TODO remove before going live
                     !!this.props.recordToFix && !!this.props.recordToFix.rek_display_type_lookup ?
@@ -196,6 +204,13 @@ export default class MyIncompleteRecord extends PureComponent {
                 </Grid>
 
                 <form onSubmit={this._handleDefaultSubmit}>
+                    <NavigationDialogBox when={this.props.dirty && !this.props.submitSucceeded} txt={txtFixForm.cancelWorkflowConfirmation} />
+                    <ConfirmDialogBox
+                        onRef={this._setSuccessConfirmation}
+                        onCancelAction={this._navigateToMyIncomplete}
+                        onAction={this._navigateToDashboard}
+                        locale={saveConfirmationLocale}
+                    />
                     <Grid container spacing={24}>
                         <Grid item xs={12}>
                             {
@@ -224,11 +239,15 @@ export default class MyIncompleteRecord extends PureComponent {
                             }
                         </Grid>
                         <Grid item xs={12}>
-                            <StandardCard title={'JSON of the initialValues'}>
-                                <JSONPretty id="json-pretty" data={this.props.initialValues} />
+                            <StandardCard title={txt.fields.grants.title}>
+                                <Field
+                                    component={GrantListEditorField}
+                                    name="grants"
+                                    disabled={this.props.submitting}
+                                    disableDeleteAllGrants={this.props.disableDeleteAllGrants}
+                                />
                             </StandardCard>
                         </Grid>
-
                         <Grid item xs={12}>
                             <StandardCard title={txt.fields.notes.title}>
                                 <Field
@@ -241,16 +260,6 @@ export default class MyIncompleteRecord extends PureComponent {
                                     rows={5}
                                     label={txt.fields.notes.label}
                                     placeholder={txt.fields.notes.placeholder}
-                                />
-                            </StandardCard>
-                        </Grid>
-                        <Grid item xs={12}>
-                            <StandardCard title={txt.fields.grants.title}>
-                                <Field
-                                    component={GrantListEditorField}
-                                    name="grants"
-                                    disabled={this.props.submitting}
-                                    disableDeleteAllGrants={this.props.disableDeleteAllGrants}
                                 />
                             </StandardCard>
                         </Grid>

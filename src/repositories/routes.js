@@ -178,11 +178,6 @@ export const CURRENT_USER_INCOMPLETE_RECORDS_API = (values = {}, route = 'search
     }
 );
 
-// patch record apis
-export const AUTHOR_INCOMPLETEPUBLICATIONS_SAVE_API = ({pid}) => (
-    {apiUrl: `records/${pid}`}
-);
-
 export const AUTHOR_PUBLICATIONS_STATS_ONLY_API = (values) => (
     {
         apiUrl: 'records/search',
