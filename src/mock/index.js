@@ -163,7 +163,7 @@ mock
     .reply(200, mockData.lookupToolIncites)
     .onGet(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({pid: '.*'}).apiUrl)))
     .reply(config => {
-        if (config.url.indexOf('UQ:678742') >= 0) {
+        if (config.url.indexOf('UQ:692945') >= 0) {
             return [200, {data: {...mockData.incompleteNTROrecord}}];
         }
         // Data collection
