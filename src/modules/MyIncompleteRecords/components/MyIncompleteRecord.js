@@ -153,8 +153,6 @@ export default class MyIncompleteRecord extends PureComponent {
         const editExtent = (isDocumentType1 || isDocumentType2) &&
             (!this.props.recordToFix || !this.props.recordToFix.fez_record_search_key_total_pages || !this.props.recordToFix.fez_record_search_key_total_pages.rek_total_pages);
 
-        // console.log('LOADING THIS PAGE');
-
         // if author is not linked to this record, abandon form
         if (!(this.props.accountAuthorLoading || this.props.loadingRecordToFix) && !this.isAuthorLinked()) {
             this.props.history.go(-1);
@@ -195,13 +193,6 @@ export default class MyIncompleteRecord extends PureComponent {
                         <p><b>Subtype</b> (for dev) : {this.props.recordToFix.rek_subtype}</p>
                         : <p><b>Subtype</b> (for dev) : missing</p>
                 }
-                <Grid item xs={12}>
-                    <Alert
-                        title="Missing data"
-                        message="This record has missing data - enter all fields to give a quality record."
-                        type="info_outline"
-                    />
-                </Grid>
 
                 <form onSubmit={this._handleDefaultSubmit}>
                     <NavigationDialogBox when={this.props.dirty && !this.props.submitSucceeded} txt={txtFixForm.cancelWorkflowConfirmation} />
@@ -212,6 +203,13 @@ export default class MyIncompleteRecord extends PureComponent {
                         locale={saveConfirmationLocale}
                     />
                     <Grid container spacing={24}>
+                        <Grid item xs={12}>
+                            <Alert
+                                title="Missing data"
+                                message="This record has missing data - enter all fields to give a quality record."
+                                type="info_outline"
+                            />
+                        </Grid>
                         {
                             isNtro &&
                             (editCreatorContributionStatement || editAbstract || editExtent || editAudienceSize || editSignificance || editQualityIndicator || editLanguage) &&
