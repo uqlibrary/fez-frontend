@@ -184,154 +184,149 @@ exports[`Cards will display correct empty fields for a Exhibition Creative Work 
       container={true}
       spacing={24}
     >
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <NtroFields
-          defaultLanguage="eng"
-          hideAbstract={false}
-          hideAudienceSize={false}
-          hideEndPage={true}
-          hideExtent={false}
-          hideGrants={true}
-          hideIsmn={true}
-          hideIsrc={true}
-          hideIssue={true}
-          hideLanguage={false}
-          hideOriginalFormat={true}
-          hidePeerReviewActivity={false}
-          hideSeries={true}
-          hideStartPage={true}
-          hideVolume={true}
-          locale={
-            Object {
-              "contributionStatement": Object {
-                "fields": Object {
-                  "impactStatement": Object {
-                    "label": <span>
-                      Creator research statement*. Include Background, Contribution and Significance 
-                      <span
+      <NtroFields
+        defaultLanguage="eng"
+        hideAbstract={false}
+        hideAudienceSize={false}
+        hideEndPage={true}
+        hideExtent={false}
+        hideGrants={true}
+        hideIsmn={true}
+        hideIsrc={true}
+        hideIssue={true}
+        hideLanguage={false}
+        hideOriginalFormat={true}
+        hidePeerReviewActivity={false}
+        hideSeries={true}
+        hideStartPage={true}
+        hideVolume={true}
+        locale={
+          Object {
+            "contributionStatement": Object {
+              "fields": Object {
+                "impactStatement": Object {
+                  "label": <span>
+                    Creator research statement*. Include Background, Contribution and Significance 
+                    <span
+                      style={
+                        Object {
+                          "fontWeight": 700,
+                        }
+                      }
+                    >
+                      (not for public view)
+                    </span>
+                  </span>,
+                  "placeholder": "Remember to include substantiation of your Major or Minor Scale/Significance claim above.",
+                },
+                "scaleOfWork": Object {
+                  "description": "Select the option that best describes the significance of the work.",
+                  "label": <span>
+                    Scale/Significance of work* 
+                    <span
+                      style={
+                        Object {
+                          "fontWeight": 700,
+                        }
+                      }
+                    >
+                      (not for public view)
+                    </span>
+                  </span>,
+                },
+              },
+              "help": Object {
+                "buttonLabel": "CLOSE",
+                "text": <React.Fragment>
+                  <h3>
+                    Creator research statement
+                  </h3>
+                  <p>
+                    For more information about the research statement, click  
+                    <b>
+                      <a
+                        href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836548"
                         style={
                           Object {
                             "fontWeight": 700,
                           }
                         }
+                        target="_blank"
                       >
-                        (not for public view)
-                      </span>
-                    </span>,
-                    "placeholder": "Remember to include substantiation of your Major or Minor Scale/Significance claim above.",
-                  },
-                  "scaleOfWork": Object {
-                    "description": "Select the option that best describes the significance of the work.",
-                    "label": <span>
-                      Scale/Significance of work* 
-                      <span
-                        style={
-                          Object {
-                            "fontWeight": 700,
-                          }
-                        }
-                      >
-                        (not for public view)
-                      </span>
-                    </span>,
-                  },
-                },
-                "help": Object {
-                  "buttonLabel": "CLOSE",
-                  "text": <React.Fragment>
-                    <h3>
-                      Creator research statement
-                    </h3>
-                    <p>
-                      For more information about the research statement, click  
-                      <b>
-                        <a
-                          href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836548"
-                          style={
-                            Object {
-                              "fontWeight": 700,
-                            }
-                          }
-                          target="_blank"
-                        >
-                          here
-                        </a>
-                      </b>
-                    </p>
-                  </React.Fragment>,
-                  "title": "Author/Creator research statement",
-                },
+                        here
+                      </a>
+                    </b>
+                  </p>
+                </React.Fragment>,
                 "title": "Author/Creator research statement",
               },
-              "grantEditor": Object {
-                "title": "Grant details",
-              },
-              "metadata": Object {
-                "fields": Object {
-                  "abstract": Object {
-                    "label": <span>
-                      Abstract/Description* 
-                      <span
-                        style={
-                          Object {
-                            "fontWeight": 700,
-                          }
+              "title": "Author/Creator research statement",
+            },
+            "grantEditor": Object {
+              "title": "Grant details",
+            },
+            "metadata": Object {
+              "fields": Object {
+                "abstract": Object {
+                  "label": <span>
+                    Abstract/Description* 
+                    <span
+                      style={
+                        Object {
+                          "fontWeight": 700,
                         }
-                      >
-                        (for public view)
-                      </span>
-                    </span>,
-                    "placeholder": "Enter a brief description of the work",
-                  },
-                  "audienceSize": Object {
-                    "label": "Audience size",
-                  },
-                  "endPage": Object {
-                    "label": "End page",
-                  },
-                  "extent": Object {
-                    "label": "Total pages/Extent",
-                    "placeholder": "Enter total pages, size or duration of work",
-                  },
-                  "issue": Object {
-                    "label": "Issue",
-                  },
-                  "language": Object {
-                    "label": "Language",
-                  },
-                  "notes": Object {
-                    "label": "Notes",
-                  },
-                  "peerReviewActivity": Object {
-                    "label": "Quality indicators",
-                  },
-                  "physicalDescription": Object {
-                    "label": "Physical description",
-                    "placeholder": "Building, Exhibition, Performance, Composition",
-                  },
-                  "series": Object {
-                    "floatingLabelText": "Series",
-                    "hintText": "Enter the name of publication, performance, recording, or event series",
-                  },
-                  "startPage": Object {
-                    "label": "Start page",
-                  },
-                  "volume": Object {
-                    "label": "Volume",
-                  },
+                      }
+                    >
+                      (for public view)
+                    </span>
+                  </span>,
+                  "placeholder": "Enter a brief description of the work",
                 },
-                "title": "NTRO data",
+                "audienceSize": Object {
+                  "label": "Audience size",
+                },
+                "endPage": Object {
+                  "label": "End page",
+                },
+                "extent": Object {
+                  "label": "Total pages/Extent",
+                  "placeholder": "Enter total pages, size or duration of work",
+                },
+                "issue": Object {
+                  "label": "Issue",
+                },
+                "language": Object {
+                  "label": "Language",
+                },
+                "notes": Object {
+                  "label": "Notes",
+                },
+                "peerReviewActivity": Object {
+                  "label": "Quality indicators",
+                },
+                "physicalDescription": Object {
+                  "label": "Physical description",
+                  "placeholder": "Building, Exhibition, Performance, Composition",
+                },
+                "series": Object {
+                  "floatingLabelText": "Series",
+                  "hintText": "Enter the name of publication, performance, recording, or event series",
+                },
+                "startPage": Object {
+                  "label": "Start page",
+                },
+                "volume": Object {
+                  "label": "Volume",
+                },
               },
-            }
+              "title": "NTRO data",
+            },
           }
-          showContributionStatement={true}
-          showSignificance={true}
-          submitting={false}
-        />
-      </WithStyles(Grid)>
+        }
+        showContributionStatement={true}
+        showSignificance={true}
+        submitting={false}
+      />
       <WithStyles(Grid)
         item={true}
         xs={12}
@@ -670,154 +665,149 @@ exports[`Cards will display correct empty fields for a Live Performance of Music
       container={true}
       spacing={24}
     >
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <NtroFields
-          defaultLanguage="eng"
-          hideAbstract={false}
-          hideAudienceSize={false}
-          hideEndPage={true}
-          hideExtent={false}
-          hideGrants={true}
-          hideIsmn={true}
-          hideIsrc={true}
-          hideIssue={true}
-          hideLanguage={false}
-          hideOriginalFormat={true}
-          hidePeerReviewActivity={false}
-          hideSeries={true}
-          hideStartPage={true}
-          hideVolume={true}
-          locale={
-            Object {
-              "contributionStatement": Object {
-                "fields": Object {
-                  "impactStatement": Object {
-                    "label": <span>
-                      Creator research statement*. Include Background, Contribution and Significance 
-                      <span
+      <NtroFields
+        defaultLanguage="eng"
+        hideAbstract={false}
+        hideAudienceSize={false}
+        hideEndPage={true}
+        hideExtent={false}
+        hideGrants={true}
+        hideIsmn={true}
+        hideIsrc={true}
+        hideIssue={true}
+        hideLanguage={false}
+        hideOriginalFormat={true}
+        hidePeerReviewActivity={false}
+        hideSeries={true}
+        hideStartPage={true}
+        hideVolume={true}
+        locale={
+          Object {
+            "contributionStatement": Object {
+              "fields": Object {
+                "impactStatement": Object {
+                  "label": <span>
+                    Creator research statement*. Include Background, Contribution and Significance 
+                    <span
+                      style={
+                        Object {
+                          "fontWeight": 700,
+                        }
+                      }
+                    >
+                      (not for public view)
+                    </span>
+                  </span>,
+                  "placeholder": "Remember to include substantiation of your Major or Minor Scale/Significance claim above.",
+                },
+                "scaleOfWork": Object {
+                  "description": "Select the option that best describes the significance of the work.",
+                  "label": <span>
+                    Scale/Significance of work* 
+                    <span
+                      style={
+                        Object {
+                          "fontWeight": 700,
+                        }
+                      }
+                    >
+                      (not for public view)
+                    </span>
+                  </span>,
+                },
+              },
+              "help": Object {
+                "buttonLabel": "CLOSE",
+                "text": <React.Fragment>
+                  <h3>
+                    Creator research statement
+                  </h3>
+                  <p>
+                    For more information about the research statement, click  
+                    <b>
+                      <a
+                        href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836548"
                         style={
                           Object {
                             "fontWeight": 700,
                           }
                         }
+                        target="_blank"
                       >
-                        (not for public view)
-                      </span>
-                    </span>,
-                    "placeholder": "Remember to include substantiation of your Major or Minor Scale/Significance claim above.",
-                  },
-                  "scaleOfWork": Object {
-                    "description": "Select the option that best describes the significance of the work.",
-                    "label": <span>
-                      Scale/Significance of work* 
-                      <span
-                        style={
-                          Object {
-                            "fontWeight": 700,
-                          }
-                        }
-                      >
-                        (not for public view)
-                      </span>
-                    </span>,
-                  },
-                },
-                "help": Object {
-                  "buttonLabel": "CLOSE",
-                  "text": <React.Fragment>
-                    <h3>
-                      Creator research statement
-                    </h3>
-                    <p>
-                      For more information about the research statement, click  
-                      <b>
-                        <a
-                          href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836548"
-                          style={
-                            Object {
-                              "fontWeight": 700,
-                            }
-                          }
-                          target="_blank"
-                        >
-                          here
-                        </a>
-                      </b>
-                    </p>
-                  </React.Fragment>,
-                  "title": "Author/Creator research statement",
-                },
+                        here
+                      </a>
+                    </b>
+                  </p>
+                </React.Fragment>,
                 "title": "Author/Creator research statement",
               },
-              "grantEditor": Object {
-                "title": "Grant details",
-              },
-              "metadata": Object {
-                "fields": Object {
-                  "abstract": Object {
-                    "label": <span>
-                      Abstract/Description* 
-                      <span
-                        style={
-                          Object {
-                            "fontWeight": 700,
-                          }
+              "title": "Author/Creator research statement",
+            },
+            "grantEditor": Object {
+              "title": "Grant details",
+            },
+            "metadata": Object {
+              "fields": Object {
+                "abstract": Object {
+                  "label": <span>
+                    Abstract/Description* 
+                    <span
+                      style={
+                        Object {
+                          "fontWeight": 700,
                         }
-                      >
-                        (for public view)
-                      </span>
-                    </span>,
-                    "placeholder": "Enter a brief description of the work",
-                  },
-                  "audienceSize": Object {
-                    "label": "Audience size",
-                  },
-                  "endPage": Object {
-                    "label": "End page",
-                  },
-                  "extent": Object {
-                    "label": "Total pages/Extent",
-                    "placeholder": "Enter total pages, size or duration of work",
-                  },
-                  "issue": Object {
-                    "label": "Issue",
-                  },
-                  "language": Object {
-                    "label": "Language",
-                  },
-                  "notes": Object {
-                    "label": "Notes",
-                  },
-                  "peerReviewActivity": Object {
-                    "label": "Quality indicators",
-                  },
-                  "physicalDescription": Object {
-                    "label": "Physical description",
-                    "placeholder": "Building, Exhibition, Performance, Composition",
-                  },
-                  "series": Object {
-                    "floatingLabelText": "Series",
-                    "hintText": "Enter the name of publication, performance, recording, or event series",
-                  },
-                  "startPage": Object {
-                    "label": "Start page",
-                  },
-                  "volume": Object {
-                    "label": "Volume",
-                  },
+                      }
+                    >
+                      (for public view)
+                    </span>
+                  </span>,
+                  "placeholder": "Enter a brief description of the work",
                 },
-                "title": "NTRO data",
+                "audienceSize": Object {
+                  "label": "Audience size",
+                },
+                "endPage": Object {
+                  "label": "End page",
+                },
+                "extent": Object {
+                  "label": "Total pages/Extent",
+                  "placeholder": "Enter total pages, size or duration of work",
+                },
+                "issue": Object {
+                  "label": "Issue",
+                },
+                "language": Object {
+                  "label": "Language",
+                },
+                "notes": Object {
+                  "label": "Notes",
+                },
+                "peerReviewActivity": Object {
+                  "label": "Quality indicators",
+                },
+                "physicalDescription": Object {
+                  "label": "Physical description",
+                  "placeholder": "Building, Exhibition, Performance, Composition",
+                },
+                "series": Object {
+                  "floatingLabelText": "Series",
+                  "hintText": "Enter the name of publication, performance, recording, or event series",
+                },
+                "startPage": Object {
+                  "label": "Start page",
+                },
+                "volume": Object {
+                  "label": "Volume",
+                },
               },
-            }
+              "title": "NTRO data",
+            },
           }
-          showContributionStatement={true}
-          showSignificance={true}
-          submitting={false}
-        />
-      </WithStyles(Grid)>
+        }
+        showContributionStatement={true}
+        showSignificance={true}
+        submitting={false}
+      />
       <WithStyles(Grid)
         item={true}
         xs={12}
@@ -1156,154 +1146,149 @@ exports[`Cards will display correct empty fields for a Musical Creative work 1`]
       container={true}
       spacing={24}
     >
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <NtroFields
-          defaultLanguage="eng"
-          hideAbstract={false}
-          hideAudienceSize={true}
-          hideEndPage={true}
-          hideExtent={false}
-          hideGrants={true}
-          hideIsmn={true}
-          hideIsrc={true}
-          hideIssue={true}
-          hideLanguage={false}
-          hideOriginalFormat={true}
-          hidePeerReviewActivity={false}
-          hideSeries={true}
-          hideStartPage={true}
-          hideVolume={true}
-          locale={
-            Object {
-              "contributionStatement": Object {
-                "fields": Object {
-                  "impactStatement": Object {
-                    "label": <span>
-                      Creator research statement*. Include Background, Contribution and Significance 
-                      <span
+      <NtroFields
+        defaultLanguage="eng"
+        hideAbstract={false}
+        hideAudienceSize={true}
+        hideEndPage={true}
+        hideExtent={false}
+        hideGrants={true}
+        hideIsmn={true}
+        hideIsrc={true}
+        hideIssue={true}
+        hideLanguage={false}
+        hideOriginalFormat={true}
+        hidePeerReviewActivity={false}
+        hideSeries={true}
+        hideStartPage={true}
+        hideVolume={true}
+        locale={
+          Object {
+            "contributionStatement": Object {
+              "fields": Object {
+                "impactStatement": Object {
+                  "label": <span>
+                    Creator research statement*. Include Background, Contribution and Significance 
+                    <span
+                      style={
+                        Object {
+                          "fontWeight": 700,
+                        }
+                      }
+                    >
+                      (not for public view)
+                    </span>
+                  </span>,
+                  "placeholder": "Remember to include substantiation of your Major or Minor Scale/Significance claim above.",
+                },
+                "scaleOfWork": Object {
+                  "description": "Select the option that best describes the significance of the work.",
+                  "label": <span>
+                    Scale/Significance of work* 
+                    <span
+                      style={
+                        Object {
+                          "fontWeight": 700,
+                        }
+                      }
+                    >
+                      (not for public view)
+                    </span>
+                  </span>,
+                },
+              },
+              "help": Object {
+                "buttonLabel": "CLOSE",
+                "text": <React.Fragment>
+                  <h3>
+                    Creator research statement
+                  </h3>
+                  <p>
+                    For more information about the research statement, click  
+                    <b>
+                      <a
+                        href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836548"
                         style={
                           Object {
                             "fontWeight": 700,
                           }
                         }
+                        target="_blank"
                       >
-                        (not for public view)
-                      </span>
-                    </span>,
-                    "placeholder": "Remember to include substantiation of your Major or Minor Scale/Significance claim above.",
-                  },
-                  "scaleOfWork": Object {
-                    "description": "Select the option that best describes the significance of the work.",
-                    "label": <span>
-                      Scale/Significance of work* 
-                      <span
-                        style={
-                          Object {
-                            "fontWeight": 700,
-                          }
-                        }
-                      >
-                        (not for public view)
-                      </span>
-                    </span>,
-                  },
-                },
-                "help": Object {
-                  "buttonLabel": "CLOSE",
-                  "text": <React.Fragment>
-                    <h3>
-                      Creator research statement
-                    </h3>
-                    <p>
-                      For more information about the research statement, click  
-                      <b>
-                        <a
-                          href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836548"
-                          style={
-                            Object {
-                              "fontWeight": 700,
-                            }
-                          }
-                          target="_blank"
-                        >
-                          here
-                        </a>
-                      </b>
-                    </p>
-                  </React.Fragment>,
-                  "title": "Author/Creator research statement",
-                },
+                        here
+                      </a>
+                    </b>
+                  </p>
+                </React.Fragment>,
                 "title": "Author/Creator research statement",
               },
-              "grantEditor": Object {
-                "title": "Grant details",
-              },
-              "metadata": Object {
-                "fields": Object {
-                  "abstract": Object {
-                    "label": <span>
-                      Abstract/Description* 
-                      <span
-                        style={
-                          Object {
-                            "fontWeight": 700,
-                          }
+              "title": "Author/Creator research statement",
+            },
+            "grantEditor": Object {
+              "title": "Grant details",
+            },
+            "metadata": Object {
+              "fields": Object {
+                "abstract": Object {
+                  "label": <span>
+                    Abstract/Description* 
+                    <span
+                      style={
+                        Object {
+                          "fontWeight": 700,
                         }
-                      >
-                        (for public view)
-                      </span>
-                    </span>,
-                    "placeholder": "Enter a brief description of the work",
-                  },
-                  "audienceSize": Object {
-                    "label": "Audience size",
-                  },
-                  "endPage": Object {
-                    "label": "End page",
-                  },
-                  "extent": Object {
-                    "label": "Total pages/Extent",
-                    "placeholder": "Enter total pages, size or duration of work",
-                  },
-                  "issue": Object {
-                    "label": "Issue",
-                  },
-                  "language": Object {
-                    "label": "Language",
-                  },
-                  "notes": Object {
-                    "label": "Notes",
-                  },
-                  "peerReviewActivity": Object {
-                    "label": "Quality indicators",
-                  },
-                  "physicalDescription": Object {
-                    "label": "Physical description",
-                    "placeholder": "Building, Exhibition, Performance, Composition",
-                  },
-                  "series": Object {
-                    "floatingLabelText": "Series",
-                    "hintText": "Enter the name of publication, performance, recording, or event series",
-                  },
-                  "startPage": Object {
-                    "label": "Start page",
-                  },
-                  "volume": Object {
-                    "label": "Volume",
-                  },
+                      }
+                    >
+                      (for public view)
+                    </span>
+                  </span>,
+                  "placeholder": "Enter a brief description of the work",
                 },
-                "title": "NTRO data",
+                "audienceSize": Object {
+                  "label": "Audience size",
+                },
+                "endPage": Object {
+                  "label": "End page",
+                },
+                "extent": Object {
+                  "label": "Total pages/Extent",
+                  "placeholder": "Enter total pages, size or duration of work",
+                },
+                "issue": Object {
+                  "label": "Issue",
+                },
+                "language": Object {
+                  "label": "Language",
+                },
+                "notes": Object {
+                  "label": "Notes",
+                },
+                "peerReviewActivity": Object {
+                  "label": "Quality indicators",
+                },
+                "physicalDescription": Object {
+                  "label": "Physical description",
+                  "placeholder": "Building, Exhibition, Performance, Composition",
+                },
+                "series": Object {
+                  "floatingLabelText": "Series",
+                  "hintText": "Enter the name of publication, performance, recording, or event series",
+                },
+                "startPage": Object {
+                  "label": "Start page",
+                },
+                "volume": Object {
+                  "label": "Volume",
+                },
               },
-            }
+              "title": "NTRO data",
+            },
           }
-          showContributionStatement={true}
-          showSignificance={true}
-          submitting={false}
-        />
-      </WithStyles(Grid)>
+        }
+        showContributionStatement={true}
+        showSignificance={true}
+        submitting={false}
+      />
       <WithStyles(Grid)
         item={true}
         xs={12}
@@ -1642,154 +1627,149 @@ exports[`Cards will display correct empty fields for a Public Sector Research Re
       container={true}
       spacing={24}
     >
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <NtroFields
-          defaultLanguage="eng"
-          hideAbstract={false}
-          hideAudienceSize={true}
-          hideEndPage={true}
-          hideExtent={false}
-          hideGrants={true}
-          hideIsmn={true}
-          hideIsrc={true}
-          hideIssue={true}
-          hideLanguage={false}
-          hideOriginalFormat={true}
-          hidePeerReviewActivity={false}
-          hideSeries={true}
-          hideStartPage={true}
-          hideVolume={true}
-          locale={
-            Object {
-              "contributionStatement": Object {
-                "fields": Object {
-                  "impactStatement": Object {
-                    "label": <span>
-                      Creator research statement*. Include Background, Contribution and Significance 
-                      <span
+      <NtroFields
+        defaultLanguage="eng"
+        hideAbstract={false}
+        hideAudienceSize={true}
+        hideEndPage={true}
+        hideExtent={false}
+        hideGrants={true}
+        hideIsmn={true}
+        hideIsrc={true}
+        hideIssue={true}
+        hideLanguage={false}
+        hideOriginalFormat={true}
+        hidePeerReviewActivity={false}
+        hideSeries={true}
+        hideStartPage={true}
+        hideVolume={true}
+        locale={
+          Object {
+            "contributionStatement": Object {
+              "fields": Object {
+                "impactStatement": Object {
+                  "label": <span>
+                    Creator research statement*. Include Background, Contribution and Significance 
+                    <span
+                      style={
+                        Object {
+                          "fontWeight": 700,
+                        }
+                      }
+                    >
+                      (not for public view)
+                    </span>
+                  </span>,
+                  "placeholder": "Remember to include substantiation of your Major or Minor Scale/Significance claim above.",
+                },
+                "scaleOfWork": Object {
+                  "description": "Select the option that best describes the significance of the work.",
+                  "label": <span>
+                    Scale/Significance of work* 
+                    <span
+                      style={
+                        Object {
+                          "fontWeight": 700,
+                        }
+                      }
+                    >
+                      (not for public view)
+                    </span>
+                  </span>,
+                },
+              },
+              "help": Object {
+                "buttonLabel": "CLOSE",
+                "text": <React.Fragment>
+                  <h3>
+                    Creator research statement
+                  </h3>
+                  <p>
+                    For more information about the research statement, click  
+                    <b>
+                      <a
+                        href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836548"
                         style={
                           Object {
                             "fontWeight": 700,
                           }
                         }
+                        target="_blank"
                       >
-                        (not for public view)
-                      </span>
-                    </span>,
-                    "placeholder": "Remember to include substantiation of your Major or Minor Scale/Significance claim above.",
-                  },
-                  "scaleOfWork": Object {
-                    "description": "Select the option that best describes the significance of the work.",
-                    "label": <span>
-                      Scale/Significance of work* 
-                      <span
-                        style={
-                          Object {
-                            "fontWeight": 700,
-                          }
-                        }
-                      >
-                        (not for public view)
-                      </span>
-                    </span>,
-                  },
-                },
-                "help": Object {
-                  "buttonLabel": "CLOSE",
-                  "text": <React.Fragment>
-                    <h3>
-                      Creator research statement
-                    </h3>
-                    <p>
-                      For more information about the research statement, click  
-                      <b>
-                        <a
-                          href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836548"
-                          style={
-                            Object {
-                              "fontWeight": 700,
-                            }
-                          }
-                          target="_blank"
-                        >
-                          here
-                        </a>
-                      </b>
-                    </p>
-                  </React.Fragment>,
-                  "title": "Author/Creator research statement",
-                },
+                        here
+                      </a>
+                    </b>
+                  </p>
+                </React.Fragment>,
                 "title": "Author/Creator research statement",
               },
-              "grantEditor": Object {
-                "title": "Grant details",
-              },
-              "metadata": Object {
-                "fields": Object {
-                  "abstract": Object {
-                    "label": <span>
-                      Abstract/Description* 
-                      <span
-                        style={
-                          Object {
-                            "fontWeight": 700,
-                          }
+              "title": "Author/Creator research statement",
+            },
+            "grantEditor": Object {
+              "title": "Grant details",
+            },
+            "metadata": Object {
+              "fields": Object {
+                "abstract": Object {
+                  "label": <span>
+                    Abstract/Description* 
+                    <span
+                      style={
+                        Object {
+                          "fontWeight": 700,
                         }
-                      >
-                        (for public view)
-                      </span>
-                    </span>,
-                    "placeholder": "Enter a brief description of the work",
-                  },
-                  "audienceSize": Object {
-                    "label": "Audience size",
-                  },
-                  "endPage": Object {
-                    "label": "End page",
-                  },
-                  "extent": Object {
-                    "label": "Total pages/Extent",
-                    "placeholder": "Enter total pages, size or duration of work",
-                  },
-                  "issue": Object {
-                    "label": "Issue",
-                  },
-                  "language": Object {
-                    "label": "Language",
-                  },
-                  "notes": Object {
-                    "label": "Notes",
-                  },
-                  "peerReviewActivity": Object {
-                    "label": "Quality indicators",
-                  },
-                  "physicalDescription": Object {
-                    "label": "Physical description",
-                    "placeholder": "Building, Exhibition, Performance, Composition",
-                  },
-                  "series": Object {
-                    "floatingLabelText": "Series",
-                    "hintText": "Enter the name of publication, performance, recording, or event series",
-                  },
-                  "startPage": Object {
-                    "label": "Start page",
-                  },
-                  "volume": Object {
-                    "label": "Volume",
-                  },
+                      }
+                    >
+                      (for public view)
+                    </span>
+                  </span>,
+                  "placeholder": "Enter a brief description of the work",
                 },
-                "title": "NTRO data",
+                "audienceSize": Object {
+                  "label": "Audience size",
+                },
+                "endPage": Object {
+                  "label": "End page",
+                },
+                "extent": Object {
+                  "label": "Total pages/Extent",
+                  "placeholder": "Enter total pages, size or duration of work",
+                },
+                "issue": Object {
+                  "label": "Issue",
+                },
+                "language": Object {
+                  "label": "Language",
+                },
+                "notes": Object {
+                  "label": "Notes",
+                },
+                "peerReviewActivity": Object {
+                  "label": "Quality indicators",
+                },
+                "physicalDescription": Object {
+                  "label": "Physical description",
+                  "placeholder": "Building, Exhibition, Performance, Composition",
+                },
+                "series": Object {
+                  "floatingLabelText": "Series",
+                  "hintText": "Enter the name of publication, performance, recording, or event series",
+                },
+                "startPage": Object {
+                  "label": "Start page",
+                },
+                "volume": Object {
+                  "label": "Volume",
+                },
               },
-            }
+              "title": "NTRO data",
+            },
           }
-          showContributionStatement={true}
-          showSignificance={true}
-          submitting={false}
-        />
-      </WithStyles(Grid)>
+        }
+        showContributionStatement={true}
+        showSignificance={true}
+        submitting={false}
+      />
       <WithStyles(Grid)
         item={true}
         xs={12}
@@ -2128,154 +2108,149 @@ exports[`Cards will display correct empty fields for a Textual Book work 1`] = `
       container={true}
       spacing={24}
     >
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <NtroFields
-          defaultLanguage="eng"
-          hideAbstract={false}
-          hideAudienceSize={true}
-          hideEndPage={true}
-          hideExtent={false}
-          hideGrants={true}
-          hideIsmn={true}
-          hideIsrc={true}
-          hideIssue={true}
-          hideLanguage={false}
-          hideOriginalFormat={true}
-          hidePeerReviewActivity={false}
-          hideSeries={true}
-          hideStartPage={true}
-          hideVolume={true}
-          locale={
-            Object {
-              "contributionStatement": Object {
-                "fields": Object {
-                  "impactStatement": Object {
-                    "label": <span>
-                      Creator research statement*. Include Background, Contribution and Significance 
-                      <span
+      <NtroFields
+        defaultLanguage="eng"
+        hideAbstract={false}
+        hideAudienceSize={true}
+        hideEndPage={true}
+        hideExtent={false}
+        hideGrants={true}
+        hideIsmn={true}
+        hideIsrc={true}
+        hideIssue={true}
+        hideLanguage={false}
+        hideOriginalFormat={true}
+        hidePeerReviewActivity={false}
+        hideSeries={true}
+        hideStartPage={true}
+        hideVolume={true}
+        locale={
+          Object {
+            "contributionStatement": Object {
+              "fields": Object {
+                "impactStatement": Object {
+                  "label": <span>
+                    Creator research statement*. Include Background, Contribution and Significance 
+                    <span
+                      style={
+                        Object {
+                          "fontWeight": 700,
+                        }
+                      }
+                    >
+                      (not for public view)
+                    </span>
+                  </span>,
+                  "placeholder": "Remember to include substantiation of your Major or Minor Scale/Significance claim above.",
+                },
+                "scaleOfWork": Object {
+                  "description": "Select the option that best describes the significance of the work.",
+                  "label": <span>
+                    Scale/Significance of work* 
+                    <span
+                      style={
+                        Object {
+                          "fontWeight": 700,
+                        }
+                      }
+                    >
+                      (not for public view)
+                    </span>
+                  </span>,
+                },
+              },
+              "help": Object {
+                "buttonLabel": "CLOSE",
+                "text": <React.Fragment>
+                  <h3>
+                    Creator research statement
+                  </h3>
+                  <p>
+                    For more information about the research statement, click  
+                    <b>
+                      <a
+                        href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836548"
                         style={
                           Object {
                             "fontWeight": 700,
                           }
                         }
+                        target="_blank"
                       >
-                        (not for public view)
-                      </span>
-                    </span>,
-                    "placeholder": "Remember to include substantiation of your Major or Minor Scale/Significance claim above.",
-                  },
-                  "scaleOfWork": Object {
-                    "description": "Select the option that best describes the significance of the work.",
-                    "label": <span>
-                      Scale/Significance of work* 
-                      <span
-                        style={
-                          Object {
-                            "fontWeight": 700,
-                          }
-                        }
-                      >
-                        (not for public view)
-                      </span>
-                    </span>,
-                  },
-                },
-                "help": Object {
-                  "buttonLabel": "CLOSE",
-                  "text": <React.Fragment>
-                    <h3>
-                      Creator research statement
-                    </h3>
-                    <p>
-                      For more information about the research statement, click  
-                      <b>
-                        <a
-                          href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836548"
-                          style={
-                            Object {
-                              "fontWeight": 700,
-                            }
-                          }
-                          target="_blank"
-                        >
-                          here
-                        </a>
-                      </b>
-                    </p>
-                  </React.Fragment>,
-                  "title": "Author/Creator research statement",
-                },
+                        here
+                      </a>
+                    </b>
+                  </p>
+                </React.Fragment>,
                 "title": "Author/Creator research statement",
               },
-              "grantEditor": Object {
-                "title": "Grant details",
-              },
-              "metadata": Object {
-                "fields": Object {
-                  "abstract": Object {
-                    "label": <span>
-                      Abstract/Description* 
-                      <span
-                        style={
-                          Object {
-                            "fontWeight": 700,
-                          }
+              "title": "Author/Creator research statement",
+            },
+            "grantEditor": Object {
+              "title": "Grant details",
+            },
+            "metadata": Object {
+              "fields": Object {
+                "abstract": Object {
+                  "label": <span>
+                    Abstract/Description* 
+                    <span
+                      style={
+                        Object {
+                          "fontWeight": 700,
                         }
-                      >
-                        (for public view)
-                      </span>
-                    </span>,
-                    "placeholder": "Enter a brief description of the work",
-                  },
-                  "audienceSize": Object {
-                    "label": "Audience size",
-                  },
-                  "endPage": Object {
-                    "label": "End page",
-                  },
-                  "extent": Object {
-                    "label": "Total pages/Extent",
-                    "placeholder": "Enter total pages, size or duration of work",
-                  },
-                  "issue": Object {
-                    "label": "Issue",
-                  },
-                  "language": Object {
-                    "label": "Language",
-                  },
-                  "notes": Object {
-                    "label": "Notes",
-                  },
-                  "peerReviewActivity": Object {
-                    "label": "Quality indicators",
-                  },
-                  "physicalDescription": Object {
-                    "label": "Physical description",
-                    "placeholder": "Building, Exhibition, Performance, Composition",
-                  },
-                  "series": Object {
-                    "floatingLabelText": "Series",
-                    "hintText": "Enter the name of publication, performance, recording, or event series",
-                  },
-                  "startPage": Object {
-                    "label": "Start page",
-                  },
-                  "volume": Object {
-                    "label": "Volume",
-                  },
+                      }
+                    >
+                      (for public view)
+                    </span>
+                  </span>,
+                  "placeholder": "Enter a brief description of the work",
                 },
-                "title": "NTRO data",
+                "audienceSize": Object {
+                  "label": "Audience size",
+                },
+                "endPage": Object {
+                  "label": "End page",
+                },
+                "extent": Object {
+                  "label": "Total pages/Extent",
+                  "placeholder": "Enter total pages, size or duration of work",
+                },
+                "issue": Object {
+                  "label": "Issue",
+                },
+                "language": Object {
+                  "label": "Language",
+                },
+                "notes": Object {
+                  "label": "Notes",
+                },
+                "peerReviewActivity": Object {
+                  "label": "Quality indicators",
+                },
+                "physicalDescription": Object {
+                  "label": "Physical description",
+                  "placeholder": "Building, Exhibition, Performance, Composition",
+                },
+                "series": Object {
+                  "floatingLabelText": "Series",
+                  "hintText": "Enter the name of publication, performance, recording, or event series",
+                },
+                "startPage": Object {
+                  "label": "Start page",
+                },
+                "volume": Object {
+                  "label": "Volume",
+                },
               },
-            }
+              "title": "NTRO data",
+            },
           }
-          showContributionStatement={true}
-          showSignificance={true}
-          submitting={false}
-        />
-      </WithStyles(Grid)>
+        }
+        showContributionStatement={true}
+        showSignificance={true}
+        submitting={false}
+      />
       <WithStyles(Grid)
         item={true}
         xs={12}
@@ -2621,154 +2596,149 @@ exports[`Cards will display correct empty fields for a Textual Book work with la
       container={true}
       spacing={24}
     >
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <NtroFields
-          defaultLanguage="chi"
-          hideAbstract={false}
-          hideAudienceSize={true}
-          hideEndPage={true}
-          hideExtent={false}
-          hideGrants={true}
-          hideIsmn={true}
-          hideIsrc={true}
-          hideIssue={true}
-          hideLanguage={true}
-          hideOriginalFormat={true}
-          hidePeerReviewActivity={false}
-          hideSeries={true}
-          hideStartPage={true}
-          hideVolume={true}
-          locale={
-            Object {
-              "contributionStatement": Object {
-                "fields": Object {
-                  "impactStatement": Object {
-                    "label": <span>
-                      Creator research statement*. Include Background, Contribution and Significance 
-                      <span
+      <NtroFields
+        defaultLanguage="chi"
+        hideAbstract={false}
+        hideAudienceSize={true}
+        hideEndPage={true}
+        hideExtent={false}
+        hideGrants={true}
+        hideIsmn={true}
+        hideIsrc={true}
+        hideIssue={true}
+        hideLanguage={true}
+        hideOriginalFormat={true}
+        hidePeerReviewActivity={false}
+        hideSeries={true}
+        hideStartPage={true}
+        hideVolume={true}
+        locale={
+          Object {
+            "contributionStatement": Object {
+              "fields": Object {
+                "impactStatement": Object {
+                  "label": <span>
+                    Creator research statement*. Include Background, Contribution and Significance 
+                    <span
+                      style={
+                        Object {
+                          "fontWeight": 700,
+                        }
+                      }
+                    >
+                      (not for public view)
+                    </span>
+                  </span>,
+                  "placeholder": "Remember to include substantiation of your Major or Minor Scale/Significance claim above.",
+                },
+                "scaleOfWork": Object {
+                  "description": "Select the option that best describes the significance of the work.",
+                  "label": <span>
+                    Scale/Significance of work* 
+                    <span
+                      style={
+                        Object {
+                          "fontWeight": 700,
+                        }
+                      }
+                    >
+                      (not for public view)
+                    </span>
+                  </span>,
+                },
+              },
+              "help": Object {
+                "buttonLabel": "CLOSE",
+                "text": <React.Fragment>
+                  <h3>
+                    Creator research statement
+                  </h3>
+                  <p>
+                    For more information about the research statement, click  
+                    <b>
+                      <a
+                        href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836548"
                         style={
                           Object {
                             "fontWeight": 700,
                           }
                         }
+                        target="_blank"
                       >
-                        (not for public view)
-                      </span>
-                    </span>,
-                    "placeholder": "Remember to include substantiation of your Major or Minor Scale/Significance claim above.",
-                  },
-                  "scaleOfWork": Object {
-                    "description": "Select the option that best describes the significance of the work.",
-                    "label": <span>
-                      Scale/Significance of work* 
-                      <span
-                        style={
-                          Object {
-                            "fontWeight": 700,
-                          }
-                        }
-                      >
-                        (not for public view)
-                      </span>
-                    </span>,
-                  },
-                },
-                "help": Object {
-                  "buttonLabel": "CLOSE",
-                  "text": <React.Fragment>
-                    <h3>
-                      Creator research statement
-                    </h3>
-                    <p>
-                      For more information about the research statement, click  
-                      <b>
-                        <a
-                          href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836548"
-                          style={
-                            Object {
-                              "fontWeight": 700,
-                            }
-                          }
-                          target="_blank"
-                        >
-                          here
-                        </a>
-                      </b>
-                    </p>
-                  </React.Fragment>,
-                  "title": "Author/Creator research statement",
-                },
+                        here
+                      </a>
+                    </b>
+                  </p>
+                </React.Fragment>,
                 "title": "Author/Creator research statement",
               },
-              "grantEditor": Object {
-                "title": "Grant details",
-              },
-              "metadata": Object {
-                "fields": Object {
-                  "abstract": Object {
-                    "label": <span>
-                      Abstract/Description* 
-                      <span
-                        style={
-                          Object {
-                            "fontWeight": 700,
-                          }
+              "title": "Author/Creator research statement",
+            },
+            "grantEditor": Object {
+              "title": "Grant details",
+            },
+            "metadata": Object {
+              "fields": Object {
+                "abstract": Object {
+                  "label": <span>
+                    Abstract/Description* 
+                    <span
+                      style={
+                        Object {
+                          "fontWeight": 700,
                         }
-                      >
-                        (for public view)
-                      </span>
-                    </span>,
-                    "placeholder": "Enter a brief description of the work",
-                  },
-                  "audienceSize": Object {
-                    "label": "Audience size",
-                  },
-                  "endPage": Object {
-                    "label": "End page",
-                  },
-                  "extent": Object {
-                    "label": "Total pages/Extent",
-                    "placeholder": "Enter total pages, size or duration of work",
-                  },
-                  "issue": Object {
-                    "label": "Issue",
-                  },
-                  "language": Object {
-                    "label": "Language",
-                  },
-                  "notes": Object {
-                    "label": "Notes",
-                  },
-                  "peerReviewActivity": Object {
-                    "label": "Quality indicators",
-                  },
-                  "physicalDescription": Object {
-                    "label": "Physical description",
-                    "placeholder": "Building, Exhibition, Performance, Composition",
-                  },
-                  "series": Object {
-                    "floatingLabelText": "Series",
-                    "hintText": "Enter the name of publication, performance, recording, or event series",
-                  },
-                  "startPage": Object {
-                    "label": "Start page",
-                  },
-                  "volume": Object {
-                    "label": "Volume",
-                  },
+                      }
+                    >
+                      (for public view)
+                    </span>
+                  </span>,
+                  "placeholder": "Enter a brief description of the work",
                 },
-                "title": "NTRO data",
+                "audienceSize": Object {
+                  "label": "Audience size",
+                },
+                "endPage": Object {
+                  "label": "End page",
+                },
+                "extent": Object {
+                  "label": "Total pages/Extent",
+                  "placeholder": "Enter total pages, size or duration of work",
+                },
+                "issue": Object {
+                  "label": "Issue",
+                },
+                "language": Object {
+                  "label": "Language",
+                },
+                "notes": Object {
+                  "label": "Notes",
+                },
+                "peerReviewActivity": Object {
+                  "label": "Quality indicators",
+                },
+                "physicalDescription": Object {
+                  "label": "Physical description",
+                  "placeholder": "Building, Exhibition, Performance, Composition",
+                },
+                "series": Object {
+                  "floatingLabelText": "Series",
+                  "hintText": "Enter the name of publication, performance, recording, or event series",
+                },
+                "startPage": Object {
+                  "label": "Start page",
+                },
+                "volume": Object {
+                  "label": "Volume",
+                },
               },
-            }
+              "title": "NTRO data",
+            },
           }
-          showContributionStatement={true}
-          showSignificance={true}
-          submitting={false}
-        />
-      </WithStyles(Grid)>
+        }
+        showContributionStatement={true}
+        showSignificance={true}
+        submitting={false}
+      />
       <WithStyles(Grid)
         item={true}
         xs={12}
@@ -3107,154 +3077,149 @@ exports[`Cards will display correct empty fields for a Website Creative work 1`]
       container={true}
       spacing={24}
     >
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <NtroFields
-          defaultLanguage="eng"
-          hideAbstract={false}
-          hideAudienceSize={true}
-          hideEndPage={true}
-          hideExtent={false}
-          hideGrants={true}
-          hideIsmn={true}
-          hideIsrc={true}
-          hideIssue={true}
-          hideLanguage={false}
-          hideOriginalFormat={true}
-          hidePeerReviewActivity={false}
-          hideSeries={true}
-          hideStartPage={true}
-          hideVolume={true}
-          locale={
-            Object {
-              "contributionStatement": Object {
-                "fields": Object {
-                  "impactStatement": Object {
-                    "label": <span>
-                      Creator research statement*. Include Background, Contribution and Significance 
-                      <span
+      <NtroFields
+        defaultLanguage="eng"
+        hideAbstract={false}
+        hideAudienceSize={true}
+        hideEndPage={true}
+        hideExtent={false}
+        hideGrants={true}
+        hideIsmn={true}
+        hideIsrc={true}
+        hideIssue={true}
+        hideLanguage={false}
+        hideOriginalFormat={true}
+        hidePeerReviewActivity={false}
+        hideSeries={true}
+        hideStartPage={true}
+        hideVolume={true}
+        locale={
+          Object {
+            "contributionStatement": Object {
+              "fields": Object {
+                "impactStatement": Object {
+                  "label": <span>
+                    Creator research statement*. Include Background, Contribution and Significance 
+                    <span
+                      style={
+                        Object {
+                          "fontWeight": 700,
+                        }
+                      }
+                    >
+                      (not for public view)
+                    </span>
+                  </span>,
+                  "placeholder": "Remember to include substantiation of your Major or Minor Scale/Significance claim above.",
+                },
+                "scaleOfWork": Object {
+                  "description": "Select the option that best describes the significance of the work.",
+                  "label": <span>
+                    Scale/Significance of work* 
+                    <span
+                      style={
+                        Object {
+                          "fontWeight": 700,
+                        }
+                      }
+                    >
+                      (not for public view)
+                    </span>
+                  </span>,
+                },
+              },
+              "help": Object {
+                "buttonLabel": "CLOSE",
+                "text": <React.Fragment>
+                  <h3>
+                    Creator research statement
+                  </h3>
+                  <p>
+                    For more information about the research statement, click  
+                    <b>
+                      <a
+                        href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836548"
                         style={
                           Object {
                             "fontWeight": 700,
                           }
                         }
+                        target="_blank"
                       >
-                        (not for public view)
-                      </span>
-                    </span>,
-                    "placeholder": "Remember to include substantiation of your Major or Minor Scale/Significance claim above.",
-                  },
-                  "scaleOfWork": Object {
-                    "description": "Select the option that best describes the significance of the work.",
-                    "label": <span>
-                      Scale/Significance of work* 
-                      <span
-                        style={
-                          Object {
-                            "fontWeight": 700,
-                          }
-                        }
-                      >
-                        (not for public view)
-                      </span>
-                    </span>,
-                  },
-                },
-                "help": Object {
-                  "buttonLabel": "CLOSE",
-                  "text": <React.Fragment>
-                    <h3>
-                      Creator research statement
-                    </h3>
-                    <p>
-                      For more information about the research statement, click  
-                      <b>
-                        <a
-                          href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836548"
-                          style={
-                            Object {
-                              "fontWeight": 700,
-                            }
-                          }
-                          target="_blank"
-                        >
-                          here
-                        </a>
-                      </b>
-                    </p>
-                  </React.Fragment>,
-                  "title": "Author/Creator research statement",
-                },
+                        here
+                      </a>
+                    </b>
+                  </p>
+                </React.Fragment>,
                 "title": "Author/Creator research statement",
               },
-              "grantEditor": Object {
-                "title": "Grant details",
-              },
-              "metadata": Object {
-                "fields": Object {
-                  "abstract": Object {
-                    "label": <span>
-                      Abstract/Description* 
-                      <span
-                        style={
-                          Object {
-                            "fontWeight": 700,
-                          }
+              "title": "Author/Creator research statement",
+            },
+            "grantEditor": Object {
+              "title": "Grant details",
+            },
+            "metadata": Object {
+              "fields": Object {
+                "abstract": Object {
+                  "label": <span>
+                    Abstract/Description* 
+                    <span
+                      style={
+                        Object {
+                          "fontWeight": 700,
                         }
-                      >
-                        (for public view)
-                      </span>
-                    </span>,
-                    "placeholder": "Enter a brief description of the work",
-                  },
-                  "audienceSize": Object {
-                    "label": "Audience size",
-                  },
-                  "endPage": Object {
-                    "label": "End page",
-                  },
-                  "extent": Object {
-                    "label": "Total pages/Extent",
-                    "placeholder": "Enter total pages, size or duration of work",
-                  },
-                  "issue": Object {
-                    "label": "Issue",
-                  },
-                  "language": Object {
-                    "label": "Language",
-                  },
-                  "notes": Object {
-                    "label": "Notes",
-                  },
-                  "peerReviewActivity": Object {
-                    "label": "Quality indicators",
-                  },
-                  "physicalDescription": Object {
-                    "label": "Physical description",
-                    "placeholder": "Building, Exhibition, Performance, Composition",
-                  },
-                  "series": Object {
-                    "floatingLabelText": "Series",
-                    "hintText": "Enter the name of publication, performance, recording, or event series",
-                  },
-                  "startPage": Object {
-                    "label": "Start page",
-                  },
-                  "volume": Object {
-                    "label": "Volume",
-                  },
+                      }
+                    >
+                      (for public view)
+                    </span>
+                  </span>,
+                  "placeholder": "Enter a brief description of the work",
                 },
-                "title": "NTRO data",
+                "audienceSize": Object {
+                  "label": "Audience size",
+                },
+                "endPage": Object {
+                  "label": "End page",
+                },
+                "extent": Object {
+                  "label": "Total pages/Extent",
+                  "placeholder": "Enter total pages, size or duration of work",
+                },
+                "issue": Object {
+                  "label": "Issue",
+                },
+                "language": Object {
+                  "label": "Language",
+                },
+                "notes": Object {
+                  "label": "Notes",
+                },
+                "peerReviewActivity": Object {
+                  "label": "Quality indicators",
+                },
+                "physicalDescription": Object {
+                  "label": "Physical description",
+                  "placeholder": "Building, Exhibition, Performance, Composition",
+                },
+                "series": Object {
+                  "floatingLabelText": "Series",
+                  "hintText": "Enter the name of publication, performance, recording, or event series",
+                },
+                "startPage": Object {
+                  "label": "Start page",
+                },
+                "volume": Object {
+                  "label": "Volume",
+                },
               },
-            }
+              "title": "NTRO data",
+            },
           }
-          showContributionStatement={true}
-          showSignificance={true}
-          submitting={false}
-        />
-      </WithStyles(Grid)>
+        }
+        showContributionStatement={true}
+        showSignificance={true}
+        submitting={false}
+      />
       <WithStyles(Grid)
         item={true}
         xs={12}
@@ -3593,154 +3558,149 @@ exports[`Cards will display correct empty fields for an Architectural Design wor
       container={true}
       spacing={24}
     >
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <NtroFields
-          defaultLanguage="eng"
-          hideAbstract={false}
-          hideAudienceSize={true}
-          hideEndPage={true}
-          hideExtent={false}
-          hideGrants={true}
-          hideIsmn={true}
-          hideIsrc={true}
-          hideIssue={true}
-          hideLanguage={false}
-          hideOriginalFormat={true}
-          hidePeerReviewActivity={false}
-          hideSeries={true}
-          hideStartPage={true}
-          hideVolume={true}
-          locale={
-            Object {
-              "contributionStatement": Object {
-                "fields": Object {
-                  "impactStatement": Object {
-                    "label": <span>
-                      Creator research statement*. Include Background, Contribution and Significance 
-                      <span
+      <NtroFields
+        defaultLanguage="eng"
+        hideAbstract={false}
+        hideAudienceSize={true}
+        hideEndPage={true}
+        hideExtent={false}
+        hideGrants={true}
+        hideIsmn={true}
+        hideIsrc={true}
+        hideIssue={true}
+        hideLanguage={false}
+        hideOriginalFormat={true}
+        hidePeerReviewActivity={false}
+        hideSeries={true}
+        hideStartPage={true}
+        hideVolume={true}
+        locale={
+          Object {
+            "contributionStatement": Object {
+              "fields": Object {
+                "impactStatement": Object {
+                  "label": <span>
+                    Creator research statement*. Include Background, Contribution and Significance 
+                    <span
+                      style={
+                        Object {
+                          "fontWeight": 700,
+                        }
+                      }
+                    >
+                      (not for public view)
+                    </span>
+                  </span>,
+                  "placeholder": "Remember to include substantiation of your Major or Minor Scale/Significance claim above.",
+                },
+                "scaleOfWork": Object {
+                  "description": "Select the option that best describes the significance of the work.",
+                  "label": <span>
+                    Scale/Significance of work* 
+                    <span
+                      style={
+                        Object {
+                          "fontWeight": 700,
+                        }
+                      }
+                    >
+                      (not for public view)
+                    </span>
+                  </span>,
+                },
+              },
+              "help": Object {
+                "buttonLabel": "CLOSE",
+                "text": <React.Fragment>
+                  <h3>
+                    Creator research statement
+                  </h3>
+                  <p>
+                    For more information about the research statement, click  
+                    <b>
+                      <a
+                        href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836548"
                         style={
                           Object {
                             "fontWeight": 700,
                           }
                         }
+                        target="_blank"
                       >
-                        (not for public view)
-                      </span>
-                    </span>,
-                    "placeholder": "Remember to include substantiation of your Major or Minor Scale/Significance claim above.",
-                  },
-                  "scaleOfWork": Object {
-                    "description": "Select the option that best describes the significance of the work.",
-                    "label": <span>
-                      Scale/Significance of work* 
-                      <span
-                        style={
-                          Object {
-                            "fontWeight": 700,
-                          }
-                        }
-                      >
-                        (not for public view)
-                      </span>
-                    </span>,
-                  },
-                },
-                "help": Object {
-                  "buttonLabel": "CLOSE",
-                  "text": <React.Fragment>
-                    <h3>
-                      Creator research statement
-                    </h3>
-                    <p>
-                      For more information about the research statement, click  
-                      <b>
-                        <a
-                          href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836548"
-                          style={
-                            Object {
-                              "fontWeight": 700,
-                            }
-                          }
-                          target="_blank"
-                        >
-                          here
-                        </a>
-                      </b>
-                    </p>
-                  </React.Fragment>,
-                  "title": "Author/Creator research statement",
-                },
+                        here
+                      </a>
+                    </b>
+                  </p>
+                </React.Fragment>,
                 "title": "Author/Creator research statement",
               },
-              "grantEditor": Object {
-                "title": "Grant details",
-              },
-              "metadata": Object {
-                "fields": Object {
-                  "abstract": Object {
-                    "label": <span>
-                      Abstract/Description* 
-                      <span
-                        style={
-                          Object {
-                            "fontWeight": 700,
-                          }
+              "title": "Author/Creator research statement",
+            },
+            "grantEditor": Object {
+              "title": "Grant details",
+            },
+            "metadata": Object {
+              "fields": Object {
+                "abstract": Object {
+                  "label": <span>
+                    Abstract/Description* 
+                    <span
+                      style={
+                        Object {
+                          "fontWeight": 700,
                         }
-                      >
-                        (for public view)
-                      </span>
-                    </span>,
-                    "placeholder": "Enter a brief description of the work",
-                  },
-                  "audienceSize": Object {
-                    "label": "Audience size",
-                  },
-                  "endPage": Object {
-                    "label": "End page",
-                  },
-                  "extent": Object {
-                    "label": "Total pages/Extent",
-                    "placeholder": "Enter total pages, size or duration of work",
-                  },
-                  "issue": Object {
-                    "label": "Issue",
-                  },
-                  "language": Object {
-                    "label": "Language",
-                  },
-                  "notes": Object {
-                    "label": "Notes",
-                  },
-                  "peerReviewActivity": Object {
-                    "label": "Quality indicators",
-                  },
-                  "physicalDescription": Object {
-                    "label": "Physical description",
-                    "placeholder": "Building, Exhibition, Performance, Composition",
-                  },
-                  "series": Object {
-                    "floatingLabelText": "Series",
-                    "hintText": "Enter the name of publication, performance, recording, or event series",
-                  },
-                  "startPage": Object {
-                    "label": "Start page",
-                  },
-                  "volume": Object {
-                    "label": "Volume",
-                  },
+                      }
+                    >
+                      (for public view)
+                    </span>
+                  </span>,
+                  "placeholder": "Enter a brief description of the work",
                 },
-                "title": "NTRO data",
+                "audienceSize": Object {
+                  "label": "Audience size",
+                },
+                "endPage": Object {
+                  "label": "End page",
+                },
+                "extent": Object {
+                  "label": "Total pages/Extent",
+                  "placeholder": "Enter total pages, size or duration of work",
+                },
+                "issue": Object {
+                  "label": "Issue",
+                },
+                "language": Object {
+                  "label": "Language",
+                },
+                "notes": Object {
+                  "label": "Notes",
+                },
+                "peerReviewActivity": Object {
+                  "label": "Quality indicators",
+                },
+                "physicalDescription": Object {
+                  "label": "Physical description",
+                  "placeholder": "Building, Exhibition, Performance, Composition",
+                },
+                "series": Object {
+                  "floatingLabelText": "Series",
+                  "hintText": "Enter the name of publication, performance, recording, or event series",
+                },
+                "startPage": Object {
+                  "label": "Start page",
+                },
+                "volume": Object {
+                  "label": "Volume",
+                },
               },
-            }
+              "title": "NTRO data",
+            },
           }
-          showContributionStatement={true}
-          showSignificance={true}
-          submitting={false}
-        />
-      </WithStyles(Grid)>
+        }
+        showContributionStatement={true}
+        showSignificance={true}
+        submitting={false}
+      />
       <WithStyles(Grid)
         item={true}
         xs={12}
@@ -4137,10 +4097,6 @@ exports[`Cards will display empty where nothing is incomplete 1`] = `
       container={true}
       spacing={24}
     >
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      />
       <WithStyles(Grid)
         item={true}
         xs={12}
@@ -4758,10 +4714,6 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
       <WithStyles(Grid)
         item={true}
         xs={12}
-      />
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
       >
         <StandardCard
           title="Grant information"
@@ -5373,10 +5325,6 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
       container={true}
       spacing={24}
     >
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      />
       <WithStyles(Grid)
         item={true}
         xs={12}
@@ -6006,10 +5954,6 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
       <WithStyles(Grid)
         item={true}
         xs={12}
-      />
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
       >
         <StandardCard
           title="Grant information"
@@ -6630,10 +6574,6 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
       <WithStyles(Grid)
         item={true}
         xs={12}
-      />
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
       >
         <StandardCard
           title="Grant information"
@@ -7245,10 +7185,6 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
       container={true}
       spacing={24}
     >
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      />
       <WithStyles(Grid)
         item={true}
         xs={12}

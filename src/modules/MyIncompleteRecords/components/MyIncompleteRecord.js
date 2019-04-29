@@ -212,32 +212,30 @@ export default class MyIncompleteRecord extends PureComponent {
                         locale={saveConfirmationLocale}
                     />
                     <Grid container spacing={24}>
-                        <Grid item xs={12}>
-                            {
-                                isNtro &&
-                                (editCreatorContributionStatement || editAbstract || editExtent || editAudienceSize || editSignificance || editQualityIndicator || editLanguage) &&
-                                <NtroFields
-                                    submitting={this.props.submitting}
-                                    showContributionStatement={editCreatorContributionStatement}
-                                    hideIsmn
-                                    hideIsrc
-                                    hideVolume
-                                    hideIssue
-                                    hideStartPage
-                                    hideEndPage
-                                    hideExtent={!editExtent}
-                                    hideOriginalFormat
-                                    hideAbstract={!editAbstract}
-                                    hideAudienceSize={!editAudienceSize}
-                                    showSignificance={editSignificance}
-                                    hidePeerReviewActivity={!editQualityIndicator}
-                                    hideLanguage={!editLanguage}
-                                    defaultLanguage={defaultLanguage}
-                                    hideSeries
-                                    hideGrants
-                                />
-                            }
-                        </Grid>
+                        {
+                            isNtro &&
+                            (editCreatorContributionStatement || editAbstract || editExtent || editAudienceSize || editSignificance || editQualityIndicator || editLanguage) &&
+                            <NtroFields
+                                submitting={this.props.submitting}
+                                showContributionStatement={editCreatorContributionStatement}
+                                hideIsmn
+                                hideIsrc
+                                hideVolume
+                                hideIssue
+                                hideStartPage
+                                hideEndPage
+                                hideExtent={!editExtent}
+                                hideOriginalFormat
+                                hideAbstract={!editAbstract}
+                                hideAudienceSize={!editAudienceSize}
+                                showSignificance={editSignificance}
+                                hidePeerReviewActivity={!editQualityIndicator}
+                                hideLanguage={!editLanguage}
+                                defaultLanguage={defaultLanguage}
+                                hideSeries
+                                hideGrants
+                            />
+                        }
                         <Grid item xs={12}>
                             <StandardCard title={txt.fields.grants.title}>
                                 <Field
