@@ -10,6 +10,7 @@ export {default as myRecordsList} from './myRecordsList';
 export {default as possibleUnclaimedList} from './possibleUnclaimedList';
 export {default as incompleteNTROlist} from './incompleteNTROlist';
 export {default as incompleteNTROrecord} from './incompleteNTROrecord';
+export {default as incompleteNTROrecordUqrdav10} from './incompleteNTROrecordUqrdav10';
 export {default as MyDatasetList} from './MyDatasetList';
 export {default as recordWithTiffAndThumbnail} from './recordWithTiffAndThumbnail';
 export {default as recordWithoutAuthorIds} from './recordWithoutAuthorIds';
