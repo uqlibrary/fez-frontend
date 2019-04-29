@@ -198,22 +198,6 @@ describe('Component ContributorForm', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should map state to props as expected', () => {
-        const authorsList = [
-            'test1',
-            'test2'
-        ];
-        const testFunction = () => ({ authorsList });
-        expect(mapStateToProps({
-            get: testFunction
-        })).toEqual({ authorsList });
-        expect(mapStateToProps({
-            get: () => false
-        })).toEqual({
-            authorsList: []
-        });
-    });
-
     it('should render narrower grid at md breakpoint if showIdentifierLookup is true', () => {
         const wrapper = setup({
             showRoleInput: true,

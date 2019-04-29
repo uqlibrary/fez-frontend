@@ -214,10 +214,7 @@ describe('Component ContributorRow', () => {
             onSelect: testFunction
         });
         wrapper.instance()._select();
-        expect(testFunction).toBeCalledWith({
-            selected: false,
-            nameAsPublished: "J. Smith"
-        }, 0);
+        expect(testFunction).toBeCalledWith(0);
 
         // no-op if disabled
         wrapper.setProps({ disabled: true });
@@ -240,7 +237,7 @@ describe('Component ContributorRow', () => {
 
         const wrapper = setup(testObj);
         wrapper.instance()._select();
-        expect(testFunction).toBeCalledWith(testObj.contributor, testObj.index);
+        expect(testFunction).toBeCalledWith(testObj.index);
     });
 
 

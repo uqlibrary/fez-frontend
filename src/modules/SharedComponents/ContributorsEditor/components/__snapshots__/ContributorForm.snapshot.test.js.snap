@@ -283,32 +283,15 @@ exports[`Component ContributorForm should render connected component 1`] = `
       "getState": [MockFunction] {
         "calls": Array [
           Array [],
-          Array [],
         ],
         "results": Array [
           Object {
             "isThrow": false,
             "value": Immutable.Map {},
           },
-          Object {
-            "isThrow": false,
-            "value": Immutable.Map {},
-          },
         ],
       },
-      "subscribe": [MockFunction] {
-        "calls": Array [
-          Array [
-            [Function],
-          ],
-        ],
-        "results": Array [
-          Object {
-            "isThrow": false,
-            "value": undefined,
-          },
-        ],
-      },
+      "subscribe": [MockFunction],
     }
   }
 >
@@ -807,7 +790,6 @@ exports[`Component ContributorForm should render connected component 1`] = `
                   "updateCurrentAuthor": [Function],
                 }
               }
-              authorsList={Array []}
               contributor={Object {}}
               locale={
                 Object {

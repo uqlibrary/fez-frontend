@@ -30,32 +30,15 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
       "getState": [MockFunction] {
         "calls": Array [
           Array [],
-          Array [],
         ],
         "results": Array [
           Object {
             "isThrow": false,
             "value": Immutable.Map {},
           },
-          Object {
-            "isThrow": false,
-            "value": Immutable.Map {},
-          },
         ],
       },
-      "subscribe": [MockFunction] {
-        "calls": Array [
-          Array [
-            [Function],
-          ],
-        ],
-        "results": Array [
-          Object {
-            "isThrow": false,
-            "value": undefined,
-          },
-        ],
-      },
+      "subscribe": [MockFunction],
     }
   }
 >
@@ -603,7 +586,6 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                       "aut_id": 1,
                     }
                   }
-                  authorsList={Array []}
                   classes={
                     Object {
                       "list": "list",
@@ -925,7 +907,6 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                             >
                               <OrgAffilicationTypeSelector
                                 affiliation=""
-                                disabled={false}
                                 error={false}
                                 locale={
                                   Object {
@@ -1014,7 +995,6 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                                         </InputLabel>
                                       </WithStyles(InputLabel)>
                                       <WithStyles(Select)
-                                        disabled={false}
                                         error={false}
                                         onChange={[Function]}
                                         required={true}
@@ -1034,7 +1014,6 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                                               "selectMenu": "MuiSelect-selectMenu-120",
                                             }
                                           }
-                                          disabled={false}
                                           displayEmpty={false}
                                           error={false}
                                           input={<WithStyles(Input) />}
@@ -1045,7 +1024,6 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                                           value=""
                                         >
                                           <WithStyles(Input)
-                                            disabled={false}
                                             error={false}
                                             inputComponent={[Function]}
                                             inputProps={
@@ -1115,7 +1093,6 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                                                   "underline": "MuiInput-underline-127",
                                                 }
                                               }
-                                              disabled={false}
                                               error={false}
                                               inputComponent={[Function]}
                                               inputProps={
@@ -1185,7 +1162,6 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                                                     "underline": null,
                                                   }
                                                 }
-                                                disabled={false}
                                                 error={false}
                                                 fullWidth={false}
                                                 inputComponent={[Function]}
@@ -1262,7 +1238,6 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                                                       "root": "MuiInputBase-root-136 MuiInput-root-123 MuiInput-underline-127",
                                                     }
                                                   }
-                                                  disabled={false}
                                                   error={false}
                                                   fullWidth={false}
                                                   inputComponent={[Function]}

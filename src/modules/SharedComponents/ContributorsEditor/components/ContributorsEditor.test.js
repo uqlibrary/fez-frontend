@@ -81,15 +81,23 @@ describe('ContributorsEditor tests ', () => {
         expect(wrapper.state().isCurrentAuthorSelected).toEqual(true);
     });
 
-    it('assigning a contributor to current author', () => {
-        const wrapper = setup({});
+    it('assigning a contributor to current author', async () => {
+        const wrapper = setup({
+            author: {
+                aut_id: 101,
+            },
+        });
         wrapper.setState({
-            contributors: [{}, {}, {}],
-            isCurrentAuthorSelected: false
+            contributors: [
+                { aut_id: 101 },
+                { aut_id: 102 },
+                { aut_id: 103 },
+            ],
+            isCurrentAuthorSelected: false,
         });
         expect(wrapper.state().contributors.length).toEqual(3);
         expect(wrapper.state().contributors[0].selected).toBeFalsy();
-        wrapper.instance().assignContributor({}, 0);
+        wrapper.instance().chooseSelf(0);
         expect(wrapper.state().contributors.length).toEqual(3);
         expect(wrapper.state().contributors[0].selected).toEqual(true);
     });
