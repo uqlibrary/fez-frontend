@@ -52,7 +52,11 @@ export class ContributorsEditor extends PureComponent {
             isCurrentAuthorSelected: false,
             showIdentifierLookup: false,
         };
-        this.editMode = !!((props.meta || {}).initial || []).length;
+        this.editMode = (
+            typeof (this.props.meta || {}).initial === 'object' &&
+            this.props.meta.initial.toJS &&
+            (this.props.meta.initial.toJS().length || 0) > 0
+        );
     }
 
     componentWillUpdate = (nextProps, nextState) => {
