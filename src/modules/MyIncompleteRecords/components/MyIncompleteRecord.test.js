@@ -184,4 +184,44 @@ describe('Component MyIncompleteRecord', () => {
 
     });
 
+    it('_navigateToMyIncomplete()', () => {
+        const testFN = jest.fn();
+        const wrapper = setup({
+            author: {
+                aut_id: 1
+            },
+            recordToFix: {
+                fez_record_search_key_author_id: [
+                    {rek_author_id: 1}
+                    ]
+            },
+            history: {push: testFN},
+            accountAuthorLoading: false,
+            loadingRecordToFix: false
+        });
+        wrapper.instance()._navigateToMyIncomplete();
+        expect(testFN).toHaveBeenCalledWith('/records/incomplete');
+
+    });
+
+    it('_navigateToDashboard()', () => {
+        const testFN = jest.fn();
+        const wrapper = setup({
+            author: {
+                aut_id: 1
+            },
+            recordToFix: {
+                fez_record_search_key_author_id: [
+                    {rek_author_id: 1}
+                ]
+            },
+            history: {push: testFN},
+            accountAuthorLoading: false,
+            loadingRecordToFix: false
+        });
+        wrapper.instance()._navigateToDashboard();
+        expect(testFN).toHaveBeenCalledWith('/dashboard');
+
+    });
+
 });

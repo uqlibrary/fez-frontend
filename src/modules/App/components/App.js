@@ -82,7 +82,7 @@ export class AppClass extends PureComponent {
         classes: PropTypes.object,
         // incomplete Records
         loadingIncompleteRecordData: PropTypes.bool,
-        incompleteRecordList: PropTypes.array,
+        incompleteRecordList: PropTypes.object,
     };
     static childContextTypes = {
         isMobile: PropTypes.bool,
@@ -126,7 +126,7 @@ export class AppClass extends PureComponent {
             this.sessionExpiredConfirmationBox.showConfirmation();
         }
         if(nextProps.account && this.props.account !== nextProps.account && !nextProps.accountLoading) {
-            this.props.actions.loadIncompleteRecords();
+            this.props.actions.searchAuthorIncompletePublications({});
         }
     }
 
@@ -194,7 +194,7 @@ export class AppClass extends PureComponent {
         const isHdrStudent = !isAuthorLoading && !!this.props.account && !!this.props.author
             && this.props.account.class.indexOf('IS_CURRENT') >= 0
             && this.props.account.class.indexOf('IS_UQ_STUDENT_PLACEMENT') >= 0;
-        const hasIncompleteWorks = !!(this.props.incompleteRecordList && this.props.incompleteRecordList.length > 0);
+        const hasIncompleteWorks = !!(this.props.incompleteRecordList && this.props.incompleteRecordList.publicationsListPagingData && this.props.incompleteRecordList.publicationsListPagingData.total > 0);
         const getMenuItems = () => {
             let menuItems = [];
             if(isAuthorizedUser) {

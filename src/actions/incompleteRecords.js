@@ -1,33 +1,8 @@
 import * as actions from './actionTypes';
 import * as transformers from './transformers';
-import { get, patch } from 'repositories/generic';
-import { INCOMPLETE_RECORDS_API, EXISTING_RECORD_API } from 'repositories/routes';
+import { patch } from 'repositories/generic';
+import { EXISTING_RECORD_API } from 'repositories/routes';
 import { putUploadFiles } from 'repositories';
-
-/**
- * Load a list of incomplete NTRO Records from fez
- * @returns {action}
- */
-export function loadIncompleteRecords() {
-    return dispatch => {
-        dispatch({type: actions.INCOMPLETE_RECORDS_LOADING});
-
-        return get(INCOMPLETE_RECORDS_API())
-            .then(response => {
-                dispatch({
-                    type: actions.INCOMPLETE_RECORDS_LOADED,
-                    payload: response
-                });
-            })
-            .catch(error => {
-                dispatch({
-                    type: actions.INCOMPLETE_RECORDS_FAILED,
-                    payload: error.message
-                });
-            });
-    };
-}
-
 
 /**
  * Update incomplete record request: patch record, send issue to espace admins:

@@ -322,7 +322,7 @@ describe('Dashboard test', () => {
             actions: {
                 countPossiblyYourPublications: jest.fn(),
                 loadAuthorPublicationsStats: jest.fn(),
-                loadIncompleteRecords: jest.fn()
+                searchAuthorIncompletePublications: jest.fn()
             },
             history: {},
         }, false);
@@ -340,7 +340,7 @@ describe('Dashboard test', () => {
     it('redirectToMissingRecordslist method', () => {
         const testFn = jest.fn();
         const wrapper = setup({history: {push: testFn}});
-        wrapper.instance().redirectToMissingRecordslist();
+        wrapper.instance().redirectToIncompleteRecordlist();
         expect(testFn).toBeCalledWith('/records/incomplete');
 
     });
