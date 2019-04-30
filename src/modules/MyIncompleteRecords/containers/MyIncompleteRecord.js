@@ -69,7 +69,7 @@ const mapStateToProps = (state, ownProps) => {
             fez_record_search_key_significance: importedValues && importedValues.fez_record_search_key_significance || null,
             rek_description: importedValues && importedValues.rek_description || null,
             rek_formatted_abstract: importedValues && importedValues.rek_formatted_abstract || null,
-            fez_record_search_key_total_pages: importedValues && importedValues.fez_record_search_key_total_pages || null,
+            fez_record_search_key_total_pages: importedValues && importedValues.fez_record_search_key_total_pages || { rek_total_pages: '' },
             fez_record_search_key_language: importedValues && importedValues.fez_record_search_key_language || null,
             fez_record_search_key_quality_indicator: importedValues && importedValues.fez_record_search_key_quality_indicator || null,
             fez_record_search_key_grant_agency: importedValues && importedValues.fez_record_search_key_grant_agency || null,
