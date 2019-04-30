@@ -74,9 +74,10 @@ export function updateIncompleteRecord(data) {
         // if user updated links/added files - update record
         let patchRecordRequest = null;
         patchRecordRequest = {
-            ...JSON.parse(JSON.stringify(data)),
             rek_pid: data.publication.rek_pid,
+            ...JSON.parse(JSON.stringify(data)),
             ...transformers.getRecordAbstractDescriptionSearchKey(data.ntroAbstract),
+            ...transformers.getLanguageSearchKey(data.languages),
             ...transformers.getIncompleteRequestFields(data),
             ...transformers.getGrantsListSearchKey(data.grants),
             ...transformers.getRecordFileAttachmentSearchKey(data.files ? data.files.queue : [], data.publication)

@@ -486,17 +486,6 @@ export const getIncompleteRequestFields = (data) => {
     }
 
     // TODO multiple entries for the same author?  Confirm this is how the data works
-    if (!!data.languages) {
-        result.fez_record_search_key_language =
-            data.languages.map((item, index) => {
-                return {
-                    rek_language: item,
-                    rek_language_order: index
-                };
-            });
-    }
-
-    // TODO multiple entries for the same author?  Confirm this is how the data works
     if (!!data.qualityIndicators && data.qualityIndicators.length > 0) {
         result.fez_record_search_key_quality_indicator =
             data.qualityIndicators.map((item, index) => {
