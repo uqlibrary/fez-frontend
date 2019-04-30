@@ -166,14 +166,14 @@ describe('MyIncompleteRecords test', () => {
         expect(testAction).not.toHaveBeenCalled();
     });
 
-    it('sets publication to fix', () => {
-        const push = jest.fn();
-        const setFixRecord = jest.fn();
-        const wrapper = setup({accountLoading: true, actions: {setFixRecord: setFixRecord},  history: {push: push}});
-        wrapper.instance().completeRecord({rek_pid: 'UQ:111111'});
-        expect(push).toHaveBeenCalledWith(routes.pathConfig.records.incompleteFix('UQ:111111'));
-        expect(setFixRecord).toHaveBeenCalled();
-    });
+    // it('sets publication to fix', () => {
+    //     const push = jest.fn();
+    //     const setFixRecord = jest.fn();
+    //     const wrapper = setup({accountLoading: true, actions: {setFixRecord: setFixRecord},  history: {push: push}});
+    //     wrapper.instance().completeRecord({rek_pid: 'UQ:111111'});
+    //     expect(push).toHaveBeenCalledWith(routes.pathConfig.records.incompleteFix('UQ:111111'));
+    //     expect(setFixRecord).toHaveBeenCalled();
+    // });
 
     it('component has displayable facets', () => {
         const testAction = jest.fn();
