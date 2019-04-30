@@ -433,39 +433,20 @@ export const getLanguageSearchKey = (languages) => {
 
 export const getNtroMetadataSearchKeys = (data) => {
     if (!data) return {};
-    const selectedAuthorIdIndex = data.authors.findIndex(author => author.selected === true);
     const ntroMetadata = {};
 
     if (!!data.significance) {
-        ntroMetadata.fez_record_search_key_significance = data.authors.map((item, index) =>{
-            if (selectedAuthorIdIndex === index) {
-                return {
-                    rek_significance: data.significance,
-                    rek_significance_order: selectedAuthorIdIndex + 1
-                };
-            } else {
-                return {
-                    rek_significance: 0,
-                    rek_significance_order: index + 1
-                };
-            }
-        });
+        ntroMetadata.fez_record_search_key_significance = data.authors.map((item, index) => ({
+            rek_significance: item.selected === true ? data.significance : 0,
+            rek_significance_order: index + 1
+        }));
     }
 
     if (!!data.impactStatement) {
-        ntroMetadata.fez_record_search_key_creator_contribution_statement = data.authors.map((item, index) =>{
-            if (selectedAuthorIdIndex === index) {
-                return {
-                    rek_creator_contribution_statement: data.impactStatement.htmlText,
-                    rek_creator_contribution_statement_order: selectedAuthorIdIndex + 1
-                };
-            } else {
-                return {
-                    rek_creator_contribution_statement: locale.global.defaultContributorStatementMissing,
-                    rek_creator_contribution_statement_order: index + 1
-                };
-            }
-        });
+        ntroMetadata.fez_record_search_key_creator_contribution_statement = data.authors.map((item, index) => ({
+            rek_creator_contribution_statement: item.selected === true ? data.impactStatement.htmlText : locale.global.defaultContributorStatementMissing,
+            rek_creator_contribution_statement_order: index + 1
+        }));
     }
 
     if (!!data.qualityIndicators) {
@@ -507,10 +488,10 @@ export const getIncompleteRequestFields = (data) => {
     // TODO multiple entries for the same author?  Confirm this is how the data works
     if (!!data.languages) {
         result.fez_record_search_key_language =
-            data.qualityIndicators.map((item) => {
+            data.languages.map((item, index) => {
                 return {
                     rek_language: item,
-                    rek_language_order: authorIdOrder
+                    rek_language_order: index
                 };
             });
     }
@@ -518,10 +499,10 @@ export const getIncompleteRequestFields = (data) => {
     // TODO multiple entries for the same author?  Confirm this is how the data works
     if (!!data.qualityIndicators && data.qualityIndicators.length > 0) {
         result.fez_record_search_key_quality_indicator =
-            data.qualityIndicators.map((item) => {
+            data.qualityIndicators.map((item, index) => {
                 return {
                     rek_quality_indicator: item,
-                    rek_quality_indicator_order: authorIdOrder
+                    rek_quality_indicator_order: index
                 };
             });
     }
@@ -532,13 +513,6 @@ export const getIncompleteRequestFields = (data) => {
                 rek_significance: data.significance,
                 rek_significance_order: authorIdOrder
             }];
-    }
-
-    if (!!data.fez_record_search_key_total_pages && !!data.fez_record_search_key_total_pages.rek_total_pages) {
-        result.fez_record_search_key_total_pages =
-            {
-                rek_total_pages: data.fez_record_search_key_total_pages.rek_total_pages
-            };
     }
 
     return result;
