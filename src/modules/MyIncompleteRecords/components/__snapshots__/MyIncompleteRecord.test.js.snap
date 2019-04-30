@@ -900,18 +900,7 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
                 "form": Object {
                   "locale": Object {
                     "addButton": "Add author",
-                    "descriptionStep1": <div>
-                      <span
-                        className="authorSteps"
-                      >
-                        Step 1 of 2
-                      </span>
-                       - Please 
-                      <b>
-                        add to a list of authors below
-                      </b>
-                      , in the format and order that they are published.
-                    </div>,
+                    "descriptionStep1": "Please update the information for the selected author below.",
                     "descriptionStep1NoStep2": <div>
                       Please 
                       <b>
@@ -934,18 +923,7 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
                       "confirmationMessage": "Are you sure you want to delete all items?",
                       "confirmationTitle": "Delete all",
                     },
-                    "descriptionStep2": <div>
-                      <span
-                        className="authorSteps"
-                      >
-                        Step 2 of 2
-                      </span>
-                       - Please 
-                      <b>
-                        select your name
-                      </b>
-                       from the list below (if applicable).
-                    </div>,
+                    "descriptionStep2": "Please select an author below to edit.",
                     "identifierColumn": "UQ identifier",
                     "nameColumn": "Author's name as published",
                     "reorderColumn": "Reorder items",
@@ -2021,18 +1999,7 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
                 "form": Object {
                   "locale": Object {
                     "addButton": "Add author",
-                    "descriptionStep1": <div>
-                      <span
-                        className="authorSteps"
-                      >
-                        Step 1 of 2
-                      </span>
-                       - Please 
-                      <b>
-                        add to a list of authors below
-                      </b>
-                      , in the format and order that they are published.
-                    </div>,
+                    "descriptionStep1": "Please update the information for the selected author below.",
                     "descriptionStep1NoStep2": <div>
                       Please 
                       <b>
@@ -2055,18 +2022,7 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
                       "confirmationMessage": "Are you sure you want to delete all items?",
                       "confirmationTitle": "Delete all",
                     },
-                    "descriptionStep2": <div>
-                      <span
-                        className="authorSteps"
-                      >
-                        Step 2 of 2
-                      </span>
-                       - Please 
-                      <b>
-                        select your name
-                      </b>
-                       from the list below (if applicable).
-                    </div>,
+                    "descriptionStep2": "Please select an author below to edit.",
                     "identifierColumn": "UQ identifier",
                     "nameColumn": "Author's name as published",
                     "reorderColumn": "Reorder items",
@@ -3154,18 +3110,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
                 "form": Object {
                   "locale": Object {
                     "addButton": "Add author",
-                    "descriptionStep1": <div>
-                      <span
-                        className="authorSteps"
-                      >
-                        Step 1 of 2
-                      </span>
-                       - Please 
-                      <b>
-                        add to a list of authors below
-                      </b>
-                      , in the format and order that they are published.
-                    </div>,
+                    "descriptionStep1": "Please update the information for the selected author below.",
                     "descriptionStep1NoStep2": <div>
                       Please 
                       <b>
@@ -3188,18 +3133,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
                       "confirmationMessage": "Are you sure you want to delete all items?",
                       "confirmationTitle": "Delete all",
                     },
-                    "descriptionStep2": <div>
-                      <span
-                        className="authorSteps"
-                      >
-                        Step 2 of 2
-                      </span>
-                       - Please 
-                      <b>
-                        select your name
-                      </b>
-                       from the list below (if applicable).
-                    </div>,
+                    "descriptionStep2": "Please select an author below to edit.",
                     "identifierColumn": "UQ identifier",
                     "nameColumn": "Author's name as published",
                     "reorderColumn": "Reorder items",
@@ -4281,18 +4215,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
                 "form": Object {
                   "locale": Object {
                     "addButton": "Add author",
-                    "descriptionStep1": <div>
-                      <span
-                        className="authorSteps"
-                      >
-                        Step 1 of 2
-                      </span>
-                       - Please 
-                      <b>
-                        add to a list of authors below
-                      </b>
-                      , in the format and order that they are published.
-                    </div>,
+                    "descriptionStep1": "Please update the information for the selected author below.",
                     "descriptionStep1NoStep2": <div>
                       Please 
                       <b>
@@ -4315,18 +4238,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
                       "confirmationMessage": "Are you sure you want to delete all items?",
                       "confirmationTitle": "Delete all",
                     },
-                    "descriptionStep2": <div>
-                      <span
-                        className="authorSteps"
-                      >
-                        Step 2 of 2
-                      </span>
-                       - Please 
-                      <b>
-                        select your name
-                      </b>
-                       from the list below (if applicable).
-                    </div>,
+                    "descriptionStep2": "Please select an author below to edit.",
                     "identifierColumn": "UQ identifier",
                     "nameColumn": "Author's name as published",
                     "reorderColumn": "Reorder items",
@@ -5402,18 +5314,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
                 "form": Object {
                   "locale": Object {
                     "addButton": "Add author",
-                    "descriptionStep1": <div>
-                      <span
-                        className="authorSteps"
-                      >
-                        Step 1 of 2
-                      </span>
-                       - Please 
-                      <b>
-                        add to a list of authors below
-                      </b>
-                      , in the format and order that they are published.
-                    </div>,
+                    "descriptionStep1": "Please update the information for the selected author below.",
                     "descriptionStep1NoStep2": <div>
                       Please 
                       <b>
@@ -5436,18 +5337,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
                       "confirmationMessage": "Are you sure you want to delete all items?",
                       "confirmationTitle": "Delete all",
                     },
-                    "descriptionStep2": <div>
-                      <span
-                        className="authorSteps"
-                      >
-                        Step 2 of 2
-                      </span>
-                       - Please 
-                      <b>
-                        select your name
-                      </b>
-                       from the list below (if applicable).
-                    </div>,
+                    "descriptionStep2": "Please select an author below to edit.",
                     "identifierColumn": "UQ identifier",
                     "nameColumn": "Author's name as published",
                     "reorderColumn": "Reorder items",

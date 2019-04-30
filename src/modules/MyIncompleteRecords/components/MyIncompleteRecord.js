@@ -116,6 +116,8 @@ export default class MyIncompleteRecord extends PureComponent {
         const txt = pagesLocale.pages.incompletePublication;
         const txtFixForm = formsLocale.forms.fixPublicationForm;
         const authors = componentsLocale.components.authors;
+        authors.field.form.locale.descriptionStep1 = 'Please update the information for the selected author below.';
+        authors.field.header.locale.descriptionStep2 = 'Please select an author below to edit.';
 
         if (this.props.accountAuthorLoading || this.props.loadingRecordToFix) {
             return (
