@@ -75,7 +75,7 @@ const mapStateToProps = (state, ownProps) => {
             fez_record_search_key_grant_agency: importedValues && importedValues.fez_record_search_key_grant_agency || null,
             fez_record_search_key_grant_id: importedValues && importedValues.fez_record_search_key_grant_id || null,
             fez_record_search_key_grant_agency_type: importedValues && importedValues.fez_record_search_key_grant_agency_type || null,
-            fez_record_search_key_audience_size: importedValues && importedValues.fez_record_search_key_audience_size || null,
+            fez_record_search_key_audience_size: importedValues && importedValues.fez_record_search_key_audience_size || {rek_audience_size: null},
             fez_record_search_key_creator_contribution_statement: importedValues && importedValues.fez_record_search_key_creator_contribution_statement || null,
             grants
         }
