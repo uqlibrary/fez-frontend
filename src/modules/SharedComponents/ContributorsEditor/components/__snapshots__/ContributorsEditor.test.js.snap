@@ -30,15 +30,32 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
       "getState": [MockFunction] {
         "calls": Array [
           Array [],
+          Array [],
         ],
         "results": Array [
           Object {
             "isThrow": false,
             "value": Immutable.Map {},
           },
+          Object {
+            "isThrow": false,
+            "value": Immutable.Map {},
+          },
         ],
       },
-      "subscribe": [MockFunction],
+      "subscribe": [MockFunction] {
+        "calls": Array [
+          Array [
+            [Function],
+          ],
+        ],
+        "results": Array [
+          Object {
+            "isThrow": false,
+            "value": undefined,
+          },
+        ],
+      },
     }
   }
 >
@@ -588,6 +605,7 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                       "aut_id": 1,
                     }
                   }
+                  authorsList={Array []}
                   classes={
                     Object {
                       "list": "list",
