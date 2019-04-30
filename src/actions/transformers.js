@@ -490,19 +490,6 @@ export const getIncompleteRequestFields = (data) => {
 
     const result = {};
 
-    if (!!data.ntroAbstract && !!data.ntroAbstract.htmlText) {
-        result.rek_formatted_abstract = data.ntroAbstract.htmlText;
-    } else if (!!data.ntroAbstract && !!data.ntroAbstract.plainText) {
-        result.rek_formatted_abstract = data.ntroAbstract.plainText;
-    }
-
-    if (!!data.fez_record_search_key_audience_size && !!data.fez_record_search_key_audience_size.rek_audience_size) {
-        result.fez_record_search_key_audience_size =
-            {
-                rek_audience_size: data.fez_record_search_key_audience_size.rek_audience_size
-            };
-    }
-
     let impactStatement = null;
     if (!!data.impactStatement && !!data.impactStatement.htmlText) {
         impactStatement = data.impactStatement.htmlText;
