@@ -29,6 +29,7 @@ export class ContributorsEditor extends PureComponent {
         showContributorAssignment: PropTypes.bool,
         showIdentifierLookup: PropTypes.bool,
         showRoleInput: PropTypes.bool,
+        editMode: PropTypes.bool,
     };
 
     static defaultProps = {
@@ -42,6 +43,7 @@ export class ContributorsEditor extends PureComponent {
         showContributorAssignment: false,
         showIdentifierLookup: false,
         showRoleInput: false,
+        editMode: false,
     };
 
     constructor(props) {
@@ -52,11 +54,6 @@ export class ContributorsEditor extends PureComponent {
             isCurrentAuthorSelected: false,
             showIdentifierLookup: false,
         };
-        this.editMode = (
-            typeof (this.props.meta || {}).initial === 'object' &&
-            this.props.meta.initial.toJS &&
-            (this.props.meta.initial.toJS().length || 0) > 0
-        );
     }
 
     componentWillUpdate = (nextProps, nextState) => {
@@ -100,7 +97,7 @@ export class ContributorsEditor extends PureComponent {
                 // try to automatically select contributor if they are a current author
                 if (this.props.author && contributor.aut_id === this.props.author.aut_id) {
                     const index = this.state.contributors.length - 1;
-                    this.editMode
+                    this.props.editMode
                         ? this.chooseToEdit(index)
                         : this.chooseSelf(index)
                     ;
@@ -219,7 +216,7 @@ export class ContributorsEditor extends PureComponent {
                 hideReorder={hideReorder}
                 index={index}
                 key={`ContributorRow_${index}`}
-                onSelect={ this.editMode ? this.chooseToEdit : this.chooseSelf }
+                onSelect={this.props.editMode ? this.chooseToEdit : this.chooseSelf}
                 onDelete={this.deleteContributor}
                 onMoveDown={this.moveDownContributor}
                 onMoveUp={this.moveUpContributor}
@@ -238,10 +235,9 @@ export class ContributorsEditor extends PureComponent {
 
         const contributor = this.state.contributors[index];
 
-        if (this.editMode) {
+        if (this.props.editMode) {
             formProps.locale.addButton = 'Update author';
             formProps.contributor = contributor;
-            formProps.showIdentifierLookup = false;
             formProps.initialValues = this.props.meta.initial.toJS()[index];
         }
 
@@ -296,7 +292,7 @@ export class ContributorsEditor extends PureComponent {
                     />
                 }
                 {
-                    !this.editMode &&
+                    !this.props.editMode &&
                     this.renderContributorForm(this.addContributor)
                 }
                 {
@@ -324,9 +320,9 @@ export class ContributorsEditor extends PureComponent {
                                 {this.renderContributorRows()}
                             </List>
                             {
-                                this.editMode &&
+                                this.props.editMode &&
                                 selectedContributorIndex > -1 &&
-                                <div style={{marginTop: 24}}>
+                                <div style={{ marginTop: 24 }}>
                                     {this.renderContributorForm(this.updateContributor, selectedContributorIndex)}
                                 </div>
                             }

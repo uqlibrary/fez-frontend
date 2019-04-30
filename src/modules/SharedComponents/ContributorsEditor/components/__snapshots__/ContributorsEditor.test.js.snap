@@ -537,6 +537,7 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                 "scroll": "scroll",
               }
             }
+            editMode={false}
             hideDelete={false}
             hideReorder={false}
             isNtro={true}
@@ -563,6 +564,7 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                     "scroll": "scroll",
                   }
                 }
+                editMode={false}
                 hideDelete={false}
                 hideReorder={false}
                 isContributorAssigned={true}
@@ -593,6 +595,7 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                     }
                   }
                   contributor={Object {}}
+                  editMode={false}
                   hideDelete={false}
                   hideReorder={false}
                   isContributorAssigned={true}
@@ -2637,6 +2640,7 @@ exports[`ContributorsEditor tests  rendering full component with a defined class
         "scroll": "scroll",
       }
     }
+    editMode={false}
     hideDelete={false}
     hideReorder={false}
     isContributorAssigned={true}
@@ -2663,6 +2667,7 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
         "scroll": "scroll",
       }
     }
+    editMode={false}
     hideDelete={false}
     hideReorder={false}
     isContributorAssigned={true}
@@ -2689,6 +2694,7 @@ exports[`ContributorsEditor tests  rendering full component with role input 1`] 
         "scroll": "scroll",
       }
     }
+    editMode={false}
     hideDelete={false}
     hideReorder={false}
     isContributorAssigned={true}
@@ -2716,6 +2722,7 @@ exports[`ContributorsEditor tests  renders 3 contributor rows with no infinite s
       }
     }
     contributors={Array []}
+    editMode={false}
     hideDelete={false}
     hideReorder={false}
     isContributorAssigned={true}
@@ -2831,6 +2838,7 @@ exports[`ContributorsEditor tests  renders 4 contributor rows wrapped in an infi
       }
     }
     contributors={Array []}
+    editMode={false}
     hideDelete={false}
     hideReorder={false}
     isContributorAssigned={true}
@@ -2964,6 +2972,7 @@ exports[`ContributorsEditor tests  renders no contributor rows with no infinite 
       }
     }
     contributors={Array []}
+    editMode={false}
     hideDelete={false}
     hideReorder={false}
     isContributorAssigned={true}
@@ -2990,6 +2999,7 @@ exports[`ContributorsEditor tests  should get contributors from props and input 
         "scroll": "scroll",
       }
     }
+    editMode={false}
     hideDelete={false}
     hideReorder={false}
     input={
@@ -3099,6 +3109,7 @@ exports[`ContributorsEditor tests  should get contributors from props and input 
         "scroll": "scroll",
       }
     }
+    editMode={false}
     hideDelete={false}
     hideReorder={false}
     input={
@@ -3223,6 +3234,7 @@ exports[`ContributorsEditor tests  should not move contributor down 1`] = `
         "scroll": "scroll",
       }
     }
+    editMode={false}
     hideDelete={false}
     hideReorder={false}
     isContributorAssigned={true}
@@ -3249,6 +3261,7 @@ exports[`ContributorsEditor tests  should render error as html 1`] = `
         "scroll": "scroll",
       }
     }
+    editMode={false}
     hideDelete={false}
     hideReorder={false}
     isContributorAssigned={true}
@@ -3294,6 +3307,7 @@ exports[`ContributorsEditor tests  should render error as one child 1`] = `
         "scroll": "scroll",
       }
     }
+    editMode={false}
     hideDelete={false}
     hideReorder={false}
     isContributorAssigned={true}
@@ -3334,6 +3348,7 @@ exports[`ContributorsEditor tests  should show validation error 1`] = `
       }
     }
     contributors={Array []}
+    editMode={false}
     hideDelete={false}
     hideReorder={false}
     isContributorAssigned={true}

@@ -165,6 +165,7 @@ export default class MyIncompleteRecord extends PureComponent {
                                 <Typography>{authors.description}</Typography>
                                 <Field
                                     component={ContributorsEditorField}
+                                    editMode
                                     hideDelete
                                     hideReorder
                                     isNtro={isNtro}

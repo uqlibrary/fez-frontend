@@ -891,6 +891,7 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
           </WithStyles(Typography)>
           <Field
             component={[Function]}
+            editMode={true}
             hideDelete={true}
             hideReorder={true}
             isNtro={false}
@@ -2011,6 +2012,7 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
           </WithStyles(Typography)>
           <Field
             component={[Function]}
+            editMode={true}
             hideDelete={true}
             hideReorder={true}
             isNtro={false}
@@ -3143,6 +3145,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
           </WithStyles(Typography)>
           <Field
             component={[Function]}
+            editMode={true}
             hideDelete={true}
             hideReorder={true}
             isNtro={false}
@@ -4269,6 +4272,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
           </WithStyles(Typography)>
           <Field
             component={[Function]}
+            editMode={true}
             hideDelete={true}
             hideReorder={true}
             isNtro={false}
@@ -5389,6 +5393,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
           </WithStyles(Typography)>
           <Field
             component={[Function]}
+            editMode={true}
             hideDelete={true}
             hideReorder={true}
             isNtro={false}
