@@ -191,6 +191,7 @@ describe('Component MyIncompleteRecord', () => {
                 aut_id: 1
             },
             recordToFix: {
+                fez_datastream_info: [],
                 fez_record_search_key_author_id: [
                     {rek_author_id: 1}
                     ]
@@ -211,6 +212,7 @@ describe('Component MyIncompleteRecord', () => {
                 aut_id: 1
             },
             recordToFix: {
+                fez_datastream_info: [],
                 fez_record_search_key_author_id: [
                     {rek_author_id: 1}
                 ]
