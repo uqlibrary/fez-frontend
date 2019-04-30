@@ -1,6 +1,6 @@
 import * as actions from './actionTypes';
 import * as repositories from 'repositories';
-import * as incompleteRecords from './incompleteRecords';
+import * as publications from './publications';
 import * as incompleteRecordList from 'mock/data/records/incompleteRecordList';
 
 describe('incompleteRecords actions', () => {
@@ -22,11 +22,11 @@ describe('incompleteRecords actions', () => {
             .reply(200, incompleteRecordList);
 
         const expectedActions = [
-            actions.INCOMPLETE_RECORDS_LOADING,
-            actions.INCOMPLETE_RECORDS_LOADED
+            actions.AUTHOR_INCOMPLETEPUBLICATIONS_LOADING,
+            actions.AUTHOR_INCOMPLETEPUBLICATIONS_LOADED
         ];
 
-        await mockActionsStore.dispatch(incompleteRecords.loadIncompleteRecords());
+        await mockActionsStore.dispatch(publications.searchAuthorIncompletePublications({}));
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
@@ -36,11 +36,11 @@ describe('incompleteRecords actions', () => {
             .reply(404);
 
         const expectedActions = [
-            actions.INCOMPLETE_RECORDS_LOADING,
-            actions.INCOMPLETE_RECORDS_FAILED
+            actions.AUTHOR_INCOMPLETEPUBLICATIONS_LOADING,
+            actions.AUTHOR_INCOMPLETEPUBLICATIONS_FAILED
         ];
 
-        await mockActionsStore.dispatch(incompleteRecords.loadIncompleteRecords());
+        await mockActionsStore.dispatch(publications.searchAuthorIncompletePublications({}));
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
