@@ -78,6 +78,7 @@ export function updateIncompleteRecord(data) {
             ...JSON.parse(JSON.stringify(data)),
             ...transformers.getRecordAbstractDescriptionSearchKey(data.ntroAbstract),
             ...transformers.getLanguageSearchKey(data.languages),
+            ...transformers.getQualityIndicatorSearchKey(data.qualityIndicators),
             ...transformers.getIncompleteRequestFields(data),
             ...transformers.getGrantsListSearchKey(data.grants),
             ...transformers.getRecordFileAttachmentSearchKey(data.files ? data.files.queue : [], data.publication)

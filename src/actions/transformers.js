@@ -449,14 +449,18 @@ export const getNtroMetadataSearchKeys = (data) => {
         }));
     }
 
-    if (!!data.qualityIndicators) {
-        ntroMetadata.fez_record_search_key_quality_indicator = data.qualityIndicators.map((item, index) => ({
+    return ntroMetadata;
+};
+
+export const getQualityIndicatorSearchKey = (qualityIndicators = []) => {
+    if (!qualityIndicators || qualityIndicators.length === 0) return {};
+
+    return {
+        fez_record_search_key_quality_indicator: qualityIndicators.map((item, index) => ({
             rek_quality_indicator: item,
             rek_quality_indicator_order: index + 1
-        }));
-    }
-
-    return ntroMetadata;
+        }))
+    };
 };
 
 /**
@@ -483,17 +487,6 @@ export const getIncompleteRequestFields = (data) => {
                 rek_creator_contribution_statement: impactStatement,
                 rek_creator_contribution_statement_order: authorIdOrder
             }];
-    }
-
-    // TODO multiple entries for the same author?  Confirm this is how the data works
-    if (!!data.qualityIndicators && data.qualityIndicators.length > 0) {
-        result.fez_record_search_key_quality_indicator =
-            data.qualityIndicators.map((item, index) => {
-                return {
-                    rek_quality_indicator: item,
-                    rek_quality_indicator_order: index
-                };
-            });
     }
 
     if (!!data.significance) {
