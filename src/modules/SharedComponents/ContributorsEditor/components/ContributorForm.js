@@ -153,7 +153,7 @@ export class ContributorForm extends PureComponent {
         this.setState({
             contributor: selectedItem
         }, () => {
-            this._onSubmit();
+            !this.props.initialValues && this._onSubmit();
         });
     };
 
@@ -198,7 +198,7 @@ export class ContributorForm extends PureComponent {
         const description = showContributorAssignment
             ? locale.descriptionStep1
             : locale.descriptionStep1NoStep2
-            ;
+        ;
 
         const buttonDisabled = disabled ||
             (this.state.nameAsPublished || '').trim().length === 0 ||
@@ -209,8 +209,8 @@ export class ContributorForm extends PureComponent {
             (
                 this.state.affiliation === 'NotUQ' &&
                 (
-                    (this.state.orgaff || '').trim().length === 0 ||
-                    (this.state.orgtype || '').trim().length === 0
+                    this.state.orgaff.trim().length === 0 ||
+                    this.state.orgtype.trim().length === 0
                 )
             )
             ;

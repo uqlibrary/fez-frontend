@@ -49,7 +49,7 @@ export class ContributorsEditor extends PureComponent {
     constructor(props) {
         super(props);
         this.state = {
-            contributors: this.getContributorsFromProps(props) || [],
+            contributors: this.getContributorsFromProps(props),
             errorMessage: '',
             isCurrentAuthorSelected: false,
             showIdentifierLookup: false,
@@ -95,12 +95,12 @@ export class ContributorsEditor extends PureComponent {
                 )
             }, () => {
                 // try to automatically select contributor if they are a current author
-                if (this.props.author && contributor.aut_id === this.props.author.aut_id) {
+                if (
+                    this.props.author &&
+                    contributor.aut_id === this.props.author.aut_id
+                ) {
                     const index = this.state.contributors.length - 1;
-                    this.props.editMode
-                        ? this.chooseToEdit(index)
-                        : this.chooseSelf(index)
-                    ;
+                    this.chooseSelf(index);
                 }
             });
         }
