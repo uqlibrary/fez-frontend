@@ -19,19 +19,12 @@ exports[`Component ContributorRow Row should be clickable when showContributorAs
     aria-label="Select this record (J. Smith) to assign it to you"
     classes={
       Object {
-        "root": "",
+        "root": "listItem",
       }
     }
     divider={true}
     onClick={[Function]}
     onKeyDown={[Function]}
-    style={
-      Object {
-        "cursor": "pointer",
-        "margin": "0 1%",
-        "width": "98%",
-      }
-    }
     tabIndex={0}
   >
     <Hidden
@@ -60,7 +53,7 @@ exports[`Component ContributorRow Row should be clickable when showContributorAs
     <WithStyles(Grid)
       classes={
         Object {
-          "container": "listItem",
+          "container": undefined,
         }
       }
       container={true}
@@ -185,19 +178,12 @@ exports[`Component ContributorRow Row should not be clickable when showContribut
     aria-label="Select this record (J. Smith) to assign it to you"
     classes={
       Object {
-        "root": "",
+        "root": "listItem",
       }
     }
     divider={true}
     onClick={[Function]}
     onKeyDown={[Function]}
-    style={
-      Object {
-        "cursor": "pointer",
-        "margin": "0 1%",
-        "width": "98%",
-      }
-    }
     tabIndex={0}
   >
     <Hidden
@@ -226,7 +212,7 @@ exports[`Component ContributorRow Row should not be clickable when showContribut
     <WithStyles(Grid)
       classes={
         Object {
-          "container": "listItem",
+          "container": undefined,
         }
       }
       container={true}
@@ -351,19 +337,12 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
     aria-label="Select this record (A. Smith) to assign it to you"
     classes={
       Object {
-        "root": "",
+        "root": "listItem",
       }
     }
     divider={true}
     onClick={[Function]}
     onKeyDown={[Function]}
-    style={
-      Object {
-        "cursor": "pointer",
-        "margin": "0 1%",
-        "width": "98%",
-      }
-    }
     tabIndex={0}
   >
     <Hidden
@@ -392,7 +371,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
     <WithStyles(Grid)
       classes={
         Object {
-          "container": "listItem",
+          "container": undefined,
         }
       }
       container={true}
@@ -481,19 +460,12 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
     aria-label="Select this record (A. Smith) to assign it to you"
     classes={
       Object {
-        "root": "",
+        "root": "listItem",
       }
     }
     divider={true}
     onClick={[Function]}
     onKeyDown={[Function]}
-    style={
-      Object {
-        "cursor": "pointer",
-        "margin": "0 1%",
-        "width": "98%",
-      }
-    }
     tabIndex={0}
   >
     <Hidden
@@ -522,7 +494,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
     <WithStyles(Grid)
       classes={
         Object {
-          "container": "listItem",
+          "container": undefined,
         }
       }
       container={true}
@@ -611,19 +583,12 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
     aria-label="Select this record (J. Smith) to assign it to you"
     classes={
       Object {
-        "root": "",
+        "root": "listItem",
       }
     }
     divider={true}
     onClick={[Function]}
     onKeyDown={[Function]}
-    style={
-      Object {
-        "cursor": "pointer",
-        "margin": "0 1%",
-        "width": "98%",
-      }
-    }
     tabIndex={0}
   >
     <Hidden
@@ -652,7 +617,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
     <WithStyles(Grid)
       classes={
         Object {
-          "container": "listItem",
+          "container": undefined,
         }
       }
       container={true}
@@ -821,19 +786,12 @@ exports[`Component ContributorRow a row with index and contributor with author d
     aria-label="Select this record (J. Smith) to assign it to you"
     classes={
       Object {
-        "root": "",
+        "root": "listItem",
       }
     }
     divider={true}
     onClick={[Function]}
     onKeyDown={[Function]}
-    style={
-      Object {
-        "cursor": "pointer",
-        "margin": "0 1%",
-        "width": "98%",
-      }
-    }
     tabIndex={0}
   >
     <Hidden
@@ -862,7 +820,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
     <WithStyles(Grid)
       classes={
         Object {
-          "container": "listItem",
+          "container": undefined,
         }
       }
       container={true}
@@ -951,19 +909,12 @@ exports[`Component ContributorRow a row with index and contributor with author d
     aria-label="Select this record (J. Smith) to assign it to you"
     classes={
       Object {
-        "root": "",
+        "root": "listItem",
       }
     }
     divider={true}
     onClick={[Function]}
     onKeyDown={[Function]}
-    style={
-      Object {
-        "cursor": "pointer",
-        "margin": "0 1%",
-        "width": "98%",
-      }
-    }
     tabIndex={0}
   >
     <Hidden
@@ -992,7 +943,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
     <WithStyles(Grid)
       classes={
         Object {
-          "container": "listItem",
+          "container": undefined,
         }
       }
       container={true}
@@ -1081,19 +1032,12 @@ exports[`Component ContributorRow a row with index and contributor with author d
     aria-label="Select this record (J. Smith) to assign it to you"
     classes={
       Object {
-        "root": "",
+        "root": "listItem",
       }
     }
     divider={true}
     onClick={[Function]}
     onKeyDown={[Function]}
-    style={
-      Object {
-        "cursor": "pointer",
-        "margin": "0 1%",
-        "width": "98%",
-      }
-    }
     tabIndex={0}
   >
     <Hidden
@@ -1122,7 +1066,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
     <WithStyles(Grid)
       classes={
         Object {
-          "container": "listItem",
+          "container": undefined,
         }
       }
       container={true}
@@ -1247,19 +1191,12 @@ exports[`Component ContributorRow a row with index and creator with creator role
     aria-label="Select this record (J. Smith) to assign it to you"
     classes={
       Object {
-        "root": "",
+        "root": "listItem",
       }
     }
     divider={true}
     onClick={[Function]}
     onKeyDown={[Function]}
-    style={
-      Object {
-        "cursor": "pointer",
-        "margin": "0 1%",
-        "width": "98%",
-      }
-    }
     tabIndex={0}
   >
     <Hidden
@@ -1288,7 +1225,7 @@ exports[`Component ContributorRow a row with index and creator with creator role
     <WithStyles(Grid)
       classes={
         Object {
-          "container": "listItem",
+          "container": undefined,
         }
       }
       container={true}
@@ -1413,19 +1350,12 @@ exports[`Component ContributorRow a row with index and creator with creator role
     aria-label="Select this record (J. Smith) to assign it to you"
     classes={
       Object {
-        "root": "",
+        "root": "listItem",
       }
     }
     divider={true}
     onClick={[Function]}
     onKeyDown={[Function]}
-    style={
-      Object {
-        "cursor": "pointer",
-        "margin": "0 1%",
-        "width": "98%",
-      }
-    }
     tabIndex={0}
   >
     <Hidden
@@ -1454,7 +1384,7 @@ exports[`Component ContributorRow a row with index and creator with creator role
     <WithStyles(Grid)
       classes={
         Object {
-          "container": "listItem",
+          "container": undefined,
         }
       }
       container={true}
@@ -1579,19 +1509,12 @@ exports[`Component ContributorRow should assign contributor 1`] = `
     aria-label="Select this record (test) to assign it to you"
     classes={
       Object {
-        "root": "",
+        "root": "listItem",
       }
     }
     divider={true}
     onClick={[Function]}
     onKeyDown={[Function]}
-    style={
-      Object {
-        "cursor": "pointer",
-        "margin": "0 1%",
-        "width": "98%",
-      }
-    }
     tabIndex={0}
   >
     <Hidden
@@ -1620,7 +1543,7 @@ exports[`Component ContributorRow should assign contributor 1`] = `
     <WithStyles(Grid)
       classes={
         Object {
-          "container": "listItem",
+          "container": undefined,
         }
       }
       container={true}
@@ -1749,13 +1672,6 @@ exports[`Component ContributorRow should call callback functions on ListItem 1`]
     divider={true}
     onClick={[Function]}
     onKeyDown={[Function]}
-    style={
-      Object {
-        "cursor": "pointer",
-        "margin": "0 1%",
-        "width": "98%",
-      }
-    }
     tabIndex={0}
   >
     <Hidden
@@ -1895,6 +1811,7 @@ Object {
   },
   "highlighted": Object {
     "borderLeft": "5px solid red",
+    "paddingLeft": "5px",
   },
   "identifierName": Object {
     "&:before": Object {
@@ -1909,8 +1826,14 @@ Object {
     },
     "fontSize": "test4",
   },
-  "listItem": Object {
+  "listContainer": Object {
     "padding": "0",
+  },
+  "listItem": Object {
+    "cursor": "pointer",
+    "margin": "0 1%",
+    "paddingLeft": "10px",
+    "width": "98%",
   },
   "primary": Object {
     "fontSize": "test3",
@@ -1932,6 +1855,7 @@ Object {
   },
   "highlighted": Object {
     "borderLeft": "5px solid red",
+    "paddingLeft": "5px",
   },
   "identifierName": Object {
     "&:before": Object {
@@ -1946,8 +1870,14 @@ Object {
     },
     "fontSize": "test4",
   },
-  "listItem": Object {
+  "listContainer": Object {
     "padding": "0",
+  },
+  "listItem": Object {
+    "cursor": "pointer",
+    "margin": "0 1%",
+    "paddingLeft": "10px",
+    "width": "98%",
   },
   "primary": Object {
     "fontSize": "test3",
@@ -1969,6 +1899,7 @@ Object {
   },
   "highlighted": Object {
     "borderLeft": "5px solid red",
+    "paddingLeft": "5px",
   },
   "identifierName": Object {
     "&:before": Object {
@@ -1983,8 +1914,14 @@ Object {
     },
     "fontSize": "test4",
   },
-  "listItem": Object {
+  "listContainer": Object {
     "padding": "0",
+  },
+  "listItem": Object {
+    "cursor": "pointer",
+    "margin": "0 1%",
+    "paddingLeft": "10px",
+    "width": "98%",
   },
   "primary": Object {
     "fontSize": "test3",
@@ -2163,7 +2100,7 @@ exports[`Component ContributorRow should render row with non-UQ affiiliation and
 <WithStyles(Grid)
   classes={
     Object {
-      "container": "listItem",
+      "container": undefined,
     }
   }
   container={true}
@@ -2376,19 +2313,12 @@ exports[`Component ContributorRow should render with missing aria label if selec
     aria-label={null}
     classes={
       Object {
-        "root": "",
+        "root": "listItem",
       }
     }
     divider={true}
     onClick={[Function]}
     onKeyDown={[Function]}
-    style={
-      Object {
-        "cursor": "pointer",
-        "margin": "0 1%",
-        "width": "98%",
-      }
-    }
     tabIndex={0}
   >
     <Hidden
@@ -2417,7 +2347,7 @@ exports[`Component ContributorRow should render with missing aria label if selec
     <WithStyles(Grid)
       classes={
         Object {
-          "container": "listItem",
+          "container": undefined,
         }
       }
       container={true}

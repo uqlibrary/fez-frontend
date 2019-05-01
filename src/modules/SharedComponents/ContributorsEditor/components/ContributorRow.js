@@ -23,18 +23,28 @@ import KeyboardArrowUp from '@material-ui/icons/KeyboardArrowUp';
 import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 
 export const styles = (theme) => ({
+    listContainer: {
+        padding: '0',
+    },
     listItem: {
-        padding: '0'
+        cursor: 'pointer',
+        width: '98%',
+        margin: '0 1%',
+        paddingLeft: '10px',
+    },
+    highlighted: {
+        paddingLeft: '5px',
+        borderLeft: '5px solid red',
     },
     rowSelected: {
-        backgroundColor: ((theme.palette || {}).accent || {}).light
+        backgroundColor: ((theme.palette || {}).accent || {}).light,
     },
     selected: {
         color: 'white !important',
-        fontWeight: theme.typography.fontWeightMedium
+        fontWeight: theme.typography.fontWeightMedium,
     },
     hideIcon: {
-        display: 'none'
+        display: 'none',
     },
     primary: {
         fontSize: theme.typography.body2.fontSize,
@@ -43,18 +53,15 @@ export const styles = (theme) => ({
         fontSize: theme.typography.caption.fontSize,
         marginTop: 8,
         '&:before': {
-            content: '"UQ Id: "'
-        }
+            content: '"UQ Id: "',
+        },
     },
     identifierSubtitle: {
         fontSize: theme.typography.caption.fontSize,
         '&:before': {
-            content: '"UQ Username: "'
-        }
+            content: '"UQ Username: "',
+        },
     },
-    highlighted: {
-        borderLeft: '5px solid red'
-    }
 });
 
 export class ContributorRow extends PureComponent {
@@ -159,7 +166,7 @@ export class ContributorRow extends PureComponent {
         const { suffix } = this.props.locale;
         const contributorOrder = `${numberToWords(index + 1)} ${suffix}`;
         return (
-            <Grid container classes={{ container: classes.listItem }}>
+            <Grid container classes={{ container: classes.listContainer }}>
                 <Grid item xs={10} sm={5} md={5}>
                     {this.getListItemTypography(
                         contributor.nameAsPublished,
@@ -253,12 +260,13 @@ export class ContributorRow extends PureComponent {
                     locale={deleteRecordConfirmation}
                 />
                 <ListItem
-                    style={{ cursor: 'pointer', width: '98%', margin: '0 1%' }}
                     divider
                     classes={{ root: `${
-                        contributor.selected && classes.rowSelected || ''
+                        classes.listItem || ''
                     } ${
                         highlighted && classes.highlighted || ''
+                    } ${
+                        contributor.selected && classes.rowSelected || ''
                     }`.trim() }}
                     tabIndex={0}
                     onClick={enableSelect ? this._onSelect : () => { }}
