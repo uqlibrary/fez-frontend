@@ -697,7 +697,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 +                             class=\\"MuiListItem-root-384 ContributorRowHeader-header-411 MuiListItem-default-387 MuiListItem-gutters-391 MuiListItem-secondaryAction-393\\"
 +                           >
 +                             <div
-+                               class=\\"MuiListItemIcon-root-423\\"
++                               class=\\"MuiListItemIcon-root-424\\"
 +                             >
 +                               <svg
 +                                 aria-hidden=\\"true\\"
@@ -802,7 +802,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 +                             tabindex=\\"0\\"
 +                           >
 +                             <div
-+                               class=\\"MuiListItemIcon-root-423\\"
++                               class=\\"MuiListItemIcon-root-424\\"
 +                             >
 +                               <svg
 +                                 aria-hidden=\\"true\\"
