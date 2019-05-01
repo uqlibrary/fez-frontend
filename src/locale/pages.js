@@ -723,13 +723,13 @@ export default {
         },
         incompletePublication: {
             title: 'Update my work',
-            submitButtonLabel: 'Complete my record',
-            cancelButtonLabel: 'Cancel and return to my incomplete records list',
+            submitButtonLabel: 'Update my work',
+            cancelButtonLabel: 'Cancel and return to my incomplete works list',
             fields: {
                 notes: {
                     title: 'Notes',
-                    label: 'Notes for this record',
-                    placeholder: 'Add any other notes or comments about this record to send to the eSpace team.'
+                    label: 'Notes for this work',
+                    placeholder: 'Add any other notes or comments about this work to send to the eSpace team.'
                 },
                 grants: {
                     title: 'Grant information'
@@ -758,7 +758,7 @@ export default {
                         fileUploadRestrictionHeading: 'File upload restrictions',
                         fileUploadRestrictions: (
                             <div>
-                                Maximum file size is 8Gb. <br/>
+                                Maximum file size is 8GB. <br/>
                                 PDF files must be saved using the following naming structure <b>&lt;student number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf</b>.
                                 Document name could be thesis, abstract, and etc.
                                 For example:
@@ -788,8 +788,8 @@ export default {
                     message: 'File upload and/or notes post failed',
                     type: 'warning'
                 },
-                cancelButtonLabel: 'Complete another record',
-                confirmButtonLabel: 'Go to my incomplete research list'
+                cancelButtonLabel: 'Update another incomplete work',
+                confirmButtonLabel: 'Go to my dashboard'
             },
         }
     }

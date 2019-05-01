@@ -417,8 +417,8 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
       hideCancelButton={false}
       locale={
         Object {
-          "cancelButtonLabel": "Complete another record",
-          "confirmButtonLabel": "Go to my incomplete research list",
+          "cancelButtonLabel": "Update another incomplete work",
+          "confirmButtonLabel": "Go to my dashboard",
           "confirmationMessage": <React.Fragment />,
           "confirmationTitle": "Your work has been updated",
           "fileFailConfirmationAlert": Object {
@@ -992,10 +992,10 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
             component={[Function]}
             disabled={false}
             fullWidth={true}
-            label="Notes for this record"
+            label="Notes for this work"
             multiline={true}
             name="notes"
-            placeholder="Add any other notes or comments about this record to send to the eSpace team."
+            placeholder="Add any other notes or comments about this work to send to the eSpace team."
             rows={5}
             type="text"
           />
@@ -1029,7 +1029,7 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
                 </p>,
                 "fileUploadRestrictionHeading": "File upload restrictions",
                 "fileUploadRestrictions": <div>
-                  Maximum file size is 8Gb. 
+                  Maximum file size is 8GB. 
                   <br />
                   PDF files must be saved using the following naming structure 
                   <b>
@@ -1101,7 +1101,7 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
           onClick={[Function]}
           variant="contained"
         >
-          Cancel and return to my incomplete records list
+          Cancel and return to my incomplete works list
         </WithStyles(Button)>
       </WithStyles(Grid)>
       <WithStyles(Grid)
@@ -1113,7 +1113,7 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
           onClick={[MockFunction]}
           variant="contained"
         >
-          Complete my record
+          Update my work
         </WithStyles(Button)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
@@ -1538,8 +1538,8 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
       hideCancelButton={false}
       locale={
         Object {
-          "cancelButtonLabel": "Complete another record",
-          "confirmButtonLabel": "Go to my incomplete research list",
+          "cancelButtonLabel": "Update another incomplete work",
+          "confirmButtonLabel": "Go to my dashboard",
           "confirmationMessage": <React.Fragment />,
           "confirmationTitle": "Your work has been updated",
           "fileFailConfirmationAlert": Object {
@@ -2113,10 +2113,10 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
             component={[Function]}
             disabled={false}
             fullWidth={true}
-            label="Notes for this record"
+            label="Notes for this work"
             multiline={true}
             name="notes"
-            placeholder="Add any other notes or comments about this record to send to the eSpace team."
+            placeholder="Add any other notes or comments about this work to send to the eSpace team."
             rows={5}
             type="text"
           />
@@ -2150,7 +2150,7 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
                 </p>,
                 "fileUploadRestrictionHeading": "File upload restrictions",
                 "fileUploadRestrictions": <div>
-                  Maximum file size is 8Gb. 
+                  Maximum file size is 8GB. 
                   <br />
                   PDF files must be saved using the following naming structure 
                   <b>
@@ -2222,7 +2222,7 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
           onClick={[Function]}
           variant="contained"
         >
-          Cancel and return to my incomplete records list
+          Cancel and return to my incomplete works list
         </WithStyles(Button)>
       </WithStyles(Grid)>
       <WithStyles(Grid)
@@ -2234,7 +2234,7 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
           onClick={[MockFunction]}
           variant="contained"
         >
-          Complete my record
+          Update my work
         </WithStyles(Button)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
@@ -2671,8 +2671,8 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
       hideCancelButton={false}
       locale={
         Object {
-          "cancelButtonLabel": "Complete another record",
-          "confirmButtonLabel": "Go to my incomplete research list",
+          "cancelButtonLabel": "Update another incomplete work",
+          "confirmButtonLabel": "Go to my dashboard",
           "confirmationMessage": <React.Fragment />,
           "confirmationTitle": "Your work has been updated",
           "fileFailConfirmationAlert": Object {
@@ -3246,10 +3246,10 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
             component={[Function]}
             disabled={false}
             fullWidth={true}
-            label="Notes for this record"
+            label="Notes for this work"
             multiline={true}
             name="notes"
-            placeholder="Add any other notes or comments about this record to send to the eSpace team."
+            placeholder="Add any other notes or comments about this work to send to the eSpace team."
             rows={5}
             type="text"
           />
@@ -3283,7 +3283,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
                 </p>,
                 "fileUploadRestrictionHeading": "File upload restrictions",
                 "fileUploadRestrictions": <div>
-                  Maximum file size is 8Gb. 
+                  Maximum file size is 8GB. 
                   <br />
                   PDF files must be saved using the following naming structure 
                   <b>
@@ -3355,7 +3355,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
           onClick={[Function]}
           variant="contained"
         >
-          Cancel and return to my incomplete records list
+          Cancel and return to my incomplete works list
         </WithStyles(Button)>
       </WithStyles(Grid)>
       <WithStyles(Grid)
@@ -3367,7 +3367,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
           onClick={[MockFunction]}
           variant="contained"
         >
-          Complete my record
+          Update my work
         </WithStyles(Button)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
@@ -3792,8 +3792,8 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
       hideCancelButton={false}
       locale={
         Object {
-          "cancelButtonLabel": "Complete another record",
-          "confirmButtonLabel": "Go to my incomplete research list",
+          "cancelButtonLabel": "Update another incomplete work",
+          "confirmButtonLabel": "Go to my dashboard",
           "confirmationMessage": <React.Fragment>
             <WithStyles(Alert)
               message="File upload and/or notes post failed"
@@ -4373,10 +4373,10 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
             component={[Function]}
             disabled={false}
             fullWidth={true}
-            label="Notes for this record"
+            label="Notes for this work"
             multiline={true}
             name="notes"
-            placeholder="Add any other notes or comments about this record to send to the eSpace team."
+            placeholder="Add any other notes or comments about this work to send to the eSpace team."
             rows={5}
             type="text"
           />
@@ -4410,7 +4410,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
                 </p>,
                 "fileUploadRestrictionHeading": "File upload restrictions",
                 "fileUploadRestrictions": <div>
-                  Maximum file size is 8Gb. 
+                  Maximum file size is 8GB. 
                   <br />
                   PDF files must be saved using the following naming structure 
                   <b>
@@ -4482,7 +4482,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
           onClick={[Function]}
           variant="contained"
         >
-          Cancel and return to my incomplete records list
+          Cancel and return to my incomplete works list
         </WithStyles(Button)>
       </WithStyles(Grid)>
       <WithStyles(Grid)
@@ -4494,7 +4494,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
           onClick={[MockFunction]}
           variant="contained"
         >
-          Complete my record
+          Update my work
         </WithStyles(Button)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
@@ -4919,8 +4919,8 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
       hideCancelButton={false}
       locale={
         Object {
-          "cancelButtonLabel": "Complete another record",
-          "confirmButtonLabel": "Go to my incomplete research list",
+          "cancelButtonLabel": "Update another incomplete work",
+          "confirmButtonLabel": "Go to my dashboard",
           "confirmationMessage": <React.Fragment />,
           "confirmationTitle": "Your work has been updated",
           "fileFailConfirmationAlert": Object {
@@ -5494,10 +5494,10 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
             component={[Function]}
             disabled={false}
             fullWidth={true}
-            label="Notes for this record"
+            label="Notes for this work"
             multiline={true}
             name="notes"
-            placeholder="Add any other notes or comments about this record to send to the eSpace team."
+            placeholder="Add any other notes or comments about this work to send to the eSpace team."
             rows={5}
             type="text"
           />
@@ -5531,7 +5531,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
                 </p>,
                 "fileUploadRestrictionHeading": "File upload restrictions",
                 "fileUploadRestrictions": <div>
-                  Maximum file size is 8Gb. 
+                  Maximum file size is 8GB. 
                   <br />
                   PDF files must be saved using the following naming structure 
                   <b>
@@ -5603,7 +5603,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
           onClick={[Function]}
           variant="contained"
         >
-          Cancel and return to my incomplete records list
+          Cancel and return to my incomplete works list
         </WithStyles(Button)>
       </WithStyles(Grid)>
       <WithStyles(Grid)
@@ -5615,7 +5615,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
           onClick={[MockFunction]}
           variant="contained"
         >
-          Complete my record
+          Update my work
         </WithStyles(Button)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
