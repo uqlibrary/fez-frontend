@@ -49,11 +49,7 @@ describe('LanguageField component', () => {
         const wrapper = setup({
             label: 'Test label',
             placeholder: 'Test placeholder',
-            input: {
-                value: ['One', 'Two'],
-                onChange: jest.fn()
-            },
-            defaultValue: "eng"
+            defaultValue: "afr"
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });

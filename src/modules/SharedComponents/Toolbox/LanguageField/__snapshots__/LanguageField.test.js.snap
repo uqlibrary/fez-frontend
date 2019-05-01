@@ -564,19 +564,10 @@ exports[`LanguageField component should render immutable list as selected value 
 
 exports[`LanguageField component should render when given a default value field props 1`] = `
 <GenericSelectField
-  defaultValue="eng"
+  defaultValue="afr"
   error={false}
   errorText=""
   hideLabel={false}
-  input={
-    Object {
-      "onChange": [MockFunction],
-      "value": Array [
-        "One",
-        "Two",
-      ],
-    }
-  }
   itemsList={
     Array [
       Object {
@@ -839,11 +830,10 @@ exports[`LanguageField component should render when given a default value field 
       "label": "Test label",
     }
   }
-  onChange={[MockFunction]}
   placeholder="Test placeholder"
   selectedValue={
     Array [
-      "eng",
+      "afr",
     ]
   }
 />

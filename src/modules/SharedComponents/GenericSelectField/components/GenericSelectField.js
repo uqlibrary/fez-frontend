@@ -106,6 +106,15 @@ export class GenericSelectFieldClass extends Component {
                 return this.props.selectedValue || '';
             }
         }
+        // if(this.props.multiple) {
+        //     defaultValue = this.props.hideLabel ? [-1] : [];
+        // } else {
+        //     defaultValue = this.props.hideLabel ?  '-1' : '';
+        // }
+        //
+        // return this.props.selectedValue && this.props.selectedValue.length > 0 && this.props.selectedValue || defaultValue;
+
+        // return this.props.selectedValue && this.props.selectedValue.length > 0 && this.props.selectedValue || (!!this.selectedValue && this.selectedValue) || defaultValue;
     };
 
     loadingIndicationText = () => this.props.itemsLoading ? this.props.loadingHint : this.props.hintText;

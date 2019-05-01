@@ -388,7 +388,7 @@ export default class NtroFields extends React.PureComponent {
                                         name="languages"
                                         disabled={this.props.submitting}
                                         label={metadata.fields.language.label}
-                                        required
+                                        required={false}
                                         multiple
                                         validate={[validation.requiredList]}
                                         defaultValue={this.props.defaultLanguage}

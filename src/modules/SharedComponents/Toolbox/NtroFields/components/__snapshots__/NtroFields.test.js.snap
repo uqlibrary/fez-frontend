@@ -490,7 +490,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             label="Language"
             multiple={true}
             name="languages"
-            required={true}
+            required={false}
             validate={
               Array [
                 [Function],
@@ -1028,7 +1028,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
             label="Language"
             multiple={true}
             name="languages"
-            required={true}
+            required={false}
             validate={
               Array [
                 [Function],
@@ -1443,7 +1443,7 @@ exports[`Component NtroFields should render default view 1`] = `
             label="Language"
             multiple={true}
             name="languages"
-            required={true}
+            required={false}
             validate={
               Array [
                 [Function],
@@ -1981,7 +1981,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             label="Language"
             multiple={true}
             name="languages"
-            required={true}
+            required={false}
             validate={
               Array [
                 [Function],
@@ -2467,7 +2467,7 @@ exports[`Component NtroFields should show significance field even if contributio
             label="Language"
             multiple={true}
             name="languages"
-            required={true}
+            required={false}
             validate={
               Array [
                 [Function],
