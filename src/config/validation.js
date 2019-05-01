@@ -116,7 +116,7 @@ export const authorAffiliationIncomplete = (author) => (
 );
 
 export const authorsAffiliationIncomplete = (authors) => {
-    return authors.some(author => (authorAffiliationIncomplete(author) === undefined))
+    return ((authors.toJS && authors.toJS()) || authors).some(author => !!authorAffiliationIncomplete(author))
         ? locale.validationErrors.authorsAffiliationIncomplete
         : undefined
     ;
