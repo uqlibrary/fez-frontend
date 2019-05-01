@@ -2,7 +2,7 @@
 
 exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
 <StandardPage
-  title="Fix an incomplete record"
+  title="Update my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
     publication={
@@ -887,7 +887,7 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
           title="Authors"
         >
           <WithStyles(Typography)>
-            Please complete affiliation data for all the authors.
+            Please complete affiliation data for each listed author.
           </WithStyles(Typography)>
           <Field
             component={[Function]}
@@ -906,9 +906,9 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
                       >
                         Step 2 of 2
                       </span>
-                       - Please 
+                       - 
                       <b>
-                        update the information
+                        Update the affiliation data
                       </b>
                        for the selected author below.
                     </div>,
@@ -940,11 +940,11 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
                       >
                         Step 1 of 2
                       </span>
-                       - Please 
+                       - 
                       <b>
-                        select an author
+                        Select an author
                       </b>
-                       below to edit.
+                       below to update affiliation data.
                     </div>,
                     "identifierColumn": "UQ identifier",
                     "nameColumn": "Author's name as published",
@@ -1123,7 +1123,7 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
 
 exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
 <StandardPage
-  title="Fix an incomplete record"
+  title="Update my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
     publication={
@@ -2008,7 +2008,7 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
           title="Authors"
         >
           <WithStyles(Typography)>
-            Please complete affiliation data for all the authors.
+            Please complete affiliation data for each listed author.
           </WithStyles(Typography)>
           <Field
             component={[Function]}
@@ -2027,9 +2027,9 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
                       >
                         Step 2 of 2
                       </span>
-                       - Please 
+                       - 
                       <b>
-                        update the information
+                        Update the affiliation data
                       </b>
                        for the selected author below.
                     </div>,
@@ -2061,11 +2061,11 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
                       >
                         Step 1 of 2
                       </span>
-                       - Please 
+                       - 
                       <b>
-                        select an author
+                        Select an author
                       </b>
-                       below to edit.
+                       below to update affiliation data.
                     </div>,
                     "identifierColumn": "UQ identifier",
                     "nameColumn": "Author's name as published",
@@ -2256,7 +2256,7 @@ exports[`Component MyIncompleteRecord should render loader when record is loadin
 
 exports[`Component MyIncompleteRecord should render record citation, two actions in select field and a cancel button 1`] = `
 <StandardPage
-  title="Fix an incomplete record"
+  title="Update my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
     publication={
@@ -3141,7 +3141,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
           title="Authors"
         >
           <WithStyles(Typography)>
-            Please complete affiliation data for all the authors.
+            Please complete affiliation data for each listed author.
           </WithStyles(Typography)>
           <Field
             component={[Function]}
@@ -3160,9 +3160,9 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
                       >
                         Step 2 of 2
                       </span>
-                       - Please 
+                       - 
                       <b>
-                        update the information
+                        Update the affiliation data
                       </b>
                        for the selected author below.
                     </div>,
@@ -3194,11 +3194,11 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
                       >
                         Step 1 of 2
                       </span>
-                       - Please 
+                       - 
                       <b>
-                        select an author
+                        Select an author
                       </b>
-                       below to edit.
+                       below to update affiliation data.
                     </div>,
                     "identifierColumn": "UQ identifier",
                     "nameColumn": "Author's name as published",
@@ -3377,7 +3377,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
 
 exports[`Component MyIncompleteRecord should render the confirm dialog box with an alert due to a file upload failure 1`] = `
 <StandardPage
-  title="Fix an incomplete record"
+  title="Update my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
     publication={
@@ -4268,7 +4268,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
           title="Authors"
         >
           <WithStyles(Typography)>
-            Please complete affiliation data for all the authors.
+            Please complete affiliation data for each listed author.
           </WithStyles(Typography)>
           <Field
             component={[Function]}
@@ -4287,9 +4287,9 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
                       >
                         Step 2 of 2
                       </span>
-                       - Please 
+                       - 
                       <b>
-                        update the information
+                        Update the affiliation data
                       </b>
                        for the selected author below.
                     </div>,
@@ -4321,11 +4321,11 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
                       >
                         Step 1 of 2
                       </span>
-                       - Please 
+                       - 
                       <b>
-                        select an author
+                        Select an author
                       </b>
-                       below to edit.
+                       below to update affiliation data.
                     </div>,
                     "identifierColumn": "UQ identifier",
                     "nameColumn": "Author's name as published",
@@ -4504,7 +4504,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
 
 exports[`Component MyIncompleteRecord should render the confirm dialog box without an alert due to a file upload success 1`] = `
 <StandardPage
-  title="Fix an incomplete record"
+  title="Update my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
     publication={
@@ -5389,7 +5389,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
           title="Authors"
         >
           <WithStyles(Typography)>
-            Please complete affiliation data for all the authors.
+            Please complete affiliation data for each listed author.
           </WithStyles(Typography)>
           <Field
             component={[Function]}
@@ -5408,9 +5408,9 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
                       >
                         Step 2 of 2
                       </span>
-                       - Please 
+                       - 
                       <b>
-                        update the information
+                        Update the affiliation data
                       </b>
                        for the selected author below.
                     </div>,
@@ -5442,11 +5442,11 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
                       >
                         Step 1 of 2
                       </span>
-                       - Please 
+                       - 
                       <b>
-                        select an author
+                        Select an author
                       </b>
-                       below to edit.
+                       below to update affiliation data.
                     </div>,
                     "identifierColumn": "UQ identifier",
                     "nameColumn": "Author's name as published",

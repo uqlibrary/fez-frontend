@@ -707,8 +707,8 @@ export default {
             title: 'Unpublished buffer'
         },
         incompletePublications: {
-            pageTitle: 'Incomplete records',
-            recordCount: 'Displaying incomplete records [recordsFrom] to [recordsTo] of [recordsTotal] total records. ',
+            pageTitle: 'My incomplete works',
+            recordCount: 'Displaying works [recordsFrom] to [recordsTo] of [recordsTotal] total works. ',
             loadingMessage: 'Searching for incomplete works',
             noResultsFound: {
                 title: 'No incomplete works found',
@@ -718,11 +718,11 @@ export default {
                     </div>
                 ),
             },
-            completeRecordButton: 'Complete record',
+            completeRecordButton: 'Update work',
             facetsFilter: {...locale.components.facetsFilter}
         },
         incompletePublication: {
-            title: 'Fix an incomplete record',
+            title: 'Update my work',
             submitButtonLabel: 'Complete my record',
             cancelButtonLabel: 'Cancel and return to my incomplete records list',
             fields: {

@@ -116,9 +116,9 @@ export default class MyIncompleteRecord extends PureComponent {
         const txt = pagesLocale.pages.incompletePublication;
         const txtFixForm = formsLocale.forms.fixPublicationForm;
         const authors = componentsLocale.components.authors;
-        authors.description = 'Please complete affiliation data for all the authors.';
-        authors.field.form.locale.descriptionStep1 = <div><span className="authorSteps" key="step-1">Step 2 of 2</span> - Please <b>update the information</b> for the selected author below.</div>;
-        authors.field.header.locale.descriptionStep2 = <div><span className="authorSteps" key="step-1">Step 1 of 2</span> - Please <b>select an author</b> below to edit.</div>;
+        authors.description = 'Please complete affiliation data for each listed author.';
+        authors.field.form.locale.descriptionStep1 = <div><span className="authorSteps" key="step-1">Step 2 of 2</span> - <b>Update the affiliation data</b> for the selected author below.</div>;
+        authors.field.header.locale.descriptionStep2 = <div><span className="authorSteps" key="step-1">Step 1 of 2</span> - <b>Select an author</b> below to update affiliation data.</div>;
 
         if (this.props.accountAuthorLoading || this.props.loadingRecordToFix) {
             return (
