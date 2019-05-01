@@ -482,21 +482,19 @@ export const getIncompleteRequestFields = (data) => {
         impactStatement = data.impactStatement.plainText;
     }
     if (!!impactStatement) {
-        result.fez_record_search_key_creator_contribution_statement = {
-            fez_record_search_key_creator_contribution_statement: [{
+        result.fez_record_search_key_creator_contribution_statement =
+            [{
                 rek_creator_contribution_statement: impactStatement,
                 rek_creator_contribution_statement_order: authorIdOrder
-            }]
-        };
+            }];
     }
 
     if (!!data.significance) {
-        result.fez_record_search_key_significance = {
-            fez_record_search_key_significance: [{
+        result.fez_record_search_key_significance =
+            [{
                 rek_significance: data.significance,
                 rek_significance_order: authorIdOrder
-            }]
-        };
+            }];
     }
 
     return result;
