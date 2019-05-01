@@ -2239,6 +2239,124 @@ exports[`Component ContributorRow should render row with non-UQ affiiliation and
 </WithStyles(Grid)>
 `;
 
+exports[`Component ContributorRow should render row with student author title in xs width 1`] = `
+<WithStyles(Grid)
+  classes={
+    Object {
+      "container": undefined,
+    }
+  }
+  container={true}
+>
+  <WithStyles(Grid)
+    item={true}
+    md={5}
+    sm={5}
+    xs={10}
+  >
+    <WithStyles(ListItemText)
+      disableTypography={true}
+      primary={
+        <WithStyles(Typography)
+          classes={
+            Object {
+              "root": "test1 undefined",
+            }
+          }
+          noWrap={true}
+          variant="body2"
+        />
+      }
+      secondary={
+        <WithStyles(Typography)
+          classes={
+            Object {
+              "root": "undefined",
+            }
+          }
+          noWrap={true}
+          variant="caption"
+        >
+          First  listed contributor
+        </WithStyles(Typography)>
+      }
+    />
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+    md={5}
+    sm={5}
+    xs={10}
+  >
+    <WithStyles(ListItemText)
+      disableTypography={true}
+      primary={
+        <WithStyles(Typography)
+          classes={
+            Object {
+              "root": "test2 undefined",
+            }
+          }
+          noWrap={true}
+          variant="body2"
+        >
+          Ms undefined
+        </WithStyles(Typography)>
+      }
+      secondary={
+        <WithStyles(Typography)
+          classes={
+            Object {
+              "root": "test3 undefined",
+            }
+          }
+          noWrap={true}
+          variant="caption"
+        >
+          The University of Queensland (studentUser)
+        </WithStyles(Typography)>
+      }
+    />
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+    md={5}
+    sm={5}
+    xs={10}
+  >
+    <WithStyles(ListItemText)
+      disableTypography={true}
+      primary={
+        <WithStyles(Typography)
+          classes={
+            Object {
+              "root": "test2 undefined",
+            }
+          }
+          noWrap={true}
+          variant="body2"
+        >
+          role
+        </WithStyles(Typography)>
+      }
+      secondary={
+        <WithStyles(Typography)
+          classes={
+            Object {
+              "root": "test3 undefined",
+            }
+          }
+          noWrap={true}
+          variant="caption"
+        >
+          
+        </WithStyles(Typography)>
+      }
+    />
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
+`;
+
 exports[`Component ContributorRow should render with missing aria label if selectHint prop is falsy 1`] = `
 <Fragment>
   <ConfirmDialogBox

@@ -15,73 +15,113 @@ function setup(testProps, isShallow = true) {
     return getElement(ContributorsEditor, props, isShallow);
 }
 
-describe('ContributorsEditor tests ', () => {
-    it('rendering full component with a defined className', () => {
+describe('ContributorsEditor', () => {
+    it('renders full component with a defined className', () => {
         const wrapper = setup({ className: 'requiredField' });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('rendering full component with identifier lookup', () => {
+    it('renders full component with identifier lookup', () => {
         const wrapper = setup({ showIdentifierLookup: true });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('rendering full component with role input', () => {
+    it('renders full component with role input', () => {
         const wrapper = setup({ showRoleInput: true });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('rendering full component with NTRO fields', () => {
+    it('renders full component with NTRO fields', () => {
         const wrapper = setup({ isNtro: true }, false);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('appending a contributor to the list', () => {
+    it('renders component in edit mode', () => {
+        const wrapper = setup({
+            editMode: true,
+            locale: {
+                form: {
+                    locale: {
+                        addButton: 'test'
+                    }
+                }
+            },
+            meta: {
+                initial: {
+                    toJS: () => ([{}])
+                }
+            }
+        });
+        wrapper.setState({
+            contributors: [{
+                selected: true
+            }],
+        }, () => {
+            expect(wrapper.instance().render()).toMatchSnapshot();
+        });
+    });
+
+    it('appends a contributor to the list', () => {
         const wrapper = setup({});
         expect(wrapper.state().contributors.length).toEqual(0);
-        wrapper.instance().addContributor({ displayName: "J.Smith" });
+        wrapper.instance().addContributor({ displayName: 'J.Smith' });
         expect(wrapper.state().contributors.length).toEqual(1);
     });
 
-    it('appending a contributor with identifier to the list', () => {
+    it('appends a contributor with identifier to the list', () => {
         const wrapper = setup({});
         expect(wrapper.state().contributors.length).toEqual(0);
         wrapper.instance().addContributor({
-            displayName: "J.Smith",
+            displayName: 'J.Smith',
             ...authorsSearch.data[0]
         });
         expect(wrapper.state().contributors.length).toEqual(1);
         expect(wrapper.state().isCurrentAuthorSelected).toEqual(false);
     });
 
-    it('appending a contributor with duplicate identifier to the list', () => {
+    it('appends a contributor with duplicate identifier to the list', () => {
         const wrapper = setup({});
         expect(wrapper.state().contributors.length).toEqual(0);
         wrapper.instance().addContributor({
-            displayName: "J.Smith",
+            displayName: 'J.Smith',
             ...authorsSearch.data[0]
         });
         expect(wrapper.state().contributors.length).toEqual(1);
         expect(wrapper.state().isCurrentAuthorSelected).toEqual(false);
         wrapper.instance().addContributor({
-            displayName: "J.Smith II",
+            displayName: 'J.Smith II',
             ...authorsSearch.data[0]
         });
         expect(wrapper.state().contributors.length).toEqual(1);
     });
 
-    it('appending a contributor with identifier who is a current author to the list', () => {
+    it('appends a contributor with identifier who is a current author to the list', () => {
         const wrapper = setup({ author: authorsSearch.data[0] });
         expect(wrapper.state().contributors.length).toEqual(0);
         wrapper.instance().addContributor({
-            displayName: "J.Smith",
+            displayName: 'J.Smith',
             ...authorsSearch.data[0]
         });
         expect(wrapper.state().contributors.length).toEqual(1);
         expect(wrapper.state().isCurrentAuthorSelected).toEqual(true);
     });
 
-    it('assigning a contributor to current author', async () => {
+    it('updates a contributor', () => {
+        const wrapper = setup({});
+        wrapper.setState({
+            contributors: [{
+                test: 'value1'
+            }, {
+                test: 'value2'
+            }, {
+                test: 'value3'
+            }]
+        });
+        wrapper.instance().updateContributor({ test: 'value4' }, 1);
+        expect(wrapper.state().contributors[1].test).toBe('value4');
+    });
+
+    it('assigns a contributor to current author', async () => {
         const wrapper = setup({
             author: {
                 aut_id: 101,
@@ -102,7 +142,30 @@ describe('ContributorsEditor tests ', () => {
         expect(wrapper.state().contributors[0].selected).toEqual(true);
     });
 
-    it('deleting a contributor from the list', () => {
+    it('chooses a contributor to edit', () => {
+        const wrapper = setup({});
+        wrapper.setState({
+            contributors: [{
+                selected: true
+            }, {
+                selected: false
+            }, {
+                selected: false
+            }]
+        });
+        wrapper.instance().chooseToEdit(1);
+        expect(wrapper.state().contributors).toEqual([
+            {
+                selected: false
+            }, {
+                selected: true
+            }, {
+                selected: false
+            }
+        ]);
+    });
+
+    it('deletes a contributor from the list', () => {
         const wrapper = setup({});
         wrapper.setState({
             contributors: [{}, {}, {}],
@@ -113,13 +176,13 @@ describe('ContributorsEditor tests ', () => {
         expect(wrapper.state().contributors.length).toEqual(2);
     });
 
-    it('deleting all contributors from a list', () => {
+    it('deletes all contributors from a list', () => {
         const wrapper = setup({});
         wrapper.setState({
             contributors: [
-                { "nameAsPublished": "One", "disabled": false },
-                { "nameAsPublished": "Two", "disabled": false },
-                { "nameAsPublished": "Three", "disabled": false }
+                { 'nameAsPublished': 'One', 'disabled': false },
+                { 'nameAsPublished': 'Two', 'disabled': false },
+                { 'nameAsPublished': 'Three', 'disabled': false }
             ], isCurrentAuthorSelected: true
         });
         expect(wrapper.state().contributors.length).toEqual(3);
@@ -128,7 +191,7 @@ describe('ContributorsEditor tests ', () => {
         expect(wrapper.state().isCurrentAuthorSelected).toEqual(false);
     });
 
-    it('moving up a contributor', () => {
+    it('moves up a contributor', () => {
         const wrapper = setup({});
         wrapper.setState({
             contributors: [
@@ -144,7 +207,7 @@ describe('ContributorsEditor tests ', () => {
         expect(wrapper.state().contributors[1].displayName).toEqual(1);
     });
 
-    it('moving down a contributor', () => {
+    it('moves down a contributor', () => {
         const wrapper = setup({});
         wrapper.setState({
             contributors: [
@@ -168,7 +231,56 @@ describe('ContributorsEditor tests ', () => {
             isCurrentAuthorSelected: false,
             contributors: [{ nameAsPublished: 1 }],
         });
-        expect(wrapper.instance().renderContributorRows()).toMatchSnapshot();
+        expect(wrapper.instance().renderContributorRows()[0].props.showContributorAssignment).toBe(true);
+    });
+
+    it('returns array of contributor rows in edit mode with chooseToEdit select handler', () => {
+        const wrapper = setup({
+            editMode: true
+        });
+        const testFn = jest.fn();
+        wrapper.instance().chooseToEdit = testFn;
+        wrapper.setState({
+            contributors: [{
+                nameAsPublished: 1
+            }]
+        })
+        expect(wrapper.instance().renderContributorRows()[0].props.onSelect).toBe(testFn);
+    });
+
+    it('returns contributor form with expected props', () => {
+        const wrapper = setup({
+            contributors: [
+                { nameAsPublished: 1 }
+            ]
+        });
+        const testFn = jest.fn();
+        expect(wrapper.instance().renderContributorForm(testFn, 0)).toMatchSnapshot();
+
+        wrapper.setProps({
+            editMode: true,
+            locale: {
+                form: {
+                    locale: {
+                        addButton: 'test'
+                    }
+                }
+            },
+            meta: {
+                initial: {
+                    toJS: () => ([{}])
+                }
+            }
+        });
+        const contributorForm = wrapper.instance().renderContributorForm(testFn, 0);
+        expect(contributorForm).toMatchSnapshot();
+
+        const testObj = {
+            nameAsPublished: 2
+        };
+        contributorForm.props.onSubmit(testObj);
+        expect(testFn).toBeCalledWith(testObj, 0);
+
     });
 
     // Tests for infinite scroll appear or not

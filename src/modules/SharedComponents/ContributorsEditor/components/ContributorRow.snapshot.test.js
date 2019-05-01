@@ -505,4 +505,23 @@ describe('Component ContributorRow', () => {
             wrapper.instance().getContributorRowText()
         ).toMatchSnapshot();
     });
+
+    it('should render row with student author title in xs width', () => {
+        const wrapper = setup({
+            contributor: {
+                aut_title: 'Ms',
+                aut_student_username: 'studentUser',
+                creatorRole: 'role',
+            },
+            classes: {
+                primary: 'test1',
+                identifierName: 'test2',
+                identifierSubtitle: 'test3',
+            },
+            width: 'xs',
+        });
+        expect(
+            wrapper.instance().getContributorRowText()
+        ).toMatchSnapshot();
+    });
 });

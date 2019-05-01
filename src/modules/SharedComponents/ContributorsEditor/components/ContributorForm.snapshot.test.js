@@ -47,6 +47,31 @@ describe('Component ContributorForm', () => {
         expect(wrapper.state().nameAsPublished).toEqual('J. Smith');
     });
 
+    it('should call event handler on submit if all checks pass', () => {
+        const testFn = jest.fn();
+        const wrapper = setup({
+            onSubmit: testFn,
+        });
+        const state = {
+            nameAsPublished: 'Firstname Lastname',
+            affiliation: 'UQ',
+            orgaff: '',
+            orgtype: '',
+            creatorRole: '',
+            contributor: {},
+        };
+        wrapper.setState(state);
+        const event = {
+            key: 'Enter'
+        };
+        wrapper.instance()._onSubmit(event);
+        delete state.contributor;
+        expect(testFn).toBeCalledWith({
+            ...state,
+            uqIdentifier: undefined,
+        });
+    });
+
     it('should not add contributor if key is not Enter', () => {
         const onAddFn = jest.fn();
         const wrapper = setup({
@@ -219,6 +244,52 @@ describe('Component ContributorForm', () => {
             showIdentifierLookup: true
         }, true);
         expect(wrapper.find('#creatorRoleField').parent().prop('md')).toBe(3);
+    });
+
+    it('should process prop updates', () => {
+        const contributor1 = { test1: 'value1' };
+        const contributor2 = { test1: 'value2' };
+        const wrapper = setup({
+            contributor: contributor1,
+            test1: 'value1',
+            test2: 'value3',
+        });
+        const before = wrapper.state();
+        wrapper.instance().componentWillReceiveProps({
+            contributor: contributor1,
+            test2: 'value4',
+        });
+        expect(wrapper.state()).toEqual(before);
+
+        wrapper.instance().componentWillReceiveProps({
+            contributor: contributor2
+        });
+        expect(wrapper.state().contributor).toBe(contributor2);
+        expect(wrapper.state().test1).toBe('value2');
+
+        wrapper.instance().componentWillReceiveProps({});
+        expect(wrapper.state().contributor).toEqual({});
+    });
+
+    it('should be able to save selected item object to contributor state', () => {
+        const wrapper = setup({});
+        const testFn = jest.spyOn(wrapper.instance(), '_onSubmit');
+        wrapper.instance()._onUQIdentifierSelected({});
+        expect(wrapper.state().contributor).toEqual({});
+        expect(testFn).toBeCalled();
+    });
+
+    it('should clear uqIdentifier state if affiliation is changed to "NotUQ"', () => {
+        const wrapper = setup({});
+        wrapper.setState({
+            uqIdentifier: '100'
+        });
+        wrapper.instance().handleAffiliationChange({
+            target: {
+                value: 'NotUQ'
+            }
+        });
+        expect(wrapper.state().uqIdentifier).toBe('');
     });
 
 });

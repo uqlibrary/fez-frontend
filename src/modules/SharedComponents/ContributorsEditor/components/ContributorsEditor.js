@@ -206,7 +206,7 @@ export class ContributorsEditor extends PureComponent {
 
         return contributors.map((contributor, index) => (
             <ContributorRow
-                {...((locale || {}).row || {})}
+                {...(locale.row || {})}
                 canMoveDown={index !== contributors.length - 1}
                 canMoveUp={index !== 0}
                 contributor={contributor}
@@ -229,7 +229,7 @@ export class ContributorsEditor extends PureComponent {
         const formProps = {
             ...this.props,
             isContributorAssigned: !!this.state.contributors,
-            locale: ((this.props.locale || {}).form || {}).locale,
+            locale: (this.props.locale.form || {}).locale,
             onSubmit: contributor => onSubmit(contributor, index),
         };
 
@@ -301,7 +301,7 @@ export class ContributorsEditor extends PureComponent {
                         <Grid item xs={12}>
                             <List>
                                 <ContributorRowHeader
-                                    {...((this.props.locale || {}).header || {})}
+                                    {...(this.props.locale.header || {})}
                                     disabled={disabled}
                                     hideDelete={hideDelete}
                                     isInfinite={contributors.length > 3}
