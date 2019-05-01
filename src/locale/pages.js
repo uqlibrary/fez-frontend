@@ -210,7 +210,7 @@ export default {
             },
             incompleteRecordLure: {
                 title: 'NTRO Data Required',
-                message: 'We have found [count] record[plural] that require[verbEnding] additional data.',
+                message: 'We have found [count] work[plural] that require[verbEnding] additional data.',
                 type: 'warning',
                 actionButtonLabel: 'View and Update'
             },
