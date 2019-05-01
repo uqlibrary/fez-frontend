@@ -30,7 +30,7 @@ exports[`Component PublicationForm should render properly with non-matching doct
             "text": <p>
               For more information about each type, click 
               <a
-                href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-tradtional-research-ouptuts"
+                href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
                 style={
                   Object {
                     "fontWeight": 700,
