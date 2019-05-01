@@ -1,6 +1,6 @@
 import React, { PureComponent, Fragment } from 'react';
 import PropTypes from 'prop-types';
-import { numberToWords } from 'config';
+import { numberToWords, validation } from 'config';
 import { ORG_TYPES_LOOKUP } from 'config/general';
 import { locale } from 'locale';
 
@@ -51,6 +51,9 @@ export const styles = (theme) => ({
         '&:before': {
             content: '"UQ Username: "'
         }
+    },
+    highlighted: {
+        borderLeft: '5px solid red'
     }
 });
 
@@ -214,8 +217,22 @@ export class ContributorRow extends PureComponent {
     };
 
     render() {
-        const { deleteRecordConfirmation, moveUpHint, moveDownHint, deleteHint, selectHint } = this.props.locale;
-        const { contributor, canMoveDown, canMoveUp, disabled, classes, hideReorder, hideDelete } = this.props;
+        const {
+            deleteRecordConfirmation,
+            moveUpHint,
+            moveDownHint,
+            deleteHint,
+            selectHint
+        } = this.props.locale;
+        const {
+            contributor,
+            canMoveDown,
+            canMoveUp,
+            disabled,
+            classes,
+            hideReorder,
+            hideDelete
+        } = this.props;
 
         const ariaLabel = (
             selectHint &&
@@ -226,6 +243,7 @@ export class ContributorRow extends PureComponent {
             ;
         const enableSelect = this.props.showContributorAssignment;
         const selectedClass = contributor.selected ? classes.selected : '';
+        const highlighted = !!validation.authorAffiliationIncomplete(contributor);
 
         return (
             <Fragment>
@@ -237,7 +255,11 @@ export class ContributorRow extends PureComponent {
                 <ListItem
                     style={{ cursor: 'pointer', width: '98%', margin: '0 1%' }}
                     divider
-                    classes={{ root: contributor.selected ? classes.rowSelected : '' }}
+                    classes={{ root: `${
+                        contributor.selected && classes.rowSelected
+                    } ${
+                        highlighted && classes.highlighted
+                    }` }}
                     tabIndex={0}
                     onClick={enableSelect ? this._onSelect : () => { }}
                     onKeyDown={enableSelect ? this._onSelectKeyboard : () => { }}

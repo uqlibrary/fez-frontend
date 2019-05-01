@@ -116,8 +116,9 @@ export default class MyIncompleteRecord extends PureComponent {
         const txt = pagesLocale.pages.incompletePublication;
         const txtFixForm = formsLocale.forms.fixPublicationForm;
         const authors = componentsLocale.components.authors;
-        authors.field.form.locale.descriptionStep1 = 'Please update the information for the selected author below.';
-        authors.field.header.locale.descriptionStep2 = 'Please select an author below to edit.';
+        authors.description = 'Please complete affiliation data for all the authors.';
+        authors.field.form.locale.descriptionStep1 = <div><span className="authorSteps" key="step-1">Step 2 of 2</span> - Please <b>update the information</b> for the selected author below.</div>;
+        authors.field.header.locale.descriptionStep2 = <div><span className="authorSteps" key="step-1">Step 1 of 2</span> - Please <b>select an author</b> below to edit.</div>;
 
         if (this.props.accountAuthorLoading || this.props.loadingRecordToFix) {
             return (
@@ -175,7 +176,7 @@ export default class MyIncompleteRecord extends PureComponent {
                                     name="authors"
                                     required
                                     showContributorAssignment
-                                    validate={[validation.authorAffiliationComplete]}
+                                    validate={[validation.authorsAffiliationIncomplete]}
                                 />
                             </StandardCard>
                         </Grid>

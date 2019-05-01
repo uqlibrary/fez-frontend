@@ -102,17 +102,24 @@ export const authorRequired = (authors) => peopleRequired(authors, locale.valida
 export const editorRequired = (editors) => peopleRequired(editors, locale.validationErrors.editorRequired, true);
 export const supervisorRequired = (supervisors) => peopleRequired(supervisors, locale.validationErrors.supervisorRequired, false);
 
-export const authorAffiliationComplete = (authors) => {
-    return authors.some(author => (
-        (author.nameAsPublished || '').trim().length === 0 ||
+export const authorAffiliationIncomplete = (author) => (
+    (author.nameAsPublished || '').trim().length === 0 ||
+    (
+        author.affiliation === 'NotUQ' &&
         (
-            author.affiliation === 'NotUQ' &&
-            (
-                (author.orgaff || '').trim().length === 0 ||
-                (author.orgtype || '').trim().length === 0
-            )
+            (author.orgaff || '').trim().length === 0 ||
+            (author.orgtype || '').trim().length === 0
         )
-    )) ? locale.validationErrors.authorAffiliationIncomplete : undefined;
+    )
+        ? locale.validationErrors.authorAffiliationIncomplete
+        : undefined
+);
+
+export const authorsAffiliationIncomplete = (authors) => {
+    return authors.some(author => (authorAffiliationIncomplete(author) === undefined))
+        ? locale.validationErrors.authorsAffiliationIncomplete
+        : undefined
+    ;
 };
 
 // DateTime
