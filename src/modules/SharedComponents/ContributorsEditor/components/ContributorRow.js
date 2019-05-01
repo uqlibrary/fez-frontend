@@ -256,10 +256,10 @@ export class ContributorRow extends PureComponent {
                     style={{ cursor: 'pointer', width: '98%', margin: '0 1%' }}
                     divider
                     classes={{ root: `${
-                        contributor.selected && classes.rowSelected
+                        contributor.selected && classes.rowSelected || ''
                     } ${
-                        highlighted && classes.highlighted
-                    }` }}
+                        highlighted && classes.highlighted || ''
+                    }`.trim() }}
                     tabIndex={0}
                     onClick={enableSelect ? this._onSelect : () => { }}
                     onKeyDown={enableSelect ? this._onSelectKeyboard : () => { }}
