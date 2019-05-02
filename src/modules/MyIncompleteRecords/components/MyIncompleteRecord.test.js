@@ -542,4 +542,15 @@ describe('Cards', () => {
 
     });
 
+    it('should redirect to other pages', () => {
+        const testMethod = jest.fn();
+        const goBack = jest.fn();
+
+        const wrapper = setup({recordToFix: mockRecordToFix, history: {push: testMethod, goBack: goBack}});
+        wrapper.instance()._navigateToMyIncomplete();
+        expect(testMethod).toHaveBeenCalledWith('/records/incomplete');
+
+        wrapper.instance()._navigateToDashboard();
+        expect(testMethod).toHaveBeenCalledWith('/dashboard');
+    });
 });
