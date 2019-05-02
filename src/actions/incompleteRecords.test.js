@@ -103,7 +103,7 @@ describe('updateIncompleteRecord actions', () => {
     it('should handle plain text impactStatement', async () => {
         const testInput = {
             publication: {
-                ...mockData.mockRecordToFix,
+                ...mockRecordToFix
             },
             impactStatement: {
                 plainText: 'dummy'
@@ -121,14 +121,14 @@ describe('updateIncompleteRecord actions', () => {
             actions.FIX_RECORD_SUCCESS
         ];
 
-        await mockActionsStore.dispatch(incompleteRecords.updateIncompleteRecord(testInput));
+        await mockActionsStore.dispatch(updateIncompleteRecord(testInput));
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
     it('should handle significance', async () => {
         const testInput = {
             publication: {
-                ...mockData.mockRecordToFix,
+                ...mockRecordToFix,
             },
             significance: 454026,
             author: {
@@ -144,7 +144,7 @@ describe('updateIncompleteRecord actions', () => {
             actions.FIX_RECORD_SUCCESS
         ];
 
-        await mockActionsStore.dispatch(incompleteRecords.updateIncompleteRecord(testInput));
+        await mockActionsStore.dispatch(updateIncompleteRecord(testInput));
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
@@ -177,7 +177,7 @@ describe('updateIncompleteRecord actions', () => {
     //     ];
 
     //     try {
-    //         await mockActionsStore.dispatch(incompleteRecords.updateIncompleteRecord({}));
+    //         await mockActionsStore.dispatch(updateIncompleteRecord({}));
     //     } catch (e) {
     //         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     //     }
@@ -186,7 +186,7 @@ describe('updateIncompleteRecord actions', () => {
     it('dispatches updated contributor id', async () => {
         const testInput = {
             publication: {
-                ...mockData.mockRecordToFix,
+                ...mockRecordToFix,
                 fez_record_search_key_author_id: [
                     {
                         rek_author_id: 123
@@ -211,14 +211,14 @@ describe('updateIncompleteRecord actions', () => {
             actions.FIX_RECORD_SUCCESS
         ];
 
-        await mockActionsStore.dispatch(incompleteRecords.updateIncompleteRecord(testInput));
+        await mockActionsStore.dispatch(updateIncompleteRecord(testInput));
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
     it('dispatches failure where Current author is not linked to this record', async () => {
         const testInput = {
             publication: {
-                ...mockData.mockRecordToFix,
+                ...mockRecordToFix,
             },
             author: {
                 aut_id: 124
@@ -235,7 +235,7 @@ describe('updateIncompleteRecord actions', () => {
         ];
 
         try {
-            await mockActionsStore.dispatch(incompleteRecords.updateIncompleteRecord(testInput));
+            await mockActionsStore.dispatch(updateIncompleteRecord(testInput));
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         } catch (e) {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
@@ -245,7 +245,7 @@ describe('updateIncompleteRecord actions', () => {
     it('dispatches expected actions for successful file upload', async () => {
         const testInput = {
             publication: {
-                ...mockData.mockRecordToFix,
+                ...mockRecordToFix,
                 fez_record_search_key_author_id: [
                     {
                         rek_author_id: 123
@@ -285,12 +285,12 @@ describe('updateIncompleteRecord actions', () => {
             .onPut('s3-ap-southeast-2.amazonaws.com', {"name": "test.txt"})
             .reply(200, {})
             .onPatch(repositories.routes.EXISTING_RECORD_API({pid: testPid}).apiUrl)
-            .reply(200, {data: {...mockData.mockRecordToFix}})
+            .reply(200, {data: {...mockRecordToFix}})
             .onPost(repositories.routes.RECORDS_ISSUES_API({pid: testPid}).apiUrl)
             .reply(200, {});
 
         try {
-            await mockActionsStore.dispatch(incompleteRecords.updateIncompleteRecord(testInput));
+            await mockActionsStore.dispatch(updateIncompleteRecord(testInput));
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         } catch (e) {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
@@ -300,7 +300,7 @@ describe('updateIncompleteRecord actions', () => {
     it('dispatches failure on api error', async () => {
         const testInput = {
             publication: {
-                ...mockData.mockRecordToFix,
+                ...mockRecordToFix,
                 fez_record_search_key_author_id: [
                     {
                         rek_author_id: 123
@@ -327,7 +327,7 @@ describe('updateIncompleteRecord actions', () => {
             .onAny()
             .reply(500, {});
        try {
-            await mockActionsStore.dispatch(incompleteRecords.updateIncompleteRecord(testInput));
+            await mockActionsStore.dispatch(updateIncompleteRecord(testInput));
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         } catch (e) {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
@@ -337,7 +337,7 @@ describe('updateIncompleteRecord actions', () => {
     it('see what happens when the author isnt on the list', async () => {
         const testInput = {
             publication: {
-                ...mockData.mockRecordToFix,
+                ...mockRecordToFix,
                 fez_record_search_key_author_id: [
                     {
                         rek_author_id: 123
@@ -362,7 +362,7 @@ describe('updateIncompleteRecord actions', () => {
         ];
 
         try {
-            await mockActionsStore.dispatch(incompleteRecords.updateIncompleteRecord(testInput));
+            await mockActionsStore.dispatch(updateIncompleteRecord(testInput));
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         } catch (e) {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);

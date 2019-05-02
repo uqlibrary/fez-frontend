@@ -155,10 +155,11 @@ export class DashboardClass extends PureComponent {
                     <PublicationStats publicationsStats={this.props.publicationsStats}/>
                 </StandardCard>
             ) : null;
-        /* istanbul ignore else */
-        const pluralTextReplacement = this.props.incompleteRecordList && this.props.incompleteRecordList.length > 1 ? 's' : '';
-        /* istanbul ignore else */
-        const verbEndingTextReplacement = this.props.incompleteRecordList && this.props.incompleteRecordList.length > 1 ? '' : 's';
+        const pluralTextReplacement = this.props.incompleteRecordList && this.props.incompleteRecordList.publicationsListPagingData
+                                       && this.props.incompleteRecordList.publicationsListPagingData.total > 1 ? 's' : '';
+        const verbEndingTextReplacement = this.props.incompleteRecordList && this.props.incompleteRecordList.publicationsListPagingData
+                                       && this.props.incompleteRecordList.publicationsListPagingData.total > 1 ? '' : 's';
+
         return (
             <StandardPage>
                 <Grid container spacing={24}>
