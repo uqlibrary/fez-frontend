@@ -81,11 +81,9 @@ export const required = value => value ? undefined : locale.validationErrors.req
 export const requireChecked = value => value === 'on' ? undefined : locale.validationErrors.requireChecked;
 
 export const requiredList = value => {
-    if(value instanceof Immutable.List) {
-        return value.toJS() && value.toJS().length > 0 ? undefined : locale.validationErrors.required;
-    } else {
-        return value && value.length > 0 ? undefined : locale.validationErrors.required;
-    }
+    return ((value instanceof Immutable.List) && value.toJS() || value || []).length > 0
+        ? undefined
+        : locale.validationErrors.required;
 };
 
 export const email = value => !value || !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value) ? locale.validationErrors.email : undefined;
