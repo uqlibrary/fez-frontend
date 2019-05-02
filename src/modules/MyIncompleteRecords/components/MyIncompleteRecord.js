@@ -107,10 +107,10 @@ export default class MyIncompleteRecord extends PureComponent {
 
     render() {
         // if author is not linked to this record, abandon form
-        // if (!(this.props.accountAuthorLoading || this.props.loadingRecordToFix) && !this.isAuthorLinked()) {
-        //     this.props.history.go(-1);
-        //     return <div />;
-        // }
+        if (!(this.props.accountAuthorLoading || this.props.loadingRecordToFix) && !this.isAuthorLinked()) {
+            this.props.history.go(-1);
+            return <div />;
+        }
 
         const isNtro = !!this.props.recordToFix && !!this.props.recordToFix.rek_subtype && !!general.NTRO_SUBTYPES.includes(this.props.recordToFix.rek_subtype);
 
