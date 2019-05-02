@@ -30,7 +30,7 @@ export default {
         pageRange: 'Please provide a valid start/end page range',
         remindToAdd: 'Please remember to click ADD to add this item to your list',
         requireChecked: 'Please accept deposit agreement',
-        authorsAffiliationIncomplete: 'Please update affiliation data for each listed author',
+        authorsAffiliationIncomplete: 'Rows marked with a red prefix must be updated',
         authorAffiliationIncomplete: 'Please update affiliation data for the selected author',
     },
     validationErrorsSummary: {
