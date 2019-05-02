@@ -39,7 +39,7 @@ export default {
             "fez_record_search_key_assigned_group_id": [],
             "fez_record_search_key_assigned_user_id": [],
             "fez_record_search_key_author": [{
-                "rek_author_id": null,
+                "rek_author_id": 410,
                 "rek_author_pid": "UQ:678742",
                 "rek_author": "Pedroso, Marcelo Monteiro",
                 "rek_author_order": 1
@@ -231,7 +231,7 @@ export default {
             "fez_record_search_key_author_id": [{
                 "rek_author_id_id": null,
                 "rek_author_id_pid": "UQ:678742",
-                "rek_author_id": 0,
+                "rek_author_id": 410,
                 "rek_author_id_order": 1
             }, {
                 "rek_author_id_id": null,

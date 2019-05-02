@@ -40,7 +40,7 @@ export default class MyIncompleteRecord extends PureComponent {
 
     componentDidMount() {
         if (this.props.actions &&
-            // !this.props.recordToFix &&
+            !this.props.recordToFix &&
             this.props.match.params && this.props.match.params.pid) {
             this.props.actions.loadRecordToFix(this.props.match.params.pid);
         }
@@ -121,9 +121,7 @@ export default class MyIncompleteRecord extends PureComponent {
                 {saveConfirmationLocale.confirmationMessage}
             </React.Fragment>
         );
-        const hasAnyFiles = this.props.recordToFix.fez_datastream_info.length > 0 ?
-            this.props.recordToFix.fez_datastream_info.length
-            : 0;
+        const hasAnyFiles = this.props.recordToFix && this.props.recordToFix.fez_datastream_info && this.props.recordToFix.fez_datastream_info.length || 0;
         return (
             <StandardPage title={txt.title}>
                 <PublicationCitation publication={this.props.recordToFix} />
