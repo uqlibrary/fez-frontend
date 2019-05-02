@@ -1,5 +1,4256 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Cards will display correct empty fields for a Exhibition Creative Work work 1`] = `
+<StandardPage
+  title="Fix an incomplete record"
+>
+  <withRouter(Connect(WithStyles(PublicationCitation)))
+    publication={
+      Object {
+        "fez_record_search_key_audience_size": null,
+        "fez_record_search_key_author": Array [
+          Object {
+            "rek_author": "Brown, M. A.",
+            "rek_author_id": 30038090,
+            "rek_author_order": 2,
+            "rek_author_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author": "He, Y.",
+            "rek_author_id": 30038089,
+            "rek_author_order": 1,
+            "rek_author_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author": "Rothnagel, J. A.",
+            "rek_author_id": 30038091,
+            "rek_author_order": 3,
+            "rek_author_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author": "Saunders, N. A.",
+            "rek_author_id": 30038092,
+            "rek_author_order": 4,
+            "rek_author_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author": "Smith, R.",
+            "rek_author_id": 30038093,
+            "rek_author_order": 5,
+            "rek_author_pid": "UQ:41878",
+          },
+        ],
+        "fez_record_search_key_author_id": Array [
+          Object {
+            "rek_author_id": 0,
+            "rek_author_id_id": 29384218,
+            "rek_author_id_order": 1,
+            "rek_author_id_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author_id": 410,
+            "rek_author_id_id": 29384219,
+            "rek_author_id_order": 2,
+            "rek_author_id_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author_id": 786,
+            "rek_author_id_id": 29384220,
+            "rek_author_id_order": 3,
+            "rek_author_id_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author_id": 687,
+            "rek_author_id_id": 29384221,
+            "rek_author_id_order": 4,
+            "rek_author_id_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author_id": 4100,
+            "rek_author_id_id": 29384222,
+            "rek_author_id_order": 5,
+            "rek_author_id_pid": "UQ:41878",
+          },
+        ],
+        "fez_record_search_key_creator_contribution_statement": null,
+        "fez_record_search_key_end_page": Object {
+          "rek_end_page": "253A",
+          "rek_end_page_id": 5708077,
+          "rek_end_page_pid": "UQ:41878",
+        },
+        "fez_record_search_key_issue_number": null,
+        "fez_record_search_key_journal_name": Object {
+          "rek_journal_name": "Molecular Biology of The Cell",
+          "rek_journal_name_id": 5236446,
+          "rek_journal_name_pid": "UQ:41878",
+        },
+        "fez_record_search_key_language": null,
+        "fez_record_search_key_place_of_publication": Object {
+          "rek_place_of_publication": "Bethesda",
+          "rek_place_of_publication_id": 4343575,
+          "rek_place_of_publication_pid": "UQ:41878",
+        },
+        "fez_record_search_key_publisher": Object {
+          "rek_publisher": "American Society for Cell Biology",
+          "rek_publisher_id": 4629173,
+          "rek_publisher_pid": "UQ:41878",
+        },
+        "fez_record_search_key_quality_indicator": null,
+        "fez_record_search_key_significance": null,
+        "fez_record_search_key_start_page": Object {
+          "rek_start_page": "252A",
+          "rek_start_page_id": 5781267,
+          "rek_start_page_pid": "UQ:41878",
+        },
+        "fez_record_search_key_total_chapters": null,
+        "fez_record_search_key_total_pages": null,
+        "fez_record_search_key_volume_number": Object {
+          "rek_volume_number": "15",
+          "rek_volume_number_id": 5294487,
+          "rek_volume_number_pid": "UQ:41878",
+        },
+        "rek_citation": "blah blah blah",
+        "rek_date": "2004-01-01T00:00:00Z",
+        "rek_display_type": 313,
+        "rek_display_type_lookup": "Creative Work",
+        "rek_formatted_abstract": null,
+        "rek_genre": "Creative",
+        "rek_object_type": 3,
+        "rek_pid": "UQ:41878",
+        "rek_status": 2,
+        "rek_subtype": "Curated or Produced Exhibition or Event - Exhibition or Event",
+        "rek_title": "Article Title",
+      }
+    }
+  />
+  <p>
+    <b>
+      Display Type
+    </b>
+     (for dev): 
+    Creative Work
+  </p>
+  <p>
+    <b>
+      Subtype
+    </b>
+     (for dev) : 
+    Curated or Produced Exhibition or Event - Exhibition or Event
+  </p>
+  <form
+    onSubmit={[Function]}
+  >
+    <NavigationDialogBox
+      txt={
+        Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to cancel this request?",
+          "confirmationTitle": "Cancel request",
+        }
+      }
+      when={true}
+    />
+    <ConfirmDialogBox
+      hideCancelButton={false}
+      locale={
+        Object {
+          "cancelButtonLabel": "Complete another record",
+          "confirmButtonLabel": "Go to my incomplete research list",
+          "confirmationMessage": <React.Fragment />,
+          "confirmationTitle": "Your work has been updated",
+          "fileFailConfirmationAlert": Object {
+            "message": "File upload and/or notes post failed",
+            "title": "UPLOAD FAILED",
+            "type": "warning",
+          },
+        }
+      }
+      onAction={[Function]}
+      onCancelAction={[Function]}
+      onRef={[Function]}
+    />
+    <WithStyles(Grid)
+      container={true}
+      spacing={24}
+    >
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(Alert)
+          message="This record has missing data - enter all fields to give a quality record."
+          title="Missing data"
+          type="info_outline"
+        />
+      </WithStyles(Grid)>
+      <NtroFields
+        defaultLanguage="eng"
+        hideAbstract={false}
+        hideAudienceSize={false}
+        hideEndPage={true}
+        hideExtent={false}
+        hideGrants={true}
+        hideIsmn={true}
+        hideIsrc={true}
+        hideIssue={true}
+        hideLanguage={false}
+        hideOriginalFormat={true}
+        hidePeerReviewActivity={false}
+        hideSeries={true}
+        hideStartPage={true}
+        hideVolume={true}
+        locale={
+          Object {
+            "contributionStatement": Object {
+              "fields": Object {
+                "impactStatement": Object {
+                  "label": <span>
+                    Creator research statement*. Include Background, Contribution and Significance 
+                    <span
+                      style={
+                        Object {
+                          "fontWeight": 700,
+                        }
+                      }
+                    >
+                      (not for public view)
+                    </span>
+                  </span>,
+                  "placeholder": "Remember to include substantiation of your Major or Minor Scale/Significance claim above.",
+                },
+                "scaleOfWork": Object {
+                  "description": "Select the option that best describes the significance of the work.",
+                  "label": <span>
+                    Scale/Significance of work* 
+                    <span
+                      style={
+                        Object {
+                          "fontWeight": 700,
+                        }
+                      }
+                    >
+                      (not for public view)
+                    </span>
+                  </span>,
+                },
+              },
+              "help": Object {
+                "buttonLabel": "CLOSE",
+                "text": <React.Fragment>
+                  <h3>
+                    Creator research statement
+                  </h3>
+                  <p>
+                    For more information about the research statement, click  
+                    <b>
+                      <a
+                        href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836548"
+                        style={
+                          Object {
+                            "fontWeight": 700,
+                          }
+                        }
+                        target="_blank"
+                      >
+                        here
+                      </a>
+                    </b>
+                  </p>
+                </React.Fragment>,
+                "title": "Author/Creator research statement",
+              },
+              "title": "Author/Creator research statement",
+            },
+            "grantEditor": Object {
+              "title": "Grant details",
+            },
+            "metadata": Object {
+              "fields": Object {
+                "abstract": Object {
+                  "label": <span>
+                    Abstract/Description* 
+                    <span
+                      style={
+                        Object {
+                          "fontWeight": 700,
+                        }
+                      }
+                    >
+                      (for public view)
+                    </span>
+                  </span>,
+                  "placeholder": "Enter a brief description of the work",
+                },
+                "audienceSize": Object {
+                  "label": "Audience size",
+                },
+                "endPage": Object {
+                  "label": "End page",
+                },
+                "extent": Object {
+                  "label": "Total pages/Extent",
+                  "placeholder": "Enter total pages, size or duration of work",
+                },
+                "issue": Object {
+                  "label": "Issue",
+                },
+                "language": Object {
+                  "label": "Language",
+                },
+                "notes": Object {
+                  "label": "Notes",
+                },
+                "peerReviewActivity": Object {
+                  "label": "Quality indicators",
+                },
+                "physicalDescription": Object {
+                  "label": "Physical description",
+                  "placeholder": "Building, Exhibition, Performance, Composition",
+                },
+                "series": Object {
+                  "floatingLabelText": "Series",
+                  "hintText": "Enter the name of publication, performance, recording, or event series",
+                },
+                "startPage": Object {
+                  "label": "Start page",
+                },
+                "volume": Object {
+                  "label": "Volume",
+                },
+              },
+              "title": "NTRO data",
+            },
+          }
+        }
+        showContributionStatement={true}
+        showSignificance={true}
+        submitting={false}
+      />
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          title="Grant information"
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            name="grants"
+          />
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          title="Notes"
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            fullWidth={true}
+            label="Notes for this record"
+            multiline={true}
+            name="notes"
+            placeholder="Add any other notes or comments about this record to send to the eSpace team."
+            rows={5}
+            type="text"
+          />
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          title="Upload files"
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            failedAlertLocale={
+              Object {
+                "actionButtonLabel": "RESUBMIT YOUR THESIS",
+                "message": "There was an issue uploading your thesis files. You will need to resubmit your thesis by clicking on the 'Resubmit your thesis' button.",
+                "title": "FILE UPLOAD ERROR",
+                "type": "error",
+              }
+            }
+            isNtro={true}
+            locale={
+              Object {
+                "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
+                "errorTitle": "Upload Errors",
+                "fileUploadInstruction": <p>
+                  Click here to select files, or drag files into this area to upload
+                </p>,
+                "fileUploadRestrictionHeading": "File upload restrictions",
+                "fileUploadRestrictions": <div>
+                  Maximum file size is 8Gb. 
+                  <br />
+                  PDF files must be saved using the following naming structure 
+                  <b>
+                    &lt;student number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf
+                  </b>
+                  . Document name could be thesis, abstract, and etc. For example:
+                  <ul>
+                    <li>
+                      s1234567_phd_thesis.pdf
+                    </li>
+                    <li>
+                      s1234567_phd_abstract.pdf
+                    </li>
+                  </ul>
+                  Supplementary audio files are to be in MP 3 format. 
+                  <br />
+                  Supplementary video files are to be in WMV or AVI format. 
+                  <br />
+                </div>,
+                "instructions": "",
+                "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
+                "successTitle": "Success",
+                "validation": Object {
+                  "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
+                  "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
+                  "notFiles": "Invalid files ([fileNames])",
+                  "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
+                  "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
+                },
+              }
+            }
+            name="files"
+            requireOpenAccessStatus={true}
+            text={
+              <div>
+                <span
+                  className="requiredField"
+                >
+                  <label>
+                     
+                  </label>
+                </span>
+              </div>
+            }
+            title="Upload files"
+            validate={
+              Array [
+                [Function],
+              ]
+            }
+          />
+        </StandardCard>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      container={true}
+      spacing={24}
+    >
+      <WithStyles(Grid)
+        item={true}
+        xs={true}
+      />
+      <WithStyles(Grid)
+        item={true}
+      >
+        <WithStyles(Button)
+          disabled={false}
+          fullWidth={true}
+          onClick={[Function]}
+          variant="contained"
+        >
+          Cancel and return to my incomplete records list
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+      >
+        <WithStyles(Button)
+          color="primary"
+          fullWidth={true}
+          onClick={[MockFunction]}
+          variant="contained"
+        >
+          Complete my record
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </form>
+</StandardPage>
+`;
+
+exports[`Cards will display correct empty fields for a Live Performance of Musical Creative Work work 1`] = `
+<StandardPage
+  title="Fix an incomplete record"
+>
+  <withRouter(Connect(WithStyles(PublicationCitation)))
+    publication={
+      Object {
+        "fez_record_search_key_audience_size": null,
+        "fez_record_search_key_author": Array [
+          Object {
+            "rek_author": "Brown, M. A.",
+            "rek_author_id": 30038090,
+            "rek_author_order": 2,
+            "rek_author_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author": "He, Y.",
+            "rek_author_id": 30038089,
+            "rek_author_order": 1,
+            "rek_author_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author": "Rothnagel, J. A.",
+            "rek_author_id": 30038091,
+            "rek_author_order": 3,
+            "rek_author_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author": "Saunders, N. A.",
+            "rek_author_id": 30038092,
+            "rek_author_order": 4,
+            "rek_author_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author": "Smith, R.",
+            "rek_author_id": 30038093,
+            "rek_author_order": 5,
+            "rek_author_pid": "UQ:41878",
+          },
+        ],
+        "fez_record_search_key_author_id": Array [
+          Object {
+            "rek_author_id": 0,
+            "rek_author_id_id": 29384218,
+            "rek_author_id_order": 1,
+            "rek_author_id_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author_id": 410,
+            "rek_author_id_id": 29384219,
+            "rek_author_id_order": 2,
+            "rek_author_id_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author_id": 786,
+            "rek_author_id_id": 29384220,
+            "rek_author_id_order": 3,
+            "rek_author_id_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author_id": 687,
+            "rek_author_id_id": 29384221,
+            "rek_author_id_order": 4,
+            "rek_author_id_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author_id": 4100,
+            "rek_author_id_id": 29384222,
+            "rek_author_id_order": 5,
+            "rek_author_id_pid": "UQ:41878",
+          },
+        ],
+        "fez_record_search_key_creator_contribution_statement": null,
+        "fez_record_search_key_end_page": Object {
+          "rek_end_page": "253A",
+          "rek_end_page_id": 5708077,
+          "rek_end_page_pid": "UQ:41878",
+        },
+        "fez_record_search_key_issue_number": null,
+        "fez_record_search_key_journal_name": Object {
+          "rek_journal_name": "Molecular Biology of The Cell",
+          "rek_journal_name_id": 5236446,
+          "rek_journal_name_pid": "UQ:41878",
+        },
+        "fez_record_search_key_language": null,
+        "fez_record_search_key_place_of_publication": Object {
+          "rek_place_of_publication": "Bethesda",
+          "rek_place_of_publication_id": 4343575,
+          "rek_place_of_publication_pid": "UQ:41878",
+        },
+        "fez_record_search_key_publisher": Object {
+          "rek_publisher": "American Society for Cell Biology",
+          "rek_publisher_id": 4629173,
+          "rek_publisher_pid": "UQ:41878",
+        },
+        "fez_record_search_key_quality_indicator": null,
+        "fez_record_search_key_significance": null,
+        "fez_record_search_key_start_page": Object {
+          "rek_start_page": "252A",
+          "rek_start_page_id": 5781267,
+          "rek_start_page_pid": "UQ:41878",
+        },
+        "fez_record_search_key_total_chapters": null,
+        "fez_record_search_key_total_pages": null,
+        "fez_record_search_key_volume_number": Object {
+          "rek_volume_number": "15",
+          "rek_volume_number_id": 5294487,
+          "rek_volume_number_pid": "UQ:41878",
+        },
+        "rek_citation": "blah blah blah",
+        "rek_date": "2004-01-01T00:00:00Z",
+        "rek_display_type": 313,
+        "rek_display_type_lookup": "Creative Work",
+        "rek_formatted_abstract": null,
+        "rek_genre": "Creative",
+        "rek_object_type": 3,
+        "rek_pid": "UQ:41878",
+        "rek_status": 2,
+        "rek_subtype": "Live Performance of Creative Work - Music",
+        "rek_title": "Article Title",
+      }
+    }
+  />
+  <p>
+    <b>
+      Display Type
+    </b>
+     (for dev): 
+    Creative Work
+  </p>
+  <p>
+    <b>
+      Subtype
+    </b>
+     (for dev) : 
+    Live Performance of Creative Work - Music
+  </p>
+  <form
+    onSubmit={[Function]}
+  >
+    <NavigationDialogBox
+      txt={
+        Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to cancel this request?",
+          "confirmationTitle": "Cancel request",
+        }
+      }
+      when={true}
+    />
+    <ConfirmDialogBox
+      hideCancelButton={false}
+      locale={
+        Object {
+          "cancelButtonLabel": "Complete another record",
+          "confirmButtonLabel": "Go to my incomplete research list",
+          "confirmationMessage": <React.Fragment />,
+          "confirmationTitle": "Your work has been updated",
+          "fileFailConfirmationAlert": Object {
+            "message": "File upload and/or notes post failed",
+            "title": "UPLOAD FAILED",
+            "type": "warning",
+          },
+        }
+      }
+      onAction={[Function]}
+      onCancelAction={[Function]}
+      onRef={[Function]}
+    />
+    <WithStyles(Grid)
+      container={true}
+      spacing={24}
+    >
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(Alert)
+          message="This record has missing data - enter all fields to give a quality record."
+          title="Missing data"
+          type="info_outline"
+        />
+      </WithStyles(Grid)>
+      <NtroFields
+        defaultLanguage="eng"
+        hideAbstract={false}
+        hideAudienceSize={false}
+        hideEndPage={true}
+        hideExtent={false}
+        hideGrants={true}
+        hideIsmn={true}
+        hideIsrc={true}
+        hideIssue={true}
+        hideLanguage={false}
+        hideOriginalFormat={true}
+        hidePeerReviewActivity={false}
+        hideSeries={true}
+        hideStartPage={true}
+        hideVolume={true}
+        locale={
+          Object {
+            "contributionStatement": Object {
+              "fields": Object {
+                "impactStatement": Object {
+                  "label": <span>
+                    Creator research statement*. Include Background, Contribution and Significance 
+                    <span
+                      style={
+                        Object {
+                          "fontWeight": 700,
+                        }
+                      }
+                    >
+                      (not for public view)
+                    </span>
+                  </span>,
+                  "placeholder": "Remember to include substantiation of your Major or Minor Scale/Significance claim above.",
+                },
+                "scaleOfWork": Object {
+                  "description": "Select the option that best describes the significance of the work.",
+                  "label": <span>
+                    Scale/Significance of work* 
+                    <span
+                      style={
+                        Object {
+                          "fontWeight": 700,
+                        }
+                      }
+                    >
+                      (not for public view)
+                    </span>
+                  </span>,
+                },
+              },
+              "help": Object {
+                "buttonLabel": "CLOSE",
+                "text": <React.Fragment>
+                  <h3>
+                    Creator research statement
+                  </h3>
+                  <p>
+                    For more information about the research statement, click  
+                    <b>
+                      <a
+                        href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836548"
+                        style={
+                          Object {
+                            "fontWeight": 700,
+                          }
+                        }
+                        target="_blank"
+                      >
+                        here
+                      </a>
+                    </b>
+                  </p>
+                </React.Fragment>,
+                "title": "Author/Creator research statement",
+              },
+              "title": "Author/Creator research statement",
+            },
+            "grantEditor": Object {
+              "title": "Grant details",
+            },
+            "metadata": Object {
+              "fields": Object {
+                "abstract": Object {
+                  "label": <span>
+                    Abstract/Description* 
+                    <span
+                      style={
+                        Object {
+                          "fontWeight": 700,
+                        }
+                      }
+                    >
+                      (for public view)
+                    </span>
+                  </span>,
+                  "placeholder": "Enter a brief description of the work",
+                },
+                "audienceSize": Object {
+                  "label": "Audience size",
+                },
+                "endPage": Object {
+                  "label": "End page",
+                },
+                "extent": Object {
+                  "label": "Total pages/Extent",
+                  "placeholder": "Enter total pages, size or duration of work",
+                },
+                "issue": Object {
+                  "label": "Issue",
+                },
+                "language": Object {
+                  "label": "Language",
+                },
+                "notes": Object {
+                  "label": "Notes",
+                },
+                "peerReviewActivity": Object {
+                  "label": "Quality indicators",
+                },
+                "physicalDescription": Object {
+                  "label": "Physical description",
+                  "placeholder": "Building, Exhibition, Performance, Composition",
+                },
+                "series": Object {
+                  "floatingLabelText": "Series",
+                  "hintText": "Enter the name of publication, performance, recording, or event series",
+                },
+                "startPage": Object {
+                  "label": "Start page",
+                },
+                "volume": Object {
+                  "label": "Volume",
+                },
+              },
+              "title": "NTRO data",
+            },
+          }
+        }
+        showContributionStatement={true}
+        showSignificance={true}
+        submitting={false}
+      />
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          title="Grant information"
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            name="grants"
+          />
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          title="Notes"
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            fullWidth={true}
+            label="Notes for this record"
+            multiline={true}
+            name="notes"
+            placeholder="Add any other notes or comments about this record to send to the eSpace team."
+            rows={5}
+            type="text"
+          />
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          title="Upload files"
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            failedAlertLocale={
+              Object {
+                "actionButtonLabel": "RESUBMIT YOUR THESIS",
+                "message": "There was an issue uploading your thesis files. You will need to resubmit your thesis by clicking on the 'Resubmit your thesis' button.",
+                "title": "FILE UPLOAD ERROR",
+                "type": "error",
+              }
+            }
+            isNtro={true}
+            locale={
+              Object {
+                "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
+                "errorTitle": "Upload Errors",
+                "fileUploadInstruction": <p>
+                  Click here to select files, or drag files into this area to upload
+                </p>,
+                "fileUploadRestrictionHeading": "File upload restrictions",
+                "fileUploadRestrictions": <div>
+                  Maximum file size is 8Gb. 
+                  <br />
+                  PDF files must be saved using the following naming structure 
+                  <b>
+                    &lt;student number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf
+                  </b>
+                  . Document name could be thesis, abstract, and etc. For example:
+                  <ul>
+                    <li>
+                      s1234567_phd_thesis.pdf
+                    </li>
+                    <li>
+                      s1234567_phd_abstract.pdf
+                    </li>
+                  </ul>
+                  Supplementary audio files are to be in MP 3 format. 
+                  <br />
+                  Supplementary video files are to be in WMV or AVI format. 
+                  <br />
+                </div>,
+                "instructions": "",
+                "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
+                "successTitle": "Success",
+                "validation": Object {
+                  "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
+                  "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
+                  "notFiles": "Invalid files ([fileNames])",
+                  "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
+                  "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
+                },
+              }
+            }
+            name="files"
+            requireOpenAccessStatus={true}
+            text={
+              <div>
+                <span
+                  className="requiredField"
+                >
+                  <label>
+                     
+                  </label>
+                </span>
+              </div>
+            }
+            title="Upload files"
+            validate={
+              Array [
+                [Function],
+              ]
+            }
+          />
+        </StandardCard>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      container={true}
+      spacing={24}
+    >
+      <WithStyles(Grid)
+        item={true}
+        xs={true}
+      />
+      <WithStyles(Grid)
+        item={true}
+      >
+        <WithStyles(Button)
+          disabled={false}
+          fullWidth={true}
+          onClick={[Function]}
+          variant="contained"
+        >
+          Cancel and return to my incomplete records list
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+      >
+        <WithStyles(Button)
+          color="primary"
+          fullWidth={true}
+          onClick={[MockFunction]}
+          variant="contained"
+        >
+          Complete my record
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </form>
+</StandardPage>
+`;
+
+exports[`Cards will display correct empty fields for a Musical Creative work 1`] = `
+<StandardPage
+  title="Fix an incomplete record"
+>
+  <withRouter(Connect(WithStyles(PublicationCitation)))
+    publication={
+      Object {
+        "fez_record_search_key_audience_size": null,
+        "fez_record_search_key_author": Array [
+          Object {
+            "rek_author": "Brown, M. A.",
+            "rek_author_id": 30038090,
+            "rek_author_order": 2,
+            "rek_author_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author": "He, Y.",
+            "rek_author_id": 30038089,
+            "rek_author_order": 1,
+            "rek_author_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author": "Rothnagel, J. A.",
+            "rek_author_id": 30038091,
+            "rek_author_order": 3,
+            "rek_author_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author": "Saunders, N. A.",
+            "rek_author_id": 30038092,
+            "rek_author_order": 4,
+            "rek_author_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author": "Smith, R.",
+            "rek_author_id": 30038093,
+            "rek_author_order": 5,
+            "rek_author_pid": "UQ:41878",
+          },
+        ],
+        "fez_record_search_key_author_id": Array [
+          Object {
+            "rek_author_id": 0,
+            "rek_author_id_id": 29384218,
+            "rek_author_id_order": 1,
+            "rek_author_id_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author_id": 410,
+            "rek_author_id_id": 29384219,
+            "rek_author_id_order": 2,
+            "rek_author_id_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author_id": 786,
+            "rek_author_id_id": 29384220,
+            "rek_author_id_order": 3,
+            "rek_author_id_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author_id": 687,
+            "rek_author_id_id": 29384221,
+            "rek_author_id_order": 4,
+            "rek_author_id_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author_id": 4100,
+            "rek_author_id_id": 29384222,
+            "rek_author_id_order": 5,
+            "rek_author_id_pid": "UQ:41878",
+          },
+        ],
+        "fez_record_search_key_creator_contribution_statement": null,
+        "fez_record_search_key_end_page": Object {
+          "rek_end_page": "253A",
+          "rek_end_page_id": 5708077,
+          "rek_end_page_pid": "UQ:41878",
+        },
+        "fez_record_search_key_issue_number": null,
+        "fez_record_search_key_journal_name": Object {
+          "rek_journal_name": "Molecular Biology of The Cell",
+          "rek_journal_name_id": 5236446,
+          "rek_journal_name_pid": "UQ:41878",
+        },
+        "fez_record_search_key_language": null,
+        "fez_record_search_key_place_of_publication": Object {
+          "rek_place_of_publication": "Bethesda",
+          "rek_place_of_publication_id": 4343575,
+          "rek_place_of_publication_pid": "UQ:41878",
+        },
+        "fez_record_search_key_publisher": Object {
+          "rek_publisher": "American Society for Cell Biology",
+          "rek_publisher_id": 4629173,
+          "rek_publisher_pid": "UQ:41878",
+        },
+        "fez_record_search_key_quality_indicator": null,
+        "fez_record_search_key_significance": null,
+        "fez_record_search_key_start_page": Object {
+          "rek_start_page": "252A",
+          "rek_start_page_id": 5781267,
+          "rek_start_page_pid": "UQ:41878",
+        },
+        "fez_record_search_key_total_chapters": null,
+        "fez_record_search_key_total_pages": null,
+        "fez_record_search_key_volume_number": Object {
+          "rek_volume_number": "15",
+          "rek_volume_number_id": 5294487,
+          "rek_volume_number_pid": "UQ:41878",
+        },
+        "rek_citation": "blah blah blah",
+        "rek_date": "2004-01-01T00:00:00Z",
+        "rek_display_type": 313,
+        "rek_display_type_lookup": "Creative Work",
+        "rek_formatted_abstract": null,
+        "rek_genre": "Creative",
+        "rek_object_type": 3,
+        "rek_pid": "UQ:41878",
+        "rek_status": 2,
+        "rek_subtype": "Creative Work - Musical Composition",
+        "rek_title": "Article Title",
+      }
+    }
+  />
+  <p>
+    <b>
+      Display Type
+    </b>
+     (for dev): 
+    Creative Work
+  </p>
+  <p>
+    <b>
+      Subtype
+    </b>
+     (for dev) : 
+    Creative Work - Musical Composition
+  </p>
+  <form
+    onSubmit={[Function]}
+  >
+    <NavigationDialogBox
+      txt={
+        Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to cancel this request?",
+          "confirmationTitle": "Cancel request",
+        }
+      }
+      when={true}
+    />
+    <ConfirmDialogBox
+      hideCancelButton={false}
+      locale={
+        Object {
+          "cancelButtonLabel": "Complete another record",
+          "confirmButtonLabel": "Go to my incomplete research list",
+          "confirmationMessage": <React.Fragment />,
+          "confirmationTitle": "Your work has been updated",
+          "fileFailConfirmationAlert": Object {
+            "message": "File upload and/or notes post failed",
+            "title": "UPLOAD FAILED",
+            "type": "warning",
+          },
+        }
+      }
+      onAction={[Function]}
+      onCancelAction={[Function]}
+      onRef={[Function]}
+    />
+    <WithStyles(Grid)
+      container={true}
+      spacing={24}
+    >
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(Alert)
+          message="This record has missing data - enter all fields to give a quality record."
+          title="Missing data"
+          type="info_outline"
+        />
+      </WithStyles(Grid)>
+      <NtroFields
+        defaultLanguage="eng"
+        hideAbstract={false}
+        hideAudienceSize={true}
+        hideEndPage={true}
+        hideExtent={false}
+        hideGrants={true}
+        hideIsmn={true}
+        hideIsrc={true}
+        hideIssue={true}
+        hideLanguage={false}
+        hideOriginalFormat={true}
+        hidePeerReviewActivity={false}
+        hideSeries={true}
+        hideStartPage={true}
+        hideVolume={true}
+        locale={
+          Object {
+            "contributionStatement": Object {
+              "fields": Object {
+                "impactStatement": Object {
+                  "label": <span>
+                    Creator research statement*. Include Background, Contribution and Significance 
+                    <span
+                      style={
+                        Object {
+                          "fontWeight": 700,
+                        }
+                      }
+                    >
+                      (not for public view)
+                    </span>
+                  </span>,
+                  "placeholder": "Remember to include substantiation of your Major or Minor Scale/Significance claim above.",
+                },
+                "scaleOfWork": Object {
+                  "description": "Select the option that best describes the significance of the work.",
+                  "label": <span>
+                    Scale/Significance of work* 
+                    <span
+                      style={
+                        Object {
+                          "fontWeight": 700,
+                        }
+                      }
+                    >
+                      (not for public view)
+                    </span>
+                  </span>,
+                },
+              },
+              "help": Object {
+                "buttonLabel": "CLOSE",
+                "text": <React.Fragment>
+                  <h3>
+                    Creator research statement
+                  </h3>
+                  <p>
+                    For more information about the research statement, click  
+                    <b>
+                      <a
+                        href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836548"
+                        style={
+                          Object {
+                            "fontWeight": 700,
+                          }
+                        }
+                        target="_blank"
+                      >
+                        here
+                      </a>
+                    </b>
+                  </p>
+                </React.Fragment>,
+                "title": "Author/Creator research statement",
+              },
+              "title": "Author/Creator research statement",
+            },
+            "grantEditor": Object {
+              "title": "Grant details",
+            },
+            "metadata": Object {
+              "fields": Object {
+                "abstract": Object {
+                  "label": <span>
+                    Abstract/Description* 
+                    <span
+                      style={
+                        Object {
+                          "fontWeight": 700,
+                        }
+                      }
+                    >
+                      (for public view)
+                    </span>
+                  </span>,
+                  "placeholder": "Enter a brief description of the work",
+                },
+                "audienceSize": Object {
+                  "label": "Audience size",
+                },
+                "endPage": Object {
+                  "label": "End page",
+                },
+                "extent": Object {
+                  "label": "Total pages/Extent",
+                  "placeholder": "Enter total pages, size or duration of work",
+                },
+                "issue": Object {
+                  "label": "Issue",
+                },
+                "language": Object {
+                  "label": "Language",
+                },
+                "notes": Object {
+                  "label": "Notes",
+                },
+                "peerReviewActivity": Object {
+                  "label": "Quality indicators",
+                },
+                "physicalDescription": Object {
+                  "label": "Physical description",
+                  "placeholder": "Building, Exhibition, Performance, Composition",
+                },
+                "series": Object {
+                  "floatingLabelText": "Series",
+                  "hintText": "Enter the name of publication, performance, recording, or event series",
+                },
+                "startPage": Object {
+                  "label": "Start page",
+                },
+                "volume": Object {
+                  "label": "Volume",
+                },
+              },
+              "title": "NTRO data",
+            },
+          }
+        }
+        showContributionStatement={true}
+        showSignificance={true}
+        submitting={false}
+      />
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          title="Grant information"
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            name="grants"
+          />
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          title="Notes"
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            fullWidth={true}
+            label="Notes for this record"
+            multiline={true}
+            name="notes"
+            placeholder="Add any other notes or comments about this record to send to the eSpace team."
+            rows={5}
+            type="text"
+          />
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          title="Upload files"
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            failedAlertLocale={
+              Object {
+                "actionButtonLabel": "RESUBMIT YOUR THESIS",
+                "message": "There was an issue uploading your thesis files. You will need to resubmit your thesis by clicking on the 'Resubmit your thesis' button.",
+                "title": "FILE UPLOAD ERROR",
+                "type": "error",
+              }
+            }
+            isNtro={true}
+            locale={
+              Object {
+                "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
+                "errorTitle": "Upload Errors",
+                "fileUploadInstruction": <p>
+                  Click here to select files, or drag files into this area to upload
+                </p>,
+                "fileUploadRestrictionHeading": "File upload restrictions",
+                "fileUploadRestrictions": <div>
+                  Maximum file size is 8Gb. 
+                  <br />
+                  PDF files must be saved using the following naming structure 
+                  <b>
+                    &lt;student number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf
+                  </b>
+                  . Document name could be thesis, abstract, and etc. For example:
+                  <ul>
+                    <li>
+                      s1234567_phd_thesis.pdf
+                    </li>
+                    <li>
+                      s1234567_phd_abstract.pdf
+                    </li>
+                  </ul>
+                  Supplementary audio files are to be in MP 3 format. 
+                  <br />
+                  Supplementary video files are to be in WMV or AVI format. 
+                  <br />
+                </div>,
+                "instructions": "",
+                "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
+                "successTitle": "Success",
+                "validation": Object {
+                  "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
+                  "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
+                  "notFiles": "Invalid files ([fileNames])",
+                  "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
+                  "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
+                },
+              }
+            }
+            name="files"
+            requireOpenAccessStatus={true}
+            text={
+              <div>
+                <span
+                  className="requiredField"
+                >
+                  <label>
+                     
+                  </label>
+                </span>
+              </div>
+            }
+            title="Upload files"
+            validate={
+              Array [
+                [Function],
+              ]
+            }
+          />
+        </StandardCard>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      container={true}
+      spacing={24}
+    >
+      <WithStyles(Grid)
+        item={true}
+        xs={true}
+      />
+      <WithStyles(Grid)
+        item={true}
+      >
+        <WithStyles(Button)
+          disabled={false}
+          fullWidth={true}
+          onClick={[Function]}
+          variant="contained"
+        >
+          Cancel and return to my incomplete records list
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+      >
+        <WithStyles(Button)
+          color="primary"
+          fullWidth={true}
+          onClick={[MockFunction]}
+          variant="contained"
+        >
+          Complete my record
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </form>
+</StandardPage>
+`;
+
+exports[`Cards will display correct empty fields for a Public Sector Research Report work 1`] = `
+<StandardPage
+  title="Fix an incomplete record"
+>
+  <withRouter(Connect(WithStyles(PublicationCitation)))
+    publication={
+      Object {
+        "fez_record_search_key_audience_size": null,
+        "fez_record_search_key_author": Array [
+          Object {
+            "rek_author": "Brown, M. A.",
+            "rek_author_id": 30038090,
+            "rek_author_order": 2,
+            "rek_author_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author": "He, Y.",
+            "rek_author_id": 30038089,
+            "rek_author_order": 1,
+            "rek_author_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author": "Rothnagel, J. A.",
+            "rek_author_id": 30038091,
+            "rek_author_order": 3,
+            "rek_author_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author": "Saunders, N. A.",
+            "rek_author_id": 30038092,
+            "rek_author_order": 4,
+            "rek_author_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author": "Smith, R.",
+            "rek_author_id": 30038093,
+            "rek_author_order": 5,
+            "rek_author_pid": "UQ:41878",
+          },
+        ],
+        "fez_record_search_key_author_id": Array [
+          Object {
+            "rek_author_id": 0,
+            "rek_author_id_id": 29384218,
+            "rek_author_id_order": 1,
+            "rek_author_id_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author_id": 410,
+            "rek_author_id_id": 29384219,
+            "rek_author_id_order": 2,
+            "rek_author_id_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author_id": 786,
+            "rek_author_id_id": 29384220,
+            "rek_author_id_order": 3,
+            "rek_author_id_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author_id": 687,
+            "rek_author_id_id": 29384221,
+            "rek_author_id_order": 4,
+            "rek_author_id_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author_id": 4100,
+            "rek_author_id_id": 29384222,
+            "rek_author_id_order": 5,
+            "rek_author_id_pid": "UQ:41878",
+          },
+        ],
+        "fez_record_search_key_creator_contribution_statement": null,
+        "fez_record_search_key_end_page": Object {
+          "rek_end_page": "253A",
+          "rek_end_page_id": 5708077,
+          "rek_end_page_pid": "UQ:41878",
+        },
+        "fez_record_search_key_issue_number": null,
+        "fez_record_search_key_journal_name": Object {
+          "rek_journal_name": "Molecular Biology of The Cell",
+          "rek_journal_name_id": 5236446,
+          "rek_journal_name_pid": "UQ:41878",
+        },
+        "fez_record_search_key_language": null,
+        "fez_record_search_key_place_of_publication": Object {
+          "rek_place_of_publication": "Bethesda",
+          "rek_place_of_publication_id": 4343575,
+          "rek_place_of_publication_pid": "UQ:41878",
+        },
+        "fez_record_search_key_publisher": Object {
+          "rek_publisher": "American Society for Cell Biology",
+          "rek_publisher_id": 4629173,
+          "rek_publisher_pid": "UQ:41878",
+        },
+        "fez_record_search_key_quality_indicator": null,
+        "fez_record_search_key_significance": null,
+        "fez_record_search_key_start_page": Object {
+          "rek_start_page": "252A",
+          "rek_start_page_id": 5781267,
+          "rek_start_page_pid": "UQ:41878",
+        },
+        "fez_record_search_key_total_chapters": null,
+        "fez_record_search_key_total_pages": null,
+        "fez_record_search_key_volume_number": Object {
+          "rek_volume_number": "15",
+          "rek_volume_number_id": 5294487,
+          "rek_volume_number_pid": "UQ:41878",
+        },
+        "rek_citation": "blah blah blah",
+        "rek_date": "2004-01-01T00:00:00Z",
+        "rek_display_type": 275,
+        "rek_display_type_lookup": "Research Report",
+        "rek_formatted_abstract": null,
+        "rek_genre": "Research Report",
+        "rek_object_type": 3,
+        "rek_pid": "UQ:41878",
+        "rek_status": 2,
+        "rek_subtype": "Research Report for an External Body - Public Sector",
+        "rek_title": "Article Title",
+      }
+    }
+  />
+  <p>
+    <b>
+      Display Type
+    </b>
+     (for dev): 
+    Research Report
+  </p>
+  <p>
+    <b>
+      Subtype
+    </b>
+     (for dev) : 
+    Research Report for an External Body - Public Sector
+  </p>
+  <form
+    onSubmit={[Function]}
+  >
+    <NavigationDialogBox
+      txt={
+        Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to cancel this request?",
+          "confirmationTitle": "Cancel request",
+        }
+      }
+      when={true}
+    />
+    <ConfirmDialogBox
+      hideCancelButton={false}
+      locale={
+        Object {
+          "cancelButtonLabel": "Complete another record",
+          "confirmButtonLabel": "Go to my incomplete research list",
+          "confirmationMessage": <React.Fragment />,
+          "confirmationTitle": "Your work has been updated",
+          "fileFailConfirmationAlert": Object {
+            "message": "File upload and/or notes post failed",
+            "title": "UPLOAD FAILED",
+            "type": "warning",
+          },
+        }
+      }
+      onAction={[Function]}
+      onCancelAction={[Function]}
+      onRef={[Function]}
+    />
+    <WithStyles(Grid)
+      container={true}
+      spacing={24}
+    >
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(Alert)
+          message="This record has missing data - enter all fields to give a quality record."
+          title="Missing data"
+          type="info_outline"
+        />
+      </WithStyles(Grid)>
+      <NtroFields
+        defaultLanguage="eng"
+        hideAbstract={false}
+        hideAudienceSize={true}
+        hideEndPage={true}
+        hideExtent={false}
+        hideGrants={true}
+        hideIsmn={true}
+        hideIsrc={true}
+        hideIssue={true}
+        hideLanguage={false}
+        hideOriginalFormat={true}
+        hidePeerReviewActivity={false}
+        hideSeries={true}
+        hideStartPage={true}
+        hideVolume={true}
+        locale={
+          Object {
+            "contributionStatement": Object {
+              "fields": Object {
+                "impactStatement": Object {
+                  "label": <span>
+                    Creator research statement*. Include Background, Contribution and Significance 
+                    <span
+                      style={
+                        Object {
+                          "fontWeight": 700,
+                        }
+                      }
+                    >
+                      (not for public view)
+                    </span>
+                  </span>,
+                  "placeholder": "Remember to include substantiation of your Major or Minor Scale/Significance claim above.",
+                },
+                "scaleOfWork": Object {
+                  "description": "Select the option that best describes the significance of the work.",
+                  "label": <span>
+                    Scale/Significance of work* 
+                    <span
+                      style={
+                        Object {
+                          "fontWeight": 700,
+                        }
+                      }
+                    >
+                      (not for public view)
+                    </span>
+                  </span>,
+                },
+              },
+              "help": Object {
+                "buttonLabel": "CLOSE",
+                "text": <React.Fragment>
+                  <h3>
+                    Creator research statement
+                  </h3>
+                  <p>
+                    For more information about the research statement, click  
+                    <b>
+                      <a
+                        href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836548"
+                        style={
+                          Object {
+                            "fontWeight": 700,
+                          }
+                        }
+                        target="_blank"
+                      >
+                        here
+                      </a>
+                    </b>
+                  </p>
+                </React.Fragment>,
+                "title": "Author/Creator research statement",
+              },
+              "title": "Author/Creator research statement",
+            },
+            "grantEditor": Object {
+              "title": "Grant details",
+            },
+            "metadata": Object {
+              "fields": Object {
+                "abstract": Object {
+                  "label": <span>
+                    Abstract/Description* 
+                    <span
+                      style={
+                        Object {
+                          "fontWeight": 700,
+                        }
+                      }
+                    >
+                      (for public view)
+                    </span>
+                  </span>,
+                  "placeholder": "Enter a brief description of the work",
+                },
+                "audienceSize": Object {
+                  "label": "Audience size",
+                },
+                "endPage": Object {
+                  "label": "End page",
+                },
+                "extent": Object {
+                  "label": "Total pages/Extent",
+                  "placeholder": "Enter total pages, size or duration of work",
+                },
+                "issue": Object {
+                  "label": "Issue",
+                },
+                "language": Object {
+                  "label": "Language",
+                },
+                "notes": Object {
+                  "label": "Notes",
+                },
+                "peerReviewActivity": Object {
+                  "label": "Quality indicators",
+                },
+                "physicalDescription": Object {
+                  "label": "Physical description",
+                  "placeholder": "Building, Exhibition, Performance, Composition",
+                },
+                "series": Object {
+                  "floatingLabelText": "Series",
+                  "hintText": "Enter the name of publication, performance, recording, or event series",
+                },
+                "startPage": Object {
+                  "label": "Start page",
+                },
+                "volume": Object {
+                  "label": "Volume",
+                },
+              },
+              "title": "NTRO data",
+            },
+          }
+        }
+        showContributionStatement={true}
+        showSignificance={true}
+        submitting={false}
+      />
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          title="Grant information"
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            name="grants"
+          />
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          title="Notes"
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            fullWidth={true}
+            label="Notes for this record"
+            multiline={true}
+            name="notes"
+            placeholder="Add any other notes or comments about this record to send to the eSpace team."
+            rows={5}
+            type="text"
+          />
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          title="Upload files"
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            failedAlertLocale={
+              Object {
+                "actionButtonLabel": "RESUBMIT YOUR THESIS",
+                "message": "There was an issue uploading your thesis files. You will need to resubmit your thesis by clicking on the 'Resubmit your thesis' button.",
+                "title": "FILE UPLOAD ERROR",
+                "type": "error",
+              }
+            }
+            isNtro={true}
+            locale={
+              Object {
+                "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
+                "errorTitle": "Upload Errors",
+                "fileUploadInstruction": <p>
+                  Click here to select files, or drag files into this area to upload
+                </p>,
+                "fileUploadRestrictionHeading": "File upload restrictions",
+                "fileUploadRestrictions": <div>
+                  Maximum file size is 8Gb. 
+                  <br />
+                  PDF files must be saved using the following naming structure 
+                  <b>
+                    &lt;student number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf
+                  </b>
+                  . Document name could be thesis, abstract, and etc. For example:
+                  <ul>
+                    <li>
+                      s1234567_phd_thesis.pdf
+                    </li>
+                    <li>
+                      s1234567_phd_abstract.pdf
+                    </li>
+                  </ul>
+                  Supplementary audio files are to be in MP 3 format. 
+                  <br />
+                  Supplementary video files are to be in WMV or AVI format. 
+                  <br />
+                </div>,
+                "instructions": "",
+                "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
+                "successTitle": "Success",
+                "validation": Object {
+                  "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
+                  "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
+                  "notFiles": "Invalid files ([fileNames])",
+                  "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
+                  "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
+                },
+              }
+            }
+            name="files"
+            requireOpenAccessStatus={true}
+            text={
+              <div>
+                <span
+                  className="requiredField"
+                >
+                  <label>
+                     
+                  </label>
+                </span>
+              </div>
+            }
+            title="Upload files"
+            validate={
+              Array [
+                [Function],
+              ]
+            }
+          />
+        </StandardCard>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      container={true}
+      spacing={24}
+    >
+      <WithStyles(Grid)
+        item={true}
+        xs={true}
+      />
+      <WithStyles(Grid)
+        item={true}
+      >
+        <WithStyles(Button)
+          disabled={false}
+          fullWidth={true}
+          onClick={[Function]}
+          variant="contained"
+        >
+          Cancel and return to my incomplete records list
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+      >
+        <WithStyles(Button)
+          color="primary"
+          fullWidth={true}
+          onClick={[MockFunction]}
+          variant="contained"
+        >
+          Complete my record
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </form>
+</StandardPage>
+`;
+
+exports[`Cards will display correct empty fields for a Textual Book work 1`] = `
+<StandardPage
+  title="Fix an incomplete record"
+>
+  <withRouter(Connect(WithStyles(PublicationCitation)))
+    publication={
+      Object {
+        "fez_record_search_key_audience_size": null,
+        "fez_record_search_key_author": Array [
+          Object {
+            "rek_author": "Brown, M. A.",
+            "rek_author_id": 30038090,
+            "rek_author_order": 2,
+            "rek_author_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author": "He, Y.",
+            "rek_author_id": 30038089,
+            "rek_author_order": 1,
+            "rek_author_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author": "Rothnagel, J. A.",
+            "rek_author_id": 30038091,
+            "rek_author_order": 3,
+            "rek_author_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author": "Saunders, N. A.",
+            "rek_author_id": 30038092,
+            "rek_author_order": 4,
+            "rek_author_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author": "Smith, R.",
+            "rek_author_id": 30038093,
+            "rek_author_order": 5,
+            "rek_author_pid": "UQ:41878",
+          },
+        ],
+        "fez_record_search_key_author_id": Array [
+          Object {
+            "rek_author_id": 0,
+            "rek_author_id_id": 29384218,
+            "rek_author_id_order": 1,
+            "rek_author_id_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author_id": 410,
+            "rek_author_id_id": 29384219,
+            "rek_author_id_order": 2,
+            "rek_author_id_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author_id": 786,
+            "rek_author_id_id": 29384220,
+            "rek_author_id_order": 3,
+            "rek_author_id_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author_id": 687,
+            "rek_author_id_id": 29384221,
+            "rek_author_id_order": 4,
+            "rek_author_id_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author_id": 4100,
+            "rek_author_id_id": 29384222,
+            "rek_author_id_order": 5,
+            "rek_author_id_pid": "UQ:41878",
+          },
+        ],
+        "fez_record_search_key_creator_contribution_statement": null,
+        "fez_record_search_key_end_page": Object {
+          "rek_end_page": "253A",
+          "rek_end_page_id": 5708077,
+          "rek_end_page_pid": "UQ:41878",
+        },
+        "fez_record_search_key_issue_number": null,
+        "fez_record_search_key_journal_name": Object {
+          "rek_journal_name": "Molecular Biology of The Cell",
+          "rek_journal_name_id": 5236446,
+          "rek_journal_name_pid": "UQ:41878",
+        },
+        "fez_record_search_key_language": null,
+        "fez_record_search_key_place_of_publication": Object {
+          "rek_place_of_publication": "Bethesda",
+          "rek_place_of_publication_id": 4343575,
+          "rek_place_of_publication_pid": "UQ:41878",
+        },
+        "fez_record_search_key_publisher": Object {
+          "rek_publisher": "American Society for Cell Biology",
+          "rek_publisher_id": 4629173,
+          "rek_publisher_pid": "UQ:41878",
+        },
+        "fez_record_search_key_quality_indicator": null,
+        "fez_record_search_key_significance": null,
+        "fez_record_search_key_start_page": Object {
+          "rek_start_page": "252A",
+          "rek_start_page_id": 5781267,
+          "rek_start_page_pid": "UQ:41878",
+        },
+        "fez_record_search_key_total_chapters": null,
+        "fez_record_search_key_total_pages": null,
+        "fez_record_search_key_volume_number": Object {
+          "rek_volume_number": "15",
+          "rek_volume_number_id": 5294487,
+          "rek_volume_number_pid": "UQ:41878",
+        },
+        "rek_citation": "blah blah blah",
+        "rek_date": "2004-01-01T00:00:00Z",
+        "rek_display_type": 174,
+        "rek_display_type_lookup": "Book",
+        "rek_formatted_abstract": null,
+        "rek_genre": "Book",
+        "rek_object_type": 3,
+        "rek_pid": "UQ:41878",
+        "rek_status": 2,
+        "rek_subtype": "Creative Work - Textual",
+        "rek_title": "Article Title",
+      }
+    }
+  />
+  <p>
+    <b>
+      Display Type
+    </b>
+     (for dev): 
+    Book
+  </p>
+  <p>
+    <b>
+      Subtype
+    </b>
+     (for dev) : 
+    Creative Work - Textual
+  </p>
+  <form
+    onSubmit={[Function]}
+  >
+    <NavigationDialogBox
+      txt={
+        Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to cancel this request?",
+          "confirmationTitle": "Cancel request",
+        }
+      }
+      when={true}
+    />
+    <ConfirmDialogBox
+      hideCancelButton={false}
+      locale={
+        Object {
+          "cancelButtonLabel": "Complete another record",
+          "confirmButtonLabel": "Go to my incomplete research list",
+          "confirmationMessage": <React.Fragment />,
+          "confirmationTitle": "Your work has been updated",
+          "fileFailConfirmationAlert": Object {
+            "message": "File upload and/or notes post failed",
+            "title": "UPLOAD FAILED",
+            "type": "warning",
+          },
+        }
+      }
+      onAction={[Function]}
+      onCancelAction={[Function]}
+      onRef={[Function]}
+    />
+    <WithStyles(Grid)
+      container={true}
+      spacing={24}
+    >
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(Alert)
+          message="This record has missing data - enter all fields to give a quality record."
+          title="Missing data"
+          type="info_outline"
+        />
+      </WithStyles(Grid)>
+      <NtroFields
+        defaultLanguage="eng"
+        hideAbstract={false}
+        hideAudienceSize={true}
+        hideEndPage={true}
+        hideExtent={false}
+        hideGrants={true}
+        hideIsmn={true}
+        hideIsrc={true}
+        hideIssue={true}
+        hideLanguage={false}
+        hideOriginalFormat={true}
+        hidePeerReviewActivity={false}
+        hideSeries={true}
+        hideStartPage={true}
+        hideVolume={true}
+        locale={
+          Object {
+            "contributionStatement": Object {
+              "fields": Object {
+                "impactStatement": Object {
+                  "label": <span>
+                    Creator research statement*. Include Background, Contribution and Significance 
+                    <span
+                      style={
+                        Object {
+                          "fontWeight": 700,
+                        }
+                      }
+                    >
+                      (not for public view)
+                    </span>
+                  </span>,
+                  "placeholder": "Remember to include substantiation of your Major or Minor Scale/Significance claim above.",
+                },
+                "scaleOfWork": Object {
+                  "description": "Select the option that best describes the significance of the work.",
+                  "label": <span>
+                    Scale/Significance of work* 
+                    <span
+                      style={
+                        Object {
+                          "fontWeight": 700,
+                        }
+                      }
+                    >
+                      (not for public view)
+                    </span>
+                  </span>,
+                },
+              },
+              "help": Object {
+                "buttonLabel": "CLOSE",
+                "text": <React.Fragment>
+                  <h3>
+                    Creator research statement
+                  </h3>
+                  <p>
+                    For more information about the research statement, click  
+                    <b>
+                      <a
+                        href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836548"
+                        style={
+                          Object {
+                            "fontWeight": 700,
+                          }
+                        }
+                        target="_blank"
+                      >
+                        here
+                      </a>
+                    </b>
+                  </p>
+                </React.Fragment>,
+                "title": "Author/Creator research statement",
+              },
+              "title": "Author/Creator research statement",
+            },
+            "grantEditor": Object {
+              "title": "Grant details",
+            },
+            "metadata": Object {
+              "fields": Object {
+                "abstract": Object {
+                  "label": <span>
+                    Abstract/Description* 
+                    <span
+                      style={
+                        Object {
+                          "fontWeight": 700,
+                        }
+                      }
+                    >
+                      (for public view)
+                    </span>
+                  </span>,
+                  "placeholder": "Enter a brief description of the work",
+                },
+                "audienceSize": Object {
+                  "label": "Audience size",
+                },
+                "endPage": Object {
+                  "label": "End page",
+                },
+                "extent": Object {
+                  "label": "Total pages/Extent",
+                  "placeholder": "Enter total pages, size or duration of work",
+                },
+                "issue": Object {
+                  "label": "Issue",
+                },
+                "language": Object {
+                  "label": "Language",
+                },
+                "notes": Object {
+                  "label": "Notes",
+                },
+                "peerReviewActivity": Object {
+                  "label": "Quality indicators",
+                },
+                "physicalDescription": Object {
+                  "label": "Physical description",
+                  "placeholder": "Building, Exhibition, Performance, Composition",
+                },
+                "series": Object {
+                  "floatingLabelText": "Series",
+                  "hintText": "Enter the name of publication, performance, recording, or event series",
+                },
+                "startPage": Object {
+                  "label": "Start page",
+                },
+                "volume": Object {
+                  "label": "Volume",
+                },
+              },
+              "title": "NTRO data",
+            },
+          }
+        }
+        showContributionStatement={true}
+        showSignificance={true}
+        submitting={false}
+      />
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          title="Grant information"
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            name="grants"
+          />
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          title="Notes"
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            fullWidth={true}
+            label="Notes for this record"
+            multiline={true}
+            name="notes"
+            placeholder="Add any other notes or comments about this record to send to the eSpace team."
+            rows={5}
+            type="text"
+          />
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          title="Upload files"
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            failedAlertLocale={
+              Object {
+                "actionButtonLabel": "RESUBMIT YOUR THESIS",
+                "message": "There was an issue uploading your thesis files. You will need to resubmit your thesis by clicking on the 'Resubmit your thesis' button.",
+                "title": "FILE UPLOAD ERROR",
+                "type": "error",
+              }
+            }
+            isNtro={true}
+            locale={
+              Object {
+                "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
+                "errorTitle": "Upload Errors",
+                "fileUploadInstruction": <p>
+                  Click here to select files, or drag files into this area to upload
+                </p>,
+                "fileUploadRestrictionHeading": "File upload restrictions",
+                "fileUploadRestrictions": <div>
+                  Maximum file size is 8Gb. 
+                  <br />
+                  PDF files must be saved using the following naming structure 
+                  <b>
+                    &lt;student number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf
+                  </b>
+                  . Document name could be thesis, abstract, and etc. For example:
+                  <ul>
+                    <li>
+                      s1234567_phd_thesis.pdf
+                    </li>
+                    <li>
+                      s1234567_phd_abstract.pdf
+                    </li>
+                  </ul>
+                  Supplementary audio files are to be in MP 3 format. 
+                  <br />
+                  Supplementary video files are to be in WMV or AVI format. 
+                  <br />
+                </div>,
+                "instructions": "",
+                "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
+                "successTitle": "Success",
+                "validation": Object {
+                  "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
+                  "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
+                  "notFiles": "Invalid files ([fileNames])",
+                  "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
+                  "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
+                },
+              }
+            }
+            name="files"
+            requireOpenAccessStatus={true}
+            text={
+              <div>
+                <span
+                  className="requiredField"
+                >
+                  <label>
+                     
+                  </label>
+                </span>
+              </div>
+            }
+            title="Upload files"
+            validate={
+              Array [
+                [Function],
+              ]
+            }
+          />
+        </StandardCard>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      container={true}
+      spacing={24}
+    >
+      <WithStyles(Grid)
+        item={true}
+        xs={true}
+      />
+      <WithStyles(Grid)
+        item={true}
+      >
+        <WithStyles(Button)
+          disabled={false}
+          fullWidth={true}
+          onClick={[Function]}
+          variant="contained"
+        >
+          Cancel and return to my incomplete records list
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+      >
+        <WithStyles(Button)
+          color="primary"
+          fullWidth={true}
+          onClick={[MockFunction]}
+          variant="contained"
+        >
+          Complete my record
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </form>
+</StandardPage>
+`;
+
+exports[`Cards will display correct empty fields for a Textual Book work with lang supplied 1`] = `
+<StandardPage
+  title="Fix an incomplete record"
+>
+  <withRouter(Connect(WithStyles(PublicationCitation)))
+    publication={
+      Object {
+        "fez_record_search_key_audience_size": null,
+        "fez_record_search_key_author": Array [
+          Object {
+            "rek_author": "Brown, M. A.",
+            "rek_author_id": 30038090,
+            "rek_author_order": 2,
+            "rek_author_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author": "He, Y.",
+            "rek_author_id": 30038089,
+            "rek_author_order": 1,
+            "rek_author_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author": "Rothnagel, J. A.",
+            "rek_author_id": 30038091,
+            "rek_author_order": 3,
+            "rek_author_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author": "Saunders, N. A.",
+            "rek_author_id": 30038092,
+            "rek_author_order": 4,
+            "rek_author_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author": "Smith, R.",
+            "rek_author_id": 30038093,
+            "rek_author_order": 5,
+            "rek_author_pid": "UQ:41878",
+          },
+        ],
+        "fez_record_search_key_author_id": Array [
+          Object {
+            "rek_author_id": 0,
+            "rek_author_id_id": 29384218,
+            "rek_author_id_order": 1,
+            "rek_author_id_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author_id": 410,
+            "rek_author_id_id": 29384219,
+            "rek_author_id_order": 2,
+            "rek_author_id_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author_id": 786,
+            "rek_author_id_id": 29384220,
+            "rek_author_id_order": 3,
+            "rek_author_id_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author_id": 687,
+            "rek_author_id_id": 29384221,
+            "rek_author_id_order": 4,
+            "rek_author_id_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author_id": 4100,
+            "rek_author_id_id": 29384222,
+            "rek_author_id_order": 5,
+            "rek_author_id_pid": "UQ:41878",
+          },
+        ],
+        "fez_record_search_key_creator_contribution_statement": null,
+        "fez_record_search_key_end_page": Object {
+          "rek_end_page": "253A",
+          "rek_end_page_id": 5708077,
+          "rek_end_page_pid": "UQ:41878",
+        },
+        "fez_record_search_key_issue_number": null,
+        "fez_record_search_key_journal_name": Object {
+          "rek_journal_name": "Molecular Biology of The Cell",
+          "rek_journal_name_id": 5236446,
+          "rek_journal_name_pid": "UQ:41878",
+        },
+        "fez_record_search_key_language": Array [
+          Object {
+            "rek_language": "chi",
+            "rek_language_id": 5459649,
+            "rek_language_order": 1,
+            "rek_language_pid": "UQ:41878",
+          },
+        ],
+        "fez_record_search_key_place_of_publication": Object {
+          "rek_place_of_publication": "Bethesda",
+          "rek_place_of_publication_id": 4343575,
+          "rek_place_of_publication_pid": "UQ:41878",
+        },
+        "fez_record_search_key_publisher": Object {
+          "rek_publisher": "American Society for Cell Biology",
+          "rek_publisher_id": 4629173,
+          "rek_publisher_pid": "UQ:41878",
+        },
+        "fez_record_search_key_quality_indicator": null,
+        "fez_record_search_key_significance": null,
+        "fez_record_search_key_start_page": Object {
+          "rek_start_page": "252A",
+          "rek_start_page_id": 5781267,
+          "rek_start_page_pid": "UQ:41878",
+        },
+        "fez_record_search_key_total_chapters": null,
+        "fez_record_search_key_total_pages": null,
+        "fez_record_search_key_volume_number": Object {
+          "rek_volume_number": "15",
+          "rek_volume_number_id": 5294487,
+          "rek_volume_number_pid": "UQ:41878",
+        },
+        "rek_citation": "blah blah blah",
+        "rek_date": "2004-01-01T00:00:00Z",
+        "rek_display_type": 174,
+        "rek_display_type_lookup": "Book",
+        "rek_formatted_abstract": null,
+        "rek_genre": "Book",
+        "rek_object_type": 3,
+        "rek_pid": "UQ:41878",
+        "rek_status": 2,
+        "rek_subtype": "Creative Work - Textual",
+        "rek_title": "Article Title",
+      }
+    }
+  />
+  <p>
+    <b>
+      Display Type
+    </b>
+     (for dev): 
+    Book
+  </p>
+  <p>
+    <b>
+      Subtype
+    </b>
+     (for dev) : 
+    Creative Work - Textual
+  </p>
+  <form
+    onSubmit={[Function]}
+  >
+    <NavigationDialogBox
+      txt={
+        Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to cancel this request?",
+          "confirmationTitle": "Cancel request",
+        }
+      }
+      when={true}
+    />
+    <ConfirmDialogBox
+      hideCancelButton={false}
+      locale={
+        Object {
+          "cancelButtonLabel": "Complete another record",
+          "confirmButtonLabel": "Go to my incomplete research list",
+          "confirmationMessage": <React.Fragment />,
+          "confirmationTitle": "Your work has been updated",
+          "fileFailConfirmationAlert": Object {
+            "message": "File upload and/or notes post failed",
+            "title": "UPLOAD FAILED",
+            "type": "warning",
+          },
+        }
+      }
+      onAction={[Function]}
+      onCancelAction={[Function]}
+      onRef={[Function]}
+    />
+    <WithStyles(Grid)
+      container={true}
+      spacing={24}
+    >
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(Alert)
+          message="This record has missing data - enter all fields to give a quality record."
+          title="Missing data"
+          type="info_outline"
+        />
+      </WithStyles(Grid)>
+      <NtroFields
+        defaultLanguage="chi"
+        hideAbstract={false}
+        hideAudienceSize={true}
+        hideEndPage={true}
+        hideExtent={false}
+        hideGrants={true}
+        hideIsmn={true}
+        hideIsrc={true}
+        hideIssue={true}
+        hideLanguage={true}
+        hideOriginalFormat={true}
+        hidePeerReviewActivity={false}
+        hideSeries={true}
+        hideStartPage={true}
+        hideVolume={true}
+        locale={
+          Object {
+            "contributionStatement": Object {
+              "fields": Object {
+                "impactStatement": Object {
+                  "label": <span>
+                    Creator research statement*. Include Background, Contribution and Significance 
+                    <span
+                      style={
+                        Object {
+                          "fontWeight": 700,
+                        }
+                      }
+                    >
+                      (not for public view)
+                    </span>
+                  </span>,
+                  "placeholder": "Remember to include substantiation of your Major or Minor Scale/Significance claim above.",
+                },
+                "scaleOfWork": Object {
+                  "description": "Select the option that best describes the significance of the work.",
+                  "label": <span>
+                    Scale/Significance of work* 
+                    <span
+                      style={
+                        Object {
+                          "fontWeight": 700,
+                        }
+                      }
+                    >
+                      (not for public view)
+                    </span>
+                  </span>,
+                },
+              },
+              "help": Object {
+                "buttonLabel": "CLOSE",
+                "text": <React.Fragment>
+                  <h3>
+                    Creator research statement
+                  </h3>
+                  <p>
+                    For more information about the research statement, click  
+                    <b>
+                      <a
+                        href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836548"
+                        style={
+                          Object {
+                            "fontWeight": 700,
+                          }
+                        }
+                        target="_blank"
+                      >
+                        here
+                      </a>
+                    </b>
+                  </p>
+                </React.Fragment>,
+                "title": "Author/Creator research statement",
+              },
+              "title": "Author/Creator research statement",
+            },
+            "grantEditor": Object {
+              "title": "Grant details",
+            },
+            "metadata": Object {
+              "fields": Object {
+                "abstract": Object {
+                  "label": <span>
+                    Abstract/Description* 
+                    <span
+                      style={
+                        Object {
+                          "fontWeight": 700,
+                        }
+                      }
+                    >
+                      (for public view)
+                    </span>
+                  </span>,
+                  "placeholder": "Enter a brief description of the work",
+                },
+                "audienceSize": Object {
+                  "label": "Audience size",
+                },
+                "endPage": Object {
+                  "label": "End page",
+                },
+                "extent": Object {
+                  "label": "Total pages/Extent",
+                  "placeholder": "Enter total pages, size or duration of work",
+                },
+                "issue": Object {
+                  "label": "Issue",
+                },
+                "language": Object {
+                  "label": "Language",
+                },
+                "notes": Object {
+                  "label": "Notes",
+                },
+                "peerReviewActivity": Object {
+                  "label": "Quality indicators",
+                },
+                "physicalDescription": Object {
+                  "label": "Physical description",
+                  "placeholder": "Building, Exhibition, Performance, Composition",
+                },
+                "series": Object {
+                  "floatingLabelText": "Series",
+                  "hintText": "Enter the name of publication, performance, recording, or event series",
+                },
+                "startPage": Object {
+                  "label": "Start page",
+                },
+                "volume": Object {
+                  "label": "Volume",
+                },
+              },
+              "title": "NTRO data",
+            },
+          }
+        }
+        showContributionStatement={true}
+        showSignificance={true}
+        submitting={false}
+      />
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          title="Grant information"
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            name="grants"
+          />
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          title="Notes"
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            fullWidth={true}
+            label="Notes for this record"
+            multiline={true}
+            name="notes"
+            placeholder="Add any other notes or comments about this record to send to the eSpace team."
+            rows={5}
+            type="text"
+          />
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          title="Upload files"
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            failedAlertLocale={
+              Object {
+                "actionButtonLabel": "RESUBMIT YOUR THESIS",
+                "message": "There was an issue uploading your thesis files. You will need to resubmit your thesis by clicking on the 'Resubmit your thesis' button.",
+                "title": "FILE UPLOAD ERROR",
+                "type": "error",
+              }
+            }
+            isNtro={true}
+            locale={
+              Object {
+                "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
+                "errorTitle": "Upload Errors",
+                "fileUploadInstruction": <p>
+                  Click here to select files, or drag files into this area to upload
+                </p>,
+                "fileUploadRestrictionHeading": "File upload restrictions",
+                "fileUploadRestrictions": <div>
+                  Maximum file size is 8Gb. 
+                  <br />
+                  PDF files must be saved using the following naming structure 
+                  <b>
+                    &lt;student number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf
+                  </b>
+                  . Document name could be thesis, abstract, and etc. For example:
+                  <ul>
+                    <li>
+                      s1234567_phd_thesis.pdf
+                    </li>
+                    <li>
+                      s1234567_phd_abstract.pdf
+                    </li>
+                  </ul>
+                  Supplementary audio files are to be in MP 3 format. 
+                  <br />
+                  Supplementary video files are to be in WMV or AVI format. 
+                  <br />
+                </div>,
+                "instructions": "",
+                "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
+                "successTitle": "Success",
+                "validation": Object {
+                  "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
+                  "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
+                  "notFiles": "Invalid files ([fileNames])",
+                  "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
+                  "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
+                },
+              }
+            }
+            name="files"
+            requireOpenAccessStatus={true}
+            text={
+              <div>
+                <span
+                  className="requiredField"
+                >
+                  <label>
+                     
+                  </label>
+                </span>
+              </div>
+            }
+            title="Upload files"
+            validate={
+              Array [
+                [Function],
+              ]
+            }
+          />
+        </StandardCard>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      container={true}
+      spacing={24}
+    >
+      <WithStyles(Grid)
+        item={true}
+        xs={true}
+      />
+      <WithStyles(Grid)
+        item={true}
+      >
+        <WithStyles(Button)
+          disabled={false}
+          fullWidth={true}
+          onClick={[Function]}
+          variant="contained"
+        >
+          Cancel and return to my incomplete records list
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+      >
+        <WithStyles(Button)
+          color="primary"
+          fullWidth={true}
+          onClick={[MockFunction]}
+          variant="contained"
+        >
+          Complete my record
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </form>
+</StandardPage>
+`;
+
+exports[`Cards will display correct empty fields for a Website Creative work 1`] = `
+<StandardPage
+  title="Fix an incomplete record"
+>
+  <withRouter(Connect(WithStyles(PublicationCitation)))
+    publication={
+      Object {
+        "fez_record_search_key_audience_size": null,
+        "fez_record_search_key_author": Array [
+          Object {
+            "rek_author": "Brown, M. A.",
+            "rek_author_id": 30038090,
+            "rek_author_order": 2,
+            "rek_author_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author": "He, Y.",
+            "rek_author_id": 30038089,
+            "rek_author_order": 1,
+            "rek_author_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author": "Rothnagel, J. A.",
+            "rek_author_id": 30038091,
+            "rek_author_order": 3,
+            "rek_author_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author": "Saunders, N. A.",
+            "rek_author_id": 30038092,
+            "rek_author_order": 4,
+            "rek_author_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author": "Smith, R.",
+            "rek_author_id": 30038093,
+            "rek_author_order": 5,
+            "rek_author_pid": "UQ:41878",
+          },
+        ],
+        "fez_record_search_key_author_id": Array [
+          Object {
+            "rek_author_id": 0,
+            "rek_author_id_id": 29384218,
+            "rek_author_id_order": 1,
+            "rek_author_id_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author_id": 410,
+            "rek_author_id_id": 29384219,
+            "rek_author_id_order": 2,
+            "rek_author_id_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author_id": 786,
+            "rek_author_id_id": 29384220,
+            "rek_author_id_order": 3,
+            "rek_author_id_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author_id": 687,
+            "rek_author_id_id": 29384221,
+            "rek_author_id_order": 4,
+            "rek_author_id_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author_id": 4100,
+            "rek_author_id_id": 29384222,
+            "rek_author_id_order": 5,
+            "rek_author_id_pid": "UQ:41878",
+          },
+        ],
+        "fez_record_search_key_creator_contribution_statement": null,
+        "fez_record_search_key_end_page": Object {
+          "rek_end_page": "253A",
+          "rek_end_page_id": 5708077,
+          "rek_end_page_pid": "UQ:41878",
+        },
+        "fez_record_search_key_issue_number": null,
+        "fez_record_search_key_journal_name": Object {
+          "rek_journal_name": "Molecular Biology of The Cell",
+          "rek_journal_name_id": 5236446,
+          "rek_journal_name_pid": "UQ:41878",
+        },
+        "fez_record_search_key_language": null,
+        "fez_record_search_key_place_of_publication": Object {
+          "rek_place_of_publication": "Bethesda",
+          "rek_place_of_publication_id": 4343575,
+          "rek_place_of_publication_pid": "UQ:41878",
+        },
+        "fez_record_search_key_publisher": Object {
+          "rek_publisher": "American Society for Cell Biology",
+          "rek_publisher_id": 4629173,
+          "rek_publisher_pid": "UQ:41878",
+        },
+        "fez_record_search_key_quality_indicator": null,
+        "fez_record_search_key_significance": null,
+        "fez_record_search_key_start_page": Object {
+          "rek_start_page": "252A",
+          "rek_start_page_id": 5781267,
+          "rek_start_page_pid": "UQ:41878",
+        },
+        "fez_record_search_key_total_chapters": null,
+        "fez_record_search_key_total_pages": null,
+        "fez_record_search_key_volume_number": Object {
+          "rek_volume_number": "15",
+          "rek_volume_number_id": 5294487,
+          "rek_volume_number_pid": "UQ:41878",
+        },
+        "rek_citation": "blah blah blah",
+        "rek_date": "2004-01-01T00:00:00Z",
+        "rek_display_type": 313,
+        "rek_display_type_lookup": "Creative Work",
+        "rek_formatted_abstract": null,
+        "rek_genre": "Creative",
+        "rek_object_type": 3,
+        "rek_pid": "UQ:41878",
+        "rek_status": 2,
+        "rek_subtype": "Recorded or Rendered Creative Work - Web Exhibition",
+        "rek_title": "Article Title",
+      }
+    }
+  />
+  <p>
+    <b>
+      Display Type
+    </b>
+     (for dev): 
+    Creative Work
+  </p>
+  <p>
+    <b>
+      Subtype
+    </b>
+     (for dev) : 
+    Recorded or Rendered Creative Work - Web Exhibition
+  </p>
+  <form
+    onSubmit={[Function]}
+  >
+    <NavigationDialogBox
+      txt={
+        Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to cancel this request?",
+          "confirmationTitle": "Cancel request",
+        }
+      }
+      when={true}
+    />
+    <ConfirmDialogBox
+      hideCancelButton={false}
+      locale={
+        Object {
+          "cancelButtonLabel": "Complete another record",
+          "confirmButtonLabel": "Go to my incomplete research list",
+          "confirmationMessage": <React.Fragment />,
+          "confirmationTitle": "Your work has been updated",
+          "fileFailConfirmationAlert": Object {
+            "message": "File upload and/or notes post failed",
+            "title": "UPLOAD FAILED",
+            "type": "warning",
+          },
+        }
+      }
+      onAction={[Function]}
+      onCancelAction={[Function]}
+      onRef={[Function]}
+    />
+    <WithStyles(Grid)
+      container={true}
+      spacing={24}
+    >
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(Alert)
+          message="This record has missing data - enter all fields to give a quality record."
+          title="Missing data"
+          type="info_outline"
+        />
+      </WithStyles(Grid)>
+      <NtroFields
+        defaultLanguage="eng"
+        hideAbstract={false}
+        hideAudienceSize={true}
+        hideEndPage={true}
+        hideExtent={false}
+        hideGrants={true}
+        hideIsmn={true}
+        hideIsrc={true}
+        hideIssue={true}
+        hideLanguage={false}
+        hideOriginalFormat={true}
+        hidePeerReviewActivity={false}
+        hideSeries={true}
+        hideStartPage={true}
+        hideVolume={true}
+        locale={
+          Object {
+            "contributionStatement": Object {
+              "fields": Object {
+                "impactStatement": Object {
+                  "label": <span>
+                    Creator research statement*. Include Background, Contribution and Significance 
+                    <span
+                      style={
+                        Object {
+                          "fontWeight": 700,
+                        }
+                      }
+                    >
+                      (not for public view)
+                    </span>
+                  </span>,
+                  "placeholder": "Remember to include substantiation of your Major or Minor Scale/Significance claim above.",
+                },
+                "scaleOfWork": Object {
+                  "description": "Select the option that best describes the significance of the work.",
+                  "label": <span>
+                    Scale/Significance of work* 
+                    <span
+                      style={
+                        Object {
+                          "fontWeight": 700,
+                        }
+                      }
+                    >
+                      (not for public view)
+                    </span>
+                  </span>,
+                },
+              },
+              "help": Object {
+                "buttonLabel": "CLOSE",
+                "text": <React.Fragment>
+                  <h3>
+                    Creator research statement
+                  </h3>
+                  <p>
+                    For more information about the research statement, click  
+                    <b>
+                      <a
+                        href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836548"
+                        style={
+                          Object {
+                            "fontWeight": 700,
+                          }
+                        }
+                        target="_blank"
+                      >
+                        here
+                      </a>
+                    </b>
+                  </p>
+                </React.Fragment>,
+                "title": "Author/Creator research statement",
+              },
+              "title": "Author/Creator research statement",
+            },
+            "grantEditor": Object {
+              "title": "Grant details",
+            },
+            "metadata": Object {
+              "fields": Object {
+                "abstract": Object {
+                  "label": <span>
+                    Abstract/Description* 
+                    <span
+                      style={
+                        Object {
+                          "fontWeight": 700,
+                        }
+                      }
+                    >
+                      (for public view)
+                    </span>
+                  </span>,
+                  "placeholder": "Enter a brief description of the work",
+                },
+                "audienceSize": Object {
+                  "label": "Audience size",
+                },
+                "endPage": Object {
+                  "label": "End page",
+                },
+                "extent": Object {
+                  "label": "Total pages/Extent",
+                  "placeholder": "Enter total pages, size or duration of work",
+                },
+                "issue": Object {
+                  "label": "Issue",
+                },
+                "language": Object {
+                  "label": "Language",
+                },
+                "notes": Object {
+                  "label": "Notes",
+                },
+                "peerReviewActivity": Object {
+                  "label": "Quality indicators",
+                },
+                "physicalDescription": Object {
+                  "label": "Physical description",
+                  "placeholder": "Building, Exhibition, Performance, Composition",
+                },
+                "series": Object {
+                  "floatingLabelText": "Series",
+                  "hintText": "Enter the name of publication, performance, recording, or event series",
+                },
+                "startPage": Object {
+                  "label": "Start page",
+                },
+                "volume": Object {
+                  "label": "Volume",
+                },
+              },
+              "title": "NTRO data",
+            },
+          }
+        }
+        showContributionStatement={true}
+        showSignificance={true}
+        submitting={false}
+      />
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          title="Grant information"
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            name="grants"
+          />
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          title="Notes"
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            fullWidth={true}
+            label="Notes for this record"
+            multiline={true}
+            name="notes"
+            placeholder="Add any other notes or comments about this record to send to the eSpace team."
+            rows={5}
+            type="text"
+          />
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          title="Upload files"
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            failedAlertLocale={
+              Object {
+                "actionButtonLabel": "RESUBMIT YOUR THESIS",
+                "message": "There was an issue uploading your thesis files. You will need to resubmit your thesis by clicking on the 'Resubmit your thesis' button.",
+                "title": "FILE UPLOAD ERROR",
+                "type": "error",
+              }
+            }
+            isNtro={true}
+            locale={
+              Object {
+                "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
+                "errorTitle": "Upload Errors",
+                "fileUploadInstruction": <p>
+                  Click here to select files, or drag files into this area to upload
+                </p>,
+                "fileUploadRestrictionHeading": "File upload restrictions",
+                "fileUploadRestrictions": <div>
+                  Maximum file size is 8Gb. 
+                  <br />
+                  PDF files must be saved using the following naming structure 
+                  <b>
+                    &lt;student number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf
+                  </b>
+                  . Document name could be thesis, abstract, and etc. For example:
+                  <ul>
+                    <li>
+                      s1234567_phd_thesis.pdf
+                    </li>
+                    <li>
+                      s1234567_phd_abstract.pdf
+                    </li>
+                  </ul>
+                  Supplementary audio files are to be in MP 3 format. 
+                  <br />
+                  Supplementary video files are to be in WMV or AVI format. 
+                  <br />
+                </div>,
+                "instructions": "",
+                "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
+                "successTitle": "Success",
+                "validation": Object {
+                  "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
+                  "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
+                  "notFiles": "Invalid files ([fileNames])",
+                  "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
+                  "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
+                },
+              }
+            }
+            name="files"
+            requireOpenAccessStatus={true}
+            text={
+              <div>
+                <span
+                  className="requiredField"
+                >
+                  <label>
+                     
+                  </label>
+                </span>
+              </div>
+            }
+            title="Upload files"
+            validate={
+              Array [
+                [Function],
+              ]
+            }
+          />
+        </StandardCard>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      container={true}
+      spacing={24}
+    >
+      <WithStyles(Grid)
+        item={true}
+        xs={true}
+      />
+      <WithStyles(Grid)
+        item={true}
+      >
+        <WithStyles(Button)
+          disabled={false}
+          fullWidth={true}
+          onClick={[Function]}
+          variant="contained"
+        >
+          Cancel and return to my incomplete records list
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+      >
+        <WithStyles(Button)
+          color="primary"
+          fullWidth={true}
+          onClick={[MockFunction]}
+          variant="contained"
+        >
+          Complete my record
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </form>
+</StandardPage>
+`;
+
+exports[`Cards will display correct empty fields for an Architectural Design work 1`] = `
+<StandardPage
+  title="Fix an incomplete record"
+>
+  <withRouter(Connect(WithStyles(PublicationCitation)))
+    publication={
+      Object {
+        "fez_record_search_key_audience_size": null,
+        "fez_record_search_key_author": Array [
+          Object {
+            "rek_author": "Brown, M. A.",
+            "rek_author_id": 30038090,
+            "rek_author_order": 2,
+            "rek_author_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author": "He, Y.",
+            "rek_author_id": 30038089,
+            "rek_author_order": 1,
+            "rek_author_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author": "Rothnagel, J. A.",
+            "rek_author_id": 30038091,
+            "rek_author_order": 3,
+            "rek_author_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author": "Saunders, N. A.",
+            "rek_author_id": 30038092,
+            "rek_author_order": 4,
+            "rek_author_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author": "Smith, R.",
+            "rek_author_id": 30038093,
+            "rek_author_order": 5,
+            "rek_author_pid": "UQ:41878",
+          },
+        ],
+        "fez_record_search_key_author_id": Array [
+          Object {
+            "rek_author_id": 0,
+            "rek_author_id_id": 29384218,
+            "rek_author_id_order": 1,
+            "rek_author_id_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author_id": 410,
+            "rek_author_id_id": 29384219,
+            "rek_author_id_order": 2,
+            "rek_author_id_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author_id": 786,
+            "rek_author_id_id": 29384220,
+            "rek_author_id_order": 3,
+            "rek_author_id_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author_id": 687,
+            "rek_author_id_id": 29384221,
+            "rek_author_id_order": 4,
+            "rek_author_id_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author_id": 4100,
+            "rek_author_id_id": 29384222,
+            "rek_author_id_order": 5,
+            "rek_author_id_pid": "UQ:41878",
+          },
+        ],
+        "fez_record_search_key_creator_contribution_statement": null,
+        "fez_record_search_key_end_page": Object {
+          "rek_end_page": "253A",
+          "rek_end_page_id": 5708077,
+          "rek_end_page_pid": "UQ:41878",
+        },
+        "fez_record_search_key_issue_number": null,
+        "fez_record_search_key_journal_name": Object {
+          "rek_journal_name": "Molecular Biology of The Cell",
+          "rek_journal_name_id": 5236446,
+          "rek_journal_name_pid": "UQ:41878",
+        },
+        "fez_record_search_key_language": null,
+        "fez_record_search_key_place_of_publication": Object {
+          "rek_place_of_publication": "Bethesda",
+          "rek_place_of_publication_id": 4343575,
+          "rek_place_of_publication_pid": "UQ:41878",
+        },
+        "fez_record_search_key_publisher": Object {
+          "rek_publisher": "American Society for Cell Biology",
+          "rek_publisher_id": 4629173,
+          "rek_publisher_pid": "UQ:41878",
+        },
+        "fez_record_search_key_quality_indicator": null,
+        "fez_record_search_key_significance": null,
+        "fez_record_search_key_start_page": Object {
+          "rek_start_page": "252A",
+          "rek_start_page_id": 5781267,
+          "rek_start_page_pid": "UQ:41878",
+        },
+        "fez_record_search_key_total_chapters": null,
+        "fez_record_search_key_total_pages": null,
+        "fez_record_search_key_volume_number": Object {
+          "rek_volume_number": "15",
+          "rek_volume_number_id": 5294487,
+          "rek_volume_number_pid": "UQ:41878",
+        },
+        "rek_citation": "blah blah blah",
+        "rek_date": "2004-01-01T00:00:00Z",
+        "rek_display_type": 316,
+        "rek_display_type_lookup": "Design",
+        "rek_formatted_abstract": null,
+        "rek_genre": "Design",
+        "rek_object_type": 3,
+        "rek_pid": "UQ:41878",
+        "rek_status": 2,
+        "rek_subtype": "Creative Work - Design/Architectural",
+        "rek_title": "Article Title",
+      }
+    }
+  />
+  <p>
+    <b>
+      Display Type
+    </b>
+     (for dev): 
+    Design
+  </p>
+  <p>
+    <b>
+      Subtype
+    </b>
+     (for dev) : 
+    Creative Work - Design/Architectural
+  </p>
+  <form
+    onSubmit={[Function]}
+  >
+    <NavigationDialogBox
+      txt={
+        Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to cancel this request?",
+          "confirmationTitle": "Cancel request",
+        }
+      }
+      when={true}
+    />
+    <ConfirmDialogBox
+      hideCancelButton={false}
+      locale={
+        Object {
+          "cancelButtonLabel": "Complete another record",
+          "confirmButtonLabel": "Go to my incomplete research list",
+          "confirmationMessage": <React.Fragment />,
+          "confirmationTitle": "Your work has been updated",
+          "fileFailConfirmationAlert": Object {
+            "message": "File upload and/or notes post failed",
+            "title": "UPLOAD FAILED",
+            "type": "warning",
+          },
+        }
+      }
+      onAction={[Function]}
+      onCancelAction={[Function]}
+      onRef={[Function]}
+    />
+    <WithStyles(Grid)
+      container={true}
+      spacing={24}
+    >
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(Alert)
+          message="This record has missing data - enter all fields to give a quality record."
+          title="Missing data"
+          type="info_outline"
+        />
+      </WithStyles(Grid)>
+      <NtroFields
+        defaultLanguage="eng"
+        hideAbstract={false}
+        hideAudienceSize={true}
+        hideEndPage={true}
+        hideExtent={false}
+        hideGrants={true}
+        hideIsmn={true}
+        hideIsrc={true}
+        hideIssue={true}
+        hideLanguage={false}
+        hideOriginalFormat={true}
+        hidePeerReviewActivity={false}
+        hideSeries={true}
+        hideStartPage={true}
+        hideVolume={true}
+        locale={
+          Object {
+            "contributionStatement": Object {
+              "fields": Object {
+                "impactStatement": Object {
+                  "label": <span>
+                    Creator research statement*. Include Background, Contribution and Significance 
+                    <span
+                      style={
+                        Object {
+                          "fontWeight": 700,
+                        }
+                      }
+                    >
+                      (not for public view)
+                    </span>
+                  </span>,
+                  "placeholder": "Remember to include substantiation of your Major or Minor Scale/Significance claim above.",
+                },
+                "scaleOfWork": Object {
+                  "description": "Select the option that best describes the significance of the work.",
+                  "label": <span>
+                    Scale/Significance of work* 
+                    <span
+                      style={
+                        Object {
+                          "fontWeight": 700,
+                        }
+                      }
+                    >
+                      (not for public view)
+                    </span>
+                  </span>,
+                },
+              },
+              "help": Object {
+                "buttonLabel": "CLOSE",
+                "text": <React.Fragment>
+                  <h3>
+                    Creator research statement
+                  </h3>
+                  <p>
+                    For more information about the research statement, click  
+                    <b>
+                      <a
+                        href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836548"
+                        style={
+                          Object {
+                            "fontWeight": 700,
+                          }
+                        }
+                        target="_blank"
+                      >
+                        here
+                      </a>
+                    </b>
+                  </p>
+                </React.Fragment>,
+                "title": "Author/Creator research statement",
+              },
+              "title": "Author/Creator research statement",
+            },
+            "grantEditor": Object {
+              "title": "Grant details",
+            },
+            "metadata": Object {
+              "fields": Object {
+                "abstract": Object {
+                  "label": <span>
+                    Abstract/Description* 
+                    <span
+                      style={
+                        Object {
+                          "fontWeight": 700,
+                        }
+                      }
+                    >
+                      (for public view)
+                    </span>
+                  </span>,
+                  "placeholder": "Enter a brief description of the work",
+                },
+                "audienceSize": Object {
+                  "label": "Audience size",
+                },
+                "endPage": Object {
+                  "label": "End page",
+                },
+                "extent": Object {
+                  "label": "Total pages/Extent",
+                  "placeholder": "Enter total pages, size or duration of work",
+                },
+                "issue": Object {
+                  "label": "Issue",
+                },
+                "language": Object {
+                  "label": "Language",
+                },
+                "notes": Object {
+                  "label": "Notes",
+                },
+                "peerReviewActivity": Object {
+                  "label": "Quality indicators",
+                },
+                "physicalDescription": Object {
+                  "label": "Physical description",
+                  "placeholder": "Building, Exhibition, Performance, Composition",
+                },
+                "series": Object {
+                  "floatingLabelText": "Series",
+                  "hintText": "Enter the name of publication, performance, recording, or event series",
+                },
+                "startPage": Object {
+                  "label": "Start page",
+                },
+                "volume": Object {
+                  "label": "Volume",
+                },
+              },
+              "title": "NTRO data",
+            },
+          }
+        }
+        showContributionStatement={true}
+        showSignificance={true}
+        submitting={false}
+      />
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          title="Grant information"
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            name="grants"
+          />
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          title="Notes"
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            fullWidth={true}
+            label="Notes for this record"
+            multiline={true}
+            name="notes"
+            placeholder="Add any other notes or comments about this record to send to the eSpace team."
+            rows={5}
+            type="text"
+          />
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          title="Upload files"
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            failedAlertLocale={
+              Object {
+                "actionButtonLabel": "RESUBMIT YOUR THESIS",
+                "message": "There was an issue uploading your thesis files. You will need to resubmit your thesis by clicking on the 'Resubmit your thesis' button.",
+                "title": "FILE UPLOAD ERROR",
+                "type": "error",
+              }
+            }
+            isNtro={true}
+            locale={
+              Object {
+                "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
+                "errorTitle": "Upload Errors",
+                "fileUploadInstruction": <p>
+                  Click here to select files, or drag files into this area to upload
+                </p>,
+                "fileUploadRestrictionHeading": "File upload restrictions",
+                "fileUploadRestrictions": <div>
+                  Maximum file size is 8Gb. 
+                  <br />
+                  PDF files must be saved using the following naming structure 
+                  <b>
+                    &lt;student number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf
+                  </b>
+                  . Document name could be thesis, abstract, and etc. For example:
+                  <ul>
+                    <li>
+                      s1234567_phd_thesis.pdf
+                    </li>
+                    <li>
+                      s1234567_phd_abstract.pdf
+                    </li>
+                  </ul>
+                  Supplementary audio files are to be in MP 3 format. 
+                  <br />
+                  Supplementary video files are to be in WMV or AVI format. 
+                  <br />
+                </div>,
+                "instructions": "",
+                "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
+                "successTitle": "Success",
+                "validation": Object {
+                  "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
+                  "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
+                  "notFiles": "Invalid files ([fileNames])",
+                  "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
+                  "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
+                },
+              }
+            }
+            name="files"
+            requireOpenAccessStatus={true}
+            text={
+              <div>
+                <span
+                  className="requiredField"
+                >
+                  <label>
+                     
+                  </label>
+                </span>
+              </div>
+            }
+            title="Upload files"
+            validate={
+              Array [
+                [Function],
+              ]
+            }
+          />
+        </StandardCard>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      container={true}
+      spacing={24}
+    >
+      <WithStyles(Grid)
+        item={true}
+        xs={true}
+      />
+      <WithStyles(Grid)
+        item={true}
+      >
+        <WithStyles(Button)
+          disabled={false}
+          fullWidth={true}
+          onClick={[Function]}
+          variant="contained"
+        >
+          Cancel and return to my incomplete records list
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+      >
+        <WithStyles(Button)
+          color="primary"
+          fullWidth={true}
+          onClick={[MockFunction]}
+          variant="contained"
+        >
+          Complete my record
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </form>
+</StandardPage>
+`;
+
+exports[`Cards will display empty where nothing is incomplete 1`] = `
+<StandardPage
+  title="Fix an incomplete record"
+>
+  <withRouter(Connect(WithStyles(PublicationCitation)))
+    publication={
+      Object {
+        "fez_record_search_key_audience_size": Object {
+          "rek_audience_size": 1,
+          "rek_audience_size_id": 453993,
+          "rek_audience_size_pid": "UQ:ec5ce03",
+        },
+        "fez_record_search_key_author": Array [
+          Object {
+            "rek_author": "Brown, M. A.",
+            "rek_author_id": 30038090,
+            "rek_author_order": 2,
+            "rek_author_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author": "He, Y.",
+            "rek_author_id": 30038089,
+            "rek_author_order": 1,
+            "rek_author_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author": "Rothnagel, J. A.",
+            "rek_author_id": 30038091,
+            "rek_author_order": 3,
+            "rek_author_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author": "Saunders, N. A.",
+            "rek_author_id": 30038092,
+            "rek_author_order": 4,
+            "rek_author_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author": "Smith, R.",
+            "rek_author_id": 30038093,
+            "rek_author_order": 5,
+            "rek_author_pid": "UQ:41878",
+          },
+        ],
+        "fez_record_search_key_author_id": Array [
+          Object {
+            "rek_author_id": 0,
+            "rek_author_id_id": 29384218,
+            "rek_author_id_order": 1,
+            "rek_author_id_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author_id": 410,
+            "rek_author_id_id": 29384219,
+            "rek_author_id_order": 2,
+            "rek_author_id_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author_id": 786,
+            "rek_author_id_id": 29384220,
+            "rek_author_id_order": 3,
+            "rek_author_id_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author_id": 687,
+            "rek_author_id_id": 29384221,
+            "rek_author_id_order": 4,
+            "rek_author_id_pid": "UQ:41878",
+          },
+          Object {
+            "rek_author_id": 4100,
+            "rek_author_id_id": 29384222,
+            "rek_author_id_order": 5,
+            "rek_author_id_pid": "UQ:41878",
+          },
+        ],
+        "fez_record_search_key_creator_contribution_statement": Array [
+          Object {
+            "rek_creator_contribution_statement": "<p>It was significant.</p>",
+            "rek_creator_contribution_statement_id": 293,
+            "rek_creator_contribution_statement_order": 1,
+            "rek_creator_contribution_statement_pid": "UQ:ec5ce03",
+          },
+          Object {
+            "rek_creator_contribution_statement": "Statement missing.",
+            "rek_creator_contribution_statement_id": 294,
+            "rek_creator_contribution_statement_order": 2,
+            "rek_creator_contribution_statement_pid": "UQ:ec5ce03",
+          },
+        ],
+        "fez_record_search_key_end_page": Object {
+          "rek_end_page": "253A",
+          "rek_end_page_id": 5708077,
+          "rek_end_page_pid": "UQ:41878",
+        },
+        "fez_record_search_key_issue_number": null,
+        "fez_record_search_key_journal_name": Object {
+          "rek_journal_name": "Molecular Biology of The Cell",
+          "rek_journal_name_id": 5236446,
+          "rek_journal_name_pid": "UQ:41878",
+        },
+        "fez_record_search_key_language": Array [
+          Object {
+            "rek_language": "chi",
+            "rek_language_id": 5459649,
+            "rek_language_order": 1,
+            "rek_language_pid": "UQ:41878",
+          },
+        ],
+        "fez_record_search_key_place_of_publication": Object {
+          "rek_place_of_publication": "Bethesda",
+          "rek_place_of_publication_id": 4343575,
+          "rek_place_of_publication_pid": "UQ:41878",
+        },
+        "fez_record_search_key_publisher": Object {
+          "rek_publisher": "American Society for Cell Biology",
+          "rek_publisher_id": 4629173,
+          "rek_publisher_pid": "UQ:41878",
+        },
+        "fez_record_search_key_quality_indicator": Array [
+          Object {
+            "rek_quality_indicator": 453996,
+            "rek_quality_indicator_id": 282,
+            "rek_quality_indicator_lookup": "Reviews, prizes, awards recognition of the output",
+            "rek_quality_indicator_order": 1,
+            "rek_quality_indicator_pid": "UQ:ec5ce03",
+          },
+          Object {
+            "rek_quality_indicator": 453997,
+            "rek_quality_indicator_id": 283,
+            "rek_quality_indicator_lookup": "Association with recognised international entities, distinct from co-creation",
+            "rek_quality_indicator_order": 2,
+            "rek_quality_indicator_pid": "UQ:ec5ce03",
+          },
+        ],
+        "fez_record_search_key_significance": Array [
+          Object {
+            "rek_significance": 454026,
+            "rek_significance_id": 214,
+            "rek_significance_lookup": "Major",
+            "rek_significance_order": 1,
+            "rek_significance_pid": "UQ:ec5ce03",
+          },
+          Object {
+            "rek_significance": 0,
+            "rek_significance_id": 215,
+            "rek_significance_order": 2,
+            "rek_significance_pid": "UQ:ec5ce03",
+          },
+        ],
+        "fez_record_search_key_start_page": Object {
+          "rek_start_page": "252A",
+          "rek_start_page_id": 5781267,
+          "rek_start_page_pid": "UQ:41878",
+        },
+        "fez_record_search_key_total_chapters": null,
+        "fez_record_search_key_total_pages": Object {
+          "rek_total_pages": "10",
+          "rek_total_pages_id": 5782362,
+          "rek_total_pages_pid": "UQ:ec5ce03",
+          "rek_total_pages_xsdmf_id": null,
+        },
+        "fez_record_search_key_volume_number": Object {
+          "rek_volume_number": "15",
+          "rek_volume_number_id": 5294487,
+          "rek_volume_number_pid": "UQ:41878",
+        },
+        "rek_citation": "blah blah blah",
+        "rek_date": "2004-01-01T00:00:00Z",
+        "rek_display_type": 313,
+        "rek_display_type_lookup": "Creative Work",
+        "rek_formatted_abstract": "<p>abstract</p>",
+        "rek_genre": "Creative",
+        "rek_object_type": 3,
+        "rek_pid": "UQ:41878",
+        "rek_status": 2,
+        "rek_subtype": "Curated or Produced Exhibition or Event - Exhibition or Event",
+        "rek_title": "Article Title",
+      }
+    }
+  />
+  <p>
+    <b>
+      Display Type
+    </b>
+     (for dev): 
+    Creative Work
+  </p>
+  <p>
+    <b>
+      Subtype
+    </b>
+     (for dev) : 
+    Curated or Produced Exhibition or Event - Exhibition or Event
+  </p>
+  <form
+    onSubmit={[Function]}
+  >
+    <NavigationDialogBox
+      txt={
+        Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to cancel this request?",
+          "confirmationTitle": "Cancel request",
+        }
+      }
+      when={true}
+    />
+    <ConfirmDialogBox
+      hideCancelButton={false}
+      locale={
+        Object {
+          "cancelButtonLabel": "Complete another record",
+          "confirmButtonLabel": "Go to my incomplete research list",
+          "confirmationMessage": <React.Fragment />,
+          "confirmationTitle": "Your work has been updated",
+          "fileFailConfirmationAlert": Object {
+            "message": "File upload and/or notes post failed",
+            "title": "UPLOAD FAILED",
+            "type": "warning",
+          },
+        }
+      }
+      onAction={[Function]}
+      onCancelAction={[Function]}
+      onRef={[Function]}
+    />
+    <WithStyles(Grid)
+      container={true}
+      spacing={24}
+    >
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(Alert)
+          message="This record has missing data - enter all fields to give a quality record."
+          title="Missing data"
+          type="info_outline"
+        />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          title="Grant information"
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            name="grants"
+          />
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          title="Notes"
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            fullWidth={true}
+            label="Notes for this record"
+            multiline={true}
+            name="notes"
+            placeholder="Add any other notes or comments about this record to send to the eSpace team."
+            rows={5}
+            type="text"
+          />
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          title="Upload files"
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            failedAlertLocale={
+              Object {
+                "actionButtonLabel": "RESUBMIT YOUR THESIS",
+                "message": "There was an issue uploading your thesis files. You will need to resubmit your thesis by clicking on the 'Resubmit your thesis' button.",
+                "title": "FILE UPLOAD ERROR",
+                "type": "error",
+              }
+            }
+            isNtro={true}
+            locale={
+              Object {
+                "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
+                "errorTitle": "Upload Errors",
+                "fileUploadInstruction": <p>
+                  Click here to select files, or drag files into this area to upload
+                </p>,
+                "fileUploadRestrictionHeading": "File upload restrictions",
+                "fileUploadRestrictions": <div>
+                  Maximum file size is 8Gb. 
+                  <br />
+                  PDF files must be saved using the following naming structure 
+                  <b>
+                    &lt;student number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf
+                  </b>
+                  . Document name could be thesis, abstract, and etc. For example:
+                  <ul>
+                    <li>
+                      s1234567_phd_thesis.pdf
+                    </li>
+                    <li>
+                      s1234567_phd_abstract.pdf
+                    </li>
+                  </ul>
+                  Supplementary audio files are to be in MP 3 format. 
+                  <br />
+                  Supplementary video files are to be in WMV or AVI format. 
+                  <br />
+                </div>,
+                "instructions": "",
+                "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
+                "successTitle": "Success",
+                "validation": Object {
+                  "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
+                  "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
+                  "notFiles": "Invalid files ([fileNames])",
+                  "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
+                  "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
+                },
+              }
+            }
+            name="files"
+            requireOpenAccessStatus={true}
+            text={
+              <div>
+                <span
+                  className="requiredField"
+                >
+                  <label>
+                     
+                  </label>
+                </span>
+              </div>
+            }
+            title="Upload files"
+            validate={
+              Array [
+                [Function],
+              ]
+            }
+          />
+        </StandardCard>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      container={true}
+      spacing={24}
+    >
+      <WithStyles(Grid)
+        item={true}
+        xs={true}
+      />
+      <WithStyles(Grid)
+        item={true}
+      >
+        <WithStyles(Button)
+          disabled={false}
+          fullWidth={true}
+          onClick={[Function]}
+          variant="contained"
+        >
+          Cancel and return to my incomplete records list
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+      >
+        <WithStyles(Button)
+          color="primary"
+          fullWidth={true}
+          onClick={[MockFunction]}
+          variant="contained"
+        >
+          Complete my record
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </form>
+</StandardPage>
+`;
+
 exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
 <StandardPage
   title="Update my work"
@@ -400,6 +4651,20 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
       }
     }
   />
+  <p>
+    <b>
+      Display Type
+    </b>
+     (for dev): 
+    Journal Article
+  </p>
+  <p>
+    <b>
+      Subtype
+    </b>
+     (for dev) : 
+    Other
+  </p>
   <form
     onSubmit={[Function]}
   >
@@ -437,6 +4702,16 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
       container={true}
       spacing={24}
     >
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(Alert)
+          message="This record has missing data - enter all fields to give a quality record."
+          title="Missing data"
+          type="info_outline"
+        />
+      </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
         xs={12}
@@ -1515,6 +5790,20 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
       }
     }
   />
+  <p>
+    <b>
+      Display Type
+    </b>
+     (for dev): 
+    Journal Article
+  </p>
+  <p>
+    <b>
+      Subtype
+    </b>
+     (for dev) : 
+    Other
+  </p>
   <form
     onSubmit={[Function]}
   >
@@ -1552,6 +5841,16 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
       container={true}
       spacing={24}
     >
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(Alert)
+          message="This record has missing data - enter all fields to give a quality record."
+          title="Missing data"
+          type="info_outline"
+        />
+      </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
         xs={12}
@@ -2642,6 +6941,20 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
       }
     }
   />
+  <p>
+    <b>
+      Display Type
+    </b>
+     (for dev): 
+    Journal Article
+  </p>
+  <p>
+    <b>
+      Subtype
+    </b>
+     (for dev) : 
+    Other
+  </p>
   <form
     onSubmit={[Function]}
   >
@@ -2679,6 +6992,16 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
       container={true}
       spacing={24}
     >
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(Alert)
+          message="This record has missing data - enter all fields to give a quality record."
+          title="Missing data"
+          type="info_outline"
+        />
+      </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
         xs={12}
@@ -3757,6 +8080,20 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
       }
     }
   />
+  <p>
+    <b>
+      Display Type
+    </b>
+     (for dev): 
+    Journal Article
+  </p>
+  <p>
+    <b>
+      Subtype
+    </b>
+     (for dev) : 
+    Other
+  </p>
   <form
     onSubmit={[Function]}
   >
@@ -3800,6 +8137,16 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
       container={true}
       spacing={24}
     >
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(Alert)
+          message="This record has missing data - enter all fields to give a quality record."
+          title="Missing data"
+          type="info_outline"
+        />
+      </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
         xs={12}
@@ -4878,6 +9225,20 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
       }
     }
   />
+  <p>
+    <b>
+      Display Type
+    </b>
+     (for dev): 
+    Journal Article
+  </p>
+  <p>
+    <b>
+      Subtype
+    </b>
+     (for dev) : 
+    Other
+  </p>
   <form
     onSubmit={[Function]}
   >
@@ -4915,6 +9276,16 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
       container={true}
       spacing={24}
     >
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(Alert)
+          message="This record has missing data - enter all fields to give a quality record."
+          title="Missing data"
+          type="info_outline"
+        />
+      </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
         xs={12}

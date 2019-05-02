@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { Field, propTypes } from 'redux-form/immutable';
-import JSONPretty from 'react-json-pretty';
 
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
@@ -18,11 +17,17 @@ import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { PublicationCitation } from 'modules/SharedComponents/PublicationCitation';
 import { GrantListEditorField } from 'modules/SharedComponents/GrantListEditor';
 import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
+import { NtroFields } from 'modules/SharedComponents/Toolbox/NtroFields';
 
 import { general, validation, routes } from 'config';
 import { default as pagesLocale } from 'locale/pages';
 import { default as formsLocale } from 'locale/forms';
 import { default as componentsLocale } from 'locale/components';
+import {
+    DOCUMENT_TYPE_DESIGN, DOCUMENT_TYPE_JOURNAL_ARTICLE, DOCUMENT_TYPE_BOOK_CHAPTER, DOCUMENT_TYPE_BOOK, DOCUMENT_TYPE_RESEARCH_REPORT, DOCUMENT_TYPE_CREATIVE_WORK,
+    CW_NTRO_SUBTYPES, LP_NTRO_SUBTYPES, RRW_NTRO_SUBTYPES, CPEE_NTRO_SUBTYPES, RESEARCH_REPORT_NTRO_SUBTYPES, NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK
+} from 'config/general';
+
 
 export default class MyIncompleteRecord extends PureComponent {
     static propTypes = {
@@ -45,12 +50,8 @@ export default class MyIncompleteRecord extends PureComponent {
     };
 
     componentDidMount() {
-        if (
-            this.props.actions &&
-            !this.props.recordToFix &&
-            this.props.match.params &&
-            this.props.match.params.pid
-        ) {
+        if (!!this.props.actions && !this.props.recordToFix &&
+            !!this.props.match.params && !!this.props.match.params.pid) {
             this.props.actions.loadRecordToFix(this.props.match.params.pid);
         }
     }
@@ -105,13 +106,63 @@ export default class MyIncompleteRecord extends PureComponent {
     };
 
     render() {
-        const isNtro = this.props.recordToFix && !!general.NTRO_SUBTYPES.includes(this.props.recordToFix.rek_subtype);
-
         // if author is not linked to this record, abandon form
-        if (!(this.props.accountAuthorLoading || this.props.loadingRecordToFix) && !this.isAuthorLinked()) {
-            this.props.history.go(-1);
-            return <div />;
-        }
+        // if (!(this.props.accountAuthorLoading || this.props.loadingRecordToFix) && !this.isAuthorLinked()) {
+        //     this.props.history.go(-1);
+        //     return <div />;
+        // }
+
+        const isNtro = !!this.props.recordToFix && !!this.props.recordToFix.rek_subtype && !!general.NTRO_SUBTYPES.includes(this.props.recordToFix.rek_subtype);
+
+        // see https://docs.google.com/spreadsheets/d/1JOWQeFepCs7DWaiMY50yKacxbO_okgolJjeFc2nlMx8/edit#gid=0 for the cross reference of which fields are mandatory on which types
+        const isDocumentType1 = !!this.props.recordToFix && !!this.props.recordToFix.rek_display_type_lookup && !!this.props.recordToFix.rek_subtype &&
+            (
+                (this.props.recordToFix.rek_display_type_lookup === DOCUMENT_TYPE_DESIGN && !!this.props.recordToFix.rek_subtype && this.props.recordToFix.rek_subtype === NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK) ||
+                (this.props.recordToFix.rek_display_type_lookup === DOCUMENT_TYPE_BOOK && !!this.props.recordToFix.rek_subtype && CW_NTRO_SUBTYPES.includes(this.props.recordToFix.rek_subtype)) ||
+                (this.props.recordToFix.rek_display_type_lookup === DOCUMENT_TYPE_CREATIVE_WORK && !!this.props.recordToFix.rek_subtype && CW_NTRO_SUBTYPES.includes(this.props.recordToFix.rek_subtype)) ||
+                (this.props.recordToFix.rek_display_type_lookup === DOCUMENT_TYPE_CREATIVE_WORK && !!this.props.recordToFix.rek_subtype && RRW_NTRO_SUBTYPES.includes(this.props.recordToFix.rek_subtype)) ||
+                (this.props.recordToFix.rek_display_type_lookup === DOCUMENT_TYPE_RESEARCH_REPORT && !!this.props.recordToFix.rek_subtype && RESEARCH_REPORT_NTRO_SUBTYPES.includes(this.props.recordToFix.rek_subtype))
+            );
+
+        const isDocumentType2 = (!!this.props.recordToFix &&  this.props.recordToFix.rek_display_type_lookup === DOCUMENT_TYPE_CREATIVE_WORK && !!this.props.recordToFix.rek_subtype
+            && (LP_NTRO_SUBTYPES.includes(this.props.recordToFix.rek_subtype) || CPEE_NTRO_SUBTYPES.includes(this.props.recordToFix.rek_subtype))
+        );
+
+        const isDocumentType3 = !!this.props.recordToFix &&
+            (this.props.recordToFix.rek_display_type_lookup === DOCUMENT_TYPE_BOOK_CHAPTER || this.props.recordToFix.rek_display_type_lookup === DOCUMENT_TYPE_JOURNAL_ARTICLE)
+            && !!this.props.recordToFix.rek_subtype && CW_NTRO_SUBTYPES.includes(this.props.recordToFix.rek_subtype);
+
+        // rek_formatted_abstract
+        const editAbstract = (isDocumentType1 || isDocumentType2 || isDocumentType3) &&
+            (!this.props.recordToFix || !this.props.recordToFix.rek_formatted_abstract);
+
+        // fez_record_search_key_audience_size
+        const editAudienceSize = isDocumentType2 &&
+            (!this.props.recordToFix || !this.props.recordToFix.fez_record_search_key_audience_size || !this.props.recordToFix.fez_record_search_key_audience_size.rek_audience_size);
+
+        // fez_record_search_key_creator_contribution_statement
+        const editCreatorContributionStatement = (isDocumentType1 || isDocumentType2 || isDocumentType3) &&
+            (!this.props.recordToFix || !this.props.recordToFix.fez_record_search_key_creator_contribution_statement ||
+                this.props.recordToFix.fez_record_search_key_creator_contribution_statement.length === 0);
+
+        // fez_record_search_key_language
+        const editLanguage = !this.props.recordToFix || !this.props.recordToFix.fez_record_search_key_language || !this.props.recordToFix.fez_record_search_key_language || !this.props.recordToFix.fez_record_search_key_language || this.props.recordToFix.fez_record_search_key_language.length === 0;
+        const defaultLanguage = !!this.props.recordToFix && !!this.props.recordToFix.fez_record_search_key_language
+            && this.props.recordToFix.fez_record_search_key_language.length > 0
+            && this.props.recordToFix.fez_record_search_key_language[0].rek_language
+         || 'eng';
+
+        // fez_record_search_key_quality_indicator
+        const editQualityIndicator = (isDocumentType1 || isDocumentType2 || isDocumentType3) &&
+            (!this.props.recordToFix || !this.props.recordToFix.fez_record_search_key_quality_indicator || this.props.recordToFix.fez_record_search_key_quality_indicator.length === 0);
+
+        // fez_record_search_key_significance
+        const editSignificance = (isDocumentType1 || isDocumentType2 || isDocumentType3) &&
+            (!this.props.recordToFix || !this.props.recordToFix.fez_record_search_key_significance || this.props.recordToFix.fez_record_search_key_significance.length === 0);
+
+        // fez_record_search_key_total_pages
+        const editExtent = (isDocumentType1 || isDocumentType2) &&
+            (!this.props.recordToFix || !this.props.recordToFix.fez_record_search_key_total_pages || !this.props.recordToFix.fez_record_search_key_total_pages.rek_total_pages);
 
         const txt = pagesLocale.pages.incompletePublication;
         const txtFixForm = formsLocale.forms.fixPublicationForm;
@@ -141,6 +192,19 @@ export default class MyIncompleteRecord extends PureComponent {
         return (
             <StandardPage title={txt.title}>
                 <PublicationCitation publication={this.props.recordToFix} />
+                {
+                    // TODO remove before going live
+                    !!this.props.recordToFix && !!this.props.recordToFix.rek_display_type_lookup ?
+                        <p><b>Display Type</b> (for dev): {this.props.recordToFix.rek_display_type_lookup}</p>
+                        : <p><b>Display Type</b> (for dev): missing</p>
+                }
+                {
+                    // TODO remove before going live
+                    !!this.props.recordToFix && !!this.props.recordToFix.rek_subtype ?
+                        <p><b>Subtype</b> (for dev) : {this.props.recordToFix.rek_subtype}</p>
+                        : <p><b>Subtype</b> (for dev) : missing</p>
+                }
+
                 <form onSubmit={this._handleDefaultSubmit}>
                     <NavigationDialogBox when={this.props.dirty && !this.props.submitSucceeded} txt={txtFixForm.cancelWorkflowConfirmation} />
                     <ConfirmDialogBox
@@ -151,6 +215,37 @@ export default class MyIncompleteRecord extends PureComponent {
                     />
                     <Grid container spacing={24}>
                         <Grid item xs={12}>
+                            <Alert
+                                title="Missing data"
+                                message="This record has missing data - enter all fields to give a quality record."
+                                type="info_outline"
+                            />
+                        </Grid>
+                        {
+                            isNtro &&
+                            (editCreatorContributionStatement || editAbstract || editExtent || editAudienceSize || editSignificance || editQualityIndicator || editLanguage) &&
+                            <NtroFields
+                                submitting={this.props.submitting}
+                                showContributionStatement={editCreatorContributionStatement}
+                                hideIsmn
+                                hideIsrc
+                                hideVolume
+                                hideIssue
+                                hideStartPage
+                                hideEndPage
+                                hideExtent={!editExtent}
+                                hideOriginalFormat
+                                hideAbstract={!editAbstract}
+                                hideAudienceSize={!editAudienceSize}
+                                showSignificance={editSignificance}
+                                hidePeerReviewActivity={!editQualityIndicator}
+                                hideLanguage={!editLanguage}
+                                defaultLanguage={defaultLanguage}
+                                hideSeries
+                                hideGrants
+                            />
+                        }
+                        <Grid item xs={12}>
                             <StandardCard title={txt.fields.grants.title}>
                                 <Field
                                     component={GrantListEditorField}
@@ -158,11 +253,6 @@ export default class MyIncompleteRecord extends PureComponent {
                                     disabled={this.props.submitting}
                                     disableDeleteAllGrants={this.props.disableDeleteAllGrants}
                                 />
-                            </StandardCard>
-                        </Grid>
-                        <Grid item xs={12}>
-                            <StandardCard title={'JSON of the initialValues'}>
-                                <JSONPretty id="json-pretty" data={this.props.initialValues} />
                             </StandardCard>
                         </Grid>
                         <Grid item xs={12}>
