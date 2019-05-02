@@ -736,6 +736,8 @@ export default {
                 },
                 authors: {
                     description: 'Please complete affiliation data for each listed author.',
+                    ariaLabel: 'Select this author ([name]) to update their affiliation data.',
+                    requiredLabel: 'This author\'s data is incomplete.',
                     selectAuthor: (<div>
                         <span className="authorSteps" key="step-1">Step 1 of 2</span> -
                         <b>Select an author</b> below to update affiliation data.
@@ -748,12 +750,6 @@ export default {
                 },
                 fileUpload: {
                     title: 'Upload files',
-                    failedAlertLocale: {
-                        type: 'error',
-                        title: 'FILE UPLOAD ERROR',
-                        message: 'There was an issue uploading your thesis files. You will need to resubmit your thesis by clicking on the \'Resubmit your thesis\' button.',
-                        actionButtonLabel: 'RESUBMIT YOUR THESIS',
-                    },
                     locale: {
                         instructions: '',
                         accessTermsAndConditions: 'I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.',

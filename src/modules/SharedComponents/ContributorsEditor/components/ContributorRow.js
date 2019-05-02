@@ -241,16 +241,23 @@ export class ContributorRow extends PureComponent {
             hideDelete
         } = this.props;
 
+        const enableSelect = this.props.showContributorAssignment;
+        const selectedClass = contributor.selected ? classes.selected : '';
+        const highlighted = !!validation.authorAffiliationIncomplete(contributor);
+
+        const ariaLabelLocaleString = `${
+            selectHint.replace('[name]', contributor.nameAsPublished)
+        } ${
+            (highlighted && locale.pages.incompletePublication.fields.authors.requiredLabel) || ''
+        }`.trim();
+
         const ariaLabel = (
             selectHint &&
             selectHint.indexOf('[name]') > -1
         )
-            ? selectHint.replace('[name]', contributor.nameAsPublished)
+            ? ariaLabelLocaleString
             : null
-            ;
-        const enableSelect = this.props.showContributorAssignment;
-        const selectedClass = contributor.selected ? classes.selected : '';
-        const highlighted = !!validation.authorAffiliationIncomplete(contributor);
+        ;
 
         return (
             <Fragment>

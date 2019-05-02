@@ -397,6 +397,7 @@ describe('Component ContributorRow', () => {
                 nameAsPublished: 'test',
                 selected: true,
                 affiliation: 'NotUQ',
+                orgaff: 'Somewhere',
                 orgtype: '453983'
             },
         });
@@ -422,6 +423,7 @@ describe('Component ContributorRow', () => {
                 nameAsPublished: 'test',
                 selected: true,
                 affiliation: 'NotUQ',
+                orgaff: 'Somewhere',
                 orgtype: '453983'
             },
             width: 'xs',

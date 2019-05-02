@@ -962,7 +962,7 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
                     },
                     "moveDownHint": "Move item down the order",
                     "moveUpHint": "Move item up the order",
-                    "selectHint": "Select this author ([name]) to assign it as you",
+                    "selectHint": "Select this author ([name]) to update their affiliation data.",
                     "selectedHint": "This is you",
                     "suffix": " listed author",
                     "unselectedHint": "Select this to confirm [identifier] is you",
@@ -1011,14 +1011,6 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
           <Field
             component={[Function]}
             disabled={false}
-            failedAlertLocale={
-              Object {
-                "actionButtonLabel": "RESUBMIT YOUR THESIS",
-                "message": "There was an issue uploading your thesis files. You will need to resubmit your thesis by clicking on the 'Resubmit your thesis' button.",
-                "title": "FILE UPLOAD ERROR",
-                "type": "error",
-              }
-            }
             isNtro={true}
             locale={
               Object {
@@ -2083,7 +2075,7 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
                     },
                     "moveDownHint": "Move item down the order",
                     "moveUpHint": "Move item up the order",
-                    "selectHint": "Select this author ([name]) to assign it as you",
+                    "selectHint": "Select this author ([name]) to update their affiliation data.",
                     "selectedHint": "This is you",
                     "suffix": " listed author",
                     "unselectedHint": "Select this to confirm [identifier] is you",
@@ -2132,14 +2124,6 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
           <Field
             component={[Function]}
             disabled={false}
-            failedAlertLocale={
-              Object {
-                "actionButtonLabel": "RESUBMIT YOUR THESIS",
-                "message": "There was an issue uploading your thesis files. You will need to resubmit your thesis by clicking on the 'Resubmit your thesis' button.",
-                "title": "FILE UPLOAD ERROR",
-                "type": "error",
-              }
-            }
             isNtro={true}
             locale={
               Object {
@@ -3216,7 +3200,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
                     },
                     "moveDownHint": "Move item down the order",
                     "moveUpHint": "Move item up the order",
-                    "selectHint": "Select this author ([name]) to assign it as you",
+                    "selectHint": "Select this author ([name]) to update their affiliation data.",
                     "selectedHint": "This is you",
                     "suffix": " listed author",
                     "unselectedHint": "Select this to confirm [identifier] is you",
@@ -3265,14 +3249,6 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
           <Field
             component={[Function]}
             disabled={false}
-            failedAlertLocale={
-              Object {
-                "actionButtonLabel": "RESUBMIT YOUR THESIS",
-                "message": "There was an issue uploading your thesis files. You will need to resubmit your thesis by clicking on the 'Resubmit your thesis' button.",
-                "title": "FILE UPLOAD ERROR",
-                "type": "error",
-              }
-            }
             isNtro={true}
             locale={
               Object {
@@ -4343,7 +4319,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
                     },
                     "moveDownHint": "Move item down the order",
                     "moveUpHint": "Move item up the order",
-                    "selectHint": "Select this author ([name]) to assign it as you",
+                    "selectHint": "Select this author ([name]) to update their affiliation data.",
                     "selectedHint": "This is you",
                     "suffix": " listed author",
                     "unselectedHint": "Select this to confirm [identifier] is you",
@@ -4392,14 +4368,6 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
           <Field
             component={[Function]}
             disabled={false}
-            failedAlertLocale={
-              Object {
-                "actionButtonLabel": "RESUBMIT YOUR THESIS",
-                "message": "There was an issue uploading your thesis files. You will need to resubmit your thesis by clicking on the 'Resubmit your thesis' button.",
-                "title": "FILE UPLOAD ERROR",
-                "type": "error",
-              }
-            }
             isNtro={true}
             locale={
               Object {
@@ -5464,7 +5432,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
                     },
                     "moveDownHint": "Move item down the order",
                     "moveUpHint": "Move item up the order",
-                    "selectHint": "Select this author ([name]) to assign it as you",
+                    "selectHint": "Select this author ([name]) to update their affiliation data.",
                     "selectedHint": "This is you",
                     "suffix": " listed author",
                     "unselectedHint": "Select this to confirm [identifier] is you",
@@ -5513,14 +5481,6 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
           <Field
             component={[Function]}
             disabled={false}
-            failedAlertLocale={
-              Object {
-                "actionButtonLabel": "RESUBMIT YOUR THESIS",
-                "message": "There was an issue uploading your thesis files. You will need to resubmit your thesis by clicking on the 'Resubmit your thesis' button.",
-                "title": "FILE UPLOAD ERROR",
-                "type": "error",
-              }
-            }
             isNtro={true}
             locale={
               Object {

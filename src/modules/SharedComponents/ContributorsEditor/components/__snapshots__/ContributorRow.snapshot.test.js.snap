@@ -1600,7 +1600,7 @@ exports[`Component ContributorRow should assign contributor 1`] = `
               noWrap={true}
               variant="body2"
             >
-              undefined
+              Somewhere
             </WithStyles(Typography)>
           }
           secondary={
@@ -1757,7 +1757,7 @@ exports[`Component ContributorRow should call callback functions on ListItem 1`]
               noWrap={true}
               variant="body2"
             >
-              undefined
+              Somewhere
             </WithStyles(Typography)>
           }
           secondary={

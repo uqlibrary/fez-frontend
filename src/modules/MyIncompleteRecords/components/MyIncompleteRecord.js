@@ -119,6 +119,7 @@ export default class MyIncompleteRecord extends PureComponent {
         authors.description = txt.fields.authors.description;
         authors.field.form.locale.descriptionStep1 = txt.fields.authors.updateAuthor;
         authors.field.header.locale.descriptionStep2 = txt.fields.authors.selectAuthor;
+        authors.field.row.locale.selectHint = txt.fields.authors.ariaLabel;
 
         if (this.props.accountAuthorLoading || this.props.loadingRecordToFix) {
             return (
