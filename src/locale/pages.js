@@ -729,10 +729,22 @@ export default {
                 notes: {
                     title: 'Notes',
                     label: 'Notes for this work',
-                    placeholder: 'Add any other notes or comments about this work to send to the eSpace team.'
+                    placeholder: 'Add any other notes or comments about this work to send to the eSpace team.',
                 },
                 grants: {
-                    title: 'Grant information'
+                    title: 'Grant information',
+                },
+                authors: {
+                    description: 'Please complete affiliation data for each listed author.',
+                    selectAuthor: (<div>
+                        <span className="authorSteps" key="step-1">Step 1 of 2</span> -
+                        <b>Select an author</b> below to update affiliation data.
+                    </div>),
+                    updateAuthor: (<div>
+                        <span className="authorSteps" key="step-1">Step 2 of 2</span> -
+                        <b>Update the affiliation data</b> for the selected author below.
+                    </div>),
+                    formButtonLabel: 'Update author',
                 },
                 fileUpload: {
                     title: 'Upload files',
@@ -740,7 +752,7 @@ export default {
                         type: 'error',
                         title: 'FILE UPLOAD ERROR',
                         message: 'There was an issue uploading your thesis files. You will need to resubmit your thesis by clicking on the \'Resubmit your thesis\' button.',
-                        actionButtonLabel: 'RESUBMIT YOUR THESIS'
+                        actionButtonLabel: 'RESUBMIT YOUR THESIS',
                     },
                     locale: {
                         instructions: '',
@@ -772,13 +784,13 @@ export default {
                         ),
                         fileUploadInstruction: (
                             <p>Click here to select files, or drag files into this area to upload</p>
-                        )
+                        ),
                     },
                     text: (
                         <div>
                             <span className="requiredField"><label>&nbsp;</label></span>
                         </div>
-                    )
+                    ),
                 },
             },
             successWorkflowConfirmation: {
