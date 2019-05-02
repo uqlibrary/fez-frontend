@@ -1,8 +1,7 @@
 import * as actions from './actionTypes';
 import * as repositories from 'repositories';
-import * as incompleteRecords from './incompleteRecords';
-import * as incompleteRecordList from 'mock/data/records/incompleteNTROlist';
-import * as mockData from "../mock/data/testing/records";
+import * as publications from './publications';
+import * as incompleteRecordList from 'mock/data/records/incompleteRecordList';
 
 // extend expect to check actions
 expect.extend({toHaveDispatchedActions});
@@ -19,7 +18,7 @@ afterEach(() => {
 describe('incompleteRecords actions', () => {
     it('should call loading/loaded actions on successful load', async () => {
         mockApi
-            .onGet(repositories.routes.CURRENT_USER_INCOMPLETE_RECORDS_API().apiUrl)
+            .onGet(repositories.routes.INCOMPLETE_RECORDS_API({}).apiUrl)
             .reply(200, incompleteRecordList);
 
         const expectedActions = [
@@ -27,7 +26,7 @@ describe('incompleteRecords actions', () => {
             actions.AUTHOR_INCOMPLETEPUBLICATIONS_LOADED
         ];
 
-        await mockActionsStore.dispatch(incompleteRecords.loadIncompleteRecords());
+        await mockActionsStore.dispatch(publications.searchAuthorIncompletePublications({}));
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
@@ -41,7 +40,7 @@ describe('incompleteRecords actions', () => {
             actions.AUTHOR_INCOMPLETEPUBLICATIONS_FAILED
         ];
 
-        await mockActionsStore.dispatch(incompleteRecords.loadIncompleteRecords());
+        await mockActionsStore.dispatch(publications.searchAuthorIncompletePublications({}));
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 

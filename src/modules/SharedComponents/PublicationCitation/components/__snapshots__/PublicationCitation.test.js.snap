@@ -75,6 +75,7 @@ exports[`PublicationCitation  should render component with default actions 1`] =
             hideDoiLink={false}
             publication={
               Object {
+                "fez_datastream_info": Array [],
                 "fez_record_search_key_access_conditions": null,
                 "fez_record_search_key_acknowledgements": null,
                 "fez_record_search_key_additional_notes": null,
@@ -476,6 +477,7 @@ exports[`PublicationCitation  should render component with default actions 1`] =
             hideViewFullStatisticsLink={false}
             publication={
               Object {
+                "fez_datastream_info": Array [],
                 "fez_record_search_key_access_conditions": null,
                 "fez_record_search_key_acknowledgements": null,
                 "fez_record_search_key_additional_notes": null,
@@ -958,6 +960,7 @@ exports[`PublicationCitation  should render component with default item 1`] = `
             hideDoiLink={false}
             publication={
               Object {
+                "fez_datastream_info": Array [],
                 "fez_record_search_key_access_conditions": null,
                 "fez_record_search_key_acknowledgements": null,
                 "fez_record_search_key_additional_notes": null,
@@ -1359,6 +1362,7 @@ exports[`PublicationCitation  should render component with default item 1`] = `
             hideViewFullStatisticsLink={false}
             publication={
               Object {
+                "fez_datastream_info": Array [],
                 "fez_record_search_key_access_conditions": null,
                 "fez_record_search_key_acknowledgements": null,
                 "fez_record_search_key_additional_notes": null,
@@ -1797,6 +1801,7 @@ exports[`PublicationCitation  should render component with default item without 
             hideDoiLink={true}
             publication={
               Object {
+                "fez_datastream_info": Array [],
                 "fez_record_search_key_access_conditions": null,
                 "fez_record_search_key_acknowledgements": null,
                 "fez_record_search_key_additional_notes": null,
@@ -2198,6 +2203,7 @@ exports[`PublicationCitation  should render component with default item without 
             hideViewFullStatisticsLink={false}
             publication={
               Object {
+                "fez_datastream_info": Array [],
                 "fez_record_search_key_access_conditions": null,
                 "fez_record_search_key_acknowledgements": null,
                 "fez_record_search_key_additional_notes": null,
@@ -2641,6 +2647,7 @@ exports[`PublicationCitation  should render component with default list hiding t
             hideDoiLink={false}
             publication={
               Object {
+                "fez_datastream_info": Array [],
                 "fez_record_search_key_access_conditions": null,
                 "fez_record_search_key_acknowledgements": null,
                 "fez_record_search_key_additional_notes": null,
@@ -3042,6 +3049,7 @@ exports[`PublicationCitation  should render component with default list hiding t
             hideViewFullStatisticsLink={false}
             publication={
               Object {
+                "fez_datastream_info": Array [],
                 "fez_record_search_key_access_conditions": null,
                 "fez_record_search_key_acknowledgements": null,
                 "fez_record_search_key_additional_notes": null,
@@ -3485,6 +3493,7 @@ exports[`PublicationCitation  should render component with default list hiding t
             hideDoiLink={false}
             publication={
               Object {
+                "fez_datastream_info": Array [],
                 "fez_record_search_key_access_conditions": null,
                 "fez_record_search_key_acknowledgements": null,
                 "fez_record_search_key_additional_notes": null,
@@ -3886,6 +3895,7 @@ exports[`PublicationCitation  should render component with default list hiding t
             hideViewFullStatisticsLink={false}
             publication={
               Object {
+                "fez_datastream_info": Array [],
                 "fez_record_search_key_access_conditions": null,
                 "fez_record_search_key_acknowledgements": null,
                 "fez_record_search_key_additional_notes": null,
@@ -4329,6 +4339,7 @@ exports[`PublicationCitation  should render component with publication from mult
             hideDoiLink={false}
             publication={
               Object {
+                "fez_datastream_info": Array [],
                 "fez_record_search_key_access_conditions": null,
                 "fez_record_search_key_acknowledgements": null,
                 "fez_record_search_key_additional_notes": null,
@@ -4736,6 +4747,7 @@ exports[`PublicationCitation  should render component with publication from mult
             hideViewFullStatisticsLink={false}
             publication={
               Object {
+                "fez_datastream_info": Array [],
                 "fez_record_search_key_access_conditions": null,
                 "fez_record_search_key_acknowledgements": null,
                 "fez_record_search_key_additional_notes": null,
@@ -5187,6 +5199,7 @@ exports[`PublicationCitation  should render component without a title 1`] = `
             hideDoiLink={false}
             publication={
               Object {
+                "fez_datastream_info": Array [],
                 "fez_record_search_key_access_conditions": null,
                 "fez_record_search_key_acknowledgements": null,
                 "fez_record_search_key_additional_notes": null,
@@ -5594,6 +5607,7 @@ exports[`PublicationCitation  should render component without a title 1`] = `
             hideViewFullStatisticsLink={false}
             publication={
               Object {
+                "fez_datastream_info": Array [],
                 "fez_record_search_key_access_conditions": null,
                 "fez_record_search_key_acknowledgements": null,
                 "fez_record_search_key_additional_notes": null,
@@ -6129,6 +6143,7 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
             hideDoiLink={false}
             publication={
               Object {
+                "fez_datastream_info": Array [],
                 "fez_record_search_key_access_conditions": null,
                 "fez_record_search_key_acknowledgements": null,
                 "fez_record_search_key_additional_notes": null,
@@ -6530,6 +6545,7 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
             hideViewFullStatisticsLink={false}
             publication={
               Object {
+                "fez_datastream_info": Array [],
                 "fez_record_search_key_access_conditions": null,
                 "fez_record_search_key_acknowledgements": null,
                 "fez_record_search_key_additional_notes": null,
@@ -6930,6 +6946,7 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
           <UnpublishedBufferCitationView
             publication={
               Object {
+                "fez_datastream_info": Array [],
                 "fez_record_search_key_access_conditions": null,
                 "fez_record_search_key_acknowledgements": null,
                 "fez_record_search_key_additional_notes": null,

@@ -1,6 +1,5 @@
 import {AppClass} from './App';
 import App from './App';
-// import styles from './App';
 import {accounts} from 'mock/data';
 import {routes, AUTH_URL_LOGIN, AUTH_URL_LOGOUT} from 'config';
 import mui1theme from 'config';
@@ -15,7 +14,8 @@ function setup(testProps, isShallow = true) {
         accountLoading: testProps.accountLoading || false,
         accountAuthorLoading: testProps.accountAuthorLoading || false,
         actions: testProps.actions || {
-            loadCurrentAccount: jest.fn()
+            loadCurrentAccount: jest.fn(),
+            searchAuthorIncompletePublications: jest.fn()
         },
         location: testProps.location || {},
         history: testProps.history || {location: {}}
@@ -355,6 +355,38 @@ describe('Application component', () => {
             expect(getWrapper(path.pathname).instance().isPublicPage(menuItems)).toEqual(path.isPublic)
         });
     })
+
+    it('should load the incomplete publications list when the account is loaded', () => {
+        const testMethod = jest.fn();
+        const wrapper = setup({
+            account: {name: 'test1'},
+            accountLoading: false,
+            actions: {
+                loadCurrentAccount: jest.fn(),
+                searchAuthorIncompletePublications: testMethod
+            }
+        });
+        wrapper.update();
+        wrapper.setProps({account: {name: 'test2'}});
+        expect(testMethod).toHaveBeenCalled();
+    });
+
+    it('should determine if it has incomplete works from props and show/hide menu item', () => {
+        const wrapper = setup({
+            account: {name: 'test1'},
+            accountLoading: false,
+            actions: {
+                loadCurrentAccount: jest.fn(),
+                searchAuthorIncompletePublications: jest.fn()
+            },
+            incompleteRecordList: {
+                publicationsListPagingData: {
+                    total: 10
+                }
+            }
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });
 
 describe('Testing wrapped App component', () => {

@@ -171,7 +171,7 @@ describe('Publications actions', () => {
             };
 
             mockApi
-                .onGet(repositories.routes.CURRENT_USER_INCOMPLETE_RECORDS_API(testRequest).apiUrl)
+                .onGet(repositories.routes.INCOMPLETE_RECORDS_API(testRequest).apiUrl)
                 .reply(200, {});
 
             const expectedActions = [

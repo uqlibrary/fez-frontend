@@ -210,7 +210,7 @@ export default {
             },
             incompleteRecordLure: {
                 title: 'NTRO Data Required',
-                message: 'We have found [count] record[plural] that require[verbEnding] additional data.',
+                message: 'We have found [count] work[plural] that require[verbEnding] additional data.',
                 type: 'warning',
                 actionButtonLabel: 'View and Update'
             },
@@ -707,7 +707,7 @@ export default {
             title: 'Unpublished buffer'
         },
         incompletePublications: {
-            pageTitle: 'Incomplete records',
+            pageTitle: 'Incomplete works',
             recordCount: 'Displaying incomplete records [recordsFrom] to [recordsTo] of [recordsTotal] total records. ',
             loadingMessage: 'Searching for incomplete works',
             noResultsFound: {

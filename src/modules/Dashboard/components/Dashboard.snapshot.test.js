@@ -322,7 +322,7 @@ describe('Dashboard test', () => {
             actions: {
                 countPossiblyYourPublications: jest.fn(),
                 loadAuthorPublicationsStats: jest.fn(),
-                loadIncompleteRecords: jest.fn()
+                searchAuthorIncompletePublications: jest.fn()
             },
             history: {},
         }, false);
@@ -337,10 +337,18 @@ describe('Dashboard test', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it ('displays a lure to a single work when the user has incomplete NTRO submissions', () => {
+        const wrapper = setup({
+            incompleteRecordList: [1],
+            authorDetails: mock.authorDetails.uqresearcher,
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
     it('redirectToMissingRecordslist method', () => {
         const testFn = jest.fn();
         const wrapper = setup({history: {push: testFn}});
-        wrapper.instance().redirectToMissingRecordslist();
+        wrapper.instance().redirectToIncompleteRecordlist();
         expect(testFn).toBeCalledWith('/records/incomplete');
 
     });
