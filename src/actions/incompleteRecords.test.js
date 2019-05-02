@@ -1,7 +1,9 @@
 import * as actions from './actionTypes';
 import * as repositories from 'repositories';
 import * as publications from './publications';
-import * as incompleteRecordList from 'mock/data/records/incompleteRecordList';
+import * as incompleteRecordList from 'mock/data/records/incompleteNTROlist';
+import { updateIncompleteRecord } from './incompleteRecords';
+import { mockRecordToFix } from 'mock/data/testing/records';
 
 // extend expect to check actions
 expect.extend({toHaveDispatchedActions});
@@ -63,7 +65,7 @@ describe('updateIncompleteRecord actions', () => {
     it('should call loading/loaded actions on successful load', async () => {
         const testInput = {
             publication: {
-                ...mockData.mockRecordToFix,
+                ...mockRecordToFix,
                 impactStatement:
                     {
                         htmlText: '<p>dummy</p>'
@@ -82,21 +84,17 @@ describe('updateIncompleteRecord actions', () => {
             actions.FIX_RECORD_SUCCESS
         ];
 
-        await mockActionsStore.dispatch(incompleteRecords.updateIncompleteRecord(testInput));
+        await mockActionsStore.dispatch(updateIncompleteRecord(testInput));
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
     it('should call loading/load failed actions on incomplete data', async () => {
-        mockApi
-            .onAny()
-            .reply(404);
-
         const expectedActions = [
             actions.FIX_RECORD_FAILED
         ];
 
         try {
-            await mockActionsStore.dispatch(incompleteRecords.updateIncompleteRecord({}));
+            await mockActionsStore.dispatch(updateIncompleteRecord({}));
         } catch (e) {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         }
@@ -109,35 +107,15 @@ describe('updateIncompleteRecord actions', () => {
                 aut_id: 1
             }
         };
-        mockApi
-            .onAny()
-            .reply(404);
 
         const expectedActions = [
             actions.FIX_RECORD_FAILED
         ];
 
         try {
-            await mockActionsStore.dispatch(incompleteRecords.updateIncompleteRecord(testInput));
+            await mockActionsStore.dispatch(updateIncompleteRecord(testInput));
         } catch (e) {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         }
     });
-
-    // it('should call loading/load failed actions on failed load', async () => {
-    //     mockApi
-    //         .onAny()
-    //         .reply(404);
-
-    //     const expectedActions = [
-    //         actions.FIX_RECORD_FAILED
-    //     ];
-
-    //     try {
-    //         await mockActionsStore.dispatch(incompleteRecords.updateIncompleteRecord({}));
-    //     } catch (e) {
-    //         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
-    //     }
-    // });
-
 });
