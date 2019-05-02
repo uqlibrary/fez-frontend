@@ -39,8 +39,7 @@ export default class NtroFields extends React.PureComponent {
         hideLanguage: PropTypes.bool,
         showContributionStatement: PropTypes.bool,
         showSignificance: PropTypes.bool,
-        hideAbstract: PropTypes.bool,
-        defaultLanguage: PropTypes.string
+        hideAbstract: PropTypes.bool
     };
 
     static defaultProps = {
@@ -60,7 +59,6 @@ export default class NtroFields extends React.PureComponent {
         showContributionStatement: false,
         showSignificance: false,
         hideAbstract: false,
-        defaultLanguage: null,
         locale: {
             contributionStatement: {
                 title: 'Author/Creator research statement',
@@ -388,10 +386,8 @@ export default class NtroFields extends React.PureComponent {
                                         name="languages"
                                         disabled={this.props.submitting}
                                         label={metadata.fields.language.label}
-                                        required={false}
                                         multiple
                                         validate={[validation.requiredList]}
-                                        defaultValue={this.props.defaultLanguage}
                                     />
                                 </Grid>
                             }
