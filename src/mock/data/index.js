@@ -1,6 +1,6 @@
 export {accounts, authorsSearch, currentAuthor, authorDetails} from './account';
 export {externalDoiSearchResultList, externalPubMedSearchResultsList, record, myRecordsList, possibleUnclaimedList,
-    incompleteNTROlist, incompleteNTROrecord, incompleteNTROrecordUqrdav10,
+    incompleteNTROlist, incompleteNTROrecord, incompleteNTROrecordUqrdav10, incompleteNTROrecordUqsbutl1,
     externalTitleSearchResultsList, internalTitleSearchList, recordsTypeList, externalTitleScopusResultsList,
     recordWithMap, recordWithTiffAndThumbnail, MyDatasetList, internalTitleSearchListNoResults, recordWithoutAuthorIds,
     collections} from './records';
