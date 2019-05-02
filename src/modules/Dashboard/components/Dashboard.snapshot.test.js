@@ -24,7 +24,7 @@ function setup(testProps, isShallow = true) {
             loadIncompleteRecords: jest.fn(),
         },
         loadingIncompleteRecordData: false,
-        incompleteRecordList: [],
+        incompleteRecordList: {},
         history: {},
         ...testProps,
     };
@@ -331,7 +331,18 @@ describe('Dashboard test', () => {
 
     it ('displays a lure when the user has incomplete NTRO submissions', () => {
         const wrapper = setup({
-            incompleteRecordList: [1, 2],
+            incompleteRecordList: {
+                publicationsListPagingData: {
+                    "total": 2,
+                    "took": 30,
+                    "per_page": 20,
+                    "current_page": 1,
+                    "from": 1,
+                    "to": 3,
+                    "data": [1,2],
+                    "filters": {}
+                }
+            },
             authorDetails: mock.authorDetails.uqresearcher,
         });
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -339,7 +350,18 @@ describe('Dashboard test', () => {
 
     it ('displays a lure to a single work when the user has incomplete NTRO submissions', () => {
         const wrapper = setup({
-            incompleteRecordList: [1],
+            incompleteRecordList: {
+                publicationsListPagingData: {
+                    "total": 1,
+                    "took": 30,
+                    "per_page": 20,
+                    "current_page": 1,
+                    "from": 1,
+                    "to": 1,
+                    "data": [1],
+                    "filters": {}
+                }
+            },
             authorDetails: mock.authorDetails.uqresearcher,
         });
         expect(toJson(wrapper)).toMatchSnapshot();

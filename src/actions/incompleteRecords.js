@@ -31,8 +31,6 @@ export function updateIncompleteRecord(data) {
     const isContributorLinked = data.publication.fez_record_search_key_contributor_id && data.publication.fez_record_search_key_contributor_id.length > 0 &&
         data.publication.fez_record_search_key_contributor_id.filter(contributorId => contributorId.rek_contributor_id === data.author.aut_id).length > 0;
 
-    const hasFilesToUpload = data.files && data.files.queue && data.files.queue.length > 0;
-
     if (!isAuthorLinked && !isContributorLinked) {
         return dispatch => {
             dispatch({
@@ -42,6 +40,8 @@ export function updateIncompleteRecord(data) {
             return Promise.reject(new Error('Current author is not linked to this record'));
         };
     }
+
+    const hasFilesToUpload = data.files && data.files.queue && data.files.queue.length > 0;
 
     return dispatch => {
         dispatch({type: actions.FIX_RECORD_PROCESSING});
@@ -54,7 +54,8 @@ export function updateIncompleteRecord(data) {
             ...transformers.getRecordAbstractDescriptionSearchKey(data.ntroAbstract),
             ...transformers.getLanguageSearchKey(data.languages),
             ...transformers.getQualityIndicatorSearchKey(data.qualityIndicators),
-            ...transformers.getIncompleteRequestFields(data),
+            ...transformers.getCreatorContributionStatementSearchKeys(data),
+            ...transformers.getSignificanceSearchKeys(data),
             ...transformers.getGrantsListSearchKey(data.grants),
             ...transformers.getRecordFileAttachmentSearchKey(data.files ? data.files.queue : [], data.publication)
         };
