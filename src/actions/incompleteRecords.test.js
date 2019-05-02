@@ -141,4 +141,165 @@ describe('updateIncompleteRecord actions', () => {
     //     }
     // });
 
+    it('dispatches updated contributor id', async () => {
+        const testInput = {
+            publication: {
+                ...mockData.mockRecordToFix,
+                fez_record_search_key_author_id: [
+                    {
+                        rek_author_id: 123
+                    }
+                ],
+                fez_record_search_key_contributor_id: [
+                    {
+                        rek_contributor_id: 123
+                    }
+                ]
+            },
+            author: {
+                aut_id: 123
+            }
+        };
+        mockApi
+            .onPatch(repositories.routes.EXISTING_RECORD_API({pid: testPid}).apiUrl)
+            .reply(200, {});
+
+        const expectedActions = [
+            actions.FIX_RECORD_PROCESSING,
+            actions.FIX_RECORD_SUCCESS
+        ];
+
+        await mockActionsStore.dispatch(incompleteRecords.updateIncompleteRecord(testInput));
+        expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+    });
+
+    it('dispatches failure where Current author is not linked to this record', async () => {
+        const testInput = {
+            publication: {
+                ...mockData.mockRecordToFix,
+                // fez_record_search_key_language: [ // random field to update
+                //     {
+                //         rek_language: "eng"
+                //     }
+                // ],
+                // fez_record_search_key_contributor_id: [
+                //     {
+                //         rek_contributor_id: 123
+                //     }
+                // ]
+            },
+            author: {
+                aut_id: 124
+            }
+        };
+        mockApi
+            .onPatch(repositories.routes.EXISTING_RECORD_API({pid: testPid}).apiUrl)
+            .reply(500, {});
+
+        const expectedActions = [
+            // actions.FIX_RECORD_PROCESSING,
+            // actions.APP_ALERT_SHOW,
+            actions.FIX_RECORD_FAILED
+        ];
+
+        try {
+            await mockActionsStore.dispatch(incompleteRecords.updateIncompleteRecord(testInput));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        } catch (e) {
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        }
+    });
+
+    it('dispatches expected actions for successful file upload', async () => {
+        const testInput = {
+            publication: {
+                ...mockData.mockRecordToFix,
+                fez_record_search_key_author_id: [
+                    {
+                        rek_author_id: 123
+                    }
+                ],
+                fez_record_search_key_contributor_id: [
+                    {
+                        rek_contributor_id: 123
+                    }
+                ]
+            },
+            author: {
+                aut_id: 123
+            },
+            files: {
+                queue: [
+                    {
+                        name: 'test.txt',
+                        fileData: {
+                            name: 'test.txt'
+                        }
+                    }
+                ]
+            }
+        };
+
+        const expectedActions = [
+            actions.FIX_RECORD_PROCESSING,
+            'FILE_UPLOAD_STARTED',
+            'FILE_UPLOAD_PROGRESS@test.txt',
+            actions.FIX_RECORD_SUCCESS
+        ];
+
+        mockApi
+            .onGet(repositories.routes.FILE_UPLOAD_API({pid: testPid, fileName: "test.txt"}).apiUrl)
+            .reply(200, 's3-ap-southeast-2.amazonaws.com')
+            .onPut('s3-ap-southeast-2.amazonaws.com', {"name": "test.txt"})
+            .reply(200, {})
+            .onPatch(repositories.routes.EXISTING_RECORD_API({pid: testPid}).apiUrl)
+            .reply(200, {data: {...mockData.mockRecordToFix}})
+            .onPost(repositories.routes.RECORDS_ISSUES_API({pid: testPid}).apiUrl)
+            .reply(200, {});
+
+        try {
+            await mockActionsStore.dispatch(incompleteRecords.updateIncompleteRecord(testInput));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        } catch (e) {
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        }
+    });
+
+    it('dispatches failure on api error', async () => {
+        const testInput = {
+            publication: {
+                ...mockData.mockRecordToFix,
+                fez_record_search_key_author_id: [
+                    {
+                        rek_author_id: 123
+                    }
+                ],
+                fez_record_search_key_contributor_id: [
+                    {
+                        rek_contributor_id: 123
+                    }
+                ]
+            },
+            author: {
+                aut_id: 123
+            }
+        };
+
+        const expectedActions = [
+            actions.FIX_RECORD_PROCESSING,
+            actions.APP_ALERT_SHOW,
+            actions.FIX_RECORD_FAILED
+        ];
+
+        mockApi
+            .onAny()
+            .reply(500, {});
+       try {
+            await mockActionsStore.dispatch(incompleteRecords.updateIncompleteRecord(testInput));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        } catch (e) {
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        }
+    });
+
 });

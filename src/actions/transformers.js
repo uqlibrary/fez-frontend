@@ -463,16 +463,19 @@ export const getQualityIndicatorSearchKey = (qualityIndicators = []) => {
     };
 };
 
+const getAuthorId = (data) => {
+    const author = data.publication.fez_record_search_key_author_id.filter(authorId => authorId.rek_author_id === data.author.aut_id);
+
+    // TODO test with author uqrdav10 on record UQ:720334 (he isnt first on that record)
+    // is it ok to default to 1 if there is no author or should we be throwing an error?
+    return author.length > 0 && author[0].rek_author_id_order || 1;
+};
+
 /**
  * only return the changed fields
  * @param data
  */
-export const getIncompleteRequestFields = (data) => {
-    const author = data.publication.fez_record_search_key_author_id.filter(authorId => authorId.rek_author_id === data.author.aut_id);
-
-    // TODO test with author uqrdav10 on record UQ:720334 (he isnt first on that record)
-    const authorIdOrder = author[0].rek_author_id_order;
-
+export const getCreatorContributionStatementSearchKeys = (data) => {
     const result = {};
 
     let impactStatement = null;
@@ -485,15 +488,25 @@ export const getIncompleteRequestFields = (data) => {
         result.fez_record_search_key_creator_contribution_statement =
             [{
                 rek_creator_contribution_statement: impactStatement,
-                rek_creator_contribution_statement_order: authorIdOrder
+                rek_creator_contribution_statement_order: getAuthorId(data)
             }];
     }
+
+    return result;
+};
+
+/**
+ * only return the changed fields
+ * @param data
+ */
+export const getSignificanceSearchKeys = (data) => {
+    const result = {};
 
     if (!!data.significance) {
         result.fez_record_search_key_significance =
             [{
                 rek_significance: data.significance,
-                rek_significance_order: authorIdOrder
+                rek_significance_order: getAuthorId(data)
             }];
     }
 
