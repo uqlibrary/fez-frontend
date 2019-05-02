@@ -63,7 +63,7 @@ export class DashboardClass extends PureComponent {
 
         // incomplete Record lure
         loadingIncompleteRecordData: PropTypes.bool,
-        incompleteRecordList: PropTypes.object,
+        incompleteRecordList: PropTypes.array,
 
         // wos/scopus data
         loadingPublicationsStats: PropTypes.bool,
