@@ -61,15 +61,63 @@ describe('updateIncompleteRecord actions', () => {
             aut_id: 124
         }
     };
+
     it('should call loading/loaded actions on successful load', async () => {
         const testInput = {
             publication: {
                 ...mockData.mockRecordToFix,
-                impactStatement:
-                    {
-                        htmlText: '<p>dummy</p>'
-                    }
             },
+            impactStatement: {
+                    htmlText: '<p>dummy</p>'
+            },
+            author: {
+                aut_id: 410
+            }
+        };
+        mockApi
+            .onPatch(repositories.routes.EXISTING_RECORD_API({pid: testPid}).apiUrl)
+            .reply(200, {});
+
+        const expectedActions = [
+            actions.FIX_RECORD_PROCESSING,
+            actions.FIX_RECORD_SUCCESS
+        ];
+
+        await mockActionsStore.dispatch(incompleteRecords.updateIncompleteRecord(testInput));
+        expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+    });
+
+    it('should handle plain text impactStatement', async () => {
+        const testInput = {
+            publication: {
+                ...mockData.mockRecordToFix,
+            },
+            impactStatement: {
+                plainText: 'dummy'
+            },
+            author: {
+                aut_id: 410
+            }
+        };
+        mockApi
+            .onPatch(repositories.routes.EXISTING_RECORD_API({pid: testPid}).apiUrl)
+            .reply(200, {});
+
+        const expectedActions = [
+            actions.FIX_RECORD_PROCESSING,
+            actions.FIX_RECORD_SUCCESS
+        ];
+
+        await mockActionsStore.dispatch(incompleteRecords.updateIncompleteRecord(testInput));
+        expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+    });
+
+    it('should handle significance', async () => {
+        const testInput = {
+            publication: {
+                ...mockData.mockRecordToFix,
+            },
+            significance: 454026,
             author: {
                 aut_id: 410
             }
@@ -177,16 +225,6 @@ describe('updateIncompleteRecord actions', () => {
         const testInput = {
             publication: {
                 ...mockData.mockRecordToFix,
-                // fez_record_search_key_language: [ // random field to update
-                //     {
-                //         rek_language: "eng"
-                //     }
-                // ],
-                // fez_record_search_key_contributor_id: [
-                //     {
-                //         rek_contributor_id: 123
-                //     }
-                // ]
             },
             author: {
                 aut_id: 124
@@ -302,4 +340,38 @@ describe('updateIncompleteRecord actions', () => {
         }
     });
 
+    it('see what happens when the author isnt on the list', async () => {
+        const testInput = {
+            publication: {
+                ...mockData.mockRecordToFix,
+                fez_record_search_key_author_id: [
+                    {
+                        rek_author_id: 123
+                    }
+                ],
+                fez_record_search_key_contributor_id: [
+                    {
+                        rek_contributor_id: 124
+                    }
+                ]
+            },
+            author: {
+                aut_id: 125
+            }
+        };
+        mockApi
+            .onPatch(repositories.routes.EXISTING_RECORD_API({pid: testPid}).apiUrl)
+            .reply(200, {});
+
+        const expectedActions = [
+            actions.FIX_RECORD_FAILED
+        ];
+
+        try {
+            await mockActionsStore.dispatch(incompleteRecords.updateIncompleteRecord(testInput));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        } catch (e) {
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        }
+    });
 });
