@@ -106,14 +106,19 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
       }
     >
       <WithStyles(Tooltip)
+        disableFocusListener={false}
+        disableHoverListener={false}
+        disableTouchListener={false}
         title="Remove all records"
       >
-        <WithStyles(IconButton)
-          disabled={false}
-          onClick={[Function]}
-        >
-          <pure(DeleteForeverIcon) />
-        </WithStyles(IconButton)>
+        <span>
+          <WithStyles(IconButton)
+            disabled={false}
+            onClick={[Function]}
+          >
+            <pure(DeleteForeverIcon) />
+          </WithStyles(IconButton)>
+        </span>
       </WithStyles(Tooltip)>
     </WithStyles(ListItemSecondaryAction)>
   </WithStyles(ListItem)>
@@ -202,14 +207,19 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
       }
     >
       <WithStyles(Tooltip)
+        disableFocusListener={true}
+        disableHoverListener={true}
+        disableTouchListener={true}
         title="Remove all records"
       >
-        <WithStyles(IconButton)
-          disabled={true}
-          onClick={[Function]}
-        >
-          <pure(DeleteForeverIcon) />
-        </WithStyles(IconButton)>
+        <span>
+          <WithStyles(IconButton)
+            disabled={true}
+            onClick={[Function]}
+          >
+            <pure(DeleteForeverIcon) />
+          </WithStyles(IconButton)>
+        </span>
       </WithStyles(Tooltip)>
     </WithStyles(ListItemSecondaryAction)>
   </WithStyles(ListItem)>
@@ -298,14 +308,19 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
       }
     >
       <WithStyles(Tooltip)
+        disableFocusListener={false}
+        disableHoverListener={false}
+        disableTouchListener={false}
         title="Remove all records"
       >
-        <WithStyles(IconButton)
-          disabled={false}
-          onClick={[Function]}
-        >
-          <pure(DeleteForeverIcon) />
-        </WithStyles(IconButton)>
+        <span>
+          <WithStyles(IconButton)
+            disabled={false}
+            onClick={[Function]}
+          >
+            <pure(DeleteForeverIcon) />
+          </WithStyles(IconButton)>
+        </span>
       </WithStyles(Tooltip)>
     </WithStyles(ListItemSecondaryAction)>
   </WithStyles(ListItem)>
@@ -416,14 +431,19 @@ exports[`Component ContributorRowHeader header for creator role 1`] = `
       }
     >
       <WithStyles(Tooltip)
+        disableFocusListener={false}
+        disableHoverListener={false}
+        disableTouchListener={false}
         title="Remove all records"
       >
-        <WithStyles(IconButton)
-          disabled={false}
-          onClick={[Function]}
-        >
-          <pure(DeleteForeverIcon) />
-        </WithStyles(IconButton)>
+        <span>
+          <WithStyles(IconButton)
+            disabled={false}
+            onClick={[Function]}
+          >
+            <pure(DeleteForeverIcon) />
+          </WithStyles(IconButton)>
+        </span>
       </WithStyles(Tooltip)>
     </WithStyles(ListItemSecondaryAction)>
   </WithStyles(ListItem)>
@@ -512,14 +532,19 @@ exports[`Component ContributorRowHeader should display infinite class 1`] = `
       }
     >
       <WithStyles(Tooltip)
+        disableFocusListener={false}
+        disableHoverListener={false}
+        disableTouchListener={false}
         title="Remove all records"
       >
-        <WithStyles(IconButton)
-          disabled={false}
-          onClick={[Function]}
-        >
-          <pure(DeleteForeverIcon) />
-        </WithStyles(IconButton)>
+        <span>
+          <WithStyles(IconButton)
+            disabled={false}
+            onClick={[Function]}
+          >
+            <pure(DeleteForeverIcon) />
+          </WithStyles(IconButton)>
+        </span>
       </WithStyles(Tooltip)>
     </WithStyles(ListItemSecondaryAction)>
   </WithStyles(ListItem)>

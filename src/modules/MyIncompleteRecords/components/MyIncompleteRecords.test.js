@@ -1,6 +1,7 @@
 import MyIncompleteRecords from './MyIncompleteRecords';
 import {routes, general} from 'config';
 import {locale} from 'locale';
+import {mockRecordToFix} from 'mock/data/testing/records';
 
 function setup(testProps, isShallow = true) {
     const props = {
@@ -166,14 +167,14 @@ describe('MyIncompleteRecords test', () => {
         expect(testAction).not.toHaveBeenCalled();
     });
 
-    it('sets publication to fix', () => {
-        const push = jest.fn();
-        const setFixRecord = jest.fn();
-        const wrapper = setup({accountLoading: true, actions: {setFixRecord: setFixRecord},  history: {push: push}});
-        wrapper.instance().completeRecord({rek_pid: 'UQ:111111'});
-        expect(push).toHaveBeenCalledWith(routes.pathConfig.records.incompleteFix('UQ:111111'));
-        expect(setFixRecord).toHaveBeenCalled();
-    });
+    // it('sets publication to fix', () => {
+    //     const push = jest.fn();
+    //     const setFixRecord = jest.fn();
+    //     const wrapper = setup({accountLoading: true, actions: {setFixRecord: setFixRecord},  history: {push: push}});
+    //     wrapper.instance().completeRecord({rek_pid: 'UQ:111111'});
+    //     expect(push).toHaveBeenCalledWith(routes.pathConfig.records.incompleteFix('UQ:111111'));
+    //     expect(setFixRecord).toHaveBeenCalled();
+    // });
 
     it('component has displayable facets', () => {
         const testAction = jest.fn();
@@ -185,5 +186,15 @@ describe('MyIncompleteRecords test', () => {
         expect(wrapper.state().page).toEqual(1);
         expect(testAction).toHaveBeenCalled();
         expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should complete record', () => {
+        const testMethod = jest.fn();
+        const goBack = jest.fn();
+
+        const wrapper = setup({recordToFix: mockRecordToFix, history: {push: testMethod, goBack: goBack}});
+        const item = { rek_pid: 'UQ:1001' };
+        wrapper.instance().completeRecord(item);
+        expect(testMethod).toHaveBeenCalledWith('/records/UQ:1001/incomplete');
     });
 });

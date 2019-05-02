@@ -1,33 +1,8 @@
 import * as actions from './actionTypes';
 import * as transformers from './transformers';
-import { get, patch } from 'repositories/generic';
-import { INCOMPLETE_RECORDS_API, EXISTING_RECORD_API } from 'repositories/routes';
+import { patch } from 'repositories/generic';
+import { EXISTING_RECORD_API } from 'repositories/routes';
 import { putUploadFiles } from 'repositories';
-
-/**
- * Load a list of incomplete NTRO Records from fez
- * @returns {action}
- */
-export function loadIncompleteRecords() {
-    return dispatch => {
-        dispatch({type: actions.INCOMPLETE_RECORDS_LOADING});
-
-        return get(INCOMPLETE_RECORDS_API())
-            .then(response => {
-                dispatch({
-                    type: actions.INCOMPLETE_RECORDS_LOADED,
-                    payload: response
-                });
-            })
-            .catch(error => {
-                dispatch({
-                    type: actions.INCOMPLETE_RECORDS_FAILED,
-                    payload: error.message
-                });
-            });
-    };
-}
-
 
 /**
  * Update incomplete record request: patch record, send issue to espace admins:
@@ -56,8 +31,6 @@ export function updateIncompleteRecord(data) {
     const isContributorLinked = data.publication.fez_record_search_key_contributor_id && data.publication.fez_record_search_key_contributor_id.length > 0 &&
         data.publication.fez_record_search_key_contributor_id.filter(contributorId => contributorId.rek_contributor_id === data.author.aut_id).length > 0;
 
-    const hasFilesToUpload = data.files && data.files.queue && data.files.queue.length > 0;
-
     if (!isAuthorLinked && !isContributorLinked) {
         return dispatch => {
             dispatch({
@@ -68,6 +41,8 @@ export function updateIncompleteRecord(data) {
         };
     }
 
+    const hasFilesToUpload = data.files && data.files.queue && data.files.queue.length > 0;
+
     return dispatch => {
         dispatch({type: actions.FIX_RECORD_PROCESSING});
 
@@ -75,9 +50,27 @@ export function updateIncompleteRecord(data) {
         let patchRecordRequest = null;
         patchRecordRequest = {
             rek_pid: data.publication.rek_pid,
+            ...JSON.parse(JSON.stringify(data)),
+            ...transformers.getRecordAbstractDescriptionSearchKey(data.ntroAbstract),
+            ...transformers.getLanguageSearchKey(data.languages),
+            ...transformers.getQualityIndicatorSearchKey(data.qualityIndicators),
+            ...transformers.getCreatorContributionStatementSearchKeys(data),
+            ...transformers.getSignificanceSearchKeys(data),
             ...transformers.getGrantsListSearchKey(data.grants),
             ...transformers.getRecordFileAttachmentSearchKey(data.files ? data.files.queue : [], data.publication)
         };
+
+        // delete extra form values from request object
+        if (patchRecordRequest.author) delete patchRecordRequest.author;
+        if (patchRecordRequest.publication) delete patchRecordRequest.publication;
+        if (patchRecordRequest.authors) delete patchRecordRequest.authors;
+        if (patchRecordRequest.files) delete patchRecordRequest.files;
+        if (patchRecordRequest.ntroAbstract) delete patchRecordRequest.ntroAbstract;
+        if (patchRecordRequest.grants) delete patchRecordRequest.grants;
+        if (patchRecordRequest.significance) delete patchRecordRequest.significance;
+        if (patchRecordRequest.impactStatement) delete patchRecordRequest.impactStatement;
+        if (patchRecordRequest.languages) delete patchRecordRequest.languages;
+        if (patchRecordRequest.qualityIndicators) delete patchRecordRequest.qualityIndicators;
 
         // create request for issue notification
         // const createIssueRequest = transformers.getFixIssueRequest(data);

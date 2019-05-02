@@ -6955,6 +6955,7 @@ export const preprint = {
 };
 
 export const mockRecordToFix = {
+    fez_datastream_info: [],
     "rek_pid": "UQ:41878",
     "rek_title_xsdmf_id": 10588,
     "rek_title": "Roles of heterogeneous nuclear ribonucleoproteins A\/B in cell growth",

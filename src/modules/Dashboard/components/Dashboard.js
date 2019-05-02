@@ -63,7 +63,7 @@ export class DashboardClass extends PureComponent {
 
         // incomplete Record lure
         loadingIncompleteRecordData: PropTypes.bool,
-        incompleteRecordList: PropTypes.array,
+        incompleteRecordList: PropTypes.object,
 
         // wos/scopus data
         loadingPublicationsStats: PropTypes.bool,
@@ -90,13 +90,16 @@ export class DashboardClass extends PureComponent {
         if (this.props.account && this.props.account.id) {
             this.props.actions.countPossiblyYourPublications(this.props.account.id);
             this.props.actions.loadAuthorPublicationsStats(this.props.account.id);
-            this.props.actions.loadIncompleteRecords();
+            if(!this.props.incompleteRecordList) {
+                this.props.actions.searchAuthorIncompletePublications();
+            }
         }
     }
 
     _claimYourPublications = () => {
         this.props.history.push(pathConfig.records.possible);
     };
+
     _addPublication = () => {
         this.props.history.push(pathConfig.records.add.find);
     };
@@ -106,7 +109,7 @@ export class DashboardClass extends PureComponent {
             dashboardPubsTabs: value});
     };
 
-    redirectToMissingRecordslist = () => {
+    redirectToIncompleteRecordlist = () => {
         this.props.history.push(pathConfig.records.incomplete);
     };
 
@@ -152,10 +155,11 @@ export class DashboardClass extends PureComponent {
                     <PublicationStats publicationsStats={this.props.publicationsStats}/>
                 </StandardCard>
             ) : null;
-        /* istanbul ignore else */
-        const pluralTextReplacement = this.props.incompleteRecordList && this.props.incompleteRecordList.length > 1 ? 's' : '';
-        /* istanbul ignore else */
-        const verbEndingTextReplacement = this.props.incompleteRecordList && this.props.incompleteRecordList.length > 1 ? '' : 's';
+        const pluralTextReplacement = this.props.incompleteRecordList && this.props.incompleteRecordList.publicationsListPagingData
+                                       && this.props.incompleteRecordList.publicationsListPagingData.total > 1 ? 's' : '';
+        const verbEndingTextReplacement = this.props.incompleteRecordList && this.props.incompleteRecordList.publicationsListPagingData
+                                       && this.props.incompleteRecordList.publicationsListPagingData.total > 1 ? '' : 's';
+
         return (
             <StandardPage>
                 <Grid container spacing={24}>
@@ -173,18 +177,20 @@ export class DashboardClass extends PureComponent {
                             {
                                 !!txt.incompleteRecordLure &&
                                 !this.props.loadingIncompleteRecordData &&
-                                !!this.props.incompleteRecordList && this.props.incompleteRecordList.length > 0 &&
+                                !!this.props.incompleteRecordList
+                                && this.props.incompleteRecordList.publicationsListPagingData
+                                && this.props.incompleteRecordList.publicationsListPagingData.total > 0 &&
                                 <Grid item xs={12} style={{marginTop: -27}}>
                                     <Alert
                                         title={txt.incompleteRecordLure.title}
                                         message={txt.incompleteRecordLure.message
-                                            .replace('[count]', this.props.incompleteRecordList.length)
+                                            .replace('[count]', this.props.incompleteRecordList.publicationsListPagingData.total)
                                             .replace('[plural]', pluralTextReplacement)
                                             .replace('[verbEnding]', verbEndingTextReplacement)
                                         }
                                         type={txt.incompleteRecordLure.type}
                                         actionButtonLabel={txt.incompleteRecordLure.actionButtonLabel}
-                                        action={this.redirectToMissingRecordslist}
+                                        action={this.redirectToIncompleteRecordlist}
                                     />
                                 </Grid>
                             }
