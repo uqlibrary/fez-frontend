@@ -7,6 +7,9 @@ import { withRouter } from 'react-router-dom';
 import * as actions from 'actions';
 import { confirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
 import { ORG_TYPE_NOT_SET } from 'config/general';
+import { leftJoin } from 'helpers/general';
+import { locale } from 'locale';
+import { general } from 'config';
 
 const FORM_NAME = 'MyIncompleteRecord';
 
@@ -46,12 +49,68 @@ let MyIncompleteRecordContainer = reduxForm({
 const mapStateToProps = (state, ownProps) => {
     const formErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});
     const importedValues = state.get('fixRecordReducer') && state.get('fixRecordReducer').recordToFix;
-    const grants = importedValues && importedValues.fez_record_search_key_grant_agency.map((grantAgency, index) => ({
-        grantAgencyName: grantAgency.rek_grant_agency,
-        grantId: importedValues.fez_record_search_key_grant_id && importedValues.fez_record_search_key_grant_id.length > 0 && importedValues.fez_record_search_key_grant_id[index].rek_grant_id || '',
-        grantAgencyType: importedValues.fez_record_search_key_grant_agency_type && importedValues.fez_record_search_key_grant_agency_type.length > 0 && importedValues.fez_record_search_key_grant_agency_type[index].rek_grant_agency_type || ORG_TYPE_NOT_SET,
-        disabled: ownProps.disableInitialGrants
-    }));
+    const grants = [];
+    const authors = [];
+    if (importedValues) {
+        importedValues.fez_record_search_key_grant_agency.map((grantAgency, index) => {
+            grants.push({
+                grantAgencyName: grantAgency.rek_grant_agency,
+                grantId: importedValues.fez_record_search_key_grant_id &&
+                    importedValues.fez_record_search_key_grant_id.length > 0 &&
+                    importedValues.fez_record_search_key_grant_id[index] &&
+                    importedValues.fez_record_search_key_grant_id[index].rek_grant_id || '',
+                grantAgencyType: importedValues.fez_record_search_key_grant_agency_type &&
+                    importedValues.fez_record_search_key_grant_agency_type.length > 0 &&
+                    importedValues.fez_record_search_key_grant_id[index] &&
+                    importedValues.fez_record_search_key_grant_agency_type[index].rek_grant_agency_type || ORG_TYPE_NOT_SET,
+                disabled: ownProps.disableInitialGrants
+            });
+        });
+
+        const affiliationDataMap = [
+            {
+                infoArray: importedValues.fez_record_search_key_author,
+                key: 'rek_author_order'
+            },
+            {
+                infoArray: importedValues.fez_record_search_key_author_affiliation_name,
+                key: 'rek_author_affiliation_name_order'
+            },
+            {
+                infoArray: importedValues.fez_record_search_key_author_affiliation_type,
+                key: 'rek_author_affiliation_type_order'
+            },
+        ];
+
+        const mergedAffiliationsArray = affiliationDataMap.reduce((authors, affiliationData) => {
+            return leftJoin(
+                authors,
+                affiliationData.infoArray,
+                'rek_author_id_order',
+                affiliationData.key
+            );
+        }, importedValues.fez_record_search_key_author_id);
+
+        mergedAffiliationsArray.map((author) => {
+            const isUQ = author.rek_author_affiliation_name === locale.global.orgTitle;
+            const affiliation = isUQ ? 'UQ' : 'NotUQ';
+            const orgtype = isUQ ? general.ORG_TYPE_ID_UNIVERSITY : (
+                author.rek_author_affiliation_type
+                    && String(author.rek_author_affiliation_type)
+                || ''
+            );
+            const contributor = {
+                affiliation,
+                creatorRole: '',
+                disabled: false,
+                nameAsPublished: author.rek_author,
+                orgaff: author.rek_author_affiliation_name || '',
+                orgtype,
+                uqIdentifier: author.rek_author_affiliation_type && String(author.rek_author_id) || '',
+            };
+            authors.push(contributor);
+        });
+    }
 
 
     return {
@@ -63,8 +122,6 @@ const mapStateToProps = (state, ownProps) => {
         initialValues: {
             // Place all of the imported NTRO values from the PID into their form fields here....
             rek_title: importedValues && importedValues.rek_title || null,
-            rek_author_affiliation_name: importedValues && importedValues.rek_author_affiliation_name || null,
-            rek_author_affiliation_type: importedValues && importedValues.rek_author_affiliation_type || null,
             fez_record_search_key_significance: importedValues && importedValues.fez_record_search_key_significance || null,
             rek_description: importedValues && importedValues.rek_description || null,
             rek_formatted_abstract: importedValues && importedValues.rek_formatted_abstract || null,
@@ -72,7 +129,8 @@ const mapStateToProps = (state, ownProps) => {
             fez_record_search_key_language: importedValues && importedValues.fez_record_search_key_language || null,
             fez_record_search_key_quality_indicator: importedValues && importedValues.fez_record_search_key_quality_indicator || null,
             fez_record_search_key_audience_size: importedValues && importedValues.fez_record_search_key_audience_size || null,
-            grants
+            grants,
+            authors,
         }
     };
 };

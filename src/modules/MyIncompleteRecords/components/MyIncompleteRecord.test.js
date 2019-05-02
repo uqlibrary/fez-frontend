@@ -1,10 +1,11 @@
 import MyIncompleteRecord from './MyIncompleteRecord';
-import {mockRecordToFix} from 'mock/data/testing/records';
+import { mockRecordToFix } from 'mock/data/testing/records';
 import Immutable from 'immutable';
+import { routes } from 'config';
 
 function setup(testProps, isShallow = true) {
     const props = {
-        "array": {
+        array: {
             insert: jest.fn(),
             move: jest.fn(),
             pop: jest.fn(),
@@ -20,8 +21,8 @@ function setup(testProps, isShallow = true) {
         blur: jest.fn(),
         change: jest.fn(),
         clearAsyncError: jest.fn(),
-        "anyTouched": true,
-        "asyncValidating": false,
+        anyTouched: true,
+        asyncValidating: false,
         asyncValidate: jest.fn(),
         clearFields: jest.fn(),
         clearSubmitErrors: jest.fn(),
@@ -34,11 +35,11 @@ function setup(testProps, isShallow = true) {
         submit: jest.fn(),
         untouch: jest.fn(),
         clearSubmit: jest.fn(),
-        "dirty": true,
-        "form": "form",
-        "initialized": false,
-        "submitFailed": false,
-        "valid": true,
+        dirty: true,
+        form: 'form',
+        initialized: false,
+        submitFailed: false,
+        valid: true,
         pure: true,
         pristine: true,
         submitting: false,
@@ -142,14 +143,12 @@ describe('Component MyIncompleteRecord', () => {
         const wrapper = setup({recordToFix: mockRecordToFix, publicationToFixFileUploadingError: true});
         wrapper.setState({selectedRecordAction: 'fix'});
         expect(toJson(wrapper)).toMatchSnapshot();
-
     });
 
     it('should render the confirm dialog box without an alert due to a file upload success', () => {
         const wrapper = setup({recordToFix: mockRecordToFix, publicationToFixFileUploadingError: false});
         wrapper.setState({selectedRecordAction: 'fix'});
         expect(toJson(wrapper)).toMatchSnapshot();
-
     });
 
     it('_handleDefaultSubmit()', () => {
@@ -158,14 +157,25 @@ describe('Component MyIncompleteRecord', () => {
         const event = {preventDefault: testFN};
         wrapper.instance()._handleDefaultSubmit(event);
         expect(testFN).toHaveBeenCalled();
-
     });
 
     it('_handleDefaultSubmit()', () => {
         const wrapper = setup({recordToFix: mockRecordToFix, publicationToFixFileUploadingError: false});
         wrapper.instance()._handleDefaultSubmit();
         expect(toJson(wrapper)).toMatchSnapshot();
+    });
 
+    it('should be able to navigate to specific routes', () => {
+        const testFn = jest.fn();
+        const wrapper = setup({ history: {
+            push: testFn,
+            go: jest.fn(),
+        } });
+        wrapper.instance()._navigateToMyIncomplete();
+        expect(testFn).toBeCalledWith(routes.pathConfig.records.incomplete);
+
+        wrapper.instance()._navigateToDashboard();
+        expect(testFn).toBeCalledWith(routes.pathConfig.dashboard);
     });
 
     it('componentWillReceiveProps()', () => {
@@ -173,7 +183,6 @@ describe('Component MyIncompleteRecord', () => {
         const nextProps = {submitSucceeded: true};
         wrapper.instance().componentWillReceiveProps(nextProps);
         expect(toJson(wrapper)).toMatchSnapshot();
-
     });
 
     it('componentWillUnmount()', () => {
@@ -181,7 +190,6 @@ describe('Component MyIncompleteRecord', () => {
         const wrapper = setup({actions: {clearFixRecord: testFN}, submitSucceeded: true, recordToFix: mockRecordToFix, publicationToFixFileUploadingError: false});
         wrapper.instance().componentWillUnmount();
         expect(testFN).toHaveBeenCalled();
-
     });
 
     it('_navigateToMyIncomplete()', () => {

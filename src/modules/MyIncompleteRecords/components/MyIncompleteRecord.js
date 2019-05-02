@@ -1,22 +1,28 @@
-import React, {PureComponent} from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import {Field, propTypes} from 'redux-form/immutable';
+import { Field, propTypes } from 'redux-form/immutable';
+import JSONPretty from 'react-json-pretty';
+
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
-import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
-import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
-import {NavigationDialogBox} from 'modules/SharedComponents/Toolbox/NavigationPrompt';
-import {ConfirmDialogBox} from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
-import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
-import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
-import {FileUploadField} from 'modules/SharedComponents/Toolbox/FileUploader';
-import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
-import {PublicationCitation} from 'modules/SharedComponents/PublicationCitation';
-import {GrantListEditorField} from 'modules/SharedComponents/GrantListEditor';
+import Typography from '@material-ui/core/Typography';
 
-import {validation, routes} from 'config';
-import {default as pagesLocale} from 'locale/pages';
-import {default as formsLocale} from 'locale/forms';
+import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
+import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
+import { NavigationDialogBox } from 'modules/SharedComponents/Toolbox/NavigationPrompt';
+import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
+import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
+import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
+import { FileUploadField } from 'modules/SharedComponents/Toolbox/FileUploader';
+import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
+import { PublicationCitation } from 'modules/SharedComponents/PublicationCitation';
+import { GrantListEditorField } from 'modules/SharedComponents/GrantListEditor';
+import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
+
+import { general, validation, routes } from 'config';
+import { default as pagesLocale } from 'locale/pages';
+import { default as formsLocale } from 'locale/forms';
+import { default as componentsLocale } from 'locale/components';
 
 export default class MyIncompleteRecord extends PureComponent {
     static propTypes = {
@@ -39,9 +45,12 @@ export default class MyIncompleteRecord extends PureComponent {
     };
 
     componentDidMount() {
-        if (this.props.actions &&
+        if (
+            this.props.actions &&
             !this.props.recordToFix &&
-            this.props.match.params && this.props.match.params.pid) {
+            this.props.match.params &&
+            this.props.match.params.pid
+        ) {
             this.props.actions.loadRecordToFix(this.props.match.params.pid);
         }
     }
@@ -92,10 +101,12 @@ export default class MyIncompleteRecord extends PureComponent {
     };
 
     _handleDefaultSubmit = (event) => {
-        if(event) event.preventDefault();
+        if (event) event.preventDefault();
     };
 
     render() {
+        const isNtro = this.props.recordToFix && !!general.NTRO_SUBTYPES.includes(this.props.recordToFix.rek_subtype);
+
         // if author is not linked to this record, abandon form
         if (!(this.props.accountAuthorLoading || this.props.loadingRecordToFix) && !this.isAuthorLinked()) {
             this.props.history.go(-1);
@@ -104,17 +115,22 @@ export default class MyIncompleteRecord extends PureComponent {
 
         const txt = pagesLocale.pages.incompletePublication;
         const txtFixForm = formsLocale.forms.fixPublicationForm;
+        const authors = componentsLocale.components.authors;
+        authors.description = txt.fields.authors.description;
+        authors.field.form.locale.descriptionStep1 = txt.fields.authors.updateAuthor;
+        authors.field.header.locale.descriptionStep2 = txt.fields.authors.selectAuthor;
+        authors.field.row.locale.selectHint = txt.fields.authors.ariaLabel;
 
-        if(this.props.accountAuthorLoading || this.props.loadingRecordToFix) {
+        if (this.props.accountAuthorLoading || this.props.loadingRecordToFix) {
             return (
                 <React.Fragment>
-                    <InlineLoader message={txt.loadingMessage}/>
+                    <InlineLoader message={txt.loadingMessage} />
                 </React.Fragment>
             );
         }
 
         // set confirmation message depending on file upload status
-        const saveConfirmationLocale = {...txt.successWorkflowConfirmation};
+        const saveConfirmationLocale = { ...txt.successWorkflowConfirmation };
         saveConfirmationLocale.confirmationMessage = (
             <React.Fragment>
                 {this.props.publicationToFixFileUploadingError && <Alert {...saveConfirmationLocale.fileFailConfirmationAlert} />}
@@ -144,6 +160,29 @@ export default class MyIncompleteRecord extends PureComponent {
                                 />
                             </StandardCard>
                         </Grid>
+                        <Grid item xs={12}>
+                            <StandardCard title={'JSON of the initialValues'}>
+                                <JSONPretty id="json-pretty" data={this.props.initialValues} />
+                            </StandardCard>
+                        </Grid>
+                        <Grid item xs={12}>
+                            <StandardCard title={authors.title} help={authors.help}>
+                                <Typography>{authors.description}</Typography>
+                                <Field
+                                    component={ContributorsEditorField}
+                                    editMode
+                                    hideDelete
+                                    hideReorder
+                                    isNtro={isNtro}
+                                    locale={authors.field}
+                                    name="authors"
+                                    required
+                                    showContributorAssignment
+                                    validate={[validation.authorsAffiliationIncomplete]}
+                                />
+                            </StandardCard>
+                        </Grid>
+
                         <Grid item xs={12}>
                             <StandardCard title={txt.fields.notes.title}>
                                 <Field
@@ -184,7 +223,7 @@ export default class MyIncompleteRecord extends PureComponent {
                                 fullWidth
                                 children={txt.cancelButtonLabel}
                                 disabled={this.props.submitting}
-                                onClick={this._cancelFix}/>
+                                onClick={this._cancelFix} />
                         </Grid>
                         <Grid item>
                             <Button
@@ -193,7 +232,7 @@ export default class MyIncompleteRecord extends PureComponent {
                                 fullWidth
                                 children={txt.submitButtonLabel}
                                 onClick={this.props.handleSubmit}
-                                disabled={this.props.submitting || this.props.disableSubmit}/>
+                                disabled={this.props.submitting || this.props.disableSubmit} />
                         </Grid>
                     </Grid>
                 </form>
