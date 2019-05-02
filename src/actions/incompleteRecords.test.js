@@ -1,8 +1,9 @@
 import * as actions from './actionTypes';
 import * as repositories from 'repositories';
-import * as incompleteRecords from './incompleteRecords';
+import * as publications from './publications';
 import * as incompleteRecordList from 'mock/data/records/incompleteNTROlist';
-import * as mockData from "../mock/data/testing/records";
+import { updateIncompleteRecord } from './incompleteRecords';
+import { mockRecordToFix } from 'mock/data/testing/records';
 
 // extend expect to check actions
 expect.extend({toHaveDispatchedActions});
@@ -19,7 +20,7 @@ afterEach(() => {
 describe('incompleteRecords actions', () => {
     it('should call loading/loaded actions on successful load', async () => {
         mockApi
-            .onGet(repositories.routes.CURRENT_USER_INCOMPLETE_RECORDS_API().apiUrl)
+            .onGet(repositories.routes.INCOMPLETE_RECORDS_API({}).apiUrl)
             .reply(200, incompleteRecordList);
 
         const expectedActions = [
@@ -27,7 +28,7 @@ describe('incompleteRecords actions', () => {
             actions.AUTHOR_INCOMPLETEPUBLICATIONS_LOADED
         ];
 
-        await mockActionsStore.dispatch(incompleteRecords.loadIncompleteRecords());
+        await mockActionsStore.dispatch(publications.searchAuthorIncompletePublications({}));
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
@@ -41,7 +42,7 @@ describe('incompleteRecords actions', () => {
             actions.AUTHOR_INCOMPLETEPUBLICATIONS_FAILED
         ];
 
-        await mockActionsStore.dispatch(incompleteRecords.loadIncompleteRecords());
+        await mockActionsStore.dispatch(publications.searchAuthorIncompletePublications({}));
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
@@ -65,10 +66,10 @@ describe('updateIncompleteRecord actions', () => {
     it('should call loading/loaded actions on successful load', async () => {
         const testInput = {
             publication: {
-                ...mockData.mockRecordToFix,
+                ...mockRecordToFix
             },
             impactStatement: {
-                    htmlText: '<p>dummy</p>'
+                htmlText: '<p>dummy</p>'
             },
             author: {
                 aut_id: 410
@@ -83,8 +84,20 @@ describe('updateIncompleteRecord actions', () => {
             actions.FIX_RECORD_SUCCESS
         ];
 
-        await mockActionsStore.dispatch(incompleteRecords.updateIncompleteRecord(testInput));
+        await mockActionsStore.dispatch(updateIncompleteRecord(testInput));
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+    });
+
+    it('should call loading/load failed actions on incomplete data', async () => {
+        const expectedActions = [
+            actions.FIX_RECORD_FAILED
+        ];
+
+        try {
+            await mockActionsStore.dispatch(updateIncompleteRecord({}));
+        } catch (e) {
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        }
     });
 
     it('should handle plain text impactStatement', async () => {
@@ -135,22 +148,6 @@ describe('updateIncompleteRecord actions', () => {
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
-    it('should call loading/load failed actions on incomplete data', async () => {
-        mockApi
-            .onAny()
-            .reply(404);
-
-        const expectedActions = [
-            actions.FIX_RECORD_FAILED
-        ];
-
-        try {
-            await mockActionsStore.dispatch(incompleteRecords.updateIncompleteRecord({}));
-        } catch (e) {
-            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
-        }
-    });
-
     it('should call loading/load failed actions on bad author', async () => {
         const testInput = {
             ...testInput,
@@ -158,16 +155,13 @@ describe('updateIncompleteRecord actions', () => {
                 aut_id: 1
             }
         };
-        mockApi
-            .onAny()
-            .reply(404);
 
         const expectedActions = [
             actions.FIX_RECORD_FAILED
         ];
 
         try {
-            await mockActionsStore.dispatch(incompleteRecords.updateIncompleteRecord(testInput));
+            await mockActionsStore.dispatch(updateIncompleteRecord(testInput));
         } catch (e) {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         }

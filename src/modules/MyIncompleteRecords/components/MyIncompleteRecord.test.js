@@ -542,15 +542,46 @@ describe('Cards', () => {
 
     });
 
-    it('should redirect to other pages', () => {
-        const testMethod = jest.fn();
-        const goBack = jest.fn();
-
-        const wrapper = setup({recordToFix: mockRecordToFix, history: {push: testMethod, goBack: goBack}});
+    it('_navigateToMyIncomplete()', () => {
+        const testFN = jest.fn();
+        const wrapper = setup({
+            author: {
+                aut_id: 1
+            },
+            recordToFix: {
+                fez_datastream_info: [],
+                fez_record_search_key_author_id: [
+                    {rek_author_id: 1}
+                    ]
+            },
+            history: {push: testFN},
+            accountAuthorLoading: false,
+            loadingRecordToFix: false
+        });
         wrapper.instance()._navigateToMyIncomplete();
-        expect(testMethod).toHaveBeenCalledWith('/records/incomplete');
+        expect(testFN).toHaveBeenCalledWith('/records/incomplete');
 
-        wrapper.instance()._navigateToDashboard();
-        expect(testMethod).toHaveBeenCalledWith('/dashboard');
     });
+
+    it('_navigateToDashboard()', () => {
+        const testFN = jest.fn();
+        const wrapper = setup({
+            author: {
+                aut_id: 1
+            },
+            recordToFix: {
+                fez_datastream_info: [],
+                fez_record_search_key_author_id: [
+                    {rek_author_id: 1}
+                ]
+            },
+            history: {push: testFN},
+            accountAuthorLoading: false,
+            loadingRecordToFix: false
+        });
+        wrapper.instance()._navigateToDashboard();
+        expect(testFN).toHaveBeenCalledWith('/dashboard');
+
+    });
+
 });

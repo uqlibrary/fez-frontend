@@ -178,6 +178,7 @@ export default class MyIncompleteRecord extends PureComponent {
                 {saveConfirmationLocale.confirmationMessage}
             </React.Fragment>
         );
+        const hasAnyFiles = this.props.recordToFix && this.props.recordToFix.fez_datastream_info && this.props.recordToFix.fez_datastream_info.length || 0;
         return (
             <StandardPage title={txt.title}>
                 <PublicationCitation publication={this.props.recordToFix} />
@@ -261,19 +262,22 @@ export default class MyIncompleteRecord extends PureComponent {
                                 />
                             </StandardCard>
                         </Grid>
-                        <Grid item xs={12}>
-                            <StandardCard title={txt.fields.fileUpload.title}>
-                                <Field
-                                    name="files"
-                                    component={ FileUploadField }
-                                    disabled={this.props.submitting}
-                                    requireOpenAccessStatus
-                                    validate={[validation.validFileUpload]}
-                                    isNtro
-                                    {...txt.fields.fileUpload}
-                                />
-                            </StandardCard>
-                        </Grid>
+                        {
+                            !hasAnyFiles &&
+                            <Grid item xs={12}>
+                                <StandardCard title={txt.fields.fileUpload.title}>
+                                    <Field
+                                        name="files"
+                                        component={FileUploadField}
+                                        disabled={this.props.submitting}
+                                        requireOpenAccessStatus
+                                        validate={[validation.validFileUpload]}
+                                        isNtro
+                                        {...txt.fields.fileUpload}
+                                    />
+                                </StandardCard>
+                            </Grid>
+                        }
                     </Grid>
                     <Grid container spacing={24}>
                         <Grid item xs />

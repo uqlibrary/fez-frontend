@@ -166,6 +166,9 @@ mock
         if (config.url.indexOf('UQ:6de77b0') >= 0) {
             return [200, {data: {...mockData.incompleteNTROrecordUqrdav10}}];
         }
+        if (config.url.indexOf('UQ:56b1652') >= 0) {
+            return [200, {data: {...mockData.incompleteNTROrecordUqsbutl1}}];
+        }
         if (config.url.indexOf('UQ:678742') >= 0) {
             return [200, {data: {...mockData.incompleteNTROrecord}}];
         }

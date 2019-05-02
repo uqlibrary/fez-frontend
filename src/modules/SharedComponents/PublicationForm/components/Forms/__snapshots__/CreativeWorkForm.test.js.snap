@@ -550,7 +550,6 @@ exports[`CreativeWorkForm renders  should show exhibition content correctly 1`] 
     </StandardCard>
   </WithStyles(Grid)>
   <NtroFields
-    defaultLanguage={null}
     hideAbstract={false}
     hideAudienceSize={false}
     hideEndPage={true}

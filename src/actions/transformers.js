@@ -419,7 +419,15 @@ export const getGrantsListSearchKey = (grants) => {
 };
 
 export const getLanguageSearchKey = (languages) => {
-    if (!languages || languages.length === 0) return {};
+    if (!languages || languages.length === 0) {
+        return {
+            fez_record_search_key_language: [{
+                rek_language: 'eng',
+                rek_language_order: 1
+            }]
+        };
+    }
+
     return {
         fez_record_search_key_language: [
             ...languages

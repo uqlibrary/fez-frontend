@@ -4258,6 +4258,7 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
   <withRouter(Connect(WithStyles(PublicationCitation)))
     publication={
       Object {
+        "fez_datastream_info": Array [],
         "fez_record_search_key_access_conditions": null,
         "fez_record_search_key_acknowledgements": null,
         "fez_record_search_key_additional_notes": null,
@@ -4872,6 +4873,7 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
   <withRouter(Connect(WithStyles(PublicationCitation)))
     publication={
       Object {
+        "fez_datastream_info": Array [],
         "fez_record_search_key_access_conditions": null,
         "fez_record_search_key_acknowledgements": null,
         "fez_record_search_key_additional_notes": null,
@@ -5498,6 +5500,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
   <withRouter(Connect(WithStyles(PublicationCitation)))
     publication={
       Object {
+        "fez_datastream_info": Array [],
         "fez_record_search_key_access_conditions": null,
         "fez_record_search_key_acknowledgements": null,
         "fez_record_search_key_additional_notes": null,
@@ -6112,6 +6115,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
   <withRouter(Connect(WithStyles(PublicationCitation)))
     publication={
       Object {
+        "fez_datastream_info": Array [],
         "fez_record_search_key_access_conditions": null,
         "fez_record_search_key_acknowledgements": null,
         "fez_record_search_key_additional_notes": null,
@@ -6732,6 +6736,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
   <withRouter(Connect(WithStyles(PublicationCitation)))
     publication={
       Object {
+        "fez_datastream_info": Array [],
         "fez_record_search_key_access_conditions": null,
         "fez_record_search_key_acknowledgements": null,
         "fez_record_search_key_additional_notes": null,
