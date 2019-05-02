@@ -182,21 +182,6 @@ export default class MyIncompleteRecord extends PureComponent {
         return (
             <StandardPage title={txt.title}>
                 <PublicationCitation publication={this.props.recordToFix} />
-                {
-                    // TODO remove before going live
-                    !!this.props.recordToFix && !!this.props.recordToFix.rek_display_type_lookup ?
-                        <p><b>Display Type</b> (for dev): {this.props.recordToFix.rek_display_type_lookup}</p>
-                        /* istanbul ignore next */
-                        : <p><b>Display Type</b> (for dev): missing</p>
-                }
-                {
-                    // TODO remove before going live
-                    !!this.props.recordToFix && !!this.props.recordToFix.rek_subtype ?
-                        <p><b>Subtype</b> (for dev) : {this.props.recordToFix.rek_subtype}</p>
-                        /* istanbul ignore next */
-                        : <p><b>Subtype</b> (for dev) : missing</p>
-                }
-
                 <form onSubmit={this._handleDefaultSubmit}>
                     <NavigationDialogBox when={this.props.dirty && !this.props.submitSucceeded} txt={txtFixForm.cancelWorkflowConfirmation} />
                     <ConfirmDialogBox

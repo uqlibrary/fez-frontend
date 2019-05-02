@@ -123,20 +123,6 @@ exports[`Cards will display correct empty fields for a Exhibition Creative Work 
       }
     }
   />
-  <p>
-    <b>
-      Display Type
-    </b>
-     (for dev): 
-    Creative Work
-  </p>
-  <p>
-    <b>
-      Subtype
-    </b>
-     (for dev) : 
-    Curated or Produced Exhibition or Event - Exhibition or Event
-  </p>
   <form
     onSubmit={[Function]}
   >
@@ -604,20 +590,6 @@ exports[`Cards will display correct empty fields for a Live Performance of Music
       }
     }
   />
-  <p>
-    <b>
-      Display Type
-    </b>
-     (for dev): 
-    Creative Work
-  </p>
-  <p>
-    <b>
-      Subtype
-    </b>
-     (for dev) : 
-    Live Performance of Creative Work - Music
-  </p>
   <form
     onSubmit={[Function]}
   >
@@ -1085,20 +1057,6 @@ exports[`Cards will display correct empty fields for a Musical Creative work 1`]
       }
     }
   />
-  <p>
-    <b>
-      Display Type
-    </b>
-     (for dev): 
-    Creative Work
-  </p>
-  <p>
-    <b>
-      Subtype
-    </b>
-     (for dev) : 
-    Creative Work - Musical Composition
-  </p>
   <form
     onSubmit={[Function]}
   >
@@ -1566,20 +1524,6 @@ exports[`Cards will display correct empty fields for a Public Sector Research Re
       }
     }
   />
-  <p>
-    <b>
-      Display Type
-    </b>
-     (for dev): 
-    Research Report
-  </p>
-  <p>
-    <b>
-      Subtype
-    </b>
-     (for dev) : 
-    Research Report for an External Body - Public Sector
-  </p>
   <form
     onSubmit={[Function]}
   >
@@ -2047,20 +1991,6 @@ exports[`Cards will display correct empty fields for a Textual Book work 1`] = `
       }
     }
   />
-  <p>
-    <b>
-      Display Type
-    </b>
-     (for dev): 
-    Book
-  </p>
-  <p>
-    <b>
-      Subtype
-    </b>
-     (for dev) : 
-    Creative Work - Textual
-  </p>
   <form
     onSubmit={[Function]}
   >
@@ -2535,20 +2465,6 @@ exports[`Cards will display correct empty fields for a Textual Book work with la
       }
     }
   />
-  <p>
-    <b>
-      Display Type
-    </b>
-     (for dev): 
-    Book
-  </p>
-  <p>
-    <b>
-      Subtype
-    </b>
-     (for dev) : 
-    Creative Work - Textual
-  </p>
   <form
     onSubmit={[Function]}
   >
@@ -3016,20 +2932,6 @@ exports[`Cards will display correct empty fields for a Website Creative work 1`]
       }
     }
   />
-  <p>
-    <b>
-      Display Type
-    </b>
-     (for dev): 
-    Creative Work
-  </p>
-  <p>
-    <b>
-      Subtype
-    </b>
-     (for dev) : 
-    Recorded or Rendered Creative Work - Web Exhibition
-  </p>
   <form
     onSubmit={[Function]}
   >
@@ -3497,20 +3399,6 @@ exports[`Cards will display correct empty fields for an Architectural Design wor
       }
     }
   />
-  <p>
-    <b>
-      Display Type
-    </b>
-     (for dev): 
-    Design
-  </p>
-  <p>
-    <b>
-      Subtype
-    </b>
-     (for dev) : 
-    Creative Work - Design/Architectural
-  </p>
   <form
     onSubmit={[Function]}
   >
@@ -4036,20 +3924,6 @@ exports[`Cards will display empty where nothing is incomplete 1`] = `
       }
     }
   />
-  <p>
-    <b>
-      Display Type
-    </b>
-     (for dev): 
-    Creative Work
-  </p>
-  <p>
-    <b>
-      Subtype
-    </b>
-     (for dev) : 
-    Curated or Produced Exhibition or Event - Exhibition or Event
-  </p>
   <form
     onSubmit={[Function]}
   >
@@ -4651,20 +4525,6 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
       }
     }
   />
-  <p>
-    <b>
-      Display Type
-    </b>
-     (for dev): 
-    Journal Article
-  </p>
-  <p>
-    <b>
-      Subtype
-    </b>
-     (for dev) : 
-    Other
-  </p>
   <form
     onSubmit={[Function]}
   >
@@ -5266,20 +5126,6 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
       }
     }
   />
-  <p>
-    <b>
-      Display Type
-    </b>
-     (for dev): 
-    Journal Article
-  </p>
-  <p>
-    <b>
-      Subtype
-    </b>
-     (for dev) : 
-    Other
-  </p>
   <form
     onSubmit={[Function]}
   >
@@ -5893,20 +5739,6 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
       }
     }
   />
-  <p>
-    <b>
-      Display Type
-    </b>
-     (for dev): 
-    Journal Article
-  </p>
-  <p>
-    <b>
-      Subtype
-    </b>
-     (for dev) : 
-    Other
-  </p>
   <form
     onSubmit={[Function]}
   >
@@ -6508,20 +6340,6 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
       }
     }
   />
-  <p>
-    <b>
-      Display Type
-    </b>
-     (for dev): 
-    Journal Article
-  </p>
-  <p>
-    <b>
-      Subtype
-    </b>
-     (for dev) : 
-    Other
-  </p>
   <form
     onSubmit={[Function]}
   >
@@ -7129,20 +6947,6 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
       }
     }
   />
-  <p>
-    <b>
-      Display Type
-    </b>
-     (for dev): 
-    Journal Article
-  </p>
-  <p>
-    <b>
-      Subtype
-    </b>
-     (for dev) : 
-    Other
-  </p>
   <form
     onSubmit={[Function]}
   >
