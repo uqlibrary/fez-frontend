@@ -1283,3 +1283,39 @@ describe('getNtroMetadataSearchKeys tests',  () => {
         });
     })
 });
+
+describe('getAuthorOrder', () => {
+    it('returns author\'s order when a match it found', () => {
+        const data = {
+            author: {
+                aut_id: 99
+            },
+            publication: {
+                fez_record_search_key_author_id: [
+                    {
+                        rek_author_id: 99,
+                        rek_author_id_order: 1
+                    }
+                ]
+            }
+        }
+        expect(transformers.getAuthorOrder(data)).toBe(1);
+    });
+
+    it('returns -1 when a match is not found', () => {
+        const data = {
+            author: {
+                aut_id: 2
+            },
+            publication: {
+                fez_record_search_key_author_id: [
+                    {
+                        rek_author_id: 99,
+                        rek_author_id_order: 1
+                    }
+                ]
+            }
+        }
+        expect(transformers.getAuthorOrder(data)).toBe(-1);
+    });
+});
