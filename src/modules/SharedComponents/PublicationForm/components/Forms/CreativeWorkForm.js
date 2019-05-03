@@ -1,18 +1,18 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import {Field} from 'redux-form/immutable';
+import { Field } from 'redux-form/immutable';
 
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 
-import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
-import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
-import {PartialDateField} from 'modules/SharedComponents/Toolbox/PartialDate';
-import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
-import {NtroFields} from 'modules/SharedComponents/Toolbox/NtroFields';
+import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
+import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
+import { PartialDateField } from 'modules/SharedComponents/Toolbox/PartialDate';
+import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
+import { NtroFields } from 'modules/SharedComponents/Toolbox/NtroFields';
 
-import {validation} from 'config';
-import {default as formLocale} from 'locale/publicationForm';
+import { validation } from 'config';
+import { default as formLocale } from 'locale/publicationForm';
 import {
     RRW_NTRO_SUBTYPES,
     LP_NTRO_SUBTYPES,
@@ -130,14 +130,13 @@ export default class CreativeWorkForm extends Component {
                         <Typography>{txt.authors.description}</Typography>
                         <Field
                             component={ContributorsEditorField}
-                            showContributorAssignment
-                            required
-                            name="authors"
-                            locale={txt.authors.field}
                             disabled={this.props.submitting}
-                            validate={[validation.authorRequired]}
                             isNtro={this.props.isNtro}
+                            locale={txt.authors.field}
+                            name="authors"
                             required
+                            showContributorAssignment
+                            validate={[validation.authorRequired]}
                         />
                     </StandardCard>
                 </Grid>

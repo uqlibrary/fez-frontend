@@ -102,6 +102,26 @@ export const authorRequired = (authors) => peopleRequired(authors, locale.valida
 export const editorRequired = (editors) => peopleRequired(editors, locale.validationErrors.editorRequired, true);
 export const supervisorRequired = (supervisors) => peopleRequired(supervisors, locale.validationErrors.supervisorRequired, false);
 
+export const authorAffiliationIncomplete = (author) => (
+    (author.nameAsPublished || '').trim().length === 0 ||
+    (
+        author.affiliation === 'NotUQ' &&
+        (
+            (author.orgaff || '').trim().length === 0 ||
+            (author.orgtype || '').trim().length === 0
+        )
+    )
+        ? locale.validationErrors.authorAffiliationIncomplete
+        : undefined
+);
+
+export const authorsAffiliationIncomplete = (authors) => {
+    return ((authors.toJS && authors.toJS()) || authors).some(author => !!authorAffiliationIncomplete(author))
+        ? locale.validationErrors.authorsAffiliationIncomplete
+        : undefined
+    ;
+};
+
 // DateTime
 export const dateTimeDay = value => value && (isNaN(value) || parseInt(value, 10) < 0 || parseInt(value, 10) > 31) ? locale.validationErrors.dateTimeDay : undefined;
 export const dateTimeYear = value => !value || value.length === 0 || isNaN(value) || parseInt(value, 10) > (new Date()).getFullYear() ? locale.validationErrors.dateTimeYear : undefined;

@@ -989,7 +989,7 @@ describe('getRecordAuthorAffiliationSearchKey tests', () => {
         ];
         const expected = {
             "fez_record_search_key_author_affiliation_name": [{
-                "rek_author_affiliation_name": "University of Queensland",
+                "rek_author_affiliation_name": "The University of Queensland",
                 "rek_author_affiliation_name_order": 1
             }, {
                 "rek_author_affiliation_name": "Test organisation",
@@ -998,7 +998,7 @@ describe('getRecordAuthorAffiliationSearchKey tests', () => {
                 "rek_author_affiliation_name": "Some Organisation",
                 "rek_author_affiliation_name_order": 3
             }, {
-                "rek_author_affiliation_name": "University of Queensland",
+                "rek_author_affiliation_name": "The University of Queensland",
                 "rek_author_affiliation_name_order": 4
             }
             ]
@@ -1124,7 +1124,10 @@ describe('getRecordAuthorAffiliationTypeSearchKey tests', () => {
             }, {
                 "rek_author_affiliation_type": 453987,
                 "rek_author_affiliation_type_order": 3
-            }, {"rek_author_affiliation_type": 453989, "rek_author_affiliation_type_order": 4}]
+            }, {
+                "rek_author_affiliation_type": 453989,
+                "rek_author_affiliation_type_order": 4
+            }]
         };
         const result = transformers.getRecordAuthorAffiliationTypeSearchKey(input);
         expect(result).toEqual(expected);

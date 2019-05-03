@@ -313,7 +313,7 @@ exports[`ConferencePaperForm renders  component 1`] = `
                 "inputFieldHint": "Enter ISBN, e.g. 13 digit: 9780815375296 or 10 digit: 1861972717",
                 "inputFieldLabel": "ISBN value",
                 "remindToAdd": <span>
-                  Pleasepress 
+                  Please press 
                   <b>
                     ENTER
                   </b>
@@ -387,7 +387,7 @@ exports[`ConferencePaperForm renders  component 1`] = `
                 "inputFieldHint": "Enter ISSN, e.g. 1838-9414",
                 "inputFieldLabel": "ISSN value",
                 "remindToAdd": <span>
-                  Pleasepress 
+                  Please press 
                   <b>
                     ENTER
                   </b>

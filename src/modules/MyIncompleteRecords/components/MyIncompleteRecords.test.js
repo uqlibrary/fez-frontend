@@ -1,6 +1,7 @@
 import MyIncompleteRecords from './MyIncompleteRecords';
 import {routes, general} from 'config';
 import {locale} from 'locale';
+import {mockRecordToFix} from 'mock/data/testing/records';
 
 function setup(testProps, isShallow = true) {
     const props = {
@@ -185,5 +186,15 @@ describe('MyIncompleteRecords test', () => {
         expect(wrapper.state().page).toEqual(1);
         expect(testAction).toHaveBeenCalled();
         expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should complete record', () => {
+        const testMethod = jest.fn();
+        const goBack = jest.fn();
+
+        const wrapper = setup({recordToFix: mockRecordToFix, history: {push: testMethod, goBack: goBack}});
+        const item = { rek_pid: 'UQ:1001' };
+        wrapper.instance().completeRecord(item);
+        expect(testMethod).toHaveBeenCalledWith('/records/UQ:1001/incomplete');
     });
 });
