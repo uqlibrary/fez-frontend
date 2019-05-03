@@ -61,7 +61,7 @@ export default class PossiblyMyRecords extends PureComponent {
     }
 
     componentDidMount() {
-        if (!this.props.accountLoading) {
+        if (!this.props.accountLoading && (!this.props.possiblePublicationsList || this.props.possiblePublicationsList.type !== 'possible')) {
             this.props.actions.searchPossiblyYourPublications({...this.state});
         }
     }
@@ -160,6 +160,7 @@ export default class PossiblyMyRecords extends PureComponent {
     };
 
     render() {
+        console.log(this.props);
         if (this.props.accountLoading) return null;
         const totalPossiblePubs = this.props.possibleCounts;
         const pagingData = this.props.possiblePublicationsPagingData;

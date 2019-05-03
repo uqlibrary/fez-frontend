@@ -15,6 +15,7 @@ import Hidden from '@material-ui/core/Hidden';
 export default class MyRecords extends PureComponent {
     static propTypes = {
         publicationsList: PropTypes.array,
+        publicationsListType: PropTypes.string,
         publicationsListFacets: PropTypes.object,
         loadingPublicationsList: PropTypes.bool,
         publicationsListPagingData: PropTypes.object,
@@ -55,7 +56,7 @@ export default class MyRecords extends PureComponent {
     }
 
     componentDidMount() {
-        if (!this.props.accountLoading) {
+        if (!this.props.accountLoading && (!this.props.publicationsList || this.props.publicationsListType !== 'mine')) {
             this.props.actions.searchAuthorPublications({...this.state});
         }
     }

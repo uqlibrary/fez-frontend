@@ -85,7 +85,7 @@ export function searchAuthorPublications({page = 1, pageSize = 20, sortBy = 'sco
             .then(response => {
                 dispatch({
                     type: actions.AUTHOR_PUBLICATIONS_LOADED,
-                    payload: response
+                    payload: {...response, type: 'mine'}
                 });
             })
             .catch(error => {
@@ -115,7 +115,7 @@ export function searchAuthorIncompletePublications({page = 1, pageSize = 20, sor
             .then(response => {
                 dispatch({
                     type: actions.AUTHOR_INCOMPLETEPUBLICATIONS_LOADED,
-                    payload: response
+                    payload: {...response, type: 'incomplete'}
                 });
             })
             .catch(error => {
