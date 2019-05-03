@@ -13,8 +13,6 @@ import ContributorRow from './ContributorRow';
 import ContributorForm from './ContributorForm';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 
-import { default as pagesLocale } from 'locale/pages';
-
 export class ContributorsEditor extends PureComponent {
     static propTypes = {
         author: PropTypes.object,
@@ -238,7 +236,6 @@ export class ContributorsEditor extends PureComponent {
         const contributor = this.state.contributors[index];
 
         if (this.props.editMode) {
-            formProps.locale.addButton = pagesLocale.pages.incompletePublication.fields.authors.formButtonLabel;
             formProps.contributor = contributor;
             formProps.initialValues = this.props.meta.initial.toJS()[index];
         }

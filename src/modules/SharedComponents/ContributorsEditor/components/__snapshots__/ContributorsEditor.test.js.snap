@@ -334,7 +334,7 @@ exports[`ContributorsEditor renders component in edit mode 1`] = `
           isNtro={false}
           locale={
             Object {
-              "addButton": "Update author",
+              "addButton": "test",
             }
           }
           meta={
@@ -3146,7 +3146,7 @@ exports[`ContributorsEditor returns contributor form with expected props 2`] = `
   isNtro={false}
   locale={
     Object {
-      "addButton": "Update author",
+      "addButton": "test",
     }
   }
   meta={

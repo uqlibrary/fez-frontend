@@ -735,18 +735,37 @@ export default {
                     title: 'Grant information',
                 },
                 authors: {
+                    ...locale.components.authors,
                     description: 'Please complete affiliation data for each listed author.',
-                    ariaLabel: 'Select this author ([name]) to update their affiliation data.',
-                    requiredLabel: 'This author\'s data is incomplete.',
-                    selectAuthor: (<div>
-                        <span className="authorSteps" key="step-1">Step 1 of 2</span> -
-                        <b>Select an author</b> below to update affiliation data.
-                    </div>),
-                    updateAuthor: (<div>
-                        <span className="authorSteps" key="step-1">Step 2 of 2</span> -
-                        <b>Update the affiliation data</b> for the selected author below.
-                    </div>),
-                    formButtonLabel: 'Update author',
+                    field: {
+                        ...locale.components.authors.field,
+                        form: {
+                            locale: {
+                                ...locale.components.authors.field.form.locale,
+                                descriptionStep1: (<div>
+                                    <span className="authorSteps" key="step-2">Step 2 of 2</span> - <b>Update the affiliation data</b> for the selected author below.
+                                </div>),
+                                addButton: 'Update author'
+                            }
+                        },
+                        header: {
+                            ...locale.components.authors.field.header,
+                            locale: {
+                                ...locale.components.authors.field.header.locale,
+                                descriptionStep2: (<div>
+                                    <span className="authorSteps" key="step-1">Step 1 of 2</span> - <b>Select an author</b> below to update affiliation data.
+                                </div>)
+                            }
+                        },
+                        row: {
+                            ...locale.components.authors.field.row,
+                            locale: {
+                                ...locale.components.authors.field.row.locale,
+                                selectHint: 'Select this author ([name]) to update their affiliation data.',
+                                requiredLabel: 'This author\'s data is incomplete.'
+                            }
+                        }
+                    },
                 },
                 fileUpload: {
                     title: 'Upload files',

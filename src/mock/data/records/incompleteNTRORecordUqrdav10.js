@@ -69,7 +69,7 @@ export default {
         "rek_author_id_id": 32308187,
         "rek_author_id_pid": "UQ:6de77b0",
         "rek_author_id_xsdmf_id": null,
-        "rek_author_id": 79324,
+        "rek_author_id": 410,
         "rek_author_id_order": 1,
         "rek_author_id_lookup": "Robert Davidson"
     }],
