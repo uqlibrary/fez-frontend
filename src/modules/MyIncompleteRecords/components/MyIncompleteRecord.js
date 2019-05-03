@@ -123,7 +123,7 @@ export default class MyIncompleteRecord extends PureComponent {
 
         // rek_formatted_abstract
         const editAbstract = (isDocumentType1 || isDocumentType2 || isDocumentType3) &&
-            (!this.props.recordToFix || !this.props.recordToFix.rek_formatted_abstract);
+            (!this.props.recordToFix || (!this.props.recordToFix.rek_formatted_abstract && !this.props.recordToFix.rek_description));
 
         // fez_record_search_key_audience_size
         const editAudienceSize = isDocumentType2 &&
