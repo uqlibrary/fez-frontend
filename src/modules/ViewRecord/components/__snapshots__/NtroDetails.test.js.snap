@@ -24842,7 +24842,7 @@ exports[`NtroDetails  should render default fields for record with missing looku
       data="Not set"
       heading="Scale/Significance of work"
       key="1"
-      subheading="(Someone else)"
+      subheading="(Ky Lane)"
     />
     <Component
       data="This is an abstract"

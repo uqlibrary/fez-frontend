@@ -68,7 +68,7 @@ export class NtroDetailsClass extends PureComponent {
                                 <this.ViewNtroRow
                                     key={index}
                                     heading={`${locale.viewRecord.headings.NTRO.significance}`}
-                                    subheading={`(${publication.fez_record_search_key_author[index].rek_author})`}
+                                    subheading={`(${publication.fez_record_search_key_author[item.rek_significance_order - 1].rek_author})`}
                                     data={(item.rek_significance !== 0 && item.rek_significance !== '0' && !!item.rek_significance && item.rek_significance_lookup) || 'Not set'}
                                 />
                             );
@@ -85,7 +85,7 @@ export class NtroDetailsClass extends PureComponent {
                                         className={this.props.classes.richTextParagraphFix}
                                         key={index}
                                         heading={locale.viewRecord.headings.NTRO.impactStatement}
-                                        subheading={publication.fez_record_search_key_author[index].rek_author ? `(${publication.fez_record_search_key_author[index].rek_author})` : ''}
+                                        subheading={publication.fez_record_search_key_author[item.rek_creator_contribution_statement_order - 1].rek_author ? `(${publication.fez_record_search_key_author[item.rek_creator_contribution_statement_order - 1].rek_author})` : ''}
                                         data={item.rek_creator_contribution_statement && item.rek_creator_contribution_statement.trim().length !== 0 && ReactHtmlParser(item.rek_creator_contribution_statement) || null}
                                     />
                                 );
