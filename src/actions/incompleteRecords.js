@@ -57,7 +57,9 @@ export function updateIncompleteRecord(data) {
             ...transformers.getCreatorContributionStatementSearchKeys(data),
             ...transformers.getSignificanceSearchKeys(data),
             ...transformers.getGrantsListSearchKey(data.grants),
-            ...transformers.getRecordFileAttachmentSearchKey(data.files ? data.files.queue : [], data.publication)
+            ...transformers.getRecordFileAttachmentSearchKey(data.files ? data.files.queue : [], data.publication),
+            ...transformers.getRecordAuthorAffiliationSearchKey(data.authors),
+            ...transformers.getRecordAuthorAffiliationTypeSearchKey(data.authors),
         };
 
         // delete extra form values from request object
