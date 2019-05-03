@@ -121,7 +121,6 @@ export default class MyIncompleteRecords extends PureComponent {
 
     completeRecord = (item) => {
         this.props.history.push(routes.pathConfig.records.incompleteFix(item.rek_pid));
-        this.props.actions.setFixRecord(item);
     }
 
     render() {

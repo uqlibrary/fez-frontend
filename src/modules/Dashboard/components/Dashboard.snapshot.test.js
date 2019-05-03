@@ -337,6 +337,14 @@ describe('Dashboard test', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it ('displays a lure to a single work when the user has incomplete NTRO submissions', () => {
+        const wrapper = setup({
+            incompleteRecordList: [1],
+            authorDetails: mock.authorDetails.uqresearcher,
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
     it('redirectToMissingRecordslist method', () => {
         const testFn = jest.fn();
         const wrapper = setup({history: {push: testFn}});
