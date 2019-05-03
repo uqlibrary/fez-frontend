@@ -77,14 +77,43 @@ exports[`ThesisSubmission form should allow user to submit thesis 1`] = `
                       </div>
                     </div>
                     <div
-@@ -290,17 +283,207 @@
-                            class=\\"MuiButton-label-262\\"
+@@ -247,26 +240,26 @@
+                      >
+                        <div
+                          class=\\"MuiFormControl-root-188 MuiFormControl-fullWidth-191\\"
+                        >
+                          <label
+-                           class=\\"MuiFormLabel-root-199 MuiFormLabel-error-202 MuiFormLabel-required-204 MuiInputLabel-root-192 MuiInputLabel-formControl-193 MuiInputLabel-animated-196\\"
++                           class=\\"MuiFormLabel-root-199 MuiFormLabel-required-204 MuiInputLabel-root-192 MuiInputLabel-formControl-193 MuiInputLabel-animated-196\\"
+                            data-shrink=\\"false\\"
+                            for=\\"nameAsPublishedField\\"
                           >
+                            Enter each supervisor’s name on a separate line e.g. Firstname Surname
+                            <span
+-                             class=\\"MuiFormLabel-asterisk-205 MuiFormLabel-error-202\\"
++                             class=\\"MuiFormLabel-asterisk-205\\"
+                            >
+                               *
+                            </span>
+                          </label>
+                          <div
+-                           class=\\"MuiInputBase-root-219 MuiInput-root-206 MuiInput-underline-210 MuiInputBase-error-225 MuiInput-error-211 MuiInputBase-fullWidth-228 MuiInput-fullWidth-213 MuiInputBase-formControl-220 MuiInput-formControl-207\\"
++                           class=\\"MuiInputBase-root-219 MuiInput-root-206 MuiInput-underline-210 MuiInputBase-fullWidth-228 MuiInput-fullWidth-213 MuiInputBase-formControl-220 MuiInput-formControl-207\\"
+                          >
+                            <input
+-                             aria-invalid=\\"true\\"
++                             aria-invalid=\\"false\\"
+                              autocomplete=\\"off\\"
+                              class=\\"MuiInputBase-input-229 MuiInput-input-214\\"
+                              id=\\"nameAsPublishedField\\"
+                              placeholder=\\"\\"
+                              required=\\"\\"
+@@ -292,15 +285,205 @@
                             Add supervisor
                           </span>
                         </button>
-+                     </div>
-+                   </div>
+                      </div>
+                    </div>
 +                   <div
 +                     class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-8-25\\"
 +                   >
@@ -127,22 +156,22 @@ exports[`ThesisSubmission form should allow user to submit thesis 1`] = `
 +                               >
 +                                 Supervisor's name
 +                               </span>
-                              </div>
++                             </div>
 +                             <div
 +                               class=\\"MuiListItemText-root-384\\"
 +                             >
-+                               <span
+                                <span
+-                     class=\\"MuiTypography-root-100 MuiTypography-caption-110 MuiTypography-colorError-134\\"
 +                                 class=\\"MuiTypography-root-100 MuiTypography-caption-110 MuiTypography-colorTextSecondary-133 MuiListItemText-secondary-388 ContributorRowHeader-right-368 ContributorRowHeader-paddingRight24-370\\"
 +                               >
 +                                 Reorder items
 +                               </span>
 +                             </div>
-                            </div>
++                           </div>
 +                           <div
 +                             class=\\"MuiListItemSecondaryAction-root-390\\"
 +                           >
-                              <span
--                     class=\\"MuiTypography-root-100 MuiTypography-caption-110 MuiTypography-colorError-134\\"
++                             <span
 +                               title=\\"Remove all items\\"
 +                             >
 +                               <button
@@ -254,15 +283,15 @@ exports[`ThesisSubmission form should allow user to submit thesis 1`] = `
 +                               >
 +                                 <span
 +                                   class=\\"MuiIconButton-label-403\\"
-                                  >
--                     Please provide a list of supervisors
++                                 >
 +                                   <svg
 +                                     aria-hidden=\\"true\\"
 +                                     class=\\"MuiSvgIcon-root-244\\"
 +                                     focusable=\\"false\\"
 +                                     role=\\"presentation\\"
 +                                     viewBox=\\"0 0 24 24\\"
-+                                   >
+                                    >
+-                     Please provide a list of supervisors
 +                                     <path
 +                                       d=\\"M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z\\"
 +                                     />
@@ -476,7 +505,7 @@ exports[`ThesisSubmission form should allow user to submit thesis 1`] = `
                       <div
                         class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-2-47\\"
                       >
-@@ -458,18 +731,263 @@
+@@ -458,12 +731,257 @@
                         >
                           <span
                             class=\\"MuiButton-label-262\\"
@@ -728,24 +757,26 @@ exports[`ThesisSubmission form should allow user to submit thesis 1`] = `
 +                             class=\\"MuiTouchRipple-root-297\\"
 +                           />
                           </button>
-                        </div>
++                       </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-+           </div>
-            <div
-              class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
-            >
-              <div
-                class=\\"MuiPaper-root-154 MuiPaper-elevation1-157 MuiPaper-rounded-155 MuiCard-root-153 Cards-card-149 StandardCard\\"
-@@ -587,77 +1105,11 @@
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+@@ -579,78 +1097,12 @@
+                            autocomplete=\\"off\\"
+                            id=\\"Uploader\\"
+                            multiple=\\"\\"
+                            style=\\"position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; opacity: 0.00001; pointer-events: none;\\"
+                            type=\\"file\\"
+-                         />
+-                       </div>
+-                     </div>
+-                   </div>
+-                 </div>
+-               </div>
+-             </div>
+-           </div>
 -           <div
 -             class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
 -           >
@@ -779,9 +810,9 @@ exports[`ThesisSubmission form should allow user to submit thesis 1`] = `
 -                         />
 -                         <path
 -                           d=\\"M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z\\"
--                         />
+                          />
 -                       </svg>
--                     </div>
+                        </div>
 -                     <div
 -                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31 Alert-text-314\\"
 -                       id=\\"text\\"
@@ -806,18 +837,11 @@ exports[`ThesisSubmission form should allow user to submit thesis 1`] = `
 -                           </li>
 -                         </ul>
 -                       </span>
--                     </div>
--                   </div>
--                 </div>
--               </div>
-          </div>
--           </div>
--         </div>
-          <div
-            class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-16-26\\"
-          >
-            <div
-              class=\\"MuiGrid-item-4 MuiGrid-grid-sm-true-45\\"
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
 @@ -682,21 +1134,23 @@
             </div>
             <div

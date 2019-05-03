@@ -230,7 +230,7 @@ export class ContributorsEditor extends PureComponent {
     renderContributorForm = (onSubmit, index) => {
         const formProps = {
             ...this.props,
-            isContributorAssigned: !!this.state.contributors,
+            isContributorAssigned: !!this.state.contributors.length,
             locale: (this.props.locale.form || {}).locale,
             onSubmit: contributor => onSubmit(contributor, index),
         };
