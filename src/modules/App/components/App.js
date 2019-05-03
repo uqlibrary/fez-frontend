@@ -196,13 +196,10 @@ export class AppClass extends PureComponent {
             && this.props.account.class.indexOf('IS_UQ_STUDENT_PLACEMENT') >= 0;
         const hasIncompleteWorks = !!(this.props.incompleteRecordList && this.props.incompleteRecordList.publicationsListPagingData && this.props.incompleteRecordList.publicationsListPagingData.total > 0);
         const getMenuItems = () => {
-            let menuItems = [];
-            if(isAuthorizedUser) {
-                menuItems = routes.getMenuConfig(this.props.account, isOrcidRequired && isHdrStudent);
-                // Filter out the incomplete menu item if there are none
-                if (!hasIncompleteWorks) {
-                    menuItems = menuItems.filter(item => item.linkTo !== routes.pathConfig.records.incomplete);
-                }
+            let menuItems = routes.getMenuConfig(this.props.account, isOrcidRequired && isHdrStudent);
+            // Filter out the incomplete menu item if there are none
+            if (!hasIncompleteWorks) {
+                menuItems = menuItems.filter(item => item.linkTo !== routes.pathConfig.records.incomplete);
             }
             return menuItems;
         };
@@ -319,7 +316,7 @@ export class AppClass extends PureComponent {
                 {
                     showMenu &&
                     <MenuDrawer
-                        hasIncompleteWorks={hasIncompleteWorks}
+                        hasIncompleteWorks={hasIncompleteWorks || false}
                         menuItems={getMenuItems()}
                         drawerOpen={this.state.docked || this.state.menuDrawerOpen}
                         docked={this.state.docked}

@@ -707,8 +707,8 @@ export default {
             title: 'Unpublished buffer'
         },
         incompletePublications: {
-            pageTitle: 'Incomplete works',
-            recordCount: 'Displaying incomplete records [recordsFrom] to [recordsTo] of [recordsTotal] total records. ',
+            pageTitle: 'My incomplete works',
+            recordCount: 'Displaying works [recordsFrom] to [recordsTo] of [recordsTotal] total works. ',
             loadingMessage: 'Searching for incomplete works',
             noResultsFound: {
                 title: 'No incomplete works found',
@@ -718,30 +718,38 @@ export default {
                     </div>
                 ),
             },
-            completeRecordButton: 'Complete record',
+            completeRecordButton: 'Update work',
             facetsFilter: {...locale.components.facetsFilter}
         },
         incompletePublication: {
-            title: 'Fix an incomplete record',
-            submitButtonLabel: 'Complete my record',
-            cancelButtonLabel: 'Cancel and return to my incomplete records list',
+            title: 'Update my work',
+            submitButtonLabel: 'Update my work',
+            cancelButtonLabel: 'Cancel and return to my incomplete works list',
             fields: {
                 notes: {
                     title: 'Notes',
-                    label: 'Notes for this record',
-                    placeholder: 'Add any other notes or comments about this record to send to the eSpace team.'
+                    label: 'Notes for this work',
+                    placeholder: 'Add any other notes or comments about this work to send to the eSpace team.',
                 },
                 grants: {
-                    title: 'Grant information'
+                    title: 'Grant information',
+                },
+                authors: {
+                    description: 'Please complete affiliation data for each listed author.',
+                    ariaLabel: 'Select this author ([name]) to update their affiliation data.',
+                    requiredLabel: 'This author\'s data is incomplete.',
+                    selectAuthor: (<div>
+                        <span className="authorSteps" key="step-1">Step 1 of 2</span> -
+                        <b>Select an author</b> below to update affiliation data.
+                    </div>),
+                    updateAuthor: (<div>
+                        <span className="authorSteps" key="step-1">Step 2 of 2</span> -
+                        <b>Update the affiliation data</b> for the selected author below.
+                    </div>),
+                    formButtonLabel: 'Update author',
                 },
                 fileUpload: {
                     title: 'Upload files',
-                    failedAlertLocale: {
-                        type: 'error',
-                        title: 'FILE UPLOAD ERROR',
-                        message: 'There was an issue uploading your thesis files. You will need to resubmit your thesis by clicking on the \'Resubmit your thesis\' button.',
-                        actionButtonLabel: 'RESUBMIT YOUR THESIS'
-                    },
                     locale: {
                         instructions: '',
                         accessTermsAndConditions: 'I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.',
@@ -758,7 +766,7 @@ export default {
                         fileUploadRestrictionHeading: 'File upload restrictions',
                         fileUploadRestrictions: (
                             <div>
-                                Maximum file size is 8Gb. <br/>
+                                Maximum file size is 8GB. <br/>
                                 PDF files must be saved using the following naming structure <b>&lt;student number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf</b>.
                                 Document name could be thesis, abstract, and etc.
                                 For example:
@@ -772,13 +780,13 @@ export default {
                         ),
                         fileUploadInstruction: (
                             <p>Click here to select files, or drag files into this area to upload</p>
-                        )
+                        ),
                     },
                     text: (
                         <div>
                             <span className="requiredField"><label>&nbsp;</label></span>
                         </div>
-                    )
+                    ),
                 },
             },
             successWorkflowConfirmation: {
@@ -788,8 +796,8 @@ export default {
                     message: 'File upload and/or notes post failed',
                     type: 'warning'
                 },
-                cancelButtonLabel: 'Complete another record',
-                confirmButtonLabel: 'Go to my incomplete research list'
+                cancelButtonLabel: 'Update another incomplete work',
+                confirmButtonLabel: 'Go to my dashboard'
             },
         }
     }

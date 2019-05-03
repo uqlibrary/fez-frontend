@@ -57,8 +57,22 @@ export function updateIncompleteRecord(data) {
             ...transformers.getCreatorContributionStatementSearchKeys(data),
             ...transformers.getSignificanceSearchKeys(data),
             ...transformers.getGrantsListSearchKey(data.grants),
-            ...transformers.getRecordFileAttachmentSearchKey(data.files ? data.files.queue : [], data.publication)
+            ...transformers.getRecordFileAttachmentSearchKey(data.files ? data.files.queue : [], data.publication),
+            ...transformers.getRecordAuthorAffiliationSearchKey(data.authors),
+            ...transformers.getRecordAuthorAffiliationTypeSearchKey(data.authors),
         };
+
+        // delete extra form values from request object
+        if (patchRecordRequest.author) delete patchRecordRequest.author;
+        if (patchRecordRequest.publication) delete patchRecordRequest.publication;
+        if (patchRecordRequest.authors) delete patchRecordRequest.authors;
+        if (patchRecordRequest.files) delete patchRecordRequest.files;
+        if (patchRecordRequest.ntroAbstract) delete patchRecordRequest.ntroAbstract;
+        if (patchRecordRequest.grants) delete patchRecordRequest.grants;
+        if (patchRecordRequest.significance) delete patchRecordRequest.significance;
+        if (patchRecordRequest.impactStatement) delete patchRecordRequest.impactStatement;
+        if (patchRecordRequest.languages) delete patchRecordRequest.languages;
+        if (patchRecordRequest.qualityIndicators) delete patchRecordRequest.qualityIndicators;
 
         // create request for issue notification
         // const createIssueRequest = transformers.getFixIssueRequest(data);

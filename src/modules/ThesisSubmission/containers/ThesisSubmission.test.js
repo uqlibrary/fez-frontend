@@ -10,7 +10,9 @@ function setup(testProps, isShallow = true) {
 
 describe('ThesisSubmission container', () => {
     it('should mount', () => {
-        const wrapper = setup({}, false);
+        const wrapper = setup({
+            account: {}
+        }, false);
     });
 
     it('should read the local storage', () => {

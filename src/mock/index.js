@@ -169,8 +169,14 @@ mock
         if (config.url.indexOf('UQ:56b1652') >= 0) {
             return [200, {data: {...mockData.incompleteNTROrecordUqsbutl1}}];
         }
-        if (config.url.indexOf('UQ:678742') >= 0) {
+        if (config.url.indexOf('UQ:692945') >= 0) {
             return [200, {data: {...mockData.incompleteNTROrecord}}];
+        }
+        if (config.url.indexOf('UQ:678742') >= 0) {
+            return [200, {data: {...mockData.incompleteNTROlist.data[1]}}];
+        }
+        if (config.url.indexOf('UQ:678743') >= 0) {
+            return [200, {data: {...mockData.incompleteNTROlist.data[2]}}];
         }
         // Data collection
         if (config.url.indexOf('UQ:407731') >= 0) {

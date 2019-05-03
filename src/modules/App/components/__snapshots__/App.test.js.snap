@@ -125,7 +125,7 @@ exports[`Application component Should display mobile correctly 1`] = `
                 item={true}
               >
                 <div
-                  aria-label="University of Queensland"
+                  aria-label="The University of Queensland"
                   className="smallLogo"
                   id="logo"
                   style={
@@ -213,8 +213,33 @@ exports[`Application component Should display mobile correctly 1`] = `
     }
     logoImage="largeLogo"
     logoLink="http://www.uq.edu.au"
-    logoText="University of Queensland"
-    menuItems={Array []}
+    logoText="The University of Queensland"
+    menuItems={
+      Array [
+        Object {
+          "linkTo": "/",
+          "primaryText": "Home",
+          "public": true,
+        },
+        Object {
+          "linkTo": "/records/search",
+          "primaryText": "Search eSpace",
+          "public": true,
+          "secondaryText": "",
+        },
+        Object {
+          "linkTo": "https://guides.library.uq.edu.au/for-researchers/research-publications-guide",
+          "primaryText": "Help",
+          "public": true,
+        },
+        Object {
+          "linkTo": "/contact",
+          "primaryText": "Contact",
+          "public": true,
+          "secondaryText": "",
+        },
+      ]
+    }
     onToggleDrawer={[Function]}
   />
   <div
@@ -396,7 +421,7 @@ exports[`Application component should determine if it has incomplete works from 
             "admin",
           ],
           "exact": true,
-          "pageTitle": "Fix an incomplete record",
+          "pageTitle": "Update my work",
           "path": "/records/:pid(UQ:[a-z0-9]+)/incomplete",
           "render": [Function],
         },
@@ -579,7 +604,7 @@ exports[`Application component should determine if it has incomplete works from 
                 item={true}
               >
                 <div
-                  aria-label="University of Queensland"
+                  aria-label="The University of Queensland"
                   className="smallLogo"
                   id="logo"
                   style={
@@ -667,7 +692,7 @@ exports[`Application component should determine if it has incomplete works from 
     }
     logoImage="largeLogo"
     logoLink="http://www.uq.edu.au"
-    logoText="University of Queensland"
+    logoText="The University of Queensland"
     menuItems={
       Array [
         Object {
@@ -690,7 +715,7 @@ exports[`Application component should determine if it has incomplete works from 
         },
         Object {
           "linkTo": "/records/incomplete",
-          "primaryText": "My incomplete work",
+          "primaryText": "My incomplete works",
         },
         Object {
           "linkTo": "/records/add/find",
@@ -877,7 +902,7 @@ exports[`Application component should determine if it has incomplete works from 
         }
         exact={true}
         key="route_9"
-        pageTitle="Fix an incomplete record"
+        pageTitle="Update my work"
         path="/records/:pid(UQ:[a-z0-9]+)/incomplete"
         render={[Function]}
       />
@@ -1131,7 +1156,7 @@ exports[`Application component should redirect to login page with correct return
                 item={true}
               >
                 <div
-                  aria-label="University of Queensland"
+                  aria-label="The University of Queensland"
                   className="smallLogo"
                   id="logo"
                   style={
@@ -1219,8 +1244,33 @@ exports[`Application component should redirect to login page with correct return
     }
     logoImage="largeLogo"
     logoLink="http://www.uq.edu.au"
-    logoText="University of Queensland"
-    menuItems={Array []}
+    logoText="The University of Queensland"
+    menuItems={
+      Array [
+        Object {
+          "linkTo": "/",
+          "primaryText": "Home",
+          "public": true,
+        },
+        Object {
+          "linkTo": "/records/search",
+          "primaryText": "Search eSpace",
+          "public": true,
+          "secondaryText": "",
+        },
+        Object {
+          "linkTo": "https://guides.library.uq.edu.au/for-researchers/research-publications-guide",
+          "primaryText": "Help",
+          "public": true,
+        },
+        Object {
+          "linkTo": "/contact",
+          "primaryText": "Contact",
+          "public": true,
+          "secondaryText": "",
+        },
+      ]
+    }
     onToggleDrawer={[Function]}
   />
   <div
@@ -1400,7 +1450,7 @@ exports[`Application component should render alert if user is not fez author 1`]
             "admin",
           ],
           "exact": true,
-          "pageTitle": "Fix an incomplete record",
+          "pageTitle": "Update my work",
           "path": "/records/:pid(UQ:[a-z0-9]+)/incomplete",
           "render": [Function],
         },
@@ -1583,7 +1633,7 @@ exports[`Application component should render alert if user is not fez author 1`]
                 item={true}
               >
                 <div
-                  aria-label="University of Queensland"
+                  aria-label="The University of Queensland"
                   className="smallLogo"
                   id="logo"
                   style={
@@ -1671,7 +1721,7 @@ exports[`Application component should render alert if user is not fez author 1`]
     }
     logoImage="largeLogo"
     logoLink="http://www.uq.edu.au"
-    logoText="University of Queensland"
+    logoText="The University of Queensland"
     menuItems={
       Array [
         Object {
@@ -1877,7 +1927,7 @@ exports[`Application component should render alert if user is not fez author 1`]
         }
         exact={true}
         key="route_9"
-        pageTitle="Fix an incomplete record"
+        pageTitle="Update my work"
         path="/records/:pid(UQ:[a-z0-9]+)/incomplete"
         render={[Function]}
       />
@@ -2095,7 +2145,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             "admin",
           ],
           "exact": true,
-          "pageTitle": "Fix an incomplete record",
+          "pageTitle": "Update my work",
           "path": "/records/:pid(UQ:[a-z0-9]+)/incomplete",
           "render": [Function],
         },
@@ -2278,7 +2328,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                 item={true}
               >
                 <div
-                  aria-label="University of Queensland"
+                  aria-label="The University of Queensland"
                   className="smallLogo"
                   id="logo"
                   style={
@@ -2366,7 +2416,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
     }
     logoImage="largeLogo"
     logoLink="http://www.uq.edu.au"
-    logoText="University of Queensland"
+    logoText="The University of Queensland"
     menuItems={
       Array [
         Object {
@@ -2550,7 +2600,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         }
         exact={true}
         key="route_9"
-        pageTitle="Fix an incomplete record"
+        pageTitle="Update my work"
         path="/records/:pid(UQ:[a-z0-9]+)/incomplete"
         render={[Function]}
       />
@@ -2808,7 +2858,7 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
                 item={true}
               >
                 <div
-                  aria-label="University of Queensland"
+                  aria-label="The University of Queensland"
                   className="smallLogo"
                   id="logo"
                   style={
@@ -2896,7 +2946,7 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
     }
     logoImage="largeLogo"
     logoLink="http://www.uq.edu.au"
-    logoText="University of Queensland"
+    logoText="The University of Queensland"
     menuItems={
       Array [
         Object {
@@ -3114,7 +3164,7 @@ exports[`Application component should render app for account with fez author wit
             "admin",
           ],
           "exact": true,
-          "pageTitle": "Fix an incomplete record",
+          "pageTitle": "Update my work",
           "path": "/records/:pid(UQ:[a-z0-9]+)/incomplete",
           "render": [Function],
         },
@@ -3297,7 +3347,7 @@ exports[`Application component should render app for account with fez author wit
                 item={true}
               >
                 <div
-                  aria-label="University of Queensland"
+                  aria-label="The University of Queensland"
                   className="smallLogo"
                   id="logo"
                   style={
@@ -3385,7 +3435,7 @@ exports[`Application component should render app for account with fez author wit
     }
     logoImage="largeLogo"
     logoLink="http://www.uq.edu.au"
-    logoText="University of Queensland"
+    logoText="The University of Queensland"
     menuItems={
       Array [
         Object {
@@ -3569,7 +3619,7 @@ exports[`Application component should render app for account with fez author wit
         }
         exact={true}
         key="route_9"
-        pageTitle="Fix an incomplete record"
+        pageTitle="Update my work"
         path="/records/:pid(UQ:[a-z0-9]+)/incomplete"
         render={[Function]}
       />
@@ -3787,7 +3837,7 @@ exports[`Application component should render app for account with fez author wit
             "admin",
           ],
           "exact": true,
-          "pageTitle": "Fix an incomplete record",
+          "pageTitle": "Update my work",
           "path": "/records/:pid(UQ:[a-z0-9]+)/incomplete",
           "render": [Function],
         },
@@ -3970,7 +4020,7 @@ exports[`Application component should render app for account with fez author wit
                 item={true}
               >
                 <div
-                  aria-label="University of Queensland"
+                  aria-label="The University of Queensland"
                   className="smallLogo"
                   id="logo"
                   style={
@@ -4058,7 +4108,7 @@ exports[`Application component should render app for account with fez author wit
     }
     logoImage="largeLogo"
     logoLink="http://www.uq.edu.au"
-    logoText="University of Queensland"
+    logoText="The University of Queensland"
     menuItems={
       Array [
         Object {
@@ -4266,7 +4316,7 @@ exports[`Application component should render app for account with fez author wit
         }
         exact={true}
         key="route_9"
-        pageTitle="Fix an incomplete record"
+        pageTitle="Update my work"
         path="/records/:pid(UQ:[a-z0-9]+)/incomplete"
         render={[Function]}
       />
@@ -4484,7 +4534,7 @@ exports[`Application component should render app for account with fez author wit
             "admin",
           ],
           "exact": true,
-          "pageTitle": "Fix an incomplete record",
+          "pageTitle": "Update my work",
           "path": "/records/:pid(UQ:[a-z0-9]+)/incomplete",
           "render": [Function],
         },
@@ -4639,7 +4689,7 @@ exports[`Application component should render app for account with fez author wit
                 item={true}
               >
                 <div
-                  aria-label="University of Queensland"
+                  aria-label="The University of Queensland"
                   className="smallLogo"
                   id="logo"
                   style={
@@ -4818,7 +4868,7 @@ exports[`Application component should render app for account with fez author wit
         }
         exact={true}
         key="route_9"
-        pageTitle="Fix an incomplete record"
+        pageTitle="Update my work"
         path="/records/:pid(UQ:[a-z0-9]+)/incomplete"
         render={[Function]}
       />
@@ -5036,7 +5086,7 @@ exports[`Application component should render application with routing for the us
             "admin",
           ],
           "exact": true,
-          "pageTitle": "Fix an incomplete record",
+          "pageTitle": "Update my work",
           "path": "/records/:pid(UQ:[a-z0-9]+)/incomplete",
           "render": [Function],
         },
@@ -5219,7 +5269,7 @@ exports[`Application component should render application with routing for the us
                 item={true}
               >
                 <div
-                  aria-label="University of Queensland"
+                  aria-label="The University of Queensland"
                   className="smallLogo"
                   id="logo"
                   style={
@@ -5307,7 +5357,7 @@ exports[`Application component should render application with routing for the us
     }
     logoImage="largeLogo"
     logoLink="http://www.uq.edu.au"
-    logoText="University of Queensland"
+    logoText="The University of Queensland"
     menuItems={
       Array [
         Object {
@@ -5520,7 +5570,7 @@ exports[`Application component should render for anon user 1`] = `
                 item={true}
               >
                 <div
-                  aria-label="University of Queensland"
+                  aria-label="The University of Queensland"
                   className="smallLogo"
                   id="logo"
                   style={
@@ -5608,8 +5658,33 @@ exports[`Application component should render for anon user 1`] = `
     }
     logoImage="largeLogo"
     logoLink="http://www.uq.edu.au"
-    logoText="University of Queensland"
-    menuItems={Array []}
+    logoText="The University of Queensland"
+    menuItems={
+      Array [
+        Object {
+          "linkTo": "/",
+          "primaryText": "Home",
+          "public": true,
+        },
+        Object {
+          "linkTo": "/records/search",
+          "primaryText": "Search eSpace",
+          "public": true,
+          "secondaryText": "",
+        },
+        Object {
+          "linkTo": "https://guides.library.uq.edu.au/for-researchers/research-publications-guide",
+          "primaryText": "Help",
+          "public": true,
+        },
+        Object {
+          "linkTo": "/contact",
+          "primaryText": "Contact",
+          "public": true,
+          "secondaryText": "",
+        },
+      ]
+    }
     onToggleDrawer={[Function]}
   />
   <div
@@ -5628,30 +5703,6 @@ exports[`Application component should render for anon user 1`] = `
       }
       onRef={[Function]}
     />
-    <WithStyles(Grid)
-      alignContent="center"
-      alignItems="center"
-      container={true}
-      justify="center"
-    >
-      <WithStyles(Grid)
-        item={true}
-        style={
-          Object {
-            "marginBottom": 0,
-            "marginTop": 0,
-          }
-        }
-      >
-        <WithStyles(Alert)
-          action={[Function]}
-          actionButtonLabel="Click to login"
-          message="Login to UQ eSpace for full search results and more services."
-          title="You are not logged in"
-          type="info_outline"
-        />
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
     <Connect(AppAlert) />
     <Switch>
       <Route
@@ -5711,7 +5762,7 @@ exports[`Application component should render loading screen while account is loa
   >
     <WithStyles(AppLoader)
       logoImage="largeLogo"
-      logoText="University of Queensland"
+      logoText="The University of Queensland"
       title="UQ eSpace "
     />
   </WithStyles(Grid)>
@@ -5819,7 +5870,7 @@ exports[`Application component should render thesis submission for HDR without m
                 item={true}
               >
                 <div
-                  aria-label="University of Queensland"
+                  aria-label="The University of Queensland"
                   className="smallLogo"
                   id="logo"
                   style={
@@ -6929,7 +6980,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 "admin",
                               ],
                               "exact": true,
-                              "pageTitle": "Fix an incomplete record",
+                              "pageTitle": "Update my work",
                               "path": "/records/:pid(UQ:[a-z0-9]+)/incomplete",
                               "render": [Function],
                             },
@@ -7163,7 +7214,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                     "admin",
                                   ],
                                   "exact": true,
-                                  "pageTitle": "Fix an incomplete record",
+                                  "pageTitle": "Update my work",
                                   "path": "/records/:pid(UQ:[a-z0-9]+)/incomplete",
                                   "render": [Function],
                                 },
@@ -7397,7 +7448,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                       "admin",
                                     ],
                                     "exact": true,
-                                    "pageTitle": "Fix an incomplete record",
+                                    "pageTitle": "Update my work",
                                     "path": "/records/:pid(UQ:[a-z0-9]+)/incomplete",
                                     "render": [Function],
                                   },
@@ -9886,7 +9937,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                       className="MuiGrid-item-7"
                                                                     >
                                                                       <div
-                                                                        aria-label="University of Queensland"
+                                                                        aria-label="The University of Queensland"
                                                                         className="smallLogo"
                                                                         id="logo"
                                                                         style={
@@ -14656,7 +14707,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                         }
                         logoImage="largeLogo"
                         logoLink="http://www.uq.edu.au"
-                        logoText="University of Queensland"
+                        logoText="The University of Queensland"
                         menuItems={
                           Array [
                             Object {
@@ -14755,7 +14806,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                           }
                           logoImage="largeLogo"
                           logoLink="http://www.uq.edu.au"
-                          logoText="University of Queensland"
+                          logoText="The University of Queensland"
                           menuItems={
                             Array [
                               Object {
