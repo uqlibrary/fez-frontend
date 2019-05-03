@@ -45,10 +45,9 @@ export class NewsFeed extends PureComponent {
     };
 
     componentDidMount() {
-        /* istanbul ignore else */
-        if (this.props.actions && this.props.actions.loadNewsFeed) {
-            this.props.actions.loadNewsFeed();
-        }
+        this.props.actions &&
+        this.props.actions.loadNewsFeed &&
+        this.props.actions.loadNewsFeed();
     }
 
     render() {

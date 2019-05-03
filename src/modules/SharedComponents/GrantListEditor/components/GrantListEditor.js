@@ -39,10 +39,8 @@ export class GrantListEditor extends PureComponent {
 
     componentWillUpdate(nextProps, nextState) {
         // notify parent component when local state has been updated, eg grants added/removed/reordered
-        // istanbul ignore else
-        if (this.props.onChange) {
-            this.props.onChange(nextState.grants);
-        }
+        !!this.props.onChange &&
+        this.props.onChange(nextState.grants);
     }
 
     getGrantsFromProps = (props) => {

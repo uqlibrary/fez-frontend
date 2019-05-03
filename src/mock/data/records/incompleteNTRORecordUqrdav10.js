@@ -17,7 +17,7 @@ export default {
     "rek_created_date_xsdmf_id": null,
     "rek_created_date": "2019-02-27T04:17:15Z",
     "rek_updated_date_xsdmf_id": 3678,
-    "rek_updated_date": "2019-04-29T04:48:55Z",
+    "rek_updated_date": "2019-05-03T00:16:18Z",
     "rek_file_downloads": 0,
     "rek_citation": "",
     "rek_genre_xsdmf_id": 11991,
@@ -54,7 +54,6 @@ export default {
     "fez_record_search_key_article_number": null,
     "fez_record_search_key_assigned_group_id": [],
     "fez_record_search_key_assigned_user_id": [],
-    "fez_record_search_key_audience_size": null,
     "fez_record_search_key_author": [{
         "rek_author_id": 32253113,
         "rek_author_pid": "UQ:6de77b0",
@@ -144,6 +143,27 @@ export default {
             "rek_grant_agency_xsdmf_id": 0,
             "rek_grant_agency": "adfasdf",
             "rek_grant_agency_order": 5
+        },
+        {
+            "rek_grant_agency_id": 175018,
+            "rek_grant_agency_pid": "UQ:6de77b0",
+            "rek_grant_agency_xsdmf_id": 0,
+            "rek_grant_agency": "test",
+            "rek_grant_agency_order": 6
+        },
+        {
+            "rek_grant_agency_id": 175026,
+            "rek_grant_agency_pid": "UQ:6de77b0",
+            "rek_grant_agency_xsdmf_id": 0,
+            "rek_grant_agency": "aadsfasdfasdf",
+            "rek_grant_agency_order": 7
+        },
+        {
+            "rek_grant_agency_id": 175027,
+            "rek_grant_agency_pid": "UQ:6de77b0",
+            "rek_grant_agency_xsdmf_id": 0,
+            "rek_grant_agency": "asdfa",
+            "rek_grant_agency_order": 8
         }
     ],
     "fez_record_search_key_grant_agency_id": [],
@@ -181,6 +201,27 @@ export default {
             "rek_grant_id_xsdmf_id": 0,
             "rek_grant_id": "Not set",
             "rek_grant_id_order": 5
+        },
+        {
+            "rek_grant_id_id": 107951,
+            "rek_grant_id_pid": "UQ:6de77b0",
+            "rek_grant_id_xsdmf_id": 0,
+            "rek_grant_id": "13131",
+            "rek_grant_id_order": 6
+        },
+        {
+            "rek_grant_id_id": 107959,
+            "rek_grant_id_pid": "UQ:6de77b0",
+            "rek_grant_id_xsdmf_id": 0,
+            "rek_grant_id": "2323423",
+            "rek_grant_id_order": 7
+        },
+        {
+            "rek_grant_id_id": 107960,
+            "rek_grant_id_pid": "UQ:6de77b0",
+            "rek_grant_id_xsdmf_id": 0,
+            "rek_grant_id": "12121",
+            "rek_grant_id_order": 8
         }
     ],
     "fez_record_search_key_grant_text": [],
@@ -303,6 +344,73 @@ export default {
     "rek_scopus_doc_type_lookup": null,
     "rek_status_lookup": "Published",
     "rek_wok_doc_type_lookup": null,
+    "fez_record_search_key_audience_size": {
+        "rek_audience_size_id": 36,
+        "rek_audience_size_pid": "UQ:6de77b0",
+        "rek_audience_size_xsdmf_id": null,
+        "rek_audience_size": null
+    },
+    "fez_record_search_key_grant_agency_type": [{
+            "rek_grant_agency_type_id": 123,
+            "rek_grant_agency_type_pid": "UQ:6de77b0",
+            "rek_grant_agency_type_xsdmf_id": null,
+            "rek_grant_agency_type": 453986,
+            "rek_grant_agency_type_order": 1,
+            "rek_grant_agency_type_lookup": "NGO"
+        },
+        {
+            "rek_grant_agency_type_id": 169,
+            "rek_grant_agency_type_pid": "UQ:6de77b0",
+            "rek_grant_agency_type_xsdmf_id": null,
+            "rek_grant_agency_type": null,
+            "rek_grant_agency_type_order": 2
+        },
+        {
+            "rek_grant_agency_type_id": 170,
+            "rek_grant_agency_type_pid": "UQ:6de77b0",
+            "rek_grant_agency_type_xsdmf_id": null,
+            "rek_grant_agency_type": null,
+            "rek_grant_agency_type_order": 3
+        },
+        {
+            "rek_grant_agency_type_id": 172,
+            "rek_grant_agency_type_pid": "UQ:6de77b0",
+            "rek_grant_agency_type_xsdmf_id": null,
+            "rek_grant_agency_type": null,
+            "rek_grant_agency_type_order": 4
+        },
+        {
+            "rek_grant_agency_type_id": 173,
+            "rek_grant_agency_type_pid": "UQ:6de77b0",
+            "rek_grant_agency_type_xsdmf_id": null,
+            "rek_grant_agency_type": null,
+            "rek_grant_agency_type_order": 5
+        },
+        {
+            "rek_grant_agency_type_id": 190,
+            "rek_grant_agency_type_pid": "UQ:6de77b0",
+            "rek_grant_agency_type_xsdmf_id": null,
+            "rek_grant_agency_type": 453988,
+            "rek_grant_agency_type_order": 6,
+            "rek_grant_agency_type_lookup": "Corporate\/Industry"
+        },
+        {
+            "rek_grant_agency_type_id": 198,
+            "rek_grant_agency_type_pid": "UQ:6de77b0",
+            "rek_grant_agency_type_xsdmf_id": null,
+            "rek_grant_agency_type": 453984,
+            "rek_grant_agency_type_order": 7,
+            "rek_grant_agency_type_lookup": "Commercial Gallery"
+        },
+        {
+            "rek_grant_agency_type_id": 199,
+            "rek_grant_agency_type_pid": "UQ:6de77b0",
+            "rek_grant_agency_type_xsdmf_id": null,
+            "rek_grant_agency_type": 453986,
+            "rek_grant_agency_type_order": 8,
+            "rek_grant_agency_type_lookup": "NGO"
+        }
+    ],
     "fez_record_search_key_quality_indicator": [{
             "rek_quality_indicator_id": 118,
             "rek_quality_indicator_pid": "UQ:6de77b0",
@@ -342,43 +450,6 @@ export default {
         "rek_creator_contribution_statement": "<p>A setting of the poem Balance by Oodgeroo, commissioned by singer Katie Noonan. This setting highlights the contrasts as found in successive lines in the poem, amplifying them through shifts in harmony, vocal range, density and texture. The opening and closing focus on the words of the poem, while the middle section expands the time for these words and brings focus to an ecstatic sense of being through instrumental interplay.<\/p>",
         "rek_creator_contribution_statement_order": 1
     }],
-    "fez_record_search_key_grant_agency_type": [{
-            "rek_grant_agency_type_id": 123,
-            "rek_grant_agency_type_pid": "UQ:6de77b0",
-            "rek_grant_agency_type_xsdmf_id": null,
-            "rek_grant_agency_type": 453986,
-            "rek_grant_agency_type_order": 1,
-            "rek_grant_agency_type_lookup": "NGO"
-        },
-        {
-            "rek_grant_agency_type_id": 169,
-            "rek_grant_agency_type_pid": "UQ:6de77b0",
-            "rek_grant_agency_type_xsdmf_id": null,
-            "rek_grant_agency_type": "",
-            "rek_grant_agency_type_order": 2
-        },
-        {
-            "rek_grant_agency_type_id": 170,
-            "rek_grant_agency_type_pid": "UQ:6de77b0",
-            "rek_grant_agency_type_xsdmf_id": null,
-            "rek_grant_agency_type": "",
-            "rek_grant_agency_type_order": 3
-        },
-        {
-            "rek_grant_agency_type_id": 172,
-            "rek_grant_agency_type_pid": "UQ:6de77b0",
-            "rek_grant_agency_type_xsdmf_id": null,
-            "rek_grant_agency_type": "",
-            "rek_grant_agency_type_order": 4
-        },
-        {
-            "rek_grant_agency_type_id": 173,
-            "rek_grant_agency_type_pid": "UQ:6de77b0",
-            "rek_grant_agency_type_xsdmf_id": null,
-            "rek_grant_agency_type": "",
-            "rek_grant_agency_type_order": 5
-        }
-    ],
     "fez_record_search_key_significance": [{
         "rek_significance_id": 53,
         "rek_significance_pid": "UQ:6de77b0",
