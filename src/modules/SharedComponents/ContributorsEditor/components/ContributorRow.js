@@ -248,7 +248,7 @@ export class ContributorRow extends PureComponent {
         const ariaLabelLocaleString = `${
             selectHint.replace('[name]', contributor.nameAsPublished)
         } ${
-            (highlighted && locale.pages.incompletePublication.fields.authors.requiredLabel) || ''
+            (highlighted && locale.requiredLabel) || ''
         }`.trim();
 
         const ariaLabel = (

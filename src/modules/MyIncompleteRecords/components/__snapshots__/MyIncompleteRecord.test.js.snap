@@ -362,14 +362,14 @@ exports[`Cards will display correct empty fields for a Exhibition Creative Work 
               Object {
                 "form": Object {
                   "locale": Object {
-                    "addButton": "Add author",
+                    "addButton": "Update author",
                     "descriptionStep1": <div>
                       <span
                         className="authorSteps"
                       >
                         Step 2 of 2
                       </span>
-                       -
+                       - 
                       <b>
                         Update the affiliation data
                       </b>
@@ -403,7 +403,7 @@ exports[`Cards will display correct empty fields for a Exhibition Creative Work 
                       >
                         Step 1 of 2
                       </span>
-                       -
+                       - 
                       <b>
                         Select an author
                       </b>
@@ -425,6 +425,7 @@ exports[`Cards will display correct empty fields for a Exhibition Creative Work 
                     },
                     "moveDownHint": "Move item down the order",
                     "moveUpHint": "Move item up the order",
+                    "requiredLabel": "This author's data is incomplete.",
                     "selectHint": "Select this author ([name]) to update their affiliation data.",
                     "selectedHint": "This is you",
                     "suffix": " listed author",
@@ -938,14 +939,14 @@ exports[`Cards will display correct empty fields for a Live Performance of Music
               Object {
                 "form": Object {
                   "locale": Object {
-                    "addButton": "Add author",
+                    "addButton": "Update author",
                     "descriptionStep1": <div>
                       <span
                         className="authorSteps"
                       >
                         Step 2 of 2
                       </span>
-                       -
+                       - 
                       <b>
                         Update the affiliation data
                       </b>
@@ -979,7 +980,7 @@ exports[`Cards will display correct empty fields for a Live Performance of Music
                       >
                         Step 1 of 2
                       </span>
-                       -
+                       - 
                       <b>
                         Select an author
                       </b>
@@ -1001,6 +1002,7 @@ exports[`Cards will display correct empty fields for a Live Performance of Music
                     },
                     "moveDownHint": "Move item down the order",
                     "moveUpHint": "Move item up the order",
+                    "requiredLabel": "This author's data is incomplete.",
                     "selectHint": "Select this author ([name]) to update their affiliation data.",
                     "selectedHint": "This is you",
                     "suffix": " listed author",
@@ -1514,14 +1516,14 @@ exports[`Cards will display correct empty fields for a Musical Creative work 1`]
               Object {
                 "form": Object {
                   "locale": Object {
-                    "addButton": "Add author",
+                    "addButton": "Update author",
                     "descriptionStep1": <div>
                       <span
                         className="authorSteps"
                       >
                         Step 2 of 2
                       </span>
-                       -
+                       - 
                       <b>
                         Update the affiliation data
                       </b>
@@ -1555,7 +1557,7 @@ exports[`Cards will display correct empty fields for a Musical Creative work 1`]
                       >
                         Step 1 of 2
                       </span>
-                       -
+                       - 
                       <b>
                         Select an author
                       </b>
@@ -1577,6 +1579,7 @@ exports[`Cards will display correct empty fields for a Musical Creative work 1`]
                     },
                     "moveDownHint": "Move item down the order",
                     "moveUpHint": "Move item up the order",
+                    "requiredLabel": "This author's data is incomplete.",
                     "selectHint": "Select this author ([name]) to update their affiliation data.",
                     "selectedHint": "This is you",
                     "suffix": " listed author",
@@ -2090,14 +2093,14 @@ exports[`Cards will display correct empty fields for a Public Sector Research Re
               Object {
                 "form": Object {
                   "locale": Object {
-                    "addButton": "Add author",
+                    "addButton": "Update author",
                     "descriptionStep1": <div>
                       <span
                         className="authorSteps"
                       >
                         Step 2 of 2
                       </span>
-                       -
+                       - 
                       <b>
                         Update the affiliation data
                       </b>
@@ -2131,7 +2134,7 @@ exports[`Cards will display correct empty fields for a Public Sector Research Re
                       >
                         Step 1 of 2
                       </span>
-                       -
+                       - 
                       <b>
                         Select an author
                       </b>
@@ -2153,6 +2156,7 @@ exports[`Cards will display correct empty fields for a Public Sector Research Re
                     },
                     "moveDownHint": "Move item down the order",
                     "moveUpHint": "Move item up the order",
+                    "requiredLabel": "This author's data is incomplete.",
                     "selectHint": "Select this author ([name]) to update their affiliation data.",
                     "selectedHint": "This is you",
                     "suffix": " listed author",
@@ -2666,14 +2670,14 @@ exports[`Cards will display correct empty fields for a Textual Book work 1`] = `
               Object {
                 "form": Object {
                   "locale": Object {
-                    "addButton": "Add author",
+                    "addButton": "Update author",
                     "descriptionStep1": <div>
                       <span
                         className="authorSteps"
                       >
                         Step 2 of 2
                       </span>
-                       -
+                       - 
                       <b>
                         Update the affiliation data
                       </b>
@@ -2707,7 +2711,7 @@ exports[`Cards will display correct empty fields for a Textual Book work 1`] = `
                       >
                         Step 1 of 2
                       </span>
-                       -
+                       - 
                       <b>
                         Select an author
                       </b>
@@ -2729,6 +2733,7 @@ exports[`Cards will display correct empty fields for a Textual Book work 1`] = `
                     },
                     "moveDownHint": "Move item down the order",
                     "moveUpHint": "Move item up the order",
+                    "requiredLabel": "This author's data is incomplete.",
                     "selectHint": "Select this author ([name]) to update their affiliation data.",
                     "selectedHint": "This is you",
                     "suffix": " listed author",
@@ -3249,14 +3254,14 @@ exports[`Cards will display correct empty fields for a Textual Book work with la
               Object {
                 "form": Object {
                   "locale": Object {
-                    "addButton": "Add author",
+                    "addButton": "Update author",
                     "descriptionStep1": <div>
                       <span
                         className="authorSteps"
                       >
                         Step 2 of 2
                       </span>
-                       -
+                       - 
                       <b>
                         Update the affiliation data
                       </b>
@@ -3290,7 +3295,7 @@ exports[`Cards will display correct empty fields for a Textual Book work with la
                       >
                         Step 1 of 2
                       </span>
-                       -
+                       - 
                       <b>
                         Select an author
                       </b>
@@ -3312,6 +3317,7 @@ exports[`Cards will display correct empty fields for a Textual Book work with la
                     },
                     "moveDownHint": "Move item down the order",
                     "moveUpHint": "Move item up the order",
+                    "requiredLabel": "This author's data is incomplete.",
                     "selectHint": "Select this author ([name]) to update their affiliation data.",
                     "selectedHint": "This is you",
                     "suffix": " listed author",
@@ -3825,14 +3831,14 @@ exports[`Cards will display correct empty fields for a Website Creative work 1`]
               Object {
                 "form": Object {
                   "locale": Object {
-                    "addButton": "Add author",
+                    "addButton": "Update author",
                     "descriptionStep1": <div>
                       <span
                         className="authorSteps"
                       >
                         Step 2 of 2
                       </span>
-                       -
+                       - 
                       <b>
                         Update the affiliation data
                       </b>
@@ -3866,7 +3872,7 @@ exports[`Cards will display correct empty fields for a Website Creative work 1`]
                       >
                         Step 1 of 2
                       </span>
-                       -
+                       - 
                       <b>
                         Select an author
                       </b>
@@ -3888,6 +3894,7 @@ exports[`Cards will display correct empty fields for a Website Creative work 1`]
                     },
                     "moveDownHint": "Move item down the order",
                     "moveUpHint": "Move item up the order",
+                    "requiredLabel": "This author's data is incomplete.",
                     "selectHint": "Select this author ([name]) to update their affiliation data.",
                     "selectedHint": "This is you",
                     "suffix": " listed author",
@@ -4401,14 +4408,14 @@ exports[`Cards will display correct empty fields for an Architectural Design wor
               Object {
                 "form": Object {
                   "locale": Object {
-                    "addButton": "Add author",
+                    "addButton": "Update author",
                     "descriptionStep1": <div>
                       <span
                         className="authorSteps"
                       >
                         Step 2 of 2
                       </span>
-                       -
+                       - 
                       <b>
                         Update the affiliation data
                       </b>
@@ -4442,7 +4449,7 @@ exports[`Cards will display correct empty fields for an Architectural Design wor
                       >
                         Step 1 of 2
                       </span>
-                       -
+                       - 
                       <b>
                         Select an author
                       </b>
@@ -4464,6 +4471,7 @@ exports[`Cards will display correct empty fields for an Architectural Design wor
                     },
                     "moveDownHint": "Move item down the order",
                     "moveUpHint": "Move item up the order",
+                    "requiredLabel": "This author's data is incomplete.",
                     "selectHint": "Select this author ([name]) to update their affiliation data.",
                     "selectedHint": "This is you",
                     "suffix": " listed author",
@@ -4892,14 +4900,14 @@ exports[`Cards will display empty where nothing is incomplete 1`] = `
               Object {
                 "form": Object {
                   "locale": Object {
-                    "addButton": "Add author",
+                    "addButton": "Update author",
                     "descriptionStep1": <div>
                       <span
                         className="authorSteps"
                       >
                         Step 2 of 2
                       </span>
-                       -
+                       - 
                       <b>
                         Update the affiliation data
                       </b>
@@ -4933,7 +4941,7 @@ exports[`Cards will display empty where nothing is incomplete 1`] = `
                       >
                         Step 1 of 2
                       </span>
-                       -
+                       - 
                       <b>
                         Select an author
                       </b>
@@ -4955,6 +4963,7 @@ exports[`Cards will display empty where nothing is incomplete 1`] = `
                     },
                     "moveDownHint": "Move item down the order",
                     "moveUpHint": "Move item up the order",
+                    "requiredLabel": "This author's data is incomplete.",
                     "selectHint": "Select this author ([name]) to update their affiliation data.",
                     "selectedHint": "This is you",
                     "suffix": " listed author",
@@ -5602,14 +5611,14 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
               Object {
                 "form": Object {
                   "locale": Object {
-                    "addButton": "Add author",
+                    "addButton": "Update author",
                     "descriptionStep1": <div>
                       <span
                         className="authorSteps"
                       >
                         Step 2 of 2
                       </span>
-                       -
+                       - 
                       <b>
                         Update the affiliation data
                       </b>
@@ -5643,7 +5652,7 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
                       >
                         Step 1 of 2
                       </span>
-                       -
+                       - 
                       <b>
                         Select an author
                       </b>
@@ -5665,6 +5674,7 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
                     },
                     "moveDownHint": "Move item down the order",
                     "moveUpHint": "Move item up the order",
+                    "requiredLabel": "This author's data is incomplete.",
                     "selectHint": "Select this author ([name]) to update their affiliation data.",
                     "selectedHint": "This is you",
                     "suffix": " listed author",
@@ -6312,14 +6322,14 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
               Object {
                 "form": Object {
                   "locale": Object {
-                    "addButton": "Add author",
+                    "addButton": "Update author",
                     "descriptionStep1": <div>
                       <span
                         className="authorSteps"
                       >
                         Step 2 of 2
                       </span>
-                       -
+                       - 
                       <b>
                         Update the affiliation data
                       </b>
@@ -6353,7 +6363,7 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
                       >
                         Step 1 of 2
                       </span>
-                       -
+                       - 
                       <b>
                         Select an author
                       </b>
@@ -6375,6 +6385,7 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
                     },
                     "moveDownHint": "Move item down the order",
                     "moveUpHint": "Move item up the order",
+                    "requiredLabel": "This author's data is incomplete.",
                     "selectHint": "Select this author ([name]) to update their affiliation data.",
                     "selectedHint": "This is you",
                     "suffix": " listed author",
@@ -7034,14 +7045,14 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
               Object {
                 "form": Object {
                   "locale": Object {
-                    "addButton": "Add author",
+                    "addButton": "Update author",
                     "descriptionStep1": <div>
                       <span
                         className="authorSteps"
                       >
                         Step 2 of 2
                       </span>
-                       -
+                       - 
                       <b>
                         Update the affiliation data
                       </b>
@@ -7075,7 +7086,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
                       >
                         Step 1 of 2
                       </span>
-                       -
+                       - 
                       <b>
                         Select an author
                       </b>
@@ -7097,6 +7108,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
                     },
                     "moveDownHint": "Move item down the order",
                     "moveUpHint": "Move item up the order",
+                    "requiredLabel": "This author's data is incomplete.",
                     "selectHint": "Select this author ([name]) to update their affiliation data.",
                     "selectedHint": "This is you",
                     "suffix": " listed author",
@@ -7750,14 +7762,14 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
               Object {
                 "form": Object {
                   "locale": Object {
-                    "addButton": "Add author",
+                    "addButton": "Update author",
                     "descriptionStep1": <div>
                       <span
                         className="authorSteps"
                       >
                         Step 2 of 2
                       </span>
-                       -
+                       - 
                       <b>
                         Update the affiliation data
                       </b>
@@ -7791,7 +7803,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
                       >
                         Step 1 of 2
                       </span>
-                       -
+                       - 
                       <b>
                         Select an author
                       </b>
@@ -7813,6 +7825,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
                     },
                     "moveDownHint": "Move item down the order",
                     "moveUpHint": "Move item up the order",
+                    "requiredLabel": "This author's data is incomplete.",
                     "selectHint": "Select this author ([name]) to update their affiliation data.",
                     "selectedHint": "This is you",
                     "suffix": " listed author",
@@ -8460,14 +8473,14 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
               Object {
                 "form": Object {
                   "locale": Object {
-                    "addButton": "Add author",
+                    "addButton": "Update author",
                     "descriptionStep1": <div>
                       <span
                         className="authorSteps"
                       >
                         Step 2 of 2
                       </span>
-                       -
+                       - 
                       <b>
                         Update the affiliation data
                       </b>
@@ -8501,7 +8514,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
                       >
                         Step 1 of 2
                       </span>
-                       -
+                       - 
                       <b>
                         Select an author
                       </b>
@@ -8523,6 +8536,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
                     },
                     "moveDownHint": "Move item down the order",
                     "moveUpHint": "Move item up the order",
+                    "requiredLabel": "This author's data is incomplete.",
                     "selectHint": "Select this author ([name]) to update their affiliation data.",
                     "selectedHint": "This is you",
                     "suffix": " listed author",
