@@ -79,7 +79,7 @@ export default {
         "rek_author_id_id": 32030882,
         "rek_author_id_pid": "UQ:692945",
         "rek_author_id_xsdmf_id": 11955,
-        "rek_author_id": 1516,
+        "rek_author_id": 410,
         "rek_author_id_order": 1,
         "rek_author_id_lookup": "Carleton, Stephen James"
       },

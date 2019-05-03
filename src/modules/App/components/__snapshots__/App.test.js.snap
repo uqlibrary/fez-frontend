@@ -214,7 +214,32 @@ exports[`Application component Should display mobile correctly 1`] = `
     logoImage="largeLogo"
     logoLink="http://www.uq.edu.au"
     logoText="The University of Queensland"
-    menuItems={Array []}
+    menuItems={
+      Array [
+        Object {
+          "linkTo": "/",
+          "primaryText": "Home",
+          "public": true,
+        },
+        Object {
+          "linkTo": "/records/search",
+          "primaryText": "Search eSpace",
+          "public": true,
+          "secondaryText": "",
+        },
+        Object {
+          "linkTo": "https://guides.library.uq.edu.au/for-researchers/research-publications-guide",
+          "primaryText": "Help",
+          "public": true,
+        },
+        Object {
+          "linkTo": "/contact",
+          "primaryText": "Contact",
+          "public": true,
+          "secondaryText": "",
+        },
+      ]
+    }
     onToggleDrawer={[Function]}
   />
   <div
@@ -1220,7 +1245,32 @@ exports[`Application component should redirect to login page with correct return
     logoImage="largeLogo"
     logoLink="http://www.uq.edu.au"
     logoText="The University of Queensland"
-    menuItems={Array []}
+    menuItems={
+      Array [
+        Object {
+          "linkTo": "/",
+          "primaryText": "Home",
+          "public": true,
+        },
+        Object {
+          "linkTo": "/records/search",
+          "primaryText": "Search eSpace",
+          "public": true,
+          "secondaryText": "",
+        },
+        Object {
+          "linkTo": "https://guides.library.uq.edu.au/for-researchers/research-publications-guide",
+          "primaryText": "Help",
+          "public": true,
+        },
+        Object {
+          "linkTo": "/contact",
+          "primaryText": "Contact",
+          "public": true,
+          "secondaryText": "",
+        },
+      ]
+    }
     onToggleDrawer={[Function]}
   />
   <div
@@ -5609,7 +5659,32 @@ exports[`Application component should render for anon user 1`] = `
     logoImage="largeLogo"
     logoLink="http://www.uq.edu.au"
     logoText="The University of Queensland"
-    menuItems={Array []}
+    menuItems={
+      Array [
+        Object {
+          "linkTo": "/",
+          "primaryText": "Home",
+          "public": true,
+        },
+        Object {
+          "linkTo": "/records/search",
+          "primaryText": "Search eSpace",
+          "public": true,
+          "secondaryText": "",
+        },
+        Object {
+          "linkTo": "https://guides.library.uq.edu.au/for-researchers/research-publications-guide",
+          "primaryText": "Help",
+          "public": true,
+        },
+        Object {
+          "linkTo": "/contact",
+          "primaryText": "Contact",
+          "public": true,
+          "secondaryText": "",
+        },
+      ]
+    }
     onToggleDrawer={[Function]}
   />
   <div
@@ -5628,30 +5703,6 @@ exports[`Application component should render for anon user 1`] = `
       }
       onRef={[Function]}
     />
-    <WithStyles(Grid)
-      alignContent="center"
-      alignItems="center"
-      container={true}
-      justify="center"
-    >
-      <WithStyles(Grid)
-        item={true}
-        style={
-          Object {
-            "marginBottom": 0,
-            "marginTop": 0,
-          }
-        }
-      >
-        <WithStyles(Alert)
-          action={[Function]}
-          actionButtonLabel="Click to login"
-          message="Login to UQ eSpace for full search results and more services."
-          title="You are not logged in"
-          type="info_outline"
-        />
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
     <Connect(AppAlert) />
     <Switch>
       <Route
