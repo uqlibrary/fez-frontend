@@ -2,7 +2,7 @@ import React, { PureComponent, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { numberToWords, validation } from 'config';
 import { ORG_TYPES_LOOKUP } from 'config/general';
-import { locale } from 'locale';
+import locale from 'locale/global';
 
 import { withStyles } from '@material-ui/core/styles';
 import withWidth from '@material-ui/core/withWidth';
