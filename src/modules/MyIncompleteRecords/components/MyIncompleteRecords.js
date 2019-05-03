@@ -125,7 +125,6 @@ export default class MyIncompleteRecords extends PureComponent {
     }
 
     render() {
-        console.log(this.props);
         if (this.props.accountLoading) return null;
         const txt = this.props.localePages;
         const pagingData = this.props.publicationsListPagingData;
