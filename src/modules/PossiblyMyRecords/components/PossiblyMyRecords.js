@@ -61,7 +61,7 @@ export default class PossiblyMyRecords extends PureComponent {
     }
 
     componentDidMount() {
-        if (!this.props.accountLoading && (!this.props.possiblePublicationsList || this.props.possiblePublicationsList.type !== 'possible')) {
+        if (!this.props.accountLoading) {
             this.props.actions.searchPossiblyYourPublications({...this.state});
         }
     }
