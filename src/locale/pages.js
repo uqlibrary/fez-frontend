@@ -799,6 +799,11 @@ export default {
                 cancelButtonLabel: 'Update another incomplete work',
                 confirmButtonLabel: 'Go to my dashboard'
             },
+            prompt: {
+                title: 'Missing data',
+                message: 'This record has missing data - enter all fields to give a quality record.',
+                type: 'info_outline'
+            }
         }
     }
 };

@@ -203,9 +203,9 @@ export default class MyIncompleteRecord extends PureComponent {
                     <Grid container spacing={24}>
                         <Grid item xs={12}>
                             <Alert
-                                title="Missing data"
-                                message="This record has missing data - enter all fields to give a quality record."
-                                type="info_outline"
+                                title={txt.prompt.title}
+                                message={txt.prompt.message}
+                                type={txt.prompt.type}
                             />
                         </Grid>
                         <Grid item xs={12}>
