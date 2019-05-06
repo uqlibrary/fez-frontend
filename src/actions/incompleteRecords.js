@@ -63,23 +63,16 @@ export function updateIncompleteRecord(data) {
         };
 
         // delete extra form values from request object
-        /* istanbul ignore else */
-        if (patchRecordRequest.author) delete patchRecordRequest.author;
-        /* istanbul ignore else */
-        if (patchRecordRequest.publication) delete patchRecordRequest.publication;
-        /* istanbul ignore if */
-        if (patchRecordRequest.authors) delete patchRecordRequest.authors;
-        if (patchRecordRequest.files) delete patchRecordRequest.files;
-        /* istanbul ignore if */
-        if (patchRecordRequest.ntroAbstract) delete patchRecordRequest.ntroAbstract;
-        /* istanbul ignore if */
-        if (patchRecordRequest.grants) delete patchRecordRequest.grants;
-        if (patchRecordRequest.significance) delete patchRecordRequest.significance;
-        if (patchRecordRequest.impactStatement) delete patchRecordRequest.impactStatement;
-        /* istanbul ignore if */
-        if (patchRecordRequest.languages) delete patchRecordRequest.languages;
-        /* istanbul ignore if */
-        if (patchRecordRequest.qualityIndicators) delete patchRecordRequest.qualityIndicators;
+        !!patchRecordRequest.author && delete patchRecordRequest.author;
+        !!patchRecordRequest.publication && delete patchRecordRequest.publication;
+        !!patchRecordRequest.authors && delete patchRecordRequest.authors;
+        !!patchRecordRequest.files && delete patchRecordRequest.files;
+        !!patchRecordRequest.ntroAbstract && delete patchRecordRequest.ntroAbstract;
+        !!patchRecordRequest.grants && delete patchRecordRequest.grants;
+        !!patchRecordRequest.significance && delete patchRecordRequest.significance;
+        !!patchRecordRequest.impactStatement && delete patchRecordRequest.impactStatement;
+        !!patchRecordRequest.languages && delete patchRecordRequest.languages;
+        !!patchRecordRequest.qualityIndicators && delete patchRecordRequest.qualityIndicators;
 
         // create request for issue notification
         // const createIssueRequest = transformers.getFixIssueRequest(data);

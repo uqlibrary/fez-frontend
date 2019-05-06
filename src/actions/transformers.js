@@ -480,13 +480,11 @@ export const getQualityIndicatorSearchKey = (qualityIndicators = []) => {
     };
 };
 
-const getAuthorId = (data) => {
+export const getAuthorOrder = (data) => {
     const author = data.publication.fez_record_search_key_author_id.filter(authorId => authorId.rek_author_id === data.author.aut_id);
 
     // a missing author doesn't actually reach here, but if code is changed and that doesnt catch it anymore, -1 here should force handling, rather than silently introducing bad data
-    return author.length > 0 && author[0].rek_author_id_order
-        /* istanbul ignore next */
-        || -1;
+    return (author.length > 0 && author[0].rek_author_id_order) || -1;
 };
 
 /**
@@ -506,7 +504,7 @@ export const getCreatorContributionStatementSearchKeys = (data) => {
         result.fez_record_search_key_creator_contribution_statement =
             [{
                 rek_creator_contribution_statement: impactStatement,
-                rek_creator_contribution_statement_order: getAuthorId(data)
+                rek_creator_contribution_statement_order: getAuthorOrder(data)
             }];
     }
 
@@ -524,7 +522,7 @@ export const getSignificanceSearchKeys = (data) => {
         result.fez_record_search_key_significance =
             [{
                 rek_significance: data.significance,
-                rek_significance_order: getAuthorId(data)
+                rek_significance_order: getAuthorOrder(data)
             }];
     }
 

@@ -22,7 +22,6 @@ import { NtroFields } from 'modules/SharedComponents/Toolbox/NtroFields';
 import { general, validation, routes } from 'config';
 import { default as pagesLocale } from 'locale/pages';
 import { default as formsLocale } from 'locale/forms';
-import { default as componentsLocale } from 'locale/components';
 import { default as viewRecordLocale } from 'locale/viewRecord';
 import {
     DOCUMENT_TYPE_DESIGN, DOCUMENT_TYPE_JOURNAL_ARTICLE, DOCUMENT_TYPE_BOOK_CHAPTER, DOCUMENT_TYPE_BOOK, DOCUMENT_TYPE_RESEARCH_REPORT, DOCUMENT_TYPE_CREATIVE_WORK,
@@ -166,11 +165,7 @@ export default class MyIncompleteRecord extends PureComponent {
 
         const txt = pagesLocale.pages.incompletePublication;
         const txtFixForm = formsLocale.forms.fixPublicationForm;
-        const authors = componentsLocale.components.authors;
-        authors.description = txt.fields.authors.description;
-        authors.field.form.locale.descriptionStep1 = txt.fields.authors.updateAuthor;
-        authors.field.header.locale.descriptionStep2 = txt.fields.authors.selectAuthor;
-        authors.field.row.locale.selectHint = txt.fields.authors.ariaLabel;
+        const authors = txt.fields.authors;
 
         if (this.props.accountAuthorLoading || this.props.loadingRecordToFix) {
             return (
@@ -281,7 +276,7 @@ export default class MyIncompleteRecord extends PureComponent {
                                     hideDelete
                                     hideReorder
                                     isNtro={isNtro}
-                                    locale={authors.field}
+                                    locale={txt.fields.authors.field}
                                     name="authors"
                                     required
                                     showContributorAssignment

@@ -21,6 +21,7 @@ const handlers = {
         return {
             ...state,
             publicationsList: action.payload.data,
+            publicationsListType: action.payload.type || null,
             publicationsListPagingData: {
                 total: action.payload.total,
                 current_page: action.payload.current_page,
@@ -57,6 +58,7 @@ const handlers = {
         return {
             ...state,
             publicationsList: action.payload.data,
+            publicationsListType: action.payload.type || null,
             publicationsListPagingData: {
                 total: action.payload.total,
                 current_page: action.payload.current_page,

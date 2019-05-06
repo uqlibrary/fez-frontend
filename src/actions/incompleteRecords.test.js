@@ -140,20 +140,8 @@ describe('incompleteRecords actions', () => {
 
 describe('updateIncompleteRecord actions', () => {
     const testPid = "UQ:41878";
-    const testInput = {
-        publication: {
-            fez_record_search_key_author_id: [
-                {
-                    rek_author_id: 123
-                }
-            ]
-        },
-        author: {
-            aut_id: 124
-        }
-    };
 
-    it('should call loading/loaded actions on successful load', async () => {
+    it('should dispatch processing/success actions on successful load', async () => {
         const testInput = {
             publication: {
                 ...mockRecordToFix
@@ -163,7 +151,12 @@ describe('updateIncompleteRecord actions', () => {
             },
             author: {
                 aut_id: 410
-            }
+            },
+            authors: [],
+            ntroAbstract: {},
+            grants: [],
+            languages: [],
+            qualityIndicators: [],
         };
         mockApi
             .onPatch(repositories.routes.EXISTING_RECORD_API({pid: testPid}).apiUrl)
@@ -178,7 +171,7 @@ describe('updateIncompleteRecord actions', () => {
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
-    it('should call loading/load failed actions on incomplete data', async () => {
+    it('should dispatch failed action on incomplete data', async () => {
         const expectedActions = [
             actions.FIX_RECORD_FAILED
         ];
@@ -238,7 +231,7 @@ describe('updateIncompleteRecord actions', () => {
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
-    it('should call loading/load failed actions on bad author', async () => {
+    it('should dispatch failed action on bad author', async () => {
         const testInput = {
             ...testInput,
             author: {

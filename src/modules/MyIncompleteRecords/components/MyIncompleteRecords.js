@@ -13,6 +13,7 @@ import Hidden from '@material-ui/core/Hidden';
 export default class MyIncompleteRecords extends PureComponent {
     static propTypes = {
         publicationsList: PropTypes.array,
+        publicationsListType: PropTypes.string,
         publicationsListFacets: PropTypes.object,
         loadingPublicationsList: PropTypes.bool,
         publicationsListPagingData: PropTypes.object,
@@ -53,7 +54,7 @@ export default class MyIncompleteRecords extends PureComponent {
     }
 
     componentDidMount() {
-        if (!this.props.accountLoading) {
+        if (!this.props.accountLoading && (!this.props.publicationsList || this.props.publicationsList !== 'incomplete')) {
             this.props.actions.searchAuthorIncompletePublications({...this.state});
         }
     }
