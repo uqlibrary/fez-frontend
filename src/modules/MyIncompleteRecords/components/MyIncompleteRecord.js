@@ -23,7 +23,7 @@ import { general, validation, routes } from 'config';
 import { default as pagesLocale } from 'locale/pages';
 import { default as formsLocale } from 'locale/forms';
 import { default as componentsLocale } from 'locale/components';
-import locale from 'locale/viewRecord';
+import { default as viewRecordLocale } from 'locale/viewRecord';
 import {
     DOCUMENT_TYPE_DESIGN, DOCUMENT_TYPE_JOURNAL_ARTICLE, DOCUMENT_TYPE_BOOK_CHAPTER, DOCUMENT_TYPE_BOOK, DOCUMENT_TYPE_RESEARCH_REPORT, DOCUMENT_TYPE_CREATIVE_WORK,
     CW_NTRO_SUBTYPES, LP_NTRO_SUBTYPES, RRW_NTRO_SUBTYPES, CPEE_NTRO_SUBTYPES, RESEARCH_REPORT_NTRO_SUBTYPES, NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK
@@ -209,13 +209,13 @@ export default class MyIncompleteRecord extends PureComponent {
                             />
                         </Grid>
                         <Grid item xs={12}>
-                            <StandardCard title={locale.viewRecord.sections.publicationDetails}>
+                            <StandardCard title={viewRecordLocale.viewRecord.sections.publicationDetails}>
                                 <Grid container spacing={8} style={{paddingBottom: 12, borderBottom: '1px solid #f2f2f2'}}>
                                     {
                                         !!this.props.recordToFix && !!this.props.recordToFix.rek_display_type_lookup &&
                                         <Grid container spacing={16} alignItems="flex-start">
                                             <Grid item xs={12} sm={3}>
-                                                <Typography variant="body2" component={'span'}>{locale.viewRecord.headings.default.publicationDetails.rek_display_type}</Typography>
+                                                <Typography variant="body2" component={'span'}>{viewRecordLocale.viewRecord.headings.default.publicationDetails.rek_display_type}</Typography>
                                             </Grid>
                                             <Grid item xs={12} sm={9}>
                                                 <Typography variant="body2" component={'span'}>{this.props.recordToFix.rek_display_type_lookup}</Typography>
@@ -228,7 +228,7 @@ export default class MyIncompleteRecord extends PureComponent {
                                         !!this.props.recordToFix && !!this.props.recordToFix.rek_subtype &&
                                         <Grid container spacing={16} alignItems="flex-start">
                                             <Grid item xs={12} sm={3}>
-                                                <Typography variant="body2" component={'span'}>{locale.viewRecord.headings.default.publicationDetails.rek_subtype}</Typography>
+                                                <Typography variant="body2" component={'span'}>{viewRecordLocale.viewRecord.headings.default.publicationDetails.rek_subtype}</Typography>
                                             </Grid>
                                             <Grid item xs={12} sm={9}>
                                                 <Typography variant="body2" component={'span'}>{this.props.recordToFix.rek_subtype}</Typography>
