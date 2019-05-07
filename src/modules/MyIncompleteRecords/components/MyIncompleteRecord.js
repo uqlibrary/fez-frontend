@@ -27,6 +27,7 @@ import {
     DOCUMENT_TYPE_DESIGN, DOCUMENT_TYPE_JOURNAL_ARTICLE, DOCUMENT_TYPE_BOOK_CHAPTER, DOCUMENT_TYPE_BOOK, DOCUMENT_TYPE_RESEARCH_REPORT, DOCUMENT_TYPE_CREATIVE_WORK,
     CW_NTRO_SUBTYPES, LP_NTRO_SUBTYPES, RRW_NTRO_SUBTYPES, CPEE_NTRO_SUBTYPES, RESEARCH_REPORT_NTRO_SUBTYPES, NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK
 } from 'config/general';
+import {pathConfig} from 'config/routes';
 
 export default class MyIncompleteRecord extends PureComponent {
     static propTypes = {
@@ -87,7 +88,7 @@ export default class MyIncompleteRecord extends PureComponent {
     };
 
     _cancelFix = () => {
-        this.props.history.goBack();
+        this.props.history.push(pathConfig.records.incomplete);
     };
 
     _actionSelected = (event, value) => {

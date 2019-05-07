@@ -108,12 +108,9 @@ describe('Component MyIncompleteRecord', () => {
 
     it('should redirect to other pages', () => {
         const testMethod = jest.fn();
-        const goBack = jest.fn();
-
-        const wrapper = setup({recordToFix: mockRecordToFix, history: {push: testMethod, goBack: goBack}});
-
+        const wrapper = setup({recordToFix: mockRecordToFix, history: {push: testMethod}});
         wrapper.instance()._cancelFix();
-        expect(goBack).toHaveBeenCalled();
+        expect(testMethod).toHaveBeenCalledWith('/records/incomplete');
     });
 
     it('should clear record to fix when leaving the form', () => {
