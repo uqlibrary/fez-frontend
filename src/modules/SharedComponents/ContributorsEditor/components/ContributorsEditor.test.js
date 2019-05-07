@@ -99,8 +99,8 @@ describe('ContributorsEditor', () => {
         const wrapper = setup({ author: authorsSearch.data[0] });
         expect(wrapper.state().contributors.length).toEqual(0);
         wrapper.instance().addContributor({
-            displayName: 'J.Smith',
-            ...authorsSearch.data[0]
+            nameAsPublished: 'J.Smith',
+            uqIdentifier: `${authorsSearch.data[0].aut_id}`
         });
         expect(wrapper.state().contributors.length).toEqual(1);
         expect(wrapper.state().isCurrentAuthorSelected).toEqual(true);
