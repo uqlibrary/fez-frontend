@@ -122,15 +122,6 @@ const mapStateToProps = (state, ownProps) => {
         formErrors: formErrors,
         disableSubmit: formErrors && !(formErrors instanceof Immutable.Map),
         initialValues: {
-            // Place all of the imported NTRO values from the PID into their form fields here....
-            rek_title: importedValues && importedValues.rek_title || null,
-            fez_record_search_key_significance: importedValues && importedValues.fez_record_search_key_significance || null,
-            rek_description: importedValues && importedValues.rek_description || null,
-            rek_formatted_abstract: importedValues && importedValues.rek_formatted_abstract || null,
-            fez_record_search_key_total_pages: importedValues && importedValues.fez_record_search_key_total_pages || { rek_total_pages: '' },
-            fez_record_search_key_quality_indicator: importedValues && importedValues.fez_record_search_key_quality_indicator || null,
-            fez_record_search_key_audience_size: importedValues && importedValues.fez_record_search_key_audience_size || {rek_audience_size: null},
-            fez_record_search_key_creator_contribution_statement: importedValues && importedValues.fez_record_search_key_creator_contribution_statement || null,
             grants,
             authors,
             languages
