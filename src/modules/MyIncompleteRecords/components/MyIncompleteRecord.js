@@ -27,8 +27,21 @@ import {
     DOCUMENT_TYPE_DESIGN, DOCUMENT_TYPE_JOURNAL_ARTICLE, DOCUMENT_TYPE_BOOK_CHAPTER, DOCUMENT_TYPE_BOOK, DOCUMENT_TYPE_RESEARCH_REPORT, DOCUMENT_TYPE_CREATIVE_WORK,
     CW_NTRO_SUBTYPES, LP_NTRO_SUBTYPES, RRW_NTRO_SUBTYPES, CPEE_NTRO_SUBTYPES, RESEARCH_REPORT_NTRO_SUBTYPES, NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK
 } from 'config/general';
+import {withStyles} from '@material-ui/core/styles';
 
-export default class MyIncompleteRecord extends PureComponent {
+export const styles = (theme) => ({
+    GridType: {
+        paddingBottom: 12,
+        borderBottom: `1px solid ${theme.palette.secondary.light}`
+    },
+    GridSubType: {
+        marginTop: 12,
+        paddingBottom: 12,
+        borderBottom: `1px solid ${theme.palette.secondary.light}`
+    }
+});
+
+export class MyIncompleteRecordClass extends PureComponent {
     static propTypes = {
         ...propTypes, // all redux-form props
         disableSubmit: PropTypes.bool,
@@ -45,7 +58,8 @@ export default class MyIncompleteRecord extends PureComponent {
 
         publicationToFixFileUploadingError: PropTypes.bool,
 
-        errors: PropTypes.object
+        errors: PropTypes.object,
+        classes: PropTypes.object
     };
 
     componentDidMount() {
@@ -149,7 +163,7 @@ export default class MyIncompleteRecord extends PureComponent {
         const defaultLanguage = !!this.props.recordToFix && !!this.props.recordToFix.fez_record_search_key_language
             && this.props.recordToFix.fez_record_search_key_language.length > 0
             && this.props.recordToFix.fez_record_search_key_language[0].rek_language
-         || 'eng';
+            || 'eng';
 
         // fez_record_search_key_quality_indicator
         const editQualityIndicator = (isDocumentType1 || isDocumentType2 || isDocumentType3) &&
@@ -205,7 +219,7 @@ export default class MyIncompleteRecord extends PureComponent {
                         </Grid>
                         <Grid item xs={12}>
                             <StandardCard title={viewRecordLocale.viewRecord.sections.publicationDetails}>
-                                <Grid container spacing={8} style={{paddingBottom: 12, borderBottom: '1px solid #f2f2f2'}}>
+                                <Grid container spacing={8} className={this.props.classes.GridType}>
                                     {
                                         !!this.props.recordToFix && !!this.props.recordToFix.rek_display_type_lookup &&
                                         <Grid container spacing={16} alignItems="flex-start">
@@ -218,7 +232,7 @@ export default class MyIncompleteRecord extends PureComponent {
                                         </Grid>
                                     }
                                 </Grid>
-                                <Grid container spacing={8} style={{marginTop: 12, paddingBottom: 12, borderBottom: '1px solid #f2f2f2'}}>
+                                <Grid container spacing={8} className={this.props.classes.GridSubType}>
                                     {
                                         !!this.props.recordToFix && !!this.props.recordToFix.rek_subtype &&
                                         <Grid container spacing={16} alignItems="flex-start">
@@ -342,3 +356,6 @@ export default class MyIncompleteRecord extends PureComponent {
         );
     }
 }
+
+const MyIncompleteRecord = withStyles(styles, {withTheme: true})(MyIncompleteRecordClass);
+export default MyIncompleteRecord;

@@ -1,5 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Cards should have a proper style generator 1`] = `
+Object {
+  "GridSubType": Object {
+    "borderBottom": "1px solid test1",
+    "marginTop": 12,
+    "paddingBottom": 12,
+  },
+  "GridType": Object {
+    "borderBottom": "1px solid test1",
+    "paddingBottom": 12,
+  },
+}
+`;
+
 exports[`Cards will display correct empty fields for a Exhibition Creative Work work 1`] = `
 <StandardPage
   title="Update my work"
@@ -180,12 +194,6 @@ exports[`Cards will display correct empty fields for a Exhibition Creative Work 
           <WithStyles(Grid)
             container={true}
             spacing={8}
-            style={
-              Object {
-                "borderBottom": "1px solid #f2f2f2",
-                "paddingBottom": 12,
-              }
-            }
           >
             <WithStyles(Grid)
               alignItems="flex-start"
@@ -221,13 +229,6 @@ exports[`Cards will display correct empty fields for a Exhibition Creative Work 
           <WithStyles(Grid)
             container={true}
             spacing={8}
-            style={
-              Object {
-                "borderBottom": "1px solid #f2f2f2",
-                "marginTop": 12,
-                "paddingBottom": 12,
-              }
-            }
           >
             <WithStyles(Grid)
               alignItems="flex-start"
@@ -849,12 +850,6 @@ exports[`Cards will display correct empty fields for a Live Performance of Music
           <WithStyles(Grid)
             container={true}
             spacing={8}
-            style={
-              Object {
-                "borderBottom": "1px solid #f2f2f2",
-                "paddingBottom": 12,
-              }
-            }
           >
             <WithStyles(Grid)
               alignItems="flex-start"
@@ -890,13 +885,6 @@ exports[`Cards will display correct empty fields for a Live Performance of Music
           <WithStyles(Grid)
             container={true}
             spacing={8}
-            style={
-              Object {
-                "borderBottom": "1px solid #f2f2f2",
-                "marginTop": 12,
-                "paddingBottom": 12,
-              }
-            }
           >
             <WithStyles(Grid)
               alignItems="flex-start"
@@ -1518,12 +1506,6 @@ exports[`Cards will display correct empty fields for a Musical Creative work 1`]
           <WithStyles(Grid)
             container={true}
             spacing={8}
-            style={
-              Object {
-                "borderBottom": "1px solid #f2f2f2",
-                "paddingBottom": 12,
-              }
-            }
           >
             <WithStyles(Grid)
               alignItems="flex-start"
@@ -1559,13 +1541,6 @@ exports[`Cards will display correct empty fields for a Musical Creative work 1`]
           <WithStyles(Grid)
             container={true}
             spacing={8}
-            style={
-              Object {
-                "borderBottom": "1px solid #f2f2f2",
-                "marginTop": 12,
-                "paddingBottom": 12,
-              }
-            }
           >
             <WithStyles(Grid)
               alignItems="flex-start"
@@ -2187,12 +2162,6 @@ exports[`Cards will display correct empty fields for a Public Sector Research Re
           <WithStyles(Grid)
             container={true}
             spacing={8}
-            style={
-              Object {
-                "borderBottom": "1px solid #f2f2f2",
-                "paddingBottom": 12,
-              }
-            }
           >
             <WithStyles(Grid)
               alignItems="flex-start"
@@ -2228,13 +2197,6 @@ exports[`Cards will display correct empty fields for a Public Sector Research Re
           <WithStyles(Grid)
             container={true}
             spacing={8}
-            style={
-              Object {
-                "borderBottom": "1px solid #f2f2f2",
-                "marginTop": 12,
-                "paddingBottom": 12,
-              }
-            }
           >
             <WithStyles(Grid)
               alignItems="flex-start"
@@ -2856,12 +2818,6 @@ exports[`Cards will display correct empty fields for a Textual Book work 1`] = `
           <WithStyles(Grid)
             container={true}
             spacing={8}
-            style={
-              Object {
-                "borderBottom": "1px solid #f2f2f2",
-                "paddingBottom": 12,
-              }
-            }
           >
             <WithStyles(Grid)
               alignItems="flex-start"
@@ -2897,13 +2853,6 @@ exports[`Cards will display correct empty fields for a Textual Book work 1`] = `
           <WithStyles(Grid)
             container={true}
             spacing={8}
-            style={
-              Object {
-                "borderBottom": "1px solid #f2f2f2",
-                "marginTop": 12,
-                "paddingBottom": 12,
-              }
-            }
           >
             <WithStyles(Grid)
               alignItems="flex-start"
@@ -3532,12 +3481,6 @@ exports[`Cards will display correct empty fields for a Textual Book work with la
           <WithStyles(Grid)
             container={true}
             spacing={8}
-            style={
-              Object {
-                "borderBottom": "1px solid #f2f2f2",
-                "paddingBottom": 12,
-              }
-            }
           >
             <WithStyles(Grid)
               alignItems="flex-start"
@@ -3573,13 +3516,6 @@ exports[`Cards will display correct empty fields for a Textual Book work with la
           <WithStyles(Grid)
             container={true}
             spacing={8}
-            style={
-              Object {
-                "borderBottom": "1px solid #f2f2f2",
-                "marginTop": 12,
-                "paddingBottom": 12,
-              }
-            }
           >
             <WithStyles(Grid)
               alignItems="flex-start"
@@ -4201,12 +4137,6 @@ exports[`Cards will display correct empty fields for a Website Creative work 1`]
           <WithStyles(Grid)
             container={true}
             spacing={8}
-            style={
-              Object {
-                "borderBottom": "1px solid #f2f2f2",
-                "paddingBottom": 12,
-              }
-            }
           >
             <WithStyles(Grid)
               alignItems="flex-start"
@@ -4242,13 +4172,6 @@ exports[`Cards will display correct empty fields for a Website Creative work 1`]
           <WithStyles(Grid)
             container={true}
             spacing={8}
-            style={
-              Object {
-                "borderBottom": "1px solid #f2f2f2",
-                "marginTop": 12,
-                "paddingBottom": 12,
-              }
-            }
           >
             <WithStyles(Grid)
               alignItems="flex-start"
@@ -4870,12 +4793,6 @@ exports[`Cards will display correct empty fields for an Architectural Design wor
           <WithStyles(Grid)
             container={true}
             spacing={8}
-            style={
-              Object {
-                "borderBottom": "1px solid #f2f2f2",
-                "paddingBottom": 12,
-              }
-            }
           >
             <WithStyles(Grid)
               alignItems="flex-start"
@@ -4911,13 +4828,6 @@ exports[`Cards will display correct empty fields for an Architectural Design wor
           <WithStyles(Grid)
             container={true}
             spacing={8}
-            style={
-              Object {
-                "borderBottom": "1px solid #f2f2f2",
-                "marginTop": 12,
-                "paddingBottom": 12,
-              }
-            }
           >
             <WithStyles(Grid)
               alignItems="flex-start"
@@ -5597,12 +5507,6 @@ exports[`Cards will display empty where nothing is incomplete 1`] = `
           <WithStyles(Grid)
             container={true}
             spacing={8}
-            style={
-              Object {
-                "borderBottom": "1px solid #f2f2f2",
-                "paddingBottom": 12,
-              }
-            }
           >
             <WithStyles(Grid)
               alignItems="flex-start"
@@ -5638,13 +5542,6 @@ exports[`Cards will display empty where nothing is incomplete 1`] = `
           <WithStyles(Grid)
             container={true}
             spacing={8}
-            style={
-              Object {
-                "borderBottom": "1px solid #f2f2f2",
-                "marginTop": 12,
-                "paddingBottom": 12,
-              }
-            }
           >
             <WithStyles(Grid)
               alignItems="flex-start"
@@ -6400,12 +6297,6 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
           <WithStyles(Grid)
             container={true}
             spacing={8}
-            style={
-              Object {
-                "borderBottom": "1px solid #f2f2f2",
-                "paddingBottom": 12,
-              }
-            }
           >
             <WithStyles(Grid)
               alignItems="flex-start"
@@ -6441,13 +6332,6 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
           <WithStyles(Grid)
             container={true}
             spacing={8}
-            style={
-              Object {
-                "borderBottom": "1px solid #f2f2f2",
-                "marginTop": 12,
-                "paddingBottom": 12,
-              }
-            }
           >
             <WithStyles(Grid)
               alignItems="flex-start"
@@ -7203,12 +7087,6 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
           <WithStyles(Grid)
             container={true}
             spacing={8}
-            style={
-              Object {
-                "borderBottom": "1px solid #f2f2f2",
-                "paddingBottom": 12,
-              }
-            }
           >
             <WithStyles(Grid)
               alignItems="flex-start"
@@ -7244,13 +7122,6 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
           <WithStyles(Grid)
             container={true}
             spacing={8}
-            style={
-              Object {
-                "borderBottom": "1px solid #f2f2f2",
-                "marginTop": 12,
-                "paddingBottom": 12,
-              }
-            }
           >
             <WithStyles(Grid)
               alignItems="flex-start"
@@ -8018,12 +7889,6 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
           <WithStyles(Grid)
             container={true}
             spacing={8}
-            style={
-              Object {
-                "borderBottom": "1px solid #f2f2f2",
-                "paddingBottom": 12,
-              }
-            }
           >
             <WithStyles(Grid)
               alignItems="flex-start"
@@ -8059,13 +7924,6 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
           <WithStyles(Grid)
             container={true}
             spacing={8}
-            style={
-              Object {
-                "borderBottom": "1px solid #f2f2f2",
-                "marginTop": 12,
-                "paddingBottom": 12,
-              }
-            }
           >
             <WithStyles(Grid)
               alignItems="flex-start"
@@ -8827,12 +8685,6 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
           <WithStyles(Grid)
             container={true}
             spacing={8}
-            style={
-              Object {
-                "borderBottom": "1px solid #f2f2f2",
-                "paddingBottom": 12,
-              }
-            }
           >
             <WithStyles(Grid)
               alignItems="flex-start"
@@ -8868,13 +8720,6 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
           <WithStyles(Grid)
             container={true}
             spacing={8}
-            style={
-              Object {
-                "borderBottom": "1px solid #f2f2f2",
-                "marginTop": 12,
-                "paddingBottom": 12,
-              }
-            }
           >
             <WithStyles(Grid)
               alignItems="flex-start"
@@ -9630,12 +9475,6 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
           <WithStyles(Grid)
             container={true}
             spacing={8}
-            style={
-              Object {
-                "borderBottom": "1px solid #f2f2f2",
-                "paddingBottom": 12,
-              }
-            }
           >
             <WithStyles(Grid)
               alignItems="flex-start"
@@ -9671,13 +9510,6 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
           <WithStyles(Grid)
             container={true}
             spacing={8}
-            style={
-              Object {
-                "borderBottom": "1px solid #f2f2f2",
-                "marginTop": 12,
-                "paddingBottom": 12,
-              }
-            }
           >
             <WithStyles(Grid)
               alignItems="flex-start"
