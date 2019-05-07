@@ -308,10 +308,10 @@ export default class MyIncompleteRecord extends PureComponent {
                                         !!this.props.recordToFix && !!this.props.recordToFix.rek_display_type_lookup &&
                                         <Grid container spacing={16} alignItems="flex-start">
                                             <Grid item xs={12} sm={3}>
-                                                <Typography variant="body2" component={'span'}>{viewRecordLocale.viewRecord.headings.default.publicationDetails.rek_display_type}</Typography>
+                                                <Typography variant="body2">{viewRecordLocale.viewRecord.headings.default.publicationDetails.rek_display_type}</Typography>
                                             </Grid>
                                             <Grid item xs={12} sm={9}>
-                                                <Typography variant="body2" component={'span'}>{this.props.recordToFix.rek_display_type_lookup}</Typography>
+                                                <Typography variant="body2">{this.props.recordToFix.rek_display_type_lookup}</Typography>
                                             </Grid>
                                         </Grid>
                                     }
@@ -321,10 +321,10 @@ export default class MyIncompleteRecord extends PureComponent {
                                         !!this.props.recordToFix && !!this.props.recordToFix.rek_subtype &&
                                         <Grid container spacing={16} alignItems="flex-start">
                                             <Grid item xs={12} sm={3}>
-                                                <Typography variant="body2" component={'span'}>{viewRecordLocale.viewRecord.headings.default.publicationDetails.rek_subtype}</Typography>
+                                                <Typography variant="body2">{viewRecordLocale.viewRecord.headings.default.publicationDetails.rek_subtype}</Typography>
                                             </Grid>
                                             <Grid item xs={12} sm={9}>
-                                                <Typography variant="body2" component={'span'}>{this.props.recordToFix.rek_subtype}</Typography>
+                                                <Typography variant="body2">{this.props.recordToFix.rek_subtype}</Typography>
                                             </Grid>
                                         </Grid>
                                     }
@@ -380,7 +380,7 @@ export default class MyIncompleteRecord extends PureComponent {
                                     editMode
                                     hideDelete
                                     hideReorder
-                                    isNtro={isNtro}
+                                    isNtro
                                     locale={txt.fields.authors.field}
                                     name="authors"
                                     required

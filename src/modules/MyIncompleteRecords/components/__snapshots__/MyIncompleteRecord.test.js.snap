@@ -198,7 +198,6 @@ exports[`Cards will display correct empty fields for a Exhibition Creative Work 
                 xs={12}
               >
                 <WithStyles(Typography)
-                  component="span"
                   variant="body2"
                 >
                   Type of work
@@ -210,7 +209,6 @@ exports[`Cards will display correct empty fields for a Exhibition Creative Work 
                 xs={12}
               >
                 <WithStyles(Typography)
-                  component="span"
                   variant="body2"
                 >
                   Creative Work
@@ -240,7 +238,6 @@ exports[`Cards will display correct empty fields for a Exhibition Creative Work 
                 xs={12}
               >
                 <WithStyles(Typography)
-                  component="span"
                   variant="body2"
                 >
                   Sub-type
@@ -252,7 +249,6 @@ exports[`Cards will display correct empty fields for a Exhibition Creative Work 
                 xs={12}
               >
                 <WithStyles(Typography)
-                  component="span"
                   variant="body2"
                 >
                   Curated or Produced Exhibition or Event - Exhibition or Event
@@ -867,7 +863,6 @@ exports[`Cards will display correct empty fields for a Live Performance of Music
                 xs={12}
               >
                 <WithStyles(Typography)
-                  component="span"
                   variant="body2"
                 >
                   Type of work
@@ -879,7 +874,6 @@ exports[`Cards will display correct empty fields for a Live Performance of Music
                 xs={12}
               >
                 <WithStyles(Typography)
-                  component="span"
                   variant="body2"
                 >
                   Creative Work
@@ -909,7 +903,6 @@ exports[`Cards will display correct empty fields for a Live Performance of Music
                 xs={12}
               >
                 <WithStyles(Typography)
-                  component="span"
                   variant="body2"
                 >
                   Sub-type
@@ -921,7 +914,6 @@ exports[`Cards will display correct empty fields for a Live Performance of Music
                 xs={12}
               >
                 <WithStyles(Typography)
-                  component="span"
                   variant="body2"
                 >
                   Live Performance of Creative Work - Music
@@ -1536,7 +1528,6 @@ exports[`Cards will display correct empty fields for a Musical Creative work 1`]
                 xs={12}
               >
                 <WithStyles(Typography)
-                  component="span"
                   variant="body2"
                 >
                   Type of work
@@ -1548,7 +1539,6 @@ exports[`Cards will display correct empty fields for a Musical Creative work 1`]
                 xs={12}
               >
                 <WithStyles(Typography)
-                  component="span"
                   variant="body2"
                 >
                   Creative Work
@@ -1578,7 +1568,6 @@ exports[`Cards will display correct empty fields for a Musical Creative work 1`]
                 xs={12}
               >
                 <WithStyles(Typography)
-                  component="span"
                   variant="body2"
                 >
                   Sub-type
@@ -1590,7 +1579,6 @@ exports[`Cards will display correct empty fields for a Musical Creative work 1`]
                 xs={12}
               >
                 <WithStyles(Typography)
-                  component="span"
                   variant="body2"
                 >
                   Creative Work - Musical Composition
@@ -2205,7 +2193,6 @@ exports[`Cards will display correct empty fields for a Public Sector Research Re
                 xs={12}
               >
                 <WithStyles(Typography)
-                  component="span"
                   variant="body2"
                 >
                   Type of work
@@ -2217,7 +2204,6 @@ exports[`Cards will display correct empty fields for a Public Sector Research Re
                 xs={12}
               >
                 <WithStyles(Typography)
-                  component="span"
                   variant="body2"
                 >
                   Research Report
@@ -2247,7 +2233,6 @@ exports[`Cards will display correct empty fields for a Public Sector Research Re
                 xs={12}
               >
                 <WithStyles(Typography)
-                  component="span"
                   variant="body2"
                 >
                   Sub-type
@@ -2259,7 +2244,6 @@ exports[`Cards will display correct empty fields for a Public Sector Research Re
                 xs={12}
               >
                 <WithStyles(Typography)
-                  component="span"
                   variant="body2"
                 >
                   Research Report for an External Body - Public Sector
@@ -2874,7 +2858,6 @@ exports[`Cards will display correct empty fields for a Textual Book work 1`] = `
                 xs={12}
               >
                 <WithStyles(Typography)
-                  component="span"
                   variant="body2"
                 >
                   Type of work
@@ -2886,7 +2869,6 @@ exports[`Cards will display correct empty fields for a Textual Book work 1`] = `
                 xs={12}
               >
                 <WithStyles(Typography)
-                  component="span"
                   variant="body2"
                 >
                   Book
@@ -2916,7 +2898,6 @@ exports[`Cards will display correct empty fields for a Textual Book work 1`] = `
                 xs={12}
               >
                 <WithStyles(Typography)
-                  component="span"
                   variant="body2"
                 >
                   Sub-type
@@ -2928,7 +2909,6 @@ exports[`Cards will display correct empty fields for a Textual Book work 1`] = `
                 xs={12}
               >
                 <WithStyles(Typography)
-                  component="span"
                   variant="body2"
                 >
                   Creative Work - Textual
@@ -3550,7 +3530,6 @@ exports[`Cards will display correct empty fields for a Textual Book work with la
                 xs={12}
               >
                 <WithStyles(Typography)
-                  component="span"
                   variant="body2"
                 >
                   Type of work
@@ -3562,7 +3541,6 @@ exports[`Cards will display correct empty fields for a Textual Book work with la
                 xs={12}
               >
                 <WithStyles(Typography)
-                  component="span"
                   variant="body2"
                 >
                   Book
@@ -3592,7 +3570,6 @@ exports[`Cards will display correct empty fields for a Textual Book work with la
                 xs={12}
               >
                 <WithStyles(Typography)
-                  component="span"
                   variant="body2"
                 >
                   Sub-type
@@ -3604,7 +3581,6 @@ exports[`Cards will display correct empty fields for a Textual Book work with la
                 xs={12}
               >
                 <WithStyles(Typography)
-                  component="span"
                   variant="body2"
                 >
                   Creative Work - Textual
@@ -4219,7 +4195,6 @@ exports[`Cards will display correct empty fields for a Website Creative work 1`]
                 xs={12}
               >
                 <WithStyles(Typography)
-                  component="span"
                   variant="body2"
                 >
                   Type of work
@@ -4231,7 +4206,6 @@ exports[`Cards will display correct empty fields for a Website Creative work 1`]
                 xs={12}
               >
                 <WithStyles(Typography)
-                  component="span"
                   variant="body2"
                 >
                   Creative Work
@@ -4261,7 +4235,6 @@ exports[`Cards will display correct empty fields for a Website Creative work 1`]
                 xs={12}
               >
                 <WithStyles(Typography)
-                  component="span"
                   variant="body2"
                 >
                   Sub-type
@@ -4273,7 +4246,6 @@ exports[`Cards will display correct empty fields for a Website Creative work 1`]
                 xs={12}
               >
                 <WithStyles(Typography)
-                  component="span"
                   variant="body2"
                 >
                   Recorded or Rendered Creative Work - Web Exhibition
@@ -4888,7 +4860,6 @@ exports[`Cards will display correct empty fields for an Architectural Design wor
                 xs={12}
               >
                 <WithStyles(Typography)
-                  component="span"
                   variant="body2"
                 >
                   Type of work
@@ -4900,7 +4871,6 @@ exports[`Cards will display correct empty fields for an Architectural Design wor
                 xs={12}
               >
                 <WithStyles(Typography)
-                  component="span"
                   variant="body2"
                 >
                   Design
@@ -4930,7 +4900,6 @@ exports[`Cards will display correct empty fields for an Architectural Design wor
                 xs={12}
               >
                 <WithStyles(Typography)
-                  component="span"
                   variant="body2"
                 >
                   Sub-type
@@ -4942,7 +4911,6 @@ exports[`Cards will display correct empty fields for an Architectural Design wor
                 xs={12}
               >
                 <WithStyles(Typography)
-                  component="span"
                   variant="body2"
                 >
                   Creative Work - Design/Architectural
@@ -5615,7 +5583,6 @@ exports[`Cards will display empty where nothing is incomplete 1`] = `
                 xs={12}
               >
                 <WithStyles(Typography)
-                  component="span"
                   variant="body2"
                 >
                   Type of work
@@ -5627,7 +5594,6 @@ exports[`Cards will display empty where nothing is incomplete 1`] = `
                 xs={12}
               >
                 <WithStyles(Typography)
-                  component="span"
                   variant="body2"
                 >
                   Creative Work
@@ -5657,7 +5623,6 @@ exports[`Cards will display empty where nothing is incomplete 1`] = `
                 xs={12}
               >
                 <WithStyles(Typography)
-                  component="span"
                   variant="body2"
                 >
                   Sub-type
@@ -5669,7 +5634,6 @@ exports[`Cards will display empty where nothing is incomplete 1`] = `
                 xs={12}
               >
                 <WithStyles(Typography)
-                  component="span"
                   variant="body2"
                 >
                   Curated or Produced Exhibition or Event - Exhibition or Event
@@ -6418,7 +6382,6 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
                 xs={12}
               >
                 <WithStyles(Typography)
-                  component="span"
                   variant="body2"
                 >
                   Type of work
@@ -6430,7 +6393,6 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
                 xs={12}
               >
                 <WithStyles(Typography)
-                  component="span"
                   variant="body2"
                 >
                   Journal Article
@@ -6460,7 +6422,6 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
                 xs={12}
               >
                 <WithStyles(Typography)
-                  component="span"
                   variant="body2"
                 >
                   Sub-type
@@ -6472,7 +6433,6 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
                 xs={12}
               >
                 <WithStyles(Typography)
-                  component="span"
                   variant="body2"
                 >
                   Other
@@ -6526,7 +6486,7 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
             editMode={true}
             hideDelete={true}
             hideReorder={true}
-            isNtro={false}
+            isNtro={true}
             locale={
               Object {
                 "form": Object {
@@ -7221,7 +7181,6 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
                 xs={12}
               >
                 <WithStyles(Typography)
-                  component="span"
                   variant="body2"
                 >
                   Type of work
@@ -7233,7 +7192,6 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
                 xs={12}
               >
                 <WithStyles(Typography)
-                  component="span"
                   variant="body2"
                 >
                   Journal Article
@@ -7263,7 +7221,6 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
                 xs={12}
               >
                 <WithStyles(Typography)
-                  component="span"
                   variant="body2"
                 >
                   Sub-type
@@ -7275,7 +7232,6 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
                 xs={12}
               >
                 <WithStyles(Typography)
-                  component="span"
                   variant="body2"
                 >
                   Other
@@ -7329,7 +7285,7 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
             editMode={true}
             hideDelete={true}
             hideReorder={true}
-            isNtro={false}
+            isNtro={true}
             locale={
               Object {
                 "form": Object {
@@ -8036,7 +7992,6 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
                 xs={12}
               >
                 <WithStyles(Typography)
-                  component="span"
                   variant="body2"
                 >
                   Type of work
@@ -8048,7 +8003,6 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
                 xs={12}
               >
                 <WithStyles(Typography)
-                  component="span"
                   variant="body2"
                 >
                   Journal Article
@@ -8078,7 +8032,6 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
                 xs={12}
               >
                 <WithStyles(Typography)
-                  component="span"
                   variant="body2"
                 >
                   Sub-type
@@ -8090,7 +8043,6 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
                 xs={12}
               >
                 <WithStyles(Typography)
-                  component="span"
                   variant="body2"
                 >
                   Other
@@ -8144,7 +8096,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
             editMode={true}
             hideDelete={true}
             hideReorder={true}
-            isNtro={false}
+            isNtro={true}
             locale={
               Object {
                 "form": Object {
@@ -8845,7 +8797,6 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
                 xs={12}
               >
                 <WithStyles(Typography)
-                  component="span"
                   variant="body2"
                 >
                   Type of work
@@ -8857,7 +8808,6 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
                 xs={12}
               >
                 <WithStyles(Typography)
-                  component="span"
                   variant="body2"
                 >
                   Journal Article
@@ -8887,7 +8837,6 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
                 xs={12}
               >
                 <WithStyles(Typography)
-                  component="span"
                   variant="body2"
                 >
                   Sub-type
@@ -8899,7 +8848,6 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
                 xs={12}
               >
                 <WithStyles(Typography)
-                  component="span"
                   variant="body2"
                 >
                   Other
@@ -8953,7 +8901,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
             editMode={true}
             hideDelete={true}
             hideReorder={true}
-            isNtro={false}
+            isNtro={true}
             locale={
               Object {
                 "form": Object {
@@ -9648,7 +9596,6 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
                 xs={12}
               >
                 <WithStyles(Typography)
-                  component="span"
                   variant="body2"
                 >
                   Type of work
@@ -9660,7 +9607,6 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
                 xs={12}
               >
                 <WithStyles(Typography)
-                  component="span"
                   variant="body2"
                 >
                   Journal Article
@@ -9690,7 +9636,6 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
                 xs={12}
               >
                 <WithStyles(Typography)
-                  component="span"
                   variant="body2"
                 >
                   Sub-type
@@ -9702,7 +9647,6 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
                 xs={12}
               >
                 <WithStyles(Typography)
-                  component="span"
                   variant="body2"
                 >
                   Other
@@ -9756,7 +9700,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
             editMode={true}
             hideDelete={true}
             hideReorder={true}
-            isNtro={false}
+            isNtro={true}
             locale={
               Object {
                 "form": Object {
