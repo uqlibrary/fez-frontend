@@ -85,20 +85,20 @@ export class ContributorsEditor extends PureComponent {
                 errorMessage: this.props.locale.errorMessage
             });
         } else {
-            contributor.disabled = !!contributor.aut_id;
+            contributor.disabled = !!contributor.uqIdentifier;
 
             this.setState({
                 contributors: [...this.state.contributors, contributor],
                 errorMessage: '',
                 isCurrentAuthorSelected: this.state.isCurrentAuthorSelected || (
                     this.props.author &&
-                    contributor.aut_id === this.props.author.aut_id
+                    contributor.uqIdentifier === `${this.props.author.aut_id}`
                 )
             }, () => {
                 // try to automatically select contributor if they are a current author
                 if (
                     this.props.author &&
-                    contributor.aut_id === this.props.author.aut_id
+                    contributor.uqIdentifier === `${this.props.author.aut_id}`
                 ) {
                     const index = this.state.contributors.length - 1;
                     this.assignContributor(index);
