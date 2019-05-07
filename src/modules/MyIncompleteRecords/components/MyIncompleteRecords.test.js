@@ -1,7 +1,7 @@
 import MyIncompleteRecords from './MyIncompleteRecords';
-import {routes, general} from 'config';
-import {locale} from 'locale';
-import {mockRecordToFix} from 'mock/data/testing/records';
+import { routes, general } from 'config';
+import { locale } from 'locale';
+import { mockRecordToFix } from 'mock/data/testing/records';
 
 function setup(testProps, isShallow = true) {
     const props = {
@@ -42,13 +42,16 @@ describe('MyIncompleteRecords test', () => {
 
     it('renders loading screen while loading publications while filtering', () => {
         const wrapper = setup({ publicationsList: [1, 2, 2] });
-        wrapper.setProps({loadingPublicationsList: true});
+        wrapper.setProps({ loadingPublicationsList: true });
         wrapper.update();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('renders loading screen while export publications loading', () => {
-        const wrapper = setup({ publicationsList: [1, 2, 2], exportPublicationsLoading: true });
+        const wrapper = setup({
+            publicationsList: [1, 2, 2],
+            exportPublicationsLoading: true
+        });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -60,7 +63,13 @@ describe('MyIncompleteRecords test', () => {
     it('renders list of publications no facets', () => {
         const wrapper = setup({
             publicationsList: [1, 2, 3], // myRecordsList.data,
-            publicationsListPagingData: {"total": 147, "per_page": 20, "current_page": 1, "from": 1,"to": 20}
+            publicationsListPagingData: {
+                "total": 147,
+                "per_page": 20,
+                "current_page": 1,
+                "from": 1,
+                "to": 20
+            }
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -68,26 +77,35 @@ describe('MyIncompleteRecords test', () => {
     it('renders list of publications with facets', () => {
         const wrapper = setup({
             publicationsList: [1, 2, 3], // myRecordsList.data,
-            publicationsListPagingData: {"total": 147, "per_page": 20, "current_page": 1, "from": 1,"to": 20},
+            publicationsListPagingData: {
+                "total": 147,
+                "per_page": 20,
+                "current_page": 1,
+                "from": 1,
+                "to": 20
+            },
             publicationsListFacets: {
                 "Display type": {
                     "doc_count_error_upper_bound": 0,
                     "sum_other_doc_count": 3,
-                    "buckets": [{"key": 179, "doc_count": 95}, {"key": 130, "doc_count": 34}, {
-                        "key": 177,
-                        "doc_count": 2
-                    }, {"key": 183, "doc_count": 2}, {"key": 174, "doc_count": 1}]
+                    "buckets": [
+                        { "key": 179, "doc_count": 95 },
+                        { "key": 130, "doc_count": 34 },
+                        { "key": 177, "doc_count": 2 },
+                        { "key": 183, "doc_count": 2 },
+                        { "key": 174, "doc_count": 1 }
+                    ]
                 },
                 "Keywords": {
                     "doc_count_error_upper_bound": 0,
                     "sum_other_doc_count": 641,
-                    "buckets": [{"key": "Brca1", "doc_count": 15}, {
-                        "key": "Oncology",
-                        "doc_count": 15
-                    }, {"key": "Breast cancer", "doc_count": 13}, {
-                        "key": "Genetics & Heredity",
-                        "doc_count": 12
-                    }, {"key": "Biochemistry & Molecular Biology", "doc_count": 10}]
+                    "buckets": [
+                        { "key": "Brca1", "doc_count": 15 },
+                        { "key": "Oncology", "doc_count": 15 },
+                        { "key": "Breast cancer", "doc_count": 13 },
+                        { "key": "Genetics & Heredity", "doc_count": 12 },
+                        { "key": "Biochemistry & Molecular Biology", "doc_count": 10 }
+                    ]
                 }
             }
         });
@@ -95,13 +113,31 @@ describe('MyIncompleteRecords test', () => {
     });
 
     it('renders active filters', () => {
-        const wrapper = setup({location: {state: {activeFacets: {filters: {}, ranges: {Year: {from: 2000, to: 2010}}}}}});
+        const wrapper = setup({
+            location: {
+                state: {
+                    activeFacets: {
+                        filters: {},
+                        ranges: {
+                            Year: {
+                                from: 2000,
+                                to: 2010
+                            }
+                        }
+                    }
+                }
+            }
+        });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('state is updated by sub components', () => {
         const testAction = jest.fn();
-        const wrapper = setup({actions: {searchAuthorIncompletePublications: testAction}});
+        const wrapper = setup({
+            actions: {
+                searchAuthorIncompletePublications: testAction
+            }
+        });
 
         wrapper.instance().pageSizeChanged(100);
         expect(wrapper.state().pageSize).toEqual(100);
@@ -117,33 +153,57 @@ describe('MyIncompleteRecords test', () => {
         expect(wrapper.state().sortDirection).toEqual('bar');
         expect(testAction).toHaveBeenCalled();
 
-        wrapper.instance().facetsChanged({'foo': 'bar'});
-        expect(wrapper.state().activeFacets).toEqual({'foo': 'bar'});
+        wrapper.instance().facetsChanged({ 'foo': 'bar' });
+        expect(wrapper.state().activeFacets).toEqual({ 'foo': 'bar' });
         expect(wrapper.state().page).toEqual(1);
         expect(testAction).toHaveBeenCalled();
     });
 
     it('sets forever true has publications on load', () => {
-        const wrapper = setup({location: { state: {page: 2, hasPublications: true}} });
+        const wrapper = setup({
+            location: {
+                state: {
+                    page: 2,
+                    hasPublications: true
+                }
+            }
+        });
         expect(wrapper.state().hasPublications).toEqual(true);
         expect(wrapper.state().page).toEqual(2);
     });
 
     it('sets forever true has publications', () => {
-        const wrapper = setup({loadingPublicationsList: true});
+        const wrapper = setup({ loadingPublicationsList: true });
         expect(wrapper.state().hasPublications).toEqual(false);
 
-        wrapper.instance().componentWillReceiveProps({loadingPublicationsList: false, publicationsList: [1,2,3], history: {}, location: {}});
+        wrapper.instance().componentWillReceiveProps({
+            loadingPublicationsList: false,
+            publicationsList: [1, 2, 3],
+            history: {},
+            location: {}
+        });
         expect(wrapper.state().hasPublications).toEqual(true);
     });
 
     it('gets publications when user clicks back and state is set', () => {
         const testAction = jest.fn();
-        const wrapper = setup({accountLoading: true, actions: {searchAuthorIncompletePublications: testAction}, thisUrl: routes.pathConfig.records.mine});
+        const wrapper = setup({
+            accountLoading: true,
+            actions: {
+                searchAuthorIncompletePublications: testAction
+            },
+            thisUrl: routes.pathConfig.records.mine
+        });
 
         wrapper.instance().componentWillReceiveProps({
-            history: {action: 'POP'},
-            location: {pathname: routes.pathConfig.records.mine, state: {page: 2, hasPublications: true}}
+            history: { action: 'POP' },
+            location: {
+                pathname: routes.pathConfig.records.mine,
+                state: {
+                    page: 2,
+                    hasPublications: true
+                }
+            }
         });
         expect(testAction).toHaveBeenCalled();
         expect(wrapper.state().hasPublications).toEqual(true);
@@ -153,17 +213,37 @@ describe('MyIncompleteRecords test', () => {
 
     it('gets publications when user clicks back and state is not set', () => {
         const testAction = jest.fn();
-        const wrapper = setup({accountLoading: true, actions: {searchAuthorIncompletePublications: testAction}, thisUrl: routes.pathConfig.records.mine});
-        wrapper.instance().componentWillReceiveProps({history: { action: 'POP'}, location: {pathname: routes.pathConfig.records.mine, state: null}});
+        const wrapper = setup({
+            accountLoading: true,
+            actions: {
+                searchAuthorIncompletePublications: testAction
+            },
+            thisUrl: routes.pathConfig.records.mine
+        });
+        wrapper.instance().componentWillReceiveProps({
+            history: { action: 'POP' },
+            location: {
+                pathname: routes.pathConfig.records.mine,
+                state: null
+            }
+        });
         expect(testAction).toHaveBeenCalled();
         expect(wrapper.state().page).toEqual(1);
     });
 
     it('doesn\'t retrieve data from history if user navigates to next page', () => {
         const testAction = jest.fn();
-        const wrapper = setup({accountLoading: true, actions: {searchAuthorIncompletePublications: testAction}});
+        const wrapper = setup({
+            accountLoading: true,
+            actions: {
+                searchAuthorIncompletePublications: testAction
+            }
+        });
 
-        wrapper.instance().componentWillReceiveProps({history: { action: 'PUSH'}, location: {pathname: routes.pathConfig.records.mine}});
+        wrapper.instance().componentWillReceiveProps({
+            history: { action: 'PUSH' },
+            location: { pathname: routes.pathConfig.records.mine }
+        });
         expect(testAction).not.toHaveBeenCalled();
     });
 
@@ -178,11 +258,19 @@ describe('MyIncompleteRecords test', () => {
 
     it('component has displayable facets', () => {
         const testAction = jest.fn();
-        const wrapper = setup({actions: {searchAuthorIncompletePublications: testAction}});
+        const wrapper = setup({ actions: { searchAuthorIncompletePublications: testAction } });
 
-        wrapper.instance().facetsChanged({'filters': {'Display type': general.PUBLICATION_TYPE_CREATIVE_WORK}});
+        wrapper.instance().facetsChanged({
+            'filters': {
+                'Display type': general.PUBLICATION_TYPE_CREATIVE_WORK
+            }
+        });
 
-        expect(wrapper.state().activeFacets).toEqual({"filters": {"Display type": general.PUBLICATION_TYPE_CREATIVE_WORK}});
+        expect(wrapper.state().activeFacets).toEqual({
+            "filters": {
+                "Display type": general.PUBLICATION_TYPE_CREATIVE_WORK
+            }
+        });
         expect(wrapper.state().page).toEqual(1);
         expect(testAction).toHaveBeenCalled();
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -192,7 +280,13 @@ describe('MyIncompleteRecords test', () => {
         const testMethod = jest.fn();
         const goBack = jest.fn();
 
-        const wrapper = setup({recordToFix: mockRecordToFix, history: {push: testMethod, goBack: goBack}});
+        const wrapper = setup({
+            recordToFix: mockRecordToFix,
+            history: {
+                push: testMethod,
+                goBack: goBack
+            }
+        });
         const item = { rek_pid: 'UQ:1001' };
         wrapper.instance().completeRecord(item);
         expect(testMethod).toHaveBeenCalledWith('/records/UQ:1001/incomplete');
