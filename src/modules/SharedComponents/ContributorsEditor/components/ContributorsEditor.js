@@ -53,6 +53,7 @@ export class ContributorsEditor extends PureComponent {
             errorMessage: '',
             isCurrentAuthorSelected: false,
             showIdentifierLookup: false,
+            contributorIndexSelectedToEdit: null
         };
     }
 
@@ -100,24 +101,20 @@ export class ContributorsEditor extends PureComponent {
                     contributor.aut_id === this.props.author.aut_id
                 ) {
                     const index = this.state.contributors.length - 1;
-                    this.chooseSelf(index);
+                    this.assignContributor(index);
                 }
             });
         }
     };
 
     updateContributor = (contributor, index) => {
-        const newContributor = {
-            ...this.state.contributors[index],
-            ...contributor,
-            selected: false,
-        };
         this.setState({
             contributors: [
                 ...this.state.contributors.slice(0, index),
-                newContributor,
+                { ...contributor, selected: false },
                 ...this.state.contributors.slice(index + 1)
-            ]
+            ],
+            contributorIndexSelectedToEdit: null
         });
     };
 
@@ -160,13 +157,13 @@ export class ContributorsEditor extends PureComponent {
         });
     };
 
-    chooseSelf = (index) => {
+    assignContributor = (index) => {
         const newContributors = this.state.contributors.map((item, itemIndex) => ({
             ...item,
             selected: (
                 this.props.author &&
                 item.aut_id === this.props.author.aut_id
-            ),
+            ) || index === itemIndex,
             authorId: (
                 index === itemIndex &&
                 this.props.author
@@ -177,17 +174,14 @@ export class ContributorsEditor extends PureComponent {
         });
     }
 
-    chooseToEdit = (index) => {
-        const newContributors = this.state.contributors.map((item, itemIndex) => ({
-            ...item,
-            selected: (
-                index === itemIndex &&
-                !item.selected
-            )
+    selectContributor = (index) => {
+        this.setState((prevState) => ({
+            contributors: prevState.contributors.map((contributor, itemIndex) => ({
+                ...contributor,
+                selected: index === itemIndex
+            })),
+            contributorIndexSelectedToEdit: index
         }));
-        this.setState({
-            contributors: newContributors
-        });
     };
 
     renderContributorRows = () => {
@@ -216,7 +210,7 @@ export class ContributorsEditor extends PureComponent {
                 hideReorder={hideReorder}
                 index={index}
                 key={`ContributorRow_${index}`}
-                onSelect={this.props.editMode ? this.chooseToEdit : this.chooseSelf}
+                onSelect={this.props.editMode ? this.selectContributor : this.assignContributor}
                 onDelete={this.deleteContributor}
                 onMoveDown={this.moveDownContributor}
                 onMoveUp={this.moveUpContributor}
@@ -233,11 +227,10 @@ export class ContributorsEditor extends PureComponent {
             onSubmit: contributor => onSubmit(contributor, index),
         };
 
-        const contributor = this.state.contributors[index];
-
         if (this.props.editMode) {
-            formProps.contributor = contributor;
-            formProps.initialValues = this.props.meta.initial.toJS()[index];
+            formProps.contributor = this.state.contributors[index];
+            formProps.disableNameAsPublished = true;
+            formProps.enableUqIdentifierOnAffiliationChange = false;
         }
 
         return (
@@ -260,6 +253,7 @@ export class ContributorsEditor extends PureComponent {
         const {
             contributors,
             errorMessage,
+            contributorIndexSelectedToEdit
         } = this.state;
 
         let error = null;
@@ -277,8 +271,6 @@ export class ContributorsEditor extends PureComponent {
                 )
             ;
         }
-
-        const selectedContributorIndex = contributors.findIndex(contributor => contributor.selected);
 
         return (
             <div>
@@ -320,9 +312,9 @@ export class ContributorsEditor extends PureComponent {
                             </List>
                             {
                                 this.props.editMode &&
-                                selectedContributorIndex > -1 &&
+                                contributorIndexSelectedToEdit !== null &&
                                 <div style={{ marginTop: 24 }}>
-                                    {this.renderContributorForm(this.updateContributor, selectedContributorIndex)}
+                                    {this.renderContributorForm(this.updateContributor, contributorIndexSelectedToEdit)}
                                 </div>
                             }
                         </Grid>

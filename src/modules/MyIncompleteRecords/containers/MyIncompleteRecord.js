@@ -103,7 +103,6 @@ const mapStateToProps = (state, ownProps) => {
             const contributor = {
                 affiliation,
                 creatorRole: '',
-                disabled: false,
                 nameAsPublished: author.rek_author,
                 orgaff: author.rek_author_affiliation_name || '',
                 orgtype,
