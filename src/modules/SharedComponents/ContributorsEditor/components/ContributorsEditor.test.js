@@ -99,8 +99,8 @@ describe('ContributorsEditor', () => {
         const wrapper = setup({ author: authorsSearch.data[0] });
         expect(wrapper.state().contributors.length).toEqual(0);
         wrapper.instance().addContributor({
-            displayName: 'J.Smith',
-            ...authorsSearch.data[0]
+            nameAsPublished: 'J.Smith',
+            uqIdentifier: `${authorsSearch.data[0].aut_id}`
         });
         expect(wrapper.state().contributors.length).toEqual(1);
         expect(wrapper.state().isCurrentAuthorSelected).toEqual(true);
@@ -137,32 +137,44 @@ describe('ContributorsEditor', () => {
         });
         expect(wrapper.state().contributors.length).toEqual(3);
         expect(wrapper.state().contributors[0].selected).toBeFalsy();
-        wrapper.instance().chooseSelf(0);
+        wrapper.instance().assignContributor(0);
         expect(wrapper.state().contributors.length).toEqual(3);
         expect(wrapper.state().contributors[0].selected).toEqual(true);
     });
 
     it('chooses a contributor to edit', () => {
-        const wrapper = setup({});
+        const wrapper = setup({
+            editMode: true
+        });
         wrapper.setState({
             contributors: [{
-                selected: true
-            }, {
+                nameAsPublished: 'test1',
                 selected: false
             }, {
+                nameAsPublished: 'test2',
+                selected: false
+            }, {
+                nameAsPublished: 'test3',
                 selected: false
             }]
         });
-        wrapper.instance().chooseToEdit(1);
+        expect(toJson(wrapper)).toMatchSnapshot();
+
+        wrapper.instance().selectContributor(1);
         expect(wrapper.state().contributors).toEqual([
             {
+                nameAsPublished: 'test1',
                 selected: false
             }, {
+                nameAsPublished: 'test2',
                 selected: true
             }, {
+                nameAsPublished: 'test3',
                 selected: false
             }
         ]);
+        wrapper.update();
+        expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('deletes a contributor from the list', () => {
@@ -234,12 +246,12 @@ describe('ContributorsEditor', () => {
         expect(wrapper.instance().renderContributorRows()[0].props.showContributorAssignment).toBe(true);
     });
 
-    it('returns array of contributor rows in edit mode with chooseToEdit select handler', () => {
+    it('returns array of contributor rows in edit mode with selectContributor select handler', () => {
         const wrapper = setup({
             editMode: true
         });
         const testFn = jest.fn();
-        wrapper.instance().chooseToEdit = testFn;
+        wrapper.instance().selectContributor = testFn;
         wrapper.setState({
             contributors: [{
                 nameAsPublished: 1
@@ -440,4 +452,6 @@ describe('ContributorsEditor', () => {
             author: null
         });
     });
+
+
 });

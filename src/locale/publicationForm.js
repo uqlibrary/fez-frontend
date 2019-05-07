@@ -19,9 +19,9 @@ export default {
         }
     },
     publicationSubtype: {
-        title: 'Publication subtype',
-        inputLabelText: 'Publication subtype',
-        hintText: 'Select a publication subtype from the dropdown list',
+        title: 'Work subtype',
+        inputLabelText: 'Work subtype',
+        hintText: 'Select a work subtype from the dropdown list',
     },
     generic: {
         information: {

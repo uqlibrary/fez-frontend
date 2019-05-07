@@ -719,7 +719,11 @@ export default {
                 ),
             },
             completeRecordButton: 'Update work',
-            facetsFilter: {...locale.components.facetsFilter}
+            facetsFilter: {
+                ...locale.components.facetsFilter,
+                excludeFacetsList: ['Author'],
+                renameFacetsList: {}
+            }
         },
         incompletePublication: {
             title: 'Update my work',

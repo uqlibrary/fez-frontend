@@ -109,12 +109,9 @@ describe('Component MyIncompleteRecord', () => {
 
     it('should redirect to other pages', () => {
         const testMethod = jest.fn();
-        const goBack = jest.fn();
-
-        const wrapper = setup({recordToFix: mockRecordToFix, history: {push: testMethod, goBack: goBack}});
-
+        const wrapper = setup({recordToFix: mockRecordToFix, history: {push: testMethod}});
         wrapper.instance()._cancelFix();
-        expect(goBack).toHaveBeenCalled();
+        expect(testMethod).toHaveBeenCalledWith('/records/incomplete');
     });
 
     it('should clear record to fix when leaving the form', () => {
@@ -126,7 +123,18 @@ describe('Component MyIncompleteRecord', () => {
 
     it('should load record if record is not loaded', () => {
         const actionFunction = jest.fn();
-        const wrapper = setup({loadingRecordToFix: false, recordToFix: null, actions: {loadRecordToFix: actionFunction}, match: {params: {pid: 'UQ:1001'}}});
+        const wrapper = setup({
+            loadingRecordToFix: false,
+            recordToFix: null,
+            actions: {
+                loadRecordToFix: actionFunction
+            },
+            match: {
+                params: {
+                    pid: 'UQ:1001'
+                }
+            }
+        });
         wrapper.update;
         wrapper.instance().componentDidMount();
         expect(actionFunction).toHaveBeenCalledWith('UQ:1001');
@@ -141,19 +149,28 @@ describe('Component MyIncompleteRecord', () => {
     });
 
     it('should render the confirm dialog box with an alert due to a file upload failure', () => {
-        const wrapper = setup({recordToFix: mockRecordToFix, publicationToFixFileUploadingError: true});
+        const wrapper = setup({
+            recordToFix: mockRecordToFix,
+            publicationToFixFileUploadingError: true
+        });
         wrapper.setState({selectedRecordAction: 'fix'});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render the confirm dialog box without an alert due to a file upload success', () => {
-        const wrapper = setup({recordToFix: mockRecordToFix, publicationToFixFileUploadingError: false});
+        const wrapper = setup({
+            recordToFix: mockRecordToFix,
+            publicationToFixFileUploadingError: false
+        });
         wrapper.setState({selectedRecordAction: 'fix'});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('_handleDefaultSubmit()', () => {
-        const wrapper = setup({recordToFix: mockRecordToFix, publicationToFixFileUploadingError: false});
+        const wrapper = setup({
+            recordToFix: mockRecordToFix,
+            publicationToFixFileUploadingError: false
+        });
         const testFN = jest.fn();
         const event = {preventDefault: testFN};
         wrapper.instance()._handleDefaultSubmit(event);
@@ -161,7 +178,10 @@ describe('Component MyIncompleteRecord', () => {
     });
 
     it('_handleDefaultSubmit()', () => {
-        const wrapper = setup({recordToFix: mockRecordToFix, publicationToFixFileUploadingError: false});
+        const wrapper = setup({
+            recordToFix: mockRecordToFix,
+            publicationToFixFileUploadingError: false
+        });
         wrapper.instance()._handleDefaultSubmit();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -180,7 +200,11 @@ describe('Component MyIncompleteRecord', () => {
     });
 
     it('componentWillReceiveProps()', () => {
-        const wrapper = setup({submitSucceeded: true, recordToFix: mockRecordToFix, publicationToFixFileUploadingError: false});
+        const wrapper = setup({
+            submitSucceeded: true,
+            recordToFix: mockRecordToFix,
+            publicationToFixFileUploadingError: false
+        });
         const nextProps = {submitSucceeded: true};
         wrapper.instance().componentWillReceiveProps(nextProps);
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -188,7 +212,14 @@ describe('Component MyIncompleteRecord', () => {
 
     it('componentWillUnmount()', () => {
         const testFN = jest.fn();
-        const wrapper = setup({actions: {clearFixRecord: testFN}, submitSucceeded: true, recordToFix: mockRecordToFix, publicationToFixFileUploadingError: false});
+        const wrapper = setup({
+            actions: {
+                clearFixRecord: testFN
+            },
+            submitSucceeded: true,
+            recordToFix: mockRecordToFix,
+            publicationToFixFileUploadingError: false
+        });
         wrapper.instance().componentWillUnmount();
         expect(testFN).toHaveBeenCalled();
     });
