@@ -1,6 +1,5 @@
-import {ContributorForm, mapStateToProps} from './ContributorForm';
+import { ContributorForm, mapStateToProps } from './ContributorForm';
 import ConnectedContributorForm from './ContributorForm';
-import {authorsSearch} from 'mock/data';
 
 function setup(testProps, isShallow = true) {
     const props = {
@@ -26,12 +25,12 @@ describe('Component ContributorForm', () => {
     });
 
     it('should render display name field and identifier field', () => {
-        const wrapper = setup({ showIdentifierLookup: true});
+        const wrapper = setup({ showIdentifierLookup: true });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render display name field and role field', () => {
-        const wrapper = setup({ showRoleInput: true});
+        const wrapper = setup({ showRoleInput: true });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -40,28 +39,37 @@ describe('Component ContributorForm', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('loads authors when value is changed', () => {
-        const testFunction = jest.fn((value, cb) => {
-            expect(cb({aut_org_username: 'test'})).toBeTruthy();
-        });
-        const wrapper = setup({showIdentifierLookup: true, actions: { searchAuthors: testFunction }});
-        wrapper.instance()._onUQIdentifierChanged('smith');
-        expect(testFunction).toBeCalled();
-    });
-
     it('sets display name of a contributor ', () => {
         const testFunction = jest.fn();
         const wrapper = setup({ showIdentifierLookup: true, actions: { searchAuthors: testFunction } });
         expect(wrapper.state.nameAsPublished).toBeFalsy();
-        wrapper.instance()._onNameChanged({target: {value: 'J. Smith'}});
+        wrapper.instance()._onNameChanged({ target: { value: 'J. Smith' } });
         expect(wrapper.state().nameAsPublished).toEqual('J. Smith');
     });
 
-    it('selects author identifier, calls add contributor ', () => {
-        const testFunction = jest.fn();
-        const wrapper = setup({ showIdentifierLookup: true, onAdd: testFunction });
-        wrapper.instance()._onUQIdentifierSelected(authorsSearch.data[0], 0);
-        expect(testFunction).toBeCalled();
+    it('should call event handler on submit if all checks pass', () => {
+        const testFn = jest.fn();
+        const wrapper = setup({
+            onSubmit: testFn,
+        });
+        const state = {
+            nameAsPublished: 'Firstname Lastname',
+            affiliation: 'UQ',
+            orgaff: '',
+            orgtype: '',
+            creatorRole: '',
+            contributor: {},
+        };
+        wrapper.setState(state);
+        const event = {
+            key: 'Enter'
+        };
+        wrapper.instance()._onSubmit(event);
+        delete state.contributor;
+        expect(testFn).toBeCalledWith({
+            ...state,
+            uqIdentifier: undefined,
+        });
     });
 
     it('should not add contributor if key is not Enter', () => {
@@ -72,7 +80,7 @@ describe('Component ContributorForm', () => {
         wrapper.setState({
             nameAsPublished: 'testing'
         });
-        wrapper.instance()._addContributor({key: 'Esc'});
+        wrapper.instance()._onSubmit({ key: 'Esc' });
         expect(onAddFn).not.toBeCalled();
     });
 
@@ -84,7 +92,7 @@ describe('Component ContributorForm', () => {
         wrapper.setState({
             nameAsPublished: ''
         });
-        wrapper.instance()._addContributor({key: 'Enter'});
+        wrapper.instance()._onSubmit({ key: 'Enter' });
         expect(onAddFn).not.toBeCalled();
     });
 
@@ -98,7 +106,7 @@ describe('Component ContributorForm', () => {
             nameAsPublished: 'test',
             creatorRole: ''
         });
-        wrapper.instance()._addContributor({key: 'Enter'});
+        wrapper.instance()._onSubmit({ key: 'Enter' });
         expect(onAddFn).not.toBeCalled();
     });
 
@@ -113,7 +121,7 @@ describe('Component ContributorForm', () => {
             orgaff: '',
             orgtype: ''
         });
-        wrapper.instance()._addContributor({key: 'Enter'});
+        wrapper.instance()._onSubmit({ key: 'Enter' });
         expect(onAddFn).not.toBeCalled();
     });
 
@@ -131,11 +139,11 @@ describe('Component ContributorForm', () => {
         });
         expect(toJson(wrapper)).toMatchSnapshot();
 
-        wrapper.find('OrgAffilicationTypeSelector').props().onAffiliationChange({target: {value: 'UQ'}});
+        wrapper.find('OrgAffilicationTypeSelector').props().onAffiliationChange({ target: { value: 'UQ' } });
         expect(wrapper.state().affiliation).toEqual('UQ');
         expect(wrapper.state().showIdentifierLookup).toBeTruthy();
 
-        wrapper.find('OrgAffilicationTypeSelector').props().onAffiliationChange({target: {value: 'Non-UQ'}});
+        wrapper.find('OrgAffilicationTypeSelector').props().onAffiliationChange({ target: { value: 'Non-UQ' } });
         expect(wrapper.state().affiliation).toEqual('Non-UQ');
         expect(wrapper.state().showIdentifierLookup).toBeFalsy();
     });
@@ -166,10 +174,10 @@ describe('Component ContributorForm', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('NonUqOrgAffiliationFormSection').length).toBe(1);
 
-        wrapper.find('NonUqOrgAffiliationFormSection').props().onOrgAffiliationChange({target: {value: 'test'}});
+        wrapper.find('NonUqOrgAffiliationFormSection').props().onOrgAffiliationChange({ target: { value: 'test' } });
         expect(wrapper.state().orgaff).toEqual('test');
 
-        wrapper.find('NonUqOrgAffiliationFormSection').props().onOrgTypeChange({target: {value: 'testing'}});
+        wrapper.find('NonUqOrgAffiliationFormSection').props().onOrgTypeChange({ target: { value: 'testing' } });
         expect(wrapper.state().orgtype).toEqual('testing');
     });
 
@@ -203,7 +211,7 @@ describe('Component ContributorForm', () => {
     });
 
     it('should render connected component', () => {
-        const wrapper = getElement(ConnectedContributorForm, {onAdd: jest.fn()}, false);
+        const wrapper = getElement(ConnectedContributorForm, { onAdd: jest.fn() }, false);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -230,16 +238,6 @@ describe('Component ContributorForm', () => {
         });
     });
 
-    it('should not search authors if new UQ idenitifier value is too short', () => {
-        const wrapper = setup({
-            actions: {
-                searchAuthors: jest.fn()
-            }
-        });
-        wrapper.instance()._onUQIdentifierChanged('a');
-        expect(wrapper.instance().props.actions.searchAuthors).not.toBeCalled();
-    });
-
     it('should render narrower grid at md breakpoint if showIdentifierLookup is true', () => {
         const wrapper = setup({
             showRoleInput: true,
@@ -247,4 +245,51 @@ describe('Component ContributorForm', () => {
         }, true);
         expect(wrapper.find('#creatorRoleField').parent().prop('md')).toBe(3);
     });
+
+    it('should process prop updates', () => {
+        const contributor1 = { test1: 'value1' };
+        const contributor2 = { test1: 'value2' };
+        const wrapper = setup({
+            contributor: contributor1,
+            test1: 'value1',
+            test2: 'value3',
+        });
+        const before = wrapper.state();
+        wrapper.instance().componentWillReceiveProps({
+            contributor: contributor1,
+            test2: 'value4',
+        });
+        expect(wrapper.state()).toEqual(before);
+
+        wrapper.instance().componentWillReceiveProps({
+            contributor: contributor2
+        });
+        expect(wrapper.state().contributor).toBe(contributor2);
+        expect(wrapper.state().test1).toBe('value2');
+
+        wrapper.instance().componentWillReceiveProps({});
+        expect(wrapper.state().contributor).toEqual({});
+    });
+
+    it('should be able to save selected item object to contributor state', () => {
+        const wrapper = setup({});
+        const testFn = jest.spyOn(wrapper.instance(), '_onSubmit');
+        wrapper.instance()._onUQIdentifierSelected({});
+        expect(wrapper.state().contributor).toEqual({});
+        expect(testFn).toBeCalled();
+    });
+
+    it('should clear uqIdentifier state if affiliation is changed to "NotUQ"', () => {
+        const wrapper = setup({});
+        wrapper.setState({
+            uqIdentifier: '100'
+        });
+        wrapper.instance().handleAffiliationChange({
+            target: {
+                value: 'NotUQ'
+            }
+        });
+        expect(wrapper.state().uqIdentifier).toBe('');
+    });
+
 });

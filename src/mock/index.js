@@ -81,7 +81,9 @@ mock
     })
     .onGet(routes.CURRENT_USER_RECORDS_API({}).apiUrl).reply(config => {
         // AUTHOR_PUBLICATIONS_STATS_ONLY_API
-        if (config.params.rule === 'mine' && !!config.params['filters[stats_only]']) {
+        if (config.params.rule === 'incomplete') {
+            return [200, mockData.incompleteNTROlist];
+        } else if (config.params.rule === 'mine' && !!config.params['filters[stats_only]']) {
             return [200, mockData.currentAuthorStats];
         } else if (config.params.rule === 'mine' && config.params['filters[facets][Display+type]'] === 371) {
             // CURRENT_USER_RECORDS_API - myDataset
@@ -161,6 +163,21 @@ mock
     .reply(200, mockData.lookupToolIncites)
     .onGet(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({pid: '.*'}).apiUrl)))
     .reply(config => {
+        if (config.url.indexOf('UQ:6de77b0') >= 0) {
+            return [200, {data: {...mockData.incompleteNTROrecordUqrdav10}}];
+        }
+        if (config.url.indexOf('UQ:56b1652') >= 0) {
+            return [200, {data: {...mockData.incompleteNTROrecordUqsbutl1}}];
+        }
+        if (config.url.indexOf('UQ:692945') >= 0) {
+            return [200, {data: {...mockData.incompleteNTROrecord}}];
+        }
+        if (config.url.indexOf('UQ:678742') >= 0) {
+            return [200, {data: {...mockData.incompleteNTROlist.data[1]}}];
+        }
+        if (config.url.indexOf('UQ:678743') >= 0) {
+            return [200, {data: {...mockData.incompleteNTROlist.data[2]}}];
+        }
         // Data collection
         if (config.url.indexOf('UQ:407731') >= 0) {
             return [200, {data: {...mockTestingData.dataCollection}}];
@@ -188,8 +205,6 @@ mock
     // .reply(500, ["Server error: `POST https://sandbox.orcid.org/oauth/token` resulted in a `500 Internal Server Error` response:\n{\"error\":\"server_error\",\"error_description\":\"Redirect URI mismatch.\"}\n"])
     .onGet(new RegExp(escapeRegExp(routes.FILE_UPLOAD_API({pid: '.*', fileName: '.*'}).apiUrl)))
     .reply(200, ['s3-ap-southeast-2.amazonaws.com']);
-// .reply(500, {message: 'error - failed GET FILE_UPLOAD_API'});
-
 
 mock
     .onPut(/(s3-ap-southeast-2.amazonaws.com)/)
@@ -215,8 +230,7 @@ mock
     .onPatch(new RegExp(escapeRegExp(routes.AUTHOR_API({authorId: '.*'}).apiUrl)))
     .reply(200, {...mockData.currentAuthor.uqresearcher})
     // .reply(500, {message: 'error - failed PATCH AUTHOR_API'})
-    .onPost(new RegExp(escapeRegExp(routes.NEW_COLLECTION_API().apiUrl)))
-    .reply(200, {data: {rek_pid: 'UQ:12345'}})
+
     .onAny().reply((config) => {
         console.log('url not found...');
         console.log(config);

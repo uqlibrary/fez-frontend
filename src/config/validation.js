@@ -81,11 +81,9 @@ export const required = value => value ? undefined : locale.validationErrors.req
 export const requireChecked = value => value === 'on' ? undefined : locale.validationErrors.requireChecked;
 
 export const requiredList = value => {
-    if(value instanceof Immutable.List) {
-        return value.toJS() && value.toJS().length > 0 ? undefined : locale.validationErrors.required;
-    } else {
-        return value && value.length > 0 ? undefined : locale.validationErrors.required;
-    }
+    return ((value instanceof Immutable.List) && value.toJS() || value || []).length > 0
+        ? undefined
+        : locale.validationErrors.required;
 };
 
 export const email = value => !value || !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value) ? locale.validationErrors.email : undefined;
@@ -101,6 +99,26 @@ export const peopleRequired = (itemList, validationError, checkSelected = true) 
 export const authorRequired = (authors) => peopleRequired(authors, locale.validationErrors.authorRequired, true);
 export const editorRequired = (editors) => peopleRequired(editors, locale.validationErrors.editorRequired, true);
 export const supervisorRequired = (supervisors) => peopleRequired(supervisors, locale.validationErrors.supervisorRequired, false);
+
+export const authorAffiliationIncomplete = (author) => (
+    (author.nameAsPublished || '').trim().length === 0 ||
+    (
+        author.affiliation === 'NotUQ' &&
+        (
+            (author.orgaff || '').trim().length === 0 ||
+            (author.orgtype || '').trim().length === 0
+        )
+    )
+        ? locale.validationErrors.authorAffiliationIncomplete
+        : undefined
+);
+
+export const authorsAffiliationIncomplete = (authors) => {
+    return ((authors.toJS && authors.toJS()) || authors).some(author => !!authorAffiliationIncomplete(author))
+        ? locale.validationErrors.authorsAffiliationIncomplete
+        : undefined
+    ;
+};
 
 // DateTime
 export const dateTimeDay = value => value && (isNaN(value) || parseInt(value, 10) < 0 || parseInt(value, 10) > 31) ? locale.validationErrors.dateTimeDay : undefined;

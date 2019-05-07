@@ -2187,9 +2187,9 @@ exports[`Component PublicationForm should call componentWillReceiveProps when pr
             <Field
               component={[Function]}
               disabled={false}
-              label="Publication subtype"
+              label="Work subtype"
               name="rek_subtype"
-              placeholder="Select a publication subtype from the dropdown list"
+              placeholder="Select a work subtype from the dropdown list"
               required={true}
             />
           </WithStyles(Grid)>
@@ -2626,9 +2626,9 @@ exports[`Component PublicationForm should call componentWillReceiveProps when pr
             <Field
               component={[Function]}
               disabled={false}
-              label="Publication subtype"
+              label="Work subtype"
               name="rek_subtype"
-              placeholder="Select a publication subtype from the dropdown list"
+              placeholder="Select a work subtype from the dropdown list"
               required={true}
             >
               <WithStyles(MenuItem)
@@ -3078,9 +3078,9 @@ exports[`Component PublicationForm should call componentWillReceiveProps when pr
             <Field
               component={[Function]}
               disabled={false}
-              label="Publication subtype"
+              label="Work subtype"
               name="rek_subtype"
-              placeholder="Select a publication subtype from the dropdown list"
+              placeholder="Select a work subtype from the dropdown list"
               required={true}
             >
               <WithStyles(MenuItem)
@@ -3957,9 +3957,9 @@ exports[`Component PublicationForm should render component initialised with two 
             <Field
               component={[Function]}
               disabled={false}
-              label="Publication subtype"
+              label="Work subtype"
               name="rek_subtype"
-              placeholder="Select a publication subtype from the dropdown list"
+              placeholder="Select a work subtype from the dropdown list"
               required={true}
             />
           </WithStyles(Grid)>
@@ -4416,9 +4416,9 @@ exports[`Component PublicationForm should render component with BookForm 1`] = `
             <Field
               component={[Function]}
               disabled={false}
-              label="Publication subtype"
+              label="Work subtype"
               name="rek_subtype"
-              placeholder="Select a publication subtype from the dropdown list"
+              placeholder="Select a work subtype from the dropdown list"
               required={true}
             />
           </WithStyles(Grid)>
@@ -4911,9 +4911,9 @@ exports[`Component PublicationForm should render component with GenericDocument 
             <Field
               component={[Function]}
               disabled={false}
-              label="Publication subtype"
+              label="Work subtype"
               name="rek_subtype"
-              placeholder="Select a publication subtype from the dropdown list"
+              placeholder="Select a work subtype from the dropdown list"
               required={true}
             />
           </WithStyles(Grid)>
@@ -5403,9 +5403,9 @@ exports[`Component PublicationForm should render component with JournalArticleFo
             <Field
               component={[Function]}
               disabled={false}
-              label="Publication subtype"
+              label="Work subtype"
               name="rek_subtype"
-              placeholder="Select a publication subtype from the dropdown list"
+              placeholder="Select a work subtype from the dropdown list"
               required={true}
             />
           </WithStyles(Grid)>
@@ -5895,9 +5895,9 @@ exports[`Component PublicationForm should render component with ResearchReportFo
             <Field
               component={[Function]}
               disabled={false}
-              label="Publication subtype"
+              label="Work subtype"
               name="rek_subtype"
-              placeholder="Select a publication subtype from the dropdown list"
+              placeholder="Select a work subtype from the dropdown list"
               required={true}
             />
           </WithStyles(Grid)>

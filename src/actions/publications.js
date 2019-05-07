@@ -85,12 +85,42 @@ export function searchAuthorPublications({page = 1, pageSize = 20, sortBy = 'sco
             .then(response => {
                 dispatch({
                     type: actions.AUTHOR_PUBLICATIONS_LOADED,
-                    payload: response
+                    payload: {...response, type: 'mine'}
                 });
             })
             .catch(error => {
                 dispatch({
                     type: actions.AUTHOR_PUBLICATIONS_FAILED,
+                    payload: error.message
+                });
+            });
+    };
+}
+
+/**
+ * Get author's incomplete publications
+ * @param {string} author user name
+ * @returns {action}
+ */
+export function searchAuthorIncompletePublications({page = 1, pageSize = 20, sortBy = 'created date', sortDirection = 'Desc', activeFacets = {filters: {}, ranges: {}}}) {
+    return dispatch => {
+        dispatch({type: actions.AUTHOR_INCOMPLETEPUBLICATIONS_LOADING});
+        return get(routes.INCOMPLETE_RECORDS_API({
+            page: page,
+            pageSize: pageSize,
+            sortBy: sortBy,
+            sortDirection: sortDirection,
+            facets: activeFacets
+        }))
+            .then(response => {
+                dispatch({
+                    type: actions.AUTHOR_INCOMPLETEPUBLICATIONS_LOADED,
+                    payload: {...response, type: 'incomplete'}
+                });
+            })
+            .catch(error => {
+                dispatch({
+                    type: actions.AUTHOR_INCOMPLETEPUBLICATIONS_FAILED,
                     payload: error.message
                 });
             });

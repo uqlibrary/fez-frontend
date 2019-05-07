@@ -102,7 +102,8 @@ export class MenuDrawer extends Component {
             skipNavAriaLabel: PropTypes.string,
             closeMenuLabel: PropTypes.string
         }),
-        classes: PropTypes.object
+        classes: PropTypes.object,
+        hasIncompleteWorks: PropTypes.bool
     };
 
     shouldComponentUpdate(nextProps) {

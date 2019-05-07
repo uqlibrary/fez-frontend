@@ -344,7 +344,7 @@ exports[`BookChapterForm renders  component 1`] = `
                 "inputFieldHint": "Enter ISBN, e.g. 13 digit: 9780815375296 or 10 digit: 1861972717",
                 "inputFieldLabel": "ISBN value",
                 "remindToAdd": <span>
-                  Pleasepress 
+                  Please press 
                   <b>
                     ENTER
                   </b>
@@ -418,7 +418,7 @@ exports[`BookChapterForm renders  component 1`] = `
                 "inputFieldHint": "Enter ISSN, e.g. 1838-9414",
                 "inputFieldLabel": "ISSN value",
                 "remindToAdd": <span>
-                  Pleasepress 
+                  Please press 
                   <b>
                     ENTER
                   </b>
@@ -925,7 +925,7 @@ exports[`BookChapterForm renders  shows an error when end page is less than star
                 "inputFieldHint": "Enter ISBN, e.g. 13 digit: 9780815375296 or 10 digit: 1861972717",
                 "inputFieldLabel": "ISBN value",
                 "remindToAdd": <span>
-                  Pleasepress 
+                  Please press 
                   <b>
                     ENTER
                   </b>
@@ -999,7 +999,7 @@ exports[`BookChapterForm renders  shows an error when end page is less than star
                 "inputFieldHint": "Enter ISSN, e.g. 1838-9414",
                 "inputFieldLabel": "ISSN value",
                 "remindToAdd": <span>
-                  Pleasepress 
+                  Please press 
                   <b>
                     ENTER
                   </b>

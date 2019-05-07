@@ -2,9 +2,8 @@
 import React from 'react';
 import * as repositories from 'repositories';
 import ThesisSubmission from './containers/ThesisSubmission';
-const {getByTestId} = require('test-utils');
-import {rtlRender, fireEvent, waitForElement, cleanup, withRedux, withRouter} from 'test-utils';
-import {searchKeyList} from 'mock/data';
+import { rtlRender, fireEvent, waitForElement, cleanup, withRedux, withRouter, getByTestId } from 'test-utils';
+import { searchKeyList } from 'mock/data';
 import 'ckeditor';
 import Immutable from 'immutable';
 

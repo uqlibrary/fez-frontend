@@ -213,7 +213,53 @@ describe('GrantListEditor', () => {
         wrapper.instance().moveUpGrant(grant2, 1);
         expect(toJson(wrapper)).toMatchSnapshot();
 
+        wrapper.instance().moveUpGrant(grant1, 1);
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should not move the grant up at index 0', () => {
+        const grant1 = {
+            grantAgencyName: 'Test 1',
+            grantId: '123',
+            grantAgencyType: 'Testing 1'
+        };
+
+        const wrapper = setup({
+            input: {
+                name: 'test',
+                value: [grant1]
+            }
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+
         wrapper.instance().moveUpGrant(grant1, 0);
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should not move the grant up the disabled grant', () => {
+
+        const grant1 = {
+            grantAgencyName: 'Test 1',
+            grantId: '123',
+            grantAgencyType: 'Testing 1',
+            disabled: true
+        };
+
+        const grant2 = {
+            grantAgencyName: 'Test 2',
+            grantId: '456',
+            grantAgencyType: 'Testing 2'
+        };
+
+        const wrapper = setup({
+            input: {
+                name: 'test',
+                value: [grant1, grant2]
+            }
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+
+        wrapper.instance().moveUpGrant(grant2, 1);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

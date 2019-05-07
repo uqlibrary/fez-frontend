@@ -1,6 +1,361 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`] = `
+exports[`ContributorsEditor renders 3 contributor rows with no infinite scroll 1`] = `
+<div>
+  <Connect(ContributorForm)
+    author={
+      Object {
+        "aut_id": 1,
+      }
+    }
+    classes={
+      Object {
+        "list": "list",
+        "scroll": "scroll",
+      }
+    }
+    contributors={Array []}
+    editMode={false}
+    hideDelete={false}
+    hideReorder={false}
+    isContributorAssigned={true}
+    isNtro={false}
+    onSubmit={[Function]}
+    showContributorAssignment={false}
+    showIdentifierLookup={false}
+    showRoleInput={false}
+  />
+  <WithStyles(Grid)
+    container={true}
+    spacing={8}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <WithStyles(List)>
+        <WithStyles(ContributorRowHeader)
+          hideDelete={false}
+          isInfinite={false}
+          isNtro={false}
+          onDeleteAll={[Function]}
+          showContributorAssignment={false}
+          showIdentifierLookup={false}
+          showRoleInput={false}
+        />
+      </WithStyles(List)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <WithStyles(List)
+        classes={
+          Object {
+            "root": "list ",
+          }
+        }
+      >
+        <WithStyles(WithTheme(WithWidth(ContributorRow)))
+          canMoveDown={true}
+          canMoveUp={false}
+          contributor={
+            Object {
+              "nameAsPublished": 1,
+            }
+          }
+          hideDelete={false}
+          hideReorder={false}
+          index={0}
+          key="ContributorRow_0"
+          onDelete={[Function]}
+          onMoveDown={[Function]}
+          onMoveUp={[Function]}
+          onSelect={[Function]}
+          showContributorAssignment={false}
+        />
+        <WithStyles(WithTheme(WithWidth(ContributorRow)))
+          canMoveDown={true}
+          canMoveUp={true}
+          contributor={
+            Object {
+              "nameAsPublished": 2,
+            }
+          }
+          hideDelete={false}
+          hideReorder={false}
+          index={1}
+          key="ContributorRow_1"
+          onDelete={[Function]}
+          onMoveDown={[Function]}
+          onMoveUp={[Function]}
+          onSelect={[Function]}
+          showContributorAssignment={false}
+        />
+        <WithStyles(WithTheme(WithWidth(ContributorRow)))
+          canMoveDown={false}
+          canMoveUp={true}
+          contributor={
+            Object {
+              "nameAsPublished": 3,
+            }
+          }
+          hideDelete={false}
+          hideReorder={false}
+          index={2}
+          key="ContributorRow_2"
+          onDelete={[Function]}
+          onMoveDown={[Function]}
+          onMoveUp={[Function]}
+          onSelect={[Function]}
+          showContributorAssignment={false}
+        />
+      </WithStyles(List)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</div>
+`;
+
+exports[`ContributorsEditor renders 4 contributor rows wrapped in an infinite scroll 1`] = `
+<div>
+  <Connect(ContributorForm)
+    author={
+      Object {
+        "aut_id": 1,
+      }
+    }
+    classes={
+      Object {
+        "list": "list",
+        "scroll": "scroll",
+      }
+    }
+    contributors={Array []}
+    editMode={false}
+    hideDelete={false}
+    hideReorder={false}
+    isContributorAssigned={true}
+    isNtro={false}
+    onSubmit={[Function]}
+    showContributorAssignment={false}
+    showIdentifierLookup={false}
+    showRoleInput={false}
+  />
+  <WithStyles(Grid)
+    container={true}
+    spacing={8}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <WithStyles(List)>
+        <WithStyles(ContributorRowHeader)
+          hideDelete={false}
+          isInfinite={true}
+          isNtro={false}
+          onDeleteAll={[Function]}
+          showContributorAssignment={false}
+          showIdentifierLookup={false}
+          showRoleInput={false}
+        />
+      </WithStyles(List)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <WithStyles(List)
+        classes={
+          Object {
+            "root": "list scroll",
+          }
+        }
+      >
+        <WithStyles(WithTheme(WithWidth(ContributorRow)))
+          canMoveDown={true}
+          canMoveUp={false}
+          contributor={
+            Object {
+              "displayName": 1,
+            }
+          }
+          hideDelete={false}
+          hideReorder={false}
+          index={0}
+          key="ContributorRow_0"
+          onDelete={[Function]}
+          onMoveDown={[Function]}
+          onMoveUp={[Function]}
+          onSelect={[Function]}
+          showContributorAssignment={false}
+        />
+        <WithStyles(WithTheme(WithWidth(ContributorRow)))
+          canMoveDown={true}
+          canMoveUp={true}
+          contributor={
+            Object {
+              "displayName": 2,
+            }
+          }
+          hideDelete={false}
+          hideReorder={false}
+          index={1}
+          key="ContributorRow_1"
+          onDelete={[Function]}
+          onMoveDown={[Function]}
+          onMoveUp={[Function]}
+          onSelect={[Function]}
+          showContributorAssignment={false}
+        />
+        <WithStyles(WithTheme(WithWidth(ContributorRow)))
+          canMoveDown={true}
+          canMoveUp={true}
+          contributor={
+            Object {
+              "displayName": 3,
+            }
+          }
+          hideDelete={false}
+          hideReorder={false}
+          index={2}
+          key="ContributorRow_2"
+          onDelete={[Function]}
+          onMoveDown={[Function]}
+          onMoveUp={[Function]}
+          onSelect={[Function]}
+          showContributorAssignment={false}
+        />
+        <WithStyles(WithTheme(WithWidth(ContributorRow)))
+          canMoveDown={false}
+          canMoveUp={true}
+          contributor={
+            Object {
+              "displayName": 4,
+            }
+          }
+          hideDelete={false}
+          hideReorder={false}
+          index={3}
+          key="ContributorRow_3"
+          onDelete={[Function]}
+          onMoveDown={[Function]}
+          onMoveUp={[Function]}
+          onSelect={[Function]}
+          showContributorAssignment={false}
+        />
+      </WithStyles(List)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</div>
+`;
+
+exports[`ContributorsEditor renders component in edit mode 1`] = `
+<div>
+  
+  <WithStyles(Grid)
+    container={true}
+    spacing={8}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <WithStyles(List)>
+        <WithStyles(ContributorRowHeader)
+          hideDelete={false}
+          isInfinite={false}
+          isNtro={false}
+          onDeleteAll={[Function]}
+          showContributorAssignment={false}
+          showIdentifierLookup={false}
+          showRoleInput={false}
+        />
+      </WithStyles(List)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <WithStyles(List)
+        classes={
+          Object {
+            "root": "list ",
+          }
+        }
+      >
+        <WithStyles(WithTheme(WithWidth(ContributorRow)))
+          canMoveDown={false}
+          canMoveUp={false}
+          contributor={
+            Object {
+              "selected": true,
+            }
+          }
+          hideDelete={false}
+          hideReorder={false}
+          index={0}
+          onDelete={[Function]}
+          onMoveDown={[Function]}
+          onMoveUp={[Function]}
+          onSelect={[Function]}
+          showContributorAssignment={false}
+        />
+      </WithStyles(List)>
+      <div
+        style={
+          Object {
+            "marginTop": 24,
+          }
+        }
+      >
+        <Connect(ContributorForm)
+          author={
+            Object {
+              "aut_id": 1,
+            }
+          }
+          classes={
+            Object {
+              "list": "list",
+              "scroll": "scroll",
+            }
+          }
+          contributor={
+            Object {
+              "selected": true,
+            }
+          }
+          editMode={true}
+          hideDelete={false}
+          hideReorder={false}
+          initialValues={Object {}}
+          isContributorAssigned={true}
+          isNtro={false}
+          locale={
+            Object {
+              "addButton": "test",
+            }
+          }
+          meta={
+            Object {
+              "initial": Object {
+                "toJS": [Function],
+              },
+            }
+          }
+          onSubmit={[Function]}
+          showContributorAssignment={false}
+          showIdentifierLookup={false}
+          showRoleInput={false}
+        />
+      </div>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</div>
+`;
+
+exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
 <Provider
   store={
     Object {
@@ -532,6 +887,9 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                 "scroll": "scroll",
               }
             }
+            editMode={false}
+            hideDelete={false}
+            hideReorder={false}
             isNtro={true}
             locale={
               Object {
@@ -545,9 +903,23 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
           >
             <div>
               <Connect(ContributorForm)
+                author={
+                  Object {
+                    "aut_id": 1,
+                  }
+                }
+                classes={
+                  Object {
+                    "list": "list",
+                    "scroll": "scroll",
+                  }
+                }
+                editMode={false}
+                hideDelete={false}
+                hideReorder={false}
                 isContributorAssigned={false}
                 isNtro={true}
-                onAdd={[Function]}
+                onSubmit={[Function]}
                 showContributorAssignment={false}
                 showIdentifierLookup={false}
                 showRoleInput={false}
@@ -561,7 +933,22 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                       "updateCurrentAuthor": [Function],
                     }
                   }
+                  author={
+                    Object {
+                      "aut_id": 1,
+                    }
+                  }
                   authorsList={Array []}
+                  classes={
+                    Object {
+                      "list": "list",
+                      "scroll": "scroll",
+                    }
+                  }
+                  contributor={Object {}}
+                  editMode={false}
+                  hideDelete={false}
+                  hideReorder={false}
                   isContributorAssigned={false}
                   isNtro={true}
                   locale={
@@ -575,7 +962,7 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                         >
                           Step 1 of 2
                         </span>
-                         - Please 
+                        - Please 
                         <b>
                           add to a list of contributors below
                         </b>
@@ -593,7 +980,7 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
                       "nameAsPublishedLabel": "Name as published",
                     }
                   }
-                  onAdd={[Function]}
+                  onSubmit={[Function]}
                   required={false}
                   showContributorAssignment={false}
                   showIdentifierLookup={false}
@@ -2589,12 +2976,27 @@ exports[`ContributorsEditor tests  rendering full component with NTRO fields 1`]
 </Provider>
 `;
 
-exports[`ContributorsEditor tests  rendering full component with a defined className 1`] = `
+exports[`ContributorsEditor renders full component with a defined className 1`] = `
 <div>
   <Connect(ContributorForm)
+    author={
+      Object {
+        "aut_id": 1,
+      }
+    }
+    className="requiredField"
+    classes={
+      Object {
+        "list": "list",
+        "scroll": "scroll",
+      }
+    }
+    editMode={false}
+    hideDelete={false}
+    hideReorder={false}
     isContributorAssigned={false}
     isNtro={false}
-    onAdd={[Function]}
+    onSubmit={[Function]}
     showContributorAssignment={false}
     showIdentifierLookup={false}
     showRoleInput={false}
@@ -2602,12 +3004,26 @@ exports[`ContributorsEditor tests  rendering full component with a defined class
 </div>
 `;
 
-exports[`ContributorsEditor tests  rendering full component with identifier lookup 1`] = `
+exports[`ContributorsEditor renders full component with identifier lookup 1`] = `
 <div>
   <Connect(ContributorForm)
+    author={
+      Object {
+        "aut_id": 1,
+      }
+    }
+    classes={
+      Object {
+        "list": "list",
+        "scroll": "scroll",
+      }
+    }
+    editMode={false}
+    hideDelete={false}
+    hideReorder={false}
     isContributorAssigned={false}
     isNtro={false}
-    onAdd={[Function]}
+    onSubmit={[Function]}
     showContributorAssignment={false}
     showIdentifierLookup={true}
     showRoleInput={false}
@@ -2615,12 +3031,26 @@ exports[`ContributorsEditor tests  rendering full component with identifier look
 </div>
 `;
 
-exports[`ContributorsEditor tests  rendering full component with role input 1`] = `
+exports[`ContributorsEditor renders full component with role input 1`] = `
 <div>
   <Connect(ContributorForm)
+    author={
+      Object {
+        "aut_id": 1,
+      }
+    }
+    classes={
+      Object {
+        "list": "list",
+        "scroll": "scroll",
+      }
+    }
+    editMode={false}
+    hideDelete={false}
+    hideReorder={false}
     isContributorAssigned={false}
     isNtro={false}
-    onAdd={[Function]}
+    onSubmit={[Function]}
     showContributorAssignment={false}
     showIdentifierLookup={false}
     showRoleInput={true}
@@ -2628,237 +3058,27 @@ exports[`ContributorsEditor tests  rendering full component with role input 1`] 
 </div>
 `;
 
-exports[`ContributorsEditor tests  renders 3 contributor rows with no infinite scroll 1`] = `
+exports[`ContributorsEditor renders no contributor rows with no infinite scroll 1`] = `
 <div>
   <Connect(ContributorForm)
-    isContributorAssigned={true}
-    isNtro={false}
-    onAdd={[Function]}
-    showContributorAssignment={false}
-    showIdentifierLookup={false}
-    showRoleInput={false}
-  />
-  <WithStyles(Grid)
-    container={true}
-    spacing={8}
-  >
-    <WithStyles(Grid)
-      item={true}
-      xs={12}
-    >
-      <WithStyles(List)>
-        <WithStyles(ContributorRowHeader)
-          isInfinite={false}
-          isNtro={false}
-          onDeleteAll={[Function]}
-          showContributorAssignment={false}
-          showIdentifierLookup={false}
-          showRoleInput={false}
-        />
-      </WithStyles(List)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
-      item={true}
-      xs={12}
-    >
-      <WithStyles(List)
-        classes={
-          Object {
-            "root": "list ",
-          }
-        }
-      >
-        <WithStyles(WithTheme(WithWidth(ContributorRow)))
-          canMoveDown={true}
-          canMoveUp={false}
-          contributor={
-            Object {
-              "nameAsPublished": 1,
-            }
-          }
-          disabledContributorAssignment={false}
-          index={0}
-          key="ContributorRow_0"
-          onContributorAssigned={[Function]}
-          onDelete={[Function]}
-          onMoveDown={[Function]}
-          onMoveUp={[Function]}
-          showContributorAssignment={false}
-          showIdentifierLookup={false}
-          showRoleInput={false}
-        />
-        <WithStyles(WithTheme(WithWidth(ContributorRow)))
-          canMoveDown={true}
-          canMoveUp={true}
-          contributor={
-            Object {
-              "nameAsPublished": 2,
-            }
-          }
-          disabledContributorAssignment={false}
-          index={1}
-          key="ContributorRow_1"
-          onContributorAssigned={[Function]}
-          onDelete={[Function]}
-          onMoveDown={[Function]}
-          onMoveUp={[Function]}
-          showContributorAssignment={false}
-          showIdentifierLookup={false}
-          showRoleInput={false}
-        />
-        <WithStyles(WithTheme(WithWidth(ContributorRow)))
-          canMoveDown={false}
-          canMoveUp={true}
-          contributor={
-            Object {
-              "nameAsPublished": 3,
-            }
-          }
-          disabledContributorAssignment={false}
-          index={2}
-          key="ContributorRow_2"
-          onContributorAssigned={[Function]}
-          onDelete={[Function]}
-          onMoveDown={[Function]}
-          onMoveUp={[Function]}
-          showContributorAssignment={false}
-          showIdentifierLookup={false}
-          showRoleInput={false}
-        />
-      </WithStyles(List)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
-</div>
-`;
-
-exports[`ContributorsEditor tests  renders 4 contributor rows wrapped in an infinite scroll 1`] = `
-<div>
-  <Connect(ContributorForm)
-    isContributorAssigned={true}
-    isNtro={false}
-    onAdd={[Function]}
-    showContributorAssignment={false}
-    showIdentifierLookup={false}
-    showRoleInput={false}
-  />
-  <WithStyles(Grid)
-    container={true}
-    spacing={8}
-  >
-    <WithStyles(Grid)
-      item={true}
-      xs={12}
-    >
-      <WithStyles(List)>
-        <WithStyles(ContributorRowHeader)
-          isInfinite={true}
-          isNtro={false}
-          onDeleteAll={[Function]}
-          showContributorAssignment={false}
-          showIdentifierLookup={false}
-          showRoleInput={false}
-        />
-      </WithStyles(List)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
-      item={true}
-      xs={12}
-    >
-      <WithStyles(List)
-        classes={
-          Object {
-            "root": "list scroll",
-          }
-        }
-      >
-        <WithStyles(WithTheme(WithWidth(ContributorRow)))
-          canMoveDown={true}
-          canMoveUp={false}
-          contributor={
-            Object {
-              "displayName": 1,
-            }
-          }
-          disabledContributorAssignment={false}
-          index={0}
-          key="ContributorRow_0"
-          onContributorAssigned={[Function]}
-          onDelete={[Function]}
-          onMoveDown={[Function]}
-          onMoveUp={[Function]}
-          showContributorAssignment={false}
-          showIdentifierLookup={false}
-          showRoleInput={false}
-        />
-        <WithStyles(WithTheme(WithWidth(ContributorRow)))
-          canMoveDown={true}
-          canMoveUp={true}
-          contributor={
-            Object {
-              "displayName": 2,
-            }
-          }
-          disabledContributorAssignment={false}
-          index={1}
-          key="ContributorRow_1"
-          onContributorAssigned={[Function]}
-          onDelete={[Function]}
-          onMoveDown={[Function]}
-          onMoveUp={[Function]}
-          showContributorAssignment={false}
-          showIdentifierLookup={false}
-          showRoleInput={false}
-        />
-        <WithStyles(WithTheme(WithWidth(ContributorRow)))
-          canMoveDown={true}
-          canMoveUp={true}
-          contributor={
-            Object {
-              "displayName": 3,
-            }
-          }
-          disabledContributorAssignment={false}
-          index={2}
-          key="ContributorRow_2"
-          onContributorAssigned={[Function]}
-          onDelete={[Function]}
-          onMoveDown={[Function]}
-          onMoveUp={[Function]}
-          showContributorAssignment={false}
-          showIdentifierLookup={false}
-          showRoleInput={false}
-        />
-        <WithStyles(WithTheme(WithWidth(ContributorRow)))
-          canMoveDown={false}
-          canMoveUp={true}
-          contributor={
-            Object {
-              "displayName": 4,
-            }
-          }
-          disabledContributorAssignment={false}
-          index={3}
-          key="ContributorRow_3"
-          onContributorAssigned={[Function]}
-          onDelete={[Function]}
-          onMoveDown={[Function]}
-          onMoveUp={[Function]}
-          showContributorAssignment={false}
-          showIdentifierLookup={false}
-          showRoleInput={false}
-        />
-      </WithStyles(List)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
-</div>
-`;
-
-exports[`ContributorsEditor tests  renders no contributor rows with no infinite scroll 1`] = `
-<div>
-  <Connect(ContributorForm)
+    author={
+      Object {
+        "aut_id": 1,
+      }
+    }
+    classes={
+      Object {
+        "list": "list",
+        "scroll": "scroll",
+      }
+    }
+    contributors={Array []}
+    editMode={false}
+    hideDelete={false}
+    hideReorder={false}
     isContributorAssigned={false}
     isNtro={false}
-    onAdd={[Function]}
+    onSubmit={[Function]}
     showContributorAssignment={false}
     showIdentifierLookup={false}
     showRoleInput={false}
@@ -2866,12 +3086,116 @@ exports[`ContributorsEditor tests  renders no contributor rows with no infinite 
 </div>
 `;
 
-exports[`ContributorsEditor tests  should get contributors from props and input value set as an Immutable list 1`] = `
+exports[`ContributorsEditor returns contributor form with expected props 1`] = `
+<Connect(ContributorForm)
+  author={
+    Object {
+      "aut_id": 1,
+    }
+  }
+  classes={
+    Object {
+      "list": "list",
+      "scroll": "scroll",
+    }
+  }
+  contributors={
+    Array [
+      Object {
+        "nameAsPublished": 1,
+      },
+    ]
+  }
+  editMode={false}
+  hideDelete={false}
+  hideReorder={false}
+  isContributorAssigned={false}
+  isNtro={false}
+  onSubmit={[Function]}
+  showContributorAssignment={false}
+  showIdentifierLookup={false}
+  showRoleInput={false}
+/>
+`;
+
+exports[`ContributorsEditor returns contributor form with expected props 2`] = `
+<Connect(ContributorForm)
+  author={
+    Object {
+      "aut_id": 1,
+    }
+  }
+  classes={
+    Object {
+      "list": "list",
+      "scroll": "scroll",
+    }
+  }
+  contributors={
+    Array [
+      Object {
+        "nameAsPublished": 1,
+      },
+    ]
+  }
+  editMode={true}
+  hideDelete={false}
+  hideReorder={false}
+  initialValues={Object {}}
+  isContributorAssigned={false}
+  isNtro={false}
+  locale={
+    Object {
+      "addButton": "test",
+    }
+  }
+  meta={
+    Object {
+      "initial": Object {
+        "toJS": [Function],
+      },
+    }
+  }
+  onSubmit={[Function]}
+  showContributorAssignment={false}
+  showIdentifierLookup={false}
+  showRoleInput={false}
+/>
+`;
+
+exports[`ContributorsEditor should get contributors from props and input value set as an Immutable list 1`] = `
 <div>
   <Connect(ContributorForm)
+    author={
+      Object {
+        "aut_id": 1,
+      }
+    }
+    classes={
+      Object {
+        "list": "list",
+        "scroll": "scroll",
+      }
+    }
+    editMode={false}
+    hideDelete={false}
+    hideReorder={false}
+    input={
+      Object {
+        "name": "test",
+        "value": Immutable.List [
+          Object {
+            "displayName": "test 1",
+          },
+          Object {
+            "displayName": "test 2",
+          },
+        ],
+      }
+    }
     isContributorAssigned={true}
     isNtro={false}
-    onAdd={[Function]}
+    onSubmit={[Function]}
     showContributorAssignment={false}
     showIdentifierLookup={false}
     showRoleInput={false}
@@ -2886,6 +3210,7 @@ exports[`ContributorsEditor tests  should get contributors from props and input 
     >
       <WithStyles(List)>
         <WithStyles(ContributorRowHeader)
+          hideDelete={false}
           isInfinite={false}
           isNtro={false}
           onDeleteAll={[Function]}
@@ -2914,16 +3239,15 @@ exports[`ContributorsEditor tests  should get contributors from props and input 
               "displayName": "test 1",
             }
           }
-          disabledContributorAssignment={false}
+          hideDelete={false}
+          hideReorder={false}
           index={0}
           key="ContributorRow_0"
-          onContributorAssigned={[Function]}
           onDelete={[Function]}
           onMoveDown={[Function]}
           onMoveUp={[Function]}
+          onSelect={[Function]}
           showContributorAssignment={false}
-          showIdentifierLookup={false}
-          showRoleInput={false}
         />
         <WithStyles(WithTheme(WithWidth(ContributorRow)))
           canMoveDown={false}
@@ -2933,16 +3257,15 @@ exports[`ContributorsEditor tests  should get contributors from props and input 
               "displayName": "test 2",
             }
           }
-          disabledContributorAssignment={false}
+          hideDelete={false}
+          hideReorder={false}
           index={1}
           key="ContributorRow_1"
-          onContributorAssigned={[Function]}
           onDelete={[Function]}
           onMoveDown={[Function]}
           onMoveUp={[Function]}
+          onSelect={[Function]}
           showContributorAssignment={false}
-          showIdentifierLookup={false}
-          showRoleInput={false}
         />
       </WithStyles(List)>
     </WithStyles(Grid)>
@@ -2950,12 +3273,39 @@ exports[`ContributorsEditor tests  should get contributors from props and input 
 </div>
 `;
 
-exports[`ContributorsEditor tests  should get contributors from props and input value set as an array 1`] = `
+exports[`ContributorsEditor should get contributors from props and input value set as an array 1`] = `
 <div>
   <Connect(ContributorForm)
+    author={
+      Object {
+        "aut_id": 1,
+      }
+    }
+    classes={
+      Object {
+        "list": "list",
+        "scroll": "scroll",
+      }
+    }
+    editMode={false}
+    hideDelete={false}
+    hideReorder={false}
+    input={
+      Object {
+        "name": "test",
+        "value": Array [
+          Object {
+            "displayName": "test 1",
+          },
+          Object {
+            "displayName": "test 2",
+          },
+        ],
+      }
+    }
     isContributorAssigned={true}
     isNtro={false}
-    onAdd={[Function]}
+    onSubmit={[Function]}
     showContributorAssignment={false}
     showIdentifierLookup={false}
     showRoleInput={false}
@@ -2970,6 +3320,7 @@ exports[`ContributorsEditor tests  should get contributors from props and input 
     >
       <WithStyles(List)>
         <WithStyles(ContributorRowHeader)
+          hideDelete={false}
           isInfinite={false}
           isNtro={false}
           onDeleteAll={[Function]}
@@ -2998,16 +3349,15 @@ exports[`ContributorsEditor tests  should get contributors from props and input 
               "displayName": "test 1",
             }
           }
-          disabledContributorAssignment={false}
+          hideDelete={false}
+          hideReorder={false}
           index={0}
           key="ContributorRow_0"
-          onContributorAssigned={[Function]}
           onDelete={[Function]}
           onMoveDown={[Function]}
           onMoveUp={[Function]}
+          onSelect={[Function]}
           showContributorAssignment={false}
-          showIdentifierLookup={false}
-          showRoleInput={false}
         />
         <WithStyles(WithTheme(WithWidth(ContributorRow)))
           canMoveDown={false}
@@ -3017,16 +3367,15 @@ exports[`ContributorsEditor tests  should get contributors from props and input 
               "displayName": "test 2",
             }
           }
-          disabledContributorAssignment={false}
+          hideDelete={false}
+          hideReorder={false}
           index={1}
           key="ContributorRow_1"
-          onContributorAssigned={[Function]}
           onDelete={[Function]}
           onMoveDown={[Function]}
           onMoveUp={[Function]}
+          onSelect={[Function]}
           showContributorAssignment={false}
-          showIdentifierLookup={false}
-          showRoleInput={false}
         />
       </WithStyles(List)>
     </WithStyles(Grid)>
@@ -3034,7 +3383,7 @@ exports[`ContributorsEditor tests  should get contributors from props and input 
 </div>
 `;
 
-exports[`ContributorsEditor tests  should have a proper style generator 1`] = `
+exports[`ContributorsEditor should have a proper style generator 1`] = `
 Object {
   "list": Object {
     "margin": "0 1%",
@@ -3049,16 +3398,26 @@ Object {
 }
 `;
 
-exports[`ContributorsEditor tests  should not move contributor down 1`] = `
+exports[`ContributorsEditor should not move contributor down 1`] = `
 <div>
   <Connect(ContributorForm)
-    0="t"
-    1="e"
-    2="s"
-    3="t"
+    author={
+      Object {
+        "aut_id": 1,
+      }
+    }
+    classes={
+      Object {
+        "list": "list",
+        "scroll": "scroll",
+      }
+    }
+    editMode={false}
+    hideDelete={false}
+    hideReorder={false}
     isContributorAssigned={false}
     isNtro={false}
-    onAdd={[Function]}
+    onSubmit={[Function]}
     showContributorAssignment={false}
     showIdentifierLookup={false}
     showRoleInput={false}
@@ -3066,12 +3425,35 @@ exports[`ContributorsEditor tests  should not move contributor down 1`] = `
 </div>
 `;
 
-exports[`ContributorsEditor tests  should render error as html 1`] = `
+exports[`ContributorsEditor should render error as html 1`] = `
 <div>
   <Connect(ContributorForm)
+    author={
+      Object {
+        "aut_id": 1,
+      }
+    }
+    classes={
+      Object {
+        "list": "list",
+        "scroll": "scroll",
+      }
+    }
+    editMode={false}
+    hideDelete={false}
+    hideReorder={false}
     isContributorAssigned={false}
     isNtro={false}
-    onAdd={[Function]}
+    meta={
+      Object {
+        "error": <p>
+          <span>
+            test
+          </span>
+        </p>,
+      }
+    }
+    onSubmit={[Function]}
     showContributorAssignment={false}
     showIdentifierLookup={false}
     showRoleInput={false}
@@ -3089,12 +3471,33 @@ exports[`ContributorsEditor tests  should render error as html 1`] = `
 </div>
 `;
 
-exports[`ContributorsEditor tests  should render error as one child 1`] = `
+exports[`ContributorsEditor should render error as one child 1`] = `
 <div>
   <Connect(ContributorForm)
+    author={
+      Object {
+        "aut_id": 1,
+      }
+    }
+    classes={
+      Object {
+        "list": "list",
+        "scroll": "scroll",
+      }
+    }
+    editMode={false}
+    hideDelete={false}
+    hideReorder={false}
     isContributorAssigned={false}
     isNtro={false}
-    onAdd={[Function]}
+    meta={
+      Object {
+        "error": <span>
+          test
+        </span>,
+      }
+    }
+    onSubmit={[Function]}
     showContributorAssignment={false}
     showIdentifierLookup={false}
     showRoleInput={false}
@@ -3108,12 +3511,32 @@ exports[`ContributorsEditor tests  should render error as one child 1`] = `
 </div>
 `;
 
-exports[`ContributorsEditor tests  should show validation error 1`] = `
+exports[`ContributorsEditor should show validation error 1`] = `
 <div>
   <Connect(ContributorForm)
+    author={
+      Object {
+        "aut_id": 1,
+      }
+    }
+    classes={
+      Object {
+        "list": "list",
+        "scroll": "scroll",
+      }
+    }
+    contributors={Array []}
+    editMode={false}
+    hideDelete={false}
+    hideReorder={false}
     isContributorAssigned={false}
     isNtro={false}
-    onAdd={[Function]}
+    meta={
+      Object {
+        "error": "This is a test error",
+      }
+    }
+    onSubmit={[Function]}
     showContributorAssignment={false}
     showIdentifierLookup={false}
     showRoleInput={false}

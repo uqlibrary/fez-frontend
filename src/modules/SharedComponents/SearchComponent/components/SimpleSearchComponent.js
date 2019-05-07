@@ -133,10 +133,8 @@ export class SimpleSearchComponent extends PureComponent {
     };
 
     _handleSearchMode = () => {
-        /* istanbul ignore else */
-        if (!!this.props.onToggleSearchMode) {
-            this.props.onToggleSearchMode();
-        }
+        !!this.props.onToggleSearchMode &&
+        this.props.onToggleSearchMode();
     };
 
     _handleSearch = (event) => {

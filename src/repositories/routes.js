@@ -83,9 +83,11 @@ export const CURRENT_AUTHOR_API = () => (
 export const AUTHOR_API = ({authorId}) => (
     {apiUrl: `fez-authors/${authorId}`}
 );
-export const AUTHOR_DETAILS_API = ({userId}) => (
-    {apiUrl: `authors/details/${userId}`}
-);
+export const AUTHOR_DETAILS_API = ({userId}) => {
+    return {
+        apiUrl: `authors/details/${userId}`
+    };
+};
 export const AUTHOR_ORCID_DETAILS_API = ({userId, params}) => (
     {apiUrl: `orcid/${userId}/request`, options: {params: {...params}}}
 );
@@ -165,6 +167,19 @@ export const CURRENT_USER_RECORDS_API = (values, route = 'search') => (
         }
     }
 );
+
+export const INCOMPLETE_RECORDS_API = (values) => {
+    return {
+        apiUrl: 'records/search',
+        options: {
+            params: {
+                rule: 'incomplete',
+                ...{...getStandardSearchParams(values), ...getOpenAccessSearchParams(values)}
+            }
+        }
+    };
+};
+
 export const AUTHOR_PUBLICATIONS_STATS_ONLY_API = (values) => (
     {
         apiUrl: 'records/search',

@@ -1,5 +1,6 @@
 import locale from 'locale/global';
 import templates from 'locale/templates';
+import { general } from 'config';
 
 const moment = require('moment');
 
@@ -183,12 +184,16 @@ export const getRecordAuthorAffiliationSearchKey = (authors) => {
     return {
         fez_record_search_key_author_affiliation_name: authors
             .map(
-                (item, index) => (
-                    {
-                        rek_author_affiliation_name: item.orgaff || 'University of Queensland',
-                        rek_author_affiliation_name_order: index + 1
+                (item, index) => {
+                    let orgaff = item.orgaff;
+                    if (!orgaff || item.affiliation === 'UQ') {
+                        orgaff = locale.global.orgTitle;
                     }
-                )
+                    return {
+                        rek_author_affiliation_name: orgaff,
+                        rek_author_affiliation_name_order: index + 1
+                    };
+                }
             )
     };
 };
@@ -199,12 +204,16 @@ export const getRecordAuthorAffiliationTypeSearchKey = (authors) => {
     return {
         fez_record_search_key_author_affiliation_type: authors
             .map(
-                (item, index) => (
-                    {
-                        rek_author_affiliation_type: !!item.orgtype ? parseInt(item.orgtype, 10) : 453989,
+                (item, index) => {
+                    const orgtype = (!!item.orgtype && item.affiliation === 'NotUQ')
+                        ? parseInt(item.orgtype, 10)
+                        : parseInt(general.ORG_TYPE_ID_UNIVERSITY, 10)
+                    ;
+                    return {
+                        rek_author_affiliation_type: orgtype,
                         rek_author_affiliation_type_order: index + 1
-                    }
-                )
+                    };
+                }
             )
     };
 };
@@ -419,7 +428,15 @@ export const getGrantsListSearchKey = (grants) => {
 };
 
 export const getLanguageSearchKey = (languages) => {
-    if (!languages || languages.length === 0) return {};
+    if (!languages || languages.length === 0) {
+        return {
+            fez_record_search_key_language: [{
+                rek_language: 'eng',
+                rek_language_order: 1
+            }]
+        };
+    }
+
     return {
         fez_record_search_key_language: [
             ...languages
@@ -433,47 +450,81 @@ export const getLanguageSearchKey = (languages) => {
 
 export const getNtroMetadataSearchKeys = (data) => {
     if (!data) return {};
-    const selectedAuthorIdIndex = data.authors.findIndex(author => author.selected === true);
     const ntroMetadata = {};
 
     if (!!data.significance) {
-        ntroMetadata.fez_record_search_key_significance = data.authors.map((item, index) =>{
-            if (selectedAuthorIdIndex === index) {
-                return {
-                    rek_significance: data.significance,
-                    rek_significance_order: selectedAuthorIdIndex + 1
-                };
-            } else {
-                return {
-                    rek_significance: 0,
-                    rek_significance_order: index + 1
-                };
-            }
-        });
+        ntroMetadata.fez_record_search_key_significance = data.authors.map((item, index) => ({
+            rek_significance: item.selected === true ? data.significance : 0,
+            rek_significance_order: index + 1
+        }));
     }
 
     if (!!data.impactStatement) {
-        ntroMetadata.fez_record_search_key_creator_contribution_statement = data.authors.map((item, index) =>{
-            if (selectedAuthorIdIndex === index) {
-                return {
-                    rek_creator_contribution_statement: data.impactStatement.htmlText,
-                    rek_creator_contribution_statement_order: selectedAuthorIdIndex + 1
-                };
-            } else {
-                return {
-                    rek_creator_contribution_statement: locale.global.defaultContributorStatementMissing,
-                    rek_creator_contribution_statement_order: index + 1
-                };
-            }
-        });
-    }
-
-    if (!!data.qualityIndicators) {
-        ntroMetadata.fez_record_search_key_quality_indicator = data.qualityIndicators.map((item, index) => ({
-            rek_quality_indicator: item,
-            rek_quality_indicator_order: index + 1
+        ntroMetadata.fez_record_search_key_creator_contribution_statement = data.authors.map((item, index) => ({
+            rek_creator_contribution_statement: item.selected === true ? data.impactStatement.htmlText : locale.global.defaultContributorStatementMissing,
+            rek_creator_contribution_statement_order: index + 1
         }));
     }
 
     return ntroMetadata;
+};
+
+export const getQualityIndicatorSearchKey = (qualityIndicators = []) => {
+    if (!qualityIndicators || qualityIndicators.length === 0) return {};
+
+    return {
+        fez_record_search_key_quality_indicator: qualityIndicators.map((item, index) => ({
+            rek_quality_indicator: item,
+            rek_quality_indicator_order: index + 1
+        }))
+    };
+};
+
+export const getAuthorOrder = (data) => {
+    const author = data.publication.fez_record_search_key_author_id.filter(authorId => authorId.rek_author_id === data.author.aut_id);
+
+    // a missing author doesn't actually reach here, but if code is changed and that doesnt catch it anymore, -1 here should force handling, rather than silently introducing bad data
+    return (author.length > 0 && author[0].rek_author_id_order) || -1;
+};
+
+/**
+ * only return the changed fields
+ * @param data
+ */
+export const getCreatorContributionStatementSearchKeys = (data) => {
+    const result = {};
+
+    let impactStatement = null;
+    if (!!data.impactStatement && !!data.impactStatement.htmlText) {
+        impactStatement = data.impactStatement.htmlText;
+    } else if (!!data.impactStatement && !!data.impactStatement.plainText) {
+        impactStatement = data.impactStatement.plainText;
+    }
+    if (!!impactStatement) {
+        result.fez_record_search_key_creator_contribution_statement =
+            [{
+                rek_creator_contribution_statement: impactStatement,
+                rek_creator_contribution_statement_order: getAuthorOrder(data)
+            }];
+    }
+
+    return result;
+};
+
+/**
+ * only return the changed fields
+ * @param data
+ */
+export const getSignificanceSearchKeys = (data) => {
+    const result = {};
+
+    if (!!data.significance) {
+        result.fez_record_search_key_significance =
+            [{
+                rek_significance: data.significance,
+                rek_significance_order: getAuthorOrder(data)
+            }];
+    }
+
+    return result;
 };
