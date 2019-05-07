@@ -4,7 +4,7 @@ import ConnectedContributorForm from './ContributorForm';
 function setup(testProps, isShallow = true) {
     const props = {
         authorsList: [],
-        onAdd: jest.fn(),
+        onSubmit: jest.fn(),
         showIdentifierLookup: false,
         showRoleInput: false,
         isNtro: false,
@@ -44,31 +44,32 @@ describe('Component ContributorForm', () => {
         const wrapper = setup({ showIdentifierLookup: true, actions: { searchAuthors: testFunction } });
         expect(wrapper.state.nameAsPublished).toBeFalsy();
         wrapper.instance()._onNameChanged({ target: { value: 'J. Smith' } });
-        expect(wrapper.state().nameAsPublished).toEqual('J. Smith');
+        expect(wrapper.state().contributor.nameAsPublished).toEqual('J. Smith');
     });
 
     it('should call event handler on submit if all checks pass', () => {
         const testFn = jest.fn();
         const wrapper = setup({
             onSubmit: testFn,
+            contributor: {
+                nameAsPublished: 'Firstname Lastname',
+                affiliation: 'UQ',
+                orgaff: '',
+                orgtype: '',
+                creatorRole: '',
+            }
         });
-        const state = {
+        const event = {
+            key: 'Enter'
+        };
+        wrapper.instance()._onSubmit(event);
+        expect(testFn).toBeCalledWith({
             nameAsPublished: 'Firstname Lastname',
             affiliation: 'UQ',
             orgaff: '',
             orgtype: '',
             creatorRole: '',
-            contributor: {},
-        };
-        wrapper.setState(state);
-        const event = {
-            key: 'Enter'
-        };
-        wrapper.instance()._onSubmit(event);
-        delete state.contributor;
-        expect(testFn).toBeCalledWith({
-            ...state,
-            uqIdentifier: undefined,
+            uqIdentifier: ''
         });
     });
 
@@ -78,7 +79,9 @@ describe('Component ContributorForm', () => {
             onAdd: onAddFn
         });
         wrapper.setState({
-            nameAsPublished: 'testing'
+            contributor: {
+                nameAsPublished: 'testing'
+            }
         });
         wrapper.instance()._onSubmit({ key: 'Esc' });
         expect(onAddFn).not.toBeCalled();
@@ -90,7 +93,9 @@ describe('Component ContributorForm', () => {
             onAdd: onAddFn
         });
         wrapper.setState({
-            nameAsPublished: ''
+            contributor: {
+                nameAsPublished: ''
+            }
         });
         wrapper.instance()._onSubmit({ key: 'Enter' });
         expect(onAddFn).not.toBeCalled();
@@ -103,8 +108,10 @@ describe('Component ContributorForm', () => {
             showRoleInput: true
         });
         wrapper.setState({
-            nameAsPublished: 'test',
-            creatorRole: ''
+            contributor: {
+                nameAsPublished: 'test',
+                creatorRole: ''
+            }
         });
         wrapper.instance()._onSubmit({ key: 'Enter' });
         expect(onAddFn).not.toBeCalled();
@@ -116,10 +123,12 @@ describe('Component ContributorForm', () => {
             onAdd: onAddFn
         });
         wrapper.setState({
-            nameAsPublished: 'test',
-            affiliation: 'NOT UQ',
-            orgaff: '',
-            orgtype: ''
+            contributor: {
+                nameAsPublished: 'test',
+                affiliation: 'NotUQ',
+                orgaff: '',
+                orgtype: ''
+            }
         });
         wrapper.instance()._onSubmit({ key: 'Enter' });
         expect(onAddFn).not.toBeCalled();
@@ -130,7 +139,7 @@ describe('Component ContributorForm', () => {
             showRoleInput: true
         });
         wrapper.find('Connect(WithStyles(AutoCompleteAsyncField))').props().onChange('test');
-        expect(wrapper.state().creatorRole).toEqual('test');
+        expect(wrapper.state().contributor.creatorRole).toEqual('test');
     });
 
     it('should handle affiliation change', () => {
@@ -140,12 +149,10 @@ describe('Component ContributorForm', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
 
         wrapper.find('OrgAffilicationTypeSelector').props().onAffiliationChange({ target: { value: 'UQ' } });
-        expect(wrapper.state().affiliation).toEqual('UQ');
-        expect(wrapper.state().showIdentifierLookup).toBeTruthy();
+        expect(wrapper.state().contributor.affiliation).toEqual('UQ');
 
         wrapper.find('OrgAffilicationTypeSelector').props().onAffiliationChange({ target: { value: 'Non-UQ' } });
-        expect(wrapper.state().affiliation).toEqual('Non-UQ');
-        expect(wrapper.state().showIdentifierLookup).toBeFalsy();
+        expect(wrapper.state().contributor.affiliation).toEqual('Non-UQ');
     });
 
     it('should show error regarding affiliation type selector', () => {
@@ -169,16 +176,19 @@ describe('Component ContributorForm', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('NonUqOrgAffiliationFormSection').length).toBe(0);
         wrapper.setState({
-            affiliation: 'NotUQ'
+            contributor: {
+                nameAsPublished: '',
+                affiliation: 'NotUQ'
+            }
         });
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('NonUqOrgAffiliationFormSection').length).toBe(1);
 
         wrapper.find('NonUqOrgAffiliationFormSection').props().onOrgAffiliationChange({ target: { value: 'test' } });
-        expect(wrapper.state().orgaff).toEqual('test');
+        expect(wrapper.state().contributor.orgaff).toEqual('test');
 
         wrapper.find('NonUqOrgAffiliationFormSection').props().onOrgTypeChange({ target: { value: 'testing' } });
-        expect(wrapper.state().orgtype).toEqual('testing');
+        expect(wrapper.state().contributor.orgtype).toEqual('testing');
     });
 
     it('should disable button', () => {
@@ -201,17 +211,19 @@ describe('Component ContributorForm', () => {
             showRoleInput: true
         });
         wrapper.setState({
-            nameAsPublished: 'test',
-            creatorRole: 'role',
-            affiliation: 'NotUQ',
-            orgaff: 'test',
-            orgtype: 'test'
+            contributor: {
+                nameAsPublished: 'test',
+                creatorRole: 'role',
+                affiliation: 'NotUQ',
+                orgaff: 'test',
+                orgtype: 'test'
+            }
         });
         expect(wrapper.find('WithStyles(Button)').props().disabled).toBeFalsy();
     });
 
     it('should render connected component', () => {
-        const wrapper = getElement(ConnectedContributorForm, { onAdd: jest.fn() }, false);
+        const wrapper = getElement(ConnectedContributorForm, { onSubmit: jest.fn() }, false);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -247,49 +259,36 @@ describe('Component ContributorForm', () => {
     });
 
     it('should process prop updates', () => {
-        const contributor1 = { test1: 'value1' };
-        const contributor2 = { test1: 'value2' };
-        const wrapper = setup({
-            contributor: contributor1,
-            test1: 'value1',
-            test2: 'value3',
-        });
-        const before = wrapper.state();
-        wrapper.instance().componentWillReceiveProps({
-            contributor: contributor1,
-            test2: 'value4',
-        });
-        expect(wrapper.state()).toEqual(before);
+        const contributor1 = { nameAsPublished: 'value1' };
+        const contributor2 = { nameAsPublished: 'value2' };
 
-        wrapper.instance().componentWillReceiveProps({
+        const wrapper = setup({
+            contributor: contributor1
+        });
+        const componentWillReceiveProps = jest.spyOn(wrapper.instance(), 'componentWillReceiveProps');
+
+        expect(toJson(wrapper)).toMatchSnapshot();
+
+        wrapper.setProps({
             contributor: contributor2
         });
-        expect(wrapper.state().contributor).toBe(contributor2);
-        expect(wrapper.state().test1).toBe('value2');
-
-        wrapper.instance().componentWillReceiveProps({});
-        expect(wrapper.state().contributor).toEqual({});
+        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(componentWillReceiveProps).toHaveBeenCalled();
     });
 
-    it('should be able to save selected item object to contributor state', () => {
-        const wrapper = setup({});
-        const testFn = jest.spyOn(wrapper.instance(), '_onSubmit');
-        wrapper.instance()._onUQIdentifierSelected({});
-        expect(wrapper.state().contributor).toEqual({});
-        expect(testFn).toBeCalled();
-    });
-
-    it('should clear uqIdentifier state if affiliation is changed to "NotUQ"', () => {
-        const wrapper = setup({});
-        wrapper.setState({
-            uqIdentifier: '100'
+    it('should be able to set uqIdentifier on the contributor object', () => {
+        const testFn = jest.fn();
+        const wrapper = setup({
+            onSubmit: testFn
         });
-        wrapper.instance().handleAffiliationChange({
-            target: {
-                value: 'NotUQ'
-            }
+        wrapper.instance()._onUQIdentifierSelected({aut_id: 111});
+        expect(testFn).toBeCalledWith({
+            affiliation: '',
+            creatorRole: '',
+            nameAsPublished: '',
+            orgaff: '',
+            orgtype: '',
+            uqIdentifier: '111'
         });
-        expect(wrapper.state().uqIdentifier).toBe('');
     });
-
 });
