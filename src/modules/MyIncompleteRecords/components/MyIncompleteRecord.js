@@ -414,7 +414,7 @@ export default class MyIncompleteRecord extends PureComponent {
                                         component={FileUploadField}
                                         disabled={this.props.submitting}
                                         requireOpenAccessStatus
-                                        validate={[validation.validFileUpload]}
+                                        validate={[validation.fileUploadRequired, validation.validFileUpload]}
                                         isNtro
                                         {...txt.fields.fileUpload}
                                     />

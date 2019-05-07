@@ -622,6 +622,7 @@ exports[`Cards will display correct empty fields for a Exhibition Creative Work 
             validate={
               Array [
                 [Function],
+                [Function],
               ]
             }
           />
@@ -1286,6 +1287,7 @@ exports[`Cards will display correct empty fields for a Live Performance of Music
             title="Upload files"
             validate={
               Array [
+                [Function],
                 [Function],
               ]
             }
@@ -1952,6 +1954,7 @@ exports[`Cards will display correct empty fields for a Musical Creative work 1`]
             validate={
               Array [
                 [Function],
+                [Function],
               ]
             }
           />
@@ -2617,6 +2620,7 @@ exports[`Cards will display correct empty fields for a Public Sector Research Re
             validate={
               Array [
                 [Function],
+                [Function],
               ]
             }
           />
@@ -3281,6 +3285,7 @@ exports[`Cards will display correct empty fields for a Textual Book work 1`] = `
             title="Upload files"
             validate={
               Array [
+                [Function],
                 [Function],
               ]
             }
@@ -3954,6 +3959,7 @@ exports[`Cards will display correct empty fields for a Textual Book work with la
             validate={
               Array [
                 [Function],
+                [Function],
               ]
             }
           />
@@ -4618,6 +4624,7 @@ exports[`Cards will display correct empty fields for a Website Creative work 1`]
             title="Upload files"
             validate={
               Array [
+                [Function],
                 [Function],
               ]
             }
@@ -5284,6 +5291,7 @@ exports[`Cards will display correct empty fields for an Architectural Design wor
             validate={
               Array [
                 [Function],
+                [Function],
               ]
             }
           />
@@ -5863,6 +5871,7 @@ exports[`Cards will display empty where nothing is incomplete 1`] = `
             title="Upload files"
             validate={
               Array [
+                [Function],
                 [Function],
               ]
             }
@@ -6663,6 +6672,7 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
             validate={
               Array [
                 [Function],
+                [Function],
               ]
             }
           />
@@ -7461,6 +7471,7 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
             title="Upload files"
             validate={
               Array [
+                [Function],
                 [Function],
               ]
             }
@@ -8273,6 +8284,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
             validate={
               Array [
                 [Function],
+                [Function],
               ]
             }
           />
@@ -9078,6 +9090,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
             validate={
               Array [
                 [Function],
+                [Function],
               ]
             }
           />
@@ -9876,6 +9889,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
             title="Upload files"
             validate={
               Array [
+                [Function],
                 [Function],
               ]
             }
