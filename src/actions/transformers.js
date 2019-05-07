@@ -483,7 +483,6 @@ export const getQualityIndicatorSearchKey = (qualityIndicators = []) => {
 export const getAuthorOrder = (data) => {
     const author = data.publication.fez_record_search_key_author_id.filter(authorId => authorId.rek_author_id === data.author.aut_id);
 
-    // TODO check using author uqrdav10 on record UQ:720334 (he isnt first on that record)
     // a missing author doesn't actually reach here, but if code is changed and that doesnt catch it anymore, -1 here should force handling, rather than silently introducing bad data
     return (author.length > 0 && author[0].rek_author_id_order) || -1;
 };

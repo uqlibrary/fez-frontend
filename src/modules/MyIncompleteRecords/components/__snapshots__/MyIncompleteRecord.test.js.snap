@@ -170,6 +170,98 @@ exports[`Cards will display correct empty fields for a Exhibition Creative Work 
           type="info_outline"
         />
       </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          title="Type & Collection"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={8}
+            style={
+              Object {
+                "borderBottom": "1px solid #f2f2f2",
+                "paddingBottom": 12,
+              }
+            }
+          >
+            <WithStyles(Grid)
+              alignItems="flex-start"
+              container={true}
+              spacing={16}
+            >
+              <WithStyles(Grid)
+                item={true}
+                sm={3}
+                xs={12}
+              >
+                <WithStyles(Typography)
+                  component="span"
+                  variant="body2"
+                >
+                  Type of work
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+              <WithStyles(Grid)
+                item={true}
+                sm={9}
+                xs={12}
+              >
+                <WithStyles(Typography)
+                  component="span"
+                  variant="body2"
+                >
+                  Creative Work
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            container={true}
+            spacing={8}
+            style={
+              Object {
+                "borderBottom": "1px solid #f2f2f2",
+                "marginTop": 12,
+                "paddingBottom": 12,
+              }
+            }
+          >
+            <WithStyles(Grid)
+              alignItems="flex-start"
+              container={true}
+              spacing={16}
+            >
+              <WithStyles(Grid)
+                item={true}
+                sm={3}
+                xs={12}
+              >
+                <WithStyles(Typography)
+                  component="span"
+                  variant="body2"
+                >
+                  Sub-type
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+              <WithStyles(Grid)
+                item={true}
+                sm={9}
+                xs={12}
+              >
+                <WithStyles(Typography)
+                  component="span"
+                  variant="body2"
+                >
+                  Curated or Produced Exhibition or Event - Exhibition or Event
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
       <NtroFields
         defaultLanguage="eng"
         hideAbstract={false}
@@ -746,6 +838,98 @@ exports[`Cards will display correct empty fields for a Live Performance of Music
           title="Missing data"
           type="info_outline"
         />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          title="Type & Collection"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={8}
+            style={
+              Object {
+                "borderBottom": "1px solid #f2f2f2",
+                "paddingBottom": 12,
+              }
+            }
+          >
+            <WithStyles(Grid)
+              alignItems="flex-start"
+              container={true}
+              spacing={16}
+            >
+              <WithStyles(Grid)
+                item={true}
+                sm={3}
+                xs={12}
+              >
+                <WithStyles(Typography)
+                  component="span"
+                  variant="body2"
+                >
+                  Type of work
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+              <WithStyles(Grid)
+                item={true}
+                sm={9}
+                xs={12}
+              >
+                <WithStyles(Typography)
+                  component="span"
+                  variant="body2"
+                >
+                  Creative Work
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            container={true}
+            spacing={8}
+            style={
+              Object {
+                "borderBottom": "1px solid #f2f2f2",
+                "marginTop": 12,
+                "paddingBottom": 12,
+              }
+            }
+          >
+            <WithStyles(Grid)
+              alignItems="flex-start"
+              container={true}
+              spacing={16}
+            >
+              <WithStyles(Grid)
+                item={true}
+                sm={3}
+                xs={12}
+              >
+                <WithStyles(Typography)
+                  component="span"
+                  variant="body2"
+                >
+                  Sub-type
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+              <WithStyles(Grid)
+                item={true}
+                sm={9}
+                xs={12}
+              >
+                <WithStyles(Typography)
+                  component="span"
+                  variant="body2"
+                >
+                  Live Performance of Creative Work - Music
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
       </WithStyles(Grid)>
       <NtroFields
         defaultLanguage="eng"
@@ -1324,6 +1508,98 @@ exports[`Cards will display correct empty fields for a Musical Creative work 1`]
           type="info_outline"
         />
       </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          title="Type & Collection"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={8}
+            style={
+              Object {
+                "borderBottom": "1px solid #f2f2f2",
+                "paddingBottom": 12,
+              }
+            }
+          >
+            <WithStyles(Grid)
+              alignItems="flex-start"
+              container={true}
+              spacing={16}
+            >
+              <WithStyles(Grid)
+                item={true}
+                sm={3}
+                xs={12}
+              >
+                <WithStyles(Typography)
+                  component="span"
+                  variant="body2"
+                >
+                  Type of work
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+              <WithStyles(Grid)
+                item={true}
+                sm={9}
+                xs={12}
+              >
+                <WithStyles(Typography)
+                  component="span"
+                  variant="body2"
+                >
+                  Creative Work
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            container={true}
+            spacing={8}
+            style={
+              Object {
+                "borderBottom": "1px solid #f2f2f2",
+                "marginTop": 12,
+                "paddingBottom": 12,
+              }
+            }
+          >
+            <WithStyles(Grid)
+              alignItems="flex-start"
+              container={true}
+              spacing={16}
+            >
+              <WithStyles(Grid)
+                item={true}
+                sm={3}
+                xs={12}
+              >
+                <WithStyles(Typography)
+                  component="span"
+                  variant="body2"
+                >
+                  Sub-type
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+              <WithStyles(Grid)
+                item={true}
+                sm={9}
+                xs={12}
+              >
+                <WithStyles(Typography)
+                  component="span"
+                  variant="body2"
+                >
+                  Creative Work - Musical Composition
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
       <NtroFields
         defaultLanguage="eng"
         hideAbstract={false}
@@ -1901,6 +2177,98 @@ exports[`Cards will display correct empty fields for a Public Sector Research Re
           type="info_outline"
         />
       </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          title="Type & Collection"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={8}
+            style={
+              Object {
+                "borderBottom": "1px solid #f2f2f2",
+                "paddingBottom": 12,
+              }
+            }
+          >
+            <WithStyles(Grid)
+              alignItems="flex-start"
+              container={true}
+              spacing={16}
+            >
+              <WithStyles(Grid)
+                item={true}
+                sm={3}
+                xs={12}
+              >
+                <WithStyles(Typography)
+                  component="span"
+                  variant="body2"
+                >
+                  Type of work
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+              <WithStyles(Grid)
+                item={true}
+                sm={9}
+                xs={12}
+              >
+                <WithStyles(Typography)
+                  component="span"
+                  variant="body2"
+                >
+                  Research Report
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            container={true}
+            spacing={8}
+            style={
+              Object {
+                "borderBottom": "1px solid #f2f2f2",
+                "marginTop": 12,
+                "paddingBottom": 12,
+              }
+            }
+          >
+            <WithStyles(Grid)
+              alignItems="flex-start"
+              container={true}
+              spacing={16}
+            >
+              <WithStyles(Grid)
+                item={true}
+                sm={3}
+                xs={12}
+              >
+                <WithStyles(Typography)
+                  component="span"
+                  variant="body2"
+                >
+                  Sub-type
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+              <WithStyles(Grid)
+                item={true}
+                sm={9}
+                xs={12}
+              >
+                <WithStyles(Typography)
+                  component="span"
+                  variant="body2"
+                >
+                  Research Report for an External Body - Public Sector
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
       <NtroFields
         defaultLanguage="eng"
         hideAbstract={false}
@@ -2477,6 +2845,98 @@ exports[`Cards will display correct empty fields for a Textual Book work 1`] = `
           title="Missing data"
           type="info_outline"
         />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          title="Type & Collection"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={8}
+            style={
+              Object {
+                "borderBottom": "1px solid #f2f2f2",
+                "paddingBottom": 12,
+              }
+            }
+          >
+            <WithStyles(Grid)
+              alignItems="flex-start"
+              container={true}
+              spacing={16}
+            >
+              <WithStyles(Grid)
+                item={true}
+                sm={3}
+                xs={12}
+              >
+                <WithStyles(Typography)
+                  component="span"
+                  variant="body2"
+                >
+                  Type of work
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+              <WithStyles(Grid)
+                item={true}
+                sm={9}
+                xs={12}
+              >
+                <WithStyles(Typography)
+                  component="span"
+                  variant="body2"
+                >
+                  Book
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            container={true}
+            spacing={8}
+            style={
+              Object {
+                "borderBottom": "1px solid #f2f2f2",
+                "marginTop": 12,
+                "paddingBottom": 12,
+              }
+            }
+          >
+            <WithStyles(Grid)
+              alignItems="flex-start"
+              container={true}
+              spacing={16}
+            >
+              <WithStyles(Grid)
+                item={true}
+                sm={3}
+                xs={12}
+              >
+                <WithStyles(Typography)
+                  component="span"
+                  variant="body2"
+                >
+                  Sub-type
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+              <WithStyles(Grid)
+                item={true}
+                sm={9}
+                xs={12}
+              >
+                <WithStyles(Typography)
+                  component="span"
+                  variant="body2"
+                >
+                  Creative Work - Textual
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
       </WithStyles(Grid)>
       <NtroFields
         defaultLanguage="eng"
@@ -3062,6 +3522,98 @@ exports[`Cards will display correct empty fields for a Textual Book work with la
           type="info_outline"
         />
       </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          title="Type & Collection"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={8}
+            style={
+              Object {
+                "borderBottom": "1px solid #f2f2f2",
+                "paddingBottom": 12,
+              }
+            }
+          >
+            <WithStyles(Grid)
+              alignItems="flex-start"
+              container={true}
+              spacing={16}
+            >
+              <WithStyles(Grid)
+                item={true}
+                sm={3}
+                xs={12}
+              >
+                <WithStyles(Typography)
+                  component="span"
+                  variant="body2"
+                >
+                  Type of work
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+              <WithStyles(Grid)
+                item={true}
+                sm={9}
+                xs={12}
+              >
+                <WithStyles(Typography)
+                  component="span"
+                  variant="body2"
+                >
+                  Book
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            container={true}
+            spacing={8}
+            style={
+              Object {
+                "borderBottom": "1px solid #f2f2f2",
+                "marginTop": 12,
+                "paddingBottom": 12,
+              }
+            }
+          >
+            <WithStyles(Grid)
+              alignItems="flex-start"
+              container={true}
+              spacing={16}
+            >
+              <WithStyles(Grid)
+                item={true}
+                sm={3}
+                xs={12}
+              >
+                <WithStyles(Typography)
+                  component="span"
+                  variant="body2"
+                >
+                  Sub-type
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+              <WithStyles(Grid)
+                item={true}
+                sm={9}
+                xs={12}
+              >
+                <WithStyles(Typography)
+                  component="span"
+                  variant="body2"
+                >
+                  Creative Work - Textual
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
       <NtroFields
         defaultLanguage="chi"
         hideAbstract={false}
@@ -3639,6 +4191,98 @@ exports[`Cards will display correct empty fields for a Website Creative work 1`]
           type="info_outline"
         />
       </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          title="Type & Collection"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={8}
+            style={
+              Object {
+                "borderBottom": "1px solid #f2f2f2",
+                "paddingBottom": 12,
+              }
+            }
+          >
+            <WithStyles(Grid)
+              alignItems="flex-start"
+              container={true}
+              spacing={16}
+            >
+              <WithStyles(Grid)
+                item={true}
+                sm={3}
+                xs={12}
+              >
+                <WithStyles(Typography)
+                  component="span"
+                  variant="body2"
+                >
+                  Type of work
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+              <WithStyles(Grid)
+                item={true}
+                sm={9}
+                xs={12}
+              >
+                <WithStyles(Typography)
+                  component="span"
+                  variant="body2"
+                >
+                  Creative Work
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            container={true}
+            spacing={8}
+            style={
+              Object {
+                "borderBottom": "1px solid #f2f2f2",
+                "marginTop": 12,
+                "paddingBottom": 12,
+              }
+            }
+          >
+            <WithStyles(Grid)
+              alignItems="flex-start"
+              container={true}
+              spacing={16}
+            >
+              <WithStyles(Grid)
+                item={true}
+                sm={3}
+                xs={12}
+              >
+                <WithStyles(Typography)
+                  component="span"
+                  variant="body2"
+                >
+                  Sub-type
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+              <WithStyles(Grid)
+                item={true}
+                sm={9}
+                xs={12}
+              >
+                <WithStyles(Typography)
+                  component="span"
+                  variant="body2"
+                >
+                  Recorded or Rendered Creative Work - Web Exhibition
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
       <NtroFields
         defaultLanguage="eng"
         hideAbstract={false}
@@ -4215,6 +4859,98 @@ exports[`Cards will display correct empty fields for an Architectural Design wor
           title="Missing data"
           type="info_outline"
         />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          title="Type & Collection"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={8}
+            style={
+              Object {
+                "borderBottom": "1px solid #f2f2f2",
+                "paddingBottom": 12,
+              }
+            }
+          >
+            <WithStyles(Grid)
+              alignItems="flex-start"
+              container={true}
+              spacing={16}
+            >
+              <WithStyles(Grid)
+                item={true}
+                sm={3}
+                xs={12}
+              >
+                <WithStyles(Typography)
+                  component="span"
+                  variant="body2"
+                >
+                  Type of work
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+              <WithStyles(Grid)
+                item={true}
+                sm={9}
+                xs={12}
+              >
+                <WithStyles(Typography)
+                  component="span"
+                  variant="body2"
+                >
+                  Design
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            container={true}
+            spacing={8}
+            style={
+              Object {
+                "borderBottom": "1px solid #f2f2f2",
+                "marginTop": 12,
+                "paddingBottom": 12,
+              }
+            }
+          >
+            <WithStyles(Grid)
+              alignItems="flex-start"
+              container={true}
+              spacing={16}
+            >
+              <WithStyles(Grid)
+                item={true}
+                sm={3}
+                xs={12}
+              >
+                <WithStyles(Typography)
+                  component="span"
+                  variant="body2"
+                >
+                  Sub-type
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+              <WithStyles(Grid)
+                item={true}
+                sm={9}
+                xs={12}
+              >
+                <WithStyles(Typography)
+                  component="span"
+                  variant="body2"
+                >
+                  Creative Work - Design/Architectural
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
       </WithStyles(Grid)>
       <NtroFields
         defaultLanguage="eng"
@@ -4850,6 +5586,98 @@ exports[`Cards will display empty where nothing is incomplete 1`] = `
           title="Missing data"
           type="info_outline"
         />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          title="Type & Collection"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={8}
+            style={
+              Object {
+                "borderBottom": "1px solid #f2f2f2",
+                "paddingBottom": 12,
+              }
+            }
+          >
+            <WithStyles(Grid)
+              alignItems="flex-start"
+              container={true}
+              spacing={16}
+            >
+              <WithStyles(Grid)
+                item={true}
+                sm={3}
+                xs={12}
+              >
+                <WithStyles(Typography)
+                  component="span"
+                  variant="body2"
+                >
+                  Type of work
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+              <WithStyles(Grid)
+                item={true}
+                sm={9}
+                xs={12}
+              >
+                <WithStyles(Typography)
+                  component="span"
+                  variant="body2"
+                >
+                  Creative Work
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            container={true}
+            spacing={8}
+            style={
+              Object {
+                "borderBottom": "1px solid #f2f2f2",
+                "marginTop": 12,
+                "paddingBottom": 12,
+              }
+            }
+          >
+            <WithStyles(Grid)
+              alignItems="flex-start"
+              container={true}
+              spacing={16}
+            >
+              <WithStyles(Grid)
+                item={true}
+                sm={3}
+                xs={12}
+              >
+                <WithStyles(Typography)
+                  component="span"
+                  variant="body2"
+                >
+                  Sub-type
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+              <WithStyles(Grid)
+                item={true}
+                sm={9}
+                xs={12}
+              >
+                <WithStyles(Typography)
+                  component="span"
+                  variant="body2"
+                >
+                  Curated or Produced Exhibition or Event - Exhibition or Event
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
       </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
@@ -5567,6 +6395,98 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
         xs={12}
       >
         <StandardCard
+          title="Type & Collection"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={8}
+            style={
+              Object {
+                "borderBottom": "1px solid #f2f2f2",
+                "paddingBottom": 12,
+              }
+            }
+          >
+            <WithStyles(Grid)
+              alignItems="flex-start"
+              container={true}
+              spacing={16}
+            >
+              <WithStyles(Grid)
+                item={true}
+                sm={3}
+                xs={12}
+              >
+                <WithStyles(Typography)
+                  component="span"
+                  variant="body2"
+                >
+                  Type of work
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+              <WithStyles(Grid)
+                item={true}
+                sm={9}
+                xs={12}
+              >
+                <WithStyles(Typography)
+                  component="span"
+                  variant="body2"
+                >
+                  Journal Article
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            container={true}
+            spacing={8}
+            style={
+              Object {
+                "borderBottom": "1px solid #f2f2f2",
+                "marginTop": 12,
+                "paddingBottom": 12,
+              }
+            }
+          >
+            <WithStyles(Grid)
+              alignItems="flex-start"
+              container={true}
+              spacing={16}
+            >
+              <WithStyles(Grid)
+                item={true}
+                sm={3}
+                xs={12}
+              >
+                <WithStyles(Typography)
+                  component="span"
+                  variant="body2"
+                >
+                  Sub-type
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+              <WithStyles(Grid)
+                item={true}
+                sm={9}
+                xs={12}
+              >
+                <WithStyles(Typography)
+                  component="span"
+                  variant="body2"
+                >
+                  Other
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
           title="Grant information"
         >
           <Field
@@ -6272,6 +7192,98 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
           title="Missing data"
           type="info_outline"
         />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          title="Type & Collection"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={8}
+            style={
+              Object {
+                "borderBottom": "1px solid #f2f2f2",
+                "paddingBottom": 12,
+              }
+            }
+          >
+            <WithStyles(Grid)
+              alignItems="flex-start"
+              container={true}
+              spacing={16}
+            >
+              <WithStyles(Grid)
+                item={true}
+                sm={3}
+                xs={12}
+              >
+                <WithStyles(Typography)
+                  component="span"
+                  variant="body2"
+                >
+                  Type of work
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+              <WithStyles(Grid)
+                item={true}
+                sm={9}
+                xs={12}
+              >
+                <WithStyles(Typography)
+                  component="span"
+                  variant="body2"
+                >
+                  Journal Article
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            container={true}
+            spacing={8}
+            style={
+              Object {
+                "borderBottom": "1px solid #f2f2f2",
+                "marginTop": 12,
+                "paddingBottom": 12,
+              }
+            }
+          >
+            <WithStyles(Grid)
+              alignItems="flex-start"
+              container={true}
+              spacing={16}
+            >
+              <WithStyles(Grid)
+                item={true}
+                sm={3}
+                xs={12}
+              >
+                <WithStyles(Typography)
+                  component="span"
+                  variant="body2"
+                >
+                  Sub-type
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+              <WithStyles(Grid)
+                item={true}
+                sm={9}
+                xs={12}
+              >
+                <WithStyles(Typography)
+                  component="span"
+                  variant="body2"
+                >
+                  Other
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
       </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
@@ -7001,6 +8013,98 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
         xs={12}
       >
         <StandardCard
+          title="Type & Collection"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={8}
+            style={
+              Object {
+                "borderBottom": "1px solid #f2f2f2",
+                "paddingBottom": 12,
+              }
+            }
+          >
+            <WithStyles(Grid)
+              alignItems="flex-start"
+              container={true}
+              spacing={16}
+            >
+              <WithStyles(Grid)
+                item={true}
+                sm={3}
+                xs={12}
+              >
+                <WithStyles(Typography)
+                  component="span"
+                  variant="body2"
+                >
+                  Type of work
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+              <WithStyles(Grid)
+                item={true}
+                sm={9}
+                xs={12}
+              >
+                <WithStyles(Typography)
+                  component="span"
+                  variant="body2"
+                >
+                  Journal Article
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            container={true}
+            spacing={8}
+            style={
+              Object {
+                "borderBottom": "1px solid #f2f2f2",
+                "marginTop": 12,
+                "paddingBottom": 12,
+              }
+            }
+          >
+            <WithStyles(Grid)
+              alignItems="flex-start"
+              container={true}
+              spacing={16}
+            >
+              <WithStyles(Grid)
+                item={true}
+                sm={3}
+                xs={12}
+              >
+                <WithStyles(Typography)
+                  component="span"
+                  variant="body2"
+                >
+                  Sub-type
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+              <WithStyles(Grid)
+                item={true}
+                sm={9}
+                xs={12}
+              >
+                <WithStyles(Typography)
+                  component="span"
+                  variant="body2"
+                >
+                  Other
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
           title="Grant information"
         >
           <Field
@@ -7718,6 +8822,98 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
         xs={12}
       >
         <StandardCard
+          title="Type & Collection"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={8}
+            style={
+              Object {
+                "borderBottom": "1px solid #f2f2f2",
+                "paddingBottom": 12,
+              }
+            }
+          >
+            <WithStyles(Grid)
+              alignItems="flex-start"
+              container={true}
+              spacing={16}
+            >
+              <WithStyles(Grid)
+                item={true}
+                sm={3}
+                xs={12}
+              >
+                <WithStyles(Typography)
+                  component="span"
+                  variant="body2"
+                >
+                  Type of work
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+              <WithStyles(Grid)
+                item={true}
+                sm={9}
+                xs={12}
+              >
+                <WithStyles(Typography)
+                  component="span"
+                  variant="body2"
+                >
+                  Journal Article
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            container={true}
+            spacing={8}
+            style={
+              Object {
+                "borderBottom": "1px solid #f2f2f2",
+                "marginTop": 12,
+                "paddingBottom": 12,
+              }
+            }
+          >
+            <WithStyles(Grid)
+              alignItems="flex-start"
+              container={true}
+              spacing={16}
+            >
+              <WithStyles(Grid)
+                item={true}
+                sm={3}
+                xs={12}
+              >
+                <WithStyles(Typography)
+                  component="span"
+                  variant="body2"
+                >
+                  Sub-type
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+              <WithStyles(Grid)
+                item={true}
+                sm={9}
+                xs={12}
+              >
+                <WithStyles(Typography)
+                  component="span"
+                  variant="body2"
+                >
+                  Other
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
           title="Grant information"
         >
           <Field
@@ -8423,6 +9619,98 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
           title="Missing data"
           type="info_outline"
         />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          title="Type & Collection"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={8}
+            style={
+              Object {
+                "borderBottom": "1px solid #f2f2f2",
+                "paddingBottom": 12,
+              }
+            }
+          >
+            <WithStyles(Grid)
+              alignItems="flex-start"
+              container={true}
+              spacing={16}
+            >
+              <WithStyles(Grid)
+                item={true}
+                sm={3}
+                xs={12}
+              >
+                <WithStyles(Typography)
+                  component="span"
+                  variant="body2"
+                >
+                  Type of work
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+              <WithStyles(Grid)
+                item={true}
+                sm={9}
+                xs={12}
+              >
+                <WithStyles(Typography)
+                  component="span"
+                  variant="body2"
+                >
+                  Journal Article
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            container={true}
+            spacing={8}
+            style={
+              Object {
+                "borderBottom": "1px solid #f2f2f2",
+                "marginTop": 12,
+                "paddingBottom": 12,
+              }
+            }
+          >
+            <WithStyles(Grid)
+              alignItems="flex-start"
+              container={true}
+              spacing={16}
+            >
+              <WithStyles(Grid)
+                item={true}
+                sm={3}
+                xs={12}
+              >
+                <WithStyles(Typography)
+                  component="span"
+                  variant="body2"
+                >
+                  Sub-type
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+              <WithStyles(Grid)
+                item={true}
+                sm={9}
+                xs={12}
+              >
+                <WithStyles(Typography)
+                  component="span"
+                  variant="body2"
+                >
+                  Other
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
       </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
