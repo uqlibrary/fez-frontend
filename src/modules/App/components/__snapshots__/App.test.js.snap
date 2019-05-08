@@ -263,6 +263,11 @@ exports[`Application component Should display mobile correctly 1`] = `
       alignItems="center"
       container={true}
       justify="center"
+      style={
+        Object {
+          "marginBottom": 12,
+        }
+      }
     >
       <WithStyles(Grid)
         item={true}
@@ -779,6 +784,11 @@ exports[`Application component should determine if it has incomplete works from 
       alignItems="center"
       container={true}
       justify="center"
+      style={
+        Object {
+          "marginBottom": 12,
+        }
+      }
     >
       <WithStyles(Grid)
         item={true}
@@ -1294,6 +1304,11 @@ exports[`Application component should redirect to login page with correct return
       alignItems="center"
       container={true}
       justify="center"
+      style={
+        Object {
+          "marginBottom": 12,
+        }
+      }
     >
       <WithStyles(Grid)
         item={true}
@@ -1804,6 +1819,11 @@ exports[`Application component should render alert if user is not fez author 1`]
       alignItems="center"
       container={true}
       justify="center"
+      style={
+        Object {
+          "marginBottom": 12,
+        }
+      }
     >
       <WithStyles(Grid)
         item={true}
@@ -3005,6 +3025,11 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
       alignItems="center"
       container={true}
       justify="center"
+      style={
+        Object {
+          "marginBottom": 12,
+        }
+      }
     >
       <WithStyles(Grid)
         item={true}
@@ -4191,6 +4216,11 @@ exports[`Application component should render app for account with fez author wit
       alignItems="center"
       container={true}
       justify="center"
+      style={
+        Object {
+          "marginBottom": 12,
+        }
+      }
     >
       <WithStyles(Grid)
         item={true}
