@@ -413,7 +413,7 @@ describe('Component ContributorRow', () => {
         const wrapper = setup({
             contributor: {
                 orgtype: 'test',
-                affiliation: 'NOTUQ'
+                affiliation: 'NotUQ'
             }
         });
         expect(
@@ -471,4 +471,21 @@ describe('Component ContributorRow', () => {
             wrapper.instance().getContributorRowText()
         ).toMatchSnapshot();
     });
+
+    it('should render row as required', () => {
+        const wrapper = setup({
+            contributor: {
+                nameAsPublished: 'Test',
+                orgaff: 'Test',
+                affilication: 'NotUQ',
+                orgtype: 'NGO'
+            },
+            classes: {
+                highlighted: 'highlighted'
+            },
+            required: true
+        });
+
+        expect(toJson(wrapper)).toMatchSnapshot();
+    })
 });
