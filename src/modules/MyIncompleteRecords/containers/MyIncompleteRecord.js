@@ -10,6 +10,7 @@ import { ORG_TYPE_NOT_SET } from 'config/general';
 import { leftJoin } from 'helpers/general';
 import { locale } from 'locale';
 import { general } from 'config';
+import { authorAffiliationRequired } from 'config/validation';
 
 const FORM_NAME = 'MyIncompleteRecord';
 
@@ -34,9 +35,16 @@ const onSubmit = (values, dispatch, props) => {
         });
 };
 
-const validate = () => {
+const validate = (values, props) => {
+    const { author } = props;
     stopSubmit(FORM_NAME, null);
+    const data = values.toJS();
     const errors = {};
+    if (data.authors) {
+        errors.authors = data.authors.some(authorAffiliation => authorAffiliationRequired(authorAffiliation, author))
+            ? locale.validationErrors.authorsAffiliationIncomplete
+            : undefined;
+    }
     return errors;
 };
 
@@ -106,11 +114,14 @@ const mapStateToProps = (state, ownProps) => {
                 orgaff: authorAffiliation.rek_author_affiliation_name || '',
                 orgtype,
                 uqIdentifier: String(authorAffiliation.rek_author_id) || '',
-                disabled: authorAffiliation.rek_author_id && authorAffiliation.rek_author_id !== author.aut_id
+                disabled: authorAffiliation.rek_author_id && authorAffiliation.rek_author_id !== author.aut_id,
             };
 
             return contributor;
-        });
+        }).map(authorAffiliation => ({
+            ...authorAffiliation,
+            required: authorAffiliationRequired(authorAffiliation, author)}
+        ));
     }
 
     const languages = importedValues && importedValues.fez_record_search_key_language.length > 0 && importedValues.fez_record_search_key_language.map(lang => lang.rek_language) || ['eng'];
