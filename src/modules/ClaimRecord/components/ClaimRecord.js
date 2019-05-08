@@ -71,10 +71,7 @@ export default class ClaimRecord extends PureComponent {
     };
 
     _handleDefaultSubmit = (event) => {
-        /* istanbul ignore else */
-        if(event) {
-            event.preventDefault();
-        }
+        !!event && event.preventDefault();
     };
 
     _contributorValidation = (link) => {

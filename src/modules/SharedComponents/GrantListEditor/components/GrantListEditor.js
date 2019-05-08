@@ -20,27 +20,27 @@ export class GrantListEditor extends PureComponent {
         input: PropTypes.object,
         classes: PropTypes.object,
         required: PropTypes.bool,
-        hideType: PropTypes.bool
+        hideType: PropTypes.bool,
+        disableDeleteAllGrants: PropTypes.bool
     };
 
     static defaultProps = {
-        hideType: false
+        hideType: false,
+        disableDeleteAllGrants: false
     };
 
     constructor(props) {
         super(props);
         this.state = {
             grants: this.getGrantsFromProps(props),
-            errorMessage: '',
+            errorMessage: ''
         };
     }
 
     componentWillUpdate(nextProps, nextState) {
         // notify parent component when local state has been updated, eg grants added/removed/reordered
-        // istanbul ignore else
-        if (this.props.onChange) {
-            this.props.onChange(nextState.grants);
-        }
+        !!this.props.onChange &&
+        this.props.onChange(nextState.grants);
     }
 
     getGrantsFromProps = (props) => {
@@ -60,11 +60,15 @@ export class GrantListEditor extends PureComponent {
 
     moveUpGrant = (grant, index) => {
         if (index === 0) return;
-        const nextGrant = this.state.grants[index - 1];
+
+        const previousGrant = this.state.grants[index - 1];
+
+        if (previousGrant.hasOwnProperty('disabled') && previousGrant.disabled) return;
+
         this.setState({
             grants: [
                 ...this.state.grants.slice(0, index - 1),
-                grant, nextGrant,
+                grant, previousGrant,
                 ...this.state.grants.slice(index + 1)]
         });
     }
@@ -94,14 +98,14 @@ export class GrantListEditor extends PureComponent {
     }
 
     render() {
-        const {classes, disabled, required} = this.props;
+        const {classes, disabled, required, disableDeleteAllGrants} = this.props;
         const {grants, errorMessage} = this.state;
 
         const renderGrantsRows = grants.map((grant, index) => (
             <GrantListEditorRow
                 key={`GrantListRow_${index}`}
                 index={index}
-                disabled={disabled}
+                disabled={disabled || grant && grant.disabled}
                 grant={grant}
                 canMoveDown={index !== grants.length - 1}
                 canMoveUp={index !== 0}
@@ -146,7 +150,7 @@ export class GrantListEditor extends PureComponent {
                             <List>
                                 <GrantListEditorHeader
                                     onDeleteAll={this.deleteAllGrants}
-                                    disabled={disabled}
+                                    disabled={disabled || disableDeleteAllGrants}
                                     hideType={this.props.hideType}
                                 />
                             </List>

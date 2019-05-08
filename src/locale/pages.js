@@ -208,6 +208,12 @@ export default {
             publicationTypesCountChart: {
                 title: 'Work types overview'
             },
+            incompleteRecordLure: {
+                title: 'NTRO Data Required',
+                message: 'We have found [count] work[plural] that require[verbEnding] additional data.',
+                type: 'warning',
+                actionButtonLabel: 'View and Update'
+            },
         },
         myResearch: {
             pageTitle: 'My research',
@@ -699,6 +705,128 @@ export default {
         },
         unpublished: {
             title: 'Unpublished buffer'
+        },
+        incompletePublications: {
+            pageTitle: 'My incomplete works',
+            recordCount: 'Displaying works [recordsFrom] to [recordsTo] of [recordsTotal] total works. ',
+            loadingMessage: 'Searching for incomplete works',
+            noResultsFound: {
+                title: 'No incomplete works found',
+                text: (
+                    <div>
+                        <p>No incomplete works were found for you to rectify.</p>
+                    </div>
+                ),
+            },
+            completeRecordButton: 'Update work',
+            facetsFilter: {
+                ...locale.components.facetsFilter,
+                excludeFacetsList: ['Author'],
+                renameFacetsList: {}
+            }
+        },
+        incompletePublication: {
+            title: 'Update my work',
+            submitButtonLabel: 'Update my work',
+            cancelButtonLabel: 'Cancel and return to my incomplete works list',
+            fields: {
+                notes: {
+                    title: 'Notes',
+                    label: 'Notes for this work',
+                    placeholder: 'Add any other notes or comments about this work to send to the eSpace team.',
+                },
+                grants: {
+                    title: 'Grant information',
+                },
+                authors: {
+                    ...locale.components.authors,
+                    description: 'Please complete affiliation data for each listed author.',
+                    field: {
+                        ...locale.components.authors.field,
+                        form: {
+                            locale: {
+                                ...locale.components.authors.field.form.locale,
+                                descriptionStep1: (<div>
+                                    <span className="authorSteps" key="step-2">Step 2 of 2</span> - <b>Update the affiliation data</b> for the selected author below.
+                                </div>),
+                                addButton: 'Update author'
+                            }
+                        },
+                        header: {
+                            ...locale.components.authors.field.header,
+                            locale: {
+                                ...locale.components.authors.field.header.locale,
+                                descriptionStep2: (<div>
+                                    <span className="authorSteps" key="step-1">Step 1 of 2</span> - <b>Select an author</b> below to update affiliation data.
+                                </div>)
+                            }
+                        },
+                        row: {
+                            ...locale.components.authors.field.row,
+                            locale: {
+                                ...locale.components.authors.field.row.locale,
+                                selectHint: 'Select this author ([name]) to update their affiliation data.',
+                                requiredLabel: 'This author\'s data is incomplete.'
+                            }
+                        }
+                    },
+                },
+                fileUpload: {
+                    title: 'Upload files',
+                    locale: {
+                        instructions: '',
+                        accessTermsAndConditions: 'I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.',
+                        validation: {
+                            ['notFiles']: 'Invalid files ([fileNames])',
+                            ['invalidFileNames']: 'File(s) ([fileNames]) have invalid file name',
+                            ['tooBigFiles']: 'File(s) ([fileNames]) exceed maximum allowed upload file size',
+                            ['tooManyFiles']: 'Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded',
+                            ['duplicateFiles']: 'File(s) ([fileNames]) are duplicates and have been ignored'
+                        },
+                        successTitle: 'Success',
+                        successMessage: 'Successfully added [numberOfFiles] file(s) to upload queue.',
+                        errorTitle: 'Upload Errors',
+                        fileUploadRestrictionHeading: 'File upload restrictions',
+                        fileUploadRestrictions: (
+                            <div>
+                                Maximum file size is 8GB. <br/>
+                                PDF files must be saved using the following naming structure <b>&lt;student number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf</b>.
+                                Document name could be thesis, abstract, and etc.
+                                For example:
+                                <ul>
+                                    <li>s1234567_phd_thesis.pdf</li>
+                                    <li>s1234567_phd_abstract.pdf</li>
+                                </ul>
+                                Supplementary audio files are to be in MP 3 format. <br />
+                                Supplementary video files are to be in WMV or AVI format. <br />
+                            </div>
+                        ),
+                        fileUploadInstruction: (
+                            <p>Click here to select files, or drag files into this area to upload</p>
+                        ),
+                    },
+                    text: (
+                        <div>
+                            <span className="requiredField"><label>&nbsp;</label></span>
+                        </div>
+                    ),
+                },
+            },
+            successWorkflowConfirmation: {
+                confirmationTitle: 'Your work has been updated',
+                fileFailConfirmationAlert: {
+                    title: 'UPLOAD FAILED',
+                    message: 'File upload and/or notes post failed',
+                    type: 'warning'
+                },
+                cancelButtonLabel: 'Update another incomplete work',
+                confirmButtonLabel: 'Go to my dashboard'
+            },
+            prompt: {
+                title: 'Missing data',
+                message: 'This record has missing data - enter all fields to give a quality record.',
+                type: 'info_outline'
+            }
         }
     }
 };

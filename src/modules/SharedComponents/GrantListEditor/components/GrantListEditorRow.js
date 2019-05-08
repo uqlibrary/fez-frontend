@@ -142,7 +142,7 @@ export class GrantListEditorRow extends PureComponent {
                     </Grid>
                     <Grid item xs={this.props.width === 'xs' ? 4 : 3}>
                         {this.getListItemTypoGraphy(
-                            `${ORG_TYPES_LOOKUP[grant.grantAgencyType]}`,
+                            `${ORG_TYPES_LOOKUP[grant.grantAgencyType] ? ORG_TYPES_LOOKUP[grant.grantAgencyType] : ''}`,
                             '',
                             `${width === 'xs' ? classes.identifierName : classes.primary} ${selectedClass}`,
                             ''
@@ -181,7 +181,12 @@ export class GrantListEditorRow extends PureComponent {
                                 <Grid container spacing={0}>
                                     <Hidden smDown>
                                         <Grid item xs={8} style={{textAlign: 'right'}}>
-                                            <Tooltip title={moveUpHint}>
+                                            <Tooltip
+                                                title={moveUpHint}
+                                                disableFocusListener={disabled || !canMoveUp}
+                                                disableHoverListener={disabled || !canMoveUp}
+                                                disableTouchListener={disabled || !canMoveUp}
+                                            >
                                                 <div style={{display: 'inline'}}>
                                                     <IconButton
                                                         onClick={this._onMoveUp}
@@ -192,7 +197,12 @@ export class GrantListEditorRow extends PureComponent {
                                                     </IconButton>
                                                 </div>
                                             </Tooltip>
-                                            <Tooltip title={moveDownHint}>
+                                            <Tooltip
+                                                title={moveDownHint}
+                                                disableFocusListener={disabled || !canMoveDown}
+                                                disableHoverListener={disabled || !canMoveDown}
+                                                disableTouchListener={disabled || !canMoveDown}
+                                            >
                                                 <div style={{display: 'inline'}}>
                                                     <IconButton
                                                         onClick={this._onMoveDown}
@@ -206,14 +216,21 @@ export class GrantListEditorRow extends PureComponent {
                                         </Grid>
                                     </Hidden>
                                     <Grid item xs={this.props.width === 'sm' || this.props.width === 'xs' ? 12 : 4} style={{textAlign: 'right'}}>
-                                        <Tooltip title={deleteHint}>
-                                            <IconButton
-                                                aria-label={deleteHint}
-                                                onClick={this._showConfirmation}
-                                                disabled={disabled}
-                                            >
-                                                <Delete/>
-                                            </IconButton>
+                                        <Tooltip
+                                            title={deleteHint}
+                                            disableFocusListener={disabled}
+                                            disableHoverListener={disabled}
+                                            disableTouchListener={disabled}
+                                        >
+                                            <div style={{display: 'inline'}}>
+                                                <IconButton
+                                                    aria-label={deleteHint}
+                                                    onClick={this._showConfirmation}
+                                                    disabled={disabled}
+                                                >
+                                                    <Delete/>
+                                                </IconButton>
+                                            </div>
                                         </Tooltip>
                                     </Grid>
                                 </Grid>

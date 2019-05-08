@@ -21,6 +21,7 @@ exports[`Component FixRecord _handleDefaultSubmit() 1`] = `
           <withRouter(Connect(WithStyles(PublicationCitation)))
             publication={
               Object {
+                "fez_datastream_info": Array [],
                 "fez_record_search_key_access_conditions": null,
                 "fez_record_search_key_acknowledgements": null,
                 "fez_record_search_key_additional_notes": null,
@@ -488,6 +489,7 @@ exports[`Component FixRecord componentWillReceiveProps() 1`] = `
           <withRouter(Connect(WithStyles(PublicationCitation)))
             publication={
               Object {
+                "fez_datastream_info": Array [],
                 "fez_record_search_key_access_conditions": null,
                 "fez_record_search_key_acknowledgements": null,
                 "fez_record_search_key_additional_notes": null,
@@ -966,6 +968,7 @@ exports[`Component FixRecord should render fix record form 1`] = `
           <withRouter(Connect(WithStyles(PublicationCitation)))
             publication={
               Object {
+                "fez_datastream_info": Array [],
                 "fez_record_search_key_access_conditions": null,
                 "fez_record_search_key_acknowledgements": null,
                 "fez_record_search_key_additional_notes": null,
@@ -1565,6 +1568,7 @@ exports[`Component FixRecord should render record citation, two actions in selec
           <withRouter(Connect(WithStyles(PublicationCitation)))
             publication={
               Object {
+                "fez_datastream_info": Array [],
                 "fez_record_search_key_access_conditions": null,
                 "fez_record_search_key_acknowledgements": null,
                 "fez_record_search_key_additional_notes": null,
@@ -2032,6 +2036,7 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
           <withRouter(Connect(WithStyles(PublicationCitation)))
             publication={
               Object {
+                "fez_datastream_info": Array [],
                 "fez_record_search_key_access_conditions": null,
                 "fez_record_search_key_acknowledgements": null,
                 "fez_record_search_key_additional_notes": null,
@@ -2620,6 +2625,7 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
           <withRouter(Connect(WithStyles(PublicationCitation)))
             publication={
               Object {
+                "fez_datastream_info": Array [],
                 "fez_record_search_key_access_conditions": null,
                 "fez_record_search_key_acknowledgements": null,
                 "fez_record_search_key_additional_notes": null,
@@ -3203,6 +3209,7 @@ exports[`Component FixRecord should render unclaim form 1`] = `
           <withRouter(Connect(WithStyles(PublicationCitation)))
             publication={
               Object {
+                "fez_datastream_info": Array [],
                 "fez_record_search_key_access_conditions": null,
                 "fez_record_search_key_acknowledgements": null,
                 "fez_record_search_key_additional_notes": null,

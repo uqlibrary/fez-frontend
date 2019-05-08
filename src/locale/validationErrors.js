@@ -29,7 +29,9 @@ export default {
         dateRange: 'Please provide a valid start/end date range',
         pageRange: 'Please provide a valid start/end page range',
         remindToAdd: 'Please remember to click ADD to add this item to your list',
-        requireChecked: 'Please accept deposit agreement'
+        requireChecked: 'Please accept deposit agreement',
+        authorsAffiliationIncomplete: 'Rows marked with a red prefix must be updated',
+        authorAffiliationIncomplete: 'Please update affiliation data for the selected author',
     },
     validationErrorsSummary: {
         rek_title: 'Title is required',

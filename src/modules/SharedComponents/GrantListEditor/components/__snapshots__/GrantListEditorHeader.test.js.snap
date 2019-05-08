@@ -171,13 +171,25 @@ exports[`GrantListEditorHeader should hide grant agency type input 1`] = `
                 }
               }
             >
-              <WithStyles(Tooltip)>
-                <WithStyles(IconButton)
-                  disabled={false}
-                  onClick={[Function]}
+              <WithStyles(Tooltip)
+                disableFocusListener={false}
+                disableHoverListener={false}
+                disableTouchListener={false}
+              >
+                <div
+                  style={
+                    Object {
+                      "display": "inline",
+                    }
+                  }
                 >
-                  <pure(DeleteForeverIcon) />
-                </WithStyles(IconButton)>
+                  <WithStyles(IconButton)
+                    disabled={false}
+                    onClick={[Function]}
+                  >
+                    <pure(DeleteForeverIcon) />
+                  </WithStyles(IconButton)>
+                </div>
               </WithStyles(Tooltip)>
             </WithStyles(ListItemSecondaryAction)>
           </WithStyles(Grid)>
@@ -353,13 +365,25 @@ exports[`GrantListEditorHeader should render default mobile view 1`] = `
                 }
               }
             >
-              <WithStyles(Tooltip)>
-                <WithStyles(IconButton)
-                  disabled={false}
-                  onClick={[Function]}
+              <WithStyles(Tooltip)
+                disableFocusListener={false}
+                disableHoverListener={false}
+                disableTouchListener={false}
+              >
+                <div
+                  style={
+                    Object {
+                      "display": "inline",
+                    }
+                  }
                 >
-                  <pure(DeleteForeverIcon) />
-                </WithStyles(IconButton)>
+                  <WithStyles(IconButton)
+                    disabled={false}
+                    onClick={[Function]}
+                  >
+                    <pure(DeleteForeverIcon) />
+                  </WithStyles(IconButton)>
+                </div>
               </WithStyles(Tooltip)>
             </WithStyles(ListItemSecondaryAction)>
           </WithStyles(Grid)>
@@ -535,13 +559,25 @@ exports[`GrantListEditorHeader should render default view 1`] = `
                 }
               }
             >
-              <WithStyles(Tooltip)>
-                <WithStyles(IconButton)
-                  disabled={false}
-                  onClick={[Function]}
+              <WithStyles(Tooltip)
+                disableFocusListener={false}
+                disableHoverListener={false}
+                disableTouchListener={false}
+              >
+                <div
+                  style={
+                    Object {
+                      "display": "inline",
+                    }
+                  }
                 >
-                  <pure(DeleteForeverIcon) />
-                </WithStyles(IconButton)>
+                  <WithStyles(IconButton)
+                    disabled={false}
+                    onClick={[Function]}
+                  >
+                    <pure(DeleteForeverIcon) />
+                  </WithStyles(IconButton)>
+                </div>
               </WithStyles(Tooltip)>
             </WithStyles(ListItemSecondaryAction)>
           </WithStyles(Grid)>
@@ -717,13 +753,25 @@ exports[`GrantListEditorHeader should show confirmation box 1`] = `
                 }
               }
             >
-              <WithStyles(Tooltip)>
-                <WithStyles(IconButton)
-                  disabled={false}
-                  onClick={[Function]}
+              <WithStyles(Tooltip)
+                disableFocusListener={false}
+                disableHoverListener={false}
+                disableTouchListener={false}
+              >
+                <div
+                  style={
+                    Object {
+                      "display": "inline",
+                    }
+                  }
                 >
-                  <pure(DeleteForeverIcon) />
-                </WithStyles(IconButton)>
+                  <WithStyles(IconButton)
+                    disabled={false}
+                    onClick={[Function]}
+                  >
+                    <pure(DeleteForeverIcon) />
+                  </WithStyles(IconButton)>
+                </div>
               </WithStyles(Tooltip)>
             </WithStyles(ListItemSecondaryAction)>
           </WithStyles(Grid)>

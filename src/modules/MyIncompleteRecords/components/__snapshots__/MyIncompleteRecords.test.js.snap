@@ -1,0 +1,830 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MyIncompleteRecords test component has displayable facets 1`] = `
+<StandardPage
+  title="My research"
+>
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <StandardCard
+        text={
+          <div>
+            We were unable to find any results. You may be able to 
+            <a
+              href="/records/possible"
+            >
+              claim works we think may be yours
+            </a>
+             or 
+            <a
+              href="/records/add/find"
+            >
+              add a missing publication
+            </a>
+          </div>
+        }
+        title="No works found"
+      >
+        <div>
+          We were unable to find any results. You may be able to 
+          <a
+            href="/records/possible"
+          >
+            claim works we think may be yours
+          </a>
+           or 
+          <a
+            href="/records/add/find"
+          >
+            add a missing publication
+          </a>
+        </div>
+      </StandardCard>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</StandardPage>
+`;
+
+exports[`MyIncompleteRecords test renders active filters 1`] = `
+<StandardPage
+  title="My research"
+>
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <StandardCard
+        text={
+          <div>
+            We were unable to find any results. You may be able to 
+            <a
+              href="/records/possible"
+            >
+              claim works we think may be yours
+            </a>
+             or 
+            <a
+              href="/records/add/find"
+            >
+              add a missing publication
+            </a>
+          </div>
+        }
+        title="No works found"
+      >
+        <div>
+          We were unable to find any results. You may be able to 
+          <a
+            href="/records/possible"
+          >
+            claim works we think may be yours
+          </a>
+           or 
+          <a
+            href="/records/add/find"
+          >
+            add a missing publication
+          </a>
+        </div>
+      </StandardCard>
+    </WithStyles(Grid)>
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={true}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={false}
+      xsUp={false}
+    >
+      <WithStyles(Grid)
+        item={true}
+        md={3}
+      >
+        <StandardRighthandCard
+          title="Refine results"
+        >
+          <FacetsFilter
+            activeFacets={
+              Object {
+                "filters": Object {},
+                "ranges": Object {
+                  "Year": Object {
+                    "from": 2000,
+                    "to": 2010,
+                  },
+                },
+              }
+            }
+            disabled={false}
+            excludeFacetsList={
+              Array [
+                "Scopus document type",
+                "Genre",
+                "Year published",
+              ]
+            }
+            facetsData={Object {}}
+            lookupFacetsList={
+              Object {
+                "Author": "Author (lookup)",
+                "Collection": "Collection (lookup)",
+                "Subject": "Subject (lookup)",
+              }
+            }
+            onFacetsChanged={[Function]}
+            renameFacetsList={
+              Object {
+                "Display type": "Work type",
+                "Subtype": "Work subtype",
+              }
+            }
+            showOpenAccessFilter={true}
+          />
+        </StandardRighthandCard>
+      </WithStyles(Grid)>
+    </Hidden>
+  </WithStyles(Grid)>
+</StandardPage>
+`;
+
+exports[`MyIncompleteRecords test renders list of publications no facets 1`] = `
+<StandardPage
+  title="My research"
+>
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
+  >
+    <WithStyles(Grid)
+      item={true}
+      md={9}
+      xs={12}
+    >
+      <StandardCard
+        noHeader={true}
+      >
+        <span>
+          Displaying records 1 to 20 of 147 total records. 
+        </span>
+        <WithStyles(Grid)
+          container={true}
+          spacing={16}
+        >
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <span>
+              Add to this list by 
+              <a
+                href="/records/possible"
+              >
+                claiming a work
+              </a>
+               or 
+              <a
+                href="/records/add/find"
+              >
+                adding a missing work
+              </a>
+              .
+            </span>
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(PublicationsListSorting)
+              disabled={false}
+              initPageLength={20}
+              onPageSizeChanged={[Function]}
+              onSortByChanged={[Function]}
+              pageSize={20}
+              pagingData={
+                Object {
+                  "current_page": 1,
+                  "from": 1,
+                  "per_page": 20,
+                  "to": 20,
+                  "total": 147,
+                }
+              }
+              sortBy="published_date"
+              sortDirection="Desc"
+            />
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(PublicationsListPaging)
+              disabled={false}
+              loading={false}
+              onPageChanged={[Function]}
+              pagingData={
+                Object {
+                  "current_page": 1,
+                  "from": 1,
+                  "per_page": 20,
+                  "to": 20,
+                  "total": 147,
+                }
+              }
+            />
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <PublicationsList
+              customActions={
+                Array [
+                  Object {
+                    "handleAction": [Function],
+                    "label": undefined,
+                    "primary": true,
+                  },
+                ]
+              }
+              hideCountDiff={false}
+              publicationsList={
+                Array [
+                  1,
+                  2,
+                  3,
+                ]
+              }
+              publicationsListSubset={Array []}
+              showDefaultActions={false}
+              showMetrics={false}
+              showSourceCountIcon={false}
+              showSources={false}
+              showUnpublishedBufferFields={false}
+              subsetCustomActions={
+                Array [
+                  Object {
+                    "disabled": true,
+                    "label": "In progress",
+                    "primary": false,
+                  },
+                ]
+              }
+            />
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(PublicationsListPaging)
+              disabled={false}
+              loading={false}
+              onPageChanged={[Function]}
+              pagingData={
+                Object {
+                  "current_page": 1,
+                  "from": 1,
+                  "per_page": 20,
+                  "to": 20,
+                  "total": 147,
+                }
+              }
+            />
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+      </StandardCard>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</StandardPage>
+`;
+
+exports[`MyIncompleteRecords test renders list of publications with facets 1`] = `
+<StandardPage
+  title="My research"
+>
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
+  >
+    <WithStyles(Grid)
+      item={true}
+      md={9}
+      xs={12}
+    >
+      <StandardCard
+        noHeader={true}
+      >
+        <span>
+          Displaying records 1 to 20 of 147 total records. 
+        </span>
+        <WithStyles(Grid)
+          container={true}
+          spacing={16}
+        >
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <span>
+              Add to this list by 
+              <a
+                href="/records/possible"
+              >
+                claiming a work
+              </a>
+               or 
+              <a
+                href="/records/add/find"
+              >
+                adding a missing work
+              </a>
+              .
+            </span>
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(PublicationsListSorting)
+              disabled={false}
+              initPageLength={20}
+              onPageSizeChanged={[Function]}
+              onSortByChanged={[Function]}
+              pageSize={20}
+              pagingData={
+                Object {
+                  "current_page": 1,
+                  "from": 1,
+                  "per_page": 20,
+                  "to": 20,
+                  "total": 147,
+                }
+              }
+              sortBy="published_date"
+              sortDirection="Desc"
+            />
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(PublicationsListPaging)
+              disabled={false}
+              loading={false}
+              onPageChanged={[Function]}
+              pagingData={
+                Object {
+                  "current_page": 1,
+                  "from": 1,
+                  "per_page": 20,
+                  "to": 20,
+                  "total": 147,
+                }
+              }
+            />
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <PublicationsList
+              customActions={
+                Array [
+                  Object {
+                    "handleAction": [Function],
+                    "label": undefined,
+                    "primary": true,
+                  },
+                ]
+              }
+              hideCountDiff={false}
+              publicationsList={
+                Array [
+                  1,
+                  2,
+                  3,
+                ]
+              }
+              publicationsListSubset={Array []}
+              showDefaultActions={false}
+              showMetrics={false}
+              showSourceCountIcon={false}
+              showSources={false}
+              showUnpublishedBufferFields={false}
+              subsetCustomActions={
+                Array [
+                  Object {
+                    "disabled": true,
+                    "label": "In progress",
+                    "primary": false,
+                  },
+                ]
+              }
+            />
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(PublicationsListPaging)
+              disabled={false}
+              loading={false}
+              onPageChanged={[Function]}
+              pagingData={
+                Object {
+                  "current_page": 1,
+                  "from": 1,
+                  "per_page": 20,
+                  "to": 20,
+                  "total": 147,
+                }
+              }
+            />
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+      </StandardCard>
+    </WithStyles(Grid)>
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={true}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={false}
+      xsUp={false}
+    >
+      <WithStyles(Grid)
+        item={true}
+        md={3}
+      >
+        <StandardRighthandCard
+          title="Refine results"
+        >
+          <FacetsFilter
+            activeFacets={
+              Object {
+                "filters": Object {},
+                "ranges": Object {},
+              }
+            }
+            disabled={false}
+            excludeFacetsList={
+              Array [
+                "Scopus document type",
+                "Genre",
+                "Year published",
+              ]
+            }
+            facetsData={
+              Object {
+                "Display type": Object {
+                  "buckets": Array [
+                    Object {
+                      "doc_count": 95,
+                      "key": 179,
+                    },
+                    Object {
+                      "doc_count": 34,
+                      "key": 130,
+                    },
+                    Object {
+                      "doc_count": 2,
+                      "key": 177,
+                    },
+                    Object {
+                      "doc_count": 2,
+                      "key": 183,
+                    },
+                    Object {
+                      "doc_count": 1,
+                      "key": 174,
+                    },
+                  ],
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 3,
+                },
+                "Keywords": Object {
+                  "buckets": Array [
+                    Object {
+                      "doc_count": 15,
+                      "key": "Brca1",
+                    },
+                    Object {
+                      "doc_count": 15,
+                      "key": "Oncology",
+                    },
+                    Object {
+                      "doc_count": 13,
+                      "key": "Breast cancer",
+                    },
+                    Object {
+                      "doc_count": 12,
+                      "key": "Genetics & Heredity",
+                    },
+                    Object {
+                      "doc_count": 10,
+                      "key": "Biochemistry & Molecular Biology",
+                    },
+                  ],
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 641,
+                },
+              }
+            }
+            lookupFacetsList={
+              Object {
+                "Author": "Author (lookup)",
+                "Collection": "Collection (lookup)",
+                "Subject": "Subject (lookup)",
+              }
+            }
+            onFacetsChanged={[Function]}
+            renameFacetsList={
+              Object {
+                "Display type": "Work type",
+                "Subtype": "Work subtype",
+              }
+            }
+            showOpenAccessFilter={true}
+          />
+        </StandardRighthandCard>
+      </WithStyles(Grid)>
+    </Hidden>
+  </WithStyles(Grid)>
+</StandardPage>
+`;
+
+exports[`MyIncompleteRecords test renders loading screen while export publications loading 1`] = `
+<StandardPage
+  title="My research"
+>
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
+  >
+    <WithStyles(Grid)
+      item={true}
+      md={9}
+      xs={12}
+    >
+      <StandardCard
+        noHeader={true}
+      >
+        <WithStyles(Grid)
+          container={true}
+          spacing={16}
+        >
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <span>
+              Add to this list by 
+              <a
+                href="/records/possible"
+              >
+                claiming a work
+              </a>
+               or 
+              <a
+                href="/records/add/find"
+              >
+                adding a missing work
+              </a>
+              .
+            </span>
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(PublicationsListSorting)
+              disabled={false}
+              initPageLength={20}
+              onPageSizeChanged={[Function]}
+              onSortByChanged={[Function]}
+              pageSize={20}
+              pagingData={Object {}}
+              sortBy="published_date"
+              sortDirection="Desc"
+            />
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(PublicationsListPaging)
+              disabled={false}
+              loading={false}
+              onPageChanged={[Function]}
+              pagingData={Object {}}
+            />
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          />
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(PublicationsListPaging)
+              disabled={false}
+              loading={false}
+              onPageChanged={[Function]}
+              pagingData={Object {}}
+            />
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+      </StandardCard>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</StandardPage>
+`;
+
+exports[`MyIncompleteRecords test renders loading screen while loading account data 1`] = `""`;
+
+exports[`MyIncompleteRecords test renders loading screen while loading publications  1`] = `
+<StandardPage
+  title="My research"
+>
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <WithStyles(InlineLoader)
+        message="Searching for your works"
+      />
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</StandardPage>
+`;
+
+exports[`MyIncompleteRecords test renders loading screen while loading publications while filtering 1`] = `
+<StandardPage
+  title="My research"
+>
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
+  >
+    <WithStyles(Grid)
+      item={true}
+      md={9}
+      xs={12}
+    >
+      <StandardCard
+        noHeader={true}
+      >
+        <WithStyles(Grid)
+          container={true}
+          spacing={16}
+        >
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <span>
+              Add to this list by 
+              <a
+                href="/records/possible"
+              >
+                claiming a work
+              </a>
+               or 
+              <a
+                href="/records/add/find"
+              >
+                adding a missing work
+              </a>
+              .
+            </span>
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(PublicationsListSorting)
+              disabled={true}
+              initPageLength={20}
+              onPageSizeChanged={[Function]}
+              onSortByChanged={[Function]}
+              pageSize={20}
+              pagingData={Object {}}
+              sortBy="published_date"
+              sortDirection="Desc"
+            />
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(PublicationsListPaging)
+              disabled={true}
+              loading={true}
+              onPageChanged={[Function]}
+              pagingData={Object {}}
+            />
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <div
+              className="is-centered"
+            >
+              <WithStyles(InlineLoader)
+                message="Retrieving your works"
+              />
+            </div>
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(PublicationsListPaging)
+              disabled={true}
+              loading={true}
+              onPageChanged={[Function]}
+              pagingData={Object {}}
+            />
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+      </StandardCard>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</StandardPage>
+`;
+
+exports[`MyIncompleteRecords test renders no results 1`] = `
+<StandardPage
+  title="My research"
+>
+  <WithStyles(Grid)
+    container={true}
+    spacing={16}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <StandardCard
+        text={
+          <div>
+            We were unable to find any results. You may be able to 
+            <a
+              href="/records/possible"
+            >
+              claim works we think may be yours
+            </a>
+             or 
+            <a
+              href="/records/add/find"
+            >
+              add a missing publication
+            </a>
+          </div>
+        }
+        title="No works found"
+      >
+        <div>
+          We were unable to find any results. You may be able to 
+          <a
+            href="/records/possible"
+          >
+            claim works we think may be yours
+          </a>
+           or 
+          <a
+            href="/records/add/find"
+          >
+            add a missing publication
+          </a>
+        </div>
+      </StandardCard>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</StandardPage>
+`;

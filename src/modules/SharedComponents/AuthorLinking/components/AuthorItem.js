@@ -47,10 +47,7 @@ export class AuthorItem extends PureComponent {
      * @private
      */
     _selectAuthor = () => {
-        /* istanbul ignore else */
-        if (this.props.onAuthorSelected) {
-            this.props.onAuthorSelected(this.props.author);
-        }
+        this.props.onAuthorSelected && this.props.onAuthorSelected(this.props.author);
     };
 
     /**

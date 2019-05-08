@@ -88,13 +88,20 @@ export class GrantListEditorHeader extends PureComponent {
                                 </Hidden>
                                 <Grid item xs={this.props.width === 'xs' || this.props.width === 'sm' ? 12 : 4} style={{textAlign: 'right'}}>
                                     <ListItemSecondaryAction style={{smarginTop: -4}}>
-                                        <Tooltip title={deleteAll}>
-                                            <IconButton
-                                                onClick={this._showConfirmation}
-                                                disabled={this.props.disabled}
-                                            >
-                                                <DeleteForever/>
-                                            </IconButton>
+                                        <Tooltip
+                                            title={deleteAll}
+                                            disableFocusListener={this.props.disabled}
+                                            disableHoverListener={this.props.disabled}
+                                            disableTouchListener={this.props.disabled}
+                                        >
+                                            <div style={{display: 'inline'}}>
+                                                <IconButton
+                                                    onClick={this._showConfirmation}
+                                                    disabled={this.props.disabled}
+                                                >
+                                                    <DeleteForever/>
+                                                </IconButton>
+                                            </div>
                                         </Tooltip>
                                     </ListItemSecondaryAction>
                                 </Grid>

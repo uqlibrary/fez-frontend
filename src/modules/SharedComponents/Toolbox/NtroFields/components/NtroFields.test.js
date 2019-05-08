@@ -86,4 +86,14 @@ describe('Component NtroFields', () => {
             fez_test_order: 2
         });
     });
+
+    // cc - in reality, signif and contrib always appear together
+    it('should show significance field even if contribution field isnt empty', () => {
+        const wrapper = setup({
+            showContributionStatement: false,
+            showSignificance: true}
+            );
+        const tree = toJson(wrapper);
+        expect(tree).toMatchSnapshot();
+    });
 });

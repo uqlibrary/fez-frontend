@@ -86,10 +86,7 @@ export default class PublicationForm extends Component {
     }
 
     _handleDefaultSubmit = (event) => {
-        /* istanbul ignore else */
-        if(event) {
-            event.preventDefault();
-        }
+        !!event && event.preventDefault();
     };
 
     render() {

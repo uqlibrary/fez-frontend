@@ -12,12 +12,13 @@ const mapStateToProps = (state, props) => {
         allowFreeText: true,
         onChange: (item) => props.onChange(item.value),
         errorText: null,
-        error: false,
+        error: props.error,
         itemToString: (item) => !!item && String(item.value) || '',
         selectedValue: !!props.value && {value: props.value} || null,
         openOnFocus: true,
         filter: () => true,
-        clearInput: props.clearInput
+        clearInput: props.clearInput,
+        required: props.required
     };
 };
 

@@ -124,52 +124,42 @@ export class AdvancedSearchComponent extends PureComponent {
     };
 
     _toggleSearchMode = () => {
-        /* istanbul ignore else */
-        if (!!this.props.onToggleSearchMode) {
-            this.props.onToggleSearchMode();
-        }
+        !!this.props.onToggleSearchMode &&
+        this.props.onToggleSearchMode();
     };
 
     _toggleMinimise = () => {
-        /* istanbul ignore else */
-        if (!!this.props.onToggleMinimise) {
-            this.props.onToggleMinimise();
-        }
+        !!this.props.onToggleMinimise &&
+        this.props.onToggleMinimise();
     };
 
     _toggleOpenAccess = () => {
-        /* istanbul ignore else */
-        if (!!this.props.onToggleOpenAccess) {
-            this.props.onToggleOpenAccess();
-        }
+        !!this.props.onToggleOpenAccess &&
+        this.props.onToggleOpenAccess();
     };
 
     _handleAdvancedSearchRowChange = (index, searchRow) => {
+        !!this.props.onAdvancedSearchRowChange &&
         this.props.onAdvancedSearchRowChange(index, searchRow);
     };
 
     _addAdvancedSearchRow = () => {
-        /* istanbul ignore else */
-        if (!!this.props.onAdvancedSearchRowAdd) {
-            this.props.onAdvancedSearchRowAdd();
-        }
+        !!this.props.onAdvancedSearchRowAdd &&
+        this.props.onAdvancedSearchRowAdd();
     };
 
     _removeAdvancedSearchRow = (index) => {
-        /* istanbul ignore else */
-        if (!!this.props.onAdvancedSearchRowRemove) {
-            this.props.onAdvancedSearchRowRemove(index);
-        }
+        !!this.props.onAdvancedSearchRowRemove &&
+        this.props.onAdvancedSearchRowRemove(index);
     };
 
     _resetAdvancedSearch = () => {
-        /* istanbul ignore else */
-        if (!!this.props.onAdvancedSearchReset) {
-            this.props.onAdvancedSearchReset();
-        }
+        !!this.props.onAdvancedSearchReset &&
+        this.props.onAdvancedSearchReset();
     };
 
     _handleDateRangeChange = (key) => (value) => {
+        !!this.props.updateDateRange &&
         this.props.updateDateRange(key, value);
     };
 

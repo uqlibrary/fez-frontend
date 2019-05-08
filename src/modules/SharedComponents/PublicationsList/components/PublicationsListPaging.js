@@ -52,10 +52,8 @@ export class PublicationsListPaging extends Component {
     }
 
     pageChanged = (newPage) => {
-        /* istanbul ignore else */
-        if (this.props.onPageChanged) {
-            this.props.onPageChanged(newPage);
-        }
+        this.props.onPageChanged &&
+        this.props.onPageChanged(newPage);
     };
 
     renderButton = (key) => {
