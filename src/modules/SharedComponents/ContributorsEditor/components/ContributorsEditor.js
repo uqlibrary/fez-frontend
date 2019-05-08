@@ -111,7 +111,7 @@ export class ContributorsEditor extends PureComponent {
         this.setState({
             contributors: [
                 ...this.state.contributors.slice(0, index),
-                { ...contributor, selected: false },
+                { ...contributor, selected: false, required: false },
                 ...this.state.contributors.slice(index + 1)
             ],
             contributorIndexSelectedToEdit: null
@@ -214,7 +214,8 @@ export class ContributorsEditor extends PureComponent {
                 onDelete={this.deleteContributor}
                 onMoveDown={this.moveDownContributor}
                 onMoveUp={this.moveUpContributor}
-                showContributorAssignment={showContributorAssignment && !isCurrentAuthorSelected}
+                showContributorAssignment={showContributorAssignment && !isCurrentAuthorSelected && contributor.disabled !== true}
+                required={contributor.required}
             />
         ));
     };

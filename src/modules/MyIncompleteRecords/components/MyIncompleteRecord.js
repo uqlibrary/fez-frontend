@@ -400,7 +400,6 @@ export class MyIncompleteRecordClass extends PureComponent {
                                     name="authors"
                                     required
                                     showContributorAssignment
-                                    validate={[validation.authorsAffiliationIncomplete]}
                                 />
                             </StandardCard>
                         </Grid>

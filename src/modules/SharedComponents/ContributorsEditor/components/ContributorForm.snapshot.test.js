@@ -298,7 +298,8 @@ describe('Component ContributorForm', () => {
             nameAsPublished: '',
             orgaff: '',
             orgtype: '',
-            uqIdentifier: '111'
+            uqIdentifier: '111',
+            aut_id: 111
         });
     });
 });
