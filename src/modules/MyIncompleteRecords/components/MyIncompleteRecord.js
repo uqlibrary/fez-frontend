@@ -39,7 +39,21 @@ import {
 } from 'config/general';
 import {pathConfig} from 'config/routes';
 
-export default class MyIncompleteRecord extends PureComponent {
+import {withStyles} from '@material-ui/core/styles';
+
+export const styles = (theme) => ({
+    GridType: {
+        paddingBottom: 12,
+        borderBottom: `1px solid ${theme.palette.secondary.light}`
+    },
+    GridSubType: {
+        marginTop: 12,
+        paddingBottom: 12,
+        borderBottom: `1px solid ${theme.palette.secondary.light}`
+    }
+});
+
+export class MyIncompleteRecordClass extends PureComponent {
     static propTypes = {
         ...propTypes, // all redux-form props
         disableSubmit: PropTypes.bool,
@@ -56,7 +70,8 @@ export default class MyIncompleteRecord extends PureComponent {
 
         publicationToFixFileUploadingError: PropTypes.bool,
 
-        errors: PropTypes.object
+        errors: PropTypes.object,
+        classes: PropTypes.object
     };
 
     componentDidMount() {
@@ -303,7 +318,7 @@ export default class MyIncompleteRecord extends PureComponent {
                         </Grid>
                         <Grid item xs={12}>
                             <StandardCard title={viewRecordLocale.viewRecord.sections.publicationDetails}>
-                                <Grid container spacing={8} style={{paddingBottom: 12, borderBottom: '1px solid #f2f2f2'}}>
+                                <Grid container spacing={8} className={this.props.classes.GridType}>
                                     {
                                         !!this.props.recordToFix && !!this.props.recordToFix.rek_display_type_lookup &&
                                         <Grid container spacing={16} alignItems="flex-start">
@@ -316,7 +331,7 @@ export default class MyIncompleteRecord extends PureComponent {
                                         </Grid>
                                     }
                                 </Grid>
-                                <Grid container spacing={8} style={{marginTop: 12, paddingBottom: 12, borderBottom: '1px solid #f2f2f2'}}>
+                                <Grid container spacing={8} className={this.props.classes.GridSubType}>
                                     {
                                         !!this.props.recordToFix && !!this.props.recordToFix.rek_subtype &&
                                         <Grid container spacing={16} alignItems="flex-start">
@@ -447,3 +462,6 @@ export default class MyIncompleteRecord extends PureComponent {
         );
     }
 }
+
+const MyIncompleteRecord = withStyles(styles, {withTheme: true})(MyIncompleteRecordClass);
+export default MyIncompleteRecord;

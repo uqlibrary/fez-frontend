@@ -1,4 +1,4 @@
-import MyIncompleteRecord from './MyIncompleteRecord';
+import { MyIncompleteRecordClass, styles }from './MyIncompleteRecord';
 import { mockRecordToFix } from 'mock/data/testing/records';
 import Immutable from 'immutable';
 import { routes } from 'config';
@@ -60,11 +60,12 @@ function setup(testProps, isShallow = true) {
         actions: testProps.actions || {},
         history: testProps.history || {go: jest.fn()},
         match: testProps.match || {},
+        classes: {},
 
         publicationToFixFileUploadingError: testProps.publicationToFixFileUploadingError || false,
         ...testProps,
     };
-    return getElement(MyIncompleteRecord, props, isShallow);
+    return getElement(MyIncompleteRecordClass, props, isShallow);
 }
 
 describe('Component MyIncompleteRecord', () => {
@@ -623,4 +624,14 @@ describe('Cards', () => {
 
     });
 
+    it('should have a proper style generator', () => {
+        const theme = {
+            palette: {
+                secondary: {
+                    light: 'test1'
+                }
+            }
+        };
+        expect(styles(theme)).toMatchSnapshot();
+    });
 });

@@ -71,14 +71,13 @@ export class ContributorForm extends PureComponent {
     }
 
     componentWillReceiveProps(nextProps) {
-        if (this.props.contributor !== nextProps.contributor) {
-            this.setState({
-                ...this.state,
-                contributor: {
-                    ...nextProps.contributor,
-                },
-            });
-        }
+        this.props.contributor !== nextProps.contributor &&
+        this.setState({
+            ...this.state,
+            contributor: {
+                ...nextProps.contributor,
+            },
+        });
     }
 
     defaultState = (props) => ({
