@@ -73,6 +73,16 @@ describe('Component ContributorForm', () => {
         });
     });
 
+    it('should add contributor if nameAsPublished is not empty and role from the dropdown is selected', () => {
+        const testFn = jest.fn();
+        const wrapper = setup({
+            onSubmit: testFn
+        });
+        wrapper.instance()._onNameChanged({ target: { value: 'test' }});
+        wrapper.instance()._onRoleChanged('Co-investigator');
+        expect(testFn).toHaveBeenCalled();
+    });
+
     it('should not add contributor if key is not Enter', () => {
         const onAddFn = jest.fn();
         const wrapper = setup({
