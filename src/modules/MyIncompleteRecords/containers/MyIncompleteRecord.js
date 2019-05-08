@@ -48,25 +48,24 @@ let MyIncompleteRecordContainer = reduxForm({
 })(confirmDiscardFormChanges(MyIncompleteRecord, FORM_NAME));
 
 const mapStateToProps = (state, ownProps) => {
+    const { author } = state.get('accountReducer');
     const formErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});
     const importedValues = state.get('fixRecordReducer') && state.get('fixRecordReducer').recordToFix;
-    const grants = [];
-    const authors = [];
+    let grants = [];
+    let authors = [];
     if (importedValues) {
-        importedValues.fez_record_search_key_grant_agency.map((grantAgency, index) => {
-            grants.push({
-                grantAgencyName: grantAgency.rek_grant_agency,
-                grantId: importedValues.fez_record_search_key_grant_id &&
-                    importedValues.fez_record_search_key_grant_id.length > 0 &&
-                    importedValues.fez_record_search_key_grant_id[index] &&
-                    importedValues.fez_record_search_key_grant_id[index].rek_grant_id || '',
-                grantAgencyType: importedValues.fez_record_search_key_grant_agency_type &&
-                    importedValues.fez_record_search_key_grant_agency_type.length > 0 &&
-                    importedValues.fez_record_search_key_grant_id[index] &&
-                    importedValues.fez_record_search_key_grant_agency_type[index].rek_grant_agency_type || ORG_TYPE_NOT_SET,
-                disabled: ownProps.disableInitialGrants
-            });
-        });
+        grants = importedValues.fez_record_search_key_grant_agency.map((grantAgency, index) => ({
+            grantAgencyName: grantAgency.rek_grant_agency,
+            grantId: importedValues.fez_record_search_key_grant_id &&
+                importedValues.fez_record_search_key_grant_id.length > 0 &&
+                importedValues.fez_record_search_key_grant_id[index] &&
+                importedValues.fez_record_search_key_grant_id[index].rek_grant_id || '',
+            grantAgencyType: importedValues.fez_record_search_key_grant_agency_type &&
+                importedValues.fez_record_search_key_grant_agency_type.length > 0 &&
+                importedValues.fez_record_search_key_grant_id[index] &&
+                importedValues.fez_record_search_key_grant_agency_type[index].rek_grant_agency_type || ORG_TYPE_NOT_SET,
+            disabled: ownProps.disableInitialGrants
+        }));
 
         const affiliationDataMap = [
             {
@@ -92,23 +91,25 @@ const mapStateToProps = (state, ownProps) => {
             );
         }, importedValues.fez_record_search_key_author_id);
 
-        mergedAffiliationsArray.map((author) => {
-            const isUQ = author.rek_author_affiliation_name === locale.global.orgTitle;
+        authors = mergedAffiliationsArray.map((authorAffiliation) => {
+            const isUQ = authorAffiliation.rek_author_affiliation_name === locale.global.orgTitle;
             const affiliation = isUQ ? 'UQ' : 'NotUQ';
             const orgtype = isUQ ? general.ORG_TYPE_ID_UNIVERSITY : (
-                author.rek_author_affiliation_type
-                    && String(author.rek_author_affiliation_type)
+                authorAffiliation.rek_author_affiliation_type
+                    && String(authorAffiliation.rek_author_affiliation_type)
                 || ''
             );
             const contributor = {
                 affiliation,
                 creatorRole: '',
-                nameAsPublished: author.rek_author,
-                orgaff: author.rek_author_affiliation_name || '',
+                nameAsPublished: authorAffiliation.rek_author,
+                orgaff: authorAffiliation.rek_author_affiliation_name || '',
                 orgtype,
-                uqIdentifier: author.rek_author_affiliation_type && String(author.rek_author_id) || '',
+                uqIdentifier: String(authorAffiliation.rek_author_id) || '',
+                disabled: authorAffiliation.rek_author_id && authorAffiliation.rek_author_id !== author.aut_id
             };
-            authors.push(contributor);
+
+            return contributor;
         });
     }
 

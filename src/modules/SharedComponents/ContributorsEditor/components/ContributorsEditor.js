@@ -214,7 +214,7 @@ export class ContributorsEditor extends PureComponent {
                 onDelete={this.deleteContributor}
                 onMoveDown={this.moveDownContributor}
                 onMoveUp={this.moveUpContributor}
-                showContributorAssignment={showContributorAssignment && !isCurrentAuthorSelected}
+                showContributorAssignment={showContributorAssignment && !isCurrentAuthorSelected && contributor.disabled !== true}
             />
         ));
     };
