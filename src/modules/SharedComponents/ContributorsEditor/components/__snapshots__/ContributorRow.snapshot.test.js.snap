@@ -1936,6 +1936,129 @@ Object {
 }
 `;
 
+exports[`Component ContributorRow should render row as required 1`] = `
+<Fragment>
+  <ConfirmDialogBox
+    hideCancelButton={false}
+    locale={
+      Object {
+        "cancelButtonLabel": "No",
+        "confirmButtonLabel": "Yes",
+        "confirmationMessage": "Are you sure you want to delete this record?",
+        "confirmationTitle": "Delete record",
+      }
+    }
+    onAction={[Function]}
+    onRef={[Function]}
+  />
+  <WithStyles(ListItem)
+    aria-label="Select this record (Test) to assign it to you"
+    classes={
+      Object {
+        "root": "highlighted",
+      }
+    }
+    divider={true}
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex={0}
+  >
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={true}
+      xsUp={false}
+    >
+      <WithStyles(ListItemIcon)
+        classes={
+          Object {
+            "root": "",
+          }
+        }
+      >
+        <pure(PersonOutlinedIcon) />
+      </WithStyles(ListItemIcon)>
+    </Hidden>
+    <WithStyles(Grid)
+      classes={
+        Object {
+          "container": undefined,
+        }
+      }
+      container={true}
+    >
+      <WithStyles(Grid)
+        item={true}
+        md={5}
+        sm={5}
+        xs={10}
+      >
+        <WithStyles(ListItemText)
+          disableTypography={true}
+          primary={
+            <WithStyles(Typography)
+              classes={
+                Object {
+                  "root": "undefined ",
+                }
+              }
+              noWrap={true}
+              variant="body2"
+            >
+              Test
+            </WithStyles(Typography)>
+          }
+          secondary={
+            <WithStyles(Typography)
+              classes={
+                Object {
+                  "root": "",
+                }
+              }
+              noWrap={true}
+              variant="caption"
+            >
+              First  listed contributor
+            </WithStyles(Typography)>
+          }
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+    <WithStyles(ListItemSecondaryAction)>
+      <WithStyles(Tooltip)
+        disableFocusListener={false}
+        disableHoverListener={false}
+        disableTouchListener={false}
+        title="Remove this record"
+      >
+        <span>
+          <WithStyles(IconButton)
+            aria-label="Remove this record"
+            disabled={false}
+            onClick={[Function]}
+          >
+            <pure(DeleteIcon)
+              classes={
+                Object {
+                  "root": "",
+                }
+              }
+            />
+          </WithStyles(IconButton)>
+        </span>
+      </WithStyles(Tooltip)>
+    </WithStyles(ListItemSecondaryAction)>
+  </WithStyles(ListItem)>
+</Fragment>
+`;
+
 exports[`Component ContributorRow should render row with UQ affiiliation and missing author title 1`] = `
 <WithStyles(Grid)
   classes={

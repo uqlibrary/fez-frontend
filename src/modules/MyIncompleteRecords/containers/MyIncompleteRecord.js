@@ -40,10 +40,8 @@ const validate = (values, props) => {
     stopSubmit(FORM_NAME, null);
     const data = values.toJS();
     const errors = {};
-    if (data.authors) {
-        errors.authors = data.authors.some(authorAffiliation => authorAffiliationRequired(authorAffiliation, author))
-            ? locale.validationErrors.authorsAffiliationIncomplete
-            : undefined;
+    if (data.authors && data.authors.some(authorAffiliation => authorAffiliationRequired(authorAffiliation, author))) {
+        errors.authors = locale.validationErrors.authorsAffiliationIncomplete;
     }
     return errors;
 };
