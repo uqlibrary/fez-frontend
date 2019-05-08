@@ -23,6 +23,7 @@ function setup(testProps, isShallow = true) {
             identifierSubtitle: 'identifierSubtitle'
         },
         width: 'md',
+        required: false,
         ...testProps,
     };
     return getElement(ContributorRow, props, isShallow);
@@ -294,62 +295,6 @@ describe('Component ContributorRow', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should call shouldComponentUpdate when something changes', () => {
-        const testFunction = jest.fn();
-        const wrapper = setup({
-            contributor: {
-                nameAsPublished: "J. Smith"
-            }
-        });
-        wrapper.instance().shouldComponentUpdate = testFunction;
-        wrapper.setProps({
-            contributor: {
-                nameAsPublished: "K. Lane"
-            }
-        });
-        expect(testFunction).toBeCalledWith(
-            {
-                canMoveDown: false,
-                canMoveUp: false,
-                classes: {
-                    hideIcon: "hideIcon",
-                    identifierName: "identifierName",
-                    identifierSubtitle: "identifierSubtitle",
-                    listItem: "listItem",
-                    primary: "primary",
-                    selected: "selected"
-                },
-                contributor: {
-                    nameAsPublished: "K. Lane"
-                },
-                disabled: false,
-                disabledContributorAssignment: false,
-                hideDelete: false,
-                hideReorder: false,
-                index: 0,
-                locale: {
-                    deleteHint: "Remove this record",
-                    deleteRecordConfirmation: {
-                        cancelButtonLabel: "No",
-                        confirmButtonLabel: "Yes",
-                        confirmationMessage: "Are you sure you want to delete this record?",
-                        confirmationTitle: "Delete record"
-                    },
-                    moveDownHint: "Move record down the order",
-                    moveUpHint: "Move record up the order",
-                    selectHint: "Select this record ([name]) to assign it to you",
-                    suffix: " listed contributor"
-                },
-                showContributorAssignment: false,
-                showIdentifierLookup: false,
-                showRoleInput: false,
-                width: "md"
-            },
-            {},
-            {}
-        );
-    });
-
     it('triggers the confirmation box', () => {
         const testFunction = jest.fn();
         const wrapper = setup({});
@@ -468,7 +413,7 @@ describe('Component ContributorRow', () => {
         const wrapper = setup({
             contributor: {
                 orgtype: 'test',
-                affiliation: 'NOTUQ'
+                affiliation: 'NotUQ'
             }
         });
         expect(
@@ -526,4 +471,21 @@ describe('Component ContributorRow', () => {
             wrapper.instance().getContributorRowText()
         ).toMatchSnapshot();
     });
+
+    it('should render row as required', () => {
+        const wrapper = setup({
+            contributor: {
+                nameAsPublished: 'Test',
+                orgaff: 'Test',
+                affilication: 'NotUQ',
+                orgtype: 'NGO'
+            },
+            classes: {
+                highlighted: 'highlighted'
+            },
+            required: true
+        });
+
+        expect(toJson(wrapper)).toMatchSnapshot();
+    })
 });

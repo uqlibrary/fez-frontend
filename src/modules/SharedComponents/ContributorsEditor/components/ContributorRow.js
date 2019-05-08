@@ -1,6 +1,6 @@
 import React, { PureComponent, Fragment } from 'react';
 import PropTypes from 'prop-types';
-import { numberToWords, validation } from 'config';
+import { numberToWords } from 'config';
 import { ORG_TYPES_LOOKUP } from 'config/general';
 import locale from 'locale/global';
 
@@ -81,6 +81,7 @@ export class ContributorRow extends PureComponent {
         onMoveUp: PropTypes.func,
         showContributorAssignment: PropTypes.bool,
         width: PropTypes.string,
+        required: PropTypes.bool
     };
 
     static defaultProps = {
@@ -99,6 +100,7 @@ export class ContributorRow extends PureComponent {
         },
         hideReorder: false,
         hideDelete: false,
+        required: false
     };
 
     constructor(props) {
@@ -238,17 +240,17 @@ export class ContributorRow extends PureComponent {
             disabled,
             classes,
             hideReorder,
-            hideDelete
+            hideDelete,
+            required
         } = this.props;
 
         const enableSelect = this.props.showContributorAssignment;
         const selectedClass = contributor.selected ? classes.selected : '';
-        const highlighted = !!validation.authorAffiliationIncomplete(contributor);
 
         const ariaLabelLocaleString = `${
             selectHint.replace('[name]', contributor.nameAsPublished)
         } ${
-            (highlighted && locale.requiredLabel) || ''
+            (required && locale.requiredLabel) || ''
         }`.trim();
 
         const ariaLabel = (
@@ -271,7 +273,7 @@ export class ContributorRow extends PureComponent {
                     classes={{ root: `${
                         classes.listItem || ''
                     } ${
-                        highlighted && classes.highlighted || ''
+                        required && classes.highlighted || ''
                     } ${
                         contributor.selected && classes.rowSelected || ''
                     }`.trim() }}

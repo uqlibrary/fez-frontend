@@ -155,7 +155,8 @@ export class ContributorForm extends PureComponent {
             ...prevState,
             contributor: {
                 ...prevState.contributor,
-                uqIdentifier: `${selectedItem.aut_id}`
+                uqIdentifier: `${selectedItem.aut_id}`,
+                ...selectedItem
             }
         }), () => {
             this._onSubmit();

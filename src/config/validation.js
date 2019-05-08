@@ -100,25 +100,22 @@ export const authorRequired = (authors) => peopleRequired(authors, locale.valida
 export const editorRequired = (editors) => peopleRequired(editors, locale.validationErrors.editorRequired, true);
 export const supervisorRequired = (supervisors) => peopleRequired(supervisors, locale.validationErrors.supervisorRequired, false);
 
-export const authorAffiliationIncomplete = (author) => (
-    (author.nameAsPublished || '').trim().length === 0 ||
+export const authorAffiliationRequired = (authorAffiliation, loggedInAuthor) => (
     (
-        author.affiliation === 'NotUQ' &&
+        authorAffiliation.uqIdentifier === '0' ||
+        authorAffiliation.uqIdentifier === String(loggedInAuthor.aut_id)
+    ) &&
+    (
+        (authorAffiliation.nameAsPublished || '').trim().length === 0 ||
         (
-            (author.orgaff || '').trim().length === 0 ||
-            (author.orgtype || '').trim().length === 0
+            authorAffiliation.affiliation === 'NotUQ' &&
+            (
+                (authorAffiliation.orgaff || '').trim().length === 0 ||
+                (authorAffiliation.orgtype || '').trim().length === 0
+            )
         )
     )
-        ? locale.validationErrors.authorAffiliationIncomplete
-        : undefined
 );
-
-export const authorsAffiliationIncomplete = (authors) => {
-    return ((authors.toJS && authors.toJS()) || authors).some(author => !!authorAffiliationIncomplete(author))
-        ? locale.validationErrors.authorsAffiliationIncomplete
-        : undefined
-    ;
-};
 
 // DateTime
 export const dateTimeDay = value => value && (isNaN(value) || parseInt(value, 10) < 0 || parseInt(value, 10) > 31) ? locale.validationErrors.dateTimeDay : undefined;
