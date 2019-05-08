@@ -526,11 +526,6 @@ exports[`Cards will display correct empty fields for a Exhibition Creative Work 
             name="authors"
             required={true}
             showContributorAssignment={true}
-            validate={
-              Array [
-                [Function],
-              ]
-            }
           />
         </StandardCard>
       </WithStyles(Grid)>
@@ -1179,11 +1174,6 @@ exports[`Cards will display correct empty fields for a Live Performance of Music
             name="authors"
             required={true}
             showContributorAssignment={true}
-            validate={
-              Array [
-                [Function],
-              ]
-            }
           />
         </StandardCard>
       </WithStyles(Grid)>
@@ -1832,11 +1822,6 @@ exports[`Cards will display correct empty fields for a Musical Creative work 1`]
             name="authors"
             required={true}
             showContributorAssignment={true}
-            validate={
-              Array [
-                [Function],
-              ]
-            }
           />
         </StandardCard>
       </WithStyles(Grid)>
@@ -2485,11 +2470,6 @@ exports[`Cards will display correct empty fields for a Public Sector Research Re
             name="authors"
             required={true}
             showContributorAssignment={true}
-            validate={
-              Array [
-                [Function],
-              ]
-            }
           />
         </StandardCard>
       </WithStyles(Grid)>
@@ -3138,11 +3118,6 @@ exports[`Cards will display correct empty fields for a Textual Book work 1`] = `
             name="authors"
             required={true}
             showContributorAssignment={true}
-            validate={
-              Array [
-                [Function],
-              ]
-            }
           />
         </StandardCard>
       </WithStyles(Grid)>
@@ -3798,11 +3773,6 @@ exports[`Cards will display correct empty fields for a Textual Book work with la
             name="authors"
             required={true}
             showContributorAssignment={true}
-            validate={
-              Array [
-                [Function],
-              ]
-            }
           />
         </StandardCard>
       </WithStyles(Grid)>
@@ -4451,11 +4421,6 @@ exports[`Cards will display correct empty fields for a Website Creative work 1`]
             name="authors"
             required={true}
             showContributorAssignment={true}
-            validate={
-              Array [
-                [Function],
-              ]
-            }
           />
         </StandardCard>
       </WithStyles(Grid)>
@@ -5104,11 +5069,6 @@ exports[`Cards will display correct empty fields for an Architectural Design wor
             name="authors"
             required={true}
             showContributorAssignment={true}
-            validate={
-              Array [
-                [Function],
-              ]
-            }
           />
         </StandardCard>
       </WithStyles(Grid)>
@@ -5672,11 +5632,6 @@ exports[`Cards will display empty where nothing is incomplete 1`] = `
             name="authors"
             required={true}
             showContributorAssignment={true}
-            validate={
-              Array [
-                [Function],
-              ]
-            }
           />
         </StandardCard>
       </WithStyles(Grid)>
@@ -6459,11 +6414,6 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
             name="authors"
             required={true}
             showContributorAssignment={true}
-            validate={
-              Array [
-                [Function],
-              ]
-            }
           />
         </StandardCard>
       </WithStyles(Grid)>
@@ -7246,11 +7196,6 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
             name="authors"
             required={true}
             showContributorAssignment={true}
-            validate={
-              Array [
-                [Function],
-              ]
-            }
           />
         </StandardCard>
       </WithStyles(Grid)>
@@ -8045,11 +7990,6 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
             name="authors"
             required={true}
             showContributorAssignment={true}
-            validate={
-              Array [
-                [Function],
-              ]
-            }
           />
         </StandardCard>
       </WithStyles(Grid)>
@@ -8838,11 +8778,6 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
             name="authors"
             required={true}
             showContributorAssignment={true}
-            validate={
-              Array [
-                [Function],
-              ]
-            }
           />
         </StandardCard>
       </WithStyles(Grid)>
@@ -9625,11 +9560,6 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
             name="authors"
             required={true}
             showContributorAssignment={true}
-            validate={
-              Array [
-                [Function],
-              ]
-            }
           />
         </StandardCard>
       </WithStyles(Grid)>
