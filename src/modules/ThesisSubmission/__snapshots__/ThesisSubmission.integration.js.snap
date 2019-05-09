@@ -108,7 +108,7 @@ exports[`ThesisSubmission form should allow user to submit thesis 1`] = `
                               id=\\"nameAsPublishedField\\"
                               placeholder=\\"\\"
                               required=\\"\\"
-@@ -292,15 +285,200 @@
+@@ -292,20 +285,208 @@
                             Add supervisor
                           </span>
                         </button>
@@ -152,18 +152,17 @@ exports[`ThesisSubmission form should allow user to submit thesis 1`] = `
 +                             <div
 +                               class=\\"MuiListItemText-root-384\\"
 +                             >
-                                <span
--                     class=\\"MuiTypography-root-100 MuiTypography-caption-110 MuiTypography-colorError-134\\"
++                               <span
 +                                 class=\\"MuiTypography-root-100 MuiTypography-caption-110 MuiTypography-colorTextSecondary-133 MuiListItemText-secondary-388\\"
-                                >
--                     Please provide a list of supervisors
++                               >
 +                                 Supervisor's name
 +                               </span>
 +                             </div>
 +                             <div
 +                               class=\\"MuiListItemText-root-384\\"
 +                             >
-+                               <span
+                                <span
+-                     class=\\"MuiTypography-root-100 MuiTypography-caption-110 MuiTypography-colorError-134\\"
 +                                 class=\\"MuiTypography-root-100 MuiTypography-caption-110 MuiTypography-colorTextSecondary-133 MuiListItemText-secondary-388 ContributorRowHeader-right-368 ContributorRowHeader-paddingRight24-370\\"
 +                               >
 +                                 Reorder items
@@ -185,10 +184,10 @@ exports[`ThesisSubmission form should allow user to submit thesis 1`] = `
 +                                   class=\\"MuiIconButton-label-403\\"
 +                                 >
 +                                   <svg
-+                                     aria-hidden=\\"true\\"
++                                     aria-hidden=\\"false\\"
 +                                     class=\\"MuiSvgIcon-root-244\\"
 +                                     focusable=\\"false\\"
-+                                     role=\\"presentation\\"
++                                     role=\\"img\\"
 +                                     viewBox=\\"0 0 24 24\\"
 +                                   >
 +                                     <path
@@ -202,6 +201,9 @@ exports[`ThesisSubmission form should allow user to submit thesis 1`] = `
 +                                       d=\\"M0 0h24v24H0z\\"
 +                                       fill=\\"none\\"
 +                                     />
++                                     <title>
++                                       Remove all items
++                                     </title>
 +                                   </svg>
 +                                 </span>
 +                                 <span
@@ -232,7 +234,8 @@ exports[`ThesisSubmission form should allow user to submit thesis 1`] = `
 +                                 focusable=\\"false\\"
 +                                 role=\\"presentation\\"
 +                                 viewBox=\\"0 0 24 24\\"
-+                               >
+                                >
+-                     Please provide a list of supervisors
 +                                 <path
 +                                   d=\\"M0 0h24v24H0z\\"
 +                                   fill=\\"none\\"
@@ -260,12 +263,12 @@ exports[`ThesisSubmission form should allow user to submit thesis 1`] = `
 +                                     class=\\"MuiTypography-root-100 MuiTypography-caption-110 MuiTypography-noWrap-126\\"
 +                                   >
 +                                     First  listed supervisor
-+                                   </span>
-+                                 </div>
-+                               </div>
-+                             </div>
-+                           </div>
-+                           <div
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div
 +                             class=\\"MuiListItemSecondaryAction-root-390\\"
 +                           >
 +                             <span
@@ -300,18 +303,23 @@ exports[`ThesisSubmission form should allow user to submit thesis 1`] = `
 +                                   class=\\"MuiTouchRipple-root-297\\"
 +                                 />
 +                               </button>
-                              </span>
++                             </span>
 +                           </div>
 +                         </li>
 +                       </ul>
 +                     </div>
 +                   </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-@@ -340,41 +518,138 @@
++                 </div>
++               </div>
++             </div>
++           </div>
++           <div
+              class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
+            >
+              <div
+                class=\\"MuiPaper-root-154 MuiPaper-elevation1-157 MuiPaper-rounded-155 MuiCard-root-153 Cards-card-149 StandardCard\\"
+              >
+@@ -340,41 +521,138 @@
                         aria-labelledby=\\"downshift-1-label\\"
                         class=\\"AutoCompleteAsyncField-container-256\\"
                         role=\\"combobox\\"
@@ -343,11 +351,11 @@ exports[`ThesisSubmission form should allow user to submit thesis 1`] = `
                               placeholder=\\"Start typing code or field name and select from list\\"
                               type=\\"text\\"
                               value=\\"\\"
-                            />
++                           />
 +                         </div>
 +                       </div>
 +                     </div>
-                    </div>
++                   </div>
 +                   <div
 +                     style=\\"padding: 8px;\\"
 +                   >
@@ -385,7 +393,7 @@ exports[`ThesisSubmission form should allow user to submit thesis 1`] = `
 +                               <path
 +                                 d=\\"M0 0h24v24H0V0z\\"
 +                                 fill=\\"none\\"
-+                               />
+                                />
 +                               <path
 +                                 d=\\"M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12l1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z\\"
 +                               />
@@ -401,7 +409,7 @@ exports[`ThesisSubmission form should allow user to submit thesis 1`] = `
 +                         </button>
 +                       </div>
 +                     </div>
-+                   </div>
+                    </div>
 +                   <div
 +                     style=\\"padding: 8px;\\"
 +                   >
@@ -457,7 +465,7 @@ exports[`ThesisSubmission form should allow user to submit thesis 1`] = `
                     </div>
                   </div>
                 </div>
-@@ -414,38 +689,31 @@
+@@ -414,38 +692,31 @@
                     >
                       <div
                         class=\\"MuiGrid-item-4\\"
@@ -500,7 +508,7 @@ exports[`ThesisSubmission form should allow user to submit thesis 1`] = `
                       <div
                         class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-2-47\\"
                       >
-@@ -458,18 +726,263 @@
+@@ -458,19 +729,264 @@
                         >
                           <span
                             class=\\"MuiButton-label-262\\"
@@ -621,14 +629,14 @@ exports[`ThesisSubmission form should allow user to submit thesis 1`] = `
 +                                     fill=\\"none\\"
 +                                   />
 +                                 </svg>
-+                               </span>
+                                </span>
 +                               <span
 +                                 class=\\"MuiTouchRipple-root-297\\"
 +                               />
-+                             </button>
-+                           </div>
-+                         </div>
-+                       </div>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
 +                       <div
 +                         class=\\"MuiGrid-item-4 MuiGrid-grid-xs-2-33 MuiGrid-grid-sm-1-46 ListRow-center-420\\"
 +                       >
@@ -661,10 +669,10 @@ exports[`ThesisSubmission form should allow user to submit thesis 1`] = `
 +                             class=\\"MuiTouchRipple-root-297\\"
 +                           />
 +                         </button>
-+                       </div>
-+                     </div>
-+                   </div>
-+                   <div
+                        </div>
+                      </div>
+                    </div>
+                    <div
 +                     style=\\"padding: 8px;\\"
 +                   >
 +                     <div
@@ -712,14 +720,14 @@ exports[`ThesisSubmission form should allow user to submit thesis 1`] = `
 +                                     fill=\\"none\\"
 +                                   />
 +                                 </svg>
-                                </span>
++                               </span>
 +                               <span
 +                                 class=\\"MuiTouchRipple-root-297\\"
 +                               />
-                              </button>
-                            </div>
-                          </div>
-                        </div>
++                             </button>
++                           </div>
++                         </div>
++                       </div>
 +                       <div
 +                         class=\\"MuiGrid-item-4 MuiGrid-grid-xs-2-33 MuiGrid-grid-sm-1-46 ListRow-center-420\\"
 +                       >
@@ -754,17 +762,18 @@ exports[`ThesisSubmission form should allow user to submit thesis 1`] = `
 +                         </button>
 +                       </div>
 +                     </div>
-                    </div>
-                  </div>
-                </div>
++                   </div>
++                 </div>
++               </div>
 +             </div>
 +           </div>
-            <div
++           <div
               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
             >
               <div
                 class=\\"MuiPaper-root-154 MuiPaper-elevation1-157 MuiPaper-rounded-155 MuiCard-root-153 Cards-card-149 StandardCard\\"
-@@ -579,78 +1092,12 @@
+              >
+@@ -579,78 +1095,12 @@
                             autocomplete=\\"off\\"
                             id=\\"Uploader\\"
                             multiple=\\"\\"
@@ -843,7 +852,7 @@ exports[`ThesisSubmission form should allow user to submit thesis 1`] = `
                   </div>
                 </div>
               </div>
-@@ -682,21 +1129,23 @@
+@@ -682,21 +1132,23 @@
             </div>
             <div
               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-auto-44\\"

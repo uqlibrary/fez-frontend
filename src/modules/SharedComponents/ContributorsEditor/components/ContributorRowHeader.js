@@ -132,7 +132,7 @@ export class ContributorRowHeader extends PureComponent {
                                     onClick={this._showConfirmation}
                                     disabled={disabled || hideDelete}
                                 >
-                                    <DeleteForever/>
+                                    <DeleteForever titleAccess={deleteAll} />
                                 </IconButton>
                             </span>
                         </Tooltip>

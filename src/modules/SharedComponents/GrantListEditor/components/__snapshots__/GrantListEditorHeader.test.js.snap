@@ -142,7 +142,7 @@ exports[`GrantListEditorHeader should hide grant agency type input 1`] = `
                     "root": undefined,
                   }
                 }
-                secondaryTypographyProps={
+                econdaryTypographyProps={
                   Object {
                     "variant": "caption",
                   }
@@ -336,7 +336,7 @@ exports[`GrantListEditorHeader should render default mobile view 1`] = `
                     "root": undefined,
                   }
                 }
-                secondaryTypographyProps={
+                econdaryTypographyProps={
                   Object {
                     "variant": "caption",
                   }
@@ -530,7 +530,7 @@ exports[`GrantListEditorHeader should render default view 1`] = `
                     "root": undefined,
                   }
                 }
-                secondaryTypographyProps={
+                econdaryTypographyProps={
                   Object {
                     "variant": "caption",
                   }
@@ -724,7 +724,7 @@ exports[`GrantListEditorHeader should show confirmation box 1`] = `
                     "root": undefined,
                   }
                 }
-                secondaryTypographyProps={
+                econdaryTypographyProps={
                   Object {
                     "variant": "caption",
                   }
