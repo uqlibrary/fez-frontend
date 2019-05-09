@@ -84,6 +84,7 @@ export default {
         pageRange: 'Please provide a valid start/end page range',
         // Collection form validations
         community: 'You must select a community',
-        title: 'Title is required'
+        title: 'Title is required',
+        authorsAffiliation: 'Author affiliation rows marked with red are required'
     }
 };
