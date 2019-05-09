@@ -291,7 +291,7 @@ export class ContributorsEditor extends PureComponent {
                     contributors.length > 0 &&
                     <Grid container spacing={8}>
                         <Grid item xs={12}>
-                            <List>
+                            <List style={{marginBottom: 0}}>
                                 <ContributorRowHeader
                                     {...(this.props.locale.header || {})}
                                     disabled={disabled}
@@ -304,8 +304,6 @@ export class ContributorsEditor extends PureComponent {
                                     showRoleInput={showRoleInput}
                                 />
                             </List>
-                        </Grid>
-                        <Grid item xs={12}>
                             <List classes={{
                                 root: `${classes.list} ${(contributors.length > 3) ? classes.scroll : ''}`
                             }}>
@@ -344,11 +342,11 @@ export const mapStateToProps = (state) => {
 
 export const styles = () => ({
     list: {
-        width: '98%',
-        margin: '0 1%',
-        maxHeight: 200,
+        width: '100%',
+        margin: '0',
+        maxHeight: 225,
         overflow: 'hidden',
-        marginBottom: 8
+        marginBottom: 16
     },
     scroll: {
         overflowY: 'scroll'

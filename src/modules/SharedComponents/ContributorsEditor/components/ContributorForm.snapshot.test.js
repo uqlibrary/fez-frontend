@@ -66,8 +66,8 @@ describe('Component ContributorForm', () => {
         expect(testFn).toBeCalledWith({
             nameAsPublished: 'Firstname Lastname',
             affiliation: 'UQ',
-            orgaff: '',
-            orgtype: '',
+            orgaff: 'The University of Queensland',
+            orgtype: '453989',
             creatorRole: '',
             uqIdentifier: ''
         });

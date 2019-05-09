@@ -14,7 +14,8 @@ import * as actions from 'actions/authors';
 import OrgAffiliationTypeSelector from './OrgAffiliationTypeSelector';
 import NonUqOrgAffiliationFormSection from './NonUqOrgAffiliationFormSection';
 
-import {DATA_COLLECTION_CREATOR_ROLES} from 'config/general';
+import {DATA_COLLECTION_CREATOR_ROLES, ORG_TYPE_ID_UNIVERSITY} from 'config/general';
+import locale from 'locale/global';
 
 export class ContributorForm extends PureComponent {
     static propTypes = {
@@ -117,7 +118,11 @@ export class ContributorForm extends PureComponent {
         ) return;
 
         // pass on the selected contributor
-        this.props.onSubmit(contributor);
+        this.props.onSubmit({
+            ...contributor,
+            orgtype: contributor.affiliation === 'UQ' && ORG_TYPE_ID_UNIVERSITY || contributor.orgtype,
+            orgaff: contributor.affiliation === 'UQ' && locale.global.orgTitle || contributor.orgaff
+        });
 
         // reset internal state
         this.setState(this.defaultState(this.props));
@@ -254,13 +259,13 @@ export class ContributorForm extends PureComponent {
                             value={contributor.nameAsPublished}
                             onChange={this._onNameChanged}
                             onKeyDown={this._onSubmit}
-                            disabled={disabled || disableNameAsPublished}
+                            disabled={disabled || disableNameAsPublished || isNtro && contributor.affiliation === ''}
                             required={required}
                             autoComplete="off"
                             error={
                                 !isContributorAssigned &&
                                 contributor.nameAsPublished.trim().length === 0 && (
-                                    isNtro ? !!contributor.affiliation : !!required
+                                    isNtro ? contributor.affiliation !== '' : !!required
                                 )
                             }
                         />

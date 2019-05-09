@@ -1,6 +1,7 @@
 import React from 'react';
 import locale from 'locale/validationErrors';
 import Immutable from 'immutable';
+import { ORG_TYPE_NOT_SET } from 'config/general';
 
 // Max Length
 export const maxLength = max => value => value && value.toString().replace(/\s/g, '').length > max ? locale.validationErrors.maxLength.replace('[max]', max) : undefined;
@@ -107,13 +108,9 @@ export const authorAffiliationRequired = (authorAffiliation, loggedInAuthor) => 
     ) &&
     (
         (authorAffiliation.nameAsPublished || '').trim().length === 0 ||
-        (
-            authorAffiliation.affiliation === 'NotUQ' &&
-            (
-                (authorAffiliation.orgaff || '').trim().length === 0 ||
-                (authorAffiliation.orgtype || '').trim().length === 0
-            )
-        )
+        (authorAffiliation.orgaff || '').trim().length === 0 ||
+        (authorAffiliation.orgtype || '').trim().length === 0 ||
+        (authorAffiliation.orgtype === ORG_TYPE_NOT_SET)
     )
 );
 

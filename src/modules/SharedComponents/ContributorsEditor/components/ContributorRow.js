@@ -20,6 +20,7 @@ import PersonOutlined from '@material-ui/icons/PersonOutlined';
 import Delete from '@material-ui/icons/Delete';
 import KeyboardArrowDown from '@material-ui/icons/KeyboardArrowDown';
 import KeyboardArrowUp from '@material-ui/icons/KeyboardArrowUp';
+import Lock from '@material-ui/icons/Lock';
 import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 
 export const styles = (theme) => ({
@@ -27,17 +28,24 @@ export const styles = (theme) => ({
         padding: '0',
     },
     listItem: {
+        borderLeft: '5px solid transparent',
         cursor: 'pointer',
-        width: '98%',
-        margin: '0 1%',
-        paddingLeft: '10px',
+        width: '100%',
+        margin: '0'
+    },
+    disabledListItem: {
+        width: '100%',
+        margin: '0',
+        outline: 'none !important',
+        '&:focus': {
+            outline: 'none !important'
+        }
     },
     highlighted: {
-        paddingLeft: '5px',
         borderLeft: '5px solid red',
     },
     rowSelected: {
-        backgroundColor: ((theme.palette || {}).accent || {}).light,
+        backgroundColor: ((theme.palette || {}).accent || {}).main,
     },
     selected: {
         color: 'white !important',
@@ -52,15 +60,9 @@ export const styles = (theme) => ({
     identifierName: {
         fontSize: theme.typography.caption.fontSize,
         marginTop: 8,
-        '&:before': {
-            content: '"UQ Id: "',
-        },
     },
     identifierSubtitle: {
         fontSize: theme.typography.caption.fontSize,
-        '&:before': {
-            content: '"UQ Username: "',
-        },
     },
 });
 
@@ -91,12 +93,13 @@ export class ContributorRow extends PureComponent {
             moveDownHint: 'Move record down the order',
             deleteHint: 'Remove this record',
             selectHint: 'Select this record ([name]) to assign it to you',
+            lockedTooltip: 'You are not able to edit this row',
             deleteRecordConfirmation: {
                 confirmationTitle: 'Delete record',
                 confirmationMessage: 'Are you sure you want to delete this record?',
                 cancelButtonLabel: 'No',
                 confirmButtonLabel: 'Yes'
-            }
+            },
         },
         hideReorder: false,
         hideDelete: false,
@@ -151,11 +154,13 @@ export class ContributorRow extends PureComponent {
         <ListItemText
             disableTypography
             primary={
+                primaryText &&
                 <Typography noWrap variant="body2" classes={{ root: primaryClass }}>
                     {primaryText}
                 </Typography>
             }
             secondary={
+                secondaryText &&
                 <Typography noWrap variant="caption" classes={{ root: secondaryClass }}>
                     {secondaryText}
                 </Typography>
@@ -189,8 +194,8 @@ export class ContributorRow extends PureComponent {
                     </Grid>
                 }
                 {
-                    contributor.affiliation && contributor.affiliation !== 'UQ' &&
-                    <Grid item xs={5}>
+                    contributor.affiliation && !contributor.aut_title &&
+                    <Grid item xs={12} sm={5}>
                         {this.getListItemTypography(
                             `${contributor.orgaff}`,
                             `${ORG_TYPES_LOOKUP[contributor.orgtype] && `Organisation type: ${ORG_TYPES_LOOKUP[contributor.orgtype]}` || ''}`,
@@ -200,19 +205,8 @@ export class ContributorRow extends PureComponent {
                     </Grid>
                 }
                 {
-                    contributor.affiliation && contributor.affiliation === 'UQ' && !contributor.aut_title &&
-                    <Grid item xs={5}>
-                        {this.getListItemTypography(
-                            locale.global.orgTitle,
-                            'Organisation type: University',
-                            `${width === 'xs' ? classes.identifierName : classes.primary} ${selectedClass}`,
-                            `${width === 'xs' ? classes.identifierSubtitle : ''} ${selectedClass}`
-                        )}
-                    </Grid>
-                }
-                {
                     contributor.creatorRole &&
-                    <Grid item xs={10} sm={5} md={5}>
+                    <Grid item xs={12} sm={5} md={5}>
                         {this.getListItemTypography(
                             contributor.creatorRole,
                             '',
@@ -261,6 +255,23 @@ export class ContributorRow extends PureComponent {
             : null
         ;
 
+        const rowIcon = () => {
+            if (contributor.selected) {
+                return <Person/>;
+            } else if (this.props.disabled || !enableSelect) {
+                return  (
+                    this.props.locale.lockedTooltip ?
+                        <Tooltip title={this.props.locale.lockedTooltip}>
+                            <Lock/>
+                        </Tooltip>
+                        :
+                        <Lock/>
+                );
+            } else {
+                return <PersonOutlined/>;
+            }
+        };
+
         return (
             <Fragment>
                 <ConfirmDialogBox
@@ -276,15 +287,16 @@ export class ContributorRow extends PureComponent {
                         required && classes.highlighted || ''
                     } ${
                         contributor.selected && classes.rowSelected || ''
+                    } ${ !enableSelect && classes.disabledListItem || ''
                     }`.trim() }}
-                    tabIndex={0}
                     onClick={enableSelect ? this._onSelect : () => { }}
+                    tabIndex={!enableSelect || this.props.disabled ? -1 : 0}
                     onKeyDown={enableSelect ? this._onSelectKeyboard : () => { }}
                     aria-label={ariaLabel}
                 >
                     <Hidden xsDown>
                         <ListItemIcon classes={{ root: selectedClass }}>
-                            {contributor.selected ? <Person /> : <PersonOutlined />}
+                            {rowIcon()}
                         </ListItemIcon>
                     </Hidden>
                     {this.getContributorRowText(selectedClass)}

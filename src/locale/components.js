@@ -615,6 +615,7 @@ export default {
                 },
                 row: {
                     locale: {
+                        lockedTooltip: 'You are not able to edit this row',
                         suffix: ' listed author',
                         unselectedHint: 'Select this to confirm [identifier] is you',
                         selectedHint: 'This is you',
