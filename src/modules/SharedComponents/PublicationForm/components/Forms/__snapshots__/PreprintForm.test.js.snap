@@ -155,6 +155,7 @@ exports[`PreprintForm renders  component 1`] = `
                   "confirmationMessage": "Are you sure you want to delete this item?",
                   "confirmationTitle": "Delete item",
                 },
+                "lockedTooltip": "You are not able to edit this row",
                 "moveDownHint": "Move item down the order",
                 "moveUpHint": "Move item up the order",
                 "selectHint": "Select this author ([name]) to assign it as you",

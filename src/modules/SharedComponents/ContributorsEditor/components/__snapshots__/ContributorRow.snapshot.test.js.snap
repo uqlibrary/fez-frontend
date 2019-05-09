@@ -184,7 +184,7 @@ exports[`Component ContributorRow Row should not be clickable when showContribut
     divider={true}
     onClick={[Function]}
     onKeyDown={[Function]}
-    tabIndex={0}
+    tabIndex={-1}
   >
     <Hidden
       implementation="js"
@@ -206,7 +206,11 @@ exports[`Component ContributorRow Row should not be clickable when showContribut
           }
         }
       >
-        <pure(PersonOutlinedIcon) />
+        <WithStyles(Tooltip)
+          title="You are not able to edit this row"
+        >
+          <pure(LockIcon) />
+        </WithStyles(Tooltip)>
       </WithStyles(ListItemIcon)>
     </Hidden>
     <WithStyles(Grid)
@@ -343,7 +347,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
     divider={true}
     onClick={[Function]}
     onKeyDown={[Function]}
-    tabIndex={0}
+    tabIndex={-1}
   >
     <Hidden
       implementation="js"
@@ -365,7 +369,11 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
           }
         }
       >
-        <pure(PersonOutlinedIcon) />
+        <WithStyles(Tooltip)
+          title="You are not able to edit this row"
+        >
+          <pure(LockIcon) />
+        </WithStyles(Tooltip)>
       </WithStyles(ListItemIcon)>
     </Hidden>
     <WithStyles(Grid)
@@ -466,7 +474,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
     divider={true}
     onClick={[Function]}
     onKeyDown={[Function]}
-    tabIndex={0}
+    tabIndex={-1}
   >
     <Hidden
       implementation="js"
@@ -488,7 +496,11 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
           }
         }
       >
-        <pure(PersonOutlinedIcon) />
+        <WithStyles(Tooltip)
+          title="You are not able to edit this row"
+        >
+          <pure(LockIcon) />
+        </WithStyles(Tooltip)>
       </WithStyles(ListItemIcon)>
     </Hidden>
     <WithStyles(Grid)
@@ -792,7 +804,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
     divider={true}
     onClick={[Function]}
     onKeyDown={[Function]}
-    tabIndex={0}
+    tabIndex={-1}
   >
     <Hidden
       implementation="js"
@@ -915,7 +927,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
     divider={true}
     onClick={[Function]}
     onKeyDown={[Function]}
-    tabIndex={0}
+    tabIndex={-1}
   >
     <Hidden
       implementation="js"
@@ -1038,7 +1050,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
     divider={true}
     onClick={[Function]}
     onKeyDown={[Function]}
-    tabIndex={0}
+    tabIndex={-1}
   >
     <Hidden
       implementation="js"
@@ -1060,7 +1072,11 @@ exports[`Component ContributorRow a row with index and contributor with author d
           }
         }
       >
-        <pure(PersonOutlinedIcon) />
+        <WithStyles(Tooltip)
+          title="You are not able to edit this row"
+        >
+          <pure(LockIcon) />
+        </WithStyles(Tooltip)>
       </WithStyles(ListItemIcon)>
     </Hidden>
     <WithStyles(Grid)
@@ -1197,7 +1213,7 @@ exports[`Component ContributorRow a row with index and creator with creator role
     divider={true}
     onClick={[Function]}
     onKeyDown={[Function]}
-    tabIndex={0}
+    tabIndex={-1}
   >
     <Hidden
       implementation="js"
@@ -1270,7 +1286,7 @@ exports[`Component ContributorRow a row with index and creator with creator role
         item={true}
         md={5}
         sm={5}
-        xs={10}
+        xs={12}
       >
         <WithStyles(ListItemText)
           disableTypography={true}
@@ -1287,19 +1303,7 @@ exports[`Component ContributorRow a row with index and creator with creator role
               Investigator
             </WithStyles(Typography)>
           }
-          secondary={
-            <WithStyles(Typography)
-              classes={
-                Object {
-                  "root": " selected",
-                }
-              }
-              noWrap={true}
-              variant="caption"
-            >
-              
-            </WithStyles(Typography)>
-          }
+          secondary=""
         />
       </WithStyles(Grid)>
     </WithStyles(Grid)>
@@ -1356,7 +1360,7 @@ exports[`Component ContributorRow a row with index and creator with creator role
     divider={true}
     onClick={[Function]}
     onKeyDown={[Function]}
-    tabIndex={0}
+    tabIndex={-1}
   >
     <Hidden
       implementation="js"
@@ -1429,7 +1433,7 @@ exports[`Component ContributorRow a row with index and creator with creator role
         item={true}
         md={5}
         sm={5}
-        xs={10}
+        xs={12}
       >
         <WithStyles(ListItemText)
           disableTypography={true}
@@ -1446,19 +1450,7 @@ exports[`Component ContributorRow a row with index and creator with creator role
               Investigator
             </WithStyles(Typography)>
           }
-          secondary={
-            <WithStyles(Typography)
-              classes={
-                Object {
-                  "root": " selected",
-                }
-              }
-              noWrap={true}
-              variant="caption"
-            >
-              
-            </WithStyles(Typography)>
-          }
+          secondary=""
         />
       </WithStyles(Grid)>
     </WithStyles(Grid)>
@@ -1586,7 +1578,8 @@ exports[`Component ContributorRow should assign contributor 1`] = `
       </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
-        xs={5}
+        sm={5}
+        xs={12}
       >
         <WithStyles(ListItemText)
           disableTypography={true}
@@ -1672,7 +1665,7 @@ exports[`Component ContributorRow should call callback functions on ListItem 1`]
     divider={true}
     onClick={[Function]}
     onKeyDown={[Function]}
-    tabIndex={0}
+    tabIndex={-1}
   >
     <Hidden
       implementation="js"
@@ -1743,7 +1736,8 @@ exports[`Component ContributorRow should call callback functions on ListItem 1`]
       </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
-        xs={5}
+        sm={5}
+        xs={12}
       >
         <WithStyles(ListItemText)
           disableTypography={true}
@@ -1806,40 +1800,41 @@ exports[`Component ContributorRow should call callback functions on ListItem 1`]
 
 exports[`Component ContributorRow should have a proper style generator 1`] = `
 Object {
+  "disabledListItem": Object {
+    "&:focus": Object {
+      "outline": "none !important",
+    },
+    "margin": "0",
+    "outline": "none !important",
+    "width": "100%",
+  },
   "hideIcon": Object {
     "display": "none",
   },
   "highlighted": Object {
     "borderLeft": "5px solid red",
-    "paddingLeft": "5px",
   },
   "identifierName": Object {
-    "&:before": Object {
-      "content": "\\"UQ Id: \\"",
-    },
     "fontSize": "test4",
     "marginTop": 8,
   },
   "identifierSubtitle": Object {
-    "&:before": Object {
-      "content": "\\"UQ Username: \\"",
-    },
     "fontSize": "test4",
   },
   "listContainer": Object {
     "padding": "0",
   },
   "listItem": Object {
+    "borderLeft": "5px solid transparent",
     "cursor": "pointer",
-    "margin": "0 1%",
-    "paddingLeft": "10px",
-    "width": "98%",
+    "margin": "0",
+    "width": "100%",
   },
   "primary": Object {
     "fontSize": "test3",
   },
   "rowSelected": Object {
-    "backgroundColor": "test1",
+    "backgroundColor": undefined,
   },
   "selected": Object {
     "color": "white !important",
@@ -1850,34 +1845,35 @@ Object {
 
 exports[`Component ContributorRow should have a proper style generator 2`] = `
 Object {
+  "disabledListItem": Object {
+    "&:focus": Object {
+      "outline": "none !important",
+    },
+    "margin": "0",
+    "outline": "none !important",
+    "width": "100%",
+  },
   "hideIcon": Object {
     "display": "none",
   },
   "highlighted": Object {
     "borderLeft": "5px solid red",
-    "paddingLeft": "5px",
   },
   "identifierName": Object {
-    "&:before": Object {
-      "content": "\\"UQ Id: \\"",
-    },
     "fontSize": "test4",
     "marginTop": 8,
   },
   "identifierSubtitle": Object {
-    "&:before": Object {
-      "content": "\\"UQ Username: \\"",
-    },
     "fontSize": "test4",
   },
   "listContainer": Object {
     "padding": "0",
   },
   "listItem": Object {
+    "borderLeft": "5px solid transparent",
     "cursor": "pointer",
-    "margin": "0 1%",
-    "paddingLeft": "10px",
-    "width": "98%",
+    "margin": "0",
+    "width": "100%",
   },
   "primary": Object {
     "fontSize": "test3",
@@ -1894,34 +1890,35 @@ Object {
 
 exports[`Component ContributorRow should have a proper style generator 3`] = `
 Object {
+  "disabledListItem": Object {
+    "&:focus": Object {
+      "outline": "none !important",
+    },
+    "margin": "0",
+    "outline": "none !important",
+    "width": "100%",
+  },
   "hideIcon": Object {
     "display": "none",
   },
   "highlighted": Object {
     "borderLeft": "5px solid red",
-    "paddingLeft": "5px",
   },
   "identifierName": Object {
-    "&:before": Object {
-      "content": "\\"UQ Id: \\"",
-    },
     "fontSize": "test4",
     "marginTop": 8,
   },
   "identifierSubtitle": Object {
-    "&:before": Object {
-      "content": "\\"UQ Username: \\"",
-    },
     "fontSize": "test4",
   },
   "listContainer": Object {
     "padding": "0",
   },
   "listItem": Object {
+    "borderLeft": "5px solid transparent",
     "cursor": "pointer",
-    "margin": "0 1%",
-    "paddingLeft": "10px",
-    "width": "98%",
+    "margin": "0",
+    "width": "100%",
   },
   "primary": Object {
     "fontSize": "test3",
@@ -1961,7 +1958,7 @@ exports[`Component ContributorRow should render row as required 1`] = `
     divider={true}
     onClick={[Function]}
     onKeyDown={[Function]}
-    tabIndex={0}
+    tabIndex={-1}
   >
     <Hidden
       implementation="js"
@@ -1983,7 +1980,11 @@ exports[`Component ContributorRow should render row as required 1`] = `
           }
         }
       >
-        <pure(PersonOutlinedIcon) />
+        <WithStyles(Tooltip)
+          title="You are not able to edit this row"
+        >
+          <pure(LockIcon) />
+        </WithStyles(Tooltip)>
       </WithStyles(ListItemIcon)>
     </Hidden>
     <WithStyles(Grid)
@@ -2076,17 +2077,6 @@ exports[`Component ContributorRow should render row with UQ affiiliation and mis
   >
     <WithStyles(ListItemText)
       disableTypography={true}
-      primary={
-        <WithStyles(Typography)
-          classes={
-            Object {
-              "root": "undefined undefined",
-            }
-          }
-          noWrap={true}
-          variant="body2"
-        />
-      }
       secondary={
         <WithStyles(Typography)
           classes={
@@ -2104,7 +2094,8 @@ exports[`Component ContributorRow should render row with UQ affiiliation and mis
   </WithStyles(Grid)>
   <WithStyles(Grid)
     item={true}
-    xs={5}
+    sm={5}
+    xs={12}
   >
     <WithStyles(ListItemText)
       disableTypography={true}
@@ -2118,22 +2109,10 @@ exports[`Component ContributorRow should render row with UQ affiiliation and mis
           noWrap={true}
           variant="body2"
         >
-          The University of Queensland
+          undefined
         </WithStyles(Typography)>
       }
-      secondary={
-        <WithStyles(Typography)
-          classes={
-            Object {
-              "root": "test2 undefined",
-            }
-          }
-          noWrap={true}
-          variant="caption"
-        >
-          Organisation type: University
-        </WithStyles(Typography)>
-      }
+      secondary=""
     />
   </WithStyles(Grid)>
 </WithStyles(Grid)>
@@ -2156,17 +2135,6 @@ exports[`Component ContributorRow should render row with UQ affiiliation and mis
   >
     <WithStyles(ListItemText)
       disableTypography={true}
-      primary={
-        <WithStyles(Typography)
-          classes={
-            Object {
-              "root": "test undefined",
-            }
-          }
-          noWrap={true}
-          variant="body2"
-        />
-      }
       secondary={
         <WithStyles(Typography)
           classes={
@@ -2184,7 +2152,8 @@ exports[`Component ContributorRow should render row with UQ affiiliation and mis
   </WithStyles(Grid)>
   <WithStyles(Grid)
     item={true}
-    xs={5}
+    sm={5}
+    xs={12}
   >
     <WithStyles(ListItemText)
       disableTypography={true}
@@ -2198,22 +2167,10 @@ exports[`Component ContributorRow should render row with UQ affiiliation and mis
           noWrap={true}
           variant="body2"
         >
-          The University of Queensland
+          undefined
         </WithStyles(Typography)>
       }
-      secondary={
-        <WithStyles(Typography)
-          classes={
-            Object {
-              "root": " undefined",
-            }
-          }
-          noWrap={true}
-          variant="caption"
-        >
-          Organisation type: University
-        </WithStyles(Typography)>
-      }
+      secondary=""
     />
   </WithStyles(Grid)>
 </WithStyles(Grid)>
@@ -2236,17 +2193,6 @@ exports[`Component ContributorRow should render row with non-UQ affiiliation and
   >
     <WithStyles(ListItemText)
       disableTypography={true}
-      primary={
-        <WithStyles(Typography)
-          classes={
-            Object {
-              "root": "primary undefined",
-            }
-          }
-          noWrap={true}
-          variant="body2"
-        />
-      }
       secondary={
         <WithStyles(Typography)
           classes={
@@ -2264,7 +2210,8 @@ exports[`Component ContributorRow should render row with non-UQ affiiliation and
   </WithStyles(Grid)>
   <WithStyles(Grid)
     item={true}
-    xs={5}
+    sm={5}
+    xs={12}
   >
     <WithStyles(ListItemText)
       disableTypography={true}
@@ -2281,19 +2228,7 @@ exports[`Component ContributorRow should render row with non-UQ affiiliation and
           undefined
         </WithStyles(Typography)>
       }
-      secondary={
-        <WithStyles(Typography)
-          classes={
-            Object {
-              "root": " undefined",
-            }
-          }
-          noWrap={true}
-          variant="caption"
-        >
-          
-        </WithStyles(Typography)>
-      }
+      secondary=""
     />
   </WithStyles(Grid)>
 </WithStyles(Grid)>
@@ -2316,17 +2251,6 @@ exports[`Component ContributorRow should render row with student author title in
   >
     <WithStyles(ListItemText)
       disableTypography={true}
-      primary={
-        <WithStyles(Typography)
-          classes={
-            Object {
-              "root": "test1 undefined",
-            }
-          }
-          noWrap={true}
-          variant="body2"
-        />
-      }
       secondary={
         <WithStyles(Typography)
           classes={
@@ -2382,7 +2306,7 @@ exports[`Component ContributorRow should render row with student author title in
     item={true}
     md={5}
     sm={5}
-    xs={10}
+    xs={12}
   >
     <WithStyles(ListItemText)
       disableTypography={true}
@@ -2399,19 +2323,7 @@ exports[`Component ContributorRow should render row with student author title in
           role
         </WithStyles(Typography)>
       }
-      secondary={
-        <WithStyles(Typography)
-          classes={
-            Object {
-              "root": "test3 undefined",
-            }
-          }
-          noWrap={true}
-          variant="caption"
-        >
-          
-        </WithStyles(Typography)>
-      }
+      secondary=""
     />
   </WithStyles(Grid)>
 </WithStyles(Grid)>
@@ -2442,7 +2354,7 @@ exports[`Component ContributorRow should render with missing aria label if selec
     divider={true}
     onClick={[Function]}
     onKeyDown={[Function]}
-    tabIndex={0}
+    tabIndex={-1}
   >
     <Hidden
       implementation="js"
@@ -2464,7 +2376,7 @@ exports[`Component ContributorRow should render with missing aria label if selec
           }
         }
       >
-        <pure(PersonOutlinedIcon) />
+        <pure(LockIcon) />
       </WithStyles(ListItemIcon)>
     </Hidden>
     <WithStyles(Grid)

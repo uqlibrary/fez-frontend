@@ -10,7 +10,13 @@ exports[`ContributorsEditor chooses a contributor to edit 1`] = `
       item={true}
       xs={12}
     >
-      <WithStyles(List)>
+      <WithStyles(List)
+        style={
+          Object {
+            "marginBottom": 0,
+          }
+        }
+      >
         <WithStyles(ContributorRowHeader)
           hideDelete={false}
           isInfinite={false}
@@ -21,11 +27,6 @@ exports[`ContributorsEditor chooses a contributor to edit 1`] = `
           showRoleInput={false}
         />
       </WithStyles(List)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
-      item={true}
-      xs={12}
-    >
       <WithStyles(List)
         classes={
           Object {
@@ -106,7 +107,13 @@ exports[`ContributorsEditor chooses a contributor to edit 2`] = `
       item={true}
       xs={12}
     >
-      <WithStyles(List)>
+      <WithStyles(List)
+        style={
+          Object {
+            "marginBottom": 0,
+          }
+        }
+      >
         <WithStyles(ContributorRowHeader)
           hideDelete={false}
           isInfinite={false}
@@ -117,11 +124,6 @@ exports[`ContributorsEditor chooses a contributor to edit 2`] = `
           showRoleInput={false}
         />
       </WithStyles(List)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
-      item={true}
-      xs={12}
-    >
       <WithStyles(List)
         classes={
           Object {
@@ -263,7 +265,13 @@ exports[`ContributorsEditor renders 3 contributor rows with no infinite scroll 1
       item={true}
       xs={12}
     >
-      <WithStyles(List)>
+      <WithStyles(List)
+        style={
+          Object {
+            "marginBottom": 0,
+          }
+        }
+      >
         <WithStyles(ContributorRowHeader)
           hideDelete={false}
           isInfinite={false}
@@ -274,11 +282,6 @@ exports[`ContributorsEditor renders 3 contributor rows with no infinite scroll 1
           showRoleInput={false}
         />
       </WithStyles(List)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
-      item={true}
-      xs={12}
-    >
       <WithStyles(List)
         classes={
           Object {
@@ -379,7 +382,13 @@ exports[`ContributorsEditor renders 4 contributor rows wrapped in an infinite sc
       item={true}
       xs={12}
     >
-      <WithStyles(List)>
+      <WithStyles(List)
+        style={
+          Object {
+            "marginBottom": 0,
+          }
+        }
+      >
         <WithStyles(ContributorRowHeader)
           hideDelete={false}
           isInfinite={true}
@@ -390,11 +399,6 @@ exports[`ContributorsEditor renders 4 contributor rows wrapped in an infinite sc
           showRoleInput={false}
         />
       </WithStyles(List)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
-      item={true}
-      xs={12}
-    >
       <WithStyles(List)
         classes={
           Object {
@@ -491,7 +495,13 @@ exports[`ContributorsEditor renders component in edit mode 1`] = `
       item={true}
       xs={12}
     >
-      <WithStyles(List)>
+      <WithStyles(List)
+        style={
+          Object {
+            "marginBottom": 0,
+          }
+        }
+      >
         <WithStyles(ContributorRowHeader)
           hideDelete={false}
           isInfinite={false}
@@ -502,11 +512,6 @@ exports[`ContributorsEditor renders component in edit mode 1`] = `
           showRoleInput={false}
         />
       </WithStyles(List)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
-      item={true}
-      xs={12}
-    >
       <WithStyles(List)
         classes={
           Object {
@@ -2655,7 +2660,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                             >
                               <WithStyles(TextFieldWrapper)
                                 autoComplete="off"
-                                disabled={false}
+                                disabled={true}
                                 error={false}
                                 fullWidth={true}
                                 id="nameAsPublishedField"
@@ -2669,7 +2674,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                 <TextFieldWrapper
                                   autoComplete="off"
                                   classes={Object {}}
-                                  disabled={false}
+                                  disabled={true}
                                   error={false}
                                   fullWidth={true}
                                   id="nameAsPublishedField"
@@ -2684,7 +2689,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                     InputLabelProps={null}
                                     autoComplete="off"
                                     classes={Object {}}
-                                    disabled={false}
+                                    disabled={true}
                                     error={false}
                                     fullWidth={true}
                                     id="nameAsPublishedField"
@@ -2699,7 +2704,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                   >
                                     <WithStyles(FormControl)
                                       classes={Object {}}
-                                      disabled={false}
+                                      disabled={true}
                                       error={false}
                                       fullWidth={true}
                                       onKeyDown={[Function]}
@@ -2716,7 +2721,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                           }
                                         }
                                         component="div"
-                                        disabled={false}
+                                        disabled={true}
                                         error={false}
                                         fullWidth={true}
                                         margin="none"
@@ -2769,7 +2774,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                   htmlFor="nameAsPublishedField"
                                                 >
                                                   <label
-                                                    className="MuiFormLabel-root-109 MuiInputLabel-root-102 MuiInputLabel-formControl-103 MuiInputLabel-animated-106"
+                                                    className="MuiFormLabel-root-109 MuiFormLabel-disabled-111 MuiInputLabel-root-102 MuiInputLabel-formControl-103 MuiInputLabel-animated-106"
                                                     data-shrink={false}
                                                     htmlFor="nameAsPublishedField"
                                                   >
@@ -2873,14 +2878,14 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                   value=""
                                                 >
                                                   <div
-                                                    className="MuiInputBase-root-136 MuiInput-root-123 MuiInput-underline-127 MuiInputBase-fullWidth-145 MuiInput-fullWidth-130 MuiInputBase-formControl-137 MuiInput-formControl-124"
+                                                    className="MuiInputBase-root-136 MuiInput-root-123 MuiInput-underline-127 MuiInputBase-disabled-139 MuiInput-disabled-126 MuiInputBase-fullWidth-145 MuiInput-fullWidth-130 MuiInputBase-formControl-137 MuiInput-formControl-124"
                                                     onClick={[Function]}
                                                   >
                                                     <input
                                                       aria-invalid={false}
                                                       autoComplete="off"
-                                                      className="MuiInputBase-input-146 MuiInput-input-131"
-                                                      disabled={false}
+                                                      className="MuiInputBase-input-146 MuiInput-input-131 MuiInputBase-disabled-139 MuiInput-disabled-126"
+                                                      disabled={true}
                                                       id="nameAsPublishedField"
                                                       onBlur={[Function]}
                                                       onChange={[Function]}
@@ -3399,7 +3404,13 @@ exports[`ContributorsEditor should get contributors from props and input value s
       item={true}
       xs={12}
     >
-      <WithStyles(List)>
+      <WithStyles(List)
+        style={
+          Object {
+            "marginBottom": 0,
+          }
+        }
+      >
         <WithStyles(ContributorRowHeader)
           hideDelete={false}
           isInfinite={false}
@@ -3410,11 +3421,6 @@ exports[`ContributorsEditor should get contributors from props and input value s
           showRoleInput={false}
         />
       </WithStyles(List)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
-      item={true}
-      xs={12}
-    >
       <WithStyles(List)
         classes={
           Object {
@@ -3509,7 +3515,13 @@ exports[`ContributorsEditor should get contributors from props and input value s
       item={true}
       xs={12}
     >
-      <WithStyles(List)>
+      <WithStyles(List)
+        style={
+          Object {
+            "marginBottom": 0,
+          }
+        }
+      >
         <WithStyles(ContributorRowHeader)
           hideDelete={false}
           isInfinite={false}
@@ -3520,11 +3532,6 @@ exports[`ContributorsEditor should get contributors from props and input value s
           showRoleInput={false}
         />
       </WithStyles(List)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
-      item={true}
-      xs={12}
-    >
       <WithStyles(List)
         classes={
           Object {
@@ -3577,11 +3584,11 @@ exports[`ContributorsEditor should get contributors from props and input value s
 exports[`ContributorsEditor should have a proper style generator 1`] = `
 Object {
   "list": Object {
-    "margin": "0 1%",
-    "marginBottom": 8,
-    "maxHeight": 200,
+    "margin": "0",
+    "marginBottom": 16,
+    "maxHeight": 225,
     "overflow": "hidden",
-    "width": "98%",
+    "width": "100%",
   },
   "scroll": Object {
     "overflowY": "scroll",

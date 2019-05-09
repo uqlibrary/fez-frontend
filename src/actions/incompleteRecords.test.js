@@ -50,7 +50,9 @@ describe('incompleteRecords actions', () => {
     it('should call fixing/fixed actions on successful save', async () => {
         mockApi
             .onPatch(repositories.routes.EXISTING_RECORD_API({ pid: 'UQ:692945' }).apiUrl)
-            .reply(200, { data: incompleteNTROrecord });
+            .reply(200, { data: incompleteNTROrecord })
+            .onPost(repositories.routes.RECORDS_ISSUES_API({ pid: 'UQ:692945' }).apiUrl)
+            .reply(200, {});
 
         const expectedActions = [
             actions.FIX_RECORD_PROCESSING,
@@ -160,6 +162,8 @@ describe('updateIncompleteRecord actions', () => {
         };
         mockApi
             .onPatch(repositories.routes.EXISTING_RECORD_API({pid: testPid}).apiUrl)
+            .reply(200, {})
+            .onPost(repositories.routes.RECORDS_ISSUES_API({ pid: testPid }).apiUrl)
             .reply(200, {});
 
         const expectedActions = [
@@ -197,6 +201,8 @@ describe('updateIncompleteRecord actions', () => {
         };
         mockApi
             .onPatch(repositories.routes.EXISTING_RECORD_API({pid: testPid}).apiUrl)
+            .reply(200, {})
+            .onPost(repositories.routes.RECORDS_ISSUES_API({ pid: testPid }).apiUrl)
             .reply(200, {});
 
         const expectedActions = [
@@ -220,6 +226,8 @@ describe('updateIncompleteRecord actions', () => {
         };
         mockApi
             .onPatch(repositories.routes.EXISTING_RECORD_API({pid: testPid}).apiUrl)
+            .reply(200, {})
+            .onPost(repositories.routes.RECORDS_ISSUES_API({ pid: testPid }).apiUrl)
             .reply(200, {});
 
         const expectedActions = [
@@ -287,6 +295,8 @@ describe('updateIncompleteRecord actions', () => {
         };
         mockApi
             .onPatch(repositories.routes.EXISTING_RECORD_API({pid: testPid}).apiUrl)
+            .reply(200, {})
+            .onPost(repositories.routes.RECORDS_ISSUES_API({ pid: testPid }).apiUrl)
             .reply(200, {});
 
         const expectedActions = [

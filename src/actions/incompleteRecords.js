@@ -1,7 +1,7 @@
 import * as actions from './actionTypes';
 import * as transformers from './transformers';
-import { patch } from 'repositories/generic';
-import { EXISTING_RECORD_API } from 'repositories/routes';
+import { patch, post } from 'repositories/generic';
+import { EXISTING_RECORD_API, RECORDS_ISSUES_API } from 'repositories/routes';
 import { putUploadFiles } from 'repositories';
 
 /**
@@ -46,7 +46,7 @@ export function updateIncompleteRecord(data) {
     return dispatch => {
         dispatch({type: actions.FIX_RECORD_PROCESSING});
 
-        // if user updated links/added files - update record
+        // if user updated NTRO data - update record
         let patchRecordRequest = null;
         patchRecordRequest = {
             rek_pid: data.publication.rek_pid,
@@ -75,12 +75,12 @@ export function updateIncompleteRecord(data) {
         !!patchRecordRequest.qualityIndicators && delete patchRecordRequest.qualityIndicators;
 
         // create request for issue notification
-        // const createIssueRequest = transformers.getFixIssueRequest(data);
+        const createIssueRequest = transformers.getFixIssueRequest(data);
 
         return Promise.resolve([])
             .then(()=> (hasFilesToUpload ? putUploadFiles(data.publication.rek_pid, data.files.queue, dispatch) : null))
             .then(()=> (patch(EXISTING_RECORD_API({pid: data.publication.rek_pid}), patchRecordRequest)))
-            // .then(()=> (post(RECORDS_ISSUES_API({pid: data.publication.rek_pid}), createIssueRequest)))
+            .then(()=> (post(RECORDS_ISSUES_API({pid: data.publication.rek_pid}), createIssueRequest)))
             .then(responses => {
                 dispatch({
                     type: actions.FIX_RECORD_SUCCESS,
