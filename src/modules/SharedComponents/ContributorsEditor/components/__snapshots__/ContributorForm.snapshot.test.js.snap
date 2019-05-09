@@ -171,7 +171,7 @@ exports[`Component ContributorForm should handle affiliation change 1`] = `
     >
       <WithStyles(TextFieldWrapper)
         autoComplete="off"
-        disabled={false}
+        disabled={true}
         error={false}
         fullWidth={true}
         id="nameAsPublishedField"
@@ -346,7 +346,7 @@ exports[`Component ContributorForm should render NTRO fields 1`] = `
     >
       <WithStyles(TextFieldWrapper)
         autoComplete="off"
-        disabled={false}
+        disabled={true}
         error={false}
         fullWidth={true}
         id="nameAsPublishedField"
@@ -1221,7 +1221,6 @@ exports[`Component ContributorForm should render connected component 1`] = `
                         >
                           <WithStyles(TextFieldWrapper)
                             autoComplete="off"
-                            disabled={false}
                             error={false}
                             fullWidth={true}
                             id="nameAsPublishedField"
@@ -1235,7 +1234,6 @@ exports[`Component ContributorForm should render connected component 1`] = `
                             <TextFieldWrapper
                               autoComplete="off"
                               classes={Object {}}
-                              disabled={false}
                               error={false}
                               fullWidth={true}
                               id="nameAsPublishedField"
@@ -1250,7 +1248,6 @@ exports[`Component ContributorForm should render connected component 1`] = `
                                 InputLabelProps={null}
                                 autoComplete="off"
                                 classes={Object {}}
-                                disabled={false}
                                 error={false}
                                 fullWidth={true}
                                 id="nameAsPublishedField"
@@ -1265,7 +1262,6 @@ exports[`Component ContributorForm should render connected component 1`] = `
                               >
                                 <WithStyles(FormControl)
                                   classes={Object {}}
-                                  disabled={false}
                                   error={false}
                                   fullWidth={true}
                                   onKeyDown={[Function]}
@@ -2005,7 +2001,7 @@ exports[`Component ContributorForm should show error regarding affiliation type 
     >
       <WithStyles(TextFieldWrapper)
         autoComplete="off"
-        disabled={false}
+        disabled={true}
         error={false}
         fullWidth={true}
         id="nameAsPublishedField"
