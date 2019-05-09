@@ -1,6 +1,5 @@
 import locale from 'locale/global';
 import templates from 'locale/templates';
-import { general } from 'config';
 
 const moment = require('moment');
 
@@ -185,7 +184,7 @@ export const getRecordAuthorAffiliationSearchKey = (authors) => {
         fez_record_search_key_author_affiliation_name: authors
             .map(
                 (item, index) => ({
-                    rek_author_affiliation_name: item.affiliation === 'UQ' && locale.global.orgTitle || item.orgaff,
+                    rek_author_affiliation_name: item.orgaff,
                     rek_author_affiliation_name_order: index + 1
                 })
             )
@@ -199,11 +198,7 @@ export const getRecordAuthorAffiliationTypeSearchKey = (authors) => {
         fez_record_search_key_author_affiliation_type: authors
             .map(
                 (item, index) => ({
-                    rek_author_affiliation_type: (
-                        (item.affiliation === 'UQ' && parseInt(general.ORG_TYPE_ID_UNIVERSITY, 10)) ||
-                        (item.orgtype && parseInt(item.orgtype, 10)) ||
-                        0
-                    ),
+                    rek_author_affiliation_type: (item.orgtype && parseInt(item.orgtype, 10)) || 0,
                     rek_author_affiliation_type_order: index + 1
                 })
             )
