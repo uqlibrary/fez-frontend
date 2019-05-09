@@ -408,6 +408,7 @@ export class MyIncompleteRecordClass extends PureComponent {
                         <Grid item xs={12}>
                             <StandardCard title={txt.fields.notes.title}>
                                 <Field
+                                    style={{marginTop: -24}}
                                     component={TextField}
                                     name="notes"
                                     type="text"

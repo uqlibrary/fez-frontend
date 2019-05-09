@@ -546,6 +546,11 @@ exports[`Cards will display correct empty fields for a Exhibition Creative Work 
             name="notes"
             placeholder="Add any other notes or comments about this work to send to the eSpace team."
             rows={5}
+            style={
+              Object {
+                "marginTop": -24,
+              }
+            }
             type="text"
           />
         </StandardCard>
@@ -1213,6 +1218,11 @@ exports[`Cards will display correct empty fields for a Live Performance of Music
             name="notes"
             placeholder="Add any other notes or comments about this work to send to the eSpace team."
             rows={5}
+            style={
+              Object {
+                "marginTop": -24,
+              }
+            }
             type="text"
           />
         </StandardCard>
@@ -1880,6 +1890,11 @@ exports[`Cards will display correct empty fields for a Musical Creative work 1`]
             name="notes"
             placeholder="Add any other notes or comments about this work to send to the eSpace team."
             rows={5}
+            style={
+              Object {
+                "marginTop": -24,
+              }
+            }
             type="text"
           />
         </StandardCard>
@@ -2547,6 +2562,11 @@ exports[`Cards will display correct empty fields for a Public Sector Research Re
             name="notes"
             placeholder="Add any other notes or comments about this work to send to the eSpace team."
             rows={5}
+            style={
+              Object {
+                "marginTop": -24,
+              }
+            }
             type="text"
           />
         </StandardCard>
@@ -3214,6 +3234,11 @@ exports[`Cards will display correct empty fields for a Textual Book work 1`] = `
             name="notes"
             placeholder="Add any other notes or comments about this work to send to the eSpace team."
             rows={5}
+            style={
+              Object {
+                "marginTop": -24,
+              }
+            }
             type="text"
           />
         </StandardCard>
@@ -3888,6 +3913,11 @@ exports[`Cards will display correct empty fields for a Textual Book work with la
             name="notes"
             placeholder="Add any other notes or comments about this work to send to the eSpace team."
             rows={5}
+            style={
+              Object {
+                "marginTop": -24,
+              }
+            }
             type="text"
           />
         </StandardCard>
@@ -4555,6 +4585,11 @@ exports[`Cards will display correct empty fields for a Website Creative work 1`]
             name="notes"
             placeholder="Add any other notes or comments about this work to send to the eSpace team."
             rows={5}
+            style={
+              Object {
+                "marginTop": -24,
+              }
+            }
             type="text"
           />
         </StandardCard>
@@ -5222,6 +5257,11 @@ exports[`Cards will display correct empty fields for an Architectural Design wor
             name="notes"
             placeholder="Add any other notes or comments about this work to send to the eSpace team."
             rows={5}
+            style={
+              Object {
+                "marginTop": -24,
+              }
+            }
             type="text"
           />
         </StandardCard>
@@ -5804,6 +5844,11 @@ exports[`Cards will display empty where nothing is incomplete 1`] = `
             name="notes"
             placeholder="Add any other notes or comments about this work to send to the eSpace team."
             rows={5}
+            style={
+              Object {
+                "marginTop": -24,
+              }
+            }
             type="text"
           />
         </StandardCard>
@@ -6605,6 +6650,11 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
             name="notes"
             placeholder="Add any other notes or comments about this work to send to the eSpace team."
             rows={5}
+            style={
+              Object {
+                "marginTop": -24,
+              }
+            }
             type="text"
           />
         </StandardCard>
@@ -7406,6 +7456,11 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
             name="notes"
             placeholder="Add any other notes or comments about this work to send to the eSpace team."
             rows={5}
+            style={
+              Object {
+                "marginTop": -24,
+              }
+            }
             type="text"
           />
         </StandardCard>
@@ -8219,6 +8274,11 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
             name="notes"
             placeholder="Add any other notes or comments about this work to send to the eSpace team."
             rows={5}
+            style={
+              Object {
+                "marginTop": -24,
+              }
+            }
             type="text"
           />
         </StandardCard>
@@ -9026,6 +9086,11 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
             name="notes"
             placeholder="Add any other notes or comments about this work to send to the eSpace team."
             rows={5}
+            style={
+              Object {
+                "marginTop": -24,
+              }
+            }
             type="text"
           />
         </StandardCard>
@@ -9827,6 +9892,11 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
             name="notes"
             placeholder="Add any other notes or comments about this work to send to the eSpace team."
             rows={5}
+            style={
+              Object {
+                "marginTop": -24,
+              }
+            }
             type="text"
           />
         </StandardCard>

@@ -28,26 +28,24 @@ export const styles = (theme) => ({
         padding: '0',
     },
     listItem: {
+        borderLeft: '5px solid transparent',
         cursor: 'pointer',
-        width: '98%',
-        margin: '0 1%',
-        paddingLeft: '10px'
+        width: '100%',
+        margin: '0'
     },
     disabledListItem: {
-        width: '98%',
-        margin: '0 1%',
-        paddingLeft: '10px',
+        width: '100%',
+        margin: '0',
         outline: 'none !important',
         '&:focus': {
             outline: 'none !important'
         }
     },
     highlighted: {
-        paddingLeft: '5px',
         borderLeft: '5px solid red',
     },
     rowSelected: {
-        backgroundColor: ((theme.palette || {}).accent || {}).light,
+        backgroundColor: ((theme.palette || {}).accent || {}).main,
     },
     selected: {
         color: 'white !important',
@@ -196,22 +194,11 @@ export class ContributorRow extends PureComponent {
                     </Grid>
                 }
                 {
-                    contributor.affiliation && contributor.affiliation !== 'UQ' &&
+                    contributor.affiliation && !contributor.aut_title &&
                     <Grid item xs={12} sm={5}>
                         {this.getListItemTypography(
                             `${contributor.orgaff}`,
                             `${ORG_TYPES_LOOKUP[contributor.orgtype] && `Organisation type: ${ORG_TYPES_LOOKUP[contributor.orgtype]}` || ''}`,
-                            `${width === 'xs' ? classes.identifierName : classes.primary} ${selectedClass}`,
-                            `${width === 'xs' ? classes.identifierSubtitle : ''} ${selectedClass}`
-                        )}
-                    </Grid>
-                }
-                {
-                    contributor.affiliation && contributor.affiliation === 'UQ' &&
-                    <Grid item xs={12} sm={5}>
-                        {this.getListItemTypography(
-                            locale.global.orgTitle,
-                            'Organisation type: University',
                             `${width === 'xs' ? classes.identifierName : classes.primary} ${selectedClass}`,
                             `${width === 'xs' ? classes.identifierSubtitle : ''} ${selectedClass}`
                         )}
@@ -273,9 +260,12 @@ export class ContributorRow extends PureComponent {
                 return <Person/>;
             } else if (this.props.disabled || !enableSelect) {
                 return  (
-                    <Tooltip title={this.props.locale.lockedTooltip || 'Huh'}>
+                    this.props.locale.lockedTooltip ?
+                        <Tooltip title={this.props.locale.lockedTooltip}>
+                            <Lock/>
+                        </Tooltip>
+                        :
                         <Lock/>
-                    </Tooltip>
                 );
             } else {
                 return <PersonOutlined/>;

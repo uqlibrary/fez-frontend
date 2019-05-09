@@ -12330,11 +12330,15 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                           "disableUnderline": true,
                                                                                         }
                                                                                       }
-                                                                                      aria-label="Enter your search query to search eSpace and then press Enter"
                                                                                       autoComplete="search"
                                                                                       autoFocus={true}
                                                                                       error={null}
                                                                                       fullWidth={true}
+                                                                                      inputProps={
+                                                                                        Object {
+                                                                                          "aria-label": "Enter your search query to search eSpace and then press Enter",
+                                                                                        }
+                                                                                      }
                                                                                       label={false}
                                                                                       onChange={[Function]}
                                                                                       onKeyPress={[Function]}
@@ -12346,7 +12350,6 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       variant="standard"
                                                                                     >
                                                                                       <WithStyles(FormControl)
-                                                                                        aria-label="Enter your search query to search eSpace and then press Enter"
                                                                                         error={null}
                                                                                         fullWidth={true}
                                                                                         onKeyPress={[Function]}
@@ -12354,7 +12357,6 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                         variant="standard"
                                                                                       >
                                                                                         <FormControl
-                                                                                          aria-label="Enter your search query to search eSpace and then press Enter"
                                                                                           classes={
                                                                                             Object {
                                                                                               "fullWidth": "MuiFormControl-fullWidth-286",
@@ -12373,7 +12375,6 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                           variant="standard"
                                                                                         >
                                                                                           <div
-                                                                                            aria-label="Enter your search query to search eSpace and then press Enter"
                                                                                             className="MuiFormControl-root-283 MuiFormControl-fullWidth-286"
                                                                                             onKeyPress={[Function]}
                                                                                           >
@@ -12382,6 +12383,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                               autoFocus={true}
                                                                                               disableUnderline={true}
                                                                                               fullWidth={true}
+                                                                                              inputProps={
+                                                                                                Object {
+                                                                                                  "aria-label": "Enter your search query to search eSpace and then press Enter",
+                                                                                                }
+                                                                                              }
                                                                                               onChange={[Function]}
                                                                                               placeholder="Search eSpace"
                                                                                               type="search"
@@ -12409,6 +12415,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                 }
                                                                                                 disableUnderline={true}
                                                                                                 fullWidth={true}
+                                                                                                inputProps={
+                                                                                                  Object {
+                                                                                                    "aria-label": "Enter your search query to search eSpace and then press Enter",
+                                                                                                  }
+                                                                                                }
                                                                                                 onChange={[Function]}
                                                                                                 placeholder="Search eSpace"
                                                                                                 type="search"
@@ -12436,6 +12447,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                   }
                                                                                                   fullWidth={true}
                                                                                                   inputComponent="input"
+                                                                                                  inputProps={
+                                                                                                    Object {
+                                                                                                      "aria-label": "Enter your search query to search eSpace and then press Enter",
+                                                                                                    }
+                                                                                                  }
                                                                                                   multiline={false}
                                                                                                   onChange={[Function]}
                                                                                                   placeholder="Search eSpace"
@@ -12468,6 +12484,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                     }
                                                                                                     fullWidth={true}
                                                                                                     inputComponent="input"
+                                                                                                    inputProps={
+                                                                                                      Object {
+                                                                                                        "aria-label": "Enter your search query to search eSpace and then press Enter",
+                                                                                                      }
+                                                                                                    }
                                                                                                     multiline={false}
                                                                                                     onChange={[Function]}
                                                                                                     placeholder="Search eSpace"
@@ -12480,6 +12501,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                     >
                                                                                                       <input
                                                                                                         aria-invalid={null}
+                                                                                                        aria-label="Enter your search query to search eSpace and then press Enter"
                                                                                                         autoComplete="search"
                                                                                                         autoFocus={true}
                                                                                                         className="MuiInputBase-input-310 MuiInput-input-295 MuiInputBase-inputType-313 MuiInput-inputType-298 MuiInputBase-inputTypeSearch-314 MuiInput-inputTypeSearch-299"

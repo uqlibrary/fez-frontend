@@ -1804,17 +1804,15 @@ Object {
     "&:focus": Object {
       "outline": "none !important",
     },
-    "margin": "0 1%",
+    "margin": "0",
     "outline": "none !important",
-    "paddingLeft": "10px",
-    "width": "98%",
+    "width": "100%",
   },
   "hideIcon": Object {
     "display": "none",
   },
   "highlighted": Object {
     "borderLeft": "5px solid red",
-    "paddingLeft": "5px",
   },
   "identifierName": Object {
     "fontSize": "test4",
@@ -1827,16 +1825,16 @@ Object {
     "padding": "0",
   },
   "listItem": Object {
+    "borderLeft": "5px solid transparent",
     "cursor": "pointer",
-    "margin": "0 1%",
-    "paddingLeft": "10px",
-    "width": "98%",
+    "margin": "0",
+    "width": "100%",
   },
   "primary": Object {
     "fontSize": "test3",
   },
   "rowSelected": Object {
-    "backgroundColor": "test1",
+    "backgroundColor": undefined,
   },
   "selected": Object {
     "color": "white !important",
@@ -1851,17 +1849,15 @@ Object {
     "&:focus": Object {
       "outline": "none !important",
     },
-    "margin": "0 1%",
+    "margin": "0",
     "outline": "none !important",
-    "paddingLeft": "10px",
-    "width": "98%",
+    "width": "100%",
   },
   "hideIcon": Object {
     "display": "none",
   },
   "highlighted": Object {
     "borderLeft": "5px solid red",
-    "paddingLeft": "5px",
   },
   "identifierName": Object {
     "fontSize": "test4",
@@ -1874,10 +1870,10 @@ Object {
     "padding": "0",
   },
   "listItem": Object {
+    "borderLeft": "5px solid transparent",
     "cursor": "pointer",
-    "margin": "0 1%",
-    "paddingLeft": "10px",
-    "width": "98%",
+    "margin": "0",
+    "width": "100%",
   },
   "primary": Object {
     "fontSize": "test3",
@@ -1898,17 +1894,15 @@ Object {
     "&:focus": Object {
       "outline": "none !important",
     },
-    "margin": "0 1%",
+    "margin": "0",
     "outline": "none !important",
-    "paddingLeft": "10px",
-    "width": "98%",
+    "width": "100%",
   },
   "hideIcon": Object {
     "display": "none",
   },
   "highlighted": Object {
     "borderLeft": "5px solid red",
-    "paddingLeft": "5px",
   },
   "identifierName": Object {
     "fontSize": "test4",
@@ -1921,10 +1915,10 @@ Object {
     "padding": "0",
   },
   "listItem": Object {
+    "borderLeft": "5px solid transparent",
     "cursor": "pointer",
-    "margin": "0 1%",
-    "paddingLeft": "10px",
-    "width": "98%",
+    "margin": "0",
+    "width": "100%",
   },
   "primary": Object {
     "fontSize": "test3",
@@ -2115,22 +2109,10 @@ exports[`Component ContributorRow should render row with UQ affiiliation and mis
           noWrap={true}
           variant="body2"
         >
-          The University of Queensland
+          undefined
         </WithStyles(Typography)>
       }
-      secondary={
-        <WithStyles(Typography)
-          classes={
-            Object {
-              "root": "test2 undefined",
-            }
-          }
-          noWrap={true}
-          variant="caption"
-        >
-          Organisation type: University
-        </WithStyles(Typography)>
-      }
+      secondary=""
     />
   </WithStyles(Grid)>
 </WithStyles(Grid)>
@@ -2185,22 +2167,10 @@ exports[`Component ContributorRow should render row with UQ affiiliation and mis
           noWrap={true}
           variant="body2"
         >
-          The University of Queensland
+          undefined
         </WithStyles(Typography)>
       }
-      secondary={
-        <WithStyles(Typography)
-          classes={
-            Object {
-              "root": " undefined",
-            }
-          }
-          noWrap={true}
-          variant="caption"
-        >
-          Organisation type: University
-        </WithStyles(Typography)>
-      }
+      secondary=""
     />
   </WithStyles(Grid)>
 </WithStyles(Grid)>
@@ -2406,11 +2376,7 @@ exports[`Component ContributorRow should render with missing aria label if selec
           }
         }
       >
-        <WithStyles(Tooltip)
-          title="Huh"
-        >
-          <pure(LockIcon) />
-        </WithStyles(Tooltip)>
+        <pure(LockIcon) />
       </WithStyles(ListItemIcon)>
     </Hidden>
     <WithStyles(Grid)
