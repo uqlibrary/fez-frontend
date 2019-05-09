@@ -439,7 +439,24 @@ exports[`Cards will display correct empty fields for a Exhibition Creative Work 
           title="Authors"
         >
           <WithStyles(Typography)>
-            Please complete affiliation data for each listed author.
+            <span>
+              Please complete affiliation data for each listed author by selecting each row marked in 
+              <span
+                style={
+                  Object {
+                    "color": "red",
+                    "weight": "bold",
+                  }
+                }
+              >
+                red
+              </span>
+              , and adding the missing information in the form underneath the list and clicking 
+              <b>
+                UPDATE AUTHOR
+              </b>
+              .
+            </span>
           </WithStyles(Typography)>
           <Field
             component={[Function]}
@@ -1111,7 +1128,24 @@ exports[`Cards will display correct empty fields for a Live Performance of Music
           title="Authors"
         >
           <WithStyles(Typography)>
-            Please complete affiliation data for each listed author.
+            <span>
+              Please complete affiliation data for each listed author by selecting each row marked in 
+              <span
+                style={
+                  Object {
+                    "color": "red",
+                    "weight": "bold",
+                  }
+                }
+              >
+                red
+              </span>
+              , and adding the missing information in the form underneath the list and clicking 
+              <b>
+                UPDATE AUTHOR
+              </b>
+              .
+            </span>
           </WithStyles(Typography)>
           <Field
             component={[Function]}
@@ -1783,7 +1817,24 @@ exports[`Cards will display correct empty fields for a Musical Creative work 1`]
           title="Authors"
         >
           <WithStyles(Typography)>
-            Please complete affiliation data for each listed author.
+            <span>
+              Please complete affiliation data for each listed author by selecting each row marked in 
+              <span
+                style={
+                  Object {
+                    "color": "red",
+                    "weight": "bold",
+                  }
+                }
+              >
+                red
+              </span>
+              , and adding the missing information in the form underneath the list and clicking 
+              <b>
+                UPDATE AUTHOR
+              </b>
+              .
+            </span>
           </WithStyles(Typography)>
           <Field
             component={[Function]}
@@ -2455,7 +2506,24 @@ exports[`Cards will display correct empty fields for a Public Sector Research Re
           title="Authors"
         >
           <WithStyles(Typography)>
-            Please complete affiliation data for each listed author.
+            <span>
+              Please complete affiliation data for each listed author by selecting each row marked in 
+              <span
+                style={
+                  Object {
+                    "color": "red",
+                    "weight": "bold",
+                  }
+                }
+              >
+                red
+              </span>
+              , and adding the missing information in the form underneath the list and clicking 
+              <b>
+                UPDATE AUTHOR
+              </b>
+              .
+            </span>
           </WithStyles(Typography)>
           <Field
             component={[Function]}
@@ -3127,7 +3195,24 @@ exports[`Cards will display correct empty fields for a Textual Book work 1`] = `
           title="Authors"
         >
           <WithStyles(Typography)>
-            Please complete affiliation data for each listed author.
+            <span>
+              Please complete affiliation data for each listed author by selecting each row marked in 
+              <span
+                style={
+                  Object {
+                    "color": "red",
+                    "weight": "bold",
+                  }
+                }
+              >
+                red
+              </span>
+              , and adding the missing information in the form underneath the list and clicking 
+              <b>
+                UPDATE AUTHOR
+              </b>
+              .
+            </span>
           </WithStyles(Typography)>
           <Field
             component={[Function]}
@@ -3806,7 +3891,24 @@ exports[`Cards will display correct empty fields for a Textual Book work with la
           title="Authors"
         >
           <WithStyles(Typography)>
-            Please complete affiliation data for each listed author.
+            <span>
+              Please complete affiliation data for each listed author by selecting each row marked in 
+              <span
+                style={
+                  Object {
+                    "color": "red",
+                    "weight": "bold",
+                  }
+                }
+              >
+                red
+              </span>
+              , and adding the missing information in the form underneath the list and clicking 
+              <b>
+                UPDATE AUTHOR
+              </b>
+              .
+            </span>
           </WithStyles(Typography)>
           <Field
             component={[Function]}
@@ -4478,7 +4580,24 @@ exports[`Cards will display correct empty fields for a Website Creative work 1`]
           title="Authors"
         >
           <WithStyles(Typography)>
-            Please complete affiliation data for each listed author.
+            <span>
+              Please complete affiliation data for each listed author by selecting each row marked in 
+              <span
+                style={
+                  Object {
+                    "color": "red",
+                    "weight": "bold",
+                  }
+                }
+              >
+                red
+              </span>
+              , and adding the missing information in the form underneath the list and clicking 
+              <b>
+                UPDATE AUTHOR
+              </b>
+              .
+            </span>
           </WithStyles(Typography)>
           <Field
             component={[Function]}
@@ -5150,7 +5269,24 @@ exports[`Cards will display correct empty fields for an Architectural Design wor
           title="Authors"
         >
           <WithStyles(Typography)>
-            Please complete affiliation data for each listed author.
+            <span>
+              Please complete affiliation data for each listed author by selecting each row marked in 
+              <span
+                style={
+                  Object {
+                    "color": "red",
+                    "weight": "bold",
+                  }
+                }
+              >
+                red
+              </span>
+              , and adding the missing information in the form underneath the list and clicking 
+              <b>
+                UPDATE AUTHOR
+              </b>
+              .
+            </span>
           </WithStyles(Typography)>
           <Field
             component={[Function]}
@@ -5737,7 +5873,24 @@ exports[`Cards will display empty where nothing is incomplete 1`] = `
           title="Authors"
         >
           <WithStyles(Typography)>
-            Please complete affiliation data for each listed author.
+            <span>
+              Please complete affiliation data for each listed author by selecting each row marked in 
+              <span
+                style={
+                  Object {
+                    "color": "red",
+                    "weight": "bold",
+                  }
+                }
+              >
+                red
+              </span>
+              , and adding the missing information in the form underneath the list and clicking 
+              <b>
+                UPDATE AUTHOR
+              </b>
+              .
+            </span>
           </WithStyles(Typography)>
           <Field
             component={[Function]}
@@ -6543,7 +6696,24 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
           title="Authors"
         >
           <WithStyles(Typography)>
-            Please complete affiliation data for each listed author.
+            <span>
+              Please complete affiliation data for each listed author by selecting each row marked in 
+              <span
+                style={
+                  Object {
+                    "color": "red",
+                    "weight": "bold",
+                  }
+                }
+              >
+                red
+              </span>
+              , and adding the missing information in the form underneath the list and clicking 
+              <b>
+                UPDATE AUTHOR
+              </b>
+              .
+            </span>
           </WithStyles(Typography)>
           <Field
             component={[Function]}
@@ -7349,7 +7519,24 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
           title="Authors"
         >
           <WithStyles(Typography)>
-            Please complete affiliation data for each listed author.
+            <span>
+              Please complete affiliation data for each listed author by selecting each row marked in 
+              <span
+                style={
+                  Object {
+                    "color": "red",
+                    "weight": "bold",
+                  }
+                }
+              >
+                red
+              </span>
+              , and adding the missing information in the form underneath the list and clicking 
+              <b>
+                UPDATE AUTHOR
+              </b>
+              .
+            </span>
           </WithStyles(Typography)>
           <Field
             component={[Function]}
@@ -8167,7 +8354,24 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
           title="Authors"
         >
           <WithStyles(Typography)>
-            Please complete affiliation data for each listed author.
+            <span>
+              Please complete affiliation data for each listed author by selecting each row marked in 
+              <span
+                style={
+                  Object {
+                    "color": "red",
+                    "weight": "bold",
+                  }
+                }
+              >
+                red
+              </span>
+              , and adding the missing information in the form underneath the list and clicking 
+              <b>
+                UPDATE AUTHOR
+              </b>
+              .
+            </span>
           </WithStyles(Typography)>
           <Field
             component={[Function]}
@@ -8979,7 +9183,24 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
           title="Authors"
         >
           <WithStyles(Typography)>
-            Please complete affiliation data for each listed author.
+            <span>
+              Please complete affiliation data for each listed author by selecting each row marked in 
+              <span
+                style={
+                  Object {
+                    "color": "red",
+                    "weight": "bold",
+                  }
+                }
+              >
+                red
+              </span>
+              , and adding the missing information in the form underneath the list and clicking 
+              <b>
+                UPDATE AUTHOR
+              </b>
+              .
+            </span>
           </WithStyles(Typography)>
           <Field
             component={[Function]}
@@ -9785,7 +10006,24 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
           title="Authors"
         >
           <WithStyles(Typography)>
-            Please complete affiliation data for each listed author.
+            <span>
+              Please complete affiliation data for each listed author by selecting each row marked in 
+              <span
+                style={
+                  Object {
+                    "color": "red",
+                    "weight": "bold",
+                  }
+                }
+              >
+                red
+              </span>
+              , and adding the missing information in the form underneath the list and clicking 
+              <b>
+                UPDATE AUTHOR
+              </b>
+              .
+            </span>
           </WithStyles(Typography)>
           <Field
             component={[Function]}
