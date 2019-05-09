@@ -225,8 +225,10 @@ export class ContributorRow extends PureComponent {
             moveUpHint,
             moveDownHint,
             deleteHint,
-            selectHint
+            selectHint,
+            lockedTooltip
         } = this.props.locale;
+
         const {
             contributor,
             canMoveDown,
@@ -241,27 +243,19 @@ export class ContributorRow extends PureComponent {
         const enableSelect = this.props.showContributorAssignment;
         const selectedClass = contributor.selected ? classes.selected : '';
 
-        const ariaLabelLocaleString = `${
+        const ariaLabel = `${
             selectHint.replace('[name]', contributor.nameAsPublished)
         } ${
             (required && locale.requiredLabel) || ''
         }`.trim();
-
-        const ariaLabel = (
-            selectHint &&
-            selectHint.indexOf('[name]') > -1
-        )
-            ? ariaLabelLocaleString
-            : null
-        ;
 
         const rowIcon = () => {
             if (contributor.selected) {
                 return <Person/>;
             } else if (this.props.disabled || !enableSelect) {
                 return  (
-                    this.props.locale.lockedTooltip ?
-                        <Tooltip title={this.props.locale.lockedTooltip}>
+                    lockedTooltip ?
+                        <Tooltip title={lockedTooltip}>
                             <Lock/>
                         </Tooltip>
                         :

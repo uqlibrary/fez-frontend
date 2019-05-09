@@ -154,7 +154,7 @@ describe('updateIncompleteRecord actions', () => {
             author: {
                 aut_id: 410
             },
-            authors: [],
+            authorsAffiliation: [],
             ntroAbstract: {},
             grants: [],
             languages: [],

@@ -524,7 +524,7 @@ exports[`Cards will display correct empty fields for a Exhibition Creative Work 
                 },
               }
             }
-            name="authors"
+            name="authorsAffiliation"
             required={true}
             showContributorAssignment={true}
           />
@@ -543,7 +543,7 @@ exports[`Cards will display correct empty fields for a Exhibition Creative Work 
             fullWidth={true}
             label="Notes for this work"
             multiline={true}
-            name="notes"
+            name="comments"
             placeholder="Add any other notes or comments about this work to send to the eSpace team."
             rows={5}
             style={
@@ -1196,7 +1196,7 @@ exports[`Cards will display correct empty fields for a Live Performance of Music
                 },
               }
             }
-            name="authors"
+            name="authorsAffiliation"
             required={true}
             showContributorAssignment={true}
           />
@@ -1215,7 +1215,7 @@ exports[`Cards will display correct empty fields for a Live Performance of Music
             fullWidth={true}
             label="Notes for this work"
             multiline={true}
-            name="notes"
+            name="comments"
             placeholder="Add any other notes or comments about this work to send to the eSpace team."
             rows={5}
             style={
@@ -1868,7 +1868,7 @@ exports[`Cards will display correct empty fields for a Musical Creative work 1`]
                 },
               }
             }
-            name="authors"
+            name="authorsAffiliation"
             required={true}
             showContributorAssignment={true}
           />
@@ -1887,7 +1887,7 @@ exports[`Cards will display correct empty fields for a Musical Creative work 1`]
             fullWidth={true}
             label="Notes for this work"
             multiline={true}
-            name="notes"
+            name="comments"
             placeholder="Add any other notes or comments about this work to send to the eSpace team."
             rows={5}
             style={
@@ -2540,7 +2540,7 @@ exports[`Cards will display correct empty fields for a Public Sector Research Re
                 },
               }
             }
-            name="authors"
+            name="authorsAffiliation"
             required={true}
             showContributorAssignment={true}
           />
@@ -2559,7 +2559,7 @@ exports[`Cards will display correct empty fields for a Public Sector Research Re
             fullWidth={true}
             label="Notes for this work"
             multiline={true}
-            name="notes"
+            name="comments"
             placeholder="Add any other notes or comments about this work to send to the eSpace team."
             rows={5}
             style={
@@ -3212,7 +3212,7 @@ exports[`Cards will display correct empty fields for a Textual Book work 1`] = `
                 },
               }
             }
-            name="authors"
+            name="authorsAffiliation"
             required={true}
             showContributorAssignment={true}
           />
@@ -3231,7 +3231,7 @@ exports[`Cards will display correct empty fields for a Textual Book work 1`] = `
             fullWidth={true}
             label="Notes for this work"
             multiline={true}
-            name="notes"
+            name="comments"
             placeholder="Add any other notes or comments about this work to send to the eSpace team."
             rows={5}
             style={
@@ -3891,7 +3891,7 @@ exports[`Cards will display correct empty fields for a Textual Book work with la
                 },
               }
             }
-            name="authors"
+            name="authorsAffiliation"
             required={true}
             showContributorAssignment={true}
           />
@@ -3910,7 +3910,7 @@ exports[`Cards will display correct empty fields for a Textual Book work with la
             fullWidth={true}
             label="Notes for this work"
             multiline={true}
-            name="notes"
+            name="comments"
             placeholder="Add any other notes or comments about this work to send to the eSpace team."
             rows={5}
             style={
@@ -4563,7 +4563,7 @@ exports[`Cards will display correct empty fields for a Website Creative work 1`]
                 },
               }
             }
-            name="authors"
+            name="authorsAffiliation"
             required={true}
             showContributorAssignment={true}
           />
@@ -4582,7 +4582,7 @@ exports[`Cards will display correct empty fields for a Website Creative work 1`]
             fullWidth={true}
             label="Notes for this work"
             multiline={true}
-            name="notes"
+            name="comments"
             placeholder="Add any other notes or comments about this work to send to the eSpace team."
             rows={5}
             style={
@@ -5235,7 +5235,7 @@ exports[`Cards will display correct empty fields for an Architectural Design wor
                 },
               }
             }
-            name="authors"
+            name="authorsAffiliation"
             required={true}
             showContributorAssignment={true}
           />
@@ -5254,7 +5254,7 @@ exports[`Cards will display correct empty fields for an Architectural Design wor
             fullWidth={true}
             label="Notes for this work"
             multiline={true}
-            name="notes"
+            name="comments"
             placeholder="Add any other notes or comments about this work to send to the eSpace team."
             rows={5}
             style={
@@ -5822,7 +5822,7 @@ exports[`Cards will display empty where nothing is incomplete 1`] = `
                 },
               }
             }
-            name="authors"
+            name="authorsAffiliation"
             required={true}
             showContributorAssignment={true}
           />
@@ -5841,7 +5841,7 @@ exports[`Cards will display empty where nothing is incomplete 1`] = `
             fullWidth={true}
             label="Notes for this work"
             multiline={true}
-            name="notes"
+            name="comments"
             placeholder="Add any other notes or comments about this work to send to the eSpace team."
             rows={5}
             style={
@@ -6628,7 +6628,7 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
                 },
               }
             }
-            name="authors"
+            name="authorsAffiliation"
             required={true}
             showContributorAssignment={true}
           />
@@ -6647,7 +6647,7 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
             fullWidth={true}
             label="Notes for this work"
             multiline={true}
-            name="notes"
+            name="comments"
             placeholder="Add any other notes or comments about this work to send to the eSpace team."
             rows={5}
             style={
@@ -7434,7 +7434,7 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
                 },
               }
             }
-            name="authors"
+            name="authorsAffiliation"
             required={true}
             showContributorAssignment={true}
           />
@@ -7453,7 +7453,7 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
             fullWidth={true}
             label="Notes for this work"
             multiline={true}
-            name="notes"
+            name="comments"
             placeholder="Add any other notes or comments about this work to send to the eSpace team."
             rows={5}
             style={
@@ -7539,6 +7539,17 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
             }
           />
         </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(Alert)
+          message="New work has been saved successfully."
+          pushToTop={true}
+          title="Success"
+          type="done"
+        />
       </WithStyles(Grid)>
     </WithStyles(Grid)>
     <WithStyles(Grid)
@@ -8252,7 +8263,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
                 },
               }
             }
-            name="authors"
+            name="authorsAffiliation"
             required={true}
             showContributorAssignment={true}
           />
@@ -8271,7 +8282,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
             fullWidth={true}
             label="Notes for this work"
             multiline={true}
-            name="notes"
+            name="comments"
             placeholder="Add any other notes or comments about this work to send to the eSpace team."
             rows={5}
             style={
@@ -9064,7 +9075,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
                 },
               }
             }
-            name="authors"
+            name="authorsAffiliation"
             required={true}
             showContributorAssignment={true}
           />
@@ -9083,7 +9094,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
             fullWidth={true}
             label="Notes for this work"
             multiline={true}
-            name="notes"
+            name="comments"
             placeholder="Add any other notes or comments about this work to send to the eSpace team."
             rows={5}
             style={
@@ -9870,7 +9881,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
                 },
               }
             }
-            name="authors"
+            name="authorsAffiliation"
             required={true}
             showContributorAssignment={true}
           />
@@ -9889,7 +9900,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
             fullWidth={true}
             label="Notes for this work"
             multiline={true}
-            name="notes"
+            name="comments"
             placeholder="Add any other notes or comments about this work to send to the eSpace team."
             rows={5}
             style={

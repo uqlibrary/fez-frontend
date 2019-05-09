@@ -39,8 +39,8 @@ const validate = (values, props) => {
     stopSubmit(FORM_NAME, null);
     const data = values.toJS();
     const errors = {};
-    if (data.authors && data.authors.some(authorAffiliation => authorAffiliationRequired(authorAffiliation, author))) {
-        errors.authors = locale.validationErrors.authorsAffiliationIncomplete;
+    if (data.authorsAffiliation && data.authorsAffiliation.some(authorAffiliation => authorAffiliationRequired(authorAffiliation, author))) {
+        errors.authorsAffiliation = locale.validationErrors.authorsAffiliationIncomplete;
     }
     return errors;
 };
@@ -119,7 +119,7 @@ const mapStateToProps = (state, ownProps) => {
         disableSubmit: formErrors && !(formErrors instanceof Immutable.Map),
         initialValues: {
             grants,
-            authors,
+            authorsAffiliation: authors,
             languages
         }
     };
