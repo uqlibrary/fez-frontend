@@ -9,7 +9,6 @@ import { confirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDisca
 import { ORG_TYPE_NOT_SET } from 'config/general';
 import { leftJoin } from 'helpers/general';
 import { locale } from 'locale';
-import { general } from 'config';
 import { authorAffiliationRequired } from 'config/validation';
 
 const FORM_NAME = 'MyIncompleteRecord';
@@ -88,38 +87,26 @@ const mapStateToProps = (state, ownProps) => {
             },
         ];
 
-        const mergedAffiliationsArray = affiliationDataMap.reduce((authors, affiliationData) => {
-            return leftJoin(
+        authors = affiliationDataMap
+            .reduce((authors, affiliationData) => leftJoin(
                 authors,
                 affiliationData.infoArray,
                 'rek_author_id_order',
                 affiliationData.key
-            );
-        }, importedValues.fez_record_search_key_author_id);
-
-        authors = mergedAffiliationsArray.map((authorAffiliation) => {
-            const isUQ = authorAffiliation.rek_author_affiliation_name === locale.global.orgTitle;
-            const affiliation = isUQ ? 'UQ' : 'NotUQ';
-            const orgtype = isUQ ? general.ORG_TYPE_ID_UNIVERSITY : (
-                authorAffiliation.rek_author_affiliation_type
-                    && String(authorAffiliation.rek_author_affiliation_type)
-                || ''
-            );
-            const contributor = {
-                affiliation,
+            ), importedValues.fez_record_search_key_author_id)
+            .map((authorAffiliation) => ({
+                affiliation: authorAffiliation.rek_author_affiliation_name === locale.global.orgTitle ? 'UQ' : 'NotUQ',
                 creatorRole: '',
                 nameAsPublished: authorAffiliation.rek_author,
                 orgaff: authorAffiliation.rek_author_affiliation_name || '',
-                orgtype,
+                orgtype: (authorAffiliation.rek_author_affiliation_type && String(authorAffiliation.rek_author_affiliation_type)) || '',
                 uqIdentifier: String(authorAffiliation.rek_author_id) || '',
                 disabled: authorAffiliation.rek_author_id && authorAffiliation.rek_author_id !== author.aut_id,
-            };
-
-            return contributor;
-        }).map(authorAffiliation => ({
-            ...authorAffiliation,
-            required: authorAffiliationRequired(authorAffiliation, author)}
-        ));
+            }))
+            .map(authorAffiliation => ({
+                ...authorAffiliation,
+                required: authorAffiliationRequired(authorAffiliation, author)}
+            ));
     }
 
     const languages = importedValues && importedValues.fez_record_search_key_language.length > 0 && importedValues.fez_record_search_key_language.map(lang => lang.rek_language) || ['eng'];

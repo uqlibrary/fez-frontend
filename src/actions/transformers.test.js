@@ -921,7 +921,7 @@ describe('getRecordAuthorAffiliationSearchKey tests', () => {
                 nameAsPublished: 'Test user',
                 creatorRole: '',
                 affiliation: 'UQ',
-                orgaff: '',
+                orgaff: 'The University of Queensland',
                 orgtype: '',
                 disabled: true,
                 selected: false,
@@ -980,7 +980,7 @@ describe('getRecordAuthorAffiliationSearchKey tests', () => {
                 nameAsPublished: 'Some user',
                 creatorRole: '',
                 affiliation: 'UQ',
-                orgaff: '',
+                orgaff: 'The University of Queensland',
                 orgtype: '',
                 disabled: true,
                 selected: false,
@@ -1042,7 +1042,7 @@ describe('getRecordAuthorAffiliationSearchKey tests', () => {
                 nameAsPublished: 'Test user',
                 creatorRole: '',
                 affiliation: 'UQ',
-                orgaff: '',
+                orgaff: 'The University of Queensland',
                 orgtype: '',
                 disabled: true,
                 selected: false,
@@ -1101,7 +1101,7 @@ describe('getRecordAuthorAffiliationSearchKey tests', () => {
                 nameAsPublished: 'Some user',
                 creatorRole: '',
                 affiliation: 'UQ',
-                orgaff: '',
+                orgaff: 'The University of Queensland',
                 orgtype: '',
                 disabled: true,
                 selected: false,
@@ -1170,7 +1170,7 @@ describe('getRecordAuthorAffiliationTypeSearchKey tests', () => {
                 creatorRole: '',
                 affiliation: 'UQ',
                 orgaff: '',
-                orgtype: '',
+                orgtype: '453989',
                 disabled: true,
                 selected: false,
                 authorId: null
@@ -1229,7 +1229,7 @@ describe('getRecordAuthorAffiliationTypeSearchKey tests', () => {
                 creatorRole: '',
                 affiliation: 'UQ',
                 orgaff: '',
-                orgtype: '',
+                orgtype: '453989',
                 disabled: true,
                 selected: false,
                 authorId: null
@@ -1254,7 +1254,7 @@ describe('getRecordAuthorAffiliationTypeSearchKey tests', () => {
         expect(result).toEqual(expected);
     });
 
-    it('should return search key with data', () => {
+    it('should return search key with data for already linked authors', () => {
         const input = [
             {
                 value: 'Professor Del Mar, Christopher B. (mdcmar) ',
@@ -1290,7 +1290,7 @@ describe('getRecordAuthorAffiliationTypeSearchKey tests', () => {
                 creatorRole: '',
                 affiliation: 'UQ',
                 orgaff: '',
-                orgtype: '',
+                orgtype: '453989',
                 disabled: true,
                 selected: false,
                 authorId: null
@@ -1349,7 +1349,7 @@ describe('getRecordAuthorAffiliationTypeSearchKey tests', () => {
                 creatorRole: '',
                 affiliation: 'UQ',
                 orgaff: '',
-                orgtype: '',
+                orgtype: '453989',
                 disabled: true,
                 selected: false,
                 authorId: null
