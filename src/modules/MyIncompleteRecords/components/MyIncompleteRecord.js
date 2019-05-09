@@ -4,6 +4,7 @@ import { Field, propTypes } from 'redux-form/immutable';
 
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
+import Hidden from '@material-ui/core/Hidden';
 import Typography from '@material-ui/core/Typography';
 
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
@@ -437,8 +438,10 @@ export class MyIncompleteRecordClass extends PureComponent {
                         }
                     </Grid>
                     <Grid container spacing={24}>
-                        <Grid item xs />
-                        <Grid item>
+                        <Hidden smDown>
+                            <Grid item xs />
+                        </Hidden>
+                        <Grid item xs={12} md={'auto'}>
                             <Button
                                 variant={'contained'}
                                 fullWidth
@@ -446,7 +449,7 @@ export class MyIncompleteRecordClass extends PureComponent {
                                 disabled={this.props.submitting}
                                 onClick={this._cancelFix} />
                         </Grid>
-                        <Grid item>
+                        <Grid item xs={12} md={'auto'}>
                             <Button
                                 variant={'contained'}
                                 color={'primary'}

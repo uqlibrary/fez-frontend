@@ -512,6 +512,7 @@ exports[`Cards will display correct empty fields for a Exhibition Creative Work 
                       "confirmationMessage": "Are you sure you want to delete this item?",
                       "confirmationTitle": "Delete item",
                     },
+                    "lockedTooltip": "You are not able to edit this row",
                     "moveDownHint": "Move item down the order",
                     "moveUpHint": "Move item up the order",
                     "requiredLabel": "This author's data is incomplete.",
@@ -629,12 +630,28 @@ exports[`Cards will display correct empty fields for a Exhibition Creative Work 
       container={true}
       spacing={24}
     >
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={true}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={false}
+        xsUp={false}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={true}
+        />
+      </Hidden>
       <WithStyles(Grid)
         item={true}
-        xs={true}
-      />
-      <WithStyles(Grid)
-        item={true}
+        md="auto"
+        xs={12}
       >
         <WithStyles(Button)
           disabled={false}
@@ -647,6 +664,8 @@ exports[`Cards will display correct empty fields for a Exhibition Creative Work 
       </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
+        md="auto"
+        xs={12}
       >
         <WithStyles(Button)
           color="primary"
@@ -1160,6 +1179,7 @@ exports[`Cards will display correct empty fields for a Live Performance of Music
                       "confirmationMessage": "Are you sure you want to delete this item?",
                       "confirmationTitle": "Delete item",
                     },
+                    "lockedTooltip": "You are not able to edit this row",
                     "moveDownHint": "Move item down the order",
                     "moveUpHint": "Move item up the order",
                     "requiredLabel": "This author's data is incomplete.",
@@ -1277,12 +1297,28 @@ exports[`Cards will display correct empty fields for a Live Performance of Music
       container={true}
       spacing={24}
     >
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={true}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={false}
+        xsUp={false}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={true}
+        />
+      </Hidden>
       <WithStyles(Grid)
         item={true}
-        xs={true}
-      />
-      <WithStyles(Grid)
-        item={true}
+        md="auto"
+        xs={12}
       >
         <WithStyles(Button)
           disabled={false}
@@ -1295,6 +1331,8 @@ exports[`Cards will display correct empty fields for a Live Performance of Music
       </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
+        md="auto"
+        xs={12}
       >
         <WithStyles(Button)
           color="primary"
@@ -1808,6 +1846,7 @@ exports[`Cards will display correct empty fields for a Musical Creative work 1`]
                       "confirmationMessage": "Are you sure you want to delete this item?",
                       "confirmationTitle": "Delete item",
                     },
+                    "lockedTooltip": "You are not able to edit this row",
                     "moveDownHint": "Move item down the order",
                     "moveUpHint": "Move item up the order",
                     "requiredLabel": "This author's data is incomplete.",
@@ -1925,12 +1964,28 @@ exports[`Cards will display correct empty fields for a Musical Creative work 1`]
       container={true}
       spacing={24}
     >
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={true}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={false}
+        xsUp={false}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={true}
+        />
+      </Hidden>
       <WithStyles(Grid)
         item={true}
-        xs={true}
-      />
-      <WithStyles(Grid)
-        item={true}
+        md="auto"
+        xs={12}
       >
         <WithStyles(Button)
           disabled={false}
@@ -1943,6 +1998,8 @@ exports[`Cards will display correct empty fields for a Musical Creative work 1`]
       </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
+        md="auto"
+        xs={12}
       >
         <WithStyles(Button)
           color="primary"
@@ -2456,6 +2513,7 @@ exports[`Cards will display correct empty fields for a Public Sector Research Re
                       "confirmationMessage": "Are you sure you want to delete this item?",
                       "confirmationTitle": "Delete item",
                     },
+                    "lockedTooltip": "You are not able to edit this row",
                     "moveDownHint": "Move item down the order",
                     "moveUpHint": "Move item up the order",
                     "requiredLabel": "This author's data is incomplete.",
@@ -2573,12 +2631,28 @@ exports[`Cards will display correct empty fields for a Public Sector Research Re
       container={true}
       spacing={24}
     >
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={true}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={false}
+        xsUp={false}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={true}
+        />
+      </Hidden>
       <WithStyles(Grid)
         item={true}
-        xs={true}
-      />
-      <WithStyles(Grid)
-        item={true}
+        md="auto"
+        xs={12}
       >
         <WithStyles(Button)
           disabled={false}
@@ -2591,6 +2665,8 @@ exports[`Cards will display correct empty fields for a Public Sector Research Re
       </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
+        md="auto"
+        xs={12}
       >
         <WithStyles(Button)
           color="primary"
@@ -3104,6 +3180,7 @@ exports[`Cards will display correct empty fields for a Textual Book work 1`] = `
                       "confirmationMessage": "Are you sure you want to delete this item?",
                       "confirmationTitle": "Delete item",
                     },
+                    "lockedTooltip": "You are not able to edit this row",
                     "moveDownHint": "Move item down the order",
                     "moveUpHint": "Move item up the order",
                     "requiredLabel": "This author's data is incomplete.",
@@ -3221,12 +3298,28 @@ exports[`Cards will display correct empty fields for a Textual Book work 1`] = `
       container={true}
       spacing={24}
     >
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={true}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={false}
+        xsUp={false}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={true}
+        />
+      </Hidden>
       <WithStyles(Grid)
         item={true}
-        xs={true}
-      />
-      <WithStyles(Grid)
-        item={true}
+        md="auto"
+        xs={12}
       >
         <WithStyles(Button)
           disabled={false}
@@ -3239,6 +3332,8 @@ exports[`Cards will display correct empty fields for a Textual Book work 1`] = `
       </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
+        md="auto"
+        xs={12}
       >
         <WithStyles(Button)
           color="primary"
@@ -3759,6 +3854,7 @@ exports[`Cards will display correct empty fields for a Textual Book work with la
                       "confirmationMessage": "Are you sure you want to delete this item?",
                       "confirmationTitle": "Delete item",
                     },
+                    "lockedTooltip": "You are not able to edit this row",
                     "moveDownHint": "Move item down the order",
                     "moveUpHint": "Move item up the order",
                     "requiredLabel": "This author's data is incomplete.",
@@ -3876,12 +3972,28 @@ exports[`Cards will display correct empty fields for a Textual Book work with la
       container={true}
       spacing={24}
     >
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={true}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={false}
+        xsUp={false}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={true}
+        />
+      </Hidden>
       <WithStyles(Grid)
         item={true}
-        xs={true}
-      />
-      <WithStyles(Grid)
-        item={true}
+        md="auto"
+        xs={12}
       >
         <WithStyles(Button)
           disabled={false}
@@ -3894,6 +4006,8 @@ exports[`Cards will display correct empty fields for a Textual Book work with la
       </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
+        md="auto"
+        xs={12}
       >
         <WithStyles(Button)
           color="primary"
@@ -4407,6 +4521,7 @@ exports[`Cards will display correct empty fields for a Website Creative work 1`]
                       "confirmationMessage": "Are you sure you want to delete this item?",
                       "confirmationTitle": "Delete item",
                     },
+                    "lockedTooltip": "You are not able to edit this row",
                     "moveDownHint": "Move item down the order",
                     "moveUpHint": "Move item up the order",
                     "requiredLabel": "This author's data is incomplete.",
@@ -4524,12 +4639,28 @@ exports[`Cards will display correct empty fields for a Website Creative work 1`]
       container={true}
       spacing={24}
     >
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={true}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={false}
+        xsUp={false}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={true}
+        />
+      </Hidden>
       <WithStyles(Grid)
         item={true}
-        xs={true}
-      />
-      <WithStyles(Grid)
-        item={true}
+        md="auto"
+        xs={12}
       >
         <WithStyles(Button)
           disabled={false}
@@ -4542,6 +4673,8 @@ exports[`Cards will display correct empty fields for a Website Creative work 1`]
       </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
+        md="auto"
+        xs={12}
       >
         <WithStyles(Button)
           color="primary"
@@ -5055,6 +5188,7 @@ exports[`Cards will display correct empty fields for an Architectural Design wor
                       "confirmationMessage": "Are you sure you want to delete this item?",
                       "confirmationTitle": "Delete item",
                     },
+                    "lockedTooltip": "You are not able to edit this row",
                     "moveDownHint": "Move item down the order",
                     "moveUpHint": "Move item up the order",
                     "requiredLabel": "This author's data is incomplete.",
@@ -5172,12 +5306,28 @@ exports[`Cards will display correct empty fields for an Architectural Design wor
       container={true}
       spacing={24}
     >
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={true}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={false}
+        xsUp={false}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={true}
+        />
+      </Hidden>
       <WithStyles(Grid)
         item={true}
-        xs={true}
-      />
-      <WithStyles(Grid)
-        item={true}
+        md="auto"
+        xs={12}
       >
         <WithStyles(Button)
           disabled={false}
@@ -5190,6 +5340,8 @@ exports[`Cards will display correct empty fields for an Architectural Design wor
       </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
+        md="auto"
+        xs={12}
       >
         <WithStyles(Button)
           color="primary"
@@ -5618,6 +5770,7 @@ exports[`Cards will display empty where nothing is incomplete 1`] = `
                       "confirmationMessage": "Are you sure you want to delete this item?",
                       "confirmationTitle": "Delete item",
                     },
+                    "lockedTooltip": "You are not able to edit this row",
                     "moveDownHint": "Move item down the order",
                     "moveUpHint": "Move item up the order",
                     "requiredLabel": "This author's data is incomplete.",
@@ -5735,12 +5888,28 @@ exports[`Cards will display empty where nothing is incomplete 1`] = `
       container={true}
       spacing={24}
     >
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={true}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={false}
+        xsUp={false}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={true}
+        />
+      </Hidden>
       <WithStyles(Grid)
         item={true}
-        xs={true}
-      />
-      <WithStyles(Grid)
-        item={true}
+        md="auto"
+        xs={12}
       >
         <WithStyles(Button)
           disabled={false}
@@ -5753,6 +5922,8 @@ exports[`Cards will display empty where nothing is incomplete 1`] = `
       </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
+        md="auto"
+        xs={12}
       >
         <WithStyles(Button)
           color="primary"
@@ -6400,6 +6571,7 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
                       "confirmationMessage": "Are you sure you want to delete this item?",
                       "confirmationTitle": "Delete item",
                     },
+                    "lockedTooltip": "You are not able to edit this row",
                     "moveDownHint": "Move item down the order",
                     "moveUpHint": "Move item up the order",
                     "requiredLabel": "This author's data is incomplete.",
@@ -6517,12 +6689,28 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
       container={true}
       spacing={24}
     >
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={true}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={false}
+        xsUp={false}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={true}
+        />
+      </Hidden>
       <WithStyles(Grid)
         item={true}
-        xs={true}
-      />
-      <WithStyles(Grid)
-        item={true}
+        md="auto"
+        xs={12}
       >
         <WithStyles(Button)
           disabled={false}
@@ -6535,6 +6723,8 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
       </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
+        md="auto"
+        xs={12}
       >
         <WithStyles(Button)
           color="primary"
@@ -7182,6 +7372,7 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
                       "confirmationMessage": "Are you sure you want to delete this item?",
                       "confirmationTitle": "Delete item",
                     },
+                    "lockedTooltip": "You are not able to edit this row",
                     "moveDownHint": "Move item down the order",
                     "moveUpHint": "Move item up the order",
                     "requiredLabel": "This author's data is incomplete.",
@@ -7299,12 +7490,28 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
       container={true}
       spacing={24}
     >
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={true}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={false}
+        xsUp={false}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={true}
+        />
+      </Hidden>
       <WithStyles(Grid)
         item={true}
-        xs={true}
-      />
-      <WithStyles(Grid)
-        item={true}
+        md="auto"
+        xs={12}
       >
         <WithStyles(Button)
           disabled={false}
@@ -7317,6 +7524,8 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
       </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
+        md="auto"
+        xs={12}
       >
         <WithStyles(Button)
           color="primary"
@@ -7976,6 +8185,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
                       "confirmationMessage": "Are you sure you want to delete this item?",
                       "confirmationTitle": "Delete item",
                     },
+                    "lockedTooltip": "You are not able to edit this row",
                     "moveDownHint": "Move item down the order",
                     "moveUpHint": "Move item up the order",
                     "requiredLabel": "This author's data is incomplete.",
@@ -8093,12 +8303,28 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
       container={true}
       spacing={24}
     >
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={true}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={false}
+        xsUp={false}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={true}
+        />
+      </Hidden>
       <WithStyles(Grid)
         item={true}
-        xs={true}
-      />
-      <WithStyles(Grid)
-        item={true}
+        md="auto"
+        xs={12}
       >
         <WithStyles(Button)
           disabled={false}
@@ -8111,6 +8337,8 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
       </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
+        md="auto"
+        xs={12}
       >
         <WithStyles(Button)
           color="primary"
@@ -8764,6 +8992,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
                       "confirmationMessage": "Are you sure you want to delete this item?",
                       "confirmationTitle": "Delete item",
                     },
+                    "lockedTooltip": "You are not able to edit this row",
                     "moveDownHint": "Move item down the order",
                     "moveUpHint": "Move item up the order",
                     "requiredLabel": "This author's data is incomplete.",
@@ -8881,12 +9110,28 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
       container={true}
       spacing={24}
     >
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={true}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={false}
+        xsUp={false}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={true}
+        />
+      </Hidden>
       <WithStyles(Grid)
         item={true}
-        xs={true}
-      />
-      <WithStyles(Grid)
-        item={true}
+        md="auto"
+        xs={12}
       >
         <WithStyles(Button)
           disabled={false}
@@ -8899,6 +9144,8 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
       </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
+        md="auto"
+        xs={12}
       >
         <WithStyles(Button)
           color="primary"
@@ -9546,6 +9793,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
                       "confirmationMessage": "Are you sure you want to delete this item?",
                       "confirmationTitle": "Delete item",
                     },
+                    "lockedTooltip": "You are not able to edit this row",
                     "moveDownHint": "Move item down the order",
                     "moveUpHint": "Move item up the order",
                     "requiredLabel": "This author's data is incomplete.",
@@ -9663,12 +9911,28 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
       container={true}
       spacing={24}
     >
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={true}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={false}
+        xsUp={false}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={true}
+        />
+      </Hidden>
       <WithStyles(Grid)
         item={true}
-        xs={true}
-      />
-      <WithStyles(Grid)
-        item={true}
+        md="auto"
+        xs={12}
       >
         <WithStyles(Button)
           disabled={false}
@@ -9681,6 +9945,8 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
       </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
+        md="auto"
+        xs={12}
       >
         <WithStyles(Button)
           color="primary"
