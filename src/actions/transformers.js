@@ -184,16 +184,10 @@ export const getRecordAuthorAffiliationSearchKey = (authors) => {
     return {
         fez_record_search_key_author_affiliation_name: authors
             .map(
-                (item, index) => {
-                    let orgaff = item.orgaff;
-                    if (!orgaff || item.affiliation === 'UQ') {
-                        orgaff = locale.global.orgTitle;
-                    }
-                    return {
-                        rek_author_affiliation_name: orgaff,
-                        rek_author_affiliation_name_order: index + 1
-                    };
-                }
+                (item, index) => ({
+                    rek_author_affiliation_name: item.affiliation === 'UQ' && locale.global.orgTitle || item.orgaff,
+                    rek_author_affiliation_name_order: index + 1
+                })
             )
     };
 };
@@ -204,16 +198,14 @@ export const getRecordAuthorAffiliationTypeSearchKey = (authors) => {
     return {
         fez_record_search_key_author_affiliation_type: authors
             .map(
-                (item, index) => {
-                    const orgtype = (!!item.orgtype && item.affiliation === 'NotUQ')
-                        ? parseInt(item.orgtype, 10)
-                        : parseInt(general.ORG_TYPE_ID_UNIVERSITY, 10)
-                    ;
-                    return {
-                        rek_author_affiliation_type: orgtype,
-                        rek_author_affiliation_type_order: index + 1
-                    };
-                }
+                (item, index) => ({
+                    rek_author_affiliation_type: (
+                        (item.affiliation === 'UQ' && parseInt(general.ORG_TYPE_ID_UNIVERSITY, 10)) ||
+                        (item.orgtype && parseInt(item.orgtype, 10)) ||
+                        0
+                    ),
+                    rek_author_affiliation_type_order: index + 1
+                })
             )
     };
 };
