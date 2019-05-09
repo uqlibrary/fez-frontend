@@ -282,10 +282,9 @@ export class AppClass extends PureComponent {
                                         !this.state.docked && !this.state.menuDrawerOpen &&
                                             <Hidden xsDown>
                                                 <Grid item>
-                                                    <div id="logo" className="smallLogo"
-                                                        style={{height: 66, width: 60}}
-                                                        aria-label={locale.global.logo.label}
-                                                    />
+                                                    <div id="logo" className="smallLogo" style={{height: 66, width: 60}}>
+                                                        {locale.global.logo.label}
+                                                    </div>
                                                 </Grid>
                                             </Hidden>
                                     }

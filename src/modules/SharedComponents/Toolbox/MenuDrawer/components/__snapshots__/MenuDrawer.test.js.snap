@@ -56,12 +56,12 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider 1`
         zeroMinWidth={true}
       >
         <WithStyles(ExternalLink)
+          className="noHover"
           href="test"
           openInNewIcon={false}
           title="test"
         >
           <div
-            alt="test"
             className="test"
             style={
               Object {
@@ -70,7 +70,9 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider 1`
                 "width": 160,
               }
             }
-          />
+          >
+            test
+          </div>
         </WithStyles(ExternalLink)>
       </WithStyles(Grid)>
       <Hidden
@@ -198,12 +200,12 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
         zeroMinWidth={true}
       >
         <WithStyles(ExternalLink)
+          className="noHover"
           href="test"
           openInNewIcon={false}
           title="test"
         >
           <div
-            alt="test"
             className="test"
             style={
               Object {
@@ -212,7 +214,9 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
                 "width": 160,
               }
             }
-          />
+          >
+            test
+          </div>
         </WithStyles(ExternalLink)>
       </WithStyles(Grid)>
       <Hidden
@@ -358,12 +362,12 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
         zeroMinWidth={true}
       >
         <WithStyles(ExternalLink)
+          className="noHover"
           href="test"
           openInNewIcon={false}
           title="test"
         >
           <div
-            alt="test"
             className="test"
             style={
               Object {
@@ -372,7 +376,9 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
                 "width": 160,
               }
             }
-          />
+          >
+            test
+          </div>
         </WithStyles(ExternalLink)>
       </WithStyles(Grid)>
       <Hidden

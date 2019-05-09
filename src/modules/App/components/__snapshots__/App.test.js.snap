@@ -125,7 +125,6 @@ exports[`Application component Should display mobile correctly 1`] = `
                 item={true}
               >
                 <div
-                  aria-label="The University of Queensland"
                   className="smallLogo"
                   id="logo"
                   style={
@@ -134,7 +133,9 @@ exports[`Application component Should display mobile correctly 1`] = `
                       "width": 60,
                     }
                   }
-                />
+                >
+                  The University of Queensland
+                </div>
               </WithStyles(Grid)>
             </Hidden>
             <WithStyles(Grid)
@@ -609,7 +610,6 @@ exports[`Application component should determine if it has incomplete works from 
                 item={true}
               >
                 <div
-                  aria-label="The University of Queensland"
                   className="smallLogo"
                   id="logo"
                   style={
@@ -618,7 +618,9 @@ exports[`Application component should determine if it has incomplete works from 
                       "width": 60,
                     }
                   }
-                />
+                >
+                  The University of Queensland
+                </div>
               </WithStyles(Grid)>
             </Hidden>
             <WithStyles(Grid)
@@ -1166,7 +1168,6 @@ exports[`Application component should redirect to login page with correct return
                 item={true}
               >
                 <div
-                  aria-label="The University of Queensland"
                   className="smallLogo"
                   id="logo"
                   style={
@@ -1175,7 +1176,9 @@ exports[`Application component should redirect to login page with correct return
                       "width": 60,
                     }
                   }
-                />
+                >
+                  The University of Queensland
+                </div>
               </WithStyles(Grid)>
             </Hidden>
             <WithStyles(Grid)
@@ -1648,7 +1651,6 @@ exports[`Application component should render alert if user is not fez author 1`]
                 item={true}
               >
                 <div
-                  aria-label="The University of Queensland"
                   className="smallLogo"
                   id="logo"
                   style={
@@ -1657,7 +1659,9 @@ exports[`Application component should render alert if user is not fez author 1`]
                       "width": 60,
                     }
                   }
-                />
+                >
+                  The University of Queensland
+                </div>
               </WithStyles(Grid)>
             </Hidden>
             <WithStyles(Grid)
@@ -2348,7 +2352,6 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                 item={true}
               >
                 <div
-                  aria-label="The University of Queensland"
                   className="smallLogo"
                   id="logo"
                   style={
@@ -2357,7 +2360,9 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                       "width": 60,
                     }
                   }
-                />
+                >
+                  The University of Queensland
+                </div>
               </WithStyles(Grid)>
             </Hidden>
             <WithStyles(Grid)
@@ -2878,7 +2883,6 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
                 item={true}
               >
                 <div
-                  aria-label="The University of Queensland"
                   className="smallLogo"
                   id="logo"
                   style={
@@ -2887,7 +2891,9 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
                       "width": 60,
                     }
                   }
-                />
+                >
+                  The University of Queensland
+                </div>
               </WithStyles(Grid)>
             </Hidden>
             <WithStyles(Grid)
@@ -3372,7 +3378,6 @@ exports[`Application component should render app for account with fez author wit
                 item={true}
               >
                 <div
-                  aria-label="The University of Queensland"
                   className="smallLogo"
                   id="logo"
                   style={
@@ -3381,7 +3386,9 @@ exports[`Application component should render app for account with fez author wit
                       "width": 60,
                     }
                   }
-                />
+                >
+                  The University of Queensland
+                </div>
               </WithStyles(Grid)>
             </Hidden>
             <WithStyles(Grid)
@@ -4045,7 +4052,6 @@ exports[`Application component should render app for account with fez author wit
                 item={true}
               >
                 <div
-                  aria-label="The University of Queensland"
                   className="smallLogo"
                   id="logo"
                   style={
@@ -4054,7 +4060,9 @@ exports[`Application component should render app for account with fez author wit
                       "width": 60,
                     }
                   }
-                />
+                >
+                  The University of Queensland
+                </div>
               </WithStyles(Grid)>
             </Hidden>
             <WithStyles(Grid)
@@ -4719,7 +4727,6 @@ exports[`Application component should render app for account with fez author wit
                 item={true}
               >
                 <div
-                  aria-label="The University of Queensland"
                   className="smallLogo"
                   id="logo"
                   style={
@@ -4728,7 +4735,9 @@ exports[`Application component should render app for account with fez author wit
                       "width": 60,
                     }
                   }
-                />
+                >
+                  The University of Queensland
+                </div>
               </WithStyles(Grid)>
             </Hidden>
             <WithStyles(Grid)
@@ -5299,7 +5308,6 @@ exports[`Application component should render application with routing for the us
                 item={true}
               >
                 <div
-                  aria-label="The University of Queensland"
                   className="smallLogo"
                   id="logo"
                   style={
@@ -5308,7 +5316,9 @@ exports[`Application component should render application with routing for the us
                       "width": 60,
                     }
                   }
-                />
+                >
+                  The University of Queensland
+                </div>
               </WithStyles(Grid)>
             </Hidden>
             <WithStyles(Grid)
@@ -5600,7 +5610,6 @@ exports[`Application component should render for anon user 1`] = `
                 item={true}
               >
                 <div
-                  aria-label="The University of Queensland"
                   className="smallLogo"
                   id="logo"
                   style={
@@ -5609,7 +5618,9 @@ exports[`Application component should render for anon user 1`] = `
                       "width": 60,
                     }
                   }
-                />
+                >
+                  The University of Queensland
+                </div>
               </WithStyles(Grid)>
             </Hidden>
             <WithStyles(Grid)
@@ -5900,7 +5911,6 @@ exports[`Application component should render thesis submission for HDR without m
                 item={true}
               >
                 <div
-                  aria-label="The University of Queensland"
                   className="smallLogo"
                   id="logo"
                   style={
@@ -5909,7 +5919,9 @@ exports[`Application component should render thesis submission for HDR without m
                       "width": 60,
                     }
                   }
-                />
+                >
+                  The University of Queensland
+                </div>
               </WithStyles(Grid)>
             </Hidden>
             <WithStyles(Grid)
@@ -9967,7 +9979,6 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                       className="MuiGrid-item-7"
                                                                     >
                                                                       <div
-                                                                        aria-label="The University of Queensland"
                                                                         className="smallLogo"
                                                                         id="logo"
                                                                         style={
@@ -9976,7 +9987,9 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "width": 60,
                                                                           }
                                                                         }
-                                                                      />
+                                                                      >
+                                                                        The University of Queensland
+                                                                      </div>
                                                                     </div>
                                                                   </Grid>
                                                                 </WithStyles(Grid)>
