@@ -24,6 +24,8 @@ import { general, validation, routes } from 'config';
 import { default as pagesLocale } from 'locale/pages';
 import { default as formsLocale } from 'locale/forms';
 import { default as viewRecordLocale } from 'locale/viewRecord';
+import { default as alertLocale } from 'locale/publicationForm';
+
 import {
     CPEE_NTRO_SUBTYPES,
     CW_NTRO_SUBTYPES,
@@ -160,6 +162,8 @@ export class MyIncompleteRecordClass extends PureComponent {
             this.props.history.go(-1);
             return <div />;
         }
+
+        const alertProps = validation.getErrorAlertProps({...this.props, alertLocale: alertLocale});
 
         const isNtro = !!this.props.recordToFix &&
             !!this.props.recordToFix.rek_subtype &&
@@ -398,7 +402,7 @@ export class MyIncompleteRecordClass extends PureComponent {
                                     hideReorder
                                     isNtro
                                     locale={txt.fields.authors.field}
-                                    name="authors"
+                                    name="authorsAffiliation"
                                     required
                                     showContributorAssignment
                                 />
@@ -410,7 +414,7 @@ export class MyIncompleteRecordClass extends PureComponent {
                                 <Field
                                     style={{marginTop: -24}}
                                     component={TextField}
-                                    name="notes"
+                                    name="comments"
                                     type="text"
                                     disabled={this.props.submitting}
                                     fullWidth
@@ -437,23 +441,29 @@ export class MyIncompleteRecordClass extends PureComponent {
                                 </StandardCard>
                             </Grid>
                         }
+                        {
+                            alertProps &&
+                            <Grid item xs={12}>
+                                <Alert pushToTop {...alertProps} />
+                            </Grid>
+                        }
                     </Grid>
                     <Grid container spacing={24}>
                         <Hidden smDown>
                             <Grid item xs />
                         </Hidden>
-                        <Grid item xs={12} md={'auto'}>
+                        <Grid item xs={12} md="auto">
                             <Button
-                                variant={'contained'}
+                                variant="contained"
                                 fullWidth
                                 children={txt.cancelButtonLabel}
                                 disabled={this.props.submitting}
                                 onClick={this._cancelFix} />
                         </Grid>
-                        <Grid item xs={12} md={'auto'}>
+                        <Grid item xs={12} md="auto">
                             <Button
-                                variant={'contained'}
-                                color={'primary'}
+                                variant="contained"
+                                color="primary"
                                 fullWidth
                                 children={txt.submitButtonLabel}
                                 onClick={this.props.handleSubmit}

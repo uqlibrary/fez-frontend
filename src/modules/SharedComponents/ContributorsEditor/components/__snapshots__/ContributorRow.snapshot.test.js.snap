@@ -2345,7 +2345,7 @@ exports[`Component ContributorRow should render with missing aria label if selec
     onRef={[Function]}
   />
   <WithStyles(ListItem)
-    aria-label={null}
+    aria-label=""
     classes={
       Object {
         "root": "listItem",

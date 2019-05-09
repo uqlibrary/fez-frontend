@@ -58,14 +58,14 @@ export function updateIncompleteRecord(data) {
             ...transformers.getSignificanceSearchKeys(data),
             ...transformers.getGrantsListSearchKey(data.grants),
             ...transformers.getRecordFileAttachmentSearchKey(data.files ? data.files.queue : [], data.publication),
-            ...transformers.getRecordAuthorAffiliationSearchKey(data.authors),
-            ...transformers.getRecordAuthorAffiliationTypeSearchKey(data.authors),
+            ...transformers.getRecordAuthorAffiliationSearchKey(data.authorsAffiliation),
+            ...transformers.getRecordAuthorAffiliationTypeSearchKey(data.authorsAffiliation),
         };
 
         // delete extra form values from request object
         !!patchRecordRequest.author && delete patchRecordRequest.author;
         !!patchRecordRequest.publication && delete patchRecordRequest.publication;
-        !!patchRecordRequest.authors && delete patchRecordRequest.authors;
+        !!patchRecordRequest.authorsAffiliation && delete patchRecordRequest.authorsAffiliation;
         !!patchRecordRequest.files && delete patchRecordRequest.files;
         !!patchRecordRequest.ntroAbstract && delete patchRecordRequest.ntroAbstract;
         !!patchRecordRequest.grants && delete patchRecordRequest.grants;
