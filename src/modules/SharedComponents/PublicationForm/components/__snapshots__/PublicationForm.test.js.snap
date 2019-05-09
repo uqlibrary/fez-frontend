@@ -30,7 +30,7 @@ exports[`Component PublicationForm Shows an alert 1`] = `
             "text": <p>
               For more information about each type, click 
               <a
-                href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-tradtional-research-ouptuts"
+                href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
                 style={
                   Object {
                     "fontWeight": 700,
@@ -456,7 +456,7 @@ exports[`Component PublicationForm Shows an alert 2`] = `
             "text": <p>
               For more information about each type, click 
               <a
-                href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-tradtional-research-ouptuts"
+                href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
                 style={
                   Object {
                     "fontWeight": 700,
@@ -922,7 +922,7 @@ exports[`Component PublicationForm Shows an alert 3`] = `
             "text": <p>
               For more information about each type, click 
               <a
-                href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-tradtional-research-ouptuts"
+                href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
                 style={
                   Object {
                     "fontWeight": 700,
@@ -1388,7 +1388,7 @@ exports[`Component PublicationForm should call componentWillReceiveProps when pr
             "text": <p>
               For more information about each type, click 
               <a
-                href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-tradtional-research-ouptuts"
+                href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
                 style={
                   Object {
                     "fontWeight": 700,
@@ -1814,7 +1814,7 @@ exports[`Component PublicationForm should call componentWillReceiveProps when pr
             "text": <p>
               For more information about each type, click 
               <a
-                href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-tradtional-research-ouptuts"
+                href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
                 style={
                   Object {
                     "fontWeight": 700,
@@ -2253,7 +2253,7 @@ exports[`Component PublicationForm should call componentWillReceiveProps when pr
             "text": <p>
               For more information about each type, click 
               <a
-                href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-tradtional-research-ouptuts"
+                href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
                 style={
                   Object {
                     "fontWeight": 700,
@@ -2705,7 +2705,7 @@ exports[`Component PublicationForm should call componentWillReceiveProps when pr
             "text": <p>
               For more information about each type, click 
               <a
-                href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-tradtional-research-ouptuts"
+                href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
                 style={
                   Object {
                     "fontWeight": 700,
@@ -3157,7 +3157,7 @@ exports[`Component PublicationForm should render component initialised with just
             "text": <p>
               For more information about each type, click 
               <a
-                href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-tradtional-research-ouptuts"
+                href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
                 style={
                   Object {
                     "fontWeight": 700,
@@ -3583,7 +3583,7 @@ exports[`Component PublicationForm should render component initialised with two 
             "text": <p>
               For more information about each type, click 
               <a
-                href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-tradtional-research-ouptuts"
+                href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
                 style={
                   Object {
                     "fontWeight": 700,
@@ -4042,7 +4042,7 @@ exports[`Component PublicationForm should render component with BookForm 1`] = `
             "text": <p>
               For more information about each type, click 
               <a
-                href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-tradtional-research-ouptuts"
+                href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
                 style={
                   Object {
                     "fontWeight": 700,
@@ -4537,7 +4537,7 @@ exports[`Component PublicationForm should render component with GenericDocument 
             "text": <p>
               For more information about each type, click 
               <a
-                href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-tradtional-research-ouptuts"
+                href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
                 style={
                   Object {
                     "fontWeight": 700,
@@ -5029,7 +5029,7 @@ exports[`Component PublicationForm should render component with JournalArticleFo
             "text": <p>
               For more information about each type, click 
               <a
-                href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-tradtional-research-ouptuts"
+                href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
                 style={
                   Object {
                     "fontWeight": 700,
@@ -5521,7 +5521,7 @@ exports[`Component PublicationForm should render component with ResearchReportFo
             "text": <p>
               For more information about each type, click 
               <a
-                href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-tradtional-research-ouptuts"
+                href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
                 style={
                   Object {
                     "fontWeight": 700,
@@ -6013,7 +6013,7 @@ exports[`Component PublicationForm should render component with all fields disab
             "text": <p>
               For more information about each type, click 
               <a
-                href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-tradtional-research-ouptuts"
+                href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
                 style={
                   Object {
                     "fontWeight": 700,

@@ -740,7 +740,9 @@ export default {
                 },
                 authors: {
                     ...locale.components.authors,
-                    description: 'Please complete affiliation data for each listed author.',
+                    description: (
+                        <span>Please complete affiliation data for each listed author by selecting each row marked in <span style={{color: 'red', weight: 'bold'}}>red</span>, and adding the missing information in the form underneath the list and clicking <b>UPDATE AUTHOR</b>.</span>
+                    ),
                     field: {
                         ...locale.components.authors.field,
                         form: {
