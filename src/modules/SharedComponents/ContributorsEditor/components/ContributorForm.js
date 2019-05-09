@@ -259,13 +259,13 @@ export class ContributorForm extends PureComponent {
                             value={contributor.nameAsPublished}
                             onChange={this._onNameChanged}
                             onKeyDown={this._onSubmit}
-                            disabled={disabled || disableNameAsPublished}
+                            disabled={disabled || disableNameAsPublished || isNtro && contributor.affiliation === ''}
                             required={required}
                             autoComplete="off"
                             error={
                                 !isContributorAssigned &&
                                 contributor.nameAsPublished.trim().length === 0 && (
-                                    isNtro ? !!contributor.affiliation : !!required
+                                    isNtro ? contributor.affiliation !== '' : !!required
                                 )
                             }
                         />
