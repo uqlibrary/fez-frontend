@@ -163,7 +163,7 @@ export class ContributorsEditor extends PureComponent {
             selected: (
                 this.props.author &&
                 item.aut_id === this.props.author.aut_id
-            ) || index === itemIndex,
+            ) || !item.selected && index === itemIndex,
             authorId: (
                 index === itemIndex &&
                 this.props.author

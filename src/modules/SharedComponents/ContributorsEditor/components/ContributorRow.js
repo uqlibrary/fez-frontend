@@ -243,11 +243,11 @@ export class ContributorRow extends PureComponent {
         const enableSelect = this.props.showContributorAssignment;
         const selectedClass = contributor.selected ? classes.selected : '';
 
-        const ariaLabel = `${
+        const ariaLabel = !disabled && `${
             selectHint.replace('[name]', contributor.nameAsPublished)
         } ${
             (required && locale.requiredLabel) || ''
-        }`.trim();
+        }`.trim() || '';
 
         const rowIcon = () => {
             if (contributor.selected) {
