@@ -328,7 +328,7 @@ describe('Backend routes method', () => {
     });
 
     it('should construct url for AUTHORS_SEARCH_API', () => {
-        expect(routes.AUTHORS_SEARCH_API({query: 'jane'})).toEqual({apiUrl: 'fez-authors/search', options: {params: {query: 'jane'}}});
+        expect(routes.AUTHORS_SEARCH_API({query: 'jane'})).toEqual({apiUrl: 'fez-authors/search', options: {params: {query: 'jane', rule: 'lookup'}}});
     });
 
     it('should construct url for AUTHOR_DETAILS_API', () => {
