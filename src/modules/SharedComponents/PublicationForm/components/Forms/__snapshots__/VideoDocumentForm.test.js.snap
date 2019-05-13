@@ -166,6 +166,7 @@ exports[`VideoDocumentForm renders  component 1`] = `
                   , in the format and order that they are published.
                 </div>,
                 "identifierLabel": "UQ identifier (if available)",
+                "nameAsPublishedFieldId": "creators-name-as-published-field",
                 "nameAsPublishedHint": "Type the name exactly as published",
                 "nameAsPublishedLabel": "Enter each creator's name as published (eg. Smith, John)",
               },
@@ -200,6 +201,7 @@ exports[`VideoDocumentForm renders  component 1`] = `
             },
             "row": Object {
               "locale": Object {
+                "deleteButtonId": [Function],
                 "deleteHint": "Remove this item",
                 "deleteRecordConfirmation": Object {
                   "cancelButtonLabel": "No",
@@ -266,6 +268,7 @@ exports[`VideoDocumentForm renders  component 1`] = `
                   , in the format and order that they are published.
                 </div>,
                 "identifierLabel": "UQ identifier (if available)",
+                "nameAsPublishedFieldId": "contributors-name-as-published-field",
                 "nameAsPublishedHint": "Type the name exactly as published",
                 "nameAsPublishedLabel": "Enter each contributor's name as published (eg. Smith, John)",
               },
@@ -299,6 +302,7 @@ exports[`VideoDocumentForm renders  component 1`] = `
             },
             "row": Object {
               "locale": Object {
+                "deleteButtonId": [Function],
                 "deleteHint": "Remove this item",
                 "deleteRecordConfirmation": Object {
                   "cancelButtonLabel": "No",
@@ -538,6 +542,7 @@ exports[`VideoDocumentForm renders  component should render contributor assignme
                   , in the format and order that they are published.
                 </div>,
                 "identifierLabel": "UQ identifier (if available)",
+                "nameAsPublishedFieldId": "creators-name-as-published-field",
                 "nameAsPublishedHint": "Type the name exactly as published",
                 "nameAsPublishedLabel": "Enter each creator's name as published (eg. Smith, John)",
               },
@@ -572,6 +577,7 @@ exports[`VideoDocumentForm renders  component should render contributor assignme
             },
             "row": Object {
               "locale": Object {
+                "deleteButtonId": [Function],
                 "deleteHint": "Remove this item",
                 "deleteRecordConfirmation": Object {
                   "cancelButtonLabel": "No",
@@ -638,6 +644,7 @@ exports[`VideoDocumentForm renders  component should render contributor assignme
                   , in the format and order that they are published.
                 </div>,
                 "identifierLabel": "UQ identifier (if available)",
+                "nameAsPublishedFieldId": "contributors-name-as-published-field",
                 "nameAsPublishedHint": "Type the name exactly as published",
                 "nameAsPublishedLabel": "Enter each contributor's name as published (eg. Smith, John)",
               },
@@ -671,6 +678,7 @@ exports[`VideoDocumentForm renders  component should render contributor assignme
             },
             "row": Object {
               "locale": Object {
+                "deleteButtonId": [Function],
                 "deleteHint": "Remove this item",
                 "deleteRecordConfirmation": Object {
                   "cancelButtonLabel": "No",

@@ -55,6 +55,11 @@ exports[`Component PublicationForm should render properly with non-matching doct
             xs={12}
           >
             <Field
+              SelectDisplayProps={
+                Object {
+                  "id": "rek-display-type",
+                }
+              }
               component={[Function]}
               disabled={false}
               label="Work type"
