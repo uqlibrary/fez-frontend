@@ -323,5 +323,3 @@ exports[`Add new record should render the confirm dialog without an alert for a 
   onRef={[Function]}
 />
 `;
-
-exports[`Add new record should render with missing author information 1`] = `null`;
