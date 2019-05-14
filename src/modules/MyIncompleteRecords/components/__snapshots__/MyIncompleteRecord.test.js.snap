@@ -8689,6 +8689,7 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
                       , in the format and order that they are published.
                     </div>,
                     "identifierLabel": "UQ identifier (if available)",
+                    "nameAsPublishedFieldId": "authors-name-as-published-field",
                     "nameAsPublishedHint": "Type the name exactly as published",
                     "nameAsPublishedLabel": "Enter each author's name as published (eg. Smith, John)",
                   },
@@ -8722,6 +8723,7 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
                 },
                 "row": Object {
                   "locale": Object {
+                    "deleteButtonId": [Function],
                     "deleteHint": "Remove this item",
                     "deleteRecordConfirmation": Object {
                       "cancelButtonLabel": "No",
@@ -9506,6 +9508,7 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
                       , in the format and order that they are published.
                     </div>,
                     "identifierLabel": "UQ identifier (if available)",
+                    "nameAsPublishedFieldId": "authors-name-as-published-field",
                     "nameAsPublishedHint": "Type the name exactly as published",
                     "nameAsPublishedLabel": "Enter each author's name as published (eg. Smith, John)",
                   },
@@ -9539,6 +9542,7 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
                 },
                 "row": Object {
                   "locale": Object {
+                    "deleteButtonId": [Function],
                     "deleteHint": "Remove this item",
                     "deleteRecordConfirmation": Object {
                       "cancelButtonLabel": "No",
