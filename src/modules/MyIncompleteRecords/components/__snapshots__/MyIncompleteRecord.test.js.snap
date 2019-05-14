@@ -292,7 +292,7 @@ exports[`Cards will display correct empty fields for a Exhibition Creative Work 
                       (not for public view)
                     </span>
                   </span>,
-                  "placeholder": "Remember to include substantiation of your Major or Minor Scale/Significance claim above.",
+                  "placeholder": "Remember to include substantiation of your major or minor scale/significance claim above.",
                 },
                 "scaleOfWork": Object {
                   "description": "Select the option that best describes the significance of the work.",
@@ -694,6 +694,7 @@ exports[`Cards will display correct empty fields for a Exhibition Creative Work 
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="update-my-work"
           onClick={[MockFunction]}
           variant="contained"
         >
@@ -983,7 +984,7 @@ exports[`Cards will display correct empty fields for a Live Performance of Music
                       (not for public view)
                     </span>
                   </span>,
-                  "placeholder": "Remember to include substantiation of your Major or Minor Scale/Significance claim above.",
+                  "placeholder": "Remember to include substantiation of your major or minor scale/significance claim above.",
                 },
                 "scaleOfWork": Object {
                   "description": "Select the option that best describes the significance of the work.",
@@ -1385,6 +1386,7 @@ exports[`Cards will display correct empty fields for a Live Performance of Music
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="update-my-work"
           onClick={[MockFunction]}
           variant="contained"
         >
@@ -1674,7 +1676,7 @@ exports[`Cards will display correct empty fields for a Musical Creative work 1`]
                       (not for public view)
                     </span>
                   </span>,
-                  "placeholder": "Remember to include substantiation of your Major or Minor Scale/Significance claim above.",
+                  "placeholder": "Remember to include substantiation of your major or minor scale/significance claim above.",
                 },
                 "scaleOfWork": Object {
                   "description": "Select the option that best describes the significance of the work.",
@@ -2076,6 +2078,7 @@ exports[`Cards will display correct empty fields for a Musical Creative work 1`]
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="update-my-work"
           onClick={[MockFunction]}
           variant="contained"
         >
@@ -2365,7 +2368,7 @@ exports[`Cards will display correct empty fields for a Public Sector Research Re
                       (not for public view)
                     </span>
                   </span>,
-                  "placeholder": "Remember to include substantiation of your Major or Minor Scale/Significance claim above.",
+                  "placeholder": "Remember to include substantiation of your major or minor scale/significance claim above.",
                 },
                 "scaleOfWork": Object {
                   "description": "Select the option that best describes the significance of the work.",
@@ -2767,6 +2770,7 @@ exports[`Cards will display correct empty fields for a Public Sector Research Re
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="update-my-work"
           onClick={[MockFunction]}
           variant="contained"
         >
@@ -3056,7 +3060,7 @@ exports[`Cards will display correct empty fields for a Textual Book work 1`] = `
                       (not for public view)
                     </span>
                   </span>,
-                  "placeholder": "Remember to include substantiation of your Major or Minor Scale/Significance claim above.",
+                  "placeholder": "Remember to include substantiation of your major or minor scale/significance claim above.",
                 },
                 "scaleOfWork": Object {
                   "description": "Select the option that best describes the significance of the work.",
@@ -3458,6 +3462,7 @@ exports[`Cards will display correct empty fields for a Textual Book work 1`] = `
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="update-my-work"
           onClick={[MockFunction]}
           variant="contained"
         >
@@ -3754,7 +3759,7 @@ exports[`Cards will display correct empty fields for a Textual Book work with la
                       (not for public view)
                     </span>
                   </span>,
-                  "placeholder": "Remember to include substantiation of your Major or Minor Scale/Significance claim above.",
+                  "placeholder": "Remember to include substantiation of your major or minor scale/significance claim above.",
                 },
                 "scaleOfWork": Object {
                   "description": "Select the option that best describes the significance of the work.",
@@ -4156,6 +4161,7 @@ exports[`Cards will display correct empty fields for a Textual Book work with la
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="update-my-work"
           onClick={[MockFunction]}
           variant="contained"
         >
@@ -4445,7 +4451,7 @@ exports[`Cards will display correct empty fields for a Website Creative work 1`]
                       (not for public view)
                     </span>
                   </span>,
-                  "placeholder": "Remember to include substantiation of your Major or Minor Scale/Significance claim above.",
+                  "placeholder": "Remember to include substantiation of your major or minor scale/significance claim above.",
                 },
                 "scaleOfWork": Object {
                   "description": "Select the option that best describes the significance of the work.",
@@ -4847,6 +4853,7 @@ exports[`Cards will display correct empty fields for a Website Creative work 1`]
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="update-my-work"
           onClick={[MockFunction]}
           variant="contained"
         >
@@ -5136,7 +5143,7 @@ exports[`Cards will display correct empty fields for an Architectural Design wor
                       (not for public view)
                     </span>
                   </span>,
-                  "placeholder": "Remember to include substantiation of your Major or Minor Scale/Significance claim above.",
+                  "placeholder": "Remember to include substantiation of your major or minor scale/significance claim above.",
                 },
                 "scaleOfWork": Object {
                   "description": "Select the option that best describes the significance of the work.",
@@ -5538,6 +5545,7 @@ exports[`Cards will display correct empty fields for an Architectural Design wor
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="update-my-work"
           onClick={[MockFunction]}
           variant="contained"
         >
@@ -5885,7 +5893,7 @@ exports[`Cards will display empty where nothing is incomplete 1`] = `
                       (not for public view)
                     </span>
                   </span>,
-                  "placeholder": "Remember to include substantiation of your Major or Minor Scale/Significance claim above.",
+                  "placeholder": "Remember to include substantiation of your major or minor scale/significance claim above.",
                 },
                 "scaleOfWork": Object {
                   "description": "Select the option that best describes the significance of the work.",
@@ -6287,6 +6295,7 @@ exports[`Cards will display empty where nothing is incomplete 1`] = `
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="update-my-work"
           onClick={[MockFunction]}
           variant="contained"
         >
@@ -7112,6 +7121,7 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="update-my-work"
           onClick={[MockFunction]}
           variant="contained"
         >
@@ -7948,6 +7958,7 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="update-my-work"
           onClick={[MockFunction]}
           variant="contained"
         >
@@ -8492,7 +8503,7 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
                       (not for public view)
                     </span>
                   </span>,
-                  "placeholder": "Remember to include substantiation of your Major or Minor Scale/Significance claim above.",
+                  "placeholder": "Remember to include substantiation of your major or minor scale/significance claim above.",
                 },
                 "scaleOfWork": Object {
                   "description": "Select the option that best describes the significance of the work.",
@@ -8894,6 +8905,7 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="update-my-work"
           onClick={[MockFunction]}
           variant="contained"
         >
@@ -9713,6 +9725,7 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="update-my-work"
           onClick={[MockFunction]}
           variant="contained"
         >
@@ -10538,6 +10551,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="update-my-work"
           onClick={[MockFunction]}
           variant="contained"
         >
@@ -11369,6 +11383,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="update-my-work"
           onClick={[MockFunction]}
           variant="contained"
         >
@@ -12194,6 +12209,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="update-my-work"
           onClick={[MockFunction]}
           variant="contained"
         >

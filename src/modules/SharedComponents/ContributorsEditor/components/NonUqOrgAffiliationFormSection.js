@@ -38,6 +38,7 @@ export default function NonUqOrgAffiliationFormSection({
                     label={locale.fields.organisation.inputLabel}
                     placeholder={locale.fields.organisation.placeholder}
                     disabled={disableAffiliationEdit}
+                    id="org-affiliation-name"
                 />
             </Grid>
             <Grid item xs={6}>
@@ -47,6 +48,9 @@ export default function NonUqOrgAffiliationFormSection({
                         value={orgType}
                         onChange={onOrgTypeChange}
                         disabled={disableOrgTypeEdit}
+                        SelectDisplayProps={{
+                            id: 'org-affiliation-type'
+                        }}
                     >
                         <MenuItem disabled>{locale.fields.organisationType.placeholder}</MenuItem>
                         {options}

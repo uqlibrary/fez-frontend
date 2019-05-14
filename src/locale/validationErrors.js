@@ -85,6 +85,7 @@ export default {
         // Collection form validations
         community: 'You must select a community',
         title: 'Title is required',
-        authorsAffiliation: 'Author affiliation rows marked with red are required'
+        authorsAffiliation: 'Author affiliation rows marked with red are required',
+        rek_audience_size: 'Audience size is required'
     }
 };

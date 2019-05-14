@@ -474,6 +474,7 @@ export class MyIncompleteRecordClass extends PureComponent {
                         </Grid>
                         <Grid item xs={12} md="auto">
                             <Button
+                                id="update-my-work"
                                 variant="contained"
                                 color="primary"
                                 fullWidth

@@ -21,6 +21,9 @@ export default function OrgAffilicationTypeSelector({
                 error={error}
                 required
                 disabled={disabled}
+                SelectDisplayProps={{
+                    id: 'org-affiliation-selector'
+                }}
             >
                 <MenuItem value="" disabled>
                     {locale.placeholder}
