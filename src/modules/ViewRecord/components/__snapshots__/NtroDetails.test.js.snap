@@ -24706,6 +24706,16 @@ exports[`NtroDetails  should render component with record 1`] = `
     <Component
       data={
         Array [
+          "Missing.",
+        ]
+      }
+      heading="Creator research statement"
+      key="1"
+      subheading=""
+    />
+    <Component
+      data={
+        Array [
           <p>
             This is an abstract
           </p>,

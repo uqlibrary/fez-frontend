@@ -5991,7 +5991,7 @@ exports[`Cards will display empty where nothing is incomplete 1`] = `
             },
           }
         }
-        showContributionStatement={true}
+        showContributionStatement={false}
         showSignificance={true}
         submitting={false}
       />
