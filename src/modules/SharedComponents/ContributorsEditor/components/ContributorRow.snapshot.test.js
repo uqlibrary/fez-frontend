@@ -41,7 +41,8 @@ describe('Component ContributorRow', () => {
     it('should render with missing aria label if selectHint prop is falsy', () => {
         const wrapper = setup({
             locale: {
-                selectHint: ''
+                selectHint: '',
+                deleteButtonId: () => 'delete-record-0'
             }
         });
         expect(toJson(wrapper)).toMatchSnapshot();

@@ -270,6 +270,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
                     "descriptionStep1": "",
                     "descriptionStep1NoStep2": "List your current supervisors",
                     "identifierLabel": "UQ identifier (if available)",
+                    "nameAsPublishedFieldId": "supervisors-name-as-published-field",
                     "nameAsPublishedHint": "",
                     "nameAsPublishedLabel": "Enter each supervisor’s name on a separate line e.g. Firstname Surname",
                   },
@@ -292,6 +293,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
                 },
                 "row": Object {
                   "locale": Object {
+                    "deleteButtonId": [Function],
                     "deleteHint": "Remove this item",
                     "deleteRecordConfirmation": Object {
                       "cancelButtonLabel": "No",
@@ -780,6 +782,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
                     "descriptionStep1": "",
                     "descriptionStep1NoStep2": "List your current supervisors",
                     "identifierLabel": "UQ identifier (if available)",
+                    "nameAsPublishedFieldId": "supervisors-name-as-published-field",
                     "nameAsPublishedHint": "",
                     "nameAsPublishedLabel": "Enter each supervisor’s name on a separate line e.g. Firstname Surname",
                   },
@@ -802,6 +805,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
                 },
                 "row": Object {
                   "locale": Object {
+                    "deleteButtonId": [Function],
                     "deleteHint": "Remove this item",
                     "deleteRecordConfirmation": Object {
                       "cancelButtonLabel": "No",

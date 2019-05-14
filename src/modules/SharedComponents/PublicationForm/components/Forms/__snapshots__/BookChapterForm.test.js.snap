@@ -172,6 +172,7 @@ exports[`BookChapterForm renders  component 1`] = `
                   , in the format and order that they are published.
                 </div>,
                 "identifierLabel": "UQ identifier (if available)",
+                "nameAsPublishedFieldId": "authors-name-as-published-field",
                 "nameAsPublishedHint": "Type the name exactly as published",
                 "nameAsPublishedLabel": "Enter each author's name as published (eg. Smith, John)",
               },
@@ -205,6 +206,7 @@ exports[`BookChapterForm renders  component 1`] = `
             },
             "row": Object {
               "locale": Object {
+                "deleteButtonId": [Function],
                 "deleteHint": "Remove this item",
                 "deleteRecordConfirmation": Object {
                   "cancelButtonLabel": "No",
@@ -269,6 +271,7 @@ exports[`BookChapterForm renders  component 1`] = `
                   , in the format and order that they are published.
                 </div>,
                 "identifierLabel": "UQ identifier (if available)",
+                "nameAsPublishedFieldId": "editors-name-as-published-field",
                 "nameAsPublishedHint": "Type the name in the format eg. \\"John Smith\\"",
                 "nameAsPublishedLabel": "Enter each editor's name as published (eg. John Smith)",
               },
@@ -302,6 +305,7 @@ exports[`BookChapterForm renders  component 1`] = `
             },
             "row": Object {
               "locale": Object {
+                "deleteButtonId": [Function],
                 "deleteHint": "Remove this item",
                 "deleteRecordConfirmation": Object {
                   "cancelButtonLabel": "No",
@@ -754,6 +758,7 @@ exports[`BookChapterForm renders  shows an error when end page is less than star
                   , in the format and order that they are published.
                 </div>,
                 "identifierLabel": "UQ identifier (if available)",
+                "nameAsPublishedFieldId": "authors-name-as-published-field",
                 "nameAsPublishedHint": "Type the name exactly as published",
                 "nameAsPublishedLabel": "Enter each author's name as published (eg. Smith, John)",
               },
@@ -787,6 +792,7 @@ exports[`BookChapterForm renders  shows an error when end page is less than star
             },
             "row": Object {
               "locale": Object {
+                "deleteButtonId": [Function],
                 "deleteHint": "Remove this item",
                 "deleteRecordConfirmation": Object {
                   "cancelButtonLabel": "No",
@@ -851,6 +857,7 @@ exports[`BookChapterForm renders  shows an error when end page is less than star
                   , in the format and order that they are published.
                 </div>,
                 "identifierLabel": "UQ identifier (if available)",
+                "nameAsPublishedFieldId": "editors-name-as-published-field",
                 "nameAsPublishedHint": "Type the name in the format eg. \\"John Smith\\"",
                 "nameAsPublishedLabel": "Enter each editor's name as published (eg. John Smith)",
               },
@@ -884,6 +891,7 @@ exports[`BookChapterForm renders  shows an error when end page is less than star
             },
             "row": Object {
               "locale": Object {
+                "deleteButtonId": [Function],
                 "deleteHint": "Remove this item",
                 "deleteRecordConfirmation": Object {
                   "cancelButtonLabel": "No",

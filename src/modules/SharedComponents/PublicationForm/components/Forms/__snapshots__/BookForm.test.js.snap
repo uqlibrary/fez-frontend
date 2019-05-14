@@ -25,6 +25,7 @@ exports[`BookForm renders  component 1`] = `
             component={[Function]}
             disabled={false}
             fullWidth={true}
+            id="rek-title"
             label="Book title"
             multiline={true}
             name="rek_title"
@@ -47,6 +48,7 @@ exports[`BookForm renders  component 1`] = `
             component={[Function]}
             disabled={false}
             fullWidth={true}
+            id="rek-place-of-publication"
             label="Place of publication"
             name="fez_record_search_key_place_of_publication.rek_place_of_publication"
             required={true}
@@ -67,6 +69,7 @@ exports[`BookForm renders  component 1`] = `
             component={[Function]}
             disabled={false}
             fullWidth={true}
+            id="rek-publisher"
             label="Publisher"
             name="fez_record_search_key_publisher.rek_publisher"
             required={true}
@@ -188,6 +191,7 @@ exports[`BookForm renders  component 1`] = `
                   , in the format and order that they are published.
                 </div>,
                 "identifierLabel": "UQ identifier (if available)",
+                "nameAsPublishedFieldId": "authors-name-as-published-field",
                 "nameAsPublishedHint": "Type the name exactly as published",
                 "nameAsPublishedLabel": "Enter each author's name as published (eg. Smith, John)",
               },
@@ -221,6 +225,7 @@ exports[`BookForm renders  component 1`] = `
             },
             "row": Object {
               "locale": Object {
+                "deleteButtonId": [Function],
                 "deleteHint": "Remove this item",
                 "deleteRecordConfirmation": Object {
                   "cancelButtonLabel": "No",
@@ -255,6 +260,7 @@ exports[`BookForm renders  component 1`] = `
       <Field
         component={[Function]}
         disabled={false}
+        id="editors-name-as-published-field"
         locale={
           Object {
             "form": Object {
@@ -280,6 +286,7 @@ exports[`BookForm renders  component 1`] = `
                   , in the format and order that they are published.
                 </div>,
                 "identifierLabel": "UQ identifier (if available)",
+                "nameAsPublishedFieldId": "editors-name-as-published-field",
                 "nameAsPublishedHint": "Type the name in the format eg. \\"John Smith\\"",
                 "nameAsPublishedLabel": "Enter each editor's name as published (eg. John Smith)",
               },
@@ -313,6 +320,7 @@ exports[`BookForm renders  component 1`] = `
             },
             "row": Object {
               "locale": Object {
+                "deleteButtonId": [Function],
                 "deleteHint": "Remove this item",
                 "deleteRecordConfirmation": Object {
                   "cancelButtonLabel": "No",
@@ -557,6 +565,7 @@ exports[`BookForm renders  component should render contributor assignment 1`] = 
             component={[Function]}
             disabled={false}
             fullWidth={true}
+            id="rek-title"
             label="Book title"
             multiline={true}
             name="rek_title"
@@ -579,6 +588,7 @@ exports[`BookForm renders  component should render contributor assignment 1`] = 
             component={[Function]}
             disabled={false}
             fullWidth={true}
+            id="rek-place-of-publication"
             label="Place of publication"
             name="fez_record_search_key_place_of_publication.rek_place_of_publication"
             required={true}
@@ -599,6 +609,7 @@ exports[`BookForm renders  component should render contributor assignment 1`] = 
             component={[Function]}
             disabled={false}
             fullWidth={true}
+            id="rek-publisher"
             label="Publisher"
             name="fez_record_search_key_publisher.rek_publisher"
             required={true}
@@ -891,6 +902,7 @@ exports[`BookForm renders  component should render non ntro book 1`] = `
             component={[Function]}
             disabled={false}
             fullWidth={true}
+            id="rek-title"
             label="Book title"
             multiline={true}
             name="rek_title"
@@ -913,6 +925,7 @@ exports[`BookForm renders  component should render non ntro book 1`] = `
             component={[Function]}
             disabled={false}
             fullWidth={true}
+            id="rek-place-of-publication"
             label="Place of publication"
             name="fez_record_search_key_place_of_publication.rek_place_of_publication"
             required={true}
@@ -933,6 +946,7 @@ exports[`BookForm renders  component should render non ntro book 1`] = `
             component={[Function]}
             disabled={false}
             fullWidth={true}
+            id="rek-publisher"
             label="Publisher"
             name="fez_record_search_key_publisher.rek_publisher"
             required={true}
@@ -1054,6 +1068,7 @@ exports[`BookForm renders  component should render non ntro book 1`] = `
                   , in the format and order that they are published.
                 </div>,
                 "identifierLabel": "UQ identifier (if available)",
+                "nameAsPublishedFieldId": "authors-name-as-published-field",
                 "nameAsPublishedHint": "Type the name exactly as published",
                 "nameAsPublishedLabel": "Enter each author's name as published (eg. Smith, John)",
               },
@@ -1087,6 +1102,7 @@ exports[`BookForm renders  component should render non ntro book 1`] = `
             },
             "row": Object {
               "locale": Object {
+                "deleteButtonId": [Function],
                 "deleteHint": "Remove this item",
                 "deleteRecordConfirmation": Object {
                   "cancelButtonLabel": "No",
@@ -1121,6 +1137,7 @@ exports[`BookForm renders  component should render non ntro book 1`] = `
       <Field
         component={[Function]}
         disabled={false}
+        id="editors-name-as-published-field"
         locale={
           Object {
             "form": Object {
@@ -1146,6 +1163,7 @@ exports[`BookForm renders  component should render non ntro book 1`] = `
                   , in the format and order that they are published.
                 </div>,
                 "identifierLabel": "UQ identifier (if available)",
+                "nameAsPublishedFieldId": "editors-name-as-published-field",
                 "nameAsPublishedHint": "Type the name in the format eg. \\"John Smith\\"",
                 "nameAsPublishedLabel": "Enter each editor's name as published (eg. John Smith)",
               },
@@ -1179,6 +1197,7 @@ exports[`BookForm renders  component should render non ntro book 1`] = `
             },
             "row": Object {
               "locale": Object {
+                "deleteButtonId": [Function],
                 "deleteHint": "Remove this item",
                 "deleteRecordConfirmation": Object {
                   "cancelButtonLabel": "No",
@@ -1423,6 +1442,7 @@ exports[`BookForm renders  component with 4 input fields for NTRO 1`] = `
             component={[Function]}
             disabled={false}
             fullWidth={true}
+            id="rek-title"
             label="Book title"
             multiline={true}
             name="rek_title"
@@ -1445,6 +1465,7 @@ exports[`BookForm renders  component with 4 input fields for NTRO 1`] = `
             component={[Function]}
             disabled={false}
             fullWidth={true}
+            id="rek-place-of-publication"
             label="Place of publication"
             name="fez_record_search_key_place_of_publication.rek_place_of_publication"
             required={true}
@@ -1465,6 +1486,7 @@ exports[`BookForm renders  component with 4 input fields for NTRO 1`] = `
             component={[Function]}
             disabled={false}
             fullWidth={true}
+            id="rek-publisher"
             label="Publisher"
             name="fez_record_search_key_publisher.rek_publisher"
             required={true}
@@ -1571,6 +1593,7 @@ exports[`BookForm renders  component with 4 input fields for NTRO 1`] = `
                   , in the format and order that they are published.
                 </div>,
                 "identifierLabel": "UQ identifier (if available)",
+                "nameAsPublishedFieldId": "authors-name-as-published-field",
                 "nameAsPublishedHint": "Type the name exactly as published",
                 "nameAsPublishedLabel": "Enter each author's name as published (eg. Smith, John)",
               },
@@ -1604,6 +1627,7 @@ exports[`BookForm renders  component with 4 input fields for NTRO 1`] = `
             },
             "row": Object {
               "locale": Object {
+                "deleteButtonId": [Function],
                 "deleteHint": "Remove this item",
                 "deleteRecordConfirmation": Object {
                   "cancelButtonLabel": "No",
@@ -1638,6 +1662,7 @@ exports[`BookForm renders  component with 4 input fields for NTRO 1`] = `
       <Field
         component={[Function]}
         disabled={false}
+        id="editors-name-as-published-field"
         locale={
           Object {
             "form": Object {
@@ -1663,6 +1688,7 @@ exports[`BookForm renders  component with 4 input fields for NTRO 1`] = `
                   , in the format and order that they are published.
                 </div>,
                 "identifierLabel": "UQ identifier (if available)",
+                "nameAsPublishedFieldId": "editors-name-as-published-field",
                 "nameAsPublishedHint": "Type the name in the format eg. \\"John Smith\\"",
                 "nameAsPublishedLabel": "Enter each editor's name as published (eg. John Smith)",
               },
@@ -1696,6 +1722,7 @@ exports[`BookForm renders  component with 4 input fields for NTRO 1`] = `
             },
             "row": Object {
               "locale": Object {
+                "deleteButtonId": [Function],
                 "deleteHint": "Remove this item",
                 "deleteRecordConfirmation": Object {
                   "cancelButtonLabel": "No",
@@ -2082,6 +2109,7 @@ exports[`BookForm renders  should hide author when is edited book 1`] = `
             component={[Function]}
             disabled={false}
             fullWidth={true}
+            id="rek-title"
             label="Book title"
             multiline={true}
             name="rek_title"
@@ -2104,6 +2132,7 @@ exports[`BookForm renders  should hide author when is edited book 1`] = `
             component={[Function]}
             disabled={false}
             fullWidth={true}
+            id="rek-place-of-publication"
             label="Place of publication"
             name="fez_record_search_key_place_of_publication.rek_place_of_publication"
             required={true}
@@ -2124,6 +2153,7 @@ exports[`BookForm renders  should hide author when is edited book 1`] = `
             component={[Function]}
             disabled={false}
             fullWidth={true}
+            id="rek-publisher"
             label="Publisher"
             name="fez_record_search_key_publisher.rek_publisher"
             required={true}
@@ -2204,6 +2234,7 @@ exports[`BookForm renders  should hide author when is edited book 1`] = `
       <Field
         component={[Function]}
         disabled={false}
+        id="editors-name-as-published-field"
         locale={
           Object {
             "form": Object {
@@ -2229,6 +2260,7 @@ exports[`BookForm renders  should hide author when is edited book 1`] = `
                   , in the format and order that they are published.
                 </div>,
                 "identifierLabel": "UQ identifier (if available)",
+                "nameAsPublishedFieldId": "editors-name-as-published-field",
                 "nameAsPublishedHint": "Type the name in the format eg. \\"John Smith\\"",
                 "nameAsPublishedLabel": "Enter each editor's name as published (eg. John Smith)",
               },
@@ -2262,6 +2294,7 @@ exports[`BookForm renders  should hide author when is edited book 1`] = `
             },
             "row": Object {
               "locale": Object {
+                "deleteButtonId": [Function],
                 "deleteHint": "Remove this item",
                 "deleteRecordConfirmation": Object {
                   "cancelButtonLabel": "No",
@@ -2506,6 +2539,7 @@ exports[`BookForm renders  should show author when is not edited book 1`] = `
             component={[Function]}
             disabled={false}
             fullWidth={true}
+            id="rek-title"
             label="Book title"
             multiline={true}
             name="rek_title"
@@ -2528,6 +2562,7 @@ exports[`BookForm renders  should show author when is not edited book 1`] = `
             component={[Function]}
             disabled={false}
             fullWidth={true}
+            id="rek-place-of-publication"
             label="Place of publication"
             name="fez_record_search_key_place_of_publication.rek_place_of_publication"
             required={true}
@@ -2548,6 +2583,7 @@ exports[`BookForm renders  should show author when is not edited book 1`] = `
             component={[Function]}
             disabled={false}
             fullWidth={true}
+            id="rek-publisher"
             label="Publisher"
             name="fez_record_search_key_publisher.rek_publisher"
             required={true}
@@ -2669,6 +2705,7 @@ exports[`BookForm renders  should show author when is not edited book 1`] = `
                   , in the format and order that they are published.
                 </div>,
                 "identifierLabel": "UQ identifier (if available)",
+                "nameAsPublishedFieldId": "authors-name-as-published-field",
                 "nameAsPublishedHint": "Type the name exactly as published",
                 "nameAsPublishedLabel": "Enter each author's name as published (eg. Smith, John)",
               },
@@ -2702,6 +2739,7 @@ exports[`BookForm renders  should show author when is not edited book 1`] = `
             },
             "row": Object {
               "locale": Object {
+                "deleteButtonId": [Function],
                 "deleteHint": "Remove this item",
                 "deleteRecordConfirmation": Object {
                   "cancelButtonLabel": "No",
@@ -2736,6 +2774,7 @@ exports[`BookForm renders  should show author when is not edited book 1`] = `
       <Field
         component={[Function]}
         disabled={false}
+        id="editors-name-as-published-field"
         locale={
           Object {
             "form": Object {
@@ -2761,6 +2800,7 @@ exports[`BookForm renders  should show author when is not edited book 1`] = `
                   , in the format and order that they are published.
                 </div>,
                 "identifierLabel": "UQ identifier (if available)",
+                "nameAsPublishedFieldId": "editors-name-as-published-field",
                 "nameAsPublishedHint": "Type the name in the format eg. \\"John Smith\\"",
                 "nameAsPublishedLabel": "Enter each editor's name as published (eg. John Smith)",
               },
@@ -2794,6 +2834,7 @@ exports[`BookForm renders  should show author when is not edited book 1`] = `
             },
             "row": Object {
               "locale": Object {
+                "deleteButtonId": [Function],
                 "deleteHint": "Remove this item",
                 "deleteRecordConfirmation": Object {
                   "cancelButtonLabel": "No",
