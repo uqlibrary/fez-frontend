@@ -1777,7 +1777,7 @@ exports[`BookForm renders  component with 4 input fields for NTRO 1`] = `
                   (not for public view)
                 </span>
               </span>,
-              "placeholder": "Remember to include substantiation of your Major or Minor Scale/Significance claim above.",
+              "placeholder": "Remember to include substantiation of your major or minor scale/significance claim above.",
             },
             "scaleOfWork": Object {
               "description": "Select the option that best describes the significance of the work.",

@@ -23,6 +23,7 @@ exports[`Component ContributorRow Row should be clickable when showContributorAs
       }
     }
     divider={true}
+    id="contributor-editor-row-0"
     onClick={[Function]}
     onKeyDown={[Function]}
     tabIndex={0}
@@ -183,6 +184,7 @@ exports[`Component ContributorRow Row should not be clickable when showContribut
       }
     }
     divider={true}
+    id="contributor-editor-row-0"
     onClick={[Function]}
     onKeyDown={[Function]}
     tabIndex={-1}
@@ -347,6 +349,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
       }
     }
     divider={true}
+    id="contributor-editor-row-0"
     onClick={[Function]}
     onKeyDown={[Function]}
     tabIndex={-1}
@@ -475,6 +478,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
       }
     }
     divider={true}
+    id="contributor-editor-row-0"
     onClick={[Function]}
     onKeyDown={[Function]}
     tabIndex={-1}
@@ -603,6 +607,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
       }
     }
     divider={true}
+    id="contributor-editor-row-0"
     onClick={[Function]}
     onKeyDown={[Function]}
     tabIndex={0}
@@ -807,6 +812,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
       }
     }
     divider={true}
+    id="contributor-editor-row-0"
     onClick={[Function]}
     onKeyDown={[Function]}
     tabIndex={-1}
@@ -931,6 +937,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
       }
     }
     divider={true}
+    id="contributor-editor-row-0"
     onClick={[Function]}
     onKeyDown={[Function]}
     tabIndex={-1}
@@ -1055,6 +1062,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
       }
     }
     divider={true}
+    id="contributor-editor-row-0"
     onClick={[Function]}
     onKeyDown={[Function]}
     tabIndex={-1}
@@ -1219,6 +1227,7 @@ exports[`Component ContributorRow a row with index and creator with creator role
       }
     }
     divider={true}
+    id="contributor-editor-row-0"
     onClick={[Function]}
     onKeyDown={[Function]}
     tabIndex={-1}
@@ -1367,6 +1376,7 @@ exports[`Component ContributorRow a row with index and creator with creator role
       }
     }
     divider={true}
+    id="contributor-editor-row-0"
     onClick={[Function]}
     onKeyDown={[Function]}
     tabIndex={-1}
@@ -1515,6 +1525,7 @@ exports[`Component ContributorRow should assign contributor 1`] = `
       }
     }
     divider={true}
+    id="contributor-editor-row-0"
     onClick={[Function]}
     onKeyDown={[Function]}
     tabIndex={0}
@@ -1674,6 +1685,7 @@ exports[`Component ContributorRow should call callback functions on ListItem 1`]
       }
     }
     divider={true}
+    id="contributor-editor-row-0"
     onClick={[Function]}
     onKeyDown={[Function]}
     tabIndex={-1}
@@ -1968,6 +1980,7 @@ exports[`Component ContributorRow should render row as required 1`] = `
       }
     }
     divider={true}
+    id="contributor-editor-row-0"
     onClick={[Function]}
     onKeyDown={[Function]}
     tabIndex={-1}
@@ -2365,6 +2378,7 @@ exports[`Component ContributorRow should render with missing aria label if selec
       }
     }
     divider={true}
+    id="contributor-editor-row-0"
     onClick={[Function]}
     onKeyDown={[Function]}
     tabIndex={-1}

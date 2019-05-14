@@ -18,7 +18,7 @@ import {SeriesField} from 'modules/SharedComponents/LookupFields';
 
 import {validation} from 'config';
 import {default as componentLocale} from 'locale/components';
-import {SIGNIFICANCE_MAJOR, SIGNIFICANCE_MINOR, AUDIENCE_SIZE} from 'config/general';
+import {AUDIENCE_SIZE, SIGNIFICANCE} from 'config/general';
 
 export default class NtroFields extends React.PureComponent {
     static propTypes = {
@@ -69,7 +69,7 @@ export default class NtroFields extends React.PureComponent {
                     },
                     impactStatement: {
                         label: (<span>Creator research statement*. Include Background, Contribution and Significance <span style={{fontWeight: 700}}>(not for public view)</span></span>),
-                        placeholder: 'Remember to include substantiation of your Major or Minor Scale/Significance claim above.'
+                        placeholder: 'Remember to include substantiation of your major or minor scale/significance claim above.'
                     },
                 },
                 help: {
@@ -190,9 +190,15 @@ export default class NtroFields extends React.PureComponent {
                                             label={contributionStatement.fields.scaleOfWork.label}
                                             required
                                             validate={[validation.required]}
+                                            SelectDisplayProps={{
+                                                id: 'significance'
+                                            }}
                                         >
-                                            <MenuItem value={SIGNIFICANCE_MINOR}>Minor</MenuItem>
-                                            <MenuItem value={SIGNIFICANCE_MAJOR}>Major</MenuItem>
+                                            {
+                                                SIGNIFICANCE.map(item => (
+                                                    <MenuItem key={item.value} value={item.value}>{item.text}</MenuItem>
+                                                ))
+                                            }
                                         </Field>
                                     </Grid>
                                 }
@@ -369,6 +375,9 @@ export default class NtroFields extends React.PureComponent {
                                         label={metadata.fields.audienceSize.label}
                                         required
                                         validate={[validation.required]}
+                                        SelectDisplayProps={{
+                                            id: 'rek-audience-size'
+                                        }}
                                     >
                                         {
                                             AUDIENCE_SIZE.map(item => (
@@ -397,6 +406,7 @@ export default class NtroFields extends React.PureComponent {
                                     <Field
                                         component={QualityIndicatorField}
                                         disabled={this.props.submitting}
+                                        id="quality-indicators"
                                         name="qualityIndicators"
                                         label={metadata.fields.peerReviewActivity.label}
                                         placeholder={metadata.fields.peerReviewActivity.label}
