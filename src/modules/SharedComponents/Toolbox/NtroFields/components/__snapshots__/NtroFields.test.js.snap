@@ -1,5 +1,116 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Component NtroFields should not show NTRO data card in the Ntro fields 1`] = `
+<Fragment>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <StandardCard
+      help={
+        Object {
+          "buttonLabel": "CLOSE",
+          "text": <React.Fragment>
+            <h3>
+              Creator research statement
+            </h3>
+            <p>
+              For more information about the research statement, click  
+              <b>
+                <a
+                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836548"
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                  target="_blank"
+                >
+                  here
+                </a>
+              </b>
+            </p>
+          </React.Fragment>,
+          "title": "Author/Creator research statement",
+        }
+      }
+      title="Author/Creator research statement"
+    >
+      <WithStyles(Grid)
+        container={true}
+        spacing={8}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
+        >
+          <WithStyles(Typography)>
+            Select the option that best describes the significance of the work.
+          </WithStyles(Typography)>
+          <Field
+            SelectDisplayProps={
+              Object {
+                "id": "significance",
+              }
+            }
+            component={[Function]}
+            disabled={false}
+            label={
+              <span>
+                Scale/Significance of work* 
+                <span
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                >
+                  (not for public view)
+                </span>
+              </span>
+            }
+            name="significance"
+            required={true}
+            validate={
+              Array [
+                [Function],
+              ]
+            }
+          >
+            <WithStyles(MenuItem)
+              key="454027"
+              value={454027}
+            >
+              Minor
+            </WithStyles(MenuItem)>
+            <WithStyles(MenuItem)
+              key="454026"
+              value={454026}
+            >
+              Major
+            </WithStyles(MenuItem)>
+          </Field>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </StandardCard>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <StandardCard
+      title="Grant details"
+    >
+      <Field
+        component={[Function]}
+        disabled={false}
+        name="grants"
+      />
+    </StandardCard>
+  </WithStyles(Grid)>
+</Fragment>
+`;
+
 exports[`Component NtroFields should render all fields as disabled 1`] = `
 <Fragment>
   <WithStyles(Grid)
