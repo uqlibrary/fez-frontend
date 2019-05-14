@@ -335,7 +335,7 @@ export const ntro = {
         {
             rek_creator_contribution_statement_id: 294,
             rek_creator_contribution_statement_pid: "UQ:ec5ce03",
-            rek_creator_contribution_statement: "Statement missing.",
+            rek_creator_contribution_statement: "Missing.",
             rek_creator_contribution_statement_order: 2
         }
     ],

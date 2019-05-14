@@ -425,7 +425,7 @@ describe('ThesisSubmission form', () => {
         const enrollingUnitList = await waitForElement(() => getByTestId(container, 'downshift-0-menu'), {container});
         fireEvent.click(getByTestId(enrollingUnitList, 'downshift-0-item-0'));
 
-        fireEvent.change(getByTestId(container, 'nameAsPublishedField'), {target: {value: 'test'}});
+        fireEvent.change(getByTestId(container, 'supervisors-name-as-published-field'), {target: {value: 'test'}});
         fireEvent.click(getByText(/add supervisor/i));
 
         fireEvent.change(getByTestId(container, 'downshift-1-input'), {target: {value: 'math'}});

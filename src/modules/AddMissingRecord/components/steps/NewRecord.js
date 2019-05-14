@@ -1,13 +1,12 @@
-import React, {PureComponent} from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-import {ConfirmDialogBox} from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
-import Async from 'modules/SharedComponents/Async';
-const PublicationForm = (componentProps) => (<Async load={import('modules/SharedComponents/PublicationForm/containers/PublicationForm')} componentProps={componentProps} />);
-import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
+import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
+import { PublicationForm } from 'modules/SharedComponents/PublicationForm';
+import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 
 // forms & custom components
-import {routes} from 'config';
+import { routes } from 'config';
 import locale from 'locale/pages';
 import Grid from '@material-ui/core/Grid';
 

@@ -223,6 +223,101 @@ describe('Component MyIncompleteRecord', () => {
         wrapper.instance().componentWillUnmount();
         expect(testFN).toHaveBeenCalled();
     });
+
+    it('should render no fields as they are complete', () => {
+        const wrapper = setup({recordToFix: {
+            ...mockRecordToFix,
+                rek_display_type_lookup: 'Creative Work',
+                rek_subtype: 'Creative Work - Design/Architectural',
+                rek_author_id: 410,
+                // Linked Authors
+                fez_record_search_key_author_id: [
+                    {},
+                    {
+                        rek_author_id: 410,
+                        rek_author_id_order: 2
+                    }
+                ],
+                // Abstract
+                rek_formatted_abstract: 'test',
+                rek_description: 'test',
+                // Contribution Statement
+                fez_record_search_key_creator_contribution_statement: [
+                    {},
+                    {rek_creator_contribution_statement: 'test'}
+                ],
+                // Extent
+                fez_record_search_key_total_pages: {
+                    rek_total_pages: 'test'
+                },
+                // Audience size
+                fez_record_search_key_audience_size: {
+                    rek_audience_size: 'test'
+                },
+                // Language
+                fez_record_search_key_language: [
+                    {rek_language: 'Test'}
+                ],
+                // Quality Indicator
+                fez_record_search_key_quality_indicator: [
+                    'Test'
+                ],
+                // Significance
+                fez_record_search_key_significance: [
+                    {},
+                    {rek_significance: 'test'}
+                ]
+            }
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render langauge field', () => {
+        const wrapper = setup({recordToFix: {
+            ...mockRecordToFix,
+                rek_display_type_lookup: 'Creative Work',
+                rek_subtype: 'Creative Work - Design/Architectural',
+                rek_author_id: 410,
+                // Linked Authors
+                fez_record_search_key_author_id: [
+                    {},
+                    {
+                        rek_author_id: 410,
+                        rek_author_id_order: 2
+                    }
+                ],
+                // Abstract
+                rek_formatted_abstract: 'test',
+                rek_description: 'test',
+                // Contribution Statement
+                fez_record_search_key_creator_contribution_statement: [
+                    {},
+                    {rek_creator_contribution_statement: 'test'}
+                ],
+                // Extent
+                fez_record_search_key_total_pages: {
+                    rek_total_pages: 'test'
+                },
+                // Audience size
+                fez_record_search_key_audience_size: {
+                    rek_audience_size: 'test'
+                },
+                // Language
+                fez_record_search_key_language: [],
+                // Quality Indicator
+                fez_record_search_key_quality_indicator: [
+                    'Test'
+                ],
+                // Significance
+                fez_record_search_key_significance: [
+                    {},
+                    {rek_significance: 'test'}
+                ]
+            }
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
 });
 
 describe('Cards', () => {
@@ -527,7 +622,7 @@ describe('Cards', () => {
                 {
                     "rek_creator_contribution_statement_id": 294,
                     "rek_creator_contribution_statement_pid": "UQ:ec5ce03",
-                    "rek_creator_contribution_statement": "Statement missing.",
+                    "rek_creator_contribution_statement": "Missing.",
                     "rek_creator_contribution_statement_order": 2
                 }
             ],

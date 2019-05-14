@@ -85,7 +85,7 @@ export class GrantListEditorHeader extends PureComponent {
                                     <Grid item xs={8}>
                                         <ListItemText
                                             secondary={reorderColumn}
-                                            econdaryTypographyProps={{variant: 'caption'}}
+                                            secondaryTypographyProps={{variant: 'caption'}}
                                             style={{padding: 0}}
                                             classes={{root: classes.right}}
                                         />

@@ -26,6 +26,8 @@ import { default as formsLocale } from 'locale/forms';
 import { default as viewRecordLocale } from 'locale/viewRecord';
 import { default as alertLocale } from 'locale/publicationForm';
 
+import locale from 'locale/global';
+
 import {
     CPEE_NTRO_SUBTYPES,
     CW_NTRO_SUBTYPES,
@@ -135,6 +137,11 @@ export class MyIncompleteRecordClass extends PureComponent {
         return isAuthorLinked || isContributorLinked;
     };
 
+    currentAuthorIndex = () => {
+        const author = this.props.recordToFix && this.props.recordToFix.fez_record_search_key_author_id.filter(authorId => authorId.rek_author_id === this.props.author.aut_id);
+        return author.length > 0 && author[0].rek_author_id_order - 1;
+    };
+
     _cancelFix = () => {
         this.props.history.push(pathConfig.records.incomplete);
     };
@@ -226,7 +233,10 @@ export class MyIncompleteRecordClass extends PureComponent {
         ) && (
             !this.props.recordToFix ||
             !this.props.recordToFix.fez_record_search_key_creator_contribution_statement ||
-            this.props.recordToFix.fez_record_search_key_creator_contribution_statement.length === 0
+            this.props.recordToFix.fez_record_search_key_creator_contribution_statement.length === 0 ||
+            // Check the current users statement is not missing, empty or null
+            !this.props.recordToFix.fez_record_search_key_creator_contribution_statement[this.currentAuthorIndex()] ||
+            this.props.recordToFix.fez_record_search_key_creator_contribution_statement[this.currentAuthorIndex()].rek_creator_contribution_statement === locale.global.defaultContributorStatementMissing
         );
 
         // fez_record_search_key_language
@@ -259,7 +269,9 @@ export class MyIncompleteRecordClass extends PureComponent {
         ) && (
             !this.props.recordToFix ||
             !this.props.recordToFix.fez_record_search_key_significance ||
-            this.props.recordToFix.fez_record_search_key_significance.length === 0
+            this.props.recordToFix.fez_record_search_key_significance.length === 0 ||
+            !this.props.recordToFix.fez_record_search_key_significance[this.currentAuthorIndex()] ||
+            this.props.recordToFix.fez_record_search_key_significance[this.currentAuthorIndex()].rek_significance === 0
         );
 
         // fez_record_search_key_total_pages

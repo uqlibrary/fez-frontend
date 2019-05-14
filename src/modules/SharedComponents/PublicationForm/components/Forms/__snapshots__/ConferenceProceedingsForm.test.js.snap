@@ -204,6 +204,7 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
                   , in the format and order that they are published.
                 </div>,
                 "identifierLabel": "UQ identifier (if available)",
+                "nameAsPublishedFieldId": "editors-name-as-published-field",
                 "nameAsPublishedHint": "Type the name in the format eg. \\"John Smith\\"",
                 "nameAsPublishedLabel": "Enter each editor's name as published (eg. John Smith)",
               },
@@ -237,6 +238,7 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
             },
             "row": Object {
               "locale": Object {
+                "deleteButtonId": [Function],
                 "deleteHint": "Remove this item",
                 "deleteRecordConfirmation": Object {
                   "cancelButtonLabel": "No",

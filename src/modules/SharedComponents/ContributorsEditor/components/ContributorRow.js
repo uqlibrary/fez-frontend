@@ -100,6 +100,7 @@ export class ContributorRow extends PureComponent {
                 cancelButtonLabel: 'No',
                 confirmButtonLabel: 'Yes'
             },
+            deleteButtonId: (index) => `delete-record-${index}`
         },
         hideReorder: false,
         hideDelete: false,
@@ -226,7 +227,8 @@ export class ContributorRow extends PureComponent {
             moveDownHint,
             deleteHint,
             selectHint,
-            lockedTooltip
+            lockedTooltip,
+            deleteButtonId
         } = this.props.locale;
 
         const {
@@ -237,7 +239,8 @@ export class ContributorRow extends PureComponent {
             classes,
             hideReorder,
             hideDelete,
-            required
+            required,
+            index
         } = this.props;
 
         const enableSelect = this.props.showContributorAssignment;
@@ -341,6 +344,7 @@ export class ContributorRow extends PureComponent {
                                     aria-label={deleteHint}
                                     onClick={this._showConfirmation}
                                     disabled={disabled || hideDelete}
+                                    id={deleteButtonId(index)}
                                 >
                                     <Delete classes={{ root: `${selectedClass}` }} />
                                 </IconButton>
