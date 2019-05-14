@@ -183,6 +183,7 @@ exports[`DesignForm renders  component 1`] = `
                   , in the format and order that they are published.
                 </div>,
                 "identifierLabel": "UQ identifier (if available)",
+                "nameAsPublishedFieldId": "designers-name-as-published-field",
                 "nameAsPublishedHint": "Type the name exactly as published",
                 "nameAsPublishedLabel": "Enter each designer's name as published (eg. Smith, John)",
               },
@@ -216,6 +217,7 @@ exports[`DesignForm renders  component 1`] = `
             },
             "row": Object {
               "locale": Object {
+                "deleteButtonId": [Function],
                 "deleteHint": "Remove this item",
                 "deleteRecordConfirmation": Object {
                   "cancelButtonLabel": "No",

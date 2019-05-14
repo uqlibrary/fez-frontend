@@ -253,7 +253,7 @@ export class ContributorForm extends PureComponent {
                     <Grid item xs={12} sm >
                         <TextField
                             fullWidth
-                            id="nameAsPublishedField"
+                            id={locale.nameAsPublishedFieldId || 'nameAsPublishedField'}
                             label={locale.nameAsPublishedLabel}
                             placeholder={locale.nameAsPublishedHint}
                             value={contributor.nameAsPublished}

@@ -142,6 +142,7 @@ exports[`Component ContributorRow Row should be clickable when showContributorAs
           <WithStyles(IconButton)
             aria-label="Remove this record"
             disabled={false}
+            id="delete-record-0"
             onClick={[Function]}
           >
             <pure(DeleteIcon)
@@ -305,6 +306,7 @@ exports[`Component ContributorRow Row should not be clickable when showContribut
           <WithStyles(IconButton)
             aria-label="Remove this record"
             disabled={false}
+            id="delete-record-0"
             onClick={[Function]}
           >
             <pure(DeleteIcon)
@@ -432,6 +434,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
           <WithStyles(IconButton)
             aria-label="Remove this record"
             disabled={false}
+            id="delete-record-0"
             onClick={[Function]}
           >
             <pure(DeleteIcon)
@@ -559,6 +562,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
           <WithStyles(IconButton)
             aria-label="Remove this record"
             disabled={false}
+            id="delete-record-0"
             onClick={[Function]}
           >
             <pure(DeleteIcon)
@@ -762,6 +766,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
           <WithStyles(IconButton)
             aria-label="Remove this record"
             disabled={false}
+            id="delete-record-0"
             onClick={[Function]}
           >
             <pure(DeleteIcon)
@@ -885,6 +890,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
           <WithStyles(IconButton)
             aria-label="Remove this record"
             disabled={false}
+            id="delete-record-0"
             onClick={[Function]}
           >
             <pure(DeleteIcon)
@@ -1008,6 +1014,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
           <WithStyles(IconButton)
             aria-label="Remove this record"
             disabled={false}
+            id="delete-record-0"
             onClick={[Function]}
           >
             <pure(DeleteIcon)
@@ -1171,6 +1178,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
           <WithStyles(IconButton)
             aria-label="Remove this record"
             disabled={false}
+            id="delete-record-0"
             onClick={[Function]}
           >
             <pure(DeleteIcon)
@@ -1318,6 +1326,7 @@ exports[`Component ContributorRow a row with index and creator with creator role
           <WithStyles(IconButton)
             aria-label="Remove this record"
             disabled={false}
+            id="delete-record-0"
             onClick={[Function]}
           >
             <pure(DeleteIcon)
@@ -1465,6 +1474,7 @@ exports[`Component ContributorRow a row with index and creator with creator role
           <WithStyles(IconButton)
             aria-label="Remove this record"
             disabled={false}
+            id="delete-record-0"
             onClick={[Function]}
           >
             <pure(DeleteIcon)
@@ -1623,6 +1633,7 @@ exports[`Component ContributorRow should assign contributor 1`] = `
           <WithStyles(IconButton)
             aria-label="Remove this record"
             disabled={false}
+            id="delete-record-0"
             onClick={[Function]}
           >
             <pure(DeleteIcon)
@@ -1781,6 +1792,7 @@ exports[`Component ContributorRow should call callback functions on ListItem 1`]
           <WithStyles(IconButton)
             aria-label="Remove this record"
             disabled={false}
+            id="delete-record-0"
             onClick={[Function]}
           >
             <pure(DeleteIcon)
@@ -2043,6 +2055,7 @@ exports[`Component ContributorRow should render row as required 1`] = `
           <WithStyles(IconButton)
             aria-label="Remove this record"
             disabled={false}
+            id="delete-record-0"
             onClick={[Function]}
           >
             <pure(DeleteIcon)
@@ -2433,6 +2446,7 @@ exports[`Component ContributorRow should render with missing aria label if selec
         <span>
           <WithStyles(IconButton)
             disabled={false}
+            id="delete-record-0"
             onClick={[Function]}
           >
             <pure(DeleteIcon)
