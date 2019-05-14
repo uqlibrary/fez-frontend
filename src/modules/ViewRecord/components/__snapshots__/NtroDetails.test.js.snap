@@ -598,7 +598,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                     "rek_creator_contribution_statement_pid": "UQ:ec5ce03",
                   },
                   Object {
-                    "rek_creator_contribution_statement": "Statement missing.",
+                    "rek_creator_contribution_statement": "Missing.",
                     "rek_creator_contribution_statement_id": 294,
                     "rek_creator_contribution_statement_order": 2,
                     "rek_creator_contribution_statement_pid": "UQ:ec5ce03",
@@ -994,7 +994,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                       "rek_creator_contribution_statement_pid": "UQ:ec5ce03",
                     },
                     Object {
-                      "rek_creator_contribution_statement": "Statement missing.",
+                      "rek_creator_contribution_statement": "Missing.",
                       "rek_creator_contribution_statement_id": 294,
                       "rek_creator_contribution_statement_order": 2,
                       "rek_creator_contribution_statement_pid": "UQ:ec5ce03",
@@ -1395,7 +1395,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                         "rek_creator_contribution_statement_pid": "UQ:ec5ce03",
                       },
                       Object {
-                        "rek_creator_contribution_statement": "Statement missing.",
+                        "rek_creator_contribution_statement": "Missing.",
                         "rek_creator_contribution_statement_id": 294,
                         "rek_creator_contribution_statement_order": 2,
                         "rek_creator_contribution_statement_pid": "UQ:ec5ce03",
@@ -8626,7 +8626,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                               className="NtroDetailsClass-richTextParagraphFix-2"
                                               data={
                                                 Array [
-                                                  "Statement missing.",
+                                                  "Missing.",
                                                 ]
                                               }
                                               heading="Creator research statement"
@@ -10528,7 +10528,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                                 <span
                                                                   className="MuiTypography-root-138 MuiTypography-body2-146 NtroDetailsClass-richTextParagraphFix-2"
                                                                 >
-                                                                  Statement missing.
+                                                                  Missing.
                                                                 </span>
                                                               </Typography>
                                                             </WithStyles(Typography)>
@@ -23354,7 +23354,7 @@ exports[`NtroDetails  renders ISMN correctly 1`] = `
     <Component
       data={
         Array [
-          "Statement missing.",
+          "Missing.",
         ]
       }
       heading="Creator research statement"
@@ -23491,7 +23491,7 @@ exports[`NtroDetails  renders ISRC correctly 1`] = `
     <Component
       data={
         Array [
-          "Statement missing.",
+          "Missing.",
         ]
       }
       heading="Creator research statement"
@@ -23638,7 +23638,7 @@ exports[`NtroDetails  renders audience size correctly 1`] = `
     <Component
       data={
         Array [
-          "Statement missing.",
+          "Missing.",
         ]
       }
       heading="Creator research statement"
@@ -23775,7 +23775,7 @@ exports[`NtroDetails  renders audience size correctly 2`] = `
     <Component
       data={
         Array [
-          "Statement missing.",
+          "Missing.",
         ]
       }
       heading="Creator research statement"
@@ -23912,7 +23912,7 @@ exports[`NtroDetails  renders component as expected 1`] = `
     <Component
       data={
         Array [
-          "Statement missing.",
+          "Missing.",
         ]
       }
       heading="Creator research statement"
@@ -24293,7 +24293,7 @@ exports[`NtroDetails  renders minor significance 1`] = `
     <Component
       data={
         Array [
-          "Statement missing.",
+          "Missing.",
         ]
       }
       heading="Creator research statement"
@@ -24428,7 +24428,7 @@ exports[`NtroDetails  renders start/end page correctly due to correct doc/sub ty
     <Component
       data={
         Array [
-          "Statement missing.",
+          "Missing.",
         ]
       }
       heading="Creator research statement"
@@ -24571,7 +24571,7 @@ exports[`NtroDetails  renders the abstract according to html or plain 1`] = `
     <Component
       data={
         Array [
-          "Statement missing.",
+          "Missing.",
         ]
       }
       heading="Creator research statement"
@@ -24942,7 +24942,7 @@ exports[`NtroDetails  should show admin only fields when admin user 1`] = `
     <Component
       data={
         Array [
-          "Statement missing.",
+          "Missing.",
         ]
       }
       heading="Creator research statement"
