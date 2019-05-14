@@ -489,6 +489,7 @@ exports[`Cards will display correct empty fields for a Exhibition Creative Work 
                       , in the format and order that they are published.
                     </div>,
                     "identifierLabel": "UQ identifier (if available)",
+                    "nameAsPublishedFieldId": "authors-name-as-published-field",
                     "nameAsPublishedHint": "Type the name exactly as published",
                     "nameAsPublishedLabel": "Enter each author's name as published (eg. Smith, John)",
                   },
@@ -522,6 +523,7 @@ exports[`Cards will display correct empty fields for a Exhibition Creative Work 
                 },
                 "row": Object {
                   "locale": Object {
+                    "deleteButtonId": [Function],
                     "deleteHint": "Remove this item",
                     "deleteRecordConfirmation": Object {
                       "cancelButtonLabel": "No",
@@ -1178,6 +1180,7 @@ exports[`Cards will display correct empty fields for a Live Performance of Music
                       , in the format and order that they are published.
                     </div>,
                     "identifierLabel": "UQ identifier (if available)",
+                    "nameAsPublishedFieldId": "authors-name-as-published-field",
                     "nameAsPublishedHint": "Type the name exactly as published",
                     "nameAsPublishedLabel": "Enter each author's name as published (eg. Smith, John)",
                   },
@@ -1211,6 +1214,7 @@ exports[`Cards will display correct empty fields for a Live Performance of Music
                 },
                 "row": Object {
                   "locale": Object {
+                    "deleteButtonId": [Function],
                     "deleteHint": "Remove this item",
                     "deleteRecordConfirmation": Object {
                       "cancelButtonLabel": "No",
@@ -1867,6 +1871,7 @@ exports[`Cards will display correct empty fields for a Musical Creative work 1`]
                       , in the format and order that they are published.
                     </div>,
                     "identifierLabel": "UQ identifier (if available)",
+                    "nameAsPublishedFieldId": "authors-name-as-published-field",
                     "nameAsPublishedHint": "Type the name exactly as published",
                     "nameAsPublishedLabel": "Enter each author's name as published (eg. Smith, John)",
                   },
@@ -1900,6 +1905,7 @@ exports[`Cards will display correct empty fields for a Musical Creative work 1`]
                 },
                 "row": Object {
                   "locale": Object {
+                    "deleteButtonId": [Function],
                     "deleteHint": "Remove this item",
                     "deleteRecordConfirmation": Object {
                       "cancelButtonLabel": "No",
@@ -2556,6 +2562,7 @@ exports[`Cards will display correct empty fields for a Public Sector Research Re
                       , in the format and order that they are published.
                     </div>,
                     "identifierLabel": "UQ identifier (if available)",
+                    "nameAsPublishedFieldId": "authors-name-as-published-field",
                     "nameAsPublishedHint": "Type the name exactly as published",
                     "nameAsPublishedLabel": "Enter each author's name as published (eg. Smith, John)",
                   },
@@ -2589,6 +2596,7 @@ exports[`Cards will display correct empty fields for a Public Sector Research Re
                 },
                 "row": Object {
                   "locale": Object {
+                    "deleteButtonId": [Function],
                     "deleteHint": "Remove this item",
                     "deleteRecordConfirmation": Object {
                       "cancelButtonLabel": "No",
@@ -3245,6 +3253,7 @@ exports[`Cards will display correct empty fields for a Textual Book work 1`] = `
                       , in the format and order that they are published.
                     </div>,
                     "identifierLabel": "UQ identifier (if available)",
+                    "nameAsPublishedFieldId": "authors-name-as-published-field",
                     "nameAsPublishedHint": "Type the name exactly as published",
                     "nameAsPublishedLabel": "Enter each author's name as published (eg. Smith, John)",
                   },
@@ -3278,6 +3287,7 @@ exports[`Cards will display correct empty fields for a Textual Book work 1`] = `
                 },
                 "row": Object {
                   "locale": Object {
+                    "deleteButtonId": [Function],
                     "deleteHint": "Remove this item",
                     "deleteRecordConfirmation": Object {
                       "cancelButtonLabel": "No",
@@ -3941,6 +3951,7 @@ exports[`Cards will display correct empty fields for a Textual Book work with la
                       , in the format and order that they are published.
                     </div>,
                     "identifierLabel": "UQ identifier (if available)",
+                    "nameAsPublishedFieldId": "authors-name-as-published-field",
                     "nameAsPublishedHint": "Type the name exactly as published",
                     "nameAsPublishedLabel": "Enter each author's name as published (eg. Smith, John)",
                   },
@@ -3974,6 +3985,7 @@ exports[`Cards will display correct empty fields for a Textual Book work with la
                 },
                 "row": Object {
                   "locale": Object {
+                    "deleteButtonId": [Function],
                     "deleteHint": "Remove this item",
                     "deleteRecordConfirmation": Object {
                       "cancelButtonLabel": "No",
@@ -4630,6 +4642,7 @@ exports[`Cards will display correct empty fields for a Website Creative work 1`]
                       , in the format and order that they are published.
                     </div>,
                     "identifierLabel": "UQ identifier (if available)",
+                    "nameAsPublishedFieldId": "authors-name-as-published-field",
                     "nameAsPublishedHint": "Type the name exactly as published",
                     "nameAsPublishedLabel": "Enter each author's name as published (eg. Smith, John)",
                   },
@@ -4663,6 +4676,7 @@ exports[`Cards will display correct empty fields for a Website Creative work 1`]
                 },
                 "row": Object {
                   "locale": Object {
+                    "deleteButtonId": [Function],
                     "deleteHint": "Remove this item",
                     "deleteRecordConfirmation": Object {
                       "cancelButtonLabel": "No",
@@ -5319,6 +5333,7 @@ exports[`Cards will display correct empty fields for an Architectural Design wor
                       , in the format and order that they are published.
                     </div>,
                     "identifierLabel": "UQ identifier (if available)",
+                    "nameAsPublishedFieldId": "authors-name-as-published-field",
                     "nameAsPublishedHint": "Type the name exactly as published",
                     "nameAsPublishedLabel": "Enter each author's name as published (eg. Smith, John)",
                   },
@@ -5352,6 +5367,7 @@ exports[`Cards will display correct empty fields for an Architectural Design wor
                 },
                 "row": Object {
                   "locale": Object {
+                    "deleteButtonId": [Function],
                     "deleteHint": "Remove this item",
                     "deleteRecordConfirmation": Object {
                       "cancelButtonLabel": "No",
@@ -5923,6 +5939,7 @@ exports[`Cards will display empty where nothing is incomplete 1`] = `
                       , in the format and order that they are published.
                     </div>,
                     "identifierLabel": "UQ identifier (if available)",
+                    "nameAsPublishedFieldId": "authors-name-as-published-field",
                     "nameAsPublishedHint": "Type the name exactly as published",
                     "nameAsPublishedLabel": "Enter each author's name as published (eg. Smith, John)",
                   },
@@ -5956,6 +5973,7 @@ exports[`Cards will display empty where nothing is incomplete 1`] = `
                 },
                 "row": Object {
                   "locale": Object {
+                    "deleteButtonId": [Function],
                     "deleteHint": "Remove this item",
                     "deleteRecordConfirmation": Object {
                       "cancelButtonLabel": "No",
@@ -6746,6 +6764,7 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
                       , in the format and order that they are published.
                     </div>,
                     "identifierLabel": "UQ identifier (if available)",
+                    "nameAsPublishedFieldId": "authors-name-as-published-field",
                     "nameAsPublishedHint": "Type the name exactly as published",
                     "nameAsPublishedLabel": "Enter each author's name as published (eg. Smith, John)",
                   },
@@ -6779,6 +6798,7 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
                 },
                 "row": Object {
                   "locale": Object {
+                    "deleteButtonId": [Function],
                     "deleteHint": "Remove this item",
                     "deleteRecordConfirmation": Object {
                       "cancelButtonLabel": "No",
@@ -7569,6 +7589,7 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
                       , in the format and order that they are published.
                     </div>,
                     "identifierLabel": "UQ identifier (if available)",
+                    "nameAsPublishedFieldId": "authors-name-as-published-field",
                     "nameAsPublishedHint": "Type the name exactly as published",
                     "nameAsPublishedLabel": "Enter each author's name as published (eg. Smith, John)",
                   },
@@ -7602,6 +7623,7 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
                 },
                 "row": Object {
                   "locale": Object {
+                    "deleteButtonId": [Function],
                     "deleteHint": "Remove this item",
                     "deleteRecordConfirmation": Object {
                       "cancelButtonLabel": "No",
@@ -8415,6 +8437,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
                       , in the format and order that they are published.
                     </div>,
                     "identifierLabel": "UQ identifier (if available)",
+                    "nameAsPublishedFieldId": "authors-name-as-published-field",
                     "nameAsPublishedHint": "Type the name exactly as published",
                     "nameAsPublishedLabel": "Enter each author's name as published (eg. Smith, John)",
                   },
@@ -8448,6 +8471,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
                 },
                 "row": Object {
                   "locale": Object {
+                    "deleteButtonId": [Function],
                     "deleteHint": "Remove this item",
                     "deleteRecordConfirmation": Object {
                       "cancelButtonLabel": "No",
@@ -9244,6 +9268,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
                       , in the format and order that they are published.
                     </div>,
                     "identifierLabel": "UQ identifier (if available)",
+                    "nameAsPublishedFieldId": "authors-name-as-published-field",
                     "nameAsPublishedHint": "Type the name exactly as published",
                     "nameAsPublishedLabel": "Enter each author's name as published (eg. Smith, John)",
                   },
@@ -9277,6 +9302,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
                 },
                 "row": Object {
                   "locale": Object {
+                    "deleteButtonId": [Function],
                     "deleteHint": "Remove this item",
                     "deleteRecordConfirmation": Object {
                       "cancelButtonLabel": "No",
@@ -10067,6 +10093,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
                       , in the format and order that they are published.
                     </div>,
                     "identifierLabel": "UQ identifier (if available)",
+                    "nameAsPublishedFieldId": "authors-name-as-published-field",
                     "nameAsPublishedHint": "Type the name exactly as published",
                     "nameAsPublishedLabel": "Enter each author's name as published (eg. Smith, John)",
                   },
@@ -10100,6 +10127,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
                 },
                 "row": Object {
                   "locale": Object {
+                    "deleteButtonId": [Function],
                     "deleteHint": "Remove this item",
                     "deleteRecordConfirmation": Object {
                       "cancelButtonLabel": "No",

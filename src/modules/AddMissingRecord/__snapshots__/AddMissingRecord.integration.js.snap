@@ -1,0 +1,2539 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddMissingRecord form BookForm:Textbook should validate the form and show validation error message correctly for authors/editors field combination 1`] = `
+"Snapshot Diff:
+- First value
++ Second value
+
+@@ -142,11 +142,11 @@
+        </div>
+        <form>
+          <div
+            class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-24-27\\"
+          >
+-           <span />
++           <div />
+            <div
+              class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
+            >
+              <div
+                class=\\"MuiPaper-root-156 MuiPaper-elevation1-159 MuiPaper-rounded-157 MuiCard-root-155 Cards-card-151 StandardCard\\"
+@@ -212,12 +212,12 @@
+                      <div
+                        class=\\"MuiFormControl-root-223\\"
+                        style=\\"width: 100%;\\"
+                      >
+                        <label
+-                         class=\\"MuiFormLabel-root-234 MuiFormLabel-required-239 MuiInputLabel-root-227 MuiInputLabel-formControl-228 MuiInputLabel-animated-231\\"
+-                         data-shrink=\\"false\\"
++                         class=\\"MuiFormLabel-root-234 MuiFormLabel-filled-238 MuiFormLabel-required-239 MuiInputLabel-root-227 MuiInputLabel-formControl-228 MuiInputLabel-animated-231 MuiInputLabel-shrink-230\\"
++                         data-shrink=\\"true\\"
+                        >
+                          Work type
+                          <span
+                            class=\\"MuiFormLabel-asterisk-240\\"
+                          >
+@@ -235,20 +235,78 @@
+                            <div
+                              aria-haspopup=\\"true\\"
+                              aria-pressed=\\"false\\"
+                              class=\\"MuiSelect-select-242 MuiSelect-selectMenu-245 MuiInputBase-input-271 MuiInput-input-256\\"
+                              id=\\"rek-display-type\\"
++                             role=\\"button\\"
++                             tabindex=\\"0\\"
++                           >
++                             Book
++                           </div>
++                           <input
++                             name=\\"rek_display_type\\"
++                             placeholder=\\"Select a Work type from the dropdown list\\"
++                             type=\\"hidden\\"
++                             value=\\"174\\"
++                           />
++                           <svg
++                             aria-hidden=\\"true\\"
++                             class=\\"MuiSvgIcon-root-206 MuiSelect-icon-247\\"
++                             focusable=\\"false\\"
++                             role=\\"presentation\\"
++                             viewBox=\\"0 0 24 24\\"
++                           >
++                             <path
++                               d=\\"M7 10l5 5 5-5z\\"
++                             />
++                           </svg>
++                         </div>
++                       </div>
++                     </div>
++                   </div>
++                   <div
++                     class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++                   >
++                     <div
++                       class=\\"MuiFormControl-root-223\\"
++                       style=\\"width: 100%;\\"
++                     >
++                       <label
++                         class=\\"MuiFormLabel-root-234 MuiFormLabel-required-239 MuiInputLabel-root-227 MuiInputLabel-formControl-228 MuiInputLabel-animated-231\\"
++                         data-shrink=\\"false\\"
++                       >
++                         Work subtype
++                         <span
++                           class=\\"MuiFormLabel-asterisk-240\\"
++                         >
++                            *
++                         </span>
++                       </label>
++                       <div
++                         class=\\"MuiInputBase-root-261 MuiInput-root-248 MuiInput-underline-252 MuiInputBase-formControl-262 MuiInput-formControl-249\\"
++                         label=\\"Work subtype\\"
++                         required=\\"\\"
++                       >
++                         <div
++                           class=\\"MuiSelect-root-241\\"
++                         >
++                           <div
++                             aria-haspopup=\\"true\\"
++                             aria-pressed=\\"false\\"
++                             class=\\"MuiSelect-select-242 MuiSelect-selectMenu-245 MuiInputBase-input-271 MuiInput-input-256\\"
++                             id=\\"rek-subtype\\"
+                              role=\\"button\\"
+                              tabindex=\\"0\\"
+                            >
+                              <span>
+                                ​
+                              </span>
+                            </div>
+                            <input
+-                             name=\\"rek_display_type\\"
+-                             placeholder=\\"Select a Work type from the dropdown list\\"
++                             id=\\"rek-subtype\\"
++                             name=\\"rek_subtype\\"
++                             placeholder=\\"Select a work subtype from the dropdown list\\"
+                              type=\\"hidden\\"
+                              value=\\"\\"
+                            />
+                            <svg
+                              aria-hidden=\\"true\\"
+@@ -290,10 +348,28 @@
+                  Abandon and search again
+                </span>
+                <span
+                  class=\\"MuiTouchRipple-root-215\\"
+                />
++             </button>
++           </div>
++           <div
++             class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-auto-44\\"
++           >
++             <button
++               class=\\"MuiButtonBase-root-203 MuiButtonBase-disabled-204 MuiButton-root-280 MuiButton-contained-291 MuiButton-containedPrimary-292 MuiButton-raised-294 MuiButton-raisedPrimary-295 MuiButton-disabled-300 MuiButton-fullWidth-305\\"
++               disabled=\\"\\"
++               id=\\"submit-work\\"
++               style=\\"white-space: nowrap;\\"
++               tabindex=\\"-1\\"
++               type=\\"button\\"
++             >
++               <span
++                 class=\\"MuiButton-label-281\\"
++               >
++                 Submit for approval
++               </span>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>"
+`;
+
+exports[`AddMissingRecord form BookForm:Textbook should validate the form and show validation error message correctly for authors/editors field combination 2`] = `
+"Snapshot Diff:
+- First value
++ Second value
+
+@@ -269,12 +269,12 @@
+                      <div
+                        class=\\"MuiFormControl-root-223\\"
+                        style=\\"width: 100%;\\"
+                      >
+                        <label
+-                         class=\\"MuiFormLabel-root-234 MuiFormLabel-required-239 MuiInputLabel-root-227 MuiInputLabel-formControl-228 MuiInputLabel-animated-231\\"
+-                         data-shrink=\\"false\\"
++                         class=\\"MuiFormLabel-root-234 MuiFormLabel-filled-238 MuiFormLabel-required-239 MuiInputLabel-root-227 MuiInputLabel-formControl-228 MuiInputLabel-animated-231 MuiInputLabel-shrink-230\\"
++                         data-shrink=\\"true\\"
+                        >
+                          Work subtype
+                          <span
+                            class=\\"MuiFormLabel-asterisk-240\\"
+                          >
+@@ -295,20 +295,338 @@
+                              class=\\"MuiSelect-select-242 MuiSelect-selectMenu-245 MuiInputBase-input-271 MuiInput-input-256\\"
+                              id=\\"rek-subtype\\"
+                              role=\\"button\\"
+                              tabindex=\\"0\\"
+                            >
+-                             <span>
+-                               ​
+-                             </span>
++                             Textbook
+                            </div>
+                            <input
+                              id=\\"rek-subtype\\"
+                              name=\\"rek_subtype\\"
+                              placeholder=\\"Select a work subtype from the dropdown list\\"
+                              type=\\"hidden\\"
++                             value=\\"Textbook\\"
++                           />
++                           <svg
++                             aria-hidden=\\"true\\"
++                             class=\\"MuiSvgIcon-root-206 MuiSelect-icon-247\\"
++                             focusable=\\"false\\"
++                             role=\\"presentation\\"
++                             viewBox=\\"0 0 24 24\\"
++                           >
++                             <path
++                               d=\\"M7 10l5 5 5-5z\\"
++                             />
++                           </svg>
++                         </div>
++                       </div>
++                     </div>
++                   </div>
++                 </div>
++               </div>
++             </div>
++           </div>
++           <div
++             class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++           >
++             <div
++               class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-24-27\\"
++             >
++               <div
++                 class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++               >
++                 <div
++                   class=\\"MuiPaper-root-156 MuiPaper-elevation1-159 MuiPaper-rounded-157 MuiCard-root-155 Cards-card-151 StandardCard\\"
++                 >
++                   <div
++                     class=\\"MuiCardHeader-root-183\\"
++                   >
++                     <div
++                       class=\\"MuiCardHeader-content-186\\"
++                     >
++                       <h3
++                         class=\\"MuiTypography-root-100 MuiTypography-h5-116 MuiTypography-colorInherit-129 MuiCardHeader-title-187\\"
++                       >
++                         Book information
++                       </h3>
++                     </div>
++                   </div>
++                   <div
++                     class=\\"MuiCardContent-root-222\\"
++                   >
++                     <div
++                       class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-16-26\\"
++                     >
++                       <div
++                         class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++                       >
++                         <div
++                           aria-describedby=\\"rek-title-helper-text\\"
++                           class=\\"MuiFormControl-root-223 MuiFormControl-fullWidth-226\\"
++                         >
++                           <label
++                             class=\\"MuiFormLabel-root-234 MuiFormLabel-error-237 MuiFormLabel-required-239 MuiInputLabel-root-227 MuiInputLabel-formControl-228 MuiInputLabel-animated-231\\"
++                             data-shrink=\\"false\\"
++                             for=\\"rek-title\\"
++                           >
++                             Book title
++                             <span
++                               class=\\"MuiFormLabel-asterisk-240 MuiFormLabel-error-237\\"
++                             >
++                                *
++                             </span>
++                           </label>
++                           <div
++                             class=\\"MuiInputBase-root-261 MuiInput-root-248 MuiInput-underline-252 MuiInputBase-error-267 MuiInput-error-253 MuiInputBase-fullWidth-270 MuiInput-fullWidth-255 MuiInputBase-formControl-262 MuiInput-formControl-249 MuiInputBase-multiline-269 MuiInput-multiline-254\\"
++                           >
++                             <textarea
++                               aria-invalid=\\"true\\"
++                               class=\\"MuiInputBase-input-271 MuiInput-input-256 MuiInputBase-inputMultiline-273 MuiInput-inputMultiline-258\\"
++                               id=\\"rek-title\\"
++                               name=\\"rek_title\\"
++                               required=\\"\\"
++                               rows=\\"1\\"
++                             />
++                           </div>
++                           <p
++                             class=\\"MuiFormHelperText-root-392 MuiFormHelperText-error-393 MuiFormHelperText-required-399\\"
++                             id=\\"rek-title-helper-text\\"
++                           >
++                             This field is required
++                           </p>
++                         </div>
++                       </div>
++                       <div
++                         class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-4-49\\"
++                       >
++                         <div
++                           aria-describedby=\\"rek-place-of-publication-helper-text\\"
++                           class=\\"MuiFormControl-root-223 MuiFormControl-fullWidth-226\\"
++                         >
++                           <label
++                             class=\\"MuiFormLabel-root-234 MuiFormLabel-error-237 MuiFormLabel-required-239 MuiInputLabel-root-227 MuiInputLabel-formControl-228 MuiInputLabel-animated-231\\"
++                             data-shrink=\\"false\\"
++                             for=\\"rek-place-of-publication\\"
++                           >
++                             Place of publication
++                             <span
++                               class=\\"MuiFormLabel-asterisk-240 MuiFormLabel-error-237\\"
++                             >
++                                *
++                             </span>
++                           </label>
++                           <div
++                             class=\\"MuiInputBase-root-261 MuiInput-root-248 MuiInput-underline-252 MuiInputBase-error-267 MuiInput-error-253 MuiInputBase-fullWidth-270 MuiInput-fullWidth-255 MuiInputBase-formControl-262 MuiInput-formControl-249\\"
++                           >
++                             <input
++                               aria-invalid=\\"true\\"
++                               class=\\"MuiInputBase-input-271 MuiInput-input-256\\"
++                               id=\\"rek-place-of-publication\\"
++                               name=\\"fez_record_search_key_place_of_publication.rek_place_of_publication\\"
++                               required=\\"\\"
++                               type=\\"text\\"
++                               value=\\"\\"
++                             />
++                           </div>
++                           <p
++                             class=\\"MuiFormHelperText-root-392 MuiFormHelperText-error-393 MuiFormHelperText-required-399\\"
++                             id=\\"rek-place-of-publication-helper-text\\"
++                           >
++                             This field is required
++                           </p>
++                         </div>
++                       </div>
++                       <div
++                         class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-4-49\\"
++                       >
++                         <div
++                           aria-describedby=\\"rek-publisher-helper-text\\"
++                           class=\\"MuiFormControl-root-223 MuiFormControl-fullWidth-226\\"
++                         >
++                           <label
++                             class=\\"MuiFormLabel-root-234 MuiFormLabel-error-237 MuiFormLabel-required-239 MuiInputLabel-root-227 MuiInputLabel-formControl-228 MuiInputLabel-animated-231\\"
++                             data-shrink=\\"false\\"
++                             for=\\"rek-publisher\\"
++                           >
++                             Publisher
++                             <span
++                               class=\\"MuiFormLabel-asterisk-240 MuiFormLabel-error-237\\"
++                             >
++                                *
++                             </span>
++                           </label>
++                           <div
++                             class=\\"MuiInputBase-root-261 MuiInput-root-248 MuiInput-underline-252 MuiInputBase-error-267 MuiInput-error-253 MuiInputBase-fullWidth-270 MuiInput-fullWidth-255 MuiInputBase-formControl-262 MuiInput-formControl-249\\"
++                           >
++                             <input
++                               aria-invalid=\\"true\\"
++                               class=\\"MuiInputBase-input-271 MuiInput-input-256\\"
++                               id=\\"rek-publisher\\"
++                               name=\\"fez_record_search_key_publisher.rek_publisher\\"
++                               required=\\"\\"
++                               type=\\"text\\"
++                               value=\\"\\"
++                             />
++                           </div>
++                           <p
++                             class=\\"MuiFormHelperText-root-392 MuiFormHelperText-error-393 MuiFormHelperText-required-399\\"
++                             id=\\"rek-publisher-helper-text\\"
++                           >
++                             This field is required
++                           </p>
++                         </div>
++                       </div>
++                       <div
++                         class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-4-49\\"
++                       >
++                         <div
++                           class=\\"MuiFormControl-root-223 MuiFormControl-fullWidth-226\\"
++                         >
++                           <label
++                             class=\\"MuiFormLabel-root-234 MuiInputLabel-root-227 MuiInputLabel-formControl-228 MuiInputLabel-animated-231\\"
++                             data-shrink=\\"false\\"
++                             for=\\"Total pages\\"
++                           >
++                             Total pages
++                           </label>
++                           <div
++                             class=\\"MuiInputBase-root-261 MuiInput-root-248 MuiInput-underline-252 MuiInputBase-fullWidth-270 MuiInput-fullWidth-255 MuiInputBase-formControl-262 MuiInput-formControl-249\\"
++                           >
++                             <input
++                               aria-invalid=\\"false\\"
++                               class=\\"MuiInputBase-input-271 MuiInput-input-256\\"
++                               id=\\"Total pages\\"
++                               name=\\"fez_record_search_key_total_pages.rek_total_pages\\"
++                               placeholder=\\"\\"
++                               type=\\"text\\"
++                               value=\\"\\"
++                             />
++                           </div>
++                         </div>
++                       </div>
++                       <div
++                         class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-6-51\\"
++                       >
++                         <div
++                           class=\\"MuiFormControl-root-223 MuiFormControl-fullWidth-226\\"
++                         >
++                           <label
++                             class=\\"MuiFormLabel-root-234 MuiInputLabel-root-227 MuiInputLabel-formControl-228 MuiInputLabel-animated-231\\"
++                             data-shrink=\\"false\\"
++                             for=\\"DOI\\"
++                           >
++                             DOI
++                           </label>
++                           <div
++                             class=\\"MuiInputBase-root-261 MuiInput-root-248 MuiInput-underline-252 MuiInputBase-fullWidth-270 MuiInput-fullWidth-255 MuiInputBase-formControl-262 MuiInput-formControl-249\\"
++                           >
++                             <input
++                               aria-invalid=\\"false\\"
++                               class=\\"MuiInputBase-input-271 MuiInput-input-256\\"
++                               id=\\"DOI\\"
++                               name=\\"fez_record_search_key_doi.rek_doi\\"
++                               placeholder=\\"Enter a valid DOI (eg. 10.4324/9780203118214)\\"
++                               type=\\"text\\"
++                               value=\\"\\"
++                             />
++                           </div>
++                         </div>
++                       </div>
++                       <div
++                         class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-6-51\\"
++                       >
++                         <div
++                           class=\\"MuiGrid-container-3\\"
++                         >
++                           <div
++                             class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++                           >
++                             <label
++                               class=\\"MuiFormLabel-root-234 MuiFormLabel-error-237 MuiFormLabel-required-239 MuiInputLabel-root-227 MuiInputLabel-animated-231 MuiInputLabel-shrink-230\\"
++                               data-shrink=\\"true\\"
++                               style=\\"zoom: 0.75;\\"
++                             >
++                               Date published
++                               <span
++                                 class=\\"MuiFormLabel-asterisk-240 MuiFormLabel-error-237\\"
++                               >
++                                  *
++                               </span>
++                             </label>
++                           </div>
++                           <div
++                             class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++                           >
++                             <div
++                               class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-16-26\\"
++                               style=\\"margin-top: -12px;\\"
++                             >
++                               <div
++                                 class=\\"MuiGrid-item-4 MuiGrid-grid-xs-4-35\\"
++                               >
++                                 <label
++                                   class=\\"MuiFormLabel-root-234 MuiInputLabel-root-227 MuiInputLabel-animated-231 PartialDateForm-hideLabel-365\\"
++                                   for=\\"day\\"
++                                 >
++                                   Day
++                                 </label>
++                                 <div
++                                   class=\\"MuiFormControl-root-223 MuiFormControl-fullWidth-226\\"
++                                 >
++                                   <div
++                                     class=\\"MuiInputBase-root-261 MuiInput-root-248 MuiInput-underline-252 MuiInputBase-error-267 MuiInput-error-253 MuiInputBase-fullWidth-270 MuiInput-fullWidth-255 MuiInputBase-formControl-262 MuiInput-formControl-249\\"
++                                   >
++                                     <input
++                                       aria-invalid=\\"true\\"
++                                       class=\\"MuiInputBase-input-271 MuiInput-input-256\\"
++                                       id=\\"day\\"
++                                       label=\\"day\\"
++                                       maxlength=\\"2\\"
++                                       name=\\"day\\"
++                                       placeholder=\\"Day\\"
++                                       type=\\"text\\"
+                                        value=\\"\\"
++                                     />
++                                   </div>
++                                 </div>
++                                 <p
++                                   class=\\"MuiFormHelperText-root-392 MuiFormHelperText-error-393\\"
++                                 >
++                                   Year required
++                                 </p>
++                               </div>
++                               <div
++                                 class=\\"MuiGrid-item-4 MuiGrid-grid-xs-4-35\\"
++                               >
++                                 <label
++                                   class=\\"MuiFormLabel-root-234 MuiInputLabel-root-227 MuiInputLabel-animated-231 PartialDateForm-hideLabel-365\\"
++                                   for=\\"month\\"
++                                 >
++                                   Month
++                                 </label>
++                                 <div
++                                   class=\\"MuiInputBase-root-261 MuiInput-root-248 MuiInput-underline-252 MuiInputBase-error-267 MuiInput-error-253\\"
++                                   style=\\"width: 100%;\\"
++                                 >
++                                   <div
++                                     class=\\"MuiSelect-root-241\\"
++                                   >
++                                     <div
++                                       aria-haspopup=\\"true\\"
++                                       aria-pressed=\\"false\\"
++                                       class=\\"MuiSelect-select-242 MuiSelect-selectMenu-245 MuiInputBase-input-271 MuiInput-input-256\\"
++                                       role=\\"button\\"
++                                       tabindex=\\"0\\"
++                                     >
++                                       Month
++                                     </div>
++                                     <input
++                                       id=\\"month\\"
++                                       name=\\"month\\"
++                                       placeholder=\\"Month\\"
++                                       type=\\"hidden\\"
++                                       value=\\"-1\\"
+                                      />
+                                      <svg
+                                        aria-hidden=\\"true\\"
+                                        class=\\"MuiSvgIcon-root-206 MuiSelect-icon-247\\"
+                                        focusable=\\"false\\"
+@@ -317,12 +635,749 @@
+                                      >
+                                        <path
+                                          d=\\"M7 10l5 5 5-5z\\"
+                                        />
+                                      </svg>
++                                   </div>
++                                 </div>
++                               </div>
++                               <div
++                                 class=\\"MuiGrid-item-4 MuiGrid-grid-xs-4-35\\"
++                               >
++                                 <label
++                                   class=\\"MuiFormLabel-root-234 MuiInputLabel-root-227 MuiInputLabel-animated-231 PartialDateForm-hideLabel-365\\"
++                                   for=\\"year\\"
++                                 >
++                                   Year
++                                 </label>
++                                 <div
++                                   class=\\"MuiFormControl-root-223 MuiFormControl-fullWidth-226\\"
++                                 >
++                                   <div
++                                     class=\\"MuiInputBase-root-261 MuiInput-root-248 MuiInput-underline-252 MuiInputBase-error-267 MuiInput-error-253 MuiInputBase-fullWidth-270 MuiInput-fullWidth-255 MuiInputBase-formControl-262 MuiInput-formControl-249\\"
++                                   >
++                                     <input
++                                       aria-invalid=\\"true\\"
++                                       class=\\"MuiInputBase-input-271 MuiInput-input-256\\"
++                                       id=\\"year\\"
++                                       label=\\"year\\"
++                                       maxlength=\\"4\\"
++                                       name=\\"year\\"
++                                       placeholder=\\"Year\\"
++                                       type=\\"text\\"
++                                       value=\\"\\"
++                                     />
++                                   </div>
++                                 </div>
++                               </div>
++                             </div>
++                           </div>
++                         </div>
++                       </div>
++                     </div>
++                   </div>
+                  </div>
+                </div>
++               <div
++                 class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++               >
++                 <div
++                   class=\\"MuiPaper-root-156 MuiPaper-elevation1-159 MuiPaper-rounded-157 MuiCard-root-155 Cards-card-151 StandardCard\\"
++                 >
++                   <div
++                     class=\\"MuiCardHeader-root-183\\"
++                   >
++                     <div
++                       class=\\"MuiCardHeader-content-186\\"
++                     >
++                       <h3
++                         class=\\"MuiTypography-root-100 MuiTypography-h5-116 MuiTypography-colorInherit-129 MuiCardHeader-title-187\\"
++                       >
++                         Authors
++                       </h3>
++                     </div>
++                     <div
++                       class=\\"MuiCardHeader-action-185\\"
++                     >
++                       <button
++                         class=\\"MuiButtonBase-root-203 MuiIconButton-root-197\\"
++                         tabindex=\\"0\\"
++                         title=\\"Click for more information\\"
++                         type=\\"button\\"
++                       >
++                         <span
++                           class=\\"MuiIconButton-label-202\\"
++                         >
++                           <svg
++                             aria-hidden=\\"false\\"
++                             class=\\"MuiSvgIcon-root-206 HelpIcon-helpIcon-189\\"
++                             focusable=\\"false\\"
++                             role=\\"img\\"
++                             viewBox=\\"0 0 24 24\\"
++                           >
++                             <path
++                               d=\\"M0 0h24v24H0z\\"
++                               fill=\\"none\\"
++                             />
++                             <path
++                               d=\\"M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z\\"
++                             />
++                             <title>
++                               Click for more information
++                             </title>
++                           </svg>
++                         </span>
++                         <span
++                           class=\\"MuiTouchRipple-root-215\\"
++                         />
++                       </button>
++                     </div>
++                   </div>
++                   <div
++                     class=\\"MuiCardContent-root-222\\"
++                   >
++                     <div>
++                       <div>
++                         <span
++                           class=\\"authorSteps\\"
++                         >
++                           Step 1 of 2
++                         </span>
++                          - Please 
++                         <b>
++                           add to a list of authors below
++                         </b>
++                         , in the format and order that they are published.
++                       </div>
++                       <div
++                         class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-8-25\\"
++                         style=\\"margin-top: 8px;\\"
++                       >
++                         <div
++                           class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-true-45\\"
++                         >
++                           <div
++                             class=\\"MuiFormControl-root-223 MuiFormControl-fullWidth-226\\"
++                           >
++                             <label
++                               class=\\"MuiFormLabel-root-234 MuiFormLabel-error-237 MuiFormLabel-required-239 MuiInputLabel-root-227 MuiInputLabel-formControl-228 MuiInputLabel-animated-231\\"
++                               data-shrink=\\"false\\"
++                               for=\\"authors-name-as-published-field\\"
++                             >
++                               Enter each author's name as published (eg. Smith, John)
++                               <span
++                                 class=\\"MuiFormLabel-asterisk-240 MuiFormLabel-error-237\\"
++                               >
++                                  *
++                               </span>
++                             </label>
++                             <div
++                               class=\\"MuiInputBase-root-261 MuiInput-root-248 MuiInput-underline-252 MuiInputBase-error-267 MuiInput-error-253 MuiInputBase-fullWidth-270 MuiInput-fullWidth-255 MuiInputBase-formControl-262 MuiInput-formControl-249\\"
++                             >
++                               <input
++                                 aria-invalid=\\"true\\"
++                                 autocomplete=\\"off\\"
++                                 class=\\"MuiInputBase-input-271 MuiInput-input-256\\"
++                                 id=\\"authors-name-as-published-field\\"
++                                 placeholder=\\"Type the name exactly as published\\"
++                                 required=\\"\\"
++                                 type=\\"text\\"
++                                 value=\\"\\"
++                               />
++                             </div>
++                           </div>
++                         </div>
++                         <div
++                           class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++                           style=\\"margin-bottom: 8px;\\"
++                         >
++                           <button
++                             class=\\"MuiButtonBase-root-203 MuiButtonBase-disabled-204 MuiButton-root-280 MuiButton-contained-291 MuiButton-containedPrimary-292 MuiButton-raised-294 MuiButton-raisedPrimary-295 MuiButton-disabled-300 MuiButton-fullWidth-305\\"
++                             disabled=\\"\\"
++                             tabindex=\\"-1\\"
++                             type=\\"button\\"
++                           >
++                             <span
++                               class=\\"MuiButton-label-281\\"
++                             >
++                               Add author
++                             </span>
++                           </button>
++                         </div>
++                       </div>
++                       <span
++                         class=\\"MuiTypography-root-100 MuiTypography-caption-110 MuiTypography-colorError-134\\"
++                       >
++                         Please 
++                         <b>
++                           provide a list of authors/creators
++                         </b>
++                          of the work and 
++                         <b>
++                           select an author/creator or editor/contributor
++                         </b>
++                          as you
++                       </span>
++                     </div>
++                   </div>
++                 </div>
++               </div>
++               <div
++                 class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++               >
++                 <div
++                   class=\\"MuiPaper-root-156 MuiPaper-elevation1-159 MuiPaper-rounded-157 MuiCard-root-155 Cards-card-151 StandardCard\\"
++                 >
++                   <div
++                     class=\\"MuiCardHeader-root-183\\"
++                   >
++                     <div
++                       class=\\"MuiCardHeader-content-186\\"
++                     >
++                       <h3
++                         class=\\"MuiTypography-root-100 MuiTypography-h5-116 MuiTypography-colorInherit-129 MuiCardHeader-title-187\\"
++                       >
++                         Editors
++                       </h3>
++                     </div>
++                   </div>
++                   <div
++                     class=\\"MuiCardContent-root-222\\"
++                   >
++                     <div>
++                       <div>
++                         <span
++                           class=\\"authorSteps\\"
++                         >
++                           Step 1 of 2
++                         </span>
++                          - Please 
++                         <b>
++                           add to a list of editors below
++                         </b>
++                         , in the format \\"John Smith\\".
++                       </div>
++                       <div
++                         class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-8-25\\"
++                         style=\\"margin-top: 8px;\\"
++                       >
++                         <div
++                           class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-true-45\\"
++                         >
++                           <div
++                             class=\\"MuiFormControl-root-223 MuiFormControl-fullWidth-226\\"
++                           >
++                             <label
++                               class=\\"MuiFormLabel-root-234 MuiInputLabel-root-227 MuiInputLabel-formControl-228 MuiInputLabel-animated-231\\"
++                               data-shrink=\\"false\\"
++                               for=\\"editors-name-as-published-field\\"
++                             >
++                               Enter each editor's name as published (eg. John Smith)
++                             </label>
++                             <div
++                               class=\\"MuiInputBase-root-261 MuiInput-root-248 MuiInput-underline-252 MuiInputBase-fullWidth-270 MuiInput-fullWidth-255 MuiInputBase-formControl-262 MuiInput-formControl-249\\"
++                             >
++                               <input
++                                 aria-invalid=\\"false\\"
++                                 autocomplete=\\"off\\"
++                                 class=\\"MuiInputBase-input-271 MuiInput-input-256\\"
++                                 id=\\"editors-name-as-published-field\\"
++                                 placeholder=\\"Type the name in the format eg. \\\\\\"John Smith\\\\\\"\\"
++                                 type=\\"text\\"
++                                 value=\\"\\"
++                               />
++                             </div>
++                           </div>
++                         </div>
++                         <div
++                           class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++                           style=\\"margin-bottom: 8px;\\"
++                         >
++                           <button
++                             class=\\"MuiButtonBase-root-203 MuiButtonBase-disabled-204 MuiButton-root-280 MuiButton-contained-291 MuiButton-containedPrimary-292 MuiButton-raised-294 MuiButton-raisedPrimary-295 MuiButton-disabled-300 MuiButton-fullWidth-305\\"
++                             disabled=\\"\\"
++                             tabindex=\\"-1\\"
++                             type=\\"button\\"
++                           >
++                             <span
++                               class=\\"MuiButton-label-281\\"
++                             >
++                               Add editor
++                             </span>
++                           </button>
++                         </div>
++                       </div>
++                       <span
++                         class=\\"MuiTypography-root-100 MuiTypography-caption-110 MuiTypography-colorError-134\\"
++                       >
++                         Please 
++                         <b>
++                           provide a list of editors/contributors
++                         </b>
++                          of the work and 
++                         <b>
++                           select an editor/contributor or author/creator
++                         </b>
++                          as you
++                       </span>
++                     </div>
++                   </div>
++                 </div>
++               </div>
++               <div
++                 class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++               >
++                 <div
++                   class=\\"MuiPaper-root-156 MuiPaper-elevation1-159 MuiPaper-rounded-157 MuiCard-root-155 Cards-card-151 StandardCard\\"
++                 >
++                   <div
++                     class=\\"MuiCardHeader-root-183\\"
++                   >
++                     <div
++                       class=\\"MuiCardHeader-content-186\\"
++                     >
++                       <h3
++                         class=\\"MuiTypography-root-100 MuiTypography-h5-116 MuiTypography-colorInherit-129 MuiCardHeader-title-187\\"
++                       >
++                         ISBN
++                       </h3>
++                     </div>
++                   </div>
++                   <div
++                     class=\\"MuiCardContent-root-222\\"
++                   >
++                     <p
++                       class=\\"MuiTypography-root-100 MuiTypography-body2-108\\"
++                     >
++                       You can add up to five ISBN values
++                     </p>
++                     <div>
++                       <div
++                         class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-16-26 MuiGrid-align-items-xs-center-11\\"
++                         display=\\"row\\"
++                       >
++                         <div
++                           class=\\"MuiGrid-item-4\\"
++                         >
++                           <div
++                             class=\\"MuiFormControl-root-223 MuiFormControl-fullWidth-226\\"
++                           >
++                             <label
++                               class=\\"MuiFormLabel-root-234 MuiInputLabel-root-227 MuiInputLabel-formControl-228 MuiInputLabel-animated-231\\"
++                               data-shrink=\\"false\\"
++                               for=\\"\\"
++                             >
++                               ISBN value
++                             </label>
++                             <div
++                               class=\\"MuiInputBase-root-261 MuiInput-root-248 MuiInput-underline-252 MuiInputBase-fullWidth-270 MuiInput-fullWidth-255 MuiInputBase-formControl-262 MuiInput-formControl-249\\"
++                             >
++                               <input
++                                 aria-invalid=\\"false\\"
++                                 class=\\"MuiInputBase-input-271 MuiInput-input-256\\"
++                                 id=\\"\\"
++                                 placeholder=\\"Enter ISBN, e.g. 13 digit: 9780815375296 or 10 digit: 1861972717\\"
++                                 type=\\"text\\"
++                                 value=\\"\\"
++                               />
++                             </div>
++                           </div>
++                         </div>
++                         <div
++                           class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-2-47\\"
++                         >
++                           <button
++                             class=\\"MuiButtonBase-root-203 MuiButtonBase-disabled-204 MuiButton-root-280 MuiButton-contained-291 MuiButton-containedPrimary-292 MuiButton-raised-294 MuiButton-raisedPrimary-295 MuiButton-disabled-300 MuiButton-fullWidth-305\\"
++                             disabled=\\"\\"
++                             id=\\"add-items\\"
++                             tabindex=\\"-1\\"
++                             type=\\"button\\"
++                           >
++                             <span
++                               class=\\"MuiButton-label-281\\"
++                             >
++                               Add ISBN
++                             </span>
++                           </button>
++                         </div>
++                       </div>
++                     </div>
++                   </div>
++                 </div>
++               </div>
++               <div
++                 class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++               >
++                 <div
++                   class=\\"MuiPaper-root-156 MuiPaper-elevation1-159 MuiPaper-rounded-157 MuiCard-root-155 Cards-card-151 StandardCard\\"
++                 >
++                   <div
++                     class=\\"MuiCardHeader-root-183\\"
++                   >
++                     <div
++                       class=\\"MuiCardHeader-content-186\\"
++                     >
++                       <h3
++                         class=\\"MuiTypography-root-100 MuiTypography-h5-116 MuiTypography-colorInherit-129 MuiCardHeader-title-187\\"
++                       >
++                         ISSN
++                       </h3>
++                     </div>
++                   </div>
++                   <div
++                     class=\\"MuiCardContent-root-222\\"
++                   >
++                     <p
++                       class=\\"MuiTypography-root-100 MuiTypography-body2-108\\"
++                     >
++                       You can add up to five ISSN values
++                     </p>
++                     <div>
++                       <div
++                         class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-16-26 MuiGrid-align-items-xs-center-11\\"
++                         display=\\"row\\"
++                       >
++                         <div
++                           class=\\"MuiGrid-item-4\\"
++                         >
++                           <div
++                             class=\\"MuiFormControl-root-223 MuiFormControl-fullWidth-226\\"
++                           >
++                             <label
++                               class=\\"MuiFormLabel-root-234 MuiInputLabel-root-227 MuiInputLabel-formControl-228 MuiInputLabel-animated-231\\"
++                               data-shrink=\\"false\\"
++                               for=\\"\\"
++                             >
++                               ISSN value
++                             </label>
++                             <div
++                               class=\\"MuiInputBase-root-261 MuiInput-root-248 MuiInput-underline-252 MuiInputBase-fullWidth-270 MuiInput-fullWidth-255 MuiInputBase-formControl-262 MuiInput-formControl-249\\"
++                             >
++                               <input
++                                 aria-invalid=\\"false\\"
++                                 class=\\"MuiInputBase-input-271 MuiInput-input-256\\"
++                                 id=\\"\\"
++                                 placeholder=\\"Enter ISSN, e.g. 1838-9414\\"
++                                 type=\\"text\\"
++                                 value=\\"\\"
++                               />
++                             </div>
++                           </div>
++                         </div>
++                         <div
++                           class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-2-47\\"
++                         >
++                           <button
++                             class=\\"MuiButtonBase-root-203 MuiButtonBase-disabled-204 MuiButton-root-280 MuiButton-contained-291 MuiButton-containedPrimary-292 MuiButton-raised-294 MuiButton-raisedPrimary-295 MuiButton-disabled-300 MuiButton-fullWidth-305\\"
++                             disabled=\\"\\"
++                             id=\\"add-items\\"
++                             tabindex=\\"-1\\"
++                             type=\\"button\\"
++                           >
++                             <span
++                               class=\\"MuiButton-label-281\\"
++                             >
++                               Add ISSN
++                             </span>
++                           </button>
++                         </div>
++                       </div>
++                     </div>
++                   </div>
++                 </div>
++               </div>
++               <div
++                 class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++               >
++                 <div
++                   class=\\"MuiPaper-root-156 MuiPaper-elevation1-159 MuiPaper-rounded-157 MuiCard-root-155 Cards-card-151 StandardCard\\"
++                 >
++                   <div
++                     class=\\"MuiCardHeader-root-183\\"
++                   >
++                     <div
++                       class=\\"MuiCardHeader-content-186\\"
++                     >
++                       <h3
++                         class=\\"MuiTypography-root-100 MuiTypography-h5-116 MuiTypography-colorInherit-129 MuiCardHeader-title-187\\"
++                       >
++                         Optional details
++                       </h3>
++                     </div>
++                   </div>
++                   <div
++                     class=\\"MuiCardContent-root-222\\"
++                   >
++                     <div
++                       class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-16-26\\"
++                     >
++                       <div
++                         class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++                       >
++                         <div
++                           class=\\"MuiFormControl-root-223 MuiFormControl-fullWidth-226\\"
++                         >
++                           <label
++                             class=\\"MuiFormLabel-root-234 MuiInputLabel-root-227 MuiInputLabel-formControl-228 MuiInputLabel-animated-231\\"
++                             data-shrink=\\"false\\"
++                             for=\\"Notes (not publicly viewable)\\"
++                           >
++                             Notes (not publicly viewable)
++                           </label>
++                           <div
++                             class=\\"MuiInputBase-root-261 MuiInput-root-248 MuiInput-underline-252 MuiInputBase-fullWidth-270 MuiInput-fullWidth-255 MuiInputBase-formControl-262 MuiInput-formControl-249 MuiInputBase-multiline-269 MuiInput-multiline-254\\"
++                           >
++                             <div
++                               class=\\"Textarea-root-370\\"
++                             >
++                               <textarea
++                                 aria-hidden=\\"true\\"
++                                 class=\\"Textarea-textarea-371 Textarea-shadow-372\\"
++                                 readonly=\\"\\"
++                                 rows=\\"1\\"
++                                 tabindex=\\"-1\\"
++                               />
++                               <textarea
++                                 aria-hidden=\\"true\\"
++                                 class=\\"Textarea-textarea-371 Textarea-shadow-372\\"
++                                 readonly=\\"\\"
++                                 rows=\\"1\\"
++                                 tabindex=\\"-1\\"
++                               />
++                               <textarea
++                                 aria-invalid=\\"false\\"
++                                 class=\\"Textarea-textarea-371 MuiInputBase-input-271 MuiInput-input-256 MuiInputBase-inputMultiline-273 MuiInput-inputMultiline-258\\"
++                                 id=\\"Notes (not publicly viewable)\\"
++                                 name=\\"comments\\"
++                                 rows=\\"1\\"
++                                 style=\\"height: 0px;\\"
++                               />
++                             </div>
++                           </div>
++                         </div>
++                       </div>
++                       <div
++                         class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++                       >
++                         <div
++                           class=\\"MuiFormControl-root-223 MuiFormControl-fullWidth-226\\"
++                         >
++                           <label
++                             class=\\"MuiFormLabel-root-234 MuiInputLabel-root-227 MuiInputLabel-formControl-228 MuiInputLabel-animated-231\\"
++                             data-shrink=\\"false\\"
++                             for=\\"Link (URL)\\"
++                           >
++                             Link (URL)
++                           </label>
++                           <div
++                             class=\\"MuiInputBase-root-261 MuiInput-root-248 MuiInput-underline-252 MuiInputBase-fullWidth-270 MuiInput-fullWidth-255 MuiInputBase-formControl-262 MuiInput-formControl-249\\"
++                           >
++                             <input
++                               aria-invalid=\\"false\\"
++                               class=\\"MuiInputBase-input-271 MuiInput-input-256\\"
++                               id=\\"Link (URL)\\"
++                               name=\\"rek_link\\"
++                               type=\\"text\\"
++                               value=\\"\\"
++                             />
++                           </div>
++                         </div>
++                       </div>
++                     </div>
++                   </div>
++                 </div>
++               </div>
++             </div>
++           </div>
++           <div
++             class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++           >
++             <div
++               class=\\"MuiPaper-root-156 MuiPaper-elevation1-159 MuiPaper-rounded-157 MuiCard-root-155 Cards-card-151 StandardCard\\"
++             >
++               <div
++                 class=\\"MuiCardHeader-root-183\\"
++               >
++                 <div
++                   class=\\"MuiCardHeader-content-186\\"
++                 >
++                   <h3
++                     class=\\"MuiTypography-root-100 MuiTypography-h5-116 MuiTypography-colorInherit-129 MuiCardHeader-title-187\\"
++                   >
++                     Upload files
++                   </h3>
++                 </div>
++               </div>
++               <div
++                 class=\\"MuiCardContent-root-222\\"
++               >
++                 <p
++                   class=\\"MuiTypography-root-100 MuiTypography-body2-108 MuiTypography-gutterBottom-127\\"
++                 >
++                   You may add up to 10 files (max 8GB each)
++                 </p>
++                 <div
++                   class=\\"MuiGrid-container-3\\"
++                 >
++                   <div
++                     class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++                   >
++                     <div
++                       tabindex=\\"0\\"
++                     >
++                       <div
++                         aria-disabled=\\"false\\"
++                         class=\\"\\"
++                         style=\\"position: relative; padding: 0px;\\"
++                       >
++                         <div
++                           class=\\"MuiGrid-container-3 FileUploadDropzoneStaticContent-dropzone-374\\"
++                         >
++                           <div
++                             class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-6-51\\"
++                           >
++                             <p
++                               class=\\"MuiTypography-root-100 MuiTypography-body2-108 FileUploadDropzoneStaticContent-heading-375\\"
++                             >
++                               File upload restrictions
++                             </p>
++                             <div>
++                               Please ensure your files:
++                               <ul>
++                                 <li>
++                                   begin with a letter and are less than 45 characters long
++                                 </li>
++                                 <li>
++                                   contain only upper and lowercase alphanumeric characters, and underscores
++                                 </li>
++                                 <li>
++                                   have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
++                                 </li>
++                                 <li>
++                                   two periods are allowed for multipart zip files.  Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
++                                 </li>
++                                 <li>
++                                   are uploaded individually and not inside a folder
++                                 </li>
++                               </ul>
++                             </div>
++                           </div>
++                           <div
++                             class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-6-51\\"
++                           >
++                             <div
++                               class=\\"MuiGrid-container-3 MuiGrid-direction-xs-column-6 MuiGrid-align-items-xs-center-11 MuiGrid-justify-xs-center-20 FileUploadDropzoneStaticContent-instructions-376\\"
++                             >
++                               <div
++                                 class=\\"MuiGrid-item-4\\"
++                               >
++                                 <svg
++                                   aria-hidden=\\"true\\"
++                                   class=\\"MuiSvgIcon-root-206 FileUploadDropzoneStaticContent-cloudIcon-377\\"
++                                   focusable=\\"false\\"
++                                   role=\\"presentation\\"
++                                   viewBox=\\"0 0 24 24\\"
++                                 >
++                                   <path
++                                     d=\\"M0 0h24v24H0z\\"
++                                     fill=\\"none\\"
++                                   />
++                                   <path
++                                     d=\\"M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z\\"
++                                   />
++                                 </svg>
++                               </div>
++                               <div
++                                 class=\\"MuiGrid-item-4\\"
++                               >
++                                 <p>
++                                   Click here to select files, or drag files into this area to upload
++                                 </p>
++                               </div>
++                             </div>
++                           </div>
++                         </div>
++                         <input
++                           autocomplete=\\"off\\"
++                           id=\\"Uploader\\"
++                           multiple=\\"\\"
++                           style=\\"position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; opacity: 0.00001; pointer-events: none;\\"
++                           type=\\"file\\"
++                         />
++                       </div>
++                     </div>
++                   </div>
++                 </div>
++               </div>
++             </div>
++           </div>
++           <div
++             class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++           >
++             <div
++               class=\\"Alert\\"
++               style=\\"padding: 12px;\\"
++             >
++               <div
++                 class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-24-27 MuiGrid-align-items-xs-flex-start-12 MuiGrid-align-content-xs-center-15 MuiGrid-justify-xs-center-20 Alert-warning-386 Alert-common-378\\"
++               >
++                 <div
++                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-true-45\\"
++                 >
++                   <div
++                     class=\\"MuiGrid-container-3 MuiGrid-align-items-xs-flex-start-12 MuiGrid-align-content-xs-center-15 MuiGrid-justify-xs-center-20\\"
++                   >
++                     <div
++                       class=\\"MuiGrid-item-4 Alert-icon-379\\"
++                       id=\\"icon\\"
++                     >
++                       <svg
++                         aria-hidden=\\"true\\"
++                         class=\\"MuiSvgIcon-root-206 icon\\"
++                         focusable=\\"false\\"
++                         role=\\"presentation\\"
++                         viewBox=\\"0 0 24 24\\"
++                       >
++                         <path
++                           d=\\"M0 0h24v24H0z\\"
++                           fill=\\"none\\"
++                         />
++                         <path
++                           d=\\"M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z\\"
++                         />
++                       </svg>
++                     </div>
++                     <div
++                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31 Alert-text-380\\"
++                       id=\\"text\\"
++                     >
++                       <b>
++                         Validation - 
++                       </b>
++                       <span>
++                         Form cannot be submitted until all fields are valid. Please review all input fields.
++                         <ul>
++                           <li>
++                             Author/creator names are required
++                           </li>
++                           <li>
++                             Editor/contributor names are required
++                           </li>
++                           <li>
++                             Title is required
++                           </li>
++                           <li>
++                             Place of publication is required
++                           </li>
++                           <li>
++                             Publisher is required
++                           </li>
++                           <li>
++                             Publication date is required
++                           </li>
++                         </ul>
++                       </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>"
+`;
+
+exports[`AddMissingRecord form BookForm:Textbook should validate the form and show validation error message correctly for authors/editors field combination 3`] = `
+"Snapshot Diff:
+- First value
++ Second value
+
+@@ -358,123 +358,104 @@
+                      >
+                        <div
+                          class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
+                        >
+                          <div
+-                           aria-describedby=\\"rek-title-helper-text\\"
+                            class=\\"MuiFormControl-root-223 MuiFormControl-fullWidth-226\\"
+                          >
+                            <label
+-                             class=\\"MuiFormLabel-root-234 MuiFormLabel-error-237 MuiFormLabel-required-239 MuiInputLabel-root-227 MuiInputLabel-formControl-228 MuiInputLabel-animated-231\\"
+-                             data-shrink=\\"false\\"
++                             class=\\"MuiFormLabel-root-234 MuiFormLabel-filled-238 MuiFormLabel-required-239 MuiInputLabel-root-227 MuiInputLabel-formControl-228 MuiInputLabel-animated-231 MuiInputLabel-shrink-230\\"
++                             data-shrink=\\"true\\"
+                              for=\\"rek-title\\"
+                            >
+                              Book title
+                              <span
+-                               class=\\"MuiFormLabel-asterisk-240 MuiFormLabel-error-237\\"
++                               class=\\"MuiFormLabel-asterisk-240\\"
+                              >
+                                 *
+                              </span>
+                            </label>
+                            <div
+-                             class=\\"MuiInputBase-root-261 MuiInput-root-248 MuiInput-underline-252 MuiInputBase-error-267 MuiInput-error-253 MuiInputBase-fullWidth-270 MuiInput-fullWidth-255 MuiInputBase-formControl-262 MuiInput-formControl-249 MuiInputBase-multiline-269 MuiInput-multiline-254\\"
++                             class=\\"MuiInputBase-root-261 MuiInput-root-248 MuiInput-underline-252 MuiInputBase-fullWidth-270 MuiInput-fullWidth-255 MuiInputBase-formControl-262 MuiInput-formControl-249 MuiInputBase-multiline-269 MuiInput-multiline-254\\"
+                            >
+                              <textarea
+-                               aria-invalid=\\"true\\"
++                               aria-invalid=\\"false\\"
+                                class=\\"MuiInputBase-input-271 MuiInput-input-256 MuiInputBase-inputMultiline-273 MuiInput-inputMultiline-258\\"
+                                id=\\"rek-title\\"
+                                name=\\"rek_title\\"
+                                required=\\"\\"
+                                rows=\\"1\\"
+-                             />
++                             >
++                               book title
++                             </textarea>
+                            </div>
+-                           <p
+-                             class=\\"MuiFormHelperText-root-392 MuiFormHelperText-error-393 MuiFormHelperText-required-399\\"
+-                             id=\\"rek-title-helper-text\\"
+-                           >
+-                             This field is required
+-                           </p>
+                          </div>
+                        </div>
+                        <div
+                          class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-4-49\\"
+                        >
+                          <div
+-                           aria-describedby=\\"rek-place-of-publication-helper-text\\"
+                            class=\\"MuiFormControl-root-223 MuiFormControl-fullWidth-226\\"
+                          >
+                            <label
+-                             class=\\"MuiFormLabel-root-234 MuiFormLabel-error-237 MuiFormLabel-required-239 MuiInputLabel-root-227 MuiInputLabel-formControl-228 MuiInputLabel-animated-231\\"
+-                             data-shrink=\\"false\\"
++                             class=\\"MuiFormLabel-root-234 MuiFormLabel-filled-238 MuiFormLabel-required-239 MuiInputLabel-root-227 MuiInputLabel-formControl-228 MuiInputLabel-animated-231 MuiInputLabel-shrink-230\\"
++                             data-shrink=\\"true\\"
+                              for=\\"rek-place-of-publication\\"
+                            >
+                              Place of publication
+                              <span
+-                               class=\\"MuiFormLabel-asterisk-240 MuiFormLabel-error-237\\"
++                               class=\\"MuiFormLabel-asterisk-240\\"
+                              >
+                                 *
+                              </span>
+                            </label>
+                            <div
+-                             class=\\"MuiInputBase-root-261 MuiInput-root-248 MuiInput-underline-252 MuiInputBase-error-267 MuiInput-error-253 MuiInputBase-fullWidth-270 MuiInput-fullWidth-255 MuiInputBase-formControl-262 MuiInput-formControl-249\\"
++                             class=\\"MuiInputBase-root-261 MuiInput-root-248 MuiInput-underline-252 MuiInputBase-fullWidth-270 MuiInput-fullWidth-255 MuiInputBase-formControl-262 MuiInput-formControl-249\\"
+                            >
+                              <input
+-                               aria-invalid=\\"true\\"
++                               aria-invalid=\\"false\\"
+                                class=\\"MuiInputBase-input-271 MuiInput-input-256\\"
+                                id=\\"rek-place-of-publication\\"
+                                name=\\"fez_record_search_key_place_of_publication.rek_place_of_publication\\"
+                                required=\\"\\"
+                                type=\\"text\\"
+-                               value=\\"\\"
++                               value=\\"test place of publication\\"
+                              />
+                            </div>
+-                           <p
+-                             class=\\"MuiFormHelperText-root-392 MuiFormHelperText-error-393 MuiFormHelperText-required-399\\"
+-                             id=\\"rek-place-of-publication-helper-text\\"
+-                           >
+-                             This field is required
+-                           </p>
+                          </div>
+                        </div>
+                        <div
+                          class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-4-49\\"
+                        >
+                          <div
+-                           aria-describedby=\\"rek-publisher-helper-text\\"
+                            class=\\"MuiFormControl-root-223 MuiFormControl-fullWidth-226\\"
+                          >
+                            <label
+-                             class=\\"MuiFormLabel-root-234 MuiFormLabel-error-237 MuiFormLabel-required-239 MuiInputLabel-root-227 MuiInputLabel-formControl-228 MuiInputLabel-animated-231\\"
+-                             data-shrink=\\"false\\"
++                             class=\\"MuiFormLabel-root-234 MuiFormLabel-filled-238 MuiFormLabel-required-239 MuiInputLabel-root-227 MuiInputLabel-formControl-228 MuiInputLabel-animated-231 MuiInputLabel-shrink-230\\"
++                             data-shrink=\\"true\\"
+                              for=\\"rek-publisher\\"
+                            >
+                              Publisher
+                              <span
+-                               class=\\"MuiFormLabel-asterisk-240 MuiFormLabel-error-237\\"
++                               class=\\"MuiFormLabel-asterisk-240\\"
+                              >
+                                 *
+                              </span>
+                            </label>
+                            <div
+-                             class=\\"MuiInputBase-root-261 MuiInput-root-248 MuiInput-underline-252 MuiInputBase-error-267 MuiInput-error-253 MuiInputBase-fullWidth-270 MuiInput-fullWidth-255 MuiInputBase-formControl-262 MuiInput-formControl-249\\"
++                             class=\\"MuiInputBase-root-261 MuiInput-root-248 MuiInput-underline-252 MuiInputBase-fullWidth-270 MuiInput-fullWidth-255 MuiInputBase-formControl-262 MuiInput-formControl-249\\"
+                            >
+                              <input
+-                               aria-invalid=\\"true\\"
++                               aria-invalid=\\"false\\"
+                                class=\\"MuiInputBase-input-271 MuiInput-input-256\\"
+                                id=\\"rek-publisher\\"
+                                name=\\"fez_record_search_key_publisher.rek_publisher\\"
+                                required=\\"\\"
+                                type=\\"text\\"
+-                               value=\\"\\"
++                               value=\\"test publisher\\"
+                              />
+                            </div>
+-                           <p
+-                             class=\\"MuiFormHelperText-root-392 MuiFormHelperText-error-393 MuiFormHelperText-required-399\\"
+-                             id=\\"rek-publisher-helper-text\\"
+-                           >
+-                             This field is required
+-                           </p>
+                          </div>
+                        </div>
+                        <div
+                          class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-4-49\\"
+                        >
+@@ -539,17 +520,17 @@
+                          >
+                            <div
+                              class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
+                            >
+                              <label
+-                               class=\\"MuiFormLabel-root-234 MuiFormLabel-error-237 MuiFormLabel-required-239 MuiInputLabel-root-227 MuiInputLabel-animated-231 MuiInputLabel-shrink-230\\"
++                               class=\\"MuiFormLabel-root-234 MuiFormLabel-required-239 MuiInputLabel-root-227 MuiInputLabel-animated-231 MuiInputLabel-shrink-230\\"
+                                data-shrink=\\"true\\"
+                                style=\\"zoom: 0.75;\\"
+                              >
+                                Date published
+                                <span
+-                                 class=\\"MuiFormLabel-asterisk-240 MuiFormLabel-error-237\\"
++                                 class=\\"MuiFormLabel-asterisk-240\\"
+                                >
+                                   *
+                                </span>
+                              </label>
+                            </div>
+@@ -571,14 +552,14 @@
+                                  </label>
+                                  <div
+                                    class=\\"MuiFormControl-root-223 MuiFormControl-fullWidth-226\\"
+                                  >
+                                    <div
+-                                     class=\\"MuiInputBase-root-261 MuiInput-root-248 MuiInput-underline-252 MuiInputBase-error-267 MuiInput-error-253 MuiInputBase-fullWidth-270 MuiInput-fullWidth-255 MuiInputBase-formControl-262 MuiInput-formControl-249\\"
++                                     class=\\"MuiInputBase-root-261 MuiInput-root-248 MuiInput-underline-252 MuiInputBase-fullWidth-270 MuiInput-fullWidth-255 MuiInputBase-formControl-262 MuiInput-formControl-249\\"
+                                    >
+                                      <input
+-                                       aria-invalid=\\"true\\"
++                                       aria-invalid=\\"false\\"
+                                        class=\\"MuiInputBase-input-271 MuiInput-input-256\\"
+                                        id=\\"day\\"
+                                        label=\\"day\\"
+                                        maxlength=\\"2\\"
+                                        name=\\"day\\"
+@@ -586,15 +567,10 @@
+                                        type=\\"text\\"
+                                        value=\\"\\"
+                                      />
+                                    </div>
+                                  </div>
+-                                 <p
+-                                   class=\\"MuiFormHelperText-root-392 MuiFormHelperText-error-393\\"
+-                                 >
+-                                   Year required
+-                                 </p>
+                                </div>
+                                <div
+                                  class=\\"MuiGrid-item-4 MuiGrid-grid-xs-4-35\\"
+                                >
+                                  <label
+@@ -602,11 +578,11 @@
+                                    for=\\"month\\"
+                                  >
+                                    Month
+                                  </label>
+                                  <div
+-                                   class=\\"MuiInputBase-root-261 MuiInput-root-248 MuiInput-underline-252 MuiInputBase-error-267 MuiInput-error-253\\"
++                                   class=\\"MuiInputBase-root-261 MuiInput-root-248 MuiInput-underline-252\\"
+                                    style=\\"width: 100%;\\"
+                                  >
+                                    <div
+                                      class=\\"MuiSelect-root-241\\"
+                                    >
+@@ -651,14 +627,14 @@
+                                  </label>
+                                  <div
+                                    class=\\"MuiFormControl-root-223 MuiFormControl-fullWidth-226\\"
+                                  >
+                                    <div
+-                                     class=\\"MuiInputBase-root-261 MuiInput-root-248 MuiInput-underline-252 MuiInputBase-error-267 MuiInput-error-253 MuiInputBase-fullWidth-270 MuiInput-fullWidth-255 MuiInputBase-formControl-262 MuiInput-formControl-249\\"
++                                     class=\\"MuiInputBase-root-261 MuiInput-root-248 MuiInput-underline-252 MuiInputBase-fullWidth-270 MuiInput-fullWidth-255 MuiInputBase-formControl-262 MuiInput-formControl-249\\"
+                                    >
+                                      <input
+-                                       aria-invalid=\\"true\\"
++                                       aria-invalid=\\"false\\"
+                                        class=\\"MuiInputBase-input-271 MuiInput-input-256\\"
+                                        id=\\"year\\"
+                                        label=\\"year\\"
+                                        maxlength=\\"4\\"
+                                        name=\\"year\\"
+@@ -1359,22 +1335,10 @@
+                            <li>
+                              Author/creator names are required
+                            </li>
+                            <li>
+                              Editor/contributor names are required
+-                           </li>
+-                           <li>
+-                             Title is required
+-                           </li>
+-                           <li>
+-                             Place of publication is required
+-                           </li>
+-                           <li>
+-                             Publisher is required
+-                           </li>
+-                           <li>
+-                             Publication date is required
+                            </li>
+                          </ul>
+                        </span>
+                      </div>
+                    </div>"
+`;
+
+exports[`AddMissingRecord form BookForm:Textbook should validate the form and show validation error message correctly for authors/editors field combination 4`] = `
+"Snapshot Diff:
+- First value
++ Second value
+
+@@ -666,50 +666,14 @@
+                        class=\\"MuiCardHeader-content-186\\"
+                      >
+                        <h3
+                          class=\\"MuiTypography-root-100 MuiTypography-h5-116 MuiTypography-colorInherit-129 MuiCardHeader-title-187\\"
+                        >
+-                         Authors
++                         Editors
+                        </h3>
+                      </div>
+-                     <div
+-                       class=\\"MuiCardHeader-action-185\\"
+-                     >
+-                       <button
+-                         class=\\"MuiButtonBase-root-203 MuiIconButton-root-197\\"
+-                         tabindex=\\"0\\"
+-                         title=\\"Click for more information\\"
+-                         type=\\"button\\"
+-                       >
+-                         <span
+-                           class=\\"MuiIconButton-label-202\\"
+-                         >
+-                           <svg
+-                             aria-hidden=\\"false\\"
+-                             class=\\"MuiSvgIcon-root-206 HelpIcon-helpIcon-189\\"
+-                             focusable=\\"false\\"
+-                             role=\\"img\\"
+-                             viewBox=\\"0 0 24 24\\"
+-                           >
+-                             <path
+-                               d=\\"M0 0h24v24H0z\\"
+-                               fill=\\"none\\"
+-                             />
+-                             <path
+-                               d=\\"M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z\\"
+-                             />
+-                             <title>
+-                               Click for more information
+-                             </title>
+-                           </svg>
+-                         </span>
+-                         <span
+-                           class=\\"MuiTouchRipple-root-215\\"
+-                         />
+-                       </button>
+                    </div>
+-                   </div>
+                    <div
+                      class=\\"MuiCardContent-root-222\\"
+                    >
+                      <div>
+                        <div>
+@@ -718,13 +682,13 @@
+                          >
+                            Step 1 of 2
+                          </span>
+                           - Please 
+                          <b>
+-                           add to a list of authors below
++                           add to a list of editors below
+                          </b>
+-                         , in the format and order that they are published.
++                         , in the format \\"John Smith\\".
+                        </div>
+                        <div
+                          class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-8-25\\"
+                          style=\\"margin-top: 8px;\\"
+                        >
+@@ -733,31 +697,25 @@
+                          >
+                            <div
+                              class=\\"MuiFormControl-root-223 MuiFormControl-fullWidth-226\\"
+                            >
+                              <label
+-                               class=\\"MuiFormLabel-root-234 MuiFormLabel-error-237 MuiFormLabel-required-239 MuiInputLabel-root-227 MuiInputLabel-formControl-228 MuiInputLabel-animated-231\\"
++                               class=\\"MuiFormLabel-root-234 MuiInputLabel-root-227 MuiInputLabel-formControl-228 MuiInputLabel-animated-231\\"
+                                data-shrink=\\"false\\"
+-                               for=\\"authors-name-as-published-field\\"
+-                             >
+-                               Enter each author's name as published (eg. Smith, John)
+-                               <span
+-                                 class=\\"MuiFormLabel-asterisk-240 MuiFormLabel-error-237\\"
++                               for=\\"editors-name-as-published-field\\"
+                              >
+-                                  *
+-                               </span>
++                               Enter each editor's name as published (eg. John Smith)
+                              </label>
+                              <div
+-                               class=\\"MuiInputBase-root-261 MuiInput-root-248 MuiInput-underline-252 MuiInputBase-error-267 MuiInput-error-253 MuiInputBase-fullWidth-270 MuiInput-fullWidth-255 MuiInputBase-formControl-262 MuiInput-formControl-249\\"
++                               class=\\"MuiInputBase-root-261 MuiInput-root-248 MuiInput-underline-252 MuiInputBase-fullWidth-270 MuiInput-fullWidth-255 MuiInputBase-formControl-262 MuiInput-formControl-249\\"
+                              >
+                                <input
+-                                 aria-invalid=\\"true\\"
++                                 aria-invalid=\\"false\\"
+                                  autocomplete=\\"off\\"
+                                  class=\\"MuiInputBase-input-271 MuiInput-input-256\\"
+-                                 id=\\"authors-name-as-published-field\\"
+-                                 placeholder=\\"Type the name exactly as published\\"
+-                                 required=\\"\\"
++                                 id=\\"editors-name-as-published-field\\"
++                                 placeholder=\\"Type the name in the format eg. \\\\\\"John Smith\\\\\\"\\"
+                                  type=\\"text\\"
+                                  value=\\"\\"
+                                />
+                              </div>
+                            </div>
+@@ -773,130 +731,224 @@
+                              type=\\"button\\"
+                            >
+                              <span
+                                class=\\"MuiButton-label-281\\"
+                              >
+-                               Add author
++                               Add editor
+                              </span>
+                            </button>
+                          </div>
+                        </div>
++                       <div
++                         class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-8-25\\"
++                       >
++                         <div
++                           class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++                         >
++                           <ul
++                             class=\\"MuiList-root-343 MuiList-padding-344\\"
++                             style=\\"margin-bottom: 0px;\\"
++                           >
++                             <br />
++                             <div>
+                                <span
+-                         class=\\"MuiTypography-root-100 MuiTypography-caption-110 MuiTypography-colorError-134\\"
++                                 class=\\"authorSteps\\"
+                                >
+-                         Please 
+-                         <b>
+-                           provide a list of authors/creators
+-                         </b>
+-                          of the work and 
++                                 Step 2 of 2
++                               </span>
++                                - Please 
+                                <b>
+-                           select an author/creator or editor/contributor
++                                 select your name
+                                </b>
+-                          as you
+-                       </span>
++                                from the list below (if applicable).
+                              </div>
+-                   </div>
+-                 </div>
+-               </div>
++                             <li
++                               class=\\"MuiListItem-container-350\\"
++                             >
+                                <div
+-                 class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++                                 class=\\"MuiListItem-root-349 ContributorRowHeader-header-401 MuiListItem-default-352 MuiListItem-gutters-356 MuiListItem-secondaryAction-358\\"
+                                >
+                                  <div
+-                   class=\\"MuiPaper-root-156 MuiPaper-elevation1-159 MuiPaper-rounded-157 MuiCard-root-155 Cards-card-151 StandardCard\\"
++                                   class=\\"MuiListItemIcon-root-422\\"
++                                 >
++                                   <svg
++                                     aria-hidden=\\"true\\"
++                                     class=\\"MuiSvgIcon-root-206\\"
++                                     focusable=\\"false\\"
++                                     role=\\"presentation\\"
++                                     viewBox=\\"0 0 24 24\\"
+                                    >
++                                     <path
++                                       d=\\"M0 0h24v24H0z\\"
++                                       fill=\\"none\\"
++                                     />
++                                     <path
++                                       d=\\"M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z\\"
++                                     />
++                                   </svg>
++                                 </div>
+                                  <div
+-                     class=\\"MuiCardHeader-root-183\\"
++                                   class=\\"MuiListItemText-root-405\\"
++                                 >
++                                   <span
++                                     class=\\"MuiTypography-root-100 MuiTypography-caption-110 MuiTypography-colorTextSecondary-133 MuiListItemText-secondary-409\\"
+                                    >
++                                     Editor's name in the format eg. \\"John Smith\\"
++                                   </span>
++                                 </div>
+                                  <div
+-                       class=\\"MuiCardHeader-content-186\\"
++                                   class=\\"MuiListItemText-root-405\\"
+                                  >
+-                       <h3
+-                         class=\\"MuiTypography-root-100 MuiTypography-h5-116 MuiTypography-colorInherit-129 MuiCardHeader-title-187\\"
++                                   <span
++                                     class=\\"MuiTypography-root-100 MuiTypography-caption-110 MuiTypography-colorTextSecondary-133 MuiListItemText-secondary-409 ContributorRowHeader-right-400 ContributorRowHeader-paddingRight24-402\\"
+                                    >
+-                         Editors
+-                       </h3>
++                                     Reorder items
++                                   </span>
+                                  </div>
+                                </div>
+                                <div
+-                     class=\\"MuiCardContent-root-222\\"
++                                 class=\\"MuiListItemSecondaryAction-root-411\\"
++                               >
++                                 <span
++                                   title=\\"Remove all items\\"
++                                 >
++                                   <button
++                                     class=\\"MuiButtonBase-root-203 MuiIconButton-root-197\\"
++                                     tabindex=\\"0\\"
++                                     type=\\"button\\"
+                                    >
+-                     <div>
+-                       <div>
+                                      <span
+-                           class=\\"authorSteps\\"
++                                       class=\\"MuiIconButton-label-202\\"
++                                     >
++                                       <svg
++                                         aria-hidden=\\"false\\"
++                                         class=\\"MuiSvgIcon-root-206\\"
++                                         focusable=\\"false\\"
++                                         role=\\"img\\"
++                                         viewBox=\\"0 0 24 24\\"
+                                        >
+-                           Step 1 of 2
++                                         <path
++                                           d=\\"M0 0h24v24H0V0z\\"
++                                           fill=\\"none\\"
++                                         />
++                                         <path
++                                           d=\\"M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12l1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z\\"
++                                         />
++                                         <path
++                                           d=\\"M0 0h24v24H0z\\"
++                                           fill=\\"none\\"
++                                         />
++                                         <title>
++                                           Remove all items
++                                         </title>
++                                       </svg>
++                                     </span>
++                                     <span
++                                       class=\\"MuiTouchRipple-root-215\\"
++                                     />
++                                   </button>
+                                  </span>
+-                          - Please 
+-                         <b>
+-                           add to a list of editors below
+-                         </b>
+-                         , in the format \\"John Smith\\".
+                                </div>
++                             </li>
++                           </ul>
++                           <ul
++                             class=\\"MuiList-root-343 Connect-ContributorsEditor--list-366  MuiList-padding-344\\"
++                           >
++                             <li
++                               class=\\"MuiListItem-container-350\\"
++                             >
+                                <div
+-                         class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-8-25\\"
+-                         style=\\"margin-top: 8px;\\"
++                                 aria-label=\\"Select this editor (test) to assign it as you\\"
++                                 class=\\"MuiListItem-root-349 WithTheme-WithWidth-ContributorRow---listItem-413 MuiListItem-default-352 MuiListItem-gutters-356 MuiListItem-divider-355 MuiListItem-secondaryAction-358\\"
++                                 tabindex=\\"0\\"
+                                >
+                                  <div
+-                           class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-true-45\\"
++                                   class=\\"MuiListItemIcon-root-422\\"
++                                 >
++                                   <svg
++                                     aria-hidden=\\"true\\"
++                                     class=\\"MuiSvgIcon-root-206\\"
++                                     focusable=\\"false\\"
++                                     role=\\"presentation\\"
++                                     viewBox=\\"0 0 24 24\\"
+                                    >
++                                     <path
++                                       d=\\"M0 0h24v24H0V0z\\"
++                                       fill=\\"none\\"
++                                     />
++                                     <g>
++                                       <path
++                                         d=\\"M12 6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m0 10c2.7 0 5.8 1.29 6 2H6c.23-.72 3.31-2 6-2m0-12C9.79 4 8 5.79 8 8s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 10c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z\\"
++                                       />
++                                     </g>
++                                   </svg>
++                                 </div>
+                                  <div
+-                             class=\\"MuiFormControl-root-223 MuiFormControl-fullWidth-226\\"
++                                   class=\\"MuiGrid-container-3 WithTheme-WithWidth-ContributorRow---listContainer-412\\"
+                                  >
+-                             <label
+-                               class=\\"MuiFormLabel-root-234 MuiInputLabel-root-227 MuiInputLabel-formControl-228 MuiInputLabel-animated-231\\"
+-                               data-shrink=\\"false\\"
+-                               for=\\"editors-name-as-published-field\\"
++                                   <div
++                                     class=\\"MuiGrid-item-4 MuiGrid-grid-xs-10-41 MuiGrid-grid-sm-5-50 MuiGrid-grid-md-5-64\\"
+                                    >
+-                               Enter each editor's name as published (eg. John Smith)
+-                             </label>
+                                      <div
+-                               class=\\"MuiInputBase-root-261 MuiInput-root-248 MuiInput-underline-252 MuiInputBase-fullWidth-270 MuiInput-fullWidth-255 MuiInputBase-formControl-262 MuiInput-formControl-249\\"
++                                       class=\\"MuiListItemText-root-405\\"
++                                     >
++                                       <p
++                                         class=\\"MuiTypography-root-100 WithTheme-WithWidth-ContributorRow---primary-419  MuiTypography-body2-108 MuiTypography-noWrap-126\\"
++                                       >
++                                         test
++                                       </p>
++                                       <span
++                                         class=\\"MuiTypography-root-100 MuiTypography-caption-110 MuiTypography-noWrap-126\\"
+                                        >
+-                               <input
+-                                 aria-invalid=\\"false\\"
+-                                 autocomplete=\\"off\\"
+-                                 class=\\"MuiInputBase-input-271 MuiInput-input-256\\"
+-                                 id=\\"editors-name-as-published-field\\"
+-                                 placeholder=\\"Type the name in the format eg. \\\\\\"John Smith\\\\\\"\\"
+-                                 type=\\"text\\"
+-                                 value=\\"\\"
+-                               />
++                                         First  listed editor
++                                       </span>
++                                     </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div
+-                           class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
+-                           style=\\"margin-bottom: 8px;\\"
++                                 class=\\"MuiListItemSecondaryAction-root-411\\"
+                                >
++                                 <span
++                                   title=\\"Remove this item\\"
++                                 >
+                                    <button
+-                             class=\\"MuiButtonBase-root-203 MuiButtonBase-disabled-204 MuiButton-root-280 MuiButton-contained-291 MuiButton-containedPrimary-292 MuiButton-raised-294 MuiButton-raisedPrimary-295 MuiButton-disabled-300 MuiButton-fullWidth-305\\"
+-                             disabled=\\"\\"
+-                             tabindex=\\"-1\\"
++                                     aria-label=\\"Remove this item\\"
++                                     class=\\"MuiButtonBase-root-203 MuiIconButton-root-197\\"
++                                     id=\\"delete-editor-0\\"
++                                     tabindex=\\"0\\"
+                                      type=\\"button\\"
+                                    >
+                                      <span
+-                               class=\\"MuiButton-label-281\\"
++                                       class=\\"MuiIconButton-label-202\\"
++                                     >
++                                       <svg
++                                         aria-hidden=\\"true\\"
++                                         class=\\"MuiSvgIcon-root-206\\"
++                                         focusable=\\"false\\"
++                                         role=\\"presentation\\"
++                                         viewBox=\\"0 0 24 24\\"
+                                        >
+-                               Add editor
++                                         <path
++                                           d=\\"M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z\\"
++                                         />
++                                         <path
++                                           d=\\"M0 0h24v24H0z\\"
++                                           fill=\\"none\\"
++                                         />
++                                       </svg>
+                                      </span>
++                                     <span
++                                       class=\\"MuiTouchRipple-root-215\\"
++                                     />
+                                    </button>
++                                 </span>
+                                </div>
++                             </li>
++                           </ul>
+                          </div>
+-                       <span
+-                         class=\\"MuiTypography-root-100 MuiTypography-caption-110 MuiTypography-colorError-134\\"
+-                       >
+-                         Please 
+-                         <b>
+-                           provide a list of editors/contributors
+-                         </b>
+-                          of the work and 
+-                         <b>
+-                           select an editor/contributor or author/creator
+-                         </b>
+-                          as you
+-                       </span>
++                       </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+@@ -1276,72 +1328,12 @@
+                            autocomplete=\\"off\\"
+                            id=\\"Uploader\\"
+                            multiple=\\"\\"
+                            style=\\"position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; opacity: 0.00001; pointer-events: none;\\"
+                            type=\\"file\\"
+-                         />
+-                       </div>
+-                     </div>
+-                   </div>
+-                 </div>
+-               </div>
+-             </div>
+-           </div>
+-           <div
+-             class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
+-           >
+-             <div
+-               class=\\"Alert\\"
+-               style=\\"padding: 12px;\\"
+-             >
+-               <div
+-                 class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-24-27 MuiGrid-align-items-xs-flex-start-12 MuiGrid-align-content-xs-center-15 MuiGrid-justify-xs-center-20 Alert-warning-386 Alert-common-378\\"
+-               >
+-                 <div
+-                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-true-45\\"
+-                 >
+-                   <div
+-                     class=\\"MuiGrid-container-3 MuiGrid-align-items-xs-flex-start-12 MuiGrid-align-content-xs-center-15 MuiGrid-justify-xs-center-20\\"
+-                   >
+-                     <div
+-                       class=\\"MuiGrid-item-4 Alert-icon-379\\"
+-                       id=\\"icon\\"
+-                     >
+-                       <svg
+-                         aria-hidden=\\"true\\"
+-                         class=\\"MuiSvgIcon-root-206 icon\\"
+-                         focusable=\\"false\\"
+-                         role=\\"presentation\\"
+-                         viewBox=\\"0 0 24 24\\"
+-                       >
+-                         <path
+-                           d=\\"M0 0h24v24H0z\\"
+-                           fill=\\"none\\"
+-                         />
+-                         <path
+-                           d=\\"M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z\\"
+                          />
+-                       </svg>
+                        </div>
+-                     <div
+-                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31 Alert-text-380\\"
+-                       id=\\"text\\"
+-                     >
+-                       <b>
+-                         Validation - 
+-                       </b>
+-                       <span>
+-                         Form cannot be submitted until all fields are valid. Please review all input fields.
+-                         <ul>
+-                           <li>
+-                             Author/creator names are required
+-                           </li>
+-                           <li>
+-                             Editor/contributor names are required
+-                           </li>
+-                         </ul>
+-                       </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+@@ -1373,22 +1365,24 @@
+            </div>
+            <div
+              class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-auto-44\\"
+            >
+              <button
+-               class=\\"MuiButtonBase-root-203 MuiButtonBase-disabled-204 MuiButton-root-280 MuiButton-contained-291 MuiButton-containedPrimary-292 MuiButton-raised-294 MuiButton-raisedPrimary-295 MuiButton-disabled-300 MuiButton-fullWidth-305\\"
+-               disabled=\\"\\"
++               class=\\"MuiButtonBase-root-203 MuiButton-root-280 MuiButton-contained-291 MuiButton-containedPrimary-292 MuiButton-raised-294 MuiButton-raisedPrimary-295 MuiButton-fullWidth-305\\"
+                id=\\"submit-work\\"
+                style=\\"white-space: nowrap;\\"
+-               tabindex=\\"-1\\"
++               tabindex=\\"0\\"
+                type=\\"button\\"
+              >
+                <span
+                  class=\\"MuiButton-label-281\\"
+                >
+                  Submit for approval
+                </span>
++               <span
++                 class=\\"MuiTouchRipple-root-215\\"
++               />
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>"
+`;
+
+exports[`AddMissingRecord form BookForm:Textbook should validate the form and show validation error message correctly for authors/editors field combination 5`] = `
+"Snapshot Diff:
+- First value
++ Second value
+
+@@ -666,14 +666,50 @@
+                        class=\\"MuiCardHeader-content-186\\"
+                      >
+                        <h3
+                          class=\\"MuiTypography-root-100 MuiTypography-h5-116 MuiTypography-colorInherit-129 MuiCardHeader-title-187\\"
+                        >
+-                         Editors
++                         Authors
+                        </h3>
+                      </div>
++                     <div
++                       class=\\"MuiCardHeader-action-185\\"
++                     >
++                       <button
++                         class=\\"MuiButtonBase-root-203 MuiIconButton-root-197\\"
++                         tabindex=\\"0\\"
++                         title=\\"Click for more information\\"
++                         type=\\"button\\"
++                       >
++                         <span
++                           class=\\"MuiIconButton-label-202\\"
++                         >
++                           <svg
++                             aria-hidden=\\"false\\"
++                             class=\\"MuiSvgIcon-root-206 HelpIcon-helpIcon-189\\"
++                             focusable=\\"false\\"
++                             role=\\"img\\"
++                             viewBox=\\"0 0 24 24\\"
++                           >
++                             <path
++                               d=\\"M0 0h24v24H0z\\"
++                               fill=\\"none\\"
++                             />
++                             <path
++                               d=\\"M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z\\"
++                             />
++                             <title>
++                               Click for more information
++                             </title>
++                           </svg>
++                         </span>
++                         <span
++                           class=\\"MuiTouchRipple-root-215\\"
++                         />
++                       </button>
+                      </div>
++                   </div>
+                    <div
+                      class=\\"MuiCardContent-root-222\\"
+                    >
+                      <div>
+                        <div>
+@@ -682,13 +718,13 @@
+                          >
+                            Step 1 of 2
+                          </span>
+                           - Please 
+                          <b>
+-                           add to a list of editors below
++                           add to a list of authors below
+                          </b>
+-                         , in the format \\"John Smith\\".
++                         , in the format and order that they are published.
+                        </div>
+                        <div
+                          class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-8-25\\"
+                          style=\\"margin-top: 8px;\\"
+                        >
+@@ -697,25 +733,31 @@
+                          >
+                            <div
+                              class=\\"MuiFormControl-root-223 MuiFormControl-fullWidth-226\\"
+                            >
+                              <label
+-                               class=\\"MuiFormLabel-root-234 MuiInputLabel-root-227 MuiInputLabel-formControl-228 MuiInputLabel-animated-231\\"
++                               class=\\"MuiFormLabel-root-234 MuiFormLabel-error-237 MuiFormLabel-required-239 MuiInputLabel-root-227 MuiInputLabel-formControl-228 MuiInputLabel-animated-231\\"
+                                data-shrink=\\"false\\"
+-                               for=\\"editors-name-as-published-field\\"
++                               for=\\"authors-name-as-published-field\\"
++                             >
++                               Enter each author's name as published (eg. Smith, John)
++                               <span
++                                 class=\\"MuiFormLabel-asterisk-240 MuiFormLabel-error-237\\"
+                                >
+-                               Enter each editor's name as published (eg. John Smith)
++                                  *
++                               </span>
+                              </label>
+                              <div
+-                               class=\\"MuiInputBase-root-261 MuiInput-root-248 MuiInput-underline-252 MuiInputBase-fullWidth-270 MuiInput-fullWidth-255 MuiInputBase-formControl-262 MuiInput-formControl-249\\"
++                               class=\\"MuiInputBase-root-261 MuiInput-root-248 MuiInput-underline-252 MuiInputBase-error-267 MuiInput-error-253 MuiInputBase-fullWidth-270 MuiInput-fullWidth-255 MuiInputBase-formControl-262 MuiInput-formControl-249\\"
+                              >
+                                <input
+-                                 aria-invalid=\\"false\\"
++                                 aria-invalid=\\"true\\"
+                                  autocomplete=\\"off\\"
+                                  class=\\"MuiInputBase-input-271 MuiInput-input-256\\"
+-                                 id=\\"editors-name-as-published-field\\"
+-                                 placeholder=\\"Type the name in the format eg. \\\\\\"John Smith\\\\\\"\\"
++                                 id=\\"authors-name-as-published-field\\"
++                                 placeholder=\\"Type the name exactly as published\\"
++                                 required=\\"\\"
+                                  type=\\"text\\"
+                                  value=\\"\\"
+                                />
+                              </div>
+                            </div>
+@@ -731,224 +773,130 @@
+                              type=\\"button\\"
+                            >
+                              <span
+                                class=\\"MuiButton-label-281\\"
+                              >
+-                               Add editor
++                               Add author
+                              </span>
+                            </button>
+                          </div>
+                        </div>
+-                       <div
+-                         class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-8-25\\"
+-                       >
+-                         <div
+-                           class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
+-                         >
+-                           <ul
+-                             class=\\"MuiList-root-343 MuiList-padding-344\\"
+-                             style=\\"margin-bottom: 0px;\\"
+-                           >
+-                             <br />
+-                             <div>
+                        <span
+-                                 class=\\"authorSteps\\"
++                         class=\\"MuiTypography-root-100 MuiTypography-caption-110 MuiTypography-colorError-134\\"
+                        >
+-                                 Step 2 of 2
+-                               </span>
+-                                - Please 
++                         Please 
++                         <b>
++                           provide a list of authors/creators
++                         </b>
++                          of the work and 
+                          <b>
+-                                 select your name
++                           select an author/creator or editor/contributor
+                          </b>
+-                                from the list below (if applicable).
++                          as you
++                       </span>
+                      </div>
+-                             <li
+-                               class=\\"MuiListItem-container-350\\"
+-                             >
++                   </div>
++                 </div>
++               </div>
+                <div
+-                                 class=\\"MuiListItem-root-349 ContributorRowHeader-header-401 MuiListItem-default-352 MuiListItem-gutters-356 MuiListItem-secondaryAction-358\\"
++                 class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
+                >
+                  <div
+-                                   class=\\"MuiListItemIcon-root-422\\"
+-                                 >
+-                                   <svg
+-                                     aria-hidden=\\"true\\"
+-                                     class=\\"MuiSvgIcon-root-206\\"
+-                                     focusable=\\"false\\"
+-                                     role=\\"presentation\\"
+-                                     viewBox=\\"0 0 24 24\\"
++                   class=\\"MuiPaper-root-156 MuiPaper-elevation1-159 MuiPaper-rounded-157 MuiCard-root-155 Cards-card-151 StandardCard\\"
+                  >
+-                                     <path
+-                                       d=\\"M0 0h24v24H0z\\"
+-                                       fill=\\"none\\"
+-                                     />
+-                                     <path
+-                                       d=\\"M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z\\"
+-                                     />
+-                                   </svg>
+-                                 </div>
+                    <div
+-                                   class=\\"MuiListItemText-root-405\\"
+-                                 >
+-                                   <span
+-                                     class=\\"MuiTypography-root-100 MuiTypography-caption-110 MuiTypography-colorTextSecondary-133 MuiListItemText-secondary-409\\"
++                     class=\\"MuiCardHeader-root-183\\"
+                    >
+-                                     Editor's name in the format eg. \\"John Smith\\"
+-                                   </span>
+-                                 </div>
+                      <div
+-                                   class=\\"MuiListItemText-root-405\\"
++                       class=\\"MuiCardHeader-content-186\\"
+                      >
+-                                   <span
+-                                     class=\\"MuiTypography-root-100 MuiTypography-caption-110 MuiTypography-colorTextSecondary-133 MuiListItemText-secondary-409 ContributorRowHeader-right-400 ContributorRowHeader-paddingRight24-402\\"
++                       <h3
++                         class=\\"MuiTypography-root-100 MuiTypography-h5-116 MuiTypography-colorInherit-129 MuiCardHeader-title-187\\"
+                        >
+-                                     Reorder items
+-                                   </span>
++                         Editors
++                       </h3>
+                      </div>
+                    </div>
+                    <div
+-                                 class=\\"MuiListItemSecondaryAction-root-411\\"
+-                               >
+-                                 <span
+-                                   title=\\"Remove all items\\"
+-                                 >
+-                                   <button
+-                                     class=\\"MuiButtonBase-root-203 MuiIconButton-root-197\\"
+-                                     tabindex=\\"0\\"
+-                                     type=\\"button\\"
++                     class=\\"MuiCardContent-root-222\\"
+                    >
++                     <div>
++                       <div>
+                          <span
+-                                       class=\\"MuiIconButton-label-202\\"
+-                                     >
+-                                       <svg
+-                                         aria-hidden=\\"false\\"
+-                                         class=\\"MuiSvgIcon-root-206\\"
+-                                         focusable=\\"false\\"
+-                                         role=\\"img\\"
+-                                         viewBox=\\"0 0 24 24\\"
++                           class=\\"authorSteps\\"
+                          >
+-                                         <path
+-                                           d=\\"M0 0h24v24H0V0z\\"
+-                                           fill=\\"none\\"
+-                                         />
+-                                         <path
+-                                           d=\\"M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12l1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z\\"
+-                                         />
+-                                         <path
+-                                           d=\\"M0 0h24v24H0z\\"
+-                                           fill=\\"none\\"
+-                                         />
+-                                         <title>
+-                                           Remove all items
+-                                         </title>
+-                                       </svg>
+-                                     </span>
+-                                     <span
+-                                       class=\\"MuiTouchRipple-root-215\\"
+-                                     />
+-                                   </button>
++                           Step 1 of 2
+                          </span>
++                          - Please 
++                         <b>
++                           add to a list of editors below
++                         </b>
++                         , in the format \\"John Smith\\".
+                        </div>
+-                             </li>
+-                           </ul>
+-                           <ul
+-                             class=\\"MuiList-root-343 Connect-ContributorsEditor--list-366  MuiList-padding-344\\"
+-                           >
+-                             <li
+-                               class=\\"MuiListItem-container-350\\"
+-                             >
+                        <div
+-                                 aria-label=\\"Select this editor (test) to assign it as you\\"
+-                                 class=\\"MuiListItem-root-349 WithTheme-WithWidth-ContributorRow---listItem-413 MuiListItem-default-352 MuiListItem-gutters-356 MuiListItem-divider-355 MuiListItem-secondaryAction-358\\"
+-                                 tabindex=\\"0\\"
++                         class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-8-25\\"
++                         style=\\"margin-top: 8px;\\"
+                        >
+                          <div
+-                                   class=\\"MuiListItemIcon-root-422\\"
+-                                 >
+-                                   <svg
+-                                     aria-hidden=\\"true\\"
+-                                     class=\\"MuiSvgIcon-root-206\\"
+-                                     focusable=\\"false\\"
+-                                     role=\\"presentation\\"
+-                                     viewBox=\\"0 0 24 24\\"
++                           class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-true-45\\"
+                          >
+-                                     <path
+-                                       d=\\"M0 0h24v24H0V0z\\"
+-                                       fill=\\"none\\"
+-                                     />
+-                                     <g>
+-                                       <path
+-                                         d=\\"M12 6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m0 10c2.7 0 5.8 1.29 6 2H6c.23-.72 3.31-2 6-2m0-12C9.79 4 8 5.79 8 8s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 10c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z\\"
+-                                       />
+-                                     </g>
+-                                   </svg>
+-                                 </div>
+                            <div
+-                                   class=\\"MuiGrid-container-3 WithTheme-WithWidth-ContributorRow---listContainer-412\\"
++                             class=\\"MuiFormControl-root-223 MuiFormControl-fullWidth-226\\"
+                            >
+-                                   <div
+-                                     class=\\"MuiGrid-item-4 MuiGrid-grid-xs-10-41 MuiGrid-grid-sm-5-50 MuiGrid-grid-md-5-64\\"
++                             <label
++                               class=\\"MuiFormLabel-root-234 MuiInputLabel-root-227 MuiInputLabel-formControl-228 MuiInputLabel-animated-231\\"
++                               data-shrink=\\"false\\"
++                               for=\\"editors-name-as-published-field\\"
+                              >
++                               Enter each editor's name as published (eg. John Smith)
++                             </label>
+                              <div
+-                                       class=\\"MuiListItemText-root-405\\"
+-                                     >
+-                                       <p
+-                                         class=\\"MuiTypography-root-100 WithTheme-WithWidth-ContributorRow---primary-419  MuiTypography-body2-108 MuiTypography-noWrap-126\\"
+-                                       >
+-                                         test
+-                                       </p>
+-                                       <span
+-                                         class=\\"MuiTypography-root-100 MuiTypography-caption-110 MuiTypography-noWrap-126\\"
++                               class=\\"MuiInputBase-root-261 MuiInput-root-248 MuiInput-underline-252 MuiInputBase-fullWidth-270 MuiInput-fullWidth-255 MuiInputBase-formControl-262 MuiInput-formControl-249\\"
+                              >
+-                                         First  listed editor
+-                                       </span>
+-                                     </div>
++                               <input
++                                 aria-invalid=\\"false\\"
++                                 autocomplete=\\"off\\"
++                                 class=\\"MuiInputBase-input-271 MuiInput-input-256\\"
++                                 id=\\"editors-name-as-published-field\\"
++                                 placeholder=\\"Type the name in the format eg. \\\\\\"John Smith\\\\\\"\\"
++                                 type=\\"text\\"
++                                 value=\\"\\"
++                               />
+                              </div>
+                            </div>
+                          </div>
+                          <div
+-                                 class=\\"MuiListItemSecondaryAction-root-411\\"
++                           class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++                           style=\\"margin-bottom: 8px;\\"
+                          >
+-                                 <span
+-                                   title=\\"Remove this item\\"
+-                                 >
+                            <button
+-                                     aria-label=\\"Remove this item\\"
+-                                     class=\\"MuiButtonBase-root-203 MuiIconButton-root-197\\"
+-                                     id=\\"delete-editor-0\\"
+-                                     tabindex=\\"0\\"
++                             class=\\"MuiButtonBase-root-203 MuiButtonBase-disabled-204 MuiButton-root-280 MuiButton-contained-291 MuiButton-containedPrimary-292 MuiButton-raised-294 MuiButton-raisedPrimary-295 MuiButton-disabled-300 MuiButton-fullWidth-305\\"
++                             disabled=\\"\\"
++                             tabindex=\\"-1\\"
+                              type=\\"button\\"
+                            >
+                              <span
+-                                       class=\\"MuiIconButton-label-202\\"
+-                                     >
+-                                       <svg
+-                                         aria-hidden=\\"true\\"
+-                                         class=\\"MuiSvgIcon-root-206\\"
+-                                         focusable=\\"false\\"
+-                                         role=\\"presentation\\"
+-                                         viewBox=\\"0 0 24 24\\"
++                               class=\\"MuiButton-label-281\\"
+                              >
+-                                         <path
+-                                           d=\\"M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z\\"
+-                                         />
+-                                         <path
+-                                           d=\\"M0 0h24v24H0z\\"
+-                                           fill=\\"none\\"
+-                                         />
+-                                       </svg>
++                               Add editor
+                              </span>
+-                                     <span
+-                                       class=\\"MuiTouchRipple-root-215\\"
+-                                     />
+                            </button>
+-                                 </span>
+                          </div>
+-                             </li>
+-                           </ul>
+                        </div>
+-                       </div>
++                       <span
++                         class=\\"MuiTypography-root-100 MuiTypography-caption-110 MuiTypography-colorError-134\\"
++                       >
++                         Please 
++                         <b>
++                           provide a list of editors/contributors
++                         </b>
++                          of the work and 
++                         <b>
++                           select an editor/contributor or author/creator
++                         </b>
++                          as you
++                       </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+@@ -1328,12 +1276,72 @@
+                            autocomplete=\\"off\\"
+                            id=\\"Uploader\\"
+                            multiple=\\"\\"
+                            style=\\"position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; opacity: 0.00001; pointer-events: none;\\"
+                            type=\\"file\\"
++                         />
++                       </div>
++                     </div>
++                   </div>
++                 </div>
++               </div>
++             </div>
++           </div>
++           <div
++             class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++           >
++             <div
++               class=\\"Alert\\"
++               style=\\"padding: 12px;\\"
++             >
++               <div
++                 class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-24-27 MuiGrid-align-items-xs-flex-start-12 MuiGrid-align-content-xs-center-15 MuiGrid-justify-xs-center-20 Alert-warning-436 Alert-common-428\\"
++               >
++                 <div
++                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-true-45\\"
++                 >
++                   <div
++                     class=\\"MuiGrid-container-3 MuiGrid-align-items-xs-flex-start-12 MuiGrid-align-content-xs-center-15 MuiGrid-justify-xs-center-20\\"
++                   >
++                     <div
++                       class=\\"MuiGrid-item-4 Alert-icon-429\\"
++                       id=\\"icon\\"
++                     >
++                       <svg
++                         aria-hidden=\\"true\\"
++                         class=\\"MuiSvgIcon-root-206 icon\\"
++                         focusable=\\"false\\"
++                         role=\\"presentation\\"
++                         viewBox=\\"0 0 24 24\\"
++                       >
++                         <path
++                           d=\\"M0 0h24v24H0z\\"
++                           fill=\\"none\\"
++                         />
++                         <path
++                           d=\\"M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z\\"
+                          />
++                       </svg>
+                      </div>
++                     <div
++                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31 Alert-text-430\\"
++                       id=\\"text\\"
++                     >
++                       <b>
++                         Validation - 
++                       </b>
++                       <span>
++                         Form cannot be submitted until all fields are valid. Please review all input fields.
++                         <ul>
++                           <li>
++                             Author/creator names are required
++                           </li>
++                           <li>
++                             Editor/contributor names are required
++                           </li>
++                         </ul>
++                       </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+@@ -1365,24 +1373,22 @@
+            </div>
+            <div
+              class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-auto-44\\"
+            >
+              <button
+-               class=\\"MuiButtonBase-root-203 MuiButton-root-280 MuiButton-contained-291 MuiButton-containedPrimary-292 MuiButton-raised-294 MuiButton-raisedPrimary-295 MuiButton-fullWidth-305\\"
++               class=\\"MuiButtonBase-root-203 MuiButtonBase-disabled-204 MuiButton-root-280 MuiButton-contained-291 MuiButton-containedPrimary-292 MuiButton-raised-294 MuiButton-raisedPrimary-295 MuiButton-disabled-300 MuiButton-fullWidth-305\\"
++               disabled=\\"\\"
+                id=\\"submit-work\\"
+                style=\\"white-space: nowrap;\\"
+-               tabindex=\\"0\\"
++               tabindex=\\"-1\\"
+                type=\\"button\\"
+              >
+                <span
+                  class=\\"MuiButton-label-281\\"
+                >
+                  Submit for approval
+                </span>
+-               <span
+-                 class=\\"MuiTouchRipple-root-215\\"
+-               />
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>"
+`;

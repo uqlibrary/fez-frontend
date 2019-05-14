@@ -592,7 +592,8 @@ export default {
                         nameAsPublishedLabel: 'Enter each author\'s name as published (eg. Smith, John)',
                         nameAsPublishedHint: 'Type the name exactly as published',
                         identifierLabel: 'UQ identifier (if available)',
-                        addButton: 'Add author'
+                        addButton: 'Add author',
+                        nameAsPublishedFieldId: 'authors-name-as-published-field'
                     }
                 },
                 header: {
@@ -628,7 +629,8 @@ export default {
                             confirmationMessage: 'Are you sure you want to delete this item?',
                             cancelButtonLabel: 'No',
                             confirmButtonLabel: 'Yes'
-                        }
+                        },
+                        deleteButtonId: (index) => `delete-author-${index}`
                     }
                 }
             }
@@ -655,7 +657,8 @@ export default {
                         nameAsPublishedLabel: 'Enter each editor\'s name as published (eg. John Smith)',
                         nameAsPublishedHint: 'Type the name in the format eg. "John Smith"',
                         identifierLabel: 'UQ identifier (if available)',
-                        addButton: 'Add editor'
+                        addButton: 'Add editor',
+                        nameAsPublishedFieldId: 'editors-name-as-published-field'
                     }
                 },
                 header: {
@@ -690,7 +693,8 @@ export default {
                             confirmationMessage: 'Are you sure you want to delete this item?',
                             cancelButtonLabel: 'No',
                             confirmButtonLabel: 'Yes'
-                        }
+                        },
+                        deleteButtonId: (index) => `delete-editor-${index}`
                     }
                 }
             }
@@ -718,7 +722,8 @@ export default {
                         creatorRoleLabel: 'Enter creator\'s role',
                         creatorRoleHint: 'Select role from list or type the role of the creator in relation to the dataset',
                         identifierLabel: 'UQ identifier (if available)',
-                        addButton: 'Add creator'
+                        addButton: 'Add creator',
+                        nameAsPublishedFieldId: 'creators-name-as-published-field'
                     }
                 },
                 header: {
@@ -754,7 +759,8 @@ export default {
                             confirmationMessage: 'Are you sure you want to delete this item?',
                             cancelButtonLabel: 'No',
                             confirmButtonLabel: 'Yes'
-                        }
+                        },
+                        deleteButtonId: (index) => `delete-creator-${index}`
                     }
                 }
             }
@@ -781,7 +787,8 @@ export default {
                         nameAsPublishedLabel: 'Enter each designer\'s name as published (eg. Smith, John)',
                         nameAsPublishedHint: 'Type the name exactly as published',
                         identifierLabel: 'UQ identifier (if available)',
-                        addButton: 'Add designer'
+                        addButton: 'Add designer',
+                        nameAsPublishedFieldId: 'designers-name-as-published-field'
                     }
                 },
                 header: {
@@ -816,7 +823,8 @@ export default {
                             confirmationMessage: 'Are you sure you want to delete this item?',
                             cancelButtonLabel: 'No',
                             confirmButtonLabel: 'Yes'
-                        }
+                        },
+                        deleteButtonId: (index) => `delete-designer-${index}`
                     }
                 },
             }
@@ -841,7 +849,8 @@ export default {
                         nameAsPublishedLabel: 'Enter each supervisor\'s name as published (eg. Smith, John)',
                         nameAsPublishedHint: '',
                         identifierLabel: 'UQ identifier (if available)',
-                        addButton: 'Add supervisor'
+                        addButton: 'Add supervisor',
+                        nameAsPublishedFieldId: 'supervisors-name-as-published-field'
                     }
                 },
                 header: {
@@ -876,7 +885,8 @@ export default {
                             confirmationMessage: 'Are you sure you want to delete this item?',
                             cancelButtonLabel: 'No',
                             confirmButtonLabel: 'Yes'
-                        }
+                        },
+                        deleteButtonId: (index) => `delete-supervisor-${index}`
                     }
                 }
             }
@@ -896,7 +906,8 @@ export default {
                         nameAsPublishedLabel: 'Enter each supervisor’s name on a separate line e.g. Firstname Surname',
                         nameAsPublishedHint: '',
                         identifierLabel: 'UQ identifier (if available)',
-                        addButton: 'Add supervisor'
+                        addButton: 'Add supervisor',
+                        nameAsPublishedFieldId: 'supervisors-name-as-published-field'
                     }
                 },
                 header: {
@@ -927,7 +938,8 @@ export default {
                             confirmationMessage: 'Are you sure you want to delete this item?',
                             cancelButtonLabel: 'No',
                             confirmButtonLabel: 'Yes'
-                        }
+                        },
+                        deleteButtonId: (index) => `delete-supervisor-${index}`
                     }
                 }
             }
@@ -951,7 +963,8 @@ export default {
                         nameAsPublishedLabel: 'Enter each contributor\'s name as published (eg. Smith, John)',
                         nameAsPublishedHint: 'Type the name exactly as published',
                         identifierLabel: 'UQ identifier (if available)',
-                        addButton: 'Add contributor'
+                        addButton: 'Add contributor',
+                        nameAsPublishedFieldId: 'contributors-name-as-published-field'
                     }
                 },
                 header: {
@@ -986,7 +999,8 @@ export default {
                             confirmationMessage: 'Are you sure you want to delete this item?',
                             cancelButtonLabel: 'No',
                             confirmButtonLabel: 'Yes'
-                        }
+                        },
+                        deleteButtonId: (index) => `delete-contributor-${index}`
                     }
                 }
             }

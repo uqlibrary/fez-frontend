@@ -319,7 +319,7 @@ describe('AddDataCollection form', () => {
         const forCodesList = await waitForElement(() => getByTestId(container, 'downshift-1-menu'), {container});
         fireEvent.click(getByTestId(forCodesList, 'downshift-1-item-0'));
 
-        fireEvent.change(getByTestId(container, 'nameAsPublishedField'), {target: {value: 'test'}});
+        fireEvent.change(getByTestId(container, 'creators-name-as-published-field'), {target: {value: 'test'}});
 
         fireEvent.focus(getByTestId(container, 'downshift-2-input'));
         const creatorRoleList = getByTestId(container, 'downshift-2-menu');
