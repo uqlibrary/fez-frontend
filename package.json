@@ -254,6 +254,7 @@
       "!src/**/containers/*.{js,jsx}",
       "src/modules/Index/*.{js,jsx}",
       "src/actions/*.{js,jsx}",
+      "src/helpers/*.{js,jsx}",
       "src/middleware/*.{js,jsx}",
       "src/reducers/*.{js,jsx}"
     ],
