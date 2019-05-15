@@ -218,6 +218,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             fullWidth={true}
             maxValue={2000}
             name="impactStatement"
+            required={true}
             title={
               <span>
                 Creator research statement*. Include Background, Contribution and Significance 
@@ -768,6 +769,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
             fullWidth={true}
             maxValue={2000}
             name="impactStatement"
+            required={true}
             title={
               <span>
                 Creator research statement*. Include Background, Contribution and Significance 
@@ -1738,6 +1740,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             fullWidth={true}
             maxValue={2000}
             name="impactStatement"
+            required={true}
             title={
               <span>
                 Creator research statement*. Include Background, Contribution and Significance 

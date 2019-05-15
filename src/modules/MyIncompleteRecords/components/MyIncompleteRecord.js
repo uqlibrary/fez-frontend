@@ -241,6 +241,25 @@ export class MyIncompleteRecordClass extends PureComponent {
             !this.props.recordToFix.fez_record_search_key_audience_size.rek_audience_size
         );
 
+        // fez_record_search_key_significance
+        const editSignificance = (
+            isDocumentType1 ||
+            isDocumentType2 ||
+            isDocumentType3
+        ) && (
+            !this.props.recordToFix ||
+            !this.props.recordToFix.fez_record_search_key_significance ||
+            this.props.recordToFix.fez_record_search_key_significance.length === 0 ||
+            this.props.recordToFix.fez_record_search_key_significance.map(item => {
+                if(item.rek_significance_order === this.currentAuthorOrder()) {
+                    console.log('Author order on record: ', this.currentAuthorOrder(), 'item.rek_significance', item.rek_significance);
+                    return (!item.rek_significance || item.rek_significance === 0);
+                } else {
+                    return false;
+                }
+            })[this.props.recordToFix.fez_record_search_key_significance.length === this.props.recordToFix.fez_record_search_key_author.length ? this.currentAuthorIndex() : 0]
+        );
+
         // fez_record_search_key_creator_contribution_statement
         const editCreatorContributionStatement = (
             isDocumentType1 ||
@@ -253,11 +272,11 @@ export class MyIncompleteRecordClass extends PureComponent {
             // Check the current users statement is not missing, empty or null
             this.props.recordToFix.fez_record_search_key_creator_contribution_statement.map(item => {
                 if(item.rek_creator_contribution_statement_order === this.currentAuthorOrder()) {
-                    return (!item.rek_creator_contribution_statement ||  item.rek_creator_contribution_statement === '' || item.rek_creator_contribution_statement === locale.global.defaultContributorStatementMissing) && true;
+                    return (!item.rek_creator_contribution_statement ||  item.rek_creator_contribution_statement === '' || item.rek_creator_contribution_statement === locale.global.defaultContributorStatementMissing);
                 } else {
                     return false;
                 }
-            })
+            })[this.props.recordToFix.fez_record_search_key_creator_contribution_statement.length === this.props.recordToFix.fez_record_search_key_author.length ? this.currentAuthorIndex() : 0]
         );
 
         // fez_record_search_key_language
@@ -280,25 +299,6 @@ export class MyIncompleteRecordClass extends PureComponent {
             !this.props.recordToFix ||
             !this.props.recordToFix.fez_record_search_key_quality_indicator ||
             this.props.recordToFix.fez_record_search_key_quality_indicator.length === 0
-        );
-
-        // fez_record_search_key_significance
-        const editSignificance = (
-            isDocumentType1 ||
-            isDocumentType2 ||
-            isDocumentType3
-        ) && (
-            !this.props.recordToFix ||
-            !this.props.recordToFix.fez_record_search_key_significance ||
-            this.props.recordToFix.fez_record_search_key_significance.length === 0 ||
-            this.props.recordToFix.fez_record_search_key_significance.map(item => {
-                if(item.rek_significance_order === this.currentAuthorOrder()) {
-                    console.log('Current authors signif', item.rek_significance === 0);
-                    return !item.rek_significance || item.rek_significance === 0;
-                } else {
-                    return false;
-                }
-            })
         );
 
         // fez_record_search_key_total_pages
@@ -331,12 +331,13 @@ export class MyIncompleteRecordClass extends PureComponent {
                 {saveConfirmationLocale.confirmationMessage}
             </React.Fragment>
         );
+
+        // Does the record have any files attached
         const hasAnyFiles = this.props.recordToFix &&
             this.props.recordToFix.fez_datastream_info &&
             this.props.recordToFix.fez_datastream_info.length || 0
         ;
-        console.log('editSignificance', editSignificance);
-        console.log('this.currentAuthorOrder()', this.currentAuthorOrder());
+        console.log(editSignificance);
         return (
             <StandardPage title={txt.title}>
                 <PublicationCitation publication={this.props.recordToFix} />
