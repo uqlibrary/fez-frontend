@@ -1,7 +1,14 @@
 import {validation, openAccessConfig} from 'config';
-import {IN_CREATION, IN_DRAFT, IN_REVIEW, UNPUBLISHED, RETRACTED, SUBMITTED_FOR_APPROVAL} from 'config/general';
+import {
+    IN_CREATION,
+    IN_DRAFT,
+    IN_REVIEW,
+    UNPUBLISHED,
+    RETRACTED,
+    SUBMITTED_FOR_APPROVAL
+} from 'config/general';
 
-const zeroPaddedYear = (value) => value ? ('0000' + value).substr(-4) : '*';
+export const zeroPaddedYear = (value) => value ? ('0000' + value).substr(-4) : '*';
 
 /**
  * Translate selected facets to query string parameters
@@ -163,7 +170,8 @@ export const CURRENT_USER_RECORDS_API = (values, route = 'search') => (
         options: {
             params: {
                 rule: 'mine',
-                ...{...getStandardSearchParams(values), ...getOpenAccessSearchParams(values)}
+                ...getStandardSearchParams(values),
+                ...getOpenAccessSearchParams(values)
             }
         }
     }
@@ -175,7 +183,8 @@ export const INCOMPLETE_RECORDS_API = (values) => {
         options: {
             params: {
                 rule: 'incomplete',
-                ...{...getStandardSearchParams(values), ...getOpenAccessSearchParams(values)}
+                ...getStandardSearchParams(values),
+                ...getOpenAccessSearchParams(values)
             }
         }
     };
@@ -188,14 +197,15 @@ export const AUTHOR_PUBLICATIONS_STATS_ONLY_API = (values) => (
             params: {
                 rule: 'mine',
                 'filters[stats_only]': true,
-                ...{...getStandardSearchParams(values), ...getOpenAccessSearchParams(values)}
+                ...getStandardSearchParams(values),
+                ...getOpenAccessSearchParams(values)
             }
         }
     }
 );
 export const TRENDING_PUBLICATIONS_API = () => ({apiUrl: 'records/trending'});
 
-export const formatSearchQueryParams = (result, key, searchQueryParams) => {
+export const formatSearchQueryParams = ({result, key, searchQueryParams}) => {
     const {value} = searchQueryParams[key];
     switch (key) {
         case 'rek_pid':
@@ -226,24 +236,23 @@ export const formatSearchQueryParams = (result, key, searchQueryParams) => {
                     : value
             };
         case 'rek_created_date':
-            if (key === 'rek_updated_date') {
-                return result;
-            }
-            break;
         case 'rek_updated_date':
+            return result;
+        case 'all':
             return {
                 ...result,
                 [key]: value
             };
         default:
-            return {
-                ...result,
-                [key]: !!value
-                    ? value
-                    : searchQueryParams[key]
-            };
+            break;
     }
-    return result;
+
+    return {
+        ...result,
+        [key]: !!value
+            ? value
+            : searchQueryParams[key]
+    };
 };
 
 export const SEARCH_INTERNAL_RECORDS_API = (query, route = 'search') => {
@@ -256,7 +265,7 @@ export const SEARCH_INTERNAL_RECORDS_API = (query, route = 'search') => {
     const searchQueryParamsWithoutLabels = query.searchMode === 'advanced' &&
     !!searchQueryParams &&
     Object.keys(searchQueryParams).reduce(
-        (result, key) => formatSearchQueryParams(result, key, searchQueryParams),
+        (result, key) => formatSearchQueryParams({result, key, searchQueryParams}),
         {}
     ) || searchQueryParams;
 

@@ -256,7 +256,8 @@
       "src/actions/*.{js,jsx}",
       "src/helpers/*.{js,jsx}",
       "src/middleware/*.{js,jsx}",
-      "src/reducers/*.{js,jsx}"
+      "src/reducers/*.{js,jsx}",
+      "src/repositories/routes.js"
     ],
     "coverageReporters": [
       "html",
