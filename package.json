@@ -255,8 +255,7 @@
       "src/modules/Index/*.{js,jsx}",
       "src/actions/*.{js,jsx}",
       "src/middleware/*.{js,jsx}",
-      "src/reducers/*.{js,jsx}",
-      "!src/modules/SharedComponents/Toolbox/Charts/components/*.js"
+      "src/reducers/*.{js,jsx}"
     ],
     "coverageReporters": [
       "html",

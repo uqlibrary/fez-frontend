@@ -23,4 +23,21 @@ describe('AuthorsPublicationsPerYearChart ', () => {
         const app = setup({series: [], categories: [], yAxisTitle: 'title'});
         expect(toJson(app)).toMatchSnapshot();
     });
+
+    it('should render component with no set class name', () => {
+        const wrapper = setup({
+            className: ''
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('labelFormatter', () => {
+        const wrapper = setup({});
+        wrapper.instance().userOptions = {
+            name: 'test'
+        };
+        expect(wrapper.state().options.legend.labelFormatter()).toBe('test');
+        wrapper.instance().userOptions.extraInfoForLegend = 'a, b';
+        expect(wrapper.state().options.legend.labelFormatter()).toBe('test (a, <br />b)');
+    });
 });

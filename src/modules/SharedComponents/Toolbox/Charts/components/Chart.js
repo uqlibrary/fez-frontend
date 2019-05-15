@@ -28,16 +28,16 @@ class Chart extends React.Component {
     }
 
     componentDidUpdate() {
-        if (this.chart) {
-            this.chart.update(this.props.chartOptions);
-        }
+        this.chart &&
+        this.chart.update(this.props.chartOptions);
     }
 
     componentWillUnmount() {
-        if (this.chart) {
-            this.chart.destroy();
-            !!this.printMedia && this.printMedia.removeListener(this.reflowChart);
-        }
+        !!this.chart && this.chart.destroy();
+
+        !!this.chart &&
+        !!this.printMedia &&
+        this.printMedia.removeListener(this.reflowChart);
     }
 
     reflowChart = () => this.chart.reflow();
