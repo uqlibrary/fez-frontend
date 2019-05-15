@@ -16,7 +16,7 @@ Object {
 
 exports[`Cards will display correct empty fields for a Exhibition Creative Work work 1`] = `
 <StandardPage
-  title="Update my work"
+  title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
     publication={
@@ -155,7 +155,7 @@ exports[`Cards will display correct empty fields for a Exhibition Creative Work 
       hideCancelButton={false}
       locale={
         Object {
-          "cancelButtonLabel": "Update another incomplete work",
+          "cancelButtonLabel": "Complete another work",
           "confirmButtonLabel": "Go to my dashboard",
           "confirmationMessage": <React.Fragment />,
           "confirmationTitle": "Your work has been updated",
@@ -179,8 +179,8 @@ exports[`Cards will display correct empty fields for a Exhibition Creative Work 
         xs={12}
       >
         <WithStyles(Alert)
-          message="This record has missing data - enter all fields to give a quality record."
-          title="Missing data"
+          message="follow the prompts in red text to add missing information. You can also provide additional grant details or include notes to the eSpace team."
+          title="Incomplete work"
           type="info_outline"
         />
       </WithStyles(Grid)>
@@ -440,7 +440,7 @@ exports[`Cards will display correct empty fields for a Exhibition Creative Work 
         >
           <WithStyles(Typography)>
             <span>
-              Please complete affiliation data for each listed author by selecting each row marked in 
+              For each author marked with a 
               <span
                 style={
                   Object {
@@ -451,7 +451,7 @@ exports[`Cards will display correct empty fields for a Exhibition Creative Work 
               >
                 red
               </span>
-              , and adding the missing information in the form underneath the list and clicking 
+               prefix, select the author name at Step 1, update the affiliation information at Step 2, then click 
               <b>
                 UPDATE AUTHOR
               </b>
@@ -477,9 +477,9 @@ exports[`Cards will display correct empty fields for a Exhibition Creative Work 
                       </span>
                        - 
                       <b>
-                        Update the affiliation data
+                        Update the affiliation information
                       </b>
-                       for the selected author below.
+                      .
                     </div>,
                     "descriptionStep1NoStep2": <div>
                       Please 
@@ -514,7 +514,7 @@ exports[`Cards will display correct empty fields for a Exhibition Creative Work 
                       <b>
                         Select an author
                       </b>
-                       below to update affiliation data.
+                      .
                     </div>,
                     "identifierColumn": "UQ identifier",
                     "nameColumn": "Author's name as published",
@@ -698,7 +698,7 @@ exports[`Cards will display correct empty fields for a Exhibition Creative Work 
           onClick={[MockFunction]}
           variant="contained"
         >
-          Update my work
+          Complete work
         </WithStyles(Button)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
@@ -708,7 +708,7 @@ exports[`Cards will display correct empty fields for a Exhibition Creative Work 
 
 exports[`Cards will display correct empty fields for a Live Performance of Musical Creative Work work 1`] = `
 <StandardPage
-  title="Update my work"
+  title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
     publication={
@@ -847,7 +847,7 @@ exports[`Cards will display correct empty fields for a Live Performance of Music
       hideCancelButton={false}
       locale={
         Object {
-          "cancelButtonLabel": "Update another incomplete work",
+          "cancelButtonLabel": "Complete another work",
           "confirmButtonLabel": "Go to my dashboard",
           "confirmationMessage": <React.Fragment />,
           "confirmationTitle": "Your work has been updated",
@@ -871,8 +871,8 @@ exports[`Cards will display correct empty fields for a Live Performance of Music
         xs={12}
       >
         <WithStyles(Alert)
-          message="This record has missing data - enter all fields to give a quality record."
-          title="Missing data"
+          message="follow the prompts in red text to add missing information. You can also provide additional grant details or include notes to the eSpace team."
+          title="Incomplete work"
           type="info_outline"
         />
       </WithStyles(Grid)>
@@ -1132,7 +1132,7 @@ exports[`Cards will display correct empty fields for a Live Performance of Music
         >
           <WithStyles(Typography)>
             <span>
-              Please complete affiliation data for each listed author by selecting each row marked in 
+              For each author marked with a 
               <span
                 style={
                   Object {
@@ -1143,7 +1143,7 @@ exports[`Cards will display correct empty fields for a Live Performance of Music
               >
                 red
               </span>
-              , and adding the missing information in the form underneath the list and clicking 
+               prefix, select the author name at Step 1, update the affiliation information at Step 2, then click 
               <b>
                 UPDATE AUTHOR
               </b>
@@ -1169,9 +1169,9 @@ exports[`Cards will display correct empty fields for a Live Performance of Music
                       </span>
                        - 
                       <b>
-                        Update the affiliation data
+                        Update the affiliation information
                       </b>
-                       for the selected author below.
+                      .
                     </div>,
                     "descriptionStep1NoStep2": <div>
                       Please 
@@ -1206,7 +1206,7 @@ exports[`Cards will display correct empty fields for a Live Performance of Music
                       <b>
                         Select an author
                       </b>
-                       below to update affiliation data.
+                      .
                     </div>,
                     "identifierColumn": "UQ identifier",
                     "nameColumn": "Author's name as published",
@@ -1390,7 +1390,7 @@ exports[`Cards will display correct empty fields for a Live Performance of Music
           onClick={[MockFunction]}
           variant="contained"
         >
-          Update my work
+          Complete work
         </WithStyles(Button)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
@@ -1400,7 +1400,7 @@ exports[`Cards will display correct empty fields for a Live Performance of Music
 
 exports[`Cards will display correct empty fields for a Musical Creative work 1`] = `
 <StandardPage
-  title="Update my work"
+  title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
     publication={
@@ -1539,7 +1539,7 @@ exports[`Cards will display correct empty fields for a Musical Creative work 1`]
       hideCancelButton={false}
       locale={
         Object {
-          "cancelButtonLabel": "Update another incomplete work",
+          "cancelButtonLabel": "Complete another work",
           "confirmButtonLabel": "Go to my dashboard",
           "confirmationMessage": <React.Fragment />,
           "confirmationTitle": "Your work has been updated",
@@ -1563,8 +1563,8 @@ exports[`Cards will display correct empty fields for a Musical Creative work 1`]
         xs={12}
       >
         <WithStyles(Alert)
-          message="This record has missing data - enter all fields to give a quality record."
-          title="Missing data"
+          message="follow the prompts in red text to add missing information. You can also provide additional grant details or include notes to the eSpace team."
+          title="Incomplete work"
           type="info_outline"
         />
       </WithStyles(Grid)>
@@ -1824,7 +1824,7 @@ exports[`Cards will display correct empty fields for a Musical Creative work 1`]
         >
           <WithStyles(Typography)>
             <span>
-              Please complete affiliation data for each listed author by selecting each row marked in 
+              For each author marked with a 
               <span
                 style={
                   Object {
@@ -1835,7 +1835,7 @@ exports[`Cards will display correct empty fields for a Musical Creative work 1`]
               >
                 red
               </span>
-              , and adding the missing information in the form underneath the list and clicking 
+               prefix, select the author name at Step 1, update the affiliation information at Step 2, then click 
               <b>
                 UPDATE AUTHOR
               </b>
@@ -1861,9 +1861,9 @@ exports[`Cards will display correct empty fields for a Musical Creative work 1`]
                       </span>
                        - 
                       <b>
-                        Update the affiliation data
+                        Update the affiliation information
                       </b>
-                       for the selected author below.
+                      .
                     </div>,
                     "descriptionStep1NoStep2": <div>
                       Please 
@@ -1898,7 +1898,7 @@ exports[`Cards will display correct empty fields for a Musical Creative work 1`]
                       <b>
                         Select an author
                       </b>
-                       below to update affiliation data.
+                      .
                     </div>,
                     "identifierColumn": "UQ identifier",
                     "nameColumn": "Author's name as published",
@@ -2082,7 +2082,7 @@ exports[`Cards will display correct empty fields for a Musical Creative work 1`]
           onClick={[MockFunction]}
           variant="contained"
         >
-          Update my work
+          Complete work
         </WithStyles(Button)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
@@ -2092,7 +2092,7 @@ exports[`Cards will display correct empty fields for a Musical Creative work 1`]
 
 exports[`Cards will display correct empty fields for a Public Sector Research Report work 1`] = `
 <StandardPage
-  title="Update my work"
+  title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
     publication={
@@ -2231,7 +2231,7 @@ exports[`Cards will display correct empty fields for a Public Sector Research Re
       hideCancelButton={false}
       locale={
         Object {
-          "cancelButtonLabel": "Update another incomplete work",
+          "cancelButtonLabel": "Complete another work",
           "confirmButtonLabel": "Go to my dashboard",
           "confirmationMessage": <React.Fragment />,
           "confirmationTitle": "Your work has been updated",
@@ -2255,8 +2255,8 @@ exports[`Cards will display correct empty fields for a Public Sector Research Re
         xs={12}
       >
         <WithStyles(Alert)
-          message="This record has missing data - enter all fields to give a quality record."
-          title="Missing data"
+          message="follow the prompts in red text to add missing information. You can also provide additional grant details or include notes to the eSpace team."
+          title="Incomplete work"
           type="info_outline"
         />
       </WithStyles(Grid)>
@@ -2516,7 +2516,7 @@ exports[`Cards will display correct empty fields for a Public Sector Research Re
         >
           <WithStyles(Typography)>
             <span>
-              Please complete affiliation data for each listed author by selecting each row marked in 
+              For each author marked with a 
               <span
                 style={
                   Object {
@@ -2527,7 +2527,7 @@ exports[`Cards will display correct empty fields for a Public Sector Research Re
               >
                 red
               </span>
-              , and adding the missing information in the form underneath the list and clicking 
+               prefix, select the author name at Step 1, update the affiliation information at Step 2, then click 
               <b>
                 UPDATE AUTHOR
               </b>
@@ -2553,9 +2553,9 @@ exports[`Cards will display correct empty fields for a Public Sector Research Re
                       </span>
                        - 
                       <b>
-                        Update the affiliation data
+                        Update the affiliation information
                       </b>
-                       for the selected author below.
+                      .
                     </div>,
                     "descriptionStep1NoStep2": <div>
                       Please 
@@ -2590,7 +2590,7 @@ exports[`Cards will display correct empty fields for a Public Sector Research Re
                       <b>
                         Select an author
                       </b>
-                       below to update affiliation data.
+                      .
                     </div>,
                     "identifierColumn": "UQ identifier",
                     "nameColumn": "Author's name as published",
@@ -2774,7 +2774,7 @@ exports[`Cards will display correct empty fields for a Public Sector Research Re
           onClick={[MockFunction]}
           variant="contained"
         >
-          Update my work
+          Complete work
         </WithStyles(Button)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
@@ -2784,7 +2784,7 @@ exports[`Cards will display correct empty fields for a Public Sector Research Re
 
 exports[`Cards will display correct empty fields for a Textual Book work 1`] = `
 <StandardPage
-  title="Update my work"
+  title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
     publication={
@@ -2923,7 +2923,7 @@ exports[`Cards will display correct empty fields for a Textual Book work 1`] = `
       hideCancelButton={false}
       locale={
         Object {
-          "cancelButtonLabel": "Update another incomplete work",
+          "cancelButtonLabel": "Complete another work",
           "confirmButtonLabel": "Go to my dashboard",
           "confirmationMessage": <React.Fragment />,
           "confirmationTitle": "Your work has been updated",
@@ -2947,8 +2947,8 @@ exports[`Cards will display correct empty fields for a Textual Book work 1`] = `
         xs={12}
       >
         <WithStyles(Alert)
-          message="This record has missing data - enter all fields to give a quality record."
-          title="Missing data"
+          message="follow the prompts in red text to add missing information. You can also provide additional grant details or include notes to the eSpace team."
+          title="Incomplete work"
           type="info_outline"
         />
       </WithStyles(Grid)>
@@ -3208,7 +3208,7 @@ exports[`Cards will display correct empty fields for a Textual Book work 1`] = `
         >
           <WithStyles(Typography)>
             <span>
-              Please complete affiliation data for each listed author by selecting each row marked in 
+              For each author marked with a 
               <span
                 style={
                   Object {
@@ -3219,7 +3219,7 @@ exports[`Cards will display correct empty fields for a Textual Book work 1`] = `
               >
                 red
               </span>
-              , and adding the missing information in the form underneath the list and clicking 
+               prefix, select the author name at Step 1, update the affiliation information at Step 2, then click 
               <b>
                 UPDATE AUTHOR
               </b>
@@ -3245,9 +3245,9 @@ exports[`Cards will display correct empty fields for a Textual Book work 1`] = `
                       </span>
                        - 
                       <b>
-                        Update the affiliation data
+                        Update the affiliation information
                       </b>
-                       for the selected author below.
+                      .
                     </div>,
                     "descriptionStep1NoStep2": <div>
                       Please 
@@ -3282,7 +3282,7 @@ exports[`Cards will display correct empty fields for a Textual Book work 1`] = `
                       <b>
                         Select an author
                       </b>
-                       below to update affiliation data.
+                      .
                     </div>,
                     "identifierColumn": "UQ identifier",
                     "nameColumn": "Author's name as published",
@@ -3466,7 +3466,7 @@ exports[`Cards will display correct empty fields for a Textual Book work 1`] = `
           onClick={[MockFunction]}
           variant="contained"
         >
-          Update my work
+          Complete work
         </WithStyles(Button)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
@@ -3476,7 +3476,7 @@ exports[`Cards will display correct empty fields for a Textual Book work 1`] = `
 
 exports[`Cards will display correct empty fields for a Textual Book work with lang supplied 1`] = `
 <StandardPage
-  title="Update my work"
+  title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
     publication={
@@ -3622,7 +3622,7 @@ exports[`Cards will display correct empty fields for a Textual Book work with la
       hideCancelButton={false}
       locale={
         Object {
-          "cancelButtonLabel": "Update another incomplete work",
+          "cancelButtonLabel": "Complete another work",
           "confirmButtonLabel": "Go to my dashboard",
           "confirmationMessage": <React.Fragment />,
           "confirmationTitle": "Your work has been updated",
@@ -3646,8 +3646,8 @@ exports[`Cards will display correct empty fields for a Textual Book work with la
         xs={12}
       >
         <WithStyles(Alert)
-          message="This record has missing data - enter all fields to give a quality record."
-          title="Missing data"
+          message="follow the prompts in red text to add missing information. You can also provide additional grant details or include notes to the eSpace team."
+          title="Incomplete work"
           type="info_outline"
         />
       </WithStyles(Grid)>
@@ -3907,7 +3907,7 @@ exports[`Cards will display correct empty fields for a Textual Book work with la
         >
           <WithStyles(Typography)>
             <span>
-              Please complete affiliation data for each listed author by selecting each row marked in 
+              For each author marked with a 
               <span
                 style={
                   Object {
@@ -3918,7 +3918,7 @@ exports[`Cards will display correct empty fields for a Textual Book work with la
               >
                 red
               </span>
-              , and adding the missing information in the form underneath the list and clicking 
+               prefix, select the author name at Step 1, update the affiliation information at Step 2, then click 
               <b>
                 UPDATE AUTHOR
               </b>
@@ -3944,9 +3944,9 @@ exports[`Cards will display correct empty fields for a Textual Book work with la
                       </span>
                        - 
                       <b>
-                        Update the affiliation data
+                        Update the affiliation information
                       </b>
-                       for the selected author below.
+                      .
                     </div>,
                     "descriptionStep1NoStep2": <div>
                       Please 
@@ -3981,7 +3981,7 @@ exports[`Cards will display correct empty fields for a Textual Book work with la
                       <b>
                         Select an author
                       </b>
-                       below to update affiliation data.
+                      .
                     </div>,
                     "identifierColumn": "UQ identifier",
                     "nameColumn": "Author's name as published",
@@ -4165,7 +4165,7 @@ exports[`Cards will display correct empty fields for a Textual Book work with la
           onClick={[MockFunction]}
           variant="contained"
         >
-          Update my work
+          Complete work
         </WithStyles(Button)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
@@ -4175,7 +4175,7 @@ exports[`Cards will display correct empty fields for a Textual Book work with la
 
 exports[`Cards will display correct empty fields for a Website Creative work 1`] = `
 <StandardPage
-  title="Update my work"
+  title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
     publication={
@@ -4314,7 +4314,7 @@ exports[`Cards will display correct empty fields for a Website Creative work 1`]
       hideCancelButton={false}
       locale={
         Object {
-          "cancelButtonLabel": "Update another incomplete work",
+          "cancelButtonLabel": "Complete another work",
           "confirmButtonLabel": "Go to my dashboard",
           "confirmationMessage": <React.Fragment />,
           "confirmationTitle": "Your work has been updated",
@@ -4338,8 +4338,8 @@ exports[`Cards will display correct empty fields for a Website Creative work 1`]
         xs={12}
       >
         <WithStyles(Alert)
-          message="This record has missing data - enter all fields to give a quality record."
-          title="Missing data"
+          message="follow the prompts in red text to add missing information. You can also provide additional grant details or include notes to the eSpace team."
+          title="Incomplete work"
           type="info_outline"
         />
       </WithStyles(Grid)>
@@ -4599,7 +4599,7 @@ exports[`Cards will display correct empty fields for a Website Creative work 1`]
         >
           <WithStyles(Typography)>
             <span>
-              Please complete affiliation data for each listed author by selecting each row marked in 
+              For each author marked with a 
               <span
                 style={
                   Object {
@@ -4610,7 +4610,7 @@ exports[`Cards will display correct empty fields for a Website Creative work 1`]
               >
                 red
               </span>
-              , and adding the missing information in the form underneath the list and clicking 
+               prefix, select the author name at Step 1, update the affiliation information at Step 2, then click 
               <b>
                 UPDATE AUTHOR
               </b>
@@ -4636,9 +4636,9 @@ exports[`Cards will display correct empty fields for a Website Creative work 1`]
                       </span>
                        - 
                       <b>
-                        Update the affiliation data
+                        Update the affiliation information
                       </b>
-                       for the selected author below.
+                      .
                     </div>,
                     "descriptionStep1NoStep2": <div>
                       Please 
@@ -4673,7 +4673,7 @@ exports[`Cards will display correct empty fields for a Website Creative work 1`]
                       <b>
                         Select an author
                       </b>
-                       below to update affiliation data.
+                      .
                     </div>,
                     "identifierColumn": "UQ identifier",
                     "nameColumn": "Author's name as published",
@@ -4857,7 +4857,7 @@ exports[`Cards will display correct empty fields for a Website Creative work 1`]
           onClick={[MockFunction]}
           variant="contained"
         >
-          Update my work
+          Complete work
         </WithStyles(Button)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
@@ -4867,7 +4867,7 @@ exports[`Cards will display correct empty fields for a Website Creative work 1`]
 
 exports[`Cards will display correct empty fields for an Architectural Design work 1`] = `
 <StandardPage
-  title="Update my work"
+  title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
     publication={
@@ -5006,7 +5006,7 @@ exports[`Cards will display correct empty fields for an Architectural Design wor
       hideCancelButton={false}
       locale={
         Object {
-          "cancelButtonLabel": "Update another incomplete work",
+          "cancelButtonLabel": "Complete another work",
           "confirmButtonLabel": "Go to my dashboard",
           "confirmationMessage": <React.Fragment />,
           "confirmationTitle": "Your work has been updated",
@@ -5030,8 +5030,8 @@ exports[`Cards will display correct empty fields for an Architectural Design wor
         xs={12}
       >
         <WithStyles(Alert)
-          message="This record has missing data - enter all fields to give a quality record."
-          title="Missing data"
+          message="follow the prompts in red text to add missing information. You can also provide additional grant details or include notes to the eSpace team."
+          title="Incomplete work"
           type="info_outline"
         />
       </WithStyles(Grid)>
@@ -5291,7 +5291,7 @@ exports[`Cards will display correct empty fields for an Architectural Design wor
         >
           <WithStyles(Typography)>
             <span>
-              Please complete affiliation data for each listed author by selecting each row marked in 
+              For each author marked with a 
               <span
                 style={
                   Object {
@@ -5302,7 +5302,7 @@ exports[`Cards will display correct empty fields for an Architectural Design wor
               >
                 red
               </span>
-              , and adding the missing information in the form underneath the list and clicking 
+               prefix, select the author name at Step 1, update the affiliation information at Step 2, then click 
               <b>
                 UPDATE AUTHOR
               </b>
@@ -5328,9 +5328,9 @@ exports[`Cards will display correct empty fields for an Architectural Design wor
                       </span>
                        - 
                       <b>
-                        Update the affiliation data
+                        Update the affiliation information
                       </b>
-                       for the selected author below.
+                      .
                     </div>,
                     "descriptionStep1NoStep2": <div>
                       Please 
@@ -5365,7 +5365,7 @@ exports[`Cards will display correct empty fields for an Architectural Design wor
                       <b>
                         Select an author
                       </b>
-                       below to update affiliation data.
+                      .
                     </div>,
                     "identifierColumn": "UQ identifier",
                     "nameColumn": "Author's name as published",
@@ -5549,7 +5549,7 @@ exports[`Cards will display correct empty fields for an Architectural Design wor
           onClick={[MockFunction]}
           variant="contained"
         >
-          Update my work
+          Complete work
         </WithStyles(Button)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
@@ -5559,7 +5559,7 @@ exports[`Cards will display correct empty fields for an Architectural Design wor
 
 exports[`Cards will display empty where nothing is incomplete 1`] = `
 <StandardPage
-  title="Update my work"
+  title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
     publication={
@@ -5756,7 +5756,7 @@ exports[`Cards will display empty where nothing is incomplete 1`] = `
       hideCancelButton={false}
       locale={
         Object {
-          "cancelButtonLabel": "Update another incomplete work",
+          "cancelButtonLabel": "Complete another work",
           "confirmButtonLabel": "Go to my dashboard",
           "confirmationMessage": <React.Fragment />,
           "confirmationTitle": "Your work has been updated",
@@ -5780,8 +5780,8 @@ exports[`Cards will display empty where nothing is incomplete 1`] = `
         xs={12}
       >
         <WithStyles(Alert)
-          message="This record has missing data - enter all fields to give a quality record."
-          title="Missing data"
+          message="follow the prompts in red text to add missing information. You can also provide additional grant details or include notes to the eSpace team."
+          title="Incomplete work"
           type="info_outline"
         />
       </WithStyles(Grid)>
@@ -6041,7 +6041,7 @@ exports[`Cards will display empty where nothing is incomplete 1`] = `
         >
           <WithStyles(Typography)>
             <span>
-              Please complete affiliation data for each listed author by selecting each row marked in 
+              For each author marked with a 
               <span
                 style={
                   Object {
@@ -6052,7 +6052,7 @@ exports[`Cards will display empty where nothing is incomplete 1`] = `
               >
                 red
               </span>
-              , and adding the missing information in the form underneath the list and clicking 
+               prefix, select the author name at Step 1, update the affiliation information at Step 2, then click 
               <b>
                 UPDATE AUTHOR
               </b>
@@ -6078,9 +6078,9 @@ exports[`Cards will display empty where nothing is incomplete 1`] = `
                       </span>
                        - 
                       <b>
-                        Update the affiliation data
+                        Update the affiliation information
                       </b>
-                       for the selected author below.
+                      .
                     </div>,
                     "descriptionStep1NoStep2": <div>
                       Please 
@@ -6115,7 +6115,7 @@ exports[`Cards will display empty where nothing is incomplete 1`] = `
                       <b>
                         Select an author
                       </b>
-                       below to update affiliation data.
+                      .
                     </div>,
                     "identifierColumn": "UQ identifier",
                     "nameColumn": "Author's name as published",
@@ -6299,7 +6299,7 @@ exports[`Cards will display empty where nothing is incomplete 1`] = `
           onClick={[MockFunction]}
           variant="contained"
         >
-          Update my work
+          Complete work
         </WithStyles(Button)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
@@ -6309,7 +6309,7 @@ exports[`Cards will display empty where nothing is incomplete 1`] = `
 
 exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
 <StandardPage
-  title="Update my work"
+  title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
     publication={
@@ -6725,7 +6725,7 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
       hideCancelButton={false}
       locale={
         Object {
-          "cancelButtonLabel": "Update another incomplete work",
+          "cancelButtonLabel": "Complete another work",
           "confirmButtonLabel": "Go to my dashboard",
           "confirmationMessage": <React.Fragment />,
           "confirmationTitle": "Your work has been updated",
@@ -6749,8 +6749,8 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
         xs={12}
       >
         <WithStyles(Alert)
-          message="This record has missing data - enter all fields to give a quality record."
-          title="Missing data"
+          message="follow the prompts in red text to add missing information. You can also provide additional grant details or include notes to the eSpace team."
+          title="Incomplete work"
           type="info_outline"
         />
       </WithStyles(Grid)>
@@ -6867,7 +6867,7 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
         >
           <WithStyles(Typography)>
             <span>
-              Please complete affiliation data for each listed author by selecting each row marked in 
+              For each author marked with a 
               <span
                 style={
                   Object {
@@ -6878,7 +6878,7 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
               >
                 red
               </span>
-              , and adding the missing information in the form underneath the list and clicking 
+               prefix, select the author name at Step 1, update the affiliation information at Step 2, then click 
               <b>
                 UPDATE AUTHOR
               </b>
@@ -6904,9 +6904,9 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
                       </span>
                        - 
                       <b>
-                        Update the affiliation data
+                        Update the affiliation information
                       </b>
-                       for the selected author below.
+                      .
                     </div>,
                     "descriptionStep1NoStep2": <div>
                       Please 
@@ -6941,7 +6941,7 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
                       <b>
                         Select an author
                       </b>
-                       below to update affiliation data.
+                      .
                     </div>,
                     "identifierColumn": "UQ identifier",
                     "nameColumn": "Author's name as published",
@@ -7125,7 +7125,7 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
           onClick={[MockFunction]}
           variant="contained"
         >
-          Update my work
+          Complete work
         </WithStyles(Button)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
@@ -7135,7 +7135,7 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
 
 exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
 <StandardPage
-  title="Update my work"
+  title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
     publication={
@@ -7551,7 +7551,7 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
       hideCancelButton={false}
       locale={
         Object {
-          "cancelButtonLabel": "Update another incomplete work",
+          "cancelButtonLabel": "Complete another work",
           "confirmButtonLabel": "Go to my dashboard",
           "confirmationMessage": <React.Fragment />,
           "confirmationTitle": "Your work has been updated",
@@ -7575,8 +7575,8 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
         xs={12}
       >
         <WithStyles(Alert)
-          message="This record has missing data - enter all fields to give a quality record."
-          title="Missing data"
+          message="follow the prompts in red text to add missing information. You can also provide additional grant details or include notes to the eSpace team."
+          title="Incomplete work"
           type="info_outline"
         />
       </WithStyles(Grid)>
@@ -7693,7 +7693,7 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
         >
           <WithStyles(Typography)>
             <span>
-              Please complete affiliation data for each listed author by selecting each row marked in 
+              For each author marked with a 
               <span
                 style={
                   Object {
@@ -7704,7 +7704,7 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
               >
                 red
               </span>
-              , and adding the missing information in the form underneath the list and clicking 
+               prefix, select the author name at Step 1, update the affiliation information at Step 2, then click 
               <b>
                 UPDATE AUTHOR
               </b>
@@ -7730,9 +7730,9 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
                       </span>
                        - 
                       <b>
-                        Update the affiliation data
+                        Update the affiliation information
                       </b>
-                       for the selected author below.
+                      .
                     </div>,
                     "descriptionStep1NoStep2": <div>
                       Please 
@@ -7767,7 +7767,7 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
                       <b>
                         Select an author
                       </b>
-                       below to update affiliation data.
+                      .
                     </div>,
                     "identifierColumn": "UQ identifier",
                     "nameColumn": "Author's name as published",
@@ -7907,7 +7907,7 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
         xs={12}
       >
         <WithStyles(Alert)
-          message="New work has been saved successfully."
+          message="New information has been saved successfully."
           pushToTop={true}
           title="Success"
           type="done"
@@ -7962,7 +7962,7 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
           onClick={[MockFunction]}
           variant="contained"
         >
-          Update my work
+          Complete work
         </WithStyles(Button)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
@@ -7972,7 +7972,7 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
 
 exports[`Component MyIncompleteRecord should render langauge field 1`] = `
 <StandardPage
-  title="Update my work"
+  title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
     publication={
@@ -8366,7 +8366,7 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
       hideCancelButton={false}
       locale={
         Object {
-          "cancelButtonLabel": "Update another incomplete work",
+          "cancelButtonLabel": "Complete another work",
           "confirmButtonLabel": "Go to my dashboard",
           "confirmationMessage": <React.Fragment />,
           "confirmationTitle": "Your work has been updated",
@@ -8390,8 +8390,8 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
         xs={12}
       >
         <WithStyles(Alert)
-          message="This record has missing data - enter all fields to give a quality record."
-          title="Missing data"
+          message="follow the prompts in red text to add missing information. You can also provide additional grant details or include notes to the eSpace team."
+          title="Incomplete work"
           type="info_outline"
         />
       </WithStyles(Grid)>
@@ -8651,7 +8651,7 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
         >
           <WithStyles(Typography)>
             <span>
-              Please complete affiliation data for each listed author by selecting each row marked in 
+              For each author marked with a 
               <span
                 style={
                   Object {
@@ -8662,7 +8662,7 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
               >
                 red
               </span>
-              , and adding the missing information in the form underneath the list and clicking 
+               prefix, select the author name at Step 1, update the affiliation information at Step 2, then click 
               <b>
                 UPDATE AUTHOR
               </b>
@@ -8688,9 +8688,9 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
                       </span>
                        - 
                       <b>
-                        Update the affiliation data
+                        Update the affiliation information
                       </b>
-                       for the selected author below.
+                      .
                     </div>,
                     "descriptionStep1NoStep2": <div>
                       Please 
@@ -8725,7 +8725,7 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
                       <b>
                         Select an author
                       </b>
-                       below to update affiliation data.
+                      .
                     </div>,
                     "identifierColumn": "UQ identifier",
                     "nameColumn": "Author's name as published",
@@ -8909,7 +8909,7 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
           onClick={[MockFunction]}
           variant="contained"
         >
-          Update my work
+          Complete work
         </WithStyles(Button)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
@@ -8931,7 +8931,7 @@ exports[`Component MyIncompleteRecord should render loader when record is loadin
 
 exports[`Component MyIncompleteRecord should render no fields as they are complete 1`] = `
 <StandardPage
-  title="Update my work"
+  title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
     publication={
@@ -9329,7 +9329,7 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
       hideCancelButton={false}
       locale={
         Object {
-          "cancelButtonLabel": "Update another incomplete work",
+          "cancelButtonLabel": "Complete another work",
           "confirmButtonLabel": "Go to my dashboard",
           "confirmationMessage": <React.Fragment />,
           "confirmationTitle": "Your work has been updated",
@@ -9353,8 +9353,8 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
         xs={12}
       >
         <WithStyles(Alert)
-          message="This record has missing data - enter all fields to give a quality record."
-          title="Missing data"
+          message="follow the prompts in red text to add missing information. You can also provide additional grant details or include notes to the eSpace team."
+          title="Incomplete work"
           type="info_outline"
         />
       </WithStyles(Grid)>
@@ -9471,7 +9471,7 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
         >
           <WithStyles(Typography)>
             <span>
-              Please complete affiliation data for each listed author by selecting each row marked in 
+              For each author marked with a 
               <span
                 style={
                   Object {
@@ -9482,7 +9482,7 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
               >
                 red
               </span>
-              , and adding the missing information in the form underneath the list and clicking 
+               prefix, select the author name at Step 1, update the affiliation information at Step 2, then click 
               <b>
                 UPDATE AUTHOR
               </b>
@@ -9508,9 +9508,9 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
                       </span>
                        - 
                       <b>
-                        Update the affiliation data
+                        Update the affiliation information
                       </b>
-                       for the selected author below.
+                      .
                     </div>,
                     "descriptionStep1NoStep2": <div>
                       Please 
@@ -9545,7 +9545,7 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
                       <b>
                         Select an author
                       </b>
-                       below to update affiliation data.
+                      .
                     </div>,
                     "identifierColumn": "UQ identifier",
                     "nameColumn": "Author's name as published",
@@ -9729,7 +9729,7 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
           onClick={[MockFunction]}
           variant="contained"
         >
-          Update my work
+          Complete work
         </WithStyles(Button)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
@@ -9739,7 +9739,7 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
 
 exports[`Component MyIncompleteRecord should render record citation, two actions in select field and a cancel button 1`] = `
 <StandardPage
-  title="Update my work"
+  title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
     publication={
@@ -10155,7 +10155,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
       hideCancelButton={false}
       locale={
         Object {
-          "cancelButtonLabel": "Update another incomplete work",
+          "cancelButtonLabel": "Complete another work",
           "confirmButtonLabel": "Go to my dashboard",
           "confirmationMessage": <React.Fragment />,
           "confirmationTitle": "Your work has been updated",
@@ -10179,8 +10179,8 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
         xs={12}
       >
         <WithStyles(Alert)
-          message="This record has missing data - enter all fields to give a quality record."
-          title="Missing data"
+          message="follow the prompts in red text to add missing information. You can also provide additional grant details or include notes to the eSpace team."
+          title="Incomplete work"
           type="info_outline"
         />
       </WithStyles(Grid)>
@@ -10297,7 +10297,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
         >
           <WithStyles(Typography)>
             <span>
-              Please complete affiliation data for each listed author by selecting each row marked in 
+              For each author marked with a 
               <span
                 style={
                   Object {
@@ -10308,7 +10308,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
               >
                 red
               </span>
-              , and adding the missing information in the form underneath the list and clicking 
+               prefix, select the author name at Step 1, update the affiliation information at Step 2, then click 
               <b>
                 UPDATE AUTHOR
               </b>
@@ -10334,9 +10334,9 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
                       </span>
                        - 
                       <b>
-                        Update the affiliation data
+                        Update the affiliation information
                       </b>
-                       for the selected author below.
+                      .
                     </div>,
                     "descriptionStep1NoStep2": <div>
                       Please 
@@ -10371,7 +10371,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
                       <b>
                         Select an author
                       </b>
-                       below to update affiliation data.
+                      .
                     </div>,
                     "identifierColumn": "UQ identifier",
                     "nameColumn": "Author's name as published",
@@ -10555,7 +10555,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
           onClick={[MockFunction]}
           variant="contained"
         >
-          Update my work
+          Complete work
         </WithStyles(Button)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
@@ -10565,7 +10565,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
 
 exports[`Component MyIncompleteRecord should render the confirm dialog box with an alert due to a file upload failure 1`] = `
 <StandardPage
-  title="Update my work"
+  title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
     publication={
@@ -10981,7 +10981,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
       hideCancelButton={false}
       locale={
         Object {
-          "cancelButtonLabel": "Update another incomplete work",
+          "cancelButtonLabel": "Complete another work",
           "confirmButtonLabel": "Go to my dashboard",
           "confirmationMessage": <React.Fragment>
             <WithStyles(Alert)
@@ -11011,8 +11011,8 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
         xs={12}
       >
         <WithStyles(Alert)
-          message="This record has missing data - enter all fields to give a quality record."
-          title="Missing data"
+          message="follow the prompts in red text to add missing information. You can also provide additional grant details or include notes to the eSpace team."
+          title="Incomplete work"
           type="info_outline"
         />
       </WithStyles(Grid)>
@@ -11129,7 +11129,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
         >
           <WithStyles(Typography)>
             <span>
-              Please complete affiliation data for each listed author by selecting each row marked in 
+              For each author marked with a 
               <span
                 style={
                   Object {
@@ -11140,7 +11140,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
               >
                 red
               </span>
-              , and adding the missing information in the form underneath the list and clicking 
+               prefix, select the author name at Step 1, update the affiliation information at Step 2, then click 
               <b>
                 UPDATE AUTHOR
               </b>
@@ -11166,9 +11166,9 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
                       </span>
                        - 
                       <b>
-                        Update the affiliation data
+                        Update the affiliation information
                       </b>
-                       for the selected author below.
+                      .
                     </div>,
                     "descriptionStep1NoStep2": <div>
                       Please 
@@ -11203,7 +11203,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
                       <b>
                         Select an author
                       </b>
-                       below to update affiliation data.
+                      .
                     </div>,
                     "identifierColumn": "UQ identifier",
                     "nameColumn": "Author's name as published",
@@ -11387,7 +11387,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
           onClick={[MockFunction]}
           variant="contained"
         >
-          Update my work
+          Complete work
         </WithStyles(Button)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
@@ -11397,7 +11397,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
 
 exports[`Component MyIncompleteRecord should render the confirm dialog box without an alert due to a file upload success 1`] = `
 <StandardPage
-  title="Update my work"
+  title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
     publication={
@@ -11813,7 +11813,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
       hideCancelButton={false}
       locale={
         Object {
-          "cancelButtonLabel": "Update another incomplete work",
+          "cancelButtonLabel": "Complete another work",
           "confirmButtonLabel": "Go to my dashboard",
           "confirmationMessage": <React.Fragment />,
           "confirmationTitle": "Your work has been updated",
@@ -11837,8 +11837,8 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
         xs={12}
       >
         <WithStyles(Alert)
-          message="This record has missing data - enter all fields to give a quality record."
-          title="Missing data"
+          message="follow the prompts in red text to add missing information. You can also provide additional grant details or include notes to the eSpace team."
+          title="Incomplete work"
           type="info_outline"
         />
       </WithStyles(Grid)>
@@ -11955,7 +11955,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
         >
           <WithStyles(Typography)>
             <span>
-              Please complete affiliation data for each listed author by selecting each row marked in 
+              For each author marked with a 
               <span
                 style={
                   Object {
@@ -11966,7 +11966,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
               >
                 red
               </span>
-              , and adding the missing information in the form underneath the list and clicking 
+               prefix, select the author name at Step 1, update the affiliation information at Step 2, then click 
               <b>
                 UPDATE AUTHOR
               </b>
@@ -11992,9 +11992,9 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
                       </span>
                        - 
                       <b>
-                        Update the affiliation data
+                        Update the affiliation information
                       </b>
-                       for the selected author below.
+                      .
                     </div>,
                     "descriptionStep1NoStep2": <div>
                       Please 
@@ -12029,7 +12029,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
                       <b>
                         Select an author
                       </b>
-                       below to update affiliation data.
+                      .
                     </div>,
                     "identifierColumn": "UQ identifier",
                     "nameColumn": "Author's name as published",
@@ -12213,7 +12213,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
           onClick={[MockFunction]}
           variant="contained"
         >
-          Update my work
+          Complete work
         </WithStyles(Button)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
