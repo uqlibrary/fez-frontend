@@ -103,11 +103,31 @@ export class PublicationCitation extends PureComponent {
     constructor(props) {
         super(props);
         // keep a list of all available citations
-        this.citationComponents = {BookChapterCitation, JournalArticleCitation, BookCitation, ConferencePaperCitation,
-            AudioDocumentCitation, GenericDocumentCitation, ResearchReportCitation, PreprintCitation, SeminarPaperCitation,
-            CreativeWorkCitation, ManuscriptCitation, DepartmentTechnicalReportCitation, ImageDocumentCitation, DesignCitation,
-            DigilibImageCitation, WorkingPaperCitation, VideoDocumentCitation, JournalCitation, ConferenceProceedingsCitation,
-            ThesisCitation, NewspaperArticleCitation, PatentCitation, DataCollectionCitation};
+        this.citationComponents = {
+            BookChapterCitation,
+            JournalArticleCitation,
+            BookCitation,
+            ConferencePaperCitation,
+            AudioDocumentCitation,
+            GenericDocumentCitation,
+            ResearchReportCitation,
+            PreprintCitation,
+            SeminarPaperCitation,
+            CreativeWorkCitation,
+            ManuscriptCitation,
+            DepartmentTechnicalReportCitation,
+            ImageDocumentCitation,
+            DesignCitation,
+            DigilibImageCitation,
+            WorkingPaperCitation,
+            VideoDocumentCitation,
+            JournalCitation,
+            ConferenceProceedingsCitation,
+            ThesisCitation,
+            NewspaperArticleCitation,
+            PatentCitation,
+            DataCollectionCitation
+        };
 
         // get default actions from locale
         this.defaultActions = locale.components.publicationCitation.defaultActions;
@@ -131,7 +151,11 @@ export class PublicationCitation extends PureComponent {
 
     renderTitle = () => {
         return this.props.publication.rek_pid && !this.props.hideLinks
-            ? (<Link to={routes.pathConfig.records.view(this.props.publication.rek_pid)}>{ReactHtmlParser(this.props.publication.rek_title)}</Link>)
+            ? (
+                <Link to={routes.pathConfig.records.view(this.props.publication.rek_pid)}>
+                    {ReactHtmlParser(this.props.publication.rek_title)}
+                </Link>
+            )
             : (ReactHtmlParser(this.props.publication.rek_title));
     }
 
@@ -142,9 +166,21 @@ export class PublicationCitation extends PureComponent {
             })
             : null;
 
-        return filteredPublicationType && filteredPublicationType.length > 0 && filteredPublicationType[0].citationComponent
-            ? React.createElement(filteredPublicationType[0].citationComponent, {publication: this.props.publication, hideDoiLink: this.props.hideLinks})
-            : (<div>Citation display not available for {publicationTypeId}</div>);
+        return filteredPublicationType &&
+            filteredPublicationType.length > 0 &&
+            filteredPublicationType[0].citationComponent
+            ? React.createElement(
+                filteredPublicationType[0].citationComponent,
+                {
+                    publication: this.props.publication,
+                    hideDoiLink: this.props.hideLinks
+                }
+            )
+            : (
+                <div>
+                    Citation display not available for {publicationTypeId}
+                </div>
+            );
     }
 
     renderActions = (actions) => {
