@@ -284,11 +284,6 @@ export class MyIncompleteRecordClass extends PureComponent {
             !this.props.recordToFix.fez_record_search_key_language ||
             this.props.recordToFix.fez_record_search_key_language.length === 0
         ;
-        const defaultLanguage = !!this.props.recordToFix &&
-            !!this.props.recordToFix.fez_record_search_key_language &&
-            this.props.recordToFix.fez_record_search_key_language.length > 0 &&
-            this.props.recordToFix.fez_record_search_key_language[0].rek_language
-         || 'eng';
 
         // fez_record_search_key_quality_indicator
         const editQualityIndicator = (
@@ -337,7 +332,7 @@ export class MyIncompleteRecordClass extends PureComponent {
             this.props.recordToFix.fez_datastream_info &&
             this.props.recordToFix.fez_datastream_info.length || 0
         ;
-        console.log(editSignificance);
+
         return (
             <StandardPage title={txt.title}>
                 <PublicationCitation publication={this.props.recordToFix} />
@@ -416,7 +411,6 @@ export class MyIncompleteRecordClass extends PureComponent {
                                 showSignificance={editSignificance}
                                 hidePeerReviewActivity={!editQualityIndicator}
                                 hideLanguage={!editLanguage}
-                                defaultLanguage={defaultLanguage}
                                 hideSeries
                                 hideGrants
                             />
