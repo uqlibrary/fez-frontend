@@ -1126,3 +1126,590 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
                           </ul>
                         </span>"
 `;
+
+exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of Creative Work - Music should allow user to update work 1`] = `
+"Snapshot Diff:
+- First value
++ Second value
+
+@@ -128,11 +128,11 @@
+        </div>
+        <hr
+          class=\\"MuiDivider-root-536 PublicationCitation-divider-526\\"
+        />
+        <form>
+-         <span />
++         <div />
+          <div
+            class=\\"MuiGrid-container-394 MuiGrid-spacing-xs-24-418\\"
+          >
+            <div
+              class=\\"MuiGrid-item-395 MuiGrid-grid-xs-12-434\\"
+@@ -336,29 +336,29 @@
+                      <div
+                        class=\\"MuiFormControl-root-640\\"
+                        style=\\"width: 100%;\\"
+                      >
+                        <label
+-                         class=\\"MuiFormLabel-root-651 MuiFormLabel-error-654 MuiFormLabel-required-656 MuiInputLabel-root-644 MuiInputLabel-formControl-645 MuiInputLabel-animated-648\\"
+-                         data-shrink=\\"false\\"
++                         class=\\"MuiFormLabel-root-651 MuiFormLabel-filled-655 MuiFormLabel-required-656 MuiInputLabel-root-644 MuiInputLabel-formControl-645 MuiInputLabel-animated-648 MuiInputLabel-shrink-647\\"
++                         data-shrink=\\"true\\"
+                        >
+                          <span>
+                            Scale/Significance of work* 
+                            <span
+                              style=\\"font-weight: 700;\\"
+                            >
+                              (not for public view)
+                            </span>
+                          </span>
+                          <span
+-                           class=\\"MuiFormLabel-asterisk-657 MuiFormLabel-error-654\\"
++                           class=\\"MuiFormLabel-asterisk-657\\"
+                          >
+                             *
+                          </span>
+                        </label>
+                        <div
+-                         class=\\"MuiInputBase-root-678 MuiInput-root-665 MuiInput-underline-669 MuiInputBase-error-684 MuiInput-error-670 MuiInputBase-formControl-679 MuiInput-formControl-666\\"
++                         class=\\"MuiInputBase-root-678 MuiInput-root-665 MuiInput-underline-669 MuiInputBase-formControl-679 MuiInput-formControl-666\\"
+                          label=\\"[object Object]\\"
+                          required=\\"\\"
+                        >
+                          <div
+                            class=\\"MuiSelect-root-658\\"
+@@ -369,18 +369,16 @@
+                              class=\\"MuiSelect-select-659 MuiSelect-selectMenu-662 MuiInputBase-input-688 MuiInput-input-673\\"
+                              id=\\"significance\\"
+                              role=\\"button\\"
+                              tabindex=\\"0\\"
+                            >
+-                             <span>
+-                               ​
+-                             </span>
++                             Major
+                            </div>
+                            <input
+                              name=\\"significance\\"
+                              type=\\"hidden\\"
+-                             value=\\"\\"
++                             value=\\"454026\\"
+                            />
+                            <svg
+                              aria-hidden=\\"true\\"
+                              class=\\"MuiSvgIcon-root-568 MuiSelect-icon-664\\"
+                              focusable=\\"false\\"
+@@ -391,15 +389,10 @@
+                                d=\\"M7 10l5 5 5-5z\\"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+-                       <p
+-                         class=\\"MuiFormHelperText-root-767 MuiFormHelperText-error-768 MuiFormHelperText-required-774\\"
+-                       >
+-                         This field is required
+-                       </p>
+                      </div>
+                    </div>
+                    <div
+                      class=\\"MuiGrid-item-395 MuiGrid-grid-xs-12-434\\"
+                      style=\\"margin-top: 24px;\\"
+@@ -1646,11 +1639,80 @@
+                        class=\\"MuiInputBase-input-688 MuiInput-input-673 MuiInputBase-inputMultiline-690 MuiInput-inputMultiline-675\\"
+                        id=\\"Notes for this work\\"
+                        name=\\"comments\\"
+                        placeholder=\\"Add any other notes or comments about this work to send to the eSpace team.\\"
+                        rows=\\"5\\"
++                     />
++                   </div>
++                 </div>
++               </div>
++             </div>
++           </div>
++           <div
++             class=\\"MuiGrid-item-395 MuiGrid-grid-xs-12-434\\"
++           >
++             <div
++               class=\\"Alert\\"
++               style=\\"padding: 12px;\\"
++             >
++               <div
++                 class=\\"MuiGrid-container-394 MuiGrid-spacing-xs-24-418 MuiGrid-align-items-xs-flex-start-403 MuiGrid-align-content-xs-center-406 MuiGrid-justify-xs-center-411 Alert-warning-562 Alert-common-554\\"
++               >
++                 <div
++                   class=\\"MuiGrid-item-395 MuiGrid-grid-xs-12-434 MuiGrid-grid-sm-true-436\\"
++                 >
++                   <div
++                     class=\\"MuiGrid-container-394 MuiGrid-align-items-xs-flex-start-403 MuiGrid-align-content-xs-center-406 MuiGrid-justify-xs-center-411\\"
++                   >
++                     <div
++                       class=\\"MuiGrid-item-395 Alert-icon-555\\"
++                       id=\\"icon\\"
++                     >
++                       <svg
++                         aria-hidden=\\"true\\"
++                         class=\\"MuiSvgIcon-root-568 icon\\"
++                         focusable=\\"false\\"
++                         role=\\"presentation\\"
++                         viewBox=\\"0 0 24 24\\"
++                       >
++                         <path
++                           d=\\"M0 0h24v24H0z\\"
++                           fill=\\"none\\"
++                         />
++                         <path
++                           d=\\"M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z\\"
+                          />
++                       </svg>
++                     </div>
++                     <div
++                       class=\\"MuiGrid-item-395 MuiGrid-grid-xs-true-422 Alert-text-556\\"
++                       id=\\"text\\"
++                     >
++                       <b>
++                         Validation - 
++                       </b>
++                       <span>
++                         Form cannot be submitted until all fields are valid. Please review all input fields.
++                         <ul>
++                           <li>
++                             Author affiliation rows marked with red are required
++                           </li>
++                           <li>
++                             Creator research statement is required
++                           </li>
++                           <li>
++                             Total page is required
++                           </li>
++                           <li>
++                             Audience size is required
++                           </li>
++                           <li>
++                             Quality indicator is required
++                           </li>
++                         </ul>
++                       </span>
++                     </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>"
+`;
+
+exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of Creative Work - Music should allow user to update work 2`] = `
+"Snapshot Diff:
+- First value
++ Second value
+
+@@ -505,45 +505,38 @@
+                    />
+                    <div
+                      class=\\"MuiGrid-item-395 MuiGrid-grid-xs-12-434 MuiGrid-grid-sm-12-448\\"
+                    >
+                      <div
+-                       aria-describedby=\\"rek-total-pages-helper-text\\"
+                        class=\\"MuiFormControl-root-640 MuiFormControl-fullWidth-643\\"
+                      >
+                        <label
+-                         class=\\"MuiFormLabel-root-651 MuiFormLabel-error-654 MuiFormLabel-required-656 MuiInputLabel-root-644 MuiInputLabel-formControl-645 MuiInputLabel-animated-648\\"
+-                         data-shrink=\\"false\\"
++                         class=\\"MuiFormLabel-root-651 MuiFormLabel-filled-655 MuiFormLabel-required-656 MuiInputLabel-root-644 MuiInputLabel-formControl-645 MuiInputLabel-animated-648 MuiInputLabel-shrink-647\\"
++                         data-shrink=\\"true\\"
+                          for=\\"rek-total-pages\\"
+                        >
+                          Total pages/Extent
+                          <span
+-                           class=\\"MuiFormLabel-asterisk-657 MuiFormLabel-error-654\\"
++                           class=\\"MuiFormLabel-asterisk-657\\"
+                          >
+                             *
+                          </span>
+                        </label>
+                        <div
+-                         class=\\"MuiInputBase-root-678 MuiInput-root-665 MuiInput-underline-669 MuiInputBase-error-684 MuiInput-error-670 MuiInputBase-fullWidth-687 MuiInput-fullWidth-672 MuiInputBase-formControl-679 MuiInput-formControl-666\\"
++                         class=\\"MuiInputBase-root-678 MuiInput-root-665 MuiInput-underline-669 MuiInputBase-fullWidth-687 MuiInput-fullWidth-672 MuiInputBase-formControl-679 MuiInput-formControl-666\\"
+                        >
+                          <input
+-                           aria-invalid=\\"true\\"
++                           aria-invalid=\\"false\\"
+                            class=\\"MuiInputBase-input-688 MuiInput-input-673\\"
+                            id=\\"rek-total-pages\\"
+                            name=\\"fez_record_search_key_total_pages.rek_total_pages\\"
+                            placeholder=\\"Enter total pages, size or duration of work\\"
+                            required=\\"\\"
+                            type=\\"text\\"
+-                           value=\\"\\"
++                           value=\\"10\\"
+                          />
+                        </div>
+-                       <p
+-                         class=\\"MuiFormHelperText-root-767 MuiFormHelperText-error-768 MuiFormHelperText-required-774\\"
+-                         id=\\"rek-total-pages-helper-text\\"
+-                       >
+-                         This field is required
+-                       </p>
+                      </div>
+                    </div>
+                    <div
+                      class=\\"MuiGrid-item-395 MuiGrid-grid-xs-12-434 MuiGrid-grid-sm-6-442\\"
+                    >
+@@ -1696,13 +1689,10 @@
+                            <li>
+                              Author affiliation rows marked with red are required
+                            </li>
+                            <li>
+                              Creator research statement is required
+-                           </li>
+-                           <li>
+-                             Total page is required
+                            </li>
+                            <li>
+                              Audience size is required
+                            </li>
+                            <li>"
+`;
+
+exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of Creative Work - Music should allow user to update work 3`] = `
+"Snapshot Diff:
+- First value
++ Second value
+
+@@ -543,22 +543,22 @@
+                      <div
+                        class=\\"MuiFormControl-root-640\\"
+                        style=\\"width: 100%;\\"
+                      >
+                        <label
+-                         class=\\"MuiFormLabel-root-651 MuiFormLabel-error-654 MuiFormLabel-required-656 MuiInputLabel-root-644 MuiInputLabel-formControl-645 MuiInputLabel-animated-648\\"
+-                         data-shrink=\\"false\\"
++                         class=\\"MuiFormLabel-root-651 MuiFormLabel-filled-655 MuiFormLabel-required-656 MuiInputLabel-root-644 MuiInputLabel-formControl-645 MuiInputLabel-animated-648 MuiInputLabel-shrink-647\\"
++                         data-shrink=\\"true\\"
+                        >
+                          Audience size
+                          <span
+-                           class=\\"MuiFormLabel-asterisk-657 MuiFormLabel-error-654\\"
++                           class=\\"MuiFormLabel-asterisk-657\\"
+                          >
+                             *
+                          </span>
+                        </label>
+                        <div
+-                         class=\\"MuiInputBase-root-678 MuiInput-root-665 MuiInput-underline-669 MuiInputBase-error-684 MuiInput-error-670 MuiInputBase-formControl-679 MuiInput-formControl-666\\"
++                         class=\\"MuiInputBase-root-678 MuiInput-root-665 MuiInput-underline-669 MuiInputBase-formControl-679 MuiInput-formControl-666\\"
+                          label=\\"Audience size\\"
+                          required=\\"\\"
+                        >
+                          <div
+                            class=\\"MuiSelect-root-658\\"
+@@ -569,18 +569,16 @@
+                              class=\\"MuiSelect-select-659 MuiSelect-selectMenu-662 MuiInputBase-input-688 MuiInput-input-673\\"
+                              id=\\"rek-audience-size\\"
+                              role=\\"button\\"
+                              tabindex=\\"0\\"
+                            >
+-                             <span>
+-                               ​
+-                             </span>
++                             Less than 100
+                            </div>
+                            <input
+                              name=\\"fez_record_search_key_audience_size.rek_audience_size\\"
+                              type=\\"hidden\\"
+-                             value=\\"\\"
++                             value=\\"453992\\"
+                            />
+                            <svg
+                              aria-hidden=\\"true\\"
+                              class=\\"MuiSvgIcon-root-568 MuiSelect-icon-664\\"
+                              focusable=\\"false\\"
+@@ -591,15 +589,10 @@
+                                d=\\"M7 10l5 5 5-5z\\"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+-                       <p
+-                         class=\\"MuiFormHelperText-root-767 MuiFormHelperText-error-768 MuiFormHelperText-required-774\\"
+-                       >
+-                         This field is required
+-                       </p>
+                      </div>
+                    </div>
+                    <div
+                      class=\\"MuiGrid-item-395 MuiGrid-grid-xs-12-434 MuiGrid-grid-sm-6-442\\"
+                    >
+@@ -1689,13 +1682,10 @@
+                            <li>
+                              Author affiliation rows marked with red are required
+                            </li>
+                            <li>
+                              Creator research statement is required
+-                           </li>
+-                           <li>
+-                             Audience size is required
+                            </li>
+                            <li>
+                              Quality indicator is required
+                            </li>
+                          </ul>"
+`;
+
+exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of Creative Work - Music should allow user to update work 4`] = `
+"Snapshot Diff:
+- First value
++ Second value
+
+@@ -598,41 +598,40 @@
+                    >
+                      <div
+                        class=\\"MuiFormControl-root-640 MuiFormControl-fullWidth-643\\"
+                      >
+                        <label
+-                         class=\\"MuiFormLabel-root-651 MuiFormLabel-error-654 MuiFormLabel-required-656 MuiInputLabel-root-644 MuiInputLabel-formControl-645 MuiInputLabel-animated-648\\"
+-                         data-shrink=\\"false\\"
++                         class=\\"MuiFormLabel-root-651 MuiFormLabel-filled-655 MuiFormLabel-required-656 MuiInputLabel-root-644 MuiInputLabel-formControl-645 MuiInputLabel-animated-648 MuiInputLabel-shrink-647\\"
++                         data-shrink=\\"true\\"
+                        >
+                          Quality indicators
+                          <span
+-                           class=\\"MuiFormLabel-asterisk-657 MuiFormLabel-error-654\\"
++                           class=\\"MuiFormLabel-asterisk-657\\"
+                          >
+                             *
+                          </span>
+                        </label>
+                        <div
+-                         class=\\"MuiInputBase-root-678 MuiInput-root-665 MuiInput-underline-669 MuiInputBase-error-684 MuiInput-error-670 MuiInputBase-formControl-679 MuiInput-formControl-666\\"
++                         class=\\"MuiInputBase-root-678 MuiInput-root-665 MuiInput-underline-669 MuiInputBase-formControl-679 MuiInput-formControl-666\\"
+                        >
+                          <div
+                            class=\\"MuiSelect-root-658\\"
+                          >
+                            <div
+                              aria-haspopup=\\"true\\"
+-                             aria-pressed=\\"false\\"
++                             aria-owns=\\"menu-\\"
++                             aria-pressed=\\"true\\"
+                              class=\\"MuiSelect-select-659 MuiSelect-selectMenu-662 MuiInputBase-input-688 MuiInput-input-673\\"
+                              id=\\"quality-indicators\\"
+                              role=\\"button\\"
+                              tabindex=\\"0\\"
+                            >
+-                             <span>
+-                               ​
+-                             </span>
++                             Commissioned by external body
+                            </div>
+                            <input
+                              type=\\"hidden\\"
+-                             value=\\"\\"
++                             value=\\"454036\\"
+                            />
+                            <svg
+                              aria-hidden=\\"true\\"
+                              class=\\"MuiSvgIcon-root-568 MuiSelect-icon-664\\"
+                              focusable=\\"false\\"
+@@ -643,15 +642,10 @@
+                                d=\\"M7 10l5 5 5-5z\\"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+-                       <p
+-                         class=\\"MuiFormHelperText-root-767 MuiFormHelperText-error-768 MuiFormHelperText-required-774\\"
+-                       >
+-                         This field is required
+-                       </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+@@ -1682,13 +1676,10 @@
+                            <li>
+                              Author affiliation rows marked with red are required
+                            </li>
+                            <li>
+                              Creator research statement is required
+-                           </li>
+-                           <li>
+-                             Quality indicator is required
+                            </li>
+                          </ul>
+                        </span>
+                      </div>
+                    </div>"
+`;
+
+exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of Creative Work - Music should allow user to update work 5`] = `
+"Snapshot Diff:
+Compared values have no visual difference."
+`;
+
+exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of Creative Work - Music should allow user to update work 6`] = `
+"Snapshot Diff:
+- First value
++ Second value
+
+@@ -1123,11 +1123,11 @@
+                          <li
+                            class=\\"MuiListItem-container-739\\"
+                          >
+                            <div
+                              aria-label=\\"Select this author (Grinberg, Anna) to update their affiliation data.\\"
+-                             class=\\"MuiListItem-root-738 WithTheme-WithWidth-ContributorRow---listItem-757 WithTheme-WithWidth-ContributorRow---highlighted-759 MuiListItem-default-741 MuiListItem-gutters-745 MuiListItem-divider-744 MuiListItem-secondaryAction-747\\"
++                             class=\\"MuiListItem-root-738 WithTheme-WithWidth-ContributorRow---listItem-757 MuiListItem-default-741 MuiListItem-gutters-745 MuiListItem-divider-744 MuiListItem-secondaryAction-747\\"
+                              id=\\"contributor-editor-row-1\\"
+                              tabindex=\\"0\\"
+                            >
+                              <div
+                                class=\\"MuiListItemIcon-root-766\\"
+@@ -1174,11 +1174,22 @@
+                                <div
+                                  class=\\"MuiGrid-item-395 MuiGrid-grid-xs-12-434 MuiGrid-grid-sm-5-441\\"
+                                >
+                                  <div
+                                    class=\\"MuiListItemText-root-749\\"
+-                                 />
++                                 >
++                                   <p
++                                     class=\\"MuiTypography-root-491 WithTheme-WithWidth-ContributorRow---primary-763  MuiTypography-body2-499 MuiTypography-noWrap-517\\"
++                                   >
++                                     The University of Queensland
++                                   </p>
++                                   <span
++                                     class=\\"MuiTypography-root-491   MuiTypography-caption-501 MuiTypography-noWrap-517\\"
++                                   >
++                                     Organisation type: University
++                                   </span>
++                                 </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              class=\\"MuiListItemSecondaryAction-root-755\\""
+`;
+
+exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of Creative Work - Music should allow user to update work 7`] = `
+"Snapshot Diff:
+- First value
++ Second value
+
+@@ -1293,11 +1293,11 @@
+                          <li
+                            class=\\"MuiListItem-container-739\\"
+                          >
+                            <div
+                              aria-label=\\"Select this author (Healey, Christopher ) to update their affiliation data.\\"
+-                             class=\\"MuiListItem-root-738 WithTheme-WithWidth-ContributorRow---listItem-757 WithTheme-WithWidth-ContributorRow---highlighted-759 MuiListItem-default-741 MuiListItem-gutters-745 MuiListItem-divider-744 MuiListItem-secondaryAction-747\\"
++                             class=\\"MuiListItem-root-738 WithTheme-WithWidth-ContributorRow---listItem-757 MuiListItem-default-741 MuiListItem-gutters-745 MuiListItem-divider-744 MuiListItem-secondaryAction-747\\"
+                              id=\\"contributor-editor-row-2\\"
+                              tabindex=\\"0\\"
+                            >
+                              <div
+                                class=\\"MuiListItemIcon-root-766\\"
+@@ -1344,11 +1344,22 @@
+                                <div
+                                  class=\\"MuiGrid-item-395 MuiGrid-grid-xs-12-434 MuiGrid-grid-sm-5-441\\"
+                                >
+                                  <div
+                                    class=\\"MuiListItemText-root-749\\"
+-                                 />
++                                 >
++                                   <p
++                                     class=\\"MuiTypography-root-491 WithTheme-WithWidth-ContributorRow---primary-763  MuiTypography-body2-499 MuiTypography-noWrap-517\\"
++                                   >
++                                     test
++                                   </p>
++                                   <span
++                                     class=\\"MuiTypography-root-491   MuiTypography-caption-501 MuiTypography-noWrap-517\\"
++                                   >
++                                     Organisation type: Government
++                                   </span>
++                                 </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              class=\\"MuiListItemSecondaryAction-root-755\\""
+`;
+
+exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of Creative Work - Music should allow user to update work 8`] = `
+"Snapshot Diff:
+- First value
++ Second value
+
+@@ -1463,11 +1463,11 @@
+                          <li
+                            class=\\"MuiListItem-container-739\\"
+                          >
+                            <div
+                              aria-label=\\"Select this author (Tomlinson, Vanessa ) to update their affiliation data.\\"
+-                             class=\\"MuiListItem-root-738 WithTheme-WithWidth-ContributorRow---listItem-757 WithTheme-WithWidth-ContributorRow---highlighted-759 MuiListItem-default-741 MuiListItem-gutters-745 MuiListItem-divider-744 MuiListItem-secondaryAction-747\\"
++                             class=\\"MuiListItem-root-738 WithTheme-WithWidth-ContributorRow---listItem-757 MuiListItem-default-741 MuiListItem-gutters-745 MuiListItem-divider-744 MuiListItem-secondaryAction-747\\"
+                              id=\\"contributor-editor-row-3\\"
+                              tabindex=\\"0\\"
+                            >
+                              <div
+                                class=\\"MuiListItemIcon-root-766\\"
+@@ -1514,14 +1514,25 @@
+                                <div
+                                  class=\\"MuiGrid-item-395 MuiGrid-grid-xs-12-434 MuiGrid-grid-sm-5-441\\"
+                                >
+                                  <div
+                                    class=\\"MuiListItemText-root-749\\"
+-                                 />
++                                 >
++                                   <p
++                                     class=\\"MuiTypography-root-491 WithTheme-WithWidth-ContributorRow---primary-763  MuiTypography-body2-499 MuiTypography-noWrap-517\\"
++                                   >
++                                     The University of Queensland
++                                   </p>
++                                   <span
++                                     class=\\"MuiTypography-root-491   MuiTypography-caption-501 MuiTypography-noWrap-517\\"
++                                   >
++                                     Organisation type: University
++                                   </span>
+                                  </div>
+                                </div>
+                              </div>
++                           </div>
+                            <div
+                              class=\\"MuiListItemSecondaryAction-root-755\\"
+                            >
+                              <span
+                                title=\\"Move item up the order\\"
+@@ -1589,15 +1600,10 @@
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+-                   <span
+-                     class=\\"MuiTypography-root-491 MuiTypography-caption-501 MuiTypography-colorError-525\\"
+-                   >
+-                     Rows marked with a red prefix must be updated
+-                   </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+@@ -1693,13 +1699,10 @@
+                          Validation - 
+                        </b>
+                        <span>
+                          Form cannot be submitted until all fields are valid. Please review all input fields.
+                          <ul>
+-                           <li>
+-                             Author affiliation rows marked with red are required
+-                           </li>
+                            <li>
+                              Creator research statement is required
+                            </li>
+                          </ul>
+                        </span>"
+`;

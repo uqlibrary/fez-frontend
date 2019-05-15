@@ -6,9 +6,6 @@ import { updateIncompleteRecord } from './incompleteRecords';
 import * as incompleteRecordList from 'mock/data/records/incompleteNTROlist';
 import { mockRecordToFix } from 'mock/data/testing/records';
 
-// extend expect to check actions
-expect.extend({toHaveDispatchedActions});
-
 beforeEach(() => {
     mockActionsStore = setupStoreForActions();
     mockApi = setupMockAdapter();

@@ -7,9 +7,6 @@ import {locale} from 'locale'
 describe('View record actions', () => {
     const testPid = "UQ:396321";
 
-    // extend expect to check actions
-    expect.extend({toHaveDispatchedActions});
-
     beforeEach(() => {
         mockActionsStore = setupStoreForActions();
         mockApi = setupMockAdapter();

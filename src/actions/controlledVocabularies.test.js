@@ -3,9 +3,6 @@ import * as repositories from 'repositories';
 import * as controlledVocabActions from './controlledVocabularies';
 
 describe('Controlled Vocabularies actions', () => {
-    // extend expect to check actions
-    expect.extend({toHaveDispatchedActions});
-
     beforeEach(() => {
         mockActionsStore = setupStoreForActions();
         mockApi = setupMockAdapter();
