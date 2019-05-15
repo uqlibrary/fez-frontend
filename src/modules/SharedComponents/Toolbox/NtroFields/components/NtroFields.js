@@ -212,6 +212,7 @@ export default class NtroFields extends React.PureComponent {
                                             title={contributionStatement.fields.impactStatement.label}
                                             description={contributionStatement.fields.impactStatement.placeholder}
                                             maxValue={2000}
+                                            required
                                             disabled={this.props.submitting}
                                             validate={[validation.required, validation.maxLengthWithWhitespace(2000)]}
                                         />

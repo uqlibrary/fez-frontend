@@ -142,6 +142,11 @@ export class MyIncompleteRecordClass extends PureComponent {
         return author.length > 0 && author[0].rek_author_id_order - 1;
     };
 
+    currentAuthorOrder = () => {
+        const author = this.props.recordToFix && this.props.recordToFix.fez_record_search_key_author_id.filter(authorId => authorId.rek_author_id === this.props.author.aut_id);
+        return author.length > 0 && author[0].rek_author_id_order;
+    };
+
     _cancelFix = () => {
         this.props.history.push(pathConfig.records.incomplete);
     };
@@ -235,8 +240,13 @@ export class MyIncompleteRecordClass extends PureComponent {
             !this.props.recordToFix.fez_record_search_key_creator_contribution_statement ||
             this.props.recordToFix.fez_record_search_key_creator_contribution_statement.length === 0 ||
             // Check the current users statement is not missing, empty or null
-            !this.props.recordToFix.fez_record_search_key_creator_contribution_statement[this.currentAuthorIndex()] ||
-            this.props.recordToFix.fez_record_search_key_creator_contribution_statement[this.currentAuthorIndex()].rek_creator_contribution_statement === locale.global.defaultContributorStatementMissing
+            this.props.recordToFix.fez_record_search_key_creator_contribution_statement.map(item => {
+                if(item.rek_creator_contribution_statement_order === this.currentAuthorOrder()) {
+                    return (!item.rek_creator_contribution_statement ||  item.rek_creator_contribution_statement === '' || item.rek_creator_contribution_statement === locale.global.defaultContributorStatementMissing) && true;
+                } else {
+                    return false;
+                }
+            })
         );
 
         // fez_record_search_key_language
@@ -270,8 +280,14 @@ export class MyIncompleteRecordClass extends PureComponent {
             !this.props.recordToFix ||
             !this.props.recordToFix.fez_record_search_key_significance ||
             this.props.recordToFix.fez_record_search_key_significance.length === 0 ||
-            !this.props.recordToFix.fez_record_search_key_significance[this.currentAuthorIndex()] ||
-            this.props.recordToFix.fez_record_search_key_significance[this.currentAuthorIndex()].rek_significance === 0
+            this.props.recordToFix.fez_record_search_key_significance.map(item => {
+                if(item.rek_significance_order === this.currentAuthorOrder()) {
+                    console.log('Current authors signif', item.rek_significance === 0);
+                    return !item.rek_significance || item.rek_significance === 0;
+                } else {
+                    return false;
+                }
+            })
         );
 
         // fez_record_search_key_total_pages
@@ -311,6 +327,8 @@ export class MyIncompleteRecordClass extends PureComponent {
             this.props.recordToFix.fez_datastream_info &&
             this.props.recordToFix.fez_datastream_info.length || 0
         ;
+        console.log('editSignificance', editSignificance);
+        console.log('this.currentAuthorOrder()', this.currentAuthorOrder());
         return (
             <StandardPage title={txt.title}>
                 <PublicationCitation publication={this.props.recordToFix} />
