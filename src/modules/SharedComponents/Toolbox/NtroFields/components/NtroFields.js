@@ -357,6 +357,7 @@ export default class NtroFields extends React.PureComponent {
                                     <Grid item xs={12} sm={this.row4Width}>
                                         <Field
                                             component={TextField}
+                                            id="rek-total-pages"
                                             name="fez_record_search_key_total_pages.rek_total_pages"
                                             type="text"
                                             fullWidth

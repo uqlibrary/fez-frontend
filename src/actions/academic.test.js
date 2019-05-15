@@ -5,9 +5,6 @@ import * as repositories from 'repositories';
 import * as academicActions from './academic';
 
 describe('Academic action creators', () => {
-    // extend expect to check actions
-    expect.extend({toHaveDispatchedActions});
-
     beforeEach(() => {
         mockActionsStore = setupStoreForActions();
         mockApi = setupMockAdapter();

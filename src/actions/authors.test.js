@@ -5,11 +5,6 @@ import * as mockData from 'mock/data';
 import * as routes from 'config/routes';
 
 describe('Action creators for authors', () => {
-    // extend expect to check actions
-    expect.extend({toHaveDispatchedActions});
-    // usage:
-    // expect(store.getActions()).toHaveDispatchedActions(expectedActions);
-
     beforeEach(() => {
         mockActionsStore = setupStoreForActions();
         mockApi = setupMockAdapter();
