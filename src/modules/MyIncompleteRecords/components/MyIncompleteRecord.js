@@ -175,7 +175,18 @@ export class MyIncompleteRecordClass extends PureComponent {
             return <div />;
         }
 
-        const alertProps = validation.getErrorAlertProps({...this.props, alertLocale: alertLocale});
+        const txt = pagesLocale.pages.incompletePublication;
+        const txtFixForm = formsLocale.forms.fixPublicationForm;
+        const authors = txt.fields.authors;
+
+        const alertProps = validation.getErrorAlertProps({
+            ...this.props,
+            alertLocale: {
+                ...alertLocale,
+                progressAlert: txt.progressAlert,
+                successAlert: txt.successAlert
+            }
+        });
 
         const isNtro = !!this.props.recordToFix &&
             !!this.props.recordToFix.rek_subtype &&
@@ -300,9 +311,6 @@ export class MyIncompleteRecordClass extends PureComponent {
             !this.props.recordToFix.fez_record_search_key_total_pages.rek_total_pages
         );
 
-        const txt = pagesLocale.pages.incompletePublication;
-        const txtFixForm = formsLocale.forms.fixPublicationForm;
-        const authors = txt.fields.authors;
 
         if (this.props.accountAuthorLoading || this.props.loadingRecordToFix) {
             return (
