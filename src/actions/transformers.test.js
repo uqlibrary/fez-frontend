@@ -1113,10 +1113,10 @@ describe('getRecordAuthorAffiliationSearchKey tests', () => {
                 "rek_author_affiliation_name": "The University of Queensland",
                 "rek_author_affiliation_name_order": 1
             }, {
-                "rek_author_affiliation_name": "",
+                "rek_author_affiliation_name": "Missing",
                 "rek_author_affiliation_name_order": 2
             }, {
-                "rek_author_affiliation_name": "",
+                "rek_author_affiliation_name": "Missing",
                 "rek_author_affiliation_name_order": 3
             }, {
                 "rek_author_affiliation_name": "The University of Queensland",
