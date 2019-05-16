@@ -480,13 +480,14 @@ export const getAuthorOrder = (data) => {
  */
 export const getCreatorContributionStatementSearchKeys = (data) => {
     const result = {};
-
-    let impactStatement = null;
-    if (!!data.impactStatement && !!data.impactStatement.htmlText) {
-        impactStatement = data.impactStatement.htmlText;
-    } else if (!!data.impactStatement && !!data.impactStatement.plainText) {
-        impactStatement = data.impactStatement.plainText;
-    }
+    const impactStatement = !!data &&
+        !!data.impactStatement &&
+        (
+            data.impactStatement.htmlText ||
+            data.impactStatement.plainText
+        ) ||
+        null
+    ;
     if (!!impactStatement) {
         result.fez_record_search_key_creator_contribution_statement =
             [{
@@ -505,7 +506,7 @@ export const getCreatorContributionStatementSearchKeys = (data) => {
 export const getSignificanceSearchKeys = (data) => {
     const result = {};
 
-    if (!!data.significance) {
+    if (!!data && !!data.significance) {
         result.fez_record_search_key_significance =
             [{
                 rek_significance: data.significance,
