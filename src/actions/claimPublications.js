@@ -120,10 +120,14 @@ export function hideRecordErrorReset() {
  * @returns {action}
  */
 export function setClaimPublication(publication) {
+    const { sources } = publication;
     return dispatch => {
         dispatch({
             type: actions.PUBLICATION_TO_CLAIM_SET,
-            payload: publication
+            payload: {
+                ...publication,
+                ...transformers.getExternalSourceIdSearchKeys(sources),
+            }
         });
     };
 }

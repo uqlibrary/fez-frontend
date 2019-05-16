@@ -1560,3 +1560,25 @@ describe('getAuthorOrder', () => {
         expect(transformers.getAuthorOrder(data)).toBe(-1);
     });
 });
+
+describe('getExternalSourceIdSearchKeys', () => {
+    it('should return formatted search keys for external sources', () => {
+        const data = [
+            { source: 'crossref', id: 'test1' },
+            { source: 'scopus', id: 'test2' },
+            { source: 'wos', id: 'test3' },
+        ];
+        const expected = {
+            fez_record_search_key_doi: {
+                rek_doi: 'test1',
+            },
+            fez_record_search_key_scopus_id: {
+                rek_scopus_id: 'test2',
+            },
+            fez_record_search_key_isi_loc: {
+                rek_isi_loc: 'test3',
+            },
+        };
+        expect(transformers.getExternalSourceIdSearchKeys(data)).toEqual(expected);
+    });
+});
