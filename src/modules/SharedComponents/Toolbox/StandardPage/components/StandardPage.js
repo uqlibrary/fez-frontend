@@ -23,7 +23,7 @@ const styles = theme => ({
     }
 });
 
-class Page extends Component {
+export class Page extends Component {
     static propTypes = {
         title: PropTypes.any,
         help: PropTypes.object,
