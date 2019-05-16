@@ -326,7 +326,7 @@ export class MyIncompleteRecordClass extends PureComponent {
             recordToFix.fez_datastream_info.length || 0
         ;
         return (
-            <StandardPage title={txt.title}>
+            <StandardPage title={txt.title} help={txt.help}>
                 <PublicationCitation publication={recordToFix} />
                 <form onSubmit={this._handleDefaultSubmit}>
                     <NavigationDialogBox

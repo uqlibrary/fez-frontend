@@ -727,6 +727,11 @@ export default {
         },
         incompletePublication: {
             title: 'Complete my work',
+            help: {
+                title: 'Add more information to an existing NTRO',
+                text: (<div>For help, click <a href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-ntro-information" target="_blank">here</a>.</div>),
+                buttonLabel: 'CLOSE'
+            },
             submitButtonLabel: 'Complete work',
             cancelButtonLabel: 'Cancel and return to my incomplete works list',
             fields: {
