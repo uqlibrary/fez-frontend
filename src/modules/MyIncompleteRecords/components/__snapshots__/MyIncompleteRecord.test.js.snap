@@ -16,6 +16,22 @@ Object {
 
 exports[`Cards will display correct empty fields for a Exhibition Creative Work work 1`] = `
 <StandardPage
+  help={
+    Object {
+      "buttonLabel": "CLOSE",
+      "text": <div>
+        For help, click 
+        <a
+          href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-ntro-information"
+          target="_blank"
+        >
+          here
+        </a>
+        .
+      </div>,
+      "title": "Add more information to an existing NTRO",
+    }
+  }
   title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
@@ -707,6 +723,22 @@ exports[`Cards will display correct empty fields for a Exhibition Creative Work 
 
 exports[`Cards will display correct empty fields for a Live Performance of Musical Creative Work work 1`] = `
 <StandardPage
+  help={
+    Object {
+      "buttonLabel": "CLOSE",
+      "text": <div>
+        For help, click 
+        <a
+          href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-ntro-information"
+          target="_blank"
+        >
+          here
+        </a>
+        .
+      </div>,
+      "title": "Add more information to an existing NTRO",
+    }
+  }
   title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
@@ -1398,6 +1430,22 @@ exports[`Cards will display correct empty fields for a Live Performance of Music
 
 exports[`Cards will display correct empty fields for a Musical Creative work 1`] = `
 <StandardPage
+  help={
+    Object {
+      "buttonLabel": "CLOSE",
+      "text": <div>
+        For help, click 
+        <a
+          href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-ntro-information"
+          target="_blank"
+        >
+          here
+        </a>
+        .
+      </div>,
+      "title": "Add more information to an existing NTRO",
+    }
+  }
   title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
@@ -2089,6 +2137,22 @@ exports[`Cards will display correct empty fields for a Musical Creative work 1`]
 
 exports[`Cards will display correct empty fields for a Public Sector Research Report work 1`] = `
 <StandardPage
+  help={
+    Object {
+      "buttonLabel": "CLOSE",
+      "text": <div>
+        For help, click 
+        <a
+          href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-ntro-information"
+          target="_blank"
+        >
+          here
+        </a>
+        .
+      </div>,
+      "title": "Add more information to an existing NTRO",
+    }
+  }
   title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
@@ -2780,6 +2844,22 @@ exports[`Cards will display correct empty fields for a Public Sector Research Re
 
 exports[`Cards will display correct empty fields for a Textual Book work 1`] = `
 <StandardPage
+  help={
+    Object {
+      "buttonLabel": "CLOSE",
+      "text": <div>
+        For help, click 
+        <a
+          href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-ntro-information"
+          target="_blank"
+        >
+          here
+        </a>
+        .
+      </div>,
+      "title": "Add more information to an existing NTRO",
+    }
+  }
   title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
@@ -3471,6 +3551,22 @@ exports[`Cards will display correct empty fields for a Textual Book work 1`] = `
 
 exports[`Cards will display correct empty fields for a Textual Book work with lang supplied 1`] = `
 <StandardPage
+  help={
+    Object {
+      "buttonLabel": "CLOSE",
+      "text": <div>
+        For help, click 
+        <a
+          href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-ntro-information"
+          target="_blank"
+        >
+          here
+        </a>
+        .
+      </div>,
+      "title": "Add more information to an existing NTRO",
+    }
+  }
   title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
@@ -4169,6 +4265,22 @@ exports[`Cards will display correct empty fields for a Textual Book work with la
 
 exports[`Cards will display correct empty fields for a Website Creative work 1`] = `
 <StandardPage
+  help={
+    Object {
+      "buttonLabel": "CLOSE",
+      "text": <div>
+        For help, click 
+        <a
+          href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-ntro-information"
+          target="_blank"
+        >
+          here
+        </a>
+        .
+      </div>,
+      "title": "Add more information to an existing NTRO",
+    }
+  }
   title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
@@ -4860,6 +4972,22 @@ exports[`Cards will display correct empty fields for a Website Creative work 1`]
 
 exports[`Cards will display correct empty fields for an Architectural Design work 1`] = `
 <StandardPage
+  help={
+    Object {
+      "buttonLabel": "CLOSE",
+      "text": <div>
+        For help, click 
+        <a
+          href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-ntro-information"
+          target="_blank"
+        >
+          here
+        </a>
+        .
+      </div>,
+      "title": "Add more information to an existing NTRO",
+    }
+  }
   title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
@@ -5551,6 +5679,22 @@ exports[`Cards will display correct empty fields for an Architectural Design wor
 
 exports[`Cards will display empty where nothing is incomplete 1`] = `
 <StandardPage
+  help={
+    Object {
+      "buttonLabel": "CLOSE",
+      "text": <div>
+        For help, click 
+        <a
+          href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-ntro-information"
+          target="_blank"
+        >
+          here
+        </a>
+        .
+      </div>,
+      "title": "Add more information to an existing NTRO",
+    }
+  }
   title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
@@ -6300,6 +6444,22 @@ exports[`Cards will display empty where nothing is incomplete 1`] = `
 
 exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
 <StandardPage
+  help={
+    Object {
+      "buttonLabel": "CLOSE",
+      "text": <div>
+        For help, click 
+        <a
+          href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-ntro-information"
+          target="_blank"
+        >
+          here
+        </a>
+        .
+      </div>,
+      "title": "Add more information to an existing NTRO",
+    }
+  }
   title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
@@ -7126,6 +7286,22 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
 
 exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
 <StandardPage
+  help={
+    Object {
+      "buttonLabel": "CLOSE",
+      "text": <div>
+        For help, click 
+        <a
+          href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-ntro-information"
+          target="_blank"
+        >
+          here
+        </a>
+        .
+      </div>,
+      "title": "Add more information to an existing NTRO",
+    }
+  }
   title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
@@ -7963,6 +8139,22 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
 
 exports[`Component MyIncompleteRecord should render langauge field 1`] = `
 <StandardPage
+  help={
+    Object {
+      "buttonLabel": "CLOSE",
+      "text": <div>
+        For help, click 
+        <a
+          href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-ntro-information"
+          target="_blank"
+        >
+          here
+        </a>
+        .
+      </div>,
+      "title": "Add more information to an existing NTRO",
+    }
+  }
   title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
@@ -8921,6 +9113,22 @@ exports[`Component MyIncompleteRecord should render loader when record is loadin
 
 exports[`Component MyIncompleteRecord should render no fields as they are complete 1`] = `
 <StandardPage
+  help={
+    Object {
+      "buttonLabel": "CLOSE",
+      "text": <div>
+        For help, click 
+        <a
+          href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-ntro-information"
+          target="_blank"
+        >
+          here
+        </a>
+        .
+      </div>,
+      "title": "Add more information to an existing NTRO",
+    }
+  }
   title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
@@ -9729,6 +9937,22 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
 
 exports[`Component MyIncompleteRecord should render record citation, two actions in select field and a cancel button 1`] = `
 <StandardPage
+  help={
+    Object {
+      "buttonLabel": "CLOSE",
+      "text": <div>
+        For help, click 
+        <a
+          href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-ntro-information"
+          target="_blank"
+        >
+          here
+        </a>
+        .
+      </div>,
+      "title": "Add more information to an existing NTRO",
+    }
+  }
   title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
@@ -10555,6 +10779,22 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
 
 exports[`Component MyIncompleteRecord should render significance and contribution statement fields 1`] = `
 <StandardPage
+  help={
+    Object {
+      "buttonLabel": "CLOSE",
+      "text": <div>
+        For help, click 
+        <a
+          href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-ntro-information"
+          target="_blank"
+        >
+          here
+        </a>
+        .
+      </div>,
+      "title": "Add more information to an existing NTRO",
+    }
+  }
   title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
@@ -11512,6 +11752,22 @@ exports[`Component MyIncompleteRecord should render significance and contributio
 
 exports[`Component MyIncompleteRecord should render the confirm dialog box with an alert due to a file upload failure 1`] = `
 <StandardPage
+  help={
+    Object {
+      "buttonLabel": "CLOSE",
+      "text": <div>
+        For help, click 
+        <a
+          href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-ntro-information"
+          target="_blank"
+        >
+          here
+        </a>
+        .
+      </div>,
+      "title": "Add more information to an existing NTRO",
+    }
+  }
   title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
@@ -12344,6 +12600,22 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
 
 exports[`Component MyIncompleteRecord should render the confirm dialog box without an alert due to a file upload success 1`] = `
 <StandardPage
+  help={
+    Object {
+      "buttonLabel": "CLOSE",
+      "text": <div>
+        For help, click 
+        <a
+          href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-ntro-information"
+          target="_blank"
+        >
+          here
+        </a>
+        .
+      </div>,
+      "title": "Add more information to an existing NTRO",
+    }
+  }
   title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
