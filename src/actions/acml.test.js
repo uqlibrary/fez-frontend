@@ -3,9 +3,6 @@ import * as repositories from 'repositories';
 import * as acmlActions from './acml';
 
 describe('ACML actions', () => {
-    // extend expect to check actions
-    expect.extend({toHaveDispatchedActions});
-
     beforeEach(() => {
         mockActionsStore = setupStoreForActions();
         mockApi = setupMockAdapter();

@@ -41,6 +41,7 @@ exports[`Component ContributorForm should display org affiliation selector if af
         color="primary"
         disabled={true}
         fullWidth={true}
+        id="submit-author"
         onClick={[Function]}
         variant="contained"
       />
@@ -117,6 +118,7 @@ exports[`Component ContributorForm should display org affiliation selector if af
         color="primary"
         disabled={true}
         fullWidth={true}
+        id="submit-author"
         onClick={[Function]}
         variant="contained"
       />
@@ -194,6 +196,7 @@ exports[`Component ContributorForm should handle affiliation change 1`] = `
         color="primary"
         disabled={true}
         fullWidth={true}
+        id="submit-author"
         onClick={[Function]}
         variant="contained"
       />
@@ -243,6 +246,7 @@ exports[`Component ContributorForm should process prop updates 1`] = `
         color="primary"
         disabled={false}
         fullWidth={true}
+        id="submit-author"
         onClick={[Function]}
         variant="contained"
       />
@@ -292,6 +296,7 @@ exports[`Component ContributorForm should process prop updates 2`] = `
         color="primary"
         disabled={false}
         fullWidth={true}
+        id="submit-author"
         onClick={[Function]}
         variant="contained"
       />
@@ -369,6 +374,7 @@ exports[`Component ContributorForm should render NTRO fields 1`] = `
         color="primary"
         disabled={true}
         fullWidth={true}
+        id="submit-author"
         onClick={[Function]}
         variant="contained"
       />
@@ -1610,6 +1616,7 @@ exports[`Component ContributorForm should render connected component 1`] = `
                             color="primary"
                             disabled={true}
                             fullWidth={true}
+                            id="submit-author"
                             onClick={[Function]}
                             variant="contained"
                           >
@@ -1649,6 +1656,7 @@ exports[`Component ContributorForm should render connected component 1`] = `
                               disableFocusRipple={false}
                               disabled={true}
                               fullWidth={true}
+                              id="submit-author"
                               mini={false}
                               onClick={[Function]}
                               size="medium"
@@ -1661,6 +1669,7 @@ exports[`Component ContributorForm should render connected component 1`] = `
                                 disabled={true}
                                 focusRipple={true}
                                 focusVisibleClassName="MuiButton-focusVisible-165"
+                                id="submit-author"
                                 onClick={[Function]}
                                 type="button"
                               >
@@ -1680,6 +1689,7 @@ exports[`Component ContributorForm should render connected component 1`] = `
                                   disabled={true}
                                   focusRipple={true}
                                   focusVisibleClassName="MuiButton-focusVisible-165"
+                                  id="submit-author"
                                   onClick={[Function]}
                                   tabIndex="0"
                                   type="button"
@@ -1687,6 +1697,7 @@ exports[`Component ContributorForm should render connected component 1`] = `
                                   <button
                                     className="MuiButtonBase-root-172 MuiButtonBase-disabled-173 MuiButton-root-146 MuiButton-contained-157 MuiButton-containedPrimary-158 MuiButton-raised-160 MuiButton-raisedPrimary-161 MuiButton-disabled-166 MuiButton-fullWidth-171"
                                     disabled={true}
+                                    id="submit-author"
                                     onBlur={[Function]}
                                     onClick={[Function]}
                                     onFocus={[Function]}
@@ -1781,6 +1792,7 @@ exports[`Component ContributorForm should render display name field and identifi
         color="primary"
         disabled={true}
         fullWidth={true}
+        id="submit-author"
         onClick={[Function]}
         variant="contained"
       />
@@ -1848,6 +1860,7 @@ exports[`Component ContributorForm should render display name field and role fie
         color="primary"
         disabled={true}
         fullWidth={true}
+        id="submit-author"
         onClick={[Function]}
         variant="contained"
       />
@@ -1897,6 +1910,7 @@ exports[`Component ContributorForm should render display name field only 1`] = `
         color="primary"
         disabled={true}
         fullWidth={true}
+        id="submit-author"
         onClick={[Function]}
         variant="contained"
       />
@@ -1947,6 +1961,7 @@ exports[`Component ContributorForm should show contributor assignment 1`] = `
         color="primary"
         disabled={true}
         fullWidth={true}
+        id="submit-author"
         onClick={[Function]}
         variant="contained"
       />
@@ -2024,6 +2039,7 @@ exports[`Component ContributorForm should show error regarding affiliation type 
         color="primary"
         disabled={true}
         fullWidth={true}
+        id="submit-author"
         onClick={[Function]}
         variant="contained"
       />
@@ -2073,6 +2089,7 @@ exports[`Component ContributorForm should show error regarding name field 1`] = 
         color="primary"
         disabled={true}
         fullWidth={true}
+        id="submit-author"
         onClick={[Function]}
         variant="contained"
       />

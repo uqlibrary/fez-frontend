@@ -80,12 +80,11 @@ describe('Component MyIncompleteRecord', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    // TODO: un comment this when uncommenting from the compoennt
-    // it('should redirect if author not linked', () => {
-    //     const testMethod = jest.fn();
-    //     const wrapper = setup({author: {aut_id: 1001}, recordToFix: mockRecordToFix, history: {go: testMethod}});
-    //     expect(testMethod).toHaveBeenCalled();
-    // });
+    it('should redirect if author not linked', () => {
+        const testMethod = jest.fn();
+        const wrapper = setup({author: {aut_id: 1001}, recordToFix: mockRecordToFix, history: {go: testMethod}});
+        expect(testMethod).toHaveBeenCalled();
+    });
 
     it('should render record citation, two actions in select field and a cancel button', () => {
         const wrapper = setup({recordToFix: mockRecordToFix});
@@ -184,6 +183,14 @@ describe('Component MyIncompleteRecord', () => {
         });
         wrapper.instance()._handleDefaultSubmit();
         expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('currentAuthorIndex()', () => {
+        const wrapper = setup({
+            recordToFix: mockRecordToFix,
+            author: {aut_id: 410},
+        });
+        expect(wrapper.instance().currentAuthorIndex()).toEqual(1);
     });
 
     it('should be able to navigate to specific routes', () => {
@@ -312,6 +319,54 @@ describe('Component MyIncompleteRecord', () => {
                 fez_record_search_key_significance: [
                     {},
                     {rek_significance: 'test'}
+                ]
+            }
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render significance and contribution statement fields', () => {
+        const wrapper = setup({recordToFix: {
+            ...mockRecordToFix,
+                rek_display_type_lookup: 'Creative Work',
+                rek_subtype: 'Creative Work - Other',
+                rek_author_id: 410,
+                // Linked Authors
+                fez_record_search_key_author_id: [
+                    {
+                        rek_author_id: 1,
+                        rek_author_id_order: 1},
+                    {
+                        rek_author_id: 410,
+                        rek_author_id_order: 2
+                    }
+                ],
+                // Abstract
+                rek_formatted_abstract: 'test',
+                rek_description: 'test',
+                // Contribution Statement
+                fez_record_search_key_creator_contribution_statement: [
+                    {rek_creator_contribution_statement: 'Missing', rek_creator_contribution_statement_order: 1},
+                    {rek_creator_contribution_statement: 'Missing', rek_creator_contribution_statement_order: 2}
+                ],
+                // Extent
+                fez_record_search_key_total_pages: {
+                    rek_total_pages: 'test'
+                },
+                // Audience size
+                fez_record_search_key_audience_size: {
+                    rek_audience_size: 'test'
+                },
+                // Language
+                fez_record_search_key_language: [],
+                // Quality Indicator
+                fez_record_search_key_quality_indicator: [
+                    'Test'
+                ],
+                // Significance
+                fez_record_search_key_significance: [
+                    {rek_significance: 1, rek_significance_order: 1},
+                    {rek_significance: 0, rek_significance_order: 2}
                 ]
             }
         });

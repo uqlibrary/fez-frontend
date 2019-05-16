@@ -290,6 +290,7 @@ export class ContributorRow extends PureComponent {
                     tabIndex={!enableSelect || this.props.disabled ? -1 : 0}
                     onKeyDown={enableSelect ? this._onSelectKeyboard : () => { }}
                     aria-label={ariaLabel}
+                    id={`contributor-editor-row-${this.props.index}`}
                 >
                     <Hidden xsDown>
                         <ListItemIcon classes={{ root: selectedClass }}>

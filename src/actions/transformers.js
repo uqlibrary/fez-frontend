@@ -184,7 +184,7 @@ export const getRecordAuthorAffiliationSearchKey = (authors) => {
         fez_record_search_key_author_affiliation_name: authors
             .map(
                 (item, index) => ({
-                    rek_author_affiliation_name: item.orgaff,
+                    rek_author_affiliation_name: !!item.orgaff && item.orgaff.length > 0 ? item.orgaff : 'Missing',
                     rek_author_affiliation_name_order: index + 1
                 })
             )

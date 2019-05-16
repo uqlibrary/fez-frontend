@@ -5,9 +5,6 @@ import * as repositories from 'repositories';
 import {possibleUnclaimedList} from 'mock/data';
 
 describe('Claim publication actions tests ', () => {
-    // extend expect to check actions
-    expect.extend({toHaveDispatchedActions});
-
     beforeEach(() => {
         mockActionsStore = setupStoreForActions();
         mockApi = setupMockAdapter();

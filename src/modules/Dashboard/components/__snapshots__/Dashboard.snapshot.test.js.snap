@@ -2649,8 +2649,8 @@ exports[`Dashboard test displays a lure to a single work when the user has incom
     >
       <WithStyles(Alert)
         action={[Function]}
-        actionButtonLabel="View and Update"
-        message="We have found 1 work that requires additional data."
+        actionButtonLabel="View and Complete"
+        message="We have found 1 work(s) that requires more information."
         title="NTRO Data Required"
         type="warning"
       />
@@ -2736,8 +2736,8 @@ exports[`Dashboard test displays a lure when the user has incomplete NTRO submis
     >
       <WithStyles(Alert)
         action={[Function]}
-        actionButtonLabel="View and Update"
-        message="We have found 2 works that require additional data."
+        actionButtonLabel="View and Complete"
+        message="We have found 2 work(s) that require more information."
         title="NTRO Data Required"
         type="warning"
       />

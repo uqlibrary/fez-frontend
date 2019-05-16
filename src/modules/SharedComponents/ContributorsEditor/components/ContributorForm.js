@@ -323,6 +323,7 @@ export class ContributorForm extends PureComponent {
                             color="primary"
                             disabled={buttonDisabled}
                             onClick={this._onSubmit}
+                            id="submit-author"
                         >
                             {locale.addButton}
                         </Button>

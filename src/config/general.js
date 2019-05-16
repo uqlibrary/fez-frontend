@@ -896,6 +896,11 @@ export const DOCTYPE_SUBTYPE_MAPPING = {
 export const SIGNIFICANCE_MAJOR = 454026;
 export const SIGNIFICANCE_MINOR = 454027;
 
+export const SIGNIFICANCE = [
+    {text: 'Minor', value: SIGNIFICANCE_MINOR},
+    {text: 'Major', value: SIGNIFICANCE_MAJOR}
+];
+
 export const QUALITY_INDICATORS = [
     {text: 'Disseminated via nationally recognised outlet or entity', value: 453996},
     {text: 'Disseminated via internationally recognised outlet or entity', value: 453997},
