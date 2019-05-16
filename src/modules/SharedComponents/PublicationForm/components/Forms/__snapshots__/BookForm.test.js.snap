@@ -1746,6 +1746,7 @@ exports[`BookForm renders  component with 4 input fields for NTRO 1`] = `
     </StandardCard>
   </WithStyles(Grid)>
   <NtroFields
+    disableDeleteAllGrants={false}
     hideAbstract={false}
     hideAudienceSize={true}
     hideEndPage={true}

@@ -556,6 +556,7 @@ exports[`CreativeWorkForm renders  should show exhibition content correctly 1`] 
     </StandardCard>
   </WithStyles(Grid)>
   <NtroFields
+    disableDeleteAllGrants={false}
     hideAbstract={false}
     hideAudienceSize={false}
     hideEndPage={true}
