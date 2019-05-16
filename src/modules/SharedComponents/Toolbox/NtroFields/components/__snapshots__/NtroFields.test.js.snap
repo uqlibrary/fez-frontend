@@ -103,6 +103,7 @@ exports[`Component NtroFields should not show NTRO data card in the Ntro fields 
     >
       <Field
         component={[Function]}
+        disableDeleteAllGrants={false}
         disabled={false}
         name="grants"
       />
@@ -654,6 +655,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
     >
       <Field
         component={[Function]}
+        disableDeleteAllGrants={false}
         disabled={true}
         name="grants"
       />
@@ -1205,6 +1207,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
     >
       <Field
         component={[Function]}
+        disableDeleteAllGrants={false}
         disabled={false}
         name="grants"
       />
@@ -1625,6 +1628,7 @@ exports[`Component NtroFields should render default view 1`] = `
     >
       <Field
         component={[Function]}
+        disableDeleteAllGrants={false}
         disabled={false}
         name="grants"
       />
@@ -2674,6 +2678,7 @@ exports[`Component NtroFields should show significance field even if contributio
     >
       <Field
         component={[Function]}
+        disableDeleteAllGrants={false}
         disabled={false}
         name="grants"
       />

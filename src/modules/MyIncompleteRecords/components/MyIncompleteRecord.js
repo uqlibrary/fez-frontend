@@ -16,7 +16,6 @@ import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { FileUploadField } from 'modules/SharedComponents/Toolbox/FileUploader';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { PublicationCitation } from 'modules/SharedComponents/PublicationCitation';
-import { GrantListEditorField } from 'modules/SharedComponents/GrantListEditor';
 import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
 import { NtroFields } from 'modules/SharedComponents/Toolbox/NtroFields';
 
@@ -378,15 +377,7 @@ export class MyIncompleteRecordClass extends PureComponent {
                             </StandardCard>
                         </Grid>
                         {
-                            isNtro && (
-                                editCreatorContributionStatement ||
-                                editAbstract ||
-                                editExtent ||
-                                editAudienceSize ||
-                                editSignificance ||
-                                editQualityIndicator ||
-                                editLanguage
-                            ) &&
+                            isNtro &&
                             <NtroFields
                                 submitting={this.props.submitting}
                                 showContributionStatement={editCreatorContributionStatement}
@@ -404,19 +395,9 @@ export class MyIncompleteRecordClass extends PureComponent {
                                 hidePeerReviewActivity={!editQualityIndicator}
                                 hideLanguage={!editLanguage}
                                 hideSeries
-                                hideGrants
+                                disableDeleteAllGrants={this.props.disableDeleteAllGrants}
                             />
                         }
-                        <Grid item xs={12}>
-                            <StandardCard title={txt.fields.grants.title}>
-                                <Field
-                                    component={GrantListEditorField}
-                                    name="grants"
-                                    disabled={this.props.submitting}
-                                    disableDeleteAllGrants={this.props.disableDeleteAllGrants}
-                                />
-                            </StandardCard>
-                        </Grid>
                         <Grid item xs={12}>
                             <StandardCard title={authors.title} help={authors.help}>
                                 <Typography>{authors.description}</Typography>
