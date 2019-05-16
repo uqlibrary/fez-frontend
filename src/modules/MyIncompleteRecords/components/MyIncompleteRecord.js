@@ -277,11 +277,6 @@ export class MyIncompleteRecordClass extends PureComponent {
             !recordToFix.fez_record_search_key_language ||
             recordToFix.fez_record_search_key_language.length === 0
         ;
-        const defaultLanguage = !!recordToFix &&
-            !!recordToFix.fez_record_search_key_language &&
-            recordToFix.fez_record_search_key_language.length > 0 &&
-            recordToFix.fez_record_search_key_language[0].rek_language
-         || 'eng';
 
         // fez_record_search_key_quality_indicator
         const editQualityIndicator = (
@@ -408,7 +403,6 @@ export class MyIncompleteRecordClass extends PureComponent {
                                 showSignificance={editSignificance}
                                 hidePeerReviewActivity={!editQualityIndicator}
                                 hideLanguage={!editLanguage}
-                                defaultLanguage={defaultLanguage}
                                 hideSeries
                                 hideGrants
                             />

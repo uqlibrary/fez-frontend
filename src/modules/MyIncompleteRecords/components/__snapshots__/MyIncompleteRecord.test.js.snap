@@ -179,8 +179,8 @@ exports[`Cards will display correct empty fields for a Exhibition Creative Work 
         xs={12}
       >
         <WithStyles(Alert)
-          message="follow the prompts in red text to add missing information. You can also provide additional grant details or include notes to the eSpace team."
-          title="Incomplete work"
+          message="follow the red prompts to add missing information. You can also provide additional grant details or include notes to the eSpace team."
+          title="Missing data"
           type="info_outline"
         />
       </WithStyles(Grid)>
@@ -260,7 +260,6 @@ exports[`Cards will display correct empty fields for a Exhibition Creative Work 
         </StandardCard>
       </WithStyles(Grid)>
       <NtroFields
-        defaultLanguage="eng"
         hideAbstract={false}
         hideAudienceSize={false}
         hideEndPage={true}
@@ -451,7 +450,7 @@ exports[`Cards will display correct empty fields for a Exhibition Creative Work 
               >
                 red
               </span>
-               prefix, select the author name at Step 1, update the affiliation information at Step 2, then click 
+               prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
               <b>
                 UPDATE AUTHOR
               </b>
@@ -871,8 +870,8 @@ exports[`Cards will display correct empty fields for a Live Performance of Music
         xs={12}
       >
         <WithStyles(Alert)
-          message="follow the prompts in red text to add missing information. You can also provide additional grant details or include notes to the eSpace team."
-          title="Incomplete work"
+          message="follow the red prompts to add missing information. You can also provide additional grant details or include notes to the eSpace team."
+          title="Missing data"
           type="info_outline"
         />
       </WithStyles(Grid)>
@@ -952,7 +951,6 @@ exports[`Cards will display correct empty fields for a Live Performance of Music
         </StandardCard>
       </WithStyles(Grid)>
       <NtroFields
-        defaultLanguage="eng"
         hideAbstract={false}
         hideAudienceSize={false}
         hideEndPage={true}
@@ -1143,7 +1141,7 @@ exports[`Cards will display correct empty fields for a Live Performance of Music
               >
                 red
               </span>
-               prefix, select the author name at Step 1, update the affiliation information at Step 2, then click 
+               prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
               <b>
                 UPDATE AUTHOR
               </b>
@@ -1563,8 +1561,8 @@ exports[`Cards will display correct empty fields for a Musical Creative work 1`]
         xs={12}
       >
         <WithStyles(Alert)
-          message="follow the prompts in red text to add missing information. You can also provide additional grant details or include notes to the eSpace team."
-          title="Incomplete work"
+          message="follow the red prompts to add missing information. You can also provide additional grant details or include notes to the eSpace team."
+          title="Missing data"
           type="info_outline"
         />
       </WithStyles(Grid)>
@@ -1644,7 +1642,6 @@ exports[`Cards will display correct empty fields for a Musical Creative work 1`]
         </StandardCard>
       </WithStyles(Grid)>
       <NtroFields
-        defaultLanguage="eng"
         hideAbstract={false}
         hideAudienceSize={true}
         hideEndPage={true}
@@ -1835,7 +1832,7 @@ exports[`Cards will display correct empty fields for a Musical Creative work 1`]
               >
                 red
               </span>
-               prefix, select the author name at Step 1, update the affiliation information at Step 2, then click 
+               prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
               <b>
                 UPDATE AUTHOR
               </b>
@@ -2255,8 +2252,8 @@ exports[`Cards will display correct empty fields for a Public Sector Research Re
         xs={12}
       >
         <WithStyles(Alert)
-          message="follow the prompts in red text to add missing information. You can also provide additional grant details or include notes to the eSpace team."
-          title="Incomplete work"
+          message="follow the red prompts to add missing information. You can also provide additional grant details or include notes to the eSpace team."
+          title="Missing data"
           type="info_outline"
         />
       </WithStyles(Grid)>
@@ -2336,7 +2333,6 @@ exports[`Cards will display correct empty fields for a Public Sector Research Re
         </StandardCard>
       </WithStyles(Grid)>
       <NtroFields
-        defaultLanguage="eng"
         hideAbstract={false}
         hideAudienceSize={true}
         hideEndPage={true}
@@ -2527,7 +2523,7 @@ exports[`Cards will display correct empty fields for a Public Sector Research Re
               >
                 red
               </span>
-               prefix, select the author name at Step 1, update the affiliation information at Step 2, then click 
+               prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
               <b>
                 UPDATE AUTHOR
               </b>
@@ -2947,8 +2943,8 @@ exports[`Cards will display correct empty fields for a Textual Book work 1`] = `
         xs={12}
       >
         <WithStyles(Alert)
-          message="follow the prompts in red text to add missing information. You can also provide additional grant details or include notes to the eSpace team."
-          title="Incomplete work"
+          message="follow the red prompts to add missing information. You can also provide additional grant details or include notes to the eSpace team."
+          title="Missing data"
           type="info_outline"
         />
       </WithStyles(Grid)>
@@ -3028,7 +3024,6 @@ exports[`Cards will display correct empty fields for a Textual Book work 1`] = `
         </StandardCard>
       </WithStyles(Grid)>
       <NtroFields
-        defaultLanguage="eng"
         hideAbstract={false}
         hideAudienceSize={true}
         hideEndPage={true}
@@ -3219,7 +3214,7 @@ exports[`Cards will display correct empty fields for a Textual Book work 1`] = `
               >
                 red
               </span>
-               prefix, select the author name at Step 1, update the affiliation information at Step 2, then click 
+               prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
               <b>
                 UPDATE AUTHOR
               </b>
@@ -3646,8 +3641,8 @@ exports[`Cards will display correct empty fields for a Textual Book work with la
         xs={12}
       >
         <WithStyles(Alert)
-          message="follow the prompts in red text to add missing information. You can also provide additional grant details or include notes to the eSpace team."
-          title="Incomplete work"
+          message="follow the red prompts to add missing information. You can also provide additional grant details or include notes to the eSpace team."
+          title="Missing data"
           type="info_outline"
         />
       </WithStyles(Grid)>
@@ -3727,7 +3722,6 @@ exports[`Cards will display correct empty fields for a Textual Book work with la
         </StandardCard>
       </WithStyles(Grid)>
       <NtroFields
-        defaultLanguage="chi"
         hideAbstract={false}
         hideAudienceSize={true}
         hideEndPage={true}
@@ -3918,7 +3912,7 @@ exports[`Cards will display correct empty fields for a Textual Book work with la
               >
                 red
               </span>
-               prefix, select the author name at Step 1, update the affiliation information at Step 2, then click 
+               prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
               <b>
                 UPDATE AUTHOR
               </b>
@@ -4338,8 +4332,8 @@ exports[`Cards will display correct empty fields for a Website Creative work 1`]
         xs={12}
       >
         <WithStyles(Alert)
-          message="follow the prompts in red text to add missing information. You can also provide additional grant details or include notes to the eSpace team."
-          title="Incomplete work"
+          message="follow the red prompts to add missing information. You can also provide additional grant details or include notes to the eSpace team."
+          title="Missing data"
           type="info_outline"
         />
       </WithStyles(Grid)>
@@ -4419,7 +4413,6 @@ exports[`Cards will display correct empty fields for a Website Creative work 1`]
         </StandardCard>
       </WithStyles(Grid)>
       <NtroFields
-        defaultLanguage="eng"
         hideAbstract={false}
         hideAudienceSize={true}
         hideEndPage={true}
@@ -4610,7 +4603,7 @@ exports[`Cards will display correct empty fields for a Website Creative work 1`]
               >
                 red
               </span>
-               prefix, select the author name at Step 1, update the affiliation information at Step 2, then click 
+               prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
               <b>
                 UPDATE AUTHOR
               </b>
@@ -5030,8 +5023,8 @@ exports[`Cards will display correct empty fields for an Architectural Design wor
         xs={12}
       >
         <WithStyles(Alert)
-          message="follow the prompts in red text to add missing information. You can also provide additional grant details or include notes to the eSpace team."
-          title="Incomplete work"
+          message="follow the red prompts to add missing information. You can also provide additional grant details or include notes to the eSpace team."
+          title="Missing data"
           type="info_outline"
         />
       </WithStyles(Grid)>
@@ -5111,7 +5104,6 @@ exports[`Cards will display correct empty fields for an Architectural Design wor
         </StandardCard>
       </WithStyles(Grid)>
       <NtroFields
-        defaultLanguage="eng"
         hideAbstract={false}
         hideAudienceSize={true}
         hideEndPage={true}
@@ -5302,7 +5294,7 @@ exports[`Cards will display correct empty fields for an Architectural Design wor
               >
                 red
               </span>
-               prefix, select the author name at Step 1, update the affiliation information at Step 2, then click 
+               prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
               <b>
                 UPDATE AUTHOR
               </b>
@@ -5780,8 +5772,8 @@ exports[`Cards will display empty where nothing is incomplete 1`] = `
         xs={12}
       >
         <WithStyles(Alert)
-          message="follow the prompts in red text to add missing information. You can also provide additional grant details or include notes to the eSpace team."
-          title="Incomplete work"
+          message="follow the red prompts to add missing information. You can also provide additional grant details or include notes to the eSpace team."
+          title="Missing data"
           type="info_outline"
         />
       </WithStyles(Grid)>
@@ -5861,7 +5853,6 @@ exports[`Cards will display empty where nothing is incomplete 1`] = `
         </StandardCard>
       </WithStyles(Grid)>
       <NtroFields
-        defaultLanguage="chi"
         hideAbstract={true}
         hideAudienceSize={true}
         hideEndPage={true}
@@ -6052,7 +6043,7 @@ exports[`Cards will display empty where nothing is incomplete 1`] = `
               >
                 red
               </span>
-               prefix, select the author name at Step 1, update the affiliation information at Step 2, then click 
+               prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
               <b>
                 UPDATE AUTHOR
               </b>
@@ -6749,8 +6740,8 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
         xs={12}
       >
         <WithStyles(Alert)
-          message="follow the prompts in red text to add missing information. You can also provide additional grant details or include notes to the eSpace team."
-          title="Incomplete work"
+          message="follow the red prompts to add missing information. You can also provide additional grant details or include notes to the eSpace team."
+          title="Missing data"
           type="info_outline"
         />
       </WithStyles(Grid)>
@@ -6878,7 +6869,7 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
               >
                 red
               </span>
-               prefix, select the author name at Step 1, update the affiliation information at Step 2, then click 
+               prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
               <b>
                 UPDATE AUTHOR
               </b>
@@ -7575,8 +7566,8 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
         xs={12}
       >
         <WithStyles(Alert)
-          message="follow the prompts in red text to add missing information. You can also provide additional grant details or include notes to the eSpace team."
-          title="Incomplete work"
+          message="follow the red prompts to add missing information. You can also provide additional grant details or include notes to the eSpace team."
+          title="Missing data"
           type="info_outline"
         />
       </WithStyles(Grid)>
@@ -7704,7 +7695,7 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
               >
                 red
               </span>
-               prefix, select the author name at Step 1, update the affiliation information at Step 2, then click 
+               prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
               <b>
                 UPDATE AUTHOR
               </b>
@@ -8390,8 +8381,8 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
         xs={12}
       >
         <WithStyles(Alert)
-          message="follow the prompts in red text to add missing information. You can also provide additional grant details or include notes to the eSpace team."
-          title="Incomplete work"
+          message="follow the red prompts to add missing information. You can also provide additional grant details or include notes to the eSpace team."
+          title="Missing data"
           type="info_outline"
         />
       </WithStyles(Grid)>
@@ -8471,7 +8462,6 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
         </StandardCard>
       </WithStyles(Grid)>
       <NtroFields
-        defaultLanguage="eng"
         hideAbstract={true}
         hideAudienceSize={true}
         hideEndPage={true}
@@ -8662,7 +8652,7 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
               >
                 red
               </span>
-               prefix, select the author name at Step 1, update the affiliation information at Step 2, then click 
+               prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
               <b>
                 UPDATE AUTHOR
               </b>
@@ -9353,8 +9343,8 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
         xs={12}
       >
         <WithStyles(Alert)
-          message="follow the prompts in red text to add missing information. You can also provide additional grant details or include notes to the eSpace team."
-          title="Incomplete work"
+          message="follow the red prompts to add missing information. You can also provide additional grant details or include notes to the eSpace team."
+          title="Missing data"
           type="info_outline"
         />
       </WithStyles(Grid)>
@@ -9482,7 +9472,7 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
               >
                 red
               </span>
-               prefix, select the author name at Step 1, update the affiliation information at Step 2, then click 
+               prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
               <b>
                 UPDATE AUTHOR
               </b>
@@ -10179,8 +10169,8 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
         xs={12}
       >
         <WithStyles(Alert)
-          message="follow the prompts in red text to add missing information. You can also provide additional grant details or include notes to the eSpace team."
-          title="Incomplete work"
+          message="follow the red prompts to add missing information. You can also provide additional grant details or include notes to the eSpace team."
+          title="Missing data"
           type="info_outline"
         />
       </WithStyles(Grid)>
@@ -10308,7 +10298,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
               >
                 red
               </span>
-               prefix, select the author name at Step 1, update the affiliation information at Step 2, then click 
+               prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
               <b>
                 UPDATE AUTHOR
               </b>
@@ -10994,8 +10984,8 @@ exports[`Component MyIncompleteRecord should render significance and contributio
         xs={12}
       >
         <WithStyles(Alert)
-          message="follow the prompts in red text to add missing information. You can also provide additional grant details or include notes to the eSpace team."
-          title="Incomplete work"
+          message="follow the red prompts to add missing information. You can also provide additional grant details or include notes to the eSpace team."
+          title="Missing data"
           type="info_outline"
         />
       </WithStyles(Grid)>
@@ -11075,7 +11065,6 @@ exports[`Component MyIncompleteRecord should render significance and contributio
         </StandardCard>
       </WithStyles(Grid)>
       <NtroFields
-        defaultLanguage="eng"
         hideAbstract={true}
         hideAudienceSize={true}
         hideEndPage={true}
@@ -11266,7 +11255,7 @@ exports[`Component MyIncompleteRecord should render significance and contributio
               >
                 red
               </span>
-               prefix, select the author name at Step 1, update the affiliation information at Step 2, then click 
+               prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
               <b>
                 UPDATE AUTHOR
               </b>
@@ -11969,8 +11958,8 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
         xs={12}
       >
         <WithStyles(Alert)
-          message="follow the prompts in red text to add missing information. You can also provide additional grant details or include notes to the eSpace team."
-          title="Incomplete work"
+          message="follow the red prompts to add missing information. You can also provide additional grant details or include notes to the eSpace team."
+          title="Missing data"
           type="info_outline"
         />
       </WithStyles(Grid)>
@@ -12098,7 +12087,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
               >
                 red
               </span>
-               prefix, select the author name at Step 1, update the affiliation information at Step 2, then click 
+               prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
               <b>
                 UPDATE AUTHOR
               </b>
@@ -12795,8 +12784,8 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
         xs={12}
       >
         <WithStyles(Alert)
-          message="follow the prompts in red text to add missing information. You can also provide additional grant details or include notes to the eSpace team."
-          title="Incomplete work"
+          message="follow the red prompts to add missing information. You can also provide additional grant details or include notes to the eSpace team."
+          title="Missing data"
           type="info_outline"
         />
       </WithStyles(Grid)>
@@ -12924,7 +12913,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
               >
                 red
               </span>
-               prefix, select the author name at Step 1, update the affiliation information at Step 2, then click 
+               prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
               <b>
                 UPDATE AUTHOR
               </b>

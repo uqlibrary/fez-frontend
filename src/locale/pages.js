@@ -209,8 +209,8 @@ export default {
                 title: 'Work types overview'
             },
             incompleteRecordLure: {
-                title: 'Incomplete Works',
-                message: 'We have found [count] work([plural]) that require[verbEnding] more information.',
+                title: 'NTRO Data Required',
+                message: 'We have found [count] work(s) that require[verbEnding] more information.',
                 type: 'warning',
                 actionButtonLabel: 'View and Complete'
             },
@@ -741,7 +741,7 @@ export default {
                 authors: {
                     ...locale.components.authors,
                     description: (
-                        <span>For each author marked with a <span style={{color: 'red', weight: 'bold'}}>red</span> prefix, select the author name at Step 1, update the affiliation information at Step 2, then click <b>UPDATE AUTHOR</b>.</span>
+                        <span>For each author marked with a <span style={{color: 'red', weight: 'bold'}}>red</span> prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click <b>UPDATE AUTHOR</b>.</span>
                     ),
                     field: {
                         ...locale.components.authors.field,
@@ -825,14 +825,14 @@ export default {
                 confirmButtonLabel: 'Go to my dashboard'
             },
             prompt: {
-                title: 'Incomplete work',
-                message: 'follow the prompts in red text to add missing information. You can also provide additional grant details or include notes to the eSpace team.',
+                title: 'Missing data',
+                message: 'follow the red prompts to add missing information. You can also provide additional grant details or include notes to the eSpace team.',
                 type: 'info_outline'
             },
             progressAlert: {
                 type: 'info_outline',
                 title: 'Saving',
-                message: 'Completing work is in progress.',
+                message: 'Updating work is in progress.',
                 showLoader: true
             },
             successAlert: {
