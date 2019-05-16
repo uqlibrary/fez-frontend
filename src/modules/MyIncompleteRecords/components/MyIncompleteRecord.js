@@ -347,7 +347,7 @@ export class MyIncompleteRecordClass extends PureComponent {
                             />
                         </Grid>
                         <Grid item xs={12}>
-                            <StandardCard title={viewRecordLocale.viewRecord.sections.publicationDetails} help={txt.help}>
+                            <StandardCard title={viewRecordLocale.viewRecord.sections.publicationDetails}>
                                 <Grid container spacing={8} className={this.props.classes.GridType}>
                                     {
                                         !!recordToFix && !!recordToFix.rek_display_type_lookup &&
