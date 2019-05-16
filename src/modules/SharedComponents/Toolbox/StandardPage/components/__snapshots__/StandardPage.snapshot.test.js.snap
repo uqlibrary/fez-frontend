@@ -1,5 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Snapshot tests for StandardPage component renders StandardPage with help 1`] = `
+<WithStyles(Page)
+  help={
+    Object {
+      "buttonLabel": "Test",
+      "text": "Test",
+      "title": "Test",
+    }
+  }
+/>
+`;
+
 exports[`Snapshot tests for StandardPage component renders StandardPage with title 1`] = `
 <WithStyles(Page)
   title="standard page title"
