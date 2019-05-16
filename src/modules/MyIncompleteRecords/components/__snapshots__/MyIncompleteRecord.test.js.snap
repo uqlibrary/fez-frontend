@@ -5888,7 +5888,7 @@ exports[`Cards will display empty where nothing is incomplete 1`] = `
           }
         }
         showContributionStatement={false}
-        showSignificance={false}
+        showSignificance={true}
         submitting={false}
       />
       <WithStyles(Grid)
@@ -11160,8 +11160,8 @@ exports[`Component MyIncompleteRecord should render significance and contributio
             },
           }
         }
-        showContributionStatement={false}
-        showSignificance={false}
+        showContributionStatement={true}
+        showSignificance={true}
         submitting={false}
       />
       <WithStyles(Grid)
