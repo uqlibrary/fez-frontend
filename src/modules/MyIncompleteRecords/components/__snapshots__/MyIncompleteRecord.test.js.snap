@@ -5860,6 +5860,149 @@ exports[`Cards will display empty where nothing is incomplete 1`] = `
           </WithStyles(Grid)>
         </StandardCard>
       </WithStyles(Grid)>
+      <NtroFields
+        defaultLanguage="chi"
+        hideAbstract={true}
+        hideAudienceSize={true}
+        hideEndPage={true}
+        hideExtent={true}
+        hideGrants={true}
+        hideIsmn={true}
+        hideIsrc={true}
+        hideIssue={true}
+        hideLanguage={true}
+        hideOriginalFormat={true}
+        hidePeerReviewActivity={true}
+        hideSeries={true}
+        hideStartPage={true}
+        hideVolume={true}
+        locale={
+          Object {
+            "contributionStatement": Object {
+              "fields": Object {
+                "impactStatement": Object {
+                  "label": <span>
+                    Creator research statement*. Include Background, Contribution and Significance 
+                    <span
+                      style={
+                        Object {
+                          "fontWeight": 700,
+                        }
+                      }
+                    >
+                      (not for public view)
+                    </span>
+                  </span>,
+                  "placeholder": "Remember to include substantiation of your major or minor scale/significance claim above.",
+                },
+                "scaleOfWork": Object {
+                  "description": "Select the option that best describes the significance of the work.",
+                  "label": <span>
+                    Scale/Significance of work* 
+                    <span
+                      style={
+                        Object {
+                          "fontWeight": 700,
+                        }
+                      }
+                    >
+                      (not for public view)
+                    </span>
+                  </span>,
+                },
+              },
+              "help": Object {
+                "buttonLabel": "CLOSE",
+                "text": <React.Fragment>
+                  <h3>
+                    Creator research statement
+                  </h3>
+                  <p>
+                    For more information about the research statement, click  
+                    <b>
+                      <a
+                        href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836548"
+                        style={
+                          Object {
+                            "fontWeight": 700,
+                          }
+                        }
+                        target="_blank"
+                      >
+                        here
+                      </a>
+                    </b>
+                  </p>
+                </React.Fragment>,
+                "title": "Author/Creator research statement",
+              },
+              "title": "Author/Creator research statement",
+            },
+            "grantEditor": Object {
+              "title": "Grant details",
+            },
+            "metadata": Object {
+              "fields": Object {
+                "abstract": Object {
+                  "label": <span>
+                    Abstract/Description* 
+                    <span
+                      style={
+                        Object {
+                          "fontWeight": 700,
+                        }
+                      }
+                    >
+                      (for public view)
+                    </span>
+                  </span>,
+                  "placeholder": "Enter a brief description of the work",
+                },
+                "audienceSize": Object {
+                  "label": "Audience size",
+                },
+                "endPage": Object {
+                  "label": "End page",
+                },
+                "extent": Object {
+                  "label": "Total pages/Extent",
+                  "placeholder": "Enter total pages, size or duration of work",
+                },
+                "issue": Object {
+                  "label": "Issue",
+                },
+                "language": Object {
+                  "label": "Language",
+                },
+                "notes": Object {
+                  "label": "Notes",
+                },
+                "peerReviewActivity": Object {
+                  "label": "Quality indicators",
+                },
+                "physicalDescription": Object {
+                  "label": "Physical description",
+                  "placeholder": "Building, Exhibition, Performance, Composition",
+                },
+                "series": Object {
+                  "floatingLabelText": "Series",
+                  "hintText": "Enter the name of publication, performance, recording, or event series",
+                },
+                "startPage": Object {
+                  "label": "Start page",
+                },
+                "volume": Object {
+                  "label": "Volume",
+                },
+              },
+              "title": "NTRO data",
+            },
+          }
+        }
+        showContributionStatement={false}
+        showSignificance={true}
+        submitting={false}
+      />
       <WithStyles(Grid)
         item={true}
         xs={12}
@@ -11070,8 +11213,8 @@ exports[`Component MyIncompleteRecord should render significance and contributio
             },
           }
         }
-        showContributionStatement={false}
-        showSignificance={false}
+        showContributionStatement={true}
+        showSignificance={true}
         submitting={false}
       />
       <WithStyles(Grid)

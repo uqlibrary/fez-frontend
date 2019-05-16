@@ -166,6 +166,7 @@ export class MyIncompleteRecordClass extends PureComponent {
     };
 
     render() {
+        const {recordToFix} = this.props;
         // if author is not linked to this record, abandon form
         if (!(
             this.props.accountAuthorLoading ||
@@ -188,38 +189,38 @@ export class MyIncompleteRecordClass extends PureComponent {
             }
         });
 
-        const isNtro = !!this.props.recordToFix &&
-            !!this.props.recordToFix.rek_subtype &&
-            !!general.NTRO_SUBTYPES.includes(this.props.recordToFix.rek_subtype)
+        const isNtro = !!recordToFix &&
+            !!recordToFix.rek_subtype &&
+            !!general.NTRO_SUBTYPES.includes(recordToFix.rek_subtype)
         ;
 
         // see https://docs.google.com/spreadsheets/d/1JOWQeFepCs7DWaiMY50yKacxbO_okgolJjeFc2nlMx8/edit#gid=0 for the cross reference of which fields are mandatory on which types
-        const isDocumentType1 = !!this.props.recordToFix &&
-            !!this.props.recordToFix.rek_display_type_lookup &&
-            !!this.props.recordToFix.rek_subtype &&
+        const isDocumentType1 = !!recordToFix &&
+            !!recordToFix.rek_display_type_lookup &&
+            !!recordToFix.rek_subtype &&
             ((displayType, subType) => (
                 (displayType === DOCUMENT_TYPE_DESIGN && subType === NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK) ||
                 (displayType === DOCUMENT_TYPE_BOOK && CW_NTRO_SUBTYPES.includes(subType)) ||
                 (displayType === DOCUMENT_TYPE_CREATIVE_WORK && CW_NTRO_SUBTYPES.includes(subType)) ||
                 (displayType === DOCUMENT_TYPE_CREATIVE_WORK && RRW_NTRO_SUBTYPES.includes(subType)) ||
                 (displayType === DOCUMENT_TYPE_RESEARCH_REPORT && RESEARCH_REPORT_NTRO_SUBTYPES.includes(subType))
-            ))(this.props.recordToFix.rek_display_type_lookup, this.props.recordToFix.rek_subtype);
+            ))(recordToFix.rek_display_type_lookup, recordToFix.rek_subtype);
 
         const isDocumentType2 = (
-            !!this.props.recordToFix &&
-            this.props.recordToFix.rek_display_type_lookup === DOCUMENT_TYPE_CREATIVE_WORK &&
-            !!this.props.recordToFix.rek_subtype && (
-                LP_NTRO_SUBTYPES.includes(this.props.recordToFix.rek_subtype) ||
-                CPEE_NTRO_SUBTYPES.includes(this.props.recordToFix.rek_subtype)
+            !!recordToFix &&
+            recordToFix.rek_display_type_lookup === DOCUMENT_TYPE_CREATIVE_WORK &&
+            !!recordToFix.rek_subtype && (
+                LP_NTRO_SUBTYPES.includes(recordToFix.rek_subtype) ||
+                CPEE_NTRO_SUBTYPES.includes(recordToFix.rek_subtype)
             )
         );
 
-        const isDocumentType3 = !!this.props.recordToFix && (
-            this.props.recordToFix.rek_display_type_lookup === DOCUMENT_TYPE_BOOK_CHAPTER ||
-            this.props.recordToFix.rek_display_type_lookup === DOCUMENT_TYPE_JOURNAL_ARTICLE
+        const isDocumentType3 = !!recordToFix && (
+            recordToFix.rek_display_type_lookup === DOCUMENT_TYPE_BOOK_CHAPTER ||
+            recordToFix.rek_display_type_lookup === DOCUMENT_TYPE_JOURNAL_ARTICLE
         ) &&
-            !!this.props.recordToFix.rek_subtype &&
-            CW_NTRO_SUBTYPES.includes(this.props.recordToFix.rek_subtype)
+            !!recordToFix.rek_subtype &&
+            CW_NTRO_SUBTYPES.includes(recordToFix.rek_subtype)
         ;
 
         // rek_formatted_abstract
@@ -228,17 +229,17 @@ export class MyIncompleteRecordClass extends PureComponent {
             isDocumentType2 ||
             isDocumentType3
         ) && (
-            !this.props.recordToFix || (
-                !this.props.recordToFix.rek_formatted_abstract &&
-                !this.props.recordToFix.rek_description
+            !recordToFix || (
+                !recordToFix.rek_formatted_abstract &&
+                !recordToFix.rek_description
             )
         );
 
         // fez_record_search_key_audience_size
         const editAudienceSize = isDocumentType2 && (
-            !this.props.recordToFix ||
-            !this.props.recordToFix.fez_record_search_key_audience_size ||
-            !this.props.recordToFix.fez_record_search_key_audience_size.rek_audience_size
+            !recordToFix ||
+            !recordToFix.fez_record_search_key_audience_size ||
+            !recordToFix.fez_record_search_key_audience_size.rek_audience_size
         );
 
         // fez_record_search_key_significance
@@ -247,17 +248,12 @@ export class MyIncompleteRecordClass extends PureComponent {
             isDocumentType2 ||
             isDocumentType3
         ) && (
-            !this.props.recordToFix ||
-            !this.props.recordToFix.fez_record_search_key_significance ||
-            this.props.recordToFix.fez_record_search_key_significance.length === 0 ||
-            this.props.recordToFix.fez_record_search_key_significance.map(item => {
-                if(item.rek_significance_order === this.currentAuthorOrder()) {
-                    console.log('Author order on record: ', this.currentAuthorOrder(), 'item.rek_significance', item.rek_significance);
-                    return (!item.rek_significance || item.rek_significance === 0);
-                } else {
-                    return false;
-                }
-            })[this.props.recordToFix.fez_record_search_key_significance.length === this.props.recordToFix.fez_record_search_key_author.length ? this.currentAuthorIndex() : 0]
+            !recordToFix ||
+            !recordToFix.fez_record_search_key_significance ||
+            recordToFix.fez_record_search_key_significance.length === 0 ||
+            recordToFix.fez_record_search_key_significance.filter(item => (
+                item.rek_significance_order === this.currentAuthorOrder() && !item.rek_significance
+            )).length > 0
         );
 
         // fez_record_search_key_creator_contribution_statement
@@ -266,28 +262,25 @@ export class MyIncompleteRecordClass extends PureComponent {
             isDocumentType2 ||
             isDocumentType3
         ) && (
-            !this.props.recordToFix ||
-            !this.props.recordToFix.fez_record_search_key_creator_contribution_statement ||
-            this.props.recordToFix.fez_record_search_key_creator_contribution_statement.length === 0 ||
+            !recordToFix ||
+            !recordToFix.fez_record_search_key_creator_contribution_statement ||
+            recordToFix.fez_record_search_key_creator_contribution_statement.length === 0 ||
             // Check the current users statement is not missing, empty or null
-            this.props.recordToFix.fez_record_search_key_creator_contribution_statement.map(item => {
-                if(item.rek_creator_contribution_statement_order === this.currentAuthorOrder()) {
-                    return (!item.rek_creator_contribution_statement ||  item.rek_creator_contribution_statement === '' || item.rek_creator_contribution_statement === locale.global.defaultContributorStatementMissing);
-                } else {
-                    return false;
-                }
-            })[this.props.recordToFix.fez_record_search_key_creator_contribution_statement.length === this.props.recordToFix.fez_record_search_key_author.length ? this.currentAuthorIndex() : 0]
+            recordToFix.fez_record_search_key_creator_contribution_statement.filter(item => (
+                item.rek_creator_contribution_statement_order === this.currentAuthorOrder() &&
+                (!item.rek_creator_contribution_statement ||  item.rek_creator_contribution_statement === '' || item.rek_creator_contribution_statement === locale.global.defaultContributorStatementMissing)
+            )).length > 0
         );
 
         // fez_record_search_key_language
-        const editLanguage = !this.props.recordToFix ||
-            !this.props.recordToFix.fez_record_search_key_language ||
-            this.props.recordToFix.fez_record_search_key_language.length === 0
+        const editLanguage = !recordToFix ||
+            !recordToFix.fez_record_search_key_language ||
+            recordToFix.fez_record_search_key_language.length === 0
         ;
-        const defaultLanguage = !!this.props.recordToFix &&
-            !!this.props.recordToFix.fez_record_search_key_language &&
-            this.props.recordToFix.fez_record_search_key_language.length > 0 &&
-            this.props.recordToFix.fez_record_search_key_language[0].rek_language
+        const defaultLanguage = !!recordToFix &&
+            !!recordToFix.fez_record_search_key_language &&
+            recordToFix.fez_record_search_key_language.length > 0 &&
+            recordToFix.fez_record_search_key_language[0].rek_language
          || 'eng';
 
         // fez_record_search_key_quality_indicator
@@ -296,9 +289,9 @@ export class MyIncompleteRecordClass extends PureComponent {
             isDocumentType2 ||
             isDocumentType3
         ) && (
-            !this.props.recordToFix ||
-            !this.props.recordToFix.fez_record_search_key_quality_indicator ||
-            this.props.recordToFix.fez_record_search_key_quality_indicator.length === 0
+            !recordToFix ||
+            !recordToFix.fez_record_search_key_quality_indicator ||
+            recordToFix.fez_record_search_key_quality_indicator.length === 0
         );
 
         // fez_record_search_key_total_pages
@@ -306,9 +299,9 @@ export class MyIncompleteRecordClass extends PureComponent {
             isDocumentType1 ||
             isDocumentType2
         ) && (
-            !this.props.recordToFix ||
-            !this.props.recordToFix.fez_record_search_key_total_pages ||
-            !this.props.recordToFix.fez_record_search_key_total_pages.rek_total_pages
+            !recordToFix ||
+            !recordToFix.fez_record_search_key_total_pages ||
+            !recordToFix.fez_record_search_key_total_pages.rek_total_pages
         );
 
 
@@ -333,14 +326,13 @@ export class MyIncompleteRecordClass extends PureComponent {
         );
 
         // Does the record have any files attached
-        const hasAnyFiles = this.props.recordToFix &&
-            this.props.recordToFix.fez_datastream_info &&
-            this.props.recordToFix.fez_datastream_info.length || 0
+        const hasAnyFiles = recordToFix &&
+            recordToFix.fez_datastream_info &&
+            recordToFix.fez_datastream_info.length || 0
         ;
-        console.log(editSignificance);
         return (
             <StandardPage title={txt.title}>
-                <PublicationCitation publication={this.props.recordToFix} />
+                <PublicationCitation publication={recordToFix} />
                 <form onSubmit={this._handleDefaultSubmit}>
                     <NavigationDialogBox
                         when={this.props.dirty && !this.props.submitSucceeded}
@@ -364,26 +356,26 @@ export class MyIncompleteRecordClass extends PureComponent {
                             <StandardCard title={viewRecordLocale.viewRecord.sections.publicationDetails}>
                                 <Grid container spacing={8} className={this.props.classes.GridType}>
                                     {
-                                        !!this.props.recordToFix && !!this.props.recordToFix.rek_display_type_lookup &&
+                                        !!recordToFix && !!recordToFix.rek_display_type_lookup &&
                                         <Grid container spacing={16} alignItems="flex-start">
                                             <Grid item xs={12} sm={3}>
                                                 <Typography variant="body2">{viewRecordLocale.viewRecord.headings.default.publicationDetails.rek_display_type}</Typography>
                                             </Grid>
                                             <Grid item xs={12} sm={9}>
-                                                <Typography variant="body2">{this.props.recordToFix.rek_display_type_lookup}</Typography>
+                                                <Typography variant="body2">{recordToFix.rek_display_type_lookup}</Typography>
                                             </Grid>
                                         </Grid>
                                     }
                                 </Grid>
                                 <Grid container spacing={8} className={this.props.classes.GridSubType}>
                                     {
-                                        !!this.props.recordToFix && !!this.props.recordToFix.rek_subtype &&
+                                        !!recordToFix && !!recordToFix.rek_subtype &&
                                         <Grid container spacing={16} alignItems="flex-start">
                                             <Grid item xs={12} sm={3}>
                                                 <Typography variant="body2">{viewRecordLocale.viewRecord.headings.default.publicationDetails.rek_subtype}</Typography>
                                             </Grid>
                                             <Grid item xs={12} sm={9}>
-                                                <Typography variant="body2">{this.props.recordToFix.rek_subtype}</Typography>
+                                                <Typography variant="body2">{recordToFix.rek_subtype}</Typography>
                                             </Grid>
                                         </Grid>
                                     }
