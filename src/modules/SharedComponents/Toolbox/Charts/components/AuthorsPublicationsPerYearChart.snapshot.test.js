@@ -33,6 +33,7 @@ describe('AuthorsPublicationsPerYearChart ', () => {
 
     it('labelFormatter', () => {
         const wrapper = setup({});
+        expect(wrapper.state().options.legend.labelFormatter()).toBe('');
         wrapper.instance().userOptions = {
             name: 'test'
         };
