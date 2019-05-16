@@ -34,11 +34,18 @@ describe('AuthorsPublicationsPerYearChart ', () => {
     it('labelFormatter', () => {
         const wrapper = setup({});
         expect(wrapper.state().options.legend.labelFormatter()).toBe('');
-        wrapper.instance().userOptions = {
-            name: 'test'
+        const scope1 = {
+            userOptions: {
+                name: 'test'
+            }
         };
-        expect(wrapper.state().options.legend.labelFormatter()).toBe('test');
-        wrapper.instance().userOptions.extraInfoForLegend = 'a, b';
-        expect(wrapper.state().options.legend.labelFormatter()).toBe('test (a, <br />b)');
+        expect(wrapper.state().options.legend.labelFormatter.bind(scope1)()).toBe('test');
+        const scope2 = {
+            userOptions : {
+                name: 'test',
+                extraInfoForLegend: 'a, b'
+            }
+        };
+        expect(wrapper.state().options.legend.labelFormatter.bind(scope2)()).toBe('test (a, <br />b)');
     });
 });

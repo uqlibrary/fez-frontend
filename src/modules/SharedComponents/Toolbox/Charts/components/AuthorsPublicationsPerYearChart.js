@@ -57,7 +57,7 @@ class AuthorsPublicationsPerYearChart extends React.Component {
                     y: -10,
                     floating: true,
                     shadow: false,
-                    labelFormatter: () => {
+                    labelFormatter: function labelFormatter() {
                         if (!this.userOptions) {
                             return '';
                         }
