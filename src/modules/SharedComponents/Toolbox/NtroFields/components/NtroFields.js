@@ -39,7 +39,8 @@ export default class NtroFields extends React.PureComponent {
         hideLanguage: PropTypes.bool,
         showContributionStatement: PropTypes.bool,
         showSignificance: PropTypes.bool,
-        hideAbstract: PropTypes.bool
+        hideAbstract: PropTypes.bool,
+        disableDeleteAllGrants: PropTypes.bool
     };
 
     static defaultProps = {
@@ -59,6 +60,7 @@ export default class NtroFields extends React.PureComponent {
         showContributionStatement: false,
         showSignificance: false,
         hideAbstract: false,
+        disableDeleteAllGrants: false,
         locale: {
             contributionStatement: {
                 title: 'Author/Creator research statement',
@@ -446,6 +448,7 @@ export default class NtroFields extends React.PureComponent {
                                 component={GrantListEditorField}
                                 name="grants"
                                 disabled={this.props.submitting}
+                                disableDeleteAllGrants={this.props.disableDeleteAllGrants}
                             />
                         </StandardCard>
                     </Grid>
