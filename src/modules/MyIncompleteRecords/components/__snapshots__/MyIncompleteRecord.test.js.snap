@@ -189,6 +189,26 @@ exports[`Cards will display correct empty fields for a Exhibition Creative Work 
         xs={12}
       >
         <StandardCard
+          help={
+            Object {
+              "buttonLabel": "CLOSE",
+              "text": <p>
+                For help, click 
+                <a
+                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-ntro-information"
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                  target="_blank"
+                >
+                  here
+                </a>
+              </p>,
+              "title": "Add more information to an existing NTRO",
+            }
+          }
           title="Type & Collection"
         >
           <WithStyles(Grid)
@@ -867,6 +887,26 @@ exports[`Cards will display correct empty fields for a Live Performance of Music
         xs={12}
       >
         <StandardCard
+          help={
+            Object {
+              "buttonLabel": "CLOSE",
+              "text": <p>
+                For help, click 
+                <a
+                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-ntro-information"
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                  target="_blank"
+                >
+                  here
+                </a>
+              </p>,
+              "title": "Add more information to an existing NTRO",
+            }
+          }
           title="Type & Collection"
         >
           <WithStyles(Grid)
@@ -1545,6 +1585,26 @@ exports[`Cards will display correct empty fields for a Musical Creative work 1`]
         xs={12}
       >
         <StandardCard
+          help={
+            Object {
+              "buttonLabel": "CLOSE",
+              "text": <p>
+                For help, click 
+                <a
+                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-ntro-information"
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                  target="_blank"
+                >
+                  here
+                </a>
+              </p>,
+              "title": "Add more information to an existing NTRO",
+            }
+          }
           title="Type & Collection"
         >
           <WithStyles(Grid)
@@ -2223,6 +2283,26 @@ exports[`Cards will display correct empty fields for a Public Sector Research Re
         xs={12}
       >
         <StandardCard
+          help={
+            Object {
+              "buttonLabel": "CLOSE",
+              "text": <p>
+                For help, click 
+                <a
+                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-ntro-information"
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                  target="_blank"
+                >
+                  here
+                </a>
+              </p>,
+              "title": "Add more information to an existing NTRO",
+            }
+          }
           title="Type & Collection"
         >
           <WithStyles(Grid)
@@ -2901,6 +2981,26 @@ exports[`Cards will display correct empty fields for a Textual Book work 1`] = `
         xs={12}
       >
         <StandardCard
+          help={
+            Object {
+              "buttonLabel": "CLOSE",
+              "text": <p>
+                For help, click 
+                <a
+                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-ntro-information"
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                  target="_blank"
+                >
+                  here
+                </a>
+              </p>,
+              "title": "Add more information to an existing NTRO",
+            }
+          }
           title="Type & Collection"
         >
           <WithStyles(Grid)
@@ -3586,6 +3686,26 @@ exports[`Cards will display correct empty fields for a Textual Book work with la
         xs={12}
       >
         <StandardCard
+          help={
+            Object {
+              "buttonLabel": "CLOSE",
+              "text": <p>
+                For help, click 
+                <a
+                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-ntro-information"
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                  target="_blank"
+                >
+                  here
+                </a>
+              </p>,
+              "title": "Add more information to an existing NTRO",
+            }
+          }
           title="Type & Collection"
         >
           <WithStyles(Grid)
@@ -4264,6 +4384,26 @@ exports[`Cards will display correct empty fields for a Website Creative work 1`]
         xs={12}
       >
         <StandardCard
+          help={
+            Object {
+              "buttonLabel": "CLOSE",
+              "text": <p>
+                For help, click 
+                <a
+                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-ntro-information"
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                  target="_blank"
+                >
+                  here
+                </a>
+              </p>,
+              "title": "Add more information to an existing NTRO",
+            }
+          }
           title="Type & Collection"
         >
           <WithStyles(Grid)
@@ -4942,6 +5082,26 @@ exports[`Cards will display correct empty fields for an Architectural Design wor
         xs={12}
       >
         <StandardCard
+          help={
+            Object {
+              "buttonLabel": "CLOSE",
+              "text": <p>
+                For help, click 
+                <a
+                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-ntro-information"
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                  target="_blank"
+                >
+                  here
+                </a>
+              </p>,
+              "title": "Add more information to an existing NTRO",
+            }
+          }
           title="Type & Collection"
         >
           <WithStyles(Grid)
@@ -5678,6 +5838,26 @@ exports[`Cards will display empty where nothing is incomplete 1`] = `
         xs={12}
       >
         <StandardCard
+          help={
+            Object {
+              "buttonLabel": "CLOSE",
+              "text": <p>
+                For help, click 
+                <a
+                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-ntro-information"
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                  target="_blank"
+                >
+                  here
+                </a>
+              </p>,
+              "title": "Add more information to an existing NTRO",
+            }
+          }
           title="Type & Collection"
         >
           <WithStyles(Grid)
@@ -6633,6 +6813,26 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
         xs={12}
       >
         <StandardCard
+          help={
+            Object {
+              "buttonLabel": "CLOSE",
+              "text": <p>
+                For help, click 
+                <a
+                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-ntro-information"
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                  target="_blank"
+                >
+                  here
+                </a>
+              </p>,
+              "title": "Add more information to an existing NTRO",
+            }
+          }
           title="Type & Collection"
         >
           <WithStyles(Grid)
@@ -7445,6 +7645,26 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
         xs={12}
       >
         <StandardCard
+          help={
+            Object {
+              "buttonLabel": "CLOSE",
+              "text": <p>
+                For help, click 
+                <a
+                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-ntro-information"
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                  target="_blank"
+                >
+                  here
+                </a>
+              </p>,
+              "title": "Add more information to an existing NTRO",
+            }
+          }
           title="Type & Collection"
         >
           <WithStyles(Grid)
@@ -8246,6 +8466,26 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
         xs={12}
       >
         <StandardCard
+          help={
+            Object {
+              "buttonLabel": "CLOSE",
+              "text": <p>
+                For help, click 
+                <a
+                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-ntro-information"
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                  target="_blank"
+                >
+                  here
+                </a>
+              </p>,
+              "title": "Add more information to an existing NTRO",
+            }
+          }
           title="Type & Collection"
         >
           <WithStyles(Grid)
@@ -9195,6 +9435,26 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
         xs={12}
       >
         <StandardCard
+          help={
+            Object {
+              "buttonLabel": "CLOSE",
+              "text": <p>
+                For help, click 
+                <a
+                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-ntro-information"
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                  target="_blank"
+                >
+                  here
+                </a>
+              </p>,
+              "title": "Add more information to an existing NTRO",
+            }
+          }
           title="Type & Collection"
         >
           <WithStyles(Grid)
@@ -10150,6 +10410,26 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
         xs={12}
       >
         <StandardCard
+          help={
+            Object {
+              "buttonLabel": "CLOSE",
+              "text": <p>
+                For help, click 
+                <a
+                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-ntro-information"
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                  target="_blank"
+                >
+                  here
+                </a>
+              </p>,
+              "title": "Add more information to an existing NTRO",
+            }
+          }
           title="Type & Collection"
         >
           <WithStyles(Grid)
@@ -10951,6 +11231,26 @@ exports[`Component MyIncompleteRecord should render significance and contributio
         xs={12}
       >
         <StandardCard
+          help={
+            Object {
+              "buttonLabel": "CLOSE",
+              "text": <p>
+                For help, click 
+                <a
+                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-ntro-information"
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                  target="_blank"
+                >
+                  here
+                </a>
+              </p>,
+              "title": "Add more information to an existing NTRO",
+            }
+          }
           title="Type & Collection"
         >
           <WithStyles(Grid)
@@ -11912,6 +12212,26 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
         xs={12}
       >
         <StandardCard
+          help={
+            Object {
+              "buttonLabel": "CLOSE",
+              "text": <p>
+                For help, click 
+                <a
+                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-ntro-information"
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                  target="_blank"
+                >
+                  here
+                </a>
+              </p>,
+              "title": "Add more information to an existing NTRO",
+            }
+          }
           title="Type & Collection"
         >
           <WithStyles(Grid)
@@ -12724,6 +13044,26 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
         xs={12}
       >
         <StandardCard
+          help={
+            Object {
+              "buttonLabel": "CLOSE",
+              "text": <p>
+                For help, click 
+                <a
+                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-ntro-information"
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                  target="_blank"
+                >
+                  here
+                </a>
+              </p>,
+              "title": "Add more information to an existing NTRO",
+            }
+          }
           title="Type & Collection"
         >
           <WithStyles(Grid)
