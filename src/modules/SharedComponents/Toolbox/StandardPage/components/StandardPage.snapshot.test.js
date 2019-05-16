@@ -19,7 +19,7 @@ describe('Snapshot tests for StandardPage component', () => {
     });
 
     it('renders StandardPage with help', () => {
-        const wrapper = setup({help: {title: 'Test', text: 'Test', buttonLabel:'Test'}});
+        const wrapper = setup({tit: 'Test', help: {title: 'Test', text: 'Test', buttonLabel:'Test'}});
         const tree = toJson(wrapper);
         expect(tree).toMatchSnapshot();
     });
