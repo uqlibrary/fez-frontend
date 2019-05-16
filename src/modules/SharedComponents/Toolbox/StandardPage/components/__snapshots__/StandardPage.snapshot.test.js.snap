@@ -9,6 +9,7 @@ exports[`Snapshot tests for StandardPage component renders StandardPage with hel
       "title": "Test",
     }
   }
+  tit="Test"
 />
 `;
 
