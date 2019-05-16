@@ -16,7 +16,7 @@ Object {
 
 exports[`Cards will display correct empty fields for a Exhibition Creative Work work 1`] = `
 <StandardPage
-  title="Update my work"
+  title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
     publication={
@@ -155,7 +155,7 @@ exports[`Cards will display correct empty fields for a Exhibition Creative Work 
       hideCancelButton={false}
       locale={
         Object {
-          "cancelButtonLabel": "Update another incomplete work",
+          "cancelButtonLabel": "Complete another work",
           "confirmButtonLabel": "Go to my dashboard",
           "confirmationMessage": <React.Fragment />,
           "confirmationTitle": "Your work has been updated",
@@ -179,7 +179,7 @@ exports[`Cards will display correct empty fields for a Exhibition Creative Work 
         xs={12}
       >
         <WithStyles(Alert)
-          message="This record has missing data - enter all fields to give a quality record."
+          message="follow the red prompts to add missing information. You can also provide additional grant details or include notes to the eSpace team."
           title="Missing data"
           type="info_outline"
         />
@@ -260,7 +260,6 @@ exports[`Cards will display correct empty fields for a Exhibition Creative Work 
         </StandardCard>
       </WithStyles(Grid)>
       <NtroFields
-        defaultLanguage="eng"
         hideAbstract={false}
         hideAudienceSize={false}
         hideEndPage={true}
@@ -292,7 +291,7 @@ exports[`Cards will display correct empty fields for a Exhibition Creative Work 
                       (not for public view)
                     </span>
                   </span>,
-                  "placeholder": "Remember to include substantiation of your Major or Minor Scale/Significance claim above.",
+                  "placeholder": "Remember to include substantiation of your major or minor scale/significance claim above.",
                 },
                 "scaleOfWork": Object {
                   "description": "Select the option that best describes the significance of the work.",
@@ -440,7 +439,7 @@ exports[`Cards will display correct empty fields for a Exhibition Creative Work 
         >
           <WithStyles(Typography)>
             <span>
-              Please complete affiliation data for each listed author by selecting each row marked in 
+              For each author marked with a 
               <span
                 style={
                   Object {
@@ -451,7 +450,7 @@ exports[`Cards will display correct empty fields for a Exhibition Creative Work 
               >
                 red
               </span>
-              , and adding the missing information in the form underneath the list and clicking 
+               prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
               <b>
                 UPDATE AUTHOR
               </b>
@@ -477,9 +476,9 @@ exports[`Cards will display correct empty fields for a Exhibition Creative Work 
                       </span>
                        - 
                       <b>
-                        Update the affiliation data
+                        Update the affiliation information
                       </b>
-                       for the selected author below.
+                      .
                     </div>,
                     "descriptionStep1NoStep2": <div>
                       Please 
@@ -514,7 +513,7 @@ exports[`Cards will display correct empty fields for a Exhibition Creative Work 
                       <b>
                         Select an author
                       </b>
-                       below to update affiliation data.
+                      .
                     </div>,
                     "identifierColumn": "UQ identifier",
                     "nameColumn": "Author's name as published",
@@ -694,10 +693,11 @@ exports[`Cards will display correct empty fields for a Exhibition Creative Work 
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="update-my-work"
           onClick={[MockFunction]}
           variant="contained"
         >
-          Update my work
+          Complete work
         </WithStyles(Button)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
@@ -707,7 +707,7 @@ exports[`Cards will display correct empty fields for a Exhibition Creative Work 
 
 exports[`Cards will display correct empty fields for a Live Performance of Musical Creative Work work 1`] = `
 <StandardPage
-  title="Update my work"
+  title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
     publication={
@@ -846,7 +846,7 @@ exports[`Cards will display correct empty fields for a Live Performance of Music
       hideCancelButton={false}
       locale={
         Object {
-          "cancelButtonLabel": "Update another incomplete work",
+          "cancelButtonLabel": "Complete another work",
           "confirmButtonLabel": "Go to my dashboard",
           "confirmationMessage": <React.Fragment />,
           "confirmationTitle": "Your work has been updated",
@@ -870,7 +870,7 @@ exports[`Cards will display correct empty fields for a Live Performance of Music
         xs={12}
       >
         <WithStyles(Alert)
-          message="This record has missing data - enter all fields to give a quality record."
+          message="follow the red prompts to add missing information. You can also provide additional grant details or include notes to the eSpace team."
           title="Missing data"
           type="info_outline"
         />
@@ -951,7 +951,6 @@ exports[`Cards will display correct empty fields for a Live Performance of Music
         </StandardCard>
       </WithStyles(Grid)>
       <NtroFields
-        defaultLanguage="eng"
         hideAbstract={false}
         hideAudienceSize={false}
         hideEndPage={true}
@@ -983,7 +982,7 @@ exports[`Cards will display correct empty fields for a Live Performance of Music
                       (not for public view)
                     </span>
                   </span>,
-                  "placeholder": "Remember to include substantiation of your Major or Minor Scale/Significance claim above.",
+                  "placeholder": "Remember to include substantiation of your major or minor scale/significance claim above.",
                 },
                 "scaleOfWork": Object {
                   "description": "Select the option that best describes the significance of the work.",
@@ -1131,7 +1130,7 @@ exports[`Cards will display correct empty fields for a Live Performance of Music
         >
           <WithStyles(Typography)>
             <span>
-              Please complete affiliation data for each listed author by selecting each row marked in 
+              For each author marked with a 
               <span
                 style={
                   Object {
@@ -1142,7 +1141,7 @@ exports[`Cards will display correct empty fields for a Live Performance of Music
               >
                 red
               </span>
-              , and adding the missing information in the form underneath the list and clicking 
+               prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
               <b>
                 UPDATE AUTHOR
               </b>
@@ -1168,9 +1167,9 @@ exports[`Cards will display correct empty fields for a Live Performance of Music
                       </span>
                        - 
                       <b>
-                        Update the affiliation data
+                        Update the affiliation information
                       </b>
-                       for the selected author below.
+                      .
                     </div>,
                     "descriptionStep1NoStep2": <div>
                       Please 
@@ -1205,7 +1204,7 @@ exports[`Cards will display correct empty fields for a Live Performance of Music
                       <b>
                         Select an author
                       </b>
-                       below to update affiliation data.
+                      .
                     </div>,
                     "identifierColumn": "UQ identifier",
                     "nameColumn": "Author's name as published",
@@ -1385,10 +1384,11 @@ exports[`Cards will display correct empty fields for a Live Performance of Music
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="update-my-work"
           onClick={[MockFunction]}
           variant="contained"
         >
-          Update my work
+          Complete work
         </WithStyles(Button)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
@@ -1398,7 +1398,7 @@ exports[`Cards will display correct empty fields for a Live Performance of Music
 
 exports[`Cards will display correct empty fields for a Musical Creative work 1`] = `
 <StandardPage
-  title="Update my work"
+  title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
     publication={
@@ -1537,7 +1537,7 @@ exports[`Cards will display correct empty fields for a Musical Creative work 1`]
       hideCancelButton={false}
       locale={
         Object {
-          "cancelButtonLabel": "Update another incomplete work",
+          "cancelButtonLabel": "Complete another work",
           "confirmButtonLabel": "Go to my dashboard",
           "confirmationMessage": <React.Fragment />,
           "confirmationTitle": "Your work has been updated",
@@ -1561,7 +1561,7 @@ exports[`Cards will display correct empty fields for a Musical Creative work 1`]
         xs={12}
       >
         <WithStyles(Alert)
-          message="This record has missing data - enter all fields to give a quality record."
+          message="follow the red prompts to add missing information. You can also provide additional grant details or include notes to the eSpace team."
           title="Missing data"
           type="info_outline"
         />
@@ -1642,7 +1642,6 @@ exports[`Cards will display correct empty fields for a Musical Creative work 1`]
         </StandardCard>
       </WithStyles(Grid)>
       <NtroFields
-        defaultLanguage="eng"
         hideAbstract={false}
         hideAudienceSize={true}
         hideEndPage={true}
@@ -1674,7 +1673,7 @@ exports[`Cards will display correct empty fields for a Musical Creative work 1`]
                       (not for public view)
                     </span>
                   </span>,
-                  "placeholder": "Remember to include substantiation of your Major or Minor Scale/Significance claim above.",
+                  "placeholder": "Remember to include substantiation of your major or minor scale/significance claim above.",
                 },
                 "scaleOfWork": Object {
                   "description": "Select the option that best describes the significance of the work.",
@@ -1822,7 +1821,7 @@ exports[`Cards will display correct empty fields for a Musical Creative work 1`]
         >
           <WithStyles(Typography)>
             <span>
-              Please complete affiliation data for each listed author by selecting each row marked in 
+              For each author marked with a 
               <span
                 style={
                   Object {
@@ -1833,7 +1832,7 @@ exports[`Cards will display correct empty fields for a Musical Creative work 1`]
               >
                 red
               </span>
-              , and adding the missing information in the form underneath the list and clicking 
+               prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
               <b>
                 UPDATE AUTHOR
               </b>
@@ -1859,9 +1858,9 @@ exports[`Cards will display correct empty fields for a Musical Creative work 1`]
                       </span>
                        - 
                       <b>
-                        Update the affiliation data
+                        Update the affiliation information
                       </b>
-                       for the selected author below.
+                      .
                     </div>,
                     "descriptionStep1NoStep2": <div>
                       Please 
@@ -1896,7 +1895,7 @@ exports[`Cards will display correct empty fields for a Musical Creative work 1`]
                       <b>
                         Select an author
                       </b>
-                       below to update affiliation data.
+                      .
                     </div>,
                     "identifierColumn": "UQ identifier",
                     "nameColumn": "Author's name as published",
@@ -2076,10 +2075,11 @@ exports[`Cards will display correct empty fields for a Musical Creative work 1`]
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="update-my-work"
           onClick={[MockFunction]}
           variant="contained"
         >
-          Update my work
+          Complete work
         </WithStyles(Button)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
@@ -2089,7 +2089,7 @@ exports[`Cards will display correct empty fields for a Musical Creative work 1`]
 
 exports[`Cards will display correct empty fields for a Public Sector Research Report work 1`] = `
 <StandardPage
-  title="Update my work"
+  title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
     publication={
@@ -2228,7 +2228,7 @@ exports[`Cards will display correct empty fields for a Public Sector Research Re
       hideCancelButton={false}
       locale={
         Object {
-          "cancelButtonLabel": "Update another incomplete work",
+          "cancelButtonLabel": "Complete another work",
           "confirmButtonLabel": "Go to my dashboard",
           "confirmationMessage": <React.Fragment />,
           "confirmationTitle": "Your work has been updated",
@@ -2252,7 +2252,7 @@ exports[`Cards will display correct empty fields for a Public Sector Research Re
         xs={12}
       >
         <WithStyles(Alert)
-          message="This record has missing data - enter all fields to give a quality record."
+          message="follow the red prompts to add missing information. You can also provide additional grant details or include notes to the eSpace team."
           title="Missing data"
           type="info_outline"
         />
@@ -2333,7 +2333,6 @@ exports[`Cards will display correct empty fields for a Public Sector Research Re
         </StandardCard>
       </WithStyles(Grid)>
       <NtroFields
-        defaultLanguage="eng"
         hideAbstract={false}
         hideAudienceSize={true}
         hideEndPage={true}
@@ -2365,7 +2364,7 @@ exports[`Cards will display correct empty fields for a Public Sector Research Re
                       (not for public view)
                     </span>
                   </span>,
-                  "placeholder": "Remember to include substantiation of your Major or Minor Scale/Significance claim above.",
+                  "placeholder": "Remember to include substantiation of your major or minor scale/significance claim above.",
                 },
                 "scaleOfWork": Object {
                   "description": "Select the option that best describes the significance of the work.",
@@ -2513,7 +2512,7 @@ exports[`Cards will display correct empty fields for a Public Sector Research Re
         >
           <WithStyles(Typography)>
             <span>
-              Please complete affiliation data for each listed author by selecting each row marked in 
+              For each author marked with a 
               <span
                 style={
                   Object {
@@ -2524,7 +2523,7 @@ exports[`Cards will display correct empty fields for a Public Sector Research Re
               >
                 red
               </span>
-              , and adding the missing information in the form underneath the list and clicking 
+               prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
               <b>
                 UPDATE AUTHOR
               </b>
@@ -2550,9 +2549,9 @@ exports[`Cards will display correct empty fields for a Public Sector Research Re
                       </span>
                        - 
                       <b>
-                        Update the affiliation data
+                        Update the affiliation information
                       </b>
-                       for the selected author below.
+                      .
                     </div>,
                     "descriptionStep1NoStep2": <div>
                       Please 
@@ -2587,7 +2586,7 @@ exports[`Cards will display correct empty fields for a Public Sector Research Re
                       <b>
                         Select an author
                       </b>
-                       below to update affiliation data.
+                      .
                     </div>,
                     "identifierColumn": "UQ identifier",
                     "nameColumn": "Author's name as published",
@@ -2767,10 +2766,11 @@ exports[`Cards will display correct empty fields for a Public Sector Research Re
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="update-my-work"
           onClick={[MockFunction]}
           variant="contained"
         >
-          Update my work
+          Complete work
         </WithStyles(Button)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
@@ -2780,7 +2780,7 @@ exports[`Cards will display correct empty fields for a Public Sector Research Re
 
 exports[`Cards will display correct empty fields for a Textual Book work 1`] = `
 <StandardPage
-  title="Update my work"
+  title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
     publication={
@@ -2919,7 +2919,7 @@ exports[`Cards will display correct empty fields for a Textual Book work 1`] = `
       hideCancelButton={false}
       locale={
         Object {
-          "cancelButtonLabel": "Update another incomplete work",
+          "cancelButtonLabel": "Complete another work",
           "confirmButtonLabel": "Go to my dashboard",
           "confirmationMessage": <React.Fragment />,
           "confirmationTitle": "Your work has been updated",
@@ -2943,7 +2943,7 @@ exports[`Cards will display correct empty fields for a Textual Book work 1`] = `
         xs={12}
       >
         <WithStyles(Alert)
-          message="This record has missing data - enter all fields to give a quality record."
+          message="follow the red prompts to add missing information. You can also provide additional grant details or include notes to the eSpace team."
           title="Missing data"
           type="info_outline"
         />
@@ -3024,7 +3024,6 @@ exports[`Cards will display correct empty fields for a Textual Book work 1`] = `
         </StandardCard>
       </WithStyles(Grid)>
       <NtroFields
-        defaultLanguage="eng"
         hideAbstract={false}
         hideAudienceSize={true}
         hideEndPage={true}
@@ -3056,7 +3055,7 @@ exports[`Cards will display correct empty fields for a Textual Book work 1`] = `
                       (not for public view)
                     </span>
                   </span>,
-                  "placeholder": "Remember to include substantiation of your Major or Minor Scale/Significance claim above.",
+                  "placeholder": "Remember to include substantiation of your major or minor scale/significance claim above.",
                 },
                 "scaleOfWork": Object {
                   "description": "Select the option that best describes the significance of the work.",
@@ -3204,7 +3203,7 @@ exports[`Cards will display correct empty fields for a Textual Book work 1`] = `
         >
           <WithStyles(Typography)>
             <span>
-              Please complete affiliation data for each listed author by selecting each row marked in 
+              For each author marked with a 
               <span
                 style={
                   Object {
@@ -3215,7 +3214,7 @@ exports[`Cards will display correct empty fields for a Textual Book work 1`] = `
               >
                 red
               </span>
-              , and adding the missing information in the form underneath the list and clicking 
+               prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
               <b>
                 UPDATE AUTHOR
               </b>
@@ -3241,9 +3240,9 @@ exports[`Cards will display correct empty fields for a Textual Book work 1`] = `
                       </span>
                        - 
                       <b>
-                        Update the affiliation data
+                        Update the affiliation information
                       </b>
-                       for the selected author below.
+                      .
                     </div>,
                     "descriptionStep1NoStep2": <div>
                       Please 
@@ -3278,7 +3277,7 @@ exports[`Cards will display correct empty fields for a Textual Book work 1`] = `
                       <b>
                         Select an author
                       </b>
-                       below to update affiliation data.
+                      .
                     </div>,
                     "identifierColumn": "UQ identifier",
                     "nameColumn": "Author's name as published",
@@ -3458,10 +3457,11 @@ exports[`Cards will display correct empty fields for a Textual Book work 1`] = `
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="update-my-work"
           onClick={[MockFunction]}
           variant="contained"
         >
-          Update my work
+          Complete work
         </WithStyles(Button)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
@@ -3471,7 +3471,7 @@ exports[`Cards will display correct empty fields for a Textual Book work 1`] = `
 
 exports[`Cards will display correct empty fields for a Textual Book work with lang supplied 1`] = `
 <StandardPage
-  title="Update my work"
+  title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
     publication={
@@ -3617,7 +3617,7 @@ exports[`Cards will display correct empty fields for a Textual Book work with la
       hideCancelButton={false}
       locale={
         Object {
-          "cancelButtonLabel": "Update another incomplete work",
+          "cancelButtonLabel": "Complete another work",
           "confirmButtonLabel": "Go to my dashboard",
           "confirmationMessage": <React.Fragment />,
           "confirmationTitle": "Your work has been updated",
@@ -3641,7 +3641,7 @@ exports[`Cards will display correct empty fields for a Textual Book work with la
         xs={12}
       >
         <WithStyles(Alert)
-          message="This record has missing data - enter all fields to give a quality record."
+          message="follow the red prompts to add missing information. You can also provide additional grant details or include notes to the eSpace team."
           title="Missing data"
           type="info_outline"
         />
@@ -3722,7 +3722,6 @@ exports[`Cards will display correct empty fields for a Textual Book work with la
         </StandardCard>
       </WithStyles(Grid)>
       <NtroFields
-        defaultLanguage="chi"
         hideAbstract={false}
         hideAudienceSize={true}
         hideEndPage={true}
@@ -3754,7 +3753,7 @@ exports[`Cards will display correct empty fields for a Textual Book work with la
                       (not for public view)
                     </span>
                   </span>,
-                  "placeholder": "Remember to include substantiation of your Major or Minor Scale/Significance claim above.",
+                  "placeholder": "Remember to include substantiation of your major or minor scale/significance claim above.",
                 },
                 "scaleOfWork": Object {
                   "description": "Select the option that best describes the significance of the work.",
@@ -3902,7 +3901,7 @@ exports[`Cards will display correct empty fields for a Textual Book work with la
         >
           <WithStyles(Typography)>
             <span>
-              Please complete affiliation data for each listed author by selecting each row marked in 
+              For each author marked with a 
               <span
                 style={
                   Object {
@@ -3913,7 +3912,7 @@ exports[`Cards will display correct empty fields for a Textual Book work with la
               >
                 red
               </span>
-              , and adding the missing information in the form underneath the list and clicking 
+               prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
               <b>
                 UPDATE AUTHOR
               </b>
@@ -3939,9 +3938,9 @@ exports[`Cards will display correct empty fields for a Textual Book work with la
                       </span>
                        - 
                       <b>
-                        Update the affiliation data
+                        Update the affiliation information
                       </b>
-                       for the selected author below.
+                      .
                     </div>,
                     "descriptionStep1NoStep2": <div>
                       Please 
@@ -3976,7 +3975,7 @@ exports[`Cards will display correct empty fields for a Textual Book work with la
                       <b>
                         Select an author
                       </b>
-                       below to update affiliation data.
+                      .
                     </div>,
                     "identifierColumn": "UQ identifier",
                     "nameColumn": "Author's name as published",
@@ -4156,10 +4155,11 @@ exports[`Cards will display correct empty fields for a Textual Book work with la
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="update-my-work"
           onClick={[MockFunction]}
           variant="contained"
         >
-          Update my work
+          Complete work
         </WithStyles(Button)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
@@ -4169,7 +4169,7 @@ exports[`Cards will display correct empty fields for a Textual Book work with la
 
 exports[`Cards will display correct empty fields for a Website Creative work 1`] = `
 <StandardPage
-  title="Update my work"
+  title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
     publication={
@@ -4308,7 +4308,7 @@ exports[`Cards will display correct empty fields for a Website Creative work 1`]
       hideCancelButton={false}
       locale={
         Object {
-          "cancelButtonLabel": "Update another incomplete work",
+          "cancelButtonLabel": "Complete another work",
           "confirmButtonLabel": "Go to my dashboard",
           "confirmationMessage": <React.Fragment />,
           "confirmationTitle": "Your work has been updated",
@@ -4332,7 +4332,7 @@ exports[`Cards will display correct empty fields for a Website Creative work 1`]
         xs={12}
       >
         <WithStyles(Alert)
-          message="This record has missing data - enter all fields to give a quality record."
+          message="follow the red prompts to add missing information. You can also provide additional grant details or include notes to the eSpace team."
           title="Missing data"
           type="info_outline"
         />
@@ -4413,7 +4413,6 @@ exports[`Cards will display correct empty fields for a Website Creative work 1`]
         </StandardCard>
       </WithStyles(Grid)>
       <NtroFields
-        defaultLanguage="eng"
         hideAbstract={false}
         hideAudienceSize={true}
         hideEndPage={true}
@@ -4445,7 +4444,7 @@ exports[`Cards will display correct empty fields for a Website Creative work 1`]
                       (not for public view)
                     </span>
                   </span>,
-                  "placeholder": "Remember to include substantiation of your Major or Minor Scale/Significance claim above.",
+                  "placeholder": "Remember to include substantiation of your major or minor scale/significance claim above.",
                 },
                 "scaleOfWork": Object {
                   "description": "Select the option that best describes the significance of the work.",
@@ -4593,7 +4592,7 @@ exports[`Cards will display correct empty fields for a Website Creative work 1`]
         >
           <WithStyles(Typography)>
             <span>
-              Please complete affiliation data for each listed author by selecting each row marked in 
+              For each author marked with a 
               <span
                 style={
                   Object {
@@ -4604,7 +4603,7 @@ exports[`Cards will display correct empty fields for a Website Creative work 1`]
               >
                 red
               </span>
-              , and adding the missing information in the form underneath the list and clicking 
+               prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
               <b>
                 UPDATE AUTHOR
               </b>
@@ -4630,9 +4629,9 @@ exports[`Cards will display correct empty fields for a Website Creative work 1`]
                       </span>
                        - 
                       <b>
-                        Update the affiliation data
+                        Update the affiliation information
                       </b>
-                       for the selected author below.
+                      .
                     </div>,
                     "descriptionStep1NoStep2": <div>
                       Please 
@@ -4667,7 +4666,7 @@ exports[`Cards will display correct empty fields for a Website Creative work 1`]
                       <b>
                         Select an author
                       </b>
-                       below to update affiliation data.
+                      .
                     </div>,
                     "identifierColumn": "UQ identifier",
                     "nameColumn": "Author's name as published",
@@ -4847,10 +4846,11 @@ exports[`Cards will display correct empty fields for a Website Creative work 1`]
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="update-my-work"
           onClick={[MockFunction]}
           variant="contained"
         >
-          Update my work
+          Complete work
         </WithStyles(Button)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
@@ -4860,7 +4860,7 @@ exports[`Cards will display correct empty fields for a Website Creative work 1`]
 
 exports[`Cards will display correct empty fields for an Architectural Design work 1`] = `
 <StandardPage
-  title="Update my work"
+  title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
     publication={
@@ -4999,7 +4999,7 @@ exports[`Cards will display correct empty fields for an Architectural Design wor
       hideCancelButton={false}
       locale={
         Object {
-          "cancelButtonLabel": "Update another incomplete work",
+          "cancelButtonLabel": "Complete another work",
           "confirmButtonLabel": "Go to my dashboard",
           "confirmationMessage": <React.Fragment />,
           "confirmationTitle": "Your work has been updated",
@@ -5023,7 +5023,7 @@ exports[`Cards will display correct empty fields for an Architectural Design wor
         xs={12}
       >
         <WithStyles(Alert)
-          message="This record has missing data - enter all fields to give a quality record."
+          message="follow the red prompts to add missing information. You can also provide additional grant details or include notes to the eSpace team."
           title="Missing data"
           type="info_outline"
         />
@@ -5104,7 +5104,6 @@ exports[`Cards will display correct empty fields for an Architectural Design wor
         </StandardCard>
       </WithStyles(Grid)>
       <NtroFields
-        defaultLanguage="eng"
         hideAbstract={false}
         hideAudienceSize={true}
         hideEndPage={true}
@@ -5136,7 +5135,7 @@ exports[`Cards will display correct empty fields for an Architectural Design wor
                       (not for public view)
                     </span>
                   </span>,
-                  "placeholder": "Remember to include substantiation of your Major or Minor Scale/Significance claim above.",
+                  "placeholder": "Remember to include substantiation of your major or minor scale/significance claim above.",
                 },
                 "scaleOfWork": Object {
                   "description": "Select the option that best describes the significance of the work.",
@@ -5284,7 +5283,7 @@ exports[`Cards will display correct empty fields for an Architectural Design wor
         >
           <WithStyles(Typography)>
             <span>
-              Please complete affiliation data for each listed author by selecting each row marked in 
+              For each author marked with a 
               <span
                 style={
                   Object {
@@ -5295,7 +5294,7 @@ exports[`Cards will display correct empty fields for an Architectural Design wor
               >
                 red
               </span>
-              , and adding the missing information in the form underneath the list and clicking 
+               prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
               <b>
                 UPDATE AUTHOR
               </b>
@@ -5321,9 +5320,9 @@ exports[`Cards will display correct empty fields for an Architectural Design wor
                       </span>
                        - 
                       <b>
-                        Update the affiliation data
+                        Update the affiliation information
                       </b>
-                       for the selected author below.
+                      .
                     </div>,
                     "descriptionStep1NoStep2": <div>
                       Please 
@@ -5358,7 +5357,7 @@ exports[`Cards will display correct empty fields for an Architectural Design wor
                       <b>
                         Select an author
                       </b>
-                       below to update affiliation data.
+                      .
                     </div>,
                     "identifierColumn": "UQ identifier",
                     "nameColumn": "Author's name as published",
@@ -5538,10 +5537,11 @@ exports[`Cards will display correct empty fields for an Architectural Design wor
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="update-my-work"
           onClick={[MockFunction]}
           variant="contained"
         >
-          Update my work
+          Complete work
         </WithStyles(Button)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
@@ -5551,7 +5551,7 @@ exports[`Cards will display correct empty fields for an Architectural Design wor
 
 exports[`Cards will display empty where nothing is incomplete 1`] = `
 <StandardPage
-  title="Update my work"
+  title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
     publication={
@@ -5748,7 +5748,7 @@ exports[`Cards will display empty where nothing is incomplete 1`] = `
       hideCancelButton={false}
       locale={
         Object {
-          "cancelButtonLabel": "Update another incomplete work",
+          "cancelButtonLabel": "Complete another work",
           "confirmButtonLabel": "Go to my dashboard",
           "confirmationMessage": <React.Fragment />,
           "confirmationTitle": "Your work has been updated",
@@ -5772,7 +5772,7 @@ exports[`Cards will display empty where nothing is incomplete 1`] = `
         xs={12}
       >
         <WithStyles(Alert)
-          message="This record has missing data - enter all fields to give a quality record."
+          message="follow the red prompts to add missing information. You can also provide additional grant details or include notes to the eSpace team."
           title="Missing data"
           type="info_outline"
         />
@@ -5853,7 +5853,6 @@ exports[`Cards will display empty where nothing is incomplete 1`] = `
         </StandardCard>
       </WithStyles(Grid)>
       <NtroFields
-        defaultLanguage="chi"
         hideAbstract={true}
         hideAudienceSize={true}
         hideEndPage={true}
@@ -5885,7 +5884,7 @@ exports[`Cards will display empty where nothing is incomplete 1`] = `
                       (not for public view)
                     </span>
                   </span>,
-                  "placeholder": "Remember to include substantiation of your Major or Minor Scale/Significance claim above.",
+                  "placeholder": "Remember to include substantiation of your major or minor scale/significance claim above.",
                 },
                 "scaleOfWork": Object {
                   "description": "Select the option that best describes the significance of the work.",
@@ -6033,7 +6032,7 @@ exports[`Cards will display empty where nothing is incomplete 1`] = `
         >
           <WithStyles(Typography)>
             <span>
-              Please complete affiliation data for each listed author by selecting each row marked in 
+              For each author marked with a 
               <span
                 style={
                   Object {
@@ -6044,7 +6043,7 @@ exports[`Cards will display empty where nothing is incomplete 1`] = `
               >
                 red
               </span>
-              , and adding the missing information in the form underneath the list and clicking 
+               prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
               <b>
                 UPDATE AUTHOR
               </b>
@@ -6070,9 +6069,9 @@ exports[`Cards will display empty where nothing is incomplete 1`] = `
                       </span>
                        - 
                       <b>
-                        Update the affiliation data
+                        Update the affiliation information
                       </b>
-                       for the selected author below.
+                      .
                     </div>,
                     "descriptionStep1NoStep2": <div>
                       Please 
@@ -6107,7 +6106,7 @@ exports[`Cards will display empty where nothing is incomplete 1`] = `
                       <b>
                         Select an author
                       </b>
-                       below to update affiliation data.
+                      .
                     </div>,
                     "identifierColumn": "UQ identifier",
                     "nameColumn": "Author's name as published",
@@ -6287,10 +6286,11 @@ exports[`Cards will display empty where nothing is incomplete 1`] = `
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="update-my-work"
           onClick={[MockFunction]}
           variant="contained"
         >
-          Update my work
+          Complete work
         </WithStyles(Button)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
@@ -6300,7 +6300,7 @@ exports[`Cards will display empty where nothing is incomplete 1`] = `
 
 exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
 <StandardPage
-  title="Update my work"
+  title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
     publication={
@@ -6716,7 +6716,7 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
       hideCancelButton={false}
       locale={
         Object {
-          "cancelButtonLabel": "Update another incomplete work",
+          "cancelButtonLabel": "Complete another work",
           "confirmButtonLabel": "Go to my dashboard",
           "confirmationMessage": <React.Fragment />,
           "confirmationTitle": "Your work has been updated",
@@ -6740,7 +6740,7 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
         xs={12}
       >
         <WithStyles(Alert)
-          message="This record has missing data - enter all fields to give a quality record."
+          message="follow the red prompts to add missing information. You can also provide additional grant details or include notes to the eSpace team."
           title="Missing data"
           type="info_outline"
         />
@@ -6858,7 +6858,7 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
         >
           <WithStyles(Typography)>
             <span>
-              Please complete affiliation data for each listed author by selecting each row marked in 
+              For each author marked with a 
               <span
                 style={
                   Object {
@@ -6869,7 +6869,7 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
               >
                 red
               </span>
-              , and adding the missing information in the form underneath the list and clicking 
+               prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
               <b>
                 UPDATE AUTHOR
               </b>
@@ -6895,9 +6895,9 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
                       </span>
                        - 
                       <b>
-                        Update the affiliation data
+                        Update the affiliation information
                       </b>
-                       for the selected author below.
+                      .
                     </div>,
                     "descriptionStep1NoStep2": <div>
                       Please 
@@ -6932,7 +6932,7 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
                       <b>
                         Select an author
                       </b>
-                       below to update affiliation data.
+                      .
                     </div>,
                     "identifierColumn": "UQ identifier",
                     "nameColumn": "Author's name as published",
@@ -7112,10 +7112,11 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="update-my-work"
           onClick={[MockFunction]}
           variant="contained"
         >
-          Update my work
+          Complete work
         </WithStyles(Button)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
@@ -7125,7 +7126,7 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
 
 exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
 <StandardPage
-  title="Update my work"
+  title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
     publication={
@@ -7541,7 +7542,7 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
       hideCancelButton={false}
       locale={
         Object {
-          "cancelButtonLabel": "Update another incomplete work",
+          "cancelButtonLabel": "Complete another work",
           "confirmButtonLabel": "Go to my dashboard",
           "confirmationMessage": <React.Fragment />,
           "confirmationTitle": "Your work has been updated",
@@ -7565,7 +7566,7 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
         xs={12}
       >
         <WithStyles(Alert)
-          message="This record has missing data - enter all fields to give a quality record."
+          message="follow the red prompts to add missing information. You can also provide additional grant details or include notes to the eSpace team."
           title="Missing data"
           type="info_outline"
         />
@@ -7683,7 +7684,7 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
         >
           <WithStyles(Typography)>
             <span>
-              Please complete affiliation data for each listed author by selecting each row marked in 
+              For each author marked with a 
               <span
                 style={
                   Object {
@@ -7694,7 +7695,7 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
               >
                 red
               </span>
-              , and adding the missing information in the form underneath the list and clicking 
+               prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
               <b>
                 UPDATE AUTHOR
               </b>
@@ -7720,9 +7721,9 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
                       </span>
                        - 
                       <b>
-                        Update the affiliation data
+                        Update the affiliation information
                       </b>
-                       for the selected author below.
+                      .
                     </div>,
                     "descriptionStep1NoStep2": <div>
                       Please 
@@ -7757,7 +7758,7 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
                       <b>
                         Select an author
                       </b>
-                       below to update affiliation data.
+                      .
                     </div>,
                     "identifierColumn": "UQ identifier",
                     "nameColumn": "Author's name as published",
@@ -7897,7 +7898,7 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
         xs={12}
       >
         <WithStyles(Alert)
-          message="New work has been saved successfully."
+          message="New information has been saved successfully."
           pushToTop={true}
           title="Success"
           type="done"
@@ -7948,10 +7949,11 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="update-my-work"
           onClick={[MockFunction]}
           variant="contained"
         >
-          Update my work
+          Complete work
         </WithStyles(Button)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
@@ -7961,7 +7963,7 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
 
 exports[`Component MyIncompleteRecord should render langauge field 1`] = `
 <StandardPage
-  title="Update my work"
+  title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
     publication={
@@ -8355,7 +8357,7 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
       hideCancelButton={false}
       locale={
         Object {
-          "cancelButtonLabel": "Update another incomplete work",
+          "cancelButtonLabel": "Complete another work",
           "confirmButtonLabel": "Go to my dashboard",
           "confirmationMessage": <React.Fragment />,
           "confirmationTitle": "Your work has been updated",
@@ -8379,7 +8381,7 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
         xs={12}
       >
         <WithStyles(Alert)
-          message="This record has missing data - enter all fields to give a quality record."
+          message="follow the red prompts to add missing information. You can also provide additional grant details or include notes to the eSpace team."
           title="Missing data"
           type="info_outline"
         />
@@ -8460,7 +8462,6 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
         </StandardCard>
       </WithStyles(Grid)>
       <NtroFields
-        defaultLanguage="eng"
         hideAbstract={true}
         hideAudienceSize={true}
         hideEndPage={true}
@@ -8492,7 +8493,7 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
                       (not for public view)
                     </span>
                   </span>,
-                  "placeholder": "Remember to include substantiation of your Major or Minor Scale/Significance claim above.",
+                  "placeholder": "Remember to include substantiation of your major or minor scale/significance claim above.",
                 },
                 "scaleOfWork": Object {
                   "description": "Select the option that best describes the significance of the work.",
@@ -8640,7 +8641,7 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
         >
           <WithStyles(Typography)>
             <span>
-              Please complete affiliation data for each listed author by selecting each row marked in 
+              For each author marked with a 
               <span
                 style={
                   Object {
@@ -8651,7 +8652,7 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
               >
                 red
               </span>
-              , and adding the missing information in the form underneath the list and clicking 
+               prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
               <b>
                 UPDATE AUTHOR
               </b>
@@ -8677,9 +8678,9 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
                       </span>
                        - 
                       <b>
-                        Update the affiliation data
+                        Update the affiliation information
                       </b>
-                       for the selected author below.
+                      .
                     </div>,
                     "descriptionStep1NoStep2": <div>
                       Please 
@@ -8714,7 +8715,7 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
                       <b>
                         Select an author
                       </b>
-                       below to update affiliation data.
+                      .
                     </div>,
                     "identifierColumn": "UQ identifier",
                     "nameColumn": "Author's name as published",
@@ -8894,10 +8895,11 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="update-my-work"
           onClick={[MockFunction]}
           variant="contained"
         >
-          Update my work
+          Complete work
         </WithStyles(Button)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
@@ -8919,7 +8921,7 @@ exports[`Component MyIncompleteRecord should render loader when record is loadin
 
 exports[`Component MyIncompleteRecord should render no fields as they are complete 1`] = `
 <StandardPage
-  title="Update my work"
+  title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
     publication={
@@ -9317,7 +9319,7 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
       hideCancelButton={false}
       locale={
         Object {
-          "cancelButtonLabel": "Update another incomplete work",
+          "cancelButtonLabel": "Complete another work",
           "confirmButtonLabel": "Go to my dashboard",
           "confirmationMessage": <React.Fragment />,
           "confirmationTitle": "Your work has been updated",
@@ -9341,7 +9343,7 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
         xs={12}
       >
         <WithStyles(Alert)
-          message="This record has missing data - enter all fields to give a quality record."
+          message="follow the red prompts to add missing information. You can also provide additional grant details or include notes to the eSpace team."
           title="Missing data"
           type="info_outline"
         />
@@ -9459,7 +9461,7 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
         >
           <WithStyles(Typography)>
             <span>
-              Please complete affiliation data for each listed author by selecting each row marked in 
+              For each author marked with a 
               <span
                 style={
                   Object {
@@ -9470,7 +9472,7 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
               >
                 red
               </span>
-              , and adding the missing information in the form underneath the list and clicking 
+               prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
               <b>
                 UPDATE AUTHOR
               </b>
@@ -9496,9 +9498,9 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
                       </span>
                        - 
                       <b>
-                        Update the affiliation data
+                        Update the affiliation information
                       </b>
-                       for the selected author below.
+                      .
                     </div>,
                     "descriptionStep1NoStep2": <div>
                       Please 
@@ -9533,7 +9535,7 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
                       <b>
                         Select an author
                       </b>
-                       below to update affiliation data.
+                      .
                     </div>,
                     "identifierColumn": "UQ identifier",
                     "nameColumn": "Author's name as published",
@@ -9713,10 +9715,11 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="update-my-work"
           onClick={[MockFunction]}
           variant="contained"
         >
-          Update my work
+          Complete work
         </WithStyles(Button)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
@@ -9726,7 +9729,7 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
 
 exports[`Component MyIncompleteRecord should render record citation, two actions in select field and a cancel button 1`] = `
 <StandardPage
-  title="Update my work"
+  title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
     publication={
@@ -10142,7 +10145,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
       hideCancelButton={false}
       locale={
         Object {
-          "cancelButtonLabel": "Update another incomplete work",
+          "cancelButtonLabel": "Complete another work",
           "confirmButtonLabel": "Go to my dashboard",
           "confirmationMessage": <React.Fragment />,
           "confirmationTitle": "Your work has been updated",
@@ -10166,7 +10169,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
         xs={12}
       >
         <WithStyles(Alert)
-          message="This record has missing data - enter all fields to give a quality record."
+          message="follow the red prompts to add missing information. You can also provide additional grant details or include notes to the eSpace team."
           title="Missing data"
           type="info_outline"
         />
@@ -10284,7 +10287,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
         >
           <WithStyles(Typography)>
             <span>
-              Please complete affiliation data for each listed author by selecting each row marked in 
+              For each author marked with a 
               <span
                 style={
                   Object {
@@ -10295,7 +10298,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
               >
                 red
               </span>
-              , and adding the missing information in the form underneath the list and clicking 
+               prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
               <b>
                 UPDATE AUTHOR
               </b>
@@ -10321,9 +10324,9 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
                       </span>
                        - 
                       <b>
-                        Update the affiliation data
+                        Update the affiliation information
                       </b>
-                       for the selected author below.
+                      .
                     </div>,
                     "descriptionStep1NoStep2": <div>
                       Please 
@@ -10358,7 +10361,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
                       <b>
                         Select an author
                       </b>
-                       below to update affiliation data.
+                      .
                     </div>,
                     "identifierColumn": "UQ identifier",
                     "nameColumn": "Author's name as published",
@@ -10538,10 +10541,968 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="update-my-work"
           onClick={[MockFunction]}
           variant="contained"
         >
-          Update my work
+          Complete work
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </form>
+</StandardPage>
+`;
+
+exports[`Component MyIncompleteRecord should render significance and contribution statement fields 1`] = `
+<StandardPage
+  title="Complete my work"
+>
+  <withRouter(Connect(WithStyles(PublicationCitation)))
+    publication={
+      Object {
+        "fez_datastream_info": Array [],
+        "fez_record_search_key_access_conditions": null,
+        "fez_record_search_key_acknowledgements": null,
+        "fez_record_search_key_additional_notes": null,
+        "fez_record_search_key_advisory_statement": null,
+        "fez_record_search_key_alternate_genre": Array [],
+        "fez_record_search_key_alternative_title": Array [],
+        "fez_record_search_key_ands_collection_type": null,
+        "fez_record_search_key_architectural_features": Array [],
+        "fez_record_search_key_article_number": null,
+        "fez_record_search_key_assigned_group_id": Array [],
+        "fez_record_search_key_assigned_user_id": Array [],
+        "fez_record_search_key_audience_size": Object {
+          "rek_audience_size": "test",
+        },
+        "fez_record_search_key_author": Array [
+          Object {
+            "rek_author": "Brown, M. A.",
+            "rek_author_id": 30038090,
+            "rek_author_order": 2,
+            "rek_author_pid": "UQ:41878",
+            "rek_author_xsdmf_id": 6351,
+          },
+          Object {
+            "rek_author": "He, Y.",
+            "rek_author_id": 30038089,
+            "rek_author_order": 1,
+            "rek_author_pid": "UQ:41878",
+            "rek_author_xsdmf_id": 6351,
+          },
+          Object {
+            "rek_author": "Rothnagel, J. A.",
+            "rek_author_id": 30038091,
+            "rek_author_order": 3,
+            "rek_author_pid": "UQ:41878",
+            "rek_author_xsdmf_id": 6351,
+          },
+          Object {
+            "rek_author": "Saunders, N. A.",
+            "rek_author_id": 30038092,
+            "rek_author_order": 4,
+            "rek_author_pid": "UQ:41878",
+            "rek_author_xsdmf_id": 6351,
+          },
+          Object {
+            "rek_author": "Smith, R.",
+            "rek_author_id": 30038093,
+            "rek_author_order": 5,
+            "rek_author_pid": "UQ:41878",
+            "rek_author_xsdmf_id": 6351,
+          },
+        ],
+        "fez_record_search_key_author_affiliation_country": Array [],
+        "fez_record_search_key_author_affiliation_full_address": Array [],
+        "fez_record_search_key_author_affiliation_id": Array [],
+        "fez_record_search_key_author_affiliation_name": Array [],
+        "fez_record_search_key_author_id": Array [
+          Object {
+            "rek_author_id": 1,
+            "rek_author_id_order": 1,
+          },
+          Object {
+            "rek_author_id": 410,
+            "rek_author_id_order": 2,
+          },
+        ],
+        "fez_record_search_key_author_role": Array [],
+        "fez_record_search_key_book_title": null,
+        "fez_record_search_key_building_materials": Array [],
+        "fez_record_search_key_category": Array [],
+        "fez_record_search_key_chapter_number": null,
+        "fez_record_search_key_condition": Array [],
+        "fez_record_search_key_conference_dates": null,
+        "fez_record_search_key_conference_id": null,
+        "fez_record_search_key_conference_location": null,
+        "fez_record_search_key_conference_name": null,
+        "fez_record_search_key_construction_date": null,
+        "fez_record_search_key_contact_details_email": Array [],
+        "fez_record_search_key_contributor": Array [],
+        "fez_record_search_key_contributor_id": Array [],
+        "fez_record_search_key_convener": null,
+        "fez_record_search_key_corresponding_country": Array [],
+        "fez_record_search_key_corresponding_email": Array [],
+        "fez_record_search_key_corresponding_name": Array [],
+        "fez_record_search_key_corresponding_organisation": Array [],
+        "fez_record_search_key_country_of_issue": null,
+        "fez_record_search_key_coverage_period": Array [],
+        "fez_record_search_key_creator_contribution_statement": Array [
+          Object {
+            "rek_creator_contribution_statement": "Missing",
+            "rek_creator_contribution_statement_order": 1,
+          },
+          Object {
+            "rek_creator_contribution_statement": "Missing",
+            "rek_creator_contribution_statement_order": 2,
+          },
+        ],
+        "fez_record_search_key_creator_id": Array [],
+        "fez_record_search_key_creator_name": Array [],
+        "fez_record_search_key_data_volume": null,
+        "fez_record_search_key_datastream_policy": null,
+        "fez_record_search_key_date_available": null,
+        "fez_record_search_key_date_photo_taken": null,
+        "fez_record_search_key_date_recorded": null,
+        "fez_record_search_key_date_scanned": null,
+        "fez_record_search_key_doi": null,
+        "fez_record_search_key_edition": null,
+        "fez_record_search_key_end_date": null,
+        "fez_record_search_key_end_page": Object {
+          "rek_end_page": "253A",
+          "rek_end_page_id": 5708077,
+          "rek_end_page_pid": "UQ:41878",
+          "rek_end_page_xsdmf_id": 6384,
+        },
+        "fez_record_search_key_file_attachment_access_condition": Array [],
+        "fez_record_search_key_file_attachment_embargo_date": Array [],
+        "fez_record_search_key_file_attachment_name": Array [],
+        "fez_record_search_key_geographic_area": Array [],
+        "fez_record_search_key_grant_acronym": Array [],
+        "fez_record_search_key_grant_agency": Array [],
+        "fez_record_search_key_grant_agency_id": Array [],
+        "fez_record_search_key_grant_id": Array [],
+        "fez_record_search_key_grant_text": Array [],
+        "fez_record_search_key_herdc_code": Object {
+          "rek_herdc_code": 450013,
+          "rek_herdc_code_id": 4887870,
+          "rek_herdc_code_pid": "UQ:41878",
+          "rek_herdc_code_xsdmf_id": 12386,
+        },
+        "fez_record_search_key_herdc_status": Object {
+          "rek_herdc_status": 453220,
+          "rek_herdc_status_id": 3755768,
+          "rek_herdc_status_pid": "UQ:41878",
+          "rek_herdc_status_xsdmf_id": 12405,
+        },
+        "fez_record_search_key_identifier": Array [],
+        "fez_record_search_key_institutional_status": Object {
+          "rek_institutional_status": 453225,
+          "rek_institutional_status_id": 3388459,
+          "rek_institutional_status_pid": "UQ:41878",
+          "rek_institutional_status_xsdmf_id": 12406,
+        },
+        "fez_record_search_key_interior_features": Array [],
+        "fez_record_search_key_isbn": Array [],
+        "fez_record_search_key_isdatasetof": Array [],
+        "fez_record_search_key_isderivationof": Array [],
+        "fez_record_search_key_isi_loc": Object {
+          "rek_isi_loc": "000224648802120",
+          "rek_isi_loc_id": 4013895,
+          "rek_isi_loc_pid": "UQ:41878",
+          "rek_isi_loc_xsdmf_id": 10797,
+        },
+        "fez_record_search_key_ismemberof": Array [
+          Object {
+            "rek_ismemberof": "UQ:152266",
+            "rek_ismemberof_id": 11962368,
+            "rek_ismemberof_order": 2,
+            "rek_ismemberof_pid": "UQ:41878",
+            "rek_ismemberof_xsdmf_id": 149,
+          },
+          Object {
+            "rek_ismemberof": "UQ:3825",
+            "rek_ismemberof_id": 11962367,
+            "rek_ismemberof_order": 1,
+            "rek_ismemberof_pid": "UQ:41878",
+            "rek_ismemberof_xsdmf_id": 149,
+          },
+        ],
+        "fez_record_search_key_issn": Array [
+          Object {
+            "rek_issn": "1059-1524",
+            "rek_issn_id": 5349729,
+            "rek_issn_order": 1,
+            "rek_issn_pid": "UQ:41878",
+            "rek_issn_xsdmf_id": 10796,
+          },
+          Object {
+            "rek_issn": "1939-4586",
+            "rek_issn_id": 5349730,
+            "rek_issn_order": 2,
+            "rek_issn_pid": "UQ:41878",
+            "rek_issn_xsdmf_id": 10796,
+          },
+        ],
+        "fez_record_search_key_issue_number": null,
+        "fez_record_search_key_job_number": null,
+        "fez_record_search_key_journal_name": Object {
+          "rek_journal_name": "Molecular Biology of The Cell",
+          "rek_journal_name_id": 5236446,
+          "rek_journal_name_pid": "UQ:41878",
+          "rek_journal_name_xsdmf_id": 11071,
+        },
+        "fez_record_search_key_keywords": Array [
+          Object {
+            "rek_keywords": "Cell Biology",
+            "rek_keywords_id": 30026357,
+            "rek_keywords_order": 1,
+            "rek_keywords_pid": "UQ:41878",
+            "rek_keywords_xsdmf_id": 7956,
+          },
+        ],
+        "fez_record_search_key_language": Array [],
+        "fez_record_search_key_language_of_book_title": Array [],
+        "fez_record_search_key_language_of_journal_name": Array [],
+        "fez_record_search_key_language_of_proceedings_title": Array [],
+        "fez_record_search_key_language_of_title": Array [],
+        "fez_record_search_key_length": null,
+        "fez_record_search_key_license": null,
+        "fez_record_search_key_link": Array [],
+        "fez_record_search_key_link_description": Array [],
+        "fez_record_search_key_location": Array [],
+        "fez_record_search_key_native_script_book_title": null,
+        "fez_record_search_key_native_script_conference_name": null,
+        "fez_record_search_key_native_script_journal_name": null,
+        "fez_record_search_key_native_script_proceedings_title": null,
+        "fez_record_search_key_native_script_title": null,
+        "fez_record_search_key_newspaper": null,
+        "fez_record_search_key_notes": null,
+        "fez_record_search_key_oa_embargo_days": null,
+        "fez_record_search_key_oa_notes": null,
+        "fez_record_search_key_oa_status": Object {
+          "rek_oa_status": 453692,
+          "rek_oa_status_id": 362796,
+          "rek_oa_status_pid": "UQ:41878",
+          "rek_oa_status_xsdmf_id": 16607,
+        },
+        "fez_record_search_key_org_name": null,
+        "fez_record_search_key_org_unit_name": null,
+        "fez_record_search_key_original_format": null,
+        "fez_record_search_key_parent_publication": null,
+        "fez_record_search_key_patent_number": null,
+        "fez_record_search_key_period": Array [],
+        "fez_record_search_key_place_of_publication": Object {
+          "rek_place_of_publication": "Bethesda",
+          "rek_place_of_publication_id": 4343575,
+          "rek_place_of_publication_pid": "UQ:41878",
+          "rek_place_of_publication_xsdmf_id": 9625,
+        },
+        "fez_record_search_key_proceedings_title": null,
+        "fez_record_search_key_project_description": null,
+        "fez_record_search_key_project_id": null,
+        "fez_record_search_key_project_name": null,
+        "fez_record_search_key_project_start_date": null,
+        "fez_record_search_key_publisher": Object {
+          "rek_publisher": "American Society for Cell Biology",
+          "rek_publisher_id": 4629173,
+          "rek_publisher_pid": "UQ:41878",
+          "rek_publisher_xsdmf_id": 9626,
+        },
+        "fez_record_search_key_pubmed_id": null,
+        "fez_record_search_key_quality_indicator": Array [
+          "Test",
+        ],
+        "fez_record_search_key_refereed": Object {
+          "rek_refereed": 1,
+          "rek_refereed_id": 2560543,
+          "rek_refereed_pid": "UQ:41878",
+          "rek_refereed_xsdmf_id": 7940,
+        },
+        "fez_record_search_key_refereed_source": Object {
+          "rek_refereed_source": "453635",
+          "rek_refereed_source_id": 1418859,
+          "rek_refereed_source_pid": "UQ:41878",
+          "rek_refereed_source_xsdmf_id": 16623,
+        },
+        "fez_record_search_key_related_datasets": null,
+        "fez_record_search_key_related_publications": null,
+        "fez_record_search_key_report_number": null,
+        "fez_record_search_key_retracted": null,
+        "fez_record_search_key_rights": null,
+        "fez_record_search_key_roman_script_book_title": null,
+        "fez_record_search_key_roman_script_conference_name": null,
+        "fez_record_search_key_roman_script_journal_name": null,
+        "fez_record_search_key_roman_script_proceedings_title": null,
+        "fez_record_search_key_roman_script_title": null,
+        "fez_record_search_key_scale": null,
+        "fez_record_search_key_scopus_id": null,
+        "fez_record_search_key_section": null,
+        "fez_record_search_key_seo_code": Array [],
+        "fez_record_search_key_series": null,
+        "fez_record_search_key_significance": Array [
+          Object {
+            "rek_significance": 1,
+            "rek_significance_order": 1,
+          },
+          Object {
+            "rek_significance": 0,
+            "rek_significance_order": 2,
+          },
+        ],
+        "fez_record_search_key_software_required": Array [],
+        "fez_record_search_key_source": null,
+        "fez_record_search_key_start_date": null,
+        "fez_record_search_key_start_page": Object {
+          "rek_start_page": "252A",
+          "rek_start_page_id": 5781267,
+          "rek_start_page_pid": "UQ:41878",
+          "rek_start_page_xsdmf_id": 6383,
+        },
+        "fez_record_search_key_structural_systems": Array [],
+        "fez_record_search_key_style": Array [],
+        "fez_record_search_key_subcategory": Array [],
+        "fez_record_search_key_subject": Array [],
+        "fez_record_search_key_supervisor": Array [],
+        "fez_record_search_key_supervisor_id": Array [],
+        "fez_record_search_key_surrounding_features": Array [],
+        "fez_record_search_key_time_period_end_date": null,
+        "fez_record_search_key_time_period_start_date": null,
+        "fez_record_search_key_total_chapters": null,
+        "fez_record_search_key_total_pages": Object {
+          "rek_total_pages": "test",
+        },
+        "fez_record_search_key_transcript": null,
+        "fez_record_search_key_translated_book_title": null,
+        "fez_record_search_key_translated_conference_name": null,
+        "fez_record_search_key_translated_journal_name": null,
+        "fez_record_search_key_translated_newspaper": null,
+        "fez_record_search_key_translated_proceedings_title": null,
+        "fez_record_search_key_translated_title": null,
+        "fez_record_search_key_type_of_data": Array [],
+        "fez_record_search_key_volume_number": Object {
+          "rek_volume_number": "15",
+          "rek_volume_number_id": 5294487,
+          "rek_volume_number_pid": "UQ:41878",
+          "rek_volume_number_xsdmf_id": 6379,
+        },
+        "rek_altmetric_id": null,
+        "rek_altmetric_id_xsdmf_id": null,
+        "rek_altmetric_score": null,
+        "rek_altmetric_score_xsdmf_id": null,
+        "rek_author_id": 410,
+        "rek_citation": "<a class=\\"citation_author_name\\" title=\\"Browse by Author Name for He, Y.\\" href=\\"/list/author/He%2C+Y./\\">He, Y.</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Brown, M. A.\\" href=\\"/list/author_id/1671/\\">Brown, M. A.</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Rothnagel, J. A.\\" href=\\"/list/author_id/786/\\">Rothnagel, J. A.</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Saunders, N. A.\\" href=\\"/list/author_id/687/\\">Saunders, N. A.</a> and <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Smith, R.\\" href=\\"/list/author_id/450/\\">Smith, R.</a> (<span class=\\"citation_date\\">2004</span>) <a class=\\"citation_title\\" title=\\"Click to view Journal Article: Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth\\" href=\\"/view/UQ:41878\\">Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth</a>. <i><span class=\\"citation_journal_name\\">Molecular Biology of The Cell</span></i>, <i><span class=\\"citation_volume_number\\">15</span></i>  <span class=\\"citation_start_page\\">252A</span>-<span class=\\"citation_end_page\\">253A</span>.",
+        "rek_copyright": "on",
+        "rek_copyright_xsdmf_id": 3679,
+        "rek_created_date": "2007-08-13T14:41:26Z",
+        "rek_created_date_xsdmf_id": 3677,
+        "rek_date": "2004-01-01T00:00:00Z",
+        "rek_date_xsdmf_id": 6386,
+        "rek_depositor": null,
+        "rek_depositor_affiliation": 881,
+        "rek_depositor_affiliation_xsdmf_id": 11881,
+        "rek_depositor_xsdmf_id": null,
+        "rek_description": "test",
+        "rek_description_xsdmf_id": null,
+        "rek_display_type": 179,
+        "rek_display_type_lookup": "Creative Work",
+        "rek_display_type_xsdmf_id": 3673,
+        "rek_file_downloads": 0,
+        "rek_formatted_abstract": "test",
+        "rek_formatted_abstract_xsdmf_id": null,
+        "rek_formatted_title": null,
+        "rek_formatted_title_xsdmf_id": null,
+        "rek_genre": "Journal Article",
+        "rek_genre_type": null,
+        "rek_genre_type_xsdmf_id": null,
+        "rek_genre_xsdmf_id": 7207,
+        "rek_herdc_notes": null,
+        "rek_herdc_notes_xsdmf_id": null,
+        "rek_object_type": 3,
+        "rek_object_type_xsdmf_id": 3674,
+        "rek_pid": "UQ:41878",
+        "rek_pubmed_doc_type": null,
+        "rek_pubmed_doc_type_xsdmf_id": null,
+        "rek_scopus_citation_count": null,
+        "rek_scopus_doc_type": null,
+        "rek_scopus_doc_type_xsdmf_id": null,
+        "rek_security_inherited": 1,
+        "rek_status": 2,
+        "rek_status_xsdmf_id": 3680,
+        "rek_subtype": "Creative Work - Other",
+        "rek_subtype_xsdmf_id": 12379,
+        "rek_thomson_citation_count": 2,
+        "rek_thomson_citation_count_xsdmf_id": null,
+        "rek_title": "Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth",
+        "rek_title_xsdmf_id": 10588,
+        "rek_updated_date": "2017-01-04T06:46:26Z",
+        "rek_updated_date_xsdmf_id": 3678,
+        "rek_wok_doc_type": "MC",
+        "rek_wok_doc_type_xsdmf_id": 12551,
+      }
+    }
+  />
+  <form
+    onSubmit={[Function]}
+  >
+    <NavigationDialogBox
+      txt={
+        Object {
+          "cancelButtonLabel": "No",
+          "confirmButtonLabel": "Yes",
+          "confirmationMessage": "Are you sure you want to cancel this request?",
+          "confirmationTitle": "Cancel request",
+        }
+      }
+      when={true}
+    />
+    <ConfirmDialogBox
+      hideCancelButton={false}
+      locale={
+        Object {
+          "cancelButtonLabel": "Complete another work",
+          "confirmButtonLabel": "Go to my dashboard",
+          "confirmationMessage": <React.Fragment />,
+          "confirmationTitle": "Your work has been updated",
+          "fileFailConfirmationAlert": Object {
+            "message": "File upload and/or notes post failed",
+            "title": "UPLOAD FAILED",
+            "type": "warning",
+          },
+        }
+      }
+      onAction={[Function]}
+      onCancelAction={[Function]}
+      onRef={[Function]}
+    />
+    <WithStyles(Grid)
+      container={true}
+      spacing={24}
+    >
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(Alert)
+          message="follow the red prompts to add missing information. You can also provide additional grant details or include notes to the eSpace team."
+          title="Missing data"
+          type="info_outline"
+        />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          title="Type & Collection"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={8}
+          >
+            <WithStyles(Grid)
+              alignItems="flex-start"
+              container={true}
+              spacing={16}
+            >
+              <WithStyles(Grid)
+                item={true}
+                sm={3}
+                xs={12}
+              >
+                <WithStyles(Typography)
+                  variant="body2"
+                >
+                  Type of work
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+              <WithStyles(Grid)
+                item={true}
+                sm={9}
+                xs={12}
+              >
+                <WithStyles(Typography)
+                  variant="body2"
+                >
+                  Creative Work
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            container={true}
+            spacing={8}
+          >
+            <WithStyles(Grid)
+              alignItems="flex-start"
+              container={true}
+              spacing={16}
+            >
+              <WithStyles(Grid)
+                item={true}
+                sm={3}
+                xs={12}
+              >
+                <WithStyles(Typography)
+                  variant="body2"
+                >
+                  Sub-type
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+              <WithStyles(Grid)
+                item={true}
+                sm={9}
+                xs={12}
+              >
+                <WithStyles(Typography)
+                  variant="body2"
+                >
+                  Creative Work - Other
+                </WithStyles(Typography)>
+              </WithStyles(Grid)>
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
+      <NtroFields
+        hideAbstract={true}
+        hideAudienceSize={true}
+        hideEndPage={true}
+        hideExtent={true}
+        hideGrants={true}
+        hideIsmn={true}
+        hideIsrc={true}
+        hideIssue={true}
+        hideLanguage={false}
+        hideOriginalFormat={true}
+        hidePeerReviewActivity={true}
+        hideSeries={true}
+        hideStartPage={true}
+        hideVolume={true}
+        locale={
+          Object {
+            "contributionStatement": Object {
+              "fields": Object {
+                "impactStatement": Object {
+                  "label": <span>
+                    Creator research statement*. Include Background, Contribution and Significance 
+                    <span
+                      style={
+                        Object {
+                          "fontWeight": 700,
+                        }
+                      }
+                    >
+                      (not for public view)
+                    </span>
+                  </span>,
+                  "placeholder": "Remember to include substantiation of your major or minor scale/significance claim above.",
+                },
+                "scaleOfWork": Object {
+                  "description": "Select the option that best describes the significance of the work.",
+                  "label": <span>
+                    Scale/Significance of work* 
+                    <span
+                      style={
+                        Object {
+                          "fontWeight": 700,
+                        }
+                      }
+                    >
+                      (not for public view)
+                    </span>
+                  </span>,
+                },
+              },
+              "help": Object {
+                "buttonLabel": "CLOSE",
+                "text": <React.Fragment>
+                  <h3>
+                    Creator research statement
+                  </h3>
+                  <p>
+                    For more information about the research statement, click  
+                    <b>
+                      <a
+                        href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836548"
+                        style={
+                          Object {
+                            "fontWeight": 700,
+                          }
+                        }
+                        target="_blank"
+                      >
+                        here
+                      </a>
+                    </b>
+                  </p>
+                </React.Fragment>,
+                "title": "Author/Creator research statement",
+              },
+              "title": "Author/Creator research statement",
+            },
+            "grantEditor": Object {
+              "title": "Grant details",
+            },
+            "metadata": Object {
+              "fields": Object {
+                "abstract": Object {
+                  "label": <span>
+                    Abstract/Description* 
+                    <span
+                      style={
+                        Object {
+                          "fontWeight": 700,
+                        }
+                      }
+                    >
+                      (for public view)
+                    </span>
+                  </span>,
+                  "placeholder": "Enter a brief description of the work",
+                },
+                "audienceSize": Object {
+                  "label": "Audience size",
+                },
+                "endPage": Object {
+                  "label": "End page",
+                },
+                "extent": Object {
+                  "label": "Total pages/Extent",
+                  "placeholder": "Enter total pages, size or duration of work",
+                },
+                "issue": Object {
+                  "label": "Issue",
+                },
+                "language": Object {
+                  "label": "Language",
+                },
+                "notes": Object {
+                  "label": "Notes",
+                },
+                "peerReviewActivity": Object {
+                  "label": "Quality indicators",
+                },
+                "physicalDescription": Object {
+                  "label": "Physical description",
+                  "placeholder": "Building, Exhibition, Performance, Composition",
+                },
+                "series": Object {
+                  "floatingLabelText": "Series",
+                  "hintText": "Enter the name of publication, performance, recording, or event series",
+                },
+                "startPage": Object {
+                  "label": "Start page",
+                },
+                "volume": Object {
+                  "label": "Volume",
+                },
+              },
+              "title": "NTRO data",
+            },
+          }
+        }
+        showContributionStatement={true}
+        showSignificance={true}
+        submitting={false}
+      />
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          title="Grant information"
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            name="grants"
+          />
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          help={
+            Object {
+              "buttonLabel": "CLOSE",
+              "text": <p>
+                For more information about identification of author/creator/designer, click 
+                <a
+                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836546"
+                  target="_blank"
+                >
+                  here
+                </a>
+              </p>,
+              "title": "Authors/Designers name",
+            }
+          }
+          title="Authors"
+        >
+          <WithStyles(Typography)>
+            <span>
+              For each author marked with a 
+              <span
+                style={
+                  Object {
+                    "color": "red",
+                    "weight": "bold",
+                  }
+                }
+              >
+                red
+              </span>
+               prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
+              <b>
+                UPDATE AUTHOR
+              </b>
+              .
+            </span>
+          </WithStyles(Typography)>
+          <Field
+            component={[Function]}
+            editMode={true}
+            hideDelete={true}
+            hideReorder={true}
+            isNtro={true}
+            locale={
+              Object {
+                "form": Object {
+                  "locale": Object {
+                    "addButton": "Update author",
+                    "descriptionStep1": <div>
+                      <span
+                        className="authorSteps"
+                      >
+                        Step 2 of 2
+                      </span>
+                       - 
+                      <b>
+                        Update the affiliation information
+                      </b>
+                      .
+                    </div>,
+                    "descriptionStep1NoStep2": <div>
+                      Please 
+                      <b>
+                        add to a list of authors below
+                      </b>
+                      , in the format and order that they are published.
+                    </div>,
+                    "identifierLabel": "UQ identifier (if available)",
+                    "nameAsPublishedFieldId": "authors-name-as-published-field",
+                    "nameAsPublishedHint": "Type the name exactly as published",
+                    "nameAsPublishedLabel": "Enter each author's name as published (eg. Smith, John)",
+                  },
+                },
+                "header": Object {
+                  "locale": Object {
+                    "contributorAssignmentColumn": "Select your name",
+                    "deleteAll": "Remove all items",
+                    "deleteAllConfirmation": Object {
+                      "cancelButtonLabel": "No",
+                      "confirmButtonLabel": "Yes",
+                      "confirmationMessage": "Are you sure you want to delete all items?",
+                      "confirmationTitle": "Delete all",
+                    },
+                    "descriptionStep2": <div>
+                      <span
+                        className="authorSteps"
+                      >
+                        Step 1 of 2
+                      </span>
+                       - 
+                      <b>
+                        Select an author
+                      </b>
+                      .
+                    </div>,
+                    "identifierColumn": "UQ identifier",
+                    "nameColumn": "Author's name as published",
+                    "reorderColumn": "Reorder items",
+                  },
+                },
+                "row": Object {
+                  "locale": Object {
+                    "deleteButtonId": [Function],
+                    "deleteHint": "Remove this item",
+                    "deleteRecordConfirmation": Object {
+                      "cancelButtonLabel": "No",
+                      "confirmButtonLabel": "Yes",
+                      "confirmationMessage": "Are you sure you want to delete this item?",
+                      "confirmationTitle": "Delete item",
+                    },
+                    "lockedTooltip": "You are not able to edit this row",
+                    "moveDownHint": "Move item down the order",
+                    "moveUpHint": "Move item up the order",
+                    "requiredLabel": "This author's data is incomplete.",
+                    "selectHint": "Select this author ([name]) to update their affiliation data.",
+                    "selectedHint": "This is you",
+                    "suffix": " listed author",
+                    "unselectedHint": "Select this to confirm [identifier] is you",
+                  },
+                },
+              }
+            }
+            name="authorsAffiliation"
+            required={true}
+            showContributorAssignment={true}
+          />
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          title="Notes"
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            fullWidth={true}
+            label="Notes for this work"
+            multiline={true}
+            name="comments"
+            placeholder="Add any other notes or comments about this work to send to the eSpace team."
+            rows={5}
+            style={
+              Object {
+                "marginTop": -24,
+              }
+            }
+            type="text"
+          />
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          title="Upload files"
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            isNtro={true}
+            locale={
+              Object {
+                "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
+                "errorTitle": "Upload Errors",
+                "fileUploadInstruction": <p>
+                  Click here to select files, or drag files into this area to upload
+                </p>,
+                "fileUploadRestrictionHeading": "File upload restrictions",
+                "fileUploadRestrictions": <div>
+                  Maximum file size is 8GB. 
+                  <br />
+                  PDF files must be saved using the following naming structure 
+                  <b>
+                    &lt;student number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf
+                  </b>
+                  . Document name could be thesis, abstract, and etc. For example:
+                  <ul>
+                    <li>
+                      s1234567_phd_thesis.pdf
+                    </li>
+                    <li>
+                      s1234567_phd_abstract.pdf
+                    </li>
+                  </ul>
+                  Supplementary audio files are to be in MP 3 format. 
+                  <br />
+                  Supplementary video files are to be in WMV or AVI format. 
+                  <br />
+                </div>,
+                "instructions": "",
+                "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
+                "successTitle": "Success",
+                "validation": Object {
+                  "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
+                  "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
+                  "notFiles": "Invalid files ([fileNames])",
+                  "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
+                  "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
+                },
+              }
+            }
+            name="files"
+            requireOpenAccessStatus={true}
+            text={
+              <div>
+                <span
+                  className="requiredField"
+                >
+                  <label>
+                     
+                  </label>
+                </span>
+              </div>
+            }
+            title="Upload files"
+            validate={
+              Array [
+                [Function],
+                [Function],
+              ]
+            }
+          />
+        </StandardCard>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      container={true}
+      spacing={24}
+    >
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={true}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={false}
+        xsUp={false}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={true}
+        />
+      </Hidden>
+      <WithStyles(Grid)
+        item={true}
+        md="auto"
+        xs={12}
+      >
+        <WithStyles(Button)
+          disabled={false}
+          fullWidth={true}
+          onClick={[Function]}
+          variant="contained"
+        >
+          Cancel and return to my incomplete works list
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        md="auto"
+        xs={12}
+      >
+        <WithStyles(Button)
+          color="primary"
+          fullWidth={true}
+          id="update-my-work"
+          onClick={[MockFunction]}
+          variant="contained"
+        >
+          Complete work
         </WithStyles(Button)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
@@ -10551,7 +11512,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
 
 exports[`Component MyIncompleteRecord should render the confirm dialog box with an alert due to a file upload failure 1`] = `
 <StandardPage
-  title="Update my work"
+  title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
     publication={
@@ -10967,7 +11928,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
       hideCancelButton={false}
       locale={
         Object {
-          "cancelButtonLabel": "Update another incomplete work",
+          "cancelButtonLabel": "Complete another work",
           "confirmButtonLabel": "Go to my dashboard",
           "confirmationMessage": <React.Fragment>
             <WithStyles(Alert)
@@ -10997,7 +11958,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
         xs={12}
       >
         <WithStyles(Alert)
-          message="This record has missing data - enter all fields to give a quality record."
+          message="follow the red prompts to add missing information. You can also provide additional grant details or include notes to the eSpace team."
           title="Missing data"
           type="info_outline"
         />
@@ -11115,7 +12076,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
         >
           <WithStyles(Typography)>
             <span>
-              Please complete affiliation data for each listed author by selecting each row marked in 
+              For each author marked with a 
               <span
                 style={
                   Object {
@@ -11126,7 +12087,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
               >
                 red
               </span>
-              , and adding the missing information in the form underneath the list and clicking 
+               prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
               <b>
                 UPDATE AUTHOR
               </b>
@@ -11152,9 +12113,9 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
                       </span>
                        - 
                       <b>
-                        Update the affiliation data
+                        Update the affiliation information
                       </b>
-                       for the selected author below.
+                      .
                     </div>,
                     "descriptionStep1NoStep2": <div>
                       Please 
@@ -11189,7 +12150,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
                       <b>
                         Select an author
                       </b>
-                       below to update affiliation data.
+                      .
                     </div>,
                     "identifierColumn": "UQ identifier",
                     "nameColumn": "Author's name as published",
@@ -11369,10 +12330,11 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="update-my-work"
           onClick={[MockFunction]}
           variant="contained"
         >
-          Update my work
+          Complete work
         </WithStyles(Button)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
@@ -11382,7 +12344,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
 
 exports[`Component MyIncompleteRecord should render the confirm dialog box without an alert due to a file upload success 1`] = `
 <StandardPage
-  title="Update my work"
+  title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
     publication={
@@ -11798,7 +12760,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
       hideCancelButton={false}
       locale={
         Object {
-          "cancelButtonLabel": "Update another incomplete work",
+          "cancelButtonLabel": "Complete another work",
           "confirmButtonLabel": "Go to my dashboard",
           "confirmationMessage": <React.Fragment />,
           "confirmationTitle": "Your work has been updated",
@@ -11822,7 +12784,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
         xs={12}
       >
         <WithStyles(Alert)
-          message="This record has missing data - enter all fields to give a quality record."
+          message="follow the red prompts to add missing information. You can also provide additional grant details or include notes to the eSpace team."
           title="Missing data"
           type="info_outline"
         />
@@ -11940,7 +12902,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
         >
           <WithStyles(Typography)>
             <span>
-              Please complete affiliation data for each listed author by selecting each row marked in 
+              For each author marked with a 
               <span
                 style={
                   Object {
@@ -11951,7 +12913,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
               >
                 red
               </span>
-              , and adding the missing information in the form underneath the list and clicking 
+               prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
               <b>
                 UPDATE AUTHOR
               </b>
@@ -11977,9 +12939,9 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
                       </span>
                        - 
                       <b>
-                        Update the affiliation data
+                        Update the affiliation information
                       </b>
-                       for the selected author below.
+                      .
                     </div>,
                     "descriptionStep1NoStep2": <div>
                       Please 
@@ -12014,7 +12976,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
                       <b>
                         Select an author
                       </b>
-                       below to update affiliation data.
+                      .
                     </div>,
                     "identifierColumn": "UQ identifier",
                     "nameColumn": "Author's name as published",
@@ -12194,10 +13156,11 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="update-my-work"
           onClick={[MockFunction]}
           variant="contained"
         >
-          Update my work
+          Complete work
         </WithStyles(Button)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>

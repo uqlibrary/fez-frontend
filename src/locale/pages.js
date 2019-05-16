@@ -210,9 +210,9 @@ export default {
             },
             incompleteRecordLure: {
                 title: 'NTRO Data Required',
-                message: 'We have found [count] work[plural] that require[verbEnding] additional data.',
+                message: 'We have found [count] work(s) that require[verbEnding] more information.',
                 type: 'warning',
-                actionButtonLabel: 'View and Update'
+                actionButtonLabel: 'View and Complete'
             },
         },
         myResearch: {
@@ -718,7 +718,7 @@ export default {
                     </div>
                 ),
             },
-            completeRecordButton: 'Update work',
+            completeRecordButton: 'Complete work',
             facetsFilter: {
                 ...locale.components.facetsFilter,
                 excludeFacetsList: ['Author'],
@@ -726,8 +726,8 @@ export default {
             }
         },
         incompletePublication: {
-            title: 'Update my work',
-            submitButtonLabel: 'Update my work',
+            title: 'Complete my work',
+            submitButtonLabel: 'Complete work',
             cancelButtonLabel: 'Cancel and return to my incomplete works list',
             fields: {
                 notes: {
@@ -741,7 +741,7 @@ export default {
                 authors: {
                     ...locale.components.authors,
                     description: (
-                        <span>Please complete affiliation data for each listed author by selecting each row marked in <span style={{color: 'red', weight: 'bold'}}>red</span>, and adding the missing information in the form underneath the list and clicking <b>UPDATE AUTHOR</b>.</span>
+                        <span>For each author marked with a <span style={{color: 'red', weight: 'bold'}}>red</span> prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click <b>UPDATE AUTHOR</b>.</span>
                     ),
                     field: {
                         ...locale.components.authors.field,
@@ -749,7 +749,7 @@ export default {
                             locale: {
                                 ...locale.components.authors.field.form.locale,
                                 descriptionStep1: (<div>
-                                    <span className="authorSteps" key="step-2">Step 2 of 2</span> - <b>Update the affiliation data</b> for the selected author below.
+                                    <span className="authorSteps" key="step-2">Step 2 of 2</span> - <b>Update the affiliation information</b>.
                                 </div>),
                                 addButton: 'Update author'
                             }
@@ -759,7 +759,7 @@ export default {
                             locale: {
                                 ...locale.components.authors.field.header.locale,
                                 descriptionStep2: (<div>
-                                    <span className="authorSteps" key="step-1">Step 1 of 2</span> - <b>Select an author</b> below to update affiliation data.
+                                    <span className="authorSteps" key="step-1">Step 1 of 2</span> - <b>Select an author</b>.
                                 </div>)
                             }
                         },
@@ -821,14 +821,25 @@ export default {
                     message: 'File upload and/or notes post failed',
                     type: 'warning'
                 },
-                cancelButtonLabel: 'Update another incomplete work',
+                cancelButtonLabel: 'Complete another work',
                 confirmButtonLabel: 'Go to my dashboard'
             },
             prompt: {
                 title: 'Missing data',
-                message: 'This record has missing data - enter all fields to give a quality record.',
+                message: 'follow the red prompts to add missing information. You can also provide additional grant details or include notes to the eSpace team.',
                 type: 'info_outline'
-            }
+            },
+            progressAlert: {
+                type: 'info_outline',
+                title: 'Saving',
+                message: 'Updating work is in progress.',
+                showLoader: true
+            },
+            successAlert: {
+                type: 'done',
+                title: 'Success',
+                message: 'New information has been saved successfully.'
+            },
         }
     }
 };

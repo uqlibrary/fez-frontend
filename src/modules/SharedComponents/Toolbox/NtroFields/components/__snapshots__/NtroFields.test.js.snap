@@ -1,5 +1,116 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Component NtroFields should not show NTRO data card in the Ntro fields 1`] = `
+<Fragment>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <StandardCard
+      help={
+        Object {
+          "buttonLabel": "CLOSE",
+          "text": <React.Fragment>
+            <h3>
+              Creator research statement
+            </h3>
+            <p>
+              For more information about the research statement, click  
+              <b>
+                <a
+                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836548"
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                  target="_blank"
+                >
+                  here
+                </a>
+              </b>
+            </p>
+          </React.Fragment>,
+          "title": "Author/Creator research statement",
+        }
+      }
+      title="Author/Creator research statement"
+    >
+      <WithStyles(Grid)
+        container={true}
+        spacing={8}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
+        >
+          <WithStyles(Typography)>
+            Select the option that best describes the significance of the work.
+          </WithStyles(Typography)>
+          <Field
+            SelectDisplayProps={
+              Object {
+                "id": "significance",
+              }
+            }
+            component={[Function]}
+            disabled={false}
+            label={
+              <span>
+                Scale/Significance of work* 
+                <span
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                >
+                  (not for public view)
+                </span>
+              </span>
+            }
+            name="significance"
+            required={true}
+            validate={
+              Array [
+                [Function],
+              ]
+            }
+          >
+            <WithStyles(MenuItem)
+              key="454027"
+              value={454027}
+            >
+              Minor
+            </WithStyles(MenuItem)>
+            <WithStyles(MenuItem)
+              key="454026"
+              value={454026}
+            >
+              Major
+            </WithStyles(MenuItem)>
+          </Field>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </StandardCard>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <StandardCard
+      title="Grant details"
+    >
+      <Field
+        component={[Function]}
+        disabled={false}
+        name="grants"
+      />
+    </StandardCard>
+  </WithStyles(Grid)>
+</Fragment>
+`;
+
 exports[`Component NtroFields should render all fields as disabled 1`] = `
 <Fragment>
   <WithStyles(Grid)
@@ -48,6 +159,11 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             Select the option that best describes the significance of the work.
           </WithStyles(Typography)>
           <Field
+            SelectDisplayProps={
+              Object {
+                "id": "significance",
+              }
+            }
             component={[Function]}
             disabled={true}
             label={
@@ -73,11 +189,13 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             }
           >
             <WithStyles(MenuItem)
+              key="454027"
               value={454027}
             >
               Minor
             </WithStyles(MenuItem)>
             <WithStyles(MenuItem)
+              key="454026"
               value={454026}
             >
               Major
@@ -95,11 +213,12 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
         >
           <Field
             component={[Function]}
-            description="Remember to include substantiation of your Major or Minor Scale/Significance claim above."
+            description="Remember to include substantiation of your major or minor scale/significance claim above."
             disabled={true}
             fullWidth={true}
             maxValue={2000}
             name="impactStatement"
+            required={true}
             title={
               <span>
                 Creator research statement*. Include Background, Contribution and Significance 
@@ -414,6 +533,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             component={[Function]}
             disabled={true}
             fullWidth={true}
+            id="rek-total-pages"
             label="Total pages/Extent"
             name="fez_record_search_key_total_pages.rek_total_pages"
             placeholder="Enter total pages, size or duration of work"
@@ -447,6 +567,11 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
           xs={12}
         >
           <Field
+            SelectDisplayProps={
+              Object {
+                "id": "rek-audience-size",
+              }
+            }
             component={[Function]}
             disabled={true}
             label="Audience size"
@@ -504,6 +629,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
           <Field
             component={[Function]}
             disabled={true}
+            id="quality-indicators"
             label="Quality indicators"
             multiple={true}
             name="qualityIndicators"
@@ -584,6 +710,11 @@ exports[`Component NtroFields should render contribution statement fields as wel
             Select the option that best describes the significance of the work.
           </WithStyles(Typography)>
           <Field
+            SelectDisplayProps={
+              Object {
+                "id": "significance",
+              }
+            }
             component={[Function]}
             disabled={false}
             label={
@@ -609,11 +740,13 @@ exports[`Component NtroFields should render contribution statement fields as wel
             }
           >
             <WithStyles(MenuItem)
+              key="454027"
               value={454027}
             >
               Minor
             </WithStyles(MenuItem)>
             <WithStyles(MenuItem)
+              key="454026"
               value={454026}
             >
               Major
@@ -631,11 +764,12 @@ exports[`Component NtroFields should render contribution statement fields as wel
         >
           <Field
             component={[Function]}
-            description="Remember to include substantiation of your Major or Minor Scale/Significance claim above."
+            description="Remember to include substantiation of your major or minor scale/significance claim above."
             disabled={false}
             fullWidth={true}
             maxValue={2000}
             name="impactStatement"
+            required={true}
             title={
               <span>
                 Creator research statement*. Include Background, Contribution and Significance 
@@ -950,6 +1084,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
             component={[Function]}
             disabled={false}
             fullWidth={true}
+            id="rek-total-pages"
             label="Total pages/Extent"
             name="fez_record_search_key_total_pages.rek_total_pages"
             placeholder="Enter total pages, size or duration of work"
@@ -983,6 +1118,11 @@ exports[`Component NtroFields should render contribution statement fields as wel
           xs={12}
         >
           <Field
+            SelectDisplayProps={
+              Object {
+                "id": "rek-audience-size",
+              }
+            }
             component={[Function]}
             disabled={false}
             label="Audience size"
@@ -1040,6 +1180,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
           <Field
             component={[Function]}
             disabled={false}
+            id="quality-indicators"
             label="Quality indicators"
             multiple={true}
             name="qualityIndicators"
@@ -1363,6 +1504,7 @@ exports[`Component NtroFields should render default view 1`] = `
             component={[Function]}
             disabled={false}
             fullWidth={true}
+            id="rek-total-pages"
             label="Total pages/Extent"
             name="fez_record_search_key_total_pages.rek_total_pages"
             placeholder="Enter total pages, size or duration of work"
@@ -1396,6 +1538,11 @@ exports[`Component NtroFields should render default view 1`] = `
           xs={12}
         >
           <Field
+            SelectDisplayProps={
+              Object {
+                "id": "rek-audience-size",
+              }
+            }
             component={[Function]}
             disabled={false}
             label="Audience size"
@@ -1453,6 +1600,7 @@ exports[`Component NtroFields should render default view 1`] = `
           <Field
             component={[Function]}
             disabled={false}
+            id="quality-indicators"
             label="Quality indicators"
             multiple={true}
             name="qualityIndicators"
@@ -1533,6 +1681,11 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             Select the option that best describes the significance of the work.
           </WithStyles(Typography)>
           <Field
+            SelectDisplayProps={
+              Object {
+                "id": "significance",
+              }
+            }
             component={[Function]}
             disabled={false}
             label={
@@ -1558,11 +1711,13 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             }
           >
             <WithStyles(MenuItem)
+              key="454027"
               value={454027}
             >
               Minor
             </WithStyles(MenuItem)>
             <WithStyles(MenuItem)
+              key="454026"
               value={454026}
             >
               Major
@@ -1580,11 +1735,12 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
         >
           <Field
             component={[Function]}
-            description="Remember to include substantiation of your Major or Minor Scale/Significance claim above."
+            description="Remember to include substantiation of your major or minor scale/significance claim above."
             disabled={false}
             fullWidth={true}
             maxValue={2000}
             name="impactStatement"
+            required={true}
             title={
               <span>
                 Creator research statement*. Include Background, Contribution and Significance 
@@ -1899,6 +2055,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             component={[Function]}
             disabled={false}
             fullWidth={true}
+            id="rek-total-pages"
             label="Total pages/Extent"
             name="fez_record_search_key_total_pages.rek_total_pages"
             placeholder="Enter total pages, size or duration of work"
@@ -1932,6 +2089,11 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
           xs={12}
         >
           <Field
+            SelectDisplayProps={
+              Object {
+                "id": "rek-audience-size",
+              }
+            }
             component={[Function]}
             disabled={false}
             label="Audience size"
@@ -1989,6 +2151,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
           <Field
             component={[Function]}
             disabled={false}
+            id="quality-indicators"
             label="Quality indicators"
             multiple={true}
             name="qualityIndicators"
@@ -2055,6 +2218,11 @@ exports[`Component NtroFields should show significance field even if contributio
             Select the option that best describes the significance of the work.
           </WithStyles(Typography)>
           <Field
+            SelectDisplayProps={
+              Object {
+                "id": "significance",
+              }
+            }
             component={[Function]}
             disabled={false}
             label={
@@ -2080,11 +2248,13 @@ exports[`Component NtroFields should show significance field even if contributio
             }
           >
             <WithStyles(MenuItem)
+              key="454027"
               value={454027}
             >
               Minor
             </WithStyles(MenuItem)>
             <WithStyles(MenuItem)
+              key="454026"
               value={454026}
             >
               Major
@@ -2383,6 +2553,7 @@ exports[`Component NtroFields should show significance field even if contributio
             component={[Function]}
             disabled={false}
             fullWidth={true}
+            id="rek-total-pages"
             label="Total pages/Extent"
             name="fez_record_search_key_total_pages.rek_total_pages"
             placeholder="Enter total pages, size or duration of work"
@@ -2416,6 +2587,11 @@ exports[`Component NtroFields should show significance field even if contributio
           xs={12}
         >
           <Field
+            SelectDisplayProps={
+              Object {
+                "id": "rek-audience-size",
+              }
+            }
             component={[Function]}
             disabled={false}
             label="Audience size"
@@ -2473,6 +2649,7 @@ exports[`Component NtroFields should show significance field even if contributio
           <Field
             component={[Function]}
             disabled={false}
+            id="quality-indicators"
             label="Quality indicators"
             multiple={true}
             name="qualityIndicators"

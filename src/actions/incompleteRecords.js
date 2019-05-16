@@ -80,7 +80,7 @@ export function updateIncompleteRecord(data) {
         return Promise.resolve([])
             .then(()=> (hasFilesToUpload ? putUploadFiles(data.publication.rek_pid, data.files.queue, dispatch) : null))
             .then(()=> (patch(EXISTING_RECORD_API({pid: data.publication.rek_pid}), patchRecordRequest)))
-            .then(()=> (post(RECORDS_ISSUES_API({pid: data.publication.rek_pid}), createIssueRequest)))
+            .then(()=> ((!!data.comments || !!data.files) ? post(RECORDS_ISSUES_API({pid: data.publication.rek_pid}), createIssueRequest) : null))
             .then(responses => {
                 dispatch({
                     type: actions.FIX_RECORD_SUCCESS,
