@@ -241,6 +241,7 @@ export default class SearchComponent extends PureComponent {
             this.props.actions &&
             this.props.actions.searchEspacePublications
         ) {
+            this.props.actions.searchEspacePublications(searchQuery);
             // navigate to search results page
             this.props.history.push({
                 pathname: (
