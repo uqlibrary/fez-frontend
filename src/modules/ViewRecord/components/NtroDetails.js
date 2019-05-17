@@ -77,7 +77,6 @@ export class NtroDetailsClass extends PureComponent {
                                     />
                                 );
                             } else {
-                                console.log('ping');
                                 return null;
                             }
                         })
