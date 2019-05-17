@@ -184,6 +184,6 @@ export default {
             cancelButtonLabel: 'Cancel',
             confirmButtonLabel: 'Redirect to login'
         },
-        defaultContributorStatementMissing: 'Missing'
+        defaultAuthorDataPlaceholder: 'Missing'
     }
 };

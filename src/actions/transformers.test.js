@@ -564,7 +564,14 @@ describe('getRecordAuthorsIdSearchKey test ', () => {
             {nameAsPublished: "Smith C.", disabled: false, selected: false, authorId: null},
             {nameAsPublished: "Smith D.", disabled: false, selected: false, aut_id: 1001}
         ];
-        const expected = {"fez_record_search_key_author_id": [{"rek_author_id": 0, "rek_author_id_order": 1}, {"rek_author_id": 100, "rek_author_id_order": 2}, {"rek_author_id": 0, "rek_author_id_order": 3}, {"rek_author_id": 1001, "rek_author_id_order": 4}]};
+        const expected = {
+            "fez_record_search_key_author_id": [
+                { "rek_author_id": 0,    "rek_author_id_order": 1 },
+                { "rek_author_id": 100,  "rek_author_id_order": 2 },
+                { "rek_author_id": 0,    "rek_author_id_order": 3 },
+                { "rek_author_id": 1001, "rek_author_id_order": 4 }
+            ]
+        };
         const result = transformers.getRecordAuthorsIdSearchKey(input);
         expect(result).toEqual(expected);
     });
