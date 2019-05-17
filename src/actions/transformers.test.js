@@ -563,7 +563,15 @@ describe('getRecordAuthorsIdSearchKey test ', () => {
             {nameAsPublished: "Smith C.", disabled: false, selected: false, authorId: null},
             {nameAsPublished: "Smith D.", disabled: false, selected: false, aut_id: 1001}
         ];
-        const expected = {"fez_record_search_key_author_id": [{"rek_author_id": 0, "rek_author_id_order": 1}, {"rek_author_id": 100, "rek_author_id_order": 2}, {"rek_author_id": 0, "rek_author_id_order": 3}, {"rek_author_id": 1001, "rek_author_id_order": 4}]};
+        const expected = {
+            "fez_record_search_key_author_id": [{
+                "rek_author_id": 0,
+                "rek_author_id_order": 1
+            }, {"rek_author_id": 100, "rek_author_id_order": 2}, {
+                "rek_author_id": 0,
+                "rek_author_id_order": 3
+            }, {"rek_author_id": 1001, "rek_author_id_order": 4}]
+        };
         const result = transformers.getRecordAuthorsIdSearchKey(input);
         expect(result).toEqual(expected);
     });
@@ -1475,7 +1483,7 @@ describe('getGrantsListSearchKey tests', () => {
     });
 });
 
-describe('getNtroMetadataSearchKeys tests',  () => {
+describe('getNtroMetadataSearchKeys tests', () => {
     it('should get ntro meta data', () => {
         const result = transformers.getNtroMetadataSearchKeys({
             authors: [{
@@ -1493,34 +1501,20 @@ describe('getNtroMetadataSearchKeys tests',  () => {
         });
 
         expect(result).toMatchObject({
-            fez_record_search_key_significance: [
-                {
-                    rek_significance: 0,
-                    rek_significance_order: 1
-                },
-                {
-                    rek_significance: 0,
-                    rek_significance_order: 2
-                },
-                {
-                    rek_significance: 0,
-                    rek_significance_order: 3
-                }
-            ],
-            fez_record_search_key_creator_contribution_statement: [
-                {
-                    rek_creator_contribution_statement: 'Missing',
-                    rek_creator_contribution_statement_order: 1
-                },
-                {
-                    rek_creator_contribution_statement: 'Missing',
-                    rek_creator_contribution_statement_order: 2
-                },
-                {
-                    rek_creator_contribution_statement: 'Missing',
-                    rek_creator_contribution_statement_order: 3
-                }
-            ]
+            "fez_record_search_key_creator_contribution_statement": [{
+                "rek_creator_contribution_statement": undefined,
+                "rek_creator_contribution_statement_order": 1
+            }, {
+                "rek_creator_contribution_statement": undefined,
+                "rek_creator_contribution_statement_order": 2
+            }, {"rek_creator_contribution_statement": undefined, "rek_creator_contribution_statement_order": 3}],
+            "fez_record_search_key_significance": [{
+                "rek_significance": 0,
+                "rek_significance_order": 1
+            }, {"rek_significance": 0, "rek_significance_order": 2}, {
+                "rek_significance": 0,
+                "rek_significance_order": 3
+            }]
         });
     })
 });
