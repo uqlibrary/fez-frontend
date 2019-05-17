@@ -479,23 +479,45 @@ export const getAuthorOrder = (data) => {
  * @param data
  */
 export const getCreatorContributionStatementSearchKeys = (data) => {
-    const result = {};
+    if (!data || !data.impactStatement) return {};
 
-    let impactStatement = null;
-    if (!!data.impactStatement && !!data.impactStatement.htmlText) {
-        impactStatement = data.impactStatement.htmlText;
-    } else if (!!data.impactStatement && !!data.impactStatement.plainText) {
-        impactStatement = data.impactStatement.plainText;
-    }
-    if (!!impactStatement) {
-        result.fez_record_search_key_creator_contribution_statement =
-            [{
-                rek_creator_contribution_statement: impactStatement,
-                rek_creator_contribution_statement_order: getAuthorOrder(data)
-            }];
-    }
+    const impactStatement = (
+        data.impactStatement.htmlText ||
+        data.impactStatement.plainText ||
+        null
+    );
 
-    return result;
+    if (!impactStatement) return {};
+
+    // Cache current author order and statement object
+    const currentAuthorOrder = getAuthorOrder(data);
+    const currentAuthorContributionStatement = {
+        rek_creator_contribution_statement: impactStatement,
+        rek_creator_contribution_statement_order: currentAuthorOrder
+    };
+
+    // flag to check if author order has matched
+    let authorOrderMatched = false;
+
+    const statements = (data.initialContributionStatements || []).length > 0
+        ? data.initialContributionStatements.map(statement => {
+            if (statement.rek_creator_contribution_statement_order === currentAuthorOrder) {
+                authorOrderMatched = true;
+                return currentAuthorContributionStatement;
+            } else return statement;
+        })
+        : [currentAuthorContributionStatement];
+
+    return {
+        fez_record_search_key_creator_contribution_statement: (
+            (data.initialContributionStatements || []).length > 0 &&
+            !authorOrderMatched &&
+            [
+                ...statements,
+                currentAuthorContributionStatement
+            ] || statements
+        )
+    };
 };
 
 /**
@@ -503,15 +525,35 @@ export const getCreatorContributionStatementSearchKeys = (data) => {
  * @param data
  */
 export const getSignificanceSearchKeys = (data) => {
-    const result = {};
+    if (!data || !data.significance) return {};
 
-    if (!!data.significance) {
-        result.fez_record_search_key_significance =
-            [{
-                rek_significance: data.significance,
-                rek_significance_order: getAuthorOrder(data)
-            }];
-    }
+    const currentAuthorOrder = getAuthorOrder(data);
+    const currentAuthorSignificance = {
+        rek_significance: data.significance,
+        rek_significance_order: currentAuthorOrder
+    };
 
-    return result;
+
+    // flag to check if author order has matched
+    let authorOrderMatched = false;
+
+    const significances = (data.initialSignificance || []).length > 0
+        ? data.initialContributionStatements.map(significance => {
+            if (significance.rek_significance_order === currentAuthorOrder) {
+                authorOrderMatched = true;
+                return currentAuthorSignificance;
+            } else return significance;
+        })
+        : [currentAuthorSignificance];
+
+    return {
+        fez_record_search_key_significance: (
+            (data.initialSignificance || []).length > 0 &&
+            !authorOrderMatched &&
+            [
+                ...significances,
+                currentAuthorSignificance
+            ] || significances
+        )
+    };
 };
