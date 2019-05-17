@@ -11400,7 +11400,7 @@ exports[`Component MyIncompleteRecord should render significance and contributio
             },
           }
         }
-        showContributionStatement={false}
+        showContributionStatement={true}
         showSignificance={true}
         submitting={false}
       />
