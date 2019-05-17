@@ -441,6 +441,36 @@ describe('Claim publication actions tests ', () => {
             }
         });
 
+        it('should include external source IDs when claiming a publication from external source', async () => {
+            const testRequest = {
+                ...testClaimRequest,
+                publication: {
+                    ...testClaimRequest.publication,
+                    sources: [
+                        { source: 'crossref', id: 'test1'},
+                        { source: 'scopus', id: 'test2'},
+                        { source: 'wos', id: 'test3'},
+                    ],
+                    rek_pid: null
+                }
+            };
+
+            mockApi
+                .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
+                .reply(config => {
+                    const requestObj = JSON.parse(config.data);
+                    expect(requestObj.fez_record_search_key_doi.rek_doi).toBe('test1');
+                    expect(requestObj.fez_record_search_key_scopus_id.rek_scopus_id).toBe('test2');
+                    expect(requestObj.fez_record_search_key_isi_loc.rek_isi_loc).toBe('test3');
+                    return [200, { data: { ...testClaimRequest.publication } }];
+                })
+                .onAny()
+                .reply(200, {})
+            ;
+
+            await mockActionsStore.dispatch(claimActions.claimPublication(testRequest));
+        });
+
         it('dispatched expected actions claiming a publication with files', async () => {
             const files = {
                 "files": {
