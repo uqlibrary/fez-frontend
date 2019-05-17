@@ -120,14 +120,10 @@ export function hideRecordErrorReset() {
  * @returns {action}
  */
 export function setClaimPublication(publication) {
-    const { sources } = publication;
     return dispatch => {
         dispatch({
             type: actions.PUBLICATION_TO_CLAIM_SET,
-            payload: {
-                ...publication,
-                ...transformers.getExternalSourceIdSearchKeys(sources),
-            }
+            payload: publication
         });
     };
 }
@@ -212,6 +208,7 @@ export function claimPublication(data) {
             ...NEW_RECORD_DEFAULT_VALUES,
             ...transformers.getRecordLinkSearchKey(data),
             ...transformers.getRecordFileAttachmentSearchKey(data.files ? data.files.queue : [], data.publication),
+            ...transformers.getExternalSourceIdSearchKeys(data.publication.sources),
             ...recordAuthorsIdSearchKeys,
             ...recordContributorsIdSearchKeys
         } : null;
