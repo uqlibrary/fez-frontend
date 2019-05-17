@@ -469,8 +469,14 @@ describe('NtroDetails ', () => {
                     {
                         rek_creator_contribution_statement_id: 294,
                         rek_creator_contribution_statement_pid: "UQ:ec5ce03",
-                        rek_creator_contribution_statement: ' ',
+                        rek_creator_contribution_statement: '     ',
                         rek_creator_contribution_statement_order: 2
+                    },
+                    {
+                        rek_creator_contribution_statement_id: 294,
+                        rek_creator_contribution_statement_pid: "UQ:ec5ce03",
+                        rek_creator_contribution_statement: '',
+                        rek_creator_contribution_statement_order: 3
                     }
                 ],
             }
