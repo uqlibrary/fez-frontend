@@ -44,9 +44,20 @@ export function loadThirdPartyResults(type, field1, field2) {
             })
             .catch(error => {
                 let message = ['an unspecified error occurred'];
-                if (!!error && !!error.response && !!error.response.data && !!error.response.data.data && error.response.data.data.length > 0) {
+                if (
+                    !!error &&
+                    !!error.response &&
+                    !!error.response.data &&
+                    !!error.response.data.data &&
+                    error.response.data.data.length > 0
+                ) {
                     message = [error.response.data.data];
-                } else if (!!error && !!error.response && !!error.response.data && error.response.data.length > 0) {
+                } else if (
+                    !!error &&
+                    !!error.response &&
+                    !!error.response.data &&
+                    error.response.data.length > 0
+                ) {
                     message = [error.response.data];
                 }
                 dispatch({

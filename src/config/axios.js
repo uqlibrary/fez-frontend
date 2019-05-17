@@ -89,7 +89,12 @@ api.interceptors.response.use(response => {
     return Promise.resolve(response.data);
 }, error => {
     const reportHttpStatusToSentry = [422, 500];
-    if (error && error.response && error.response.status && reportHttpStatusToSentry.indexOf(error.response.status) !== -1) {
+    if (
+        !!error &&
+        !!error.response &&
+        !!error.response.status &&
+        reportHttpStatusToSentry.indexOf(error.response.status) !== -1
+    ) {
         reportToSentry(error);
     }
 
