@@ -66,7 +66,7 @@ export class NtroDetailsClass extends PureComponent {
                         publication.fez_record_search_key_significance.map((item, index) => {
                             if (
                                 (this.props.account && this.props.account.canMasquerade) ||
-                                item.rek_significance !== '' || item.rek_significance.trim().length !== 0
+                                item.rek_significance && item.rek_significance !== '' || item.rek_significance === 0
                             ) {
                                 return (
                                     <this.ViewNtroRow
@@ -77,7 +77,6 @@ export class NtroDetailsClass extends PureComponent {
                                     />
                                 );
                             } else {
-                                console.log('ping');
                                 return null;
                             }
                         })
@@ -89,7 +88,12 @@ export class NtroDetailsClass extends PureComponent {
                         publication.fez_record_search_key_creator_contribution_statement.map((item, index) => {
                             if (
                                 (this.props.account && this.props.account.canMasquerade) ||
-                                (item.rek_creator_contribution_statement !== '' && item.rek_creator_contribution_statement.trim().length > 0)
+                                (
+                                    item.rek_creator_contribution_statement &&
+                                    (item.rek_creator_contribution_statement !== '' &&
+                                    item.rek_creator_contribution_statement.length > 0 &&
+                                    item.rek_creator_contribution_statement.trim().length !== 0) ||
+                                item.rek_creator_contribution_statement === null)
                             ) {
                                 return (
                                     <this.ViewNtroRow
@@ -97,7 +101,7 @@ export class NtroDetailsClass extends PureComponent {
                                         key={index}
                                         heading={locale.viewRecord.headings.NTRO.impactStatement}
                                         subheading={publication.fez_record_search_key_author[item.rek_creator_contribution_statement_order - 1].rek_author ? `(${publication.fez_record_search_key_author[item.rek_creator_contribution_statement_order - 1].rek_author})` : ''}
-                                        data={item.rek_creator_contribution_statement && item.rek_creator_contribution_statement.trim().length !== 0 && ReactHtmlParser(item.rek_creator_contribution_statement) || null}
+                                        data={item.rek_creator_contribution_statement && item.rek_creator_contribution_statement.trim().length !== 0 && ReactHtmlParser(item.rek_creator_contribution_statement) || global.global.defaultAuthorDataPlaceholder}
                                     />
                                 );
                             } else {
