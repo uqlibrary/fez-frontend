@@ -32,7 +32,8 @@ export class CitationCountView extends PureComponent {
                     href={link}
                     aria-label={title}
                     title={title}
-                    openInNewIcon={false}>
+                    openInNewIcon={false}
+                >
                     <span className={`fez-icon ${source} large`}/>
                     &nbsp;
                     <span className="citationCountNumber">{count}</span>

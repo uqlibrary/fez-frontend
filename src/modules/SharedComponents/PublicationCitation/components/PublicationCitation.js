@@ -222,7 +222,10 @@ export class PublicationCitation extends PureComponent {
                                 key={'source_' + index}
                                 className="publicationSource"
                                 href={sourceConfig.externalUrl.replace('[id]', source.id)}
-                                aria-label={locale.global.linkWillOpenInNewWindow.replace('[destination]', sourceConfig.title)}>
+                                aria-label={locale.global.linkWillOpenInNewWindow.replace(
+                                    '[destination]',
+                                    sourceConfig.title
+                                )}>
                                 {sourceConfig.title}
                             </ExternalLink>
                         );
@@ -242,21 +245,27 @@ export class PublicationCitation extends PureComponent {
                     <Grid item xs>
                         <Grid container spacing={0}>
                             {
-                                !this.props.hideTitle ?
-                                    <Grid item xs style={{minWidth: 1}}>
+                                !this.props.hideTitle
+                                    ? <Grid item xs style={{minWidth: 1}}>
                                         <Typography variant="h6" component="h6" className={classes.citationTitle}>{this.renderTitle()}</Typography>
                                     </Grid>
-                                    :
-                                    <Grid item xs />
+                                    : <Grid item xs />
                             }
                             {
                                 this.props.showMetrics &&
                                     <Grid item xs={12} sm="auto" className="citationMetrics">
                                         <ExternalLink
                                             href={recordValue.citation_url}
-                                            title={txt.linkWillOpenInNewWindow.replace('[destination]', txt.myTrendingPublications.sourceTitles[recordValue.source])}
-                                            aria-label={txt.linkWillOpenInNewWindow.replace('[destination]', txt.myTrendingPublications.sourceTitles[recordValue.source])}
-                                            openInNewIcon={false}>
+                                            title={txt.linkWillOpenInNewWindow.replace(
+                                                '[destination]',
+                                                txt.myTrendingPublications.sourceTitles[recordValue.source]
+                                            )}
+                                            aria-label={txt.linkWillOpenInNewWindow.replace(
+                                                '[destination]',
+                                                txt.myTrendingPublications.sourceTitles[recordValue.source]
+                                            )}
+                                            openInNewIcon={false}
+                                        >
                                             <Grid container>
                                                 {
                                                     this.props.showSourceCountIcon &&
@@ -276,7 +285,9 @@ export class PublicationCitation extends PureComponent {
                                                 {
                                                     !this.props.hideCountDiff &&
                                                     <Grid item>
-                                                        <Typography variant="h6" color="inherit" className="difference" title={txt.myTrendingPublications.trendDifferenceShares[recordValue.source]}>
+                                                        <Typography variant="h6" color="inherit" className="difference"
+                                                            title={txt.myTrendingPublications.trendDifferenceShares[recordValue.source]}
+                                                        >
                                                             +{Math.round(recordValue.difference)}
                                                         </Typography>
                                                     </Grid>
@@ -291,7 +302,10 @@ export class PublicationCitation extends PureComponent {
                             {
                                 !this.props.hideCitationCounts &&
                                 <Grid item xs={12} className={classes.citationCounts}>
-                                    <CitationCounts publication={this.props.publication} hideViewFullStatisticsLink={this.props.hideViewFullStatisticsLink}/>
+                                    <CitationCounts
+                                        publication={this.props.publication}
+                                        hideViewFullStatisticsLink={this.props.hideViewFullStatisticsLink}
+                                    />
                                 </Grid>
                             }
                             {
@@ -316,7 +330,11 @@ export class PublicationCitation extends PureComponent {
                             <Grid item xs />
                         </Hidden>
                         {
-                            this.renderActions(this.props.showDefaultActions ? this.defaultActions : this.props.customActions)
+                            this.renderActions(
+                                this.props.showDefaultActions
+                                    ? this.defaultActions
+                                    : this.props.customActions
+                            )
                         }
                     </Grid>
                 }
