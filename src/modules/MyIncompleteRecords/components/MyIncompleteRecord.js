@@ -267,7 +267,7 @@ export class MyIncompleteRecordClass extends PureComponent {
             // Check the current users statement is not missing, empty or null
             recordToFix.fez_record_search_key_creator_contribution_statement.filter(item => (
                 item.rek_creator_contribution_statement_order === this.currentAuthorOrder() &&
-                (!item.rek_creator_contribution_statement ||  item.rek_creator_contribution_statement === '' || item.rek_creator_contribution_statement === locale.global.defaultAuthorStataPlaceholder)
+                (!item.rek_creator_contribution_statement ||  item.rek_creator_contribution_statement === '' || item.rek_creator_contribution_statement === locale.global.defaultAuthorDataPlaceholder)
             )).length > 0
         );
 

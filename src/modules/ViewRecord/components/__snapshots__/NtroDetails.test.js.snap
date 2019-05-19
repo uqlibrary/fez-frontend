@@ -24062,7 +24062,7 @@ exports[`NtroDetails  renders contribution statement as an admin with a blank st
       subheading="(Ky Lane)"
     />
     <Component
-      data={null}
+      data="Missing"
       heading="Creator research statement"
       key="1"
       subheading="(Someone else)"
