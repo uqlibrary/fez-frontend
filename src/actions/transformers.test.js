@@ -1516,7 +1516,7 @@ describe('getNtroMetadataSearchKeys tests', () => {
                 "rek_significance_order": 3
             }]
         });
-    })
+    });
 });
 
 describe('getAuthorOrder', () => {
@@ -1554,3 +1554,243 @@ describe('getAuthorOrder', () => {
         expect(transformers.getAuthorOrder(data)).toBe(-1);
     });
 });
+
+describe('getSignificanceAndContributionStatementSearchKeys', () => {
+    it('returns empty object if data is null', () => {
+        expect(transformers.getSignificanceAndContributionStatementSearchKeys(null)).toEqual({});
+    });
+
+    it('returns empty object if data is undefined', () => {
+        expect(transformers.getSignificanceAndContributionStatementSearchKeys(undefined)).toEqual({});
+    });
+
+    it('returns correct object if impact statement is html text for non-admin author', () => {
+        expect(transformers.getSignificanceAndContributionStatementSearchKeys({
+            impactStatement: {
+                htmlText: '<p>test</p>'
+            },
+            author: {
+                aut_id: 3
+            },
+            publication: {
+                fez_record_search_key_author_id: [
+                    {
+                        rek_author_id: 3,
+                        rek_author_id_order: 2
+                    }
+                ]
+            }
+        })).toEqual({
+            fez_record_search_key_creator_contribution_statement: [{
+                rek_creator_contribution_statement: '<p>test</p>',
+                rek_creator_contribution_statement_order: 2
+            }]
+        });
+    });
+
+    it('returns correct object if impact statement is plain text for non-admin author', () => {
+        expect(transformers.getSignificanceAndContributionStatementSearchKeys({
+            impactStatement: {
+                plainText: 'test'
+            },
+            author: {
+                aut_id: 3
+            },
+            publication: {
+                fez_record_search_key_author_id: [
+                    {
+                        rek_author_id: 3,
+                        rek_author_id_order: 2
+                    }
+                ]
+            }
+        })).toEqual({
+            fez_record_search_key_creator_contribution_statement: [{
+                rek_creator_contribution_statement: 'test',
+                rek_creator_contribution_statement_order: 2
+            }]
+        });
+    });
+
+    it('returns correct object for siginificance for non-admin author', () => {
+        expect(transformers.getSignificanceAndContributionStatementSearchKeys({
+            significance: '1234',
+            author: {
+                aut_id: 3
+            },
+            publication: {
+                fez_record_search_key_author_id: [
+                    {
+                        rek_author_id: 3,
+                        rek_author_id_order: 2
+                    }
+                ]
+            }
+        })).toEqual({
+            fez_record_search_key_significance: [{
+                rek_significance: '1234',
+                rek_significance_order: 2
+            }]
+        });
+    });
+
+    it('returns contribution statement and significance search keys for non-admin author', () => {
+        expect(transformers.getSignificanceAndContributionStatementSearchKeys({
+            significance: '1234',
+            impactStatement: {
+                htmlText: '<span>test</span>'
+            },
+            initialContributionStatements: [],
+            initialSignificance: [],
+            author: {
+                aut_id: 3
+            },
+            publication: {
+                fez_record_search_key_author_id: [
+                    {
+                        rek_author_id: 3,
+                        rek_author_id_order: 2
+                    }
+                ]
+            }
+        })).toEqual({
+            fez_record_search_key_significance: [{
+                rek_significance: '1234',
+                rek_significance_order: 2
+            }],
+            fez_record_search_key_creator_contribution_statement: [{
+                rek_creator_contribution_statement: '<span>test</span>',
+                rek_creator_contribution_statement_order: 2
+            }]
+        });
+    });
+
+    it('returns correct contribution statement and significance search keys for admin author on author order matched', () => {
+        expect(transformers.getSignificanceAndContributionStatementSearchKeys({
+            significance: '1234',
+            impactStatement: {
+                htmlText: '<span>test</span>'
+            },
+            initialContributionStatements: [{
+                rek_creator_contribution_statement: 'Some statement',
+                rek_creator_contribution_statement_order: 1
+            }, {
+                rek_creator_contribution_statement: 'Missing',
+                rek_creator_contribution_statement_order: 2
+            }, {
+                rek_creator_contribution_statement: 'Missing',
+                rek_creator_contribution_statement_order: 3
+            }],
+            initialSignificance: [{
+                rek_significance: '1234',
+                rek_significance_order: 1
+            }, {
+                rek_significance: 0,
+                rek_significance_order: 2
+            }, {
+                rek_significance: 0,
+                rek_significance_order: 3
+            }],
+            author: {
+                aut_id: 3
+            },
+            publication: {
+                fez_record_search_key_author_id: [
+                    {
+                        rek_author_id: 3,
+                        rek_author_id_order: 2
+                    }
+                ]
+            }
+        })).toEqual({
+            fez_record_search_key_significance: [{
+                rek_significance: '1234',
+                rek_significance_order: 1
+            }, {
+                rek_significance: '1234',
+                rek_significance_order: 2
+            }, {
+                rek_significance: 0,
+                rek_significance_order: 3
+            }],
+            fez_record_search_key_creator_contribution_statement: [{
+                rek_creator_contribution_statement: 'Some statement',
+                rek_creator_contribution_statement_order: 1
+            }, {
+                rek_creator_contribution_statement: '<span>test</span>',
+                rek_creator_contribution_statement_order: 2
+            }, {
+                rek_creator_contribution_statement: 'Missing',
+                rek_creator_contribution_statement_order: 3
+            }]
+        });
+    });
+
+
+    it('returns correct contribution statement and significance search keys for admin author on author order not matched', () => {
+        expect(transformers.getSignificanceAndContributionStatementSearchKeys({
+            significance: '1234',
+            impactStatement: {
+                htmlText: '<span>test</span>'
+            },
+            initialContributionStatements: [{
+                rek_creator_contribution_statement: 'Some statement',
+                rek_creator_contribution_statement_order: 1
+            }, {
+                rek_creator_contribution_statement: 'Missing',
+                rek_creator_contribution_statement_order: 2
+            }, {
+                rek_creator_contribution_statement: 'Missing',
+                rek_creator_contribution_statement_order: 3
+            }],
+            initialSignificance: [{
+                rek_significance: '1234',
+                rek_significance_order: 1
+            }, {
+                rek_significance: 0,
+                rek_significance_order: 2
+            }, {
+                rek_significance: 0,
+                rek_significance_order: 3
+            }],
+            author: {
+                aut_id: 3
+            },
+            publication: {
+                fez_record_search_key_author_id: [
+                    {
+                        rek_author_id: 3,
+                        rek_author_id_order: 4
+                    }
+                ]
+            }
+        })).toEqual({
+            fez_record_search_key_significance: [{
+                rek_significance: '1234',
+                rek_significance_order: 1
+            }, {
+                rek_significance: 0,
+                rek_significance_order: 2
+            }, {
+                rek_significance: 0,
+                rek_significance_order: 3
+            }, {
+                rek_significance: '1234',
+                rek_significance_order: 4
+            }],
+            fez_record_search_key_creator_contribution_statement: [{
+                rek_creator_contribution_statement: 'Some statement',
+                rek_creator_contribution_statement_order: 1
+            }, {
+                rek_creator_contribution_statement: 'Missing',
+                rek_creator_contribution_statement_order: 2
+            }, {
+                rek_creator_contribution_statement: 'Missing',
+                rek_creator_contribution_statement_order: 3
+            }, {
+                rek_creator_contribution_statement: '<span>test</span>',
+                rek_creator_contribution_statement_order: 4
+            }]
+        });
+    });
+})
