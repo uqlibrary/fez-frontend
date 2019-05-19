@@ -474,86 +474,61 @@ export const getAuthorOrder = (data) => {
     return (author.length > 0 && author[0].rek_author_id_order) || -1;
 };
 
-/**
- * only return the changed fields
- * @param data
- */
-export const getCreatorContributionStatementSearchKeys = (data) => {
-    if (!data || !data.impactStatement) return {};
+export const getSearchKey = (searchKey, currentAuthorOrder, initialValues = [], value = null) => {
+    if (!value) return {};
 
-    const impactStatement = (
-        data.impactStatement.htmlText ||
-        data.impactStatement.plainText ||
-        null
-    );
-
-    if (!impactStatement) return {};
-
-    // Cache current author order and statement object
-    const currentAuthorOrder = getAuthorOrder(data);
-    const currentAuthorContributionStatement = {
-        rek_creator_contribution_statement: impactStatement,
-        rek_creator_contribution_statement_order: currentAuthorOrder
+    const currentAuthorSearchKeyObject = {
+        [searchKey.value.subkey]: value,
+        [searchKey.value.orderKey]: currentAuthorOrder
     };
 
-    // flag to check if author order has matched
     let authorOrderMatched = false;
 
-    const statements = (data.initialContributionStatements || []).length > 0
-        ? data.initialContributionStatements.map(statement => {
-            if (statement.rek_creator_contribution_statement_order === currentAuthorOrder) {
+    const searchKeyValues = initialValues.length > 0
+        ? initialValues.map(initialValue => {
+            if (initialValue[searchKey.value.orderKey] === currentAuthorOrder) {
                 authorOrderMatched = true;
-                return currentAuthorContributionStatement;
-            } else return statement;
+                return currentAuthorSearchKeyObject;
+            } else return initialValue;
         })
-        : [currentAuthorContributionStatement];
+        : [currentAuthorSearchKeyObject];
 
     return {
-        fez_record_search_key_creator_contribution_statement: (
-            (data.initialContributionStatements || []).length > 0 &&
+        [searchKey.key]: (
+            initialValues.length > 0 &&
             !authorOrderMatched &&
             [
-                ...statements,
-                currentAuthorContributionStatement
-            ] || statements
+                ...searchKeyValues,
+                currentAuthorSearchKeyObject
+            ] || searchKeyValues
         )
     };
 };
 
-/**
- * only return the changed fields
- * @param data
- */
-export const getSignificanceSearchKeys = (data) => {
-    if (!data || !data.significance) return {};
+export const getSignificanceAndContributionStatementSearchKeys = (data) => {
+    if (!data) return {};
 
     const currentAuthorOrder = getAuthorOrder(data);
-    const currentAuthorSignificance = {
-        rek_significance: data.significance,
-        rek_significance_order: currentAuthorOrder
-    };
-
-
-    // flag to check if author order has matched
-    let authorOrderMatched = false;
-
-    const significances = (data.initialSignificance || []).length > 0
-        ? data.initialContributionStatements.map(significance => {
-            if (significance.rek_significance_order === currentAuthorOrder) {
-                authorOrderMatched = true;
-                return currentAuthorSignificance;
-            } else return significance;
-        })
-        : [currentAuthorSignificance];
 
     return {
-        fez_record_search_key_significance: (
-            (data.initialSignificance || []).length > 0 &&
-            !authorOrderMatched &&
-            [
-                ...significances,
-                currentAuthorSignificance
-            ] || significances
+        ...getSearchKey({
+            key: 'fez_record_search_key_significance',
+            value: {
+                subkey: 'rek_significance',
+                orderKey: 'rek_significance_order'
+            }
+        }, currentAuthorOrder, data.initialSignificance, data.significance),
+        ...getSearchKey({
+            key: 'fez_record_search_key_creator_contribution_statement',
+            value: {
+                subkey: 'rek_creator_contribution_statement',
+                orderKey: 'rek_creator_contribution_statement_order'
+            }
+        }, currentAuthorOrder, data.initialContributionStatements, (
+                (data.impactStatement || {}).htmlText ||
+                (data.impactStatement || {}).plainText ||
+                null
+            )
         )
     };
 };
