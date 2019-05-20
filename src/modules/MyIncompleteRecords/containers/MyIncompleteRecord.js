@@ -53,11 +53,13 @@ let MyIncompleteRecordContainer = reduxForm({
 })(confirmDiscardFormChanges(MyIncompleteRecord, FORM_NAME));
 
 const mapStateToProps = (state, ownProps) => {
-    const { author } = state.get('accountReducer');
+    const { author, account } = state.get('accountReducer');
     const formErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});
     const importedValues = state.get('fixRecordReducer') && state.get('fixRecordReducer').recordToFix;
     let grants = [];
     let authors = [];
+    let initialContributionStatements = [];
+    let initialSignificance = [];
     if (importedValues) {
         grants = importedValues.fez_record_search_key_grant_agency.map((grantAgency, index) => ({
             grantAgencyName: grantAgency.rek_grant_agency,
@@ -107,6 +109,9 @@ const mapStateToProps = (state, ownProps) => {
                 ...authorAffiliation,
                 required: authorAffiliationRequired(authorAffiliation, author)}
             ));
+
+        initialContributionStatements = account.canMasquerade && importedValues.fez_record_search_key_creator_contribution_statement || [];
+        initialSignificance = account.canMasquerade && importedValues.fez_record_search_key_significance || [];
     }
 
     const languages = importedValues && importedValues.fez_record_search_key_language.length > 0 && importedValues.fez_record_search_key_language.map(lang => lang.rek_language) || ['eng'];
@@ -120,7 +125,9 @@ const mapStateToProps = (state, ownProps) => {
         initialValues: {
             grants,
             authorsAffiliation: authors,
-            languages
+            languages,
+            initialContributionStatements,
+            initialSignificance
         }
     };
 };
