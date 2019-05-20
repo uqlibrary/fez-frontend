@@ -44,6 +44,7 @@ import {
 import {pathConfig} from 'config/routes';
 
 import {withStyles} from '@material-ui/core/styles';
+import {viewRecordsConfig} from 'config';
 
 export const styles = (theme) => ({
     GridType: {
@@ -162,6 +163,13 @@ export class MyIncompleteRecordClass extends PureComponent {
 
     _handleDefaultSubmit = (event) => {
         if (event) event.preventDefault();
+    };
+
+    isFileValid = (dataStream) => {
+        const {files: {blacklist}} = viewRecordsConfig;
+        return !dataStream.dsi_dsid.match(blacklist.namePrefixRegex)
+        && (!dataStream.dsi_label || !!dataStream.dsi_label.match(new RegExp(blacklist.descriptionKeywordsRegex, 'gi')))
+        && dataStream.dsi_state === 'A';
     };
 
     render() {
@@ -322,8 +330,10 @@ export class MyIncompleteRecordClass extends PureComponent {
         // Does the record have any files attached
         const hasAnyFiles = recordToFix &&
             recordToFix.fez_datastream_info &&
-            recordToFix.fez_datastream_info.length || 0
-        ;
+            recordToFix.fez_datastream_info.length > 0 &&
+            recordToFix.fez_datastream_info.map(item => {
+                return this.isFileValid(item);
+            }).some(item => item === true);
         return (
             <StandardPage title={txt.title} help={txt.help}>
                 <PublicationCitation publication={recordToFix} />
