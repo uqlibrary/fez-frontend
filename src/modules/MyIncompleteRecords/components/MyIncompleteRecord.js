@@ -154,19 +154,11 @@ export class MyIncompleteRecordClass extends PureComponent {
             hideLanguage: (recordToFix.fez_record_search_key_language || []).length !== 0,
             hidePeerReviewActivity: (recordToFix.fez_record_search_key_quality_indicator || []).length !== 0,
             hideExtent: (
-                [
-                    DOCUMENT_TYPE_BOOK_CHAPTER,
-                    DOCUMENT_TYPE_JOURNAL_ARTICLE
-                ].includes(recordToFix.rek_display_type_lookup) ||
+                [ DOCUMENT_TYPE_BOOK_CHAPTER, DOCUMENT_TYPE_JOURNAL_ARTICLE ].includes(recordToFix.rek_display_type_lookup) ||
                 !!(recordToFix.fez_record_search_key_total_pages || {}).rek_total_pages
             ),
             hideAudienceSize: (
-                !(
-                    [
-                        ...LP_NTRO_SUBTYPES,
-                        ...CPEE_NTRO_SUBTYPES
-                    ].includes(recordToFix.rek_subtype)
-                ) ||
+                ![ ...LP_NTRO_SUBTYPES, ...CPEE_NTRO_SUBTYPES ].includes(recordToFix.rek_subtype) ||
                 !!(recordToFix.fez_record_search_key_audience_size || {}).rek_audience_size
             ),
             showSignificance: (
