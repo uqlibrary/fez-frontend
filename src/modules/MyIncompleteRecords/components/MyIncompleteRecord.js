@@ -100,6 +100,18 @@ export class MyIncompleteRecordClass extends PureComponent {
         this.props.history.push(routes.pathConfig.dashboard);
     };
 
+    _cancelFix = () => {
+        this.props.history.push(pathConfig.records.incomplete);
+    };
+
+    _setSuccessConfirmation = (ref) => {
+        this.successConfirmationBox = ref;
+    };
+
+    _handleDefaultSubmit = (event) => {
+        if (event) event.preventDefault();
+    };
+
     isLoggedInUserLinked = (author, recordToFix, searchKey, subkey) => {
         return !!author &&
             !!recordToFix &&
@@ -128,27 +140,54 @@ export class MyIncompleteRecordClass extends PureComponent {
         return isAuthorLinked || isContributorLinked;
     };
 
-    currentAuthorOrder = () => {
-        const author = this.props.recordToFix && this.props.recordToFix.fez_record_search_key_author_id.filter(authorId => authorId.rek_author_id === this.props.author.aut_id);
-        return author.length > 0 && author[0].rek_author_id_order;
+    getCurrentAuthorOrder = (recordToFix, author) => {
+        const currentAuthor = recordToFix && recordToFix.fez_record_search_key_author_id.filter(authorId => authorId.rek_author_id === author.aut_id);
+        return currentAuthor.length > 0 && currentAuthor[0].rek_author_id_order;
     };
 
-    _cancelFix = () => {
-        this.props.history.push(pathConfig.records.incomplete);
-    };
+    getNtroFieldFlags = (recordToFix) => {
+        const {author} = this.props;
+        const currentAuthorOrder = this.getCurrentAuthorOrder(recordToFix, author);
 
-    _actionSelected = (event, value) => {
-        this.setState({
-            selectedRecordAction: value
-        });
-    };
-
-    _setSuccessConfirmation = (ref) => {
-        this.successConfirmationBox = ref;
-    };
-
-    _handleDefaultSubmit = (event) => {
-        if (event) event.preventDefault();
+        return {
+            hideAbstract: !!recordToFix.rek_formatted_abstract || !!recordToFix.rek_description,
+            hideLanguage: (recordToFix.fez_record_search_key_language || []).length !== 0,
+            hidePeerReviewActivity: (recordToFix.fez_record_search_key_quality_indicator || []).length !== 0,
+            hideExtent: (
+                [
+                    DOCUMENT_TYPE_BOOK_CHAPTER,
+                    DOCUMENT_TYPE_JOURNAL_ARTICLE
+                ].includes(recordToFix.rek_display_type_lookup) ||
+                !!(recordToFix.fez_record_search_key_total_pages || {}).rek_total_pages
+            ),
+            hideAudienceSize: (
+                !(
+                    [
+                        ...LP_NTRO_SUBTYPES,
+                        ...CPEE_NTRO_SUBTYPES
+                    ].includes(recordToFix.rek_subtype)
+                ) ||
+                !!(recordToFix.fez_record_search_key_audience_size || {}).rek_audience_size
+            ),
+            showSignificance: (
+                (recordToFix.fez_record_search_key_significance || []).length === 0 ||
+                recordToFix.fez_record_search_key_significance.filter(item => (
+                    item.rek_significance_order === currentAuthorOrder &&
+                    !item.rek_significance
+                )).length > 0
+            ),
+            showContributionStatement: (
+                (recordToFix.fez_record_search_key_creator_contribution_statement || []).length === 0 ||
+                recordToFix.fez_record_search_key_creator_contribution_statement.filter(item => (
+                    item.rek_creator_contribution_statement_order === currentAuthorOrder &&
+                    (
+                        !item.rek_creator_contribution_statement ||
+                        item.rek_creator_contribution_statement === '' ||
+                        item.rek_creator_contribution_statement === locale.global.defaultAuthorDataPlaceholder
+                    )
+                )).length > 0
+            )
+        };
     };
 
     render() {
@@ -191,71 +230,7 @@ export class MyIncompleteRecordClass extends PureComponent {
             !!general.NTRO_SUBTYPES.includes(recordToFix.rek_subtype)
         ;
 
-        const currentAuthorOrder = this.currentAuthorOrder();
-
-        // rek_formatted_abstract
-        const editAbstract = (
-            !recordToFix.rek_formatted_abstract &&
-            !recordToFix.rek_description
-        );
-
-        // fez_record_search_key_audience_size
-        const editAudienceSize = (
-            !!recordToFix.rek_subtype &&
-            (
-                LP_NTRO_SUBTYPES.includes(recordToFix.rek_subtype) ||
-                CPEE_NTRO_SUBTYPES.includes(recordToFix.rek_subtype)
-            ) &&
-            (
-                !recordToFix.fez_record_search_key_audience_size ||
-                !recordToFix.fez_record_search_key_audience_size.rek_audience_size
-            )
-        );
-
-        // fez_record_search_key_significance
-        const editSignificance = (
-            !recordToFix.fez_record_search_key_significance ||
-            recordToFix.fez_record_search_key_significance.length === 0 ||
-            recordToFix.fez_record_search_key_significance.filter(item => (
-                item.rek_significance_order === currentAuthorOrder && !item.rek_significance
-            )).length > 0
-        );
-
-        // fez_record_search_key_creator_contribution_statement
-        const editCreatorContributionStatement = (
-            !recordToFix.fez_record_search_key_creator_contribution_statement ||
-            recordToFix.fez_record_search_key_creator_contribution_statement.length === 0 ||
-            // Check the current users statement is not missing, empty or null
-            recordToFix.fez_record_search_key_creator_contribution_statement.filter(item => (
-                item.rek_creator_contribution_statement_order === currentAuthorOrder &&
-                (!item.rek_creator_contribution_statement ||  item.rek_creator_contribution_statement === '' || item.rek_creator_contribution_statement === locale.global.defaultAuthorDataPlaceholder)
-            )).length > 0
-        );
-
-        // fez_record_search_key_language
-        const editLanguage = (
-            !recordToFix.fez_record_search_key_language ||
-            recordToFix.fez_record_search_key_language.length === 0
-        );
-
-        // fez_record_search_key_quality_indicator
-        const editQualityIndicator = (
-            !recordToFix.fez_record_search_key_quality_indicator ||
-            recordToFix.fez_record_search_key_quality_indicator.length === 0
-        );
-
-        // fez_record_search_key_total_pages
-        const editExtent = (
-            (
-                ![DOCUMENT_TYPE_BOOK_CHAPTER, DOCUMENT_TYPE_JOURNAL_ARTICLE]
-                    .includes(recordToFix.rek_display_type_lookup)
-            ) &&
-            (
-                !recordToFix.fez_record_search_key_total_pages ||
-                !recordToFix.fez_record_search_key_total_pages.rek_total_pages
-            )
-        );
-
+        const ntroFieldProps = isNtro && this.getNtroFieldFlags(recordToFix);
 
         // set confirmation message depending on file upload status
         const saveConfirmationLocale = { ...txt.successWorkflowConfirmation };
@@ -272,8 +247,9 @@ export class MyIncompleteRecordClass extends PureComponent {
         // Does the record have any files attached
         const hasAnyFiles = recordToFix &&
             recordToFix.fez_datastream_info &&
-            recordToFix.fez_datastream_info.length || 0
-        ;
+            recordToFix.fez_datastream_info.length ||
+            0;
+
         return (
             <StandardPage title={txt.title} help={txt.help}>
                 <PublicationCitation publication={recordToFix} />
@@ -330,22 +306,16 @@ export class MyIncompleteRecordClass extends PureComponent {
                             isNtro &&
                             <NtroFields
                                 submitting={this.props.submitting}
-                                showContributionStatement={editCreatorContributionStatement}
                                 hideIsmn
                                 hideIsrc
                                 hideVolume
                                 hideIssue
                                 hideStartPage
                                 hideEndPage
-                                hideExtent={!editExtent}
                                 hideOriginalFormat
-                                hideAbstract={!editAbstract}
-                                hideAudienceSize={!editAudienceSize}
-                                showSignificance={editSignificance}
-                                hidePeerReviewActivity={!editQualityIndicator}
-                                hideLanguage={!editLanguage}
                                 hideSeries
                                 disableDeleteAllGrants={this.props.disableDeleteAllGrants}
+                                {...ntroFieldProps}
                             />
                         }
                         <Grid item xs={12}>

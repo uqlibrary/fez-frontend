@@ -93,12 +93,6 @@ describe('Component MyIncompleteRecord', () => {
         // expect(wrapper.find('withRouter(Connect(PublicationCitation))').length).toEqual(1);
     });
 
-    it('should set action for form', () => {
-        const wrapper = setup({recordToFix: mockRecordToFix});
-        wrapper.instance()._actionSelected('', 'fix');
-        expect(wrapper.state().selectedRecordAction).toEqual('fix');
-    });
-
     it('should set local variables', () => {
         const wrapper = setup({recordToFix: mockRecordToFix});
         wrapper.setState({selectedRecordAction: 'unclaim'});
