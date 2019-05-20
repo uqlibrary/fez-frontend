@@ -185,14 +185,6 @@ describe('Component MyIncompleteRecord', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('currentAuthorIndex()', () => {
-        const wrapper = setup({
-            recordToFix: mockRecordToFix,
-            author: {aut_id: 410},
-        });
-        expect(wrapper.instance().currentAuthorIndex()).toEqual(1);
-    });
-
     it('should be able to navigate to specific routes', () => {
         const testFn = jest.fn();
         const wrapper = setup({ history: {

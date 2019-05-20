@@ -128,11 +128,6 @@ export class MyIncompleteRecordClass extends PureComponent {
         return isAuthorLinked || isContributorLinked;
     };
 
-    currentAuthorIndex = () => {
-        const author = this.props.recordToFix && this.props.recordToFix.fez_record_search_key_author_id.filter(authorId => authorId.rek_author_id === this.props.author.aut_id);
-        return author.length > 0 && author[0].rek_author_id_order - 1;
-    };
-
     currentAuthorOrder = () => {
         const author = this.props.recordToFix && this.props.recordToFix.fez_record_search_key_author_id.filter(authorId => authorId.rek_author_id === this.props.author.aut_id);
         return author.length > 0 && author[0].rek_author_id_order;
