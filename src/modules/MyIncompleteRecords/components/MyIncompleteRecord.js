@@ -28,22 +28,15 @@ import { default as alertLocale } from 'locale/publicationForm';
 import locale from 'locale/global';
 
 import {
-    CPEE_NTRO_SUBTYPES,
-    CW_NTRO_SUBTYPES,
     DOCUMENT_TYPE_BOOK_CHAPTER,
-    DOCUMENT_TYPE_BOOK,
-    DOCUMENT_TYPE_CREATIVE_WORK,
-    DOCUMENT_TYPE_DESIGN,
     DOCUMENT_TYPE_JOURNAL_ARTICLE,
-    DOCUMENT_TYPE_RESEARCH_REPORT,
+    CPEE_NTRO_SUBTYPES,
     LP_NTRO_SUBTYPES,
-    NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
-    RESEARCH_REPORT_NTRO_SUBTYPES,
-    RRW_NTRO_SUBTYPES,
 } from 'config/general';
 import {pathConfig} from 'config/routes';
 
 import {withStyles} from '@material-ui/core/styles';
+import {viewRecordsConfig} from 'config';
 
 export const styles = (theme) => ({
     GridType: {
@@ -108,6 +101,18 @@ export class MyIncompleteRecordClass extends PureComponent {
         this.props.history.push(routes.pathConfig.dashboard);
     };
 
+    _cancelFix = () => {
+        this.props.history.push(pathConfig.records.incomplete);
+    };
+
+    _setSuccessConfirmation = (ref) => {
+        this.successConfirmationBox = ref;
+    };
+
+    _handleDefaultSubmit = (event) => {
+        if (event) event.preventDefault();
+    };
+
     isLoggedInUserLinked = (author, recordToFix, searchKey, subkey) => {
         return !!author &&
             !!recordToFix &&
@@ -136,49 +141,81 @@ export class MyIncompleteRecordClass extends PureComponent {
         return isAuthorLinked || isContributorLinked;
     };
 
-    currentAuthorIndex = () => {
-        const author = this.props.recordToFix && this.props.recordToFix.fez_record_search_key_author_id.filter(authorId => authorId.rek_author_id === this.props.author.aut_id);
-        return author.length > 0 && author[0].rek_author_id_order - 1;
+    getCurrentAuthorOrder = (recordToFix, author) => {
+        const currentAuthor = recordToFix && recordToFix.fez_record_search_key_author_id.filter(authorId => authorId.rek_author_id === author.aut_id);
+        return currentAuthor.length > 0 && currentAuthor[0].rek_author_id_order;
     };
 
-    currentAuthorOrder = () => {
-        const author = this.props.recordToFix && this.props.recordToFix.fez_record_search_key_author_id.filter(authorId => authorId.rek_author_id === this.props.author.aut_id);
-        return author.length > 0 && author[0].rek_author_id_order;
+    getNtroFieldFlags = (recordToFix) => {
+        const {author} = this.props;
+        const currentAuthorOrder = this.getCurrentAuthorOrder(recordToFix, author);
+
+        return {
+            hideAbstract: !!recordToFix.rek_formatted_abstract || !!recordToFix.rek_description,
+            hideLanguage: (recordToFix.fez_record_search_key_language || []).length !== 0,
+            hidePeerReviewActivity: (recordToFix.fez_record_search_key_quality_indicator || []).length !== 0,
+            hideExtent: (
+                [ DOCUMENT_TYPE_BOOK_CHAPTER, DOCUMENT_TYPE_JOURNAL_ARTICLE ].includes(recordToFix.rek_display_type_lookup) ||
+                !!(recordToFix.fez_record_search_key_total_pages || {}).rek_total_pages
+            ),
+            hideAudienceSize: (
+                ![ ...LP_NTRO_SUBTYPES, ...CPEE_NTRO_SUBTYPES ].includes(recordToFix.rek_subtype) ||
+                !!(recordToFix.fez_record_search_key_audience_size || {}).rek_audience_size
+            ),
+            showSignificance: (
+                (recordToFix.fez_record_search_key_significance || []).length === 0 ||
+                recordToFix.fez_record_search_key_significance.filter(item => (
+                    item.rek_significance_order === currentAuthorOrder &&
+                    !item.rek_significance
+                )).length > 0
+            ),
+            showContributionStatement: (
+                (recordToFix.fez_record_search_key_creator_contribution_statement || []).length === 0 ||
+                recordToFix.fez_record_search_key_creator_contribution_statement.filter(item => (
+                    item.rek_creator_contribution_statement_order === currentAuthorOrder &&
+                    (
+                        !item.rek_creator_contribution_statement ||
+                        item.rek_creator_contribution_statement === '' ||
+                        item.rek_creator_contribution_statement === locale.global.defaultAuthorDataPlaceholder
+                    )
+                )).length > 0
+            )
+        };
     };
 
-    _cancelFix = () => {
-        this.props.history.push(pathConfig.records.incomplete);
-    };
-
-    _actionSelected = (event, value) => {
-        this.setState({
-            selectedRecordAction: value
-        });
-    };
-
-    _setSuccessConfirmation = (ref) => {
-        this.successConfirmationBox = ref;
-    };
-
-    _handleDefaultSubmit = (event) => {
-        if (event) event.preventDefault();
+    isFileValid = (dataStream) => {
+        const {files: {blacklist}} = viewRecordsConfig;
+        return !dataStream.dsi_dsid.match(blacklist.namePrefixRegex)
+            && (!dataStream.dsi_label || !!dataStream.dsi_label.match(new RegExp(blacklist.descriptionKeywordsRegex, 'gi')))
+            && dataStream.dsi_state === 'A';
     };
 
     render() {
-        const {recordToFix} = this.props;
+        const txt = pagesLocale.pages.incompletePublication;
+
+        const { accountAuthorLoading, loadingRecordToFix } = this.props;
+        // display loading spinner
+        if (accountAuthorLoading || loadingRecordToFix) {
+            return (
+                <React.Fragment>
+                    <InlineLoader message={txt.loadingMessage} />
+                </React.Fragment>
+            );
+        }
+
         // if author is not linked to this record, abandon form
-        if (!(
-            this.props.accountAuthorLoading ||
-            this.props.loadingRecordToFix
-        ) && !this.isAuthorLinked()) {
+        if (
+            !(accountAuthorLoading || loadingRecordToFix) &&
+            !this.isAuthorLinked()
+        ) {
             this.props.history.go(-1);
             return <div />;
         }
 
-        const txt = pagesLocale.pages.incompletePublication;
         const txtFixForm = formsLocale.forms.fixPublicationForm;
         const authors = txt.fields.authors;
 
+        const {recordToFix} = this.props;
         const alertProps = validation.getErrorAlertProps({
             ...this.props,
             alertLocale: {
@@ -193,119 +230,7 @@ export class MyIncompleteRecordClass extends PureComponent {
             !!general.NTRO_SUBTYPES.includes(recordToFix.rek_subtype)
         ;
 
-        // see https://docs.google.com/spreadsheets/d/1JOWQeFepCs7DWaiMY50yKacxbO_okgolJjeFc2nlMx8/edit#gid=0 for the cross reference of which fields are mandatory on which types
-        const isDocumentType1 = !!recordToFix &&
-            !!recordToFix.rek_display_type_lookup &&
-            !!recordToFix.rek_subtype &&
-            ((displayType, subType) => (
-                (displayType === DOCUMENT_TYPE_DESIGN && subType === NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK) ||
-                (displayType === DOCUMENT_TYPE_BOOK && CW_NTRO_SUBTYPES.includes(subType)) ||
-                (displayType === DOCUMENT_TYPE_CREATIVE_WORK && CW_NTRO_SUBTYPES.includes(subType)) ||
-                (displayType === DOCUMENT_TYPE_CREATIVE_WORK && RRW_NTRO_SUBTYPES.includes(subType)) ||
-                (displayType === DOCUMENT_TYPE_RESEARCH_REPORT && RESEARCH_REPORT_NTRO_SUBTYPES.includes(subType))
-            ))(recordToFix.rek_display_type_lookup, recordToFix.rek_subtype);
-
-        const isDocumentType2 = (
-            !!recordToFix &&
-            recordToFix.rek_display_type_lookup === DOCUMENT_TYPE_CREATIVE_WORK &&
-            !!recordToFix.rek_subtype && (
-                LP_NTRO_SUBTYPES.includes(recordToFix.rek_subtype) ||
-                CPEE_NTRO_SUBTYPES.includes(recordToFix.rek_subtype)
-            )
-        );
-
-        const isDocumentType3 = !!recordToFix && (
-            recordToFix.rek_display_type_lookup === DOCUMENT_TYPE_BOOK_CHAPTER ||
-            recordToFix.rek_display_type_lookup === DOCUMENT_TYPE_JOURNAL_ARTICLE
-        ) &&
-            !!recordToFix.rek_subtype &&
-            CW_NTRO_SUBTYPES.includes(recordToFix.rek_subtype)
-        ;
-
-        // rek_formatted_abstract
-        const editAbstract = (
-            isDocumentType1 ||
-            isDocumentType2 ||
-            isDocumentType3
-        ) && (
-            !recordToFix || (
-                !recordToFix.rek_formatted_abstract &&
-                !recordToFix.rek_description
-            )
-        );
-
-        // fez_record_search_key_audience_size
-        const editAudienceSize = isDocumentType2 && (
-            !recordToFix ||
-            !recordToFix.fez_record_search_key_audience_size ||
-            !recordToFix.fez_record_search_key_audience_size.rek_audience_size
-        );
-
-        // fez_record_search_key_significance
-        const editSignificance = (
-            isDocumentType1 ||
-            isDocumentType2 ||
-            isDocumentType3
-        ) && (
-            !recordToFix ||
-            !recordToFix.fez_record_search_key_significance ||
-            recordToFix.fez_record_search_key_significance.length === 0 ||
-            recordToFix.fez_record_search_key_significance.filter(item => (
-                item.rek_significance_order === this.currentAuthorOrder() && !item.rek_significance
-            )).length > 0
-        );
-
-        // fez_record_search_key_creator_contribution_statement
-        const editCreatorContributionStatement = (
-            isDocumentType1 ||
-            isDocumentType2 ||
-            isDocumentType3
-        ) && (
-            !recordToFix ||
-            !recordToFix.fez_record_search_key_creator_contribution_statement ||
-            recordToFix.fez_record_search_key_creator_contribution_statement.length === 0 ||
-            // Check the current users statement is not missing, empty or null
-            recordToFix.fez_record_search_key_creator_contribution_statement.filter(item => (
-                item.rek_creator_contribution_statement_order === this.currentAuthorOrder() &&
-                (!item.rek_creator_contribution_statement ||  item.rek_creator_contribution_statement === '' || item.rek_creator_contribution_statement === locale.global.defaultAuthorDataPlaceholder)
-            )).length > 0
-        );
-
-        // fez_record_search_key_language
-        const editLanguage = !recordToFix ||
-            !recordToFix.fez_record_search_key_language ||
-            recordToFix.fez_record_search_key_language.length === 0
-        ;
-
-        // fez_record_search_key_quality_indicator
-        const editQualityIndicator = (
-            isDocumentType1 ||
-            isDocumentType2 ||
-            isDocumentType3
-        ) && (
-            !recordToFix ||
-            !recordToFix.fez_record_search_key_quality_indicator ||
-            recordToFix.fez_record_search_key_quality_indicator.length === 0
-        );
-
-        // fez_record_search_key_total_pages
-        const editExtent = (
-            isDocumentType1 ||
-            isDocumentType2
-        ) && (
-            !recordToFix ||
-            !recordToFix.fez_record_search_key_total_pages ||
-            !recordToFix.fez_record_search_key_total_pages.rek_total_pages
-        );
-
-
-        if (this.props.accountAuthorLoading || this.props.loadingRecordToFix) {
-            return (
-                <React.Fragment>
-                    <InlineLoader message={txt.loadingMessage} />
-                </React.Fragment>
-            );
-        }
+        const ntroFieldProps = isNtro && this.getNtroFieldFlags(recordToFix);
 
         // set confirmation message depending on file upload status
         const saveConfirmationLocale = { ...txt.successWorkflowConfirmation };
@@ -318,12 +243,13 @@ export class MyIncompleteRecordClass extends PureComponent {
                 {saveConfirmationLocale.confirmationMessage}
             </React.Fragment>
         );
-
         // Does the record have any files attached
         const hasAnyFiles = recordToFix &&
             recordToFix.fez_datastream_info &&
-            recordToFix.fez_datastream_info.length || 0
-        ;
+            recordToFix.fez_datastream_info.length > 0 &&
+            recordToFix.fez_datastream_info.map(item => {
+                return this.isFileValid(item);
+            }).some(item => item === true);
         return (
             <StandardPage title={txt.title} help={txt.help}>
                 <PublicationCitation publication={recordToFix} />
@@ -380,22 +306,16 @@ export class MyIncompleteRecordClass extends PureComponent {
                             isNtro &&
                             <NtroFields
                                 submitting={this.props.submitting}
-                                showContributionStatement={editCreatorContributionStatement}
                                 hideIsmn
                                 hideIsrc
                                 hideVolume
                                 hideIssue
                                 hideStartPage
                                 hideEndPage
-                                hideExtent={!editExtent}
                                 hideOriginalFormat
-                                hideAbstract={!editAbstract}
-                                hideAudienceSize={!editAudienceSize}
-                                showSignificance={editSignificance}
-                                hidePeerReviewActivity={!editQualityIndicator}
-                                hideLanguage={!editLanguage}
                                 hideSeries
                                 disableDeleteAllGrants={this.props.disableDeleteAllGrants}
+                                {...ntroFieldProps}
                             />
                         }
                         <Grid item xs={12}>
