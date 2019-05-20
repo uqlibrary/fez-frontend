@@ -28,18 +28,10 @@ import { default as alertLocale } from 'locale/publicationForm';
 import locale from 'locale/global';
 
 import {
-    CPEE_NTRO_SUBTYPES,
-    CW_NTRO_SUBTYPES,
     DOCUMENT_TYPE_BOOK_CHAPTER,
-    DOCUMENT_TYPE_BOOK,
-    DOCUMENT_TYPE_CREATIVE_WORK,
-    DOCUMENT_TYPE_DESIGN,
     DOCUMENT_TYPE_JOURNAL_ARTICLE,
-    DOCUMENT_TYPE_RESEARCH_REPORT,
+    CPEE_NTRO_SUBTYPES,
     LP_NTRO_SUBTYPES,
-    NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
-    RESEARCH_REPORT_NTRO_SUBTYPES,
-    RRW_NTRO_SUBTYPES,
 } from 'config/general';
 import {pathConfig} from 'config/routes';
 
@@ -165,20 +157,31 @@ export class MyIncompleteRecordClass extends PureComponent {
     };
 
     render() {
-        const {recordToFix} = this.props;
+        const txt = pagesLocale.pages.incompletePublication;
+
+        const { accountAuthorLoading, loadingRecordToFix } = this.props;
+        // display loading spinner
+        if (accountAuthorLoading || loadingRecordToFix) {
+            return (
+                <React.Fragment>
+                    <InlineLoader message={txt.loadingMessage} />
+                </React.Fragment>
+            );
+        }
+
         // if author is not linked to this record, abandon form
-        if (!(
-            this.props.accountAuthorLoading ||
-            this.props.loadingRecordToFix
-        ) && !this.isAuthorLinked()) {
+        if (
+            !(accountAuthorLoading || loadingRecordToFix) &&
+            !this.isAuthorLinked()
+        ) {
             this.props.history.go(-1);
             return <div />;
         }
 
-        const txt = pagesLocale.pages.incompletePublication;
         const txtFixForm = formsLocale.forms.fixPublicationForm;
         const authors = txt.fields.authors;
 
+        const {recordToFix} = this.props;
         const alertProps = validation.getErrorAlertProps({
             ...this.props,
             alertLocale: {
@@ -193,119 +196,71 @@ export class MyIncompleteRecordClass extends PureComponent {
             !!general.NTRO_SUBTYPES.includes(recordToFix.rek_subtype)
         ;
 
-        // see https://docs.google.com/spreadsheets/d/1JOWQeFepCs7DWaiMY50yKacxbO_okgolJjeFc2nlMx8/edit#gid=0 for the cross reference of which fields are mandatory on which types
-        const isDocumentType1 = !!recordToFix &&
-            !!recordToFix.rek_display_type_lookup &&
-            !!recordToFix.rek_subtype &&
-            ((displayType, subType) => (
-                (displayType === DOCUMENT_TYPE_DESIGN && subType === NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK) ||
-                (displayType === DOCUMENT_TYPE_BOOK && CW_NTRO_SUBTYPES.includes(subType)) ||
-                (displayType === DOCUMENT_TYPE_CREATIVE_WORK && CW_NTRO_SUBTYPES.includes(subType)) ||
-                (displayType === DOCUMENT_TYPE_CREATIVE_WORK && RRW_NTRO_SUBTYPES.includes(subType)) ||
-                (displayType === DOCUMENT_TYPE_RESEARCH_REPORT && RESEARCH_REPORT_NTRO_SUBTYPES.includes(subType))
-            ))(recordToFix.rek_display_type_lookup, recordToFix.rek_subtype);
-
-        const isDocumentType2 = (
-            !!recordToFix &&
-            recordToFix.rek_display_type_lookup === DOCUMENT_TYPE_CREATIVE_WORK &&
-            !!recordToFix.rek_subtype && (
-                LP_NTRO_SUBTYPES.includes(recordToFix.rek_subtype) ||
-                CPEE_NTRO_SUBTYPES.includes(recordToFix.rek_subtype)
-            )
-        );
-
-        const isDocumentType3 = !!recordToFix && (
-            recordToFix.rek_display_type_lookup === DOCUMENT_TYPE_BOOK_CHAPTER ||
-            recordToFix.rek_display_type_lookup === DOCUMENT_TYPE_JOURNAL_ARTICLE
-        ) &&
-            !!recordToFix.rek_subtype &&
-            CW_NTRO_SUBTYPES.includes(recordToFix.rek_subtype)
-        ;
+        const currentAuthorOrder = this.currentAuthorOrder();
 
         // rek_formatted_abstract
         const editAbstract = (
-            isDocumentType1 ||
-            isDocumentType2 ||
-            isDocumentType3
-        ) && (
-            !recordToFix || (
-                !recordToFix.rek_formatted_abstract &&
-                !recordToFix.rek_description
-            )
+            !recordToFix.rek_formatted_abstract &&
+            !recordToFix.rek_description
         );
 
         // fez_record_search_key_audience_size
-        const editAudienceSize = isDocumentType2 && (
-            !recordToFix ||
-            !recordToFix.fez_record_search_key_audience_size ||
-            !recordToFix.fez_record_search_key_audience_size.rek_audience_size
+        const editAudienceSize = (
+            !!recordToFix.rek_subtype &&
+            (
+                LP_NTRO_SUBTYPES.includes(recordToFix.rek_subtype) ||
+                CPEE_NTRO_SUBTYPES.includes(recordToFix.rek_subtype)
+            ) &&
+            (
+                !recordToFix.fez_record_search_key_audience_size ||
+                !recordToFix.fez_record_search_key_audience_size.rek_audience_size
+            )
         );
 
         // fez_record_search_key_significance
         const editSignificance = (
-            isDocumentType1 ||
-            isDocumentType2 ||
-            isDocumentType3
-        ) && (
-            !recordToFix ||
             !recordToFix.fez_record_search_key_significance ||
             recordToFix.fez_record_search_key_significance.length === 0 ||
             recordToFix.fez_record_search_key_significance.filter(item => (
-                item.rek_significance_order === this.currentAuthorOrder() && !item.rek_significance
+                item.rek_significance_order === currentAuthorOrder && !item.rek_significance
             )).length > 0
         );
 
         // fez_record_search_key_creator_contribution_statement
         const editCreatorContributionStatement = (
-            isDocumentType1 ||
-            isDocumentType2 ||
-            isDocumentType3
-        ) && (
-            !recordToFix ||
             !recordToFix.fez_record_search_key_creator_contribution_statement ||
             recordToFix.fez_record_search_key_creator_contribution_statement.length === 0 ||
             // Check the current users statement is not missing, empty or null
             recordToFix.fez_record_search_key_creator_contribution_statement.filter(item => (
-                item.rek_creator_contribution_statement_order === this.currentAuthorOrder() &&
+                item.rek_creator_contribution_statement_order === currentAuthorOrder &&
                 (!item.rek_creator_contribution_statement ||  item.rek_creator_contribution_statement === '' || item.rek_creator_contribution_statement === locale.global.defaultAuthorDataPlaceholder)
             )).length > 0
         );
 
         // fez_record_search_key_language
-        const editLanguage = !recordToFix ||
+        const editLanguage = (
             !recordToFix.fez_record_search_key_language ||
             recordToFix.fez_record_search_key_language.length === 0
-        ;
+        );
 
         // fez_record_search_key_quality_indicator
         const editQualityIndicator = (
-            isDocumentType1 ||
-            isDocumentType2 ||
-            isDocumentType3
-        ) && (
-            !recordToFix ||
             !recordToFix.fez_record_search_key_quality_indicator ||
             recordToFix.fez_record_search_key_quality_indicator.length === 0
         );
 
         // fez_record_search_key_total_pages
         const editExtent = (
-            isDocumentType1 ||
-            isDocumentType2
-        ) && (
-            !recordToFix ||
-            !recordToFix.fez_record_search_key_total_pages ||
-            !recordToFix.fez_record_search_key_total_pages.rek_total_pages
+            (
+                ![DOCUMENT_TYPE_BOOK_CHAPTER, DOCUMENT_TYPE_JOURNAL_ARTICLE]
+                    .includes(recordToFix.rek_display_type_lookup)
+            ) &&
+            (
+                !recordToFix.fez_record_search_key_total_pages ||
+                !recordToFix.fez_record_search_key_total_pages.rek_total_pages
+            )
         );
 
-
-        if (this.props.accountAuthorLoading || this.props.loadingRecordToFix) {
-            return (
-                <React.Fragment>
-                    <InlineLoader message={txt.loadingMessage} />
-                </React.Fragment>
-            );
-        }
 
         // set confirmation message depending on file upload status
         const saveConfirmationLocale = { ...txt.successWorkflowConfirmation };
