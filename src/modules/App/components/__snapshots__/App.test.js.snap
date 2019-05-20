@@ -12347,6 +12347,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       autoFocus={true}
                                                                                       error={null}
                                                                                       fullWidth={true}
+                                                                                      id="simpleSearchField"
                                                                                       inputProps={
                                                                                         Object {
                                                                                           "aria-label": "Enter your search query to search eSpace and then press Enter",
@@ -12396,6 +12397,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                               autoFocus={true}
                                                                                               disableUnderline={true}
                                                                                               fullWidth={true}
+                                                                                              id="simpleSearchField"
                                                                                               inputProps={
                                                                                                 Object {
                                                                                                   "aria-label": "Enter your search query to search eSpace and then press Enter",
@@ -12428,6 +12430,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                 }
                                                                                                 disableUnderline={true}
                                                                                                 fullWidth={true}
+                                                                                                id="simpleSearchField"
                                                                                                 inputProps={
                                                                                                   Object {
                                                                                                     "aria-label": "Enter your search query to search eSpace and then press Enter",
@@ -12459,6 +12462,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                     }
                                                                                                   }
                                                                                                   fullWidth={true}
+                                                                                                  id="simpleSearchField"
                                                                                                   inputComponent="input"
                                                                                                   inputProps={
                                                                                                     Object {
@@ -12496,6 +12500,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                       }
                                                                                                     }
                                                                                                     fullWidth={true}
+                                                                                                    id="simpleSearchField"
                                                                                                     inputComponent="input"
                                                                                                     inputProps={
                                                                                                       Object {
@@ -12519,6 +12524,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                         autoFocus={true}
                                                                                                         className="MuiInputBase-input-310 MuiInput-input-295 MuiInputBase-inputType-313 MuiInput-inputType-298 MuiInputBase-inputTypeSearch-314 MuiInput-inputTypeSearch-299"
                                                                                                         disabled={false}
+                                                                                                        id="simpleSearchField"
                                                                                                         onBlur={[Function]}
                                                                                                         onChange={[Function]}
                                                                                                         onFocus={[Function]}

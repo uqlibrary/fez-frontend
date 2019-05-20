@@ -187,6 +187,7 @@ export class SimpleSearchComponent extends PureComponent {
                                                 type="search"
                                                 autoComplete={'search'}
                                                 fullWidth
+                                                id="simpleSearchField"
                                                 autoFocus={this.props.autoFocus}
                                                 label={false}
                                                 placeholder={txt.searchBoxPlaceholder}
@@ -250,6 +251,7 @@ export class SimpleSearchComponent extends PureComponent {
                                     <Grid item xs>
                                         <TextField
                                             type="search"
+                                            id="simpleSearchField"
                                             fullWidth
                                             label={!this.props.isInHeader && txt.searchBoxPlaceholder}
                                             placeholder={txt.searchBoxHint}
