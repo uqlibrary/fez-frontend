@@ -42,7 +42,6 @@ export class CitationCounts extends PureComponent {
             <Grid container spacing={0}>
                 <Grid item xs={12} sm={'auto'}>
                     {
-                        counts.wos !== null &&
                         !!publication.fez_record_search_key_isi_loc &&
                         !!publication.fez_record_search_key_isi_loc.rek_isi_loc &&
                         <Partials.CitationCountView
@@ -56,7 +55,6 @@ export class CitationCounts extends PureComponent {
                         />
                     }
                     {
-                        counts.scopus !== null &&
                         !!publication.fez_record_search_key_scopus_id &&
                         !!publication.fez_record_search_key_scopus_id.rek_scopus_id &&
                         <Partials.CitationCountView

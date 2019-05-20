@@ -1262,6 +1262,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                               classes={
                                 Object {
                                   "citationCount": "CitationCountView-citationCount-99",
+                                  "citationCountNumber": "CitationCountView-citationCountNumber-100",
                                 }
                               }
                               count={1}
@@ -1700,8 +1701,8 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                   className="wosCitationCount CitationCountView-citationCount-99"
                                   classes={
                                     Object {
-                                      "externalLink": "ExternalLink-externalLink-100",
-                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-101",
+                                      "externalLink": "ExternalLink-externalLink-101",
+                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-102",
                                     }
                                   }
                                   href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
@@ -2131,7 +2132,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                 >
                                   <a
                                     aria-label="Full citation in Web of science will open in a new window"
-                                    className="wosCitationCount CitationCountView-citationCount-99 ExternalLink-externalLink-100"
+                                    className="wosCitationCount CitationCountView-citationCount-99 ExternalLink-externalLink-101"
                                     href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
                                     rel="noopener noreferrer"
                                     tabIndex="0"
@@ -2560,9 +2561,8 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                     <span
                                       className="fez-icon wos large"
                                     />
-                                     
                                     <span
-                                      className="citationCountNumber"
+                                      className="CitationCountView-citationCountNumber-100"
                                     >
                                       1
                                     </span>
@@ -2581,6 +2581,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                               classes={
                                 Object {
                                   "citationCount": "CitationCountView-citationCount-99",
+                                  "citationCountNumber": "CitationCountView-citationCountNumber-100",
                                 }
                               }
                               count={0}
@@ -3019,8 +3020,8 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                   className="scopusCitationCount CitationCountView-citationCount-99"
                                   classes={
                                     Object {
-                                      "externalLink": "ExternalLink-externalLink-100",
-                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-101",
+                                      "externalLink": "ExternalLink-externalLink-101",
+                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-102",
                                     }
                                   }
                                   href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
@@ -3450,7 +3451,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                 >
                                   <a
                                     aria-label="Full citation in Scopus will open in a new window"
-                                    className="scopusCitationCount CitationCountView-citationCount-99 ExternalLink-externalLink-100"
+                                    className="scopusCitationCount CitationCountView-citationCount-99 ExternalLink-externalLink-101"
                                     href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
                                     rel="noopener noreferrer"
                                     tabIndex="0"
@@ -3879,9 +3880,8 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                     <span
                                       className="fez-icon scopus large"
                                     />
-                                     
                                     <span
-                                      className="citationCountNumber"
+                                      className="CitationCountView-citationCountNumber-100"
                                     >
                                       0
                                     </span>
@@ -3900,6 +3900,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                               classes={
                                 Object {
                                   "citationCount": "CitationCountView-citationCount-99",
+                                  "citationCountNumber": "CitationCountView-citationCountNumber-100",
                                 }
                               }
                               count={1}
@@ -4338,8 +4339,8 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                   className="altmetricCitationCount CitationCountView-citationCount-99"
                                   classes={
                                     Object {
-                                      "externalLink": "ExternalLink-externalLink-100",
-                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-101",
+                                      "externalLink": "ExternalLink-externalLink-101",
+                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-102",
                                     }
                                   }
                                   href="http://www.altmetric.com/details.php?citation_id=12345"
@@ -4769,7 +4770,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                 >
                                   <a
                                     aria-label="Full citation in Altmetric will open in a new window"
-                                    className="altmetricCitationCount CitationCountView-citationCount-99 ExternalLink-externalLink-100"
+                                    className="altmetricCitationCount CitationCountView-citationCount-99 ExternalLink-externalLink-101"
                                     href="http://www.altmetric.com/details.php?citation_id=12345"
                                     rel="noopener noreferrer"
                                     tabIndex="0"
@@ -5198,9 +5199,8 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                     <span
                                       className="fez-icon altmetric large"
                                     />
-                                     
                                     <span
-                                      className="citationCountNumber"
+                                      className="CitationCountView-citationCountNumber-100"
                                     >
                                       1
                                     </span>
@@ -5219,6 +5219,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                               classes={
                                 Object {
                                   "citationCount": "CitationCountView-citationCount-99",
+                                  "citationCountNumber": "CitationCountView-citationCountNumber-100",
                                 }
                               }
                               count={1}
@@ -5657,8 +5658,8 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                   className="googleCitationCount CitationCountView-citationCount-99"
                                   classes={
                                     Object {
-                                      "externalLink": "ExternalLink-externalLink-100",
-                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-101",
+                                      "externalLink": "ExternalLink-externalLink-101",
+                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-102",
                                     }
                                   }
                                   href="https://scholar.google.com/scholar?q=intitle:This%20is%20test%20title"
@@ -6088,7 +6089,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                 >
                                   <a
                                     aria-label="Full citation in Google scholar will open in a new window"
-                                    className="googleCitationCount CitationCountView-citationCount-99 ExternalLink-externalLink-100"
+                                    className="googleCitationCount CitationCountView-citationCount-99 ExternalLink-externalLink-101"
                                     href="https://scholar.google.com/scholar?q=intitle:This%20is%20test%20title"
                                     rel="noopener noreferrer"
                                     tabIndex="0"
@@ -6517,9 +6518,8 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                     <span
                                       className="fez-icon google large"
                                     />
-                                     
                                     <span
-                                      className="citationCountNumber"
+                                      className="CitationCountView-citationCountNumber-100"
                                     >
                                       1
                                     </span>
@@ -10174,6 +10174,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                               classes={
                                 Object {
                                   "citationCount": "CitationCountView-citationCount-99",
+                                  "citationCountNumber": "CitationCountView-citationCountNumber-100",
                                 }
                               }
                               count={0}
@@ -10612,8 +10613,8 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                   className="scopusCitationCount CitationCountView-citationCount-99"
                                   classes={
                                     Object {
-                                      "externalLink": "ExternalLink-externalLink-100",
-                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-101",
+                                      "externalLink": "ExternalLink-externalLink-101",
+                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-102",
                                     }
                                   }
                                   href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=2-s2.0-85026774540&origin=inward"
@@ -11043,7 +11044,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                 >
                                   <a
                                     aria-label="Full citation in Scopus will open in a new window"
-                                    className="scopusCitationCount CitationCountView-citationCount-99 ExternalLink-externalLink-100"
+                                    className="scopusCitationCount CitationCountView-citationCount-99 ExternalLink-externalLink-101"
                                     href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=2-s2.0-85026774540&origin=inward"
                                     rel="noopener noreferrer"
                                     tabIndex="0"
@@ -11472,9 +11473,8 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                     <span
                                       className="fez-icon scopus large"
                                     />
-                                     
                                     <span
-                                      className="citationCountNumber"
+                                      className="CitationCountView-citationCountNumber-100"
                                     >
                                       0
                                     </span>
@@ -11493,6 +11493,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                               classes={
                                 Object {
                                   "citationCount": "CitationCountView-citationCount-99",
+                                  "citationCountNumber": "CitationCountView-citationCountNumber-100",
                                 }
                               }
                               count={1}
@@ -11931,8 +11932,8 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                   className="altmetricCitationCount CitationCountView-citationCount-99"
                                   classes={
                                     Object {
-                                      "externalLink": "ExternalLink-externalLink-100",
-                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-101",
+                                      "externalLink": "ExternalLink-externalLink-101",
+                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-102",
                                     }
                                   }
                                   href="http://www.altmetric.com/details.php?citation_id=23535331"
@@ -12362,7 +12363,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                 >
                                   <a
                                     aria-label="Full citation in Altmetric will open in a new window"
-                                    className="altmetricCitationCount CitationCountView-citationCount-99 ExternalLink-externalLink-100"
+                                    className="altmetricCitationCount CitationCountView-citationCount-99 ExternalLink-externalLink-101"
                                     href="http://www.altmetric.com/details.php?citation_id=23535331"
                                     rel="noopener noreferrer"
                                     tabIndex="0"
@@ -12791,9 +12792,8 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                     <span
                                       className="fez-icon altmetric large"
                                     />
-                                     
                                     <span
-                                      className="citationCountNumber"
+                                      className="CitationCountView-citationCountNumber-100"
                                     >
                                       1
                                     </span>
@@ -12812,6 +12812,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                               classes={
                                 Object {
                                   "citationCount": "CitationCountView-citationCount-99",
+                                  "citationCountNumber": "CitationCountView-citationCountNumber-100",
                                 }
                               }
                               count={null}
@@ -13250,8 +13251,8 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                   className="googleCitationCount CitationCountView-citationCount-99"
                                   classes={
                                     Object {
-                                      "externalLink": "ExternalLink-externalLink-100",
-                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-101",
+                                      "externalLink": "ExternalLink-externalLink-101",
+                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-102",
                                     }
                                   }
                                   href="https://scholar.google.com/scholar?q=intitle:ENA/VASP%20proteins%20regulate%20exocytosis%20by%20mediating%20myosin%20VI-dependent%20recruitment%20of%20secretory%20granules%20to%20the%20cortical%20actin%20network"
@@ -13681,7 +13682,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                 >
                                   <a
                                     aria-label="Full citation in Google scholar will open in a new window"
-                                    className="googleCitationCount CitationCountView-citationCount-99 ExternalLink-externalLink-100"
+                                    className="googleCitationCount CitationCountView-citationCount-99 ExternalLink-externalLink-101"
                                     href="https://scholar.google.com/scholar?q=intitle:ENA/VASP%20proteins%20regulate%20exocytosis%20by%20mediating%20myosin%20VI-dependent%20recruitment%20of%20secretory%20granules%20to%20the%20cortical%20actin%20network"
                                     rel="noopener noreferrer"
                                     tabIndex="0"
@@ -14110,10 +14111,6 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                     <span
                                       className="fez-icon google large"
                                     />
-                                     
-                                    <span
-                                      className="citationCountNumber"
-                                    />
                                   </a>
                                 </ExternalLink>
                               </WithStyles(ExternalLink)>
@@ -14264,8 +14261,8 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                               className="CitationCounts-statsLink-1"
                               classes={
                                 Object {
-                                  "externalLink": "ExternalLink-externalLink-100",
-                                  "externalLinkIcon": "ExternalLink-externalLinkIcon-101",
+                                  "externalLink": "ExternalLink-externalLink-101",
+                                  "externalLinkIcon": "ExternalLink-externalLinkIcon-102",
                                 }
                               }
                               href="https://app.library.uq.edu.au/#/authors/view/UQ:67abc8"
@@ -14694,7 +14691,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                               title="ENA/VASP proteins regulate exocytosis by mediating myosin VI-dependent recruitment of secretory granules to the cortical actin network"
                             >
                               <a
-                                className="CitationCounts-statsLink-1 ExternalLink-externalLink-100"
+                                className="CitationCounts-statsLink-1 ExternalLink-externalLink-101"
                                 href="https://app.library.uq.edu.au/#/authors/view/UQ:67abc8"
                                 rel="noopener noreferrer"
                                 tabIndex="0"
@@ -15121,27 +15118,27 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                 title="ENA/VASP proteins regulate exocytosis by mediating myosin VI-dependent recruitment of secretory granules to the cortical actin network"
                               >
                                 <pure(OpenInNewIcon)
-                                  className="ExternalLink-externalLinkIcon-101"
+                                  className="ExternalLink-externalLinkIcon-102"
                                 >
                                   <OpenInNewIcon
-                                    className="ExternalLink-externalLinkIcon-101"
+                                    className="ExternalLink-externalLinkIcon-102"
                                   >
                                     <WithStyles(SvgIcon)
-                                      className="ExternalLink-externalLinkIcon-101"
+                                      className="ExternalLink-externalLinkIcon-102"
                                     >
                                       <SvgIcon
-                                        className="ExternalLink-externalLinkIcon-101"
+                                        className="ExternalLink-externalLinkIcon-102"
                                         classes={
                                           Object {
-                                            "colorAction": "MuiSvgIcon-colorAction-105",
-                                            "colorDisabled": "MuiSvgIcon-colorDisabled-107",
-                                            "colorError": "MuiSvgIcon-colorError-106",
-                                            "colorPrimary": "MuiSvgIcon-colorPrimary-103",
-                                            "colorSecondary": "MuiSvgIcon-colorSecondary-104",
-                                            "fontSizeInherit": "MuiSvgIcon-fontSizeInherit-108",
-                                            "fontSizeLarge": "MuiSvgIcon-fontSizeLarge-110",
-                                            "fontSizeSmall": "MuiSvgIcon-fontSizeSmall-109",
-                                            "root": "MuiSvgIcon-root-102",
+                                            "colorAction": "MuiSvgIcon-colorAction-106",
+                                            "colorDisabled": "MuiSvgIcon-colorDisabled-108",
+                                            "colorError": "MuiSvgIcon-colorError-107",
+                                            "colorPrimary": "MuiSvgIcon-colorPrimary-104",
+                                            "colorSecondary": "MuiSvgIcon-colorSecondary-105",
+                                            "fontSizeInherit": "MuiSvgIcon-fontSizeInherit-109",
+                                            "fontSizeLarge": "MuiSvgIcon-fontSizeLarge-111",
+                                            "fontSizeSmall": "MuiSvgIcon-fontSizeSmall-110",
+                                            "root": "MuiSvgIcon-root-103",
                                           }
                                         }
                                         color="inherit"
@@ -15151,7 +15148,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                       >
                                         <svg
                                           aria-hidden="true"
-                                          className="MuiSvgIcon-root-102 ExternalLink-externalLinkIcon-101"
+                                          className="MuiSvgIcon-root-103 ExternalLink-externalLinkIcon-102"
                                           focusable="false"
                                           role="presentation"
                                           viewBox="0 0 24 24"
@@ -17041,6 +17038,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                               classes={
                                 Object {
                                   "citationCount": "CitationCountView-citationCount-99",
+                                  "citationCountNumber": "CitationCountView-citationCountNumber-100",
                                 }
                               }
                               count={0}
@@ -17479,8 +17477,8 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                   className="wosCitationCount CitationCountView-citationCount-99"
                                   classes={
                                     Object {
-                                      "externalLink": "ExternalLink-externalLink-100",
-                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-101",
+                                      "externalLink": "ExternalLink-externalLink-101",
+                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-102",
                                     }
                                   }
                                   href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
@@ -17910,7 +17908,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                 >
                                   <a
                                     aria-label="Full citation in Web of science will open in a new window"
-                                    className="wosCitationCount CitationCountView-citationCount-99 ExternalLink-externalLink-100"
+                                    className="wosCitationCount CitationCountView-citationCount-99 ExternalLink-externalLink-101"
                                     href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
                                     rel="noopener noreferrer"
                                     tabIndex="0"
@@ -18339,9 +18337,8 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                     <span
                                       className="fez-icon wos large"
                                     />
-                                     
                                     <span
-                                      className="citationCountNumber"
+                                      className="CitationCountView-citationCountNumber-100"
                                     >
                                       0
                                     </span>
@@ -18360,6 +18357,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                               classes={
                                 Object {
                                   "citationCount": "CitationCountView-citationCount-99",
+                                  "citationCountNumber": "CitationCountView-citationCountNumber-100",
                                 }
                               }
                               count={1}
@@ -18798,8 +18796,8 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                   className="scopusCitationCount CitationCountView-citationCount-99"
                                   classes={
                                     Object {
-                                      "externalLink": "ExternalLink-externalLink-100",
-                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-101",
+                                      "externalLink": "ExternalLink-externalLink-101",
+                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-102",
                                     }
                                   }
                                   href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
@@ -19229,7 +19227,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                 >
                                   <a
                                     aria-label="Full citation in Scopus will open in a new window"
-                                    className="scopusCitationCount CitationCountView-citationCount-99 ExternalLink-externalLink-100"
+                                    className="scopusCitationCount CitationCountView-citationCount-99 ExternalLink-externalLink-101"
                                     href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
                                     rel="noopener noreferrer"
                                     tabIndex="0"
@@ -19658,9 +19656,8 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                     <span
                                       className="fez-icon scopus large"
                                     />
-                                     
                                     <span
-                                      className="citationCountNumber"
+                                      className="CitationCountView-citationCountNumber-100"
                                     >
                                       1
                                     </span>
@@ -19679,6 +19676,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                               classes={
                                 Object {
                                   "citationCount": "CitationCountView-citationCount-99",
+                                  "citationCountNumber": "CitationCountView-citationCountNumber-100",
                                 }
                               }
                               count={1}
@@ -20117,8 +20115,8 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                   className="altmetricCitationCount CitationCountView-citationCount-99"
                                   classes={
                                     Object {
-                                      "externalLink": "ExternalLink-externalLink-100",
-                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-101",
+                                      "externalLink": "ExternalLink-externalLink-101",
+                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-102",
                                     }
                                   }
                                   href="http://www.altmetric.com/details.php?citation_id=12345"
@@ -20548,7 +20546,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                 >
                                   <a
                                     aria-label="Full citation in Altmetric will open in a new window"
-                                    className="altmetricCitationCount CitationCountView-citationCount-99 ExternalLink-externalLink-100"
+                                    className="altmetricCitationCount CitationCountView-citationCount-99 ExternalLink-externalLink-101"
                                     href="http://www.altmetric.com/details.php?citation_id=12345"
                                     rel="noopener noreferrer"
                                     tabIndex="0"
@@ -20977,9 +20975,8 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                     <span
                                       className="fez-icon altmetric large"
                                     />
-                                     
                                     <span
-                                      className="citationCountNumber"
+                                      className="CitationCountView-citationCountNumber-100"
                                     >
                                       1
                                     </span>
@@ -20998,6 +20995,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                               classes={
                                 Object {
                                   "citationCount": "CitationCountView-citationCount-99",
+                                  "citationCountNumber": "CitationCountView-citationCountNumber-100",
                                 }
                               }
                               count={1}
@@ -21436,8 +21434,8 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                   className="googleCitationCount CitationCountView-citationCount-99"
                                   classes={
                                     Object {
-                                      "externalLink": "ExternalLink-externalLink-100",
-                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-101",
+                                      "externalLink": "ExternalLink-externalLink-101",
+                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-102",
                                     }
                                   }
                                   href="https://scholar.google.com/scholar?q=intitle:This%20is%20test%20title"
@@ -21867,7 +21865,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                 >
                                   <a
                                     aria-label="Full citation in Google scholar will open in a new window"
-                                    className="googleCitationCount CitationCountView-citationCount-99 ExternalLink-externalLink-100"
+                                    className="googleCitationCount CitationCountView-citationCount-99 ExternalLink-externalLink-101"
                                     href="https://scholar.google.com/scholar?q=intitle:This%20is%20test%20title"
                                     rel="noopener noreferrer"
                                     tabIndex="0"
@@ -22296,9 +22294,8 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                     <span
                                       className="fez-icon google large"
                                     />
-                                     
                                     <span
-                                      className="citationCountNumber"
+                                      className="CitationCountView-citationCountNumber-100"
                                     >
                                       1
                                     </span>
@@ -22452,8 +22449,8 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                               className="CitationCounts-statsLink-1"
                               classes={
                                 Object {
-                                  "externalLink": "ExternalLink-externalLink-100",
-                                  "externalLinkIcon": "ExternalLink-externalLinkIcon-101",
+                                  "externalLink": "ExternalLink-externalLink-101",
+                                  "externalLinkIcon": "ExternalLink-externalLinkIcon-102",
                                 }
                               }
                               href="https://app.library.uq.edu.au/#/authors/view/pid:111"
@@ -22882,7 +22879,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                               title="This is test title"
                             >
                               <a
-                                className="CitationCounts-statsLink-1 ExternalLink-externalLink-100"
+                                className="CitationCounts-statsLink-1 ExternalLink-externalLink-101"
                                 href="https://app.library.uq.edu.au/#/authors/view/pid:111"
                                 rel="noopener noreferrer"
                                 tabIndex="0"
@@ -23309,27 +23306,27 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                 title="This is test title"
                               >
                                 <pure(OpenInNewIcon)
-                                  className="ExternalLink-externalLinkIcon-101"
+                                  className="ExternalLink-externalLinkIcon-102"
                                 >
                                   <OpenInNewIcon
-                                    className="ExternalLink-externalLinkIcon-101"
+                                    className="ExternalLink-externalLinkIcon-102"
                                   >
                                     <WithStyles(SvgIcon)
-                                      className="ExternalLink-externalLinkIcon-101"
+                                      className="ExternalLink-externalLinkIcon-102"
                                     >
                                       <SvgIcon
-                                        className="ExternalLink-externalLinkIcon-101"
+                                        className="ExternalLink-externalLinkIcon-102"
                                         classes={
                                           Object {
-                                            "colorAction": "MuiSvgIcon-colorAction-105",
-                                            "colorDisabled": "MuiSvgIcon-colorDisabled-107",
-                                            "colorError": "MuiSvgIcon-colorError-106",
-                                            "colorPrimary": "MuiSvgIcon-colorPrimary-103",
-                                            "colorSecondary": "MuiSvgIcon-colorSecondary-104",
-                                            "fontSizeInherit": "MuiSvgIcon-fontSizeInherit-108",
-                                            "fontSizeLarge": "MuiSvgIcon-fontSizeLarge-110",
-                                            "fontSizeSmall": "MuiSvgIcon-fontSizeSmall-109",
-                                            "root": "MuiSvgIcon-root-102",
+                                            "colorAction": "MuiSvgIcon-colorAction-106",
+                                            "colorDisabled": "MuiSvgIcon-colorDisabled-108",
+                                            "colorError": "MuiSvgIcon-colorError-107",
+                                            "colorPrimary": "MuiSvgIcon-colorPrimary-104",
+                                            "colorSecondary": "MuiSvgIcon-colorSecondary-105",
+                                            "fontSizeInherit": "MuiSvgIcon-fontSizeInherit-109",
+                                            "fontSizeLarge": "MuiSvgIcon-fontSizeLarge-111",
+                                            "fontSizeSmall": "MuiSvgIcon-fontSizeSmall-110",
+                                            "root": "MuiSvgIcon-root-103",
                                           }
                                         }
                                         color="inherit"
@@ -23339,7 +23336,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                       >
                                         <svg
                                           aria-hidden="true"
-                                          className="MuiSvgIcon-root-102 ExternalLink-externalLinkIcon-101"
+                                          className="MuiSvgIcon-root-103 ExternalLink-externalLinkIcon-102"
                                           focusable="false"
                                           role="presentation"
                                           viewBox="0 0 24 24"
