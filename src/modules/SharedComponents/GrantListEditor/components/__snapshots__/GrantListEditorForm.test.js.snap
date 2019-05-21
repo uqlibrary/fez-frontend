@@ -592,6 +592,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                 disabled={false}
                 errorText={null}
                 hideType={false}
+                isPopulated={false}
                 locale={
                   Object {
                     "addButton": "Test",
@@ -3442,6 +3443,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
             disabled={false}
             errorText={null}
             hideType={false}
+            isPopulated={false}
             locale={
               Object {
                 "addButton": "Button",

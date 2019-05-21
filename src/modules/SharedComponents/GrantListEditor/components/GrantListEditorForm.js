@@ -28,7 +28,8 @@ export class GrantListEditorFormClass extends PureComponent {
         disabled: PropTypes.bool,
         required: PropTypes.bool,
         hideType: PropTypes.bool,
-        classes: PropTypes.object
+        classes: PropTypes.object,
+        isPopulated: PropTypes.any
     };
 
     static defaultProps = {
@@ -41,9 +42,10 @@ export class GrantListEditorFormClass extends PureComponent {
             grantAgencyTypeHint: 'Select Funder/Sponsor type',
             addButton: 'Add grant',
             description: 'Add the Funder/Sponsor\'s name, grant ID and type - then click the ADD GRANT button to add each to the list',
-            remindToAdd: 'Click ADD GRANT to add this item to your list'
+            remindToAdd: (<span>&nbsp;<b>* REMINDER:</b> Click ADD GRANT to add this item to your list or it will not be included.</span>)
         },
-        hideType: false
+        hideType: false,
+        isPopulated: false
     };
 
     constructor(props) {
@@ -74,17 +76,28 @@ export class GrantListEditorFormClass extends PureComponent {
             grantId: '',
             grantAgencyType: ''
         });
+        if (this.props.isPopulated) {
+            this.props.isPopulated(false);
+        }
     };
 
     _onNameChanged = (event) => {
         this.setState({
             grantAgencyName: event.target.value,
+        }, ()=> {
+            if(this.props.isPopulated) {
+                this.props.isPopulated(!!(this.state.grantAgencyName.trim().length > 0));
+            }
         });
     };
 
     _onIDChanged = (event) => {
         this.setState({
             grantId: event.target.value,
+        }, () => {
+            if(this.props.isPopulated) {
+                this.props.isPopulated(!!(this.state.grantId.trim().length > 0));
+            }
         });
     };
 
