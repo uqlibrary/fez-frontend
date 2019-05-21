@@ -217,6 +217,31 @@ describe('Component MyIncompleteRecord', () => {
         expect(testFN).toHaveBeenCalled();
     });
 
+    it('isFileValid()', () => {
+        const wrapper = setup({});
+
+        expect(wrapper.instance().isFileValid({
+            "dsi_pid": "UQ:719129",
+            "dsi_dsid": "FezACML_stradbroke_review_1.pdf.xml",
+            "dsi_label": "FezACML security for datastream - stradbroke_review_1.pdf",
+            "dsi_state": "A",
+        })).toBeFalsy();
+
+        expect(wrapper.instance().isFileValid({
+            "dsi_pid": "UQ:719129",
+            "dsi_dsid": "review_1.pdf.xml",
+            "dsi_label": null,
+            "dsi_state": "A",
+        })).toBeTruthy();
+
+        expect(wrapper.instance().isFileValid({
+            "dsi_pid": "UQ:719129",
+            "dsi_dsid": "review_1.pdf.xml",
+            "dsi_label": 'not publicly available',
+            "dsi_state": "A",
+        })).toBeTruthy();
+    });
+
     it('should render no fields as they are complete', () => {
         const wrapper = setup({recordToFix: {
             ...mockRecordToFix,
@@ -771,3 +796,4 @@ describe('Cards', () => {
         expect(styles(theme)).toMatchSnapshot();
     });
 });
+
