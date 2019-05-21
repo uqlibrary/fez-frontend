@@ -93,12 +93,6 @@ describe('Component MyIncompleteRecord', () => {
         // expect(wrapper.find('withRouter(Connect(PublicationCitation))').length).toEqual(1);
     });
 
-    it('should set action for form', () => {
-        const wrapper = setup({recordToFix: mockRecordToFix});
-        wrapper.instance()._actionSelected('', 'fix');
-        expect(wrapper.state().selectedRecordAction).toEqual('fix');
-    });
-
     it('should set local variables', () => {
         const wrapper = setup({recordToFix: mockRecordToFix});
         wrapper.setState({selectedRecordAction: 'unclaim'});
@@ -185,14 +179,6 @@ describe('Component MyIncompleteRecord', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('currentAuthorIndex()', () => {
-        const wrapper = setup({
-            recordToFix: mockRecordToFix,
-            author: {aut_id: 410},
-        });
-        expect(wrapper.instance().currentAuthorIndex()).toEqual(1);
-    });
-
     it('should be able to navigate to specific routes', () => {
         const testFn = jest.fn();
         const wrapper = setup({ history: {
@@ -229,6 +215,31 @@ describe('Component MyIncompleteRecord', () => {
         });
         wrapper.instance().componentWillUnmount();
         expect(testFN).toHaveBeenCalled();
+    });
+
+    it('isFileValid()', () => {
+        const wrapper = setup({});
+
+        expect(wrapper.instance().isFileValid({
+            "dsi_pid": "UQ:719129",
+            "dsi_dsid": "FezACML_stradbroke_review_1.pdf.xml",
+            "dsi_label": "FezACML security for datastream - stradbroke_review_1.pdf",
+            "dsi_state": "A",
+        })).toBeFalsy();
+
+        expect(wrapper.instance().isFileValid({
+            "dsi_pid": "UQ:719129",
+            "dsi_dsid": "review_1.pdf.xml",
+            "dsi_label": null,
+            "dsi_state": "A",
+        })).toBeTruthy();
+
+        expect(wrapper.instance().isFileValid({
+            "dsi_pid": "UQ:719129",
+            "dsi_dsid": "review_1.pdf.xml",
+            "dsi_label": 'not publicly available',
+            "dsi_state": "A",
+        })).toBeTruthy();
     });
 
     it('should render no fields as they are complete', () => {
@@ -785,3 +796,4 @@ describe('Cards', () => {
         expect(styles(theme)).toMatchSnapshot();
     });
 });
+

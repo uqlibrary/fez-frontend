@@ -1132,19 +1132,6 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
 - First value
 + Second value
 
-@@ -156,11 +156,11 @@
-        </div>
-        <hr
-          class=\\"MuiDivider-root-571 PublicationCitation-divider-560\\"
-        />
-        <form>
--         <span />
-+         <div />
-          <div
-            class=\\"MuiGrid-container-395 MuiGrid-spacing-xs-24-419\\"
-          >
-            <div
-              class=\\"MuiGrid-item-396 MuiGrid-grid-xs-12-435\\"
 @@ -364,29 +364,29 @@
                       <div
                         class=\\"MuiFormControl-root-642\\"
@@ -1207,7 +1194,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                           </div>
                         </div>
 -                       <p
--                         class=\\"MuiFormHelperText-root-769 MuiFormHelperText-error-770 MuiFormHelperText-required-776\\"
+-                         class=\\"MuiFormHelperText-root-774 MuiFormHelperText-error-775 MuiFormHelperText-required-781\\"
 -                       >
 -                         This field is required
 -                       </p>
@@ -1216,87 +1203,20 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                     <div
                       class=\\"MuiGrid-item-396 MuiGrid-grid-xs-12-435\\"
                       style=\\"margin-top: 24px;\\"
-@@ -1674,11 +1667,80 @@
-                        class=\\"MuiInputBase-input-690 MuiInput-input-675 MuiInputBase-inputMultiline-692 MuiInput-inputMultiline-677\\"
-                        id=\\"Notes for this work\\"
-                        name=\\"comments\\"
-                        placeholder=\\"Add any other notes or comments about this work to send to the eSpace team.\\"
-                        rows=\\"5\\"
-+                     />
-+                   </div>
-+                 </div>
-+               </div>
-+             </div>
-+           </div>
-+           <div
-+             class=\\"MuiGrid-item-396 MuiGrid-grid-xs-12-435\\"
-+           >
-+             <div
-+               class=\\"Alert\\"
-+               style=\\"padding: 12px;\\"
-+             >
-+               <div
-+                 class=\\"MuiGrid-container-395 MuiGrid-spacing-xs-24-419 MuiGrid-align-items-xs-flex-start-404 MuiGrid-align-content-xs-center-407 MuiGrid-justify-xs-center-412 Alert-warning-597 Alert-common-589\\"
-+               >
-+                 <div
-+                   class=\\"MuiGrid-item-396 MuiGrid-grid-xs-12-435 MuiGrid-grid-sm-true-437\\"
-+                 >
-+                   <div
-+                     class=\\"MuiGrid-container-395 MuiGrid-align-items-xs-flex-start-404 MuiGrid-align-content-xs-center-407 MuiGrid-justify-xs-center-412\\"
-+                   >
-+                     <div
-+                       class=\\"MuiGrid-item-396 Alert-icon-590\\"
-+                       id=\\"icon\\"
-+                     >
-+                       <svg
-+                         aria-hidden=\\"true\\"
-+                         class=\\"MuiSvgIcon-root-544 icon\\"
-+                         focusable=\\"false\\"
-+                         role=\\"presentation\\"
-+                         viewBox=\\"0 0 24 24\\"
-+                       >
-+                         <path
-+                           d=\\"M0 0h24v24H0z\\"
-+                           fill=\\"none\\"
-+                         />
-+                         <path
-+                           d=\\"M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z\\"
-                          />
-+                       </svg>
-+                     </div>
-+                     <div
-+                       class=\\"MuiGrid-item-396 MuiGrid-grid-xs-true-423 Alert-text-591\\"
-+                       id=\\"text\\"
-+                     >
-+                       <b>
-+                         Validation - 
-+                       </b>
-+                       <span>
-+                         Form cannot be submitted until all fields are valid. Please review all input fields.
-+                         <ul>
-+                           <li>
-+                             Author affiliation rows marked with red are required
-+                           </li>
-+                           <li>
-+                             Creator research statement is required
-+                           </li>
-+                           <li>
-+                             Total page is required
-+                           </li>
-+                           <li>
-+                             Audience size is required
-+                           </li>
-+                           <li>
-+                             Quality indicator is required
-+                           </li>
-+                         </ul>
-+                       </span>
-+                     </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>"
+@@ -1852,13 +1845,10 @@
+                        <span>
+                          Form cannot be submitted until all fields are valid. Please review all input fields.
+                          <ul>
+                            <li>
+                              Author affiliation rows marked with red are required
+-                           </li>
+-                           <li>
+-                             Scale/Significance of work is required
+                            </li>
+                            <li>
+                              Creator research statement is required
+                            </li>
+                            <li>"
 `;
 
 exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of Creative Work - Music should allow user to update work 2`] = `
@@ -1346,7 +1266,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                           />
                         </div>
 -                       <p
--                         class=\\"MuiFormHelperText-root-769 MuiFormHelperText-error-770 MuiFormHelperText-required-776\\"
+-                         class=\\"MuiFormHelperText-root-774 MuiFormHelperText-error-775 MuiFormHelperText-required-781\\"
 -                         id=\\"rek-total-pages-helper-text\\"
 -                       >
 -                         This field is required
@@ -1356,7 +1276,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                     <div
                       class=\\"MuiGrid-item-396 MuiGrid-grid-xs-12-435 MuiGrid-grid-sm-6-443\\"
                     >
-@@ -1724,13 +1717,10 @@
+@@ -1848,13 +1841,10 @@
                             <li>
                               Author affiliation rows marked with red are required
                             </li>
@@ -1432,7 +1352,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                           </div>
                         </div>
 -                       <p
--                         class=\\"MuiFormHelperText-root-769 MuiFormHelperText-error-770 MuiFormHelperText-required-776\\"
+-                         class=\\"MuiFormHelperText-root-774 MuiFormHelperText-error-775 MuiFormHelperText-required-781\\"
 -                       >
 -                         This field is required
 -                       </p>
@@ -1441,7 +1361,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                     <div
                       class=\\"MuiGrid-item-396 MuiGrid-grid-xs-12-435 MuiGrid-grid-sm-6-443\\"
                     >
-@@ -1717,13 +1710,10 @@
+@@ -1841,13 +1834,10 @@
                             <li>
                               Author affiliation rows marked with red are required
                             </li>
@@ -1454,7 +1374,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                             <li>
                               Quality indicator is required
                             </li>
-                          </ul>"
+                            <li>"
 `;
 
 exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of Creative Work - Music should allow user to update work 4`] = `
@@ -1519,7 +1439,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                           </div>
                         </div>
 -                       <p
--                         class=\\"MuiFormHelperText-root-769 MuiFormHelperText-error-770 MuiFormHelperText-required-776\\"
+-                         class=\\"MuiFormHelperText-root-774 MuiFormHelperText-error-775 MuiFormHelperText-required-781\\"
 -                       >
 -                         This field is required
 -                       </p>
@@ -1528,7 +1448,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                   </div>
                 </div>
               </div>
-@@ -1710,13 +1704,10 @@
+@@ -1834,13 +1828,10 @@
                             <li>
                               Author affiliation rows marked with red are required
                             </li>
@@ -1538,10 +1458,10 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
 -                           <li>
 -                             Quality indicator is required
                             </li>
-                          </ul>
-                        </span>
-                      </div>
-                    </div>"
+                            <li>
+                              File submission to be completed
+                            </li>
+                          </ul>"
 `;
 
 exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of Creative Work - Music should allow user to update work 5`] = `
@@ -1566,7 +1486,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                               tabindex=\\"0\\"
                             >
                               <div
-                                class=\\"MuiListItemIcon-root-768\\"
+                                class=\\"MuiListItemIcon-root-773\\"
 @@ -1202,11 +1202,22 @@
                                 <div
                                   class=\\"MuiGrid-item-396 MuiGrid-grid-xs-12-435 MuiGrid-grid-sm-5-442\\"
@@ -1610,7 +1530,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                               tabindex=\\"0\\"
                             >
                               <div
-                                class=\\"MuiListItemIcon-root-768\\"
+                                class=\\"MuiListItemIcon-root-773\\"
 @@ -1372,11 +1372,22 @@
                                 <div
                                   class=\\"MuiGrid-item-396 MuiGrid-grid-xs-12-435 MuiGrid-grid-sm-5-442\\"
@@ -1654,7 +1574,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                               tabindex=\\"0\\"
                             >
                               <div
-                                class=\\"MuiListItemIcon-root-768\\"
+                                class=\\"MuiListItemIcon-root-773\\"
 @@ -1542,14 +1542,25 @@
                                 <div
                                   class=\\"MuiGrid-item-396 MuiGrid-grid-xs-12-435 MuiGrid-grid-sm-5-442\\"
@@ -1698,7 +1618,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
               </div>
             </div>
             <div
-@@ -1721,13 +1727,10 @@
+@@ -1845,13 +1851,10 @@
                           Validation - 
                         </b>
                         <span>
@@ -1710,6 +1630,6 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                             <li>
                               Creator research statement is required
                             </li>
-                          </ul>
-                        </span>"
+                            <li>
+                              File submission to be completed"
 `;
