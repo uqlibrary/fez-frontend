@@ -271,6 +271,7 @@ export class SimpleSearchComponent extends PureComponent {
                                             disabled={!!this.searchTextValidationMessage(this.props.searchText)}
                                             onClick={this._handleSearch}
                                             fullWidth
+                                            id="simpleSearchButton"
                                         />
                                     </Grid>
                                     <Grid item xs={12} sm={'auto'}>
@@ -281,6 +282,7 @@ export class SimpleSearchComponent extends PureComponent {
                                             onClick={this._handleSearchMode}
                                             className="advancedButton"
                                             fullWidth
+                                            id="showAdvancedSearchButton"
                                         />
                                     </Grid>
                                 </Grid>

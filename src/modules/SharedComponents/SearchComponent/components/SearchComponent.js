@@ -241,7 +241,11 @@ export default class SearchComponent extends PureComponent {
             this.props.actions &&
             this.props.actions.searchEspacePublications
         ) {
+            // If in header, the page will redirect to a new route,
+            // which means search results from API call will be lost.
+            !this.props.isInHeader &&
             this.props.actions.searchEspacePublications(searchQuery);
+
             // navigate to search results page
             this.props.history.push({
                 pathname: (

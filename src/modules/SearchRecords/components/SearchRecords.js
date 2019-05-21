@@ -352,7 +352,9 @@ class SearchRecords extends PureComponent {
                                     </Grid>
                                 }
                                 {
-                                    !isLoadingOrExporting && this.props.publicationsList && this.props.publicationsList.length > 0 &&
+                                    !isLoadingOrExporting &&
+                                    this.props.publicationsList &&
+                                    this.props.publicationsList.length > 0 &&
                                     <div style={{ marginTop: 16 }}>
                                         <PublicationsList
                                             showUnpublishedBufferFields={this.props.isUnpublishedBufferPage}

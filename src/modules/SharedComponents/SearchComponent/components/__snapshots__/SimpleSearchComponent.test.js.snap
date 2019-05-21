@@ -98,6 +98,7 @@ exports[`SimpleSearchComponent should render default view 1`] = `
           color="primary"
           disabled={false}
           fullWidth={true}
+          id="simpleSearchButton"
           onClick={[Function]}
           variant="contained"
         >
@@ -113,6 +114,7 @@ exports[`SimpleSearchComponent should render default view 1`] = `
           aria-label="Click to switch to Advanced search"
           className="advancedButton"
           fullWidth={true}
+          id="showAdvancedSearchButton"
           onClick={[Function]}
           variant="contained"
         >
@@ -199,6 +201,7 @@ exports[`SimpleSearchComponent should render show prefix icon in the search box 
           color="primary"
           disabled={false}
           fullWidth={true}
+          id="simpleSearchButton"
           onClick={[Function]}
           variant="contained"
         >
@@ -214,6 +217,7 @@ exports[`SimpleSearchComponent should render show prefix icon in the search box 
           aria-label="Click to switch to Advanced search"
           className="advancedButton"
           fullWidth={true}
+          id="showAdvancedSearchButton"
           onClick={[Function]}
           variant="contained"
         >
@@ -372,6 +376,7 @@ exports[`SimpleSearchComponent should set search value from prop 1`] = `
           color="primary"
           disabled={false}
           fullWidth={true}
+          id="simpleSearchButton"
           onClick={[Function]}
           variant="contained"
         >
@@ -387,6 +392,7 @@ exports[`SimpleSearchComponent should set search value from prop 1`] = `
           aria-label="Click to switch to Advanced search"
           className="advancedButton"
           fullWidth={true}
+          id="showAdvancedSearchButton"
           onClick={[Function]}
           variant="contained"
         >
