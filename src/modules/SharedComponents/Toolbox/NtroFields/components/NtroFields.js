@@ -449,6 +449,7 @@ export default class NtroFields extends React.PureComponent {
                                 name="grants"
                                 disabled={this.props.submitting}
                                 disableDeleteAllGrants={this.props.disableDeleteAllGrants}
+                                validate={[validation.grantFormIsPopulated]}
                             />
                         </StandardCard>
                     </Grid>

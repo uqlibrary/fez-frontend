@@ -340,4 +340,12 @@ describe('GrantListEditor', () => {
         wrapper.instance().deleteAllGrants();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+
+    it('isFormPopulated() sets state correctly', () => {
+        const wrapper = setup({onChange: jest.fn()});
+        wrapper.instance().isFormPopulated(true);
+        expect(wrapper.state()).toEqual({"errorMessage": "", "grantFormPopulated": true, "grants": []})
+        wrapper.instance().isFormPopulated(false);
+        expect(wrapper.state()).toEqual({"errorMessage": "", "grantFormPopulated": false, "grants": []})
+    });
 });
