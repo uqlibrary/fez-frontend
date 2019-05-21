@@ -336,6 +336,60 @@ describe('Component MyIncompleteRecord', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should render file upload field', () => {
+        const wrapper = setup({recordToFix: {
+            ...mockRecordToFix,
+                rek_display_type_lookup: 'Creative Work',
+                rek_subtype: 'Creative Work - Design/Architectural',
+                rek_author_id: 410,
+                // Linked Authors
+                fez_record_search_key_author_id: [
+                    {},
+                    {
+                        rek_author_id: 410,
+                        rek_author_id_order: 2
+                    }
+                ],
+                // Abstract
+                rek_formatted_abstract: 'test',
+                rek_description: 'test',
+                // Contribution Statement
+                fez_record_search_key_creator_contribution_statement: [
+                    {},
+                    {rek_creator_contribution_statement: 'test'}
+                ],
+                // Extent
+                fez_record_search_key_total_pages: {
+                    rek_total_pages: 'test'
+                },
+                // Audience size
+                fez_record_search_key_audience_size: {
+                    rek_audience_size: 'test'
+                },
+                // Language
+                fez_record_search_key_language: [],
+                // Quality Indicator
+                fez_record_search_key_quality_indicator: [
+                    'Test'
+                ],
+                // Significance
+                fez_record_search_key_significance: [
+                    {},
+                    {rek_significance: 'test'}
+                ],
+                // Files
+                fez_datastream_info: [
+                    {
+                        dsi_dsid: '',
+                        dsi_label: '',
+                        dsi_state: ''
+                    }
+                ]
+            }
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
     it('should render significance and contribution statement fields', () => {
         const wrapper = setup({recordToFix: {
             ...mockRecordToFix,
