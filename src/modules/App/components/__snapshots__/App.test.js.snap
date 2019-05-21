@@ -28,6 +28,13 @@ exports[`Application component Should display mobile correctly 1`] = `
         Object {
           "component": [Function],
           "exact": true,
+          "pageTitle": undefined,
+          "path": "/view_new/:pid(UQ:[a-z0-9]+)",
+          "regExPath": "/view_new/(UQ:[a-z0-9]+)",
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
           "pageTitle": "eSpace search",
           "path": "/records/search",
         },
@@ -314,18 +321,25 @@ exports[`Application component Should display mobile correctly 1`] = `
         component={[Function]}
         exact={true}
         key="route_3"
+        path="/view_new/:pid(UQ:[a-z0-9]+)"
+        regExPath="/view_new/(UQ:[a-z0-9]+)"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        key="route_4"
         pageTitle="eSpace search"
         path="/records/search"
       />
       <Route
         component={[Function]}
         exact={true}
-        key="route_4"
+        key="route_5"
         pageTitle="eSpace"
         path="/dashboard"
       />
       <Route
-        key="route_5"
+        key="route_6"
         pageTitle="Page not found"
         render={[Function]}
       />
@@ -515,6 +529,13 @@ exports[`Application component should determine if it has incomplete works from 
           "pageTitle": undefined,
           "path": "/view/:pid(UQ:[a-z0-9]+)",
           "regExPath": "/view/(UQ:[a-z0-9]+)",
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": undefined,
+          "path": "/view_new/:pid(UQ:[a-z0-9]+)",
+          "regExPath": "/view_new/(UQ:[a-z0-9]+)",
         },
         Object {
           "component": [Function],
@@ -1028,11 +1049,18 @@ exports[`Application component should determine if it has incomplete works from 
         component={[Function]}
         exact={true}
         key="route_20"
+        path="/view_new/:pid(UQ:[a-z0-9]+)"
+        regExPath="/view_new/(UQ:[a-z0-9]+)"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        key="route_21"
         pageTitle="eSpace search"
         path="/records/search"
       />
       <Route
-        key="route_21"
+        key="route_22"
         pageTitle="Page not found"
         render={[Function]}
       />
@@ -1067,6 +1095,13 @@ exports[`Application component should redirect to login page with correct return
           "pageTitle": undefined,
           "path": "/view/:pid(UQ:[a-z0-9]+)",
           "regExPath": "/view/(UQ:[a-z0-9]+)",
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": undefined,
+          "path": "/view_new/:pid(UQ:[a-z0-9]+)",
+          "regExPath": "/view_new/(UQ:[a-z0-9]+)",
         },
         Object {
           "component": [Function],
@@ -1357,18 +1392,25 @@ exports[`Application component should redirect to login page with correct return
         component={[Function]}
         exact={true}
         key="route_3"
+        path="/view_new/:pid(UQ:[a-z0-9]+)"
+        regExPath="/view_new/(UQ:[a-z0-9]+)"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        key="route_4"
         pageTitle="eSpace search"
         path="/records/search"
       />
       <Route
         component={[Function]}
         exact={true}
-        key="route_4"
+        key="route_5"
         pageTitle="eSpace"
         path="/dashboard"
       />
       <Route
-        key="route_5"
+        key="route_6"
         pageTitle="Page not found"
         render={[Function]}
       />
@@ -1556,6 +1598,13 @@ exports[`Application component should render alert if user is not fez author 1`]
           "pageTitle": undefined,
           "path": "/view/:pid(UQ:[a-z0-9]+)",
           "regExPath": "/view/(UQ:[a-z0-9]+)",
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": undefined,
+          "path": "/view_new/:pid(UQ:[a-z0-9]+)",
+          "regExPath": "/view_new/(UQ:[a-z0-9]+)",
         },
         Object {
           "component": [Function],
@@ -2065,11 +2114,18 @@ exports[`Application component should render alert if user is not fez author 1`]
         component={[Function]}
         exact={true}
         key="route_20"
+        path="/view_new/:pid(UQ:[a-z0-9]+)"
+        regExPath="/view_new/(UQ:[a-z0-9]+)"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        key="route_21"
         pageTitle="eSpace search"
         path="/records/search"
       />
       <Route
-        key="route_21"
+        key="route_22"
         pageTitle="Page not found"
         render={[Function]}
       />
@@ -2257,6 +2313,13 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           "pageTitle": undefined,
           "path": "/view/:pid(UQ:[a-z0-9]+)",
           "regExPath": "/view/(UQ:[a-z0-9]+)",
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": undefined,
+          "path": "/view_new/:pid(UQ:[a-z0-9]+)",
+          "regExPath": "/view_new/(UQ:[a-z0-9]+)",
         },
         Object {
           "component": [Function],
@@ -2739,11 +2802,18 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         component={[Function]}
         exact={true}
         key="route_20"
+        path="/view_new/:pid(UQ:[a-z0-9]+)"
+        regExPath="/view_new/(UQ:[a-z0-9]+)"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        key="route_21"
         pageTitle="eSpace search"
         path="/records/search"
       />
       <Route
-        key="route_21"
+        key="route_22"
         pageTitle="Page not found"
         render={[Function]}
       />
@@ -2778,6 +2848,13 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
           "pageTitle": undefined,
           "path": "/view/:pid(UQ:[a-z0-9]+)",
           "regExPath": "/view/(UQ:[a-z0-9]+)",
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": undefined,
+          "path": "/view_new/:pid(UQ:[a-z0-9]+)",
+          "regExPath": "/view_new/(UQ:[a-z0-9]+)",
         },
         Object {
           "component": [Function],
@@ -3079,24 +3156,31 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
         component={[Function]}
         exact={true}
         key="route_3"
+        path="/view_new/:pid(UQ:[a-z0-9]+)"
+        regExPath="/view_new/(UQ:[a-z0-9]+)"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        key="route_4"
         pageTitle="eSpace search"
         path="/records/search"
       />
       <Route
-        key="route_4"
+        key="route_5"
         pageTitle="Higher degree by research thesis deposit"
         path="/rhdsubmission"
         render={[Function]}
       />
       <Route
-        key="route_5"
+        key="route_6"
         pageTitle="Professional doctorate deposit"
         path="/habslodge"
         render={[Function]}
       />
       <Route
         component={[Function]}
-        key="route_6"
+        key="route_7"
         pageTitle="Link ORCID ID to UQ eSpace"
       />
     </Switch>
@@ -3283,6 +3367,13 @@ exports[`Application component should render app for account with fez author wit
           "pageTitle": undefined,
           "path": "/view/:pid(UQ:[a-z0-9]+)",
           "regExPath": "/view/(UQ:[a-z0-9]+)",
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": undefined,
+          "path": "/view_new/:pid(UQ:[a-z0-9]+)",
+          "regExPath": "/view_new/(UQ:[a-z0-9]+)",
         },
         Object {
           "component": [Function],
@@ -3765,11 +3856,18 @@ exports[`Application component should render app for account with fez author wit
         component={[Function]}
         exact={true}
         key="route_20"
+        path="/view_new/:pid(UQ:[a-z0-9]+)"
+        regExPath="/view_new/(UQ:[a-z0-9]+)"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        key="route_21"
         pageTitle="eSpace search"
         path="/records/search"
       />
       <Route
-        key="route_21"
+        key="route_22"
         pageTitle="Page not found"
         render={[Function]}
       />
@@ -3957,6 +4055,13 @@ exports[`Application component should render app for account with fez author wit
           "pageTitle": undefined,
           "path": "/view/:pid(UQ:[a-z0-9]+)",
           "regExPath": "/view/(UQ:[a-z0-9]+)",
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": undefined,
+          "path": "/view_new/:pid(UQ:[a-z0-9]+)",
+          "regExPath": "/view_new/(UQ:[a-z0-9]+)",
         },
         Object {
           "component": [Function],
@@ -4468,11 +4573,18 @@ exports[`Application component should render app for account with fez author wit
         component={[Function]}
         exact={true}
         key="route_20"
+        path="/view_new/:pid(UQ:[a-z0-9]+)"
+        regExPath="/view_new/(UQ:[a-z0-9]+)"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        key="route_21"
         pageTitle="eSpace search"
         path="/records/search"
       />
       <Route
-        key="route_21"
+        key="route_22"
         pageTitle="Page not found"
         render={[Function]}
       />
@@ -4660,6 +4772,13 @@ exports[`Application component should render app for account with fez author wit
           "pageTitle": undefined,
           "path": "/view/:pid(UQ:[a-z0-9]+)",
           "regExPath": "/view/(UQ:[a-z0-9]+)",
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": undefined,
+          "path": "/view_new/:pid(UQ:[a-z0-9]+)",
+          "regExPath": "/view_new/(UQ:[a-z0-9]+)",
         },
         Object {
           "component": [Function],
@@ -5021,11 +5140,18 @@ exports[`Application component should render app for account with fez author wit
         component={[Function]}
         exact={true}
         key="route_20"
+        path="/view_new/:pid(UQ:[a-z0-9]+)"
+        regExPath="/view_new/(UQ:[a-z0-9]+)"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        key="route_21"
         pageTitle="eSpace search"
         path="/records/search"
       />
       <Route
-        key="route_21"
+        key="route_22"
         pageTitle="Page not found"
         render={[Function]}
       />
@@ -5213,6 +5339,13 @@ exports[`Application component should render application with routing for the us
           "pageTitle": undefined,
           "path": "/view/:pid(UQ:[a-z0-9]+)",
           "regExPath": "/view/(UQ:[a-z0-9]+)",
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": undefined,
+          "path": "/view_new/:pid(UQ:[a-z0-9]+)",
+          "regExPath": "/view_new/(UQ:[a-z0-9]+)",
         },
         Object {
           "component": [Function],
@@ -5513,6 +5646,13 @@ exports[`Application component should render for anon user 1`] = `
         Object {
           "component": [Function],
           "exact": true,
+          "pageTitle": undefined,
+          "path": "/view_new/:pid(UQ:[a-z0-9]+)",
+          "regExPath": "/view_new/(UQ:[a-z0-9]+)",
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
           "pageTitle": "eSpace search",
           "path": "/records/search",
         },
@@ -5770,18 +5910,25 @@ exports[`Application component should render for anon user 1`] = `
         component={[Function]}
         exact={true}
         key="route_3"
+        path="/view_new/:pid(UQ:[a-z0-9]+)"
+        regExPath="/view_new/(UQ:[a-z0-9]+)"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        key="route_4"
         pageTitle="eSpace search"
         path="/records/search"
       />
       <Route
         component={[Function]}
         exact={true}
-        key="route_4"
+        key="route_5"
         pageTitle="eSpace"
         path="/dashboard"
       />
       <Route
-        key="route_5"
+        key="route_6"
         pageTitle="Page not found"
         render={[Function]}
       />
@@ -5834,6 +5981,13 @@ exports[`Application component should render thesis submission for HDR without m
           "pageTitle": undefined,
           "path": "/view/:pid(UQ:[a-z0-9]+)",
           "regExPath": "/view/(UQ:[a-z0-9]+)",
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": undefined,
+          "path": "/view_new/:pid(UQ:[a-z0-9]+)",
+          "regExPath": "/view_new/(UQ:[a-z0-9]+)",
         },
         Object {
           "component": [Function],
@@ -6011,24 +6165,31 @@ exports[`Application component should render thesis submission for HDR without m
         component={[Function]}
         exact={true}
         key="route_3"
+        path="/view_new/:pid(UQ:[a-z0-9]+)"
+        regExPath="/view_new/(UQ:[a-z0-9]+)"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        key="route_4"
         pageTitle="eSpace search"
         path="/records/search"
       />
       <Route
-        key="route_4"
+        key="route_5"
         pageTitle="Higher degree by research thesis deposit"
         path="/rhdsubmission"
         render={[Function]}
       />
       <Route
-        key="route_5"
+        key="route_6"
         pageTitle="Professional doctorate deposit"
         path="/habslodge"
         render={[Function]}
       />
       <Route
         component={[Function]}
-        key="route_6"
+        key="route_7"
         pageTitle="Link ORCID ID to UQ eSpace"
       />
     </Switch>
@@ -7114,6 +7275,13 @@ exports[`Testing wrapped App component Mounts 1`] = `
                             Object {
                               "component": [Function],
                               "exact": true,
+                              "pageTitle": undefined,
+                              "path": "/view_new/:pid(UQ:[a-z0-9]+)",
+                              "regExPath": "/view_new/(UQ:[a-z0-9]+)",
+                            },
+                            Object {
+                              "component": [Function],
+                              "exact": true,
                               "pageTitle": "eSpace search",
                               "path": "/records/search",
                             },
@@ -7348,6 +7516,13 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 Object {
                                   "component": [Function],
                                   "exact": true,
+                                  "pageTitle": undefined,
+                                  "path": "/view_new/:pid(UQ:[a-z0-9]+)",
+                                  "regExPath": "/view_new/(UQ:[a-z0-9]+)",
+                                },
+                                Object {
+                                  "component": [Function],
+                                  "exact": true,
                                   "pageTitle": "eSpace search",
                                   "path": "/records/search",
                                 },
@@ -7578,6 +7753,13 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                     "pageTitle": undefined,
                                     "path": "/view/:pid(UQ:[a-z0-9]+)",
                                     "regExPath": "/view/(UQ:[a-z0-9]+)",
+                                  },
+                                  Object {
+                                    "component": [Function],
+                                    "exact": true,
+                                    "pageTitle": undefined,
+                                    "path": "/view_new/:pid(UQ:[a-z0-9]+)",
+                                    "regExPath": "/view_new/(UQ:[a-z0-9]+)",
                                   },
                                   Object {
                                     "component": [Function],

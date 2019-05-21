@@ -208,7 +208,8 @@ export class MyIncompleteRecordClass extends PureComponent {
             !(accountAuthorLoading || loadingRecordToFix) &&
             !this.isAuthorLinked()
         ) {
-            this.props.history.go(-1);
+            // this.props.history.go(-1);
+            this.props.history.push(routes.pathConfig.dashboard);
             return <div />;
         }
 
