@@ -274,7 +274,7 @@ describe('Meta Component ', () => {
         const wrapper = setup({publication});
         expect(wrapper.instance().getMetaTags(publication)).toEqual([
             {name: 'DC.Identifier', content: "http://localhost/view/UQ:222222"},
-            {name: 'citation_pdf_url', content: 'http://localhost/view/UQ:222222/abc.pdf'},
+            // {name: 'citation_pdf_url', content: 'http://localhost/view/UQ:222222/abc.pdf'},
             {name: 'DC.Date', content: '2015-01-01'},
             {name: 'citation_date', content: '2015/01/01'},
         ]);
