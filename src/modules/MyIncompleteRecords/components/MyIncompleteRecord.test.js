@@ -58,7 +58,7 @@ function setup(testProps, isShallow = true) {
                 author: Immutable.Map(testProps.author || {aut_id: 410})
             }),
         actions: testProps.actions || {},
-        history: testProps.history || {go: jest.fn()},
+        history: testProps.history || {go: jest.fn(), push: jest.fn()},
         match: testProps.match || {},
         classes: {},
 
@@ -82,7 +82,7 @@ describe('Component MyIncompleteRecord', () => {
 
     it('should redirect if author not linked', () => {
         const testMethod = jest.fn();
-        const wrapper = setup({author: {aut_id: 1001}, recordToFix: mockRecordToFix, history: {go: testMethod}});
+        const wrapper = setup({author: {aut_id: 1001}, recordToFix: mockRecordToFix, history: {push: testMethod}});
         expect(testMethod).toHaveBeenCalled();
     });
 
