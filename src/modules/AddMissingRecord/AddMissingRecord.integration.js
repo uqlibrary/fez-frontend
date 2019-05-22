@@ -3,7 +3,7 @@ import React from 'react';
 import AddMissingRecord from './containers/AddMissingRecord';
 import NewRecord from './components/steps/NewRecord';
 import Immutable from 'immutable';
-import { rtlRender, fireEvent, waitForElement, cleanup, withRedux, withRouter, getByTestId } from 'test-utils';
+import { rtlRender, fireEvent, waitForElement, cleanup, withRedux, withRouter } from 'test-utils';
 
 const initialState = Immutable.Map({
     accountReducer: {
@@ -87,38 +87,38 @@ describe('AddMissingRecord form', () => {
     describe('BookForm:Textbook', () => {
         it('should validate the form and show validation error message correctly for authors/editors field combination', async () => {
             const route = '/records/add/new';
-            const {container, asFragment, getByText} = rtlRender(withRedux(initialState)(withRouter({route})(<AddMissingRecord addRecordStep={NewRecord} />)));
+            const {container, asFragment, getByText, getByTestId} = rtlRender(withRedux(initialState)(withRouter({route})(<AddMissingRecord addRecordStep={NewRecord} />)));
 
             let fragment = asFragment();
 
-            fireEvent.click(getByTestId(container, 'rek-display-type'));
-            waitForElement(() => getByTestId(container, 'menu-rek_display_type'));
+            fireEvent.click(getByTestId('rek-display-type'));
+            waitForElement(() => getByTestId('menu-rek_display_type'));
             fireEvent.click(getByText(/book/i));
             expect(fragment).toMatchDiffSnapshot(fragment = asFragment());
 
-            fireEvent.click(getByTestId(container, 'rek-subtype'));
-            waitForElement(() => getByTestId(container, 'menu-rek_subtype'));
+            fireEvent.click(getByTestId('rek-subtype'));
+            waitForElement(() => getByTestId('menu-rek_subtype'));
             fireEvent.click(getByText(/textbook/i));
             expect(fragment).toMatchDiffSnapshot(fragment = asFragment());
 
-            expect(getByTestId(container, 'submit-work')).toHaveAttribute('disabled');
+            expect(getByTestId('submit-work')).toHaveAttribute('disabled');
 
-            fireEvent.change(getByTestId(container, 'rek-title'), {target: {value: 'book title'}});
-            fireEvent.change(getByTestId(container, 'rek-place-of-publication'), {target: {value: 'test place of publication'}});
-            fireEvent.change(getByTestId(container, 'rek-publisher'), {target: {value: 'test publisher'}});
-            fireEvent.change(getByTestId(container, 'year'), {target: {value: '2018'}});
+            fireEvent.change(getByTestId('rek-title'), {target: {value: 'book title'}});
+            fireEvent.change(getByTestId('rek-place-of-publication'), {target: {value: 'test place of publication'}});
+            fireEvent.change(getByTestId('rek-publisher'), {target: {value: 'test publisher'}});
+            fireEvent.change(getByTestId('year'), {target: {value: '2018'}});
             expect(fragment).toMatchDiffSnapshot(fragment = asFragment());
 
-            fireEvent.change(getByTestId(container, 'editors-name-as-published-field'), {target: {value: 'test'}});
+            fireEvent.change(getByTestId('editors-name-as-published-field'), {target: {value: 'test'}});
             fireEvent.click(getByText(/add editor/i));
             expect(fragment).toMatchDiffSnapshot(fragment = asFragment());
 
-            expect(getByTestId(container, 'submit-work')).not.toHaveAttribute('disabled');
+            expect(getByTestId('submit-work')).not.toHaveAttribute('disabled');
 
-            fireEvent.click(getByTestId(container, 'delete-editor-0'));
+            fireEvent.click(getByTestId('delete-editor-0'));
             fireEvent.click(getByText(/yes/i));
             expect(fragment).toMatchDiffSnapshot(fragment = asFragment());
-            expect(getByTestId(container, 'submit-work')).toHaveAttribute('disabled');
+            expect(getByTestId('submit-work')).toHaveAttribute('disabled');
         });
     });
 });
