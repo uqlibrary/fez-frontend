@@ -442,7 +442,7 @@ export const getNtroMetadataSearchKeys = (data) => {
 
     if (!!data.impactStatement) {
         ntroMetadata.fez_record_search_key_creator_contribution_statement = data.authors.map((item, index) => ({
-            rek_creator_contribution_statement: item.selected === true ? data.impactStatement.htmlText : locale.global.defaultAuthorStataPlaceholder,
+            rek_creator_contribution_statement: item.selected === true ? data.impactStatement.htmlText : locale.global.defaultAuthorDataPlaceholder,
             rek_creator_contribution_statement_order: index + 1
         }));
     }
