@@ -38,9 +38,10 @@ export default class Meta extends PureComponent {
                     return this.sanitiseAndReplaceHtmlChars(object, key, 'rek_formatted_abstract');
                 case 'rek_title':
                     return this.sanitiseAndReplaceHtmlChars(object, key, 'rek_formatted_title');
-                case 'fez_datastream_info':
-                    return !!object.dsi_dsid && object.dsi_mimetype === 'application/pdf' &&
-                        url(this.props.publication.rek_pid, object.dsi_dsid);
+                // Removing file list metatagging to avoid inconsistencies between googlebot and google scholar
+                // case 'fez_datastream_info':
+                //     return !!object.dsi_dsid && object.dsi_mimetype === 'application/pdf' &&
+                //         url(this.props.publication.rek_pid, object.dsi_dsid);
                 case 'rek_issn':
                     return object[key];
                 default:

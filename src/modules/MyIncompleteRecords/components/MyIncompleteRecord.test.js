@@ -58,7 +58,7 @@ function setup(testProps, isShallow = true) {
                 author: Immutable.Map(testProps.author || {aut_id: 410})
             }),
         actions: testProps.actions || {},
-        history: testProps.history || {go: jest.fn()},
+        history: testProps.history || {go: jest.fn(), push: jest.fn()},
         match: testProps.match || {},
         classes: {},
 
@@ -82,7 +82,7 @@ describe('Component MyIncompleteRecord', () => {
 
     it('should redirect if author not linked', () => {
         const testMethod = jest.fn();
-        const wrapper = setup({author: {aut_id: 1001}, recordToFix: mockRecordToFix, history: {go: testMethod}});
+        const wrapper = setup({author: {aut_id: 1001}, recordToFix: mockRecordToFix, history: {push: testMethod}});
         expect(testMethod).toHaveBeenCalled();
     });
 
@@ -217,6 +217,31 @@ describe('Component MyIncompleteRecord', () => {
         expect(testFN).toHaveBeenCalled();
     });
 
+    it('isFileValid()', () => {
+        const wrapper = setup({});
+
+        expect(wrapper.instance().isFileValid({
+            "dsi_pid": "UQ:719129",
+            "dsi_dsid": "FezACML_stradbroke_review_1.pdf.xml",
+            "dsi_label": "FezACML security for datastream - stradbroke_review_1.pdf",
+            "dsi_state": "A",
+        })).toBeFalsy();
+
+        expect(wrapper.instance().isFileValid({
+            "dsi_pid": "UQ:719129",
+            "dsi_dsid": "review_1.pdf.xml",
+            "dsi_label": null,
+            "dsi_state": "A",
+        })).toBeTruthy();
+
+        expect(wrapper.instance().isFileValid({
+            "dsi_pid": "UQ:719129",
+            "dsi_dsid": "review_1.pdf.xml",
+            "dsi_label": 'not publicly available',
+            "dsi_state": "A",
+        })).toBeTruthy();
+    });
+
     it('should render no fields as they are complete', () => {
         const wrapper = setup({recordToFix: {
             ...mockRecordToFix,
@@ -305,6 +330,60 @@ describe('Component MyIncompleteRecord', () => {
                 fez_record_search_key_significance: [
                     {},
                     {rek_significance: 'test'}
+                ]
+            }
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render file upload field', () => {
+        const wrapper = setup({recordToFix: {
+            ...mockRecordToFix,
+                rek_display_type_lookup: 'Creative Work',
+                rek_subtype: 'Creative Work - Design/Architectural',
+                rek_author_id: 410,
+                // Linked Authors
+                fez_record_search_key_author_id: [
+                    {},
+                    {
+                        rek_author_id: 410,
+                        rek_author_id_order: 2
+                    }
+                ],
+                // Abstract
+                rek_formatted_abstract: 'test',
+                rek_description: 'test',
+                // Contribution Statement
+                fez_record_search_key_creator_contribution_statement: [
+                    {},
+                    {rek_creator_contribution_statement: 'test'}
+                ],
+                // Extent
+                fez_record_search_key_total_pages: {
+                    rek_total_pages: 'test'
+                },
+                // Audience size
+                fez_record_search_key_audience_size: {
+                    rek_audience_size: 'test'
+                },
+                // Language
+                fez_record_search_key_language: [],
+                // Quality Indicator
+                fez_record_search_key_quality_indicator: [
+                    'Test'
+                ],
+                // Significance
+                fez_record_search_key_significance: [
+                    {},
+                    {rek_significance: 'test'}
+                ],
+                // Files
+                fez_datastream_info: [
+                    {
+                        dsi_dsid: '',
+                        dsi_label: '',
+                        dsi_state: ''
+                    }
                 ]
             }
         });
@@ -771,3 +850,4 @@ describe('Cards', () => {
         expect(styles(theme)).toMatchSnapshot();
     });
 });
+

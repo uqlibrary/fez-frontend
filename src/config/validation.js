@@ -203,6 +203,8 @@ export const dateRange = (value, values) => {
     }
 };
 
+export const grantFormIsPopulated = (value) => (value === true  ? locale.validationErrors.grants : undefined);
+
 export const translateFormErrorsToText = (formErrors) => {
     if (!formErrors) return null;
 

@@ -1502,12 +1502,15 @@ describe('getNtroMetadataSearchKeys tests', () => {
 
         expect(result).toMatchObject({
             "fez_record_search_key_creator_contribution_statement": [{
-                "rek_creator_contribution_statement": undefined,
+                "rek_creator_contribution_statement": 'Missing',
                 "rek_creator_contribution_statement_order": 1
             }, {
-                "rek_creator_contribution_statement": undefined,
+                "rek_creator_contribution_statement": 'Missing',
                 "rek_creator_contribution_statement_order": 2
-            }, {"rek_creator_contribution_statement": undefined, "rek_creator_contribution_statement_order": 3}],
+            }, {
+                "rek_creator_contribution_statement": 'Missing',
+                "rek_creator_contribution_statement_order": 3
+            }],
             "fez_record_search_key_significance": [{
                 "rek_significance": 0,
                 "rek_significance_order": 1
