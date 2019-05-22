@@ -914,6 +914,12 @@ export const QUALITY_INDICATORS = [
     {text: 'Other (add details to Author/Creator research statement)', value: 454040}
 ];
 
+export const CONTENT_INDICATORS = [
+    { value: 454057, text: 'Scholarship of Teaching and Learning' },
+    { value: 454058, text: 'Protocols' },
+    { value: 454059, text: 'Case Studies' },
+];
+
 export const AUDIENCE_SIZE = [
     {text: 'Less than 100', value: 453992},
     {text: '100 - 500', value: 453993},

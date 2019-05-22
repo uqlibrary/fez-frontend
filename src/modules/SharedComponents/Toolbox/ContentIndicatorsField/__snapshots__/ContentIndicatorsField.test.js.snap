@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContentIndicatorsField component should render default view 1`] = `
+<GenericSelectField
+  error={false}
+  errorText=""
+  hideLabel={false}
+  itemsList={
+    Array [
+      Object {
+        "text": "Scholarship of Teaching and Learning",
+        "value": 454057,
+      },
+      Object {
+        "text": "Protocols",
+        "value": 454058,
+      },
+      Object {
+        "text": "Case Studies",
+        "value": 454059,
+      },
+    ]
+  }
+  locale={
+    Object {
+      "label": undefined,
+      "placeholder": undefined,
+    }
+  }
+  selectedValue={Array []}
+/>
+`;
+
+exports[`ContentIndicatorsField component should render with given field props 1`] = `
+<GenericSelectField
+  error={true}
+  errorText="Test error"
+  hideLabel={false}
+  input={
+    Object {
+      "onChange": [MockFunction],
+      "value": Array [
+        454057,
+        454058,
+      ],
+    }
+  }
+  itemsList={
+    Array [
+      Object {
+        "text": "Scholarship of Teaching and Learning",
+        "value": 454057,
+      },
+      Object {
+        "text": "Protocols",
+        "value": 454058,
+      },
+      Object {
+        "text": "Case Studies",
+        "value": 454059,
+      },
+    ]
+  }
+  label="Test label"
+  locale={
+    Object {
+      "label": "Test label",
+      "placeholder": "Test placeholder",
+    }
+  }
+  meta={
+    Object {
+      "error": "Test error",
+    }
+  }
+  onChange={[MockFunction]}
+  placeholder="Test placeholder"
+  selectedValue={
+    Array [
+      454057,
+      454058,
+    ]
+  }
+/>
+`;
