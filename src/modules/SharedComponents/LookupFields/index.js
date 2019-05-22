@@ -3,7 +3,6 @@ export {OrgNameField} from './containers/OrgNameField';
 export {PublisherField} from './containers/PublisherField';
 export {AuthorIdField} from './containers/AuthorIdField';
 export {SeriesField} from './containers/SeriesField';
-export {QualityIndicatorField} from './containers/QualityIndicatorField';
 export {JournalNameField} from './containers/JournalNameField';
 export {ReportNumberField} from './containers/ReportNumberField';
 export {FieldOfResearchField} from './containers/FieldOfResearchField';
