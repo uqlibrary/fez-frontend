@@ -2071,11 +2071,10 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                 onKeyPress={[Function]}
                                 tabIndex="0"
                               >
-                                <n
+                                <t
                                   disableClick={false}
                                   disablePreview={true}
                                   disabled={false}
-                                  getDataTransferItems={[Function]}
                                   inputProps={
                                     Object {
                                       "id": "Uploader",
@@ -3647,7 +3646,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                       type="file"
                                     />
                                   </div>
-                                </n>
+                                </t>
                               </div>
                             </div>
                           </Grid>
@@ -5751,11 +5750,10 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                 onKeyPress={[Function]}
                                 tabIndex="0"
                               >
-                                <n
+                                <t
                                   disableClick={false}
                                   disablePreview={true}
                                   disabled={false}
-                                  getDataTransferItems={[Function]}
                                   inputProps={
                                     Object {
                                       "id": "Uploader",
@@ -7327,7 +7325,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                       type="file"
                                     />
                                   </div>
-                                </n>
+                                </t>
                               </div>
                             </div>
                           </Grid>
