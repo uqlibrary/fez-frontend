@@ -4,36 +4,40 @@ import { MyIncompleteRecord } from '.';
 import Immutable from 'immutable';
 import { UQ352045, UQ716942_uqagrinb } from 'mock/data/records';
 import { uqrdav10, uqagrinb } from 'mock/data/account';
+import * as repositories from 'repositories';
 import {
     rtlRender,
     fireEvent,
     cleanup,
     withRedux,
-    withRouter
+    withRouter,
+    waitForElement
 } from 'test-utils';
 
-const initialState = (accountReducer, recordToFix) => Immutable.Map({
-    accountReducer,
-    fixRecordReducer: {
-        recordToFix,
-        loadingRecordToFix: false,
-        recordToFixError: null
-    }
+const initialState = (accountReducer) => Immutable.Map({
+    accountReducer
 });
 
 describe('MyIncompleteRecord form', () => {
-    afterEach(cleanup);
-    it('Creative Work:Live Performance of Creative Work - Music should allow user to update work', () => {
+    afterEach(() => cleanup);
+    it('Creative Work:Live Performance of Creative Work - Music should allow user to update work', async () => {
+        mockApi
+            .onGet(repositories.routes.EXISTING_RECORD_API({pid: 'UQ:352045'}).apiUrl)
+            .reply(200, {data: UQ352045});
+
+        const path = '/records/:pid(UQ:[a-z0-9]+)/incomplete';
         const route = '/records/UQ:352045/incomplete';
         const {
             container,
             asFragment,
             getByText,
             getByTestId
-        } = rtlRender(withRedux(initialState(uqrdav10, UQ352045))(withRouter({route})(<MyIncompleteRecord/>)));
+        } = rtlRender(withRedux(initialState(uqrdav10))(withRouter({route, path})(<MyIncompleteRecord/>)));
+
+        const submitButton = await waitForElement(() => getByTestId('update-my-work'));
+        expect(submitButton).toHaveAttribute('disabled');
 
         let fragment = asFragment();
-        expect(getByTestId('update-my-work')).toHaveAttribute('disabled');
 
         fireEvent.click(getByTestId('significance'));
         fireEvent.click(getByText(/Major/));
@@ -87,17 +91,24 @@ describe('MyIncompleteRecord form', () => {
         expect(fragment).toMatchDiffSnapshot(fragment = asFragment());
     });
 
-    it('UQ:716942 - Creative Work:Live Performance of Creative Work - Music should allow user to update work', () => {
+    it('UQ:716942 - Creative Work:Live Performance of Creative Work - Music should allow user to update work', async () => {
+        mockApi
+            .onGet(repositories.routes.EXISTING_RECORD_API({pid: 'UQ:716942'}).apiUrl)
+            .reply(200, {data: UQ716942_uqagrinb});
+
+        const path = '/records/:pid(UQ:[a-z0-9]+)/incomplete';
         const route = '/records/UQ:716942/incomplete';
         const {
             container,
             asFragment,
             getByText,
             getByTestId
-        } = rtlRender(withRedux(initialState(uqagrinb, UQ716942_uqagrinb))(withRouter({route})(<MyIncompleteRecord/>)));
+        } = rtlRender(withRedux(initialState(uqagrinb))(withRouter({route, path})(<MyIncompleteRecord/>)));
+
+        const submitButton = await waitForElement(() => getByTestId('update-my-work'));
+        expect(submitButton).toHaveAttribute('disabled');
 
         let fragment = asFragment();
-        expect(getByTestId('update-my-work')).toHaveAttribute('disabled');
 
         fireEvent.click(getByTestId('significance'));
         fireEvent.click(getByText(/Major/));
