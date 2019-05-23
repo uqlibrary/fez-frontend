@@ -2,7 +2,7 @@
 import React from 'react';
 import * as repositories from 'repositories';
 import ThesisSubmission from './containers/ThesisSubmission';
-import { rtlRender, fireEvent, waitForElement, cleanup, withRedux, withRouter, getByTestId } from 'test-utils';
+import { rtlRender, fireEvent, waitForElement, cleanup, withRedux, withRouter } from 'test-utils';
 import { searchKeyList } from 'mock/data';
 import 'ckeditor';
 import Immutable from 'immutable';
@@ -412,28 +412,28 @@ describe('ThesisSubmission form', () => {
             .reply(200, returnedApiData);
 
         const route = '/rhdsubmission';
-        const {container, asFragment, getByText} = rtlRender(withRedux(initialState)(withRouter({route})(<ThesisSubmission />)));
+        const {container, asFragment, getByText, getByTestId} = rtlRender(withRedux(initialState)(withRouter({route})(<ThesisSubmission />)));
         const firstRender = asFragment();
 
-        const submitButton = getByTestId(container, 'submit-thesis');
+        const submitButton = getByTestId('submit-thesis');
         expect(submitButton).toHaveAttribute('disabled');
 
-        fireEvent.click(getByTestId(container, 'thesis-subtype'));
+        fireEvent.click(getByTestId('thesis-subtype'));
         fireEvent.click(getByText(/phd thesis/i));
 
-        fireEvent.change(getByTestId(container, 'downshift-0-input'), {target: {value: 'sch'}});
-        const enrollingUnitList = await waitForElement(() => getByTestId(container, 'downshift-0-menu'), {container});
-        fireEvent.click(getByTestId(enrollingUnitList, 'downshift-0-item-0'));
+        fireEvent.change(getByTestId('downshift-0-input'), {target: {value: 'sch'}});
+        const enrollingUnitList = await waitForElement(() => getByTestId('downshift-0-menu'), {container});
+        fireEvent.click(getByTestId('downshift-0-item-0', enrollingUnitList));
 
-        fireEvent.change(getByTestId(container, 'supervisors-name-as-published-field'), {target: {value: 'test'}});
+        fireEvent.change(getByTestId('supervisors-name-as-published-field'), {target: {value: 'test'}});
         fireEvent.click(getByText(/add supervisor/i));
 
-        fireEvent.change(getByTestId(container, 'downshift-1-input'), {target: {value: 'math'}});
-        const fieldOfResearchList = await waitForElement(() => getByTestId(container, 'downshift-1-menu'), {container});
-        fireEvent.click(getByTestId(fieldOfResearchList, 'downshift-1-item-0'));
+        fireEvent.change(getByTestId('downshift-1-input'), {target: {value: 'math'}});
+        const fieldOfResearchList = await waitForElement(() => getByTestId('downshift-1-menu'), {container});
+        fireEvent.click(getByTestId('downshift-1-item-0', fieldOfResearchList));
 
-        fireEvent.change(getByTestId(container, 'keywords-input'), {target: {value: 'test1,test2'}})
-        fireEvent.click(getByTestId(container, 'add-items'));
+        fireEvent.change(getByTestId('keywords-input'), {target: {value: 'test1,test2'}})
+        fireEvent.click(getByTestId('add-items'));
 
         expect(submitButton).not.toHaveAttribute('disabled');
         expect(firstRender).toMatchDiffSnapshot(asFragment());

@@ -2,7 +2,6 @@
 import React from 'react';
 import * as repositories from 'repositories';
 import AddDataCollection from './containers/AddDataCollection';
-const {getByTestId} = require('test-utils');
 import {fireEvent, waitForElement, cleanup, renderWithRouter, withRedux} from 'test-utils';
 import {searchKeyList} from 'mock/data';
 
@@ -296,64 +295,64 @@ describe('AddDataCollection form', () => {
             .reply(200, returnedApiData);
 
         const route = '/data-collections/add';
-        const {container, asFragment, getByText} = renderWithRouter(withRedux()(<AddDataCollection/>), {route});
+        const {container, asFragment, getByText, getByTestId} = renderWithRouter(withRedux()(<AddDataCollection/>), {route});
 
         const firstRender = asFragment();
 
-        const submitButton = getByTestId(container, 'submit-data-collection');
+        const submitButton = getByTestId('submit-data-collection');
         expect(submitButton).toHaveAttribute('disabled');
 
-        fireEvent.click(getByTestId(container, 'deposit-agreement'));
-        fireEvent.change(getByTestId(container, 'Dataset name'), {target: {value: 'testing'}});
-        fireEvent.change(getByTestId(container, 'Dataset description'), {target: {value: 'testing'}});
-        fireEvent.change(getByTestId(container, 'Contact name'), {target: {value: 'testing'}});
+        fireEvent.click(getByTestId('deposit-agreement'));
+        fireEvent.change(getByTestId('Dataset name'), {target: {value: 'testing'}});
+        fireEvent.change(getByTestId('Dataset description'), {target: {value: 'testing'}});
+        fireEvent.change(getByTestId('Contact name'), {target: {value: 'testing'}});
 
-        fireEvent.change(getByTestId(container, 'downshift-0-input'), {target: {value: 'te'}});
-        const contactIdList = await waitForElement(() => getByTestId(container, 'downshift-0-menu'), {container});
-        fireEvent.select(getByTestId(contactIdList, 'downshift-0-item-0'));
+        fireEvent.change(getByTestId('downshift-0-input'), {target: {value: 'te'}});
+        const contactIdList = await waitForElement(() => getByTestId('downshift-0-menu'), {container});
+        fireEvent.select(getByTestId('downshift-0-item-0', contactIdList));
 
-        fireEvent.change(getByTestId(container, 'Contact email'), {target: {value: 'testing@test.com'}});
-        fireEvent.change(getByTestId(container, 'year'), {target: {value: '2018'}});
+        fireEvent.change(getByTestId('Contact email'), {target: {value: 'testing@test.com'}});
+        fireEvent.change(getByTestId('year'), {target: {value: '2018'}});
 
-        fireEvent.change(getByTestId(container, 'downshift-1-input'), {target: {value: 'Math'}});
-        const forCodesList = await waitForElement(() => getByTestId(container, 'downshift-1-menu'), {container});
-        fireEvent.click(getByTestId(forCodesList, 'downshift-1-item-0'));
+        fireEvent.change(getByTestId('downshift-1-input'), {target: {value: 'Math'}});
+        const forCodesList = await waitForElement(() => getByTestId('downshift-1-menu'), {container});
+        fireEvent.click(getByTestId('downshift-1-item-0', forCodesList));
 
-        fireEvent.change(getByTestId(container, 'creators-name-as-published-field'), {target: {value: 'test'}});
+        fireEvent.change(getByTestId('creators-name-as-published-field'), {target: {value: 'test'}});
 
-        fireEvent.focus(getByTestId(container, 'downshift-2-input'));
-        const creatorRoleList = getByTestId(container, 'downshift-2-menu');
-        fireEvent.click(getByTestId(creatorRoleList, 'downshift-2-item-1'));
+        fireEvent.focus(getByTestId('downshift-2-input'));
+        const creatorRoleList = getByTestId('downshift-2-menu');
+        fireEvent.click(getByTestId('downshift-2-item-1', creatorRoleList));
         fireEvent.click(getByText(/add creator/i));
 
-        fireEvent.click(getByTestId(container, 'data-collection-access-selector'));
-        waitForElement(() => getByTestId(container, 'menu-'));
+        fireEvent.click(getByTestId('data-collection-access-selector'));
+        waitForElement(() => getByTestId('menu-'));
         fireEvent.click(getByText(/mediated access/i));
 
-        fireEvent.click(getByTestId(container, 'data-collection-license-selector'));
-        waitForElement(() => getByTestId(container, 'menu-'));
+        fireEvent.click(getByTestId('data-collection-license-selector'));
+        waitForElement(() => getByTestId('menu-'));
         fireEvent.click(getByText(/Creative Commons Attribution \(only\) http:\/\/creativecommons.org\/licenses\/by\/3.0\/deed.en_US/i));
 
-        fireEvent.change(getByTestId(container, 'Project name'), {target: {value: 'test project'}});
-        fireEvent.change(getByTestId(container, 'Project description'), {target: {value: 'test description'}});
+        fireEvent.change(getByTestId('Project name'), {target: {value: 'test project'}});
+        fireEvent.change(getByTestId('Project description'), {target: {value: 'test description'}});
 
         expect(submitButton).not.toHaveAttribute('disabled');
 
-        fireEvent.change(getByTestId(container, 'Contact email'), {target: {value: 'testing'}});
+        fireEvent.change(getByTestId('Contact email'), {target: {value: 'testing'}});
         expect(container).toHaveTextContent(/email address is not valid/i);
         expect(container).toHaveTextContent(/contact email is required/i);
         expect(submitButton).toHaveAttribute('disabled');
 
-        fireEvent.change(getByTestId(container, 'Contact email'), {target: {value: 'testing@test.com'}});
+        fireEvent.change(getByTestId('Contact email'), {target: {value: 'testing@test.com'}});
         expect(container).not.toHaveTextContent(/email address is not valid/i);
         expect(container).not.toHaveTextContent(/contact email is required/i);
         expect(submitButton).not.toHaveAttribute('disabled');
 
-        fireEvent.click(getByTestId(container, 'deposit-agreement'));
+        fireEvent.click(getByTestId('deposit-agreement'));
         expect(container).toHaveTextContent(/you are required to accept deposit agreement/i);
         expect(submitButton).toHaveAttribute('disabled');
 
-        fireEvent.click(getByTestId(container, 'deposit-agreement'));
+        fireEvent.click(getByTestId('deposit-agreement'));
         expect(container).not.toHaveTextContent(/you are required to accept deposit agreement/i);
         expect(submitButton).not.toHaveAttribute('disabled');
 

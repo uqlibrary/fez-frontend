@@ -18,3 +18,4 @@ export {default as recordWithoutAuthorIds} from './recordWithoutAuthorIds';
 export {default as collections} from './collections';
 export {default as UQ352045} from './incompleteNTRORecordUQ352045';
 export {default as UQ716942_uqagrinb} from './incompleteNTRORecordUQ716942_uqagrinb';
+export {default as UQ716942_uqagrinb_grants} from './incompleteNTRORecordUQ716942_uqagrinb_grants';

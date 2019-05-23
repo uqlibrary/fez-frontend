@@ -186,7 +186,7 @@ export class MyIncompleteRecordClass extends PureComponent {
     isFileValid = (dataStream) => {
         const {files: {blacklist}} = viewRecordsConfig;
         return !dataStream.dsi_dsid.match(blacklist.namePrefixRegex)
-            && (!dataStream.dsi_label || !!dataStream.dsi_label.match(new RegExp(blacklist.descriptionKeywordsRegex, 'gi')))
+            && (!dataStream.dsi_label || !dataStream.dsi_label.match(new RegExp(blacklist.descriptionKeywordsRegex, 'gi')))
             && dataStream.dsi_state === 'A';
     };
 

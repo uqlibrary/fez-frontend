@@ -227,14 +227,14 @@ export const translateFormErrorsToText = (formErrors) => {
     return errorMessagesList.length > 0 ? errorMessagesList : null;
 };
 
-export const getErrorAlertProps = ({dirty = false, submitting = false,
+export const getErrorAlertProps = ({submitting = false,
     error, formErrors, submitSucceeded = false, alertLocale = {}}) => {
     let alertProps = null;
     if (submitting) {
         alertProps = {...alertLocale.progressAlert};
     } else if (submitSucceeded) {
         alertProps = {...alertLocale.successAlert};
-    } else if (dirty) {
+    } else {
         if (error) {
             // error is set by submit failed, it's reset once form is re-validated (updated for re-submit)
             alertProps = {

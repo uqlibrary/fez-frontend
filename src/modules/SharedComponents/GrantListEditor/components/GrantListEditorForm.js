@@ -151,6 +151,9 @@ export class GrantListEditorFormClass extends PureComponent {
                             >
                                 <InputLabel>{this.props.locale.grantAgencyType}</InputLabel>
                                 <Select
+                                    SelectDisplayProps={{
+                                        id: 'grantType'
+                                    }}
                                     label={this.props.locale.grantAgencyType}
                                     placeholder={this.props.locale.grantAgencyTypeHint}
                                     value={this.state.grantAgencyType}
@@ -174,6 +177,7 @@ export class GrantListEditorFormClass extends PureComponent {
                     }
                     <Grid item xs={12}>
                         <Button
+                            id="grantAddButton"
                             variant="contained"
                             fullWidth
                             color="primary"
