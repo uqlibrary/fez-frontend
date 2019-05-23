@@ -9,7 +9,6 @@ import Grid from '@material-ui/core/Grid';
 import {NtroHeader} from 'modules/SharedComponents/Toolbox/NtroFields';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {SelectField} from 'modules/SharedComponents/Toolbox/SelectField';
-import {ContentIndicatorsField} from 'modules/SharedComponents/Toolbox/ContentIndicatorsField';
 import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
 import {FileUploadField} from 'modules/SharedComponents/Toolbox/FileUploader';
 import {NavigationDialogBox} from 'modules/SharedComponents/Toolbox/NavigationPrompt';
@@ -139,19 +138,6 @@ export default class PublicationForm extends Component {
                     {
                         !!this.props.formComponent &&
                         <React.Fragment>
-                            <Grid item xs={12}>
-                                <StandardCard title={txt.generic.contentIndicators.title}>
-                                    <Field
-                                        component={ContentIndicatorsField}
-                                        disabled={this.props.submitting}
-                                        id="content-indicators"
-                                        name="contentIndicators"
-                                        label={txt.generic.contentIndicators.label}
-                                        value={this.props.formValues.get('contentIndicators')}
-                                        multiple
-                                    />
-                                </StandardCard>
-                            </Grid>
                             {
                                 !!this.props.isNtro &&
                                 <NtroHeader/>

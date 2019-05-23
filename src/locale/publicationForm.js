@@ -57,10 +57,6 @@ export default {
             }
         },
         authors: txt.components.authors,
-        contentIndicators: {
-            title: 'Content Indicators',
-            label: 'Please choose applicable indicators',
-        },
         optional: {
             title: 'Optional information',
             // help: {
