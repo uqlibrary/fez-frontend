@@ -13,6 +13,7 @@ const mapStateToProps = (state, props) => {
                     ...item
                 }))
             : [],
+        itemsListLoading: state.get('authorsReducer') && state.get('authorsReducer').authorsListLoading || false,
         onChange: props.onChange,
         allowFreeText: false,
         async: true,

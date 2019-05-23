@@ -230,6 +230,7 @@ exports[`ConferencePaperForm renders  component 1`] = `
                   , in the format and order that they are published.
                 </div>,
                 "identifierLabel": "UQ identifier (if available)",
+                "nameAsPublishedFieldId": "authors-name-as-published-field",
                 "nameAsPublishedHint": "Type the name exactly as published",
                 "nameAsPublishedLabel": "Enter each author's name as published (eg. Smith, John)",
               },
@@ -263,6 +264,7 @@ exports[`ConferencePaperForm renders  component 1`] = `
             },
             "row": Object {
               "locale": Object {
+                "deleteButtonId": [Function],
                 "deleteHint": "Remove this item",
                 "deleteRecordConfirmation": Object {
                   "cancelButtonLabel": "No",
@@ -270,6 +272,7 @@ exports[`ConferencePaperForm renders  component 1`] = `
                   "confirmationMessage": "Are you sure you want to delete this item?",
                   "confirmationTitle": "Delete item",
                 },
+                "lockedTooltip": "You are not able to edit this row",
                 "moveDownHint": "Move item down the order",
                 "moveUpHint": "Move item up the order",
                 "selectHint": "Select this author ([name]) to assign it as you",
@@ -313,7 +316,7 @@ exports[`ConferencePaperForm renders  component 1`] = `
                 "inputFieldHint": "Enter ISBN, e.g. 13 digit: 9780815375296 or 10 digit: 1861972717",
                 "inputFieldLabel": "ISBN value",
                 "remindToAdd": <span>
-                  Pleasepress 
+                  Please press 
                   <b>
                     ENTER
                   </b>
@@ -387,7 +390,7 @@ exports[`ConferencePaperForm renders  component 1`] = `
                 "inputFieldHint": "Enter ISSN, e.g. 1838-9414",
                 "inputFieldLabel": "ISSN value",
                 "remindToAdd": <span>
-                  Pleasepress 
+                  Please press 
                   <b>
                     ENTER
                   </b>

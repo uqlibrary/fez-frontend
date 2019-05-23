@@ -20,8 +20,11 @@ function setup(testProps, isShallow = true) {
         possiblyYourPublicationsCountLoading: false,
         actions: {
             countPossiblyYourPublications: jest.fn(),
-            loadAuthorPublicationsStats: jest.fn()
+            loadAuthorPublicationsStats: jest.fn(),
+            loadIncompleteRecords: jest.fn(),
         },
+        loadingIncompleteRecordData: false,
+        incompleteRecordList: {},
         history: {},
         ...testProps,
     };
@@ -318,11 +321,58 @@ describe('Dashboard test', () => {
             possiblyYourPublicationsCountLoading: false,
             actions: {
                 countPossiblyYourPublications: jest.fn(),
-                loadAuthorPublicationsStats: jest.fn()
+                loadAuthorPublicationsStats: jest.fn(),
+                searchAuthorIncompletePublications: jest.fn()
             },
             history: {},
         }, false);
         expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it ('displays a lure when the user has incomplete NTRO submissions', () => {
+        const wrapper = setup({
+            incompleteRecordList: {
+                publicationsListPagingData: {
+                    "total": 2,
+                    "took": 30,
+                    "per_page": 20,
+                    "current_page": 1,
+                    "from": 1,
+                    "to": 3,
+                    "data": [1,2],
+                    "filters": {}
+                }
+            },
+            authorDetails: mock.authorDetails.uqresearcher,
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it ('displays a lure to a single work when the user has incomplete NTRO submissions', () => {
+        const wrapper = setup({
+            incompleteRecordList: {
+                publicationsListPagingData: {
+                    "total": 1,
+                    "took": 30,
+                    "per_page": 20,
+                    "current_page": 1,
+                    "from": 1,
+                    "to": 1,
+                    "data": [1],
+                    "filters": {}
+                }
+            },
+            authorDetails: mock.authorDetails.uqresearcher,
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('redirectToMissingRecordslist method', () => {
+        const testFn = jest.fn();
+        const wrapper = setup({history: {push: testFn}});
+        wrapper.instance().redirectToIncompleteRecordlist();
+        expect(testFn).toBeCalledWith('/records/incomplete');
+
     });
 
 });

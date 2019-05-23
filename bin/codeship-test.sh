@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 export TZ='Australia/Brisbane'
 
 printf "\n---- RUNNING ESLint ---\n"

@@ -69,9 +69,13 @@ exports[`SimpleSearchComponent should render default view 1`] = `
         xs={true}
       >
         <TextField
-          aria-label="Enter your search query to search eSpace and then press Enter"
           error={null}
           fullWidth={true}
+          inputProps={
+            Object {
+              "aria-label": "Enter your search query to search eSpace and then press Enter",
+            }
+          }
           label="Search eSpace"
           onChange={[Function]}
           onKeyPress={[Function]}
@@ -165,9 +169,13 @@ exports[`SimpleSearchComponent should render show prefix icon in the search box 
         xs={true}
       >
         <TextField
-          aria-label="Enter your search query to search eSpace and then press Enter"
           error={null}
           fullWidth={true}
+          inputProps={
+            Object {
+              "aria-label": "Enter your search query to search eSpace and then press Enter",
+            }
+          }
           label="Search eSpace"
           onChange={[Function]}
           onKeyPress={[Function]}
@@ -256,10 +264,14 @@ exports[`SimpleSearchComponent should render with a class "header" for use in Ap
                 "disableUnderline": true,
               }
             }
-            aria-label="Enter your search query to search eSpace and then press Enter"
             autoComplete="search"
             error={null}
             fullWidth={true}
+            inputProps={
+              Object {
+                "aria-label": "Enter your search query to search eSpace and then press Enter",
+              }
+            }
             label={false}
             onChange={[Function]}
             onKeyPress={[Function]}
@@ -328,9 +340,13 @@ exports[`SimpleSearchComponent should set search value from prop 1`] = `
         xs={true}
       >
         <TextField
-          aria-label="Enter your search query to search eSpace and then press Enter"
           error={null}
           fullWidth={true}
+          inputProps={
+            Object {
+              "aria-label": "Enter your search query to search eSpace and then press Enter",
+            }
+          }
           label="Search eSpace"
           onChange={[Function]}
           onKeyPress={[Function]}

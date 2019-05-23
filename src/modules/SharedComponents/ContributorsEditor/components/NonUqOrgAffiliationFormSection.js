@@ -9,9 +9,22 @@ import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
 import {orgAffiliationTypes} from 'config/general';
 
-export default function NonUqOrgAffiliationFormSection({orgAffiliation, orgType, onOrgAffiliationChange, onOrgTypeChange, locale}) {
+export default function NonUqOrgAffiliationFormSection({
+    orgAffiliation,
+    orgType,
+    onOrgAffiliationChange,
+    onOrgTypeChange,
+    locale,
+    disableAffiliationEdit,
+    disableOrgTypeEdit,
+}) {
     const options = orgAffiliationTypes.map(option => {
-        return option.value !== '454045' ? <MenuItem value={option.value} key={option.value}>{option.text}</MenuItem> : null;
+        return (option.value !== '454045')
+            ? <MenuItem value={option.value} key={option.value}>
+                {option.text}
+            </MenuItem>
+            : null
+        ;
     });
 
     return (
@@ -24,14 +37,20 @@ export default function NonUqOrgAffiliationFormSection({orgAffiliation, orgType,
                     onChange={onOrgAffiliationChange}
                     label={locale.fields.organisation.inputLabel}
                     placeholder={locale.fields.organisation.placeholder}
+                    disabled={disableAffiliationEdit}
+                    id="org-affiliation-name"
                 />
             </Grid>
             <Grid item xs={6}>
-                <FormControl fullWidth>
+                <FormControl required fullWidth>
                     <InputLabel>{locale.fields.organisationType.inputLabel}</InputLabel>
                     <Select
                         value={orgType}
                         onChange={onOrgTypeChange}
+                        disabled={disableOrgTypeEdit}
+                        SelectDisplayProps={{
+                            id: 'org-affiliation-type'
+                        }}
                     >
                         <MenuItem disabled>{locale.fields.organisationType.placeholder}</MenuItem>
                         {options}
@@ -47,7 +66,9 @@ NonUqOrgAffiliationFormSection.propTypes = {
     orgType: PropTypes.string,
     onOrgAffiliationChange: PropTypes.func,
     onOrgTypeChange: PropTypes.func,
-    locale: PropTypes.object
+    locale: PropTypes.object,
+    disableAffiliationEdit: PropTypes.bool,
+    disableOrgTypeEdit: PropTypes.bool,
 };
 
 NonUqOrgAffiliationFormSection.defaultProps = {

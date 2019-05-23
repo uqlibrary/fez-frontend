@@ -4,9 +4,6 @@ import * as newsFeedActions from './newsFeed';
 import * as newsFeedData from 'mock/data/newsFeed';
 
 describe('NewsFeed actions', () => {
-    // extend expect to check actions
-    expect.extend({toHaveDispatchedActions});
-
     beforeEach(() => {
         mockActionsStore = setupStoreForActions();
         mockApi = setupMockAdapter();

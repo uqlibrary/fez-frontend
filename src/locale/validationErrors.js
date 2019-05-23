@@ -29,7 +29,10 @@ export default {
         dateRange: 'Please provide a valid start/end date range',
         pageRange: 'Please provide a valid start/end page range',
         remindToAdd: 'Please remember to click ADD to add this item to your list',
-        requireChecked: 'Please accept deposit agreement'
+        requireChecked: 'Please accept deposit agreement',
+        authorsAffiliationIncomplete: 'Rows marked with a red prefix must be updated',
+        authorAffiliationIncomplete: 'Please update affiliation data for the selected author',
+        grants: 'You must click ADD GRANT to enter the value to the grants list'
     },
     validationErrorsSummary: {
         rek_title: 'Title is required',
@@ -82,6 +85,9 @@ export default {
         pageRange: 'Please provide a valid start/end page range',
         // Collection form validations
         community: 'You must select a community',
-        title: 'Title is required'
+        title: 'Title is required',
+        authorsAffiliation: 'Author affiliation rows marked with red are required',
+        rek_audience_size: 'Audience size is required',
+        grants: 'You must click ADD GRANT to enter the value to the grants list'
     }
 };

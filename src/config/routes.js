@@ -31,13 +31,15 @@ export const pathConfig = {
     contact: '/contact',
     hdrSubmission: '/rhdsubmission',
     sbsSubmission: '/habslodge',
-    adminCollection: '/admin/collection',
     records: {
         mine: '/records/mine',
         possible: '/records/possible',
+        incomplete: '/records/incomplete',
+        incompleteFix: (pid) => (`/records/${pid}/incomplete`),
         claim: '/records/claim',
         search: '/records/search',
         view: (pid, includeFullPath = false) => (`${includeFullPath ? fullPath : ''}/view/${pid}`),
+        view_new: (pid, includeFullPath = false) => (`${includeFullPath ? fullPath : ''}/view_new/${pid}`), //  temporary for MM to view pids without being redirected to legacy
         fix: (pid) => (`/records/${pid}/fix`),
         add: {
             find: '/records/add/find',
@@ -92,8 +94,6 @@ export const pathConfig = {
     admin: {
         masquerade: '/admin/masquerade',
         thirdPartyTools: '/tool/lookup',
-        collectionForm: '/admin/collection',
-        communityForm: '/admin/community',
         legacyEspace: `${fullPath}/my_upo_tools.php`,
         unpublished: '/admin/unpublished'
     },
@@ -116,8 +116,7 @@ export const pathConfig = {
 
 // a duplicate list of routes for
 const flattedPathConfig = ['/', '/dashboard', '/contact', '/rhdsubmission', '/sbslodge_new', '/records/search',
-    '/records/mine', '/records/possible', '/records/claim', '/records/add/find', '/records/add/results', '/records/add/new',
-    '/admin/masquerade', 'admin/collection', 'admin/community', '/tool/lookup', '/author-identifiers/orcid/link', '/author-identifiers/google-scholar/link',
+    '/records/mine', '/records/possible', '/records/incomplete', '/records/claim', '/records/add/find', '/records/add/results', '/records/add/new',
     '/admin/masquerade', '/admin/unpublished', '/admin/thirdPartyTools', '/author-identifiers/orcid/link', '/author-identifiers/google-scholar/link'
 ];
 
@@ -147,6 +146,13 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
             exact: true,
             pageTitle: locale.pages.viewRecord.title,
             regExPath: pathConfig.records.view(`(${pidRegExp})`)
+        },
+        {
+            path: pathConfig.records.view_new(pid),
+            component: components.ViewRecord,
+            exact: true,
+            pageTitle: locale.pages.viewRecord.title,
+            regExPath: pathConfig.records.view_new(`(${pidRegExp})`)
         },
         {
             path: pathConfig.records.search,
@@ -241,6 +247,20 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
                 pageTitle: locale.pages.claimPublications.title
             },
             {
+                path: pathConfig.records.incomplete,
+                component: components.MyIncompleteRecords,
+                access: [roles.researcher, roles.admin],
+                exact: true,
+                pageTitle: locale.pages.incompletePublications.title
+            },
+            {
+                path: pathConfig.records.incompleteFix(pid),
+                render: (props) => components.MyIncompleteRecord({...props, disableInitialGrants: true, disableDeleteAllGrants: true}),
+                access: [roles.researcher, roles.admin],
+                exact: true,
+                pageTitle: locale.pages.incompletePublication.title
+            },
+            {
                 path: pathConfig.records.claim,
                 component: components.ClaimRecord,
                 access: [roles.researcher, roles.admin],
@@ -307,20 +327,6 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
                 exact: true,
                 access: [roles.admin],
                 pageTitle: locale.pages.unpublished.title
-            },
-            {
-                path: pathConfig.admin.collectionForm,
-                component: components.CollectionForm,
-                exact: true,
-                access: [roles.admin],
-                pageTitle: locale.pages.collection.title
-            },
-            {
-                path: pathConfig.admin.communityForm,
-                component: components.CommunityForm,
-                exact: true,
-                access: [roles.admin],
-                pageTitle: locale.pages.community.title
             },
             {
                 path: pathConfig.admin.thirdPartyTools,
@@ -403,6 +409,10 @@ export const getMenuConfig = (account, disabled) => {
                 ...locale.menu.claimPublication
             },
             {
+                linkTo: pathConfig.records.incomplete,
+                ...locale.menu.incompleteRecords
+            },
+            {
                 linkTo: pathConfig.records.add.find,
                 ...locale.menu.addMissingRecord
             },
@@ -410,10 +420,6 @@ export const getMenuConfig = (account, disabled) => {
                 linkTo: pathConfig.dataset.mine,
                 ...locale.menu.myDatasets
             },
-            // {
-            //     linkTo: pathConfig.dataset.legacy,
-            //     ...locale.menu.addDataset
-            // },
             {
                 linkTo: pathConfig.dataset.add,
                 ...locale.menu.addMissingDataset
@@ -428,14 +434,6 @@ export const getMenuConfig = (account, disabled) => {
             }
         ] : []),
         ...(account && account.canMasquerade ? [
-            {
-                linkTo: pathConfig.admin.collectionForm,
-                ...locale.menu.collectionForm,
-            },
-            {
-                linkTo: pathConfig.admin.communityForm,
-                ...locale.menu.communityForm,
-            },
             {
                 linkTo: pathConfig.admin.masquerade,
                 ...locale.menu.masquerade,

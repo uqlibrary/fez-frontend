@@ -86,10 +86,7 @@ export default class PublicationForm extends Component {
     }
 
     _handleDefaultSubmit = (event) => {
-        /* istanbul ignore else */
-        if(event) {
-            event.preventDefault();
-        }
+        !!event && event.preventDefault();
     };
 
     render() {
@@ -109,7 +106,10 @@ export default class PublicationForm extends Component {
                                         value={this.props.formValues.get('rek_display_type')}
                                         label={txt.publicationType.inputLabelText}
                                         required
-                                        placeholder={txt.publicationType.hintText}>
+                                        placeholder={txt.publicationType.hintText}
+                                        SelectDisplayProps={{
+                                            id: 'rek-display-type'
+                                        }}>
                                         {this.publicationTypeItems}
                                     </Field>
                                 </Grid>
@@ -119,11 +119,15 @@ export default class PublicationForm extends Component {
                                         <Field
                                             component={SelectField}
                                             disabled={this.props.submitting}
+                                            id="rek-subtype"
                                             name="rek_subtype"
                                             value={this.props.formValues.get('rek_subtype')}
                                             label={txt.publicationSubtype.inputLabelText}
                                             required
-                                            placeholder={txt.publicationSubtype.hintText}>
+                                            placeholder={txt.publicationSubtype.hintText}
+                                            SelectDisplayProps={{
+                                                id: 'rek-subtype'
+                                            }}>
                                             {this.publicationSubtypeItems}
                                         </Field>
                                     </Grid>
@@ -184,6 +188,7 @@ export default class PublicationForm extends Component {
                         <Grid item xs={12} sm="auto">
                             <Button
                                 style={{whiteSpace: 'nowrap'}}
+                                id="submit-work"
                                 variant="contained"
                                 color="primary"
                                 fullWidth

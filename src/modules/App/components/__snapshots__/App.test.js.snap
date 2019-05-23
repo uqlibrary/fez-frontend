@@ -28,6 +28,13 @@ exports[`Application component Should display mobile correctly 1`] = `
         Object {
           "component": [Function],
           "exact": true,
+          "pageTitle": undefined,
+          "path": "/view_new/:pid(UQ:[a-z0-9]+)",
+          "regExPath": "/view_new/(UQ:[a-z0-9]+)",
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
           "pageTitle": "eSpace search",
           "path": "/records/search",
         },
@@ -125,7 +132,6 @@ exports[`Application component Should display mobile correctly 1`] = `
                 item={true}
               >
                 <div
-                  aria-label="University of Queensland"
                   className="smallLogo"
                   id="logo"
                   style={
@@ -134,7 +140,9 @@ exports[`Application component Should display mobile correctly 1`] = `
                       "width": 60,
                     }
                   }
-                />
+                >
+                  The University of Queensland
+                </div>
               </WithStyles(Grid)>
             </Hidden>
             <WithStyles(Grid)
@@ -197,6 +205,7 @@ exports[`Application component Should display mobile correctly 1`] = `
   <WithStyles(MenuDrawer)
     docked={false}
     drawerOpen={false}
+    hasIncompleteWorks={false}
     history={
       Object {
         "location": Object {},
@@ -212,7 +221,7 @@ exports[`Application component Should display mobile correctly 1`] = `
     }
     logoImage="largeLogo"
     logoLink="http://www.uq.edu.au"
-    logoText="University of Queensland"
+    logoText="The University of Queensland"
     menuItems={
       Array [
         Object {
@@ -262,6 +271,11 @@ exports[`Application component Should display mobile correctly 1`] = `
       alignItems="center"
       container={true}
       justify="center"
+      style={
+        Object {
+          "marginBottom": 12,
+        }
+      }
     >
       <WithStyles(Grid)
         item={true}
@@ -307,18 +321,25 @@ exports[`Application component Should display mobile correctly 1`] = `
         component={[Function]}
         exact={true}
         key="route_3"
+        path="/view_new/:pid(UQ:[a-z0-9]+)"
+        regExPath="/view_new/(UQ:[a-z0-9]+)"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        key="route_4"
         pageTitle="eSpace search"
         path="/records/search"
       />
       <Route
         component={[Function]}
         exact={true}
-        key="route_4"
+        key="route_5"
         pageTitle="eSpace"
         path="/dashboard"
       />
       <Route
-        key="route_5"
+        key="route_6"
         pageTitle="Page not found"
         render={[Function]}
       />
@@ -331,336 +352,7 @@ exports[`Application component Should display mobile correctly 1`] = `
 
 exports[`Application component redirects user to login if not Authorized 1`] = `<div />`;
 
-exports[`Application component should redirect to login page with correct return url if rhd submission route accessed 1`] = `
-<WithStyles(Grid)
-  container={true}
->
-  <withRouter(Connect(Meta))
-    routesConfig={
-      Array [
-        Object {
-          "component": [Function],
-          "exact": true,
-          "pageTitle": "eSpace",
-          "path": "/",
-        },
-        Object {
-          "pageTitle": "Contact UQ eSpace",
-          "path": "/contact",
-          "render": [Function],
-        },
-        Object {
-          "component": [Function],
-          "exact": true,
-          "pageTitle": undefined,
-          "path": "/view/:pid(UQ:[a-z0-9]+)",
-          "regExPath": "/view/(UQ:[a-z0-9]+)",
-        },
-        Object {
-          "component": [Function],
-          "exact": true,
-          "pageTitle": "eSpace search",
-          "path": "/records/search",
-        },
-        Object {
-          "component": [Function],
-          "exact": true,
-          "pageTitle": "eSpace",
-          "path": "/dashboard",
-        },
-        Object {
-          "pageTitle": "Page not found",
-          "render": [Function],
-        },
-      ]
-    }
-  />
-  <WithStyles(AppBar)
-    className="AppBar"
-    color="primary"
-    position="fixed"
-  >
-    <WithStyles(Toolbar)
-      style={
-        Object {
-          "height": "70px",
-        }
-      }
-    >
-      <WithStyles(Grid)
-        alignItems="center"
-        container={true}
-        direction="row"
-        justify="flex-start"
-        spacing={8}
-        wrap="nowrap"
-      >
-        <WithStyles(Grid)
-          item={true}
-        >
-          <WithStyles(Tooltip)
-            TransitionComponent={[Function]}
-            placement="bottom-end"
-            title="Main navigation"
-          >
-            <WithStyles(IconButton)
-              aria-label="Click to open the main navigation"
-              onClick={[Function]}
-              style={
-                Object {
-                  "marginLeft": "-12px",
-                  "marginRight": "12px",
-                }
-              }
-            >
-              <pure(MenuIcon)
-                style={
-                  Object {
-                    "color": "white",
-                  }
-                }
-              />
-            </WithStyles(IconButton)>
-          </WithStyles(Tooltip)>
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          style={
-            Object {
-              "paddingLeft": 0,
-            }
-          }
-          xs={true}
-        >
-          <WithStyles(Grid)
-            alignItems="center"
-            container={true}
-            justify="flex-start"
-            spacing={16}
-            wrap="nowrap"
-          >
-            <Hidden
-              implementation="js"
-              lgDown={false}
-              lgUp={false}
-              mdDown={false}
-              mdUp={false}
-              smDown={false}
-              smUp={false}
-              xlDown={false}
-              xlUp={false}
-              xsDown={true}
-              xsUp={false}
-            >
-              <WithStyles(Grid)
-                item={true}
-              >
-                <div
-                  aria-label="University of Queensland"
-                  className="smallLogo"
-                  id="logo"
-                  style={
-                    Object {
-                      "height": 66,
-                      "width": 60,
-                    }
-                  }
-                />
-              </WithStyles(Grid)>
-            </Hidden>
-            <WithStyles(Grid)
-              item={true}
-              style={
-                Object {
-                  "overflow": "hidden",
-                  "textOverflow": "ellipsis",
-                }
-              }
-              xs="auto"
-            >
-              <WithStyles(Typography)
-                component="h1"
-                noWrap={true}
-                variant="h5"
-              >
-                <a
-                  className="appTitle"
-                  href="/"
-                  style={
-                    Object {
-                      "color": "#FFFFFF",
-                    }
-                  }
-                  title="Click to return to the eSpace home page"
-                >
-                  UQ eSpace 
-                </a>
-              </WithStyles(Typography)>
-            </WithStyles(Grid)>
-          </WithStyles(Grid)>
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          sm={4}
-          xs={2}
-        >
-          <withRouter(Connect(SearchComponent))
-            autoFocus={false}
-            isInHeader={true}
-            showMobileSearchButton={true}
-            showPrefixIcon={true}
-          />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-        >
-          <WithStyles(AuthButton)
-            ariaLabel="Click to log in to eSpace"
-            isAuthorizedUser={false}
-            onClick={[Function]}
-            signInTooltipText="Log in"
-            signOutTooltipText=""
-          />
-        </WithStyles(Grid)>
-      </WithStyles(Grid)>
-    </WithStyles(Toolbar)>
-  </WithStyles(AppBar)>
-  <WithStyles(MenuDrawer)
-    docked={false}
-    drawerOpen={false}
-    history={
-      Object {
-        "location": Object {},
-      }
-    }
-    isMobile={false}
-    locale={
-      Object {
-        "closeMenuLabel": "Close menu",
-        "skipNavAriaLabel": "Click to skip, or tab to progress to the navigation",
-        "skipNavTitle": "Skip Navigation",
-      }
-    }
-    logoImage="largeLogo"
-    logoLink="http://www.uq.edu.au"
-    logoText="University of Queensland"
-    menuItems={
-      Array [
-        Object {
-          "linkTo": "/",
-          "primaryText": "Home",
-          "public": true,
-        },
-        Object {
-          "linkTo": "/records/search",
-          "primaryText": "Search eSpace",
-          "public": true,
-          "secondaryText": "",
-        },
-        Object {
-          "linkTo": "https://guides.library.uq.edu.au/for-researchers/research-publications-guide",
-          "primaryText": "Help",
-          "public": true,
-        },
-        Object {
-          "linkTo": "/contact",
-          "primaryText": "Contact",
-          "public": true,
-          "secondaryText": "",
-        },
-      ]
-    }
-    onToggleDrawer={[Function]}
-  />
-  <div
-    className="content-container"
-    style={Object {}}
-  >
-    <ConfirmDialogBox
-      hideCancelButton={true}
-      locale={
-        Object {
-          "cancelButtonLabel": "Cancel",
-          "confirmButtonLabel": "Redirect to login",
-          "confirmationMessage": "Your session has expired. Follow the login prompt to return to your submission form. You must upload your files again to successfully deposit your thesis, even if you have already uploaded your files.",
-          "confirmationTitle": "Session Expired",
-        }
-      }
-      onRef={[Function]}
-    />
-    <WithStyles(Grid)
-      alignContent="center"
-      alignItems="center"
-      container={true}
-      justify="center"
-    >
-      <WithStyles(Grid)
-        item={true}
-        style={
-          Object {
-            "marginBottom": 0,
-            "marginTop": 0,
-          }
-        }
-      >
-        <WithStyles(Alert)
-          action={[Function]}
-          actionButtonLabel="Click to login"
-          message="Login to UQ eSpace for full search results and more services."
-          title="You are not logged in"
-          type="info_outline"
-        />
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
-    <Connect(AppAlert) />
-    <Switch>
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_0"
-        pageTitle="eSpace"
-        path="/"
-      />
-      <Route
-        key="route_1"
-        pageTitle="Contact UQ eSpace"
-        path="/contact"
-        render={[Function]}
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_2"
-        path="/view/:pid(UQ:[a-z0-9]+)"
-        regExPath="/view/(UQ:[a-z0-9]+)"
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_3"
-        pageTitle="eSpace search"
-        path="/records/search"
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_4"
-        pageTitle="eSpace"
-        path="/dashboard"
-      />
-      <Route
-        key="route_5"
-        pageTitle="Page not found"
-        render={[Function]}
-      />
-    </Switch>
-  </div>
-  <Connect(WithStyles(HelpDrawer)) />
-  <WithStyles(OfflineSnackbar) />
-</WithStyles(Grid)>
-`;
-
-exports[`Application component should render alert if user is not fez author 1`] = `
+exports[`Application component should determine if it has incomplete works from props and show/hide menu item 1`] = `
 <WithStyles(Grid)
   container={true}
 >
@@ -732,6 +424,26 @@ exports[`Application component should render alert if user is not fez author 1`]
           "exact": true,
           "pageTitle": "Claim possible works",
           "path": "/records/possible",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": undefined,
+          "path": "/records/incomplete",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "exact": true,
+          "pageTitle": "Complete my work",
+          "path": "/records/:pid(UQ:[a-z0-9]+)/incomplete",
+          "render": [Function],
         },
         Object {
           "access": Array [
@@ -821,6 +533,13 @@ exports[`Application component should render alert if user is not fez author 1`]
         Object {
           "component": [Function],
           "exact": true,
+          "pageTitle": undefined,
+          "path": "/view_new/:pid(UQ:[a-z0-9]+)",
+          "regExPath": "/view_new/(UQ:[a-z0-9]+)",
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
           "pageTitle": "eSpace search",
           "path": "/records/search",
         },
@@ -912,7 +631,6 @@ exports[`Application component should render alert if user is not fez author 1`]
                 item={true}
               >
                 <div
-                  aria-label="University of Queensland"
                   className="smallLogo"
                   id="logo"
                   style={
@@ -921,7 +639,9 @@ exports[`Application component should render alert if user is not fez author 1`]
                       "width": 60,
                     }
                   }
-                />
+                >
+                  The University of Queensland
+                </div>
               </WithStyles(Grid)>
             </Hidden>
             <WithStyles(Grid)
@@ -975,7 +695,7 @@ exports[`Application component should render alert if user is not fez author 1`]
             isAuthorizedUser={true}
             onClick={[Function]}
             signInTooltipText="Log in"
-            signOutTooltipText="Log out - undefined"
+            signOutTooltipText="Log out - test1"
           />
         </WithStyles(Grid)>
       </WithStyles(Grid)>
@@ -984,6 +704,7 @@ exports[`Application component should render alert if user is not fez author 1`]
   <WithStyles(MenuDrawer)
     docked={false}
     drawerOpen={false}
+    hasIncompleteWorks={true}
     history={
       Object {
         "location": Object {},
@@ -999,7 +720,7 @@ exports[`Application component should render alert if user is not fez author 1`]
     }
     logoImage="largeLogo"
     logoLink="http://www.uq.edu.au"
-    logoText="University of Queensland"
+    logoText="The University of Queensland"
     menuItems={
       Array [
         Object {
@@ -1021,6 +742,10 @@ exports[`Application component should render alert if user is not fez author 1`]
           "primaryText": "Claim possible work",
         },
         Object {
+          "linkTo": "/records/incomplete",
+          "primaryText": "My incomplete works",
+        },
+        Object {
           "linkTo": "/records/add/find",
           "primaryText": "Add a missing work",
         },
@@ -1033,7 +758,7 @@ exports[`Application component should render alert if user is not fez author 1`]
           "primaryText": "Add a missing dataset",
         },
         Object {
-          "linkTo": "https://app.library.uq.edu.au/#/authors/uqauthor1",
+          "linkTo": "https://app.library.uq.edu.au/#/authors/undefined",
           "primaryText": "Author statistics",
         },
         Object {
@@ -1082,6 +807,11 @@ exports[`Application component should render alert if user is not fez author 1`]
       alignItems="center"
       container={true}
       justify="center"
+      style={
+        Object {
+          "marginBottom": 12,
+        }
+      }
     >
       <WithStyles(Grid)
         item={true}
@@ -1194,6 +924,31 @@ exports[`Application component should render alert if user is not fez author 1`]
         component={[Function]}
         exact={true}
         key="route_8"
+        path="/records/incomplete"
+      />
+      <Route
+        access={
+          Array [
+            "researcher",
+            "admin",
+          ]
+        }
+        exact={true}
+        key="route_9"
+        pageTitle="Complete my work"
+        path="/records/:pid(UQ:[a-z0-9]+)/incomplete"
+        render={[Function]}
+      />
+      <Route
+        access={
+          Array [
+            "researcher",
+            "admin",
+          ]
+        }
+        component={[Function]}
+        exact={true}
+        key="route_10"
         pageTitle="Claim a work"
         path="/records/claim"
       />
@@ -1206,7 +961,7 @@ exports[`Application component should render alert if user is not fez author 1`]
         }
         component={[Function]}
         exact={true}
-        key="route_9"
+        key="route_11"
         pageTitle="Request a correction or upload files"
         path="/records/:pid(UQ:[a-z0-9]+)/fix"
         regExPath="/records/(UQ:[a-z0-9]+)/fix"
@@ -1219,7 +974,7 @@ exports[`Application component should render alert if user is not fez author 1`]
           ]
         }
         exact={true}
-        key="route_10"
+        key="route_12"
         pageTitle="Add a missing work to eSpace"
         path="/records/add/find"
         render={[Function]}
@@ -1232,7 +987,7 @@ exports[`Application component should render alert if user is not fez author 1`]
           ]
         }
         exact={true}
-        key="route_11"
+        key="route_13"
         pageTitle="Add a missing work to eSpace"
         path="/records/add/results"
         render={[Function]}
@@ -1245,7 +1000,7 @@ exports[`Application component should render alert if user is not fez author 1`]
           ]
         }
         exact={true}
-        key="route_12"
+        key="route_14"
         pageTitle="Add a missing work to eSpace"
         path="/records/add/new"
         render={[Function]}
@@ -1253,7 +1008,7 @@ exports[`Application component should render alert if user is not fez author 1`]
       <Route
         component={[Function]}
         exact={true}
-        key="route_13"
+        key="route_15"
         pageTitle="Link ORCID ID to UQ eSpace"
         path="/author-identifiers/orcid/link"
       />
@@ -1266,19 +1021,19 @@ exports[`Application component should render alert if user is not fez author 1`]
         }
         component={[Function]}
         exact={true}
-        key="route_14"
+        key="route_16"
         pageTitle="Google Scholar identifier"
         path="/author-identifiers/google-scholar/link"
       />
       <Route
         component={[Function]}
         exact={true}
-        key="route_15"
+        key="route_17"
         pageTitle="eSpace"
         path="/"
       />
       <Route
-        key="route_16"
+        key="route_18"
         pageTitle="Contact UQ eSpace"
         path="/contact"
         render={[Function]}
@@ -1286,19 +1041,26 @@ exports[`Application component should render alert if user is not fez author 1`]
       <Route
         component={[Function]}
         exact={true}
-        key="route_17"
+        key="route_19"
         path="/view/:pid(UQ:[a-z0-9]+)"
         regExPath="/view/(UQ:[a-z0-9]+)"
       />
       <Route
         component={[Function]}
         exact={true}
-        key="route_18"
+        key="route_20"
+        path="/view_new/:pid(UQ:[a-z0-9]+)"
+        regExPath="/view_new/(UQ:[a-z0-9]+)"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        key="route_21"
         pageTitle="eSpace search"
         path="/records/search"
       />
       <Route
-        key="route_19"
+        key="route_22"
         pageTitle="Page not found"
         render={[Function]}
       />
@@ -1309,7 +1071,357 @@ exports[`Application component should render alert if user is not fez author 1`]
 </WithStyles(Grid)>
 `;
 
-exports[`Application component should render app for HDR with ORCID ID 1`] = `
+exports[`Application component should redirect to login page with correct return url if rhd submission route accessed 1`] = `
+<WithStyles(Grid)
+  container={true}
+>
+  <withRouter(Connect(Meta))
+    routesConfig={
+      Array [
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "eSpace",
+          "path": "/",
+        },
+        Object {
+          "pageTitle": "Contact UQ eSpace",
+          "path": "/contact",
+          "render": [Function],
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": undefined,
+          "path": "/view/:pid(UQ:[a-z0-9]+)",
+          "regExPath": "/view/(UQ:[a-z0-9]+)",
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": undefined,
+          "path": "/view_new/:pid(UQ:[a-z0-9]+)",
+          "regExPath": "/view_new/(UQ:[a-z0-9]+)",
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "eSpace search",
+          "path": "/records/search",
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "eSpace",
+          "path": "/dashboard",
+        },
+        Object {
+          "pageTitle": "Page not found",
+          "render": [Function],
+        },
+      ]
+    }
+  />
+  <WithStyles(AppBar)
+    className="AppBar"
+    color="primary"
+    position="fixed"
+  >
+    <WithStyles(Toolbar)
+      style={
+        Object {
+          "height": "70px",
+        }
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="center"
+        container={true}
+        direction="row"
+        justify="flex-start"
+        spacing={8}
+        wrap="nowrap"
+      >
+        <WithStyles(Grid)
+          item={true}
+        >
+          <WithStyles(Tooltip)
+            TransitionComponent={[Function]}
+            placement="bottom-end"
+            title="Main navigation"
+          >
+            <WithStyles(IconButton)
+              aria-label="Click to open the main navigation"
+              onClick={[Function]}
+              style={
+                Object {
+                  "marginLeft": "-12px",
+                  "marginRight": "12px",
+                }
+              }
+            >
+              <pure(MenuIcon)
+                style={
+                  Object {
+                    "color": "white",
+                  }
+                }
+              />
+            </WithStyles(IconButton)>
+          </WithStyles(Tooltip)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          style={
+            Object {
+              "paddingLeft": 0,
+            }
+          }
+          xs={true}
+        >
+          <WithStyles(Grid)
+            alignItems="center"
+            container={true}
+            justify="flex-start"
+            spacing={16}
+            wrap="nowrap"
+          >
+            <Hidden
+              implementation="js"
+              lgDown={false}
+              lgUp={false}
+              mdDown={false}
+              mdUp={false}
+              smDown={false}
+              smUp={false}
+              xlDown={false}
+              xlUp={false}
+              xsDown={true}
+              xsUp={false}
+            >
+              <WithStyles(Grid)
+                item={true}
+              >
+                <div
+                  className="smallLogo"
+                  id="logo"
+                  style={
+                    Object {
+                      "height": 66,
+                      "width": 60,
+                    }
+                  }
+                >
+                  The University of Queensland
+                </div>
+              </WithStyles(Grid)>
+            </Hidden>
+            <WithStyles(Grid)
+              item={true}
+              style={
+                Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                }
+              }
+              xs="auto"
+            >
+              <WithStyles(Typography)
+                component="h1"
+                noWrap={true}
+                variant="h5"
+              >
+                <a
+                  className="appTitle"
+                  href="/"
+                  style={
+                    Object {
+                      "color": "#FFFFFF",
+                    }
+                  }
+                  title="Click to return to the eSpace home page"
+                >
+                  UQ eSpace 
+                </a>
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          sm={4}
+          xs={2}
+        >
+          <withRouter(Connect(SearchComponent))
+            autoFocus={false}
+            isInHeader={true}
+            showMobileSearchButton={true}
+            showPrefixIcon={true}
+          />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+        >
+          <WithStyles(AuthButton)
+            ariaLabel="Click to log in to eSpace"
+            isAuthorizedUser={false}
+            onClick={[Function]}
+            signInTooltipText="Log in"
+            signOutTooltipText=""
+          />
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </WithStyles(Toolbar)>
+  </WithStyles(AppBar)>
+  <WithStyles(MenuDrawer)
+    docked={false}
+    drawerOpen={false}
+    hasIncompleteWorks={false}
+    history={
+      Object {
+        "location": Object {},
+      }
+    }
+    isMobile={false}
+    locale={
+      Object {
+        "closeMenuLabel": "Close menu",
+        "skipNavAriaLabel": "Click to skip, or tab to progress to the navigation",
+        "skipNavTitle": "Skip Navigation",
+      }
+    }
+    logoImage="largeLogo"
+    logoLink="http://www.uq.edu.au"
+    logoText="The University of Queensland"
+    menuItems={
+      Array [
+        Object {
+          "linkTo": "/",
+          "primaryText": "Home",
+          "public": true,
+        },
+        Object {
+          "linkTo": "/records/search",
+          "primaryText": "Search eSpace",
+          "public": true,
+          "secondaryText": "",
+        },
+        Object {
+          "linkTo": "https://guides.library.uq.edu.au/for-researchers/research-publications-guide",
+          "primaryText": "Help",
+          "public": true,
+        },
+        Object {
+          "linkTo": "/contact",
+          "primaryText": "Contact",
+          "public": true,
+          "secondaryText": "",
+        },
+      ]
+    }
+    onToggleDrawer={[Function]}
+  />
+  <div
+    className="content-container"
+    style={Object {}}
+  >
+    <ConfirmDialogBox
+      hideCancelButton={true}
+      locale={
+        Object {
+          "cancelButtonLabel": "Cancel",
+          "confirmButtonLabel": "Redirect to login",
+          "confirmationMessage": "Your session has expired. Follow the login prompt to return to your submission form. You must upload your files again to successfully deposit your thesis, even if you have already uploaded your files.",
+          "confirmationTitle": "Session Expired",
+        }
+      }
+      onRef={[Function]}
+    />
+    <WithStyles(Grid)
+      alignContent="center"
+      alignItems="center"
+      container={true}
+      justify="center"
+      style={
+        Object {
+          "marginBottom": 12,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        item={true}
+        style={
+          Object {
+            "marginBottom": 0,
+            "marginTop": 0,
+          }
+        }
+      >
+        <WithStyles(Alert)
+          action={[Function]}
+          actionButtonLabel="Click to login"
+          message="Login to UQ eSpace for full search results and more services."
+          title="You are not logged in"
+          type="info_outline"
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+    <Connect(AppAlert) />
+    <Switch>
+      <Route
+        component={[Function]}
+        exact={true}
+        key="route_0"
+        pageTitle="eSpace"
+        path="/"
+      />
+      <Route
+        key="route_1"
+        pageTitle="Contact UQ eSpace"
+        path="/contact"
+        render={[Function]}
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        key="route_2"
+        path="/view/:pid(UQ:[a-z0-9]+)"
+        regExPath="/view/(UQ:[a-z0-9]+)"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        key="route_3"
+        path="/view_new/:pid(UQ:[a-z0-9]+)"
+        regExPath="/view_new/(UQ:[a-z0-9]+)"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        key="route_4"
+        pageTitle="eSpace search"
+        path="/records/search"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        key="route_5"
+        pageTitle="eSpace"
+        path="/dashboard"
+      />
+      <Route
+        key="route_6"
+        pageTitle="Page not found"
+        render={[Function]}
+      />
+    </Switch>
+  </div>
+  <Connect(WithStyles(HelpDrawer)) />
+  <WithStyles(OfflineSnackbar) />
+</WithStyles(Grid)>
+`;
+
+exports[`Application component should render alert if user is not fez author 1`] = `
 <WithStyles(Grid)
   container={true}
 >
@@ -1381,6 +1493,26 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           "exact": true,
           "pageTitle": "Claim possible works",
           "path": "/records/possible",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": undefined,
+          "path": "/records/incomplete",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "exact": true,
+          "pageTitle": "Complete my work",
+          "path": "/records/:pid(UQ:[a-z0-9]+)/incomplete",
+          "render": [Function],
         },
         Object {
           "access": Array [
@@ -1466,6 +1598,13 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           "pageTitle": undefined,
           "path": "/view/:pid(UQ:[a-z0-9]+)",
           "regExPath": "/view/(UQ:[a-z0-9]+)",
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": undefined,
+          "path": "/view_new/:pid(UQ:[a-z0-9]+)",
+          "regExPath": "/view_new/(UQ:[a-z0-9]+)",
         },
         Object {
           "component": [Function],
@@ -1561,7 +1700,6 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                 item={true}
               >
                 <div
-                  aria-label="University of Queensland"
                   className="smallLogo"
                   id="logo"
                   style={
@@ -1570,7 +1708,724 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                       "width": 60,
                     }
                   }
-                />
+                >
+                  The University of Queensland
+                </div>
+              </WithStyles(Grid)>
+            </Hidden>
+            <WithStyles(Grid)
+              item={true}
+              style={
+                Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                }
+              }
+              xs="auto"
+            >
+              <WithStyles(Typography)
+                component="h1"
+                noWrap={true}
+                variant="h5"
+              >
+                <a
+                  className="appTitle"
+                  href="/"
+                  style={
+                    Object {
+                      "color": "#FFFFFF",
+                    }
+                  }
+                  title="Click to return to the eSpace home page"
+                >
+                  UQ eSpace 
+                </a>
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          sm={4}
+          xs={2}
+        >
+          <withRouter(Connect(SearchComponent))
+            autoFocus={false}
+            isInHeader={true}
+            showMobileSearchButton={true}
+            showPrefixIcon={true}
+          />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+        >
+          <WithStyles(AuthButton)
+            ariaLabel="Click to log out of eSpace"
+            isAuthorizedUser={true}
+            onClick={[Function]}
+            signInTooltipText="Log in"
+            signOutTooltipText="Log out - undefined"
+          />
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </WithStyles(Toolbar)>
+  </WithStyles(AppBar)>
+  <WithStyles(MenuDrawer)
+    docked={false}
+    drawerOpen={false}
+    hasIncompleteWorks={false}
+    history={
+      Object {
+        "location": Object {},
+      }
+    }
+    isMobile={false}
+    locale={
+      Object {
+        "closeMenuLabel": "Close menu",
+        "skipNavAriaLabel": "Click to skip, or tab to progress to the navigation",
+        "skipNavTitle": "Skip Navigation",
+      }
+    }
+    logoImage="largeLogo"
+    logoLink="http://www.uq.edu.au"
+    logoText="The University of Queensland"
+    menuItems={
+      Array [
+        Object {
+          "linkTo": "/",
+          "primaryText": "Home",
+          "public": true,
+        },
+        Object {
+          "linkTo": "/dashboard",
+          "primaryText": "My dashboard",
+          "secondaryText": undefined,
+        },
+        Object {
+          "linkTo": "/records/mine",
+          "primaryText": "My research",
+        },
+        Object {
+          "linkTo": "/records/possible",
+          "primaryText": "Claim possible work",
+        },
+        Object {
+          "linkTo": "/records/add/find",
+          "primaryText": "Add a missing work",
+        },
+        Object {
+          "linkTo": "/data-collections/mine",
+          "primaryText": "My research data",
+        },
+        Object {
+          "linkTo": "/data-collections/add",
+          "primaryText": "Add a missing dataset",
+        },
+        Object {
+          "linkTo": "https://app.library.uq.edu.au/#/authors/uqauthor1",
+          "primaryText": "Author statistics",
+        },
+        Object {
+          "divider": true,
+          "path": "/234234234242",
+        },
+        Object {
+          "linkTo": "/records/search",
+          "primaryText": "Search eSpace",
+          "public": true,
+          "secondaryText": "",
+        },
+        Object {
+          "linkTo": "https://guides.library.uq.edu.au/for-researchers/research-publications-guide",
+          "primaryText": "Help",
+          "public": true,
+        },
+        Object {
+          "linkTo": "/contact",
+          "primaryText": "Contact",
+          "public": true,
+          "secondaryText": "",
+        },
+      ]
+    }
+    onToggleDrawer={[Function]}
+  />
+  <div
+    className="content-container"
+    style={Object {}}
+  >
+    <ConfirmDialogBox
+      hideCancelButton={true}
+      locale={
+        Object {
+          "cancelButtonLabel": "Cancel",
+          "confirmButtonLabel": "Redirect to login",
+          "confirmationMessage": "Your session has expired. Follow the login prompt to return to your submission form. You must upload your files again to successfully deposit your thesis, even if you have already uploaded your files.",
+          "confirmationTitle": "Session Expired",
+        }
+      }
+      onRef={[Function]}
+    />
+    <WithStyles(Grid)
+      alignContent="center"
+      alignItems="center"
+      container={true}
+      justify="center"
+      style={
+        Object {
+          "marginBottom": 12,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        item={true}
+        style={
+          Object {
+            "marginBottom": 0,
+            "marginTop": 0,
+          }
+        }
+      >
+        <WithStyles(Alert)
+          message="Please contact the UQ eSpace administrator to resolve this."
+          title="You are not registered in UQ eSpace as an author"
+          type="info_outline"
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+    <Connect(AppAlert) />
+    <Switch>
+      <Route
+        key="route_0"
+        pageTitle="Higher degree by research thesis deposit"
+        path="/rhdsubmission"
+        render={[Function]}
+      />
+      <Route
+        key="route_1"
+        pageTitle="Professional doctorate deposit"
+        path="/habslodge"
+        render={[Function]}
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        key="route_2"
+        pageTitle="eSpace"
+        path="/"
+      />
+      <Route
+        access={
+          Array [
+            "researcher",
+            "admin",
+          ]
+        }
+        component={[Function]}
+        exact={true}
+        key="route_3"
+        path="/dashboard"
+      />
+      <Route
+        access={
+          Array [
+            "researcher",
+            "admin",
+          ]
+        }
+        component={[Function]}
+        exact={true}
+        key="route_4"
+        pageTitle="My research"
+        path="/records/mine"
+      />
+      <Route
+        access={
+          Array [
+            "researcher",
+            "admin",
+          ]
+        }
+        component={[Function]}
+        exact={true}
+        key="route_5"
+        pageTitle="My research data"
+        path="/data-collections/mine"
+      />
+      <Route
+        access={
+          Array [
+            "researcher",
+            "admin",
+          ]
+        }
+        component={[Function]}
+        exact={true}
+        key="route_6"
+        pageTitle="Add data collection"
+        path="/data-collections/add"
+      />
+      <Route
+        access={
+          Array [
+            "researcher",
+            "admin",
+          ]
+        }
+        component={[Function]}
+        exact={true}
+        key="route_7"
+        pageTitle="Claim possible works"
+        path="/records/possible"
+      />
+      <Route
+        access={
+          Array [
+            "researcher",
+            "admin",
+          ]
+        }
+        component={[Function]}
+        exact={true}
+        key="route_8"
+        path="/records/incomplete"
+      />
+      <Route
+        access={
+          Array [
+            "researcher",
+            "admin",
+          ]
+        }
+        exact={true}
+        key="route_9"
+        pageTitle="Complete my work"
+        path="/records/:pid(UQ:[a-z0-9]+)/incomplete"
+        render={[Function]}
+      />
+      <Route
+        access={
+          Array [
+            "researcher",
+            "admin",
+          ]
+        }
+        component={[Function]}
+        exact={true}
+        key="route_10"
+        pageTitle="Claim a work"
+        path="/records/claim"
+      />
+      <Route
+        access={
+          Array [
+            "researcher",
+            "admin",
+          ]
+        }
+        component={[Function]}
+        exact={true}
+        key="route_11"
+        pageTitle="Request a correction or upload files"
+        path="/records/:pid(UQ:[a-z0-9]+)/fix"
+        regExPath="/records/(UQ:[a-z0-9]+)/fix"
+      />
+      <Route
+        access={
+          Array [
+            "researcher",
+            "admin",
+          ]
+        }
+        exact={true}
+        key="route_12"
+        pageTitle="Add a missing work to eSpace"
+        path="/records/add/find"
+        render={[Function]}
+      />
+      <Route
+        access={
+          Array [
+            "researcher",
+            "admin",
+          ]
+        }
+        exact={true}
+        key="route_13"
+        pageTitle="Add a missing work to eSpace"
+        path="/records/add/results"
+        render={[Function]}
+      />
+      <Route
+        access={
+          Array [
+            "researcher",
+            "admin",
+          ]
+        }
+        exact={true}
+        key="route_14"
+        pageTitle="Add a missing work to eSpace"
+        path="/records/add/new"
+        render={[Function]}
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        key="route_15"
+        pageTitle="Link ORCID ID to UQ eSpace"
+        path="/author-identifiers/orcid/link"
+      />
+      <Route
+        access={
+          Array [
+            "researcher",
+            "admin",
+          ]
+        }
+        component={[Function]}
+        exact={true}
+        key="route_16"
+        pageTitle="Google Scholar identifier"
+        path="/author-identifiers/google-scholar/link"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        key="route_17"
+        pageTitle="eSpace"
+        path="/"
+      />
+      <Route
+        key="route_18"
+        pageTitle="Contact UQ eSpace"
+        path="/contact"
+        render={[Function]}
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        key="route_19"
+        path="/view/:pid(UQ:[a-z0-9]+)"
+        regExPath="/view/(UQ:[a-z0-9]+)"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        key="route_20"
+        path="/view_new/:pid(UQ:[a-z0-9]+)"
+        regExPath="/view_new/(UQ:[a-z0-9]+)"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        key="route_21"
+        pageTitle="eSpace search"
+        path="/records/search"
+      />
+      <Route
+        key="route_22"
+        pageTitle="Page not found"
+        render={[Function]}
+      />
+    </Switch>
+  </div>
+  <Connect(WithStyles(HelpDrawer)) />
+  <WithStyles(OfflineSnackbar) />
+</WithStyles(Grid)>
+`;
+
+exports[`Application component should render app for HDR with ORCID ID 1`] = `
+<WithStyles(Grid)
+  container={true}
+>
+  <withRouter(Connect(Meta))
+    routesConfig={
+      Array [
+        Object {
+          "pageTitle": "Higher degree by research thesis deposit",
+          "path": "/rhdsubmission",
+          "render": [Function],
+        },
+        Object {
+          "pageTitle": "Professional doctorate deposit",
+          "path": "/habslodge",
+          "render": [Function],
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "eSpace",
+          "path": "/",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": undefined,
+          "path": "/dashboard",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "My research",
+          "path": "/records/mine",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "My research data",
+          "path": "/data-collections/mine",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "Add data collection",
+          "path": "/data-collections/add",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "Claim possible works",
+          "path": "/records/possible",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": undefined,
+          "path": "/records/incomplete",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "exact": true,
+          "pageTitle": "Complete my work",
+          "path": "/records/:pid(UQ:[a-z0-9]+)/incomplete",
+          "render": [Function],
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "Claim a work",
+          "path": "/records/claim",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "Request a correction or upload files",
+          "path": "/records/:pid(UQ:[a-z0-9]+)/fix",
+          "regExPath": "/records/(UQ:[a-z0-9]+)/fix",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "exact": true,
+          "pageTitle": "Add a missing work to eSpace",
+          "path": "/records/add/find",
+          "render": [Function],
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "exact": true,
+          "pageTitle": "Add a missing work to eSpace",
+          "path": "/records/add/results",
+          "render": [Function],
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "exact": true,
+          "pageTitle": "Add a missing work to eSpace",
+          "path": "/records/add/new",
+          "render": [Function],
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "Link ORCID ID to UQ eSpace",
+          "path": "/author-identifiers/orcid/link",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "Google Scholar identifier",
+          "path": "/author-identifiers/google-scholar/link",
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "eSpace",
+          "path": "/",
+        },
+        Object {
+          "pageTitle": "Contact UQ eSpace",
+          "path": "/contact",
+          "render": [Function],
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": undefined,
+          "path": "/view/:pid(UQ:[a-z0-9]+)",
+          "regExPath": "/view/(UQ:[a-z0-9]+)",
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": undefined,
+          "path": "/view_new/:pid(UQ:[a-z0-9]+)",
+          "regExPath": "/view_new/(UQ:[a-z0-9]+)",
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "eSpace search",
+          "path": "/records/search",
+        },
+        Object {
+          "pageTitle": "Page not found",
+          "render": [Function],
+        },
+      ]
+    }
+  />
+  <WithStyles(AppBar)
+    className="AppBar"
+    color="primary"
+    position="fixed"
+  >
+    <WithStyles(Toolbar)
+      style={
+        Object {
+          "height": "70px",
+        }
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="center"
+        container={true}
+        direction="row"
+        justify="flex-start"
+        spacing={8}
+        wrap="nowrap"
+      >
+        <WithStyles(Grid)
+          item={true}
+        >
+          <WithStyles(Tooltip)
+            TransitionComponent={[Function]}
+            placement="bottom-end"
+            title="Main navigation"
+          >
+            <WithStyles(IconButton)
+              aria-label="Click to open the main navigation"
+              onClick={[Function]}
+              style={
+                Object {
+                  "marginLeft": "-12px",
+                  "marginRight": "12px",
+                }
+              }
+            >
+              <pure(MenuIcon)
+                style={
+                  Object {
+                    "color": "white",
+                  }
+                }
+              />
+            </WithStyles(IconButton)>
+          </WithStyles(Tooltip)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          style={
+            Object {
+              "paddingLeft": 0,
+            }
+          }
+          xs={true}
+        >
+          <WithStyles(Grid)
+            alignItems="center"
+            container={true}
+            justify="flex-start"
+            spacing={16}
+            wrap="nowrap"
+          >
+            <Hidden
+              implementation="js"
+              lgDown={false}
+              lgUp={false}
+              mdDown={false}
+              mdUp={false}
+              smDown={false}
+              smUp={false}
+              xlDown={false}
+              xlUp={false}
+              xsDown={true}
+              xsUp={false}
+            >
+              <WithStyles(Grid)
+                item={true}
+              >
+                <div
+                  className="smallLogo"
+                  id="logo"
+                  style={
+                    Object {
+                      "height": 66,
+                      "width": 60,
+                    }
+                  }
+                >
+                  The University of Queensland
+                </div>
               </WithStyles(Grid)>
             </Hidden>
             <WithStyles(Grid)
@@ -1633,6 +2488,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
   <WithStyles(MenuDrawer)
     docked={false}
     drawerOpen={false}
+    hasIncompleteWorks={false}
     history={
       Object {
         "location": Object {},
@@ -1648,7 +2504,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
     }
     logoImage="largeLogo"
     logoLink="http://www.uq.edu.au"
-    logoText="University of Queensland"
+    logoText="The University of Queensland"
     menuItems={
       Array [
         Object {
@@ -1821,6 +2677,31 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         component={[Function]}
         exact={true}
         key="route_8"
+        path="/records/incomplete"
+      />
+      <Route
+        access={
+          Array [
+            "researcher",
+            "admin",
+          ]
+        }
+        exact={true}
+        key="route_9"
+        pageTitle="Complete my work"
+        path="/records/:pid(UQ:[a-z0-9]+)/incomplete"
+        render={[Function]}
+      />
+      <Route
+        access={
+          Array [
+            "researcher",
+            "admin",
+          ]
+        }
+        component={[Function]}
+        exact={true}
+        key="route_10"
         pageTitle="Claim a work"
         path="/records/claim"
       />
@@ -1833,7 +2714,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         }
         component={[Function]}
         exact={true}
-        key="route_9"
+        key="route_11"
         pageTitle="Request a correction or upload files"
         path="/records/:pid(UQ:[a-z0-9]+)/fix"
         regExPath="/records/(UQ:[a-z0-9]+)/fix"
@@ -1846,7 +2727,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           ]
         }
         exact={true}
-        key="route_10"
+        key="route_12"
         pageTitle="Add a missing work to eSpace"
         path="/records/add/find"
         render={[Function]}
@@ -1859,7 +2740,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           ]
         }
         exact={true}
-        key="route_11"
+        key="route_13"
         pageTitle="Add a missing work to eSpace"
         path="/records/add/results"
         render={[Function]}
@@ -1872,7 +2753,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           ]
         }
         exact={true}
-        key="route_12"
+        key="route_14"
         pageTitle="Add a missing work to eSpace"
         path="/records/add/new"
         render={[Function]}
@@ -1880,7 +2761,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
       <Route
         component={[Function]}
         exact={true}
-        key="route_13"
+        key="route_15"
         pageTitle="Link ORCID ID to UQ eSpace"
         path="/author-identifiers/orcid/link"
       />
@@ -1893,19 +2774,19 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         }
         component={[Function]}
         exact={true}
-        key="route_14"
+        key="route_16"
         pageTitle="Google Scholar identifier"
         path="/author-identifiers/google-scholar/link"
       />
       <Route
         component={[Function]}
         exact={true}
-        key="route_15"
+        key="route_17"
         pageTitle="eSpace"
         path="/"
       />
       <Route
-        key="route_16"
+        key="route_18"
         pageTitle="Contact UQ eSpace"
         path="/contact"
         render={[Function]}
@@ -1913,19 +2794,26 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
       <Route
         component={[Function]}
         exact={true}
-        key="route_17"
+        key="route_19"
         path="/view/:pid(UQ:[a-z0-9]+)"
         regExPath="/view/(UQ:[a-z0-9]+)"
       />
       <Route
         component={[Function]}
         exact={true}
-        key="route_18"
+        key="route_20"
+        path="/view_new/:pid(UQ:[a-z0-9]+)"
+        regExPath="/view_new/(UQ:[a-z0-9]+)"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        key="route_21"
         pageTitle="eSpace search"
         path="/records/search"
       />
       <Route
-        key="route_19"
+        key="route_22"
         pageTitle="Page not found"
         render={[Function]}
       />
@@ -1960,6 +2848,13 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
           "pageTitle": undefined,
           "path": "/view/:pid(UQ:[a-z0-9]+)",
           "regExPath": "/view/(UQ:[a-z0-9]+)",
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": undefined,
+          "path": "/view_new/:pid(UQ:[a-z0-9]+)",
+          "regExPath": "/view_new/(UQ:[a-z0-9]+)",
         },
         Object {
           "component": [Function],
@@ -2065,7 +2960,6 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
                 item={true}
               >
                 <div
-                  aria-label="University of Queensland"
                   className="smallLogo"
                   id="logo"
                   style={
@@ -2074,7 +2968,9 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
                       "width": 60,
                     }
                   }
-                />
+                >
+                  The University of Queensland
+                </div>
               </WithStyles(Grid)>
             </Hidden>
             <WithStyles(Grid)
@@ -2137,6 +3033,7 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
   <WithStyles(MenuDrawer)
     docked={false}
     drawerOpen={false}
+    hasIncompleteWorks={false}
     history={
       Object {
         "location": Object {},
@@ -2152,7 +3049,7 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
     }
     logoImage="largeLogo"
     logoLink="http://www.uq.edu.au"
-    logoText="University of Queensland"
+    logoText="The University of Queensland"
     menuItems={
       Array [
         Object {
@@ -2211,6 +3108,11 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
       alignItems="center"
       container={true}
       justify="center"
+      style={
+        Object {
+          "marginBottom": 12,
+        }
+      }
     >
       <WithStyles(Grid)
         item={true}
@@ -2254,24 +3156,31 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
         component={[Function]}
         exact={true}
         key="route_3"
+        path="/view_new/:pid(UQ:[a-z0-9]+)"
+        regExPath="/view_new/(UQ:[a-z0-9]+)"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        key="route_4"
         pageTitle="eSpace search"
         path="/records/search"
       />
       <Route
-        key="route_4"
+        key="route_5"
         pageTitle="Higher degree by research thesis deposit"
         path="/rhdsubmission"
         render={[Function]}
       />
       <Route
-        key="route_5"
+        key="route_6"
         pageTitle="Professional doctorate deposit"
         path="/habslodge"
         render={[Function]}
       />
       <Route
         component={[Function]}
-        key="route_6"
+        key="route_7"
         pageTitle="Link ORCID ID to UQ eSpace"
       />
     </Switch>
@@ -2361,6 +3270,26 @@ exports[`Application component should render app for account with fez author wit
           ],
           "component": [Function],
           "exact": true,
+          "pageTitle": undefined,
+          "path": "/records/incomplete",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "exact": true,
+          "pageTitle": "Complete my work",
+          "path": "/records/:pid(UQ:[a-z0-9]+)/incomplete",
+          "render": [Function],
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
           "pageTitle": "Claim a work",
           "path": "/records/claim",
         },
@@ -2438,6 +3367,13 @@ exports[`Application component should render app for account with fez author wit
           "pageTitle": undefined,
           "path": "/view/:pid(UQ:[a-z0-9]+)",
           "regExPath": "/view/(UQ:[a-z0-9]+)",
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": undefined,
+          "path": "/view_new/:pid(UQ:[a-z0-9]+)",
+          "regExPath": "/view_new/(UQ:[a-z0-9]+)",
         },
         Object {
           "component": [Function],
@@ -2533,7 +3469,6 @@ exports[`Application component should render app for account with fez author wit
                 item={true}
               >
                 <div
-                  aria-label="University of Queensland"
                   className="smallLogo"
                   id="logo"
                   style={
@@ -2542,7 +3477,9 @@ exports[`Application component should render app for account with fez author wit
                       "width": 60,
                     }
                   }
-                />
+                >
+                  The University of Queensland
+                </div>
               </WithStyles(Grid)>
             </Hidden>
             <WithStyles(Grid)
@@ -2605,6 +3542,7 @@ exports[`Application component should render app for account with fez author wit
   <WithStyles(MenuDrawer)
     docked={false}
     drawerOpen={false}
+    hasIncompleteWorks={false}
     history={
       Object {
         "location": Object {},
@@ -2620,7 +3558,7 @@ exports[`Application component should render app for account with fez author wit
     }
     logoImage="largeLogo"
     logoLink="http://www.uq.edu.au"
-    logoText="University of Queensland"
+    logoText="The University of Queensland"
     menuItems={
       Array [
         Object {
@@ -2793,6 +3731,31 @@ exports[`Application component should render app for account with fez author wit
         component={[Function]}
         exact={true}
         key="route_8"
+        path="/records/incomplete"
+      />
+      <Route
+        access={
+          Array [
+            "researcher",
+            "admin",
+          ]
+        }
+        exact={true}
+        key="route_9"
+        pageTitle="Complete my work"
+        path="/records/:pid(UQ:[a-z0-9]+)/incomplete"
+        render={[Function]}
+      />
+      <Route
+        access={
+          Array [
+            "researcher",
+            "admin",
+          ]
+        }
+        component={[Function]}
+        exact={true}
+        key="route_10"
         pageTitle="Claim a work"
         path="/records/claim"
       />
@@ -2805,7 +3768,7 @@ exports[`Application component should render app for account with fez author wit
         }
         component={[Function]}
         exact={true}
-        key="route_9"
+        key="route_11"
         pageTitle="Request a correction or upload files"
         path="/records/:pid(UQ:[a-z0-9]+)/fix"
         regExPath="/records/(UQ:[a-z0-9]+)/fix"
@@ -2818,7 +3781,7 @@ exports[`Application component should render app for account with fez author wit
           ]
         }
         exact={true}
-        key="route_10"
+        key="route_12"
         pageTitle="Add a missing work to eSpace"
         path="/records/add/find"
         render={[Function]}
@@ -2831,7 +3794,7 @@ exports[`Application component should render app for account with fez author wit
           ]
         }
         exact={true}
-        key="route_11"
+        key="route_13"
         pageTitle="Add a missing work to eSpace"
         path="/records/add/results"
         render={[Function]}
@@ -2844,7 +3807,7 @@ exports[`Application component should render app for account with fez author wit
           ]
         }
         exact={true}
-        key="route_12"
+        key="route_14"
         pageTitle="Add a missing work to eSpace"
         path="/records/add/new"
         render={[Function]}
@@ -2852,7 +3815,7 @@ exports[`Application component should render app for account with fez author wit
       <Route
         component={[Function]}
         exact={true}
-        key="route_13"
+        key="route_15"
         pageTitle="Link ORCID ID to UQ eSpace"
         path="/author-identifiers/orcid/link"
       />
@@ -2865,19 +3828,19 @@ exports[`Application component should render app for account with fez author wit
         }
         component={[Function]}
         exact={true}
-        key="route_14"
+        key="route_16"
         pageTitle="Google Scholar identifier"
         path="/author-identifiers/google-scholar/link"
       />
       <Route
         component={[Function]}
         exact={true}
-        key="route_15"
+        key="route_17"
         pageTitle="eSpace"
         path="/"
       />
       <Route
-        key="route_16"
+        key="route_18"
         pageTitle="Contact UQ eSpace"
         path="/contact"
         render={[Function]}
@@ -2885,19 +3848,26 @@ exports[`Application component should render app for account with fez author wit
       <Route
         component={[Function]}
         exact={true}
-        key="route_17"
+        key="route_19"
         path="/view/:pid(UQ:[a-z0-9]+)"
         regExPath="/view/(UQ:[a-z0-9]+)"
       />
       <Route
         component={[Function]}
         exact={true}
-        key="route_18"
+        key="route_20"
+        path="/view_new/:pid(UQ:[a-z0-9]+)"
+        regExPath="/view_new/(UQ:[a-z0-9]+)"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        key="route_21"
         pageTitle="eSpace search"
         path="/records/search"
       />
       <Route
-        key="route_19"
+        key="route_22"
         pageTitle="Page not found"
         render={[Function]}
       />
@@ -2988,6 +3958,26 @@ exports[`Application component should render app for account with fez author wit
           ],
           "component": [Function],
           "exact": true,
+          "pageTitle": undefined,
+          "path": "/records/incomplete",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "exact": true,
+          "pageTitle": "Complete my work",
+          "path": "/records/:pid(UQ:[a-z0-9]+)/incomplete",
+          "render": [Function],
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
           "pageTitle": "Claim a work",
           "path": "/records/claim",
         },
@@ -3065,6 +4055,13 @@ exports[`Application component should render app for account with fez author wit
           "pageTitle": undefined,
           "path": "/view/:pid(UQ:[a-z0-9]+)",
           "regExPath": "/view/(UQ:[a-z0-9]+)",
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": undefined,
+          "path": "/view_new/:pid(UQ:[a-z0-9]+)",
+          "regExPath": "/view_new/(UQ:[a-z0-9]+)",
         },
         Object {
           "component": [Function],
@@ -3160,7 +4157,6 @@ exports[`Application component should render app for account with fez author wit
                 item={true}
               >
                 <div
-                  aria-label="University of Queensland"
                   className="smallLogo"
                   id="logo"
                   style={
@@ -3169,7 +4165,9 @@ exports[`Application component should render app for account with fez author wit
                       "width": 60,
                     }
                   }
-                />
+                >
+                  The University of Queensland
+                </div>
               </WithStyles(Grid)>
             </Hidden>
             <WithStyles(Grid)
@@ -3232,6 +4230,7 @@ exports[`Application component should render app for account with fez author wit
   <WithStyles(MenuDrawer)
     docked={false}
     drawerOpen={false}
+    hasIncompleteWorks={false}
     history={
       Object {
         "location": Object {},
@@ -3247,7 +4246,7 @@ exports[`Application component should render app for account with fez author wit
     }
     logoImage="largeLogo"
     logoLink="http://www.uq.edu.au"
-    logoText="University of Queensland"
+    logoText="The University of Queensland"
     menuItems={
       Array [
         Object {
@@ -3330,6 +4329,11 @@ exports[`Application component should render app for account with fez author wit
       alignItems="center"
       container={true}
       justify="center"
+      style={
+        Object {
+          "marginBottom": 12,
+        }
+      }
     >
       <WithStyles(Grid)
         item={true}
@@ -3444,6 +4448,31 @@ exports[`Application component should render app for account with fez author wit
         component={[Function]}
         exact={true}
         key="route_8"
+        path="/records/incomplete"
+      />
+      <Route
+        access={
+          Array [
+            "researcher",
+            "admin",
+          ]
+        }
+        exact={true}
+        key="route_9"
+        pageTitle="Complete my work"
+        path="/records/:pid(UQ:[a-z0-9]+)/incomplete"
+        render={[Function]}
+      />
+      <Route
+        access={
+          Array [
+            "researcher",
+            "admin",
+          ]
+        }
+        component={[Function]}
+        exact={true}
+        key="route_10"
         pageTitle="Claim a work"
         path="/records/claim"
       />
@@ -3456,7 +4485,7 @@ exports[`Application component should render app for account with fez author wit
         }
         component={[Function]}
         exact={true}
-        key="route_9"
+        key="route_11"
         pageTitle="Request a correction or upload files"
         path="/records/:pid(UQ:[a-z0-9]+)/fix"
         regExPath="/records/(UQ:[a-z0-9]+)/fix"
@@ -3469,7 +4498,7 @@ exports[`Application component should render app for account with fez author wit
           ]
         }
         exact={true}
-        key="route_10"
+        key="route_12"
         pageTitle="Add a missing work to eSpace"
         path="/records/add/find"
         render={[Function]}
@@ -3482,7 +4511,7 @@ exports[`Application component should render app for account with fez author wit
           ]
         }
         exact={true}
-        key="route_11"
+        key="route_13"
         pageTitle="Add a missing work to eSpace"
         path="/records/add/results"
         render={[Function]}
@@ -3495,7 +4524,7 @@ exports[`Application component should render app for account with fez author wit
           ]
         }
         exact={true}
-        key="route_12"
+        key="route_14"
         pageTitle="Add a missing work to eSpace"
         path="/records/add/new"
         render={[Function]}
@@ -3503,7 +4532,7 @@ exports[`Application component should render app for account with fez author wit
       <Route
         component={[Function]}
         exact={true}
-        key="route_13"
+        key="route_15"
         pageTitle="Link ORCID ID to UQ eSpace"
         path="/author-identifiers/orcid/link"
       />
@@ -3516,19 +4545,19 @@ exports[`Application component should render app for account with fez author wit
         }
         component={[Function]}
         exact={true}
-        key="route_14"
+        key="route_16"
         pageTitle="Google Scholar identifier"
         path="/author-identifiers/google-scholar/link"
       />
       <Route
         component={[Function]}
         exact={true}
-        key="route_15"
+        key="route_17"
         pageTitle="eSpace"
         path="/"
       />
       <Route
-        key="route_16"
+        key="route_18"
         pageTitle="Contact UQ eSpace"
         path="/contact"
         render={[Function]}
@@ -3536,19 +4565,26 @@ exports[`Application component should render app for account with fez author wit
       <Route
         component={[Function]}
         exact={true}
-        key="route_17"
+        key="route_19"
         path="/view/:pid(UQ:[a-z0-9]+)"
         regExPath="/view/(UQ:[a-z0-9]+)"
       />
       <Route
         component={[Function]}
         exact={true}
-        key="route_18"
+        key="route_20"
+        path="/view_new/:pid(UQ:[a-z0-9]+)"
+        regExPath="/view_new/(UQ:[a-z0-9]+)"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        key="route_21"
         pageTitle="eSpace search"
         path="/records/search"
       />
       <Route
-        key="route_19"
+        key="route_22"
         pageTitle="Page not found"
         render={[Function]}
       />
@@ -3639,6 +4675,26 @@ exports[`Application component should render app for account with fez author wit
           ],
           "component": [Function],
           "exact": true,
+          "pageTitle": undefined,
+          "path": "/records/incomplete",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "exact": true,
+          "pageTitle": "Complete my work",
+          "path": "/records/:pid(UQ:[a-z0-9]+)/incomplete",
+          "render": [Function],
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
           "pageTitle": "Claim a work",
           "path": "/records/claim",
         },
@@ -3720,6 +4776,13 @@ exports[`Application component should render app for account with fez author wit
         Object {
           "component": [Function],
           "exact": true,
+          "pageTitle": undefined,
+          "path": "/view_new/:pid(UQ:[a-z0-9]+)",
+          "regExPath": "/view_new/(UQ:[a-z0-9]+)",
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
           "pageTitle": "eSpace search",
           "path": "/records/search",
         },
@@ -3783,7 +4846,6 @@ exports[`Application component should render app for account with fez author wit
                 item={true}
               >
                 <div
-                  aria-label="University of Queensland"
                   className="smallLogo"
                   id="logo"
                   style={
@@ -3792,7 +4854,9 @@ exports[`Application component should render app for account with fez author wit
                       "width": 60,
                     }
                   }
-                />
+                >
+                  The University of Queensland
+                </div>
               </WithStyles(Grid)>
             </Hidden>
             <WithStyles(Grid)
@@ -3951,6 +5015,31 @@ exports[`Application component should render app for account with fez author wit
         component={[Function]}
         exact={true}
         key="route_8"
+        path="/records/incomplete"
+      />
+      <Route
+        access={
+          Array [
+            "researcher",
+            "admin",
+          ]
+        }
+        exact={true}
+        key="route_9"
+        pageTitle="Complete my work"
+        path="/records/:pid(UQ:[a-z0-9]+)/incomplete"
+        render={[Function]}
+      />
+      <Route
+        access={
+          Array [
+            "researcher",
+            "admin",
+          ]
+        }
+        component={[Function]}
+        exact={true}
+        key="route_10"
         pageTitle="Claim a work"
         path="/records/claim"
       />
@@ -3963,7 +5052,7 @@ exports[`Application component should render app for account with fez author wit
         }
         component={[Function]}
         exact={true}
-        key="route_9"
+        key="route_11"
         pageTitle="Request a correction or upload files"
         path="/records/:pid(UQ:[a-z0-9]+)/fix"
         regExPath="/records/(UQ:[a-z0-9]+)/fix"
@@ -3976,7 +5065,7 @@ exports[`Application component should render app for account with fez author wit
           ]
         }
         exact={true}
-        key="route_10"
+        key="route_12"
         pageTitle="Add a missing work to eSpace"
         path="/records/add/find"
         render={[Function]}
@@ -3989,7 +5078,7 @@ exports[`Application component should render app for account with fez author wit
           ]
         }
         exact={true}
-        key="route_11"
+        key="route_13"
         pageTitle="Add a missing work to eSpace"
         path="/records/add/results"
         render={[Function]}
@@ -4002,7 +5091,7 @@ exports[`Application component should render app for account with fez author wit
           ]
         }
         exact={true}
-        key="route_12"
+        key="route_14"
         pageTitle="Add a missing work to eSpace"
         path="/records/add/new"
         render={[Function]}
@@ -4010,7 +5099,7 @@ exports[`Application component should render app for account with fez author wit
       <Route
         component={[Function]}
         exact={true}
-        key="route_13"
+        key="route_15"
         pageTitle="Link ORCID ID to UQ eSpace"
         path="/author-identifiers/orcid/link"
       />
@@ -4023,19 +5112,19 @@ exports[`Application component should render app for account with fez author wit
         }
         component={[Function]}
         exact={true}
-        key="route_14"
+        key="route_16"
         pageTitle="Google Scholar identifier"
         path="/author-identifiers/google-scholar/link"
       />
       <Route
         component={[Function]}
         exact={true}
-        key="route_15"
+        key="route_17"
         pageTitle="eSpace"
         path="/"
       />
       <Route
-        key="route_16"
+        key="route_18"
         pageTitle="Contact UQ eSpace"
         path="/contact"
         render={[Function]}
@@ -4043,19 +5132,26 @@ exports[`Application component should render app for account with fez author wit
       <Route
         component={[Function]}
         exact={true}
-        key="route_17"
+        key="route_19"
         path="/view/:pid(UQ:[a-z0-9]+)"
         regExPath="/view/(UQ:[a-z0-9]+)"
       />
       <Route
         component={[Function]}
         exact={true}
-        key="route_18"
+        key="route_20"
+        path="/view_new/:pid(UQ:[a-z0-9]+)"
+        regExPath="/view_new/(UQ:[a-z0-9]+)"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        key="route_21"
         pageTitle="eSpace search"
         path="/records/search"
       />
       <Route
-        key="route_19"
+        key="route_22"
         pageTitle="Page not found"
         render={[Function]}
       />
@@ -4146,6 +5242,26 @@ exports[`Application component should render application with routing for the us
           ],
           "component": [Function],
           "exact": true,
+          "pageTitle": undefined,
+          "path": "/records/incomplete",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "exact": true,
+          "pageTitle": "Complete my work",
+          "path": "/records/:pid(UQ:[a-z0-9]+)/incomplete",
+          "render": [Function],
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
           "pageTitle": "Claim a work",
           "path": "/records/claim",
         },
@@ -4223,6 +5339,13 @@ exports[`Application component should render application with routing for the us
           "pageTitle": undefined,
           "path": "/view/:pid(UQ:[a-z0-9]+)",
           "regExPath": "/view/(UQ:[a-z0-9]+)",
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": undefined,
+          "path": "/view_new/:pid(UQ:[a-z0-9]+)",
+          "regExPath": "/view_new/(UQ:[a-z0-9]+)",
         },
         Object {
           "component": [Function],
@@ -4318,7 +5441,6 @@ exports[`Application component should render application with routing for the us
                 item={true}
               >
                 <div
-                  aria-label="University of Queensland"
                   className="smallLogo"
                   id="logo"
                   style={
@@ -4327,7 +5449,9 @@ exports[`Application component should render application with routing for the us
                       "width": 60,
                     }
                   }
-                />
+                >
+                  The University of Queensland
+                </div>
               </WithStyles(Grid)>
             </Hidden>
             <WithStyles(Grid)
@@ -4390,6 +5514,7 @@ exports[`Application component should render application with routing for the us
   <WithStyles(MenuDrawer)
     docked={false}
     drawerOpen={false}
+    hasIncompleteWorks={false}
     history={
       Object {
         "location": Object {},
@@ -4405,7 +5530,7 @@ exports[`Application component should render application with routing for the us
     }
     logoImage="largeLogo"
     logoLink="http://www.uq.edu.au"
-    logoText="University of Queensland"
+    logoText="The University of Queensland"
     menuItems={
       Array [
         Object {
@@ -4521,6 +5646,13 @@ exports[`Application component should render for anon user 1`] = `
         Object {
           "component": [Function],
           "exact": true,
+          "pageTitle": undefined,
+          "path": "/view_new/:pid(UQ:[a-z0-9]+)",
+          "regExPath": "/view_new/(UQ:[a-z0-9]+)",
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
           "pageTitle": "eSpace search",
           "path": "/records/search",
         },
@@ -4618,7 +5750,6 @@ exports[`Application component should render for anon user 1`] = `
                 item={true}
               >
                 <div
-                  aria-label="University of Queensland"
                   className="smallLogo"
                   id="logo"
                   style={
@@ -4627,7 +5758,9 @@ exports[`Application component should render for anon user 1`] = `
                       "width": 60,
                     }
                   }
-                />
+                >
+                  The University of Queensland
+                </div>
               </WithStyles(Grid)>
             </Hidden>
             <WithStyles(Grid)
@@ -4690,6 +5823,7 @@ exports[`Application component should render for anon user 1`] = `
   <WithStyles(MenuDrawer)
     docked={false}
     drawerOpen={false}
+    hasIncompleteWorks={false}
     history={
       Object {
         "location": Object {},
@@ -4705,7 +5839,7 @@ exports[`Application component should render for anon user 1`] = `
     }
     logoImage="largeLogo"
     logoLink="http://www.uq.edu.au"
-    logoText="University of Queensland"
+    logoText="The University of Queensland"
     menuItems={
       Array [
         Object {
@@ -4776,18 +5910,25 @@ exports[`Application component should render for anon user 1`] = `
         component={[Function]}
         exact={true}
         key="route_3"
+        path="/view_new/:pid(UQ:[a-z0-9]+)"
+        regExPath="/view_new/(UQ:[a-z0-9]+)"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        key="route_4"
         pageTitle="eSpace search"
         path="/records/search"
       />
       <Route
         component={[Function]}
         exact={true}
-        key="route_4"
+        key="route_5"
         pageTitle="eSpace"
         path="/dashboard"
       />
       <Route
-        key="route_5"
+        key="route_6"
         pageTitle="Page not found"
         render={[Function]}
       />
@@ -4809,7 +5950,7 @@ exports[`Application component should render loading screen while account is loa
   >
     <WithStyles(AppLoader)
       logoImage="largeLogo"
-      logoText="University of Queensland"
+      logoText="The University of Queensland"
       title="UQ eSpace "
     />
   </WithStyles(Grid)>
@@ -4840,6 +5981,13 @@ exports[`Application component should render thesis submission for HDR without m
           "pageTitle": undefined,
           "path": "/view/:pid(UQ:[a-z0-9]+)",
           "regExPath": "/view/(UQ:[a-z0-9]+)",
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": undefined,
+          "path": "/view_new/:pid(UQ:[a-z0-9]+)",
+          "regExPath": "/view_new/(UQ:[a-z0-9]+)",
         },
         Object {
           "component": [Function],
@@ -4917,7 +6065,6 @@ exports[`Application component should render thesis submission for HDR without m
                 item={true}
               >
                 <div
-                  aria-label="University of Queensland"
                   className="smallLogo"
                   id="logo"
                   style={
@@ -4926,7 +6073,9 @@ exports[`Application component should render thesis submission for HDR without m
                       "width": 60,
                     }
                   }
-                />
+                >
+                  The University of Queensland
+                </div>
               </WithStyles(Grid)>
             </Hidden>
             <WithStyles(Grid)
@@ -5016,24 +6165,31 @@ exports[`Application component should render thesis submission for HDR without m
         component={[Function]}
         exact={true}
         key="route_3"
+        path="/view_new/:pid(UQ:[a-z0-9]+)"
+        regExPath="/view_new/(UQ:[a-z0-9]+)"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        key="route_4"
         pageTitle="eSpace search"
         path="/records/search"
       />
       <Route
-        key="route_4"
+        key="route_5"
         pageTitle="Higher degree by research thesis deposit"
         path="/rhdsubmission"
         render={[Function]}
       />
       <Route
-        key="route_5"
+        key="route_6"
         pageTitle="Professional doctorate deposit"
         path="/habslodge"
         render={[Function]}
       />
       <Route
         component={[Function]}
-        key="route_6"
+        key="route_7"
         pageTitle="Link ORCID ID to UQ eSpace"
       />
     </Switch>
@@ -6018,6 +7174,26 @@ exports[`Testing wrapped App component Mounts 1`] = `
                               ],
                               "component": [Function],
                               "exact": true,
+                              "pageTitle": undefined,
+                              "path": "/records/incomplete",
+                            },
+                            Object {
+                              "access": Array [
+                                "researcher",
+                                "admin",
+                              ],
+                              "exact": true,
+                              "pageTitle": "Complete my work",
+                              "path": "/records/:pid(UQ:[a-z0-9]+)/incomplete",
+                              "render": [Function],
+                            },
+                            Object {
+                              "access": Array [
+                                "researcher",
+                                "admin",
+                              ],
+                              "component": [Function],
+                              "exact": true,
                               "pageTitle": "Claim a work",
                               "path": "/records/claim",
                             },
@@ -6095,6 +7271,13 @@ exports[`Testing wrapped App component Mounts 1`] = `
                               "pageTitle": undefined,
                               "path": "/view/:pid(UQ:[a-z0-9]+)",
                               "regExPath": "/view/(UQ:[a-z0-9]+)",
+                            },
+                            Object {
+                              "component": [Function],
+                              "exact": true,
+                              "pageTitle": undefined,
+                              "path": "/view_new/:pid(UQ:[a-z0-9]+)",
+                              "regExPath": "/view_new/(UQ:[a-z0-9]+)",
                             },
                             Object {
                               "component": [Function],
@@ -6232,6 +7415,26 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                   ],
                                   "component": [Function],
                                   "exact": true,
+                                  "pageTitle": undefined,
+                                  "path": "/records/incomplete",
+                                },
+                                Object {
+                                  "access": Array [
+                                    "researcher",
+                                    "admin",
+                                  ],
+                                  "exact": true,
+                                  "pageTitle": "Complete my work",
+                                  "path": "/records/:pid(UQ:[a-z0-9]+)/incomplete",
+                                  "render": [Function],
+                                },
+                                Object {
+                                  "access": Array [
+                                    "researcher",
+                                    "admin",
+                                  ],
+                                  "component": [Function],
+                                  "exact": true,
                                   "pageTitle": "Claim a work",
                                   "path": "/records/claim",
                                 },
@@ -6309,6 +7512,13 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                   "pageTitle": undefined,
                                   "path": "/view/:pid(UQ:[a-z0-9]+)",
                                   "regExPath": "/view/(UQ:[a-z0-9]+)",
+                                },
+                                Object {
+                                  "component": [Function],
+                                  "exact": true,
+                                  "pageTitle": undefined,
+                                  "path": "/view_new/:pid(UQ:[a-z0-9]+)",
+                                  "regExPath": "/view_new/(UQ:[a-z0-9]+)",
                                 },
                                 Object {
                                   "component": [Function],
@@ -6446,6 +7656,26 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                     ],
                                     "component": [Function],
                                     "exact": true,
+                                    "pageTitle": undefined,
+                                    "path": "/records/incomplete",
+                                  },
+                                  Object {
+                                    "access": Array [
+                                      "researcher",
+                                      "admin",
+                                    ],
+                                    "exact": true,
+                                    "pageTitle": "Complete my work",
+                                    "path": "/records/:pid(UQ:[a-z0-9]+)/incomplete",
+                                    "render": [Function],
+                                  },
+                                  Object {
+                                    "access": Array [
+                                      "researcher",
+                                      "admin",
+                                    ],
+                                    "component": [Function],
+                                    "exact": true,
                                     "pageTitle": "Claim a work",
                                     "path": "/records/claim",
                                   },
@@ -6523,6 +7753,13 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                     "pageTitle": undefined,
                                     "path": "/view/:pid(UQ:[a-z0-9]+)",
                                     "regExPath": "/view/(UQ:[a-z0-9]+)",
+                                  },
+                                  Object {
+                                    "component": [Function],
+                                    "exact": true,
+                                    "pageTitle": undefined,
+                                    "path": "/view_new/:pid(UQ:[a-z0-9]+)",
+                                    "regExPath": "/view_new/(UQ:[a-z0-9]+)",
                                   },
                                   Object {
                                     "component": [Function],
@@ -8924,7 +10161,6 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                       className="MuiGrid-item-7"
                                                                     >
                                                                       <div
-                                                                        aria-label="University of Queensland"
                                                                         className="smallLogo"
                                                                         id="logo"
                                                                         style={
@@ -8933,7 +10169,9 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "width": 60,
                                                                           }
                                                                         }
-                                                                      />
+                                                                      >
+                                                                        The University of Queensland
+                                                                      </div>
                                                                     </div>
                                                                   </Grid>
                                                                 </WithStyles(Grid)>
@@ -9837,6 +11075,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                               "loadVocabulariesList": [Function],
                                                               "logout": [Function],
                                                               "resetSavingAuthorState": [Function],
+                                                              "searchAuthorIncompletePublications": [Function],
                                                               "searchAuthorPublications": [Function],
                                                               "searchAuthors": [Function],
                                                               "searchEspacePublications": [Function],
@@ -9853,6 +11092,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                               "submitThesis": [Function],
                                                               "unclaimRecord": [Function],
                                                               "updateCurrentAuthor": [Function],
+                                                              "updateIncompleteRecord": [Function],
                                                             }
                                                           }
                                                           autoFocus={true}
@@ -11285,11 +12525,15 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                           "disableUnderline": true,
                                                                                         }
                                                                                       }
-                                                                                      aria-label="Enter your search query to search eSpace and then press Enter"
                                                                                       autoComplete="search"
                                                                                       autoFocus={true}
                                                                                       error={null}
                                                                                       fullWidth={true}
+                                                                                      inputProps={
+                                                                                        Object {
+                                                                                          "aria-label": "Enter your search query to search eSpace and then press Enter",
+                                                                                        }
+                                                                                      }
                                                                                       label={false}
                                                                                       onChange={[Function]}
                                                                                       onKeyPress={[Function]}
@@ -11301,7 +12545,6 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       variant="standard"
                                                                                     >
                                                                                       <WithStyles(FormControl)
-                                                                                        aria-label="Enter your search query to search eSpace and then press Enter"
                                                                                         error={null}
                                                                                         fullWidth={true}
                                                                                         onKeyPress={[Function]}
@@ -11309,7 +12552,6 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                         variant="standard"
                                                                                       >
                                                                                         <FormControl
-                                                                                          aria-label="Enter your search query to search eSpace and then press Enter"
                                                                                           classes={
                                                                                             Object {
                                                                                               "fullWidth": "MuiFormControl-fullWidth-286",
@@ -11328,7 +12570,6 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                           variant="standard"
                                                                                         >
                                                                                           <div
-                                                                                            aria-label="Enter your search query to search eSpace and then press Enter"
                                                                                             className="MuiFormControl-root-283 MuiFormControl-fullWidth-286"
                                                                                             onKeyPress={[Function]}
                                                                                           >
@@ -11337,6 +12578,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                               autoFocus={true}
                                                                                               disableUnderline={true}
                                                                                               fullWidth={true}
+                                                                                              inputProps={
+                                                                                                Object {
+                                                                                                  "aria-label": "Enter your search query to search eSpace and then press Enter",
+                                                                                                }
+                                                                                              }
                                                                                               onChange={[Function]}
                                                                                               placeholder="Search eSpace"
                                                                                               type="search"
@@ -11364,6 +12610,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                 }
                                                                                                 disableUnderline={true}
                                                                                                 fullWidth={true}
+                                                                                                inputProps={
+                                                                                                  Object {
+                                                                                                    "aria-label": "Enter your search query to search eSpace and then press Enter",
+                                                                                                  }
+                                                                                                }
                                                                                                 onChange={[Function]}
                                                                                                 placeholder="Search eSpace"
                                                                                                 type="search"
@@ -11391,6 +12642,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                   }
                                                                                                   fullWidth={true}
                                                                                                   inputComponent="input"
+                                                                                                  inputProps={
+                                                                                                    Object {
+                                                                                                      "aria-label": "Enter your search query to search eSpace and then press Enter",
+                                                                                                    }
+                                                                                                  }
                                                                                                   multiline={false}
                                                                                                   onChange={[Function]}
                                                                                                   placeholder="Search eSpace"
@@ -11423,6 +12679,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                     }
                                                                                                     fullWidth={true}
                                                                                                     inputComponent="input"
+                                                                                                    inputProps={
+                                                                                                      Object {
+                                                                                                        "aria-label": "Enter your search query to search eSpace and then press Enter",
+                                                                                                      }
+                                                                                                    }
                                                                                                     multiline={false}
                                                                                                     onChange={[Function]}
                                                                                                     placeholder="Search eSpace"
@@ -11435,6 +12696,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                     >
                                                                                                       <input
                                                                                                         aria-invalid={null}
+                                                                                                        aria-label="Enter your search query to search eSpace and then press Enter"
                                                                                                         autoComplete="search"
                                                                                                         autoFocus={true}
                                                                                                         className="MuiInputBase-input-310 MuiInput-input-295 MuiInputBase-inputType-313 MuiInput-inputType-298 MuiInputBase-inputTypeSearch-314 MuiInput-inputTypeSearch-299"
@@ -13672,6 +14934,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                       <WithStyles(MenuDrawer)
                         docked={false}
                         drawerOpen={false}
+                        hasIncompleteWorks={false}
                         history={
                           Object {
                             "go": [MockFunction],
@@ -13691,7 +14954,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                         }
                         logoImage="largeLogo"
                         logoLink="http://www.uq.edu.au"
-                        logoText="University of Queensland"
+                        logoText="The University of Queensland"
                         menuItems={
                           Array [
                             Object {
@@ -13770,6 +15033,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                           }
                           docked={false}
                           drawerOpen={false}
+                          hasIncompleteWorks={false}
                           history={
                             Object {
                               "go": [MockFunction],
@@ -13789,7 +15053,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                           }
                           logoImage="largeLogo"
                           logoLink="http://www.uq.edu.au"
-                          logoText="University of Queensland"
+                          logoText="The University of Queensland"
                           menuItems={
                             Array [
                               Object {
@@ -14956,6 +16220,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 "loadVocabulariesList": [Function],
                                 "logout": [Function],
                                 "resetSavingAuthorState": [Function],
+                                "searchAuthorIncompletePublications": [Function],
                                 "searchAuthorPublications": [Function],
                                 "searchAuthors": [Function],
                                 "searchEspacePublications": [Function],
@@ -14972,6 +16237,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 "submitThesis": [Function],
                                 "unclaimRecord": [Function],
                                 "updateCurrentAuthor": [Function],
+                                "updateIncompleteRecord": [Function],
                               }
                             }
                             appAlert={null}
@@ -16589,6 +17855,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "loadVocabulariesList": [Function],
                                                                             "logout": [Function],
                                                                             "resetSavingAuthorState": [Function],
+                                                                            "searchAuthorIncompletePublications": [Function],
                                                                             "searchAuthorPublications": [Function],
                                                                             "searchAuthors": [Function],
                                                                             "searchEspacePublications": [Function],
@@ -16605,6 +17872,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "submitThesis": [Function],
                                                                             "unclaimRecord": [Function],
                                                                             "updateCurrentAuthor": [Function],
+                                                                            "updateIncompleteRecord": [Function],
                                                                           }
                                                                         }
                                                                         history={
@@ -16696,6 +17964,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                               "loadVocabulariesList": [Function],
                                                                               "logout": [Function],
                                                                               "resetSavingAuthorState": [Function],
+                                                                              "searchAuthorIncompletePublications": [Function],
                                                                               "searchAuthorPublications": [Function],
                                                                               "searchAuthors": [Function],
                                                                               "searchEspacePublications": [Function],
@@ -16712,6 +17981,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                               "submitThesis": [Function],
                                                                               "unclaimRecord": [Function],
                                                                               "updateCurrentAuthor": [Function],
+                                                                              "updateIncompleteRecord": [Function],
                                                                             }
                                                                           }
                                                                           classes={
@@ -16810,6 +18080,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                 "loadVocabulariesList": [Function],
                                                                                 "logout": [Function],
                                                                                 "resetSavingAuthorState": [Function],
+                                                                                "searchAuthorIncompletePublications": [Function],
                                                                                 "searchAuthorPublications": [Function],
                                                                                 "searchAuthors": [Function],
                                                                                 "searchEspacePublications": [Function],
@@ -16826,6 +18097,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                 "submitThesis": [Function],
                                                                                 "unclaimRecord": [Function],
                                                                                 "updateCurrentAuthor": [Function],
+                                                                                "updateIncompleteRecord": [Function],
                                                                               }
                                                                             }
                                                                             classes={
@@ -17343,6 +18615,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                   "loadVocabulariesList": [Function],
                                                                                   "logout": [Function],
                                                                                   "resetSavingAuthorState": [Function],
+                                                                                  "searchAuthorIncompletePublications": [Function],
                                                                                   "searchAuthorPublications": [Function],
                                                                                   "searchAuthors": [Function],
                                                                                   "searchEspacePublications": [Function],
@@ -17359,6 +18632,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                   "submitThesis": [Function],
                                                                                   "unclaimRecord": [Function],
                                                                                   "updateCurrentAuthor": [Function],
+                                                                                  "updateIncompleteRecord": [Function],
                                                                                 }
                                                                               }
                                                                               classes={
@@ -20740,6 +22014,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                     "loadVocabulariesList": [Function],
                                                                                     "logout": [Function],
                                                                                     "resetSavingAuthorState": [Function],
+                                                                                    "searchAuthorIncompletePublications": [Function],
                                                                                     "searchAuthorPublications": [Function],
                                                                                     "searchAuthors": [Function],
                                                                                     "searchEspacePublications": [Function],
@@ -20756,6 +22031,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                     "submitThesis": [Function],
                                                                                     "unclaimRecord": [Function],
                                                                                     "updateCurrentAuthor": [Function],
+                                                                                    "updateIncompleteRecord": [Function],
                                                                                   }
                                                                                 }
                                                                               >
@@ -20801,6 +22077,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "loadVocabulariesList": [Function],
                                                                                       "logout": [Function],
                                                                                       "resetSavingAuthorState": [Function],
+                                                                                      "searchAuthorIncompletePublications": [Function],
                                                                                       "searchAuthorPublications": [Function],
                                                                                       "searchAuthors": [Function],
                                                                                       "searchEspacePublications": [Function],
@@ -20817,6 +22094,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "submitThesis": [Function],
                                                                                       "unclaimRecord": [Function],
                                                                                       "updateCurrentAuthor": [Function],
+                                                                                      "updateIncompleteRecord": [Function],
                                                                                     }
                                                                                   }
                                                                                   classes={

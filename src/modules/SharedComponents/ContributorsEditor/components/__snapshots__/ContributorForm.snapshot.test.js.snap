@@ -23,6 +23,7 @@ exports[`Component ContributorForm should display org affiliation selector if af
         fullWidth={true}
         id="nameAsPublishedField"
         onChange={[Function]}
+        onKeyDown={[Function]}
         required={false}
         value=""
       />
@@ -40,6 +41,7 @@ exports[`Component ContributorForm should display org affiliation selector if af
         color="primary"
         disabled={true}
         fullWidth={true}
+        id="submit-author"
         onClick={[Function]}
         variant="contained"
       />
@@ -71,6 +73,7 @@ exports[`Component ContributorForm should display org affiliation selector if af
         fullWidth={true}
         id="nameAsPublishedField"
         onChange={[Function]}
+        onKeyDown={[Function]}
         required={false}
         value=""
       />
@@ -80,6 +83,8 @@ exports[`Component ContributorForm should display org affiliation selector if af
       xs={12}
     >
       <NonUqOrgAffiliationFormSection
+        disableAffiliationEdit={false}
+        disableOrgTypeEdit={false}
         locale={
           Object {
             "fields": Object {
@@ -113,6 +118,7 @@ exports[`Component ContributorForm should display org affiliation selector if af
         color="primary"
         disabled={true}
         fullWidth={true}
+        id="submit-author"
         onClick={[Function]}
         variant="contained"
       />
@@ -139,6 +145,7 @@ exports[`Component ContributorForm should handle affiliation change 1`] = `
     >
       <OrgAffilicationTypeSelector
         affiliation=""
+        disabled={false}
         error={false}
         locale={
           Object {
@@ -171,6 +178,7 @@ exports[`Component ContributorForm should handle affiliation change 1`] = `
         fullWidth={true}
         id="nameAsPublishedField"
         onChange={[Function]}
+        onKeyDown={[Function]}
         required={false}
         value=""
       />
@@ -188,6 +196,107 @@ exports[`Component ContributorForm should handle affiliation change 1`] = `
         color="primary"
         disabled={true}
         fullWidth={true}
+        id="submit-author"
+        onClick={[Function]}
+        variant="contained"
+      />
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</Fragment>
+`;
+
+exports[`Component ContributorForm should process prop updates 1`] = `
+<Fragment>
+  <WithStyles(Grid)
+    container={true}
+    spacing={8}
+    style={
+      Object {
+        "marginTop": 8,
+      }
+    }
+  >
+    <WithStyles(Grid)
+      item={true}
+      sm={true}
+      xs={12}
+    >
+      <WithStyles(TextFieldWrapper)
+        autoComplete="off"
+        disabled={false}
+        error={false}
+        fullWidth={true}
+        id="nameAsPublishedField"
+        onChange={[Function]}
+        onKeyDown={[Function]}
+        required={false}
+        value="value1"
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "marginBottom": 8,
+        }
+      }
+      xs={12}
+    >
+      <WithStyles(Button)
+        color="primary"
+        disabled={false}
+        fullWidth={true}
+        id="submit-author"
+        onClick={[Function]}
+        variant="contained"
+      />
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</Fragment>
+`;
+
+exports[`Component ContributorForm should process prop updates 2`] = `
+<Fragment>
+  <WithStyles(Grid)
+    container={true}
+    spacing={8}
+    style={
+      Object {
+        "marginTop": 8,
+      }
+    }
+  >
+    <WithStyles(Grid)
+      item={true}
+      sm={true}
+      xs={12}
+    >
+      <WithStyles(TextFieldWrapper)
+        autoComplete="off"
+        disabled={false}
+        error={false}
+        fullWidth={true}
+        id="nameAsPublishedField"
+        onChange={[Function]}
+        onKeyDown={[Function]}
+        required={false}
+        value="value2"
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "marginBottom": 8,
+        }
+      }
+      xs={12}
+    >
+      <WithStyles(Button)
+        color="primary"
+        disabled={false}
+        fullWidth={true}
+        id="submit-author"
         onClick={[Function]}
         variant="contained"
       />
@@ -214,6 +323,7 @@ exports[`Component ContributorForm should render NTRO fields 1`] = `
     >
       <OrgAffilicationTypeSelector
         affiliation=""
+        disabled={false}
         error={false}
         locale={
           Object {
@@ -246,6 +356,7 @@ exports[`Component ContributorForm should render NTRO fields 1`] = `
         fullWidth={true}
         id="nameAsPublishedField"
         onChange={[Function]}
+        onKeyDown={[Function]}
         required={false}
         value=""
       />
@@ -263,6 +374,7 @@ exports[`Component ContributorForm should render NTRO fields 1`] = `
         color="primary"
         disabled={true}
         fullWidth={true}
+        id="submit-author"
         onClick={[Function]}
         variant="contained"
       />
@@ -792,7 +904,7 @@ exports[`Component ContributorForm should render connected component 1`] = `
           }
         >
           <Connect(ContributorForm)
-            onAdd={[MockFunction]}
+            onSubmit={[MockFunction]}
           >
             <ContributorForm
               actions={
@@ -804,6 +916,9 @@ exports[`Component ContributorForm should render connected component 1`] = `
                 }
               }
               authorsList={Array []}
+              contributor={Object {}}
+              disableNameAsPublished={false}
+              enableUqIdentifierOnAffiliationChange={true}
               locale={
                 Object {
                   "addButton": "Add author",
@@ -815,7 +930,7 @@ exports[`Component ContributorForm should render connected component 1`] = `
                     >
                       Step 1 of 2
                     </span>
-                     - Please 
+                    - Please 
                     <b>
                       add to a list of contributors below
                     </b>
@@ -833,8 +948,9 @@ exports[`Component ContributorForm should render connected component 1`] = `
                   "nameAsPublishedLabel": "Name as published",
                 }
               }
-              onAdd={[MockFunction]}
+              onSubmit={[MockFunction]}
               required={false}
+              showIdentifierLookup={false}
             >
               <div>
                 Please 
@@ -1116,6 +1232,7 @@ exports[`Component ContributorForm should render connected component 1`] = `
                             id="nameAsPublishedField"
                             label="Name as published"
                             onChange={[Function]}
+                            onKeyDown={[Function]}
                             placeholder="Please type the name exactly as published"
                             required={false}
                             value=""
@@ -1128,6 +1245,7 @@ exports[`Component ContributorForm should render connected component 1`] = `
                               id="nameAsPublishedField"
                               label="Name as published"
                               onChange={[Function]}
+                              onKeyDown={[Function]}
                               placeholder="Please type the name exactly as published"
                               required={false}
                               value=""
@@ -1141,6 +1259,7 @@ exports[`Component ContributorForm should render connected component 1`] = `
                                 id="nameAsPublishedField"
                                 label="Name as published"
                                 onChange={[Function]}
+                                onKeyDown={[Function]}
                                 placeholder="Please type the name exactly as published"
                                 required={false}
                                 select={false}
@@ -1151,6 +1270,7 @@ exports[`Component ContributorForm should render connected component 1`] = `
                                   classes={Object {}}
                                   error={false}
                                   fullWidth={true}
+                                  onKeyDown={[Function]}
                                   required={false}
                                   variant="standard"
                                 >
@@ -1168,11 +1288,13 @@ exports[`Component ContributorForm should render connected component 1`] = `
                                     error={false}
                                     fullWidth={true}
                                     margin="none"
+                                    onKeyDown={[Function]}
                                     required={false}
                                     variant="standard"
                                   >
                                     <div
                                       className="MuiFormControl-root-98 MuiFormControl-fullWidth-101"
+                                      onKeyDown={[Function]}
                                     >
                                       <WithStyles(InputLabel)
                                         htmlFor="nameAsPublishedField"
@@ -1494,6 +1616,7 @@ exports[`Component ContributorForm should render connected component 1`] = `
                             color="primary"
                             disabled={true}
                             fullWidth={true}
+                            id="submit-author"
                             onClick={[Function]}
                             variant="contained"
                           >
@@ -1533,6 +1656,7 @@ exports[`Component ContributorForm should render connected component 1`] = `
                               disableFocusRipple={false}
                               disabled={true}
                               fullWidth={true}
+                              id="submit-author"
                               mini={false}
                               onClick={[Function]}
                               size="medium"
@@ -1545,6 +1669,7 @@ exports[`Component ContributorForm should render connected component 1`] = `
                                 disabled={true}
                                 focusRipple={true}
                                 focusVisibleClassName="MuiButton-focusVisible-165"
+                                id="submit-author"
                                 onClick={[Function]}
                                 type="button"
                               >
@@ -1564,6 +1689,7 @@ exports[`Component ContributorForm should render connected component 1`] = `
                                   disabled={true}
                                   focusRipple={true}
                                   focusVisibleClassName="MuiButton-focusVisible-165"
+                                  id="submit-author"
                                   onClick={[Function]}
                                   tabIndex="0"
                                   type="button"
@@ -1571,6 +1697,7 @@ exports[`Component ContributorForm should render connected component 1`] = `
                                   <button
                                     className="MuiButtonBase-root-172 MuiButtonBase-disabled-173 MuiButton-root-146 MuiButton-contained-157 MuiButton-containedPrimary-158 MuiButton-raised-160 MuiButton-raisedPrimary-161 MuiButton-disabled-166 MuiButton-fullWidth-171"
                                     disabled={true}
+                                    id="submit-author"
                                     onBlur={[Function]}
                                     onClick={[Function]}
                                     onFocus={[Function]}
@@ -1633,6 +1760,7 @@ exports[`Component ContributorForm should render display name field and identifi
         fullWidth={true}
         id="nameAsPublishedField"
         onChange={[Function]}
+        onKeyDown={[Function]}
         required={false}
         value=""
       />
@@ -1648,6 +1776,7 @@ exports[`Component ContributorForm should render display name field and identifi
         hintText="Type UQ author name to search"
         id="identifierField"
         onChange={[Function]}
+        value=""
       />
     </WithStyles(Grid)>
     <WithStyles(Grid)
@@ -1663,6 +1792,7 @@ exports[`Component ContributorForm should render display name field and identifi
         color="primary"
         disabled={true}
         fullWidth={true}
+        id="submit-author"
         onClick={[Function]}
         variant="contained"
       />
@@ -1694,6 +1824,7 @@ exports[`Component ContributorForm should render display name field and role fie
         fullWidth={true}
         id="nameAsPublishedField"
         onChange={[Function]}
+        onKeyDown={[Function]}
         required={false}
         value=""
       />
@@ -1706,8 +1837,9 @@ exports[`Component ContributorForm should render display name field and role fie
     >
       <Connect(WithStyles(AutoCompleteAsyncField))
         autoComplete="off"
-        disabled={false}
-        error={true}
+        clearInput={true}
+        disabled={true}
+        error={false}
         fullWidth={true}
         id="creatorRoleField"
         onChange={[Function]}
@@ -1728,6 +1860,7 @@ exports[`Component ContributorForm should render display name field and role fie
         color="primary"
         disabled={true}
         fullWidth={true}
+        id="submit-author"
         onClick={[Function]}
         variant="contained"
       />
@@ -1759,6 +1892,7 @@ exports[`Component ContributorForm should render display name field only 1`] = `
         fullWidth={true}
         id="nameAsPublishedField"
         onChange={[Function]}
+        onKeyDown={[Function]}
         required={false}
         value=""
       />
@@ -1776,6 +1910,7 @@ exports[`Component ContributorForm should render display name field only 1`] = `
         color="primary"
         disabled={true}
         fullWidth={true}
+        id="submit-author"
         onClick={[Function]}
         variant="contained"
       />
@@ -1808,6 +1943,7 @@ exports[`Component ContributorForm should show contributor assignment 1`] = `
         fullWidth={true}
         id="nameAsPublishedField"
         onChange={[Function]}
+        onKeyDown={[Function]}
         required={false}
         value=""
       />
@@ -1825,6 +1961,7 @@ exports[`Component ContributorForm should show contributor assignment 1`] = `
         color="primary"
         disabled={true}
         fullWidth={true}
+        id="submit-author"
         onClick={[Function]}
         variant="contained"
       />
@@ -1851,6 +1988,7 @@ exports[`Component ContributorForm should show error regarding affiliation type 
     >
       <OrgAffilicationTypeSelector
         affiliation=""
+        disabled={false}
         error={true}
         locale={
           Object {
@@ -1883,6 +2021,7 @@ exports[`Component ContributorForm should show error regarding affiliation type 
         fullWidth={true}
         id="nameAsPublishedField"
         onChange={[Function]}
+        onKeyDown={[Function]}
         required={true}
         value=""
       />
@@ -1900,6 +2039,7 @@ exports[`Component ContributorForm should show error regarding affiliation type 
         color="primary"
         disabled={true}
         fullWidth={true}
+        id="submit-author"
         onClick={[Function]}
         variant="contained"
       />
@@ -1931,6 +2071,7 @@ exports[`Component ContributorForm should show error regarding name field 1`] = 
         fullWidth={true}
         id="nameAsPublishedField"
         onChange={[Function]}
+        onKeyDown={[Function]}
         required={true}
         value=""
       />
@@ -1948,6 +2089,7 @@ exports[`Component ContributorForm should show error regarding name field 1`] = 
         color="primary"
         disabled={true}
         fullWidth={true}
+        id="submit-author"
         onClick={[Function]}
         variant="contained"
       />

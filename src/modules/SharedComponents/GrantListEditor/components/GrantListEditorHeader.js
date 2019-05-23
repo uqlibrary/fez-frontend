@@ -83,18 +83,30 @@ export class GrantListEditorHeader extends PureComponent {
                             <Grid container spacing={0} alignItems={'center'} alignContent={'center'}>
                                 <Hidden smDown>
                                     <Grid item xs={8}>
-                                        <ListItemText secondary={reorderColumn} secondaryTypographyProps={{variant: 'caption'}} style={{padding: 0}} classes={{root: classes.right}}/>
+                                        <ListItemText
+                                            secondary={reorderColumn}
+                                            secondaryTypographyProps={{variant: 'caption'}}
+                                            style={{padding: 0}}
+                                            classes={{root: classes.right}}
+                                        />
                                     </Grid>
                                 </Hidden>
                                 <Grid item xs={this.props.width === 'xs' || this.props.width === 'sm' ? 12 : 4} style={{textAlign: 'right'}}>
                                     <ListItemSecondaryAction style={{smarginTop: -4}}>
-                                        <Tooltip title={deleteAll}>
-                                            <IconButton
-                                                onClick={this._showConfirmation}
-                                                disabled={this.props.disabled}
-                                            >
-                                                <DeleteForever/>
-                                            </IconButton>
+                                        <Tooltip
+                                            title={deleteAll}
+                                            disableFocusListener={this.props.disabled}
+                                            disableHoverListener={this.props.disabled}
+                                            disableTouchListener={this.props.disabled}
+                                        >
+                                            <div style={{display: 'inline'}}>
+                                                <IconButton
+                                                    onClick={this._showConfirmation}
+                                                    disabled={this.props.disabled}
+                                                >
+                                                    <DeleteForever titleAccess={deleteAll} />
+                                                </IconButton>
+                                            </div>
                                         </Tooltip>
                                     </ListItemSecondaryAction>
                                 </Grid>

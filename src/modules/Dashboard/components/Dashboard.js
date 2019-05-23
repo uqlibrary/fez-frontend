@@ -61,6 +61,10 @@ export class DashboardClass extends PureComponent {
         possiblyYourPublicationsCountLoading: PropTypes.bool,
         hidePossiblyYourPublicationsLure: PropTypes.bool,
 
+        // incomplete Record lure
+        loadingIncompleteRecordData: PropTypes.bool,
+        incompleteRecordList: PropTypes.object,
+
         // wos/scopus data
         loadingPublicationsStats: PropTypes.bool,
         publicationsStats: PropTypes.object,
@@ -86,11 +90,16 @@ export class DashboardClass extends PureComponent {
         if (this.props.account && this.props.account.id) {
             this.props.actions.countPossiblyYourPublications(this.props.account.id);
             this.props.actions.loadAuthorPublicationsStats(this.props.account.id);
+            if(!this.props.incompleteRecordList) {
+                this.props.actions.searchAuthorIncompletePublications();
+            }
         }
     }
+
     _claimYourPublications = () => {
         this.props.history.push(pathConfig.records.possible);
     };
+
     _addPublication = () => {
         this.props.history.push(pathConfig.records.add.find);
     };
@@ -98,6 +107,10 @@ export class DashboardClass extends PureComponent {
     handleTabChange = (event, value) => {
         this.setState({
             dashboardPubsTabs: value});
+    };
+
+    redirectToIncompleteRecordlist = () => {
+        this.props.history.push(pathConfig.records.incomplete);
     };
 
     render() {
@@ -142,6 +155,11 @@ export class DashboardClass extends PureComponent {
                     <PublicationStats publicationsStats={this.props.publicationsStats}/>
                 </StandardCard>
             ) : null;
+        const pluralTextReplacement = this.props.incompleteRecordList && this.props.incompleteRecordList.publicationsListPagingData
+                                       && this.props.incompleteRecordList.publicationsListPagingData.total > 1 ? 's' : '';
+        const verbEndingTextReplacement = this.props.incompleteRecordList && this.props.incompleteRecordList.publicationsListPagingData
+                                       && this.props.incompleteRecordList.publicationsListPagingData.total > 1 ? '' : 's';
+
         return (
             <StandardPage>
                 <Grid container spacing={24}>
@@ -156,6 +174,26 @@ export class DashboardClass extends PureComponent {
                     {
                         !loading && this.props.authorDetails &&
                         <React.Fragment>
+                            {
+                                !!txt.incompleteRecordLure &&
+                                !this.props.loadingIncompleteRecordData &&
+                                !!this.props.incompleteRecordList
+                                && this.props.incompleteRecordList.publicationsListPagingData
+                                && this.props.incompleteRecordList.publicationsListPagingData.total > 0 &&
+                                <Grid item xs={12} style={{marginTop: -27}}>
+                                    <Alert
+                                        title={txt.incompleteRecordLure.title}
+                                        message={txt.incompleteRecordLure.message
+                                            .replace('[count]', this.props.incompleteRecordList.publicationsListPagingData.total)
+                                            .replace('[plural]', pluralTextReplacement)
+                                            .replace('[verbEnding]', verbEndingTextReplacement)
+                                        }
+                                        type={txt.incompleteRecordLure.type}
+                                        actionButtonLabel={txt.incompleteRecordLure.actionButtonLabel}
+                                        action={this.redirectToIncompleteRecordlist}
+                                    />
+                                </Grid>
+                            }
                             <Grid item xs={12}>
                                 <DashboardAuthorProfile
                                     authorDetails={this.props.authorDetails}

@@ -11,6 +11,7 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with both
   >
     <TextField
       fullWidth={true}
+      id="org-affiliation-name"
       label="Organisation"
       onChange={[MockFunction]}
       required={true}
@@ -25,11 +26,17 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with both
   >
     <WithStyles(FormControl)
       fullWidth={true}
+      required={true}
     >
       <WithStyles(InputLabel)>
         Organisation type
       </WithStyles(InputLabel)>
       <WithStyles(Select)
+        SelectDisplayProps={
+          Object {
+            "id": "org-affiliation-type",
+          }
+        }
         onChange={[MockFunction]}
         value="453987"
       >
@@ -103,6 +110,7 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with defa
   >
     <TextField
       fullWidth={true}
+      id="org-affiliation-name"
       label="Organisation"
       onChange={[MockFunction]}
       required={true}
@@ -117,11 +125,17 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with defa
   >
     <WithStyles(FormControl)
       fullWidth={true}
+      required={true}
     >
       <WithStyles(InputLabel)>
         Organisation type
       </WithStyles(InputLabel)>
       <WithStyles(Select)
+        SelectDisplayProps={
+          Object {
+            "id": "org-affiliation-type",
+          }
+        }
         onChange={[MockFunction]}
         value=""
       >
@@ -195,6 +209,7 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with orga
   >
     <TextField
       fullWidth={true}
+      id="org-affiliation-name"
       label="Organisation"
       onChange={[MockFunction]}
       required={true}
@@ -209,11 +224,17 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with orga
   >
     <WithStyles(FormControl)
       fullWidth={true}
+      required={true}
     >
       <WithStyles(InputLabel)>
         Organisation type
       </WithStyles(InputLabel)>
       <WithStyles(Select)
+        SelectDisplayProps={
+          Object {
+            "id": "org-affiliation-type",
+          }
+        }
         onChange={[MockFunction]}
         value="453987"
       >
@@ -287,6 +308,7 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with orga
   >
     <TextField
       fullWidth={true}
+      id="org-affiliation-name"
       label="Organisation"
       onChange={[MockFunction]}
       required={true}
@@ -301,11 +323,17 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with orga
   >
     <WithStyles(FormControl)
       fullWidth={true}
+      required={true}
     >
       <WithStyles(InputLabel)>
         Organisation type
       </WithStyles(InputLabel)>
       <WithStyles(Select)
+        SelectDisplayProps={
+          Object {
+            "id": "org-affiliation-type",
+          }
+        }
         onChange={[MockFunction]}
         value=""
       >

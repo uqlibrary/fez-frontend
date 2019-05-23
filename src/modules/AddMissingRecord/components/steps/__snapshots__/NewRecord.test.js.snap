@@ -49,7 +49,7 @@ exports[`Add new record should render alert about file uploading or issue error 
     onCancelAction={[Function]}
     onRef={[Function]}
   />
-  <PublicationForm
+  <Connect(ReduxForm)
     initialValues={
       Object {
         "currentAuthor": Array [
@@ -109,7 +109,7 @@ exports[`Add new record should render stepper and a publication form 1`] = `
     onCancelAction={[Function]}
     onRef={[Function]}
   />
-  <PublicationForm
+  <Connect(ReduxForm)
     initialValues={
       Object {
         "currentAuthor": Array [
@@ -321,23 +321,5 @@ exports[`Add new record should render the confirm dialog without an alert for a 
   onAction={[Function]}
   onCancelAction={[Function]}
   onRef={[Function]}
-/>
-`;
-
-exports[`Add new record should render with missing author information 1`] = `
-<PublicationForm
-  initialValues={
-    Object {
-      "currentAuthor": Array [
-        Object {
-          "authorId": "",
-          "nameAsPublished": "",
-        },
-      ],
-      "rek_title": "",
-    }
-  }
-  onFormCancel={[Function]}
-  onFormSubmitSuccess={[Function]}
 />
 `;
