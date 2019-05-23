@@ -239,7 +239,7 @@ describe('Component MyIncompleteRecord', () => {
             "dsi_dsid": "review_1.pdf.xml",
             "dsi_label": 'not publicly available',
             "dsi_state": "A",
-        })).toBeTruthy();
+        })).toBeFalsy();
     });
 
     it('should render no fields as they are complete', () => {

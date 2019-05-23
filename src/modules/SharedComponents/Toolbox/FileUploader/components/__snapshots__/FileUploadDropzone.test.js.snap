@@ -765,10 +765,11 @@ exports[`Component FileUploadDropzone should open files selection dialog 1`] = `
                           onKeyPress={[Function]}
                           tabIndex="0"
                         >
-                          <t
+                          <n
                             disableClick={false}
                             disablePreview={true}
                             disabled={false}
+                            getDataTransferItems={[Function]}
                             inputProps={
                               Object {
                                 "id": "Uploader",
@@ -2152,7 +2153,7 @@ exports[`Component FileUploadDropzone should open files selection dialog 1`] = `
                                 type="file"
                               />
                             </div>
-                          </t>
+                          </n>
                         </div>
                       </div>
                     </Grid>
@@ -2180,10 +2181,11 @@ exports[`Component FileUploadDropzone should render component with default props
       onKeyPress={[Function]}
       tabIndex="0"
     >
-      <t
+      <n
         disableClick={false}
         disablePreview={true}
         disabled={false}
+        getDataTransferItems={[Function]}
         inputProps={
           Object {
             "id": "Uploader",
@@ -2203,7 +2205,7 @@ exports[`Component FileUploadDropzone should render component with default props
         <WithStyles(FileUploadDropzoneStaticContent)
           locale={Object {}}
         />
-      </t>
+      </n>
     </div>
   </WithStyles(Grid)>
 </WithStyles(Grid)>
@@ -2965,10 +2967,11 @@ exports[`Component FileUploadDropzone should render disabled component 1`] = `
                           onKeyPress={[Function]}
                           tabIndex="0"
                         >
-                          <t
+                          <n
                             disableClick={true}
                             disablePreview={true}
                             disabled={true}
+                            getDataTransferItems={[Function]}
                             inputProps={
                               Object {
                                 "id": "Uploader",
@@ -4352,7 +4355,7 @@ exports[`Component FileUploadDropzone should render disabled component 1`] = `
                                 type="file"
                               />
                             </div>
-                          </t>
+                          </n>
                         </div>
                       </div>
                     </Grid>

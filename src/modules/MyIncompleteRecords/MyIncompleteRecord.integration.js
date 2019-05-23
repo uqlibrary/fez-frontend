@@ -2,7 +2,7 @@
 import React from 'react';
 import { MyIncompleteRecord } from '.';
 import Immutable from 'immutable';
-import { UQ352045, UQ716942_uqagrinb } from 'mock/data/records';
+import { UQ352045, UQ716942_uqagrinb, UQ716942_uqagrinb_grants } from 'mock/data/records';
 import { uqrdav10, uqagrinb } from 'mock/data/account';
 import {
     rtlRender,
@@ -150,4 +150,46 @@ describe('MyIncompleteRecord form', () => {
         fireEvent.click(getByTestId('submit-author'));
         expect(fragment).toMatchDiffSnapshot(fragment = asFragment());
     });
+
+    it('UQ:716942 - Creative Work:Live Performance of Creative Work - Music : Grants editor tests should prevent submission if inputs are populated', () => {
+        const route = '/records/UQ:716942/incomplete';
+        const {
+            container,
+            asFragment,
+            getByText,
+            getByTestId
+        } = rtlRender(withRedux(initialState(uqagrinb, UQ716942_uqagrinb_grants))(withRouter({route})(<MyIncompleteRecord/>)));
+
+        let fragment = asFragment();
+        expect(getByTestId('update-my-work')).toHaveAttribute('disabled');
+
+        fireEvent.click(getByTestId('quality-indicators'));
+        fireEvent.click(getByText(/commissioned by external body/i));
+        fireEvent.click(container);
+
+        expect(getByTestId('update-my-work')).not.toHaveAttribute('disabled');
+
+        fireEvent.change(getByTestId('grantAgencyName'), {target: {value: 'Grant name'}});
+        expect(getByTestId('update-my-work')).toHaveAttribute('disabled');
+        expect(fragment).toMatchDiffSnapshot(fragment = asFragment());
+
+        fireEvent.change(getByTestId('grantId'), {target: {value: '0001'}});
+        expect(getByTestId('update-my-work')).toHaveAttribute('disabled');
+        expect(fragment).toMatchDiffSnapshot(fragment = asFragment());
+
+        fireEvent.click(getByTestId('grantType'));
+        fireEvent.click(getByText(/commercial gallery/i));
+
+        expect(getByTestId('update-my-work')).toHaveAttribute('disabled');
+        expect(fragment).toMatchDiffSnapshot(fragment = asFragment());
+
+        fireEvent.click(getByTestId('grantAddButton'));
+
+        expect(getByTestId('update-my-work')).not.toHaveAttribute('disabled');
+        expect(fragment).toMatchDiffSnapshot(fragment = asFragment());
+
+
+    });
+
+
 });
