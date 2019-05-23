@@ -24,7 +24,6 @@ exports[`ContentIndicatorsField component should render default view 1`] = `
   locale={
     Object {
       "label": undefined,
-      "placeholder": undefined,
     }
   }
   selectedValue={Array []}
@@ -65,7 +64,6 @@ exports[`ContentIndicatorsField component should render with given field props 1
   locale={
     Object {
       "label": "Test label",
-      "placeholder": "Test placeholder",
     }
   }
   meta={

@@ -57,6 +57,10 @@ export default {
             }
         },
         authors: txt.components.authors,
+        contentIndicators: {
+            title: 'Content Indicators',
+            label: 'Please choose applicable indicators',
+        },
         optional: {
             title: 'Optional information',
             // help: {
@@ -1178,7 +1182,6 @@ export default {
             }
         }
     },
-
     fileUpload: {
         title: 'Upload files',
         // help: {
@@ -1193,7 +1196,6 @@ export default {
         cancelButtonLabel: 'No',
         confirmButtonLabel: 'Yes'
     },
-
     validationAlert: {
         type: 'warning',
         title: 'Validation',
