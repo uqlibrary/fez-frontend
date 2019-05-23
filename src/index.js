@@ -22,11 +22,6 @@ if (process.env.BRANCH !== 'production' && process.env.USE_MOCK) {
     require('./mock');
 }
 
-if (process.env.BRANCH === 'development') {
-    const {registerObserver} = require('react-perf-devtool');
-    registerObserver();
-}
-
 const render = () => {
     ReactDOM.render(
         <AppErrorBoundary>
