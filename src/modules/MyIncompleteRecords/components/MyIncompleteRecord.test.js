@@ -285,4 +285,10 @@ describe('Component MyIncompleteRecord', () => {
         };
         expect(styles(theme)).toMatchSnapshot();
     });
+
+    it('should set the correct ref for successfulConformationBox', () => {
+        const wrapper = setup();
+        wrapper.instance()._setSuccessConfirmation('successBox');
+        expect(wrapper.instance().successConfirmationBox).toEqual('successBox');
+    });
 });
