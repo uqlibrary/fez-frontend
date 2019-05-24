@@ -8,7 +8,7 @@ import { locale } from 'locale';
 
 export const FORM_NAME = 'MyIncompleteRecord';
 
-const onSubmit = (values, dispatch, props) => {
+export const onSubmit = (values, dispatch, props) => {
     const data = {
         ...values.toJS(),
         publication: {...props.recordToFix},
@@ -30,12 +30,15 @@ const onSubmit = (values, dispatch, props) => {
         });
 };
 
-const validate = (values, props) => {
+export const validate = (values, props) => {
     const { author } = props;
     stopSubmit(FORM_NAME, null);
     const data = values.toJS();
     const errors = {};
-    if (data.authorsAffiliation && data.authorsAffiliation.some(authorAffiliation => authorAffiliationRequired(authorAffiliation, author))) {
+    if (data.authorsAffiliation &&
+        data.authorsAffiliation
+            .some(authorAffiliation => authorAffiliationRequired(authorAffiliation, author))
+    ) {
         errors.authorsAffiliation = locale.validationErrors.authorsAffiliationIncomplete;
     }
     return errors;

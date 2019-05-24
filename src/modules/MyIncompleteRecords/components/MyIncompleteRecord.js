@@ -57,8 +57,6 @@ export class MyIncompleteRecordClass extends PureComponent {
         hasAnyFiles: PropTypes.bool,
 
         history: PropTypes.object.isRequired,
-        match: PropTypes.object.isRequired,
-        actions: PropTypes.object.isRequired,
 
         publicationToFixFileUploadingError: PropTypes.bool,
         disableDeleteAllGrants: PropTypes.bool,
