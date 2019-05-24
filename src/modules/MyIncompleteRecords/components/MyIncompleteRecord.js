@@ -19,7 +19,7 @@ import { PublicationCitation } from 'modules/SharedComponents/PublicationCitatio
 import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
 import { NtroFields } from 'modules/SharedComponents/Toolbox/NtroFields';
 
-import { general, validation, routes } from 'config';
+import { general, validation, routes, incompleteRecord } from 'config';
 import { default as pagesLocale } from 'locale/pages';
 import { default as formsLocale } from 'locale/forms';
 import { default as viewRecordLocale } from 'locale/viewRecord';
@@ -36,7 +36,6 @@ import {
 import {pathConfig} from 'config/routes';
 
 import {withStyles} from '@material-ui/core/styles';
-import {viewRecordsConfig} from 'config';
 
 export const styles = (theme) => ({
     GridType: {
@@ -184,7 +183,7 @@ export class MyIncompleteRecordClass extends PureComponent {
     };
 
     isFileValid = (dataStream) => {
-        const {files: {blacklist}} = viewRecordsConfig;
+        const {files: {blacklist}} = incompleteRecord;
         return !dataStream.dsi_dsid.match(blacklist.namePrefixRegex)
             && (!dataStream.dsi_label || !dataStream.dsi_label.match(new RegExp(blacklist.descriptionKeywordsRegex, 'gi')))
             && dataStream.dsi_state === 'A';
