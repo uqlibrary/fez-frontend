@@ -20,6 +20,7 @@ export * as general from './general';
 export {publicationTypes, numberToWords} from './general';
 export * as routes from './routes';
 export * as openAccessConfig from './openAccess';
+export {default as incompleteRecord} from './incompleteRecord';
 export {viewRecordsConfig} from './viewRecord';
 export {trendingPublicationsConfig} from './trendingPublications';
 export {claimRecordConfig} from './claimRecord';
