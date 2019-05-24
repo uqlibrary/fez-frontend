@@ -13,7 +13,7 @@ import { leftJoin } from 'helpers/general';
 import { locale } from 'locale';
 import { authorAffiliationRequired } from 'config/validation';
 import { default as pagesLocale } from 'locale/pages';
-import {viewRecordsConfig} from 'config';
+import {incompleteRecord} from 'config';
 
 import MyIncompleteRecordForm from './MyIncompleteRecordForm';
 
@@ -213,11 +213,10 @@ export default class MyIncompleteRecordContainer extends React.Component {
     };
 
     isFileValid = (dataStream) => {
-        const {files: {blacklist}} = viewRecordsConfig;
-
-        return !dataStream.dsi_dsid.match(blacklist.namePrefixRegex) &&
-            (!dataStream.dsi_label || !dataStream.dsi_label.match(new RegExp(blacklist.descriptionKeywordsRegex, 'gi'))) &&
-            dataStream.dsi_state === 'A';
+        const {files: {blacklist}} = incompleteRecord;
+        return !dataStream.dsi_dsid.match(blacklist.namePrefixRegex)
+            && (!dataStream.dsi_label || !dataStream.dsi_label.match(new RegExp(blacklist.descriptionKeywordsRegex, 'gi')))
+            && dataStream.dsi_state === 'A';
     };
 
     render() {

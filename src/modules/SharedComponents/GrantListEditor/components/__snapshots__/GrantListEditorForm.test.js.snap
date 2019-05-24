@@ -52,6 +52,7 @@ exports[`GrantListEditorForm should hide grant agency type input 1`] = `
         color="primary"
         disabled={true}
         fullWidth={true}
+        id="grantAddButton"
         onClick={[Function]}
         variant="contained"
       >
@@ -1587,12 +1588,22 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                     </InputLabel>
                                   </WithStyles(InputLabel)>
                                   <WithStyles(Select)
+                                    SelectDisplayProps={
+                                      Object {
+                                        "id": "grantType",
+                                      }
+                                    }
                                     disabled={true}
                                     onChange={[Function]}
                                     value=""
                                   >
                                     <Select
                                       IconComponent={[Function]}
+                                      SelectDisplayProps={
+                                        Object {
+                                          "id": "grantType",
+                                        }
+                                      }
                                       autoWidth={false}
                                       classes={
                                         Object {
@@ -1620,7 +1631,9 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                           Object {
                                             "IconComponent": [Function],
                                             "MenuProps": undefined,
-                                            "SelectDisplayProps": undefined,
+                                            "SelectDisplayProps": Object {
+                                              "id": "grantType",
+                                            },
                                             "autoWidth": false,
                                             "children": Array [
                                               <WithStyles(MenuItem)
@@ -1717,7 +1730,9 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                             Object {
                                               "IconComponent": [Function],
                                               "MenuProps": undefined,
-                                              "SelectDisplayProps": undefined,
+                                              "SelectDisplayProps": Object {
+                                                "id": "grantType",
+                                              },
                                               "autoWidth": false,
                                               "children": Array [
                                                 <WithStyles(MenuItem)
@@ -1815,7 +1830,9 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                               Object {
                                                 "IconComponent": [Function],
                                                 "MenuProps": undefined,
-                                                "SelectDisplayProps": undefined,
+                                                "SelectDisplayProps": Object {
+                                                  "id": "grantType",
+                                                },
                                                 "autoWidth": false,
                                                 "children": Array [
                                                   <WithStyles(MenuItem)
@@ -1919,7 +1936,9 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                 Object {
                                                   "IconComponent": [Function],
                                                   "MenuProps": undefined,
-                                                  "SelectDisplayProps": undefined,
+                                                  "SelectDisplayProps": Object {
+                                                    "id": "grantType",
+                                                  },
                                                   "autoWidth": false,
                                                   "children": Array [
                                                     <WithStyles(MenuItem)
@@ -2000,6 +2019,11 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                               >
                                                 <SelectInput
                                                   IconComponent={[Function]}
+                                                  SelectDisplayProps={
+                                                    Object {
+                                                      "id": "grantType",
+                                                    }
+                                                  }
                                                   aria-invalid={false}
                                                   autoWidth={false}
                                                   className="MuiInputBase-input-126 MuiInput-input-111 MuiInputBase-disabled-119 MuiInput-disabled-106"
@@ -2033,6 +2057,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                       aria-owns={null}
                                                       aria-pressed="false"
                                                       className="MuiSelect-select-156 MuiSelect-selectMenu-159 MuiSelect-disabled-160 MuiInputBase-input-126 MuiInput-input-111 MuiInputBase-disabled-119 MuiInput-disabled-106"
+                                                      id="grantType"
                                                       onBlur={[Function]}
                                                       onClick={null}
                                                       onFocus={[Function]}
@@ -2818,6 +2843,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                               color="primary"
                               disabled={true}
                               fullWidth={true}
+                              id="grantAddButton"
                               onClick={[Function]}
                               variant="contained"
                             >
@@ -2857,6 +2883,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                 disableFocusRipple={false}
                                 disabled={true}
                                 fullWidth={true}
+                                id="grantAddButton"
                                 mini={false}
                                 onClick={[Function]}
                                 size="medium"
@@ -2869,6 +2896,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                   disabled={true}
                                   focusRipple={true}
                                   focusVisibleClassName="MuiButton-focusVisible-194"
+                                  id="grantAddButton"
                                   onClick={[Function]}
                                   type="button"
                                 >
@@ -2888,6 +2916,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                     disabled={true}
                                     focusRipple={true}
                                     focusVisibleClassName="MuiButton-focusVisible-194"
+                                    id="grantAddButton"
                                     onClick={[Function]}
                                     tabIndex="0"
                                     type="button"
@@ -2895,6 +2924,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                     <button
                                       className="MuiButtonBase-root-201 MuiButtonBase-disabled-202 MuiButton-root-175 MuiButton-contained-186 MuiButton-containedPrimary-187 MuiButton-raised-189 MuiButton-raisedPrimary-190 MuiButton-disabled-195 MuiButton-fullWidth-200"
                                       disabled={true}
+                                      id="grantAddButton"
                                       onBlur={[Function]}
                                       onClick={[Function]}
                                       onFocus={[Function]}
@@ -4438,12 +4468,22 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                 </InputLabel>
                               </WithStyles(InputLabel)>
                               <WithStyles(Select)
+                                SelectDisplayProps={
+                                  Object {
+                                    "id": "grantType",
+                                  }
+                                }
                                 disabled={true}
                                 onChange={[Function]}
                                 value=""
                               >
                                 <Select
                                   IconComponent={[Function]}
+                                  SelectDisplayProps={
+                                    Object {
+                                      "id": "grantType",
+                                    }
+                                  }
                                   autoWidth={false}
                                   classes={
                                     Object {
@@ -4471,7 +4511,9 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                       Object {
                                         "IconComponent": [Function],
                                         "MenuProps": undefined,
-                                        "SelectDisplayProps": undefined,
+                                        "SelectDisplayProps": Object {
+                                          "id": "grantType",
+                                        },
                                         "autoWidth": false,
                                         "children": Array [
                                           <WithStyles(MenuItem)
@@ -4568,7 +4610,9 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                         Object {
                                           "IconComponent": [Function],
                                           "MenuProps": undefined,
-                                          "SelectDisplayProps": undefined,
+                                          "SelectDisplayProps": Object {
+                                            "id": "grantType",
+                                          },
                                           "autoWidth": false,
                                           "children": Array [
                                             <WithStyles(MenuItem)
@@ -4666,7 +4710,9 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                           Object {
                                             "IconComponent": [Function],
                                             "MenuProps": undefined,
-                                            "SelectDisplayProps": undefined,
+                                            "SelectDisplayProps": Object {
+                                              "id": "grantType",
+                                            },
                                             "autoWidth": false,
                                             "children": Array [
                                               <WithStyles(MenuItem)
@@ -4770,7 +4816,9 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                             Object {
                                               "IconComponent": [Function],
                                               "MenuProps": undefined,
-                                              "SelectDisplayProps": undefined,
+                                              "SelectDisplayProps": Object {
+                                                "id": "grantType",
+                                              },
                                               "autoWidth": false,
                                               "children": Array [
                                                 <WithStyles(MenuItem)
@@ -4851,6 +4899,11 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                           >
                                             <SelectInput
                                               IconComponent={[Function]}
+                                              SelectDisplayProps={
+                                                Object {
+                                                  "id": "grantType",
+                                                }
+                                              }
                                               aria-invalid={false}
                                               autoWidth={false}
                                               className="MuiInputBase-input-126 MuiInput-input-111 MuiInputBase-disabled-119 MuiInput-disabled-106"
@@ -4884,6 +4937,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                                   aria-owns={null}
                                                   aria-pressed="false"
                                                   className="MuiSelect-select-156 MuiSelect-selectMenu-159 MuiSelect-disabled-160 MuiInputBase-input-126 MuiInput-input-111 MuiInputBase-disabled-119 MuiInput-disabled-106"
+                                                  id="grantType"
                                                   onBlur={[Function]}
                                                   onClick={null}
                                                   onFocus={[Function]}
@@ -5669,6 +5723,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                           color="primary"
                           disabled={true}
                           fullWidth={true}
+                          id="grantAddButton"
                           onClick={[Function]}
                           variant="contained"
                         >
@@ -5708,6 +5763,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                             disableFocusRipple={false}
                             disabled={true}
                             fullWidth={true}
+                            id="grantAddButton"
                             mini={false}
                             onClick={[Function]}
                             size="medium"
@@ -5720,6 +5776,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                               disabled={true}
                               focusRipple={true}
                               focusVisibleClassName="MuiButton-focusVisible-194"
+                              id="grantAddButton"
                               onClick={[Function]}
                               type="button"
                             >
@@ -5739,6 +5796,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                 disabled={true}
                                 focusRipple={true}
                                 focusVisibleClassName="MuiButton-focusVisible-194"
+                                id="grantAddButton"
                                 onClick={[Function]}
                                 tabIndex="0"
                                 type="button"
@@ -5746,6 +5804,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                 <button
                                   className="MuiButtonBase-root-201 MuiButtonBase-disabled-202 MuiButton-root-175 MuiButton-contained-186 MuiButton-containedPrimary-187 MuiButton-raised-189 MuiButton-raisedPrimary-190 MuiButton-disabled-195 MuiButton-fullWidth-200"
                                   disabled={true}
+                                  id="grantAddButton"
                                   onBlur={[Function]}
                                   onClick={[Function]}
                                   onFocus={[Function]}
@@ -5841,6 +5900,11 @@ exports[`GrantListEditorForm should set grant agency type as a required input if
       >
         <WithStyles(InputLabel) />
         <WithStyles(Select)
+          SelectDisplayProps={
+            Object {
+              "id": "grantType",
+            }
+          }
           disabled={true}
           onChange={[Function]}
           value=""
@@ -5908,6 +5972,7 @@ exports[`GrantListEditorForm should set grant agency type as a required input if
         color="primary"
         disabled={true}
         fullWidth={true}
+        id="grantAddButton"
         onClick={[Function]}
         variant="contained"
       >
@@ -5975,6 +6040,11 @@ exports[`GrantListEditorForm should set grant agency type as a required input if
       >
         <WithStyles(InputLabel) />
         <WithStyles(Select)
+          SelectDisplayProps={
+            Object {
+              "id": "grantType",
+            }
+          }
           disabled={false}
           onChange={[Function]}
           value=""
@@ -6047,6 +6117,7 @@ exports[`GrantListEditorForm should set grant agency type as a required input if
         color="primary"
         disabled={true}
         fullWidth={true}
+        id="grantAddButton"
         onClick={[Function]}
         variant="contained"
       >
@@ -6114,6 +6185,11 @@ exports[`GrantListEditorForm should set grant agency type as a required input if
       >
         <WithStyles(InputLabel) />
         <WithStyles(Select)
+          SelectDisplayProps={
+            Object {
+              "id": "grantType",
+            }
+          }
           disabled={false}
           onChange={[Function]}
           value=""
@@ -6186,6 +6262,7 @@ exports[`GrantListEditorForm should set grant agency type as a required input if
         color="primary"
         disabled={true}
         fullWidth={true}
+        id="grantAddButton"
         onClick={[Function]}
         variant="contained"
       >

@@ -126,7 +126,7 @@ describe('MyIncompleteRecord Container', () => {
             showSignificance: true
         });
         expect(wrapper.state().isAuthorLinked).toBeFalsy();
-        expect(wrapper.state().hasAnyFiles).toBeFalsy();
+        expect(wrapper.state().hasAnyFiles).toBeTruthy();
         expect(wrapper.state().initialValues).toEqual({
             grants: [{
                 grantAgencyName: 'Test 1',
@@ -246,7 +246,7 @@ describe('MyIncompleteRecord Container', () => {
             showSignificance: true
         });
         expect(wrapper.state().isAuthorLinked).toBeTruthy();
-        expect(wrapper.state().hasAnyFiles).toBeFalsy();
+        expect(wrapper.state().hasAnyFiles).toBeTruthy();
         expect(wrapper.state().initialValues).toEqual({
             grants: [],
             authorsAffiliation: [{
@@ -449,6 +449,27 @@ describe('MyIncompleteRecord Container', () => {
             "dsi_pid": "UQ:719129",
             "dsi_dsid": "review_1.pdf.xml",
             "dsi_label": 'not publicly available',
+            "dsi_state": "A",
+        })).toBeTruthy();
+
+        expect(wrapper.instance().isFileValid({
+            "dsi_pid": "UQ:719129",
+            "dsi_dsid": "review_1.pdf.xml",
+            "dsi_label": 'corrected thesis',
+            "dsi_state": "A",
+        })).toBeFalsy();
+
+        expect(wrapper.instance().isFileValid({
+            "dsi_pid": "UQ:719129",
+            "dsi_dsid": "review_1.pdf.xml",
+            "dsi_label": 'ERA',
+            "dsi_state": "A",
+        })).toBeTruthy();
+
+        expect(wrapper.instance().isFileValid({
+            "dsi_pid": "UQ:719129",
+            "dsi_dsid": "thumbnail_review_1.pdf.xml",
+            "dsi_label": 'ERA',
             "dsi_state": "A",
         })).toBeFalsy();
     });

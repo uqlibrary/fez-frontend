@@ -49,7 +49,7 @@ exports[`MyIncompleteRecord Container should display form once record and author
   }
   dirty={false}
   disableInitialGrants={true}
-  hasAnyFiles={false}
+  hasAnyFiles={true}
   initialValues={
     Object {
       "authorsAffiliation": Array [
@@ -688,7 +688,7 @@ exports[`MyIncompleteRecord Container should load all contribution statements an
   }
   dirty={false}
   disableInitialGrants={true}
-  hasAnyFiles={false}
+  hasAnyFiles={true}
   initialValues={
     Object {
       "authorsAffiliation": Array [
