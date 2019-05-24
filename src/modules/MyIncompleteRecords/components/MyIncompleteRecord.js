@@ -190,7 +190,6 @@ export class MyIncompleteRecordClass extends PureComponent {
     };
 
     render() {
-        console.log(incompleteRecord);
         const txt = pagesLocale.pages.incompletePublication;
 
         const { accountAuthorLoading, loadingRecordToFix } = this.props;
