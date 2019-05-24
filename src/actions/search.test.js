@@ -14,10 +14,6 @@ beforeEach(() => {
 describe('Search action creators', () => {
     const testTitleSearchParam = 'global';
 
-    // extend expect to check actions
-    expect.extend({toHaveDispatchedActions});
-    expect.extend({toHaveAnyOrderDispatchedActions});
-
     beforeEach(() => {
         mockActionsStore = setupStoreForActions();
         mockApi = setupMockAdapter();

@@ -53,6 +53,11 @@ describe('AutoCompleteAsyncField component', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should render a spinner while loading', () => {
+        const wrapper = setup({itemsListLoading: true }, false);
+        expect(toJson(wrapper.find('CircularProgress'))).toMatchSnapshot();
+    });
+
     it('should render autosuggest field and call action creator', () => {
         const testFunction = jest.fn();
         const wrapper = setup({ loadSuggestions: testFunction, async: false }, false);

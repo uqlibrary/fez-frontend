@@ -1,8 +1,10 @@
-import React, {PureComponent, Fragment} from 'react';
+import React, { PureComponent, Fragment } from 'react';
 import PropTypes from 'prop-types';
-import {numberToWords} from 'config';
-import {ORG_TYPES_LOOKUP} from 'config/general';
-import {withStyles} from '@material-ui/core/styles';
+import { numberToWords } from 'config';
+import { ORG_TYPES_LOOKUP } from 'config/general';
+import locale from 'locale/global';
+
+import { withStyles } from '@material-ui/core/styles';
 import withWidth from '@material-ui/core/withWidth';
 import Grid from '@material-ui/core/Grid';
 import ListItem from '@material-ui/core/ListItem';
@@ -18,21 +20,39 @@ import PersonOutlined from '@material-ui/icons/PersonOutlined';
 import Delete from '@material-ui/icons/Delete';
 import KeyboardArrowDown from '@material-ui/icons/KeyboardArrowDown';
 import KeyboardArrowUp from '@material-ui/icons/KeyboardArrowUp';
-import {ConfirmDialogBox} from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
+import Lock from '@material-ui/icons/Lock';
+import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 
 export const styles = (theme) => ({
+    listContainer: {
+        padding: '0',
+    },
     listItem: {
-        padding: '0'
+        borderLeft: '5px solid transparent',
+        cursor: 'pointer',
+        width: '100%',
+        margin: '0'
+    },
+    disabledListItem: {
+        width: '100%',
+        margin: '0',
+        outline: 'none !important',
+        '&:focus': {
+            outline: 'none !important'
+        }
+    },
+    highlighted: {
+        borderLeft: '5px solid red',
     },
     rowSelected: {
-        backgroundColor: ((theme.palette || {}).accent || {}).light
+        backgroundColor: ((theme.palette || {}).accent || {}).main,
     },
     selected: {
         color: 'white !important',
-        fontWeight: theme.typography.fontWeightMedium
+        fontWeight: theme.typography.fontWeightMedium,
     },
     hideIcon: {
-        display: 'none'
+        display: 'none',
     },
     primary: {
         fontSize: theme.typography.body2.fontSize,
@@ -40,36 +60,30 @@ export const styles = (theme) => ({
     identifierName: {
         fontSize: theme.typography.caption.fontSize,
         marginTop: 8,
-        '&:before': {
-            content: '"UQ Id: "'
-        }
     },
     identifierSubtitle: {
         fontSize: theme.typography.caption.fontSize,
-        '&:before': {
-            content: '"UQ Username: "'
-        }
-    }
+    },
 });
 
 export class ContributorRow extends PureComponent {
     static propTypes = {
-        index: PropTypes.number.isRequired,
-        contributor: PropTypes.object.isRequired,
-        canMoveUp: PropTypes.bool,
         canMoveDown: PropTypes.bool,
-        onMoveUp: PropTypes.func,
-        onMoveDown: PropTypes.func,
-        onDelete: PropTypes.func,
-        showIdentifierLookup: PropTypes.bool,
-        showContributorAssignment: PropTypes.bool,
-        disabledContributorAssignment: PropTypes.bool,
-        onContributorAssigned: PropTypes.func,
-        locale: PropTypes.object,
-        disabled: PropTypes.bool,
+        canMoveUp: PropTypes.bool,
         classes: PropTypes.object,
+        contributor: PropTypes.object.isRequired,
+        disabled: PropTypes.bool,
+        hideDelete: PropTypes.bool,
+        hideReorder: PropTypes.bool,
+        index: PropTypes.number.isRequired,
+        locale: PropTypes.object,
+        onSelect: PropTypes.func,
+        onDelete: PropTypes.func,
+        onMoveDown: PropTypes.func,
+        onMoveUp: PropTypes.func,
+        showContributorAssignment: PropTypes.bool,
         width: PropTypes.string,
-        showRoleInput: PropTypes.bool
+        required: PropTypes.bool
     };
 
     static defaultProps = {
@@ -79,13 +93,18 @@ export class ContributorRow extends PureComponent {
             moveDownHint: 'Move record down the order',
             deleteHint: 'Remove this record',
             selectHint: 'Select this record ([name]) to assign it to you',
+            lockedTooltip: 'You are not able to edit this row',
             deleteRecordConfirmation: {
                 confirmationTitle: 'Delete record',
                 confirmationMessage: 'Are you sure you want to delete this record?',
                 cancelButtonLabel: 'No',
                 confirmButtonLabel: 'Yes'
-            }
-        }
+            },
+            deleteButtonId: (index) => `delete-record-${index}`
+        },
+        hideReorder: false,
+        hideDelete: false,
+        required: false
     };
 
     constructor(props) {
@@ -96,7 +115,7 @@ export class ContributorRow extends PureComponent {
         this.confirmationBox.showConfirmation();
     };
 
-    _deleteRecord = () => {
+    _onDelete = () => {
         if (!this.props.disabled && this.props.onDelete) {
             this.props.onDelete(this.props.contributor, this.props.index);
         }
@@ -114,54 +133,50 @@ export class ContributorRow extends PureComponent {
         }
     };
 
-    _onContributorAssignedKeyboard = (event) => {
+    _onSelectKeyboard = (event) => {
         if (event.key === 'Enter') {
-            this._assignContributor();
+            this._select();
         }
     };
 
-    _onContributorAssigned = (event) => {
-        this._assignContributor();
+    _onSelect = (event) => {
+        this._select();
         event && event.currentTarget.blur();
     };
 
-    _assignContributor = () => {
-        if(this.props.contributor.selected) {
-            // deselect this contributor
-            if (!this.props.disabled && this.props.onContributorAssigned) {
-                this.props.onContributorAssigned(null, null);
-            }
-        } else {
-            // select this contributor
-            if (!this.props.disabled && this.props.onContributorAssigned) {
-                this.props.onContributorAssigned(this.props.contributor, this.props.index);
-            }
+    _select = () => {
+        const { disabled, onSelect, index } = this.props;
+        if (!disabled && !!onSelect) {
+            onSelect(index);
         }
     };
 
-    getListItemTypoGraphy = (primaryText, secondaryText, primaryClass, secondaryClass) => (
+    getListItemTypography = (primaryText, secondaryText, primaryClass, secondaryClass) => (
         <ListItemText
             disableTypography
             primary={
+                primaryText &&
                 <Typography noWrap variant="body2" classes={{ root: primaryClass }}>
                     {primaryText}
                 </Typography>
             }
             secondary={
+                secondaryText &&
                 <Typography noWrap variant="caption" classes={{ root: secondaryClass }}>
                     {secondaryText}
-                </Typography>}
+                </Typography>
+            }
         />
     );
 
-    getContributorRowText = (showIdentifierLookup, showRoleInput, selectedClass) => {
-        const {index, contributor, classes, width} = this.props;
-        const {suffix} = this.props.locale;
+    getContributorRowText = (selectedClass) => {
+        const { index, contributor, classes, width } = this.props;
+        const { suffix } = this.props.locale;
         const contributorOrder = `${numberToWords(index + 1)} ${suffix}`;
         return (
-            <Grid container classes={{container: classes.listItem}}>
+            <Grid container classes={{ container: classes.listContainer }}>
                 <Grid item xs={10} sm={5} md={5}>
-                    {this.getListItemTypoGraphy(
+                    {this.getListItemTypography(
                         contributor.nameAsPublished,
                         contributorOrder,
                         `${classes.primary} ${selectedClass}`,
@@ -169,20 +184,20 @@ export class ContributorRow extends PureComponent {
                     )}
                 </Grid>
                 {
-                    (showIdentifierLookup || !!contributor.aut_title) &&
+                    !!contributor.aut_title &&
                     <Grid item xs={10} sm={5} md={5}>
-                        {this.getListItemTypoGraphy(
+                        {this.getListItemTypography(
                             `${contributor.aut_title} ${contributor.aut_display_name}`,
-                            `University of Queensland (${contributor.aut_org_username || contributor.aut_student_username})`,
+                            `${locale.global.orgTitle} (${contributor.aut_org_username || contributor.aut_student_username})`,
                             `${width === 'xs' ? classes.identifierName : classes.primary} ${selectedClass}`,
                             `${width === 'xs' ? classes.identifierSubtitle : ''} ${selectedClass}`
                         )}
                     </Grid>
                 }
                 {
-                    contributor.affiliation && contributor.affiliation !== 'UQ' &&
-                    <Grid item xs={5}>
-                        {this.getListItemTypoGraphy(
+                    contributor.affiliation && !contributor.aut_title &&
+                    <Grid item xs={12} sm={5}>
+                        {this.getListItemTypography(
                             `${contributor.orgaff}`,
                             `${ORG_TYPES_LOOKUP[contributor.orgtype] && `Organisation type: ${ORG_TYPES_LOOKUP[contributor.orgtype]}` || ''}`,
                             `${width === 'xs' ? classes.identifierName : classes.primary} ${selectedClass}`,
@@ -191,20 +206,9 @@ export class ContributorRow extends PureComponent {
                     </Grid>
                 }
                 {
-                    contributor.affiliation && contributor.affiliation === 'UQ' && !contributor.aut_title &&
-                        <Grid item xs={5}>
-                            {this.getListItemTypoGraphy(
-                                'University of Queensland',
-                                'Organisation type: University',
-                                `${width === 'xs' ? classes.identifierName : classes.primary} ${selectedClass}`,
-                                `${width === 'xs' ? classes.identifierSubtitle : ''} ${selectedClass}`
-                            )}
-                        </Grid>
-                }
-                {
-                    showRoleInput &&
-                    <Grid item xs={10} sm={5} md={5}>
-                        {this.getListItemTypoGraphy(
+                    contributor.creatorRole &&
+                    <Grid item xs={12} sm={5} md={5}>
+                        {this.getListItemTypography(
                             contributor.creatorRole,
                             '',
                             `${width === 'xs' ? classes.identifierName : classes.primary} ${selectedClass}`,
@@ -217,71 +221,135 @@ export class ContributorRow extends PureComponent {
     };
 
     render() {
-        const {deleteRecordConfirmation, moveUpHint, moveDownHint, deleteHint, selectHint} = this.props.locale;
-        const {contributor, canMoveDown, canMoveUp, disabled, classes} = this.props;
+        const {
+            deleteRecordConfirmation,
+            moveUpHint,
+            moveDownHint,
+            deleteHint,
+            selectHint,
+            lockedTooltip,
+            deleteButtonId
+        } = this.props.locale;
 
+        const {
+            contributor,
+            canMoveDown,
+            canMoveUp,
+            disabled,
+            classes,
+            hideReorder,
+            hideDelete,
+            required,
+            index
+        } = this.props;
 
-        const ariaLabel = selectHint && selectHint.indexOf('[name]') > -1 ? selectHint.replace('[name]', contributor.nameAsPublished) : null;
-        const disableAssignment = this.props.showContributorAssignment && !this.props.disabledContributorAssignment;
+        const enableSelect = this.props.showContributorAssignment;
         const selectedClass = contributor.selected ? classes.selected : '';
+
+        const ariaLabel = !disabled && `${
+            selectHint.replace('[name]', contributor.nameAsPublished)
+        } ${
+            (required && locale.requiredLabel) || ''
+        }`.trim() || '';
+
+        const rowIcon = () => {
+            if (contributor.selected) {
+                return <Person/>;
+            } else if (this.props.disabled || !enableSelect) {
+                return  (
+                    lockedTooltip ?
+                        <Tooltip title={lockedTooltip}>
+                            <Lock/>
+                        </Tooltip>
+                        :
+                        <Lock/>
+                );
+            } else {
+                return <PersonOutlined/>;
+            }
+        };
 
         return (
             <Fragment>
                 <ConfirmDialogBox
                     onRef={ref => (this.confirmationBox = ref)}
-                    onAction={this._deleteRecord}
+                    onAction={this._onDelete}
                     locale={deleteRecordConfirmation}
                 />
                 <ListItem
-                    style={{cursor: 'pointer', width: '98%', margin: '0 1%'}}
                     divider
-                    classes={{root: contributor.selected ? classes.rowSelected : ''}}
-                    tabIndex={0}
-                    onClick={disableAssignment ? this._onContributorAssigned : () => {}}
-                    onKeyDown={disableAssignment ? this._onContributorAssignedKeyboard : () => {}}
+                    classes={{ root: `${
+                        classes.listItem || ''
+                    } ${
+                        required && classes.highlighted || ''
+                    } ${
+                        contributor.selected && classes.rowSelected || ''
+                    } ${ !enableSelect && classes.disabledListItem || ''
+                    }`.trim() }}
+                    onClick={enableSelect ? this._onSelect : () => { }}
+                    tabIndex={!enableSelect || this.props.disabled ? -1 : 0}
+                    onKeyDown={enableSelect ? this._onSelectKeyboard : () => { }}
                     aria-label={ariaLabel}
+                    id={`contributor-editor-row-${this.props.index}`}
                 >
                     <Hidden xsDown>
-                        <ListItemIcon classes={{root: selectedClass}}>
-                            {contributor.selected ? <Person/> : <PersonOutlined/>}
+                        <ListItemIcon classes={{ root: selectedClass }}>
+                            {rowIcon()}
                         </ListItemIcon>
                     </Hidden>
-                    {
-                        this.getContributorRowText(this.props.showIdentifierLookup, this.props.showRoleInput, selectedClass)
-                    }
+                    {this.getContributorRowText(selectedClass)}
                     <ListItemSecondaryAction>
                         {
                             canMoveUp &&
-                            <Tooltip title={moveUpHint}>
-                                <IconButton
-                                    onClick={this._onMoveUp}
-                                    disabled={disabled}
-                                    aria-label={moveUpHint}
-                                >
-                                    <KeyboardArrowUp classes={{ root: `${selectedClass}` }}/>
-                                </IconButton>
+                            <Tooltip title={moveUpHint}
+                                disableFocusListener={disabled || hideReorder}
+                                disableHoverListener={disabled || hideReorder}
+                                disableTouchListener={disabled || hideReorder}
+                            >
+                                <span>
+                                    <IconButton
+                                        onClick={this._onMoveUp}
+                                        disabled={disabled || hideReorder}
+                                        aria-label={moveUpHint}
+                                    >
+                                        <KeyboardArrowUp classes={{ root: `${selectedClass}` }} />
+                                    </IconButton>
+                                </span>
                             </Tooltip>
                         }
                         {
                             canMoveDown &&
-                            <Tooltip title={moveDownHint}>
-                                <IconButton
-                                    onClick={this._onMoveDown}
-                                    disabled={disabled}
-                                    aria-label={moveDownHint}
-                                >
-                                    <KeyboardArrowDown classes={{ root: `${selectedClass}` }}/>
-                                </IconButton>
+                            <Tooltip title={moveDownHint}
+                                disableFocusListener={disabled || hideReorder}
+                                disableHoverListener={disabled || hideReorder}
+                                disableTouchListener={disabled || hideReorder}
+                            >
+                                <span>
+                                    <IconButton
+                                        onClick={this._onMoveDown}
+                                        disabled={disabled || hideReorder}
+                                        aria-label={moveDownHint}
+                                    >
+                                        <KeyboardArrowDown classes={{ root: `${selectedClass}` }} />
+                                    </IconButton>
+                                </span>
                             </Tooltip>
                         }
-                        <Tooltip title={deleteHint}>
-                            <IconButton
-                                aria-label={deleteHint}
-                                onClick={this._showConfirmation}
-                                disabled={disabled}
-                            >
-                                <Delete classes={{ root: `${selectedClass}` }}/>
-                            </IconButton>
+                        <Tooltip title={deleteHint}
+                            disableFocusListener={disabled || hideDelete}
+                            disableHoverListener={disabled || hideDelete}
+                            disableTouchListener={disabled || hideDelete}
+                        >
+                            <span>
+                                <IconButton
+                                    aria-label={deleteHint}
+                                    onClick={this._showConfirmation}
+                                    disabled={disabled || hideDelete}
+                                    id={deleteButtonId(index)}
+                                >
+                                    <Delete classes={{ root: `${selectedClass}` }} />
+                                </IconButton>
+                            </span>
                         </Tooltip>
                     </ListItemSecondaryAction>
                 </ListItem>

@@ -12,16 +12,16 @@ export default {
         help: {
             title: 'Non-traditional research output types',
             text: (
-                <p>For more information about each type, click <a style={{fontWeight: 700}} target="_blank" href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-tradtional-research-ouptuts">here</a>
+                <p>For more information about each type, click <a style={{fontWeight: 700}} target="_blank" href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs">here</a>
                 </p>
             ),
             buttonLabel: 'CLOSE'
         }
     },
     publicationSubtype: {
-        title: 'Publication subtype',
-        inputLabelText: 'Publication subtype',
-        hintText: 'Select a publication subtype from the dropdown list',
+        title: 'Work subtype',
+        inputLabelText: 'Work subtype',
+        hintText: 'Select a work subtype from the dropdown list',
     },
     generic: {
         information: {
@@ -1249,7 +1249,7 @@ export default {
                 fileUploadRestrictionHeading: 'File upload restrictions',
                 fileUploadRestrictions: (
                     <div>
-                        Maximum file size is 8Gb. <br/>
+                        Maximum file size is 8GB. <br/>
                         PDF files must be saved using the following naming structure <b>&lt;student
                         number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf</b>.
                         Document name could be thesis, abstract, and etc.
@@ -1322,7 +1322,7 @@ export default {
                 fileUploadRestrictionHeading: 'File upload restrictions',
                 fileUploadRestrictions: (
                     <div>
-                        Maximum file size is 8Gb. <br/>
+                        Maximum file size is 8GB. <br/>
                         PDF files must be saved using the following naming structure <b>&lt;student
                         number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf</b>.
                         Document name could be thesis, abstract, and etc.

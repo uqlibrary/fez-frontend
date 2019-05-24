@@ -578,88 +578,83 @@ exports[`Meta Component  should render component with conference proceedings 1`]
     name="DC.Subject"
   />
   <meta
-    content="http://localhost/view/UQ:159544/ch7008.pdf"
-    key="citation_pdf_url-5"
-    name="citation_pdf_url"
-  />
-  <meta
     content="Experiences and Challenges in Sewers: Measurements and Hydrodynamics"
-    key="DC.Title-6"
+    key="DC.Title-5"
     name="DC.Title"
   />
   <meta
     content="Experiences and Challenges in Sewers: Measurements and Hydrodynamics"
-    key="citation_title-7"
+    key="citation_title-6"
     name="citation_title"
   />
   <meta
     content="Frédérique Larrarte"
-    key="DC.Contributor-8"
+    key="DC.Contributor-7"
     name="DC.Contributor"
   />
   <meta
     content="Hubert Chanson"
-    key="DC.Contributor-9"
+    key="DC.Contributor-8"
     name="DC.Contributor"
   />
   <meta
     content="2008-01-01"
-    key="DC.Date-10"
+    key="DC.Date-9"
     name="DC.Date"
   />
   <meta
     content="2008/01/01"
-    key="citation_date-11"
+    key="citation_date-10"
     name="citation_date"
   />
   <meta
     content="1"
-    key="citation_firstpage-12"
+    key="citation_firstpage-11"
     name="citation_firstpage"
   />
   <meta
     content="114"
-    key="citation_lastpage-13"
+    key="citation_lastpage-12"
     name="citation_lastpage"
   />
   <meta
     content="Department of Civil Engineering at The University of Queensland"
-    key="DC.Publisher-14"
+    key="DC.Publisher-13"
     name="DC.Publisher"
   />
   <meta
     content="Department of Civil Engineering at The University of Queensland"
-    key="citation_publisher-15"
+    key="citation_publisher-14"
     name="citation_publisher"
   />
   <meta
     content="eng"
-    key="citation_language-16"
+    key="citation_language-15"
     name="citation_language"
   />
   <meta
     content="The International Meeting on Measurements and Hydraulics of Sewers (IMMHS'08) was organised by the Water and Environment Division of the Laboratoire Central des Ponts et Chaussées (LCPC) to foster interactions between industry professionals, researchers and university academics on the topics of experiences and challenges in sewers including measurements, hydrodynamics and sediments. A main feature of the meeting was the direct interactions between a wide range of professionals and researchers working on a broad range of relevant topics, including operational issues, sediments and turbidity, mud rheology, H2S, and flow measurements. Another interesting aspect of this event was the stimulating debates during and after the presentations, as well as during the subsequent discussions and the field measurements. Contributions include: Challenges in Sewer Hydrodynamics, Sediments and Measurements, Sedimentation in Large Combined Sewage Systems: Perspectives of an Operator, A New Velocity and Total Suspended Solid Measurement Device, Measurements of Pollutants by Turbidimetry, Acoustic Doppler Velocimetry (ADV) in the Field and in Laboratory: Practical Experiences, Sewer Sediments - their Diversity, Impact and Modelling Challenges, Use of CFD Techniques to Estimate the Spatial Distribution of Sediment on the Bed of a Large Detention and Settling Basin. The publication of the proceedings marked the successful conclusion of this event. Each paper was peer-reviewed by a minimum of two experts. A key feature of all these contributions is the practical knowledge gained in the last ten to fifteen years, and a particular effort was made by all contributors to share both positive and negative experiences."
-    key="DC.Description-17"
+    key="DC.Description-16"
     name="DC.Description"
   />
   <meta
     content="The International Meeting on Measurements and Hydraulics of Sewers (IMMHS'08) was organised by the Water and Environment Division of the Laboratoire Central des Ponts et Chaussées (LCPC) to foster interactions between industry professionals, researchers and university academics on the topics of experiences and challenges in sewers including measurements, hydrodynamics and sediments. A main feature of the meeting was the direct interactions between a wide range of professionals and researchers working on a broad range of relevant topics, including operational issues, sediments and turbidity, mud rheology, H2S, and flow measurements. Another interesting aspect of this event was the stimulating debates during and after the presentations, as well as during the subsequent discussions and the field measurements. Contributions include: Challenges in Sewer Hydrodynamics, Sediments and Measurements, Sedimentation in Large Combined Sewage Systems: Perspectives of an Operator, A New Velocity and Total Suspended Solid Measurement Device, Measurements of Pollutants by Turbidimetry, Acoustic Doppler Velocimetry (ADV) in the Field and in Laboratory: Practical Experiences, Sewer Sediments - their Diversity, Impact and Modelling Challenges, Use of CFD Techniques to Estimate the Spatial Distribution of Sediment on the Bed of a Large Detention and Settling Basin. The publication of the proceedings marked the successful conclusion of this event. Each paper was peer-reviewed by a minimum of two experts. A key feature of all these contributions is the practical knowledge gained in the last ten to fifteen years, and a particular effort was made by all contributors to share both positive and negative experiences."
-    key="citation_abstract-18"
+    key="citation_abstract-17"
     name="citation_abstract"
   />
   <meta
     content="Sewers; Measurements; Hydraulics; Open channel flows; Sediments; Turbidity; Hydrodynamics; Sedimentation; design; operation; rehabilitation; urban environment"
-    key="citation_keywords-19"
+    key="citation_keywords-18"
     name="citation_keywords"
   />
   <meta
     content="International Meeting on Measurements and Hydraulics of Sewers IMMHS'08, Summer School GEMCEA/LCPC"
-    key="citation_conference-20"
+    key="citation_conference-19"
     name="citation_conference"
   />
   <meta
     content="9781864999280"
-    key="citation_isbn-21"
+    key="citation_isbn-20"
     name="citation_isbn"
   />
 </HelmetWrapper>
@@ -759,88 +754,63 @@ exports[`Meta Component  should render component with creative work 1`] = `
     name="DC.Subject"
   />
   <meta
-    content="http://localhost/view/UQ:177836/HCA10UQ177836.pdf"
-    key="citation_pdf_url-3"
-    name="citation_pdf_url"
-  />
-  <meta
-    content="http://localhost/view/UQ:177836/HCA12UQ177836_plans.pdf"
-    key="citation_pdf_url-4"
-    name="citation_pdf_url"
-  />
-  <meta
-    content="http://localhost/view/UQ:177836/HCA12UQ177836_project_description_.pdf"
-    key="citation_pdf_url-5"
-    name="citation_pdf_url"
-  />
-  <meta
-    content="http://localhost/view/UQ:177836/HCA12UQ177836_report.pdf"
-    key="citation_pdf_url-6"
-    name="citation_pdf_url"
-  />
-  <meta
-    content="http://localhost/view/UQ:177836/UQ177836.pdf"
-    key="citation_pdf_url-7"
-    name="citation_pdf_url"
-  />
-  <meta
     content="Sustainable home Brisbane"
-    key="DC.Title-8"
+    key="DC.Title-3"
     name="DC.Title"
   />
   <meta
     content="Sustainable home Brisbane"
-    key="citation_title-9"
+    key="citation_title-4"
     name="citation_title"
   />
   <meta
     content="Webster-Mannison, Marci"
-    key="DC.Creator-10"
+    key="DC.Creator-5"
     name="DC.Creator"
   />
   <meta
     content="Webster-Mannison, Marci"
-    key="citation_authors-11"
+    key="citation_authors-6"
     name="citation_authors"
   />
   <meta
     content="2006-01-01"
-    key="DC.Date-12"
+    key="DC.Date-7"
     name="DC.Date"
   />
   <meta
     content="2006/01/01"
-    key="citation_date-13"
+    key="citation_date-8"
     name="citation_date"
   />
   <meta
     content="School of Architecture, The University of Queensland"
-    key="DC.Publisher-14"
+    key="DC.Publisher-9"
     name="DC.Publisher"
   />
   <meta
     content="School of Architecture, The University of Queensland"
-    key="citation_publisher-15"
+    key="citation_publisher-10"
     name="citation_publisher"
   />
   <meta
     content="eng"
-    key="citation_language-16"
+    key="citation_language-11"
     name="citation_language"
   />
   <meta
     content="&lt;b&gt;Research Background:&lt;/b&gt; 35,000 to 40,000 new dwellings per year are built in Queensland making it an imperative to incorporate sustainability into the design. The Queensland Government's Sustainable Homes program provides communities with unique display homes which exemplify their regional climatic context and environmental, social and economic sustainability.&lt;br /&gt;&lt;b&gt;&lt;br /&gt;Research Contribution:&lt;/b&gt; The Sustainable Home Brisbane, Seventeen Mile Rocks was part of the Queensland Government Sustainable Homes program, and addresses the need to provide industry, government, community groups, and the public an opportunity to learn about sustainable housing design and living.&lt;br /&gt;&lt;br /&gt;The home demonstrates cost-effective environmental features and practices in its construction and operation. The approaches to integrated water management involving significant rainwater collection and treatment for potable use, greywater treatment and biofiltration and energy efficiency through passive solar design, the unique passive air cooling and heating system and the use of solar energy are highly innovative and replicable. The Sustainable Home Brisbane sets a benchmark for future housing design in subtropical Queensland.&lt;br /&gt;&lt;b&gt;&lt;br /&gt;Research Significance:&lt;/b&gt; The significance of this research is evidenced by the project winning the Royal Australian Institute of Australia (RAIA Qld Chapter) Architecture Award, Regional Commendation, Brisbane Sustainable Home, 2007, the Housing Industry Association (HIA) Greensmart Building of the Year, 2006, the HIA Greensmart Water Efficiency Award, 2006 and the Brisbane/Gold Coast HIA GreenSmart Energy Efficient Housing Award. Furthermore, the significant interest in this project is evidenced by the number of visitors during the public display period.&lt;br /&gt;"
-    key="DC.Description-17"
+    key="DC.Description-12"
     name="DC.Description"
   />
   <meta
     content="&lt;b&gt;Research Background:&lt;/b&gt; 35,000 to 40,000 new dwellings per year are built in Queensland making it an imperative to incorporate sustainability into the design. The Queensland Government's Sustainable Homes program provides communities with unique display homes which exemplify their regional climatic context and environmental, social and economic sustainability.&lt;br /&gt;&lt;b&gt;&lt;br /&gt;Research Contribution:&lt;/b&gt; The Sustainable Home Brisbane, Seventeen Mile Rocks was part of the Queensland Government Sustainable Homes program, and addresses the need to provide industry, government, community groups, and the public an opportunity to learn about sustainable housing design and living.&lt;br /&gt;&lt;br /&gt;The home demonstrates cost-effective environmental features and practices in its construction and operation. The approaches to integrated water management involving significant rainwater collection and treatment for potable use, greywater treatment and biofiltration and energy efficiency through passive solar design, the unique passive air cooling and heating system and the use of solar energy are highly innovative and replicable. The Sustainable Home Brisbane sets a benchmark for future housing design in subtropical Queensland.&lt;br /&gt;&lt;b&gt;&lt;br /&gt;Research Significance:&lt;/b&gt; The significance of this research is evidenced by the project winning the Royal Australian Institute of Australia (RAIA Qld Chapter) Architecture Award, Regional Commendation, Brisbane Sustainable Home, 2007, the Housing Industry Association (HIA) Greensmart Building of the Year, 2006, the HIA Greensmart Water Efficiency Award, 2006 and the Brisbane/Gold Coast HIA GreenSmart Energy Efficient Housing Award. Furthermore, the significant interest in this project is evidenced by the number of visitors during the public display period.&lt;br /&gt;"
-    key="citation_abstract-18"
+    key="citation_abstract-13"
     name="citation_abstract"
   />
   <meta
     content="Original Creative Works - Design/Architectural work"
-    key="citation_keywords-19"
+    key="citation_keywords-14"
     name="citation_keywords"
   />
 </HelmetWrapper>
@@ -1213,63 +1183,58 @@ exports[`Meta Component  should render component with generic document 1`] = `
     name="DC.Subject"
   />
   <meta
-    content="http://localhost/view/UQ:239427/Lectures_Book.pdf"
-    key="citation_pdf_url-2"
-    name="citation_pdf_url"
-  />
-  <meta
     content="Numerical solution of partial differential equations"
-    key="DC.Title-3"
+    key="DC.Title-2"
     name="DC.Title"
   />
   <meta
     content="Numerical solution of partial differential equations"
-    key="citation_title-4"
+    key="citation_title-3"
     name="citation_title"
   />
   <meta
     content="Dion Weatherley"
-    key="DC.Contributor-5"
+    key="DC.Contributor-4"
     name="DC.Contributor"
   />
   <meta
     content="V. E. Boros"
-    key="DC.Contributor-6"
+    key="DC.Contributor-5"
     name="DC.Contributor"
   />
   <meta
     content="Louise Olsen-Kettle"
-    key="DC.Creator-7"
+    key="DC.Creator-6"
     name="DC.Creator"
   />
   <meta
     content="Louise Olsen-Kettle"
-    key="citation_authors-8"
+    key="citation_authors-7"
     name="citation_authors"
   />
   <meta
     content="2011-03-29"
-    key="DC.Date-9"
+    key="DC.Date-8"
     name="DC.Date"
   />
   <meta
     content="2011/03/29"
-    key="citation_date-10"
+    key="citation_date-9"
     name="citation_date"
   />
   <meta
     content="Lecture notes on numerical solution of partial differential equations. Topics include parabolic and hyperbolic partial differential equations, explicit and implicit methods, iterative methods, finite difference, stability and error analysis, finite element method, spectral method, central difference method, Forward Euler method, Backward Euler method, Lax method, Jacobi method, Gauss-Seidel method, relaxation methods, wave equation, diffusion and heat equation, nonlinear partial differential equations, soliton, shock wave, Korteweg-de-Vries equation, nonlinear inviscid Burger's equation, method of characteristics."
-    key="DC.Description-11"
+    key="DC.Description-10"
     name="DC.Description"
   />
   <meta
     content="Lecture notes on numerical solution of partial differential equations. Topics include parabolic and hyperbolic partial differential equations, explicit and implicit methods, iterative methods, finite difference, stability and error analysis, finite element method, spectral method, central difference method, Forward Euler method, Backward Euler method, Lax method, Jacobi method, Gauss-Seidel method, relaxation methods, wave equation, diffusion and heat equation, nonlinear partial differential equations, soliton, shock wave, Korteweg-de-Vries equation, nonlinear inviscid Burger's equation, method of characteristics."
-    key="citation_abstract-12"
+    key="citation_abstract-11"
     name="citation_abstract"
   />
   <meta
     content="Partial Differential Equations (PDEs); Parabolic; Hyperbolic; Finite difference; Spectral method; Finite element method; Iterative methods; Nonlinear Partial Differential Equations"
-    key="citation_keywords-13"
+    key="citation_keywords-12"
     name="citation_keywords"
   />
 </HelmetWrapper>
@@ -1446,68 +1411,63 @@ exports[`Meta Component  should render component with manuscript 1`] = `
     scheme="URI"
   />
   <meta
-    content="http://localhost/view/UQ:677394/UQFL2_i3255_copyright_permission.pdf"
-    key="citation_pdf_url-1"
-    name="citation_pdf_url"
-  />
-  <meta
     content="Thea Astley, Ashgrove, Brisbane to [Paul] Grano, 15 Jul 1944"
-    key="DC.Title-2"
+    key="DC.Title-1"
     name="DC.Title"
   />
   <meta
     content="Thea Astley, Ashgrove, Brisbane to [Paul] Grano, 15 Jul 1944"
-    key="citation_title-3"
+    key="citation_title-2"
     name="citation_title"
   />
   <meta
     content="Astley, Thea, 1925-2004"
-    key="DC.Contributor-4"
+    key="DC.Contributor-3"
     name="DC.Contributor"
   />
   <meta
     content="Grano, Paul, 1894-1975"
-    key="DC.Contributor-5"
+    key="DC.Contributor-4"
     name="DC.Contributor"
   />
   <meta
     content="Hayes, Edward Leo, 1889-1967"
-    key="DC.Creator-6"
+    key="DC.Creator-5"
     name="DC.Creator"
   />
   <meta
     content="Hayes, Edward Leo, 1889-1967"
-    key="citation_authors-7"
+    key="citation_authors-6"
     name="citation_authors"
   />
   <meta
     content="1944-07-15"
-    key="DC.Date-8"
+    key="DC.Date-7"
     name="DC.Date"
   />
   <meta
     content="1944/07/15"
-    key="citation_date-9"
+    key="citation_date-8"
     name="citation_date"
   />
   <meta
     content="eng"
-    key="citation_language-10"
+    key="citation_language-9"
     name="citation_language"
   />
   <meta
     content="Father Edward Leo Hayes Collection, UQFL2 contains correspondence and manuscript material on literary and historical matters, mostly in Queensland and New South Wales. It also includes personal papers of Father Hayes, relating to his activities as parish priest; bookplates, photographs, realia. &lt;br /&gt;&lt;br /&gt;Father Hayes was born in 1889 at Frederickton, New South Wales, and began book collecting at age seven. He commenced studies for the priesthood at St Columbia's College, Springwood, in 1911 and was ordained after further study at St Patrick's, Manly, in 1918. Over the course of 70 years he amassed one of the greatest collections of Australiana, including more than 25,000 volumes, 30,000 manuscript items, 1,500 Indigenous artefacts, maps, stamps, coins, weapons, geological specimens, cattle bells, and a variety of other material. On 19-20 October 1967 a convoy of removal trucks transported eighty large crates and 400 cartons of material to The University of Queensland Library at St Lucia, doubling its holdings on Australian subjects and effectively putting the Library on the map as an institution capable of supporting high-level research in Australian studies. (Information from Follett, Roslyn &amp;amp; University of Queensland. Library &amp;amp; Fryer Library (2010). Found in Fryer : stories from the Fryer Library collection. The University of Queensland Library, St Lucia, Qld.)&lt;br /&gt;"
-    key="DC.Description-11"
+    key="DC.Description-10"
     name="DC.Description"
   />
   <meta
     content="Father Edward Leo Hayes Collection, UQFL2 contains correspondence and manuscript material on literary and historical matters, mostly in Queensland and New South Wales. It also includes personal papers of Father Hayes, relating to his activities as parish priest; bookplates, photographs, realia. &lt;br /&gt;&lt;br /&gt;Father Hayes was born in 1889 at Frederickton, New South Wales, and began book collecting at age seven. He commenced studies for the priesthood at St Columbia's College, Springwood, in 1911 and was ordained after further study at St Patrick's, Manly, in 1918. Over the course of 70 years he amassed one of the greatest collections of Australiana, including more than 25,000 volumes, 30,000 manuscript items, 1,500 Indigenous artefacts, maps, stamps, coins, weapons, geological specimens, cattle bells, and a variety of other material. On 19-20 October 1967 a convoy of removal trucks transported eighty large crates and 400 cartons of material to The University of Queensland Library at St Lucia, doubling its holdings on Australian subjects and effectively putting the Library on the map as an institution capable of supporting high-level research in Australian studies. (Information from Follett, Roslyn &amp;amp; University of Queensland. Library &amp;amp; Fryer Library (2010). Found in Fryer : stories from the Fryer Library collection. The University of Queensland Library, St Lucia, Qld.)&lt;br /&gt;"
-    key="citation_abstract-12"
+    key="citation_abstract-11"
     name="citation_abstract"
   />
   <meta
     content="Hayes, Edward Leo, 1889-1967 -- Archives; Hayes, Edward Leo, 1889-1967 -- Manuscripts; Astley, Thea, 1925-2004 -- Correspondence; Grano, Paul, 1894-1975 -- Correspondence; Authors, Australian -- 20th century"
-    key="citation_keywords-13"
+    key="citation_keywords-12"
     name="citation_keywords"
   />
 </HelmetWrapper>
@@ -1779,63 +1739,58 @@ exports[`Meta Component  should render component with preprint 1`] = `
     name="DC.Subject"
   />
   <meta
-    content="http://localhost/view/UQ:10457/dpk_akrfinal.pdf"
-    key="citation_pdf_url-4"
-    name="citation_pdf_url"
-  />
-  <meta
     content="Heavy Tails, Importance Sampling and Cross-Entropy"
-    key="DC.Title-5"
+    key="DC.Title-4"
     name="DC.Title"
   />
   <meta
     content="Heavy Tails, Importance Sampling and Cross-Entropy"
-    key="citation_title-6"
+    key="citation_title-5"
     name="citation_title"
   />
   <meta
     content="Asmussen, S."
-    key="DC.Creator-7"
+    key="DC.Creator-6"
     name="DC.Creator"
   />
   <meta
     content="Kroese, D. P."
-    key="DC.Creator-8"
+    key="DC.Creator-7"
     name="DC.Creator"
   />
   <meta
     content="Rubinstein, R. Y."
-    key="DC.Creator-9"
+    key="DC.Creator-8"
     name="DC.Creator"
   />
   <meta
     content="Asmussen, S.; Kroese, D. P.; Rubinstein, R. Y."
-    key="citation_authors-10"
+    key="citation_authors-9"
     name="citation_authors"
   />
   <meta
     content="2004-01-01"
-    key="DC.Date-11"
+    key="DC.Date-10"
     name="DC.Date"
   />
   <meta
     content="2004/01/01"
-    key="citation_date-12"
+    key="citation_date-11"
     name="citation_date"
   />
   <meta
     content="We consider the problem of estimating P (Y1+ ... +Yn &gt; x) by importance sampling when the Yi are i.i.d. and heavy-tailed. The idea is to exploit the cross-entropy method as a tool for choosing good parameters in the importance sampling distribution; in doing so, we use the asymptotic description that given P(Y1+ ... +Yn &gt; x,) n-1 of the Yi have distribution F and one the conditional distribution of Y given Y &gt; x. We show in some parametric examples (Pareto and Weibull) how this leads to precise answers, which as demonstrated numerically, are close to being variance minimal within the parametric class under consideration. Related problems for M/G/1 and GI/G/1 queues are also discussed."
-    key="DC.Description-13"
+    key="DC.Description-12"
     name="DC.Description"
   />
   <meta
     content="We consider the problem of estimating P (Y1+ ... +Yn &gt; x) by importance sampling when the Yi are i.i.d. and heavy-tailed. The idea is to exploit the cross-entropy method as a tool for choosing good parameters in the importance sampling distribution; in doing so, we use the asymptotic description that given P(Y1+ ... +Yn &gt; x,) n-1 of the Yi have distribution F and one the conditional distribution of Y given Y &gt; x. We show in some parametric examples (Pareto and Weibull) how this leads to precise answers, which as demonstrated numerically, are close to being variance minimal within the parametric class under consideration. Related problems for M/G/1 and GI/G/1 queues are also discussed."
-    key="citation_abstract-14"
+    key="citation_abstract-13"
     name="citation_abstract"
   />
   <meta
     content="Algorithmic complexity; cross-entropy; GI/G/1 queue; importance sampling; maximum likelihood; Pareto distribution; Pollaczek-Khintchine formula; random walk; rare event; subexponential distribution; Weibull distribution"
-    key="citation_keywords-15"
+    key="citation_keywords-14"
     name="citation_keywords"
   />
 </HelmetWrapper>
@@ -2117,53 +2072,48 @@ exports[`Meta Component  should render component with thesis 1`] = `
     name="DC.Subject"
   />
   <meta
-    content="http://localhost/view/UQ:170415/dpk_akrfinal.pdf"
-    key="citation_pdf_url-2"
-    name="citation_pdf_url"
-  />
-  <meta
     content="It's for love not money: Queensland graziers' perceptions of sustainable development"
-    key="DC.Title-3"
+    key="DC.Title-2"
     name="DC.Title"
   />
   <meta
     content="It's for love not money: Queensland graziers' perceptions of sustainable development"
-    key="citation_title-4"
+    key="citation_title-3"
     name="citation_title"
   />
   <meta
     content="Jennifer Moffatt"
-    key="DC.Creator-5"
+    key="DC.Creator-4"
     name="DC.Creator"
   />
   <meta
     content="Jennifer Moffatt"
-    key="citation_authors-6"
+    key="citation_authors-5"
     name="citation_authors"
   />
   <meta
     content="2008-06-01"
-    key="DC.Date-7"
+    key="DC.Date-6"
     name="DC.Date"
   />
   <meta
     content="2008/06/01"
-    key="citation_date-8"
+    key="citation_date-7"
     name="citation_date"
   />
   <meta
     content="Despite a National Strategy for Ecologically Sustainable Development and the embodiment of this in numerous national and state statues, environmental degradation continues to occur on rural land. This raises the question of how the primary land managers in Queensland perceive sustainable development. Australia’s early reliance on agricultural production and international markets contributed substantially to the extensive environmental degradation that has occurred. Consequently economic and environmental issues have dominated the research on sustainable development, with the social dimension relatively neglected. In addition, despite the large quantity of work that has been conducted with farmers and graziers, little is known about how either of these types of land managers interpret sustainable development. The aim of this thesis was to develop an in-depth understanding of graziers’ perceptions of sustainable development to make a contribution to this area. An exploratory interpretative approach was taken to conduct this investigation because previous research had been limited. In-depth unstructured interviews were conducted with 57 Queensland graziers in the tropical savannas in a case study with two locations – the Gulf of Carpentaria and the Central West. This approach was supported by participant observation and a brief questionnaire to provide background information. The fieldwork was conducted over a period of five months which allowed analysis to be conducted as the study progressed. Most of the graziers were interviewed on their properties with the goal of adding richness to the data and assisting with interpretation. Several bodies of literature have been used to interpret the results of this study. Areas of the sustainable development literature relevant to this thesis are reviewed to provide a context for the thesis. The literature on structural change in Australian agriculture provides a background to the broad influences on the agricultural sector and farmers. Also reviewed are the approaches taken to change the land management practices of farmers. The enduring value of farming and the changing values of rural land use are explored through a review of agrarianism, the goals and values of farmers and the post-productivist transition. The results for both study locations showed that these graziers preference the economic dimension of sustainable development over the environmental and social dimensions. The rationale for this preference is that maintaining economic viability will allow them to achieve their social goal – to continue their preferred way of life. A strong focus therefore, is on economic viability as a means to a social end. The objective is to overcome the constraints of being market and season dependent and the costs of operating in rural and remote locations through a whole-of-enterprise business management approach. The need for graziers to continue increasing their productivity to remain economically viable and to continue being competitive in international markets, challenges their ability to balance the economic and environmental dimensions of sustainable development. For some the environmental dimension of sustainable development may be compromised to accommodate their economic priorities and social goals. A perceived future threat, more so for Gulf graziers, arises from the belief that they and their interests are marginalised through consultation processes. This contributes to their belief that the government prioritises Aboriginal land rights and environmental protection interests over their production interests. They believe that if this continues their future is at risk through further decreases to the security of their tenure. The results of this study suggest that a more innovative and integrated approach will be required to meet the challenges of sustainable development in these areas, in early twenty-first century Australia. The holistic approach from a social science perspective has provided an understanding of what graziers value and why. These insights contribute to knowledge of how to progress sustainable development. They could be tested with other types of land managers and as a foundation on which to build a more comprehensive understanding of sustainable development."
-    key="DC.Description-9"
+    key="DC.Description-8"
     name="DC.Description"
   />
   <meta
     content="Despite a National Strategy for Ecologically Sustainable Development and the embodiment of this in numerous national and state statues, environmental degradation continues to occur on rural land. This raises the question of how the primary land managers in Queensland perceive sustainable development. Australia’s early reliance on agricultural production and international markets contributed substantially to the extensive environmental degradation that has occurred. Consequently economic and environmental issues have dominated the research on sustainable development, with the social dimension relatively neglected. In addition, despite the large quantity of work that has been conducted with farmers and graziers, little is known about how either of these types of land managers interpret sustainable development. The aim of this thesis was to develop an in-depth understanding of graziers’ perceptions of sustainable development to make a contribution to this area. An exploratory interpretative approach was taken to conduct this investigation because previous research had been limited. In-depth unstructured interviews were conducted with 57 Queensland graziers in the tropical savannas in a case study with two locations – the Gulf of Carpentaria and the Central West. This approach was supported by participant observation and a brief questionnaire to provide background information. The fieldwork was conducted over a period of five months which allowed analysis to be conducted as the study progressed. Most of the graziers were interviewed on their properties with the goal of adding richness to the data and assisting with interpretation. Several bodies of literature have been used to interpret the results of this study. Areas of the sustainable development literature relevant to this thesis are reviewed to provide a context for the thesis. The literature on structural change in Australian agriculture provides a background to the broad influences on the agricultural sector and farmers. Also reviewed are the approaches taken to change the land management practices of farmers. The enduring value of farming and the changing values of rural land use are explored through a review of agrarianism, the goals and values of farmers and the post-productivist transition. The results for both study locations showed that these graziers preference the economic dimension of sustainable development over the environmental and social dimensions. The rationale for this preference is that maintaining economic viability will allow them to achieve their social goal – to continue their preferred way of life. A strong focus therefore, is on economic viability as a means to a social end. The objective is to overcome the constraints of being market and season dependent and the costs of operating in rural and remote locations through a whole-of-enterprise business management approach. The need for graziers to continue increasing their productivity to remain economically viable and to continue being competitive in international markets, challenges their ability to balance the economic and environmental dimensions of sustainable development. For some the environmental dimension of sustainable development may be compromised to accommodate their economic priorities and social goals. A perceived future threat, more so for Gulf graziers, arises from the belief that they and their interests are marginalised through consultation processes. This contributes to their belief that the government prioritises Aboriginal land rights and environmental protection interests over their production interests. They believe that if this continues their future is at risk through further decreases to the security of their tenure. The results of this study suggest that a more innovative and integrated approach will be required to meet the challenges of sustainable development in these areas, in early twenty-first century Australia. The holistic approach from a social science perspective has provided an understanding of what graziers value and why. These insights contribute to knowledge of how to progress sustainable development. They could be tested with other types of land managers and as a foundation on which to build a more comprehensive understanding of sustainable development."
-    key="citation_abstract-10"
+    key="citation_abstract-9"
     name="citation_abstract"
   />
   <meta
     content="Sustainable development; graziers; farmers; agriculture; land management; business"
-    key="citation_keywords-11"
+    key="citation_keywords-10"
     name="citation_keywords"
   />
 </HelmetWrapper>
@@ -2269,93 +2219,88 @@ exports[`Meta Component  should render component with working paper 1`] = `
     name="DC.Subject"
   />
   <meta
-    content="http://localhost/view/UQ:176145/wp46.pdf"
-    key="citation_pdf_url-3"
-    name="citation_pdf_url"
-  />
-  <meta
     content="Education, Employment and Social Inclusion within the European Union"
-    key="DC.Title-4"
+    key="DC.Title-3"
     name="DC.Title"
   />
   <meta
     content="Education, Employment and Social Inclusion within the European Union"
-    key="citation_title-5"
+    key="citation_title-4"
     name="citation_title"
   />
   <meta
     content="Laselle, Laurence"
-    key="DC.Creator-6"
+    key="DC.Creator-5"
     name="DC.Creator"
   />
   <meta
     content="Tisdell, Clem"
-    key="DC.Creator-7"
+    key="DC.Creator-6"
     name="DC.Creator"
   />
   <meta
     content="Laselle, Laurence; Tisdell, Clem"
-    key="citation_authors-8"
+    key="citation_authors-7"
     name="citation_authors"
   />
   <meta
     content="2006-11-01"
-    key="DC.Date-9"
+    key="DC.Date-8"
     name="DC.Date"
   />
   <meta
     content="2006/11/01"
-    key="citation_date-10"
+    key="citation_date-9"
     name="citation_date"
   />
   <meta
     content="10.1242/jcs.196651"
-    key="citation_doi-11"
+    key="citation_doi-10"
     name="citation_doi"
   />
   <meta
     content="1"
-    key="citation_firstpage-12"
+    key="citation_firstpage-11"
     name="citation_firstpage"
   />
   <meta
     content="23"
-    key="citation_lastpage-13"
+    key="citation_lastpage-12"
     name="citation_lastpage"
   />
   <meta
     content="School of Economics"
-    key="DC.Publisher-14"
+    key="DC.Publisher-13"
     name="DC.Publisher"
   />
   <meta
     content="School of Economics"
-    key="citation_publisher-15"
+    key="citation_publisher-14"
     name="citation_publisher"
   />
   <meta
     content="eng"
-    key="citation_language-16"
+    key="citation_language-15"
     name="citation_language"
   />
   <meta
     content="Employment and social inclusion have been regular themes in the agenda of the European Union for the past fifteen years. From a soft coordinated approach mainly focused on the fight against unemployment, the European Union has moved towards a more coordinated but still voluntary strategy for its Member States and this agenda now has multiple economic, social and environmental objectives. A constant feature of these strategies has been the use of education and training policies, in particular for young people who are at risk of social exclusion. This paper reviews the relevant agenda of the European Union and presents the concept of second chance schools initiated by the European Commission in 1995. It seeks to understand how the elements associated with these youth and the policy-makers are combined in order to achieve success in terms of job opportunities and better inclusion for young people."
-    key="DC.Description-17"
+    key="DC.Description-16"
     name="DC.Description"
   />
   <meta
     content="Employment and social inclusion have been regular themes in the agenda of the European Union for the past fifteen years. From a soft coordinated approach mainly focused on the fight against unemployment, the European Union has moved towards a more coordinated but still voluntary strategy for its Member States and this agenda now has multiple economic, social and environmental objectives. A constant feature of these strategies has been the use of education and training policies, in particular for young people who are at risk of social exclusion. This paper reviews the relevant agenda of the European Union and presents the concept of second chance schools initiated by the European Commission in 1995. It seeks to understand how the elements associated with these youth and the policy-makers are combined in order to achieve success in terms of job opportunities and better inclusion for young people."
-    key="citation_abstract-18"
+    key="citation_abstract-17"
     name="citation_abstract"
   />
   <meta
     content="European Union; Education; Employment; Social inclusion"
-    key="citation_keywords-19"
+    key="citation_keywords-18"
     name="citation_keywords"
   />
   <meta
     content="46"
-    key="citation_technical_report_number-20"
+    key="citation_technical_report_number-19"
     name="citation_technical_report_number"
   />
 </HelmetWrapper>

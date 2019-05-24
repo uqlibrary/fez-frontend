@@ -59,34 +59,49 @@ export class NtroDetailsClass extends PureComponent {
         return (
             <Grid item xs={12}>
                 <StandardCard title={locale.viewRecord.sections.ntro.title}>
-                    {/* Scale of work */}
+                    {/* Significance */}
                     {
                         publication.fez_record_search_key_significance &&
                         publication.fez_record_search_key_significance.length > 0 &&
                         publication.fez_record_search_key_significance.map((item, index) => {
-                            return (
-                                <this.ViewNtroRow
-                                    key={index}
-                                    heading={`${locale.viewRecord.headings.NTRO.significance}`}
-                                    subheading={`(${publication.fez_record_search_key_author[index].rek_author})`}
-                                    data={(item.rek_significance !== 0 && item.rek_significance !== '0' && !!item.rek_significance && item.rek_significance_lookup) || 'Not set'}
-                                />
-                            );
+                            if (
+                                (this.props.account && this.props.account.canMasquerade) ||
+                                item.rek_significance && item.rek_significance !== '' || item.rek_significance === 0
+                            ) {
+                                return (
+                                    <this.ViewNtroRow
+                                        key={index}
+                                        heading={`${locale.viewRecord.headings.NTRO.significance}`}
+                                        subheading={`(${publication.fez_record_search_key_author[item.rek_significance_order - 1].rek_author})`}
+                                        data={(item.rek_significance !== 0 && item.rek_significance !== '0' && !!item.rek_significance && item.rek_significance_lookup) || global.global.defaultAuthorDataPlaceholder}
+                                    />
+                                );
+                            } else {
+                                return null;
+                            }
                         })
                     }
                     {/* Contribution statement */}
                     {
-                        publication.fez_record_search_key_creator_contribution_statement && publication.fez_record_search_key_creator_contribution_statement.length > 0 &&
+                        publication.fez_record_search_key_creator_contribution_statement &&
+                        publication.fez_record_search_key_creator_contribution_statement.length > 0 &&
                         publication.fez_record_search_key_creator_contribution_statement.map((item, index) => {
-                            if(this.props.account && !!this.props.account.canMasquerade ||
-                                item.rek_creator_contribution_statement !== global.global.defaultContributorStatementMissing && item.rek_creator_contribution_statement.trim().length > 0) {
+                            if (
+                                (this.props.account && this.props.account.canMasquerade) ||
+                                (
+                                    item.rek_creator_contribution_statement &&
+                                    (item.rek_creator_contribution_statement !== '' &&
+                                    item.rek_creator_contribution_statement.length > 0 &&
+                                    item.rek_creator_contribution_statement.trim().length !== 0) ||
+                                item.rek_creator_contribution_statement === null)
+                            ) {
                                 return (
                                     <this.ViewNtroRow
                                         className={this.props.classes.richTextParagraphFix}
                                         key={index}
                                         heading={locale.viewRecord.headings.NTRO.impactStatement}
-                                        subheading={publication.fez_record_search_key_author[index].rek_author ? `(${publication.fez_record_search_key_author[index].rek_author})` : ''}
-                                        data={item.rek_creator_contribution_statement && item.rek_creator_contribution_statement.trim().length !== 0 && ReactHtmlParser(item.rek_creator_contribution_statement) || null}
+                                        subheading={publication.fez_record_search_key_author[item.rek_creator_contribution_statement_order - 1].rek_author ? `(${publication.fez_record_search_key_author[item.rek_creator_contribution_statement_order - 1].rek_author})` : ''}
+                                        data={item.rek_creator_contribution_statement && item.rek_creator_contribution_statement.trim().length !== 0 && ReactHtmlParser(item.rek_creator_contribution_statement) || global.global.defaultAuthorDataPlaceholder}
                                     />
                                 );
                             } else {

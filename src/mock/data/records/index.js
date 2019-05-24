@@ -10,9 +10,12 @@ export {default as myRecordsList} from './myRecordsList';
 export {default as possibleUnclaimedList} from './possibleUnclaimedList';
 export {default as incompleteNTROlist} from './incompleteNTROlist';
 export {default as incompleteNTROrecord} from './incompleteNTROrecord';
+export {default as incompleteNTROrecordUqrdav10} from './incompleteNTRORecordUqrdav10';
+export {default as incompleteNTROrecordUqsbutl1} from './incompleteNTRORecordUqsbutl1';
 export {default as MyDatasetList} from './MyDatasetList';
 export {default as recordWithTiffAndThumbnail} from './recordWithTiffAndThumbnail';
 export {default as recordWithoutAuthorIds} from './recordWithoutAuthorIds';
 export {default as collections} from './collections';
-export {default as incompleteRecordList} from './incompleteRecordList';
-
+export {default as UQ352045} from './incompleteNTRORecordUQ352045';
+export {default as UQ716942_uqagrinb} from './incompleteNTRORecordUQ716942_uqagrinb';
+export {default as UQ716942_uqagrinb_grants} from './incompleteNTRORecordUQ716942_uqagrinb_grants';

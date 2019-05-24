@@ -7,9 +7,6 @@ import * as accountActions from './account';
 jest.mock('raven-js');
 
 describe('Account action creators', () => {
-    // extend expect to check actions
-    expect.extend({toHaveDispatchedActions});
-
     const MockDate = require('mockdate');
     beforeEach(() => {
         MockDate.set('2020-01-01T00:00:00.000Z', 10);

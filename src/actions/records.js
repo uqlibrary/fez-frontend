@@ -33,7 +33,8 @@ export function createNewRecord(data) {
             ...transformers.getRecordAbstractDescriptionSearchKey(data.isNtro && data.ntroAbstract || null),
             ...transformers.getGrantsListSearchKey(data.isNtro && data.grants || null),
             ...transformers.getNtroMetadataSearchKeys(data.isNtro && data || null),
-            ...transformers.getLanguageSearchKey(data.isNtro && data.languages || null)
+            ...transformers.getLanguageSearchKey(data.isNtro && data.languages || null),
+            ...transformers.getQualityIndicatorSearchKey(data.isNtro && data.qualityIndicators || null),
         };
 
         // delete extra form values from request object

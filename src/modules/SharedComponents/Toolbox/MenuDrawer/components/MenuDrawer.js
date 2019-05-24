@@ -102,7 +102,8 @@ export class MenuDrawer extends Component {
             skipNavAriaLabel: PropTypes.string,
             closeMenuLabel: PropTypes.string
         }),
-        classes: PropTypes.object
+        classes: PropTypes.object,
+        hasIncompleteWorks: PropTypes.bool
     };
 
     shouldComponentUpdate(nextProps) {
@@ -188,8 +189,11 @@ export class MenuDrawer extends Component {
                                         href={logoLink}
                                         title={logoText}
                                         openInNewIcon={false}
+                                        className="noHover"
                                     >
-                                        <div className={logoImage} style={{height: 50, width: 160, margin: '8px auto'}} alt={logoText}/>
+                                        <div className={logoImage} style={{height: 50, width: 160, margin: '8px auto'}} >
+                                            {logoText}
+                                        </div>
                                     </ExternalLink>
                                     }
                                 </Grid>

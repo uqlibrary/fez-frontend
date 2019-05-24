@@ -6,9 +6,6 @@ import * as mockData from 'mock/data/testing/records';
 describe('Fix record actions', () => {
     const testPid = "UQ:41878";
 
-    // extend expect to check actions
-    expect.extend({toHaveDispatchedActions});
-
     beforeEach(() => {
         mockActionsStore = setupStoreForActions();
         mockApi = setupMockAdapter();

@@ -39,8 +39,9 @@ export class GrantListEditor extends PureComponent {
 
     componentWillUpdate(nextProps, nextState) {
         // notify parent component when local state has been updated, eg grants added/removed/reordered
-        // istanbul ignore else
-        if (this.props.onChange) {
+        if (nextState.grantFormPopulated && this.props.onChange) {
+            this.props.onChange(nextState.grantFormPopulated);
+        } else {
             this.props.onChange(nextState.grants);
         }
     }
@@ -99,6 +100,12 @@ export class GrantListEditor extends PureComponent {
         });
     }
 
+    isFormPopulated = (value) => {
+        this.setState({
+            grantFormPopulated: !!value
+        });
+    };
+
     render() {
         const {classes, disabled, required, disableDeleteAllGrants} = this.props;
         const {grants, errorMessage} = this.state;
@@ -140,6 +147,7 @@ export class GrantListEditor extends PureComponent {
                 }
                 <GrantListEditorForm
                     onAdd={this.addGrant}
+                    isPopulated={this.isFormPopulated}
                     required={required}
                     disabled={disabled}
                     hideType={this.props.hideType}

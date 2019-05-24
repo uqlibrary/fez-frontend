@@ -210,9 +210,9 @@ export default {
             },
             incompleteRecordLure: {
                 title: 'NTRO Data Required',
-                message: 'We have found [count] record[plural] that require[verbEnding] additional data.',
+                message: 'We have found [count] work(s) that require[verbEnding] more information.',
                 type: 'warning',
-                actionButtonLabel: 'View and Update'
+                actionButtonLabel: 'View and Complete'
             },
         },
         myResearch: {
@@ -707,8 +707,8 @@ export default {
             title: 'Unpublished buffer'
         },
         incompletePublications: {
-            pageTitle: 'Incomplete records',
-            recordCount: 'Displaying incomplete records [recordsFrom] to [recordsTo] of [recordsTotal] total records. ',
+            pageTitle: 'My incomplete works',
+            recordCount: 'Displaying works [recordsFrom] to [recordsTo] of [recordsTotal] total works. ',
             loadingMessage: 'Searching for incomplete works',
             noResultsFound: {
                 title: 'No incomplete works found',
@@ -718,30 +718,68 @@ export default {
                     </div>
                 ),
             },
-            completeRecordButton: 'Complete record',
-            facetsFilter: {...locale.components.facetsFilter}
+            completeRecordButton: 'Complete work',
+            facetsFilter: {
+                ...locale.components.facetsFilter,
+                excludeFacetsList: ['Author'],
+                renameFacetsList: {}
+            }
         },
         incompletePublication: {
-            title: 'Fix an incomplete record',
-            submitButtonLabel: 'Complete my record',
-            cancelButtonLabel: 'Cancel and return to my incomplete records list',
+            title: 'Complete my work',
+            help: {
+                title: 'Add more information to an existing NTRO',
+                text: (<div>For help, click <a href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-ntro-information" target="_blank">here</a>.</div>),
+                buttonLabel: 'CLOSE'
+            },
+            submitButtonLabel: 'Complete work',
+            cancelButtonLabel: 'Cancel and return to my incomplete works list',
             fields: {
                 notes: {
                     title: 'Notes',
-                    label: 'Notes for this record',
-                    placeholder: 'Add any other notes or comments about this record to send to the eSpace team.'
+                    label: 'Notes for this work',
+                    placeholder: 'Add any other notes or comments about this work to send to the eSpace team.',
                 },
                 grants: {
-                    title: 'Grant information'
+                    title: 'Grant information',
+                },
+                authors: {
+                    ...locale.components.authors,
+                    description: (
+                        <span>For each author marked with a <span style={{color: 'red', weight: 'bold'}}>red</span> prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click <b>UPDATE AUTHOR</b>.</span>
+                    ),
+                    field: {
+                        ...locale.components.authors.field,
+                        form: {
+                            locale: {
+                                ...locale.components.authors.field.form.locale,
+                                descriptionStep1: (<div>
+                                    <span className="authorSteps" key="step-2">Step 2 of 2</span> - <b>Update the affiliation information</b>.
+                                </div>),
+                                addButton: 'Update author'
+                            }
+                        },
+                        header: {
+                            ...locale.components.authors.field.header,
+                            locale: {
+                                ...locale.components.authors.field.header.locale,
+                                descriptionStep2: (<div>
+                                    <span className="authorSteps" key="step-1">Step 1 of 2</span> - <b>Select an author</b>.
+                                </div>)
+                            }
+                        },
+                        row: {
+                            ...locale.components.authors.field.row,
+                            locale: {
+                                ...locale.components.authors.field.row.locale,
+                                selectHint: 'Select this author ([name]) to update their affiliation data.',
+                                requiredLabel: 'This author\'s data is incomplete.'
+                            }
+                        }
+                    },
                 },
                 fileUpload: {
                     title: 'Upload files',
-                    failedAlertLocale: {
-                        type: 'error',
-                        title: 'FILE UPLOAD ERROR',
-                        message: 'There was an issue uploading your thesis files. You will need to resubmit your thesis by clicking on the \'Resubmit your thesis\' button.',
-                        actionButtonLabel: 'RESUBMIT YOUR THESIS'
-                    },
                     locale: {
                         instructions: '',
                         accessTermsAndConditions: 'I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.',
@@ -758,7 +796,7 @@ export default {
                         fileUploadRestrictionHeading: 'File upload restrictions',
                         fileUploadRestrictions: (
                             <div>
-                                Maximum file size is 8Gb. <br/>
+                                Maximum file size is 8GB. <br/>
                                 PDF files must be saved using the following naming structure <b>&lt;student number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf</b>.
                                 Document name could be thesis, abstract, and etc.
                                 For example:
@@ -772,13 +810,13 @@ export default {
                         ),
                         fileUploadInstruction: (
                             <p>Click here to select files, or drag files into this area to upload</p>
-                        )
+                        ),
                     },
                     text: (
                         <div>
                             <span className="requiredField"><label>&nbsp;</label></span>
                         </div>
-                    )
+                    ),
                 },
             },
             successWorkflowConfirmation: {
@@ -788,8 +826,24 @@ export default {
                     message: 'File upload and/or notes post failed',
                     type: 'warning'
                 },
-                cancelButtonLabel: 'Complete another record',
-                confirmButtonLabel: 'Go to my incomplete research list'
+                cancelButtonLabel: 'Complete another work',
+                confirmButtonLabel: 'Go to my dashboard'
+            },
+            prompt: {
+                title: 'Missing data',
+                message: 'follow the red prompts to add missing information. You can also provide additional grant details or include notes to the eSpace team.',
+                type: 'info_outline'
+            },
+            progressAlert: {
+                type: 'info_outline',
+                title: 'Saving',
+                message: 'Updating work is in progress.',
+                showLoader: true
+            },
+            successAlert: {
+                type: 'done',
+                title: 'Success',
+                message: 'New information has been saved successfully.'
             },
         }
     }

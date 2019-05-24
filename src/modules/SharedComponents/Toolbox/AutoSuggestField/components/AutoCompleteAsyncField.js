@@ -7,6 +7,8 @@ import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
 import MenuItem from '@material-ui/core/MenuItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Popper from '@material-ui/core/Popper';
+import CircularProgress from '@material-ui/core/CircularProgress';
+import Grid from '@material-ui/core/Grid';
 
 export const styles = () => ({
     root: {
@@ -170,9 +172,8 @@ export class AutoCompleteAsyncField extends Component {
     );
 
     render() {
-        const { classes, itemsList, error, errorText, hintText, floatingLabelText, disabled, maxResults, itemToString, required, selectedValue } = this.props;
+        const { classes, itemsList, error, errorText, hintText, floatingLabelText, disabled, maxResults, itemToString, required, selectedValue, itemsListLoading } = this.props;
         const selectedItemProps = this.props.clearInput ? {selectedItem: ''} : {};
-
         return (
             <div className={classes.root}>
                 <Downshift
@@ -187,21 +188,31 @@ export class AutoCompleteAsyncField extends Component {
                         ({ getInputProps, getMenuProps, isOpen, inputValue, getItemProps, selectedItem, highlightedIndex, openMenu }) => {
                             return (
                                 <div className={classes.container}>
-                                    {this.renderInput({
-                                        fullWidth: true,
-                                        classes,
-                                        inputProps: getInputProps({
-                                            onChange: this.getSuggestions
-                                        }),
-                                        error: error,
-                                        errorText: error && errorText || '',
-                                        placeholder: hintText,
-                                        label: floatingLabelText,
-                                        value: inputValue,
-                                        disabled: disabled,
-                                        required: required,
-                                        openMenu: openMenu
-                                    })}
+                                    <Grid container spacing={16} alignItems={'flex-end'} alignContent={'flex-end'}>
+                                        <Grid item xs>
+                                            {this.renderInput({
+                                                fullWidth: true,
+                                                classes,
+                                                inputProps: getInputProps({
+                                                    onChange: this.getSuggestions
+                                                }),
+                                                error: error,
+                                                errorText: error && errorText || '',
+                                                placeholder: hintText,
+                                                label: floatingLabelText,
+                                                value: inputValue,
+                                                disabled: disabled,
+                                                required: required,
+                                                openMenu: openMenu
+                                            })}
+                                        </Grid>
+                                        {
+                                            itemsListLoading &&
+                                                <Grid item xs={'auto'}>
+                                                    <CircularProgress size={16} color="primary" />
+                                                </Grid>
+                                        }
+                                    </Grid>
                                     {isOpen && itemsList.length > 0 ? (
                                         <div {...getMenuProps()}>
                                             <Popper disablePortal id="downshift-popper" open anchorEl={this.textInputRef} placement="bottom-start">

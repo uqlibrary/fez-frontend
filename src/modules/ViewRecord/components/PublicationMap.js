@@ -135,10 +135,9 @@ const PublicationMap = compose(
             const polygonZoom = 13;
 
             const updateState = (geoCoords, currentOverlay) => {
-                /* istanbul ignore else */
-                if (!!this.state.currentOverlay) {
-                    this.state.currentOverlay.setMap(null);
-                }
+                !!this.state.currentOverlay &&
+                this.state.currentOverlay.setMap(null);
+
                 this.setState({
                     currentOverlay: currentOverlay,
                     geoCoords: geoCoords,

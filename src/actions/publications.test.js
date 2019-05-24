@@ -12,9 +12,6 @@ beforeEach(() => {
 });
 
 describe('Publications actions', () => {
-    // extend expect to check actions
-    expect.extend({ toHaveDispatchedActions });
-
     beforeEach(() => {
         mockActionsStore = setupStoreForActions();
         mockApi = setupMockAdapter();
@@ -171,7 +168,7 @@ describe('Publications actions', () => {
             };
 
             mockApi
-                .onGet(repositories.routes.CURRENT_USER_INCOMPLETE_RECORDS_API(testRequest).apiUrl)
+                .onGet(repositories.routes.INCOMPLETE_RECORDS_API(testRequest).apiUrl)
                 .reply(200, {});
 
             const expectedActions = [

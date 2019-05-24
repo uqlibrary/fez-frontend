@@ -3,9 +3,6 @@ import * as appActions from './app';
 import * as mockData from 'mock/data';
 
 describe('App action creator', () => {
-    // extend expect to check actions
-    expect.extend({toHaveDispatchedActions});
-
     beforeEach(() => {
         mockActionsStore = setupStoreForActions();
         mockApi = setupMockAdapter();

@@ -28,7 +28,7 @@ export function searchPossiblyYourPublications({activeFacets = {}, page = 1, pag
             .then(response => {
                 dispatch({
                     type: actions.POSSIBLY_YOUR_PUBLICATIONS_LOADED,
-                    payload: response,
+                    payload: {...response, type: 'possible'},
                 });
 
                 dispatch({

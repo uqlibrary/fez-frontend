@@ -86,4 +86,36 @@ describe('Component NtroFields', () => {
             fez_test_order: 2
         });
     });
+
+    // cc - in reality, signif and contrib always appear together
+    it('should show significance field even if contribution field isnt empty', () => {
+        const wrapper = setup({
+            showContributionStatement: false,
+            showSignificance: true
+        });
+        const tree = toJson(wrapper);
+        expect(tree).toMatchSnapshot();
+    });
+
+    it('should not show NTRO data card in the Ntro fields', () => {
+        const wrapper = setup({
+            showContributionStatement: false,
+            showSignificance: true,
+            hideAbstract: true,
+            hidePeerReviewActivity: true,
+            hideLanguage: true,
+            hideAudienceSize: true,
+            hideOriginalFormat: true,
+            hideExtent: true,
+            hideEndPage: true,
+            hideStartPage: true,
+            hideIssue: true,
+            hideVolume: true,
+            hideSeries: true,
+            hideIsrc: true,
+            hideIsmn: true
+        });
+
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });

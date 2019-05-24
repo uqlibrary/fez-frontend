@@ -52,6 +52,7 @@ export default class BookForm extends Component {
                                     component={TextField}
                                     autoFocus={!this.props.isNtro}
                                     disabled={this.props.submitting}
+                                    id="rek-title"
                                     name="rek_title"
                                     required
                                     type="text"
@@ -65,6 +66,7 @@ export default class BookForm extends Component {
                                 <Field
                                     component={TextField}
                                     disabled={this.props.submitting}
+                                    id="rek-place-of-publication"
                                     name="fez_record_search_key_place_of_publication.rek_place_of_publication"
                                     type="text"
                                     required
@@ -76,6 +78,7 @@ export default class BookForm extends Component {
                                 <Field
                                     component={TextField}
                                     disabled={this.props.submitting}
+                                    id="rek-publisher"
                                     name="fez_record_search_key_publisher.rek_publisher"
                                     type="text"
                                     required
@@ -147,6 +150,7 @@ export default class BookForm extends Component {
                             <Field
                                 component={ContributorsEditorField}
                                 showContributorAssignment={!authorSelected}
+                                id="editors-name-as-published-field"
                                 name="editors"
                                 locale={txt.editors.field}
                                 disabled={this.props.submitting} />

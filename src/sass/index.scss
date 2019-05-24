@@ -25,14 +25,21 @@ a {
   &:hover {
     text-decoration: underline;
   }
+  &.noHover {
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
 
-.smallLogo::before {
-  content: url(../../src/images/uq-logo-white-minimal.svg);
+.smallLogo,
+.largeLogo {
+  color: transparent;
+  background: center center url(../../src/images/uq-logo-white-minimal.svg) no-repeat;
 }
 
-.largeLogo::before {
-  content: url(../../src/images/uq-logo-white-2018.svg);
+.largeLogo {
+  background-image: url('../../src/images/uq-logo-white-2018.svg');
 }
 
 .layout-fill {

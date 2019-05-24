@@ -42,9 +42,10 @@ export class HelpIcon extends Component {
         return (
             <Tooltip title={tooltip}
                 placement="bottom-end"
-                TransitionComponent={Fade}>
+                TransitionComponent={Fade}
+            >
                 <IconButton onClick={this.setDrawerContent}>
-                    <HelpOutline className={classes.helpIcon}/>
+                    <HelpOutline className={classes.helpIcon} titleAccess={tooltip} />
                 </IconButton>
             </Tooltip>
         );
