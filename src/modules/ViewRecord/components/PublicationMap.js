@@ -106,14 +106,21 @@ GoogleMapViewComponent.propTypes = {
 };
 
 export const getDefaultCenter = (geoCoords) => {
-    const minLngPoint = geoCoords.reduce((min, point) => point.lng < min ? point.lng : min, geoCoords[0].lng);
-    const maxLngPoint = geoCoords.reduce((max, point) => point.lng > max ? point.lng : max, geoCoords[0].lng);
-    const minLatPoint = geoCoords.reduce((min, point) => point.lat < min ? point.lat : min, geoCoords[0].lat);
-    const maxLatPoint = geoCoords.reduce((max, point) => point.lat > max ? point.lat : max, geoCoords[0].lat);
-    return {
-        lng: (maxLngPoint + minLngPoint) / 2,
-        lat: (minLatPoint + maxLatPoint) / 2
-    };
+    if (geoCoords.length > 0) {
+        const minLngPoint = geoCoords.reduce((min, point) => point.lng < min ? point.lng : min, geoCoords[0].lng);
+        const maxLngPoint = geoCoords.reduce((max, point) => point.lng > max ? point.lng : max, geoCoords[0].lng);
+        const minLatPoint = geoCoords.reduce((min, point) => point.lat < min ? point.lat : min, geoCoords[0].lat);
+        const maxLatPoint = geoCoords.reduce((max, point) => point.lat > max ? point.lat : max, geoCoords[0].lat);
+        return {
+            lng: (maxLngPoint + minLngPoint) / 2,
+            lat: (minLatPoint + maxLatPoint) / 2
+        };
+    } else {
+        return {
+            lng: 153.013346,
+            lat: -27.499412
+        };
+    }
 };
 
 const PublicationMap = compose(
@@ -128,9 +135,9 @@ const PublicationMap = compose(
                     lng: Number(item.split(',')[0]),
                     lat: Number(item.split(',')[1])
                 }
-            ));
+            )) || [];
 
-            const defaultCenter = (geoCoords) ? getDefaultCenter(geoCoords) : {lng: 153.013346, lat: -27.499412};
+            const defaultCenter = getDefaultCenter(geoCoords);
             const pointZoom = 7;
             const polygonZoom = 13;
 

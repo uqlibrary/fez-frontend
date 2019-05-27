@@ -486,7 +486,7 @@ exports[`RichEditor tests  should render component 1`] = `
               ],
               "results": Array [
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
               ],
@@ -1042,31 +1042,31 @@ exports[`RichEditor tests  should render error as one child 1`] = `
               ],
               "results": Array [
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
               ],
@@ -1105,7 +1105,7 @@ exports[`RichEditor tests  should render error as one child 1`] = `
                   ],
                   "results": Array [
                     Object {
-                      "isThrow": false,
+                      "type": "return",
                       "value": undefined,
                     },
                   ],
@@ -2679,27 +2679,27 @@ exports[`RichEditor tests  should render error as react children 1`] = `
               ],
               "results": Array [
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
               ],
@@ -2740,7 +2740,7 @@ exports[`RichEditor tests  should render error as react children 1`] = `
                   ],
                   "results": Array [
                     Object {
-                      "isThrow": false,
+                      "type": "return",
                       "value": undefined,
                     },
                   ],
@@ -4312,23 +4312,23 @@ exports[`RichEditor tests  should render error showing input length 1`] = `
               ],
               "results": Array [
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
               ],
@@ -4365,7 +4365,7 @@ exports[`RichEditor tests  should render error showing input length 1`] = `
                   ],
                   "results": Array [
                     Object {
-                      "isThrow": false,
+                      "type": "return",
                       "value": undefined,
                     },
                   ],
@@ -5927,19 +5927,19 @@ exports[`RichEditor tests  should render error showing maxValue and instructions
               ],
               "results": Array [
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
               ],
@@ -7513,11 +7513,11 @@ exports[`RichEditor tests  should render given title and description 1`] = `
               ],
               "results": Array [
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
               ],
@@ -9043,15 +9043,15 @@ exports[`RichEditor tests  should render given title and description with error 
               ],
               "results": Array [
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
               ],

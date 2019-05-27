@@ -1641,7 +1641,7 @@ exports[`MyIncompleteRecord Container should run componentDidMount() life cycle 
         ],
         "results": Array [
           Object {
-            "isThrow": false,
+            "type": "return",
             "value": undefined,
           },
         ],

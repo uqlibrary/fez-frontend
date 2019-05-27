@@ -492,11 +492,11 @@ exports[`ThesisCitation renders  component with a mock espace record 1`] = `
               ],
               "results": Array [
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
               ],
@@ -2394,15 +2394,15 @@ exports[`ThesisCitation renders  component with an empty doi view 1`] = `
               ],
               "results": Array [
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
               ],
@@ -4294,7 +4294,7 @@ exports[`ThesisCitation renders  component with empty publication 1`] = `
               ],
               "results": Array [
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
               ],

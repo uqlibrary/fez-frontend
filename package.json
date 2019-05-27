@@ -5,6 +5,31 @@
   "license": "MIT",
   "repository": "github:uqlibrary/fez-frontend",
   "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/plugin-proposal-decorators": "^7.0.0",
+    "@babel/plugin-proposal-do-expressions": "^7.0.0",
+    "@babel/plugin-proposal-export-default-from": "^7.0.0",
+    "@babel/plugin-proposal-export-namespace-from": "^7.0.0",
+    "@babel/plugin-proposal-function-bind": "^7.0.0",
+    "@babel/plugin-proposal-function-sent": "^7.0.0",
+    "@babel/plugin-proposal-json-strings": "^7.0.0",
+    "@babel/plugin-proposal-logical-assignment-operators": "^7.0.0",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.0.0",
+    "@babel/plugin-proposal-numeric-separator": "^7.0.0",
+    "@babel/plugin-proposal-optional-chaining": "^7.0.0",
+    "@babel/plugin-proposal-pipeline-operator": "^7.0.0",
+    "@babel/plugin-proposal-throw-expressions": "^7.0.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/plugin-syntax-export-namespace-from": "^7.2.0",
+    "@babel/plugin-syntax-import-meta": "^7.0.0",
+    "@babel/plugin-transform-react-constant-elements": "^7.0.0",
+    "@babel/plugin-transform-runtime": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/register": "^7.0.0",
+    "@babel/runtime-corejs2": "^7.0.0",
     "@sentry/webpack-plugin": "^1.5.2",
     "@types/enzyme": "^3.1.16",
     "@types/file-saver": "1.3.1",
@@ -34,27 +59,17 @@
     "@types/sinon": "^5.0.2",
     "@types/webpack": "^4.4.24",
     "assets-webpack-plugin": "^3.9.7",
+    "autoprefixer": "^9.5.1",
     "axios-mock-adapter": "^1.15.0",
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
-    "babel-eslint": "^8.2.3",
-    "babel-jest": "^23.6.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^9.0.0",
+    "babel-jest": "^23.4.2",
     "babel-plugin-dynamic-import-node": "^1.2.0",
-    "babel-plugin-transform-class-properties": "^6.24.1",
-    "babel-plugin-transform-react-constant-elements": "6.23.0",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.13",
-    "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-polyfill": "6.26.0",
-    "babel-preset-env": "^1.6.0",
-    "babel-preset-react": "6.24.1",
-    "babel-preset-stage-0": "^6.24.1",
-    "babel-preset-stage-1": "6.24.1",
-    "babel-register": "^6.26.0",
-    "babel-runtime": "^6.26.0",
     "chalk": "2.4.1",
     "chromedriver": "^2.38.2",
     "cross-env": "^5.2.0",
-    "css-loader": "^0.28.10",
+    "css-loader": "^2.1.1",
     "dom-testing-library": "^3.17.1",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "1.7.1",
@@ -66,8 +81,8 @@
     "eslint-plugin-uqlibrary": "file:eslint-plugin-uqlibrary",
     "file-loader": "1.1.11",
     "html-webpack-plugin": "3.2.0",
-    "jest": "^23.6.0",
-    "jest-cli": "^23.6.0",
+    "jest": "^24.7.1",
+    "jest-cli": "^24.7.1",
     "jest-dom": "^3.1.3",
     "jest-localstorage-mock": "^2.4.0",
     "jsdom": "11.10.0",
@@ -78,6 +93,7 @@
     "postcss-loader": "^2.1.4",
     "preloader-html-webpack-plugin": "github:uqlibrary/preloader-html-webpack-plugin#master",
     "progress-bar-webpack-plugin": "^1.11.0",
+    "query-string": "^6.5.0",
     "react-test-renderer": "16.3.2",
     "react-testing-library": "^6.0.0",
     "redux-mock-store": "^1.5.1",
@@ -90,22 +106,25 @@
     "style-loader": "^0.21.0",
     "uglifyjs-webpack-plugin": "^1.2.5",
     "webpack": "^4.16.0",
-    "webpack-bundle-analyzer": "^2.13.1",
+    "webpack-bundle-analyzer": "^3.3.2",
     "webpack-cli": "^3.0.8",
     "webpack-dev-server": "^3.1.14",
     "webpack-pwa-manifest": "^3.7.1"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.4.4",
+    "@babel/runtime": "^7.4.5",
     "@material-ui/core": "^3.2.0",
     "@material-ui/icons": "^3.0.1",
     "@material/animation": "0.34.0",
     "axios": "^0.18.0",
     "axios-cache-adapter": "^2.0.0",
-    "babel-loader": "^7.1.4",
+    "babel-loader": "^8.0.0",
     "can-deparam": "^1.1.1",
     "can-param": "^1.0.4",
     "classnames": "^2.2.6",
     "connected-react-router": "^4.3.0",
+    "deep-diff": "^1.0.2",
     "dompurify": "^1.0.4",
     "downshift": "^2.2.0",
     "eslint-plugin-react-hooks": "^1.5.0",
@@ -171,24 +190,20 @@
   },
   "babel": {
     "presets": [
-      "env",
-      "react",
-      "stage-0",
-      "stage-1"
+      "@babel/env",
+      "@babel/react"
     ],
     "env": {
       "development": {
         "presets": [
-          "env",
-          "react",
-          "stage-0",
-          "stage-1"
+          "@babel/env",
+          "@babel/react"
         ]
       },
       "production": {
         "presets": [
           [
-            "env",
+            "@babel/env",
             {
               "es2015": {
                 "modules": false
@@ -201,29 +216,37 @@
           ]
         ],
         "plugins": [
-          "transform-react-constant-elements",
+          "@babel/plugin-transform-react-constant-elements",
           "transform-react-remove-prop-types",
-          "transform-class-properties"
+          "@babel/plugin-proposal-class-properties",
+          "@babel/plugin-proposal-export-namespace-from",
+          "@babel/plugin-proposal-export-default-from",
+          "@babel/plugin-proposal-class-properties"
         ]
       },
       "test": {
         "presets": [
-          "env",
-          "react",
-          "stage-0",
-          "stage-1"
+          "@babel/env",
+          "@babel/react"
         ],
         "plugins": [
           [
             "dynamic-import-node",
-            "transform-runtime",
+            {
+              "noInterop": true
+            }
+          ],
+          [
+            "@babel/plugin-transform-runtime",
             {
               "helpers": false,
-              "polyfill": false,
               "regenerator": true,
-              "moduleName": "babel-runtime"
+              "corejs": false
             }
-          ]
+          ],
+          "@babel/plugin-proposal-export-namespace-from",
+          "@babel/plugin-proposal-export-default-from",
+          "@babel/plugin-proposal-class-properties"
         ]
       }
     }
@@ -287,7 +310,9 @@
       "./src/test.setup.js",
       "jest-localstorage-mock"
     ],
-    "setupTestFrameworkScriptFile": "./src/jest.setup.js",
+    "setupFilesAfterEnv": [
+      "./src/jest.setup.js"
+    ],
     "testURL": "http://fez-staging.library.uq.edu.au"
   }
 }
