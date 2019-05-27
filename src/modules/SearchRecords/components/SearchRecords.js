@@ -1,13 +1,13 @@
-import React, {PureComponent} from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
-import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
-import {StandardRighthandCard} from 'modules/SharedComponents/Toolbox/StandardRighthandCard';
-import {SearchComponent} from 'modules/SharedComponents/SearchComponent';
-import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
-import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
-import {routes} from 'config';
+import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
+import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
+import { StandardRighthandCard } from 'modules/SharedComponents/Toolbox/StandardRighthandCard';
+import { SearchComponent } from 'modules/SharedComponents/SearchComponent';
+import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
+import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
+import { routes } from 'config';
 import param from 'can-param';
 import deparam from 'can-deparam';
 
@@ -21,7 +21,7 @@ import {
     FacetsFilter
 } from 'modules/SharedComponents/PublicationsList';
 
-import {locale} from 'locale';
+import { locale } from 'locale';
 
 class SearchRecords extends PureComponent {
     static propTypes = {
@@ -57,8 +57,10 @@ class SearchRecords extends PureComponent {
         };
 
         if (!!props.location && props.location.search.indexOf('?') >= 0) {
-            const providedSearchQuery = this.parseSearchQueryStringFromUrl(props.location.search.substr(1));
-            this.initState = {...this.initState, ...providedSearchQuery};
+            const providedSearchQuery = this.parseSearchQueryStringFromUrl(
+                props.location.search.substr(1)
+            );
+            this.initState = { ...this.initState, ...providedSearchQuery };
         }
 
         this.state = {
@@ -71,7 +73,7 @@ class SearchRecords extends PureComponent {
     }
 
     componentDidMount() {
-        const {searchQueryParams} = this.state;
+        const { searchQueryParams } = this.state;
         if (!!searchQueryParams) {
             this.updateSearch();
         }
@@ -84,9 +86,9 @@ class SearchRecords extends PureComponent {
             newProps.history.action === 'POP' &&
             newProps.location.pathname === routes.pathConfig.records.search
         ) {
-            this.setState({...(!!newProps.location.state ? newProps.location.state : this.state)}, () => {
+            this.setState({ ...(!!newProps.location.state ? newProps.location.state : this.state) }, () => {
                 // only will be called when user clicks back on search records page
-                this.props.actions.searchEspacePublications({...this.state});
+                this.props.actions.searchEspacePublications({ ...this.state });
             });
         } else {
             this.setState({
@@ -94,7 +96,9 @@ class SearchRecords extends PureComponent {
                     (
                         !!newProps.location.search
                         && newProps.location.search.length > 1
-                        && this.parseSearchQueryStringFromUrl(newProps.location.search.substr(1))
+                        && this.parseSearchQueryStringFromUrl(
+                            newProps.location.search.substr(1)
+                        )
                     ) || {}
                 )
             });
@@ -122,7 +126,9 @@ class SearchRecords extends PureComponent {
             }
 
             if (providedSearchQuery.activeFacets.hasOwnProperty('showOpenAccessOnly')) {
-                providedSearchQuery.activeFacets.showOpenAccessOnly = (providedSearchQuery.activeFacets.showOpenAccessOnly === 'true');
+                providedSearchQuery.activeFacets.showOpenAccessOnly = (
+                    providedSearchQuery.activeFacets.showOpenAccessOnly === 'true'
+                );
             }
         } else {
             providedSearchQuery.activeFacets = {
@@ -132,9 +138,15 @@ class SearchRecords extends PureComponent {
         }
 
         const pageSize = parseInt(providedSearchQuery.pageSize, 10);
-        providedSearchQuery.pageSize = locale.components.sorting.recordsPerPage.indexOf(pageSize) < 0 ? 20 : pageSize;
+        providedSearchQuery.pageSize = locale.components.sorting.recordsPerPage.indexOf(
+            pageSize
+        ) < 0
+            ? 20
+            : pageSize;
 
-        providedSearchQuery.sortDirection = locale.components.sorting.sortDirection.indexOf(providedSearchQuery.sortDirection) < 0
+        providedSearchQuery.sortDirection = locale.components.sorting.sortDirection.indexOf(
+            providedSearchQuery.sortDirection
+        ) < 0
             ? locale.components.sorting.sortDirection[0]
             : providedSearchQuery.sortDirection;
 
@@ -200,23 +212,23 @@ class SearchRecords extends PureComponent {
                     : routes.pathConfig.records.search
             ),
             search: param(this.state),
-            state: {...this.state}
+            state: { ...this.state }
         });
         this.updateSearch();
     };
 
     updateSearch = () => {
-        this.props.actions.searchEspacePublications({...this.props.searchQuery, ...this.state});
+        this.props.actions.searchEspacePublications({ ...this.props.searchQuery, ...this.state });
     };
 
     handleExportPublications = (exportFormat) => {
-        this.props.actions.exportEspacePublications({...exportFormat, ...this.state});
+        this.props.actions.exportEspacePublications({ ...exportFormat, ...this.state });
     };
 
     handleFacetExcludesFromSearchFields = (searchFields) => {
         const excludesFromLocale = locale.pages.searchRecords.facetsFilter.excludeFacetsList;
         // Iterate the searchfields and add their map from locale into the excluded facets array
-        if(searchFields) {
+        if (searchFields) {
             const importedFacetExcludes = [];
             Object.keys(searchFields).map((key) => {
                 if (searchFields[key].searchField) {
@@ -237,7 +249,7 @@ class SearchRecords extends PureComponent {
         const pagingData = this.props.publicationsListPagingData;
         const isLoadingOrExporting = this.props.searchLoading || this.props.exportPublicationsLoading;
         const hasSearchParams = !!this.props.searchQuery && this.props.searchQuery.constructor === Object && Object.keys(this.props.searchQuery).length > 0;
-        const alertProps = this.props.searchLoadingError && {...txt.errorAlert, message: txt.errorAlert.message(locale.global.errorMessages.generic)};
+        const alertProps = this.props.searchLoadingError && { ...txt.errorAlert, message: txt.errorAlert.message(locale.global.errorMessages.generic) };
         return (
             <StandardPage className="page-search-records">
                 <Grid container spacing={24}>
@@ -261,7 +273,7 @@ class SearchRecords extends PureComponent {
                         // first time loading search results
                         !hasSearchParams && this.props.searchLoading &&
                         <Grid item xs={12}>
-                            <InlineLoader message={txt.loadingMessage}/>
+                            <InlineLoader message={txt.loadingMessage} />
                         </Grid>
                     }
                     {
@@ -291,8 +303,11 @@ class SearchRecords extends PureComponent {
                                 <Grid container spacing={16}>
                                     <Grid item xs={12}>
                                         {
-                                            pagingData && pagingData.to && pagingData.from && pagingData.total ?
-                                                <span>
+                                            pagingData &&
+                                            pagingData.to &&
+                                            pagingData.from &&
+                                            pagingData.total
+                                                ? <span>
                                                     {txt.recordCount
                                                         .replace('[recordsTotal]', pagingData.total)
                                                         .replace('[recordsFrom]', pagingData.from)
@@ -312,32 +327,40 @@ class SearchRecords extends PureComponent {
                                             onSortByChanged={this.sortByChanged}
                                             onPageSizeChanged={this.pageSizeChanged}
                                             onExportPublications={this.handleExportPublications}
-                                            disabled={isLoadingOrExporting} />
+                                            disabled={isLoadingOrExporting}
+                                        />
                                     </Grid>
                                     <Grid item xs={12}>
                                         <PublicationsListPaging
                                             loading={isLoadingOrExporting}
                                             pagingData={pagingData}
                                             onPageChanged={this.pageChanged}
-                                            disabled={isLoadingOrExporting} />
+                                            disabled={isLoadingOrExporting}
+                                        />
                                     </Grid>
                                 </Grid>
                                 {
                                     isLoadingOrExporting &&
                                     <Grid container justify={'center'}>
                                         <Grid item>
-                                            <InlineLoader message={this.props.searchLoading ? txt.loadingPagingMessage : txt.exportPublicationsLoadingMessage}/>
+                                            <InlineLoader message={
+                                                this.props.searchLoading
+                                                    ? txt.loadingPagingMessage
+                                                    : txt.exportPublicationsLoadingMessage
+                                            } />
                                         </Grid>
                                     </Grid>
                                 }
                                 {
-                                    !isLoadingOrExporting && this.props.publicationsList && this.props.publicationsList.length > 0 &&
-                                        <div style={{marginTop: 16}}>
-                                            <PublicationsList
-                                                showUnpublishedBufferFields={this.props.isUnpublishedBufferPage}
-                                                publicationsList={this.props.publicationsList}
-                                            />
-                                        </div>
+                                    !isLoadingOrExporting &&
+                                    this.props.publicationsList &&
+                                    this.props.publicationsList.length > 0 &&
+                                    <div style={{ marginTop: 16 }}>
+                                        <PublicationsList
+                                            showUnpublishedBufferFields={this.props.isUnpublishedBufferPage}
+                                            publicationsList={this.props.publicationsList}
+                                        />
+                                    </div>
                                 }
                                 <PublicationsListPaging
                                     loading={isLoadingOrExporting}
@@ -350,21 +373,22 @@ class SearchRecords extends PureComponent {
                     {
                         this.props.publicationsListFacets
                         && Object.keys(this.props.publicationsListFacets).length !== 0 &&
-                            <Hidden smDown>
-                                <Grid item md={3}>
-                                    <StandardRighthandCard title={txt.facetsFilter.title} help={txt.facetsFilter.help}>
-                                        <FacetsFilter
-                                            facetsData={this.props.publicationsListFacets}
-                                            onFacetsChanged={this.facetsChanged}
-                                            activeFacets={this.state.activeFacets}
-                                            disabled={isLoadingOrExporting}
-                                            excludeFacetsList={this.state.advancedSearchFields}
-                                            renameFacetsList={txt.facetsFilter.renameFacetsList}
-                                            lookupFacetsList={txt.facetsFilter.lookupFacetsList}
-                                            showOpenAccessFilter/>
-                                    </StandardRighthandCard>
-                                </Grid>
-                            </Hidden>
+                        <Hidden smDown>
+                            <Grid item md={3}>
+                                <StandardRighthandCard title={txt.facetsFilter.title} help={txt.facetsFilter.help}>
+                                    <FacetsFilter
+                                        facetsData={this.props.publicationsListFacets}
+                                        onFacetsChanged={this.facetsChanged}
+                                        activeFacets={this.state.activeFacets}
+                                        disabled={isLoadingOrExporting}
+                                        excludeFacetsList={this.state.advancedSearchFields}
+                                        renameFacetsList={txt.facetsFilter.renameFacetsList}
+                                        lookupFacetsList={txt.facetsFilter.lookupFacetsList}
+                                        showOpenAccessFilter
+                                    />
+                                </StandardRighthandCard>
+                            </Grid>
+                        </Hidden>
                     }
                 </Grid>
             </StandardPage>

@@ -1,0 +1,3650 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchRecords Should be able to perform advanced search 1`] = `
+"Snapshot Diff:
+- First value
++ Second value
+
+@@ -16,81 +16,449 @@
+            >
+              <div
+                class=\\"MuiCardContent-root-473\\"
+              >
+                <form
+-                 style=\\"margin: 8px;\\"
++                 id=\\"advancedSearchForm\\"
++                 style=\\"padding: 12px;\\"
++               >
++                 <div
++                   class=\\"MuiGrid-container-344 MuiGrid-spacing-xs-24-368\\"
++                 >
++                   <div
++                     class=\\"MuiGrid-container-344 MuiGrid-spacing-xs-40-370\\"
++                   >
++                     <div
++                       class=\\"MuiGrid-item-345\\"
++                       style=\\"width: 1px;\\"
++                     >
++                       <h5
++                         class=\\"MuiTypography-root-575 MuiTypography-h5-591\\"
++                       >
++                         Advanced search
++                       </h5>
++                     </div>
++                     <div
++                       class=\\"MuiGrid-item-345\\"
++                     >
++                       <button
++                         class=\\"MuiButtonBase-root-555 MuiIconButton-root-610\\"
++                         tabindex=\\"0\\"
++                         tooltip=\\"Hide advanced search\\"
++                         type=\\"button\\"
++                       >
++                         <span
++                           class=\\"MuiIconButton-label-615\\"
++                         >
++                           <svg
++                             aria-hidden=\\"true\\"
++                             class=\\"MuiSvgIcon-root-616\\"
++                             focusable=\\"false\\"
++                             role=\\"presentation\\"
++                             viewBox=\\"0 0 24 24\\"
++                           >
++                             <path
++                               d=\\"M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z\\"
++                             />
++                             <path
++                               d=\\"M0 0h24v24H0z\\"
++                               fill=\\"none\\"
++                             />
++                           </svg>
++                         </span>
++                         <span
++                           class=\\"MuiTouchRipple-root-558\\"
++                         />
++                       </button>
++                     </div>
++                   </div>
++                   <div
++                     class=\\"MuiGrid-container-344\\"
++                   >
++                     <div
++                       class=\\"MuiGrid-item-345 MuiGrid-grid-xs-12-384 MuiGrid-grid-md-8-408\\"
++                     >
++                       <div
++                         class=\\"MuiGrid-container-344 MuiGrid-spacing-xs-16-367\\"
++                       >
++                         <div
++                           class=\\"MuiGrid-item-345 MuiGrid-grid-xs-12-384 MuiGrid-grid-md-6-406\\"
+                          >
+                            <div
+-                   class=\\"MuiGrid-container-344 MuiGrid-spacing-xs-16-367 MuiGrid-align-items-xs-center-352\\"
++                             class=\\"MuiGrid-container-344 MuiGrid-spacing-xs-16-367\\"
+                            >
+                              <div
+-                     class=\\"MuiGrid-item-345 MuiGrid-grid-xs-true-372\\"
++                               class=\\"MuiGrid-item-345 AdvancedSearchRow-autoWidth-625\\"
++                               style=\\"min-width: 200px;\\"
++                             >
++                               <div
++                                 class=\\"MuiFormControl-root-481 MuiFormControl-fullWidth-484\\"
++                               >
++                                 <div
++                                   aria-label=\\"Click to select a field to search from the list - Select a field currently selected\\"
++                                   class=\\"MuiInputBase-root-512 MuiInput-root-499 MuiInput-underline-503 MuiInputBase-error-518 MuiInput-error-504 MuiInputBase-formControl-513 MuiInput-formControl-500\\"
++                                 >
++                                   <div
++                                     class=\\"MuiSelect-root-630\\"
++                                   >
++                                     <div
++                                       aria-haspopup=\\"true\\"
++                                       aria-pressed=\\"false\\"
++                                       class=\\"MuiSelect-select-631 MuiSelect-selectMenu-634 MuiInputBase-input-522 MuiInput-input-507\\"
++                                       role=\\"button\\"
++                                       tabindex=\\"0\\"
++                                     >
++                                       Select a field
++                                     </div>
++                                     <input
++                                       type=\\"hidden\\"
++                                       value=\\"0\\"
++                                     />
++                                     <svg
++                                       aria-hidden=\\"true\\"
++                                       class=\\"MuiSvgIcon-root-616 MuiSelect-icon-636\\"
++                                       focusable=\\"false\\"
++                                       role=\\"presentation\\"
++                                       viewBox=\\"0 0 24 24\\"
++                                     >
++                                       <path
++                                         d=\\"M7 10l5 5 5-5z\\"
++                                       />
++                                     </svg>
++                                   </div>
++                                 </div>
++                                 <p
++                                   class=\\"MuiFormHelperText-root-641 MuiFormHelperText-error-642 MuiFormHelperText-filled-647\\"
++                                 >
++                                   Please select a field to search
++                                 </p>
++                               </div>
++                             </div>
++                             <div
++                               class=\\"MuiGrid-item-345 MuiGrid-grid-xs-auto-371\\"
++                             >
++                               <p
++                                 class=\\"MuiTypography-root-575 MuiTypography-body2-583 AdvancedSearchRow-advancedSearchCombiner-627\\"
++                               />
++                             </div>
++                           </div>
++                         </div>
++                         <div
++                           class=\\"MuiGrid-item-345 MuiGrid-grid-xs-12-384 MuiGrid-grid-md-6-406 AdvancedSearchRow-mobileInputRow-629\\"
++                         >
++                           <div
++                             class=\\"MuiGrid-container-344 MuiGrid-spacing-xs-16-367\\"
++                           >
++                             <div
++                               class=\\"MuiGrid-item-345 MuiGrid-zeroMinWidth-346 AdvancedSearchRow-autoWidth-625\\"
++                             >
++                               <div
++                                 aria-label=\\"Select a field to search on\\"
++                                 class=\\"MuiFormControl-root-481 MuiFormControl-fullWidth-484\\"
++                               >
++                                 <div
++                                   class=\\"MuiInputBase-root-512 MuiInput-root-499 MuiInput-underline-503 MuiInputBase-disabled-515 MuiInput-disabled-502 MuiInputBase-fullWidth-521 MuiInput-fullWidth-506 MuiInputBase-formControl-513 MuiInput-formControl-500\\"
++                                 >
++                                   <input
++                                     aria-invalid=\\"false\\"
++                                     autocomplete=\\"search\\"
++                                     class=\\"MuiInputBase-input-522 MuiInput-input-507 MuiInputBase-disabled-515 MuiInput-disabled-502 MuiInputBase-inputType-525 MuiInput-inputType-510 MuiInputBase-inputTypeSearch-526 MuiInput-inputTypeSearch-511\\"
++                                     disabled=\\"\\"
++                                     id=\\"searchField\\"
++                                     name=\\"searchField0\\"
++                                     placeholder=\\"Select a field to search on\\"
++                                     type=\\"search\\"
++                                     value=\\"\\"
++                                   />
++                                 </div>
++                               </div>
++                             </div>
++                           </div>
++                         </div>
++                       </div>
++                     </div>
++                     <div
++                       class=\\"MuiGrid-item-345 MuiGrid-grid-xs-12-384 MuiGrid-grid-md-4-404 AdvancedSearchComponent-sideBar-572\\"
++                     >
++                       <div
++                         class=\\"MuiGrid-container-344 MuiGrid-spacing-xs-16-367\\"
++                       >
++                         <div
++                           class=\\"MuiGrid-item-345 MuiGrid-grid-xs-12-384\\"
+                          >
+                            <div
+                              class=\\"MuiFormControl-root-481 MuiFormControl-fullWidth-484\\"
+                            >
+                              <label
+                                class=\\"MuiFormLabel-root-492 MuiInputLabel-root-485 MuiInputLabel-formControl-486 MuiInputLabel-animated-489\\"
+                                data-shrink=\\"false\\"
+-                         for=\\"simpleSearchField\\"
+                              >
+-                         Search eSpace
++                               Work type
+                              </label>
+                              <div
++                               aria-label=\\"Select multiple publications types to search on\\"
+                                class=\\"MuiInputBase-root-512 MuiInput-root-499 MuiInput-underline-503 MuiInputBase-fullWidth-521 MuiInput-fullWidth-506 MuiInputBase-formControl-513 MuiInput-formControl-500\\"
+                              >
++                               <div
++                                 class=\\"MuiSelect-root-630\\"
++                               >
++                                 <div
++                                   aria-haspopup=\\"true\\"
++                                   aria-pressed=\\"false\\"
++                                   class=\\"MuiSelect-select-631 MuiSelect-selectMenu-634 MuiInputBase-input-522 MuiInput-input-507\\"
++                                   role=\\"button\\"
++                                   tabindex=\\"0\\"
++                                 >
++                                   <span>
++                                     ​
++                                   </span>
++                                 </div>
+                                  <input
+-                           aria-label=\\"Enter your search query to search eSpace and then press Enter\\"
+-                           class=\\"MuiInputBase-input-522 MuiInput-input-507 MuiInputBase-inputType-525 MuiInput-inputType-510 MuiInputBase-inputTypeSearch-526 MuiInput-inputTypeSearch-511\\"
+-                           id=\\"simpleSearchField\\"
+-                           placeholder=\\"Enter your search query to search all fields in eSpace\\"
+-                           type=\\"search\\"
++                                   type=\\"hidden\\"
++                                   value=\\"\\"
++                                 />
++                                 <svg
++                                   aria-hidden=\\"true\\"
++                                   class=\\"MuiSvgIcon-root-616 MuiSelect-icon-636\\"
++                                   focusable=\\"false\\"
++                                   role=\\"presentation\\"
++                                   viewBox=\\"0 0 24 24\\"
++                                 >
++                                   <path
++                                     d=\\"M7 10l5 5 5-5z\\"
++                                   />
++                                 </svg>
++                               </div>
++                             </div>
++                           </div>
++                         </div>
++                         <div
++                           class=\\"MuiGrid-item-345 MuiGrid-grid-xs-12-384\\"
++                         >
++                           <div
++                             class=\\"MuiGrid-container-344\\"
++                           >
++                             <div
++                               class=\\"MuiGrid-item-345 MuiGrid-grid-xs-12-384\\"
++                             >
++                               <label
++                                 class=\\"MuiFormLabel-root-492 MuiInputLabel-root-485 MuiInputLabel-animated-489 MuiInputLabel-shrink-488 PublicationYearRangeField-title-651\\"
++                                 data-shrink=\\"true\\"
++                               >
++                                 Published year range
++                               </label>
++                             </div>
++                           </div>
++                           <div
++                             class=\\"MuiGrid-container-344\\"
++                           >
++                             <div
++                               class=\\"MuiGrid-item-345 MuiGrid-zeroMinWidth-346\\"
++                               style=\\"width: 1px;\\"
++                             >
++                               <div
++                                 aria-label=\\"Enter a year to search from\\"
++                                 class=\\"MuiFormControl-root-481 MuiFormControl-fullWidth-484\\"
++                               >
++                                 <div
++                                   class=\\"MuiInputBase-root-512 MuiInput-root-499 MuiInput-underline-503 MuiInputBase-fullWidth-521 MuiInput-fullWidth-506 MuiInputBase-formControl-513 MuiInput-formControl-500\\"
++                                 >
++                                   <input
++                                     aria-invalid=\\"false\\"
++                                     class=\\"MuiInputBase-input-522 MuiInput-input-507\\"
++                                     id=\\"to\\"
++                                     placeholder=\\"Year from\\"
++                                     type=\\"text\\"
++                                     value=\\"\\"
++                                   />
++                                 </div>
++                               </div>
++                             </div>
++                             <div
++                               class=\\"MuiGrid-item-345 MuiGrid-grid-xs-auto-371\\"
++                             >
++                               <div
++                                 class=\\"MuiFormControl-root-481\\"
++                                 style=\\"width: 24px;\\"
++                               >
++                                 <div
++                                   class=\\"MuiInputBase-root-512 MuiInput-root-499 MuiInputBase-disabled-515 MuiInput-disabled-502 MuiInputBase-formControl-513 MuiInput-formControl-500\\"
++                                 >
++                                   <input
++                                     aria-invalid=\\"false\\"
++                                     class=\\"MuiInputBase-input-522 MuiInput-input-507 MuiInputBase-disabled-515 MuiInput-disabled-502\\"
++                                     disabled=\\"\\"
++                                     type=\\"text\\"
++                                     value=\\" to \\"
++                                   />
++                                 </div>
++                               </div>
++                             </div>
++                             <div
++                               class=\\"MuiGrid-item-345 MuiGrid-zeroMinWidth-346\\"
++                               style=\\"width: 1px;\\"
++                             >
++                               <div
++                                 aria-label=\\"Enter a year to search to\\"
++                                 class=\\"MuiFormControl-root-481 MuiFormControl-fullWidth-484\\"
++                               >
++                                 <div
++                                   class=\\"MuiInputBase-root-512 MuiInput-root-499 MuiInput-underline-503 MuiInputBase-fullWidth-521 MuiInput-fullWidth-506 MuiInputBase-formControl-513 MuiInput-formControl-500\\"
++                                 >
++                                   <input
++                                     aria-invalid=\\"false\\"
++                                     class=\\"MuiInputBase-input-522 MuiInput-input-507\\"
++                                     id=\\"from\\"
++                                     placeholder=\\"Year to\\"
++                                     type=\\"text\\"
+                                      value=\\"\\"
+                                    />
++                                 </div>
+                                </div>
+                              </div>
+                            </div>
++                         </div>
+                          <div
++                           class=\\"MuiGrid-item-345 MuiGrid-grid-xs-12-384\\"
++                         >
++                           <label
++                             class=\\"MuiFormControlLabel-root-652\\"
++                           >
++                             <span
++                               aria-label=\\"Check to search for publications with are only open access / full text\\"
++                               class=\\"MuiButtonBase-root-555 MuiIconButton-root-610 MuiSwitchBase-root-662 MuiCheckbox-root-656 MuiCheckbox-colorSecondary-661\\"
++                             >
++                               <span
++                                 class=\\"MuiIconButton-label-615\\"
++                               >
++                                 <svg
++                                   aria-hidden=\\"true\\"
++                                   class=\\"MuiSvgIcon-root-616\\"
++                                   focusable=\\"false\\"
++                                   role=\\"presentation\\"
++                                   viewBox=\\"0 0 24 24\\"
++                                 >
++                                   <path
++                                     d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"
++                                   />
++                                 </svg>
++                                 <input
++                                   class=\\"MuiSwitchBase-input-665\\"
++                                   data-indeterminate=\\"false\\"
++                                   type=\\"checkbox\\"
++                                   value=\\"\\"
++                                 />
++                               </span>
++                               <span
++                                 class=\\"MuiTouchRipple-root-558\\"
++                               />
++                             </span>
++                             <span
++                               class=\\"MuiTypography-root-575 MuiTypography-body2-583 MuiFormControlLabel-label-655\\"
++                             >
++                               Open access
++                             </span>
++                           </label>
++                         </div>
++                       </div>
++                     </div>
++                   </div>
++                   <div
++                     class=\\"MuiGrid-container-344 MuiGrid-spacing-xs-16-367\\"
++                     style=\\"margin-top: 24px;\\"
++                   >
++                     <div
+                        class=\\"MuiGrid-item-345 MuiGrid-grid-xs-12-384 MuiGrid-grid-sm-auto-385\\"
+                      >
+                        <button
+-                       aria-label=\\"Click to search eSpace\\"
+-                       class=\\"MuiButtonBase-root-555 MuiButton-root-529 MuiButton-contained-540 MuiButton-containedPrimary-541 MuiButton-raised-543 MuiButton-raisedPrimary-544 MuiButton-fullWidth-554\\"
+-                       id=\\"simpleSearchButton\\"
++                         aria-label=\\"Click to add another advanced search field\\"
++                         class=\\"MuiButtonBase-root-555 MuiButtonBase-disabled-556 MuiButton-root-529 AdvancedSearchComponent-blueButton-574 MuiButton-contained-540 MuiButton-raised-543 MuiButton-disabled-549 MuiButton-fullWidth-554\\"
++                         disabled=\\"\\"
++                         tabindex=\\"-1\\"
++                         type=\\"button\\"
++                       >
++                         <span
++                           class=\\"MuiButton-label-530\\"
++                         >
++                           Add another field
++                         </span>
++                       </button>
++                     </div>
++                     <div
++                       class=\\"MuiGrid-item-345 MuiGrid-grid-xs-12-384 MuiGrid-grid-sm-auto-385\\"
++                     >
++                       <button
++                         aria-label=\\"Click to reset the advanced search\\"
++                         class=\\"MuiButtonBase-root-555 MuiButton-root-529 MuiButton-contained-540 MuiButton-raised-543 MuiButton-fullWidth-554\\"
+                          tabindex=\\"0\\"
+                          type=\\"button\\"
+                        >
+                          <span
+                            class=\\"MuiButton-label-530\\"
+                          >
+-                         Search
++                           Reset
+                          </span>
+                          <span
+                            class=\\"MuiTouchRipple-root-558\\"
+                          />
+                        </button>
+                      </div>
+                      <div
+                        class=\\"MuiGrid-item-345 MuiGrid-grid-xs-12-384 MuiGrid-grid-sm-auto-385\\"
+                      >
+                        <button
+-                       aria-label=\\"Click to switch to Advanced search\\"
+-                       class=\\"MuiButtonBase-root-555 MuiButton-root-529 MuiButton-contained-540 MuiButton-raised-543 MuiButton-fullWidth-554 advancedButton\\"
+-                       id=\\"showAdvancedSearchButton\\"
++                         aria-label=\\"Click to return to the simple search\\"
++                         class=\\"MuiButtonBase-root-555 MuiButton-root-529 MuiButton-text-531 MuiButton-flat-534 MuiButton-fullWidth-554\\"
+                          tabindex=\\"0\\"
+                          type=\\"button\\"
+                        >
+                          <span
+                            class=\\"MuiButton-label-530\\"
++                         >
++                           Simple search
++                         </span>
++                         <span
++                           class=\\"MuiTouchRipple-root-558\\"
++                         />
++                       </button>
++                     </div>
++                     <div
++                       class=\\"MuiGrid-item-345\\"
++                       style=\\"width: 1px;\\"
++                     />
++                     <div
++                       class=\\"MuiGrid-item-345 MuiGrid-grid-xs-12-384 MuiGrid-grid-md-4-404 AdvancedSearchComponent-searchButton-573\\"
+                      >
+-                         Advanced search
++                       <button
++                         aria-label=\\"Click to search eSpace\\"
++                         class=\\"MuiButtonBase-root-555 MuiButton-root-529 MuiButton-contained-540 MuiButton-containedPrimary-541 MuiButton-raised-543 MuiButton-raisedPrimary-544 MuiButton-fullWidth-554\\"
++                         id=\\"advancedSearchButton\\"
++                         tabindex=\\"0\\"
++                         type=\\"submit\\"
++                       >
++                         <span
++                           class=\\"MuiButton-label-530\\"
++                         >
++                           Search
+                          </span>
+                          <span
+                            class=\\"MuiTouchRipple-root-558\\"
+                          />
+                        </button>
++                     </div>
++                   </div>
++                   <div
++                     class=\\"MuiGrid-container-344\\"
++                   >
++                     <div
++                       class=\\"MuiGrid-item-345\\"
++                       style=\\"padding-top: 24px;\\"
++                     >
++                       <div
++                         class=\\"search-body searchQueryCaption\\"
++                       />
++                     </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>"
+`;
+
+exports[`SearchRecords Should be able to perform advanced search 2`] = `
+"Snapshot Diff:
+- First value
++ Second value
+
+@@ -100,11 +100,12 @@
+                                    <div
+                                      class=\\"MuiSelect-root-630\\"
+                                    >
+                                      <div
+                                        aria-haspopup=\\"true\\"
+-                                       aria-pressed=\\"false\\"
++                                       aria-owns=\\"menu-\\"
++                                       aria-pressed=\\"true\\"
+                                        class=\\"MuiSelect-select-631 MuiSelect-selectMenu-634 MuiInputBase-input-522 MuiInput-input-507\\"
+                                        role=\\"button\\"
+                                        tabindex=\\"0\\"
+                                      >
+                                        Select a field"
+`;
+
+exports[`SearchRecords Should be able to perform advanced search 3`] = `
+"Snapshot Diff:
+- First value
++ Second value
+
+@@ -92,29 +92,28 @@
+                              >
+                                <div
+                                  class=\\"MuiFormControl-root-481 MuiFormControl-fullWidth-484\\"
+                                >
+                                  <div
+-                                   aria-label=\\"Click to select a field to search from the list - Select a field currently selected\\"
+-                                   class=\\"MuiInputBase-root-512 MuiInput-root-499 MuiInput-underline-503 MuiInputBase-error-518 MuiInput-error-504 MuiInputBase-formControl-513 MuiInput-formControl-500\\"
++                                   aria-label=\\"Click to select a field to search from the list - Any field currently selected\\"
++                                   class=\\"MuiInputBase-root-512 MuiInput-root-499 MuiInput-underline-503 MuiInputBase-formControl-513 MuiInput-formControl-500\\"
+                                  >
+                                    <div
+                                      class=\\"MuiSelect-root-630\\"
+                                    >
+                                      <div
+                                        aria-haspopup=\\"true\\"
+-                                       aria-owns=\\"menu-\\"
+-                                       aria-pressed=\\"true\\"
++                                       aria-pressed=\\"false\\"
+                                        class=\\"MuiSelect-select-631 MuiSelect-selectMenu-634 MuiInputBase-input-522 MuiInput-input-507\\"
+                                        role=\\"button\\"
+                                        tabindex=\\"0\\"
+                                      >
+-                                       Select a field
++                                       Any field
+                                      </div>
+                                      <input
+                                        type=\\"hidden\\"
+-                                       value=\\"0\\"
++                                       value=\\"all\\"
+                                      />
+                                      <svg
+                                        aria-hidden=\\"true\\"
+                                        class=\\"MuiSvgIcon-root-616 MuiSelect-icon-636\\"
+                                        focusable=\\"false\\"
+@@ -126,22 +125,22 @@
+                                        />
+                                      </svg>
+                                    </div>
+                                  </div>
+                                  <p
+-                                   class=\\"MuiFormHelperText-root-641 MuiFormHelperText-error-642 MuiFormHelperText-filled-647\\"
+-                                 >
+-                                   Please select a field to search
+-                                 </p>
++                                   class=\\"MuiFormHelperText-root-641 MuiFormHelperText-filled-647\\"
++                                 />
+                                </div>
+                              </div>
+                              <div
+                                class=\\"MuiGrid-item-345 MuiGrid-grid-xs-auto-371\\"
+                              >
+                                <p
+                                  class=\\"MuiTypography-root-575 MuiTypography-body2-583 AdvancedSearchRow-advancedSearchCombiner-627\\"
+-                               />
++                               >
++                                 contains
++                               </p>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class=\\"MuiGrid-item-345 MuiGrid-grid-xs-12-384 MuiGrid-grid-md-6-406 AdvancedSearchRow-mobileInputRow-629\\"
+@@ -151,24 +150,23 @@
+                            >
+                              <div
+                                class=\\"MuiGrid-item-345 MuiGrid-zeroMinWidth-346 AdvancedSearchRow-autoWidth-625\\"
+                              >
+                                <div
+-                                 aria-label=\\"Select a field to search on\\"
++                                 aria-label=\\"Type a value to search all fields for\\"
+                                  class=\\"MuiFormControl-root-481 MuiFormControl-fullWidth-484\\"
+                                >
+                                  <div
+-                                   class=\\"MuiInputBase-root-512 MuiInput-root-499 MuiInput-underline-503 MuiInputBase-disabled-515 MuiInput-disabled-502 MuiInputBase-fullWidth-521 MuiInput-fullWidth-506 MuiInputBase-formControl-513 MuiInput-formControl-500\\"
++                                   class=\\"MuiInputBase-root-512 MuiInput-root-499 MuiInput-underline-503 MuiInputBase-fullWidth-521 MuiInput-fullWidth-506 MuiInputBase-formControl-513 MuiInput-formControl-500\\"
+                                  >
+                                    <input
+                                      aria-invalid=\\"false\\"
+                                      autocomplete=\\"search\\"
+-                                     class=\\"MuiInputBase-input-522 MuiInput-input-507 MuiInputBase-disabled-515 MuiInput-disabled-502 MuiInputBase-inputType-525 MuiInput-inputType-510 MuiInputBase-inputTypeSearch-526 MuiInput-inputTypeSearch-511\\"
+-                                     disabled=\\"\\"
++                                     class=\\"MuiInputBase-input-522 MuiInput-input-507 MuiInputBase-inputType-525 MuiInput-inputType-510 MuiInputBase-inputTypeSearch-526 MuiInput-inputTypeSearch-511\\"
+                                      id=\\"searchField\\"
+                                      name=\\"searchField0\\"
+-                                     placeholder=\\"Select a field to search on\\"
++                                     placeholder=\\"Add some text to search all fields with\\"
+                                      type=\\"search\\"
+                                      value=\\"\\"
+                                    />
+                                  </div>
+                                </div>
+@@ -370,20 +368,22 @@
+                      <div
+                        class=\\"MuiGrid-item-345 MuiGrid-grid-xs-12-384 MuiGrid-grid-sm-auto-385\\"
+                      >
+                        <button
+                          aria-label=\\"Click to add another advanced search field\\"
+-                         class=\\"MuiButtonBase-root-555 MuiButtonBase-disabled-556 MuiButton-root-529 AdvancedSearchComponent-blueButton-574 MuiButton-contained-540 MuiButton-raised-543 MuiButton-disabled-549 MuiButton-fullWidth-554\\"
+-                         disabled=\\"\\"
+-                         tabindex=\\"-1\\"
++                         class=\\"MuiButtonBase-root-555 MuiButton-root-529 AdvancedSearchComponent-blueButton-574 MuiButton-contained-540 MuiButton-raised-543 MuiButton-fullWidth-554\\"
++                         tabindex=\\"0\\"
+                          type=\\"button\\"
+                        >
+                          <span
+                            class=\\"MuiButton-label-530\\"
+                          >
+                            Add another field
+                          </span>
++                         <span
++                           class=\\"MuiTouchRipple-root-558\\"
++                         />
+                        </button>
+                      </div>
+                      <div
+                        class=\\"MuiGrid-item-345 MuiGrid-grid-xs-12-384 MuiGrid-grid-sm-auto-385\\"
+                      >
+@@ -454,11 +454,34 @@
+                        class=\\"MuiGrid-item-345\\"
+                        style=\\"padding-top: 24px;\\"
+                      >
+                        <div
+                          class=\\"search-body searchQueryCaption\\"
+-                       />
++                       >
++                         <span>
++                           <span
++                             class=\\"AdvancedSearchCaption-and-666\\"
++                           >
++                               
++                           </span>
++                           <span
++                             class=\\"AdvancedSearchCaption-title-667\\"
++                           >
++                             Any field 
++                           </span>
++                           <span
++                             class=\\"AdvancedSearchCaption-combiner-668\\"
++                           >
++                              contains 
++                           </span>
++                           <span
++                             class=\\"AdvancedSearchCaption-value-669\\"
++                           >
++                              anything
++                           </span>
++                         </span>
++                       </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>"
+`;
+
+exports[`SearchRecords Should be able to perform advanced search 4`] = `
+"Snapshot Diff:
+- First value
++ Second value
+
+@@ -164,11 +164,11 @@
+                                      class=\\"MuiInputBase-input-522 MuiInput-input-507 MuiInputBase-inputType-525 MuiInput-inputType-510 MuiInputBase-inputTypeSearch-526 MuiInput-inputTypeSearch-511\\"
+                                      id=\\"searchField\\"
+                                      name=\\"searchField0\\"
+                                      placeholder=\\"Add some text to search all fields with\\"
+                                      type=\\"search\\"
+-                                     value=\\"\\"
++                                     value=\\"vaccination\\"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+@@ -474,11 +474,11 @@
+                               contains 
+                            </span>
+                            <span
+                              class=\\"AdvancedSearchCaption-value-669\\"
+                            >
+-                              anything
++                              vaccination
+                            </span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>"
+`;
+
+exports[`SearchRecords Should be able to perform advanced search 5`] = `
+"Snapshot Diff:
+- First value
++ Second value
+
+@@ -172,12 +172,144 @@
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
++                       <div
++                         class=\\"MuiGrid-container-344 MuiGrid-spacing-xs-16-367\\"
++                       >
++                         <div
++                           class=\\"MuiGrid-item-345 MuiGrid-grid-xs-12-384 MuiGrid-grid-md-6-406\\"
++                         >
++                           <div
++                             class=\\"MuiGrid-container-344 MuiGrid-spacing-xs-16-367\\"
++                           >
++                             <div
++                               class=\\"MuiGrid-item-345 AdvancedSearchRow-autoWidth-625\\"
++                               style=\\"min-width: 200px;\\"
++                             >
++                               <div
++                                 class=\\"MuiFormControl-root-481 MuiFormControl-fullWidth-484\\"
++                               >
++                                 <div
++                                   aria-label=\\"Click to select a field to search from the list - Select a field currently selected\\"
++                                   class=\\"MuiInputBase-root-512 MuiInput-root-499 MuiInput-underline-503 MuiInputBase-error-518 MuiInput-error-504 MuiInputBase-formControl-513 MuiInput-formControl-500\\"
++                                 >
++                                   <div
++                                     class=\\"MuiSelect-root-630\\"
++                                   >
++                                     <div
++                                       aria-haspopup=\\"true\\"
++                                       aria-pressed=\\"false\\"
++                                       class=\\"MuiSelect-select-631 MuiSelect-selectMenu-634 MuiInputBase-input-522 MuiInput-input-507\\"
++                                       role=\\"button\\"
++                                       tabindex=\\"0\\"
++                                     >
++                                       Select a field
++                                     </div>
++                                     <input
++                                       type=\\"hidden\\"
++                                       value=\\"0\\"
++                                     />
++                                     <svg
++                                       aria-hidden=\\"true\\"
++                                       class=\\"MuiSvgIcon-root-616 MuiSelect-icon-636\\"
++                                       focusable=\\"false\\"
++                                       role=\\"presentation\\"
++                                       viewBox=\\"0 0 24 24\\"
++                                     >
++                                       <path
++                                         d=\\"M7 10l5 5 5-5z\\"
++                                       />
++                                     </svg>
++                                   </div>
++                                 </div>
++                                 <p
++                                   class=\\"MuiFormHelperText-root-641 MuiFormHelperText-error-642 MuiFormHelperText-filled-647\\"
++                                 >
++                                   Please select a field to search
++                                 </p>
++                               </div>
++                             </div>
++                             <div
++                               class=\\"MuiGrid-item-345 MuiGrid-grid-xs-auto-371\\"
++                             >
++                               <p
++                                 class=\\"MuiTypography-root-575 MuiTypography-body2-583 AdvancedSearchRow-advancedSearchCombiner-627\\"
++                               />
++                             </div>
++                           </div>
++                         </div>
++                         <div
++                           class=\\"MuiGrid-item-345 MuiGrid-grid-xs-12-384 MuiGrid-grid-md-6-406 AdvancedSearchRow-mobileInputRow-629\\"
++                         >
++                           <div
++                             class=\\"MuiGrid-container-344 MuiGrid-spacing-xs-16-367\\"
++                           >
++                             <div
++                               class=\\"MuiGrid-item-345 MuiGrid-zeroMinWidth-346 AdvancedSearchRow-autoWidth-625\\"
++                             >
++                               <div
++                                 aria-label=\\"Select a field to search on\\"
++                                 class=\\"MuiFormControl-root-481 MuiFormControl-fullWidth-484\\"
++                               >
++                                 <div
++                                   class=\\"MuiInputBase-root-512 MuiInput-root-499 MuiInput-underline-503 MuiInputBase-disabled-515 MuiInput-disabled-502 MuiInputBase-fullWidth-521 MuiInput-fullWidth-506 MuiInputBase-formControl-513 MuiInput-formControl-500\\"
++                                 >
++                                   <input
++                                     aria-invalid=\\"false\\"
++                                     autocomplete=\\"search\\"
++                                     class=\\"MuiInputBase-input-522 MuiInput-input-507 MuiInputBase-disabled-515 MuiInput-disabled-502 MuiInputBase-inputType-525 MuiInput-inputType-510 MuiInputBase-inputTypeSearch-526 MuiInput-inputTypeSearch-511\\"
++                                     disabled=\\"\\"
++                                     id=\\"searchField\\"
++                                     name=\\"searchField1\\"
++                                     placeholder=\\"Select a field to search on\\"
++                                     type=\\"search\\"
++                                     value=\\"\\"
++                                   />
++                                 </div>
++                               </div>
+                              </div>
+                              <div
++                               class=\\"MuiGrid-item-345 AdvancedSearchRow-advancedSearchRowDeleteButton-626\\"
++                             >
++                               <button
++                                 aria-label=\\"Click to delete this search row\\"
++                                 class=\\"MuiButtonBase-root-555 MuiIconButton-root-610 deleteFieldButton\\"
++                                 style=\\"float: right;\\"
++                                 tabindex=\\"0\\"
++                                 type=\\"button\\"
++                               >
++                                 <span
++                                   class=\\"MuiIconButton-label-615\\"
++                                 >
++                                   <svg
++                                     aria-hidden=\\"true\\"
++                                     class=\\"MuiSvgIcon-root-616\\"
++                                     focusable=\\"false\\"
++                                     role=\\"presentation\\"
++                                     viewBox=\\"0 0 24 24\\"
++                                   >
++                                     <path
++                                       d=\\"M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z\\"
++                                     />
++                                     <path
++                                       d=\\"M0 0h24v24H0z\\"
++                                       fill=\\"none\\"
++                                     />
++                                   </svg>
++                                 </span>
++                                 <span
++                                   class=\\"MuiTouchRipple-root-558\\"
++                                 />
++                               </button>
++                             </div>
++                           </div>
++                         </div>
++                       </div>
++                     </div>
++                     <div
+                        class=\\"MuiGrid-item-345 MuiGrid-grid-xs-12-384 MuiGrid-grid-md-4-404 AdvancedSearchComponent-sideBar-572\\"
+                      >
+                        <div
+                          class=\\"MuiGrid-container-344 MuiGrid-spacing-xs-16-367\\"
+                        >
+@@ -368,22 +500,20 @@
+                      <div
+                        class=\\"MuiGrid-item-345 MuiGrid-grid-xs-12-384 MuiGrid-grid-sm-auto-385\\"
+                      >
+                        <button
+                          aria-label=\\"Click to add another advanced search field\\"
+-                         class=\\"MuiButtonBase-root-555 MuiButton-root-529 AdvancedSearchComponent-blueButton-574 MuiButton-contained-540 MuiButton-raised-543 MuiButton-fullWidth-554\\"
+-                         tabindex=\\"0\\"
++                         class=\\"MuiButtonBase-root-555 MuiButtonBase-disabled-556 MuiButton-root-529 AdvancedSearchComponent-blueButton-574 MuiButton-contained-540 MuiButton-raised-543 MuiButton-disabled-549 MuiButton-fullWidth-554\\"
++                         disabled=\\"\\"
++                         tabindex=\\"-1\\"
+                          type=\\"button\\"
+                        >
+                          <span
+                            class=\\"MuiButton-label-530\\"
+                          >
+                            Add another field
+                          </span>
+-                         <span
+-                           class=\\"MuiTouchRipple-root-558\\"
+-                         />
+                        </button>
+                      </div>
+                      <div
+                        class=\\"MuiGrid-item-345 MuiGrid-grid-xs-12-384 MuiGrid-grid-sm-auto-385\\"
+                      >"
+`;
+
+exports[`SearchRecords Should be able to perform advanced search 6`] = `
+"Snapshot Diff:
+- First value
++ Second value
+
+@@ -197,11 +197,12 @@
+                                    <div
+                                      class=\\"MuiSelect-root-630\\"
+                                    >
+                                      <div
+                                        aria-haspopup=\\"true\\"
+-                                       aria-pressed=\\"false\\"
++                                       aria-owns=\\"menu-\\"
++                                       aria-pressed=\\"true\\"
+                                        class=\\"MuiSelect-select-631 MuiSelect-selectMenu-634 MuiInputBase-input-522 MuiInput-input-507\\"
+                                        role=\\"button\\"
+                                        tabindex=\\"0\\"
+                                      >
+                                        Select a field"
+`;
+
+exports[`SearchRecords Should be able to perform advanced search 7`] = `
+"Snapshot Diff:
+- First value
++ Second value
+
+@@ -189,29 +189,28 @@
+                              >
+                                <div
+                                  class=\\"MuiFormControl-root-481 MuiFormControl-fullWidth-484\\"
+                                >
+                                  <div
+-                                   aria-label=\\"Click to select a field to search from the list - Select a field currently selected\\"
+-                                   class=\\"MuiInputBase-root-512 MuiInput-root-499 MuiInput-underline-503 MuiInputBase-error-518 MuiInput-error-504 MuiInputBase-formControl-513 MuiInput-formControl-500\\"
++                                   aria-label=\\"Click to select a field to search from the list - Title currently selected\\"
++                                   class=\\"MuiInputBase-root-512 MuiInput-root-499 MuiInput-underline-503 MuiInputBase-formControl-513 MuiInput-formControl-500\\"
+                                  >
+                                    <div
+                                      class=\\"MuiSelect-root-630\\"
+                                    >
+                                      <div
+                                        aria-haspopup=\\"true\\"
+-                                       aria-owns=\\"menu-\\"
+-                                       aria-pressed=\\"true\\"
++                                       aria-pressed=\\"false\\"
+                                        class=\\"MuiSelect-select-631 MuiSelect-selectMenu-634 MuiInputBase-input-522 MuiInput-input-507\\"
+                                        role=\\"button\\"
+                                        tabindex=\\"0\\"
+                                      >
+-                                       Select a field
++                                       Title
+                                      </div>
+                                      <input
+                                        type=\\"hidden\\"
+-                                       value=\\"0\\"
++                                       value=\\"rek_title\\"
+                                      />
+                                      <svg
+                                        aria-hidden=\\"true\\"
+                                        class=\\"MuiSvgIcon-root-616 MuiSelect-icon-636\\"
+                                        focusable=\\"false\\"
+@@ -223,22 +222,22 @@
+                                        />
+                                      </svg>
+                                    </div>
+                                  </div>
+                                  <p
+-                                   class=\\"MuiFormHelperText-root-641 MuiFormHelperText-error-642 MuiFormHelperText-filled-647\\"
+-                                 >
+-                                   Please select a field to search
+-                                 </p>
++                                   class=\\"MuiFormHelperText-root-641 MuiFormHelperText-filled-647\\"
++                                 />
+                                </div>
+                              </div>
+                              <div
+                                class=\\"MuiGrid-item-345 MuiGrid-grid-xs-auto-371\\"
+                              >
+                                <p
+                                  class=\\"MuiTypography-root-575 MuiTypography-body2-583 AdvancedSearchRow-advancedSearchCombiner-627\\"
+-                               />
++                               >
++                                 contains
++                               </p>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class=\\"MuiGrid-item-345 MuiGrid-grid-xs-12-384 MuiGrid-grid-md-6-406 AdvancedSearchRow-mobileInputRow-629\\"
+@@ -248,28 +247,34 @@
+                            >
+                              <div
+                                class=\\"MuiGrid-item-345 MuiGrid-zeroMinWidth-346 AdvancedSearchRow-autoWidth-625\\"
+                              >
+                                <div
+-                                 aria-label=\\"Select a field to search on\\"
++                                 aria-describedby=\\"searchField-helper-text\\"
++                                 aria-label=\\"Type a title to search for\\"
+                                  class=\\"MuiFormControl-root-481 MuiFormControl-fullWidth-484\\"
+                                >
+                                  <div
+-                                   class=\\"MuiInputBase-root-512 MuiInput-root-499 MuiInput-underline-503 MuiInputBase-disabled-515 MuiInput-disabled-502 MuiInputBase-fullWidth-521 MuiInput-fullWidth-506 MuiInputBase-formControl-513 MuiInput-formControl-500\\"
++                                   class=\\"MuiInputBase-root-512 MuiInput-root-499 MuiInput-underline-503 MuiInputBase-error-518 MuiInput-error-504 MuiInputBase-fullWidth-521 MuiInput-fullWidth-506 MuiInputBase-formControl-513 MuiInput-formControl-500\\"
+                                  >
+                                    <input
+-                                     aria-invalid=\\"false\\"
++                                     aria-invalid=\\"true\\"
+                                      autocomplete=\\"search\\"
+-                                     class=\\"MuiInputBase-input-522 MuiInput-input-507 MuiInputBase-disabled-515 MuiInput-disabled-502 MuiInputBase-inputType-525 MuiInput-inputType-510 MuiInputBase-inputTypeSearch-526 MuiInput-inputTypeSearch-511\\"
+-                                     disabled=\\"\\"
++                                     class=\\"MuiInputBase-input-522 MuiInput-input-507 MuiInputBase-inputType-525 MuiInput-inputType-510 MuiInputBase-inputTypeSearch-526 MuiInput-inputTypeSearch-511\\"
+                                      id=\\"searchField\\"
+                                      name=\\"searchField1\\"
+-                                     placeholder=\\"Select a field to search on\\"
++                                     placeholder=\\"Add a title\\"
+                                      type=\\"search\\"
+                                      value=\\"\\"
+                                    />
+                                  </div>
++                                 <p
++                                   class=\\"MuiFormHelperText-root-641 MuiFormHelperText-error-642\\"
++                                   id=\\"searchField-helper-text\\"
++                                 >
++                                   This field is required
++                                 </p>
+                                </div>
+                              </div>
+                              <div
+                                class=\\"MuiGrid-item-345 AdvancedSearchRow-advancedSearchRowDeleteButton-626\\"
+                              >
+@@ -560,23 +565,21 @@
+                      <div
+                        class=\\"MuiGrid-item-345 MuiGrid-grid-xs-12-384 MuiGrid-grid-md-4-404 AdvancedSearchComponent-searchButton-573\\"
+                      >
+                        <button
+                          aria-label=\\"Click to search eSpace\\"
+-                         class=\\"MuiButtonBase-root-555 MuiButton-root-529 MuiButton-contained-540 MuiButton-containedPrimary-541 MuiButton-raised-543 MuiButton-raisedPrimary-544 MuiButton-fullWidth-554\\"
++                         class=\\"MuiButtonBase-root-555 MuiButtonBase-disabled-556 MuiButton-root-529 MuiButton-contained-540 MuiButton-containedPrimary-541 MuiButton-raised-543 MuiButton-raisedPrimary-544 MuiButton-disabled-549 MuiButton-fullWidth-554\\"
++                         disabled=\\"\\"
+                          id=\\"advancedSearchButton\\"
+-                         tabindex=\\"0\\"
++                         tabindex=\\"-1\\"
+                          type=\\"submit\\"
+                        >
+                          <span
+                            class=\\"MuiButton-label-530\\"
+                          >
+                            Search
+                          </span>
+-                         <span
+-                           class=\\"MuiTouchRipple-root-558\\"
+-                         />
+                        </button>
+                      </div>
+                    </div>
+                    <div
+                      class=\\"MuiGrid-container-344\\""
+`;
+
+exports[`SearchRecords Should be able to perform advanced search 8`] = `
+"Snapshot Diff:
+- First value
++ Second value
+
+@@ -247,34 +247,27 @@
+                            >
+                              <div
+                                class=\\"MuiGrid-item-345 MuiGrid-zeroMinWidth-346 AdvancedSearchRow-autoWidth-625\\"
+                              >
+                                <div
+-                                 aria-describedby=\\"searchField-helper-text\\"
+                                  aria-label=\\"Type a title to search for\\"
+                                  class=\\"MuiFormControl-root-481 MuiFormControl-fullWidth-484\\"
+                                >
+                                  <div
+-                                   class=\\"MuiInputBase-root-512 MuiInput-root-499 MuiInput-underline-503 MuiInputBase-error-518 MuiInput-error-504 MuiInputBase-fullWidth-521 MuiInput-fullWidth-506 MuiInputBase-formControl-513 MuiInput-formControl-500\\"
++                                   class=\\"MuiInputBase-root-512 MuiInput-root-499 MuiInput-underline-503 MuiInputBase-fullWidth-521 MuiInput-fullWidth-506 MuiInputBase-formControl-513 MuiInput-formControl-500\\"
+                                  >
+                                    <input
+-                                     aria-invalid=\\"true\\"
++                                     aria-invalid=\\"false\\"
+                                      autocomplete=\\"search\\"
+                                      class=\\"MuiInputBase-input-522 MuiInput-input-507 MuiInputBase-inputType-525 MuiInput-inputType-510 MuiInputBase-inputTypeSearch-526 MuiInput-inputTypeSearch-511\\"
+                                      id=\\"searchField\\"
+                                      name=\\"searchField1\\"
+                                      placeholder=\\"Add a title\\"
+                                      type=\\"search\\"
+-                                     value=\\"\\"
++                                     value=\\"Rheumatic\\"
+                                    />
+                                  </div>
+-                                 <p
+-                                   class=\\"MuiFormHelperText-root-641 MuiFormHelperText-error-642\\"
+-                                   id=\\"searchField-helper-text\\"
+-                                 >
+-                                   This field is required
+-                                 </p>
+                                </div>
+                              </div>
+                              <div
+                                class=\\"MuiGrid-item-345 AdvancedSearchRow-advancedSearchRowDeleteButton-626\\"
+                              >
+@@ -506,20 +499,22 @@
+                      <div
+                        class=\\"MuiGrid-item-345 MuiGrid-grid-xs-12-384 MuiGrid-grid-sm-auto-385\\"
+                      >
+                        <button
+                          aria-label=\\"Click to add another advanced search field\\"
+-                         class=\\"MuiButtonBase-root-555 MuiButtonBase-disabled-556 MuiButton-root-529 AdvancedSearchComponent-blueButton-574 MuiButton-contained-540 MuiButton-raised-543 MuiButton-disabled-549 MuiButton-fullWidth-554\\"
+-                         disabled=\\"\\"
+-                         tabindex=\\"-1\\"
++                         class=\\"MuiButtonBase-root-555 MuiButton-root-529 AdvancedSearchComponent-blueButton-574 MuiButton-contained-540 MuiButton-raised-543 MuiButton-fullWidth-554\\"
++                         tabindex=\\"0\\"
+                          type=\\"button\\"
+                        >
+                          <span
+                            class=\\"MuiButton-label-530\\"
+                          >
+                            Add another field
+                          </span>
++                         <span
++                           class=\\"MuiTouchRipple-root-558\\"
++                         />
+                        </button>
+                      </div>
+                      <div
+                        class=\\"MuiGrid-item-345 MuiGrid-grid-xs-12-384 MuiGrid-grid-sm-auto-385\\"
+                      >
+@@ -565,21 +560,23 @@
+                      <div
+                        class=\\"MuiGrid-item-345 MuiGrid-grid-xs-12-384 MuiGrid-grid-md-4-404 AdvancedSearchComponent-searchButton-573\\"
+                      >
+                        <button
+                          aria-label=\\"Click to search eSpace\\"
+-                         class=\\"MuiButtonBase-root-555 MuiButtonBase-disabled-556 MuiButton-root-529 MuiButton-contained-540 MuiButton-containedPrimary-541 MuiButton-raised-543 MuiButton-raisedPrimary-544 MuiButton-disabled-549 MuiButton-fullWidth-554\\"
+-                         disabled=\\"\\"
++                         class=\\"MuiButtonBase-root-555 MuiButton-root-529 MuiButton-contained-540 MuiButton-containedPrimary-541 MuiButton-raised-543 MuiButton-raisedPrimary-544 MuiButton-fullWidth-554\\"
+                          id=\\"advancedSearchButton\\"
+-                         tabindex=\\"-1\\"
++                         tabindex=\\"0\\"
+                          type=\\"submit\\"
+                        >
+                          <span
+                            class=\\"MuiButton-label-530\\"
+                          >
+                            Search
+                          </span>
++                         <span
++                           class=\\"MuiTouchRipple-root-558\\"
++                         />
+                        </button>
+                      </div>
+                    </div>
+                    <div
+                      class=\\"MuiGrid-container-344\\"
+@@ -609,10 +606,32 @@
+                            </span>
+                            <span
+                              class=\\"AdvancedSearchCaption-value-669\\"
+                            >
+                               vaccination
++                           </span>
++                         </span>
++                         <span>
++                           <span
++                             class=\\"AdvancedSearchCaption-and-666\\"
++                           >
++                               AND  
++                           </span>
++                           <span
++                             class=\\"AdvancedSearchCaption-title-667\\"
++                           >
++                             Title 
++                           </span>
++                           <span
++                             class=\\"AdvancedSearchCaption-combiner-668\\"
++                           >
++                              contains 
++                           </span>
++                           <span
++                             class=\\"AdvancedSearchCaption-value-669\\"
++                           >
++                              Rheumatic
+                            </span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>"
+`;
+
+exports[`SearchRecords Should be able to perform advanced search 9`] = `
+"Snapshot Diff:
+- First value
++ Second value
+
+@@ -324,21 +324,20 @@
+                              >
+                                Work type
+                              </label>
+                              <div
+                                aria-label=\\"Select multiple publications types to search on\\"
+-                               class=\\"MuiInputBase-root-512 MuiInput-root-499 MuiInput-underline-503 MuiInputBase-fullWidth-521 MuiInput-fullWidth-506 MuiInputBase-formControl-513 MuiInput-formControl-500\\"
++                               class=\\"MuiInputBase-root-512 MuiInput-root-499 MuiInput-underline-503 MuiInputBase-disabled-515 MuiInput-disabled-502 MuiInputBase-fullWidth-521 MuiInput-fullWidth-506 MuiInputBase-formControl-513 MuiInput-formControl-500\\"
+                              >
+                                <div
+                                  class=\\"MuiSelect-root-630\\"
+                                >
+                                  <div
+                                    aria-haspopup=\\"true\\"
+                                    aria-pressed=\\"false\\"
+-                                   class=\\"MuiSelect-select-631 MuiSelect-selectMenu-634 MuiInputBase-input-522 MuiInput-input-507\\"
++                                   class=\\"MuiSelect-select-631 MuiSelect-selectMenu-634 MuiSelect-disabled-635 MuiInputBase-input-522 MuiInput-input-507 MuiInputBase-disabled-515 MuiInput-disabled-502\\"
+                                    role=\\"button\\"
+-                                   tabindex=\\"0\\"
+                                  >
+                                    <span>
+                                      ​
+                                    </span>
+                                  </div>
+@@ -388,15 +387,16 @@
+                                <div
+                                  aria-label=\\"Enter a year to search from\\"
+                                  class=\\"MuiFormControl-root-481 MuiFormControl-fullWidth-484\\"
+                                >
+                                  <div
+-                                   class=\\"MuiInputBase-root-512 MuiInput-root-499 MuiInput-underline-503 MuiInputBase-fullWidth-521 MuiInput-fullWidth-506 MuiInputBase-formControl-513 MuiInput-formControl-500\\"
++                                   class=\\"MuiInputBase-root-512 MuiInput-root-499 MuiInput-underline-503 MuiInputBase-disabled-515 MuiInput-disabled-502 MuiInputBase-fullWidth-521 MuiInput-fullWidth-506 MuiInputBase-formControl-513 MuiInput-formControl-500\\"
+                                  >
+                                    <input
+                                      aria-invalid=\\"false\\"
+-                                     class=\\"MuiInputBase-input-522 MuiInput-input-507\\"
++                                     class=\\"MuiInputBase-input-522 MuiInput-input-507 MuiInputBase-disabled-515 MuiInput-disabled-502\\"
++                                     disabled=\\"\\"
+                                      id=\\"to\\"
+                                      placeholder=\\"Year from\\"
+                                      type=\\"text\\"
+                                      value=\\"\\"
+                                    />
+@@ -430,15 +430,16 @@
+                                <div
+                                  aria-label=\\"Enter a year to search to\\"
+                                  class=\\"MuiFormControl-root-481 MuiFormControl-fullWidth-484\\"
+                                >
+                                  <div
+-                                   class=\\"MuiInputBase-root-512 MuiInput-root-499 MuiInput-underline-503 MuiInputBase-fullWidth-521 MuiInput-fullWidth-506 MuiInputBase-formControl-513 MuiInput-formControl-500\\"
++                                   class=\\"MuiInputBase-root-512 MuiInput-root-499 MuiInput-underline-503 MuiInputBase-disabled-515 MuiInput-disabled-502 MuiInputBase-fullWidth-521 MuiInput-fullWidth-506 MuiInputBase-formControl-513 MuiInput-formControl-500\\"
+                                  >
+                                    <input
+                                      aria-invalid=\\"false\\"
+-                                     class=\\"MuiInputBase-input-522 MuiInput-input-507\\"
++                                     class=\\"MuiInputBase-input-522 MuiInput-input-507 MuiInputBase-disabled-515 MuiInput-disabled-502\\"
++                                     disabled=\\"\\"
+                                      id=\\"from\\"
+                                      placeholder=\\"Year to\\"
+                                      type=\\"text\\"
+                                      value=\\"\\"
+                                    />
+@@ -449,15 +450,16 @@
+                          </div>
+                          <div
+                            class=\\"MuiGrid-item-345 MuiGrid-grid-xs-12-384\\"
+                          >
+                            <label
+-                             class=\\"MuiFormControlLabel-root-652\\"
++                             class=\\"MuiFormControlLabel-root-652 MuiFormControlLabel-disabled-654\\"
+                            >
+                              <span
+                                aria-label=\\"Check to search for publications with are only open access / full text\\"
+-                               class=\\"MuiButtonBase-root-555 MuiIconButton-root-610 MuiSwitchBase-root-662 MuiCheckbox-root-656 MuiCheckbox-colorSecondary-661\\"
++                               class=\\"MuiButtonBase-root-555 MuiButtonBase-disabled-556 MuiIconButton-root-610 MuiIconButton-disabled-614 MuiSwitchBase-root-662 MuiCheckbox-root-656 MuiCheckbox-colorSecondary-661 MuiSwitchBase-disabled-664 MuiCheckbox-disabled-658\\"
++                               tabindex=\\"-1\\"
+                              >
+                                <span
+                                  class=\\"MuiIconButton-label-615\\"
+                                >
+                                  <svg
+@@ -472,20 +474,18 @@
+                                    />
+                                  </svg>
+                                  <input
+                                    class=\\"MuiSwitchBase-input-665\\"
+                                    data-indeterminate=\\"false\\"
++                                   disabled=\\"\\"
+                                    type=\\"checkbox\\"
+                                    value=\\"\\"
+                                  />
+                                </span>
+-                               <span
+-                                 class=\\"MuiTouchRipple-root-558\\"
+-                               />
+                              </span>
+                              <span
+-                               class=\\"MuiTypography-root-575 MuiTypography-body2-583 MuiFormControlLabel-label-655\\"
++                               class=\\"MuiTypography-root-575 MuiTypography-body2-583 MuiFormControlLabel-label-655 MuiFormControlLabel-disabled-654\\"
+                              >
+                                Open access
+                              </span>
+                            </label>
+                          </div>
+@@ -499,22 +499,20 @@
+                      <div
+                        class=\\"MuiGrid-item-345 MuiGrid-grid-xs-12-384 MuiGrid-grid-sm-auto-385\\"
+                      >
+                        <button
+                          aria-label=\\"Click to add another advanced search field\\"
+-                         class=\\"MuiButtonBase-root-555 MuiButton-root-529 AdvancedSearchComponent-blueButton-574 MuiButton-contained-540 MuiButton-raised-543 MuiButton-fullWidth-554\\"
+-                         tabindex=\\"0\\"
++                         class=\\"MuiButtonBase-root-555 MuiButtonBase-disabled-556 MuiButton-root-529 AdvancedSearchComponent-blueButton-574 MuiButton-contained-540 MuiButton-raised-543 MuiButton-disabled-549 MuiButton-fullWidth-554\\"
++                         disabled=\\"\\"
++                         tabindex=\\"-1\\"
+                          type=\\"button\\"
+                        >
+                          <span
+                            class=\\"MuiButton-label-530\\"
+                          >
+                            Add another field
+                          </span>
+-                         <span
+-                           class=\\"MuiTouchRipple-root-558\\"
+-                         />
+                        </button>
+                      </div>
+                      <div
+                        class=\\"MuiGrid-item-345 MuiGrid-grid-xs-12-384 MuiGrid-grid-sm-auto-385\\"
+                      >
+@@ -560,23 +558,21 @@
+                      <div
+                        class=\\"MuiGrid-item-345 MuiGrid-grid-xs-12-384 MuiGrid-grid-md-4-404 AdvancedSearchComponent-searchButton-573\\"
+                      >
+                        <button
+                          aria-label=\\"Click to search eSpace\\"
+-                         class=\\"MuiButtonBase-root-555 MuiButton-root-529 MuiButton-contained-540 MuiButton-containedPrimary-541 MuiButton-raised-543 MuiButton-raisedPrimary-544 MuiButton-fullWidth-554\\"
++                         class=\\"MuiButtonBase-root-555 MuiButtonBase-disabled-556 MuiButton-root-529 MuiButton-contained-540 MuiButton-containedPrimary-541 MuiButton-raised-543 MuiButton-raisedPrimary-544 MuiButton-disabled-549 MuiButton-fullWidth-554\\"
++                         disabled=\\"\\"
+                          id=\\"advancedSearchButton\\"
+-                         tabindex=\\"0\\"
++                         tabindex=\\"-1\\"
+                          type=\\"submit\\"
+                        >
+                          <span
+                            class=\\"MuiButton-label-530\\"
+                          >
+                            Search
+                          </span>
+-                         <span
+-                           class=\\"MuiTouchRipple-root-558\\"
+-                         />
+                        </button>
+                      </div>
+                    </div>
+                    <div
+                      class=\\"MuiGrid-container-344\\"
+@@ -635,10 +631,286 @@
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
++             </div>
++           </div>
++         </div>
++         <div
++           class=\\"MuiGrid-item-345 MuiGrid-grid-xs-true-372 MuiGrid-grid-sm-true-386 MuiGrid-grid-md-9-409\\"
++         >
++           <div
++             class=\\"MuiPaper-root-446 MuiPaper-elevation1-449 MuiPaper-rounded-447 MuiCard-root-445 Cards-card-441 StandardCard\\"
++           >
++             <div
++               class=\\"MuiCardContent-root-473\\"
++             >
++               <div
++                 class=\\"MuiGrid-container-344 MuiGrid-spacing-xs-16-367\\"
++               >
++                 <div
++                   class=\\"MuiGrid-item-345 MuiGrid-grid-xs-12-384\\"
++                 >
++                   <span>
++                     Searching for works
++                   </span>
++                 </div>
++                 <div
++                   class=\\"MuiGrid-item-345 MuiGrid-grid-xs-12-384\\"
++                 >
++                   <div
++                     class=\\"MuiGrid-container-344 MuiGrid-spacing-xs-16-367\\"
++                   >
++                     <div
++                       class=\\"MuiGrid-item-345 MuiGrid-grid-xs-12-384 MuiGrid-grid-sm-6-392 MuiGrid-grid-md-3-403\\"
++                     >
++                       <div
++                         class=\\"MuiFormControl-root-481 MuiFormControl-fullWidth-484\\"
++                       >
++                         <label
++                           class=\\"MuiFormLabel-root-492 MuiFormLabel-filled-496 MuiInputLabel-root-485 MuiInputLabel-formControl-486 MuiInputLabel-animated-489 MuiInputLabel-shrink-488\\"
++                           data-shrink=\\"true\\"
++                         >
++                           Sort results by
++                         </label>
++                         <div
++                           class=\\"MuiInputBase-root-512 MuiInput-root-499 MuiInput-underline-503 MuiInputBase-disabled-515 MuiInput-disabled-502 MuiInputBase-formControl-513 MuiInput-formControl-500\\"
++                         >
++                           <div
++                             class=\\"MuiSelect-root-630\\"
++                           >
++                             <div
++                               aria-haspopup=\\"true\\"
++                               aria-pressed=\\"false\\"
++                               class=\\"MuiSelect-select-631 MuiSelect-selectMenu-634 MuiSelect-disabled-635 MuiInputBase-input-522 MuiInput-input-507 MuiInputBase-disabled-515 MuiInput-disabled-502\\"
++                               role=\\"button\\"
++                             >
++                               Search relevance
++                             </div>
++                             <input
++                               id=\\"sortBy\\"
++                               type=\\"hidden\\"
++                               value=\\"score\\"
++                             />
++                             <svg
++                               aria-hidden=\\"true\\"
++                               class=\\"MuiSvgIcon-root-616 MuiSelect-icon-636\\"
++                               focusable=\\"false\\"
++                               role=\\"presentation\\"
++                               viewBox=\\"0 0 24 24\\"
++                             >
++                               <path
++                                 d=\\"M7 10l5 5 5-5z\\"
++                               />
++                             </svg>
++                           </div>
++                         </div>
++                       </div>
++                     </div>
++                     <div
++                       class=\\"MuiGrid-item-345 MuiGrid-grid-xs-12-384 MuiGrid-grid-sm-6-392 MuiGrid-grid-md-3-403\\"
++                     >
++                       <div
++                         class=\\"MuiFormControl-root-481 MuiFormControl-fullWidth-484\\"
++                       >
++                         <label
++                           class=\\"MuiFormLabel-root-492 MuiFormLabel-filled-496 MuiInputLabel-root-485 MuiInputLabel-formControl-486 MuiInputLabel-animated-489 MuiInputLabel-shrink-488\\"
++                           data-shrink=\\"true\\"
++                         >
++                           Sort order
++                         </label>
++                         <div
++                           class=\\"MuiInputBase-root-512 MuiInput-root-499 MuiInput-underline-503 MuiInputBase-disabled-515 MuiInput-disabled-502 MuiInputBase-formControl-513 MuiInput-formControl-500\\"
++                         >
++                           <div
++                             class=\\"MuiSelect-root-630\\"
++                           >
++                             <div
++                               aria-haspopup=\\"true\\"
++                               aria-pressed=\\"false\\"
++                               class=\\"MuiSelect-select-631 MuiSelect-selectMenu-634 MuiSelect-disabled-635 MuiInputBase-input-522 MuiInput-input-507 MuiInputBase-disabled-515 MuiInput-disabled-502\\"
++                               role=\\"button\\"
++                             >
++                               Desc
++                             </div>
++                             <input
++                               id=\\"sortOrder\\"
++                               type=\\"hidden\\"
++                               value=\\"Desc\\"
++                             />
++                             <svg
++                               aria-hidden=\\"true\\"
++                               class=\\"MuiSvgIcon-root-616 MuiSelect-icon-636\\"
++                               focusable=\\"false\\"
++                               role=\\"presentation\\"
++                               viewBox=\\"0 0 24 24\\"
++                             >
++                               <path
++                                 d=\\"M7 10l5 5 5-5z\\"
++                               />
++                             </svg>
++                           </div>
++                         </div>
++                       </div>
++                     </div>
++                     <div
++                       class=\\"MuiGrid-item-345 MuiGrid-grid-xs-12-384 MuiGrid-grid-sm-6-392 MuiGrid-grid-md-3-403\\"
++                     >
++                       <div
++                         class=\\"MuiFormControl-root-481 MuiFormControl-fullWidth-484\\"
++                       >
++                         <label
++                           class=\\"MuiFormLabel-root-492 MuiFormLabel-filled-496 MuiInputLabel-root-485 MuiInputLabel-formControl-486 MuiInputLabel-animated-489 MuiInputLabel-shrink-488\\"
++                           data-shrink=\\"true\\"
++                         >
++                           Records per page
++                         </label>
++                         <div
++                           class=\\"MuiInputBase-root-512 MuiInput-root-499 MuiInput-underline-503 MuiInputBase-disabled-515 MuiInput-disabled-502 MuiInputBase-formControl-513 MuiInput-formControl-500\\"
++                         >
++                           <div
++                             class=\\"MuiSelect-root-630\\"
++                           >
++                             <div
++                               aria-haspopup=\\"true\\"
++                               aria-pressed=\\"false\\"
++                               class=\\"MuiSelect-select-631 MuiSelect-selectMenu-634 MuiSelect-disabled-635 MuiInputBase-input-522 MuiInput-input-507 MuiInputBase-disabled-515 MuiInput-disabled-502\\"
++                               role=\\"button\\"
++                             >
++                               20
++                             </div>
++                             <input
++                               id=\\"pageSize\\"
++                               type=\\"hidden\\"
++                               value=\\"20\\"
++                             />
++                             <svg
++                               aria-hidden=\\"true\\"
++                               class=\\"MuiSvgIcon-root-616 MuiSelect-icon-636\\"
++                               focusable=\\"false\\"
++                               role=\\"presentation\\"
++                               viewBox=\\"0 0 24 24\\"
++                             >
++                               <path
++                                 d=\\"M7 10l5 5 5-5z\\"
++                               />
++                             </svg>
++                           </div>
++                         </div>
++                       </div>
++                     </div>
++                     <div
++                       class=\\"MuiGrid-item-345 MuiGrid-grid-sm-6-392 MuiGrid-grid-md-3-403\\"
++                     >
++                       <div
++                         class=\\"MuiFormControl-root-481 MuiFormControl-fullWidth-484\\"
++                       >
++                         <label
++                           class=\\"MuiFormLabel-root-492 MuiFormLabel-filled-496 MuiInputLabel-root-485 MuiInputLabel-formControl-486 MuiInputLabel-animated-489 MuiInputLabel-shrink-488\\"
++                           data-shrink=\\"true\\"
++                         >
++                           Export results
++                         </label>
++                         <div
++                           class=\\"MuiInputBase-root-512 MuiInput-root-499 MuiInput-underline-503 MuiInputBase-disabled-515 MuiInput-disabled-502 MuiInputBase-formControl-513 MuiInput-formControl-500\\"
++                         >
++                           <div
++                             class=\\"MuiSelect-root-630\\"
++                           >
++                             <div
++                               aria-haspopup=\\"true\\"
++                               aria-pressed=\\"false\\"
++                               class=\\"MuiSelect-select-631 MuiSelect-selectMenu-634 MuiSelect-disabled-635 MuiInputBase-input-522 MuiInput-input-507 MuiInputBase-disabled-515 MuiInput-disabled-502\\"
++                               role=\\"button\\"
++                             >
++                               Please select
++                             </div>
++                             <input
++                               id=\\"exportPublicationsFormat\\"
++                               type=\\"hidden\\"
++                               value=\\"-1\\"
++                             />
++                             <svg
++                               aria-hidden=\\"true\\"
++                               class=\\"MuiSvgIcon-root-616 MuiSelect-icon-636\\"
++                               focusable=\\"false\\"
++                               role=\\"presentation\\"
++                               viewBox=\\"0 0 24 24\\"
++                             >
++                               <path
++                                 d=\\"M7 10l5 5 5-5z\\"
++                               />
++                             </svg>
++                           </div>
++                         </div>
++                       </div>
++                     </div>
++                   </div>
++                 </div>
++                 <div
++                   class=\\"MuiGrid-item-345 MuiGrid-grid-xs-12-384\\"
++                 >
++                   <span
++                     class=\\"publicationsListControls empty\\"
++                   />
++                 </div>
++               </div>
++               <div
++                 class=\\"MuiGrid-container-344 MuiGrid-justify-xs-center-361\\"
++               >
++                 <div
++                   class=\\"MuiGrid-item-345\\"
++                 >
++                   <div
++                     style=\\"padding: 8px;\\"
++                   >
++                     <div
++                       class=\\"MuiGrid-container-344 MuiGrid-spacing-xs-8-366 MuiGrid-align-items-xs-center-352 MuiGrid-align-content-xs-center-356 MuiGrid-justify-xs-center-361\\"
++                     >
++                       <div
++                         class=\\"MuiGrid-item-345 MuiGrid-grid-xs-auto-371\\"
++                         style=\\"text-align: center;\\"
++                       >
++                         <div
++                           class=\\"MuiCircularProgress-root-720 MuiCircularProgress-colorPrimary-723 MuiCircularProgress-indeterminate-722\\"
++                           role=\\"progressbar\\"
++                           style=\\"width: 18px; height: 18px;\\"
++                         >
++                           <svg
++                             class=\\"MuiCircularProgress-svg-725\\"
++                             viewBox=\\"22 22 44 44\\"
++                           >
++                             <circle
++                               class=\\"MuiCircularProgress-circle-726 MuiCircularProgress-circleIndeterminate-728\\"
++                               cx=\\"44\\"
++                               cy=\\"44\\"
++                               fill=\\"none\\"
++                               r=\\"21\\"
++                               stroke-width=\\"2\\"
++                             />
++                           </svg>
++                         </div>
++                       </div>
++                       <div
++                         class=\\"MuiGrid-item-345 MuiGrid-grid-xs-auto-371\\"
++                         style=\\"text-align: center;\\"
++                       >
++                         <span
++                           class=\\"MuiTypography-root-575 MuiTypography-h5-591 MuiTypography-colorPrimary-605\\"
++                           style=\\"font-size: 1.33rem;\\"
++                         >
++                           Searching for works
++                         </span>
++                       </div>
++                     </div>
++                   </div>
++                 </div>
++               </div>
++               <span
++                 class=\\"publicationsListControls empty\\"
++               />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>"
+`;
+
+exports[`SearchRecords Should be able to perform advanced search 10`] = `
+"Snapshot Diff:
+- First value
++ Second value
+
+@@ -324,20 +324,21 @@
+                              >
+                                Work type
+                              </label>
+                              <div
+                                aria-label=\\"Select multiple publications types to search on\\"
+-                               class=\\"MuiInputBase-root-512 MuiInput-root-499 MuiInput-underline-503 MuiInputBase-disabled-515 MuiInput-disabled-502 MuiInputBase-fullWidth-521 MuiInput-fullWidth-506 MuiInputBase-formControl-513 MuiInput-formControl-500\\"
++                               class=\\"MuiInputBase-root-512 MuiInput-root-499 MuiInput-underline-503 MuiInputBase-fullWidth-521 MuiInput-fullWidth-506 MuiInputBase-formControl-513 MuiInput-formControl-500\\"
+                              >
+                                <div
+                                  class=\\"MuiSelect-root-630\\"
+                                >
+                                  <div
+                                    aria-haspopup=\\"true\\"
+                                    aria-pressed=\\"false\\"
+-                                   class=\\"MuiSelect-select-631 MuiSelect-selectMenu-634 MuiSelect-disabled-635 MuiInputBase-input-522 MuiInput-input-507 MuiInputBase-disabled-515 MuiInput-disabled-502\\"
++                                   class=\\"MuiSelect-select-631 MuiSelect-selectMenu-634 MuiInputBase-input-522 MuiInput-input-507\\"
+                                    role=\\"button\\"
++                                   tabindex=\\"0\\"
+                                  >
+                                    <span>
+                                      ​
+                                    </span>
+                                  </div>
+@@ -387,16 +388,15 @@
+                                <div
+                                  aria-label=\\"Enter a year to search from\\"
+                                  class=\\"MuiFormControl-root-481 MuiFormControl-fullWidth-484\\"
+                                >
+                                  <div
+-                                   class=\\"MuiInputBase-root-512 MuiInput-root-499 MuiInput-underline-503 MuiInputBase-disabled-515 MuiInput-disabled-502 MuiInputBase-fullWidth-521 MuiInput-fullWidth-506 MuiInputBase-formControl-513 MuiInput-formControl-500\\"
++                                   class=\\"MuiInputBase-root-512 MuiInput-root-499 MuiInput-underline-503 MuiInputBase-fullWidth-521 MuiInput-fullWidth-506 MuiInputBase-formControl-513 MuiInput-formControl-500\\"
+                                  >
+                                    <input
+                                      aria-invalid=\\"false\\"
+-                                     class=\\"MuiInputBase-input-522 MuiInput-input-507 MuiInputBase-disabled-515 MuiInput-disabled-502\\"
+-                                     disabled=\\"\\"
++                                     class=\\"MuiInputBase-input-522 MuiInput-input-507\\"
+                                      id=\\"to\\"
+                                      placeholder=\\"Year from\\"
+                                      type=\\"text\\"
+                                      value=\\"\\"
+                                    />
+@@ -430,16 +430,15 @@
+                                <div
+                                  aria-label=\\"Enter a year to search to\\"
+                                  class=\\"MuiFormControl-root-481 MuiFormControl-fullWidth-484\\"
+                                >
+                                  <div
+-                                   class=\\"MuiInputBase-root-512 MuiInput-root-499 MuiInput-underline-503 MuiInputBase-disabled-515 MuiInput-disabled-502 MuiInputBase-fullWidth-521 MuiInput-fullWidth-506 MuiInputBase-formControl-513 MuiInput-formControl-500\\"
++                                   class=\\"MuiInputBase-root-512 MuiInput-root-499 MuiInput-underline-503 MuiInputBase-fullWidth-521 MuiInput-fullWidth-506 MuiInputBase-formControl-513 MuiInput-formControl-500\\"
+                                  >
+                                    <input
+                                      aria-invalid=\\"false\\"
+-                                     class=\\"MuiInputBase-input-522 MuiInput-input-507 MuiInputBase-disabled-515 MuiInput-disabled-502\\"
+-                                     disabled=\\"\\"
++                                     class=\\"MuiInputBase-input-522 MuiInput-input-507\\"
+                                      id=\\"from\\"
+                                      placeholder=\\"Year to\\"
+                                      type=\\"text\\"
+                                      value=\\"\\"
+                                    />
+@@ -450,16 +449,15 @@
+                          </div>
+                          <div
+                            class=\\"MuiGrid-item-345 MuiGrid-grid-xs-12-384\\"
+                          >
+                            <label
+-                             class=\\"MuiFormControlLabel-root-652 MuiFormControlLabel-disabled-654\\"
++                             class=\\"MuiFormControlLabel-root-652\\"
+                            >
+                              <span
+                                aria-label=\\"Check to search for publications with are only open access / full text\\"
+-                               class=\\"MuiButtonBase-root-555 MuiButtonBase-disabled-556 MuiIconButton-root-610 MuiIconButton-disabled-614 MuiSwitchBase-root-662 MuiCheckbox-root-656 MuiCheckbox-colorSecondary-661 MuiSwitchBase-disabled-664 MuiCheckbox-disabled-658\\"
+-                               tabindex=\\"-1\\"
++                               class=\\"MuiButtonBase-root-555 MuiIconButton-root-610 MuiSwitchBase-root-662 MuiCheckbox-root-656 MuiCheckbox-colorSecondary-661\\"
+                              >
+                                <span
+                                  class=\\"MuiIconButton-label-615\\"
+                                >
+                                  <svg
+@@ -474,18 +472,20 @@
+                                    />
+                                  </svg>
+                                  <input
+                                    class=\\"MuiSwitchBase-input-665\\"
+                                    data-indeterminate=\\"false\\"
+-                                   disabled=\\"\\"
+                                    type=\\"checkbox\\"
+                                    value=\\"\\"
+                                  />
+                                </span>
++                               <span
++                                 class=\\"MuiTouchRipple-root-558\\"
++                               />
+                              </span>
+                              <span
+-                               class=\\"MuiTypography-root-575 MuiTypography-body2-583 MuiFormControlLabel-label-655 MuiFormControlLabel-disabled-654\\"
++                               class=\\"MuiTypography-root-575 MuiTypography-body2-583 MuiFormControlLabel-label-655\\"
+                              >
+                                Open access
+                              </span>
+                            </label>
+                          </div>
+@@ -499,20 +499,22 @@
+                      <div
+                        class=\\"MuiGrid-item-345 MuiGrid-grid-xs-12-384 MuiGrid-grid-sm-auto-385\\"
+                      >
+                        <button
+                          aria-label=\\"Click to add another advanced search field\\"
+-                         class=\\"MuiButtonBase-root-555 MuiButtonBase-disabled-556 MuiButton-root-529 AdvancedSearchComponent-blueButton-574 MuiButton-contained-540 MuiButton-raised-543 MuiButton-disabled-549 MuiButton-fullWidth-554\\"
+-                         disabled=\\"\\"
+-                         tabindex=\\"-1\\"
++                         class=\\"MuiButtonBase-root-555 MuiButton-root-529 AdvancedSearchComponent-blueButton-574 MuiButton-contained-540 MuiButton-raised-543 MuiButton-fullWidth-554\\"
++                         tabindex=\\"0\\"
+                          type=\\"button\\"
+                        >
+                          <span
+                            class=\\"MuiButton-label-530\\"
+                          >
+                            Add another field
+                          </span>
++                         <span
++                           class=\\"MuiTouchRipple-root-558\\"
++                         />
+                        </button>
+                      </div>
+                      <div
+                        class=\\"MuiGrid-item-345 MuiGrid-grid-xs-12-384 MuiGrid-grid-sm-auto-385\\"
+                      >
+@@ -558,21 +560,23 @@
+                      <div
+                        class=\\"MuiGrid-item-345 MuiGrid-grid-xs-12-384 MuiGrid-grid-md-4-404 AdvancedSearchComponent-searchButton-573\\"
+                      >
+                        <button
+                          aria-label=\\"Click to search eSpace\\"
+-                         class=\\"MuiButtonBase-root-555 MuiButtonBase-disabled-556 MuiButton-root-529 MuiButton-contained-540 MuiButton-containedPrimary-541 MuiButton-raised-543 MuiButton-raisedPrimary-544 MuiButton-disabled-549 MuiButton-fullWidth-554\\"
+-                         disabled=\\"\\"
++                         class=\\"MuiButtonBase-root-555 MuiButton-root-529 MuiButton-contained-540 MuiButton-containedPrimary-541 MuiButton-raised-543 MuiButton-raisedPrimary-544 MuiButton-fullWidth-554\\"
+                          id=\\"advancedSearchButton\\"
+-                         tabindex=\\"-1\\"
++                         tabindex=\\"0\\"
+                          type=\\"submit\\"
+                        >
+                          <span
+                            class=\\"MuiButton-label-530\\"
+                          >
+                            Search
+                          </span>
++                         <span
++                           class=\\"MuiTouchRipple-root-558\\"
++                         />
+                        </button>
+                      </div>
+                    </div>
+                    <div
+                      class=\\"MuiGrid-container-344\\"
+@@ -650,11 +654,11 @@
+                >
+                  <div
+                    class=\\"MuiGrid-item-345 MuiGrid-grid-xs-12-384\\"
+                  >
+                    <span>
+-                     Searching for works
++                     Displaying works 1 to 1 of 1 total records. 
+                    </span>
+                  </div>
+                  <div
+                    class=\\"MuiGrid-item-345 MuiGrid-grid-xs-12-384\\"
+                  >
+@@ -672,20 +676,21 @@
+                            data-shrink=\\"true\\"
+                          >
+                            Sort results by
+                          </label>
+                          <div
+-                           class=\\"MuiInputBase-root-512 MuiInput-root-499 MuiInput-underline-503 MuiInputBase-disabled-515 MuiInput-disabled-502 MuiInputBase-formControl-513 MuiInput-formControl-500\\"
++                           class=\\"MuiInputBase-root-512 MuiInput-root-499 MuiInput-underline-503 MuiInputBase-formControl-513 MuiInput-formControl-500\\"
+                          >
+                            <div
+                              class=\\"MuiSelect-root-630\\"
+                            >
+                              <div
+                                aria-haspopup=\\"true\\"
+                                aria-pressed=\\"false\\"
+-                               class=\\"MuiSelect-select-631 MuiSelect-selectMenu-634 MuiSelect-disabled-635 MuiInputBase-input-522 MuiInput-input-507 MuiInputBase-disabled-515 MuiInput-disabled-502\\"
++                               class=\\"MuiSelect-select-631 MuiSelect-selectMenu-634 MuiInputBase-input-522 MuiInput-input-507\\"
+                                role=\\"button\\"
++                               tabindex=\\"0\\"
+                              >
+                                Search relevance
+                              </div>
+                              <input
+                                id=\\"sortBy\\"
+@@ -718,20 +723,21 @@
+                            data-shrink=\\"true\\"
+                          >
+                            Sort order
+                          </label>
+                          <div
+-                           class=\\"MuiInputBase-root-512 MuiInput-root-499 MuiInput-underline-503 MuiInputBase-disabled-515 MuiInput-disabled-502 MuiInputBase-formControl-513 MuiInput-formControl-500\\"
++                           class=\\"MuiInputBase-root-512 MuiInput-root-499 MuiInput-underline-503 MuiInputBase-formControl-513 MuiInput-formControl-500\\"
+                          >
+                            <div
+                              class=\\"MuiSelect-root-630\\"
+                            >
+                              <div
+                                aria-haspopup=\\"true\\"
+                                aria-pressed=\\"false\\"
+-                               class=\\"MuiSelect-select-631 MuiSelect-selectMenu-634 MuiSelect-disabled-635 MuiInputBase-input-522 MuiInput-input-507 MuiInputBase-disabled-515 MuiInput-disabled-502\\"
++                               class=\\"MuiSelect-select-631 MuiSelect-selectMenu-634 MuiInputBase-input-522 MuiInput-input-507\\"
+                                role=\\"button\\"
++                               tabindex=\\"0\\"
+                              >
+                                Desc
+                              </div>
+                              <input
+                                id=\\"sortOrder\\"
+@@ -764,20 +770,21 @@
+                            data-shrink=\\"true\\"
+                          >
+                            Records per page
+                          </label>
+                          <div
+-                           class=\\"MuiInputBase-root-512 MuiInput-root-499 MuiInput-underline-503 MuiInputBase-disabled-515 MuiInput-disabled-502 MuiInputBase-formControl-513 MuiInput-formControl-500\\"
++                           class=\\"MuiInputBase-root-512 MuiInput-root-499 MuiInput-underline-503 MuiInputBase-formControl-513 MuiInput-formControl-500\\"
+                          >
+                            <div
+                              class=\\"MuiSelect-root-630\\"
+                            >
+                              <div
+                                aria-haspopup=\\"true\\"
+                                aria-pressed=\\"false\\"
+-                               class=\\"MuiSelect-select-631 MuiSelect-selectMenu-634 MuiSelect-disabled-635 MuiInputBase-input-522 MuiInput-input-507 MuiInputBase-disabled-515 MuiInput-disabled-502\\"
++                               class=\\"MuiSelect-select-631 MuiSelect-selectMenu-634 MuiInputBase-input-522 MuiInput-input-507\\"
+                                role=\\"button\\"
++                               tabindex=\\"0\\"
+                              >
+                                20
+                              </div>
+                              <input
+                                id=\\"pageSize\\"
+@@ -810,20 +817,21 @@
+                            data-shrink=\\"true\\"
+                          >
+                            Export results
+                          </label>
+                          <div
+-                           class=\\"MuiInputBase-root-512 MuiInput-root-499 MuiInput-underline-503 MuiInputBase-disabled-515 MuiInput-disabled-502 MuiInputBase-formControl-513 MuiInput-formControl-500\\"
++                           class=\\"MuiInputBase-root-512 MuiInput-root-499 MuiInput-underline-503 MuiInputBase-formControl-513 MuiInput-formControl-500\\"
+                          >
+                            <div
+                              class=\\"MuiSelect-root-630\\"
+                            >
+                              <div
+                                aria-haspopup=\\"true\\"
+                                aria-pressed=\\"false\\"
+-                               class=\\"MuiSelect-select-631 MuiSelect-selectMenu-634 MuiSelect-disabled-635 MuiInputBase-input-522 MuiInput-input-507 MuiInputBase-disabled-515 MuiInput-disabled-502\\"
++                               class=\\"MuiSelect-select-631 MuiSelect-selectMenu-634 MuiInputBase-input-522 MuiInput-input-507\\"
+                                role=\\"button\\"
++                               tabindex=\\"0\\"
+                              >
+                                Please select
+                              </div>
+                              <input
+                                id=\\"exportPublicationsFormat\\"
+@@ -848,69 +856,539 @@
+                    </div>
+                  </div>
+                  <div
+                    class=\\"MuiGrid-item-345 MuiGrid-grid-xs-12-384\\"
+                  >
++                   <div />
++                 </div>
++               </div>
++               <div
++                 style=\\"margin-top: 16px;\\"
++               >
++                 <div
++                   class=\\"MuiGrid-container-344\\"
++                 >
++                   <div
++                     class=\\"MuiGrid-item-345 MuiGrid-grid-xs-true-372\\"
++                   >
++                     <div
++                       class=\\"MuiGrid-container-344\\"
++                     >
++                       <div
++                         class=\\"MuiGrid-item-345 MuiGrid-grid-xs-true-372\\"
++                         style=\\"min-width: 1px;\\"
++                       >
++                         <h6
++                           class=\\"MuiTypography-root-575 MuiTypography-h6-592 PublicationCitation-citationTitle-730\\"
++                         >
++                           <a
++                             href=\\"/view/UQ:215681\\"
++                           >
++                             Rheumatic complications of influenza vaccination
++                           </a>
++                         </h6>
++                       </div>
++                       <div
++                         class=\\"MuiGrid-item-345 MuiGrid-grid-xs-12-384 PublicationCitation-citationText-731\\"
++                       >
++                         <div
++                           class=\\"citationContent citationJournalArticle\\"
++                         >
++                           <span
++                             class=\\"citationAuthors\\"
++                           >
++                             <span
++                               class=\\"citationAuthor\\"
++                             >
++                               Brown, M. A.
++                             </span>
++                             <span
++                               class=\\"citationAuthor\\"
++                             >
++                                and Bertouch, J. V.
++                             </span>
++                              
++                           </span>
+                            <span
+-                     class=\\"publicationsListControls empty\\"
++                             class=\\"citationDate\\"
++                           >
++                             (1994).
++                           </span>
++                           <span
++                             class=\\"citationTitle\\"
++                           >
++                              Rheumatic complications of influenza vaccination.
++                           </span>
++                           <span
++                             class=\\"citationJournalName\\"
++                           >
++                              Australian and New Zealand Journal of Medicine 
++                           </span>
++                           <span
++                             class=\\"citationVolumeNumber\\"
++                           >
++                              24 
++                           </span>
++                           <span
++                             class=\\"citationIssueNumber\\"
++                           >
++                             (5) 
++                           </span>
++                           <span
++                             class=\\"citationPageRange\\"
++                           >
++                             <span
++                               class=\\"citationStartPage\\"
++                             >
++                               572
++                             </span>
++                             -
++                             <span
++                               class=\\"citationEndPage\\"
++                             >
++                               573
++                             </span>
++                           </span>
++                           <span>
++                             . 
++                           </span>
++                           <a
++                             aria-label=\\"Open this DOI in an new window\\"
++                             class=\\"citationDoiLink ExternalLink-externalLink-735\\"
++                             href=\\"https://doi.org/10.1111/j.1445-5994.1994.tb01760.x\\"
++                             rel=\\"noopener noreferrer\\"
++                             tabindex=\\"0\\"
++                             target=\\"_blank\\"
++                             theme=\\"[object Object]\\"
++                             title=\\"Open this DOI in an new window\\"
++                           >
++                             <svg
++                               aria-hidden=\\"true\\"
++                               class=\\"MuiSvgIcon-root-616 ExternalLink-externalLinkIcon-736\\"
++                               focusable=\\"false\\"
++                               role=\\"presentation\\"
++                               viewBox=\\"0 0 24 24\\"
++                             >
++                               <path
++                                 d=\\"M0 0h24v24H0z\\"
++                                 fill=\\"none\\"
++                               />
++                               <path
++                                 d=\\"M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z\\"
+                                />
++                             </svg>
++                             https://doi.org/10.1111/j.1445-5994.1994.tb01760.x
++                           </a>
+                          </div>
+                        </div>
+                        <div
+-                 class=\\"MuiGrid-container-344 MuiGrid-justify-xs-center-361\\"
++                         class=\\"MuiGrid-item-345 MuiGrid-grid-xs-12-384 PublicationCitation-citationCounts-732\\"
++                       >
++                         <div
++                           class=\\"MuiGrid-container-344\\"
++                         >
++                           <div
++                             class=\\"MuiGrid-item-345 MuiGrid-grid-xs-12-384 MuiGrid-grid-sm-auto-385\\"
++                           >
++                             <a
++                               aria-label=\\"Full citation in Web of science will open in a new window\\"
++                               class=\\"wosCitationCount CitationCountView-citationCount-738 ExternalLink-externalLink-735\\"
++                               href=\\"http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=A1994PP66100010&SrcAuth=uqueensland\\"
++                               rel=\\"noopener noreferrer\\"
++                               tabindex=\\"0\\"
++                               target=\\"_blank\\"
++                               theme=\\"[object Object]\\"
++                               title=\\"Full citation in Web of science will open in a new window\\"
++                             >
++                               <span
++                                 class=\\"fez-icon wos large\\"
++                               />
++                                
++                               <span
++                                 class=\\"citationCountNumber\\"
++                               >
++                                 20
++                               </span>
++                             </a>
++                             <a
++                               aria-label=\\"Full citation in Scopus will open in a new window\\"
++                               class=\\"scopusCitationCount CitationCountView-citationCount-738 ExternalLink-externalLink-735\\"
++                               href=\\"http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=2-s2.0-0028527457&origin=inward\\"
++                               rel=\\"noopener noreferrer\\"
++                               tabindex=\\"0\\"
++                               target=\\"_blank\\"
++                               theme=\\"[object Object]\\"
++                               title=\\"Full citation in Scopus will open in a new window\\"
++                             >
++                               <span
++                                 class=\\"fez-icon scopus large\\"
++                               />
++                                
++                               <span
++                                 class=\\"citationCountNumber\\"
++                               >
++                                 25
++                               </span>
++                             </a>
++                             <a
++                               aria-label=\\"Full citation in Altmetric will open in a new window\\"
++                               class=\\"altmetricCitationCount CitationCountView-citationCount-738 ExternalLink-externalLink-735\\"
++                               href=\\"http://www.altmetric.com/details.php?citation_id=11749800\\"
++                               rel=\\"noopener noreferrer\\"
++                               tabindex=\\"0\\"
++                               target=\\"_blank\\"
++                               theme=\\"[object Object]\\"
++                               title=\\"Full citation in Altmetric will open in a new window\\"
++                             >
++                               <span
++                                 class=\\"fez-icon altmetric large\\"
++                               />
++                                
++                               <span
++                                 class=\\"citationCountNumber\\"
++                               >
++                                 4
++                               </span>
++                             </a>
++                             <a
++                               aria-label=\\"Full citation in Google scholar will open in a new window\\"
++                               class=\\"googleCitationCount CitationCountView-citationCount-738 ExternalLink-externalLink-735\\"
++                               href=\\"https://scholar.google.com/scholar?q=intitle:Rheumatic%20complications%20of%20influenza%20vaccination\\"
++                               rel=\\"noopener noreferrer\\"
++                               tabindex=\\"0\\"
++                               target=\\"_blank\\"
++                               theme=\\"[object Object]\\"
++                               title=\\"Full citation in Google scholar will open in a new window\\"
+                              >
++                               <span
++                                 class=\\"fez-icon google large\\"
++                               />
++                                
++                               <span
++                                 class=\\"citationCountNumber\\"
++                               />
++                             </a>
++                             <span
++                               class=\\"noOaIcon\\"
++                             />
++                           </div>
+                            <div
+                              class=\\"MuiGrid-item-345\\"
++                           />
++                           <div
++                             class=\\"MuiGrid-item-345 MuiGrid-grid-xs-true-372\\"
++                           />
++                         </div>
++                       </div>
++                     </div>
++                   </div>
++                 </div>
++                 <hr
++                   class=\\"MuiDivider-root-739 PublicationCitation-divider-729\\"
++                 />
++               </div>
++               <div />
++             </div>
++           </div>
++         </div>
++         <div
++           class=\\"MuiGrid-item-345 MuiGrid-grid-md-3-403\\"
+          >
+            <div
+-                     style=\\"padding: 8px;\\"
++             class=\\"MuiGrid-container-344\\"
+            >
+              <div
+-                       class=\\"MuiGrid-container-344 MuiGrid-spacing-xs-8-366 MuiGrid-align-items-xs-center-352 MuiGrid-align-content-xs-center-356 MuiGrid-justify-xs-center-361\\"
++               class=\\"MuiGrid-item-345 MuiGrid-grid-xs-true-372 RighthandCard-title-743\\"
++             >
++               <h6
++                 class=\\"MuiTypography-root-575 MuiTypography-h6-592 MuiTypography-colorPrimary-605\\"
+                >
++                 Refine results
++               </h6>
++             </div>
+              <div
+-                         class=\\"MuiGrid-item-345 MuiGrid-grid-xs-auto-371\\"
+-                         style=\\"text-align: center;\\"
++               class=\\"MuiGrid-item-345 MuiGrid-grid-xs-12-384\\"
+              >
++               <hr
++                 class=\\"MuiDivider-root-739 RighthandCard-divider-744\\"
++               />
++             </div>
+              <div
+-                           class=\\"MuiCircularProgress-root-720 MuiCircularProgress-colorPrimary-723 MuiCircularProgress-indeterminate-722\\"
+-                           role=\\"progressbar\\"
+-                           style=\\"width: 18px; height: 18px;\\"
++               class=\\"MuiGrid-item-345 MuiGrid-grid-xs-12-384\\"
++             >
++               <div
++                 class=\\"facetsFilter\\"
++               >
++                 <nav
++                   class=\\"MuiList-root-745 MuiList-dense-747 MuiList-padding-746\\"
++                 >
++                   <div
++                     class=\\"MuiButtonBase-root-555 MuiListItem-root-751 MuiListItem-default-754 MuiListItem-dense-755 MuiListItem-gutters-758 FacetsFilterListItem-listItemGutters-749 MuiListItem-button-759\\"
++                     role=\\"button\\"
++                     tabindex=\\"0\\"
++                   >
++                     <div
++                       class=\\"MuiListItemText-root-762 MuiListItemText-dense-764\\"
++                     >
++                       <p
++                         class=\\"MuiTypography-root-575 MuiTypography-body2-583 MuiTypography-colorTextPrimary-607 FacetsFilterListItem-listText-750\\"
+                        >
++                         Work type
++                       </p>
++                     </div>
+                      <svg
+-                             class=\\"MuiCircularProgress-svg-725\\"
+-                             viewBox=\\"22 22 44 44\\"
++                       aria-hidden=\\"true\\"
++                       class=\\"MuiSvgIcon-root-616\\"
++                       focusable=\\"false\\"
++                       role=\\"presentation\\"
++                       viewBox=\\"0 0 24 24\\"
+                      >
+-                             <circle
+-                               class=\\"MuiCircularProgress-circle-726 MuiCircularProgress-circleIndeterminate-728\\"
+-                               cx=\\"44\\"
+-                               cy=\\"44\\"
++                       <path
++                         d=\\"M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z\\"
++                       />
++                       <path
++                         d=\\"M0 0h24v24H0z\\"
+                          fill=\\"none\\"
+-                               r=\\"21\\"
+-                               stroke-width=\\"2\\"
+                        />
+                      </svg>
++                     <span
++                       class=\\"MuiTouchRipple-root-558\\"
++                     />
+                    </div>
++                   <div
++                     class=\\"MuiButtonBase-root-555 MuiListItem-root-751 MuiListItem-default-754 MuiListItem-dense-755 MuiListItem-gutters-758 FacetsFilterListItem-listItemGutters-749 MuiListItem-button-759\\"
++                     role=\\"button\\"
++                     tabindex=\\"0\\"
++                   >
++                     <div
++                       class=\\"MuiListItemText-root-762 MuiListItemText-dense-764\\"
++                     >
++                       <p
++                         class=\\"MuiTypography-root-575 MuiTypography-body2-583 MuiTypography-colorTextPrimary-607 FacetsFilterListItem-listText-750\\"
++                       >
++                         Keywords
++                       </p>
++                     </div>
++                     <svg
++                       aria-hidden=\\"true\\"
++                       class=\\"MuiSvgIcon-root-616\\"
++                       focusable=\\"false\\"
++                       role=\\"presentation\\"
++                       viewBox=\\"0 0 24 24\\"
++                     >
++                       <path
++                         d=\\"M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z\\"
++                       />
++                       <path
++                         d=\\"M0 0h24v24H0z\\"
++                         fill=\\"none\\"
++                       />
++                     </svg>
++                     <span
++                       class=\\"MuiTouchRipple-root-558\\"
++                     />
+                    </div>
++                   <div
++                     class=\\"MuiButtonBase-root-555 MuiListItem-root-751 MuiListItem-default-754 MuiListItem-dense-755 MuiListItem-gutters-758 FacetsFilterListItem-listItemGutters-749 MuiListItem-button-759\\"
++                     role=\\"button\\"
++                     tabindex=\\"0\\"
++                   >
+                      <div
+-                         class=\\"MuiGrid-item-345 MuiGrid-grid-xs-auto-371\\"
+-                         style=\\"text-align: center;\\"
++                       class=\\"MuiListItemText-root-762 MuiListItemText-dense-764\\"
++                     >
++                       <p
++                         class=\\"MuiTypography-root-575 MuiTypography-body2-583 MuiTypography-colorTextPrimary-607 FacetsFilterListItem-listText-750\\"
++                       >
++                         Subject
++                       </p>
++                     </div>
++                     <svg
++                       aria-hidden=\\"true\\"
++                       class=\\"MuiSvgIcon-root-616\\"
++                       focusable=\\"false\\"
++                       role=\\"presentation\\"
++                       viewBox=\\"0 0 24 24\\"
+                      >
++                       <path
++                         d=\\"M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z\\"
++                       />
++                       <path
++                         d=\\"M0 0h24v24H0z\\"
++                         fill=\\"none\\"
++                       />
++                     </svg>
+                      <span
+-                           class=\\"MuiTypography-root-575 MuiTypography-h5-591 MuiTypography-colorPrimary-605\\"
+-                           style=\\"font-size: 1.33rem;\\"
++                       class=\\"MuiTouchRipple-root-558\\"
++                     />
++                   </div>
++                   <div
++                     class=\\"MuiButtonBase-root-555 MuiListItem-root-751 MuiListItem-default-754 MuiListItem-dense-755 MuiListItem-gutters-758 FacetsFilterListItem-listItemGutters-749 MuiListItem-button-759\\"
++                     role=\\"button\\"
++                     tabindex=\\"0\\"
++                   >
++                     <div
++                       class=\\"MuiListItemText-root-762 MuiListItemText-dense-764\\"
++                     >
++                       <p
++                         class=\\"MuiTypography-root-575 MuiTypography-body2-583 MuiTypography-colorTextPrimary-607 FacetsFilterListItem-listText-750\\"
+                        >
+-                           Searching for works
+-                         </span>
++                         Journal name
++                       </p>
++                     </div>
++                     <svg
++                       aria-hidden=\\"true\\"
++                       class=\\"MuiSvgIcon-root-616\\"
++                       focusable=\\"false\\"
++                       role=\\"presentation\\"
++                       viewBox=\\"0 0 24 24\\"
++                     >
++                       <path
++                         d=\\"M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z\\"
++                       />
++                       <path
++                         d=\\"M0 0h24v24H0z\\"
++                         fill=\\"none\\"
++                       />
++                     </svg>
++                     <span
++                       class=\\"MuiTouchRipple-root-558\\"
++                     />
++                   </div>
++                   <div
++                     class=\\"MuiButtonBase-root-555 MuiListItem-root-751 MuiListItem-default-754 MuiListItem-dense-755 MuiListItem-gutters-758 FacetsFilterListItem-listItemGutters-749 MuiListItem-button-759\\"
++                     role=\\"button\\"
++                     tabindex=\\"0\\"
++                   >
++                     <div
++                       class=\\"MuiListItemText-root-762 MuiListItemText-dense-764\\"
++                     >
++                       <p
++                         class=\\"MuiTypography-root-575 MuiTypography-body2-583 MuiTypography-colorTextPrimary-607 FacetsFilterListItem-listText-750\\"
++                       >
++                         Collection
++                       </p>
++                     </div>
++                     <svg
++                       aria-hidden=\\"true\\"
++                       class=\\"MuiSvgIcon-root-616\\"
++                       focusable=\\"false\\"
++                       role=\\"presentation\\"
++                       viewBox=\\"0 0 24 24\\"
++                     >
++                       <path
++                         d=\\"M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z\\"
++                       />
++                       <path
++                         d=\\"M0 0h24v24H0z\\"
++                         fill=\\"none\\"
++                       />
++                     </svg>
++                     <span
++                       class=\\"MuiTouchRipple-root-558\\"
++                     />
+                    </div>
++                   <div
++                     class=\\"MuiButtonBase-root-555 MuiListItem-root-751 MuiListItem-default-754 MuiListItem-dense-755 MuiListItem-gutters-758 FacetsFilterListItem-listItemGutters-749 MuiListItem-button-759\\"
++                     role=\\"button\\"
++                     tabindex=\\"0\\"
++                   >
++                     <div
++                       class=\\"MuiListItemText-root-762 MuiListItemText-dense-764\\"
++                     >
++                       <p
++                         class=\\"MuiTypography-root-575 MuiTypography-body2-583 MuiTypography-colorTextPrimary-607 FacetsFilterListItem-listText-750\\"
++                       >
++                         Author
++                       </p>
++                     </div>
++                     <svg
++                       aria-hidden=\\"true\\"
++                       class=\\"MuiSvgIcon-root-616\\"
++                       focusable=\\"false\\"
++                       role=\\"presentation\\"
++                       viewBox=\\"0 0 24 24\\"
++                     >
++                       <path
++                         d=\\"M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z\\"
++                       />
++                       <path
++                         d=\\"M0 0h24v24H0z\\"
++                         fill=\\"none\\"
++                       />
++                     </svg>
++                     <span
++                       class=\\"MuiTouchRipple-root-558\\"
++                     />
+                    </div>
++                   <div
++                     class=\\"MuiButtonBase-root-555 MuiListItem-root-751 MuiListItem-default-754 MuiListItem-dense-755 MuiListItem-gutters-758 FacetsFilterListItem-listItemGutters-749 MuiListItem-button-759\\"
++                     role=\\"button\\"
++                     tabindex=\\"0\\"
++                   >
++                     <div
++                       class=\\"MuiListItemText-root-762 MuiListItemText-dense-764\\"
++                     >
++                       <p
++                         class=\\"MuiTypography-root-575 MuiTypography-body2-583 MuiTypography-colorTextPrimary-607 FacetsFilterListItem-listText-750\\"
++                       >
++                         Work subtype
++                       </p>
+                      </div>
++                     <svg
++                       aria-hidden=\\"true\\"
++                       class=\\"MuiSvgIcon-root-616\\"
++                       focusable=\\"false\\"
++                       role=\\"presentation\\"
++                       viewBox=\\"0 0 24 24\\"
++                     >
++                       <path
++                         d=\\"M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z\\"
++                       />
++                       <path
++                         d=\\"M0 0h24v24H0z\\"
++                         fill=\\"none\\"
++                       />
++                     </svg>
++                     <span
++                       class=\\"MuiTouchRipple-root-558\\"
++                     />
+                    </div>
++                   <div
++                     class=\\"MuiButtonBase-root-555 MuiListItem-root-751 MuiListItem-default-754 MuiListItem-dense-755 MuiListItem-gutters-758 FacetsFilterListItem-listItemGutters-749 MuiListItem-button-759\\"
++                     role=\\"button\\"
++                     tabindex=\\"0\\"
++                   >
++                     <div
++                       class=\\"MuiListItemText-root-762 MuiListItemText-dense-764\\"
++                     >
++                       <p
++                         class=\\"MuiTypography-root-575 MuiTypography-body2-583 MuiTypography-colorTextPrimary-607 FacetsFilterListItem-listText-750\\"
++                       >
++                         Open access status
++                       </p>
+                      </div>
++                     <svg
++                       aria-hidden=\\"true\\"
++                       class=\\"MuiSvgIcon-root-616\\"
++                       focusable=\\"false\\"
++                       role=\\"presentation\\"
++                       viewBox=\\"0 0 24 24\\"
++                     >
++                       <path
++                         d=\\"M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z\\"
++                       />
++                       <path
++                         d=\\"M0 0h24v24H0z\\"
++                         fill=\\"none\\"
++                       />
++                     </svg>
+                      <span
+-                 class=\\"publicationsListControls empty\\"
++                       class=\\"MuiTouchRipple-root-558\\"
+                      />
++                   </div>
++                 </nav>
++               </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>"
+`;
+
+exports[`SearchRecords Should be able to perform simple search 1`] = `
+"Snapshot Diff:
+- First value
++ Second value
+
+@@ -28,12 +28,12 @@
+                    >
+                      <div
+                        class=\\"MuiFormControl-root-140 MuiFormControl-fullWidth-143\\"
+                      >
+                        <label
+-                         class=\\"MuiFormLabel-root-151 MuiInputLabel-root-144 MuiInputLabel-formControl-145 MuiInputLabel-animated-148\\"
+-                         data-shrink=\\"false\\"
++                         class=\\"MuiFormLabel-root-151 MuiFormLabel-filled-155 MuiInputLabel-root-144 MuiInputLabel-formControl-145 MuiInputLabel-animated-148 MuiInputLabel-shrink-147\\"
++                         data-shrink=\\"true\\"
+                          for=\\"simpleSearchField\\"
+                        >
+                          Search eSpace
+                        </label>
+                        <div
+@@ -43,11 +43,11 @@
+                            aria-label=\\"Enter your search query to search eSpace and then press Enter\\"
+                            class=\\"MuiInputBase-input-181 MuiInput-input-166 MuiInputBase-inputType-184 MuiInput-inputType-169 MuiInputBase-inputTypeSearch-185 MuiInput-inputTypeSearch-170\\"
+                            id=\\"simpleSearchField\\"
+                            placeholder=\\"Enter your search query to search all fields in eSpace\\"
+                            type=\\"search\\"
+-                           value=\\"\\"
++                           value=\\"vaccination\\"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div"
+`;
+
+exports[`SearchRecords Should be able to perform simple search 2`] = `
+"Snapshot Diff:
+- First value
++ Second value
+
+@@ -93,9 +93,285 @@
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
++         <div
++           class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31 MuiGrid-grid-sm-true-45 MuiGrid-grid-md-9-68\\"
++         >
++           <div
++             class=\\"MuiPaper-root-105 MuiPaper-elevation1-108 MuiPaper-rounded-106 MuiCard-root-104 Cards-card-100 StandardCard\\"
++           >
++             <div
++               class=\\"MuiCardContent-root-132\\"
++             >
++               <div
++                 class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-16-26\\"
++               >
++                 <div
++                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++                 >
++                   <span>
++                     Searching for works
++                   </span>
++                 </div>
++                 <div
++                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++                 >
++                   <div
++                     class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-16-26\\"
++                   >
++                     <div
++                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-6-51 MuiGrid-grid-md-3-62\\"
++                     >
++                       <div
++                         class=\\"MuiFormControl-root-140 MuiFormControl-fullWidth-143\\"
++                       >
++                         <label
++                           class=\\"MuiFormLabel-root-151 MuiFormLabel-filled-155 MuiInputLabel-root-144 MuiInputLabel-formControl-145 MuiInputLabel-animated-148 MuiInputLabel-shrink-147\\"
++                           data-shrink=\\"true\\"
++                         >
++                           Sort results by
++                         </label>
++                         <div
++                           class=\\"MuiInputBase-root-171 MuiInput-root-158 MuiInput-underline-162 MuiInputBase-disabled-174 MuiInput-disabled-161 MuiInputBase-formControl-172 MuiInput-formControl-159\\"
++                         >
++                           <div
++                             class=\\"MuiSelect-root-279\\"
++                           >
++                             <div
++                               aria-haspopup=\\"true\\"
++                               aria-pressed=\\"false\\"
++                               class=\\"MuiSelect-select-280 MuiSelect-selectMenu-283 MuiSelect-disabled-284 MuiInputBase-input-181 MuiInput-input-166 MuiInputBase-disabled-174 MuiInput-disabled-161\\"
++                               role=\\"button\\"
++                             >
++                               Search relevance
++                             </div>
++                             <input
++                               id=\\"sortBy\\"
++                               type=\\"hidden\\"
++                               value=\\"score\\"
++                             />
++                             <svg
++                               aria-hidden=\\"true\\"
++                               class=\\"MuiSvgIcon-root-286 MuiSelect-icon-285\\"
++                               focusable=\\"false\\"
++                               role=\\"presentation\\"
++                               viewBox=\\"0 0 24 24\\"
++                             >
++                               <path
++                                 d=\\"M7 10l5 5 5-5z\\"
++                               />
++                             </svg>
++                           </div>
++                         </div>
++                       </div>
++                     </div>
++                     <div
++                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-6-51 MuiGrid-grid-md-3-62\\"
++                     >
++                       <div
++                         class=\\"MuiFormControl-root-140 MuiFormControl-fullWidth-143\\"
++                       >
++                         <label
++                           class=\\"MuiFormLabel-root-151 MuiFormLabel-filled-155 MuiInputLabel-root-144 MuiInputLabel-formControl-145 MuiInputLabel-animated-148 MuiInputLabel-shrink-147\\"
++                           data-shrink=\\"true\\"
++                         >
++                           Sort order
++                         </label>
++                         <div
++                           class=\\"MuiInputBase-root-171 MuiInput-root-158 MuiInput-underline-162 MuiInputBase-disabled-174 MuiInput-disabled-161 MuiInputBase-formControl-172 MuiInput-formControl-159\\"
++                         >
++                           <div
++                             class=\\"MuiSelect-root-279\\"
++                           >
++                             <div
++                               aria-haspopup=\\"true\\"
++                               aria-pressed=\\"false\\"
++                               class=\\"MuiSelect-select-280 MuiSelect-selectMenu-283 MuiSelect-disabled-284 MuiInputBase-input-181 MuiInput-input-166 MuiInputBase-disabled-174 MuiInput-disabled-161\\"
++                               role=\\"button\\"
++                             >
++                               Desc
++                             </div>
++                             <input
++                               id=\\"sortOrder\\"
++                               type=\\"hidden\\"
++                               value=\\"Desc\\"
++                             />
++                             <svg
++                               aria-hidden=\\"true\\"
++                               class=\\"MuiSvgIcon-root-286 MuiSelect-icon-285\\"
++                               focusable=\\"false\\"
++                               role=\\"presentation\\"
++                               viewBox=\\"0 0 24 24\\"
++                             >
++                               <path
++                                 d=\\"M7 10l5 5 5-5z\\"
++                               />
++                             </svg>
++                           </div>
++                         </div>
++                       </div>
++                     </div>
++                     <div
++                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-6-51 MuiGrid-grid-md-3-62\\"
++                     >
++                       <div
++                         class=\\"MuiFormControl-root-140 MuiFormControl-fullWidth-143\\"
++                       >
++                         <label
++                           class=\\"MuiFormLabel-root-151 MuiFormLabel-filled-155 MuiInputLabel-root-144 MuiInputLabel-formControl-145 MuiInputLabel-animated-148 MuiInputLabel-shrink-147\\"
++                           data-shrink=\\"true\\"
++                         >
++                           Records per page
++                         </label>
++                         <div
++                           class=\\"MuiInputBase-root-171 MuiInput-root-158 MuiInput-underline-162 MuiInputBase-disabled-174 MuiInput-disabled-161 MuiInputBase-formControl-172 MuiInput-formControl-159\\"
++                         >
++                           <div
++                             class=\\"MuiSelect-root-279\\"
++                           >
++                             <div
++                               aria-haspopup=\\"true\\"
++                               aria-pressed=\\"false\\"
++                               class=\\"MuiSelect-select-280 MuiSelect-selectMenu-283 MuiSelect-disabled-284 MuiInputBase-input-181 MuiInput-input-166 MuiInputBase-disabled-174 MuiInput-disabled-161\\"
++                               role=\\"button\\"
++                             >
++                               20
++                             </div>
++                             <input
++                               id=\\"pageSize\\"
++                               type=\\"hidden\\"
++                               value=\\"20\\"
++                             />
++                             <svg
++                               aria-hidden=\\"true\\"
++                               class=\\"MuiSvgIcon-root-286 MuiSelect-icon-285\\"
++                               focusable=\\"false\\"
++                               role=\\"presentation\\"
++                               viewBox=\\"0 0 24 24\\"
++                             >
++                               <path
++                                 d=\\"M7 10l5 5 5-5z\\"
++                               />
++                             </svg>
++                           </div>
++                         </div>
++                       </div>
++                     </div>
++                     <div
++                       class=\\"MuiGrid-item-4 MuiGrid-grid-sm-6-51 MuiGrid-grid-md-3-62\\"
++                     >
++                       <div
++                         class=\\"MuiFormControl-root-140 MuiFormControl-fullWidth-143\\"
++                       >
++                         <label
++                           class=\\"MuiFormLabel-root-151 MuiFormLabel-filled-155 MuiInputLabel-root-144 MuiInputLabel-formControl-145 MuiInputLabel-animated-148 MuiInputLabel-shrink-147\\"
++                           data-shrink=\\"true\\"
++                         >
++                           Export results
++                         </label>
++                         <div
++                           class=\\"MuiInputBase-root-171 MuiInput-root-158 MuiInput-underline-162 MuiInputBase-disabled-174 MuiInput-disabled-161 MuiInputBase-formControl-172 MuiInput-formControl-159\\"
++                         >
++                           <div
++                             class=\\"MuiSelect-root-279\\"
++                           >
++                             <div
++                               aria-haspopup=\\"true\\"
++                               aria-pressed=\\"false\\"
++                               class=\\"MuiSelect-select-280 MuiSelect-selectMenu-283 MuiSelect-disabled-284 MuiInputBase-input-181 MuiInput-input-166 MuiInputBase-disabled-174 MuiInput-disabled-161\\"
++                               role=\\"button\\"
++                             >
++                               Please select
++                             </div>
++                             <input
++                               id=\\"exportPublicationsFormat\\"
++                               type=\\"hidden\\"
++                               value=\\"-1\\"
++                             />
++                             <svg
++                               aria-hidden=\\"true\\"
++                               class=\\"MuiSvgIcon-root-286 MuiSelect-icon-285\\"
++                               focusable=\\"false\\"
++                               role=\\"presentation\\"
++                               viewBox=\\"0 0 24 24\\"
++                             >
++                               <path
++                                 d=\\"M7 10l5 5 5-5z\\"
++                               />
++                             </svg>
++                           </div>
++                         </div>
++                       </div>
++                     </div>
++                   </div>
++                 </div>
++                 <div
++                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++                 >
++                   <span
++                     class=\\"publicationsListControls empty\\"
++                   />
++                 </div>
++               </div>
++               <div
++                 class=\\"MuiGrid-container-3 MuiGrid-justify-xs-center-20\\"
++               >
++                 <div
++                   class=\\"MuiGrid-item-4\\"
++                 >
++                   <div
++                     style=\\"padding: 8px;\\"
++                   >
++                     <div
++                       class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-8-25 MuiGrid-align-items-xs-center-11 MuiGrid-align-content-xs-center-15 MuiGrid-justify-xs-center-20\\"
++                     >
++                       <div
++                         class=\\"MuiGrid-item-4 MuiGrid-grid-xs-auto-30\\"
++                         style=\\"text-align: center;\\"
++                       >
++                         <div
++                           class=\\"MuiCircularProgress-root-235 MuiCircularProgress-colorPrimary-238 MuiCircularProgress-indeterminate-237\\"
++                           role=\\"progressbar\\"
++                           style=\\"width: 18px; height: 18px;\\"
++                         >
++                           <svg
++                             class=\\"MuiCircularProgress-svg-240\\"
++                             viewBox=\\"22 22 44 44\\"
++                           >
++                             <circle
++                               class=\\"MuiCircularProgress-circle-241 MuiCircularProgress-circleIndeterminate-243\\"
++                               cx=\\"44\\"
++                               cy=\\"44\\"
++                               fill=\\"none\\"
++                               r=\\"21\\"
++                               stroke-width=\\"2\\"
++                             />
++                           </svg>
++                         </div>
++                       </div>
++                       <div
++                         class=\\"MuiGrid-item-4 MuiGrid-grid-xs-auto-30\\"
++                         style=\\"text-align: center;\\"
++                       >
++                         <span
++                           class=\\"MuiTypography-root-244 MuiTypography-h5-260 MuiTypography-colorPrimary-274\\"
++                           style=\\"font-size: 1.33rem;\\"
++                         >
++                           Searching for works
++                         </span>
++                       </div>
++                     </div>
++                   </div>
++                 </div>
++               </div>
++               <span
++                 class=\\"publicationsListControls empty\\"
++               />
++             </div>
++           </div>
++         </div>
+        </div>
+      </div>
+    </div>
+  </DocumentFragment>"
+`;
+
+exports[`SearchRecords Should be able to perform simple search 3`] = `
+"Snapshot Diff:
+- First value
++ Second value
+
+@@ -109,11 +109,11 @@
+                >
+                  <div
+                    class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
+                  >
+                    <span>
+-                     Searching for works
++                     Displaying works 1 to 2 of 2 total records. 
+                    </span>
+                  </div>
+                  <div
+                    class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
+                  >
+@@ -131,20 +131,21 @@
+                            data-shrink=\\"true\\"
+                          >
+                            Sort results by
+                          </label>
+                          <div
+-                           class=\\"MuiInputBase-root-171 MuiInput-root-158 MuiInput-underline-162 MuiInputBase-disabled-174 MuiInput-disabled-161 MuiInputBase-formControl-172 MuiInput-formControl-159\\"
++                           class=\\"MuiInputBase-root-171 MuiInput-root-158 MuiInput-underline-162 MuiInputBase-formControl-172 MuiInput-formControl-159\\"
+                          >
+                            <div
+                              class=\\"MuiSelect-root-279\\"
+                            >
+                              <div
+                                aria-haspopup=\\"true\\"
+                                aria-pressed=\\"false\\"
+-                               class=\\"MuiSelect-select-280 MuiSelect-selectMenu-283 MuiSelect-disabled-284 MuiInputBase-input-181 MuiInput-input-166 MuiInputBase-disabled-174 MuiInput-disabled-161\\"
++                               class=\\"MuiSelect-select-280 MuiSelect-selectMenu-283 MuiInputBase-input-181 MuiInput-input-166\\"
+                                role=\\"button\\"
++                               tabindex=\\"0\\"
+                              >
+                                Search relevance
+                              </div>
+                              <input
+                                id=\\"sortBy\\"
+@@ -177,20 +178,21 @@
+                            data-shrink=\\"true\\"
+                          >
+                            Sort order
+                          </label>
+                          <div
+-                           class=\\"MuiInputBase-root-171 MuiInput-root-158 MuiInput-underline-162 MuiInputBase-disabled-174 MuiInput-disabled-161 MuiInputBase-formControl-172 MuiInput-formControl-159\\"
++                           class=\\"MuiInputBase-root-171 MuiInput-root-158 MuiInput-underline-162 MuiInputBase-formControl-172 MuiInput-formControl-159\\"
+                          >
+                            <div
+                              class=\\"MuiSelect-root-279\\"
+                            >
+                              <div
+                                aria-haspopup=\\"true\\"
+                                aria-pressed=\\"false\\"
+-                               class=\\"MuiSelect-select-280 MuiSelect-selectMenu-283 MuiSelect-disabled-284 MuiInputBase-input-181 MuiInput-input-166 MuiInputBase-disabled-174 MuiInput-disabled-161\\"
++                               class=\\"MuiSelect-select-280 MuiSelect-selectMenu-283 MuiInputBase-input-181 MuiInput-input-166\\"
+                                role=\\"button\\"
++                               tabindex=\\"0\\"
+                              >
+                                Desc
+                              </div>
+                              <input
+                                id=\\"sortOrder\\"
+@@ -223,20 +225,21 @@
+                            data-shrink=\\"true\\"
+                          >
+                            Records per page
+                          </label>
+                          <div
+-                           class=\\"MuiInputBase-root-171 MuiInput-root-158 MuiInput-underline-162 MuiInputBase-disabled-174 MuiInput-disabled-161 MuiInputBase-formControl-172 MuiInput-formControl-159\\"
++                           class=\\"MuiInputBase-root-171 MuiInput-root-158 MuiInput-underline-162 MuiInputBase-formControl-172 MuiInput-formControl-159\\"
+                          >
+                            <div
+                              class=\\"MuiSelect-root-279\\"
+                            >
+                              <div
+                                aria-haspopup=\\"true\\"
+                                aria-pressed=\\"false\\"
+-                               class=\\"MuiSelect-select-280 MuiSelect-selectMenu-283 MuiSelect-disabled-284 MuiInputBase-input-181 MuiInput-input-166 MuiInputBase-disabled-174 MuiInput-disabled-161\\"
++                               class=\\"MuiSelect-select-280 MuiSelect-selectMenu-283 MuiInputBase-input-181 MuiInput-input-166\\"
+                                role=\\"button\\"
++                               tabindex=\\"0\\"
+                              >
+                                20
+                              </div>
+                              <input
+                                id=\\"pageSize\\"
+@@ -269,20 +272,21 @@
+                            data-shrink=\\"true\\"
+                          >
+                            Export results
+                          </label>
+                          <div
+-                           class=\\"MuiInputBase-root-171 MuiInput-root-158 MuiInput-underline-162 MuiInputBase-disabled-174 MuiInput-disabled-161 MuiInputBase-formControl-172 MuiInput-formControl-159\\"
++                           class=\\"MuiInputBase-root-171 MuiInput-root-158 MuiInput-underline-162 MuiInputBase-formControl-172 MuiInput-formControl-159\\"
+                          >
+                            <div
+                              class=\\"MuiSelect-root-279\\"
+                            >
+                              <div
+                                aria-haspopup=\\"true\\"
+                                aria-pressed=\\"false\\"
+-                               class=\\"MuiSelect-select-280 MuiSelect-selectMenu-283 MuiSelect-disabled-284 MuiInputBase-input-181 MuiInput-input-166 MuiInputBase-disabled-174 MuiInput-disabled-161\\"
++                               class=\\"MuiSelect-select-280 MuiSelect-selectMenu-283 MuiInputBase-input-181 MuiInput-input-166\\"
+                                role=\\"button\\"
++                               tabindex=\\"0\\"
+                              >
+                                Please select
+                              </div>
+                              <input
+                                id=\\"exportPublicationsFormat\\"
+@@ -307,69 +311,735 @@
+                    </div>
+                  </div>
+                  <div
+                    class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
+                  >
++                   <div />
++                 </div>
++               </div>
++               <div
++                 style=\\"margin-top: 16px;\\"
++               >
++                 <div
++                   class=\\"MuiGrid-container-3\\"
++                 >
++                   <div
++                     class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31\\"
++                   >
++                     <div
++                       class=\\"MuiGrid-container-3\\"
++                     >
++                       <div
++                         class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31\\"
++                         style=\\"min-width: 1px;\\"
++                       >
++                         <h6
++                           class=\\"MuiTypography-root-244 MuiTypography-h6-261 PublicationCitation-citationTitle-300\\"
++                         >
++                           <a
++                             href=\\"/view/UQ:215681\\"
++                           >
++                             Rheumatic complications of influenza vaccination
++                           </a>
++                         </h6>
++                       </div>
++                       <div
++                         class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 PublicationCitation-citationText-301\\"
++                       >
++                         <div
++                           class=\\"citationContent citationJournalArticle\\"
++                         >
++                           <span
++                             class=\\"citationAuthors\\"
++                           >
++                             <span
++                               class=\\"citationAuthor\\"
++                             >
++                               Brown, M. A.
++                             </span>
+                              <span
+-                     class=\\"publicationsListControls empty\\"
++                               class=\\"citationAuthor\\"
++                             >
++                                and Bertouch, J. V.
++                             </span>
++                              
++                           </span>
++                           <span
++                             class=\\"citationDate\\"
++                           >
++                             (1994).
++                           </span>
++                           <span
++                             class=\\"citationTitle\\"
++                           >
++                              Rheumatic complications of influenza vaccination.
++                           </span>
++                           <span
++                             class=\\"citationJournalName\\"
++                           >
++                              Australian and New Zealand Journal of Medicine 
++                           </span>
++                           <span
++                             class=\\"citationVolumeNumber\\"
++                           >
++                              24 
++                           </span>
++                           <span
++                             class=\\"citationIssueNumber\\"
++                           >
++                             (5) 
++                           </span>
++                           <span
++                             class=\\"citationPageRange\\"
++                           >
++                             <span
++                               class=\\"citationStartPage\\"
++                             >
++                               572
++                             </span>
++                             -
++                             <span
++                               class=\\"citationEndPage\\"
++                             >
++                               573
++                             </span>
++                           </span>
++                           <span>
++                             . 
++                           </span>
++                           <a
++                             aria-label=\\"Open this DOI in an new window\\"
++                             class=\\"citationDoiLink ExternalLink-externalLink-305\\"
++                             href=\\"https://doi.org/10.1111/j.1445-5994.1994.tb01760.x\\"
++                             rel=\\"noopener noreferrer\\"
++                             tabindex=\\"0\\"
++                             target=\\"_blank\\"
++                             theme=\\"[object Object]\\"
++                             title=\\"Open this DOI in an new window\\"
++                           >
++                             <svg
++                               aria-hidden=\\"true\\"
++                               class=\\"MuiSvgIcon-root-286 ExternalLink-externalLinkIcon-306\\"
++                               focusable=\\"false\\"
++                               role=\\"presentation\\"
++                               viewBox=\\"0 0 24 24\\"
++                             >
++                               <path
++                                 d=\\"M0 0h24v24H0z\\"
++                                 fill=\\"none\\"
+                                />
++                               <path
++                                 d=\\"M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z\\"
++                               />
++                             </svg>
++                             https://doi.org/10.1111/j.1445-5994.1994.tb01760.x
++                           </a>
+                          </div>
+                        </div>
+                        <div
+-                 class=\\"MuiGrid-container-3 MuiGrid-justify-xs-center-20\\"
++                         class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 PublicationCitation-citationCounts-302\\"
++                       >
++                         <div
++                           class=\\"MuiGrid-container-3\\"
++                         >
++                           <div
++                             class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-auto-44\\"
++                           >
++                             <a
++                               aria-label=\\"Full citation in Web of science will open in a new window\\"
++                               class=\\"wosCitationCount CitationCountView-citationCount-308 ExternalLink-externalLink-305\\"
++                               href=\\"http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=A1994PP66100010&SrcAuth=uqueensland\\"
++                               rel=\\"noopener noreferrer\\"
++                               tabindex=\\"0\\"
++                               target=\\"_blank\\"
++                               theme=\\"[object Object]\\"
++                               title=\\"Full citation in Web of science will open in a new window\\"
++                             >
++                               <span
++                                 class=\\"fez-icon wos large\\"
++                               />
++                                
++                               <span
++                                 class=\\"citationCountNumber\\"
++                               >
++                                 20
++                               </span>
++                             </a>
++                             <a
++                               aria-label=\\"Full citation in Scopus will open in a new window\\"
++                               class=\\"scopusCitationCount CitationCountView-citationCount-308 ExternalLink-externalLink-305\\"
++                               href=\\"http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=2-s2.0-0028527457&origin=inward\\"
++                               rel=\\"noopener noreferrer\\"
++                               tabindex=\\"0\\"
++                               target=\\"_blank\\"
++                               theme=\\"[object Object]\\"
++                               title=\\"Full citation in Scopus will open in a new window\\"
++                             >
++                               <span
++                                 class=\\"fez-icon scopus large\\"
++                               />
++                                
++                               <span
++                                 class=\\"citationCountNumber\\"
++                               >
++                                 25
++                               </span>
++                             </a>
++                             <a
++                               aria-label=\\"Full citation in Altmetric will open in a new window\\"
++                               class=\\"altmetricCitationCount CitationCountView-citationCount-308 ExternalLink-externalLink-305\\"
++                               href=\\"http://www.altmetric.com/details.php?citation_id=11749800\\"
++                               rel=\\"noopener noreferrer\\"
++                               tabindex=\\"0\\"
++                               target=\\"_blank\\"
++                               theme=\\"[object Object]\\"
++                               title=\\"Full citation in Altmetric will open in a new window\\"
++                             >
++                               <span
++                                 class=\\"fez-icon altmetric large\\"
++                               />
++                                
++                               <span
++                                 class=\\"citationCountNumber\\"
++                               >
++                                 4
++                               </span>
++                             </a>
++                             <a
++                               aria-label=\\"Full citation in Google scholar will open in a new window\\"
++                               class=\\"googleCitationCount CitationCountView-citationCount-308 ExternalLink-externalLink-305\\"
++                               href=\\"https://scholar.google.com/scholar?q=intitle:Rheumatic%20complications%20of%20influenza%20vaccination\\"
++                               rel=\\"noopener noreferrer\\"
++                               tabindex=\\"0\\"
++                               target=\\"_blank\\"
++                               theme=\\"[object Object]\\"
++                               title=\\"Full citation in Google scholar will open in a new window\\"
+                              >
++                               <span
++                                 class=\\"fez-icon google large\\"
++                               />
++                                
++                               <span
++                                 class=\\"citationCountNumber\\"
++                               />
++                             </a>
++                             <span
++                               class=\\"noOaIcon\\"
++                             />
++                           </div>
+                            <div
+                              class=\\"MuiGrid-item-4\\"
++                           />
++                           <div
++                             class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31\\"
++                           />
++                         </div>
++                       </div>
++                     </div>
++                   </div>
++                 </div>
++                 <hr
++                   class=\\"MuiDivider-root-309 PublicationCitation-divider-299\\"
++                 />
++                 <div
++                   class=\\"MuiGrid-container-3\\"
+                  >
+                    <div
+-                     style=\\"padding: 8px;\\"
++                     class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31\\"
++                   >
++                     <div
++                       class=\\"MuiGrid-container-3\\"
+                      >
+                        <div
+-                       class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-8-25 MuiGrid-align-items-xs-center-11 MuiGrid-align-content-xs-center-15 MuiGrid-justify-xs-center-20\\"
++                         class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31\\"
++                         style=\\"min-width: 1px;\\"
++                       >
++                         <h6
++                           class=\\"MuiTypography-root-244 MuiTypography-h6-261 PublicationCitation-citationTitle-300\\"
+                          >
++                           <a
++                             href=\\"/view/UQ:175986\\"
++                           >
++                             Patient care drives mandatory vaccination
++                           </a>
++                         </h6>
++                       </div>
+                        <div
+-                         class=\\"MuiGrid-item-4 MuiGrid-grid-xs-auto-30\\"
+-                         style=\\"text-align: center;\\"
++                         class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 PublicationCitation-citationText-301\\"
+                        >
+                          <div
+-                           class=\\"MuiCircularProgress-root-235 MuiCircularProgress-colorPrimary-238 MuiCircularProgress-indeterminate-237\\"
+-                           role=\\"progressbar\\"
+-                           style=\\"width: 18px; height: 18px;\\"
++                           class=\\"citationContent citationJournalArticle\\"
++                         >
++                           <span
++                             class=\\"citationAuthors\\"
++                           >
++                             <span
++                               class=\\"citationAuthor\\"
++                             >
++                               Lambert, Stephen B.
++                             </span>
++                              
++                           </span>
++                           <span
++                             class=\\"citationDate\\"
++                           >
++                             (2008).
++                           </span>
++                           <span
++                             class=\\"citationTitle\\"
++                           >
++                              Patient care drives mandatory vaccination.
++                           </span>
++                           <span
++                             class=\\"citationJournalName\\"
++                           >
++                              British Medical Journal 
++                           </span>
++                           <span
++                             class=\\"citationVolumeNumber\\"
++                           >
++                              337 
++                           </span>
++                           <span
++                             class=\\"citationIssueNumber\\"
++                           >
++                             (7680) 
++                           </span>
++                           <span
++                             class=\\"citationPageRange\\"
++                           >
++                             <span
++                               class=\\"citationStartPage\\"
++                             >
++                               1188
++                             </span>
++                             -
++                             <span
++                               class=\\"citationEndPage\\"
++                             >
++                               1188
++                             </span>
++                           </span>
++                           <span>
++                             . 
++                           </span>
++                           <a
++                             aria-label=\\"Open this DOI in an new window\\"
++                             class=\\"citationDoiLink ExternalLink-externalLink-305\\"
++                             href=\\"https://doi.org/10.1136/bmj.a2588\\"
++                             rel=\\"noopener noreferrer\\"
++                             tabindex=\\"0\\"
++                             target=\\"_blank\\"
++                             theme=\\"[object Object]\\"
++                             title=\\"Open this DOI in an new window\\"
+                            >
+                              <svg
+-                             class=\\"MuiCircularProgress-svg-240\\"
+-                             viewBox=\\"22 22 44 44\\"
++                               aria-hidden=\\"true\\"
++                               class=\\"MuiSvgIcon-root-286 ExternalLink-externalLinkIcon-306\\"
++                               focusable=\\"false\\"
++                               role=\\"presentation\\"
++                               viewBox=\\"0 0 24 24\\"
+                              >
+-                             <circle
+-                               class=\\"MuiCircularProgress-circle-241 MuiCircularProgress-circleIndeterminate-243\\"
+-                               cx=\\"44\\"
+-                               cy=\\"44\\"
++                               <path
++                                 d=\\"M0 0h24v24H0z\\"
+                                  fill=\\"none\\"
+-                               r=\\"21\\"
+-                               stroke-width=\\"2\\"
+                                />
++                               <path
++                                 d=\\"M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z\\"
++                               />
+                              </svg>
++                             https://doi.org/10.1136/bmj.a2588
++                           </a>
+                          </div>
+                        </div>
+                        <div
+-                         class=\\"MuiGrid-item-4 MuiGrid-grid-xs-auto-30\\"
+-                         style=\\"text-align: center;\\"
++                         class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 PublicationCitation-citationCounts-302\\"
++                       >
++                         <div
++                           class=\\"MuiGrid-container-3\\"
++                         >
++                           <div
++                             class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-auto-44\\"
++                           >
++                             <a
++                               aria-label=\\"Full citation in Web of science will open in a new window\\"
++                               class=\\"wosCitationCount CitationCountView-citationCount-308 ExternalLink-externalLink-305\\"
++                               href=\\"http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=000262654000015&SrcAuth=uqueensland\\"
++                               rel=\\"noopener noreferrer\\"
++                               tabindex=\\"0\\"
++                               target=\\"_blank\\"
++                               theme=\\"[object Object]\\"
++                               title=\\"Full citation in Web of science will open in a new window\\"
+                              >
+                                <span
+-                           class=\\"MuiTypography-root-244 MuiTypography-h5-260 MuiTypography-colorPrimary-274\\"
+-                           style=\\"font-size: 1.33rem;\\"
++                                 class=\\"fez-icon wos large\\"
++                               />
++                                
++                               <span
++                                 class=\\"citationCountNumber\\"
++                               >
++                                 4
++                               </span>
++                             </a>
++                             <a
++                               aria-label=\\"Full citation in Scopus will open in a new window\\"
++                               class=\\"scopusCitationCount CitationCountView-citationCount-308 ExternalLink-externalLink-305\\"
++                               href=\\"http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=2-s2.0-57349138348&origin=inward\\"
++                               rel=\\"noopener noreferrer\\"
++                               tabindex=\\"0\\"
++                               target=\\"_blank\\"
++                               theme=\\"[object Object]\\"
++                               title=\\"Full citation in Scopus will open in a new window\\"
++                             >
++                               <span
++                                 class=\\"fez-icon scopus large\\"
++                               />
++                                
++                               <span
++                                 class=\\"citationCountNumber\\"
+                                >
+-                           Searching for works
++                                 1
+                                </span>
++                             </a>
++                             <a
++                               aria-label=\\"Full citation in Google scholar will open in a new window\\"
++                               class=\\"googleCitationCount CitationCountView-citationCount-308 ExternalLink-externalLink-305\\"
++                               href=\\"https://scholar.google.com/scholar?q=intitle:Patient%20care%20drives%20mandatory%20vaccination\\"
++                               rel=\\"noopener noreferrer\\"
++                               tabindex=\\"0\\"
++                               target=\\"_blank\\"
++                               theme=\\"[object Object]\\"
++                               title=\\"Full citation in Google scholar will open in a new window\\"
++                             >
++                               <span
++                                 class=\\"fez-icon google large\\"
++                               />
++                                
++                               <span
++                                 class=\\"citationCountNumber\\"
++                               />
++                             </a>
++                             <span
++                               class=\\"noOaIcon\\"
++                             />
++                           </div>
++                           <div
++                             class=\\"MuiGrid-item-4\\"
++                           />
++                           <div
++                             class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31\\"
++                           />
++                         </div>
++                       </div>
+                      </div>
+                    </div>
+                  </div>
++                 <hr
++                   class=\\"MuiDivider-root-309 PublicationCitation-divider-299\\"
++                 />
+                </div>
++               <div />
+              </div>
++           </div>
++         </div>
++         <div
++           class=\\"MuiGrid-item-4 MuiGrid-grid-md-3-62\\"
++         >
++           <div
++             class=\\"MuiGrid-container-3\\"
++           >
++             <div
++               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31 RighthandCard-title-313\\"
++             >
++               <h6
++                 class=\\"MuiTypography-root-244 MuiTypography-h6-261 MuiTypography-colorPrimary-274\\"
++               >
++                 Refine results
++               </h6>
++             </div>
++             <div
++               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++             >
++               <hr
++                 class=\\"MuiDivider-root-309 RighthandCard-divider-314\\"
++               />
++             </div>
++             <div
++               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++             >
++               <div
++                 class=\\"facetsFilter\\"
++               >
++                 <nav
++                   class=\\"MuiList-root-315 MuiList-dense-317 MuiList-padding-316\\"
++                 >
++                   <div
++                     class=\\"MuiButtonBase-root-214 MuiListItem-root-321 MuiListItem-default-324 MuiListItem-dense-325 MuiListItem-gutters-328 FacetsFilterListItem-listItemGutters-319 MuiListItem-button-329\\"
++                     role=\\"button\\"
++                     tabindex=\\"0\\"
++                   >
++                     <div
++                       class=\\"MuiListItemText-root-332 MuiListItemText-dense-334\\"
++                     >
++                       <p
++                         class=\\"MuiTypography-root-244 MuiTypography-body2-252 MuiTypography-colorTextPrimary-276 FacetsFilterListItem-listText-320\\"
++                       >
++                         Work type
++                       </p>
++                     </div>
++                     <svg
++                       aria-hidden=\\"true\\"
++                       class=\\"MuiSvgIcon-root-286\\"
++                       focusable=\\"false\\"
++                       role=\\"presentation\\"
++                       viewBox=\\"0 0 24 24\\"
++                     >
++                       <path
++                         d=\\"M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z\\"
++                       />
++                       <path
++                         d=\\"M0 0h24v24H0z\\"
++                         fill=\\"none\\"
++                       />
++                     </svg>
+                      <span
+-                 class=\\"publicationsListControls empty\\"
++                       class=\\"MuiTouchRipple-root-217\\"
++                     />
++                   </div>
++                   <div
++                     class=\\"MuiButtonBase-root-214 MuiListItem-root-321 MuiListItem-default-324 MuiListItem-dense-325 MuiListItem-gutters-328 FacetsFilterListItem-listItemGutters-319 MuiListItem-button-329\\"
++                     role=\\"button\\"
++                     tabindex=\\"0\\"
++                   >
++                     <div
++                       class=\\"MuiListItemText-root-332 MuiListItemText-dense-334\\"
++                     >
++                       <p
++                         class=\\"MuiTypography-root-244 MuiTypography-body2-252 MuiTypography-colorTextPrimary-276 FacetsFilterListItem-listText-320\\"
++                       >
++                         Keywords
++                       </p>
++                     </div>
++                     <svg
++                       aria-hidden=\\"true\\"
++                       class=\\"MuiSvgIcon-root-286\\"
++                       focusable=\\"false\\"
++                       role=\\"presentation\\"
++                       viewBox=\\"0 0 24 24\\"
++                     >
++                       <path
++                         d=\\"M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z\\"
++                       />
++                       <path
++                         d=\\"M0 0h24v24H0z\\"
++                         fill=\\"none\\"
++                       />
++                     </svg>
++                     <span
++                       class=\\"MuiTouchRipple-root-217\\"
++                     />
++                   </div>
++                   <div
++                     class=\\"MuiButtonBase-root-214 MuiListItem-root-321 MuiListItem-default-324 MuiListItem-dense-325 MuiListItem-gutters-328 FacetsFilterListItem-listItemGutters-319 MuiListItem-button-329\\"
++                     role=\\"button\\"
++                     tabindex=\\"0\\"
++                   >
++                     <div
++                       class=\\"MuiListItemText-root-332 MuiListItemText-dense-334\\"
++                     >
++                       <p
++                         class=\\"MuiTypography-root-244 MuiTypography-body2-252 MuiTypography-colorTextPrimary-276 FacetsFilterListItem-listText-320\\"
++                       >
++                         Subject
++                       </p>
++                     </div>
++                     <svg
++                       aria-hidden=\\"true\\"
++                       class=\\"MuiSvgIcon-root-286\\"
++                       focusable=\\"false\\"
++                       role=\\"presentation\\"
++                       viewBox=\\"0 0 24 24\\"
++                     >
++                       <path
++                         d=\\"M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z\\"
++                       />
++                       <path
++                         d=\\"M0 0h24v24H0z\\"
++                         fill=\\"none\\"
++                       />
++                     </svg>
++                     <span
++                       class=\\"MuiTouchRipple-root-217\\"
++                     />
++                   </div>
++                   <div
++                     class=\\"MuiButtonBase-root-214 MuiListItem-root-321 MuiListItem-default-324 MuiListItem-dense-325 MuiListItem-gutters-328 FacetsFilterListItem-listItemGutters-319 MuiListItem-button-329\\"
++                     role=\\"button\\"
++                     tabindex=\\"0\\"
++                   >
++                     <div
++                       class=\\"MuiListItemText-root-332 MuiListItemText-dense-334\\"
++                     >
++                       <p
++                         class=\\"MuiTypography-root-244 MuiTypography-body2-252 MuiTypography-colorTextPrimary-276 FacetsFilterListItem-listText-320\\"
++                       >
++                         Journal name
++                       </p>
++                     </div>
++                     <svg
++                       aria-hidden=\\"true\\"
++                       class=\\"MuiSvgIcon-root-286\\"
++                       focusable=\\"false\\"
++                       role=\\"presentation\\"
++                       viewBox=\\"0 0 24 24\\"
++                     >
++                       <path
++                         d=\\"M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z\\"
++                       />
++                       <path
++                         d=\\"M0 0h24v24H0z\\"
++                         fill=\\"none\\"
++                       />
++                     </svg>
++                     <span
++                       class=\\"MuiTouchRipple-root-217\\"
++                     />
++                   </div>
++                   <div
++                     class=\\"MuiButtonBase-root-214 MuiListItem-root-321 MuiListItem-default-324 MuiListItem-dense-325 MuiListItem-gutters-328 FacetsFilterListItem-listItemGutters-319 MuiListItem-button-329\\"
++                     role=\\"button\\"
++                     tabindex=\\"0\\"
++                   >
++                     <div
++                       class=\\"MuiListItemText-root-332 MuiListItemText-dense-334\\"
++                     >
++                       <p
++                         class=\\"MuiTypography-root-244 MuiTypography-body2-252 MuiTypography-colorTextPrimary-276 FacetsFilterListItem-listText-320\\"
++                       >
++                         Collection
++                       </p>
++                     </div>
++                     <svg
++                       aria-hidden=\\"true\\"
++                       class=\\"MuiSvgIcon-root-286\\"
++                       focusable=\\"false\\"
++                       role=\\"presentation\\"
++                       viewBox=\\"0 0 24 24\\"
++                     >
++                       <path
++                         d=\\"M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z\\"
++                       />
++                       <path
++                         d=\\"M0 0h24v24H0z\\"
++                         fill=\\"none\\"
++                       />
++                     </svg>
++                     <span
++                       class=\\"MuiTouchRipple-root-217\\"
++                     />
++                   </div>
++                   <div
++                     class=\\"MuiButtonBase-root-214 MuiListItem-root-321 MuiListItem-default-324 MuiListItem-dense-325 MuiListItem-gutters-328 FacetsFilterListItem-listItemGutters-319 MuiListItem-button-329\\"
++                     role=\\"button\\"
++                     tabindex=\\"0\\"
++                   >
++                     <div
++                       class=\\"MuiListItemText-root-332 MuiListItemText-dense-334\\"
++                     >
++                       <p
++                         class=\\"MuiTypography-root-244 MuiTypography-body2-252 MuiTypography-colorTextPrimary-276 FacetsFilterListItem-listText-320\\"
++                       >
++                         Author
++                       </p>
++                     </div>
++                     <svg
++                       aria-hidden=\\"true\\"
++                       class=\\"MuiSvgIcon-root-286\\"
++                       focusable=\\"false\\"
++                       role=\\"presentation\\"
++                       viewBox=\\"0 0 24 24\\"
++                     >
++                       <path
++                         d=\\"M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z\\"
++                       />
++                       <path
++                         d=\\"M0 0h24v24H0z\\"
++                         fill=\\"none\\"
++                       />
++                     </svg>
++                     <span
++                       class=\\"MuiTouchRipple-root-217\\"
++                     />
++                   </div>
++                   <div
++                     class=\\"MuiButtonBase-root-214 MuiListItem-root-321 MuiListItem-default-324 MuiListItem-dense-325 MuiListItem-gutters-328 FacetsFilterListItem-listItemGutters-319 MuiListItem-button-329\\"
++                     role=\\"button\\"
++                     tabindex=\\"0\\"
++                   >
++                     <div
++                       class=\\"MuiListItemText-root-332 MuiListItemText-dense-334\\"
++                     >
++                       <p
++                         class=\\"MuiTypography-root-244 MuiTypography-body2-252 MuiTypography-colorTextPrimary-276 FacetsFilterListItem-listText-320\\"
++                       >
++                         Work subtype
++                       </p>
++                     </div>
++                     <svg
++                       aria-hidden=\\"true\\"
++                       class=\\"MuiSvgIcon-root-286\\"
++                       focusable=\\"false\\"
++                       role=\\"presentation\\"
++                       viewBox=\\"0 0 24 24\\"
++                     >
++                       <path
++                         d=\\"M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z\\"
+                        />
++                       <path
++                         d=\\"M0 0h24v24H0z\\"
++                         fill=\\"none\\"
++                       />
++                     </svg>
++                     <span
++                       class=\\"MuiTouchRipple-root-217\\"
++                     />
++                   </div>
++                   <div
++                     class=\\"MuiButtonBase-root-214 MuiListItem-root-321 MuiListItem-default-324 MuiListItem-dense-325 MuiListItem-gutters-328 FacetsFilterListItem-listItemGutters-319 MuiListItem-button-329\\"
++                     role=\\"button\\"
++                     tabindex=\\"0\\"
++                   >
++                     <div
++                       class=\\"MuiListItemText-root-332 MuiListItemText-dense-334\\"
++                     >
++                       <p
++                         class=\\"MuiTypography-root-244 MuiTypography-body2-252 MuiTypography-colorTextPrimary-276 FacetsFilterListItem-listText-320\\"
++                       >
++                         Open access status
++                       </p>
++                     </div>
++                     <svg
++                       aria-hidden=\\"true\\"
++                       class=\\"MuiSvgIcon-root-286\\"
++                       focusable=\\"false\\"
++                       role=\\"presentation\\"
++                       viewBox=\\"0 0 24 24\\"
++                     >
++                       <path
++                         d=\\"M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z\\"
++                       />
++                       <path
++                         d=\\"M0 0h24v24H0z\\"
++                         fill=\\"none\\"
++                       />
++                     </svg>
++                     <span
++                       class=\\"MuiTouchRipple-root-217\\"
++                     />
++                   </div>
++                 </nav>
++               </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>"
+`;

@@ -187,6 +187,7 @@ export class SimpleSearchComponent extends PureComponent {
                                                 type="search"
                                                 autoComplete={'search'}
                                                 fullWidth
+                                                id="simpleSearchField"
                                                 autoFocus={this.props.autoFocus}
                                                 label={false}
                                                 placeholder={txt.searchBoxPlaceholder}
@@ -250,6 +251,7 @@ export class SimpleSearchComponent extends PureComponent {
                                     <Grid item xs>
                                         <TextField
                                             type="search"
+                                            id="simpleSearchField"
                                             fullWidth
                                             label={!this.props.isInHeader && txt.searchBoxPlaceholder}
                                             placeholder={txt.searchBoxHint}
@@ -269,6 +271,7 @@ export class SimpleSearchComponent extends PureComponent {
                                             disabled={!!this.searchTextValidationMessage(this.props.searchText)}
                                             onClick={this._handleSearch}
                                             fullWidth
+                                            id="simpleSearchButton"
                                         />
                                     </Grid>
                                     <Grid item xs={12} sm={'auto'}>
@@ -279,6 +282,7 @@ export class SimpleSearchComponent extends PureComponent {
                                             onClick={this._handleSearchMode}
                                             className="advancedButton"
                                             fullWidth
+                                            id="showAdvancedSearchButton"
                                         />
                                     </Grid>
                                 </Grid>
