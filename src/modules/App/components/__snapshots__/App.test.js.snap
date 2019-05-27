@@ -352,7 +352,722 @@ exports[`Application component Should display mobile correctly 1`] = `
 
 exports[`Application component redirects user to login if not Authorized 1`] = `<div />`;
 
-exports[`Application component should determine if it has incomplete works from props and show/hide menu item 1`] = `
+exports[`Application component should determine if it has incomplete works from props and hide menu item 1`] = `
+<WithStyles(Grid)
+  container={true}
+>
+  <withRouter(Connect(Meta))
+    routesConfig={
+      Array [
+        Object {
+          "pageTitle": "Higher degree by research thesis deposit",
+          "path": "/rhdsubmission",
+          "render": [Function],
+        },
+        Object {
+          "pageTitle": "Professional doctorate deposit",
+          "path": "/habslodge",
+          "render": [Function],
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "eSpace",
+          "path": "/",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": undefined,
+          "path": "/dashboard",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "My research",
+          "path": "/records/mine",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "My research data",
+          "path": "/data-collections/mine",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "Add data collection",
+          "path": "/data-collections/add",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "Claim possible works",
+          "path": "/records/possible",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": undefined,
+          "path": "/records/incomplete",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "exact": true,
+          "pageTitle": "Complete my work",
+          "path": "/records/:pid(UQ:[a-z0-9]+)/incomplete",
+          "render": [Function],
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "Claim a work",
+          "path": "/records/claim",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "Request a correction or upload files",
+          "path": "/records/:pid(UQ:[a-z0-9]+)/fix",
+          "regExPath": "/records/(UQ:[a-z0-9]+)/fix",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "exact": true,
+          "pageTitle": "Add a missing work to eSpace",
+          "path": "/records/add/find",
+          "render": [Function],
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "exact": true,
+          "pageTitle": "Add a missing work to eSpace",
+          "path": "/records/add/results",
+          "render": [Function],
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "exact": true,
+          "pageTitle": "Add a missing work to eSpace",
+          "path": "/records/add/new",
+          "render": [Function],
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "Link ORCID ID to UQ eSpace",
+          "path": "/author-identifiers/orcid/link",
+        },
+        Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "Google Scholar identifier",
+          "path": "/author-identifiers/google-scholar/link",
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "eSpace",
+          "path": "/",
+        },
+        Object {
+          "pageTitle": "Contact UQ eSpace",
+          "path": "/contact",
+          "render": [Function],
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": undefined,
+          "path": "/view/:pid(UQ:[a-z0-9]+)",
+          "regExPath": "/view/(UQ:[a-z0-9]+)",
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": undefined,
+          "path": "/view_new/:pid(UQ:[a-z0-9]+)",
+          "regExPath": "/view_new/(UQ:[a-z0-9]+)",
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "eSpace search",
+          "path": "/records/search",
+        },
+        Object {
+          "pageTitle": "Page not found",
+          "render": [Function],
+        },
+      ]
+    }
+  />
+  <WithStyles(AppBar)
+    className="AppBar"
+    color="primary"
+    position="fixed"
+  >
+    <WithStyles(Toolbar)
+      style={
+        Object {
+          "height": "70px",
+        }
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="center"
+        container={true}
+        direction="row"
+        justify="flex-start"
+        spacing={8}
+        wrap="nowrap"
+      >
+        <WithStyles(Grid)
+          item={true}
+        >
+          <WithStyles(Tooltip)
+            TransitionComponent={[Function]}
+            placement="bottom-end"
+            title="Main navigation"
+          >
+            <WithStyles(IconButton)
+              aria-label="Click to open the main navigation"
+              onClick={[Function]}
+              style={
+                Object {
+                  "marginLeft": "-12px",
+                  "marginRight": "12px",
+                }
+              }
+            >
+              <pure(MenuIcon)
+                style={
+                  Object {
+                    "color": "white",
+                  }
+                }
+              />
+            </WithStyles(IconButton)>
+          </WithStyles(Tooltip)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          style={
+            Object {
+              "paddingLeft": 0,
+            }
+          }
+          xs={true}
+        >
+          <WithStyles(Grid)
+            alignItems="center"
+            container={true}
+            justify="flex-start"
+            spacing={16}
+            wrap="nowrap"
+          >
+            <Hidden
+              implementation="js"
+              lgDown={false}
+              lgUp={false}
+              mdDown={false}
+              mdUp={false}
+              smDown={false}
+              smUp={false}
+              xlDown={false}
+              xlUp={false}
+              xsDown={true}
+              xsUp={false}
+            >
+              <WithStyles(Grid)
+                item={true}
+              >
+                <div
+                  className="smallLogo"
+                  id="logo"
+                  style={
+                    Object {
+                      "height": 66,
+                      "width": 60,
+                    }
+                  }
+                >
+                  The University of Queensland
+                </div>
+              </WithStyles(Grid)>
+            </Hidden>
+            <WithStyles(Grid)
+              item={true}
+              style={
+                Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                }
+              }
+              xs="auto"
+            >
+              <WithStyles(Typography)
+                component="h1"
+                noWrap={true}
+                variant="h5"
+              >
+                <a
+                  className="appTitle"
+                  href="/"
+                  style={
+                    Object {
+                      "color": "#FFFFFF",
+                    }
+                  }
+                  title="Click to return to the eSpace home page"
+                >
+                  UQ eSpace 
+                </a>
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          sm={4}
+          xs={2}
+        >
+          <withRouter(Connect(SearchComponent))
+            autoFocus={false}
+            isInHeader={true}
+            showMobileSearchButton={true}
+            showPrefixIcon={true}
+          />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+        >
+          <WithStyles(AuthButton)
+            ariaLabel="Click to log out of eSpace"
+            isAuthorizedUser={true}
+            onClick={[Function]}
+            signInTooltipText="Log in"
+            signOutTooltipText="Log out - test1"
+          />
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </WithStyles(Toolbar)>
+  </WithStyles(AppBar)>
+  <WithStyles(MenuDrawer)
+    docked={false}
+    drawerOpen={false}
+    hasIncompleteWorks={false}
+    history={
+      Object {
+        "location": Object {},
+      }
+    }
+    isMobile={false}
+    locale={
+      Object {
+        "closeMenuLabel": "Close menu",
+        "skipNavAriaLabel": "Click to skip, or tab to progress to the navigation",
+        "skipNavTitle": "Skip Navigation",
+      }
+    }
+    logoImage="largeLogo"
+    logoLink="http://www.uq.edu.au"
+    logoText="The University of Queensland"
+    menuItems={
+      Array [
+        Object {
+          "linkTo": "/",
+          "primaryText": "Home",
+          "public": true,
+        },
+        Object {
+          "linkTo": "/dashboard",
+          "primaryText": "My dashboard",
+          "secondaryText": undefined,
+        },
+        Object {
+          "linkTo": "/records/mine",
+          "primaryText": "My research",
+        },
+        Object {
+          "linkTo": "/records/possible",
+          "primaryText": "Claim possible work",
+        },
+        Object {
+          "linkTo": "/records/add/find",
+          "primaryText": "Add a missing work",
+        },
+        Object {
+          "linkTo": "/data-collections/mine",
+          "primaryText": "My research data",
+        },
+        Object {
+          "linkTo": "/data-collections/add",
+          "primaryText": "Add a missing dataset",
+        },
+        Object {
+          "linkTo": "https://app.library.uq.edu.au/#/authors/undefined",
+          "primaryText": "Author statistics",
+        },
+        Object {
+          "divider": true,
+          "path": "/234234234242",
+        },
+        Object {
+          "linkTo": "/records/search",
+          "primaryText": "Search eSpace",
+          "public": true,
+          "secondaryText": "",
+        },
+        Object {
+          "linkTo": "https://guides.library.uq.edu.au/for-researchers/research-publications-guide",
+          "primaryText": "Help",
+          "public": true,
+        },
+        Object {
+          "linkTo": "/contact",
+          "primaryText": "Contact",
+          "public": true,
+          "secondaryText": "",
+        },
+      ]
+    }
+    onToggleDrawer={[Function]}
+  />
+  <div
+    className="content-container"
+    style={Object {}}
+  >
+    <ConfirmDialogBox
+      hideCancelButton={true}
+      locale={
+        Object {
+          "cancelButtonLabel": "Cancel",
+          "confirmButtonLabel": "Redirect to login",
+          "confirmationMessage": "Your session has expired. Follow the login prompt to return to your submission form. You must upload your files again to successfully deposit your thesis, even if you have already uploaded your files.",
+          "confirmationTitle": "Session Expired",
+        }
+      }
+      onRef={[Function]}
+    />
+    <WithStyles(Grid)
+      alignContent="center"
+      alignItems="center"
+      container={true}
+      justify="center"
+      style={
+        Object {
+          "marginBottom": 12,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        item={true}
+        style={
+          Object {
+            "marginBottom": 0,
+            "marginTop": 0,
+          }
+        }
+      >
+        <WithStyles(Alert)
+          message="Please contact the UQ eSpace administrator to resolve this."
+          title="You are not registered in UQ eSpace as an author"
+          type="info_outline"
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+    <Connect(AppAlert) />
+    <Switch>
+      <Route
+        key="route_0"
+        pageTitle="Higher degree by research thesis deposit"
+        path="/rhdsubmission"
+        render={[Function]}
+      />
+      <Route
+        key="route_1"
+        pageTitle="Professional doctorate deposit"
+        path="/habslodge"
+        render={[Function]}
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        key="route_2"
+        pageTitle="eSpace"
+        path="/"
+      />
+      <Route
+        access={
+          Array [
+            "researcher",
+            "admin",
+          ]
+        }
+        component={[Function]}
+        exact={true}
+        key="route_3"
+        path="/dashboard"
+      />
+      <Route
+        access={
+          Array [
+            "researcher",
+            "admin",
+          ]
+        }
+        component={[Function]}
+        exact={true}
+        key="route_4"
+        pageTitle="My research"
+        path="/records/mine"
+      />
+      <Route
+        access={
+          Array [
+            "researcher",
+            "admin",
+          ]
+        }
+        component={[Function]}
+        exact={true}
+        key="route_5"
+        pageTitle="My research data"
+        path="/data-collections/mine"
+      />
+      <Route
+        access={
+          Array [
+            "researcher",
+            "admin",
+          ]
+        }
+        component={[Function]}
+        exact={true}
+        key="route_6"
+        pageTitle="Add data collection"
+        path="/data-collections/add"
+      />
+      <Route
+        access={
+          Array [
+            "researcher",
+            "admin",
+          ]
+        }
+        component={[Function]}
+        exact={true}
+        key="route_7"
+        pageTitle="Claim possible works"
+        path="/records/possible"
+      />
+      <Route
+        access={
+          Array [
+            "researcher",
+            "admin",
+          ]
+        }
+        component={[Function]}
+        exact={true}
+        key="route_8"
+        path="/records/incomplete"
+      />
+      <Route
+        access={
+          Array [
+            "researcher",
+            "admin",
+          ]
+        }
+        exact={true}
+        key="route_9"
+        pageTitle="Complete my work"
+        path="/records/:pid(UQ:[a-z0-9]+)/incomplete"
+        render={[Function]}
+      />
+      <Route
+        access={
+          Array [
+            "researcher",
+            "admin",
+          ]
+        }
+        component={[Function]}
+        exact={true}
+        key="route_10"
+        pageTitle="Claim a work"
+        path="/records/claim"
+      />
+      <Route
+        access={
+          Array [
+            "researcher",
+            "admin",
+          ]
+        }
+        component={[Function]}
+        exact={true}
+        key="route_11"
+        pageTitle="Request a correction or upload files"
+        path="/records/:pid(UQ:[a-z0-9]+)/fix"
+        regExPath="/records/(UQ:[a-z0-9]+)/fix"
+      />
+      <Route
+        access={
+          Array [
+            "researcher",
+            "admin",
+          ]
+        }
+        exact={true}
+        key="route_12"
+        pageTitle="Add a missing work to eSpace"
+        path="/records/add/find"
+        render={[Function]}
+      />
+      <Route
+        access={
+          Array [
+            "researcher",
+            "admin",
+          ]
+        }
+        exact={true}
+        key="route_13"
+        pageTitle="Add a missing work to eSpace"
+        path="/records/add/results"
+        render={[Function]}
+      />
+      <Route
+        access={
+          Array [
+            "researcher",
+            "admin",
+          ]
+        }
+        exact={true}
+        key="route_14"
+        pageTitle="Add a missing work to eSpace"
+        path="/records/add/new"
+        render={[Function]}
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        key="route_15"
+        pageTitle="Link ORCID ID to UQ eSpace"
+        path="/author-identifiers/orcid/link"
+      />
+      <Route
+        access={
+          Array [
+            "researcher",
+            "admin",
+          ]
+        }
+        component={[Function]}
+        exact={true}
+        key="route_16"
+        pageTitle="Google Scholar identifier"
+        path="/author-identifiers/google-scholar/link"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        key="route_17"
+        pageTitle="eSpace"
+        path="/"
+      />
+      <Route
+        key="route_18"
+        pageTitle="Contact UQ eSpace"
+        path="/contact"
+        render={[Function]}
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        key="route_19"
+        path="/view/:pid(UQ:[a-z0-9]+)"
+        regExPath="/view/(UQ:[a-z0-9]+)"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        key="route_20"
+        path="/view_new/:pid(UQ:[a-z0-9]+)"
+        regExPath="/view_new/(UQ:[a-z0-9]+)"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        key="route_21"
+        pageTitle="eSpace search"
+        path="/records/search"
+      />
+      <Route
+        key="route_22"
+        pageTitle="Page not found"
+        render={[Function]}
+      />
+    </Switch>
+  </div>
+  <Connect(WithStyles(HelpDrawer)) />
+  <WithStyles(OfflineSnackbar) />
+</WithStyles(Grid)>
+`;
+
+exports[`Application component should determine if it has incomplete works from props and show menu item 1`] = `
 <WithStyles(Grid)
   container={true}
 >
