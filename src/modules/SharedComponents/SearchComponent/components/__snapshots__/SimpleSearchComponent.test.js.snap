@@ -71,6 +71,7 @@ exports[`SimpleSearchComponent should render default view 1`] = `
         <TextField
           error={null}
           fullWidth={true}
+          id="simpleSearchField"
           inputProps={
             Object {
               "aria-label": "Enter your search query to search eSpace and then press Enter",
@@ -97,6 +98,7 @@ exports[`SimpleSearchComponent should render default view 1`] = `
           color="primary"
           disabled={false}
           fullWidth={true}
+          id="simpleSearchButton"
           onClick={[Function]}
           variant="contained"
         >
@@ -112,6 +114,7 @@ exports[`SimpleSearchComponent should render default view 1`] = `
           aria-label="Click to switch to Advanced search"
           className="advancedButton"
           fullWidth={true}
+          id="showAdvancedSearchButton"
           onClick={[Function]}
           variant="contained"
         >
@@ -171,6 +174,7 @@ exports[`SimpleSearchComponent should render show prefix icon in the search box 
         <TextField
           error={null}
           fullWidth={true}
+          id="simpleSearchField"
           inputProps={
             Object {
               "aria-label": "Enter your search query to search eSpace and then press Enter",
@@ -197,6 +201,7 @@ exports[`SimpleSearchComponent should render show prefix icon in the search box 
           color="primary"
           disabled={false}
           fullWidth={true}
+          id="simpleSearchButton"
           onClick={[Function]}
           variant="contained"
         >
@@ -212,6 +217,7 @@ exports[`SimpleSearchComponent should render show prefix icon in the search box 
           aria-label="Click to switch to Advanced search"
           className="advancedButton"
           fullWidth={true}
+          id="showAdvancedSearchButton"
           onClick={[Function]}
           variant="contained"
         >
@@ -267,6 +273,7 @@ exports[`SimpleSearchComponent should render with a class "header" for use in Ap
             autoComplete="search"
             error={null}
             fullWidth={true}
+            id="simpleSearchField"
             inputProps={
               Object {
                 "aria-label": "Enter your search query to search eSpace and then press Enter",
@@ -342,6 +349,7 @@ exports[`SimpleSearchComponent should set search value from prop 1`] = `
         <TextField
           error={null}
           fullWidth={true}
+          id="simpleSearchField"
           inputProps={
             Object {
               "aria-label": "Enter your search query to search eSpace and then press Enter",
@@ -368,6 +376,7 @@ exports[`SimpleSearchComponent should set search value from prop 1`] = `
           color="primary"
           disabled={false}
           fullWidth={true}
+          id="simpleSearchButton"
           onClick={[Function]}
           variant="contained"
         >
@@ -383,6 +392,7 @@ exports[`SimpleSearchComponent should set search value from prop 1`] = `
           aria-label="Click to switch to Advanced search"
           className="advancedButton"
           fullWidth={true}
+          id="showAdvancedSearchButton"
           onClick={[Function]}
           variant="contained"
         >
