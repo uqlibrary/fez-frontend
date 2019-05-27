@@ -29,7 +29,7 @@ exports[`Alert snapshots test renders Alert of error type 1`] = `
         justify="center"
       >
         <WithStyles(Grid)
-          id="icon"
+          className="undefined alert-icon"
           item={true}
         >
           <pure(ErrorIcon)
@@ -37,7 +37,7 @@ exports[`Alert snapshots test renders Alert of error type 1`] = `
           />
         </WithStyles(Grid)>
         <WithStyles(Grid)
-          id="text"
+          className="undefined alert-text"
           item={true}
           xs={true}
         >
@@ -81,7 +81,7 @@ exports[`Alert snapshots test renders Alert of error type should render action b
         justify="center"
       >
         <WithStyles(Grid)
-          id="icon"
+          className="undefined alert-icon"
           item={true}
           onClick={[MockFunction]}
           onKeyDown={[MockFunction]}
@@ -91,7 +91,7 @@ exports[`Alert snapshots test renders Alert of error type should render action b
           />
         </WithStyles(Grid)>
         <WithStyles(Grid)
-          id="text"
+          className="undefined alert-text"
           item={true}
           onClick={[MockFunction]}
           onKeyDown={[MockFunction]}
@@ -108,9 +108,8 @@ exports[`Alert snapshots test renders Alert of error type should render action b
       xs={true}
     >
       <WithStyles(Button)
-        className="action"
+        className="action alert-button"
         fullWidth={true}
-        id="alertButton"
         onClick={[MockFunction]}
         variant="text"
       >
@@ -150,7 +149,7 @@ exports[`Alert snapshots test renders Alert of error type should render dismiss 
         justify="center"
       >
         <WithStyles(Grid)
-          id="icon"
+          className="undefined alert-icon"
           item={true}
         >
           <pure(ErrorIcon)
@@ -158,7 +157,7 @@ exports[`Alert snapshots test renders Alert of error type should render dismiss 
           />
         </WithStyles(Grid)>
         <WithStyles(Grid)
-          id="text"
+          className="undefined alert-text"
           item={true}
           xs={true}
         >
@@ -256,7 +255,7 @@ exports[`Alert snapshots test renders Alert of error type should render dismiss 
         justify="center"
       >
         <WithStyles(Grid)
-          id="icon"
+          className="undefined alert-icon"
           item={true}
           onClick={[MockFunction]}
           onKeyDown={[MockFunction]}
@@ -266,7 +265,7 @@ exports[`Alert snapshots test renders Alert of error type should render dismiss 
           />
         </WithStyles(Grid)>
         <WithStyles(Grid)
-          id="text"
+          className="undefined alert-text"
           item={true}
           onClick={[MockFunction]}
           onKeyDown={[MockFunction]}
@@ -311,9 +310,8 @@ exports[`Alert snapshots test renders Alert of error type should render dismiss 
       xs={true}
     >
       <WithStyles(Button)
-        className="action"
+        className="action alert-button"
         fullWidth={true}
-        id="alertButton"
         onClick={[MockFunction]}
         variant="text"
       >
@@ -381,7 +379,7 @@ exports[`Alert snapshots test renders Alert of error type should render dismiss 
         justify="center"
       >
         <WithStyles(Grid)
-          id="icon"
+          className="undefined alert-icon"
           item={true}
           onClick={[MockFunction]}
           onKeyDown={[MockFunction]}
@@ -393,7 +391,7 @@ exports[`Alert snapshots test renders Alert of error type should render dismiss 
           />
         </WithStyles(Grid)>
         <WithStyles(Grid)
-          id="text"
+          className="undefined alert-text"
           item={true}
           onClick={[MockFunction]}
           onKeyDown={[MockFunction]}
@@ -438,9 +436,8 @@ exports[`Alert snapshots test renders Alert of error type should render dismiss 
       xs={true}
     >
       <WithStyles(Button)
-        className="action"
+        className="action alert-button"
         fullWidth={true}
-        id="alertButton"
         onClick={[MockFunction]}
         variant="text"
       >

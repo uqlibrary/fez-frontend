@@ -113,7 +113,7 @@ exports[`RichEditor tests  should render component 1`] = `
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -633,7 +633,7 @@ exports[`RichEditor tests  should render error as one child 1`] = `
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -1260,7 +1260,7 @@ exports[`RichEditor tests  should render error as one child 1`] = `
                       "accent": Object {
                         "dark": "#2a557d",
                         "light": "#54acff",
-                        "main": "#4085C6",
+                        "main": "#316799",
                       },
                       "action": Object {
                         "active": "rgba(0, 0, 0, 0.54)",
@@ -1778,7 +1778,7 @@ exports[`RichEditor tests  should render error as one child 1`] = `
                       "accent": Object {
                         "dark": "#2a557d",
                         "light": "#54acff",
-                        "main": "#4085C6",
+                        "main": "#316799",
                       },
                       "action": Object {
                         "active": "rgba(0, 0, 0, 0.54)",
@@ -2276,7 +2276,7 @@ exports[`RichEditor tests  should render error as react children 1`] = `
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -2895,7 +2895,7 @@ exports[`RichEditor tests  should render error as react children 1`] = `
                       "accent": Object {
                         "dark": "#2a557d",
                         "light": "#54acff",
-                        "main": "#4085C6",
+                        "main": "#316799",
                       },
                       "action": Object {
                         "active": "rgba(0, 0, 0, 0.54)",
@@ -3417,7 +3417,7 @@ exports[`RichEditor tests  should render error as react children 1`] = `
                       "accent": Object {
                         "dark": "#2a557d",
                         "light": "#54acff",
-                        "main": "#4085C6",
+                        "main": "#316799",
                       },
                       "action": Object {
                         "active": "rgba(0, 0, 0, 0.54)",
@@ -3915,7 +3915,7 @@ exports[`RichEditor tests  should render error showing input length 1`] = `
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -4520,7 +4520,7 @@ exports[`RichEditor tests  should render error showing input length 1`] = `
                       "accent": Object {
                         "dark": "#2a557d",
                         "light": "#54acff",
-                        "main": "#4085C6",
+                        "main": "#316799",
                       },
                       "action": Object {
                         "active": "rgba(0, 0, 0, 0.54)",
@@ -5038,7 +5038,7 @@ exports[`RichEditor tests  should render error showing input length 1`] = `
                       "accent": Object {
                         "dark": "#2a557d",
                         "light": "#54acff",
-                        "main": "#4085C6",
+                        "main": "#316799",
                       },
                       "action": Object {
                         "active": "rgba(0, 0, 0, 0.54)",
@@ -5536,7 +5536,7 @@ exports[`RichEditor tests  should render error showing maxValue and instructions
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -6118,7 +6118,7 @@ exports[`RichEditor tests  should render error showing maxValue and instructions
                       "accent": Object {
                         "dark": "#2a557d",
                         "light": "#54acff",
-                        "main": "#4085C6",
+                        "main": "#316799",
                       },
                       "action": Object {
                         "active": "rgba(0, 0, 0, 0.54)",
@@ -6636,7 +6636,7 @@ exports[`RichEditor tests  should render error showing maxValue and instructions
                       "accent": Object {
                         "dark": "#2a557d",
                         "light": "#54acff",
-                        "main": "#4085C6",
+                        "main": "#316799",
                       },
                       "action": Object {
                         "active": "rgba(0, 0, 0, 0.54)",
@@ -7134,7 +7134,7 @@ exports[`RichEditor tests  should render given title and description 1`] = `
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -7669,7 +7669,7 @@ exports[`RichEditor tests  should render given title and description 1`] = `
                         "accent": Object {
                           "dark": "#2a557d",
                           "light": "#54acff",
-                          "main": "#4085C6",
+                          "main": "#316799",
                         },
                         "action": Object {
                           "active": "rgba(0, 0, 0, 0.54)",
@@ -8165,7 +8165,7 @@ exports[`RichEditor tests  should render given title and description 1`] = `
                         "accent": Object {
                           "dark": "#2a557d",
                           "light": "#54acff",
-                          "main": "#4085C6",
+                          "main": "#316799",
                         },
                         "action": Object {
                           "active": "rgba(0, 0, 0, 0.54)",
@@ -8658,7 +8658,7 @@ exports[`RichEditor tests  should render given title and description with error 
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -9210,7 +9210,7 @@ exports[`RichEditor tests  should render given title and description with error 
                         "accent": Object {
                           "dark": "#2a557d",
                           "light": "#54acff",
-                          "main": "#4085C6",
+                          "main": "#316799",
                         },
                         "action": Object {
                           "active": "rgba(0, 0, 0, 0.54)",
@@ -9707,7 +9707,7 @@ exports[`RichEditor tests  should render given title and description with error 
                         "accent": Object {
                           "dark": "#2a557d",
                           "light": "#54acff",
-                          "main": "#4085C6",
+                          "main": "#316799",
                         },
                         "action": Object {
                           "active": "rgba(0, 0, 0, 0.54)",
@@ -10221,7 +10221,7 @@ exports[`RichEditor tests  should render given title and description with error 
                       "accent": Object {
                         "dark": "#2a557d",
                         "light": "#54acff",
-                        "main": "#4085C6",
+                        "main": "#316799",
                       },
                       "action": Object {
                         "active": "rgba(0, 0, 0, 0.54)",

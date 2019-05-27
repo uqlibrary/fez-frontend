@@ -34,30 +34,31 @@ describe('Alert component functionality test ', () => {
     it('does not fire any action when clicking on the message text with no action assigned', () => {
         const alertFunc = jest.fn();
         const wrapper = setup({action: null, actionButtonLabel: null});
-        wrapper.find('#text').simulate('click');
+        wrapper.find('.alert-text').simulate('click');
         expect(alertFunc).not.toHaveBeenCalled();
     });
 
     it('fires the action when clicking on the iconButton', () => {
         const alertFunc = jest.fn();
         const wrapper = setup({action: alertFunc, actionButtonLabel: 'button'});
-        wrapper.find('#icon').simulate('click');
+        wrapper.find('.alert-icon').simulate('click');
         expect(alertFunc).toHaveBeenCalled();
     });
 
     it('does not fire the action when clicking on the iconButton with no action assigned', () => {
         const alertFunc = jest.fn();
         const wrapper = setup({action: null, actionButtonLabel: null});
-        wrapper.find('#icon').simulate('click');
+        // wrapper.find('#icon').simulate('click');
+        wrapper.find('.alert-icon').simulate('click');
         expect(alertFunc).not.toHaveBeenCalled();
     });
 
     it('fires the action when clicking on the action button', () => {
         const alertFunc = jest.fn();
         const wrapper = setup({action: alertFunc, actionButtonLabel: 'button'});
-        expect(wrapper.find('#alertButton').exists()).toBeTruthy();
-        expect(wrapper.find('#alertButton')).toHaveLength(1);
-        wrapper.find('#alertButton').simulate('click');
+        expect(wrapper.find('.alert-button').exists()).toBeTruthy();
+        expect(wrapper.find('.alert-button')).toHaveLength(1);
+        wrapper.find('.alert-button').simulate('click');
         expect(alertFunc).toHaveBeenCalled();
     });
 

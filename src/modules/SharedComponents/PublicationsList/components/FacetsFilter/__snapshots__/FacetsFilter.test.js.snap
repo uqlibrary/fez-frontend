@@ -605,7 +605,7 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -1435,7 +1435,7 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                                   "accent": Object {
                                                     "dark": "#2a557d",
                                                     "light": "#54acff",
-                                                    "main": "#4085C6",
+                                                    "main": "#316799",
                                                   },
                                                   "action": Object {
                                                     "active": "rgba(0, 0, 0, 0.54)",
@@ -1960,7 +1960,7 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                   "accent": Object {
                                     "dark": "#2a557d",
                                     "light": "#54acff",
-                                    "main": "#4085C6",
+                                    "main": "#316799",
                                   },
                                   "action": Object {
                                     "active": "rgba(0, 0, 0, 0.54)",
@@ -2658,7 +2658,7 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                                   "accent": Object {
                                                     "dark": "#2a557d",
                                                     "light": "#54acff",
-                                                    "main": "#4085C6",
+                                                    "main": "#316799",
                                                   },
                                                   "action": Object {
                                                     "active": "rgba(0, 0, 0, 0.54)",
@@ -3183,7 +3183,7 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                   "accent": Object {
                                     "dark": "#2a557d",
                                     "light": "#54acff",
-                                    "main": "#4085C6",
+                                    "main": "#316799",
                                   },
                                   "action": Object {
                                     "active": "rgba(0, 0, 0, 0.54)",
@@ -3833,7 +3833,7 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                                   "accent": Object {
                                                     "dark": "#2a557d",
                                                     "light": "#54acff",
-                                                    "main": "#4085C6",
+                                                    "main": "#316799",
                                                   },
                                                   "action": Object {
                                                     "active": "rgba(0, 0, 0, 0.54)",
@@ -4358,7 +4358,7 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                   "accent": Object {
                                     "dark": "#2a557d",
                                     "light": "#54acff",
-                                    "main": "#4085C6",
+                                    "main": "#316799",
                                   },
                                   "action": Object {
                                     "active": "rgba(0, 0, 0, 0.54)",
@@ -5020,7 +5020,7 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                                   "accent": Object {
                                                     "dark": "#2a557d",
                                                     "light": "#54acff",
-                                                    "main": "#4085C6",
+                                                    "main": "#316799",
                                                   },
                                                   "action": Object {
                                                     "active": "rgba(0, 0, 0, 0.54)",
@@ -5545,7 +5545,7 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                   "accent": Object {
                                     "dark": "#2a557d",
                                     "light": "#54acff",
-                                    "main": "#4085C6",
+                                    "main": "#316799",
                                   },
                                   "action": Object {
                                     "active": "rgba(0, 0, 0, 0.54)",
@@ -6195,7 +6195,7 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                                   "accent": Object {
                                                     "dark": "#2a557d",
                                                     "light": "#54acff",
-                                                    "main": "#4085C6",
+                                                    "main": "#316799",
                                                   },
                                                   "action": Object {
                                                     "active": "rgba(0, 0, 0, 0.54)",
@@ -6720,7 +6720,7 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                   "accent": Object {
                                     "dark": "#2a557d",
                                     "light": "#54acff",
-                                    "main": "#4085C6",
+                                    "main": "#316799",
                                   },
                                   "action": Object {
                                     "active": "rgba(0, 0, 0, 0.54)",
@@ -7370,7 +7370,7 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                                   "accent": Object {
                                                     "dark": "#2a557d",
                                                     "light": "#54acff",
-                                                    "main": "#4085C6",
+                                                    "main": "#316799",
                                                   },
                                                   "action": Object {
                                                     "active": "rgba(0, 0, 0, 0.54)",
@@ -7895,7 +7895,7 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                   "accent": Object {
                                     "dark": "#2a557d",
                                     "light": "#54acff",
-                                    "main": "#4085C6",
+                                    "main": "#316799",
                                   },
                                   "action": Object {
                                     "active": "rgba(0, 0, 0, 0.54)",
@@ -8660,7 +8660,7 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                                     "accent": Object {
                                                       "dark": "#2a557d",
                                                       "light": "#54acff",
-                                                      "main": "#4085C6",
+                                                      "main": "#316799",
                                                     },
                                                     "action": Object {
                                                       "active": "rgba(0, 0, 0, 0.54)",
@@ -9185,7 +9185,7 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                     "accent": Object {
                                       "dark": "#2a557d",
                                       "light": "#54acff",
-                                      "main": "#4085C6",
+                                      "main": "#316799",
                                     },
                                     "action": Object {
                                       "active": "rgba(0, 0, 0, 0.54)",
@@ -10081,7 +10081,7 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -10913,7 +10913,7 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                                   "accent": Object {
                                                     "dark": "#2a557d",
                                                     "light": "#54acff",
-                                                    "main": "#4085C6",
+                                                    "main": "#316799",
                                                   },
                                                   "action": Object {
                                                     "active": "rgba(0, 0, 0, 0.54)",
@@ -11440,7 +11440,7 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                   "accent": Object {
                                     "dark": "#2a557d",
                                     "light": "#54acff",
-                                    "main": "#4085C6",
+                                    "main": "#316799",
                                   },
                                   "action": Object {
                                     "active": "rgba(0, 0, 0, 0.54)",
@@ -12147,7 +12147,7 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                                                   "accent": Object {
                                                                     "dark": "#2a557d",
                                                                     "light": "#54acff",
-                                                                    "main": "#4085C6",
+                                                                    "main": "#316799",
                                                                   },
                                                                   "action": Object {
                                                                     "active": "rgba(0, 0, 0, 0.54)",
@@ -12880,7 +12880,7 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                                   "accent": Object {
                                                     "dark": "#2a557d",
                                                     "light": "#54acff",
-                                                    "main": "#4085C6",
+                                                    "main": "#316799",
                                                   },
                                                   "action": Object {
                                                     "active": "rgba(0, 0, 0, 0.54)",
@@ -13405,7 +13405,7 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                   "accent": Object {
                                     "dark": "#2a557d",
                                     "light": "#54acff",
-                                    "main": "#4085C6",
+                                    "main": "#316799",
                                   },
                                   "action": Object {
                                     "active": "rgba(0, 0, 0, 0.54)",
@@ -14055,7 +14055,7 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                                   "accent": Object {
                                                     "dark": "#2a557d",
                                                     "light": "#54acff",
-                                                    "main": "#4085C6",
+                                                    "main": "#316799",
                                                   },
                                                   "action": Object {
                                                     "active": "rgba(0, 0, 0, 0.54)",
@@ -14580,7 +14580,7 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                   "accent": Object {
                                     "dark": "#2a557d",
                                     "light": "#54acff",
-                                    "main": "#4085C6",
+                                    "main": "#316799",
                                   },
                                   "action": Object {
                                     "active": "rgba(0, 0, 0, 0.54)",
@@ -15242,7 +15242,7 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                                   "accent": Object {
                                                     "dark": "#2a557d",
                                                     "light": "#54acff",
-                                                    "main": "#4085C6",
+                                                    "main": "#316799",
                                                   },
                                                   "action": Object {
                                                     "active": "rgba(0, 0, 0, 0.54)",
@@ -15767,7 +15767,7 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                   "accent": Object {
                                     "dark": "#2a557d",
                                     "light": "#54acff",
-                                    "main": "#4085C6",
+                                    "main": "#316799",
                                   },
                                   "action": Object {
                                     "active": "rgba(0, 0, 0, 0.54)",
@@ -16417,7 +16417,7 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                                   "accent": Object {
                                                     "dark": "#2a557d",
                                                     "light": "#54acff",
-                                                    "main": "#4085C6",
+                                                    "main": "#316799",
                                                   },
                                                   "action": Object {
                                                     "active": "rgba(0, 0, 0, 0.54)",
@@ -16942,7 +16942,7 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                   "accent": Object {
                                     "dark": "#2a557d",
                                     "light": "#54acff",
-                                    "main": "#4085C6",
+                                    "main": "#316799",
                                   },
                                   "action": Object {
                                     "active": "rgba(0, 0, 0, 0.54)",
@@ -17592,7 +17592,7 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                                   "accent": Object {
                                                     "dark": "#2a557d",
                                                     "light": "#54acff",
-                                                    "main": "#4085C6",
+                                                    "main": "#316799",
                                                   },
                                                   "action": Object {
                                                     "active": "rgba(0, 0, 0, 0.54)",
@@ -18117,7 +18117,7 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                   "accent": Object {
                                     "dark": "#2a557d",
                                     "light": "#54acff",
-                                    "main": "#4085C6",
+                                    "main": "#316799",
                                   },
                                   "action": Object {
                                     "active": "rgba(0, 0, 0, 0.54)",
@@ -18882,7 +18882,7 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                                     "accent": Object {
                                                       "dark": "#2a557d",
                                                       "light": "#54acff",
-                                                      "main": "#4085C6",
+                                                      "main": "#316799",
                                                     },
                                                     "action": Object {
                                                       "active": "rgba(0, 0, 0, 0.54)",
@@ -19407,7 +19407,7 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                     "accent": Object {
                                       "dark": "#2a557d",
                                       "light": "#54acff",
-                                      "main": "#4085C6",
+                                      "main": "#316799",
                                     },
                                     "action": Object {
                                       "active": "rgba(0, 0, 0, 0.54)",

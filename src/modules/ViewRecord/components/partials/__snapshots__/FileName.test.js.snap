@@ -113,7 +113,7 @@ exports[`File Name Component  should display file name link 1`] = `
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -841,7 +841,7 @@ exports[`File Name Component  should display file name link 1`] = `
                                   "accent": Object {
                                     "dark": "#2a557d",
                                     "light": "#54acff",
-                                    "main": "#4085C6",
+                                    "main": "#316799",
                                   },
                                   "action": Object {
                                     "active": "rgba(0, 0, 0, 0.54)",
@@ -1268,7 +1268,7 @@ exports[`File Name Component  should display file name link 1`] = `
                                     "accent": Object {
                                       "dark": "#2a557d",
                                       "light": "#54acff",
-                                      "main": "#4085C6",
+                                      "main": "#316799",
                                     },
                                     "action": Object {
                                       "active": "rgba(0, 0, 0, 0.54)",
@@ -1776,7 +1776,7 @@ exports[`File Name Component  should display file name link 1`] = `
                               "accent": Object {
                                 "dark": "#2a557d",
                                 "light": "#54acff",
-                                "main": "#4085C6",
+                                "main": "#316799",
                               },
                               "action": Object {
                                 "active": "rgba(0, 0, 0, 0.54)",
@@ -2412,7 +2412,7 @@ exports[`File Name Component  should render audio player 1`] = `
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -3150,7 +3150,7 @@ exports[`File Name Component  should render audio player 1`] = `
                                   "accent": Object {
                                     "dark": "#2a557d",
                                     "light": "#54acff",
-                                    "main": "#4085C6",
+                                    "main": "#316799",
                                   },
                                   "action": Object {
                                     "active": "rgba(0, 0, 0, 0.54)",
@@ -3577,7 +3577,7 @@ exports[`File Name Component  should render audio player 1`] = `
                                     "accent": Object {
                                       "dark": "#2a557d",
                                       "light": "#54acff",
-                                      "main": "#4085C6",
+                                      "main": "#316799",
                                     },
                                     "action": Object {
                                       "active": "rgba(0, 0, 0, 0.54)",
@@ -4085,7 +4085,7 @@ exports[`File Name Component  should render audio player 1`] = `
                               "accent": Object {
                                 "dark": "#2a557d",
                                 "light": "#54acff",
-                                "main": "#4085C6",
+                                "main": "#316799",
                               },
                               "action": Object {
                                 "active": "rgba(0, 0, 0, 0.54)",
@@ -4927,7 +4927,7 @@ exports[`File Name Component  should render component and display file name only
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -5697,7 +5697,7 @@ exports[`File Name Component  should render component and display file name only
                                   "accent": Object {
                                     "dark": "#2a557d",
                                     "light": "#54acff",
-                                    "main": "#4085C6",
+                                    "main": "#316799",
                                   },
                                   "action": Object {
                                     "active": "rgba(0, 0, 0, 0.54)",
@@ -6160,7 +6160,7 @@ exports[`File Name Component  should render component and display file name only
                               "accent": Object {
                                 "dark": "#2a557d",
                                 "light": "#54acff",
-                                "main": "#4085C6",
+                                "main": "#316799",
                               },
                               "action": Object {
                                 "active": "rgba(0, 0, 0, 0.54)",
@@ -6796,7 +6796,7 @@ exports[`File Name Component  should run onFileSelect function on click 1`] = `
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -7596,7 +7596,7 @@ exports[`File Name Component  should run onFileSelect function on click 1`] = `
                                   "accent": Object {
                                     "dark": "#2a557d",
                                     "light": "#54acff",
-                                    "main": "#4085C6",
+                                    "main": "#316799",
                                   },
                                   "action": Object {
                                     "active": "rgba(0, 0, 0, 0.54)",
@@ -8065,7 +8065,7 @@ exports[`File Name Component  should run onFileSelect function on click 1`] = `
                               "accent": Object {
                                 "dark": "#2a557d",
                                 "light": "#54acff",
-                                "main": "#4085C6",
+                                "main": "#316799",
                               },
                               "action": Object {
                                 "active": "rgba(0, 0, 0, 0.54)",
@@ -8701,7 +8701,7 @@ exports[`File Name Component  should run onFileSelect function on key press 1`] 
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -9511,7 +9511,7 @@ exports[`File Name Component  should run onFileSelect function on key press 1`] 
                                   "accent": Object {
                                     "dark": "#2a557d",
                                     "light": "#54acff",
-                                    "main": "#4085C6",
+                                    "main": "#316799",
                                   },
                                   "action": Object {
                                     "active": "rgba(0, 0, 0, 0.54)",
@@ -9980,7 +9980,7 @@ exports[`File Name Component  should run onFileSelect function on key press 1`] 
                               "accent": Object {
                                 "dark": "#2a557d",
                                 "light": "#54acff",
-                                "main": "#4085C6",
+                                "main": "#316799",
                               },
                               "action": Object {
                                 "active": "rgba(0, 0, 0, 0.54)",

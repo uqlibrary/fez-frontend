@@ -113,7 +113,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -641,7 +641,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                     "accent": Object {
                       "dark": "#2a557d",
                       "light": "#54acff",
-                      "main": "#4085C6",
+                      "main": "#316799",
                     },
                     "action": Object {
                       "active": "rgba(0, 0, 0, 0.54)",
@@ -1327,7 +1327,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                     "accent": Object {
                                       "dark": "#2a557d",
                                       "light": "#54acff",
-                                      "main": "#4085C6",
+                                      "main": "#316799",
                                     },
                                     "action": Object {
                                       "active": "rgba(0, 0, 0, 0.54)",
@@ -1768,7 +1768,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                         "accent": Object {
                                           "dark": "#2a557d",
                                           "light": "#54acff",
-                                          "main": "#4085C6",
+                                          "main": "#316799",
                                         },
                                         "action": Object {
                                           "active": "rgba(0, 0, 0, 0.54)",
@@ -2196,7 +2196,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                           "accent": Object {
                                             "dark": "#2a557d",
                                             "light": "#54acff",
-                                            "main": "#4085C6",
+                                            "main": "#316799",
                                           },
                                           "action": Object {
                                             "active": "rgba(0, 0, 0, 0.54)",
@@ -2646,7 +2646,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                     "accent": Object {
                                       "dark": "#2a557d",
                                       "light": "#54acff",
-                                      "main": "#4085C6",
+                                      "main": "#316799",
                                     },
                                     "action": Object {
                                       "active": "rgba(0, 0, 0, 0.54)",
@@ -3087,7 +3087,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                         "accent": Object {
                                           "dark": "#2a557d",
                                           "light": "#54acff",
-                                          "main": "#4085C6",
+                                          "main": "#316799",
                                         },
                                         "action": Object {
                                           "active": "rgba(0, 0, 0, 0.54)",
@@ -3515,7 +3515,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                           "accent": Object {
                                             "dark": "#2a557d",
                                             "light": "#54acff",
-                                            "main": "#4085C6",
+                                            "main": "#316799",
                                           },
                                           "action": Object {
                                             "active": "rgba(0, 0, 0, 0.54)",
@@ -3965,7 +3965,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                     "accent": Object {
                                       "dark": "#2a557d",
                                       "light": "#54acff",
-                                      "main": "#4085C6",
+                                      "main": "#316799",
                                     },
                                     "action": Object {
                                       "active": "rgba(0, 0, 0, 0.54)",
@@ -4406,7 +4406,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                         "accent": Object {
                                           "dark": "#2a557d",
                                           "light": "#54acff",
-                                          "main": "#4085C6",
+                                          "main": "#316799",
                                         },
                                         "action": Object {
                                           "active": "rgba(0, 0, 0, 0.54)",
@@ -4834,7 +4834,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                           "accent": Object {
                                             "dark": "#2a557d",
                                             "light": "#54acff",
-                                            "main": "#4085C6",
+                                            "main": "#316799",
                                           },
                                           "action": Object {
                                             "active": "rgba(0, 0, 0, 0.54)",
@@ -5284,7 +5284,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                     "accent": Object {
                                       "dark": "#2a557d",
                                       "light": "#54acff",
-                                      "main": "#4085C6",
+                                      "main": "#316799",
                                     },
                                     "action": Object {
                                       "active": "rgba(0, 0, 0, 0.54)",
@@ -5725,7 +5725,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                         "accent": Object {
                                           "dark": "#2a557d",
                                           "light": "#54acff",
-                                          "main": "#4085C6",
+                                          "main": "#316799",
                                         },
                                         "action": Object {
                                           "active": "rgba(0, 0, 0, 0.54)",
@@ -6153,7 +6153,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                           "accent": Object {
                                             "dark": "#2a557d",
                                             "light": "#54acff",
-                                            "main": "#4085C6",
+                                            "main": "#316799",
                                           },
                                           "action": Object {
                                             "active": "rgba(0, 0, 0, 0.54)",
@@ -6758,7 +6758,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                 "accent": Object {
                                   "dark": "#2a557d",
                                   "light": "#54acff",
-                                  "main": "#4085C6",
+                                  "main": "#316799",
                                 },
                                 "action": Object {
                                   "active": "rgba(0, 0, 0, 0.54)",
@@ -7395,7 +7395,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -9553,7 +9553,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                     "accent": Object {
                       "dark": "#2a557d",
                       "light": "#54acff",
-                      "main": "#4085C6",
+                      "main": "#316799",
                     },
                     "action": Object {
                       "active": "rgba(0, 0, 0, 0.54)",
@@ -10239,7 +10239,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                     "accent": Object {
                                       "dark": "#2a557d",
                                       "light": "#54acff",
-                                      "main": "#4085C6",
+                                      "main": "#316799",
                                     },
                                     "action": Object {
                                       "active": "rgba(0, 0, 0, 0.54)",
@@ -10680,7 +10680,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                         "accent": Object {
                                           "dark": "#2a557d",
                                           "light": "#54acff",
-                                          "main": "#4085C6",
+                                          "main": "#316799",
                                         },
                                         "action": Object {
                                           "active": "rgba(0, 0, 0, 0.54)",
@@ -11108,7 +11108,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                           "accent": Object {
                                             "dark": "#2a557d",
                                             "light": "#54acff",
-                                            "main": "#4085C6",
+                                            "main": "#316799",
                                           },
                                           "action": Object {
                                             "active": "rgba(0, 0, 0, 0.54)",
@@ -11558,7 +11558,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                     "accent": Object {
                                       "dark": "#2a557d",
                                       "light": "#54acff",
-                                      "main": "#4085C6",
+                                      "main": "#316799",
                                     },
                                     "action": Object {
                                       "active": "rgba(0, 0, 0, 0.54)",
@@ -11999,7 +11999,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                         "accent": Object {
                                           "dark": "#2a557d",
                                           "light": "#54acff",
-                                          "main": "#4085C6",
+                                          "main": "#316799",
                                         },
                                         "action": Object {
                                           "active": "rgba(0, 0, 0, 0.54)",
@@ -12427,7 +12427,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                           "accent": Object {
                                             "dark": "#2a557d",
                                             "light": "#54acff",
-                                            "main": "#4085C6",
+                                            "main": "#316799",
                                           },
                                           "action": Object {
                                             "active": "rgba(0, 0, 0, 0.54)",
@@ -12877,7 +12877,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                     "accent": Object {
                                       "dark": "#2a557d",
                                       "light": "#54acff",
-                                      "main": "#4085C6",
+                                      "main": "#316799",
                                     },
                                     "action": Object {
                                       "active": "rgba(0, 0, 0, 0.54)",
@@ -13318,7 +13318,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                         "accent": Object {
                                           "dark": "#2a557d",
                                           "light": "#54acff",
-                                          "main": "#4085C6",
+                                          "main": "#316799",
                                         },
                                         "action": Object {
                                           "active": "rgba(0, 0, 0, 0.54)",
@@ -13746,7 +13746,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                           "accent": Object {
                                             "dark": "#2a557d",
                                             "light": "#54acff",
-                                            "main": "#4085C6",
+                                            "main": "#316799",
                                           },
                                           "action": Object {
                                             "active": "rgba(0, 0, 0, 0.54)",
@@ -14332,7 +14332,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                     "accent": Object {
                                       "dark": "#2a557d",
                                       "light": "#54acff",
-                                      "main": "#4085C6",
+                                      "main": "#316799",
                                     },
                                     "action": Object {
                                       "active": "rgba(0, 0, 0, 0.54)",
@@ -14759,7 +14759,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                       "accent": Object {
                                         "dark": "#2a557d",
                                         "light": "#54acff",
-                                        "main": "#4085C6",
+                                        "main": "#316799",
                                       },
                                       "action": Object {
                                         "active": "rgba(0, 0, 0, 0.54)",
@@ -15267,7 +15267,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                 "accent": Object {
                                   "dark": "#2a557d",
                                   "light": "#54acff",
-                                  "main": "#4085C6",
+                                  "main": "#316799",
                                 },
                                 "action": Object {
                                   "active": "rgba(0, 0, 0, 0.54)",
@@ -15904,7 +15904,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -16420,7 +16420,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                     "accent": Object {
                       "dark": "#2a557d",
                       "light": "#54acff",
-                      "main": "#4085C6",
+                      "main": "#316799",
                     },
                     "action": Object {
                       "active": "rgba(0, 0, 0, 0.54)",
@@ -17106,7 +17106,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                     "accent": Object {
                                       "dark": "#2a557d",
                                       "light": "#54acff",
-                                      "main": "#4085C6",
+                                      "main": "#316799",
                                     },
                                     "action": Object {
                                       "active": "rgba(0, 0, 0, 0.54)",
@@ -17547,7 +17547,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                         "accent": Object {
                                           "dark": "#2a557d",
                                           "light": "#54acff",
-                                          "main": "#4085C6",
+                                          "main": "#316799",
                                         },
                                         "action": Object {
                                           "active": "rgba(0, 0, 0, 0.54)",
@@ -17975,7 +17975,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                           "accent": Object {
                                             "dark": "#2a557d",
                                             "light": "#54acff",
-                                            "main": "#4085C6",
+                                            "main": "#316799",
                                           },
                                           "action": Object {
                                             "active": "rgba(0, 0, 0, 0.54)",
@@ -18425,7 +18425,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                     "accent": Object {
                                       "dark": "#2a557d",
                                       "light": "#54acff",
-                                      "main": "#4085C6",
+                                      "main": "#316799",
                                     },
                                     "action": Object {
                                       "active": "rgba(0, 0, 0, 0.54)",
@@ -18866,7 +18866,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                         "accent": Object {
                                           "dark": "#2a557d",
                                           "light": "#54acff",
-                                          "main": "#4085C6",
+                                          "main": "#316799",
                                         },
                                         "action": Object {
                                           "active": "rgba(0, 0, 0, 0.54)",
@@ -19294,7 +19294,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                           "accent": Object {
                                             "dark": "#2a557d",
                                             "light": "#54acff",
-                                            "main": "#4085C6",
+                                            "main": "#316799",
                                           },
                                           "action": Object {
                                             "active": "rgba(0, 0, 0, 0.54)",
@@ -19744,7 +19744,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                     "accent": Object {
                                       "dark": "#2a557d",
                                       "light": "#54acff",
-                                      "main": "#4085C6",
+                                      "main": "#316799",
                                     },
                                     "action": Object {
                                       "active": "rgba(0, 0, 0, 0.54)",
@@ -20185,7 +20185,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                         "accent": Object {
                                           "dark": "#2a557d",
                                           "light": "#54acff",
-                                          "main": "#4085C6",
+                                          "main": "#316799",
                                         },
                                         "action": Object {
                                           "active": "rgba(0, 0, 0, 0.54)",
@@ -20613,7 +20613,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                           "accent": Object {
                                             "dark": "#2a557d",
                                             "light": "#54acff",
-                                            "main": "#4085C6",
+                                            "main": "#316799",
                                           },
                                           "action": Object {
                                             "active": "rgba(0, 0, 0, 0.54)",
@@ -21063,7 +21063,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                     "accent": Object {
                                       "dark": "#2a557d",
                                       "light": "#54acff",
-                                      "main": "#4085C6",
+                                      "main": "#316799",
                                     },
                                     "action": Object {
                                       "active": "rgba(0, 0, 0, 0.54)",
@@ -21504,7 +21504,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                         "accent": Object {
                                           "dark": "#2a557d",
                                           "light": "#54acff",
-                                          "main": "#4085C6",
+                                          "main": "#316799",
                                         },
                                         "action": Object {
                                           "active": "rgba(0, 0, 0, 0.54)",
@@ -21932,7 +21932,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                           "accent": Object {
                                             "dark": "#2a557d",
                                             "light": "#54acff",
-                                            "main": "#4085C6",
+                                            "main": "#316799",
                                           },
                                           "action": Object {
                                             "active": "rgba(0, 0, 0, 0.54)",
@@ -22520,7 +22520,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                     "accent": Object {
                                       "dark": "#2a557d",
                                       "light": "#54acff",
-                                      "main": "#4085C6",
+                                      "main": "#316799",
                                     },
                                     "action": Object {
                                       "active": "rgba(0, 0, 0, 0.54)",
@@ -22947,7 +22947,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                       "accent": Object {
                                         "dark": "#2a557d",
                                         "light": "#54acff",
-                                        "main": "#4085C6",
+                                        "main": "#316799",
                                       },
                                       "action": Object {
                                         "active": "rgba(0, 0, 0, 0.54)",
@@ -23455,7 +23455,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                 "accent": Object {
                                   "dark": "#2a557d",
                                   "light": "#54acff",
-                                  "main": "#4085C6",
+                                  "main": "#316799",
                                 },
                                 "action": Object {
                                   "active": "rgba(0, 0, 0, 0.54)",
@@ -24092,7 +24092,7 @@ exports[`CitationCounts should render component with no metrics 1`] = `
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -24542,7 +24542,7 @@ exports[`CitationCounts should render component with no metrics 1`] = `
                     "accent": Object {
                       "dark": "#2a557d",
                       "light": "#54acff",
-                      "main": "#4085C6",
+                      "main": "#316799",
                     },
                     "action": Object {
                       "active": "rgba(0, 0, 0, 0.54)",
@@ -25383,7 +25383,7 @@ exports[`CitationCounts should render component with no metrics 1`] = `
                                 "accent": Object {
                                   "dark": "#2a557d",
                                   "light": "#54acff",
-                                  "main": "#4085C6",
+                                  "main": "#316799",
                                 },
                                 "action": Object {
                                   "active": "rgba(0, 0, 0, 0.54)",

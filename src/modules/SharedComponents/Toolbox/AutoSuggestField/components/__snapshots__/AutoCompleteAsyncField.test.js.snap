@@ -621,7 +621,7 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -1379,7 +1379,7 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                                   value=""
                                 >
                                   <TextField
-                                    InputLabelProps={null}
+                                    InputLabelProps="{[object Object]"
                                     InputProps={
                                       Object {
                                         "aria-activedescendant": null,
@@ -1728,7 +1728,7 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -2520,7 +2520,7 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
                                   value=""
                                 >
                                   <TextField
-                                    InputLabelProps={null}
+                                    InputLabelProps="{[object Object]"
                                     InputProps={
                                       Object {
                                         "aria-activedescendant": null,
@@ -2891,7 +2891,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -3708,7 +3708,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                   value=""
                                 >
                                   <TextField
-                                    InputLabelProps={null}
+                                    InputLabelProps="{[object Object]"
                                     InputProps={
                                       Object {
                                         "aria-activedescendant": null,
@@ -4057,7 +4057,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -4874,7 +4874,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                   value=""
                                 >
                                   <TextField
-                                    InputLabelProps={null}
+                                    InputLabelProps="{[object Object]"
                                     InputProps={
                                       Object {
                                         "aria-activedescendant": null,
@@ -5251,7 +5251,7 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -5999,7 +5999,7 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
                                   value=""
                                 >
                                   <TextField
-                                    InputLabelProps={null}
+                                    InputLabelProps="{[object Object]"
                                     InputProps={
                                       Object {
                                         "aria-activedescendant": null,
