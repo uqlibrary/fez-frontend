@@ -2131,7 +2131,7 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
               ],
@@ -3304,7 +3304,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
               ],
@@ -4470,7 +4470,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
               ],
