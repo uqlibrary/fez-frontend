@@ -486,7 +486,7 @@ exports[`Component FileUploadAccessSelector should render access condition disab
               ],
               "results": Array [
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
               ],
@@ -2087,11 +2087,11 @@ exports[`Component FileUploadAccessSelector should render access condition disab
               ],
               "results": Array [
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
               ],

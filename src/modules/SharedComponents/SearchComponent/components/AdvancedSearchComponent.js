@@ -320,6 +320,7 @@ export class AdvancedSearchComponent extends PureComponent {
                                             fullWidth
                                             onClick={this._handleAdvancedSearch}
                                             disabled={!this.haveAllAdvancedSearchFieldsValidated(this.props.fieldRows)}
+                                            id="advancedSearchButton"
                                         />
                                     </Grid>
                                 </Grid>

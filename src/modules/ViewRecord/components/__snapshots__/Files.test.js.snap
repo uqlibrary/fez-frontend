@@ -2274,7 +2274,7 @@ exports[`Files Component  should render component full mount 1`] = `
               ],
               "results": Array [
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
               ],

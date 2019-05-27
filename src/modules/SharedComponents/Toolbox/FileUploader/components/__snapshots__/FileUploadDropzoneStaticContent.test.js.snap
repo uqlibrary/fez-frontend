@@ -486,7 +486,7 @@ exports[`Component FileUploadDropzoneStaticContent should render with default se
               ],
               "results": Array [
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
               ],

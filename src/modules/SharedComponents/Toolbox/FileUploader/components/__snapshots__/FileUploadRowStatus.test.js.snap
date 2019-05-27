@@ -12,11 +12,11 @@ exports[`Component FileUploadRowStatus should mount the container 1`] = `
         ],
         "results": Array [
           Object {
-            "isThrow": false,
+            "type": "return",
             "value": Immutable.Map {},
           },
           Object {
-            "isThrow": false,
+            "type": "return",
             "value": Immutable.Map {},
           },
         ],
@@ -29,7 +29,7 @@ exports[`Component FileUploadRowStatus should mount the container 1`] = `
         ],
         "results": Array [
           Object {
-            "isThrow": false,
+            "type": "return",
             "value": undefined,
           },
         ],
@@ -513,7 +513,7 @@ exports[`Component FileUploadRowStatus should mount the container 1`] = `
               ],
               "results": Array [
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
               ],

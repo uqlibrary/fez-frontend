@@ -978,7 +978,7 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
               ],
               "results": Array [
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
               ],
@@ -10454,7 +10454,7 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
               ],
               "results": Array [
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
               ],

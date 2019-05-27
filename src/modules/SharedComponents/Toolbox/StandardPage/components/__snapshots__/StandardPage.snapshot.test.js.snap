@@ -65,7 +65,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
         ],
         "results": Array [
           Object {
-            "isThrow": false,
+            "type": "return",
             "value": Immutable.Map {},
           },
         ],
@@ -550,7 +550,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
               ],
               "results": Array [
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
               ],

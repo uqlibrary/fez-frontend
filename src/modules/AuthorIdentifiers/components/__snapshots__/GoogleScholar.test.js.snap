@@ -328,7 +328,7 @@ exports[`Component GoogleScholar  should handle keyboard form submit event 1`] =
         ],
         "results": Array [
           Object {
-            "isThrow": false,
+            "type": "return",
             "value": Immutable.Map {},
           },
         ],
@@ -813,7 +813,7 @@ exports[`Component GoogleScholar  should handle keyboard form submit event 1`] =
               ],
               "results": Array [
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
               ],

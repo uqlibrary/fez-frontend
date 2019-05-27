@@ -4,7 +4,7 @@ import React from 'react';
 import Enzyme, { shallow, render, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import toJson from 'enzyme-to-json';
-import 'babel-polyfill';
+import '@babel/polyfill';
 
 import {Provider} from 'react-redux';
 import Immutable from 'immutable';
