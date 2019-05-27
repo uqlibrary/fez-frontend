@@ -636,7 +636,7 @@ export const DATA_COLLECTION_CREATOR_ROLES = [
     {value: 'Technician'}
 ];
 
-export const CLOSED_ACCESS_ID = 453619;
+export const OPEN_ACCESS_ID = 453619;
 export const MEDIATED_ACCESS_ID = 453618;
 export const licenses = [
     {

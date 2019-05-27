@@ -540,7 +540,7 @@ exports[`Facet filter nested list item  should render inactive filter view 1`] =
               ],
               "results": Array [
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
               ],

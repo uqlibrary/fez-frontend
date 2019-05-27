@@ -55,11 +55,11 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
         ],
         "results": Array [
           Object {
-            "isThrow": false,
+            "type": "return",
             "value": Immutable.Map {},
           },
           Object {
-            "isThrow": false,
+            "type": "return",
             "value": Immutable.Map {},
           },
         ],
@@ -72,7 +72,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
         ],
         "results": Array [
           Object {
-            "isThrow": false,
+            "type": "return",
             "value": undefined,
           },
         ],
@@ -556,7 +556,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
               ],
               "results": Array [
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
               ],
@@ -2631,11 +2631,11 @@ exports[`UnpublishedStatusField component should render error message from redux
         ],
         "results": Array [
           Object {
-            "isThrow": false,
+            "type": "return",
             "value": Immutable.Map {},
           },
           Object {
-            "isThrow": false,
+            "type": "return",
             "value": Immutable.Map {},
           },
         ],
@@ -2648,7 +2648,7 @@ exports[`UnpublishedStatusField component should render error message from redux
         ],
         "results": Array [
           Object {
-            "isThrow": false,
+            "type": "return",
             "value": undefined,
           },
         ],
@@ -3144,15 +3144,15 @@ exports[`UnpublishedStatusField component should render error message from redux
               ],
               "results": Array [
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
               ],
@@ -5278,11 +5278,11 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
         ],
         "results": Array [
           Object {
-            "isThrow": false,
+            "type": "return",
             "value": Immutable.Map {},
           },
           Object {
-            "isThrow": false,
+            "type": "return",
             "value": Immutable.Map {},
           },
         ],
@@ -5295,7 +5295,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
         ],
         "results": Array [
           Object {
-            "isThrow": false,
+            "type": "return",
             "value": undefined,
           },
         ],
@@ -5797,19 +5797,19 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
               ],
               "results": Array [
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
               ],
@@ -7886,11 +7886,11 @@ exports[`UnpublishedStatusField component should render with value selected from
         ],
         "results": Array [
           Object {
-            "isThrow": false,
+            "type": "return",
             "value": Immutable.Map {},
           },
           Object {
-            "isThrow": false,
+            "type": "return",
             "value": Immutable.Map {},
           },
         ],
@@ -7903,7 +7903,7 @@ exports[`UnpublishedStatusField component should render with value selected from
         ],
         "results": Array [
           Object {
-            "isThrow": false,
+            "type": "return",
             "value": undefined,
           },
         ],
@@ -8393,11 +8393,11 @@ exports[`UnpublishedStatusField component should render with value selected from
               ],
               "results": Array [
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
               ],
