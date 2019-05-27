@@ -486,7 +486,7 @@ exports[`Dashboard Rsearcher IDs test Full mount render to test withStyles/Theme
               ],
               "results": Array [
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
               ],

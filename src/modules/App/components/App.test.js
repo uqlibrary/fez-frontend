@@ -371,7 +371,7 @@ describe('Application component', () => {
         expect(testMethod).toHaveBeenCalled();
     });
 
-    it('should determine if it has incomplete works from props and show/hide menu item', () => {
+    it('should determine if it has incomplete works from props and hide menu item', () => {
         const wrapper = setup({
             account: {name: 'test1'},
             accountLoading: false,
@@ -383,6 +383,24 @@ describe('Application component', () => {
                 publicationsListPagingData: {
                     total: 10
                 }
+            }
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should determine if it has incomplete works from props and show menu item', () => {
+        const wrapper = setup({
+            account: {name: 'test1'},
+            accountLoading: false,
+            actions: {
+                loadCurrentAccount: jest.fn(),
+                searchAuthorIncompletePublications: jest.fn()
+            },
+            incompleteRecordList: {
+                publicationsListPagingData: {
+                    total: 10
+                },
+                publicationsListType: 'incomplete'
             }
         });
         expect(toJson(wrapper)).toMatchSnapshot();

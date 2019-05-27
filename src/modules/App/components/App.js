@@ -194,7 +194,12 @@ export class AppClass extends PureComponent {
         const isHdrStudent = !isAuthorLoading && !!this.props.account && !!this.props.author
             && this.props.account.class.indexOf('IS_CURRENT') >= 0
             && this.props.account.class.indexOf('IS_UQ_STUDENT_PLACEMENT') >= 0;
-        const hasIncompleteWorks = !!(this.props.incompleteRecordList && this.props.incompleteRecordList.publicationsListPagingData && this.props.incompleteRecordList.publicationsListPagingData.total > 0);
+        const hasIncompleteWorks = !!(
+            this.props.incompleteRecordList &&
+            this.props.incompleteRecordList.publicationsListPagingData &&
+            this.props.incompleteRecordList.publicationsListPagingData.total > 0 &&
+            this.props.incompleteRecordList.publicationsListType === 'incomplete'
+        );
         const getMenuItems = () => {
             let menuItems = routes.getMenuConfig(this.props.account, isOrcidRequired && isHdrStudent);
             // Filter out the incomplete menu item if there are none
