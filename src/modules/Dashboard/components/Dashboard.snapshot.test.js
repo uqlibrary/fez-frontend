@@ -341,7 +341,8 @@ describe('Dashboard test', () => {
                     "to": 3,
                     "data": [1,2],
                     "filters": {}
-                }
+                },
+                publicationsListType: 'incomplete'
             },
             authorDetails: mock.authorDetails.uqresearcher,
         });
@@ -360,7 +361,8 @@ describe('Dashboard test', () => {
                     "to": 1,
                     "data": [1],
                     "filters": {}
-                }
+                },
+                publicationsListType: 'incomplete'
             },
             authorDetails: mock.authorDetails.uqresearcher,
         });

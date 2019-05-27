@@ -177,9 +177,10 @@ export class DashboardClass extends PureComponent {
                             {
                                 !!txt.incompleteRecordLure &&
                                 !this.props.loadingIncompleteRecordData &&
-                                !!this.props.incompleteRecordList
-                                && this.props.incompleteRecordList.publicationsListPagingData
-                                && this.props.incompleteRecordList.publicationsListPagingData.total > 0 &&
+                                !!this.props.incompleteRecordList &&
+                                this.props.incompleteRecordList.publicationsListPagingData &&
+                                this.props.incompleteRecordList.publicationsListPagingData.total > 0 &&
+                                this.props.incompleteRecordList.publicationsListType === 'incomplete' &&
                                 <Grid item xs={12} style={{marginTop: -27}}>
                                     <Alert
                                         title={txt.incompleteRecordLure.title}

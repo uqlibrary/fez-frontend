@@ -12,14 +12,11 @@ const mapStateToProps = (state) => {
     const loadingIncompleteRecordData = state.get('publicationsReducer').loadingPublicationsList &&
         state.get('publicationsReducer').publicationsListType === 'incomplete';
 
-    const incompleteRecordList = (state.get('publicationsReducer').publicationsListType === 'incomplete') &&
-        state.get('publicationsReducer').publicationsList || [];
-
     return {
         ...state.get('accountReducer'),
         ...state.get('academicStatsReducer'),
         ...state.get('appReducer'),
-        incompleteRecordList,
+        incompleteRecordList: state.get('publicationsReducer'),
         loadingIncompleteRecordData,
         showLatestPublicationsTab: loadingLatestPublications || latestPublicationsList.length > 0,
         showTrendingPublicationsTab: loadingTrendingPublications || trendingPublicationsList.length > 0,
