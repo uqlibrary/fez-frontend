@@ -5,7 +5,7 @@ import * as actions from 'actions';
 
 const mapStateToProps = (state) => ({
     ...state.get('accountReducer'),
-    incompleteRecordList: {...state.get('publicationsReducer')},
+    incompleteRecordList: state.get('publicationsReducer'),
     loadingIncompleteRecordData: state.get('publicationsReducer').loadingPublicationsList,
 });
 

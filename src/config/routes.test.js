@@ -26,27 +26,27 @@ describe('Routes method', () => {
 
     it('should return a list of routes for anon user', () => {
         const testRoutes = routes.getRoutesConfig({components: {}, account: null});
-        expect(testRoutes.length).toEqual(6);
+        expect(testRoutes.length).toEqual(7);
     });
 
     it('should return a list of routes for researcher', () => {
         const testRoutes = routes.getRoutesConfig({components: {}, account: accounts.uqresearcher});
-        expect(testRoutes.length).toEqual(22);
+        expect(testRoutes.length).toEqual(23);
     });
 
     it('should return a list of routes for user who can masquerade', () => {
         const testRoutes = routes.getRoutesConfig({components: {}, account: accounts.uqstaff});
-        expect(testRoutes.length).toEqual(25);
+        expect(testRoutes.length).toEqual(26);
     });
 
     it('should return a list of routes for hdr student without ORCID', () => {
         const testRoutes = routes.getRoutesConfig({components: {}, account: accounts.s2222222, forceOrcidRegistration: true, isHdrStudent: true});
-        expect(testRoutes.length).toEqual(7);
+        expect(testRoutes.length).toEqual(8);
     });
 
     it('should return a list of routes for hdr student with ORCID', () => {
         const testRoutes = routes.getRoutesConfig({components: {}, account: accounts.s2222222, forceOrcidRegistration: false, isHdrStudent: true});
-        expect(testRoutes.length).toEqual(22);
+        expect(testRoutes.length).toEqual(23);
     });
 
     it('should render auth required page', () => {

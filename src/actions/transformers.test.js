@@ -1558,10 +1558,10 @@ describe('getNtroMetadataSearchKeys tests', () => {
                 "rek_creator_contribution_statement": 'test impact statement',
                 "rek_creator_contribution_statement_order": 1
             }, {
-                "rek_creator_contribution_statement": undefined,
+                "rek_creator_contribution_statement": 'Missing',
                 "rek_creator_contribution_statement_order": 2
             }, {
-                "rek_creator_contribution_statement": undefined,
+                "rek_creator_contribution_statement": 'Missing',
                 "rek_creator_contribution_statement_order": 3
             }],
             "fez_record_search_key_significance": [{

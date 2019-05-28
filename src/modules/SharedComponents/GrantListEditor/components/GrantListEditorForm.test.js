@@ -11,6 +11,7 @@ function setup(testProps, isShallow = true){
         hideType: false,
         classes: {},
         theme: {},
+        isPopulated: testProps.isPopulated || undefined,
         ...testProps,
     };
     return getElement(GrantListEditorFormClass, props, isShallow);
@@ -60,10 +61,12 @@ describe('GrantListEditorForm', () => {
         expect(wrapper.find('WithStyles(FormHelperText)').length).toEqual(1);
     });
 
-    it('should add grant', () => {
+    it('should add grant and pass isPopulated info', () => {
         const onAddFn = jest.fn();
+        const isPopulated = jest.fn();
         const wrapper = setup({
-            onAdd: onAddFn
+            onAdd: onAddFn,
+            isPopulated: isPopulated
         });
 
         wrapper.setState({
@@ -86,6 +89,38 @@ describe('GrantListEditorForm', () => {
             grantId: '',
             grantAgencyType: ''
         });
+        expect(isPopulated).toHaveBeenCalled();
+    });
+
+    it('should add grant and not pass isPopulated info', () => {
+        const onAddFn = jest.fn();
+        const isPopulated = jest.fn();
+        const wrapper = setup({
+            onAdd: onAddFn,
+            isPopulated: null
+        });
+
+        wrapper.setState({
+            grantAgencyName: 'test',
+            grantId: '123',
+            grantAgencyType: 'Government'
+        });
+
+        const setState = jest.spyOn(wrapper.instance(), 'setState');
+        wrapper.instance()._addGrant({key: 'Enter'});
+
+        expect(onAddFn).toHaveBeenCalledWith({
+            grantAgencyName: 'test',
+            grantId: '123',
+            grantAgencyType: 'Government'
+        });
+
+        expect(setState).toHaveBeenCalledWith({
+            grantAgencyName: '',
+            grantId: '',
+            grantAgencyType: ''
+        });
+        expect(isPopulated).not.toHaveBeenCalled();
     });
 
     it('should not add grant if form has value but Enter key is not pressed', () => {
@@ -140,23 +175,43 @@ describe('GrantListEditorForm', () => {
     });
 
     it('should set correct state on name changed', () => {
-        const wrapper = setup({});
+        const isPopulated = jest.fn();
+        const wrapper = setup({isPopulated: isPopulated});
         const setState = jest.spyOn(wrapper.instance(), 'setState');
         wrapper.instance()._onNameChanged({target: {value: 'test'}});
-        expect(setState).toHaveBeenCalledWith({grantAgencyName: 'test'});
+        expect(setState).toHaveBeenCalled();
+        expect(isPopulated).toHaveBeenCalledWith(true);
     });
 
     it('should set correct state on id changed', () => {
-        const wrapper = setup({});
+        const isPopulated = jest.fn();
+        const wrapper = setup({isPopulated: isPopulated});
         const setState = jest.spyOn(wrapper.instance(), 'setState');
         wrapper.instance()._onIDChanged({target: {value: 'test'}});
-        expect(setState).toHaveBeenCalledWith({grantId: 'test'});
+        expect(setState).toHaveBeenCalled();
+        expect(isPopulated).toHaveBeenCalled();
     });
 
     it('should set correct state on type changed', () => {
-        const wrapper = setup({});
+        const wrapper = setup({isPopulated: jest.fn()});
         const setState = jest.spyOn(wrapper.instance(), 'setState');
         wrapper.instance()._onTypeChanged({target: {value: 'test'}});
-        expect(setState).toHaveBeenCalledWith({grantAgencyType: 'test'});
+        expect(setState).toHaveBeenCalled();
+    });
+
+    it('should set correct name on type changed without isPopulated function', () => {
+        const isPopulated = null;
+        const wrapper = setup({isPopulated: isPopulated});
+        const setState = jest.spyOn(wrapper.instance(), 'setState');
+        wrapper.instance()._onNameChanged({target: {value: 'test'}});
+        expect(setState).toHaveBeenCalled();
+    });
+
+    it('should set correct id on change without isPopulated function', () => {
+        const isPopulated = null;
+        const wrapper = setup({isPopulated: isPopulated});
+        const setState = jest.spyOn(wrapper.instance(), 'setState');
+        wrapper.instance()._onIDChanged({target: {value: 'test'}});
+        expect(setState).toHaveBeenCalled();
     });
 });

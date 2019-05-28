@@ -39,6 +39,7 @@ export const pathConfig = {
         claim: '/records/claim',
         search: '/records/search',
         view: (pid, includeFullPath = false) => (`${includeFullPath ? fullPath : ''}/view/${pid}`),
+        view_new: (pid, includeFullPath = false) => (`${includeFullPath ? fullPath : ''}/view_new/${pid}`), //  temporary for MM to view pids without being redirected to legacy
         fix: (pid) => (`/records/${pid}/fix`),
         add: {
             find: '/records/add/find',
@@ -145,6 +146,13 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
             exact: true,
             pageTitle: locale.pages.viewRecord.title,
             regExPath: pathConfig.records.view(`(${pidRegExp})`)
+        },
+        {
+            path: pathConfig.records.view_new(pid),
+            component: components.ViewRecord,
+            exact: true,
+            pageTitle: locale.pages.viewRecord.title,
+            regExPath: pathConfig.records.view_new(`(${pidRegExp})`)
         },
         {
             path: pathConfig.records.search,
@@ -319,9 +327,7 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
                 exact: true,
                 access: [roles.admin],
                 pageTitle: locale.pages.unpublished.title
-            }
-        ] : []),
-        ...(account && account.canMasquerade ? [ // this should check if the user is an admin
+            },
             {
                 path: pathConfig.admin.thirdPartyTools,
                 component: components.ThirdPartyLookupTool,
@@ -414,10 +420,6 @@ export const getMenuConfig = (account, disabled) => {
                 linkTo: pathConfig.dataset.mine,
                 ...locale.menu.myDatasets
             },
-            // {
-            //     linkTo: pathConfig.dataset.legacy,
-            //     ...locale.menu.addDataset
-            // },
             {
                 linkTo: pathConfig.dataset.add,
                 ...locale.menu.addMissingDataset

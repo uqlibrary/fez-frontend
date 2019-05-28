@@ -486,7 +486,7 @@ exports[`Publication Details Component  Renders full mount 1`] = `
               ],
               "results": Array [
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
               ],
