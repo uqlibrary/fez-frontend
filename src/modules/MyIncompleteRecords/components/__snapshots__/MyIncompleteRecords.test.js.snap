@@ -732,7 +732,6 @@ exports[`MyIncompleteRecords test renders loading screen while loading publicati
               onPageSizeChanged={[Function]}
               onSortByChanged={[Function]}
               pageSize={20}
-              pagingData={Object {}}
               sortBy="published_date"
               sortDirection="Desc"
             />
@@ -745,7 +744,6 @@ exports[`MyIncompleteRecords test renders loading screen while loading publicati
               disabled={true}
               loading={true}
               onPageChanged={[Function]}
-              pagingData={Object {}}
             />
           </WithStyles(Grid)>
           <WithStyles(Grid)
@@ -768,7 +766,6 @@ exports[`MyIncompleteRecords test renders loading screen while loading publicati
               disabled={true}
               loading={true}
               onPageChanged={[Function]}
-              pagingData={Object {}}
             />
           </WithStyles(Grid)>
         </WithStyles(Grid)>

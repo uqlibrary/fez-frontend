@@ -21,12 +21,18 @@ function setup(testProps, isShallow = true) {
         actions: {
             countPossiblyYourPublications: jest.fn(),
             loadAuthorPublicationsStats: jest.fn(),
-            loadIncompleteRecords: jest.fn(),
+            searchAuthorPublications: jest.fn()
         },
         loadingIncompleteRecordData: false,
-        incompleteRecordList: {},
         history: {},
         ...testProps,
+        incomplete: {
+            publicationsListPagingData: {},
+            loadingPublicationsList: false,
+            publicationsList: [],
+            publicationsListFacets: {},
+            ...testProps.incomplete
+        }
     };
     return getElement(DashboardClass, props, isShallow);
 }
@@ -322,7 +328,13 @@ describe('Dashboard test', () => {
             actions: {
                 countPossiblyYourPublications: jest.fn(),
                 loadAuthorPublicationsStats: jest.fn(),
-                searchAuthorIncompletePublications: jest.fn()
+                searchAuthorPublications: jest.fn()
+            },
+            incomplete: {
+                publicationsListPagingData: {},
+                loadingPublicationsList: false,
+                publicationsList: [],
+                publicationsListFacets: {},
             },
             history: {},
         }, false);
@@ -331,7 +343,7 @@ describe('Dashboard test', () => {
 
     it ('displays a lure when the user has incomplete NTRO submissions', () => {
         const wrapper = setup({
-            incompleteRecordList: {
+            incomplete: {
                 publicationsListPagingData: {
                     "total": 2,
                     "took": 30,
@@ -341,8 +353,7 @@ describe('Dashboard test', () => {
                     "to": 3,
                     "data": [1,2],
                     "filters": {}
-                },
-                publicationsListType: 'incomplete'
+                }
             },
             authorDetails: mock.authorDetails.uqresearcher,
         });
@@ -351,7 +362,7 @@ describe('Dashboard test', () => {
 
     it ('displays a lure to a single work when the user has incomplete NTRO submissions', () => {
         const wrapper = setup({
-            incompleteRecordList: {
+            incomplete: {
                 publicationsListPagingData: {
                     "total": 1,
                     "took": 30,
@@ -361,8 +372,7 @@ describe('Dashboard test', () => {
                     "to": 1,
                     "data": [1],
                     "filters": {}
-                },
-                publicationsListType: 'incomplete'
+                }
             },
             authorDetails: mock.authorDetails.uqresearcher,
         });
@@ -374,7 +384,6 @@ describe('Dashboard test', () => {
         const wrapper = setup({history: {push: testFn}});
         wrapper.instance().redirectToIncompleteRecordlist();
         expect(testFn).toBeCalledWith('/records/incomplete');
-
     });
 
 });

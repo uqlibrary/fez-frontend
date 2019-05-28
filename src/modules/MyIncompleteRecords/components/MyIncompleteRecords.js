@@ -17,11 +17,12 @@ import Hidden from '@material-ui/core/Hidden';
 
 export default class MyIncompleteRecords extends PureComponent {
     static propTypes = {
-        publicationsList: PropTypes.array,
-        publicationsListType: PropTypes.string,
-        publicationsListFacets: PropTypes.object,
-        loadingPublicationsList: PropTypes.bool,
-        publicationsListPagingData: PropTypes.object,
+        incomplete: PropTypes.shape({
+            publicationsList: PropTypes.array,
+            publicationsListFacets: PropTypes.object,
+            loadingPublicationsList: PropTypes.bool,
+            publicationsListPagingData: PropTypes.object,
+        }),
         exportPublicationsLoading: PropTypes.bool,
 
         initialFacets: PropTypes.object,
@@ -53,17 +54,14 @@ export default class MyIncompleteRecords extends PureComponent {
         this.state = {
             // check if user has publications, once true always true
             // facets filtering might return no results, but facets should still be visible
-            hasPublications: !props.loadingPublicationsList && props.publicationsList.length > 0,
+            hasPublications: !props.incomplete.loadingPublicationsList && props.incomplete.publicationsList.length > 0,
             ...(!!props.location.state ? props.location.state : this.initState)
         };
     }
 
     componentDidMount() {
-        if (!this.props.accountLoading && (
-            !this.props.publicationsList ||
-            this.props.publicationsList !== 'incomplete'
-        )) {
-            this.props.actions.searchAuthorIncompletePublications({ ...this.state });
+        if (!this.props.accountLoading && !this.props.incomplete.publicationsList.length) {
+            this.props.actions.searchAuthorPublications({ ...this.state }, 'incomplete');
         }
     }
 
@@ -78,12 +76,12 @@ export default class MyIncompleteRecords extends PureComponent {
                     : this.initState
             )}, () => {
                 // only will be called when user clicks back on my records page
-                this.props.actions.searchAuthorIncompletePublications({ ...this.state });
+                this.props.actions.searchAuthorPublications({ ...this.state }, 'incomplete');
             });
         }
         // set forever-true flag if user has publications
-        if (!this.state.hasPublications && !newProps.loadingPublicationsList
-            && !!newProps.publicationsList && newProps.publicationsList.length > 0) {
+        if (!this.state.hasPublications && !newProps.incomplete.loadingPublicationsList
+            && !!newProps.incomplete.publicationsList && newProps.incomplete.publicationsList.length > 0) {
             this.setState({ hasPublications: true });
         }
     }
@@ -129,7 +127,7 @@ export default class MyIncompleteRecords extends PureComponent {
             search: `?ts=${Date.now()}`,
             state: { ...this.state }
         });
-        this.props.actions.searchAuthorIncompletePublications({ ...this.state });
+        this.props.actions.searchAuthorPublications({ ...this.state }, 'incomplete');
     };
 
     completeRecord = (item) => {
@@ -139,8 +137,8 @@ export default class MyIncompleteRecords extends PureComponent {
     render() {
         if (this.props.accountLoading) return null;
         const txt = this.props.localePages;
-        const pagingData = this.props.publicationsListPagingData;
-        const isLoading = this.props.loadingPublicationsList;
+        const pagingData = this.props.incomplete.publicationsListPagingData;
+        const isLoading = this.props.incomplete.loadingPublicationsList;
         const inProgress = [
             {
                 label: 'In progress',
@@ -164,16 +162,16 @@ export default class MyIncompleteRecords extends PureComponent {
                         // first time loading my publications - account hasn't been loaded or
                         // any my publications haven't been loaded
                         !this.state.hasPublications &&
-                        this.props.loadingPublicationsList &&
+                        this.props.incomplete.loadingPublicationsList &&
                         <Grid item xs={12}>
                             <InlineLoader message={txt.loadingMessage} />
                         </Grid>
                     }
                     {
                         // no results to display
-                        !this.props.loadingPublicationsList &&
-                        this.props.publicationsList &&
-                        this.props.publicationsList.length === 0 &&
+                        !this.props.incomplete.loadingPublicationsList &&
+                        this.props.incomplete.publicationsList &&
+                        this.props.incomplete.publicationsList.length === 0 &&
                         <Grid item xs={12}>
                             <StandardCard {...txt.noResultsFound}>
                                 {txt.noResultsFound.text}
@@ -183,8 +181,8 @@ export default class MyIncompleteRecords extends PureComponent {
                     {
                         // results to display or loading if user is filtering/paging
                         this.state.hasPublications && (
-                            this.props.loadingPublicationsList ||
-                            this.props.publicationsList.length > 0
+                            this.props.incomplete.loadingPublicationsList ||
+                            this.props.incomplete.publicationsList.length > 0
                         ) &&
                         <Grid item xs={12} md={9}>
                             <StandardCard noHeader>
@@ -227,18 +225,18 @@ export default class MyIncompleteRecords extends PureComponent {
                                             isLoading &&
                                             <div className="is-centered">
                                                 <InlineLoader message={
-                                                    this.props.loadingPublicationsList &&
+                                                    this.props.incomplete.loadingPublicationsList &&
                                                     txt.loadingPagingMessage
                                                 } />
                                             </div>
                                         }
                                         {
                                             !this.props.exportPublicationsLoading &&
-                                            !this.props.loadingPublicationsList &&
-                                            this.props.publicationsList &&
-                                            this.props.publicationsList.length > 0 &&
+                                            !this.props.incomplete.loadingPublicationsList &&
+                                            this.props.incomplete.publicationsList &&
+                                            this.props.incomplete.publicationsList.length > 0 &&
                                             <PublicationsList
-                                                publicationsList={this.props.publicationsList}
+                                                publicationsList={this.props.incomplete.publicationsList}
                                                 subsetCustomActions={inProgress}
                                                 customActions={actions}
                                             />
@@ -257,14 +255,14 @@ export default class MyIncompleteRecords extends PureComponent {
                     }
                     {
                         // show available filters or selected filters (even if there are no results)
-                        ((this.props.publicationsListFacets && Object.keys(this.props.publicationsListFacets).length > 0)
+                        ((this.props.incomplete.publicationsListFacets && Object.keys(this.props.incomplete.publicationsListFacets).length > 0)
                             || (this.state.activeFacets && this.state.activeFacets.ranges && Object.keys(this.state.activeFacets.ranges).length > 0)
                             || (this.state.activeFacets && !!this.state.activeFacets.showOpenAccessOnly)) &&
                         <Hidden smDown>
                             <Grid item md={3}>
                                 <StandardRighthandCard title={txt.facetsFilter.title} help={txt.facetsFilter.help}>
                                     <FacetsFilter
-                                        facetsData={this.props.publicationsListFacets}
+                                        facetsData={this.props.incomplete.publicationsListFacets}
                                         onFacetsChanged={this.facetsChanged}
                                         activeFacets={this.state.activeFacets}
                                         disabled={isLoading}

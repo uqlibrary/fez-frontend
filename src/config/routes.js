@@ -349,7 +349,7 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
     ];
 };
 
-export const getMenuConfig = (account, disabled) => {
+export const getMenuConfig = (account, disabled, hasIncompleteWorks = false) => {
     const homePage = [
         {
             linkTo: pathConfig.index,
@@ -374,6 +374,13 @@ export const getMenuConfig = (account, disabled) => {
             public: true
         }
     ];
+
+    const incompletePage = hasIncompleteWorks && [
+        {
+            linkTo: pathConfig.records.incomplete,
+            ...locale.menu.incompleteRecords
+        }
+    ] || [];
 
     if (disabled) {
         return [
@@ -408,10 +415,7 @@ export const getMenuConfig = (account, disabled) => {
                 linkTo: pathConfig.records.possible,
                 ...locale.menu.claimPublication
             },
-            {
-                linkTo: pathConfig.records.incomplete,
-                ...locale.menu.incompleteRecords
-            },
+            ...incompletePage,
             {
                 linkTo: pathConfig.records.add.find,
                 ...locale.menu.addMissingRecord

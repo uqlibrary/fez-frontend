@@ -460,7 +460,6 @@ exports[`myDatasets test renders loading screen while loading publications while
               onPageSizeChanged={[Function]}
               onSortByChanged={[Function]}
               pageSize={20}
-              pagingData={Object {}}
               sortBy="published_date"
               sortDirection="Desc"
             />
@@ -473,7 +472,6 @@ exports[`myDatasets test renders loading screen while loading publications while
               disabled={true}
               loading={true}
               onPageChanged={[Function]}
-              pagingData={Object {}}
             />
           </WithStyles(Grid)>
           <WithStyles(Grid)
@@ -496,7 +494,6 @@ exports[`myDatasets test renders loading screen while loading publications while
               disabled={true}
               loading={true}
               onPageChanged={[Function]}
-              pagingData={Object {}}
             />
           </WithStyles(Grid)>
         </WithStyles(Grid)>
