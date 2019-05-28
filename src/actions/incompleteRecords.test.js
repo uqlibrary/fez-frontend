@@ -16,34 +16,6 @@ afterEach(() => {
 });
 
 describe('incompleteRecords actions', () => {
-    it('should call loading/loaded actions on successful load', async () => {
-        mockApi
-            .onGet(repositories.routes.INCOMPLETE_RECORDS_API({}).apiUrl)
-            .reply(200, incompleteRecordList);
-
-        const expectedActions = [
-            actions.AUTHOR_INCOMPLETEPUBLICATIONS_LOADING,
-            actions.AUTHOR_INCOMPLETEPUBLICATIONS_LOADED
-        ];
-
-        await mockActionsStore.dispatch(publications.searchAuthorIncompletePublications({}));
-        expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
-    });
-
-    it('should call loading/load failed actions on failed load', async () => {
-        mockApi
-            .onAny()
-            .reply(404);
-
-        const expectedActions = [
-            actions.AUTHOR_INCOMPLETEPUBLICATIONS_LOADING,
-            actions.AUTHOR_INCOMPLETEPUBLICATIONS_FAILED
-        ];
-
-        await mockActionsStore.dispatch(publications.searchAuthorIncompletePublications({}));
-        expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
-    });
-
     it('should call fixing/fixed actions on successful save', async () => {
         mockApi
             .onPatch(repositories.routes.EXISTING_RECORD_API({ pid: 'UQ:692945' }).apiUrl)
@@ -254,22 +226,6 @@ describe('updateIncompleteRecord actions', () => {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         }
     });
-
-    // it('should call loading/load failed actions on failed load', async () => {
-    //     mockApi
-    //         .onAny()
-    //         .reply(404);
-
-    //     const expectedActions = [
-    //         actions.FIX_RECORD_FAILED
-    //     ];
-
-    //     try {
-    //         await mockActionsStore.dispatch(updateIncompleteRecord({}));
-    //     } catch (e) {
-    //         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
-    //     }
-    // });
 
     it('dispatches updated contributor id', async () => {
         const testInput = {

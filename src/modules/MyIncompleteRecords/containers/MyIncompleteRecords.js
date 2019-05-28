@@ -10,7 +10,7 @@ const mapStateToProps = (state) => {
     return {
         accountLoading: state.get('accountReducer').accountLoading,
         ...state.get('accountReducer'),
-        ...state.get('publicationsReducer'),
+        ...state.get('publicationsReducer').incomplete,
         localePages: locale.pages.incompletePublications,
         thisUrl: routes.pathConfig.records.incomplete,
     };

@@ -704,7 +704,7 @@ exports[`Application component should determine if it has incomplete works from 
   <WithStyles(MenuDrawer)
     docked={false}
     drawerOpen={false}
-    hasIncompleteWorks={false}
+    hasIncompleteWorks={true}
     history={
       Object {
         "location": Object {},
@@ -740,6 +740,10 @@ exports[`Application component should determine if it has incomplete works from 
         Object {
           "linkTo": "/records/possible",
           "primaryText": "Claim possible work",
+        },
+        Object {
+          "linkTo": "/records/incomplete",
+          "primaryText": "My incomplete works",
         },
         Object {
           "linkTo": "/records/add/find",
@@ -11790,7 +11794,6 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                               "loadVocabulariesList": [Function],
                                                               "logout": [Function],
                                                               "resetSavingAuthorState": [Function],
-                                                              "searchAuthorIncompletePublications": [Function],
                                                               "searchAuthorPublications": [Function],
                                                               "searchAuthors": [Function],
                                                               "searchEspacePublications": [Function],
@@ -16941,7 +16944,6 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 "loadVocabulariesList": [Function],
                                 "logout": [Function],
                                 "resetSavingAuthorState": [Function],
-                                "searchAuthorIncompletePublications": [Function],
                                 "searchAuthorPublications": [Function],
                                 "searchAuthors": [Function],
                                 "searchEspacePublications": [Function],
@@ -18576,7 +18578,6 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "loadVocabulariesList": [Function],
                                                                             "logout": [Function],
                                                                             "resetSavingAuthorState": [Function],
-                                                                            "searchAuthorIncompletePublications": [Function],
                                                                             "searchAuthorPublications": [Function],
                                                                             "searchAuthors": [Function],
                                                                             "searchEspacePublications": [Function],
@@ -18685,7 +18686,6 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                               "loadVocabulariesList": [Function],
                                                                               "logout": [Function],
                                                                               "resetSavingAuthorState": [Function],
-                                                                              "searchAuthorIncompletePublications": [Function],
                                                                               "searchAuthorPublications": [Function],
                                                                               "searchAuthors": [Function],
                                                                               "searchEspacePublications": [Function],
@@ -18801,7 +18801,6 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                 "loadVocabulariesList": [Function],
                                                                                 "logout": [Function],
                                                                                 "resetSavingAuthorState": [Function],
-                                                                                "searchAuthorIncompletePublications": [Function],
                                                                                 "searchAuthorPublications": [Function],
                                                                                 "searchAuthors": [Function],
                                                                                 "searchEspacePublications": [Function],
@@ -19336,7 +19335,6 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                   "loadVocabulariesList": [Function],
                                                                                   "logout": [Function],
                                                                                   "resetSavingAuthorState": [Function],
-                                                                                  "searchAuthorIncompletePublications": [Function],
                                                                                   "searchAuthorPublications": [Function],
                                                                                   "searchAuthors": [Function],
                                                                                   "searchEspacePublications": [Function],
@@ -22735,7 +22733,6 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                     "loadVocabulariesList": [Function],
                                                                                     "logout": [Function],
                                                                                     "resetSavingAuthorState": [Function],
-                                                                                    "searchAuthorIncompletePublications": [Function],
                                                                                     "searchAuthorPublications": [Function],
                                                                                     "searchAuthors": [Function],
                                                                                     "searchEspacePublications": [Function],
@@ -22798,7 +22795,6 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "loadVocabulariesList": [Function],
                                                                                       "logout": [Function],
                                                                                       "resetSavingAuthorState": [Function],
-                                                                                      "searchAuthorIncompletePublications": [Function],
                                                                                       "searchAuthorPublications": [Function],
                                                                                       "searchAuthors": [Function],
                                                                                       "searchEspacePublications": [Function],

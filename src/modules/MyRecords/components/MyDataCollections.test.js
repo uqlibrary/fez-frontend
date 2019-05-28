@@ -5,7 +5,7 @@ import {locale} from 'locale';
 function setup(testProps, isShallow = true) {
     const props = {
         actions: {
-            searchAuthorPublications: jest.fn(),
+            loadAuthorPublications: jest.fn(),
             setFixRecord: jest.fn(),
         },
         location: {
@@ -17,12 +17,12 @@ function setup(testProps, isShallow = true) {
             go: jest.fn()
         },
         accountLoading: false,
+        localePages: locale.pages.myDatasets,
         publicationsListPagingData: {},
         loadingPublicationsList: false,
         publicationsList: [],
         publicationsListFacets: {},
-        localePages: locale.pages.myDatasets,
-        ...testProps
+        ...testProps,
     };
     return getElement(myDatasets, props, isShallow);
 }
@@ -40,7 +40,7 @@ describe('myDatasets test', () => {
 
     it('renders loading screen while loading publications while filtering', () => {
         const wrapper = setup({ publicationsList: [1, 2, 2] });
-        wrapper.setProps({loadingPublicationsList: true});
+        wrapper.setProps({ loadingPublicationsList: true });
         wrapper.update();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -95,7 +95,7 @@ describe('myDatasets test', () => {
 
     it('state is updated by sub components', () => {
         const testAction = jest.fn();
-        const wrapper = setup({actions: {searchAuthorPublications: testAction}});
+        const wrapper = setup({actions: {loadAuthorPublications: testAction}});
 
         wrapper.instance().pageSizeChanged(100);
         expect(wrapper.state().pageSize).toEqual(100);
@@ -124,20 +124,24 @@ describe('myDatasets test', () => {
     });
 
     it('sets forever true has publications', () => {
-        const wrapper = setup({loadingPublicationsList: true});
+        const wrapper = setup({ loadingPublicationsList: true, publicationsList: [] });
         expect(wrapper.state().hasPublications).toEqual(false);
 
-        wrapper.instance().componentWillReceiveProps({loadingPublicationsList: false, publicationsList: [1,2,3], history: {}, location: {}});
+        wrapper.instance().componentWillReceiveProps({ loadingPublicationsList: false, publicationsList: [1,2,3], history: {}, location: {}});
         expect(wrapper.state().hasPublications).toEqual(true);
     });
 
     it('gets publications when user clicks back and state is set', () => {
         const testAction = jest.fn();
-        const wrapper = setup({accountLoading: true, actions: {searchAuthorPublications: testAction}, thisUrl: routes.pathConfig.dataset.mine});
+        const wrapper = setup({accountLoading: true, actions: {loadAuthorPublications: testAction}, thisUrl: routes.pathConfig.dataset.mine});
 
         wrapper.instance().componentWillReceiveProps({
             history: {action: 'POP'},
-            location: {pathname: routes.pathConfig.dataset.mine, state: {page: 2, hasPublications: true}}
+            location: {pathname: routes.pathConfig.dataset.mine, state: {page: 2, hasPublications: true}},
+            publicationsListPagingData: {},
+            loadingPublicationsList: false,
+            publicationsList: [],
+            publicationsListFacets: {},
         });
         expect(testAction).toHaveBeenCalled();
         expect(wrapper.state().hasPublications).toEqual(true);
@@ -147,17 +151,24 @@ describe('myDatasets test', () => {
 
     it('gets publications when user clicks back and state is not set', () => {
         const testAction = jest.fn();
-        const wrapper = setup({accountLoading: true, actions: {searchAuthorPublications: testAction}, thisUrl: routes.pathConfig.dataset.mine});
-        wrapper.instance().componentWillReceiveProps({history: { action: 'POP'}, location: {pathname: routes.pathConfig.dataset.mine, state: null}});
+        const wrapper = setup({accountLoading: true, actions: {loadAuthorPublications: testAction}, thisUrl: routes.pathConfig.dataset.mine});
+        wrapper.instance().componentWillReceiveProps({
+            history: { action: 'POP'},
+            location: {pathname: routes.pathConfig.dataset.mine, state: null},
+            publicationsListPagingData: {},
+            loadingPublicationsList: false,
+            publicationsList: [],
+            publicationsListFacets: {},
+        });
         expect(testAction).toHaveBeenCalled();
         expect(wrapper.state().page).toEqual(1);
     });
 
     it('doesn\'t retrieve data from history if user navigates to next page', () => {
         const testAction = jest.fn();
-        const wrapper = setup({accountLoading: true, actions: {searchAuthorPublications: testAction}});
+        const wrapper = setup({accountLoading: true, actions: {loadAuthorPublications: testAction}});
 
-        wrapper.instance().componentWillReceiveProps({history: { action: 'PUSH'}, location: {pathname: routes.pathConfig.dataset.mine}});
+        wrapper.instance().componentWillReceiveProps({history: { action: 'PUSH'}, location: {pathname: routes.pathConfig.dataset.mine}, mine: {}});
         expect(testAction).not.toHaveBeenCalled();
     });
 
