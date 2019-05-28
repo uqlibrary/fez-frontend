@@ -303,15 +303,15 @@ describe('AddDataCollection form', () => {
         expect(submitButton).toHaveAttribute('disabled');
 
         fireEvent.click(getByTestId('deposit-agreement'));
-        fireEvent.change(getByTestId('Dataset name'), {target: {value: 'testing'}});
-        fireEvent.change(getByTestId('Dataset description'), {target: {value: 'testing'}});
-        fireEvent.change(getByTestId('Contact name'), {target: {value: 'testing'}});
+        fireEvent.change(getByTestId('Datasetname'), {target: {value: 'testing'}});
+        fireEvent.change(getByTestId('Datasetdescription'), {target: {value: 'testing'}});
+        fireEvent.change(getByTestId('Contactname'), {target: {value: 'testing'}});
 
         fireEvent.change(getByTestId('downshift-0-input'), {target: {value: 'te'}});
         const contactIdList = await waitForElement(() => getByTestId('downshift-0-menu'), {container});
         fireEvent.select(getByTestId('downshift-0-item-0', contactIdList));
 
-        fireEvent.change(getByTestId('Contact email'), {target: {value: 'testing@test.com'}});
+        fireEvent.change(getByTestId('Contactemail'), {target: {value: 'testing@test.com'}});
         fireEvent.change(getByTestId('year'), {target: {value: '2018'}});
 
         fireEvent.change(getByTestId('downshift-1-input'), {target: {value: 'Math'}});
@@ -333,17 +333,17 @@ describe('AddDataCollection form', () => {
         waitForElement(() => getByTestId('menu-'));
         fireEvent.click(getByText(/Creative Commons Attribution \(only\) http:\/\/creativecommons.org\/licenses\/by\/3.0\/deed.en_US/i));
 
-        fireEvent.change(getByTestId('Project name'), {target: {value: 'test project'}});
-        fireEvent.change(getByTestId('Project description'), {target: {value: 'test description'}});
+        fireEvent.change(getByTestId('Projectname'), {target: {value: 'test project'}});
+        fireEvent.change(getByTestId('Projectdescription'), {target: {value: 'test description'}});
 
         expect(submitButton).not.toHaveAttribute('disabled');
 
-        fireEvent.change(getByTestId('Contact email'), {target: {value: 'testing'}});
+        fireEvent.change(getByTestId('Contactemail'), {target: {value: 'testing'}});
         expect(container).toHaveTextContent(/email address is not valid/i);
         expect(container).toHaveTextContent(/contact email is required/i);
         expect(submitButton).toHaveAttribute('disabled');
 
-        fireEvent.change(getByTestId('Contact email'), {target: {value: 'testing@test.com'}});
+        fireEvent.change(getByTestId('Contactemail'), {target: {value: 'testing@test.com'}});
         expect(container).not.toHaveTextContent(/email address is not valid/i);
         expect(container).not.toHaveTextContent(/contact email is required/i);
         expect(submitButton).not.toHaveAttribute('disabled');

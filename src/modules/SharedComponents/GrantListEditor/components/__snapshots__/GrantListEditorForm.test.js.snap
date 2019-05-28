@@ -894,7 +894,6 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                 value=""
                               >
                                 <TextField
-                                  InputLabelProps="{[object Object]"
                                   autoComplete="off"
                                   classes={Object {}}
                                   disabled={false}
@@ -1231,7 +1230,6 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                 value=""
                               >
                                 <TextField
-                                  InputLabelProps="{[object Object]"
                                   classes={Object {}}
                                   disabled={true}
                                   error={false}
@@ -3774,7 +3772,6 @@ exports[`GrantListEditorForm should render default view 2`] = `
                             value=""
                           >
                             <TextField
-                              InputLabelProps="{[object Object]"
                               autoComplete="off"
                               classes={Object {}}
                               disabled={false}
@@ -4111,7 +4108,6 @@ exports[`GrantListEditorForm should render default view 2`] = `
                             value=""
                           >
                             <TextField
-                              InputLabelProps="{[object Object]"
                               classes={Object {}}
                               disabled={true}
                               error={false}

@@ -2710,7 +2710,6 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                   value=""
                                 >
                                   <TextField
-                                    InputLabelProps="{[object Object]"
                                     autoComplete="off"
                                     classes={Object {}}
                                     disabled={true}
@@ -2758,41 +2757,9 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                           onKeyDown={[Function]}
                                         >
                                           <WithStyles(InputLabel)
-                                            0="{"
-                                            1="["
-                                            10="b"
-                                            11="j"
-                                            12="e"
-                                            13="c"
-                                            14="t"
-                                            15="]"
-                                            2="o"
-                                            3="b"
-                                            4="j"
-                                            5="e"
-                                            6="c"
-                                            7="t"
-                                            8=" "
-                                            9="O"
                                             htmlFor="nameAsPublishedField"
                                           >
                                             <InputLabel
-                                              0="{"
-                                              1="["
-                                              10="b"
-                                              11="j"
-                                              12="e"
-                                              13="c"
-                                              14="t"
-                                              15="]"
-                                              2="o"
-                                              3="b"
-                                              4="j"
-                                              5="e"
-                                              6="c"
-                                              7="t"
-                                              8=" "
-                                              9="O"
                                               classes={
                                                 Object {
                                                   "animated": "MuiInputLabel-animated-106",
@@ -2808,43 +2775,11 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                               htmlFor="nameAsPublishedField"
                                             >
                                               <WithStyles(FormLabel)
-                                                0="{"
-                                                1="["
-                                                10="b"
-                                                11="j"
-                                                12="e"
-                                                13="c"
-                                                14="t"
-                                                15="]"
-                                                2="o"
-                                                3="b"
-                                                4="j"
-                                                5="e"
-                                                6="c"
-                                                7="t"
-                                                8=" "
-                                                9="O"
                                                 className="MuiInputLabel-root-102 MuiInputLabel-formControl-103 MuiInputLabel-animated-106"
                                                 data-shrink={false}
                                                 htmlFor="nameAsPublishedField"
                                               >
                                                 <FormLabel
-                                                  0="{"
-                                                  1="["
-                                                  10="b"
-                                                  11="j"
-                                                  12="e"
-                                                  13="c"
-                                                  14="t"
-                                                  15="]"
-                                                  2="o"
-                                                  3="b"
-                                                  4="j"
-                                                  5="e"
-                                                  6="c"
-                                                  7="t"
-                                                  8=" "
-                                                  9="O"
                                                   className="MuiInputLabel-root-102 MuiInputLabel-formControl-103 MuiInputLabel-animated-106"
                                                   classes={
                                                     Object {
@@ -2862,22 +2797,6 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                   htmlFor="nameAsPublishedField"
                                                 >
                                                   <label
-                                                    0="{"
-                                                    1="["
-                                                    10="b"
-                                                    11="j"
-                                                    12="e"
-                                                    13="c"
-                                                    14="t"
-                                                    15="]"
-                                                    2="o"
-                                                    3="b"
-                                                    4="j"
-                                                    5="e"
-                                                    6="c"
-                                                    7="t"
-                                                    8=" "
-                                                    9="O"
                                                     className="MuiFormLabel-root-109 MuiFormLabel-disabled-111 MuiInputLabel-root-102 MuiInputLabel-formControl-103 MuiInputLabel-animated-106"
                                                     data-shrink={false}
                                                     htmlFor="nameAsPublishedField"

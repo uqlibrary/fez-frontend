@@ -50,7 +50,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-12-57\\"
                     >
                       <div
--                       aria-describedby=\\"Dataset name-helper-text\\"
+-                       aria-describedby=\\"Datasetname-helper-text\\"
                         class=\\"MuiFormControl-root-231 MuiFormControl-fullWidth-234\\"
                       >
                         <label
@@ -58,7 +58,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 -                         data-shrink=\\"false\\"
 +                         class=\\"MuiFormLabel-root-242 MuiFormLabel-filled-246 MuiFormLabel-required-247 MuiInputLabel-root-235 MuiInputLabel-formControl-236 MuiInputLabel-animated-239 MuiInputLabel-shrink-238\\"
 +                         data-shrink=\\"true\\"
-                          for=\\"Dataset name\\"
+                          for=\\"Datasetname\\"
                         >
                           Dataset name
                           <span
@@ -76,7 +76,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 -                           aria-invalid=\\"true\\"
 +                           aria-invalid=\\"false\\"
                             class=\\"MuiInputBase-input-272 MuiInput-input-257 MuiInputBase-inputMultiline-274 MuiInput-inputMultiline-259\\"
-                            id=\\"Dataset name\\"
+                            id=\\"Datasetname\\"
                             name=\\"rek_title\\"
                             placeholder=\\"Type the descriptive name for the dataset\\"
                             required=\\"\\"
@@ -85,7 +85,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 -                       </div>
 -                       <p
 -                         class=\\"MuiFormHelperText-root-360 MuiFormHelperText-error-361 MuiFormHelperText-required-367\\"
--                         id=\\"Dataset name-helper-text\\"
+-                         id=\\"Datasetname-helper-text\\"
                           >
 -                         This field is required
 -                       </p>
@@ -98,7 +98,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-12-57\\"
                     >
                       <div
--                       aria-describedby=\\"Dataset description-helper-text\\"
+-                       aria-describedby=\\"Datasetdescription-helper-text\\"
                         class=\\"MuiFormControl-root-231 MuiFormControl-fullWidth-234\\"
                       >
                         <label
@@ -106,7 +106,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 -                         data-shrink=\\"false\\"
 +                         class=\\"MuiFormLabel-root-242 MuiFormLabel-filled-246 MuiFormLabel-required-247 MuiInputLabel-root-235 MuiInputLabel-formControl-236 MuiInputLabel-animated-239 MuiInputLabel-shrink-238\\"
 +                         data-shrink=\\"true\\"
-                          for=\\"Dataset description\\"
+                          for=\\"Datasetdescription\\"
                         >
                           Dataset description
                           <span
@@ -124,7 +124,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 -                           aria-invalid=\\"true\\"
 +                           aria-invalid=\\"false\\"
                             class=\\"MuiInputBase-input-272 MuiInput-input-257 MuiInputBase-inputMultiline-274 MuiInput-inputMultiline-259\\"
-                            id=\\"Dataset description\\"
+                            id=\\"Datasetdescription\\"
                             name=\\"rek_description\\"
                             placeholder=\\"Describe the dataset's topic(s) and theme(s)\\"
                             required=\\"\\"
@@ -133,7 +133,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 -                       </div>
 -                       <p
 -                         class=\\"MuiFormHelperText-root-360 MuiFormHelperText-error-361 MuiFormHelperText-required-367\\"
--                         id=\\"Dataset description-helper-text\\"
+-                         id=\\"Datasetdescription-helper-text\\"
                           >
 -                         This field is required
 -                       </p>
@@ -146,7 +146,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-6-51\\"
                     >
                       <div
--                       aria-describedby=\\"Contact name-helper-text\\"
+-                       aria-describedby=\\"Contactname-helper-text\\"
                         class=\\"MuiFormControl-root-231 MuiFormControl-fullWidth-234\\"
                       >
                         <label
@@ -154,7 +154,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 -                         data-shrink=\\"false\\"
 +                         class=\\"MuiFormLabel-root-242 MuiFormLabel-filled-246 MuiFormLabel-required-247 MuiInputLabel-root-235 MuiInputLabel-formControl-236 MuiInputLabel-animated-239 MuiInputLabel-shrink-238\\"
 +                         data-shrink=\\"true\\"
-                          for=\\"Contact name\\"
+                          for=\\"Contactname\\"
                         >
                           Contact name
                           <span
@@ -172,7 +172,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 -                           aria-invalid=\\"true\\"
 +                           aria-invalid=\\"false\\"
                             class=\\"MuiInputBase-input-272 MuiInput-input-257\\"
-                            id=\\"Contact name\\"
+                            id=\\"Contactname\\"
                             name=\\"contact.contactName\\"
                             placeholder=\\"Type the name of primary contact for this dataset\\"
                             required=\\"\\"
@@ -183,7 +183,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
                         </div>
 -                       <p
 -                         class=\\"MuiFormHelperText-root-360 MuiFormHelperText-error-361 MuiFormHelperText-required-367\\"
--                         id=\\"Contact name-helper-text\\"
+-                         id=\\"Contactname-helper-text\\"
 -                       >
 -                         This field is required
 -                       </p>
@@ -211,7 +211,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
                               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31\\"
                             >
                               <div
--                               aria-describedby=\\"Contact name ID-helper-text\\"
+-                               aria-describedby=\\"ContactnameID-helper-text\\"
                                 class=\\"MuiFormControl-root-231 MuiFormControl-fullWidth-234\\"
                               >
                                 <label
@@ -219,7 +219,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 -                                 data-shrink=\\"false\\"
 +                                 class=\\"MuiFormLabel-root-242 MuiFormLabel-filled-246 MuiInputLabel-root-235 MuiInputLabel-formControl-236 MuiInputLabel-animated-239 MuiInputLabel-shrink-238\\"
 +                                 data-shrink=\\"true\\"
-                                  for=\\"Contact name ID\\"
+                                  for=\\"ContactnameID\\"
                                 >
                                   Contact name ID
                                 </label>
@@ -329,7 +329,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 +                                   </span>
                                     <p
 -                                 class=\\"MuiFormHelperText-root-360 MuiFormHelperText-error-361\\"
--                                 id=\\"Contact name ID-helper-text\\"
+-                                 id=\\"ContactnameID-helper-text\\"
 +                                     class=\\"MuiTypography-root-152 MuiTypography-body2-160 MuiTypography-colorTextSecondary-185 MuiListItemText-secondary-399\\"
                                     >
 -                                 This field is required
@@ -376,7 +376,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-12-57\\"
                     >
                       <div
--                       aria-describedby=\\"Contact email-helper-text\\"
+-                       aria-describedby=\\"Contactemail-helper-text\\"
                         class=\\"MuiFormControl-root-231 MuiFormControl-fullWidth-234\\"
                       >
                         <label
@@ -384,7 +384,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 -                         data-shrink=\\"false\\"
 +                         class=\\"MuiFormLabel-root-242 MuiFormLabel-filled-246 MuiFormLabel-required-247 MuiInputLabel-root-235 MuiInputLabel-formControl-236 MuiInputLabel-animated-239 MuiInputLabel-shrink-238\\"
 +                         data-shrink=\\"true\\"
-                          for=\\"Contact email\\"
+                          for=\\"Contactemail\\"
                         >
                           Contact email
                           <span
@@ -402,7 +402,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 -                           aria-invalid=\\"true\\"
 +                           aria-invalid=\\"false\\"
                             class=\\"MuiInputBase-input-272 MuiInput-input-257\\"
-                            id=\\"Contact email\\"
+                            id=\\"Contactemail\\"
                             name=\\"contact.contactEmail\\"
                             placeholder=\\"Type the email address of primary contact for this dataset\\"
                             required=\\"\\"
@@ -413,7 +413,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
                         </div>
 -                       <p
 -                         class=\\"MuiFormHelperText-root-360 MuiFormHelperText-error-361 MuiFormHelperText-required-367\\"
--                         id=\\"Contact email-helper-text\\"
+-                         id=\\"Contactemail-helper-text\\"
 -                       >
 -                         This field is required
 -                       </p>
@@ -511,14 +511,14 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
                             class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31\\"
                           >
                             <div
--                             aria-describedby=\\"Field of research-helper-text\\"
+-                             aria-describedby=\\"Fieldofresearch-helper-text\\"
                               class=\\"MuiFormControl-root-231 MuiFormControl-fullWidth-234\\"
                             >
                               <label
 -                               class=\\"MuiFormLabel-root-242 MuiFormLabel-error-245 MuiInputLabel-root-235 MuiInputLabel-formControl-236 MuiInputLabel-animated-239\\"
 +                               class=\\"MuiFormLabel-root-242 MuiInputLabel-root-235 MuiInputLabel-formControl-236 MuiInputLabel-animated-239\\"
                                 data-shrink=\\"false\\"
-                                for=\\"Field of research\\"
+                                for=\\"Fieldofresearch\\"
                               >
                                 Field of research
                               </label>
@@ -609,7 +609,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 +                       >
                           <p
 -                               class=\\"MuiFormHelperText-root-360 MuiFormHelperText-error-361\\"
--                               id=\\"Field of research-helper-text\\"
+-                               id=\\"Fieldofresearch-helper-text\\"
 +                           class=\\"MuiTypography-root-152 MuiTypography-body2-160\\"
                           >
 -                               Field of research values are required
@@ -1050,7 +1050,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
                     >
                       <div
--                       aria-describedby=\\"Project name-helper-text\\"
+-                       aria-describedby=\\"Projectname-helper-text\\"
                         class=\\"MuiFormControl-root-231 MuiFormControl-fullWidth-234\\"
                       >
                         <label
@@ -1058,7 +1058,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 -                         data-shrink=\\"false\\"
 +                         class=\\"MuiFormLabel-root-242 MuiFormLabel-filled-246 MuiFormLabel-required-247 MuiInputLabel-root-235 MuiInputLabel-formControl-236 MuiInputLabel-animated-239 MuiInputLabel-shrink-238\\"
 +                         data-shrink=\\"true\\"
-                          for=\\"Project name\\"
+                          for=\\"Projectname\\"
                         >
                           Project name
                           <span
@@ -1076,7 +1076,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 -                           aria-invalid=\\"true\\"
 +                           aria-invalid=\\"false\\"
                             class=\\"MuiInputBase-input-272 MuiInput-input-257 MuiInputBase-inputMultiline-274 MuiInput-inputMultiline-259\\"
-                            id=\\"Project name\\"
+                            id=\\"Projectname\\"
                             name=\\"fez_record_search_key_project_name.rek_project_name\\"
                             placeholder=\\"Type the name of the project that initiated the dataset\\"
                             required=\\"\\"
@@ -1085,7 +1085,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 -                       </div>
 -                       <p
 -                         class=\\"MuiFormHelperText-root-360 MuiFormHelperText-error-361 MuiFormHelperText-required-367\\"
--                         id=\\"Project name-helper-text\\"
+-                         id=\\"Projectname-helper-text\\"
                           >
 -                         This field is required
 -                       </p>
@@ -1098,7 +1098,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
                     >
                       <div
--                       aria-describedby=\\"Project description-helper-text\\"
+-                       aria-describedby=\\"Projectdescription-helper-text\\"
                         class=\\"MuiFormControl-root-231 MuiFormControl-fullWidth-234\\"
                       >
                         <label
@@ -1106,7 +1106,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 -                         data-shrink=\\"false\\"
 +                         class=\\"MuiFormLabel-root-242 MuiFormLabel-filled-246 MuiFormLabel-required-247 MuiInputLabel-root-235 MuiInputLabel-formControl-236 MuiInputLabel-animated-239 MuiInputLabel-shrink-238\\"
 +                         data-shrink=\\"true\\"
-                          for=\\"Project description\\"
+                          for=\\"Projectdescription\\"
                         >
                           Project description
                           <span
@@ -1124,7 +1124,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 -                           aria-invalid=\\"true\\"
 +                           aria-invalid=\\"false\\"
                             class=\\"MuiInputBase-input-272 MuiInput-input-257 MuiInputBase-inputMultiline-274 MuiInput-inputMultiline-259\\"
-                            id=\\"Project description\\"
+                            id=\\"Projectdescription\\"
                             name=\\"fez_record_search_key_project_description.rek_project_description\\"
                             placeholder=\\"Briefly describe the project, including purpose\\"
                             required=\\"\\"
@@ -1136,7 +1136,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
                         </div>
 -                       <p
 -                         class=\\"MuiFormHelperText-root-360 MuiFormHelperText-error-361 MuiFormHelperText-required-367\\"
--                         id=\\"Project description-helper-text\\"
+-                         id=\\"Projectdescription-helper-text\\"
 -                       >
 -                         This field is required
 -                       </p>

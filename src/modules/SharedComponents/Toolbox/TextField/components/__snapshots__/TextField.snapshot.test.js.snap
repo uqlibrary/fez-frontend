@@ -3,7 +3,6 @@
 exports[`TextFieldWrapper snapshots tests renders TextField component 1`] = `
 <Fragment>
   <TextField
-    InputLabelProps="{[object Object]"
     error={false}
     floatingLabelText="This is a test textfield component"
     fullWidth={true}
@@ -20,7 +19,6 @@ exports[`TextFieldWrapper snapshots tests renders TextField component 1`] = `
 exports[`TextFieldWrapper snapshots tests renders TextField component appending a class 1`] = `
 <Fragment>
   <TextField
-    InputLabelProps="{[object Object]"
     className="requiredField"
     error={false}
     floatingLabelText="This is a test textfield component"
@@ -38,7 +36,11 @@ exports[`TextFieldWrapper snapshots tests renders TextField component appending 
 exports[`TextFieldWrapper snapshots tests renders TextField component with shrink:true 1`] = `
 <Fragment>
   <TextField
-    InputLabelProps="{[object Object]"
+    InputLabelProps={
+      Object {
+        "shrink": true,
+      }
+    }
     error={false}
     floatingLabelText="This is a test textfield component"
     floatinglabelfixed={true}

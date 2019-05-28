@@ -1379,7 +1379,6 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                                   value=""
                                 >
                                   <TextField
-                                    InputLabelProps="{[object Object]"
                                     InputProps={
                                       Object {
                                         "aria-activedescendant": null,
@@ -2520,7 +2519,6 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
                                   value=""
                                 >
                                   <TextField
-                                    InputLabelProps="{[object Object]"
                                     InputProps={
                                       Object {
                                         "aria-activedescendant": null,
@@ -3708,7 +3706,6 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                   value=""
                                 >
                                   <TextField
-                                    InputLabelProps="{[object Object]"
                                     InputProps={
                                       Object {
                                         "aria-activedescendant": null,
@@ -4874,7 +4871,6 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                   value=""
                                 >
                                   <TextField
-                                    InputLabelProps="{[object Object]"
                                     InputProps={
                                       Object {
                                         "aria-activedescendant": null,
@@ -5999,7 +5995,6 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
                                   value=""
                                 >
                                   <TextField
-                                    InputLabelProps="{[object Object]"
                                     InputProps={
                                       Object {
                                         "aria-activedescendant": null,

@@ -361,7 +361,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                           <label
 +                             class=\\"MuiFormLabel-root-234 MuiInputLabel-root-227 MuiInputLabel-formControl-228 MuiInputLabel-animated-231\\"
 +                             data-shrink=\\"false\\"
-+                             for=\\"Total pages\\"
++                             for=\\"Totalpages\\"
 +                           >
 +                             Total pages
 +                           </label>
@@ -371,7 +371,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                             <input
 +                               aria-invalid=\\"false\\"
 +                               class=\\"MuiInputBase-input-271 MuiInput-input-256\\"
-+                               id=\\"Total pages\\"
++                               id=\\"Totalpages\\"
 +                               name=\\"fez_record_search_key_total_pages.rek_total_pages\\"
 +                               placeholder=\\"\\"
 +                               type=\\"text\\"
@@ -997,7 +997,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                           <label
 +                             class=\\"MuiFormLabel-root-234 MuiInputLabel-root-227 MuiInputLabel-formControl-228 MuiInputLabel-animated-231\\"
 +                             data-shrink=\\"false\\"
-+                             for=\\"Notes (not publicly viewable)\\"
++                             for=\\"Notes(notpubliclyviewable)\\"
 +                           >
 +                             Notes (not publicly viewable)
 +                           </label>
@@ -1024,7 +1024,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                               <textarea
 +                                 aria-invalid=\\"false\\"
 +                                 class=\\"Textarea-textarea-371 MuiInputBase-input-271 MuiInput-input-256 MuiInputBase-inputMultiline-273 MuiInput-inputMultiline-258\\"
-+                                 id=\\"Notes (not publicly viewable)\\"
++                                 id=\\"Notes(notpubliclyviewable)\\"
 +                                 name=\\"comments\\"
 +                                 rows=\\"1\\"
 +                                 style=\\"height: 0px;\\"
@@ -1042,7 +1042,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                           <label
 +                             class=\\"MuiFormLabel-root-234 MuiInputLabel-root-227 MuiInputLabel-formControl-228 MuiInputLabel-animated-231\\"
 +                             data-shrink=\\"false\\"
-+                             for=\\"Link (URL)\\"
++                             for=\\"Link(URL)\\"
 +                           >
 +                             Link (URL)
 +                           </label>
@@ -1052,7 +1052,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                             <input
 +                               aria-invalid=\\"false\\"
 +                               class=\\"MuiInputBase-input-271 MuiInput-input-256\\"
-+                               id=\\"Link (URL)\\"
++                               id=\\"Link(URL)\\"
 +                               name=\\"rek_link\\"
 +                               type=\\"text\\"
 +                               value=\\"\\"

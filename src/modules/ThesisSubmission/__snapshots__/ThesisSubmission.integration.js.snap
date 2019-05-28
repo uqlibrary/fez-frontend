@@ -29,7 +29,7 @@ exports[`ThesisSubmission form should allow user to submit thesis 1`] = `
                               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31\\"
                             >
                               <div
--                               aria-describedby=\\"Enrolling unit-helper-text\\"
+-                               aria-describedby=\\"Enrollingunit-helper-text\\"
                                 class=\\"MuiFormControl-root-188 MuiFormControl-fullWidth-191\\"
                               >
                                 <label
@@ -37,7 +37,7 @@ exports[`ThesisSubmission form should allow user to submit thesis 1`] = `
 -                                 data-shrink=\\"false\\"
 +                                 class=\\"MuiFormLabel-root-199 MuiFormLabel-filled-203 MuiFormLabel-required-204 MuiInputLabel-root-192 MuiInputLabel-formControl-193 MuiInputLabel-animated-196 MuiInputLabel-shrink-195\\"
 +                                 data-shrink=\\"true\\"
-                                  for=\\"Enrolling unit\\"
+                                  for=\\"Enrollingunit\\"
                                 >
                                   Enrolling unit
                                   <span
@@ -68,7 +68,7 @@ exports[`ThesisSubmission form should allow user to submit thesis 1`] = `
                                 </div>
 -                               <p
 -                                 class=\\"MuiFormHelperText-root-304 MuiFormHelperText-error-305 MuiFormHelperText-required-311\\"
--                                 id=\\"Enrolling unit-helper-text\\"
+-                                 id=\\"Enrollingunit-helper-text\\"
 -                               >
 -                                 This field is required
 -                               </p>
@@ -327,14 +327,14 @@ exports[`ThesisSubmission form should allow user to submit thesis 1`] = `
                             class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31\\"
                           >
                             <div
--                             aria-describedby=\\"Field of research-helper-text\\"
+-                             aria-describedby=\\"Fieldofresearch-helper-text\\"
                               class=\\"MuiFormControl-root-188 MuiFormControl-fullWidth-191\\"
                             >
                               <label
 -                               class=\\"MuiFormLabel-root-199 MuiFormLabel-error-202 MuiInputLabel-root-192 MuiInputLabel-formControl-193 MuiInputLabel-animated-196\\"
 +                               class=\\"MuiFormLabel-root-199 MuiInputLabel-root-192 MuiInputLabel-formControl-193 MuiInputLabel-animated-196\\"
                                 data-shrink=\\"false\\"
-                                for=\\"Field of research\\"
+                                for=\\"Fieldofresearch\\"
                               >
                                 Field of research
                               </label>
@@ -425,7 +425,7 @@ exports[`ThesisSubmission form should allow user to submit thesis 1`] = `
 +                       >
                           <p
 -                               class=\\"MuiFormHelperText-root-304 MuiFormHelperText-error-305\\"
--                               id=\\"Field of research-helper-text\\"
+-                               id=\\"Fieldofresearch-helper-text\\"
 +                           class=\\"MuiTypography-root-100 MuiTypography-body2-108\\"
                           >
 -                               Field of research values are required
