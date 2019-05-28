@@ -9,7 +9,8 @@ export const initialState = {
 
 export const getInitialState = () => ({
     'mine': initialState,
-    'incomplete': initialState
+    'incomplete': initialState,
+    'datasets': initialState
 });
 
 const handlers = {

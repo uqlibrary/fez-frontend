@@ -14,12 +14,10 @@ import Hidden from '@material-ui/core/Hidden';
 
 export default class MyRecords extends PureComponent {
     static propTypes = {
-        mine: PropTypes.shape({
-            publicationsList: PropTypes.array,
-            publicationsListFacets: PropTypes.object,
-            loadingPublicationsList: PropTypes.bool,
-            publicationsListPagingData: PropTypes.object,
-        }),
+        publicationsList: PropTypes.array,
+        publicationsListFacets: PropTypes.object,
+        loadingPublicationsList: PropTypes.bool,
+        publicationsListPagingData: PropTypes.object,
         exportPublicationsLoading: PropTypes.bool,
 
         initialFacets: PropTypes.object,
@@ -51,14 +49,14 @@ export default class MyRecords extends PureComponent {
         this.state = {
             // check if user has publications, once true always true
             // facets filtering might return no results, but facets should still be visible
-            hasPublications: !props.mine.loadingPublicationsList && props.mine.publicationsList.length > 0,
+            hasPublications: !props.loadingPublicationsList && props.publicationsList.length > 0,
             ...(!!props.location.state ? props.location.state : this.initState)
         };
     }
 
     componentDidMount() {
-        if (!this.props.accountLoading && !this.props.mine.publicationsList.length) {
-            this.props.actions.searchAuthorPublications({...this.state}, 'mine');
+        if (!this.props.accountLoading && !this.props.publicationsList.length) {
+            this.props.actions.loadAuthorPublications({...this.state});
         }
     }
 
@@ -69,12 +67,12 @@ export default class MyRecords extends PureComponent {
             && newProps.location.pathname === this.props.thisUrl) {
             this.setState({...(!!newProps.location.state ? newProps.location.state : this.initState)}, () => {
                 // only will be called when user clicks back on my records page
-                this.props.actions.searchAuthorPublications({...this.state}, 'mine');
+                this.props.actions.loadAuthorPublications({...this.state});
             });
         }
         // set forever-true flag if user has publications
-        if (!this.state.hasPublications && !newProps.mine.loadingPublicationsList
-            && !!newProps.mine.publicationsList && newProps.mine.publicationsList.length > 0) {
+        if (!this.state.hasPublications && !newProps.loadingPublicationsList
+            && !!newProps.publicationsList && newProps.publicationsList.length > 0) {
             this.setState({ hasPublications: true });
         }
     }
@@ -147,7 +145,7 @@ export default class MyRecords extends PureComponent {
             search: `?ts=${Date.now()}`,
             state: {...this.state}
         });
-        this.props.actions.searchAuthorPublications({...this.state}, 'mine');
+        this.props.actions.loadAuthorPublications({...this.state});
     };
 
     fixRecord = (item) => {
@@ -163,22 +161,22 @@ export default class MyRecords extends PureComponent {
         if (this.props.accountLoading) return null;
 
         const txt = this.props.localePages;
-        const pagingData = this.props.mine.publicationsListPagingData;
-        const isLoadingOrExporting = this.props.mine.loadingPublicationsList || this.props.exportPublicationsLoading;
+        const pagingData = this.props.publicationsListPagingData;
+        const isLoadingOrExporting = this.props.loadingPublicationsList || this.props.exportPublicationsLoading;
 
         return (
             <StandardPage title={txt.pageTitle}>
                 <Grid container spacing={16}>
                     {
                         // first time loading my publications - account hasn't been loaded or any my publications haven't been loaded
-                        !this.state.hasPublications && this.props.mine.loadingPublicationsList &&
+                        !this.state.hasPublications && this.props.loadingPublicationsList &&
                         <Grid item xs={12}>
                             <InlineLoader message={txt.loadingMessage}/>
                         </Grid>
                     }
                     {
                         // no results to display
-                        !this.props.mine.loadingPublicationsList && this.props.mine.publicationsList && this.props.mine.publicationsList.length === 0 &&
+                        !this.props.loadingPublicationsList && this.props.publicationsList && this.props.publicationsList.length === 0 &&
                         <Grid item xs={12}>
                             <StandardCard {...txt.noResultsFound}>
                                 {txt.noResultsFound.text}
@@ -187,7 +185,7 @@ export default class MyRecords extends PureComponent {
                     }
                     {
                         // results to display or loading if user is filtering/paging
-                        this.state.hasPublications && (this.props.mine.loadingPublicationsList || this.props.mine.publicationsList.length > 0) &&
+                        this.state.hasPublications && (this.props.loadingPublicationsList || this.props.publicationsList.length > 0) &&
                         <Grid item xs={12} md={9}>
                             <StandardCard noHeader>
                                 {
@@ -226,12 +224,12 @@ export default class MyRecords extends PureComponent {
                                     <Grid item xs={12}>
                                         {
                                             isLoadingOrExporting &&
-                                            <div className="is-centered"><InlineLoader message={this.props.mine.loadingPublicationsList ? txt.loadingPagingMessage : txt.exportPublicationsLoadingMessage}/></div>
+                                            <div className="is-centered"><InlineLoader message={this.props.loadingPublicationsList ? txt.loadingPagingMessage : txt.exportPublicationsLoadingMessage}/></div>
                                         }
                                         {
-                                            !this.props.exportPublicationsLoading && !this.props.mine.loadingPublicationsList && this.props.mine.publicationsList && this.props.mine.publicationsList.length > 0 &&
+                                            !this.props.exportPublicationsLoading && !this.props.loadingPublicationsList && this.props.publicationsList && this.props.publicationsList.length > 0 &&
                                             <PublicationsList
-                                                publicationsList={this.props.mine.publicationsList}
+                                                publicationsList={this.props.publicationsList}
                                                 showDefaultActions />
                                         }
                                     </Grid>
@@ -248,7 +246,7 @@ export default class MyRecords extends PureComponent {
                     }
                     {
                         // show available filters or selected filters (even if there are no results)
-                        ((this.props.mine.publicationsListFacets && Object.keys(this.props.mine.publicationsListFacets).length > 0)
+                        ((this.props.publicationsListFacets && Object.keys(this.props.publicationsListFacets).length > 0)
                         || (this.state.activeFacets && this.hasDisplayableFilters(this.state.activeFacets.filters))
                         || (this.state.activeFacets && this.state.activeFacets.ranges && Object.keys(this.state.activeFacets.ranges).length > 0)
                         || (this.state.activeFacets && !!this.state.activeFacets.showOpenAccessOnly)) &&
@@ -256,7 +254,7 @@ export default class MyRecords extends PureComponent {
                                 <Grid item md={3}>
                                     <StandardRighthandCard title={txt.facetsFilter.title} help={txt.facetsFilter.help}>
                                         <FacetsFilter
-                                            facetsData={this.props.mine.publicationsListFacets}
+                                            facetsData={this.props.publicationsListFacets}
                                             onFacetsChanged={this.facetsChanged}
                                             activeFacets={this.state.activeFacets}
                                             disabled={isLoadingOrExporting}

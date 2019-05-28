@@ -20,14 +20,11 @@ function setup(testProps, isShallow = true) {
         accountLoading: false,
         exportPublicationsLoading: false,
         localePages: locale.pages.myResearch,
+        publicationsListPagingData: {},
+        loadingPublicationsList: false,
+        publicationsList: [],
+        publicationsListFacets: {},
         ...testProps,
-        incomplete: {
-            publicationsListPagingData: {},
-            loadingPublicationsList: false,
-            publicationsList: [],
-            publicationsListFacets: {},
-            ...testProps.incomplete
-        },
     };
     return getElement(MyIncompleteRecords, props, isShallow);
 }
@@ -39,24 +36,16 @@ describe('MyIncompleteRecords test', () => {
     });
 
     it('renders loading screen while loading publications ', () => {
-        const wrapper = setup({ incomplete:
-            {
-                loadingPublicationsList: true
-            }
+        const wrapper = setup({
+            loadingPublicationsList: true
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('renders loading screen while loading publications while filtering', () => {
-        const wrapper = setup({
-            incomplete: {
-                publicationsList: [1, 2, 2]
-            }
-        });
+        const wrapper = setup({publicationsList: [1, 2, 2]});
         wrapper.setProps({
-            incomplete: {
-                loadingPublicationsList: true
-            }
+            loadingPublicationsList: true
         });
         wrapper.update();
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -64,9 +53,7 @@ describe('MyIncompleteRecords test', () => {
 
     it('renders loading screen while export publications loading', () => {
         const wrapper = setup({
-            incomplete: {
-                publicationsList: [1, 2, 2],
-            },
+            publicationsList: [1, 2, 2],
             exportPublicationsLoading: true
         });
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -79,15 +66,13 @@ describe('MyIncompleteRecords test', () => {
 
     it('renders list of publications no facets', () => {
         const wrapper = setup({
-            incomplete: {
-                publicationsList: [1, 2, 3], // myRecordsList.data,
-                publicationsListPagingData: {
-                    "total": 147,
-                    "per_page": 20,
-                    "current_page": 1,
-                    "from": 1,
-                    "to": 20
-                }
+            publicationsList: [1, 2, 3], // myRecordsList.data,
+            publicationsListPagingData: {
+                "total": 147,
+                "per_page": 20,
+                "current_page": 1,
+                "from": 1,
+                "to": 20
             }
         });
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -95,38 +80,36 @@ describe('MyIncompleteRecords test', () => {
 
     it('renders list of publications with facets', () => {
         const wrapper = setup({
-            incomplete: {
-                publicationsList: [1, 2, 3], // myRecordsList.data,
-                publicationsListPagingData: {
-                    "total": 147,
-                    "per_page": 20,
-                    "current_page": 1,
-                    "from": 1,
-                    "to": 20
+            publicationsList: [1, 2, 3], // myRecordsList.data,
+            publicationsListPagingData: {
+                "total": 147,
+                "per_page": 20,
+                "current_page": 1,
+                "from": 1,
+                "to": 20
+            },
+            publicationsListFacets: {
+                "Display type": {
+                    "doc_count_error_upper_bound": 0,
+                    "sum_other_doc_count": 3,
+                    "buckets": [
+                        { "key": 179, "doc_count": 95 },
+                        { "key": 130, "doc_count": 34 },
+                        { "key": 177, "doc_count": 2 },
+                        { "key": 183, "doc_count": 2 },
+                        { "key": 174, "doc_count": 1 }
+                    ]
                 },
-                publicationsListFacets: {
-                    "Display type": {
-                        "doc_count_error_upper_bound": 0,
-                        "sum_other_doc_count": 3,
-                        "buckets": [
-                            { "key": 179, "doc_count": 95 },
-                            { "key": 130, "doc_count": 34 },
-                            { "key": 177, "doc_count": 2 },
-                            { "key": 183, "doc_count": 2 },
-                            { "key": 174, "doc_count": 1 }
-                        ]
-                    },
-                    "Keywords": {
-                        "doc_count_error_upper_bound": 0,
-                        "sum_other_doc_count": 641,
-                        "buckets": [
-                            { "key": "Brca1", "doc_count": 15 },
-                            { "key": "Oncology", "doc_count": 15 },
-                            { "key": "Breast cancer", "doc_count": 13 },
-                            { "key": "Genetics & Heredity", "doc_count": 12 },
-                            { "key": "Biochemistry & Molecular Biology", "doc_count": 10 }
-                        ]
-                    }
+                "Keywords": {
+                    "doc_count_error_upper_bound": 0,
+                    "sum_other_doc_count": 641,
+                    "buckets": [
+                        { "key": "Brca1", "doc_count": 15 },
+                        { "key": "Oncology", "doc_count": 15 },
+                        { "key": "Breast cancer", "doc_count": 13 },
+                        { "key": "Genetics & Heredity", "doc_count": 12 },
+                        { "key": "Biochemistry & Molecular Biology", "doc_count": 10 }
+                    ]
                 }
             }
         });
@@ -194,14 +177,12 @@ describe('MyIncompleteRecords test', () => {
     });
 
     it('sets forever true has publications', () => {
-        const wrapper = setup({ incomplete: { loadingPublicationsList: true }});
+        const wrapper = setup({ loadingPublicationsList: true });
         expect(wrapper.state().hasPublications).toEqual(false);
 
         wrapper.instance().componentWillReceiveProps({
-            incomplete: {
-                loadingPublicationsList: false,
-                publicationsList: [1, 2, 3],
-            },
+            loadingPublicationsList: false,
+            publicationsList: [1, 2, 3],
             history: {},
             location: {}
         });
@@ -249,10 +230,8 @@ describe('MyIncompleteRecords test', () => {
                 pathname: routes.pathConfig.records.mine,
                 state: null
             },
-            incomplete: {
-                loadingPublicationsList: false,
-                publicationsList: [],
-            }
+            loadingPublicationsList: false,
+            publicationsList: [],
         });
         expect(testAction).toHaveBeenCalled();
         expect(wrapper.state().page).toEqual(1);
@@ -270,10 +249,8 @@ describe('MyIncompleteRecords test', () => {
         wrapper.instance().componentWillReceiveProps({
             history: { action: 'PUSH' },
             location: { pathname: routes.pathConfig.records.mine },
-            incomplete: {
-                loadingPublicationsList: false,
-                publicationsList: [],
-            }
+            loadingPublicationsList: false,
+            publicationsList: [],
         });
         expect(testAction).not.toHaveBeenCalled();
     });

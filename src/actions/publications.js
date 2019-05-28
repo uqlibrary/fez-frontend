@@ -69,6 +69,7 @@ export function searchTopCitedPublications(recordsPerSource = 20) {
 function searchAuthorPublicationsApiEndpoint(type) {
     switch (type) {
         case 'mine':
+        case 'datasets':
             return routes.CURRENT_USER_RECORDS_API;
         case 'incomplete':
             return routes.INCOMPLETE_RECORDS_API;
