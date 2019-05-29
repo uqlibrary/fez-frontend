@@ -896,6 +896,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
             ]
           }
           publicationsListSubset={Array []}
+          showContentIndicators={false}
           showDefaultActions={false}
           showMetrics={true}
           showSourceCountIcon={false}
@@ -1851,6 +1852,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
             ]
           }
           publicationsListSubset={Array []}
+          showContentIndicators={false}
           showDefaultActions={false}
           showMetrics={true}
           showSourceCountIcon={false}
@@ -2725,6 +2727,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
             ]
           }
           publicationsListSubset={Array []}
+          showContentIndicators={false}
           showDefaultActions={false}
           showMetrics={true}
           showSourceCountIcon={false}

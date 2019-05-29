@@ -83,6 +83,10 @@ export default {
                     altmetric: 'Altmetric'
                 },
                 recordsPerSource: 5
+            },
+            contentIndicators: {
+                label: 'Content Indicators: ',
+                divider: ', '
             }
         },
         myTrendingPublications: {

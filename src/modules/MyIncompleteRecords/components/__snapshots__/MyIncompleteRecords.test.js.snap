@@ -270,6 +270,7 @@ exports[`MyIncompleteRecords test renders list of publications no facets 1`] = `
                 ]
               }
               publicationsListSubset={Array []}
+              showContentIndicators={false}
               showDefaultActions={false}
               showMetrics={false}
               showSourceCountIcon={false}
@@ -420,6 +421,7 @@ exports[`MyIncompleteRecords test renders list of publications with facets 1`] =
                 ]
               }
               publicationsListSubset={Array []}
+              showContentIndicators={false}
               showDefaultActions={false}
               showMetrics={false}
               showSourceCountIcon={false}

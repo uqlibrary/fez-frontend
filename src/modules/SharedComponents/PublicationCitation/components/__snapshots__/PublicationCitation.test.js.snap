@@ -25,6 +25,11 @@ Object {
     "marginBottom": 6,
     "marginRight": 12,
   },
+  "contentIndicators": Object {
+    "span": Object {
+      "marginRight": 12,
+    },
+  },
   "divider": Object {
     "marginBottom": 12,
     "marginTop": 12,
