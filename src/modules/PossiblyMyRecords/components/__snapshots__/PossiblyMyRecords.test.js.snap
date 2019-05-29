@@ -204,7 +204,6 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                 ]
               }
               publicationsListSubset={Array []}
-              showContentIndicators={false}
               showDefaultActions={false}
               showMetrics={false}
               showSourceCountIcon={false}

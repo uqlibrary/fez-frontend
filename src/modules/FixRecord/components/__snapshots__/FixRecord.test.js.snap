@@ -422,7 +422,6 @@ exports[`Component FixRecord _handleDefaultSubmit() 1`] = `
                 "rek_wok_doc_type_xsdmf_id": 12551,
               }
             }
-            showContentIndicators={true}
           />
           <Field
             component={[Function]}
@@ -900,7 +899,6 @@ exports[`Component FixRecord componentWillReceiveProps() 1`] = `
                 "rek_wok_doc_type_xsdmf_id": 12551,
               }
             }
-            showContentIndicators={true}
           />
           <Field
             component={[Function]}
@@ -1389,7 +1387,6 @@ exports[`Component FixRecord should render fix record form 1`] = `
                 "rek_wok_doc_type_xsdmf_id": 12551,
               }
             }
-            showContentIndicators={true}
           />
           <Field
             component={[Function]}
@@ -1999,7 +1996,6 @@ exports[`Component FixRecord should render record citation, two actions in selec
                 "rek_wok_doc_type_xsdmf_id": 12551,
               }
             }
-            showContentIndicators={true}
           />
           <Field
             component={[Function]}
@@ -2477,7 +2473,6 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
                 "rek_wok_doc_type_xsdmf_id": 12551,
               }
             }
-            showContentIndicators={true}
           />
           <Field
             component={[Function]}
@@ -3076,7 +3071,6 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
                 "rek_wok_doc_type_xsdmf_id": 12551,
               }
             }
-            showContentIndicators={true}
           />
           <Field
             component={[Function]}
@@ -3670,7 +3664,6 @@ exports[`Component FixRecord should render unclaim form 1`] = `
                 "rek_wok_doc_type_xsdmf_id": 12551,
               }
             }
-            showContentIndicators={true}
           />
           <Field
             component={[Function]}

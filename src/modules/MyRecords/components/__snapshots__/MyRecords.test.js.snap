@@ -320,7 +320,6 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
                 ]
               }
               publicationsListSubset={Array []}
-              showContentIndicators={false}
               showDefaultActions={true}
               showMetrics={false}
               showSourceCountIcon={false}
@@ -455,7 +454,6 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
                 ]
               }
               publicationsListSubset={Array []}
-              showContentIndicators={false}
               showDefaultActions={true}
               showMetrics={false}
               showSourceCountIcon={false}
@@ -968,7 +966,6 @@ exports[`MyRecords test should handle export publications 1`] = `
                 ]
               }
               publicationsListSubset={Array []}
-              showContentIndicators={false}
               showDefaultActions={true}
               showMetrics={false}
               showSourceCountIcon={false}

@@ -1387,6 +1387,22 @@ exports[`PublicationCitation  should render component with default actions 1`] =
           item={true}
           xs={12}
         >
+          <WithStyles(Typography)
+            gutterBottom={true}
+            variant="caption"
+          >
+            Content Indicators: 
+            <span
+              key="0"
+            >
+              some content indicator
+            </span>
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
+        >
           <WithStyles(CitationCounts)
             hideViewFullStatisticsLink={false}
             publication={
@@ -2290,6 +2306,22 @@ exports[`PublicationCitation  should render component with default item 1`] = `
           item={true}
           xs={12}
         >
+          <WithStyles(Typography)
+            gutterBottom={true}
+            variant="caption"
+          >
+            Content Indicators: 
+            <span
+              key="0"
+            >
+              some content indicator
+            </span>
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
+        >
           <WithStyles(CitationCounts)
             hideViewFullStatisticsLink={false}
             publication={
@@ -3144,6 +3176,22 @@ exports[`PublicationCitation  should render component with default item without 
               }
             }
           />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
+        >
+          <WithStyles(Typography)
+            gutterBottom={true}
+            variant="caption"
+          >
+            Content Indicators: 
+            <span
+              key="0"
+            >
+              some content indicator
+            </span>
+          </WithStyles(Typography)>
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
@@ -4013,6 +4061,22 @@ exports[`PublicationCitation  should render component with default list hiding t
           item={true}
           xs={12}
         >
+          <WithStyles(Typography)
+            gutterBottom={true}
+            variant="caption"
+          >
+            Content Indicators: 
+            <span
+              key="0"
+            >
+              some content indicator
+            </span>
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
+        >
           <WithStyles(CitationCounts)
             hideViewFullStatisticsLink={false}
             publication={
@@ -4872,6 +4936,22 @@ exports[`PublicationCitation  should render component with default list hiding t
               }
             }
           />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
+        >
+          <WithStyles(Typography)
+            gutterBottom={true}
+            variant="caption"
+          >
+            Content Indicators: 
+            <span
+              key="0"
+            >
+              some content indicator
+            </span>
+          </WithStyles(Typography)>
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
@@ -5742,6 +5822,22 @@ exports[`PublicationCitation  should render component with publication from mult
               }
             }
           />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
+        >
+          <WithStyles(Typography)
+            gutterBottom={true}
+            variant="caption"
+          >
+            Content Indicators: 
+            <span
+              key="0"
+            >
+              some content indicator
+            </span>
+          </WithStyles(Typography)>
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
@@ -6620,6 +6716,22 @@ exports[`PublicationCitation  should render component without a title 1`] = `
               }
             }
           />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
+        >
+          <WithStyles(Typography)
+            gutterBottom={true}
+            variant="caption"
+          >
+            Content Indicators: 
+            <span
+              key="0"
+            >
+              some content indicator
+            </span>
+          </WithStyles(Typography)>
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
@@ -7576,6 +7688,22 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
               }
             }
           />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
+        >
+          <WithStyles(Typography)
+            gutterBottom={true}
+            variant="caption"
+          >
+            Content Indicators: 
+            <span
+              key="0"
+            >
+              some content indicator
+            </span>
+          </WithStyles(Typography)>
         </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}

@@ -82,6 +82,16 @@ export default {
                     "rek_author_id_order": 1
                 }
             ],
+            "fez_record_search_key_content_indicator": [
+                {
+                    "rek_content_indicator_id": 2391648,
+                    "rek_content_indicator_pid": "UQ:641272",
+                    "rek_content_indicator_xsdmf_id": 6037,
+                    "rek_content_indicator": 123,
+                    "rek_content_indicator_lookup": 'dummy content indicator',
+                    "rek_content_indicator_order": 1
+                }
+            ],
             "fez_record_search_key_contributor": [
                 {
                     "rek_contributor_id": 3208183,

@@ -592,7 +592,6 @@ exports[`SearchRecords page should render when paging 1`] = `
               ]
             }
             publicationsListSubset={Array []}
-            showContentIndicators={false}
             showDefaultActions={false}
             showMetrics={false}
             showSourceCountIcon={false}

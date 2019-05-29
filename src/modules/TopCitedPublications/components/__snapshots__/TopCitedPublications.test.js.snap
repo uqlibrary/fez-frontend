@@ -938,7 +938,6 @@ exports[`Component TopCitedPublications should render tabs with xs width properl
             ]
           }
           publicationsListSubset={Array []}
-          showContentIndicators={false}
           showDefaultActions={false}
           showMetrics={true}
           showSourceCountIcon={false}
@@ -1880,7 +1879,6 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
             ]
           }
           publicationsListSubset={Array []}
-          showContentIndicators={false}
           showDefaultActions={false}
           showMetrics={true}
           showSourceCountIcon={false}

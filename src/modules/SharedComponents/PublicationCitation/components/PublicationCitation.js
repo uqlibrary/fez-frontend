@@ -88,7 +88,7 @@ export class PublicationCitation extends PureComponent {
         hideViewFullStatisticsLink: PropTypes.bool,
         hideCitationCounts: PropTypes.bool,
         hideLinks: PropTypes.bool,
-        showContentIndicators: PropTypes.bool,
+        hideContentIndicators: PropTypes.bool,
         classes: PropTypes.object
     };
 
@@ -103,8 +103,8 @@ export class PublicationCitation extends PureComponent {
         hideCountDiff: false,
         hideCountTotal: false,
         hideViewFullStatisticsLink: false,
-        showContentIndicators: false,
-        hideCitationCounts: false
+        hideCitationCounts: false,
+        hideContentIndicators: false
     };
 
     constructor(props) {
@@ -260,7 +260,7 @@ export class PublicationCitation extends PureComponent {
                                 {this.renderCitation(this.props.publication.rek_display_type)}
                             </Grid>
                             {
-                                !!this.props.showContentIndicators &&
+                                !this.props.hideContentIndicators &&
                                 !!this.props.publication.fez_record_search_key_content_indicator &&
                                 this.props.publication.fez_record_search_key_content_indicator.length > 0 &&
                                 <Grid item xs={12} className={classes.contentIndicators}>

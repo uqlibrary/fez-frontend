@@ -204,7 +204,7 @@ describe('PublicationCitation ', () => {
                 }
             ],
         };
-        const wrapper = setup({publication: publicationWithContentIndicators, showContentIndicators: true});
+        const wrapper = setup({publication: publicationWithContentIndicators});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });
