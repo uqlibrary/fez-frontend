@@ -105,6 +105,15 @@ describe('incompleteRecords actions', () => {
             expect(e.message).toBe('The requested page could not be found.');
         }
 
+        delete data.publication.fez_record_search_key_author_id;
+        delete data.publication.fez_record_search_key_contributor_id;
+
+        try {
+            await mockActionsStore.dispatch(updateIncompleteRecord(data));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        } catch (e) {
+            expect(e.message).toBe('Current author is not linked to this record');
+        }
     });
 
 });
