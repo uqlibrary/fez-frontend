@@ -113,7 +113,7 @@ export default {
                 id: 'espace',
                 title: 'eSpace',
                 priority: 0,
-                externalUrl: APP_URL + 'records/[id]',
+                externalUrl: `${APP_URL}view/[id]`,
                 idKey: 'rek_pid'
             },
             wos: {
