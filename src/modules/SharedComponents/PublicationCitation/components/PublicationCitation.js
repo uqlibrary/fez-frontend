@@ -124,7 +124,6 @@ export class PublicationCitation extends PureComponent {
         switch (action) {
             case 'fixRecord':
                 this.props.history.push(routes.pathConfig.records.fix(this.props.publication.rek_pid));
-                this.props.actions.setFixRecord(this.props.publication);
                 break;
             case 'shareRecord':
                 // TODO: display share interface
