@@ -150,7 +150,6 @@ export default class MyRecords extends PureComponent {
 
     fixRecord = (item) => {
         this.props.history.push(routes.pathConfig.records.fix(item.rek_pid));
-        this.props.actions.setFixRecord(item);
     }
 
     handleExportPublications = (exportFormat) => {
