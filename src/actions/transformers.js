@@ -525,3 +525,21 @@ export const getSignificanceAndContributionStatementSearchKeys = (data) => {
         )
     };
 };
+
+export const getExternalSourceIdSearchKeys = (data) => {
+    const result = {};
+    const sourceKeys = {
+        crossref: '_doi',
+        scopus: '_scopus_id',
+        wos: '_isi_loc',
+    };
+    !!data && data.forEach(sourceObj => {
+        const sourceKey = sourceKeys[sourceObj.source];
+        const searchKey = `fez_record_search_key${sourceKey}`;
+        const subKey = `rek${sourceKey}`;
+        result[searchKey] = {};
+        result[searchKey][subKey] = sourceObj.id;
+    });
+
+    return result;
+};

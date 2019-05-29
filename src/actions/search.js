@@ -93,12 +93,18 @@ export function createSearchPromise(source, queryString, dispatch) {
  */
 export function searchPublications(searchQuery) {
     return dispatch => {
-        dispatch({type: actions.SEARCH_LOADING, payload: searchQuery});
+        dispatch({
+            type: actions.SEARCH_LOADING,
+            payload: searchQuery
+        });
 
         const searchPromises = Object.keys(locale.global.sources)
             .map(source => createSearchPromise(source, searchQuery, dispatch));
 
-        dispatch({type: actions.SEARCH_SOURCE_COUNT, payload: searchPromises.length});
+        dispatch({
+            type: actions.SEARCH_SOURCE_COUNT,
+            payload: searchPromises.length
+        });
 
         return Promise.all(searchPromises)
             .then((response) => {
@@ -131,11 +137,19 @@ export function getSearchLookupApi(searchQuery, searchKey) {
 export function loadSearchKeyList(searchKey, searchQuery) {
     return dispatch => {
         dispatch({type: `${actions.SEARCH_KEY_LOOKUP_LOADING}@${searchKey}`, payload: searchKey});
-        return searchQuery && searchQuery.trim().length > 0 && get(getSearchLookupApi(searchQuery, searchKey))
+        return searchQuery &&
+        searchQuery.trim().length > 0 &&
+        get(getSearchLookupApi(searchQuery, searchKey))
             .then((response) => {
-                dispatch({type: `${actions.SEARCH_KEY_LOOKUP_LOADED}@${searchKey}`, payload: response.data});
+                dispatch({
+                    type: `${actions.SEARCH_KEY_LOOKUP_LOADED}@${searchKey}`,
+                    payload: response.data
+                });
             }, (error) => {
-                dispatch({type: `${actions.SEARCH_KEY_LOOKUP_FAILED}@${searchKey}`, payload: error.message});
+                dispatch({
+                    type: `${actions.SEARCH_KEY_LOOKUP_FAILED}@${searchKey}`,
+                    payload: error.message
+                });
             });
     };
 }
@@ -162,7 +176,10 @@ export function searchEspacePublications(searchParams) {
 
         dispatch({type: actions.SEARCH_LOADING, payload: ''});
 
-        return get(SEARCH_INTERNAL_RECORDS_API({...searchParams, facets: searchParams.activeFacets || {}}))
+        return get(SEARCH_INTERNAL_RECORDS_API({
+            ...searchParams,
+            facets: searchParams.activeFacets || {}
+        }))
             .then(response => {
                 dispatch({
                     type: actions.SEARCH_LOADED,
@@ -180,13 +197,31 @@ export function searchEspacePublications(searchParams) {
 
 export function loadPublicationList(searchKey, searchQuery) {
     return dispatch => {
-        dispatch({type: `${actions.SEARCH_KEY_LOOKUP_LOADING}@${searchKey}`, payload: searchKey});
+        dispatch({
+            type: `${actions.SEARCH_KEY_LOOKUP_LOADING}@${searchKey}`,
+            payload: searchKey
+        });
 
-        return get(SEARCH_INTERNAL_RECORDS_API({searchQueryParams: {all: searchQuery}, page: 1, pageSize: 20, sortBy: 'score', sortDirection: 'Desc', facets: {}}))
+        return get(SEARCH_INTERNAL_RECORDS_API({
+            searchQueryParams: {
+                all: searchQuery
+            },
+            page: 1,
+            pageSize: 20,
+            sortBy: 'score',
+            sortDirection: 'Desc',
+            facets: {}
+        }))
             .then((response) => {
-                dispatch({type: `${actions.SEARCH_KEY_LOOKUP_LOADED}@${searchKey}`, payload: response.data});
+                dispatch({
+                    type: `${actions.SEARCH_KEY_LOOKUP_LOADED}@${searchKey}`,
+                    payload: response.data
+                });
             }, (error) => {
-                dispatch({type: `${actions.SEARCH_KEY_LOOKUP_FAILED}@${searchKey}`, payload: error.message});
+                dispatch({
+                    type: `${actions.SEARCH_KEY_LOOKUP_FAILED}@${searchKey}`,
+                    payload: error.message
+                });
             });
     };
 }
