@@ -11,6 +11,11 @@ describe('Routes method', () => {
 
     it('should return a list of menus for researcher', () => {
         const testRoutes = routes.getMenuConfig(accounts.uqresearcher);
+        expect(testRoutes.length).toEqual(12);
+    });
+
+    it('should return a list of menus including incomplete menu item for researcher', () => {
+        const testRoutes = routes.getMenuConfig(accounts.uqresearcher, false, true);
         expect(testRoutes.length).toEqual(13);
     });
 
@@ -21,6 +26,11 @@ describe('Routes method', () => {
 
     it('should return a list of menus for user who can masquerade', () => {
         const testRoutes = routes.getMenuConfig(accounts.uqstaff);
+        expect(testRoutes.length).toEqual(17);
+    });
+
+    it('should return a list of menus including incomplete menu item for user who can masquerade', () => {
+        const testRoutes = routes.getMenuConfig(accounts.uqstaff, false, true);
         expect(testRoutes.length).toEqual(18);
     });
 

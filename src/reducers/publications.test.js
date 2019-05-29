@@ -9,6 +9,11 @@ const initialState = {
     loadingPublicationsList: true
 };
 
+const getInitialState = () => ({
+    'mine': initialState,
+    'incomplete': initialState
+});
+
 const authorPubsPayload = {
     "total": 1,
     "per_page": 20,
@@ -347,20 +352,20 @@ const authorPubsPayload = {
 
 describe('Authors publications reducer', () => {
     it('returns the correct state while authors publications are loading', () => {
-        const test = publicationsReducer(initialState, {type: actions.AUTHOR_PUBLICATIONS_LOADING});
-        expect(test.publicationsList).toEqual([]);
-        expect(test.publicationsListPagingData).toEqual({});
-        expect(test.loadingPublicationsList).toBeTruthy();
+        const test = publicationsReducer(getInitialState(), {type: `${actions.AUTHOR_PUBLICATIONS_LOADING}@mine`});
+        expect(test.mine.publicationsList).toEqual([]);
+        expect(test.mine.publicationsListPagingData).toEqual({});
+        expect(test.mine.loadingPublicationsList).toBeTruthy();
     });
 
     it('returns the correct state when authors publications have loaded with expected filters and facets', () => {
-        const test = publicationsReducer(initialState, {
-            type: actions.AUTHOR_PUBLICATIONS_LOADED,
+        const test = publicationsReducer(getInitialState(), {
+            type: `${actions.AUTHOR_PUBLICATIONS_LOADED}@mine`,
             payload: authorPubsPayload
         });
 
-        expect(test.publicationsList).toEqual(authorPubsPayload.data);
-        expect(test.publicationsListPagingData).toEqual({
+        expect(test.mine.publicationsList).toEqual(authorPubsPayload.data);
+        expect(test.mine.publicationsListPagingData).toEqual({
             total: authorPubsPayload.total,
             current_page: authorPubsPayload.current_page,
             from: authorPubsPayload.from,
@@ -368,31 +373,30 @@ describe('Authors publications reducer', () => {
             per_page: authorPubsPayload.per_page
         });
         const pubListFacets = authorPubsPayload.filters.facets || {};
-        expect(test.publicationsListFacets).toEqual(pubListFacets);
-        expect(test.loadingPublicationsList).toBeFalsy();
+        expect(test.mine.publicationsListFacets).toEqual(pubListFacets);
+        expect(test.mine.loadingPublicationsList).toBeFalsy();
     });
 
 
     it('returns the correct state when authors publications have loaded without expected filters and facets', () => {
         delete authorPubsPayload['filters'];
-        const test = publicationsReducer(initialState, {
-            type: actions.AUTHOR_PUBLICATIONS_LOADED,
+        const test = publicationsReducer(getInitialState(), {
+            type: `${actions.AUTHOR_PUBLICATIONS_LOADED}@mine`,
             payload: authorPubsPayload
         });
-        expect(test.publicationsListFacets).toEqual({});
+        expect(test.mine.publicationsListFacets).toEqual({});
     });
 
     it('returns the correct state when authors publications fails to load data', () => {
-        const test = publicationsReducer(initialState, {type: actions.AUTHOR_PUBLICATIONS_FAILED});
-        expect(test.publicationsList).toEqual([]);
-        expect(test.publicationsListPagingData).toEqual({});
-        expect(test.publicationsListFacets).toEqual({});
-        expect(test.loadingPublicationsList).toBeFalsy();
+        const test = publicationsReducer(getInitialState(), {type: `${actions.AUTHOR_PUBLICATIONS_FAILED}@mine`});
+        expect(test.mine.publicationsList).toEqual([]);
+        expect(test.mine.publicationsListPagingData).toEqual({});
+        expect(test.mine.publicationsListFacets).toEqual({});
+        expect(test.mine.loadingPublicationsList).toBeFalsy();
     });
 });
 
 describe('Authors incomplete publications reducer', () => {
-
     const payload = {
         "total": 1,
         "per_page": 20,
@@ -729,54 +733,53 @@ describe('Authors incomplete publications reducer', () => {
         }
     };
 
-
     it('returns the correct state while authors publications are loading', () => {
-        const test = publicationsReducer(initialState, {type: actions.AUTHOR_INCOMPLETEPUBLICATIONS_LOADING});
-        expect(test.publicationsList).toEqual([]);
-        expect(test.publicationsListPagingData).toEqual({});
-        expect(test.loadingPublicationsList).toBeTruthy();
+        const test = publicationsReducer(getInitialState(), {type: `${actions.AUTHOR_PUBLICATIONS_LOADING}@incomplete`});
+        expect(test.incomplete.publicationsList).toEqual([]);
+        expect(test.incomplete.publicationsListPagingData).toEqual({});
+        expect(test.incomplete.loadingPublicationsList).toBeTruthy();
     });
 
     it('returns the correct state when authors publications have loaded with expected filters and facets', () => {
-        const test = publicationsReducer(initialState, {
-            type: actions.AUTHOR_INCOMPLETEPUBLICATIONS_LOADED,
+        const test = publicationsReducer(getInitialState(), {
+            type: `${actions.AUTHOR_PUBLICATIONS_LOADED}@incomplete`,
             payload: payload
         });
 
-        expect(test.publicationsList).toEqual(payload.data);
-        expect(test.publicationsListPagingData).toEqual({
+        expect(test.incomplete.publicationsList).toEqual(payload.data);
+        expect(test.incomplete.publicationsListPagingData).toEqual({
             total: payload.total,
             current_page: payload.current_page,
             from: payload.from,
             to: payload.to,
             per_page: payload.per_page
         });
-        expect(test.publicationsListFacets).toEqual(payload.filters.facets);
-        expect(test.loadingPublicationsList).toBeFalsy();
+        expect(test.incomplete.publicationsListFacets).toEqual(payload.filters.facets);
+        expect(test.incomplete.loadingPublicationsList).toBeFalsy();
     });
 
 
     it('returns the correct state when authors publications have loaded without expected filters and facets', () => {
         delete payload['filters'];
-        const test = publicationsReducer(initialState, {
-            type: actions.AUTHOR_INCOMPLETEPUBLICATIONS_LOADED,
+        const test = publicationsReducer(getInitialState(), {
+            type: `${actions.AUTHOR_PUBLICATIONS_LOADED}@incomplete`,
             payload: payload
         });
-        expect(test.publicationsListFacets).toEqual({});
+        expect(test.incomplete.publicationsListFacets).toEqual({});
     });
 
     it('returns the correct state when authors publications fails to load data', () => {
-        const test = publicationsReducer(initialState, {type: actions.AUTHOR_INCOMPLETEPUBLICATIONS_FAILED});
-        expect(test.publicationsList).toEqual([]);
-        expect(test.publicationsListPagingData).toEqual({});
-        expect(test.publicationsListFacets).toEqual({});
-        expect(test.loadingPublicationsList).toBeFalsy();
+        const test = publicationsReducer(getInitialState(), {type: `${actions.AUTHOR_PUBLICATIONS_FAILED}@incomplete`});
+        expect(test.incomplete.publicationsList).toEqual([]);
+        expect(test.incomplete.publicationsListPagingData).toEqual({});
+        expect(test.incomplete.publicationsListFacets).toEqual({});
+        expect(test.incomplete.loadingPublicationsList).toBeFalsy();
     });
 });
 
 describe('General publications reducer', () => {
     it('returns the state when an invalid action type is supplied', () => {
-        const test = publicationsReducer(initialState, {type: 'INVALID_ACTION_TYPE'});
-        expect(test).toEqual(initialState);
+        const test = publicationsReducer(getInitialState(), {type: 'INVALID_ACTION_TYPE'});
+        expect(test).toEqual(getInitialState());
     });
 });

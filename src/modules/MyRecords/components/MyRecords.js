@@ -15,7 +15,6 @@ import Hidden from '@material-ui/core/Hidden';
 export default class MyRecords extends PureComponent {
     static propTypes = {
         publicationsList: PropTypes.array,
-        publicationsListType: PropTypes.string,
         publicationsListFacets: PropTypes.object,
         loadingPublicationsList: PropTypes.bool,
         publicationsListPagingData: PropTypes.object,
@@ -56,8 +55,8 @@ export default class MyRecords extends PureComponent {
     }
 
     componentDidMount() {
-        if (!this.props.accountLoading && (!this.props.publicationsList || this.props.publicationsListType !== 'mine')) {
-            this.props.actions.searchAuthorPublications({...this.state});
+        if (!this.props.accountLoading && !this.props.publicationsList.length) {
+            this.props.actions.loadAuthorPublications({...this.state});
         }
     }
 
@@ -68,7 +67,7 @@ export default class MyRecords extends PureComponent {
             && newProps.location.pathname === this.props.thisUrl) {
             this.setState({...(!!newProps.location.state ? newProps.location.state : this.initState)}, () => {
                 // only will be called when user clicks back on my records page
-                this.props.actions.searchAuthorPublications({...this.state});
+                this.props.actions.loadAuthorPublications({...this.state});
             });
         }
         // set forever-true flag if user has publications
@@ -146,7 +145,7 @@ export default class MyRecords extends PureComponent {
             search: `?ts=${Date.now()}`,
             state: {...this.state}
         });
-        this.props.actions.searchAuthorPublications({...this.state});
+        this.props.actions.loadAuthorPublications({...this.state});
     };
 
     fixRecord = (item) => {

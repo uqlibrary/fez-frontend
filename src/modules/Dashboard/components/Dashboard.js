@@ -62,8 +62,7 @@ export class DashboardClass extends PureComponent {
         hidePossiblyYourPublicationsLure: PropTypes.bool,
 
         // incomplete Record lure
-        loadingIncompleteRecordData: PropTypes.bool,
-        incompleteRecordList: PropTypes.object,
+        incomplete: PropTypes.object,
 
         // wos/scopus data
         loadingPublicationsStats: PropTypes.bool,
@@ -90,9 +89,8 @@ export class DashboardClass extends PureComponent {
         if (this.props.account && this.props.account.id) {
             this.props.actions.countPossiblyYourPublications(this.props.account.id);
             this.props.actions.loadAuthorPublicationsStats(this.props.account.id);
-            if(!this.props.incompleteRecordList) {
-                this.props.actions.searchAuthorIncompletePublications();
-            }
+            !this.props.incomplete.publicationsList.length &&
+                this.props.actions.searchAuthorPublications({}, 'incomplete');
         }
     }
 
@@ -155,10 +153,10 @@ export class DashboardClass extends PureComponent {
                     <PublicationStats publicationsStats={this.props.publicationsStats}/>
                 </StandardCard>
             ) : null;
-        const pluralTextReplacement = this.props.incompleteRecordList && this.props.incompleteRecordList.publicationsListPagingData
-                                       && this.props.incompleteRecordList.publicationsListPagingData.total > 1 ? 's' : '';
-        const verbEndingTextReplacement = this.props.incompleteRecordList && this.props.incompleteRecordList.publicationsListPagingData
-                                       && this.props.incompleteRecordList.publicationsListPagingData.total > 1 ? '' : 's';
+        const pluralTextReplacement = this.props.incomplete && this.props.incomplete.publicationsListPagingData
+                                       && this.props.incomplete.publicationsListPagingData.total > 1 ? 's' : '';
+        const verbEndingTextReplacement = this.props.incomplete && this.props.incomplete.publicationsListPagingData
+                                       && this.props.incomplete.publicationsListPagingData.total > 1 ? '' : 's';
 
         return (
             <StandardPage>
@@ -176,15 +174,15 @@ export class DashboardClass extends PureComponent {
                         <React.Fragment>
                             {
                                 !!txt.incompleteRecordLure &&
-                                !this.props.loadingIncompleteRecordData &&
-                                !!this.props.incompleteRecordList
-                                && this.props.incompleteRecordList.publicationsListPagingData
-                                && this.props.incompleteRecordList.publicationsListPagingData.total > 0 &&
+                                !!this.props.incomplete &&
+                                !this.props.incomplete.loadingPublicationsList &&
+                                this.props.incomplete.publicationsListPagingData &&
+                                this.props.incomplete.publicationsListPagingData.total > 0 &&
                                 <Grid item xs={12} style={{marginTop: -27}}>
                                     <Alert
                                         title={txt.incompleteRecordLure.title}
                                         message={txt.incompleteRecordLure.message
-                                            .replace('[count]', this.props.incompleteRecordList.publicationsListPagingData.total)
+                                            .replace('[count]', this.props.incomplete.publicationsListPagingData.total)
                                             .replace('[plural]', pluralTextReplacement)
                                             .replace('[verbEnding]', verbEndingTextReplacement)
                                         }

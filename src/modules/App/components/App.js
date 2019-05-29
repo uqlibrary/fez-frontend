@@ -126,7 +126,7 @@ export class AppClass extends PureComponent {
             this.sessionExpiredConfirmationBox.showConfirmation();
         }
         if(nextProps.account && this.props.account !== nextProps.account && !nextProps.accountLoading) {
-            this.props.actions.searchAuthorIncompletePublications({});
+            this.props.actions.searchAuthorPublications({}, 'incomplete');
         }
     }
 
@@ -196,19 +196,11 @@ export class AppClass extends PureComponent {
             && this.props.account.class.indexOf('IS_UQ_STUDENT_PLACEMENT') >= 0;
         const hasIncompleteWorks = !!(
             this.props.incompleteRecordList &&
-            this.props.incompleteRecordList.publicationsListPagingData &&
-            this.props.incompleteRecordList.publicationsListPagingData.total > 0 &&
-            this.props.incompleteRecordList.publicationsListType === 'incomplete'
+            this.props.incompleteRecordList.incomplete.publicationsListPagingData &&
+            this.props.incompleteRecordList.incomplete.publicationsListPagingData.total > 0
         );
-        const getMenuItems = () => {
-            let menuItems = routes.getMenuConfig(this.props.account, isOrcidRequired && isHdrStudent);
-            // Filter out the incomplete menu item if there are none
-            if (!hasIncompleteWorks) {
-                menuItems = menuItems.filter(item => item.linkTo !== routes.pathConfig.records.incomplete);
-            }
-            return menuItems;
-        };
-        const isPublicPage = this.isPublicPage(getMenuItems());
+        const menuItems = routes.getMenuConfig(this.props.account, isOrcidRequired && isHdrStudent, hasIncompleteWorks);
+        const isPublicPage = this.isPublicPage(menuItems);
         const isThesisSubmissionPage = this.props.location.pathname === routes.pathConfig.hdrSubmission ||
             this.props.location.pathname === routes.pathConfig.sbsSubmission;
         const isSearchPage = this.props.location.pathname === routes.pathConfig.records.search ||
@@ -321,7 +313,7 @@ export class AppClass extends PureComponent {
                     showMenu &&
                     <MenuDrawer
                         hasIncompleteWorks={hasIncompleteWorks || false}
-                        menuItems={getMenuItems()}
+                        menuItems={menuItems}
                         drawerOpen={this.state.docked || this.state.menuDrawerOpen}
                         docked={this.state.docked}
                         history={this.props.history}

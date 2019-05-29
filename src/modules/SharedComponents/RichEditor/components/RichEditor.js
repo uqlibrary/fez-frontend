@@ -28,22 +28,18 @@ export default class RichEditor extends PureComponent {
     };
 
     componentDidMount() {
-        if (window.CKEDITOR) {
-            this.editorInstance = window.CKEDITOR.appendTo(
-                this.props.inputRef.current,
-                {
-                    removeButtons: 'Cut,Copy,Paste,Undo,Redo,Anchor',
-                    height: this.props.height,
-                    pasteFilter: 'semantic-content'
-                },
-                !!this.props.value && this.props.value.get('htmlText') || null
-            );
+        this.editorInstance = !!window.CKEDITOR && window.CKEDITOR.appendTo(
+            this.props.inputRef.current,
+            {
+                removeButtons: 'Cut,Copy,Paste,Undo,Redo,Anchor',
+                height: this.props.height,
+                pasteFilter: 'semantic-content'
+            },
+            !!this.props.value && this.props.value.get('htmlText') || null
+        );
 
-            if (this.editorInstance) {
-                this.editorInstance.on('instanceReady', this.onInstanceReady);
-                this.editorInstance.on('change', this.onChange);
-            }
-        }
+        !!this.editorInstance && this.editorInstance.on('instanceReady', this.onInstanceReady);
+        !!this.editorInstance && this.editorInstance.on('change', this.onChange);
     }
 
     componentWillReceiveProps(nextProps) {
@@ -95,7 +91,14 @@ export default class RichEditor extends PureComponent {
                 <div className={this.props.className} ref={this.props.inputRef} />
                 {
                     this.props.meta && this.props.meta.error &&
-                        <Typography color="error" variant="caption" component={'span'} style={{display: 'inline-block'}}>
+                        <Typography
+                            color="error"
+                            variant="caption"
+                            component={'span'}
+                            style={{
+                                display: 'inline-block'
+                            }}
+                        >
                             {
                                 error || this.props.meta.error
                             }
@@ -107,7 +110,18 @@ export default class RichEditor extends PureComponent {
                 }
                 {
                     this.props.maxValue &&
-                    <Typography component={'span'} style={{display: 'inline-block'}} variant="caption" color={this.props.meta && this.props.meta.error && 'error'}>
+                    <Typography
+                        component={'span'}
+                        style={{
+                            display: 'inline-block'
+                        }}
+                        variant="caption"
+                        color={
+                            this.props.meta &&
+                            this.props.meta.error &&
+                            'error'
+                        }
+                    >
                         {inputLength > 0 ? inputLength : 0} characters of {this.props.maxValue} {this.props.instructions || ''}
                     </Typography>
                 }
