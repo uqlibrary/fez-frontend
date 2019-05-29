@@ -854,7 +854,7 @@ exports[`PublicationsList renders component with items 1`] = `
         "rek_wok_doc_type_xsdmf_id": null,
       }
     }
-    showContentIndicators={false}
+    showContentIndicators={true}
     showDefaultActions={false}
     showMetrics={false}
     showSourceCountIcon={false}
@@ -1972,7 +1972,7 @@ exports[`PublicationsList renders component with items 1`] = `
         "rek_wok_doc_type_xsdmf_id": 12551,
       }
     }
-    showContentIndicators={false}
+    showContentIndicators={true}
     showDefaultActions={false}
     showMetrics={false}
     showSourceCountIcon={false}
@@ -2926,7 +2926,7 @@ exports[`PublicationsList renders component with items 1`] = `
         "rek_wok_doc_type_xsdmf_id": 12551,
       }
     }
-    showContentIndicators={false}
+    showContentIndicators={true}
     showDefaultActions={false}
     showMetrics={false}
     showSourceCountIcon={false}
@@ -3838,7 +3838,7 @@ exports[`PublicationsList renders component with items 1`] = `
         "rek_wok_doc_type_xsdmf_id": 12551,
       }
     }
-    showContentIndicators={false}
+    showContentIndicators={true}
     showDefaultActions={false}
     showMetrics={false}
     showSourceCountIcon={false}
@@ -4895,7 +4895,7 @@ exports[`PublicationsList renders component with items 1`] = `
         "rek_wok_doc_type_xsdmf_id": 12551,
       }
     }
-    showContentIndicators={false}
+    showContentIndicators={true}
     showDefaultActions={false}
     showMetrics={false}
     showSourceCountIcon={false}
@@ -6087,7 +6087,7 @@ exports[`PublicationsList renders component with items 1`] = `
         "rek_wok_doc_type_xsdmf_id": 12551,
       }
     }
-    showContentIndicators={false}
+    showContentIndicators={true}
     showDefaultActions={false}
     showMetrics={false}
     showSourceCountIcon={false}
@@ -6935,7 +6935,7 @@ exports[`PublicationsList renders component with items 1`] = `
         "rek_wok_doc_type_xsdmf_id": 12551,
       }
     }
-    showContentIndicators={false}
+    showContentIndicators={true}
     showDefaultActions={false}
     showMetrics={false}
     showSourceCountIcon={false}
@@ -7694,7 +7694,7 @@ exports[`PublicationsList renders component with items 1`] = `
         "rek_wok_doc_type_xsdmf_id": 12551,
       }
     }
-    showContentIndicators={false}
+    showContentIndicators={true}
     showDefaultActions={false}
     showMetrics={false}
     showSourceCountIcon={false}
@@ -8666,7 +8666,7 @@ exports[`PublicationsList renders component with items 1`] = `
         "rek_wok_doc_type_xsdmf_id": 12551,
       }
     }
-    showContentIndicators={false}
+    showContentIndicators={true}
     showDefaultActions={false}
     showMetrics={false}
     showSourceCountIcon={false}
@@ -10049,7 +10049,7 @@ exports[`PublicationsList renders component with items 1`] = `
         "rek_wok_doc_type_xsdmf_id": 12551,
       }
     }
-    showContentIndicators={false}
+    showContentIndicators={true}
     showDefaultActions={false}
     showMetrics={false}
     showSourceCountIcon={false}
@@ -11077,7 +11077,7 @@ exports[`PublicationsList renders component with items 1`] = `
         "rek_wok_doc_type_xsdmf_id": 12551,
       }
     }
-    showContentIndicators={false}
+    showContentIndicators={true}
     showDefaultActions={false}
     showMetrics={false}
     showSourceCountIcon={false}
@@ -11824,7 +11824,7 @@ exports[`PublicationsList renders component with items 1`] = `
         "rek_wok_doc_type_xsdmf_id": null,
       }
     }
-    showContentIndicators={false}
+    showContentIndicators={true}
     showDefaultActions={false}
     showMetrics={false}
     showSourceCountIcon={false}
@@ -12764,7 +12764,7 @@ exports[`PublicationsList renders component with items 1`] = `
         "rek_wok_doc_type_xsdmf_id": 12551,
       }
     }
-    showContentIndicators={false}
+    showContentIndicators={true}
     showDefaultActions={false}
     showMetrics={false}
     showSourceCountIcon={false}
@@ -13573,7 +13573,7 @@ exports[`PublicationsList renders component with items 1`] = `
         "rek_wok_doc_type_xsdmf_id": 12551,
       }
     }
-    showContentIndicators={false}
+    showContentIndicators={true}
     showDefaultActions={false}
     showMetrics={false}
     showSourceCountIcon={false}
@@ -14434,7 +14434,7 @@ exports[`PublicationsList renders component with items 1`] = `
         "rek_wok_doc_type_xsdmf_id": 12551,
       }
     }
-    showContentIndicators={false}
+    showContentIndicators={true}
     showDefaultActions={false}
     showMetrics={false}
     showSourceCountIcon={false}
@@ -15555,7 +15555,7 @@ exports[`PublicationsList renders component with items 1`] = `
         "rek_wok_doc_type_xsdmf_id": 12551,
       }
     }
-    showContentIndicators={false}
+    showContentIndicators={true}
     showDefaultActions={false}
     showMetrics={false}
     showSourceCountIcon={false}
@@ -16866,7 +16866,7 @@ exports[`PublicationsList renders component with items 1`] = `
         "rek_wok_doc_type_xsdmf_id": 12551,
       }
     }
-    showContentIndicators={false}
+    showContentIndicators={true}
     showDefaultActions={false}
     showMetrics={false}
     showSourceCountIcon={false}
@@ -17840,7 +17840,7 @@ exports[`PublicationsList renders component with items 1`] = `
         "rek_wok_doc_type_xsdmf_id": 12551,
       }
     }
-    showContentIndicators={false}
+    showContentIndicators={true}
     showDefaultActions={false}
     showMetrics={false}
     showSourceCountIcon={false}
@@ -18468,7 +18468,7 @@ exports[`PublicationsList renders component with items 1`] = `
         "rek_wok_doc_type_xsdmf_id": 12551,
       }
     }
-    showContentIndicators={false}
+    showContentIndicators={true}
     showDefaultActions={false}
     showMetrics={false}
     showSourceCountIcon={false}
@@ -19589,7 +19589,7 @@ exports[`PublicationsList renders component with items 1`] = `
         "rek_wok_doc_type_xsdmf_id": 12551,
       }
     }
-    showContentIndicators={false}
+    showContentIndicators={true}
     showDefaultActions={false}
     showMetrics={false}
     showSourceCountIcon={false}
