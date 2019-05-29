@@ -1,5 +1,5 @@
 import React from 'react';
-import {APP_URL} from 'config';
+import {APP_URL} from 'config/general';
 import {pathConfig} from 'config/routes';
 
 /*
