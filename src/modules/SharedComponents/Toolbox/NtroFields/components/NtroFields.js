@@ -216,7 +216,7 @@ export default class NtroFields extends React.PureComponent {
                                             maxValue={2000}
                                             required
                                             disabled={this.props.submitting}
-                                            validate={[validation.required, validation.maxLengthWithWhitespace(2000)]}
+                                            validate={[validation.required, validation.maxListEditorTextLength2000]}
                                         />
                                     </Grid>
                                 }
@@ -254,7 +254,7 @@ export default class NtroFields extends React.PureComponent {
                                             description={metadata.fields.abstract.placeholder}
                                             maxValue={800}
                                             disabled={this.props.submitting}
-                                            validate={[validation.required, validation.maxLengthWithWhitespace(800)]}
+                                            validate={[validation.required, validation.maxListEditorTextLength800]}
                                         />
                                     }
                                 </Grid>
