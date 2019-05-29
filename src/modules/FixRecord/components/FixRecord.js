@@ -153,7 +153,10 @@ export default class FixRecord extends PureComponent {
                     <Grid container spacing={24}>
                         <Grid item xs={12}>
                             <StandardCard title={txt.subTitle} help={txt.help}>
-                                <PublicationCitation publication={this.props.recordToFix}/>
+                                <PublicationCitation
+                                    publication={this.props.recordToFix}
+                                    showContentIndicators
+                                />
                                 <Field
                                     component={SelectField}
                                     disabled={this.props.submitting}

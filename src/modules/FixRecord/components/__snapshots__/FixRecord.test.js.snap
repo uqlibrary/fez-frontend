@@ -123,6 +123,15 @@ exports[`Component FixRecord _handleDefaultSubmit() 1`] = `
                 "fez_record_search_key_conference_name": null,
                 "fez_record_search_key_construction_date": null,
                 "fez_record_search_key_contact_details_email": Array [],
+                "fez_record_search_key_content_indicator": Array [
+                  Object {
+                    "rek_content_indicator": 454057,
+                    "rek_content_indicator_id": 1,
+                    "rek_content_indicator_lookup": "some content indicator",
+                    "rek_content_indicator_order": 1,
+                    "rek_ismemberof": "UQ:152266",
+                  },
+                ],
                 "fez_record_search_key_contributor": Array [],
                 "fez_record_search_key_contributor_id": Array [],
                 "fez_record_search_key_convener": null,
@@ -413,6 +422,7 @@ exports[`Component FixRecord _handleDefaultSubmit() 1`] = `
                 "rek_wok_doc_type_xsdmf_id": 12551,
               }
             }
+            showContentIndicators={true}
           />
           <Field
             component={[Function]}
@@ -591,6 +601,15 @@ exports[`Component FixRecord componentWillReceiveProps() 1`] = `
                 "fez_record_search_key_conference_name": null,
                 "fez_record_search_key_construction_date": null,
                 "fez_record_search_key_contact_details_email": Array [],
+                "fez_record_search_key_content_indicator": Array [
+                  Object {
+                    "rek_content_indicator": 454057,
+                    "rek_content_indicator_id": 1,
+                    "rek_content_indicator_lookup": "some content indicator",
+                    "rek_content_indicator_order": 1,
+                    "rek_ismemberof": "UQ:152266",
+                  },
+                ],
                 "fez_record_search_key_contributor": Array [],
                 "fez_record_search_key_contributor_id": Array [],
                 "fez_record_search_key_convener": null,
@@ -881,6 +900,7 @@ exports[`Component FixRecord componentWillReceiveProps() 1`] = `
                 "rek_wok_doc_type_xsdmf_id": 12551,
               }
             }
+            showContentIndicators={true}
           />
           <Field
             component={[Function]}
@@ -1070,6 +1090,15 @@ exports[`Component FixRecord should render fix record form 1`] = `
                 "fez_record_search_key_conference_name": null,
                 "fez_record_search_key_construction_date": null,
                 "fez_record_search_key_contact_details_email": Array [],
+                "fez_record_search_key_content_indicator": Array [
+                  Object {
+                    "rek_content_indicator": 454057,
+                    "rek_content_indicator_id": 1,
+                    "rek_content_indicator_lookup": "some content indicator",
+                    "rek_content_indicator_order": 1,
+                    "rek_ismemberof": "UQ:152266",
+                  },
+                ],
                 "fez_record_search_key_contributor": Array [],
                 "fez_record_search_key_contributor_id": Array [],
                 "fez_record_search_key_convener": null,
@@ -1360,6 +1389,7 @@ exports[`Component FixRecord should render fix record form 1`] = `
                 "rek_wok_doc_type_xsdmf_id": 12551,
               }
             }
+            showContentIndicators={true}
           />
           <Field
             component={[Function]}
@@ -1670,6 +1700,15 @@ exports[`Component FixRecord should render record citation, two actions in selec
                 "fez_record_search_key_conference_name": null,
                 "fez_record_search_key_construction_date": null,
                 "fez_record_search_key_contact_details_email": Array [],
+                "fez_record_search_key_content_indicator": Array [
+                  Object {
+                    "rek_content_indicator": 454057,
+                    "rek_content_indicator_id": 1,
+                    "rek_content_indicator_lookup": "some content indicator",
+                    "rek_content_indicator_order": 1,
+                    "rek_ismemberof": "UQ:152266",
+                  },
+                ],
                 "fez_record_search_key_contributor": Array [],
                 "fez_record_search_key_contributor_id": Array [],
                 "fez_record_search_key_convener": null,
@@ -1960,6 +1999,7 @@ exports[`Component FixRecord should render record citation, two actions in selec
                 "rek_wok_doc_type_xsdmf_id": 12551,
               }
             }
+            showContentIndicators={true}
           />
           <Field
             component={[Function]}
@@ -2138,6 +2178,15 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
                 "fez_record_search_key_conference_name": null,
                 "fez_record_search_key_construction_date": null,
                 "fez_record_search_key_contact_details_email": Array [],
+                "fez_record_search_key_content_indicator": Array [
+                  Object {
+                    "rek_content_indicator": 454057,
+                    "rek_content_indicator_id": 1,
+                    "rek_content_indicator_lookup": "some content indicator",
+                    "rek_content_indicator_order": 1,
+                    "rek_ismemberof": "UQ:152266",
+                  },
+                ],
                 "fez_record_search_key_contributor": Array [],
                 "fez_record_search_key_contributor_id": Array [],
                 "fez_record_search_key_convener": null,
@@ -2428,6 +2477,7 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
                 "rek_wok_doc_type_xsdmf_id": 12551,
               }
             }
+            showContentIndicators={true}
           />
           <Field
             component={[Function]}
@@ -2727,6 +2777,15 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
                 "fez_record_search_key_conference_name": null,
                 "fez_record_search_key_construction_date": null,
                 "fez_record_search_key_contact_details_email": Array [],
+                "fez_record_search_key_content_indicator": Array [
+                  Object {
+                    "rek_content_indicator": 454057,
+                    "rek_content_indicator_id": 1,
+                    "rek_content_indicator_lookup": "some content indicator",
+                    "rek_content_indicator_order": 1,
+                    "rek_ismemberof": "UQ:152266",
+                  },
+                ],
                 "fez_record_search_key_contributor": Array [],
                 "fez_record_search_key_contributor_id": Array [],
                 "fez_record_search_key_convener": null,
@@ -3017,6 +3076,7 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
                 "rek_wok_doc_type_xsdmf_id": 12551,
               }
             }
+            showContentIndicators={true}
           />
           <Field
             component={[Function]}
@@ -3311,6 +3371,15 @@ exports[`Component FixRecord should render unclaim form 1`] = `
                 "fez_record_search_key_conference_name": null,
                 "fez_record_search_key_construction_date": null,
                 "fez_record_search_key_contact_details_email": Array [],
+                "fez_record_search_key_content_indicator": Array [
+                  Object {
+                    "rek_content_indicator": 454057,
+                    "rek_content_indicator_id": 1,
+                    "rek_content_indicator_lookup": "some content indicator",
+                    "rek_content_indicator_order": 1,
+                    "rek_ismemberof": "UQ:152266",
+                  },
+                ],
                 "fez_record_search_key_contributor": Array [],
                 "fez_record_search_key_contributor_id": Array [],
                 "fez_record_search_key_convener": null,
@@ -3601,6 +3670,7 @@ exports[`Component FixRecord should render unclaim form 1`] = `
                 "rek_wok_doc_type_xsdmf_id": 12551,
               }
             }
+            showContentIndicators={true}
           />
           <Field
             component={[Function]}
