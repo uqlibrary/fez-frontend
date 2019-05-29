@@ -22,7 +22,6 @@ const SelectFieldWrapper = props => {
                 <Select
                     id={`${filteredProps.label}`}
                     inputProps={{'aria-labelledby': `${filteredProps.label}-label`, id: filteredProps.label}}
-                    inputLabelProps={{for: filteredProps.label, id: `${filteredProps.label}-label`}}
                     {...filteredProps}
                     autoWidth
                 />

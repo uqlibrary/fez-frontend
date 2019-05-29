@@ -19,12 +19,6 @@ exports[`SelectfieldWrapper snapshots tests renders SelectField component 1`] = 
       floatingLabelText="This is a test selectfield component"
       fullWidth={true}
       id="undefined"
-      inputLabelProps={
-        Object {
-          "for": undefined,
-          "id": "undefined-label",
-        }
-      }
       inputProps={
         Object {
           "aria-labelledby": "undefined-label",
@@ -59,12 +53,6 @@ exports[`SelectfieldWrapper snapshots tests renders an error 1`] = `
       floatingLabelText="test selectfield component"
       fullWidth={true}
       id="undefined"
-      inputLabelProps={
-        Object {
-          "for": undefined,
-          "id": "undefined-label",
-        }
-      }
       inputProps={
         Object {
           "aria-labelledby": "undefined-label",
