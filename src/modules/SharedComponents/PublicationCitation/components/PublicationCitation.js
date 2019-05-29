@@ -110,11 +110,31 @@ export class PublicationCitation extends PureComponent {
     constructor(props) {
         super(props);
         // keep a list of all available citations
-        this.citationComponents = {BookChapterCitation, JournalArticleCitation, BookCitation, ConferencePaperCitation,
-            AudioDocumentCitation, GenericDocumentCitation, ResearchReportCitation, PreprintCitation, SeminarPaperCitation,
-            CreativeWorkCitation, ManuscriptCitation, DepartmentTechnicalReportCitation, ImageDocumentCitation, DesignCitation,
-            DigilibImageCitation, WorkingPaperCitation, VideoDocumentCitation, JournalCitation, ConferenceProceedingsCitation,
-            ThesisCitation, NewspaperArticleCitation, PatentCitation, DataCollectionCitation};
+        this.citationComponents = {
+            BookChapterCitation,
+            JournalArticleCitation,
+            BookCitation,
+            ConferencePaperCitation,
+            AudioDocumentCitation,
+            GenericDocumentCitation,
+            ResearchReportCitation,
+            PreprintCitation,
+            SeminarPaperCitation,
+            CreativeWorkCitation,
+            ManuscriptCitation,
+            DepartmentTechnicalReportCitation,
+            ImageDocumentCitation,
+            DesignCitation,
+            DigilibImageCitation,
+            WorkingPaperCitation,
+            VideoDocumentCitation,
+            JournalCitation,
+            ConferenceProceedingsCitation,
+            ThesisCitation,
+            NewspaperArticleCitation,
+            PatentCitation,
+            DataCollectionCitation
+        };
 
         // get default actions from locale
         this.defaultActions = locale.components.publicationCitation.defaultActions;
@@ -137,7 +157,11 @@ export class PublicationCitation extends PureComponent {
 
     renderTitle = () => {
         return this.props.publication.rek_pid && !this.props.hideLinks
-            ? (<Link to={routes.pathConfig.records.view(this.props.publication.rek_pid)}>{ReactHtmlParser(this.props.publication.rek_title)}</Link>)
+            ? (
+                <Link to={routes.pathConfig.records.view(this.props.publication.rek_pid)}>
+                    {ReactHtmlParser(this.props.publication.rek_title)}
+                </Link>
+            )
             : (ReactHtmlParser(this.props.publication.rek_title));
     }
 
@@ -148,9 +172,21 @@ export class PublicationCitation extends PureComponent {
             })
             : null;
 
-        return filteredPublicationType && filteredPublicationType.length > 0 && filteredPublicationType[0].citationComponent
-            ? React.createElement(filteredPublicationType[0].citationComponent, {publication: this.props.publication, hideDoiLink: this.props.hideLinks})
-            : (<div>Citation display not available for {publicationTypeId}</div>);
+        return filteredPublicationType &&
+            filteredPublicationType.length > 0 &&
+            filteredPublicationType[0].citationComponent
+            ? React.createElement(
+                filteredPublicationType[0].citationComponent,
+                {
+                    publication: this.props.publication,
+                    hideDoiLink: this.props.hideLinks
+                }
+            )
+            : (
+                <div>
+                    Citation display not available for {publicationTypeId}
+                </div>
+            );
     }
 
     renderActions = (actions) => {
@@ -192,7 +228,10 @@ export class PublicationCitation extends PureComponent {
                                 key={'source_' + index}
                                 className="publicationSource"
                                 href={sourceConfig.externalUrl.replace('[id]', source.id)}
-                                aria-label={locale.global.linkWillOpenInNewWindow.replace('[destination]', sourceConfig.title)}>
+                                aria-label={locale.global.linkWillOpenInNewWindow.replace(
+                                    '[destination]',
+                                    sourceConfig.title
+                                )}>
                                 {sourceConfig.title}
                             </ExternalLink>
                         );
@@ -212,21 +251,27 @@ export class PublicationCitation extends PureComponent {
                     <Grid item xs>
                         <Grid container spacing={0}>
                             {
-                                !this.props.hideTitle ?
-                                    <Grid item xs style={{minWidth: 1}}>
+                                !this.props.hideTitle
+                                    ? <Grid item xs style={{minWidth: 1}}>
                                         <Typography variant="h6" component="h6" className={classes.citationTitle}>{this.renderTitle()}</Typography>
                                     </Grid>
-                                    :
-                                    <Grid item xs />
+                                    : <Grid item xs />
                             }
                             {
                                 this.props.showMetrics &&
                                     <Grid item xs={12} sm="auto" className="citationMetrics">
                                         <ExternalLink
                                             href={recordValue.citation_url}
-                                            title={txt.linkWillOpenInNewWindow.replace('[destination]', txt.myTrendingPublications.sourceTitles[recordValue.source])}
-                                            aria-label={txt.linkWillOpenInNewWindow.replace('[destination]', txt.myTrendingPublications.sourceTitles[recordValue.source])}
-                                            openInNewIcon={false}>
+                                            title={txt.linkWillOpenInNewWindow.replace(
+                                                '[destination]',
+                                                txt.myTrendingPublications.sourceTitles[recordValue.source]
+                                            )}
+                                            aria-label={txt.linkWillOpenInNewWindow.replace(
+                                                '[destination]',
+                                                txt.myTrendingPublications.sourceTitles[recordValue.source]
+                                            )}
+                                            openInNewIcon={false}
+                                        >
                                             <Grid container>
                                                 {
                                                     this.props.showSourceCountIcon &&
@@ -246,7 +291,9 @@ export class PublicationCitation extends PureComponent {
                                                 {
                                                     !this.props.hideCountDiff &&
                                                     <Grid item>
-                                                        <Typography variant="h6" color="inherit" className="difference" title={txt.myTrendingPublications.trendDifferenceShares[recordValue.source]}>
+                                                        <Typography variant="h6" color="inherit" className="difference"
+                                                            title={txt.myTrendingPublications.trendDifferenceShares[recordValue.source]}
+                                                        >
                                                             +{Math.round(recordValue.difference)}
                                                         </Typography>
                                                     </Grid>
@@ -280,7 +327,10 @@ export class PublicationCitation extends PureComponent {
                             {
                                 !this.props.hideCitationCounts &&
                                 <Grid item xs={12} className={classes.citationCounts}>
-                                    <CitationCounts publication={this.props.publication} hideViewFullStatisticsLink={this.props.hideViewFullStatisticsLink}/>
+                                    <CitationCounts
+                                        publication={this.props.publication}
+                                        hideViewFullStatisticsLink={this.props.hideViewFullStatisticsLink}
+                                    />
                                 </Grid>
                             }
                             {
@@ -305,7 +355,11 @@ export class PublicationCitation extends PureComponent {
                             <Grid item xs />
                         </Hidden>
                         {
-                            this.renderActions(this.props.showDefaultActions ? this.defaultActions : this.props.customActions)
+                            this.renderActions(
+                                this.props.showDefaultActions
+                                    ? this.defaultActions
+                                    : this.props.customActions
+                            )
                         }
                     </Grid>
                 }

@@ -43,7 +43,7 @@ export const maxListEditorTextLength = (max) => (value) => {
         valueToValidate = value;
     }
 
-    return maxLength(max)(valueToValidate);
+    return maxLengthWithWhitespace(max)(valueToValidate);
 };
 
 export const maxListEditorTextLength800 = maxListEditorTextLength(800);

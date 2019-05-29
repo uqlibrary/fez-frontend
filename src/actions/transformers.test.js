@@ -778,7 +778,11 @@ describe('getDatasetCreatorRolesSearchKey tests', () => {
         };
         const result = transformers.getDatasetCreatorRolesSearchKey(input);
         expect(result).toEqual(expected);
-    })
+
+        expect(transformers.getDatasetCreatorRolesSearchKey([{}])).toEqual({
+            fez_record_search_key_author_role: [{}]
+        });
+    });
 });
 
 describe('getDatasetContactDetailSearchKeys tests', () => {
@@ -1436,6 +1440,12 @@ describe('getGrantsListSearchKey tests', () => {
         };
         const result = transformers.getGrantsListSearchKey(input);
         expect(result).toEqual(expected);
+
+        // Check defaults
+        expected.fez_record_search_key_grant_agency[0].rek_grant_agency = 'Not set';
+        expected.fez_record_search_key_grant_id[0].rek_grant_id = 'Not set';
+        expected.fez_record_search_key_grant_agency_type[0].rek_grant_agency_type = 454045;
+        expect(transformers.getGrantsListSearchKey([{}])).toEqual(expected);
     });
 
     it('should return search key with data filtered empty values', () => {
@@ -1459,21 +1469,30 @@ describe('getGrantsListSearchKey tests', () => {
             "fez_record_search_key_grant_agency": [{
                 "rek_grant_agency": "test",
                 "rek_grant_agency_order": 1
-            }, {"rek_grant_agency": "testing", "rek_grant_agency_order": 2}, {
+            }, {
+                "rek_grant_agency": "testing",
+                "rek_grant_agency_order": 2
+            }, {
                 "rek_grant_agency": "tested",
                 "rek_grant_agency_order": 3
             }],
             "fez_record_search_key_grant_agency_type": [{
                 "rek_grant_agency_type": 454045,
                 "rek_grant_agency_type_order": 1
-            }, {"rek_grant_agency_type": 12345, "rek_grant_agency_type_order": 2}, {
+            }, {
+                "rek_grant_agency_type": 12345,
+                "rek_grant_agency_type_order": 2
+            }, {
                 "rek_grant_agency_type": 56465,
                 "rek_grant_agency_type_order": 3
             }],
             "fez_record_search_key_grant_id": [{
                 "rek_grant_id": "test123",
                 "rek_grant_id_order": 1
-            }, {"rek_grant_id": "testing123", "rek_grant_id_order": 2}, {
+            }, {
+                "rek_grant_id": "testing123",
+                "rek_grant_id_order": 2
+            }, {
                 "rek_grant_id": "Not set",
                 "rek_grant_id_order": 3
             }]
@@ -1483,12 +1502,44 @@ describe('getGrantsListSearchKey tests', () => {
     });
 });
 
+describe('getLanguageSearchKey', () => {
+    it('should return language search keys', () => {
+        const input = [
+            'test1',
+            'test2'
+        ];
+        const expected = {
+            fez_record_search_key_language: [
+                {
+                    rek_language: 'test1',
+                    rek_language_order: 1
+                },
+                {
+                    rek_language: 'test2',
+                    rek_language_order: 2
+                },
+            ]
+        };
+        expect(transformers.getLanguageSearchKey(input)).toEqual(expected);
+
+        const expectedDefault = {
+            fez_record_search_key_language: [{
+                rek_language: 'eng',
+                rek_language_order: 1
+            }],
+        };
+        expect(transformers.getLanguageSearchKey([])).toEqual(expectedDefault);
+    });
+});
+
 describe('getNtroMetadataSearchKeys tests', () => {
     it('should get ntro meta data', () => {
+        expect(transformers.getNtroMetadataSearchKeys()).toEqual({});
+        expect(transformers.getNtroMetadataSearchKeys({})).toEqual({});
         const result = transformers.getNtroMetadataSearchKeys({
             authors: [{
                 rek_author_id: 111,
-                selected: false,
+                selected: true,
             }, {
                 rek_author_id: 222,
                 selected: false
@@ -1497,12 +1548,14 @@ describe('getNtroMetadataSearchKeys tests', () => {
                 selected: false
             }],
             significance: 'Major',
-            impactStatement: 'test impact statement'
+            impactStatement:  {
+                htmlText: 'test impact statement',
+            },
         });
 
         expect(result).toMatchObject({
             "fez_record_search_key_creator_contribution_statement": [{
-                "rek_creator_contribution_statement": 'Missing',
+                "rek_creator_contribution_statement": 'test impact statement',
                 "rek_creator_contribution_statement_order": 1
             }, {
                 "rek_creator_contribution_statement": 'Missing',
@@ -1512,13 +1565,32 @@ describe('getNtroMetadataSearchKeys tests', () => {
                 "rek_creator_contribution_statement_order": 3
             }],
             "fez_record_search_key_significance": [{
-                "rek_significance": 0,
+                "rek_significance": 'Major',
                 "rek_significance_order": 1
-            }, {"rek_significance": 0, "rek_significance_order": 2}, {
+            }, {
+                "rek_significance": 0,
+                "rek_significance_order": 2
+            }, {
                 "rek_significance": 0,
                 "rek_significance_order": 3
             }]
         });
+    });
+});
+
+describe('getQualityIndicatorSearchKey', () => {
+    it('should return quality indicator search key', () => {
+        expect(transformers.getQualityIndicatorSearchKey()).toEqual({});
+        const input = [ 'test' ];
+        const expected = {
+            fez_record_search_key_quality_indicator: [
+                {
+                    rek_quality_indicator: 'test',
+                    rek_quality_indicator_order: 1,
+                },
+            ],
+        };
+        expect(transformers.getQualityIndicatorSearchKey(input)).toEqual(expected);
     });
 });
 
@@ -1796,4 +1868,26 @@ describe('getSignificanceAndContributionStatementSearchKeys', () => {
             }]
         });
     });
-})
+});
+
+describe('getExternalSourceIdSearchKeys', () => {
+    it('should return formatted search keys for external sources', () => {
+        const data = [
+            { source: 'crossref', id: 'test1' },
+            { source: 'scopus', id: 'test2' },
+            { source: 'wos', id: 'test3' },
+        ];
+        const expected = {
+            fez_record_search_key_doi: {
+                rek_doi: 'test1',
+            },
+            fez_record_search_key_scopus_id: {
+                rek_scopus_id: 'test2',
+            },
+            fez_record_search_key_isi_loc: {
+                rek_isi_loc: 'test3',
+            },
+        };
+        expect(transformers.getExternalSourceIdSearchKeys(data)).toEqual(expected);
+    });
+});

@@ -10,7 +10,7 @@ import {routes} from 'config';
 const mapStateToProps = (state) => {
     return {
         accountLoading: state.get('accountReducer').accountLoading,
-        ...state.get('publicationsReducer'),
+        ...state.get('publicationsReducer').datasets,
         ...state.get('exportPublicationsReducer'),
         initialFacets: {
             filters: {'Display type': general.PUBLICATION_TYPE_DATA_COLLECTION}
@@ -22,7 +22,10 @@ const mapStateToProps = (state) => {
 
 function mapDispatchToProps(dispatch) {
     return {
-        actions: bindActionCreators(actions, dispatch)
+        actions: {
+            ...bindActionCreators(actions, dispatch),
+            loadAuthorPublications: (state) => dispatch(actions.searchAuthorPublications(state, 'datasets'))
+        }
     };
 }
 
