@@ -3,10 +3,20 @@
 exports[`TextFieldWrapper snapshots tests renders TextField component 1`] = `
 <Fragment>
   <TextField
+    InputLabelProps={
+      Object {
+        "id": "undefined-label",
+        "shrink": undefined,
+      }
+    }
     error={false}
     floatingLabelText="This is a test textfield component"
     fullWidth={true}
-    id=""
+    inputProps={
+      Object {
+        "aria-labelledby": "undefined-label",
+      }
+    }
     name="testField"
     required={false}
     select={false}
@@ -19,11 +29,21 @@ exports[`TextFieldWrapper snapshots tests renders TextField component 1`] = `
 exports[`TextFieldWrapper snapshots tests renders TextField component appending a class 1`] = `
 <Fragment>
   <TextField
+    InputLabelProps={
+      Object {
+        "id": "undefined-label",
+        "shrink": undefined,
+      }
+    }
     className="requiredField"
     error={false}
     floatingLabelText="This is a test textfield component"
     fullWidth={true}
-    id=""
+    inputProps={
+      Object {
+        "aria-labelledby": "undefined-label",
+      }
+    }
     name="testField"
     required={false}
     select={false}
@@ -38,6 +58,7 @@ exports[`TextFieldWrapper snapshots tests renders TextField component with shrin
   <TextField
     InputLabelProps={
       Object {
+        "id": "undefined-label",
         "shrink": true,
       }
     }
@@ -45,7 +66,11 @@ exports[`TextFieldWrapper snapshots tests renders TextField component with shrin
     floatingLabelText="This is a test textfield component"
     floatinglabelfixed={true}
     fullWidth={true}
-    id=""
+    inputProps={
+      Object {
+        "aria-labelledby": "undefined-label",
+      }
+    }
     name="testField"
     required={false}
     select={false}

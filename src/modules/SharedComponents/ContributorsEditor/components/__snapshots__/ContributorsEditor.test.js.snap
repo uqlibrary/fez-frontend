@@ -2710,12 +2710,23 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                   value=""
                                 >
                                   <TextField
+                                    InputLabelProps={
+                                      Object {
+                                        "id": "nameAsPublishedField-label",
+                                        "shrink": undefined,
+                                      }
+                                    }
                                     autoComplete="off"
                                     classes={Object {}}
                                     disabled={true}
                                     error={false}
                                     fullWidth={true}
                                     id="nameAsPublishedField"
+                                    inputProps={
+                                      Object {
+                                        "aria-labelledby": "nameAsPublishedField-label",
+                                      }
+                                    }
                                     label="Name as published"
                                     onChange={[Function]}
                                     onKeyDown={[Function]}
@@ -2758,6 +2769,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                         >
                                           <WithStyles(InputLabel)
                                             htmlFor="nameAsPublishedField"
+                                            id="nameAsPublishedField-label"
                                           >
                                             <InputLabel
                                               classes={
@@ -2773,11 +2785,13 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                               }
                                               disableAnimation={false}
                                               htmlFor="nameAsPublishedField"
+                                              id="nameAsPublishedField-label"
                                             >
                                               <WithStyles(FormLabel)
                                                 className="MuiInputLabel-root-102 MuiInputLabel-formControl-103 MuiInputLabel-animated-106"
                                                 data-shrink={false}
                                                 htmlFor="nameAsPublishedField"
+                                                id="nameAsPublishedField-label"
                                               >
                                                 <FormLabel
                                                   className="MuiInputLabel-root-102 MuiInputLabel-formControl-103 MuiInputLabel-animated-106"
@@ -2795,11 +2809,13 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                   component="label"
                                                   data-shrink={false}
                                                   htmlFor="nameAsPublishedField"
+                                                  id="nameAsPublishedField-label"
                                                 >
                                                   <label
                                                     className="MuiFormLabel-root-109 MuiFormLabel-disabled-111 MuiInputLabel-root-102 MuiInputLabel-formControl-103 MuiInputLabel-animated-106"
                                                     data-shrink={false}
                                                     htmlFor="nameAsPublishedField"
+                                                    id="nameAsPublishedField-label"
                                                   >
                                                     Name as published
                                                   </label>
@@ -2811,6 +2827,11 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                             autoComplete="off"
                                             fullWidth={true}
                                             id="nameAsPublishedField"
+                                            inputProps={
+                                              Object {
+                                                "aria-labelledby": "nameAsPublishedField-label",
+                                              }
+                                            }
                                             onChange={[Function]}
                                             placeholder="Please type the name exactly as published"
                                             value=""
@@ -2836,6 +2857,11 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                               }
                                               fullWidth={true}
                                               id="nameAsPublishedField"
+                                              inputProps={
+                                                Object {
+                                                  "aria-labelledby": "nameAsPublishedField-label",
+                                                }
+                                              }
                                               onChange={[Function]}
                                               placeholder="Please type the name exactly as published"
                                               value=""
@@ -2862,6 +2888,11 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                 fullWidth={true}
                                                 id="nameAsPublishedField"
                                                 inputComponent="input"
+                                                inputProps={
+                                                  Object {
+                                                    "aria-labelledby": "nameAsPublishedField-label",
+                                                  }
+                                                }
                                                 multiline={false}
                                                 onChange={[Function]}
                                                 placeholder="Please type the name exactly as published"
@@ -2894,6 +2925,11 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                   fullWidth={true}
                                                   id="nameAsPublishedField"
                                                   inputComponent="input"
+                                                  inputProps={
+                                                    Object {
+                                                      "aria-labelledby": "nameAsPublishedField-label",
+                                                    }
+                                                  }
                                                   multiline={false}
                                                   onChange={[Function]}
                                                   placeholder="Please type the name exactly as published"
@@ -2906,6 +2942,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                   >
                                                     <input
                                                       aria-invalid={false}
+                                                      aria-labelledby="nameAsPublishedField-label"
                                                       autoComplete="off"
                                                       className="MuiInputBase-input-146 MuiInput-input-131 MuiInputBase-disabled-139 MuiInput-disabled-126"
                                                       disabled={true}

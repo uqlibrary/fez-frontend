@@ -18,42 +18,21 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
           >
             <div
               class=\\"MuiGrid-item-2 MuiGrid-grid-xs-12-41\\"
-@@ -364,29 +364,29 @@
-                      <div
+@@ -365,11 +365,11 @@
                         class=\\"MuiFormControl-root-260\\"
                         style=\\"width: 100%;\\"
                       >
-                        <label
--                         class=\\"MuiFormLabel-root-271 MuiFormLabel-error-274 MuiFormLabel-required-276 MuiInputLabel-root-264 MuiInputLabel-formControl-265 MuiInputLabel-animated-268\\"
--                         data-shrink=\\"false\\"
-+                         class=\\"MuiFormLabel-root-271 MuiFormLabel-filled-275 MuiFormLabel-required-276 MuiInputLabel-root-264 MuiInputLabel-formControl-265 MuiInputLabel-animated-268 MuiInputLabel-shrink-267\\"
-+                         data-shrink=\\"true\\"
-                        >
-                          <span>
-                            Scale/Significance of work* 
-                            <span
-                              style=\\"font-weight: 700;\\"
-                            >
-                              (not for public view)
-                            </span>
-                          </span>
-                          <span
--                           class=\\"MuiFormLabel-asterisk-277 MuiFormLabel-error-274\\"
-+                           class=\\"MuiFormLabel-asterisk-277\\"
-                          >
-                             *
-                          </span>
-                        </label>
                         <div
--                         class=\\"MuiInputBase-root-298 MuiInput-root-285 MuiInput-underline-289 MuiInputBase-error-304 MuiInput-error-290 MuiInputBase-formControl-299 MuiInput-formControl-286\\"
-+                         class=\\"MuiInputBase-root-298 MuiInput-root-285 MuiInput-underline-289 MuiInputBase-formControl-299 MuiInput-formControl-286\\"
+                          aria-labelledby=\\"[object Object]\\"
+-                         class=\\"MuiInputBase-root-284 MuiInput-root-271 MuiInput-underline-275 MuiInputBase-error-290 MuiInput-error-276 MuiInputBase-formControl-285 MuiInput-formControl-272\\"
++                         class=\\"MuiInputBase-root-284 MuiInput-root-271 MuiInput-underline-275 MuiInputBase-formControl-285 MuiInput-formControl-272\\"
+                          inputlabelprops=\\"[object Object]\\"
                           label=\\"[object Object]\\"
                           required=\\"\\"
                         >
                           <div
-                            class=\\"MuiSelect-root-278\\"
-@@ -397,18 +397,16 @@
-                              class=\\"MuiSelect-select-279 MuiSelect-selectMenu-282 MuiInputBase-input-308 MuiInput-input-293\\"
+@@ -381,20 +381,18 @@
+                              class=\\"MuiSelect-select-265 MuiSelect-selectMenu-268 MuiInputBase-input-294 MuiInput-input-279\\"
                               id=\\"significance\\"
                               role=\\"button\\"
                               tabindex=\\"0\\"
@@ -64,6 +43,8 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
 +                             Major
                             </div>
                             <input
+                              aria-labelledby=\\"[object Object]-label\\"
+                              id=\\"test\\"
                               name=\\"significance\\"
                               type=\\"hidden\\"
 -                             value=\\"\\"
@@ -71,9 +52,9 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
                             />
                             <svg
                               aria-hidden=\\"true\\"
-                              class=\\"MuiSvgIcon-root-163 MuiSelect-icon-284\\"
+                              class=\\"MuiSvgIcon-root-163 MuiSelect-icon-270\\"
                               focusable=\\"false\\"
-@@ -419,15 +417,10 @@
+@@ -405,15 +403,10 @@
                                 d=\\"M7 10l5 5 5-5z\\"
                               />
                             </svg>
@@ -89,7 +70,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
                     <div
                       class=\\"MuiGrid-item-2 MuiGrid-grid-xs-12-41\\"
                       style=\\"margin-top: 24px;\\"
-@@ -1688,13 +1681,10 @@
+@@ -1675,13 +1668,10 @@
                         <span>
                           Form cannot be submitted until all fields are valid. Please review all input fields.
                           <ul>
@@ -110,35 +91,21 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
 - First value
 + Second value
 
-@@ -537,22 +537,22 @@
-                      <div
+@@ -524,11 +524,11 @@
                         class=\\"MuiFormControl-root-260\\"
                         style=\\"width: 100%;\\"
                       >
-                        <label
--                         class=\\"MuiFormLabel-root-271 MuiFormLabel-error-274 MuiFormLabel-required-276 MuiInputLabel-root-264 MuiInputLabel-formControl-265 MuiInputLabel-animated-268\\"
--                         data-shrink=\\"false\\"
-+                         class=\\"MuiFormLabel-root-271 MuiFormLabel-filled-275 MuiFormLabel-required-276 MuiInputLabel-root-264 MuiInputLabel-formControl-265 MuiInputLabel-animated-268 MuiInputLabel-shrink-267\\"
-+                         data-shrink=\\"true\\"
-                        >
-                          Audience size
-                          <span
--                           class=\\"MuiFormLabel-asterisk-277 MuiFormLabel-error-274\\"
-+                           class=\\"MuiFormLabel-asterisk-277\\"
-                          >
-                             *
-                          </span>
-                        </label>
                         <div
--                         class=\\"MuiInputBase-root-298 MuiInput-root-285 MuiInput-underline-289 MuiInputBase-error-304 MuiInput-error-290 MuiInputBase-formControl-299 MuiInput-formControl-286\\"
-+                         class=\\"MuiInputBase-root-298 MuiInput-root-285 MuiInput-underline-289 MuiInputBase-formControl-299 MuiInput-formControl-286\\"
+                          aria-labelledby=\\"Audience size\\"
+-                         class=\\"MuiInputBase-root-284 MuiInput-root-271 MuiInput-underline-275 MuiInputBase-error-290 MuiInput-error-276 MuiInputBase-formControl-285 MuiInput-formControl-272\\"
++                         class=\\"MuiInputBase-root-284 MuiInput-root-271 MuiInput-underline-275 MuiInputBase-formControl-285 MuiInput-formControl-272\\"
+                          inputlabelprops=\\"[object Object]\\"
                           label=\\"Audience size\\"
                           required=\\"\\"
                         >
                           <div
-                            class=\\"MuiSelect-root-278\\"
-@@ -563,18 +563,16 @@
-                              class=\\"MuiSelect-select-279 MuiSelect-selectMenu-282 MuiInputBase-input-308 MuiInput-input-293\\"
+@@ -540,20 +540,18 @@
+                              class=\\"MuiSelect-select-265 MuiSelect-selectMenu-268 MuiInputBase-input-294 MuiInput-input-279\\"
                               id=\\"rek-audience-size\\"
                               role=\\"button\\"
                               tabindex=\\"0\\"
@@ -149,6 +116,8 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
 +                             Less than 100
                             </div>
                             <input
+                              aria-labelledby=\\"Audience size-label\\"
+                              id=\\"test\\"
                               name=\\"fez_record_search_key_audience_size.rek_audience_size\\"
                               type=\\"hidden\\"
 -                             value=\\"\\"
@@ -156,9 +125,9 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
                             />
                             <svg
                               aria-hidden=\\"true\\"
-                              class=\\"MuiSvgIcon-root-163 MuiSelect-icon-284\\"
+                              class=\\"MuiSvgIcon-root-163 MuiSelect-icon-270\\"
                               focusable=\\"false\\"
-@@ -585,15 +583,10 @@
+@@ -564,15 +562,10 @@
                                 d=\\"M7 10l5 5 5-5z\\"
                               />
                             </svg>
@@ -174,7 +143,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
                     <div
                       class=\\"MuiGrid-item-2 MuiGrid-grid-xs-12-41 MuiGrid-grid-sm-6-49\\"
                     >
-@@ -1684,13 +1677,10 @@
+@@ -1671,13 +1664,10 @@
                             <li>
                               Author affiliation rows marked with red are required
                             </li>
@@ -195,38 +164,39 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
 - First value
 + Second value
 
-@@ -592,41 +592,40 @@
+@@ -571,43 +571,42 @@
                     >
                       <div
                         class=\\"MuiFormControl-root-260 MuiFormControl-fullWidth-263\\"
                       >
                         <label
--                         class=\\"MuiFormLabel-root-271 MuiFormLabel-error-274 MuiFormLabel-required-276 MuiInputLabel-root-264 MuiInputLabel-formControl-265 MuiInputLabel-animated-268\\"
+-                         class=\\"MuiFormLabel-root-311 MuiFormLabel-error-314 MuiFormLabel-required-316 MuiInputLabel-root-304 MuiInputLabel-formControl-305 MuiInputLabel-animated-308\\"
 -                         data-shrink=\\"false\\"
-+                         class=\\"MuiFormLabel-root-271 MuiFormLabel-filled-275 MuiFormLabel-required-276 MuiInputLabel-root-264 MuiInputLabel-formControl-265 MuiInputLabel-animated-268 MuiInputLabel-shrink-267\\"
++                         class=\\"MuiFormLabel-root-311 MuiFormLabel-filled-315 MuiFormLabel-required-316 MuiInputLabel-root-304 MuiInputLabel-formControl-305 MuiInputLabel-animated-308 MuiInputLabel-shrink-307\\"
 +                         data-shrink=\\"true\\"
+                          id=\\"Quality indicators-label\\"
                         >
                           Quality indicators
                           <span
--                           class=\\"MuiFormLabel-asterisk-277 MuiFormLabel-error-274\\"
-+                           class=\\"MuiFormLabel-asterisk-277\\"
+-                           class=\\"MuiFormLabel-asterisk-317 MuiFormLabel-error-314\\"
++                           class=\\"MuiFormLabel-asterisk-317\\"
                           >
                              *
                           </span>
                         </label>
                         <div
--                         class=\\"MuiInputBase-root-298 MuiInput-root-285 MuiInput-underline-289 MuiInputBase-error-304 MuiInput-error-290 MuiInputBase-formControl-299 MuiInput-formControl-286\\"
-+                         class=\\"MuiInputBase-root-298 MuiInput-root-285 MuiInput-underline-289 MuiInputBase-formControl-299 MuiInput-formControl-286\\"
+-                         class=\\"MuiInputBase-root-284 MuiInput-root-271 MuiInput-underline-275 MuiInputBase-error-290 MuiInput-error-276 MuiInputBase-formControl-285 MuiInput-formControl-272\\"
++                         class=\\"MuiInputBase-root-284 MuiInput-root-271 MuiInput-underline-275 MuiInputBase-formControl-285 MuiInput-formControl-272\\"
                         >
                           <div
-                            class=\\"MuiSelect-root-278\\"
+                            class=\\"MuiSelect-root-264\\"
                           >
                             <div
                               aria-haspopup=\\"true\\"
 -                             aria-pressed=\\"false\\"
 +                             aria-owns=\\"menu-\\"
 +                             aria-pressed=\\"true\\"
-                              class=\\"MuiSelect-select-279 MuiSelect-selectMenu-282 MuiInputBase-input-308 MuiInput-input-293\\"
+                              class=\\"MuiSelect-select-265 MuiSelect-selectMenu-268 MuiInputBase-input-294 MuiInput-input-279\\"
                               id=\\"quality-indicators\\"
                               role=\\"button\\"
                               tabindex=\\"0\\"
@@ -237,15 +207,16 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
 +                             Commissioned by external body
                             </div>
                             <input
+                              aria-labelledby=\\"Quality indicators-label\\"
                               type=\\"hidden\\"
 -                             value=\\"\\"
 +                             value=\\"454036\\"
                             />
                             <svg
                               aria-hidden=\\"true\\"
-                              class=\\"MuiSvgIcon-root-163 MuiSelect-icon-284\\"
+                              class=\\"MuiSvgIcon-root-163 MuiSelect-icon-270\\"
                               focusable=\\"false\\"
-@@ -637,15 +636,10 @@
+@@ -618,15 +617,10 @@
                                 d=\\"M7 10l5 5 5-5z\\"
                               />
                             </svg>
@@ -261,7 +232,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
                   </div>
                 </div>
               </div>
-@@ -1677,13 +1671,10 @@
+@@ -1664,13 +1658,10 @@
                             <li>
                               Author affiliation rows marked with red are required
                             </li>
@@ -282,7 +253,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
 - First value
 + Second value
 
-@@ -993,33 +993,31 @@
+@@ -978,33 +978,31 @@
                           <li
                             class=\\"MuiListItem-container-359\\"
                           >
@@ -321,7 +292,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
                               <div
                                 class=\\"MuiGrid-container-1 WithTheme-WithWidth-ContributorRow---listContainer-376\\"
                               >
-@@ -1028,16 +1026,16 @@
+@@ -1013,16 +1011,16 @@
                                 >
                                   <div
                                     class=\\"MuiListItemText-root-369\\"
@@ -340,7 +311,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
                                     </span>
                                   </div>
                                 </div>
-@@ -1066,11 +1064,11 @@
+@@ -1051,11 +1049,11 @@
                                   <span
                                     class=\\"MuiIconButton-label-159\\"
                                   >
@@ -353,7 +324,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
                                       viewBox=\\"0 0 24 24\\"
                                     >
                                       <path
-@@ -1098,11 +1096,11 @@
+@@ -1083,11 +1081,11 @@
                                   <span
                                     class=\\"MuiIconButton-label-159\\"
                                   >
@@ -366,7 +337,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
                                       viewBox=\\"0 0 24 24\\"
                                     >
                                       <path
-@@ -1562,10 +1560,227 @@
+@@ -1547,10 +1545,229 @@
                                 </button>
                               </span>
                             </div>
@@ -398,22 +369,22 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
 +                               class=\\"MuiFormControl-root-260 MuiFormControl-fullWidth-263\\"
 +                             >
 +                               <label
-+                                 class=\\"MuiFormLabel-root-271 MuiFormLabel-filled-275 MuiInputLabel-root-264 MuiInputLabel-formControl-265 MuiInputLabel-animated-268 MuiInputLabel-shrink-267\\"
++                                 class=\\"MuiFormLabel-root-311 MuiFormLabel-filled-315 MuiInputLabel-root-304 MuiInputLabel-formControl-305 MuiInputLabel-animated-308 MuiInputLabel-shrink-307\\"
 +                                 data-shrink=\\"true\\"
 +                               >
 +                                 Org affiliation
 +                               </label>
 +                               <div
-+                                 class=\\"MuiInputBase-root-298 MuiInput-root-285 MuiInput-underline-289 MuiInputBase-formControl-299 MuiInput-formControl-286\\"
++                                 class=\\"MuiInputBase-root-284 MuiInput-root-271 MuiInput-underline-275 MuiInputBase-formControl-285 MuiInput-formControl-272\\"
 +                                 required=\\"\\"
 +                               >
 +                                 <div
-+                                   class=\\"MuiSelect-root-278\\"
++                                   class=\\"MuiSelect-root-264\\"
 +                                 >
 +                                   <div
 +                                     aria-haspopup=\\"true\\"
 +                                     aria-pressed=\\"false\\"
-+                                     class=\\"MuiSelect-select-279 MuiSelect-selectMenu-282 MuiInputBase-input-308 MuiInput-input-293\\"
++                                     class=\\"MuiSelect-select-265 MuiSelect-selectMenu-268 MuiInputBase-input-294 MuiInput-input-279\\"
 +                                     id=\\"org-affiliation-selector\\"
 +                                     role=\\"button\\"
 +                                     tabindex=\\"0\\"
@@ -426,7 +397,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
 +                                   />
 +                                   <svg
 +                                     aria-hidden=\\"true\\"
-+                                     class=\\"MuiSvgIcon-root-163 MuiSelect-icon-284\\"
++                                     class=\\"MuiSvgIcon-root-163 MuiSelect-icon-270\\"
 +                                     focusable=\\"false\\"
 +                                     role=\\"presentation\\"
 +                                     viewBox=\\"0 0 24 24\\"
@@ -446,24 +417,26 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
 +                               class=\\"MuiFormControl-root-260 MuiFormControl-fullWidth-263\\"
 +                             >
 +                               <label
-+                                 class=\\"MuiFormLabel-root-271 MuiFormLabel-disabled-273 MuiFormLabel-filled-275 MuiFormLabel-required-276 MuiInputLabel-root-264 MuiInputLabel-formControl-265 MuiInputLabel-animated-268 MuiInputLabel-shrink-267\\"
++                                 class=\\"MuiFormLabel-root-311 MuiFormLabel-disabled-313 MuiFormLabel-filled-315 MuiFormLabel-required-316 MuiInputLabel-root-304 MuiInputLabel-formControl-305 MuiInputLabel-animated-308 MuiInputLabel-shrink-307\\"
 +                                 data-shrink=\\"true\\"
 +                                 for=\\"authors-name-as-published-field\\"
++                                 id=\\"authors-name-as-published-field-label\\"
 +                               >
 +                                 Enter each author's name as published (eg. Smith, John)
 +                                 <span
-+                                   class=\\"MuiFormLabel-asterisk-277\\"
++                                   class=\\"MuiFormLabel-asterisk-317\\"
 +                                 >
 +                                    *
 +                                 </span>
 +                               </label>
 +                               <div
-+                                 class=\\"MuiInputBase-root-298 MuiInput-root-285 MuiInput-underline-289 MuiInputBase-disabled-301 MuiInput-disabled-288 MuiInputBase-fullWidth-307 MuiInput-fullWidth-292 MuiInputBase-formControl-299 MuiInput-formControl-286\\"
++                                 class=\\"MuiInputBase-root-284 MuiInput-root-271 MuiInput-underline-275 MuiInputBase-disabled-287 MuiInput-disabled-274 MuiInputBase-fullWidth-293 MuiInput-fullWidth-278 MuiInputBase-formControl-285 MuiInput-formControl-272\\"
 +                               >
 +                                 <input
 +                                   aria-invalid=\\"false\\"
++                                   aria-labelledby=\\"authors-name-as-published-field-label\\"
 +                                   autocomplete=\\"off\\"
-+                                   class=\\"MuiInputBase-input-308 MuiInput-input-293 MuiInputBase-disabled-301 MuiInput-disabled-288\\"
++                                   class=\\"MuiInputBase-input-294 MuiInput-input-279 MuiInputBase-disabled-287 MuiInput-disabled-274\\"
 +                                   disabled=\\"\\"
 +                                   id=\\"authors-name-as-published-field\\"
 +                                   placeholder=\\"Type the name exactly as published\\"
@@ -487,23 +460,23 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
 +                                   class=\\"MuiFormControl-root-260 MuiFormControl-fullWidth-263\\"
 +                                 >
 +                                   <label
-+                                     class=\\"MuiFormLabel-root-271 MuiFormLabel-required-276 MuiInputLabel-root-264 MuiInputLabel-formControl-265 MuiInputLabel-animated-268\\"
++                                     class=\\"MuiFormLabel-root-311 MuiFormLabel-required-316 MuiInputLabel-root-304 MuiInputLabel-formControl-305 MuiInputLabel-animated-308\\"
 +                                     data-shrink=\\"false\\"
 +                                     for=\\"org-affiliation-name\\"
 +                                   >
 +                                     Organisation
 +                                     <span
-+                                       class=\\"MuiFormLabel-asterisk-277\\"
++                                       class=\\"MuiFormLabel-asterisk-317\\"
 +                                     >
 +                                        *
 +                                     </span>
 +                                   </label>
 +                                   <div
-+                                     class=\\"MuiInputBase-root-298 MuiInput-root-285 MuiInput-underline-289 MuiInputBase-fullWidth-307 MuiInput-fullWidth-292 MuiInputBase-formControl-299 MuiInput-formControl-286\\"
++                                     class=\\"MuiInputBase-root-284 MuiInput-root-271 MuiInput-underline-275 MuiInputBase-fullWidth-293 MuiInput-fullWidth-278 MuiInputBase-formControl-285 MuiInput-formControl-272\\"
 +                                   >
 +                                     <input
 +                                       aria-invalid=\\"false\\"
-+                                       class=\\"MuiInputBase-input-308 MuiInput-input-293\\"
++                                       class=\\"MuiInputBase-input-294 MuiInput-input-279\\"
 +                                       id=\\"org-affiliation-name\\"
 +                                       placeholder=\\"Enter the primary affiliated organisation\\"
 +                                       required=\\"\\"
@@ -520,26 +493,26 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
 +                                   class=\\"MuiFormControl-root-260 MuiFormControl-fullWidth-263\\"
 +                                 >
 +                                   <label
-+                                     class=\\"MuiFormLabel-root-271 MuiFormLabel-required-276 MuiInputLabel-root-264 MuiInputLabel-formControl-265 MuiInputLabel-animated-268\\"
++                                     class=\\"MuiFormLabel-root-311 MuiFormLabel-required-316 MuiInputLabel-root-304 MuiInputLabel-formControl-305 MuiInputLabel-animated-308\\"
 +                                     data-shrink=\\"false\\"
 +                                   >
 +                                     Organisation type
 +                                     <span
-+                                       class=\\"MuiFormLabel-asterisk-277\\"
++                                       class=\\"MuiFormLabel-asterisk-317\\"
 +                                     >
 +                                        *
 +                                     </span>
 +                                   </label>
 +                                   <div
-+                                     class=\\"MuiInputBase-root-298 MuiInput-root-285 MuiInput-underline-289 MuiInputBase-formControl-299 MuiInput-formControl-286\\"
++                                     class=\\"MuiInputBase-root-284 MuiInput-root-271 MuiInput-underline-275 MuiInputBase-formControl-285 MuiInput-formControl-272\\"
 +                                   >
 +                                     <div
-+                                       class=\\"MuiSelect-root-278\\"
++                                       class=\\"MuiSelect-root-264\\"
 +                                     >
 +                                       <div
 +                                         aria-haspopup=\\"true\\"
 +                                         aria-pressed=\\"false\\"
-+                                         class=\\"MuiSelect-select-279 MuiSelect-selectMenu-282 MuiInputBase-input-308 MuiInput-input-293\\"
++                                         class=\\"MuiSelect-select-265 MuiSelect-selectMenu-268 MuiInputBase-input-294 MuiInput-input-279\\"
 +                                         id=\\"org-affiliation-type\\"
 +                                         role=\\"button\\"
 +                                         tabindex=\\"0\\"
@@ -554,7 +527,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
 +                                       />
 +                                       <svg
 +                                         aria-hidden=\\"true\\"
-+                                         class=\\"MuiSvgIcon-root-163 MuiSelect-icon-284\\"
++                                         class=\\"MuiSvgIcon-root-163 MuiSelect-icon-270\\"
 +                                         focusable=\\"false\\"
 +                                         role=\\"presentation\\"
 +                                         viewBox=\\"0 0 24 24\\"
@@ -601,7 +574,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
 - First value
 + Second value
 
-@@ -993,31 +993,33 @@
+@@ -978,31 +978,33 @@
                           <li
                             class=\\"MuiListItem-container-359\\"
                           >
@@ -640,7 +613,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
                               <div
                                 class=\\"MuiGrid-container-1 WithTheme-WithWidth-ContributorRow---listContainer-376\\"
                               >
-@@ -1026,27 +1028,38 @@
+@@ -1011,27 +1013,38 @@
                                 >
                                   <div
                                     class=\\"MuiListItemText-root-369\\"
@@ -682,7 +655,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
                             </div>
                             <div
                               class=\\"MuiListItemSecondaryAction-root-375\\"
-@@ -1064,11 +1077,11 @@
+@@ -1049,11 +1062,11 @@
                                   <span
                                     class=\\"MuiIconButton-label-159\\"
                                   >
@@ -695,7 +668,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
                                       viewBox=\\"0 0 24 24\\"
                                     >
                                       <path
-@@ -1096,11 +1109,11 @@
+@@ -1081,11 +1094,11 @@
                                   <span
                                     class=\\"MuiIconButton-label-159\\"
                                   >
@@ -708,7 +681,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
                                       viewBox=\\"0 0 24 24\\"
                                     >
                                       <path
-@@ -1560,227 +1573,10 @@
+@@ -1545,229 +1558,10 @@
                                 </button>
                               </span>
                             </div>
@@ -740,22 +713,22 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
 -                               class=\\"MuiFormControl-root-260 MuiFormControl-fullWidth-263\\"
 -                             >
 -                               <label
--                                 class=\\"MuiFormLabel-root-271 MuiFormLabel-filled-275 MuiInputLabel-root-264 MuiInputLabel-formControl-265 MuiInputLabel-animated-268 MuiInputLabel-shrink-267\\"
+-                                 class=\\"MuiFormLabel-root-311 MuiFormLabel-filled-315 MuiInputLabel-root-304 MuiInputLabel-formControl-305 MuiInputLabel-animated-308 MuiInputLabel-shrink-307\\"
 -                                 data-shrink=\\"true\\"
 -                               >
 -                                 Org affiliation
 -                               </label>
 -                               <div
--                                 class=\\"MuiInputBase-root-298 MuiInput-root-285 MuiInput-underline-289 MuiInputBase-formControl-299 MuiInput-formControl-286\\"
+-                                 class=\\"MuiInputBase-root-284 MuiInput-root-271 MuiInput-underline-275 MuiInputBase-formControl-285 MuiInput-formControl-272\\"
 -                                 required=\\"\\"
 -                               >
 -                                 <div
--                                   class=\\"MuiSelect-root-278\\"
+-                                   class=\\"MuiSelect-root-264\\"
 -                                 >
 -                                   <div
 -                                     aria-haspopup=\\"true\\"
 -                                     aria-pressed=\\"false\\"
--                                     class=\\"MuiSelect-select-279 MuiSelect-selectMenu-282 MuiInputBase-input-308 MuiInput-input-293\\"
+-                                     class=\\"MuiSelect-select-265 MuiSelect-selectMenu-268 MuiInputBase-input-294 MuiInput-input-279\\"
 -                                     id=\\"org-affiliation-selector\\"
 -                                     role=\\"button\\"
 -                                     tabindex=\\"0\\"
@@ -768,7 +741,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
 -                                   />
 -                                   <svg
 -                                     aria-hidden=\\"true\\"
--                                     class=\\"MuiSvgIcon-root-163 MuiSelect-icon-284\\"
+-                                     class=\\"MuiSvgIcon-root-163 MuiSelect-icon-270\\"
 -                                     focusable=\\"false\\"
 -                                     role=\\"presentation\\"
 -                                     viewBox=\\"0 0 24 24\\"
@@ -788,24 +761,26 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
 -                               class=\\"MuiFormControl-root-260 MuiFormControl-fullWidth-263\\"
 -                             >
 -                               <label
--                                 class=\\"MuiFormLabel-root-271 MuiFormLabel-disabled-273 MuiFormLabel-filled-275 MuiFormLabel-required-276 MuiInputLabel-root-264 MuiInputLabel-formControl-265 MuiInputLabel-animated-268 MuiInputLabel-shrink-267\\"
+-                                 class=\\"MuiFormLabel-root-311 MuiFormLabel-disabled-313 MuiFormLabel-filled-315 MuiFormLabel-required-316 MuiInputLabel-root-304 MuiInputLabel-formControl-305 MuiInputLabel-animated-308 MuiInputLabel-shrink-307\\"
 -                                 data-shrink=\\"true\\"
 -                                 for=\\"authors-name-as-published-field\\"
+-                                 id=\\"authors-name-as-published-field-label\\"
 -                               >
 -                                 Enter each author's name as published (eg. Smith, John)
 -                                 <span
--                                   class=\\"MuiFormLabel-asterisk-277\\"
+-                                   class=\\"MuiFormLabel-asterisk-317\\"
 -                                 >
 -                                    *
 -                                 </span>
 -                               </label>
 -                               <div
--                                 class=\\"MuiInputBase-root-298 MuiInput-root-285 MuiInput-underline-289 MuiInputBase-disabled-301 MuiInput-disabled-288 MuiInputBase-fullWidth-307 MuiInput-fullWidth-292 MuiInputBase-formControl-299 MuiInput-formControl-286\\"
+-                                 class=\\"MuiInputBase-root-284 MuiInput-root-271 MuiInput-underline-275 MuiInputBase-disabled-287 MuiInput-disabled-274 MuiInputBase-fullWidth-293 MuiInput-fullWidth-278 MuiInputBase-formControl-285 MuiInput-formControl-272\\"
 -                               >
 -                                 <input
 -                                   aria-invalid=\\"false\\"
+-                                   aria-labelledby=\\"authors-name-as-published-field-label\\"
 -                                   autocomplete=\\"off\\"
--                                   class=\\"MuiInputBase-input-308 MuiInput-input-293 MuiInputBase-disabled-301 MuiInput-disabled-288\\"
+-                                   class=\\"MuiInputBase-input-294 MuiInput-input-279 MuiInputBase-disabled-287 MuiInput-disabled-274\\"
 -                                   disabled=\\"\\"
 -                                   id=\\"authors-name-as-published-field\\"
 -                                   placeholder=\\"Type the name exactly as published\\"
@@ -829,23 +804,23 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
 -                                   class=\\"MuiFormControl-root-260 MuiFormControl-fullWidth-263\\"
 -                                 >
 -                                   <label
--                                     class=\\"MuiFormLabel-root-271 MuiFormLabel-required-276 MuiInputLabel-root-264 MuiInputLabel-formControl-265 MuiInputLabel-animated-268\\"
+-                                     class=\\"MuiFormLabel-root-311 MuiFormLabel-required-316 MuiInputLabel-root-304 MuiInputLabel-formControl-305 MuiInputLabel-animated-308\\"
 -                                     data-shrink=\\"false\\"
 -                                     for=\\"org-affiliation-name\\"
 -                                   >
 -                                     Organisation
 -                                     <span
--                                       class=\\"MuiFormLabel-asterisk-277\\"
+-                                       class=\\"MuiFormLabel-asterisk-317\\"
 -                                     >
 -                                        *
 -                                     </span>
 -                                   </label>
 -                                   <div
--                                     class=\\"MuiInputBase-root-298 MuiInput-root-285 MuiInput-underline-289 MuiInputBase-fullWidth-307 MuiInput-fullWidth-292 MuiInputBase-formControl-299 MuiInput-formControl-286\\"
+-                                     class=\\"MuiInputBase-root-284 MuiInput-root-271 MuiInput-underline-275 MuiInputBase-fullWidth-293 MuiInput-fullWidth-278 MuiInputBase-formControl-285 MuiInput-formControl-272\\"
 -                                   >
 -                                     <input
 -                                       aria-invalid=\\"false\\"
--                                       class=\\"MuiInputBase-input-308 MuiInput-input-293\\"
+-                                       class=\\"MuiInputBase-input-294 MuiInput-input-279\\"
 -                                       id=\\"org-affiliation-name\\"
 -                                       placeholder=\\"Enter the primary affiliated organisation\\"
 -                                       required=\\"\\"
@@ -862,26 +837,26 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
 -                                   class=\\"MuiFormControl-root-260 MuiFormControl-fullWidth-263\\"
 -                                 >
 -                                   <label
--                                     class=\\"MuiFormLabel-root-271 MuiFormLabel-required-276 MuiInputLabel-root-264 MuiInputLabel-formControl-265 MuiInputLabel-animated-268\\"
+-                                     class=\\"MuiFormLabel-root-311 MuiFormLabel-required-316 MuiInputLabel-root-304 MuiInputLabel-formControl-305 MuiInputLabel-animated-308\\"
 -                                     data-shrink=\\"false\\"
 -                                   >
 -                                     Organisation type
 -                                     <span
--                                       class=\\"MuiFormLabel-asterisk-277\\"
+-                                       class=\\"MuiFormLabel-asterisk-317\\"
 -                                     >
 -                                        *
 -                                     </span>
 -                                   </label>
 -                                   <div
--                                     class=\\"MuiInputBase-root-298 MuiInput-root-285 MuiInput-underline-289 MuiInputBase-formControl-299 MuiInput-formControl-286\\"
+-                                     class=\\"MuiInputBase-root-284 MuiInput-root-271 MuiInput-underline-275 MuiInputBase-formControl-285 MuiInput-formControl-272\\"
 -                                   >
 -                                     <div
--                                       class=\\"MuiSelect-root-278\\"
+-                                       class=\\"MuiSelect-root-264\\"
 -                                     >
 -                                       <div
 -                                         aria-haspopup=\\"true\\"
 -                                         aria-pressed=\\"false\\"
--                                         class=\\"MuiSelect-select-279 MuiSelect-selectMenu-282 MuiInputBase-input-308 MuiInput-input-293\\"
+-                                         class=\\"MuiSelect-select-265 MuiSelect-selectMenu-268 MuiInputBase-input-294 MuiInput-input-279\\"
 -                                         id=\\"org-affiliation-type\\"
 -                                         role=\\"button\\"
 -                                         tabindex=\\"0\\"
@@ -896,7 +871,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
 -                                       />
 -                                       <svg
 -                                         aria-hidden=\\"true\\"
--                                         class=\\"MuiSvgIcon-root-163 MuiSelect-icon-284\\"
+-                                         class=\\"MuiSvgIcon-root-163 MuiSelect-icon-270\\"
 -                                         focusable=\\"false\\"
 -                                         role=\\"presentation\\"
 -                                         viewBox=\\"0 0 24 24\\"
@@ -943,7 +918,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
 - First value
 + Second value
 
-@@ -1132,11 +1132,11 @@
+@@ -1117,11 +1117,11 @@
                           <li
                             class=\\"MuiListItem-container-359\\"
                           >
@@ -956,7 +931,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
                             >
                               <div
                                 class=\\"MuiListItemIcon-root-386\\"
-@@ -1183,11 +1183,22 @@
+@@ -1168,11 +1168,22 @@
                                 <div
                                   class=\\"MuiGrid-item-2 MuiGrid-grid-xs-12-41 MuiGrid-grid-sm-5-48\\"
                                 >
@@ -992,7 +967,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
 - First value
 + Second value
 
-@@ -1460,11 +1460,11 @@
+@@ -1445,11 +1445,11 @@
                           <li
                             class=\\"MuiListItem-container-359\\"
                           >
@@ -1005,7 +980,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
                             >
                               <div
                                 class=\\"MuiListItemIcon-root-386\\"
-@@ -1511,14 +1511,25 @@
+@@ -1496,14 +1496,25 @@
                                 <div
                                   class=\\"MuiGrid-item-2 MuiGrid-grid-xs-12-41 MuiGrid-grid-sm-5-48\\"
                                 >
@@ -1032,7 +1007,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
                             >
                               <span
                                 title=\\"Move item up the order\\"
-@@ -1586,15 +1597,10 @@
+@@ -1571,15 +1582,10 @@
                             </div>
                           </li>
                         </ul>
@@ -1048,7 +1023,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
               </div>
             </div>
             <div
-@@ -1688,13 +1694,10 @@
+@@ -1675,13 +1681,10 @@
                           Validation - 
                         </b>
                         <span>
@@ -1082,7 +1057,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
           >
             <div
               class=\\"MuiGrid-item-803 MuiGrid-grid-xs-12-842\\"
-@@ -363,41 +363,40 @@
+@@ -363,43 +363,42 @@
                     >
                       <div
                         class=\\"MuiFormControl-root-1062 MuiFormControl-fullWidth-1065\\"
@@ -1092,6 +1067,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
 -                         data-shrink=\\"false\\"
 +                         class=\\"MuiFormLabel-root-1073 MuiFormLabel-filled-1077 MuiFormLabel-required-1078 MuiInputLabel-root-1066 MuiInputLabel-formControl-1067 MuiInputLabel-animated-1070 MuiInputLabel-shrink-1069\\"
 +                         data-shrink=\\"true\\"
+                          id=\\"Quality indicators-label\\"
                         >
                           Quality indicators
                           <span
@@ -1124,6 +1100,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
 +                             Commissioned by external body
                             </div>
                             <input
+                              aria-labelledby=\\"Quality indicators-label\\"
                               type=\\"hidden\\"
 -                             value=\\"\\"
 +                             value=\\"454036\\"
@@ -1132,7 +1109,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                               aria-hidden=\\"true\\"
                               class=\\"MuiSvgIcon-root-964 MuiSelect-icon-1086\\"
                               focusable=\\"false\\"
-@@ -408,15 +407,10 @@
+@@ -410,15 +409,10 @@
                                 d=\\"M7 10l5 5 5-5z\\"
                               />
                             </svg>
@@ -1148,7 +1125,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                   </div>
                 </div>
               </div>
-@@ -454,12 +448,12 @@
+@@ -456,12 +450,12 @@
                       >
                         <div
                           class=\\"MuiFormControl-root-1062 MuiFormControl-fullWidth-1065\\"
@@ -1159,11 +1136,11 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
 +                           class=\\"MuiFormLabel-root-1073 MuiFormLabel-filled-1077 MuiInputLabel-root-1066 MuiInputLabel-formControl-1067 MuiInputLabel-animated-1070 MuiInputLabel-shrink-1069\\"
 +                           data-shrink=\\"true\\"
                             for=\\"grantAgencyName\\"
+                            id=\\"grantAgencyName-label\\"
                           >
                             Funder/Sponsor name
                           </label>
-                          <div
-@@ -470,11 +464,11 @@
+@@ -474,11 +468,11 @@
                               autocomplete=\\"off\\"
                               class=\\"MuiInputBase-input-1110 MuiInput-input-1095\\"
                               id=\\"grantAgencyName\\"
@@ -1176,7 +1153,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                         </div>
                       </div>
                       <div
-@@ -482,23 +476,22 @@
+@@ -486,25 +480,24 @@
                       >
                         <div
                           class=\\"MuiFormControl-root-1062 MuiFormControl-fullWidth-1065\\"
@@ -1186,6 +1163,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
 +                           class=\\"MuiFormLabel-root-1073 MuiInputLabel-root-1066 MuiInputLabel-formControl-1067 MuiInputLabel-animated-1070\\"
                             data-shrink=\\"false\\"
                             for=\\"grantId\\"
+                            id=\\"grantId-label\\"
                           >
                             Grant ID
                           </label>
@@ -1195,6 +1173,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                           >
                             <input
                               aria-invalid=\\"false\\"
+                              aria-labelledby=\\"grantId-label\\"
 -                             class=\\"MuiInputBase-input-1110 MuiInput-input-1095 MuiInputBase-disabled-1103 MuiInput-disabled-1090\\"
 -                             disabled=\\"\\"
 +                             class=\\"MuiInputBase-input-1110 MuiInput-input-1095\\"
@@ -1203,7 +1182,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                               type=\\"text\\"
                               value=\\"\\"
                             />
-@@ -510,28 +503,34 @@
+@@ -516,28 +509,34 @@
                       >
                         <div
                           class=\\"MuiFormControl-root-1062 MuiFormControl-fullWidth-1065\\"
@@ -1241,7 +1220,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                                   ​
                                 </span>
                               </div>
-@@ -551,10 +550,15 @@
+@@ -557,10 +556,15 @@
                                   d=\\"M7 10l5 5 5-5z\\"
                                 />
                               </svg>
@@ -1257,7 +1236,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                       <div
                         class=\\"MuiGrid-item-803 MuiGrid-grid-xs-12-842\\"
                       >
-@@ -571,10 +575,15 @@
+@@ -577,10 +581,15 @@
                             Add grant
                           </span>
                         </button>
@@ -1273,7 +1252,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
               </div>
             </div>
             <div
-@@ -1483,11 +1492,11 @@
+@@ -1491,11 +1500,11 @@
                         </b>
                         <span>
                           Form cannot be submitted until all fields are valid. Please review all input fields.
@@ -1293,7 +1272,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
 - First value
 + Second value
 
-@@ -476,12 +476,12 @@
+@@ -480,12 +480,12 @@
                       >
                         <div
                           class=\\"MuiFormControl-root-1062 MuiFormControl-fullWidth-1065\\"
@@ -1304,12 +1283,12 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
 +                           class=\\"MuiFormLabel-root-1073 MuiFormLabel-filled-1077 MuiInputLabel-root-1066 MuiInputLabel-formControl-1067 MuiInputLabel-animated-1070 MuiInputLabel-shrink-1069\\"
 +                           data-shrink=\\"true\\"
                             for=\\"grantId\\"
+                            id=\\"grantId-label\\"
                           >
                             Grant ID
                           </label>
-                          <div
-@@ -491,11 +491,11 @@
-                              aria-invalid=\\"false\\"
+@@ -497,11 +497,11 @@
+                              aria-labelledby=\\"grantId-label\\"
                               class=\\"MuiInputBase-input-1110 MuiInput-input-1095\\"
                               id=\\"grantId\\"
                               placeholder=\\"Enter grant number for this work, if available\\"
@@ -1328,7 +1307,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
 - First value
 + Second value
 
-@@ -503,22 +503,22 @@
+@@ -509,22 +509,22 @@
                       >
                         <div
                           class=\\"MuiFormControl-root-1062 MuiFormControl-fullWidth-1065\\"
@@ -1355,7 +1334,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                             <div
                               class=\\"MuiSelect-root-1080\\"
                             >
-@@ -528,18 +528,16 @@
+@@ -534,18 +534,16 @@
                                 class=\\"MuiSelect-select-1081 MuiSelect-selectMenu-1084 MuiInputBase-input-1110 MuiInput-input-1095\\"
                                 id=\\"grantType\\"
                                 role=\\"button\\"
@@ -1376,7 +1355,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                                 aria-hidden=\\"true\\"
                                 class=\\"MuiSvgIcon-root-964 MuiSelect-icon-1086\\"
                                 focusable=\\"false\\"
-@@ -550,32 +548,29 @@
+@@ -556,32 +554,29 @@
                                   d=\\"M7 10l5 5 5-5z\\"
                                 />
                               </svg>
@@ -1421,7 +1400,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
 - First value
 + Second value
 
-@@ -448,12 +448,12 @@
+@@ -450,12 +450,12 @@
                       >
                         <div
                           class=\\"MuiFormControl-root-1062 MuiFormControl-fullWidth-1065\\"
@@ -1432,11 +1411,11 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
 +                           class=\\"MuiFormLabel-root-1073 MuiInputLabel-root-1066 MuiInputLabel-formControl-1067 MuiInputLabel-animated-1070\\"
 +                           data-shrink=\\"false\\"
                             for=\\"grantAgencyName\\"
+                            id=\\"grantAgencyName-label\\"
                           >
                             Funder/Sponsor name
                           </label>
-                          <div
-@@ -464,11 +464,11 @@
+@@ -468,11 +468,11 @@
                               autocomplete=\\"off\\"
                               class=\\"MuiInputBase-input-1110 MuiInput-input-1095\\"
                               id=\\"grantAgencyName\\"
@@ -1449,7 +1428,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                         </div>
                       </div>
                       <div
-@@ -476,26 +476,27 @@
+@@ -480,28 +480,29 @@
                       >
                         <div
                           class=\\"MuiFormControl-root-1062 MuiFormControl-fullWidth-1065\\"
@@ -1460,6 +1439,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
 +                           class=\\"MuiFormLabel-root-1073 MuiFormLabel-disabled-1075 MuiInputLabel-root-1066 MuiInputLabel-formControl-1067 MuiInputLabel-animated-1070\\"
 +                           data-shrink=\\"false\\"
                             for=\\"grantId\\"
+                            id=\\"grantId-label\\"
                           >
                             Grant ID
                           </label>
@@ -1469,6 +1449,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                           >
                             <input
                               aria-invalid=\\"false\\"
+                              aria-labelledby=\\"grantId-label\\"
 -                             class=\\"MuiInputBase-input-1110 MuiInput-input-1095\\"
 +                             class=\\"MuiInputBase-input-1110 MuiInput-input-1095 MuiInputBase-disabled-1103 MuiInput-disabled-1090\\"
 +                             disabled=\\"\\"
@@ -1482,7 +1463,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                         </div>
                       </div>
                       <div
-@@ -503,41 +504,37 @@
+@@ -509,41 +510,37 @@
                       >
                         <div
                           class=\\"MuiFormControl-root-1062 MuiFormControl-fullWidth-1065\\"
@@ -1532,7 +1513,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                                 aria-hidden=\\"true\\"
                                 class=\\"MuiSvgIcon-root-964 MuiSelect-icon-1086\\"
                                 focusable=\\"false\\"
-@@ -554,35 +551,367 @@
+@@ -560,35 +557,367 @@
                       </div>
                       <div
                         class=\\"MuiGrid-item-803 MuiGrid-grid-xs-12-842\\"
@@ -1904,7 +1885,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
             >
               <div
                 class=\\"MuiPaper-root-1027 MuiPaper-elevation1-1030 MuiPaper-rounded-1028 MuiCard-root-1026 Cards-card-1022 StandardCard\\"
-@@ -1442,66 +1771,11 @@
+@@ -1450,66 +1779,11 @@
                     </div>
                   </div>
                 </div>
@@ -1971,7 +1952,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
           >
             <div
               class=\\"MuiGrid-item-803 MuiGrid-grid-xs-true-830\\"
-@@ -1526,21 +1800,23 @@
+@@ -1534,21 +1808,23 @@
             </div>
             <div
               class=\\"MuiGrid-item-803 MuiGrid-grid-xs-12-842 MuiGrid-grid-md-auto-857\\"
@@ -2005,42 +1986,21 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
 - First value
 + Second value
 
-@@ -366,29 +366,29 @@
-                      <div
+@@ -367,11 +367,11 @@
                         class=\\"MuiFormControl-root-658\\"
                         style=\\"width: 100%;\\"
                       >
-                        <label
--                         class=\\"MuiFormLabel-root-669 MuiFormLabel-error-672 MuiFormLabel-required-674 MuiInputLabel-root-662 MuiInputLabel-formControl-663 MuiInputLabel-animated-666\\"
--                         data-shrink=\\"false\\"
-+                         class=\\"MuiFormLabel-root-669 MuiFormLabel-filled-673 MuiFormLabel-required-674 MuiInputLabel-root-662 MuiInputLabel-formControl-663 MuiInputLabel-animated-666 MuiInputLabel-shrink-665\\"
-+                         data-shrink=\\"true\\"
-                        >
-                          <span>
-                            Scale/Significance of work* 
-                            <span
-                              style=\\"font-weight: 700;\\"
-                            >
-                              (not for public view)
-                            </span>
-                          </span>
-                          <span
--                           class=\\"MuiFormLabel-asterisk-675 MuiFormLabel-error-672\\"
-+                           class=\\"MuiFormLabel-asterisk-675\\"
-                          >
-                             *
-                          </span>
-                        </label>
                         <div
--                         class=\\"MuiInputBase-root-696 MuiInput-root-683 MuiInput-underline-687 MuiInputBase-error-702 MuiInput-error-688 MuiInputBase-formControl-697 MuiInput-formControl-684\\"
-+                         class=\\"MuiInputBase-root-696 MuiInput-root-683 MuiInput-underline-687 MuiInputBase-formControl-697 MuiInput-formControl-684\\"
+                          aria-labelledby=\\"[object Object]\\"
+-                         class=\\"MuiInputBase-root-682 MuiInput-root-669 MuiInput-underline-673 MuiInputBase-error-688 MuiInput-error-674 MuiInputBase-formControl-683 MuiInput-formControl-670\\"
++                         class=\\"MuiInputBase-root-682 MuiInput-root-669 MuiInput-underline-673 MuiInputBase-formControl-683 MuiInput-formControl-670\\"
+                          inputlabelprops=\\"[object Object]\\"
                           label=\\"[object Object]\\"
                           required=\\"\\"
                         >
                           <div
-                            class=\\"MuiSelect-root-676\\"
-@@ -399,18 +399,16 @@
-                              class=\\"MuiSelect-select-677 MuiSelect-selectMenu-680 MuiInputBase-input-706 MuiInput-input-691\\"
+@@ -383,20 +383,18 @@
+                              class=\\"MuiSelect-select-663 MuiSelect-selectMenu-666 MuiInputBase-input-692 MuiInput-input-677\\"
                               id=\\"significance\\"
                               role=\\"button\\"
                               tabindex=\\"0\\"
@@ -2051,6 +2011,8 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
 +                             Major
                             </div>
                             <input
+                              aria-labelledby=\\"[object Object]-label\\"
+                              id=\\"test\\"
                               name=\\"significance\\"
                               type=\\"hidden\\"
 -                             value=\\"\\"
@@ -2058,9 +2020,9 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                             />
                             <svg
                               aria-hidden=\\"true\\"
-                              class=\\"MuiSvgIcon-root-561 MuiSelect-icon-682\\"
+                              class=\\"MuiSvgIcon-root-561 MuiSelect-icon-668\\"
                               focusable=\\"false\\"
-@@ -421,15 +419,10 @@
+@@ -407,15 +405,10 @@
                                 d=\\"M7 10l5 5 5-5z\\"
                               />
                             </svg>
@@ -2076,7 +2038,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                     <div
                       class=\\"MuiGrid-item-400 MuiGrid-grid-xs-12-439\\"
                       style=\\"margin-top: 24px;\\"
-@@ -1855,13 +1848,10 @@
+@@ -1845,13 +1838,10 @@
                         <span>
                           Form cannot be submitted until all fields are valid. Please review all input fields.
                           <ul>
@@ -2097,7 +2059,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
 - First value
 + Second value
 
-@@ -535,45 +535,38 @@
+@@ -521,47 +521,40 @@
                     />
                     <div
                       class=\\"MuiGrid-item-400 MuiGrid-grid-xs-12-439 MuiGrid-grid-sm-12-453\\"
@@ -2107,28 +2069,30 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                         class=\\"MuiFormControl-root-658 MuiFormControl-fullWidth-661\\"
                       >
                         <label
--                         class=\\"MuiFormLabel-root-669 MuiFormLabel-error-672 MuiFormLabel-required-674 MuiInputLabel-root-662 MuiInputLabel-formControl-663 MuiInputLabel-animated-666\\"
+-                         class=\\"MuiFormLabel-root-708 MuiFormLabel-error-711 MuiFormLabel-required-713 MuiInputLabel-root-701 MuiInputLabel-formControl-702 MuiInputLabel-animated-705\\"
 -                         data-shrink=\\"false\\"
-+                         class=\\"MuiFormLabel-root-669 MuiFormLabel-filled-673 MuiFormLabel-required-674 MuiInputLabel-root-662 MuiInputLabel-formControl-663 MuiInputLabel-animated-666 MuiInputLabel-shrink-665\\"
++                         class=\\"MuiFormLabel-root-708 MuiFormLabel-filled-712 MuiFormLabel-required-713 MuiInputLabel-root-701 MuiInputLabel-formControl-702 MuiInputLabel-animated-705 MuiInputLabel-shrink-704\\"
 +                         data-shrink=\\"true\\"
                           for=\\"rek-total-pages\\"
+                          id=\\"rek-total-pages-label\\"
                         >
                           Total pages/Extent
                           <span
--                           class=\\"MuiFormLabel-asterisk-675 MuiFormLabel-error-672\\"
-+                           class=\\"MuiFormLabel-asterisk-675\\"
+-                           class=\\"MuiFormLabel-asterisk-714 MuiFormLabel-error-711\\"
++                           class=\\"MuiFormLabel-asterisk-714\\"
                           >
                              *
                           </span>
                         </label>
                         <div
--                         class=\\"MuiInputBase-root-696 MuiInput-root-683 MuiInput-underline-687 MuiInputBase-error-702 MuiInput-error-688 MuiInputBase-fullWidth-705 MuiInput-fullWidth-690 MuiInputBase-formControl-697 MuiInput-formControl-684\\"
-+                         class=\\"MuiInputBase-root-696 MuiInput-root-683 MuiInput-underline-687 MuiInputBase-fullWidth-705 MuiInput-fullWidth-690 MuiInputBase-formControl-697 MuiInput-formControl-684\\"
+-                         class=\\"MuiInputBase-root-682 MuiInput-root-669 MuiInput-underline-673 MuiInputBase-error-688 MuiInput-error-674 MuiInputBase-fullWidth-691 MuiInput-fullWidth-676 MuiInputBase-formControl-683 MuiInput-formControl-670\\"
++                         class=\\"MuiInputBase-root-682 MuiInput-root-669 MuiInput-underline-673 MuiInputBase-fullWidth-691 MuiInput-fullWidth-676 MuiInputBase-formControl-683 MuiInput-formControl-670\\"
                         >
                           <input
 -                           aria-invalid=\\"true\\"
 +                           aria-invalid=\\"false\\"
-                            class=\\"MuiInputBase-input-706 MuiInput-input-691\\"
+                            aria-labelledby=\\"rek-total-pages-label\\"
+                            class=\\"MuiInputBase-input-692 MuiInput-input-677\\"
                             id=\\"rek-total-pages\\"
                             name=\\"fez_record_search_key_total_pages.rek_total_pages\\"
                             placeholder=\\"Enter total pages, size or duration of work\\"
@@ -2149,7 +2113,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                     <div
                       class=\\"MuiGrid-item-400 MuiGrid-grid-xs-12-439 MuiGrid-grid-sm-6-447\\"
                     >
-@@ -1851,13 +1844,10 @@
+@@ -1841,13 +1834,10 @@
                             <li>
                               Author affiliation rows marked with red are required
                             </li>
@@ -2170,35 +2134,21 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
 - First value
 + Second value
 
-@@ -573,22 +573,22 @@
-                      <div
+@@ -562,11 +562,11 @@
                         class=\\"MuiFormControl-root-658\\"
                         style=\\"width: 100%;\\"
                       >
-                        <label
--                         class=\\"MuiFormLabel-root-669 MuiFormLabel-error-672 MuiFormLabel-required-674 MuiInputLabel-root-662 MuiInputLabel-formControl-663 MuiInputLabel-animated-666\\"
--                         data-shrink=\\"false\\"
-+                         class=\\"MuiFormLabel-root-669 MuiFormLabel-filled-673 MuiFormLabel-required-674 MuiInputLabel-root-662 MuiInputLabel-formControl-663 MuiInputLabel-animated-666 MuiInputLabel-shrink-665\\"
-+                         data-shrink=\\"true\\"
-                        >
-                          Audience size
-                          <span
--                           class=\\"MuiFormLabel-asterisk-675 MuiFormLabel-error-672\\"
-+                           class=\\"MuiFormLabel-asterisk-675\\"
-                          >
-                             *
-                          </span>
-                        </label>
                         <div
--                         class=\\"MuiInputBase-root-696 MuiInput-root-683 MuiInput-underline-687 MuiInputBase-error-702 MuiInput-error-688 MuiInputBase-formControl-697 MuiInput-formControl-684\\"
-+                         class=\\"MuiInputBase-root-696 MuiInput-root-683 MuiInput-underline-687 MuiInputBase-formControl-697 MuiInput-formControl-684\\"
+                          aria-labelledby=\\"Audience size\\"
+-                         class=\\"MuiInputBase-root-682 MuiInput-root-669 MuiInput-underline-673 MuiInputBase-error-688 MuiInput-error-674 MuiInputBase-formControl-683 MuiInput-formControl-670\\"
++                         class=\\"MuiInputBase-root-682 MuiInput-root-669 MuiInput-underline-673 MuiInputBase-formControl-683 MuiInput-formControl-670\\"
+                          inputlabelprops=\\"[object Object]\\"
                           label=\\"Audience size\\"
                           required=\\"\\"
                         >
                           <div
-                            class=\\"MuiSelect-root-676\\"
-@@ -599,18 +599,16 @@
-                              class=\\"MuiSelect-select-677 MuiSelect-selectMenu-680 MuiInputBase-input-706 MuiInput-input-691\\"
+@@ -578,20 +578,18 @@
+                              class=\\"MuiSelect-select-663 MuiSelect-selectMenu-666 MuiInputBase-input-692 MuiInput-input-677\\"
                               id=\\"rek-audience-size\\"
                               role=\\"button\\"
                               tabindex=\\"0\\"
@@ -2209,6 +2159,8 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
 +                             Less than 100
                             </div>
                             <input
+                              aria-labelledby=\\"Audience size-label\\"
+                              id=\\"test\\"
                               name=\\"fez_record_search_key_audience_size.rek_audience_size\\"
                               type=\\"hidden\\"
 -                             value=\\"\\"
@@ -2216,9 +2168,9 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                             />
                             <svg
                               aria-hidden=\\"true\\"
-                              class=\\"MuiSvgIcon-root-561 MuiSelect-icon-682\\"
+                              class=\\"MuiSvgIcon-root-561 MuiSelect-icon-668\\"
                               focusable=\\"false\\"
-@@ -621,15 +619,10 @@
+@@ -602,15 +600,10 @@
                                 d=\\"M7 10l5 5 5-5z\\"
                               />
                             </svg>
@@ -2234,7 +2186,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                     <div
                       class=\\"MuiGrid-item-400 MuiGrid-grid-xs-12-439 MuiGrid-grid-sm-6-447\\"
                     >
-@@ -1844,13 +1837,10 @@
+@@ -1834,13 +1827,10 @@
                             <li>
                               Author affiliation rows marked with red are required
                             </li>
@@ -2255,38 +2207,39 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
 - First value
 + Second value
 
-@@ -628,41 +628,40 @@
+@@ -609,43 +609,42 @@
                     >
                       <div
                         class=\\"MuiFormControl-root-658 MuiFormControl-fullWidth-661\\"
                       >
                         <label
--                         class=\\"MuiFormLabel-root-669 MuiFormLabel-error-672 MuiFormLabel-required-674 MuiInputLabel-root-662 MuiInputLabel-formControl-663 MuiInputLabel-animated-666\\"
+-                         class=\\"MuiFormLabel-root-708 MuiFormLabel-error-711 MuiFormLabel-required-713 MuiInputLabel-root-701 MuiInputLabel-formControl-702 MuiInputLabel-animated-705\\"
 -                         data-shrink=\\"false\\"
-+                         class=\\"MuiFormLabel-root-669 MuiFormLabel-filled-673 MuiFormLabel-required-674 MuiInputLabel-root-662 MuiInputLabel-formControl-663 MuiInputLabel-animated-666 MuiInputLabel-shrink-665\\"
++                         class=\\"MuiFormLabel-root-708 MuiFormLabel-filled-712 MuiFormLabel-required-713 MuiInputLabel-root-701 MuiInputLabel-formControl-702 MuiInputLabel-animated-705 MuiInputLabel-shrink-704\\"
 +                         data-shrink=\\"true\\"
+                          id=\\"Quality indicators-label\\"
                         >
                           Quality indicators
                           <span
--                           class=\\"MuiFormLabel-asterisk-675 MuiFormLabel-error-672\\"
-+                           class=\\"MuiFormLabel-asterisk-675\\"
+-                           class=\\"MuiFormLabel-asterisk-714 MuiFormLabel-error-711\\"
++                           class=\\"MuiFormLabel-asterisk-714\\"
                           >
                              *
                           </span>
                         </label>
                         <div
--                         class=\\"MuiInputBase-root-696 MuiInput-root-683 MuiInput-underline-687 MuiInputBase-error-702 MuiInput-error-688 MuiInputBase-formControl-697 MuiInput-formControl-684\\"
-+                         class=\\"MuiInputBase-root-696 MuiInput-root-683 MuiInput-underline-687 MuiInputBase-formControl-697 MuiInput-formControl-684\\"
+-                         class=\\"MuiInputBase-root-682 MuiInput-root-669 MuiInput-underline-673 MuiInputBase-error-688 MuiInput-error-674 MuiInputBase-formControl-683 MuiInput-formControl-670\\"
++                         class=\\"MuiInputBase-root-682 MuiInput-root-669 MuiInput-underline-673 MuiInputBase-formControl-683 MuiInput-formControl-670\\"
                         >
                           <div
-                            class=\\"MuiSelect-root-676\\"
+                            class=\\"MuiSelect-root-662\\"
                           >
                             <div
                               aria-haspopup=\\"true\\"
 -                             aria-pressed=\\"false\\"
 +                             aria-owns=\\"menu-\\"
 +                             aria-pressed=\\"true\\"
-                              class=\\"MuiSelect-select-677 MuiSelect-selectMenu-680 MuiInputBase-input-706 MuiInput-input-691\\"
+                              class=\\"MuiSelect-select-663 MuiSelect-selectMenu-666 MuiInputBase-input-692 MuiInput-input-677\\"
                               id=\\"quality-indicators\\"
                               role=\\"button\\"
                               tabindex=\\"0\\"
@@ -2297,15 +2250,16 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
 +                             Commissioned by external body
                             </div>
                             <input
+                              aria-labelledby=\\"Quality indicators-label\\"
                               type=\\"hidden\\"
 -                             value=\\"\\"
 +                             value=\\"454036\\"
                             />
                             <svg
                               aria-hidden=\\"true\\"
-                              class=\\"MuiSvgIcon-root-561 MuiSelect-icon-682\\"
+                              class=\\"MuiSvgIcon-root-561 MuiSelect-icon-668\\"
                               focusable=\\"false\\"
-@@ -673,15 +672,10 @@
+@@ -656,15 +655,10 @@
                                 d=\\"M7 10l5 5 5-5z\\"
                               />
                             </svg>
@@ -2321,7 +2275,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                   </div>
                 </div>
               </div>
-@@ -1837,13 +1831,10 @@
+@@ -1827,13 +1821,10 @@
                             <li>
                               Author affiliation rows marked with red are required
                             </li>
@@ -2347,7 +2301,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
 - First value
 + Second value
 
-@@ -1156,11 +1156,11 @@
+@@ -1143,11 +1143,11 @@
                           <li
                             class=\\"MuiListItem-container-757\\"
                           >
@@ -2360,7 +2314,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                             >
                               <div
                                 class=\\"MuiListItemIcon-root-789\\"
-@@ -1207,11 +1207,22 @@
+@@ -1194,11 +1194,22 @@
                                 <div
                                   class=\\"MuiGrid-item-400 MuiGrid-grid-xs-12-439 MuiGrid-grid-sm-5-446\\"
                                 >
@@ -2391,7 +2345,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
 - First value
 + Second value
 
-@@ -1326,11 +1326,11 @@
+@@ -1313,11 +1313,11 @@
                           <li
                             class=\\"MuiListItem-container-757\\"
                           >
@@ -2404,7 +2358,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                             >
                               <div
                                 class=\\"MuiListItemIcon-root-789\\"
-@@ -1377,11 +1377,22 @@
+@@ -1364,11 +1364,22 @@
                                 <div
                                   class=\\"MuiGrid-item-400 MuiGrid-grid-xs-12-439 MuiGrid-grid-sm-5-446\\"
                                 >
@@ -2435,7 +2389,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
 - First value
 + Second value
 
-@@ -1496,11 +1496,11 @@
+@@ -1483,11 +1483,11 @@
                           <li
                             class=\\"MuiListItem-container-757\\"
                           >
@@ -2448,7 +2402,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                             >
                               <div
                                 class=\\"MuiListItemIcon-root-789\\"
-@@ -1547,14 +1547,25 @@
+@@ -1534,14 +1534,25 @@
                                 <div
                                   class=\\"MuiGrid-item-400 MuiGrid-grid-xs-12-439 MuiGrid-grid-sm-5-446\\"
                                 >
@@ -2475,7 +2429,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                             >
                               <span
                                 title=\\"Move item up the order\\"
-@@ -1622,15 +1633,10 @@
+@@ -1609,15 +1620,10 @@
                             </div>
                           </li>
                         </ul>
@@ -2491,7 +2445,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
               </div>
             </div>
             <div
-@@ -1848,13 +1854,10 @@
+@@ -1838,13 +1844,10 @@
                           Validation - 
                         </b>
                         <span>

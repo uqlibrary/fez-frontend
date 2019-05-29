@@ -2078,6 +2078,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                   getDataTransferItems={[Function]}
                                   inputProps={
                                     Object {
+                                      "aria-label": "Upload files",
                                       "id": "Uploader",
                                     }
                                   }
@@ -3628,6 +3629,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                       </FileUploadDropzoneStaticContent>
                                     </WithStyles(FileUploadDropzoneStaticContent)>
                                     <input
+                                      aria-label="Upload files"
                                       autoComplete="off"
                                       disabled={false}
                                       id="Uploader"
@@ -5758,6 +5760,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                   getDataTransferItems={[Function]}
                                   inputProps={
                                     Object {
+                                      "aria-label": "Upload files",
                                       "id": "Uploader",
                                     }
                                   }
@@ -7308,6 +7311,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                       </FileUploadDropzoneStaticContent>
                                     </WithStyles(FileUploadDropzoneStaticContent)>
                                     <input
+                                      aria-label="Upload files"
                                       autoComplete="off"
                                       disabled={false}
                                       id="Uploader"

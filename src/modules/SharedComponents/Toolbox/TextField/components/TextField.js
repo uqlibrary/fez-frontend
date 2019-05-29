@@ -12,14 +12,19 @@ export const TextFieldWrapper = props => {
     // Assign the redux validation error to the MUI input error prop and remove it from the prop payload
     const helperText = filteredProps.errorText || undefined;
     delete filteredProps.errorText;
+    const ariaLabel = `${filteredProps.id || filteredProps.label && filteredProps.label.replace(/\s+/g, '')}-label`;
     return (
         <Fragment>
             <TextField {...filteredProps}
                 helperText={helperText}
-                id={filteredProps.id || filteredProps.label && filteredProps.label.replace(/\s+/g, '') || ''}
-                InputLabelProps={
-                    filteredProps.floatinglabelfixed ? {shrink: true} : undefined
-                }
+                id={filteredProps.id || filteredProps.label && filteredProps.label.replace(/\s+/g, '')}
+                inputProps={{
+                    'aria-labelledby': ariaLabel,
+                }}
+                InputLabelProps={{
+                    shrink: filteredProps.floatinglabelfixed ? true : undefined,
+                    id: ariaLabel
+                }}
             />
         </Fragment>
     );

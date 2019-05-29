@@ -1,7 +1,7 @@
 import React from 'react';
 import Select from '@material-ui/core/Select';
 import FormControl from '@material-ui/core/FormControl';
-import InputLabel from '@material-ui/core/InputLabel';
+import Input from '@material-ui/core/Input';
 import FormHelperText from '@material-ui/core/FormHelperText';
 
 import PropTypes from 'prop-types';
@@ -17,8 +17,14 @@ const SelectFieldWrapper = props => {
     return (
         <React.Fragment>
             <FormControl error={error} style={{width: '100%'}} required={filteredProps.required}>
-                <InputLabel>{filteredProps.label}</InputLabel>
-                <Select {...filteredProps} autoWidth />
+                <Select
+                    id={`${filteredProps.label}`}
+                    inputProps={{'aria-labelledby': `${filteredProps.label}-label`, id: 'test'}}
+                    inputLabelProps={{for: filteredProps.label, id: 'test'}}
+                    input={<Input aria-labelledby={filteredProps.label} id="test" />}
+                    {...filteredProps}
+                    autoWidth
+                />
                 {
                     helperText &&
                     <FormHelperText>{helperText}</FormHelperText>
