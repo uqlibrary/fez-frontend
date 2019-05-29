@@ -39,7 +39,6 @@ export class GenericSelectFieldClass extends Component {
         locale: PropTypes.object,
         hideLabel: PropTypes.bool,
         displayEmpty: PropTypes.bool,
-
         classes: PropTypes.object,
         id: PropTypes.string
     };
@@ -79,19 +78,6 @@ export class GenericSelectFieldClass extends Component {
         this.props.onChange(value);
     };
 
-    getMenuItemProps = (item, selectedValue, multiple) => {
-        if (multiple) {
-            return {
-                selected: selectedValue.indexOf(item.value || item) > -1,
-                value: item.value || item,
-            };
-        } else {
-            return {
-                value: item.value || item,
-            };
-        }
-    };
-
     newValue = () => {
         if(this.props.multiple) {
             if(this.props.hideLabel) {
@@ -113,13 +99,26 @@ export class GenericSelectFieldClass extends Component {
     renderMenuItems = () => {
         const {classes} = this.props;
         return [
-            this.props.hideLabel && <MenuItem value={-1} key={0} style={{display: 'block'}} disabled>{this.loadingIndicationText()}</MenuItem>,
+            this.props.hideLabel &&
+            <MenuItem
+                value={-1}
+                key={0}
+                style={{display: 'block'}}
+                disabled
+            >
+                {this.loadingIndicationText()}
+            </MenuItem>,
             ...this.props.itemsList.map((item, index) => {
                 return (
                     <MenuItem
                         classes={{selected: classes.selectedMenuItem}}
                         style={{display: 'block'}}
-                        {...(this.getMenuItemProps(item, this.props.selectedValue, this.props.multiple))}
+                        selected={
+                            this.props.multiple &&
+                            this.props.selectedValue.includes(item.value || item) ||
+                            undefined
+                        }
+                        value={item.value || item}
                         key={index + 1}
                         disabled={item && !item.value}
                         aria-label={item.text || item.value || item}>

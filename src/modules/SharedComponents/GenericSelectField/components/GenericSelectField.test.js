@@ -96,42 +96,6 @@ describe('GenericSelectField ', () => {
             expect(testFn).toBeCalledWith(["two", "three"]);
         });
 
-        it('getMenuItemProps as a multiple selection', () => {
-            const testFn = jest.fn();
-            const item = {value: 1, text: 'test'};
-            const selectedValue = [1];
-            const wrapper = setup({});
-            expect(wrapper.instance().getMenuItemProps(item, selectedValue, true)).toEqual({"selected": true, "value": 1});
-
-        });
-
-        it('getMenuItemProps as a multiple selection with single itemlist object', () => {
-            const testFn = jest.fn();
-            const item = 1;
-            const selectedValue = [1];
-            const wrapper = setup({});
-            expect(wrapper.instance().getMenuItemProps(item, selectedValue, true)).toEqual({"selected": true, "value": 1});
-
-        });
-
-        it('getMenuItemProps as a single selection with single itemlist object', () => {
-            const testFn = jest.fn();
-            const item = 1;
-            const selectedValue = [1];
-            const wrapper = setup({});
-            expect(wrapper.instance().getMenuItemProps(item, selectedValue, false)).toEqual({"value": 1});
-
-        });
-
-        it('getMenuItemProps as a single selection from single', () => {
-            const testFn = jest.fn();
-            const item = {value: 1, text: 'test'};
-            const selectedValue = 1;
-            const wrapper = setup({});
-            expect(wrapper.instance().getMenuItemProps(item, selectedValue, false)).toEqual({"value": 1});
-
-        });
-
         it('newValue (multiple: true, hideLabel, true)', () => {
             const wrapper = setup({multiple: true, hideLabel: true, selectedValue: [1,2,3]});
             expect(wrapper.instance().newValue()).toEqual([1,2,3]);

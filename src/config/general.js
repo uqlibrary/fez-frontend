@@ -443,7 +443,7 @@ export const publicationTypes = (components) => [
     }
 ];
 
-export const documentTypesLookup = {
+export const DOCUMENT_TYPES_LOOKUP = {
     202: 'Generic document',
     263: 'Audio document',
     174: 'Book',

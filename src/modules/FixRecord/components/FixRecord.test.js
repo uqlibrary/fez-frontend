@@ -80,7 +80,7 @@ describe('Component FixRecord', () => {
 
     it('should redirect if author not linked', () => {
         const testMethod = jest.fn();
-        const wrapper = setup({author: {aut_id: 1001}, recordToFix: mockRecordToFix, history: {go: testMethod}});
+        setup({author: {aut_id: 1001}, recordToFix: mockRecordToFix, history: {go: testMethod}});
         expect(testMethod).toHaveBeenCalled();
     });
 
