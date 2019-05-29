@@ -10,27 +10,25 @@ exports[`SelectfieldWrapper snapshots tests renders SelectField component 1`] = 
       }
     }
   >
+    <WithStyles(InputLabel)
+      id="undefined-label"
+    />
     <WithStyles(Select)
       autoWidth={true}
       error={false}
       floatingLabelText="This is a test selectfield component"
       fullWidth={true}
       id="undefined"
-      input={
-        <WithStyles(Input)
-          id="test"
-        />
-      }
       inputLabelProps={
         Object {
           "for": undefined,
-          "id": "test",
+          "id": "undefined-label",
         }
       }
       inputProps={
         Object {
           "aria-labelledby": "undefined-label",
-          "id": "test",
+          "id": undefined,
         }
       }
       name="selectfield"
@@ -52,27 +50,25 @@ exports[`SelectfieldWrapper snapshots tests renders an error 1`] = `
       }
     }
   >
+    <WithStyles(InputLabel)
+      id="undefined-label"
+    />
     <WithStyles(Select)
       autoWidth={true}
       error={true}
       floatingLabelText="test selectfield component"
       fullWidth={true}
       id="undefined"
-      input={
-        <WithStyles(Input)
-          id="test"
-        />
-      }
       inputLabelProps={
         Object {
           "for": undefined,
-          "id": "test",
+          "id": "undefined-label",
         }
       }
       inputProps={
         Object {
           "aria-labelledby": "undefined-label",
-          "id": "test",
+          "id": undefined,
         }
       }
       name="selectfield"
