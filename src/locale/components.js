@@ -83,10 +83,6 @@ export default {
                     altmetric: 'Altmetric'
                 },
                 recordsPerSource: 5
-            },
-            contentIndicators: {
-                label: 'Content Indicators: ',
-                divider: ', '
             }
         },
         myTrendingPublications: {
@@ -1416,6 +1412,10 @@ export default {
         },
         fileUploader: {
             label: 'Click here to select files, or drag files into this area to upload'
+        },
+        contentIndicators: {
+            label: 'Content Indicators',
+            divider: ', '
         }
     }
 };
