@@ -208,6 +208,7 @@ export function claimPublication(data) {
             ...NEW_RECORD_DEFAULT_VALUES,
             ...transformers.getRecordLinkSearchKey(data),
             ...transformers.getRecordFileAttachmentSearchKey(data.files ? data.files.queue : [], data.publication),
+            ...transformers.getExternalSourceIdSearchKeys(data.publication.sources),
             ...recordAuthorsIdSearchKeys,
             ...recordContributorsIdSearchKeys
         } : null;
