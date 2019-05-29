@@ -498,7 +498,8 @@ exports[`PublicationCitation  should render component with content indicators 1`
             gutterBottom={true}
             variant="caption"
           >
-            Content Indicators: 
+            Content Indicators
+            :
             <span
               key="0"
             >
@@ -1086,8 +1087,15 @@ exports[`PublicationCitation  should render component with default actions 1`] =
                   Object {
                     "rek_content_indicator": 454057,
                     "rek_content_indicator_id": 1,
-                    "rek_content_indicator_lookup": "some content indicator",
+                    "rek_content_indicator_lookup": "more content indicators",
                     "rek_content_indicator_order": 1,
+                    "rek_ismemberof": "UQ:152266",
+                  },
+                  Object {
+                    "rek_content_indicator": 454058,
+                    "rek_content_indicator_id": 2,
+                    "rek_content_indicator_lookup": "still yet another content indicator",
+                    "rek_content_indicator_order": 2,
                     "rek_ismemberof": "UQ:152266",
                   },
                 ],
@@ -1391,11 +1399,18 @@ exports[`PublicationCitation  should render component with default actions 1`] =
             gutterBottom={true}
             variant="caption"
           >
-            Content Indicators: 
+            Content Indicators
+            :
             <span
               key="0"
             >
-              some content indicator
+              more content indicators
+              , 
+            </span>
+            <span
+              key="1"
+            >
+              still yet another content indicator
             </span>
           </WithStyles(Typography)>
         </WithStyles(Grid)>
@@ -1513,8 +1528,15 @@ exports[`PublicationCitation  should render component with default actions 1`] =
                   Object {
                     "rek_content_indicator": 454057,
                     "rek_content_indicator_id": 1,
-                    "rek_content_indicator_lookup": "some content indicator",
+                    "rek_content_indicator_lookup": "more content indicators",
                     "rek_content_indicator_order": 1,
+                    "rek_ismemberof": "UQ:152266",
+                  },
+                  Object {
+                    "rek_content_indicator": 454058,
+                    "rek_content_indicator_id": 2,
+                    "rek_content_indicator_lookup": "still yet another content indicator",
+                    "rek_content_indicator_order": 2,
                     "rek_ismemberof": "UQ:152266",
                   },
                 ],
@@ -2005,8 +2027,15 @@ exports[`PublicationCitation  should render component with default item 1`] = `
                   Object {
                     "rek_content_indicator": 454057,
                     "rek_content_indicator_id": 1,
-                    "rek_content_indicator_lookup": "some content indicator",
+                    "rek_content_indicator_lookup": "more content indicators",
                     "rek_content_indicator_order": 1,
+                    "rek_ismemberof": "UQ:152266",
+                  },
+                  Object {
+                    "rek_content_indicator": 454058,
+                    "rek_content_indicator_id": 2,
+                    "rek_content_indicator_lookup": "still yet another content indicator",
+                    "rek_content_indicator_order": 2,
                     "rek_ismemberof": "UQ:152266",
                   },
                 ],
@@ -2310,11 +2339,18 @@ exports[`PublicationCitation  should render component with default item 1`] = `
             gutterBottom={true}
             variant="caption"
           >
-            Content Indicators: 
+            Content Indicators
+            :
             <span
               key="0"
             >
-              some content indicator
+              more content indicators
+              , 
+            </span>
+            <span
+              key="1"
+            >
+              still yet another content indicator
             </span>
           </WithStyles(Typography)>
         </WithStyles(Grid)>
@@ -2432,8 +2468,15 @@ exports[`PublicationCitation  should render component with default item 1`] = `
                   Object {
                     "rek_content_indicator": 454057,
                     "rek_content_indicator_id": 1,
-                    "rek_content_indicator_lookup": "some content indicator",
+                    "rek_content_indicator_lookup": "more content indicators",
                     "rek_content_indicator_order": 1,
+                    "rek_ismemberof": "UQ:152266",
+                  },
+                  Object {
+                    "rek_content_indicator": 454058,
+                    "rek_content_indicator_id": 2,
+                    "rek_content_indicator_lookup": "still yet another content indicator",
+                    "rek_content_indicator_order": 2,
                     "rek_ismemberof": "UQ:152266",
                   },
                 ],
@@ -2880,8 +2923,15 @@ exports[`PublicationCitation  should render component with default item without 
                   Object {
                     "rek_content_indicator": 454057,
                     "rek_content_indicator_id": 1,
-                    "rek_content_indicator_lookup": "some content indicator",
+                    "rek_content_indicator_lookup": "more content indicators",
                     "rek_content_indicator_order": 1,
+                    "rek_ismemberof": "UQ:152266",
+                  },
+                  Object {
+                    "rek_content_indicator": 454058,
+                    "rek_content_indicator_id": 2,
+                    "rek_content_indicator_lookup": "still yet another content indicator",
+                    "rek_content_indicator_order": 2,
                     "rek_ismemberof": "UQ:152266",
                   },
                 ],
@@ -3185,11 +3235,18 @@ exports[`PublicationCitation  should render component with default item without 
             gutterBottom={true}
             variant="caption"
           >
-            Content Indicators: 
+            Content Indicators
+            :
             <span
               key="0"
             >
-              some content indicator
+              more content indicators
+              , 
+            </span>
+            <span
+              key="1"
+            >
+              still yet another content indicator
             </span>
           </WithStyles(Typography)>
         </WithStyles(Grid)>
@@ -3307,8 +3364,15 @@ exports[`PublicationCitation  should render component with default item without 
                   Object {
                     "rek_content_indicator": 454057,
                     "rek_content_indicator_id": 1,
-                    "rek_content_indicator_lookup": "some content indicator",
+                    "rek_content_indicator_lookup": "more content indicators",
                     "rek_content_indicator_order": 1,
+                    "rek_ismemberof": "UQ:152266",
+                  },
+                  Object {
+                    "rek_content_indicator": 454058,
+                    "rek_content_indicator_id": 2,
+                    "rek_content_indicator_lookup": "still yet another content indicator",
+                    "rek_content_indicator_order": 2,
                     "rek_ismemberof": "UQ:152266",
                   },
                 ],
@@ -3760,8 +3824,15 @@ exports[`PublicationCitation  should render component with default list hiding t
                   Object {
                     "rek_content_indicator": 454057,
                     "rek_content_indicator_id": 1,
-                    "rek_content_indicator_lookup": "some content indicator",
+                    "rek_content_indicator_lookup": "more content indicators",
                     "rek_content_indicator_order": 1,
+                    "rek_ismemberof": "UQ:152266",
+                  },
+                  Object {
+                    "rek_content_indicator": 454058,
+                    "rek_content_indicator_id": 2,
+                    "rek_content_indicator_lookup": "still yet another content indicator",
+                    "rek_content_indicator_order": 2,
                     "rek_ismemberof": "UQ:152266",
                   },
                 ],
@@ -4065,11 +4136,18 @@ exports[`PublicationCitation  should render component with default list hiding t
             gutterBottom={true}
             variant="caption"
           >
-            Content Indicators: 
+            Content Indicators
+            :
             <span
               key="0"
             >
-              some content indicator
+              more content indicators
+              , 
+            </span>
+            <span
+              key="1"
+            >
+              still yet another content indicator
             </span>
           </WithStyles(Typography)>
         </WithStyles(Grid)>
@@ -4187,8 +4265,15 @@ exports[`PublicationCitation  should render component with default list hiding t
                   Object {
                     "rek_content_indicator": 454057,
                     "rek_content_indicator_id": 1,
-                    "rek_content_indicator_lookup": "some content indicator",
+                    "rek_content_indicator_lookup": "more content indicators",
                     "rek_content_indicator_order": 1,
+                    "rek_ismemberof": "UQ:152266",
+                  },
+                  Object {
+                    "rek_content_indicator": 454058,
+                    "rek_content_indicator_id": 2,
+                    "rek_content_indicator_lookup": "still yet another content indicator",
+                    "rek_content_indicator_order": 2,
                     "rek_ismemberof": "UQ:152266",
                   },
                 ],
@@ -4640,8 +4725,15 @@ exports[`PublicationCitation  should render component with default list hiding t
                   Object {
                     "rek_content_indicator": 454057,
                     "rek_content_indicator_id": 1,
-                    "rek_content_indicator_lookup": "some content indicator",
+                    "rek_content_indicator_lookup": "more content indicators",
                     "rek_content_indicator_order": 1,
+                    "rek_ismemberof": "UQ:152266",
+                  },
+                  Object {
+                    "rek_content_indicator": 454058,
+                    "rek_content_indicator_id": 2,
+                    "rek_content_indicator_lookup": "still yet another content indicator",
+                    "rek_content_indicator_order": 2,
                     "rek_ismemberof": "UQ:152266",
                   },
                 ],
@@ -4945,11 +5037,18 @@ exports[`PublicationCitation  should render component with default list hiding t
             gutterBottom={true}
             variant="caption"
           >
-            Content Indicators: 
+            Content Indicators
+            :
             <span
               key="0"
             >
-              some content indicator
+              more content indicators
+              , 
+            </span>
+            <span
+              key="1"
+            >
+              still yet another content indicator
             </span>
           </WithStyles(Typography)>
         </WithStyles(Grid)>
@@ -5067,8 +5166,15 @@ exports[`PublicationCitation  should render component with default list hiding t
                   Object {
                     "rek_content_indicator": 454057,
                     "rek_content_indicator_id": 1,
-                    "rek_content_indicator_lookup": "some content indicator",
+                    "rek_content_indicator_lookup": "more content indicators",
                     "rek_content_indicator_order": 1,
+                    "rek_ismemberof": "UQ:152266",
+                  },
+                  Object {
+                    "rek_content_indicator": 454058,
+                    "rek_content_indicator_id": 2,
+                    "rek_content_indicator_lookup": "still yet another content indicator",
+                    "rek_content_indicator_order": 2,
                     "rek_ismemberof": "UQ:152266",
                   },
                 ],
@@ -5520,8 +5626,15 @@ exports[`PublicationCitation  should render component with publication from mult
                   Object {
                     "rek_content_indicator": 454057,
                     "rek_content_indicator_id": 1,
-                    "rek_content_indicator_lookup": "some content indicator",
+                    "rek_content_indicator_lookup": "more content indicators",
                     "rek_content_indicator_order": 1,
+                    "rek_ismemberof": "UQ:152266",
+                  },
+                  Object {
+                    "rek_content_indicator": 454058,
+                    "rek_content_indicator_id": 2,
+                    "rek_content_indicator_lookup": "still yet another content indicator",
+                    "rek_content_indicator_order": 2,
                     "rek_ismemberof": "UQ:152266",
                   },
                 ],
@@ -5831,11 +5944,18 @@ exports[`PublicationCitation  should render component with publication from mult
             gutterBottom={true}
             variant="caption"
           >
-            Content Indicators: 
+            Content Indicators
+            :
             <span
               key="0"
             >
-              some content indicator
+              more content indicators
+              , 
+            </span>
+            <span
+              key="1"
+            >
+              still yet another content indicator
             </span>
           </WithStyles(Typography)>
         </WithStyles(Grid)>
@@ -5953,8 +6073,15 @@ exports[`PublicationCitation  should render component with publication from mult
                   Object {
                     "rek_content_indicator": 454057,
                     "rek_content_indicator_id": 1,
-                    "rek_content_indicator_lookup": "some content indicator",
+                    "rek_content_indicator_lookup": "more content indicators",
                     "rek_content_indicator_order": 1,
+                    "rek_ismemberof": "UQ:152266",
+                  },
+                  Object {
+                    "rek_content_indicator": 454058,
+                    "rek_content_indicator_id": 2,
+                    "rek_content_indicator_lookup": "still yet another content indicator",
+                    "rek_content_indicator_order": 2,
                     "rek_ismemberof": "UQ:152266",
                   },
                 ],
@@ -6414,8 +6541,15 @@ exports[`PublicationCitation  should render component without a title 1`] = `
                   Object {
                     "rek_content_indicator": 454057,
                     "rek_content_indicator_id": 1,
-                    "rek_content_indicator_lookup": "some content indicator",
+                    "rek_content_indicator_lookup": "more content indicators",
                     "rek_content_indicator_order": 1,
+                    "rek_ismemberof": "UQ:152266",
+                  },
+                  Object {
+                    "rek_content_indicator": 454058,
+                    "rek_content_indicator_id": 2,
+                    "rek_content_indicator_lookup": "still yet another content indicator",
+                    "rek_content_indicator_order": 2,
                     "rek_ismemberof": "UQ:152266",
                   },
                 ],
@@ -6725,11 +6859,18 @@ exports[`PublicationCitation  should render component without a title 1`] = `
             gutterBottom={true}
             variant="caption"
           >
-            Content Indicators: 
+            Content Indicators
+            :
             <span
               key="0"
             >
-              some content indicator
+              more content indicators
+              , 
+            </span>
+            <span
+              key="1"
+            >
+              still yet another content indicator
             </span>
           </WithStyles(Typography)>
         </WithStyles(Grid)>
@@ -6847,8 +6988,15 @@ exports[`PublicationCitation  should render component without a title 1`] = `
                   Object {
                     "rek_content_indicator": 454057,
                     "rek_content_indicator_id": 1,
-                    "rek_content_indicator_lookup": "some content indicator",
+                    "rek_content_indicator_lookup": "more content indicators",
                     "rek_content_indicator_order": 1,
+                    "rek_ismemberof": "UQ:152266",
+                  },
+                  Object {
+                    "rek_content_indicator": 454058,
+                    "rek_content_indicator_id": 2,
+                    "rek_content_indicator_lookup": "still yet another content indicator",
+                    "rek_content_indicator_order": 2,
                     "rek_ismemberof": "UQ:152266",
                   },
                 ],
@@ -7392,8 +7540,15 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
                   Object {
                     "rek_content_indicator": 454057,
                     "rek_content_indicator_id": 1,
-                    "rek_content_indicator_lookup": "some content indicator",
+                    "rek_content_indicator_lookup": "more content indicators",
                     "rek_content_indicator_order": 1,
+                    "rek_ismemberof": "UQ:152266",
+                  },
+                  Object {
+                    "rek_content_indicator": 454058,
+                    "rek_content_indicator_id": 2,
+                    "rek_content_indicator_lookup": "still yet another content indicator",
+                    "rek_content_indicator_order": 2,
                     "rek_ismemberof": "UQ:152266",
                   },
                 ],
@@ -7697,11 +7852,18 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
             gutterBottom={true}
             variant="caption"
           >
-            Content Indicators: 
+            Content Indicators
+            :
             <span
               key="0"
             >
-              some content indicator
+              more content indicators
+              , 
+            </span>
+            <span
+              key="1"
+            >
+              still yet another content indicator
             </span>
           </WithStyles(Typography)>
         </WithStyles(Grid)>
@@ -7819,8 +7981,15 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
                   Object {
                     "rek_content_indicator": 454057,
                     "rek_content_indicator_id": 1,
-                    "rek_content_indicator_lookup": "some content indicator",
+                    "rek_content_indicator_lookup": "more content indicators",
                     "rek_content_indicator_order": 1,
+                    "rek_ismemberof": "UQ:152266",
+                  },
+                  Object {
+                    "rek_content_indicator": 454058,
+                    "rek_content_indicator_id": 2,
+                    "rek_content_indicator_lookup": "still yet another content indicator",
+                    "rek_content_indicator_order": 2,
                     "rek_ismemberof": "UQ:152266",
                   },
                 ],
@@ -8229,8 +8398,15 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
                   Object {
                     "rek_content_indicator": 454057,
                     "rek_content_indicator_id": 1,
-                    "rek_content_indicator_lookup": "some content indicator",
+                    "rek_content_indicator_lookup": "more content indicators",
                     "rek_content_indicator_order": 1,
+                    "rek_ismemberof": "UQ:152266",
+                  },
+                  Object {
+                    "rek_content_indicator": 454058,
+                    "rek_content_indicator_id": 2,
+                    "rek_content_indicator_lookup": "still yet another content indicator",
+                    "rek_content_indicator_order": 2,
                     "rek_ismemberof": "UQ:152266",
                   },
                 ],
