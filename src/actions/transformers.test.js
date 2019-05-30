@@ -1578,6 +1578,29 @@ describe('getNtroMetadataSearchKeys tests', () => {
     });
 });
 
+describe('getContentIndicatorSearchKey', () => {
+    it('returns empty object if input is missing or empty', () => {
+        expect(transformers.getContentIndicatorSearchKey()).toEqual({});
+    });
+
+    it('returns content indicator search key for valid input', () => {
+        const input = [200, 300];
+        const expected = {
+            fez_record_search_key_content_indicator: [
+                {
+                    rek_content_indicator: 200,
+                    rek_content_indicator_order: 1,
+                },
+                {
+                    rek_content_indicator: 300,
+                    rek_content_indicator_order: 2,
+                },
+            ],
+        };
+        expect(transformers.getContentIndicatorSearchKey(input)).toEqual(expected);
+    });
+});
+
 describe('getQualityIndicatorSearchKey', () => {
     it('should return quality indicator search key', () => {
         expect(transformers.getQualityIndicatorSearchKey()).toEqual({});
