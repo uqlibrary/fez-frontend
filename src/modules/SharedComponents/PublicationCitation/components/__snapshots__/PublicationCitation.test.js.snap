@@ -501,13 +501,13 @@ exports[`PublicationCitation  should render component with content indicators 1`
             Content Indicators
             :
             <span
-              key="0"
+              key="1"
             >
               a content indicator
               , 
             </span>
             <span
-              key="1"
+              key="2"
             >
               another content indicator
             </span>
@@ -1402,13 +1402,13 @@ exports[`PublicationCitation  should render component with default actions 1`] =
             Content Indicators
             :
             <span
-              key="0"
+              key="1"
             >
               more content indicators
               , 
             </span>
             <span
-              key="1"
+              key="2"
             >
               still yet another content indicator
             </span>
@@ -2342,13 +2342,13 @@ exports[`PublicationCitation  should render component with default item 1`] = `
             Content Indicators
             :
             <span
-              key="0"
+              key="1"
             >
               more content indicators
               , 
             </span>
             <span
-              key="1"
+              key="2"
             >
               still yet another content indicator
             </span>
@@ -3238,13 +3238,13 @@ exports[`PublicationCitation  should render component with default item without 
             Content Indicators
             :
             <span
-              key="0"
+              key="1"
             >
               more content indicators
               , 
             </span>
             <span
-              key="1"
+              key="2"
             >
               still yet another content indicator
             </span>
@@ -4139,13 +4139,13 @@ exports[`PublicationCitation  should render component with default list hiding t
             Content Indicators
             :
             <span
-              key="0"
+              key="1"
             >
               more content indicators
               , 
             </span>
             <span
-              key="1"
+              key="2"
             >
               still yet another content indicator
             </span>
@@ -5040,13 +5040,13 @@ exports[`PublicationCitation  should render component with default list hiding t
             Content Indicators
             :
             <span
-              key="0"
+              key="1"
             >
               more content indicators
               , 
             </span>
             <span
-              key="1"
+              key="2"
             >
               still yet another content indicator
             </span>
@@ -5947,13 +5947,13 @@ exports[`PublicationCitation  should render component with publication from mult
             Content Indicators
             :
             <span
-              key="0"
+              key="1"
             >
               more content indicators
               , 
             </span>
             <span
-              key="1"
+              key="2"
             >
               still yet another content indicator
             </span>
@@ -6862,13 +6862,13 @@ exports[`PublicationCitation  should render component without a title 1`] = `
             Content Indicators
             :
             <span
-              key="0"
+              key="1"
             >
               more content indicators
               , 
             </span>
             <span
-              key="1"
+              key="2"
             >
               still yet another content indicator
             </span>
@@ -7855,13 +7855,13 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
             Content Indicators
             :
             <span
-              key="0"
+              key="1"
             >
               more content indicators
               , 
             </span>
             <span
-              key="1"
+              key="2"
             >
               still yet another content indicator
             </span>

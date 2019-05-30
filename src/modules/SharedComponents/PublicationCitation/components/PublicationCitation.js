@@ -314,7 +314,7 @@ export class PublicationCitation extends PureComponent {
                                         {
                                             this.props.publication.fez_record_search_key_content_indicator.map((item, index) => {
                                                 return (
-                                                    <span key={index}>
+                                                    <span key={item.rek_content_indicator_id}>
                                                         {item.rek_content_indicator_lookup}
                                                         {index < (this.props.publication.fez_record_search_key_content_indicator.length - 1) && locale.components.contentIndicators.divider}
                                                     </span>
