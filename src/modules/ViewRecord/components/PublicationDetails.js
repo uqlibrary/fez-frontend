@@ -81,7 +81,7 @@ export class PublicationDetailsClass extends PureComponent {
                             />
                     }
                     {
-                        !!this.props.publication.fez_record_search_key_content_indicator &&
+                        this.props.publication.fez_record_search_key_content_indicator &&
                         this.props.publication.fez_record_search_key_content_indicator.length > 0 &&
                         <this.ViewRecordRow
                             heading={componentLocale.components.contentIndicators.label}
