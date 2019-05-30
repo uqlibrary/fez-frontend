@@ -1,7 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { GenericSelectField } from 'modules/SharedComponents/GenericSelectField';
-import { CONTENT_INDICATORS } from 'config/general';
+import {
+    CONTENT_INDICATORS,
+    CONTENT_INDICATORS_DOCTYPE_BLACKLIST,
+    CONTENT_INDICATORS_COLLECTIONS_BLACKLIST,
+} from 'config/general';
 
 export const getSelected = props => {
     let selectedValues = !!props.input && props.input.value || [];
@@ -21,6 +25,19 @@ export const getSelected = props => {
         ])];
     }
     return selectedValues;
+};
+
+export const showContentIndicatorsField = (record) => {
+    const isBlacklistedType = CONTENT_INDICATORS_DOCTYPE_BLACKLIST.includes(
+        record.rek_display_type
+    );
+    const recordCollectionPids = record.fez_record_search_key_ismemberof.map(
+        item => item.rek_ismemberof
+    );
+    const inBlacklistedCollection = CONTENT_INDICATORS_COLLECTIONS_BLACKLIST.some(
+        collectionPid => recordCollectionPids.includes(collectionPid)
+    );
+    return !isBlacklistedType && !inBlacklistedCollection;
 };
 
 export const ContentIndicatorsField = props => {

@@ -1,1 +1,1 @@
-export { default as ContentIndicatorsField } from './ContentIndicatorsField';
+export { ContentIndicatorsField, showContentIndicatorsField } from './ContentIndicatorsField';
