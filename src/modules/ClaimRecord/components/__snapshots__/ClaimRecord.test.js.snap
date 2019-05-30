@@ -20464,3 +20464,20 @@ exports[`Component ClaimRecord  should show contributor as linked 1`] = `
   </form>
 </StandardPage>
 `;
+
+exports[`Component ClaimRecord  should show the loader 1`] = `
+<StandardPage>
+  <WithStyles(Grid)
+    container={true}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <WithStyles(InlineLoader)
+        message="Loading record to claim"
+      />
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</StandardPage>
+`;

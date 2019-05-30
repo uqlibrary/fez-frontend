@@ -6,6 +6,7 @@ export default {
             title: 'Claim a work',
             cancel: 'Cancel this claim',
             submit: 'Claim this work',
+            publicationLoading: 'Loading record to claim',
             claimingInformation: {
                 title: 'You are claiming to be an author for the following work:',
                 // help: {

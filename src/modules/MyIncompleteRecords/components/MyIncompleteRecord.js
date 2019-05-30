@@ -104,7 +104,6 @@ export class MyIncompleteRecordClass extends PureComponent {
         const txtFixForm = formsLocale.forms.fixPublicationForm;
         const authors = txt.fields.authors;
 
-        // console.log(this.props);
         const alertProps = validation.getErrorAlertProps({
             ...this.props,
             alertLocale: {

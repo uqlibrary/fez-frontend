@@ -12,6 +12,7 @@ import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
 import {ConfirmDialogBox} from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import {FileUploadField} from 'modules/SharedComponents/Toolbox/FileUploader';
 import {NavigationDialogBox} from 'modules/SharedComponents/Toolbox/NavigationPrompt';
+import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
 
 import {PublicationCitation} from 'modules/SharedComponents/PublicationCitation';
 import {AuthorLinkingField, ContributorLinkingField} from 'modules/SharedComponents/AuthorLinking';
@@ -22,6 +23,11 @@ export default class ClaimRecord extends PureComponent {
     static propTypes = {
         ...propTypes, // all redux-form props
         disableSubmit: PropTypes.bool,
+
+        fullPublicationToClaim: PropTypes.object,
+        fullPublicationToClaimLoading: PropTypes.bool,
+        fullPublicationToClaimLoadingFailed: PropTypes.any,
+
         publicationToClaimFileUploadingError: PropTypes.bool,
         publicationFailedToClaim: PropTypes.string,
         redirectPath: PropTypes.string,
@@ -30,11 +36,17 @@ export default class ClaimRecord extends PureComponent {
     };
 
     componentWillMount() {
-        const publication = this.props.initialValues.get('publication') ? this.props.initialValues.get('publication').toJS() : null;
         const author = this.props.initialValues.get('author') ? this.props.initialValues.get('author').toJS() : null;
-
+        const publication = this.props.initialValues.get('publication') ? this.props.initialValues.get('publication').toJS() : null;
         if (!author || !publication) {
             this.props.history.go(-1);
+        }
+    }
+
+    componentDidMount() {
+        const publication = this.props.initialValues.get('publication') ? this.props.initialValues.get('publication').toJS() : null;
+        if(publication && publication.rek_pid) {
+            this.props.actions.loadFullRecordToClaim(publication.rek_pid);
         }
     }
 
@@ -78,15 +90,28 @@ export default class ClaimRecord extends PureComponent {
         const publication = this.props.initialValues.get('publication').toJS();
         return publication.fez_record_search_key_author && publication.fez_record_search_key_author.length > 0 ?
             validation.isValidContributorLink(link) : validation.isValidContributorLink(link, true);
-    }
+    };
 
     render() {
         const txt = locale.forms.claimPublicationForm;
-        const publication = this.props.initialValues.get('publication') ? this.props.initialValues.get('publication').toJS() : null;
+        const publication = {...(this.props.initialValues.get('publication') && this.props.initialValues.get('publication').toJS(0)), ...this.props.fullPublicationToClaim};
         const author = this.props.initialValues.get('author') ? this.props.initialValues.get('author').toJS() : null;
-        if (!author || !publication) {
+
+        if (!author) {
             return (<div />);
         }
+        if(!publication || this.props.fullPublicationToClaimLoading) {
+            return (
+                <StandardPage>
+                    <Grid container>
+                        <Grid item xs={12}>
+                            <InlineLoader message={txt.publicationLoading}/>
+                        </Grid>
+                    </Grid>
+                </StandardPage>
+            );
+        }
+
         const authorLinked = publication && author && publication.fez_record_search_key_author_id && publication.fez_record_search_key_author_id.length > 0 &&
             publication.fez_record_search_key_author_id.filter(authorId => authorId.rek_author_id === author.aut_id).length > 0;
         const contributorLinked = publication && author && publication.fez_record_search_key_contributor_id && publication.fez_record_search_key_contributor_id.length > 0 &&
