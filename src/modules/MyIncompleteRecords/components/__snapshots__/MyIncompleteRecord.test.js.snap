@@ -21,6 +21,7 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
   title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
+    hideContentIndicators={true}
     publication={
       Object {
         "fez_datastream_info": Array [],
@@ -933,6 +934,7 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
   title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
+    hideContentIndicators={true}
     publication={
       Object {
         "fez_datastream_info": Array [],
@@ -1870,6 +1872,7 @@ exports[`Component MyIncompleteRecord should render file upload field 1`] = `
   title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
+    hideContentIndicators={true}
     publication={
       Object {
         "fez_datastream_info": Array [],
@@ -2857,6 +2860,7 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
   title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
+    hideContentIndicators={true}
     publication={
       Object {
         "fez_datastream_info": Array [],
@@ -3769,6 +3773,7 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
   title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
+    hideContentIndicators={true}
     publication={
       Object {
         "fez_datastream_info": Array [],
@@ -4681,6 +4686,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
   title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
+    hideContentIndicators={true}
     publication={
       Object {
         "fez_datastream_info": Array [],
@@ -5593,6 +5599,7 @@ exports[`Component MyIncompleteRecord should render significance and contributio
   title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
+    hideContentIndicators={true}
     publication={
       Object {
         "fez_datastream_info": Array [],
@@ -6505,6 +6512,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
   title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
+    hideContentIndicators={true}
     publication={
       Object {
         "fez_datastream_info": Array [],
@@ -7423,6 +7431,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
   title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
+    hideContentIndicators={true}
     publication={
       Object {
         "fez_datastream_info": Array [],
