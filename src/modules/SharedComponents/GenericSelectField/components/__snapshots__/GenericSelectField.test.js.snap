@@ -2263,6 +2263,64 @@ Array [
 ]
 `;
 
+exports[`GenericSelectField Methods renderMenuItems (multiple: true) 1`] = `
+Array [
+  undefined,
+  <WithStyles(MenuItem)
+    aria-label={1}
+    classes={
+      Object {
+        "selected": undefined,
+      }
+    }
+    disabled={true}
+    selected={true}
+    style={
+      Object {
+        "display": "block",
+      }
+    }
+    value={1}
+  >
+    1
+  </WithStyles(MenuItem)>,
+  <WithStyles(MenuItem)
+    aria-label={2}
+    classes={
+      Object {
+        "selected": undefined,
+      }
+    }
+    disabled={true}
+    style={
+      Object {
+        "display": "block",
+      }
+    }
+    value={2}
+  >
+    2
+  </WithStyles(MenuItem)>,
+  <WithStyles(MenuItem)
+    aria-label={3}
+    classes={
+      Object {
+        "selected": undefined,
+      }
+    }
+    disabled={true}
+    style={
+      Object {
+        "display": "block",
+      }
+    }
+    value={3}
+  >
+    3
+  </WithStyles(MenuItem)>,
+]
+`;
+
 exports[`GenericSelectField should render snapshots for loading items 1`] = `
 <WithStyles(FormControl)
   error={false}

@@ -264,6 +264,17 @@ describe('GenericSelectField', () => {
             ).toMatchSnapshot();
         });
 
+        it('renderMenuItems (multiple: true)', () => {
+            const wrapper = setup({
+                multiple: true,
+                itemsList: [1, 2, 3],
+                selectedValue: [1],
+            });
+            expect(
+                wrapper.instance().renderMenuItems()
+            ).toMatchSnapshot();
+        });
+
         it('Shows an error', () => {
             const wrapper = setup({
                 hideLabel: false,
