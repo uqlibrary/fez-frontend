@@ -1,4 +1,4 @@
-import ContentIndicatorsField from './ContentIndicatorsField';
+import { ContentIndicatorsField, getSelected } from './ContentIndicatorsField';
 import Immutable from 'immutable';
 
 function setup(testProps, isShallow = true) {
@@ -38,5 +38,18 @@ describe('ContentIndicatorsField component', () => {
             }
         });
         expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should not allow deselection of initial values', () => {
+        const input = {
+            input: {
+                value: [454057],
+            },
+            meta: {
+                initial: Immutable.List([454057, 454058])
+            }
+        };
+        const expected = [454057, 454058];
+        expect(getSelected(input)).toEqual(expected);
     });
 });
