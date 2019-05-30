@@ -1,27 +1,27 @@
-import React, {PureComponent} from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import {propTypes} from 'redux-form/immutable';
-import {Field} from 'redux-form/immutable';
+import { propTypes } from 'redux-form/immutable';
+import { Field } from 'redux-form/immutable';
 
 import Button from '@material-ui/core/Button';
 import MenuItem from '@material-ui/core/MenuItem';
 import Grid from '@material-ui/core/Grid';
 
-import {SelectField} from 'modules/SharedComponents/Toolbox/SelectField';
-import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
-import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
-import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
-import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
-import {ConfirmDialogBox} from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
-import {ContentIndicatorsField} from 'modules/SharedComponents/Toolbox/ContentIndicatorsField';
-import {NavigationDialogBox} from 'modules/SharedComponents/Toolbox/NavigationPrompt';
-import {FileUploadField} from 'modules/SharedComponents/Toolbox/FileUploader';
-import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
+import { SelectField } from 'modules/SharedComponents/Toolbox/SelectField';
+import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
+import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
+import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
+import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
+import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
+import { ContentIndicatorsField } from 'modules/SharedComponents/Toolbox/ContentIndicatorsField';
+import { NavigationDialogBox } from 'modules/SharedComponents/Toolbox/NavigationPrompt';
+import { FileUploadField } from 'modules/SharedComponents/Toolbox/FileUploader';
+import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 
-import {PublicationCitation} from 'modules/SharedComponents/PublicationCitation';
-import {validation, routes} from 'config';
-import {default as pagesLocale} from 'locale/pages';
-import {default as formsLocale} from 'locale/forms';
+import { PublicationCitation } from 'modules/SharedComponents/PublicationCitation';
+import { validation, routes } from 'config';
+import { default as pagesLocale } from 'locale/pages';
+import { default as formsLocale } from 'locale/forms';
 
 export default class FixRecord extends PureComponent {
     static propTypes = {
@@ -120,7 +120,8 @@ export default class FixRecord extends PureComponent {
     };
 
     _handleDefaultSubmit = (event) => {
-        if(event) event.preventDefault();
+        event &&
+        event.preventDefault();
     };
 
     render() {
@@ -134,10 +135,10 @@ export default class FixRecord extends PureComponent {
         const txtFixForm = formsLocale.forms.fixPublicationForm;
         const txtUnclaimForm = formsLocale.forms.unclaimPublicationForm;
 
-        if(this.props.accountAuthorLoading || this.props.loadingRecordToFix) {
+        if (this.props.accountAuthorLoading || this.props.loadingRecordToFix) {
             return (
                 <React.Fragment>
-                    <InlineLoader message={txt.loadingMessage}/>
+                    <InlineLoader message={txt.loadingMessage} />
                 </React.Fragment>
             );
         }
@@ -150,21 +151,21 @@ export default class FixRecord extends PureComponent {
         ));
 
         // set confirmation message depending on file upload status
-        const saveConfirmationLocale = {...txtFixForm.successWorkflowConfirmation};
+        const saveConfirmationLocale = { ...txtFixForm.successWorkflowConfirmation };
         saveConfirmationLocale.confirmationMessage = (
             <React.Fragment>
                 {this.props.publicationToFixFileUploadingError && <Alert {...saveConfirmationLocale.fileFailConfirmationAlert} />}
                 {saveConfirmationLocale.confirmationMessage}
             </React.Fragment>
         );
-        const alertProps = validation.getErrorAlertProps({...this.props, alertLocale: txtFixForm});
+        const alertProps = validation.getErrorAlertProps({ ...this.props, alertLocale: txtFixForm });
         return (
             <StandardPage title={txt.title}>
                 <form onSubmit={this._handleDefaultSubmit}>
                     <Grid container spacing={24}>
                         <Grid item xs={12}>
                             <StandardCard title={txt.subTitle} help={txt.help}>
-                                <PublicationCitation publication={this.props.recordToFix}/>
+                                <PublicationCitation publication={this.props.recordToFix} />
                                 <Field
                                     component={SelectField}
                                     disabled={this.props.submitting}
@@ -253,7 +254,7 @@ export default class FixRecord extends PureComponent {
                             this.state.selectedRecordAction === 'unclaim' &&
                             <Grid item xs={12}>
                                 <StandardCard title={txtUnclaimForm.title} help={txtUnclaimForm.help}>
-                                    <Alert {...txtUnclaimForm.alert}/>
+                                    <Alert {...txtUnclaimForm.alert} />
                                     {txtUnclaimForm.description}
                                     <ConfirmDialogBox
                                         onRef={this._setSuccessConfirmation}
@@ -280,7 +281,7 @@ export default class FixRecord extends PureComponent {
                                 fullWidth
                                 children={txt.cancel}
                                 disabled={this.props.submitting}
-                                onClick={this._cancelFix}/>
+                                onClick={this._cancelFix} />
                         </Grid>
                         {
                             this.state.selectedRecordAction &&
@@ -291,7 +292,7 @@ export default class FixRecord extends PureComponent {
                                     fullWidth
                                     children={txt.submit}
                                     onClick={this.props.handleSubmit}
-                                    disabled={this.props.submitting || this.props.disableSubmit}/>
+                                    disabled={this.props.submitting || this.props.disableSubmit} />
                             </Grid>
                         }
                     </Grid>
