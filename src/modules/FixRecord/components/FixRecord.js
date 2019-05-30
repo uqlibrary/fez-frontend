@@ -13,6 +13,7 @@ import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
 import {ConfirmDialogBox} from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
+import {ContentIndicatorsField} from 'modules/SharedComponents/Toolbox/ContentIndicatorsField';
 import {NavigationDialogBox} from 'modules/SharedComponents/Toolbox/NavigationPrompt';
 import {FileUploadField} from 'modules/SharedComponents/Toolbox/FileUploader';
 import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
@@ -189,6 +190,22 @@ export default class FixRecord extends PureComponent {
                                     onCancelAction={this._navigateToDashboard}
                                     locale={saveConfirmationLocale}
                                 />
+                                <Grid item xs={12}>
+                                    <StandardCard
+                                        title={txtFixForm.contentIndicators.title}
+                                    >
+                                        {txtFixForm.contentIndicators.description}
+                                        <Field
+                                            component={ContentIndicatorsField}
+                                            disabled={this.props.submitting}
+                                            id="content-indicators"
+                                            name="contentIndicators"
+                                            label={txtFixForm.contentIndicators.label}
+                                            multiple
+                                            fullWidth
+                                        />
+                                    </StandardCard>
+                                </Grid>
                                 <Grid item xs={12}>
                                     <StandardCard title={txtFixForm.comments.title} help={txtFixForm.comments.help}>
                                         <Grid container spacing={16}>

@@ -81,3 +81,53 @@ exports[`ContentIndicatorsField component should render with given field props 1
   }
 />
 `;
+
+exports[`ContentIndicatorsField component should render with given field props 2`] = `
+<GenericSelectField
+  error={true}
+  errorText="Test error"
+  hideLabel={false}
+  input={
+    Object {
+      "value": Immutable.List [
+        454057,
+        454058,
+      ],
+    }
+  }
+  itemsList={
+    Array [
+      Object {
+        "text": "Scholarship of Teaching and Learning",
+        "value": 454057,
+      },
+      Object {
+        "text": "Protocols",
+        "value": 454058,
+      },
+      Object {
+        "text": "Case Studies",
+        "value": 454059,
+      },
+    ]
+  }
+  label="Test label"
+  locale={
+    Object {
+      "label": "Test label",
+    }
+  }
+  meta={
+    Object {
+      "error": "Test error",
+    }
+  }
+  placeholder="Test placeholder"
+  selectedValue={
+    Array [
+      454057,
+      454058,
+    ]
+  }
+/>
+`;

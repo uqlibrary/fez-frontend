@@ -95,7 +95,7 @@ describe('Component FixRecord', () => {
         const wrapper = setup({recordToFix: mockRecordToFix});
         wrapper.setState({selectedRecordAction: 'fix'});
         expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('Field').length).toEqual(4);
+        expect(wrapper.find('Field').length).toEqual(5);
     });
 
     it('should set action for form', () => {
