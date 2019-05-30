@@ -5159,7 +5159,7 @@ exports[`PublicationCitation  should render component with publication from mult
             <WithStyles(ExternalLink)
               aria-label="Link to eSpace will open in a new window."
               className="publicationSource"
-              href="https://fez-staging.library.uq.edu.au/records/UQ:224457"
+              href="https://fez-staging.library.uq.edu.au/view/UQ:224457"
               key="source_0"
             >
               eSpace
@@ -6019,7 +6019,7 @@ exports[`PublicationCitation  should render component without a title 1`] = `
             <WithStyles(ExternalLink)
               aria-label="Link to eSpace will open in a new window."
               className="publicationSource"
-              href="https://fez-staging.library.uq.edu.au/records/UQ:224457"
+              href="https://fez-staging.library.uq.edu.au/view/UQ:224457"
               key="source_0"
             >
               eSpace
