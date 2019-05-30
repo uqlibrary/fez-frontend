@@ -62,6 +62,23 @@ export class PublicationDetailsClass extends PureComponent {
                             />
                     }
                     {
+                        this.props.publication.fez_record_search_key_content_indicator &&
+                        this.props.publication.fez_record_search_key_content_indicator.length > 0 &&
+                        <this.ViewRecordRow
+                            heading={componentLocale.components.contentIndicators.label}
+                            data={
+                                this.props.publication.fez_record_search_key_content_indicator.map((item, index) => {
+                                    return (
+                                        <span key={index}>
+                                            {item.rek_content_indicator_lookup}
+                                            {index < (this.props.publication.fez_record_search_key_content_indicator.length - 1) && componentLocale.components.contentIndicators.divider}
+                                        </span>
+                                    );
+                                })
+                            }
+                        />
+                    }
+                    {
                         this.props.publication.fez_record_search_key_ismemberof &&
                         this.props.publication.fez_record_search_key_ismemberof.length > 0 &&
                             <this.ViewRecordRow
@@ -79,23 +96,6 @@ export class PublicationDetailsClass extends PureComponent {
                                     </ul>
                                 )}
                             />
-                    }
-                    {
-                        this.props.publication.fez_record_search_key_content_indicator &&
-                        this.props.publication.fez_record_search_key_content_indicator.length > 0 &&
-                        <this.ViewRecordRow
-                            heading={componentLocale.components.contentIndicators.label}
-                            data={
-                                this.props.publication.fez_record_search_key_content_indicator.map((item, index) => {
-                                    return (
-                                        <span key={index}>
-                                            {item.rek_content_indicator_lookup}
-                                            {index < (this.props.publication.fez_record_search_key_content_indicator.length - 1) && componentLocale.components.contentIndicators.divider}
-                                        </span>
-                                    );
-                                })
-                            }
-                        />
                     }
                 </StandardCard>
             </Grid>

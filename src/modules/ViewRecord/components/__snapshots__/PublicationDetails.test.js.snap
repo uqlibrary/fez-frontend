@@ -3426,6 +3426,20 @@ exports[`Publication Details Component  should render component 1`] = `
     />
     <Component
       data={
+        Array [
+          <span>
+            some content indicator
+            , 
+          </span>,
+          <span>
+            yet another content indicator
+          </span>,
+        ]
+      }
+      heading="Content Indicators"
+    />
+    <Component
+      data={
         <ul
           className="ul"
         >
@@ -3456,20 +3470,6 @@ exports[`Publication Details Component  should render component 1`] = `
         </ul>
       }
       heading="Collections"
-    />
-    <Component
-      data={
-        Array [
-          <span>
-            some content indicator
-            , 
-          </span>,
-          <span>
-            yet another content indicator
-          </span>,
-        ]
-      }
-      heading="Content Indicators"
     />
   </StandardCard>
 </WithStyles(Grid)>
@@ -3519,6 +3519,20 @@ exports[`Publication Details Component  should render with publication without s
     />
     <Component
       data={
+        Array [
+          <span>
+            some content indicator
+            , 
+          </span>,
+          <span>
+            yet another content indicator
+          </span>,
+        ]
+      }
+      heading="Content Indicators"
+    />
+    <Component
+      data={
         <ul
           className="ul"
         >
@@ -3549,20 +3563,6 @@ exports[`Publication Details Component  should render with publication without s
         </ul>
       }
       heading="Collections"
-    />
-    <Component
-      data={
-        Array [
-          <span>
-            some content indicator
-            , 
-          </span>,
-          <span>
-            yet another content indicator
-          </span>,
-        ]
-      }
-      heading="Content Indicators"
     />
   </StandardCard>
 </WithStyles(Grid)>
