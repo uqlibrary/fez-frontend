@@ -1,4 +1,5 @@
 import ContentIndicatorsField from './ContentIndicatorsField';
+import Immutable from 'immutable';
 
 function setup(testProps, isShallow = true) {
     const props = {
@@ -27,6 +28,13 @@ describe('ContentIndicatorsField component', () => {
             },
             meta: {
                 error: 'Test error'
+            }
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+
+        wrapper.setProps({
+            input: {
+                value: Immutable.List([454057, 454058])
             }
         });
         expect(toJson(wrapper)).toMatchSnapshot();

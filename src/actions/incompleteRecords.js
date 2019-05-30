@@ -25,11 +25,13 @@ export function updateIncompleteRecord(data) {
         };
     }
 
-    const isAuthorLinked = data.publication.fez_record_search_key_author_id && data.publication.fez_record_search_key_author_id.length > 0 &&
-        data.publication.fez_record_search_key_author_id.filter(authorId => authorId.rek_author_id === data.author.aut_id).length > 0;
+    const isAuthorLinked = (data.publication.fez_record_search_key_author_id || []).some(
+        authorId => authorId.rek_author_id === data.author.aut_id
+    );
 
-    const isContributorLinked = data.publication.fez_record_search_key_contributor_id && data.publication.fez_record_search_key_contributor_id.length > 0 &&
-        data.publication.fez_record_search_key_contributor_id.filter(contributorId => contributorId.rek_contributor_id === data.author.aut_id).length > 0;
+    const isContributorLinked = (data.publication.fez_record_search_key_contributor_id || []).some(
+        contributorId => contributorId.rek_contributor_id === data.author.aut_id
+    );
 
     if (!isAuthorLinked && !isContributorLinked) {
         return dispatch => {
@@ -62,16 +64,21 @@ export function updateIncompleteRecord(data) {
         };
 
         // delete extra form values from request object
-        !!patchRecordRequest.author && delete patchRecordRequest.author;
-        !!patchRecordRequest.publication && delete patchRecordRequest.publication;
-        !!patchRecordRequest.authorsAffiliation && delete patchRecordRequest.authorsAffiliation;
-        !!patchRecordRequest.files && delete patchRecordRequest.files;
-        !!patchRecordRequest.ntroAbstract && delete patchRecordRequest.ntroAbstract;
-        !!patchRecordRequest.grants && delete patchRecordRequest.grants;
-        !!patchRecordRequest.significance && delete patchRecordRequest.significance;
-        !!patchRecordRequest.impactStatement && delete patchRecordRequest.impactStatement;
-        !!patchRecordRequest.languages && delete patchRecordRequest.languages;
-        !!patchRecordRequest.qualityIndicators && delete patchRecordRequest.qualityIndicators;
+        const keysToDelete = [
+            'author',
+            'authorsAffiliation',
+            'files',
+            'grants',
+            'impactStatement',
+            'languages',
+            'ntroAbstract',
+            'publication',
+            'qualityIndicators',
+            'significance',
+        ];
+        keysToDelete.forEach(key => {
+            delete patchRecordRequest[key];
+        });
 
         // create request for issue notification
         const createIssueRequest = transformers.getFixIssueRequest(data);

@@ -5,7 +5,7 @@ import * as repositories from 'repositories';
 import * as exportPublicationsActions from './exportPublications';
 import {exportSearchToExcel as exportSearchToExcelResponse} from "mock/data/testing/searchRecords";
 import {promptForDownload} from './exportPublicationsDataTransformers';
-import {exportFormatToExtension} from 'config/general';
+import {EXPORT_FORMAT_TO_EXTENSION} from 'config/general';
 
 beforeEach(() => {
     promptForDownload.mockClear();
@@ -22,7 +22,7 @@ describe('Export publications actions', () => {
     });
 
     describe('exportPublications()', () => {
-        const exportPublicationsFormat = Object.keys(exportFormatToExtension)[0];
+        const exportPublicationsFormat = Object.keys(EXPORT_FORMAT_TO_EXTENSION)[0];
         const requestParams = repositories.routes.CURRENT_USER_RECORDS_API({
             exportPublicationsFormat: exportPublicationsFormat,
             apiUrl: 'records/search',

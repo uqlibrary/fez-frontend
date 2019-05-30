@@ -43,19 +43,27 @@ const validate = (values) => {
 
 let FixRecordContainer = reduxForm({
     form: FORM_NAME,
+    enableReinitialize: true,
     validate,
     onSubmit
 })(confirmDiscardFormChanges(FixRecord, FORM_NAME));
 
 const mapStateToProps = (state) => {
     const formErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});
-
+    const recordToFix = state.get('fixRecordReducer') && state.get('fixRecordReducer').recordToFix;
+    const contentIndicators = !!recordToFix &&
+    (recordToFix.fez_record_search_key_content_indicator || []).map(
+        item => item.rek_content_indicator
+    ) || [];
     return {
         ...state.get('fixRecordReducer'),
         ...state.get('accountReducer'),
         formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
         formErrors: formErrors,
-        disableSubmit: formErrors && !(formErrors instanceof Immutable.Map)
+        disableSubmit: formErrors && !(formErrors instanceof Immutable.Map),
+        initialValues: {
+            contentIndicators
+        }
     };
 };
 

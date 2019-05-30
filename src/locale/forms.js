@@ -126,6 +126,11 @@ export default {
             }
         },
         fixPublicationForm: {
+            contentIndicators: {
+                title: 'Content Indicators',
+                description: 'You can choose additional content indicators, but cannot remove existing ones.',
+                label: 'Please choose applicable indicators',
+            },
             comments: {
                 title: 'Suggest a correction',
                 // help: {
