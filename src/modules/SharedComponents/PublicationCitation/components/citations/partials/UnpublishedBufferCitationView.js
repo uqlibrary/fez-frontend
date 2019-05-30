@@ -10,7 +10,7 @@ import Grid from '@material-ui/core/Grid';
 import CitationView from './CitationView';
 import DateCitationView from './DateCitationView';
 
-import {unpublishedBufferActionUrls as options, GENERIC_DATE_FORMAT} from 'config/general';
+import {UNPUBLISHED_BUFFER_ACTION_URLS as options, GENERIC_DATE_FORMAT} from 'config/general';
 
 export class UnpublishedBufferCitationView extends Component {
     static propTypes = {
