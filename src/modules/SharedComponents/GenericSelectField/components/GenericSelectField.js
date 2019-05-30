@@ -40,7 +40,7 @@ export class GenericSelectFieldClass extends Component {
         hideLabel: PropTypes.bool,
         displayEmpty: PropTypes.bool,
         classes: PropTypes.object,
-        id: PropTypes.string
+        id: PropTypes.string,
     };
 
     static defaultProps = {
@@ -70,10 +70,13 @@ export class GenericSelectFieldClass extends Component {
 
     _itemSelected = (event) => {
         let value = event.target.value;
-        if (value[0] === -1 && value.length === 1) {
-            value = '';
-        } else if(value[0] === -1 && value.length > 1) {
-            value.shift();
+        if (value[0] === -1) {
+            if(value.length === 1) {
+                value = '';
+            }
+            if(value.length > 1) {
+                value.shift();
+            }
         }
         this.props.onChange(value);
     };
