@@ -39,9 +39,8 @@ export class GenericSelectFieldClass extends Component {
         locale: PropTypes.object,
         hideLabel: PropTypes.bool,
         displayEmpty: PropTypes.bool,
-
         classes: PropTypes.object,
-        id: PropTypes.string
+        id: PropTypes.string,
     };
 
     static defaultProps = {
@@ -71,25 +70,15 @@ export class GenericSelectFieldClass extends Component {
 
     _itemSelected = (event) => {
         let value = event.target.value;
-        if (value[0] === -1 && value.length === 1) {
-            value = '';
-        } else if(value[0] === -1 && value.length > 1) {
-            value.shift();
+        if (value[0] === -1) {
+            if(value.length === 1) {
+                value = '';
+            }
+            if(value.length > 1) {
+                value.shift();
+            }
         }
         this.props.onChange(value);
-    };
-
-    getMenuItemProps = (item, selectedValue, multiple) => {
-        if (multiple) {
-            return {
-                selected: selectedValue.indexOf(item.value || item) > -1,
-                value: item.value || item,
-            };
-        } else {
-            return {
-                value: item.value || item,
-            };
-        }
     };
 
     newValue = () => {
@@ -113,13 +102,26 @@ export class GenericSelectFieldClass extends Component {
     renderMenuItems = () => {
         const {classes} = this.props;
         return [
-            this.props.hideLabel && <MenuItem value={-1} key={0} style={{display: 'block'}} disabled>{this.loadingIndicationText()}</MenuItem>,
+            this.props.hideLabel &&
+            <MenuItem
+                value={-1}
+                key={0}
+                style={{display: 'block'}}
+                disabled
+            >
+                {this.loadingIndicationText()}
+            </MenuItem>,
             ...this.props.itemsList.map((item, index) => {
                 return (
                     <MenuItem
                         classes={{selected: classes.selectedMenuItem}}
                         style={{display: 'block'}}
-                        {...(this.getMenuItemProps(item, this.props.selectedValue, this.props.multiple))}
+                        selected={
+                            this.props.multiple &&
+                            this.props.selectedValue.includes(item.value || item) ||
+                            undefined
+                        }
+                        value={item.value || item}
                         key={index + 1}
                         disabled={item && !item.value}
                         aria-label={item.text || item.value || item}>

@@ -461,6 +461,17 @@ export const getQualityIndicatorSearchKey = (qualityIndicators = []) => {
     };
 };
 
+export const getContentIndicatorSearchKey = (contentIndicators = []) => {
+    if (!contentIndicators || contentIndicators.length === 0) return {};
+
+    return {
+        fez_record_search_key_content_indicator: contentIndicators.map((item, index) => ({
+            rek_content_indicator: item,
+            rek_content_indicator_order: index + 1
+        }))
+    };
+};
+
 export const getAuthorOrder = (data) => {
     const author = data.publication.fez_record_search_key_author_id.filter(authorId => authorId.rek_author_id === data.author.aut_id);
 

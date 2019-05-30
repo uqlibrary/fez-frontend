@@ -5,7 +5,7 @@ import param from 'can-param';
 import Snackbar from '@material-ui/core/Snackbar';
 import { routes } from 'config';
 import {
-    defaultQueryParams,
+    DEFAULT_QUERY_PARAMS,
     UNPUBLISHED_STATUS_MAP,
     UNPUBLISHED_STATUS_TEXT_MAP,
     GENERIC_DATE_FORMAT
@@ -295,7 +295,7 @@ export default class SearchComponent extends PureComponent {
             searchQueryParams: {
                 all: this.state.simpleSearch.searchText
             },
-            ...defaultQueryParams
+            ...DEFAULT_QUERY_PARAMS
         };
 
         // Perform search
@@ -486,11 +486,11 @@ export default class SearchComponent extends PureComponent {
     };
 
     getSearchQuery = (searchQueryParams, ranges = {}) => {
-        const { activeFacets } = defaultQueryParams;
+        const {activeFacets} = DEFAULT_QUERY_PARAMS;
         const docTypeParams = this.state.advancedSearch.docTypes;
 
         const searchQuery = {
-            ...defaultQueryParams,
+            ...DEFAULT_QUERY_PARAMS,
             searchQueryParams: {
                 ...searchQueryParams,
                 rek_display_type: docTypeParams

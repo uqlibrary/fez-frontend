@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`GenericSelectField  Full mount  should render 1`] = `
+exports[`GenericSelectField Full mount should render 1`] = `
 <Provider
   store={
     Object {
@@ -2003,7 +2003,7 @@ exports[`GenericSelectField  Full mount  should render 1`] = `
 </Provider>
 `;
 
-exports[`GenericSelectField  Methods  Shows an error 1`] = `
+exports[`GenericSelectField Methods Shows an error 1`] = `
 <WithStyles(FormControl)
   error={true}
   fullWidth={true}
@@ -2084,7 +2084,244 @@ exports[`GenericSelectField  Methods  Shows an error 1`] = `
 </WithStyles(FormControl)>
 `;
 
-exports[`GenericSelectField  should render  snapshots for  loading items 1`] = `
+exports[`GenericSelectField Methods renderMenuItems (hideLabel: false) 1`] = `
+Array [
+  false,
+  <WithStyles(MenuItem)
+    aria-label="One"
+    classes={
+      Object {
+        "selected": undefined,
+      }
+    }
+    disabled={false}
+    style={
+      Object {
+        "display": "block",
+      }
+    }
+    value={1}
+  >
+    One
+  </WithStyles(MenuItem)>,
+  <WithStyles(MenuItem)
+    aria-label="Two"
+    classes={
+      Object {
+        "selected": undefined,
+      }
+    }
+    disabled={false}
+    style={
+      Object {
+        "display": "block",
+      }
+    }
+    value={2}
+  >
+    Two
+  </WithStyles(MenuItem)>,
+  <WithStyles(MenuItem)
+    aria-label="Three"
+    classes={
+      Object {
+        "selected": undefined,
+      }
+    }
+    disabled={false}
+    style={
+      Object {
+        "display": "block",
+      }
+    }
+    value={3}
+  >
+    Three
+  </WithStyles(MenuItem)>,
+]
+`;
+
+exports[`GenericSelectField Methods renderMenuItems (hideLabel: false) 2`] = `
+Array [
+  false,
+  <WithStyles(MenuItem)
+    aria-label={1}
+    classes={
+      Object {
+        "selected": undefined,
+      }
+    }
+    disabled={true}
+    style={
+      Object {
+        "display": "block",
+      }
+    }
+    value={1}
+  >
+    1
+  </WithStyles(MenuItem)>,
+  <WithStyles(MenuItem)
+    aria-label={2}
+    classes={
+      Object {
+        "selected": undefined,
+      }
+    }
+    disabled={true}
+    style={
+      Object {
+        "display": "block",
+      }
+    }
+    value={2}
+  >
+    2
+  </WithStyles(MenuItem)>,
+  <WithStyles(MenuItem)
+    aria-label={3}
+    classes={
+      Object {
+        "selected": undefined,
+      }
+    }
+    disabled={true}
+    style={
+      Object {
+        "display": "block",
+      }
+    }
+    value={3}
+  >
+    3
+  </WithStyles(MenuItem)>,
+]
+`;
+
+exports[`GenericSelectField Methods renderMenuItems (hideLabel: true) 1`] = `
+Array [
+  <WithStyles(MenuItem)
+    disabled={true}
+    style={
+      Object {
+        "display": "block",
+      }
+    }
+    value={-1}
+  />,
+  <WithStyles(MenuItem)
+    aria-label="One"
+    classes={
+      Object {
+        "selected": undefined,
+      }
+    }
+    disabled={false}
+    style={
+      Object {
+        "display": "block",
+      }
+    }
+    value={1}
+  >
+    One
+  </WithStyles(MenuItem)>,
+  <WithStyles(MenuItem)
+    aria-label="Two"
+    classes={
+      Object {
+        "selected": undefined,
+      }
+    }
+    disabled={false}
+    style={
+      Object {
+        "display": "block",
+      }
+    }
+    value={2}
+  >
+    Two
+  </WithStyles(MenuItem)>,
+  <WithStyles(MenuItem)
+    aria-label="Three"
+    classes={
+      Object {
+        "selected": undefined,
+      }
+    }
+    disabled={false}
+    style={
+      Object {
+        "display": "block",
+      }
+    }
+    value={3}
+  >
+    Three
+  </WithStyles(MenuItem)>,
+]
+`;
+
+exports[`GenericSelectField Methods renderMenuItems (multiple: true) 1`] = `
+Array [
+  undefined,
+  <WithStyles(MenuItem)
+    aria-label={1}
+    classes={
+      Object {
+        "selected": undefined,
+      }
+    }
+    disabled={true}
+    selected={true}
+    style={
+      Object {
+        "display": "block",
+      }
+    }
+    value={1}
+  >
+    1
+  </WithStyles(MenuItem)>,
+  <WithStyles(MenuItem)
+    aria-label={2}
+    classes={
+      Object {
+        "selected": undefined,
+      }
+    }
+    disabled={true}
+    style={
+      Object {
+        "display": "block",
+      }
+    }
+    value={2}
+  >
+    2
+  </WithStyles(MenuItem)>,
+  <WithStyles(MenuItem)
+    aria-label={3}
+    classes={
+      Object {
+        "selected": undefined,
+      }
+    }
+    disabled={true}
+    style={
+      Object {
+        "display": "block",
+      }
+    }
+    value={3}
+  >
+    3
+  </WithStyles(MenuItem)>,
+]
+`;
+
+exports[`GenericSelectField should render snapshots for loading items 1`] = `
 <WithStyles(FormControl)
   error={false}
   fullWidth={true}
@@ -2162,7 +2399,7 @@ exports[`GenericSelectField  should render  snapshots for  loading items 1`] = `
 </WithStyles(FormControl)>
 `;
 
-exports[`GenericSelectField  should render  snapshots for  loading items 2`] = `
+exports[`GenericSelectField should render snapshots for loading items 2`] = `
 <WithStyles(FormControl)
   error={false}
   fullWidth={true}
@@ -2247,7 +2484,7 @@ exports[`GenericSelectField  should render  snapshots for  loading items 2`] = `
 </WithStyles(FormControl)>
 `;
 
-exports[`GenericSelectField  should render  snapshots for  no items 1`] = `
+exports[`GenericSelectField should render snapshots for no items 1`] = `
 <WithStyles(FormControl)
   error={false}
   fullWidth={true}
@@ -2270,7 +2507,7 @@ exports[`GenericSelectField  should render  snapshots for  no items 1`] = `
 </WithStyles(FormControl)>
 `;
 
-exports[`GenericSelectField  should render  snapshots for  one item 1`] = `
+exports[`GenericSelectField should render snapshots for one item 1`] = `
 <WithStyles(FormControl)
   error={false}
   fullWidth={true}

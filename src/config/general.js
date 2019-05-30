@@ -3,7 +3,7 @@ import moment from 'moment';
 const converter = require('number-to-words');
 
 const getValue = (value) => (
-    typeof(value) !== 'undefined' && !!value ? value : null
+    typeof (value) !== 'undefined' && !!value ? value : null
 );
 
 export const numberToWords = (value) => {
@@ -443,7 +443,7 @@ export const publicationTypes = (components) => [
     }
 ];
 
-export const documentTypesLookup = {
+export const DOCUMENT_TYPES_LOOKUP = {
     202: 'Generic document',
     263: 'Audio document',
     174: 'Book',
@@ -470,7 +470,7 @@ export const documentTypesLookup = {
     272: 'Reference entry'
 };
 
-export const QuickTemplates = {
+export const QUICK_TEMPLATES = {
     UQ_STAFF_STUDENTS_VIEW: 1,
     UQ_STAFF_STUDENTS_PRINTERY_VIEW: 6,
     INHERIT_FROM_ABOVE: 7,
@@ -478,38 +478,68 @@ export const QuickTemplates = {
     OPEN_ACCESS_ID: 9,
 };
 
-export const thesisSubtypes = [
-    {value: 'B.A. Thesis', label: 'B.A. Thesis'},
-    {value: 'B.Sc Thesis', label: 'B.Sc Thesis'},
-    {value: 'Bachelor\'s Thesis', label: 'Bachelor\'s Thesis'},
-    {value: 'Higher Doctorate', label: 'Higher Doctorate'},
-    {value: 'Honours Thesis', label: 'Honours Thesis'},
-    {value: 'M.A. Thesis', label: 'M.A. Thesis'},
-    {value: 'M.Sc Thesis', label: 'M.Sc Thesis'},
-    {value: 'Master\'s Thesis', label: 'Master\'s Thesis'},
-    {value: 'MPhil Thesis', label: 'MPhil Thesis'},
-    {value: 'Other', label: 'Other'},
-    {value: 'PhD Thesis', label: 'PhD Thesis'},
-    {value: 'Professional Doctorate', label: 'Professional Doctorate'}
-];
+export const THESIS_SUBTYPES = [{
+    value: 'B.A. Thesis',
+    label: 'B.A. Thesis'
+}, {
+    value: 'B.Sc Thesis',
+    label: 'B.Sc Thesis'
+}, {
+    value: 'Bachelor\'s Thesis',
+    label: 'Bachelor\'s Thesis'
+}, {
+    value: 'Higher Doctorate',
+    label: 'Higher Doctorate'
+}, {
+    value: 'Honours Thesis',
+    label: 'Honours Thesis'
+}, {
+    value: 'M.A. Thesis',
+    label: 'M.A. Thesis'
+}, {
+    value: 'M.Sc Thesis',
+    label: 'M.Sc Thesis'
+}, {
+    value: 'Master\'s Thesis',
+    label: 'Master\'s Thesis'
+}, {
+    value: 'MPhil Thesis',
+    label: 'MPhil Thesis'
+}, {
+    value: 'Other',
+    label: 'Other'
+}, {
+    value: 'PhD Thesis',
+    label: 'PhD Thesis'
+}, {
+    value: 'Professional Doctorate',
+    label: 'Professional Doctorate'
+}];
 
-export const thesisSubmissionSubtypes = [
-    {value: undefined, text: 'Select a thesis type'},
-    {value: 'MPhil Thesis', text: 'MPhil Thesis'},
-    {value: 'PhD Thesis', text: 'PhD Thesis'},
-    {value: 'Professional Doctorate', text: 'Professional Doctorate'}
-];
+export const THESIS_SUBMISSION_SUBTYPES = [{
+    value: undefined,
+    text: 'Select a thesis type'
+}, {
+    value: 'MPhil Thesis',
+    text: 'MPhil Thesis'
+}, {
+    value: 'PhD Thesis',
+    text: 'PhD Thesis'
+}, {
+    value: 'Professional Doctorate',
+    text: 'Professional Doctorate'
+}];
 
 /**
  * File type to name map
  */
-export const exportFormatToExtension = {
+export const EXPORT_FORMAT_TO_EXTENSION = {
     'excel': 'xlsx',
     'endnote': 'enw'
 };
 
-export const OrgUnitsVocabId = 453703;
-export const FieldOfResearchVocabId = 451780;
+export const ORG_UNITS_VOCAB_ID = 453703;
+export const FIELD_OF_RESEARCH_VOCAB_ID = 451780;
 
 // Default values for createNewRecord
 export const NEW_RECORD_DEFAULT_VALUES = {
@@ -561,7 +591,7 @@ export const HDR_THESIS_DEFAULT_VALUES = {
     rek_object_type: 3,
     rek_status: 3,
     fez_record_search_key_ismemberof: [
-        {rek_ismemberof: 'UQ:152694'}
+        { rek_ismemberof: 'UQ:152694' }
     ],
     rek_display_type: PUBLICATION_TYPE_THESIS,
     fileAccessId: 3
@@ -571,14 +601,14 @@ export const SBS_THESIS_DEFAULT_VALUES = {
     rek_object_type: 3,
     rek_status: 3,
     fez_record_search_key_ismemberof: [
-        {rek_ismemberof: 'UQ:155729'}
+        { rek_ismemberof: 'UQ:155729' }
     ],
     rek_display_type: PUBLICATION_TYPE_THESIS,
     rek_genre_type: 'Professional Doctorate',
     fileAccessId: 4
 };
 
-export const defaultQueryParams = {
+export const DEFAULT_QUERY_PARAMS = {
     page: 1,
     pageSize: 20,
     sortBy: locale.components.sorting.sortBy[1].value,
@@ -597,15 +627,28 @@ export const RETRACTED = 7;
 export const SUBMITTED_FOR_APPROVAL = 3;
 export const UNPUBLISHED = 1;
 
-export const UNPUBLISHED_STATUS = [
-    {value: 'Any unpublished', text: 'Any unpublished'},
-    {value: 'In Creation', text: 'In Creation'},
-    {value: 'In Draft', text: 'In Draft'},
-    {value: 'In Review', text: 'In Review'},
-    {value: 'Retracted', text: 'Retracted'},
-    {value: 'Submitted for Approval', text: 'Submitted for Approval'},
-    {value: 'Unpublished', text: 'Unpublished'}
-];
+export const UNPUBLISHED_STATUS = [{
+    value: 'Any unpublished',
+    text: 'Any unpublished'
+}, {
+    value: 'In Creation',
+    text: 'In Creation'
+}, {
+    value: 'In Draft',
+    text: 'In Draft'
+}, {
+    value: 'In Review',
+    text: 'In Review'
+}, {
+    value: 'Retracted',
+    text: 'Retracted'
+}, {
+    value: 'Submitted for Approval',
+    text: 'Submitted for Approval'
+}, {
+    value: 'Unpublished',
+    text: 'Unpublished'
+}];
 
 export const UNPUBLISHED_STATUS_MAP = {
     'Any unpublished': ANY_UNPUBLISHED,
@@ -627,18 +670,18 @@ export const UNPUBLISHED_STATUS_TEXT_MAP = {
     [UNPUBLISHED]: 'Unpublished'
 };
 export const DATA_COLLECTION_CREATOR_ROLES = [
-    {value: 'Project lead/Principal investigator'},
-    {value: 'Co-investigator'},
-    {value: 'Higher degree research student'},
-    {value: 'Research assistant'},
-    {value: 'Software engineer'},
-    {value: 'Statistician'},
-    {value: 'Technician'}
+    { value: 'Project lead/Principal investigator' },
+    { value: 'Co-investigator' },
+    { value: 'Higher degree research student' },
+    { value: 'Research assistant' },
+    { value: 'Software engineer' },
+    { value: 'Statistician' },
+    { value: 'Technician' }
 ];
 
 export const OPEN_ACCESS_ID = 453619;
 export const MEDIATED_ACCESS_ID = 453618;
-export const licenses = [
+export const LICENSES = [
     {
         value: 453608,
         text: 'Creative Commons Attribution (only) http://creativecommons.org/licenses/by/3.0/deed.en_US'
@@ -695,7 +738,7 @@ export const ORG_TYPES_LOOKUP = {
     [ORG_TYPE_NOT_SET]: 'Not set',
 };
 
-export const grantAgencyTypes = [
+export const GRANT_AGENCY_TYPES = [
     'Library/Museum/Public Gallery',
     'Commercial Gallery',
     'Government',
@@ -707,16 +750,16 @@ export const grantAgencyTypes = [
     'Not set'
 ];
 
-export const orgAffiliationTypes = [
-    {value: '453983', text: 'Library/Museum/Public Gallery'},
-    {value: '453984', text: 'Commercial Gallery'},
-    {value: '453985', text: 'Government'},
-    {value: '453986', text: 'NGO'},
-    {value: '453987', text: 'Foundation'},
-    {value: '453988', text: 'Corporate/Industry'},
-    {value: '453989', text: 'University'},
-    {value: '453990', text: 'Other'},
-    {value: '454045', text: 'Not set'}
+export const ORG_AFFILIATION_TYPES = [
+    { value: '453983', text: 'Library/Museum/Public Gallery' },
+    { value: '453984', text: 'Commercial Gallery' },
+    { value: '453985', text: 'Government' },
+    { value: '453986', text: 'NGO' },
+    { value: '453987', text: 'Foundation' },
+    { value: '453988', text: 'Corporate/Industry' },
+    { value: '453989', text: 'University' },
+    { value: '453990', text: 'Other' },
+    { value: '454045', text: 'Not set' }
 ];
 
 export const NEW_DOCTYPES_OPTIONS = [
@@ -897,96 +940,102 @@ export const SIGNIFICANCE_MAJOR = 454026;
 export const SIGNIFICANCE_MINOR = 454027;
 
 export const SIGNIFICANCE = [
-    {text: 'Minor', value: SIGNIFICANCE_MINOR},
-    {text: 'Major', value: SIGNIFICANCE_MAJOR}
+    { text: 'Minor', value: SIGNIFICANCE_MINOR },
+    { text: 'Major', value: SIGNIFICANCE_MAJOR }
 ];
 
 export const QUALITY_INDICATORS = [
-    {text: 'Disseminated via nationally recognised outlet or entity', value: 453996},
-    {text: 'Disseminated via internationally recognised outlet or entity', value: 453997},
-    {text: 'Association with recognised national entities, distinct from co-creation', value: 454033},
-    {text: 'Association with recognised international entities, distinct from co-creation', value: 454034},
-    {text: 'Reviews, prizes, awards recognition of the output', value: 454035},
-    {text: 'Commissioned by external body', value: 454036},
-    {text: 'Repeat performances, reproductions, republications or re-exhibitions', value: 454037},
-    {text: 'Selected for use by nationally recognised outlet or entity', value: 454038},
-    {text: 'Selected for use by internationally recognised outlet or entity', value: 454039},
-    {text: 'Other (add details to Author/Creator research statement)', value: 454040}
+    { value: 453996, text: 'Disseminated via nationally recognised outlet or entity' },
+    { value: 453997, text: 'Disseminated via internationally recognised outlet or entity' },
+    { value: 454033, text: 'Association with recognised national entities, distinct from co-creation' },
+    { value: 454034, text: 'Association with recognised international entities, distinct from co-creation' },
+    { value: 454035, text: 'Reviews, prizes, awards recognition of the output' },
+    { value: 454036, text: 'Commissioned by external body' },
+    { value: 454037, text: 'Repeat performances, reproductions, republications or re-exhibitions' },
+    { value: 454038, text: 'Selected for use by nationally recognised outlet or entity' },
+    { value: 454039, text: 'Selected for use by internationally recognised outlet or entity' },
+    { value: 454040, text: 'Other (add details to Author/Creator research statement)' }
+];
+
+export const CONTENT_INDICATORS = [
+    { value: 454057, text: 'Scholarship of Teaching and Learning' },
+    { value: 454058, text: 'Protocols' },
+    { value: 454059, text: 'Case Studies' },
 ];
 
 export const AUDIENCE_SIZE = [
-    {text: 'Less than 100', value: 453992},
-    {text: '100 - 500', value: 453993},
-    {text: 'Greater than 500', value: 453994},
+    { value: 453992, text: 'Less than 100' },
+    { value: 453993, text: '100 - 500' },
+    { value: 453994, text: 'Greater than 500' },
 ];
 
 export const LANGUAGE = [
-    {text: 'Select multiple languages as required', value: null},
-    {text: 'Afrikaans', value: 'afr'},
-    {text: 'Albanian', value: 'alb'},
-    {text: 'Arabic', value: 'ara'},
-    {text: 'Australian Indigenous', value: 'aus'},
-    {text: 'Bosnian', value: 'bos'},
-    {text: 'Catalan', value: 'cat'},
-    {text: 'Chinese', value: 'chi'},
-    {text: 'Coptic', value: 'cop'},
-    {text: 'Czech', value: 'cze'},
-    {text: 'Danish', value: 'dan'},
-    {text: 'Dutch', value: 'dut'},
-    {text: 'Egyptian (Ancient)', value: 'egy'},
-    {text: 'Elamite', value: 'elx'},
-    {text: 'English', value: 'eng'},
-    {text: 'English (Ancient)', value: 'enm'},
-    {text: 'Esperanto', value: 'epo'},
-    {text: 'Estonian', value: 'est'},
-    {text: 'Finnish', value: 'fin'},
-    {text: 'French', value: 'fre'},
-    {text: 'German', value: 'ger'},
-    {text: 'Germanic', value: 'gem'},
-    {text: 'Greek (Ancient)', value: 'grc'},
-    {text: 'Greek', value: 'gre'},
-    {text: 'Hebrew', value: 'heb'},
-    {text: 'Croatian', value: 'hrv'},
-    {text: 'Hungarian', value: 'hun'},
-    {text: 'Indonesian', value: 'ind'},
-    {text: 'Iranian', value: 'ira'},
-    {text: 'Italian', value: 'ita'},
-    {text: 'Japanese', value: 'jpn'},
-    {text: 'Korean', value: 'kor'},
-    {text: 'Lao', value: 'lao'},
-    {text: 'Latin', value: 'lat'},
-    {text: 'Latvian', value: 'lav'},
-    {text: 'Lithuanian', value: 'lit'},
-    {text: 'Macedonian', value: 'mac'},
-    {text: 'Malayalam', value: 'mal'},
-    {text: 'Malay', value: 'may'},
-    {text: 'Mongolian', value: 'mon'},
-    {text: 'Nahuatl', value: 'nah'},
-    {text: 'Norwegian', value: 'nor'},
-    {text: 'Turkish (Ottoman)', value: 'ota'},
-    {text: 'Papuan', value: 'paa'},
-    {text: 'Persian', value: 'per'},
-    {text: 'Polish', value: 'pol'},
-    {text: 'Portuguese', value: 'por'},
-    {text: 'Romanian', value: 'rum'},
-    {text: 'Russian', value: 'rus'},
-    {text: 'Slovak', value: 'slo'},
-    {text: 'Slovenian', value: 'slv'},
-    {text: 'Spanish', value: 'spa'},
-    {text: 'Serbian', value: 'srp'},
-    {text: 'Swedish', value: 'swe'},
-    {text: 'Classical Syriac', value: 'syc'},
-    {text: 'Syriac', value: 'syr'},
-    {text: 'Tetum', value: 'tet'},
-    {text: 'Thai', value: 'tha'},
-    {text: 'Turkish', value: 'tur'},
-    {text: 'Ukrainian', value: 'ukr'},
-    {text: 'Vietnamese', value: 'vie'},
-    {text: 'Waray', value: 'war'},
-    {text: 'Yiddish', value: 'yid'}
+    { value: null, text: 'Select multiple languages as required' },
+    { value: 'afr', text: 'Afrikaans' },
+    { value: 'alb', text: 'Albanian' },
+    { value: 'ara', text: 'Arabic' },
+    { value: 'aus', text: 'Australian Indigenous' },
+    { value: 'bos', text: 'Bosnian' },
+    { value: 'cat', text: 'Catalan' },
+    { value: 'chi', text: 'Chinese' },
+    { value: 'cop', text: 'Coptic' },
+    { value: 'cze', text: 'Czech' },
+    { value: 'dan', text: 'Danish' },
+    { value: 'dut', text: 'Dutch' },
+    { value: 'egy', text: 'Egyptian (Ancient)' },
+    { value: 'elx', text: 'Elamite' },
+    { value: 'eng', text: 'English' },
+    { value: 'enm', text: 'English (Ancient)' },
+    { value: 'epo', text: 'Esperanto' },
+    { value: 'est', text: 'Estonian' },
+    { value: 'fin', text: 'Finnish' },
+    { value: 'fre', text: 'French' },
+    { value: 'ger', text: 'German' },
+    { value: 'gem', text: 'Germanic' },
+    { value: 'grc', text: 'Greek (Ancient)' },
+    { value: 'gre', text: 'Greek' },
+    { value: 'heb', text: 'Hebrew' },
+    { value: 'hrv', text: 'Croatian' },
+    { value: 'hun', text: 'Hungarian' },
+    { value: 'ind', text: 'Indonesian' },
+    { value: 'ira', text: 'Iranian' },
+    { value: 'ita', text: 'Italian' },
+    { value: 'jpn', text: 'Japanese' },
+    { value: 'kor', text: 'Korean' },
+    { value: 'lao', text: 'Lao' },
+    { value: 'lat', text: 'Latin' },
+    { value: 'lav', text: 'Latvian' },
+    { value: 'lit', text: 'Lithuanian' },
+    { value: 'mac', text: 'Macedonian' },
+    { value: 'mal', text: 'Malayalam' },
+    { value: 'may', text: 'Malay' },
+    { value: 'mon', text: 'Mongolian' },
+    { value: 'nah', text: 'Nahuatl' },
+    { value: 'nor', text: 'Norwegian' },
+    { value: 'ota', text: 'Turkish (Ottoman)' },
+    { value: 'paa', text: 'Papuan' },
+    { value: 'per', text: 'Persian' },
+    { value: 'pol', text: 'Polish' },
+    { value: 'por', text: 'Portuguese' },
+    { value: 'rum', text: 'Romanian' },
+    { value: 'rus', text: 'Russian' },
+    { value: 'slo', text: 'Slovak' },
+    { value: 'slv', text: 'Slovenian' },
+    { value: 'spa', text: 'Spanish' },
+    { value: 'srp', text: 'Serbian' },
+    { value: 'swe', text: 'Swedish' },
+    { value: 'syc', text: 'Classical Syriac' },
+    { value: 'syr', text: 'Syriac' },
+    { value: 'tet', text: 'Tetum' },
+    { value: 'tha', text: 'Thai' },
+    { value: 'tur', text: 'Turkish' },
+    { value: 'ukr', text: 'Ukrainian' },
+    { value: 'vie', text: 'Vietnamese' },
+    { value: 'war', text: 'Waray' },
+    { value: 'yid', text: 'Yiddish' }
 ];
 
-export const unpublishedBufferActionUrls = [
+export const UNPUBLISHED_BUFFER_ACTION_URLS = [
     {
         label: 'Edit selected record',
         url: (pid) => `${APP_URL}workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=289&href=%2Fmy_fez_traditional.php`

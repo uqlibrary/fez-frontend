@@ -1178,7 +1178,6 @@ export default {
             }
         }
     },
-
     fileUpload: {
         title: 'Upload files',
         // help: {
@@ -1193,7 +1192,6 @@ export default {
         cancelButtonLabel: 'No',
         confirmButtonLabel: 'Yes'
     },
-
     validationAlert: {
         type: 'warning',
         title: 'Validation',
