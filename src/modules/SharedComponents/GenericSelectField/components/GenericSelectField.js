@@ -16,31 +16,32 @@ const styles = theme => ({
 
 export class GenericSelectFieldClass extends Component {
     static propTypes = {
-        onChange: PropTypes.func,
-        itemsList: PropTypes.array,
-        itemsLoading: PropTypes.bool,
-        loadItemsList: PropTypes.func,
-        itemsLoadingHint: PropTypes.string,
-        selectedValue: PropTypes.any,
-        parentItemsId: PropTypes.number,
+        ariaLabel: PropTypes.string,
+        autoWidth: PropTypes.bool,
+        classes: PropTypes.object,
         className: PropTypes.string,
         disabled: PropTypes.bool,
-        menuItemClassName: PropTypes.string,
-        fullWidth: PropTypes.bool,
-        autoWidth: PropTypes.bool,
-        errorText: PropTypes.string,
-        hintText: PropTypes.string,
-        multiple: PropTypes.bool,
-        required: PropTypes.bool,
-        error: PropTypes.any,
-        ariaLabel: PropTypes.string,
-        loadingHint: PropTypes.string,
-        label: PropTypes.string,
-        locale: PropTypes.object,
-        hideLabel: PropTypes.bool,
         displayEmpty: PropTypes.bool,
-        classes: PropTypes.object,
+        error: PropTypes.any,
+        errorText: PropTypes.string,
+        fullWidth: PropTypes.bool,
+        hideLabel: PropTypes.bool,
+        hintText: PropTypes.string,
         id: PropTypes.string,
+        itemsList: PropTypes.array,
+        itemsLoading: PropTypes.bool,
+        itemsLoadingHint: PropTypes.string,
+        label: PropTypes.string,
+        loadingHint: PropTypes.string,
+        loadItemsList: PropTypes.func,
+        locale: PropTypes.object,
+        menuItemClassName: PropTypes.string,
+        meta: PropTypes.object,
+        multiple: PropTypes.bool,
+        onChange: PropTypes.func,
+        parentItemsId: PropTypes.number,
+        required: PropTypes.bool,
+        selectedValue: PropTypes.any,
     };
 
     static defaultProps = {
@@ -123,8 +124,14 @@ export class GenericSelectFieldClass extends Component {
                         }
                         value={item.value || item}
                         key={index + 1}
-                        disabled={item && !item.value}
-                        aria-label={item.text || item.value || item}>
+                        disabled={
+                            item && (
+                                !item.value ||
+                                !!item.disabled
+                            )
+                        }
+                        aria-label={item.text || item.value || item}
+                    >
                         {item.text || item.value || item}
                     </MenuItem>
                 );

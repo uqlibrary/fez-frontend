@@ -1,6 +1,9 @@
 import Immutable from 'immutable';
-import { ContentIndicatorsField, getSelected, showContentIndicatorsField } from './ContentIndicatorsField';
-import { PUBLICATION_TYPE_THESIS } from 'config/general';
+import { ContentIndicatorsField, getContentIndicators, showContentIndicatorsField } from './ContentIndicatorsField';
+import {
+    CONTENT_INDICATORS,
+    PUBLICATION_TYPE_THESIS
+} from 'config/general';
 
 function setup(testProps, isShallow = true) {
     const props = {
@@ -41,17 +44,22 @@ describe('ContentIndicatorsField component', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should not allow deselection of initial values', () => {
+    it('should mark existing indicators as disabled', () => {
         const input = {
-            input: {
-                value: [454057],
-            },
             meta: {
-                initial: Immutable.List([454057, 454058])
+                initial: Immutable.List([
+                    CONTENT_INDICATORS[1].value,
+                    CONTENT_INDICATORS[2].value,
+                ]),
             }
         };
-        const expected = [454057, 454058];
-        expect(getSelected(input)).toEqual(expected);
+        const expected = CONTENT_INDICATORS.map(item => ({
+            ...item,
+            disabled: false,
+        }));
+        expected[1].disabled = true;
+        expected[2].disabled = true;
+        expect(getContentIndicators(input)).toEqual(expected);
     });
 
     describe('should detect whether content indicator field should be shown', () => {

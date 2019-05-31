@@ -8,14 +8,17 @@ exports[`ContentIndicatorsField component should render default view 1`] = `
   itemsList={
     Array [
       Object {
+        "disabled": false,
         "text": "Scholarship of Teaching and Learning",
         "value": 454057,
       },
       Object {
+        "disabled": false,
         "text": "Protocols",
         "value": 454058,
       },
       Object {
+        "disabled": false,
         "text": "Case Studies",
         "value": 454059,
       },
@@ -47,14 +50,17 @@ exports[`ContentIndicatorsField component should render with given field props 1
   itemsList={
     Array [
       Object {
+        "disabled": false,
         "text": "Scholarship of Teaching and Learning",
         "value": 454057,
       },
       Object {
+        "disabled": false,
         "text": "Protocols",
         "value": 454058,
       },
       Object {
+        "disabled": false,
         "text": "Case Studies",
         "value": 454059,
       },
@@ -98,14 +104,17 @@ exports[`ContentIndicatorsField component should render with given field props 2
   itemsList={
     Array [
       Object {
+        "disabled": false,
         "text": "Scholarship of Teaching and Learning",
         "value": 454057,
       },
       Object {
+        "disabled": false,
         "text": "Protocols",
         "value": 454058,
       },
       Object {
+        "disabled": false,
         "text": "Case Studies",
         "value": 454059,
       },

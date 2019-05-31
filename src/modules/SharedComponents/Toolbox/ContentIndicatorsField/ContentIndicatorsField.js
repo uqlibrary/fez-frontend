@@ -12,18 +12,6 @@ export const getSelected = props => {
     if (selectedValues.toJS) {
         selectedValues = selectedValues.toJS();
     }
-    if(
-        !!props.meta &&
-        !!props.meta.initial &&
-        !!props.meta.initial.toJS &&
-        props.meta.initial.toJS().length
-    ) {
-        const initialValues = props.meta.initial.toJS();
-        selectedValues = [...new Set([
-            ...initialValues,
-            ...selectedValues
-        ])];
-    }
     return selectedValues;
 };
 
@@ -40,10 +28,22 @@ export const showContentIndicatorsField = (record) => {
     return !isBlacklistedType && !inBlacklistedCollection;
 };
 
+export const getContentIndicators = props => CONTENT_INDICATORS.map(
+    item => ({
+        ...item,
+        disabled: (
+            !!props.meta &&
+            !!props.meta.initial &&
+            !!props.meta.initial.toJS &&
+            props.meta.initial.toJS().includes(item.value)
+        )
+    })
+);
+
 export const ContentIndicatorsField = props => {
     return (
         <GenericSelectField
-            itemsList={CONTENT_INDICATORS}
+            itemsList={getContentIndicators(props)}
             hideLabel={false}
             locale={{ label: props.label }}
             selectedValue={getSelected(props)}
