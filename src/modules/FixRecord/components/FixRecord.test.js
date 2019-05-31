@@ -160,14 +160,12 @@ describe('Component FixRecord', () => {
         const wrapper = setup({recordToFix: mockRecordToFix, publicationToFixFileUploadingError: true});
         wrapper.setState({selectedRecordAction: 'fix'});
         expect(toJson(wrapper)).toMatchSnapshot();
-
     });
 
     it('should render the confirm dialog box without an alert due to a file upload success', () => {
         const wrapper = setup({recordToFix: mockRecordToFix, publicationToFixFileUploadingError: false});
         wrapper.setState({selectedRecordAction: 'fix'});
         expect(toJson(wrapper)).toMatchSnapshot();
-
     });
 
     it('_handleDefaultSubmit()', () => {
@@ -176,14 +174,12 @@ describe('Component FixRecord', () => {
         const event = {preventDefault: testFN};
         wrapper.instance()._handleDefaultSubmit(event);
         expect(testFN).toHaveBeenCalled();
-
     });
 
     it('_handleDefaultSubmit()', () => {
         const wrapper = setup({recordToFix: mockRecordToFix, publicationToFixFileUploadingError: false});
         wrapper.instance()._handleDefaultSubmit();
         expect(toJson(wrapper)).toMatchSnapshot();
-
     });
 
     it('componentWillReceiveProps()', () => {
@@ -191,7 +187,6 @@ describe('Component FixRecord', () => {
         const nextProps = {submitSucceeded: true};
         wrapper.instance().componentWillReceiveProps(nextProps);
         expect(toJson(wrapper)).toMatchSnapshot();
-
     });
 
     it('componentWillUnmount()', () => {
@@ -199,7 +194,6 @@ describe('Component FixRecord', () => {
         const wrapper = setup({actions: {clearFixRecord: testFN}, submitSucceeded: true, recordToFix: mockRecordToFix, publicationToFixFileUploadingError: false});
         wrapper.instance().componentWillUnmount();
         expect(testFN).toHaveBeenCalled();
-
     });
 
 });
