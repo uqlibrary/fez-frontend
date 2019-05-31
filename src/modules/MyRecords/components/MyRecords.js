@@ -55,7 +55,7 @@ export default class MyRecords extends PureComponent {
     }
 
     componentDidMount() {
-        if (!this.props.accountLoading && !this.props.publicationsList.length) {
+        if (!this.props.accountLoading) {
             this.props.actions.loadAuthorPublications({...this.state});
         }
     }

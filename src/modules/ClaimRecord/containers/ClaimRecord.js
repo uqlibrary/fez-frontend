@@ -33,6 +33,9 @@ let ClaimPublicationFormContainer = reduxForm({
 const mapStateToProps = (state) => {
     const formErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});
     return {
+        fullPublicationToClaim: state && state.get('claimPublicationReducer') && state.get('claimPublicationReducer').fullPublicationToClaim || null,
+        fullPublicationToClaimLoading: state && state.get('claimPublicationReducer') && state.get('claimPublicationReducer').fullPublicationToClaimLoading || false,
+        fullPublicationToClaimLoadingFailed: state && state.get('claimPublicationReducer') && state.get('claimPublicationReducer').fullPublicationToClaimLoadingFailed || false,
         publicationToClaimFileUploadingError: state && state.get('claimPublicationReducer') ? state.get('claimPublicationReducer').publicationToClaimFileUploadingError : null,
         formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
         formErrors: formErrors,

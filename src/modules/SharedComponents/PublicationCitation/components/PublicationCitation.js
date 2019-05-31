@@ -147,7 +147,6 @@ export class PublicationCitation extends PureComponent {
                 break;
             case 'shareRecord':
                 // TODO: display share interface
-                // console.log('share this record');
                 break;
             default:
                 // do nothing
