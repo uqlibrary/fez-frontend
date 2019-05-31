@@ -45,7 +45,7 @@ export default class ClaimRecord extends PureComponent {
 
     componentDidMount() {
         const publication = this.props.initialValues.get('publication') ? this.props.initialValues.get('publication').toJS() : null;
-        if(publication && publication.rek_pid) {
+        if(publication && publication.rek_pid && this.props.actions) {
             this.props.actions.loadFullRecordToClaim(publication.rek_pid);
         }
     }
