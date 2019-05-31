@@ -6,6 +6,7 @@ import { Field } from 'redux-form/immutable';
 import Button from '@material-ui/core/Button';
 import MenuItem from '@material-ui/core/MenuItem';
 import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
 
 import { SelectField } from 'modules/SharedComponents/Toolbox/SelectField';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
@@ -193,19 +194,23 @@ export default class FixRecord extends PureComponent {
                                 {
                                     showContentIndicatorsField(this.props.recordToFix) &&
                                     <Grid item xs={12}>
-                                        <StandardCard
-                                            title={txtFixForm.contentIndicators.title}
-                                        >
-                                            {txtFixForm.contentIndicators.description}
-                                            <Field
-                                                component={ContentIndicatorsField}
-                                                disabled={this.props.submitting}
-                                                id="content-indicators"
-                                                name="contentIndicators"
-                                                label={txtFixForm.contentIndicators.label}
-                                                multiple
-                                                fullWidth
-                                            />
+                                        <StandardCard title={txtFixForm.contentIndicators.title} >
+                                            <Grid container spacing={24}>
+                                                <Grid item xs={12}>
+                                                    <Typography>{txtFixForm.contentIndicators.description}</Typography>
+                                                </Grid>
+                                                <Grid item xs={12}>
+                                                    <Field
+                                                        component={ContentIndicatorsField}
+                                                        disabled={this.props.submitting}
+                                                        id="content-indicators"
+                                                        name="contentIndicators"
+                                                        label={txtFixForm.contentIndicators.label}
+                                                        multiple
+                                                        fullWidth
+                                                    />
+                                                </Grid>
+                                            </Grid>
                                         </StandardCard>
                                     </Grid>
                                 }

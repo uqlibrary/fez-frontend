@@ -1478,16 +1478,33 @@ exports[`Component FixRecord should render fix record form 1`] = `
         <StandardCard
           title="Content Indicators"
         >
-          You can choose additional content indicators, but cannot remove existing ones.
-          <Field
-            component={[Function]}
-            disabled={false}
-            fullWidth={true}
-            id="content-indicators"
-            label="Please choose applicable indicators"
-            multiple={true}
-            name="contentIndicators"
-          />
+          <WithStyles(Grid)
+            container={true}
+            spacing={24}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(Typography)>
+                You can choose additional content indicators, but cannot remove existing ones.
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                id="content-indicators"
+                label="Please choose applicable indicators"
+                multiple={true}
+                name="contentIndicators"
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
         </StandardCard>
       </WithStyles(Grid)>
       <WithStyles(Grid)
@@ -2602,16 +2619,33 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
         <StandardCard
           title="Content Indicators"
         >
-          You can choose additional content indicators, but cannot remove existing ones.
-          <Field
-            component={[Function]}
-            disabled={false}
-            fullWidth={true}
-            id="content-indicators"
-            label="Please choose applicable indicators"
-            multiple={true}
-            name="contentIndicators"
-          />
+          <WithStyles(Grid)
+            container={true}
+            spacing={24}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(Typography)>
+                You can choose additional content indicators, but cannot remove existing ones.
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                id="content-indicators"
+                label="Please choose applicable indicators"
+                multiple={true}
+                name="contentIndicators"
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
         </StandardCard>
       </WithStyles(Grid)>
       <WithStyles(Grid)
@@ -3221,16 +3255,33 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
         <StandardCard
           title="Content Indicators"
         >
-          You can choose additional content indicators, but cannot remove existing ones.
-          <Field
-            component={[Function]}
-            disabled={false}
-            fullWidth={true}
-            id="content-indicators"
-            label="Please choose applicable indicators"
-            multiple={true}
-            name="contentIndicators"
-          />
+          <WithStyles(Grid)
+            container={true}
+            spacing={24}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(Typography)>
+                You can choose additional content indicators, but cannot remove existing ones.
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                id="content-indicators"
+                label="Please choose applicable indicators"
+                multiple={true}
+                name="contentIndicators"
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
         </StandardCard>
       </WithStyles(Grid)>
       <WithStyles(Grid)
