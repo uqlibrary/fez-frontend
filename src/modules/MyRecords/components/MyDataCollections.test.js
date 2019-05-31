@@ -178,6 +178,5 @@ describe('myDatasets test', () => {
         const wrapper = setup({accountLoading: true, actions: {setFixRecord: setFixRecord},  history: {push: push}});
         wrapper.instance().fixRecord({rek_pid: 'UQ:111111'});
         expect(push).toHaveBeenCalledWith(routes.pathConfig.records.fix('UQ:111111'));
-        expect(setFixRecord).toHaveBeenCalled();
     });
 });
