@@ -1,12 +1,22 @@
 import locale from 'locale/global';
 import templates from 'locale/templates';
+import { CONTENT_INDICATORS } from 'config/general';
 
 const moment = require('moment');
 
 const pipe = (...functionsList) => values => functionsList.reduce((attributes, functionItem) => functionItem(attributes), values);
 
-const getIssueValues = (data) => {
+export const getIssueValues = (data) => {
     return {
+        contentIndicators: (
+            data.contentIndicators &&
+            data.contentIndicators.length &&
+            data.contentIndicators.map(
+                id => CONTENT_INDICATORS.find(
+                    item => item.value === id
+                ).text
+            ).join(', ') || null
+        ),
         comments: data.comments || null,
         files: data.files && data.files.queue ? data.files.queue.map(item => item.name).toString().replace(/,/g, ', ') : null,
         link: data.rek_link || null,
