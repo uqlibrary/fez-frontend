@@ -33,9 +33,10 @@ const onSubmit = (values, dispatch, props) => {
 const validate = (values) => {
     stopSubmit(FORM_NAME, null);
     const data = values.toJS();
+    const hasAddedContentIndicators = data.contentIndicators.length > data.contentIndicatorsCountOnLoad;
     const hasFiles = data.files && data.files.queue && data.files.queue.length > 0;
     const errors = {};
-    if(data.fixAction === 'fix' && !data.comments && !data.rek_link && !hasFiles) {
+    if(data.fixAction === 'fix' && !hasAddedContentIndicators && !data.comments && !data.rek_link && !hasFiles) {
         errors.fixRecordAnyField = true;
     }
     return errors;
@@ -62,7 +63,8 @@ const mapStateToProps = (state) => {
         formErrors: formErrors,
         disableSubmit: formErrors && !(formErrors instanceof Immutable.Map),
         initialValues: {
-            contentIndicators
+            contentIndicators,
+            contentIndicatorsCountOnLoad: contentIndicators.length,
         }
     };
 };
