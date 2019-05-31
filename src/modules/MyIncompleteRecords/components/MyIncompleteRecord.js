@@ -127,7 +127,7 @@ export class MyIncompleteRecordClass extends PureComponent {
 
         return (
             <StandardPage title={txt.title} help={txt.help}>
-                <PublicationCitation publication={recordToFix} />
+                <PublicationCitation publication={recordToFix} hideContentIndicators/>
                 <form onSubmit={this._handleDefaultSubmit}>
                     <NavigationDialogBox
                         when={this.props.dirty && !this.props.submitSucceeded}

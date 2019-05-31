@@ -66,7 +66,7 @@ export default class ViewRecord extends PureComponent {
             <StandardPage className="viewRecord" title={ReactHtmlParser(recordToView.rek_title)}>
                 <Grid container style={{marginTop: -24}}>
                     <Grid item xs={12}>
-                        <PublicationCitation publication={recordToView} hideTitle />
+                        <PublicationCitation publication={recordToView} hideTitle hideContentIndicators/>
                     </Grid>
                 </Grid>
                 <Grid container spacing={24}>

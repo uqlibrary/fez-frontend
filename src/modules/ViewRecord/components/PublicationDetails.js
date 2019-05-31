@@ -1,6 +1,7 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import locale from 'locale/viewRecord';
+import {default as componentLocale} from 'locale/components';
 import {pathConfig} from 'config/routes';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {Link} from 'react-router-dom';
@@ -59,6 +60,23 @@ export class PublicationDetailsClass extends PureComponent {
                                 heading={locale.viewRecord.headings.default.publicationDetails.rek_subtype}
                                 data={this.props.publication.rek_subtype}
                             />
+                    }
+                    {
+                        this.props.publication.fez_record_search_key_content_indicator &&
+                        this.props.publication.fez_record_search_key_content_indicator.length > 0 &&
+                        <this.ViewRecordRow
+                            heading={componentLocale.components.contentIndicators.label}
+                            data={
+                                this.props.publication.fez_record_search_key_content_indicator.map((item, index) => {
+                                    return (
+                                        <span key={index}>
+                                            {item.rek_content_indicator_lookup}
+                                            {index < (this.props.publication.fez_record_search_key_content_indicator.length - 1) && componentLocale.components.contentIndicators.divider}
+                                        </span>
+                                    );
+                                })
+                            }
+                        />
                     }
                     {
                         this.props.publication.fez_record_search_key_ismemberof &&

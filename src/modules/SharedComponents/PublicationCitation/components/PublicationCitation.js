@@ -62,6 +62,11 @@ export const styles = theme => ({
         [theme.breakpoints.down('sm')]: {
             marginTop: 12
         }
+    },
+    contentIndicators: {
+        span: {
+            marginRight: 12
+        }
     }
 });
 
@@ -83,6 +88,7 @@ export class PublicationCitation extends PureComponent {
         hideViewFullStatisticsLink: PropTypes.bool,
         hideCitationCounts: PropTypes.bool,
         hideLinks: PropTypes.bool,
+        hideContentIndicators: PropTypes.bool,
         classes: PropTypes.object
     };
 
@@ -97,7 +103,8 @@ export class PublicationCitation extends PureComponent {
         hideCountDiff: false,
         hideCountTotal: false,
         hideViewFullStatisticsLink: false,
-        hideCitationCounts: false
+        hideCitationCounts: false,
+        hideContentIndicators: false
     };
 
     constructor(props) {
@@ -297,6 +304,25 @@ export class PublicationCitation extends PureComponent {
                             <Grid item xs={12} className={classes.citationText}>
                                 {this.renderCitation(this.props.publication.rek_display_type)}
                             </Grid>
+                            {
+                                !this.props.hideContentIndicators &&
+                                this.props.publication.fez_record_search_key_content_indicator &&
+                                this.props.publication.fez_record_search_key_content_indicator.length > 0 &&
+                                <Grid item xs={12} className={classes.contentIndicators}>
+                                    <Typography gutterBottom variant="caption">{locale.components.contentIndicators.label}:
+                                        {
+                                            this.props.publication.fez_record_search_key_content_indicator.map((item, index) => {
+                                                return (
+                                                    <span key={item.rek_content_indicator_id}>
+                                                        {item.rek_content_indicator_lookup}
+                                                        {index < (this.props.publication.fez_record_search_key_content_indicator.length - 1) && locale.components.contentIndicators.divider}
+                                                    </span>
+                                                );
+                                            })
+                                        }
+                                    </Typography>
+                                </Grid>
+                            }
                             {
                                 !this.props.hideCitationCounts &&
                                 <Grid item xs={12} className={classes.citationCounts}>
