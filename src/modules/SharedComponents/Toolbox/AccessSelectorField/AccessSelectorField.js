@@ -11,12 +11,12 @@ export default function AccessSelectorField(fieldProps) {
             onChange={!!fieldProps.input && fieldProps.input.onChange}
             itemsList={[
                 {
-                    id: OPEN_ACCESS_ID,
-                    value: 'Open Access'
+                    value: OPEN_ACCESS_ID,
+                    text: 'Open Access'
                 },
                 {
-                    id: MEDIATED_ACCESS_ID,
-                    value: 'Mediated Access'
+                    value: MEDIATED_ACCESS_ID,
+                    text: 'Mediated Access'
                 }
             ]}
             errorText={!!fieldProps.meta && fieldProps.meta.error || ''}
