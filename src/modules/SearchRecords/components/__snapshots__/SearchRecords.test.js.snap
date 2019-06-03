@@ -876,7 +876,126 @@ exports[`SearchRecords page should show available filters or selected filters if
               }
             }
             disabled={false}
-            excludeFacetsList={Array []}
+            excludeFacetsList={
+              Array [
+                "Scopus document type",
+                "Genre",
+                "Year published",
+                "Published year range",
+              ]
+            }
+            facetsData={
+              Object {
+                "Another facet": 2,
+                "Some facet": 1,
+              }
+            }
+            lookupFacetsList={
+              Object {
+                "Author": "Author (lookup)",
+                "Collection": "Collection (lookup)",
+                "Subject": "Subject (lookup)",
+              }
+            }
+            onFacetsChanged={[Function]}
+            renameFacetsList={
+              Object {
+                "Display type": "Work type",
+                "Subtype": "Work subtype",
+              }
+            }
+            showOpenAccessFilter={true}
+          />
+        </StandardRighthandCard>
+      </WithStyles(Grid)>
+    </Hidden>
+  </WithStyles(Grid)>
+</StandardPage>
+`;
+
+exports[`SearchRecords page should show available filters or selected filters if publicationsListFacets returned (even if there are no results) and should exclude facets from advanced search field 1`] = `
+<StandardPage
+  className="page-search-records"
+>
+  <WithStyles(Grid)
+    container={true}
+    spacing={24}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <StandardCard
+        className="searchComponent"
+        noHeader={true}
+      >
+        <withRouter(Connect(SearchComponent))
+          activeFacets={
+            Object {
+              "filters": Object {},
+              "ranges": Object {},
+            }
+          }
+          className="search-body"
+          facetsChanged={[Function]}
+          isAdvancedSearch={false}
+          isUnpublishedBufferPage={false}
+          searchLoading={false}
+          showAdvancedSearchButton={true}
+          updateFacetExcludesFromSearchFields={[Function]}
+        />
+      </StandardCard>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <StandardCard
+        text={
+          <div>
+            We were unable to find any results.
+          </div>
+        }
+        title="No works found"
+      >
+        <div>
+          We were unable to find any results.
+        </div>
+      </StandardCard>
+    </WithStyles(Grid)>
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={true}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={false}
+      xsUp={false}
+    >
+      <WithStyles(Grid)
+        item={true}
+        md={3}
+      >
+        <StandardRighthandCard
+          title="Refine results"
+        >
+          <FacetsFilter
+            activeFacets={
+              Object {
+                "filters": Object {},
+                "ranges": Object {},
+              }
+            }
+            disabled={false}
+            excludeFacetsList={
+              Array [
+                "Author",
+              ]
+            }
             facetsData={
               Object {
                 "Another facet": 2,

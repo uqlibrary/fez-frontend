@@ -133,7 +133,7 @@ describe('Application component', () => {
     it('Should display mobile correctly', () => {
         // current URL is set to testUrl which is set in package.json as http://fez-staging.library.uq.edu.au
         const wrapper = setup({});
-        wrapper.setState({ isMobile: 'true' });
+        wrapper.setState({ isMobile: true });
         wrapper.instance().getChildContext();
         wrapper.update();
         expect(toJson(wrapper)).toMatchSnapshot();
