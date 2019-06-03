@@ -876,7 +876,14 @@ exports[`SearchRecords page should show available filters or selected filters if
               }
             }
             disabled={false}
-            excludeFacetsList={Array []}
+            excludeFacetsList={
+              Array [
+                "Scopus document type",
+                "Genre",
+                "Year published",
+                "Published year range",
+              ]
+            }
             facetsData={
               Object {
                 "Another facet": 2,

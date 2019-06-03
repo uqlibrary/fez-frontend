@@ -137,13 +137,6 @@ export default class MyIncompleteRecords extends PureComponent {
         const txt = this.props.localePages;
         const pagingData = this.props.publicationsListPagingData;
         const isLoading = this.props.loadingPublicationsList;
-        const inProgress = [
-            {
-                label: 'In progress',
-                disabled: true,
-                primary: false
-            }
-        ];
 
         const actions = [
             {
@@ -235,7 +228,6 @@ export default class MyIncompleteRecords extends PureComponent {
                                             this.props.publicationsList.length > 0 &&
                                             <PublicationsList
                                                 publicationsList={this.props.publicationsList}
-                                                subsetCustomActions={inProgress}
                                                 customActions={actions}
                                             />
                                         }

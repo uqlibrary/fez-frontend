@@ -381,7 +381,10 @@ class SearchRecords extends PureComponent {
                                         onFacetsChanged={this.facetsChanged}
                                         activeFacets={this.state.activeFacets}
                                         disabled={isLoadingOrExporting}
-                                        excludeFacetsList={this.state.advancedSearchFields}
+                                        excludeFacetsList={
+                                            this.state.advancedSearchFields.length && this.state.advancedSearchFields ||
+                                            locale.pages.searchRecords.facetsFilter.excludeFacetsList
+                                        }
                                         renameFacetsList={txt.facetsFilter.renameFacetsList}
                                         lookupFacetsList={txt.facetsFilter.lookupFacetsList}
                                         showOpenAccessFilter

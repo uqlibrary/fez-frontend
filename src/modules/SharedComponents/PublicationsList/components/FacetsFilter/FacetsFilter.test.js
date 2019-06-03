@@ -688,7 +688,13 @@ describe('FacetsFilter ', () => {
     });
 
     it('_handleResetClick sets state to filter by display type if on "My DataSet" page', () => {
-        const wrapper = setup({ isMyDataSetPage: true });
+        const wrapper = setup({
+            initialFacets: {
+                filters: {
+                    'Display type': general.PUBLICATION_TYPE_DATA_COLLECTION
+                }
+            }
+        });
         wrapper.setState({
             activeFacets: {
                 ranges: {

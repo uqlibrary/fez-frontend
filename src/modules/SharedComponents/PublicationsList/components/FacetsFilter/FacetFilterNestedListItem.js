@@ -1,4 +1,4 @@
-import React, {PureComponent} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 import ListItem from '@material-ui/core/ListItem';
@@ -27,47 +27,48 @@ const styles = (theme) => ({
     }
 });
 
-export class FacetsFilterNestedListItem extends PureComponent {
-    static propTypes = {
-        index: PropTypes.number,
-        primaryText: PropTypes.string,
-        disabled: PropTypes.bool,
-        isActive: PropTypes.bool,
-        classes: PropTypes.object,
-        onFacetClick: PropTypes.func.isRequired,
-    };
-
-    render() {
-        const {onFacetClick, index, disabled, primaryText, isActive} = this.props;
-        return (
-            <ListItem
-                key={`facet-filter-nested-item-${index}`}
-                button
-                onClick={onFacetClick}
-                disabled={disabled}
-                classes={{
-                    gutters: this.props.classes.listItemGutters
-                }}
+export function FacetsFilterNestedListItem({onFacetClick, index, disabled, primaryText, isActive, classes}) {
+    return (
+        <ListItem
+            key={`facet-filter-nested-item-${index}`}
+            button
+            onClick={onFacetClick}
+            disabled={disabled}
+            classes={{
+                gutters: classes.listItemGutters
+            }}
+        >
+            {
+                isActive &&
+                <ListItemIcon>
+                    <Clear disabled={disabled}/>
+                </ListItemIcon>
+            }
+            <ListItemText
+                inset
+                className={classes.listText}
+                disableTypography
+                classes={{inset: classes.inset}}
             >
-                {
-                    isActive &&
-                    <ListItemIcon>
-                        <Clear disabled={disabled}/>
-                    </ListItemIcon>
-                }
-                <ListItemText
-                    inset
-                    className={this.props.classes.listText}
-                    disableTypography
-                    classes={{inset: this.props.classes.inset}}
-                >
-                    <Typography variant={'body2'} color={isActive ? 'primary' : 'default'}>
-                        {primaryText}
-                    </Typography>
-                </ListItemText>
-            </ListItem>
-        );
-    }
+                <Typography variant={'body2'} color={isActive ? 'primary' : 'default'}>
+                    {primaryText}
+                </Typography>
+            </ListItemText>
+        </ListItem>
+    );
 }
 
-export default withStyles(styles)(FacetsFilterNestedListItem);
+FacetsFilterNestedListItem.propTypes = {
+    index: PropTypes.number,
+    primaryText: PropTypes.string,
+    disabled: PropTypes.bool,
+    isActive: PropTypes.bool,
+    classes: PropTypes.object,
+    onFacetClick: PropTypes.func.isRequired,
+};
+
+function isActiveOrDisabled(prevProps, nextProps) {
+    return prevProps.isActive === nextProps.isActive && prevProps.disabled === nextProps.disabled;
+}
+
+export default React.memo(withStyles(styles)(FacetsFilterNestedListItem), isActiveOrDisabled);
