@@ -712,7 +712,10 @@ export default {
                     </div>
                 ),
             },
-            completeRecordButton: 'Complete work',
+            publicationsList: {
+                complete: 'Complete work',
+                inProgress: 'In progress'
+            },
             facetsFilter: {
                 ...locale.components.facetsFilter,
                 excludeFacetsList: ['Author'],

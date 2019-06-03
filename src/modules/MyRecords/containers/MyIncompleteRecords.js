@@ -15,9 +15,16 @@ const mapStateToProps = (state, ownProps) => {
         thisUrl: routes.pathConfig.records.incomplete,
         publicationsListCustomActions: [
             {
-                label: locale.pages.incompletePublications.completeRecordButton,
+                label: locale.pages.incompletePublications.publicationsList.complete,
                 handleAction: (item) => ownProps.history.push(routes.pathConfig.records.incompleteFix(item.rek_pid)),
                 primary: true
+            }
+        ],
+        subsetCustomActions: [
+            {
+                label: locale.pages.incompletePublications.publicationsList.inProgress,
+                disabled: true,
+                primary: false
             }
         ]
     };

@@ -4,12 +4,15 @@ export const initialState = {
     publicationsList: [],
     publicationsListPagingData: {},
     publicationsListFacets: {},
-    loadingPublicationsList: true,
+    loadingPublicationsList: true
 };
 
 export const getInitialState = () => ({
     'mine': initialState,
-    'incomplete': initialState,
+    'incomplete': {
+        ...initialState,
+        publicationsInProgress: []
+    },
     'datasets': initialState
 });
 
@@ -58,7 +61,17 @@ const handlers = {
                 loadingPublicationsList: false
             }
         };
-    }
+    },
+
+    [`${actions.FIX_RECORD_SUCCESS}@`]: (state, action, type) => (
+        {
+            ...state,
+            [type]: {
+                ...state[type],
+                publicationsInProgress: [...state[type].publicationsInProgress, action.payload.pid]
+            }
+        }
+    )
 };
 
 export default function publicationsReducer(state = getInitialState(), action) {
