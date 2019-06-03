@@ -58,7 +58,7 @@ export default class MyIncompleteRecords extends PureComponent {
     }
 
     componentDidMount() {
-        if (!this.props.accountLoading && !this.props.publicationsList.length) {
+        if (!this.props.accountLoading) {
             this.props.actions.searchAuthorPublications({ ...this.state }, 'incomplete');
         }
     }
