@@ -371,8 +371,8 @@ class SearchRecords extends PureComponent {
                         </Grid>
                     }
                     {
-                        this.props.publicationsListFacets
-                        && Object.keys(this.props.publicationsListFacets).length !== 0 &&
+                        this.props.publicationsListFacets &&
+                        Object.keys(this.props.publicationsListFacets).length !== 0 &&
                         <Hidden smDown>
                             <Grid item md={3}>
                                 <StandardRighthandCard title={txt.facetsFilter.title} help={txt.facetsFilter.help}>
