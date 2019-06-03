@@ -19,13 +19,6 @@ const mapStateToProps = (state, ownProps) => {
                 handleAction: (item) => ownProps.history.push(routes.pathConfig.records.incompleteFix(item.rek_pid)),
                 primary: true
             }
-        ],
-        subsetCustomActions: [
-            {
-                label: locale.pages.incompletePublications.publicationsList.inProgress,
-                disabled: true,
-                primary: false
-            }
         ]
     };
 };

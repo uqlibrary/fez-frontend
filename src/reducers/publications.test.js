@@ -770,15 +770,6 @@ describe('Authors incomplete publications reducer', () => {
         expect(test.incomplete.publicationsListFacets).toEqual({});
         expect(test.incomplete.loadingPublicationsList).toBeFalsy();
     });
-
-    it('returns the correct state when incomplete record has been updated', () => {
-        const test = publicationsReducer(getInitialState(), {type: `${actions.FIX_RECORD_SUCCESS}@incomplete`, payload: { pid: 'UQ:111111' }});
-        expect(test.incomplete.publicationsList).toEqual([]);
-        expect(test.incomplete.publicationsListPagingData).toEqual({});
-        expect(test.incomplete.publicationsListFacets).toEqual({});
-        expect(test.incomplete.loadingPublicationsList).toBeTruthy();
-        expect(test.incomplete.publicationsInProgress).toEqual(['UQ:111111']);
-    })
 });
 
 describe('General publications reducer', () => {

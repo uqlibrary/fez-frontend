@@ -714,7 +714,6 @@ export default {
             },
             publicationsList: {
                 complete: 'Complete work',
-                inProgress: 'In progress'
             },
             facetsFilter: {
                 ...locale.components.facetsFilter,

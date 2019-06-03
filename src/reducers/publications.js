@@ -9,10 +9,7 @@ export const initialState = {
 
 export const getInitialState = () => ({
     'mine': initialState,
-    'incomplete': {
-        ...initialState,
-        publicationsInProgress: []
-    },
+    'incomplete': initialState,
     'datasets': initialState
 });
 
@@ -62,16 +59,6 @@ const handlers = {
             }
         };
     },
-
-    [`${actions.FIX_RECORD_SUCCESS}@`]: (state, action, type) => (
-        {
-            ...state,
-            [type]: {
-                ...state[type],
-                publicationsInProgress: [...state[type].publicationsInProgress, action.payload.pid]
-            }
-        }
-    )
 };
 
 export default function publicationsReducer(state = getInitialState(), action) {

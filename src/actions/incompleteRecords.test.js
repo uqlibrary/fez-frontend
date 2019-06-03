@@ -25,7 +25,7 @@ describe('incompleteRecords actions', () => {
 
         const expectedActions = [
             actions.FIX_RECORD_PROCESSING,
-            `${actions.FIX_RECORD_SUCCESS}@incomplete`
+            actions.FIX_RECORD_SUCCESS
         ];
 
         const data = {
@@ -137,7 +137,7 @@ describe('updateIncompleteRecord actions', () => {
 
         const expectedActions = [
             actions.FIX_RECORD_PROCESSING,
-            `${actions.FIX_RECORD_SUCCESS}@incomplete`
+            actions.FIX_RECORD_SUCCESS
         ];
 
         await mockActionsStore.dispatch(updateIncompleteRecord(testInput));
@@ -176,7 +176,7 @@ describe('updateIncompleteRecord actions', () => {
 
         const expectedActions = [
             actions.FIX_RECORD_PROCESSING,
-            `${actions.FIX_RECORD_SUCCESS}@incomplete`
+            actions.FIX_RECORD_SUCCESS
         ];
 
         await mockActionsStore.dispatch(updateIncompleteRecord(testInput));
@@ -201,7 +201,7 @@ describe('updateIncompleteRecord actions', () => {
 
         const expectedActions = [
             actions.FIX_RECORD_PROCESSING,
-            `${actions.FIX_RECORD_SUCCESS}@incomplete`
+            actions.FIX_RECORD_SUCCESS
         ];
 
         await mockActionsStore.dispatch(updateIncompleteRecord(testInput));
@@ -254,7 +254,7 @@ describe('updateIncompleteRecord actions', () => {
 
         const expectedActions = [
             actions.FIX_RECORD_PROCESSING,
-            `${actions.FIX_RECORD_SUCCESS}@incomplete`
+            actions.FIX_RECORD_SUCCESS
         ];
 
         await mockActionsStore.dispatch(updateIncompleteRecord(testInput));
@@ -322,7 +322,7 @@ describe('updateIncompleteRecord actions', () => {
             actions.FIX_RECORD_PROCESSING,
             'FILE_UPLOAD_STARTED',
             'FILE_UPLOAD_PROGRESS@test.txt',
-            `${actions.FIX_RECORD_SUCCESS}@incomplete`
+            actions.FIX_RECORD_SUCCESS
         ];
 
         mockApi

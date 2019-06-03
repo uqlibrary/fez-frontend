@@ -23,8 +23,6 @@ export default class MyRecords extends PureComponent {
         publicationsListPagingData: PropTypes.object,
         exportPublicationsLoading: PropTypes.bool,
         publicationsListCustomActions: PropTypes.array,
-        publicationsInProgress: PropTypes.array,
-        subsetCustomActions: PropTypes.array,
 
         initialFacets: PropTypes.object,
         accountLoading: PropTypes.bool,
@@ -61,7 +59,7 @@ export default class MyRecords extends PureComponent {
     }
 
     componentDidMount() {
-        if (!this.props.accountLoading && !this.props.publicationsList.length) {
+        if (!this.props.accountLoading) {
             this.props.actions.loadAuthorPublications({...this.state});
         }
     }
@@ -223,8 +221,6 @@ export default class MyRecords extends PureComponent {
                                             !this.props.exportPublicationsLoading && !this.props.loadingPublicationsList && this.props.publicationsList && this.props.publicationsList.length > 0 &&
                                             <PublicationsList
                                                 publicationsList={this.props.publicationsList}
-                                                publicationsListSubset={this.props.publicationsInProgress}
-                                                subsetCustomActions={this.props.subsetCustomActions}
                                                 { ...actionProps} />
                                         }
                                     </Grid>
