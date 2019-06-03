@@ -10,7 +10,7 @@ const mapStateToProps = (state) => {
     return {
         accountLoading: state.get('accountReducer').accountLoading,
         ...state.get('accountReducer'),
-        ...state.get('publicationsReducer'),
+        ...state.get('publicationsReducer').mine,
         ...state.get('exportPublicationsReducer'),
         localePages: locale.pages.myResearch,
         thisUrl: routes.pathConfig.records.mine,
@@ -20,7 +20,10 @@ const mapStateToProps = (state) => {
 
 function mapDispatchToProps(dispatch) {
     return {
-        actions: bindActionCreators(actions, dispatch)
+        actions: {
+            ...bindActionCreators(actions, dispatch),
+            loadAuthorPublications: (state) => dispatch(actions.searchAuthorPublications(state, 'mine'))
+        }
     };
 }
 

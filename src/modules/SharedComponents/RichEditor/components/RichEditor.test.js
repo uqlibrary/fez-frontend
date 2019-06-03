@@ -27,8 +27,7 @@ function setup(testProps, isShallow = true) {
     return getElement(RichEditor, props, isShallow);
 }
 
-
-describe('RichEditor tests ', () => {
+describe('RichEditor', () => {
     it('should render component', () => {
         const wrapper = setup({}, false);
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -63,6 +62,13 @@ describe('RichEditor tests ', () => {
             }
         }, false);
         expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render maxValue with missing instructions', () => {
+        const wrapper = setup({
+            maxValue: 10,
+        }, false);
+        expect(toJson(wrapper.find('RichEditor WithStyles(Typography) Typography span'))).toMatchSnapshot();
     });
 
     it('should render error showing input length', () => {
@@ -112,6 +118,18 @@ describe('RichEditor tests ', () => {
             disabled: true
         });
         expect(componentWillReceiveProps).toHaveBeenCalled();
+    });
+
+    it('should not set editor as read-only if disabled prop is not being changed', () => {
+        const wrapper = setup({});
+        const testFn = jest.fn();
+        wrapper.instance().editorInstance = {
+            setReadOnly: testFn
+        };
+        wrapper.instance().componentWillReceiveProps({
+            disabled: wrapper.instance().props.disabled
+        });
+        expect(testFn).not.toBeCalled();
     });
 
     it('should set CKEditor as read only', () => {

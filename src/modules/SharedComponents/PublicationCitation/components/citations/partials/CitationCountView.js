@@ -7,6 +7,9 @@ const styles = (theme) => ({
     citationCount: {
         ...theme.typography.caption,
         marginRight: 8
+    },
+    citationCountNumber: {
+        marginLeft: '0.4em'
     }
 });
 
@@ -32,10 +35,13 @@ export class CitationCountView extends PureComponent {
                     href={link}
                     aria-label={title}
                     title={title}
-                    openInNewIcon={false}>
+                    openInNewIcon={false}
+                >
                     <span className={`fez-icon ${source} large`}/>
-                    &nbsp;
-                    <span className="citationCountNumber">{count}</span>
+                    {
+                        count !== null &&
+                        <span className={this.props.classes.citationCountNumber}>{count}</span>
+                    }
                 </ExternalLink>
             </React.Fragment>
         );

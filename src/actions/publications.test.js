@@ -22,7 +22,6 @@ describe('Publications actions', () => {
     });
 
     describe('searchLatestPublications()', () => {
-
         it('dispatches expected actions on successful load', async () => {
             mockApi
                 .onGet(repositories.routes.CURRENT_USER_RECORDS_API({ pageSize: 5 }).apiUrl)
@@ -69,176 +68,229 @@ describe('Publications actions', () => {
     });
 
     describe('searchAuthorPublications()', () => {
+        describe('type: mine', () => {
+            it('dispatches expected actions on successful search', async () => {
+                const testRequest = {
+                    userName: 'uqresearcher',
+                    page: 1,
+                    pageSize: 20,
+                    sortBy: 'score',
+                    sortDirection: 'desc',
+                    facets: {},
+                };
 
-        it('dispatches expected actions on successful search', async () => {
-            const testRequest = {
-                userName: 'uqresearcher',
-                page: 1,
-                pageSize: 20,
-                sortBy: 'score',
-                sortDirection: 'desc',
-                facets: {},
-            };
+                mockApi
+                    .onGet(repositories.routes.CURRENT_USER_RECORDS_API(testRequest).apiUrl)
+                    .reply(200, {});
 
-            mockApi
-                .onGet(repositories.routes.CURRENT_USER_RECORDS_API(testRequest).apiUrl)
-                .reply(200, {});
+                const expectedActions = [
+                    `${actions.AUTHOR_PUBLICATIONS_LOADING}@mine`,
+                    `${actions.AUTHOR_PUBLICATIONS_LOADED}@mine`
+                ];
 
-            const expectedActions = [
-                actions.AUTHOR_PUBLICATIONS_LOADING,
-                actions.AUTHOR_PUBLICATIONS_LOADED
-            ];
+                await mockActionsStore.dispatch(publicationsActions.searchAuthorPublications(testRequest, 'mine'));
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            });
 
-            await mockActionsStore.dispatch(publicationsActions.searchAuthorPublications(testRequest));
-            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            it('dispatches expected actions for anon user', async () => {
+                const testRequest = {
+                    userName: 'uqresearcher',
+                    page: 1,
+                    pageSize: 20,
+                    sortBy: 'score',
+                    sortDirection: 'desc',
+                    facets: {},
+                };
+
+                mockApi
+                    .onAny()
+                    .reply(403, {});
+
+                const expectedActions = [
+                    `${actions.AUTHOR_PUBLICATIONS_LOADING}@mine`,
+                    actions.CURRENT_ACCOUNT_ANONYMOUS,
+                    `${actions.AUTHOR_PUBLICATIONS_FAILED}@mine`
+                ];
+
+                await mockActionsStore.dispatch(publicationsActions.searchAuthorPublications(testRequest, 'mine'));
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            });
+
+            it('dispatches expected actions if api fails', async () => {
+                const testRequest = {
+                    userName: 'uqresearcher',
+                    page: 1,
+                    pageSize: 20,
+                    sortBy: 'score',
+                    sortDirection: 'desc',
+                    facets: {},
+                };
+
+                mockApi
+                    .onAny()
+                    .reply(500, {});
+
+                const expectedActions = [
+                    `${actions.AUTHOR_PUBLICATIONS_LOADING}@mine`,
+                    actions.APP_ALERT_SHOW,
+                    `${actions.AUTHOR_PUBLICATIONS_FAILED}@mine`
+                ];
+
+                await mockActionsStore.dispatch(publicationsActions.searchAuthorPublications(testRequest, 'mine'));
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            });
+
+            it('handles defaults', async () => {
+                mockApi
+                    .onAny()
+                    .reply(200, {});
+
+                const expectedActions = [
+                    `${actions.AUTHOR_PUBLICATIONS_LOADING}@mine`,
+                    `${actions.AUTHOR_PUBLICATIONS_LOADED}@mine`
+                ]
+                await mockActionsStore.dispatch(publicationsActions.searchAuthorPublications({}, 'mine'));
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            });
         });
 
-        it('dispatches expected actions for anon user', async () => {
-            const testRequest = {
-                userName: 'uqresearcher',
-                page: 1,
-                pageSize: 20,
-                sortBy: 'score',
-                sortDirection: 'desc',
-                facets: {},
-            };
+        describe('type: incomplete', () => {
+            it('dispatches expected actions on successful search', async () => {
+                const testRequest = {
+                    userName: 'uqresearcher',
+                    page: 1,
+                    pageSize: 20,
+                    sortBy: 'score',
+                    sortDirection: 'desc',
+                    facets: {},
+                };
 
-            mockApi
-                .onAny()
-                .reply(403, {});
+                mockApi
+                    .onGet(repositories.routes.INCOMPLETE_RECORDS_API(testRequest).apiUrl)
+                    .reply(200, {});
 
-            const expectedActions = [
-                actions.AUTHOR_PUBLICATIONS_LOADING,
-                actions.CURRENT_ACCOUNT_ANONYMOUS,
-                actions.AUTHOR_PUBLICATIONS_FAILED
-            ];
+                const expectedActions = [
+                    `${actions.AUTHOR_PUBLICATIONS_LOADING}@incomplete`,
+                    `${actions.AUTHOR_PUBLICATIONS_LOADED}@incomplete`
+                ];
 
-            await mockActionsStore.dispatch(publicationsActions.searchAuthorPublications(testRequest));
-            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+                await mockActionsStore.dispatch(publicationsActions.searchAuthorPublications(testRequest, 'incomplete'));
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            });
+
+            it('dispatches expected actions for anon user', async () => {
+                const testRequest = {
+                    userName: 'uqresearcher',
+                    page: 1,
+                    pageSize: 20,
+                    sortBy: 'score',
+                    sortDirection: 'desc',
+                    facets: {},
+                };
+
+                mockApi
+                    .onAny()
+                    .reply(403, {});
+
+                const expectedActions = [
+                    `${actions.AUTHOR_PUBLICATIONS_LOADING}@incomplete`,
+                    actions.CURRENT_ACCOUNT_ANONYMOUS,
+                    `${actions.AUTHOR_PUBLICATIONS_FAILED}@incomplete`
+                ];
+
+                await mockActionsStore.dispatch(publicationsActions.searchAuthorPublications(testRequest, 'incomplete'));
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            });
+
+            it('dispatches expected actions if api fails', async () => {
+                const testRequest = {
+                    userName: 'uqresearcher',
+                    page: 1,
+                    pageSize: 20,
+                    sortBy: 'score',
+                    sortDirection: 'desc',
+                    facets: {},
+                };
+
+                mockApi
+                    .onAny()
+                    .reply(500, {});
+
+                const expectedActions = [
+                    `${actions.AUTHOR_PUBLICATIONS_LOADING}@incomplete`,
+                    actions.APP_ALERT_SHOW,
+                    `${actions.AUTHOR_PUBLICATIONS_FAILED}@incomplete`
+                ];
+
+                await mockActionsStore.dispatch(publicationsActions.searchAuthorPublications(testRequest, 'incomplete'));
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            });
+
+            it('handles defaults', async () => {
+                mockApi
+                    .onAny()
+                    .reply(200, {});
+
+                const expectedActions = [
+                    `${actions.AUTHOR_PUBLICATIONS_LOADING}@incomplete`,
+                    `${actions.AUTHOR_PUBLICATIONS_LOADED}@incomplete`
+                ]
+                await mockActionsStore.dispatch(publicationsActions.searchAuthorPublications({}, 'incomplete'));
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            });
         });
 
-        it('dispatches expected actions if api fails', async () => {
-            const testRequest = {
-                userName: 'uqresearcher',
-                page: 1,
-                pageSize: 20,
-                sortBy: 'score',
-                sortDirection: 'desc',
-                facets: {},
-            };
+        describe('type: null', () => {
+            it('dispatches expected actions', async () => {
+                const testRequest = {
+                    userName: 'uqresearcher',
+                    page: 1,
+                    pageSize: 20,
+                    sortBy: 'score',
+                    sortDirection: 'desc',
+                    facets: {},
+                };
 
-            mockApi
-                .onAny()
-                .reply(500, {});
+                mockApi
+                    .onGet(repositories.routes.INCOMPLETE_RECORDS_API(testRequest).apiUrl)
+                    .reply(200, {});
 
-            const expectedActions = [
-                actions.AUTHOR_PUBLICATIONS_LOADING,
-                actions.APP_ALERT_SHOW,
-                actions.AUTHOR_PUBLICATIONS_FAILED
-            ];
+                const expectedActions = [
+                    `${actions.AUTHOR_PUBLICATIONS_LOADING}@test`
+                ];
 
-            await mockActionsStore.dispatch(publicationsActions.searchAuthorPublications(testRequest));
-            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+                try {
+                    await mockActionsStore.dispatch(publicationsActions.searchAuthorPublications(testRequest, 'test'));
+                } catch (e) {
+                    expect(e.message).toBe('Please provide valid type');
+                    expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+                }
+            });
         });
 
-        it('handles defaults', async () => {
-            mockApi
-                .onAny()
-                .reply(200, {});
+        describe('default type: mine', () => {
+            it('dispatches expected actions on successful search', async () => {
+                const testRequest = {
+                    userName: 'uqresearcher',
+                    page: 1,
+                    pageSize: 20,
+                    sortBy: 'score',
+                    sortDirection: 'desc',
+                    facets: {},
+                };
 
-            const expectedActions = [
-                actions.AUTHOR_PUBLICATIONS_LOADING,
-                actions.AUTHOR_PUBLICATIONS_LOADED
-            ]
-            await mockActionsStore.dispatch(publicationsActions.searchAuthorPublications({}));
-            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
-        });
-    });
+                mockApi
+                    .onGet(repositories.routes.CURRENT_USER_RECORDS_API(testRequest).apiUrl)
+                    .reply(200, {});
 
-    describe('searchAuthorIncompletePublications()', () => {
+                const expectedActions = [
+                    `${actions.AUTHOR_PUBLICATIONS_LOADING}@mine`,
+                    `${actions.AUTHOR_PUBLICATIONS_LOADED}@mine`
+                ];
 
-        it('dispatches expected actions on successful search', async () => {
-            const testRequest = {
-                userName: 'uqresearcher',
-                page: 1,
-                pageSize: 20,
-                sortBy: 'score',
-                sortDirection: 'desc',
-                facets: {},
-            };
-
-            mockApi
-                .onGet(repositories.routes.INCOMPLETE_RECORDS_API(testRequest).apiUrl)
-                .reply(200, {});
-
-            const expectedActions = [
-                actions.AUTHOR_INCOMPLETEPUBLICATIONS_LOADING,
-                actions.AUTHOR_INCOMPLETEPUBLICATIONS_LOADED
-            ];
-
-            await mockActionsStore.dispatch(publicationsActions.searchAuthorIncompletePublications(testRequest));
-            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
-        });
-
-        it('dispatches expected actions for anon user', async () => {
-            const testRequest = {
-                userName: 'uqresearcher',
-                page: 1,
-                pageSize: 20,
-                sortBy: 'score',
-                sortDirection: 'desc',
-                facets: {},
-            };
-
-            mockApi
-                .onAny()
-                .reply(403, {});
-
-            const expectedActions = [
-                actions.AUTHOR_INCOMPLETEPUBLICATIONS_LOADING,
-                actions.CURRENT_ACCOUNT_ANONYMOUS,
-                actions.AUTHOR_INCOMPLETEPUBLICATIONS_FAILED
-            ];
-
-            await mockActionsStore.dispatch(publicationsActions.searchAuthorIncompletePublications(testRequest));
-            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
-        });
-
-        it('dispatches expected actions if api fails', async () => {
-            const testRequest = {
-                userName: 'uqresearcher',
-                page: 1,
-                pageSize: 20,
-                sortBy: 'score',
-                sortDirection: 'desc',
-                facets: {},
-            };
-
-            mockApi
-                .onAny()
-                .reply(500, {});
-
-            const expectedActions = [
-                actions.AUTHOR_INCOMPLETEPUBLICATIONS_LOADING,
-                actions.APP_ALERT_SHOW,
-                actions.AUTHOR_INCOMPLETEPUBLICATIONS_FAILED
-            ];
-
-            await mockActionsStore.dispatch(publicationsActions.searchAuthorIncompletePublications(testRequest));
-            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
-        });
-
-        it('handles defaults', async () => {
-            mockApi
-                .onAny()
-                .reply(200, {});
-
-            const expectedActions = [
-                actions.AUTHOR_INCOMPLETEPUBLICATIONS_LOADING,
-                actions.AUTHOR_INCOMPLETEPUBLICATIONS_LOADED
-            ]
-            await mockActionsStore.dispatch(publicationsActions.searchAuthorIncompletePublications({}));
-            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+                await mockActionsStore.dispatch(publicationsActions.searchAuthorPublications(testRequest));
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            });
         });
     });
 

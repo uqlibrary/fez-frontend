@@ -15,7 +15,7 @@ function setup(testProps, isShallow = true) {
         accountAuthorLoading: testProps.accountAuthorLoading || false,
         actions: testProps.actions || {
             loadCurrentAccount: jest.fn(),
-            searchAuthorIncompletePublications: jest.fn()
+            searchAuthorPublications: jest.fn()
         },
         location: testProps.location || {},
         history: testProps.history || {location: {}}
@@ -363,7 +363,7 @@ describe('Application component', () => {
             accountLoading: false,
             actions: {
                 loadCurrentAccount: jest.fn(),
-                searchAuthorIncompletePublications: testMethod
+                searchAuthorPublications: testMethod
             }
         });
         wrapper.update();
@@ -377,11 +377,13 @@ describe('Application component', () => {
             accountLoading: false,
             actions: {
                 loadCurrentAccount: jest.fn(),
-                searchAuthorIncompletePublications: jest.fn()
+                searchAuthorPublications: jest.fn()
             },
             incompleteRecordList: {
-                publicationsListPagingData: {
-                    total: 10
+                incomplete: {
+                    publicationsListPagingData: {
+                        total: 10
+                    }
                 }
             }
         });
@@ -394,13 +396,14 @@ describe('Application component', () => {
             accountLoading: false,
             actions: {
                 loadCurrentAccount: jest.fn(),
-                searchAuthorIncompletePublications: jest.fn()
+                searchAuthorPublications: jest.fn()
             },
             incompleteRecordList: {
-                publicationsListPagingData: {
-                    total: 10
-                },
-                publicationsListType: 'incomplete'
+                incomplete: {
+                    publicationsListPagingData: {
+                        total: 10
+                    }
+                }
             }
         });
         expect(toJson(wrapper)).toMatchSnapshot();
