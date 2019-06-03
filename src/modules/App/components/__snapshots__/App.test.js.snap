@@ -211,7 +211,7 @@ exports[`Application component Should display mobile correctly 1`] = `
         "location": Object {},
       }
     }
-    isMobile="true"
+    isMobile={true}
     locale={
       Object {
         "closeMenuLabel": "Close menu",
