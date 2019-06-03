@@ -293,7 +293,8 @@ describe('Fix record actions', () => {
                 },
                 author: {
                     aut_id: 410
-                }
+                },
+                contentIndicators: []
             };
 
             const expectedActions = [
@@ -314,11 +315,13 @@ describe('Fix record actions', () => {
         it('dispatches expected actions for record fix for anon user', async () => {
             const testInput = {
                 publication: {
-                    ...mockData.mockRecordToFix
+                    ...mockData.mockRecordToFix,
+                    fez_record_search_key_content_indicator: null
                 },
                 author: {
                     aut_id: 410
-                }
+                },
+                contentIndicators: [],
             };
 
             const expectedActions = [

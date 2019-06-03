@@ -129,8 +129,8 @@ export default {
         fixPublicationForm: {
             contentIndicators: {
                 title: 'Content Indicators',
-                description: 'You can choose additional content indicators, but cannot remove existing ones.',
-                label: 'Please choose applicable indicators',
+                description: 'You can select multiple indicators for a work, but cannot remove existing ones. To change existing information, submit as a correction below.',
+                label: 'Please select relevant indicator(s).',
             },
             comments: {
                 title: 'Suggest a correction',
