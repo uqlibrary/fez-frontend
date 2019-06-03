@@ -15,7 +15,7 @@ function setup(testProps, isShallow = true) {
         accountAuthorLoading: testProps.accountAuthorLoading || false,
         actions: testProps.actions || {
             loadCurrentAccount: jest.fn(),
-            searchAuthorIncompletePublications: jest.fn()
+            searchAuthorPublications: jest.fn()
         },
         location: testProps.location || {},
         history: testProps.history || {location: {}}
@@ -363,7 +363,7 @@ describe('Application component', () => {
             accountLoading: false,
             actions: {
                 loadCurrentAccount: jest.fn(),
-                searchAuthorIncompletePublications: testMethod
+                searchAuthorPublications: testMethod
             }
         });
         wrapper.update();
@@ -371,17 +371,38 @@ describe('Application component', () => {
         expect(testMethod).toHaveBeenCalled();
     });
 
-    it('should determine if it has incomplete works from props and show/hide menu item', () => {
+    it('should determine if it has incomplete works from props and hide menu item', () => {
         const wrapper = setup({
             account: {name: 'test1'},
             accountLoading: false,
             actions: {
                 loadCurrentAccount: jest.fn(),
-                searchAuthorIncompletePublications: jest.fn()
+                searchAuthorPublications: jest.fn()
             },
             incompleteRecordList: {
-                publicationsListPagingData: {
-                    total: 10
+                incomplete: {
+                    publicationsListPagingData: {
+                        total: 10
+                    }
+                }
+            }
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should determine if it has incomplete works from props and show menu item', () => {
+        const wrapper = setup({
+            account: {name: 'test1'},
+            accountLoading: false,
+            actions: {
+                loadCurrentAccount: jest.fn(),
+                searchAuthorPublications: jest.fn()
+            },
+            incompleteRecordList: {
+                incomplete: {
+                    publicationsListPagingData: {
+                        total: 10
+                    }
                 }
             }
         });

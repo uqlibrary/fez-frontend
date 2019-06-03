@@ -486,7 +486,7 @@ exports[`GenericSelectField  Full mount  should render 1`] = `
               ],
               "results": Array [
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
               ],
@@ -503,7 +503,7 @@ exports[`GenericSelectField  Full mount  should render 1`] = `
                 ],
                 "results": Array [
                   Object {
-                    "isThrow": false,
+                    "type": "return",
                     "value": undefined,
                   },
                 ],
@@ -521,7 +521,7 @@ exports[`GenericSelectField  Full mount  should render 1`] = `
                   ],
                   "results": Array [
                     Object {
-                      "isThrow": false,
+                      "type": "return",
                       "value": undefined,
                     },
                   ],
@@ -548,7 +548,7 @@ exports[`GenericSelectField  Full mount  should render 1`] = `
                     ],
                     "results": Array [
                       Object {
-                        "isThrow": false,
+                        "type": "return",
                         "value": undefined,
                       },
                     ],

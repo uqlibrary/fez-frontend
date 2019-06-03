@@ -492,11 +492,11 @@ exports[`Dashboard test Full mount for styles render 1`] = `
               ],
               "results": Array [
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
               ],
@@ -539,7 +539,7 @@ exports[`Dashboard test Full mount for styles render 1`] = `
                   ],
                   "results": Array [
                     Object {
-                      "isThrow": false,
+                      "type": "return",
                       "value": undefined,
                     },
                   ],
@@ -552,18 +552,21 @@ exports[`Dashboard test Full mount for styles render 1`] = `
                   ],
                   "results": Array [
                     Object {
-                      "isThrow": false,
+                      "type": "return",
                       "value": undefined,
                     },
                   ],
                 },
-                "searchAuthorIncompletePublications": [MockFunction] {
+                "searchAuthorPublications": [MockFunction] {
                   "calls": Array [
-                    Array [],
+                    Array [
+                      Object {},
+                      "incomplete",
+                    ],
                   ],
                   "results": Array [
                     Object {
-                      "isThrow": false,
+                      "type": "return",
                       "value": undefined,
                     },
                   ],
@@ -573,6 +576,14 @@ exports[`Dashboard test Full mount for styles render 1`] = `
             classes={Object {}}
             hidePossiblyYourPublicationsLure={false}
             history={Object {}}
+            incomplete={
+              Object {
+                "loadingPublicationsList": false,
+                "publicationsList": Array [],
+                "publicationsListFacets": Object {},
+                "publicationsListPagingData": Object {},
+              }
+            }
             loadingPublicationsByYear={false}
             loadingPublicationsStats={false}
             possiblyYourPublicationsCountLoading={false}
@@ -615,7 +626,7 @@ exports[`Dashboard test Full mount for styles render 1`] = `
                     ],
                     "results": Array [
                       Object {
-                        "isThrow": false,
+                        "type": "return",
                         "value": undefined,
                       },
                     ],
@@ -628,18 +639,21 @@ exports[`Dashboard test Full mount for styles render 1`] = `
                     ],
                     "results": Array [
                       Object {
-                        "isThrow": false,
+                        "type": "return",
                         "value": undefined,
                       },
                     ],
                   },
-                  "searchAuthorIncompletePublications": [MockFunction] {
+                  "searchAuthorPublications": [MockFunction] {
                     "calls": Array [
-                      Array [],
+                      Array [
+                        Object {},
+                        "incomplete",
+                      ],
                     ],
                     "results": Array [
                       Object {
-                        "isThrow": false,
+                        "type": "return",
                         "value": undefined,
                       },
                     ],
@@ -649,6 +663,14 @@ exports[`Dashboard test Full mount for styles render 1`] = `
               classes={Object {}}
               hidePossiblyYourPublicationsLure={false}
               history={Object {}}
+              incomplete={
+                Object {
+                  "loadingPublicationsList": false,
+                  "publicationsList": Array [],
+                  "publicationsListFacets": Object {},
+                  "publicationsListPagingData": Object {},
+                }
+              }
               loadingPublicationsByYear={false}
               loadingPublicationsStats={false}
               possiblyYourPublicationsCountLoading={false}
@@ -691,7 +713,7 @@ exports[`Dashboard test Full mount for styles render 1`] = `
                       ],
                       "results": Array [
                         Object {
-                          "isThrow": false,
+                          "type": "return",
                           "value": undefined,
                         },
                       ],
@@ -704,18 +726,21 @@ exports[`Dashboard test Full mount for styles render 1`] = `
                       ],
                       "results": Array [
                         Object {
-                          "isThrow": false,
+                          "type": "return",
                           "value": undefined,
                         },
                       ],
                     },
-                    "searchAuthorIncompletePublications": [MockFunction] {
+                    "searchAuthorPublications": [MockFunction] {
                       "calls": Array [
-                        Array [],
+                        Array [
+                          Object {},
+                          "incomplete",
+                        ],
                       ],
                       "results": Array [
                         Object {
-                          "isThrow": false,
+                          "type": "return",
                           "value": undefined,
                         },
                       ],
@@ -731,6 +756,14 @@ exports[`Dashboard test Full mount for styles render 1`] = `
                 }
                 hidePossiblyYourPublicationsLure={false}
                 history={Object {}}
+                incomplete={
+                  Object {
+                    "loadingPublicationsList": false,
+                    "publicationsList": Array [],
+                    "publicationsListFacets": Object {},
+                    "publicationsListPagingData": Object {},
+                  }
+                }
                 loadingPublicationsByYear={false}
                 loadingPublicationsStats={false}
                 possiblyYourPublicationsCountLoading={false}
@@ -4891,7 +4924,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
               ],
               "results": Array [
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
               ],
@@ -4934,7 +4967,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                   ],
                   "results": Array [
                     Object {
-                      "isThrow": false,
+                      "type": "return",
                       "value": undefined,
                     },
                   ],
@@ -4947,18 +4980,38 @@ exports[`Dashboard test should get styles for full render 1`] = `
                   ],
                   "results": Array [
                     Object {
-                      "isThrow": false,
+                      "type": "return",
                       "value": undefined,
                     },
                   ],
                 },
-                "loadIncompleteRecords": [MockFunction],
+                "searchAuthorPublications": [MockFunction] {
+                  "calls": Array [
+                    Array [
+                      Object {},
+                      "incomplete",
+                    ],
+                  ],
+                  "results": Array [
+                    Object {
+                      "type": "return",
+                      "value": undefined,
+                    },
+                  ],
+                },
               }
             }
             classes={Object {}}
             hidePossiblyYourPublicationsLure={false}
             history={Object {}}
-            incompleteRecordList={Object {}}
+            incomplete={
+              Object {
+                "loadingPublicationsList": false,
+                "publicationsList": Array [],
+                "publicationsListFacets": Object {},
+                "publicationsListPagingData": Object {},
+              }
+            }
             loadingIncompleteRecordData={false}
             loadingPublicationsByYear={false}
             loadingPublicationsStats={false}

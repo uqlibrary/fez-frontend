@@ -37,9 +37,15 @@ export class AdditionalInformationClass extends PureComponent {
         return (
             <div style={{padding: 8}} key={index}>
                 <Grid container spacing={16} key={`additional-info-${heading}`} className={this.props.classes.gridRow} alignItems="flex-start">
-                    <Grid item xs={12} sm={3}><Typography variant="body2" component={'span'} classes={{root: this.props.classes.header}}>{heading}</Typography></Grid>
+                    <Grid item xs={12} sm={3}>
+                        <Typography variant="body2" component={'span'} classes={{root: this.props.classes.header}}>
+                            {heading}
+                        </Typography>
+                    </Grid>
                     <Grid item xs={12} sm={9} className={this.props.classes.data}>
-                        <Typography variant="body2" component={'span'}>{data}</Typography>
+                        <Typography variant="body2" component={'span'}>
+                            {data}
+                        </Typography>
                     </Grid>
                 </Grid>
             </div>
@@ -133,7 +139,11 @@ export class AdditionalInformationClass extends PureComponent {
 
     renderTitle = () => {
         const {publication} = this.props;
-        return this.renderHTML(publication.rek_formatted_title ? publication.rek_formatted_title : publication.rek_title);
+        return this.renderHTML(
+            publication.rek_formatted_title
+                ? publication.rek_formatted_title
+                : publication.rek_title
+        );
     }
 
     renderLicense = (cvoId, lookup) => {

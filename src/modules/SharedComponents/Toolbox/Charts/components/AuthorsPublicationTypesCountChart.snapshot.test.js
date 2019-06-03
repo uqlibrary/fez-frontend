@@ -5,7 +5,6 @@ function setup(testProps, isShallow = true) {
     return getElement(AuthorsPublicationTypesCountChart, props, isShallow);
 }
 
-
 describe('AuthorsPublicationTypesCountChart ', () => {
     it('should render empty chart component', () => {
         const app = setup({series: []});

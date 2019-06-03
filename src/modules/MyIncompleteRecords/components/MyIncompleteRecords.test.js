@@ -6,7 +6,7 @@ import { mockRecordToFix } from 'mock/data/testing/records';
 function setup(testProps, isShallow = true) {
     const props = {
         actions: {
-            searchAuthorIncompletePublications: jest.fn(),
+            searchAuthorPublications: jest.fn(),
             setFixRecord: jest.fn(),
         },
         location: {
@@ -18,13 +18,13 @@ function setup(testProps, isShallow = true) {
             go: jest.fn()
         },
         accountLoading: false,
+        exportPublicationsLoading: false,
+        localePages: locale.pages.myResearch,
         publicationsListPagingData: {},
         loadingPublicationsList: false,
-        exportPublicationsLoading: false,
         publicationsList: [],
         publicationsListFacets: {},
-        localePages: locale.pages.myResearch,
-        ...testProps
+        ...testProps,
     };
     return getElement(MyIncompleteRecords, props, isShallow);
 }
@@ -36,13 +36,17 @@ describe('MyIncompleteRecords test', () => {
     });
 
     it('renders loading screen while loading publications ', () => {
-        const wrapper = setup({ loadingPublicationsList: true });
+        const wrapper = setup({
+            loadingPublicationsList: true
+        });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('renders loading screen while loading publications while filtering', () => {
-        const wrapper = setup({ publicationsList: [1, 2, 2] });
-        wrapper.setProps({ loadingPublicationsList: true });
+        const wrapper = setup({publicationsList: [1, 2, 2]});
+        wrapper.setProps({
+            loadingPublicationsList: true
+        });
         wrapper.update();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -135,7 +139,7 @@ describe('MyIncompleteRecords test', () => {
         const testAction = jest.fn();
         const wrapper = setup({
             actions: {
-                searchAuthorIncompletePublications: testAction
+                searchAuthorPublications: testAction
             }
         });
 
@@ -190,7 +194,7 @@ describe('MyIncompleteRecords test', () => {
         const wrapper = setup({
             accountLoading: true,
             actions: {
-                searchAuthorIncompletePublications: testAction
+                searchAuthorPublications: testAction
             },
             thisUrl: routes.pathConfig.records.mine
         });
@@ -216,7 +220,7 @@ describe('MyIncompleteRecords test', () => {
         const wrapper = setup({
             accountLoading: true,
             actions: {
-                searchAuthorIncompletePublications: testAction
+                searchAuthorPublications: testAction
             },
             thisUrl: routes.pathConfig.records.mine
         });
@@ -225,7 +229,9 @@ describe('MyIncompleteRecords test', () => {
             location: {
                 pathname: routes.pathConfig.records.mine,
                 state: null
-            }
+            },
+            loadingPublicationsList: false,
+            publicationsList: [],
         });
         expect(testAction).toHaveBeenCalled();
         expect(wrapper.state().page).toEqual(1);
@@ -236,13 +242,15 @@ describe('MyIncompleteRecords test', () => {
         const wrapper = setup({
             accountLoading: true,
             actions: {
-                searchAuthorIncompletePublications: testAction
+                searchAuthorPublications: testAction
             }
         });
 
         wrapper.instance().componentWillReceiveProps({
             history: { action: 'PUSH' },
-            location: { pathname: routes.pathConfig.records.mine }
+            location: { pathname: routes.pathConfig.records.mine },
+            loadingPublicationsList: false,
+            publicationsList: [],
         });
         expect(testAction).not.toHaveBeenCalled();
     });
@@ -258,7 +266,7 @@ describe('MyIncompleteRecords test', () => {
 
     it('component has displayable facets', () => {
         const testAction = jest.fn();
-        const wrapper = setup({ actions: { searchAuthorIncompletePublications: testAction } });
+        const wrapper = setup({ actions: { searchAuthorPublications: testAction } });
 
         wrapper.instance().facetsChanged({
             'filters': {

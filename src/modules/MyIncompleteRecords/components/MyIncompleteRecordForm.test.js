@@ -1,6 +1,7 @@
 import MyIncompleteRecordForm, { onSubmit, validate } from './MyIncompleteRecordForm';
 import { UQ352045 } from 'mock/data/records';
 import { Map } from 'immutable';
+import { SubmissionError } from 'redux-form';
 
 jest.mock('actions', () => ({
     updateIncompleteRecord: (data) => (
@@ -65,7 +66,7 @@ describe('MyIncompleteRecordForm', () => {
         expect(dispatch).toHaveBeenCalled();
     });
 
-    it('should reject onSubmit()', () => {
+    it('should reject onSubmit()', async () => {
         const testValue = new Map({
             significance: '11111',
             impactStatement: {
@@ -82,13 +83,7 @@ describe('MyIncompleteRecordForm', () => {
             }
         };
 
-        try {
-            onSubmit(testValue, dispatch, props);
-        } catch (error) {
-            expect(dispatch).toHaveBeenCalled();
-            expect(error).toBeInstanceOf('SubmissionError');
-            expect(error._error).toEqual('Some error');
-        }
+        await expect(onSubmit(testValue, dispatch, props)).rejects.toThrow(new SubmissionError('Submit Validation Failed'));
     });
 
     it('should validate() and return empty object', () => {
