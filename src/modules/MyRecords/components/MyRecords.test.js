@@ -23,6 +23,7 @@ function setup(testProps, isShallow = true) {
         loadingPublicationsList: false,
         publicationsList: [],
         publicationsListFacets: {},
+        publicationsListCustomActions: [],
         ...testProps,
     };
     return getElement(MyRecords, props, isShallow);
@@ -64,6 +65,18 @@ describe('MyRecords test', () => {
         const wrapper = setup({
             publicationsList: [1, 2, 3], // myRecordsList.data,
             publicationsListPagingData: {"total": 147, "per_page": 20, "current_page": 1, "from": 1,"to": 20}
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+    it('renders list of publications with custom actions', () => {
+        const wrapper = setup({
+            publicationsList: [1, 2, 3],
+            publicationsListPagingData: {"total": 147, "per_page": 20, "current_page": 1, "from": 1,"to": 20},
+            publicationsListCustomActions: [{
+                label: 'Test',
+                handleAction: () => {},
+                primary: false
+            }]
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });

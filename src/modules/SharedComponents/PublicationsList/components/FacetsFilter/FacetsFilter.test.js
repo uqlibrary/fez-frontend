@@ -671,6 +671,7 @@ describe('FacetsFilter ', () => {
     it('_handleResetClick returns empty state for activeFacets', () => {
         const wrapper = setup({});
         wrapper.setState({
+            hasActiveFilters: true,
             activeFacets: {
                 ranges: {
                     "Year published": {
@@ -683,6 +684,7 @@ describe('FacetsFilter ', () => {
                 }
             }
         });
+        expect(toJson(wrapper)).toMatchSnapshot();
         wrapper.instance()._handleResetClick();
         expect(wrapper.state().activeFacets).toEqual({ filters: {}, ranges: {} });
     });
@@ -803,6 +805,18 @@ describe('FacetsFilter ', () => {
 
         const wrapper = setup({});
         expect(wrapper.instance().isFacetFilterActive(activeFacets, 'Display type', 134)).toBeTruthy();
+    });
+
+    it('should return true if Display type is set in activeFacets as a string value and value passed is string', () => {
+        const activeFacets = {
+            filters: {
+                'Display type': 'test'
+            },
+            ranges: {}
+        };
+
+        const wrapper = setup({});
+        expect(wrapper.instance().isFacetFilterActive(activeFacets, 'Display type', '134')).toBeFalsy();
     });
 
     it('renders lookup facets', () => {

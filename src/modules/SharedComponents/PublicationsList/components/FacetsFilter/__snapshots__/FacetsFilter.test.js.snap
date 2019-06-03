@@ -1,5 +1,56 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`FacetsFilter  _handleResetClick returns empty state for activeFacets 1`] = `
+<div
+  className="facetsFilter"
+>
+  <WithStyles(List)
+    component="nav"
+    dense={true}
+  >
+    <DateRange
+      defaultValue={
+        Object {
+          "from": 2007,
+          "to": 2022,
+        }
+      }
+      locale={
+        Object {
+          "displayTitle": "Published year range",
+          "fromFieldLabel": "From",
+          "rangeSubmitButtonLabel": "Go",
+          "toFieldLabel": "To",
+        }
+      }
+      onChange={[Function]}
+      onToggle={[Function]}
+      value={
+        Object {
+          "from": 2010,
+          "to": 2015,
+        }
+      }
+    />
+  </WithStyles(List)>
+  <WithStyles(Grid)
+    container={true}
+    justify="flex-end"
+  >
+    <WithStyles(Grid)
+      item={true}
+    >
+      <WithStyles(Button)
+        onClick={[Function]}
+        variant="contained"
+      >
+        Reset
+      </WithStyles(Button)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</div>
+`;
+
 exports[`FacetsFilter  components for mock data 1`] = `
 <div
   className="facetsFilter"

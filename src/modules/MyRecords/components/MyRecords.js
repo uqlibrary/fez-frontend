@@ -147,7 +147,7 @@ export default class MyRecords extends PureComponent {
         const pagingData = this.props.publicationsListPagingData;
         const isLoadingOrExporting = this.props.loadingPublicationsList || this.props.exportPublicationsLoading;
 
-        const actionProps = this.props.publicationsListCustomActions ?
+        const actionProps = (this.props.publicationsListCustomActions || []).length > 0 ?
             {
                 customActions: this.props.publicationsListCustomActions
             } :
