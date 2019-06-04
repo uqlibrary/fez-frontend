@@ -3,9 +3,6 @@ import * as repositories from 'repositories';
 import {locale} from 'locale';
 
 describe('File repository tests ', () => {
-    // extend expect to check actions
-    expect.extend({toHaveDispatchedActions});
-
     beforeEach(() => {
         mockActionsStore = setupStoreForActions();
         mockApi = setupMockAdapter();

@@ -6,8 +6,18 @@ exports[`OrgAffiliationTypeSelector tests  should render component with Not UQ s
 >
   <WithStyles(WithFormControlContext(InputLabel))>
     Org affiliation
+<<<<<<< HEAD
   </WithStyles(WithFormControlContext(InputLabel))>
   <WithStyles(WithFormControlContext(Select))
+=======
+  </WithStyles(InputLabel)>
+  <WithStyles(Select)
+    SelectDisplayProps={
+      Object {
+        "id": "org-affiliation-selector",
+      }
+    }
+>>>>>>> master
     error={false}
     onChange={[MockFunction]}
     required={true}
@@ -41,8 +51,18 @@ exports[`OrgAffiliationTypeSelector tests  should render component with UQ selec
 >
   <WithStyles(WithFormControlContext(InputLabel))>
     Org affiliation
+<<<<<<< HEAD
   </WithStyles(WithFormControlContext(InputLabel))>
   <WithStyles(WithFormControlContext(Select))
+=======
+  </WithStyles(InputLabel)>
+  <WithStyles(Select)
+    SelectDisplayProps={
+      Object {
+        "id": "org-affiliation-selector",
+      }
+    }
+>>>>>>> master
     error={false}
     onChange={[MockFunction]}
     required={true}
@@ -76,8 +96,18 @@ exports[`OrgAffiliationTypeSelector tests  should render component with default 
 >
   <WithStyles(WithFormControlContext(InputLabel))>
     Org affiliation
+<<<<<<< HEAD
   </WithStyles(WithFormControlContext(InputLabel))>
   <WithStyles(WithFormControlContext(Select))
+=======
+  </WithStyles(InputLabel)>
+  <WithStyles(Select)
+    SelectDisplayProps={
+      Object {
+        "id": "org-affiliation-selector",
+      }
+    }
+>>>>>>> master
     error={false}
     onChange={[MockFunction]}
     required={true}

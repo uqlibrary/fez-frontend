@@ -57,11 +57,15 @@ class AuthorsPublicationsPerYearChart extends React.Component {
                     y: -10,
                     floating: true,
                     shadow: false,
-                    /* eslint-disable-next-line func-names */
-                    labelFormatter: function() {
+                    labelFormatter: function labelFormatter() {
+                        if (!this.userOptions) {
+                            return '';
+                        }
                         const name = this.userOptions.name;
-                        const extras = !!this.userOptions.extraInfoForLegend && this.userOptions.extraInfoForLegend.split(', ');
-                        return !!extras ? `${name} (${extras.join(', <br />')})` : name;
+                        const extras = (this.userOptions.extraInfoForLegend || '').split(', ');
+                        return extras.join('').length
+                            ? `${name} (${extras.join(', <br />')})`
+                            : name;
                     }
                 },
                 series: this.props.series

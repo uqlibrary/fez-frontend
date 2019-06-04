@@ -14,10 +14,6 @@ beforeEach(() => {
 describe('Search action creators', () => {
     const testTitleSearchParam = 'global';
 
-    // extend expect to check actions
-    expect.extend({toHaveDispatchedActions});
-    expect.extend({toHaveAnyOrderDispatchedActions});
-
     beforeEach(() => {
         mockActionsStore = setupStoreForActions();
         mockApi = setupMockAdapter();
@@ -366,6 +362,34 @@ describe('Search action creators', () => {
         ];
 
         await mockActionsStore.dispatch(searchActions.collectionsList());
+        expect(mockActionsStore.getActions()).toHaveAnyOrderDispatchedActions(expectedActions);
+    });
+
+    it('should dispatch series of actions on community list', async () => {
+        mockApi
+            .onGet(repositories.routes.SEARCH_INTERNAL_RECORDS_API({}).apiUrl)
+            .reply(200, {data: [1, 2, 3]});
+
+        const expectedActions = [
+            actions.SEARCH_COMMUNITIES_LOADING,
+            actions.SEARCH_COMMUNITIES_LOADED
+        ];
+
+        await mockActionsStore.dispatch(searchActions.communitiesList());
+        expect(mockActionsStore.getActions()).toHaveAnyOrderDispatchedActions(expectedActions);
+    });
+
+    it('should dispatch series of actions on community list fetch error', async () => {
+        mockApi
+            .onGet(repositories.routes.SEARCH_INTERNAL_RECORDS_API({}).apiUrl)
+            .reply(404, {});
+
+        const expectedActions = [
+            actions.SEARCH_COMMUNITIES_LOADING,
+            actions.SEARCH_COMMUNITIES_FAILED
+        ];
+
+        await mockActionsStore.dispatch(searchActions.communitiesList());
         expect(mockActionsStore.getActions()).toHaveAnyOrderDispatchedActions(expectedActions);
     });
 

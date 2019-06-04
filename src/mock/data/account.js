@@ -1,6 +1,6 @@
 export const accounts = {
     // staff, no espace data
-    uqstaff : {
+    uqstaff: {
         "id": "uqstaff",
         "class": ["libstaff", "IS_CURRENT"],
         "type": 18,
@@ -31,27 +31,27 @@ export const accounts = {
         "mail": "undegraduate@student.uq.edu.au",
         "barcode": "111111111111111",
         "groups": null,
-        "classes": [
+        "classes": [{
+                "ACAD_CAREER": "UGRD",
+                "DESCR": "Real Estate Development Plg",
+                "SUBJECT": "REDE",
+                "CATALOG_NBR": "3200",
+                "CAMPUS": "STLUC",
+                "INSTRUCTION_MODE": "IN",
+                "ACAD_GROUP": "SCI",
+                "STRM": "6720"
+            },
             {
-            "ACAD_CAREER": "UGRD",
-            "DESCR": "Real Estate Development Plg",
-            "SUBJECT": "REDE",
-            "CATALOG_NBR": "3200",
-            "CAMPUS": "STLUC",
-            "INSTRUCTION_MODE": "IN",
-            "ACAD_GROUP": "SCI",
-            "STRM": "6720"
-        },
-            {
-            "ACAD_CAREER": "UGRD",
-            "DESCR": "Reg F\/works for Envl Mmgt &",
-            "SUBJECT": "ENVM",
-            "CATALOG_NBR": "3103",
-            "CAMPUS": "STLUC",
-            "INSTRUCTION_MODE": "IN",
-            "ACAD_GROUP": "SCI",
-            "STRM": "6720"}
-            ],
+                "ACAD_CAREER": "UGRD",
+                "DESCR": "Reg F\/works for Envl Mmgt &",
+                "SUBJECT": "ENVM",
+                "CATALOG_NBR": "3103",
+                "CAMPUS": "STLUC",
+                "INSTRUCTION_MODE": "IN",
+                "ACAD_GROUP": "SCI",
+                "STRM": "6720"
+            }
+        ],
         "expiryDate": "31-03-18",
         "hasSession": true,
         "tokenBased": false,
@@ -123,8 +123,37 @@ export const accounts = {
     // admins
 };
 
-export const authorsSearch = {"total": 10,
-    "data": [
+export const authorsSearch = {
+    "total": 10,
+    "data": [{
+            "aut_id": 410,
+            "aut_org_username": "uqresearcher",
+            "aut_org_staff_id": "0000111",
+            "aut_org_student_id": null,
+            "aut_email": null,
+            "aut_display_name": "J Researcher",
+            "aut_fname": "J",
+            "aut_mname": null,
+            "aut_lname": "Researcher",
+            "aut_title": "Professor",
+            "aut_position": null,
+            "aut_homepage_link": null,
+            "aut_created_date": "2007-08-09",
+            "aut_update_date": null,
+            "aut_external_id": "0001098586",
+            "aut_ref_num": null,
+            "aut_researcher_id": null,
+            "aut_scopus_id": null,
+            "aut_mypub_url": null,
+            "aut_rid_password": null,
+            "aut_people_australia_id": null,
+            "aut_description": null,
+            "aut_orcid_id": "0000-0001-1111-1111",
+            "aut_google_scholar_id": "kUemDfMAAAAJ",
+            "aut_rid_last_updated": null,
+            "aut_publons_id": null,
+            "aut_student_username": null
+        },
         {
             "aut_id": 61940,
             "aut_org_username": null,
@@ -443,7 +472,9 @@ export const authorsSearch = {"total": 10,
             "aut_rid_last_updated": "2016-01-08",
             "aut_publons_id": null,
             "aut_student_username": null
-        }]};
+        }
+    ]
+};
 
 export const currentAuthor = {
     uqresearcher: {
@@ -561,7 +592,11 @@ export const authorDetails = {
         "mypub_url": "uqresearcher",
         "org_units": ["Institute for Molecular Bioscience", "Institute for Molecular Bioscience", "School of Chemistry and Molecular Biosciences", "The University of Queensland Diamantina Institute"],
         "positions": ["Affiliate Professor", "Casual Affiliate Professor", "Affiliate Professorial Res Fellow", "ARC Australian Laureate Fellow"],
-        "espace": {"first_year":1975,"last_year":2018,"doc_count":357}
+        "espace": {
+            "first_year": 1975,
+            "last_year": 2018,
+            "doc_count": 357
+        }
     },
     s2222222: {
         "espace_id": 44444,
@@ -580,7 +615,11 @@ export const authorDetails = {
         "positions": [""],
         "uqr_id": null,
         "image_exists": null,
-        "espace": {"first_year": null, "last_year": null, "doc_count": 0}
+        "espace": {
+            "first_year": null,
+            "last_year": null,
+            "doc_count": 0
+        }
     },
     uqnoauthid: {
         "uqr_id": null,
@@ -599,6 +638,266 @@ export const authorDetails = {
         "mypub_url": null,
         "org_units": ["The University of Queensland Diamantina Institute"],
         "positions": ["Program Scientific Support Coordin"],
-        "espace": {"first_year": 1999, "last_year": 2012, "doc_count": 14}
+        "espace": {
+            "first_year": 1999,
+            "last_year": 2012,
+            "doc_count": 14
+        }
     }
+};
+
+export const uqrdav10 = {
+    account: {
+        id: 'uqrdav10',
+        'class': [
+            'Campus-STLUCIA',
+            'Faculty of Humanities and Social Sciences',
+            'IS_ACADEMIC',
+            'IS_CONTINUING',
+            'IS_CURRENT',
+            'IS_PAID',
+            'IS_SUBSTANTIVE',
+            'IS_TEACHING_AND_RESEARCH',
+            'IS_UQ_STAFF_PLACEMENT',
+            'Office of the Provost',
+            'School of Music',
+            'staff@uq.edu.au',
+            'uqrdav10@uq.edu.au'
+        ],
+        type: 3,
+        homeLib: 'St Lucia',
+        firstName: 'Robert',
+        lastName: 'DAVIDSON',
+        name: 'Robert DAVIDSON',
+        mail: 'r.davidson2@uq.edu.au',
+        barcode: '24067620872938',
+        groups: [
+            'CN=lib_staff,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au',
+            'CN=lib_staff_lts,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au',
+            'CN=lib_ladmin,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au',
+            'CN=lib_libshare_rw,OU=lib-libshare-groups,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au',
+            'CN=lib_libshare_ro,OU=lib-libshare-groups,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au',
+            'CN=lib_www,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au',
+            'CN=lib_UQLCompAccess,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au',
+            'CN=lib_dev,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au',
+            'CN=lib_libapi_MembershipAdmins,OU=lib-libapi-groups,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au',
+            'CN=lib_libapi_LiaisonAdmins,OU=lib-libapi-groups,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au',
+            'CN=lib_www_cleanup,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au',
+            'CN=lib_lts,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au',
+            'CN=lib_uqsoftserv,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au',
+            'CN=lib_libapi_SpotlightAdmins,OU=lib-libapi-groups,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au',
+            'CN=lib_libshare_Governance_CommitteesOther_LPPG,OU=lib-libshare-groups,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au',
+            'CN=lib_libshare_Governance_CommitteesGoverning_LX,OU=lib-libshare-groups,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au',
+            'CN=lib_libshare_ExternalRelations_Advancement_Donations,OU=lib-libshare-groups,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au',
+            'CN=lib_libshare_ISRS_IR_Data_Licenses_Contracts,OU=lib-libshare-groups,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au',
+            'CN=lib_libapi_MasqueradeUsers,OU=lib-libapi-groups,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au',
+            'CN=LIB_Staff_All,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au',
+            'CN=LIB_Staff_ISRS,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au',
+            'CN=lib_servicepoint_login,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au'
+        ],
+        classes: [],
+        expiryDate: '31-12-99',
+        hasSession: true,
+        tokenBased: false,
+        canMasquerade: false,
+        blocked: false,
+        masqueradingId: 'uqvasai',
+        masqueradingType: 'full'
+    },
+    author: {
+        aut_id: 79324,
+        aut_org_username: 'uqrdav10',
+        aut_org_staff_id: '0003370',
+        aut_org_student_id: null,
+        aut_email: 'r.davidson2@uq.edu.au',
+        aut_display_name: 'Robert Davidson',
+        aut_fname: 'Robert',
+        aut_mname: null,
+        aut_lname: 'Davidson',
+        aut_title: 'Dr',
+        aut_position: null,
+        aut_homepage_link: null,
+        aut_created_date: '2009-04-13T00:00:00Z',
+        aut_update_date: '2019-04-07T19:23:53Z',
+        aut_external_id: null,
+        aut_ref_num: null,
+        aut_researcher_id: 'I-7251-2018',
+        aut_scopus_id: null,
+        aut_is_scopus_id_authenticated: 0,
+        aut_mypub_url: null,
+        aut_rid_password: '',
+        aut_people_australia_id: null,
+        aut_description: null,
+        aut_orcid_id: '0000-0001-8694-6144',
+        aut_orcid_bio: null,
+        aut_orcid_works_last_modified: null,
+        aut_google_scholar_id: null,
+        aut_twitter_username: null,
+        aut_rid_last_updated: '1975-12-15',
+        aut_publons_id: null,
+        aut_student_username: null,
+        aut_orcid_works_last_sync: null,
+        aut_is_orcid_sync_enabled: null
+    },
+    authorDetails: {
+        espace_id: 79324,
+        staff_id: '0003370',
+        given_name: 'Robert',
+        family_name: 'Davidson',
+        title: 'Dr',
+        scopus_id: null,
+        google_scholar_id: null,
+        researcher_id: 'I-7251-2018',
+        orcid_id: '0000-0001-8694-6144',
+        publons_id: null,
+        mypub_url: null,
+        username: 'uqrdav10',
+        org_units: [
+            'School of Music'
+        ],
+        positions: [
+            'Senior Lecturer'
+        ],
+        uqr_id: 394,
+        image_exists: 1,
+        espace: {
+            first_year: 2001,
+            last_year: 2019,
+            doc_count: 192
+        }
+    },
+    accountLoading: false,
+    accountAuthorLoading: false,
+    accountAuthorDetailsLoading: false,
+    isSessionExpired: null,
+    accountAuthorSaving: false,
+    accountAuthorError: null
+};
+
+export const uqagrinb = {
+    account: {
+        id: 'uqagrinb',
+        'class': [
+            'Campus-STLUCIA',
+            'Faculty of Humanities and Social Sciences',
+            'IS_ACADEMIC',
+            'IS_CONTINUING',
+            'IS_CURRENT',
+            'IS_PAID',
+            'IS_SUBSTANTIVE',
+            'IS_TEACHING_AND_RESEARCH',
+            'IS_UQ_STAFF_PLACEMENT',
+            'Office of the Provost',
+            'School of Music',
+            'staff@uq.edu.au',
+            'uqagrinb@uq.edu.au'
+        ],
+        type: 3,
+        homeLib: 'St Lucia',
+        firstName: 'Anna',
+        lastName: 'GRINBERG',
+        name: 'Anna GRINBERG',
+        mail: 'a.grinberg@uq.edu.au',
+        barcode: '24067520950198',
+        groups: [
+            'CN=lib_staff,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au',
+            'CN=lib_staff_lts,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au',
+            'CN=lib_ladmin,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au',
+            'CN=lib_libshare_rw,OU=lib-libshare-groups,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au',
+            'CN=lib_libshare_ro,OU=lib-libshare-groups,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au',
+            'CN=lib_www,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au',
+            'CN=lib_UQLCompAccess,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au',
+            'CN=lib_dev,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au',
+            'CN=lib_libapi_MembershipAdmins,OU=lib-libapi-groups,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au',
+            'CN=lib_libapi_LiaisonAdmins,OU=lib-libapi-groups,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au',
+            'CN=lib_www_cleanup,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au',
+            'CN=lib_lts,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au',
+            'CN=lib_uqsoftserv,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au',
+            'CN=lib_libapi_SpotlightAdmins,OU=lib-libapi-groups,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au',
+            'CN=lib_libshare_Governance_CommitteesOther_LPPG,OU=lib-libshare-groups,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au',
+            'CN=lib_libshare_Governance_CommitteesGoverning_LX,OU=lib-libshare-groups,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au',
+            'CN=lib_libshare_ExternalRelations_Advancement_Donations,OU=lib-libshare-groups,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au',
+            'CN=lib_libshare_ISRS_IR_Data_Licenses_Contracts,OU=lib-libshare-groups,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au',
+            'CN=lib_libapi_MasqueradeUsers,OU=lib-libapi-groups,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au',
+            'CN=LIB_Staff_All,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au',
+            'CN=LIB_Staff_ISRS,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au',
+            'CN=lib_servicepoint_login,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au'
+        ],
+        classes: [],
+        expiryDate: '31-12-99',
+        hasSession: true,
+        tokenBased: false,
+        canMasquerade: false,
+        blocked: false,
+        masqueradingId: 'uqvasai',
+        masqueradingType: 'full'
+    },
+    author: {
+        aut_id: 81130,
+        aut_org_username: 'uqagrinb',
+        aut_org_staff_id: '0083598',
+        aut_org_student_id: null,
+        aut_email: 'annagrin@gmail.com',
+        aut_display_name: 'Anna Grinberg',
+        aut_fname: 'Anna',
+        aut_mname: null,
+        aut_lname: 'Grinberg',
+        aut_title: 'Dr',
+        aut_position: null,
+        aut_homepage_link: null,
+        aut_created_date: '2009-10-19T00:00:00Z',
+        aut_update_date: '2019-04-07T19:25:35Z',
+        aut_external_id: null,
+        aut_ref_num: null,
+        aut_researcher_id: null,
+        aut_scopus_id: null,
+        aut_is_scopus_id_authenticated: 0,
+        aut_mypub_url: null,
+        aut_rid_password: null,
+        aut_people_australia_id: null,
+        aut_description: null,
+        aut_orcid_id: null,
+        aut_orcid_bio: null,
+        aut_orcid_works_last_modified: null,
+        aut_google_scholar_id: null,
+        aut_twitter_username: null,
+        aut_rid_last_updated: null,
+        aut_publons_id: null,
+        aut_student_username: null,
+        aut_orcid_works_last_sync: null,
+        aut_is_orcid_sync_enabled: null
+    },
+    authorDetails: {
+        espace_id: 81130,
+        staff_id: '0083598',
+        given_name: 'Anna',
+        family_name: 'Grinberg',
+        title: 'Dr',
+        scopus_id: null,
+        google_scholar_id: null,
+        researcher_id: null,
+        orcid_id: null,
+        publons_id: null,
+        mypub_url: null,
+        username: 'uqagrinb',
+        org_units: [
+            'School of Music'
+        ],
+        positions: [
+            'Lecturer'
+        ],
+        uqr_id: null,
+        image_exists: null,
+        espace: {
+            first_year: 2008,
+            last_year: 2017,
+            doc_count: 59
+        }
+    },
+    accountLoading: false,
+    accountAuthorLoading: false,
+    accountAuthorDetailsLoading: false,
+    isSessionExpired: null,
+    accountAuthorSaving: false,
+    accountAuthorError: null
 };

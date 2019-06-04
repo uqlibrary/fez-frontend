@@ -1,4 +1,5 @@
 import locale from 'locale/components';
+import moment from 'moment';
 const converter = require('number-to-words');
 
 const getValue = (value) => (
@@ -190,10 +191,12 @@ export const NTRO_SUBTYPES_CATEGORY_CODE = {
     [NTRO_SUBTYPE_RREB_NOT_FOR_PROFIT]: 'CW5'
 };
 
-const DOCUMENT_TYPE_JOURNAL_ARTICLE = 'Journal Article';
-const DOCUMENT_TYPE_BOOK_CHAPTER = 'Book Chapter';
-const DOCUMENT_TYPE_BOOK = 'Book';
-const DOCUMENT_TYPE_RESEARCH_REPORT = 'Research Report';
+export const DOCUMENT_TYPE_JOURNAL_ARTICLE = 'Journal Article';
+export const DOCUMENT_TYPE_BOOK_CHAPTER = 'Book Chapter';
+export const DOCUMENT_TYPE_BOOK = 'Book';
+export const DOCUMENT_TYPE_RESEARCH_REPORT = 'Research Report';
+export const DOCUMENT_TYPE_DESIGN = 'Design';
+export const DOCUMENT_TYPE_CREATIVE_WORK = 'Creative Work';
 
 export const publicationTypes = (components) => [
     {
@@ -273,7 +276,7 @@ export const publicationTypes = (components) => [
     },
     {
         id: PUBLICATION_TYPE_CREATIVE_WORK,
-        name: 'Creative Work',
+        name: DOCUMENT_TYPE_CREATIVE_WORK,
         class: 'Uqlibrary\\FezCore\\Types\\CreativeWork',
         citationComponent: components ? components.CreativeWorkCitation : null,
         formComponent: components ? components.CreativeWorkForm : null,
@@ -298,7 +301,7 @@ export const publicationTypes = (components) => [
     },
     {
         id: PUBLICATION_TYPE_DESIGN,
-        name: 'Design',
+        name: DOCUMENT_TYPE_DESIGN,
         class: 'Uqlibrary\\FezCore\\Types\\Design',
         citationComponent: components ? components.DesignCitation : null,
         formComponent: components ? components.DesignForm : null,
@@ -520,6 +523,28 @@ export const NEW_RECORD_DEFAULT_VALUES = {
     ]
 };
 
+export const NEW_COMMUNITY_DEFAULT_VALUES = {
+    rek_object_type: 1,
+    rek_display_type: 11,
+    rek_status: 2,
+    rek_title: '',
+    rek_description: '',
+    rek_date: moment().format(),
+    fez_record_search_key_keywords: [],
+};
+
+export const NEW_COLLECTION_DEFAULT_VALUES = {
+    rek_object_type: 2,
+    rek_display_type: 9,
+    rek_status: 2,
+    rek_title: '',
+    rek_description: '',
+    rek_date: moment().format(),
+    fez_record_search_key_keywords: [],
+    fez_record_search_key_ismemberof: []
+
+};
+
 export const NEW_DATASET_DEFAULT_VALUES = {
     rek_object_type: 3,
     rek_status: 3,
@@ -611,7 +636,7 @@ export const DATA_COLLECTION_CREATOR_ROLES = [
     {value: 'Technician'}
 ];
 
-export const CLOSED_ACCESS_ID = 453619;
+export const OPEN_ACCESS_ID = 453619;
 export const MEDIATED_ACCESS_ID = 453618;
 export const licenses = [
     {
@@ -870,6 +895,11 @@ export const DOCTYPE_SUBTYPE_MAPPING = {
 
 export const SIGNIFICANCE_MAJOR = 454026;
 export const SIGNIFICANCE_MINOR = 454027;
+
+export const SIGNIFICANCE = [
+    {text: 'Minor', value: SIGNIFICANCE_MINOR},
+    {text: 'Major', value: SIGNIFICANCE_MAJOR}
+];
 
 export const QUALITY_INDICATORS = [
     {text: 'Disseminated via nationally recognised outlet or entity', value: 453996},

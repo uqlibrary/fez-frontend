@@ -79,7 +79,10 @@ export class AppClass extends PureComponent {
         actions: PropTypes.object,
         location: PropTypes.object,
         history: PropTypes.object.isRequired,
-        classes: PropTypes.object
+        classes: PropTypes.object,
+        // incomplete Records
+        loadingIncompleteRecordData: PropTypes.bool,
+        incompleteRecordList: PropTypes.object,
     };
     static childContextTypes = {
         isMobile: PropTypes.bool,
@@ -122,6 +125,9 @@ export class AppClass extends PureComponent {
         if (nextProps.isSessionExpired) {
             this.sessionExpiredConfirmationBox.showConfirmation();
         }
+        if(nextProps.account && this.props.account !== nextProps.account && !nextProps.accountLoading) {
+            this.props.actions.searchAuthorPublications({}, 'incomplete');
+        }
     }
 
     componentWillUnmount() {
@@ -155,12 +161,12 @@ export class AppClass extends PureComponent {
         }
     };
 
-    isPublicPage = (menuItems) => (
-        menuItems
+    isPublicPage = (menuItems) => {
+        return menuItems
             .filter(menuItem => this.props.location.pathname === menuItem.linkTo && menuItem.public)
             .length > 0
-        || (new RegExp(routes.pathConfig.records.view(`(${routes.pidRegExp})`)).test(this.props.location.pathname))
-    );
+            || (new RegExp(routes.pathConfig.records.view(`(${routes.pidRegExp})`)).test(this.props.location.pathname));
+    };
 
     setSessionExpiredConfirmation = (ref) => {
         this.sessionExpiredConfirmationBox = ref;
@@ -188,15 +194,19 @@ export class AppClass extends PureComponent {
         const isHdrStudent = !isAuthorLoading && !!this.props.account && !!this.props.author
             && this.props.account.class.indexOf('IS_CURRENT') >= 0
             && this.props.account.class.indexOf('IS_UQ_STUDENT_PLACEMENT') >= 0;
-
-        const menuItems = routes.getMenuConfig(this.props.account, isOrcidRequired && isHdrStudent);
+        const hasIncompleteWorks = !!(
+            this.props.incompleteRecordList &&
+            this.props.incompleteRecordList.incomplete.publicationsListPagingData &&
+            this.props.incompleteRecordList.incomplete.publicationsListPagingData.total > 0
+        );
+        const menuItems = routes.getMenuConfig(this.props.account, isOrcidRequired && isHdrStudent, hasIncompleteWorks);
         const isPublicPage = this.isPublicPage(menuItems);
         const isThesisSubmissionPage = this.props.location.pathname === routes.pathConfig.hdrSubmission ||
             this.props.location.pathname === routes.pathConfig.sbsSubmission;
         const isSearchPage = this.props.location.pathname === routes.pathConfig.records.search ||
             this.props.location.pathname === routes.pathConfig.records.search;
-
         const showMenu = !isThesisSubmissionPage;
+
         const containerStyle = this.state.docked && !isThesisSubmissionPage ? {paddingLeft: 260} : {};
         if (!isAuthorizedUser && isThesisSubmissionPage) {
             this.redirectUserToLogin()();
@@ -269,10 +279,9 @@ export class AppClass extends PureComponent {
                                         !this.state.docked && !this.state.menuDrawerOpen &&
                                             <Hidden xsDown>
                                                 <Grid item>
-                                                    <div id="logo" className="smallLogo"
-                                                        style={{height: 66, width: 60}}
-                                                        aria-label={locale.global.logo.label}
-                                                    />
+                                                    <div id="logo" className="smallLogo" style={{height: 66, width: 60}}>
+                                                        {locale.global.logo.label}
+                                                    </div>
                                                 </Grid>
                                             </Hidden>
                                     }
@@ -303,6 +312,7 @@ export class AppClass extends PureComponent {
                 {
                     showMenu &&
                     <MenuDrawer
+                        hasIncompleteWorks={hasIncompleteWorks || false}
                         menuItems={menuItems}
                         drawerOpen={this.state.docked || this.state.menuDrawerOpen}
                         docked={this.state.docked}
@@ -326,9 +336,8 @@ export class AppClass extends PureComponent {
                         locale={locale.global.sessionExpiredConfirmation}
                     />
                     {
-                        userStatusAlert && false &&
-                        /* istanbul ignore next */
-                        <Grid container alignContent="center" justify="center" alignItems="center" >
+                        userStatusAlert &&
+                        <Grid container alignContent="center" justify="center" alignItems="center">
                             <Grid item className={classes.layoutCard} style={{marginTop: 0, marginBottom: 0}}>
                                 <Alert {...userStatusAlert} />
                             </Grid>

@@ -34,9 +34,12 @@ export const pathConfig = {
     records: {
         mine: '/records/mine',
         possible: '/records/possible',
+        incomplete: '/records/incomplete',
+        incompleteFix: (pid) => (`/records/${pid}/incomplete`),
         claim: '/records/claim',
         search: '/records/search',
         view: (pid, includeFullPath = false) => (`${includeFullPath ? fullPath : ''}/view/${pid}`),
+        view_new: (pid, includeFullPath = false) => (`${includeFullPath ? fullPath : ''}/view_new/${pid}`), //  temporary for MM to view pids without being redirected to legacy
         fix: (pid) => (`/records/${pid}/fix`),
         add: {
             find: '/records/add/find',
@@ -118,7 +121,7 @@ export const pathConfig = {
 
 // a duplicate list of routes for
 const flattedPathConfig = ['/', '/dashboard', '/contact', '/rhdsubmission', '/sbslodge_new', '/records/search',
-    '/records/mine', '/records/possible', '/records/claim', '/records/add/find', '/records/add/results', '/records/add/new',
+    '/records/mine', '/records/possible', '/records/incomplete', '/records/claim', '/records/add/find', '/records/add/results', '/records/add/new',
     '/admin/masquerade', '/admin/unpublished', '/admin/thirdPartyTools', '/admin/prototype', '/author-identifiers/orcid/link', '/author-identifiers/google-scholar/link'
 ];
 
@@ -148,6 +151,13 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
             exact: true,
             pageTitle: locale.pages.viewRecord.title,
             regExPath: pathConfig.records.view(`(${pidRegExp})`)
+        },
+        {
+            path: pathConfig.records.view_new(pid),
+            component: components.ViewRecord,
+            exact: true,
+            pageTitle: locale.pages.viewRecord.title,
+            regExPath: pathConfig.records.view_new(`(${pidRegExp})`)
         },
         {
             path: pathConfig.records.search,
@@ -240,6 +250,20 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
                 access: [roles.researcher, roles.admin],
                 exact: true,
                 pageTitle: locale.pages.claimPublications.title
+            },
+            {
+                path: pathConfig.records.incomplete,
+                component: components.MyIncompleteRecords,
+                access: [roles.researcher, roles.admin],
+                exact: true,
+                pageTitle: locale.pages.incompletePublications.title
+            },
+            {
+                path: pathConfig.records.incompleteFix(pid),
+                render: (props) => components.MyIncompleteRecord({...props, disableInitialGrants: true, disableDeleteAllGrants: true}),
+                access: [roles.researcher, roles.admin],
+                exact: true,
+                pageTitle: locale.pages.incompletePublication.title
             },
             {
                 path: pathConfig.records.claim,
@@ -343,9 +367,7 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
                 exact: true,
                 access: [roles.admin],
                 pageTitle: locale.pages.unpublished.title
-            }
-        ] : []),
-        ...(account && account.canMasquerade ? [ // this should check if the user is an admin
+            },
             {
                 path: pathConfig.admin.thirdPartyTools,
                 component: components.ThirdPartyLookupTool,
@@ -367,7 +389,7 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
     ];
 };
 
-export const getMenuConfig = (account, disabled) => {
+export const getMenuConfig = (account, disabled, hasIncompleteWorks = false) => {
     const homePage = [
         {
             linkTo: pathConfig.index,
@@ -392,6 +414,13 @@ export const getMenuConfig = (account, disabled) => {
             public: true
         }
     ];
+
+    const incompletePage = hasIncompleteWorks && [
+        {
+            linkTo: pathConfig.records.incomplete,
+            ...locale.menu.incompleteRecords
+        }
+    ] || [];
 
     if (disabled) {
         return [
@@ -426,6 +455,7 @@ export const getMenuConfig = (account, disabled) => {
                 linkTo: pathConfig.records.possible,
                 ...locale.menu.claimPublication
             },
+            ...incompletePage,
             {
                 linkTo: pathConfig.records.add.find,
                 ...locale.menu.addMissingRecord
@@ -434,10 +464,6 @@ export const getMenuConfig = (account, disabled) => {
                 linkTo: pathConfig.dataset.mine,
                 ...locale.menu.myDatasets
             },
-            // {
-            //     linkTo: pathConfig.dataset.legacy,
-            //     ...locale.menu.addDataset
-            // },
             {
                 linkTo: pathConfig.dataset.add,
                 ...locale.menu.addMissingDataset

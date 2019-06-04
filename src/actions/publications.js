@@ -66,16 +66,28 @@ export function searchTopCitedPublications(recordsPerSource = 20) {
     };
 }
 
+function searchAuthorPublicationsApiEndpoint(type) {
+    switch (type) {
+        case 'mine':
+        case 'datasets':
+            return routes.CURRENT_USER_RECORDS_API;
+        case 'incomplete':
+            return routes.INCOMPLETE_RECORDS_API;
+        default:
+            throw Error('Please provide valid type');
+    }
+}
+
 /**
  * Get author's publications
  * @param {string} author user name
  * @returns {action}
  */
-export function searchAuthorPublications({page = 1, pageSize = 20, sortBy = 'score', sortDirection = 'Desc', activeFacets = {filters: {}, ranges: {}}}) {
+export function searchAuthorPublications({page = 1, pageSize = 20, sortBy = 'score', sortDirection = 'Desc', activeFacets = {filters: {}, ranges: {}}}, type = 'mine') {
     return dispatch => {
-        dispatch({type: actions.AUTHOR_PUBLICATIONS_LOADING});
+        dispatch({type: `${actions.AUTHOR_PUBLICATIONS_LOADING}@${type}`});
 
-        return get(routes.CURRENT_USER_RECORDS_API({
+        return get(searchAuthorPublicationsApiEndpoint(type)({
             page: page,
             pageSize: pageSize,
             sortBy: sortBy,
@@ -84,13 +96,13 @@ export function searchAuthorPublications({page = 1, pageSize = 20, sortBy = 'sco
         }))
             .then(response => {
                 dispatch({
-                    type: actions.AUTHOR_PUBLICATIONS_LOADED,
-                    payload: response
+                    type: `${actions.AUTHOR_PUBLICATIONS_LOADED}@${type}`,
+                    payload: {...response}
                 });
             })
             .catch(error => {
                 dispatch({
-                    type: actions.AUTHOR_PUBLICATIONS_FAILED,
+                    type: `${actions.AUTHOR_PUBLICATIONS_FAILED}@${type}`,
                     payload: error.message
                 });
             });

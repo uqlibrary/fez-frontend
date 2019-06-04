@@ -507,11 +507,11 @@ exports[`Dashboard test Full mount for styles render 1`] = `
               ],
               "results": Array [
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
               ],
@@ -554,7 +554,7 @@ exports[`Dashboard test Full mount for styles render 1`] = `
                   ],
                   "results": Array [
                     Object {
-                      "isThrow": false,
+                      "type": "return",
                       "value": undefined,
                     },
                   ],
@@ -567,7 +567,21 @@ exports[`Dashboard test Full mount for styles render 1`] = `
                   ],
                   "results": Array [
                     Object {
-                      "isThrow": false,
+                      "type": "return",
+                      "value": undefined,
+                    },
+                  ],
+                },
+                "searchAuthorPublications": [MockFunction] {
+                  "calls": Array [
+                    Array [
+                      Object {},
+                      "incomplete",
+                    ],
+                  ],
+                  "results": Array [
+                    Object {
+                      "type": "return",
                       "value": undefined,
                     },
                   ],
@@ -577,6 +591,14 @@ exports[`Dashboard test Full mount for styles render 1`] = `
             classes={Object {}}
             hidePossiblyYourPublicationsLure={false}
             history={Object {}}
+            incomplete={
+              Object {
+                "loadingPublicationsList": false,
+                "publicationsList": Array [],
+                "publicationsListFacets": Object {},
+                "publicationsListPagingData": Object {},
+              }
+            }
             loadingPublicationsByYear={false}
             loadingPublicationsStats={false}
             possiblyYourPublicationsCountLoading={false}
@@ -619,7 +641,7 @@ exports[`Dashboard test Full mount for styles render 1`] = `
                     ],
                     "results": Array [
                       Object {
-                        "isThrow": false,
+                        "type": "return",
                         "value": undefined,
                       },
                     ],
@@ -632,7 +654,21 @@ exports[`Dashboard test Full mount for styles render 1`] = `
                     ],
                     "results": Array [
                       Object {
-                        "isThrow": false,
+                        "type": "return",
+                        "value": undefined,
+                      },
+                    ],
+                  },
+                  "searchAuthorPublications": [MockFunction] {
+                    "calls": Array [
+                      Array [
+                        Object {},
+                        "incomplete",
+                      ],
+                    ],
+                    "results": Array [
+                      Object {
+                        "type": "return",
                         "value": undefined,
                       },
                     ],
@@ -642,6 +678,14 @@ exports[`Dashboard test Full mount for styles render 1`] = `
               classes={Object {}}
               hidePossiblyYourPublicationsLure={false}
               history={Object {}}
+              incomplete={
+                Object {
+                  "loadingPublicationsList": false,
+                  "publicationsList": Array [],
+                  "publicationsListFacets": Object {},
+                  "publicationsListPagingData": Object {},
+                }
+              }
               loadingPublicationsByYear={false}
               loadingPublicationsStats={false}
               possiblyYourPublicationsCountLoading={false}
@@ -684,7 +728,7 @@ exports[`Dashboard test Full mount for styles render 1`] = `
                       ],
                       "results": Array [
                         Object {
-                          "isThrow": false,
+                          "type": "return",
                           "value": undefined,
                         },
                       ],
@@ -697,7 +741,21 @@ exports[`Dashboard test Full mount for styles render 1`] = `
                       ],
                       "results": Array [
                         Object {
-                          "isThrow": false,
+                          "type": "return",
+                          "value": undefined,
+                        },
+                      ],
+                    },
+                    "searchAuthorPublications": [MockFunction] {
+                      "calls": Array [
+                        Array [
+                          Object {},
+                          "incomplete",
+                        ],
+                      ],
+                      "results": Array [
+                        Object {
+                          "type": "return",
                           "value": undefined,
                         },
                       ],
@@ -713,6 +771,14 @@ exports[`Dashboard test Full mount for styles render 1`] = `
                 }
                 hidePossiblyYourPublicationsLure={false}
                 history={Object {}}
+                incomplete={
+                  Object {
+                    "loadingPublicationsList": false,
+                    "publicationsList": Array [],
+                    "publicationsListFacets": Object {},
+                    "publicationsListPagingData": Object {},
+                  }
+                }
                 loadingPublicationsByYear={false}
                 loadingPublicationsStats={false}
                 possiblyYourPublicationsCountLoading={false}
@@ -2624,6 +2690,180 @@ exports[`Dashboard test componentDidMount without account id 1`] = `
           </WithStyles(Grid)>
         </WithStyles(Grid)>
       </StandardCard>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</StandardPage>
+`;
+
+exports[`Dashboard test displays a lure to a single work when the user has incomplete NTRO submissions 1`] = `
+<StandardPage>
+  <WithStyles(Grid)
+    container={true}
+    spacing={24}
+  >
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "marginTop": -27,
+        }
+      }
+      xs={12}
+    >
+      <WithStyles(Alert)
+        action={[Function]}
+        actionButtonLabel="View and Complete"
+        message="We have found 1 work(s) that requires more information."
+        title="NTRO Data Required"
+        type="warning"
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <WithStyles(DashboardAuthorProfile)
+        authorDetails={
+          Object {
+            "espace": Object {
+              "doc_count": 357,
+              "first_year": 1975,
+              "last_year": 2018,
+            },
+            "espace_id": 20288,
+            "family_name": "Researcher",
+            "given_name": "J",
+            "google_scholar_id": "kUemDfMAAAAJ",
+            "image_exists": 1,
+            "mypub_url": "uqresearcher",
+            "orcid_id": "0000-0001-1111-1111",
+            "org_units": Array [
+              "Institute for Molecular Bioscience",
+              "Institute for Molecular Bioscience",
+              "School of Chemistry and Molecular Biosciences",
+              "The University of Queensland Diamantina Institute",
+            ],
+            "positions": Array [
+              "Affiliate Professor",
+              "Casual Affiliate Professor",
+              "Affiliate Professorial Res Fellow",
+              "ARC Australian Laureate Fellow",
+            ],
+            "publons_id": "",
+            "researcher_id": "G-111-1111",
+            "scopus_id": "",
+            "staff_id": "0000111",
+            "title": "Professor",
+            "uqr_id": 14,
+            "username": "uqresearcher",
+          }
+        }
+        history={Object {}}
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "marginTop": -27,
+        }
+      }
+      xs={12}
+    >
+      <WithStyles(Alert)
+        action={[Function]}
+        actionButtonLabel="Add a missing work"
+        message="We found nothing new for you to claim, but you may add a work any time."
+        title="Add your work to eSpace"
+        type="info_outline"
+      />
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</StandardPage>
+`;
+
+exports[`Dashboard test displays a lure when the user has incomplete NTRO submissions 1`] = `
+<StandardPage>
+  <WithStyles(Grid)
+    container={true}
+    spacing={24}
+  >
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "marginTop": -27,
+        }
+      }
+      xs={12}
+    >
+      <WithStyles(Alert)
+        action={[Function]}
+        actionButtonLabel="View and Complete"
+        message="We have found 2 work(s) that require more information."
+        title="NTRO Data Required"
+        type="warning"
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <WithStyles(DashboardAuthorProfile)
+        authorDetails={
+          Object {
+            "espace": Object {
+              "doc_count": 357,
+              "first_year": 1975,
+              "last_year": 2018,
+            },
+            "espace_id": 20288,
+            "family_name": "Researcher",
+            "given_name": "J",
+            "google_scholar_id": "kUemDfMAAAAJ",
+            "image_exists": 1,
+            "mypub_url": "uqresearcher",
+            "orcid_id": "0000-0001-1111-1111",
+            "org_units": Array [
+              "Institute for Molecular Bioscience",
+              "Institute for Molecular Bioscience",
+              "School of Chemistry and Molecular Biosciences",
+              "The University of Queensland Diamantina Institute",
+            ],
+            "positions": Array [
+              "Affiliate Professor",
+              "Casual Affiliate Professor",
+              "Affiliate Professorial Res Fellow",
+              "ARC Australian Laureate Fellow",
+            ],
+            "publons_id": "",
+            "researcher_id": "G-111-1111",
+            "scopus_id": "",
+            "staff_id": "0000111",
+            "title": "Professor",
+            "uqr_id": 14,
+            "username": "uqresearcher",
+          }
+        }
+        history={Object {}}
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "marginTop": -27,
+        }
+      }
+      xs={12}
+    >
+      <WithStyles(Alert)
+        action={[Function]}
+        actionButtonLabel="Add a missing work"
+        message="We found nothing new for you to claim, but you may add a work any time."
+        title="Add your work to eSpace"
+        type="info_outline"
+      />
     </WithStyles(Grid)>
   </WithStyles(Grid)>
 </StandardPage>
@@ -4729,7 +4969,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
               ],
               "results": Array [
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
               ],
@@ -4772,7 +5012,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                   ],
                   "results": Array [
                     Object {
-                      "isThrow": false,
+                      "type": "return",
                       "value": undefined,
                     },
                   ],
@@ -4785,7 +5025,21 @@ exports[`Dashboard test should get styles for full render 1`] = `
                   ],
                   "results": Array [
                     Object {
-                      "isThrow": false,
+                      "type": "return",
+                      "value": undefined,
+                    },
+                  ],
+                },
+                "searchAuthorPublications": [MockFunction] {
+                  "calls": Array [
+                    Array [
+                      Object {},
+                      "incomplete",
+                    ],
+                  ],
+                  "results": Array [
+                    Object {
+                      "type": "return",
                       "value": undefined,
                     },
                   ],
@@ -4795,6 +5049,15 @@ exports[`Dashboard test should get styles for full render 1`] = `
             classes={Object {}}
             hidePossiblyYourPublicationsLure={false}
             history={Object {}}
+            incomplete={
+              Object {
+                "loadingPublicationsList": false,
+                "publicationsList": Array [],
+                "publicationsListFacets": Object {},
+                "publicationsListPagingData": Object {},
+              }
+            }
+            loadingIncompleteRecordData={false}
             loadingPublicationsByYear={false}
             loadingPublicationsStats={false}
             possiblyYourPublicationsCountLoading={false}

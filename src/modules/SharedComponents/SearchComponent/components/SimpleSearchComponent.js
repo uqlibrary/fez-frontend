@@ -133,10 +133,8 @@ export class SimpleSearchComponent extends PureComponent {
     };
 
     _handleSearchMode = () => {
-        /* istanbul ignore else */
-        if (!!this.props.onToggleSearchMode) {
-            this.props.onToggleSearchMode();
-        }
+        !!this.props.onToggleSearchMode &&
+        this.props.onToggleSearchMode();
     };
 
     _handleSearch = (event) => {
@@ -168,6 +166,7 @@ export class SimpleSearchComponent extends PureComponent {
     render() {
         const txt = locale.components.searchComponent;
         const {classes} = this.props;
+        const ariaLabel = {'aria-label': txt.ariaInputLabel};
         return (
             <React.Fragment>
                 <form style={{margin: 8}} onSubmit={this._handleSubmit}>
@@ -188,10 +187,11 @@ export class SimpleSearchComponent extends PureComponent {
                                                 type="search"
                                                 autoComplete={'search'}
                                                 fullWidth
+                                                id="simpleSearchField"
                                                 autoFocus={this.props.autoFocus}
                                                 label={false}
                                                 placeholder={txt.searchBoxPlaceholder}
-                                                aria-label={txt.ariaInputLabel}
+                                                inputProps={ariaLabel}
                                                 onChange={this._handleSearchTextChange}
                                                 onKeyPress={this._handleSearch}
                                                 value={this.props.searchText}
@@ -232,7 +232,7 @@ export class SimpleSearchComponent extends PureComponent {
                                                             fullWidth
                                                             label={false}
                                                             placeholder={txt.searchBoxPlaceholder}
-                                                            aria-label={txt.ariaInputLabel}
+                                                            inputProps={ariaLabel}
                                                             onChange={this._handleSearchTextChange}
                                                             onKeyPress={this._handleSearch}
                                                             value={this.props.searchText}
@@ -251,10 +251,11 @@ export class SimpleSearchComponent extends PureComponent {
                                     <Grid item xs>
                                         <TextField
                                             type="search"
+                                            id="simpleSearchField"
                                             fullWidth
                                             label={!this.props.isInHeader && txt.searchBoxPlaceholder}
                                             placeholder={txt.searchBoxHint}
-                                            aria-label={txt.ariaInputLabel}
+                                            inputProps={ariaLabel}
                                             onChange={this._handleSearchTextChange}
                                             onKeyPress={this._handleSearch}
                                             value={this.props.searchText}
@@ -270,6 +271,7 @@ export class SimpleSearchComponent extends PureComponent {
                                             disabled={!!this.searchTextValidationMessage(this.props.searchText)}
                                             onClick={this._handleSearch}
                                             fullWidth
+                                            id="simpleSearchButton"
                                         />
                                     </Grid>
                                     <Grid item xs={12} sm={'auto'}>
@@ -280,6 +282,7 @@ export class SimpleSearchComponent extends PureComponent {
                                             onClick={this._handleSearchMode}
                                             className="advancedButton"
                                             fullWidth
+                                            id="showAdvancedSearchButton"
                                         />
                                     </Grid>
                                 </Grid>

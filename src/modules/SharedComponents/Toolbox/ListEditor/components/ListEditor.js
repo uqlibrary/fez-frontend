@@ -42,8 +42,13 @@ export default class ListsEditor extends Component {
     constructor(props) {
         super(props);
 
+        const valueAsJson = (props.input || {}).name &&
+            (typeof (props.input.value || {}).toJS === 'function') &&
+            props.input.value.toJS()
+        ;
+
         this.state = {
-            itemList: props.input && props.input.name && props.input.value ? props.input.value.map(item => item[props.searchKey.value]) : []
+            itemList: valueAsJson ? valueAsJson.map(item => item[props.searchKey.value]) : []
         };
     }
 

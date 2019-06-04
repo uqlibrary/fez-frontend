@@ -1,7 +1,14 @@
 import {validation, openAccessConfig} from 'config';
-import {IN_CREATION, IN_DRAFT, IN_REVIEW, UNPUBLISHED, RETRACTED, SUBMITTED_FOR_APPROVAL} from 'config/general';
+import {
+    IN_CREATION,
+    IN_DRAFT,
+    IN_REVIEW,
+    UNPUBLISHED,
+    RETRACTED,
+    SUBMITTED_FOR_APPROVAL
+} from 'config/general';
 
-const zeroPaddedYear = (value) => value ? ('0000' + value).substr(-4) : '*';
+export const zeroPaddedYear = (value) => value ? ('0000' + value).substr(-4) : '*';
 
 /**
  * Translate selected facets to query string parameters
@@ -75,7 +82,7 @@ export const CURRENT_ACCOUNT_API = () => (
     {apiUrl: 'account', options: {params: {ts: `${new Date().getTime()}`}}}
 );
 export const AUTHORS_SEARCH_API = ({query}) => (
-    {apiUrl: 'fez-authors/search', options: {params: {query: query}}}
+    {apiUrl: 'fez-authors/search', options: {params: {query: query, rule: 'lookup'}}}
 );
 export const CURRENT_AUTHOR_API = () => (
     {apiUrl: 'fez-authors'}
@@ -83,9 +90,11 @@ export const CURRENT_AUTHOR_API = () => (
 export const AUTHOR_API = ({authorId}) => (
     {apiUrl: `fez-authors/${authorId}`}
 );
-export const AUTHOR_DETAILS_API = ({userId}) => (
-    {apiUrl: `authors/details/${userId}`}
-);
+export const AUTHOR_DETAILS_API = ({userId}) => {
+    return {
+        apiUrl: `authors/details/${userId}`
+    };
+};
 export const AUTHOR_ORCID_DETAILS_API = ({userId, params}) => (
     {apiUrl: `orcid/${userId}/request`, options: {params: {...params}}}
 );
@@ -129,6 +138,14 @@ export const RECORDS_ISSUES_API = ({pid}) => (
     {apiUrl: `records/${pid}/issues`}
 );
 
+export const NEW_COLLECTION_API = () => (
+    {apiUrl: 'collections'}
+);
+
+export const NEW_COMMUNITY_API = () => (
+    {apiUrl: 'communities'}
+);
+
 // search/list records apis
 export const POSSIBLE_RECORDS_API = (values) => (
     {
@@ -136,7 +153,8 @@ export const POSSIBLE_RECORDS_API = (values) => (
         options: {
             params: {
                 rule: 'possible',
-                ...{...getStandardSearchParams(values), ...getOpenAccessSearchParams(values)}
+                ...getStandardSearchParams(values),
+                ...getOpenAccessSearchParams(values)
             }
         }
     }
@@ -152,11 +170,26 @@ export const CURRENT_USER_RECORDS_API = (values, route = 'search') => (
         options: {
             params: {
                 rule: 'mine',
-                ...{...getStandardSearchParams(values), ...getOpenAccessSearchParams(values)}
+                ...getStandardSearchParams(values),
+                ...getOpenAccessSearchParams(values)
             }
         }
     }
 );
+
+export const INCOMPLETE_RECORDS_API = (values) => {
+    return {
+        apiUrl: 'records/search',
+        options: {
+            params: {
+                rule: 'incomplete',
+                ...getStandardSearchParams(values),
+                ...getOpenAccessSearchParams(values)
+            }
+        }
+    };
+};
+
 export const AUTHOR_PUBLICATIONS_STATS_ONLY_API = (values) => (
     {
         apiUrl: 'records/search',
@@ -164,12 +197,63 @@ export const AUTHOR_PUBLICATIONS_STATS_ONLY_API = (values) => (
             params: {
                 rule: 'mine',
                 'filters[stats_only]': true,
-                ...{...getStandardSearchParams(values), ...getOpenAccessSearchParams(values)}
+                ...getStandardSearchParams(values),
+                ...getOpenAccessSearchParams(values)
             }
         }
     }
 );
 export const TRENDING_PUBLICATIONS_API = () => ({apiUrl: 'records/trending'});
+
+export const formatSearchQueryParams = ({result, key, searchQueryParams}) => {
+    const {value} = searchQueryParams[key];
+    switch (key) {
+        case 'rek_pid':
+            if (value.toLowerCase().indexOf('uq:') !== 0) {
+                return {
+                    ...result,
+                    [key]: `UQ:${value}`
+                };
+            }
+            break;
+        case 'rek_genre_type':
+            return {
+                ...result,
+                [key]: value.map(item => `"${item}"`)
+            };
+        case 'rek_status':
+            return {
+                ...result,
+                [key]: value < 0
+                    ? [
+                        UNPUBLISHED,
+                        SUBMITTED_FOR_APPROVAL,
+                        IN_CREATION,
+                        IN_REVIEW,
+                        IN_DRAFT,
+                        RETRACTED
+                    ]
+                    : value
+            };
+        case 'rek_created_date':
+        case 'rek_updated_date':
+            return result;
+        case 'all':
+            return {
+                ...result,
+                [key]: value
+            };
+        default:
+            break;
+    }
+
+    return {
+        ...result,
+        [key]: !!value
+            ? value
+            : searchQueryParams[key]
+    };
+};
 
 export const SEARCH_INTERNAL_RECORDS_API = (query, route = 'search') => {
     // query = {searchQuery (text value - title search, doi or pubmed id)
@@ -178,17 +262,12 @@ export const SEARCH_INTERNAL_RECORDS_API = (query, route = 'search') => {
     let {searchQueryParams} = query;
 
     // convert {value, label} from advanced search to value string from api
-    const searchQueryParamsWithoutLabels = query.searchMode === 'advanced' && !!searchQueryParams && Object.keys(searchQueryParams).reduce((result, key) => {
-        const {value} = searchQueryParams[key];
-        return (
-            (key === 'rek_pid' && value.toLowerCase().indexOf('uq:') !== 0) && {...result, [key]: `UQ:${value}`}
-            || (key === 'rek_genre_type') && {...result, [key]: value.map(item => `"${item}"`)}
-            || (key === 'rek_status' && value < 0) && {...result, [key]: [UNPUBLISHED, SUBMITTED_FOR_APPROVAL, IN_CREATION,  IN_REVIEW, IN_DRAFT, RETRACTED]}
-            || (key === 'rek_created_date' || key === 'rek_updated_date') && result
-            || (key === 'all' || !!value) && {...result, [key]: value}
-            || {...result, [key]: searchQueryParams[key]}
-        );
-    }, {}) || searchQueryParams;
+    const searchQueryParamsWithoutLabels = query.searchMode === 'advanced' &&
+    !!searchQueryParams &&
+    Object.keys(searchQueryParams).reduce(
+        (result, key) => formatSearchQueryParams({result, key, searchQueryParams}),
+        {}
+    ) || searchQueryParams;
 
     const values = {...query, searchQueryParams: searchQueryParamsWithoutLabels};
 

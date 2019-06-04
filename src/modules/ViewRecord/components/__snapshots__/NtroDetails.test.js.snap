@@ -501,7 +501,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
               ],
               "results": Array [
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
               ],
@@ -536,6 +536,13 @@ exports[`NtroDetails  rendered full mount 1`] = `
                     "rek_author": "Someone else",
                     "rek_author_id": 32126452,
                     "rek_author_order": 2,
+                    "rek_author_pid": "UQ:ec5ce03",
+                    "rek_author_xsdmf_id": null,
+                  },
+                  Object {
+                    "rek_author": "Someone else again",
+                    "rek_author_id": 32126453,
+                    "rek_author_order": 3,
                     "rek_author_pid": "UQ:ec5ce03",
                     "rek_author_xsdmf_id": null,
                   },
@@ -613,7 +620,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                     "rek_creator_contribution_statement_pid": "UQ:ec5ce03",
                   },
                   Object {
-                    "rek_creator_contribution_statement": "Statement missing.",
+                    "rek_creator_contribution_statement": "Missing.",
                     "rek_creator_contribution_statement_id": 294,
                     "rek_creator_contribution_statement_order": 2,
                     "rek_creator_contribution_statement_pid": "UQ:ec5ce03",
@@ -935,6 +942,13 @@ exports[`NtroDetails  rendered full mount 1`] = `
                       "rek_author_pid": "UQ:ec5ce03",
                       "rek_author_xsdmf_id": null,
                     },
+                    Object {
+                      "rek_author": "Someone else again",
+                      "rek_author_id": 32126453,
+                      "rek_author_order": 3,
+                      "rek_author_pid": "UQ:ec5ce03",
+                      "rek_author_xsdmf_id": null,
+                    },
                   ],
                   "fez_record_search_key_author_affiliation_country": Array [
                     Object {
@@ -1009,7 +1023,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                       "rek_creator_contribution_statement_pid": "UQ:ec5ce03",
                     },
                     Object {
-                      "rek_creator_contribution_statement": "Statement missing.",
+                      "rek_creator_contribution_statement": "Missing.",
                       "rek_creator_contribution_statement_id": 294,
                       "rek_creator_contribution_statement_order": 2,
                       "rek_creator_contribution_statement_pid": "UQ:ec5ce03",
@@ -1336,6 +1350,13 @@ exports[`NtroDetails  rendered full mount 1`] = `
                         "rek_author_pid": "UQ:ec5ce03",
                         "rek_author_xsdmf_id": null,
                       },
+                      Object {
+                        "rek_author": "Someone else again",
+                        "rek_author_id": 32126453,
+                        "rek_author_order": 3,
+                        "rek_author_pid": "UQ:ec5ce03",
+                        "rek_author_xsdmf_id": null,
+                      },
                     ],
                     "fez_record_search_key_author_affiliation_country": Array [
                       Object {
@@ -1410,7 +1431,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                         "rek_creator_contribution_statement_pid": "UQ:ec5ce03",
                       },
                       Object {
-                        "rek_creator_contribution_statement": "Statement missing.",
+                        "rek_creator_contribution_statement": "Missing.",
                         "rek_creator_contribution_statement_id": 294,
                         "rek_creator_contribution_statement_order": 2,
                         "rek_creator_contribution_statement_pid": "UQ:ec5ce03",
@@ -4890,7 +4911,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                               </div>
                                             </Component>
                                             <Component
-                                              data="Not set"
+                                              data="Missing"
                                               heading="Scale/Significance of work"
                                               key="1"
                                               subheading="(Someone else)"
@@ -6839,7 +6860,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                                 <span
                                                                   className="MuiTypography-root-139 MuiTypography-body2-147"
                                                                 >
-                                                                  Not set
+                                                                  Missing
                                                                 </span>
                                                               </Typography>
                                                             </WithStyles(Typography)>
@@ -8830,7 +8851,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                               className="NtroDetailsClass-richTextParagraphFix-2"
                                               data={
                                                 Array [
-                                                  "Statement missing.",
+                                                  "Missing.",
                                                 ]
                                               }
                                               heading="Creator research statement"
@@ -10783,7 +10804,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                                 <span
                                                                   className="MuiTypography-root-139 MuiTypography-body2-147 NtroDetailsClass-richTextParagraphFix-2"
                                                                 >
-                                                                  Statement missing.
+                                                                  Missing.
                                                                 </span>
                                                               </Typography>
                                                             </WithStyles(Typography)>
@@ -23895,7 +23916,7 @@ exports[`NtroDetails  renders ISMN correctly 1`] = `
       subheading="(Ky Lane)"
     />
     <Component
-      data="Not set"
+      data="Missing"
       heading="Scale/Significance of work"
       key="1"
       subheading="(Someone else)"
@@ -23915,7 +23936,7 @@ exports[`NtroDetails  renders ISMN correctly 1`] = `
     <Component
       data={
         Array [
-          "Statement missing.",
+          "Missing.",
         ]
       }
       heading="Creator research statement"
@@ -24032,7 +24053,7 @@ exports[`NtroDetails  renders ISRC correctly 1`] = `
       subheading="(Ky Lane)"
     />
     <Component
-      data="Not set"
+      data="Missing"
       heading="Scale/Significance of work"
       key="1"
       subheading="(Someone else)"
@@ -24052,7 +24073,7 @@ exports[`NtroDetails  renders ISRC correctly 1`] = `
     <Component
       data={
         Array [
-          "Statement missing.",
+          "Missing.",
         ]
       }
       heading="Creator research statement"
@@ -24179,7 +24200,7 @@ exports[`NtroDetails  renders audience size correctly 1`] = `
       subheading="(Ky Lane)"
     />
     <Component
-      data="Not set"
+      data="Missing"
       heading="Scale/Significance of work"
       key="1"
       subheading="(Someone else)"
@@ -24199,7 +24220,7 @@ exports[`NtroDetails  renders audience size correctly 1`] = `
     <Component
       data={
         Array [
-          "Statement missing.",
+          "Missing.",
         ]
       }
       heading="Creator research statement"
@@ -24316,7 +24337,7 @@ exports[`NtroDetails  renders audience size correctly 2`] = `
       subheading="(Ky Lane)"
     />
     <Component
-      data="Not set"
+      data="Missing"
       heading="Scale/Significance of work"
       key="1"
       subheading="(Someone else)"
@@ -24336,7 +24357,7 @@ exports[`NtroDetails  renders audience size correctly 2`] = `
     <Component
       data={
         Array [
-          "Statement missing.",
+          "Missing.",
         ]
       }
       heading="Creator research statement"
@@ -24453,7 +24474,7 @@ exports[`NtroDetails  renders component as expected 1`] = `
       subheading="(Ky Lane)"
     />
     <Component
-      data="Not set"
+      data="Missing"
       heading="Scale/Significance of work"
       key="1"
       subheading="(Someone else)"
@@ -24473,7 +24494,7 @@ exports[`NtroDetails  renders component as expected 1`] = `
     <Component
       data={
         Array [
-          "Statement missing.",
+          "Missing.",
         ]
       }
       heading="Creator research statement"
@@ -24586,7 +24607,7 @@ exports[`NtroDetails  renders contribution statement as an admin with a blank st
       subheading="(Ky Lane)"
     />
     <Component
-      data="Not set"
+      data="Missing"
       heading="Scale/Significance of work"
       key="1"
       subheading="(Someone else)"
@@ -24602,7 +24623,7 @@ exports[`NtroDetails  renders contribution statement as an admin with a blank st
       subheading="(Ky Lane)"
     />
     <Component
-      data={null}
+      data="Missing"
       heading="Creator research statement"
       key="1"
       subheading="(Someone else)"
@@ -24713,7 +24734,7 @@ exports[`NtroDetails  renders contribution statement not as an admin 1`] = `
       subheading="(Ky Lane)"
     />
     <Component
-      data="Not set"
+      data="Missing"
       heading="Scale/Significance of work"
       key="1"
       subheading="(Someone else)"
@@ -24819,7 +24840,7 @@ exports[`NtroDetails  renders contribution statement not as an admin 1`] = `
 </WithStyles(Grid)>
 `;
 
-exports[`NtroDetails  renders minor significance 1`] = `
+exports[`NtroDetails  renders minor significance as an admin 1`] = `
 <WithStyles(Grid)
   item={true}
   xs={12}
@@ -24834,7 +24855,7 @@ exports[`NtroDetails  renders minor significance 1`] = `
       subheading="(Ky Lane)"
     />
     <Component
-      data="Not set"
+      data="Missing"
       heading="Scale/Significance of work"
       key="1"
       subheading="(Someone else)"
@@ -24854,7 +24875,7 @@ exports[`NtroDetails  renders minor significance 1`] = `
     <Component
       data={
         Array [
-          "Statement missing.",
+          "Missing.",
         ]
       }
       heading="Creator research statement"
@@ -24969,7 +24990,7 @@ exports[`NtroDetails  renders start/end page correctly due to correct doc/sub ty
       subheading="(Ky Lane)"
     />
     <Component
-      data="Not set"
+      data="Missing"
       heading="Scale/Significance of work"
       key="1"
       subheading="(Someone else)"
@@ -24989,7 +25010,7 @@ exports[`NtroDetails  renders start/end page correctly due to correct doc/sub ty
     <Component
       data={
         Array [
-          "Statement missing.",
+          "Missing.",
         ]
       }
       heading="Creator research statement"
@@ -25112,7 +25133,7 @@ exports[`NtroDetails  renders the abstract according to html or plain 1`] = `
       subheading="(Ky Lane)"
     />
     <Component
-      data="Not set"
+      data="Missing"
       heading="Scale/Significance of work"
       key="1"
       subheading="(Someone else)"
@@ -25132,7 +25153,7 @@ exports[`NtroDetails  renders the abstract according to html or plain 1`] = `
     <Component
       data={
         Array [
-          "Statement missing.",
+          "Missing.",
         ]
       }
       heading="Creator research statement"
@@ -25241,13 +25262,13 @@ exports[`NtroDetails  should render component with record 1`] = `
       subheading="(Ky Lane)"
     />
     <Component
-      data="Not set"
+      data="Missing"
       heading="Scale/Significance of work"
       key="1"
       subheading="()"
     />
     <Component
-      data="Not set"
+      data="Missing"
       heading="Scale/Significance of work"
       key="2"
       subheading="(the third guy)"
@@ -25263,6 +25284,16 @@ exports[`NtroDetails  should render component with record 1`] = `
       heading="Creator research statement"
       key="0"
       subheading="(Ky Lane)"
+    />
+    <Component
+      data={
+        Array [
+          "Missing.",
+        ]
+      }
+      heading="Creator research statement"
+      key="1"
+      subheading=""
     />
     <Component
       data={
@@ -25394,16 +25425,16 @@ exports[`NtroDetails  should render default fields for record with missing looku
     title="Non-traditional research output metadata"
   >
     <Component
-      data="Not set"
+      data="Missing"
       heading="Scale/Significance of work"
       key="0"
       subheading="(Ky Lane)"
     />
     <Component
-      data="Not set"
+      data="Missing"
       heading="Scale/Significance of work"
       key="1"
-      subheading="(Someone else)"
+      subheading="(Ky Lane)"
     />
     <Component
       data="This is an abstract"
@@ -25477,13 +25508,13 @@ exports[`NtroDetails  should show admin only fields when admin user 1`] = `
       subheading="(Ky Lane)"
     />
     <Component
-      data="Not set"
+      data="Missing"
       heading="Scale/Significance of work"
       key="1"
       subheading="()"
     />
     <Component
-      data="Not set"
+      data="Missing"
       heading="Scale/Significance of work"
       key="2"
       subheading="(the third guy)"
@@ -25503,7 +25534,7 @@ exports[`NtroDetails  should show admin only fields when admin user 1`] = `
     <Component
       data={
         Array [
-          "Statement missing.",
+          "Missing.",
         ]
       }
       heading="Creator research statement"

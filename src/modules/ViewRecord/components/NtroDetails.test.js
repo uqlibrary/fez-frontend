@@ -73,6 +73,13 @@ export const ntro = {
             rek_author_xsdmf_id: null,
             rek_author: "Someone else",
             rek_author_order: 2
+        },
+        {
+            rek_author_id: 32126453,
+            rek_author_pid: "UQ:ec5ce03",
+            rek_author_xsdmf_id: null,
+            rek_author: "Someone else again",
+            rek_author_order: 3
         }
     ],
     fez_record_search_key_author_affiliation_country: [
@@ -335,7 +342,7 @@ export const ntro = {
         {
             rek_creator_contribution_statement_id: 294,
             rek_creator_contribution_statement_pid: "UQ:ec5ce03",
-            rek_creator_contribution_statement: "Statement missing.",
+            rek_creator_contribution_statement: "Missing.",
             rek_creator_contribution_statement_order: 2
         }
     ],
@@ -393,7 +400,7 @@ function setup(testProps, isShallow = true){
         classes: {},
         theme: {},
         publication: testProps.publication || ntro,
-        account: {canMasquerade: true},
+        account: testProps.account || {canMasquerade: true},
         ...testProps
     };
     return getElement(NtroDetailsClass, props, isShallow);
@@ -416,8 +423,9 @@ describe('NtroDetails ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('renders minor significance', () => {
+    it('renders minor significance as an admin', () => {
         const wrapper = setup({
+            account: {canMasquerade: false},
             publication: {
                 ...ntro,
                 fez_record_search_key_significance: [
@@ -433,6 +441,12 @@ describe('NtroDetails ', () => {
                         rek_significance_pid: "UQ:ec5ce03",
                         rek_significance: 0,
                         rek_significance_order: 2
+                    },
+                    {
+                        rek_significance_id: 216,
+                        rek_significance_pid: "UQ:ec5ce03",
+                        rek_significance: '',
+                        rek_significance_order: 3
                     }
                 ]
             }
@@ -455,8 +469,14 @@ describe('NtroDetails ', () => {
                     {
                         rek_creator_contribution_statement_id: 294,
                         rek_creator_contribution_statement_pid: "UQ:ec5ce03",
-                        rek_creator_contribution_statement: ' ',
+                        rek_creator_contribution_statement: '     ',
                         rek_creator_contribution_statement_order: 2
+                    },
+                    {
+                        rek_creator_contribution_statement_id: 294,
+                        rek_creator_contribution_statement_pid: "UQ:ec5ce03",
+                        rek_creator_contribution_statement: '',
+                        rek_creator_contribution_statement_order: 3
                     }
                 ],
             }

@@ -12,9 +12,6 @@ beforeEach(() => {
 });
 
 describe('Export publications actions', () => {
-    // extend expect to check actions
-    expect.extend({toHaveDispatchedActions});
-
     beforeEach(() => {
         mockActionsStore = setupStoreForActions();
         mockApi = setupMockAdapter();

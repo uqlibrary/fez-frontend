@@ -6955,6 +6955,7 @@ export const preprint = {
 };
 
 export const mockRecordToFix = {
+    fez_datastream_info: [],
     "rek_pid": "UQ:41878",
     "rek_title_xsdmf_id": 10588,
     "rek_title": "Roles of heterogeneous nuclear ribonucleoproteins A\/B in cell growth",
@@ -12903,7 +12904,7 @@ export const ntro = {
         {
             rek_creator_contribution_statement_id: 294,
             rek_creator_contribution_statement_pid: "UQ:ec5ce03",
-            rek_creator_contribution_statement: "Statement missing.",
+            rek_creator_contribution_statement: "Missing.",
             rek_creator_contribution_statement_order: 2
         }
     ],
@@ -13325,7 +13326,7 @@ export const ntro2 = {
         {
             rek_creator_contribution_statement_id: 294,
             rek_creator_contribution_statement_pid: "UQ:ec5ce03",
-            rek_creator_contribution_statement: "Statement missing.",
+            rek_creator_contribution_statement: "Missing.",
             rek_creator_contribution_statement_order: 2
         }
     ],

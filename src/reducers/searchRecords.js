@@ -180,6 +180,7 @@ const handlers = {
             publicationsList: action.payload.data && action.payload.data.length > 0 && action.payload.data[0].currentSource
                 ? deduplicateResults(action.payload.data)
                 : action.payload.data,
+            publicationsListType: action.payload.type || null,
             publicationsListPagingData: {
                 total: action.payload.total,
                 current_page: action.payload.current_page,

@@ -1,6 +1,7 @@
 import React from 'react';
 import locale from 'locale/validationErrors';
 import Immutable from 'immutable';
+import { ORG_TYPE_NOT_SET, MEDIATED_ACCESS_ID } from 'config/general';
 
 // Max Length
 export const maxLength = max => value => value && value.toString().replace(/\s/g, '').length > max ? locale.validationErrors.maxLength.replace('[max]', max) : undefined;
@@ -42,7 +43,7 @@ export const maxListEditorTextLength = (max) => (value) => {
         valueToValidate = value;
     }
 
-    return maxLength(max)(valueToValidate);
+    return maxLengthWithWhitespace(max)(valueToValidate);
 };
 
 export const maxListEditorTextLength800 = maxListEditorTextLength(800);
@@ -53,7 +54,7 @@ export const isValidDOIValue = value => {
     const regexGroup = [
         /^10.\d{4,9}\/[-._;()/:A-Z0-9]+$/i,
         /^10.1002\/[^\s]+$/i,
-        /^10.\d{4}\/\d+-\d+X?(\d+)\d+<[\d\w]+:[\d\w]*>\d+.\d+.\w+;\d$/i,
+        /^10.\d{4}\/\d+-\d+X?\(\d+\)\d+<[\d\w]+:[\d\w]*>\d+.\d+.\w+;\d$/i,
         /^10.1021\/\w\w\d+$/i,
         /^10.1207\/[\w\d]+\&\d+_\d+$/i
     ];
@@ -81,11 +82,9 @@ export const required = value => value ? undefined : locale.validationErrors.req
 export const requireChecked = value => value === 'on' ? undefined : locale.validationErrors.requireChecked;
 
 export const requiredList = value => {
-    if(value instanceof Immutable.List) {
-        return value.toJS() && value.toJS().length > 0 ? undefined : locale.validationErrors.required;
-    } else {
-        return value && value.length > 0 ? undefined : locale.validationErrors.required;
-    }
+    return ((value instanceof Immutable.List) && value.toJS() || value || []).length > 0
+        ? undefined
+        : locale.validationErrors.required;
 };
 
 export const email = value => !value || !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value) ? locale.validationErrors.email : undefined;
@@ -102,6 +101,19 @@ export const authorRequired = (authors) => peopleRequired(authors, locale.valida
 export const editorRequired = (editors) => peopleRequired(editors, locale.validationErrors.editorRequired, true);
 export const supervisorRequired = (supervisors) => peopleRequired(supervisors, locale.validationErrors.supervisorRequired, false);
 
+export const authorAffiliationRequired = (authorAffiliation, loggedInAuthor) => (
+    (
+        authorAffiliation.uqIdentifier === '0' ||
+        authorAffiliation.uqIdentifier === String(loggedInAuthor.aut_id)
+    ) &&
+    (
+        (authorAffiliation.nameAsPublished || '').trim().length === 0 ||
+        (authorAffiliation.orgaff || '').trim().length === 0 ||
+        (authorAffiliation.orgtype || '').trim().length === 0 ||
+        (authorAffiliation.orgtype === ORG_TYPE_NOT_SET)
+    )
+);
+
 // DateTime
 export const dateTimeDay = value => value && (isNaN(value) || parseInt(value, 10) < 0 || parseInt(value, 10) > 31) ? locale.validationErrors.dateTimeDay : undefined;
 export const dateTimeYear = value => !value || value.length === 0 || isNaN(value) || parseInt(value, 10) > (new Date()).getFullYear() ? locale.validationErrors.dateTimeYear : undefined;
@@ -115,7 +127,7 @@ export const fileUploadRequired = value => {
 
 export const fileUploadNotRequiredForMediated = (value, values) => {
     const accessCondition = values.toJS().fez_record_search_key_access_conditions;
-    if (!!accessCondition && accessCondition.rek_access_conditions === 'Mediated Access') {
+    if (!!accessCondition && accessCondition.rek_access_conditions === MEDIATED_ACCESS_ID) {
         return undefined;
     } else {
         return value === undefined || value.queue.length === 0 ? locale.validationErrors.fileUploadRequired : undefined;
@@ -191,6 +203,8 @@ export const dateRange = (value, values) => {
     }
 };
 
+export const grantFormIsPopulated = (value) => (value === true  ? locale.validationErrors.grants : undefined);
+
 export const translateFormErrorsToText = (formErrors) => {
     if (!formErrors) return null;
 
@@ -213,14 +227,14 @@ export const translateFormErrorsToText = (formErrors) => {
     return errorMessagesList.length > 0 ? errorMessagesList : null;
 };
 
-export const getErrorAlertProps = ({dirty = false, submitting = false,
+export const getErrorAlertProps = ({submitting = false,
     error, formErrors, submitSucceeded = false, alertLocale = {}}) => {
     let alertProps = null;
     if (submitting) {
         alertProps = {...alertLocale.progressAlert};
     } else if (submitSucceeded) {
         alertProps = {...alertLocale.successAlert};
-    } else if (dirty) {
+    } else {
         if (error) {
             // error is set by submit failed, it's reset once form is re-validated (updated for re-submit)
             alertProps = {

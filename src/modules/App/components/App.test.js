@@ -1,6 +1,5 @@
 import {AppClass} from './App';
 import App from './App';
-// import styles from './App';
 import {accounts} from 'mock/data';
 import {routes, AUTH_URL_LOGIN, AUTH_URL_LOGOUT} from 'config';
 import mui1theme from 'config';
@@ -15,7 +14,8 @@ function setup(testProps, isShallow = true) {
         accountLoading: testProps.accountLoading || false,
         accountAuthorLoading: testProps.accountAuthorLoading || false,
         actions: testProps.actions || {
-            loadCurrentAccount: jest.fn()
+            loadCurrentAccount: jest.fn(),
+            searchAuthorPublications: jest.fn()
         },
         location: testProps.location || {},
         history: testProps.history || {location: {}}
@@ -133,7 +133,7 @@ describe('Application component', () => {
     it('Should display mobile correctly', () => {
         // current URL is set to testUrl which is set in package.json as http://fez-staging.library.uq.edu.au
         const wrapper = setup({});
-        wrapper.setState({ isMobile: 'true' });
+        wrapper.setState({ isMobile: true });
         wrapper.instance().getChildContext();
         wrapper.update();
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -355,6 +355,59 @@ describe('Application component', () => {
             expect(getWrapper(path.pathname).instance().isPublicPage(menuItems)).toEqual(path.isPublic)
         });
     })
+
+    it('should load the incomplete publications list when the account is loaded', () => {
+        const testMethod = jest.fn();
+        const wrapper = setup({
+            account: {name: 'test1'},
+            accountLoading: false,
+            actions: {
+                loadCurrentAccount: jest.fn(),
+                searchAuthorPublications: testMethod
+            }
+        });
+        wrapper.update();
+        wrapper.setProps({account: {name: 'test2'}});
+        expect(testMethod).toHaveBeenCalled();
+    });
+
+    it('should determine if it has incomplete works from props and hide menu item', () => {
+        const wrapper = setup({
+            account: {name: 'test1'},
+            accountLoading: false,
+            actions: {
+                loadCurrentAccount: jest.fn(),
+                searchAuthorPublications: jest.fn()
+            },
+            incompleteRecordList: {
+                incomplete: {
+                    publicationsListPagingData: {
+                        total: 10
+                    }
+                }
+            }
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should determine if it has incomplete works from props and show menu item', () => {
+        const wrapper = setup({
+            account: {name: 'test1'},
+            accountLoading: false,
+            actions: {
+                loadCurrentAccount: jest.fn(),
+                searchAuthorPublications: jest.fn()
+            },
+            incompleteRecordList: {
+                incomplete: {
+                    publicationsListPagingData: {
+                        total: 10
+                    }
+                }
+            }
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });
 
 describe('Testing wrapped App component', () => {

@@ -14,6 +14,11 @@ describe('Routes method', () => {
         expect(testRoutes.length).toEqual(12);
     });
 
+    it('should return a list of menus including incomplete menu item for researcher', () => {
+        const testRoutes = routes.getMenuConfig(accounts.uqresearcher, false, true);
+        expect(testRoutes.length).toEqual(13);
+    });
+
     it('should return a list of menus for a user with dashboard enabled only (eg HDR student without ORCID)', () => {
         const testRoutes = routes.getMenuConfig(accounts.uqresearcher, true);
         expect(testRoutes.length).toEqual(6);
@@ -24,14 +29,19 @@ describe('Routes method', () => {
         expect(testRoutes.length).toEqual(18);
     });
 
+    it('should return a list of menus including incomplete menu item for user who can masquerade', () => {
+        const testRoutes = routes.getMenuConfig(accounts.uqstaff, false, true);
+        expect(testRoutes.length).toEqual(18);
+    });
+
     it('should return a list of routes for anon user', () => {
         const testRoutes = routes.getRoutesConfig({components: {}, account: null});
-        expect(testRoutes.length).toEqual(6);
+        expect(testRoutes.length).toEqual(7);
     });
 
     it('should return a list of routes for researcher', () => {
         const testRoutes = routes.getRoutesConfig({components: {}, account: accounts.uqresearcher});
-        expect(testRoutes.length).toEqual(20);
+        expect(testRoutes.length).toEqual(23);
     });
 
     it('should return a list of routes for user who can masquerade', () => {
@@ -41,12 +51,12 @@ describe('Routes method', () => {
 
     it('should return a list of routes for hdr student without ORCID', () => {
         const testRoutes = routes.getRoutesConfig({components: {}, account: accounts.s2222222, forceOrcidRegistration: true, isHdrStudent: true});
-        expect(testRoutes.length).toEqual(7);
+        expect(testRoutes.length).toEqual(8);
     });
 
     it('should return a list of routes for hdr student with ORCID', () => {
         const testRoutes = routes.getRoutesConfig({components: {}, account: accounts.s2222222, forceOrcidRegistration: false, isHdrStudent: true});
-        expect(testRoutes.length).toEqual(20);
+        expect(testRoutes.length).toEqual(23);
     });
 
     it('should render auth required page', () => {
@@ -98,7 +108,7 @@ describe('Routes method', () => {
 
     it('should return Switch to old interface menu item for logged in user on view page', () => {
         const testMenuItems = routes.getMenuConfig(accounts.uqresearcher, false, true);
-        expect(testMenuItems.length).toEqual(12);
+        expect(testMenuItems.length).toEqual(13);
     });
 });
 

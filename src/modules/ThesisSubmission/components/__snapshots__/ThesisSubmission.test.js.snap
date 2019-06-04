@@ -291,6 +291,7 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
                     "descriptionStep1": "",
                     "descriptionStep1NoStep2": "List your current supervisors",
                     "identifierLabel": "UQ identifier (if available)",
+                    "nameAsPublishedFieldId": "supervisors-name-as-published-field",
                     "nameAsPublishedHint": "",
                     "nameAsPublishedLabel": "Enter each supervisor’s name on a separate line e.g. Firstname Surname",
                   },
@@ -313,6 +314,7 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
                 },
                 "row": Object {
                   "locale": Object {
+                    "deleteButtonId": [Function],
                     "deleteHint": "Remove this item",
                     "deleteRecordConfirmation": Object {
                       "cancelButtonLabel": "No",
@@ -486,7 +488,7 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
                 </p>,
                 "fileUploadRestrictionHeading": "File upload restrictions",
                 "fileUploadRestrictions": <div>
-                  Maximum file size is 8Gb. 
+                  Maximum file size is 8GB. 
                   <br />
                   PDF files must be saved using the following naming structure 
                   <b>
@@ -807,6 +809,7 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
                     "descriptionStep1": "",
                     "descriptionStep1NoStep2": "List your current supervisors",
                     "identifierLabel": "UQ identifier (if available)",
+                    "nameAsPublishedFieldId": "supervisors-name-as-published-field",
                     "nameAsPublishedHint": "",
                     "nameAsPublishedLabel": "Enter each supervisor’s name on a separate line e.g. Firstname Surname",
                   },
@@ -829,6 +832,7 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
                 },
                 "row": Object {
                   "locale": Object {
+                    "deleteButtonId": [Function],
                     "deleteHint": "Remove this item",
                     "deleteRecordConfirmation": Object {
                       "cancelButtonLabel": "No",
@@ -1002,7 +1006,7 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
                 </p>,
                 "fileUploadRestrictionHeading": "File upload restrictions",
                 "fileUploadRestrictions": <div>
-                  Maximum file size is 8Gb. 
+                  Maximum file size is 8GB. 
                   <br />
                   PDF files must be saved using the following naming structure 
                   <b>

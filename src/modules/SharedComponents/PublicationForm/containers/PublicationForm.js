@@ -55,9 +55,13 @@ const validate = (values) => {
             // either author or editor should be selected and linked to a user
             if (
                 (!data.authors && !data.editors) ||
+                (!data.authors && data.editors && data.editors.length === 0) ||
+                (!data.editors && data.authors && data.authors.length === 0) ||
                 (data.authors && data.editors && data.editors.length === 0 && data.authors.length === 0) ||
-                (data.authors && data.authors.filter(item => (item.selected)).length === 0 &&
-                    (!data.editors || (data.editors && data.editors.filter(item => (item.selected)).length === 0)))
+                (
+                    (data.authors && data.authors.filter(item => (item.selected)).length === 0) &&
+                    (data.editors && data.editors.filter(item => (item.selected)).length === 0)
+                )
             ) {
                 errors.authors = locale.validationErrors.authorRequired;
                 errors.editors = locale.validationErrors.editorRequired;
@@ -75,11 +79,16 @@ const validate = (values) => {
         errors.dateRange = locale.validationErrors.dateRange;
     }
 
-    // Check start/end pages are alid
+    // Check start/end pages are valid for Book Chapters
     const startPage = data.fez_record_search_key_start_page && data.fez_record_search_key_start_page.rek_start_page;
     const endPage = data.fez_record_search_key_end_page && data.fez_record_search_key_end_page.rek_end_page;
-    if(!!startPage && !!endPage && startPage > endPage) {
+    const docType = data.rek_display_type;
+    if(docType === 177 && ((!startPage || !endPage) || (!!startPage && !!endPage && parseInt(startPage, 10) > parseInt(endPage, 10)))) {
         errors.pageRange = locale.validationErrors.pageRange;
+    } else {
+        if(errors.pageRange) {
+            delete errors.pageRange;
+        }
     }
 
     return errors;

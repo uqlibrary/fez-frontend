@@ -89,13 +89,24 @@ api.interceptors.response.use(response => {
     return Promise.resolve(response.data);
 }, error => {
     const reportHttpStatusToSentry = [422, 500];
-    if (error && error.response && error.response.status && reportHttpStatusToSentry.indexOf(error.response.status) !== -1) {
+    if (
+        !!error &&
+        !!error.response &&
+        !!error.response.status &&
+        reportHttpStatusToSentry.indexOf(error.response.status) !== -1
+    ) {
         reportToSentry(error);
     }
 
     // 403 for tool api lookup is handled in actions/thirdPartyLookupTool.js
     let errorMessage = null;
-    if (!error.config.url.includes(pathConfig.admin.thirdPartyTools.slice(1))) {
+    if (
+        !!error &&
+        !!error.config && (
+            !error.config.url ||
+            !error.config.url.includes(pathConfig.admin.thirdPartyTools.slice(1))
+        )
+    ) {
         if (!!error.response && !!error.response.status && error.response.status === 403) {
             if (!!Cookies.get(SESSION_COOKIE_NAME)) {
                 Cookies.remove(SESSION_COOKIE_NAME, {path: '/', domain: '.library.uq.edu.au'});

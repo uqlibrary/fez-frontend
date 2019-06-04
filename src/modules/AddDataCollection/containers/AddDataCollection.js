@@ -1,5 +1,5 @@
 import {connect} from 'react-redux';
-import {reduxForm, getFormValues, SubmissionError, getFormSyncErrors, reset} from 'redux-form/immutable';
+import {reduxForm, getFormValues, SubmissionError, getFormSyncErrors} from 'redux-form/immutable';
 import Immutable from 'immutable';
 import {bindActionCreators} from 'redux';
 import * as actions from 'actions';
@@ -25,12 +25,6 @@ const onSubmit = (values, dispatch, state) => {
     return dispatch(createNewRecord({...cleanValues}))
         .then(() => {
             // once this promise is resolved form is submitted successfully and will call parent container
-            // reported bug to redux-form:
-            // reset form after success action was dispatched:
-            // componentWillUnmount cleans up form, but then onSubmit success sets it back to active
-            setTimeout(()=>{
-                dispatch(reset(FORM_NAME));
-            }, 100);
         })
         .catch(error => {
             throw new SubmissionError({_error: error.message});

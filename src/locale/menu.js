@@ -22,6 +22,9 @@ export default {
         claimPublication: {
             primaryText: 'Claim possible work'
         },
+        incompleteRecords: {
+            primaryText: 'My incomplete works'
+        },
         addMissingRecord: {
             primaryText: 'Add a missing work'
         },
@@ -48,6 +51,12 @@ export default {
         },
         help: {
             primaryText: 'Help'
+        },
+        collectionForm: {
+            primaryText: 'Add a missing collection'
+        },
+        communityForm: {
+            primaryText: 'Add a missing community'
         },
         unpublished: {
             primaryText: 'Unpublished buffer'

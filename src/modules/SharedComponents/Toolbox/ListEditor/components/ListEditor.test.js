@@ -17,7 +17,7 @@ function setup(testProps) {
     return getElement(ListEditor, props);
 }
 
-describe('ListEditor tests ', () => {
+describe('ListEditor tests', () => {
     it('should render full component with a defined className', () => {
         const wrapper = setup({ className: 'requiredField' });
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -124,6 +124,15 @@ describe('ListEditor tests ', () => {
                         }
                     ]
                 }
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should process incomplete props without error', () => {
+        const wrapper = setup({
+            input: {
+                name: 'test'
+            }
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });

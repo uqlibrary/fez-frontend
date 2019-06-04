@@ -282,6 +282,7 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
           color="primary"
           disabled={false}
           fullWidth={true}
+          id="advancedSearchButton"
           onClick={[Function]}
           type="submit"
           variant="contained"
@@ -543,6 +544,7 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
           color="primary"
           disabled={false}
           fullWidth={true}
+          id="advancedSearchButton"
           onClick={[Function]}
           type="submit"
           variant="contained"
@@ -798,6 +800,7 @@ exports[`AdvancedSearchComponent should render advanced search row based on prop
           color="primary"
           disabled={false}
           fullWidth={true}
+          id="advancedSearchButton"
           onClick={[Function]}
           type="submit"
           variant="contained"
@@ -1053,6 +1056,7 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
           color="primary"
           disabled={false}
           fullWidth={true}
+          id="advancedSearchButton"
           onClick={[Function]}
           type="submit"
           variant="contained"
@@ -1355,6 +1359,7 @@ exports[`AdvancedSearchComponent should render date range fields 1`] = `
           color="primary"
           disabled={false}
           fullWidth={true}
+          id="advancedSearchButton"
           onClick={[Function]}
           type="submit"
           variant="contained"
@@ -1606,6 +1611,7 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
           color="primary"
           disabled={false}
           fullWidth={true}
+          id="advancedSearchButton"
           onClick={[Function]}
           type="submit"
           variant="contained"
@@ -1857,6 +1863,7 @@ exports[`AdvancedSearchComponent should render default view with open access che
           color="primary"
           disabled={false}
           fullWidth={true}
+          id="advancedSearchButton"
           onClick={[Function]}
           type="submit"
           variant="contained"
@@ -2187,6 +2194,7 @@ exports[`AdvancedSearchComponent should toggle minimised view for advanced searc
           color="primary"
           disabled={false}
           fullWidth={true}
+          id="advancedSearchButton"
           onClick={[Function]}
           type="submit"
           variant="contained"

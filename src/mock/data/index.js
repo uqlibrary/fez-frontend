@@ -17,8 +17,13 @@ export {
     recordWithoutAuthorIds,
     communityRecord,
     collectionRecord,
-    recordWithDatastreams
+    recordWithDatastreams,
+    incompleteNTROlist,
+    incompleteNTROrecord,
+    incompleteNTROrecordUqrdav10,
+    incompleteNTROrecordUqsbutl1,
 } from './records';
+
 export {vocabulariesList} from './vocabularies';
 export {quickTemplates} from './acml';
 export {hindexResponse, trendingPublications, currentAuthorStats} from './academicStats';

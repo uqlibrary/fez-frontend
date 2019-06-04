@@ -15,11 +15,11 @@ exports[`Index page should render placeholders 1`] = `
         ],
         "results": Array [
           Object {
-            "isThrow": false,
+            "type": "return",
             "value": undefined,
           },
           Object {
-            "isThrow": false,
+            "type": "return",
             "value": undefined,
           },
         ],
@@ -33,19 +33,19 @@ exports[`Index page should render placeholders 1`] = `
         ],
         "results": Array [
           Object {
-            "isThrow": false,
+            "type": "return",
             "value": Immutable.Map {},
           },
           Object {
-            "isThrow": false,
+            "type": "return",
             "value": Immutable.Map {},
           },
           Object {
-            "isThrow": false,
+            "type": "return",
             "value": Immutable.Map {},
           },
           Object {
-            "isThrow": false,
+            "type": "return",
             "value": Immutable.Map {},
           },
         ],
@@ -61,11 +61,11 @@ exports[`Index page should render placeholders 1`] = `
         ],
         "results": Array [
           Object {
-            "isThrow": false,
+            "type": "return",
             "value": undefined,
           },
           Object {
-            "isThrow": false,
+            "type": "return",
             "value": undefined,
           },
         ],
@@ -564,7 +564,7 @@ exports[`Index page should render placeholders 1`] = `
               ],
               "results": Array [
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
               ],
@@ -2021,7 +2021,10 @@ exports[`Index page should render placeholders 1`] = `
                                                           "clearSessionExpiredFlag": [Function],
                                                           "clearThirdPartyLookup": [Function],
                                                           "collectionsList": [Function],
+                                                          "communitiesList": [Function],
                                                           "countPossiblyYourPublications": [Function],
+                                                          "createCollection": [Function],
+                                                          "createCommunity": [Function],
                                                           "createNewRecord": [Function],
                                                           "createSearchPromise": [Function],
                                                           "dismissAppAlert": [Function],
@@ -2064,6 +2067,7 @@ exports[`Index page should render placeholders 1`] = `
                                                           "unclaimRecord": [Function],
                                                           "updateCurrentAuthor": [Function],
                                                           "updateSecurity": [Function],
+                                                          "updateIncompleteRecord": [Function],
                                                         }
                                                       }
                                                       history={
@@ -2127,7 +2131,10 @@ exports[`Index page should render placeholders 1`] = `
                                                             "clearSessionExpiredFlag": [Function],
                                                             "clearThirdPartyLookup": [Function],
                                                             "collectionsList": [Function],
+                                                            "communitiesList": [Function],
                                                             "countPossiblyYourPublications": [Function],
+                                                            "createCollection": [Function],
+                                                            "createCommunity": [Function],
                                                             "createNewRecord": [Function],
                                                             "createSearchPromise": [Function],
                                                             "dismissAppAlert": [Function],
@@ -2170,6 +2177,7 @@ exports[`Index page should render placeholders 1`] = `
                                                             "unclaimRecord": [Function],
                                                             "updateCurrentAuthor": [Function],
                                                             "updateSecurity": [Function],
+                                                            "updateIncompleteRecord": [Function],
                                                           }
                                                         }
                                                         classes={
@@ -2240,7 +2248,10 @@ exports[`Index page should render placeholders 1`] = `
                                                               "clearSessionExpiredFlag": [Function],
                                                               "clearThirdPartyLookup": [Function],
                                                               "collectionsList": [Function],
+                                                              "communitiesList": [Function],
                                                               "countPossiblyYourPublications": [Function],
+                                                              "createCollection": [Function],
+                                                              "createCommunity": [Function],
                                                               "createNewRecord": [Function],
                                                               "createSearchPromise": [Function],
                                                               "dismissAppAlert": [Function],
@@ -2283,6 +2294,7 @@ exports[`Index page should render placeholders 1`] = `
                                                               "unclaimRecord": [Function],
                                                               "updateCurrentAuthor": [Function],
                                                               "updateSecurity": [Function],
+                                                              "updateIncompleteRecord": [Function],
                                                             }
                                                           }
                                                           classes={
@@ -2787,7 +2799,10 @@ exports[`Index page should render placeholders 1`] = `
                                                                 "clearSessionExpiredFlag": [Function],
                                                                 "clearThirdPartyLookup": [Function],
                                                                 "collectionsList": [Function],
+                                                                "communitiesList": [Function],
                                                                 "countPossiblyYourPublications": [Function],
+                                                                "createCollection": [Function],
+                                                                "createCommunity": [Function],
                                                                 "createNewRecord": [Function],
                                                                 "createSearchPromise": [Function],
                                                                 "dismissAppAlert": [Function],
@@ -2830,6 +2845,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                 "unclaimRecord": [Function],
                                                                 "updateCurrentAuthor": [Function],
                                                                 "updateSecurity": [Function],
+                                                                "updateIncompleteRecord": [Function],
                                                               }
                                                             }
                                                             classes={
@@ -4056,7 +4072,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                                           id="text"
                                                                                         >
                                                                                           <b>
-                                                                                            There has been an error - 
+                                                                                            There has been an error -
                                                                                           </b>
                                                                                           Trending publications are temporarily unavailable
                                                                                         </div>
@@ -6251,7 +6267,10 @@ exports[`Index page should render placeholders 1`] = `
                                                                   "clearSessionExpiredFlag": [Function],
                                                                   "clearThirdPartyLookup": [Function],
                                                                   "collectionsList": [Function],
+                                                                  "communitiesList": [Function],
                                                                   "countPossiblyYourPublications": [Function],
+                                                                  "createCollection": [Function],
+                                                                  "createCommunity": [Function],
                                                                   "createNewRecord": [Function],
                                                                   "createSearchPromise": [Function],
                                                                   "dismissAppAlert": [Function],
@@ -6294,6 +6313,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                   "unclaimRecord": [Function],
                                                                   "updateCurrentAuthor": [Function],
                                                                   "updateSecurity": [Function],
+                                                                  "updateIncompleteRecord": [Function],
                                                                 }
                                                               }
                                                             >
@@ -6311,7 +6331,10 @@ exports[`Index page should render placeholders 1`] = `
                                                                     "clearSessionExpiredFlag": [Function],
                                                                     "clearThirdPartyLookup": [Function],
                                                                     "collectionsList": [Function],
+                                                                    "communitiesList": [Function],
                                                                     "countPossiblyYourPublications": [Function],
+                                                                    "createCollection": [Function],
+                                                                    "createCommunity": [Function],
                                                                     "createNewRecord": [Function],
                                                                     "createSearchPromise": [Function],
                                                                     "dismissAppAlert": [Function],
@@ -6354,6 +6377,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                     "unclaimRecord": [Function],
                                                                     "updateCurrentAuthor": [Function],
                                                                     "updateSecurity": [Function],
+                                                                    "updateIncompleteRecord": [Function],
                                                                   }
                                                                 }
                                                                 classes={

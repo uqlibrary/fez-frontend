@@ -8,6 +8,7 @@ describe('Lazy-loaded components', () => {
         expect(JSON.stringify(pages.FixRecord())).toEqual(expectation);
         expect(JSON.stringify(pages.ClaimRecord())).toEqual(expectation);
         expect(JSON.stringify(pages.PossiblyMyRecords())).toEqual(expectation);
+        expect(JSON.stringify(pages.MyIncompleteRecord())).toEqual(expectation);
         expect(JSON.stringify(pages.Dashboard())).toEqual(expectation);
         expect(JSON.stringify(pages.Orcid())).toEqual(expectation);
         expect(JSON.stringify(pages.GoogleScholar())).toEqual(expectation);
@@ -18,6 +19,8 @@ describe('Lazy-loaded components', () => {
         expect(JSON.stringify(pages.ThirdPartyLookupTool())).toEqual(expectation);
         expect(JSON.stringify(pages.Prototype())).toEqual(expectation);
         expect(JSON.stringify(pages.Admin())).toEqual(expectation);
+        expect(JSON.stringify(pages.CollectionForm())).toEqual(expectation);
+        expect(JSON.stringify(pages.CommunityForm())).toEqual(expectation);
     });
 
 });

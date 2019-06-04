@@ -563,7 +563,15 @@ describe('getRecordAuthorsIdSearchKey test ', () => {
             {nameAsPublished: "Smith C.", disabled: false, selected: false, authorId: null},
             {nameAsPublished: "Smith D.", disabled: false, selected: false, aut_id: 1001}
         ];
-        const expected = {"fez_record_search_key_author_id": [{"rek_author_id": 0, "rek_author_id_order": 1}, {"rek_author_id": 100, "rek_author_id_order": 2}, {"rek_author_id": 0, "rek_author_id_order": 3}, {"rek_author_id": 1001, "rek_author_id_order": 4}]};
+        const expected = {
+            "fez_record_search_key_author_id": [{
+                "rek_author_id": 0,
+                "rek_author_id_order": 1
+            }, {"rek_author_id": 100, "rek_author_id_order": 2}, {
+                "rek_author_id": 0,
+                "rek_author_id_order": 3
+            }, {"rek_author_id": 1001, "rek_author_id_order": 4}]
+        };
         const result = transformers.getRecordAuthorsIdSearchKey(input);
         expect(result).toEqual(expected);
     });
@@ -614,17 +622,14 @@ describe('getRecordContributorsSearchKey test ', () => {
         const expected = {
             fez_record_search_key_contributor: [
                 {
-                    rek_contributor_id: null,
                     rek_contributor: 'Smith A.',
                     rek_contributor_order: 1
                 },
                 {
-                    rek_contributor_id: null,
                     rek_contributor: 'Smith B.',
                     rek_contributor_order: 2
                 },
                 {
-                    rek_contributor_id: null,
                     rek_contributor: 'Smith C.',
                     rek_contributor_order: 3
                 }
@@ -780,7 +785,11 @@ describe('getDatasetCreatorRolesSearchKey tests', () => {
         };
         const result = transformers.getDatasetCreatorRolesSearchKey(input);
         expect(result).toEqual(expected);
-    })
+
+        expect(transformers.getDatasetCreatorRolesSearchKey([{}])).toEqual({
+            fez_record_search_key_author_role: [{}]
+        });
+    });
 });
 
 describe('getDatasetContactDetailSearchKeys tests', () => {
@@ -931,7 +940,7 @@ describe('getRecordAuthorAffiliationSearchKey tests', () => {
                 nameAsPublished: 'Test user',
                 creatorRole: '',
                 affiliation: 'UQ',
-                orgaff: '',
+                orgaff: 'The University of Queensland',
                 orgtype: '',
                 disabled: true,
                 selected: false,
@@ -990,7 +999,7 @@ describe('getRecordAuthorAffiliationSearchKey tests', () => {
                 nameAsPublished: 'Some user',
                 creatorRole: '',
                 affiliation: 'UQ',
-                orgaff: '',
+                orgaff: 'The University of Queensland',
                 orgtype: '',
                 disabled: true,
                 selected: false,
@@ -999,7 +1008,7 @@ describe('getRecordAuthorAffiliationSearchKey tests', () => {
         ];
         const expected = {
             "fez_record_search_key_author_affiliation_name": [{
-                "rek_author_affiliation_name": "University of Queensland",
+                "rek_author_affiliation_name": "The University of Queensland",
                 "rek_author_affiliation_name_order": 1
             }, {
                 "rek_author_affiliation_name": "Test organisation",
@@ -1008,7 +1017,128 @@ describe('getRecordAuthorAffiliationSearchKey tests', () => {
                 "rek_author_affiliation_name": "Some Organisation",
                 "rek_author_affiliation_name_order": 3
             }, {
-                "rek_author_affiliation_name": "University of Queensland",
+                "rek_author_affiliation_name": "The University of Queensland",
+                "rek_author_affiliation_name_order": 4
+            }
+            ]
+        };
+        const result = transformers.getRecordAuthorAffiliationSearchKey(input);
+        expect(result).toEqual(expected);
+    });
+
+    it('should return search key with data with affiliation empty for already linked authors', () => {
+        const input = [
+            {
+                value: 'Professor Del Mar, Christopher B. (mdcmar) ',
+                id: 553,
+                aut_id: 553,
+                aut_org_username: 'mdcmar',
+                aut_org_staff_id: '0002633',
+                aut_org_student_id: null,
+                aut_email: null,
+                aut_display_name: 'Del Mar, Christopher B.',
+                aut_fname: 'Christopher',
+                aut_mname: 'Bernard',
+                aut_lname: 'Del Mar',
+                aut_title: 'Professor',
+                aut_position: '',
+                aut_homepage_link: '',
+                aut_created_date: null,
+                aut_update_date: '2010-10-08',
+                aut_external_id: '0000041362',
+                aut_ref_num: '',
+                aut_researcher_id: null,
+                aut_scopus_id: '',
+                aut_mypub_url: '',
+                aut_rid_password: null,
+                aut_people_australia_id: null,
+                aut_description: null,
+                aut_orcid_id: null,
+                aut_google_scholar_id: null,
+                aut_rid_last_updated: null,
+                aut_publons_id: null,
+                aut_student_username: null,
+                nameAsPublished: 'Test user',
+                creatorRole: '',
+                affiliation: 'UQ',
+                orgaff: 'The University of Queensland',
+                orgtype: '',
+                disabled: true,
+                selected: false,
+                authorId: null
+            },
+            {
+                nameAsPublished: 'Test user',
+                creatorRole: '',
+                affiliation: 'NotUQ',
+                orgaff: '',
+                orgtype: '',
+                disabled: false,
+                selected: true,
+                authorId: 410
+            },
+            {
+                nameAsPublished: 'Another user',
+                creatorRole: '',
+                affiliation: 'NotUQ',
+                orgaff: '',
+                orgtype: '',
+                disabled: false,
+                selected: false,
+                authorId: null
+            },
+            {
+                value: 'Emeritus Professor Critchley, Christa (uqccritc) ',
+                id: 608,
+                aut_id: 608,
+                aut_org_username: 'uqccritc',
+                aut_org_staff_id: '0002876',
+                aut_org_student_id: null,
+                aut_email: null,
+                aut_display_name: 'Critchley, Christa',
+                aut_fname: 'Christa',
+                aut_mname: null,
+                aut_lname: 'Critchley',
+                aut_title: 'Emeritus Professor',
+                aut_position: null,
+                aut_homepage_link: null,
+                aut_created_date: null,
+                aut_update_date: '2010-01-18',
+                aut_external_id: '0000041476',
+                aut_ref_num: null,
+                aut_researcher_id: null,
+                aut_scopus_id: null,
+                aut_mypub_url: null,
+                aut_rid_password: null,
+                aut_people_australia_id: null,
+                aut_description: null,
+                aut_orcid_id: null,
+                aut_google_scholar_id: null,
+                aut_rid_last_updated: null,
+                aut_publons_id: null,
+                aut_student_username: null,
+                nameAsPublished: 'Some user',
+                creatorRole: '',
+                affiliation: 'UQ',
+                orgaff: 'The University of Queensland',
+                orgtype: '',
+                disabled: true,
+                selected: false,
+                authorId: null
+            }
+        ];
+        const expected = {
+            "fez_record_search_key_author_affiliation_name": [{
+                "rek_author_affiliation_name": "The University of Queensland",
+                "rek_author_affiliation_name_order": 1
+            }, {
+                "rek_author_affiliation_name": "Missing",
+                "rek_author_affiliation_name_order": 2
+            }, {
+                "rek_author_affiliation_name": "Missing",
+                "rek_author_affiliation_name_order": 3
+            }, {
+                "rek_author_affiliation_name": "The University of Queensland",
                 "rek_author_affiliation_name_order": 4
             }
             ]
@@ -1059,7 +1189,7 @@ describe('getRecordAuthorAffiliationTypeSearchKey tests', () => {
                 creatorRole: '',
                 affiliation: 'UQ',
                 orgaff: '',
-                orgtype: '',
+                orgtype: '453989',
                 disabled: true,
                 selected: false,
                 authorId: null
@@ -1118,7 +1248,7 @@ describe('getRecordAuthorAffiliationTypeSearchKey tests', () => {
                 creatorRole: '',
                 affiliation: 'UQ',
                 orgaff: '',
-                orgtype: '',
+                orgtype: '453989',
                 disabled: true,
                 selected: false,
                 authorId: null
@@ -1134,7 +1264,130 @@ describe('getRecordAuthorAffiliationTypeSearchKey tests', () => {
             }, {
                 "rek_author_affiliation_type": 453987,
                 "rek_author_affiliation_type_order": 3
-            }, {"rek_author_affiliation_type": 453989, "rek_author_affiliation_type_order": 4}]
+            }, {
+                "rek_author_affiliation_type": 453989,
+                "rek_author_affiliation_type_order": 4
+            }]
+        };
+        const result = transformers.getRecordAuthorAffiliationTypeSearchKey(input);
+        expect(result).toEqual(expected);
+    });
+
+    it('should return search key with data for already linked authors', () => {
+        const input = [
+            {
+                value: 'Professor Del Mar, Christopher B. (mdcmar) ',
+                id: 553,
+                aut_id: 553,
+                aut_org_username: 'mdcmar',
+                aut_org_staff_id: '0002633',
+                aut_org_student_id: null,
+                aut_email: null,
+                aut_display_name: 'Del Mar, Christopher B.',
+                aut_fname: 'Christopher',
+                aut_mname: 'Bernard',
+                aut_lname: 'Del Mar',
+                aut_title: 'Professor',
+                aut_position: '',
+                aut_homepage_link: '',
+                aut_created_date: null,
+                aut_update_date: '2010-10-08',
+                aut_external_id: '0000041362',
+                aut_ref_num: '',
+                aut_researcher_id: null,
+                aut_scopus_id: '',
+                aut_mypub_url: '',
+                aut_rid_password: null,
+                aut_people_australia_id: null,
+                aut_description: null,
+                aut_orcid_id: null,
+                aut_google_scholar_id: null,
+                aut_rid_last_updated: null,
+                aut_publons_id: null,
+                aut_student_username: null,
+                nameAsPublished: 'Test user',
+                creatorRole: '',
+                affiliation: 'UQ',
+                orgaff: '',
+                orgtype: '453989',
+                disabled: true,
+                selected: false,
+                authorId: null
+            },
+            {
+                nameAsPublished: 'Test user',
+                creatorRole: '',
+                affiliation: 'NotUQ',
+                orgaff: 'Test organisation',
+                orgtype: '453983',
+                disabled: false,
+                selected: true,
+                authorId: 410
+            },
+            {
+                nameAsPublished: 'Another user',
+                creatorRole: '',
+                affiliation: 'NotUQ',
+                orgaff: '',
+                orgtype: '',
+                disabled: false,
+                selected: false,
+                authorId: null
+            },
+            {
+                value: 'Emeritus Professor Critchley, Christa (uqccritc) ',
+                id: 608,
+                aut_id: 608,
+                aut_org_username: 'uqccritc',
+                aut_org_staff_id: '0002876',
+                aut_org_student_id: null,
+                aut_email: null,
+                aut_display_name: 'Critchley, Christa',
+                aut_fname: 'Christa',
+                aut_mname: null,
+                aut_lname: 'Critchley',
+                aut_title: 'Emeritus Professor',
+                aut_position: null,
+                aut_homepage_link: null,
+                aut_created_date: null,
+                aut_update_date: '2010-01-18',
+                aut_external_id: '0000041476',
+                aut_ref_num: null,
+                aut_researcher_id: null,
+                aut_scopus_id: null,
+                aut_mypub_url: null,
+                aut_rid_password: null,
+                aut_people_australia_id: null,
+                aut_description: null,
+                aut_orcid_id: null,
+                aut_google_scholar_id: null,
+                aut_rid_last_updated: null,
+                aut_publons_id: null,
+                aut_student_username: null,
+                nameAsPublished: 'Some user',
+                creatorRole: '',
+                affiliation: 'UQ',
+                orgaff: '',
+                orgtype: '453989',
+                disabled: true,
+                selected: false,
+                authorId: null
+            }
+        ];
+        const expected = {
+            "fez_record_search_key_author_affiliation_type": [{
+                "rek_author_affiliation_type": 453989,
+                "rek_author_affiliation_type_order": 1
+            }, {
+                "rek_author_affiliation_type": 453983,
+                "rek_author_affiliation_type_order": 2
+            }, {
+                "rek_author_affiliation_type": 0,
+                "rek_author_affiliation_type_order": 3
+            }, {
+                "rek_author_affiliation_type": 453989,
+                "rek_author_affiliation_type_order": 4
+            }]
         };
         const result = transformers.getRecordAuthorAffiliationTypeSearchKey(input);
         expect(result).toEqual(expected);
@@ -1194,6 +1447,12 @@ describe('getGrantsListSearchKey tests', () => {
         };
         const result = transformers.getGrantsListSearchKey(input);
         expect(result).toEqual(expected);
+
+        // Check defaults
+        expected.fez_record_search_key_grant_agency[0].rek_grant_agency = 'Not set';
+        expected.fez_record_search_key_grant_id[0].rek_grant_id = 'Not set';
+        expected.fez_record_search_key_grant_agency_type[0].rek_grant_agency_type = 454045;
+        expect(transformers.getGrantsListSearchKey([{}])).toEqual(expected);
     });
 
     it('should return search key with data filtered empty values', () => {
@@ -1213,86 +1472,76 @@ describe('getGrantsListSearchKey tests', () => {
         ];
 
         const expected = {
-            "fez_record_search_key_grant_agency": [
-                {
-                    "rek_grant_agency": "test",
-                    "rek_grant_agency_order": 1
-                },
-                {
-                    "rek_grant_agency": "Not set",
-                    "rek_grant_agency_order": 2
-                },
-                {
-                    "rek_grant_agency": "tested",
-                    "rek_grant_agency_order": 3
-                }
-            ],
-            "fez_record_search_key_grant_agency_type": [
-                {
-                    "rek_grant_agency_type": 454045,
-                    "rek_grant_agency_type_order": 1
-                },
-                {
-                    "rek_grant_agency_type": 12345,
-                    "rek_grant_agency_type_order": 2
-                },
-                {
-                    "rek_grant_agency_type": 56465,
-                    "rek_grant_agency_type_order": 3
-                }
-            ],
-            "fez_record_search_key_grant_id": [
-                {
-                    "rek_grant_id": "test123",
-                    "rek_grant_id_order": 1
-                },
-                {
-                    "rek_grant_id": "testing123",
-                    "rek_grant_id_order": 2
-                },
-                {
-                    "rek_grant_id": "Not set",
-                    "rek_grant_id_order": 3
-                }
-            ]
+            "fez_record_search_key_grant_agency": [{
+                "rek_grant_agency": "test",
+                "rek_grant_agency_order": 1
+            }, {
+                "rek_grant_agency": "testing",
+                "rek_grant_agency_order": 2
+            }, {
+                "rek_grant_agency": "tested",
+                "rek_grant_agency_order": 3
+            }],
+            "fez_record_search_key_grant_agency_type": [{
+                "rek_grant_agency_type": 454045,
+                "rek_grant_agency_type_order": 1
+            }, {
+                "rek_grant_agency_type": 12345,
+                "rek_grant_agency_type_order": 2
+            }, {
+                "rek_grant_agency_type": 56465,
+                "rek_grant_agency_type_order": 3
+            }],
+            "fez_record_search_key_grant_id": [{
+                "rek_grant_id": "test123",
+                "rek_grant_id_order": 1
+            }, {
+                "rek_grant_id": "testing123",
+                "rek_grant_id_order": 2
+            }, {
+                "rek_grant_id": "Not set",
+                "rek_grant_id_order": 3
+            }]
         };
         const result = transformers.getGrantsListSearchKey(input);
         expect(result).toEqual(expected);
     });
 });
 
-describe('getLanguageSearchKey()', () => {
-    it('should return empty object if input is falsy or empty array', () => {
-        expect(transformers.getLanguageSearchKey()).toEqual({});
-        expect(transformers.getLanguageSearchKey([])).toEqual({});
-    });
+describe('getLanguageSearchKey', () => {
+    it('should return language search keys', () => {
+        const input = [
+            'test1',
+            'test2'
+        ];
+        const expected = {
+            fez_record_search_key_language: [
+                {
+                    rek_language: 'test1',
+                    rek_language_order: 1
+                },
+                {
+                    rek_language: 'test2',
+                    rek_language_order: 2
+                },
+            ]
+        };
+        expect(transformers.getLanguageSearchKey(input)).toEqual(expected);
 
-    it('should return lanugage search key', () => {
-        const test = {};
-        expect(transformers.getLanguageSearchKey([test])).toEqual({
+        const expectedDefault = {
             fez_record_search_key_language: [{
-                rek_language: test,
+                rek_language: 'eng',
                 rek_language_order: 1
-            }]
-        });
+            }],
+        };
+        expect(transformers.getLanguageSearchKey([])).toEqual(expectedDefault);
     });
 });
 
-describe('getNtroMetadataSearchKeys tests',  () => {
-    it('should return empty object if input is falsy', () => {
-        expect(transformers.getNtroMetadataSearchKeys()).toEqual({});
-    });
-
-    it('should return empty object if authors data is empty', () => {
-        expect(transformers.getNtroMetadataSearchKeys({
-            authors: []
-        })).toEqual({});
-    });
-
+describe('getNtroMetadataSearchKeys tests', () => {
     it('should get ntro meta data', () => {
-        const testStatementText = 'test impact statement';
-        const testQualityIndicatorText = 'test quality Indicator'
-
+        expect(transformers.getNtroMetadataSearchKeys()).toEqual({});
+        expect(transformers.getNtroMetadataSearchKeys({})).toEqual({});
         const result = transformers.getNtroMetadataSearchKeys({
             authors: [{
                 rek_author_id: 111,
@@ -1305,45 +1554,346 @@ describe('getNtroMetadataSearchKeys tests',  () => {
                 selected: false
             }],
             significance: 'Major',
-            impactStatement: {
-                htmlText: testStatementText
+            impactStatement:  {
+                htmlText: 'test impact statement',
             },
-            qualityIndicators: [ testQualityIndicatorText ]
         });
 
         expect(result).toMatchObject({
-            fez_record_search_key_significance: [
-                {
-                    rek_significance: 'Major',
-                    rek_significance_order: 1
-                },
-                {
-                    rek_significance: 0,
-                    rek_significance_order: 2
-                },
-                {
-                    rek_significance: 0,
-                    rek_significance_order: 3
-                }
-            ],
-            fez_record_search_key_creator_contribution_statement: [
-                {
-                    rek_creator_contribution_statement: testStatementText,
-                    rek_creator_contribution_statement_order: 1
-                },
-                {
-                    rek_creator_contribution_statement: 'Statement missing.',
-                    rek_creator_contribution_statement_order: 2
-                },
-                {
-                    rek_creator_contribution_statement: 'Statement missing.',
-                    rek_creator_contribution_statement_order: 3
-                }
-            ],
-            fez_record_search_key_quality_indicator: [{
-                rek_quality_indicator: testQualityIndicatorText,
-                rek_quality_indicator_order: 1
+            "fez_record_search_key_creator_contribution_statement": [{
+                "rek_creator_contribution_statement": 'test impact statement',
+                "rek_creator_contribution_statement_order": 1
+            }, {
+                "rek_creator_contribution_statement": 'Missing',
+                "rek_creator_contribution_statement_order": 2
+            }, {
+                "rek_creator_contribution_statement": 'Missing',
+                "rek_creator_contribution_statement_order": 3
+            }],
+            "fez_record_search_key_significance": [{
+                "rek_significance": 'Major',
+                "rek_significance_order": 1
+            }, {
+                "rek_significance": 0,
+                "rek_significance_order": 2
+            }, {
+                "rek_significance": 0,
+                "rek_significance_order": 3
             }]
         });
-    })
+    });
+});
+
+describe('getQualityIndicatorSearchKey', () => {
+    it('should return quality indicator search key', () => {
+        expect(transformers.getQualityIndicatorSearchKey()).toEqual({});
+        const input = [ 'test' ];
+        const expected = {
+            fez_record_search_key_quality_indicator: [
+                {
+                    rek_quality_indicator: 'test',
+                    rek_quality_indicator_order: 1,
+                },
+            ],
+        };
+        expect(transformers.getQualityIndicatorSearchKey(input)).toEqual(expected);
+    });
+});
+
+describe('getAuthorOrder', () => {
+    it('returns author\'s order when a match it found', () => {
+        const data = {
+            author: {
+                aut_id: 99
+            },
+            publication: {
+                fez_record_search_key_author_id: [
+                    {
+                        rek_author_id: 99,
+                        rek_author_id_order: 1
+                    }
+                ]
+            }
+        }
+        expect(transformers.getAuthorOrder(data)).toBe(1);
+    });
+
+    it('returns -1 when a match is not found', () => {
+        const data = {
+            author: {
+                aut_id: 2
+            },
+            publication: {
+                fez_record_search_key_author_id: [
+                    {
+                        rek_author_id: 99,
+                        rek_author_id_order: 1
+                    }
+                ]
+            }
+        }
+        expect(transformers.getAuthorOrder(data)).toBe(-1);
+    });
+});
+
+describe('getSignificanceAndContributionStatementSearchKeys', () => {
+    it('returns empty object if data is null', () => {
+        expect(transformers.getSignificanceAndContributionStatementSearchKeys(null)).toEqual({});
+    });
+
+    it('returns empty object if data is undefined', () => {
+        expect(transformers.getSignificanceAndContributionStatementSearchKeys(undefined)).toEqual({});
+    });
+
+    it('returns correct object if impact statement is html text for non-admin author', () => {
+        expect(transformers.getSignificanceAndContributionStatementSearchKeys({
+            impactStatement: {
+                htmlText: '<p>test</p>'
+            },
+            author: {
+                aut_id: 3
+            },
+            publication: {
+                fez_record_search_key_author_id: [
+                    {
+                        rek_author_id: 3,
+                        rek_author_id_order: 2
+                    }
+                ]
+            }
+        })).toEqual({
+            fez_record_search_key_creator_contribution_statement: [{
+                rek_creator_contribution_statement: '<p>test</p>',
+                rek_creator_contribution_statement_order: 2
+            }]
+        });
+    });
+
+    it('returns correct object if impact statement is plain text for non-admin author', () => {
+        expect(transformers.getSignificanceAndContributionStatementSearchKeys({
+            impactStatement: {
+                plainText: 'test'
+            },
+            author: {
+                aut_id: 3
+            },
+            publication: {
+                fez_record_search_key_author_id: [
+                    {
+                        rek_author_id: 3,
+                        rek_author_id_order: 2
+                    }
+                ]
+            }
+        })).toEqual({
+            fez_record_search_key_creator_contribution_statement: [{
+                rek_creator_contribution_statement: 'test',
+                rek_creator_contribution_statement_order: 2
+            }]
+        });
+    });
+
+    it('returns correct object for siginificance for non-admin author', () => {
+        expect(transformers.getSignificanceAndContributionStatementSearchKeys({
+            significance: '1234',
+            author: {
+                aut_id: 3
+            },
+            publication: {
+                fez_record_search_key_author_id: [
+                    {
+                        rek_author_id: 3,
+                        rek_author_id_order: 2
+                    }
+                ]
+            }
+        })).toEqual({
+            fez_record_search_key_significance: [{
+                rek_significance: '1234',
+                rek_significance_order: 2
+            }]
+        });
+    });
+
+    it('returns contribution statement and significance search keys for non-admin author', () => {
+        expect(transformers.getSignificanceAndContributionStatementSearchKeys({
+            significance: '1234',
+            impactStatement: {
+                htmlText: '<span>test</span>'
+            },
+            initialContributionStatements: [],
+            initialSignificance: [],
+            author: {
+                aut_id: 3
+            },
+            publication: {
+                fez_record_search_key_author_id: [
+                    {
+                        rek_author_id: 3,
+                        rek_author_id_order: 2
+                    }
+                ]
+            }
+        })).toEqual({
+            fez_record_search_key_significance: [{
+                rek_significance: '1234',
+                rek_significance_order: 2
+            }],
+            fez_record_search_key_creator_contribution_statement: [{
+                rek_creator_contribution_statement: '<span>test</span>',
+                rek_creator_contribution_statement_order: 2
+            }]
+        });
+    });
+
+    it('returns correct contribution statement and significance search keys for admin author on author order matched', () => {
+        expect(transformers.getSignificanceAndContributionStatementSearchKeys({
+            significance: '1234',
+            impactStatement: {
+                htmlText: '<span>test</span>'
+            },
+            initialContributionStatements: [{
+                rek_creator_contribution_statement: 'Some statement',
+                rek_creator_contribution_statement_order: 1
+            }, {
+                rek_creator_contribution_statement: 'Missing',
+                rek_creator_contribution_statement_order: 2
+            }, {
+                rek_creator_contribution_statement: 'Missing',
+                rek_creator_contribution_statement_order: 3
+            }],
+            initialSignificance: [{
+                rek_significance: '1234',
+                rek_significance_order: 1
+            }, {
+                rek_significance: 0,
+                rek_significance_order: 2
+            }, {
+                rek_significance: 0,
+                rek_significance_order: 3
+            }],
+            author: {
+                aut_id: 3
+            },
+            publication: {
+                fez_record_search_key_author_id: [
+                    {
+                        rek_author_id: 3,
+                        rek_author_id_order: 2
+                    }
+                ]
+            }
+        })).toEqual({
+            fez_record_search_key_significance: [{
+                rek_significance: '1234',
+                rek_significance_order: 1
+            }, {
+                rek_significance: '1234',
+                rek_significance_order: 2
+            }, {
+                rek_significance: 0,
+                rek_significance_order: 3
+            }],
+            fez_record_search_key_creator_contribution_statement: [{
+                rek_creator_contribution_statement: 'Some statement',
+                rek_creator_contribution_statement_order: 1
+            }, {
+                rek_creator_contribution_statement: '<span>test</span>',
+                rek_creator_contribution_statement_order: 2
+            }, {
+                rek_creator_contribution_statement: 'Missing',
+                rek_creator_contribution_statement_order: 3
+            }]
+        });
+    });
+
+
+    it('returns correct contribution statement and significance search keys for admin author on author order not matched', () => {
+        expect(transformers.getSignificanceAndContributionStatementSearchKeys({
+            significance: '1234',
+            impactStatement: {
+                htmlText: '<span>test</span>'
+            },
+            initialContributionStatements: [{
+                rek_creator_contribution_statement: 'Some statement',
+                rek_creator_contribution_statement_order: 1
+            }, {
+                rek_creator_contribution_statement: 'Missing',
+                rek_creator_contribution_statement_order: 2
+            }, {
+                rek_creator_contribution_statement: 'Missing',
+                rek_creator_contribution_statement_order: 3
+            }],
+            initialSignificance: [{
+                rek_significance: '1234',
+                rek_significance_order: 1
+            }, {
+                rek_significance: 0,
+                rek_significance_order: 2
+            }, {
+                rek_significance: 0,
+                rek_significance_order: 3
+            }],
+            author: {
+                aut_id: 3
+            },
+            publication: {
+                fez_record_search_key_author_id: [
+                    {
+                        rek_author_id: 3,
+                        rek_author_id_order: 4
+                    }
+                ]
+            }
+        })).toEqual({
+            fez_record_search_key_significance: [{
+                rek_significance: '1234',
+                rek_significance_order: 1
+            }, {
+                rek_significance: 0,
+                rek_significance_order: 2
+            }, {
+                rek_significance: 0,
+                rek_significance_order: 3
+            }, {
+                rek_significance: '1234',
+                rek_significance_order: 4
+            }],
+            fez_record_search_key_creator_contribution_statement: [{
+                rek_creator_contribution_statement: 'Some statement',
+                rek_creator_contribution_statement_order: 1
+            }, {
+                rek_creator_contribution_statement: 'Missing',
+                rek_creator_contribution_statement_order: 2
+            }, {
+                rek_creator_contribution_statement: 'Missing',
+                rek_creator_contribution_statement_order: 3
+            }, {
+                rek_creator_contribution_statement: '<span>test</span>',
+                rek_creator_contribution_statement_order: 4
+            }]
+        });
+    });
+});
+
+describe('getExternalSourceIdSearchKeys', () => {
+    it('should return formatted search keys for external sources', () => {
+        const data = [
+            { source: 'crossref', id: 'test1' },
+            { source: 'scopus', id: 'test2' },
+            { source: 'wos', id: 'test3' },
+        ];
+        const expected = {
+            fez_record_search_key_doi: {
+                rek_doi: 'test1',
+            },
+            fez_record_search_key_scopus_id: {
+                rek_scopus_id: 'test2',
+            },
+            fez_record_search_key_isi_loc: {
+                rek_isi_loc: 'test3',
+            },
+        };
+        expect(transformers.getExternalSourceIdSearchKeys(data)).toEqual(expected);
+    });
 });

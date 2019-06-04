@@ -5,24 +5,43 @@ import List from '@material-ui/core/List';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 
-import {publicationTypes, general} from 'config';
+import {publicationTypes} from 'config';
 import {locale} from 'locale';
 import DateRange from './DateRange';
 import OpenAccessFilter from './OpenAccessFilter';
 import FacetFilterListItem from './FacetFilterListItem';
 import FacetFilterNestedListItem from './FacetFilterNestedListItem';
 
+export const FacetFilterNestedListItemsList = React.memo(
+    function FacetFilterNestedListItemsList({facetCategory, disabled, activeFacets, handleFacetClick, isFacetFilterActive}) {
+        return facetCategory.facets.map((item, index) => {
+            const isActive = isFacetFilterActive(activeFacets, facetCategory.facetTitle, item.key);
+            return (
+                <FacetFilterNestedListItem
+                    key={index}
+                    index={index}
+                    onFacetClick={handleFacetClick(facetCategory.facetTitle, item.key)}
+                    isActive={isActive}
+                    primaryText={`${item.title} (${item.count})`}
+                    disabled={disabled}
+                />
+            );
+        });
+    }
+);
+
+
 export default class FacetsFilter extends PureComponent {
     static propTypes = {
         facetsData: PropTypes.object,
         onFacetsChanged: PropTypes.func,
         activeFacets: PropTypes.object,
+        initialFacets: PropTypes.object,
         excludeFacetsList: PropTypes.array,
         renameFacetsList: PropTypes.object,
         lookupFacetsList: PropTypes.object,
         disabled: PropTypes.bool,
-        showOpenAccessFilter: PropTypes.bool,
-        isMyDataSetPage: PropTypes.bool
+        showOpenAccessFilter: PropTypes.bool
     };
 
     static defaultProps = {
@@ -37,7 +56,11 @@ export default class FacetsFilter extends PureComponent {
 
         // always keep props/state in sync
         this.state = {
-            activeFacets: props.activeFacets,
+            activeFacets: {
+                ...props.activeFacets,
+                ...props.initialFacets
+            },
+            hasActiveFilters: false,
             toggledFacets: {}
         };
     }
@@ -66,7 +89,8 @@ export default class FacetsFilter extends PureComponent {
         }
 
         this.setState({
-            activeFacets: activeFacets
+            activeFacets: activeFacets,
+            hasActiveFilters: this.hasActiveFilters(activeFacets)
         }, () => {
             this.props.onFacetsChanged(this.state.activeFacets);
         });
@@ -77,11 +101,14 @@ export default class FacetsFilter extends PureComponent {
             return;
         }
 
+        const activeFacets = {
+            ...this.state.activeFacets,
+            showOpenAccessOnly: isActive
+        };
+
         this.setState({
-            activeFacets: {
-                ...this.state.activeFacets,
-                showOpenAccessOnly: isActive
-            }
+            activeFacets,
+            hasActiveFilters: this.hasActiveFilters(activeFacets)
         }, () => {
             this.props.onFacetsChanged(this.state.activeFacets);
         });
@@ -104,22 +131,19 @@ export default class FacetsFilter extends PureComponent {
             activeFacets.ranges[category] = range;
         }
         this.setState({
-            activeFacets: activeFacets
+            activeFacets: activeFacets,
+            hasActiveFilters: this.hasActiveFilters(activeFacets)
         }, () => {
             this.props.onFacetsChanged(this.state.activeFacets);
         });
     };
 
     _handleResetClick = () => {
-        let filters = {};
-        if (this.props.isMyDataSetPage) {
-            // wipe the facets, except for the hidden display type
-            filters = {'Display type': general.PUBLICATION_TYPE_DATA_COLLECTION};
-        }
         this.setState({
             activeFacets: {
-                filters: filters,
-                ranges: {}
+                filters: {},
+                ranges: {},
+                ...(this.props.initialFacets || {})
             }
         }, () => {
             this.props.onFacetsChanged(this.state.activeFacets);
@@ -190,27 +214,6 @@ export default class FacetsFilter extends PureComponent {
         return facetsToDisplay;
     };
 
-    // My Dataset pages ('Display type = 371') do not display publication types in the filter.
-    // Remove the 'Display type' filter (locally), then see if there are still any filters.
-    areClientFiltersAvailable() {
-        if (!this.props.isMyDataSetPage) {
-            return Object.keys(this.state.activeFacets.filters).length > 0;
-        }
-
-        const localFilters = Object.assign({}, this.state.activeFacets.filters);
-        if (Object.keys(localFilters).length > 0 &&
-            localFilters.hasOwnProperty('Display type') &&
-            localFilters['Display type'] === general.PUBLICATION_TYPE_DATA_COLLECTION) {
-            delete localFilters['Display type'];
-
-            // return true if there is any other filters in array
-            return Object.keys(localFilters).length > 0;
-        } else {
-            // this shouldnt be reachable - if its a dataset page it should always have at least one filter
-            return Object.keys(this.state.activeFacets.filters).length > 0;
-        }
-    }
-
     toggleFacet = (item) => () => {
         this.setState({
             toggledFacets: {
@@ -220,30 +223,46 @@ export default class FacetsFilter extends PureComponent {
         });
     };
 
+    hasActiveFilters = (activeFacets) => (
+        Object.keys(activeFacets.filters)
+            .filter(
+                filter => !this.props.excludeFacetsList.includes(filter)
+            ).length > 0
+        || Object.keys(activeFacets.ranges).length > 0
+        || !!activeFacets.showOpenAccessOnly
+    );
+
     render() {
         const {yearPublishedCategory, yearPublishedFacet, resetButtonText, openAccessFilter} = locale.components.facetsFilter;
         const facetsToDisplay = this.getFacetsToDisplay(this.props.facetsData, this.props.excludeFacetsList, this.props.renameFacetsList, this.props.lookupFacetsList);
-        const hasActiveFilters = (this.areClientFiltersAvailable()
-            || Object.keys(this.state.activeFacets.ranges).length > 0
-            || !!this.state.activeFacets.showOpenAccessOnly);
-        if (facetsToDisplay.length === 0 && !hasActiveFilters) return (<span className="facetsFilter empty" />);
+
+        if (facetsToDisplay.length === 0 && !this.state.hasActiveFilters) {
+            return (<span className="facetsFilter empty" />);
+        }
+
         return (
             <div className="facetsFilter">
                 <List component="nav" dense>
                     {
-                        facetsToDisplay.map((item, index) => {
+                        facetsToDisplay.map((item) => {
                             // const isActive = this.state.activeFacets.filters.hasOwnProperty(item.title);
-                            const nestedItems = this.getNestedListItems(item);
                             return (
                                 <FacetFilterListItem
                                     id={`facet-category-${item.facetTitle.replace(' ', '-')}`}
-                                    key={`${index}`}
+                                    key={`facet-category-${item.facetTitle.replace(' ', '-')}`}
                                     facetTitle={item.title}
                                     disabled={this.props.disabled}
                                     onToggle={this.toggleFacet(item.facetTitle)}
-                                    nestedItems={nestedItems}
                                     open={this.state.toggledFacets[item.facetTitle]}
-                                />
+                                >
+                                    <FacetFilterNestedListItemsList
+                                        facetCategory={item}
+                                        disabled={this.props.disabled}
+                                        activeFacets={this.state.activeFacets}
+                                        handleFacetClick={this._handleFacetClick}
+                                        isFacetFilterActive={this.isFacetFilterActive}
+                                    />
+                                </FacetFilterListItem>
                             );
                         })
                     }
@@ -271,7 +290,7 @@ export default class FacetsFilter extends PureComponent {
                     }
                 </List>
                 {
-                    hasActiveFilters &&
+                    this.state.hasActiveFilters &&
                     <Grid container justify="flex-end">
                         <Grid item>
                             <Button variant="contained" onClick={this._handleResetClick}>

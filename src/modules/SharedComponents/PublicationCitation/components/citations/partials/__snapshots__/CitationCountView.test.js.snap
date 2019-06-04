@@ -5,6 +5,7 @@ exports[`CitationCountView test  should render component with given count 1`] = 
   classes={
     Object {
       "citationCount": "CitationCountView-citationCount-1",
+      "citationCountNumber": "CitationCountView-citationCountNumber-2",
     }
   }
   count={4}

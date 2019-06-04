@@ -4,6 +4,7 @@ import {accounts} from 'mock/data/account';
 import {locale} from 'locale';
 import {APP_URL} from 'config';
 import Immutable from 'immutable';
+import {MEDIATED_ACCESS_ID} from 'config/general';
 
 describe('Validation method', () => {
     it('should validate required', () => {
@@ -135,10 +136,15 @@ describe('Validation method', () => {
         expect(validation.isValidGoogleScholarId('rtgtwDFRjuH')).toEqual(locale.validationErrors.googleScholarId);
     });
 
+    it('should validate if the grants form is currently poplated', () => {
+        expect(validation.grantFormIsPopulated(true)).toEqual(locale.validationErrors.grants);
+        expect(validation.grantFormIsPopulated({grantAgencyName: '', grantId: '', grantAgencyType: ''})).toEqual(undefined);
+    });
+
     it('should conditionally validate file uploader based on open access value', () => {
         expect(validation.fileUploadNotRequiredForMediated(undefined, Immutable.Map({}))).toEqual(locale.validationErrors.fileUploadRequired);
         expect(validation.fileUploadNotRequiredForMediated(undefined, Immutable.Map({
-            fez_record_search_key_access_conditions: {rek_access_conditions: 'Mediated Access'}
+            fez_record_search_key_access_conditions: {rek_access_conditions: MEDIATED_ACCESS_ID}
         }))).toEqual(undefined);
     });
 });
