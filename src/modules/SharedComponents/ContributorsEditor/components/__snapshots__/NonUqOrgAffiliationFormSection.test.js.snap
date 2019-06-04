@@ -30,18 +30,13 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with both
     >
       <WithStyles(WithFormControlContext(InputLabel))>
         Organisation type
-<<<<<<< HEAD
       </WithStyles(WithFormControlContext(InputLabel))>
       <WithStyles(WithFormControlContext(Select))
-=======
-      </WithStyles(InputLabel)>
-      <WithStyles(Select)
         SelectDisplayProps={
           Object {
             "id": "org-affiliation-type",
           }
         }
->>>>>>> master
         onChange={[MockFunction]}
         value="453987"
       >
@@ -134,18 +129,13 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with defa
     >
       <WithStyles(WithFormControlContext(InputLabel))>
         Organisation type
-<<<<<<< HEAD
       </WithStyles(WithFormControlContext(InputLabel))>
       <WithStyles(WithFormControlContext(Select))
-=======
-      </WithStyles(InputLabel)>
-      <WithStyles(Select)
         SelectDisplayProps={
           Object {
             "id": "org-affiliation-type",
           }
         }
->>>>>>> master
         onChange={[MockFunction]}
         value=""
       >
@@ -238,18 +228,13 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with orga
     >
       <WithStyles(WithFormControlContext(InputLabel))>
         Organisation type
-<<<<<<< HEAD
       </WithStyles(WithFormControlContext(InputLabel))>
       <WithStyles(WithFormControlContext(Select))
-=======
-      </WithStyles(InputLabel)>
-      <WithStyles(Select)
         SelectDisplayProps={
           Object {
             "id": "org-affiliation-type",
           }
         }
->>>>>>> master
         onChange={[MockFunction]}
         value="453987"
       >
@@ -342,18 +327,13 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with orga
     >
       <WithStyles(WithFormControlContext(InputLabel))>
         Organisation type
-<<<<<<< HEAD
       </WithStyles(WithFormControlContext(InputLabel))>
       <WithStyles(WithFormControlContext(Select))
-=======
-      </WithStyles(InputLabel)>
-      <WithStyles(Select)
         SelectDisplayProps={
           Object {
             "id": "org-affiliation-type",
           }
         }
->>>>>>> master
         onChange={[MockFunction]}
         value=""
       >

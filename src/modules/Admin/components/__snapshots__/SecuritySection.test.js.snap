@@ -145,7 +145,7 @@ exports[`SecuritySection component should render properly for a Superadmin 1`] =
     item={true}
     xs={12}
   >
-    <[object Object]
+    <Memo(WithStyles(RecordContextWrapper))
       disabled={false}
       text={
         Object {
@@ -234,7 +234,7 @@ exports[`SecuritySection component should render record edit form for an Admin 1
     item={true}
     xs={12}
   >
-    <[object Object]
+    <Memo(WithStyles(RecordContextWrapper))
       disabled={false}
       text={
         Object {

@@ -266,18 +266,11 @@ exports[`Application component Should display mobile correctly 1`] = `
       }
       onRef={[Function]}
     />
-<<<<<<< HEAD
-=======
     <WithStyles(Grid)
       alignContent="center"
       alignItems="center"
       container={true}
       justify="center"
-      style={
-        Object {
-          "marginBottom": 12,
-        }
-      }
     >
       <WithStyles(Grid)
         item={true}
@@ -297,7 +290,6 @@ exports[`Application component Should display mobile correctly 1`] = `
         />
       </WithStyles(Grid)>
     </WithStyles(Grid)>
->>>>>>> master
     <Connect(AppAlert) />
     <Switch>
       <Route
@@ -805,18 +797,11 @@ exports[`Application component should determine if it has incomplete works from 
       }
       onRef={[Function]}
     />
-<<<<<<< HEAD
-=======
     <WithStyles(Grid)
       alignContent="center"
       alignItems="center"
       container={true}
       justify="center"
-      style={
-        Object {
-          "marginBottom": 12,
-        }
-      }
     >
       <WithStyles(Grid)
         item={true}
@@ -834,7 +819,6 @@ exports[`Application component should determine if it has incomplete works from 
         />
       </WithStyles(Grid)>
     </WithStyles(Grid)>
->>>>>>> master
     <Connect(AppAlert) />
     <Switch>
       <Route
@@ -1532,11 +1516,6 @@ exports[`Application component should determine if it has incomplete works from 
       alignItems="center"
       container={true}
       justify="center"
-      style={
-        Object {
-          "marginBottom": 12,
-        }
-      }
     >
       <WithStyles(Grid)
         item={true}
@@ -2067,11 +2046,6 @@ exports[`Application component should redirect to login page with correct return
       alignItems="center"
       container={true}
       justify="center"
-      style={
-        Object {
-          "marginBottom": 12,
-        }
-      }
     >
       <WithStyles(Grid)
         item={true}
@@ -2592,18 +2566,11 @@ exports[`Application component should render alert if user is not fez author 1`]
       }
       onRef={[Function]}
     />
-<<<<<<< HEAD
-=======
     <WithStyles(Grid)
       alignContent="center"
       alignItems="center"
       container={true}
       justify="center"
-      style={
-        Object {
-          "marginBottom": 12,
-        }
-      }
     >
       <WithStyles(Grid)
         item={true}
@@ -2621,7 +2588,6 @@ exports[`Application component should render alert if user is not fez author 1`]
         />
       </WithStyles(Grid)>
     </WithStyles(Grid)>
->>>>>>> master
     <Connect(AppAlert) />
     <Switch>
       <Route
@@ -3831,18 +3797,11 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
       }
       onRef={[Function]}
     />
-<<<<<<< HEAD
-=======
     <WithStyles(Grid)
       alignContent="center"
       alignItems="center"
       container={true}
       justify="center"
-      style={
-        Object {
-          "marginBottom": 12,
-        }
-      }
     >
       <WithStyles(Grid)
         item={true}
@@ -3860,7 +3819,6 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
         />
       </WithStyles(Grid)>
     </WithStyles(Grid)>
->>>>>>> master
     <Connect(AppAlert) />
     <Switch>
       <Route
@@ -5055,18 +5013,11 @@ exports[`Application component should render app for account with fez author wit
       }
       onRef={[Function]}
     />
-<<<<<<< HEAD
-=======
     <WithStyles(Grid)
       alignContent="center"
       alignItems="center"
       container={true}
       justify="center"
-      style={
-        Object {
-          "marginBottom": 12,
-        }
-      }
     >
       <WithStyles(Grid)
         item={true}
@@ -5086,7 +5037,6 @@ exports[`Application component should render app for account with fez author wit
         />
       </WithStyles(Grid)>
     </WithStyles(Grid)>
->>>>>>> master
     <Connect(AppAlert) />
     <Switch>
       <Route
@@ -11471,11 +11421,8 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                               "submitThesis": [Function],
                                                               "unclaimRecord": [Function],
                                                               "updateCurrentAuthor": [Function],
-<<<<<<< HEAD
-                                                              "updateSecurity": [Function],
-=======
                                                               "updateIncompleteRecord": [Function],
->>>>>>> master
+                                                              "updateSecurity": [Function],
                                                             }
                                                           }
                                                           autoFocus={true}
@@ -12984,12 +12931,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                           variant="standard"
                                                                                         >
                                                                                           <div
-<<<<<<< HEAD
-                                                                                            aria-label="Enter your search query to search eSpace and then press Enter"
                                                                                             className="MuiFormControl-root-289 MuiFormControl-fullWidth-292"
-=======
-                                                                                            className="MuiFormControl-root-283 MuiFormControl-fullWidth-286"
->>>>>>> master
                                                                                             onKeyPress={[Function]}
                                                                                           >
                                                                                             <WithStyles(Input)
@@ -13138,7 +13080,13 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                         }
                                                                                                       }
                                                                                                       fullWidth={true}
+                                                                                                      id="simpleSearchField"
                                                                                                       inputComponent="input"
+                                                                                                      inputProps={
+                                                                                                        Object {
+                                                                                                          "aria-label": "Enter your search query to search eSpace and then press Enter",
+                                                                                                        }
+                                                                                                      }
                                                                                                       muiFormControl={
                                                                                                         Object {
                                                                                                           "adornedStart": false,
@@ -13161,17 +13109,18 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                       type="search"
                                                                                                       value=""
                                                                                                     >
-<<<<<<< HEAD
                                                                                                       <div
                                                                                                         className="MuiInputBase-root-306 MuiInput-root-293 MuiInputBase-fullWidth-315 MuiInput-fullWidth-300 MuiInputBase-formControl-307 MuiInput-formControl-294"
                                                                                                         onClick={[Function]}
                                                                                                       >
                                                                                                         <input
                                                                                                           aria-invalid={null}
+                                                                                                          aria-label="Enter your search query to search eSpace and then press Enter"
                                                                                                           autoComplete="search"
                                                                                                           autoFocus={true}
                                                                                                           className="MuiInputBase-input-316 MuiInput-input-301 MuiInputBase-inputType-319 MuiInput-inputType-304 MuiInputBase-inputTypeSearch-320 MuiInput-inputTypeSearch-305"
                                                                                                           disabled={false}
+                                                                                                          id="simpleSearchField"
                                                                                                           onBlur={[Function]}
                                                                                                           onChange={[Function]}
                                                                                                           onFocus={[Function]}
@@ -13184,27 +13133,6 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                     </InputBase>
                                                                                                   </WithFormControlContext(InputBase)>
                                                                                                 </WithStyles(WithFormControlContext(InputBase))>
-=======
-                                                                                                      <input
-                                                                                                        aria-invalid={null}
-                                                                                                        aria-label="Enter your search query to search eSpace and then press Enter"
-                                                                                                        autoComplete="search"
-                                                                                                        autoFocus={true}
-                                                                                                        className="MuiInputBase-input-310 MuiInput-input-295 MuiInputBase-inputType-313 MuiInput-inputType-298 MuiInputBase-inputTypeSearch-314 MuiInput-inputTypeSearch-299"
-                                                                                                        disabled={false}
-                                                                                                        id="simpleSearchField"
-                                                                                                        onBlur={[Function]}
-                                                                                                        onChange={[Function]}
-                                                                                                        onFocus={[Function]}
-                                                                                                        placeholder="Search eSpace"
-                                                                                                        required={false}
-                                                                                                        type="search"
-                                                                                                        value=""
-                                                                                                      />
-                                                                                                    </div>
-                                                                                                  </InputBase>
-                                                                                                </WithStyles(InputBase)>
->>>>>>> master
                                                                                               </Input>
                                                                                             </WithStyles(Input)>
                                                                                           </div>
@@ -16391,11 +16319,8 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 "submitThesis": [Function],
                                 "unclaimRecord": [Function],
                                 "updateCurrentAuthor": [Function],
-<<<<<<< HEAD
-                                "updateSecurity": [Function],
-=======
                                 "updateIncompleteRecord": [Function],
->>>>>>> master
+                                "updateSecurity": [Function],
                               }
                             }
                             appAlert={null}
@@ -18060,11 +17985,8 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "submitThesis": [Function],
                                                                             "unclaimRecord": [Function],
                                                                             "updateCurrentAuthor": [Function],
-<<<<<<< HEAD
-                                                                            "updateSecurity": [Function],
-=======
                                                                             "updateIncompleteRecord": [Function],
->>>>>>> master
+                                                                            "updateSecurity": [Function],
                                                                           }
                                                                         }
                                                                         history={
@@ -18173,11 +18095,8 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                               "submitThesis": [Function],
                                                                               "unclaimRecord": [Function],
                                                                               "updateCurrentAuthor": [Function],
-<<<<<<< HEAD
-                                                                              "updateSecurity": [Function],
-=======
                                                                               "updateIncompleteRecord": [Function],
->>>>>>> master
+                                                                              "updateSecurity": [Function],
                                                                             }
                                                                           }
                                                                           classes={
@@ -18293,11 +18212,8 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                 "submitThesis": [Function],
                                                                                 "unclaimRecord": [Function],
                                                                                 "updateCurrentAuthor": [Function],
-<<<<<<< HEAD
-                                                                                "updateSecurity": [Function],
-=======
                                                                                 "updateIncompleteRecord": [Function],
->>>>>>> master
+                                                                                "updateSecurity": [Function],
                                                                               }
                                                                             }
                                                                             classes={
@@ -18847,11 +18763,8 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                   "submitThesis": [Function],
                                                                                   "unclaimRecord": [Function],
                                                                                   "updateCurrentAuthor": [Function],
-<<<<<<< HEAD
-                                                                                  "updateSecurity": [Function],
-=======
                                                                                   "updateIncompleteRecord": [Function],
->>>>>>> master
+                                                                                  "updateSecurity": [Function],
                                                                                 }
                                                                               }
                                                                               classes={
@@ -22318,11 +22231,8 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                     "submitThesis": [Function],
                                                                                     "unclaimRecord": [Function],
                                                                                     "updateCurrentAuthor": [Function],
-<<<<<<< HEAD
-                                                                                    "updateSecurity": [Function],
-=======
                                                                                     "updateIncompleteRecord": [Function],
->>>>>>> master
+                                                                                    "updateSecurity": [Function],
                                                                                   }
                                                                                 }
                                                                               >
@@ -22385,11 +22295,8 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "submitThesis": [Function],
                                                                                       "unclaimRecord": [Function],
                                                                                       "updateCurrentAuthor": [Function],
-<<<<<<< HEAD
-                                                                                      "updateSecurity": [Function],
-=======
                                                                                       "updateIncompleteRecord": [Function],
->>>>>>> master
+                                                                                      "updateSecurity": [Function],
                                                                                     }
                                                                                   }
                                                                                   classes={

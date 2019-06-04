@@ -116,7 +116,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
         }
       }
     >
-      <MuiThemeProvider
+      <MuiThemeProviderOld
         theme={
           Object {
             "breakpoints": Object {
@@ -164,12 +164,27 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
               },
             },
             "overrides": Object {
+              "MUIDataTable": Object {
+                "paper": Object {
+                  "boxShadow": "none",
+                  "margin": 0,
+                  "padding": 0,
+                },
+              },
               "MuiFormLabel": Object {
                 "root": Object {
                   "overflow": "hidden",
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
                   "width": "100%",
+                },
+              },
+              "MuiMenuItem": Object {
+                "root": Object {
+                  "&$selected": Object {
+                    "backgroundColor": "#4085C6 !important",
+                    "color": "#FFFFFF",
+                  },
                 },
               },
             },
@@ -268,30 +283,30 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
             "props": Object {},
             "shadows": Array [
               "none",
-              "0px 1px 3px 0px rgba(0, 0, 0, 0.2),0px 1px 1px 0px rgba(0, 0, 0, 0.14),0px 2px 1px -1px rgba(0, 0, 0, 0.12)",
-              "0px 1px 5px 0px rgba(0, 0, 0, 0.2),0px 2px 2px 0px rgba(0, 0, 0, 0.14),0px 3px 1px -2px rgba(0, 0, 0, 0.12)",
-              "0px 1px 8px 0px rgba(0, 0, 0, 0.2),0px 3px 4px 0px rgba(0, 0, 0, 0.14),0px 3px 3px -2px rgba(0, 0, 0, 0.12)",
-              "0px 2px 4px -1px rgba(0, 0, 0, 0.2),0px 4px 5px 0px rgba(0, 0, 0, 0.14),0px 1px 10px 0px rgba(0, 0, 0, 0.12)",
-              "0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 5px 8px 0px rgba(0, 0, 0, 0.14),0px 1px 14px 0px rgba(0, 0, 0, 0.12)",
-              "0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 6px 10px 0px rgba(0, 0, 0, 0.14),0px 1px 18px 0px rgba(0, 0, 0, 0.12)",
-              "0px 4px 5px -2px rgba(0, 0, 0, 0.2),0px 7px 10px 1px rgba(0, 0, 0, 0.14),0px 2px 16px 1px rgba(0, 0, 0, 0.12)",
-              "0px 5px 5px -3px rgba(0, 0, 0, 0.2),0px 8px 10px 1px rgba(0, 0, 0, 0.14),0px 3px 14px 2px rgba(0, 0, 0, 0.12)",
-              "0px 5px 6px -3px rgba(0, 0, 0, 0.2),0px 9px 12px 1px rgba(0, 0, 0, 0.14),0px 3px 16px 2px rgba(0, 0, 0, 0.12)",
-              "0px 6px 6px -3px rgba(0, 0, 0, 0.2),0px 10px 14px 1px rgba(0, 0, 0, 0.14),0px 4px 18px 3px rgba(0, 0, 0, 0.12)",
-              "0px 6px 7px -4px rgba(0, 0, 0, 0.2),0px 11px 15px 1px rgba(0, 0, 0, 0.14),0px 4px 20px 3px rgba(0, 0, 0, 0.12)",
-              "0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 12px 17px 2px rgba(0, 0, 0, 0.14),0px 5px 22px 4px rgba(0, 0, 0, 0.12)",
-              "0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 13px 19px 2px rgba(0, 0, 0, 0.14),0px 5px 24px 4px rgba(0, 0, 0, 0.12)",
-              "0px 7px 9px -4px rgba(0, 0, 0, 0.2),0px 14px 21px 2px rgba(0, 0, 0, 0.14),0px 5px 26px 4px rgba(0, 0, 0, 0.12)",
-              "0px 8px 9px -5px rgba(0, 0, 0, 0.2),0px 15px 22px 2px rgba(0, 0, 0, 0.14),0px 6px 28px 5px rgba(0, 0, 0, 0.12)",
-              "0px 8px 10px -5px rgba(0, 0, 0, 0.2),0px 16px 24px 2px rgba(0, 0, 0, 0.14),0px 6px 30px 5px rgba(0, 0, 0, 0.12)",
-              "0px 8px 11px -5px rgba(0, 0, 0, 0.2),0px 17px 26px 2px rgba(0, 0, 0, 0.14),0px 6px 32px 5px rgba(0, 0, 0, 0.12)",
-              "0px 9px 11px -5px rgba(0, 0, 0, 0.2),0px 18px 28px 2px rgba(0, 0, 0, 0.14),0px 7px 34px 6px rgba(0, 0, 0, 0.12)",
-              "0px 9px 12px -6px rgba(0, 0, 0, 0.2),0px 19px 29px 2px rgba(0, 0, 0, 0.14),0px 7px 36px 6px rgba(0, 0, 0, 0.12)",
-              "0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 20px 31px 3px rgba(0, 0, 0, 0.14),0px 8px 38px 7px rgba(0, 0, 0, 0.12)",
-              "0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 21px 33px 3px rgba(0, 0, 0, 0.14),0px 8px 40px 7px rgba(0, 0, 0, 0.12)",
-              "0px 10px 14px -6px rgba(0, 0, 0, 0.2),0px 22px 35px 3px rgba(0, 0, 0, 0.14),0px 8px 42px 7px rgba(0, 0, 0, 0.12)",
-              "0px 11px 14px -7px rgba(0, 0, 0, 0.2),0px 23px 36px 3px rgba(0, 0, 0, 0.14),0px 9px 44px 8px rgba(0, 0, 0, 0.12)",
-              "0px 11px 15px -7px rgba(0, 0, 0, 0.2),0px 24px 38px 3px rgba(0, 0, 0, 0.14),0px 9px 46px 8px rgba(0, 0, 0, 0.12)",
+              "0px 1px 3px 0px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 2px 1px -1px rgba(0,0,0,0.12)",
+              "0px 1px 5px 0px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 3px 1px -2px rgba(0,0,0,0.12)",
+              "0px 1px 8px 0px rgba(0,0,0,0.2),0px 3px 4px 0px rgba(0,0,0,0.14),0px 3px 3px -2px rgba(0,0,0,0.12)",
+              "0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12)",
+              "0px 3px 5px -1px rgba(0,0,0,0.2),0px 5px 8px 0px rgba(0,0,0,0.14),0px 1px 14px 0px rgba(0,0,0,0.12)",
+              "0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12)",
+              "0px 4px 5px -2px rgba(0,0,0,0.2),0px 7px 10px 1px rgba(0,0,0,0.14),0px 2px 16px 1px rgba(0,0,0,0.12)",
+              "0px 5px 5px -3px rgba(0,0,0,0.2),0px 8px 10px 1px rgba(0,0,0,0.14),0px 3px 14px 2px rgba(0,0,0,0.12)",
+              "0px 5px 6px -3px rgba(0,0,0,0.2),0px 9px 12px 1px rgba(0,0,0,0.14),0px 3px 16px 2px rgba(0,0,0,0.12)",
+              "0px 6px 6px -3px rgba(0,0,0,0.2),0px 10px 14px 1px rgba(0,0,0,0.14),0px 4px 18px 3px rgba(0,0,0,0.12)",
+              "0px 6px 7px -4px rgba(0,0,0,0.2),0px 11px 15px 1px rgba(0,0,0,0.14),0px 4px 20px 3px rgba(0,0,0,0.12)",
+              "0px 7px 8px -4px rgba(0,0,0,0.2),0px 12px 17px 2px rgba(0,0,0,0.14),0px 5px 22px 4px rgba(0,0,0,0.12)",
+              "0px 7px 8px -4px rgba(0,0,0,0.2),0px 13px 19px 2px rgba(0,0,0,0.14),0px 5px 24px 4px rgba(0,0,0,0.12)",
+              "0px 7px 9px -4px rgba(0,0,0,0.2),0px 14px 21px 2px rgba(0,0,0,0.14),0px 5px 26px 4px rgba(0,0,0,0.12)",
+              "0px 8px 9px -5px rgba(0,0,0,0.2),0px 15px 22px 2px rgba(0,0,0,0.14),0px 6px 28px 5px rgba(0,0,0,0.12)",
+              "0px 8px 10px -5px rgba(0,0,0,0.2),0px 16px 24px 2px rgba(0,0,0,0.14),0px 6px 30px 5px rgba(0,0,0,0.12)",
+              "0px 8px 11px -5px rgba(0,0,0,0.2),0px 17px 26px 2px rgba(0,0,0,0.14),0px 6px 32px 5px rgba(0,0,0,0.12)",
+              "0px 9px 11px -5px rgba(0,0,0,0.2),0px 18px 28px 2px rgba(0,0,0,0.14),0px 7px 34px 6px rgba(0,0,0,0.12)",
+              "0px 9px 12px -6px rgba(0,0,0,0.2),0px 19px 29px 2px rgba(0,0,0,0.14),0px 7px 36px 6px rgba(0,0,0,0.12)",
+              "0px 10px 13px -6px rgba(0,0,0,0.2),0px 20px 31px 3px rgba(0,0,0,0.14),0px 8px 38px 7px rgba(0,0,0,0.12)",
+              "0px 10px 13px -6px rgba(0,0,0,0.2),0px 21px 33px 3px rgba(0,0,0,0.14),0px 8px 40px 7px rgba(0,0,0,0.12)",
+              "0px 10px 14px -6px rgba(0,0,0,0.2),0px 22px 35px 3px rgba(0,0,0,0.14),0px 8px 42px 7px rgba(0,0,0,0.12)",
+              "0px 11px 14px -7px rgba(0,0,0,0.2),0px 23px 36px 3px rgba(0,0,0,0.14),0px 9px 44px 8px rgba(0,0,0,0.12)",
+              "0px 11px 15px -7px rgba(0,0,0,0.2),0px 24px 38px 3px rgba(0,0,0,0.14),0px 9px 46px 8px rgba(0,0,0,0.12)",
             ],
             "shape": Object {
               "borderRadius": 4,
@@ -361,7 +376,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                 "fontSize": "0.875rem",
                 "fontWeight": 400,
                 "letterSpacing": "0.02857em",
-                "lineHeight": 1.5,
+                "lineHeight": 1.75,
                 "textTransform": "uppercase",
               },
               "buttonNext": Object {
@@ -370,7 +385,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                 "fontSize": "0.875rem",
                 "fontWeight": 400,
                 "letterSpacing": "0.02857em",
-                "lineHeight": 1.5,
+                "lineHeight": 1.75,
                 "textTransform": "uppercase",
               },
               "caption": Object {
@@ -640,12 +655,27 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                       },
                     },
                     "overrides": Object {
+                      "MUIDataTable": Object {
+                        "paper": Object {
+                          "boxShadow": "none",
+                          "margin": 0,
+                          "padding": 0,
+                        },
+                      },
                       "MuiFormLabel": Object {
                         "root": Object {
                           "overflow": "hidden",
                           "textOverflow": "ellipsis",
                           "whiteSpace": "nowrap",
                           "width": "100%",
+                        },
+                      },
+                      "MuiMenuItem": Object {
+                        "root": Object {
+                          "&$selected": Object {
+                            "backgroundColor": "#4085C6 !important",
+                            "color": "#FFFFFF",
+                          },
                         },
                       },
                     },
@@ -744,30 +774,30 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                     "props": Object {},
                     "shadows": Array [
                       "none",
-                      "0px 1px 3px 0px rgba(0, 0, 0, 0.2),0px 1px 1px 0px rgba(0, 0, 0, 0.14),0px 2px 1px -1px rgba(0, 0, 0, 0.12)",
-                      "0px 1px 5px 0px rgba(0, 0, 0, 0.2),0px 2px 2px 0px rgba(0, 0, 0, 0.14),0px 3px 1px -2px rgba(0, 0, 0, 0.12)",
-                      "0px 1px 8px 0px rgba(0, 0, 0, 0.2),0px 3px 4px 0px rgba(0, 0, 0, 0.14),0px 3px 3px -2px rgba(0, 0, 0, 0.12)",
-                      "0px 2px 4px -1px rgba(0, 0, 0, 0.2),0px 4px 5px 0px rgba(0, 0, 0, 0.14),0px 1px 10px 0px rgba(0, 0, 0, 0.12)",
-                      "0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 5px 8px 0px rgba(0, 0, 0, 0.14),0px 1px 14px 0px rgba(0, 0, 0, 0.12)",
-                      "0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 6px 10px 0px rgba(0, 0, 0, 0.14),0px 1px 18px 0px rgba(0, 0, 0, 0.12)",
-                      "0px 4px 5px -2px rgba(0, 0, 0, 0.2),0px 7px 10px 1px rgba(0, 0, 0, 0.14),0px 2px 16px 1px rgba(0, 0, 0, 0.12)",
-                      "0px 5px 5px -3px rgba(0, 0, 0, 0.2),0px 8px 10px 1px rgba(0, 0, 0, 0.14),0px 3px 14px 2px rgba(0, 0, 0, 0.12)",
-                      "0px 5px 6px -3px rgba(0, 0, 0, 0.2),0px 9px 12px 1px rgba(0, 0, 0, 0.14),0px 3px 16px 2px rgba(0, 0, 0, 0.12)",
-                      "0px 6px 6px -3px rgba(0, 0, 0, 0.2),0px 10px 14px 1px rgba(0, 0, 0, 0.14),0px 4px 18px 3px rgba(0, 0, 0, 0.12)",
-                      "0px 6px 7px -4px rgba(0, 0, 0, 0.2),0px 11px 15px 1px rgba(0, 0, 0, 0.14),0px 4px 20px 3px rgba(0, 0, 0, 0.12)",
-                      "0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 12px 17px 2px rgba(0, 0, 0, 0.14),0px 5px 22px 4px rgba(0, 0, 0, 0.12)",
-                      "0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 13px 19px 2px rgba(0, 0, 0, 0.14),0px 5px 24px 4px rgba(0, 0, 0, 0.12)",
-                      "0px 7px 9px -4px rgba(0, 0, 0, 0.2),0px 14px 21px 2px rgba(0, 0, 0, 0.14),0px 5px 26px 4px rgba(0, 0, 0, 0.12)",
-                      "0px 8px 9px -5px rgba(0, 0, 0, 0.2),0px 15px 22px 2px rgba(0, 0, 0, 0.14),0px 6px 28px 5px rgba(0, 0, 0, 0.12)",
-                      "0px 8px 10px -5px rgba(0, 0, 0, 0.2),0px 16px 24px 2px rgba(0, 0, 0, 0.14),0px 6px 30px 5px rgba(0, 0, 0, 0.12)",
-                      "0px 8px 11px -5px rgba(0, 0, 0, 0.2),0px 17px 26px 2px rgba(0, 0, 0, 0.14),0px 6px 32px 5px rgba(0, 0, 0, 0.12)",
-                      "0px 9px 11px -5px rgba(0, 0, 0, 0.2),0px 18px 28px 2px rgba(0, 0, 0, 0.14),0px 7px 34px 6px rgba(0, 0, 0, 0.12)",
-                      "0px 9px 12px -6px rgba(0, 0, 0, 0.2),0px 19px 29px 2px rgba(0, 0, 0, 0.14),0px 7px 36px 6px rgba(0, 0, 0, 0.12)",
-                      "0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 20px 31px 3px rgba(0, 0, 0, 0.14),0px 8px 38px 7px rgba(0, 0, 0, 0.12)",
-                      "0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 21px 33px 3px rgba(0, 0, 0, 0.14),0px 8px 40px 7px rgba(0, 0, 0, 0.12)",
-                      "0px 10px 14px -6px rgba(0, 0, 0, 0.2),0px 22px 35px 3px rgba(0, 0, 0, 0.14),0px 8px 42px 7px rgba(0, 0, 0, 0.12)",
-                      "0px 11px 14px -7px rgba(0, 0, 0, 0.2),0px 23px 36px 3px rgba(0, 0, 0, 0.14),0px 9px 44px 8px rgba(0, 0, 0, 0.12)",
-                      "0px 11px 15px -7px rgba(0, 0, 0, 0.2),0px 24px 38px 3px rgba(0, 0, 0, 0.14),0px 9px 46px 8px rgba(0, 0, 0, 0.12)",
+                      "0px 1px 3px 0px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 2px 1px -1px rgba(0,0,0,0.12)",
+                      "0px 1px 5px 0px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 3px 1px -2px rgba(0,0,0,0.12)",
+                      "0px 1px 8px 0px rgba(0,0,0,0.2),0px 3px 4px 0px rgba(0,0,0,0.14),0px 3px 3px -2px rgba(0,0,0,0.12)",
+                      "0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12)",
+                      "0px 3px 5px -1px rgba(0,0,0,0.2),0px 5px 8px 0px rgba(0,0,0,0.14),0px 1px 14px 0px rgba(0,0,0,0.12)",
+                      "0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12)",
+                      "0px 4px 5px -2px rgba(0,0,0,0.2),0px 7px 10px 1px rgba(0,0,0,0.14),0px 2px 16px 1px rgba(0,0,0,0.12)",
+                      "0px 5px 5px -3px rgba(0,0,0,0.2),0px 8px 10px 1px rgba(0,0,0,0.14),0px 3px 14px 2px rgba(0,0,0,0.12)",
+                      "0px 5px 6px -3px rgba(0,0,0,0.2),0px 9px 12px 1px rgba(0,0,0,0.14),0px 3px 16px 2px rgba(0,0,0,0.12)",
+                      "0px 6px 6px -3px rgba(0,0,0,0.2),0px 10px 14px 1px rgba(0,0,0,0.14),0px 4px 18px 3px rgba(0,0,0,0.12)",
+                      "0px 6px 7px -4px rgba(0,0,0,0.2),0px 11px 15px 1px rgba(0,0,0,0.14),0px 4px 20px 3px rgba(0,0,0,0.12)",
+                      "0px 7px 8px -4px rgba(0,0,0,0.2),0px 12px 17px 2px rgba(0,0,0,0.14),0px 5px 22px 4px rgba(0,0,0,0.12)",
+                      "0px 7px 8px -4px rgba(0,0,0,0.2),0px 13px 19px 2px rgba(0,0,0,0.14),0px 5px 24px 4px rgba(0,0,0,0.12)",
+                      "0px 7px 9px -4px rgba(0,0,0,0.2),0px 14px 21px 2px rgba(0,0,0,0.14),0px 5px 26px 4px rgba(0,0,0,0.12)",
+                      "0px 8px 9px -5px rgba(0,0,0,0.2),0px 15px 22px 2px rgba(0,0,0,0.14),0px 6px 28px 5px rgba(0,0,0,0.12)",
+                      "0px 8px 10px -5px rgba(0,0,0,0.2),0px 16px 24px 2px rgba(0,0,0,0.14),0px 6px 30px 5px rgba(0,0,0,0.12)",
+                      "0px 8px 11px -5px rgba(0,0,0,0.2),0px 17px 26px 2px rgba(0,0,0,0.14),0px 6px 32px 5px rgba(0,0,0,0.12)",
+                      "0px 9px 11px -5px rgba(0,0,0,0.2),0px 18px 28px 2px rgba(0,0,0,0.14),0px 7px 34px 6px rgba(0,0,0,0.12)",
+                      "0px 9px 12px -6px rgba(0,0,0,0.2),0px 19px 29px 2px rgba(0,0,0,0.14),0px 7px 36px 6px rgba(0,0,0,0.12)",
+                      "0px 10px 13px -6px rgba(0,0,0,0.2),0px 20px 31px 3px rgba(0,0,0,0.14),0px 8px 38px 7px rgba(0,0,0,0.12)",
+                      "0px 10px 13px -6px rgba(0,0,0,0.2),0px 21px 33px 3px rgba(0,0,0,0.14),0px 8px 40px 7px rgba(0,0,0,0.12)",
+                      "0px 10px 14px -6px rgba(0,0,0,0.2),0px 22px 35px 3px rgba(0,0,0,0.14),0px 8px 42px 7px rgba(0,0,0,0.12)",
+                      "0px 11px 14px -7px rgba(0,0,0,0.2),0px 23px 36px 3px rgba(0,0,0,0.14),0px 9px 44px 8px rgba(0,0,0,0.12)",
+                      "0px 11px 15px -7px rgba(0,0,0,0.2),0px 24px 38px 3px rgba(0,0,0,0.14),0px 9px 46px 8px rgba(0,0,0,0.12)",
                     ],
                     "shape": Object {
                       "borderRadius": 4,
@@ -837,7 +867,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                         "fontSize": "0.875rem",
                         "fontWeight": 400,
                         "letterSpacing": "0.02857em",
-                        "lineHeight": 1.5,
+                        "lineHeight": 1.75,
                         "textTransform": "uppercase",
                       },
                       "buttonNext": Object {
@@ -846,7 +876,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                         "fontSize": "0.875rem",
                         "fontWeight": 400,
                         "letterSpacing": "0.02857em",
-                        "lineHeight": 1.5,
+                        "lineHeight": 1.75,
                         "textTransform": "uppercase",
                       },
                       "caption": Object {
@@ -1177,6 +1207,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                               "h5": "MuiTypography-h5-116",
                               "h6": "MuiTypography-h6-117",
                               "headline": "MuiTypography-headline-105",
+                              "inline": "MuiTypography-inline-135",
                               "noWrap": "MuiTypography-noWrap-126",
                               "overline": "MuiTypography-overline-120",
                               "paragraph": "MuiTypography-paragraph-128",
@@ -1212,6 +1243,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                               "title": "h2",
                             }
                           }
+                          inline={false}
                           noWrap={false}
                           paragraph={false}
                           theme={
@@ -1261,12 +1293,27 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                 },
                               },
                               "overrides": Object {
+                                "MUIDataTable": Object {
+                                  "paper": Object {
+                                    "boxShadow": "none",
+                                    "margin": 0,
+                                    "padding": 0,
+                                  },
+                                },
                                 "MuiFormLabel": Object {
                                   "root": Object {
                                     "overflow": "hidden",
                                     "textOverflow": "ellipsis",
                                     "whiteSpace": "nowrap",
                                     "width": "100%",
+                                  },
+                                },
+                                "MuiMenuItem": Object {
+                                  "root": Object {
+                                    "&$selected": Object {
+                                      "backgroundColor": "#4085C6 !important",
+                                      "color": "#FFFFFF",
+                                    },
                                   },
                                 },
                               },
@@ -1365,30 +1412,30 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                               "props": Object {},
                               "shadows": Array [
                                 "none",
-                                "0px 1px 3px 0px rgba(0, 0, 0, 0.2),0px 1px 1px 0px rgba(0, 0, 0, 0.14),0px 2px 1px -1px rgba(0, 0, 0, 0.12)",
-                                "0px 1px 5px 0px rgba(0, 0, 0, 0.2),0px 2px 2px 0px rgba(0, 0, 0, 0.14),0px 3px 1px -2px rgba(0, 0, 0, 0.12)",
-                                "0px 1px 8px 0px rgba(0, 0, 0, 0.2),0px 3px 4px 0px rgba(0, 0, 0, 0.14),0px 3px 3px -2px rgba(0, 0, 0, 0.12)",
-                                "0px 2px 4px -1px rgba(0, 0, 0, 0.2),0px 4px 5px 0px rgba(0, 0, 0, 0.14),0px 1px 10px 0px rgba(0, 0, 0, 0.12)",
-                                "0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 5px 8px 0px rgba(0, 0, 0, 0.14),0px 1px 14px 0px rgba(0, 0, 0, 0.12)",
-                                "0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 6px 10px 0px rgba(0, 0, 0, 0.14),0px 1px 18px 0px rgba(0, 0, 0, 0.12)",
-                                "0px 4px 5px -2px rgba(0, 0, 0, 0.2),0px 7px 10px 1px rgba(0, 0, 0, 0.14),0px 2px 16px 1px rgba(0, 0, 0, 0.12)",
-                                "0px 5px 5px -3px rgba(0, 0, 0, 0.2),0px 8px 10px 1px rgba(0, 0, 0, 0.14),0px 3px 14px 2px rgba(0, 0, 0, 0.12)",
-                                "0px 5px 6px -3px rgba(0, 0, 0, 0.2),0px 9px 12px 1px rgba(0, 0, 0, 0.14),0px 3px 16px 2px rgba(0, 0, 0, 0.12)",
-                                "0px 6px 6px -3px rgba(0, 0, 0, 0.2),0px 10px 14px 1px rgba(0, 0, 0, 0.14),0px 4px 18px 3px rgba(0, 0, 0, 0.12)",
-                                "0px 6px 7px -4px rgba(0, 0, 0, 0.2),0px 11px 15px 1px rgba(0, 0, 0, 0.14),0px 4px 20px 3px rgba(0, 0, 0, 0.12)",
-                                "0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 12px 17px 2px rgba(0, 0, 0, 0.14),0px 5px 22px 4px rgba(0, 0, 0, 0.12)",
-                                "0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 13px 19px 2px rgba(0, 0, 0, 0.14),0px 5px 24px 4px rgba(0, 0, 0, 0.12)",
-                                "0px 7px 9px -4px rgba(0, 0, 0, 0.2),0px 14px 21px 2px rgba(0, 0, 0, 0.14),0px 5px 26px 4px rgba(0, 0, 0, 0.12)",
-                                "0px 8px 9px -5px rgba(0, 0, 0, 0.2),0px 15px 22px 2px rgba(0, 0, 0, 0.14),0px 6px 28px 5px rgba(0, 0, 0, 0.12)",
-                                "0px 8px 10px -5px rgba(0, 0, 0, 0.2),0px 16px 24px 2px rgba(0, 0, 0, 0.14),0px 6px 30px 5px rgba(0, 0, 0, 0.12)",
-                                "0px 8px 11px -5px rgba(0, 0, 0, 0.2),0px 17px 26px 2px rgba(0, 0, 0, 0.14),0px 6px 32px 5px rgba(0, 0, 0, 0.12)",
-                                "0px 9px 11px -5px rgba(0, 0, 0, 0.2),0px 18px 28px 2px rgba(0, 0, 0, 0.14),0px 7px 34px 6px rgba(0, 0, 0, 0.12)",
-                                "0px 9px 12px -6px rgba(0, 0, 0, 0.2),0px 19px 29px 2px rgba(0, 0, 0, 0.14),0px 7px 36px 6px rgba(0, 0, 0, 0.12)",
-                                "0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 20px 31px 3px rgba(0, 0, 0, 0.14),0px 8px 38px 7px rgba(0, 0, 0, 0.12)",
-                                "0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 21px 33px 3px rgba(0, 0, 0, 0.14),0px 8px 40px 7px rgba(0, 0, 0, 0.12)",
-                                "0px 10px 14px -6px rgba(0, 0, 0, 0.2),0px 22px 35px 3px rgba(0, 0, 0, 0.14),0px 8px 42px 7px rgba(0, 0, 0, 0.12)",
-                                "0px 11px 14px -7px rgba(0, 0, 0, 0.2),0px 23px 36px 3px rgba(0, 0, 0, 0.14),0px 9px 44px 8px rgba(0, 0, 0, 0.12)",
-                                "0px 11px 15px -7px rgba(0, 0, 0, 0.2),0px 24px 38px 3px rgba(0, 0, 0, 0.14),0px 9px 46px 8px rgba(0, 0, 0, 0.12)",
+                                "0px 1px 3px 0px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 2px 1px -1px rgba(0,0,0,0.12)",
+                                "0px 1px 5px 0px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 3px 1px -2px rgba(0,0,0,0.12)",
+                                "0px 1px 8px 0px rgba(0,0,0,0.2),0px 3px 4px 0px rgba(0,0,0,0.14),0px 3px 3px -2px rgba(0,0,0,0.12)",
+                                "0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12)",
+                                "0px 3px 5px -1px rgba(0,0,0,0.2),0px 5px 8px 0px rgba(0,0,0,0.14),0px 1px 14px 0px rgba(0,0,0,0.12)",
+                                "0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12)",
+                                "0px 4px 5px -2px rgba(0,0,0,0.2),0px 7px 10px 1px rgba(0,0,0,0.14),0px 2px 16px 1px rgba(0,0,0,0.12)",
+                                "0px 5px 5px -3px rgba(0,0,0,0.2),0px 8px 10px 1px rgba(0,0,0,0.14),0px 3px 14px 2px rgba(0,0,0,0.12)",
+                                "0px 5px 6px -3px rgba(0,0,0,0.2),0px 9px 12px 1px rgba(0,0,0,0.14),0px 3px 16px 2px rgba(0,0,0,0.12)",
+                                "0px 6px 6px -3px rgba(0,0,0,0.2),0px 10px 14px 1px rgba(0,0,0,0.14),0px 4px 18px 3px rgba(0,0,0,0.12)",
+                                "0px 6px 7px -4px rgba(0,0,0,0.2),0px 11px 15px 1px rgba(0,0,0,0.14),0px 4px 20px 3px rgba(0,0,0,0.12)",
+                                "0px 7px 8px -4px rgba(0,0,0,0.2),0px 12px 17px 2px rgba(0,0,0,0.14),0px 5px 22px 4px rgba(0,0,0,0.12)",
+                                "0px 7px 8px -4px rgba(0,0,0,0.2),0px 13px 19px 2px rgba(0,0,0,0.14),0px 5px 24px 4px rgba(0,0,0,0.12)",
+                                "0px 7px 9px -4px rgba(0,0,0,0.2),0px 14px 21px 2px rgba(0,0,0,0.14),0px 5px 26px 4px rgba(0,0,0,0.12)",
+                                "0px 8px 9px -5px rgba(0,0,0,0.2),0px 15px 22px 2px rgba(0,0,0,0.14),0px 6px 28px 5px rgba(0,0,0,0.12)",
+                                "0px 8px 10px -5px rgba(0,0,0,0.2),0px 16px 24px 2px rgba(0,0,0,0.14),0px 6px 30px 5px rgba(0,0,0,0.12)",
+                                "0px 8px 11px -5px rgba(0,0,0,0.2),0px 17px 26px 2px rgba(0,0,0,0.14),0px 6px 32px 5px rgba(0,0,0,0.12)",
+                                "0px 9px 11px -5px rgba(0,0,0,0.2),0px 18px 28px 2px rgba(0,0,0,0.14),0px 7px 34px 6px rgba(0,0,0,0.12)",
+                                "0px 9px 12px -6px rgba(0,0,0,0.2),0px 19px 29px 2px rgba(0,0,0,0.14),0px 7px 36px 6px rgba(0,0,0,0.12)",
+                                "0px 10px 13px -6px rgba(0,0,0,0.2),0px 20px 31px 3px rgba(0,0,0,0.14),0px 8px 38px 7px rgba(0,0,0,0.12)",
+                                "0px 10px 13px -6px rgba(0,0,0,0.2),0px 21px 33px 3px rgba(0,0,0,0.14),0px 8px 40px 7px rgba(0,0,0,0.12)",
+                                "0px 10px 14px -6px rgba(0,0,0,0.2),0px 22px 35px 3px rgba(0,0,0,0.14),0px 8px 42px 7px rgba(0,0,0,0.12)",
+                                "0px 11px 14px -7px rgba(0,0,0,0.2),0px 23px 36px 3px rgba(0,0,0,0.14),0px 9px 44px 8px rgba(0,0,0,0.12)",
+                                "0px 11px 15px -7px rgba(0,0,0,0.2),0px 24px 38px 3px rgba(0,0,0,0.14),0px 9px 46px 8px rgba(0,0,0,0.12)",
                               ],
                               "shape": Object {
                                 "borderRadius": 4,
@@ -1458,7 +1505,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                   "fontSize": "0.875rem",
                                   "fontWeight": 400,
                                   "letterSpacing": "0.02857em",
-                                  "lineHeight": 1.5,
+                                  "lineHeight": 1.75,
                                   "textTransform": "uppercase",
                                 },
                                 "buttonNext": Object {
@@ -1467,7 +1514,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                   "fontSize": "0.875rem",
                                   "fontWeight": 400,
                                   "letterSpacing": "0.02857em",
-                                  "lineHeight": 1.5,
+                                  "lineHeight": 1.75,
                                   "textTransform": "uppercase",
                                 },
                                 "caption": Object {
@@ -1657,7 +1704,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                             buttonLabel="Test"
                             classes={
                               Object {
-                                "helpIcon": "HelpIcon-helpIcon-135",
+                                "helpIcon": "HelpIcon-helpIcon-136",
                               }
                             }
                             onClick={[Function]}
@@ -1709,12 +1756,27 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                   },
                                 },
                                 "overrides": Object {
+                                  "MUIDataTable": Object {
+                                    "paper": Object {
+                                      "boxShadow": "none",
+                                      "margin": 0,
+                                      "padding": 0,
+                                    },
+                                  },
                                   "MuiFormLabel": Object {
                                     "root": Object {
                                       "overflow": "hidden",
                                       "textOverflow": "ellipsis",
                                       "whiteSpace": "nowrap",
                                       "width": "100%",
+                                    },
+                                  },
+                                  "MuiMenuItem": Object {
+                                    "root": Object {
+                                      "&$selected": Object {
+                                        "backgroundColor": "#4085C6 !important",
+                                        "color": "#FFFFFF",
+                                      },
                                     },
                                   },
                                 },
@@ -1813,30 +1875,30 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                 "props": Object {},
                                 "shadows": Array [
                                   "none",
-                                  "0px 1px 3px 0px rgba(0, 0, 0, 0.2),0px 1px 1px 0px rgba(0, 0, 0, 0.14),0px 2px 1px -1px rgba(0, 0, 0, 0.12)",
-                                  "0px 1px 5px 0px rgba(0, 0, 0, 0.2),0px 2px 2px 0px rgba(0, 0, 0, 0.14),0px 3px 1px -2px rgba(0, 0, 0, 0.12)",
-                                  "0px 1px 8px 0px rgba(0, 0, 0, 0.2),0px 3px 4px 0px rgba(0, 0, 0, 0.14),0px 3px 3px -2px rgba(0, 0, 0, 0.12)",
-                                  "0px 2px 4px -1px rgba(0, 0, 0, 0.2),0px 4px 5px 0px rgba(0, 0, 0, 0.14),0px 1px 10px 0px rgba(0, 0, 0, 0.12)",
-                                  "0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 5px 8px 0px rgba(0, 0, 0, 0.14),0px 1px 14px 0px rgba(0, 0, 0, 0.12)",
-                                  "0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 6px 10px 0px rgba(0, 0, 0, 0.14),0px 1px 18px 0px rgba(0, 0, 0, 0.12)",
-                                  "0px 4px 5px -2px rgba(0, 0, 0, 0.2),0px 7px 10px 1px rgba(0, 0, 0, 0.14),0px 2px 16px 1px rgba(0, 0, 0, 0.12)",
-                                  "0px 5px 5px -3px rgba(0, 0, 0, 0.2),0px 8px 10px 1px rgba(0, 0, 0, 0.14),0px 3px 14px 2px rgba(0, 0, 0, 0.12)",
-                                  "0px 5px 6px -3px rgba(0, 0, 0, 0.2),0px 9px 12px 1px rgba(0, 0, 0, 0.14),0px 3px 16px 2px rgba(0, 0, 0, 0.12)",
-                                  "0px 6px 6px -3px rgba(0, 0, 0, 0.2),0px 10px 14px 1px rgba(0, 0, 0, 0.14),0px 4px 18px 3px rgba(0, 0, 0, 0.12)",
-                                  "0px 6px 7px -4px rgba(0, 0, 0, 0.2),0px 11px 15px 1px rgba(0, 0, 0, 0.14),0px 4px 20px 3px rgba(0, 0, 0, 0.12)",
-                                  "0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 12px 17px 2px rgba(0, 0, 0, 0.14),0px 5px 22px 4px rgba(0, 0, 0, 0.12)",
-                                  "0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 13px 19px 2px rgba(0, 0, 0, 0.14),0px 5px 24px 4px rgba(0, 0, 0, 0.12)",
-                                  "0px 7px 9px -4px rgba(0, 0, 0, 0.2),0px 14px 21px 2px rgba(0, 0, 0, 0.14),0px 5px 26px 4px rgba(0, 0, 0, 0.12)",
-                                  "0px 8px 9px -5px rgba(0, 0, 0, 0.2),0px 15px 22px 2px rgba(0, 0, 0, 0.14),0px 6px 28px 5px rgba(0, 0, 0, 0.12)",
-                                  "0px 8px 10px -5px rgba(0, 0, 0, 0.2),0px 16px 24px 2px rgba(0, 0, 0, 0.14),0px 6px 30px 5px rgba(0, 0, 0, 0.12)",
-                                  "0px 8px 11px -5px rgba(0, 0, 0, 0.2),0px 17px 26px 2px rgba(0, 0, 0, 0.14),0px 6px 32px 5px rgba(0, 0, 0, 0.12)",
-                                  "0px 9px 11px -5px rgba(0, 0, 0, 0.2),0px 18px 28px 2px rgba(0, 0, 0, 0.14),0px 7px 34px 6px rgba(0, 0, 0, 0.12)",
-                                  "0px 9px 12px -6px rgba(0, 0, 0, 0.2),0px 19px 29px 2px rgba(0, 0, 0, 0.14),0px 7px 36px 6px rgba(0, 0, 0, 0.12)",
-                                  "0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 20px 31px 3px rgba(0, 0, 0, 0.14),0px 8px 38px 7px rgba(0, 0, 0, 0.12)",
-                                  "0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 21px 33px 3px rgba(0, 0, 0, 0.14),0px 8px 40px 7px rgba(0, 0, 0, 0.12)",
-                                  "0px 10px 14px -6px rgba(0, 0, 0, 0.2),0px 22px 35px 3px rgba(0, 0, 0, 0.14),0px 8px 42px 7px rgba(0, 0, 0, 0.12)",
-                                  "0px 11px 14px -7px rgba(0, 0, 0, 0.2),0px 23px 36px 3px rgba(0, 0, 0, 0.14),0px 9px 44px 8px rgba(0, 0, 0, 0.12)",
-                                  "0px 11px 15px -7px rgba(0, 0, 0, 0.2),0px 24px 38px 3px rgba(0, 0, 0, 0.14),0px 9px 46px 8px rgba(0, 0, 0, 0.12)",
+                                  "0px 1px 3px 0px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 2px 1px -1px rgba(0,0,0,0.12)",
+                                  "0px 1px 5px 0px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 3px 1px -2px rgba(0,0,0,0.12)",
+                                  "0px 1px 8px 0px rgba(0,0,0,0.2),0px 3px 4px 0px rgba(0,0,0,0.14),0px 3px 3px -2px rgba(0,0,0,0.12)",
+                                  "0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12)",
+                                  "0px 3px 5px -1px rgba(0,0,0,0.2),0px 5px 8px 0px rgba(0,0,0,0.14),0px 1px 14px 0px rgba(0,0,0,0.12)",
+                                  "0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12)",
+                                  "0px 4px 5px -2px rgba(0,0,0,0.2),0px 7px 10px 1px rgba(0,0,0,0.14),0px 2px 16px 1px rgba(0,0,0,0.12)",
+                                  "0px 5px 5px -3px rgba(0,0,0,0.2),0px 8px 10px 1px rgba(0,0,0,0.14),0px 3px 14px 2px rgba(0,0,0,0.12)",
+                                  "0px 5px 6px -3px rgba(0,0,0,0.2),0px 9px 12px 1px rgba(0,0,0,0.14),0px 3px 16px 2px rgba(0,0,0,0.12)",
+                                  "0px 6px 6px -3px rgba(0,0,0,0.2),0px 10px 14px 1px rgba(0,0,0,0.14),0px 4px 18px 3px rgba(0,0,0,0.12)",
+                                  "0px 6px 7px -4px rgba(0,0,0,0.2),0px 11px 15px 1px rgba(0,0,0,0.14),0px 4px 20px 3px rgba(0,0,0,0.12)",
+                                  "0px 7px 8px -4px rgba(0,0,0,0.2),0px 12px 17px 2px rgba(0,0,0,0.14),0px 5px 22px 4px rgba(0,0,0,0.12)",
+                                  "0px 7px 8px -4px rgba(0,0,0,0.2),0px 13px 19px 2px rgba(0,0,0,0.14),0px 5px 24px 4px rgba(0,0,0,0.12)",
+                                  "0px 7px 9px -4px rgba(0,0,0,0.2),0px 14px 21px 2px rgba(0,0,0,0.14),0px 5px 26px 4px rgba(0,0,0,0.12)",
+                                  "0px 8px 9px -5px rgba(0,0,0,0.2),0px 15px 22px 2px rgba(0,0,0,0.14),0px 6px 28px 5px rgba(0,0,0,0.12)",
+                                  "0px 8px 10px -5px rgba(0,0,0,0.2),0px 16px 24px 2px rgba(0,0,0,0.14),0px 6px 30px 5px rgba(0,0,0,0.12)",
+                                  "0px 8px 11px -5px rgba(0,0,0,0.2),0px 17px 26px 2px rgba(0,0,0,0.14),0px 6px 32px 5px rgba(0,0,0,0.12)",
+                                  "0px 9px 11px -5px rgba(0,0,0,0.2),0px 18px 28px 2px rgba(0,0,0,0.14),0px 7px 34px 6px rgba(0,0,0,0.12)",
+                                  "0px 9px 12px -6px rgba(0,0,0,0.2),0px 19px 29px 2px rgba(0,0,0,0.14),0px 7px 36px 6px rgba(0,0,0,0.12)",
+                                  "0px 10px 13px -6px rgba(0,0,0,0.2),0px 20px 31px 3px rgba(0,0,0,0.14),0px 8px 38px 7px rgba(0,0,0,0.12)",
+                                  "0px 10px 13px -6px rgba(0,0,0,0.2),0px 21px 33px 3px rgba(0,0,0,0.14),0px 8px 40px 7px rgba(0,0,0,0.12)",
+                                  "0px 10px 14px -6px rgba(0,0,0,0.2),0px 22px 35px 3px rgba(0,0,0,0.14),0px 8px 42px 7px rgba(0,0,0,0.12)",
+                                  "0px 11px 14px -7px rgba(0,0,0,0.2),0px 23px 36px 3px rgba(0,0,0,0.14),0px 9px 44px 8px rgba(0,0,0,0.12)",
+                                  "0px 11px 15px -7px rgba(0,0,0,0.2),0px 24px 38px 3px rgba(0,0,0,0.14),0px 9px 46px 8px rgba(0,0,0,0.12)",
                                 ],
                                 "shape": Object {
                                   "borderRadius": 4,
@@ -1906,7 +1968,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                     "fontSize": "0.875rem",
                                     "fontWeight": 400,
                                     "letterSpacing": "0.02857em",
-                                    "lineHeight": 1.5,
+                                    "lineHeight": 1.75,
                                     "textTransform": "uppercase",
                                   },
                                   "buttonNext": Object {
@@ -1915,7 +1977,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                     "fontSize": "0.875rem",
                                     "fontWeight": 400,
                                     "letterSpacing": "0.02857em",
-                                    "lineHeight": 1.5,
+                                    "lineHeight": 1.75,
                                     "textTransform": "uppercase",
                                   },
                                   "caption": Object {
@@ -2093,13 +2155,14 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                 TransitionComponent={[Function]}
                                 classes={
                                   Object {
-                                    "popper": "MuiTooltip-popper-136",
-                                    "tooltip": "MuiTooltip-tooltip-137",
-                                    "tooltipPlacementBottom": "MuiTooltip-tooltipPlacementBottom-142",
-                                    "tooltipPlacementLeft": "MuiTooltip-tooltipPlacementLeft-139",
-                                    "tooltipPlacementRight": "MuiTooltip-tooltipPlacementRight-140",
-                                    "tooltipPlacementTop": "MuiTooltip-tooltipPlacementTop-141",
-                                    "touch": "MuiTooltip-touch-138",
+                                    "popper": "MuiTooltip-popper-137",
+                                    "popperInteractive": "MuiTooltip-popperInteractive-138",
+                                    "tooltip": "MuiTooltip-tooltip-139",
+                                    "tooltipPlacementBottom": "MuiTooltip-tooltipPlacementBottom-144",
+                                    "tooltipPlacementLeft": "MuiTooltip-tooltipPlacementLeft-141",
+                                    "tooltipPlacementRight": "MuiTooltip-tooltipPlacementRight-142",
+                                    "tooltipPlacementTop": "MuiTooltip-tooltipPlacementTop-143",
+                                    "touch": "MuiTooltip-touch-140",
                                   }
                                 }
                                 disableFocusListener={false}
@@ -2107,6 +2170,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                 disableTouchListener={false}
                                 enterDelay={0}
                                 enterTouchDelay={1000}
+                                interactive={false}
                                 leaveDelay={0}
                                 leaveTouchDelay={1500}
                                 placement="bottom-end"
@@ -2157,12 +2221,27 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                       },
                                     },
                                     "overrides": Object {
+                                      "MUIDataTable": Object {
+                                        "paper": Object {
+                                          "boxShadow": "none",
+                                          "margin": 0,
+                                          "padding": 0,
+                                        },
+                                      },
                                       "MuiFormLabel": Object {
                                         "root": Object {
                                           "overflow": "hidden",
                                           "textOverflow": "ellipsis",
                                           "whiteSpace": "nowrap",
                                           "width": "100%",
+                                        },
+                                      },
+                                      "MuiMenuItem": Object {
+                                        "root": Object {
+                                          "&$selected": Object {
+                                            "backgroundColor": "#4085C6 !important",
+                                            "color": "#FFFFFF",
+                                          },
                                         },
                                       },
                                     },
@@ -2261,30 +2340,30 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                     "props": Object {},
                                     "shadows": Array [
                                       "none",
-                                      "0px 1px 3px 0px rgba(0, 0, 0, 0.2),0px 1px 1px 0px rgba(0, 0, 0, 0.14),0px 2px 1px -1px rgba(0, 0, 0, 0.12)",
-                                      "0px 1px 5px 0px rgba(0, 0, 0, 0.2),0px 2px 2px 0px rgba(0, 0, 0, 0.14),0px 3px 1px -2px rgba(0, 0, 0, 0.12)",
-                                      "0px 1px 8px 0px rgba(0, 0, 0, 0.2),0px 3px 4px 0px rgba(0, 0, 0, 0.14),0px 3px 3px -2px rgba(0, 0, 0, 0.12)",
-                                      "0px 2px 4px -1px rgba(0, 0, 0, 0.2),0px 4px 5px 0px rgba(0, 0, 0, 0.14),0px 1px 10px 0px rgba(0, 0, 0, 0.12)",
-                                      "0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 5px 8px 0px rgba(0, 0, 0, 0.14),0px 1px 14px 0px rgba(0, 0, 0, 0.12)",
-                                      "0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 6px 10px 0px rgba(0, 0, 0, 0.14),0px 1px 18px 0px rgba(0, 0, 0, 0.12)",
-                                      "0px 4px 5px -2px rgba(0, 0, 0, 0.2),0px 7px 10px 1px rgba(0, 0, 0, 0.14),0px 2px 16px 1px rgba(0, 0, 0, 0.12)",
-                                      "0px 5px 5px -3px rgba(0, 0, 0, 0.2),0px 8px 10px 1px rgba(0, 0, 0, 0.14),0px 3px 14px 2px rgba(0, 0, 0, 0.12)",
-                                      "0px 5px 6px -3px rgba(0, 0, 0, 0.2),0px 9px 12px 1px rgba(0, 0, 0, 0.14),0px 3px 16px 2px rgba(0, 0, 0, 0.12)",
-                                      "0px 6px 6px -3px rgba(0, 0, 0, 0.2),0px 10px 14px 1px rgba(0, 0, 0, 0.14),0px 4px 18px 3px rgba(0, 0, 0, 0.12)",
-                                      "0px 6px 7px -4px rgba(0, 0, 0, 0.2),0px 11px 15px 1px rgba(0, 0, 0, 0.14),0px 4px 20px 3px rgba(0, 0, 0, 0.12)",
-                                      "0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 12px 17px 2px rgba(0, 0, 0, 0.14),0px 5px 22px 4px rgba(0, 0, 0, 0.12)",
-                                      "0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 13px 19px 2px rgba(0, 0, 0, 0.14),0px 5px 24px 4px rgba(0, 0, 0, 0.12)",
-                                      "0px 7px 9px -4px rgba(0, 0, 0, 0.2),0px 14px 21px 2px rgba(0, 0, 0, 0.14),0px 5px 26px 4px rgba(0, 0, 0, 0.12)",
-                                      "0px 8px 9px -5px rgba(0, 0, 0, 0.2),0px 15px 22px 2px rgba(0, 0, 0, 0.14),0px 6px 28px 5px rgba(0, 0, 0, 0.12)",
-                                      "0px 8px 10px -5px rgba(0, 0, 0, 0.2),0px 16px 24px 2px rgba(0, 0, 0, 0.14),0px 6px 30px 5px rgba(0, 0, 0, 0.12)",
-                                      "0px 8px 11px -5px rgba(0, 0, 0, 0.2),0px 17px 26px 2px rgba(0, 0, 0, 0.14),0px 6px 32px 5px rgba(0, 0, 0, 0.12)",
-                                      "0px 9px 11px -5px rgba(0, 0, 0, 0.2),0px 18px 28px 2px rgba(0, 0, 0, 0.14),0px 7px 34px 6px rgba(0, 0, 0, 0.12)",
-                                      "0px 9px 12px -6px rgba(0, 0, 0, 0.2),0px 19px 29px 2px rgba(0, 0, 0, 0.14),0px 7px 36px 6px rgba(0, 0, 0, 0.12)",
-                                      "0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 20px 31px 3px rgba(0, 0, 0, 0.14),0px 8px 38px 7px rgba(0, 0, 0, 0.12)",
-                                      "0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 21px 33px 3px rgba(0, 0, 0, 0.14),0px 8px 40px 7px rgba(0, 0, 0, 0.12)",
-                                      "0px 10px 14px -6px rgba(0, 0, 0, 0.2),0px 22px 35px 3px rgba(0, 0, 0, 0.14),0px 8px 42px 7px rgba(0, 0, 0, 0.12)",
-                                      "0px 11px 14px -7px rgba(0, 0, 0, 0.2),0px 23px 36px 3px rgba(0, 0, 0, 0.14),0px 9px 44px 8px rgba(0, 0, 0, 0.12)",
-                                      "0px 11px 15px -7px rgba(0, 0, 0, 0.2),0px 24px 38px 3px rgba(0, 0, 0, 0.14),0px 9px 46px 8px rgba(0, 0, 0, 0.12)",
+                                      "0px 1px 3px 0px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 2px 1px -1px rgba(0,0,0,0.12)",
+                                      "0px 1px 5px 0px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 3px 1px -2px rgba(0,0,0,0.12)",
+                                      "0px 1px 8px 0px rgba(0,0,0,0.2),0px 3px 4px 0px rgba(0,0,0,0.14),0px 3px 3px -2px rgba(0,0,0,0.12)",
+                                      "0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12)",
+                                      "0px 3px 5px -1px rgba(0,0,0,0.2),0px 5px 8px 0px rgba(0,0,0,0.14),0px 1px 14px 0px rgba(0,0,0,0.12)",
+                                      "0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12)",
+                                      "0px 4px 5px -2px rgba(0,0,0,0.2),0px 7px 10px 1px rgba(0,0,0,0.14),0px 2px 16px 1px rgba(0,0,0,0.12)",
+                                      "0px 5px 5px -3px rgba(0,0,0,0.2),0px 8px 10px 1px rgba(0,0,0,0.14),0px 3px 14px 2px rgba(0,0,0,0.12)",
+                                      "0px 5px 6px -3px rgba(0,0,0,0.2),0px 9px 12px 1px rgba(0,0,0,0.14),0px 3px 16px 2px rgba(0,0,0,0.12)",
+                                      "0px 6px 6px -3px rgba(0,0,0,0.2),0px 10px 14px 1px rgba(0,0,0,0.14),0px 4px 18px 3px rgba(0,0,0,0.12)",
+                                      "0px 6px 7px -4px rgba(0,0,0,0.2),0px 11px 15px 1px rgba(0,0,0,0.14),0px 4px 20px 3px rgba(0,0,0,0.12)",
+                                      "0px 7px 8px -4px rgba(0,0,0,0.2),0px 12px 17px 2px rgba(0,0,0,0.14),0px 5px 22px 4px rgba(0,0,0,0.12)",
+                                      "0px 7px 8px -4px rgba(0,0,0,0.2),0px 13px 19px 2px rgba(0,0,0,0.14),0px 5px 24px 4px rgba(0,0,0,0.12)",
+                                      "0px 7px 9px -4px rgba(0,0,0,0.2),0px 14px 21px 2px rgba(0,0,0,0.14),0px 5px 26px 4px rgba(0,0,0,0.12)",
+                                      "0px 8px 9px -5px rgba(0,0,0,0.2),0px 15px 22px 2px rgba(0,0,0,0.14),0px 6px 28px 5px rgba(0,0,0,0.12)",
+                                      "0px 8px 10px -5px rgba(0,0,0,0.2),0px 16px 24px 2px rgba(0,0,0,0.14),0px 6px 30px 5px rgba(0,0,0,0.12)",
+                                      "0px 8px 11px -5px rgba(0,0,0,0.2),0px 17px 26px 2px rgba(0,0,0,0.14),0px 6px 32px 5px rgba(0,0,0,0.12)",
+                                      "0px 9px 11px -5px rgba(0,0,0,0.2),0px 18px 28px 2px rgba(0,0,0,0.14),0px 7px 34px 6px rgba(0,0,0,0.12)",
+                                      "0px 9px 12px -6px rgba(0,0,0,0.2),0px 19px 29px 2px rgba(0,0,0,0.14),0px 7px 36px 6px rgba(0,0,0,0.12)",
+                                      "0px 10px 13px -6px rgba(0,0,0,0.2),0px 20px 31px 3px rgba(0,0,0,0.14),0px 8px 38px 7px rgba(0,0,0,0.12)",
+                                      "0px 10px 13px -6px rgba(0,0,0,0.2),0px 21px 33px 3px rgba(0,0,0,0.14),0px 8px 40px 7px rgba(0,0,0,0.12)",
+                                      "0px 10px 14px -6px rgba(0,0,0,0.2),0px 22px 35px 3px rgba(0,0,0,0.14),0px 8px 42px 7px rgba(0,0,0,0.12)",
+                                      "0px 11px 14px -7px rgba(0,0,0,0.2),0px 23px 36px 3px rgba(0,0,0,0.14),0px 9px 44px 8px rgba(0,0,0,0.12)",
+                                      "0px 11px 15px -7px rgba(0,0,0,0.2),0px 24px 38px 3px rgba(0,0,0,0.14),0px 9px 46px 8px rgba(0,0,0,0.12)",
                                     ],
                                     "shape": Object {
                                       "borderRadius": 4,
@@ -2354,7 +2433,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                         "fontSize": "0.875rem",
                                         "fontWeight": 400,
                                         "letterSpacing": "0.02857em",
-                                        "lineHeight": 1.5,
+                                        "lineHeight": 1.75,
                                         "textTransform": "uppercase",
                                       },
                                       "buttonNext": Object {
@@ -2363,7 +2442,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                         "fontSize": "0.875rem",
                                         "fontWeight": 400,
                                         "letterSpacing": "0.02857em",
-                                        "lineHeight": 1.5,
+                                        "lineHeight": 1.75,
                                         "textTransform": "uppercase",
                                       },
                                       "caption": Object {
@@ -2536,6 +2615,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                 >
                                   <WithStyles(IconButton)
                                     aria-describedby={null}
+                                    className=""
                                     onBlur={[Function]}
                                     onClick={[Function]}
                                     onFocus={[Function]}
@@ -2547,14 +2627,15 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                   >
                                     <IconButton
                                       aria-describedby={null}
+                                      className=""
                                       classes={
                                         Object {
-                                          "colorInherit": "MuiIconButton-colorInherit-144",
-                                          "colorPrimary": "MuiIconButton-colorPrimary-145",
-                                          "colorSecondary": "MuiIconButton-colorSecondary-146",
-                                          "disabled": "MuiIconButton-disabled-147",
-                                          "label": "MuiIconButton-label-148",
-                                          "root": "MuiIconButton-root-143",
+                                          "colorInherit": "MuiIconButton-colorInherit-146",
+                                          "colorPrimary": "MuiIconButton-colorPrimary-147",
+                                          "colorSecondary": "MuiIconButton-colorSecondary-148",
+                                          "disabled": "MuiIconButton-disabled-149",
+                                          "label": "MuiIconButton-label-150",
+                                          "root": "MuiIconButton-root-145",
                                         }
                                       }
                                       color="default"
@@ -2571,7 +2652,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                       <WithStyles(ButtonBase)
                                         aria-describedby={null}
                                         centerRipple={true}
-                                        className="MuiIconButton-root-143"
+                                        className="MuiIconButton-root-145"
                                         disabled={false}
                                         focusRipple={true}
                                         onBlur={[Function]}
@@ -2586,12 +2667,12 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                         <ButtonBase
                                           aria-describedby={null}
                                           centerRipple={true}
-                                          className="MuiIconButton-root-143"
+                                          className="MuiIconButton-root-145"
                                           classes={
                                             Object {
-                                              "disabled": "MuiButtonBase-disabled-150",
-                                              "focusVisible": "MuiButtonBase-focusVisible-151",
-                                              "root": "MuiButtonBase-root-149",
+                                              "disabled": "MuiButtonBase-disabled-152",
+                                              "focusVisible": "MuiButtonBase-focusVisible-153",
+                                              "root": "MuiButtonBase-root-151",
                                             }
                                           }
                                           component="button"
@@ -2612,10 +2693,11 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                         >
                                           <button
                                             aria-describedby={null}
-                                            className="MuiButtonBase-root-149 MuiIconButton-root-143"
+                                            className="MuiButtonBase-root-151 MuiIconButton-root-145"
                                             disabled={false}
                                             onBlur={[Function]}
                                             onClick={[Function]}
+                                            onContextMenu={[Function]}
                                             onFocus={[Function]}
                                             onKeyDown={[Function]}
                                             onKeyUp={[Function]}
@@ -2631,33 +2713,33 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                             type="button"
                                           >
                                             <span
-                                              className="MuiIconButton-label-148"
+                                              className="MuiIconButton-label-150"
                                             >
                                               <pure(HelpOutlineIcon)
-                                                className="HelpIcon-helpIcon-135"
+                                                className="HelpIcon-helpIcon-136"
                                                 titleAccess="Click for more information"
                                               >
                                                 <HelpOutlineIcon
-                                                  className="HelpIcon-helpIcon-135"
+                                                  className="HelpIcon-helpIcon-136"
                                                   titleAccess="Click for more information"
                                                 >
                                                   <WithStyles(SvgIcon)
-                                                    className="HelpIcon-helpIcon-135"
+                                                    className="HelpIcon-helpIcon-136"
                                                     titleAccess="Click for more information"
                                                   >
                                                     <SvgIcon
-                                                      className="HelpIcon-helpIcon-135"
+                                                      className="HelpIcon-helpIcon-136"
                                                       classes={
                                                         Object {
-                                                          "colorAction": "MuiSvgIcon-colorAction-155",
-                                                          "colorDisabled": "MuiSvgIcon-colorDisabled-157",
-                                                          "colorError": "MuiSvgIcon-colorError-156",
-                                                          "colorPrimary": "MuiSvgIcon-colorPrimary-153",
-                                                          "colorSecondary": "MuiSvgIcon-colorSecondary-154",
-                                                          "fontSizeInherit": "MuiSvgIcon-fontSizeInherit-158",
-                                                          "fontSizeLarge": "MuiSvgIcon-fontSizeLarge-160",
-                                                          "fontSizeSmall": "MuiSvgIcon-fontSizeSmall-159",
-                                                          "root": "MuiSvgIcon-root-152",
+                                                          "colorAction": "MuiSvgIcon-colorAction-157",
+                                                          "colorDisabled": "MuiSvgIcon-colorDisabled-159",
+                                                          "colorError": "MuiSvgIcon-colorError-158",
+                                                          "colorPrimary": "MuiSvgIcon-colorPrimary-155",
+                                                          "colorSecondary": "MuiSvgIcon-colorSecondary-156",
+                                                          "fontSizeInherit": "MuiSvgIcon-fontSizeInherit-160",
+                                                          "fontSizeLarge": "MuiSvgIcon-fontSizeLarge-162",
+                                                          "fontSizeSmall": "MuiSvgIcon-fontSizeSmall-161",
+                                                          "root": "MuiSvgIcon-root-154",
                                                         }
                                                       }
                                                       color="inherit"
@@ -2668,7 +2750,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                                     >
                                                       <svg
                                                         aria-hidden="false"
-                                                        className="MuiSvgIcon-root-152 HelpIcon-helpIcon-135"
+                                                        className="MuiSvgIcon-root-154 HelpIcon-helpIcon-136"
                                                         focusable="false"
                                                         role="img"
                                                         viewBox="0 0 24 24"
@@ -2689,478 +2771,56 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                                 </HelpOutlineIcon>
                                               </pure(HelpOutlineIcon)>
                                             </span>
-                                            <WithStyles(TouchRipple)
-                                              center={true}
-                                              innerRef={[Function]}
+                                            <NoSsr
+                                              defer={false}
+                                              fallback={null}
                                             >
-                                              <TouchRipple
+                                              <WithStyles(TouchRipple)
                                                 center={true}
-                                                classes={
-                                                  Object {
-                                                    "child": "MuiTouchRipple-child-165",
-                                                    "childLeaving": "MuiTouchRipple-childLeaving-166",
-                                                    "childPulsate": "MuiTouchRipple-childPulsate-167",
-                                                    "ripple": "MuiTouchRipple-ripple-162",
-                                                    "ripplePulsate": "MuiTouchRipple-ripplePulsate-164",
-                                                    "rippleVisible": "MuiTouchRipple-rippleVisible-163",
-                                                    "root": "MuiTouchRipple-root-161",
-                                                  }
-                                                }
+                                                innerRef={[Function]}
                                               >
-                                                <TransitionGroup
-                                                  childFactory={[Function]}
-                                                  className="MuiTouchRipple-root-161"
-                                                  component="span"
-                                                  enter={true}
-                                                  exit={true}
+                                                <TouchRipple
+                                                  center={true}
+                                                  classes={
+                                                    Object {
+                                                      "child": "MuiTouchRipple-child-167",
+                                                      "childLeaving": "MuiTouchRipple-childLeaving-168",
+                                                      "childPulsate": "MuiTouchRipple-childPulsate-169",
+                                                      "ripple": "MuiTouchRipple-ripple-164",
+                                                      "ripplePulsate": "MuiTouchRipple-ripplePulsate-166",
+                                                      "rippleVisible": "MuiTouchRipple-rippleVisible-165",
+                                                      "root": "MuiTouchRipple-root-163",
+                                                    }
+                                                  }
                                                 >
-                                                  <span
-                                                    className="MuiTouchRipple-root-161"
-                                                  />
-                                                </TransitionGroup>
-                                              </TouchRipple>
-                                            </WithStyles(TouchRipple)>
+                                                  <TransitionGroup
+                                                    childFactory={[Function]}
+                                                    className="MuiTouchRipple-root-163"
+                                                    component="span"
+                                                    enter={true}
+                                                    exit={true}
+                                                  >
+                                                    <span
+                                                      className="MuiTouchRipple-root-163"
+                                                    />
+                                                  </TransitionGroup>
+                                                </TouchRipple>
+                                              </WithStyles(TouchRipple)>
+                                            </NoSsr>
                                           </button>
                                         </ButtonBase>
                                       </WithStyles(ButtonBase)>
                                     </IconButton>
                                   </WithStyles(IconButton)>
                                 </RootRef>
-                                <WithTheme(Popper)
-                                  className="MuiTooltip-popper-136"
+                                <Popper
+                                  className="MuiTooltip-popper-137"
+                                  disablePortal={false}
                                   id={null}
                                   open={false}
                                   placement="bottom-end"
                                   transition={true}
-                                >
-                                  <Popper
-                                    className="MuiTooltip-popper-136"
-                                    disablePortal={false}
-                                    id={null}
-                                    open={false}
-                                    placement="bottom-end"
-                                    theme={
-                                      Object {
-                                        "breakpoints": Object {
-                                          "between": [Function],
-                                          "down": [Function],
-                                          "keys": Array [
-                                            "xs",
-                                            "sm",
-                                            "md",
-                                            "lg",
-                                            "xl",
-                                          ],
-                                          "only": [Function],
-                                          "up": [Function],
-                                          "values": Object {
-                                            "lg": 1280,
-                                            "md": 960,
-                                            "sm": 600,
-                                            "xl": 1920,
-                                            "xs": 0,
-                                          },
-                                          "width": [Function],
-                                        },
-                                        "direction": "ltr",
-                                        "graphs": Object {
-                                          "color1": "#d72865",
-                                          "color2": "#1e7d94",
-                                          "color3": "#49075E",
-                                          "color4": "#468fcc",
-                                          "color5": "#f28620",
-                                          "color6": "#333333",
-                                          "color7": "#595959",
-                                        },
-                                        "hexToRGBA": [Function],
-                                        "mixins": Object {
-                                          "gutters": [Function],
-                                          "toolbar": Object {
-                                            "@media (min-width:0px) and (orientation: landscape)": Object {
-                                              "minHeight": 48,
-                                            },
-                                            "@media (min-width:600px)": Object {
-                                              "minHeight": 64,
-                                            },
-                                            "minHeight": 56,
-                                          },
-                                        },
-                                        "overrides": Object {
-                                          "MuiFormLabel": Object {
-                                            "root": Object {
-                                              "overflow": "hidden",
-                                              "textOverflow": "ellipsis",
-                                              "whiteSpace": "nowrap",
-                                              "width": "100%",
-                                            },
-                                          },
-                                        },
-                                        "palette": Object {
-                                          "accent": Object {
-                                            "dark": "#2a557d",
-                                            "light": "#54acff",
-                                            "main": "#4085C6",
-                                          },
-                                          "action": Object {
-                                            "active": "rgba(0, 0, 0, 0.54)",
-                                            "disabled": "rgba(0, 0, 0, 0.26)",
-                                            "disabledBackground": "rgba(0, 0, 0, 0.12)",
-                                            "hover": "rgba(0, 0, 0, 0.08)",
-                                            "hoverOpacity": 0.08,
-                                            "selected": "rgba(0, 0, 0, 0.14)",
-                                          },
-                                          "augmentColor": [Function],
-                                          "background": Object {
-                                            "default": "#fafafa",
-                                            "paper": "#fff",
-                                          },
-                                          "common": Object {
-                                            "black": "#000",
-                                            "white": "#fff",
-                                          },
-                                          "contrastThreshold": 3,
-                                          "divider": "rgba(0, 0, 0, 0.12)",
-                                          "error": Object {
-                                            "contrastText": "#fff",
-                                            "dark": "#790000",
-                                            "light": "#ff0000",
-                                            "main": "#c80000",
-                                          },
-                                          "getContrastText": [Function],
-                                          "grey": Object {
-                                            "100": "#f5f5f5",
-                                            "200": "#eeeeee",
-                                            "300": "#e0e0e0",
-                                            "400": "#bdbdbd",
-                                            "50": "#fafafa",
-                                            "500": "#9e9e9e",
-                                            "600": "#757575",
-                                            "700": "#616161",
-                                            "800": "#424242",
-                                            "900": "#212121",
-                                            "A100": "#d5d5d5",
-                                            "A200": "#aaaaaa",
-                                            "A400": "#303030",
-                                            "A700": "#616161",
-                                          },
-                                          "primary": Object {
-                                            "contrastText": "#fff",
-                                            "dark": "#3b1a59",
-                                            "gradient": Object {
-                                              "diagonal": Object {
-                                                "background": "linear-gradient(135deg, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
-                                                "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
-                                              },
-                                              "horizontal": Object {
-                                                "background": "linear-gradient(to right, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
-                                                "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
-                                              },
-                                            },
-                                            "light": "#962A8B",
-                                            "main": "#51247A",
-                                          },
-                                          "secondary": Object {
-                                            "contrastText": "#fff",
-                                            "dark": "#333333",
-                                            "light": "#f2f2f2",
-                                            "main": "#595959",
-                                          },
-                                          "success": Object {
-                                            "dark": "#005000",
-                                            "light": "#00a700",
-                                            "main": "#007200",
-                                          },
-                                          "text": Object {
-                                            "disabled": "rgba(0, 0, 0, 0.38)",
-                                            "hint": "rgba(0, 0, 0, 0.38)",
-                                            "primary": "rgba(0, 0, 0, 0.87)",
-                                            "secondary": "rgba(0, 0, 0, 0.54)",
-                                          },
-                                          "tonalOffset": 0.2,
-                                          "type": "light",
-                                          "warning": Object {
-                                            "dark": "#542400",
-                                            "light": "#ff9a57",
-                                            "main": "#bf5000",
-                                          },
-                                          "white": Object {
-                                            "main": "#FFFFFF",
-                                          },
-                                        },
-                                        "props": Object {},
-                                        "shadows": Array [
-                                          "none",
-                                          "0px 1px 3px 0px rgba(0, 0, 0, 0.2),0px 1px 1px 0px rgba(0, 0, 0, 0.14),0px 2px 1px -1px rgba(0, 0, 0, 0.12)",
-                                          "0px 1px 5px 0px rgba(0, 0, 0, 0.2),0px 2px 2px 0px rgba(0, 0, 0, 0.14),0px 3px 1px -2px rgba(0, 0, 0, 0.12)",
-                                          "0px 1px 8px 0px rgba(0, 0, 0, 0.2),0px 3px 4px 0px rgba(0, 0, 0, 0.14),0px 3px 3px -2px rgba(0, 0, 0, 0.12)",
-                                          "0px 2px 4px -1px rgba(0, 0, 0, 0.2),0px 4px 5px 0px rgba(0, 0, 0, 0.14),0px 1px 10px 0px rgba(0, 0, 0, 0.12)",
-                                          "0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 5px 8px 0px rgba(0, 0, 0, 0.14),0px 1px 14px 0px rgba(0, 0, 0, 0.12)",
-                                          "0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 6px 10px 0px rgba(0, 0, 0, 0.14),0px 1px 18px 0px rgba(0, 0, 0, 0.12)",
-                                          "0px 4px 5px -2px rgba(0, 0, 0, 0.2),0px 7px 10px 1px rgba(0, 0, 0, 0.14),0px 2px 16px 1px rgba(0, 0, 0, 0.12)",
-                                          "0px 5px 5px -3px rgba(0, 0, 0, 0.2),0px 8px 10px 1px rgba(0, 0, 0, 0.14),0px 3px 14px 2px rgba(0, 0, 0, 0.12)",
-                                          "0px 5px 6px -3px rgba(0, 0, 0, 0.2),0px 9px 12px 1px rgba(0, 0, 0, 0.14),0px 3px 16px 2px rgba(0, 0, 0, 0.12)",
-                                          "0px 6px 6px -3px rgba(0, 0, 0, 0.2),0px 10px 14px 1px rgba(0, 0, 0, 0.14),0px 4px 18px 3px rgba(0, 0, 0, 0.12)",
-                                          "0px 6px 7px -4px rgba(0, 0, 0, 0.2),0px 11px 15px 1px rgba(0, 0, 0, 0.14),0px 4px 20px 3px rgba(0, 0, 0, 0.12)",
-                                          "0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 12px 17px 2px rgba(0, 0, 0, 0.14),0px 5px 22px 4px rgba(0, 0, 0, 0.12)",
-                                          "0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 13px 19px 2px rgba(0, 0, 0, 0.14),0px 5px 24px 4px rgba(0, 0, 0, 0.12)",
-                                          "0px 7px 9px -4px rgba(0, 0, 0, 0.2),0px 14px 21px 2px rgba(0, 0, 0, 0.14),0px 5px 26px 4px rgba(0, 0, 0, 0.12)",
-                                          "0px 8px 9px -5px rgba(0, 0, 0, 0.2),0px 15px 22px 2px rgba(0, 0, 0, 0.14),0px 6px 28px 5px rgba(0, 0, 0, 0.12)",
-                                          "0px 8px 10px -5px rgba(0, 0, 0, 0.2),0px 16px 24px 2px rgba(0, 0, 0, 0.14),0px 6px 30px 5px rgba(0, 0, 0, 0.12)",
-                                          "0px 8px 11px -5px rgba(0, 0, 0, 0.2),0px 17px 26px 2px rgba(0, 0, 0, 0.14),0px 6px 32px 5px rgba(0, 0, 0, 0.12)",
-                                          "0px 9px 11px -5px rgba(0, 0, 0, 0.2),0px 18px 28px 2px rgba(0, 0, 0, 0.14),0px 7px 34px 6px rgba(0, 0, 0, 0.12)",
-                                          "0px 9px 12px -6px rgba(0, 0, 0, 0.2),0px 19px 29px 2px rgba(0, 0, 0, 0.14),0px 7px 36px 6px rgba(0, 0, 0, 0.12)",
-                                          "0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 20px 31px 3px rgba(0, 0, 0, 0.14),0px 8px 38px 7px rgba(0, 0, 0, 0.12)",
-                                          "0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 21px 33px 3px rgba(0, 0, 0, 0.14),0px 8px 40px 7px rgba(0, 0, 0, 0.12)",
-                                          "0px 10px 14px -6px rgba(0, 0, 0, 0.2),0px 22px 35px 3px rgba(0, 0, 0, 0.14),0px 8px 42px 7px rgba(0, 0, 0, 0.12)",
-                                          "0px 11px 14px -7px rgba(0, 0, 0, 0.2),0px 23px 36px 3px rgba(0, 0, 0, 0.14),0px 9px 44px 8px rgba(0, 0, 0, 0.12)",
-                                          "0px 11px 15px -7px rgba(0, 0, 0, 0.2),0px 24px 38px 3px rgba(0, 0, 0, 0.14),0px 9px 46px 8px rgba(0, 0, 0, 0.12)",
-                                        ],
-                                        "shape": Object {
-                                          "borderRadius": 4,
-                                        },
-                                        "spacing": Object {
-                                          "unit": 8,
-                                        },
-                                        "status": Object {
-                                          "danger": "#f44336",
-                                          "warning": "#ff9800",
-                                        },
-                                        "transitions": Object {
-                                          "create": [Function],
-                                          "duration": Object {
-                                            "complex": 375,
-                                            "enteringScreen": 225,
-                                            "leavingScreen": 195,
-                                            "short": 250,
-                                            "shorter": 200,
-                                            "shortest": 150,
-                                            "standard": 300,
-                                          },
-                                          "easing": Object {
-                                            "easeIn": "cubic-bezier(0.4, 0, 1, 1)",
-                                            "easeInOut": "cubic-bezier(0.4, 0, 0.2, 1)",
-                                            "easeOut": "cubic-bezier(0.0, 0, 0.2, 1)",
-                                            "sharp": "cubic-bezier(0.4, 0, 0.6, 1)",
-                                          },
-                                          "getAutoHeightDuration": [Function],
-                                        },
-                                        "typography": Object {
-                                          "body1": Object {
-                                            "color": "rgba(0, 0, 0, 0.87)",
-                                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                            "fontSize": "1rem",
-                                            "fontWeight": 300,
-                                            "letterSpacing": "0.00938em",
-                                            "lineHeight": 1.5,
-                                          },
-                                          "body1Next": Object {
-                                            "color": "rgba(0, 0, 0, 0.87)",
-                                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                            "fontSize": "1rem",
-                                            "fontWeight": 300,
-                                            "letterSpacing": "0.00938em",
-                                            "lineHeight": 1.5,
-                                          },
-                                          "body2": Object {
-                                            "color": "rgba(0, 0, 0, 0.87)",
-                                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                            "fontSize": "0.875rem",
-                                            "fontWeight": 300,
-                                            "letterSpacing": "0.01071em",
-                                            "lineHeight": 1.5,
-                                          },
-                                          "body2Next": Object {
-                                            "color": "rgba(0, 0, 0, 0.87)",
-                                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                            "fontSize": "0.875rem",
-                                            "fontWeight": 300,
-                                            "letterSpacing": "0.01071em",
-                                            "lineHeight": 1.5,
-                                          },
-                                          "button": Object {
-                                            "color": "rgba(0, 0, 0, 0.87)",
-                                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                            "fontSize": "0.875rem",
-                                            "fontWeight": 400,
-                                            "letterSpacing": "0.02857em",
-                                            "lineHeight": 1.5,
-                                            "textTransform": "uppercase",
-                                          },
-                                          "buttonNext": Object {
-                                            "color": "rgba(0, 0, 0, 0.87)",
-                                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                            "fontSize": "0.875rem",
-                                            "fontWeight": 400,
-                                            "letterSpacing": "0.02857em",
-                                            "lineHeight": 1.5,
-                                            "textTransform": "uppercase",
-                                          },
-                                          "caption": Object {
-                                            "color": "rgba(0, 0, 0, 0.87)",
-                                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                            "fontSize": "0.75rem",
-                                            "fontWeight": 300,
-                                            "letterSpacing": "0.03333em",
-                                            "lineHeight": 1.66,
-                                          },
-                                          "captionNext": Object {
-                                            "color": "rgba(0, 0, 0, 0.87)",
-                                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                            "fontSize": "0.75rem",
-                                            "fontWeight": 300,
-                                            "letterSpacing": "0.03333em",
-                                            "lineHeight": 1.66,
-                                          },
-                                          "display1": Object {
-                                            "color": "rgba(0, 0, 0, 0.54)",
-                                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                            "fontSize": "2.125rem",
-                                            "fontWeight": 300,
-                                            "lineHeight": "1.20588em",
-                                          },
-                                          "display2": Object {
-                                            "color": "rgba(0, 0, 0, 0.54)",
-                                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                            "fontSize": "2.8125rem",
-                                            "fontWeight": 300,
-                                            "lineHeight": "1.13333em",
-                                            "marginLeft": "-.02em",
-                                          },
-                                          "display3": Object {
-                                            "color": "rgba(0, 0, 0, 0.54)",
-                                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                            "fontSize": "3.5rem",
-                                            "fontWeight": 300,
-                                            "letterSpacing": "-.02em",
-                                            "lineHeight": "1.30357em",
-                                            "marginLeft": "-.02em",
-                                          },
-                                          "display4": Object {
-                                            "color": "rgba(0, 0, 0, 0.54)",
-                                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                            "fontSize": "7rem",
-                                            "fontWeight": 200,
-                                            "letterSpacing": "-.04em",
-                                            "lineHeight": "1.14286em",
-                                            "marginLeft": "-.04em",
-                                          },
-                                          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                          "fontSize": 14,
-                                          "fontWeightLight": 200,
-                                          "fontWeightMedium": 400,
-                                          "fontWeightRegular": 300,
-                                          "h1": Object {
-                                            "color": "rgba(0, 0, 0, 0.87)",
-                                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                            "fontSize": "6rem",
-                                            "fontWeight": 200,
-                                            "letterSpacing": "-0.01562em",
-                                            "lineHeight": 1,
-                                          },
-                                          "h2": Object {
-                                            "color": "rgba(0, 0, 0, 0.87)",
-                                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                            "fontSize": "3.75rem",
-                                            "fontWeight": 200,
-                                            "letterSpacing": "-0.00833em",
-                                            "lineHeight": 1,
-                                          },
-                                          "h3": Object {
-                                            "color": "rgba(0, 0, 0, 0.87)",
-                                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                            "fontSize": "3rem",
-                                            "fontWeight": 300,
-                                            "letterSpacing": "0em",
-                                            "lineHeight": 1.04,
-                                          },
-                                          "h4": Object {
-                                            "color": "rgba(0, 0, 0, 0.87)",
-                                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                            "fontSize": "2.125rem",
-                                            "fontWeight": 300,
-                                            "letterSpacing": "0.00735em",
-                                            "lineHeight": 1.17,
-                                          },
-                                          "h5": Object {
-                                            "color": "rgba(0, 0, 0, 0.87)",
-                                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                            "fontSize": "1.5rem",
-                                            "fontWeight": 300,
-                                            "letterSpacing": "0em",
-                                            "lineHeight": 1.33,
-                                          },
-                                          "h6": Object {
-                                            "color": "rgba(0, 0, 0, 0.87)",
-                                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                            "fontSize": "1.25rem",
-                                            "fontWeight": 400,
-                                            "letterSpacing": "0.0075em",
-                                            "lineHeight": 1.6,
-                                          },
-                                          "headline": Object {
-                                            "color": "rgba(0, 0, 0, 0.87)",
-                                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                            "fontSize": "1.5rem",
-                                            "fontWeight": 300,
-                                            "lineHeight": "1.35417em",
-                                          },
-                                          "overline": Object {
-                                            "color": "rgba(0, 0, 0, 0.87)",
-                                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                            "fontSize": "0.75rem",
-                                            "fontWeight": 300,
-                                            "letterSpacing": "0.08333em",
-                                            "lineHeight": 2.66,
-                                            "textTransform": "uppercase",
-                                          },
-                                          "pxToRem": [Function],
-                                          "round": [Function],
-                                          "subheading": Object {
-                                            "color": "rgba(0, 0, 0, 0.87)",
-                                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                            "fontSize": "1rem",
-                                            "fontWeight": 300,
-                                            "lineHeight": "1.5em",
-                                          },
-                                          "subtitle1": Object {
-                                            "color": "rgba(0, 0, 0, 0.87)",
-                                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                            "fontSize": "1rem",
-                                            "fontWeight": 300,
-                                            "letterSpacing": "0.00938em",
-                                            "lineHeight": 1.75,
-                                          },
-                                          "subtitle2": Object {
-                                            "color": "rgba(0, 0, 0, 0.87)",
-                                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                            "fontSize": "0.875rem",
-                                            "fontWeight": 400,
-                                            "letterSpacing": "0.00714em",
-                                            "lineHeight": 1.57,
-                                          },
-                                          "suppressDeprecationWarnings": true,
-                                          "title": Object {
-                                            "color": "rgba(0, 0, 0, 0.87)",
-                                            "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                            "fontSize": "1.3125rem",
-                                            "fontWeight": 400,
-                                            "lineHeight": "1.16667em",
-                                          },
-                                          "useNextVariants": true,
-                                        },
-                                        "zIndex": Object {
-                                          "appBar": 1100,
-                                          "drawer": 1200,
-                                          "mobileStepper": 1000,
-                                          "modal": 1300,
-                                          "snackbar": 1400,
-                                          "tooltip": 1500,
-                                        },
-                                      }
-                                    }
-                                    transition={true}
-                                  />
-                                </WithTheme(Popper)>
+                                />
                               </Tooltip>
                             </WithStyles(Tooltip)>
                           </HelpIcon>
@@ -3303,7 +2963,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
             </WithStyles(Page)>
           </StandardPage>
         </MuiPickersUtilsProvider>
-      </MuiThemeProvider>
+      </MuiThemeProviderOld>
     </Router>
   </MemoryRouter>
 </Provider>

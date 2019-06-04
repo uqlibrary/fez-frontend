@@ -1476,7 +1476,7 @@ describe('getGrantsListSearchKey tests', () => {
                 "rek_grant_agency": "test",
                 "rek_grant_agency_order": 1
             }, {
-                "rek_grant_agency": "testing",
+                "rek_grant_agency": "Not set",
                 "rek_grant_agency_order": 2
             }, {
                 "rek_grant_agency": "tested",

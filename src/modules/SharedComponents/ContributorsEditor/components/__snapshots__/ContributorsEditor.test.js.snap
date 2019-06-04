@@ -1586,7 +1586,6 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                 }
                                                 data-shrink={false}
                                               >
-<<<<<<< HEAD
                                                 <FormLabel
                                                   className="MuiInputLabel-root-102 MuiInputLabel-formControl-107 MuiInputLabel-animated-110"
                                                   classes={
@@ -1632,37 +1631,22 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                         </WithFormControlContext(InputLabel)>
                                       </WithStyles(WithFormControlContext(InputLabel))>
                                       <WithStyles(WithFormControlContext(Select))
-=======
-                                                Org affiliation
-                                              </label>
-                                            </FormLabel>
-                                          </WithStyles(FormLabel)>
-                                        </InputLabel>
-                                      </WithStyles(InputLabel)>
-                                      <WithStyles(Select)
                                         SelectDisplayProps={
                                           Object {
                                             "id": "org-affiliation-selector",
                                           }
                                         }
->>>>>>> master
                                         error={false}
                                         onChange={[Function]}
                                         required={true}
                                         value=""
                                       >
-<<<<<<< HEAD
                                         <WithFormControlContext(Select)
-=======
-                                        <Select
-                                          IconComponent={[Function]}
                                           SelectDisplayProps={
                                             Object {
                                               "id": "org-affiliation-selector",
                                             }
                                           }
-                                          autoWidth={false}
->>>>>>> master
                                           classes={
                                             Object {
                                               "disabled": "MuiSelect-disabled-125",
@@ -1681,6 +1665,11 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                         >
                                           <Select
                                             IconComponent={[Function]}
+                                            SelectDisplayProps={
+                                              Object {
+                                                "id": "org-affiliation-selector",
+                                              }
+                                            }
                                             autoWidth={false}
                                             classes={
                                               Object {
@@ -1698,7 +1687,6 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                             input={<WithStyles(Input) />}
                                             muiFormControl={
                                               Object {
-<<<<<<< HEAD
                                                 "adornedStart": false,
                                                 "disabled": false,
                                                 "error": false,
@@ -1710,50 +1698,6 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                 "onFilled": [Function],
                                                 "onFocus": [Function],
                                                 "required": false,
-=======
-                                                "IconComponent": [Function],
-                                                "MenuProps": undefined,
-                                                "SelectDisplayProps": Object {
-                                                  "id": "org-affiliation-selector",
-                                                },
-                                                "autoWidth": false,
-                                                "children": Array [
-                                                  <WithStyles(MenuItem)
-                                                    disabled={true}
-                                                    value=""
-                                                  >
-                                                    Organisational affiliation at time of publication
-                                                  </WithStyles(MenuItem)>,
-                                                  Array [
-                                                    <WithStyles(MenuItem)
-                                                      value="UQ"
-                                                    >
-                                                      UQ
-                                                    </WithStyles(MenuItem)>,
-                                                    <WithStyles(MenuItem)
-                                                      value="NotUQ"
-                                                    >
-                                                      Not UQ
-                                                    </WithStyles(MenuItem)>,
-                                                  ],
-                                                ],
-                                                "classes": Object {
-                                                  "disabled": "MuiSelect-disabled-121",
-                                                  "filled": "MuiSelect-filled-118",
-                                                  "icon": "MuiSelect-icon-122",
-                                                  "outlined": "MuiSelect-outlined-119",
-                                                  "root": "MuiSelect-root-116",
-                                                  "select": "MuiSelect-select-117",
-                                                  "selectMenu": "MuiSelect-selectMenu-120",
-                                                },
-                                                "displayEmpty": false,
-                                                "multiple": false,
-                                                "onClose": undefined,
-                                                "onOpen": undefined,
-                                                "open": undefined,
-                                                "renderValue": undefined,
-                                                "type": undefined,
->>>>>>> master
                                                 "variant": "standard",
                                               }
                                             }
@@ -1991,7 +1935,9 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                       Object {
                                                         "IconComponent": [Function],
                                                         "MenuProps": undefined,
-                                                        "SelectDisplayProps": undefined,
+                                                        "SelectDisplayProps": Object {
+                                                          "id": "org-affiliation-selector",
+                                                        },
                                                         "autoWidth": false,
                                                         "children": Array [
                                                           <WithStyles(MenuItem)
@@ -2038,20 +1984,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                     type="text"
                                                     value=""
                                                   >
-<<<<<<< HEAD
                                                     <InputBase
-=======
-                                                    <SelectInput
-                                                      IconComponent={[Function]}
-                                                      SelectDisplayProps={
-                                                        Object {
-                                                          "id": "org-affiliation-selector",
-                                                        }
-                                                      }
-                                                      aria-invalid={false}
-                                                      autoWidth={false}
-                                                      className="MuiInputBase-input-146 MuiInput-input-131"
->>>>>>> master
                                                       classes={
                                                         Object {
                                                           "adornedEnd": "MuiInputBase-adornedEnd-145",
@@ -2080,7 +2013,9 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                         Object {
                                                           "IconComponent": [Function],
                                                           "MenuProps": undefined,
-                                                          "SelectDisplayProps": undefined,
+                                                          "SelectDisplayProps": Object {
+                                                            "id": "org-affiliation-selector",
+                                                          },
                                                           "autoWidth": false,
                                                           "children": Array [
                                                             <WithStyles(MenuItem)
@@ -2148,9 +2083,13 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                         onClick={[Function]}
                                                         required={true}
                                                       >
-<<<<<<< HEAD
                                                         <SelectInput
                                                           IconComponent={[Function]}
+                                                          SelectDisplayProps={
+                                                            Object {
+                                                              "id": "org-affiliation-selector",
+                                                            }
+                                                          }
                                                           aria-invalid={false}
                                                           autoWidth={false}
                                                           className="MuiInputBase-input-150 MuiInput-input-135"
@@ -2169,14 +2108,6 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                           displayEmpty={false}
                                                           inputRef={[Function]}
                                                           multiple={false}
-=======
-                                                        <div
-                                                          aria-haspopup="true"
-                                                          aria-owns={null}
-                                                          aria-pressed="false"
-                                                          className="MuiSelect-select-117 MuiSelect-selectMenu-120 MuiInputBase-input-146 MuiInput-input-131"
-                                                          id="org-affiliation-selector"
->>>>>>> master
                                                           onBlur={[Function]}
                                                           onChange={[Function]}
                                                           onFocus={[Function]}
@@ -2191,6 +2122,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                               aria-haspopup="true"
                                                               aria-pressed="false"
                                                               className="MuiSelect-select-121 MuiSelect-selectMenu-124 MuiInputBase-input-150 MuiInput-input-135"
+                                                              id="org-affiliation-selector"
                                                               onBlur={[Function]}
                                                               onClick={[Function]}
                                                               onFocus={[Function]}
@@ -3569,12 +3501,8 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                     component="button"
                                     disabled={true}
                                     focusRipple={true}
-<<<<<<< HEAD
                                     focusVisibleClassName="MuiButton-focusVisible-189"
-=======
-                                    focusVisibleClassName="MuiButton-focusVisible-185"
                                     id="submit-author"
->>>>>>> master
                                     onClick={[Function]}
                                     type="button"
                                   >
@@ -3593,12 +3521,8 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                       disableTouchRipple={false}
                                       disabled={true}
                                       focusRipple={true}
-<<<<<<< HEAD
                                       focusVisibleClassName="MuiButton-focusVisible-189"
-=======
-                                      focusVisibleClassName="MuiButton-focusVisible-185"
                                       id="submit-author"
->>>>>>> master
                                       onClick={[Function]}
                                       tabIndex="0"
                                       type="button"
@@ -3643,159 +3567,10 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
             </div>
           </ContributorsEditor>
         </MuiPickersUtilsProvider>
-<<<<<<< HEAD
       </MuiThemeProviderOld>
     </Router>
   </MemoryRouter>
 </Provider>
-`;
-
-exports[`ContributorsEditor tests  rendering full component with a defined className 1`] = `
-<div>
-  <Connect(ContributorForm)
-    isContributorAssigned={false}
-    isNtro={false}
-    onAdd={[Function]}
-    showContributorAssignment={false}
-    showIdentifierLookup={false}
-    showRoleInput={false}
-  />
-</div>
-`;
-
-exports[`ContributorsEditor tests  rendering full component with identifier lookup 1`] = `
-<div>
-  <Connect(ContributorForm)
-    isContributorAssigned={false}
-    isNtro={false}
-    onAdd={[Function]}
-    showContributorAssignment={false}
-    showIdentifierLookup={true}
-    showRoleInput={false}
-  />
-</div>
-`;
-
-exports[`ContributorsEditor tests  rendering full component with role input 1`] = `
-<div>
-  <Connect(ContributorForm)
-    isContributorAssigned={false}
-    isNtro={false}
-    onAdd={[Function]}
-    showContributorAssignment={false}
-    showIdentifierLookup={false}
-    showRoleInput={true}
-  />
-</div>
-`;
-
-exports[`ContributorsEditor tests  renders 3 contributor rows with no infinite scroll 1`] = `
-<div>
-  <Connect(ContributorForm)
-    isContributorAssigned={true}
-    isNtro={false}
-    onAdd={[Function]}
-    showContributorAssignment={false}
-    showIdentifierLookup={false}
-    showRoleInput={false}
-  />
-  <WithStyles(Grid)
-    container={true}
-    spacing={8}
-  >
-    <WithStyles(Grid)
-      item={true}
-      xs={12}
-    >
-      <WithStyles(List)>
-        <WithStyles(ContributorRowHeader)
-          isInfinite={false}
-          isNtro={false}
-          onDeleteAll={[Function]}
-          showContributorAssignment={false}
-          showIdentifierLookup={false}
-          showRoleInput={false}
-        />
-      </WithStyles(List)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
-      item={true}
-      xs={12}
-    >
-      <WithStyles(List)
-        classes={
-          Object {
-            "root": "list ",
-          }
-        }
-      >
-        <WithStyles(WithTheme(WithWidth(ContributorRow)))
-          canMoveDown={true}
-          canMoveUp={false}
-          contributor={
-            Object {
-              "nameAsPublished": 1,
-            }
-          }
-          disabledContributorAssignment={false}
-          index={0}
-          key="ContributorRow_0"
-          onContributorAssigned={[Function]}
-          onDelete={[Function]}
-          onMoveDown={[Function]}
-          onMoveUp={[Function]}
-          showContributorAssignment={false}
-          showIdentifierLookup={false}
-          showRoleInput={false}
-        />
-        <WithStyles(WithTheme(WithWidth(ContributorRow)))
-          canMoveDown={true}
-          canMoveUp={true}
-          contributor={
-            Object {
-              "nameAsPublished": 2,
-            }
-          }
-          disabledContributorAssignment={false}
-          index={1}
-          key="ContributorRow_1"
-          onContributorAssigned={[Function]}
-          onDelete={[Function]}
-          onMoveDown={[Function]}
-          onMoveUp={[Function]}
-          showContributorAssignment={false}
-          showIdentifierLookup={false}
-          showRoleInput={false}
-        />
-        <WithStyles(WithTheme(WithWidth(ContributorRow)))
-          canMoveDown={false}
-          canMoveUp={true}
-          contributor={
-            Object {
-              "nameAsPublished": 3,
-            }
-          }
-          disabledContributorAssignment={false}
-          index={2}
-          key="ContributorRow_2"
-          onContributorAssigned={[Function]}
-          onDelete={[Function]}
-          onMoveDown={[Function]}
-          onMoveUp={[Function]}
-          showContributorAssignment={false}
-          showIdentifierLookup={false}
-          showRoleInput={false}
-        />
-      </WithStyles(List)>
-    </WithStyles(Grid)>
-  </WithStyles(Grid)>
-</div>
-=======
-      </MuiThemeProvider>
-    </Router>
-  </MemoryRouter>
-</Provider>
->>>>>>> master
 `;
 
 exports[`ContributorsEditor renders full component with a defined className 1`] = `
@@ -4211,17 +3986,11 @@ exports[`ContributorsEditor should get contributors from props and input value s
 exports[`ContributorsEditor should have a proper style generator 1`] = `
 Object {
   "list": Object {
-<<<<<<< HEAD
-    "marginBottom": 8,
-    "maxHeight": 200,
-    "overflow": "hidden",
-=======
     "margin": "0",
     "marginBottom": 16,
     "maxHeight": 225,
     "overflow": "hidden",
     "width": "100%",
->>>>>>> master
   },
   "scroll": Object {
     "overflowY": "scroll",

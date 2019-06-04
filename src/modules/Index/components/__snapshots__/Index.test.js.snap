@@ -2066,8 +2066,8 @@ exports[`Index page should render placeholders 1`] = `
                                                           "submitThesis": [Function],
                                                           "unclaimRecord": [Function],
                                                           "updateCurrentAuthor": [Function],
-                                                          "updateSecurity": [Function],
                                                           "updateIncompleteRecord": [Function],
+                                                          "updateSecurity": [Function],
                                                         }
                                                       }
                                                       history={
@@ -2176,8 +2176,8 @@ exports[`Index page should render placeholders 1`] = `
                                                             "submitThesis": [Function],
                                                             "unclaimRecord": [Function],
                                                             "updateCurrentAuthor": [Function],
-                                                            "updateSecurity": [Function],
                                                             "updateIncompleteRecord": [Function],
+                                                            "updateSecurity": [Function],
                                                           }
                                                         }
                                                         classes={
@@ -2293,8 +2293,8 @@ exports[`Index page should render placeholders 1`] = `
                                                               "submitThesis": [Function],
                                                               "unclaimRecord": [Function],
                                                               "updateCurrentAuthor": [Function],
-                                                              "updateSecurity": [Function],
                                                               "updateIncompleteRecord": [Function],
+                                                              "updateSecurity": [Function],
                                                             }
                                                           }
                                                           classes={
@@ -2844,8 +2844,8 @@ exports[`Index page should render placeholders 1`] = `
                                                                 "submitThesis": [Function],
                                                                 "unclaimRecord": [Function],
                                                                 "updateCurrentAuthor": [Function],
-                                                                "updateSecurity": [Function],
                                                                 "updateIncompleteRecord": [Function],
+                                                                "updateSecurity": [Function],
                                                               }
                                                             }
                                                             classes={
@@ -4072,7 +4072,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                                           id="text"
                                                                                         >
                                                                                           <b>
-                                                                                            There has been an error -
+                                                                                            There has been an error - 
                                                                                           </b>
                                                                                           Trending publications are temporarily unavailable
                                                                                         </div>
@@ -6312,8 +6312,8 @@ exports[`Index page should render placeholders 1`] = `
                                                                   "submitThesis": [Function],
                                                                   "unclaimRecord": [Function],
                                                                   "updateCurrentAuthor": [Function],
-                                                                  "updateSecurity": [Function],
                                                                   "updateIncompleteRecord": [Function],
+                                                                  "updateSecurity": [Function],
                                                                 }
                                                               }
                                                             >
@@ -6376,8 +6376,8 @@ exports[`Index page should render placeholders 1`] = `
                                                                     "submitThesis": [Function],
                                                                     "unclaimRecord": [Function],
                                                                     "updateCurrentAuthor": [Function],
-                                                                    "updateSecurity": [Function],
                                                                     "updateIncompleteRecord": [Function],
+                                                                    "updateSecurity": [Function],
                                                                   }
                                                                 }
                                                                 classes={

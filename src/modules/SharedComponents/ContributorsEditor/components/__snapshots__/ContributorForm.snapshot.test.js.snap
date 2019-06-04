@@ -1812,12 +1812,8 @@ exports[`Component ContributorForm should render connected component 1`] = `
                                 component="button"
                                 disabled={true}
                                 focusRipple={true}
-<<<<<<< HEAD
                                 focusVisibleClassName="MuiButton-focusVisible-169"
-=======
-                                focusVisibleClassName="MuiButton-focusVisible-165"
                                 id="submit-author"
->>>>>>> master
                                 onClick={[Function]}
                                 type="button"
                               >
@@ -1836,12 +1832,8 @@ exports[`Component ContributorForm should render connected component 1`] = `
                                   disableTouchRipple={false}
                                   disabled={true}
                                   focusRipple={true}
-<<<<<<< HEAD
                                   focusVisibleClassName="MuiButton-focusVisible-169"
-=======
-                                  focusVisibleClassName="MuiButton-focusVisible-165"
                                   id="submit-author"
->>>>>>> master
                                   onClick={[Function]}
                                   tabIndex="0"
                                   type="button"

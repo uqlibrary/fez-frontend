@@ -26,16 +26,6 @@ exports[`Component ContributorRow Row should be clickable when showContributorAs
     id="contributor-editor-row-0"
     onClick={[Function]}
     onKeyDown={[Function]}
-<<<<<<< HEAD
-    style={
-      Object {
-        "cursor": "pointer",
-        "margin": 0,
-        "width": "100%",
-      }
-    }
-=======
->>>>>>> master
     tabIndex={0}
   >
     <Hidden
@@ -197,18 +187,7 @@ exports[`Component ContributorRow Row should not be clickable when showContribut
     id="contributor-editor-row-0"
     onClick={[Function]}
     onKeyDown={[Function]}
-<<<<<<< HEAD
-    style={
-      Object {
-        "cursor": "pointer",
-        "margin": 0,
-        "width": "100%",
-      }
-    }
-    tabIndex={0}
-=======
     tabIndex={-1}
->>>>>>> master
   >
     <Hidden
       implementation="js"
@@ -373,18 +352,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
     id="contributor-editor-row-0"
     onClick={[Function]}
     onKeyDown={[Function]}
-<<<<<<< HEAD
-    style={
-      Object {
-        "cursor": "pointer",
-        "margin": 0,
-        "width": "100%",
-      }
-    }
-    tabIndex={0}
-=======
     tabIndex={-1}
->>>>>>> master
   >
     <Hidden
       implementation="js"
@@ -513,18 +481,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
     id="contributor-editor-row-0"
     onClick={[Function]}
     onKeyDown={[Function]}
-<<<<<<< HEAD
-    style={
-      Object {
-        "cursor": "pointer",
-        "margin": 0,
-        "width": "100%",
-      }
-    }
-    tabIndex={0}
-=======
     tabIndex={-1}
->>>>>>> master
   >
     <Hidden
       implementation="js"
@@ -653,16 +610,6 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
     id="contributor-editor-row-0"
     onClick={[Function]}
     onKeyDown={[Function]}
-<<<<<<< HEAD
-    style={
-      Object {
-        "cursor": "pointer",
-        "margin": 0,
-        "width": "100%",
-      }
-    }
-=======
->>>>>>> master
     tabIndex={0}
   >
     <Hidden
@@ -868,18 +815,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
     id="contributor-editor-row-0"
     onClick={[Function]}
     onKeyDown={[Function]}
-<<<<<<< HEAD
-    style={
-      Object {
-        "cursor": "pointer",
-        "margin": 0,
-        "width": "100%",
-      }
-    }
-    tabIndex={0}
-=======
     tabIndex={-1}
->>>>>>> master
   >
     <Hidden
       implementation="js"
@@ -1004,18 +940,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
     id="contributor-editor-row-0"
     onClick={[Function]}
     onKeyDown={[Function]}
-<<<<<<< HEAD
-    style={
-      Object {
-        "cursor": "pointer",
-        "margin": 0,
-        "width": "100%",
-      }
-    }
-    tabIndex={0}
-=======
     tabIndex={-1}
->>>>>>> master
   >
     <Hidden
       implementation="js"
@@ -1140,18 +1065,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
     id="contributor-editor-row-0"
     onClick={[Function]}
     onKeyDown={[Function]}
-<<<<<<< HEAD
-    style={
-      Object {
-        "cursor": "pointer",
-        "margin": 0,
-        "width": "100%",
-      }
-    }
-    tabIndex={0}
-=======
     tabIndex={-1}
->>>>>>> master
   >
     <Hidden
       implementation="js"
@@ -1316,18 +1230,7 @@ exports[`Component ContributorRow a row with index and creator with creator role
     id="contributor-editor-row-0"
     onClick={[Function]}
     onKeyDown={[Function]}
-<<<<<<< HEAD
-    style={
-      Object {
-        "cursor": "pointer",
-        "margin": 0,
-        "width": "100%",
-      }
-    }
-    tabIndex={0}
-=======
     tabIndex={-1}
->>>>>>> master
   >
     <Hidden
       implementation="js"
@@ -1476,18 +1379,7 @@ exports[`Component ContributorRow a row with index and creator with creator role
     id="contributor-editor-row-0"
     onClick={[Function]}
     onKeyDown={[Function]}
-<<<<<<< HEAD
-    style={
-      Object {
-        "cursor": "pointer",
-        "margin": 0,
-        "width": "100%",
-      }
-    }
-    tabIndex={0}
-=======
     tabIndex={-1}
->>>>>>> master
   >
     <Hidden
       implementation="js"
@@ -1636,16 +1528,6 @@ exports[`Component ContributorRow should assign contributor 1`] = `
     id="contributor-editor-row-0"
     onClick={[Function]}
     onKeyDown={[Function]}
-<<<<<<< HEAD
-    style={
-      Object {
-        "cursor": "pointer",
-        "margin": 0,
-        "width": "100%",
-      }
-    }
-=======
->>>>>>> master
     tabIndex={0}
   >
     <Hidden
@@ -1806,18 +1688,7 @@ exports[`Component ContributorRow should call callback functions on ListItem 1`]
     id="contributor-editor-row-0"
     onClick={[Function]}
     onKeyDown={[Function]}
-<<<<<<< HEAD
-    style={
-      Object {
-        "cursor": "pointer",
-        "margin": 0,
-        "width": "100%",
-      }
-    }
-    tabIndex={0}
-=======
     tabIndex={-1}
->>>>>>> master
   >
     <Hidden
       implementation="js"
@@ -2510,18 +2381,7 @@ exports[`Component ContributorRow should render with missing aria label if selec
     id="contributor-editor-row-0"
     onClick={[Function]}
     onKeyDown={[Function]}
-<<<<<<< HEAD
-    style={
-      Object {
-        "cursor": "pointer",
-        "margin": 0,
-        "width": "100%",
-      }
-    }
-    tabIndex={0}
-=======
     tabIndex={-1}
->>>>>>> master
   >
     <Hidden
       implementation="js"

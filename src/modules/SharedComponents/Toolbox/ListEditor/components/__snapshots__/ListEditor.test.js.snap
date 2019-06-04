@@ -299,32 +299,5 @@ exports[`ListEditor tests should render input value as itemList 1`] = `
     normalize={[Function]}
     onAdd={[Function]}
   />
-  <WithStyles(ListRowHeader)
-    disabled={false}
-    hideReorder={false}
-    onDeleteAll={[Function]}
-  />
-  <WithStyles(ListRow)
-    canMoveDown={true}
-    canMoveUp={false}
-    disabled={false}
-    hideReorder={false}
-    index={0}
-    key="0"
-    onDelete={[Function]}
-    onMoveDown={[Function]}
-    onMoveUp={[Function]}
-  />
-  <WithStyles(ListRow)
-    canMoveDown={false}
-    canMoveUp={true}
-    disabled={false}
-    hideReorder={false}
-    index={1}
-    key="1"
-    onDelete={[Function]}
-    onMoveDown={[Function]}
-    onMoveUp={[Function]}
-  />
 </div>
 `;
