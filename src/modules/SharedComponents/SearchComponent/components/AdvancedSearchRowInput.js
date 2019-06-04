@@ -22,6 +22,7 @@ export default class AdvancedSearchRowInput extends PureComponent {
             validation: PropTypes.array.isRequired,
             hint: PropTypes.string,
             label: PropTypes.string,
+            id: PropTypes.string,
             multiple: PropTypes.bool,
             errorHint: PropTypes.string,
             loadingHint: PropTypes.string,
@@ -88,10 +89,11 @@ export default class AdvancedSearchRowInput extends PureComponent {
 
         const textFieldMui1Props = {
             'placeholder': this.props.inputField.hint,
+            'id': this.props.inputField.id || this.props.inputField.label || 'textfield',
             'aria-label': this.props.inputField.ariaLabel,
             'error': !!this.runValidationRules(this.props.value),
             'errorText': this.runValidationRules(this.props.value),
-            'label': null,
+            'label': this.props.label,
         };
 
         const lookupDefaultProps = {
@@ -115,6 +117,7 @@ export default class AdvancedSearchRowInput extends PureComponent {
                     ...textFieldMui1Props,
                     'autoComplete': 'search',
                     'onChange': (event) => this.props.onChange(event.target.value),
+                    'hideLabel': true,
                 };
             case 'PublisherLookup':
             case 'OrgUnitLookup':

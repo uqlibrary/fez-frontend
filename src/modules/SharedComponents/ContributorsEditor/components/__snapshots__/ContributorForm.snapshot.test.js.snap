@@ -1253,6 +1253,7 @@ exports[`Component ContributorForm should render connected component 1`] = `
                               <TextField
                                 InputLabelProps={
                                   Object {
+                                    "htmlFor": "nameAsPublishedField",
                                     "id": "nameAsPublishedField-label",
                                     "shrink": undefined,
                                   }
@@ -1264,7 +1265,10 @@ exports[`Component ContributorForm should render connected component 1`] = `
                                 id="nameAsPublishedField"
                                 inputProps={
                                   Object {
+                                    "aria-label": "Name as published",
                                     "aria-labelledby": "nameAsPublishedField-label",
+                                    "id": "nameAsPublishedField",
+                                    "label": "Name as published",
                                   }
                                 }
                                 label="Name as published"
@@ -1368,7 +1372,10 @@ exports[`Component ContributorForm should render connected component 1`] = `
                                         id="nameAsPublishedField"
                                         inputProps={
                                           Object {
+                                            "aria-label": "Name as published",
                                             "aria-labelledby": "nameAsPublishedField-label",
+                                            "id": "nameAsPublishedField",
+                                            "label": "Name as published",
                                           }
                                         }
                                         onChange={[Function]}
@@ -1398,7 +1405,10 @@ exports[`Component ContributorForm should render connected component 1`] = `
                                           id="nameAsPublishedField"
                                           inputProps={
                                             Object {
+                                              "aria-label": "Name as published",
                                               "aria-labelledby": "nameAsPublishedField-label",
+                                              "id": "nameAsPublishedField",
+                                              "label": "Name as published",
                                             }
                                           }
                                           onChange={[Function]}
@@ -1429,7 +1439,10 @@ exports[`Component ContributorForm should render connected component 1`] = `
                                             inputComponent="input"
                                             inputProps={
                                               Object {
+                                                "aria-label": "Name as published",
                                                 "aria-labelledby": "nameAsPublishedField-label",
+                                                "id": "nameAsPublishedField",
+                                                "label": "Name as published",
                                               }
                                             }
                                             multiline={false}
@@ -1466,7 +1479,10 @@ exports[`Component ContributorForm should render connected component 1`] = `
                                               inputComponent="input"
                                               inputProps={
                                                 Object {
+                                                  "aria-label": "Name as published",
                                                   "aria-labelledby": "nameAsPublishedField-label",
+                                                  "id": "nameAsPublishedField",
+                                                  "label": "Name as published",
                                                 }
                                               }
                                               multiline={false}
@@ -1481,11 +1497,13 @@ exports[`Component ContributorForm should render connected component 1`] = `
                                               >
                                                 <input
                                                   aria-invalid={false}
+                                                  aria-label="Name as published"
                                                   aria-labelledby="nameAsPublishedField-label"
                                                   autoComplete="off"
                                                   className="MuiInputBase-input-139 MuiInput-input-124"
                                                   disabled={false}
                                                   id="nameAsPublishedField"
+                                                  label="Name as published"
                                                   onBlur={[Function]}
                                                   onChange={[Function]}
                                                   onFocus={[Function]}

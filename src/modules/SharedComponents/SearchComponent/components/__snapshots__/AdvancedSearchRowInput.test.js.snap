@@ -59,7 +59,8 @@ exports[`AdvancedSearchRowInput should call onChange from input props for TextFi
   classes={Object {}}
   error={true}
   errorText="This field is required"
-  label={null}
+  hideLabel={true}
+  id="textfield"
   onChange={[Function]}
 />
 `;

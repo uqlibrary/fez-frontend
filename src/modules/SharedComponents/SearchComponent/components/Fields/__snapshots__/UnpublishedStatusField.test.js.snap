@@ -1146,6 +1146,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                           className="MuiFormControl-root-2 MuiFormControl-fullWidth-5"
                         >
                           <WithStyles(InputLabel)
+                            hidden={false}
                             id="Select item-label"
                           >
                             <InputLabel
@@ -1161,11 +1162,13 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                 }
                               }
                               disableAnimation={false}
+                              hidden={false}
                               id="Select item-label"
                             >
                               <WithStyles(FormLabel)
                                 className="MuiInputLabel-root-6 MuiInputLabel-formControl-7 MuiInputLabel-animated-10"
                                 data-shrink={false}
+                                hidden={false}
                                 id="Select item-label"
                               >
                                 <FormLabel
@@ -1183,11 +1186,13 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                   }
                                   component="label"
                                   data-shrink={false}
+                                  hidden={false}
                                   id="Select item-label"
                                 >
                                   <label
                                     className="MuiFormLabel-root-13 MuiInputLabel-root-6 MuiInputLabel-formControl-7 MuiInputLabel-animated-10"
                                     data-shrink={false}
+                                    hidden={false}
                                     id="Select item-label"
                                   >
                                     Select item
@@ -3789,6 +3794,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                           className="MuiFormControl-root-2 MuiFormControl-fullWidth-5"
                         >
                           <WithStyles(InputLabel)
+                            hidden={false}
                             id="Select item-label"
                           >
                             <InputLabel
@@ -3804,11 +3810,13 @@ exports[`UnpublishedStatusField component should render error message from redux
                                 }
                               }
                               disableAnimation={false}
+                              hidden={false}
                               id="Select item-label"
                             >
                               <WithStyles(FormLabel)
                                 className="MuiInputLabel-root-6 MuiInputLabel-formControl-7 MuiInputLabel-animated-10"
                                 data-shrink={false}
+                                hidden={false}
                                 id="Select item-label"
                               >
                                 <FormLabel
@@ -3826,11 +3834,13 @@ exports[`UnpublishedStatusField component should render error message from redux
                                   }
                                   component="label"
                                   data-shrink={false}
+                                  hidden={false}
                                   id="Select item-label"
                                 >
                                   <label
                                     className="MuiFormLabel-root-13 MuiFormLabel-error-16 MuiInputLabel-root-6 MuiInputLabel-formControl-7 MuiInputLabel-animated-10"
                                     data-shrink={false}
+                                    hidden={false}
                                     id="Select item-label"
                                   >
                                     Select item
@@ -6445,6 +6455,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                           className="MuiFormControl-root-2 MuiFormControl-fullWidth-5"
                         >
                           <WithStyles(InputLabel)
+                            hidden={false}
                             id="Select item-label"
                           >
                             <InputLabel
@@ -6460,11 +6471,13 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                 }
                               }
                               disableAnimation={false}
+                              hidden={false}
                               id="Select item-label"
                             >
                               <WithStyles(FormLabel)
                                 className="MuiInputLabel-root-6 MuiInputLabel-formControl-7 MuiInputLabel-animated-10"
                                 data-shrink={false}
+                                hidden={false}
                                 id="Select item-label"
                               >
                                 <FormLabel
@@ -6482,11 +6495,13 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                   }
                                   component="label"
                                   data-shrink={false}
+                                  hidden={false}
                                   id="Select item-label"
                                 >
                                   <label
                                     className="MuiFormLabel-root-13 MuiInputLabel-root-6 MuiInputLabel-formControl-7 MuiInputLabel-animated-10"
                                     data-shrink={false}
+                                    hidden={false}
                                     id="Select item-label"
                                   >
                                     Select item
@@ -9081,6 +9096,7 @@ exports[`UnpublishedStatusField component should render with value selected from
                           className="MuiFormControl-root-2 MuiFormControl-fullWidth-5"
                         >
                           <WithStyles(InputLabel)
+                            hidden={false}
                             id="Select item-label"
                           >
                             <InputLabel
@@ -9096,11 +9112,13 @@ exports[`UnpublishedStatusField component should render with value selected from
                                 }
                               }
                               disableAnimation={false}
+                              hidden={false}
                               id="Select item-label"
                             >
                               <WithStyles(FormLabel)
                                 className="MuiInputLabel-root-6 MuiInputLabel-formControl-7 MuiInputLabel-animated-10 MuiInputLabel-shrink-9"
                                 data-shrink={true}
+                                hidden={false}
                                 id="Select item-label"
                               >
                                 <FormLabel
@@ -9118,11 +9136,13 @@ exports[`UnpublishedStatusField component should render with value selected from
                                   }
                                   component="label"
                                   data-shrink={true}
+                                  hidden={false}
                                   id="Select item-label"
                                 >
                                   <label
                                     className="MuiFormLabel-root-13 MuiFormLabel-filled-17 MuiInputLabel-root-6 MuiInputLabel-formControl-7 MuiInputLabel-animated-10 MuiInputLabel-shrink-9"
                                     data-shrink={true}
+                                    hidden={false}
                                     id="Select item-label"
                                   >
                                     Select item

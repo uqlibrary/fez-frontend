@@ -5,7 +5,7 @@ exports[`ThesisSubmission form should allow user to submit thesis 1`] = `
 - First value
 + Second value
 
-@@ -121,16 +121,16 @@
+@@ -123,16 +123,16 @@
                               class=\\"MuiSelect-select-238 MuiSelect-selectMenu-241 MuiInputBase-input-229 MuiInput-input-214\\"
                               id=\\"thesis-subtype\\"
                               role=\\"button\\"
@@ -24,13 +24,13 @@ exports[`ThesisSubmission form should allow user to submit thesis 1`] = `
                               aria-hidden=\\"true\\"
                               class=\\"MuiSvgIcon-root-244 MuiSelect-icon-243\\"
                               focusable=\\"false\\"
-@@ -169,49 +169,42 @@
+@@ -171,51 +171,44 @@
                           >
                             <div
                               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31\\"
                             >
                               <div
--                               aria-describedby=\\"Enrollingunititem-helper-text\\"
+-                               aria-describedby=\\"Enrollingunit-input-helper-text\\"
                                 class=\\"MuiFormControl-root-188 MuiFormControl-fullWidth-191\\"
                               >
                                 <label
@@ -38,8 +38,8 @@ exports[`ThesisSubmission form should allow user to submit thesis 1`] = `
 -                                 data-shrink=\\"false\\"
 +                                 class=\\"MuiFormLabel-root-199 MuiFormLabel-filled-203 MuiFormLabel-required-204 MuiInputLabel-root-192 MuiInputLabel-formControl-193 MuiInputLabel-animated-196 MuiInputLabel-shrink-195\\"
 +                                 data-shrink=\\"true\\"
-                                  for=\\"Enrollingunititem\\"
-                                  id=\\"Enrollingunititem-label\\"
+                                  for=\\"Enrollingunit-input\\"
+                                  id=\\"Enrollingunit-input-label\\"
                                 >
                                   Enrolling unit
                                   <span
@@ -58,10 +58,12 @@ exports[`ThesisSubmission form should allow user to submit thesis 1`] = `
                                   <input
 -                                   aria-invalid=\\"true\\"
 +                                   aria-invalid=\\"false\\"
-                                    aria-labelledby=\\"Enrollingunititem-label\\"
+                                    aria-label=\\"Enrolling unit\\"
+                                    aria-labelledby=\\"Enrollingunit-input-label\\"
                                     autocomplete=\\"off\\"
                                     class=\\"MuiInputBase-input-229 MuiInput-input-214\\"
                                     id=\\"Enrollingunit-input\\"
+                                    label=\\"Enrolling unit\\"
                                     placeholder=\\"Enrolling unit, eg. School of Business\\"
                                     required=\\"\\"
                                     type=\\"text\\"
@@ -71,7 +73,7 @@ exports[`ThesisSubmission form should allow user to submit thesis 1`] = `
                                 </div>
 -                               <p
 -                                 class=\\"MuiFormHelperText-root-304 MuiFormHelperText-error-305 MuiFormHelperText-required-311\\"
--                                 id=\\"Enrollingunititem-helper-text\\"
+-                                 id=\\"Enrollingunit-input-helper-text\\"
 -                               >
 -                                 This field is required
 -                               </p>
@@ -80,7 +82,7 @@ exports[`ThesisSubmission form should allow user to submit thesis 1`] = `
                           </div>
                         </div>
                       </div>
-@@ -267,27 +260,27 @@
+@@ -271,27 +264,27 @@
                       >
                         <div
                           class=\\"MuiFormControl-root-188 MuiFormControl-fullWidth-191\\"
@@ -107,12 +109,12 @@ exports[`ThesisSubmission form should allow user to submit thesis 1`] = `
                             <input
 -                             aria-invalid=\\"true\\"
 +                             aria-invalid=\\"false\\"
+                              aria-label=\\"Enter each supervisor’s name on a separate line e.g. Firstname Surname\\"
                               aria-labelledby=\\"supervisors-name-as-published-field-label\\"
                               autocomplete=\\"off\\"
                               class=\\"MuiInputBase-input-229 MuiInput-input-214\\"
                               id=\\"supervisors-name-as-published-field\\"
-                              placeholder=\\"\\"
-@@ -315,19 +308,210 @@
+@@ -321,19 +314,210 @@
                             Add supervisor
                           </span>
                         </button>
@@ -325,21 +327,21 @@ exports[`ThesisSubmission form should allow user to submit thesis 1`] = `
             >
               <div
                 class=\\"MuiPaper-root-154 MuiPaper-elevation1-157 MuiPaper-rounded-155 MuiCard-root-153 Cards-card-149 StandardCard\\"
-@@ -375,52 +559,149 @@
+@@ -381,54 +565,151 @@
                         >
                           <div
                             class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31\\"
                           >
                             <div
--                             aria-describedby=\\"Fieldofresearchitem-helper-text\\"
+-                             aria-describedby=\\"Fieldofresearch-input-helper-text\\"
                               class=\\"MuiFormControl-root-188 MuiFormControl-fullWidth-191\\"
                             >
                               <label
 -                               class=\\"MuiFormLabel-root-199 MuiFormLabel-error-202 MuiInputLabel-root-192 MuiInputLabel-formControl-193 MuiInputLabel-animated-196\\"
 +                               class=\\"MuiFormLabel-root-199 MuiInputLabel-root-192 MuiInputLabel-formControl-193 MuiInputLabel-animated-196\\"
                                 data-shrink=\\"false\\"
-                                for=\\"Fieldofresearchitem\\"
-                                id=\\"Fieldofresearchitem-label\\"
+                                for=\\"Fieldofresearch-input\\"
+                                id=\\"Fieldofresearch-input-label\\"
                               >
                                 Field of research
                               </label>
@@ -352,10 +354,12 @@ exports[`ThesisSubmission form should allow user to submit thesis 1`] = `
                                 <input
 -                                 aria-invalid=\\"true\\"
 +                                 aria-invalid=\\"false\\"
-                                  aria-labelledby=\\"Fieldofresearchitem-label\\"
+                                  aria-label=\\"Field of research\\"
+                                  aria-labelledby=\\"Fieldofresearch-input-label\\"
                                   autocomplete=\\"off\\"
                                   class=\\"MuiInputBase-input-229 MuiInput-input-214\\"
                                   id=\\"Fieldofresearch-input\\"
+                                  label=\\"Field of research\\"
                                   placeholder=\\"Start typing code or field name and select from list\\"
                                   type=\\"text\\"
                                   value=\\"\\"
@@ -431,7 +435,7 @@ exports[`ThesisSubmission form should allow user to submit thesis 1`] = `
 +                       >
                           <p
 -                               class=\\"MuiFormHelperText-root-304 MuiFormHelperText-error-305\\"
--                               id=\\"Fieldofresearchitem-helper-text\\"
+-                               id=\\"Fieldofresearch-input-helper-text\\"
 +                           class=\\"MuiTypography-root-100 MuiTypography-body2-108\\"
                           >
 -                               Field of research values are required
@@ -483,7 +487,7 @@ exports[`ThesisSubmission form should allow user to submit thesis 1`] = `
             >
               <div
                 class=\\"MuiPaper-root-154 MuiPaper-elevation1-157 MuiPaper-rounded-155 MuiCard-root-153 Cards-card-149 StandardCard\\"
-@@ -453,38 +734,31 @@
+@@ -461,38 +742,31 @@
                     >
                       <div
                         class=\\"MuiGrid-item-4\\"
@@ -526,7 +530,7 @@ exports[`ThesisSubmission form should allow user to submit thesis 1`] = `
                       <div
                         class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-2-47\\"
                       >
-@@ -501,15 +775,260 @@
+@@ -509,15 +783,260 @@
                             Add
                           </span>
                         </button>
@@ -787,7 +791,7 @@ exports[`ThesisSubmission form should allow user to submit thesis 1`] = `
               <div
                 class=\\"MuiPaper-root-154 MuiPaper-elevation1-157 MuiPaper-rounded-155 MuiCard-root-153 Cards-card-149 StandardCard\\"
               >
-@@ -627,76 +1146,12 @@
+@@ -635,76 +1154,12 @@
                     </div>
                   </div>
                 </div>
@@ -864,7 +868,7 @@ exports[`ThesisSubmission form should allow user to submit thesis 1`] = `
             <div
               class=\\"MuiGrid-item-4 MuiGrid-grid-sm-true-45\\"
             />
-@@ -720,21 +1175,23 @@
+@@ -728,21 +1183,23 @@
             </div>
             <div
               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-auto-44\\"

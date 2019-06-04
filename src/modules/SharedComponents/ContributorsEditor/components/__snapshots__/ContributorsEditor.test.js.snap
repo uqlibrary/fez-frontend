@@ -2712,6 +2712,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                   <TextField
                                     InputLabelProps={
                                       Object {
+                                        "htmlFor": "nameAsPublishedField",
                                         "id": "nameAsPublishedField-label",
                                         "shrink": undefined,
                                       }
@@ -2724,7 +2725,10 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                     id="nameAsPublishedField"
                                     inputProps={
                                       Object {
+                                        "aria-label": "Name as published",
                                         "aria-labelledby": "nameAsPublishedField-label",
+                                        "id": "nameAsPublishedField",
+                                        "label": "Name as published",
                                       }
                                     }
                                     label="Name as published"
@@ -2829,7 +2833,10 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                             id="nameAsPublishedField"
                                             inputProps={
                                               Object {
+                                                "aria-label": "Name as published",
                                                 "aria-labelledby": "nameAsPublishedField-label",
+                                                "id": "nameAsPublishedField",
+                                                "label": "Name as published",
                                               }
                                             }
                                             onChange={[Function]}
@@ -2859,7 +2866,10 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                               id="nameAsPublishedField"
                                               inputProps={
                                                 Object {
+                                                  "aria-label": "Name as published",
                                                   "aria-labelledby": "nameAsPublishedField-label",
+                                                  "id": "nameAsPublishedField",
+                                                  "label": "Name as published",
                                                 }
                                               }
                                               onChange={[Function]}
@@ -2890,7 +2900,10 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                 inputComponent="input"
                                                 inputProps={
                                                   Object {
+                                                    "aria-label": "Name as published",
                                                     "aria-labelledby": "nameAsPublishedField-label",
+                                                    "id": "nameAsPublishedField",
+                                                    "label": "Name as published",
                                                   }
                                                 }
                                                 multiline={false}
@@ -2927,7 +2940,10 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                   inputComponent="input"
                                                   inputProps={
                                                     Object {
+                                                      "aria-label": "Name as published",
                                                       "aria-labelledby": "nameAsPublishedField-label",
+                                                      "id": "nameAsPublishedField",
+                                                      "label": "Name as published",
                                                     }
                                                   }
                                                   multiline={false}
@@ -2942,11 +2958,13 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                   >
                                                     <input
                                                       aria-invalid={false}
+                                                      aria-label="Name as published"
                                                       aria-labelledby="nameAsPublishedField-label"
                                                       autoComplete="off"
                                                       className="MuiInputBase-input-146 MuiInput-input-131 MuiInputBase-disabled-139 MuiInput-disabled-126"
                                                       disabled={true}
                                                       id="nameAsPublishedField"
+                                                      label="Name as published"
                                                       onBlur={[Function]}
                                                       onChange={[Function]}
                                                       onFocus={[Function]}

@@ -5,6 +5,7 @@ exports[`TextFieldWrapper snapshots tests renders TextField component 1`] = `
   <TextField
     InputLabelProps={
       Object {
+        "htmlFor": "undefined",
         "id": "undefined-label",
         "shrink": undefined,
       }
@@ -12,9 +13,13 @@ exports[`TextFieldWrapper snapshots tests renders TextField component 1`] = `
     error={false}
     floatingLabelText="This is a test textfield component"
     fullWidth={true}
+    id="undefined"
     inputProps={
       Object {
+        "aria-label": undefined,
         "aria-labelledby": "undefined-label",
+        "id": "undefined",
+        "label": undefined,
       }
     }
     name="testField"
@@ -31,6 +36,7 @@ exports[`TextFieldWrapper snapshots tests renders TextField component appending 
   <TextField
     InputLabelProps={
       Object {
+        "htmlFor": "undefined",
         "id": "undefined-label",
         "shrink": undefined,
       }
@@ -39,9 +45,13 @@ exports[`TextFieldWrapper snapshots tests renders TextField component appending 
     error={false}
     floatingLabelText="This is a test textfield component"
     fullWidth={true}
+    id="undefined"
     inputProps={
       Object {
+        "aria-label": undefined,
         "aria-labelledby": "undefined-label",
+        "id": "undefined",
+        "label": undefined,
       }
     }
     name="testField"
@@ -58,6 +68,7 @@ exports[`TextFieldWrapper snapshots tests renders TextField component with shrin
   <TextField
     InputLabelProps={
       Object {
+        "htmlFor": "undefined",
         "id": "undefined-label",
         "shrink": true,
       }
@@ -66,9 +77,13 @@ exports[`TextFieldWrapper snapshots tests renders TextField component with shrin
     floatingLabelText="This is a test textfield component"
     floatinglabelfixed={true}
     fullWidth={true}
+    id="undefined"
     inputProps={
       Object {
+        "aria-label": undefined,
         "aria-labelledby": "undefined-label",
+        "id": "undefined",
+        "label": undefined,
       }
     }
     name="testField"

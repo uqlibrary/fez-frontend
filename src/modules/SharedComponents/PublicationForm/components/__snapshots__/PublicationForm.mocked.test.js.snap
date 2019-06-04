@@ -62,6 +62,7 @@ exports[`Component PublicationForm should render properly with non-matching doct
               }
               component={[Function]}
               disabled={false}
+              id="rek_display_type"
               label="Work type"
               name="rek_display_type"
               placeholder="Select a Work type from the dropdown list"

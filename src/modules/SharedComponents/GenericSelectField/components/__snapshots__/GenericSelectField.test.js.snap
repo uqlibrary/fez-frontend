@@ -2031,6 +2031,7 @@ exports[`GenericSelectField  Methods  Shows an error 1`] = `
   fullWidth={true}
 >
   <WithStyles(InputLabel)
+    hidden={false}
     id="Select item-label"
   >
     Select item
@@ -2203,6 +2204,12 @@ exports[`GenericSelectField  should render  snapshots for  loading items 2`] = `
   error={false}
   fullWidth={true}
 >
+  <WithStyles(InputLabel)
+    hidden={true}
+    id="Select item-label"
+  >
+    Select item
+  </WithStyles(InputLabel)>
   <WithStyles(Select)
     SelectDisplayProps={
       Object {

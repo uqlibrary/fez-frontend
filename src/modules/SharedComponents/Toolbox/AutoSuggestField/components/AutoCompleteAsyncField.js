@@ -203,7 +203,7 @@ export class AutoCompleteAsyncField extends Component {
                                                 errorText: error && errorText || '',
                                                 placeholder: hintText,
                                                 label: floatingLabelText,
-                                                id: `${floatingLabelText.replace(/[^\w]/g, '')}item`,
+                                                id: `${floatingLabelText.replace(/[^\w]/g, '')}-input`,
                                                 value: inputValue,
                                                 disabled: disabled,
                                                 required: required,

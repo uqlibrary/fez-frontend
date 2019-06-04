@@ -35,6 +35,7 @@ exports[`PublicationSearchForm renders  component 1`] = `
           color="primary"
           component={[Function]}
           fullWidth={true}
+          hideLabel={true}
           label="Enter DOI, Pubmed Id or Title"
           name="searchQuery"
           required={true}
@@ -100,6 +101,7 @@ exports[`PublicationSearchForm renders  should display with skip search option 1
           color="primary"
           component={[Function]}
           fullWidth={true}
+          hideLabel={true}
           label="Enter DOI, Pubmed Id or Title"
           name="searchQuery"
           required={true}

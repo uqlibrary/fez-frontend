@@ -44,7 +44,7 @@ describe('Component PublicationYearRangeField', () => {
         wrapper.instance().setValue = setValueMock;
         expect(wrapper.instance().props.yearFilter.from).toEqual(1999);
         wrapper.find('#from').simulate('change', { target: { value: 1000 } });
-        expect(updateMock).toBeCalledWith({ "from": 1999, "invalid": true, "to": 1000 });
+        expect(updateMock).toBeCalledWith({ "from": 1000, "invalid": false, "to": 2001 });
     });
 
     it('should return values as expect for an invalid setValue', () => {
@@ -56,16 +56,16 @@ describe('Component PublicationYearRangeField', () => {
         expect(wrapper.instance().props.yearFilter.from).toEqual(1999);
 
         wrapper.find('#from').simulate('change', { target: { value: 'hello100' } });
-        expect(updateMock).toBeCalledWith({ "from": 1999, "invalid": true, "to": 100 });
+        expect(updateMock).toBeCalledWith({ "from": 100, "invalid": false, "to": 2001 });
 
         wrapper.find('#from').simulate('change', { target: { value: '100hello' } });
-        expect(updateMock).toBeCalledWith({ "from": 1999, "invalid": true, "to": 100 });
+        expect(updateMock).toBeCalledWith({ "from": 100, "invalid": false, "to": 2001 });
 
         wrapper.find('#from').simulate('change', { target: { value: '1100' } });
-        expect(updateMock).toBeCalledWith({ "from": 1999, "invalid": true, "to": 1100 });
+        expect(updateMock).toBeCalledWith({ "from": 1100, "invalid": false, "to": 2001 });
 
         wrapper.find('#from').simulate('change', { target: { value: '' } });
-        expect(updateMock).toBeCalledWith({ "from": 1999, "invalid": true, "to": 1100 });
+        expect(updateMock).toBeCalledWith({ "from": 100, "invalid": false, "to": 2001 });
     });
 
     it('should test invalid year properly', () => {
