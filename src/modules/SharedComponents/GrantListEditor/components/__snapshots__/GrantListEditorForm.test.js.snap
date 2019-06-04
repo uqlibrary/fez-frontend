@@ -896,6 +896,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                 <TextField
                                   InputLabelProps={
                                     Object {
+                                      "hidden": false,
                                       "htmlFor": "grantAgencyName",
                                       "id": "grantAgencyName-label",
                                       "shrink": undefined,
@@ -1280,6 +1281,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                 <TextField
                                   InputLabelProps={
                                     Object {
+                                      "hidden": false,
                                       "htmlFor": "grantId",
                                       "id": "grantId-label",
                                       "shrink": undefined,
@@ -3870,6 +3872,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                             <TextField
                               InputLabelProps={
                                 Object {
+                                  "hidden": false,
                                   "htmlFor": "grantAgencyName",
                                   "id": "grantAgencyName-label",
                                   "shrink": undefined,
@@ -4254,6 +4257,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                             <TextField
                               InputLabelProps={
                                 Object {
+                                  "hidden": false,
                                   "htmlFor": "grantId",
                                   "id": "grantId-label",
                                   "shrink": undefined,

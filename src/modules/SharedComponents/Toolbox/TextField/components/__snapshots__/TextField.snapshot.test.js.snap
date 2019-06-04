@@ -5,6 +5,7 @@ exports[`TextFieldWrapper snapshots tests renders TextField component 1`] = `
   <TextField
     InputLabelProps={
       Object {
+        "hidden": false,
         "htmlFor": "undefined",
         "id": "undefined-label",
         "shrink": undefined,
@@ -36,6 +37,7 @@ exports[`TextFieldWrapper snapshots tests renders TextField component appending 
   <TextField
     InputLabelProps={
       Object {
+        "hidden": false,
         "htmlFor": "undefined",
         "id": "undefined-label",
         "shrink": undefined,
@@ -68,6 +70,7 @@ exports[`TextFieldWrapper snapshots tests renders TextField component with shrin
   <TextField
     InputLabelProps={
       Object {
+        "hidden": false,
         "htmlFor": "undefined",
         "id": "undefined-label",
         "shrink": true,

@@ -1423,6 +1423,7 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                                   <TextField
                                     InputLabelProps={
                                       Object {
+                                        "hidden": false,
                                         "htmlFor": "-input",
                                         "id": "-input-label",
                                         "shrink": undefined,
@@ -2621,6 +2622,7 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
                                   <TextField
                                     InputLabelProps={
                                       Object {
+                                        "hidden": false,
                                         "htmlFor": "-input",
                                         "id": "-input-label",
                                         "shrink": undefined,
@@ -3866,6 +3868,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                   <TextField
                                     InputLabelProps={
                                       Object {
+                                        "hidden": false,
                                         "htmlFor": "-input",
                                         "id": "-input-label",
                                         "shrink": undefined,
@@ -5089,6 +5092,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                   <TextField
                                     InputLabelProps={
                                       Object {
+                                        "hidden": false,
                                         "htmlFor": "-input",
                                         "id": "-input-label",
                                         "shrink": undefined,
@@ -6277,6 +6281,7 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
                                   <TextField
                                     InputLabelProps={
                                       Object {
+                                        "hidden": false,
                                         "htmlFor": "-input",
                                         "id": "-input-label",
                                         "shrink": undefined,

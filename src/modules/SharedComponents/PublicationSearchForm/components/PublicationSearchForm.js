@@ -42,7 +42,6 @@ export default class PublicationSearchForm extends Component {
                                 label={this.props.locale.fieldLabels.search}
                                 autoFocus
                                 validate={[validation.required]}
-                                hideLabel
                             />
                         </Grid>
                         <Grid item xs={12} sm={'auto'}>

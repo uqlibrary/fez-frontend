@@ -2712,6 +2712,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                   <TextField
                                     InputLabelProps={
                                       Object {
+                                        "hidden": false,
                                         "htmlFor": "nameAsPublishedField",
                                         "id": "nameAsPublishedField-label",
                                         "shrink": undefined,
@@ -2772,6 +2773,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                           onKeyDown={[Function]}
                                         >
                                           <WithStyles(InputLabel)
+                                            hidden={false}
                                             htmlFor="nameAsPublishedField"
                                             id="nameAsPublishedField-label"
                                           >
@@ -2788,12 +2790,14 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                 }
                                               }
                                               disableAnimation={false}
+                                              hidden={false}
                                               htmlFor="nameAsPublishedField"
                                               id="nameAsPublishedField-label"
                                             >
                                               <WithStyles(FormLabel)
                                                 className="MuiInputLabel-root-102 MuiInputLabel-formControl-103 MuiInputLabel-animated-106"
                                                 data-shrink={false}
+                                                hidden={false}
                                                 htmlFor="nameAsPublishedField"
                                                 id="nameAsPublishedField-label"
                                               >
@@ -2812,12 +2816,14 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                   }
                                                   component="label"
                                                   data-shrink={false}
+                                                  hidden={false}
                                                   htmlFor="nameAsPublishedField"
                                                   id="nameAsPublishedField-label"
                                                 >
                                                   <label
                                                     className="MuiFormLabel-root-109 MuiFormLabel-disabled-111 MuiInputLabel-root-102 MuiInputLabel-formControl-103 MuiInputLabel-animated-106"
                                                     data-shrink={false}
+                                                    hidden={false}
                                                     htmlFor="nameAsPublishedField"
                                                     id="nameAsPublishedField-label"
                                                   >
