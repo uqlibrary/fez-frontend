@@ -111,8 +111,8 @@ describe('myDatasets test', () => {
         expect(wrapper.state().sortDirection).toEqual('bar');
         expect(testAction).toHaveBeenCalled();
 
-        wrapper.instance().facetsChanged({'foo': 'bar'});
-        expect(wrapper.state().activeFacets).toEqual({'foo': 'bar'});
+        wrapper.instance().facetsChanged({filters: {'foo': 'bar'}, ranges: {}});
+        expect(wrapper.state().activeFacets).toEqual({filters: {'foo': 'bar'}, ranges: {}});
         expect(wrapper.state().page).toEqual(1);
         expect(testAction).toHaveBeenCalled();
     });
@@ -170,14 +170,5 @@ describe('myDatasets test', () => {
 
         wrapper.instance().componentWillReceiveProps({history: { action: 'PUSH'}, location: {pathname: routes.pathConfig.dataset.mine}, mine: {}});
         expect(testAction).not.toHaveBeenCalled();
-    });
-
-    it('sets publication to fix', () => {
-        const push = jest.fn();
-        const setFixRecord = jest.fn();
-        const wrapper = setup({accountLoading: true, actions: {setFixRecord: setFixRecord},  history: {push: push}});
-        wrapper.instance().fixRecord({rek_pid: 'UQ:111111'});
-        expect(push).toHaveBeenCalledWith(routes.pathConfig.records.fix('UQ:111111'));
-        expect(setFixRecord).toHaveBeenCalled();
     });
 });

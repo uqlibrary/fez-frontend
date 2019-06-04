@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OpenAccessFilter  should render empty component 1`] = `
-<WithStyles(FacetsFilterListItem)
+<Memo(WithStyles(FacetsFilterListItem))
   facetTitle="Open access status"
   key="date-range"
   nestedItems={
-    <WithStyles(FacetsFilterNestedListItem)
+    <Memo(WithStyles(FacetsFilterNestedListItem))
       isActive={true}
       onFacetClick={[Function]}
     />
@@ -16,11 +16,11 @@ exports[`OpenAccessFilter  should render empty component 1`] = `
 `;
 
 exports[`OpenAccessFilter  should render selected component 1`] = `
-<WithStyles(FacetsFilterListItem)
+<Memo(WithStyles(FacetsFilterListItem))
   facetTitle="Open access status"
   key="date-range"
   nestedItems={
-    <WithStyles(FacetsFilterNestedListItem)
+    <Memo(WithStyles(FacetsFilterNestedListItem))
       isActive={true}
       onFacetClick={[Function]}
     />

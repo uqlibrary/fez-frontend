@@ -1,5 +1,5 @@
 import * as actions from 'actions/actionTypes';
-import publicationsReducer from './publications';
+import publicationsReducer, { getInitialState } from './publications';
 
 
 const initialState = {
@@ -8,11 +8,6 @@ const initialState = {
     publicationsListFacets: {},
     loadingPublicationsList: true
 };
-
-const getInitialState = () => ({
-    'mine': initialState,
-    'incomplete': initialState
-});
 
 const authorPubsPayload = {
     "total": 1,

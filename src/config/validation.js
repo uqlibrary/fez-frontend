@@ -1,7 +1,7 @@
 import React from 'react';
 import locale from 'locale/validationErrors';
 import Immutable from 'immutable';
-import { ORG_TYPE_NOT_SET } from 'config/general';
+import { ORG_TYPE_NOT_SET, MEDIATED_ACCESS_ID } from 'config/general';
 
 // Max Length
 export const maxLength = max => value => value && value.toString().replace(/\s/g, '').length > max ? locale.validationErrors.maxLength.replace('[max]', max) : undefined;
@@ -127,7 +127,7 @@ export const fileUploadRequired = value => {
 
 export const fileUploadNotRequiredForMediated = (value, values) => {
     const accessCondition = values.toJS().fez_record_search_key_access_conditions;
-    if (!!accessCondition && accessCondition.rek_access_conditions === 'Mediated Access') {
+    if (!!accessCondition && accessCondition.rek_access_conditions === MEDIATED_ACCESS_ID) {
         return undefined;
     } else {
         return value === undefined || value.queue.length === 0 ? locale.validationErrors.fileUploadRequired : undefined;
