@@ -622,17 +622,14 @@ describe('getRecordContributorsSearchKey test ', () => {
         const expected = {
             fez_record_search_key_contributor: [
                 {
-                    rek_contributor_id: null,
                     rek_contributor: 'Smith A.',
                     rek_contributor_order: 1
                 },
                 {
-                    rek_contributor_id: null,
                     rek_contributor: 'Smith B.',
                     rek_contributor_order: 2
                 },
                 {
-                    rek_contributor_id: null,
                     rek_contributor: 'Smith C.',
                     rek_contributor_order: 3
                 }

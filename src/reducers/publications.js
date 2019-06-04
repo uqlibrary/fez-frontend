@@ -4,7 +4,7 @@ export const initialState = {
     publicationsList: [],
     publicationsListPagingData: {},
     publicationsListFacets: {},
-    loadingPublicationsList: true,
+    loadingPublicationsList: true
 };
 
 export const getInitialState = () => ({
@@ -58,7 +58,7 @@ const handlers = {
                 loadingPublicationsList: false
             }
         };
-    }
+    },
 };
 
 export default function publicationsReducer(state = getInitialState(), action) {

@@ -712,7 +712,9 @@ export default {
                     </div>
                 ),
             },
-            completeRecordButton: 'Complete work',
+            publicationsList: {
+                complete: 'Complete work',
+            },
             facetsFilter: {
                 ...locale.components.facetsFilter,
                 excludeFacetsList: ['Author'],

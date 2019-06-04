@@ -984,7 +984,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
                               aria-labelledby=\\"Access conditions-label\\"
                               type=\\"hidden\\"
 -                             value=\\"\\"
-+                             value=\\"Mediated Access\\"
++                             value=\\"453618\\"
                             />
                             <svg
                               aria-hidden=\\"true\\"
