@@ -15,7 +15,7 @@ export const getIssueValues = (data) => {
                 id => CONTENT_INDICATORS.find(
                     item => item.value === id
                 ).text
-            ).join(', ') || null
+            ).join('; ') || null
         ),
         comments: data.comments || null,
         files: data.files && data.files.queue ? data.files.queue.map(item => item.name).toString().replace(/,/g, ', ') : null,
