@@ -93,14 +93,16 @@ export default class AdvancedSearchRowInput extends PureComponent {
             'aria-label': this.props.inputField.ariaLabel,
             'error': !!this.runValidationRules(this.props.value),
             'errorText': this.runValidationRules(this.props.value),
-            'label': this.props.label,
+            'label': this.props.inputField.label,
         };
 
         const lookupDefaultProps = {
             ...defaultProps,
             'value': this.props.label || this.props.value,
             'aria-label': this.props.inputField.ariaLabel,
-            'allowFreeText': true
+            'allowFreeText': true,
+            'floatingLabelText': this.props.inputField.ariaLabel,
+            'hideLabel': true
         };
 
         const selectDefaultProps = {
