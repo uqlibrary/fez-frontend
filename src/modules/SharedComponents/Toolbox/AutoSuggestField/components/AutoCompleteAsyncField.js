@@ -176,7 +176,6 @@ export class AutoCompleteAsyncField extends Component {
         const { classes, itemsList, error, errorText, hintText, floatingLabelText, hideLabel, disabled, maxResults, itemToString, required, selectedValue, itemsListLoading } = this.props;
         const selectedItemProps = this.props.clearInput ? {selectedItem: ''} : {};
         const labelText = floatingLabelText || 'autosuggest';
-        console.log(this.props);
         return (
             <div className={classes.root}>
                 <label id={`${labelText.replace(/[^\w]/g, '')}-label`} hidden>{floatingLabelText || ''}</label>
