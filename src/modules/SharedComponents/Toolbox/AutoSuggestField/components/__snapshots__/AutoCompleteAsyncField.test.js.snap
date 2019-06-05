@@ -4,13 +4,19 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
 <div
   className="root"
 >
+  <label
+    hidden={true}
+    id="-label"
+  />
   <Downshift
+    aria-label=""
     defaultHighlightedIndex={null}
     defaultInputValue="test 1"
     defaultIsOpen={false}
     defaultSelectedItem={null}
     environment={[Window]}
     getA11yStatusMessage={[Function]}
+    id=""
     itemToString={[MockFunction]}
     onChange={[MockFunction]}
     onInputValueChange={[Function]}
@@ -31,12 +37,14 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
 
 exports[`AutoCompleteAsyncField component should call filter function on itemsList 2`] = `
 <Downshift
+  aria-label=""
   defaultHighlightedIndex={null}
   defaultInputValue="test 1"
   defaultIsOpen={false}
   defaultSelectedItem={null}
   environment={[Window]}
   getA11yStatusMessage={[Function]}
+  id=""
   itemToString={[MockFunction]}
   onChange={[MockFunction]}
   onInputValueChange={[Function]}
@@ -82,6 +90,7 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
         error={true}
         errorText="This field is required"
         fullWidth={true}
+        id="-input"
         label=""
         placeholder={null}
         required={true}
@@ -180,6 +189,7 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
         error={true}
         errorText="This field is required"
         fullWidth={true}
+        id="-input"
         label=""
         placeholder={null}
         required={true}
@@ -280,6 +290,7 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
 
 exports[`AutoCompleteAsyncField component should call filter function on itemsList 7`] = `
 <WithStyles(FormControl)
+  aria-describedby="-input-helper-text"
   classes={Object {}}
   disabled={false}
   error={true}
@@ -294,12 +305,22 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
       }
     }
     fullWidth={true}
-    id=""
+    id="-input"
+    inputProps={
+      Object {
+        "aria-label": "",
+        "aria-labelledby": "-input-label",
+        "id": "-input",
+        "label": "",
+      }
+    }
     inputRef={[Function]}
     placeholder={null}
     value="123"
   />
-  <WithStyles(FormHelperText)>
+  <WithStyles(FormHelperText)
+    id="-input-helper-text"
+  >
     This field is required
   </WithStyles(FormHelperText)>
 </WithStyles(FormControl)>
@@ -332,6 +353,7 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
         error={true}
         errorText="This field is required"
         fullWidth={true}
+        id="-input"
         label=""
         placeholder={null}
         required={true}
@@ -386,13 +408,19 @@ exports[`AutoCompleteAsyncField component should call given filter function on i
 <div
   className="root"
 >
+  <label
+    hidden={true}
+    id="-label"
+  />
   <Downshift
+    aria-label=""
     defaultHighlightedIndex={null}
     defaultInputValue=""
     defaultIsOpen={false}
     defaultSelectedItem={null}
     environment={[Window]}
     getA11yStatusMessage={[Function]}
+    id=""
     itemToString={[MockFunction]}
     onChange={[MockFunction]}
     onInputValueChange={[Function]}
@@ -435,13 +463,19 @@ exports[`AutoCompleteAsyncField component should render 1`] = `
 <div
   className="root"
 >
+  <label
+    hidden={true}
+    id="-label"
+  />
   <Downshift
+    aria-label=""
     defaultHighlightedIndex={null}
     defaultInputValue=""
     defaultIsOpen={false}
     defaultSelectedItem={null}
     environment={[Window]}
     getA11yStatusMessage={[Function]}
+    id=""
     itemToString={[MockFunction]}
     onChange={[MockFunction]}
     onInputValueChange={[Function]}
@@ -621,7 +655,7 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -1042,13 +1076,19 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
             <div
               className="root"
             >
+              <label
+                hidden={true}
+                id="-label"
+              />
               <Downshift
+                aria-label=""
                 defaultHighlightedIndex={null}
                 defaultInputValue=""
                 defaultIsOpen={false}
                 defaultSelectedItem={null}
                 environment={[Window]}
                 getA11yStatusMessage={[Function]}
+                id=""
                 itemToString={[MockFunction]}
                 onChange={[MockFunction]}
                 onInputValueChange={[Function]}
@@ -1344,6 +1384,7 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                                 error={false}
                                 errorText=""
                                 fullWidth={true}
+                                id="-input"
                                 label=""
                                 placeholder={null}
                                 required={true}
@@ -1373,13 +1414,21 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                                   error={false}
                                   errorText=""
                                   fullWidth={true}
+                                  id="-input"
                                   label=""
                                   placeholder={null}
                                   required={true}
                                   value=""
                                 >
                                   <TextField
-                                    InputLabelProps={null}
+                                    InputLabelProps={
+                                      Object {
+                                        "hidden": false,
+                                        "htmlFor": "-input",
+                                        "id": "-input-label",
+                                        "shrink": undefined,
+                                      }
+                                    }
                                     InputProps={
                                       Object {
                                         "aria-activedescendant": null,
@@ -1402,7 +1451,15 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                                     disabled={false}
                                     error={false}
                                     fullWidth={true}
-                                    id=""
+                                    id="-input"
+                                    inputProps={
+                                      Object {
+                                        "aria-label": "",
+                                        "aria-labelledby": "-input-label",
+                                        "id": "-input",
+                                        "label": "",
+                                      }
+                                    }
                                     label=""
                                     placeholder={null}
                                     required={true}
@@ -1451,6 +1508,14 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                                             }
                                             fullWidth={true}
                                             id="downshift-1-input"
+                                            inputProps={
+                                              Object {
+                                                "aria-label": "",
+                                                "aria-labelledby": "-input-label",
+                                                "id": "-input",
+                                                "label": "",
+                                              }
+                                            }
                                             inputRef={[Function]}
                                             onBlur={[Function]}
                                             onChange={[Function]}
@@ -1483,6 +1548,14 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                                               }
                                               fullWidth={true}
                                               id="downshift-1-input"
+                                              inputProps={
+                                                Object {
+                                                  "aria-label": "",
+                                                  "aria-labelledby": "-input-label",
+                                                  "id": "-input",
+                                                  "label": "",
+                                                }
+                                              }
                                               inputRef={[Function]}
                                               onBlur={[Function]}
                                               onChange={[Function]}
@@ -1516,6 +1589,14 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                                                 fullWidth={true}
                                                 id="downshift-1-input"
                                                 inputComponent="input"
+                                                inputProps={
+                                                  Object {
+                                                    "aria-label": "",
+                                                    "aria-labelledby": "-input-label",
+                                                    "id": "-input",
+                                                    "label": "",
+                                                  }
+                                                }
                                                 inputRef={[Function]}
                                                 multiline={false}
                                                 onBlur={[Function]}
@@ -1555,6 +1636,14 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                                                   fullWidth={true}
                                                   id="downshift-1-input"
                                                   inputComponent="input"
+                                                  inputProps={
+                                                    Object {
+                                                      "aria-label": "",
+                                                      "aria-labelledby": "-input-label",
+                                                      "id": "-input",
+                                                      "label": "",
+                                                    }
+                                                  }
                                                   inputRef={[Function]}
                                                   multiline={false}
                                                   onBlur={[Function]}
@@ -1574,10 +1663,13 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                                                   >
                                                     <input
                                                       aria-invalid={false}
+                                                      aria-label=""
+                                                      aria-labelledby="-input-label"
                                                       autoComplete="off"
                                                       className="MuiInputBase-input-125 MuiInput-input-110"
                                                       disabled={false}
-                                                      id="downshift-1-input"
+                                                      id="-input"
+                                                      label=""
                                                       onBlur={[Function]}
                                                       onChange={[Function]}
                                                       onFocus={[Function]}
@@ -1728,7 +1820,7 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -2183,13 +2275,19 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
             <div
               className="root"
             >
+              <label
+                hidden={true}
+                id="-label"
+              />
               <Downshift
+                aria-label=""
                 defaultHighlightedIndex={null}
                 defaultInputValue=""
                 defaultIsOpen={false}
                 defaultSelectedItem={null}
                 environment={[Window]}
                 getA11yStatusMessage={[Function]}
+                id=""
                 itemToString={[MockFunction]}
                 onChange={[MockFunction]}
                 onInputValueChange={[Function]}
@@ -2485,6 +2583,7 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
                                 error={false}
                                 errorText=""
                                 fullWidth={true}
+                                id="-input"
                                 label=""
                                 placeholder={null}
                                 required={false}
@@ -2514,13 +2613,21 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
                                   error={false}
                                   errorText=""
                                   fullWidth={true}
+                                  id="-input"
                                   label=""
                                   placeholder={null}
                                   required={false}
                                   value=""
                                 >
                                   <TextField
-                                    InputLabelProps={null}
+                                    InputLabelProps={
+                                      Object {
+                                        "hidden": false,
+                                        "htmlFor": "-input",
+                                        "id": "-input-label",
+                                        "shrink": undefined,
+                                      }
+                                    }
                                     InputProps={
                                       Object {
                                         "aria-activedescendant": null,
@@ -2543,7 +2650,15 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
                                     disabled={false}
                                     error={false}
                                     fullWidth={true}
-                                    id=""
+                                    id="-input"
+                                    inputProps={
+                                      Object {
+                                        "aria-label": "",
+                                        "aria-labelledby": "-input-label",
+                                        "id": "-input",
+                                        "label": "",
+                                      }
+                                    }
                                     label=""
                                     placeholder={null}
                                     required={false}
@@ -2592,6 +2707,14 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
                                             }
                                             fullWidth={true}
                                             id="downshift-3-input"
+                                            inputProps={
+                                              Object {
+                                                "aria-label": "",
+                                                "aria-labelledby": "-input-label",
+                                                "id": "-input",
+                                                "label": "",
+                                              }
+                                            }
                                             inputRef={[Function]}
                                             onBlur={[Function]}
                                             onChange={[Function]}
@@ -2624,6 +2747,14 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
                                               }
                                               fullWidth={true}
                                               id="downshift-3-input"
+                                              inputProps={
+                                                Object {
+                                                  "aria-label": "",
+                                                  "aria-labelledby": "-input-label",
+                                                  "id": "-input",
+                                                  "label": "",
+                                                }
+                                              }
                                               inputRef={[Function]}
                                               onBlur={[Function]}
                                               onChange={[Function]}
@@ -2657,6 +2788,14 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
                                                 fullWidth={true}
                                                 id="downshift-3-input"
                                                 inputComponent="input"
+                                                inputProps={
+                                                  Object {
+                                                    "aria-label": "",
+                                                    "aria-labelledby": "-input-label",
+                                                    "id": "-input",
+                                                    "label": "",
+                                                  }
+                                                }
                                                 inputRef={[Function]}
                                                 multiline={false}
                                                 onBlur={[Function]}
@@ -2696,6 +2835,14 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
                                                   fullWidth={true}
                                                   id="downshift-3-input"
                                                   inputComponent="input"
+                                                  inputProps={
+                                                    Object {
+                                                      "aria-label": "",
+                                                      "aria-labelledby": "-input-label",
+                                                      "id": "-input",
+                                                      "label": "",
+                                                    }
+                                                  }
                                                   inputRef={[Function]}
                                                   multiline={false}
                                                   onBlur={[Function]}
@@ -2715,10 +2862,13 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
                                                   >
                                                     <input
                                                       aria-invalid={false}
+                                                      aria-label=""
+                                                      aria-labelledby="-input-label"
                                                       autoComplete="off"
                                                       className="MuiInputBase-input-125 MuiInput-input-110"
                                                       disabled={false}
-                                                      id="downshift-3-input"
+                                                      id="-input"
+                                                      label=""
                                                       onBlur={[Function]}
                                                       onChange={[Function]}
                                                       onFocus={[Function]}
@@ -2891,7 +3041,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -3371,13 +3521,19 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
             <div
               className="root"
             >
+              <label
+                hidden={true}
+                id="-label"
+              />
               <Downshift
+                aria-label=""
                 defaultHighlightedIndex={null}
                 defaultInputValue=""
                 defaultIsOpen={false}
                 defaultSelectedItem={null}
                 environment={[Window]}
                 getA11yStatusMessage={[Function]}
+                id=""
                 itemToString={[MockFunction]}
                 onChange={[MockFunction]}
                 onInputValueChange={[Function]}
@@ -3673,6 +3829,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                 error={false}
                                 errorText=""
                                 fullWidth={true}
+                                id="-input"
                                 label=""
                                 placeholder={null}
                                 required={false}
@@ -3702,13 +3859,21 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                   error={false}
                                   errorText=""
                                   fullWidth={true}
+                                  id="-input"
                                   label=""
                                   placeholder={null}
                                   required={false}
                                   value=""
                                 >
                                   <TextField
-                                    InputLabelProps={null}
+                                    InputLabelProps={
+                                      Object {
+                                        "hidden": false,
+                                        "htmlFor": "-input",
+                                        "id": "-input-label",
+                                        "shrink": undefined,
+                                      }
+                                    }
                                     InputProps={
                                       Object {
                                         "aria-activedescendant": null,
@@ -3731,7 +3896,15 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                     disabled={false}
                                     error={false}
                                     fullWidth={true}
-                                    id=""
+                                    id="-input"
+                                    inputProps={
+                                      Object {
+                                        "aria-label": "",
+                                        "aria-labelledby": "-input-label",
+                                        "id": "-input",
+                                        "label": "",
+                                      }
+                                    }
                                     label=""
                                     placeholder={null}
                                     required={false}
@@ -3780,6 +3953,14 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                             }
                                             fullWidth={true}
                                             id="downshift-4-input"
+                                            inputProps={
+                                              Object {
+                                                "aria-label": "",
+                                                "aria-labelledby": "-input-label",
+                                                "id": "-input",
+                                                "label": "",
+                                              }
+                                            }
                                             inputRef={[Function]}
                                             onBlur={[Function]}
                                             onChange={[Function]}
@@ -3812,6 +3993,14 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                               }
                                               fullWidth={true}
                                               id="downshift-4-input"
+                                              inputProps={
+                                                Object {
+                                                  "aria-label": "",
+                                                  "aria-labelledby": "-input-label",
+                                                  "id": "-input",
+                                                  "label": "",
+                                                }
+                                              }
                                               inputRef={[Function]}
                                               onBlur={[Function]}
                                               onChange={[Function]}
@@ -3845,6 +4034,14 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                                 fullWidth={true}
                                                 id="downshift-4-input"
                                                 inputComponent="input"
+                                                inputProps={
+                                                  Object {
+                                                    "aria-label": "",
+                                                    "aria-labelledby": "-input-label",
+                                                    "id": "-input",
+                                                    "label": "",
+                                                  }
+                                                }
                                                 inputRef={[Function]}
                                                 multiline={false}
                                                 onBlur={[Function]}
@@ -3884,6 +4081,14 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                                   fullWidth={true}
                                                   id="downshift-4-input"
                                                   inputComponent="input"
+                                                  inputProps={
+                                                    Object {
+                                                      "aria-label": "",
+                                                      "aria-labelledby": "-input-label",
+                                                      "id": "-input",
+                                                      "label": "",
+                                                    }
+                                                  }
                                                   inputRef={[Function]}
                                                   multiline={false}
                                                   onBlur={[Function]}
@@ -3903,10 +4108,13 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                                   >
                                                     <input
                                                       aria-invalid={false}
+                                                      aria-label=""
+                                                      aria-labelledby="-input-label"
                                                       autoComplete="off"
                                                       className="MuiInputBase-input-125 MuiInput-input-110"
                                                       disabled={false}
-                                                      id="downshift-4-input"
+                                                      id="-input"
+                                                      label=""
                                                       onBlur={[Function]}
                                                       onChange={[Function]}
                                                       onFocus={[Function]}
@@ -4057,7 +4265,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -4537,13 +4745,19 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
             <div
               className="root"
             >
+              <label
+                hidden={true}
+                id="-label"
+              />
               <Downshift
+                aria-label=""
                 defaultHighlightedIndex={null}
                 defaultInputValue=""
                 defaultIsOpen={false}
                 defaultSelectedItem={null}
                 environment={[Window]}
                 getA11yStatusMessage={[Function]}
+                id=""
                 itemToString={[MockFunction]}
                 onChange={[MockFunction]}
                 onInputValueChange={[Function]}
@@ -4839,6 +5053,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                 error={false}
                                 errorText=""
                                 fullWidth={true}
+                                id="-input"
                                 label=""
                                 placeholder={null}
                                 required={false}
@@ -4868,13 +5083,21 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                   error={false}
                                   errorText=""
                                   fullWidth={true}
+                                  id="-input"
                                   label=""
                                   placeholder={null}
                                   required={false}
                                   value=""
                                 >
                                   <TextField
-                                    InputLabelProps={null}
+                                    InputLabelProps={
+                                      Object {
+                                        "hidden": false,
+                                        "htmlFor": "-input",
+                                        "id": "-input-label",
+                                        "shrink": undefined,
+                                      }
+                                    }
                                     InputProps={
                                       Object {
                                         "aria-activedescendant": null,
@@ -4897,7 +5120,15 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                     disabled={false}
                                     error={false}
                                     fullWidth={true}
-                                    id=""
+                                    id="-input"
+                                    inputProps={
+                                      Object {
+                                        "aria-label": "",
+                                        "aria-labelledby": "-input-label",
+                                        "id": "-input",
+                                        "label": "",
+                                      }
+                                    }
                                     label=""
                                     placeholder={null}
                                     required={false}
@@ -4946,6 +5177,14 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                             }
                                             fullWidth={true}
                                             id="downshift-4-input"
+                                            inputProps={
+                                              Object {
+                                                "aria-label": "",
+                                                "aria-labelledby": "-input-label",
+                                                "id": "-input",
+                                                "label": "",
+                                              }
+                                            }
                                             inputRef={[Function]}
                                             onBlur={[Function]}
                                             onChange={[Function]}
@@ -4978,6 +5217,14 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                               }
                                               fullWidth={true}
                                               id="downshift-4-input"
+                                              inputProps={
+                                                Object {
+                                                  "aria-label": "",
+                                                  "aria-labelledby": "-input-label",
+                                                  "id": "-input",
+                                                  "label": "",
+                                                }
+                                              }
                                               inputRef={[Function]}
                                               onBlur={[Function]}
                                               onChange={[Function]}
@@ -5011,6 +5258,14 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                                 fullWidth={true}
                                                 id="downshift-4-input"
                                                 inputComponent="input"
+                                                inputProps={
+                                                  Object {
+                                                    "aria-label": "",
+                                                    "aria-labelledby": "-input-label",
+                                                    "id": "-input",
+                                                    "label": "",
+                                                  }
+                                                }
                                                 inputRef={[Function]}
                                                 multiline={false}
                                                 onBlur={[Function]}
@@ -5050,6 +5305,14 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                                   fullWidth={true}
                                                   id="downshift-4-input"
                                                   inputComponent="input"
+                                                  inputProps={
+                                                    Object {
+                                                      "aria-label": "",
+                                                      "aria-labelledby": "-input-label",
+                                                      "id": "-input",
+                                                      "label": "",
+                                                    }
+                                                  }
                                                   inputRef={[Function]}
                                                   multiline={false}
                                                   onBlur={[Function]}
@@ -5069,10 +5332,13 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                                   >
                                                     <input
                                                       aria-invalid={false}
+                                                      aria-label=""
+                                                      aria-labelledby="-input-label"
                                                       autoComplete="off"
                                                       className="MuiInputBase-input-125 MuiInput-input-110"
                                                       disabled={false}
-                                                      id="downshift-4-input"
+                                                      id="-input"
+                                                      label=""
                                                       onBlur={[Function]}
                                                       onChange={[Function]}
                                                       onFocus={[Function]}
@@ -5114,13 +5380,19 @@ exports[`AutoCompleteAsyncField component should render with an input which allo
 <div
   className="root"
 >
+  <label
+    hidden={true}
+    id="-label"
+  />
   <Downshift
+    aria-label=""
     defaultHighlightedIndex={null}
     defaultInputValue=""
     defaultIsOpen={false}
     defaultSelectedItem={null}
     environment={[Window]}
     getA11yStatusMessage={[Function]}
+    id=""
     itemToString={[MockFunction]}
     onChange={[MockFunction]}
     onInputValueChange={[Function]}
@@ -5251,7 +5523,7 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -5662,13 +5934,19 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
             <div
               className="root"
             >
+              <label
+                hidden={true}
+                id="-label"
+              />
               <Downshift
+                aria-label=""
                 defaultHighlightedIndex={null}
                 defaultInputValue=""
                 defaultIsOpen={false}
                 defaultSelectedItem={null}
                 environment={[Window]}
                 getA11yStatusMessage={[Function]}
+                id=""
                 itemToString={[MockFunction]}
                 onChange={[MockFunction]}
                 onInputValueChange={[Function]}
@@ -5964,6 +6242,7 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
                                 error={false}
                                 errorText=""
                                 fullWidth={true}
+                                id="-input"
                                 label=""
                                 placeholder={null}
                                 required={false}
@@ -5993,13 +6272,21 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
                                   error={false}
                                   errorText=""
                                   fullWidth={true}
+                                  id="-input"
                                   label=""
                                   placeholder={null}
                                   required={false}
                                   value=""
                                 >
                                   <TextField
-                                    InputLabelProps={null}
+                                    InputLabelProps={
+                                      Object {
+                                        "hidden": false,
+                                        "htmlFor": "-input",
+                                        "id": "-input-label",
+                                        "shrink": undefined,
+                                      }
+                                    }
                                     InputProps={
                                       Object {
                                         "aria-activedescendant": null,
@@ -6022,7 +6309,15 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
                                     disabled={true}
                                     error={false}
                                     fullWidth={true}
-                                    id=""
+                                    id="-input"
+                                    inputProps={
+                                      Object {
+                                        "aria-label": "",
+                                        "aria-labelledby": "-input-label",
+                                        "id": "-input",
+                                        "label": "",
+                                      }
+                                    }
                                     label=""
                                     placeholder={null}
                                     required={false}
@@ -6071,6 +6366,14 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
                                             }
                                             fullWidth={true}
                                             id="downshift-0-input"
+                                            inputProps={
+                                              Object {
+                                                "aria-label": "",
+                                                "aria-labelledby": "-input-label",
+                                                "id": "-input",
+                                                "label": "",
+                                              }
+                                            }
                                             inputRef={[Function]}
                                             onBlur={[Function]}
                                             onChange={[Function]}
@@ -6103,6 +6406,14 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
                                               }
                                               fullWidth={true}
                                               id="downshift-0-input"
+                                              inputProps={
+                                                Object {
+                                                  "aria-label": "",
+                                                  "aria-labelledby": "-input-label",
+                                                  "id": "-input",
+                                                  "label": "",
+                                                }
+                                              }
                                               inputRef={[Function]}
                                               onBlur={[Function]}
                                               onChange={[Function]}
@@ -6136,6 +6447,14 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
                                                 fullWidth={true}
                                                 id="downshift-0-input"
                                                 inputComponent="input"
+                                                inputProps={
+                                                  Object {
+                                                    "aria-label": "",
+                                                    "aria-labelledby": "-input-label",
+                                                    "id": "-input",
+                                                    "label": "",
+                                                  }
+                                                }
                                                 inputRef={[Function]}
                                                 multiline={false}
                                                 onBlur={[Function]}
@@ -6175,6 +6494,14 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
                                                   fullWidth={true}
                                                   id="downshift-0-input"
                                                   inputComponent="input"
+                                                  inputProps={
+                                                    Object {
+                                                      "aria-label": "",
+                                                      "aria-labelledby": "-input-label",
+                                                      "id": "-input",
+                                                      "label": "",
+                                                    }
+                                                  }
                                                   inputRef={[Function]}
                                                   multiline={false}
                                                   onBlur={[Function]}
@@ -6194,10 +6521,13 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
                                                   >
                                                     <input
                                                       aria-invalid={false}
+                                                      aria-label=""
+                                                      aria-labelledby="-input-label"
                                                       autoComplete="off"
                                                       className="MuiInputBase-input-125 MuiInput-input-110 MuiInputBase-disabled-118 MuiInput-disabled-105"
                                                       disabled={true}
-                                                      id="downshift-0-input"
+                                                      id="-input"
+                                                      label=""
                                                       onBlur={[Function]}
                                                       onChange={[Function]}
                                                       onFocus={[Function]}

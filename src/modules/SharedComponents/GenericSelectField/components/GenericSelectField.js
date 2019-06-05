@@ -134,15 +134,15 @@ export class GenericSelectFieldClass extends Component {
         return (
             <FormControl fullWidth required={this.props.required} error={!!this.props.error}>
                 {
-                    this.props.locale.label && !this.props.hideLabel &&
-                    <InputLabel>{this.props.locale.label}</InputLabel>
+                    this.props.locale.label &&
+                    <InputLabel hidden={this.props.hideLabel} id={`${this.props.locale.label}-label`}>{this.props.locale.label}</InputLabel>
                 }
                 <Select
                     value={this.newValue()}
                     displayEmpty={this.props.displayEmpty}
                     onChange={this._itemSelected}
                     disabled={this.props.disabled || !!this.props.itemsLoading}
-                    aria-label={this.props.ariaLabel}
+                    inputProps={{'aria-labelledby': `${this.props.locale.label}-label`}}
                     autoWidth={this.props.autoWidth}
                     multiple={this.props.multiple}
                     SelectDisplayProps={{

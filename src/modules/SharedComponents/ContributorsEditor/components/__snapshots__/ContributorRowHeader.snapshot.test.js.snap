@@ -113,6 +113,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
       >
         <span>
           <WithStyles(IconButton)
+            aria-label="Remove all records"
             disabled={false}
             onClick={[Function]}
           >
@@ -216,6 +217,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
       >
         <span>
           <WithStyles(IconButton)
+            aria-label="Remove all records"
             disabled={true}
             onClick={[Function]}
           >
@@ -319,6 +321,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
       >
         <span>
           <WithStyles(IconButton)
+            aria-label="Remove all records"
             disabled={false}
             onClick={[Function]}
           >
@@ -444,6 +447,7 @@ exports[`Component ContributorRowHeader header for creator role 1`] = `
       >
         <span>
           <WithStyles(IconButton)
+            aria-label="Remove all records"
             disabled={false}
             onClick={[Function]}
           >
@@ -547,6 +551,7 @@ exports[`Component ContributorRowHeader should display infinite class 1`] = `
       >
         <span>
           <WithStyles(IconButton)
+            aria-label="Remove all records"
             disabled={false}
             onClick={[Function]}
           >

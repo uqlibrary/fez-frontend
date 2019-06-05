@@ -6,6 +6,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Divider from '@material-ui/core/Divider';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
+// import InputLabel from '@material-ui/core/InputLabel';
 import {NtroHeader} from 'modules/SharedComponents/Toolbox/NtroFields';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {SelectField} from 'modules/SharedComponents/Toolbox/SelectField';
@@ -103,13 +104,15 @@ export default class PublicationForm extends Component {
                                         component={SelectField}
                                         disabled={this.props.submitting}
                                         name="rek_display_type"
+                                        id="rek_display_type"
                                         value={this.props.formValues.get('rek_display_type')}
                                         label={txt.publicationType.inputLabelText}
                                         required
                                         placeholder={txt.publicationType.hintText}
                                         SelectDisplayProps={{
                                             id: 'rek-display-type'
-                                        }}>
+                                        }}
+                                    >
                                         {this.publicationTypeItems}
                                     </Field>
                                 </Grid>

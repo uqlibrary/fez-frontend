@@ -28,19 +28,21 @@ export default class PublicationSearchForm extends Component {
                 <form onSubmit={this.props.handleSubmit}>
                     <Grid container spacing={16} alignItems={'center'}>
                         <Grid item xs={12}>
-                            <Typography gutterBottom>{this.props.locale.text}</Typography>
+                            <Typography gutterBottom id="search-description">{this.props.locale.text}</Typography>
                         </Grid>
                         <Grid item xs={12} sm>
                             <Field
                                 component={TextField}
                                 autoComplete={'search'}
+                                aria-describedby="search-description"
                                 color={'primary'}
                                 required
                                 name="searchQuery"
                                 fullWidth
                                 label={this.props.locale.fieldLabels.search}
                                 autoFocus
-                                validate={[validation.required]}/>
+                                validate={[validation.required]}
+                            />
                         </Grid>
                         <Grid item xs={12} sm={'auto'}>
                             <Button
