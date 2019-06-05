@@ -183,7 +183,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -761,7 +761,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                           "accent": Object {
                             "dark": "#2a557d",
                             "light": "#54acff",
-                            "main": "#4085C6",
+                            "main": "#316799",
                           },
                           "action": Object {
                             "active": "rgba(0, 0, 0, 0.54)",
@@ -1145,7 +1145,10 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                         <div
                           className="MuiFormControl-root-2 MuiFormControl-fullWidth-5"
                         >
-                          <WithStyles(InputLabel)>
+                          <WithStyles(InputLabel)
+                            hidden={false}
+                            id="Select item-label"
+                          >
                             <InputLabel
                               classes={
                                 Object {
@@ -1159,10 +1162,14 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                 }
                               }
                               disableAnimation={false}
+                              hidden={false}
+                              id="Select item-label"
                             >
                               <WithStyles(FormLabel)
                                 className="MuiInputLabel-root-6 MuiInputLabel-formControl-7 MuiInputLabel-animated-10"
                                 data-shrink={false}
+                                hidden={false}
+                                id="Select item-label"
                               >
                                 <FormLabel
                                   className="MuiInputLabel-root-6 MuiInputLabel-formControl-7 MuiInputLabel-animated-10"
@@ -1179,10 +1186,14 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                   }
                                   component="label"
                                   data-shrink={false}
+                                  hidden={false}
+                                  id="Select item-label"
                                 >
                                   <label
                                     className="MuiFormLabel-root-13 MuiInputLabel-root-6 MuiInputLabel-formControl-7 MuiInputLabel-animated-10"
                                     data-shrink={false}
+                                    hidden={false}
+                                    id="Select item-label"
                                   >
                                     Select item
                                   </label>
@@ -1198,6 +1209,11 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                             }
                             autoWidth={false}
                             disabled={false}
+                            inputProps={
+                              Object {
+                                "aria-labelledby": "Select item-label",
+                              }
+                            }
                             multiple={false}
                             onChange={[Function]}
                             value=""
@@ -1224,6 +1240,11 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                               disabled={false}
                               displayEmpty={false}
                               input={<WithStyles(Input) />}
+                              inputProps={
+                                Object {
+                                  "aria-labelledby": "Select item-label",
+                                }
+                              }
                               multiple={false}
                               native={false}
                               onChange={[Function]}
@@ -1239,6 +1260,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                     "SelectDisplayProps": Object {
                                       "id": undefined,
                                     },
+                                    "aria-labelledby": "Select item-label",
                                     "autoWidth": false,
                                     "children": Array [
                                       false,
@@ -1411,6 +1433,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                       "SelectDisplayProps": Object {
                                         "id": undefined,
                                       },
+                                      "aria-labelledby": "Select item-label",
                                       "autoWidth": false,
                                       "children": Array [
                                         false,
@@ -1584,6 +1607,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                         "SelectDisplayProps": Object {
                                           "id": undefined,
                                         },
+                                        "aria-labelledby": "Select item-label",
                                         "autoWidth": false,
                                         "children": Array [
                                           false,
@@ -1763,6 +1787,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                           "SelectDisplayProps": Object {
                                             "id": undefined,
                                           },
+                                          "aria-labelledby": "Select item-label",
                                           "autoWidth": false,
                                           "children": Array [
                                             false,
@@ -1922,6 +1947,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                             }
                                           }
                                           aria-invalid={false}
+                                          aria-labelledby="Select item-label"
                                           autoWidth={false}
                                           className="MuiInputBase-input-50 MuiInput-input-35"
                                           classes={
@@ -1970,6 +1996,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                               />
                                             </div>
                                             <input
+                                              aria-labelledby="Select item-label"
                                               type="hidden"
                                               value=""
                                             />
@@ -2116,7 +2143,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                                       "accent": Object {
                                                         "dark": "#2a557d",
                                                         "light": "#54acff",
-                                                        "main": "#4085C6",
+                                                        "main": "#316799",
                                                       },
                                                       "action": Object {
                                                         "active": "rgba(0, 0, 0, 0.54)",
@@ -2759,7 +2786,7 @@ exports[`UnpublishedStatusField component should render error message from redux
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -3382,7 +3409,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                           "accent": Object {
                             "dark": "#2a557d",
                             "light": "#54acff",
-                            "main": "#4085C6",
+                            "main": "#316799",
                           },
                           "action": Object {
                             "active": "rgba(0, 0, 0, 0.54)",
@@ -3766,7 +3793,10 @@ exports[`UnpublishedStatusField component should render error message from redux
                         <div
                           className="MuiFormControl-root-2 MuiFormControl-fullWidth-5"
                         >
-                          <WithStyles(InputLabel)>
+                          <WithStyles(InputLabel)
+                            hidden={false}
+                            id="Select item-label"
+                          >
                             <InputLabel
                               classes={
                                 Object {
@@ -3780,10 +3810,14 @@ exports[`UnpublishedStatusField component should render error message from redux
                                 }
                               }
                               disableAnimation={false}
+                              hidden={false}
+                              id="Select item-label"
                             >
                               <WithStyles(FormLabel)
                                 className="MuiInputLabel-root-6 MuiInputLabel-formControl-7 MuiInputLabel-animated-10"
                                 data-shrink={false}
+                                hidden={false}
+                                id="Select item-label"
                               >
                                 <FormLabel
                                   className="MuiInputLabel-root-6 MuiInputLabel-formControl-7 MuiInputLabel-animated-10"
@@ -3800,10 +3834,14 @@ exports[`UnpublishedStatusField component should render error message from redux
                                   }
                                   component="label"
                                   data-shrink={false}
+                                  hidden={false}
+                                  id="Select item-label"
                                 >
                                   <label
                                     className="MuiFormLabel-root-13 MuiFormLabel-error-16 MuiInputLabel-root-6 MuiInputLabel-formControl-7 MuiInputLabel-animated-10"
                                     data-shrink={false}
+                                    hidden={false}
+                                    id="Select item-label"
                                   >
                                     Select item
                                   </label>
@@ -3819,6 +3857,11 @@ exports[`UnpublishedStatusField component should render error message from redux
                             }
                             autoWidth={false}
                             disabled={false}
+                            inputProps={
+                              Object {
+                                "aria-labelledby": "Select item-label",
+                              }
+                            }
                             multiple={false}
                             onChange={[Function]}
                             value=""
@@ -3845,6 +3888,11 @@ exports[`UnpublishedStatusField component should render error message from redux
                               disabled={false}
                               displayEmpty={false}
                               input={<WithStyles(Input) />}
+                              inputProps={
+                                Object {
+                                  "aria-labelledby": "Select item-label",
+                                }
+                              }
                               multiple={false}
                               native={false}
                               onChange={[Function]}
@@ -3860,6 +3908,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                                     "SelectDisplayProps": Object {
                                       "id": undefined,
                                     },
+                                    "aria-labelledby": "Select item-label",
                                     "autoWidth": false,
                                     "children": Array [
                                       false,
@@ -4032,6 +4081,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                                       "SelectDisplayProps": Object {
                                         "id": undefined,
                                       },
+                                      "aria-labelledby": "Select item-label",
                                       "autoWidth": false,
                                       "children": Array [
                                         false,
@@ -4205,6 +4255,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                                         "SelectDisplayProps": Object {
                                           "id": undefined,
                                         },
+                                        "aria-labelledby": "Select item-label",
                                         "autoWidth": false,
                                         "children": Array [
                                           false,
@@ -4384,6 +4435,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                                           "SelectDisplayProps": Object {
                                             "id": undefined,
                                           },
+                                          "aria-labelledby": "Select item-label",
                                           "autoWidth": false,
                                           "children": Array [
                                             false,
@@ -4543,6 +4595,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                                             }
                                           }
                                           aria-invalid={true}
+                                          aria-labelledby="Select item-label"
                                           autoWidth={false}
                                           className="MuiInputBase-input-50 MuiInput-input-35"
                                           classes={
@@ -4591,6 +4644,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                                               />
                                             </div>
                                             <input
+                                              aria-labelledby="Select item-label"
                                               type="hidden"
                                               value=""
                                             />
@@ -4737,7 +4791,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                                                       "accent": Object {
                                                         "dark": "#2a557d",
                                                         "light": "#54acff",
-                                                        "main": "#4085C6",
+                                                        "main": "#316799",
                                                       },
                                                       "action": Object {
                                                         "active": "rgba(0, 0, 0, 0.54)",
@@ -5406,7 +5460,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -6016,7 +6070,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                           "accent": Object {
                             "dark": "#2a557d",
                             "light": "#54acff",
-                            "main": "#4085C6",
+                            "main": "#316799",
                           },
                           "action": Object {
                             "active": "rgba(0, 0, 0, 0.54)",
@@ -6400,7 +6454,10 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                         <div
                           className="MuiFormControl-root-2 MuiFormControl-fullWidth-5"
                         >
-                          <WithStyles(InputLabel)>
+                          <WithStyles(InputLabel)
+                            hidden={false}
+                            id="Select item-label"
+                          >
                             <InputLabel
                               classes={
                                 Object {
@@ -6414,10 +6471,14 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                 }
                               }
                               disableAnimation={false}
+                              hidden={false}
+                              id="Select item-label"
                             >
                               <WithStyles(FormLabel)
                                 className="MuiInputLabel-root-6 MuiInputLabel-formControl-7 MuiInputLabel-animated-10"
                                 data-shrink={false}
+                                hidden={false}
+                                id="Select item-label"
                               >
                                 <FormLabel
                                   className="MuiInputLabel-root-6 MuiInputLabel-formControl-7 MuiInputLabel-animated-10"
@@ -6434,10 +6495,14 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                   }
                                   component="label"
                                   data-shrink={false}
+                                  hidden={false}
+                                  id="Select item-label"
                                 >
                                   <label
                                     className="MuiFormLabel-root-13 MuiInputLabel-root-6 MuiInputLabel-formControl-7 MuiInputLabel-animated-10"
                                     data-shrink={false}
+                                    hidden={false}
+                                    id="Select item-label"
                                   >
                                     Select item
                                   </label>
@@ -6453,6 +6518,11 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                             }
                             autoWidth={false}
                             disabled={false}
+                            inputProps={
+                              Object {
+                                "aria-labelledby": "Select item-label",
+                              }
+                            }
                             multiple={false}
                             onChange={[Function]}
                             value=""
@@ -6479,6 +6549,11 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                               disabled={false}
                               displayEmpty={false}
                               input={<WithStyles(Input) />}
+                              inputProps={
+                                Object {
+                                  "aria-labelledby": "Select item-label",
+                                }
+                              }
                               multiple={false}
                               native={false}
                               onChange={[Function]}
@@ -6494,6 +6569,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                     "SelectDisplayProps": Object {
                                       "id": undefined,
                                     },
+                                    "aria-labelledby": "Select item-label",
                                     "autoWidth": false,
                                     "children": Array [
                                       false,
@@ -6666,6 +6742,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                       "SelectDisplayProps": Object {
                                         "id": undefined,
                                       },
+                                      "aria-labelledby": "Select item-label",
                                       "autoWidth": false,
                                       "children": Array [
                                         false,
@@ -6839,6 +6916,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                         "SelectDisplayProps": Object {
                                           "id": undefined,
                                         },
+                                        "aria-labelledby": "Select item-label",
                                         "autoWidth": false,
                                         "children": Array [
                                           false,
@@ -7018,6 +7096,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                           "SelectDisplayProps": Object {
                                             "id": undefined,
                                           },
+                                          "aria-labelledby": "Select item-label",
                                           "autoWidth": false,
                                           "children": Array [
                                             false,
@@ -7177,6 +7256,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                             }
                                           }
                                           aria-invalid={false}
+                                          aria-labelledby="Select item-label"
                                           autoWidth={false}
                                           className="MuiInputBase-input-50 MuiInput-input-35"
                                           classes={
@@ -7225,6 +7305,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                               />
                                             </div>
                                             <input
+                                              aria-labelledby="Select item-label"
                                               type="hidden"
                                               value=""
                                             />
@@ -7371,7 +7452,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                                       "accent": Object {
                                                         "dark": "#2a557d",
                                                         "light": "#54acff",
-                                                        "main": "#4085C6",
+                                                        "main": "#316799",
                                                       },
                                                       "action": Object {
                                                         "active": "rgba(0, 0, 0, 0.54)",
@@ -8014,7 +8095,7 @@ exports[`UnpublishedStatusField component should render with value selected from
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -8630,7 +8711,7 @@ exports[`UnpublishedStatusField component should render with value selected from
                           "accent": Object {
                             "dark": "#2a557d",
                             "light": "#54acff",
-                            "main": "#4085C6",
+                            "main": "#316799",
                           },
                           "action": Object {
                             "active": "rgba(0, 0, 0, 0.54)",
@@ -9014,7 +9095,10 @@ exports[`UnpublishedStatusField component should render with value selected from
                         <div
                           className="MuiFormControl-root-2 MuiFormControl-fullWidth-5"
                         >
-                          <WithStyles(InputLabel)>
+                          <WithStyles(InputLabel)
+                            hidden={false}
+                            id="Select item-label"
+                          >
                             <InputLabel
                               classes={
                                 Object {
@@ -9028,10 +9112,14 @@ exports[`UnpublishedStatusField component should render with value selected from
                                 }
                               }
                               disableAnimation={false}
+                              hidden={false}
+                              id="Select item-label"
                             >
                               <WithStyles(FormLabel)
                                 className="MuiInputLabel-root-6 MuiInputLabel-formControl-7 MuiInputLabel-animated-10 MuiInputLabel-shrink-9"
                                 data-shrink={true}
+                                hidden={false}
+                                id="Select item-label"
                               >
                                 <FormLabel
                                   className="MuiInputLabel-root-6 MuiInputLabel-formControl-7 MuiInputLabel-animated-10 MuiInputLabel-shrink-9"
@@ -9048,10 +9136,14 @@ exports[`UnpublishedStatusField component should render with value selected from
                                   }
                                   component="label"
                                   data-shrink={true}
+                                  hidden={false}
+                                  id="Select item-label"
                                 >
                                   <label
                                     className="MuiFormLabel-root-13 MuiFormLabel-filled-17 MuiInputLabel-root-6 MuiInputLabel-formControl-7 MuiInputLabel-animated-10 MuiInputLabel-shrink-9"
                                     data-shrink={true}
+                                    hidden={false}
+                                    id="Select item-label"
                                   >
                                     Select item
                                   </label>
@@ -9067,6 +9159,11 @@ exports[`UnpublishedStatusField component should render with value selected from
                             }
                             autoWidth={false}
                             disabled={false}
+                            inputProps={
+                              Object {
+                                "aria-labelledby": "Select item-label",
+                              }
+                            }
                             multiple={false}
                             onChange={[Function]}
                             value="test"
@@ -9093,6 +9190,11 @@ exports[`UnpublishedStatusField component should render with value selected from
                               disabled={false}
                               displayEmpty={false}
                               input={<WithStyles(Input) />}
+                              inputProps={
+                                Object {
+                                  "aria-labelledby": "Select item-label",
+                                }
+                              }
                               multiple={false}
                               native={false}
                               onChange={[Function]}
@@ -9108,6 +9210,7 @@ exports[`UnpublishedStatusField component should render with value selected from
                                     "SelectDisplayProps": Object {
                                       "id": undefined,
                                     },
+                                    "aria-labelledby": "Select item-label",
                                     "autoWidth": false,
                                     "children": Array [
                                       false,
@@ -9280,6 +9383,7 @@ exports[`UnpublishedStatusField component should render with value selected from
                                       "SelectDisplayProps": Object {
                                         "id": undefined,
                                       },
+                                      "aria-labelledby": "Select item-label",
                                       "autoWidth": false,
                                       "children": Array [
                                         false,
@@ -9453,6 +9557,7 @@ exports[`UnpublishedStatusField component should render with value selected from
                                         "SelectDisplayProps": Object {
                                           "id": undefined,
                                         },
+                                        "aria-labelledby": "Select item-label",
                                         "autoWidth": false,
                                         "children": Array [
                                           false,
@@ -9632,6 +9737,7 @@ exports[`UnpublishedStatusField component should render with value selected from
                                           "SelectDisplayProps": Object {
                                             "id": undefined,
                                           },
+                                          "aria-labelledby": "Select item-label",
                                           "autoWidth": false,
                                           "children": Array [
                                             false,
@@ -9791,6 +9897,7 @@ exports[`UnpublishedStatusField component should render with value selected from
                                             }
                                           }
                                           aria-invalid={false}
+                                          aria-labelledby="Select item-label"
                                           autoWidth={false}
                                           className="MuiInputBase-input-50 MuiInput-input-35"
                                           classes={
@@ -9839,6 +9946,7 @@ exports[`UnpublishedStatusField component should render with value selected from
                                               />
                                             </div>
                                             <input
+                                              aria-labelledby="Select item-label"
                                               type="hidden"
                                               value="test"
                                             />
@@ -9985,7 +10093,7 @@ exports[`UnpublishedStatusField component should render with value selected from
                                                       "accent": Object {
                                                         "dark": "#2a557d",
                                                         "light": "#54acff",
-                                                        "main": "#4085C6",
+                                                        "main": "#316799",
                                                       },
                                                       "action": Object {
                                                         "active": "rgba(0, 0, 0, 0.54)",

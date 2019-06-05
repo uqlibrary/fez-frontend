@@ -1175,6 +1175,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
         xs={12}
       >
         <WithStyles(Button)
+          aria-label="Cancel"
           disabled={false}
           fullWidth={true}
           onClick={[Function]}
@@ -1189,6 +1190,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
         xs={12}
       >
         <WithStyles(Button)
+          aria-label="Submit for approval"
           color="primary"
           fullWidth={true}
           id="submit-data-collection"
@@ -2372,6 +2374,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
         xs={12}
       >
         <WithStyles(Button)
+          aria-label="Cancel"
           disabled={false}
           fullWidth={true}
           onClick={[Function]}
@@ -2386,6 +2389,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
         xs={12}
       >
         <WithStyles(Button)
+          aria-label="Submit for approval"
           color="primary"
           fullWidth={true}
           id="submit-data-collection"

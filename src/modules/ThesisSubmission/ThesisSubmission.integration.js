@@ -421,16 +421,16 @@ describe('ThesisSubmission form', () => {
         fireEvent.click(getByTestId('thesis-subtype'));
         fireEvent.click(getByText(/phd thesis/i));
 
-        fireEvent.change(getByTestId('downshift-0-input'), {target: {value: 'sch'}});
-        const enrollingUnitList = await waitForElement(() => getByTestId('downshift-0-menu'), {container});
-        fireEvent.click(getByTestId('downshift-0-item-0', enrollingUnitList));
+        fireEvent.change(getByTestId('Enrollingunit-input'), {target: {value: 'sch'}});
+        const enrollingUnitList = await waitForElement(() => getByTestId('Enrollingunit-menu'), {container});
+        fireEvent.click(getByTestId('Enrollingunit-item-0', enrollingUnitList));
 
         fireEvent.change(getByTestId('supervisors-name-as-published-field'), {target: {value: 'test'}});
         fireEvent.click(getByText(/add supervisor/i));
 
-        fireEvent.change(getByTestId('downshift-1-input'), {target: {value: 'math'}});
-        const fieldOfResearchList = await waitForElement(() => getByTestId('downshift-1-menu'), {container});
-        fireEvent.click(getByTestId('downshift-1-item-0', fieldOfResearchList));
+        fireEvent.change(getByTestId('Fieldofresearch-input'), {target: {value: 'math'}});
+        const fieldOfResearchList = await waitForElement(() => getByTestId('Fieldofresearch-menu'), {container});
+        fireEvent.click(getByTestId('Fieldofresearch-item-0', fieldOfResearchList));
 
         fireEvent.change(getByTestId('keywords-input'), {target: {value: 'test1,test2'}})
         fireEvent.click(getByTestId('add-items'));

@@ -140,7 +140,7 @@ exports[`Component FileUploadRowStatus should mount the container 1`] = `
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -621,7 +621,7 @@ exports[`Component FileUploadRowStatus should mount the container 1`] = `
                         "accent": Object {
                           "dark": "#2a557d",
                           "light": "#54acff",
-                          "main": "#4085C6",
+                          "main": "#316799",
                         },
                         "action": Object {
                           "active": "rgba(0, 0, 0, 0.54)",
@@ -1236,7 +1236,7 @@ exports[`Component FileUploadRowStatus should mount the container 1`] = `
                             "accent": Object {
                               "dark": "#2a557d",
                               "light": "#54acff",
-                              "main": "#4085C6",
+                              "main": "#316799",
                             },
                             "action": Object {
                               "active": "rgba(0, 0, 0, 0.54)",

@@ -38,6 +38,7 @@ describe('MyIncompleteRecord form', () => {
         expect(submitButton).toHaveAttribute('disabled');
 
         let fragment = asFragment();
+        // expect(fragment).toMatchSnapshot();
 
         fireEvent.click(getByTestId('significance'));
         fireEvent.click(getByText(/Major/));

@@ -113,7 +113,7 @@ exports[`GenericSelectField  Full mount  should render 1`] = `
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -623,7 +623,7 @@ exports[`GenericSelectField  Full mount  should render 1`] = `
                       "accent": Object {
                         "dark": "#2a557d",
                         "light": "#54acff",
-                        "main": "#4085C6",
+                        "main": "#316799",
                       },
                       "action": Object {
                         "active": "rgba(0, 0, 0, 0.54)",
@@ -1007,7 +1007,9 @@ exports[`GenericSelectField  Full mount  should render 1`] = `
                     <div
                       className="MuiFormControl-root-2 MuiFormControl-fullWidth-5"
                     >
-                      <WithStyles(InputLabel)>
+                      <WithStyles(InputLabel)
+                        id="Select item-label"
+                      >
                         <InputLabel
                           classes={
                             Object {
@@ -1021,10 +1023,12 @@ exports[`GenericSelectField  Full mount  should render 1`] = `
                             }
                           }
                           disableAnimation={false}
+                          id="Select item-label"
                         >
                           <WithStyles(FormLabel)
                             className="MuiInputLabel-root-6 MuiInputLabel-formControl-7 MuiInputLabel-animated-10"
                             data-shrink={false}
+                            id="Select item-label"
                           >
                             <FormLabel
                               className="MuiInputLabel-root-6 MuiInputLabel-formControl-7 MuiInputLabel-animated-10"
@@ -1041,10 +1045,12 @@ exports[`GenericSelectField  Full mount  should render 1`] = `
                               }
                               component="label"
                               data-shrink={false}
+                              id="Select item-label"
                             >
                               <label
                                 className="MuiFormLabel-root-13 MuiInputLabel-root-6 MuiInputLabel-formControl-7 MuiInputLabel-animated-10"
                                 data-shrink={false}
+                                id="Select item-label"
                               >
                                 Select item
                               </label>
@@ -1060,6 +1066,11 @@ exports[`GenericSelectField  Full mount  should render 1`] = `
                         }
                         autoWidth={false}
                         disabled={false}
+                        inputProps={
+                          Object {
+                            "aria-labelledby": "Select item-label",
+                          }
+                        }
                         multiple={false}
                         onChange={[Function]}
                         value=""
@@ -1086,6 +1097,11 @@ exports[`GenericSelectField  Full mount  should render 1`] = `
                           disabled={false}
                           displayEmpty={false}
                           input={<WithStyles(Input) />}
+                          inputProps={
+                            Object {
+                              "aria-labelledby": "Select item-label",
+                            }
+                          }
                           multiple={false}
                           native={false}
                           onChange={[Function]}
@@ -1101,6 +1117,7 @@ exports[`GenericSelectField  Full mount  should render 1`] = `
                                 "SelectDisplayProps": Object {
                                   "id": undefined,
                                 },
+                                "aria-labelledby": "Select item-label",
                                 "autoWidth": false,
                                 "children": Array [
                                   undefined,
@@ -1154,6 +1171,7 @@ exports[`GenericSelectField  Full mount  should render 1`] = `
                                   "SelectDisplayProps": Object {
                                     "id": undefined,
                                   },
+                                  "aria-labelledby": "Select item-label",
                                   "autoWidth": false,
                                   "children": Array [
                                     undefined,
@@ -1208,6 +1226,7 @@ exports[`GenericSelectField  Full mount  should render 1`] = `
                                     "SelectDisplayProps": Object {
                                       "id": undefined,
                                     },
+                                    "aria-labelledby": "Select item-label",
                                     "autoWidth": false,
                                     "children": Array [
                                       undefined,
@@ -1268,6 +1287,7 @@ exports[`GenericSelectField  Full mount  should render 1`] = `
                                       "SelectDisplayProps": Object {
                                         "id": undefined,
                                       },
+                                      "aria-labelledby": "Select item-label",
                                       "autoWidth": false,
                                       "children": Array [
                                         undefined,
@@ -1308,6 +1328,7 @@ exports[`GenericSelectField  Full mount  should render 1`] = `
                                         }
                                       }
                                       aria-invalid={false}
+                                      aria-labelledby="Select item-label"
                                       autoWidth={false}
                                       className="MuiInputBase-input-50 MuiInput-input-35"
                                       classes={
@@ -1356,6 +1377,7 @@ exports[`GenericSelectField  Full mount  should render 1`] = `
                                           />
                                         </div>
                                         <input
+                                          aria-labelledby="Select item-label"
                                           type="hidden"
                                           value=""
                                         />
@@ -1502,7 +1524,7 @@ exports[`GenericSelectField  Full mount  should render 1`] = `
                                                   "accent": Object {
                                                     "dark": "#2a557d",
                                                     "light": "#54acff",
-                                                    "main": "#4085C6",
+                                                    "main": "#316799",
                                                   },
                                                   "action": Object {
                                                     "active": "rgba(0, 0, 0, 0.54)",
@@ -2008,7 +2030,10 @@ exports[`GenericSelectField  Methods  Shows an error 1`] = `
   error={true}
   fullWidth={true}
 >
-  <WithStyles(InputLabel)>
+  <WithStyles(InputLabel)
+    hidden={false}
+    id="Select item-label"
+  >
     Select item
   </WithStyles(InputLabel)>
   <WithStyles(Select)
@@ -2019,6 +2044,11 @@ exports[`GenericSelectField  Methods  Shows an error 1`] = `
     }
     autoWidth={false}
     disabled={false}
+    inputProps={
+      Object {
+        "aria-labelledby": "Select item-label",
+      }
+    }
     multiple={false}
     onChange={[Function]}
     value=""
@@ -2089,7 +2119,9 @@ exports[`GenericSelectField  should render  snapshots for  loading items 1`] = `
   error={false}
   fullWidth={true}
 >
-  <WithStyles(InputLabel)>
+  <WithStyles(InputLabel)
+    id="Select item-label"
+  >
     Select item
   </WithStyles(InputLabel)>
   <WithStyles(Select)
@@ -2100,6 +2132,11 @@ exports[`GenericSelectField  should render  snapshots for  loading items 1`] = `
     }
     autoWidth={false}
     disabled={true}
+    inputProps={
+      Object {
+        "aria-labelledby": "Select item-label",
+      }
+    }
     multiple={false}
     onChange={[Function]}
     value=""
@@ -2167,6 +2204,12 @@ exports[`GenericSelectField  should render  snapshots for  loading items 2`] = `
   error={false}
   fullWidth={true}
 >
+  <WithStyles(InputLabel)
+    hidden={true}
+    id="Select item-label"
+  >
+    Select item
+  </WithStyles(InputLabel)>
   <WithStyles(Select)
     SelectDisplayProps={
       Object {
@@ -2175,6 +2218,11 @@ exports[`GenericSelectField  should render  snapshots for  loading items 2`] = `
     }
     autoWidth={false}
     disabled={false}
+    inputProps={
+      Object {
+        "aria-labelledby": "Select item-label",
+      }
+    }
     multiple={false}
     onChange={[Function]}
     value="-1"
@@ -2252,7 +2300,9 @@ exports[`GenericSelectField  should render  snapshots for  no items 1`] = `
   error={false}
   fullWidth={true}
 >
-  <WithStyles(InputLabel)>
+  <WithStyles(InputLabel)
+    id="Select item-label"
+  >
     Select item
   </WithStyles(InputLabel)>
   <WithStyles(Select)
@@ -2263,6 +2313,11 @@ exports[`GenericSelectField  should render  snapshots for  no items 1`] = `
     }
     autoWidth={false}
     disabled={false}
+    inputProps={
+      Object {
+        "aria-labelledby": "Select item-label",
+      }
+    }
     multiple={false}
     onChange={[Function]}
     value=""
@@ -2275,7 +2330,9 @@ exports[`GenericSelectField  should render  snapshots for  one item 1`] = `
   error={false}
   fullWidth={true}
 >
-  <WithStyles(InputLabel)>
+  <WithStyles(InputLabel)
+    id="Select item-label"
+  >
     Select item
   </WithStyles(InputLabel)>
   <WithStyles(Select)
@@ -2286,6 +2343,11 @@ exports[`GenericSelectField  should render  snapshots for  one item 1`] = `
     }
     autoWidth={false}
     disabled={false}
+    inputProps={
+      Object {
+        "aria-labelledby": "Select item-label",
+      }
+    }
     multiple={false}
     onChange={[Function]}
     value=""

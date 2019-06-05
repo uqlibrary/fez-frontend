@@ -213,7 +213,7 @@ export class FileUploadDropzone extends PureComponent {
                 <Grid item xs={12}>
                     <div tabIndex="0" onKeyPress={this._onKeyPress}>
                         <Dropzone
-                            inputProps={{id: 'Uploader'}}
+                            inputProps={{id: 'Uploader', 'aria-label': 'Upload files'}}
                             ref={(ref) => {this.dropzoneRef = ref;}}
                             maxSize={maxSize}
                             onDrop={this._onDrop}

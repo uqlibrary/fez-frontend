@@ -33,8 +33,10 @@ describe('AdvancedSearchRowInput', () => {
                 "aria-label": undefined,
                 "autoComplete": "search",
                 "error": false,
-                "helperText": undefined,
-                "label": null,
+                "errorText": undefined,
+                "hideLabel": true,
+                "id": "textfield",
+                "label": undefined,
                 "placeholder": "Field hint",
                 'onChange': inputProps.onChange
             });
@@ -53,7 +55,9 @@ describe('AdvancedSearchRowInput', () => {
                 "autoComplete": "search",
                 "error": true,
                 "errorText": "Must be at least 10 characters",
-                "label": null,
+                "hideLabel": true,
+                "id": "textfield",
+                "label": undefined,
                 "placeholder": "This is hint for text input",
                 'onChange': inputProps.onChange
             });

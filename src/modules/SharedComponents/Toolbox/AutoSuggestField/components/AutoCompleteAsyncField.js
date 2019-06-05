@@ -176,12 +176,15 @@ export class AutoCompleteAsyncField extends Component {
         const selectedItemProps = this.props.clearInput ? {selectedItem: ''} : {};
         return (
             <div className={classes.root}>
+                <label id={`${floatingLabelText.replace(/[^\w]/g, '')}-label`} hidden>{floatingLabelText}</label>
                 <Downshift
                     {...selectedItemProps}
                     defaultInputValue={!!selectedValue && selectedValue.value || ''}
                     stateReducer={this.stateReducer}
                     onChange={this.props.onChange}
                     itemToString={itemToString}
+                    id={floatingLabelText.replace(/[^\w]/g, '')}
+                    aria-label={floatingLabelText}
                     onStateChange={this.handleStateChange()}
                 >
                     {
@@ -200,6 +203,7 @@ export class AutoCompleteAsyncField extends Component {
                                                 errorText: error && errorText || '',
                                                 placeholder: hintText,
                                                 label: floatingLabelText,
+                                                id: `${floatingLabelText.replace(/[^\w]/g, '')}-input`,
                                                 value: inputValue,
                                                 disabled: disabled,
                                                 required: required,

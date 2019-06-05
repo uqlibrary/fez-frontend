@@ -176,7 +176,7 @@ exports[`Index page should render placeholders 1`] = `
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -620,7 +620,7 @@ exports[`Index page should render placeholders 1`] = `
                       "accent": Object {
                         "dark": "#2a557d",
                         "light": "#54acff",
-                        "main": "#4085C6",
+                        "main": "#316799",
                       },
                       "action": Object {
                         "active": "rgba(0, 0, 0, 0.54)",
@@ -1049,7 +1049,7 @@ exports[`Index page should render placeholders 1`] = `
                             "accent": Object {
                               "dark": "#2a557d",
                               "light": "#54acff",
-                              "main": "#4085C6",
+                              "main": "#316799",
                             },
                             "action": Object {
                               "active": "rgba(0, 0, 0, 0.54)",
@@ -2359,7 +2359,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                 "accent": Object {
                                                                   "dark": "#2a557d",
                                                                   "light": "#54acff",
-                                                                  "main": "#4085C6",
+                                                                  "main": "#316799",
                                                                 },
                                                                 "action": Object {
                                                                   "active": "rgba(0, 0, 0, 0.54)",
@@ -2925,7 +2925,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                       "accent": Object {
                                                                         "dark": "#2a557d",
                                                                         "light": "#54acff",
-                                                                        "main": "#4085C6",
+                                                                        "main": "#316799",
                                                                       },
                                                                       "action": Object {
                                                                         "active": "rgba(0, 0, 0, 0.54)",
@@ -3679,14 +3679,13 @@ exports[`Index page should render placeholders 1`] = `
                                                                                     className="MuiGrid-container-3 MuiGrid-align-items-xs-flex-start-12 MuiGrid-align-content-xs-center-15 MuiGrid-justify-xs-center-20"
                                                                                   >
                                                                                     <WithStyles(Grid)
-                                                                                      className="Alert-icon-179"
-                                                                                      id="icon"
+                                                                                      className="Alert-icon-179 alert-icon"
                                                                                       item={true}
                                                                                     >
                                                                                       <Grid
                                                                                         alignContent="stretch"
                                                                                         alignItems="stretch"
-                                                                                        className="Alert-icon-179"
+                                                                                        className="Alert-icon-179 alert-icon"
                                                                                         classes={
                                                                                           Object {
                                                                                             "align-content-xs-center": "MuiGrid-align-content-xs-center-15",
@@ -3791,7 +3790,6 @@ exports[`Index page should render placeholders 1`] = `
                                                                                         component="div"
                                                                                         container={false}
                                                                                         direction="row"
-                                                                                        id="icon"
                                                                                         item={true}
                                                                                         justify="flex-start"
                                                                                         lg={false}
@@ -3804,8 +3802,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                                         zeroMinWidth={false}
                                                                                       >
                                                                                         <div
-                                                                                          className="MuiGrid-item-4 Alert-icon-179"
-                                                                                          id="icon"
+                                                                                          className="MuiGrid-item-4 Alert-icon-179 alert-icon"
                                                                                         >
                                                                                           <pure(ErrorIcon)
                                                                                             className="icon"
@@ -3859,15 +3856,14 @@ exports[`Index page should render placeholders 1`] = `
                                                                                       </Grid>
                                                                                     </WithStyles(Grid)>
                                                                                     <WithStyles(Grid)
-                                                                                      className="Alert-text-180"
-                                                                                      id="text"
+                                                                                      className="Alert-text-180 alert-text"
                                                                                       item={true}
                                                                                       xs={true}
                                                                                     >
                                                                                       <Grid
                                                                                         alignContent="stretch"
                                                                                         alignItems="stretch"
-                                                                                        className="Alert-text-180"
+                                                                                        className="Alert-text-180 alert-text"
                                                                                         classes={
                                                                                           Object {
                                                                                             "align-content-xs-center": "MuiGrid-align-content-xs-center-15",
@@ -3972,7 +3968,6 @@ exports[`Index page should render placeholders 1`] = `
                                                                                         component="div"
                                                                                         container={false}
                                                                                         direction="row"
-                                                                                        id="text"
                                                                                         item={true}
                                                                                         justify="flex-start"
                                                                                         lg={false}
@@ -3985,8 +3980,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                                         zeroMinWidth={false}
                                                                                       >
                                                                                         <div
-                                                                                          className="MuiGrid-item-4 MuiGrid-grid-xs-true-31 Alert-text-180"
-                                                                                          id="text"
+                                                                                          className="MuiGrid-item-4 MuiGrid-grid-xs-true-31 Alert-text-180 alert-text"
                                                                                         >
                                                                                           <b>
                                                                                             There has been an error - 
@@ -4476,7 +4470,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                         "accent": Object {
                                                                           "dark": "#2a557d",
                                                                           "light": "#54acff",
-                                                                          "main": "#4085C6",
+                                                                          "main": "#316799",
                                                                         },
                                                                         "action": Object {
                                                                           "active": "rgba(0, 0, 0, 0.54)",
@@ -5079,7 +5073,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                                               "accent": Object {
                                                                                                 "dark": "#2a557d",
                                                                                                 "light": "#54acff",
-                                                                                                "main": "#4085C6",
+                                                                                                "main": "#316799",
                                                                                               },
                                                                                               "action": Object {
                                                                                                 "active": "rgba(0, 0, 0, 0.54)",
@@ -5595,7 +5589,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                                             "accent": Object {
                                                                                               "dark": "#2a557d",
                                                                                               "light": "#54acff",
-                                                                                              "main": "#4085C6",
+                                                                                              "main": "#316799",
                                                                                             },
                                                                                             "action": Object {
                                                                                               "active": "rgba(0, 0, 0, 0.54)",
@@ -6308,7 +6302,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                       "accent": Object {
                                                                         "dark": "#2a557d",
                                                                         "light": "#54acff",
-                                                                        "main": "#4085C6",
+                                                                        "main": "#316799",
                                                                       },
                                                                       "action": Object {
                                                                         "active": "rgba(0, 0, 0, 0.54)",
