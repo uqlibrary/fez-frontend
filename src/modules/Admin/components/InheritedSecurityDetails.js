@@ -1,11 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 
-import { PolicyDescription } from './PolicyDescription';
+import PolicyDescription from './PolicyDescription';
 
-export const InheritedSecurityDetails = () => (
+export const InheritedSecurityDetails = ({collections}) => (
     <Grid item xs={12} style={{
         padding: 24,
         backgroundColor: 'rgba(0,0,0,0.05)'
@@ -14,15 +15,35 @@ export const InheritedSecurityDetails = () => (
             Inherited security policy details
         </Typography>
         <Grid container spacing={8} style={{ marginTop: 8 }}>
-            <Grid item xs={2}><b>Collection:</b></Grid>
-            <Grid item xs={5}>UQ:12345</Grid>
-            <Grid item xs={5}>UQ:67890</Grid>
-            <Grid item xs={2}><b>Policy:</b></Grid>
-            <Grid item xs={5}><PolicyDescription selectedPolicyKey={2} /></Grid>
-            <Grid item xs={5}><PolicyDescription selectedPolicyKey={3} /></Grid>
+            {
+                collections.map(item => (
+                    <React.Fragment key={item.rek_ismemberof}>
+                        <Grid item xs={12} sm={2}>
+                            <Typography variant="subtitle1">
+                                {`${item.rek_ismemberof}`}
+                            </Typography>
+                        </Grid>
+                        <Grid item xs={12} sm={7}>
+                            <Typography variant="subtitle2">
+                                {
+                                    `${item.rek_ismemberof_lookup}`
+                                }
+                            </Typography>
+                        </Grid>
+                        <Grid item xs={12} sm={3}>
+                            <Typography variant="body2">
+                                <PolicyDescription selectedPolicyKey={5} />
+                            </Typography>
+                        </Grid>
+                    </React.Fragment>
+                ))
+            }
         </Grid>
     </Grid>
 );
 
-export default InheritedSecurityDetails;
+InheritedSecurityDetails.propTypes = {
+    collections: PropTypes.array.isRequired
+};
 
+export default React.memo(InheritedSecurityDetails);

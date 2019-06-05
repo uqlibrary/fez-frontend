@@ -16,6 +16,7 @@ const RecordContextConsumer = RecordContext.Consumer;
 
 
 export {
+    RecordContext, FormValuesContext,
     TabbedContextProvider, TabbedContextConsumer,
     FormValuesContextProvider, FormValuesContextConsumer,
     RecordContextProvider, RecordContextConsumer,

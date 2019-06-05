@@ -65,6 +65,7 @@ const mapStateToProps = (state, ownProps) => {
                 recordType: recordToView.rek_object_type_lookup,
                 rek_security_policy: recordToView.rek_security_policy,
                 rek_datastream_policy: recordToView.rek_datastream_policy,
+                rek_security_inherited: recordToView.rek_security_inherited,
                 collection: [],
                 subject: []
             }
