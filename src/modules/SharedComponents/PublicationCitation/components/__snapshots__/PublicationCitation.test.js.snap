@@ -499,7 +499,7 @@ exports[`PublicationCitation  should render component with content indicators 1`
             variant="caption"
           >
             Content Indicators
-            :
+            : 
             <span
               key="1"
             >
@@ -1400,7 +1400,7 @@ exports[`PublicationCitation  should render component with default actions 1`] =
             variant="caption"
           >
             Content Indicators
-            :
+            : 
             <span
               key="1"
             >
@@ -2340,7 +2340,7 @@ exports[`PublicationCitation  should render component with default item 1`] = `
             variant="caption"
           >
             Content Indicators
-            :
+            : 
             <span
               key="1"
             >
@@ -3236,7 +3236,7 @@ exports[`PublicationCitation  should render component with default item without 
             variant="caption"
           >
             Content Indicators
-            :
+            : 
             <span
               key="1"
             >
@@ -4137,7 +4137,7 @@ exports[`PublicationCitation  should render component with default list hiding t
             variant="caption"
           >
             Content Indicators
-            :
+            : 
             <span
               key="1"
             >
@@ -5038,7 +5038,7 @@ exports[`PublicationCitation  should render component with default list hiding t
             variant="caption"
           >
             Content Indicators
-            :
+            : 
             <span
               key="1"
             >
@@ -5945,7 +5945,7 @@ exports[`PublicationCitation  should render component with publication from mult
             variant="caption"
           >
             Content Indicators
-            :
+            : 
             <span
               key="1"
             >
@@ -6860,7 +6860,7 @@ exports[`PublicationCitation  should render component without a title 1`] = `
             variant="caption"
           >
             Content Indicators
-            :
+            : 
             <span
               key="1"
             >
@@ -7853,7 +7853,7 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
             variant="caption"
           >
             Content Indicators
-            :
+            : 
             <span
               key="1"
             >
