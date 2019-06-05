@@ -5,6 +5,7 @@ import {defaultQueryParams} from 'config/general';
 
 const fullPath = process.env.FULL_PATH && process.env.FULL_PATH || 'https://fez-staging.library.uq.edu.au';
 export const pidRegExp = 'UQ:[a-z0-9]+';
+export const isFileUrl = (route) => new RegExp('\\/view\\/UQ:[a-z0-9]+\\/.*').test(route);
 
 const getSearchUrl = ({searchQuery = {all: ''}, activeFacets = {}}, searchUrl = '/records/search') => {
     const params = {
@@ -115,7 +116,7 @@ export const pathConfig = {
 };
 
 // a duplicate list of routes for
-const flattedPathConfig = ['/', '/dashboard', '/contact', '/rhdsubmission', '/sbslodge_new', '/records/search',
+const flattedPathConfig = ['/', '/dashboard', '/contact', '/rhdsubmission', '/sbslodge_new', '/records/search', '/view',
     '/records/mine', '/records/possible', '/records/incomplete', '/records/claim', '/records/add/find', '/records/add/results', '/records/add/new',
     '/admin/masquerade', '/admin/unpublished', '/admin/thirdPartyTools', '/author-identifiers/orcid/link', '/author-identifiers/google-scholar/link'
 ];
@@ -340,6 +341,7 @@ export const getRoutesConfig = ({components = {}, account = null, forceOrcidRegi
         {
             render: (childProps) => {
                 const isValidRoute = flattedPathConfig.indexOf(childProps.location.pathname) >= 0;
+                if (isFileUrl(childProps.location.pathname) && account) return components.StandardPage({...locale.pages.permissionDeniedOrNotFound});
                 if (isValidRoute && account) return components.StandardPage({...locale.pages.permissionDenied});
                 if (isValidRoute) return components.StandardPage({...locale.pages.authenticationRequired});
                 return components.StandardPage({...locale.pages.notFound});

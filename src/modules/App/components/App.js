@@ -16,6 +16,7 @@ import {Meta} from 'modules/SharedComponents/Meta';
 import {OfflineSnackbar} from 'modules/SharedComponents/OfflineSnackbar';
 import {SearchComponent} from 'modules/SharedComponents/SearchComponent';
 import {ConfirmDialogBox} from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
+import {isFileUrl} from 'config/routes';
 import * as pages from './pages';
 
 // MUI1
@@ -208,11 +209,10 @@ export class AppClass extends PureComponent {
         const showMenu = !isThesisSubmissionPage;
 
         const containerStyle = this.state.docked && !isThesisSubmissionPage ? {paddingLeft: 260} : {};
-        if (!isAuthorizedUser && isThesisSubmissionPage) {
+        if (!isAuthorizedUser && (isThesisSubmissionPage || isFileUrl(this.props.location.pathname))) {
             this.redirectUserToLogin()();
-            return (<div/>);
+            return (<div />);
         }
-
         let userStatusAlert = null;
         if (!this.props.accountLoading && !this.props.account && !isPublicPage) {
             // user is not logged in

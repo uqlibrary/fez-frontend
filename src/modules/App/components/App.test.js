@@ -3,6 +3,7 @@ import App from './App';
 import {accounts} from 'mock/data';
 import {routes, AUTH_URL_LOGIN, AUTH_URL_LOGOUT} from 'config';
 import mui1theme from 'config';
+import {locale} from "../../../locale";
 
 function setup(testProps, isShallow = true) {
     const props = {
@@ -67,6 +68,22 @@ describe('Application component', () => {
         expect(redirectUserToLogin).not.toHaveBeenCalled();
 
         wrapper.setProps({accountLoading: false, account: null, location: {pathname: '/rhdsubmission'}});
+        expect(redirectUserToLogin).toHaveBeenCalled();
+        wrapper.update();
+
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    // If the system is behind Lambda@Edge scripts then public users will go straight through to public files.
+    // A user will only get to the fez-frontend app for a file if they are not logged in and
+    // the file is not public, or they are logged in and the the file requires higher privs e.g. needs admin, but they are a student.
+    it('redirects user to login if going to a secure file url and not user logged in yet', () => {
+        const wrapper = setup({});
+        const redirectUserToLogin = jest.spyOn(wrapper.instance(), 'redirectUserToLogin');
+        wrapper.setProps({accountLoading: true, account: null, location: {pathname: '/view/UQ:1/test.pdf'}});
+        expect(redirectUserToLogin).not.toHaveBeenCalled();
+
+        wrapper.setProps({accountLoading: false, account: null, location: {pathname: '/view/UQ:1/test.pdf'}});
         expect(redirectUserToLogin).toHaveBeenCalled();
         wrapper.update();
 

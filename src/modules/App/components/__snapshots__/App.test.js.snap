@@ -350,6 +350,8 @@ exports[`Application component Should display mobile correctly 1`] = `
 </WithStyles(Grid)>
 `;
 
+exports[`Application component redirects user to login if going to a secure file url and not user logged in yet 1`] = `<div />`;
+
 exports[`Application component redirects user to login if not Authorized 1`] = `<div />`;
 
 exports[`Application component should determine if it has incomplete works from props and hide menu item 1`] = `
