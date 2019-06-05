@@ -287,6 +287,7 @@ describe('AutoCompleteAsyncField component', () => {
             itemsList: itemsList,
             async: true,
             maxResults: 7,
+            hideLabel: true,
             clearInput: true,
             selectedValue: { value: 'test 1', id: 123 },
             error: true,

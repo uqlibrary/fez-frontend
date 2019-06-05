@@ -42,6 +42,7 @@ export class AutoCompleteAsyncField extends Component {
         onChange: PropTypes.func,
         itemToString: PropTypes.func,
         floatingLabelText: PropTypes.string,
+        hideLabel: PropTypes.bool,
         error: PropTypes.bool,
         errorText: PropTypes.string,
         hintText: PropTypes.string,
@@ -172,19 +173,21 @@ export class AutoCompleteAsyncField extends Component {
     );
 
     render() {
-        const { classes, itemsList, error, errorText, hintText, floatingLabelText, disabled, maxResults, itemToString, required, selectedValue, itemsListLoading } = this.props;
+        const { classes, itemsList, error, errorText, hintText, floatingLabelText, hideLabel, disabled, maxResults, itemToString, required, selectedValue, itemsListLoading } = this.props;
         const selectedItemProps = this.props.clearInput ? {selectedItem: ''} : {};
+        const labelText = floatingLabelText || 'autosuggest';
+        console.log(this.props);
         return (
             <div className={classes.root}>
-                <label id={`${floatingLabelText.replace(/[^\w]/g, '')}-label`} hidden>{floatingLabelText}</label>
+                <label id={`${labelText.replace(/[^\w]/g, '')}-label`} hidden>{floatingLabelText || ''}</label>
                 <Downshift
                     {...selectedItemProps}
                     defaultInputValue={!!selectedValue && selectedValue.value || ''}
                     stateReducer={this.stateReducer}
                     onChange={this.props.onChange}
                     itemToString={itemToString}
-                    id={floatingLabelText.replace(/[^\w]/g, '')}
-                    aria-label={floatingLabelText}
+                    id={labelText.replace(/[^\w]/g, '')}
+                    aria-label={labelText}
                     onStateChange={this.handleStateChange()}
                 >
                     {
@@ -202,8 +205,8 @@ export class AutoCompleteAsyncField extends Component {
                                                 error: error,
                                                 errorText: error && errorText || '',
                                                 placeholder: hintText,
-                                                label: floatingLabelText,
-                                                id: `${floatingLabelText.replace(/[^\w]/g, '')}-input`,
+                                                label: !hideLabel ? labelText : undefined,
+                                                id: `${labelText.replace(/[^\w]/g, '')}-input`,
                                                 value: inputValue,
                                                 disabled: disabled,
                                                 required: required,
