@@ -309,7 +309,7 @@ export class PublicationCitation extends PureComponent {
                                 this.props.publication.fez_record_search_key_content_indicator &&
                                 this.props.publication.fez_record_search_key_content_indicator.length > 0 &&
                                 <Grid item xs={12} className={classes.contentIndicators}>
-                                    <Typography gutterBottom variant="caption">{locale.components.contentIndicators.label}:
+                                    <Typography gutterBottom variant="caption">{locale.components.contentIndicators.label}:&nbsp;
                                         {
                                             this.props.publication.fez_record_search_key_content_indicator.map((item, index) => {
                                                 return (
