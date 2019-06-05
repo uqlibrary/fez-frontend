@@ -5,6 +5,7 @@ exports[`AdvancedSearchRowInput should call onChange from input props for Author
   allowFreeText={true}
   error={true}
   errorText="This field is required"
+  hideLabel={true}
   onChange={[Function]}
   value={null}
 />
@@ -15,6 +16,7 @@ exports[`AdvancedSearchRowInput should call onChange from input props for Author
   allowFreeText={true}
   error={true}
   errorText="This field is required"
+  hideLabel={true}
   onChange={[Function]}
   value={null}
 />
@@ -36,6 +38,7 @@ exports[`AdvancedSearchRowInput should call onChange from input props for OrgUni
   allowFreeText={true}
   error={true}
   errorText="This field is required"
+  hideLabel={true}
   onChange={[Function]}
   value={null}
 />

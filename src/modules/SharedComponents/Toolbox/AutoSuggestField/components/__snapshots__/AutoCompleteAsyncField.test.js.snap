@@ -6,17 +6,17 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
 >
   <label
     hidden={true}
-    id="-label"
+    id="autosuggest-label"
   />
   <Downshift
-    aria-label=""
+    aria-label="autosuggest"
     defaultHighlightedIndex={null}
     defaultInputValue="test 1"
     defaultIsOpen={false}
     defaultSelectedItem={null}
     environment={[Window]}
     getA11yStatusMessage={[Function]}
-    id=""
+    id="autosuggest"
     itemToString={[MockFunction]}
     onChange={[MockFunction]}
     onInputValueChange={[Function]}
@@ -37,14 +37,14 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
 
 exports[`AutoCompleteAsyncField component should call filter function on itemsList 2`] = `
 <Downshift
-  aria-label=""
+  aria-label="autosuggest"
   defaultHighlightedIndex={null}
   defaultInputValue="test 1"
   defaultIsOpen={false}
   defaultSelectedItem={null}
   environment={[Window]}
   getA11yStatusMessage={[Function]}
-  id=""
+  id="autosuggest"
   itemToString={[MockFunction]}
   onChange={[MockFunction]}
   onInputValueChange={[Function]}
@@ -90,8 +90,7 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
         error={true}
         errorText="This field is required"
         fullWidth={true}
-        id="-input"
-        label=""
+        id="autosuggest-input"
         placeholder={null}
         required={true}
         value="tes"
@@ -189,8 +188,7 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
         error={true}
         errorText="This field is required"
         fullWidth={true}
-        id="-input"
-        label=""
+        id="autosuggest-input"
         placeholder={null}
         required={true}
         value="123"
@@ -245,8 +243,8 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
   button={true}
   classes={
     Object {
-      "root": "MuiMenuItem-root-141",
-      "selected": "MuiMenuItem-selected-142",
+      "root": "MuiMenuItem-root-155",
+      "selected": "MuiMenuItem-selected-156",
     }
   }
   component="li"
@@ -290,7 +288,7 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
 
 exports[`AutoCompleteAsyncField component should call filter function on itemsList 7`] = `
 <WithStyles(FormControl)
-  aria-describedby="-input-helper-text"
+  aria-describedby="autosuggest-input-helper-text"
   classes={Object {}}
   disabled={false}
   error={true}
@@ -305,13 +303,13 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
       }
     }
     fullWidth={true}
-    id="-input"
+    id="autosuggest-input"
     inputProps={
       Object {
-        "aria-label": "",
-        "aria-labelledby": "-input-label",
-        "id": "-input",
-        "label": "",
+        "aria-label": undefined,
+        "aria-labelledby": "autosuggest-input-label",
+        "id": "autosuggest-input",
+        "label": undefined,
       }
     }
     inputRef={[Function]}
@@ -319,7 +317,7 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
     value="123"
   />
   <WithStyles(FormHelperText)
-    id="-input-helper-text"
+    id="autosuggest-input-helper-text"
   >
     This field is required
   </WithStyles(FormHelperText)>
@@ -353,8 +351,7 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
         error={true}
         errorText="This field is required"
         fullWidth={true}
-        id="-input"
-        label=""
+        id="autosuggest-input"
         placeholder={null}
         required={true}
         value="123"
@@ -410,17 +407,17 @@ exports[`AutoCompleteAsyncField component should call given filter function on i
 >
   <label
     hidden={true}
-    id="-label"
+    id="autosuggest-label"
   />
   <Downshift
-    aria-label=""
+    aria-label="autosuggest"
     defaultHighlightedIndex={null}
     defaultInputValue=""
     defaultIsOpen={false}
     defaultSelectedItem={null}
     environment={[Window]}
     getA11yStatusMessage={[Function]}
-    id=""
+    id="autosuggest"
     itemToString={[MockFunction]}
     onChange={[MockFunction]}
     onInputValueChange={[Function]}
@@ -465,17 +462,17 @@ exports[`AutoCompleteAsyncField component should render 1`] = `
 >
   <label
     hidden={true}
-    id="-label"
+    id="autosuggest-label"
   />
   <Downshift
-    aria-label=""
+    aria-label="autosuggest"
     defaultHighlightedIndex={null}
     defaultInputValue=""
     defaultIsOpen={false}
     defaultSelectedItem={null}
     environment={[Window]}
     getA11yStatusMessage={[Function]}
-    id=""
+    id="autosuggest"
     itemToString={[MockFunction]}
     onChange={[MockFunction]}
     onInputValueChange={[Function]}
@@ -497,15 +494,15 @@ exports[`AutoCompleteAsyncField component should render a spinner while loading 
 <CircularProgress
   classes={
     Object {
-      "circle": "MuiCircularProgress-circle-138",
-      "circleIndeterminate": "MuiCircularProgress-circleIndeterminate-140",
-      "circleStatic": "MuiCircularProgress-circleStatic-139",
-      "colorPrimary": "MuiCircularProgress-colorPrimary-135",
-      "colorSecondary": "MuiCircularProgress-colorSecondary-136",
-      "indeterminate": "MuiCircularProgress-indeterminate-134",
-      "root": "MuiCircularProgress-root-132",
-      "static": "MuiCircularProgress-static-133",
-      "svg": "MuiCircularProgress-svg-137",
+      "circle": "MuiCircularProgress-circle-152",
+      "circleIndeterminate": "MuiCircularProgress-circleIndeterminate-154",
+      "circleStatic": "MuiCircularProgress-circleStatic-153",
+      "colorPrimary": "MuiCircularProgress-colorPrimary-149",
+      "colorSecondary": "MuiCircularProgress-colorSecondary-150",
+      "indeterminate": "MuiCircularProgress-indeterminate-148",
+      "root": "MuiCircularProgress-root-146",
+      "static": "MuiCircularProgress-static-147",
+      "svg": "MuiCircularProgress-svg-151",
     }
   }
   color="primary"
@@ -515,7 +512,7 @@ exports[`AutoCompleteAsyncField component should render a spinner while loading 
   variant="indeterminate"
 >
   <div
-    className="MuiCircularProgress-root-132 MuiCircularProgress-colorPrimary-135 MuiCircularProgress-indeterminate-134"
+    className="MuiCircularProgress-root-146 MuiCircularProgress-colorPrimary-149 MuiCircularProgress-indeterminate-148"
     role="progressbar"
     style={
       Object {
@@ -525,11 +522,11 @@ exports[`AutoCompleteAsyncField component should render a spinner while loading 
     }
   >
     <svg
-      className="MuiCircularProgress-svg-137"
+      className="MuiCircularProgress-svg-151"
       viewBox="22 22 44 44"
     >
       <circle
-        className="MuiCircularProgress-circle-138 MuiCircularProgress-circleIndeterminate-140"
+        className="MuiCircularProgress-circle-152 MuiCircularProgress-circleIndeterminate-154"
         cx={44}
         cy={44}
         fill="none"
@@ -1078,17 +1075,17 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
             >
               <label
                 hidden={true}
-                id="-label"
+                id="autosuggest-label"
               />
               <Downshift
-                aria-label=""
+                aria-label="autosuggest"
                 defaultHighlightedIndex={null}
                 defaultInputValue=""
                 defaultIsOpen={false}
                 defaultSelectedItem={null}
                 environment={[Window]}
                 getA11yStatusMessage={[Function]}
-                id=""
+                id="autosuggest"
                 itemToString={[MockFunction]}
                 onChange={[MockFunction]}
                 onInputValueChange={[Function]}
@@ -1104,7 +1101,7 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                 <div
                   aria-expanded={false}
                   aria-haspopup="listbox"
-                  aria-labelledby="downshift-1-label"
+                  aria-labelledby="autosuggest-label"
                   aria-owns={null}
                   className="container"
                   role="combobox"
@@ -1367,12 +1364,12 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                                     "aria-activedescendant": null,
                                     "aria-autocomplete": "list",
                                     "aria-controls": null,
-                                    "aria-labelledby": "downshift-1-label",
+                                    "aria-labelledby": "autosuggest-label",
                                     "autoComplete": "off",
                                     "classes": Object {
                                       "root": "inputRoot",
                                     },
-                                    "id": "downshift-1-input",
+                                    "id": "autosuggest-input",
                                     "inputRef": [Function],
                                     "onBlur": [Function],
                                     "onChange": [Function],
@@ -1384,8 +1381,8 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                                 error={false}
                                 errorText=""
                                 fullWidth={true}
-                                id="-input"
-                                label=""
+                                id="autosuggest-input"
+                                label="autosuggest"
                                 placeholder={null}
                                 required={true}
                                 value=""
@@ -1396,12 +1393,12 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                                       "aria-activedescendant": null,
                                       "aria-autocomplete": "list",
                                       "aria-controls": null,
-                                      "aria-labelledby": "downshift-1-label",
+                                      "aria-labelledby": "autosuggest-label",
                                       "autoComplete": "off",
                                       "classes": Object {
                                         "root": "inputRoot",
                                       },
-                                      "id": "downshift-1-input",
+                                      "id": "autosuggest-input",
                                       "inputRef": [Function],
                                       "onBlur": [Function],
                                       "onChange": [Function],
@@ -1414,8 +1411,8 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                                   error={false}
                                   errorText=""
                                   fullWidth={true}
-                                  id="-input"
-                                  label=""
+                                  id="autosuggest-input"
+                                  label="autosuggest"
                                   placeholder={null}
                                   required={true}
                                   value=""
@@ -1424,8 +1421,8 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                                     InputLabelProps={
                                       Object {
                                         "hidden": false,
-                                        "htmlFor": "-input",
-                                        "id": "-input-label",
+                                        "htmlFor": "autosuggest-input",
+                                        "id": "autosuggest-input-label",
                                         "shrink": undefined,
                                       }
                                     }
@@ -1434,12 +1431,12 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                                         "aria-activedescendant": null,
                                         "aria-autocomplete": "list",
                                         "aria-controls": null,
-                                        "aria-labelledby": "downshift-1-label",
+                                        "aria-labelledby": "autosuggest-label",
                                         "autoComplete": "off",
                                         "classes": Object {
                                           "root": "inputRoot",
                                         },
-                                        "id": "downshift-1-input",
+                                        "id": "autosuggest-input",
                                         "inputRef": [Function],
                                         "onBlur": [Function],
                                         "onChange": [Function],
@@ -1451,16 +1448,16 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                                     disabled={false}
                                     error={false}
                                     fullWidth={true}
-                                    id="-input"
+                                    id="autosuggest-input"
                                     inputProps={
                                       Object {
-                                        "aria-label": "",
-                                        "aria-labelledby": "-input-label",
-                                        "id": "-input",
-                                        "label": "",
+                                        "aria-label": "autosuggest",
+                                        "aria-labelledby": "autosuggest-input-label",
+                                        "id": "autosuggest-input",
+                                        "label": "autosuggest",
                                       }
                                     }
-                                    label=""
+                                    label="autosuggest"
                                     placeholder={null}
                                     required={true}
                                     select={false}
@@ -1495,11 +1492,77 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                                         <div
                                           className="MuiFormControl-root-98 MuiFormControl-fullWidth-101"
                                         >
+                                          <WithStyles(InputLabel)
+                                            hidden={false}
+                                            htmlFor="autosuggest-input"
+                                            id="autosuggest-input-label"
+                                          >
+                                            <InputLabel
+                                              classes={
+                                                Object {
+                                                  "animated": "MuiInputLabel-animated-106",
+                                                  "filled": "MuiInputLabel-filled-107",
+                                                  "formControl": "MuiInputLabel-formControl-103",
+                                                  "marginDense": "MuiInputLabel-marginDense-104",
+                                                  "outlined": "MuiInputLabel-outlined-108",
+                                                  "root": "MuiInputLabel-root-102",
+                                                  "shrink": "MuiInputLabel-shrink-105",
+                                                }
+                                              }
+                                              disableAnimation={false}
+                                              hidden={false}
+                                              htmlFor="autosuggest-input"
+                                              id="autosuggest-input-label"
+                                            >
+                                              <WithStyles(FormLabel)
+                                                className="MuiInputLabel-root-102 MuiInputLabel-formControl-103 MuiInputLabel-animated-106"
+                                                data-shrink={false}
+                                                hidden={false}
+                                                htmlFor="autosuggest-input"
+                                                id="autosuggest-input-label"
+                                              >
+                                                <FormLabel
+                                                  className="MuiInputLabel-root-102 MuiInputLabel-formControl-103 MuiInputLabel-animated-106"
+                                                  classes={
+                                                    Object {
+                                                      "asterisk": "MuiFormLabel-asterisk-115",
+                                                      "disabled": "MuiFormLabel-disabled-111",
+                                                      "error": "MuiFormLabel-error-112",
+                                                      "filled": "MuiFormLabel-filled-113",
+                                                      "focused": "MuiFormLabel-focused-110",
+                                                      "required": "MuiFormLabel-required-114",
+                                                      "root": "MuiFormLabel-root-109",
+                                                    }
+                                                  }
+                                                  component="label"
+                                                  data-shrink={false}
+                                                  hidden={false}
+                                                  htmlFor="autosuggest-input"
+                                                  id="autosuggest-input-label"
+                                                >
+                                                  <label
+                                                    className="MuiFormLabel-root-109 MuiFormLabel-required-114 MuiInputLabel-root-102 MuiInputLabel-formControl-103 MuiInputLabel-animated-106"
+                                                    data-shrink={false}
+                                                    hidden={false}
+                                                    htmlFor="autosuggest-input"
+                                                    id="autosuggest-input-label"
+                                                  >
+                                                    autosuggest
+                                                    <span
+                                                      className="MuiFormLabel-asterisk-115"
+                                                    >
+                                                       *
+                                                    </span>
+                                                  </label>
+                                                </FormLabel>
+                                              </WithStyles(FormLabel)>
+                                            </InputLabel>
+                                          </WithStyles(InputLabel)>
                                           <WithStyles(Input)
                                             aria-activedescendant={null}
                                             aria-autocomplete="list"
                                             aria-controls={null}
-                                            aria-labelledby="downshift-1-label"
+                                            aria-labelledby="autosuggest-label"
                                             autoComplete="off"
                                             classes={
                                               Object {
@@ -1507,13 +1570,13 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                                               }
                                             }
                                             fullWidth={true}
-                                            id="downshift-1-input"
+                                            id="autosuggest-input"
                                             inputProps={
                                               Object {
-                                                "aria-label": "",
-                                                "aria-labelledby": "-input-label",
-                                                "id": "-input",
-                                                "label": "",
+                                                "aria-label": "autosuggest",
+                                                "aria-labelledby": "autosuggest-input-label",
+                                                "id": "autosuggest-input",
+                                                "label": "autosuggest",
                                               }
                                             }
                                             inputRef={[Function]}
@@ -1527,33 +1590,33 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                                               aria-activedescendant={null}
                                               aria-autocomplete="list"
                                               aria-controls={null}
-                                              aria-labelledby="downshift-1-label"
+                                              aria-labelledby="autosuggest-label"
                                               autoComplete="off"
                                               classes={
                                                 Object {
-                                                  "disabled": "MuiInput-disabled-105",
-                                                  "error": "MuiInput-error-107",
-                                                  "focused": "MuiInput-focused-104",
-                                                  "formControl": "MuiInput-formControl-103",
-                                                  "fullWidth": "MuiInput-fullWidth-109",
-                                                  "input": "MuiInput-input-110",
-                                                  "inputMarginDense": "MuiInput-inputMarginDense-111",
-                                                  "inputMultiline": "MuiInput-inputMultiline-112",
-                                                  "inputType": "MuiInput-inputType-113",
-                                                  "inputTypeSearch": "MuiInput-inputTypeSearch-114",
-                                                  "multiline": "MuiInput-multiline-108",
-                                                  "root": "MuiInput-root-102 inputRoot",
-                                                  "underline": "MuiInput-underline-106",
+                                                  "disabled": "MuiInput-disabled-119",
+                                                  "error": "MuiInput-error-121",
+                                                  "focused": "MuiInput-focused-118",
+                                                  "formControl": "MuiInput-formControl-117",
+                                                  "fullWidth": "MuiInput-fullWidth-123",
+                                                  "input": "MuiInput-input-124",
+                                                  "inputMarginDense": "MuiInput-inputMarginDense-125",
+                                                  "inputMultiline": "MuiInput-inputMultiline-126",
+                                                  "inputType": "MuiInput-inputType-127",
+                                                  "inputTypeSearch": "MuiInput-inputTypeSearch-128",
+                                                  "multiline": "MuiInput-multiline-122",
+                                                  "root": "MuiInput-root-116 inputRoot",
+                                                  "underline": "MuiInput-underline-120",
                                                 }
                                               }
                                               fullWidth={true}
-                                              id="downshift-1-input"
+                                              id="autosuggest-input"
                                               inputProps={
                                                 Object {
-                                                  "aria-label": "",
-                                                  "aria-labelledby": "-input-label",
-                                                  "id": "-input",
-                                                  "label": "",
+                                                  "aria-label": "autosuggest",
+                                                  "aria-labelledby": "autosuggest-input-label",
+                                                  "id": "autosuggest-input",
+                                                  "label": "autosuggest",
                                                 }
                                               }
                                               inputRef={[Function]}
@@ -1567,34 +1630,34 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                                                 aria-activedescendant={null}
                                                 aria-autocomplete="list"
                                                 aria-controls={null}
-                                                aria-labelledby="downshift-1-label"
+                                                aria-labelledby="autosuggest-label"
                                                 autoComplete="off"
                                                 classes={
                                                   Object {
-                                                    "disabled": "MuiInput-disabled-105",
-                                                    "error": "MuiInput-error-107",
-                                                    "focused": "MuiInput-focused-104",
-                                                    "formControl": "MuiInput-formControl-103",
-                                                    "fullWidth": "MuiInput-fullWidth-109",
-                                                    "input": "MuiInput-input-110",
-                                                    "inputMarginDense": "MuiInput-inputMarginDense-111",
-                                                    "inputMultiline": "MuiInput-inputMultiline-112",
-                                                    "inputType": "MuiInput-inputType-113",
-                                                    "inputTypeSearch": "MuiInput-inputTypeSearch-114",
-                                                    "multiline": "MuiInput-multiline-108",
-                                                    "root": "MuiInput-root-102 inputRoot MuiInput-underline-106",
+                                                    "disabled": "MuiInput-disabled-119",
+                                                    "error": "MuiInput-error-121",
+                                                    "focused": "MuiInput-focused-118",
+                                                    "formControl": "MuiInput-formControl-117",
+                                                    "fullWidth": "MuiInput-fullWidth-123",
+                                                    "input": "MuiInput-input-124",
+                                                    "inputMarginDense": "MuiInput-inputMarginDense-125",
+                                                    "inputMultiline": "MuiInput-inputMultiline-126",
+                                                    "inputType": "MuiInput-inputType-127",
+                                                    "inputTypeSearch": "MuiInput-inputTypeSearch-128",
+                                                    "multiline": "MuiInput-multiline-122",
+                                                    "root": "MuiInput-root-116 inputRoot MuiInput-underline-120",
                                                     "underline": null,
                                                   }
                                                 }
                                                 fullWidth={true}
-                                                id="downshift-1-input"
+                                                id="autosuggest-input"
                                                 inputComponent="input"
                                                 inputProps={
                                                   Object {
-                                                    "aria-label": "",
-                                                    "aria-labelledby": "-input-label",
-                                                    "id": "-input",
-                                                    "label": "",
+                                                    "aria-label": "autosuggest",
+                                                    "aria-labelledby": "autosuggest-input-label",
+                                                    "id": "autosuggest-input",
+                                                    "label": "autosuggest",
                                                   }
                                                 }
                                                 inputRef={[Function]}
@@ -1610,38 +1673,38 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                                                   aria-activedescendant={null}
                                                   aria-autocomplete="list"
                                                   aria-controls={null}
-                                                  aria-labelledby="downshift-1-label"
+                                                  aria-labelledby="autosuggest-label"
                                                   autoComplete="off"
                                                   classes={
                                                     Object {
-                                                      "adornedEnd": "MuiInputBase-adornedEnd-120",
-                                                      "adornedStart": "MuiInputBase-adornedStart-119",
-                                                      "disabled": "MuiInputBase-disabled-118 MuiInput-disabled-105",
-                                                      "error": "MuiInputBase-error-121 MuiInput-error-107",
-                                                      "focused": "MuiInputBase-focused-117 MuiInput-focused-104",
-                                                      "formControl": "MuiInputBase-formControl-116 MuiInput-formControl-103",
-                                                      "fullWidth": "MuiInputBase-fullWidth-124 MuiInput-fullWidth-109",
-                                                      "input": "MuiInputBase-input-125 MuiInput-input-110",
-                                                      "inputAdornedEnd": "MuiInputBase-inputAdornedEnd-131",
-                                                      "inputAdornedStart": "MuiInputBase-inputAdornedStart-130",
-                                                      "inputMarginDense": "MuiInputBase-inputMarginDense-126 MuiInput-inputMarginDense-111",
-                                                      "inputMultiline": "MuiInputBase-inputMultiline-127 MuiInput-inputMultiline-112",
-                                                      "inputType": "MuiInputBase-inputType-128 MuiInput-inputType-113",
-                                                      "inputTypeSearch": "MuiInputBase-inputTypeSearch-129 MuiInput-inputTypeSearch-114",
-                                                      "marginDense": "MuiInputBase-marginDense-122",
-                                                      "multiline": "MuiInputBase-multiline-123 MuiInput-multiline-108",
-                                                      "root": "MuiInputBase-root-115 MuiInput-root-102 inputRoot MuiInput-underline-106",
+                                                      "adornedEnd": "MuiInputBase-adornedEnd-134",
+                                                      "adornedStart": "MuiInputBase-adornedStart-133",
+                                                      "disabled": "MuiInputBase-disabled-132 MuiInput-disabled-119",
+                                                      "error": "MuiInputBase-error-135 MuiInput-error-121",
+                                                      "focused": "MuiInputBase-focused-131 MuiInput-focused-118",
+                                                      "formControl": "MuiInputBase-formControl-130 MuiInput-formControl-117",
+                                                      "fullWidth": "MuiInputBase-fullWidth-138 MuiInput-fullWidth-123",
+                                                      "input": "MuiInputBase-input-139 MuiInput-input-124",
+                                                      "inputAdornedEnd": "MuiInputBase-inputAdornedEnd-145",
+                                                      "inputAdornedStart": "MuiInputBase-inputAdornedStart-144",
+                                                      "inputMarginDense": "MuiInputBase-inputMarginDense-140 MuiInput-inputMarginDense-125",
+                                                      "inputMultiline": "MuiInputBase-inputMultiline-141 MuiInput-inputMultiline-126",
+                                                      "inputType": "MuiInputBase-inputType-142 MuiInput-inputType-127",
+                                                      "inputTypeSearch": "MuiInputBase-inputTypeSearch-143 MuiInput-inputTypeSearch-128",
+                                                      "marginDense": "MuiInputBase-marginDense-136",
+                                                      "multiline": "MuiInputBase-multiline-137 MuiInput-multiline-122",
+                                                      "root": "MuiInputBase-root-129 MuiInput-root-116 inputRoot MuiInput-underline-120",
                                                     }
                                                   }
                                                   fullWidth={true}
-                                                  id="downshift-1-input"
+                                                  id="autosuggest-input"
                                                   inputComponent="input"
                                                   inputProps={
                                                     Object {
-                                                      "aria-label": "",
-                                                      "aria-labelledby": "-input-label",
-                                                      "id": "-input",
-                                                      "label": "",
+                                                      "aria-label": "autosuggest",
+                                                      "aria-labelledby": "autosuggest-input-label",
+                                                      "id": "autosuggest-input",
+                                                      "label": "autosuggest",
                                                     }
                                                   }
                                                   inputRef={[Function]}
@@ -1657,19 +1720,19 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
                                                     aria-activedescendant={null}
                                                     aria-autocomplete="list"
                                                     aria-controls={null}
-                                                    aria-labelledby="downshift-1-label"
-                                                    className="MuiInputBase-root-115 MuiInput-root-102 inputRoot MuiInput-underline-106 MuiInputBase-fullWidth-124 MuiInput-fullWidth-109 MuiInputBase-formControl-116 MuiInput-formControl-103"
+                                                    aria-labelledby="autosuggest-label"
+                                                    className="MuiInputBase-root-129 MuiInput-root-116 inputRoot MuiInput-underline-120 MuiInputBase-fullWidth-138 MuiInput-fullWidth-123 MuiInputBase-formControl-130 MuiInput-formControl-117"
                                                     onClick={[Function]}
                                                   >
                                                     <input
                                                       aria-invalid={false}
-                                                      aria-label=""
-                                                      aria-labelledby="-input-label"
+                                                      aria-label="autosuggest"
+                                                      aria-labelledby="autosuggest-input-label"
                                                       autoComplete="off"
-                                                      className="MuiInputBase-input-125 MuiInput-input-110"
+                                                      className="MuiInputBase-input-139 MuiInput-input-124"
                                                       disabled={false}
-                                                      id="-input"
-                                                      label=""
+                                                      id="autosuggest-input"
+                                                      label="autosuggest"
                                                       onBlur={[Function]}
                                                       onChange={[Function]}
                                                       onFocus={[Function]}
@@ -2277,17 +2340,17 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
             >
               <label
                 hidden={true}
-                id="-label"
+                id="autosuggest-label"
               />
               <Downshift
-                aria-label=""
+                aria-label="autosuggest"
                 defaultHighlightedIndex={null}
                 defaultInputValue=""
                 defaultIsOpen={false}
                 defaultSelectedItem={null}
                 environment={[Window]}
                 getA11yStatusMessage={[Function]}
-                id=""
+                id="autosuggest"
                 itemToString={[MockFunction]}
                 onChange={[MockFunction]}
                 onInputValueChange={[Function]}
@@ -2303,7 +2366,7 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
                 <div
                   aria-expanded={false}
                   aria-haspopup="listbox"
-                  aria-labelledby="downshift-3-label"
+                  aria-labelledby="autosuggest-label"
                   aria-owns={null}
                   className="container"
                   role="combobox"
@@ -2566,12 +2629,12 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
                                     "aria-activedescendant": null,
                                     "aria-autocomplete": "list",
                                     "aria-controls": null,
-                                    "aria-labelledby": "downshift-3-label",
+                                    "aria-labelledby": "autosuggest-label",
                                     "autoComplete": "off",
                                     "classes": Object {
                                       "root": "inputRoot",
                                     },
-                                    "id": "downshift-3-input",
+                                    "id": "autosuggest-input",
                                     "inputRef": [Function],
                                     "onBlur": [Function],
                                     "onChange": [Function],
@@ -2583,8 +2646,8 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
                                 error={false}
                                 errorText=""
                                 fullWidth={true}
-                                id="-input"
-                                label=""
+                                id="autosuggest-input"
+                                label="autosuggest"
                                 placeholder={null}
                                 required={false}
                                 value=""
@@ -2595,12 +2658,12 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
                                       "aria-activedescendant": null,
                                       "aria-autocomplete": "list",
                                       "aria-controls": null,
-                                      "aria-labelledby": "downshift-3-label",
+                                      "aria-labelledby": "autosuggest-label",
                                       "autoComplete": "off",
                                       "classes": Object {
                                         "root": "inputRoot",
                                       },
-                                      "id": "downshift-3-input",
+                                      "id": "autosuggest-input",
                                       "inputRef": [Function],
                                       "onBlur": [Function],
                                       "onChange": [Function],
@@ -2613,8 +2676,8 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
                                   error={false}
                                   errorText=""
                                   fullWidth={true}
-                                  id="-input"
-                                  label=""
+                                  id="autosuggest-input"
+                                  label="autosuggest"
                                   placeholder={null}
                                   required={false}
                                   value=""
@@ -2623,8 +2686,8 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
                                     InputLabelProps={
                                       Object {
                                         "hidden": false,
-                                        "htmlFor": "-input",
-                                        "id": "-input-label",
+                                        "htmlFor": "autosuggest-input",
+                                        "id": "autosuggest-input-label",
                                         "shrink": undefined,
                                       }
                                     }
@@ -2633,12 +2696,12 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
                                         "aria-activedescendant": null,
                                         "aria-autocomplete": "list",
                                         "aria-controls": null,
-                                        "aria-labelledby": "downshift-3-label",
+                                        "aria-labelledby": "autosuggest-label",
                                         "autoComplete": "off",
                                         "classes": Object {
                                           "root": "inputRoot",
                                         },
-                                        "id": "downshift-3-input",
+                                        "id": "autosuggest-input",
                                         "inputRef": [Function],
                                         "onBlur": [Function],
                                         "onChange": [Function],
@@ -2650,16 +2713,16 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
                                     disabled={false}
                                     error={false}
                                     fullWidth={true}
-                                    id="-input"
+                                    id="autosuggest-input"
                                     inputProps={
                                       Object {
-                                        "aria-label": "",
-                                        "aria-labelledby": "-input-label",
-                                        "id": "-input",
-                                        "label": "",
+                                        "aria-label": "autosuggest",
+                                        "aria-labelledby": "autosuggest-input-label",
+                                        "id": "autosuggest-input",
+                                        "label": "autosuggest",
                                       }
                                     }
-                                    label=""
+                                    label="autosuggest"
                                     placeholder={null}
                                     required={false}
                                     select={false}
@@ -2694,11 +2757,72 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
                                         <div
                                           className="MuiFormControl-root-98 MuiFormControl-fullWidth-101"
                                         >
+                                          <WithStyles(InputLabel)
+                                            hidden={false}
+                                            htmlFor="autosuggest-input"
+                                            id="autosuggest-input-label"
+                                          >
+                                            <InputLabel
+                                              classes={
+                                                Object {
+                                                  "animated": "MuiInputLabel-animated-106",
+                                                  "filled": "MuiInputLabel-filled-107",
+                                                  "formControl": "MuiInputLabel-formControl-103",
+                                                  "marginDense": "MuiInputLabel-marginDense-104",
+                                                  "outlined": "MuiInputLabel-outlined-108",
+                                                  "root": "MuiInputLabel-root-102",
+                                                  "shrink": "MuiInputLabel-shrink-105",
+                                                }
+                                              }
+                                              disableAnimation={false}
+                                              hidden={false}
+                                              htmlFor="autosuggest-input"
+                                              id="autosuggest-input-label"
+                                            >
+                                              <WithStyles(FormLabel)
+                                                className="MuiInputLabel-root-102 MuiInputLabel-formControl-103 MuiInputLabel-animated-106"
+                                                data-shrink={false}
+                                                hidden={false}
+                                                htmlFor="autosuggest-input"
+                                                id="autosuggest-input-label"
+                                              >
+                                                <FormLabel
+                                                  className="MuiInputLabel-root-102 MuiInputLabel-formControl-103 MuiInputLabel-animated-106"
+                                                  classes={
+                                                    Object {
+                                                      "asterisk": "MuiFormLabel-asterisk-115",
+                                                      "disabled": "MuiFormLabel-disabled-111",
+                                                      "error": "MuiFormLabel-error-112",
+                                                      "filled": "MuiFormLabel-filled-113",
+                                                      "focused": "MuiFormLabel-focused-110",
+                                                      "required": "MuiFormLabel-required-114",
+                                                      "root": "MuiFormLabel-root-109",
+                                                    }
+                                                  }
+                                                  component="label"
+                                                  data-shrink={false}
+                                                  hidden={false}
+                                                  htmlFor="autosuggest-input"
+                                                  id="autosuggest-input-label"
+                                                >
+                                                  <label
+                                                    className="MuiFormLabel-root-109 MuiInputLabel-root-102 MuiInputLabel-formControl-103 MuiInputLabel-animated-106"
+                                                    data-shrink={false}
+                                                    hidden={false}
+                                                    htmlFor="autosuggest-input"
+                                                    id="autosuggest-input-label"
+                                                  >
+                                                    autosuggest
+                                                  </label>
+                                                </FormLabel>
+                                              </WithStyles(FormLabel)>
+                                            </InputLabel>
+                                          </WithStyles(InputLabel)>
                                           <WithStyles(Input)
                                             aria-activedescendant={null}
                                             aria-autocomplete="list"
                                             aria-controls={null}
-                                            aria-labelledby="downshift-3-label"
+                                            aria-labelledby="autosuggest-label"
                                             autoComplete="off"
                                             classes={
                                               Object {
@@ -2706,13 +2830,13 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
                                               }
                                             }
                                             fullWidth={true}
-                                            id="downshift-3-input"
+                                            id="autosuggest-input"
                                             inputProps={
                                               Object {
-                                                "aria-label": "",
-                                                "aria-labelledby": "-input-label",
-                                                "id": "-input",
-                                                "label": "",
+                                                "aria-label": "autosuggest",
+                                                "aria-labelledby": "autosuggest-input-label",
+                                                "id": "autosuggest-input",
+                                                "label": "autosuggest",
                                               }
                                             }
                                             inputRef={[Function]}
@@ -2726,33 +2850,33 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
                                               aria-activedescendant={null}
                                               aria-autocomplete="list"
                                               aria-controls={null}
-                                              aria-labelledby="downshift-3-label"
+                                              aria-labelledby="autosuggest-label"
                                               autoComplete="off"
                                               classes={
                                                 Object {
-                                                  "disabled": "MuiInput-disabled-105",
-                                                  "error": "MuiInput-error-107",
-                                                  "focused": "MuiInput-focused-104",
-                                                  "formControl": "MuiInput-formControl-103",
-                                                  "fullWidth": "MuiInput-fullWidth-109",
-                                                  "input": "MuiInput-input-110",
-                                                  "inputMarginDense": "MuiInput-inputMarginDense-111",
-                                                  "inputMultiline": "MuiInput-inputMultiline-112",
-                                                  "inputType": "MuiInput-inputType-113",
-                                                  "inputTypeSearch": "MuiInput-inputTypeSearch-114",
-                                                  "multiline": "MuiInput-multiline-108",
-                                                  "root": "MuiInput-root-102 inputRoot",
-                                                  "underline": "MuiInput-underline-106",
+                                                  "disabled": "MuiInput-disabled-119",
+                                                  "error": "MuiInput-error-121",
+                                                  "focused": "MuiInput-focused-118",
+                                                  "formControl": "MuiInput-formControl-117",
+                                                  "fullWidth": "MuiInput-fullWidth-123",
+                                                  "input": "MuiInput-input-124",
+                                                  "inputMarginDense": "MuiInput-inputMarginDense-125",
+                                                  "inputMultiline": "MuiInput-inputMultiline-126",
+                                                  "inputType": "MuiInput-inputType-127",
+                                                  "inputTypeSearch": "MuiInput-inputTypeSearch-128",
+                                                  "multiline": "MuiInput-multiline-122",
+                                                  "root": "MuiInput-root-116 inputRoot",
+                                                  "underline": "MuiInput-underline-120",
                                                 }
                                               }
                                               fullWidth={true}
-                                              id="downshift-3-input"
+                                              id="autosuggest-input"
                                               inputProps={
                                                 Object {
-                                                  "aria-label": "",
-                                                  "aria-labelledby": "-input-label",
-                                                  "id": "-input",
-                                                  "label": "",
+                                                  "aria-label": "autosuggest",
+                                                  "aria-labelledby": "autosuggest-input-label",
+                                                  "id": "autosuggest-input",
+                                                  "label": "autosuggest",
                                                 }
                                               }
                                               inputRef={[Function]}
@@ -2766,34 +2890,34 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
                                                 aria-activedescendant={null}
                                                 aria-autocomplete="list"
                                                 aria-controls={null}
-                                                aria-labelledby="downshift-3-label"
+                                                aria-labelledby="autosuggest-label"
                                                 autoComplete="off"
                                                 classes={
                                                   Object {
-                                                    "disabled": "MuiInput-disabled-105",
-                                                    "error": "MuiInput-error-107",
-                                                    "focused": "MuiInput-focused-104",
-                                                    "formControl": "MuiInput-formControl-103",
-                                                    "fullWidth": "MuiInput-fullWidth-109",
-                                                    "input": "MuiInput-input-110",
-                                                    "inputMarginDense": "MuiInput-inputMarginDense-111",
-                                                    "inputMultiline": "MuiInput-inputMultiline-112",
-                                                    "inputType": "MuiInput-inputType-113",
-                                                    "inputTypeSearch": "MuiInput-inputTypeSearch-114",
-                                                    "multiline": "MuiInput-multiline-108",
-                                                    "root": "MuiInput-root-102 inputRoot MuiInput-underline-106",
+                                                    "disabled": "MuiInput-disabled-119",
+                                                    "error": "MuiInput-error-121",
+                                                    "focused": "MuiInput-focused-118",
+                                                    "formControl": "MuiInput-formControl-117",
+                                                    "fullWidth": "MuiInput-fullWidth-123",
+                                                    "input": "MuiInput-input-124",
+                                                    "inputMarginDense": "MuiInput-inputMarginDense-125",
+                                                    "inputMultiline": "MuiInput-inputMultiline-126",
+                                                    "inputType": "MuiInput-inputType-127",
+                                                    "inputTypeSearch": "MuiInput-inputTypeSearch-128",
+                                                    "multiline": "MuiInput-multiline-122",
+                                                    "root": "MuiInput-root-116 inputRoot MuiInput-underline-120",
                                                     "underline": null,
                                                   }
                                                 }
                                                 fullWidth={true}
-                                                id="downshift-3-input"
+                                                id="autosuggest-input"
                                                 inputComponent="input"
                                                 inputProps={
                                                   Object {
-                                                    "aria-label": "",
-                                                    "aria-labelledby": "-input-label",
-                                                    "id": "-input",
-                                                    "label": "",
+                                                    "aria-label": "autosuggest",
+                                                    "aria-labelledby": "autosuggest-input-label",
+                                                    "id": "autosuggest-input",
+                                                    "label": "autosuggest",
                                                   }
                                                 }
                                                 inputRef={[Function]}
@@ -2809,38 +2933,38 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
                                                   aria-activedescendant={null}
                                                   aria-autocomplete="list"
                                                   aria-controls={null}
-                                                  aria-labelledby="downshift-3-label"
+                                                  aria-labelledby="autosuggest-label"
                                                   autoComplete="off"
                                                   classes={
                                                     Object {
-                                                      "adornedEnd": "MuiInputBase-adornedEnd-120",
-                                                      "adornedStart": "MuiInputBase-adornedStart-119",
-                                                      "disabled": "MuiInputBase-disabled-118 MuiInput-disabled-105",
-                                                      "error": "MuiInputBase-error-121 MuiInput-error-107",
-                                                      "focused": "MuiInputBase-focused-117 MuiInput-focused-104",
-                                                      "formControl": "MuiInputBase-formControl-116 MuiInput-formControl-103",
-                                                      "fullWidth": "MuiInputBase-fullWidth-124 MuiInput-fullWidth-109",
-                                                      "input": "MuiInputBase-input-125 MuiInput-input-110",
-                                                      "inputAdornedEnd": "MuiInputBase-inputAdornedEnd-131",
-                                                      "inputAdornedStart": "MuiInputBase-inputAdornedStart-130",
-                                                      "inputMarginDense": "MuiInputBase-inputMarginDense-126 MuiInput-inputMarginDense-111",
-                                                      "inputMultiline": "MuiInputBase-inputMultiline-127 MuiInput-inputMultiline-112",
-                                                      "inputType": "MuiInputBase-inputType-128 MuiInput-inputType-113",
-                                                      "inputTypeSearch": "MuiInputBase-inputTypeSearch-129 MuiInput-inputTypeSearch-114",
-                                                      "marginDense": "MuiInputBase-marginDense-122",
-                                                      "multiline": "MuiInputBase-multiline-123 MuiInput-multiline-108",
-                                                      "root": "MuiInputBase-root-115 MuiInput-root-102 inputRoot MuiInput-underline-106",
+                                                      "adornedEnd": "MuiInputBase-adornedEnd-134",
+                                                      "adornedStart": "MuiInputBase-adornedStart-133",
+                                                      "disabled": "MuiInputBase-disabled-132 MuiInput-disabled-119",
+                                                      "error": "MuiInputBase-error-135 MuiInput-error-121",
+                                                      "focused": "MuiInputBase-focused-131 MuiInput-focused-118",
+                                                      "formControl": "MuiInputBase-formControl-130 MuiInput-formControl-117",
+                                                      "fullWidth": "MuiInputBase-fullWidth-138 MuiInput-fullWidth-123",
+                                                      "input": "MuiInputBase-input-139 MuiInput-input-124",
+                                                      "inputAdornedEnd": "MuiInputBase-inputAdornedEnd-145",
+                                                      "inputAdornedStart": "MuiInputBase-inputAdornedStart-144",
+                                                      "inputMarginDense": "MuiInputBase-inputMarginDense-140 MuiInput-inputMarginDense-125",
+                                                      "inputMultiline": "MuiInputBase-inputMultiline-141 MuiInput-inputMultiline-126",
+                                                      "inputType": "MuiInputBase-inputType-142 MuiInput-inputType-127",
+                                                      "inputTypeSearch": "MuiInputBase-inputTypeSearch-143 MuiInput-inputTypeSearch-128",
+                                                      "marginDense": "MuiInputBase-marginDense-136",
+                                                      "multiline": "MuiInputBase-multiline-137 MuiInput-multiline-122",
+                                                      "root": "MuiInputBase-root-129 MuiInput-root-116 inputRoot MuiInput-underline-120",
                                                     }
                                                   }
                                                   fullWidth={true}
-                                                  id="downshift-3-input"
+                                                  id="autosuggest-input"
                                                   inputComponent="input"
                                                   inputProps={
                                                     Object {
-                                                      "aria-label": "",
-                                                      "aria-labelledby": "-input-label",
-                                                      "id": "-input",
-                                                      "label": "",
+                                                      "aria-label": "autosuggest",
+                                                      "aria-labelledby": "autosuggest-input-label",
+                                                      "id": "autosuggest-input",
+                                                      "label": "autosuggest",
                                                     }
                                                   }
                                                   inputRef={[Function]}
@@ -2856,19 +2980,19 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
                                                     aria-activedescendant={null}
                                                     aria-autocomplete="list"
                                                     aria-controls={null}
-                                                    aria-labelledby="downshift-3-label"
-                                                    className="MuiInputBase-root-115 MuiInput-root-102 inputRoot MuiInput-underline-106 MuiInputBase-fullWidth-124 MuiInput-fullWidth-109 MuiInputBase-formControl-116 MuiInput-formControl-103"
+                                                    aria-labelledby="autosuggest-label"
+                                                    className="MuiInputBase-root-129 MuiInput-root-116 inputRoot MuiInput-underline-120 MuiInputBase-fullWidth-138 MuiInput-fullWidth-123 MuiInputBase-formControl-130 MuiInput-formControl-117"
                                                     onClick={[Function]}
                                                   >
                                                     <input
                                                       aria-invalid={false}
-                                                      aria-label=""
-                                                      aria-labelledby="-input-label"
+                                                      aria-label="autosuggest"
+                                                      aria-labelledby="autosuggest-input-label"
                                                       autoComplete="off"
-                                                      className="MuiInputBase-input-125 MuiInput-input-110"
+                                                      className="MuiInputBase-input-139 MuiInput-input-124"
                                                       disabled={false}
-                                                      id="-input"
-                                                      label=""
+                                                      id="autosuggest-input"
+                                                      label="autosuggest"
                                                       onBlur={[Function]}
                                                       onChange={[Function]}
                                                       onFocus={[Function]}
@@ -3523,17 +3647,17 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
             >
               <label
                 hidden={true}
-                id="-label"
+                id="autosuggest-label"
               />
               <Downshift
-                aria-label=""
+                aria-label="autosuggest"
                 defaultHighlightedIndex={null}
                 defaultInputValue=""
                 defaultIsOpen={false}
                 defaultSelectedItem={null}
                 environment={[Window]}
                 getA11yStatusMessage={[Function]}
-                id=""
+                id="autosuggest"
                 itemToString={[MockFunction]}
                 onChange={[MockFunction]}
                 onInputValueChange={[Function]}
@@ -3549,7 +3673,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                 <div
                   aria-expanded={false}
                   aria-haspopup="listbox"
-                  aria-labelledby="downshift-4-label"
+                  aria-labelledby="autosuggest-label"
                   aria-owns={null}
                   className="container"
                   role="combobox"
@@ -3812,12 +3936,12 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                     "aria-activedescendant": null,
                                     "aria-autocomplete": "list",
                                     "aria-controls": null,
-                                    "aria-labelledby": "downshift-4-label",
+                                    "aria-labelledby": "autosuggest-label",
                                     "autoComplete": "off",
                                     "classes": Object {
                                       "root": "inputRoot",
                                     },
-                                    "id": "downshift-4-input",
+                                    "id": "autosuggest-input",
                                     "inputRef": [Function],
                                     "onBlur": [Function],
                                     "onChange": [Function],
@@ -3829,8 +3953,8 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                 error={false}
                                 errorText=""
                                 fullWidth={true}
-                                id="-input"
-                                label=""
+                                id="autosuggest-input"
+                                label="autosuggest"
                                 placeholder={null}
                                 required={false}
                                 value=""
@@ -3841,12 +3965,12 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                       "aria-activedescendant": null,
                                       "aria-autocomplete": "list",
                                       "aria-controls": null,
-                                      "aria-labelledby": "downshift-4-label",
+                                      "aria-labelledby": "autosuggest-label",
                                       "autoComplete": "off",
                                       "classes": Object {
                                         "root": "inputRoot",
                                       },
-                                      "id": "downshift-4-input",
+                                      "id": "autosuggest-input",
                                       "inputRef": [Function],
                                       "onBlur": [Function],
                                       "onChange": [Function],
@@ -3859,8 +3983,8 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                   error={false}
                                   errorText=""
                                   fullWidth={true}
-                                  id="-input"
-                                  label=""
+                                  id="autosuggest-input"
+                                  label="autosuggest"
                                   placeholder={null}
                                   required={false}
                                   value=""
@@ -3869,8 +3993,8 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                     InputLabelProps={
                                       Object {
                                         "hidden": false,
-                                        "htmlFor": "-input",
-                                        "id": "-input-label",
+                                        "htmlFor": "autosuggest-input",
+                                        "id": "autosuggest-input-label",
                                         "shrink": undefined,
                                       }
                                     }
@@ -3879,12 +4003,12 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                         "aria-activedescendant": null,
                                         "aria-autocomplete": "list",
                                         "aria-controls": null,
-                                        "aria-labelledby": "downshift-4-label",
+                                        "aria-labelledby": "autosuggest-label",
                                         "autoComplete": "off",
                                         "classes": Object {
                                           "root": "inputRoot",
                                         },
-                                        "id": "downshift-4-input",
+                                        "id": "autosuggest-input",
                                         "inputRef": [Function],
                                         "onBlur": [Function],
                                         "onChange": [Function],
@@ -3896,16 +4020,16 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                     disabled={false}
                                     error={false}
                                     fullWidth={true}
-                                    id="-input"
+                                    id="autosuggest-input"
                                     inputProps={
                                       Object {
-                                        "aria-label": "",
-                                        "aria-labelledby": "-input-label",
-                                        "id": "-input",
-                                        "label": "",
+                                        "aria-label": "autosuggest",
+                                        "aria-labelledby": "autosuggest-input-label",
+                                        "id": "autosuggest-input",
+                                        "label": "autosuggest",
                                       }
                                     }
-                                    label=""
+                                    label="autosuggest"
                                     placeholder={null}
                                     required={false}
                                     select={false}
@@ -3940,11 +4064,72 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                         <div
                                           className="MuiFormControl-root-98 MuiFormControl-fullWidth-101"
                                         >
+                                          <WithStyles(InputLabel)
+                                            hidden={false}
+                                            htmlFor="autosuggest-input"
+                                            id="autosuggest-input-label"
+                                          >
+                                            <InputLabel
+                                              classes={
+                                                Object {
+                                                  "animated": "MuiInputLabel-animated-106",
+                                                  "filled": "MuiInputLabel-filled-107",
+                                                  "formControl": "MuiInputLabel-formControl-103",
+                                                  "marginDense": "MuiInputLabel-marginDense-104",
+                                                  "outlined": "MuiInputLabel-outlined-108",
+                                                  "root": "MuiInputLabel-root-102",
+                                                  "shrink": "MuiInputLabel-shrink-105",
+                                                }
+                                              }
+                                              disableAnimation={false}
+                                              hidden={false}
+                                              htmlFor="autosuggest-input"
+                                              id="autosuggest-input-label"
+                                            >
+                                              <WithStyles(FormLabel)
+                                                className="MuiInputLabel-root-102 MuiInputLabel-formControl-103 MuiInputLabel-animated-106"
+                                                data-shrink={false}
+                                                hidden={false}
+                                                htmlFor="autosuggest-input"
+                                                id="autosuggest-input-label"
+                                              >
+                                                <FormLabel
+                                                  className="MuiInputLabel-root-102 MuiInputLabel-formControl-103 MuiInputLabel-animated-106"
+                                                  classes={
+                                                    Object {
+                                                      "asterisk": "MuiFormLabel-asterisk-115",
+                                                      "disabled": "MuiFormLabel-disabled-111",
+                                                      "error": "MuiFormLabel-error-112",
+                                                      "filled": "MuiFormLabel-filled-113",
+                                                      "focused": "MuiFormLabel-focused-110",
+                                                      "required": "MuiFormLabel-required-114",
+                                                      "root": "MuiFormLabel-root-109",
+                                                    }
+                                                  }
+                                                  component="label"
+                                                  data-shrink={false}
+                                                  hidden={false}
+                                                  htmlFor="autosuggest-input"
+                                                  id="autosuggest-input-label"
+                                                >
+                                                  <label
+                                                    className="MuiFormLabel-root-109 MuiInputLabel-root-102 MuiInputLabel-formControl-103 MuiInputLabel-animated-106"
+                                                    data-shrink={false}
+                                                    hidden={false}
+                                                    htmlFor="autosuggest-input"
+                                                    id="autosuggest-input-label"
+                                                  >
+                                                    autosuggest
+                                                  </label>
+                                                </FormLabel>
+                                              </WithStyles(FormLabel)>
+                                            </InputLabel>
+                                          </WithStyles(InputLabel)>
                                           <WithStyles(Input)
                                             aria-activedescendant={null}
                                             aria-autocomplete="list"
                                             aria-controls={null}
-                                            aria-labelledby="downshift-4-label"
+                                            aria-labelledby="autosuggest-label"
                                             autoComplete="off"
                                             classes={
                                               Object {
@@ -3952,13 +4137,13 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                               }
                                             }
                                             fullWidth={true}
-                                            id="downshift-4-input"
+                                            id="autosuggest-input"
                                             inputProps={
                                               Object {
-                                                "aria-label": "",
-                                                "aria-labelledby": "-input-label",
-                                                "id": "-input",
-                                                "label": "",
+                                                "aria-label": "autosuggest",
+                                                "aria-labelledby": "autosuggest-input-label",
+                                                "id": "autosuggest-input",
+                                                "label": "autosuggest",
                                               }
                                             }
                                             inputRef={[Function]}
@@ -3972,33 +4157,33 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                               aria-activedescendant={null}
                                               aria-autocomplete="list"
                                               aria-controls={null}
-                                              aria-labelledby="downshift-4-label"
+                                              aria-labelledby="autosuggest-label"
                                               autoComplete="off"
                                               classes={
                                                 Object {
-                                                  "disabled": "MuiInput-disabled-105",
-                                                  "error": "MuiInput-error-107",
-                                                  "focused": "MuiInput-focused-104",
-                                                  "formControl": "MuiInput-formControl-103",
-                                                  "fullWidth": "MuiInput-fullWidth-109",
-                                                  "input": "MuiInput-input-110",
-                                                  "inputMarginDense": "MuiInput-inputMarginDense-111",
-                                                  "inputMultiline": "MuiInput-inputMultiline-112",
-                                                  "inputType": "MuiInput-inputType-113",
-                                                  "inputTypeSearch": "MuiInput-inputTypeSearch-114",
-                                                  "multiline": "MuiInput-multiline-108",
-                                                  "root": "MuiInput-root-102 inputRoot",
-                                                  "underline": "MuiInput-underline-106",
+                                                  "disabled": "MuiInput-disabled-119",
+                                                  "error": "MuiInput-error-121",
+                                                  "focused": "MuiInput-focused-118",
+                                                  "formControl": "MuiInput-formControl-117",
+                                                  "fullWidth": "MuiInput-fullWidth-123",
+                                                  "input": "MuiInput-input-124",
+                                                  "inputMarginDense": "MuiInput-inputMarginDense-125",
+                                                  "inputMultiline": "MuiInput-inputMultiline-126",
+                                                  "inputType": "MuiInput-inputType-127",
+                                                  "inputTypeSearch": "MuiInput-inputTypeSearch-128",
+                                                  "multiline": "MuiInput-multiline-122",
+                                                  "root": "MuiInput-root-116 inputRoot",
+                                                  "underline": "MuiInput-underline-120",
                                                 }
                                               }
                                               fullWidth={true}
-                                              id="downshift-4-input"
+                                              id="autosuggest-input"
                                               inputProps={
                                                 Object {
-                                                  "aria-label": "",
-                                                  "aria-labelledby": "-input-label",
-                                                  "id": "-input",
-                                                  "label": "",
+                                                  "aria-label": "autosuggest",
+                                                  "aria-labelledby": "autosuggest-input-label",
+                                                  "id": "autosuggest-input",
+                                                  "label": "autosuggest",
                                                 }
                                               }
                                               inputRef={[Function]}
@@ -4012,34 +4197,34 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                                 aria-activedescendant={null}
                                                 aria-autocomplete="list"
                                                 aria-controls={null}
-                                                aria-labelledby="downshift-4-label"
+                                                aria-labelledby="autosuggest-label"
                                                 autoComplete="off"
                                                 classes={
                                                   Object {
-                                                    "disabled": "MuiInput-disabled-105",
-                                                    "error": "MuiInput-error-107",
-                                                    "focused": "MuiInput-focused-104",
-                                                    "formControl": "MuiInput-formControl-103",
-                                                    "fullWidth": "MuiInput-fullWidth-109",
-                                                    "input": "MuiInput-input-110",
-                                                    "inputMarginDense": "MuiInput-inputMarginDense-111",
-                                                    "inputMultiline": "MuiInput-inputMultiline-112",
-                                                    "inputType": "MuiInput-inputType-113",
-                                                    "inputTypeSearch": "MuiInput-inputTypeSearch-114",
-                                                    "multiline": "MuiInput-multiline-108",
-                                                    "root": "MuiInput-root-102 inputRoot MuiInput-underline-106",
+                                                    "disabled": "MuiInput-disabled-119",
+                                                    "error": "MuiInput-error-121",
+                                                    "focused": "MuiInput-focused-118",
+                                                    "formControl": "MuiInput-formControl-117",
+                                                    "fullWidth": "MuiInput-fullWidth-123",
+                                                    "input": "MuiInput-input-124",
+                                                    "inputMarginDense": "MuiInput-inputMarginDense-125",
+                                                    "inputMultiline": "MuiInput-inputMultiline-126",
+                                                    "inputType": "MuiInput-inputType-127",
+                                                    "inputTypeSearch": "MuiInput-inputTypeSearch-128",
+                                                    "multiline": "MuiInput-multiline-122",
+                                                    "root": "MuiInput-root-116 inputRoot MuiInput-underline-120",
                                                     "underline": null,
                                                   }
                                                 }
                                                 fullWidth={true}
-                                                id="downshift-4-input"
+                                                id="autosuggest-input"
                                                 inputComponent="input"
                                                 inputProps={
                                                   Object {
-                                                    "aria-label": "",
-                                                    "aria-labelledby": "-input-label",
-                                                    "id": "-input",
-                                                    "label": "",
+                                                    "aria-label": "autosuggest",
+                                                    "aria-labelledby": "autosuggest-input-label",
+                                                    "id": "autosuggest-input",
+                                                    "label": "autosuggest",
                                                   }
                                                 }
                                                 inputRef={[Function]}
@@ -4055,38 +4240,38 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                                   aria-activedescendant={null}
                                                   aria-autocomplete="list"
                                                   aria-controls={null}
-                                                  aria-labelledby="downshift-4-label"
+                                                  aria-labelledby="autosuggest-label"
                                                   autoComplete="off"
                                                   classes={
                                                     Object {
-                                                      "adornedEnd": "MuiInputBase-adornedEnd-120",
-                                                      "adornedStart": "MuiInputBase-adornedStart-119",
-                                                      "disabled": "MuiInputBase-disabled-118 MuiInput-disabled-105",
-                                                      "error": "MuiInputBase-error-121 MuiInput-error-107",
-                                                      "focused": "MuiInputBase-focused-117 MuiInput-focused-104",
-                                                      "formControl": "MuiInputBase-formControl-116 MuiInput-formControl-103",
-                                                      "fullWidth": "MuiInputBase-fullWidth-124 MuiInput-fullWidth-109",
-                                                      "input": "MuiInputBase-input-125 MuiInput-input-110",
-                                                      "inputAdornedEnd": "MuiInputBase-inputAdornedEnd-131",
-                                                      "inputAdornedStart": "MuiInputBase-inputAdornedStart-130",
-                                                      "inputMarginDense": "MuiInputBase-inputMarginDense-126 MuiInput-inputMarginDense-111",
-                                                      "inputMultiline": "MuiInputBase-inputMultiline-127 MuiInput-inputMultiline-112",
-                                                      "inputType": "MuiInputBase-inputType-128 MuiInput-inputType-113",
-                                                      "inputTypeSearch": "MuiInputBase-inputTypeSearch-129 MuiInput-inputTypeSearch-114",
-                                                      "marginDense": "MuiInputBase-marginDense-122",
-                                                      "multiline": "MuiInputBase-multiline-123 MuiInput-multiline-108",
-                                                      "root": "MuiInputBase-root-115 MuiInput-root-102 inputRoot MuiInput-underline-106",
+                                                      "adornedEnd": "MuiInputBase-adornedEnd-134",
+                                                      "adornedStart": "MuiInputBase-adornedStart-133",
+                                                      "disabled": "MuiInputBase-disabled-132 MuiInput-disabled-119",
+                                                      "error": "MuiInputBase-error-135 MuiInput-error-121",
+                                                      "focused": "MuiInputBase-focused-131 MuiInput-focused-118",
+                                                      "formControl": "MuiInputBase-formControl-130 MuiInput-formControl-117",
+                                                      "fullWidth": "MuiInputBase-fullWidth-138 MuiInput-fullWidth-123",
+                                                      "input": "MuiInputBase-input-139 MuiInput-input-124",
+                                                      "inputAdornedEnd": "MuiInputBase-inputAdornedEnd-145",
+                                                      "inputAdornedStart": "MuiInputBase-inputAdornedStart-144",
+                                                      "inputMarginDense": "MuiInputBase-inputMarginDense-140 MuiInput-inputMarginDense-125",
+                                                      "inputMultiline": "MuiInputBase-inputMultiline-141 MuiInput-inputMultiline-126",
+                                                      "inputType": "MuiInputBase-inputType-142 MuiInput-inputType-127",
+                                                      "inputTypeSearch": "MuiInputBase-inputTypeSearch-143 MuiInput-inputTypeSearch-128",
+                                                      "marginDense": "MuiInputBase-marginDense-136",
+                                                      "multiline": "MuiInputBase-multiline-137 MuiInput-multiline-122",
+                                                      "root": "MuiInputBase-root-129 MuiInput-root-116 inputRoot MuiInput-underline-120",
                                                     }
                                                   }
                                                   fullWidth={true}
-                                                  id="downshift-4-input"
+                                                  id="autosuggest-input"
                                                   inputComponent="input"
                                                   inputProps={
                                                     Object {
-                                                      "aria-label": "",
-                                                      "aria-labelledby": "-input-label",
-                                                      "id": "-input",
-                                                      "label": "",
+                                                      "aria-label": "autosuggest",
+                                                      "aria-labelledby": "autosuggest-input-label",
+                                                      "id": "autosuggest-input",
+                                                      "label": "autosuggest",
                                                     }
                                                   }
                                                   inputRef={[Function]}
@@ -4102,19 +4287,19 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                                     aria-activedescendant={null}
                                                     aria-autocomplete="list"
                                                     aria-controls={null}
-                                                    aria-labelledby="downshift-4-label"
-                                                    className="MuiInputBase-root-115 MuiInput-root-102 inputRoot MuiInput-underline-106 MuiInputBase-fullWidth-124 MuiInput-fullWidth-109 MuiInputBase-formControl-116 MuiInput-formControl-103"
+                                                    aria-labelledby="autosuggest-label"
+                                                    className="MuiInputBase-root-129 MuiInput-root-116 inputRoot MuiInput-underline-120 MuiInputBase-fullWidth-138 MuiInput-fullWidth-123 MuiInputBase-formControl-130 MuiInput-formControl-117"
                                                     onClick={[Function]}
                                                   >
                                                     <input
                                                       aria-invalid={false}
-                                                      aria-label=""
-                                                      aria-labelledby="-input-label"
+                                                      aria-label="autosuggest"
+                                                      aria-labelledby="autosuggest-input-label"
                                                       autoComplete="off"
-                                                      className="MuiInputBase-input-125 MuiInput-input-110"
+                                                      className="MuiInputBase-input-139 MuiInput-input-124"
                                                       disabled={false}
-                                                      id="-input"
-                                                      label=""
+                                                      id="autosuggest-input"
+                                                      label="autosuggest"
                                                       onBlur={[Function]}
                                                       onChange={[Function]}
                                                       onFocus={[Function]}
@@ -4747,17 +4932,17 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
             >
               <label
                 hidden={true}
-                id="-label"
+                id="autosuggest-label"
               />
               <Downshift
-                aria-label=""
+                aria-label="autosuggest"
                 defaultHighlightedIndex={null}
                 defaultInputValue=""
                 defaultIsOpen={false}
                 defaultSelectedItem={null}
                 environment={[Window]}
                 getA11yStatusMessage={[Function]}
-                id=""
+                id="autosuggest"
                 itemToString={[MockFunction]}
                 onChange={[MockFunction]}
                 onInputValueChange={[Function]}
@@ -4773,7 +4958,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                 <div
                   aria-expanded={false}
                   aria-haspopup="listbox"
-                  aria-labelledby="downshift-4-label"
+                  aria-labelledby="autosuggest-label"
                   aria-owns={null}
                   className="container"
                   role="combobox"
@@ -5036,12 +5221,12 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                     "aria-activedescendant": null,
                                     "aria-autocomplete": "list",
                                     "aria-controls": null,
-                                    "aria-labelledby": "downshift-4-label",
+                                    "aria-labelledby": "autosuggest-label",
                                     "autoComplete": "off",
                                     "classes": Object {
                                       "root": "inputRoot",
                                     },
-                                    "id": "downshift-4-input",
+                                    "id": "autosuggest-input",
                                     "inputRef": [Function],
                                     "onBlur": [Function],
                                     "onChange": [Function],
@@ -5053,8 +5238,8 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                 error={false}
                                 errorText=""
                                 fullWidth={true}
-                                id="-input"
-                                label=""
+                                id="autosuggest-input"
+                                label="autosuggest"
                                 placeholder={null}
                                 required={false}
                                 value=""
@@ -5065,12 +5250,12 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                       "aria-activedescendant": null,
                                       "aria-autocomplete": "list",
                                       "aria-controls": null,
-                                      "aria-labelledby": "downshift-4-label",
+                                      "aria-labelledby": "autosuggest-label",
                                       "autoComplete": "off",
                                       "classes": Object {
                                         "root": "inputRoot",
                                       },
-                                      "id": "downshift-4-input",
+                                      "id": "autosuggest-input",
                                       "inputRef": [Function],
                                       "onBlur": [Function],
                                       "onChange": [Function],
@@ -5083,8 +5268,8 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                   error={false}
                                   errorText=""
                                   fullWidth={true}
-                                  id="-input"
-                                  label=""
+                                  id="autosuggest-input"
+                                  label="autosuggest"
                                   placeholder={null}
                                   required={false}
                                   value=""
@@ -5093,8 +5278,8 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                     InputLabelProps={
                                       Object {
                                         "hidden": false,
-                                        "htmlFor": "-input",
-                                        "id": "-input-label",
+                                        "htmlFor": "autosuggest-input",
+                                        "id": "autosuggest-input-label",
                                         "shrink": undefined,
                                       }
                                     }
@@ -5103,12 +5288,12 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                         "aria-activedescendant": null,
                                         "aria-autocomplete": "list",
                                         "aria-controls": null,
-                                        "aria-labelledby": "downshift-4-label",
+                                        "aria-labelledby": "autosuggest-label",
                                         "autoComplete": "off",
                                         "classes": Object {
                                           "root": "inputRoot",
                                         },
-                                        "id": "downshift-4-input",
+                                        "id": "autosuggest-input",
                                         "inputRef": [Function],
                                         "onBlur": [Function],
                                         "onChange": [Function],
@@ -5120,16 +5305,16 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                     disabled={false}
                                     error={false}
                                     fullWidth={true}
-                                    id="-input"
+                                    id="autosuggest-input"
                                     inputProps={
                                       Object {
-                                        "aria-label": "",
-                                        "aria-labelledby": "-input-label",
-                                        "id": "-input",
-                                        "label": "",
+                                        "aria-label": "autosuggest",
+                                        "aria-labelledby": "autosuggest-input-label",
+                                        "id": "autosuggest-input",
+                                        "label": "autosuggest",
                                       }
                                     }
-                                    label=""
+                                    label="autosuggest"
                                     placeholder={null}
                                     required={false}
                                     select={false}
@@ -5164,11 +5349,72 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                         <div
                                           className="MuiFormControl-root-98 MuiFormControl-fullWidth-101"
                                         >
+                                          <WithStyles(InputLabel)
+                                            hidden={false}
+                                            htmlFor="autosuggest-input"
+                                            id="autosuggest-input-label"
+                                          >
+                                            <InputLabel
+                                              classes={
+                                                Object {
+                                                  "animated": "MuiInputLabel-animated-106",
+                                                  "filled": "MuiInputLabel-filled-107",
+                                                  "formControl": "MuiInputLabel-formControl-103",
+                                                  "marginDense": "MuiInputLabel-marginDense-104",
+                                                  "outlined": "MuiInputLabel-outlined-108",
+                                                  "root": "MuiInputLabel-root-102",
+                                                  "shrink": "MuiInputLabel-shrink-105",
+                                                }
+                                              }
+                                              disableAnimation={false}
+                                              hidden={false}
+                                              htmlFor="autosuggest-input"
+                                              id="autosuggest-input-label"
+                                            >
+                                              <WithStyles(FormLabel)
+                                                className="MuiInputLabel-root-102 MuiInputLabel-formControl-103 MuiInputLabel-animated-106 MuiInputLabel-shrink-105"
+                                                data-shrink={true}
+                                                hidden={false}
+                                                htmlFor="autosuggest-input"
+                                                id="autosuggest-input-label"
+                                              >
+                                                <FormLabel
+                                                  className="MuiInputLabel-root-102 MuiInputLabel-formControl-103 MuiInputLabel-animated-106 MuiInputLabel-shrink-105"
+                                                  classes={
+                                                    Object {
+                                                      "asterisk": "MuiFormLabel-asterisk-115",
+                                                      "disabled": "MuiFormLabel-disabled-111",
+                                                      "error": "MuiFormLabel-error-112",
+                                                      "filled": "MuiFormLabel-filled-113",
+                                                      "focused": "MuiFormLabel-focused-110",
+                                                      "required": "MuiFormLabel-required-114",
+                                                      "root": "MuiFormLabel-root-109",
+                                                    }
+                                                  }
+                                                  component="label"
+                                                  data-shrink={true}
+                                                  hidden={false}
+                                                  htmlFor="autosuggest-input"
+                                                  id="autosuggest-input-label"
+                                                >
+                                                  <label
+                                                    className="MuiFormLabel-root-109 MuiFormLabel-focused-110 MuiInputLabel-root-102 MuiInputLabel-formControl-103 MuiInputLabel-animated-106 MuiInputLabel-shrink-105"
+                                                    data-shrink={true}
+                                                    hidden={false}
+                                                    htmlFor="autosuggest-input"
+                                                    id="autosuggest-input-label"
+                                                  >
+                                                    autosuggest
+                                                  </label>
+                                                </FormLabel>
+                                              </WithStyles(FormLabel)>
+                                            </InputLabel>
+                                          </WithStyles(InputLabel)>
                                           <WithStyles(Input)
                                             aria-activedescendant={null}
                                             aria-autocomplete="list"
                                             aria-controls={null}
-                                            aria-labelledby="downshift-4-label"
+                                            aria-labelledby="autosuggest-label"
                                             autoComplete="off"
                                             classes={
                                               Object {
@@ -5176,13 +5422,13 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                               }
                                             }
                                             fullWidth={true}
-                                            id="downshift-4-input"
+                                            id="autosuggest-input"
                                             inputProps={
                                               Object {
-                                                "aria-label": "",
-                                                "aria-labelledby": "-input-label",
-                                                "id": "-input",
-                                                "label": "",
+                                                "aria-label": "autosuggest",
+                                                "aria-labelledby": "autosuggest-input-label",
+                                                "id": "autosuggest-input",
+                                                "label": "autosuggest",
                                               }
                                             }
                                             inputRef={[Function]}
@@ -5196,33 +5442,33 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                               aria-activedescendant={null}
                                               aria-autocomplete="list"
                                               aria-controls={null}
-                                              aria-labelledby="downshift-4-label"
+                                              aria-labelledby="autosuggest-label"
                                               autoComplete="off"
                                               classes={
                                                 Object {
-                                                  "disabled": "MuiInput-disabled-105",
-                                                  "error": "MuiInput-error-107",
-                                                  "focused": "MuiInput-focused-104",
-                                                  "formControl": "MuiInput-formControl-103",
-                                                  "fullWidth": "MuiInput-fullWidth-109",
-                                                  "input": "MuiInput-input-110",
-                                                  "inputMarginDense": "MuiInput-inputMarginDense-111",
-                                                  "inputMultiline": "MuiInput-inputMultiline-112",
-                                                  "inputType": "MuiInput-inputType-113",
-                                                  "inputTypeSearch": "MuiInput-inputTypeSearch-114",
-                                                  "multiline": "MuiInput-multiline-108",
-                                                  "root": "MuiInput-root-102 inputRoot",
-                                                  "underline": "MuiInput-underline-106",
+                                                  "disabled": "MuiInput-disabled-119",
+                                                  "error": "MuiInput-error-121",
+                                                  "focused": "MuiInput-focused-118",
+                                                  "formControl": "MuiInput-formControl-117",
+                                                  "fullWidth": "MuiInput-fullWidth-123",
+                                                  "input": "MuiInput-input-124",
+                                                  "inputMarginDense": "MuiInput-inputMarginDense-125",
+                                                  "inputMultiline": "MuiInput-inputMultiline-126",
+                                                  "inputType": "MuiInput-inputType-127",
+                                                  "inputTypeSearch": "MuiInput-inputTypeSearch-128",
+                                                  "multiline": "MuiInput-multiline-122",
+                                                  "root": "MuiInput-root-116 inputRoot",
+                                                  "underline": "MuiInput-underline-120",
                                                 }
                                               }
                                               fullWidth={true}
-                                              id="downshift-4-input"
+                                              id="autosuggest-input"
                                               inputProps={
                                                 Object {
-                                                  "aria-label": "",
-                                                  "aria-labelledby": "-input-label",
-                                                  "id": "-input",
-                                                  "label": "",
+                                                  "aria-label": "autosuggest",
+                                                  "aria-labelledby": "autosuggest-input-label",
+                                                  "id": "autosuggest-input",
+                                                  "label": "autosuggest",
                                                 }
                                               }
                                               inputRef={[Function]}
@@ -5236,34 +5482,34 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                                 aria-activedescendant={null}
                                                 aria-autocomplete="list"
                                                 aria-controls={null}
-                                                aria-labelledby="downshift-4-label"
+                                                aria-labelledby="autosuggest-label"
                                                 autoComplete="off"
                                                 classes={
                                                   Object {
-                                                    "disabled": "MuiInput-disabled-105",
-                                                    "error": "MuiInput-error-107",
-                                                    "focused": "MuiInput-focused-104",
-                                                    "formControl": "MuiInput-formControl-103",
-                                                    "fullWidth": "MuiInput-fullWidth-109",
-                                                    "input": "MuiInput-input-110",
-                                                    "inputMarginDense": "MuiInput-inputMarginDense-111",
-                                                    "inputMultiline": "MuiInput-inputMultiline-112",
-                                                    "inputType": "MuiInput-inputType-113",
-                                                    "inputTypeSearch": "MuiInput-inputTypeSearch-114",
-                                                    "multiline": "MuiInput-multiline-108",
-                                                    "root": "MuiInput-root-102 inputRoot MuiInput-underline-106",
+                                                    "disabled": "MuiInput-disabled-119",
+                                                    "error": "MuiInput-error-121",
+                                                    "focused": "MuiInput-focused-118",
+                                                    "formControl": "MuiInput-formControl-117",
+                                                    "fullWidth": "MuiInput-fullWidth-123",
+                                                    "input": "MuiInput-input-124",
+                                                    "inputMarginDense": "MuiInput-inputMarginDense-125",
+                                                    "inputMultiline": "MuiInput-inputMultiline-126",
+                                                    "inputType": "MuiInput-inputType-127",
+                                                    "inputTypeSearch": "MuiInput-inputTypeSearch-128",
+                                                    "multiline": "MuiInput-multiline-122",
+                                                    "root": "MuiInput-root-116 inputRoot MuiInput-underline-120",
                                                     "underline": null,
                                                   }
                                                 }
                                                 fullWidth={true}
-                                                id="downshift-4-input"
+                                                id="autosuggest-input"
                                                 inputComponent="input"
                                                 inputProps={
                                                   Object {
-                                                    "aria-label": "",
-                                                    "aria-labelledby": "-input-label",
-                                                    "id": "-input",
-                                                    "label": "",
+                                                    "aria-label": "autosuggest",
+                                                    "aria-labelledby": "autosuggest-input-label",
+                                                    "id": "autosuggest-input",
+                                                    "label": "autosuggest",
                                                   }
                                                 }
                                                 inputRef={[Function]}
@@ -5279,38 +5525,38 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                                   aria-activedescendant={null}
                                                   aria-autocomplete="list"
                                                   aria-controls={null}
-                                                  aria-labelledby="downshift-4-label"
+                                                  aria-labelledby="autosuggest-label"
                                                   autoComplete="off"
                                                   classes={
                                                     Object {
-                                                      "adornedEnd": "MuiInputBase-adornedEnd-120",
-                                                      "adornedStart": "MuiInputBase-adornedStart-119",
-                                                      "disabled": "MuiInputBase-disabled-118 MuiInput-disabled-105",
-                                                      "error": "MuiInputBase-error-121 MuiInput-error-107",
-                                                      "focused": "MuiInputBase-focused-117 MuiInput-focused-104",
-                                                      "formControl": "MuiInputBase-formControl-116 MuiInput-formControl-103",
-                                                      "fullWidth": "MuiInputBase-fullWidth-124 MuiInput-fullWidth-109",
-                                                      "input": "MuiInputBase-input-125 MuiInput-input-110",
-                                                      "inputAdornedEnd": "MuiInputBase-inputAdornedEnd-131",
-                                                      "inputAdornedStart": "MuiInputBase-inputAdornedStart-130",
-                                                      "inputMarginDense": "MuiInputBase-inputMarginDense-126 MuiInput-inputMarginDense-111",
-                                                      "inputMultiline": "MuiInputBase-inputMultiline-127 MuiInput-inputMultiline-112",
-                                                      "inputType": "MuiInputBase-inputType-128 MuiInput-inputType-113",
-                                                      "inputTypeSearch": "MuiInputBase-inputTypeSearch-129 MuiInput-inputTypeSearch-114",
-                                                      "marginDense": "MuiInputBase-marginDense-122",
-                                                      "multiline": "MuiInputBase-multiline-123 MuiInput-multiline-108",
-                                                      "root": "MuiInputBase-root-115 MuiInput-root-102 inputRoot MuiInput-underline-106",
+                                                      "adornedEnd": "MuiInputBase-adornedEnd-134",
+                                                      "adornedStart": "MuiInputBase-adornedStart-133",
+                                                      "disabled": "MuiInputBase-disabled-132 MuiInput-disabled-119",
+                                                      "error": "MuiInputBase-error-135 MuiInput-error-121",
+                                                      "focused": "MuiInputBase-focused-131 MuiInput-focused-118",
+                                                      "formControl": "MuiInputBase-formControl-130 MuiInput-formControl-117",
+                                                      "fullWidth": "MuiInputBase-fullWidth-138 MuiInput-fullWidth-123",
+                                                      "input": "MuiInputBase-input-139 MuiInput-input-124",
+                                                      "inputAdornedEnd": "MuiInputBase-inputAdornedEnd-145",
+                                                      "inputAdornedStart": "MuiInputBase-inputAdornedStart-144",
+                                                      "inputMarginDense": "MuiInputBase-inputMarginDense-140 MuiInput-inputMarginDense-125",
+                                                      "inputMultiline": "MuiInputBase-inputMultiline-141 MuiInput-inputMultiline-126",
+                                                      "inputType": "MuiInputBase-inputType-142 MuiInput-inputType-127",
+                                                      "inputTypeSearch": "MuiInputBase-inputTypeSearch-143 MuiInput-inputTypeSearch-128",
+                                                      "marginDense": "MuiInputBase-marginDense-136",
+                                                      "multiline": "MuiInputBase-multiline-137 MuiInput-multiline-122",
+                                                      "root": "MuiInputBase-root-129 MuiInput-root-116 inputRoot MuiInput-underline-120",
                                                     }
                                                   }
                                                   fullWidth={true}
-                                                  id="downshift-4-input"
+                                                  id="autosuggest-input"
                                                   inputComponent="input"
                                                   inputProps={
                                                     Object {
-                                                      "aria-label": "",
-                                                      "aria-labelledby": "-input-label",
-                                                      "id": "-input",
-                                                      "label": "",
+                                                      "aria-label": "autosuggest",
+                                                      "aria-labelledby": "autosuggest-input-label",
+                                                      "id": "autosuggest-input",
+                                                      "label": "autosuggest",
                                                     }
                                                   }
                                                   inputRef={[Function]}
@@ -5326,19 +5572,19 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                                     aria-activedescendant={null}
                                                     aria-autocomplete="list"
                                                     aria-controls={null}
-                                                    aria-labelledby="downshift-4-label"
-                                                    className="MuiInputBase-root-115 MuiInput-root-102 inputRoot MuiInput-underline-106 MuiInputBase-fullWidth-124 MuiInput-fullWidth-109 MuiInputBase-focused-117 MuiInput-focused-104 MuiInputBase-formControl-116 MuiInput-formControl-103"
+                                                    aria-labelledby="autosuggest-label"
+                                                    className="MuiInputBase-root-129 MuiInput-root-116 inputRoot MuiInput-underline-120 MuiInputBase-fullWidth-138 MuiInput-fullWidth-123 MuiInputBase-focused-131 MuiInput-focused-118 MuiInputBase-formControl-130 MuiInput-formControl-117"
                                                     onClick={[Function]}
                                                   >
                                                     <input
                                                       aria-invalid={false}
-                                                      aria-label=""
-                                                      aria-labelledby="-input-label"
+                                                      aria-label="autosuggest"
+                                                      aria-labelledby="autosuggest-input-label"
                                                       autoComplete="off"
-                                                      className="MuiInputBase-input-125 MuiInput-input-110"
+                                                      className="MuiInputBase-input-139 MuiInput-input-124"
                                                       disabled={false}
-                                                      id="-input"
-                                                      label=""
+                                                      id="autosuggest-input"
+                                                      label="autosuggest"
                                                       onBlur={[Function]}
                                                       onChange={[Function]}
                                                       onFocus={[Function]}
@@ -5382,17 +5628,17 @@ exports[`AutoCompleteAsyncField component should render with an input which allo
 >
   <label
     hidden={true}
-    id="-label"
+    id="autosuggest-label"
   />
   <Downshift
-    aria-label=""
+    aria-label="autosuggest"
     defaultHighlightedIndex={null}
     defaultInputValue=""
     defaultIsOpen={false}
     defaultSelectedItem={null}
     environment={[Window]}
     getA11yStatusMessage={[Function]}
-    id=""
+    id="autosuggest"
     itemToString={[MockFunction]}
     onChange={[MockFunction]}
     onInputValueChange={[Function]}
@@ -5936,17 +6182,17 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
             >
               <label
                 hidden={true}
-                id="-label"
+                id="autosuggest-label"
               />
               <Downshift
-                aria-label=""
+                aria-label="autosuggest"
                 defaultHighlightedIndex={null}
                 defaultInputValue=""
                 defaultIsOpen={false}
                 defaultSelectedItem={null}
                 environment={[Window]}
                 getA11yStatusMessage={[Function]}
-                id=""
+                id="autosuggest"
                 itemToString={[MockFunction]}
                 onChange={[MockFunction]}
                 onInputValueChange={[Function]}
@@ -5962,7 +6208,7 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
                 <div
                   aria-expanded={false}
                   aria-haspopup="listbox"
-                  aria-labelledby="downshift-0-label"
+                  aria-labelledby="autosuggest-label"
                   aria-owns={null}
                   className="container"
                   role="combobox"
@@ -6225,12 +6471,12 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
                                     "aria-activedescendant": null,
                                     "aria-autocomplete": "list",
                                     "aria-controls": null,
-                                    "aria-labelledby": "downshift-0-label",
+                                    "aria-labelledby": "autosuggest-label",
                                     "autoComplete": "off",
                                     "classes": Object {
                                       "root": "inputRoot",
                                     },
-                                    "id": "downshift-0-input",
+                                    "id": "autosuggest-input",
                                     "inputRef": [Function],
                                     "onBlur": [Function],
                                     "onChange": [Function],
@@ -6242,8 +6488,8 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
                                 error={false}
                                 errorText=""
                                 fullWidth={true}
-                                id="-input"
-                                label=""
+                                id="autosuggest-input"
+                                label="autosuggest"
                                 placeholder={null}
                                 required={false}
                                 value=""
@@ -6254,12 +6500,12 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
                                       "aria-activedescendant": null,
                                       "aria-autocomplete": "list",
                                       "aria-controls": null,
-                                      "aria-labelledby": "downshift-0-label",
+                                      "aria-labelledby": "autosuggest-label",
                                       "autoComplete": "off",
                                       "classes": Object {
                                         "root": "inputRoot",
                                       },
-                                      "id": "downshift-0-input",
+                                      "id": "autosuggest-input",
                                       "inputRef": [Function],
                                       "onBlur": [Function],
                                       "onChange": [Function],
@@ -6272,8 +6518,8 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
                                   error={false}
                                   errorText=""
                                   fullWidth={true}
-                                  id="-input"
-                                  label=""
+                                  id="autosuggest-input"
+                                  label="autosuggest"
                                   placeholder={null}
                                   required={false}
                                   value=""
@@ -6282,8 +6528,8 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
                                     InputLabelProps={
                                       Object {
                                         "hidden": false,
-                                        "htmlFor": "-input",
-                                        "id": "-input-label",
+                                        "htmlFor": "autosuggest-input",
+                                        "id": "autosuggest-input-label",
                                         "shrink": undefined,
                                       }
                                     }
@@ -6292,12 +6538,12 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
                                         "aria-activedescendant": null,
                                         "aria-autocomplete": "list",
                                         "aria-controls": null,
-                                        "aria-labelledby": "downshift-0-label",
+                                        "aria-labelledby": "autosuggest-label",
                                         "autoComplete": "off",
                                         "classes": Object {
                                           "root": "inputRoot",
                                         },
-                                        "id": "downshift-0-input",
+                                        "id": "autosuggest-input",
                                         "inputRef": [Function],
                                         "onBlur": [Function],
                                         "onChange": [Function],
@@ -6309,16 +6555,16 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
                                     disabled={true}
                                     error={false}
                                     fullWidth={true}
-                                    id="-input"
+                                    id="autosuggest-input"
                                     inputProps={
                                       Object {
-                                        "aria-label": "",
-                                        "aria-labelledby": "-input-label",
-                                        "id": "-input",
-                                        "label": "",
+                                        "aria-label": "autosuggest",
+                                        "aria-labelledby": "autosuggest-input-label",
+                                        "id": "autosuggest-input",
+                                        "label": "autosuggest",
                                       }
                                     }
-                                    label=""
+                                    label="autosuggest"
                                     placeholder={null}
                                     required={false}
                                     select={false}
@@ -6353,11 +6599,72 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
                                         <div
                                           className="MuiFormControl-root-98 MuiFormControl-fullWidth-101"
                                         >
+                                          <WithStyles(InputLabel)
+                                            hidden={false}
+                                            htmlFor="autosuggest-input"
+                                            id="autosuggest-input-label"
+                                          >
+                                            <InputLabel
+                                              classes={
+                                                Object {
+                                                  "animated": "MuiInputLabel-animated-106",
+                                                  "filled": "MuiInputLabel-filled-107",
+                                                  "formControl": "MuiInputLabel-formControl-103",
+                                                  "marginDense": "MuiInputLabel-marginDense-104",
+                                                  "outlined": "MuiInputLabel-outlined-108",
+                                                  "root": "MuiInputLabel-root-102",
+                                                  "shrink": "MuiInputLabel-shrink-105",
+                                                }
+                                              }
+                                              disableAnimation={false}
+                                              hidden={false}
+                                              htmlFor="autosuggest-input"
+                                              id="autosuggest-input-label"
+                                            >
+                                              <WithStyles(FormLabel)
+                                                className="MuiInputLabel-root-102 MuiInputLabel-formControl-103 MuiInputLabel-animated-106"
+                                                data-shrink={false}
+                                                hidden={false}
+                                                htmlFor="autosuggest-input"
+                                                id="autosuggest-input-label"
+                                              >
+                                                <FormLabel
+                                                  className="MuiInputLabel-root-102 MuiInputLabel-formControl-103 MuiInputLabel-animated-106"
+                                                  classes={
+                                                    Object {
+                                                      "asterisk": "MuiFormLabel-asterisk-115",
+                                                      "disabled": "MuiFormLabel-disabled-111",
+                                                      "error": "MuiFormLabel-error-112",
+                                                      "filled": "MuiFormLabel-filled-113",
+                                                      "focused": "MuiFormLabel-focused-110",
+                                                      "required": "MuiFormLabel-required-114",
+                                                      "root": "MuiFormLabel-root-109",
+                                                    }
+                                                  }
+                                                  component="label"
+                                                  data-shrink={false}
+                                                  hidden={false}
+                                                  htmlFor="autosuggest-input"
+                                                  id="autosuggest-input-label"
+                                                >
+                                                  <label
+                                                    className="MuiFormLabel-root-109 MuiFormLabel-disabled-111 MuiInputLabel-root-102 MuiInputLabel-formControl-103 MuiInputLabel-animated-106"
+                                                    data-shrink={false}
+                                                    hidden={false}
+                                                    htmlFor="autosuggest-input"
+                                                    id="autosuggest-input-label"
+                                                  >
+                                                    autosuggest
+                                                  </label>
+                                                </FormLabel>
+                                              </WithStyles(FormLabel)>
+                                            </InputLabel>
+                                          </WithStyles(InputLabel)>
                                           <WithStyles(Input)
                                             aria-activedescendant={null}
                                             aria-autocomplete="list"
                                             aria-controls={null}
-                                            aria-labelledby="downshift-0-label"
+                                            aria-labelledby="autosuggest-label"
                                             autoComplete="off"
                                             classes={
                                               Object {
@@ -6365,13 +6672,13 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
                                               }
                                             }
                                             fullWidth={true}
-                                            id="downshift-0-input"
+                                            id="autosuggest-input"
                                             inputProps={
                                               Object {
-                                                "aria-label": "",
-                                                "aria-labelledby": "-input-label",
-                                                "id": "-input",
-                                                "label": "",
+                                                "aria-label": "autosuggest",
+                                                "aria-labelledby": "autosuggest-input-label",
+                                                "id": "autosuggest-input",
+                                                "label": "autosuggest",
                                               }
                                             }
                                             inputRef={[Function]}
@@ -6385,33 +6692,33 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
                                               aria-activedescendant={null}
                                               aria-autocomplete="list"
                                               aria-controls={null}
-                                              aria-labelledby="downshift-0-label"
+                                              aria-labelledby="autosuggest-label"
                                               autoComplete="off"
                                               classes={
                                                 Object {
-                                                  "disabled": "MuiInput-disabled-105",
-                                                  "error": "MuiInput-error-107",
-                                                  "focused": "MuiInput-focused-104",
-                                                  "formControl": "MuiInput-formControl-103",
-                                                  "fullWidth": "MuiInput-fullWidth-109",
-                                                  "input": "MuiInput-input-110",
-                                                  "inputMarginDense": "MuiInput-inputMarginDense-111",
-                                                  "inputMultiline": "MuiInput-inputMultiline-112",
-                                                  "inputType": "MuiInput-inputType-113",
-                                                  "inputTypeSearch": "MuiInput-inputTypeSearch-114",
-                                                  "multiline": "MuiInput-multiline-108",
-                                                  "root": "MuiInput-root-102 inputRoot",
-                                                  "underline": "MuiInput-underline-106",
+                                                  "disabled": "MuiInput-disabled-119",
+                                                  "error": "MuiInput-error-121",
+                                                  "focused": "MuiInput-focused-118",
+                                                  "formControl": "MuiInput-formControl-117",
+                                                  "fullWidth": "MuiInput-fullWidth-123",
+                                                  "input": "MuiInput-input-124",
+                                                  "inputMarginDense": "MuiInput-inputMarginDense-125",
+                                                  "inputMultiline": "MuiInput-inputMultiline-126",
+                                                  "inputType": "MuiInput-inputType-127",
+                                                  "inputTypeSearch": "MuiInput-inputTypeSearch-128",
+                                                  "multiline": "MuiInput-multiline-122",
+                                                  "root": "MuiInput-root-116 inputRoot",
+                                                  "underline": "MuiInput-underline-120",
                                                 }
                                               }
                                               fullWidth={true}
-                                              id="downshift-0-input"
+                                              id="autosuggest-input"
                                               inputProps={
                                                 Object {
-                                                  "aria-label": "",
-                                                  "aria-labelledby": "-input-label",
-                                                  "id": "-input",
-                                                  "label": "",
+                                                  "aria-label": "autosuggest",
+                                                  "aria-labelledby": "autosuggest-input-label",
+                                                  "id": "autosuggest-input",
+                                                  "label": "autosuggest",
                                                 }
                                               }
                                               inputRef={[Function]}
@@ -6425,34 +6732,34 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
                                                 aria-activedescendant={null}
                                                 aria-autocomplete="list"
                                                 aria-controls={null}
-                                                aria-labelledby="downshift-0-label"
+                                                aria-labelledby="autosuggest-label"
                                                 autoComplete="off"
                                                 classes={
                                                   Object {
-                                                    "disabled": "MuiInput-disabled-105",
-                                                    "error": "MuiInput-error-107",
-                                                    "focused": "MuiInput-focused-104",
-                                                    "formControl": "MuiInput-formControl-103",
-                                                    "fullWidth": "MuiInput-fullWidth-109",
-                                                    "input": "MuiInput-input-110",
-                                                    "inputMarginDense": "MuiInput-inputMarginDense-111",
-                                                    "inputMultiline": "MuiInput-inputMultiline-112",
-                                                    "inputType": "MuiInput-inputType-113",
-                                                    "inputTypeSearch": "MuiInput-inputTypeSearch-114",
-                                                    "multiline": "MuiInput-multiline-108",
-                                                    "root": "MuiInput-root-102 inputRoot MuiInput-underline-106",
+                                                    "disabled": "MuiInput-disabled-119",
+                                                    "error": "MuiInput-error-121",
+                                                    "focused": "MuiInput-focused-118",
+                                                    "formControl": "MuiInput-formControl-117",
+                                                    "fullWidth": "MuiInput-fullWidth-123",
+                                                    "input": "MuiInput-input-124",
+                                                    "inputMarginDense": "MuiInput-inputMarginDense-125",
+                                                    "inputMultiline": "MuiInput-inputMultiline-126",
+                                                    "inputType": "MuiInput-inputType-127",
+                                                    "inputTypeSearch": "MuiInput-inputTypeSearch-128",
+                                                    "multiline": "MuiInput-multiline-122",
+                                                    "root": "MuiInput-root-116 inputRoot MuiInput-underline-120",
                                                     "underline": null,
                                                   }
                                                 }
                                                 fullWidth={true}
-                                                id="downshift-0-input"
+                                                id="autosuggest-input"
                                                 inputComponent="input"
                                                 inputProps={
                                                   Object {
-                                                    "aria-label": "",
-                                                    "aria-labelledby": "-input-label",
-                                                    "id": "-input",
-                                                    "label": "",
+                                                    "aria-label": "autosuggest",
+                                                    "aria-labelledby": "autosuggest-input-label",
+                                                    "id": "autosuggest-input",
+                                                    "label": "autosuggest",
                                                   }
                                                 }
                                                 inputRef={[Function]}
@@ -6468,38 +6775,38 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
                                                   aria-activedescendant={null}
                                                   aria-autocomplete="list"
                                                   aria-controls={null}
-                                                  aria-labelledby="downshift-0-label"
+                                                  aria-labelledby="autosuggest-label"
                                                   autoComplete="off"
                                                   classes={
                                                     Object {
-                                                      "adornedEnd": "MuiInputBase-adornedEnd-120",
-                                                      "adornedStart": "MuiInputBase-adornedStart-119",
-                                                      "disabled": "MuiInputBase-disabled-118 MuiInput-disabled-105",
-                                                      "error": "MuiInputBase-error-121 MuiInput-error-107",
-                                                      "focused": "MuiInputBase-focused-117 MuiInput-focused-104",
-                                                      "formControl": "MuiInputBase-formControl-116 MuiInput-formControl-103",
-                                                      "fullWidth": "MuiInputBase-fullWidth-124 MuiInput-fullWidth-109",
-                                                      "input": "MuiInputBase-input-125 MuiInput-input-110",
-                                                      "inputAdornedEnd": "MuiInputBase-inputAdornedEnd-131",
-                                                      "inputAdornedStart": "MuiInputBase-inputAdornedStart-130",
-                                                      "inputMarginDense": "MuiInputBase-inputMarginDense-126 MuiInput-inputMarginDense-111",
-                                                      "inputMultiline": "MuiInputBase-inputMultiline-127 MuiInput-inputMultiline-112",
-                                                      "inputType": "MuiInputBase-inputType-128 MuiInput-inputType-113",
-                                                      "inputTypeSearch": "MuiInputBase-inputTypeSearch-129 MuiInput-inputTypeSearch-114",
-                                                      "marginDense": "MuiInputBase-marginDense-122",
-                                                      "multiline": "MuiInputBase-multiline-123 MuiInput-multiline-108",
-                                                      "root": "MuiInputBase-root-115 MuiInput-root-102 inputRoot MuiInput-underline-106",
+                                                      "adornedEnd": "MuiInputBase-adornedEnd-134",
+                                                      "adornedStart": "MuiInputBase-adornedStart-133",
+                                                      "disabled": "MuiInputBase-disabled-132 MuiInput-disabled-119",
+                                                      "error": "MuiInputBase-error-135 MuiInput-error-121",
+                                                      "focused": "MuiInputBase-focused-131 MuiInput-focused-118",
+                                                      "formControl": "MuiInputBase-formControl-130 MuiInput-formControl-117",
+                                                      "fullWidth": "MuiInputBase-fullWidth-138 MuiInput-fullWidth-123",
+                                                      "input": "MuiInputBase-input-139 MuiInput-input-124",
+                                                      "inputAdornedEnd": "MuiInputBase-inputAdornedEnd-145",
+                                                      "inputAdornedStart": "MuiInputBase-inputAdornedStart-144",
+                                                      "inputMarginDense": "MuiInputBase-inputMarginDense-140 MuiInput-inputMarginDense-125",
+                                                      "inputMultiline": "MuiInputBase-inputMultiline-141 MuiInput-inputMultiline-126",
+                                                      "inputType": "MuiInputBase-inputType-142 MuiInput-inputType-127",
+                                                      "inputTypeSearch": "MuiInputBase-inputTypeSearch-143 MuiInput-inputTypeSearch-128",
+                                                      "marginDense": "MuiInputBase-marginDense-136",
+                                                      "multiline": "MuiInputBase-multiline-137 MuiInput-multiline-122",
+                                                      "root": "MuiInputBase-root-129 MuiInput-root-116 inputRoot MuiInput-underline-120",
                                                     }
                                                   }
                                                   fullWidth={true}
-                                                  id="downshift-0-input"
+                                                  id="autosuggest-input"
                                                   inputComponent="input"
                                                   inputProps={
                                                     Object {
-                                                      "aria-label": "",
-                                                      "aria-labelledby": "-input-label",
-                                                      "id": "-input",
-                                                      "label": "",
+                                                      "aria-label": "autosuggest",
+                                                      "aria-labelledby": "autosuggest-input-label",
+                                                      "id": "autosuggest-input",
+                                                      "label": "autosuggest",
                                                     }
                                                   }
                                                   inputRef={[Function]}
@@ -6515,19 +6822,19 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
                                                     aria-activedescendant={null}
                                                     aria-autocomplete="list"
                                                     aria-controls={null}
-                                                    aria-labelledby="downshift-0-label"
-                                                    className="MuiInputBase-root-115 MuiInput-root-102 inputRoot MuiInput-underline-106 MuiInputBase-disabled-118 MuiInput-disabled-105 MuiInputBase-fullWidth-124 MuiInput-fullWidth-109 MuiInputBase-formControl-116 MuiInput-formControl-103"
+                                                    aria-labelledby="autosuggest-label"
+                                                    className="MuiInputBase-root-129 MuiInput-root-116 inputRoot MuiInput-underline-120 MuiInputBase-disabled-132 MuiInput-disabled-119 MuiInputBase-fullWidth-138 MuiInput-fullWidth-123 MuiInputBase-formControl-130 MuiInput-formControl-117"
                                                     onClick={[Function]}
                                                   >
                                                     <input
                                                       aria-invalid={false}
-                                                      aria-label=""
-                                                      aria-labelledby="-input-label"
+                                                      aria-label="autosuggest"
+                                                      aria-labelledby="autosuggest-input-label"
                                                       autoComplete="off"
-                                                      className="MuiInputBase-input-125 MuiInput-input-110 MuiInputBase-disabled-118 MuiInput-disabled-105"
+                                                      className="MuiInputBase-input-139 MuiInput-input-124 MuiInputBase-disabled-132 MuiInput-disabled-119"
                                                       disabled={true}
-                                                      id="-input"
-                                                      label=""
+                                                      id="autosuggest-input"
+                                                      label="autosuggest"
                                                       onBlur={[Function]}
                                                       onChange={[Function]}
                                                       onFocus={[Function]}
