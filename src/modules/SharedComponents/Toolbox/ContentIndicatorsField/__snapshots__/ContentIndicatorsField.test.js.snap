@@ -19,7 +19,7 @@ exports[`ContentIndicatorsField component should render default view 1`] = `
       },
       Object {
         "disabled": false,
-        "text": "Case Studies",
+        "text": "Case Study",
         "value": 454059,
       },
     ]
@@ -61,7 +61,7 @@ exports[`ContentIndicatorsField component should render with given field props 1
       },
       Object {
         "disabled": false,
-        "text": "Case Studies",
+        "text": "Case Study",
         "value": 454059,
       },
     ]
@@ -115,7 +115,7 @@ exports[`ContentIndicatorsField component should render with given field props 2
       },
       Object {
         "disabled": false,
-        "text": "Case Studies",
+        "text": "Case Study",
         "value": 454059,
       },
     ]
