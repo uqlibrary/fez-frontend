@@ -129,7 +129,6 @@ describe('PublicationCitation ', () => {
             switch (actionKey) {
                 case 'fixRecord':
                     expect(wrapper.instance().props.history.push).toHaveBeenCalled();
-                    expect(wrapper.instance().props.actions.setFixRecord).toHaveBeenCalled();
                     break;
 
                 case 'shareRecord':

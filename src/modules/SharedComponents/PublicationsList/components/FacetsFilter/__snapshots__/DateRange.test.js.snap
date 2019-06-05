@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Date range  should render component with values set 1`] = `
-<WithStyles(FacetsFilterListItem)
+<Memo(WithStyles(FacetsFilterListItem))
   facetTitle="Date range"
   key="date-range"
   nestedItems={
-    <WithStyles(FacetsFilterNestedListItem)
+    <Memo(WithStyles(FacetsFilterNestedListItem))
       isActive={true}
       onFacetClick={[Function]}
       primaryText="2010 - 2016"
@@ -17,7 +17,7 @@ exports[`Date range  should render component with values set 1`] = `
 `;
 
 exports[`Date range  should render disabled component 1`] = `
-<WithStyles(FacetsFilterListItem)
+<Memo(WithStyles(FacetsFilterListItem))
   disabled={true}
   facetTitle="Date range"
   key="date-range"
@@ -88,7 +88,7 @@ exports[`Date range  should render disabled component 1`] = `
 `;
 
 exports[`Date range  should render empty component 1`] = `
-<WithStyles(FacetsFilterListItem)
+<Memo(WithStyles(FacetsFilterListItem))
   facetTitle="Date range"
   key="date-range"
   nestedItems={
