@@ -5,17 +5,14 @@ import {
     rtlRender,
     fireEvent,
     cleanup,
+    waitForElement,
     withRedux,
     withRouter,
-    getByTestId,
-    getByLabelText,
-    getByPlaceholderText,
 } from 'test-utils';
 
 import { SearchRecords } from '.';
 import * as repositories from 'repositories';
-import * as mockData from 'mock/data';
-import { waitForElement } from 'react-testing-library';
+import { internalTitleSearchList } from 'mock/data';
 
 describe('SearchRecords', () => {
     beforeEach(() => {
@@ -32,9 +29,10 @@ describe('SearchRecords', () => {
         const route = '/records/search';
         const initialState = Immutable.Map({});
         const {
-            container,
             asFragment,
-            getByText
+            getByText,
+            getByTestId,
+            getByLabelText,
         } = rtlRender(withRedux(initialState)(withRouter({route})(
             <SearchRecords />
         )));
@@ -61,15 +59,15 @@ describe('SearchRecords', () => {
         mockApi
             .onGet(apiObject.apiUrl, apiObject.options)
             .reply(200, {
-                ...mockData.internalTitleSearchList,
+                ...internalTitleSearchList,
                 total: 2,
                 to: 2,
-                data: mockData.internalTitleSearchList.data.slice(-2)
+                data: internalTitleSearchList.data.slice(-2)
             })
         ;
 
         let fragment = asFragment();
-        const searchElement = getByLabelText(container, 'Search eSpace');
+        const searchElement = getByLabelText('Search eSpace');
 
         fireEvent.change(searchElement, {
             target: {
@@ -78,7 +76,7 @@ describe('SearchRecords', () => {
         });
         expect(fragment).toMatchDiffSnapshot(fragment = asFragment()); // Search query set
 
-        fireEvent.click(getByTestId(container, 'simpleSearchButton'));
+        fireEvent.click(getByTestId('simpleSearchButton'));
         expect(fragment).toMatchDiffSnapshot(fragment = asFragment()); // Waiting for search results
 
         await waitForElement(() => getByText(/Displaying works/));
@@ -89,9 +87,10 @@ describe('SearchRecords', () => {
         const route = '/records/search';
         const initialState = Immutable.Map({});
         const {
-            container,
             asFragment,
-            getByText
+            getByText,
+            getByTestId,
+            getByPlaceholderText
         } = rtlRender(withRedux(initialState)(withRouter({route})(
             <SearchRecords />
         )));
@@ -125,10 +124,10 @@ describe('SearchRecords', () => {
         mockApi
             .onGet(apiObject.apiUrl, apiObject.options)
             .reply(200, {
-                ...mockData.internalTitleSearchList,
+                ...internalTitleSearchList,
                 total: 1,
                 to: 1,
-                data: mockData.internalTitleSearchList.data.filter(result =>
+                data: internalTitleSearchList.data.filter(result =>
                     result.rek_title.indexOf(titleSearchTestParam) === 0
                 )
             })
@@ -136,7 +135,7 @@ describe('SearchRecords', () => {
 
         let fragment = asFragment();
 
-        fireEvent.click(getByTestId(container, 'showAdvancedSearchButton'));
+        fireEvent.click(getByTestId('showAdvancedSearchButton'));
         expect(fragment).toMatchDiffSnapshot(fragment = asFragment()); // Switched to advanced search
 
         fireEvent.click(getByText('Select a field'));
@@ -146,7 +145,7 @@ describe('SearchRecords', () => {
         expect(fragment).toMatchDiffSnapshot(fragment = asFragment()); // Chose to search any field
 
         fireEvent.change(
-            getByPlaceholderText(container, 'Add some text to search all fields with'),
+            getByPlaceholderText('Add some text to search all fields with'),
             {
                 target: {
                     value: simpleSearchTestParam,
@@ -165,7 +164,7 @@ describe('SearchRecords', () => {
         expect(fragment).toMatchDiffSnapshot(fragment = asFragment()); // Chose to search title field
 
         fireEvent.change(
-            getByPlaceholderText(container, 'Add a title'),
+            getByPlaceholderText('Add a title'),
             {
                 target: {
                     value: titleSearchTestParam,
@@ -174,7 +173,7 @@ describe('SearchRecords', () => {
         );
         expect(fragment).toMatchDiffSnapshot(fragment = asFragment()); // Set second search field
 
-        fireEvent.click(getByTestId(container, 'advancedSearchButton'));
+        fireEvent.click(getByTestId('advancedSearchButton'));
         expect(fragment).toMatchDiffSnapshot(fragment = asFragment()); // Waiting for search results
 
         await waitForElement(() => getByText(/Displaying works/));

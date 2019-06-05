@@ -147,7 +147,8 @@ export default class FixRecord extends PureComponent {
             <MenuItem
                 value={item.action}
                 children={item.title}
-                key={`fix_record_action_${index}`} />
+                key={`fix_record_action_${index}`}
+            />
         ));
 
         // set confirmation message depending on file upload status
