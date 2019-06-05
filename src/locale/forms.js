@@ -163,7 +163,7 @@ export default {
             },
             successWorkflowConfirmation: {
                 confirmationTitle: 'Your request has been submitted',
-                confirmationMessage: (<p>Your request will be referred to a UQ eSpace staff member for review/action.</p>),
+                confirmationMessage: (<span style={{ display: 'block', margin: '1em 0' }}>Your request will be referred to a UQ eSpace staff member for review/action.</span>),
                 fileFailConfirmationAlert: {
                     title: 'File upload failed',
                     message: 'Retry uploading files via "Fix record" screen or contact eSpace administrators.',

@@ -1455,9 +1455,16 @@ exports[`Component FixRecord should render fix record form 1`] = `
             "cancelButtonLabel": "Go to my dashboard",
             "confirmButtonLabel": "Go to my research",
             "confirmationMessage": <React.Fragment>
-              <p>
+              <span
+                style={
+                  Object {
+                    "display": "block",
+                    "margin": "1em 0",
+                  }
+                }
+              >
                 Your request will be referred to a UQ eSpace staff member for review/action.
-              </p>
+              </span>
             </React.Fragment>,
             "confirmationTitle": "Your request has been submitted",
             "fileFailConfirmationAlert": Object {
@@ -2596,9 +2603,16 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
                 title="File upload failed"
                 type="info"
               />
-              <p>
+              <span
+                style={
+                  Object {
+                    "display": "block",
+                    "margin": "1em 0",
+                  }
+                }
+              >
                 Your request will be referred to a UQ eSpace staff member for review/action.
-              </p>
+              </span>
             </React.Fragment>,
             "confirmationTitle": "Your request has been submitted",
             "fileFailConfirmationAlert": Object {
@@ -3232,9 +3246,16 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
             "cancelButtonLabel": "Go to my dashboard",
             "confirmButtonLabel": "Go to my research",
             "confirmationMessage": <React.Fragment>
-              <p>
+              <span
+                style={
+                  Object {
+                    "display": "block",
+                    "margin": "1em 0",
+                  }
+                }
+              >
                 Your request will be referred to a UQ eSpace staff member for review/action.
-              </p>
+              </span>
             </React.Fragment>,
             "confirmationTitle": "Your request has been submitted",
             "fileFailConfirmationAlert": Object {
