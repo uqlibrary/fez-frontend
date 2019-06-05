@@ -186,7 +186,7 @@ export default {
         "rek_content_indicator_pid": "UQ:396321",
         "rek_content_indicator": 454058,
         "rek_content_indicator_order": 2,
-        "rek_content_indicator_lookup": "Protocols"
+        "rek_content_indicator_lookup": "Protocol"
     }],
     "fez_record_search_key_author_id": [
         {

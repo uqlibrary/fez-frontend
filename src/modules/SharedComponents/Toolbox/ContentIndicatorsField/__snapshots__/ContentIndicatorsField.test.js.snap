@@ -14,7 +14,7 @@ exports[`ContentIndicatorsField component should render default view 1`] = `
       },
       Object {
         "disabled": false,
-        "text": "Protocols",
+        "text": "Protocol",
         "value": 454058,
       },
       Object {
@@ -56,7 +56,7 @@ exports[`ContentIndicatorsField component should render with given field props 1
       },
       Object {
         "disabled": false,
-        "text": "Protocols",
+        "text": "Protocol",
         "value": 454058,
       },
       Object {
@@ -110,7 +110,7 @@ exports[`ContentIndicatorsField component should render with given field props 2
       },
       Object {
         "disabled": false,
-        "text": "Protocols",
+        "text": "Protocol",
         "value": 454058,
       },
       Object {
