@@ -6,17 +6,19 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
 >
   <label
     hidden={true}
-    id="autosuggest-label"
-  />
+    id="Test-label"
+  >
+    Test
+  </label>
   <Downshift
-    aria-label="autosuggest"
+    aria-label="Test"
     defaultHighlightedIndex={null}
     defaultInputValue="test 1"
     defaultIsOpen={false}
     defaultSelectedItem={null}
     environment={[Window]}
     getA11yStatusMessage={[Function]}
-    id="autosuggest"
+    id="Test"
     itemToString={[MockFunction]}
     onChange={[MockFunction]}
     onInputValueChange={[Function]}
@@ -37,14 +39,14 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
 
 exports[`AutoCompleteAsyncField component should call filter function on itemsList 2`] = `
 <Downshift
-  aria-label="autosuggest"
+  aria-label="Test"
   defaultHighlightedIndex={null}
   defaultInputValue="test 1"
   defaultIsOpen={false}
   defaultSelectedItem={null}
   environment={[Window]}
   getA11yStatusMessage={[Function]}
-  id="autosuggest"
+  id="Test"
   itemToString={[MockFunction]}
   onChange={[MockFunction]}
   onInputValueChange={[Function]}
@@ -90,7 +92,7 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
         error={true}
         errorText="This field is required"
         fullWidth={true}
-        id="autosuggest-input"
+        id="Test-input"
         placeholder={null}
         required={true}
         value="tes"
@@ -188,7 +190,7 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
         error={true}
         errorText="This field is required"
         fullWidth={true}
-        id="autosuggest-input"
+        id="Test-input"
         placeholder={null}
         required={true}
         value="123"
@@ -288,7 +290,7 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
 
 exports[`AutoCompleteAsyncField component should call filter function on itemsList 7`] = `
 <WithStyles(FormControl)
-  aria-describedby="autosuggest-input-helper-text"
+  aria-describedby="Test-input-helper-text"
   classes={Object {}}
   disabled={false}
   error={true}
@@ -303,12 +305,12 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
       }
     }
     fullWidth={true}
-    id="autosuggest-input"
+    id="Test-input"
     inputProps={
       Object {
         "aria-label": undefined,
-        "aria-labelledby": "autosuggest-input-label",
-        "id": "autosuggest-input",
+        "aria-labelledby": "Test-input-label",
+        "id": "Test-input",
         "label": undefined,
       }
     }
@@ -317,7 +319,7 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
     value="123"
   />
   <WithStyles(FormHelperText)
-    id="autosuggest-input-helper-text"
+    id="Test-input-helper-text"
   >
     This field is required
   </WithStyles(FormHelperText)>
@@ -351,7 +353,7 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
         error={true}
         errorText="This field is required"
         fullWidth={true}
-        id="autosuggest-input"
+        id="Test-input"
         placeholder={null}
         required={true}
         value="123"
@@ -3601,7 +3603,8 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
             disabled={false}
             error={false}
             filter={[Function]}
-            floatingLabelText=""
+            floatingLabelText="Test"
+            hideLabel={true}
             hintText={null}
             itemToString={[MockFunction]}
             itemsList={
@@ -3647,17 +3650,19 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
             >
               <label
                 hidden={true}
-                id="autosuggest-label"
-              />
+                id="Test-label"
+              >
+                Test
+              </label>
               <Downshift
-                aria-label="autosuggest"
+                aria-label="Test"
                 defaultHighlightedIndex={null}
                 defaultInputValue=""
                 defaultIsOpen={false}
                 defaultSelectedItem={null}
                 environment={[Window]}
                 getA11yStatusMessage={[Function]}
-                id="autosuggest"
+                id="Test"
                 itemToString={[MockFunction]}
                 onChange={[MockFunction]}
                 onInputValueChange={[Function]}
@@ -3673,7 +3678,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                 <div
                   aria-expanded={false}
                   aria-haspopup="listbox"
-                  aria-labelledby="autosuggest-label"
+                  aria-labelledby="Test-label"
                   aria-owns={null}
                   className="container"
                   role="combobox"
@@ -3936,12 +3941,12 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                     "aria-activedescendant": null,
                                     "aria-autocomplete": "list",
                                     "aria-controls": null,
-                                    "aria-labelledby": "autosuggest-label",
+                                    "aria-labelledby": "Test-label",
                                     "autoComplete": "off",
                                     "classes": Object {
                                       "root": "inputRoot",
                                     },
-                                    "id": "autosuggest-input",
+                                    "id": "Test-input",
                                     "inputRef": [Function],
                                     "onBlur": [Function],
                                     "onChange": [Function],
@@ -3953,8 +3958,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                 error={false}
                                 errorText=""
                                 fullWidth={true}
-                                id="autosuggest-input"
-                                label="autosuggest"
+                                id="Test-input"
                                 placeholder={null}
                                 required={false}
                                 value=""
@@ -3965,12 +3969,12 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                       "aria-activedescendant": null,
                                       "aria-autocomplete": "list",
                                       "aria-controls": null,
-                                      "aria-labelledby": "autosuggest-label",
+                                      "aria-labelledby": "Test-label",
                                       "autoComplete": "off",
                                       "classes": Object {
                                         "root": "inputRoot",
                                       },
-                                      "id": "autosuggest-input",
+                                      "id": "Test-input",
                                       "inputRef": [Function],
                                       "onBlur": [Function],
                                       "onChange": [Function],
@@ -3983,8 +3987,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                   error={false}
                                   errorText=""
                                   fullWidth={true}
-                                  id="autosuggest-input"
-                                  label="autosuggest"
+                                  id="Test-input"
                                   placeholder={null}
                                   required={false}
                                   value=""
@@ -3993,8 +3996,8 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                     InputLabelProps={
                                       Object {
                                         "hidden": false,
-                                        "htmlFor": "autosuggest-input",
-                                        "id": "autosuggest-input-label",
+                                        "htmlFor": "Test-input",
+                                        "id": "Test-input-label",
                                         "shrink": undefined,
                                       }
                                     }
@@ -4003,12 +4006,12 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                         "aria-activedescendant": null,
                                         "aria-autocomplete": "list",
                                         "aria-controls": null,
-                                        "aria-labelledby": "autosuggest-label",
+                                        "aria-labelledby": "Test-label",
                                         "autoComplete": "off",
                                         "classes": Object {
                                           "root": "inputRoot",
                                         },
-                                        "id": "autosuggest-input",
+                                        "id": "Test-input",
                                         "inputRef": [Function],
                                         "onBlur": [Function],
                                         "onChange": [Function],
@@ -4020,16 +4023,15 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                     disabled={false}
                                     error={false}
                                     fullWidth={true}
-                                    id="autosuggest-input"
+                                    id="Test-input"
                                     inputProps={
                                       Object {
-                                        "aria-label": "autosuggest",
-                                        "aria-labelledby": "autosuggest-input-label",
-                                        "id": "autosuggest-input",
-                                        "label": "autosuggest",
+                                        "aria-label": undefined,
+                                        "aria-labelledby": "Test-input-label",
+                                        "id": "Test-input",
+                                        "label": undefined,
                                       }
                                     }
-                                    label="autosuggest"
                                     placeholder={null}
                                     required={false}
                                     select={false}
@@ -4064,72 +4066,11 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                         <div
                                           className="MuiFormControl-root-98 MuiFormControl-fullWidth-101"
                                         >
-                                          <WithStyles(InputLabel)
-                                            hidden={false}
-                                            htmlFor="autosuggest-input"
-                                            id="autosuggest-input-label"
-                                          >
-                                            <InputLabel
-                                              classes={
-                                                Object {
-                                                  "animated": "MuiInputLabel-animated-106",
-                                                  "filled": "MuiInputLabel-filled-107",
-                                                  "formControl": "MuiInputLabel-formControl-103",
-                                                  "marginDense": "MuiInputLabel-marginDense-104",
-                                                  "outlined": "MuiInputLabel-outlined-108",
-                                                  "root": "MuiInputLabel-root-102",
-                                                  "shrink": "MuiInputLabel-shrink-105",
-                                                }
-                                              }
-                                              disableAnimation={false}
-                                              hidden={false}
-                                              htmlFor="autosuggest-input"
-                                              id="autosuggest-input-label"
-                                            >
-                                              <WithStyles(FormLabel)
-                                                className="MuiInputLabel-root-102 MuiInputLabel-formControl-103 MuiInputLabel-animated-106"
-                                                data-shrink={false}
-                                                hidden={false}
-                                                htmlFor="autosuggest-input"
-                                                id="autosuggest-input-label"
-                                              >
-                                                <FormLabel
-                                                  className="MuiInputLabel-root-102 MuiInputLabel-formControl-103 MuiInputLabel-animated-106"
-                                                  classes={
-                                                    Object {
-                                                      "asterisk": "MuiFormLabel-asterisk-115",
-                                                      "disabled": "MuiFormLabel-disabled-111",
-                                                      "error": "MuiFormLabel-error-112",
-                                                      "filled": "MuiFormLabel-filled-113",
-                                                      "focused": "MuiFormLabel-focused-110",
-                                                      "required": "MuiFormLabel-required-114",
-                                                      "root": "MuiFormLabel-root-109",
-                                                    }
-                                                  }
-                                                  component="label"
-                                                  data-shrink={false}
-                                                  hidden={false}
-                                                  htmlFor="autosuggest-input"
-                                                  id="autosuggest-input-label"
-                                                >
-                                                  <label
-                                                    className="MuiFormLabel-root-109 MuiInputLabel-root-102 MuiInputLabel-formControl-103 MuiInputLabel-animated-106"
-                                                    data-shrink={false}
-                                                    hidden={false}
-                                                    htmlFor="autosuggest-input"
-                                                    id="autosuggest-input-label"
-                                                  >
-                                                    autosuggest
-                                                  </label>
-                                                </FormLabel>
-                                              </WithStyles(FormLabel)>
-                                            </InputLabel>
-                                          </WithStyles(InputLabel)>
                                           <WithStyles(Input)
                                             aria-activedescendant={null}
                                             aria-autocomplete="list"
                                             aria-controls={null}
-                                            aria-labelledby="autosuggest-label"
+                                            aria-labelledby="Test-label"
                                             autoComplete="off"
                                             classes={
                                               Object {
@@ -4137,13 +4078,13 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                               }
                                             }
                                             fullWidth={true}
-                                            id="autosuggest-input"
+                                            id="Test-input"
                                             inputProps={
                                               Object {
-                                                "aria-label": "autosuggest",
-                                                "aria-labelledby": "autosuggest-input-label",
-                                                "id": "autosuggest-input",
-                                                "label": "autosuggest",
+                                                "aria-label": undefined,
+                                                "aria-labelledby": "Test-input-label",
+                                                "id": "Test-input",
+                                                "label": undefined,
                                               }
                                             }
                                             inputRef={[Function]}
@@ -4157,7 +4098,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                               aria-activedescendant={null}
                                               aria-autocomplete="list"
                                               aria-controls={null}
-                                              aria-labelledby="autosuggest-label"
+                                              aria-labelledby="Test-label"
                                               autoComplete="off"
                                               classes={
                                                 Object {
@@ -4177,13 +4118,13 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                                 }
                                               }
                                               fullWidth={true}
-                                              id="autosuggest-input"
+                                              id="Test-input"
                                               inputProps={
                                                 Object {
-                                                  "aria-label": "autosuggest",
-                                                  "aria-labelledby": "autosuggest-input-label",
-                                                  "id": "autosuggest-input",
-                                                  "label": "autosuggest",
+                                                  "aria-label": undefined,
+                                                  "aria-labelledby": "Test-input-label",
+                                                  "id": "Test-input",
+                                                  "label": undefined,
                                                 }
                                               }
                                               inputRef={[Function]}
@@ -4197,7 +4138,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                                 aria-activedescendant={null}
                                                 aria-autocomplete="list"
                                                 aria-controls={null}
-                                                aria-labelledby="autosuggest-label"
+                                                aria-labelledby="Test-label"
                                                 autoComplete="off"
                                                 classes={
                                                   Object {
@@ -4217,14 +4158,14 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                                   }
                                                 }
                                                 fullWidth={true}
-                                                id="autosuggest-input"
+                                                id="Test-input"
                                                 inputComponent="input"
                                                 inputProps={
                                                   Object {
-                                                    "aria-label": "autosuggest",
-                                                    "aria-labelledby": "autosuggest-input-label",
-                                                    "id": "autosuggest-input",
-                                                    "label": "autosuggest",
+                                                    "aria-label": undefined,
+                                                    "aria-labelledby": "Test-input-label",
+                                                    "id": "Test-input",
+                                                    "label": undefined,
                                                   }
                                                 }
                                                 inputRef={[Function]}
@@ -4240,7 +4181,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                                   aria-activedescendant={null}
                                                   aria-autocomplete="list"
                                                   aria-controls={null}
-                                                  aria-labelledby="autosuggest-label"
+                                                  aria-labelledby="Test-label"
                                                   autoComplete="off"
                                                   classes={
                                                     Object {
@@ -4264,14 +4205,14 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                                     }
                                                   }
                                                   fullWidth={true}
-                                                  id="autosuggest-input"
+                                                  id="Test-input"
                                                   inputComponent="input"
                                                   inputProps={
                                                     Object {
-                                                      "aria-label": "autosuggest",
-                                                      "aria-labelledby": "autosuggest-input-label",
-                                                      "id": "autosuggest-input",
-                                                      "label": "autosuggest",
+                                                      "aria-label": undefined,
+                                                      "aria-labelledby": "Test-input-label",
+                                                      "id": "Test-input",
+                                                      "label": undefined,
                                                     }
                                                   }
                                                   inputRef={[Function]}
@@ -4287,19 +4228,17 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                                     aria-activedescendant={null}
                                                     aria-autocomplete="list"
                                                     aria-controls={null}
-                                                    aria-labelledby="autosuggest-label"
+                                                    aria-labelledby="Test-label"
                                                     className="MuiInputBase-root-129 MuiInput-root-116 inputRoot MuiInput-underline-120 MuiInputBase-fullWidth-138 MuiInput-fullWidth-123 MuiInputBase-formControl-130 MuiInput-formControl-117"
                                                     onClick={[Function]}
                                                   >
                                                     <input
                                                       aria-invalid={false}
-                                                      aria-label="autosuggest"
-                                                      aria-labelledby="autosuggest-input-label"
+                                                      aria-labelledby="Test-input-label"
                                                       autoComplete="off"
                                                       className="MuiInputBase-input-139 MuiInput-input-124"
                                                       disabled={false}
-                                                      id="autosuggest-input"
-                                                      label="autosuggest"
+                                                      id="Test-input"
                                                       onBlur={[Function]}
                                                       onChange={[Function]}
                                                       onFocus={[Function]}
@@ -4886,7 +4825,8 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
             disabled={false}
             error={false}
             filter={[Function]}
-            floatingLabelText=""
+            floatingLabelText="Test"
+            hideLabel={true}
             hintText={null}
             itemToString={[MockFunction]}
             itemsList={
@@ -4932,17 +4872,19 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
             >
               <label
                 hidden={true}
-                id="autosuggest-label"
-              />
+                id="Test-label"
+              >
+                Test
+              </label>
               <Downshift
-                aria-label="autosuggest"
+                aria-label="Test"
                 defaultHighlightedIndex={null}
                 defaultInputValue=""
                 defaultIsOpen={false}
                 defaultSelectedItem={null}
                 environment={[Window]}
                 getA11yStatusMessage={[Function]}
-                id="autosuggest"
+                id="Test"
                 itemToString={[MockFunction]}
                 onChange={[MockFunction]}
                 onInputValueChange={[Function]}
@@ -4958,7 +4900,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                 <div
                   aria-expanded={false}
                   aria-haspopup="listbox"
-                  aria-labelledby="autosuggest-label"
+                  aria-labelledby="Test-label"
                   aria-owns={null}
                   className="container"
                   role="combobox"
@@ -5221,12 +5163,12 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                     "aria-activedescendant": null,
                                     "aria-autocomplete": "list",
                                     "aria-controls": null,
-                                    "aria-labelledby": "autosuggest-label",
+                                    "aria-labelledby": "Test-label",
                                     "autoComplete": "off",
                                     "classes": Object {
                                       "root": "inputRoot",
                                     },
-                                    "id": "autosuggest-input",
+                                    "id": "Test-input",
                                     "inputRef": [Function],
                                     "onBlur": [Function],
                                     "onChange": [Function],
@@ -5238,8 +5180,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                 error={false}
                                 errorText=""
                                 fullWidth={true}
-                                id="autosuggest-input"
-                                label="autosuggest"
+                                id="Test-input"
                                 placeholder={null}
                                 required={false}
                                 value=""
@@ -5250,12 +5191,12 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                       "aria-activedescendant": null,
                                       "aria-autocomplete": "list",
                                       "aria-controls": null,
-                                      "aria-labelledby": "autosuggest-label",
+                                      "aria-labelledby": "Test-label",
                                       "autoComplete": "off",
                                       "classes": Object {
                                         "root": "inputRoot",
                                       },
-                                      "id": "autosuggest-input",
+                                      "id": "Test-input",
                                       "inputRef": [Function],
                                       "onBlur": [Function],
                                       "onChange": [Function],
@@ -5268,8 +5209,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                   error={false}
                                   errorText=""
                                   fullWidth={true}
-                                  id="autosuggest-input"
-                                  label="autosuggest"
+                                  id="Test-input"
                                   placeholder={null}
                                   required={false}
                                   value=""
@@ -5278,8 +5218,8 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                     InputLabelProps={
                                       Object {
                                         "hidden": false,
-                                        "htmlFor": "autosuggest-input",
-                                        "id": "autosuggest-input-label",
+                                        "htmlFor": "Test-input",
+                                        "id": "Test-input-label",
                                         "shrink": undefined,
                                       }
                                     }
@@ -5288,12 +5228,12 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                         "aria-activedescendant": null,
                                         "aria-autocomplete": "list",
                                         "aria-controls": null,
-                                        "aria-labelledby": "autosuggest-label",
+                                        "aria-labelledby": "Test-label",
                                         "autoComplete": "off",
                                         "classes": Object {
                                           "root": "inputRoot",
                                         },
-                                        "id": "autosuggest-input",
+                                        "id": "Test-input",
                                         "inputRef": [Function],
                                         "onBlur": [Function],
                                         "onChange": [Function],
@@ -5305,16 +5245,15 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                     disabled={false}
                                     error={false}
                                     fullWidth={true}
-                                    id="autosuggest-input"
+                                    id="Test-input"
                                     inputProps={
                                       Object {
-                                        "aria-label": "autosuggest",
-                                        "aria-labelledby": "autosuggest-input-label",
-                                        "id": "autosuggest-input",
-                                        "label": "autosuggest",
+                                        "aria-label": undefined,
+                                        "aria-labelledby": "Test-input-label",
+                                        "id": "Test-input",
+                                        "label": undefined,
                                       }
                                     }
-                                    label="autosuggest"
                                     placeholder={null}
                                     required={false}
                                     select={false}
@@ -5349,72 +5288,11 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                         <div
                                           className="MuiFormControl-root-98 MuiFormControl-fullWidth-101"
                                         >
-                                          <WithStyles(InputLabel)
-                                            hidden={false}
-                                            htmlFor="autosuggest-input"
-                                            id="autosuggest-input-label"
-                                          >
-                                            <InputLabel
-                                              classes={
-                                                Object {
-                                                  "animated": "MuiInputLabel-animated-106",
-                                                  "filled": "MuiInputLabel-filled-107",
-                                                  "formControl": "MuiInputLabel-formControl-103",
-                                                  "marginDense": "MuiInputLabel-marginDense-104",
-                                                  "outlined": "MuiInputLabel-outlined-108",
-                                                  "root": "MuiInputLabel-root-102",
-                                                  "shrink": "MuiInputLabel-shrink-105",
-                                                }
-                                              }
-                                              disableAnimation={false}
-                                              hidden={false}
-                                              htmlFor="autosuggest-input"
-                                              id="autosuggest-input-label"
-                                            >
-                                              <WithStyles(FormLabel)
-                                                className="MuiInputLabel-root-102 MuiInputLabel-formControl-103 MuiInputLabel-animated-106 MuiInputLabel-shrink-105"
-                                                data-shrink={true}
-                                                hidden={false}
-                                                htmlFor="autosuggest-input"
-                                                id="autosuggest-input-label"
-                                              >
-                                                <FormLabel
-                                                  className="MuiInputLabel-root-102 MuiInputLabel-formControl-103 MuiInputLabel-animated-106 MuiInputLabel-shrink-105"
-                                                  classes={
-                                                    Object {
-                                                      "asterisk": "MuiFormLabel-asterisk-115",
-                                                      "disabled": "MuiFormLabel-disabled-111",
-                                                      "error": "MuiFormLabel-error-112",
-                                                      "filled": "MuiFormLabel-filled-113",
-                                                      "focused": "MuiFormLabel-focused-110",
-                                                      "required": "MuiFormLabel-required-114",
-                                                      "root": "MuiFormLabel-root-109",
-                                                    }
-                                                  }
-                                                  component="label"
-                                                  data-shrink={true}
-                                                  hidden={false}
-                                                  htmlFor="autosuggest-input"
-                                                  id="autosuggest-input-label"
-                                                >
-                                                  <label
-                                                    className="MuiFormLabel-root-109 MuiFormLabel-focused-110 MuiInputLabel-root-102 MuiInputLabel-formControl-103 MuiInputLabel-animated-106 MuiInputLabel-shrink-105"
-                                                    data-shrink={true}
-                                                    hidden={false}
-                                                    htmlFor="autosuggest-input"
-                                                    id="autosuggest-input-label"
-                                                  >
-                                                    autosuggest
-                                                  </label>
-                                                </FormLabel>
-                                              </WithStyles(FormLabel)>
-                                            </InputLabel>
-                                          </WithStyles(InputLabel)>
                                           <WithStyles(Input)
                                             aria-activedescendant={null}
                                             aria-autocomplete="list"
                                             aria-controls={null}
-                                            aria-labelledby="autosuggest-label"
+                                            aria-labelledby="Test-label"
                                             autoComplete="off"
                                             classes={
                                               Object {
@@ -5422,13 +5300,13 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                               }
                                             }
                                             fullWidth={true}
-                                            id="autosuggest-input"
+                                            id="Test-input"
                                             inputProps={
                                               Object {
-                                                "aria-label": "autosuggest",
-                                                "aria-labelledby": "autosuggest-input-label",
-                                                "id": "autosuggest-input",
-                                                "label": "autosuggest",
+                                                "aria-label": undefined,
+                                                "aria-labelledby": "Test-input-label",
+                                                "id": "Test-input",
+                                                "label": undefined,
                                               }
                                             }
                                             inputRef={[Function]}
@@ -5442,7 +5320,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                               aria-activedescendant={null}
                                               aria-autocomplete="list"
                                               aria-controls={null}
-                                              aria-labelledby="autosuggest-label"
+                                              aria-labelledby="Test-label"
                                               autoComplete="off"
                                               classes={
                                                 Object {
@@ -5462,13 +5340,13 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                                 }
                                               }
                                               fullWidth={true}
-                                              id="autosuggest-input"
+                                              id="Test-input"
                                               inputProps={
                                                 Object {
-                                                  "aria-label": "autosuggest",
-                                                  "aria-labelledby": "autosuggest-input-label",
-                                                  "id": "autosuggest-input",
-                                                  "label": "autosuggest",
+                                                  "aria-label": undefined,
+                                                  "aria-labelledby": "Test-input-label",
+                                                  "id": "Test-input",
+                                                  "label": undefined,
                                                 }
                                               }
                                               inputRef={[Function]}
@@ -5482,7 +5360,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                                 aria-activedescendant={null}
                                                 aria-autocomplete="list"
                                                 aria-controls={null}
-                                                aria-labelledby="autosuggest-label"
+                                                aria-labelledby="Test-label"
                                                 autoComplete="off"
                                                 classes={
                                                   Object {
@@ -5502,14 +5380,14 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                                   }
                                                 }
                                                 fullWidth={true}
-                                                id="autosuggest-input"
+                                                id="Test-input"
                                                 inputComponent="input"
                                                 inputProps={
                                                   Object {
-                                                    "aria-label": "autosuggest",
-                                                    "aria-labelledby": "autosuggest-input-label",
-                                                    "id": "autosuggest-input",
-                                                    "label": "autosuggest",
+                                                    "aria-label": undefined,
+                                                    "aria-labelledby": "Test-input-label",
+                                                    "id": "Test-input",
+                                                    "label": undefined,
                                                   }
                                                 }
                                                 inputRef={[Function]}
@@ -5525,7 +5403,7 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                                   aria-activedescendant={null}
                                                   aria-autocomplete="list"
                                                   aria-controls={null}
-                                                  aria-labelledby="autosuggest-label"
+                                                  aria-labelledby="Test-label"
                                                   autoComplete="off"
                                                   classes={
                                                     Object {
@@ -5549,14 +5427,14 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                                     }
                                                   }
                                                   fullWidth={true}
-                                                  id="autosuggest-input"
+                                                  id="Test-input"
                                                   inputComponent="input"
                                                   inputProps={
                                                     Object {
-                                                      "aria-label": "autosuggest",
-                                                      "aria-labelledby": "autosuggest-input-label",
-                                                      "id": "autosuggest-input",
-                                                      "label": "autosuggest",
+                                                      "aria-label": undefined,
+                                                      "aria-labelledby": "Test-input-label",
+                                                      "id": "Test-input",
+                                                      "label": undefined,
                                                     }
                                                   }
                                                   inputRef={[Function]}
@@ -5572,19 +5450,17 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
                                                     aria-activedescendant={null}
                                                     aria-autocomplete="list"
                                                     aria-controls={null}
-                                                    aria-labelledby="autosuggest-label"
+                                                    aria-labelledby="Test-label"
                                                     className="MuiInputBase-root-129 MuiInput-root-116 inputRoot MuiInput-underline-120 MuiInputBase-fullWidth-138 MuiInput-fullWidth-123 MuiInputBase-focused-131 MuiInput-focused-118 MuiInputBase-formControl-130 MuiInput-formControl-117"
                                                     onClick={[Function]}
                                                   >
                                                     <input
                                                       aria-invalid={false}
-                                                      aria-label="autosuggest"
-                                                      aria-labelledby="autosuggest-input-label"
+                                                      aria-labelledby="Test-input-label"
                                                       autoComplete="off"
                                                       className="MuiInputBase-input-139 MuiInput-input-124"
                                                       disabled={false}
-                                                      id="autosuggest-input"
-                                                      label="autosuggest"
+                                                      id="Test-input"
                                                       onBlur={[Function]}
                                                       onChange={[Function]}
                                                       onFocus={[Function]}
