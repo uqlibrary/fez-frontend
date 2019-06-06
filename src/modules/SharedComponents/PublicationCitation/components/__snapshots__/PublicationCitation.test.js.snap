@@ -25,11 +25,6 @@ Object {
     "marginBottom": 6,
     "marginRight": 12,
   },
-  "contentIndicators": Object {
-    "span": Object {
-      "marginRight": 12,
-    },
-  },
   "divider": Object {
     "marginBottom": 12,
     "marginTop": 12,
@@ -500,17 +495,7 @@ exports[`PublicationCitation  should render component with content indicators 1`
           >
             Content Indicators
             : 
-            <span
-              key="1"
-            >
-              a content indicator
-              , 
-            </span>
-            <span
-              key="2"
-            >
-              another content indicator
-            </span>
+            a content indicator, another content indicator
           </WithStyles(Typography)>
         </WithStyles(Grid)>
         <WithStyles(Grid)
@@ -1401,17 +1386,7 @@ exports[`PublicationCitation  should render component with default actions 1`] =
           >
             Content Indicators
             : 
-            <span
-              key="1"
-            >
-              Scholarship of Teaching and Learning
-              , 
-            </span>
-            <span
-              key="2"
-            >
-              Protocols
-            </span>
+            Scholarship of Teaching and Learning, Protocols
           </WithStyles(Typography)>
         </WithStyles(Grid)>
         <WithStyles(Grid)
@@ -2341,17 +2316,7 @@ exports[`PublicationCitation  should render component with default item 1`] = `
           >
             Content Indicators
             : 
-            <span
-              key="1"
-            >
-              Scholarship of Teaching and Learning
-              , 
-            </span>
-            <span
-              key="2"
-            >
-              Protocols
-            </span>
+            Scholarship of Teaching and Learning, Protocols
           </WithStyles(Typography)>
         </WithStyles(Grid)>
         <WithStyles(Grid)
@@ -3237,17 +3202,7 @@ exports[`PublicationCitation  should render component with default item without 
           >
             Content Indicators
             : 
-            <span
-              key="1"
-            >
-              Scholarship of Teaching and Learning
-              , 
-            </span>
-            <span
-              key="2"
-            >
-              Protocols
-            </span>
+            Scholarship of Teaching and Learning, Protocols
           </WithStyles(Typography)>
         </WithStyles(Grid)>
         <WithStyles(Grid)
@@ -4138,17 +4093,7 @@ exports[`PublicationCitation  should render component with default list hiding t
           >
             Content Indicators
             : 
-            <span
-              key="1"
-            >
-              Scholarship of Teaching and Learning
-              , 
-            </span>
-            <span
-              key="2"
-            >
-              Protocols
-            </span>
+            Scholarship of Teaching and Learning, Protocols
           </WithStyles(Typography)>
         </WithStyles(Grid)>
         <WithStyles(Grid)
@@ -5039,17 +4984,7 @@ exports[`PublicationCitation  should render component with default list hiding t
           >
             Content Indicators
             : 
-            <span
-              key="1"
-            >
-              Scholarship of Teaching and Learning
-              , 
-            </span>
-            <span
-              key="2"
-            >
-              Protocols
-            </span>
+            Scholarship of Teaching and Learning, Protocols
           </WithStyles(Typography)>
         </WithStyles(Grid)>
         <WithStyles(Grid)
@@ -5946,17 +5881,7 @@ exports[`PublicationCitation  should render component with publication from mult
           >
             Content Indicators
             : 
-            <span
-              key="1"
-            >
-              Scholarship of Teaching and Learning
-              , 
-            </span>
-            <span
-              key="2"
-            >
-              Protocols
-            </span>
+            Scholarship of Teaching and Learning, Protocols
           </WithStyles(Typography)>
         </WithStyles(Grid)>
         <WithStyles(Grid)
@@ -6861,17 +6786,7 @@ exports[`PublicationCitation  should render component without a title 1`] = `
           >
             Content Indicators
             : 
-            <span
-              key="1"
-            >
-              Scholarship of Teaching and Learning
-              , 
-            </span>
-            <span
-              key="2"
-            >
-              Protocols
-            </span>
+            Scholarship of Teaching and Learning, Protocols
           </WithStyles(Typography)>
         </WithStyles(Grid)>
         <WithStyles(Grid)
@@ -7854,17 +7769,7 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
           >
             Content Indicators
             : 
-            <span
-              key="1"
-            >
-              Scholarship of Teaching and Learning
-              , 
-            </span>
-            <span
-              key="2"
-            >
-              Protocols
-            </span>
+            Scholarship of Teaching and Learning, Protocols
           </WithStyles(Typography)>
         </WithStyles(Grid)>
         <WithStyles(Grid)
