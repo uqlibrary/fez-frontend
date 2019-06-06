@@ -33,6 +33,11 @@ export default {
                 //     buttonLabel: 'CLOSE'
                 // }
             },
+            contentIndicators: {
+                title: 'Optional: Content Indicators',
+                description: 'You can select multiple indicators for a work, but cannot remove existing ones. To change existing information, submit as a correction below.',
+                label: 'Please select relevant indicator(s).',
+            },
             comments: {
                 title: 'Optional: Suggest changes or add links to this work',
                 // help: {

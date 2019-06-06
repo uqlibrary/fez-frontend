@@ -1765,7 +1765,7 @@ export default {
             "fez_record_search_key_ismemberof": [{
                 "rek_ismemberof_id": null,
                 "rek_ismemberof_pid": "UQ:678835",
-                "rek_ismemberof": "UQ:639325",
+                "rek_ismemberof": "UQ:244548",
                 "rek_ismemberof_order": 1
             }],
             "fez_record_search_key_issn": [{

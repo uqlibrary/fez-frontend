@@ -20,6 +20,10 @@ import {
     AuthorLinkingField,
     ContributorLinkingField
 } from 'modules/SharedComponents/AuthorLinking';
+import {
+    ContentIndicatorsField,
+    showContentIndicatorsField
+} from 'modules/SharedComponents/Toolbox/ContentIndicatorsField';
 import { validation, routes, claimRecordConfig } from 'config';
 import locale from 'locale/forms';
 
@@ -273,6 +277,29 @@ export default class ClaimRecord extends PureComponent {
                                                 className={contributorClassName}
                                                 validate={this._contributorValidation}
                                             />
+                                        </StandardCard>
+                                    </Grid>
+                                }
+                                {
+                                    showContentIndicatorsField(publication) &&
+                                    <Grid item xs={12}>
+                                        <StandardCard title={txt.contentIndicators.title} >
+                                            <Grid container spacing={24}>
+                                                <Grid item xs={12}>
+                                                    <Typography>{txt.contentIndicators.description}</Typography>
+                                                </Grid>
+                                                <Grid item xs={12}>
+                                                    <Field
+                                                        component={ContentIndicatorsField}
+                                                        disabled={this.props.submitting}
+                                                        id="content-indicators"
+                                                        name="contentIndicators"
+                                                        label={txt.contentIndicators.label}
+                                                        multiple
+                                                        fullWidth
+                                                    />
+                                                </Grid>
+                                            </Grid>
                                         </StandardCard>
                                     </Grid>
                                 }

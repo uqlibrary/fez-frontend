@@ -1040,6 +1040,42 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
         xs={12}
       >
         <StandardCard
+          title="Optional: Content Indicators"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={24}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(Typography)>
+                You can select multiple indicators for a work, but cannot remove existing ones. To change existing information, submit as a correction below.
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                id="content-indicators"
+                label="Please select relevant indicator(s)."
+                multiple={true}
+                name="contentIndicators"
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
           title="Optional: Suggest changes or add links to this work"
         >
           <WithStyles(Grid)
@@ -3122,6 +3158,42 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
               ]
             }
           />
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          title="Optional: Content Indicators"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={24}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(Typography)>
+                You can select multiple indicators for a work, but cannot remove existing ones. To change existing information, submit as a correction below.
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                id="content-indicators"
+                label="Please select relevant indicator(s)."
+                multiple={true}
+                name="contentIndicators"
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
         </StandardCard>
       </WithStyles(Grid)>
       <WithStyles(Grid)
@@ -5376,6 +5448,42 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
         xs={12}
       >
         <StandardCard
+          title="Optional: Content Indicators"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={24}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(Typography)>
+                You can select multiple indicators for a work, but cannot remove existing ones. To change existing information, submit as a correction below.
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                id="content-indicators"
+                label="Please select relevant indicator(s)."
+                multiple={true}
+                name="contentIndicators"
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
           title="Optional: Suggest changes or add links to this work"
         >
           <WithStyles(Grid)
@@ -6745,6 +6853,42 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
               ]
             }
           />
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          title="Optional: Content Indicators"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={24}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(Typography)>
+                You can select multiple indicators for a work, but cannot remove existing ones. To change existing information, submit as a correction below.
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                id="content-indicators"
+                label="Please select relevant indicator(s)."
+                multiple={true}
+                name="contentIndicators"
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
         </StandardCard>
       </WithStyles(Grid)>
       <WithStyles(Grid)
@@ -8128,6 +8272,42 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
         xs={12}
       >
         <StandardCard
+          title="Optional: Content Indicators"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={24}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(Typography)>
+                You can select multiple indicators for a work, but cannot remove existing ones. To change existing information, submit as a correction below.
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                id="content-indicators"
+                label="Please select relevant indicator(s)."
+                multiple={true}
+                name="contentIndicators"
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
           title="Optional: Suggest changes or add links to this work"
         >
           <WithStyles(Grid)
@@ -9497,6 +9677,42 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
               ]
             }
           />
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          title="Optional: Content Indicators"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={24}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(Typography)>
+                You can select multiple indicators for a work, but cannot remove existing ones. To change existing information, submit as a correction below.
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                id="content-indicators"
+                label="Please select relevant indicator(s)."
+                multiple={true}
+                name="contentIndicators"
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
         </StandardCard>
       </WithStyles(Grid)>
       <WithStyles(Grid)
@@ -11938,6 +12154,42 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
         xs={12}
       >
         <StandardCard
+          title="Optional: Content Indicators"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={24}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(Typography)>
+                You can select multiple indicators for a work, but cannot remove existing ones. To change existing information, submit as a correction below.
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                id="content-indicators"
+                label="Please select relevant indicator(s)."
+                multiple={true}
+                name="contentIndicators"
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
           title="Optional: Suggest changes or add links to this work"
         >
           <WithStyles(Grid)
@@ -13314,6 +13566,42 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
         xs={12}
       >
         <StandardCard
+          title="Optional: Content Indicators"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={24}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(Typography)>
+                You can select multiple indicators for a work, but cannot remove existing ones. To change existing information, submit as a correction below.
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                id="content-indicators"
+                label="Please select relevant indicator(s)."
+                multiple={true}
+                name="contentIndicators"
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
           title="Optional: Suggest changes or add links to this work"
         >
           <WithStyles(Grid)
@@ -14683,6 +14971,42 @@ exports[`Component ClaimRecord  should return and render alert message depending
               ]
             }
           />
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          title="Optional: Content Indicators"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={24}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(Typography)>
+                You can select multiple indicators for a work, but cannot remove existing ones. To change existing information, submit as a correction below.
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={true}
+                fullWidth={true}
+                id="content-indicators"
+                label="Please select relevant indicator(s)."
+                multiple={true}
+                name="contentIndicators"
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
         </StandardCard>
       </WithStyles(Grid)>
       <WithStyles(Grid)
@@ -16079,6 +16403,42 @@ exports[`Component ClaimRecord  should return and render alert message depending
         xs={12}
       >
         <StandardCard
+          title="Optional: Content Indicators"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={24}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(Typography)>
+                You can select multiple indicators for a work, but cannot remove existing ones. To change existing information, submit as a correction below.
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                id="content-indicators"
+                label="Please select relevant indicator(s)."
+                multiple={true}
+                name="contentIndicators"
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
           title="Optional: Suggest changes or add links to this work"
         >
           <WithStyles(Grid)
@@ -17459,6 +17819,42 @@ exports[`Component ClaimRecord  should return and render alert message depending
               ]
             }
           />
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          title="Optional: Content Indicators"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={24}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(Typography)>
+                You can select multiple indicators for a work, but cannot remove existing ones. To change existing information, submit as a correction below.
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                id="content-indicators"
+                label="Please select relevant indicator(s)."
+                multiple={true}
+                name="contentIndicators"
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
         </StandardCard>
       </WithStyles(Grid)>
       <WithStyles(Grid)
@@ -18854,6 +19250,42 @@ exports[`Component ClaimRecord  should return and render alert message depending
         xs={12}
       >
         <StandardCard
+          title="Optional: Content Indicators"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={24}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(Typography)>
+                You can select multiple indicators for a work, but cannot remove existing ones. To change existing information, submit as a correction below.
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                id="content-indicators"
+                label="Please select relevant indicator(s)."
+                multiple={true}
+                name="contentIndicators"
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
           title="Optional: Suggest changes or add links to this work"
         >
           <WithStyles(Grid)
@@ -19047,6 +19479,42 @@ exports[`Component ClaimRecord  should return and render alert message depending
         xs={12}
       >
         <StandardCard
+          title="Optional: Content Indicators"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={24}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(Typography)>
+                You can select multiple indicators for a work, but cannot remove existing ones. To change existing information, submit as a correction below.
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                id="content-indicators"
+                label="Please select relevant indicator(s)."
+                multiple={true}
+                name="contentIndicators"
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
           title="Optional: Suggest changes or add links to this work"
         >
           <WithStyles(Grid)
@@ -19220,6 +19688,42 @@ exports[`Component ClaimRecord  should show alert if submit failed and PID not f
         }
         when={true}
       />
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          title="Optional: Content Indicators"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={24}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(Typography)>
+                You can select multiple indicators for a work, but cannot remove existing ones. To change existing information, submit as a correction below.
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                id="content-indicators"
+                label="Please select relevant indicator(s)."
+                multiple={true}
+                name="contentIndicators"
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
         xs={12}

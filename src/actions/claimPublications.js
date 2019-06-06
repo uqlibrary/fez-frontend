@@ -253,14 +253,15 @@ export function claimPublication(data) {
                 data.publication
             ),
             ...transformers.getExternalSourceIdSearchKeys(data.publication.sources),
+            ...transformers.getContentIndicatorSearchKey(data.contentIndicators || null),
             ...recordAuthorsIdSearchKeys,
             ...recordContributorsIdSearchKeys
         } : null;
 
-        // update record with author/contributor id/link
-        // TODO: Add content indicator data in the patch request
+        // update record with author/contributor id, link, content indicators
         const patchRecordRequest = data.publication.rek_pid ? {
             ...transformers.getRecordLinkSearchKey(data),
+            ...transformers.getContentIndicatorSearchKey(data.contentIndicators || null),
             ...recordAuthorsIdSearchKeys,
             ...recordContributorsIdSearchKeys
         } : null;
