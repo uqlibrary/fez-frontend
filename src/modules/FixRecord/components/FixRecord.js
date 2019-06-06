@@ -174,7 +174,11 @@ export default class FixRecord extends PureComponent {
                                     label={txt.fieldLabels.action}
                                     validate={[validation.required]}
                                     onChange={this._actionSelected}
-                                    required >
+                                    required
+                                    SelectDisplayProps={{
+                                        id: 'fixAction'
+                                    }}
+                                >
                                     {fixOptions}
                                 </Field>
                             </StandardCard>
@@ -289,7 +293,8 @@ export default class FixRecord extends PureComponent {
                                 fullWidth
                                 children={txt.cancel}
                                 disabled={this.props.submitting}
-                                onClick={this._cancelFix} />
+                                onClick={this._cancelFix}
+                            />
                         </Grid>
                         {
                             this.state.selectedRecordAction &&
@@ -300,7 +305,9 @@ export default class FixRecord extends PureComponent {
                                     fullWidth
                                     children={txt.submit}
                                     onClick={this.props.handleSubmit}
-                                    disabled={this.props.submitting || this.props.disableSubmit} />
+                                    disabled={this.props.submitting || this.props.disableSubmit}
+                                    id="fixSubmit"
+                                />
                             </Grid>
                         }
                     </Grid>

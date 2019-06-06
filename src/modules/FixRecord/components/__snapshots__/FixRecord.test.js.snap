@@ -431,6 +431,11 @@ exports[`Component FixRecord _handleDefaultSubmit() 1`] = `
             }
           />
           <Field
+            SelectDisplayProps={
+              Object {
+                "id": "fixAction",
+              }
+            }
             component={[Function]}
             disabled={false}
             label="Select an action"
@@ -915,6 +920,11 @@ exports[`Component FixRecord componentWillReceiveProps() 1`] = `
             }
           />
           <Field
+            SelectDisplayProps={
+              Object {
+                "id": "fixAction",
+              }
+            }
             component={[Function]}
             disabled={false}
             label="Select an action"
@@ -1410,6 +1420,11 @@ exports[`Component FixRecord should render fix record form 1`] = `
             }
           />
           <Field
+            SelectDisplayProps={
+              Object {
+                "id": "fixAction",
+              }
+            }
             component={[Function]}
             disabled={false}
             label="Select an action"
@@ -1611,6 +1626,7 @@ exports[`Component FixRecord should render fix record form 1`] = `
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="fixSubmit"
           onClick={[MockFunction]}
           variant="contained"
         >
@@ -2069,6 +2085,11 @@ exports[`Component FixRecord should render record citation, two actions in selec
             }
           />
           <Field
+            SelectDisplayProps={
+              Object {
+                "id": "fixAction",
+              }
+            }
             component={[Function]}
             disabled={false}
             label="Select an action"
@@ -2553,6 +2574,11 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
             }
           />
           <Field
+            SelectDisplayProps={
+              Object {
+                "id": "fixAction",
+              }
+            }
             component={[Function]}
             disabled={false}
             label="Select an action"
@@ -2759,6 +2785,7 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="fixSubmit"
           onClick={[MockFunction]}
           variant="contained"
         >
@@ -3201,6 +3228,11 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
             }
           />
           <Field
+            SelectDisplayProps={
+              Object {
+                "id": "fixAction",
+              }
+            }
             component={[Function]}
             disabled={false}
             label="Select an action"
@@ -3402,6 +3434,7 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="fixSubmit"
           onClick={[MockFunction]}
           variant="contained"
         >
@@ -3844,6 +3877,11 @@ exports[`Component FixRecord should render unclaim form 1`] = `
             }
           />
           <Field
+            SelectDisplayProps={
+              Object {
+                "id": "fixAction",
+              }
+            }
             component={[Function]}
             disabled={false}
             label="Select an action"
@@ -3926,6 +3964,7 @@ exports[`Component FixRecord should render unclaim form 1`] = `
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="fixSubmit"
           onClick={[MockFunction]}
           variant="contained"
         >
