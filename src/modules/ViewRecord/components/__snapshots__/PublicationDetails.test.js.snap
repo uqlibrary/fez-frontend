@@ -620,14 +620,14 @@ exports[`Publication Details Component  Renders full mount 1`] = `
                 "fez_record_search_key_biosis_id": null,
                 "fez_record_search_key_content_indicator": Array [
                   Object {
-                    "rek_content_indicator": 454057,
+                    "rek_content_indicator": 454079,
                     "rek_content_indicator_id": 1,
                     "rek_content_indicator_lookup": "some content indicator",
                     "rek_content_indicator_order": 1,
                     "rek_ismemberof": "UQ:152266",
                   },
                   Object {
-                    "rek_content_indicator": 454058,
+                    "rek_content_indicator": 454080,
                     "rek_content_indicator_id": 2,
                     "rek_content_indicator_lookup": "yet another content indicator",
                     "rek_content_indicator_order": 2,
@@ -1445,14 +1445,14 @@ exports[`Publication Details Component  Renders full mount 1`] = `
                   "fez_record_search_key_biosis_id": null,
                   "fez_record_search_key_content_indicator": Array [
                     Object {
-                      "rek_content_indicator": 454057,
+                      "rek_content_indicator": 454079,
                       "rek_content_indicator_id": 1,
                       "rek_content_indicator_lookup": "some content indicator",
                       "rek_content_indicator_order": 1,
                       "rek_ismemberof": "UQ:152266",
                     },
                     Object {
-                      "rek_content_indicator": 454058,
+                      "rek_content_indicator": 454080,
                       "rek_content_indicator_id": 2,
                       "rek_content_indicator_lookup": "yet another content indicator",
                       "rek_content_indicator_order": 2,
@@ -2276,14 +2276,14 @@ exports[`Publication Details Component  Renders full mount 1`] = `
                     "fez_record_search_key_biosis_id": null,
                     "fez_record_search_key_content_indicator": Array [
                       Object {
-                        "rek_content_indicator": 454057,
+                        "rek_content_indicator": 454079,
                         "rek_content_indicator_id": 1,
                         "rek_content_indicator_lookup": "some content indicator",
                         "rek_content_indicator_order": 1,
                         "rek_ismemberof": "UQ:152266",
                       },
                       Object {
-                        "rek_content_indicator": 454058,
+                        "rek_content_indicator": 454080,
                         "rek_content_indicator_id": 2,
                         "rek_content_indicator_lookup": "yet another content indicator",
                         "rek_content_indicator_order": 2,

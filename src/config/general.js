@@ -958,9 +958,9 @@ export const QUALITY_INDICATORS = [
 ];
 
 export const CONTENT_INDICATORS = [
-    { value: 454057, text: 'Scholarship of Teaching and Learning' },
-    { value: 454058, text: 'Protocol' },
-    { value: 454059, text: 'Case Study' },
+    { value: 454079, text: 'Scholarship of Teaching and Learning' },
+    { value: 454080, text: 'Protocol' },
+    { value: 454081, text: 'Case Study' },
 ];
 
 export const AUDIENCE_SIZE = [

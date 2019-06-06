@@ -7141,13 +7141,13 @@ export const mockRecordToFix = {
         {
             "rek_content_indicator_id": 1,
             "rek_content_indicator_pid": "UQ:41878",
-            "rek_content_indicator": 454057,
+            "rek_content_indicator": 454079,
             "rek_content_indicator_order": 1,
             "rek_content_indicator_lookup": 'Scholarship of Teaching and Learning',
         }, {
             "rek_content_indicator_id": 2,
             "rek_content_indicator_pid": "UQ:41878",
-            "rek_content_indicator": 454058,
+            "rek_content_indicator": 454080,
             "rek_content_indicator_order": 2,
             "rek_content_indicator_lookup": 'Protocols',
         }
@@ -10234,13 +10234,13 @@ export const publicationDetails = {
     "fez_record_search_key_content_indicator": [
         {
             "rek_content_indicator_id": 1,
-            "rek_content_indicator": 454057,
+            "rek_content_indicator": 454079,
             "rek_ismemberof": "UQ:152266",
             "rek_content_indicator_order": 1,
             "rek_content_indicator_lookup": 'some content indicator',
         }, {
             "rek_content_indicator_id": 2,
-            "rek_content_indicator": 454058,
+            "rek_content_indicator": 454080,
             "rek_ismemberof": "UQ:152266",
             "rek_content_indicator_order": 2,
             "rek_content_indicator_lookup": 'yet another content indicator',

@@ -569,7 +569,7 @@ exports[`FixRecord form should allow content indicators to be selected 3`] = `
 +                           </div>
 +                           <input
 +                             type=\\"hidden\\"
-+                             value=\\"454057,454058\\"
++                             value=\\"454079,454080\\"
 +                           />
 +                           <svg
 +                             aria-hidden=\\"true\\"
@@ -886,8 +886,8 @@ exports[`FixRecord form should allow content indicators to be selected 5`] = `
                             </div>
                             <input
                               type=\\"hidden\\"
--                             value=\\"454057,454058\\"
-+                             value=\\"454057,454058,454059\\"
+-                             value=\\"454079,454080\\"
++                             value=\\"454079,454080,454081\\"
                             />
                             <svg
                               aria-hidden=\\"true\\"
@@ -1006,8 +1006,8 @@ exports[`FixRecord form should allow content indicators to be selected 6`] = `
                             </div>
                             <input
                               type=\\"hidden\\"
--                             value=\\"454057,454058,454059\\"
-+                             value=\\"454057,454058\\"
+-                             value=\\"454079,454080,454081\\"
++                             value=\\"454079,454080\\"
                             />
                             <svg
                               aria-hidden=\\"true\\"
