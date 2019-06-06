@@ -1,0 +1,1629 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FixRecord form should allow content indicators to be selected 1`] = `
+"Snapshot Diff:
+- First value
++ Second value
+
+  <DocumentFragment>
+    <div
+-     style=\\"padding: 8px;\\"
++     class=\\"MuiGrid-container-3 StandardPage\\"
++   >
++     <h2
++       class=\\"MuiTypography-root-100 MuiTypography-h4-115 MuiTypography-colorPrimary-130 Page-layoutTitle-303\\"
++     >
++       Request a correction or upload files
++     </h2>
++     <div
++       class=\\"MuiGrid-item-4 Page-layoutCard-302\\"
++     >
++       <form>
++         <div
++           class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-24-27\\"
++         >
++           <div
++             class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++           >
++             <div
++               class=\\"MuiPaper-root-309 MuiPaper-elevation1-312 MuiPaper-rounded-310 MuiCard-root-308 Cards-card-304 StandardCard\\"
++             >
++               <div
++                 class=\\"MuiCardHeader-root-336\\"
++               >
++                 <div
++                   class=\\"MuiCardHeader-content-339\\"
++                 >
++                   <h3
++                     class=\\"MuiTypography-root-100 MuiTypography-h5-116 MuiTypography-colorInherit-129 MuiCardHeader-title-340\\"
++                   >
++                     Work to be amended
++                   </h3>
++                 </div>
++               </div>
++               <div
++                 class=\\"MuiCardContent-root-342\\"
++               >
++                 <div
++                   class=\\"MuiGrid-container-3\\"
++                 >
++                   <div
++                     class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31\\"
++                   >
++                     <div
++                       class=\\"MuiGrid-container-3\\"
++                     >
++                       <div
++                         class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31\\"
++                         style=\\"min-width: 1px;\\"
++                       >
++                         <h6
++                           class=\\"MuiTypography-root-100 MuiTypography-h6-117 PublicationCitation-citationTitle-344\\"
++                         >
++                           <a
++                             href=\\"/view/UQ:41878\\"
++                           >
++                             Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
++                           </a>
++                         </h6>
++                       </div>
++                       <div
++                         class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 PublicationCitation-citationText-345\\"
++                       >
++                         <div
++                           class=\\"citationContent citationJournalArticle\\"
++                         >
++                           <span
++                             class=\\"citationAuthors\\"
++                           >
++                             <span
++                               class=\\"citationAuthor\\"
++                             >
++                               He, Y., 
++                             </span>
++                             <span
++                               class=\\"citationAuthor\\"
++                             >
++                               Brown, M. A., 
++                             </span>
++                             <span
++                               class=\\"citationAuthor\\"
++                             >
++                               Rothnagel, J. A., 
++                             </span>
++                             <span
++                               class=\\"citationAuthor\\"
++                             >
++                               Saunders, N. A.
++                             </span>
++                             <span
++                               class=\\"citationAuthor\\"
++                             >
++                                and Smith, R.
++                             </span>
++                              
++                           </span>
++                           <span
++                             class=\\"citationDate\\"
++                           >
++                             (2004).
++                           </span>
++                           <span
++                             class=\\"citationTitle\\"
++                           >
++                              Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth.
++                           </span>
++                           <span
++                             class=\\"citationJournalName\\"
++                           >
++                              Molecular Biology of The Cell 
++                           </span>
++                           <span
++                             class=\\"citationVolumeNumber\\"
++                           >
++                              15 
++                           </span>
++                           <span
++                             class=\\"citationIssueNumber empty\\"
++                           />
++                           <span
++                             class=\\"citationPageRange\\"
++                           >
++                             <span
++                               class=\\"citationStartPage\\"
++                             >
++                               252A
++                             </span>
++                             -
++                             <span
++                               class=\\"citationEndPage\\"
++                             >
++                               253A
++                             </span>
++                           </span>
++                           <span>
++                             . 
++                           </span>
++                           <span
++                             class=\\"citationDOI empty\\"
++                           />
++                         </div>
++                       </div>
++                       <div
++                         class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++                       >
++                         <span
++                           class=\\"MuiTypography-root-100 MuiTypography-caption-110 MuiTypography-gutterBottom-127\\"
++                         >
++                           Content Indicators: Scholarship of Teaching and Learning, Protocols
++                         </span>
++                       </div>
++                       <div
++                         class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 PublicationCitation-citationCounts-346\\"
++                       >
++                         <div
++                           class=\\"MuiGrid-container-3\\"
++                         >
++                           <div
++                             class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-auto-44\\"
++                           >
++                             <a
++                               aria-label=\\"Full citation in Web of science will open in a new window\\"
++                               class=\\"wosCitationCount CitationCountView-citationCount-350 ExternalLink-externalLink-352\\"
++                               href=\\"http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=000224648802120&SrcAuth=uqueensland\\"
++                               rel=\\"noopener noreferrer\\"
++                               tabindex=\\"0\\"
++                               target=\\"_blank\\"
++                               theme=\\"[object Object]\\"
++                               title=\\"Full citation in Web of science will open in a new window\\"
++                             >
++                               <span
++                                 class=\\"fez-icon wos large\\"
++                               />
++                               <span
++                                 class=\\"CitationCountView-citationCountNumber-351\\"
++                               >
++                                 2
++                               </span>
++                             </a>
++                             <a
++                               aria-label=\\"Full citation in Google scholar will open in a new window\\"
++                               class=\\"googleCitationCount CitationCountView-citationCount-350 ExternalLink-externalLink-352\\"
++                               href=\\"https://scholar.google.com/scholar?q=intitle:Roles%20of%20heterogeneous%20nuclear%20ribonucleoproteins%20A/B%20in%20cell%20growth\\"
++                               rel=\\"noopener noreferrer\\"
++                               tabindex=\\"0\\"
++                               target=\\"_blank\\"
++                               theme=\\"[object Object]\\"
++                               title=\\"Full citation in Google scholar will open in a new window\\"
++                             >
++                               <span
++                                 class=\\"fez-icon google large\\"
++                               />
++                             </a>
++                             <span
++                               class=\\"noOaIcon\\"
++                             />
++                           </div>
++                           <div
++                             class=\\"MuiGrid-item-4\\"
++                           >
++                             <a
++                               class=\\"CitationCounts-statsLink-349 ExternalLink-externalLink-352\\"
++                               href=\\"https://app.library.uq.edu.au/#/authors/view/UQ:41878\\"
++                               rel=\\"noopener noreferrer\\"
++                               tabindex=\\"0\\"
++                               target=\\"_blank\\"
++                               theme=\\"[object Object]\\"
++                               title=\\"Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth\\"
++                             >
++                               <svg
++                                 aria-hidden=\\"true\\"
++                                 class=\\"MuiSvgIcon-root-354 ExternalLink-externalLinkIcon-353\\"
++                                 focusable=\\"false\\"
++                                 role=\\"presentation\\"
++                                 viewBox=\\"0 0 24 24\\"
++                               >
++                                 <path
++                                   d=\\"M0 0h24v24H0z\\"
++                                   fill=\\"none\\"
++                                 />
++                                 <path
++                                   d=\\"M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z\\"
++                                 />
++                               </svg>
++                               View full statistics
++                             </a>
++                           </div>
++                           <div
++                             class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31\\"
++                           />
++                         </div>
++                       </div>
++                     </div>
++                   </div>
++                 </div>
++                 <hr
++                   class=\\"MuiDivider-root-363 PublicationCitation-divider-343\\"
++                 />
++                 <div
++                   class=\\"MuiFormControl-root-367\\"
++                   style=\\"width: 100%;\\"
++                 >
++                   <label
++                     class=\\"MuiFormLabel-root-378 MuiFormLabel-error-381 MuiFormLabel-required-383 MuiInputLabel-root-371 MuiInputLabel-formControl-372 MuiInputLabel-animated-375\\"
++                     data-shrink=\\"false\\"
++                   >
++                     Select an action
++                     <span
++                       class=\\"MuiFormLabel-asterisk-384 MuiFormLabel-error-381\\"
++                     >
++                        *
++                     </span>
++                   </label>
++                   <div
++                     class=\\"MuiInputBase-root-405 MuiInput-root-392 MuiInput-underline-396 MuiInputBase-error-411 MuiInput-error-397 MuiInputBase-formControl-406 MuiInput-formControl-393\\"
++                     label=\\"Select an action\\"
++                     required=\\"\\"
++                   >
++                     <div
++                       class=\\"MuiSelect-root-385\\"
++                     >
++                       <div
++                         aria-haspopup=\\"true\\"
++                         aria-pressed=\\"false\\"
++                         class=\\"MuiSelect-select-386 MuiSelect-selectMenu-389 MuiInputBase-input-415 MuiInput-input-400\\"
++                         id=\\"fixAction\\"
++                         role=\\"button\\"
++                         tabindex=\\"0\\"
++                       >
++                         <span>
++                           ​
++                         </span>
++                       </div>
++                       <input
++                         name=\\"fixAction\\"
++                         type=\\"hidden\\"
++                         value=\\"\\"
++                       />
++                       <svg
++                         aria-hidden=\\"true\\"
++                         class=\\"MuiSvgIcon-root-354 MuiSelect-icon-391\\"
++                         focusable=\\"false\\"
++                         role=\\"presentation\\"
++                         viewBox=\\"0 0 24 24\\"
++                       >
++                         <path
++                           d=\\"M7 10l5 5 5-5z\\"
++                         />
++                       </svg>
++                     </div>
++                   </div>
++                   <p
++                     class=\\"MuiFormHelperText-root-462 MuiFormHelperText-error-463 MuiFormHelperText-required-469\\"
++                   >
++                     This field is required
++                   </p>
++                 </div>
++               </div>
++             </div>
++           </div>
++           <div
++             class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++           >
++             <div
++               class=\\"Alert\\"
++               style=\\"padding: 12px;\\"
+              >
+                <div
+-       class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-8-25 MuiGrid-align-items-xs-center-11 MuiGrid-align-content-xs-center-15 MuiGrid-justify-xs-center-20\\"
++                 class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-24-27 MuiGrid-align-items-xs-flex-start-12 MuiGrid-align-content-xs-center-15 MuiGrid-justify-xs-center-20 Alert-warning-478 Alert-common-470\\"
++               >
++                 <div
++                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-true-45\\"
+                  >
+                    <div
+-         class=\\"MuiGrid-item-4 MuiGrid-grid-xs-auto-30\\"
+-         style=\\"text-align: center;\\"
++                     class=\\"MuiGrid-container-3 MuiGrid-align-items-xs-flex-start-12 MuiGrid-align-content-xs-center-15 MuiGrid-justify-xs-center-20\\"
+                    >
+                      <div
+-           class=\\"MuiCircularProgress-root-293 MuiCircularProgress-colorPrimary-296 MuiCircularProgress-indeterminate-295\\"
+-           role=\\"progressbar\\"
+-           style=\\"width: 18px; height: 18px;\\"
++                       class=\\"MuiGrid-item-4 Alert-icon-471\\"
++                       id=\\"icon\\"
+                      >
+                        <svg
+-             class=\\"MuiCircularProgress-svg-298\\"
+-             viewBox=\\"22 22 44 44\\"
++                         aria-hidden=\\"true\\"
++                         class=\\"MuiSvgIcon-root-354 icon\\"
++                         focusable=\\"false\\"
++                         role=\\"presentation\\"
++                         viewBox=\\"0 0 24 24\\"
+                        >
+-             <circle
+-               class=\\"MuiCircularProgress-circle-299 MuiCircularProgress-circleIndeterminate-301\\"
+-               cx=\\"44\\"
+-               cy=\\"44\\"
++                         <path
++                           d=\\"M0 0h24v24H0z\\"
+                            fill=\\"none\\"
+-               r=\\"21\\"
+-               stroke-width=\\"2\\"
++                         />
++                         <path
++                           d=\\"M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z\\"
+                          />
+                        </svg>
+                      </div>
++                     <div
++                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31 Alert-text-472\\"
++                       id=\\"text\\"
++                     >
++                       <b>
++                         Validation - 
++                       </b>
++                       <span>
++                         Form cannot be submitted until all fields are valid. Please review all input fields.
++                         <ul />
++                       </span>
++                     </div>
++                   </div>
+                  </div>
++               </div>
++             </div>
++           </div>
++         </div>
+          <div
+-         class=\\"MuiGrid-item-4 MuiGrid-grid-xs-auto-30\\"
+-         style=\\"text-align: center;\\"
++           class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-24-27\\"
+          >
++           <div
++             class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31\\"
++           />
++           <div
++             class=\\"MuiGrid-item-4\\"
++           >
++             <button
++               class=\\"MuiButtonBase-root-452 MuiButton-root-426 MuiButton-contained-437 MuiButton-raised-440 MuiButton-fullWidth-451\\"
++               tabindex=\\"0\\"
++               type=\\"button\\"
++             >
+                <span
+-           class=\\"MuiTypography-root-100 MuiTypography-h5-116 MuiTypography-colorPrimary-130\\"
+-           style=\\"font-size: 1.33rem;\\"
++                 class=\\"MuiButton-label-427\\"
+                >
+-           Loading work
++                 Cancel
+                </span>
++               <span
++                 class=\\"MuiTouchRipple-root-455\\"
++               />
++             </button>
++           </div>
+          </div>
++       </form>
+      </div>
+    </div>
+  </DocumentFragment>"
+`;
+
+exports[`FixRecord form should allow content indicators to be selected 2`] = `
+"Snapshot Diff:
+- First value
++ Second value
+
+@@ -260,11 +260,12 @@
+                      <div
+                        class=\\"MuiSelect-root-385\\"
+                      >
+                        <div
+                          aria-haspopup=\\"true\\"
+-                         aria-pressed=\\"false\\"
++                         aria-owns=\\"menu-fixAction\\"
++                         aria-pressed=\\"true\\"
+                          class=\\"MuiSelect-select-386 MuiSelect-selectMenu-389 MuiInputBase-input-415 MuiInput-input-400\\"
+                          id=\\"fixAction\\"
+                          role=\\"button\\"
+                          tabindex=\\"0\\"
+                        >"
+`;
+
+exports[`FixRecord form should allow content indicators to be selected 3`] = `
+"Snapshot Diff:
+- First value
++ Second value
+
+@@ -240,45 +240,42 @@
+                  <div
+                    class=\\"MuiFormControl-root-367\\"
+                    style=\\"width: 100%;\\"
+                  >
+                    <label
+-                     class=\\"MuiFormLabel-root-378 MuiFormLabel-error-381 MuiFormLabel-required-383 MuiInputLabel-root-371 MuiInputLabel-formControl-372 MuiInputLabel-animated-375\\"
+-                     data-shrink=\\"false\\"
++                     class=\\"MuiFormLabel-root-378 MuiFormLabel-filled-382 MuiFormLabel-required-383 MuiInputLabel-root-371 MuiInputLabel-formControl-372 MuiInputLabel-animated-375 MuiInputLabel-shrink-374\\"
++                     data-shrink=\\"true\\"
+                    >
+                      Select an action
+                      <span
+-                       class=\\"MuiFormLabel-asterisk-384 MuiFormLabel-error-381\\"
++                       class=\\"MuiFormLabel-asterisk-384\\"
+                      >
+                         *
+                      </span>
+                    </label>
+                    <div
+-                     class=\\"MuiInputBase-root-405 MuiInput-root-392 MuiInput-underline-396 MuiInputBase-error-411 MuiInput-error-397 MuiInputBase-formControl-406 MuiInput-formControl-393\\"
++                     class=\\"MuiInputBase-root-405 MuiInput-root-392 MuiInput-underline-396 MuiInputBase-formControl-406 MuiInput-formControl-393\\"
+                      label=\\"Select an action\\"
+                      required=\\"\\"
+                    >
+                      <div
+                        class=\\"MuiSelect-root-385\\"
+                      >
+                        <div
+                          aria-haspopup=\\"true\\"
+-                         aria-owns=\\"menu-fixAction\\"
+-                         aria-pressed=\\"true\\"
++                         aria-pressed=\\"false\\"
+                          class=\\"MuiSelect-select-386 MuiSelect-selectMenu-389 MuiInputBase-input-415 MuiInput-input-400\\"
+                          id=\\"fixAction\\"
+                          role=\\"button\\"
+                          tabindex=\\"0\\"
+                        >
+-                         <span>
+-                           ​
+-                         </span>
++                         I am the author/editor/contributor of this work - I would like to add information, make a correction, or upload files
+                        </div>
+                        <input
+                          name=\\"fixAction\\"
+                          type=\\"hidden\\"
+-                         value=\\"\\"
++                         value=\\"fix\\"
+                        />
+                        <svg
+                          aria-hidden=\\"true\\"
+                          class=\\"MuiSvgIcon-root-354 MuiSelect-icon-391\\"
+                          focusable=\\"false\\"
+@@ -287,21 +284,309 @@
+                        >
+                          <path
+                            d=\\"M7 10l5 5 5-5z\\"
+                          />
+                        </svg>
++                     </div>
++                   </div>
++                 </div>
++               </div>
++             </div>
++           </div>
++           <div />
++           <div
++             class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++           >
++             <div
++               class=\\"MuiPaper-root-309 MuiPaper-elevation1-312 MuiPaper-rounded-310 MuiCard-root-308 Cards-card-304 StandardCard\\"
++             >
++               <div
++                 class=\\"MuiCardHeader-root-336\\"
++               >
++                 <div
++                   class=\\"MuiCardHeader-content-339\\"
++                 >
++                   <h3
++                     class=\\"MuiTypography-root-100 MuiTypography-h5-116 MuiTypography-colorInherit-129 MuiCardHeader-title-340\\"
++                   >
++                     Content Indicators
++                   </h3>
+                  </div>
+                </div>
++               <div
++                 class=\\"MuiCardContent-root-342\\"
++               >
++                 <div
++                   class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-24-27\\"
++                 >
++                   <div
++                     class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++                   >
+                      <p
+-                     class=\\"MuiFormHelperText-root-462 MuiFormHelperText-error-463 MuiFormHelperText-required-469\\"
++                       class=\\"MuiTypography-root-100 MuiTypography-body2-108\\"
++                     >
++                       You can select multiple indicators for a work, but cannot remove existing ones. To change existing information, submit as a correction below.
++                     </p>
++                   </div>
++                   <div
++                     class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++                   >
++                     <div
++                       class=\\"MuiFormControl-root-367 MuiFormControl-fullWidth-370\\"
++                     >
++                       <label
++                         class=\\"MuiFormLabel-root-378 MuiFormLabel-filled-382 MuiInputLabel-root-371 MuiInputLabel-formControl-372 MuiInputLabel-animated-375 MuiInputLabel-shrink-374\\"
++                         data-shrink=\\"true\\"
+                        >
+-                     This field is required
++                         Please select relevant indicator(s).
++                       </label>
++                       <div
++                         class=\\"MuiInputBase-root-405 MuiInput-root-392 MuiInput-underline-396 MuiInputBase-formControl-406 MuiInput-formControl-393\\"
++                       >
++                         <div
++                           class=\\"MuiSelect-root-385\\"
++                         >
++                           <div
++                             aria-haspopup=\\"true\\"
++                             aria-pressed=\\"false\\"
++                             class=\\"MuiSelect-select-386 MuiSelect-selectMenu-389 MuiInputBase-input-415 MuiInput-input-400\\"
++                             id=\\"content-indicators\\"
++                             role=\\"button\\"
++                             tabindex=\\"0\\"
++                           >
++                             Scholarship of Teaching and Learning, Protocol
++                           </div>
++                           <input
++                             type=\\"hidden\\"
++                             value=\\"454057,454058\\"
++                           />
++                           <svg
++                             aria-hidden=\\"true\\"
++                             class=\\"MuiSvgIcon-root-354 MuiSelect-icon-391\\"
++                             focusable=\\"false\\"
++                             role=\\"presentation\\"
++                             viewBox=\\"0 0 24 24\\"
++                           >
++                             <path
++                               d=\\"M7 10l5 5 5-5z\\"
++                             />
++                           </svg>
++                         </div>
++                       </div>
++                     </div>
++                   </div>
++                 </div>
++               </div>
++             </div>
++           </div>
++           <div
++             class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++           >
++             <div
++               class=\\"MuiPaper-root-309 MuiPaper-elevation1-312 MuiPaper-rounded-310 MuiCard-root-308 Cards-card-304 StandardCard\\"
++             >
++               <div
++                 class=\\"MuiCardHeader-root-336\\"
++               >
++                 <div
++                   class=\\"MuiCardHeader-content-339\\"
++                 >
++                   <h3
++                     class=\\"MuiTypography-root-100 MuiTypography-h5-116 MuiTypography-colorInherit-129 MuiCardHeader-title-340\\"
++                   >
++                     Suggest a correction
++                   </h3>
++                 </div>
++               </div>
++               <div
++                 class=\\"MuiCardContent-root-342\\"
++               >
++                 <div
++                   class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-16-26\\"
++                 >
++                   <div
++                     class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++                   >
++                     <div
++                       class=\\"MuiFormControl-root-367 MuiFormControl-fullWidth-370\\"
++                     >
++                       <label
++                         class=\\"MuiFormLabel-root-378 MuiInputLabel-root-371 MuiInputLabel-formControl-372 MuiInputLabel-animated-375\\"
++                         data-shrink=\\"false\\"
++                         for=\\"Describe the problem with this record, eg record is a duplicate, or suggested changes\\"
++                       >
++                         Describe the problem with this record, eg record is a duplicate, or suggested changes
++                       </label>
++                       <div
++                         class=\\"MuiInputBase-root-405 MuiInput-root-392 MuiInput-underline-396 MuiInputBase-fullWidth-414 MuiInput-fullWidth-399 MuiInputBase-formControl-406 MuiInput-formControl-393 MuiInputBase-multiline-413 MuiInput-multiline-398\\"
++                       >
++                         <textarea
++                           aria-invalid=\\"false\\"
++                           class=\\"MuiInputBase-input-415 MuiInput-input-400 MuiInputBase-inputMultiline-417 MuiInput-inputMultiline-402\\"
++                           id=\\"Describe the problem with this record, eg record is a duplicate, or suggested changes\\"
++                           name=\\"comments\\"
++                           rows=\\"3\\"
++                         />
++                       </div>
++                     </div>
++                   </div>
++                   <div
++                     class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++                   >
++                     <div
++                       class=\\"MuiFormControl-root-367 MuiFormControl-fullWidth-370\\"
++                     >
++                       <label
++                         class=\\"MuiFormLabel-root-378 MuiInputLabel-root-371 MuiInputLabel-formControl-372 MuiInputLabel-animated-375\\"
++                         data-shrink=\\"false\\"
++                         for=\\"Link (URL)\\"
++                       >
++                         Link (URL)
++                       </label>
++                       <div
++                         class=\\"MuiInputBase-root-405 MuiInput-root-392 MuiInput-underline-396 MuiInputBase-fullWidth-414 MuiInput-fullWidth-399 MuiInputBase-formControl-406 MuiInput-formControl-393\\"
++                       >
++                         <input
++                           aria-invalid=\\"false\\"
++                           class=\\"MuiInputBase-input-415 MuiInput-input-400\\"
++                           id=\\"Link (URL)\\"
++                           name=\\"rek_link\\"
++                           type=\\"text\\"
++                           value=\\"\\"
++                         />
++                       </div>
++                     </div>
++                   </div>
++                 </div>
++               </div>
++             </div>
++           </div>
++           <div
++             class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++           >
++             <div
++               class=\\"MuiPaper-root-309 MuiPaper-elevation1-312 MuiPaper-rounded-310 MuiCard-root-308 Cards-card-304 StandardCard\\"
++             >
++               <div
++                 class=\\"MuiCardHeader-root-336\\"
++               >
++                 <div
++                   class=\\"MuiCardHeader-content-339\\"
++                 >
++                   <h3
++                     class=\\"MuiTypography-root-100 MuiTypography-h5-116 MuiTypography-colorInherit-129 MuiCardHeader-title-340\\"
++                   >
++                     Upload files
++                   </h3>
++                 </div>
++               </div>
++               <div
++                 class=\\"MuiCardContent-root-342\\"
++               >
++                 <div>
++                   Upload an Open Access file, HERDC evidence or an NTRO Research Statement
++                 </div>
++                 <p
++                   class=\\"MuiTypography-root-100 MuiTypography-body2-108 MuiTypography-gutterBottom-127\\"
++                 >
++                   You may add up to 10 files (max 8GB each)
++                 </p>
++                 <div
++                   class=\\"MuiGrid-container-3\\"
++                 >
++                   <div
++                     class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++                   >
++                     <div
++                       tabindex=\\"0\\"
++                     >
++                       <div
++                         aria-disabled=\\"false\\"
++                         class=\\"\\"
++                         style=\\"position: relative; padding: 0px;\\"
++                       >
++                         <div
++                           class=\\"MuiGrid-container-3 FileUploadDropzoneStaticContent-dropzone-517\\"
++                         >
++                           <div
++                             class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-6-51\\"
++                           >
++                             <p
++                               class=\\"MuiTypography-root-100 MuiTypography-body2-108 FileUploadDropzoneStaticContent-heading-518\\"
++                             >
++                               File upload restrictions
+                              </p>
++                             <div>
++                               Please ensure your files:
++                               <ul>
++                                 <li>
++                                   begin with a letter and are less than 45 characters long
++                                 </li>
++                                 <li>
++                                   contain only upper and lowercase alphanumeric characters, and underscores
++                                 </li>
++                                 <li>
++                                   have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
++                                 </li>
++                                 <li>
++                                   two periods are allowed for multipart zip files.  Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
++                                 </li>
++                                 <li>
++                                   are uploaded individually and not inside a folder
++                                 </li>
++                               </ul>
++                             </div>
++                           </div>
++                           <div
++                             class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-6-51\\"
++                           >
++                             <div
++                               class=\\"MuiGrid-container-3 MuiGrid-direction-xs-column-6 MuiGrid-align-items-xs-center-11 MuiGrid-justify-xs-center-20 FileUploadDropzoneStaticContent-instructions-519\\"
++                             >
++                               <div
++                                 class=\\"MuiGrid-item-4\\"
++                               >
++                                 <svg
++                                   aria-hidden=\\"true\\"
++                                   class=\\"MuiSvgIcon-root-354 FileUploadDropzoneStaticContent-cloudIcon-520\\"
++                                   focusable=\\"false\\"
++                                   role=\\"presentation\\"
++                                   viewBox=\\"0 0 24 24\\"
++                                 >
++                                   <path
++                                     d=\\"M0 0h24v24H0z\\"
++                                     fill=\\"none\\"
++                                   />
++                                   <path
++                                     d=\\"M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z\\"
++                                   />
++                                 </svg>
++                               </div>
++                               <div
++                                 class=\\"MuiGrid-item-4\\"
++                               >
++                                 <p>
++                                   Click here to select files, or drag files into this area to upload
++                                 </p>
++                               </div>
++                             </div>
++                           </div>
++                         </div>
++                         <input
++                           autocomplete=\\"off\\"
++                           id=\\"Uploader\\"
++                           multiple=\\"\\"
++                           style=\\"position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; opacity: 0.00001; pointer-events: none;\\"
++                           type=\\"file\\"
++                         />
++                       </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
++             </div>
++           </div>
+            <div
+              class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
+            >
+              <div
+                class=\\"Alert\\"
+@@ -343,11 +628,15 @@
+                        <b>
+                          Validation - 
+                        </b>
+                        <span>
+                          Form cannot be submitted until all fields are valid. Please review all input fields.
+-                         <ul />
++                         <ul>
++                           <li>
++                             Please provide additional information, corrections or upload file(s).
++                           </li>
++                         </ul>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+@@ -374,10 +663,27 @@
+                  Cancel
+                </span>
+                <span
+                  class=\\"MuiTouchRipple-root-455\\"
+                />
++             </button>
++           </div>
++           <div
++             class=\\"MuiGrid-item-4\\"
++           >
++             <button
++               class=\\"MuiButtonBase-root-452 MuiButtonBase-disabled-453 MuiButton-root-426 MuiButton-contained-437 MuiButton-containedPrimary-438 MuiButton-raised-440 MuiButton-raisedPrimary-441 MuiButton-disabled-446 MuiButton-fullWidth-451\\"
++               disabled=\\"\\"
++               id=\\"fixSubmit\\"
++               tabindex=\\"-1\\"
++               type=\\"button\\"
++             >
++               <span
++                 class=\\"MuiButton-label-427\\"
++               >
++                 Submit
++               </span>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>"
+`;
+
+exports[`FixRecord form should allow content indicators to be selected 4`] = `
+"Snapshot Diff:
+- First value
++ Second value
+
+@@ -345,11 +345,12 @@
+                          <div
+                            class=\\"MuiSelect-root-385\\"
+                          >
+                            <div
+                              aria-haspopup=\\"true\\"
+-                             aria-pressed=\\"false\\"
++                             aria-owns=\\"menu-\\"
++                             aria-pressed=\\"true\\"
+                              class=\\"MuiSelect-select-386 MuiSelect-selectMenu-389 MuiInputBase-input-415 MuiInput-input-400\\"
+                              id=\\"content-indicators\\"
+                              role=\\"button\\"
+                              tabindex=\\"0\\"
+                            >"
+`;
+
+exports[`FixRecord form should allow content indicators to be selected 5`] = `
+"Snapshot Diff:
+- First value
++ Second value
+
+@@ -352,15 +352,15 @@
+                              class=\\"MuiSelect-select-386 MuiSelect-selectMenu-389 MuiInputBase-input-415 MuiInput-input-400\\"
+                              id=\\"content-indicators\\"
+                              role=\\"button\\"
+                              tabindex=\\"0\\"
+                            >
+-                             Scholarship of Teaching and Learning, Protocol
++                             Scholarship of Teaching and Learning, Protocol, Case Study
+                            </div>
+                            <input
+                              type=\\"hidden\\"
+-                             value=\\"454057,454058\\"
++                             value=\\"454057,454058,454059\\"
+                            />
+                            <svg
+                              aria-hidden=\\"true\\"
+                              class=\\"MuiSvgIcon-root-354 MuiSelect-icon-391\\"
+                              focusable=\\"false\\"
+@@ -584,67 +584,10 @@
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+-           <div
+-             class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
+-           >
+-             <div
+-               class=\\"Alert\\"
+-               style=\\"padding: 12px;\\"
+-             >
+-               <div
+-                 class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-24-27 MuiGrid-align-items-xs-flex-start-12 MuiGrid-align-content-xs-center-15 MuiGrid-justify-xs-center-20 Alert-warning-478 Alert-common-470\\"
+-               >
+-                 <div
+-                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-true-45\\"
+-                 >
+-                   <div
+-                     class=\\"MuiGrid-container-3 MuiGrid-align-items-xs-flex-start-12 MuiGrid-align-content-xs-center-15 MuiGrid-justify-xs-center-20\\"
+-                   >
+-                     <div
+-                       class=\\"MuiGrid-item-4 Alert-icon-471\\"
+-                       id=\\"icon\\"
+-                     >
+-                       <svg
+-                         aria-hidden=\\"true\\"
+-                         class=\\"MuiSvgIcon-root-354 icon\\"
+-                         focusable=\\"false\\"
+-                         role=\\"presentation\\"
+-                         viewBox=\\"0 0 24 24\\"
+-                       >
+-                         <path
+-                           d=\\"M0 0h24v24H0z\\"
+-                           fill=\\"none\\"
+-                         />
+-                         <path
+-                           d=\\"M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z\\"
+-                         />
+-                       </svg>
+-                     </div>
+-                     <div
+-                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31 Alert-text-472\\"
+-                       id=\\"text\\"
+-                     >
+-                       <b>
+-                         Validation - 
+-                       </b>
+-                       <span>
+-                         Form cannot be submitted until all fields are valid. Please review all input fields.
+-                         <ul>
+-                           <li>
+-                             Please provide additional information, corrections or upload file(s).
+-                           </li>
+-                         </ul>
+-                       </span>
+-                     </div>
+-                   </div>
+-                 </div>
+-               </div>
+-             </div>
+-           </div>
+          </div>
+          <div
+            class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-24-27\\"
+          >
+            <div
+@@ -670,21 +613,23 @@
+            </div>
+            <div
+              class=\\"MuiGrid-item-4\\"
+            >
+              <button
+-               class=\\"MuiButtonBase-root-452 MuiButtonBase-disabled-453 MuiButton-root-426 MuiButton-contained-437 MuiButton-containedPrimary-438 MuiButton-raised-440 MuiButton-raisedPrimary-441 MuiButton-disabled-446 MuiButton-fullWidth-451\\"
+-               disabled=\\"\\"
++               class=\\"MuiButtonBase-root-452 MuiButton-root-426 MuiButton-contained-437 MuiButton-containedPrimary-438 MuiButton-raised-440 MuiButton-raisedPrimary-441 MuiButton-fullWidth-451\\"
+                id=\\"fixSubmit\\"
+-               tabindex=\\"-1\\"
++               tabindex=\\"0\\"
+                type=\\"button\\"
+              >
+                <span
+                  class=\\"MuiButton-label-427\\"
+                >
+                  Submit
+                </span>
++               <span
++                 class=\\"MuiTouchRipple-root-455\\"
++               />
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>"
+`;
+
+exports[`FixRecord form should allow content indicators to be selected 6`] = `
+"Snapshot Diff:
+- First value
++ Second value
+
+@@ -352,15 +352,15 @@
+                              class=\\"MuiSelect-select-386 MuiSelect-selectMenu-389 MuiInputBase-input-415 MuiInput-input-400\\"
+                              id=\\"content-indicators\\"
+                              role=\\"button\\"
+                              tabindex=\\"0\\"
+                            >
+-                             Scholarship of Teaching and Learning, Protocol, Case Study
++                             Scholarship of Teaching and Learning, Protocol
+                            </div>
+                            <input
+                              type=\\"hidden\\"
+-                             value=\\"454057,454058,454059\\"
++                             value=\\"454057,454058\\"
+                            />
+                            <svg
+                              aria-hidden=\\"true\\"
+                              class=\\"MuiSvgIcon-root-354 MuiSelect-icon-391\\"
+                              focusable=\\"false\\"
+@@ -584,10 +584,67 @@
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
++           <div
++             class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++           >
++             <div
++               class=\\"Alert\\"
++               style=\\"padding: 12px;\\"
++             >
++               <div
++                 class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-24-27 MuiGrid-align-items-xs-flex-start-12 MuiGrid-align-content-xs-center-15 MuiGrid-justify-xs-center-20 Alert-warning-529 Alert-common-521\\"
++               >
++                 <div
++                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-true-45\\"
++                 >
++                   <div
++                     class=\\"MuiGrid-container-3 MuiGrid-align-items-xs-flex-start-12 MuiGrid-align-content-xs-center-15 MuiGrid-justify-xs-center-20\\"
++                   >
++                     <div
++                       class=\\"MuiGrid-item-4 Alert-icon-522\\"
++                       id=\\"icon\\"
++                     >
++                       <svg
++                         aria-hidden=\\"true\\"
++                         class=\\"MuiSvgIcon-root-354 icon\\"
++                         focusable=\\"false\\"
++                         role=\\"presentation\\"
++                         viewBox=\\"0 0 24 24\\"
++                       >
++                         <path
++                           d=\\"M0 0h24v24H0z\\"
++                           fill=\\"none\\"
++                         />
++                         <path
++                           d=\\"M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z\\"
++                         />
++                       </svg>
++                     </div>
++                     <div
++                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31 Alert-text-523\\"
++                       id=\\"text\\"
++                     >
++                       <b>
++                         Validation - 
++                       </b>
++                       <span>
++                         Form cannot be submitted until all fields are valid. Please review all input fields.
++                         <ul>
++                           <li>
++                             Please provide additional information, corrections or upload file(s).
++                           </li>
++                         </ul>
++                       </span>
++                     </div>
++                   </div>
++                 </div>
++               </div>
++             </div>
++           </div>
+          </div>
+          <div
+            class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-24-27\\"
+          >
+            <div
+@@ -613,23 +670,21 @@
+            </div>
+            <div
+              class=\\"MuiGrid-item-4\\"
+            >
+              <button
+-               class=\\"MuiButtonBase-root-452 MuiButton-root-426 MuiButton-contained-437 MuiButton-containedPrimary-438 MuiButton-raised-440 MuiButton-raisedPrimary-441 MuiButton-fullWidth-451\\"
++               class=\\"MuiButtonBase-root-452 MuiButtonBase-disabled-453 MuiButton-root-426 MuiButton-contained-437 MuiButton-containedPrimary-438 MuiButton-raised-440 MuiButton-raisedPrimary-441 MuiButton-disabled-446 MuiButton-fullWidth-451\\"
++               disabled=\\"\\"
+                id=\\"fixSubmit\\"
+-               tabindex=\\"0\\"
++               tabindex=\\"-1\\"
+                type=\\"button\\"
+              >
+                <span
+                  class=\\"MuiButton-label-427\\"
+                >
+                  Submit
+                </span>
+-               <span
+-                 class=\\"MuiTouchRipple-root-455\\"
+-               />
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>"
+`;
+
+exports[`FixRecord form should validate the form where applicable and submit correctly 1`] = `
+"Snapshot Diff:
+- First value
++ Second value
+
+@@ -251,24 +251,23 @@
+                      >
+                         *
+                      </span>
+                    </label>
+                    <div
+-                     class=\\"MuiInputBase-root-939 MuiInput-root-926 MuiInput-underline-930 MuiInputBase-formControl-940 MuiInput-formControl-927\\"
++                     class=\\"MuiInputBase-root-939 MuiInput-root-926 MuiInput-underline-930 MuiInputBase-disabled-942 MuiInput-disabled-929 MuiInputBase-formControl-940 MuiInput-formControl-927\\"
+                      label=\\"Select an action\\"
+                      required=\\"\\"
+                    >
+                      <div
+                        class=\\"MuiSelect-root-919\\"
+                      >
+                        <div
+                          aria-haspopup=\\"true\\"
+                          aria-pressed=\\"false\\"
+-                         class=\\"MuiSelect-select-920 MuiSelect-selectMenu-923 MuiInputBase-input-949 MuiInput-input-934\\"
++                         class=\\"MuiSelect-select-920 MuiSelect-selectMenu-923 MuiSelect-disabled-924 MuiInputBase-input-949 MuiInput-input-934 MuiInputBase-disabled-942 MuiInput-disabled-929\\"
+                          id=\\"fixAction\\"
+                          role=\\"button\\"
+-                         tabindex=\\"0\\"
+                        >
+                          I am the author/editor/contributor of this work - I would like to add information, make a correction, or upload files
+                        </div>
+                        <input
+                          name=\\"fixAction\\"
+@@ -338,23 +337,22 @@
+                          data-shrink=\\"true\\"
+                        >
+                          Please select relevant indicator(s).
+                        </label>
+                        <div
+-                         class=\\"MuiInputBase-root-939 MuiInput-root-926 MuiInput-underline-930 MuiInputBase-formControl-940 MuiInput-formControl-927\\"
++                         class=\\"MuiInputBase-root-939 MuiInput-root-926 MuiInput-underline-930 MuiInputBase-disabled-942 MuiInput-disabled-929 MuiInputBase-formControl-940 MuiInput-formControl-927\\"
+                        >
+                          <div
+                            class=\\"MuiSelect-root-919\\"
+                          >
+                            <div
+                              aria-haspopup=\\"true\\"
+                              aria-owns=\\"menu-\\"
+                              aria-pressed=\\"true\\"
+-                             class=\\"MuiSelect-select-920 MuiSelect-selectMenu-923 MuiInputBase-input-949 MuiInput-input-934\\"
++                             class=\\"MuiSelect-select-920 MuiSelect-selectMenu-923 MuiSelect-disabled-924 MuiInputBase-input-949 MuiInput-input-934 MuiInputBase-disabled-942 MuiInput-disabled-929\\"
+                              id=\\"content-indicators\\"
+                              role=\\"button\\"
+-                             tabindex=\\"0\\"
+                            >
+                              Scholarship of Teaching and Learning, Protocol, Case Study
+                            </div>
+                            <input
+                              type=\\"hidden\\"
+@@ -409,22 +407,23 @@
+                    >
+                      <div
+                        class=\\"MuiFormControl-root-901 MuiFormControl-fullWidth-904\\"
+                      >
+                        <label
+-                         class=\\"MuiFormLabel-root-912 MuiInputLabel-root-905 MuiInputLabel-formControl-906 MuiInputLabel-animated-909\\"
++                         class=\\"MuiFormLabel-root-912 MuiFormLabel-disabled-914 MuiInputLabel-root-905 MuiInputLabel-formControl-906 MuiInputLabel-animated-909\\"
+                          data-shrink=\\"false\\"
+                          for=\\"Describe the problem with this record, eg record is a duplicate, or suggested changes\\"
+                        >
+                          Describe the problem with this record, eg record is a duplicate, or suggested changes
+                        </label>
+                        <div
+-                         class=\\"MuiInputBase-root-939 MuiInput-root-926 MuiInput-underline-930 MuiInputBase-fullWidth-948 MuiInput-fullWidth-933 MuiInputBase-formControl-940 MuiInput-formControl-927 MuiInputBase-multiline-947 MuiInput-multiline-932\\"
++                         class=\\"MuiInputBase-root-939 MuiInput-root-926 MuiInput-underline-930 MuiInputBase-disabled-942 MuiInput-disabled-929 MuiInputBase-fullWidth-948 MuiInput-fullWidth-933 MuiInputBase-formControl-940 MuiInput-formControl-927 MuiInputBase-multiline-947 MuiInput-multiline-932\\"
+                        >
+                          <textarea
+                            aria-invalid=\\"false\\"
+-                           class=\\"MuiInputBase-input-949 MuiInput-input-934 MuiInputBase-inputMultiline-951 MuiInput-inputMultiline-936\\"
++                           class=\\"MuiInputBase-input-949 MuiInput-input-934 MuiInputBase-disabled-942 MuiInput-disabled-929 MuiInputBase-inputMultiline-951 MuiInput-inputMultiline-936\\"
++                           disabled=\\"\\"
+                            id=\\"Describe the problem with this record, eg record is a duplicate, or suggested changes\\"
+                            name=\\"comments\\"
+                            rows=\\"3\\"
+                          />
+                        </div>
+@@ -435,22 +434,23 @@
+                    >
+                      <div
+                        class=\\"MuiFormControl-root-901 MuiFormControl-fullWidth-904\\"
+                      >
+                        <label
+-                         class=\\"MuiFormLabel-root-912 MuiInputLabel-root-905 MuiInputLabel-formControl-906 MuiInputLabel-animated-909\\"
++                         class=\\"MuiFormLabel-root-912 MuiFormLabel-disabled-914 MuiInputLabel-root-905 MuiInputLabel-formControl-906 MuiInputLabel-animated-909\\"
+                          data-shrink=\\"false\\"
+                          for=\\"Link (URL)\\"
+                        >
+                          Link (URL)
+                        </label>
+                        <div
+-                         class=\\"MuiInputBase-root-939 MuiInput-root-926 MuiInput-underline-930 MuiInputBase-fullWidth-948 MuiInput-fullWidth-933 MuiInputBase-formControl-940 MuiInput-formControl-927\\"
++                         class=\\"MuiInputBase-root-939 MuiInput-root-926 MuiInput-underline-930 MuiInputBase-disabled-942 MuiInput-disabled-929 MuiInputBase-fullWidth-948 MuiInput-fullWidth-933 MuiInputBase-formControl-940 MuiInput-formControl-927\\"
+                        >
+                          <input
+                            aria-invalid=\\"false\\"
+-                           class=\\"MuiInputBase-input-949 MuiInput-input-934\\"
++                           class=\\"MuiInputBase-input-949 MuiInput-input-934 MuiInputBase-disabled-942 MuiInput-disabled-929\\"
++                           disabled=\\"\\"
+                            id=\\"Link (URL)\\"
+                            name=\\"rek_link\\"
+                            type=\\"text\\"
+                            value=\\"\\"
+                          />
+@@ -499,11 +499,11 @@
+                    >
+                      <div
+                        tabindex=\\"0\\"
+                      >
+                        <div
+-                         aria-disabled=\\"false\\"
++                         aria-disabled=\\"true\\"
+                          class=\\"\\"
+                          style=\\"position: relative; padding: 0px;\\"
+                        >
+                          <div
+                            class=\\"MuiGrid-container-537 FileUploadDropzoneStaticContent-dropzone-1051\\"
+@@ -572,10 +572,11 @@
+                              </div>
+                            </div>
+                          </div>
+                          <input
+                            autocomplete=\\"off\\"
++                           disabled=\\"\\"
+                            id=\\"Uploader\\"
+                            multiple=\\"\\"
+                            style=\\"position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; opacity: 0.00001; pointer-events: none;\\"
+                            type=\\"file\\"
+                          />
+@@ -584,52 +585,102 @@
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
++           <div
++             class=\\"MuiGrid-item-538 MuiGrid-grid-xs-12-577\\"
++           >
++             <div
++               class=\\"Alert\\"
++               style=\\"padding: 12px;\\"
++             >
++               <div
++                 class=\\"MuiGrid-container-537 MuiGrid-spacing-xs-24-561 MuiGrid-align-items-xs-flex-start-546 MuiGrid-align-content-xs-center-549 MuiGrid-justify-xs-center-554 Alert-info_outline-1067 Alert-common-1055\\"
++               >
++                 <div
++                   class=\\"MuiGrid-item-538 MuiGrid-grid-xs-12-577 MuiGrid-grid-sm-true-579\\"
++                 >
++                   <div
++                     class=\\"MuiGrid-container-537 MuiGrid-align-items-xs-flex-start-546 MuiGrid-align-content-xs-center-549 MuiGrid-justify-xs-center-554\\"
++                   >
++                     <div
++                       class=\\"MuiGrid-item-538 Alert-icon-1056\\"
++                       id=\\"icon\\"
++                     >
++                       <div
++                         class=\\"MuiCircularProgress-root-1069 MuiCircularProgress-colorPrimary-1072 MuiCircularProgress-indeterminate-1071 spinner\\"
++                         role=\\"progressbar\\"
++                         style=\\"width: 38px; height: 38px;\\"
++                       >
++                         <svg
++                           class=\\"MuiCircularProgress-svg-1074\\"
++                           viewBox=\\"22 22 44 44\\"
++                         >
++                           <circle
++                             class=\\"MuiCircularProgress-circle-1075 MuiCircularProgress-circleIndeterminate-1077\\"
++                             cx=\\"44\\"
++                             cy=\\"44\\"
++                             fill=\\"none\\"
++                             r=\\"20.5\\"
++                             stroke-width=\\"3\\"
++                           />
++                         </svg>
++                       </div>
++                     </div>
++                     <div
++                       class=\\"MuiGrid-item-538 MuiGrid-grid-xs-true-565 Alert-text-1057\\"
++                       id=\\"text\\"
++                     >
++                       <b>
++                         Saving - 
++                       </b>
++                       Request is being processed.
++                     </div>
++                   </div>
++                 </div>
++               </div>
+              </div>
++           </div>
++         </div>
+          <div
+            class=\\"MuiGrid-container-537 MuiGrid-spacing-xs-24-561\\"
+          >
+            <div
+              class=\\"MuiGrid-item-538 MuiGrid-grid-xs-true-565\\"
+            />
+            <div
+              class=\\"MuiGrid-item-538\\"
+            >
+              <button
+-               class=\\"MuiButtonBase-root-986 MuiButton-root-960 MuiButton-contained-971 MuiButton-raised-974 MuiButton-fullWidth-985\\"
+-               tabindex=\\"0\\"
++               class=\\"MuiButtonBase-root-986 MuiButtonBase-disabled-987 MuiButton-root-960 MuiButton-contained-971 MuiButton-raised-974 MuiButton-disabled-980 MuiButton-fullWidth-985\\"
++               disabled=\\"\\"
++               tabindex=\\"-1\\"
+                type=\\"button\\"
+              >
+                <span
+                  class=\\"MuiButton-label-961\\"
+                >
+                  Cancel
+                </span>
+-               <span
+-                 class=\\"MuiTouchRipple-root-989\\"
+-               />
+              </button>
+            </div>
+            <div
+              class=\\"MuiGrid-item-538\\"
+            >
+              <button
+-               class=\\"MuiButtonBase-root-986 MuiButton-root-960 MuiButton-contained-971 MuiButton-containedPrimary-972 MuiButton-raised-974 MuiButton-raisedPrimary-975 MuiButton-fullWidth-985\\"
++               class=\\"MuiButtonBase-root-986 MuiButtonBase-disabled-987 MuiButton-root-960 MuiButton-contained-971 MuiButton-containedPrimary-972 MuiButton-raised-974 MuiButton-raisedPrimary-975 MuiButton-disabled-980 MuiButton-fullWidth-985\\"
++               disabled=\\"\\"
+                id=\\"fixSubmit\\"
+-               tabindex=\\"0\\"
++               tabindex=\\"-1\\"
+                type=\\"button\\"
+              >
+                <span
+                  class=\\"MuiButton-label-961\\"
+                >
+                  Submit
+                </span>
+-               <span
+-                 class=\\"MuiTouchRipple-root-989\\"
+-               />
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>"
+`;
+
+exports[`FixRecord form should validate the form where applicable and submit correctly 2`] = `
+"Snapshot Diff:
+- First value
++ Second value
+
+@@ -251,23 +251,24 @@
+                      >
+                         *
+                      </span>
+                    </label>
+                    <div
+-                     class=\\"MuiInputBase-root-939 MuiInput-root-926 MuiInput-underline-930 MuiInputBase-disabled-942 MuiInput-disabled-929 MuiInputBase-formControl-940 MuiInput-formControl-927\\"
++                     class=\\"MuiInputBase-root-939 MuiInput-root-926 MuiInput-underline-930 MuiInputBase-formControl-940 MuiInput-formControl-927\\"
+                      label=\\"Select an action\\"
+                      required=\\"\\"
+                    >
+                      <div
+                        class=\\"MuiSelect-root-919\\"
+                      >
+                        <div
+                          aria-haspopup=\\"true\\"
+                          aria-pressed=\\"false\\"
+-                         class=\\"MuiSelect-select-920 MuiSelect-selectMenu-923 MuiSelect-disabled-924 MuiInputBase-input-949 MuiInput-input-934 MuiInputBase-disabled-942 MuiInput-disabled-929\\"
++                         class=\\"MuiSelect-select-920 MuiSelect-selectMenu-923 MuiInputBase-input-949 MuiInput-input-934\\"
+                          id=\\"fixAction\\"
+                          role=\\"button\\"
++                         tabindex=\\"0\\"
+                        >
+                          I am the author/editor/contributor of this work - I would like to add information, make a correction, or upload files
+                        </div>
+                        <input
+                          name=\\"fixAction\\"
+@@ -289,11 +290,11 @@
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+-           <div />
++           <span />
+            <div
+              class=\\"MuiGrid-item-538 MuiGrid-grid-xs-12-577\\"
+            >
+              <div
+                class=\\"MuiPaper-root-843 MuiPaper-elevation1-846 MuiPaper-rounded-844 MuiCard-root-842 Cards-card-838 StandardCard\\"
+@@ -337,22 +338,23 @@
+                          data-shrink=\\"true\\"
+                        >
+                          Please select relevant indicator(s).
+                        </label>
+                        <div
+-                         class=\\"MuiInputBase-root-939 MuiInput-root-926 MuiInput-underline-930 MuiInputBase-disabled-942 MuiInput-disabled-929 MuiInputBase-formControl-940 MuiInput-formControl-927\\"
++                         class=\\"MuiInputBase-root-939 MuiInput-root-926 MuiInput-underline-930 MuiInputBase-formControl-940 MuiInput-formControl-927\\"
+                        >
+                          <div
+                            class=\\"MuiSelect-root-919\\"
+                          >
+                            <div
+                              aria-haspopup=\\"true\\"
+                              aria-owns=\\"menu-\\"
+                              aria-pressed=\\"true\\"
+-                             class=\\"MuiSelect-select-920 MuiSelect-selectMenu-923 MuiSelect-disabled-924 MuiInputBase-input-949 MuiInput-input-934 MuiInputBase-disabled-942 MuiInput-disabled-929\\"
++                             class=\\"MuiSelect-select-920 MuiSelect-selectMenu-923 MuiInputBase-input-949 MuiInput-input-934\\"
+                              id=\\"content-indicators\\"
+                              role=\\"button\\"
++                             tabindex=\\"0\\"
+                            >
+                              Scholarship of Teaching and Learning, Protocol, Case Study
+                            </div>
+                            <input
+                              type=\\"hidden\\"
+@@ -407,23 +409,22 @@
+                    >
+                      <div
+                        class=\\"MuiFormControl-root-901 MuiFormControl-fullWidth-904\\"
+                      >
+                        <label
+-                         class=\\"MuiFormLabel-root-912 MuiFormLabel-disabled-914 MuiInputLabel-root-905 MuiInputLabel-formControl-906 MuiInputLabel-animated-909\\"
++                         class=\\"MuiFormLabel-root-912 MuiInputLabel-root-905 MuiInputLabel-formControl-906 MuiInputLabel-animated-909\\"
+                          data-shrink=\\"false\\"
+                          for=\\"Describe the problem with this record, eg record is a duplicate, or suggested changes\\"
+                        >
+                          Describe the problem with this record, eg record is a duplicate, or suggested changes
+                        </label>
+                        <div
+-                         class=\\"MuiInputBase-root-939 MuiInput-root-926 MuiInput-underline-930 MuiInputBase-disabled-942 MuiInput-disabled-929 MuiInputBase-fullWidth-948 MuiInput-fullWidth-933 MuiInputBase-formControl-940 MuiInput-formControl-927 MuiInputBase-multiline-947 MuiInput-multiline-932\\"
++                         class=\\"MuiInputBase-root-939 MuiInput-root-926 MuiInput-underline-930 MuiInputBase-fullWidth-948 MuiInput-fullWidth-933 MuiInputBase-formControl-940 MuiInput-formControl-927 MuiInputBase-multiline-947 MuiInput-multiline-932\\"
+                        >
+                          <textarea
+                            aria-invalid=\\"false\\"
+-                           class=\\"MuiInputBase-input-949 MuiInput-input-934 MuiInputBase-disabled-942 MuiInput-disabled-929 MuiInputBase-inputMultiline-951 MuiInput-inputMultiline-936\\"
+-                           disabled=\\"\\"
++                           class=\\"MuiInputBase-input-949 MuiInput-input-934 MuiInputBase-inputMultiline-951 MuiInput-inputMultiline-936\\"
+                            id=\\"Describe the problem with this record, eg record is a duplicate, or suggested changes\\"
+                            name=\\"comments\\"
+                            rows=\\"3\\"
+                          />
+                        </div>
+@@ -434,23 +435,22 @@
+                    >
+                      <div
+                        class=\\"MuiFormControl-root-901 MuiFormControl-fullWidth-904\\"
+                      >
+                        <label
+-                         class=\\"MuiFormLabel-root-912 MuiFormLabel-disabled-914 MuiInputLabel-root-905 MuiInputLabel-formControl-906 MuiInputLabel-animated-909\\"
++                         class=\\"MuiFormLabel-root-912 MuiInputLabel-root-905 MuiInputLabel-formControl-906 MuiInputLabel-animated-909\\"
+                          data-shrink=\\"false\\"
+                          for=\\"Link (URL)\\"
+                        >
+                          Link (URL)
+                        </label>
+                        <div
+-                         class=\\"MuiInputBase-root-939 MuiInput-root-926 MuiInput-underline-930 MuiInputBase-disabled-942 MuiInput-disabled-929 MuiInputBase-fullWidth-948 MuiInput-fullWidth-933 MuiInputBase-formControl-940 MuiInput-formControl-927\\"
++                         class=\\"MuiInputBase-root-939 MuiInput-root-926 MuiInput-underline-930 MuiInputBase-fullWidth-948 MuiInput-fullWidth-933 MuiInputBase-formControl-940 MuiInput-formControl-927\\"
+                        >
+                          <input
+                            aria-invalid=\\"false\\"
+-                           class=\\"MuiInputBase-input-949 MuiInput-input-934 MuiInputBase-disabled-942 MuiInput-disabled-929\\"
+-                           disabled=\\"\\"
++                           class=\\"MuiInputBase-input-949 MuiInput-input-934\\"
+                            id=\\"Link (URL)\\"
+                            name=\\"rek_link\\"
+                            type=\\"text\\"
+                            value=\\"\\"
+                          />
+@@ -499,11 +499,11 @@
+                    >
+                      <div
+                        tabindex=\\"0\\"
+                      >
+                        <div
+-                         aria-disabled=\\"true\\"
++                         aria-disabled=\\"false\\"
+                          class=\\"\\"
+                          style=\\"position: relative; padding: 0px;\\"
+                        >
+                          <div
+                            class=\\"MuiGrid-container-537 FileUploadDropzoneStaticContent-dropzone-1051\\"
+@@ -572,11 +572,10 @@
+                              </div>
+                            </div>
+                          </div>
+                          <input
+                            autocomplete=\\"off\\"
+-                           disabled=\\"\\"
+                            id=\\"Uploader\\"
+                            multiple=\\"\\"
+                            style=\\"position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; opacity: 0.00001; pointer-events: none;\\"
+                            type=\\"file\\"
+                          />
+@@ -593,50 +592,46 @@
+              <div
+                class=\\"Alert\\"
+                style=\\"padding: 12px;\\"
+              >
+                <div
+-                 class=\\"MuiGrid-container-537 MuiGrid-spacing-xs-24-561 MuiGrid-align-items-xs-flex-start-546 MuiGrid-align-content-xs-center-549 MuiGrid-justify-xs-center-554 Alert-info_outline-1067 Alert-common-1055\\"
++                 class=\\"MuiGrid-container-537 MuiGrid-spacing-xs-24-561 MuiGrid-align-items-xs-flex-start-546 MuiGrid-align-content-xs-center-549 MuiGrid-justify-xs-center-554 Alert-done-1091 Alert-common-1078\\"
+                >
+                  <div
+                    class=\\"MuiGrid-item-538 MuiGrid-grid-xs-12-577 MuiGrid-grid-sm-true-579\\"
+                  >
+                    <div
+                      class=\\"MuiGrid-container-537 MuiGrid-align-items-xs-flex-start-546 MuiGrid-align-content-xs-center-549 MuiGrid-justify-xs-center-554\\"
+                    >
+                      <div
+-                       class=\\"MuiGrid-item-538 Alert-icon-1056\\"
++                       class=\\"MuiGrid-item-538 Alert-icon-1079\\"
+                        id=\\"icon\\"
+                      >
+-                       <div
+-                         class=\\"MuiCircularProgress-root-1069 MuiCircularProgress-colorPrimary-1072 MuiCircularProgress-indeterminate-1071 spinner\\"
+-                         role=\\"progressbar\\"
+-                         style=\\"width: 38px; height: 38px;\\"
+-                       >
+                        <svg
+-                           class=\\"MuiCircularProgress-svg-1074\\"
+-                           viewBox=\\"22 22 44 44\\"
++                         aria-hidden=\\"true\\"
++                         class=\\"MuiSvgIcon-root-888 icon\\"
++                         focusable=\\"false\\"
++                         role=\\"presentation\\"
++                         viewBox=\\"0 0 24 24\\"
+                        >
+-                           <circle
+-                             class=\\"MuiCircularProgress-circle-1075 MuiCircularProgress-circleIndeterminate-1077\\"
+-                             cx=\\"44\\"
+-                             cy=\\"44\\"
++                         <path
++                           d=\\"M0 0h24v24H0z\\"
+                            fill=\\"none\\"
+-                             r=\\"20.5\\"
+-                             stroke-width=\\"3\\"
+                          />
++                         <path
++                           d=\\"M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z\\"
++                         />
+                        </svg>
+-                       </div>
+                      </div>
+                      <div
+-                       class=\\"MuiGrid-item-538 MuiGrid-grid-xs-true-565 Alert-text-1057\\"
++                       class=\\"MuiGrid-item-538 MuiGrid-grid-xs-true-565 Alert-text-1080\\"
+                        id=\\"text\\"
+                      >
+                        <b>
+-                         Saving - 
++                         Success - 
+                        </b>
+-                       Request is being processed.
++                       Fix record request has been submitted successfully.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+@@ -650,37 +645,41 @@
+            />
+            <div
+              class=\\"MuiGrid-item-538\\"
+            >
+              <button
+-               class=\\"MuiButtonBase-root-986 MuiButtonBase-disabled-987 MuiButton-root-960 MuiButton-contained-971 MuiButton-raised-974 MuiButton-disabled-980 MuiButton-fullWidth-985\\"
+-               disabled=\\"\\"
+-               tabindex=\\"-1\\"
++               class=\\"MuiButtonBase-root-986 MuiButton-root-960 MuiButton-contained-971 MuiButton-raised-974 MuiButton-fullWidth-985\\"
++               tabindex=\\"0\\"
+                type=\\"button\\"
+              >
+                <span
+                  class=\\"MuiButton-label-961\\"
+                >
+                  Cancel
+                </span>
++               <span
++                 class=\\"MuiTouchRipple-root-989\\"
++               />
+              </button>
+            </div>
+            <div
+              class=\\"MuiGrid-item-538\\"
+            >
+              <button
+-               class=\\"MuiButtonBase-root-986 MuiButtonBase-disabled-987 MuiButton-root-960 MuiButton-contained-971 MuiButton-containedPrimary-972 MuiButton-raised-974 MuiButton-raisedPrimary-975 MuiButton-disabled-980 MuiButton-fullWidth-985\\"
+-               disabled=\\"\\"
++               class=\\"MuiButtonBase-root-986 MuiButton-root-960 MuiButton-contained-971 MuiButton-containedPrimary-972 MuiButton-raised-974 MuiButton-raisedPrimary-975 MuiButton-fullWidth-985\\"
+                id=\\"fixSubmit\\"
+-               tabindex=\\"-1\\"
++               tabindex=\\"0\\"
+                type=\\"button\\"
+              >
+                <span
+                  class=\\"MuiButton-label-961\\"
+                >
+                  Submit
+                </span>
++               <span
++                 class=\\"MuiTouchRipple-root-989\\"
++               />
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>"
+`;

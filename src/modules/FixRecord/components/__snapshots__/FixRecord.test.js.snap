@@ -127,16 +127,16 @@ exports[`Component FixRecord _handleDefaultSubmit() 1`] = `
                   Object {
                     "rek_content_indicator": 454057,
                     "rek_content_indicator_id": 1,
-                    "rek_content_indicator_lookup": "more content indicators",
+                    "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
                     "rek_content_indicator_order": 1,
-                    "rek_ismemberof": "UQ:152266",
+                    "rek_content_indicator_pid": "UQ:41878",
                   },
                   Object {
                     "rek_content_indicator": 454058,
                     "rek_content_indicator_id": 2,
-                    "rek_content_indicator_lookup": "still yet another content indicator",
+                    "rek_content_indicator_lookup": "Protocols",
                     "rek_content_indicator_order": 2,
-                    "rek_ismemberof": "UQ:152266",
+                    "rek_content_indicator_pid": "UQ:41878",
                   },
                 ],
                 "fez_record_search_key_contributor": Array [],
@@ -431,6 +431,11 @@ exports[`Component FixRecord _handleDefaultSubmit() 1`] = `
             }
           />
           <Field
+            SelectDisplayProps={
+              Object {
+                "id": "fixAction",
+              }
+            }
             component={[Function]}
             disabled={false}
             label="Select an action"
@@ -611,16 +616,16 @@ exports[`Component FixRecord componentWillReceiveProps() 1`] = `
                   Object {
                     "rek_content_indicator": 454057,
                     "rek_content_indicator_id": 1,
-                    "rek_content_indicator_lookup": "more content indicators",
+                    "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
                     "rek_content_indicator_order": 1,
-                    "rek_ismemberof": "UQ:152266",
+                    "rek_content_indicator_pid": "UQ:41878",
                   },
                   Object {
                     "rek_content_indicator": 454058,
                     "rek_content_indicator_id": 2,
-                    "rek_content_indicator_lookup": "still yet another content indicator",
+                    "rek_content_indicator_lookup": "Protocols",
                     "rek_content_indicator_order": 2,
-                    "rek_ismemberof": "UQ:152266",
+                    "rek_content_indicator_pid": "UQ:41878",
                   },
                 ],
                 "fez_record_search_key_contributor": Array [],
@@ -915,6 +920,11 @@ exports[`Component FixRecord componentWillReceiveProps() 1`] = `
             }
           />
           <Field
+            SelectDisplayProps={
+              Object {
+                "id": "fixAction",
+              }
+            }
             component={[Function]}
             disabled={false}
             label="Select an action"
@@ -1106,16 +1116,16 @@ exports[`Component FixRecord should render fix record form 1`] = `
                   Object {
                     "rek_content_indicator": 454057,
                     "rek_content_indicator_id": 1,
-                    "rek_content_indicator_lookup": "more content indicators",
+                    "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
                     "rek_content_indicator_order": 1,
-                    "rek_ismemberof": "UQ:152266",
+                    "rek_content_indicator_pid": "UQ:41878",
                   },
                   Object {
                     "rek_content_indicator": 454058,
                     "rek_content_indicator_id": 2,
-                    "rek_content_indicator_lookup": "still yet another content indicator",
+                    "rek_content_indicator_lookup": "Protocols",
                     "rek_content_indicator_order": 2,
-                    "rek_ismemberof": "UQ:152266",
+                    "rek_content_indicator_pid": "UQ:41878",
                   },
                 ],
                 "fez_record_search_key_contributor": Array [],
@@ -1410,6 +1420,11 @@ exports[`Component FixRecord should render fix record form 1`] = `
             }
           />
           <Field
+            SelectDisplayProps={
+              Object {
+                "id": "fixAction",
+              }
+            }
             component={[Function]}
             disabled={false}
             label="Select an action"
@@ -1455,9 +1470,16 @@ exports[`Component FixRecord should render fix record form 1`] = `
             "cancelButtonLabel": "Go to my dashboard",
             "confirmButtonLabel": "Go to my research",
             "confirmationMessage": <React.Fragment>
-              <p>
+              <span
+                style={
+                  Object {
+                    "display": "block",
+                    "margin": "1em 0",
+                  }
+                }
+              >
                 Your request will be referred to a UQ eSpace staff member for review/action.
-              </p>
+              </span>
             </React.Fragment>,
             "confirmationTitle": "Your request has been submitted",
             "fileFailConfirmationAlert": Object {
@@ -1604,6 +1626,7 @@ exports[`Component FixRecord should render fix record form 1`] = `
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="fixSubmit"
           onClick={[MockFunction]}
           variant="contained"
         >
@@ -1758,16 +1781,16 @@ exports[`Component FixRecord should render record citation, two actions in selec
                   Object {
                     "rek_content_indicator": 454057,
                     "rek_content_indicator_id": 1,
-                    "rek_content_indicator_lookup": "more content indicators",
+                    "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
                     "rek_content_indicator_order": 1,
-                    "rek_ismemberof": "UQ:152266",
+                    "rek_content_indicator_pid": "UQ:41878",
                   },
                   Object {
                     "rek_content_indicator": 454058,
                     "rek_content_indicator_id": 2,
-                    "rek_content_indicator_lookup": "still yet another content indicator",
+                    "rek_content_indicator_lookup": "Protocols",
                     "rek_content_indicator_order": 2,
-                    "rek_ismemberof": "UQ:152266",
+                    "rek_content_indicator_pid": "UQ:41878",
                   },
                 ],
                 "fez_record_search_key_contributor": Array [],
@@ -2062,6 +2085,11 @@ exports[`Component FixRecord should render record citation, two actions in selec
             }
           />
           <Field
+            SelectDisplayProps={
+              Object {
+                "id": "fixAction",
+              }
+            }
             component={[Function]}
             disabled={false}
             label="Select an action"
@@ -2242,16 +2270,16 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
                   Object {
                     "rek_content_indicator": 454057,
                     "rek_content_indicator_id": 1,
-                    "rek_content_indicator_lookup": "more content indicators",
+                    "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
                     "rek_content_indicator_order": 1,
-                    "rek_ismemberof": "UQ:152266",
+                    "rek_content_indicator_pid": "UQ:41878",
                   },
                   Object {
                     "rek_content_indicator": 454058,
                     "rek_content_indicator_id": 2,
-                    "rek_content_indicator_lookup": "still yet another content indicator",
+                    "rek_content_indicator_lookup": "Protocols",
                     "rek_content_indicator_order": 2,
-                    "rek_ismemberof": "UQ:152266",
+                    "rek_content_indicator_pid": "UQ:41878",
                   },
                 ],
                 "fez_record_search_key_contributor": Array [],
@@ -2546,6 +2574,11 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
             }
           />
           <Field
+            SelectDisplayProps={
+              Object {
+                "id": "fixAction",
+              }
+            }
             component={[Function]}
             disabled={false}
             label="Select an action"
@@ -2596,9 +2629,16 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
                 title="File upload failed"
                 type="info"
               />
-              <p>
+              <span
+                style={
+                  Object {
+                    "display": "block",
+                    "margin": "1em 0",
+                  }
+                }
+              >
                 Your request will be referred to a UQ eSpace staff member for review/action.
-              </p>
+              </span>
             </React.Fragment>,
             "confirmationTitle": "Your request has been submitted",
             "fileFailConfirmationAlert": Object {
@@ -2745,6 +2785,7 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="fixSubmit"
           onClick={[MockFunction]}
           variant="contained"
         >
@@ -2883,16 +2924,16 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
                   Object {
                     "rek_content_indicator": 454057,
                     "rek_content_indicator_id": 1,
-                    "rek_content_indicator_lookup": "more content indicators",
+                    "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
                     "rek_content_indicator_order": 1,
-                    "rek_ismemberof": "UQ:152266",
+                    "rek_content_indicator_pid": "UQ:41878",
                   },
                   Object {
                     "rek_content_indicator": 454058,
                     "rek_content_indicator_id": 2,
-                    "rek_content_indicator_lookup": "still yet another content indicator",
+                    "rek_content_indicator_lookup": "Protocols",
                     "rek_content_indicator_order": 2,
-                    "rek_ismemberof": "UQ:152266",
+                    "rek_content_indicator_pid": "UQ:41878",
                   },
                 ],
                 "fez_record_search_key_contributor": Array [],
@@ -3187,6 +3228,11 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
             }
           />
           <Field
+            SelectDisplayProps={
+              Object {
+                "id": "fixAction",
+              }
+            }
             component={[Function]}
             disabled={false}
             label="Select an action"
@@ -3232,9 +3278,16 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
             "cancelButtonLabel": "Go to my dashboard",
             "confirmButtonLabel": "Go to my research",
             "confirmationMessage": <React.Fragment>
-              <p>
+              <span
+                style={
+                  Object {
+                    "display": "block",
+                    "margin": "1em 0",
+                  }
+                }
+              >
                 Your request will be referred to a UQ eSpace staff member for review/action.
-              </p>
+              </span>
             </React.Fragment>,
             "confirmationTitle": "Your request has been submitted",
             "fileFailConfirmationAlert": Object {
@@ -3381,6 +3434,7 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="fixSubmit"
           onClick={[MockFunction]}
           variant="contained"
         >
@@ -3519,16 +3573,16 @@ exports[`Component FixRecord should render unclaim form 1`] = `
                   Object {
                     "rek_content_indicator": 454057,
                     "rek_content_indicator_id": 1,
-                    "rek_content_indicator_lookup": "more content indicators",
+                    "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
                     "rek_content_indicator_order": 1,
-                    "rek_ismemberof": "UQ:152266",
+                    "rek_content_indicator_pid": "UQ:41878",
                   },
                   Object {
                     "rek_content_indicator": 454058,
                     "rek_content_indicator_id": 2,
-                    "rek_content_indicator_lookup": "still yet another content indicator",
+                    "rek_content_indicator_lookup": "Protocols",
                     "rek_content_indicator_order": 2,
-                    "rek_ismemberof": "UQ:152266",
+                    "rek_content_indicator_pid": "UQ:41878",
                   },
                 ],
                 "fez_record_search_key_contributor": Array [],
@@ -3823,6 +3877,11 @@ exports[`Component FixRecord should render unclaim form 1`] = `
             }
           />
           <Field
+            SelectDisplayProps={
+              Object {
+                "id": "fixAction",
+              }
+            }
             component={[Function]}
             disabled={false}
             label="Select an action"
@@ -3905,6 +3964,7 @@ exports[`Component FixRecord should render unclaim form 1`] = `
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="fixSubmit"
           onClick={[MockFunction]}
           variant="contained"
         >

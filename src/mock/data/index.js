@@ -1,12 +1,37 @@
-export {accounts, authorsSearch, currentAuthor, authorDetails} from './account';
-export {externalDoiSearchResultList, externalPubMedSearchResultsList, record, myRecordsList, possibleUnclaimedList,
-    incompleteNTROlist, incompleteNTROrecord, incompleteNTROrecordUqrdav10, incompleteNTROrecordUqsbutl1,
-    externalTitleSearchResultsList, internalTitleSearchList, recordsTypeList, externalTitleScopusResultsList,
-    recordWithMap, recordWithTiffAndThumbnail, MyDatasetList, internalTitleSearchListNoResults, recordWithoutAuthorIds,
-    collections} from './records';
-export {vocabulariesList} from './vocabularies';
-export {quickTemplates} from './acml';
-export {hindexResponse, trendingPublications, currentAuthorStats} from './academicStats';
-export {searchKeyList} from './searchKeys';
-export {authorOrcidDetails} from './orcid';
-export {newsFeed} from './newsFeed';
+export {
+    accounts,
+    authorsSearch,
+    currentAuthor,
+    authorDetails
+} from './account';
+export {
+    collections,
+    externalDoiSearchResultList,
+    externalPubMedSearchResultsList,
+    externalTitleScopusResultsList,
+    externalTitleSearchResultsList,
+    incompleteNTROlist,
+    incompleteNTROrecord,
+    incompleteNTROrecordUqrdav10,
+    incompleteNTROrecordUqsbutl1,
+    internalTitleSearchList,
+    internalTitleSearchListNoResults,
+    MyDatasetList,
+    myRecordsList,
+    possibleUnclaimedList,
+    record,
+    recordsTypeList,
+    recordWithMap,
+    recordWithoutAuthorIds,
+    recordWithTiffAndThumbnail,
+} from './records';
+export { vocabulariesList } from './vocabularies';
+export { quickTemplates } from './acml';
+export {
+    hindexResponse,
+    trendingPublications,
+    currentAuthorStats
+} from './academicStats';
+export { searchKeyList } from './searchKeys';
+export { authorOrcidDetails } from './orcid';
+export { newsFeed } from './newsFeed';
