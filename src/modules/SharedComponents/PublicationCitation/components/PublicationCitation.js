@@ -62,6 +62,10 @@ export const styles = theme => ({
         [theme.breakpoints.down('sm')]: {
             marginTop: 12,
         },
+    },
+    contentIndicatorTitle: {
+        fontWeight: 400,
+        marginRight: '0.5ex'
     }
 });
 
@@ -300,23 +304,6 @@ export class PublicationCitation extends PureComponent {
                                 {this.renderCitation(this.props.publication.rek_display_type)}
                             </Grid>
                             {
-                                !this.props.hideContentIndicators &&
-                                this.props.publication.fez_record_search_key_content_indicator &&
-                                this.props.publication.fez_record_search_key_content_indicator.length > 0 &&
-                                <Grid item xs={12}>
-                                    <Typography gutterBottom variant="caption">
-                                        {locale.components.contentIndicators.label}:&nbsp;
-                                        {
-                                            this.props.publication.fez_record_search_key_content_indicator
-                                                .map(item => item.rek_content_indicator_lookup)
-                                                .join(
-                                                    locale.components.contentIndicators.divider
-                                                )
-                                        }
-                                    </Typography>
-                                </Grid>
-                            }
-                            {
                                 !this.props.hideCitationCounts &&
                                 <Grid item xs={12} className={classes.citationCounts}>
                                     <CitationCounts
@@ -356,6 +343,23 @@ export class PublicationCitation extends PureComponent {
                     </Grid>
                 }
                 <Divider className={classes.divider} />
+                {
+                    !this.props.hideContentIndicators &&
+                    this.props.publication.fez_record_search_key_content_indicator &&
+                    this.props.publication.fez_record_search_key_content_indicator.length > 0 &&
+                    <Grid item xs={12}>
+                        <Typography gutterBottom variant="caption">
+                            <span className={classes.contentIndicatorTitle}>{locale.components.contentIndicators.label}:</span>
+                            {
+                                this.props.publication.fez_record_search_key_content_indicator
+                                    .map(item => item.rek_content_indicator_lookup)
+                                    .join(
+                                        locale.components.contentIndicators.divider
+                                    )
+                            }
+                        </Typography>
+                    </Grid>
+                }
             </React.Fragment>
         );
     }
