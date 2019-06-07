@@ -24,7 +24,7 @@ import IdentifiersSection from './IdentifiersSection';
 import BibliographicSection from './BibliographicSection';
 import AdminSection from './AdminSection';
 import GrantInformationSection from './GrantInformationSection';
-import SecuritySection from './SecuritySection';
+import SecuritySection from './security/SecuritySection';
 import TabContainer from './TabContainer';
 import {
     TabbedContextProvider,
@@ -227,7 +227,7 @@ export function AdminInterface({ classes, submitting, isTabbed, handleSubmit }) 
                                                     </TabContainer>
                                                     <TabContainer value={6} currentTab={currentTabValue} tabbed={tabbed}>
                                                         <StandardCard title="Security" primaryHeader={!!tabbed} squareTop={!!tabbed}>
-                                                            <SecuritySection disabled={submitting} handleSubmit={handleSubmit} recordType={record.rek_object_type_lookup}/>
+                                                            <SecuritySection disabled={submitting} handleSubmit={handleSubmit} />
                                                         </StandardCard>
                                                     </TabContainer>
                                                 </Grid>

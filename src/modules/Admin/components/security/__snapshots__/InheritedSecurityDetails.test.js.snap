@@ -1,0 +1,138 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InheritedSecurityDetails component should render collections correctly 1`] = `
+<WithStyles(Grid)
+  item={true}
+  style={
+    Object {
+      "backgroundColor": "rgba(0,0,0,0.05)",
+      "padding": 24,
+    }
+  }
+  xs={12}
+>
+  <WithStyles(Typography)
+    style={
+      Object {
+        "marginTop": -8,
+      }
+    }
+    variant="h6"
+  >
+    Inherited security policy details
+  </WithStyles(Typography)>
+  <WithStyles(Grid)
+    container={true}
+    spacing={8}
+    style={
+      Object {
+        "marginTop": 8,
+      }
+    }
+  >
+    <WithStyles(Grid)
+      item={true}
+      sm={2}
+      xs={12}
+    >
+      <WithStyles(Typography)
+        variant="subtitle1"
+      >
+        UQ:11111
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      sm={7}
+      xs={12}
+    >
+      <WithStyles(Typography)
+        variant="subtitle2"
+      >
+        Test collection
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      sm={3}
+      xs={12}
+    >
+      <WithStyles(Typography)
+        variant="body2"
+      >
+        <Memo(PolicyDescription)
+          selectedPolicyKey={5}
+        />
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      sm={2}
+      xs={12}
+    >
+      <WithStyles(Typography)
+        variant="subtitle1"
+      >
+        UQ:22222
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      sm={7}
+      xs={12}
+    >
+      <WithStyles(Typography)
+        variant="subtitle2"
+      >
+        Another test collection
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      sm={3}
+      xs={12}
+    >
+      <WithStyles(Typography)
+        variant="body2"
+      >
+        <Memo(PolicyDescription)
+          selectedPolicyKey={5}
+        />
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
+`;
+
+exports[`InheritedSecurityDetails component should render properly 1`] = `
+<WithStyles(Grid)
+  item={true}
+  style={
+    Object {
+      "backgroundColor": "rgba(0,0,0,0.05)",
+      "padding": 24,
+    }
+  }
+  xs={12}
+>
+  <WithStyles(Typography)
+    style={
+      Object {
+        "marginTop": -8,
+      }
+    }
+    variant="h6"
+  >
+    Inherited security policy details
+  </WithStyles(Typography)>
+  <WithStyles(Grid)
+    container={true}
+    spacing={8}
+    style={
+      Object {
+        "marginTop": 8,
+      }
+    }
+  />
+</WithStyles(Grid)>
+`;

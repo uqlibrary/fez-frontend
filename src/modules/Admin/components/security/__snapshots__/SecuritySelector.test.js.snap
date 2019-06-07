@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SecuritySelector component should render properly for collection 1`] = `
+<WithStyles(Grid)
+  container={true}
+  spacing={8}
+>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <WithStyles(Typography)
+      component="p"
+      variant="body2"
+    >
+      test description for collection
+    </WithStyles(Typography)>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <Field
+      component={[Function]}
+      disabled={false}
+      displayPrompt={true}
+      fieldLabel="collection level policy to apply to this PID"
+      prompt="test2"
+    />
+  </WithStyles(Grid)>
+  <Memo(SelectedSecurityPolicyDescription)
+    selectedPolicyKey={2}
+    title="test3"
+  />
+</WithStyles(Grid)>
+`;
+
+exports[`SecuritySelector component should render properly for community 1`] = `
+<WithStyles(Grid)
+  container={true}
+  spacing={8}
+>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <WithStyles(Typography)
+      component="p"
+      variant="body2"
+    >
+      test description for community
+    </WithStyles(Typography)>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <Field
+      component={[Function]}
+      disabled={false}
+      displayPrompt={true}
+      fieldLabel="community level policy to apply to this PID"
+      prompt="test2"
+    />
+  </WithStyles(Grid)>
+  <Memo(SelectedSecurityPolicyDescription)
+    selectedPolicyKey={2}
+    title="test3"
+  />
+</WithStyles(Grid)>
+`;
+
+exports[`SecuritySelector component should render properly for record 1`] = `
+<WithStyles(Grid)
+  container={true}
+  spacing={8}
+>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <WithStyles(Typography)
+      component="p"
+      variant="body2"
+    >
+      test description for record
+    </WithStyles(Typography)>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <Field
+      component={[Function]}
+      disabled={false}
+      displayPrompt={true}
+      fieldLabel="record level policy to apply to this PID"
+      prompt="test2"
+    />
+  </WithStyles(Grid)>
+  <Memo(SelectedSecurityPolicyDescription)
+    selectedPolicyKey={2}
+    title="test3"
+  />
+</WithStyles(Grid)>
+`;

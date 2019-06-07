@@ -1,8 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`PolicyDropdown component should render properly 1`] = `
-<Field
-  component={[Function]}
+<SelectFieldWrapper
   label="Record level policy to apply to this PID"
   name="test"
   required={true}
@@ -46,5 +45,5 @@ exports[`PolicyDropdown component should render properly 1`] = `
   >
     Public
   </WithStyles(MenuItem)>
-</Field>
+</SelectFieldWrapper>
 `;

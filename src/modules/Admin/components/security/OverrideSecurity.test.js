@@ -1,6 +1,6 @@
-import { OverrideSecurity } from './OverrideSecurity';
+import OverrideSecurity from './OverrideSecurity';
 
-const setup = (testProps, isShallow = true) => {
+const setup = (testProps) => {
     const props = {
         label: 'test',
         input: {
@@ -8,7 +8,7 @@ const setup = (testProps, isShallow = true) => {
         },
         ...testProps
     };
-    return getElement(OverrideSecurity, props, isShallow);
+    return getElement(OverrideSecurity, props);
 };
 
 describe('OverrideSecurity component', () => {

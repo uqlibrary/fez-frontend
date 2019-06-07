@@ -1,4 +1,4 @@
-import { SelectedSecurityPolicyDescription } from './SelectedSecurityPolicyDescription';
+import SelectedSecurityPolicyDescription from './SelectedSecurityPolicyDescription';
 
 const setup = (testProps, isShallow = true) => {
     const props = {

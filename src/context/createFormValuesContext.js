@@ -1,7 +1,12 @@
 
-import React from 'react';
+import React, {useContext} from 'react';
 import Immutable from 'immutable';
 
-export default React.createContext({
+
+const FormValuesContext = React.createContext({
     formValues: Immutable.Map({})
 });
+
+export const useFormValuesContext = () => useContext(FormValuesContext);
+
+export default FormValuesContext;

@@ -8,8 +8,8 @@ import Button from '@material-ui/core/Button';
 
 import { SelectField } from 'modules/SharedComponents/Toolbox/SelectField';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
-import { FormValuesContextConsumer } from 'context';
-import { RECORD_TYPE_RECORD, RECORD_TYPE_COLLECTION, RECORD_TYPE_COMMUNITY } from 'config/general';
+import { useFormValuesContext, useRecordContext } from 'context';
+import { RECORD_TYPE_COLLECTION, RECORD_TYPE_COMMUNITY } from 'config/general';
 import SecurityCard from './SecurityCard';
 
 import { validation } from 'config';
@@ -17,18 +17,14 @@ import { locale } from 'locale';
 
 const text = locale.components.securitySection;
 
-const FormContextWrapper =  /* istanbul ignore next */ (props) => (
-    <FormValuesContextConsumer>
-        {({ formValues }) => (
-            <SecuritySection {...{
-                ...props,
-                accessLevel: formValues.get('accessLevel'),
-            }} />
-        )}
-    </FormValuesContextConsumer>
-);
+export const SecuritySection = ({ disabled, handleSubmit, ...props }) => {
+    const { formValues } = useFormValuesContext();
+    const { record } = useRecordContext();
 
-export const SecuritySection = ({ disabled, handleSubmit, recordType, accessLevel }) => {
+    const isPolicyInherited = record.rek_security_inherited === 1;
+    const recordType = record.rek_object_type_lookup.toLowerCase();
+
+    const accessLevel = formValues.get('accessLevel');
     let canEdit = false;
     switch(recordType) {
         case RECORD_TYPE_COLLECTION:
@@ -49,10 +45,10 @@ export const SecuritySection = ({ disabled, handleSubmit, recordType, accessLeve
                     required
                     validation={[validation.required]}
                 >
-                    <MenuItem value="Superadmin" >
+                    <MenuItem value="Superadmin">
                         {text.admin.field.menuItemText.superAdmin}
                     </MenuItem>
-                    <MenuItem value="Admin" >
+                    <MenuItem value="Admin">
                         {text.admin.field.menuItemText.admin}
                     </MenuItem>
                 </Field>
@@ -69,7 +65,10 @@ export const SecuritySection = ({ disabled, handleSubmit, recordType, accessLeve
                 <Grid item xs={12}>
                     <SecurityCard
                         disabled={disabled}
-                        text={text[recordType.toLowerCase()]}
+                        text={text[recordType]}
+                        recordType={recordType}
+                        isPolicyInherited={isPolicyInherited}
+                        {...props}
                     />
                 </Grid>
             }
@@ -92,15 +91,7 @@ export const SecuritySection = ({ disabled, handleSubmit, recordType, accessLeve
 
 SecuritySection.propTypes = {
     disabled: PropTypes.bool,
-    recordType: PropTypes.string,
-    handleSubmit: PropTypes.func,
-    accessLevel: PropTypes.string,
+    handleSubmit: PropTypes.func
 };
 
-SecuritySection.defaultProps = {
-    disabled: false,
-    recordType: RECORD_TYPE_RECORD,
-    accessLevel: '',
-};
-
-export default React.memo(FormContextWrapper);
+export default React.memo(SecuritySection);
