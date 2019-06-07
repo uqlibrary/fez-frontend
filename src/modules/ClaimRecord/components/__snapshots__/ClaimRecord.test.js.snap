@@ -1005,9 +1005,16 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
             "confirmationMessage": <React.Fragment>
-              <p>
+              <span
+                style={
+                  Object {
+                    "display": "block",
+                    "margin": "1em 0",
+                  }
+                }
+              >
                 Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-              </p>
+              </span>
             </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
@@ -1015,9 +1022,16 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
               "title": "File upload and/or edits/changes/comments post failed",
               "type": "warning",
             },
-            "successConfirmationMessage": <p>
+            "successConfirmationMessage": <span
+              style={
+                Object {
+                  "display": "block",
+                  "margin": "1em 0",
+                }
+              }
+            >
               Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-            </p>,
+            </span>,
           }
         }
         onAction={[Function]}
@@ -1881,9 +1895,16 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
             "confirmationMessage": <React.Fragment>
-              <p>
+              <span
+                style={
+                  Object {
+                    "display": "block",
+                    "margin": "1em 0",
+                  }
+                }
+              >
                 Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-              </p>
+              </span>
             </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
@@ -1891,9 +1912,16 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
               "title": "File upload and/or edits/changes/comments post failed",
               "type": "warning",
             },
-            "successConfirmationMessage": <p>
+            "successConfirmationMessage": <span
+              style={
+                Object {
+                  "display": "block",
+                  "margin": "1em 0",
+                }
+              }
+            >
               Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-            </p>,
+            </span>,
           }
         }
         onAction={[Function]}
@@ -3087,9 +3115,16 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
             "confirmationMessage": <React.Fragment>
-              <p>
+              <span
+                style={
+                  Object {
+                    "display": "block",
+                    "margin": "1em 0",
+                  }
+                }
+              >
                 Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-              </p>
+              </span>
             </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
@@ -3097,9 +3132,16 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
               "title": "File upload and/or edits/changes/comments post failed",
               "type": "warning",
             },
-            "successConfirmationMessage": <p>
+            "successConfirmationMessage": <span
+              style={
+                Object {
+                  "display": "block",
+                  "margin": "1em 0",
+                }
+              }
+            >
               Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-            </p>,
+            </span>,
           }
         }
         onAction={[Function]}
@@ -3999,9 +4041,16 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
             "confirmationMessage": <React.Fragment>
-              <p>
+              <span
+                style={
+                  Object {
+                    "display": "block",
+                    "margin": "1em 0",
+                  }
+                }
+              >
                 Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-              </p>
+              </span>
             </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
@@ -4009,9 +4058,16 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
               "title": "File upload and/or edits/changes/comments post failed",
               "type": "warning",
             },
-            "successConfirmationMessage": <p>
+            "successConfirmationMessage": <span
+              style={
+                Object {
+                  "display": "block",
+                  "margin": "1em 0",
+                }
+              }
+            >
               Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-            </p>,
+            </span>,
           }
         }
         onAction={[Function]}
@@ -5265,9 +5321,16 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
             "confirmationMessage": <React.Fragment>
-              <p>
+              <span
+                style={
+                  Object {
+                    "display": "block",
+                    "margin": "1em 0",
+                  }
+                }
+              >
                 Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-              </p>
+              </span>
             </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
@@ -5275,9 +5338,16 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
               "title": "File upload and/or edits/changes/comments post failed",
               "type": "warning",
             },
-            "successConfirmationMessage": <p>
+            "successConfirmationMessage": <span
+              style={
+                Object {
+                  "display": "block",
+                  "margin": "1em 0",
+                }
+              }
+            >
               Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-            </p>,
+            </span>,
           }
         }
         onAction={[Function]}
@@ -6677,9 +6747,16 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
             "confirmationMessage": <React.Fragment>
-              <p>
+              <span
+                style={
+                  Object {
+                    "display": "block",
+                    "margin": "1em 0",
+                  }
+                }
+              >
                 Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-              </p>
+              </span>
             </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
@@ -6687,9 +6764,16 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
               "title": "File upload and/or edits/changes/comments post failed",
               "type": "warning",
             },
-            "successConfirmationMessage": <p>
+            "successConfirmationMessage": <span
+              style={
+                Object {
+                  "display": "block",
+                  "margin": "1em 0",
+                }
+              }
+            >
               Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-            </p>,
+            </span>,
           }
         }
         onAction={[Function]}
@@ -8089,9 +8173,16 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
             "confirmationMessage": <React.Fragment>
-              <p>
+              <span
+                style={
+                  Object {
+                    "display": "block",
+                    "margin": "1em 0",
+                  }
+                }
+              >
                 Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-              </p>
+              </span>
             </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
@@ -8099,9 +8190,16 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
               "title": "File upload and/or edits/changes/comments post failed",
               "type": "warning",
             },
-            "successConfirmationMessage": <p>
+            "successConfirmationMessage": <span
+              style={
+                Object {
+                  "display": "block",
+                  "margin": "1em 0",
+                }
+              }
+            >
               Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-            </p>,
+            </span>,
           }
         }
         onAction={[Function]}
@@ -9501,9 +9599,16 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
             "confirmationMessage": <React.Fragment>
-              <p>
+              <span
+                style={
+                  Object {
+                    "display": "block",
+                    "margin": "1em 0",
+                  }
+                }
+              >
                 Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-              </p>
+              </span>
             </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
@@ -9511,9 +9616,16 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
               "title": "File upload and/or edits/changes/comments post failed",
               "type": "warning",
             },
-            "successConfirmationMessage": <p>
+            "successConfirmationMessage": <span
+              style={
+                Object {
+                  "display": "block",
+                  "margin": "1em 0",
+                }
+              }
+            >
               Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-            </p>,
+            </span>,
           }
         }
         onAction={[Function]}
@@ -11971,9 +12083,16 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
                   />
                 </WithStyles(Grid)>
               </WithStyles(Grid)>
-              <p>
+              <span
+                style={
+                  Object {
+                    "display": "block",
+                    "margin": "1em 0",
+                  }
+                }
+              >
                 Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-              </p>
+              </span>
             </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
@@ -11981,9 +12100,16 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
               "title": "File upload and/or edits/changes/comments post failed",
               "type": "warning",
             },
-            "successConfirmationMessage": <p>
+            "successConfirmationMessage": <span
+              style={
+                Object {
+                  "display": "block",
+                  "margin": "1em 0",
+                }
+              }
+            >
               Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-            </p>,
+            </span>,
           }
         }
         onAction={[Function]}
@@ -13383,9 +13509,16 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
             "confirmationMessage": <React.Fragment>
-              <p>
+              <span
+                style={
+                  Object {
+                    "display": "block",
+                    "margin": "1em 0",
+                  }
+                }
+              >
                 Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-              </p>
+              </span>
             </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
@@ -13393,9 +13526,16 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
               "title": "File upload and/or edits/changes/comments post failed",
               "type": "warning",
             },
-            "successConfirmationMessage": <p>
+            "successConfirmationMessage": <span
+              style={
+                Object {
+                  "display": "block",
+                  "margin": "1em 0",
+                }
+              }
+            >
               Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-            </p>,
+            </span>,
           }
         }
         onAction={[Function]}
@@ -14795,9 +14935,16 @@ exports[`Component ClaimRecord  should return and render alert message depending
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
             "confirmationMessage": <React.Fragment>
-              <p>
+              <span
+                style={
+                  Object {
+                    "display": "block",
+                    "margin": "1em 0",
+                  }
+                }
+              >
                 Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-              </p>
+              </span>
             </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
@@ -14805,9 +14952,16 @@ exports[`Component ClaimRecord  should return and render alert message depending
               "title": "File upload and/or edits/changes/comments post failed",
               "type": "warning",
             },
-            "successConfirmationMessage": <p>
+            "successConfirmationMessage": <span
+              style={
+                Object {
+                  "display": "block",
+                  "margin": "1em 0",
+                }
+              }
+            >
               Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-            </p>,
+            </span>,
           }
         }
         onAction={[Function]}
@@ -16220,9 +16374,16 @@ exports[`Component ClaimRecord  should return and render alert message depending
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
             "confirmationMessage": <React.Fragment>
-              <p>
+              <span
+                style={
+                  Object {
+                    "display": "block",
+                    "margin": "1em 0",
+                  }
+                }
+              >
                 Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-              </p>
+              </span>
             </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
@@ -16230,9 +16391,16 @@ exports[`Component ClaimRecord  should return and render alert message depending
               "title": "File upload and/or edits/changes/comments post failed",
               "type": "warning",
             },
-            "successConfirmationMessage": <p>
+            "successConfirmationMessage": <span
+              style={
+                Object {
+                  "display": "block",
+                  "margin": "1em 0",
+                }
+              }
+            >
               Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-            </p>,
+            </span>,
           }
         }
         onAction={[Function]}
@@ -17643,9 +17811,16 @@ exports[`Component ClaimRecord  should return and render alert message depending
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
             "confirmationMessage": <React.Fragment>
-              <p>
+              <span
+                style={
+                  Object {
+                    "display": "block",
+                    "margin": "1em 0",
+                  }
+                }
+              >
                 Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-              </p>
+              </span>
             </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
@@ -17653,9 +17828,16 @@ exports[`Component ClaimRecord  should return and render alert message depending
               "title": "File upload and/or edits/changes/comments post failed",
               "type": "warning",
             },
-            "successConfirmationMessage": <p>
+            "successConfirmationMessage": <span
+              style={
+                Object {
+                  "display": "block",
+                  "margin": "1em 0",
+                }
+              }
+            >
               Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-            </p>,
+            </span>,
           }
         }
         onAction={[Function]}
@@ -19067,9 +19249,16 @@ exports[`Component ClaimRecord  should return and render alert message depending
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
             "confirmationMessage": <React.Fragment>
-              <p>
+              <span
+                style={
+                  Object {
+                    "display": "block",
+                    "margin": "1em 0",
+                  }
+                }
+              >
                 Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-              </p>
+              </span>
             </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
@@ -19077,9 +19266,16 @@ exports[`Component ClaimRecord  should return and render alert message depending
               "title": "File upload and/or edits/changes/comments post failed",
               "type": "warning",
             },
-            "successConfirmationMessage": <p>
+            "successConfirmationMessage": <span
+              style={
+                Object {
+                  "display": "block",
+                  "margin": "1em 0",
+                }
+              }
+            >
               Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-            </p>,
+            </span>,
           }
         }
         onAction={[Function]}
@@ -19444,9 +19640,16 @@ exports[`Component ClaimRecord  should return and render alert message depending
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
             "confirmationMessage": <React.Fragment>
-              <p>
+              <span
+                style={
+                  Object {
+                    "display": "block",
+                    "margin": "1em 0",
+                  }
+                }
+              >
                 Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-              </p>
+              </span>
             </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
@@ -19454,9 +19657,16 @@ exports[`Component ClaimRecord  should return and render alert message depending
               "title": "File upload and/or edits/changes/comments post failed",
               "type": "warning",
             },
-            "successConfirmationMessage": <p>
+            "successConfirmationMessage": <span
+              style={
+                Object {
+                  "display": "block",
+                  "margin": "1em 0",
+                }
+              }
+            >
               Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-            </p>,
+            </span>,
           }
         }
         onAction={[Function]}
@@ -19658,9 +19868,16 @@ exports[`Component ClaimRecord  should show alert if submit failed and PID not f
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
             "confirmationMessage": <React.Fragment>
-              <p>
+              <span
+                style={
+                  Object {
+                    "display": "block",
+                    "margin": "1em 0",
+                  }
+                }
+              >
                 Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-              </p>
+              </span>
             </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
@@ -19668,9 +19885,16 @@ exports[`Component ClaimRecord  should show alert if submit failed and PID not f
               "title": "File upload and/or edits/changes/comments post failed",
               "type": "warning",
             },
-            "successConfirmationMessage": <p>
+            "successConfirmationMessage": <span
+              style={
+                Object {
+                  "display": "block",
+                  "margin": "1em 0",
+                }
+              }
+            >
               Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-            </p>,
+            </span>,
           }
         }
         onAction={[Function]}

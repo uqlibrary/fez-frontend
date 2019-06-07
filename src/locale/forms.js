@@ -67,9 +67,10 @@ export default {
             successWorkflowConfirmation: {
                 confirmationTitle: 'Claim has been submitted',
                 successConfirmationMessage: (
-                    <p>
+                    <span style={{ display: 'block', margin: '1em 0' }}>
                         Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-                    </p>),
+                    </span>
+                ),
                 fileFailConfirmationAlert: {
                     title: 'File upload and/or edits/changes/comments post failed',
                     message: 'Retry uploading files and/or posting edits/changes/comments about this claim via "Fix record" screen or contact eSpace administrators.',
