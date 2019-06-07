@@ -1278,7 +1278,8 @@ export default {
                         errorHint: 'There has been an error loading collections',
                         multiple: true,
                         validation: ['requiredList'],
-                        ariaLabel: 'Select multiple collections to search for'
+                        ariaLabel: 'Select multiple collections to search for',
+                        label: 'Collections'
                     },
                     'rek_genre_type': {
                         order: 14,
