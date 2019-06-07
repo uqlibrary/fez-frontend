@@ -28,14 +28,14 @@ export default class OpenAccessFilter extends PureComponent {
                 disabled={this.props.disabled}
                 onToggle={this.props.onToggle}
                 open={this.props.open}
-                nestedItems={
-                    <FacetFilterNestedListItem
-                        onFacetClick={this.updateFilter}
-                        isActive={isActive}
-                        primaryText={txt.activeFilter}
-                        disabled={this.props.disabled}
-                    />
-                } />
+            >
+                <FacetFilterNestedListItem
+                    onFacetClick={this.updateFilter}
+                    isActive={isActive}
+                    primaryText={txt.activeFilter}
+                    disabled={this.props.disabled}
+                />
+            </FacetFilterListItem>
         );
     }
 }
