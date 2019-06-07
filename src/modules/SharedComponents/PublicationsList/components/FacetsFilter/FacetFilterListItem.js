@@ -62,7 +62,7 @@ FacetsFilterListItem.propTypes = {
 };
 
 function isOpenOrDisabled(prevProps, nextProps) {
-    return prevProps.open === nextProps.open && prevProps.disabled === nextProps.disabled;
+    return prevProps.open === nextProps.open && prevProps.disabled === nextProps.disabled && prevProps.children === nextProps.children;
 }
 
 export default React.memo(withStyles(styles)(FacetsFilterListItem), isOpenOrDisabled);

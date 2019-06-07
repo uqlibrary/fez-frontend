@@ -717,8 +717,7 @@ export default {
             },
             facetsFilter: {
                 ...locale.components.facetsFilter,
-                excludeFacetsList: ['Author'],
-                renameFacetsList: {}
+                excludeFacetsList: [...locale.components.facetsFilter.excludeFacetsList, 'Author'],
             }
         },
         incompletePublication: {
