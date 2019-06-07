@@ -111,6 +111,8 @@ export default class AdvancedSearchRowInput extends PureComponent {
             'hintText': this.props.inputField.hint,
             'onChange': (item) => this.props.onChange(item, item),
             'aria-label': this.props.inputField.ariaLabel,
+            'label': this.props.inputField.label,
+            'style': {marginTop: 0}
         };
 
         switch (this.props.inputField.type) {

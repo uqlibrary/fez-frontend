@@ -197,7 +197,8 @@ describe('AdvancedSearchRowInput', () => {
                 "displayEmpty": true,
                 "hideLabel": true,
                 "multiple": true,
-                "selectedValue": []
+                "selectedValue": [],
+                "style": {"marginTop": 0}
             });
         });
         setup({
@@ -229,7 +230,10 @@ describe('AdvancedSearchRowInput', () => {
                 "displayEmpty": true,
                 "hideLabel": true,
                 "multiple": true,
-                "selectedValue": []
+                "selectedValue": [],
+                "errorHint": undefined,
+                "loadingHint": undefined,
+                "style": {"marginTop": 0}
             });
         });
         setup({
@@ -260,8 +264,9 @@ describe('AdvancedSearchRowInput', () => {
                 "autoWidth": false,
                 "displayEmpty": false,
                 "hideLabel": true,
-                "selectedValue": []
-            });
+                "selectedValue": [],
+                "style": {"marginTop": 0}
+        });
         });
         setup({
             children: childrenFn,

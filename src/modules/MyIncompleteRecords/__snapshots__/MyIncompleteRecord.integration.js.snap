@@ -244,7 +244,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
 +                             Commissioned by external body
                             </div>
                             <input
-                              aria-labelledby=\\"Quality indicators-label\\"
+                              style=\\"border: 1px solid red;\\"
                               type=\\"hidden\\"
 -                             value=\\"\\"
 +                             value=\\"454036\\"
@@ -1141,7 +1141,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
 +                             Commissioned by external body
                             </div>
                             <input
-                              aria-labelledby=\\"Quality indicators-label\\"
+                              style=\\"border: 1px solid red;\\"
                               type=\\"hidden\\"
 -                             value=\\"\\"
 +                             value=\\"454036\\"
@@ -2333,7 +2333,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
 +                             Commissioned by external body
                             </div>
                             <input
-                              aria-labelledby=\\"Quality indicators-label\\"
+                              style=\\"border: 1px solid red;\\"
                               type=\\"hidden\\"
 -                             value=\\"\\"
 +                             value=\\"454036\\"
