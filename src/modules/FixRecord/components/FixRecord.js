@@ -14,7 +14,10 @@ import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
-import { ContentIndicatorsField, showContentIndicatorsField } from 'modules/SharedComponents/Toolbox/ContentIndicatorsField';
+import {
+    ContentIndicatorsField,
+    showContentIndicatorsField
+} from 'modules/SharedComponents/Toolbox/ContentIndicatorsField';
 import { NavigationDialogBox } from 'modules/SharedComponents/Toolbox/NavigationPrompt';
 import { FileUploadField } from 'modules/SharedComponents/Toolbox/FileUploader';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';

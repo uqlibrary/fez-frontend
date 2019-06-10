@@ -12,37 +12,59 @@ const FORM_NAME = 'ClaimRecord';
 const onSubmit = (values, dispatch) => {
     const data = {...values.toJS()};
     return dispatch(actions.claimPublication(data))
-        .then(() => {
-            // once this promise is resolved form is submitted successfully and will call parent container
-            // reported bug to redux-form:
-            // reset form after success action was dispatched:
-            // componentWillUnmount cleans up form, but then onSubmit success sets it back to active
-            // setTimeout(()=>{
-            //     dispatch(reset(FORM_NAME));
-            // }, 100);
-        }).catch(error => {
+        .catch(error => {
             throw new SubmissionError({_error: error.message});
         });
 };
 
 let ClaimPublicationFormContainer = reduxForm({
     form: FORM_NAME,
+    enableReinitialize: true,
     onSubmit
 })(confirmDiscardFormChanges(ClaimRecord, FORM_NAME));
 
 const mapStateToProps = (state) => {
     const formErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});
+    const contentIndicators = (
+        state &&
+        state.get('claimPublicationReducer') &&
+        state.get('claimPublicationReducer').fullPublicationToClaim &&
+        (state.get('claimPublicationReducer').fullPublicationToClaim.fez_record_search_key_content_indicator || []).map(
+            item => item.rek_content_indicator
+        )
+    ) || [];
     return {
-        fullPublicationToClaim: state && state.get('claimPublicationReducer') && state.get('claimPublicationReducer').fullPublicationToClaim || null,
-        fullPublicationToClaimLoading: state && state.get('claimPublicationReducer') && state.get('claimPublicationReducer').fullPublicationToClaimLoading || false,
-        fullPublicationToClaimLoadingFailed: state && state.get('claimPublicationReducer') && state.get('claimPublicationReducer').fullPublicationToClaimLoadingFailed || false,
-        publicationToClaimFileUploadingError: state && state.get('claimPublicationReducer') ? state.get('claimPublicationReducer').publicationToClaimFileUploadingError : null,
+        fullPublicationToClaim: (
+            state &&
+            state.get('claimPublicationReducer') &&
+            state.get('claimPublicationReducer').fullPublicationToClaim
+        ) || null,
+        fullPublicationToClaimLoading: (
+            state &&
+            state.get('claimPublicationReducer') &&
+            state.get('claimPublicationReducer').fullPublicationToClaimLoading
+        ) || false,
+        fullPublicationToClaimLoadingFailed: (
+            state &&
+            state.get('claimPublicationReducer') &&
+            state.get('claimPublicationReducer').fullPublicationToClaimLoadingFailed
+        ) || false,
+        publicationToClaimFileUploadingError: (
+            state &&
+            state.get('claimPublicationReducer') &&
+            state.get('claimPublicationReducer').publicationToClaimFileUploadingError
+        ) || null,
         formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
         formErrors: formErrors,
         disableSubmit: formErrors && !(formErrors instanceof Immutable.Map),
         initialValues: {
-            publication: state && state.get('claimPublicationReducer') ? state.get('claimPublicationReducer').publicationToClaim : null,
-            author: state && state.get('accountReducer') ? state.get('accountReducer').author : null
+            publication: (
+                state &&
+                state.get('claimPublicationReducer') &&
+                state.get('claimPublicationReducer').publicationToClaim
+            ) || null,
+            author: state && state.get('accountReducer') ? state.get('accountReducer').author : null,
+            contentIndicators,
         },
         redirectPath: state && state.get('appReducer') ? state.get('appReducer').redirectPath : null
     };
