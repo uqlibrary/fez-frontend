@@ -84,11 +84,10 @@ export default {
             ],
             "fez_record_search_key_content_indicator": [
                 {
-                    "rek_content_indicator_id": 2391648,
+                    "rek_content_indicator_id": 1,
                     "rek_content_indicator_pid": "UQ:641272",
-                    "rek_content_indicator_xsdmf_id": 6037,
-                    "rek_content_indicator": 123,
-                    "rek_content_indicator_lookup": 'dummy content indicator',
+                    "rek_content_indicator": 454079,
+                    "rek_content_indicator_lookup": 'Scholarship of Teaching and Learning',
                     "rek_content_indicator_order": 1
                 }
             ],
@@ -1765,7 +1764,7 @@ export default {
             "fez_record_search_key_ismemberof": [{
                 "rek_ismemberof_id": null,
                 "rek_ismemberof_pid": "UQ:678835",
-                "rek_ismemberof": "UQ:639325",
+                "rek_ismemberof": "UQ:244548",
                 "rek_ismemberof_order": 1
             }],
             "fez_record_search_key_issn": [{

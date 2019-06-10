@@ -28,6 +28,14 @@ export const showContentIndicatorsField = (record) => {
             CONTENT_INDICATORS_COLLECTIONS_BLACKLIST.some(
                 collectionPid => recordCollectionPids.includes(collectionPid)
             );
+    const recordCollectionPids = record.fez_record_search_key_ismemberof &&
+        record.fez_record_search_key_ismemberof.map(
+            item => item.rek_ismemberof
+        ) || []
+    ;
+    const inBlacklistedCollection = CONTENT_INDICATORS_COLLECTIONS_BLACKLIST.some(
+        collectionPid => recordCollectionPids.includes(collectionPid)
+    );
     return !isBlacklistedType && !inBlacklistedCollection;
 };
 
@@ -43,20 +51,18 @@ export const getContentIndicators = props => CONTENT_INDICATORS.map(
     })
 );
 
-export const ContentIndicatorsField = props => {
-    return (
-        <GenericSelectField
-            itemsList={getContentIndicators(props)}
-            hideLabel={false}
-            locale={{ label: props.label }}
-            selectedValue={getSelected(props)}
-            onChange={!!props.input && props.input.onChange || undefined}
-            errorText={!!props.meta && props.meta.error || ''}
-            error={!!props.meta && !!props.meta.error || false}
-            {...props}
-        />
-    );
-};
+export const ContentIndicatorsField = props => (
+    <GenericSelectField
+        itemsList={getContentIndicators(props)}
+        hideLabel={false}
+        locale={{ label: props.label }}
+        selectedValue={getSelected(props)}
+        onChange={!!props.input && props.input.onChange || undefined}
+        errorText={!!props.meta && props.meta.error || ''}
+        error={!!props.meta && !!props.meta.error || false}
+        {...props}
+    />
+);
 
 ContentIndicatorsField.propTypes = {
     input: PropTypes.object,

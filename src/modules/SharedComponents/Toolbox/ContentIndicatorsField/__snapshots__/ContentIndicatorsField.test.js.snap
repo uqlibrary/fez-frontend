@@ -42,8 +42,8 @@ exports[`ContentIndicatorsField component should render with given field props 1
     Object {
       "onChange": [MockFunction],
       "value": Array [
-        454057,
-        454058,
+        454079,
+        454080,
       ],
     }
   }
@@ -81,8 +81,8 @@ exports[`ContentIndicatorsField component should render with given field props 1
   placeholder="Test placeholder"
   selectedValue={
     Array [
-      454057,
-      454058,
+      454079,
+      454080,
     ]
   }
 />
@@ -96,8 +96,8 @@ exports[`ContentIndicatorsField component should render with given field props 2
   input={
     Object {
       "value": Immutable.List [
-        454057,
-        454058,
+        454079,
+        454080,
       ],
     }
   }
@@ -134,8 +134,8 @@ exports[`ContentIndicatorsField component should render with given field props 2
   placeholder="Test placeholder"
   selectedValue={
     Array [
-      454057,
-      454058,
+      454079,
+      454080,
     ]
   }
 />
