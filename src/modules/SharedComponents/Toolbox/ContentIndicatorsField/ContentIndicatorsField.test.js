@@ -25,8 +25,8 @@ describe('ContentIndicatorsField component', () => {
             placeholder: 'Test placeholder',
             input: {
                 value: [
-                    454057,
-                    454058
+                    454079,
+                    454080
                 ],
                 onChange: jest.fn()
             },
@@ -38,7 +38,7 @@ describe('ContentIndicatorsField component', () => {
 
         wrapper.setProps({
             input: {
-                value: Immutable.List([454057, 454058])
+                value: Immutable.List([454079, 454080])
             }
         });
         expect(toJson(wrapper)).toMatchSnapshot();

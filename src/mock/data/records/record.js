@@ -178,13 +178,13 @@ export default {
     "fez_record_search_key_content_indicator": [{
         "rek_content_indicator_id": 1,
         "rek_content_indicator_pid": "UQ:396321",
-        "rek_content_indicator": 454057,
+        "rek_content_indicator": 454079,
         "rek_content_indicator_order": 1,
         "rek_content_indicator_lookup": "Scholarship of Teaching and Learning"
     }, {
         "rek_content_indicator_id": 2,
         "rek_content_indicator_pid": "UQ:396321",
-        "rek_content_indicator": 454058,
+        "rek_content_indicator": 454080,
         "rek_content_indicator_order": 2,
         "rek_content_indicator_lookup": "Protocol"
     }],

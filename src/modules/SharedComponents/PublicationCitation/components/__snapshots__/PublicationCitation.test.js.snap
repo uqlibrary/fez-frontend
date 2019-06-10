@@ -183,14 +183,14 @@ exports[`PublicationCitation  should render component with content indicators 1`
                 "fez_record_search_key_contact_details_email": Array [],
                 "fez_record_search_key_content_indicator": Array [
                   Object {
-                    "rek_content_indicator": 454057,
+                    "rek_content_indicator": 454079,
                     "rek_content_indicator_id": 1,
                     "rek_content_indicator_lookup": "a content indicator",
                     "rek_content_indicator_order": 1,
                     "rek_ismemberof": "UQ:152266",
                   },
                   Object {
-                    "rek_content_indicator": 454058,
+                    "rek_content_indicator": 454080,
                     "rek_content_indicator_id": 2,
                     "rek_content_indicator_lookup": "another content indicator",
                     "rek_content_indicator_order": 2,
@@ -601,14 +601,14 @@ exports[`PublicationCitation  should render component with content indicators 1`
                 "fez_record_search_key_contact_details_email": Array [],
                 "fez_record_search_key_content_indicator": Array [
                   Object {
-                    "rek_content_indicator": 454057,
+                    "rek_content_indicator": 454079,
                     "rek_content_indicator_id": 1,
                     "rek_content_indicator_lookup": "a content indicator",
                     "rek_content_indicator_order": 1,
                     "rek_ismemberof": "UQ:152266",
                   },
                   Object {
-                    "rek_content_indicator": 454058,
+                    "rek_content_indicator": 454080,
                     "rek_content_indicator_id": 2,
                     "rek_content_indicator_lookup": "another content indicator",
                     "rek_content_indicator_order": 2,
@@ -1076,16 +1076,16 @@ exports[`PublicationCitation  should render component with default actions 1`] =
                 "fez_record_search_key_contact_details_email": Array [],
                 "fez_record_search_key_content_indicator": Array [
                   Object {
-                    "rek_content_indicator": 454057,
+                    "rek_content_indicator": 454079,
                     "rek_content_indicator_id": 1,
                     "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
                     "rek_content_indicator_order": 1,
                     "rek_content_indicator_pid": "UQ:41878",
                   },
                   Object {
-                    "rek_content_indicator": 454058,
+                    "rek_content_indicator": 454080,
                     "rek_content_indicator_id": 2,
-                    "rek_content_indicator_lookup": "Protocols",
+                    "rek_content_indicator_lookup": "Protocol",
                     "rek_content_indicator_order": 2,
                     "rek_content_indicator_pid": "UQ:41878",
                   },
@@ -1494,16 +1494,16 @@ exports[`PublicationCitation  should render component with default actions 1`] =
                 "fez_record_search_key_contact_details_email": Array [],
                 "fez_record_search_key_content_indicator": Array [
                   Object {
-                    "rek_content_indicator": 454057,
+                    "rek_content_indicator": 454079,
                     "rek_content_indicator_id": 1,
                     "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
                     "rek_content_indicator_order": 1,
                     "rek_content_indicator_pid": "UQ:41878",
                   },
                   Object {
-                    "rek_content_indicator": 454058,
+                    "rek_content_indicator": 454080,
                     "rek_content_indicator_id": 2,
-                    "rek_content_indicator_lookup": "Protocols",
+                    "rek_content_indicator_lookup": "Protocol",
                     "rek_content_indicator_order": 2,
                     "rek_content_indicator_pid": "UQ:41878",
                   },
@@ -1855,7 +1855,7 @@ exports[`PublicationCitation  should render component with default actions 1`] =
         Content Indicators
         :
       </span>
-      Scholarship of Teaching and Learning, Protocols
+      Scholarship of Teaching and Learning, Protocol
     </WithStyles(Typography)>
   </WithStyles(Grid)>
 </Fragment>
@@ -2008,16 +2008,16 @@ exports[`PublicationCitation  should render component with default item 1`] = `
                 "fez_record_search_key_contact_details_email": Array [],
                 "fez_record_search_key_content_indicator": Array [
                   Object {
-                    "rek_content_indicator": 454057,
+                    "rek_content_indicator": 454079,
                     "rek_content_indicator_id": 1,
                     "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
                     "rek_content_indicator_order": 1,
                     "rek_content_indicator_pid": "UQ:41878",
                   },
                   Object {
-                    "rek_content_indicator": 454058,
+                    "rek_content_indicator": 454080,
                     "rek_content_indicator_id": 2,
-                    "rek_content_indicator_lookup": "Protocols",
+                    "rek_content_indicator_lookup": "Protocol",
                     "rek_content_indicator_order": 2,
                     "rek_content_indicator_pid": "UQ:41878",
                   },
@@ -2426,16 +2426,16 @@ exports[`PublicationCitation  should render component with default item 1`] = `
                 "fez_record_search_key_contact_details_email": Array [],
                 "fez_record_search_key_content_indicator": Array [
                   Object {
-                    "rek_content_indicator": 454057,
+                    "rek_content_indicator": 454079,
                     "rek_content_indicator_id": 1,
                     "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
                     "rek_content_indicator_order": 1,
                     "rek_content_indicator_pid": "UQ:41878",
                   },
                   Object {
-                    "rek_content_indicator": 454058,
+                    "rek_content_indicator": 454080,
                     "rek_content_indicator_id": 2,
-                    "rek_content_indicator_lookup": "Protocols",
+                    "rek_content_indicator_lookup": "Protocol",
                     "rek_content_indicator_order": 2,
                     "rek_content_indicator_pid": "UQ:41878",
                   },
@@ -2748,7 +2748,7 @@ exports[`PublicationCitation  should render component with default item 1`] = `
         Content Indicators
         :
       </span>
-      Scholarship of Teaching and Learning, Protocols
+      Scholarship of Teaching and Learning, Protocol
     </WithStyles(Typography)>
   </WithStyles(Grid)>
 </Fragment>
@@ -2896,16 +2896,16 @@ exports[`PublicationCitation  should render component with default item without 
                 "fez_record_search_key_contact_details_email": Array [],
                 "fez_record_search_key_content_indicator": Array [
                   Object {
-                    "rek_content_indicator": 454057,
+                    "rek_content_indicator": 454079,
                     "rek_content_indicator_id": 1,
                     "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
                     "rek_content_indicator_order": 1,
                     "rek_content_indicator_pid": "UQ:41878",
                   },
                   Object {
-                    "rek_content_indicator": 454058,
+                    "rek_content_indicator": 454080,
                     "rek_content_indicator_id": 2,
-                    "rek_content_indicator_lookup": "Protocols",
+                    "rek_content_indicator_lookup": "Protocol",
                     "rek_content_indicator_order": 2,
                     "rek_content_indicator_pid": "UQ:41878",
                   },
@@ -3314,16 +3314,16 @@ exports[`PublicationCitation  should render component with default item without 
                 "fez_record_search_key_contact_details_email": Array [],
                 "fez_record_search_key_content_indicator": Array [
                   Object {
-                    "rek_content_indicator": 454057,
+                    "rek_content_indicator": 454079,
                     "rek_content_indicator_id": 1,
                     "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
                     "rek_content_indicator_order": 1,
                     "rek_content_indicator_pid": "UQ:41878",
                   },
                   Object {
-                    "rek_content_indicator": 454058,
+                    "rek_content_indicator": 454080,
                     "rek_content_indicator_id": 2,
-                    "rek_content_indicator_lookup": "Protocols",
+                    "rek_content_indicator_lookup": "Protocol",
                     "rek_content_indicator_order": 2,
                     "rek_content_indicator_pid": "UQ:41878",
                   },
@@ -3636,7 +3636,7 @@ exports[`PublicationCitation  should render component with default item without 
         Content Indicators
         :
       </span>
-      Scholarship of Teaching and Learning, Protocols
+      Scholarship of Teaching and Learning, Protocol
     </WithStyles(Typography)>
   </WithStyles(Grid)>
 </Fragment>
@@ -3789,16 +3789,16 @@ exports[`PublicationCitation  should render component with default list hiding t
                 "fez_record_search_key_contact_details_email": Array [],
                 "fez_record_search_key_content_indicator": Array [
                   Object {
-                    "rek_content_indicator": 454057,
+                    "rek_content_indicator": 454079,
                     "rek_content_indicator_id": 1,
                     "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
                     "rek_content_indicator_order": 1,
                     "rek_content_indicator_pid": "UQ:41878",
                   },
                   Object {
-                    "rek_content_indicator": 454058,
+                    "rek_content_indicator": 454080,
                     "rek_content_indicator_id": 2,
-                    "rek_content_indicator_lookup": "Protocols",
+                    "rek_content_indicator_lookup": "Protocol",
                     "rek_content_indicator_order": 2,
                     "rek_content_indicator_pid": "UQ:41878",
                   },
@@ -4207,16 +4207,16 @@ exports[`PublicationCitation  should render component with default list hiding t
                 "fez_record_search_key_contact_details_email": Array [],
                 "fez_record_search_key_content_indicator": Array [
                   Object {
-                    "rek_content_indicator": 454057,
+                    "rek_content_indicator": 454079,
                     "rek_content_indicator_id": 1,
                     "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
                     "rek_content_indicator_order": 1,
                     "rek_content_indicator_pid": "UQ:41878",
                   },
                   Object {
-                    "rek_content_indicator": 454058,
+                    "rek_content_indicator": 454080,
                     "rek_content_indicator_id": 2,
-                    "rek_content_indicator_lookup": "Protocols",
+                    "rek_content_indicator_lookup": "Protocol",
                     "rek_content_indicator_order": 2,
                     "rek_content_indicator_pid": "UQ:41878",
                   },
@@ -4529,7 +4529,7 @@ exports[`PublicationCitation  should render component with default list hiding t
         Content Indicators
         :
       </span>
-      Scholarship of Teaching and Learning, Protocols
+      Scholarship of Teaching and Learning, Protocol
     </WithStyles(Typography)>
   </WithStyles(Grid)>
 </Fragment>
@@ -4682,16 +4682,16 @@ exports[`PublicationCitation  should render component with default list hiding t
                 "fez_record_search_key_contact_details_email": Array [],
                 "fez_record_search_key_content_indicator": Array [
                   Object {
-                    "rek_content_indicator": 454057,
+                    "rek_content_indicator": 454079,
                     "rek_content_indicator_id": 1,
                     "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
                     "rek_content_indicator_order": 1,
                     "rek_content_indicator_pid": "UQ:41878",
                   },
                   Object {
-                    "rek_content_indicator": 454058,
+                    "rek_content_indicator": 454080,
                     "rek_content_indicator_id": 2,
-                    "rek_content_indicator_lookup": "Protocols",
+                    "rek_content_indicator_lookup": "Protocol",
                     "rek_content_indicator_order": 2,
                     "rek_content_indicator_pid": "UQ:41878",
                   },
@@ -5100,16 +5100,16 @@ exports[`PublicationCitation  should render component with default list hiding t
                 "fez_record_search_key_contact_details_email": Array [],
                 "fez_record_search_key_content_indicator": Array [
                   Object {
-                    "rek_content_indicator": 454057,
+                    "rek_content_indicator": 454079,
                     "rek_content_indicator_id": 1,
                     "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
                     "rek_content_indicator_order": 1,
                     "rek_content_indicator_pid": "UQ:41878",
                   },
                   Object {
-                    "rek_content_indicator": 454058,
+                    "rek_content_indicator": 454080,
                     "rek_content_indicator_id": 2,
-                    "rek_content_indicator_lookup": "Protocols",
+                    "rek_content_indicator_lookup": "Protocol",
                     "rek_content_indicator_order": 2,
                     "rek_content_indicator_pid": "UQ:41878",
                   },
@@ -5422,7 +5422,7 @@ exports[`PublicationCitation  should render component with default list hiding t
         Content Indicators
         :
       </span>
-      Scholarship of Teaching and Learning, Protocols
+      Scholarship of Teaching and Learning, Protocol
     </WithStyles(Typography)>
   </WithStyles(Grid)>
 </Fragment>
@@ -5575,16 +5575,16 @@ exports[`PublicationCitation  should render component with publication from mult
                 "fez_record_search_key_contact_details_email": Array [],
                 "fez_record_search_key_content_indicator": Array [
                   Object {
-                    "rek_content_indicator": 454057,
+                    "rek_content_indicator": 454079,
                     "rek_content_indicator_id": 1,
                     "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
                     "rek_content_indicator_order": 1,
                     "rek_content_indicator_pid": "UQ:41878",
                   },
                   Object {
-                    "rek_content_indicator": 454058,
+                    "rek_content_indicator": 454080,
                     "rek_content_indicator_id": 2,
-                    "rek_content_indicator_lookup": "Protocols",
+                    "rek_content_indicator_lookup": "Protocol",
                     "rek_content_indicator_order": 2,
                     "rek_content_indicator_pid": "UQ:41878",
                   },
@@ -5999,16 +5999,16 @@ exports[`PublicationCitation  should render component with publication from mult
                 "fez_record_search_key_contact_details_email": Array [],
                 "fez_record_search_key_content_indicator": Array [
                   Object {
-                    "rek_content_indicator": 454057,
+                    "rek_content_indicator": 454079,
                     "rek_content_indicator_id": 1,
                     "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
                     "rek_content_indicator_order": 1,
                     "rek_content_indicator_pid": "UQ:41878",
                   },
                   Object {
-                    "rek_content_indicator": 454058,
+                    "rek_content_indicator": 454080,
                     "rek_content_indicator_id": 2,
-                    "rek_content_indicator_lookup": "Protocols",
+                    "rek_content_indicator_lookup": "Protocol",
                     "rek_content_indicator_order": 2,
                     "rek_content_indicator_pid": "UQ:41878",
                   },
@@ -6346,7 +6346,7 @@ exports[`PublicationCitation  should render component with publication from mult
         Content Indicators
         :
       </span>
-      Scholarship of Teaching and Learning, Protocols
+      Scholarship of Teaching and Learning, Protocol
     </WithStyles(Typography)>
   </WithStyles(Grid)>
 </Fragment>
@@ -6482,16 +6482,16 @@ exports[`PublicationCitation  should render component without a title 1`] = `
                 "fez_record_search_key_contact_details_email": Array [],
                 "fez_record_search_key_content_indicator": Array [
                   Object {
-                    "rek_content_indicator": 454057,
+                    "rek_content_indicator": 454079,
                     "rek_content_indicator_id": 1,
                     "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
                     "rek_content_indicator_order": 1,
                     "rek_content_indicator_pid": "UQ:41878",
                   },
                   Object {
-                    "rek_content_indicator": 454058,
+                    "rek_content_indicator": 454080,
                     "rek_content_indicator_id": 2,
-                    "rek_content_indicator_lookup": "Protocols",
+                    "rek_content_indicator_lookup": "Protocol",
                     "rek_content_indicator_order": 2,
                     "rek_content_indicator_pid": "UQ:41878",
                   },
@@ -6906,16 +6906,16 @@ exports[`PublicationCitation  should render component without a title 1`] = `
                 "fez_record_search_key_contact_details_email": Array [],
                 "fez_record_search_key_content_indicator": Array [
                   Object {
-                    "rek_content_indicator": 454057,
+                    "rek_content_indicator": 454079,
                     "rek_content_indicator_id": 1,
                     "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
                     "rek_content_indicator_order": 1,
                     "rek_content_indicator_pid": "UQ:41878",
                   },
                   Object {
-                    "rek_content_indicator": 454058,
+                    "rek_content_indicator": 454080,
                     "rek_content_indicator_id": 2,
-                    "rek_content_indicator_lookup": "Protocols",
+                    "rek_content_indicator_lookup": "Protocol",
                     "rek_content_indicator_order": 2,
                     "rek_content_indicator_pid": "UQ:41878",
                   },
@@ -7253,7 +7253,7 @@ exports[`PublicationCitation  should render component without a title 1`] = `
         Content Indicators
         :
       </span>
-      Scholarship of Teaching and Learning, Protocols
+      Scholarship of Teaching and Learning, Protocol
     </WithStyles(Typography)>
   </WithStyles(Grid)>
 </Fragment>
@@ -7473,16 +7473,16 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
                 "fez_record_search_key_contact_details_email": Array [],
                 "fez_record_search_key_content_indicator": Array [
                   Object {
-                    "rek_content_indicator": 454057,
+                    "rek_content_indicator": 454079,
                     "rek_content_indicator_id": 1,
                     "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
                     "rek_content_indicator_order": 1,
                     "rek_content_indicator_pid": "UQ:41878",
                   },
                   Object {
-                    "rek_content_indicator": 454058,
+                    "rek_content_indicator": 454080,
                     "rek_content_indicator_id": 2,
-                    "rek_content_indicator_lookup": "Protocols",
+                    "rek_content_indicator_lookup": "Protocol",
                     "rek_content_indicator_order": 2,
                     "rek_content_indicator_pid": "UQ:41878",
                   },
@@ -7891,16 +7891,16 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
                 "fez_record_search_key_contact_details_email": Array [],
                 "fez_record_search_key_content_indicator": Array [
                   Object {
-                    "rek_content_indicator": 454057,
+                    "rek_content_indicator": 454079,
                     "rek_content_indicator_id": 1,
                     "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
                     "rek_content_indicator_order": 1,
                     "rek_content_indicator_pid": "UQ:41878",
                   },
                   Object {
-                    "rek_content_indicator": 454058,
+                    "rek_content_indicator": 454080,
                     "rek_content_indicator_id": 2,
-                    "rek_content_indicator_lookup": "Protocols",
+                    "rek_content_indicator_lookup": "Protocol",
                     "rek_content_indicator_order": 2,
                     "rek_content_indicator_pid": "UQ:41878",
                   },
@@ -8308,16 +8308,16 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
                 "fez_record_search_key_contact_details_email": Array [],
                 "fez_record_search_key_content_indicator": Array [
                   Object {
-                    "rek_content_indicator": 454057,
+                    "rek_content_indicator": 454079,
                     "rek_content_indicator_id": 1,
                     "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
                     "rek_content_indicator_order": 1,
                     "rek_content_indicator_pid": "UQ:41878",
                   },
                   Object {
-                    "rek_content_indicator": 454058,
+                    "rek_content_indicator": 454080,
                     "rek_content_indicator_id": 2,
-                    "rek_content_indicator_lookup": "Protocols",
+                    "rek_content_indicator_lookup": "Protocol",
                     "rek_content_indicator_order": 2,
                     "rek_content_indicator_pid": "UQ:41878",
                   },
@@ -8630,7 +8630,7 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
         Content Indicators
         :
       </span>
-      Scholarship of Teaching and Learning, Protocols
+      Scholarship of Teaching and Learning, Protocol
     </WithStyles(Typography)>
   </WithStyles(Grid)>
 </Fragment>

@@ -128,16 +128,16 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
         "fez_record_search_key_contact_details_email": Array [],
         "fez_record_search_key_content_indicator": Array [
           Object {
-            "rek_content_indicator": 454057,
+            "rek_content_indicator": 454079,
             "rek_content_indicator_id": 1,
             "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
             "rek_content_indicator_order": 1,
             "rek_content_indicator_pid": "UQ:41878",
           },
           Object {
-            "rek_content_indicator": 454058,
+            "rek_content_indicator": 454080,
             "rek_content_indicator_id": 2,
-            "rek_content_indicator_lookup": "Protocols",
+            "rek_content_indicator_lookup": "Protocol",
             "rek_content_indicator_order": 2,
             "rek_content_indicator_pid": "UQ:41878",
           },
@@ -1041,16 +1041,16 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
         "fez_record_search_key_contact_details_email": Array [],
         "fez_record_search_key_content_indicator": Array [
           Object {
-            "rek_content_indicator": 454057,
+            "rek_content_indicator": 454079,
             "rek_content_indicator_id": 1,
             "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
             "rek_content_indicator_order": 1,
             "rek_content_indicator_pid": "UQ:41878",
           },
           Object {
-            "rek_content_indicator": 454058,
+            "rek_content_indicator": 454080,
             "rek_content_indicator_id": 2,
-            "rek_content_indicator_lookup": "Protocols",
+            "rek_content_indicator_lookup": "Protocol",
             "rek_content_indicator_order": 2,
             "rek_content_indicator_pid": "UQ:41878",
           },
@@ -1979,16 +1979,16 @@ exports[`Component MyIncompleteRecord should render file upload field 1`] = `
         "fez_record_search_key_contact_details_email": Array [],
         "fez_record_search_key_content_indicator": Array [
           Object {
-            "rek_content_indicator": 454057,
+            "rek_content_indicator": 454079,
             "rek_content_indicator_id": 1,
             "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
             "rek_content_indicator_order": 1,
             "rek_content_indicator_pid": "UQ:41878",
           },
           Object {
-            "rek_content_indicator": 454058,
+            "rek_content_indicator": 454080,
             "rek_content_indicator_id": 2,
-            "rek_content_indicator_lookup": "Protocols",
+            "rek_content_indicator_lookup": "Protocol",
             "rek_content_indicator_order": 2,
             "rek_content_indicator_pid": "UQ:41878",
           },
@@ -2967,16 +2967,16 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
         "fez_record_search_key_contact_details_email": Array [],
         "fez_record_search_key_content_indicator": Array [
           Object {
-            "rek_content_indicator": 454057,
+            "rek_content_indicator": 454079,
             "rek_content_indicator_id": 1,
             "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
             "rek_content_indicator_order": 1,
             "rek_content_indicator_pid": "UQ:41878",
           },
           Object {
-            "rek_content_indicator": 454058,
+            "rek_content_indicator": 454080,
             "rek_content_indicator_id": 2,
-            "rek_content_indicator_lookup": "Protocols",
+            "rek_content_indicator_lookup": "Protocol",
             "rek_content_indicator_order": 2,
             "rek_content_indicator_pid": "UQ:41878",
           },
@@ -3880,16 +3880,16 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
         "fez_record_search_key_contact_details_email": Array [],
         "fez_record_search_key_content_indicator": Array [
           Object {
-            "rek_content_indicator": 454057,
+            "rek_content_indicator": 454079,
             "rek_content_indicator_id": 1,
             "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
             "rek_content_indicator_order": 1,
             "rek_content_indicator_pid": "UQ:41878",
           },
           Object {
-            "rek_content_indicator": 454058,
+            "rek_content_indicator": 454080,
             "rek_content_indicator_id": 2,
-            "rek_content_indicator_lookup": "Protocols",
+            "rek_content_indicator_lookup": "Protocol",
             "rek_content_indicator_order": 2,
             "rek_content_indicator_pid": "UQ:41878",
           },
@@ -4793,16 +4793,16 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
         "fez_record_search_key_contact_details_email": Array [],
         "fez_record_search_key_content_indicator": Array [
           Object {
-            "rek_content_indicator": 454057,
+            "rek_content_indicator": 454079,
             "rek_content_indicator_id": 1,
             "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
             "rek_content_indicator_order": 1,
             "rek_content_indicator_pid": "UQ:41878",
           },
           Object {
-            "rek_content_indicator": 454058,
+            "rek_content_indicator": 454080,
             "rek_content_indicator_id": 2,
-            "rek_content_indicator_lookup": "Protocols",
+            "rek_content_indicator_lookup": "Protocol",
             "rek_content_indicator_order": 2,
             "rek_content_indicator_pid": "UQ:41878",
           },
@@ -5706,16 +5706,16 @@ exports[`Component MyIncompleteRecord should render significance and contributio
         "fez_record_search_key_contact_details_email": Array [],
         "fez_record_search_key_content_indicator": Array [
           Object {
-            "rek_content_indicator": 454057,
+            "rek_content_indicator": 454079,
             "rek_content_indicator_id": 1,
             "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
             "rek_content_indicator_order": 1,
             "rek_content_indicator_pid": "UQ:41878",
           },
           Object {
-            "rek_content_indicator": 454058,
+            "rek_content_indicator": 454080,
             "rek_content_indicator_id": 2,
-            "rek_content_indicator_lookup": "Protocols",
+            "rek_content_indicator_lookup": "Protocol",
             "rek_content_indicator_order": 2,
             "rek_content_indicator_pid": "UQ:41878",
           },
@@ -6619,16 +6619,16 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
         "fez_record_search_key_contact_details_email": Array [],
         "fez_record_search_key_content_indicator": Array [
           Object {
-            "rek_content_indicator": 454057,
+            "rek_content_indicator": 454079,
             "rek_content_indicator_id": 1,
             "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
             "rek_content_indicator_order": 1,
             "rek_content_indicator_pid": "UQ:41878",
           },
           Object {
-            "rek_content_indicator": 454058,
+            "rek_content_indicator": 454080,
             "rek_content_indicator_id": 2,
-            "rek_content_indicator_lookup": "Protocols",
+            "rek_content_indicator_lookup": "Protocol",
             "rek_content_indicator_order": 2,
             "rek_content_indicator_pid": "UQ:41878",
           },
@@ -7538,16 +7538,16 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
         "fez_record_search_key_contact_details_email": Array [],
         "fez_record_search_key_content_indicator": Array [
           Object {
-            "rek_content_indicator": 454057,
+            "rek_content_indicator": 454079,
             "rek_content_indicator_id": 1,
             "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
             "rek_content_indicator_order": 1,
             "rek_content_indicator_pid": "UQ:41878",
           },
           Object {
-            "rek_content_indicator": 454058,
+            "rek_content_indicator": 454080,
             "rek_content_indicator_id": 2,
-            "rek_content_indicator_lookup": "Protocols",
+            "rek_content_indicator_lookup": "Protocol",
             "rek_content_indicator_order": 2,
             "rek_content_indicator_pid": "UQ:41878",
           },
