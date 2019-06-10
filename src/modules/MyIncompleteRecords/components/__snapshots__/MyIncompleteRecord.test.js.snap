@@ -137,7 +137,7 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
           Object {
             "rek_content_indicator": 454080,
             "rek_content_indicator_id": 2,
-            "rek_content_indicator_lookup": "Protocols",
+            "rek_content_indicator_lookup": "Protocol",
             "rek_content_indicator_order": 2,
             "rek_content_indicator_pid": "UQ:41878",
           },
@@ -1050,7 +1050,7 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
           Object {
             "rek_content_indicator": 454080,
             "rek_content_indicator_id": 2,
-            "rek_content_indicator_lookup": "Protocols",
+            "rek_content_indicator_lookup": "Protocol",
             "rek_content_indicator_order": 2,
             "rek_content_indicator_pid": "UQ:41878",
           },
@@ -1988,7 +1988,7 @@ exports[`Component MyIncompleteRecord should render file upload field 1`] = `
           Object {
             "rek_content_indicator": 454080,
             "rek_content_indicator_id": 2,
-            "rek_content_indicator_lookup": "Protocols",
+            "rek_content_indicator_lookup": "Protocol",
             "rek_content_indicator_order": 2,
             "rek_content_indicator_pid": "UQ:41878",
           },
@@ -2976,7 +2976,7 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
           Object {
             "rek_content_indicator": 454080,
             "rek_content_indicator_id": 2,
-            "rek_content_indicator_lookup": "Protocols",
+            "rek_content_indicator_lookup": "Protocol",
             "rek_content_indicator_order": 2,
             "rek_content_indicator_pid": "UQ:41878",
           },
@@ -3889,7 +3889,7 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
           Object {
             "rek_content_indicator": 454080,
             "rek_content_indicator_id": 2,
-            "rek_content_indicator_lookup": "Protocols",
+            "rek_content_indicator_lookup": "Protocol",
             "rek_content_indicator_order": 2,
             "rek_content_indicator_pid": "UQ:41878",
           },
@@ -4802,7 +4802,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
           Object {
             "rek_content_indicator": 454080,
             "rek_content_indicator_id": 2,
-            "rek_content_indicator_lookup": "Protocols",
+            "rek_content_indicator_lookup": "Protocol",
             "rek_content_indicator_order": 2,
             "rek_content_indicator_pid": "UQ:41878",
           },
@@ -5715,7 +5715,7 @@ exports[`Component MyIncompleteRecord should render significance and contributio
           Object {
             "rek_content_indicator": 454080,
             "rek_content_indicator_id": 2,
-            "rek_content_indicator_lookup": "Protocols",
+            "rek_content_indicator_lookup": "Protocol",
             "rek_content_indicator_order": 2,
             "rek_content_indicator_pid": "UQ:41878",
           },
@@ -6628,7 +6628,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
           Object {
             "rek_content_indicator": 454080,
             "rek_content_indicator_id": 2,
-            "rek_content_indicator_lookup": "Protocols",
+            "rek_content_indicator_lookup": "Protocol",
             "rek_content_indicator_order": 2,
             "rek_content_indicator_pid": "UQ:41878",
           },
@@ -7547,7 +7547,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
           Object {
             "rek_content_indicator": 454080,
             "rek_content_indicator_id": 2,
-            "rek_content_indicator_lookup": "Protocols",
+            "rek_content_indicator_lookup": "Protocol",
             "rek_content_indicator_order": 2,
             "rek_content_indicator_pid": "UQ:41878",
           },

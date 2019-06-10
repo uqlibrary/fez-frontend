@@ -1079,7 +1079,7 @@ exports[`PublicationCitation  should render component with default actions 1`] =
                   Object {
                     "rek_content_indicator": 454080,
                     "rek_content_indicator_id": 2,
-                    "rek_content_indicator_lookup": "Protocols",
+                    "rek_content_indicator_lookup": "Protocol",
                     "rek_content_indicator_order": 2,
                     "rek_content_indicator_pid": "UQ:41878",
                   },
@@ -1386,7 +1386,7 @@ exports[`PublicationCitation  should render component with default actions 1`] =
           >
             Content Indicators
             : 
-            Scholarship of Teaching and Learning, Protocols
+            Scholarship of Teaching and Learning, Protocol
           </WithStyles(Typography)>
         </WithStyles(Grid)>
         <WithStyles(Grid)
@@ -1510,7 +1510,7 @@ exports[`PublicationCitation  should render component with default actions 1`] =
                   Object {
                     "rek_content_indicator": 454080,
                     "rek_content_indicator_id": 2,
-                    "rek_content_indicator_lookup": "Protocols",
+                    "rek_content_indicator_lookup": "Protocol",
                     "rek_content_indicator_order": 2,
                     "rek_content_indicator_pid": "UQ:41878",
                   },
@@ -2009,7 +2009,7 @@ exports[`PublicationCitation  should render component with default item 1`] = `
                   Object {
                     "rek_content_indicator": 454080,
                     "rek_content_indicator_id": 2,
-                    "rek_content_indicator_lookup": "Protocols",
+                    "rek_content_indicator_lookup": "Protocol",
                     "rek_content_indicator_order": 2,
                     "rek_content_indicator_pid": "UQ:41878",
                   },
@@ -2316,7 +2316,7 @@ exports[`PublicationCitation  should render component with default item 1`] = `
           >
             Content Indicators
             : 
-            Scholarship of Teaching and Learning, Protocols
+            Scholarship of Teaching and Learning, Protocol
           </WithStyles(Typography)>
         </WithStyles(Grid)>
         <WithStyles(Grid)
@@ -2440,7 +2440,7 @@ exports[`PublicationCitation  should render component with default item 1`] = `
                   Object {
                     "rek_content_indicator": 454080,
                     "rek_content_indicator_id": 2,
-                    "rek_content_indicator_lookup": "Protocols",
+                    "rek_content_indicator_lookup": "Protocol",
                     "rek_content_indicator_order": 2,
                     "rek_content_indicator_pid": "UQ:41878",
                   },
@@ -2895,7 +2895,7 @@ exports[`PublicationCitation  should render component with default item without 
                   Object {
                     "rek_content_indicator": 454080,
                     "rek_content_indicator_id": 2,
-                    "rek_content_indicator_lookup": "Protocols",
+                    "rek_content_indicator_lookup": "Protocol",
                     "rek_content_indicator_order": 2,
                     "rek_content_indicator_pid": "UQ:41878",
                   },
@@ -3202,7 +3202,7 @@ exports[`PublicationCitation  should render component with default item without 
           >
             Content Indicators
             : 
-            Scholarship of Teaching and Learning, Protocols
+            Scholarship of Teaching and Learning, Protocol
           </WithStyles(Typography)>
         </WithStyles(Grid)>
         <WithStyles(Grid)
@@ -3326,7 +3326,7 @@ exports[`PublicationCitation  should render component with default item without 
                   Object {
                     "rek_content_indicator": 454080,
                     "rek_content_indicator_id": 2,
-                    "rek_content_indicator_lookup": "Protocols",
+                    "rek_content_indicator_lookup": "Protocol",
                     "rek_content_indicator_order": 2,
                     "rek_content_indicator_pid": "UQ:41878",
                   },
@@ -3786,7 +3786,7 @@ exports[`PublicationCitation  should render component with default list hiding t
                   Object {
                     "rek_content_indicator": 454080,
                     "rek_content_indicator_id": 2,
-                    "rek_content_indicator_lookup": "Protocols",
+                    "rek_content_indicator_lookup": "Protocol",
                     "rek_content_indicator_order": 2,
                     "rek_content_indicator_pid": "UQ:41878",
                   },
@@ -4093,7 +4093,7 @@ exports[`PublicationCitation  should render component with default list hiding t
           >
             Content Indicators
             : 
-            Scholarship of Teaching and Learning, Protocols
+            Scholarship of Teaching and Learning, Protocol
           </WithStyles(Typography)>
         </WithStyles(Grid)>
         <WithStyles(Grid)
@@ -4217,7 +4217,7 @@ exports[`PublicationCitation  should render component with default list hiding t
                   Object {
                     "rek_content_indicator": 454080,
                     "rek_content_indicator_id": 2,
-                    "rek_content_indicator_lookup": "Protocols",
+                    "rek_content_indicator_lookup": "Protocol",
                     "rek_content_indicator_order": 2,
                     "rek_content_indicator_pid": "UQ:41878",
                   },
@@ -4677,7 +4677,7 @@ exports[`PublicationCitation  should render component with default list hiding t
                   Object {
                     "rek_content_indicator": 454080,
                     "rek_content_indicator_id": 2,
-                    "rek_content_indicator_lookup": "Protocols",
+                    "rek_content_indicator_lookup": "Protocol",
                     "rek_content_indicator_order": 2,
                     "rek_content_indicator_pid": "UQ:41878",
                   },
@@ -4984,7 +4984,7 @@ exports[`PublicationCitation  should render component with default list hiding t
           >
             Content Indicators
             : 
-            Scholarship of Teaching and Learning, Protocols
+            Scholarship of Teaching and Learning, Protocol
           </WithStyles(Typography)>
         </WithStyles(Grid)>
         <WithStyles(Grid)
@@ -5108,7 +5108,7 @@ exports[`PublicationCitation  should render component with default list hiding t
                   Object {
                     "rek_content_indicator": 454080,
                     "rek_content_indicator_id": 2,
-                    "rek_content_indicator_lookup": "Protocols",
+                    "rek_content_indicator_lookup": "Protocol",
                     "rek_content_indicator_order": 2,
                     "rek_content_indicator_pid": "UQ:41878",
                   },
@@ -5568,7 +5568,7 @@ exports[`PublicationCitation  should render component with publication from mult
                   Object {
                     "rek_content_indicator": 454080,
                     "rek_content_indicator_id": 2,
-                    "rek_content_indicator_lookup": "Protocols",
+                    "rek_content_indicator_lookup": "Protocol",
                     "rek_content_indicator_order": 2,
                     "rek_content_indicator_pid": "UQ:41878",
                   },
@@ -5881,7 +5881,7 @@ exports[`PublicationCitation  should render component with publication from mult
           >
             Content Indicators
             : 
-            Scholarship of Teaching and Learning, Protocols
+            Scholarship of Teaching and Learning, Protocol
           </WithStyles(Typography)>
         </WithStyles(Grid)>
         <WithStyles(Grid)
@@ -6005,7 +6005,7 @@ exports[`PublicationCitation  should render component with publication from mult
                   Object {
                     "rek_content_indicator": 454080,
                     "rek_content_indicator_id": 2,
-                    "rek_content_indicator_lookup": "Protocols",
+                    "rek_content_indicator_lookup": "Protocol",
                     "rek_content_indicator_order": 2,
                     "rek_content_indicator_pid": "UQ:41878",
                   },
@@ -6473,7 +6473,7 @@ exports[`PublicationCitation  should render component without a title 1`] = `
                   Object {
                     "rek_content_indicator": 454080,
                     "rek_content_indicator_id": 2,
-                    "rek_content_indicator_lookup": "Protocols",
+                    "rek_content_indicator_lookup": "Protocol",
                     "rek_content_indicator_order": 2,
                     "rek_content_indicator_pid": "UQ:41878",
                   },
@@ -6786,7 +6786,7 @@ exports[`PublicationCitation  should render component without a title 1`] = `
           >
             Content Indicators
             : 
-            Scholarship of Teaching and Learning, Protocols
+            Scholarship of Teaching and Learning, Protocol
           </WithStyles(Typography)>
         </WithStyles(Grid)>
         <WithStyles(Grid)
@@ -6910,7 +6910,7 @@ exports[`PublicationCitation  should render component without a title 1`] = `
                   Object {
                     "rek_content_indicator": 454080,
                     "rek_content_indicator_id": 2,
-                    "rek_content_indicator_lookup": "Protocols",
+                    "rek_content_indicator_lookup": "Protocol",
                     "rek_content_indicator_order": 2,
                     "rek_content_indicator_pid": "UQ:41878",
                   },
@@ -7462,7 +7462,7 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
                   Object {
                     "rek_content_indicator": 454080,
                     "rek_content_indicator_id": 2,
-                    "rek_content_indicator_lookup": "Protocols",
+                    "rek_content_indicator_lookup": "Protocol",
                     "rek_content_indicator_order": 2,
                     "rek_content_indicator_pid": "UQ:41878",
                   },
@@ -7769,7 +7769,7 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
           >
             Content Indicators
             : 
-            Scholarship of Teaching and Learning, Protocols
+            Scholarship of Teaching and Learning, Protocol
           </WithStyles(Typography)>
         </WithStyles(Grid)>
         <WithStyles(Grid)
@@ -7893,7 +7893,7 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
                   Object {
                     "rek_content_indicator": 454080,
                     "rek_content_indicator_id": 2,
-                    "rek_content_indicator_lookup": "Protocols",
+                    "rek_content_indicator_lookup": "Protocol",
                     "rek_content_indicator_order": 2,
                     "rek_content_indicator_pid": "UQ:41878",
                   },
@@ -8310,7 +8310,7 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
                   Object {
                     "rek_content_indicator": 454080,
                     "rek_content_indicator_id": 2,
-                    "rek_content_indicator_lookup": "Protocols",
+                    "rek_content_indicator_lookup": "Protocol",
                     "rek_content_indicator_order": 2,
                     "rek_content_indicator_pid": "UQ:41878",
                   },

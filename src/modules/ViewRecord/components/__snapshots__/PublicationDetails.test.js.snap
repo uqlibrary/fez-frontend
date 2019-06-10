@@ -622,14 +622,14 @@ exports[`Publication Details Component  Renders full mount 1`] = `
                   Object {
                     "rek_content_indicator": 454079,
                     "rek_content_indicator_id": 1,
-                    "rek_content_indicator_lookup": "some content indicator",
+                    "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
                     "rek_content_indicator_order": 1,
                     "rek_ismemberof": "UQ:152266",
                   },
                   Object {
                     "rek_content_indicator": 454080,
                     "rek_content_indicator_id": 2,
-                    "rek_content_indicator_lookup": "yet another content indicator",
+                    "rek_content_indicator_lookup": "Protocol",
                     "rek_content_indicator_order": 2,
                     "rek_ismemberof": "UQ:152266",
                   },
@@ -1447,14 +1447,14 @@ exports[`Publication Details Component  Renders full mount 1`] = `
                     Object {
                       "rek_content_indicator": 454079,
                       "rek_content_indicator_id": 1,
-                      "rek_content_indicator_lookup": "some content indicator",
+                      "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
                       "rek_content_indicator_order": 1,
                       "rek_ismemberof": "UQ:152266",
                     },
                     Object {
                       "rek_content_indicator": 454080,
                       "rek_content_indicator_id": 2,
-                      "rek_content_indicator_lookup": "yet another content indicator",
+                      "rek_content_indicator_lookup": "Protocol",
                       "rek_content_indicator_order": 2,
                       "rek_ismemberof": "UQ:152266",
                     },
@@ -2278,14 +2278,14 @@ exports[`Publication Details Component  Renders full mount 1`] = `
                       Object {
                         "rek_content_indicator": 454079,
                         "rek_content_indicator_id": 1,
-                        "rek_content_indicator_lookup": "some content indicator",
+                        "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
                         "rek_content_indicator_order": 1,
                         "rek_ismemberof": "UQ:152266",
                       },
                       Object {
                         "rek_content_indicator": 454080,
                         "rek_content_indicator_id": 2,
-                        "rek_content_indicator_lookup": "yet another content indicator",
+                        "rek_content_indicator_lookup": "Protocol",
                         "rek_content_indicator_order": 2,
                         "rek_ismemberof": "UQ:152266",
                       },
@@ -3425,7 +3425,7 @@ exports[`Publication Details Component  should render component 1`] = `
       heading="Sub-type"
     />
     <Component
-      data="some content indicator, yet another content indicator"
+      data="Scholarship of Teaching and Learning, Protocol"
       heading="Content Indicators"
     />
     <Component
@@ -3478,7 +3478,7 @@ exports[`Publication Details Component  should render with publication without c
       heading="Type of work"
     />
     <Component
-      data="some content indicator, yet another content indicator"
+      data="Scholarship of Teaching and Learning, Protocol"
       heading="Content Indicators"
     />
   </StandardCard>
@@ -3498,7 +3498,7 @@ exports[`Publication Details Component  should render with publication without s
       heading="Type of work"
     />
     <Component
-      data="some content indicator, yet another content indicator"
+      data="Scholarship of Teaching and Learning, Protocol"
       heading="Content Indicators"
     />
     <Component

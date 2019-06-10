@@ -155,7 +155,7 @@ exports[`FixRecord form should allow content indicators to be selected 1`] = `
 +                         <span
 +                           class=\\"MuiTypography-root-100 MuiTypography-caption-110 MuiTypography-gutterBottom-127\\"
 +                         >
-+                           Content Indicators: Scholarship of Teaching and Learning, Protocols
++                           Content Indicators: Scholarship of Teaching and Learning, Protocol
 +                         </span>
 +                       </div>
 +                       <div

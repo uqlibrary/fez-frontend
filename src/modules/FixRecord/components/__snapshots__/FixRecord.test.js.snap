@@ -134,7 +134,7 @@ exports[`Component FixRecord _handleDefaultSubmit() 1`] = `
                   Object {
                     "rek_content_indicator": 454080,
                     "rek_content_indicator_id": 2,
-                    "rek_content_indicator_lookup": "Protocols",
+                    "rek_content_indicator_lookup": "Protocol",
                     "rek_content_indicator_order": 2,
                     "rek_content_indicator_pid": "UQ:41878",
                   },
@@ -623,7 +623,7 @@ exports[`Component FixRecord componentWillReceiveProps() 1`] = `
                   Object {
                     "rek_content_indicator": 454080,
                     "rek_content_indicator_id": 2,
-                    "rek_content_indicator_lookup": "Protocols",
+                    "rek_content_indicator_lookup": "Protocol",
                     "rek_content_indicator_order": 2,
                     "rek_content_indicator_pid": "UQ:41878",
                   },
@@ -1123,7 +1123,7 @@ exports[`Component FixRecord should render fix record form 1`] = `
                   Object {
                     "rek_content_indicator": 454080,
                     "rek_content_indicator_id": 2,
-                    "rek_content_indicator_lookup": "Protocols",
+                    "rek_content_indicator_lookup": "Protocol",
                     "rek_content_indicator_order": 2,
                     "rek_content_indicator_pid": "UQ:41878",
                   },
@@ -1788,7 +1788,7 @@ exports[`Component FixRecord should render record citation, two actions in selec
                   Object {
                     "rek_content_indicator": 454080,
                     "rek_content_indicator_id": 2,
-                    "rek_content_indicator_lookup": "Protocols",
+                    "rek_content_indicator_lookup": "Protocol",
                     "rek_content_indicator_order": 2,
                     "rek_content_indicator_pid": "UQ:41878",
                   },
@@ -2277,7 +2277,7 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
                   Object {
                     "rek_content_indicator": 454080,
                     "rek_content_indicator_id": 2,
-                    "rek_content_indicator_lookup": "Protocols",
+                    "rek_content_indicator_lookup": "Protocol",
                     "rek_content_indicator_order": 2,
                     "rek_content_indicator_pid": "UQ:41878",
                   },
@@ -2931,7 +2931,7 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
                   Object {
                     "rek_content_indicator": 454080,
                     "rek_content_indicator_id": 2,
-                    "rek_content_indicator_lookup": "Protocols",
+                    "rek_content_indicator_lookup": "Protocol",
                     "rek_content_indicator_order": 2,
                     "rek_content_indicator_pid": "UQ:41878",
                   },
@@ -3580,7 +3580,7 @@ exports[`Component FixRecord should render unclaim form 1`] = `
                   Object {
                     "rek_content_indicator": 454080,
                     "rek_content_indicator_id": 2,
-                    "rek_content_indicator_lookup": "Protocols",
+                    "rek_content_indicator_lookup": "Protocol",
                     "rek_content_indicator_order": 2,
                     "rek_content_indicator_pid": "UQ:41878",
                   },
