@@ -839,6 +839,44 @@ exports[`Component PublicationForm Shows an alert 2`] = `
       item={true}
       xs={12}
     >
+      <StandardCard
+        help={
+          Object {
+            "buttonLabel": "CLOSE",
+            "text": "TBC",
+            "title": "Content indicators",
+          }
+        }
+        title="Content indicator"
+      >
+        <WithStyles(Grid)
+          container={true}
+          spacing={24}
+        >
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(Typography)>
+              Content Indicator types (not mandatory)
+            </WithStyles(Typography)>
+            <Field
+              component={[Function]}
+              disabled={false}
+              fullWidth={true}
+              id="content-indicators"
+              label="Content Indicator types (not mandatory)"
+              multiple={true}
+              name="contentIndicators"
+            />
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+      </StandardCard>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
       <formComponent
         formValues={Immutable.Map {}}
         submitting={false}
@@ -1302,6 +1340,44 @@ exports[`Component PublicationForm Shows an alert 3`] = `
                 Research Report - Internal or Other
               </WithStyles(MenuItem)>
             </Field>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+      </StandardCard>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <StandardCard
+        help={
+          Object {
+            "buttonLabel": "CLOSE",
+            "text": "TBC",
+            "title": "Content indicators",
+          }
+        }
+        title="Content indicator"
+      >
+        <WithStyles(Grid)
+          container={true}
+          spacing={24}
+        >
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(Typography)>
+              Content Indicator types (not mandatory)
+            </WithStyles(Typography)>
+            <Field
+              component={[Function]}
+              disabled={false}
+              fullWidth={true}
+              id="content-indicators"
+              label="Content Indicator types (not mandatory)"
+              multiple={true}
+              name="contentIndicators"
+            />
           </WithStyles(Grid)>
         </WithStyles(Grid)>
       </StandardCard>
@@ -4510,6 +4586,44 @@ exports[`Component PublicationForm should render component with BookForm 1`] = `
       item={true}
       xs={12}
     >
+      <StandardCard
+        help={
+          Object {
+            "buttonLabel": "CLOSE",
+            "text": "TBC",
+            "title": "Content indicators",
+          }
+        }
+        title="Content indicator"
+      >
+        <WithStyles(Grid)
+          container={true}
+          spacing={24}
+        >
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(Typography)>
+              Content Indicator types (not mandatory)
+            </WithStyles(Typography)>
+            <Field
+              component={[Function]}
+              disabled={false}
+              fullWidth={true}
+              id="content-indicators"
+              label="Content Indicator types (not mandatory)"
+              multiple={true}
+              name="contentIndicators"
+            />
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+      </StandardCard>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
       <BookForm
         formValues={
           Immutable.Map {
@@ -5008,6 +5122,44 @@ exports[`Component PublicationForm should render component with GenericDocument 
               name="rek_subtype"
               placeholder="Select a work subtype from the dropdown list"
               required={true}
+            />
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+      </StandardCard>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <StandardCard
+        help={
+          Object {
+            "buttonLabel": "CLOSE",
+            "text": "TBC",
+            "title": "Content indicators",
+          }
+        }
+        title="Content indicator"
+      >
+        <WithStyles(Grid)
+          container={true}
+          spacing={24}
+        >
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(Typography)>
+              Content Indicator types (not mandatory)
+            </WithStyles(Typography)>
+            <Field
+              component={[Function]}
+              disabled={false}
+              fullWidth={true}
+              id="content-indicators"
+              label="Content Indicator types (not mandatory)"
+              multiple={true}
+              name="contentIndicators"
             />
           </WithStyles(Grid)>
         </WithStyles(Grid)>
@@ -5521,6 +5673,44 @@ exports[`Component PublicationForm should render component with JournalArticleFo
       item={true}
       xs={12}
     >
+      <StandardCard
+        help={
+          Object {
+            "buttonLabel": "CLOSE",
+            "text": "TBC",
+            "title": "Content indicators",
+          }
+        }
+        title="Content indicator"
+      >
+        <WithStyles(Grid)
+          container={true}
+          spacing={24}
+        >
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(Typography)>
+              Content Indicator types (not mandatory)
+            </WithStyles(Typography)>
+            <Field
+              component={[Function]}
+              disabled={false}
+              fullWidth={true}
+              id="content-indicators"
+              label="Content Indicator types (not mandatory)"
+              multiple={true}
+              name="contentIndicators"
+            />
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+      </StandardCard>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
       <JournalArticleForm
         formValues={
           Immutable.Map {
@@ -6016,6 +6206,44 @@ exports[`Component PublicationForm should render component with ResearchReportFo
               name="rek_subtype"
               placeholder="Select a work subtype from the dropdown list"
               required={true}
+            />
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+      </StandardCard>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <StandardCard
+        help={
+          Object {
+            "buttonLabel": "CLOSE",
+            "text": "TBC",
+            "title": "Content indicators",
+          }
+        }
+        title="Content indicator"
+      >
+        <WithStyles(Grid)
+          container={true}
+          spacing={24}
+        >
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(Typography)>
+              Content Indicator types (not mandatory)
+            </WithStyles(Typography)>
+            <Field
+              component={[Function]}
+              disabled={false}
+              fullWidth={true}
+              id="content-indicators"
+              label="Content Indicator types (not mandatory)"
+              multiple={true}
+              name="contentIndicators"
             />
           </WithStyles(Grid)>
         </WithStyles(Grid)>

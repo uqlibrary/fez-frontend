@@ -23,6 +23,18 @@ export default {
         inputLabelText: 'Work subtype',
         hintText: 'Select a work subtype from the dropdown list',
     },
+    contentIndicators: {
+        help: {
+            title: 'Content indicators',
+            text: 'TBC',
+            buttonLabel: 'CLOSE'
+        },
+        title: 'Content indicator',
+        description: 'Content Indicator types (not mandatory)',
+        fieldLabels: {
+            label: 'Content Indicator types (not mandatory)'
+        },
+    },
     generic: {
         information: {
             title: 'Generic document information',

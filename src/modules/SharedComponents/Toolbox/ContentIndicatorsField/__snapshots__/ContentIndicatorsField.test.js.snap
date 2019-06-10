@@ -10,17 +10,17 @@ exports[`ContentIndicatorsField component should render default view 1`] = `
       Object {
         "disabled": false,
         "text": "Scholarship of Teaching and Learning",
-        "value": 454057,
+        "value": 454079,
       },
       Object {
         "disabled": false,
         "text": "Protocol",
-        "value": 454058,
+        "value": 454080,
       },
       Object {
         "disabled": false,
         "text": "Case Study",
-        "value": 454059,
+        "value": 454081,
       },
     ]
   }
@@ -52,17 +52,17 @@ exports[`ContentIndicatorsField component should render with given field props 1
       Object {
         "disabled": false,
         "text": "Scholarship of Teaching and Learning",
-        "value": 454057,
+        "value": 454079,
       },
       Object {
         "disabled": false,
         "text": "Protocol",
-        "value": 454058,
+        "value": 454080,
       },
       Object {
         "disabled": false,
         "text": "Case Study",
-        "value": 454059,
+        "value": 454081,
       },
     ]
   }
@@ -106,17 +106,17 @@ exports[`ContentIndicatorsField component should render with given field props 2
       Object {
         "disabled": false,
         "text": "Scholarship of Teaching and Learning",
-        "value": 454057,
+        "value": 454079,
       },
       Object {
         "disabled": false,
         "text": "Protocol",
-        "value": 454058,
+        "value": 454080,
       },
       Object {
         "disabled": false,
         "text": "Case Study",
-        "value": 454059,
+        "value": 454081,
       },
     ]
   }

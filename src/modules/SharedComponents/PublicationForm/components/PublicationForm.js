@@ -16,6 +16,9 @@ import {publicationTypes, validation} from 'config';
 import {default as txt} from 'locale/publicationForm';
 import * as recordForms from './Forms';
 import {NEW_DOCTYPES_OPTIONS, DOCTYPE_SUBTYPE_MAPPING} from 'config/general';
+import Typography from '@material-ui/core/Typography';
+import { ContentIndicatorsField, showContentIndicatorsField } from 'modules/SharedComponents/Toolbox/ContentIndicatorsField';
+
 
 export default class PublicationForm extends Component {
     static propTypes = {
@@ -138,6 +141,27 @@ export default class PublicationForm extends Component {
                     {
                         !!this.props.formComponent &&
                         <React.Fragment>
+                            {
+                                showContentIndicatorsField(this.props.formValues && this.props.formValues.toJS()) &&
+                                <Grid item xs={12}>
+                                    <StandardCard title={txt.contentIndicators.title} help={txt.contentIndicators.help} >
+                                        <Grid container spacing={24}>
+                                            <Grid item xs={12}>
+                                                <Typography>{txt.contentIndicators.description}</Typography>
+                                                <Field
+                                                    component={ContentIndicatorsField}
+                                                    disabled={this.props.submitting}
+                                                    id="content-indicators"
+                                                    name="contentIndicators"
+                                                    label={txt.contentIndicators.fieldLabels.label}
+                                                    multiple
+                                                    fullWidth
+                                                />
+                                            </Grid>
+                                        </Grid>
+                                    </StandardCard>
+                                </Grid>
+                            }
                             {
                                 !!this.props.isNtro &&
                                 <NtroHeader/>
