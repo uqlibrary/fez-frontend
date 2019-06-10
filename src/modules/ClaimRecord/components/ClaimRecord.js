@@ -60,7 +60,10 @@ export default class ClaimRecord extends PureComponent {
     }
 
     componentDidMount() {
-        const publication = this.props.initialValues.get('publication') ? this.props.initialValues.get('publication').toJS() : null;
+        const publication = this.props.initialValues.get('publication')
+            ? this.props.initialValues.get('publication').toJS()
+            : null
+        ;
         if (publication && publication.rek_pid && this.props.actions) {
             this.props.actions.loadFullRecordToClaim(publication.rek_pid);
         }
@@ -103,9 +106,19 @@ export default class ClaimRecord extends PureComponent {
     };
 
     _contributorValidation = (link) => {
-        const publication = this.props.initialValues.get('publication').toJS();
-        return publication.fez_record_search_key_author && publication.fez_record_search_key_author.length > 0 ?
-            validation.isValidContributorLink(link) : validation.isValidContributorLink(link, true);
+        const publication = (
+            this.props.initialValues.get('publication') &&
+            this.props.initialValues.get('publication').toJS &&
+            this.props.initialValues.get('publication').toJS()
+        );
+        return (
+            publication &&
+            publication.fez_record_search_key_author &&
+            publication.fez_record_search_key_author.length > 0
+        )
+            ? validation.isValidContributorLink(link)
+            : validation.isValidContributorLink(link, true)
+        ;
     };
 
     render() {

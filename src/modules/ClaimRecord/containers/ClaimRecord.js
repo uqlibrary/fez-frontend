@@ -19,6 +19,7 @@ const onSubmit = (values, dispatch) => {
 
 let ClaimPublicationFormContainer = reduxForm({
     form: FORM_NAME,
+    enableReinitialize: true,
     onSubmit
 })(confirmDiscardFormChanges(ClaimRecord, FORM_NAME));
 
