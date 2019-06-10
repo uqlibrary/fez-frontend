@@ -19,23 +19,17 @@ export const showContentIndicatorsField = (record) => {
     const isBlacklistedType = record && record.rek_display_type && CONTENT_INDICATORS_DOCTYPE_BLACKLIST.includes(
         record.rek_display_type
     );
-    const recordCollectionPids = record &&
-        record.fez_record_search_key_ismemberof &&
-        record.fez_record_search_key_ismemberof.map(
-            item => item.rek_ismemberof
-        );
-    const inBlacklistedCollection = recordCollectionPids &&
-            CONTENT_INDICATORS_COLLECTIONS_BLACKLIST.some(
-                collectionPid => recordCollectionPids.includes(collectionPid)
-            );
-    const recordCollectionPids = record.fez_record_search_key_ismemberof &&
+
+    const recordCollectionPids = record && record.fez_record_search_key_ismemberof &&
         record.fez_record_search_key_ismemberof.map(
             item => item.rek_ismemberof
         ) || []
     ;
-    const inBlacklistedCollection = CONTENT_INDICATORS_COLLECTIONS_BLACKLIST.some(
+
+    const inBlacklistedCollection = recordCollectionPids && CONTENT_INDICATORS_COLLECTIONS_BLACKLIST.some(
         collectionPid => recordCollectionPids.includes(collectionPid)
     );
+
     return !isBlacklistedType && !inBlacklistedCollection;
 };
 
