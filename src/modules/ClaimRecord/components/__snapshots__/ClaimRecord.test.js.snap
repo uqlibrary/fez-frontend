@@ -1179,6 +1179,7 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="claimSubmit"
           onClick={[MockFunction]}
           variant="contained"
         >
@@ -2114,6 +2115,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="claimSubmit"
           onClick={[MockFunction]}
           variant="contained"
         >
@@ -3332,6 +3334,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="claimSubmit"
           onClick={[MockFunction]}
           variant="contained"
         >
@@ -4217,6 +4220,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="claimSubmit"
           onClick={[MockFunction]}
           variant="contained"
         >
@@ -5643,6 +5647,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="claimSubmit"
           onClick={[MockFunction]}
           variant="contained"
         >
@@ -7069,6 +7074,7 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="claimSubmit"
           onClick={[MockFunction]}
           variant="contained"
         >
@@ -8495,6 +8501,7 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="claimSubmit"
           onClick={[MockFunction]}
           variant="contained"
         >
@@ -9921,6 +9928,7 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="claimSubmit"
           onClick={[MockFunction]}
           variant="contained"
         >
@@ -12405,6 +12413,7 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="claimSubmit"
           onClick={[MockFunction]}
           variant="contained"
         >
@@ -13831,6 +13840,7 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="claimSubmit"
           onClick={[MockFunction]}
           variant="contained"
         >
@@ -15270,6 +15280,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
           color="primary"
           disabled={true}
           fullWidth={true}
+          id="claimSubmit"
           onClick={[MockFunction]}
           variant="contained"
         >
@@ -16707,6 +16718,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="claimSubmit"
           onClick={[MockFunction]}
           variant="contained"
         >
@@ -18145,6 +18157,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="claimSubmit"
           onClick={[MockFunction]}
           variant="contained"
         >
@@ -19594,6 +19607,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="claimSubmit"
           onClick={[MockFunction]}
           variant="contained"
         >
@@ -19826,6 +19840,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="claimSubmit"
           onClick={[MockFunction]}
           variant="contained"
         >
