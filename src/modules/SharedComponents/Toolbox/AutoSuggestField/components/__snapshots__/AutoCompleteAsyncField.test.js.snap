@@ -520,8 +520,35 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
   store={
     Object {
       "dispatch": [MockFunction],
-      "getState": [MockFunction],
-      "subscribe": [MockFunction],
+      "getState": [MockFunction] {
+        "calls": Array [
+          Array [],
+          Array [],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+        ],
+      },
+      "subscribe": [MockFunction] {
+        "calls": Array [
+          Array [
+            [Function],
+          ],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
+        ],
+      },
     }
   }
 >
@@ -1698,8 +1725,35 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
   store={
     Object {
       "dispatch": [MockFunction],
-      "getState": [MockFunction],
-      "subscribe": [MockFunction],
+      "getState": [MockFunction] {
+        "calls": Array [
+          Array [],
+          Array [],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+        ],
+      },
+      "subscribe": [MockFunction] {
+        "calls": Array [
+          Array [
+            [Function],
+          ],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
+        ],
+      },
     }
   }
 >
@@ -2932,8 +2986,35 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
   store={
     Object {
       "dispatch": [MockFunction],
-      "getState": [MockFunction],
-      "subscribe": [MockFunction],
+      "getState": [MockFunction] {
+        "calls": Array [
+          Array [],
+          Array [],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+        ],
+      },
+      "subscribe": [MockFunction] {
+        "calls": Array [
+          Array [
+            [Function],
+          ],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
+        ],
+      },
     }
   }
 >
@@ -4169,8 +4250,35 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
   store={
     Object {
       "dispatch": [MockFunction],
-      "getState": [MockFunction],
-      "subscribe": [MockFunction],
+      "getState": [MockFunction] {
+        "calls": Array [
+          Array [],
+          Array [],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+        ],
+      },
+      "subscribe": [MockFunction] {
+        "calls": Array [
+          Array [
+            [Function],
+          ],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
+        ],
+      },
     }
   }
 >
@@ -5434,8 +5542,35 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
   store={
     Object {
       "dispatch": [MockFunction],
-      "getState": [MockFunction],
-      "subscribe": [MockFunction],
+      "getState": [MockFunction] {
+        "calls": Array [
+          Array [],
+          Array [],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+        ],
+      },
+      "subscribe": [MockFunction] {
+        "calls": Array [
+          Array [
+            [Function],
+          ],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
+        ],
+      },
     }
   }
 >

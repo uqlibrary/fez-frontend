@@ -5,8 +5,35 @@ exports[`AuthorsCitationView test  should render component with 1 author 1`] = `
   store={
     Object {
       "dispatch": [MockFunction],
-      "getState": [MockFunction],
-      "subscribe": [MockFunction],
+      "getState": [MockFunction] {
+        "calls": Array [
+          Array [],
+          Array [],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+        ],
+      },
+      "subscribe": [MockFunction] {
+        "calls": Array [
+          Array [
+            [Function],
+          ],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
+        ],
+      },
     }
   }
 >
@@ -595,8 +622,35 @@ exports[`AuthorsCitationView test  should render component with 2 authors 1`] = 
   store={
     Object {
       "dispatch": [MockFunction],
-      "getState": [MockFunction],
-      "subscribe": [MockFunction],
+      "getState": [MockFunction] {
+        "calls": Array [
+          Array [],
+          Array [],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+        ],
+      },
+      "subscribe": [MockFunction] {
+        "calls": Array [
+          Array [
+            [Function],
+          ],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
+        ],
+      },
     }
   }
 >
@@ -1215,8 +1269,35 @@ exports[`AuthorsCitationView test  should render component with 2 authors for pu
   store={
     Object {
       "dispatch": [MockFunction],
-      "getState": [MockFunction],
-      "subscribe": [MockFunction],
+      "getState": [MockFunction] {
+        "calls": Array [
+          Array [],
+          Array [],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+        ],
+      },
+      "subscribe": [MockFunction] {
+        "calls": Array [
+          Array [
+            [Function],
+          ],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
+        ],
+      },
     }
   }
 >
@@ -1817,7 +1898,6 @@ exports[`AuthorsCitationView test  should render component with 2 authors for pu
             >
               <Link
                 key="citationAuthor_1"
-                replace={false}
                 to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=1&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=1+(Pedroso%2C+Marcelo+Monteiro)&searchMode=advanced"
               >
                 <a
@@ -1841,7 +1921,6 @@ exports[`AuthorsCitationView test  should render component with 2 authors for pu
               </Link>
               <Link
                 key="citationAuthor_2"
-                replace={false}
                 to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=2&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=2+(Smith%2C+J)&searchMode=advanced"
               >
                 <a
@@ -1879,8 +1958,35 @@ exports[`AuthorsCitationView test  should render component with 2 authors for pu
   store={
     Object {
       "dispatch": [MockFunction],
-      "getState": [MockFunction],
-      "subscribe": [MockFunction],
+      "getState": [MockFunction] {
+        "calls": Array [
+          Array [],
+          Array [],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+        ],
+      },
+      "subscribe": [MockFunction] {
+        "calls": Array [
+          Array [
+            [Function],
+          ],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
+        ],
+      },
     }
   }
 >
@@ -2480,7 +2586,6 @@ exports[`AuthorsCitationView test  should render component with 2 authors for pu
               <Link
                 className="authorNameLink"
                 key="citationAuthor_1"
-                replace={false}
                 to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D%5Bvalue%5D=Pedroso%2C+Marcelo+Monteiro&searchMode=advanced"
               >
                 <a
@@ -2506,7 +2611,6 @@ exports[`AuthorsCitationView test  should render component with 2 authors for pu
               <Link
                 className="authorNameLink"
                 key="citationAuthor_2"
-                replace={false}
                 to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author%5D%5Bvalue%5D=Smith%2C+J&searchMode=advanced"
               >
                 <a
@@ -2545,8 +2649,35 @@ exports[`AuthorsCitationView test  should render component with 3 authors 1`] = 
   store={
     Object {
       "dispatch": [MockFunction],
-      "getState": [MockFunction],
-      "subscribe": [MockFunction],
+      "getState": [MockFunction] {
+        "calls": Array [
+          Array [],
+          Array [],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+        ],
+      },
+      "subscribe": [MockFunction] {
+        "calls": Array [
+          Array [
+            [Function],
+          ],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
+        ],
+      },
     }
   }
 >
@@ -3225,8 +3356,35 @@ exports[`AuthorsCitationView test  should render component with 3 authors for pu
   store={
     Object {
       "dispatch": [MockFunction],
-      "getState": [MockFunction],
-      "subscribe": [MockFunction],
+      "getState": [MockFunction] {
+        "calls": Array [
+          Array [],
+          Array [],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+        ],
+      },
+      "subscribe": [MockFunction] {
+        "calls": Array [
+          Array [
+            [Function],
+          ],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
+        ],
+      },
     }
   }
 >
@@ -3858,7 +4016,6 @@ exports[`AuthorsCitationView test  should render component with 3 authors for pu
             >
               <Link
                 key="citationAuthor_1"
-                replace={false}
                 to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=1&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=1+(Pedroso%2C+Marcelo+Monteiro)&searchMode=advanced"
               >
                 <a
@@ -3883,7 +4040,6 @@ exports[`AuthorsCitationView test  should render component with 3 authors for pu
               </Link>
               <Link
                 key="citationAuthor_2"
-                replace={false}
                 to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=2&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=2+(Smith%2C+J)&searchMode=advanced"
               >
                 <a
@@ -3907,7 +4063,6 @@ exports[`AuthorsCitationView test  should render component with 3 authors for pu
               </Link>
               <Link
                 key="citationAuthor_3"
-                replace={false}
                 to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_author_id%5D%5Bvalue%5D=3&searchQueryParams%5Brek_author_id%5D%5Blabel%5D=3+(Smith%2C+J)&searchMode=advanced"
               >
                 <a
@@ -3945,8 +4100,35 @@ exports[`AuthorsCitationView test  should render component with 3 authors with p
   store={
     Object {
       "dispatch": [MockFunction],
-      "getState": [MockFunction],
-      "subscribe": [MockFunction],
+      "getState": [MockFunction] {
+        "calls": Array [
+          Array [],
+          Array [],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+        ],
+      },
+      "subscribe": [MockFunction] {
+        "calls": Array [
+          Array [
+            [Function],
+          ],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
+        ],
+      },
     }
   }
 >
@@ -4637,8 +4819,35 @@ exports[`AuthorsCitationView test  should render component with 3 authors with p
   store={
     Object {
       "dispatch": [MockFunction],
-      "getState": [MockFunction],
-      "subscribe": [MockFunction],
+      "getState": [MockFunction] {
+        "calls": Array [
+          Array [],
+          Array [],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+        ],
+      },
+      "subscribe": [MockFunction] {
+        "calls": Array [
+          Array [
+            [Function],
+          ],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
+        ],
+      },
     }
   }
 >
@@ -5691,8 +5900,35 @@ exports[`AuthorsCitationView test  should render component with no authors 1`] =
   store={
     Object {
       "dispatch": [MockFunction],
-      "getState": [MockFunction],
-      "subscribe": [MockFunction],
+      "getState": [MockFunction] {
+        "calls": Array [
+          Array [],
+          Array [],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+        ],
+      },
+      "subscribe": [MockFunction] {
+        "calls": Array [
+          Array [
+            [Function],
+          ],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
+        ],
+      },
     }
   }
 >
@@ -6235,8 +6471,35 @@ exports[`AuthorsCitationView test  should set class on component with no authors
   store={
     Object {
       "dispatch": [MockFunction],
-      "getState": [MockFunction],
-      "subscribe": [MockFunction],
+      "getState": [MockFunction] {
+        "calls": Array [
+          Array [],
+          Array [],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+        ],
+      },
+      "subscribe": [MockFunction] {
+        "calls": Array [
+          Array [
+            [Function],
+          ],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
+        ],
+      },
     }
   }
 >

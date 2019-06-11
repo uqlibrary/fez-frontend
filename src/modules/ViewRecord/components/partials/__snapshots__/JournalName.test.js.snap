@@ -5,8 +5,35 @@ exports[`Journal Name Component test  should render with empty props 1`] = `
   store={
     Object {
       "dispatch": [MockFunction],
-      "getState": [MockFunction],
-      "subscribe": [MockFunction],
+      "getState": [MockFunction] {
+        "calls": Array [
+          Array [],
+          Array [],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+        ],
+      },
+      "subscribe": [MockFunction] {
+        "calls": Array [
+          Array [
+            [Function],
+          ],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
+        ],
+      },
     }
   }
 >
@@ -535,8 +562,35 @@ exports[`Journal Name Component test  should render with journal article 1`] = `
   store={
     Object {
       "dispatch": [MockFunction],
-      "getState": [MockFunction],
-      "subscribe": [MockFunction],
+      "getState": [MockFunction] {
+        "calls": Array [
+          Array [],
+          Array [],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+        ],
+      },
+      "subscribe": [MockFunction] {
+        "calls": Array [
+          Array [
+            [Function],
+          ],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
+        ],
+      },
     }
   }
 >
@@ -2105,7 +2159,6 @@ exports[`Journal Name Component test  should render with journal article 1`] = `
           >
             <span>
               <Link
-                replace={false}
                 to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_journal_name%5D%5Bvalue%5D=Journal+of+Cell+Science&searchMode=advanced"
               >
                 <a
@@ -3091,8 +3144,35 @@ exports[`Journal Name Component test  should render without era journal listed 1
   store={
     Object {
       "dispatch": [MockFunction],
-      "getState": [MockFunction],
-      "subscribe": [MockFunction],
+      "getState": [MockFunction] {
+        "calls": Array [
+          Array [],
+          Array [],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+        ],
+      },
+      "subscribe": [MockFunction] {
+        "calls": Array [
+          Array [
+            [Function],
+          ],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
+        ],
+      },
     }
   }
 >
@@ -4663,7 +4743,6 @@ exports[`Journal Name Component test  should render without era journal listed 1
           >
             <span>
               <Link
-                replace={false}
                 to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_journal_name%5D%5Bvalue%5D=Journal+of+Cell+Science&searchMode=advanced"
               >
                 <a
@@ -5643,8 +5722,35 @@ exports[`Journal Name Component test  should render without sherpa romeo 1`] = `
   store={
     Object {
       "dispatch": [MockFunction],
-      "getState": [MockFunction],
-      "subscribe": [MockFunction],
+      "getState": [MockFunction] {
+        "calls": Array [
+          Array [],
+          Array [],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+        ],
+      },
+      "subscribe": [MockFunction] {
+        "calls": Array [
+          Array [
+            [Function],
+          ],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
+        ],
+      },
     }
   }
 >
@@ -7141,7 +7247,6 @@ exports[`Journal Name Component test  should render without sherpa romeo 1`] = `
           >
             <span>
               <Link
-                replace={false}
                 to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_journal_name%5D%5Bvalue%5D=Journal+of+Cell+Science&searchMode=advanced"
               >
                 <a

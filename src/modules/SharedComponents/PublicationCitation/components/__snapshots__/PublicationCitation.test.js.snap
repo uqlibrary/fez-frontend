@@ -60,7 +60,6 @@ exports[`PublicationCitation  should render component with default actions 1`] =
             variant="h6"
           >
             <Link
-              replace={false}
               to="/view/UQ:41878"
             >
               Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
@@ -945,7 +944,6 @@ exports[`PublicationCitation  should render component with default item 1`] = `
             variant="h6"
           >
             <Link
-              replace={false}
               to="/view/UQ:41878"
             >
               Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
@@ -2632,7 +2630,6 @@ exports[`PublicationCitation  should render component with default list hiding t
             variant="h6"
           >
             <Link
-              replace={false}
               to="/view/UQ:41878"
             >
               Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
@@ -3478,7 +3475,6 @@ exports[`PublicationCitation  should render component with default list hiding t
             variant="h6"
           >
             <Link
-              replace={false}
               to="/view/UQ:41878"
             >
               Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
@@ -4324,7 +4320,6 @@ exports[`PublicationCitation  should render component with publication from mult
             variant="h6"
           >
             <Link
-              replace={false}
               to="/view/UQ:41878"
             >
               Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
@@ -6128,7 +6123,6 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
             variant="h6"
           >
             <Link
-              replace={false}
               to="/view/UQ:41878"
             >
               Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth

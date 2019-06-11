@@ -5,19 +5,6 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
 - First value
 + Second value
 
-@@ -154,11 +154,11 @@
-        </div>
-        <hr
-          class=\\"MuiDivider-root-186 PublicationCitation-divider-175\\"
-        />
-        <form>
--         <span />
-+         <div />
-          <div
-            class=\\"MuiGrid-container-1 MuiGrid-spacing-xs-24-25\\"
-          >
-            <div
-              class=\\"MuiGrid-item-2 MuiGrid-grid-xs-12-41\\"
 @@ -362,29 +362,29 @@
                       <div
                         class=\\"MuiFormControl-root-261\\"
@@ -80,7 +67,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
                           </div>
                         </div>
 -                       <p
--                         class=\\"MuiFormHelperText-root-400 MuiFormHelperText-error-401 MuiFormHelperText-required-407\\"
+-                         class=\\"MuiFormHelperText-root-399 MuiFormHelperText-error-400 MuiFormHelperText-required-406\\"
 -                       >
 -                         This field is required
 -                       </p>
@@ -165,7 +152,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
                           </div>
                         </div>
 -                       <p
--                         class=\\"MuiFormHelperText-root-400 MuiFormHelperText-error-401 MuiFormHelperText-required-407\\"
+-                         class=\\"MuiFormHelperText-root-399 MuiFormHelperText-error-400 MuiFormHelperText-required-406\\"
 -                       >
 -                         This field is required
 -                       </p>
@@ -252,7 +239,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
                           </div>
                         </div>
 -                       <p
--                         class=\\"MuiFormHelperText-root-400 MuiFormHelperText-error-401 MuiFormHelperText-required-407\\"
+-                         class=\\"MuiFormHelperText-root-399 MuiFormHelperText-error-400 MuiFormHelperText-required-406\\"
 -                       >
 -                         This field is required
 -                       </p>
@@ -294,8 +281,8 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
                               tabindex=\\"0\\"
                             >
                               <div
--                               class=\\"MuiListItemIcon-root-399\\"
-+                               class=\\"MuiListItemIcon-root-399 WithTheme-WithWidth-ContributorRow---selected-387\\"
+-                               class=\\"MuiListItemIcon-root-407\\"
++                               class=\\"MuiListItemIcon-root-407 WithTheme-WithWidth-ContributorRow---selected-387\\"
                               >
                                 <svg
                                   aria-hidden=\\"true\\"
@@ -613,8 +600,8 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
                               tabindex=\\"0\\"
                             >
                               <div
--                               class=\\"MuiListItemIcon-root-399 WithTheme-WithWidth-ContributorRow---selected-387\\"
-+                               class=\\"MuiListItemIcon-root-399\\"
+-                               class=\\"MuiListItemIcon-root-407 WithTheme-WithWidth-ContributorRow---selected-387\\"
++                               class=\\"MuiListItemIcon-root-407\\"
                               >
                                 <svg
                                   aria-hidden=\\"true\\"
@@ -955,7 +942,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
                               tabindex=\\"0\\"
                             >
                               <div
-                                class=\\"MuiListItemIcon-root-399\\"
+                                class=\\"MuiListItemIcon-root-407\\"
 @@ -1180,11 +1180,22 @@
                                 <div
                                   class=\\"MuiGrid-item-2 MuiGrid-grid-xs-12-41 MuiGrid-grid-sm-5-48\\"
@@ -1004,7 +991,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
                               tabindex=\\"0\\"
                             >
                               <div
-                                class=\\"MuiListItemIcon-root-399\\"
+                                class=\\"MuiListItemIcon-root-407\\"
 @@ -1508,14 +1508,25 @@
                                 <div
                                   class=\\"MuiGrid-item-2 MuiGrid-grid-xs-12-41 MuiGrid-grid-sm-5-48\\"
@@ -1139,7 +1126,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                           </div>
                         </div>
 -                       <p
--                         class=\\"MuiFormHelperText-root-1229 MuiFormHelperText-error-1230 MuiFormHelperText-required-1236\\"
+-                         class=\\"MuiFormHelperText-root-1228 MuiFormHelperText-error-1229 MuiFormHelperText-required-1235\\"
 -                       >
 -                         This field is required
 -                       </p>
@@ -2071,7 +2058,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                           </div>
                         </div>
 -                       <p
--                         class=\\"MuiFormHelperText-root-817 MuiFormHelperText-error-818 MuiFormHelperText-required-824\\"
+-                         class=\\"MuiFormHelperText-root-816 MuiFormHelperText-error-817 MuiFormHelperText-required-823\\"
 -                       >
 -                         This field is required
 -                       </p>
@@ -2140,7 +2127,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                           />
                         </div>
 -                       <p
--                         class=\\"MuiFormHelperText-root-817 MuiFormHelperText-error-818 MuiFormHelperText-required-824\\"
+-                         class=\\"MuiFormHelperText-root-816 MuiFormHelperText-error-817 MuiFormHelperText-required-823\\"
 -                         id=\\"rek-total-pages-helper-text\\"
 -                       >
 -                         This field is required
@@ -2226,7 +2213,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                           </div>
                         </div>
 -                       <p
--                         class=\\"MuiFormHelperText-root-817 MuiFormHelperText-error-818 MuiFormHelperText-required-824\\"
+-                         class=\\"MuiFormHelperText-root-816 MuiFormHelperText-error-817 MuiFormHelperText-required-823\\"
 -                       >
 -                         This field is required
 -                       </p>
@@ -2313,7 +2300,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                           </div>
                         </div>
 -                       <p
--                         class=\\"MuiFormHelperText-root-817 MuiFormHelperText-error-818 MuiFormHelperText-required-824\\"
+-                         class=\\"MuiFormHelperText-root-816 MuiFormHelperText-error-817 MuiFormHelperText-required-823\\"
 -                       >
 -                         This field is required
 -                       </p>
@@ -2360,7 +2347,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                               tabindex=\\"0\\"
                             >
                               <div
-                                class=\\"MuiListItemIcon-root-816\\"
+                                class=\\"MuiListItemIcon-root-824\\"
 @@ -1204,11 +1204,22 @@
                                 <div
                                   class=\\"MuiGrid-item-414 MuiGrid-grid-xs-12-453 MuiGrid-grid-sm-5-460\\"
@@ -2404,7 +2391,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                               tabindex=\\"0\\"
                             >
                               <div
-                                class=\\"MuiListItemIcon-root-816\\"
+                                class=\\"MuiListItemIcon-root-824\\"
 @@ -1374,11 +1374,22 @@
                                 <div
                                   class=\\"MuiGrid-item-414 MuiGrid-grid-xs-12-453 MuiGrid-grid-sm-5-460\\"
@@ -2448,7 +2435,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                               tabindex=\\"0\\"
                             >
                               <div
-                                class=\\"MuiListItemIcon-root-816\\"
+                                class=\\"MuiListItemIcon-root-824\\"
 @@ -1544,14 +1544,25 @@
                                 <div
                                   class=\\"MuiGrid-item-414 MuiGrid-grid-xs-12-453 MuiGrid-grid-sm-5-460\\"

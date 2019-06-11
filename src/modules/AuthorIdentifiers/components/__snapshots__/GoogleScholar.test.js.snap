@@ -325,15 +325,37 @@ exports[`Component GoogleScholar  should handle keyboard form submit event 1`] =
       "getState": [MockFunction] {
         "calls": Array [
           Array [],
+          Array [],
+          Array [],
         ],
         "results": Array [
           Object {
             "type": "return",
             "value": Immutable.Map {},
           },
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
         ],
       },
-      "subscribe": [MockFunction],
+      "subscribe": [MockFunction] {
+        "calls": Array [
+          Array [
+            [Function],
+          ],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
+        ],
+      },
     }
   }
 >
@@ -3003,7 +3025,7 @@ exports[`Component GoogleScholar  should handle keyboard form submit event 1`] =
                                                           >
                                                             <WithStyles(CardHeader)
                                                               action={
-                                                                <Connect(WithStyles(HelpIcon))
+                                                                <Memo(ConnectFunction)
                                                                   buttonLabel="CLOSE"
                                                                   text={
                                                                     <div>
@@ -3049,7 +3071,7 @@ exports[`Component GoogleScholar  should handle keyboard form submit event 1`] =
                                                             >
                                                               <CardHeader
                                                                 action={
-                                                                  <Connect(WithStyles(HelpIcon))
+                                                                  <Memo(ConnectFunction)
                                                                     buttonLabel="CLOSE"
                                                                     text={
                                                                       <div>

@@ -5,8 +5,35 @@ exports[`NtroDetails  rendered full mount 1`] = `
   store={
     Object {
       "dispatch": [MockFunction],
-      "getState": [MockFunction],
-      "subscribe": [MockFunction],
+      "getState": [MockFunction] {
+        "calls": Array [
+          Array [],
+          Array [],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+        ],
+      },
+      "subscribe": [MockFunction] {
+        "calls": Array [
+          Array [
+            [Function],
+          ],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
+        ],
+      },
     }
   }
 >
@@ -13720,7 +13747,6 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                             <Component
                                               data={
                                                 <Link
-                                                  replace={false}
                                                   to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_series%5D%5Bvalue%5D=Series&searchMode=advanced"
                                                 >
                                                   Series
@@ -15152,7 +15178,6 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                                   className="MuiTypography-root-139 MuiTypography-body2-147"
                                                                 >
                                                                   <Link
-                                                                    replace={false}
                                                                     to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_series%5D%5Bvalue%5D=Series&searchMode=advanced"
                                                                   >
                                                                     <a
@@ -23970,7 +23995,6 @@ exports[`NtroDetails  renders ISMN correctly 1`] = `
     <Component
       data={
         <Link
-          replace={false}
           to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_series%5D%5Bvalue%5D=Series&searchMode=advanced"
         >
           Series
@@ -24117,7 +24141,6 @@ exports[`NtroDetails  renders ISRC correctly 1`] = `
     <Component
       data={
         <Link
-          replace={false}
           to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_series%5D%5Bvalue%5D=Series&searchMode=advanced"
         >
           Series
@@ -24250,7 +24273,6 @@ exports[`NtroDetails  renders audience size correctly 1`] = `
     <Component
       data={
         <Link
-          replace={false}
           to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_series%5D%5Bvalue%5D=Series&searchMode=advanced"
         >
           Series
@@ -24387,7 +24409,6 @@ exports[`NtroDetails  renders audience size correctly 2`] = `
     <Component
       data={
         <Link
-          replace={false}
           to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_series%5D%5Bvalue%5D=Series&searchMode=advanced"
         >
           Series
@@ -24524,7 +24545,6 @@ exports[`NtroDetails  renders component as expected 1`] = `
     <Component
       data={
         <Link
-          replace={false}
           to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_series%5D%5Bvalue%5D=Series&searchMode=advanced"
         >
           Series
@@ -24651,7 +24671,6 @@ exports[`NtroDetails  renders contribution statement as an admin with a blank st
     <Component
       data={
         <Link
-          replace={false}
           to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_series%5D%5Bvalue%5D=Series&searchMode=advanced"
         >
           Series
@@ -24772,7 +24791,6 @@ exports[`NtroDetails  renders contribution statement not as an admin 1`] = `
     <Component
       data={
         <Link
-          replace={false}
           to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_series%5D%5Bvalue%5D=Series&searchMode=advanced"
         >
           Series
@@ -24905,7 +24923,6 @@ exports[`NtroDetails  renders minor significance as an admin 1`] = `
     <Component
       data={
         <Link
-          replace={false}
           to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_series%5D%5Bvalue%5D=Series&searchMode=advanced"
         >
           Series
@@ -25040,7 +25057,6 @@ exports[`NtroDetails  renders start/end page correctly due to correct doc/sub ty
     <Component
       data={
         <Link
-          replace={false}
           to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_series%5D%5Bvalue%5D=Series&searchMode=advanced"
         >
           Series
@@ -25177,7 +25193,6 @@ exports[`NtroDetails  renders the abstract according to html or plain 1`] = `
     <Component
       data={
         <Link
-          replace={false}
           to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_series%5D%5Bvalue%5D=Series&searchMode=advanced"
         >
           Series
@@ -25336,7 +25351,6 @@ exports[`NtroDetails  should render component with record 1`] = `
     <Component
       data={
         <Link
-          replace={false}
           to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_series%5D%5Bvalue%5D=Series&searchMode=advanced"
         >
           Series
@@ -25443,7 +25457,6 @@ exports[`NtroDetails  should render default fields for record with missing looku
     <Component
       data={
         <Link
-          replace={false}
           to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_series%5D%5Bvalue%5D=Series&searchMode=advanced"
         >
           Series
@@ -25582,7 +25595,6 @@ exports[`NtroDetails  should show admin only fields when admin user 1`] = `
     <Component
       data={
         <Link
-          replace={false}
           to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_series%5D%5Bvalue%5D=Series&searchMode=advanced"
         >
           Series

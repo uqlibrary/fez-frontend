@@ -5,8 +5,35 @@ exports[`Publication Details Component  Renders full mount 1`] = `
   store={
     Object {
       "dispatch": [MockFunction],
-      "getState": [MockFunction],
-      "subscribe": [MockFunction],
+      "getState": [MockFunction] {
+        "calls": Array [
+          Array [],
+          Array [],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+        ],
+      },
+      "subscribe": [MockFunction] {
+        "calls": Array [
+          Array [
+            [Function],
+          ],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
+        ],
+      },
     }
   }
 >
@@ -3413,7 +3440,6 @@ exports[`Publication Details Component  should render component 1`] = `
         >
           <li>
             <Link
-              replace={false}
               to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_ismemberof%5D%5Bvalue%5D%5B%5D=UQ%3A3825&searchMode=advanced"
             >
               School of Chemistry and Molecular Biosciences
@@ -3421,7 +3447,6 @@ exports[`Publication Details Component  should render component 1`] = `
           </li>
           <li>
             <Link
-              replace={false}
               to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_ismemberof%5D%5Bvalue%5D%5B%5D=UQ%3A218311&searchMode=advanced"
             >
               HERDC Pre-Audit
@@ -3429,7 +3454,6 @@ exports[`Publication Details Component  should render component 1`] = `
           </li>
           <li>
             <Link
-              replace={false}
               to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_ismemberof%5D%5Bvalue%5D%5B%5D=UQ%3A171723&searchMode=advanced"
             >
               UQ Centre for Clinical Research Publications
@@ -3478,7 +3502,6 @@ exports[`Publication Details Component  should render with publication without s
         >
           <li>
             <Link
-              replace={false}
               to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_ismemberof%5D%5Bvalue%5D%5B%5D=UQ%3A3825&searchMode=advanced"
             >
               School of Chemistry and Molecular Biosciences
@@ -3486,7 +3509,6 @@ exports[`Publication Details Component  should render with publication without s
           </li>
           <li>
             <Link
-              replace={false}
               to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_ismemberof%5D%5Bvalue%5D%5B%5D=UQ%3A218311&searchMode=advanced"
             >
               HERDC Pre-Audit
@@ -3494,7 +3516,6 @@ exports[`Publication Details Component  should render with publication without s
           </li>
           <li>
             <Link
-              replace={false}
               to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_ismemberof%5D%5Bvalue%5D%5B%5D=UQ%3A171723&searchMode=advanced"
             >
               UQ Centre for Clinical Research Publications

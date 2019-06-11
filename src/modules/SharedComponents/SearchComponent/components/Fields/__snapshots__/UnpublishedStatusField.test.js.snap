@@ -52,8 +52,18 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
         "calls": Array [
           Array [],
           Array [],
+          Array [],
+          Array [],
         ],
         "results": Array [
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
           Object {
             "type": "return",
             "value": Immutable.Map {},
@@ -69,8 +79,15 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
           Array [
             [Function],
           ],
+          Array [
+            [Function],
+          ],
         ],
         "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
           Object {
             "type": "return",
             "value": undefined,
@@ -2988,8 +3005,18 @@ exports[`UnpublishedStatusField component should render error message from redux
         "calls": Array [
           Array [],
           Array [],
+          Array [],
+          Array [],
         ],
         "results": Array [
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
           Object {
             "type": "return",
             "value": Immutable.Map {},
@@ -3005,8 +3032,15 @@ exports[`UnpublishedStatusField component should render error message from redux
           Array [
             [Function],
           ],
+          Array [
+            [Function],
+          ],
         ],
         "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
           Object {
             "type": "return",
             "value": undefined,
@@ -6027,8 +6061,18 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
         "calls": Array [
           Array [],
           Array [],
+          Array [],
+          Array [],
         ],
         "results": Array [
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
           Object {
             "type": "return",
             "value": Immutable.Map {},
@@ -6044,8 +6088,15 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
           Array [
             [Function],
           ],
+          Array [
+            [Function],
+          ],
         ],
         "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
           Object {
             "type": "return",
             "value": undefined,
@@ -8995,8 +9046,18 @@ exports[`UnpublishedStatusField component should render with value selected from
         "calls": Array [
           Array [],
           Array [],
+          Array [],
+          Array [],
         ],
         "results": Array [
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
           Object {
             "type": "return",
             "value": Immutable.Map {},
@@ -9012,8 +9073,15 @@ exports[`UnpublishedStatusField component should render with value selected from
           Array [
             [Function],
           ],
+          Array [
+            [Function],
+          ],
         ],
         "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
           Object {
             "type": "return",
             "value": undefined,

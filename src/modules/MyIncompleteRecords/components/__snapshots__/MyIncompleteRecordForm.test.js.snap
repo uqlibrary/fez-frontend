@@ -7,7 +7,12 @@ exports[`MyIncompleteRecordForm should mount the component with redux-form 1`] =
       "aut_id": 411,
     }
   }
+  destroyOnUnmount={true}
   dirty={false}
+  enableReinitialize={true}
+  forceUnregisterOnUnmount={false}
+  form="MyIncompleteRecord"
+  getFormState={[Function]}
   hasAnyFiles={true}
   history={
     Object {
@@ -17,6 +22,7 @@ exports[`MyIncompleteRecordForm should mount the component with redux-form 1`] =
   }
   isAuthorLinked={true}
   isNtro={true}
+  keepDirtyOnReinitialize={false}
   ntroFieldProps={
     Object {
       "hideAbstract": true,
@@ -28,6 +34,9 @@ exports[`MyIncompleteRecordForm should mount the component with redux-form 1`] =
       "showSignificance": true,
     }
   }
+  onSubmit={[Function]}
+  persistentSubmitErrors={false}
+  pure={true}
   recordToFix={
     Object {
       "fez_datastream_info": Array [
@@ -470,6 +479,15 @@ exports[`MyIncompleteRecordForm should mount the component with redux-form 1`] =
       "rek_updated_date_xsdmf_id": 3678,
     }
   }
+  shouldAsyncValidate={[Function]}
+  shouldError={[Function]}
+  shouldValidate={[Function]}
+  shouldWarn={[Function]}
+  submitAsSideEffect={false}
   submitSucceeded={false}
+  touchOnBlur={true}
+  touchOnChange={false}
+  updateUnregisteredFields={false}
+  validate={[Function]}
 />
 `;

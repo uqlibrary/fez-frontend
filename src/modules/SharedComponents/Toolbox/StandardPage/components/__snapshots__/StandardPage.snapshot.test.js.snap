@@ -62,15 +62,37 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
       "getState": [MockFunction] {
         "calls": Array [
           Array [],
+          Array [],
+          Array [],
         ],
         "results": Array [
           Object {
             "type": "return",
             "value": Immutable.Map {},
           },
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
         ],
       },
-      "subscribe": [MockFunction],
+      "subscribe": [MockFunction] {
+        "calls": Array [
+          Array [
+            [Function],
+          ],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
+        ],
+      },
     }
   }
 >

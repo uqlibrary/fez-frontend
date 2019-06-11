@@ -551,8 +551,18 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
         "calls": Array [
           Array [],
           Array [],
+          Array [],
+          Array [],
         ],
         "results": Array [
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
           Object {
             "type": "return",
             "value": Immutable.Map {},
@@ -568,8 +578,15 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
           Array [
             [Function],
           ],
+          Array [
+            [Function],
+          ],
         ],
         "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
           Object {
             "type": "return",
             "value": undefined,
@@ -3684,7 +3701,7 @@ exports[`ContributorsEditor renders no contributor rows with no infinite scroll 
 `;
 
 exports[`ContributorsEditor returns contributor form with expected props 1`] = `
-<Connect(ContributorForm)
+<Memo(ConnectFunction)
   author={
     Object {
       "aut_id": 1,
@@ -3716,7 +3733,7 @@ exports[`ContributorsEditor returns contributor form with expected props 1`] = `
 `;
 
 exports[`ContributorsEditor returns contributor form with expected props 2`] = `
-<Connect(ContributorForm)
+<Memo(ConnectFunction)
   author={
     Object {
       "aut_id": 1,

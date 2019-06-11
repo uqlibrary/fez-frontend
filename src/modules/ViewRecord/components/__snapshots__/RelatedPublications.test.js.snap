@@ -19,7 +19,6 @@ exports[`Related publications Component  should not render data with empty looku
           variant="body2"
         >
           <Link
-            replace={false}
             to="/view/UQ:313292"
           >
             Toxicity characterization of urban stormwater with bioanalytical tools
@@ -33,7 +32,6 @@ exports[`Related publications Component  should not render data with empty looku
           variant="body2"
         >
           <Link
-            replace={false}
             to="/view/UQ:313292"
           >
             dataset 2
@@ -64,7 +62,6 @@ exports[`Related publications Component  should render component 1`] = `
           variant="body2"
         >
           <Link
-            replace={false}
             to="/view/UQ:313292"
           >
             Toxicity characterization of urban stormwater with bioanalytical tools
@@ -78,7 +75,6 @@ exports[`Related publications Component  should render component 1`] = `
           variant="body2"
         >
           <Link
-            replace={false}
             to="/view/UQ:313292"
           >
             dataset 2
@@ -95,8 +91,35 @@ exports[`Related publications Component  should render component 2`] = `
   store={
     Object {
       "dispatch": [MockFunction],
-      "getState": [MockFunction],
-      "subscribe": [MockFunction],
+      "getState": [MockFunction] {
+        "calls": Array [
+          Array [],
+          Array [],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+        ],
+      },
+      "subscribe": [MockFunction] {
+        "calls": Array [
+          Array [
+            [Function],
+          ],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
+        ],
+      },
     }
   }
 >
@@ -5066,7 +5089,6 @@ exports[`Related publications Component  should render component 2`] = `
                                                       className="MuiTypography-root-138 MuiTypography-body2-146"
                                                     >
                                                       <Link
-                                                        replace={false}
                                                         to="/view/UQ:313292"
                                                       >
                                                         <a
@@ -5594,7 +5616,6 @@ exports[`Related publications Component  should render component 2`] = `
                                                       className="MuiTypography-root-138 MuiTypography-body2-146"
                                                     >
                                                       <Link
-                                                        replace={false}
                                                         to="/view/UQ:313292"
                                                       >
                                                         <a
@@ -5638,8 +5659,35 @@ exports[`Related publications Component  should render with a publication title 
   store={
     Object {
       "dispatch": [MockFunction],
-      "getState": [MockFunction],
-      "subscribe": [MockFunction],
+      "getState": [MockFunction] {
+        "calls": Array [
+          Array [],
+          Array [],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+        ],
+      },
+      "subscribe": [MockFunction] {
+        "calls": Array [
+          Array [
+            [Function],
+          ],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
+        ],
+      },
     }
   }
 >
@@ -11166,7 +11214,6 @@ exports[`Related publications Component  should render with a publication title 
                                                       className="MuiTypography-root-138 MuiTypography-body2-146"
                                                     >
                                                       <Link
-                                                        replace={false}
                                                         to="/view/UQ:313292"
                                                       >
                                                         <a
@@ -11694,7 +11741,6 @@ exports[`Related publications Component  should render with a publication title 
                                                       className="MuiTypography-root-138 MuiTypography-body2-146"
                                                     >
                                                       <Link
-                                                        replace={false}
                                                         to="/view/UQ:313292"
                                                       >
                                                         <a
@@ -11738,8 +11784,35 @@ exports[`Related publications Component  should render without a child search ke
   store={
     Object {
       "dispatch": [MockFunction],
-      "getState": [MockFunction],
-      "subscribe": [MockFunction],
+      "getState": [MockFunction] {
+        "calls": Array [
+          Array [],
+          Array [],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+        ],
+      },
+      "subscribe": [MockFunction] {
+        "calls": Array [
+          Array [
+            [Function],
+          ],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
+        ],
+      },
     }
   }
 >
@@ -16777,7 +16850,6 @@ exports[`Related publications Component  should render without a child search ke
                                                       className="MuiTypography-root-138 MuiTypography-body2-146"
                                                     >
                                                       <Link
-                                                        replace={false}
                                                         to="/view/UQ:313292"
                                                       >
                                                         <a
@@ -17305,7 +17377,6 @@ exports[`Related publications Component  should render without a child search ke
                                                       className="MuiTypography-root-138 MuiTypography-body2-146"
                                                     >
                                                       <Link
-                                                        replace={false}
                                                         to="/view/UQ:313292"
                                                       >
                                                         <a
@@ -17349,8 +17420,35 @@ exports[`Related publications Component  should render without a parent search k
   store={
     Object {
       "dispatch": [MockFunction],
-      "getState": [MockFunction],
-      "subscribe": [MockFunction],
+      "getState": [MockFunction] {
+        "calls": Array [
+          Array [],
+          Array [],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+        ],
+      },
+      "subscribe": [MockFunction] {
+        "calls": Array [
+          Array [
+            [Function],
+          ],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
+        ],
+      },
     }
   }
 >
@@ -30645,7 +30743,6 @@ exports[`Related publications Component  should render without a parent search k
                                                       className="MuiTypography-root-138 MuiTypography-body2-146"
                                                     >
                                                       <Link
-                                                        replace={false}
                                                         to="/view/UQ:390658"
                                                       >
                                                         <a

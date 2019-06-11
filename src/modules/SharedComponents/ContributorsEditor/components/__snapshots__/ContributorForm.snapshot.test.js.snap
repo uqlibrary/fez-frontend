@@ -392,8 +392,18 @@ exports[`Component ContributorForm should render connected component 1`] = `
         "calls": Array [
           Array [],
           Array [],
+          Array [],
+          Array [],
         ],
         "results": Array [
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
           Object {
             "type": "return",
             "value": Immutable.Map {},
@@ -409,8 +419,15 @@ exports[`Component ContributorForm should render connected component 1`] = `
           Array [
             [Function],
           ],
+          Array [
+            [Function],
+          ],
         ],
         "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
           Object {
             "type": "return",
             "value": undefined,
