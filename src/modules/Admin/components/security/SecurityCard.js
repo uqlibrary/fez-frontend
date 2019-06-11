@@ -18,7 +18,7 @@ export const SecurityCard = ({ disabled, text, recordType, isPolicyInherited }) 
     const { record } = useRecordContext();
     const { formValues } = useFormValuesContext();
 
-    const dataStreams = formValues.dataStreams;
+    const dataStreams = !!formValues.dataStreams.toJS ? formValues.dataStreams.toJS() : formValues.dataStreams;
     const isOverrideSecurityNotChecked = formValues.rek_security_inherited !== 0;
     const securityPolicy = formValues.rek_security_policy;
     const dataStreamPolicy = formValues.rek_datastream_policy;
@@ -115,9 +115,5 @@ SecurityCard.propTypes = {
     isPolicyInherited: PropTypes.bool
 };
 
-function isSame() {
-    return true;
-}
-
-export default React.memo(SecurityCard, isSame);
+export default React.memo(SecurityCard);
 

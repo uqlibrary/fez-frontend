@@ -36,16 +36,6 @@ export const SecuritySection = ({ disabled }) => {
             canEdit = ['Admin', 'Superadmin'].indexOf(accessLevel) > -1;
     }
 
-    const FormAlert = React.memo(() => (
-        <Grid item xs={12} sm={12}>
-            <Alert
-                type="warning"
-                title={text.admin.warning.title}
-                message={text.admin.warning.message}
-            />
-        </Grid>
-    ));
-
     return (
         <Grid container spacing={16}>
             <Grid item xs={12} sm={12}>
@@ -65,7 +55,13 @@ export const SecuritySection = ({ disabled }) => {
                     </MenuItem>
                 </Field>
             </Grid>
-            <FormAlert />
+            <Grid item xs={12} sm={12}>
+                <Alert
+                    type="warning"
+                    title={text.admin.warning.title}
+                    message={text.admin.warning.message}
+                />
+            </Grid>
             {
                 canEdit &&
                 <Grid item xs={12}>

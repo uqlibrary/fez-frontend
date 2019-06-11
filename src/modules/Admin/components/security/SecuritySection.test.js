@@ -26,7 +26,7 @@ describe('SecuritySection component', () => {
     it('should render record edit form for an Admin', () => {
         useFormValuesContext.mockImplementation(() => ({
             formValues: {
-                get: () => 'Admin'
+                accessLevel: 'Admin'
             }
         }));
 
@@ -46,7 +46,7 @@ describe('SecuritySection component', () => {
     it('should not render community edit form for an Admin', () => {
         useFormValuesContext.mockImplementation(() => ({
             formValues: {
-                get: () => 'Admin'
+                accessLevel: 'Admin'
             }
         }));
 
@@ -65,7 +65,7 @@ describe('SecuritySection component', () => {
     it('should not render collection edit form for an Admin', () => {
         useFormValuesContext.mockImplementation(() => ({
             formValues: {
-                get: () => 'Admin'
+                accessLevel: 'Admin'
             }
         }));
 
@@ -84,7 +84,7 @@ describe('SecuritySection component', () => {
     it('should render properly for a Superadmin', () => {
         useFormValuesContext.mockImplementation(() => ({
             formValues: {
-                get: () => 'Superadmin'
+                accessLevel: 'Superadmin'
             }
         }));
 

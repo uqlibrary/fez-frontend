@@ -29,19 +29,13 @@ describe('SecurityCard component', () => {
     it('should render security card correctly for record type', () => {
         useFormValuesContext.mockImplementation(() => ({
             formValues: {
-                get: (field) => {
-                    const formValues = {
-                        'dataStreams': new List([{
-                            dsi_dsid: 'test.txt',
-                            dsi_security_policy: 1
-                        }]),
-                        rek_security_inherited: 1,
-                        rek_security_policy: 5,
-                        rek_datastream_policy: 5
-                    };
-
-                    return formValues[field];
-                }
+                dataStreams: new List([{
+                    dsi_dsid: 'test.txt',
+                    dsi_security_policy: 1
+                }]),
+                rek_security_inherited: 1,
+                rek_security_policy: 5,
+                rek_datastream_policy: 5
             }
         }));
 
@@ -61,16 +55,10 @@ describe('SecurityCard component', () => {
     it('should not render data stream security selector for the record if no datastreams found', () => {
         useFormValuesContext.mockImplementation(() => ({
             formValues: {
-                get: (field) => {
-                    const formValues = {
-                        dataStreams: [],
-                        rek_security_inherited: 1,
-                        rek_security_policy: 5,
-                        rek_datastream_policy: 5
-                    };
-
-                    return formValues[field];
-                }
+                dataStreams: [],
+                rek_security_inherited: 1,
+                rek_security_policy: 5,
+                rek_datastream_policy: 5
             }
         }));
 
@@ -90,19 +78,13 @@ describe('SecurityCard component', () => {
     it('should render security card correctly for record type if user checks override security', () => {
         useFormValuesContext.mockImplementation(() => ({
             formValues: {
-                get: (field) => {
-                    const formValues = {
-                        'dataStreams': new List([{
-                            dsi_dsid: 'test.txt',
-                            dsi_security_policy: 1
-                        }]),
-                        rek_security_inherited: 0,
-                        rek_security_policy: 5,
-                        rek_datastream_policy: 5
-                    };
-
-                    return formValues[field];
-                }
+                dataStreams: new List([{
+                    dsi_dsid: 'test.txt',
+                    dsi_security_policy: 1
+                }]),
+                rek_security_inherited: 0,
+                rek_security_policy: 5,
+                rek_datastream_policy: 5
             }
         }));
 
@@ -122,16 +104,10 @@ describe('SecurityCard component', () => {
     it('should render security card correctly for collection with data stream selector for collection', () => {
         useFormValuesContext.mockImplementation(() => ({
             formValues: {
-                get: (field) => {
-                    const formValues = {
-                        dataStreams: new List([]),
-                        rek_security_inherited: 0,
-                        rek_security_policy: 5,
-                        rek_datastream_policy: 5
-                    };
-
-                    return formValues[field];
-                }
+                dataStreams: new List([]),
+                rek_security_inherited: 0,
+                rek_security_policy: 5,
+                rek_datastream_policy: 5
             }
         }));
 
@@ -153,16 +129,10 @@ describe('SecurityCard component', () => {
     it('should render security card correctly for community', () => {
         useFormValuesContext.mockImplementation(() => ({
             formValues: {
-                get: (field) => {
-                    const formValues = {
-                        dataStreams: new List([]),
-                        rek_security_inherited: 0,
-                        rek_security_policy: 5,
-                        rek_datastream_policy: 5
-                    };
-
-                    return formValues[field];
-                }
+                dataStreams: new List([]),
+                rek_security_inherited: 0,
+                rek_security_policy: 5,
+                rek_datastream_policy: 5
             }
         }));
 

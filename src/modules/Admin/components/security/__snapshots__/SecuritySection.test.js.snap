@@ -13,7 +13,7 @@ exports[`SecuritySection component should not render collection edit form for an
     <Field
       component={[Function]}
       label="Use this interface as a..."
-      name="accessLevel"
+      name="securitySection.accessLevel"
       required={true}
       validation={
         Array [
@@ -60,7 +60,7 @@ exports[`SecuritySection component should not render community edit form for an 
     <Field
       component={[Function]}
       label="Use this interface as a..."
-      name="accessLevel"
+      name="securitySection.accessLevel"
       required={true}
       validation={
         Array [
@@ -107,7 +107,7 @@ exports[`SecuritySection component should render properly for a Superadmin 1`] =
     <Field
       component={[Function]}
       label="Use this interface as a..."
-      name="accessLevel"
+      name="securitySection.accessLevel"
       required={true}
       validation={
         Array [
@@ -147,89 +147,27 @@ exports[`SecuritySection component should render properly for a Superadmin 1`] =
       recordType="collection"
       text={
         Object {
-          "admin": Object {
-            "field": Object {
-              "label": "Use this interface as a...",
-              "menuItemText": Object {
-                "admin": "Admin",
-                "superAdmin": "Super admin",
-              },
-            },
-            "typeField": Object {
-              "label": "Preview form for...",
-              "menuItemText": Object {
-                "collection": "Collection",
-                "community": "Community",
-                "dataStream": "Data Stream",
-                "record": "Record",
-              },
-            },
-            "warning": Object {
-              "message": "This section is to be handled by admins only - changes made to these sections may inadvertantly hide or show records in error - please make sure you know what you're doing.",
-              "title": "Warning",
-            },
-          },
-          "collection": Object {
-            "dataStreamFieldLabel": <span>
-              Collection policy to apply to the 
-              <b>
-                datastream
-              </b>
-               of this PID
-            </span>,
-            "dataStreamSelectedTitle": <span>
-              Selected collection 
-              <b>
-                datastream
-              </b>
-               security policy details
-            </span>,
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id aliquam sapien. Aliquam rhoncus congue consectetur. Aenean sed sapien ipsum.",
-            "fieldLabel": "",
-            "prompt": "Select a security policy to apply",
-            "selectedTitle": "Selected collection record security policy details",
-          },
-          "community": Object {
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id aliquam sapien. Aliquam rhoncus congue consectetur. Aenean sed sapien ipsum.",
-            "fieldLabel": "",
-            "prompt": "Select a security policy to apply",
-            "selectedTitle": "Selected community record security policy details",
-          },
-          "record": Object {
-            "dataStream": Object {
-              "overridePolicyPrompt": "Security policy for this file to override inheritance",
-              "overridePrompt": "Override datastream security policy details",
-            },
-            "dataStreamFieldLabel": "",
-            "dataStreamSelectedTitle": "Selected record level datastream security policy details",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id aliquam sapien. Aliquam rhoncus congue consectetur. Aenean sed sapien ipsum.",
-            "fieldLabel": "",
-            "prompt": "Select a security policy to apply",
-            "selectedTitle": "Selected record level security policy details",
-          },
-          "submit": "Submit",
+          "dataStreamFieldLabel": <span>
+            Collection policy to apply to the 
+            <b>
+              datastream
+            </b>
+             of this PID
+          </span>,
+          "dataStreamSelectedTitle": <span>
+            Selected collection 
+            <b>
+              datastream
+            </b>
+             security policy details
+          </span>,
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id aliquam sapien. Aliquam rhoncus congue consectetur. Aenean sed sapien ipsum.",
+          "fieldLabel": "",
+          "prompt": "Select a security policy to apply",
+          "selectedTitle": "Selected collection record security policy details",
         }
       }
     />
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
-    item={true}
-    sm={12}
-    xs={12}
-  >
-    <WithStyles(Button)
-      color="primary"
-      fullWidth={true}
-      onClick={[MockFunction]}
-      style={
-        Object {
-          "whiteSpace": "nowrap",
-        }
-      }
-      variant="contained"
-    >
-      Submit
-    </WithStyles(Button)>
   </WithStyles(Grid)>
 </WithStyles(Grid)>
 `;
@@ -247,7 +185,7 @@ exports[`SecuritySection component should render record edit form for an Admin 1
     <Field
       component={[Function]}
       label="Use this interface as a..."
-      name="accessLevel"
+      name="securitySection.accessLevel"
       required={true}
       validation={
         Array [
@@ -287,89 +225,19 @@ exports[`SecuritySection component should render record edit form for an Admin 1
       recordType="record"
       text={
         Object {
-          "admin": Object {
-            "field": Object {
-              "label": "Use this interface as a...",
-              "menuItemText": Object {
-                "admin": "Admin",
-                "superAdmin": "Super admin",
-              },
-            },
-            "typeField": Object {
-              "label": "Preview form for...",
-              "menuItemText": Object {
-                "collection": "Collection",
-                "community": "Community",
-                "dataStream": "Data Stream",
-                "record": "Record",
-              },
-            },
-            "warning": Object {
-              "message": "This section is to be handled by admins only - changes made to these sections may inadvertantly hide or show records in error - please make sure you know what you're doing.",
-              "title": "Warning",
-            },
+          "dataStream": Object {
+            "overridePolicyPrompt": "Security policy for this file to override inheritance",
+            "overridePrompt": "Override datastream security policy details",
           },
-          "collection": Object {
-            "dataStreamFieldLabel": <span>
-              Collection policy to apply to the 
-              <b>
-                datastream
-              </b>
-               of this PID
-            </span>,
-            "dataStreamSelectedTitle": <span>
-              Selected collection 
-              <b>
-                datastream
-              </b>
-               security policy details
-            </span>,
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id aliquam sapien. Aliquam rhoncus congue consectetur. Aenean sed sapien ipsum.",
-            "fieldLabel": "",
-            "prompt": "Select a security policy to apply",
-            "selectedTitle": "Selected collection record security policy details",
-          },
-          "community": Object {
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id aliquam sapien. Aliquam rhoncus congue consectetur. Aenean sed sapien ipsum.",
-            "fieldLabel": "",
-            "prompt": "Select a security policy to apply",
-            "selectedTitle": "Selected community record security policy details",
-          },
-          "record": Object {
-            "dataStream": Object {
-              "overridePolicyPrompt": "Security policy for this file to override inheritance",
-              "overridePrompt": "Override datastream security policy details",
-            },
-            "dataStreamFieldLabel": "",
-            "dataStreamSelectedTitle": "Selected record level datastream security policy details",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id aliquam sapien. Aliquam rhoncus congue consectetur. Aenean sed sapien ipsum.",
-            "fieldLabel": "",
-            "prompt": "Select a security policy to apply",
-            "selectedTitle": "Selected record level security policy details",
-          },
-          "submit": "Submit",
+          "dataStreamFieldLabel": "",
+          "dataStreamSelectedTitle": "Selected record level datastream security policy details",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id aliquam sapien. Aliquam rhoncus congue consectetur. Aenean sed sapien ipsum.",
+          "fieldLabel": "",
+          "prompt": "Select a security policy to apply",
+          "selectedTitle": "Selected record level security policy details",
         }
       }
     />
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
-    item={true}
-    sm={12}
-    xs={12}
-  >
-    <WithStyles(Button)
-      color="primary"
-      fullWidth={true}
-      onClick={[MockFunction]}
-      style={
-        Object {
-          "whiteSpace": "nowrap",
-        }
-      }
-      variant="contained"
-    >
-      Submit
-    </WithStyles(Button)>
   </WithStyles(Grid)>
 </WithStyles(Grid)>
 `;
