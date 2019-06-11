@@ -9,8 +9,18 @@ exports[`Component FileUploader should mount and unmount container and clear fil
         "calls": Array [
           Array [],
           Array [],
+          Array [],
+          Array [],
         ],
         "results": Array [
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
           Object {
             "type": "return",
             "value": Immutable.Map {},
@@ -26,8 +36,15 @@ exports[`Component FileUploader should mount and unmount container and clear fil
           Array [
             [Function],
           ],
+          Array [
+            [Function],
+          ],
         ],
         "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
           Object {
             "type": "return",
             "value": undefined,
@@ -3755,8 +3772,18 @@ exports[`Component FileUploader should mount and unmount container and clear fil
         "calls": Array [
           Array [],
           Array [],
+          Array [],
+          Array [],
         ],
         "results": Array [
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
           Object {
             "type": "return",
             "value": Immutable.Map {},
@@ -3772,8 +3799,15 @@ exports[`Component FileUploader should mount and unmount container and clear fil
           Array [
             [Function],
           ],
+          Array [
+            [Function],
+          ],
         ],
         "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
           Object {
             "type": "return",
             "value": undefined,

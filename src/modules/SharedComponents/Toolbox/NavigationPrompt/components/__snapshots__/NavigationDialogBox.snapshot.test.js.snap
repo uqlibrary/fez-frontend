@@ -17,120 +17,141 @@ exports[`NavigationDialogBox component should render 1`] = `
   <withRouter(NavigationPrompt)
     when={true}
   >
-    <Route>
-      <NavigationPrompt
-        history={
-          Object {
-            "action": "POP",
-            "block": [Function],
-            "canGo": [Function],
-            "createHref": [Function],
-            "entries": Array [
-              Object {
-                "hash": "",
-                "key": "testKey",
-                "pathname": "/",
-                "search": "",
-              },
-            ],
-            "go": [Function],
-            "goBack": [Function],
-            "goForward": [Function],
-            "index": 0,
-            "length": 1,
-            "listen": [Function],
-            "location": Object {
+    <NavigationPrompt
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "canGo": [Function],
+          "createHref": [Function],
+          "entries": Array [
+            Object {
               "hash": "",
               "key": "testKey",
               "pathname": "/",
               "search": "",
             },
-            "push": [Function],
-            "replace": [Function],
-          }
-        }
-        location={
-          Object {
+          ],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "index": 0,
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
             "hash": "",
             "key": "testKey",
             "pathname": "/",
             "search": "",
-          }
+          },
+          "push": [Function],
+          "replace": [Function],
         }
-        match={
-          Object {
-            "isExact": true,
-            "params": Object {},
-            "path": "/",
-            "url": "/",
-          }
+      }
+      location={
+        Object {
+          "hash": "",
+          "key": "testKey",
+          "pathname": "/",
+          "search": "",
         }
-        when={true}
-      >
-        <div>
-          <ConfirmDialogBox
-            hideCancelButton={false}
-            locale={
+      }
+      match={
+        Object {
+          "isExact": true,
+          "params": Object {},
+          "path": "/",
+          "url": "/",
+        }
+      }
+      when={true}
+    >
+      <div>
+        <ConfirmDialogBox
+          hideCancelButton={false}
+          locale={
+            Object {
+              "cancelButtonLabel": "No",
+              "confirmButtonLabel": "Yes",
+              "confirmationMessage": "Are you sure?",
+              "confirmationTitle": "Confirmation",
+            }
+          }
+          onAction={[Function]}
+          onCancelAction={[Function]}
+          onRef={[Function]}
+        >
+          <WithStyles(Dialog)
+            open={false}
+            style={
               Object {
-                "cancelButtonLabel": "No",
-                "confirmButtonLabel": "Yes",
-                "confirmationMessage": "Are you sure?",
-                "confirmationTitle": "Confirmation",
+                "padding": 6,
               }
             }
-            onAction={[Function]}
-            onCancelAction={[Function]}
-            onRef={[Function]}
           >
-            <WithStyles(Dialog)
+            <Dialog
+              PaperComponent={[Function]}
+              TransitionComponent={[Function]}
+              classes={
+                Object {
+                  "container": "MuiDialog-container-4",
+                  "paper": "MuiDialog-paper-5",
+                  "paperFullScreen": "MuiDialog-paperFullScreen-14",
+                  "paperFullWidth": "MuiDialog-paperFullWidth-13",
+                  "paperScrollBody": "MuiDialog-paperScrollBody-7",
+                  "paperScrollPaper": "MuiDialog-paperScrollPaper-6",
+                  "paperWidthLg": "MuiDialog-paperWidthLg-11",
+                  "paperWidthMd": "MuiDialog-paperWidthMd-10",
+                  "paperWidthSm": "MuiDialog-paperWidthSm-9",
+                  "paperWidthXl": "MuiDialog-paperWidthXl-12",
+                  "paperWidthXs": "MuiDialog-paperWidthXs-8",
+                  "root": "MuiDialog-root-1",
+                  "scrollBody": "MuiDialog-scrollBody-3",
+                  "scrollPaper": "MuiDialog-scrollPaper-2",
+                }
+              }
+              disableBackdropClick={false}
+              disableEscapeKeyDown={false}
+              fullScreen={false}
+              fullWidth={false}
+              maxWidth="sm"
               open={false}
+              scroll="paper"
               style={
                 Object {
                   "padding": 6,
                 }
               }
+              transitionDuration={
+                Object {
+                  "enter": 225,
+                  "exit": 195,
+                }
+              }
             >
-              <Dialog
-                PaperComponent={[Function]}
-                TransitionComponent={[Function]}
-                classes={
+              <WithStyles(Modal)
+                BackdropProps={
                   Object {
-                    "container": "MuiDialog-container-4",
-                    "paper": "MuiDialog-paper-5",
-                    "paperFullScreen": "MuiDialog-paperFullScreen-14",
-                    "paperFullWidth": "MuiDialog-paperFullWidth-13",
-                    "paperScrollBody": "MuiDialog-paperScrollBody-7",
-                    "paperScrollPaper": "MuiDialog-paperScrollPaper-6",
-                    "paperWidthLg": "MuiDialog-paperWidthLg-11",
-                    "paperWidthMd": "MuiDialog-paperWidthMd-10",
-                    "paperWidthSm": "MuiDialog-paperWidthSm-9",
-                    "paperWidthXl": "MuiDialog-paperWidthXl-12",
-                    "paperWidthXs": "MuiDialog-paperWidthXs-8",
-                    "root": "MuiDialog-root-1",
-                    "scrollBody": "MuiDialog-scrollBody-3",
-                    "scrollPaper": "MuiDialog-scrollPaper-2",
+                    "transitionDuration": Object {
+                      "enter": 225,
+                      "exit": 195,
+                    },
                   }
                 }
+                className="MuiDialog-root-1"
+                closeAfterTransition={true}
                 disableBackdropClick={false}
                 disableEscapeKeyDown={false}
-                fullScreen={false}
-                fullWidth={false}
-                maxWidth="sm"
                 open={false}
-                scroll="paper"
+                role="dialog"
                 style={
                   Object {
                     "padding": 6,
                   }
                 }
-                transitionDuration={
-                  Object {
-                    "enter": 225,
-                    "exit": 195,
-                  }
-                }
               >
-                <WithStyles(Modal)
+                <Modal
+                  BackdropComponent={[Function]}
                   BackdropProps={
                     Object {
                       "transitionDuration": Object {
@@ -140,9 +161,29 @@ exports[`NavigationDialogBox component should render 1`] = `
                     }
                   }
                   className="MuiDialog-root-1"
+                  classes={
+                    Object {
+                      "hidden": "MuiModal-hidden-16",
+                      "root": "MuiModal-root-15",
+                    }
+                  }
                   closeAfterTransition={true}
+                  disableAutoFocus={false}
                   disableBackdropClick={false}
+                  disableEnforceFocus={false}
                   disableEscapeKeyDown={false}
+                  disablePortal={false}
+                  disableRestoreFocus={false}
+                  hideBackdrop={false}
+                  keepMounted={false}
+                  manager={
+                    ModalManager {
+                      "data": Array [],
+                      "handleContainerOverflow": true,
+                      "hideSiblingNodes": true,
+                      "modals": Array [],
+                    }
+                  }
                   open={false}
                   role="dialog"
                   style={
@@ -150,56 +191,13 @@ exports[`NavigationDialogBox component should render 1`] = `
                       "padding": 6,
                     }
                   }
-                >
-                  <Modal
-                    BackdropComponent={[Function]}
-                    BackdropProps={
-                      Object {
-                        "transitionDuration": Object {
-                          "enter": 225,
-                          "exit": 195,
-                        },
-                      }
-                    }
-                    className="MuiDialog-root-1"
-                    classes={
-                      Object {
-                        "hidden": "MuiModal-hidden-16",
-                        "root": "MuiModal-root-15",
-                      }
-                    }
-                    closeAfterTransition={true}
-                    disableAutoFocus={false}
-                    disableBackdropClick={false}
-                    disableEnforceFocus={false}
-                    disableEscapeKeyDown={false}
-                    disablePortal={false}
-                    disableRestoreFocus={false}
-                    hideBackdrop={false}
-                    keepMounted={false}
-                    manager={
-                      ModalManager {
-                        "data": Array [],
-                        "handleContainerOverflow": true,
-                        "hideSiblingNodes": true,
-                        "modals": Array [],
-                      }
-                    }
-                    open={false}
-                    role="dialog"
-                    style={
-                      Object {
-                        "padding": 6,
-                      }
-                    }
-                  />
-                </WithStyles(Modal)>
-              </Dialog>
-            </WithStyles(Dialog)>
-          </ConfirmDialogBox>
-        </div>
-      </NavigationPrompt>
-    </Route>
+                />
+              </WithStyles(Modal)>
+            </Dialog>
+          </WithStyles(Dialog)>
+        </ConfirmDialogBox>
+      </div>
+    </NavigationPrompt>
   </withRouter(NavigationPrompt)>
 </NavigationDialogBox>
 `;
