@@ -1,5 +1,6 @@
 import { GenericSelectFieldClass } from './GenericSelectField';
 import GenericSelectField from './GenericSelectField';
+import Immutable from 'immutable';
 
 function setup(testProps, isShallow = true) {
     const props = {
@@ -37,6 +38,19 @@ describe('GenericSelectField', () => {
                 itemsList: ['Item 1', 'Item 2', 'Item 3'],
                 itemsLoading: false,
                 hideLabel: true
+            });
+            expect(toJson(wrapper)).toMatchSnapshot();
+        });
+
+        it('disabled list when all items have been selected', () => {
+            const list = ['Item 1', 'Item 2', 'Item 3'];
+            const wrapper = setup({
+                itemsList: list,
+                selectedValue: list,
+                multiple: true,
+                meta: {
+                    initial: Immutable.List(list)
+                },
             });
             expect(toJson(wrapper)).toMatchSnapshot();
         });
