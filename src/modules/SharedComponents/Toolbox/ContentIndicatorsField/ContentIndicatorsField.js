@@ -52,6 +52,13 @@ export const ContentIndicatorsField = props => (
         errorText={!!props.meta && props.meta.error || ''}
         error={!!props.meta && !!props.meta.error || false}
         {...props}
+        disabled={
+            props.disabled ||
+            !!props.meta &&
+            !!props.meta.initial &&
+            !!props.meta.initial.toJS &&
+            props.meta.initial.toJS().length === CONTENT_INDICATORS.length
+        }
     />
 );
 
@@ -59,6 +66,7 @@ ContentIndicatorsField.propTypes = {
     input: PropTypes.object,
     meta: PropTypes.object,
     label: PropTypes.string,
+    disabled: PropTypes.bool,
 };
 
 export default ContentIndicatorsField;

@@ -140,19 +140,6 @@ export class GenericSelectFieldClass extends Component {
     }
 
     render() {
-        const initialValues = (
-            this.props.meta &&
-            this.props.meta.initial &&
-            this.props.meta.initial.toJS &&
-            this.props.meta.initial.toJS() || []
-        );
-        const disabled = (
-            this.props.disabled ||
-            !!this.props.itemsLoading ||
-            initialValues.length > 0 && (
-                initialValues.length === this.props.itemsList.length
-            )
-        );
         return (
             <FormControl fullWidth required={this.props.required} error={!!this.props.error}>
                 {
@@ -163,7 +150,7 @@ export class GenericSelectFieldClass extends Component {
                     value={this.newValue()}
                     displayEmpty={this.props.displayEmpty}
                     onChange={this._itemSelected}
-                    {...{disabled}}
+                    disabled={this.props.disabled || !!this.props.itemsLoading}
                     aria-label={this.props.ariaLabel}
                     autoWidth={this.props.autoWidth}
                     multiple={this.props.multiple}
