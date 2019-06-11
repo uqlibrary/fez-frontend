@@ -6,7 +6,7 @@ import ListRow from './ListRow';
 export default class ListsEditor extends Component {
     static propTypes = {
         formComponent: PropTypes.func.isRequired,
-        inputField: PropTypes.func, // eg connected auto complete fields
+        inputField: PropTypes.object, // eg connected auto complete fields
         className: PropTypes.string,
         searchKey: PropTypes.object.isRequired,
         maxCount: PropTypes.number,

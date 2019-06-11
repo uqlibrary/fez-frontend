@@ -4,7 +4,6 @@ import { Field } from 'redux-form/lib/immutable';
 
 import Grid from '@material-ui/core/Grid';
 import MenuItem from '@material-ui/core/MenuItem';
-import Button from '@material-ui/core/Button';
 
 import { SelectField } from 'modules/SharedComponents/Toolbox/SelectField';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
@@ -15,16 +14,18 @@ import SecurityCard from './SecurityCard';
 import { validation } from 'config';
 import { locale } from 'locale';
 
+
 const text = locale.components.securitySection;
 
-export const SecuritySection = ({ disabled, handleSubmit, ...props }) => {
+export const SecuritySection = ({ disabled }) => {
     const { formValues } = useFormValuesContext();
     const { record } = useRecordContext();
 
     const isPolicyInherited = record.rek_security_inherited === 1;
     const recordType = record.rek_object_type_lookup.toLowerCase();
 
-    const accessLevel = formValues.get('accessLevel');
+    const accessLevel = formValues.accessLevel;
+
     let canEdit = false;
     switch(recordType) {
         case RECORD_TYPE_COLLECTION:
@@ -34,12 +35,23 @@ export const SecuritySection = ({ disabled, handleSubmit, ...props }) => {
         default:
             canEdit = ['Admin', 'Superadmin'].indexOf(accessLevel) > -1;
     }
+
+    const FormAlert = React.memo(() => (
+        <Grid item xs={12} sm={12}>
+            <Alert
+                type="warning"
+                title={text.admin.warning.title}
+                message={text.admin.warning.message}
+            />
+        </Grid>
+    ));
+
     return (
         <Grid container spacing={16}>
             <Grid item xs={12} sm={12}>
                 <Field
                     component={SelectField}
-                    name="accessLevel"
+                    name="securitySection.accessLevel"
                     label={text.admin.field.label}
                     disabled={disabled}
                     required
@@ -53,13 +65,7 @@ export const SecuritySection = ({ disabled, handleSubmit, ...props }) => {
                     </MenuItem>
                 </Field>
             </Grid>
-            <Grid item xs={12} sm={12}>
-                <Alert
-                    type="warning"
-                    title={text.admin.warning.title}
-                    message={text.admin.warning.message}
-                />
-            </Grid>
+            <FormAlert />
             {
                 canEdit &&
                 <Grid item xs={12}>
@@ -68,20 +74,6 @@ export const SecuritySection = ({ disabled, handleSubmit, ...props }) => {
                         text={text[recordType]}
                         recordType={recordType}
                         isPolicyInherited={isPolicyInherited}
-                        {...props}
-                    />
-                </Grid>
-            }
-            {
-                canEdit &&
-                <Grid item xs={12} sm={12}>
-                    <Button
-                        style={{whiteSpace: 'nowrap'}}
-                        variant="contained"
-                        color="primary"
-                        fullWidth
-                        children={text.submit}
-                        onClick={handleSubmit}
                     />
                 </Grid>
             }
@@ -90,8 +82,11 @@ export const SecuritySection = ({ disabled, handleSubmit, ...props }) => {
 };
 
 SecuritySection.propTypes = {
-    disabled: PropTypes.bool,
-    handleSubmit: PropTypes.func
+    disabled: PropTypes.bool
 };
 
-export default React.memo(SecuritySection);
+function isSame(prevProps, nextProps) {
+    return prevProps.disabled === nextProps.disabled;
+}
+
+export default React.memo(SecuritySection, isSame);

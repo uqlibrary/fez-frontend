@@ -103,4 +103,7 @@ DataStreamSecuritySelector.propTypes = {
     }).isRequired
 };
 
-export default withStyles(styles)(DataStreamSecuritySelector);
+function isSame() {
+    return true;
+}
+export default React.memo(withStyles(styles)(DataStreamSecuritySelector), isSame);

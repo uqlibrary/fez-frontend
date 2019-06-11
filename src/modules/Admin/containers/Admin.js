@@ -1,16 +1,15 @@
 import { connect } from 'react-redux';
-import { reduxForm, getFormValues, getFormSyncErrors, SubmissionError } from 'redux-form/immutable';
+import { reduxForm, /* getFormValues, */ getFormSyncErrors, SubmissionError } from 'redux-form/immutable';
 import { updateSecurity } from 'actions';
 import Immutable from 'immutable';
-import Admin from '../components/Admin';
+import AdminContainer from '../components/AdminContainer';
 import { confirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
 import { withRouter } from 'react-router';
-import Cookies from 'js-cookie';
 import { bindActionCreators } from 'redux';
 import * as actions from 'actions';
 import { viewRecordsConfig } from 'config';
 
-const FORM_NAME = 'Prototype';
+export const FORM_NAME = 'Prototype';
 
 export const isFileValid = (dataStream) => {
     const { files: { blacklist } } = viewRecordsConfig;
@@ -27,13 +26,12 @@ const onSubmit = (values, dispatch) => {
         });
 };
 
-
 let PrototypeContainer = reduxForm({
     form: FORM_NAME,
     onSubmit
-})(confirmDiscardFormChanges(Admin, FORM_NAME));
+})(confirmDiscardFormChanges(AdminContainer, FORM_NAME));
 
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = (state) => {
     const recordToView = state.get('viewRecordReducer').recordToView;
     const formErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});
     let initialFormValues = null;
@@ -41,23 +39,23 @@ const mapStateToProps = (state, ownProps) => {
         initialFormValues = {
             initialValues: {
                 pid: recordToView.rek_pid,
-                // security tab
-                rek_security_policy: recordToView.rek_security_policy,
-                rek_datastream_policy: recordToView.rek_datastream_policy,
-                rek_security_inherited: recordToView.rek_security_inherited,
-                dataStreams: recordToView.fez_datastream_info.filter(isFileValid),
                 collection: [],
-                subject: []
+                subject: [],
+                securitySection: {
+                    rek_security_policy: recordToView.rek_security_policy,
+                    rek_datastream_policy: recordToView.rek_datastream_policy,
+                    rek_security_inherited: recordToView.rek_security_inherited,
+                    dataStreams: recordToView.fez_datastream_info.filter(isFileValid),
+                }
             }
         };
     }
     return {
-        formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
-        formErrors: formErrors,
+        // formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
+        // formErrors: formErrors,
         disableSubmit: formErrors && !(formErrors instanceof Immutable.Map),
-        tabbed: Cookies.get('adminFormTabbed') && !!(Cookies.get('adminFormTabbed') === 'tabbed'),
         ...(!!initialFormValues ? initialFormValues : {}),
-        ...ownProps,
+        // ...ownProps,
         ...state.get('viewRecordReducer'),
     };
 };

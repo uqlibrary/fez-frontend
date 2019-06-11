@@ -18,14 +18,10 @@ export const SecurityCard = ({ disabled, text, recordType, isPolicyInherited }) 
     const { record } = useRecordContext();
     const { formValues } = useFormValuesContext();
 
-    const dataStreams = (
-        !!formValues.get('dataStreams').toJS &&
-        formValues.get('dataStreams').toJS()
-    ) || formValues.get('dataStreams');
-
-    const isOverrideSecurityNotChecked = formValues.get('rek_security_inherited') !== 0;
-    const securityPolicy = formValues.get('rek_security_policy');
-    const dataStreamPolicy = formValues.get('rek_datastream_policy');
+    const dataStreams = formValues.dataStreams;
+    const isOverrideSecurityNotChecked = formValues.rek_security_inherited !== 0;
+    const securityPolicy = formValues.rek_security_policy;
+    const dataStreamPolicy = formValues.rek_datastream_policy;
 
     const title = (
         <span>
@@ -48,7 +44,7 @@ export const SecurityCard = ({ disabled, text, recordType, isPolicyInherited }) 
                         <Grid item xs={12}>
                             <Field
                                 component={OverrideSecurity}
-                                name="rek_security_inherited"
+                                name="securitySection.rek_security_inherited"
                                 label="Override inherited security (detailed below)"
                                 normalize={overrideSecurityValueNormalizer}
                             />
@@ -66,7 +62,7 @@ export const SecurityCard = ({ disabled, text, recordType, isPolicyInherited }) 
                             : <SecuritySelector
                                 disabled={disabled}
                                 text={text}
-                                fieldName="rek_security_policy"
+                                fieldName="securitySection.rek_security_policy"
                                 recordType={recordType}
                                 securityPolicy={securityPolicy}
                             />
@@ -96,7 +92,7 @@ export const SecurityCard = ({ disabled, text, recordType, isPolicyInherited }) 
                                 <Grid item xs={12}>
                                     <Field
                                         component={DataStreamSecuritySelector}
-                                        name="dataStreams"
+                                        name="securitySection.dataStreams"
                                         {...{
                                             disabled,
                                             text: text.dataStream,
@@ -119,5 +115,9 @@ SecurityCard.propTypes = {
     isPolicyInherited: PropTypes.bool
 };
 
-export default React.memo(SecurityCard);
+function isSame() {
+    return true;
+}
+
+export default React.memo(SecurityCard, isSame);
 

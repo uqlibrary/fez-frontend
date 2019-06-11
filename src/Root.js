@@ -8,7 +8,6 @@ import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
 import ThemeProvider from '@material-ui/styles/ThemeProvider';
 import JssProvider from 'react-jss/lib/JssProvider';
 import { createGenerateClassName } from '@material-ui/core/styles';
-
 const generateClassName = createGenerateClassName({
     dangerouslyUseGlobalCSS: false,
     productionPrefix: 'uq-espace-',

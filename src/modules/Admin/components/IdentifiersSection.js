@@ -24,19 +24,19 @@ export const IdentifiersSection = ({disabled = false}) => (
                 {({formValues}) => (
                     <Field
                         component={DownshiftMultiChipSelectField}
-                        initialValue={formValues.get('collection')}
+                        initialValue={formValues.collection}
                         disabled={disabled}
                         label="Collection"
                         placeholder="Begin typing to select and add collection(s)"
                         optionsList={collectionItems}
-                        name="collection" />
+                        name="identifiersSection.collection" />
                 )}
             </FormValuesContextConsumer>
         </Grid>
         <Grid item xs={12} sm={6}>
             <Field
                 component={GenericTextField}
-                name="WOSisi"
+                name="identifiersSection.wosIsi"
                 fullWidth
                 label="WOS ID (ISI Loc)"
                 placeholder=""
@@ -47,7 +47,7 @@ export const IdentifiersSection = ({disabled = false}) => (
             <Field
                 component={SelectField}
                 disabled={disabled}
-                name="wosDocType"
+                name="identifiersSection.wosDocType"
                 label="WOS Document type"
                 required
                 placeholder="">
@@ -60,7 +60,7 @@ export const IdentifiersSection = ({disabled = false}) => (
         <Grid item xs={12} sm={6}>
             <Field
                 component={GenericTextField}
-                name="scopusId"
+                name="identifiersSection.scopusId"
                 fullWidth
                 label="Scopus ID"
                 placeholder=""
@@ -71,7 +71,7 @@ export const IdentifiersSection = ({disabled = false}) => (
             <Field
                 component={SelectField}
                 disabled={disabled}
-                name="scopusDocType"
+                name="identifiersSection.scopusDocType"
                 label="Scopus Document type"
                 required
                 placeholder="">
@@ -85,7 +85,7 @@ export const IdentifiersSection = ({disabled = false}) => (
         <Grid item xs={12} sm={6}>
             <Field
                 component={GenericTextField}
-                name="pubmedId"
+                name="identifiersSection.pubmedId"
                 fullWidth
                 label="PubMed ID"
                 placeholder=""
@@ -96,7 +96,7 @@ export const IdentifiersSection = ({disabled = false}) => (
             <Field
                 component={SelectField}
                 disabled={disabled}
-                name="pubmedDocType"
+                name="identifiersSection.pubmedDocType"
                 label="PubMed Document type"
                 required
                 placeholder="">
