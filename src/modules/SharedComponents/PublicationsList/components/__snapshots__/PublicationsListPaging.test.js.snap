@@ -16,8 +16,8 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
       item={true}
     >
       <WithStyles(Button)
+        className="undefined paging-previous"
         disabled={false}
-        id="pagingPrevious"
         onClick={[Function]}
         style={
           Object {
@@ -56,10 +56,9 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
       >
         <WithStyles(Button)
           aria-label="Click to select page 1 of 50 result pages"
-          className=""
+          className=" paging-button"
           color="default"
           disabled={false}
-          id="pageButton"
           key="1"
           onClick={[Function]}
           size="small"
@@ -70,10 +69,9 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
         ...
         <WithStyles(Button)
           aria-label="Click to select page 7 of 50 result pages"
-          className=""
+          className=" paging-button"
           color="default"
           disabled={false}
-          id="pageButton"
           key="7"
           onClick={[Function]}
           size="small"
@@ -83,10 +81,9 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
         </WithStyles(Button)>
         <WithStyles(Button)
           aria-label="Click to select page 8 of 50 result pages"
-          className=""
+          className=" paging-button"
           color="default"
           disabled={false}
-          id="pageButton"
           key="8"
           onClick={[Function]}
           size="small"
@@ -96,10 +93,9 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
         </WithStyles(Button)>
         <WithStyles(Button)
           aria-label="Click to select page 9 of 50 result pages"
-          className=""
+          className=" paging-button"
           color="default"
           disabled={false}
-          id="pageButton"
           key="9"
           onClick={[Function]}
           size="small"
@@ -109,10 +105,9 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
         </WithStyles(Button)>
         <WithStyles(Button)
           aria-label="Click to select page 10 of 50 result pages"
-          className=""
+          className=" paging-button"
           color="primary"
           disabled={true}
-          id="pageButton"
           key="10"
           onClick={[Function]}
           size="small"
@@ -122,10 +117,9 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
         </WithStyles(Button)>
         <WithStyles(Button)
           aria-label="Click to select page 11 of 50 result pages"
-          className=""
+          className=" paging-button"
           color="default"
           disabled={false}
-          id="pageButton"
           key="11"
           onClick={[Function]}
           size="small"
@@ -135,10 +129,9 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
         </WithStyles(Button)>
         <WithStyles(Button)
           aria-label="Click to select page 12 of 50 result pages"
-          className=""
+          className=" paging-button"
           color="default"
           disabled={false}
-          id="pageButton"
           key="12"
           onClick={[Function]}
           size="small"
@@ -148,10 +141,9 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
         </WithStyles(Button)>
         <WithStyles(Button)
           aria-label="Click to select page 13 of 50 result pages"
-          className=""
+          className=" paging-button"
           color="default"
           disabled={false}
-          id="pageButton"
           key="13"
           onClick={[Function]}
           size="small"
@@ -162,10 +154,9 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
         ...
         <WithStyles(Button)
           aria-label="Click to select page 50 of 50 result pages"
-          className=""
+          className=" paging-button"
           color="default"
           disabled={false}
-          id="pageButton"
           key="50"
           onClick={[Function]}
           size="small"
@@ -220,8 +211,8 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
       item={true}
     >
       <WithStyles(Button)
+        className="undefined paging-next"
         disabled={false}
-        id="pagingNext"
         onClick={[Function]}
         size="small"
         variant="text"
@@ -250,8 +241,8 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
       item={true}
     >
       <WithStyles(Button)
+        className="undefined paging-previous"
         disabled={true}
-        id="pagingPrevious"
         onClick={[Function]}
         style={
           Object {
@@ -290,10 +281,9 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
       >
         <WithStyles(Button)
           aria-label="Click to select page 1 of 3 result pages"
-          className=""
+          className=" paging-button"
           color="primary"
           disabled={true}
-          id="pageButton"
           key="1"
           onClick={[Function]}
           size="small"
@@ -303,10 +293,9 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
         </WithStyles(Button)>
         <WithStyles(Button)
           aria-label="Click to select page 2 of 3 result pages"
-          className=""
+          className=" paging-button"
           color="default"
           disabled={false}
-          id="pageButton"
           key="2"
           onClick={[Function]}
           size="small"
@@ -316,10 +305,9 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
         </WithStyles(Button)>
         <WithStyles(Button)
           aria-label="Click to select page 3 of 3 result pages"
-          className=""
+          className=" paging-button"
           color="default"
           disabled={false}
-          id="pageButton"
           key="3"
           onClick={[Function]}
           size="small"
@@ -374,8 +362,8 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
       item={true}
     >
       <WithStyles(Button)
+        className="undefined paging-next"
         disabled={false}
-        id="pagingNext"
         onClick={[Function]}
         size="small"
         variant="text"
@@ -398,8 +386,8 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
       item={true}
     >
       <WithStyles(Button)
+        className="undefined paging-previous"
         disabled={false}
-        id="pagingPrevious"
         onClick={[Function]}
         style={
           Object {
@@ -438,10 +426,9 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
       >
         <WithStyles(Button)
           aria-label="Click to select page 1 of 3 result pages"
-          className=""
+          className=" paging-button"
           color="default"
           disabled={false}
-          id="pageButton"
           key="1"
           onClick={[Function]}
           size="small"
@@ -451,10 +438,9 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
         </WithStyles(Button)>
         <WithStyles(Button)
           aria-label="Click to select page 2 of 3 result pages"
-          className=""
+          className=" paging-button"
           color="default"
           disabled={false}
-          id="pageButton"
           key="2"
           onClick={[Function]}
           size="small"
@@ -464,10 +450,9 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
         </WithStyles(Button)>
         <WithStyles(Button)
           aria-label="Click to select page 3 of 3 result pages"
-          className=""
+          className=" paging-button"
           color="primary"
           disabled={true}
-          id="pageButton"
           key="3"
           onClick={[Function]}
           size="small"
@@ -522,8 +507,8 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
       item={true}
     >
       <WithStyles(Button)
+        className="undefined paging-next"
         disabled={true}
-        id="pagingNext"
         onClick={[Function]}
         size="small"
         variant="text"
@@ -546,8 +531,8 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
       item={true}
     >
       <WithStyles(Button)
+        className="undefined paging-previous"
         disabled={false}
-        id="pagingPrevious"
         onClick={[Function]}
         style={
           Object {
@@ -586,10 +571,9 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
       >
         <WithStyles(Button)
           aria-label="Click to select page 1 of 3 result pages"
-          className=""
+          className=" paging-button"
           color="default"
           disabled={false}
-          id="pageButton"
           key="1"
           onClick={[Function]}
           size="small"
@@ -599,10 +583,9 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
         </WithStyles(Button)>
         <WithStyles(Button)
           aria-label="Click to select page 2 of 3 result pages"
-          className=""
+          className=" paging-button"
           color="primary"
           disabled={true}
-          id="pageButton"
           key="2"
           onClick={[Function]}
           size="small"
@@ -612,10 +595,9 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
         </WithStyles(Button)>
         <WithStyles(Button)
           aria-label="Click to select page 3 of 3 result pages"
-          className=""
+          className=" paging-button"
           color="default"
           disabled={false}
-          id="pageButton"
           key="3"
           onClick={[Function]}
           size="small"
@@ -670,8 +652,8 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
       item={true}
     >
       <WithStyles(Button)
+        className="undefined paging-next"
         disabled={false}
-        id="pagingNext"
         onClick={[Function]}
         size="small"
         variant="text"
@@ -1073,10 +1055,9 @@ exports[`PublicationsListPaging renders  component with styles 1`] = `
 exports[`PublicationsListPaging renders  should render buttons with zero total pages 1`] = `
 <WithStyles(Button)
   aria-label="Click to select page test of 0 result pages"
-  className=""
+  className=" paging-button"
   color="default"
   disabled={false}
-  id="pageButton"
   onClick={[Function]}
   size="small"
   variant="text"

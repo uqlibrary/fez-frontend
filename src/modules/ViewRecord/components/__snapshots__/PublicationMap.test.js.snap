@@ -246,7 +246,7 @@ exports[`Publication's map coordinates should mount component 1`] = `
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -851,7 +851,7 @@ exports[`Publication's map coordinates should mount component in readonly mode 1
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -2039,7 +2039,7 @@ exports[`Publication's map coordinates should render component with a marker 1`]
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -2658,7 +2658,7 @@ exports[`Publication's map coordinates should render component with a selected a
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -3253,7 +3253,7 @@ exports[`Publication's map coordinates should render component with empty coordi
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",

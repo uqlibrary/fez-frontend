@@ -1,9 +1,10 @@
+import React from 'react';
 import LookupForm from './LookupForm';
 
 function setup(testProps, isShallow = true) {
     const props = {
         ...testProps,
-        inputField: () => (<span />),
+        inputField: React.memo(function inputField() {return <span />}),
         onAdd: testProps.onAdd || jest.fn(), // : PropTypes.func.isRequired,
         isValid: testProps.isValid || jest.fn(() => ('')), // PropTypes.func,
         disabled: testProps.disabled

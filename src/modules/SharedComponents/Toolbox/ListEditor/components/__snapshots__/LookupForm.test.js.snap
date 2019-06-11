@@ -2,7 +2,7 @@
 
 exports[`LookupForm tests  should render lookup form 1`] = `
 <Fragment>
-  <inputField
+  <Memo(inputField)
     className="mui-long-labels-fix"
     floatingLabelText="Item name"
     hintText="Please type the item name, then select from the list"

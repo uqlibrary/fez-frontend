@@ -555,7 +555,7 @@ exports[`Component ContributorForm should render connected component 1`] = `
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -1283,12 +1283,27 @@ exports[`Component ContributorForm should render connected component 1`] = `
                               value=""
                             >
                               <TextField
-                                InputLabelProps={null}
+                                InputLabelProps={
+                                  Object {
+                                    "hidden": false,
+                                    "htmlFor": "nameAsPublishedField",
+                                    "id": "nameAsPublishedField-label",
+                                    "shrink": undefined,
+                                  }
+                                }
                                 autoComplete="off"
                                 classes={Object {}}
                                 error={false}
                                 fullWidth={true}
                                 id="nameAsPublishedField"
+                                inputProps={
+                                  Object {
+                                    "aria-label": "Name as published",
+                                    "aria-labelledby": "nameAsPublishedField-label",
+                                    "id": "nameAsPublishedField",
+                                    "label": "Name as published",
+                                  }
+                                }
                                 label="Name as published"
                                 onChange={[Function]}
                                 onKeyDown={[Function]}
@@ -1329,7 +1344,9 @@ exports[`Component ContributorForm should render connected component 1`] = `
                                       onKeyDown={[Function]}
                                     >
                                       <WithStyles(WithFormControlContext(InputLabel))
+                                        hidden={false}
                                         htmlFor="nameAsPublishedField"
+                                        id="nameAsPublishedField-label"
                                       >
                                         <WithFormControlContext(InputLabel)
                                           classes={
@@ -1347,7 +1364,9 @@ exports[`Component ContributorForm should render connected component 1`] = `
                                               "shrink": "MuiInputLabel-shrink-109",
                                             }
                                           }
+                                          hidden={false}
                                           htmlFor="nameAsPublishedField"
+                                          id="nameAsPublishedField-label"
                                         >
                                           <InputLabel
                                             classes={
@@ -1366,7 +1385,9 @@ exports[`Component ContributorForm should render connected component 1`] = `
                                               }
                                             }
                                             disableAnimation={false}
+                                            hidden={false}
                                             htmlFor="nameAsPublishedField"
+                                            id="nameAsPublishedField-label"
                                             muiFormControl={
                                               Object {
                                                 "adornedStart": false,
@@ -1395,7 +1416,9 @@ exports[`Component ContributorForm should render connected component 1`] = `
                                                 }
                                               }
                                               data-shrink={false}
+                                              hidden={false}
                                               htmlFor="nameAsPublishedField"
+                                              id="nameAsPublishedField-label"
                                             >
                                               <WithFormControlContext(FormLabel)
                                                 className="MuiInputLabel-root-102 MuiInputLabel-formControl-107 MuiInputLabel-animated-110"
@@ -1411,7 +1434,9 @@ exports[`Component ContributorForm should render connected component 1`] = `
                                                   }
                                                 }
                                                 data-shrink={false}
+                                                hidden={false}
                                                 htmlFor="nameAsPublishedField"
+                                                id="nameAsPublishedField-label"
                                               >
                                                 <FormLabel
                                                   className="MuiInputLabel-root-102 MuiInputLabel-formControl-107 MuiInputLabel-animated-110"
@@ -1428,7 +1453,9 @@ exports[`Component ContributorForm should render connected component 1`] = `
                                                   }
                                                   component="label"
                                                   data-shrink={false}
+                                                  hidden={false}
                                                   htmlFor="nameAsPublishedField"
+                                                  id="nameAsPublishedField-label"
                                                   muiFormControl={
                                                     Object {
                                                       "adornedStart": false,
@@ -1449,7 +1476,9 @@ exports[`Component ContributorForm should render connected component 1`] = `
                                                   <label
                                                     className="MuiFormLabel-root-113 MuiInputLabel-root-102 MuiInputLabel-formControl-107 MuiInputLabel-animated-110"
                                                     data-shrink={false}
+                                                    hidden={false}
                                                     htmlFor="nameAsPublishedField"
+                                                    id="nameAsPublishedField-label"
                                                   >
                                                     Name as published
                                                   </label>
@@ -1463,6 +1492,14 @@ exports[`Component ContributorForm should render connected component 1`] = `
                                         autoComplete="off"
                                         fullWidth={true}
                                         id="nameAsPublishedField"
+                                        inputProps={
+                                          Object {
+                                            "aria-label": "Name as published",
+                                            "aria-labelledby": "nameAsPublishedField-label",
+                                            "id": "nameAsPublishedField",
+                                            "label": "Name as published",
+                                          }
+                                        }
                                         onChange={[Function]}
                                         placeholder="Please type the name exactly as published"
                                         value=""
@@ -1488,6 +1525,14 @@ exports[`Component ContributorForm should render connected component 1`] = `
                                           }
                                           fullWidth={true}
                                           id="nameAsPublishedField"
+                                          inputProps={
+                                            Object {
+                                              "aria-label": "Name as published",
+                                              "aria-labelledby": "nameAsPublishedField-label",
+                                              "id": "nameAsPublishedField",
+                                              "label": "Name as published",
+                                            }
+                                          }
                                           onChange={[Function]}
                                           placeholder="Please type the name exactly as published"
                                           value=""
@@ -1514,6 +1559,14 @@ exports[`Component ContributorForm should render connected component 1`] = `
                                             fullWidth={true}
                                             id="nameAsPublishedField"
                                             inputComponent="input"
+                                            inputProps={
+                                              Object {
+                                                "aria-label": "Name as published",
+                                                "aria-labelledby": "nameAsPublishedField-label",
+                                                "id": "nameAsPublishedField",
+                                                "label": "Name as published",
+                                              }
+                                            }
                                             multiline={false}
                                             onChange={[Function]}
                                             placeholder="Please type the name exactly as published"
@@ -1546,6 +1599,14 @@ exports[`Component ContributorForm should render connected component 1`] = `
                                               fullWidth={true}
                                               id="nameAsPublishedField"
                                               inputComponent="input"
+                                              inputProps={
+                                                Object {
+                                                  "aria-label": "Name as published",
+                                                  "aria-labelledby": "nameAsPublishedField-label",
+                                                  "id": "nameAsPublishedField",
+                                                  "label": "Name as published",
+                                                }
+                                              }
                                               multiline={false}
                                               onChange={[Function]}
                                               placeholder="Please type the name exactly as published"
@@ -1578,6 +1639,14 @@ exports[`Component ContributorForm should render connected component 1`] = `
                                                 fullWidth={true}
                                                 id="nameAsPublishedField"
                                                 inputComponent="input"
+                                                inputProps={
+                                                  Object {
+                                                    "aria-label": "Name as published",
+                                                    "aria-labelledby": "nameAsPublishedField-label",
+                                                    "id": "nameAsPublishedField",
+                                                    "label": "Name as published",
+                                                  }
+                                                }
                                                 muiFormControl={
                                                   Object {
                                                     "adornedStart": false,
@@ -1606,10 +1675,13 @@ exports[`Component ContributorForm should render connected component 1`] = `
                                                 >
                                                   <input
                                                     aria-invalid={false}
+                                                    aria-label="Name as published"
+                                                    aria-labelledby="nameAsPublishedField-label"
                                                     autoComplete="off"
                                                     className="MuiInputBase-input-143 MuiInput-input-128"
                                                     disabled={false}
                                                     id="nameAsPublishedField"
+                                                    label="Name as published"
                                                     onBlur={[Function]}
                                                     onChange={[Function]}
                                                     onFocus={[Function]}

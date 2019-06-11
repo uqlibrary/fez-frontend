@@ -5,7 +5,7 @@ exports[`DataStreamSecuritySelector component should change security value for t
 - First value
 + Second value
 
-@@ -47,11 +47,12 @@
+@@ -48,11 +48,12 @@
             <div
               class=\\"MuiSelect-root-375\\"
             >
@@ -26,7 +26,7 @@ exports[`DataStreamSecuritySelector component should change security value for t
 - First value
 + Second value
 
-@@ -47,23 +47,22 @@
+@@ -48,25 +48,24 @@
             <div
               class=\\"MuiSelect-root-375\\"
             >
@@ -44,6 +44,8 @@ exports[`DataStreamSecuritySelector component should change security value for t
 +               Public
               </div>
               <input
+                aria-labelledby=\\"Record level policy to apply to this PID-label\\"
+                id=\\"Record level policy to apply to this PID\\"
                 name=\\"test.txt\\"
                 type=\\"hidden\\"
 -               value=\\"1\\"
@@ -86,6 +88,7 @@ exports[`DataStreamSecuritySelector component should render default view 1`] = `
         <label
           class="MuiFormLabel-root-156 MuiFormLabel-filled-160 MuiFormLabel-required-161 MuiInputLabel-required-149 MuiInputLabel-root-145 MuiInputLabel-formControl-150 MuiInputLabel-animated-153 MuiInputLabel-shrink-152"
           data-shrink="true"
+          id="Record level policy to apply to this PID-label"
         >
           Record level policy to apply to this PID
           <span
@@ -116,6 +119,8 @@ exports[`DataStreamSecuritySelector component should render default view 1`] = `
               Administrators
             </div>
             <input
+              aria-labelledby="Record level policy to apply to this PID-label"
+              id="Record level policy to apply to this PID"
               name="test.txt"
               type="hidden"
               value="1"

@@ -215,7 +215,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -808,7 +808,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                           "accent": Object {
                             "dark": "#2a557d",
                             "light": "#54acff",
-                            "main": "#4085C6",
+                            "main": "#316799",
                           },
                           "action": Object {
                             "active": "rgba(0, 0, 0, 0.54)",
@@ -1192,7 +1192,10 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                         <div
                           className="MuiFormControl-root-2 MuiFormControl-fullWidth-5"
                         >
-                          <WithStyles(WithFormControlContext(InputLabel))>
+                          <WithStyles(WithFormControlContext(InputLabel))
+                            hidden={false}
+                            id="undefined-label"
+                          >
                             <WithFormControlContext(InputLabel)
                               classes={
                                 Object {
@@ -1209,6 +1212,8 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                   "shrink": "MuiInputLabel-shrink-13",
                                 }
                               }
+                              hidden={false}
+                              id="undefined-label"
                             >
                               <InputLabel
                                 classes={
@@ -1227,6 +1232,8 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                   }
                                 }
                                 disableAnimation={false}
+                                hidden={false}
+                                id="undefined-label"
                                 muiFormControl={
                                   Object {
                                     "adornedStart": false,
@@ -1255,6 +1262,8 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                     }
                                   }
                                   data-shrink={false}
+                                  hidden={false}
+                                  id="undefined-label"
                                 >
                                   <WithFormControlContext(FormLabel)
                                     className="MuiInputLabel-root-6 MuiInputLabel-formControl-11 MuiInputLabel-animated-14"
@@ -1270,6 +1279,8 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                       }
                                     }
                                     data-shrink={false}
+                                    hidden={false}
+                                    id="undefined-label"
                                   >
                                     <FormLabel
                                       className="MuiInputLabel-root-6 MuiInputLabel-formControl-11 MuiInputLabel-animated-14"
@@ -1286,6 +1297,8 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                       }
                                       component="label"
                                       data-shrink={false}
+                                      hidden={false}
+                                      id="undefined-label"
                                       muiFormControl={
                                         Object {
                                           "adornedStart": false,
@@ -1306,9 +1319,9 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                       <label
                                         className="MuiFormLabel-root-17 MuiInputLabel-root-6 MuiInputLabel-formControl-11 MuiInputLabel-animated-14"
                                         data-shrink={false}
-                                      >
-                                        Select item
-                                      </label>
+                                        hidden={false}
+                                        id="undefined-label"
+                                      />
                                     </FormLabel>
                                   </WithFormControlContext(FormLabel)>
                                 </WithStyles(WithFormControlContext(FormLabel))>
@@ -1323,6 +1336,13 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                             }
                             autoWidth={false}
                             disabled={false}
+                            inputProps={
+                              Object {
+                                "style": Object {
+                                  "border": "1px solid red",
+                                },
+                              }
+                            }
                             multiple={false}
                             onChange={[Function]}
                             value=""
@@ -1346,6 +1366,13 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                 }
                               }
                               disabled={false}
+                              inputProps={
+                                Object {
+                                  "style": Object {
+                                    "border": "1px solid red",
+                                  },
+                                }
+                              }
                               multiple={false}
                               onChange={[Function]}
                               value=""
@@ -1372,6 +1399,13 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                 disabled={false}
                                 displayEmpty={false}
                                 input={<WithStyles(Input) />}
+                                inputProps={
+                                  Object {
+                                    "style": Object {
+                                      "border": "1px solid red",
+                                    },
+                                  }
+                                }
                                 muiFormControl={
                                   Object {
                                     "adornedStart": false,
@@ -1541,6 +1575,9 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                       "onOpen": undefined,
                                       "open": undefined,
                                       "renderValue": undefined,
+                                      "style": Object {
+                                        "border": "1px solid red",
+                                      },
                                       "type": undefined,
                                       "variant": "standard",
                                     }
@@ -1713,6 +1750,9 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                         "onOpen": undefined,
                                         "open": undefined,
                                         "renderValue": undefined,
+                                        "style": Object {
+                                          "border": "1px solid red",
+                                        },
                                         "type": undefined,
                                         "variant": "standard",
                                       }
@@ -1886,6 +1926,9 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                           "onOpen": undefined,
                                           "open": undefined,
                                           "renderValue": undefined,
+                                          "style": Object {
+                                            "border": "1px solid red",
+                                          },
                                           "type": undefined,
                                           "variant": "standard",
                                         }
@@ -2065,6 +2108,9 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                             "onOpen": undefined,
                                             "open": undefined,
                                             "renderValue": undefined,
+                                            "style": Object {
+                                              "border": "1px solid red",
+                                            },
                                             "type": undefined,
                                             "variant": "standard",
                                           }
@@ -2244,6 +2290,9 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                               "onOpen": undefined,
                                               "open": undefined,
                                               "renderValue": undefined,
+                                              "style": Object {
+                                                "border": "1px solid red",
+                                              },
                                               "type": undefined,
                                               "variant": "standard",
                                             }
@@ -2302,6 +2351,11 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                               onChange={[Function]}
                                               onFocus={[Function]}
                                               required={false}
+                                              style={
+                                                Object {
+                                                  "border": "1px solid red",
+                                                }
+                                              }
                                               value=""
                                               variant="standard"
                                             >
@@ -2328,6 +2382,11 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                                   />
                                                 </div>
                                                 <input
+                                                  style={
+                                                    Object {
+                                                      "border": "1px solid red",
+                                                    }
+                                                  }
                                                   type="hidden"
                                                   value=""
                                                 />
@@ -2491,7 +2550,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                                           "accent": Object {
                                                             "dark": "#2a557d",
                                                             "light": "#54acff",
-                                                            "main": "#4085C6",
+                                                            "main": "#316799",
                                                           },
                                                           "action": Object {
                                                             "active": "rgba(0, 0, 0, 0.54)",
@@ -3168,7 +3227,7 @@ exports[`UnpublishedStatusField component should render error message from redux
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -3806,7 +3865,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                           "accent": Object {
                             "dark": "#2a557d",
                             "light": "#54acff",
-                            "main": "#4085C6",
+                            "main": "#316799",
                           },
                           "action": Object {
                             "active": "rgba(0, 0, 0, 0.54)",
@@ -4190,7 +4249,10 @@ exports[`UnpublishedStatusField component should render error message from redux
                         <div
                           className="MuiFormControl-root-2 MuiFormControl-fullWidth-5"
                         >
-                          <WithStyles(WithFormControlContext(InputLabel))>
+                          <WithStyles(WithFormControlContext(InputLabel))
+                            hidden={false}
+                            id="undefined-label"
+                          >
                             <WithFormControlContext(InputLabel)
                               classes={
                                 Object {
@@ -4207,6 +4269,8 @@ exports[`UnpublishedStatusField component should render error message from redux
                                   "shrink": "MuiInputLabel-shrink-13",
                                 }
                               }
+                              hidden={false}
+                              id="undefined-label"
                             >
                               <InputLabel
                                 classes={
@@ -4225,6 +4289,8 @@ exports[`UnpublishedStatusField component should render error message from redux
                                   }
                                 }
                                 disableAnimation={false}
+                                hidden={false}
+                                id="undefined-label"
                                 muiFormControl={
                                   Object {
                                     "adornedStart": false,
@@ -4253,6 +4319,8 @@ exports[`UnpublishedStatusField component should render error message from redux
                                     }
                                   }
                                   data-shrink={false}
+                                  hidden={false}
+                                  id="undefined-label"
                                 >
                                   <WithFormControlContext(FormLabel)
                                     className="MuiInputLabel-root-6 MuiInputLabel-formControl-11 MuiInputLabel-animated-14"
@@ -4268,6 +4336,8 @@ exports[`UnpublishedStatusField component should render error message from redux
                                       }
                                     }
                                     data-shrink={false}
+                                    hidden={false}
+                                    id="undefined-label"
                                   >
                                     <FormLabel
                                       className="MuiInputLabel-root-6 MuiInputLabel-formControl-11 MuiInputLabel-animated-14"
@@ -4284,6 +4354,8 @@ exports[`UnpublishedStatusField component should render error message from redux
                                       }
                                       component="label"
                                       data-shrink={false}
+                                      hidden={false}
+                                      id="undefined-label"
                                       muiFormControl={
                                         Object {
                                           "adornedStart": false,
@@ -4304,9 +4376,9 @@ exports[`UnpublishedStatusField component should render error message from redux
                                       <label
                                         className="MuiFormLabel-root-17 MuiFormLabel-error-20 MuiInputLabel-error-9 MuiInputLabel-root-6 MuiInputLabel-formControl-11 MuiInputLabel-animated-14"
                                         data-shrink={false}
-                                      >
-                                        Select item
-                                      </label>
+                                        hidden={false}
+                                        id="undefined-label"
+                                      />
                                     </FormLabel>
                                   </WithFormControlContext(FormLabel)>
                                 </WithStyles(WithFormControlContext(FormLabel))>
@@ -4321,6 +4393,13 @@ exports[`UnpublishedStatusField component should render error message from redux
                             }
                             autoWidth={false}
                             disabled={false}
+                            inputProps={
+                              Object {
+                                "style": Object {
+                                  "border": "1px solid red",
+                                },
+                              }
+                            }
                             multiple={false}
                             onChange={[Function]}
                             value=""
@@ -4344,6 +4423,13 @@ exports[`UnpublishedStatusField component should render error message from redux
                                 }
                               }
                               disabled={false}
+                              inputProps={
+                                Object {
+                                  "style": Object {
+                                    "border": "1px solid red",
+                                  },
+                                }
+                              }
                               multiple={false}
                               onChange={[Function]}
                               value=""
@@ -4370,6 +4456,13 @@ exports[`UnpublishedStatusField component should render error message from redux
                                 disabled={false}
                                 displayEmpty={false}
                                 input={<WithStyles(Input) />}
+                                inputProps={
+                                  Object {
+                                    "style": Object {
+                                      "border": "1px solid red",
+                                    },
+                                  }
+                                }
                                 muiFormControl={
                                   Object {
                                     "adornedStart": false,
@@ -4539,6 +4632,9 @@ exports[`UnpublishedStatusField component should render error message from redux
                                       "onOpen": undefined,
                                       "open": undefined,
                                       "renderValue": undefined,
+                                      "style": Object {
+                                        "border": "1px solid red",
+                                      },
                                       "type": undefined,
                                       "variant": "standard",
                                     }
@@ -4711,6 +4807,9 @@ exports[`UnpublishedStatusField component should render error message from redux
                                         "onOpen": undefined,
                                         "open": undefined,
                                         "renderValue": undefined,
+                                        "style": Object {
+                                          "border": "1px solid red",
+                                        },
                                         "type": undefined,
                                         "variant": "standard",
                                       }
@@ -4884,6 +4983,9 @@ exports[`UnpublishedStatusField component should render error message from redux
                                           "onOpen": undefined,
                                           "open": undefined,
                                           "renderValue": undefined,
+                                          "style": Object {
+                                            "border": "1px solid red",
+                                          },
                                           "type": undefined,
                                           "variant": "standard",
                                         }
@@ -5063,6 +5165,9 @@ exports[`UnpublishedStatusField component should render error message from redux
                                             "onOpen": undefined,
                                             "open": undefined,
                                             "renderValue": undefined,
+                                            "style": Object {
+                                              "border": "1px solid red",
+                                            },
                                             "type": undefined,
                                             "variant": "standard",
                                           }
@@ -5242,6 +5347,9 @@ exports[`UnpublishedStatusField component should render error message from redux
                                               "onOpen": undefined,
                                               "open": undefined,
                                               "renderValue": undefined,
+                                              "style": Object {
+                                                "border": "1px solid red",
+                                              },
                                               "type": undefined,
                                               "variant": "standard",
                                             }
@@ -5300,6 +5408,11 @@ exports[`UnpublishedStatusField component should render error message from redux
                                               onChange={[Function]}
                                               onFocus={[Function]}
                                               required={false}
+                                              style={
+                                                Object {
+                                                  "border": "1px solid red",
+                                                }
+                                              }
                                               value=""
                                               variant="standard"
                                             >
@@ -5326,6 +5439,11 @@ exports[`UnpublishedStatusField component should render error message from redux
                                                   />
                                                 </div>
                                                 <input
+                                                  style={
+                                                    Object {
+                                                      "border": "1px solid red",
+                                                    }
+                                                  }
                                                   type="hidden"
                                                   value=""
                                                 />
@@ -5489,7 +5607,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                                                           "accent": Object {
                                                             "dark": "#2a557d",
                                                             "light": "#54acff",
-                                                            "main": "#4085C6",
+                                                            "main": "#316799",
                                                           },
                                                           "action": Object {
                                                             "active": "rgba(0, 0, 0, 0.54)",
@@ -6224,7 +6342,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -6849,7 +6967,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                           "accent": Object {
                             "dark": "#2a557d",
                             "light": "#54acff",
-                            "main": "#4085C6",
+                            "main": "#316799",
                           },
                           "action": Object {
                             "active": "rgba(0, 0, 0, 0.54)",
@@ -7233,7 +7351,10 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                         <div
                           className="MuiFormControl-root-2 MuiFormControl-fullWidth-5"
                         >
-                          <WithStyles(WithFormControlContext(InputLabel))>
+                          <WithStyles(WithFormControlContext(InputLabel))
+                            hidden={false}
+                            id="undefined-label"
+                          >
                             <WithFormControlContext(InputLabel)
                               classes={
                                 Object {
@@ -7250,6 +7371,8 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                   "shrink": "MuiInputLabel-shrink-13",
                                 }
                               }
+                              hidden={false}
+                              id="undefined-label"
                             >
                               <InputLabel
                                 classes={
@@ -7268,6 +7391,8 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                   }
                                 }
                                 disableAnimation={false}
+                                hidden={false}
+                                id="undefined-label"
                                 muiFormControl={
                                   Object {
                                     "adornedStart": false,
@@ -7296,6 +7421,8 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                     }
                                   }
                                   data-shrink={false}
+                                  hidden={false}
+                                  id="undefined-label"
                                 >
                                   <WithFormControlContext(FormLabel)
                                     className="MuiInputLabel-root-6 MuiInputLabel-formControl-11 MuiInputLabel-animated-14"
@@ -7311,6 +7438,8 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                       }
                                     }
                                     data-shrink={false}
+                                    hidden={false}
+                                    id="undefined-label"
                                   >
                                     <FormLabel
                                       className="MuiInputLabel-root-6 MuiInputLabel-formControl-11 MuiInputLabel-animated-14"
@@ -7327,6 +7456,8 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                       }
                                       component="label"
                                       data-shrink={false}
+                                      hidden={false}
+                                      id="undefined-label"
                                       muiFormControl={
                                         Object {
                                           "adornedStart": false,
@@ -7347,9 +7478,9 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                       <label
                                         className="MuiFormLabel-root-17 MuiInputLabel-root-6 MuiInputLabel-formControl-11 MuiInputLabel-animated-14"
                                         data-shrink={false}
-                                      >
-                                        Select item
-                                      </label>
+                                        hidden={false}
+                                        id="undefined-label"
+                                      />
                                     </FormLabel>
                                   </WithFormControlContext(FormLabel)>
                                 </WithStyles(WithFormControlContext(FormLabel))>
@@ -7364,6 +7495,13 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                             }
                             autoWidth={false}
                             disabled={false}
+                            inputProps={
+                              Object {
+                                "style": Object {
+                                  "border": "1px solid red",
+                                },
+                              }
+                            }
                             multiple={false}
                             onChange={[Function]}
                             value=""
@@ -7387,6 +7525,13 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                 }
                               }
                               disabled={false}
+                              inputProps={
+                                Object {
+                                  "style": Object {
+                                    "border": "1px solid red",
+                                  },
+                                }
+                              }
                               multiple={false}
                               onChange={[Function]}
                               value=""
@@ -7413,6 +7558,13 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                 disabled={false}
                                 displayEmpty={false}
                                 input={<WithStyles(Input) />}
+                                inputProps={
+                                  Object {
+                                    "style": Object {
+                                      "border": "1px solid red",
+                                    },
+                                  }
+                                }
                                 muiFormControl={
                                   Object {
                                     "adornedStart": false,
@@ -7582,6 +7734,9 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                       "onOpen": undefined,
                                       "open": undefined,
                                       "renderValue": undefined,
+                                      "style": Object {
+                                        "border": "1px solid red",
+                                      },
                                       "type": undefined,
                                       "variant": "standard",
                                     }
@@ -7754,6 +7909,9 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                         "onOpen": undefined,
                                         "open": undefined,
                                         "renderValue": undefined,
+                                        "style": Object {
+                                          "border": "1px solid red",
+                                        },
                                         "type": undefined,
                                         "variant": "standard",
                                       }
@@ -7927,6 +8085,9 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                           "onOpen": undefined,
                                           "open": undefined,
                                           "renderValue": undefined,
+                                          "style": Object {
+                                            "border": "1px solid red",
+                                          },
                                           "type": undefined,
                                           "variant": "standard",
                                         }
@@ -8106,6 +8267,9 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                             "onOpen": undefined,
                                             "open": undefined,
                                             "renderValue": undefined,
+                                            "style": Object {
+                                              "border": "1px solid red",
+                                            },
                                             "type": undefined,
                                             "variant": "standard",
                                           }
@@ -8285,6 +8449,9 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                               "onOpen": undefined,
                                               "open": undefined,
                                               "renderValue": undefined,
+                                              "style": Object {
+                                                "border": "1px solid red",
+                                              },
                                               "type": undefined,
                                               "variant": "standard",
                                             }
@@ -8343,6 +8510,11 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                               onChange={[Function]}
                                               onFocus={[Function]}
                                               required={false}
+                                              style={
+                                                Object {
+                                                  "border": "1px solid red",
+                                                }
+                                              }
                                               value=""
                                               variant="standard"
                                             >
@@ -8369,6 +8541,11 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                                   />
                                                 </div>
                                                 <input
+                                                  style={
+                                                    Object {
+                                                      "border": "1px solid red",
+                                                    }
+                                                  }
                                                   type="hidden"
                                                   value=""
                                                 />
@@ -8532,7 +8709,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                                           "accent": Object {
                                                             "dark": "#2a557d",
                                                             "light": "#54acff",
-                                                            "main": "#4085C6",
+                                                            "main": "#316799",
                                                           },
                                                           "action": Object {
                                                             "active": "rgba(0, 0, 0, 0.54)",
@@ -9209,7 +9386,7 @@ exports[`UnpublishedStatusField component should render with value selected from
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -9840,7 +10017,7 @@ exports[`UnpublishedStatusField component should render with value selected from
                           "accent": Object {
                             "dark": "#2a557d",
                             "light": "#54acff",
-                            "main": "#4085C6",
+                            "main": "#316799",
                           },
                           "action": Object {
                             "active": "rgba(0, 0, 0, 0.54)",
@@ -10224,7 +10401,10 @@ exports[`UnpublishedStatusField component should render with value selected from
                         <div
                           className="MuiFormControl-root-2 MuiFormControl-fullWidth-5"
                         >
-                          <WithStyles(WithFormControlContext(InputLabel))>
+                          <WithStyles(WithFormControlContext(InputLabel))
+                            hidden={false}
+                            id="undefined-label"
+                          >
                             <WithFormControlContext(InputLabel)
                               classes={
                                 Object {
@@ -10241,6 +10421,8 @@ exports[`UnpublishedStatusField component should render with value selected from
                                   "shrink": "MuiInputLabel-shrink-13",
                                 }
                               }
+                              hidden={false}
+                              id="undefined-label"
                             >
                               <InputLabel
                                 classes={
@@ -10259,6 +10441,8 @@ exports[`UnpublishedStatusField component should render with value selected from
                                   }
                                 }
                                 disableAnimation={false}
+                                hidden={false}
+                                id="undefined-label"
                                 muiFormControl={
                                   Object {
                                     "adornedStart": false,
@@ -10287,6 +10471,8 @@ exports[`UnpublishedStatusField component should render with value selected from
                                     }
                                   }
                                   data-shrink={true}
+                                  hidden={false}
+                                  id="undefined-label"
                                 >
                                   <WithFormControlContext(FormLabel)
                                     className="MuiInputLabel-root-6 MuiInputLabel-formControl-11 MuiInputLabel-animated-14 MuiInputLabel-shrink-13"
@@ -10302,6 +10488,8 @@ exports[`UnpublishedStatusField component should render with value selected from
                                       }
                                     }
                                     data-shrink={true}
+                                    hidden={false}
+                                    id="undefined-label"
                                   >
                                     <FormLabel
                                       className="MuiInputLabel-root-6 MuiInputLabel-formControl-11 MuiInputLabel-animated-14 MuiInputLabel-shrink-13"
@@ -10318,6 +10506,8 @@ exports[`UnpublishedStatusField component should render with value selected from
                                       }
                                       component="label"
                                       data-shrink={true}
+                                      hidden={false}
+                                      id="undefined-label"
                                       muiFormControl={
                                         Object {
                                           "adornedStart": false,
@@ -10338,9 +10528,9 @@ exports[`UnpublishedStatusField component should render with value selected from
                                       <label
                                         className="MuiFormLabel-root-17 MuiFormLabel-filled-21 MuiInputLabel-root-6 MuiInputLabel-formControl-11 MuiInputLabel-animated-14 MuiInputLabel-shrink-13"
                                         data-shrink={true}
-                                      >
-                                        Select item
-                                      </label>
+                                        hidden={false}
+                                        id="undefined-label"
+                                      />
                                     </FormLabel>
                                   </WithFormControlContext(FormLabel)>
                                 </WithStyles(WithFormControlContext(FormLabel))>
@@ -10355,6 +10545,13 @@ exports[`UnpublishedStatusField component should render with value selected from
                             }
                             autoWidth={false}
                             disabled={false}
+                            inputProps={
+                              Object {
+                                "style": Object {
+                                  "border": "1px solid red",
+                                },
+                              }
+                            }
                             multiple={false}
                             onChange={[Function]}
                             value="test"
@@ -10378,6 +10575,13 @@ exports[`UnpublishedStatusField component should render with value selected from
                                 }
                               }
                               disabled={false}
+                              inputProps={
+                                Object {
+                                  "style": Object {
+                                    "border": "1px solid red",
+                                  },
+                                }
+                              }
                               multiple={false}
                               onChange={[Function]}
                               value="test"
@@ -10404,6 +10608,13 @@ exports[`UnpublishedStatusField component should render with value selected from
                                 disabled={false}
                                 displayEmpty={false}
                                 input={<WithStyles(Input) />}
+                                inputProps={
+                                  Object {
+                                    "style": Object {
+                                      "border": "1px solid red",
+                                    },
+                                  }
+                                }
                                 muiFormControl={
                                   Object {
                                     "adornedStart": false,
@@ -10573,6 +10784,9 @@ exports[`UnpublishedStatusField component should render with value selected from
                                       "onOpen": undefined,
                                       "open": undefined,
                                       "renderValue": undefined,
+                                      "style": Object {
+                                        "border": "1px solid red",
+                                      },
                                       "type": undefined,
                                       "variant": "standard",
                                     }
@@ -10745,6 +10959,9 @@ exports[`UnpublishedStatusField component should render with value selected from
                                         "onOpen": undefined,
                                         "open": undefined,
                                         "renderValue": undefined,
+                                        "style": Object {
+                                          "border": "1px solid red",
+                                        },
                                         "type": undefined,
                                         "variant": "standard",
                                       }
@@ -10918,6 +11135,9 @@ exports[`UnpublishedStatusField component should render with value selected from
                                           "onOpen": undefined,
                                           "open": undefined,
                                           "renderValue": undefined,
+                                          "style": Object {
+                                            "border": "1px solid red",
+                                          },
                                           "type": undefined,
                                           "variant": "standard",
                                         }
@@ -11097,6 +11317,9 @@ exports[`UnpublishedStatusField component should render with value selected from
                                             "onOpen": undefined,
                                             "open": undefined,
                                             "renderValue": undefined,
+                                            "style": Object {
+                                              "border": "1px solid red",
+                                            },
                                             "type": undefined,
                                             "variant": "standard",
                                           }
@@ -11276,6 +11499,9 @@ exports[`UnpublishedStatusField component should render with value selected from
                                               "onOpen": undefined,
                                               "open": undefined,
                                               "renderValue": undefined,
+                                              "style": Object {
+                                                "border": "1px solid red",
+                                              },
                                               "type": undefined,
                                               "variant": "standard",
                                             }
@@ -11334,6 +11560,11 @@ exports[`UnpublishedStatusField component should render with value selected from
                                               onChange={[Function]}
                                               onFocus={[Function]}
                                               required={false}
+                                              style={
+                                                Object {
+                                                  "border": "1px solid red",
+                                                }
+                                              }
                                               value="test"
                                               variant="standard"
                                             >
@@ -11360,6 +11591,11 @@ exports[`UnpublishedStatusField component should render with value selected from
                                                   />
                                                 </div>
                                                 <input
+                                                  style={
+                                                    Object {
+                                                      "border": "1px solid red",
+                                                    }
+                                                  }
                                                   type="hidden"
                                                   value="test"
                                                 />
@@ -11523,7 +11759,7 @@ exports[`UnpublishedStatusField component should render with value selected from
                                                           "accent": Object {
                                                             "dark": "#2a557d",
                                                             "light": "#54acff",
-                                                            "main": "#4085C6",
+                                                            "main": "#316799",
                                                           },
                                                           "action": Object {
                                                             "active": "rgba(0, 0, 0, 0.54)",

@@ -241,7 +241,7 @@ exports[`Related publications Component  should render component 2`] = `
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -2982,7 +2982,7 @@ exports[`Related publications Component  should render component 2`] = `
                       "accent": Object {
                         "dark": "#2a557d",
                         "light": "#54acff",
-                        "main": "#4085C6",
+                        "main": "#316799",
                       },
                       "action": Object {
                         "active": "rgba(0, 0, 0, 0.54)",
@@ -3562,7 +3562,7 @@ exports[`Related publications Component  should render component 2`] = `
                                   "accent": Object {
                                     "dark": "#2a557d",
                                     "light": "#54acff",
-                                    "main": "#4085C6",
+                                    "main": "#316799",
                                   },
                                   "action": Object {
                                     "active": "rgba(0, 0, 0, 0.54)",
@@ -4185,7 +4185,7 @@ exports[`Related publications Component  should render component 2`] = `
                                                         "accent": Object {
                                                           "dark": "#2a557d",
                                                           "light": "#54acff",
-                                                          "main": "#4085C6",
+                                                          "main": "#316799",
                                                         },
                                                         "action": Object {
                                                           "active": "rgba(0, 0, 0, 0.54)",
@@ -4724,7 +4724,7 @@ exports[`Related publications Component  should render component 2`] = `
                                                           "accent": Object {
                                                             "dark": "#2a557d",
                                                             "light": "#54acff",
-                                                            "main": "#4085C6",
+                                                            "main": "#316799",
                                                           },
                                                           "action": Object {
                                                             "active": "rgba(0, 0, 0, 0.54)",
@@ -5251,7 +5251,7 @@ exports[`Related publications Component  should render component 2`] = `
                                                           "accent": Object {
                                                             "dark": "#2a557d",
                                                             "light": "#54acff",
-                                                            "main": "#4085C6",
+                                                            "main": "#316799",
                                                           },
                                                           "action": Object {
                                                             "active": "rgba(0, 0, 0, 0.54)",
@@ -5809,7 +5809,7 @@ exports[`Related publications Component  should render with a publication title 
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -8586,7 +8586,7 @@ exports[`Related publications Component  should render with a publication title 
                       "accent": Object {
                         "dark": "#2a557d",
                         "light": "#54acff",
-                        "main": "#4085C6",
+                        "main": "#316799",
                       },
                       "action": Object {
                         "active": "rgba(0, 0, 0, 0.54)",
@@ -9166,7 +9166,7 @@ exports[`Related publications Component  should render with a publication title 
                                   "accent": Object {
                                     "dark": "#2a557d",
                                     "light": "#54acff",
-                                    "main": "#4085C6",
+                                    "main": "#316799",
                                   },
                                   "action": Object {
                                     "active": "rgba(0, 0, 0, 0.54)",
@@ -9789,7 +9789,7 @@ exports[`Related publications Component  should render with a publication title 
                                                         "accent": Object {
                                                           "dark": "#2a557d",
                                                           "light": "#54acff",
-                                                          "main": "#4085C6",
+                                                          "main": "#316799",
                                                         },
                                                         "action": Object {
                                                           "active": "rgba(0, 0, 0, 0.54)",
@@ -10328,7 +10328,7 @@ exports[`Related publications Component  should render with a publication title 
                                                           "accent": Object {
                                                             "dark": "#2a557d",
                                                             "light": "#54acff",
-                                                            "main": "#4085C6",
+                                                            "main": "#316799",
                                                           },
                                                           "action": Object {
                                                             "active": "rgba(0, 0, 0, 0.54)",
@@ -10849,7 +10849,7 @@ exports[`Related publications Component  should render with a publication title 
                                                           "accent": Object {
                                                             "dark": "#2a557d",
                                                             "light": "#54acff",
-                                                            "main": "#4085C6",
+                                                            "main": "#316799",
                                                           },
                                                           "action": Object {
                                                             "active": "rgba(0, 0, 0, 0.54)",
@@ -11376,7 +11376,7 @@ exports[`Related publications Component  should render with a publication title 
                                                           "accent": Object {
                                                             "dark": "#2a557d",
                                                             "light": "#54acff",
-                                                            "main": "#4085C6",
+                                                            "main": "#316799",
                                                           },
                                                           "action": Object {
                                                             "active": "rgba(0, 0, 0, 0.54)",
@@ -11934,7 +11934,7 @@ exports[`Related publications Component  should render without a child search ke
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -14743,7 +14743,7 @@ exports[`Related publications Component  should render without a child search ke
                       "accent": Object {
                         "dark": "#2a557d",
                         "light": "#54acff",
-                        "main": "#4085C6",
+                        "main": "#316799",
                       },
                       "action": Object {
                         "active": "rgba(0, 0, 0, 0.54)",
@@ -15323,7 +15323,7 @@ exports[`Related publications Component  should render without a child search ke
                                   "accent": Object {
                                     "dark": "#2a557d",
                                     "light": "#54acff",
-                                    "main": "#4085C6",
+                                    "main": "#316799",
                                   },
                                   "action": Object {
                                     "active": "rgba(0, 0, 0, 0.54)",
@@ -15946,7 +15946,7 @@ exports[`Related publications Component  should render without a child search ke
                                                         "accent": Object {
                                                           "dark": "#2a557d",
                                                           "light": "#54acff",
-                                                          "main": "#4085C6",
+                                                          "main": "#316799",
                                                         },
                                                         "action": Object {
                                                           "active": "rgba(0, 0, 0, 0.54)",
@@ -16485,7 +16485,7 @@ exports[`Related publications Component  should render without a child search ke
                                                           "accent": Object {
                                                             "dark": "#2a557d",
                                                             "light": "#54acff",
-                                                            "main": "#4085C6",
+                                                            "main": "#316799",
                                                           },
                                                           "action": Object {
                                                             "active": "rgba(0, 0, 0, 0.54)",
@@ -17012,7 +17012,7 @@ exports[`Related publications Component  should render without a child search ke
                                                           "accent": Object {
                                                             "dark": "#2a557d",
                                                             "light": "#54acff",
-                                                            "main": "#4085C6",
+                                                            "main": "#316799",
                                                           },
                                                           "action": Object {
                                                             "active": "rgba(0, 0, 0, 0.54)",
@@ -17570,7 +17570,7 @@ exports[`Related publications Component  should render without a parent search k
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -28636,7 +28636,7 @@ exports[`Related publications Component  should render without a parent search k
                       "accent": Object {
                         "dark": "#2a557d",
                         "light": "#54acff",
-                        "main": "#4085C6",
+                        "main": "#316799",
                       },
                       "action": Object {
                         "active": "rgba(0, 0, 0, 0.54)",
@@ -29216,7 +29216,7 @@ exports[`Related publications Component  should render without a parent search k
                                   "accent": Object {
                                     "dark": "#2a557d",
                                     "light": "#54acff",
-                                    "main": "#4085C6",
+                                    "main": "#316799",
                                   },
                                   "action": Object {
                                     "active": "rgba(0, 0, 0, 0.54)",
@@ -29839,7 +29839,7 @@ exports[`Related publications Component  should render without a parent search k
                                                         "accent": Object {
                                                           "dark": "#2a557d",
                                                           "light": "#54acff",
-                                                          "main": "#4085C6",
+                                                          "main": "#316799",
                                                         },
                                                         "action": Object {
                                                           "active": "rgba(0, 0, 0, 0.54)",
@@ -30378,7 +30378,7 @@ exports[`Related publications Component  should render without a parent search k
                                                           "accent": Object {
                                                             "dark": "#2a557d",
                                                             "light": "#54acff",
-                                                            "main": "#4085C6",
+                                                            "main": "#316799",
                                                           },
                                                           "action": Object {
                                                             "active": "rgba(0, 0, 0, 0.54)",

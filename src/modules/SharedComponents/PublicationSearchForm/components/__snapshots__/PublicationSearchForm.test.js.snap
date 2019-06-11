@@ -18,6 +18,7 @@ exports[`PublicationSearchForm renders  component 1`] = `
       >
         <WithStyles(Typography)
           gutterBottom={true}
+          id="search-description"
         >
           Enter either the publication DOI (e.g. 10.1163/9789004326828), Pubmed Id (e.g. 28131963) or the title of the publication. This will allow us to check whether the record is already in eSpace or is available from another source.
         </WithStyles(Typography)>
@@ -28,6 +29,7 @@ exports[`PublicationSearchForm renders  component 1`] = `
         xs={12}
       >
         <Field
+          aria-describedby="search-description"
           autoComplete="search"
           autoFocus={true}
           color="primary"
@@ -81,6 +83,7 @@ exports[`PublicationSearchForm renders  should display with skip search option 1
       >
         <WithStyles(Typography)
           gutterBottom={true}
+          id="search-description"
         >
           Enter either the publication DOI (e.g. 10.1163/9789004326828), Pubmed Id (e.g. 28131963) or the title of the publication. This will allow us to check whether the record is already in eSpace or is available from another source.
         </WithStyles(Typography)>
@@ -91,6 +94,7 @@ exports[`PublicationSearchForm renders  should display with skip search option 1
         xs={12}
       >
         <Field
+          aria-describedby="search-description"
           autoComplete="search"
           autoFocus={true}
           color="primary"

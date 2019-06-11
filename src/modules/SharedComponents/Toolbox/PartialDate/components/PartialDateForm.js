@@ -150,7 +150,6 @@ export class PartialDateForm extends Component {
                 <Grid item xs={12}>
                     <Grid container spacing={16} style={{marginTop: -12}}>
                         <Grid item xs={4}>
-                            <InputLabel htmlFor="day" className={this.props.classes.hideLabel}>Day</InputLabel>
                             <TextField
                                 name="day"
                                 id="day"
@@ -170,7 +169,6 @@ export class PartialDateForm extends Component {
                             }
                         </Grid>
                         <Grid item xs={4}>
-                            <InputLabel htmlFor="month" className={this.props.classes.hideLabel}>Month</InputLabel>
                             <Select
                                 style={{width: '100%'}}
                                 name="month"
@@ -179,13 +177,14 @@ export class PartialDateForm extends Component {
                                 disabled={this.props.disabled}
                                 value={this.state.month === null ? -1 : this.state.month}
                                 placeholder={locale.monthLabel}
-                                onChange={this._onDateChanged('month')}>
+                                onChange={this._onDateChanged('month')}
+                                inputProps={{label: 'month', maxLength: 2}}
+                            >
                                 <MenuItem key={-1} value={-1} disabled>Month</MenuItem>
                                 {renderMonths}
                             </Select>
                         </Grid>
                         <Grid item xs={4}>
-                            <InputLabel htmlFor="year" className={this.props.classes.hideLabel}>Year</InputLabel>
                             <TextField
                                 name="year"
                                 id="year"

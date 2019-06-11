@@ -190,6 +190,9 @@ export class AdvancedSearchComponent extends PureComponent {
                         </Grid>
                         <Grid item>
                             <IconButton
+                                aria-label={this.props.isMinimised
+                                    ? txt.advancedSearch.tooltip.show
+                                    : txt.advancedSearch.tooltip.hide}
                                 onClick={this._toggleMinimise}
                                 tooltip={this.props.isMinimised
                                     ? txt.advancedSearch.tooltip.show

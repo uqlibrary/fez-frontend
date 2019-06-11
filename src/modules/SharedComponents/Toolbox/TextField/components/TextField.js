@@ -11,13 +11,27 @@ export const TextFieldWrapper = props => {
     const filteredProps = propFilter({...props, forceError: true}, TextField.propTypes);
     // Assign the redux validation error to the MUI input error prop and remove it from the prop payload
     const helperText = filteredProps.errorText || undefined;
+    const hideLabel = !!filteredProps.hideLabel;
     delete filteredProps.errorText;
+    delete filteredProps.hideLabel;
+    const ariaLabel = `${filteredProps.id || filteredProps.label && filteredProps.label.replace(/\s+/g, '')}`.toString();
     return (
         <Fragment>
             <TextField {...filteredProps}
                 helperText={helperText}
-                id={props.id || props.label || ''}
-                InputLabelProps={filteredProps.floatinglabelfixed ? {shrink: true} : null}
+                id={ariaLabel}
+                inputProps={{
+                    id: ariaLabel,
+                    label: filteredProps.label,
+                    'aria-label': filteredProps.label,
+                    'aria-labelledby': `${ariaLabel}-label`
+                }}
+                InputLabelProps={{
+                    shrink: filteredProps.floatinglabelfixed ? true : undefined,
+                    id: `${ariaLabel}-label`,
+                    htmlFor: ariaLabel,
+                    hidden: hideLabel
+                }}
             />
         </Fragment>
     );

@@ -958,7 +958,7 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -1714,7 +1714,7 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                               "accent": Object {
                                                 "dark": "#2a557d",
                                                 "light": "#54acff",
-                                                "main": "#4085C6",
+                                                "main": "#316799",
                                               },
                                               "action": Object {
                                                 "active": "rgba(0, 0, 0, 0.54)",
@@ -2226,7 +2226,7 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                                     "accent": Object {
                                                       "dark": "#2a557d",
                                                       "light": "#54acff",
-                                                      "main": "#4085C6",
+                                                      "main": "#316799",
                                                     },
                                                     "action": Object {
                                                       "active": "rgba(0, 0, 0, 0.54)",
@@ -2772,7 +2772,7 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                   "accent": Object {
                                     "dark": "#2a557d",
                                     "light": "#54acff",
-                                    "main": "#4085C6",
+                                    "main": "#316799",
                                   },
                                   "action": Object {
                                     "active": "rgba(0, 0, 0, 0.54)",
@@ -3348,7 +3348,7 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                               "accent": Object {
                                                 "dark": "#2a557d",
                                                 "light": "#54acff",
-                                                "main": "#4085C6",
+                                                "main": "#316799",
                                               },
                                               "action": Object {
                                                 "active": "rgba(0, 0, 0, 0.54)",
@@ -3860,7 +3860,7 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                                     "accent": Object {
                                                       "dark": "#2a557d",
                                                       "light": "#54acff",
-                                                      "main": "#4085C6",
+                                                      "main": "#316799",
                                                     },
                                                     "action": Object {
                                                       "active": "rgba(0, 0, 0, 0.54)",
@@ -4406,7 +4406,7 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                   "accent": Object {
                                     "dark": "#2a557d",
                                     "light": "#54acff",
-                                    "main": "#4085C6",
+                                    "main": "#316799",
                                   },
                                   "action": Object {
                                     "active": "rgba(0, 0, 0, 0.54)",
@@ -4982,7 +4982,7 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                               "accent": Object {
                                                 "dark": "#2a557d",
                                                 "light": "#54acff",
-                                                "main": "#4085C6",
+                                                "main": "#316799",
                                               },
                                               "action": Object {
                                                 "active": "rgba(0, 0, 0, 0.54)",
@@ -5494,7 +5494,7 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                                     "accent": Object {
                                                       "dark": "#2a557d",
                                                       "light": "#54acff",
-                                                      "main": "#4085C6",
+                                                      "main": "#316799",
                                                     },
                                                     "action": Object {
                                                       "active": "rgba(0, 0, 0, 0.54)",
@@ -6040,7 +6040,7 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                   "accent": Object {
                                     "dark": "#2a557d",
                                     "light": "#54acff",
-                                    "main": "#4085C6",
+                                    "main": "#316799",
                                   },
                                   "action": Object {
                                     "active": "rgba(0, 0, 0, 0.54)",
@@ -6616,7 +6616,7 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                               "accent": Object {
                                                 "dark": "#2a557d",
                                                 "light": "#54acff",
-                                                "main": "#4085C6",
+                                                "main": "#316799",
                                               },
                                               "action": Object {
                                                 "active": "rgba(0, 0, 0, 0.54)",
@@ -7128,7 +7128,7 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                                     "accent": Object {
                                                       "dark": "#2a557d",
                                                       "light": "#54acff",
-                                                      "main": "#4085C6",
+                                                      "main": "#316799",
                                                     },
                                                     "action": Object {
                                                       "active": "rgba(0, 0, 0, 0.54)",
@@ -7674,7 +7674,7 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                   "accent": Object {
                                     "dark": "#2a557d",
                                     "light": "#54acff",
-                                    "main": "#4085C6",
+                                    "main": "#316799",
                                   },
                                   "action": Object {
                                     "active": "rgba(0, 0, 0, 0.54)",
@@ -8250,7 +8250,7 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                               "accent": Object {
                                                 "dark": "#2a557d",
                                                 "light": "#54acff",
-                                                "main": "#4085C6",
+                                                "main": "#316799",
                                               },
                                               "action": Object {
                                                 "active": "rgba(0, 0, 0, 0.54)",
@@ -8762,7 +8762,7 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                                     "accent": Object {
                                                       "dark": "#2a557d",
                                                       "light": "#54acff",
-                                                      "main": "#4085C6",
+                                                      "main": "#316799",
                                                     },
                                                     "action": Object {
                                                       "active": "rgba(0, 0, 0, 0.54)",
@@ -9308,7 +9308,7 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                   "accent": Object {
                                     "dark": "#2a557d",
                                     "light": "#54acff",
-                                    "main": "#4085C6",
+                                    "main": "#316799",
                                   },
                                   "action": Object {
                                     "active": "rgba(0, 0, 0, 0.54)",
@@ -9884,7 +9884,7 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                               "accent": Object {
                                                 "dark": "#2a557d",
                                                 "light": "#54acff",
-                                                "main": "#4085C6",
+                                                "main": "#316799",
                                               },
                                               "action": Object {
                                                 "active": "rgba(0, 0, 0, 0.54)",
@@ -10396,7 +10396,7 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                                     "accent": Object {
                                                       "dark": "#2a557d",
                                                       "light": "#54acff",
-                                                      "main": "#4085C6",
+                                                      "main": "#316799",
                                                     },
                                                     "action": Object {
                                                       "active": "rgba(0, 0, 0, 0.54)",
@@ -10942,7 +10942,7 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                   "accent": Object {
                                     "dark": "#2a557d",
                                     "light": "#54acff",
-                                    "main": "#4085C6",
+                                    "main": "#316799",
                                   },
                                   "action": Object {
                                     "active": "rgba(0, 0, 0, 0.54)",
@@ -11346,65 +11346,6 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                       <WithStyles(FacetsFilterListItem)
                         facetTitle="Published year range"
                         key="date-range"
-                        nestedItems={
-                          <div
-                            style={
-                              Object {
-                                "padding": 8,
-                              }
-                            }
-                          >
-                            <WithStyles(Grid)
-                              alignItems="flex-end"
-                              container={true}
-                              spacing={16}
-                              wrap="nowrap"
-                            >
-                              <WithStyles(Grid)
-                                item={true}
-                                xs={4}
-                              >
-                                <TextField
-                                  fullWidth={true}
-                                  label="From"
-                                  onChange={[Function]}
-                                  required={false}
-                                  select={false}
-                                  type="number"
-                                  value={2007}
-                                  variant="standard"
-                                />
-                              </WithStyles(Grid)>
-                              <WithStyles(Grid)
-                                item={true}
-                                xs={4}
-                              >
-                                <TextField
-                                  fullWidth={true}
-                                  label="To"
-                                  onChange={[Function]}
-                                  required={false}
-                                  select={false}
-                                  type="number"
-                                  value={2022}
-                                  variant="standard"
-                                />
-                              </WithStyles(Grid)>
-                              <WithStyles(Grid)
-                                item={true}
-                              >
-                                <WithStyles(Button)
-                                  disabled={false}
-                                  fullWidth={true}
-                                  onClick={[Function]}
-                                  variant="text"
-                                >
-                                  Go
-                                </WithStyles(Button)>
-                              </WithStyles(Grid)>
-                            </WithStyles(Grid)>
-                          </div>
-                        }
                         onToggle={[Function]}
                       >
                         <FacetsFilterListItem
@@ -11415,65 +11356,6 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                             }
                           }
                           facetTitle="Published year range"
-                          nestedItems={
-                            <div
-                              style={
-                                Object {
-                                  "padding": 8,
-                                }
-                              }
-                            >
-                              <WithStyles(Grid)
-                                alignItems="flex-end"
-                                container={true}
-                                spacing={16}
-                                wrap="nowrap"
-                              >
-                                <WithStyles(Grid)
-                                  item={true}
-                                  xs={4}
-                                >
-                                  <TextField
-                                    fullWidth={true}
-                                    label="From"
-                                    onChange={[Function]}
-                                    required={false}
-                                    select={false}
-                                    type="number"
-                                    value={2007}
-                                    variant="standard"
-                                  />
-                                </WithStyles(Grid)>
-                                <WithStyles(Grid)
-                                  item={true}
-                                  xs={4}
-                                >
-                                  <TextField
-                                    fullWidth={true}
-                                    label="To"
-                                    onChange={[Function]}
-                                    required={false}
-                                    select={false}
-                                    type="number"
-                                    value={2022}
-                                    variant="standard"
-                                  />
-                                </WithStyles(Grid)>
-                                <WithStyles(Grid)
-                                  item={true}
-                                >
-                                  <WithStyles(Button)
-                                    disabled={false}
-                                    fullWidth={true}
-                                    onClick={[Function]}
-                                    variant="text"
-                                  >
-                                    Go
-                                  </WithStyles(Button)>
-                                </WithStyles(Grid)>
-                              </WithStyles(Grid)>
-                            </div>
-                          }
                           onToggle={[Function]}
                         >
                           <WithStyles(ListItem)
@@ -11653,7 +11535,7 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                                 "accent": Object {
                                                   "dark": "#2a557d",
                                                   "light": "#54acff",
-                                                  "main": "#4085C6",
+                                                  "main": "#316799",
                                                 },
                                                 "action": Object {
                                                   "active": "rgba(0, 0, 0, 0.54)",
@@ -12165,7 +12047,7 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                                       "accent": Object {
                                                         "dark": "#2a557d",
                                                         "light": "#54acff",
-                                                        "main": "#4085C6",
+                                                        "main": "#316799",
                                                       },
                                                       "action": Object {
                                                         "active": "rgba(0, 0, 0, 0.54)",
@@ -12711,7 +12593,7 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                                     "accent": Object {
                                       "dark": "#2a557d",
                                       "light": "#54acff",
-                                      "main": "#4085C6",
+                                      "main": "#316799",
                                     },
                                     "action": Object {
                                       "active": "rgba(0, 0, 0, 0.54)",
@@ -13261,7 +13143,7 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -14019,7 +13901,7 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                               "accent": Object {
                                                 "dark": "#2a557d",
                                                 "light": "#54acff",
-                                                "main": "#4085C6",
+                                                "main": "#316799",
                                               },
                                               "action": Object {
                                                 "active": "rgba(0, 0, 0, 0.54)",
@@ -14531,7 +14413,7 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                                     "accent": Object {
                                                       "dark": "#2a557d",
                                                       "light": "#54acff",
-                                                      "main": "#4085C6",
+                                                      "main": "#316799",
                                                     },
                                                     "action": Object {
                                                       "active": "rgba(0, 0, 0, 0.54)",
@@ -15079,7 +14961,7 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                   "accent": Object {
                                     "dark": "#2a557d",
                                     "light": "#54acff",
-                                    "main": "#4085C6",
+                                    "main": "#316799",
                                   },
                                   "action": Object {
                                     "active": "rgba(0, 0, 0, 0.54)",
@@ -15759,7 +15641,7 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                                                 "accent": Object {
                                                                   "dark": "#2a557d",
                                                                   "light": "#54acff",
-                                                                  "main": "#4085C6",
+                                                                  "main": "#316799",
                                                                 },
                                                                 "action": Object {
                                                                   "active": "rgba(0, 0, 0, 0.54)",
@@ -16269,7 +16151,7 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                                                       "accent": Object {
                                                                         "dark": "#2a557d",
                                                                         "light": "#54acff",
-                                                                        "main": "#4085C6",
+                                                                        "main": "#316799",
                                                                       },
                                                                       "action": Object {
                                                                         "active": "rgba(0, 0, 0, 0.54)",
@@ -16887,7 +16769,7 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                               "accent": Object {
                                                 "dark": "#2a557d",
                                                 "light": "#54acff",
-                                                "main": "#4085C6",
+                                                "main": "#316799",
                                               },
                                               "action": Object {
                                                 "active": "rgba(0, 0, 0, 0.54)",
@@ -17399,7 +17281,7 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                                     "accent": Object {
                                                       "dark": "#2a557d",
                                                       "light": "#54acff",
-                                                      "main": "#4085C6",
+                                                      "main": "#316799",
                                                     },
                                                     "action": Object {
                                                       "active": "rgba(0, 0, 0, 0.54)",
@@ -17945,7 +17827,7 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                   "accent": Object {
                                     "dark": "#2a557d",
                                     "light": "#54acff",
-                                    "main": "#4085C6",
+                                    "main": "#316799",
                                   },
                                   "action": Object {
                                     "active": "rgba(0, 0, 0, 0.54)",
@@ -18521,7 +18403,7 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                               "accent": Object {
                                                 "dark": "#2a557d",
                                                 "light": "#54acff",
-                                                "main": "#4085C6",
+                                                "main": "#316799",
                                               },
                                               "action": Object {
                                                 "active": "rgba(0, 0, 0, 0.54)",
@@ -19033,7 +18915,7 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                                     "accent": Object {
                                                       "dark": "#2a557d",
                                                       "light": "#54acff",
-                                                      "main": "#4085C6",
+                                                      "main": "#316799",
                                                     },
                                                     "action": Object {
                                                       "active": "rgba(0, 0, 0, 0.54)",
@@ -19579,7 +19461,7 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                   "accent": Object {
                                     "dark": "#2a557d",
                                     "light": "#54acff",
-                                    "main": "#4085C6",
+                                    "main": "#316799",
                                   },
                                   "action": Object {
                                     "active": "rgba(0, 0, 0, 0.54)",
@@ -20155,7 +20037,7 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                               "accent": Object {
                                                 "dark": "#2a557d",
                                                 "light": "#54acff",
-                                                "main": "#4085C6",
+                                                "main": "#316799",
                                               },
                                               "action": Object {
                                                 "active": "rgba(0, 0, 0, 0.54)",
@@ -20667,7 +20549,7 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                                     "accent": Object {
                                                       "dark": "#2a557d",
                                                       "light": "#54acff",
-                                                      "main": "#4085C6",
+                                                      "main": "#316799",
                                                     },
                                                     "action": Object {
                                                       "active": "rgba(0, 0, 0, 0.54)",
@@ -21213,7 +21095,7 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                   "accent": Object {
                                     "dark": "#2a557d",
                                     "light": "#54acff",
-                                    "main": "#4085C6",
+                                    "main": "#316799",
                                   },
                                   "action": Object {
                                     "active": "rgba(0, 0, 0, 0.54)",
@@ -21789,7 +21671,7 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                               "accent": Object {
                                                 "dark": "#2a557d",
                                                 "light": "#54acff",
-                                                "main": "#4085C6",
+                                                "main": "#316799",
                                               },
                                               "action": Object {
                                                 "active": "rgba(0, 0, 0, 0.54)",
@@ -22301,7 +22183,7 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                                     "accent": Object {
                                                       "dark": "#2a557d",
                                                       "light": "#54acff",
-                                                      "main": "#4085C6",
+                                                      "main": "#316799",
                                                     },
                                                     "action": Object {
                                                       "active": "rgba(0, 0, 0, 0.54)",
@@ -22847,7 +22729,7 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                   "accent": Object {
                                     "dark": "#2a557d",
                                     "light": "#54acff",
-                                    "main": "#4085C6",
+                                    "main": "#316799",
                                   },
                                   "action": Object {
                                     "active": "rgba(0, 0, 0, 0.54)",
@@ -23423,7 +23305,7 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                               "accent": Object {
                                                 "dark": "#2a557d",
                                                 "light": "#54acff",
-                                                "main": "#4085C6",
+                                                "main": "#316799",
                                               },
                                               "action": Object {
                                                 "active": "rgba(0, 0, 0, 0.54)",
@@ -23935,7 +23817,7 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                                     "accent": Object {
                                                       "dark": "#2a557d",
                                                       "light": "#54acff",
-                                                      "main": "#4085C6",
+                                                      "main": "#316799",
                                                     },
                                                     "action": Object {
                                                       "active": "rgba(0, 0, 0, 0.54)",
@@ -24481,7 +24363,7 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                   "accent": Object {
                                     "dark": "#2a557d",
                                     "light": "#54acff",
-                                    "main": "#4085C6",
+                                    "main": "#316799",
                                   },
                                   "action": Object {
                                     "active": "rgba(0, 0, 0, 0.54)",
@@ -24885,65 +24767,6 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                       <WithStyles(FacetsFilterListItem)
                         facetTitle="Published year range"
                         key="date-range"
-                        nestedItems={
-                          <div
-                            style={
-                              Object {
-                                "padding": 8,
-                              }
-                            }
-                          >
-                            <WithStyles(Grid)
-                              alignItems="flex-end"
-                              container={true}
-                              spacing={16}
-                              wrap="nowrap"
-                            >
-                              <WithStyles(Grid)
-                                item={true}
-                                xs={4}
-                              >
-                                <TextField
-                                  fullWidth={true}
-                                  label="From"
-                                  onChange={[Function]}
-                                  required={false}
-                                  select={false}
-                                  type="number"
-                                  value={2007}
-                                  variant="standard"
-                                />
-                              </WithStyles(Grid)>
-                              <WithStyles(Grid)
-                                item={true}
-                                xs={4}
-                              >
-                                <TextField
-                                  fullWidth={true}
-                                  label="To"
-                                  onChange={[Function]}
-                                  required={false}
-                                  select={false}
-                                  type="number"
-                                  value={2022}
-                                  variant="standard"
-                                />
-                              </WithStyles(Grid)>
-                              <WithStyles(Grid)
-                                item={true}
-                              >
-                                <WithStyles(Button)
-                                  disabled={false}
-                                  fullWidth={true}
-                                  onClick={[Function]}
-                                  variant="text"
-                                >
-                                  Go
-                                </WithStyles(Button)>
-                              </WithStyles(Grid)>
-                            </WithStyles(Grid)>
-                          </div>
-                        }
                         onToggle={[Function]}
                       >
                         <FacetsFilterListItem
@@ -24954,65 +24777,6 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                             }
                           }
                           facetTitle="Published year range"
-                          nestedItems={
-                            <div
-                              style={
-                                Object {
-                                  "padding": 8,
-                                }
-                              }
-                            >
-                              <WithStyles(Grid)
-                                alignItems="flex-end"
-                                container={true}
-                                spacing={16}
-                                wrap="nowrap"
-                              >
-                                <WithStyles(Grid)
-                                  item={true}
-                                  xs={4}
-                                >
-                                  <TextField
-                                    fullWidth={true}
-                                    label="From"
-                                    onChange={[Function]}
-                                    required={false}
-                                    select={false}
-                                    type="number"
-                                    value={2007}
-                                    variant="standard"
-                                  />
-                                </WithStyles(Grid)>
-                                <WithStyles(Grid)
-                                  item={true}
-                                  xs={4}
-                                >
-                                  <TextField
-                                    fullWidth={true}
-                                    label="To"
-                                    onChange={[Function]}
-                                    required={false}
-                                    select={false}
-                                    type="number"
-                                    value={2022}
-                                    variant="standard"
-                                  />
-                                </WithStyles(Grid)>
-                                <WithStyles(Grid)
-                                  item={true}
-                                >
-                                  <WithStyles(Button)
-                                    disabled={false}
-                                    fullWidth={true}
-                                    onClick={[Function]}
-                                    variant="text"
-                                  >
-                                    Go
-                                  </WithStyles(Button)>
-                                </WithStyles(Grid)>
-                              </WithStyles(Grid)>
-                            </div>
-                          }
                           onToggle={[Function]}
                         >
                           <WithStyles(ListItem)
@@ -25192,7 +24956,7 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                                 "accent": Object {
                                                   "dark": "#2a557d",
                                                   "light": "#54acff",
-                                                  "main": "#4085C6",
+                                                  "main": "#316799",
                                                 },
                                                 "action": Object {
                                                   "active": "rgba(0, 0, 0, 0.54)",
@@ -25704,7 +25468,7 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                                       "accent": Object {
                                                         "dark": "#2a557d",
                                                         "light": "#54acff",
-                                                        "main": "#4085C6",
+                                                        "main": "#316799",
                                                       },
                                                       "action": Object {
                                                         "active": "rgba(0, 0, 0, 0.54)",
@@ -26250,7 +26014,7 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                                     "accent": Object {
                                       "dark": "#2a557d",
                                       "light": "#54acff",
-                                      "main": "#4085C6",
+                                      "main": "#316799",
                                     },
                                     "action": Object {
                                       "active": "rgba(0, 0, 0, 0.54)",

@@ -10,12 +10,21 @@ exports[`SelectfieldWrapper snapshots tests renders SelectField component 1`] = 
       }
     }
   >
-    <WithStyles(WithFormControlContext(InputLabel)) />
+    <WithStyles(WithFormControlContext(InputLabel))
+      id="undefined-label"
+    />
     <WithStyles(WithFormControlContext(Select))
       autoWidth={true}
       error={false}
       floatingLabelText="This is a test selectfield component"
       fullWidth={true}
+      id="undefined"
+      inputProps={
+        Object {
+          "aria-labelledby": "undefined-label",
+          "id": undefined,
+        }
+      }
       name="selectfield"
       onBlur={[Function]}
       onChange={[Function]}
@@ -35,12 +44,21 @@ exports[`SelectfieldWrapper snapshots tests renders an error 1`] = `
       }
     }
   >
-    <WithStyles(WithFormControlContext(InputLabel)) />
+    <WithStyles(WithFormControlContext(InputLabel))
+      id="undefined-label"
+    />
     <WithStyles(WithFormControlContext(Select))
       autoWidth={true}
       error={true}
       floatingLabelText="test selectfield component"
       fullWidth={true}
+      id="undefined"
+      inputProps={
+        Object {
+          "aria-labelledby": "undefined-label",
+          "id": undefined,
+        }
+      }
       name="selectfield"
       onBlur={[Function]}
       onChange={[Function]}
