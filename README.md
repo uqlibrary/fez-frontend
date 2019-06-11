@@ -196,7 +196,11 @@ Before committing changes, locally run tests and update stapshots (if required).
 
 ### E2E testing
 
-TBA
+We are using [Cypress](https://docs.cypress.io/guides/getting-started/writing-your-first-test.html#Add-a-test-file) for our e2e UI testing.
+
+To run tests, use `npm run cypress:run` or to open the Cypress UI use `npm cypress:open`
+
+NOTE: Creating tests with snapshots will fail for the first time (creating the original image snapshot).
 
 ## Mocking
 
