@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Field } from 'redux-form/lib/immutable';
+import { Field } from 'redux-form/immutable';
 
 import Grid from '@material-ui/core/Grid';
 

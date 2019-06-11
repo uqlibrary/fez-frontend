@@ -44,6 +44,7 @@ function setup(testProps, isShallow = true) {
         submitting: false,
         invalid: false,
         submitSucceeded: false,
+        submitAsSideEffect: false,
 
         recordToFix: null,
         isAuthorLinked: true,

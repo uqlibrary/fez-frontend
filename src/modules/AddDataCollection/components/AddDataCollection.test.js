@@ -41,6 +41,7 @@ function setup(testProps, isShallow = true) {
         "submitFailed": false,
         "valid": true,
         pure: true,
+        submitAsSideEffect: false,
         // common immutable props above
         formValues: testProps.initialValues ? Immutable.Map(testProps.initialValues) : Immutable.Map({}),
         submitting: testProps.submitting || false, // : PropTypes.bool

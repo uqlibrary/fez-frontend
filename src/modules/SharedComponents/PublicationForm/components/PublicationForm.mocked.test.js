@@ -43,6 +43,7 @@ function setup(testProps, isShallow = true) {
         touch: jest.fn(),
         untouch: jest.fn(),
         valid: true,
+        submitAsSideEffect: false,
         ...testProps
     };
     return getElement(PublicationForm, props, isShallow);

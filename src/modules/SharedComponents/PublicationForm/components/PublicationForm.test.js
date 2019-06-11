@@ -44,6 +44,7 @@ function setup(testProps, isShallow = true) {
         submitSucceeded: false,
         valid: true,
         pure: true,
+        submitAsSideEffect: false,
         // above are common immutable default props
         formValues: testProps.initialValues ? Immutable.Map(testProps.initialValues) : Immutable.Map({}),
         onFormCancel: testProps.onFormCancel || jest.fn(),

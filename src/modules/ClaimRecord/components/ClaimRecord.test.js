@@ -44,6 +44,7 @@ function setup(testProps, isShallow = true) {
         "submitSucceeded": false,
         "valid": true,
         pure: true,
+        submitAsSideEffect: false,
         pristine: true,
         submitting: false,
         initialValues:  testProps.initialValues || Immutable.Map({
