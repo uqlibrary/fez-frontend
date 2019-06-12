@@ -72,6 +72,7 @@
     "cross-env": "^5.2.0",
     "css-loader": "^2.1.1",
     "cypress": "^3.3.1",
+    "cypress-plugin-tab": "^1.0.1",
     "dom-testing-library": "^3.17.1",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "1.13.2",
@@ -187,7 +188,8 @@
     "test-unit": "node $NODE_DEBUG_OPTION ./node_modules/lab/bin/lab ./test/unit --pattern \"^[^_]\"",
     "eslint": "eslint 'src/**/*.js' --quiet",
     "cypress:open": "cypress open",
-    "cypress:run": "cypress run --browser chrome"
+    "cypress:run": "cypress run --headed --browser electron",
+    "cypress:chrome": "cypress run --browser chrome"
   },
   "engines": {
     "npm": "^6.9.0",

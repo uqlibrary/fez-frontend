@@ -2,25 +2,54 @@
 
 context('Homepage', () => {
     beforeEach(() => {
-        cy.visit('http://localhost:3000?user=uqstaff');
+        cy.visit('http://localhost:3000');
+        cy.wait(2000);
+        cy.get('button', {timeout: 5000}).contains('Close this message').click();
+        cy.wait(2000);
     });
 
     // https://on.cypress.io/interacting-with-elements
 
     it('Clicking between trending panes', () => {
-        cy.wait(2000);
         cy.get('button', {timeout: 5000}).get('span').contains('Trending on Scopus').click();
-        cy.document( {delay: 5000}).toMatchImageSnapshot();
+        cy.document( ).toMatchImageSnapshot();
         cy.get('button', {timeout: 5000}).get('span').contains('Trending on Web of science').click();
-        cy.document( {delay: 5000}).toMatchImageSnapshot();
+        cy.document( ).toMatchImageSnapshot();
         cy.get('button', {timeout: 5000}).get('span').contains('Trending on Altmetric').click();
-        cy.document( {delay: 5000}).toMatchImageSnapshot();
-    })
+        cy.document( ).toMatchImageSnapshot();
+    });
+
+    it('Doing a basic search', () => {
+        cy.get('#simpleSearchField').type('cats and dogs{enter}', {delay: 20});
+        cy.get('.content-container').scrollTo('top');
+        cy.get('#showAdvancedSearchButton').click();
+        cy.get('.content-container').scrollTo('top');
+        cy.get('[aria-label="Check to search for publications with are only open access / full text"]').click();
+        cy.get('.content-container').scrollTo('top');
+
+        cy.get('[aria-label="Click to add another advanced search field"]', {delay: 1000}).click();
+        cy.get('.content-container').scrollTo('top');
+        cy.get('[aria-label="Click to select a field to search from the list - Select a field currently selected"]').click();
+        cy.get('.content-container').scrollTo('top');
+        cy.get('[data-value="rek_author"]').click();
+        cy.get('.content-container').scrollTo('top');
+        cy.get('[placeholder="Add an author name"]').type('Ky Lane{enter}', {delay: 100});
+
+        cy.get('[aria-label="Click to add another advanced search field"]', {delay: 1000}).click();
+        cy.get('[aria-label="Click to select a field to search from the list - Select a field currently selected"]').click();
+        cy.get('[data-value="rek_ismemberof"]').click();
+        cy.get('div').contains('Select collections').click();
+        cy.get('[data-value="UQ:131735"]').click();
+        cy.get('[data-value="UQ:131375"]').click();
+        cy.get('[data-value="UQ:292807"]').click();
+        cy.get('div[id="menu-"]').get('div[aria-hidden="true"]').click({force: true, multiple: true}); // This will close any select field modal popup by force
+        cy.get('.content-container').scrollTo('top');
+        cy.document( ).toMatchImageSnapshot();
+    });
 });
 
 // Image snapshot
 // cy.document( {delay: 5000}).toMatchImageSnapshot({threshold: 0.001});
-
 // .type() with special character sequences
 //     .type('{leftarrow}{rightarrow}{uparrow}{downarrow}')
 //     .type('{del}{selectall}{backspace}')
@@ -30,17 +59,14 @@ context('Homepage', () => {
 //     .type('{ctrl}{control}') //these are equivalent
 //     .type('{meta}{command}{cmd}') //these are equivalent
 //     .type('{shift}')
-
 // Delay each keypress by 0.1 sec
 // .type('slow.typing@email.com', { delay: 100 })
 // .should('have.value', 'slow.typing@email.com')
-
 // cy.get('.action-disabled')
 // Ignore error checking prior to type
 // like whether the input is visible or disabled
 //     .type('disabled error checking', { force: true })
 //     .should('have.value', 'disabled error checking')
-
 //
 // it('.focus() - focus on a DOM element', () => {
 //     // https://on.cypress.io/focus
