@@ -462,7 +462,7 @@ exports[`Application component should determine if it has incomplete works from 
           ],
           "component": [Function],
           "exact": true,
-          "pageTitle": "Request a correction or upload files",
+          "pageTitle": "Request a correction, add more information or upload files",
           "path": "/records/:pid(UQ:[a-z0-9]+)/fix",
           "regExPath": "/records/(UQ:[a-z0-9]+)/fix",
         },
@@ -962,7 +962,7 @@ exports[`Application component should determine if it has incomplete works from 
         component={[Function]}
         exact={true}
         key="route_11"
-        pageTitle="Request a correction or upload files"
+        pageTitle="Request a correction, add more information or upload files"
         path="/records/:pid(UQ:[a-z0-9]+)/fix"
         regExPath="/records/(UQ:[a-z0-9]+)/fix"
       />
@@ -1181,7 +1181,7 @@ exports[`Application component should determine if it has incomplete works from 
           ],
           "component": [Function],
           "exact": true,
-          "pageTitle": "Request a correction or upload files",
+          "pageTitle": "Request a correction, add more information or upload files",
           "path": "/records/:pid(UQ:[a-z0-9]+)/fix",
           "regExPath": "/records/(UQ:[a-z0-9]+)/fix",
         },
@@ -1681,7 +1681,7 @@ exports[`Application component should determine if it has incomplete works from 
         component={[Function]}
         exact={true}
         key="route_11"
-        pageTitle="Request a correction or upload files"
+        pageTitle="Request a correction, add more information or upload files"
         path="/records/:pid(UQ:[a-z0-9]+)/fix"
         regExPath="/records/(UQ:[a-z0-9]+)/fix"
       />
@@ -2250,7 +2250,7 @@ exports[`Application component should render alert if user is not fez author 1`]
           ],
           "component": [Function],
           "exact": true,
-          "pageTitle": "Request a correction or upload files",
+          "pageTitle": "Request a correction, add more information or upload files",
           "path": "/records/:pid(UQ:[a-z0-9]+)/fix",
           "regExPath": "/records/(UQ:[a-z0-9]+)/fix",
         },
@@ -2746,7 +2746,7 @@ exports[`Application component should render alert if user is not fez author 1`]
         component={[Function]}
         exact={true}
         key="route_11"
-        pageTitle="Request a correction or upload files"
+        pageTitle="Request a correction, add more information or upload files"
         path="/records/:pid(UQ:[a-z0-9]+)/fix"
         regExPath="/records/(UQ:[a-z0-9]+)/fix"
       />
@@ -2965,7 +2965,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           ],
           "component": [Function],
           "exact": true,
-          "pageTitle": "Request a correction or upload files",
+          "pageTitle": "Request a correction, add more information or upload files",
           "path": "/records/:pid(UQ:[a-z0-9]+)/fix",
           "regExPath": "/records/(UQ:[a-z0-9]+)/fix",
         },
@@ -3434,7 +3434,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         component={[Function]}
         exact={true}
         key="route_11"
-        pageTitle="Request a correction or upload files"
+        pageTitle="Request a correction, add more information or upload files"
         path="/records/:pid(UQ:[a-z0-9]+)/fix"
         regExPath="/records/(UQ:[a-z0-9]+)/fix"
       />
@@ -4019,7 +4019,7 @@ exports[`Application component should render app for account with fez author wit
           ],
           "component": [Function],
           "exact": true,
-          "pageTitle": "Request a correction or upload files",
+          "pageTitle": "Request a correction, add more information or upload files",
           "path": "/records/:pid(UQ:[a-z0-9]+)/fix",
           "regExPath": "/records/(UQ:[a-z0-9]+)/fix",
         },
@@ -4488,7 +4488,7 @@ exports[`Application component should render app for account with fez author wit
         component={[Function]}
         exact={true}
         key="route_11"
-        pageTitle="Request a correction or upload files"
+        pageTitle="Request a correction, add more information or upload files"
         path="/records/:pid(UQ:[a-z0-9]+)/fix"
         regExPath="/records/(UQ:[a-z0-9]+)/fix"
       />
@@ -4707,7 +4707,7 @@ exports[`Application component should render app for account with fez author wit
           ],
           "component": [Function],
           "exact": true,
-          "pageTitle": "Request a correction or upload files",
+          "pageTitle": "Request a correction, add more information or upload files",
           "path": "/records/:pid(UQ:[a-z0-9]+)/fix",
           "regExPath": "/records/(UQ:[a-z0-9]+)/fix",
         },
@@ -5205,7 +5205,7 @@ exports[`Application component should render app for account with fez author wit
         component={[Function]}
         exact={true}
         key="route_11"
-        pageTitle="Request a correction or upload files"
+        pageTitle="Request a correction, add more information or upload files"
         path="/records/:pid(UQ:[a-z0-9]+)/fix"
         regExPath="/records/(UQ:[a-z0-9]+)/fix"
       />
@@ -5424,7 +5424,7 @@ exports[`Application component should render app for account with fez author wit
           ],
           "component": [Function],
           "exact": true,
-          "pageTitle": "Request a correction or upload files",
+          "pageTitle": "Request a correction, add more information or upload files",
           "path": "/records/:pid(UQ:[a-z0-9]+)/fix",
           "regExPath": "/records/(UQ:[a-z0-9]+)/fix",
         },
@@ -5772,7 +5772,7 @@ exports[`Application component should render app for account with fez author wit
         component={[Function]}
         exact={true}
         key="route_11"
-        pageTitle="Request a correction or upload files"
+        pageTitle="Request a correction, add more information or upload files"
         path="/records/:pid(UQ:[a-z0-9]+)/fix"
         regExPath="/records/(UQ:[a-z0-9]+)/fix"
       />
@@ -5991,7 +5991,7 @@ exports[`Application component should render application with routing for the us
           ],
           "component": [Function],
           "exact": true,
-          "pageTitle": "Request a correction or upload files",
+          "pageTitle": "Request a correction, add more information or upload files",
           "path": "/records/:pid(UQ:[a-z0-9]+)/fix",
           "regExPath": "/records/(UQ:[a-z0-9]+)/fix",
         },
@@ -7923,7 +7923,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                               ],
                               "component": [Function],
                               "exact": true,
-                              "pageTitle": "Request a correction or upload files",
+                              "pageTitle": "Request a correction, add more information or upload files",
                               "path": "/records/:pid(UQ:[a-z0-9]+)/fix",
                               "regExPath": "/records/(UQ:[a-z0-9]+)/fix",
                             },
@@ -8164,7 +8164,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                   ],
                                   "component": [Function],
                                   "exact": true,
-                                  "pageTitle": "Request a correction or upload files",
+                                  "pageTitle": "Request a correction, add more information or upload files",
                                   "path": "/records/:pid(UQ:[a-z0-9]+)/fix",
                                   "regExPath": "/records/(UQ:[a-z0-9]+)/fix",
                                 },
@@ -8405,7 +8405,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                     ],
                                     "component": [Function],
                                     "exact": true,
-                                    "pageTitle": "Request a correction or upload files",
+                                    "pageTitle": "Request a correction, add more information or upload files",
                                     "path": "/records/:pid(UQ:[a-z0-9]+)/fix",
                                     "regExPath": "/records/(UQ:[a-z0-9]+)/fix",
                                   },

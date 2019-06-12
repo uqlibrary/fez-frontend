@@ -13,7 +13,7 @@ exports[`FixRecord form should allow content indicators to be selected 1`] = `
 +     <h2
 +       class=\\"MuiTypography-root-100 MuiTypography-h4-115 MuiTypography-colorPrimary-130 Page-layoutTitle-304\\"
       >
-+       Request a correction or upload files
++       Request a correction, add more information or upload files
 +     </h2>
       <div
 -       class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-8-25 MuiGrid-align-items-xs-center-11 MuiGrid-align-content-xs-center-15 MuiGrid-justify-xs-center-20\\"
@@ -540,7 +540,7 @@ exports[`FixRecord form should allow content indicators to be selected 3`] = `
 -                     class=\\"MuiFormHelperText-root-464 MuiFormHelperText-error-465 MuiFormHelperText-required-471\\"
 +                       class=\\"MuiTypography-root-100 MuiTypography-body2-108\\"
 +                     >
-+                       You can select multiple indicators for a work, but cannot remove existing ones. To change existing information, submit as a correction below.
++                       You can select multiple (up to 3) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
 +                     </p>
 +                   </div>
 +                   <div

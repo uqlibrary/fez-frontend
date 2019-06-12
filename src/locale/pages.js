@@ -418,7 +418,7 @@ export default {
         },
         fixRecord: {
             loadingMessage: 'Loading work',
-            title: 'Request a correction or upload files',
+            title: 'Request a correction, add more information or upload files',
             subTitle: 'Work to be amended',
             fieldLabels: {
                 action: 'Select an action'
