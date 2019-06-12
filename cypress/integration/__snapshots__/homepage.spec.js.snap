@@ -12233,7 +12233,7 @@ exports[`Homepage > Doing a basic search #0`] = `
                         <div class="MuiGrid-item-7 MuiGrid-grid-xs-12-46">
                           <label class="MuiFormControlLabel-root-518"
                             ><span
-                              class="MuiButtonBase-root-204 MuiIconButton-root-198 MuiSwitchBase-root-528 MuiCheckbox-root-522 MuiCheckbox-colorSecondary-527 MuiSwitchBase-checked-529 MuiCheckbox-checked-523"
+                              class="MuiButtonBase-root-204 MuiButtonBase-focusVisible-206 undefined MuiIconButton-root-198 MuiSwitchBase-root-528 MuiCheckbox-root-522 MuiCheckbox-colorSecondary-527 MuiSwitchBase-checked-529 MuiCheckbox-checked-523"
                               aria-label="Check to search for publications with are only open access / full text"
                               ><span class="MuiIconButton-label-203"
                                 ><svg
@@ -12252,6 +12252,12 @@ exports[`Homepage > Doing a basic search #0`] = `
                                   data-indeterminate="false"
                                   value=""/></span
                               ><span class="MuiTouchRipple-root-216"
+                                ><span
+                                  class="MuiTouchRipple-ripple-217 MuiTouchRipple-rippleVisible-218 MuiTouchRipple-ripplePulsate-219"
+                                  style="width: 49px; height: 49px; top: -0.5px; left: -0.5px;"
+                                  ><span
+                                    class="MuiTouchRipple-child-220 MuiTouchRipple-childPulsate-222"
+                                  ></span></span
                                 ><span
                                   class="MuiTouchRipple-ripple-217 MuiTouchRipple-rippleVisible-218"
                                   style="width: 49px; height: 49px; top: -0.5px; left: -0.5px;"
