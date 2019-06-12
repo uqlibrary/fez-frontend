@@ -1,7 +1,60 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`ContentIndicatorsField component should mark dropdown as disabled when all indicators have been selected 1`] = `
+<GenericSelectField
+  disabled={true}
+  error={false}
+  errorText=""
+  hideLabel={false}
+  itemsList={
+    Array [
+      Object {
+        "disabled": false,
+        "text": "Scholarship of Teaching and Learning",
+        "value": 454079,
+      },
+      Object {
+        "disabled": false,
+        "text": "Protocol",
+        "value": 454080,
+      },
+      Object {
+        "disabled": false,
+        "text": "Case Study",
+        "value": 454081,
+      },
+    ]
+  }
+  locale={
+    Object {
+      "label": undefined,
+    }
+  }
+  meta={
+    Object {
+      "initial": Immutable.List [
+        Object {
+          "text": "Scholarship of Teaching and Learning",
+          "value": 454079,
+        },
+        Object {
+          "text": "Protocol",
+          "value": 454080,
+        },
+        Object {
+          "text": "Case Study",
+          "value": 454081,
+        },
+      ],
+    }
+  }
+  selectedValue={Array []}
+/>
+`;
+
 exports[`ContentIndicatorsField component should render default view 1`] = `
 <GenericSelectField
+  disabled={false}
   error={false}
   errorText=""
   hideLabel={false}
@@ -35,6 +88,7 @@ exports[`ContentIndicatorsField component should render default view 1`] = `
 
 exports[`ContentIndicatorsField component should render with given field props 1`] = `
 <GenericSelectField
+  disabled={false}
   error={true}
   errorText="Test error"
   hideLabel={false}
@@ -90,6 +144,7 @@ exports[`ContentIndicatorsField component should render with given field props 1
 
 exports[`ContentIndicatorsField component should render with given field props 2`] = `
 <GenericSelectField
+  disabled={false}
   error={true}
   errorText="Test error"
   hideLabel={false}
