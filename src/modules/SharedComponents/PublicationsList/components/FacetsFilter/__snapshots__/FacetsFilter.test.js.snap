@@ -8,13 +8,8 @@ exports[`FacetsFilter  _handleResetClick returns empty state for activeFacets 1`
     component="nav"
     dense={true}
   >
-    <DateRange
-      defaultValue={
-        Object {
-          "from": 2007,
-          "to": 2022,
-        }
-      }
+    <Memo(DateRange)
+      isActive={true}
       locale={
         Object {
           "displayTitle": "Published year range",
@@ -264,13 +259,7 @@ exports[`FacetsFilter  components for mock data 1`] = `
         isFacetFilterActive={[Function]}
       />
     </Memo(WithStyles(FacetsFilterListItem))>
-    <DateRange
-      defaultValue={
-        Object {
-          "from": 2007,
-          "to": 2022,
-        }
-      }
+    <Memo(DateRange)
       locale={
         Object {
           "displayTitle": "Published year range",
@@ -281,7 +270,6 @@ exports[`FacetsFilter  components for mock data 1`] = `
       }
       onChange={[Function]}
       onToggle={[Function]}
-      value={Object {}}
     />
   </WithStyles(List)>
 </div>
@@ -505,13 +493,7 @@ exports[`FacetsFilter  components for mock data 2`] = `
         isFacetFilterActive={[Function]}
       />
     </Memo(WithStyles(FacetsFilterListItem))>
-    <DateRange
-      defaultValue={
-        Object {
-          "from": 2007,
-          "to": 2022,
-        }
-      }
+    <Memo(DateRange)
       locale={
         Object {
           "displayTitle": "Published year range",
@@ -522,7 +504,6 @@ exports[`FacetsFilter  components for mock data 2`] = `
       }
       onChange={[Function]}
       onToggle={[Function]}
-      value={Object {}}
     />
   </WithStyles(List)>
 </div>
@@ -765,13 +746,7 @@ exports[`FacetsFilter  components for mock data activating a facet selection 1`]
         isFacetFilterActive={[Function]}
       />
     </Memo(WithStyles(FacetsFilterListItem))>
-    <DateRange
-      defaultValue={
-        Object {
-          "from": 2007,
-          "to": 2022,
-        }
-      }
+    <Memo(DateRange)
       locale={
         Object {
           "displayTitle": "Published year range",
@@ -782,7 +757,6 @@ exports[`FacetsFilter  components for mock data activating a facet selection 1`]
       }
       onChange={[Function]}
       onToggle={[Function]}
-      value={Object {}}
     />
   </WithStyles(List)>
   <WithStyles(Grid)
@@ -11325,12 +11299,6 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                       </FacetsFilterListItem>
                     </WithStyles(FacetsFilterListItem)>
                     <DateRange
-                      defaultValue={
-                        Object {
-                          "from": 2007,
-                          "to": 2022,
-                        }
-                      }
                       locale={
                         Object {
                           "displayTitle": "Published year range",
@@ -11341,7 +11309,6 @@ exports[`FacetsFilter  components for mock data with active facets set 1`] = `
                       }
                       onChange={[Function]}
                       onToggle={[Function]}
-                      value={Object {}}
                     >
                       <WithStyles(FacetsFilterListItem)
                         facetTitle="Published year range"
@@ -24746,12 +24713,6 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                       </FacetsFilterListItem>
                     </WithStyles(FacetsFilterListItem)>
                     <DateRange
-                      defaultValue={
-                        Object {
-                          "from": 2007,
-                          "to": 2022,
-                        }
-                      }
                       locale={
                         Object {
                           "displayTitle": "Published year range",
@@ -24762,7 +24723,6 @@ exports[`FacetsFilter  components for mock data with active facets set 2`] = `
                       }
                       onChange={[Function]}
                       onToggle={[Function]}
-                      value={Object {}}
                     >
                       <WithStyles(FacetsFilterListItem)
                         facetTitle="Published year range"
@@ -26634,13 +26594,7 @@ exports[`FacetsFilter  components for mock data with disabled flag set 1`] = `
         isFacetFilterActive={[Function]}
       />
     </Memo(WithStyles(FacetsFilterListItem))>
-    <DateRange
-      defaultValue={
-        Object {
-          "from": 2007,
-          "to": 2022,
-        }
-      }
+    <Memo(DateRange)
       disabled={true}
       locale={
         Object {
@@ -26652,7 +26606,6 @@ exports[`FacetsFilter  components for mock data with disabled flag set 1`] = `
       }
       onChange={[Function]}
       onToggle={[Function]}
-      value={Object {}}
     />
   </WithStyles(List)>
 </div>
@@ -26841,13 +26794,7 @@ exports[`FacetsFilter  components for mock data with excluded facets 1`] = `
         isFacetFilterActive={[Function]}
       />
     </Memo(WithStyles(FacetsFilterListItem))>
-    <DateRange
-      defaultValue={
-        Object {
-          "from": 2007,
-          "to": 2022,
-        }
-      }
+    <Memo(DateRange)
       locale={
         Object {
           "displayTitle": "Published year range",
@@ -26858,7 +26805,6 @@ exports[`FacetsFilter  components for mock data with excluded facets 1`] = `
       }
       onChange={[Function]}
       onToggle={[Function]}
-      value={Object {}}
     />
   </WithStyles(List)>
 </div>
@@ -28071,13 +28017,7 @@ exports[`FacetsFilter  renders filter for open access 1`] = `
         isFacetFilterActive={[Function]}
       />
     </Memo(WithStyles(FacetsFilterListItem))>
-    <DateRange
-      defaultValue={
-        Object {
-          "from": 2007,
-          "to": 2022,
-        }
-      }
+    <Memo(DateRange)
       locale={
         Object {
           "displayTitle": "Published year range",
@@ -28088,7 +28028,6 @@ exports[`FacetsFilter  renders filter for open access 1`] = `
       }
       onChange={[Function]}
       onToggle={[Function]}
-      value={Object {}}
     />
     <OpenAccessFilter
       locale={
@@ -28322,13 +28261,7 @@ exports[`FacetsFilter  renders lookup facets 1`] = `
         isFacetFilterActive={[Function]}
       />
     </Memo(WithStyles(FacetsFilterListItem))>
-    <DateRange
-      defaultValue={
-        Object {
-          "from": 2007,
-          "to": 2022,
-        }
-      }
+    <Memo(DateRange)
       locale={
         Object {
           "displayTitle": "Published year range",
@@ -28339,7 +28272,6 @@ exports[`FacetsFilter  renders lookup facets 1`] = `
       }
       onChange={[Function]}
       onToggle={[Function]}
-      value={Object {}}
     />
     <OpenAccessFilter
       locale={

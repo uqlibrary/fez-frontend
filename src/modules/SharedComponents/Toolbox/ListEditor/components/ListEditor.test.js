@@ -1,4 +1,5 @@
 import ListEditor from './ListEditor';
+import { List } from 'immutable';
 
 function setup(testProps) {
     const props = {
@@ -116,14 +117,31 @@ describe('ListEditor tests', () => {
             input: {
                 name: 'test',
                 value: [
-                        {
-                            rek_value: 'test 1'
-                        },
-                        {
-                            rek_value: 'test 2'
-                        }
-                    ]
-                }
+                    {
+                        rek_value: 'test 1'
+                    },
+                    {
+                        rek_value: 'test 2'
+                    }
+                ]
+            }
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render input value as itemList for List', () => {
+        const wrapper = setup({
+            input: {
+                name: 'test',
+                value: new List([
+                    {
+                        rek_value: 'test 1'
+                    },
+                    {
+                        rek_value: 'test 2'
+                    }
+                ])
+            }
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
