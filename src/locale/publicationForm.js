@@ -29,10 +29,10 @@ export default {
             text: 'TBC',
             buttonLabel: 'CLOSE'
         },
-        title: 'Content indicator',
-        description: 'Content Indicator types (not mandatory)',
+        title: 'Content indicators',
+        description: 'You can select multiple (up to 3) content indicators to add more information about your work.',
         fieldLabels: {
-            label: 'Content Indicator types (not mandatory)'
+            label: 'Please select relevant indicator(s).'
         },
     },
     generic: {

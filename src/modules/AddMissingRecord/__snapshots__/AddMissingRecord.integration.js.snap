@@ -217,7 +217,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                   <h3
 +                     class=\\"MuiTypography-root-100 MuiTypography-h5-116 MuiTypography-colorInherit-129 MuiCardHeader-title-187\\"
 +                   >
-+                     Content indicator
++                     Content indicators
 +                   </h3>
 +                 </div>
 +                 <div
@@ -269,7 +269,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                     <p
 +                       class=\\"MuiTypography-root-100 MuiTypography-body2-108\\"
 +                     >
-+                       Content Indicator types (not mandatory)
++                       You can select multiple (up to 3) content indicators to add more information about your work.
 +                     </p>
 +                     <div
 +                       class=\\"MuiFormControl-root-223 MuiFormControl-fullWidth-226\\"
@@ -278,7 +278,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                         class=\\"MuiFormLabel-root-234 MuiInputLabel-root-227 MuiInputLabel-formControl-228 MuiInputLabel-animated-231\\"
 +                         data-shrink=\\"false\\"
 +                       >
-+                         Content Indicator types (not mandatory)
++                         Please select relevant indicator(s).
 +                       </label>
 +                       <div
 +                         class=\\"MuiInputBase-root-261 MuiInput-root-248 MuiInput-underline-252 MuiInputBase-formControl-262 MuiInput-formControl-249\\"
