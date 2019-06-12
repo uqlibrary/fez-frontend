@@ -25,10 +25,9 @@ Object {
     "marginBottom": 6,
     "marginRight": 12,
   },
-  "contentIndicators": Object {
-    "span": Object {
-      "marginRight": 12,
-    },
+  "contentIndicatorTitle": Object {
+    "fontWeight": 400,
+    "marginRight": "0.5ex",
   },
   "divider": Object {
     "marginBottom": 12,
@@ -184,14 +183,14 @@ exports[`PublicationCitation  should render component with content indicators 1`
                 "fez_record_search_key_contact_details_email": Array [],
                 "fez_record_search_key_content_indicator": Array [
                   Object {
-                    "rek_content_indicator": 454057,
+                    "rek_content_indicator": 454079,
                     "rek_content_indicator_id": 1,
                     "rek_content_indicator_lookup": "a content indicator",
                     "rek_content_indicator_order": 1,
                     "rek_ismemberof": "UQ:152266",
                   },
                   Object {
-                    "rek_content_indicator": 454058,
+                    "rek_content_indicator": 454080,
                     "rek_content_indicator_id": 2,
                     "rek_content_indicator_lookup": "another content indicator",
                     "rek_content_indicator_order": 2,
@@ -494,29 +493,6 @@ exports[`PublicationCitation  should render component with content indicators 1`
           item={true}
           xs={12}
         >
-          <WithStyles(Typography)
-            gutterBottom={true}
-            variant="caption"
-          >
-            Content Indicators
-            :
-            <span
-              key="1"
-            >
-              a content indicator
-              , 
-            </span>
-            <span
-              key="2"
-            >
-              another content indicator
-            </span>
-          </WithStyles(Typography)>
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          xs={12}
-        >
           <WithStyles(CitationCounts)
             hideViewFullStatisticsLink={false}
             publication={
@@ -625,14 +601,14 @@ exports[`PublicationCitation  should render component with content indicators 1`
                 "fez_record_search_key_contact_details_email": Array [],
                 "fez_record_search_key_content_indicator": Array [
                   Object {
-                    "rek_content_indicator": 454057,
+                    "rek_content_indicator": 454079,
                     "rek_content_indicator_id": 1,
                     "rek_content_indicator_lookup": "a content indicator",
                     "rek_content_indicator_order": 1,
                     "rek_ismemberof": "UQ:152266",
                   },
                   Object {
-                    "rek_content_indicator": 454058,
+                    "rek_content_indicator": 454080,
                     "rek_content_indicator_id": 2,
                     "rek_content_indicator_lookup": "another content indicator",
                     "rek_content_indicator_order": 2,
@@ -935,6 +911,21 @@ exports[`PublicationCitation  should render component with content indicators 1`
     </WithStyles(Grid)>
   </WithStyles(Grid)>
   <WithStyles(Divider) />
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <WithStyles(Typography)
+      gutterBottom={true}
+      variant="caption"
+    >
+      <span>
+        Content Indicators
+        :
+      </span>
+      a content indicator, another content indicator
+    </WithStyles(Typography)>
+  </WithStyles(Grid)>
 </Fragment>
 `;
 
@@ -1085,18 +1076,18 @@ exports[`PublicationCitation  should render component with default actions 1`] =
                 "fez_record_search_key_contact_details_email": Array [],
                 "fez_record_search_key_content_indicator": Array [
                   Object {
-                    "rek_content_indicator": 454057,
+                    "rek_content_indicator": 454079,
                     "rek_content_indicator_id": 1,
-                    "rek_content_indicator_lookup": "more content indicators",
+                    "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
                     "rek_content_indicator_order": 1,
-                    "rek_ismemberof": "UQ:152266",
+                    "rek_content_indicator_pid": "UQ:41878",
                   },
                   Object {
-                    "rek_content_indicator": 454058,
+                    "rek_content_indicator": 454080,
                     "rek_content_indicator_id": 2,
-                    "rek_content_indicator_lookup": "still yet another content indicator",
+                    "rek_content_indicator_lookup": "Protocol",
                     "rek_content_indicator_order": 2,
-                    "rek_ismemberof": "UQ:152266",
+                    "rek_content_indicator_pid": "UQ:41878",
                   },
                 ],
                 "fez_record_search_key_contributor": Array [],
@@ -1395,29 +1386,6 @@ exports[`PublicationCitation  should render component with default actions 1`] =
           item={true}
           xs={12}
         >
-          <WithStyles(Typography)
-            gutterBottom={true}
-            variant="caption"
-          >
-            Content Indicators
-            :
-            <span
-              key="1"
-            >
-              more content indicators
-              , 
-            </span>
-            <span
-              key="2"
-            >
-              still yet another content indicator
-            </span>
-          </WithStyles(Typography)>
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          xs={12}
-        >
           <WithStyles(CitationCounts)
             hideViewFullStatisticsLink={false}
             publication={
@@ -1526,18 +1494,18 @@ exports[`PublicationCitation  should render component with default actions 1`] =
                 "fez_record_search_key_contact_details_email": Array [],
                 "fez_record_search_key_content_indicator": Array [
                   Object {
-                    "rek_content_indicator": 454057,
+                    "rek_content_indicator": 454079,
                     "rek_content_indicator_id": 1,
-                    "rek_content_indicator_lookup": "more content indicators",
+                    "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
                     "rek_content_indicator_order": 1,
-                    "rek_ismemberof": "UQ:152266",
+                    "rek_content_indicator_pid": "UQ:41878",
                   },
                   Object {
-                    "rek_content_indicator": 454058,
+                    "rek_content_indicator": 454080,
                     "rek_content_indicator_id": 2,
-                    "rek_content_indicator_lookup": "still yet another content indicator",
+                    "rek_content_indicator_lookup": "Protocol",
                     "rek_content_indicator_order": 2,
-                    "rek_ismemberof": "UQ:152266",
+                    "rek_content_indicator_pid": "UQ:41878",
                   },
                 ],
                 "fez_record_search_key_contributor": Array [],
@@ -1875,6 +1843,21 @@ exports[`PublicationCitation  should render component with default actions 1`] =
     </WithStyles(Grid)>
   </WithStyles(Grid)>
   <WithStyles(Divider) />
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <WithStyles(Typography)
+      gutterBottom={true}
+      variant="caption"
+    >
+      <span>
+        Content Indicators
+        :
+      </span>
+      Scholarship of Teaching and Learning, Protocol
+    </WithStyles(Typography)>
+  </WithStyles(Grid)>
 </Fragment>
 `;
 
@@ -2025,18 +2008,18 @@ exports[`PublicationCitation  should render component with default item 1`] = `
                 "fez_record_search_key_contact_details_email": Array [],
                 "fez_record_search_key_content_indicator": Array [
                   Object {
-                    "rek_content_indicator": 454057,
+                    "rek_content_indicator": 454079,
                     "rek_content_indicator_id": 1,
-                    "rek_content_indicator_lookup": "more content indicators",
+                    "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
                     "rek_content_indicator_order": 1,
-                    "rek_ismemberof": "UQ:152266",
+                    "rek_content_indicator_pid": "UQ:41878",
                   },
                   Object {
-                    "rek_content_indicator": 454058,
+                    "rek_content_indicator": 454080,
                     "rek_content_indicator_id": 2,
-                    "rek_content_indicator_lookup": "still yet another content indicator",
+                    "rek_content_indicator_lookup": "Protocol",
                     "rek_content_indicator_order": 2,
-                    "rek_ismemberof": "UQ:152266",
+                    "rek_content_indicator_pid": "UQ:41878",
                   },
                 ],
                 "fez_record_search_key_contributor": Array [],
@@ -2335,29 +2318,6 @@ exports[`PublicationCitation  should render component with default item 1`] = `
           item={true}
           xs={12}
         >
-          <WithStyles(Typography)
-            gutterBottom={true}
-            variant="caption"
-          >
-            Content Indicators
-            :
-            <span
-              key="1"
-            >
-              more content indicators
-              , 
-            </span>
-            <span
-              key="2"
-            >
-              still yet another content indicator
-            </span>
-          </WithStyles(Typography)>
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          xs={12}
-        >
           <WithStyles(CitationCounts)
             hideViewFullStatisticsLink={false}
             publication={
@@ -2466,18 +2426,18 @@ exports[`PublicationCitation  should render component with default item 1`] = `
                 "fez_record_search_key_contact_details_email": Array [],
                 "fez_record_search_key_content_indicator": Array [
                   Object {
-                    "rek_content_indicator": 454057,
+                    "rek_content_indicator": 454079,
                     "rek_content_indicator_id": 1,
-                    "rek_content_indicator_lookup": "more content indicators",
+                    "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
                     "rek_content_indicator_order": 1,
-                    "rek_ismemberof": "UQ:152266",
+                    "rek_content_indicator_pid": "UQ:41878",
                   },
                   Object {
-                    "rek_content_indicator": 454058,
+                    "rek_content_indicator": 454080,
                     "rek_content_indicator_id": 2,
-                    "rek_content_indicator_lookup": "still yet another content indicator",
+                    "rek_content_indicator_lookup": "Protocol",
                     "rek_content_indicator_order": 2,
-                    "rek_ismemberof": "UQ:152266",
+                    "rek_content_indicator_pid": "UQ:41878",
                   },
                 ],
                 "fez_record_search_key_contributor": Array [],
@@ -2776,6 +2736,21 @@ exports[`PublicationCitation  should render component with default item 1`] = `
     </WithStyles(Grid)>
   </WithStyles(Grid)>
   <WithStyles(Divider) />
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <WithStyles(Typography)
+      gutterBottom={true}
+      variant="caption"
+    >
+      <span>
+        Content Indicators
+        :
+      </span>
+      Scholarship of Teaching and Learning, Protocol
+    </WithStyles(Typography)>
+  </WithStyles(Grid)>
 </Fragment>
 `;
 
@@ -2921,18 +2896,18 @@ exports[`PublicationCitation  should render component with default item without 
                 "fez_record_search_key_contact_details_email": Array [],
                 "fez_record_search_key_content_indicator": Array [
                   Object {
-                    "rek_content_indicator": 454057,
+                    "rek_content_indicator": 454079,
                     "rek_content_indicator_id": 1,
-                    "rek_content_indicator_lookup": "more content indicators",
+                    "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
                     "rek_content_indicator_order": 1,
-                    "rek_ismemberof": "UQ:152266",
+                    "rek_content_indicator_pid": "UQ:41878",
                   },
                   Object {
-                    "rek_content_indicator": 454058,
+                    "rek_content_indicator": 454080,
                     "rek_content_indicator_id": 2,
-                    "rek_content_indicator_lookup": "still yet another content indicator",
+                    "rek_content_indicator_lookup": "Protocol",
                     "rek_content_indicator_order": 2,
-                    "rek_ismemberof": "UQ:152266",
+                    "rek_content_indicator_pid": "UQ:41878",
                   },
                 ],
                 "fez_record_search_key_contributor": Array [],
@@ -3231,29 +3206,6 @@ exports[`PublicationCitation  should render component with default item without 
           item={true}
           xs={12}
         >
-          <WithStyles(Typography)
-            gutterBottom={true}
-            variant="caption"
-          >
-            Content Indicators
-            :
-            <span
-              key="1"
-            >
-              more content indicators
-              , 
-            </span>
-            <span
-              key="2"
-            >
-              still yet another content indicator
-            </span>
-          </WithStyles(Typography)>
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          xs={12}
-        >
           <WithStyles(CitationCounts)
             hideViewFullStatisticsLink={false}
             publication={
@@ -3362,18 +3314,18 @@ exports[`PublicationCitation  should render component with default item without 
                 "fez_record_search_key_contact_details_email": Array [],
                 "fez_record_search_key_content_indicator": Array [
                   Object {
-                    "rek_content_indicator": 454057,
+                    "rek_content_indicator": 454079,
                     "rek_content_indicator_id": 1,
-                    "rek_content_indicator_lookup": "more content indicators",
+                    "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
                     "rek_content_indicator_order": 1,
-                    "rek_ismemberof": "UQ:152266",
+                    "rek_content_indicator_pid": "UQ:41878",
                   },
                   Object {
-                    "rek_content_indicator": 454058,
+                    "rek_content_indicator": 454080,
                     "rek_content_indicator_id": 2,
-                    "rek_content_indicator_lookup": "still yet another content indicator",
+                    "rek_content_indicator_lookup": "Protocol",
                     "rek_content_indicator_order": 2,
-                    "rek_ismemberof": "UQ:152266",
+                    "rek_content_indicator_pid": "UQ:41878",
                   },
                 ],
                 "fez_record_search_key_contributor": Array [],
@@ -3672,6 +3624,21 @@ exports[`PublicationCitation  should render component with default item without 
     </WithStyles(Grid)>
   </WithStyles(Grid)>
   <WithStyles(Divider) />
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <WithStyles(Typography)
+      gutterBottom={true}
+      variant="caption"
+    >
+      <span>
+        Content Indicators
+        :
+      </span>
+      Scholarship of Teaching and Learning, Protocol
+    </WithStyles(Typography)>
+  </WithStyles(Grid)>
 </Fragment>
 `;
 
@@ -3822,18 +3789,18 @@ exports[`PublicationCitation  should render component with default list hiding t
                 "fez_record_search_key_contact_details_email": Array [],
                 "fez_record_search_key_content_indicator": Array [
                   Object {
-                    "rek_content_indicator": 454057,
+                    "rek_content_indicator": 454079,
                     "rek_content_indicator_id": 1,
-                    "rek_content_indicator_lookup": "more content indicators",
+                    "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
                     "rek_content_indicator_order": 1,
-                    "rek_ismemberof": "UQ:152266",
+                    "rek_content_indicator_pid": "UQ:41878",
                   },
                   Object {
-                    "rek_content_indicator": 454058,
+                    "rek_content_indicator": 454080,
                     "rek_content_indicator_id": 2,
-                    "rek_content_indicator_lookup": "still yet another content indicator",
+                    "rek_content_indicator_lookup": "Protocol",
                     "rek_content_indicator_order": 2,
-                    "rek_ismemberof": "UQ:152266",
+                    "rek_content_indicator_pid": "UQ:41878",
                   },
                 ],
                 "fez_record_search_key_contributor": Array [],
@@ -4132,29 +4099,6 @@ exports[`PublicationCitation  should render component with default list hiding t
           item={true}
           xs={12}
         >
-          <WithStyles(Typography)
-            gutterBottom={true}
-            variant="caption"
-          >
-            Content Indicators
-            :
-            <span
-              key="1"
-            >
-              more content indicators
-              , 
-            </span>
-            <span
-              key="2"
-            >
-              still yet another content indicator
-            </span>
-          </WithStyles(Typography)>
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          xs={12}
-        >
           <WithStyles(CitationCounts)
             hideViewFullStatisticsLink={false}
             publication={
@@ -4263,18 +4207,18 @@ exports[`PublicationCitation  should render component with default list hiding t
                 "fez_record_search_key_contact_details_email": Array [],
                 "fez_record_search_key_content_indicator": Array [
                   Object {
-                    "rek_content_indicator": 454057,
+                    "rek_content_indicator": 454079,
                     "rek_content_indicator_id": 1,
-                    "rek_content_indicator_lookup": "more content indicators",
+                    "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
                     "rek_content_indicator_order": 1,
-                    "rek_ismemberof": "UQ:152266",
+                    "rek_content_indicator_pid": "UQ:41878",
                   },
                   Object {
-                    "rek_content_indicator": 454058,
+                    "rek_content_indicator": 454080,
                     "rek_content_indicator_id": 2,
-                    "rek_content_indicator_lookup": "still yet another content indicator",
+                    "rek_content_indicator_lookup": "Protocol",
                     "rek_content_indicator_order": 2,
-                    "rek_ismemberof": "UQ:152266",
+                    "rek_content_indicator_pid": "UQ:41878",
                   },
                 ],
                 "fez_record_search_key_contributor": Array [],
@@ -4573,6 +4517,21 @@ exports[`PublicationCitation  should render component with default list hiding t
     </WithStyles(Grid)>
   </WithStyles(Grid)>
   <WithStyles(Divider) />
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <WithStyles(Typography)
+      gutterBottom={true}
+      variant="caption"
+    >
+      <span>
+        Content Indicators
+        :
+      </span>
+      Scholarship of Teaching and Learning, Protocol
+    </WithStyles(Typography)>
+  </WithStyles(Grid)>
 </Fragment>
 `;
 
@@ -4723,18 +4682,18 @@ exports[`PublicationCitation  should render component with default list hiding t
                 "fez_record_search_key_contact_details_email": Array [],
                 "fez_record_search_key_content_indicator": Array [
                   Object {
-                    "rek_content_indicator": 454057,
+                    "rek_content_indicator": 454079,
                     "rek_content_indicator_id": 1,
-                    "rek_content_indicator_lookup": "more content indicators",
+                    "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
                     "rek_content_indicator_order": 1,
-                    "rek_ismemberof": "UQ:152266",
+                    "rek_content_indicator_pid": "UQ:41878",
                   },
                   Object {
-                    "rek_content_indicator": 454058,
+                    "rek_content_indicator": 454080,
                     "rek_content_indicator_id": 2,
-                    "rek_content_indicator_lookup": "still yet another content indicator",
+                    "rek_content_indicator_lookup": "Protocol",
                     "rek_content_indicator_order": 2,
-                    "rek_ismemberof": "UQ:152266",
+                    "rek_content_indicator_pid": "UQ:41878",
                   },
                 ],
                 "fez_record_search_key_contributor": Array [],
@@ -5033,29 +4992,6 @@ exports[`PublicationCitation  should render component with default list hiding t
           item={true}
           xs={12}
         >
-          <WithStyles(Typography)
-            gutterBottom={true}
-            variant="caption"
-          >
-            Content Indicators
-            :
-            <span
-              key="1"
-            >
-              more content indicators
-              , 
-            </span>
-            <span
-              key="2"
-            >
-              still yet another content indicator
-            </span>
-          </WithStyles(Typography)>
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          xs={12}
-        >
           <WithStyles(CitationCounts)
             hideViewFullStatisticsLink={false}
             publication={
@@ -5164,18 +5100,18 @@ exports[`PublicationCitation  should render component with default list hiding t
                 "fez_record_search_key_contact_details_email": Array [],
                 "fez_record_search_key_content_indicator": Array [
                   Object {
-                    "rek_content_indicator": 454057,
+                    "rek_content_indicator": 454079,
                     "rek_content_indicator_id": 1,
-                    "rek_content_indicator_lookup": "more content indicators",
+                    "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
                     "rek_content_indicator_order": 1,
-                    "rek_ismemberof": "UQ:152266",
+                    "rek_content_indicator_pid": "UQ:41878",
                   },
                   Object {
-                    "rek_content_indicator": 454058,
+                    "rek_content_indicator": 454080,
                     "rek_content_indicator_id": 2,
-                    "rek_content_indicator_lookup": "still yet another content indicator",
+                    "rek_content_indicator_lookup": "Protocol",
                     "rek_content_indicator_order": 2,
-                    "rek_ismemberof": "UQ:152266",
+                    "rek_content_indicator_pid": "UQ:41878",
                   },
                 ],
                 "fez_record_search_key_contributor": Array [],
@@ -5474,6 +5410,21 @@ exports[`PublicationCitation  should render component with default list hiding t
     </WithStyles(Grid)>
   </WithStyles(Grid)>
   <WithStyles(Divider) />
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <WithStyles(Typography)
+      gutterBottom={true}
+      variant="caption"
+    >
+      <span>
+        Content Indicators
+        :
+      </span>
+      Scholarship of Teaching and Learning, Protocol
+    </WithStyles(Typography)>
+  </WithStyles(Grid)>
 </Fragment>
 `;
 
@@ -5624,18 +5575,18 @@ exports[`PublicationCitation  should render component with publication from mult
                 "fez_record_search_key_contact_details_email": Array [],
                 "fez_record_search_key_content_indicator": Array [
                   Object {
-                    "rek_content_indicator": 454057,
+                    "rek_content_indicator": 454079,
                     "rek_content_indicator_id": 1,
-                    "rek_content_indicator_lookup": "more content indicators",
+                    "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
                     "rek_content_indicator_order": 1,
-                    "rek_ismemberof": "UQ:152266",
+                    "rek_content_indicator_pid": "UQ:41878",
                   },
                   Object {
-                    "rek_content_indicator": 454058,
+                    "rek_content_indicator": 454080,
                     "rek_content_indicator_id": 2,
-                    "rek_content_indicator_lookup": "still yet another content indicator",
+                    "rek_content_indicator_lookup": "Protocol",
                     "rek_content_indicator_order": 2,
-                    "rek_ismemberof": "UQ:152266",
+                    "rek_content_indicator_pid": "UQ:41878",
                   },
                 ],
                 "fez_record_search_key_contributor": Array [],
@@ -5940,29 +5891,6 @@ exports[`PublicationCitation  should render component with publication from mult
           item={true}
           xs={12}
         >
-          <WithStyles(Typography)
-            gutterBottom={true}
-            variant="caption"
-          >
-            Content Indicators
-            :
-            <span
-              key="1"
-            >
-              more content indicators
-              , 
-            </span>
-            <span
-              key="2"
-            >
-              still yet another content indicator
-            </span>
-          </WithStyles(Typography)>
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          xs={12}
-        >
           <WithStyles(CitationCounts)
             hideViewFullStatisticsLink={false}
             publication={
@@ -6071,18 +5999,18 @@ exports[`PublicationCitation  should render component with publication from mult
                 "fez_record_search_key_contact_details_email": Array [],
                 "fez_record_search_key_content_indicator": Array [
                   Object {
-                    "rek_content_indicator": 454057,
+                    "rek_content_indicator": 454079,
                     "rek_content_indicator_id": 1,
-                    "rek_content_indicator_lookup": "more content indicators",
+                    "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
                     "rek_content_indicator_order": 1,
-                    "rek_ismemberof": "UQ:152266",
+                    "rek_content_indicator_pid": "UQ:41878",
                   },
                   Object {
-                    "rek_content_indicator": 454058,
+                    "rek_content_indicator": 454080,
                     "rek_content_indicator_id": 2,
-                    "rek_content_indicator_lookup": "still yet another content indicator",
+                    "rek_content_indicator_lookup": "Protocol",
                     "rek_content_indicator_order": 2,
-                    "rek_ismemberof": "UQ:152266",
+                    "rek_content_indicator_pid": "UQ:41878",
                   },
                 ],
                 "fez_record_search_key_contributor": Array [],
@@ -6406,6 +6334,21 @@ exports[`PublicationCitation  should render component with publication from mult
     </WithStyles(Grid)>
   </WithStyles(Grid)>
   <WithStyles(Divider) />
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <WithStyles(Typography)
+      gutterBottom={true}
+      variant="caption"
+    >
+      <span>
+        Content Indicators
+        :
+      </span>
+      Scholarship of Teaching and Learning, Protocol
+    </WithStyles(Typography)>
+  </WithStyles(Grid)>
 </Fragment>
 `;
 
@@ -6539,18 +6482,18 @@ exports[`PublicationCitation  should render component without a title 1`] = `
                 "fez_record_search_key_contact_details_email": Array [],
                 "fez_record_search_key_content_indicator": Array [
                   Object {
-                    "rek_content_indicator": 454057,
+                    "rek_content_indicator": 454079,
                     "rek_content_indicator_id": 1,
-                    "rek_content_indicator_lookup": "more content indicators",
+                    "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
                     "rek_content_indicator_order": 1,
-                    "rek_ismemberof": "UQ:152266",
+                    "rek_content_indicator_pid": "UQ:41878",
                   },
                   Object {
-                    "rek_content_indicator": 454058,
+                    "rek_content_indicator": 454080,
                     "rek_content_indicator_id": 2,
-                    "rek_content_indicator_lookup": "still yet another content indicator",
+                    "rek_content_indicator_lookup": "Protocol",
                     "rek_content_indicator_order": 2,
-                    "rek_ismemberof": "UQ:152266",
+                    "rek_content_indicator_pid": "UQ:41878",
                   },
                 ],
                 "fez_record_search_key_contributor": Array [],
@@ -6855,29 +6798,6 @@ exports[`PublicationCitation  should render component without a title 1`] = `
           item={true}
           xs={12}
         >
-          <WithStyles(Typography)
-            gutterBottom={true}
-            variant="caption"
-          >
-            Content Indicators
-            :
-            <span
-              key="1"
-            >
-              more content indicators
-              , 
-            </span>
-            <span
-              key="2"
-            >
-              still yet another content indicator
-            </span>
-          </WithStyles(Typography)>
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          xs={12}
-        >
           <WithStyles(CitationCounts)
             hideViewFullStatisticsLink={false}
             publication={
@@ -6986,18 +6906,18 @@ exports[`PublicationCitation  should render component without a title 1`] = `
                 "fez_record_search_key_contact_details_email": Array [],
                 "fez_record_search_key_content_indicator": Array [
                   Object {
-                    "rek_content_indicator": 454057,
+                    "rek_content_indicator": 454079,
                     "rek_content_indicator_id": 1,
-                    "rek_content_indicator_lookup": "more content indicators",
+                    "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
                     "rek_content_indicator_order": 1,
-                    "rek_ismemberof": "UQ:152266",
+                    "rek_content_indicator_pid": "UQ:41878",
                   },
                   Object {
-                    "rek_content_indicator": 454058,
+                    "rek_content_indicator": 454080,
                     "rek_content_indicator_id": 2,
-                    "rek_content_indicator_lookup": "still yet another content indicator",
+                    "rek_content_indicator_lookup": "Protocol",
                     "rek_content_indicator_order": 2,
-                    "rek_ismemberof": "UQ:152266",
+                    "rek_content_indicator_pid": "UQ:41878",
                   },
                 ],
                 "fez_record_search_key_contributor": Array [],
@@ -7321,6 +7241,21 @@ exports[`PublicationCitation  should render component without a title 1`] = `
     </WithStyles(Grid)>
   </WithStyles(Grid)>
   <WithStyles(Divider) />
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <WithStyles(Typography)
+      gutterBottom={true}
+      variant="caption"
+    >
+      <span>
+        Content Indicators
+        :
+      </span>
+      Scholarship of Teaching and Learning, Protocol
+    </WithStyles(Typography)>
+  </WithStyles(Grid)>
 </Fragment>
 `;
 
@@ -7538,18 +7473,18 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
                 "fez_record_search_key_contact_details_email": Array [],
                 "fez_record_search_key_content_indicator": Array [
                   Object {
-                    "rek_content_indicator": 454057,
+                    "rek_content_indicator": 454079,
                     "rek_content_indicator_id": 1,
-                    "rek_content_indicator_lookup": "more content indicators",
+                    "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
                     "rek_content_indicator_order": 1,
-                    "rek_ismemberof": "UQ:152266",
+                    "rek_content_indicator_pid": "UQ:41878",
                   },
                   Object {
-                    "rek_content_indicator": 454058,
+                    "rek_content_indicator": 454080,
                     "rek_content_indicator_id": 2,
-                    "rek_content_indicator_lookup": "still yet another content indicator",
+                    "rek_content_indicator_lookup": "Protocol",
                     "rek_content_indicator_order": 2,
-                    "rek_ismemberof": "UQ:152266",
+                    "rek_content_indicator_pid": "UQ:41878",
                   },
                 ],
                 "fez_record_search_key_contributor": Array [],
@@ -7848,29 +7783,6 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
           item={true}
           xs={12}
         >
-          <WithStyles(Typography)
-            gutterBottom={true}
-            variant="caption"
-          >
-            Content Indicators
-            :
-            <span
-              key="1"
-            >
-              more content indicators
-              , 
-            </span>
-            <span
-              key="2"
-            >
-              still yet another content indicator
-            </span>
-          </WithStyles(Typography)>
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          xs={12}
-        >
           <WithStyles(CitationCounts)
             hideViewFullStatisticsLink={false}
             publication={
@@ -7979,18 +7891,18 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
                 "fez_record_search_key_contact_details_email": Array [],
                 "fez_record_search_key_content_indicator": Array [
                   Object {
-                    "rek_content_indicator": 454057,
+                    "rek_content_indicator": 454079,
                     "rek_content_indicator_id": 1,
-                    "rek_content_indicator_lookup": "more content indicators",
+                    "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
                     "rek_content_indicator_order": 1,
-                    "rek_ismemberof": "UQ:152266",
+                    "rek_content_indicator_pid": "UQ:41878",
                   },
                   Object {
-                    "rek_content_indicator": 454058,
+                    "rek_content_indicator": 454080,
                     "rek_content_indicator_id": 2,
-                    "rek_content_indicator_lookup": "still yet another content indicator",
+                    "rek_content_indicator_lookup": "Protocol",
                     "rek_content_indicator_order": 2,
-                    "rek_ismemberof": "UQ:152266",
+                    "rek_content_indicator_pid": "UQ:41878",
                   },
                 ],
                 "fez_record_search_key_contributor": Array [],
@@ -8396,18 +8308,18 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
                 "fez_record_search_key_contact_details_email": Array [],
                 "fez_record_search_key_content_indicator": Array [
                   Object {
-                    "rek_content_indicator": 454057,
+                    "rek_content_indicator": 454079,
                     "rek_content_indicator_id": 1,
-                    "rek_content_indicator_lookup": "more content indicators",
+                    "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
                     "rek_content_indicator_order": 1,
-                    "rek_ismemberof": "UQ:152266",
+                    "rek_content_indicator_pid": "UQ:41878",
                   },
                   Object {
-                    "rek_content_indicator": 454058,
+                    "rek_content_indicator": 454080,
                     "rek_content_indicator_id": 2,
-                    "rek_content_indicator_lookup": "still yet another content indicator",
+                    "rek_content_indicator_lookup": "Protocol",
                     "rek_content_indicator_order": 2,
-                    "rek_ismemberof": "UQ:152266",
+                    "rek_content_indicator_pid": "UQ:41878",
                   },
                 ],
                 "fez_record_search_key_contributor": Array [],
@@ -8706,6 +8618,21 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
     </WithStyles(Grid)>
   </WithStyles(Grid)>
   <WithStyles(Divider) />
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <WithStyles(Typography)
+      gutterBottom={true}
+      variant="caption"
+    >
+      <span>
+        Content Indicators
+        :
+      </span>
+      Scholarship of Teaching and Learning, Protocol
+    </WithStyles(Typography)>
+  </WithStyles(Grid)>
 </Fragment>
 `;
 

@@ -189,13 +189,13 @@ describe('PublicationCitation ', () => {
             "fez_record_search_key_content_indicator": [
                 {
                     "rek_content_indicator_id": 1,
-                    "rek_content_indicator": 454057,
+                    "rek_content_indicator": 454079,
                     "rek_ismemberof": "UQ:152266",
                     "rek_content_indicator_order": 1,
                     "rek_content_indicator_lookup": 'a content indicator',
                 }, {
                     "rek_content_indicator_id": 2,
-                    "rek_content_indicator": 454058,
+                    "rek_content_indicator": 454080,
                     "rek_ismemberof": "UQ:152266",
                     "rek_content_indicator_order": 2,
                     "rek_content_indicator_lookup": 'another content indicator',

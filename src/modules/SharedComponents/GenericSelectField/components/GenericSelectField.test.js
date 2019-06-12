@@ -40,6 +40,7 @@ describe('GenericSelectField', () => {
             });
             expect(toJson(wrapper)).toMatchSnapshot();
         });
+
     });
 
     describe('Lifecycle methods', () => {

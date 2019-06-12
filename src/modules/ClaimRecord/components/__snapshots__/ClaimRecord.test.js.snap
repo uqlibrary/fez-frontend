@@ -1005,9 +1005,16 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
             "confirmationMessage": <React.Fragment>
-              <p>
+              <span
+                style={
+                  Object {
+                    "display": "block",
+                    "margin": "1em 0",
+                  }
+                }
+              >
                 Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-              </p>
+              </span>
             </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
@@ -1015,9 +1022,16 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
               "title": "File upload and/or edits/changes/comments post failed",
               "type": "warning",
             },
-            "successConfirmationMessage": <p>
+            "successConfirmationMessage": <span
+              style={
+                Object {
+                  "display": "block",
+                  "margin": "1em 0",
+                }
+              }
+            >
               Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-            </p>,
+            </span>,
           }
         }
         onAction={[Function]}
@@ -1035,6 +1049,42 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
         }
         when={true}
       />
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          title="Optional: Content Indicators"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={24}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(Typography)>
+                You can select multiple (up to 3) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                id="content-indicators"
+                label="Please select relevant indicator(s)."
+                multiple={true}
+                name="contentIndicators"
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
         xs={12}
@@ -1129,6 +1179,7 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="claimSubmit"
           onClick={[MockFunction]}
           variant="contained"
         >
@@ -1845,9 +1896,16 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
             "confirmationMessage": <React.Fragment>
-              <p>
+              <span
+                style={
+                  Object {
+                    "display": "block",
+                    "margin": "1em 0",
+                  }
+                }
+              >
                 Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-              </p>
+              </span>
             </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
@@ -1855,9 +1913,16 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
               "title": "File upload and/or edits/changes/comments post failed",
               "type": "warning",
             },
-            "successConfirmationMessage": <p>
+            "successConfirmationMessage": <span
+              style={
+                Object {
+                  "display": "block",
+                  "margin": "1em 0",
+                }
+              }
+            >
               Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-            </p>,
+            </span>,
           }
         }
         onAction={[Function]}
@@ -2050,6 +2115,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="claimSubmit"
           onClick={[MockFunction]}
           variant="contained"
         >
@@ -3051,9 +3117,16 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
             "confirmationMessage": <React.Fragment>
-              <p>
+              <span
+                style={
+                  Object {
+                    "display": "block",
+                    "margin": "1em 0",
+                  }
+                }
+              >
                 Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-              </p>
+              </span>
             </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
@@ -3061,9 +3134,16 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
               "title": "File upload and/or edits/changes/comments post failed",
               "type": "warning",
             },
-            "successConfirmationMessage": <p>
+            "successConfirmationMessage": <span
+              style={
+                Object {
+                  "display": "block",
+                  "margin": "1em 0",
+                }
+              }
+            >
               Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-            </p>,
+            </span>,
           }
         }
         onAction={[Function]}
@@ -3122,6 +3202,42 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
               ]
             }
           />
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          title="Optional: Content Indicators"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={24}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(Typography)>
+                You can select multiple (up to 3) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                id="content-indicators"
+                label="Please select relevant indicator(s)."
+                multiple={true}
+                name="contentIndicators"
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
         </StandardCard>
       </WithStyles(Grid)>
       <WithStyles(Grid)
@@ -3218,6 +3334,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="claimSubmit"
           onClick={[MockFunction]}
           variant="contained"
         >
@@ -3927,9 +4044,16 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
             "confirmationMessage": <React.Fragment>
-              <p>
+              <span
+                style={
+                  Object {
+                    "display": "block",
+                    "margin": "1em 0",
+                  }
+                }
+              >
                 Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-              </p>
+              </span>
             </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
@@ -3937,9 +4061,16 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
               "title": "File upload and/or edits/changes/comments post failed",
               "type": "warning",
             },
-            "successConfirmationMessage": <p>
+            "successConfirmationMessage": <span
+              style={
+                Object {
+                  "display": "block",
+                  "margin": "1em 0",
+                }
+              }
+            >
               Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-            </p>,
+            </span>,
           }
         }
         onAction={[Function]}
@@ -4089,6 +4220,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="claimSubmit"
           onClick={[MockFunction]}
           variant="contained"
         >
@@ -5193,9 +5325,16 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
             "confirmationMessage": <React.Fragment>
-              <p>
+              <span
+                style={
+                  Object {
+                    "display": "block",
+                    "margin": "1em 0",
+                  }
+                }
+              >
                 Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-              </p>
+              </span>
             </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
@@ -5203,9 +5342,16 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
               "title": "File upload and/or edits/changes/comments post failed",
               "type": "warning",
             },
-            "successConfirmationMessage": <p>
+            "successConfirmationMessage": <span
+              style={
+                Object {
+                  "display": "block",
+                  "margin": "1em 0",
+                }
+              }
+            >
               Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-            </p>,
+            </span>,
           }
         }
         onAction={[Function]}
@@ -5376,6 +5522,42 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
         xs={12}
       >
         <StandardCard
+          title="Optional: Content Indicators"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={24}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(Typography)>
+                You can select multiple (up to 3) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                id="content-indicators"
+                label="Please select relevant indicator(s)."
+                multiple={true}
+                name="contentIndicators"
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
           title="Optional: Suggest changes or add links to this work"
         >
           <WithStyles(Grid)
@@ -5465,6 +5647,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="claimSubmit"
           onClick={[MockFunction]}
           variant="contained"
         >
@@ -6569,9 +6752,16 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
             "confirmationMessage": <React.Fragment>
-              <p>
+              <span
+                style={
+                  Object {
+                    "display": "block",
+                    "margin": "1em 0",
+                  }
+                }
+              >
                 Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-              </p>
+              </span>
             </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
@@ -6579,9 +6769,16 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
               "title": "File upload and/or edits/changes/comments post failed",
               "type": "warning",
             },
-            "successConfirmationMessage": <p>
+            "successConfirmationMessage": <span
+              style={
+                Object {
+                  "display": "block",
+                  "margin": "1em 0",
+                }
+              }
+            >
               Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-            </p>,
+            </span>,
           }
         }
         onAction={[Function]}
@@ -6752,6 +6949,42 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
         xs={12}
       >
         <StandardCard
+          title="Optional: Content Indicators"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={24}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(Typography)>
+                You can select multiple (up to 3) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                id="content-indicators"
+                label="Please select relevant indicator(s)."
+                multiple={true}
+                name="contentIndicators"
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
           title="Optional: Suggest changes or add links to this work"
         >
           <WithStyles(Grid)
@@ -6841,6 +7074,7 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="claimSubmit"
           onClick={[MockFunction]}
           variant="contained"
         >
@@ -7945,9 +8179,16 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
             "confirmationMessage": <React.Fragment>
-              <p>
+              <span
+                style={
+                  Object {
+                    "display": "block",
+                    "margin": "1em 0",
+                  }
+                }
+              >
                 Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-              </p>
+              </span>
             </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
@@ -7955,9 +8196,16 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
               "title": "File upload and/or edits/changes/comments post failed",
               "type": "warning",
             },
-            "successConfirmationMessage": <p>
+            "successConfirmationMessage": <span
+              style={
+                Object {
+                  "display": "block",
+                  "margin": "1em 0",
+                }
+              }
+            >
               Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-            </p>,
+            </span>,
           }
         }
         onAction={[Function]}
@@ -8128,6 +8376,42 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
         xs={12}
       >
         <StandardCard
+          title="Optional: Content Indicators"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={24}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(Typography)>
+                You can select multiple (up to 3) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                id="content-indicators"
+                label="Please select relevant indicator(s)."
+                multiple={true}
+                name="contentIndicators"
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
           title="Optional: Suggest changes or add links to this work"
         >
           <WithStyles(Grid)
@@ -8217,6 +8501,7 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="claimSubmit"
           onClick={[MockFunction]}
           variant="contained"
         >
@@ -9321,9 +9606,16 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
             "confirmationMessage": <React.Fragment>
-              <p>
+              <span
+                style={
+                  Object {
+                    "display": "block",
+                    "margin": "1em 0",
+                  }
+                }
+              >
                 Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-              </p>
+              </span>
             </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
@@ -9331,9 +9623,16 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
               "title": "File upload and/or edits/changes/comments post failed",
               "type": "warning",
             },
-            "successConfirmationMessage": <p>
+            "successConfirmationMessage": <span
+              style={
+                Object {
+                  "display": "block",
+                  "margin": "1em 0",
+                }
+              }
+            >
               Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-            </p>,
+            </span>,
           }
         }
         onAction={[Function]}
@@ -9504,6 +9803,42 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
         xs={12}
       >
         <StandardCard
+          title="Optional: Content Indicators"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={24}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(Typography)>
+                You can select multiple (up to 3) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                id="content-indicators"
+                label="Please select relevant indicator(s)."
+                multiple={true}
+                name="contentIndicators"
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
           title="Optional: Suggest changes or add links to this work"
         >
           <WithStyles(Grid)
@@ -9593,6 +9928,7 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="claimSubmit"
           onClick={[MockFunction]}
           variant="contained"
         >
@@ -11755,9 +12091,16 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
                   />
                 </WithStyles(Grid)>
               </WithStyles(Grid)>
-              <p>
+              <span
+                style={
+                  Object {
+                    "display": "block",
+                    "margin": "1em 0",
+                  }
+                }
+              >
                 Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-              </p>
+              </span>
             </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
@@ -11765,9 +12108,16 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
               "title": "File upload and/or edits/changes/comments post failed",
               "type": "warning",
             },
-            "successConfirmationMessage": <p>
+            "successConfirmationMessage": <span
+              style={
+                Object {
+                  "display": "block",
+                  "margin": "1em 0",
+                }
+              }
+            >
               Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-            </p>,
+            </span>,
           }
         }
         onAction={[Function]}
@@ -11938,6 +12288,42 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
         xs={12}
       >
         <StandardCard
+          title="Optional: Content Indicators"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={24}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(Typography)>
+                You can select multiple (up to 3) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                id="content-indicators"
+                label="Please select relevant indicator(s)."
+                multiple={true}
+                name="contentIndicators"
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
           title="Optional: Suggest changes or add links to this work"
         >
           <WithStyles(Grid)
@@ -12027,6 +12413,7 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="claimSubmit"
           onClick={[MockFunction]}
           variant="contained"
         >
@@ -13131,9 +13518,16 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
             "confirmationMessage": <React.Fragment>
-              <p>
+              <span
+                style={
+                  Object {
+                    "display": "block",
+                    "margin": "1em 0",
+                  }
+                }
+              >
                 Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-              </p>
+              </span>
             </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
@@ -13141,9 +13535,16 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
               "title": "File upload and/or edits/changes/comments post failed",
               "type": "warning",
             },
-            "successConfirmationMessage": <p>
+            "successConfirmationMessage": <span
+              style={
+                Object {
+                  "display": "block",
+                  "margin": "1em 0",
+                }
+              }
+            >
               Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-            </p>,
+            </span>,
           }
         }
         onAction={[Function]}
@@ -13314,6 +13715,42 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
         xs={12}
       >
         <StandardCard
+          title="Optional: Content Indicators"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={24}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(Typography)>
+                You can select multiple (up to 3) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                id="content-indicators"
+                label="Please select relevant indicator(s)."
+                multiple={true}
+                name="contentIndicators"
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
           title="Optional: Suggest changes or add links to this work"
         >
           <WithStyles(Grid)
@@ -13403,6 +13840,7 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="claimSubmit"
           onClick={[MockFunction]}
           variant="contained"
         >
@@ -14507,9 +14945,16 @@ exports[`Component ClaimRecord  should return and render alert message depending
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
             "confirmationMessage": <React.Fragment>
-              <p>
+              <span
+                style={
+                  Object {
+                    "display": "block",
+                    "margin": "1em 0",
+                  }
+                }
+              >
                 Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-              </p>
+              </span>
             </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
@@ -14517,9 +14962,16 @@ exports[`Component ClaimRecord  should return and render alert message depending
               "title": "File upload and/or edits/changes/comments post failed",
               "type": "warning",
             },
-            "successConfirmationMessage": <p>
+            "successConfirmationMessage": <span
+              style={
+                Object {
+                  "display": "block",
+                  "margin": "1em 0",
+                }
+              }
+            >
               Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-            </p>,
+            </span>,
           }
         }
         onAction={[Function]}
@@ -14690,6 +15142,42 @@ exports[`Component ClaimRecord  should return and render alert message depending
         xs={12}
       >
         <StandardCard
+          title="Optional: Content Indicators"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={24}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(Typography)>
+                You can select multiple (up to 3) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={true}
+                fullWidth={true}
+                id="content-indicators"
+                label="Please select relevant indicator(s)."
+                multiple={true}
+                name="contentIndicators"
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
           title="Optional: Suggest changes or add links to this work"
         >
           <WithStyles(Grid)
@@ -14792,6 +15280,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
           color="primary"
           disabled={true}
           fullWidth={true}
+          id="claimSubmit"
           onClick={[MockFunction]}
           variant="contained"
         >
@@ -15896,9 +16385,16 @@ exports[`Component ClaimRecord  should return and render alert message depending
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
             "confirmationMessage": <React.Fragment>
-              <p>
+              <span
+                style={
+                  Object {
+                    "display": "block",
+                    "margin": "1em 0",
+                  }
+                }
+              >
                 Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-              </p>
+              </span>
             </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
@@ -15906,9 +16402,16 @@ exports[`Component ClaimRecord  should return and render alert message depending
               "title": "File upload and/or edits/changes/comments post failed",
               "type": "warning",
             },
-            "successConfirmationMessage": <p>
+            "successConfirmationMessage": <span
+              style={
+                Object {
+                  "display": "block",
+                  "margin": "1em 0",
+                }
+              }
+            >
               Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-            </p>,
+            </span>,
           }
         }
         onAction={[Function]}
@@ -16079,6 +16582,42 @@ exports[`Component ClaimRecord  should return and render alert message depending
         xs={12}
       >
         <StandardCard
+          title="Optional: Content Indicators"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={24}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(Typography)>
+                You can select multiple (up to 3) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                id="content-indicators"
+                label="Please select relevant indicator(s)."
+                multiple={true}
+                name="contentIndicators"
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
           title="Optional: Suggest changes or add links to this work"
         >
           <WithStyles(Grid)
@@ -16179,6 +16718,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="claimSubmit"
           onClick={[MockFunction]}
           variant="contained"
         >
@@ -17283,9 +17823,16 @@ exports[`Component ClaimRecord  should return and render alert message depending
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
             "confirmationMessage": <React.Fragment>
-              <p>
+              <span
+                style={
+                  Object {
+                    "display": "block",
+                    "margin": "1em 0",
+                  }
+                }
+              >
                 Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-              </p>
+              </span>
             </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
@@ -17293,9 +17840,16 @@ exports[`Component ClaimRecord  should return and render alert message depending
               "title": "File upload and/or edits/changes/comments post failed",
               "type": "warning",
             },
-            "successConfirmationMessage": <p>
+            "successConfirmationMessage": <span
+              style={
+                Object {
+                  "display": "block",
+                  "margin": "1em 0",
+                }
+              }
+            >
               Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-            </p>,
+            </span>,
           }
         }
         onAction={[Function]}
@@ -17466,6 +18020,42 @@ exports[`Component ClaimRecord  should return and render alert message depending
         xs={12}
       >
         <StandardCard
+          title="Optional: Content Indicators"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={24}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(Typography)>
+                You can select multiple (up to 3) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                id="content-indicators"
+                label="Please select relevant indicator(s)."
+                multiple={true}
+                name="contentIndicators"
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
           title="Optional: Suggest changes or add links to this work"
         >
           <WithStyles(Grid)
@@ -17567,6 +18157,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="claimSubmit"
           onClick={[MockFunction]}
           variant="contained"
         >
@@ -18671,9 +19262,16 @@ exports[`Component ClaimRecord  should return and render alert message depending
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
             "confirmationMessage": <React.Fragment>
-              <p>
+              <span
+                style={
+                  Object {
+                    "display": "block",
+                    "margin": "1em 0",
+                  }
+                }
+              >
                 Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-              </p>
+              </span>
             </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
@@ -18681,9 +19279,16 @@ exports[`Component ClaimRecord  should return and render alert message depending
               "title": "File upload and/or edits/changes/comments post failed",
               "type": "warning",
             },
-            "successConfirmationMessage": <p>
+            "successConfirmationMessage": <span
+              style={
+                Object {
+                  "display": "block",
+                  "margin": "1em 0",
+                }
+              }
+            >
               Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-            </p>,
+            </span>,
           }
         }
         onAction={[Function]}
@@ -18854,6 +19459,42 @@ exports[`Component ClaimRecord  should return and render alert message depending
         xs={12}
       >
         <StandardCard
+          title="Optional: Content Indicators"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={24}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(Typography)>
+                You can select multiple (up to 3) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                id="content-indicators"
+                label="Please select relevant indicator(s)."
+                multiple={true}
+                name="contentIndicators"
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
           title="Optional: Suggest changes or add links to this work"
         >
           <WithStyles(Grid)
@@ -18966,6 +19607,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="claimSubmit"
           onClick={[MockFunction]}
           variant="contained"
         >
@@ -19012,9 +19654,16 @@ exports[`Component ClaimRecord  should return and render alert message depending
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
             "confirmationMessage": <React.Fragment>
-              <p>
+              <span
+                style={
+                  Object {
+                    "display": "block",
+                    "margin": "1em 0",
+                  }
+                }
+              >
                 Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-              </p>
+              </span>
             </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
@@ -19022,9 +19671,16 @@ exports[`Component ClaimRecord  should return and render alert message depending
               "title": "File upload and/or edits/changes/comments post failed",
               "type": "warning",
             },
-            "successConfirmationMessage": <p>
+            "successConfirmationMessage": <span
+              style={
+                Object {
+                  "display": "block",
+                  "margin": "1em 0",
+                }
+              }
+            >
               Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-            </p>,
+            </span>,
           }
         }
         onAction={[Function]}
@@ -19042,6 +19698,42 @@ exports[`Component ClaimRecord  should return and render alert message depending
         }
         when={true}
       />
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          title="Optional: Content Indicators"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={24}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(Typography)>
+                You can select multiple (up to 3) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                id="content-indicators"
+                label="Please select relevant indicator(s)."
+                multiple={true}
+                name="contentIndicators"
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
         xs={12}
@@ -19148,6 +19840,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="claimSubmit"
           onClick={[MockFunction]}
           variant="contained"
         >
@@ -19190,9 +19883,16 @@ exports[`Component ClaimRecord  should show alert if submit failed and PID not f
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
             "confirmationMessage": <React.Fragment>
-              <p>
+              <span
+                style={
+                  Object {
+                    "display": "block",
+                    "margin": "1em 0",
+                  }
+                }
+              >
                 Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-              </p>
+              </span>
             </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
@@ -19200,9 +19900,16 @@ exports[`Component ClaimRecord  should show alert if submit failed and PID not f
               "title": "File upload and/or edits/changes/comments post failed",
               "type": "warning",
             },
-            "successConfirmationMessage": <p>
+            "successConfirmationMessage": <span
+              style={
+                Object {
+                  "display": "block",
+                  "margin": "1em 0",
+                }
+              }
+            >
               Your item will be referred to a UQ eSpace Staging staff member for editing, prior to being moved into a publicly viewable collection.
-            </p>,
+            </span>,
           }
         }
         onAction={[Function]}
@@ -19220,6 +19927,42 @@ exports[`Component ClaimRecord  should show alert if submit failed and PID not f
         }
         when={true}
       />
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          title="Optional: Content Indicators"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={24}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(Typography)>
+                You can select multiple (up to 3) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                id="content-indicators"
+                label="Please select relevant indicator(s)."
+                multiple={true}
+                name="contentIndicators"
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
         xs={12}

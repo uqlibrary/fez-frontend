@@ -23,7 +23,8 @@ describe('MyIncompleteRecord form', () => {
     it('Creative Work:Live Performance of Creative Work - Music should allow user to update work', async () => {
         mockApi
             .onGet(repositories.routes.EXISTING_RECORD_API({pid: 'UQ:352045'}).apiUrl)
-            .reply(200, {data: UQ352045});
+            .reply(200, {data: UQ352045})
+        ;
 
         const path = '/records/:pid(UQ:[a-z0-9]+)/incomplete';
         const route = '/records/UQ:352045/incomplete';
@@ -32,7 +33,13 @@ describe('MyIncompleteRecord form', () => {
             asFragment,
             getByText,
             getByTestId
-        } = rtlRender(withRedux(initialState(uqrdav10))(withRouter({route, path})(<MyIncompleteRecord/>)));
+        } = rtlRender(
+            withRedux(initialState(uqrdav10))(
+                withRouter({route, path})(
+                    <MyIncompleteRecord/>
+                )
+            )
+        );
 
         const submitButton = await waitForElement(() => getByTestId('update-my-work'));
         expect(submitButton).toHaveAttribute('disabled');
@@ -94,7 +101,8 @@ describe('MyIncompleteRecord form', () => {
     it('UQ:716942 - Creative Work:Live Performance of Creative Work - Music should allow user to update work', async () => {
         mockApi
             .onGet(repositories.routes.EXISTING_RECORD_API({pid: 'UQ:716942'}).apiUrl)
-            .reply(200, {data: UQ716942_uqagrinb});
+            .reply(200, {data: UQ716942_uqagrinb})
+        ;
 
         const path = '/records/:pid(UQ:[a-z0-9]+)/incomplete';
         const route = '/records/UQ:716942/incomplete';
@@ -103,7 +111,13 @@ describe('MyIncompleteRecord form', () => {
             asFragment,
             getByText,
             getByTestId
-        } = rtlRender(withRedux(initialState(uqagrinb))(withRouter({route, path})(<MyIncompleteRecord/>)));
+        } = rtlRender(
+            withRedux(initialState(uqagrinb))(
+                withRouter({route, path})(
+                    <MyIncompleteRecord/>
+                )
+            )
+        );
 
         const submitButton = await waitForElement(() => getByTestId('update-my-work'));
         expect(submitButton).toHaveAttribute('disabled');
@@ -164,8 +178,9 @@ describe('MyIncompleteRecord form', () => {
 
     it('UQ:716942 - Creative Work:Live Performance of Creative Work - Music : Grants editor tests should prevent submission if inputs are populated', async () => {
         mockApi
-        .onGet(repositories.routes.EXISTING_RECORD_API({pid: 'UQ:716942'}).apiUrl)
-        .reply(200, {data: UQ716942_uqagrinb_grants});
+            .onGet(repositories.routes.EXISTING_RECORD_API({pid: 'UQ:716942'}).apiUrl)
+            .reply(200, {data: UQ716942_uqagrinb_grants})
+        ;
 
         const path = '/records/:pid(UQ:[a-z0-9]+)/incomplete';
         const route = '/records/UQ:716942/incomplete';

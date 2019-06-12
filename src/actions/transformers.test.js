@@ -277,7 +277,7 @@ describe('getIssueValues test', () => {
         comments: 'test1',
         link: 'test2',
         files: 'file1.txt, file2.txt',
-        contentIndicators: CONTENT_INDICATORS.map(item => item.text).join(', ')
+        contentIndicators: CONTENT_INDICATORS.map(item => item.text).join('; ')
     };
     expect(transformers.getIssueValues(input)).toEqual(expected);
 });
@@ -299,7 +299,7 @@ describe('getFixIssueRequest test', () => {
             "Added comments: Some comments...",
             "Added link: http://www.test.com",
             "Added files: 1.jpg, 2.jpg",
-            `Selected Content Indicator(s): ${CONTENT_INDICATORS.map(item => item.text).join(', ')}`,
+            `Selected Content Indicator(s): ${CONTENT_INDICATORS.map(item => item.text).join('; ')}`,
         ];
         const result = transformers.getFixIssueRequest(input);
         expected.map(item => {

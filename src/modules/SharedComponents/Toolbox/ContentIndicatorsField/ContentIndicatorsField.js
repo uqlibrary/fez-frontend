@@ -19,9 +19,11 @@ export const showContentIndicatorsField = (record) => {
     const isBlacklistedType = CONTENT_INDICATORS_DOCTYPE_BLACKLIST.includes(
         record.rek_display_type
     );
-    const recordCollectionPids = record.fez_record_search_key_ismemberof.map(
-        item => item.rek_ismemberof
-    );
+    const recordCollectionPids = record.fez_record_search_key_ismemberof &&
+        record.fez_record_search_key_ismemberof.map(
+            item => item.rek_ismemberof
+        ) || []
+    ;
     const inBlacklistedCollection = CONTENT_INDICATORS_COLLECTIONS_BLACKLIST.some(
         collectionPid => recordCollectionPids.includes(collectionPid)
     );
@@ -40,25 +42,31 @@ export const getContentIndicators = props => CONTENT_INDICATORS.map(
     })
 );
 
-export const ContentIndicatorsField = props => {
-    return (
-        <GenericSelectField
-            itemsList={getContentIndicators(props)}
-            hideLabel={false}
-            locale={{ label: props.label }}
-            selectedValue={getSelected(props)}
-            onChange={!!props.input && props.input.onChange || undefined}
-            errorText={!!props.meta && props.meta.error || ''}
-            error={!!props.meta && !!props.meta.error || false}
-            {...props}
-        />
-    );
-};
+export const ContentIndicatorsField = props => (
+    <GenericSelectField
+        itemsList={getContentIndicators(props)}
+        hideLabel={false}
+        locale={{ label: props.label }}
+        selectedValue={getSelected(props)}
+        onChange={!!props.input && props.input.onChange || undefined}
+        errorText={!!props.meta && props.meta.error || ''}
+        error={!!props.meta && !!props.meta.error || false}
+        {...props}
+        disabled={
+            props.disabled ||
+            !!props.meta &&
+            !!props.meta.initial &&
+            !!props.meta.initial.toJS &&
+            props.meta.initial.toJS().length === CONTENT_INDICATORS.length
+        }
+    />
+);
 
 ContentIndicatorsField.propTypes = {
     input: PropTypes.object,
     meta: PropTypes.object,
     label: PropTypes.string,
+    disabled: PropTypes.bool,
 };
 
 export default ContentIndicatorsField;

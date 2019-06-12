@@ -48,25 +48,24 @@ export const styles = theme => ({
         lineHeight: 1,
         letterSpacing: 0,
         marginBottom: 6,
-        marginRight: 12
+        marginRight: 12,
     },
     citationText: {
         ...theme.typography.caption,
         color: theme.typography.body2.color,
-        marginBottom: 6
+        marginBottom: 6,
     },
     citationCounts: {
-        whiteSpace: 'nowrap'
+        whiteSpace: 'nowrap',
     },
     buttonMargin: {
         [theme.breakpoints.down('sm')]: {
-            marginTop: 12
-        }
+            marginTop: 12,
+        },
     },
-    contentIndicators: {
-        span: {
-            marginRight: 12
-        }
+    contentIndicatorTitle: {
+        fontWeight: 400,
+        marginRight: '0.5ex'
     }
 });
 
@@ -305,25 +304,6 @@ export class PublicationCitation extends PureComponent {
                                 {this.renderCitation(this.props.publication.rek_display_type)}
                             </Grid>
                             {
-                                !this.props.hideContentIndicators &&
-                                this.props.publication.fez_record_search_key_content_indicator &&
-                                this.props.publication.fez_record_search_key_content_indicator.length > 0 &&
-                                <Grid item xs={12} className={classes.contentIndicators}>
-                                    <Typography gutterBottom variant="caption">{locale.components.contentIndicators.label}:
-                                        {
-                                            this.props.publication.fez_record_search_key_content_indicator.map((item, index) => {
-                                                return (
-                                                    <span key={item.rek_content_indicator_id}>
-                                                        {item.rek_content_indicator_lookup}
-                                                        {index < (this.props.publication.fez_record_search_key_content_indicator.length - 1) && locale.components.contentIndicators.divider}
-                                                    </span>
-                                                );
-                                            })
-                                        }
-                                    </Typography>
-                                </Grid>
-                            }
-                            {
                                 !this.props.hideCitationCounts &&
                                 <Grid item xs={12} className={classes.citationCounts}>
                                     <CitationCounts
@@ -363,6 +343,23 @@ export class PublicationCitation extends PureComponent {
                     </Grid>
                 }
                 <Divider className={classes.divider} />
+                {
+                    !this.props.hideContentIndicators &&
+                    this.props.publication.fez_record_search_key_content_indicator &&
+                    this.props.publication.fez_record_search_key_content_indicator.length > 0 &&
+                    <Grid item xs={12}>
+                        <Typography gutterBottom variant="caption">
+                            <span className={classes.contentIndicatorTitle}>{locale.components.contentIndicators.label}:</span>
+                            {
+                                this.props.publication.fez_record_search_key_content_indicator
+                                    .map(item => item.rek_content_indicator_lookup)
+                                    .join(
+                                        locale.components.contentIndicators.divider
+                                    )
+                            }
+                        </Typography>
+                    </Grid>
+                }
             </React.Fragment>
         );
     }

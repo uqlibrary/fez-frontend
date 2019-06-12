@@ -25,8 +25,8 @@ describe('ContentIndicatorsField component', () => {
             placeholder: 'Test placeholder',
             input: {
                 value: [
-                    454057,
-                    454058
+                    454079,
+                    454080
                 ],
                 onChange: jest.fn()
             },
@@ -38,7 +38,7 @@ describe('ContentIndicatorsField component', () => {
 
         wrapper.setProps({
             input: {
-                value: Immutable.List([454057, 454058])
+                value: Immutable.List([454079, 454080])
             }
         });
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -60,6 +60,15 @@ describe('ContentIndicatorsField component', () => {
         expected[1].disabled = true;
         expected[2].disabled = true;
         expect(getContentIndicators(input)).toEqual(expected);
+    });
+
+    it('should mark dropdown as disabled when all indicators have been selected', () => {
+        const wrapper = setup({
+            meta: {
+                initial: Immutable.List(CONTENT_INDICATORS),
+            }
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     describe('should detect whether content indicator field should be shown', () => {
