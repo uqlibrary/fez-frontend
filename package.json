@@ -188,8 +188,7 @@
     "test-unit": "node $NODE_DEBUG_OPTION ./node_modules/lab/bin/lab ./test/unit --pattern \"^[^_]\"",
     "eslint": "eslint 'src/**/*.js' --quiet",
     "cypress:open": "cypress open",
-    "cypress:run": "cypress run --headed --browser electron",
-    "cypress:chrome": "cypress run --browser chrome"
+    "cypress:run": "cypress run --headed --browser electron"
   },
   "engines": {
     "npm": "^6.9.0",
