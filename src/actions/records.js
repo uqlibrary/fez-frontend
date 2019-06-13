@@ -45,6 +45,7 @@ export function createNewRecord(data) {
             ...transformers.getNtroMetadataSearchKeys(data.isNtro && data || null),
             ...transformers.getLanguageSearchKey(data.isNtro && data.languages || null),
             ...transformers.getQualityIndicatorSearchKey(data.isNtro && data.qualityIndicators || null),
+            ...transformers.getContentIndicatorSearchKey(data.contentIndicators || null),
         };
 
         // delete extra form values from request object
@@ -64,6 +65,7 @@ export function createNewRecord(data) {
             'qualityIndicators',
             'significance',
             'supervisors',
+            'contentIndicators'
         ];
         keysToDelete.forEach(key => {
             delete recordRequest[key];
