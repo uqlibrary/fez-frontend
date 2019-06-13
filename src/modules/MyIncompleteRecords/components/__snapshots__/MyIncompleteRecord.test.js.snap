@@ -726,7 +726,7 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
               <span
                 style={
                   Object {
-                    "color": "red",
+                    "color": "#e60000",
                     "weight": "bold",
                   }
                 }
@@ -1639,7 +1639,7 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
               <span
                 style={
                   Object {
-                    "color": "red",
+                    "color": "#e60000",
                     "weight": "bold",
                   }
                 }
@@ -2577,7 +2577,7 @@ exports[`Component MyIncompleteRecord should render file upload field 1`] = `
               <span
                 style={
                   Object {
-                    "color": "red",
+                    "color": "#e60000",
                     "weight": "bold",
                   }
                 }
@@ -3565,7 +3565,7 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
               <span
                 style={
                   Object {
-                    "color": "red",
+                    "color": "#e60000",
                     "weight": "bold",
                   }
                 }
@@ -4478,7 +4478,7 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
               <span
                 style={
                   Object {
-                    "color": "red",
+                    "color": "#e60000",
                     "weight": "bold",
                   }
                 }
@@ -5391,7 +5391,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
               <span
                 style={
                   Object {
-                    "color": "red",
+                    "color": "#e60000",
                     "weight": "bold",
                   }
                 }
@@ -6304,7 +6304,7 @@ exports[`Component MyIncompleteRecord should render significance and contributio
               <span
                 style={
                   Object {
-                    "color": "red",
+                    "color": "#e60000",
                     "weight": "bold",
                   }
                 }
@@ -7223,7 +7223,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
               <span
                 style={
                   Object {
-                    "color": "red",
+                    "color": "#e60000",
                     "weight": "bold",
                   }
                 }
@@ -8136,7 +8136,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
               <span
                 style={
                   Object {
-                    "color": "red",
+                    "color": "#e60000",
                     "weight": "bold",
                   }
                 }

@@ -177,7 +177,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -653,7 +653,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                       "accent": Object {
                         "dark": "#2a557d",
                         "light": "#54acff",
-                        "main": "#4085C6",
+                        "main": "#316799",
                       },
                       "action": Object {
                         "active": "rgba(0, 0, 0, 0.54)",
@@ -1274,7 +1274,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                 "accent": Object {
                                   "dark": "#2a557d",
                                   "light": "#54acff",
-                                  "main": "#4085C6",
+                                  "main": "#316799",
                                 },
                                 "action": Object {
                                   "active": "rgba(0, 0, 0, 0.54)",
@@ -1722,7 +1722,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                   "accent": Object {
                                     "dark": "#2a557d",
                                     "light": "#54acff",
-                                    "main": "#4085C6",
+                                    "main": "#316799",
                                   },
                                   "action": Object {
                                     "active": "rgba(0, 0, 0, 0.54)",
@@ -2170,7 +2170,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                       "accent": Object {
                                         "dark": "#2a557d",
                                         "light": "#54acff",
-                                        "main": "#4085C6",
+                                        "main": "#316799",
                                       },
                                       "action": Object {
                                         "active": "rgba(0, 0, 0, 0.54)",
@@ -2799,7 +2799,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                           "accent": Object {
                                             "dark": "#2a557d",
                                             "light": "#54acff",
-                                            "main": "#4085C6",
+                                            "main": "#316799",
                                           },
                                           "action": Object {
                                             "active": "rgba(0, 0, 0, 0.54)",

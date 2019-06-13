@@ -1,14 +1,17 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
-
-import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
-import {StandardRighthandCard} from 'modules/SharedComponents/Toolbox/StandardRighthandCard';
-import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
-import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
-
-import {PublicationsList, PublicationsListPaging, PublicationsListSorting, FacetsFilter} from 'modules/SharedComponents/PublicationsList';
+import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
+import { StandardRighthandCard } from 'modules/SharedComponents/Toolbox/StandardRighthandCard';
+import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
+import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
+import {
+    PublicationsList,
+    PublicationsListPaging,
+    PublicationsListSorting,
+    FacetsFilter
+} from 'modules/SharedComponents/PublicationsList';
 import locale from 'locale/components';
-import {routes, general} from 'config';
+import {routes} from 'config';
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
 
@@ -19,6 +22,7 @@ export default class MyRecords extends PureComponent {
         loadingPublicationsList: PropTypes.bool,
         publicationsListPagingData: PropTypes.object,
         exportPublicationsLoading: PropTypes.bool,
+        publicationsListCustomActions: PropTypes.array,
 
         initialFacets: PropTypes.object,
         accountLoading: PropTypes.bool,
@@ -65,7 +69,11 @@ export default class MyRecords extends PureComponent {
         if (this.props.location !== newProps.location
             && newProps.history.action === 'POP'
             && newProps.location.pathname === this.props.thisUrl) {
-            this.setState({...(!!newProps.location.state ? newProps.location.state : this.initState)}, () => {
+            this.setState({...(
+                !!newProps.location.state
+                    ? newProps.location.state
+                    : this.initState
+            )}, () => {
                 // only will be called when user clicks back on my records page
                 this.props.actions.loadAuthorPublications({...this.state});
             });
@@ -104,39 +112,19 @@ export default class MyRecords extends PureComponent {
     }
 
     facetsChanged = (activeFacets) => {
-        if (this.props.location.pathname === routes.pathConfig.dataset.mine) {
-            // this is a 'my research dataset' page
-            this.setState(
-                {
-                    activeFacets: this.getMyDatasetFacets(activeFacets),
-                    page: 1
-                }, this.pushPageHistory
-            );
-        } else {
-            this.setState(
-                {
-                    activeFacets: activeFacets,
-                    page: 1
-                }, this.pushPageHistory
-            );
-        }
+        this.setState(
+            {
+                activeFacets: activeFacets,
+                page: 1
+            }, this.pushPageHistory
+        );
     }
 
     hasDisplayableFilters = (activeFilters) => {
-        const localFilters = this.getMyDatasetFacets(activeFilters);
-        return localFilters && Object.keys(localFilters).length > 0;
-    }
-
-    getMyDatasetFacets = (activeFilters) => {
-        // on a 'my research data' page, we dont want the presence of 'Display type' to decide 'facet changed'
-        const displayType = 'Display type';
-        const localFilters = Object.assign({}, activeFilters);
-        if (Object.keys(localFilters).length > 0 &&
-            localFilters.hasOwnProperty(displayType) &&
-            localFilters[displayType] === general.PUBLICATION_TYPE_DATA_COLLECTION) {
-            delete localFilters[displayType];
-        }
-        return localFilters;
+        return Object.keys(activeFilters)
+            .filter(
+                filter => !this.props.localePages.facetsFilter.excludeFacetsList.includes(filter)
+            ).length > 0;
     }
 
     pushPageHistory = () => {
@@ -148,10 +136,6 @@ export default class MyRecords extends PureComponent {
         this.props.actions.loadAuthorPublications({...this.state});
     };
 
-    fixRecord = (item) => {
-        this.props.history.push(routes.pathConfig.records.fix(item.rek_pid));
-    }
-
     handleExportPublications = (exportFormat) => {
         this.props.actions.exportAuthorPublications({...exportFormat, ...this.state});
     }
@@ -162,6 +146,14 @@ export default class MyRecords extends PureComponent {
         const txt = this.props.localePages;
         const pagingData = this.props.publicationsListPagingData;
         const isLoadingOrExporting = this.props.loadingPublicationsList || this.props.exportPublicationsLoading;
+
+        const actionProps = (this.props.publicationsListCustomActions || []).length > 0 ?
+            {
+                customActions: this.props.publicationsListCustomActions
+            } :
+            {
+                showDefaultActions: true
+            };
 
         return (
             <StandardPage title={txt.pageTitle}>
@@ -229,7 +221,7 @@ export default class MyRecords extends PureComponent {
                                             !this.props.exportPublicationsLoading && !this.props.loadingPublicationsList && this.props.publicationsList && this.props.publicationsList.length > 0 &&
                                             <PublicationsList
                                                 publicationsList={this.props.publicationsList}
-                                                showDefaultActions />
+                                                { ...actionProps} />
                                         }
                                     </Grid>
                                     <Grid item xs={12}>
@@ -256,6 +248,7 @@ export default class MyRecords extends PureComponent {
                                             facetsData={this.props.publicationsListFacets}
                                             onFacetsChanged={this.facetsChanged}
                                             activeFacets={this.state.activeFacets}
+                                            initialFacets={this.props.initialFacets}
                                             disabled={isLoadingOrExporting}
                                             excludeFacetsList={txt.facetsFilter.excludeFacetsList}
                                             isMyDataSetPage={this.props.location.pathname === routes.pathConfig.dataset.mine}

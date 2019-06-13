@@ -109,6 +109,25 @@ describe('SearchRecords page', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should show available filters or selected filters if publicationsListFacets returned (even if there are no results) and should exclude facets from advanced search field', () => {
+        const wrapper = setup({
+            publicationsListFacets: {
+                'Some facet': 1,
+                'Another facet': 2
+            },
+            searchQuery: {
+                title: 'this is test'
+            },
+            publicationsList: []
+        });
+
+        wrapper.setState({
+            advancedSearchFields: ['Author']
+        });
+
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
     it('should show available filters or selected filters if activeFacets OA selected (even if there are no results)', () => {
         const wrapper = setup({
             searchQuery: {

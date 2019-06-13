@@ -106,6 +106,7 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
         item={true}
       >
         <WithStyles(IconButton)
+          aria-label="Hide advanced search"
           onClick={[Function]}
           tooltip="Hide advanced search"
         >
@@ -368,6 +369,7 @@ exports[`AdvancedSearchComponent should render advanced search docTypes with che
         item={true}
       >
         <WithStyles(IconButton)
+          aria-label="Hide advanced search"
           onClick={[Function]}
           tooltip="Hide advanced search"
         >
@@ -630,6 +632,7 @@ exports[`AdvancedSearchComponent should render advanced search row based on prop
         item={true}
       >
         <WithStyles(IconButton)
+          aria-label="Hide advanced search"
           onClick={[Function]}
           tooltip="Hide advanced search"
         >
@@ -880,6 +883,7 @@ exports[`AdvancedSearchComponent should render advanced search with no valid che
         item={true}
       >
         <WithStyles(IconButton)
+          aria-label="Hide advanced search"
           onClick={[Function]}
           tooltip="Hide advanced search"
         >
@@ -1142,6 +1146,7 @@ exports[`AdvancedSearchComponent should render date range fields 1`] = `
         item={true}
       >
         <WithStyles(IconButton)
+          aria-label="Hide advanced search"
           onClick={[Function]}
           tooltip="Hide advanced search"
         >
@@ -1440,6 +1445,7 @@ exports[`AdvancedSearchComponent should render default view 1`] = `
         item={true}
       >
         <WithStyles(IconButton)
+          aria-label="Hide advanced search"
           onClick={[Function]}
           tooltip="Hide advanced search"
         >
@@ -1692,6 +1698,7 @@ exports[`AdvancedSearchComponent should render default view with open access che
         item={true}
       >
         <WithStyles(IconButton)
+          aria-label="Hide advanced search"
           onClick={[Function]}
           tooltip="Hide advanced search"
         >
@@ -1944,6 +1951,7 @@ exports[`AdvancedSearchComponent should render minimised view 1`] = `
         item={true}
       >
         <WithStyles(IconButton)
+          aria-label="Show advanced search"
           onClick={[Function]}
           tooltip="Show advanced search"
         >
@@ -2023,6 +2031,7 @@ exports[`AdvancedSearchComponent should toggle minimised view for advanced searc
         item={true}
       >
         <WithStyles(IconButton)
+          aria-label="Hide advanced search"
           onClick={[Function]}
           tooltip="Hide advanced search"
         >

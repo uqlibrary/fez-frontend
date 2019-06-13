@@ -56,7 +56,7 @@ export default class DateRange extends React.Component {
     setValue = (key) => (event) => {
         const intValue = parseInt(event.target.value, 10);
         this.setState({
-            [key]: isNaN(intValue) || intValue < 0 || intValue > 9999 ? '*' : intValue
+            [key]: isNaN(intValue) || intValue < 0 || intValue > 9999 ? undefined : intValue
         });
     };
 
@@ -108,31 +108,28 @@ export default class DateRange extends React.Component {
         }
     }
 
-    getNestedItem = () => {
-        const isActive = this.state.isActive;
-        return (
-            !isActive
-                ? this.renderDateRangeForm()
-                : <FacetFilterNestedListItem
-                    onFacetClick={this.removeDateRange}
-                    isActive={isActive}
-                    primaryText={`${this.state.from} - ${this.state.to}`}
-                    disabled={this.props.disabled}
-                />
-        );
-    }
-
     render() {
         const txt = this.props.locale;
+        const isActive = this.state.isActive;
         return (
             <FacetFilterListItem
                 key="date-range"
                 facetTitle={txt.displayTitle}
                 disabled={this.props.disabled}
                 onToggle={this.props.onToggle}
-                nestedItems={this.getNestedItem()}
                 open={this.props.open}
-            />
+            >
+                {
+                    !isActive
+                        ? this.renderDateRangeForm()
+                        : <FacetFilterNestedListItem
+                            onFacetClick={this.removeDateRange}
+                            isActive={isActive}
+                            primaryText={`${this.state.from || '*'} - ${this.state.to || '*'}`}
+                            disabled={this.props.disabled}
+                        />
+                }
+            </FacetFilterListItem>
         );
     }
 }

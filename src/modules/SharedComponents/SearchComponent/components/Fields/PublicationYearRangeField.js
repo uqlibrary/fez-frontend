@@ -61,37 +61,49 @@ export class PublicationYearRangeField extends PureComponent {
                 </Grid>
                 <Grid container>
                     <Grid item zeroMinWidth style={{flexGrow: 1, width: 1}}>
+                        <InputLabel hidden id="from-label">{txt.fromAria}</InputLabel>
                         <TextField
                             fullWidth
-                            id={'to'}
+                            id="from"
                             value={this.props.yearFilter.from ? `${this.props.yearFilter.from}` : ''}
                             onChange={this.setValue('from')}
                             error={!!this.props.invalid}
                             helperText={this.props.invalid && txt.invalidText}
                             placeholder={txt.fromHint}
                             aria-label={txt.fromAria}
+                            inputProps={{
+                                'aria-labelledby': 'from-label'
+                            }}
                             disabled={this.props.disabled}
                         />
                     </Grid>
                     <Grid item xs={'auto'}>
+                        <InputLabel hidden id="combiner-label">to</InputLabel>
                         <TextField
                             style={{width: 24}}
                             value={' to '}
                             disabled
+                            inputProps={{
+                                'aria-labelledby': 'combiner-label'
+                            }}
                             InputProps={{disableUnderline: true}}
                         />
                     </Grid>
                     <Grid item zeroMinWidth style={{flexGrow: 1, width: 1}}>
+                        <InputLabel hidden id="to-label">{txt.toAria}</InputLabel>
                         <TextField
                             fullWidth
-                            id={'from'}
-                            InputLabelProps={{shrink: true}}
+                            id="to"
+                            aria-labelledby={'to-label'}
                             value={this.props.yearFilter.to ? `${this.props.yearFilter.to}` : ''}
                             onChange={this.setValue('to')}
                             error={!!this.props.invalid}
                             placeholder={txt.toHint}
                             aria-label={txt.toAria}
                             disabled={this.props.disabled}
+                            inputProps={{
+                                'aria-labelledby': 'to-label'
+                            }}
                         />
                     </Grid>
                 </Grid>

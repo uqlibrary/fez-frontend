@@ -62,6 +62,7 @@ exports[`Component PublicationForm Shows an alert 1`] = `
               }
               component={[Function]}
               disabled={false}
+              id="rek_display_type"
               label="Work type"
               name="rek_display_type"
               placeholder="Select a Work type from the dropdown list"
@@ -493,6 +494,7 @@ exports[`Component PublicationForm Shows an alert 2`] = `
               }
               component={[Function]}
               disabled={false}
+              id="rek_display_type"
               label="Work type"
               name="rek_display_type"
               placeholder="Select a Work type from the dropdown list"
@@ -964,6 +966,7 @@ exports[`Component PublicationForm Shows an alert 3`] = `
               }
               component={[Function]}
               disabled={false}
+              id="rek_display_type"
               label="Work type"
               name="rek_display_type"
               placeholder="Select a Work type from the dropdown list"
@@ -1435,6 +1438,7 @@ exports[`Component PublicationForm should call componentWillReceiveProps when pr
               }
               component={[Function]}
               disabled={false}
+              id="rek_display_type"
               label="Work type"
               name="rek_display_type"
               placeholder="Select a Work type from the dropdown list"
@@ -1866,6 +1870,7 @@ exports[`Component PublicationForm should call componentWillReceiveProps when pr
               }
               component={[Function]}
               disabled={false}
+              id="rek_display_type"
               label="Work type"
               name="rek_display_type"
               placeholder="Select a Work type from the dropdown list"
@@ -2316,6 +2321,7 @@ exports[`Component PublicationForm should call componentWillReceiveProps when pr
               }
               component={[Function]}
               disabled={false}
+              id="rek_display_type"
               label="Work type"
               name="rek_display_type"
               placeholder="Select a Work type from the dropdown list"
@@ -2779,6 +2785,7 @@ exports[`Component PublicationForm should call componentWillReceiveProps when pr
               }
               component={[Function]}
               disabled={false}
+              id="rek_display_type"
               label="Work type"
               name="rek_display_type"
               placeholder="Select a Work type from the dropdown list"
@@ -3242,6 +3249,7 @@ exports[`Component PublicationForm should render component initialised with just
               }
               component={[Function]}
               disabled={false}
+              id="rek_display_type"
               label="Work type"
               name="rek_display_type"
               placeholder="Select a Work type from the dropdown list"
@@ -3673,6 +3681,7 @@ exports[`Component PublicationForm should render component initialised with two 
               }
               component={[Function]}
               disabled={false}
+              id="rek_display_type"
               label="Work type"
               name="rek_display_type"
               placeholder="Select a Work type from the dropdown list"
@@ -4144,6 +4153,7 @@ exports[`Component PublicationForm should render component with BookForm 1`] = `
               }
               component={[Function]}
               disabled={false}
+              id="rek_display_type"
               label="Work type"
               name="rek_display_type"
               placeholder="Select a Work type from the dropdown list"
@@ -4651,6 +4661,7 @@ exports[`Component PublicationForm should render component with GenericDocument 
               }
               component={[Function]}
               disabled={false}
+              id="rek_display_type"
               label="Work type"
               name="rek_display_type"
               placeholder="Select a Work type from the dropdown list"
@@ -5155,6 +5166,7 @@ exports[`Component PublicationForm should render component with JournalArticleFo
               }
               component={[Function]}
               disabled={false}
+              id="rek_display_type"
               label="Work type"
               name="rek_display_type"
               placeholder="Select a Work type from the dropdown list"
@@ -5659,6 +5671,7 @@ exports[`Component PublicationForm should render component with ResearchReportFo
               }
               component={[Function]}
               disabled={false}
+              id="rek_display_type"
               label="Work type"
               name="rek_display_type"
               placeholder="Select a Work type from the dropdown list"
@@ -6163,6 +6176,7 @@ exports[`Component PublicationForm should render component with all fields disab
               }
               component={[Function]}
               disabled={true}
+              id="rek_display_type"
               label="Work type"
               name="rek_display_type"
               placeholder="Select a Work type from the dropdown list"

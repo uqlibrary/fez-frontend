@@ -44,13 +44,13 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
                               <p>
                                 1. I am the creator or co-creator of this dataset, or otherwise authorised to deposit or describe it;
                               </p>
-@@ -130,223 +130,315 @@
+@@ -130,137 +130,120 @@
                   >
                     <div
                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-12-57\\"
                     >
                       <div
--                       aria-describedby=\\"Dataset name-helper-text\\"
+-                       aria-describedby=\\"Datasetname-helper-text\\"
                         class=\\"MuiFormControl-root-231 MuiFormControl-fullWidth-234\\"
                       >
                         <label
@@ -58,7 +58,8 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 -                         data-shrink=\\"false\\"
 +                         class=\\"MuiFormLabel-root-242 MuiFormLabel-filled-246 MuiFormLabel-required-247 MuiInputLabel-root-235 MuiInputLabel-formControl-236 MuiInputLabel-animated-239 MuiInputLabel-shrink-238\\"
 +                         data-shrink=\\"true\\"
-                          for=\\"Dataset name\\"
+                          for=\\"Datasetname\\"
+                          id=\\"Datasetname-label\\"
                         >
                           Dataset name
                           <span
@@ -75,8 +76,11 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
                           <textarea
 -                           aria-invalid=\\"true\\"
 +                           aria-invalid=\\"false\\"
+                            aria-label=\\"Dataset name\\"
+                            aria-labelledby=\\"Datasetname-label\\"
                             class=\\"MuiInputBase-input-272 MuiInput-input-257 MuiInputBase-inputMultiline-274 MuiInput-inputMultiline-259\\"
-                            id=\\"Dataset name\\"
+                            id=\\"Datasetname\\"
+                            label=\\"Dataset name\\"
                             name=\\"rek_title\\"
                             placeholder=\\"Type the descriptive name for the dataset\\"
                             required=\\"\\"
@@ -85,7 +89,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 -                       </div>
 -                       <p
 -                         class=\\"MuiFormHelperText-root-360 MuiFormHelperText-error-361 MuiFormHelperText-required-367\\"
--                         id=\\"Dataset name-helper-text\\"
+-                         id=\\"Datasetname-helper-text\\"
                           >
 -                         This field is required
 -                       </p>
@@ -98,7 +102,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-12-57\\"
                     >
                       <div
--                       aria-describedby=\\"Dataset description-helper-text\\"
+-                       aria-describedby=\\"Datasetdescription-helper-text\\"
                         class=\\"MuiFormControl-root-231 MuiFormControl-fullWidth-234\\"
                       >
                         <label
@@ -106,7 +110,8 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 -                         data-shrink=\\"false\\"
 +                         class=\\"MuiFormLabel-root-242 MuiFormLabel-filled-246 MuiFormLabel-required-247 MuiInputLabel-root-235 MuiInputLabel-formControl-236 MuiInputLabel-animated-239 MuiInputLabel-shrink-238\\"
 +                         data-shrink=\\"true\\"
-                          for=\\"Dataset description\\"
+                          for=\\"Datasetdescription\\"
+                          id=\\"Datasetdescription-label\\"
                         >
                           Dataset description
                           <span
@@ -123,8 +128,11 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
                           <textarea
 -                           aria-invalid=\\"true\\"
 +                           aria-invalid=\\"false\\"
+                            aria-label=\\"Dataset description\\"
+                            aria-labelledby=\\"Datasetdescription-label\\"
                             class=\\"MuiInputBase-input-272 MuiInput-input-257 MuiInputBase-inputMultiline-274 MuiInput-inputMultiline-259\\"
-                            id=\\"Dataset description\\"
+                            id=\\"Datasetdescription\\"
+                            label=\\"Dataset description\\"
                             name=\\"rek_description\\"
                             placeholder=\\"Describe the dataset's topic(s) and theme(s)\\"
                             required=\\"\\"
@@ -133,7 +141,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 -                       </div>
 -                       <p
 -                         class=\\"MuiFormHelperText-root-360 MuiFormHelperText-error-361 MuiFormHelperText-required-367\\"
--                         id=\\"Dataset description-helper-text\\"
+-                         id=\\"Datasetdescription-helper-text\\"
                           >
 -                         This field is required
 -                       </p>
@@ -146,7 +154,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-6-51\\"
                     >
                       <div
--                       aria-describedby=\\"Contact name-helper-text\\"
+-                       aria-describedby=\\"Contactname-helper-text\\"
                         class=\\"MuiFormControl-root-231 MuiFormControl-fullWidth-234\\"
                       >
                         <label
@@ -154,7 +162,8 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 -                         data-shrink=\\"false\\"
 +                         class=\\"MuiFormLabel-root-242 MuiFormLabel-filled-246 MuiFormLabel-required-247 MuiInputLabel-root-235 MuiInputLabel-formControl-236 MuiInputLabel-animated-239 MuiInputLabel-shrink-238\\"
 +                         data-shrink=\\"true\\"
-                          for=\\"Contact name\\"
+                          for=\\"Contactname\\"
+                          id=\\"Contactname-label\\"
                         >
                           Contact name
                           <span
@@ -171,8 +180,11 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
                           <input
 -                           aria-invalid=\\"true\\"
 +                           aria-invalid=\\"false\\"
+                            aria-label=\\"Contact name\\"
+                            aria-labelledby=\\"Contactname-label\\"
                             class=\\"MuiInputBase-input-272 MuiInput-input-257\\"
-                            id=\\"Contact name\\"
+                            id=\\"Contactname\\"
+                            label=\\"Contact name\\"
                             name=\\"contact.contactName\\"
                             placeholder=\\"Type the name of primary contact for this dataset\\"
                             required=\\"\\"
@@ -183,7 +195,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
                         </div>
 -                       <p
 -                         class=\\"MuiFormHelperText-root-360 MuiFormHelperText-error-361 MuiFormHelperText-required-367\\"
--                         id=\\"Contact name-helper-text\\"
+-                         id=\\"Contactname-helper-text\\"
 -                       >
 -                         This field is required
 -                       </p>
@@ -192,15 +204,17 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
                     <div
                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-6-51\\"
                     >
-                      <div
-                        class=\\"AutoCompleteAsyncField-root-279\\"
-                      >
+@@ -272,107 +255,216 @@
+                          id=\\"ContactnameID-label\\"
+                        >
+                          Contact name ID
+                        </label>
                         <div
 -                         aria-expanded=\\"false\\"
 +                         aria-expanded=\\"true\\"
                           aria-haspopup=\\"listbox\\"
-                          aria-labelledby=\\"downshift-0-label\\"
-+                         aria-owns=\\"downshift-0-menu\\"
+                          aria-labelledby=\\"ContactnameID-label\\"
++                         aria-owns=\\"ContactnameID-menu\\"
                           class=\\"AutoCompleteAsyncField-container-280\\"
                           role=\\"combobox\\"
                         >
@@ -211,7 +225,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
                               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31\\"
                             >
                               <div
--                               aria-describedby=\\"Contact name ID-helper-text\\"
+-                               aria-describedby=\\"ContactnameID-input-helper-text\\"
                                 class=\\"MuiFormControl-root-231 MuiFormControl-fullWidth-234\\"
                               >
                                 <label
@@ -219,23 +233,27 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 -                                 data-shrink=\\"false\\"
 +                                 class=\\"MuiFormLabel-root-242 MuiFormLabel-filled-246 MuiInputLabel-root-235 MuiInputLabel-formControl-236 MuiInputLabel-animated-239 MuiInputLabel-shrink-238\\"
 +                                 data-shrink=\\"true\\"
-                                  for=\\"Contact name ID\\"
+                                  for=\\"ContactnameID-input\\"
+                                  id=\\"ContactnameID-input-label\\"
                                 >
                                   Contact name ID
                                 </label>
                                 <div
                                   aria-autocomplete=\\"list\\"
-+                                 aria-controls=\\"downshift-0-menu\\"
-                                  aria-labelledby=\\"downshift-0-label\\"
++                                 aria-controls=\\"ContactnameID-menu\\"
+                                  aria-labelledby=\\"ContactnameID-label\\"
 -                                 class=\\"MuiInputBase-root-262 MuiInput-root-249 AutoCompleteAsyncField-inputRoot-282 MuiInput-underline-253 MuiInputBase-error-268 MuiInput-error-254 MuiInputBase-fullWidth-271 MuiInput-fullWidth-256 MuiInputBase-formControl-263 MuiInput-formControl-250\\"
 +                                 class=\\"MuiInputBase-root-262 MuiInput-root-249 AutoCompleteAsyncField-inputRoot-282 MuiInput-underline-253 MuiInputBase-fullWidth-271 MuiInput-fullWidth-256 MuiInputBase-formControl-263 MuiInput-formControl-250\\"
                                 >
                                   <input
 -                                   aria-invalid=\\"true\\"
 +                                   aria-invalid=\\"false\\"
+                                    aria-label=\\"Contact name ID\\"
+                                    aria-labelledby=\\"ContactnameID-input-label\\"
                                     autocomplete=\\"off\\"
                                     class=\\"MuiInputBase-input-272 MuiInput-input-257\\"
-                                    id=\\"downshift-0-input\\"
+                                    id=\\"ContactnameID-input\\"
+                                    label=\\"Contact name ID\\"
                                     placeholder=\\"Type to search ID of primary contact for this dataset\\"
                                     type=\\"text\\"
 -                                   value=\\"\\"
@@ -246,8 +264,8 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 +                           </div>
 +                         </div>
 +                         <div
-+                           aria-labelledby=\\"downshift-0-label\\"
-+                           id=\\"downshift-0-menu\\"
++                           aria-labelledby=\\"ContactnameID-label\\"
++                           id=\\"ContactnameID-menu\\"
 +                           role=\\"listbox\\"
 +                         >
 +                           <div
@@ -262,7 +280,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 +                               <li
 +                                 aria-selected=\\"false\\"
 +                                 class=\\"MuiButtonBase-root-212 MuiListItem-root-384 MuiListItem-default-387 MuiListItem-gutters-391 MuiListItem-button-392 MuiMenuItem-root-382\\"
-+                                 id=\\"downshift-0-item-0\\"
++                                 id=\\"ContactnameID-item-0\\"
 +                                 role=\\"option\\"
 +                                 style=\\"font-weight: 400; white-space: normal; height: auto;\\"
 +                                 tabindex=\\"-1\\"
@@ -288,7 +306,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 +                               <li
 +                                 aria-selected=\\"false\\"
 +                                 class=\\"MuiButtonBase-root-212 MuiListItem-root-384 MuiListItem-default-387 MuiListItem-gutters-391 MuiListItem-button-392 MuiMenuItem-root-382\\"
-+                                 id=\\"downshift-0-item-1\\"
++                                 id=\\"ContactnameID-item-1\\"
 +                                 role=\\"option\\"
 +                                 style=\\"font-weight: 400; white-space: normal; height: auto;\\"
 +                                 tabindex=\\"-1\\"
@@ -314,7 +332,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 +                               <li
 +                                 aria-selected=\\"false\\"
 +                                 class=\\"MuiButtonBase-root-212 MuiListItem-root-384 MuiListItem-default-387 MuiListItem-gutters-391 MuiListItem-button-392 MuiMenuItem-root-382\\"
-+                                 id=\\"downshift-0-item-2\\"
++                                 id=\\"ContactnameID-item-2\\"
 +                                 role=\\"option\\"
 +                                 style=\\"font-weight: 400; white-space: normal; height: auto;\\"
 +                                 tabindex=\\"-1\\"
@@ -329,9 +347,10 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 +                                   </span>
                                     <p
 -                                 class=\\"MuiFormHelperText-root-360 MuiFormHelperText-error-361\\"
--                                 id=\\"Contact name ID-helper-text\\"
+-                                 id=\\"ContactnameID-input-helper-text\\"
 +                                     class=\\"MuiTypography-root-152 MuiTypography-body2-160 MuiTypography-colorTextSecondary-185 MuiListItemText-secondary-399\\"
-+                                   >
+                                    >
+-                                 This field is required
 +                                     75121
 +                                   </p>
 +                                 </div>
@@ -342,7 +361,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 +                               <li
 +                                 aria-selected=\\"false\\"
 +                                 class=\\"MuiButtonBase-root-212 MuiListItem-root-384 MuiListItem-default-387 MuiListItem-gutters-391 MuiListItem-button-392 MuiMenuItem-root-382\\"
-+                                 id=\\"downshift-0-item-3\\"
++                                 id=\\"ContactnameID-item-3\\"
 +                                 role=\\"option\\"
 +                                 style=\\"font-weight: 400; white-space: normal; height: auto;\\"
 +                                 tabindex=\\"-1\\"
@@ -357,8 +376,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 +                                   </span>
 +                                   <p
 +                                     class=\\"MuiTypography-root-152 MuiTypography-body2-160 MuiTypography-colorTextSecondary-185 MuiListItemText-secondary-399\\"
-                                    >
--                                 This field is required
++                                   >
 +                                     75875
                                     </p>
                                   </div>
@@ -376,7 +394,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-12-57\\"
                     >
                       <div
--                       aria-describedby=\\"Contact email-helper-text\\"
+-                       aria-describedby=\\"Contactemail-helper-text\\"
                         class=\\"MuiFormControl-root-231 MuiFormControl-fullWidth-234\\"
                       >
                         <label
@@ -384,7 +402,8 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 -                         data-shrink=\\"false\\"
 +                         class=\\"MuiFormLabel-root-242 MuiFormLabel-filled-246 MuiFormLabel-required-247 MuiInputLabel-root-235 MuiInputLabel-formControl-236 MuiInputLabel-animated-239 MuiInputLabel-shrink-238\\"
 +                         data-shrink=\\"true\\"
-                          for=\\"Contact email\\"
+                          for=\\"Contactemail\\"
+                          id=\\"Contactemail-label\\"
                         >
                           Contact email
                           <span
@@ -401,8 +420,11 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
                           <input
 -                           aria-invalid=\\"true\\"
 +                           aria-invalid=\\"false\\"
+                            aria-label=\\"Contact email\\"
+                            aria-labelledby=\\"Contactemail-label\\"
                             class=\\"MuiInputBase-input-272 MuiInput-input-257\\"
-                            id=\\"Contact email\\"
+                            id=\\"Contactemail\\"
+                            label=\\"Contact email\\"
                             name=\\"contact.contactEmail\\"
                             placeholder=\\"Type the email address of primary contact for this dataset\\"
                             required=\\"\\"
@@ -413,7 +435,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
                         </div>
 -                       <p
 -                         class=\\"MuiFormHelperText-root-360 MuiFormHelperText-error-361 MuiFormHelperText-required-367\\"
--                         id=\\"Contact email-helper-text\\"
+-                         id=\\"Contactemail-helper-text\\"
 -                       >
 -                         This field is required
 -                       </p>
@@ -422,7 +444,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
                     <div
                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-12-57\\"
                     >
-@@ -411,17 +503,17 @@
+@@ -445,17 +537,17 @@
                       >
                         <div
                           class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
@@ -442,8 +464,8 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
                             </span>
                           </label>
                         </div>
-@@ -443,14 +535,14 @@
-                              </label>
+@@ -471,14 +563,14 @@
+                            >
                               <div
                                 class=\\"MuiFormControl-root-231 MuiFormControl-fullWidth-234\\"
                               >
@@ -459,7 +481,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
                                     label=\\"day\\"
                                     maxlength=\\"2\\"
                                     name=\\"day\\"
-@@ -458,15 +550,10 @@
+@@ -486,21 +578,16 @@
                                     type=\\"text\\"
                                     value=\\"\\"
                                   />
@@ -474,12 +496,6 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
                             <div
                               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-4-35\\"
                             >
-                              <label
-@@ -474,11 +561,11 @@
-                                for=\\"month\\"
-                              >
-                                Month
-                              </label>
                               <div
 -                               class=\\"MuiInputBase-root-262 MuiInput-root-249 MuiInput-underline-253 MuiInputBase-error-268 MuiInput-error-254\\"
 +                               class=\\"MuiInputBase-root-262 MuiInput-root-249 MuiInput-underline-253\\"
@@ -488,8 +504,8 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
                                 <div
                                   class=\\"MuiSelect-root-285\\"
                                 >
-@@ -523,14 +610,14 @@
-                              </label>
+@@ -541,14 +628,14 @@
+                            >
                               <div
                                 class=\\"MuiFormControl-root-231 MuiFormControl-fullWidth-234\\"
                               >
@@ -505,39 +521,43 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
                                     label=\\"year\\"
                                     maxlength=\\"4\\"
                                     name=\\"year\\"
-@@ -592,43 +679,140 @@
+@@ -616,47 +703,144 @@
                         >
                           <div
                             class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31\\"
                           >
                             <div
--                             aria-describedby=\\"Field of research-helper-text\\"
+-                             aria-describedby=\\"Fieldofresearch-input-helper-text\\"
                               class=\\"MuiFormControl-root-231 MuiFormControl-fullWidth-234\\"
                             >
                               <label
 -                               class=\\"MuiFormLabel-root-242 MuiFormLabel-error-245 MuiInputLabel-root-235 MuiInputLabel-formControl-236 MuiInputLabel-animated-239\\"
 +                               class=\\"MuiFormLabel-root-242 MuiInputLabel-root-235 MuiInputLabel-formControl-236 MuiInputLabel-animated-239\\"
                                 data-shrink=\\"false\\"
-                                for=\\"Field of research\\"
+                                for=\\"Fieldofresearch-input\\"
+                                id=\\"Fieldofresearch-input-label\\"
                               >
                                 Field of research
                               </label>
                               <div
                                 aria-autocomplete=\\"list\\"
-                                aria-labelledby=\\"downshift-1-label\\"
+                                aria-labelledby=\\"Fieldofresearch-label\\"
 -                               class=\\"MuiInputBase-root-262 MuiInput-root-249 AutoCompleteAsyncField-inputRoot-282 MuiInput-underline-253 MuiInputBase-error-268 MuiInput-error-254 MuiInputBase-fullWidth-271 MuiInput-fullWidth-256 MuiInputBase-formControl-263 MuiInput-formControl-250\\"
 +                               class=\\"MuiInputBase-root-262 MuiInput-root-249 AutoCompleteAsyncField-inputRoot-282 MuiInput-underline-253 MuiInputBase-fullWidth-271 MuiInput-fullWidth-256 MuiInputBase-formControl-263 MuiInput-formControl-250\\"
                               >
                                 <input
 -                                 aria-invalid=\\"true\\"
 +                                 aria-invalid=\\"false\\"
+                                  aria-label=\\"Field of research\\"
+                                  aria-labelledby=\\"Fieldofresearch-input-label\\"
                                   autocomplete=\\"off\\"
                                   class=\\"MuiInputBase-input-272 MuiInput-input-257\\"
-                                  id=\\"downshift-1-input\\"
+                                  id=\\"Fieldofresearch-input\\"
+                                  label=\\"Field of research\\"
                                   placeholder=\\"Start typing code or field name and select from list\\"
                                   type=\\"text\\"
                                   value=\\"\\"
-+                               />
+                                />
 +                             </div>
 +                           </div>
 +                         </div>
@@ -558,7 +578,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 +                         >
 +                           Field of research
 +                         </span>
-+                       </div>
+                        </div>
 +                       <div
 +                         class=\\"MuiGrid-item-4 MuiGrid-grid-xs-2-33 MuiGrid-grid-sm-1-46 ListRowHeader-center-402\\"
 +                       >
@@ -581,7 +601,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 +                               <path
 +                                 d=\\"M0 0h24v24H0V0z\\"
 +                                 fill=\\"none\\"
-                                />
++                               />
 +                               <path
 +                                 d=\\"M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12l1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z\\"
 +                               />
@@ -595,7 +615,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 +                             class=\\"MuiTouchRipple-root-224\\"
 +                           />
 +                         </button>
-                        </div>
++                       </div>
 +                     </div>
 +                   </div>
 +                   <div
@@ -609,7 +629,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 +                       >
                           <p
 -                               class=\\"MuiFormHelperText-root-360 MuiFormHelperText-error-361\\"
--                               id=\\"Field of research-helper-text\\"
+-                               id=\\"Fieldofresearch-input-helper-text\\"
 +                           class=\\"MuiTypography-root-152 MuiTypography-body2-160\\"
                           >
 -                               Field of research values are required
@@ -654,7 +674,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
                     </div>
                   </div>
                 </div>
-@@ -673,26 +857,26 @@
+@@ -701,27 +885,27 @@
                       >
                         <div
                           class=\\"MuiFormControl-root-231 MuiFormControl-fullWidth-234\\"
@@ -664,6 +684,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 +                           class=\\"MuiFormLabel-root-242 MuiFormLabel-required-247 MuiInputLabel-root-235 MuiInputLabel-formControl-236 MuiInputLabel-animated-239\\"
                             data-shrink=\\"false\\"
                             for=\\"creators-name-as-published-field\\"
+                            id=\\"creators-name-as-published-field-label\\"
                           >
                             Enter each creator's name as published (eg. Smith, John)
                             <span
@@ -680,21 +701,17 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
                             <input
 -                             aria-invalid=\\"true\\"
 +                             aria-invalid=\\"false\\"
+                              aria-label=\\"Enter each creator's name as published (eg. Smith, John)\\"
+                              aria-labelledby=\\"creators-name-as-published-field-label\\"
                               autocomplete=\\"off\\"
                               class=\\"MuiInputBase-input-272 MuiInput-input-257\\"
                               id=\\"creators-name-as-published-field\\"
-                              placeholder=\\"Type the name exactly as published\\"
-                              required=\\"\\"
-@@ -772,20 +956,232 @@
-                        >
-                          <span
-                            class=\\"MuiButton-label-297\\"
-                          >
+@@ -818,19 +1002,232 @@
                             Add creator
-+                         </span>
-+                       </button>
-+                     </div>
-+                   </div>
+                          </span>
+                        </button>
+                      </div>
+                    </div>
 +                   <div
 +                     class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-8-25\\"
 +                   >
@@ -746,7 +763,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 +                                 class=\\"MuiTypography-root-152 MuiTypography-caption-162 MuiTypography-colorTextSecondary-185 MuiListItemText-secondary-399\\"
 +                               >
 +                                 Creator's role
-                                </span>
++                               </span>
 +                             </div>
 +                             <div
 +                               class=\\"MuiListItemText-root-395\\"
@@ -761,10 +778,12 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 +                           <div
 +                             class=\\"MuiListItemSecondaryAction-root-415\\"
 +                           >
-+                             <span
+                              <span
+-                     class=\\"MuiTypography-root-152 MuiTypography-caption-162 MuiTypography-colorError-186\\"
 +                               title=\\"Remove all items\\"
 +                             >
 +                               <button
++                                 aria-label=\\"Remove all items\\"
 +                                 class=\\"MuiButtonBase-root-212 MuiIconButton-root-206\\"
 +                                 tabindex=\\"0\\"
 +                                 type=\\"button\\"
@@ -798,14 +817,15 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 +                                 <span
 +                                   class=\\"MuiTouchRipple-root-224\\"
 +                                 />
-                                </button>
++                               </button>
 +                             </span>
 +                           </div>
 +                         </li>
 +                       </ul>
 +                       <ul
 +                         class=\\"MuiList-root-406 Connect-ContributorsEditor--list-294  MuiList-padding-407\\"
-+                       >
+                        >
+-                     This field is required
 +                         <li
 +                           class=\\"MuiListItem-container-385\\"
 +                         >
@@ -868,16 +888,14 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 +                                   </p>
 +                                 </div>
 +                               </div>
-                              </div>
-                            </div>
++                             </div>
++                           </div>
 +                           <div
 +                             class=\\"MuiListItemSecondaryAction-root-415\\"
 +                           >
-                              <span
--                     class=\\"MuiTypography-root-152 MuiTypography-caption-162 MuiTypography-colorError-186\\"
++                             <span
 +                               title=\\"Remove this item\\"
-                              >
--                     This field is required
++                             >
 +                               <button
 +                                 aria-label=\\"Remove this item\\"
 +                                 class=\\"MuiButtonBase-root-212 MuiIconButton-root-206\\"
@@ -909,18 +927,21 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 +                                 />
 +                               </button>
                               </span>
-                            </div>
++                           </div>
 +                         </li>
 +                       </ul>
-+                     </div>
-+                   </div>
-+                 </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
++             </div>
++           </div>
             <div
               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
-@@ -853,22 +1249,22 @@
+            >
+              <div
+                class=\\"MuiPaper-root-119 MuiPaper-elevation1-122 MuiPaper-rounded-120 MuiCard-root-118 Cards-card-114 StandardCard\\"
+@@ -895,23 +1292,23 @@
                     >
                       <div
                         class=\\"MuiFormControl-root-231 MuiFormControl-fullWidth-234\\"
@@ -930,6 +951,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 -                         data-shrink=\\"false\\"
 +                         class=\\"MuiFormLabel-root-242 MuiFormLabel-filled-246 MuiFormLabel-required-247 MuiInputLabel-root-235 MuiInputLabel-formControl-236 MuiInputLabel-animated-239 MuiInputLabel-shrink-238\\"
 +                         data-shrink=\\"true\\"
+                          id=\\"Access conditions-label\\"
                         >
                           Access conditions
                           <span
@@ -947,7 +969,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
                             class=\\"MuiSelect-root-285\\"
                           >
                             <div
-@@ -877,17 +1273,15 @@
+@@ -920,18 +1317,16 @@
                               class=\\"MuiSelect-select-286 MuiSelect-selectMenu-289 MuiInputBase-input-272 MuiInput-input-257\\"
                               id=\\"data-collection-access-selector\\"
                               role=\\"button\\"
@@ -959,15 +981,16 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 +                             Mediated Access
                             </div>
                             <input
+                              style=\\"border: 1px solid red;\\"
                               type=\\"hidden\\"
 -                             value=\\"\\"
-+                             value=\\"Mediated Access\\"
++                             value=\\"453618\\"
                             />
                             <svg
                               aria-hidden=\\"true\\"
                               class=\\"MuiSvgIcon-root-215 MuiSelect-icon-291\\"
                               focusable=\\"false\\"
-@@ -898,36 +1292,31 @@
+@@ -942,37 +1337,32 @@
                                 d=\\"M7 10l5 5 5-5z\\"
                               />
                             </svg>
@@ -991,6 +1014,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 -                         data-shrink=\\"false\\"
 +                         class=\\"MuiFormLabel-root-242 MuiFormLabel-filled-246 MuiFormLabel-required-247 MuiInputLabel-root-235 MuiInputLabel-formControl-236 MuiInputLabel-animated-239 MuiInputLabel-shrink-238\\"
 +                         data-shrink=\\"true\\"
+                          id=\\"Licensing and terms of access-label\\"
                         >
                           Licensing and terms of access
                           <span
@@ -1008,7 +1032,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
                             class=\\"MuiSelect-root-285\\"
                           >
                             <div
-@@ -936,17 +1325,15 @@
+@@ -981,18 +1371,16 @@
                               class=\\"MuiSelect-select-286 MuiSelect-selectMenu-289 MuiInputBase-input-272 MuiInput-input-257\\"
                               id=\\"data-collection-license-selector\\"
                               role=\\"button\\"
@@ -1020,6 +1044,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 +                             Creative Commons Attribution (only) http://creativecommons.org/licenses/by/3.0/deed.en_US
                             </div>
                             <input
+                              style=\\"border: 1px solid red;\\"
                               type=\\"hidden\\"
 -                             value=\\"\\"
 +                             value=\\"453608\\"
@@ -1028,7 +1053,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
                               aria-hidden=\\"true\\"
                               class=\\"MuiSvgIcon-root-215 MuiSelect-icon-291\\"
                               focusable=\\"false\\"
-@@ -957,15 +1344,10 @@
+@@ -1003,15 +1391,10 @@
                                 d=\\"M7 10l5 5 5-5z\\"
                               />
                             </svg>
@@ -1044,13 +1069,13 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
                     <div
                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-12-57 MuiGrid-grid-md-4-63\\"
                     >
-@@ -1025,84 +1407,74 @@
+@@ -1075,92 +1458,82 @@
                   >
                     <div
                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
                     >
                       <div
--                       aria-describedby=\\"Project name-helper-text\\"
+-                       aria-describedby=\\"Projectname-helper-text\\"
                         class=\\"MuiFormControl-root-231 MuiFormControl-fullWidth-234\\"
                       >
                         <label
@@ -1058,7 +1083,8 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 -                         data-shrink=\\"false\\"
 +                         class=\\"MuiFormLabel-root-242 MuiFormLabel-filled-246 MuiFormLabel-required-247 MuiInputLabel-root-235 MuiInputLabel-formControl-236 MuiInputLabel-animated-239 MuiInputLabel-shrink-238\\"
 +                         data-shrink=\\"true\\"
-                          for=\\"Project name\\"
+                          for=\\"Projectname\\"
+                          id=\\"Projectname-label\\"
                         >
                           Project name
                           <span
@@ -1075,8 +1101,11 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
                           <textarea
 -                           aria-invalid=\\"true\\"
 +                           aria-invalid=\\"false\\"
+                            aria-label=\\"Project name\\"
+                            aria-labelledby=\\"Projectname-label\\"
                             class=\\"MuiInputBase-input-272 MuiInput-input-257 MuiInputBase-inputMultiline-274 MuiInput-inputMultiline-259\\"
-                            id=\\"Project name\\"
+                            id=\\"Projectname\\"
+                            label=\\"Project name\\"
                             name=\\"fez_record_search_key_project_name.rek_project_name\\"
                             placeholder=\\"Type the name of the project that initiated the dataset\\"
                             required=\\"\\"
@@ -1085,20 +1114,20 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 -                       </div>
 -                       <p
 -                         class=\\"MuiFormHelperText-root-360 MuiFormHelperText-error-361 MuiFormHelperText-required-367\\"
--                         id=\\"Project name-helper-text\\"
+-                         id=\\"Projectname-helper-text\\"
                           >
 -                         This field is required
 -                       </p>
 +                           test project
 +                         </textarea>
-+                       </div>
+                        </div>
                       </div>
-                    </div>
++                   </div>
                     <div
                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
                     >
                       <div
--                       aria-describedby=\\"Project description-helper-text\\"
+-                       aria-describedby=\\"Projectdescription-helper-text\\"
                         class=\\"MuiFormControl-root-231 MuiFormControl-fullWidth-234\\"
                       >
                         <label
@@ -1106,7 +1135,8 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 -                         data-shrink=\\"false\\"
 +                         class=\\"MuiFormLabel-root-242 MuiFormLabel-filled-246 MuiFormLabel-required-247 MuiInputLabel-root-235 MuiInputLabel-formControl-236 MuiInputLabel-animated-239 MuiInputLabel-shrink-238\\"
 +                         data-shrink=\\"true\\"
-                          for=\\"Project description\\"
+                          for=\\"Projectdescription\\"
+                          id=\\"Projectdescription-label\\"
                         >
                           Project description
                           <span
@@ -1123,29 +1153,32 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
                           <textarea
 -                           aria-invalid=\\"true\\"
 +                           aria-invalid=\\"false\\"
+                            aria-label=\\"Project description\\"
+                            aria-labelledby=\\"Projectdescription-label\\"
                             class=\\"MuiInputBase-input-272 MuiInput-input-257 MuiInputBase-inputMultiline-274 MuiInput-inputMultiline-259\\"
-                            id=\\"Project description\\"
+                            id=\\"Projectdescription\\"
+                            label=\\"Project description\\"
                             name=\\"fez_record_search_key_project_description.rek_project_description\\"
                             placeholder=\\"Briefly describe the project, including purpose\\"
                             required=\\"\\"
                             rows=\\"1\\"
 -                         />
--                       </div>
--                       <p
--                         class=\\"MuiFormHelperText-root-360 MuiFormHelperText-error-361 MuiFormHelperText-required-367\\"
--                         id=\\"Project description-helper-text\\"
-                          >
--                         This field is required
--                       </p>
++                         >
 +                           test description
 +                         </textarea>
-+                       </div>
+                        </div>
+-                       <p
+-                         class=\\"MuiFormHelperText-root-360 MuiFormHelperText-error-361 MuiFormHelperText-required-367\\"
+-                         id=\\"Projectdescription-helper-text\\"
+-                       >
+-                         This field is required
+-                       </p>
                       </div>
                     </div>
                     <div
                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
                     >
-@@ -1897,107 +2269,11 @@
+@@ -1974,105 +2347,11 @@
                     </div>
                   </div>
                 </div>
@@ -1168,8 +1201,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 -                     class=\\"MuiGrid-container-3 MuiGrid-align-items-xs-flex-start-12 MuiGrid-align-content-xs-center-15 MuiGrid-justify-xs-center-20\\"
 -                   >
 -                     <div
--                       class=\\"MuiGrid-item-4 Alert-icon-369\\"
--                       id=\\"icon\\"
+-                       class=\\"MuiGrid-item-4 Alert-icon-369 alert-icon\\"
 -                     >
 -                       <svg
 -                         aria-hidden=\\"true\\"
@@ -1188,8 +1220,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 -                       </svg>
 -                     </div>
 -                     <div
--                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31 Alert-text-370\\"
--                       id=\\"text\\"
+-                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31 Alert-text-370 alert-text\\"
 -                     >
 -                       <b>
 -                         Validation - 
@@ -1253,12 +1284,12 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
           >
             <div
               class=\\"MuiGrid-item-4 MuiGrid-grid-sm-true-45\\"
-@@ -2022,21 +2298,23 @@
-            </div>
+@@ -2099,21 +2378,23 @@
             <div
               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-auto-44\\"
             >
               <button
+                aria-label=\\"Submit for approval\\"
 -               class=\\"MuiButtonBase-root-212 MuiButtonBase-disabled-213 MuiButton-root-296 MuiButton-contained-307 MuiButton-containedPrimary-308 MuiButton-raised-310 MuiButton-raisedPrimary-311 MuiButton-disabled-316 MuiButton-fullWidth-321\\"
 -               disabled=\\"\\"
 +               class=\\"MuiButtonBase-root-212 MuiButton-root-296 MuiButton-contained-307 MuiButton-containedPrimary-308 MuiButton-raised-310 MuiButton-raisedPrimary-311 MuiButton-fullWidth-321\\"

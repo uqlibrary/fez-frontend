@@ -459,6 +459,7 @@ export default class AddDataCollection extends Component {
                                 variant="contained"
                                 fullWidth
                                 children={formLocale.addDataset.cancel}
+                                aria-label={formLocale.addDataset.cancel}
                                 disabled={this.props.submitting}
                                 onClick={this._restartWorkflow}/>
                         </Grid>
@@ -469,6 +470,7 @@ export default class AddDataCollection extends Component {
                                 color="primary"
                                 fullWidth
                                 children={formLocale.addDataset.submit}
+                                aria-label={formLocale.addDataset.submit}
                                 onClick={this.props.handleSubmit}
                                 disabled={this.props.submitting || this.props.disableSubmit}/>
                         </Grid>

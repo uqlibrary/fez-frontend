@@ -113,7 +113,7 @@ exports[`Dashboard Rsearcher IDs test Full mount render to test withStyles/Theme
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -925,7 +925,7 @@ exports[`Dashboard Rsearcher IDs test Full mount render to test withStyles/Theme
                                       "accent": Object {
                                         "dark": "#2a557d",
                                         "light": "#54acff",
-                                        "main": "#4085C6",
+                                        "main": "#316799",
                                       },
                                       "action": Object {
                                         "active": "rgba(0, 0, 0, 0.54)",
@@ -1353,7 +1353,7 @@ exports[`Dashboard Rsearcher IDs test Full mount render to test withStyles/Theme
                                         "accent": Object {
                                           "dark": "#2a557d",
                                           "light": "#54acff",
-                                          "main": "#4085C6",
+                                          "main": "#316799",
                                         },
                                         "action": Object {
                                           "active": "rgba(0, 0, 0, 0.54)",
@@ -1936,7 +1936,7 @@ exports[`Dashboard Rsearcher IDs test Full mount render to test withStyles/Theme
                                       "accent": Object {
                                         "dark": "#2a557d",
                                         "light": "#54acff",
-                                        "main": "#4085C6",
+                                        "main": "#316799",
                                       },
                                       "action": Object {
                                         "active": "rgba(0, 0, 0, 0.54)",
@@ -2364,7 +2364,7 @@ exports[`Dashboard Rsearcher IDs test Full mount render to test withStyles/Theme
                                         "accent": Object {
                                           "dark": "#2a557d",
                                           "light": "#54acff",
-                                          "main": "#4085C6",
+                                          "main": "#316799",
                                         },
                                         "action": Object {
                                           "active": "rgba(0, 0, 0, 0.54)",
@@ -2947,7 +2947,7 @@ exports[`Dashboard Rsearcher IDs test Full mount render to test withStyles/Theme
                                       "accent": Object {
                                         "dark": "#2a557d",
                                         "light": "#54acff",
-                                        "main": "#4085C6",
+                                        "main": "#316799",
                                       },
                                       "action": Object {
                                         "active": "rgba(0, 0, 0, 0.54)",
@@ -3375,7 +3375,7 @@ exports[`Dashboard Rsearcher IDs test Full mount render to test withStyles/Theme
                                         "accent": Object {
                                           "dark": "#2a557d",
                                           "light": "#54acff",
-                                          "main": "#4085C6",
+                                          "main": "#316799",
                                         },
                                         "action": Object {
                                           "active": "rgba(0, 0, 0, 0.54)",
@@ -3958,7 +3958,7 @@ exports[`Dashboard Rsearcher IDs test Full mount render to test withStyles/Theme
                                       "accent": Object {
                                         "dark": "#2a557d",
                                         "light": "#54acff",
-                                        "main": "#4085C6",
+                                        "main": "#316799",
                                       },
                                       "action": Object {
                                         "active": "rgba(0, 0, 0, 0.54)",
@@ -4386,7 +4386,7 @@ exports[`Dashboard Rsearcher IDs test Full mount render to test withStyles/Theme
                                         "accent": Object {
                                           "dark": "#2a557d",
                                           "light": "#54acff",
-                                          "main": "#4085C6",
+                                          "main": "#316799",
                                         },
                                         "action": Object {
                                           "active": "rgba(0, 0, 0, 0.54)",
@@ -4969,7 +4969,7 @@ exports[`Dashboard Rsearcher IDs test Full mount render to test withStyles/Theme
                                       "accent": Object {
                                         "dark": "#2a557d",
                                         "light": "#54acff",
-                                        "main": "#4085C6",
+                                        "main": "#316799",
                                       },
                                       "action": Object {
                                         "active": "rgba(0, 0, 0, 0.54)",
@@ -5397,7 +5397,7 @@ exports[`Dashboard Rsearcher IDs test Full mount render to test withStyles/Theme
                                         "accent": Object {
                                           "dark": "#2a557d",
                                           "light": "#54acff",
-                                          "main": "#4085C6",
+                                          "main": "#316799",
                                         },
                                         "action": Object {
                                           "active": "rgba(0, 0, 0, 0.54)",
@@ -6038,7 +6038,7 @@ exports[`Dashboard Rsearcher IDs test Full mount render to test withStyles/Theme
                                         "accent": Object {
                                           "dark": "#2a557d",
                                           "light": "#54acff",
-                                          "main": "#4085C6",
+                                          "main": "#316799",
                                         },
                                         "action": Object {
                                           "active": "rgba(0, 0, 0, 0.54)",
