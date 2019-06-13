@@ -371,8 +371,8 @@ class SearchRecords extends PureComponent {
                         </Grid>
                     }
                     {
-                        this.props.publicationsListFacets
-                        && Object.keys(this.props.publicationsListFacets).length !== 0 &&
+                        this.props.publicationsListFacets &&
+                        Object.keys(this.props.publicationsListFacets).length !== 0 &&
                         <Hidden smDown>
                             <Grid item md={3}>
                                 <StandardRighthandCard title={txt.facetsFilter.title} help={txt.facetsFilter.help}>
@@ -381,7 +381,10 @@ class SearchRecords extends PureComponent {
                                         onFacetsChanged={this.facetsChanged}
                                         activeFacets={this.state.activeFacets}
                                         disabled={isLoadingOrExporting}
-                                        excludeFacetsList={this.state.advancedSearchFields}
+                                        excludeFacetsList={
+                                            this.state.advancedSearchFields.length && this.state.advancedSearchFields ||
+                                            locale.pages.searchRecords.facetsFilter.excludeFacetsList
+                                        }
                                         renameFacetsList={txt.facetsFilter.renameFacetsList}
                                         lookupFacetsList={txt.facetsFilter.lookupFacetsList}
                                         showOpenAccessFilter

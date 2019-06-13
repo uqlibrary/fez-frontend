@@ -5,7 +5,7 @@ exports[`SearchRecords Should be able to perform advanced search 1`] = `
 - First value
 + Second value
 
-@@ -16,81 +16,449 @@
+@@ -16,81 +16,476 @@
             >
               <div
                 class=\\"MuiCardContent-root-475\\"
@@ -35,6 +35,7 @@ exports[`SearchRecords Should be able to perform advanced search 1`] = `
 +                       class=\\"MuiGrid-item-347\\"
 +                     >
 +                       <button
++                         aria-label=\\"Hide advanced search\\"
 +                         class=\\"MuiButtonBase-root-557 MuiIconButton-root-612\\"
 +                         tabindex=\\"0\\"
 +                         tooltip=\\"Hide advanced search\\"
@@ -76,13 +77,11 @@ exports[`SearchRecords Should be able to perform advanced search 1`] = `
 +                       >
 +                         <div
 +                           class=\\"MuiGrid-item-347 MuiGrid-grid-xs-12-386 MuiGrid-grid-md-6-408\\"
-                          >
-                            <div
--                   class=\\"MuiGrid-container-346 MuiGrid-spacing-xs-16-369 MuiGrid-align-items-xs-center-354\\"
++                         >
++                           <div
 +                             class=\\"MuiGrid-container-346 MuiGrid-spacing-xs-16-369\\"
-                            >
-                              <div
--                     class=\\"MuiGrid-item-347 MuiGrid-grid-xs-true-374\\"
++                           >
++                             <div
 +                               class=\\"MuiGrid-item-347 AdvancedSearchRow-autoWidth-627\\"
 +                               style=\\"min-width: 200px;\\"
 +                             >
@@ -156,10 +155,11 @@ exports[`SearchRecords Should be able to perform advanced search 1`] = `
 +                                 >
 +                                   <input
 +                                     aria-invalid=\\"false\\"
++                                     aria-labelledby=\\"textfield-label\\"
 +                                     autocomplete=\\"search\\"
 +                                     class=\\"MuiInputBase-input-524 MuiInput-input-509 MuiInputBase-disabled-517 MuiInput-disabled-504 MuiInputBase-inputType-527 MuiInput-inputType-512 MuiInputBase-inputTypeSearch-528 MuiInput-inputTypeSearch-513\\"
 +                                     disabled=\\"\\"
-+                                     id=\\"searchField\\"
++                                     id=\\"textfield\\"
 +                                     name=\\"searchField0\\"
 +                                     placeholder=\\"Select a field to search on\\"
 +                                     type=\\"search\\"
@@ -174,11 +174,13 @@ exports[`SearchRecords Should be able to perform advanced search 1`] = `
 +                     </div>
 +                     <div
 +                       class=\\"MuiGrid-item-347 MuiGrid-grid-xs-12-386 MuiGrid-grid-md-4-406 AdvancedSearchComponent-sideBar-574\\"
-+                     >
-+                       <div
+                      >
+                        <div
+-                   class=\\"MuiGrid-container-346 MuiGrid-spacing-xs-16-369 MuiGrid-align-items-xs-center-354\\"
 +                         class=\\"MuiGrid-container-346 MuiGrid-spacing-xs-16-369\\"
-+                       >
-+                         <div
+                        >
+                          <div
+-                     class=\\"MuiGrid-item-347 MuiGrid-grid-xs-true-374\\"
 +                           class=\\"MuiGrid-item-347 MuiGrid-grid-xs-12-386\\"
                           >
                             <div
@@ -188,14 +190,13 @@ exports[`SearchRecords Should be able to perform advanced search 1`] = `
                                 class=\\"MuiFormLabel-root-494 MuiInputLabel-root-487 MuiInputLabel-formControl-488 MuiInputLabel-animated-491\\"
                                 data-shrink=\\"false\\"
 -                         for=\\"simpleSearchField\\"
-                              >
--                         Search eSpace
++                             >
 +                               Work type
-                              </label>
-                              <div
++                             </label>
++                             <div
 +                               aria-label=\\"Select multiple publications types to search on\\"
-                                class=\\"MuiInputBase-root-514 MuiInput-root-501 MuiInput-underline-505 MuiInputBase-fullWidth-523 MuiInput-fullWidth-508 MuiInputBase-formControl-515 MuiInput-formControl-502\\"
-                              >
++                               class=\\"MuiInputBase-root-514 MuiInput-root-501 MuiInput-underline-505 MuiInputBase-fullWidth-523 MuiInput-fullWidth-508 MuiInputBase-formControl-515 MuiInput-formControl-502\\"
++                             >
 +                               <div
 +                                 class=\\"MuiSelect-root-632\\"
 +                               >
@@ -210,12 +211,7 @@ exports[`SearchRecords Should be able to perform advanced search 1`] = `
 +                                     ​
 +                                   </span>
 +                                 </div>
-                                  <input
--                           aria-label=\\"Enter your search query to search eSpace and then press Enter\\"
--                           class=\\"MuiInputBase-input-524 MuiInput-input-509 MuiInputBase-inputType-527 MuiInput-inputType-512 MuiInputBase-inputTypeSearch-528 MuiInput-inputTypeSearch-513\\"
--                           id=\\"simpleSearchField\\"
--                           placeholder=\\"Enter your search query to search all fields in eSpace\\"
--                           type=\\"search\\"
++                                 <input
 +                                   type=\\"hidden\\"
 +                                   value=\\"\\"
 +                                 />
@@ -258,6 +254,13 @@ exports[`SearchRecords Should be able to perform advanced search 1`] = `
 +                               class=\\"MuiGrid-item-347 MuiGrid-zeroMinWidth-348\\"
 +                               style=\\"width: 1px;\\"
 +                             >
++                               <label
++                                 class=\\"MuiFormLabel-root-494 MuiInputLabel-root-487 MuiInputLabel-animated-491\\"
++                                 hidden=\\"\\"
++                                 id=\\"from-label\\"
++                               >
++                                 Enter a year to search from
++                               </label>
 +                               <div
 +                                 aria-label=\\"Enter a year to search from\\"
 +                                 class=\\"MuiFormControl-root-483 MuiFormControl-fullWidth-486\\"
@@ -267,8 +270,9 @@ exports[`SearchRecords Should be able to perform advanced search 1`] = `
 +                                 >
 +                                   <input
 +                                     aria-invalid=\\"false\\"
++                                     aria-labelledby=\\"from-label\\"
 +                                     class=\\"MuiInputBase-input-524 MuiInput-input-509\\"
-+                                     id=\\"to\\"
++                                     id=\\"from\\"
 +                                     placeholder=\\"Year from\\"
 +                                     type=\\"text\\"
 +                                     value=\\"\\"
@@ -279,15 +283,24 @@ exports[`SearchRecords Should be able to perform advanced search 1`] = `
 +                             <div
 +                               class=\\"MuiGrid-item-347 MuiGrid-grid-xs-auto-373\\"
 +                             >
++                               <label
++                                 class=\\"MuiFormLabel-root-494 MuiInputLabel-root-487 MuiInputLabel-animated-491\\"
++                                 hidden=\\"\\"
++                                 id=\\"combiner-label\\"
++                               >
++                                 to
++                               </label>
 +                               <div
 +                                 class=\\"MuiFormControl-root-483\\"
 +                                 style=\\"width: 24px;\\"
 +                               >
 +                                 <div
 +                                   class=\\"MuiInputBase-root-514 MuiInput-root-501 MuiInputBase-disabled-517 MuiInput-disabled-504 MuiInputBase-formControl-515 MuiInput-formControl-502\\"
-+                                 >
+                                  >
+-                         Search eSpace
 +                                   <input
 +                                     aria-invalid=\\"false\\"
++                                     aria-labelledby=\\"combiner-label\\"
 +                                     class=\\"MuiInputBase-input-524 MuiInput-input-509 MuiInputBase-disabled-517 MuiInput-disabled-504\\"
 +                                     disabled=\\"\\"
 +                                     type=\\"text\\"
@@ -300,27 +313,41 @@ exports[`SearchRecords Should be able to perform advanced search 1`] = `
 +                               class=\\"MuiGrid-item-347 MuiGrid-zeroMinWidth-348\\"
 +                               style=\\"width: 1px;\\"
 +                             >
-+                               <div
++                               <label
++                                 class=\\"MuiFormLabel-root-494 MuiInputLabel-root-487 MuiInputLabel-animated-491\\"
++                                 hidden=\\"\\"
++                                 id=\\"to-label\\"
++                               >
++                                 Enter a year to search to
+                                </label>
+                                <div
 +                                 aria-label=\\"Enter a year to search to\\"
++                                 aria-labelledby=\\"to-label\\"
 +                                 class=\\"MuiFormControl-root-483 MuiFormControl-fullWidth-486\\"
 +                               >
 +                                 <div
-+                                   class=\\"MuiInputBase-root-514 MuiInput-root-501 MuiInput-underline-505 MuiInputBase-fullWidth-523 MuiInput-fullWidth-508 MuiInputBase-formControl-515 MuiInput-formControl-502\\"
-+                                 >
-+                                   <input
+                                    class=\\"MuiInputBase-root-514 MuiInput-root-501 MuiInput-underline-505 MuiInputBase-fullWidth-523 MuiInput-fullWidth-508 MuiInputBase-formControl-515 MuiInput-formControl-502\\"
+                                  >
+                                    <input
+-                           aria-label=\\"Enter your search query to search eSpace and then press Enter\\"
+-                           class=\\"MuiInputBase-input-524 MuiInput-input-509 MuiInputBase-inputType-527 MuiInput-inputType-512 MuiInputBase-inputTypeSearch-528 MuiInput-inputTypeSearch-513\\"
+-                           id=\\"simpleSearchField\\"
+-                           placeholder=\\"Enter your search query to search all fields in eSpace\\"
+-                           type=\\"search\\"
 +                                     aria-invalid=\\"false\\"
++                                     aria-labelledby=\\"to-label\\"
 +                                     class=\\"MuiInputBase-input-524 MuiInput-input-509\\"
-+                                     id=\\"from\\"
++                                     id=\\"to\\"
 +                                     placeholder=\\"Year to\\"
 +                                     type=\\"text\\"
-                                      value=\\"\\"
-                                    />
++                                     value=\\"\\"
++                                   />
 +                                 </div>
-                                </div>
-                              </div>
-                            </div>
++                               </div>
++                             </div>
++                           </div>
 +                         </div>
-                          <div
++                         <div
 +                           class=\\"MuiGrid-item-347 MuiGrid-grid-xs-12-386\\"
 +                         >
 +                           <label
@@ -348,8 +375,8 @@ exports[`SearchRecords Should be able to perform advanced search 1`] = `
 +                                   class=\\"MuiSwitchBase-input-667\\"
 +                                   data-indeterminate=\\"false\\"
 +                                   type=\\"checkbox\\"
-+                                   value=\\"\\"
-+                                 />
+                                    value=\\"\\"
+                                  />
 +                               </span>
 +                               <span
 +                                 class=\\"MuiTouchRipple-root-560\\"
@@ -361,15 +388,15 @@ exports[`SearchRecords Should be able to perform advanced search 1`] = `
 +                               Open access
 +                             </span>
 +                           </label>
-+                         </div>
-+                       </div>
-+                     </div>
+                          </div>
+                        </div>
+                      </div>
 +                   </div>
 +                   <div
 +                     class=\\"MuiGrid-container-346 MuiGrid-spacing-xs-16-369\\"
 +                     style=\\"margin-top: 24px;\\"
 +                   >
-+                     <div
+                      <div
                         class=\\"MuiGrid-item-347 MuiGrid-grid-xs-12-386 MuiGrid-grid-sm-auto-387\\"
                       >
                         <button
@@ -423,7 +450,8 @@ exports[`SearchRecords Should be able to perform advanced search 1`] = `
                         >
                           <span
                             class=\\"MuiButton-label-532\\"
-+                         >
+                          >
+-                         Advanced search
 +                           Simple search
 +                         </span>
 +                         <span
@@ -437,8 +465,7 @@ exports[`SearchRecords Should be able to perform advanced search 1`] = `
 +                     />
 +                     <div
 +                       class=\\"MuiGrid-item-347 MuiGrid-grid-xs-12-386 MuiGrid-grid-md-4-406 AdvancedSearchComponent-searchButton-575\\"
-                      >
--                         Advanced search
++                     >
 +                       <button
 +                         aria-label=\\"Click to search eSpace\\"
 +                         class=\\"MuiButtonBase-root-557 MuiButton-root-531 MuiButton-contained-542 MuiButton-containedPrimary-543 MuiButton-raised-545 MuiButton-raisedPrimary-546 MuiButton-fullWidth-556\\"
@@ -480,7 +507,7 @@ exports[`SearchRecords Should be able to perform advanced search 2`] = `
 - First value
 + Second value
 
-@@ -100,11 +100,12 @@
+@@ -101,11 +101,12 @@
                                     <div
                                       class=\\"MuiSelect-root-632\\"
                                     >
@@ -501,7 +528,7 @@ exports[`SearchRecords Should be able to perform advanced search 3`] = `
 - First value
 + Second value
 
-@@ -92,29 +92,28 @@
+@@ -93,29 +93,28 @@
                               >
                                 <div
                                   class=\\"MuiFormControl-root-483 MuiFormControl-fullWidth-486\\"
@@ -536,7 +563,7 @@ exports[`SearchRecords Should be able to perform advanced search 3`] = `
                                         aria-hidden=\\"true\\"
                                         class=\\"MuiSvgIcon-root-618 MuiSelect-icon-638\\"
                                         focusable=\\"false\\"
-@@ -126,22 +125,22 @@
+@@ -127,22 +126,22 @@
                                         />
                                       </svg>
                                     </div>
@@ -564,7 +591,7 @@ exports[`SearchRecords Should be able to perform advanced search 3`] = `
                           </div>
                           <div
                             class=\\"MuiGrid-item-347 MuiGrid-grid-xs-12-386 MuiGrid-grid-md-6-408 AdvancedSearchRow-mobileInputRow-631\\"
-@@ -151,24 +150,23 @@
+@@ -152,25 +151,24 @@
                             >
                               <div
                                 class=\\"MuiGrid-item-347 MuiGrid-zeroMinWidth-348 AdvancedSearchRow-autoWidth-627\\"
@@ -580,11 +607,12 @@ exports[`SearchRecords Should be able to perform advanced search 3`] = `
                                   >
                                     <input
                                       aria-invalid=\\"false\\"
+                                      aria-labelledby=\\"textfield-label\\"
                                       autocomplete=\\"search\\"
 -                                     class=\\"MuiInputBase-input-524 MuiInput-input-509 MuiInputBase-disabled-517 MuiInput-disabled-504 MuiInputBase-inputType-527 MuiInput-inputType-512 MuiInputBase-inputTypeSearch-528 MuiInput-inputTypeSearch-513\\"
 -                                     disabled=\\"\\"
 +                                     class=\\"MuiInputBase-input-524 MuiInput-input-509 MuiInputBase-inputType-527 MuiInput-inputType-512 MuiInputBase-inputTypeSearch-528 MuiInput-inputTypeSearch-513\\"
-                                      id=\\"searchField\\"
+                                      id=\\"textfield\\"
                                       name=\\"searchField0\\"
 -                                     placeholder=\\"Select a field to search on\\"
 +                                     placeholder=\\"Add some text to search all fields with\\"
@@ -593,7 +621,7 @@ exports[`SearchRecords Should be able to perform advanced search 3`] = `
                                     />
                                   </div>
                                 </div>
-@@ -370,20 +368,22 @@
+@@ -397,20 +395,22 @@
                       <div
                         class=\\"MuiGrid-item-347 MuiGrid-grid-xs-12-386 MuiGrid-grid-sm-auto-387\\"
                       >
@@ -619,7 +647,7 @@ exports[`SearchRecords Should be able to perform advanced search 3`] = `
                       <div
                         class=\\"MuiGrid-item-347 MuiGrid-grid-xs-12-386 MuiGrid-grid-sm-auto-387\\"
                       >
-@@ -454,11 +454,34 @@
+@@ -481,11 +481,34 @@
                         class=\\"MuiGrid-item-347\\"
                         style=\\"padding-top: 24px;\\"
                       >
@@ -662,9 +690,9 @@ exports[`SearchRecords Should be able to perform advanced search 4`] = `
 - First value
 + Second value
 
-@@ -164,11 +164,11 @@
+@@ -166,11 +166,11 @@
                                       class=\\"MuiInputBase-input-524 MuiInput-input-509 MuiInputBase-inputType-527 MuiInput-inputType-512 MuiInputBase-inputTypeSearch-528 MuiInput-inputTypeSearch-513\\"
-                                      id=\\"searchField\\"
+                                      id=\\"textfield\\"
                                       name=\\"searchField0\\"
                                       placeholder=\\"Add some text to search all fields with\\"
                                       type=\\"search\\"
@@ -675,7 +703,7 @@ exports[`SearchRecords Should be able to perform advanced search 4`] = `
                                 </div>
                               </div>
                             </div>
-@@ -474,11 +474,11 @@
+@@ -501,11 +501,11 @@
                                contains 
                             </span>
                             <span
@@ -695,7 +723,7 @@ exports[`SearchRecords Should be able to perform advanced search 5`] = `
 - First value
 + Second value
 
-@@ -172,12 +172,144 @@
+@@ -174,12 +174,145 @@
                                 </div>
                               </div>
                             </div>
@@ -755,7 +783,7 @@ exports[`SearchRecords Should be able to perform advanced search 5`] = `
 +                                 >
 +                                   Please select a field to search
 +                                 </p>
-+                               </div>
+                                </div>
 +                             </div>
 +                             <div
 +                               class=\\"MuiGrid-item-347 MuiGrid-grid-xs-auto-373\\"
@@ -772,7 +800,7 @@ exports[`SearchRecords Should be able to perform advanced search 5`] = `
 +                           <div
 +                             class=\\"MuiGrid-container-346 MuiGrid-spacing-xs-16-369\\"
 +                           >
-+                             <div
+                              <div
 +                               class=\\"MuiGrid-item-347 MuiGrid-zeroMinWidth-348 AdvancedSearchRow-autoWidth-627\\"
 +                             >
 +                               <div
@@ -784,10 +812,11 @@ exports[`SearchRecords Should be able to perform advanced search 5`] = `
 +                                 >
 +                                   <input
 +                                     aria-invalid=\\"false\\"
++                                     aria-labelledby=\\"textfield-label\\"
 +                                     autocomplete=\\"search\\"
 +                                     class=\\"MuiInputBase-input-524 MuiInput-input-509 MuiInputBase-disabled-517 MuiInput-disabled-504 MuiInputBase-inputType-527 MuiInput-inputType-512 MuiInputBase-inputTypeSearch-528 MuiInput-inputTypeSearch-513\\"
 +                                     disabled=\\"\\"
-+                                     id=\\"searchField\\"
++                                     id=\\"textfield\\"
 +                                     name=\\"searchField1\\"
 +                                     placeholder=\\"Select a field to search on\\"
 +                                     type=\\"search\\"
@@ -795,8 +824,8 @@ exports[`SearchRecords Should be able to perform advanced search 5`] = `
 +                                   />
 +                                 </div>
 +                               </div>
-                              </div>
-                              <div
++                             </div>
++                             <div
 +                               class=\\"MuiGrid-item-347 AdvancedSearchRow-advancedSearchRowDeleteButton-628\\"
 +                             >
 +                               <button
@@ -840,7 +869,7 @@ exports[`SearchRecords Should be able to perform advanced search 5`] = `
                         <div
                           class=\\"MuiGrid-container-346 MuiGrid-spacing-xs-16-369\\"
                         >
-@@ -368,22 +500,20 @@
+@@ -395,22 +528,20 @@
                       <div
                         class=\\"MuiGrid-item-347 MuiGrid-grid-xs-12-386 MuiGrid-grid-sm-auto-387\\"
                       >
@@ -873,7 +902,7 @@ exports[`SearchRecords Should be able to perform advanced search 6`] = `
 - First value
 + Second value
 
-@@ -197,11 +197,12 @@
+@@ -199,11 +199,12 @@
                                     <div
                                       class=\\"MuiSelect-root-632\\"
                                     >
@@ -894,7 +923,7 @@ exports[`SearchRecords Should be able to perform advanced search 7`] = `
 - First value
 + Second value
 
-@@ -189,29 +189,28 @@
+@@ -191,29 +191,28 @@
                               >
                                 <div
                                   class=\\"MuiFormControl-root-483 MuiFormControl-fullWidth-486\\"
@@ -929,7 +958,7 @@ exports[`SearchRecords Should be able to perform advanced search 7`] = `
                                         aria-hidden=\\"true\\"
                                         class=\\"MuiSvgIcon-root-618 MuiSelect-icon-638\\"
                                         focusable=\\"false\\"
-@@ -223,22 +222,22 @@
+@@ -225,22 +224,22 @@
                                         />
                                       </svg>
                                     </div>
@@ -957,14 +986,14 @@ exports[`SearchRecords Should be able to perform advanced search 7`] = `
                           </div>
                           <div
                             class=\\"MuiGrid-item-347 MuiGrid-grid-xs-12-386 MuiGrid-grid-md-6-408 AdvancedSearchRow-mobileInputRow-631\\"
-@@ -248,28 +247,34 @@
+@@ -250,29 +249,35 @@
                             >
                               <div
                                 class=\\"MuiGrid-item-347 MuiGrid-zeroMinWidth-348 AdvancedSearchRow-autoWidth-627\\"
                               >
                                 <div
 -                                 aria-label=\\"Select a field to search on\\"
-+                                 aria-describedby=\\"searchField-helper-text\\"
++                                 aria-describedby=\\"textfield-helper-text\\"
 +                                 aria-label=\\"Type a title to search for\\"
                                   class=\\"MuiFormControl-root-483 MuiFormControl-fullWidth-486\\"
                                 >
@@ -975,11 +1004,12 @@ exports[`SearchRecords Should be able to perform advanced search 7`] = `
                                     <input
 -                                     aria-invalid=\\"false\\"
 +                                     aria-invalid=\\"true\\"
+                                      aria-labelledby=\\"textfield-label\\"
                                       autocomplete=\\"search\\"
 -                                     class=\\"MuiInputBase-input-524 MuiInput-input-509 MuiInputBase-disabled-517 MuiInput-disabled-504 MuiInputBase-inputType-527 MuiInput-inputType-512 MuiInputBase-inputTypeSearch-528 MuiInput-inputTypeSearch-513\\"
 -                                     disabled=\\"\\"
 +                                     class=\\"MuiInputBase-input-524 MuiInput-input-509 MuiInputBase-inputType-527 MuiInput-inputType-512 MuiInputBase-inputTypeSearch-528 MuiInput-inputTypeSearch-513\\"
-                                      id=\\"searchField\\"
+                                      id=\\"textfield\\"
                                       name=\\"searchField1\\"
 -                                     placeholder=\\"Select a field to search on\\"
 +                                     placeholder=\\"Add a title\\"
@@ -989,7 +1019,7 @@ exports[`SearchRecords Should be able to perform advanced search 7`] = `
                                   </div>
 +                                 <p
 +                                   class=\\"MuiFormHelperText-root-643 MuiFormHelperText-error-644\\"
-+                                   id=\\"searchField-helper-text\\"
++                                   id=\\"textfield-helper-text\\"
 +                                 >
 +                                   This field is required
 +                                 </p>
@@ -998,7 +1028,7 @@ exports[`SearchRecords Should be able to perform advanced search 7`] = `
                               <div
                                 class=\\"MuiGrid-item-347 AdvancedSearchRow-advancedSearchRowDeleteButton-628\\"
                               >
-@@ -560,23 +565,21 @@
+@@ -588,23 +593,21 @@
                       <div
                         class=\\"MuiGrid-item-347 MuiGrid-grid-xs-12-386 MuiGrid-grid-md-4-406 AdvancedSearchComponent-searchButton-575\\"
                       >
@@ -1032,13 +1062,13 @@ exports[`SearchRecords Should be able to perform advanced search 8`] = `
 - First value
 + Second value
 
-@@ -247,34 +247,27 @@
+@@ -249,35 +249,28 @@
                             >
                               <div
                                 class=\\"MuiGrid-item-347 MuiGrid-zeroMinWidth-348 AdvancedSearchRow-autoWidth-627\\"
                               >
                                 <div
--                                 aria-describedby=\\"searchField-helper-text\\"
+-                                 aria-describedby=\\"textfield-helper-text\\"
                                   aria-label=\\"Type a title to search for\\"
                                   class=\\"MuiFormControl-root-483 MuiFormControl-fullWidth-486\\"
                                 >
@@ -1049,9 +1079,10 @@ exports[`SearchRecords Should be able to perform advanced search 8`] = `
                                     <input
 -                                     aria-invalid=\\"true\\"
 +                                     aria-invalid=\\"false\\"
+                                      aria-labelledby=\\"textfield-label\\"
                                       autocomplete=\\"search\\"
                                       class=\\"MuiInputBase-input-524 MuiInput-input-509 MuiInputBase-inputType-527 MuiInput-inputType-512 MuiInputBase-inputTypeSearch-528 MuiInput-inputTypeSearch-513\\"
-                                      id=\\"searchField\\"
+                                      id=\\"textfield\\"
                                       name=\\"searchField1\\"
                                       placeholder=\\"Add a title\\"
                                       type=\\"search\\"
@@ -1061,7 +1092,7 @@ exports[`SearchRecords Should be able to perform advanced search 8`] = `
                                   </div>
 -                                 <p
 -                                   class=\\"MuiFormHelperText-root-643 MuiFormHelperText-error-644\\"
--                                   id=\\"searchField-helper-text\\"
+-                                   id=\\"textfield-helper-text\\"
 -                                 >
 -                                   This field is required
 -                                 </p>
@@ -1070,7 +1101,7 @@ exports[`SearchRecords Should be able to perform advanced search 8`] = `
                               <div
                                 class=\\"MuiGrid-item-347 AdvancedSearchRow-advancedSearchRowDeleteButton-628\\"
                               >
-@@ -506,20 +499,22 @@
+@@ -534,20 +527,22 @@
                       <div
                         class=\\"MuiGrid-item-347 MuiGrid-grid-xs-12-386 MuiGrid-grid-sm-auto-387\\"
                       >
@@ -1096,7 +1127,7 @@ exports[`SearchRecords Should be able to perform advanced search 8`] = `
                       <div
                         class=\\"MuiGrid-item-347 MuiGrid-grid-xs-12-386 MuiGrid-grid-sm-auto-387\\"
                       >
-@@ -565,21 +560,23 @@
+@@ -593,21 +588,23 @@
                       <div
                         class=\\"MuiGrid-item-347 MuiGrid-grid-xs-12-386 MuiGrid-grid-md-4-406 AdvancedSearchComponent-searchButton-575\\"
                       >
@@ -1123,7 +1154,7 @@ exports[`SearchRecords Should be able to perform advanced search 8`] = `
                     </div>
                     <div
                       class=\\"MuiGrid-container-346\\"
-@@ -609,10 +606,32 @@
+@@ -637,10 +634,32 @@
                             </span>
                             <span
                               class=\\"AdvancedSearchCaption-value-671\\"
@@ -1163,7 +1194,7 @@ exports[`SearchRecords Should be able to perform advanced search 9`] = `
 - First value
 + Second value
 
-@@ -324,21 +324,20 @@
+@@ -327,21 +327,20 @@
                               >
                                 Work type
                               </label>
@@ -1187,7 +1218,7 @@ exports[`SearchRecords Should be able to perform advanced search 9`] = `
                                       ​
                                     </span>
                                   </div>
-@@ -388,15 +387,16 @@
+@@ -398,16 +397,17 @@
                                 <div
                                   aria-label=\\"Enter a year to search from\\"
                                   class=\\"MuiFormControl-root-483 MuiFormControl-fullWidth-486\\"
@@ -1198,17 +1229,18 @@ exports[`SearchRecords Should be able to perform advanced search 9`] = `
                                   >
                                     <input
                                       aria-invalid=\\"false\\"
+                                      aria-labelledby=\\"from-label\\"
 -                                     class=\\"MuiInputBase-input-524 MuiInput-input-509\\"
 +                                     class=\\"MuiInputBase-input-524 MuiInput-input-509 MuiInputBase-disabled-517 MuiInput-disabled-504\\"
 +                                     disabled=\\"\\"
-                                      id=\\"to\\"
+                                      id=\\"from\\"
                                       placeholder=\\"Year from\\"
                                       type=\\"text\\"
                                       value=\\"\\"
                                     />
-@@ -430,15 +430,16 @@
-                                <div
+@@ -457,16 +457,17 @@
                                   aria-label=\\"Enter a year to search to\\"
+                                  aria-labelledby=\\"to-label\\"
                                   class=\\"MuiFormControl-root-483 MuiFormControl-fullWidth-486\\"
                                 >
                                   <div
@@ -1217,15 +1249,16 @@ exports[`SearchRecords Should be able to perform advanced search 9`] = `
                                   >
                                     <input
                                       aria-invalid=\\"false\\"
+                                      aria-labelledby=\\"to-label\\"
 -                                     class=\\"MuiInputBase-input-524 MuiInput-input-509\\"
 +                                     class=\\"MuiInputBase-input-524 MuiInput-input-509 MuiInputBase-disabled-517 MuiInput-disabled-504\\"
 +                                     disabled=\\"\\"
-                                      id=\\"from\\"
+                                      id=\\"to\\"
                                       placeholder=\\"Year to\\"
                                       type=\\"text\\"
                                       value=\\"\\"
                                     />
-@@ -449,15 +450,16 @@
+@@ -477,15 +478,16 @@
                           </div>
                           <div
                             class=\\"MuiGrid-item-347 MuiGrid-grid-xs-12-386\\"
@@ -1244,7 +1277,7 @@ exports[`SearchRecords Should be able to perform advanced search 9`] = `
                                   class=\\"MuiIconButton-label-617\\"
                                 >
                                   <svg
-@@ -472,20 +474,18 @@
+@@ -500,20 +502,18 @@
                                     />
                                   </svg>
                                   <input
@@ -1267,7 +1300,7 @@ exports[`SearchRecords Should be able to perform advanced search 9`] = `
                               </span>
                             </label>
                           </div>
-@@ -499,22 +499,20 @@
+@@ -527,22 +527,20 @@
                       <div
                         class=\\"MuiGrid-item-347 MuiGrid-grid-xs-12-386 MuiGrid-grid-sm-auto-387\\"
                       >
@@ -1293,7 +1326,7 @@ exports[`SearchRecords Should be able to perform advanced search 9`] = `
                       <div
                         class=\\"MuiGrid-item-347 MuiGrid-grid-xs-12-386 MuiGrid-grid-sm-auto-387\\"
                       >
-@@ -560,23 +558,21 @@
+@@ -588,23 +586,21 @@
                       <div
                         class=\\"MuiGrid-item-347 MuiGrid-grid-xs-12-386 MuiGrid-grid-md-4-406 AdvancedSearchComponent-searchButton-575\\"
                       >
@@ -1320,7 +1353,7 @@ exports[`SearchRecords Should be able to perform advanced search 9`] = `
                     </div>
                     <div
                       class=\\"MuiGrid-container-346\\"
-@@ -635,10 +631,286 @@
+@@ -663,10 +659,286 @@
                         </div>
                       </div>
                     </div>
@@ -1614,7 +1647,7 @@ exports[`SearchRecords Should be able to perform advanced search 10`] = `
 - First value
 + Second value
 
-@@ -324,20 +324,21 @@
+@@ -327,20 +327,21 @@
                               >
                                 Work type
                               </label>
@@ -1638,7 +1671,7 @@ exports[`SearchRecords Should be able to perform advanced search 10`] = `
                                       ​
                                     </span>
                                   </div>
-@@ -387,16 +388,15 @@
+@@ -397,17 +398,16 @@
                                 <div
                                   aria-label=\\"Enter a year to search from\\"
                                   class=\\"MuiFormControl-root-483 MuiFormControl-fullWidth-486\\"
@@ -1649,17 +1682,18 @@ exports[`SearchRecords Should be able to perform advanced search 10`] = `
                                   >
                                     <input
                                       aria-invalid=\\"false\\"
+                                      aria-labelledby=\\"from-label\\"
 -                                     class=\\"MuiInputBase-input-524 MuiInput-input-509 MuiInputBase-disabled-517 MuiInput-disabled-504\\"
 -                                     disabled=\\"\\"
 +                                     class=\\"MuiInputBase-input-524 MuiInput-input-509\\"
-                                      id=\\"to\\"
+                                      id=\\"from\\"
                                       placeholder=\\"Year from\\"
                                       type=\\"text\\"
                                       value=\\"\\"
                                     />
-@@ -430,16 +430,15 @@
-                                <div
+@@ -457,17 +457,16 @@
                                   aria-label=\\"Enter a year to search to\\"
+                                  aria-labelledby=\\"to-label\\"
                                   class=\\"MuiFormControl-root-483 MuiFormControl-fullWidth-486\\"
                                 >
                                   <div
@@ -1668,15 +1702,16 @@ exports[`SearchRecords Should be able to perform advanced search 10`] = `
                                   >
                                     <input
                                       aria-invalid=\\"false\\"
+                                      aria-labelledby=\\"to-label\\"
 -                                     class=\\"MuiInputBase-input-524 MuiInput-input-509 MuiInputBase-disabled-517 MuiInput-disabled-504\\"
 -                                     disabled=\\"\\"
 +                                     class=\\"MuiInputBase-input-524 MuiInput-input-509\\"
-                                      id=\\"from\\"
+                                      id=\\"to\\"
                                       placeholder=\\"Year to\\"
                                       type=\\"text\\"
                                       value=\\"\\"
                                     />
-@@ -450,16 +449,15 @@
+@@ -478,16 +477,15 @@
                           </div>
                           <div
                             class=\\"MuiGrid-item-347 MuiGrid-grid-xs-12-386\\"
@@ -1695,7 +1730,7 @@ exports[`SearchRecords Should be able to perform advanced search 10`] = `
                                   class=\\"MuiIconButton-label-617\\"
                                 >
                                   <svg
-@@ -474,18 +472,20 @@
+@@ -502,18 +500,20 @@
                                     />
                                   </svg>
                                   <input
@@ -1718,7 +1753,7 @@ exports[`SearchRecords Should be able to perform advanced search 10`] = `
                               </span>
                             </label>
                           </div>
-@@ -499,20 +499,22 @@
+@@ -527,20 +527,22 @@
                       <div
                         class=\\"MuiGrid-item-347 MuiGrid-grid-xs-12-386 MuiGrid-grid-sm-auto-387\\"
                       >
@@ -1744,7 +1779,7 @@ exports[`SearchRecords Should be able to perform advanced search 10`] = `
                       <div
                         class=\\"MuiGrid-item-347 MuiGrid-grid-xs-12-386 MuiGrid-grid-sm-auto-387\\"
                       >
-@@ -558,21 +560,23 @@
+@@ -586,21 +588,23 @@
                       <div
                         class=\\"MuiGrid-item-347 MuiGrid-grid-xs-12-386 MuiGrid-grid-md-4-406 AdvancedSearchComponent-searchButton-575\\"
                       >
@@ -1771,7 +1806,7 @@ exports[`SearchRecords Should be able to perform advanced search 10`] = `
                     </div>
                     <div
                       class=\\"MuiGrid-container-346\\"
-@@ -650,11 +654,11 @@
+@@ -678,11 +682,11 @@
                 >
                   <div
                     class=\\"MuiGrid-item-347 MuiGrid-grid-xs-12-386\\"
@@ -1784,7 +1819,7 @@ exports[`SearchRecords Should be able to perform advanced search 10`] = `
                   <div
                     class=\\"MuiGrid-item-347 MuiGrid-grid-xs-12-386\\"
                   >
-@@ -672,20 +676,21 @@
+@@ -700,20 +704,21 @@
                             data-shrink=\\"true\\"
                           >
                             Sort results by
@@ -1808,7 +1843,7 @@ exports[`SearchRecords Should be able to perform advanced search 10`] = `
                               </div>
                               <input
                                 id=\\"sortBy\\"
-@@ -718,20 +723,21 @@
+@@ -746,20 +751,21 @@
                             data-shrink=\\"true\\"
                           >
                             Sort order
@@ -1832,7 +1867,7 @@ exports[`SearchRecords Should be able to perform advanced search 10`] = `
                               </div>
                               <input
                                 id=\\"sortOrder\\"
-@@ -764,20 +770,21 @@
+@@ -792,20 +798,21 @@
                             data-shrink=\\"true\\"
                           >
                             Records per page
@@ -1856,7 +1891,7 @@ exports[`SearchRecords Should be able to perform advanced search 10`] = `
                               </div>
                               <input
                                 id=\\"pageSize\\"
-@@ -810,20 +817,21 @@
+@@ -838,20 +845,21 @@
                             data-shrink=\\"true\\"
                           >
                             Export results
@@ -1880,7 +1915,7 @@ exports[`SearchRecords Should be able to perform advanced search 10`] = `
                               </div>
                               <input
                                 id=\\"exportPublicationsFormat\\"
-@@ -847,70 +855,533 @@
+@@ -875,70 +883,533 @@
                       </div>
                     </div>
                   </div>

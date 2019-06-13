@@ -267,7 +267,6 @@ export const getRecordContributorsSearchKey = (authors) => {
 
     return {
         fez_record_search_key_contributor: authors.map((item, index) => ({
-            rek_contributor_id: null,
             rek_contributor: item.nameAsPublished,
             rek_contributor_order: index + 1
         }))

@@ -37,4 +37,14 @@ describe('Facet filter nested list item ', () => {
         const wrapper = setup({ primaryText: 'Test filter', isActive: false }, false);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+
+    it('should render memoised version of the filter view', () => {
+        const wrapper = setup({ primaryText: 'Test filter', isActive: true, disabled: true }, false);
+        expect(toJson(wrapper)).toMatchSnapshot();
+        wrapper.setProps({
+            inActive: true,
+            disabled: true
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });

@@ -1065,7 +1065,7 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
               xs={12}
             >
               <WithStyles(Typography)>
-                You can select multiple indicators for a work, but cannot remove existing ones. To change existing information, submit as a correction below.
+                You can select multiple (up to 3) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
               </WithStyles(Typography)>
             </WithStyles(Grid)>
             <WithStyles(Grid)
@@ -3220,7 +3220,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
               xs={12}
             >
               <WithStyles(Typography)>
-                You can select multiple indicators for a work, but cannot remove existing ones. To change existing information, submit as a correction below.
+                You can select multiple (up to 3) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
               </WithStyles(Typography)>
             </WithStyles(Grid)>
             <WithStyles(Grid)
@@ -5533,7 +5533,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
               xs={12}
             >
               <WithStyles(Typography)>
-                You can select multiple indicators for a work, but cannot remove existing ones. To change existing information, submit as a correction below.
+                You can select multiple (up to 3) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
               </WithStyles(Typography)>
             </WithStyles(Grid)>
             <WithStyles(Grid)
@@ -6960,7 +6960,7 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
               xs={12}
             >
               <WithStyles(Typography)>
-                You can select multiple indicators for a work, but cannot remove existing ones. To change existing information, submit as a correction below.
+                You can select multiple (up to 3) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
               </WithStyles(Typography)>
             </WithStyles(Grid)>
             <WithStyles(Grid)
@@ -8387,7 +8387,7 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
               xs={12}
             >
               <WithStyles(Typography)>
-                You can select multiple indicators for a work, but cannot remove existing ones. To change existing information, submit as a correction below.
+                You can select multiple (up to 3) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
               </WithStyles(Typography)>
             </WithStyles(Grid)>
             <WithStyles(Grid)
@@ -9814,7 +9814,7 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
               xs={12}
             >
               <WithStyles(Typography)>
-                You can select multiple indicators for a work, but cannot remove existing ones. To change existing information, submit as a correction below.
+                You can select multiple (up to 3) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
               </WithStyles(Typography)>
             </WithStyles(Grid)>
             <WithStyles(Grid)
@@ -12299,7 +12299,7 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
               xs={12}
             >
               <WithStyles(Typography)>
-                You can select multiple indicators for a work, but cannot remove existing ones. To change existing information, submit as a correction below.
+                You can select multiple (up to 3) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
               </WithStyles(Typography)>
             </WithStyles(Grid)>
             <WithStyles(Grid)
@@ -13726,7 +13726,7 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
               xs={12}
             >
               <WithStyles(Typography)>
-                You can select multiple indicators for a work, but cannot remove existing ones. To change existing information, submit as a correction below.
+                You can select multiple (up to 3) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
               </WithStyles(Typography)>
             </WithStyles(Grid)>
             <WithStyles(Grid)
@@ -15153,7 +15153,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
               xs={12}
             >
               <WithStyles(Typography)>
-                You can select multiple indicators for a work, but cannot remove existing ones. To change existing information, submit as a correction below.
+                You can select multiple (up to 3) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
               </WithStyles(Typography)>
             </WithStyles(Grid)>
             <WithStyles(Grid)
@@ -16593,7 +16593,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
               xs={12}
             >
               <WithStyles(Typography)>
-                You can select multiple indicators for a work, but cannot remove existing ones. To change existing information, submit as a correction below.
+                You can select multiple (up to 3) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
               </WithStyles(Typography)>
             </WithStyles(Grid)>
             <WithStyles(Grid)
@@ -18031,7 +18031,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
               xs={12}
             >
               <WithStyles(Typography)>
-                You can select multiple indicators for a work, but cannot remove existing ones. To change existing information, submit as a correction below.
+                You can select multiple (up to 3) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
               </WithStyles(Typography)>
             </WithStyles(Grid)>
             <WithStyles(Grid)
@@ -19470,7 +19470,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
               xs={12}
             >
               <WithStyles(Typography)>
-                You can select multiple indicators for a work, but cannot remove existing ones. To change existing information, submit as a correction below.
+                You can select multiple (up to 3) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
               </WithStyles(Typography)>
             </WithStyles(Grid)>
             <WithStyles(Grid)
@@ -19714,7 +19714,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
               xs={12}
             >
               <WithStyles(Typography)>
-                You can select multiple indicators for a work, but cannot remove existing ones. To change existing information, submit as a correction below.
+                You can select multiple (up to 3) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
               </WithStyles(Typography)>
             </WithStyles(Grid)>
             <WithStyles(Grid)
@@ -19943,7 +19943,7 @@ exports[`Component ClaimRecord  should show alert if submit failed and PID not f
               xs={12}
             >
               <WithStyles(Typography)>
-                You can select multiple indicators for a work, but cannot remove existing ones. To change existing information, submit as a correction below.
+                You can select multiple (up to 3) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
               </WithStyles(Typography)>
             </WithStyles(Grid)>
             <WithStyles(Grid)

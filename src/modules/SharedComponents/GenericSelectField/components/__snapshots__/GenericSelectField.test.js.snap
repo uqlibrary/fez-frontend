@@ -113,7 +113,7 @@ exports[`GenericSelectField Full mount should render 1`] = `
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -623,7 +623,7 @@ exports[`GenericSelectField Full mount should render 1`] = `
                       "accent": Object {
                         "dark": "#2a557d",
                         "light": "#54acff",
-                        "main": "#4085C6",
+                        "main": "#316799",
                       },
                       "action": Object {
                         "active": "rgba(0, 0, 0, 0.54)",
@@ -1007,7 +1007,9 @@ exports[`GenericSelectField Full mount should render 1`] = `
                     <div
                       className="MuiFormControl-root-2 MuiFormControl-fullWidth-5"
                     >
-                      <WithStyles(InputLabel)>
+                      <WithStyles(InputLabel)
+                        id="undefined-label"
+                      >
                         <InputLabel
                           classes={
                             Object {
@@ -1021,10 +1023,12 @@ exports[`GenericSelectField Full mount should render 1`] = `
                             }
                           }
                           disableAnimation={false}
+                          id="undefined-label"
                         >
                           <WithStyles(FormLabel)
                             className="MuiInputLabel-root-6 MuiInputLabel-formControl-7 MuiInputLabel-animated-10"
                             data-shrink={false}
+                            id="undefined-label"
                           >
                             <FormLabel
                               className="MuiInputLabel-root-6 MuiInputLabel-formControl-7 MuiInputLabel-animated-10"
@@ -1041,13 +1045,13 @@ exports[`GenericSelectField Full mount should render 1`] = `
                               }
                               component="label"
                               data-shrink={false}
+                              id="undefined-label"
                             >
                               <label
                                 className="MuiFormLabel-root-13 MuiInputLabel-root-6 MuiInputLabel-formControl-7 MuiInputLabel-animated-10"
                                 data-shrink={false}
-                              >
-                                Select item
-                              </label>
+                                id="undefined-label"
+                              />
                             </FormLabel>
                           </WithStyles(FormLabel)>
                         </InputLabel>
@@ -1060,6 +1064,13 @@ exports[`GenericSelectField Full mount should render 1`] = `
                         }
                         autoWidth={false}
                         disabled={false}
+                        inputProps={
+                          Object {
+                            "style": Object {
+                              "border": "1px solid red",
+                            },
+                          }
+                        }
                         multiple={false}
                         onChange={[Function]}
                         value=""
@@ -1086,6 +1097,13 @@ exports[`GenericSelectField Full mount should render 1`] = `
                           disabled={false}
                           displayEmpty={false}
                           input={<WithStyles(Input) />}
+                          inputProps={
+                            Object {
+                              "style": Object {
+                                "border": "1px solid red",
+                              },
+                            }
+                          }
                           multiple={false}
                           native={false}
                           onChange={[Function]}
@@ -1120,6 +1138,9 @@ exports[`GenericSelectField Full mount should render 1`] = `
                                 "onOpen": undefined,
                                 "open": undefined,
                                 "renderValue": undefined,
+                                "style": Object {
+                                  "border": "1px solid red",
+                                },
                                 "type": undefined,
                                 "variant": "standard",
                               }
@@ -1173,6 +1194,9 @@ exports[`GenericSelectField Full mount should render 1`] = `
                                   "onOpen": undefined,
                                   "open": undefined,
                                   "renderValue": undefined,
+                                  "style": Object {
+                                    "border": "1px solid red",
+                                  },
                                   "type": undefined,
                                   "variant": "standard",
                                 }
@@ -1227,6 +1251,9 @@ exports[`GenericSelectField Full mount should render 1`] = `
                                     "onOpen": undefined,
                                     "open": undefined,
                                     "renderValue": undefined,
+                                    "style": Object {
+                                      "border": "1px solid red",
+                                    },
                                     "type": undefined,
                                     "variant": "standard",
                                   }
@@ -1287,6 +1314,9 @@ exports[`GenericSelectField Full mount should render 1`] = `
                                       "onOpen": undefined,
                                       "open": undefined,
                                       "renderValue": undefined,
+                                      "style": Object {
+                                        "border": "1px solid red",
+                                      },
                                       "type": undefined,
                                       "variant": "standard",
                                     }
@@ -1329,6 +1359,11 @@ exports[`GenericSelectField Full mount should render 1`] = `
                                       onChange={[Function]}
                                       onFocus={[Function]}
                                       required={false}
+                                      style={
+                                        Object {
+                                          "border": "1px solid red",
+                                        }
+                                      }
                                       value=""
                                       variant="standard"
                                     >
@@ -1356,6 +1391,11 @@ exports[`GenericSelectField Full mount should render 1`] = `
                                           />
                                         </div>
                                         <input
+                                          style={
+                                            Object {
+                                              "border": "1px solid red",
+                                            }
+                                          }
                                           type="hidden"
                                           value=""
                                         />
@@ -1502,7 +1542,7 @@ exports[`GenericSelectField Full mount should render 1`] = `
                                                   "accent": Object {
                                                     "dark": "#2a557d",
                                                     "light": "#54acff",
-                                                    "main": "#4085C6",
+                                                    "main": "#316799",
                                                   },
                                                   "action": Object {
                                                     "active": "rgba(0, 0, 0, 0.54)",
@@ -2008,9 +2048,10 @@ exports[`GenericSelectField Methods Shows an error 1`] = `
   error={true}
   fullWidth={true}
 >
-  <WithStyles(InputLabel)>
-    Select item
-  </WithStyles(InputLabel)>
+  <WithStyles(InputLabel)
+    hidden={false}
+    id="undefined-label"
+  />
   <WithStyles(Select)
     SelectDisplayProps={
       Object {
@@ -2019,6 +2060,13 @@ exports[`GenericSelectField Methods Shows an error 1`] = `
     }
     autoWidth={false}
     disabled={false}
+    inputProps={
+      Object {
+        "style": Object {
+          "border": "1px solid red",
+        },
+      }
+    }
     multiple={false}
     onChange={[Function]}
     value=""
@@ -2326,9 +2374,9 @@ exports[`GenericSelectField should render snapshots for loading items 1`] = `
   error={false}
   fullWidth={true}
 >
-  <WithStyles(InputLabel)>
-    Select item
-  </WithStyles(InputLabel)>
+  <WithStyles(InputLabel)
+    id="undefined-label"
+  />
   <WithStyles(Select)
     SelectDisplayProps={
       Object {
@@ -2337,6 +2385,13 @@ exports[`GenericSelectField should render snapshots for loading items 1`] = `
     }
     autoWidth={false}
     disabled={true}
+    inputProps={
+      Object {
+        "style": Object {
+          "border": "1px solid red",
+        },
+      }
+    }
     multiple={false}
     onChange={[Function]}
     value=""
@@ -2404,6 +2459,10 @@ exports[`GenericSelectField should render snapshots for loading items 2`] = `
   error={false}
   fullWidth={true}
 >
+  <WithStyles(InputLabel)
+    hidden={true}
+    id="undefined-label"
+  />
   <WithStyles(Select)
     SelectDisplayProps={
       Object {
@@ -2412,6 +2471,13 @@ exports[`GenericSelectField should render snapshots for loading items 2`] = `
     }
     autoWidth={false}
     disabled={false}
+    inputProps={
+      Object {
+        "style": Object {
+          "border": "1px solid red",
+        },
+      }
+    }
     multiple={false}
     onChange={[Function]}
     value="-1"
@@ -2489,9 +2555,9 @@ exports[`GenericSelectField should render snapshots for no items 1`] = `
   error={false}
   fullWidth={true}
 >
-  <WithStyles(InputLabel)>
-    Select item
-  </WithStyles(InputLabel)>
+  <WithStyles(InputLabel)
+    id="undefined-label"
+  />
   <WithStyles(Select)
     SelectDisplayProps={
       Object {
@@ -2500,6 +2566,13 @@ exports[`GenericSelectField should render snapshots for no items 1`] = `
     }
     autoWidth={false}
     disabled={false}
+    inputProps={
+      Object {
+        "style": Object {
+          "border": "1px solid red",
+        },
+      }
+    }
     multiple={false}
     onChange={[Function]}
     value=""
@@ -2512,9 +2585,9 @@ exports[`GenericSelectField should render snapshots for one item 1`] = `
   error={false}
   fullWidth={true}
 >
-  <WithStyles(InputLabel)>
-    Select item
-  </WithStyles(InputLabel)>
+  <WithStyles(InputLabel)
+    id="undefined-label"
+  />
   <WithStyles(Select)
     SelectDisplayProps={
       Object {
@@ -2523,6 +2596,13 @@ exports[`GenericSelectField should render snapshots for one item 1`] = `
     }
     autoWidth={false}
     disabled={false}
+    inputProps={
+      Object {
+        "style": Object {
+          "border": "1px solid red",
+        },
+      }
+    }
     multiple={false}
     onChange={[Function]}
     value=""

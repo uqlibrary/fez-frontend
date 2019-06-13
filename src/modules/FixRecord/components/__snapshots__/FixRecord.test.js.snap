@@ -2,7 +2,7 @@
 
 exports[`Component FixRecord _handleDefaultSubmit() 1`] = `
 <StandardPage
-  title="Request a correction or upload files"
+  title="Request a correction, add more information or upload files"
 >
   <form
     onSubmit={[Function]}
@@ -491,7 +491,7 @@ exports[`Component FixRecord _handleDefaultSubmit() 1`] = `
 
 exports[`Component FixRecord componentWillReceiveProps() 1`] = `
 <StandardPage
-  title="Request a correction or upload files"
+  title="Request a correction, add more information or upload files"
 >
   <form
     onSubmit={[Function]}
@@ -991,7 +991,7 @@ exports[`Component FixRecord componentWillReceiveProps() 1`] = `
 
 exports[`Component FixRecord should render fix record form 1`] = `
 <StandardPage
-  title="Request a correction or upload files"
+  title="Request a correction, add more information or upload files"
 >
   <form
     onSubmit={[Function]}
@@ -1509,7 +1509,7 @@ exports[`Component FixRecord should render fix record form 1`] = `
               xs={12}
             >
               <WithStyles(Typography)>
-                You can select multiple indicators for a work, but cannot remove existing ones. To change existing information, submit as a correction below.
+                You can select multiple (up to 3) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
               </WithStyles(Typography)>
             </WithStyles(Grid)>
             <WithStyles(Grid)
@@ -1656,7 +1656,7 @@ exports[`Component FixRecord should render loader when record is loading 1`] = `
 
 exports[`Component FixRecord should render record citation, two actions in select field and a cancel button 1`] = `
 <StandardPage
-  title="Request a correction or upload files"
+  title="Request a correction, add more information or upload files"
 >
   <form
     onSubmit={[Function]}
@@ -2145,7 +2145,7 @@ exports[`Component FixRecord should render record citation, two actions in selec
 
 exports[`Component FixRecord should render the confirm dialog box with an alert due to a file upload failure 1`] = `
 <StandardPage
-  title="Request a correction or upload files"
+  title="Request a correction, add more information or upload files"
 >
   <form
     onSubmit={[Function]}
@@ -2668,7 +2668,7 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
               xs={12}
             >
               <WithStyles(Typography)>
-                You can select multiple indicators for a work, but cannot remove existing ones. To change existing information, submit as a correction below.
+                You can select multiple (up to 3) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
               </WithStyles(Typography)>
             </WithStyles(Grid)>
             <WithStyles(Grid)
@@ -2799,7 +2799,7 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
 
 exports[`Component FixRecord should render the confirm dialog box without an alert due to a file upload success 1`] = `
 <StandardPage
-  title="Request a correction or upload files"
+  title="Request a correction, add more information or upload files"
 >
   <form
     onSubmit={[Function]}
@@ -3317,7 +3317,7 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
               xs={12}
             >
               <WithStyles(Typography)>
-                You can select multiple indicators for a work, but cannot remove existing ones. To change existing information, submit as a correction below.
+                You can select multiple (up to 3) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
               </WithStyles(Typography)>
             </WithStyles(Grid)>
             <WithStyles(Grid)
@@ -3448,7 +3448,7 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
 
 exports[`Component FixRecord should render unclaim form 1`] = `
 <StandardPage
-  title="Request a correction or upload files"
+  title="Request a correction, add more information or upload files"
 >
   <form
     onSubmit={[Function]}

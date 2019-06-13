@@ -113,7 +113,7 @@ exports[`AuthorsCitationView test  should render component with 1 author 1`] = `
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -688,7 +688,7 @@ exports[`AuthorsCitationView test  should render component with 2 authors 1`] = 
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -1293,7 +1293,7 @@ exports[`AuthorsCitationView test  should render component with 2 authors for pu
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -1942,7 +1942,7 @@ exports[`AuthorsCitationView test  should render component with 2 authors for pu
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -2593,7 +2593,7 @@ exports[`AuthorsCitationView test  should render component with 3 authors 1`] = 
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -3258,7 +3258,7 @@ exports[`AuthorsCitationView test  should render component with 3 authors for pu
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -3963,7 +3963,7 @@ exports[`AuthorsCitationView test  should render component with 3 authors with p
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -4640,7 +4640,7 @@ exports[`AuthorsCitationView test  should render component with 3 authors with p
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -5679,7 +5679,7 @@ exports[`AuthorsCitationView test  should render component with no authors 1`] =
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -6208,7 +6208,7 @@ exports[`AuthorsCitationView test  should set class on component with no authors
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",

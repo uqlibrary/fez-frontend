@@ -1,4 +1,4 @@
-import React, {PureComponent, Fragment} from 'react';
+import React, {Fragment} from 'react';
 import PropTypes from 'prop-types';
 
 import ListItem from '@material-ui/core/ListItem';
@@ -19,49 +19,50 @@ const styles = (theme) => ({
     }
 });
 
-export class FacetsFilterListItem extends PureComponent {
-    static propTypes = {
-        key: PropTypes.string,
-        facetTitle: PropTypes.string,
-        disabled: PropTypes.bool,
-        open: PropTypes.bool,
-        classes: PropTypes.object,
-        nestedItems: PropTypes.any,
-        onToggle: PropTypes.func
-    };
-
-    render() {
-        const {facetTitle, classes, open, key, nestedItems} = this.props;
-        return (
-            <Fragment key={`facet_fragment_${key}`}>
-                <ListItem
-                    button
-                    disabled={this.props.disabled}
-                    key={`facet_filter_${key}`}
-                    classes={{
-                        gutters: classes.listItemGutters
-                    }}
-                    onClick={this.props.onToggle}
+export function FacetsFilterListItem({facetTitle, classes, open, key, children, disabled, onToggle}) {
+    return (
+        <Fragment key={`facet_fragment_${key}`}>
+            <ListItem
+                button
+                disabled={disabled}
+                key={`facet_filter_${key}`}
+                classes={{
+                    gutters: classes.listItemGutters
+                }}
+                onClick={onToggle}
+            >
+                <ListItemText disableTypography>
+                    <Typography variant={'body2'} color={'textPrimary'} className={classes.listText}>
+                        {facetTitle}
+                    </Typography>
+                </ListItemText>
+                {open ? <ExpandLess /> : <ExpandMore />}
+            </ListItem>
+            {
+                <Collapse
+                    in={open}
+                    timeout="auto"
+                    unmountOnExit
                 >
-                    <ListItemText disableTypography>
-                        <Typography variant={'body2'} color={'textPrimary'} className={classes.listText}>
-                            {facetTitle}
-                        </Typography>
-                    </ListItemText>
-                    {open ? <ExpandLess /> : <ExpandMore />}
-                </ListItem>
-                {
-                    <Collapse
-                        in={open}
-                        timeout="auto"
-                        unmountOnExit
-                    >
-                        {nestedItems}
-                    </Collapse>
-                }
-            </Fragment>
-        );
-    }
+                    {children}
+                </Collapse>
+            }
+        </Fragment>
+    );
 }
 
-export default withStyles(styles)(FacetsFilterListItem);
+FacetsFilterListItem.propTypes = {
+    key: PropTypes.string,
+    facetTitle: PropTypes.string,
+    disabled: PropTypes.bool,
+    open: PropTypes.bool,
+    classes: PropTypes.object,
+    children: PropTypes.any,
+    onToggle: PropTypes.func
+};
+
+function isOpenOrDisabled(prevProps, nextProps) {
+    return prevProps.open === nextProps.open && prevProps.disabled === nextProps.disabled && prevProps.children === nextProps.children;
+}
+
+export default React.memo(withStyles(styles)(FacetsFilterListItem), isOpenOrDisabled);

@@ -42,6 +42,7 @@ export class GenericSelectFieldClass extends Component {
         parentItemsId: PropTypes.number,
         required: PropTypes.bool,
         selectedValue: PropTypes.any,
+        style: PropTypes.object,
     };
 
     static defaultProps = {
@@ -142,18 +143,17 @@ export class GenericSelectFieldClass extends Component {
     render() {
         return (
             <FormControl fullWidth required={this.props.required} error={!!this.props.error}>
-                {
-                    this.props.locale.label && !this.props.hideLabel &&
-                    <InputLabel>{this.props.locale.label}</InputLabel>
-                }
+                <InputLabel hidden={this.props.hideLabel} id={`${this.props.label}-label`}>{this.props.label}</InputLabel>
                 <Select
+                    style={this.props.style}
                     value={this.newValue()}
                     displayEmpty={this.props.displayEmpty}
                     onChange={this._itemSelected}
                     disabled={this.props.disabled || !!this.props.itemsLoading}
-                    aria-label={this.props.ariaLabel}
+                    inputProps={{'aria-labelledby': `${this.props.locale.label}-label`}}
                     autoWidth={this.props.autoWidth}
                     multiple={this.props.multiple}
+                    inputProps={{style: {border: '1px solid red'}}}
                     SelectDisplayProps={{
                         id: this.props.id
                     }}

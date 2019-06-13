@@ -846,7 +846,7 @@ exports[`Search record results should render a single unclaimable item with no a
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -1529,7 +1529,7 @@ exports[`Search record results should render a single unclaimable item with no a
                               "accent": Object {
                                 "dark": "#2a557d",
                                 "light": "#54acff",
-                                "main": "#4085C6",
+                                "main": "#316799",
                               },
                               "action": Object {
                                 "active": "rgba(0, 0, 0, 0.54)",
@@ -2332,7 +2332,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                           "accent": Object {
                                             "dark": "#2a557d",
                                             "light": "#54acff",
-                                            "main": "#4085C6",
+                                            "main": "#316799",
                                           },
                                           "action": Object {
                                             "active": "rgba(0, 0, 0, 0.54)",
@@ -2935,7 +2935,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                                                 "accent": Object {
                                                                   "dark": "#2a557d",
                                                                   "light": "#54acff",
-                                                                  "main": "#4085C6",
+                                                                  "main": "#316799",
                                                                 },
                                                                 "action": Object {
                                                                   "active": "rgba(0, 0, 0, 0.54)",
@@ -4911,7 +4911,7 @@ exports[`Search record results should render a single unclaimable item with no a
                               "accent": Object {
                                 "dark": "#2a557d",
                                 "light": "#54acff",
-                                "main": "#4085C6",
+                                "main": "#316799",
                               },
                               "action": Object {
                                 "active": "rgba(0, 0, 0, 0.54)",
@@ -5487,7 +5487,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                             "accent": Object {
                                               "dark": "#2a557d",
                                               "light": "#54acff",
-                                              "main": "#4085C6",
+                                              "main": "#316799",
                                             },
                                             "action": Object {
                                               "active": "rgba(0, 0, 0, 0.54)",
@@ -6229,7 +6229,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                                             "accent": Object {
                                                               "dark": "#2a557d",
                                                               "light": "#54acff",
-                                                              "main": "#4085C6",
+                                                              "main": "#316799",
                                                             },
                                                             "action": Object {
                                                               "active": "rgba(0, 0, 0, 0.54)",
