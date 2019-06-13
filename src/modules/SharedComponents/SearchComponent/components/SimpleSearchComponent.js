@@ -165,7 +165,6 @@ export class SimpleSearchComponent extends PureComponent {
 
     _handleSubmit = (event) => {
         event.preventDefault();
-        this._handleSearch(event);
     }
 
     render() {
