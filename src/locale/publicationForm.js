@@ -12,7 +12,7 @@ export default {
         help: {
             title: 'Non-traditional research output types',
             text: (
-                <p>For more information about each type, click <a style={{fontWeight: 700}} target="_blank" href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs">here</a>
+                <p>For more information about each type, click <a style={{fontWeight: 700}} target="_blank" rel="noreferrer" href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs">here</a>
                 </p>
             ),
             buttonLabel: 'CLOSE'
@@ -26,7 +26,7 @@ export default {
     contentIndicators: {
         help: {
             title: 'Content indicators',
-            text: 'TBC',
+            text: <p>For more information about content indicators, click <a style={{fontWeight: 700}} target="_blank" rel="noreferrer" href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators">here</a></p>,
             buttonLabel: 'CLOSE'
         },
         title: 'Content indicators',

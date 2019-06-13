@@ -31,6 +31,7 @@ exports[`Component PublicationForm Shows an alert 1`] = `
               For more information about each type, click 
               <a
                 href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
+                rel="noreferrer"
                 style={
                   Object {
                     "fontWeight": 700,
@@ -463,6 +464,7 @@ exports[`Component PublicationForm Shows an alert 2`] = `
               For more information about each type, click 
               <a
                 href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
+                rel="noreferrer"
                 style={
                   Object {
                     "fontWeight": 700,
@@ -845,7 +847,21 @@ exports[`Component PublicationForm Shows an alert 2`] = `
         help={
           Object {
             "buttonLabel": "CLOSE",
-            "text": "TBC",
+            "text": <p>
+              For more information about content indicators, click 
+              <a
+                href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
+                rel="noreferrer"
+                style={
+                  Object {
+                    "fontWeight": 700,
+                  }
+                }
+                target="_blank"
+              >
+                here
+              </a>
+            </p>,
             "title": "Content indicators",
           }
         }
@@ -973,6 +989,7 @@ exports[`Component PublicationForm Shows an alert 3`] = `
               For more information about each type, click 
               <a
                 href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
+                rel="noreferrer"
                 style={
                   Object {
                     "fontWeight": 700,
@@ -1355,7 +1372,21 @@ exports[`Component PublicationForm Shows an alert 3`] = `
         help={
           Object {
             "buttonLabel": "CLOSE",
-            "text": "TBC",
+            "text": <p>
+              For more information about content indicators, click 
+              <a
+                href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
+                rel="noreferrer"
+                style={
+                  Object {
+                    "fontWeight": 700,
+                  }
+                }
+                target="_blank"
+              >
+                here
+              </a>
+            </p>,
             "title": "Content indicators",
           }
         }
@@ -1483,6 +1514,7 @@ exports[`Component PublicationForm should call componentWillReceiveProps when pr
               For more information about each type, click 
               <a
                 href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
+                rel="noreferrer"
                 style={
                   Object {
                     "fontWeight": 700,
@@ -1915,6 +1947,7 @@ exports[`Component PublicationForm should call componentWillReceiveProps when pr
               For more information about each type, click 
               <a
                 href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
+                rel="noreferrer"
                 style={
                   Object {
                     "fontWeight": 700,
@@ -2366,6 +2399,7 @@ exports[`Component PublicationForm should call componentWillReceiveProps when pr
               For more information about each type, click 
               <a
                 href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
+                rel="noreferrer"
                 style={
                   Object {
                     "fontWeight": 700,
@@ -2830,6 +2864,7 @@ exports[`Component PublicationForm should call componentWillReceiveProps when pr
               For more information about each type, click 
               <a
                 href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
+                rel="noreferrer"
                 style={
                   Object {
                     "fontWeight": 700,
@@ -3294,6 +3329,7 @@ exports[`Component PublicationForm should render component initialised with just
               For more information about each type, click 
               <a
                 href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
+                rel="noreferrer"
                 style={
                   Object {
                     "fontWeight": 700,
@@ -3726,6 +3762,7 @@ exports[`Component PublicationForm should render component initialised with two 
               For more information about each type, click 
               <a
                 href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
+                rel="noreferrer"
                 style={
                   Object {
                     "fontWeight": 700,
@@ -4198,6 +4235,7 @@ exports[`Component PublicationForm should render component with BookForm 1`] = `
               For more information about each type, click 
               <a
                 href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
+                rel="noreferrer"
                 style={
                   Object {
                     "fontWeight": 700,
@@ -4600,7 +4638,21 @@ exports[`Component PublicationForm should render component with BookForm 1`] = `
         help={
           Object {
             "buttonLabel": "CLOSE",
-            "text": "TBC",
+            "text": <p>
+              For more information about content indicators, click 
+              <a
+                href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
+                rel="noreferrer"
+                style={
+                  Object {
+                    "fontWeight": 700,
+                  }
+                }
+                target="_blank"
+              >
+                here
+              </a>
+            </p>,
             "title": "Content indicators",
           }
         }
@@ -4744,6 +4796,7 @@ exports[`Component PublicationForm should render component with GenericDocument 
               For more information about each type, click 
               <a
                 href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
+                rel="noreferrer"
                 style={
                   Object {
                     "fontWeight": 700,
@@ -5146,7 +5199,21 @@ exports[`Component PublicationForm should render component with GenericDocument 
         help={
           Object {
             "buttonLabel": "CLOSE",
-            "text": "TBC",
+            "text": <p>
+              For more information about content indicators, click 
+              <a
+                href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
+                rel="noreferrer"
+                style={
+                  Object {
+                    "fontWeight": 700,
+                  }
+                }
+                target="_blank"
+              >
+                here
+              </a>
+            </p>,
             "title": "Content indicators",
           }
         }
@@ -5287,6 +5354,7 @@ exports[`Component PublicationForm should render component with JournalArticleFo
               For more information about each type, click 
               <a
                 href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
+                rel="noreferrer"
                 style={
                   Object {
                     "fontWeight": 700,
@@ -5689,7 +5757,21 @@ exports[`Component PublicationForm should render component with JournalArticleFo
         help={
           Object {
             "buttonLabel": "CLOSE",
-            "text": "TBC",
+            "text": <p>
+              For more information about content indicators, click 
+              <a
+                href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
+                rel="noreferrer"
+                style={
+                  Object {
+                    "fontWeight": 700,
+                  }
+                }
+                target="_blank"
+              >
+                here
+              </a>
+            </p>,
             "title": "Content indicators",
           }
         }
@@ -5830,6 +5912,7 @@ exports[`Component PublicationForm should render component with ResearchReportFo
               For more information about each type, click 
               <a
                 href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
+                rel="noreferrer"
                 style={
                   Object {
                     "fontWeight": 700,
@@ -6232,7 +6315,21 @@ exports[`Component PublicationForm should render component with ResearchReportFo
         help={
           Object {
             "buttonLabel": "CLOSE",
-            "text": "TBC",
+            "text": <p>
+              For more information about content indicators, click 
+              <a
+                href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
+                rel="noreferrer"
+                style={
+                  Object {
+                    "fontWeight": 700,
+                  }
+                }
+                target="_blank"
+              >
+                here
+              </a>
+            </p>,
             "title": "Content indicators",
           }
         }
@@ -6373,6 +6470,7 @@ exports[`Component PublicationForm should render component with all fields disab
               For more information about each type, click 
               <a
                 href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
+                rel="noreferrer"
                 style={
                   Object {
                     "fontWeight": 700,
