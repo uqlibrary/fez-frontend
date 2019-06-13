@@ -9,13 +9,13 @@ context('Homepage', () => {
     it('Clicking between trending panes', () => {
         cy.get('button', {timeout: 5000}).get('span').contains('Trending on Scopus').click();
         cy.get('.content-container').scrollTo('top');
-        cy.get('.content-container').toMatchSnapshot();
+        cy.get('.content-container', {timeout: 1000}).toMatchSnapshot();
         cy.get('button', {timeout: 1000}).get('span').contains('Trending on Web of science').click();
         cy.get('.content-container').scrollTo('top');
-        cy.get('.content-container').toMatchSnapshot();
+        cy.get('.content-container', {timeout: 1000}).toMatchSnapshot();
         cy.get('button', {timeout: 1000}).get('span').contains('Trending on Altmetric').click();
         cy.get('.content-container').scrollTo('top');
-        cy.get('.content-container').toMatchSnapshot();
+        cy.get('.content-container', {timeout: 1000}).toMatchSnapshot();
     });
 
     it('Doing a basic search', () => {
@@ -25,7 +25,7 @@ context('Homepage', () => {
         cy.get('.content-container').scrollTo('top');
         cy.get('[aria-label="Check to search for publications with are only open access / full text"]').click();
         cy.get('.content-container').scrollTo('top');
-        cy.get('.content-container').toMatchSnapshot();
+        cy.get('.content-container', {timeout: 1000}).toMatchSnapshot();
 
         cy.get('[aria-label="Click to add another advanced search field"]', {delay: 1000}).click();
         cy.get('.content-container').scrollTo('top');
@@ -33,7 +33,7 @@ context('Homepage', () => {
         cy.get('.content-container').scrollTo('top');
         cy.get('[data-value="rek_author"]').click();
         cy.get('.content-container').scrollTo('top');
-        cy.get('.content-container').toMatchSnapshot();
+        cy.get('.content-container', {timeout: 1000}).toMatchSnapshot();
         cy.get('[placeholder="Add an author name"]').type('Ky Lane{enter}', {delay: 100});
 
         cy.get('[aria-label="Click to add another advanced search field"]', {delay: 1000}).click();
@@ -45,6 +45,6 @@ context('Homepage', () => {
         cy.get('[data-value="UQ:292807"]').click();
         cy.get('div[id="menu-"]').get('div[aria-hidden="true"]').click({force: true, multiple: true}); // This will close any select field modal popup by force
         cy.get('.content-container').scrollTo('top');
-        cy.get('.content-container').toMatchSnapshot();
+        cy.get('.content-container', {timeout: 1000}).toMatchSnapshot();
     });
 });
