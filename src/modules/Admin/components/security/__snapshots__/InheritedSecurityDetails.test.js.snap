@@ -61,7 +61,7 @@ exports[`InheritedSecurityDetails component should render collections correctly 
         variant="body2"
       >
         <Memo(PolicyDescription)
-          selectedPolicyKey={5}
+          selectedPolicyKey={2}
         />
       </WithStyles(Typography)>
     </WithStyles(Grid)>
@@ -96,7 +96,7 @@ exports[`InheritedSecurityDetails component should render collections correctly 
         variant="body2"
       >
         <Memo(PolicyDescription)
-          selectedPolicyKey={5}
+          selectedPolicyKey={4}
         />
       </WithStyles(Typography)>
     </WithStyles(Grid)>
