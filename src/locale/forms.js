@@ -35,7 +35,7 @@ export default {
             },
             contentIndicators: {
                 title: 'Optional: Content Indicators',
-                description: 'You can select multiple indicators for a work, but cannot remove existing ones. To change existing information, submit as a correction below.',
+                description: 'You can select multiple (up to 3) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.',
                 label: 'Please select relevant indicator(s).',
             },
             comments: {
@@ -135,7 +135,7 @@ export default {
         fixPublicationForm: {
             contentIndicators: {
                 title: 'Content Indicators',
-                description: 'You can select multiple indicators for a work, but cannot remove existing ones. To change existing information, submit as a correction below.',
+                description: 'You can select multiple (up to 3) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.',
                 label: 'Please select relevant indicator(s).',
             },
             comments: {

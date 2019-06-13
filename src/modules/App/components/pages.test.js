@@ -8,7 +8,6 @@ describe('Pages component', () => {
         expect(JSON.stringify(pages.FixRecord())).toEqual(expectation);
         expect(JSON.stringify(pages.ClaimRecord())).toEqual(expectation);
         expect(JSON.stringify(pages.PossiblyMyRecords())).toEqual(expectation);
-        expect(JSON.stringify(pages.MyIncompleteRecords())).toEqual(expectation);
         expect(JSON.stringify(pages.MyIncompleteRecord())).toEqual(expectation);
         expect(JSON.stringify(pages.Dashboard())).toEqual(expectation);
         expect(JSON.stringify(pages.Orcid())).toEqual(expectation);

@@ -38,12 +38,23 @@ exports[`Component PublicationYearRangeField should render as expected 1`] = `
       }
       zeroMinWidth={true}
     >
+      <WithStyles(InputLabel)
+        hidden={true}
+        id="from-label"
+      >
+        Enter a year to search from
+      </WithStyles(InputLabel)>
       <TextField
         aria-label="Enter a year to search from"
         disabled={false}
         error={false}
         fullWidth={true}
-        id="to"
+        id="from"
+        inputProps={
+          Object {
+            "aria-labelledby": "from-label",
+          }
+        }
         onChange={[Function]}
         placeholder="Year from"
         required={false}
@@ -56,6 +67,12 @@ exports[`Component PublicationYearRangeField should render as expected 1`] = `
       item={true}
       xs="auto"
     >
+      <WithStyles(InputLabel)
+        hidden={true}
+        id="combiner-label"
+      >
+        to
+      </WithStyles(InputLabel)>
       <TextField
         InputProps={
           Object {
@@ -63,6 +80,11 @@ exports[`Component PublicationYearRangeField should render as expected 1`] = `
           }
         }
         disabled={true}
+        inputProps={
+          Object {
+            "aria-labelledby": "combiner-label",
+          }
+        }
         required={false}
         select={false}
         style={
@@ -84,17 +106,24 @@ exports[`Component PublicationYearRangeField should render as expected 1`] = `
       }
       zeroMinWidth={true}
     >
+      <WithStyles(InputLabel)
+        hidden={true}
+        id="to-label"
+      >
+        Enter a year to search to
+      </WithStyles(InputLabel)>
       <TextField
-        InputLabelProps={
-          Object {
-            "shrink": true,
-          }
-        }
         aria-label="Enter a year to search to"
+        aria-labelledby="to-label"
         disabled={false}
         error={false}
         fullWidth={true}
-        id="from"
+        id="to"
+        inputProps={
+          Object {
+            "aria-labelledby": "to-label",
+          }
+        }
         onChange={[Function]}
         placeholder="Year to"
         required={false}

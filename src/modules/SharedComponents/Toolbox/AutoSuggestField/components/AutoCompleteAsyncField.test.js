@@ -71,6 +71,8 @@ describe('AutoCompleteAsyncField component', () => {
             loadSuggestions: testFunction,
             async: false,
             openOnFocus: true,
+            floatingLabelText: 'Test',
+            hideLabel: true,
             itemsList: [{
                 id: 1,
                 value: 'test'
@@ -287,6 +289,8 @@ describe('AutoCompleteAsyncField component', () => {
             itemsList: itemsList,
             async: true,
             maxResults: 7,
+            floatingLabelText: 'Test',
+            hideLabel: true,
             clearInput: true,
             selectedValue: { value: 'test 1', id: 123 },
             error: true,

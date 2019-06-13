@@ -5,6 +5,7 @@ exports[`AdvancedSearchRowInput should call onChange from input props for Author
   allowFreeText={true}
   error={true}
   errorText="This field is required"
+  hideLabel={true}
   onChange={[Function]}
   value={null}
 />
@@ -15,6 +16,7 @@ exports[`AdvancedSearchRowInput should call onChange from input props for Author
   allowFreeText={true}
   error={true}
   errorText="This field is required"
+  hideLabel={true}
   onChange={[Function]}
   value={null}
 />
@@ -28,6 +30,11 @@ exports[`AdvancedSearchRowInput should call onChange from input props for Collec
   hideLabel={true}
   onChange={[MockFunction]}
   selectedValue={Array []}
+  style={
+    Object {
+      "marginTop": 0,
+    }
+  }
 />
 `;
 
@@ -36,6 +43,7 @@ exports[`AdvancedSearchRowInput should call onChange from input props for OrgUni
   allowFreeText={true}
   error={true}
   errorText="This field is required"
+  hideLabel={true}
   onChange={[Function]}
   value={null}
 />
@@ -50,6 +58,11 @@ exports[`AdvancedSearchRowInput should call onChange from input props for Status
   hideLabel={true}
   onChange={[Function]}
   selectedValue={null}
+  style={
+    Object {
+      "marginTop": 0,
+    }
+  }
 />
 `;
 
@@ -59,7 +72,8 @@ exports[`AdvancedSearchRowInput should call onChange from input props for TextFi
   classes={Object {}}
   error={true}
   errorText="This field is required"
-  label={null}
+  hideLabel={true}
+  id="textfield"
   onChange={[Function]}
 />
 `;
@@ -72,6 +86,11 @@ exports[`AdvancedSearchRowInput should call onChange from input props from Thesi
   hideLabel={true}
   onChange={[Function]}
   selectedValue={Array []}
+  style={
+    Object {
+      "marginTop": 0,
+    }
+  }
 />
 `;
 

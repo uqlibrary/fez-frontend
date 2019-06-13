@@ -29,7 +29,7 @@ exports[`Alert component functionality test  matches snapshot 1`] = `
         justify="center"
       >
         <WithStyles(Grid)
-          id="icon"
+          className="undefined alert-icon"
           item={true}
           onClick={[MockFunction]}
           onKeyDown={[MockFunction]}
@@ -39,7 +39,7 @@ exports[`Alert component functionality test  matches snapshot 1`] = `
           />
         </WithStyles(Grid)>
         <WithStyles(Grid)
-          id="text"
+          className="undefined alert-text"
           item={true}
           onClick={[MockFunction]}
           onKeyDown={[MockFunction]}
@@ -86,9 +86,8 @@ exports[`Alert component functionality test  matches snapshot 1`] = `
       xs={true}
     >
       <WithStyles(Button)
-        className="action"
+        className="action alert-button"
         fullWidth={true}
-        id="alertButton"
         onClick={[MockFunction]}
         variant="text"
       >
@@ -156,7 +155,7 @@ exports[`Alert component functionality test  should render correct icon based on
         justify="center"
       >
         <WithStyles(Grid)
-          id="icon"
+          className="undefined alert-icon"
           item={true}
           onClick={[MockFunction]}
           onKeyDown={[MockFunction]}
@@ -166,7 +165,7 @@ exports[`Alert component functionality test  should render correct icon based on
           />
         </WithStyles(Grid)>
         <WithStyles(Grid)
-          id="text"
+          className="undefined alert-text"
           item={true}
           onClick={[MockFunction]}
           onKeyDown={[MockFunction]}
@@ -213,9 +212,8 @@ exports[`Alert component functionality test  should render correct icon based on
       xs={true}
     >
       <WithStyles(Button)
-        className="action"
+        className="action alert-button"
         fullWidth={true}
-        id="alertButton"
         onClick={[MockFunction]}
         variant="text"
       >
@@ -283,7 +281,7 @@ exports[`Alert component functionality test  should render correct icon based on
         justify="center"
       >
         <WithStyles(Grid)
-          id="icon"
+          className="undefined alert-icon"
           item={true}
           onClick={[MockFunction]}
           onKeyDown={[MockFunction]}
@@ -293,7 +291,7 @@ exports[`Alert component functionality test  should render correct icon based on
           />
         </WithStyles(Grid)>
         <WithStyles(Grid)
-          id="text"
+          className="undefined alert-text"
           item={true}
           onClick={[MockFunction]}
           onKeyDown={[MockFunction]}
@@ -340,9 +338,8 @@ exports[`Alert component functionality test  should render correct icon based on
       xs={true}
     >
       <WithStyles(Button)
-        className="action"
+        className="action alert-button"
         fullWidth={true}
-        id="alertButton"
         onClick={[MockFunction]}
         variant="text"
       >
@@ -410,7 +407,7 @@ exports[`Alert component functionality test  should render correct icon based on
         justify="center"
       >
         <WithStyles(Grid)
-          id="icon"
+          className="undefined alert-icon"
           item={true}
           onClick={[MockFunction]}
           onKeyDown={[MockFunction]}
@@ -420,7 +417,7 @@ exports[`Alert component functionality test  should render correct icon based on
           />
         </WithStyles(Grid)>
         <WithStyles(Grid)
-          id="text"
+          className="undefined alert-text"
           item={true}
           onClick={[MockFunction]}
           onKeyDown={[MockFunction]}
@@ -467,9 +464,8 @@ exports[`Alert component functionality test  should render correct icon based on
       xs={true}
     >
       <WithStyles(Button)
-        className="action"
+        className="action alert-button"
         fullWidth={true}
-        id="alertButton"
         onClick={[MockFunction]}
         variant="text"
       >
@@ -537,7 +533,7 @@ exports[`Alert component functionality test  should render correct icon based on
         justify="center"
       >
         <WithStyles(Grid)
-          id="icon"
+          className="undefined alert-icon"
           item={true}
           onClick={[MockFunction]}
           onKeyDown={[MockFunction]}
@@ -547,7 +543,7 @@ exports[`Alert component functionality test  should render correct icon based on
           />
         </WithStyles(Grid)>
         <WithStyles(Grid)
-          id="text"
+          className="undefined alert-text"
           item={true}
           onClick={[MockFunction]}
           onKeyDown={[MockFunction]}
@@ -594,9 +590,8 @@ exports[`Alert component functionality test  should render correct icon based on
       xs={true}
     >
       <WithStyles(Button)
-        className="action"
+        className="action alert-button"
         fullWidth={true}
-        id="alertButton"
         onClick={[MockFunction]}
         variant="text"
       >
@@ -664,7 +659,7 @@ exports[`Alert component functionality test  should render correct icon based on
         justify="center"
       >
         <WithStyles(Grid)
-          id="icon"
+          className="undefined alert-icon"
           item={true}
           onClick={[MockFunction]}
           onKeyDown={[MockFunction]}
@@ -674,7 +669,7 @@ exports[`Alert component functionality test  should render correct icon based on
           />
         </WithStyles(Grid)>
         <WithStyles(Grid)
-          id="text"
+          className="undefined alert-text"
           item={true}
           onClick={[MockFunction]}
           onKeyDown={[MockFunction]}
@@ -721,9 +716,8 @@ exports[`Alert component functionality test  should render correct icon based on
       xs={true}
     >
       <WithStyles(Button)
-        className="action"
+        className="action alert-button"
         fullWidth={true}
-        id="alertButton"
         onClick={[MockFunction]}
         variant="text"
       >
@@ -791,7 +785,7 @@ exports[`Alert component functionality test  should render correct icon based on
         justify="center"
       >
         <WithStyles(Grid)
-          id="icon"
+          className="undefined alert-icon"
           item={true}
           onClick={[MockFunction]}
           onKeyDown={[MockFunction]}
@@ -801,7 +795,7 @@ exports[`Alert component functionality test  should render correct icon based on
           />
         </WithStyles(Grid)>
         <WithStyles(Grid)
-          id="text"
+          className="undefined alert-text"
           item={true}
           onClick={[MockFunction]}
           onKeyDown={[MockFunction]}
@@ -848,9 +842,8 @@ exports[`Alert component functionality test  should render correct icon based on
       xs={true}
     >
       <WithStyles(Button)
-        className="action"
+        className="action alert-button"
         fullWidth={true}
-        id="alertButton"
         onClick={[MockFunction]}
         variant="text"
       >
@@ -918,7 +911,7 @@ exports[`Alert component functionality test  should render correct icon for defa
         justify="center"
       >
         <WithStyles(Grid)
-          id="icon"
+          className="undefined alert-icon"
           item={true}
           onClick={[MockFunction]}
           onKeyDown={[MockFunction]}
@@ -928,7 +921,7 @@ exports[`Alert component functionality test  should render correct icon for defa
           />
         </WithStyles(Grid)>
         <WithStyles(Grid)
-          id="text"
+          className="undefined alert-text"
           item={true}
           onClick={[MockFunction]}
           onKeyDown={[MockFunction]}
@@ -975,9 +968,8 @@ exports[`Alert component functionality test  should render correct icon for defa
       xs={true}
     >
       <WithStyles(Button)
-        className="action"
+        className="action alert-button"
         fullWidth={true}
-        id="alertButton"
         onClick={[MockFunction]}
         variant="text"
       >

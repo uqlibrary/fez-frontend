@@ -33,8 +33,10 @@ describe('AdvancedSearchRowInput', () => {
                 "aria-label": undefined,
                 "autoComplete": "search",
                 "error": false,
-                "helperText": undefined,
-                "label": null,
+                "errorText": undefined,
+                "hideLabel": true,
+                "id": "textfield",
+                "label": undefined,
                 "placeholder": "Field hint",
                 'onChange': inputProps.onChange
             });
@@ -53,7 +55,9 @@ describe('AdvancedSearchRowInput', () => {
                 "autoComplete": "search",
                 "error": true,
                 "errorText": "Must be at least 10 characters",
-                "label": null,
+                "hideLabel": true,
+                "id": "textfield",
+                "label": undefined,
                 "placeholder": "This is hint for text input",
                 'onChange': inputProps.onChange
             });
@@ -127,6 +131,8 @@ describe('AdvancedSearchRowInput', () => {
                 "aria-label": "Type a publisher to search for",
                 "error": false,
                 "errorText": undefined,
+                "floatingLabelText": "Type a publisher to search for",
+                "hideLabel": true,
                 "hintText": "Add your publisher",
                 "label": undefined,
                 "onChange": inputProps.onChange,
@@ -155,6 +161,8 @@ describe('AdvancedSearchRowInput', () => {
                 "aria-label": "Type a org unit to search for",
                 "error": false,
                 "errorText": undefined,
+                "floatingLabelText": "Type a org unit to search for",
+                "hideLabel": true,
                 "hintText": "Add your org unit",
                 "label": undefined,
                 "onChange": inputProps.onChange,
@@ -189,7 +197,8 @@ describe('AdvancedSearchRowInput', () => {
                 "displayEmpty": true,
                 "hideLabel": true,
                 "multiple": true,
-                "selectedValue": []
+                "selectedValue": [],
+                "style": {"marginTop": 0}
             });
         });
         setup({
@@ -221,7 +230,10 @@ describe('AdvancedSearchRowInput', () => {
                 "displayEmpty": true,
                 "hideLabel": true,
                 "multiple": true,
-                "selectedValue": []
+                "selectedValue": [],
+                "errorHint": undefined,
+                "loadingHint": undefined,
+                "style": {"marginTop": 0}
             });
         });
         setup({
@@ -252,8 +264,9 @@ describe('AdvancedSearchRowInput', () => {
                 "autoWidth": false,
                 "displayEmpty": false,
                 "hideLabel": true,
-                "selectedValue": []
-            });
+                "selectedValue": [],
+                "style": {"marginTop": 0}
+        });
         });
         setup({
             children: childrenFn,

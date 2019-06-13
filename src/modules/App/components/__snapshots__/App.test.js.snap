@@ -211,7 +211,7 @@ exports[`Application component Should display mobile correctly 1`] = `
         "location": Object {},
       }
     }
-    isMobile="true"
+    isMobile={true}
     locale={
       Object {
         "closeMenuLabel": "Close menu",
@@ -462,7 +462,7 @@ exports[`Application component should determine if it has incomplete works from 
           ],
           "component": [Function],
           "exact": true,
-          "pageTitle": "Request a correction or upload files",
+          "pageTitle": "Request a correction, add more information or upload files",
           "path": "/records/:pid(UQ:[a-z0-9]+)/fix",
           "regExPath": "/records/(UQ:[a-z0-9]+)/fix",
         },
@@ -962,7 +962,7 @@ exports[`Application component should determine if it has incomplete works from 
         component={[Function]}
         exact={true}
         key="route_11"
-        pageTitle="Request a correction or upload files"
+        pageTitle="Request a correction, add more information or upload files"
         path="/records/:pid(UQ:[a-z0-9]+)/fix"
         regExPath="/records/(UQ:[a-z0-9]+)/fix"
       />
@@ -1181,7 +1181,7 @@ exports[`Application component should determine if it has incomplete works from 
           ],
           "component": [Function],
           "exact": true,
-          "pageTitle": "Request a correction or upload files",
+          "pageTitle": "Request a correction, add more information or upload files",
           "path": "/records/:pid(UQ:[a-z0-9]+)/fix",
           "regExPath": "/records/(UQ:[a-z0-9]+)/fix",
         },
@@ -1681,7 +1681,7 @@ exports[`Application component should determine if it has incomplete works from 
         component={[Function]}
         exact={true}
         key="route_11"
-        pageTitle="Request a correction or upload files"
+        pageTitle="Request a correction, add more information or upload files"
         path="/records/:pid(UQ:[a-z0-9]+)/fix"
         regExPath="/records/(UQ:[a-z0-9]+)/fix"
       />
@@ -2250,7 +2250,7 @@ exports[`Application component should render alert if user is not fez author 1`]
           ],
           "component": [Function],
           "exact": true,
-          "pageTitle": "Request a correction or upload files",
+          "pageTitle": "Request a correction, add more information or upload files",
           "path": "/records/:pid(UQ:[a-z0-9]+)/fix",
           "regExPath": "/records/(UQ:[a-z0-9]+)/fix",
         },
@@ -2746,7 +2746,7 @@ exports[`Application component should render alert if user is not fez author 1`]
         component={[Function]}
         exact={true}
         key="route_11"
-        pageTitle="Request a correction or upload files"
+        pageTitle="Request a correction, add more information or upload files"
         path="/records/:pid(UQ:[a-z0-9]+)/fix"
         regExPath="/records/(UQ:[a-z0-9]+)/fix"
       />
@@ -2965,7 +2965,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           ],
           "component": [Function],
           "exact": true,
-          "pageTitle": "Request a correction or upload files",
+          "pageTitle": "Request a correction, add more information or upload files",
           "path": "/records/:pid(UQ:[a-z0-9]+)/fix",
           "regExPath": "/records/(UQ:[a-z0-9]+)/fix",
         },
@@ -3434,7 +3434,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         component={[Function]}
         exact={true}
         key="route_11"
-        pageTitle="Request a correction or upload files"
+        pageTitle="Request a correction, add more information or upload files"
         path="/records/:pid(UQ:[a-z0-9]+)/fix"
         regExPath="/records/(UQ:[a-z0-9]+)/fix"
       />
@@ -4019,7 +4019,7 @@ exports[`Application component should render app for account with fez author wit
           ],
           "component": [Function],
           "exact": true,
-          "pageTitle": "Request a correction or upload files",
+          "pageTitle": "Request a correction, add more information or upload files",
           "path": "/records/:pid(UQ:[a-z0-9]+)/fix",
           "regExPath": "/records/(UQ:[a-z0-9]+)/fix",
         },
@@ -4488,7 +4488,7 @@ exports[`Application component should render app for account with fez author wit
         component={[Function]}
         exact={true}
         key="route_11"
-        pageTitle="Request a correction or upload files"
+        pageTitle="Request a correction, add more information or upload files"
         path="/records/:pid(UQ:[a-z0-9]+)/fix"
         regExPath="/records/(UQ:[a-z0-9]+)/fix"
       />
@@ -4707,7 +4707,7 @@ exports[`Application component should render app for account with fez author wit
           ],
           "component": [Function],
           "exact": true,
-          "pageTitle": "Request a correction or upload files",
+          "pageTitle": "Request a correction, add more information or upload files",
           "path": "/records/:pid(UQ:[a-z0-9]+)/fix",
           "regExPath": "/records/(UQ:[a-z0-9]+)/fix",
         },
@@ -5205,7 +5205,7 @@ exports[`Application component should render app for account with fez author wit
         component={[Function]}
         exact={true}
         key="route_11"
-        pageTitle="Request a correction or upload files"
+        pageTitle="Request a correction, add more information or upload files"
         path="/records/:pid(UQ:[a-z0-9]+)/fix"
         regExPath="/records/(UQ:[a-z0-9]+)/fix"
       />
@@ -5424,7 +5424,7 @@ exports[`Application component should render app for account with fez author wit
           ],
           "component": [Function],
           "exact": true,
-          "pageTitle": "Request a correction or upload files",
+          "pageTitle": "Request a correction, add more information or upload files",
           "path": "/records/:pid(UQ:[a-z0-9]+)/fix",
           "regExPath": "/records/(UQ:[a-z0-9]+)/fix",
         },
@@ -5772,7 +5772,7 @@ exports[`Application component should render app for account with fez author wit
         component={[Function]}
         exact={true}
         key="route_11"
-        pageTitle="Request a correction or upload files"
+        pageTitle="Request a correction, add more information or upload files"
         path="/records/:pid(UQ:[a-z0-9]+)/fix"
         regExPath="/records/(UQ:[a-z0-9]+)/fix"
       />
@@ -5991,7 +5991,7 @@ exports[`Application component should render application with routing for the us
           ],
           "component": [Function],
           "exact": true,
-          "pageTitle": "Request a correction or upload files",
+          "pageTitle": "Request a correction, add more information or upload files",
           "path": "/records/:pid(UQ:[a-z0-9]+)/fix",
           "regExPath": "/records/(UQ:[a-z0-9]+)/fix",
         },
@@ -7162,7 +7162,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -7923,7 +7923,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                               ],
                               "component": [Function],
                               "exact": true,
-                              "pageTitle": "Request a correction or upload files",
+                              "pageTitle": "Request a correction, add more information or upload files",
                               "path": "/records/:pid(UQ:[a-z0-9]+)/fix",
                               "regExPath": "/records/(UQ:[a-z0-9]+)/fix",
                             },
@@ -8164,7 +8164,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                   ],
                                   "component": [Function],
                                   "exact": true,
-                                  "pageTitle": "Request a correction or upload files",
+                                  "pageTitle": "Request a correction, add more information or upload files",
                                   "path": "/records/:pid(UQ:[a-z0-9]+)/fix",
                                   "regExPath": "/records/(UQ:[a-z0-9]+)/fix",
                                 },
@@ -8405,7 +8405,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                     ],
                                     "component": [Function],
                                     "exact": true,
-                                    "pageTitle": "Request a correction or upload files",
+                                    "pageTitle": "Request a correction, add more information or upload files",
                                     "path": "/records/:pid(UQ:[a-z0-9]+)/fix",
                                     "regExPath": "/records/(UQ:[a-z0-9]+)/fix",
                                   },
@@ -8971,7 +8971,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                             "accent": Object {
                                                               "dark": "#2a557d",
                                                               "light": "#54acff",
-                                                              "main": "#4085C6",
+                                                              "main": "#316799",
                                                             },
                                                             "action": Object {
                                                               "active": "rgba(0, 0, 0, 0.54)",
@@ -9649,7 +9649,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                 "accent": Object {
                                                                   "dark": "#2a557d",
                                                                   "light": "#54acff",
-                                                                  "main": "#4085C6",
+                                                                  "main": "#316799",
                                                                 },
                                                                 "action": Object {
                                                                   "active": "rgba(0, 0, 0, 0.54)",
@@ -10378,7 +10378,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                     "accent": Object {
                                                                       "dark": "#2a557d",
                                                                       "light": "#54acff",
-                                                                      "main": "#4085C6",
+                                                                      "main": "#316799",
                                                                     },
                                                                     "action": Object {
                                                                       "active": "rgba(0, 0, 0, 0.54)",
@@ -11179,7 +11179,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                         "accent": Object {
                                                                           "dark": "#2a557d",
                                                                           "light": "#54acff",
-                                                                          "main": "#4085C6",
+                                                                          "main": "#316799",
                                                                         },
                                                                         "action": Object {
                                                                           "active": "rgba(0, 0, 0, 0.54)",
@@ -11970,7 +11970,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                     "accent": Object {
                                                                       "dark": "#2a557d",
                                                                       "light": "#54acff",
-                                                                      "main": "#4085C6",
+                                                                      "main": "#316799",
                                                                     },
                                                                     "action": Object {
                                                                       "active": "rgba(0, 0, 0, 0.54)",
@@ -12430,7 +12430,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "accent": Object {
                                                                               "dark": "#2a557d",
                                                                               "light": "#54acff",
-                                                                              "main": "#4085C6",
+                                                                              "main": "#316799",
                                                                             },
                                                                             "action": Object {
                                                                               "active": "rgba(0, 0, 0, 0.54)",
@@ -13549,7 +13549,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "accent": Object {
                                                                               "dark": "#2a557d",
                                                                               "light": "#54acff",
-                                                                              "main": "#4085C6",
+                                                                              "main": "#316799",
                                                                             },
                                                                             "action": Object {
                                                                               "active": "rgba(0, 0, 0, 0.54)",
@@ -14187,7 +14187,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                             "accent": Object {
                                                               "dark": "#2a557d",
                                                               "light": "#54acff",
-                                                              "main": "#4085C6",
+                                                              "main": "#316799",
                                                             },
                                                             "action": Object {
                                                               "active": "rgba(0, 0, 0, 0.54)",
@@ -14646,7 +14646,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                   "accent": Object {
                                                                     "dark": "#2a557d",
                                                                     "light": "#54acff",
-                                                                    "main": "#4085C6",
+                                                                    "main": "#316799",
                                                                   },
                                                                   "action": Object {
                                                                     "active": "rgba(0, 0, 0, 0.54)",
@@ -15275,7 +15275,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                       "accent": Object {
                                                                         "dark": "#2a557d",
                                                                         "light": "#54acff",
-                                                                        "main": "#4085C6",
+                                                                        "main": "#316799",
                                                                       },
                                                                       "action": Object {
                                                                         "active": "rgba(0, 0, 0, 0.54)",
@@ -15899,7 +15899,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 "accent": Object {
                                   "dark": "#2a557d",
                                   "light": "#54acff",
-                                  "main": "#4085C6",
+                                  "main": "#316799",
                                 },
                                 "action": Object {
                                   "active": "rgba(0, 0, 0, 0.54)",
@@ -16352,7 +16352,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                     "accent": Object {
                                       "dark": "#2a557d",
                                       "light": "#54acff",
-                                      "main": "#4085C6",
+                                      "main": "#316799",
                                     },
                                     "action": Object {
                                       "active": "rgba(0, 0, 0, 0.54)",
@@ -17196,7 +17196,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                         "accent": Object {
                                           "dark": "#2a557d",
                                           "light": "#54acff",
-                                          "main": "#4085C6",
+                                          "main": "#316799",
                                         },
                                         "action": Object {
                                           "active": "rgba(0, 0, 0, 0.54)",
@@ -17625,7 +17625,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                               "accent": Object {
                                                 "dark": "#2a557d",
                                                 "light": "#54acff",
-                                                "main": "#4085C6",
+                                                "main": "#316799",
                                               },
                                               "action": Object {
                                                 "active": "rgba(0, 0, 0, 0.54)",
@@ -18938,7 +18938,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                   "accent": Object {
                                                                                     "dark": "#2a557d",
                                                                                     "light": "#54acff",
-                                                                                    "main": "#4085C6",
+                                                                                    "main": "#316799",
                                                                                   },
                                                                                   "action": Object {
                                                                                     "active": "rgba(0, 0, 0, 0.54)",
@@ -19505,7 +19505,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                         "accent": Object {
                                                                                           "dark": "#2a557d",
                                                                                           "light": "#54acff",
-                                                                                          "main": "#4085C6",
+                                                                                          "main": "#316799",
                                                                                         },
                                                                                         "action": Object {
                                                                                           "active": "rgba(0, 0, 0, 0.54)",
@@ -20259,14 +20259,13 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                       className="MuiGrid-container-6 MuiGrid-align-items-xs-flex-start-15 MuiGrid-align-content-xs-center-18 MuiGrid-justify-xs-center-23"
                                                                                                     >
                                                                                                       <WithStyles(Grid)
-                                                                                                        className="Alert-icon-318"
-                                                                                                        id="icon"
+                                                                                                        className="Alert-icon-318 alert-icon"
                                                                                                         item={true}
                                                                                                       >
                                                                                                         <Grid
                                                                                                           alignContent="stretch"
                                                                                                           alignItems="stretch"
-                                                                                                          className="Alert-icon-318"
+                                                                                                          className="Alert-icon-318 alert-icon"
                                                                                                           classes={
                                                                                                             Object {
                                                                                                               "align-content-xs-center": "MuiGrid-align-content-xs-center-18",
@@ -20371,7 +20370,6 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                           component="div"
                                                                                                           container={false}
                                                                                                           direction="row"
-                                                                                                          id="icon"
                                                                                                           item={true}
                                                                                                           justify="flex-start"
                                                                                                           lg={false}
@@ -20384,8 +20382,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                           zeroMinWidth={false}
                                                                                                         >
                                                                                                           <div
-                                                                                                            className="MuiGrid-item-7 Alert-icon-318"
-                                                                                                            id="icon"
+                                                                                                            className="MuiGrid-item-7 Alert-icon-318 alert-icon"
                                                                                                           >
                                                                                                             <pure(ErrorIcon)
                                                                                                               className="icon"
@@ -20439,15 +20436,14 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                         </Grid>
                                                                                                       </WithStyles(Grid)>
                                                                                                       <WithStyles(Grid)
-                                                                                                        className="Alert-text-319"
-                                                                                                        id="text"
+                                                                                                        className="Alert-text-319 alert-text"
                                                                                                         item={true}
                                                                                                         xs={true}
                                                                                                       >
                                                                                                         <Grid
                                                                                                           alignContent="stretch"
                                                                                                           alignItems="stretch"
-                                                                                                          className="Alert-text-319"
+                                                                                                          className="Alert-text-319 alert-text"
                                                                                                           classes={
                                                                                                             Object {
                                                                                                               "align-content-xs-center": "MuiGrid-align-content-xs-center-18",
@@ -20552,7 +20548,6 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                           component="div"
                                                                                                           container={false}
                                                                                                           direction="row"
-                                                                                                          id="text"
                                                                                                           item={true}
                                                                                                           justify="flex-start"
                                                                                                           lg={false}
@@ -20565,8 +20560,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                           zeroMinWidth={false}
                                                                                                         >
                                                                                                           <div
-                                                                                                            className="MuiGrid-item-7 MuiGrid-grid-xs-true-34 Alert-text-319"
-                                                                                                            id="text"
+                                                                                                            className="MuiGrid-item-7 MuiGrid-grid-xs-true-34 Alert-text-319 alert-text"
                                                                                                           >
                                                                                                             <b>
                                                                                                               There has been an error - 
@@ -21056,7 +21050,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                           "accent": Object {
                                                                                             "dark": "#2a557d",
                                                                                             "light": "#54acff",
-                                                                                            "main": "#4085C6",
+                                                                                            "main": "#316799",
                                                                                           },
                                                                                           "action": Object {
                                                                                             "active": "rgba(0, 0, 0, 0.54)",
@@ -21659,7 +21653,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                                 "accent": Object {
                                                                                                                   "dark": "#2a557d",
                                                                                                                   "light": "#54acff",
-                                                                                                                  "main": "#4085C6",
+                                                                                                                  "main": "#316799",
                                                                                                                 },
                                                                                                                 "action": Object {
                                                                                                                   "active": "rgba(0, 0, 0, 0.54)",
@@ -22175,7 +22169,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                               "accent": Object {
                                                                                                                 "dark": "#2a557d",
                                                                                                                 "light": "#54acff",
-                                                                                                                "main": "#4085C6",
+                                                                                                                "main": "#316799",
                                                                                                               },
                                                                                                               "action": Object {
                                                                                                                 "active": "rgba(0, 0, 0, 0.54)",
@@ -22890,7 +22884,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                         "accent": Object {
                                                                                           "dark": "#2a557d",
                                                                                           "light": "#54acff",
-                                                                                          "main": "#4085C6",
+                                                                                          "main": "#316799",
                                                                                         },
                                                                                         "action": Object {
                                                                                           "active": "rgba(0, 0, 0, 0.54)",
@@ -23358,7 +23352,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                   "accent": Object {
                                     "dark": "#2a557d",
                                     "light": "#54acff",
-                                    "main": "#4085C6",
+                                    "main": "#316799",
                                   },
                                   "action": Object {
                                     "active": "rgba(0, 0, 0, 0.54)",
@@ -23809,7 +23803,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                       "accent": Object {
                                         "dark": "#2a557d",
                                         "light": "#54acff",
-                                        "main": "#4085C6",
+                                        "main": "#316799",
                                       },
                                       "action": Object {
                                         "active": "rgba(0, 0, 0, 0.54)",
@@ -24300,7 +24294,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 "accent": Object {
                                   "dark": "#2a557d",
                                   "light": "#54acff",
-                                  "main": "#4085C6",
+                                  "main": "#316799",
                                 },
                                 "action": Object {
                                   "active": "rgba(0, 0, 0, 0.54)",

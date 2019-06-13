@@ -22,6 +22,7 @@ export default class AdvancedSearchRowInput extends PureComponent {
             validation: PropTypes.array.isRequired,
             hint: PropTypes.string,
             label: PropTypes.string,
+            id: PropTypes.string,
             multiple: PropTypes.bool,
             errorHint: PropTypes.string,
             loadingHint: PropTypes.string,
@@ -88,17 +89,20 @@ export default class AdvancedSearchRowInput extends PureComponent {
 
         const textFieldMui1Props = {
             'placeholder': this.props.inputField.hint,
+            'id': this.props.inputField.id || this.props.inputField.label || 'textfield',
             'aria-label': this.props.inputField.ariaLabel,
             'error': !!this.runValidationRules(this.props.value),
             'errorText': this.runValidationRules(this.props.value),
-            'label': null,
+            'label': this.props.inputField.label,
         };
 
         const lookupDefaultProps = {
             ...defaultProps,
             'value': this.props.label || this.props.value,
             'aria-label': this.props.inputField.ariaLabel,
-            'allowFreeText': true
+            'allowFreeText': true,
+            'floatingLabelText': this.props.inputField.ariaLabel,
+            'hideLabel': true
         };
 
         const selectDefaultProps = {
@@ -107,6 +111,8 @@ export default class AdvancedSearchRowInput extends PureComponent {
             'hintText': this.props.inputField.hint,
             'onChange': (item) => this.props.onChange(item, item),
             'aria-label': this.props.inputField.ariaLabel,
+            'label': this.props.inputField.label,
+            'style': {marginTop: 0}
         };
 
         switch (this.props.inputField.type) {
@@ -115,6 +121,7 @@ export default class AdvancedSearchRowInput extends PureComponent {
                     ...textFieldMui1Props,
                     'autoComplete': 'search',
                     'onChange': (event) => this.props.onChange(event.target.value),
+                    'hideLabel': true,
                 };
             case 'PublisherLookup':
             case 'OrgUnitLookup':

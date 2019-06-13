@@ -1,156 +1,153 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Date range  should render component with values set 1`] = `
-<WithStyles(FacetsFilterListItem)
+<Memo(WithStyles(FacetsFilterListItem))
   facetTitle="Date range"
   key="date-range"
-  nestedItems={
-    <WithStyles(FacetsFilterNestedListItem)
-      isActive={true}
-      onFacetClick={[Function]}
-      primaryText="2010 - 2016"
-    />
-  }
   onToggle={[MockFunction]}
   open={null}
-/>
+>
+  <Memo(WithStyles(FacetsFilterNestedListItem))
+    isActive={true}
+    onFacetClick={[Function]}
+    primaryText="2010 - 2016"
+  />
+</Memo(WithStyles(FacetsFilterListItem))>
 `;
 
 exports[`Date range  should render disabled component 1`] = `
-<WithStyles(FacetsFilterListItem)
+<Memo(WithStyles(FacetsFilterListItem))
   disabled={true}
   facetTitle="Date range"
   key="date-range"
-  nestedItems={
-    <div
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
-    >
-      <WithStyles(Grid)
-        alignItems="flex-end"
-        container={true}
-        spacing={16}
-        wrap="nowrap"
-      >
-        <WithStyles(Grid)
-          item={true}
-          xs={4}
-        >
-          <TextField
-            disabled={true}
-            fullWidth={true}
-            label="From"
-            onChange={[Function]}
-            required={false}
-            select={false}
-            type="number"
-            value={2007}
-            variant="standard"
-          />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          xs={4}
-        >
-          <TextField
-            disabled={true}
-            fullWidth={true}
-            label="To"
-            onChange={[Function]}
-            required={false}
-            select={false}
-            type="number"
-            value={2022}
-            variant="standard"
-          />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-        >
-          <WithStyles(Button)
-            disabled={true}
-            fullWidth={true}
-            onClick={[Function]}
-            variant="text"
-          >
-            Go
-          </WithStyles(Button)>
-        </WithStyles(Grid)>
-      </WithStyles(Grid)>
-    </div>
-  }
   onToggle={[MockFunction]}
   open={null}
-/>
+>
+  <div
+    style={
+      Object {
+        "padding": 8,
+      }
+    }
+  >
+    <WithStyles(Grid)
+      alignItems="flex-end"
+      container={true}
+      spacing={16}
+      wrap="nowrap"
+    >
+      <WithStyles(Grid)
+        item={true}
+        xs={4}
+      >
+        <TextField
+          disabled={true}
+          fullWidth={true}
+          label="From"
+          onChange={[Function]}
+          required={false}
+          select={false}
+          type="number"
+          value={2007}
+          variant="standard"
+        />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={4}
+      >
+        <TextField
+          disabled={true}
+          fullWidth={true}
+          label="To"
+          onChange={[Function]}
+          required={false}
+          select={false}
+          type="number"
+          value={2022}
+          variant="standard"
+        />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+      >
+        <WithStyles(Button)
+          disabled={true}
+          fullWidth={true}
+          onClick={[Function]}
+          variant="text"
+        >
+          Go
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </div>
+</Memo(WithStyles(FacetsFilterListItem))>
 `;
 
 exports[`Date range  should render empty component 1`] = `
-<WithStyles(FacetsFilterListItem)
+<Memo(WithStyles(FacetsFilterListItem))
   facetTitle="Date range"
   key="date-range"
-  nestedItems={
-    <div
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
-    >
-      <WithStyles(Grid)
-        alignItems="flex-end"
-        container={true}
-        spacing={16}
-        wrap="nowrap"
-      >
-        <WithStyles(Grid)
-          item={true}
-          xs={4}
-        >
-          <TextField
-            fullWidth={true}
-            label="From"
-            onChange={[Function]}
-            required={false}
-            select={false}
-            type="number"
-            value={2007}
-            variant="standard"
-          />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          xs={4}
-        >
-          <TextField
-            fullWidth={true}
-            label="To"
-            onChange={[Function]}
-            required={false}
-            select={false}
-            type="number"
-            value={2022}
-            variant="standard"
-          />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-        >
-          <WithStyles(Button)
-            disabled={false}
-            fullWidth={true}
-            onClick={[Function]}
-            variant="text"
-          >
-            Go
-          </WithStyles(Button)>
-        </WithStyles(Grid)>
-      </WithStyles(Grid)>
-    </div>
-  }
   onToggle={[MockFunction]}
   open={null}
-/>
+>
+  <div
+    style={
+      Object {
+        "padding": 8,
+      }
+    }
+  >
+    <WithStyles(Grid)
+      alignItems="flex-end"
+      container={true}
+      spacing={16}
+      wrap="nowrap"
+    >
+      <WithStyles(Grid)
+        item={true}
+        xs={4}
+      >
+        <TextField
+          fullWidth={true}
+          label="From"
+          onChange={[Function]}
+          required={false}
+          select={false}
+          type="number"
+          value={2007}
+          variant="standard"
+        />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={4}
+      >
+        <TextField
+          fullWidth={true}
+          label="To"
+          onChange={[Function]}
+          required={false}
+          select={false}
+          type="number"
+          value={2022}
+          variant="standard"
+        />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+      >
+        <WithStyles(Button)
+          disabled={false}
+          fullWidth={true}
+          onClick={[Function]}
+          variant="text"
+        >
+          Go
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </div>
+</Memo(WithStyles(FacetsFilterListItem))>
 `;

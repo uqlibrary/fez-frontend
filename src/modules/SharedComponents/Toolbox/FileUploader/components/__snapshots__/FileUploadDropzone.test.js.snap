@@ -113,7 +113,7 @@ exports[`Component FileUploadDropzone should open files selection dialog 1`] = `
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -772,6 +772,7 @@ exports[`Component FileUploadDropzone should open files selection dialog 1`] = `
                             getDataTransferItems={[Function]}
                             inputProps={
                               Object {
+                                "aria-label": "Upload files",
                                 "id": "Uploader",
                               }
                             }
@@ -1198,7 +1199,7 @@ exports[`Component FileUploadDropzone should open files selection dialog 1`] = `
                                                         "accent": Object {
                                                           "dark": "#2a557d",
                                                           "light": "#54acff",
-                                                          "main": "#4085C6",
+                                                          "main": "#316799",
                                                         },
                                                         "action": Object {
                                                           "active": "rgba(0, 0, 0, 0.54)",
@@ -2134,6 +2135,7 @@ exports[`Component FileUploadDropzone should open files selection dialog 1`] = `
                                 </FileUploadDropzoneStaticContent>
                               </WithStyles(FileUploadDropzoneStaticContent)>
                               <input
+                                aria-label="Upload files"
                                 autoComplete="off"
                                 disabled={false}
                                 id="Uploader"
@@ -2188,6 +2190,7 @@ exports[`Component FileUploadDropzone should render component with default props
         getDataTransferItems={[Function]}
         inputProps={
           Object {
+            "aria-label": "Upload files",
             "id": "Uploader",
           }
         }
@@ -2324,7 +2327,7 @@ exports[`Component FileUploadDropzone should render disabled component 1`] = `
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -2974,6 +2977,7 @@ exports[`Component FileUploadDropzone should render disabled component 1`] = `
                             getDataTransferItems={[Function]}
                             inputProps={
                               Object {
+                                "aria-label": "Upload files",
                                 "id": "Uploader",
                               }
                             }
@@ -3400,7 +3404,7 @@ exports[`Component FileUploadDropzone should render disabled component 1`] = `
                                                         "accent": Object {
                                                           "dark": "#2a557d",
                                                           "light": "#54acff",
-                                                          "main": "#4085C6",
+                                                          "main": "#316799",
                                                         },
                                                         "action": Object {
                                                           "active": "rgba(0, 0, 0, 0.54)",
@@ -4336,6 +4340,7 @@ exports[`Component FileUploadDropzone should render disabled component 1`] = `
                                 </FileUploadDropzoneStaticContent>
                               </WithStyles(FileUploadDropzoneStaticContent)>
                               <input
+                                aria-label="Upload files"
                                 autoComplete="off"
                                 disabled={true}
                                 id="Uploader"

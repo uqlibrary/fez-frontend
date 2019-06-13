@@ -140,7 +140,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -760,7 +760,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                         "accent": Object {
                           "dark": "#2a557d",
                           "light": "#54acff",
-                          "main": "#4085C6",
+                          "main": "#316799",
                         },
                         "action": Object {
                           "active": "rgba(0, 0, 0, 0.54)",
@@ -1258,7 +1258,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                         "accent": Object {
                           "dark": "#2a557d",
                           "light": "#54acff",
-                          "main": "#4085C6",
+                          "main": "#316799",
                         },
                         "action": Object {
                           "active": "rgba(0, 0, 0, 0.54)",
@@ -2078,6 +2078,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                   getDataTransferItems={[Function]}
                                   inputProps={
                                     Object {
+                                      "aria-label": "Upload files",
                                       "id": "Uploader",
                                     }
                                   }
@@ -2666,7 +2667,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                               "accent": Object {
                                                                 "dark": "#2a557d",
                                                                 "light": "#54acff",
-                                                                "main": "#4085C6",
+                                                                "main": "#316799",
                                                               },
                                                               "action": Object {
                                                                 "active": "rgba(0, 0, 0, 0.54)",
@@ -3628,6 +3629,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                       </FileUploadDropzoneStaticContent>
                                     </WithStyles(FileUploadDropzoneStaticContent)>
                                     <input
+                                      aria-label="Upload files"
                                       autoComplete="off"
                                       disabled={false}
                                       id="Uploader"
@@ -3820,7 +3822,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
               "accent": Object {
                 "dark": "#2a557d",
                 "light": "#54acff",
-                "main": "#4085C6",
+                "main": "#316799",
               },
               "action": Object {
                 "active": "rgba(0, 0, 0, 0.54)",
@@ -4440,7 +4442,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                         "accent": Object {
                           "dark": "#2a557d",
                           "light": "#54acff",
-                          "main": "#4085C6",
+                          "main": "#316799",
                         },
                         "action": Object {
                           "active": "rgba(0, 0, 0, 0.54)",
@@ -4938,7 +4940,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                         "accent": Object {
                           "dark": "#2a557d",
                           "light": "#54acff",
-                          "main": "#4085C6",
+                          "main": "#316799",
                         },
                         "action": Object {
                           "active": "rgba(0, 0, 0, 0.54)",
@@ -5758,6 +5760,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                   getDataTransferItems={[Function]}
                                   inputProps={
                                     Object {
+                                      "aria-label": "Upload files",
                                       "id": "Uploader",
                                     }
                                   }
@@ -6346,7 +6349,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                               "accent": Object {
                                                                 "dark": "#2a557d",
                                                                 "light": "#54acff",
-                                                                "main": "#4085C6",
+                                                                "main": "#316799",
                                                               },
                                                               "action": Object {
                                                                 "active": "rgba(0, 0, 0, 0.54)",
@@ -7308,6 +7311,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                       </FileUploadDropzoneStaticContent>
                                     </WithStyles(FileUploadDropzoneStaticContent)>
                                     <input
+                                      aria-label="Upload files"
                                       autoComplete="off"
                                       disabled={false}
                                       id="Uploader"

@@ -259,10 +259,10 @@ export class Alert extends PureComponent {
                 <Grid container spacing={24} className={classNames(classes[this.props.type], classes.common)} justify={'center'} alignItems={'flex-start'} alignContent={'center'}>
                     <Grid item xs={12} sm className={this.props.action && classes.linked}>
                         <Grid container justify={'center'} alignItems={'flex-start'} alignContent={'center'}>
-                            <Grid item className={classes.icon} onClick={this.props.action} onKeyDown={this.props.action} id={'icon'}>
+                            <Grid item className={`${classes.icon} alert-icon`} onClick={this.props.action} onKeyDown={this.props.action}>
                                 {this.props.showLoader ? <CircularProgress className={'spinner'} size={38} thickness={3} /> : this.renderIcon(this.props.type)}
                             </Grid>
-                            <Grid item xs className={classes.text} onClick={this.props.action} onKeyDown={this.props.action} id={'text'}>
+                            <Grid item xs className={`${classes.text} alert-text`} onClick={this.props.action} onKeyDown={this.props.action}>
                                 <b>{this.props.title && `${this.props.title} - `}</b>{this.props.message}
                             </Grid>
                             {
@@ -282,12 +282,11 @@ export class Alert extends PureComponent {
                         this.props.action && this.props.actionButtonLabel &&
                         <Grid item xs sm={'auto'} className={classes.actionButton}>
                             <Button
-                                id={'alertButton'}
                                 variant={'text'}
                                 children={this.props.actionButtonLabel}
                                 onClick={this.props.action}
                                 fullWidth
-                                className="action"/>
+                                className="action alert-button"/>
                         </Grid>
                     }
                     {
