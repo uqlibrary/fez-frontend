@@ -154,7 +154,7 @@ export default class ClaimRecord extends PureComponent {
 
         const authorLinked = publication &&
             author &&
-            publication.fez_record_search_key_author_id &&
+            Array.isArray(publication.fez_record_search_key_author_id) &&
             publication.fez_record_search_key_author_id.some(
                 authorId => authorId.rek_author_id === author.aut_id
             )
@@ -162,7 +162,7 @@ export default class ClaimRecord extends PureComponent {
 
         const contributorLinked = publication &&
             author &&
-            publication.fez_record_search_key_contributor_id &&
+            Array.isArray(publication.fez_record_search_key_contributor_id) &&
             publication.fez_record_search_key_contributor_id.some(
                 contributorId => contributorId.rek_contributor_id === author.aut_id
             )
