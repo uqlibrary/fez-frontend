@@ -296,7 +296,7 @@ export default class ClaimRecord extends PureComponent {
                                 {
                                     showContentIndicatorsField(publication) &&
                                     <Grid item xs={12}>
-                                        <StandardCard title={txt.contentIndicators.title} >
+                                        <StandardCard title={txt.contentIndicators.title} help={txt.contentIndicators.help} >
                                             <Grid container spacing={24}>
                                                 <Grid item xs={12}>
                                                     <Typography>{txt.contentIndicators.description}</Typography>

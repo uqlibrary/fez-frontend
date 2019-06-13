@@ -1054,6 +1054,27 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
         xs={12}
       >
         <StandardCard
+          help={
+            Object {
+              "buttonLabel": "CLOSE",
+              "text": <p>
+                For more information about content indicators, click 
+                <a
+                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
+                  rel="noreferrer"
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                  target="_blank"
+                >
+                  here
+                </a>
+              </p>,
+              "title": "Content indicators",
+            }
+          }
           title="Optional: Content Indicators"
         >
           <WithStyles(Grid)
@@ -3209,6 +3230,27 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
         xs={12}
       >
         <StandardCard
+          help={
+            Object {
+              "buttonLabel": "CLOSE",
+              "text": <p>
+                For more information about content indicators, click 
+                <a
+                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
+                  rel="noreferrer"
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                  target="_blank"
+                >
+                  here
+                </a>
+              </p>,
+              "title": "Content indicators",
+            }
+          }
           title="Optional: Content Indicators"
         >
           <WithStyles(Grid)
@@ -5522,6 +5564,27 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
         xs={12}
       >
         <StandardCard
+          help={
+            Object {
+              "buttonLabel": "CLOSE",
+              "text": <p>
+                For more information about content indicators, click 
+                <a
+                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
+                  rel="noreferrer"
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                  target="_blank"
+                >
+                  here
+                </a>
+              </p>,
+              "title": "Content indicators",
+            }
+          }
           title="Optional: Content Indicators"
         >
           <WithStyles(Grid)
@@ -6949,6 +7012,27 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
         xs={12}
       >
         <StandardCard
+          help={
+            Object {
+              "buttonLabel": "CLOSE",
+              "text": <p>
+                For more information about content indicators, click 
+                <a
+                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
+                  rel="noreferrer"
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                  target="_blank"
+                >
+                  here
+                </a>
+              </p>,
+              "title": "Content indicators",
+            }
+          }
           title="Optional: Content Indicators"
         >
           <WithStyles(Grid)
@@ -8376,6 +8460,27 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
         xs={12}
       >
         <StandardCard
+          help={
+            Object {
+              "buttonLabel": "CLOSE",
+              "text": <p>
+                For more information about content indicators, click 
+                <a
+                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
+                  rel="noreferrer"
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                  target="_blank"
+                >
+                  here
+                </a>
+              </p>,
+              "title": "Content indicators",
+            }
+          }
           title="Optional: Content Indicators"
         >
           <WithStyles(Grid)
@@ -9803,6 +9908,27 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
         xs={12}
       >
         <StandardCard
+          help={
+            Object {
+              "buttonLabel": "CLOSE",
+              "text": <p>
+                For more information about content indicators, click 
+                <a
+                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
+                  rel="noreferrer"
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                  target="_blank"
+                >
+                  here
+                </a>
+              </p>,
+              "title": "Content indicators",
+            }
+          }
           title="Optional: Content Indicators"
         >
           <WithStyles(Grid)
@@ -12288,6 +12414,27 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
         xs={12}
       >
         <StandardCard
+          help={
+            Object {
+              "buttonLabel": "CLOSE",
+              "text": <p>
+                For more information about content indicators, click 
+                <a
+                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
+                  rel="noreferrer"
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                  target="_blank"
+                >
+                  here
+                </a>
+              </p>,
+              "title": "Content indicators",
+            }
+          }
           title="Optional: Content Indicators"
         >
           <WithStyles(Grid)
@@ -13715,6 +13862,27 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
         xs={12}
       >
         <StandardCard
+          help={
+            Object {
+              "buttonLabel": "CLOSE",
+              "text": <p>
+                For more information about content indicators, click 
+                <a
+                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
+                  rel="noreferrer"
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                  target="_blank"
+                >
+                  here
+                </a>
+              </p>,
+              "title": "Content indicators",
+            }
+          }
           title="Optional: Content Indicators"
         >
           <WithStyles(Grid)
@@ -15142,6 +15310,27 @@ exports[`Component ClaimRecord  should return and render alert message depending
         xs={12}
       >
         <StandardCard
+          help={
+            Object {
+              "buttonLabel": "CLOSE",
+              "text": <p>
+                For more information about content indicators, click 
+                <a
+                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
+                  rel="noreferrer"
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                  target="_blank"
+                >
+                  here
+                </a>
+              </p>,
+              "title": "Content indicators",
+            }
+          }
           title="Optional: Content Indicators"
         >
           <WithStyles(Grid)
@@ -16582,6 +16771,27 @@ exports[`Component ClaimRecord  should return and render alert message depending
         xs={12}
       >
         <StandardCard
+          help={
+            Object {
+              "buttonLabel": "CLOSE",
+              "text": <p>
+                For more information about content indicators, click 
+                <a
+                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
+                  rel="noreferrer"
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                  target="_blank"
+                >
+                  here
+                </a>
+              </p>,
+              "title": "Content indicators",
+            }
+          }
           title="Optional: Content Indicators"
         >
           <WithStyles(Grid)
@@ -18020,6 +18230,27 @@ exports[`Component ClaimRecord  should return and render alert message depending
         xs={12}
       >
         <StandardCard
+          help={
+            Object {
+              "buttonLabel": "CLOSE",
+              "text": <p>
+                For more information about content indicators, click 
+                <a
+                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
+                  rel="noreferrer"
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                  target="_blank"
+                >
+                  here
+                </a>
+              </p>,
+              "title": "Content indicators",
+            }
+          }
           title="Optional: Content Indicators"
         >
           <WithStyles(Grid)
@@ -19459,6 +19690,27 @@ exports[`Component ClaimRecord  should return and render alert message depending
         xs={12}
       >
         <StandardCard
+          help={
+            Object {
+              "buttonLabel": "CLOSE",
+              "text": <p>
+                For more information about content indicators, click 
+                <a
+                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
+                  rel="noreferrer"
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                  target="_blank"
+                >
+                  here
+                </a>
+              </p>,
+              "title": "Content indicators",
+            }
+          }
           title="Optional: Content Indicators"
         >
           <WithStyles(Grid)
@@ -19703,6 +19955,27 @@ exports[`Component ClaimRecord  should return and render alert message depending
         xs={12}
       >
         <StandardCard
+          help={
+            Object {
+              "buttonLabel": "CLOSE",
+              "text": <p>
+                For more information about content indicators, click 
+                <a
+                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
+                  rel="noreferrer"
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                  target="_blank"
+                >
+                  here
+                </a>
+              </p>,
+              "title": "Content indicators",
+            }
+          }
           title="Optional: Content Indicators"
         >
           <WithStyles(Grid)
@@ -19932,6 +20205,27 @@ exports[`Component ClaimRecord  should show alert if submit failed and PID not f
         xs={12}
       >
         <StandardCard
+          help={
+            Object {
+              "buttonLabel": "CLOSE",
+              "text": <p>
+                For more information about content indicators, click 
+                <a
+                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
+                  rel="noreferrer"
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                  target="_blank"
+                >
+                  here
+                </a>
+              </p>,
+              "title": "Content indicators",
+            }
+          }
           title="Optional: Content Indicators"
         >
           <WithStyles(Grid)

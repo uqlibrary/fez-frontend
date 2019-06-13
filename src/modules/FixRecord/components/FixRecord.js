@@ -202,7 +202,7 @@ export default class FixRecord extends PureComponent {
                                 {
                                     showContentIndicatorsField(this.props.recordToFix) &&
                                     <Grid item xs={12}>
-                                        <StandardCard title={txtFixForm.contentIndicators.title} >
+                                        <StandardCard title={txtFixForm.contentIndicators.title}  help={txtFixForm.contentIndicators.help} >
                                             <Grid container spacing={24}>
                                                 <Grid item xs={12}>
                                                     <Typography>{txtFixForm.contentIndicators.description}</Typography>

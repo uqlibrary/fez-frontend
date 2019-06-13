@@ -34,6 +34,11 @@ export default {
                 // }
             },
             contentIndicators: {
+                help: {
+                    title: 'Content indicators',
+                    text: <p>For more information about content indicators, click <a style={{fontWeight: 700}} target="_blank" rel="noreferrer" href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators">here</a></p>,
+                    buttonLabel: 'CLOSE'
+                },
                 title: 'Optional: Content Indicators',
                 description: 'You can select multiple (up to 3) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.',
                 label: 'Please select relevant indicator(s).',
@@ -134,6 +139,11 @@ export default {
         },
         fixPublicationForm: {
             contentIndicators: {
+                help: {
+                    title: 'Content indicators',
+                    text: <p>For more information about content indicators, click <a style={{fontWeight: 700}} target="_blank" rel="noreferrer" href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators">here</a></p>,
+                    buttonLabel: 'CLOSE'
+                },
                 title: 'Content Indicators',
                 description: 'You can select multiple (up to 3) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.',
                 label: 'Please select relevant indicator(s).',

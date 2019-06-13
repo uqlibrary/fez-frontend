@@ -1498,6 +1498,27 @@ exports[`Component FixRecord should render fix record form 1`] = `
         xs={12}
       >
         <StandardCard
+          help={
+            Object {
+              "buttonLabel": "CLOSE",
+              "text": <p>
+                For more information about content indicators, click 
+                <a
+                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
+                  rel="noreferrer"
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                  target="_blank"
+                >
+                  here
+                </a>
+              </p>,
+              "title": "Content indicators",
+            }
+          }
           title="Content Indicators"
         >
           <WithStyles(Grid)
@@ -2657,6 +2678,27 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
         xs={12}
       >
         <StandardCard
+          help={
+            Object {
+              "buttonLabel": "CLOSE",
+              "text": <p>
+                For more information about content indicators, click 
+                <a
+                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
+                  rel="noreferrer"
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                  target="_blank"
+                >
+                  here
+                </a>
+              </p>,
+              "title": "Content indicators",
+            }
+          }
           title="Content Indicators"
         >
           <WithStyles(Grid)
@@ -3306,6 +3348,27 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
         xs={12}
       >
         <StandardCard
+          help={
+            Object {
+              "buttonLabel": "CLOSE",
+              "text": <p>
+                For more information about content indicators, click 
+                <a
+                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
+                  rel="noreferrer"
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                  target="_blank"
+                >
+                  here
+                </a>
+              </p>,
+              "title": "Content indicators",
+            }
+          }
           title="Content Indicators"
         >
           <WithStyles(Grid)
