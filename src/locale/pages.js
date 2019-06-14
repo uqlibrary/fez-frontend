@@ -701,9 +701,47 @@ export default {
             title: 'Unpublished buffer'
         },
         prototype: {
-            title: 'Admin prototype'
+            title: 'Admin prototype',
         },
         edit: {
+            sections: {
+                identifiers: {
+                    title: 'Identifiers',
+                },
+                bibliographic: {
+                    title: 'Bibliographic',
+                },
+                admin: {
+                    title: 'Admin',
+                },
+                grantInformation: {
+                    title: 'Grant Information',
+                },
+                authorDetails: {
+                    title: 'Author details',
+                },
+                files: {
+                    title: 'Files',
+                },
+                security: {
+                    title: 'Security',
+                },
+            },
+            help: {
+                tooltip: 'Learn about keyboard shortcuts',
+                title: 'Keyboard shortcuts',
+                text: (
+                    <div>
+                        <br/>
+                        <h3>Tab navigation</h3>
+                        <p>To navigate tabs while in tabbed mode, hold CTRL and SHIFT and use the LEFT and RIGHT arrow keys.</p>
+                        <h3>Form style</h3>
+                        <p>To switch between tabbed or full form mode, hold CTRL and SHIFT and use the UP and DOWN arrow keys.</p>
+                        <p>Your preference is saved as a cookie on this browser and it will remember your preference.</p>
+                    </div>
+                ),
+                buttonLabel: 'Got it'
+            },
             loadingMessage: 'Loading record',
             community: {
                 title: 'Edit community',

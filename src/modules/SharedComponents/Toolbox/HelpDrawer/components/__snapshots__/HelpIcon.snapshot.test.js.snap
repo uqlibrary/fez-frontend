@@ -18,6 +18,7 @@ exports[`HelpIcon snapshots tests renders help icon 1`] = `
 
 exports[`HelpIcon snapshots tests should render with styles 1`] = `
 <HelpIcon
+  IconComponent={[Function]}
   classes={
     Object {
       "helpIcon": "HelpIcon-helpIcon-1",

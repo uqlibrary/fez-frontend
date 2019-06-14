@@ -1723,6 +1723,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                           title="Test"
                         >
                           <HelpIcon
+                            IconComponent={[Function]}
                             buttonLabel="Test"
                             classes={
                               Object {

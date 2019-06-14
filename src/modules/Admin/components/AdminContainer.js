@@ -1,13 +1,18 @@
-import React, {/* Component, */ useEffect} from 'react';
+import React, { useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
+import Cookies from 'js-cookie';
+
 import locale from 'locale/pages';
 
 import {withStyles} from '@material-ui/core/styles';
+import useTheme from '@material-ui/styles/useTheme';
+import {unstable_useMediaQuery as useMediaQuery} from '@material-ui/core/useMediaQuery';
 
 import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
 import AdminInterface from './AdminInterface';
 
 import {
+    TabbedContextProvider,
     RecordContextProvider,
 } from 'context';
 
@@ -44,11 +49,21 @@ export const AdminContainer = ({
     handleSubmit,
     match
 }) => {
+    const [tabbed, setTabbed] = useState(
+        Cookies.get('adminFormTabbed') &&
+        !!(Cookies.get('adminFormTabbed') === 'tabbed')
+    );
+    const theme = useTheme();
+
+    const isMobileView = useMediaQuery(theme.breakpoints.down('xs')) || false;
+
     useEffect(() => {
         if (!!match.params.pid && !!actions.loadRecordToView) {
             actions.loadRecordToView(match.params.pid);
         }
     }, []);
+
+    const handleToggle = () => setTabbed(!tabbed);
 
     const txt = locale.pages.edit;
 
@@ -59,16 +74,18 @@ export const AdminContainer = ({
     }
 
     return (
-        <RecordContextProvider value={{record: recordToView}}>
-            <AdminInterface
-                classes={classes}
-                handleSubmit={handleSubmit}
-                record={recordToView}
-                submitting={submitting}
-                disableSubmit={disableSubmit}
-                location={location}
-            />
-        </RecordContextProvider>
+        <TabbedContextProvider value={{tabbed: isMobileView ? false : tabbed, toggleTabbed: handleToggle}}>
+            <RecordContextProvider value={{record: recordToView}}>
+                <AdminInterface
+                    classes={classes}
+                    handleSubmit={handleSubmit}
+                    record={recordToView}
+                    submitting={submitting}
+                    disableSubmit={disableSubmit}
+                    location={location}
+                />
+            </RecordContextProvider>
+        </TabbedContextProvider>
     );
 };
 

@@ -3712,6 +3712,7 @@ exports[`Component GoogleScholar  should handle keyboard form submit event 1`] =
                                                                         title="About Google Scholar"
                                                                       >
                                                                         <HelpIcon
+                                                                          IconComponent={[Function]}
                                                                           buttonLabel="CLOSE"
                                                                           classes={
                                                                             Object {
