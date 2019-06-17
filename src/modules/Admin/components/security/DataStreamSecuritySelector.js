@@ -40,7 +40,8 @@ export const DataStreamSecuritySelector = ({
             ...dataStreamSecurity.slice(0, index),
             {
                 ...dataStreamSecurity[index],
-                dsi_security_policy: value
+                dsi_security_policy: value,
+                dsi_security_inherited: 0
             },
             ...dataStreamSecurity.slice(index + 1)
         ];
@@ -76,7 +77,7 @@ export const DataStreamSecuritySelector = ({
                                     {...{
                                         input: {
                                             onChange: onSecurityChange(index),
-                                            onBlur: /* istanbul ignore next */ () => {}
+                                            onBlur: /* istanbul ignore next */ () => { }
                                         },
                                         value: dataStream.dsi_security_policy
                                     }}

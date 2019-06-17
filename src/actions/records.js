@@ -1,4 +1,7 @@
-import {post, patch} from 'repositories/generic';
+import {
+    post,
+    patch
+} from 'repositories/generic';
 import {
     NEW_RECORD_API,
     EXISTING_RECORD_API,
@@ -14,9 +17,15 @@ import {
     RECORD_TYPE_COLLECTION,
     RECORD_TYPE_COMMUNITY
 } from 'config/general';
-import {putUploadFiles} from 'repositories';
+import {
+    putUploadFiles
+} from 'repositories';
 import * as transformers from './transformers';
-import {NEW_RECORD_DEFAULT_VALUES, NEW_COLLECTION_DEFAULT_VALUES, NEW_COMMUNITY_DEFAULT_VALUES} from 'config/general';
+import {
+    NEW_RECORD_DEFAULT_VALUES,
+    NEW_COLLECTION_DEFAULT_VALUES,
+    NEW_COMMUNITY_DEFAULT_VALUES
+} from 'config/general';
 import * as actions from './actionTypes';
 
 /**
@@ -27,7 +36,9 @@ import * as actions from './actionTypes';
  */
 export function createNewRecord(data) {
     return dispatch => {
-        dispatch({type: actions.CREATE_RECORD_SAVING});
+        dispatch({
+            type: actions.CREATE_RECORD_SAVING
+        });
         // set default values, links
         const recordRequest = {
             ...NEW_RECORD_DEFAULT_VALUES,
@@ -70,7 +81,9 @@ export function createNewRecord(data) {
 
         let newRecord = null;
         const hasFilesToUpload = data.files && data.files.queue && data.files.queue.length > 0;
-        const recordPatch = hasFilesToUpload ? {...transformers.getRecordFileAttachmentSearchKey(data.files.queue)} : null;
+        const recordPatch = hasFilesToUpload ? {
+            ...transformers.getRecordFileAttachmentSearchKey(data.files.queue)
+        } : null;
 
         return post(NEW_RECORD_API(), recordRequest)
             .then(response => {
@@ -78,9 +91,16 @@ export function createNewRecord(data) {
                 newRecord = response.data;
                 return response;
             })
-            .then(() =>(hasFilesToUpload ? putUploadFiles(newRecord.rek_pid, data.files.queue, dispatch) : newRecord))
-            .then(() => (hasFilesToUpload ? patch(EXISTING_RECORD_API({pid: newRecord.rek_pid}), recordPatch) : newRecord))
-            .then(() => (data.comments ? post(RECORDS_ISSUES_API({pid: newRecord.rek_pid}), {issue: 'Notes from creator of the new record: ' +  data.comments}) : newRecord))
+            .then(() => (hasFilesToUpload ? putUploadFiles(newRecord.rek_pid, data.files.queue, dispatch) : newRecord))
+            .then(() => (hasFilesToUpload ? patch(EXISTING_RECORD_API({
+                pid: newRecord.rek_pid
+            }), recordPatch) : newRecord))
+            .then(
+                () => (data.comments ? post(RECORDS_ISSUES_API({
+                    pid: newRecord.rek_pid
+                }), {
+                    issue: 'Notes from creator of the new record: ' + data.comments
+                }) : newRecord))
             .then((response) => {
                 dispatch({
                     type: actions.CREATE_RECORD_SUCCESS,
@@ -195,7 +215,9 @@ export function createNewRecord(data) {
  */
 export function submitThesis(data) {
     return dispatch => {
-        dispatch({type: actions.CREATE_RECORD_SAVING});
+        dispatch({
+            type: actions.CREATE_RECORD_SAVING
+        });
         // set default values, links
         const recordRequest = {
             ...JSON.parse(JSON.stringify(data)),
@@ -222,7 +244,9 @@ export function submitThesis(data) {
 
         let newRecord = null;
         const hasFilesToUpload = data.files && data.files.queue && data.files.queue.length > 0;
-        const recordPatch = hasFilesToUpload ? {...transformers.getRecordFileAttachmentSearchKey(data.files.queue)} : null;
+        const recordPatch = hasFilesToUpload ? {
+            ...transformers.getRecordFileAttachmentSearchKey(data.files.queue)
+        } : null;
 
         return post(NEW_RECORD_API(), recordRequest)
             .then(response => {
@@ -230,8 +254,10 @@ export function submitThesis(data) {
                 newRecord = response.data;
                 return response;
             })
-            .then(() =>(hasFilesToUpload ? putUploadFiles(newRecord.rek_pid, data.files.queue, dispatch) : newRecord))
-            .then(() => (hasFilesToUpload ? patch(EXISTING_RECORD_API({pid: newRecord.rek_pid}), recordPatch) : newRecord))
+            .then(() => (hasFilesToUpload ? putUploadFiles(newRecord.rek_pid, data.files.queue, dispatch) : newRecord))
+            .then(() => (hasFilesToUpload ? patch(EXISTING_RECORD_API({
+                pid: newRecord.rek_pid
+            }), recordPatch) : newRecord))
             .then((response) => {
                 /* istanbul ignore next */
                 dispatch({
@@ -254,7 +280,12 @@ export function submitThesis(data) {
                             fileUploadOrIssueFailed: true
                         }
                     });
-                    return post(RECORDS_ISSUES_API({pid: newRecord.rek_pid}), {issue: 'The submitter had issues uploading files on this record: ' + newRecord})
+                    return post(
+                        RECORDS_ISSUES_API({
+                            pid: newRecord.rek_pid
+                        }), {
+                            issue: 'The submitter had issues uploading files on this record: ' + newRecord
+                        })
                         .then(
                             /* istanbul ignore next */
                             () => {
@@ -280,17 +311,17 @@ export function submitThesis(data) {
  */
 export function createCollection(data, authorId) {
     return dispatch => {
-        dispatch({type: actions.CREATE_COLLECTION_SAVING});
+        dispatch({
+            type: actions.CREATE_COLLECTION_SAVING
+        });
         // set default values, links
         const recordRequest = {
             ...NEW_COLLECTION_DEFAULT_VALUES,
             ...JSON.parse(JSON.stringify(data)),
-            fez_record_search_key_ismemberof: [
-                {
-                    rek_ismemberof: data.fez_record_search_key_ismemberof,
-                    rek_ismemberof_order: 1
-                }
-            ],
+            fez_record_search_key_ismemberof: [{
+                rek_ismemberof: data.fez_record_search_key_ismemberof,
+                rek_ismemberof_order: 1
+            }],
             rek_depositor: authorId,
         };
         return post(NEW_COLLECTION_API(), recordRequest)
@@ -320,7 +351,9 @@ export function createCollection(data, authorId) {
  */
 export function createCommunity(data, authorId) {
     return dispatch => {
-        dispatch({type: actions.CREATE_COMMUNITY_SAVING});
+        dispatch({
+            type: actions.CREATE_COMMUNITY_SAVING
+        });
         // set default values, links
         const recordRequest = {
             ...NEW_COMMUNITY_DEFAULT_VALUES,
@@ -362,11 +395,17 @@ export function clearNewRecord() {
 export const getSecurityUpdateRoute = (pid, recordType) => {
     switch (recordType) {
         case RECORD_TYPE_COMMUNITY:
-            return COMMUNITIES_SECURITY_POLICY_API({pid});
+            return COMMUNITIES_SECURITY_POLICY_API({
+                pid
+            });
         case RECORD_TYPE_COLLECTION:
-            return COLLECTIONS_SECURITY_POLICY_API({pid});
+            return COLLECTIONS_SECURITY_POLICY_API({
+                pid
+            });
         default:
-            return RECORDS_SECURITY_POLICY_API({pid});
+            return RECORDS_SECURITY_POLICY_API({
+                pid
+            });
     }
 };
 
@@ -378,8 +417,12 @@ export const getSecurityUpdateRoute = (pid, recordType) => {
  */
 export function adminUpdate(data) {
     return dispatch => {
-        const {recordType} = data;
-        dispatch({type: actions.ADMIN_UPDATE_WORK_PROCESSING});
+        const {
+            recordType
+        } = data;
+        dispatch({
+            type: actions.ADMIN_UPDATE_WORK_PROCESSING
+        });
 
         const replacer = (key, value) => {
             // delete extra form values from request object
@@ -404,7 +447,9 @@ export function adminUpdate(data) {
         };
 
         return Promise.resolve([])
-            .then(()=> (patch(EXISTING_RECORD_API({pid: data.publication.rek_pid}, recordType), patchRecordRequest)))
+            .then(() => (patch(EXISTING_RECORD_API({
+                pid: data.publication.rek_pid
+            }, recordType), patchRecordRequest)))
             .then(responses => {
                 dispatch({
                     type: actions.ADMIN_UPDATE_WORK_SUCCESS,
@@ -446,8 +491,6 @@ export function updateSecurity(pid, recordType, data) {
                     payload: error.message
                 });
                 return Promise.reject(error);
-            })
-        ;
+            });
     };
 }
-
