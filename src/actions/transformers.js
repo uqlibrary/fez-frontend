@@ -545,3 +545,11 @@ export const getExternalSourceIdSearchKeys = (data) => {
 
     return result;
 };
+
+export const getSecuritySectionSearchKeys = (data = {}) => {
+    const { dataStreams = {}, ...rest } = data;
+    return {
+        ...rest,
+        fez_datastream_info: [...dataStreams]
+    };
+};

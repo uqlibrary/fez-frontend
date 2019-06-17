@@ -7,6 +7,7 @@ import {
     RETRACTED,
     SUBMITTED_FOR_APPROVAL
 } from 'config/general';
+import pluralize from 'pluralize';
 
 export const zeroPaddedYear = (value) => value ? ('0000' + value).substr(-4) : '*';
 
@@ -131,12 +132,6 @@ export const FILE_UPLOAD_API = ({pid, fileName}) => (
 export const NEW_RECORD_API = () => (
     {apiUrl: 'records'}
 );
-export const EXISTING_RECORD_API = ({pid}) => (
-    {apiUrl: `records/${pid}`}
-);
-export const RECORDS_ISSUES_API = ({pid}) => (
-    {apiUrl: `records/${pid}/issues`}
-);
 
 export const NEW_COLLECTION_API = () => (
     {apiUrl: 'collections'}
@@ -144,6 +139,14 @@ export const NEW_COLLECTION_API = () => (
 
 export const NEW_COMMUNITY_API = () => (
     {apiUrl: 'communities'}
+);
+
+export const EXISTING_RECORD_API = ({pid}, type = 'record') => (
+    {apiUrl: `${pluralize(type)}/${pid}`}
+);
+
+export const RECORDS_ISSUES_API = ({pid}) => (
+    {apiUrl: `records/${pid}/issues`}
 );
 
 // search/list records apis

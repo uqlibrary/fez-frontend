@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { reduxForm, /* getFormValues, */ getFormSyncErrors, SubmissionError } from 'redux-form/immutable';
-import { updateSecurity } from 'actions';
+import { adminUpdate } from 'actions';
 import Immutable from 'immutable';
 import AdminContainer from '../components/AdminContainer';
 import { confirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
@@ -19,8 +19,7 @@ export const isFileValid = (dataStream) => {
 };
 
 const onSubmit = (values, dispatch) => {
-    const { pid, recordType, ...formValues } = values.toJS();
-    return dispatch(updateSecurity(pid, recordType, formValues))
+    return dispatch(adminUpdate(values.toJS()))
         .catch(error => {
             throw new SubmissionError({ _error: error });
         });
@@ -39,6 +38,7 @@ const mapStateToProps = (state) => {
         initialFormValues = {
             initialValues: {
                 pid: recordToView.rek_pid,
+                publication: recordToView,
                 collection: [],
                 subject: [],
                 securitySection: {

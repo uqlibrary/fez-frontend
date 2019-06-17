@@ -370,6 +370,60 @@ export const getSecurityUpdateRoute = (pid, recordType) => {
     }
 };
 
+/**
+ * Update work request for admins: patch record
+ * If error occurs on any stage failed action is displayed
+ * @param {object} data to be posted, refer to backend API data
+ * @returns {promise} - this method is used by redux form onSubmit which requires Promise resolve/reject as a return
+ */
+export function adminUpdate(data) {
+    return dispatch => {
+        const {recordType} = data;
+        dispatch({type: actions.ADMIN_UPDATE_WORK_PROCESSING});
+
+        const replacer = (key, value) => {
+            // delete extra form values from request object
+            const keys = [
+                'pid',
+                'publication',
+                'securitySection',
+                'collection',
+                'subject'
+            ];
+
+            if (keys.indexOf(key) > -1) return undefined;
+            return value;
+        };
+
+        // if user updated NTRO data - update record
+        let patchRecordRequest = null;
+        patchRecordRequest = {
+            rek_pid: data.publication.rek_pid,
+            ...JSON.parse(JSON.stringify(data, replacer)),
+            ...transformers.getSecuritySectionSearchKeys(data.securitySection)
+        };
+
+        return Promise.resolve([])
+            .then(()=> (patch(EXISTING_RECORD_API({pid: data.publication.rek_pid}, recordType), patchRecordRequest)))
+            .then(responses => {
+                dispatch({
+                    type: actions.ADMIN_UPDATE_WORK_SUCCESS,
+                    payload: {
+                        pid: data.publication.rek_pid
+                    }
+                });
+                return Promise.resolve(responses);
+            })
+            .catch(error => {
+                dispatch({
+                    type: actions.ADMIN_UPDATE_WORK_FAILED,
+                    payload: error.message
+                });
+                return Promise.reject(error);
+            });
+    };
+}
+
 export function updateSecurity(pid, recordType, data) {
     return dispatch => {
         dispatch({
