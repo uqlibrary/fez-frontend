@@ -12021,7 +12021,7 @@ exports[`Homepage > Doing a basic search #0`] = `
                             class="MuiGrid-container-6 MuiGrid-spacing-xs-16-29"
                           >
                             <div
-                              class="MuiGrid-item-7 AdvancedSearchRow-autoWidth-502"
+                              class="MuiGrid-item-7 AdvancedSearchRow-autoWidth-449"
                               style="min-width: 200px;"
                             >
                               <div
@@ -12031,9 +12031,9 @@ exports[`Homepage > Doing a basic search #0`] = `
                                   class="MuiInputBase-root-295 MuiInput-root-282 MuiInput-underline-286 MuiInputBase-formControl-296 MuiInput-formControl-283"
                                   aria-label="Click to select a field to search from the list - Any field currently selected"
                                 >
-                                  <div class="MuiSelect-root-446">
+                                  <div class="MuiSelect-root-454">
                                     <div
-                                      class="MuiSelect-select-447 MuiSelect-selectMenu-450 MuiInputBase-input-305 MuiInput-input-290"
+                                      class="MuiSelect-select-455 MuiSelect-selectMenu-458 MuiInputBase-input-305 MuiInput-input-290"
                                       aria-pressed="false"
                                       tabindex="0"
                                       role="button"
@@ -12042,7 +12042,7 @@ exports[`Homepage > Doing a basic search #0`] = `
                                       Any field
                                     </div>
                                     <input type="hidden" value="all" /><svg
-                                      class="MuiSvgIcon-root-207 MuiSelect-icon-452"
+                                      class="MuiSvgIcon-root-207 MuiSelect-icon-460"
                                       focusable="false"
                                       viewBox="0 0 24 24"
                                       aria-hidden="true"
@@ -12053,13 +12053,13 @@ exports[`Homepage > Doing a basic search #0`] = `
                                   </div>
                                 </div>
                                 <p
-                                  class="MuiFormHelperText-root-507 MuiFormHelperText-filled-513"
+                                  class="MuiFormHelperText-root-463 MuiFormHelperText-filled-469"
                                 ></p>
                               </div>
                             </div>
                             <div class="MuiGrid-item-7 MuiGrid-grid-xs-auto-33">
                               <p
-                                class="MuiTypography-root-116 MuiTypography-body2-124 AdvancedSearchRow-advancedSearchCombiner-504"
+                                class="MuiTypography-root-116 MuiTypography-body2-124 AdvancedSearchRow-advancedSearchCombiner-451"
                               >
                                 contains
                               </p>
@@ -12067,13 +12067,13 @@ exports[`Homepage > Doing a basic search #0`] = `
                           </div>
                         </div>
                         <div
-                          class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 MuiGrid-grid-md-6-68 AdvancedSearchRow-mobileInputRow-506"
+                          class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 MuiGrid-grid-md-6-68 AdvancedSearchRow-mobileInputRow-453"
                         >
                           <div
                             class="MuiGrid-container-6 MuiGrid-spacing-xs-16-29"
                           >
                             <div
-                              class="MuiGrid-item-7 MuiGrid-zeroMinWidth-8 AdvancedSearchRow-autoWidth-502"
+                              class="MuiGrid-item-7 MuiGrid-zeroMinWidth-8 AdvancedSearchRow-autoWidth-449"
                             >
                               <div
                                 class="MuiFormControl-root-278 MuiFormControl-fullWidth-281"
@@ -12101,7 +12101,7 @@ exports[`Homepage > Doing a basic search #0`] = `
                       </div>
                     </div>
                     <div
-                      class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 MuiGrid-grid-md-4-66 AdvancedSearchComponent-sideBar-499"
+                      class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 MuiGrid-grid-md-4-66 AdvancedSearchComponent-sideBar-446"
                     >
                       <div class="MuiGrid-container-6 MuiGrid-spacing-xs-16-29">
                         <div class="MuiGrid-item-7 MuiGrid-grid-xs-12-46">
@@ -12117,18 +12117,18 @@ exports[`Homepage > Doing a basic search #0`] = `
                               class="MuiInputBase-root-295 MuiInput-root-282 MuiInput-underline-286 MuiInputBase-fullWidth-304 MuiInput-fullWidth-289 MuiInputBase-formControl-296 MuiInput-formControl-283"
                               aria-label="Select multiple publications types to search on"
                             >
-                              <div class="MuiSelect-root-446">
+                              <div class="MuiSelect-root-454">
                                 <div
-                                  class="MuiSelect-select-447 MuiSelect-selectMenu-450 MuiInputBase-input-305 MuiInput-input-290"
+                                  class="MuiSelect-select-455 MuiSelect-selectMenu-458 MuiInputBase-input-305 MuiInput-input-290"
                                   aria-pressed="false"
-                                  tabindex="0"
                                   role="button"
                                   aria-haspopup="true"
+                                  tabindex="0"
                                 >
                                   <span>​</span>
                                 </div>
                                 <input type="hidden" value="" /><svg
-                                  class="MuiSvgIcon-root-207 MuiSelect-icon-452"
+                                  class="MuiSvgIcon-root-207 MuiSelect-icon-460"
                                   focusable="false"
                                   viewBox="0 0 24 24"
                                   aria-hidden="true"
@@ -12144,7 +12144,7 @@ exports[`Homepage > Doing a basic search #0`] = `
                           <div class="MuiGrid-container-6">
                             <div class="MuiGrid-item-7 MuiGrid-grid-xs-12-46">
                               <label
-                                class="MuiFormLabel-root-400 MuiInputLabel-root-393 MuiInputLabel-animated-397 MuiInputLabel-shrink-396 PublicationYearRangeField-title-517"
+                                class="MuiFormLabel-root-400 MuiInputLabel-root-393 MuiInputLabel-animated-397 MuiInputLabel-shrink-396 PublicationYearRangeField-title-473"
                                 data-shrink="true"
                                 >Published year range</label
                               >
@@ -12238,9 +12238,9 @@ exports[`Homepage > Doing a basic search #0`] = `
                           </div>
                         </div>
                         <div class="MuiGrid-item-7 MuiGrid-grid-xs-12-46">
-                          <label class="MuiFormControlLabel-root-518"
+                          <label class="MuiFormControlLabel-root-474"
                             ><span
-                              class="MuiButtonBase-root-204 MuiButtonBase-focusVisible-206 undefined MuiIconButton-root-198 MuiSwitchBase-root-528 MuiCheckbox-root-522 MuiCheckbox-colorSecondary-527 MuiSwitchBase-checked-529 MuiCheckbox-checked-523"
+                              class="MuiButtonBase-root-204 MuiButtonBase-focusVisible-206 undefined MuiIconButton-root-198 MuiSwitchBase-root-484 MuiCheckbox-root-478 MuiCheckbox-colorSecondary-483 MuiSwitchBase-checked-485 MuiCheckbox-checked-479"
                               aria-label="Check to search for publications with are only open access / full text"
                               ><span class="MuiIconButton-label-203"
                                 ><svg
@@ -12254,7 +12254,7 @@ exports[`Homepage > Doing a basic search #0`] = `
                                     d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
                                   ></path></svg
                                 ><input
-                                  class="MuiSwitchBase-input-531"
+                                  class="MuiSwitchBase-input-487"
                                   type="checkbox"
                                   data-indeterminate="false"
                                   value=""/></span
@@ -12272,7 +12272,7 @@ exports[`Homepage > Doing a basic search #0`] = `
                                     class="MuiTouchRipple-child-220 MuiTouchRipple-childLeaving-221"
                                   ></span></span></span></span
                             ><span
-                              class="MuiTypography-root-116 MuiTypography-body2-124 MuiFormControlLabel-label-521"
+                              class="MuiTypography-root-116 MuiTypography-body2-124 MuiFormControlLabel-label-477"
                               >Open access</span
                             ></label
                           >
@@ -12289,7 +12289,7 @@ exports[`Homepage > Doing a basic search #0`] = `
                     >
                       <button
                         tabindex="0"
-                        class="MuiButtonBase-root-204 MuiButton-root-407 AdvancedSearchComponent-blueButton-501 MuiButton-contained-418 MuiButton-raised-421 MuiButton-fullWidth-432"
+                        class="MuiButtonBase-root-204 MuiButton-root-407 AdvancedSearchComponent-blueButton-448 MuiButton-contained-418 MuiButton-raised-421 MuiButton-fullWidth-432"
                         type="button"
                         aria-label="Click to add another advanced search field"
                       >
@@ -12329,7 +12329,7 @@ exports[`Homepage > Doing a basic search #0`] = `
                       style="flex-grow: 1; width: 1px;"
                     ></div>
                     <div
-                      class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 MuiGrid-grid-md-4-66 AdvancedSearchComponent-searchButton-500"
+                      class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 MuiGrid-grid-md-4-66 AdvancedSearchComponent-searchButton-447"
                     >
                       <button
                         tabindex="0"
@@ -12347,21 +12347,21 @@ exports[`Homepage > Doing a basic search #0`] = `
                     <div class="MuiGrid-item-7" style="padding-top: 24px;">
                       <div class="search-body searchQueryCaption">
                         <span
-                          ><span class="AdvancedSearchCaption-and-532"> </span
-                          ><span class="AdvancedSearchCaption-title-533"
+                          ><span class="AdvancedSearchCaption-and-488"> </span
+                          ><span class="AdvancedSearchCaption-title-489"
                             >Any field </span
-                          ><span class="AdvancedSearchCaption-combiner-534">
+                          ><span class="AdvancedSearchCaption-combiner-490">
                             contains </span
-                          ><span class="AdvancedSearchCaption-value-535">
+                          ><span class="AdvancedSearchCaption-value-491">
                             cats and dogs</span
                           ></span
                         ><span
-                          ><span class="AdvancedSearchCaption-and-532">
+                          ><span class="AdvancedSearchCaption-and-488">
                             AND </span
-                          ><span class="AdvancedSearchCaption-title-533"> </span
-                          ><span class="AdvancedSearchCaption-combiner-534">
+                          ><span class="AdvancedSearchCaption-title-489"> </span
+                          ><span class="AdvancedSearchCaption-combiner-490">
                             is </span
-                          ><span class="AdvancedSearchCaption-value-535">
+                          ><span class="AdvancedSearchCaption-value-491">
                             <span class="value"
                               >open access/full text</span
                             ></span
@@ -12402,9 +12402,9 @@ exports[`Homepage > Doing a basic search #0`] = `
                         <div
                           class="MuiInputBase-root-295 MuiInput-root-282 MuiInput-underline-286 MuiInputBase-formControl-296 MuiInput-formControl-283"
                         >
-                          <div class="MuiSelect-root-446">
+                          <div class="MuiSelect-root-454">
                             <div
-                              class="MuiSelect-select-447 MuiSelect-selectMenu-450 MuiInputBase-input-305 MuiInput-input-290"
+                              class="MuiSelect-select-455 MuiSelect-selectMenu-458 MuiInputBase-input-305 MuiInput-input-290"
                               aria-pressed="false"
                               tabindex="0"
                               role="button"
@@ -12417,7 +12417,7 @@ exports[`Homepage > Doing a basic search #0`] = `
                               id="sortBy"
                               value="score"
                             /><svg
-                              class="MuiSvgIcon-root-207 MuiSelect-icon-452"
+                              class="MuiSvgIcon-root-207 MuiSelect-icon-460"
                               focusable="false"
                               viewBox="0 0 24 24"
                               aria-hidden="true"
@@ -12443,9 +12443,9 @@ exports[`Homepage > Doing a basic search #0`] = `
                         <div
                           class="MuiInputBase-root-295 MuiInput-root-282 MuiInput-underline-286 MuiInputBase-formControl-296 MuiInput-formControl-283"
                         >
-                          <div class="MuiSelect-root-446">
+                          <div class="MuiSelect-root-454">
                             <div
-                              class="MuiSelect-select-447 MuiSelect-selectMenu-450 MuiInputBase-input-305 MuiInput-input-290"
+                              class="MuiSelect-select-455 MuiSelect-selectMenu-458 MuiInputBase-input-305 MuiInput-input-290"
                               aria-pressed="false"
                               tabindex="0"
                               role="button"
@@ -12458,7 +12458,7 @@ exports[`Homepage > Doing a basic search #0`] = `
                               id="sortOrder"
                               value="Desc"
                             /><svg
-                              class="MuiSvgIcon-root-207 MuiSelect-icon-452"
+                              class="MuiSvgIcon-root-207 MuiSelect-icon-460"
                               focusable="false"
                               viewBox="0 0 24 24"
                               aria-hidden="true"
@@ -12484,9 +12484,9 @@ exports[`Homepage > Doing a basic search #0`] = `
                         <div
                           class="MuiInputBase-root-295 MuiInput-root-282 MuiInput-underline-286 MuiInputBase-formControl-296 MuiInput-formControl-283"
                         >
-                          <div class="MuiSelect-root-446">
+                          <div class="MuiSelect-root-454">
                             <div
-                              class="MuiSelect-select-447 MuiSelect-selectMenu-450 MuiInputBase-input-305 MuiInput-input-290"
+                              class="MuiSelect-select-455 MuiSelect-selectMenu-458 MuiInputBase-input-305 MuiInput-input-290"
                               aria-pressed="false"
                               tabindex="0"
                               role="button"
@@ -12495,7 +12495,7 @@ exports[`Homepage > Doing a basic search #0`] = `
                               20
                             </div>
                             <input type="hidden" id="pageSize" value="20" /><svg
-                              class="MuiSvgIcon-root-207 MuiSelect-icon-452"
+                              class="MuiSvgIcon-root-207 MuiSelect-icon-460"
                               focusable="false"
                               viewBox="0 0 24 24"
                               aria-hidden="true"
@@ -12521,9 +12521,9 @@ exports[`Homepage > Doing a basic search #0`] = `
                         <div
                           class="MuiInputBase-root-295 MuiInput-root-282 MuiInput-underline-286 MuiInputBase-formControl-296 MuiInput-formControl-283"
                         >
-                          <div class="MuiSelect-root-446">
+                          <div class="MuiSelect-root-454">
                             <div
-                              class="MuiSelect-select-447 MuiSelect-selectMenu-450 MuiInputBase-input-305 MuiInput-input-290"
+                              class="MuiSelect-select-455 MuiSelect-selectMenu-458 MuiInputBase-input-305 MuiInput-input-290"
                               aria-pressed="false"
                               tabindex="0"
                               role="button"
@@ -12536,7 +12536,7 @@ exports[`Homepage > Doing a basic search #0`] = `
                               id="exportPublicationsFormat"
                               value="-1"
                             /><svg
-                              class="MuiSvgIcon-root-207 MuiSelect-icon-452"
+                              class="MuiSvgIcon-root-207 MuiSelect-icon-460"
                               focusable="false"
                               viewBox="0 0 24 24"
                               aria-hidden="true"
@@ -12563,13 +12563,13 @@ exports[`Homepage > Doing a basic search #0`] = `
                         style="min-width: 1px;"
                       >
                         <h6
-                          class="MuiTypography-root-116 MuiTypography-h6-133 PublicationCitation-citationTitle-456"
+                          class="MuiTypography-root-116 MuiTypography-h6-133 PublicationCitation-citationTitle-493"
                         >
                           <a href="/view/UQ:795469">Early Onset Scoliosis</a>
                         </h6>
                       </div>
                       <div
-                        class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 PublicationCitation-citationText-457"
+                        class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 PublicationCitation-citationText-494"
                       >
                         <div class="citationContent citationBook">
                           <span class="citationAuthors empty"></span
@@ -12588,9 +12588,9 @@ exports[`Homepage > Doing a basic search #0`] = `
                             target="_blank"
                             rel="noopener noreferrer"
                             tabindex="0"
-                            class="citationDoiLink ExternalLink-externalLink-461"
+                            class="citationDoiLink ExternalLink-externalLink-498"
                             ><svg
-                              class="MuiSvgIcon-root-207 ExternalLink-externalLinkIcon-462"
+                              class="MuiSvgIcon-root-207 ExternalLink-externalLinkIcon-499"
                               focusable="false"
                               viewBox="0 0 24 24"
                               aria-hidden="true"
@@ -12605,7 +12605,7 @@ exports[`Homepage > Doing a basic search #0`] = `
                         </div>
                       </div>
                       <div
-                        class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 PublicationCitation-citationCounts-458"
+                        class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 PublicationCitation-citationCounts-495"
                       >
                         <div class="MuiGrid-container-6">
                           <div
@@ -12619,7 +12619,7 @@ exports[`Homepage > Doing a basic search #0`] = `
                               target="_blank"
                               rel="noopener noreferrer"
                               tabindex="0"
-                              class="googleCitationCount CitationCountView-citationCount-464 ExternalLink-externalLink-461"
+                              class="googleCitationCount CitationCountView-citationCount-501 ExternalLink-externalLink-498"
                               ><span class="fez-icon google large"></span></a
                             ><span
                               class="fez-icon openAccess large"
@@ -12638,7 +12638,7 @@ exports[`Homepage > Doing a basic search #0`] = `
                   </div>
                 </div>
                 <hr
-                  class="MuiDivider-root-466 PublicationCitation-divider-455"
+                  class="MuiDivider-root-503 PublicationCitation-divider-492"
                 />
                 <div class="MuiGrid-container-6">
                   <div class="MuiGrid-item-7 MuiGrid-grid-xs-true-34">
@@ -12648,13 +12648,13 @@ exports[`Homepage > Doing a basic search #0`] = `
                         style="min-width: 1px;"
                       >
                         <h6
-                          class="MuiTypography-root-116 MuiTypography-h6-133 PublicationCitation-citationTitle-456"
+                          class="MuiTypography-root-116 MuiTypography-h6-133 PublicationCitation-citationTitle-493"
                         >
                           <a href="/view/UQ:342708">Vaccination day</a>
                         </h6>
                       </div>
                       <div
-                        class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 PublicationCitation-citationText-457"
+                        class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 PublicationCitation-citationText-494"
                       >
                         <div class="citationContent citationJournalArticle">
                           <span class="citationAuthors"
@@ -12681,9 +12681,9 @@ exports[`Homepage > Doing a basic search #0`] = `
                             target="_blank"
                             rel="noopener noreferrer"
                             tabindex="0"
-                            class="citationDoiLink ExternalLink-externalLink-461"
+                            class="citationDoiLink ExternalLink-externalLink-498"
                             ><svg
-                              class="MuiSvgIcon-root-207 ExternalLink-externalLinkIcon-462"
+                              class="MuiSvgIcon-root-207 ExternalLink-externalLinkIcon-499"
                               focusable="false"
                               viewBox="0 0 24 24"
                               aria-hidden="true"
@@ -12698,7 +12698,7 @@ exports[`Homepage > Doing a basic search #0`] = `
                         </div>
                       </div>
                       <div
-                        class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 PublicationCitation-citationCounts-458"
+                        class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 PublicationCitation-citationCounts-495"
                       >
                         <div class="MuiGrid-container-6">
                           <div
@@ -12712,10 +12712,10 @@ exports[`Homepage > Doing a basic search #0`] = `
                               target="_blank"
                               rel="noopener noreferrer"
                               tabindex="0"
-                              class="wosCitationCount CitationCountView-citationCount-464 ExternalLink-externalLink-461"
+                              class="wosCitationCount CitationCountView-citationCount-501 ExternalLink-externalLink-498"
                               ><span class="fez-icon wos large"></span
                               ><span
-                                class="CitationCountView-citationCountNumber-465"
+                                class="CitationCountView-citationCountNumber-502"
                                 >12</span
                               ></a
                             ><a
@@ -12726,10 +12726,10 @@ exports[`Homepage > Doing a basic search #0`] = `
                               target="_blank"
                               rel="noopener noreferrer"
                               tabindex="0"
-                              class="scopusCitationCount CitationCountView-citationCount-464 ExternalLink-externalLink-461"
+                              class="scopusCitationCount CitationCountView-citationCount-501 ExternalLink-externalLink-498"
                               ><span class="fez-icon scopus large"></span
                               ><span
-                                class="CitationCountView-citationCountNumber-465"
+                                class="CitationCountView-citationCountNumber-502"
                                 >0</span
                               ></a
                             ><a
@@ -12740,10 +12740,10 @@ exports[`Homepage > Doing a basic search #0`] = `
                               target="_blank"
                               rel="noopener noreferrer"
                               tabindex="0"
-                              class="altmetricCitationCount CitationCountView-citationCount-464 ExternalLink-externalLink-461"
+                              class="altmetricCitationCount CitationCountView-citationCount-501 ExternalLink-externalLink-498"
                               ><span class="fez-icon altmetric large"></span
                               ><span
-                                class="CitationCountView-citationCountNumber-465"
+                                class="CitationCountView-citationCountNumber-502"
                                 >333</span
                               ></a
                             ><a
@@ -12754,7 +12754,7 @@ exports[`Homepage > Doing a basic search #0`] = `
                               target="_blank"
                               rel="noopener noreferrer"
                               tabindex="0"
-                              class="googleCitationCount CitationCountView-citationCount-464 ExternalLink-externalLink-461"
+                              class="googleCitationCount CitationCountView-citationCount-501 ExternalLink-externalLink-498"
                               ><span class="fez-icon google large"></span></a
                             ><span class="noOaIcon"></span>
                           </div>
@@ -12766,9 +12766,9 @@ exports[`Homepage > Doing a basic search #0`] = `
                               target="_blank"
                               rel="noopener noreferrer"
                               tabindex="0"
-                              class="CitationCounts-statsLink-463 ExternalLink-externalLink-461"
+                              class="CitationCounts-statsLink-500 ExternalLink-externalLink-498"
                               ><svg
-                                class="MuiSvgIcon-root-207 ExternalLink-externalLinkIcon-462"
+                                class="MuiSvgIcon-root-207 ExternalLink-externalLinkIcon-499"
                                 focusable="false"
                                 viewBox="0 0 24 24"
                                 aria-hidden="true"
@@ -12790,7 +12790,7 @@ exports[`Homepage > Doing a basic search #0`] = `
                   </div>
                 </div>
                 <hr
-                  class="MuiDivider-root-466 PublicationCitation-divider-455"
+                  class="MuiDivider-root-503 PublicationCitation-divider-492"
                 />
                 <div class="MuiGrid-container-6">
                   <div class="MuiGrid-item-7 MuiGrid-grid-xs-true-34">
@@ -12800,7 +12800,7 @@ exports[`Homepage > Doing a basic search #0`] = `
                         style="min-width: 1px;"
                       >
                         <h6
-                          class="MuiTypography-root-116 MuiTypography-h6-133 PublicationCitation-citationTitle-456"
+                          class="MuiTypography-root-116 MuiTypography-h6-133 PublicationCitation-citationTitle-493"
                         >
                           <a href="/view/UQ:288545"
                             >Bacterial plaques staining composition
@@ -12810,7 +12810,7 @@ exports[`Homepage > Doing a basic search #0`] = `
                         </h6>
                       </div>
                       <div
-                        class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 PublicationCitation-citationText-457"
+                        class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 PublicationCitation-citationText-494"
                       >
                         <div class="citationContent citationPatent">
                           <span class="citationAuthors"
@@ -12832,7 +12832,7 @@ exports[`Homepage > Doing a basic search #0`] = `
                         </div>
                       </div>
                       <div
-                        class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 PublicationCitation-citationCounts-458"
+                        class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 PublicationCitation-citationCounts-495"
                       >
                         <div class="MuiGrid-container-6">
                           <div
@@ -12846,7 +12846,7 @@ exports[`Homepage > Doing a basic search #0`] = `
                               target="_blank"
                               rel="noopener noreferrer"
                               tabindex="0"
-                              class="googleCitationCount CitationCountView-citationCount-464 ExternalLink-externalLink-461"
+                              class="googleCitationCount CitationCountView-citationCount-501 ExternalLink-externalLink-498"
                               ><span class="fez-icon google large"></span></a
                             ><span class="noOaIcon"></span>
                           </div>
@@ -12860,7 +12860,7 @@ exports[`Homepage > Doing a basic search #0`] = `
                   </div>
                 </div>
                 <hr
-                  class="MuiDivider-root-466 PublicationCitation-divider-455"
+                  class="MuiDivider-root-503 PublicationCitation-divider-492"
                 />
                 <div class="MuiGrid-container-6">
                   <div class="MuiGrid-item-7 MuiGrid-grid-xs-true-34">
@@ -12870,7 +12870,7 @@ exports[`Homepage > Doing a basic search #0`] = `
                         style="min-width: 1px;"
                       >
                         <h6
-                          class="MuiTypography-root-116 MuiTypography-h6-133 PublicationCitation-citationTitle-456"
+                          class="MuiTypography-root-116 MuiTypography-h6-133 PublicationCitation-citationTitle-493"
                         >
                           <a href="/view/UQ:95980"
                             >Lipid-core-peptides for vaccination.</a
@@ -12878,7 +12878,7 @@ exports[`Homepage > Doing a basic search #0`] = `
                         </h6>
                       </div>
                       <div
-                        class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 PublicationCitation-citationText-457"
+                        class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 PublicationCitation-citationText-494"
                       >
                         <div class="citationContent citationConferencePaper">
                           <span class="citationAuthors"
@@ -12906,7 +12906,7 @@ exports[`Homepage > Doing a basic search #0`] = `
                         </div>
                       </div>
                       <div
-                        class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 PublicationCitation-citationCounts-458"
+                        class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 PublicationCitation-citationCounts-495"
                       >
                         <div class="MuiGrid-container-6">
                           <div
@@ -12920,7 +12920,7 @@ exports[`Homepage > Doing a basic search #0`] = `
                               target="_blank"
                               rel="noopener noreferrer"
                               tabindex="0"
-                              class="googleCitationCount CitationCountView-citationCount-464 ExternalLink-externalLink-461"
+                              class="googleCitationCount CitationCountView-citationCount-501 ExternalLink-externalLink-498"
                               ><span class="fez-icon google large"></span></a
                             ><span class="noOaIcon"></span>
                           </div>
@@ -12934,7 +12934,7 @@ exports[`Homepage > Doing a basic search #0`] = `
                   </div>
                 </div>
                 <hr
-                  class="MuiDivider-root-466 PublicationCitation-divider-455"
+                  class="MuiDivider-root-503 PublicationCitation-divider-492"
                 />
                 <div class="MuiGrid-container-6">
                   <div class="MuiGrid-item-7 MuiGrid-grid-xs-true-34">
@@ -12944,7 +12944,7 @@ exports[`Homepage > Doing a basic search #0`] = `
                         style="min-width: 1px;"
                       >
                         <h6
-                          class="MuiTypography-root-116 MuiTypography-h6-133 PublicationCitation-citationTitle-456"
+                          class="MuiTypography-root-116 MuiTypography-h6-133 PublicationCitation-citationTitle-493"
                         >
                           <a href="/view/UQ:433847"
                             >A state-based vaccination register</a
@@ -12952,7 +12952,7 @@ exports[`Homepage > Doing a basic search #0`] = `
                         </h6>
                       </div>
                       <div
-                        class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 PublicationCitation-citationText-457"
+                        class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 PublicationCitation-citationText-494"
                       >
                         <div class="citationContent citationJournalArticle">
                           <span class="citationAuthors"
@@ -12977,7 +12977,7 @@ exports[`Homepage > Doing a basic search #0`] = `
                         </div>
                       </div>
                       <div
-                        class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 PublicationCitation-citationCounts-458"
+                        class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 PublicationCitation-citationCounts-495"
                       >
                         <div class="MuiGrid-container-6">
                           <div
@@ -12991,10 +12991,10 @@ exports[`Homepage > Doing a basic search #0`] = `
                               target="_blank"
                               rel="noopener noreferrer"
                               tabindex="0"
-                              class="wosCitationCount CitationCountView-citationCount-464 ExternalLink-externalLink-461"
+                              class="wosCitationCount CitationCountView-citationCount-501 ExternalLink-externalLink-498"
                               ><span class="fez-icon wos large"></span
                               ><span
-                                class="CitationCountView-citationCountNumber-465"
+                                class="CitationCountView-citationCountNumber-502"
                                 >4</span
                               ></a
                             ><a
@@ -13005,7 +13005,7 @@ exports[`Homepage > Doing a basic search #0`] = `
                               target="_blank"
                               rel="noopener noreferrer"
                               tabindex="0"
-                              class="googleCitationCount CitationCountView-citationCount-464 ExternalLink-externalLink-461"
+                              class="googleCitationCount CitationCountView-citationCount-501 ExternalLink-externalLink-498"
                               ><span class="fez-icon google large"></span></a
                             ><span class="noOaIcon"></span>
                           </div>
@@ -13017,9 +13017,9 @@ exports[`Homepage > Doing a basic search #0`] = `
                               target="_blank"
                               rel="noopener noreferrer"
                               tabindex="0"
-                              class="CitationCounts-statsLink-463 ExternalLink-externalLink-461"
+                              class="CitationCounts-statsLink-500 ExternalLink-externalLink-498"
                               ><svg
-                                class="MuiSvgIcon-root-207 ExternalLink-externalLinkIcon-462"
+                                class="MuiSvgIcon-root-207 ExternalLink-externalLinkIcon-499"
                                 focusable="false"
                                 viewBox="0 0 24 24"
                                 aria-hidden="true"
@@ -13041,7 +13041,7 @@ exports[`Homepage > Doing a basic search #0`] = `
                   </div>
                 </div>
                 <hr
-                  class="MuiDivider-root-466 PublicationCitation-divider-455"
+                  class="MuiDivider-root-503 PublicationCitation-divider-492"
                 />
                 <div class="MuiGrid-container-6">
                   <div class="MuiGrid-item-7 MuiGrid-grid-xs-true-34">
@@ -13051,7 +13051,7 @@ exports[`Homepage > Doing a basic search #0`] = `
                         style="min-width: 1px;"
                       >
                         <h6
-                          class="MuiTypography-root-116 MuiTypography-h6-133 PublicationCitation-citationTitle-456"
+                          class="MuiTypography-root-116 MuiTypography-h6-133 PublicationCitation-citationTitle-493"
                         >
                           <a href="/view/UQ:215681"
                             >Rheumatic complications of influenza vaccination</a
@@ -13059,7 +13059,7 @@ exports[`Homepage > Doing a basic search #0`] = `
                         </h6>
                       </div>
                       <div
-                        class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 PublicationCitation-citationText-457"
+                        class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 PublicationCitation-citationText-494"
                       >
                         <div class="citationContent citationJournalArticle">
                           <span class="citationAuthors"
@@ -13089,9 +13089,9 @@ exports[`Homepage > Doing a basic search #0`] = `
                             target="_blank"
                             rel="noopener noreferrer"
                             tabindex="0"
-                            class="citationDoiLink ExternalLink-externalLink-461"
+                            class="citationDoiLink ExternalLink-externalLink-498"
                             ><svg
-                              class="MuiSvgIcon-root-207 ExternalLink-externalLinkIcon-462"
+                              class="MuiSvgIcon-root-207 ExternalLink-externalLinkIcon-499"
                               focusable="false"
                               viewBox="0 0 24 24"
                               aria-hidden="true"
@@ -13106,7 +13106,7 @@ exports[`Homepage > Doing a basic search #0`] = `
                         </div>
                       </div>
                       <div
-                        class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 PublicationCitation-citationCounts-458"
+                        class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 PublicationCitation-citationCounts-495"
                       >
                         <div class="MuiGrid-container-6">
                           <div
@@ -13120,10 +13120,10 @@ exports[`Homepage > Doing a basic search #0`] = `
                               target="_blank"
                               rel="noopener noreferrer"
                               tabindex="0"
-                              class="wosCitationCount CitationCountView-citationCount-464 ExternalLink-externalLink-461"
+                              class="wosCitationCount CitationCountView-citationCount-501 ExternalLink-externalLink-498"
                               ><span class="fez-icon wos large"></span
                               ><span
-                                class="CitationCountView-citationCountNumber-465"
+                                class="CitationCountView-citationCountNumber-502"
                                 >20</span
                               ></a
                             ><a
@@ -13134,10 +13134,10 @@ exports[`Homepage > Doing a basic search #0`] = `
                               target="_blank"
                               rel="noopener noreferrer"
                               tabindex="0"
-                              class="scopusCitationCount CitationCountView-citationCount-464 ExternalLink-externalLink-461"
+                              class="scopusCitationCount CitationCountView-citationCount-501 ExternalLink-externalLink-498"
                               ><span class="fez-icon scopus large"></span
                               ><span
-                                class="CitationCountView-citationCountNumber-465"
+                                class="CitationCountView-citationCountNumber-502"
                                 >25</span
                               ></a
                             ><a
@@ -13148,10 +13148,10 @@ exports[`Homepage > Doing a basic search #0`] = `
                               target="_blank"
                               rel="noopener noreferrer"
                               tabindex="0"
-                              class="altmetricCitationCount CitationCountView-citationCount-464 ExternalLink-externalLink-461"
+                              class="altmetricCitationCount CitationCountView-citationCount-501 ExternalLink-externalLink-498"
                               ><span class="fez-icon altmetric large"></span
                               ><span
-                                class="CitationCountView-citationCountNumber-465"
+                                class="CitationCountView-citationCountNumber-502"
                                 >4</span
                               ></a
                             ><a
@@ -13162,7 +13162,7 @@ exports[`Homepage > Doing a basic search #0`] = `
                               target="_blank"
                               rel="noopener noreferrer"
                               tabindex="0"
-                              class="googleCitationCount CitationCountView-citationCount-464 ExternalLink-externalLink-461"
+                              class="googleCitationCount CitationCountView-citationCount-501 ExternalLink-externalLink-498"
                               ><span class="fez-icon google large"></span></a
                             ><span class="noOaIcon"></span>
                           </div>
@@ -13174,9 +13174,9 @@ exports[`Homepage > Doing a basic search #0`] = `
                               target="_blank"
                               rel="noopener noreferrer"
                               tabindex="0"
-                              class="CitationCounts-statsLink-463 ExternalLink-externalLink-461"
+                              class="CitationCounts-statsLink-500 ExternalLink-externalLink-498"
                               ><svg
-                                class="MuiSvgIcon-root-207 ExternalLink-externalLinkIcon-462"
+                                class="MuiSvgIcon-root-207 ExternalLink-externalLinkIcon-499"
                                 focusable="false"
                                 viewBox="0 0 24 24"
                                 aria-hidden="true"
@@ -13198,7 +13198,7 @@ exports[`Homepage > Doing a basic search #0`] = `
                   </div>
                 </div>
                 <hr
-                  class="MuiDivider-root-466 PublicationCitation-divider-455"
+                  class="MuiDivider-root-503 PublicationCitation-divider-492"
                 />
                 <div class="MuiGrid-container-6">
                   <div class="MuiGrid-item-7 MuiGrid-grid-xs-true-34">
@@ -13208,7 +13208,7 @@ exports[`Homepage > Doing a basic search #0`] = `
                         style="min-width: 1px;"
                       >
                         <h6
-                          class="MuiTypography-root-116 MuiTypography-h6-133 PublicationCitation-citationTitle-456"
+                          class="MuiTypography-root-116 MuiTypography-h6-133 PublicationCitation-citationTitle-493"
                         >
                           <a href="/view/UQ:175986"
                             >Patient care drives mandatory vaccination</a
@@ -13216,7 +13216,7 @@ exports[`Homepage > Doing a basic search #0`] = `
                         </h6>
                       </div>
                       <div
-                        class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 PublicationCitation-citationText-457"
+                        class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 PublicationCitation-citationText-494"
                       >
                         <div class="citationContent citationJournalArticle">
                           <span class="citationAuthors"
@@ -13244,9 +13244,9 @@ exports[`Homepage > Doing a basic search #0`] = `
                             target="_blank"
                             rel="noopener noreferrer"
                             tabindex="0"
-                            class="citationDoiLink ExternalLink-externalLink-461"
+                            class="citationDoiLink ExternalLink-externalLink-498"
                             ><svg
-                              class="MuiSvgIcon-root-207 ExternalLink-externalLinkIcon-462"
+                              class="MuiSvgIcon-root-207 ExternalLink-externalLinkIcon-499"
                               focusable="false"
                               viewBox="0 0 24 24"
                               aria-hidden="true"
@@ -13261,7 +13261,7 @@ exports[`Homepage > Doing a basic search #0`] = `
                         </div>
                       </div>
                       <div
-                        class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 PublicationCitation-citationCounts-458"
+                        class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 PublicationCitation-citationCounts-495"
                       >
                         <div class="MuiGrid-container-6">
                           <div
@@ -13275,10 +13275,10 @@ exports[`Homepage > Doing a basic search #0`] = `
                               target="_blank"
                               rel="noopener noreferrer"
                               tabindex="0"
-                              class="wosCitationCount CitationCountView-citationCount-464 ExternalLink-externalLink-461"
+                              class="wosCitationCount CitationCountView-citationCount-501 ExternalLink-externalLink-498"
                               ><span class="fez-icon wos large"></span
                               ><span
-                                class="CitationCountView-citationCountNumber-465"
+                                class="CitationCountView-citationCountNumber-502"
                                 >4</span
                               ></a
                             ><a
@@ -13289,10 +13289,10 @@ exports[`Homepage > Doing a basic search #0`] = `
                               target="_blank"
                               rel="noopener noreferrer"
                               tabindex="0"
-                              class="scopusCitationCount CitationCountView-citationCount-464 ExternalLink-externalLink-461"
+                              class="scopusCitationCount CitationCountView-citationCount-501 ExternalLink-externalLink-498"
                               ><span class="fez-icon scopus large"></span
                               ><span
-                                class="CitationCountView-citationCountNumber-465"
+                                class="CitationCountView-citationCountNumber-502"
                                 >1</span
                               ></a
                             ><a
@@ -13303,7 +13303,7 @@ exports[`Homepage > Doing a basic search #0`] = `
                               target="_blank"
                               rel="noopener noreferrer"
                               tabindex="0"
-                              class="googleCitationCount CitationCountView-citationCount-464 ExternalLink-externalLink-461"
+                              class="googleCitationCount CitationCountView-citationCount-501 ExternalLink-externalLink-498"
                               ><span class="fez-icon google large"></span></a
                             ><span class="noOaIcon"></span>
                           </div>
@@ -13315,9 +13315,9 @@ exports[`Homepage > Doing a basic search #0`] = `
                               target="_blank"
                               rel="noopener noreferrer"
                               tabindex="0"
-                              class="CitationCounts-statsLink-463 ExternalLink-externalLink-461"
+                              class="CitationCounts-statsLink-500 ExternalLink-externalLink-498"
                               ><svg
-                                class="MuiSvgIcon-root-207 ExternalLink-externalLinkIcon-462"
+                                class="MuiSvgIcon-root-207 ExternalLink-externalLinkIcon-499"
                                 focusable="false"
                                 viewBox="0 0 24 24"
                                 aria-hidden="true"
@@ -13339,7 +13339,7 @@ exports[`Homepage > Doing a basic search #0`] = `
                   </div>
                 </div>
                 <hr
-                  class="MuiDivider-root-466 PublicationCitation-divider-455"
+                  class="MuiDivider-root-503 PublicationCitation-divider-492"
                 />
               </div>
               <div></div>
@@ -13349,7 +13349,7 @@ exports[`Homepage > Doing a basic search #0`] = `
         <div class="MuiGrid-item-7 MuiGrid-grid-md-3-65">
           <div class="MuiGrid-container-6">
             <div
-              class="MuiGrid-item-7 MuiGrid-grid-xs-true-34 RighthandCard-title-470"
+              class="MuiGrid-item-7 MuiGrid-grid-xs-true-34 RighthandCard-title-507"
             >
               <h6
                 class="MuiTypography-root-116 MuiTypography-h6-133 MuiTypography-colorPrimary-146"
@@ -13358,23 +13358,23 @@ exports[`Homepage > Doing a basic search #0`] = `
               </h6>
             </div>
             <div class="MuiGrid-item-7 MuiGrid-grid-xs-12-46">
-              <hr class="MuiDivider-root-466 RighthandCard-divider-471" />
+              <hr class="MuiDivider-root-503 RighthandCard-divider-508" />
             </div>
             <div class="MuiGrid-item-7 MuiGrid-grid-xs-12-46">
               <div class="facetsFilter">
                 <nav
-                  class="MuiList-root-472 MuiList-dense-474 MuiList-padding-473"
+                  class="MuiList-root-509 MuiList-dense-511 MuiList-padding-510"
                 >
                   <div
                     tabindex="0"
-                    class="MuiButtonBase-root-204 MuiListItem-root-478 MuiListItem-default-481 MuiListItem-dense-482 MuiListItem-gutters-485 FacetsFilterListItem-listItemGutters-476 MuiListItem-button-486"
+                    class="MuiButtonBase-root-204 MuiListItem-root-515 MuiListItem-default-518 MuiListItem-dense-519 MuiListItem-gutters-522 FacetsFilterListItem-listItemGutters-513 MuiListItem-button-523"
                     role="button"
                   >
                     <div
-                      class="MuiListItemText-root-489 MuiListItemText-dense-491"
+                      class="MuiListItemText-root-526 MuiListItemText-dense-528"
                     >
                       <p
-                        class="MuiTypography-root-116 MuiTypography-body2-124 MuiTypography-colorTextPrimary-148 FacetsFilterListItem-listText-477"
+                        class="MuiTypography-root-116 MuiTypography-body2-124 MuiTypography-colorTextPrimary-148 FacetsFilterListItem-listText-514"
                       >
                         Work type
                       </p>
@@ -13394,14 +13394,14 @@ exports[`Homepage > Doing a basic search #0`] = `
                   </div>
                   <div
                     tabindex="0"
-                    class="MuiButtonBase-root-204 MuiListItem-root-478 MuiListItem-default-481 MuiListItem-dense-482 MuiListItem-gutters-485 FacetsFilterListItem-listItemGutters-476 MuiListItem-button-486"
+                    class="MuiButtonBase-root-204 MuiListItem-root-515 MuiListItem-default-518 MuiListItem-dense-519 MuiListItem-gutters-522 FacetsFilterListItem-listItemGutters-513 MuiListItem-button-523"
                     role="button"
                   >
                     <div
-                      class="MuiListItemText-root-489 MuiListItemText-dense-491"
+                      class="MuiListItemText-root-526 MuiListItemText-dense-528"
                     >
                       <p
-                        class="MuiTypography-root-116 MuiTypography-body2-124 MuiTypography-colorTextPrimary-148 FacetsFilterListItem-listText-477"
+                        class="MuiTypography-root-116 MuiTypography-body2-124 MuiTypography-colorTextPrimary-148 FacetsFilterListItem-listText-514"
                       >
                         Keywords
                       </p>
@@ -13421,14 +13421,14 @@ exports[`Homepage > Doing a basic search #0`] = `
                   </div>
                   <div
                     tabindex="0"
-                    class="MuiButtonBase-root-204 MuiListItem-root-478 MuiListItem-default-481 MuiListItem-dense-482 MuiListItem-gutters-485 FacetsFilterListItem-listItemGutters-476 MuiListItem-button-486"
+                    class="MuiButtonBase-root-204 MuiListItem-root-515 MuiListItem-default-518 MuiListItem-dense-519 MuiListItem-gutters-522 FacetsFilterListItem-listItemGutters-513 MuiListItem-button-523"
                     role="button"
                   >
                     <div
-                      class="MuiListItemText-root-489 MuiListItemText-dense-491"
+                      class="MuiListItemText-root-526 MuiListItemText-dense-528"
                     >
                       <p
-                        class="MuiTypography-root-116 MuiTypography-body2-124 MuiTypography-colorTextPrimary-148 FacetsFilterListItem-listText-477"
+                        class="MuiTypography-root-116 MuiTypography-body2-124 MuiTypography-colorTextPrimary-148 FacetsFilterListItem-listText-514"
                       >
                         Subject
                       </p>
@@ -13448,14 +13448,14 @@ exports[`Homepage > Doing a basic search #0`] = `
                   </div>
                   <div
                     tabindex="0"
-                    class="MuiButtonBase-root-204 MuiListItem-root-478 MuiListItem-default-481 MuiListItem-dense-482 MuiListItem-gutters-485 FacetsFilterListItem-listItemGutters-476 MuiListItem-button-486"
+                    class="MuiButtonBase-root-204 MuiListItem-root-515 MuiListItem-default-518 MuiListItem-dense-519 MuiListItem-gutters-522 FacetsFilterListItem-listItemGutters-513 MuiListItem-button-523"
                     role="button"
                   >
                     <div
-                      class="MuiListItemText-root-489 MuiListItemText-dense-491"
+                      class="MuiListItemText-root-526 MuiListItemText-dense-528"
                     >
                       <p
-                        class="MuiTypography-root-116 MuiTypography-body2-124 MuiTypography-colorTextPrimary-148 FacetsFilterListItem-listText-477"
+                        class="MuiTypography-root-116 MuiTypography-body2-124 MuiTypography-colorTextPrimary-148 FacetsFilterListItem-listText-514"
                       >
                         Journal name
                       </p>
@@ -13475,14 +13475,14 @@ exports[`Homepage > Doing a basic search #0`] = `
                   </div>
                   <div
                     tabindex="0"
-                    class="MuiButtonBase-root-204 MuiListItem-root-478 MuiListItem-default-481 MuiListItem-dense-482 MuiListItem-gutters-485 FacetsFilterListItem-listItemGutters-476 MuiListItem-button-486"
+                    class="MuiButtonBase-root-204 MuiListItem-root-515 MuiListItem-default-518 MuiListItem-dense-519 MuiListItem-gutters-522 FacetsFilterListItem-listItemGutters-513 MuiListItem-button-523"
                     role="button"
                   >
                     <div
-                      class="MuiListItemText-root-489 MuiListItemText-dense-491"
+                      class="MuiListItemText-root-526 MuiListItemText-dense-528"
                     >
                       <p
-                        class="MuiTypography-root-116 MuiTypography-body2-124 MuiTypography-colorTextPrimary-148 FacetsFilterListItem-listText-477"
+                        class="MuiTypography-root-116 MuiTypography-body2-124 MuiTypography-colorTextPrimary-148 FacetsFilterListItem-listText-514"
                       >
                         Collection
                       </p>
@@ -13502,14 +13502,14 @@ exports[`Homepage > Doing a basic search #0`] = `
                   </div>
                   <div
                     tabindex="0"
-                    class="MuiButtonBase-root-204 MuiListItem-root-478 MuiListItem-default-481 MuiListItem-dense-482 MuiListItem-gutters-485 FacetsFilterListItem-listItemGutters-476 MuiListItem-button-486"
+                    class="MuiButtonBase-root-204 MuiListItem-root-515 MuiListItem-default-518 MuiListItem-dense-519 MuiListItem-gutters-522 FacetsFilterListItem-listItemGutters-513 MuiListItem-button-523"
                     role="button"
                   >
                     <div
-                      class="MuiListItemText-root-489 MuiListItemText-dense-491"
+                      class="MuiListItemText-root-526 MuiListItemText-dense-528"
                     >
                       <p
-                        class="MuiTypography-root-116 MuiTypography-body2-124 MuiTypography-colorTextPrimary-148 FacetsFilterListItem-listText-477"
+                        class="MuiTypography-root-116 MuiTypography-body2-124 MuiTypography-colorTextPrimary-148 FacetsFilterListItem-listText-514"
                       >
                         Author
                       </p>
@@ -13529,14 +13529,14 @@ exports[`Homepage > Doing a basic search #0`] = `
                   </div>
                   <div
                     tabindex="0"
-                    class="MuiButtonBase-root-204 MuiListItem-root-478 MuiListItem-default-481 MuiListItem-dense-482 MuiListItem-gutters-485 FacetsFilterListItem-listItemGutters-476 MuiListItem-button-486"
+                    class="MuiButtonBase-root-204 MuiListItem-root-515 MuiListItem-default-518 MuiListItem-dense-519 MuiListItem-gutters-522 FacetsFilterListItem-listItemGutters-513 MuiListItem-button-523"
                     role="button"
                   >
                     <div
-                      class="MuiListItemText-root-489 MuiListItemText-dense-491"
+                      class="MuiListItemText-root-526 MuiListItemText-dense-528"
                     >
                       <p
-                        class="MuiTypography-root-116 MuiTypography-body2-124 MuiTypography-colorTextPrimary-148 FacetsFilterListItem-listText-477"
+                        class="MuiTypography-root-116 MuiTypography-body2-124 MuiTypography-colorTextPrimary-148 FacetsFilterListItem-listText-514"
                       >
                         Work subtype
                       </p>
@@ -13556,14 +13556,14 @@ exports[`Homepage > Doing a basic search #0`] = `
                   </div>
                   <div
                     tabindex="0"
-                    class="MuiButtonBase-root-204 MuiListItem-root-478 MuiListItem-default-481 MuiListItem-dense-482 MuiListItem-gutters-485 FacetsFilterListItem-listItemGutters-476 MuiListItem-button-486"
+                    class="MuiButtonBase-root-204 MuiListItem-root-515 MuiListItem-default-518 MuiListItem-dense-519 MuiListItem-gutters-522 FacetsFilterListItem-listItemGutters-513 MuiListItem-button-523"
                     role="button"
                   >
                     <div
-                      class="MuiListItemText-root-489 MuiListItemText-dense-491"
+                      class="MuiListItemText-root-526 MuiListItemText-dense-528"
                     >
                       <p
-                        class="MuiTypography-root-116 MuiTypography-body2-124 MuiTypography-colorTextPrimary-148 FacetsFilterListItem-listText-477"
+                        class="MuiTypography-root-116 MuiTypography-body2-124 MuiTypography-colorTextPrimary-148 FacetsFilterListItem-listText-514"
                       >
                         Open access status
                       </p>
@@ -13652,7 +13652,7 @@ exports[`Homepage > Doing a basic search #1`] = `
                             class="MuiGrid-container-6 MuiGrid-spacing-xs-16-29"
                           >
                             <div
-                              class="MuiGrid-item-7 AdvancedSearchRow-autoWidth-502"
+                              class="MuiGrid-item-7 AdvancedSearchRow-autoWidth-449"
                               style="min-width: 200px;"
                             >
                               <div
@@ -13662,9 +13662,9 @@ exports[`Homepage > Doing a basic search #1`] = `
                                   class="MuiInputBase-root-295 MuiInput-root-282 MuiInput-underline-286 MuiInputBase-formControl-296 MuiInput-formControl-283"
                                   aria-label="Click to select a field to search from the list - Any field currently selected"
                                 >
-                                  <div class="MuiSelect-root-446">
+                                  <div class="MuiSelect-root-454">
                                     <div
-                                      class="MuiSelect-select-447 MuiSelect-selectMenu-450 MuiInputBase-input-305 MuiInput-input-290"
+                                      class="MuiSelect-select-455 MuiSelect-selectMenu-458 MuiInputBase-input-305 MuiInput-input-290"
                                       aria-pressed="false"
                                       tabindex="0"
                                       role="button"
@@ -13673,7 +13673,7 @@ exports[`Homepage > Doing a basic search #1`] = `
                                       Any field
                                     </div>
                                     <input type="hidden" value="all" /><svg
-                                      class="MuiSvgIcon-root-207 MuiSelect-icon-452"
+                                      class="MuiSvgIcon-root-207 MuiSelect-icon-460"
                                       focusable="false"
                                       viewBox="0 0 24 24"
                                       aria-hidden="true"
@@ -13684,13 +13684,13 @@ exports[`Homepage > Doing a basic search #1`] = `
                                   </div>
                                 </div>
                                 <p
-                                  class="MuiFormHelperText-root-507 MuiFormHelperText-filled-513"
+                                  class="MuiFormHelperText-root-463 MuiFormHelperText-filled-469"
                                 ></p>
                               </div>
                             </div>
                             <div class="MuiGrid-item-7 MuiGrid-grid-xs-auto-33">
                               <p
-                                class="MuiTypography-root-116 MuiTypography-body2-124 AdvancedSearchRow-advancedSearchCombiner-504"
+                                class="MuiTypography-root-116 MuiTypography-body2-124 AdvancedSearchRow-advancedSearchCombiner-451"
                               >
                                 contains
                               </p>
@@ -13698,13 +13698,13 @@ exports[`Homepage > Doing a basic search #1`] = `
                           </div>
                         </div>
                         <div
-                          class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 MuiGrid-grid-md-6-68 AdvancedSearchRow-mobileInputRow-506"
+                          class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 MuiGrid-grid-md-6-68 AdvancedSearchRow-mobileInputRow-453"
                         >
                           <div
                             class="MuiGrid-container-6 MuiGrid-spacing-xs-16-29"
                           >
                             <div
-                              class="MuiGrid-item-7 MuiGrid-zeroMinWidth-8 AdvancedSearchRow-autoWidth-502"
+                              class="MuiGrid-item-7 MuiGrid-zeroMinWidth-8 AdvancedSearchRow-autoWidth-449"
                             >
                               <div
                                 class="MuiFormControl-root-278 MuiFormControl-fullWidth-281"
@@ -13738,7 +13738,7 @@ exports[`Homepage > Doing a basic search #1`] = `
                             class="MuiGrid-container-6 MuiGrid-spacing-xs-16-29"
                           >
                             <div
-                              class="MuiGrid-item-7 AdvancedSearchRow-autoWidth-502"
+                              class="MuiGrid-item-7 AdvancedSearchRow-autoWidth-449"
                               style="min-width: 200px;"
                             >
                               <div
@@ -13748,9 +13748,9 @@ exports[`Homepage > Doing a basic search #1`] = `
                                   class="MuiInputBase-root-295 MuiInput-root-282 MuiInput-underline-286 MuiInputBase-formControl-296 MuiInput-formControl-283"
                                   aria-label="Click to select a field to search from the list - Author Name currently selected"
                                 >
-                                  <div class="MuiSelect-root-446">
+                                  <div class="MuiSelect-root-454">
                                     <div
-                                      class="MuiSelect-select-447 MuiSelect-selectMenu-450 MuiInputBase-input-305 MuiInput-input-290"
+                                      class="MuiSelect-select-455 MuiSelect-selectMenu-458 MuiInputBase-input-305 MuiInput-input-290"
                                       aria-pressed="false"
                                       tabindex="0"
                                       role="button"
@@ -13762,7 +13762,7 @@ exports[`Homepage > Doing a basic search #1`] = `
                                       type="hidden"
                                       value="rek_author"
                                     /><svg
-                                      class="MuiSvgIcon-root-207 MuiSelect-icon-452"
+                                      class="MuiSvgIcon-root-207 MuiSelect-icon-460"
                                       focusable="false"
                                       viewBox="0 0 24 24"
                                       aria-hidden="true"
@@ -13773,13 +13773,13 @@ exports[`Homepage > Doing a basic search #1`] = `
                                   </div>
                                 </div>
                                 <p
-                                  class="MuiFormHelperText-root-507 MuiFormHelperText-filled-513"
+                                  class="MuiFormHelperText-root-463 MuiFormHelperText-filled-469"
                                 ></p>
                               </div>
                             </div>
                             <div class="MuiGrid-item-7 MuiGrid-grid-xs-auto-33">
                               <p
-                                class="MuiTypography-root-116 MuiTypography-body2-124 AdvancedSearchRow-advancedSearchCombiner-504"
+                                class="MuiTypography-root-116 MuiTypography-body2-124 AdvancedSearchRow-advancedSearchCombiner-451"
                               >
                                 contains
                               </p>
@@ -13787,13 +13787,13 @@ exports[`Homepage > Doing a basic search #1`] = `
                           </div>
                         </div>
                         <div
-                          class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 MuiGrid-grid-md-6-68 AdvancedSearchRow-mobileInputRow-506"
+                          class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 MuiGrid-grid-md-6-68 AdvancedSearchRow-mobileInputRow-453"
                         >
                           <div
                             class="MuiGrid-container-6 MuiGrid-spacing-xs-16-29"
                           >
                             <div
-                              class="MuiGrid-item-7 MuiGrid-zeroMinWidth-8 AdvancedSearchRow-autoWidth-502"
+                              class="MuiGrid-item-7 MuiGrid-zeroMinWidth-8 AdvancedSearchRow-autoWidth-449"
                             >
                               <div
                                 class="MuiFormControl-root-278 MuiFormControl-fullWidth-281"
@@ -13816,7 +13816,7 @@ exports[`Homepage > Doing a basic search #1`] = `
                                   />
                                 </div>
                                 <p
-                                  class="MuiFormHelperText-root-507 MuiFormHelperText-error-508"
+                                  class="MuiFormHelperText-root-463 MuiFormHelperText-error-464"
                                   id="textfield-helper-text"
                                 >
                                   This field is required
@@ -13824,7 +13824,7 @@ exports[`Homepage > Doing a basic search #1`] = `
                               </div>
                             </div>
                             <div
-                              class="MuiGrid-item-7 AdvancedSearchRow-advancedSearchRowDeleteButton-503"
+                              class="MuiGrid-item-7 AdvancedSearchRow-advancedSearchRowDeleteButton-450"
                             >
                               <button
                                 tabindex="0"
@@ -13856,7 +13856,7 @@ exports[`Homepage > Doing a basic search #1`] = `
                       </div>
                     </div>
                     <div
-                      class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 MuiGrid-grid-md-4-66 AdvancedSearchComponent-sideBar-499"
+                      class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 MuiGrid-grid-md-4-66 AdvancedSearchComponent-sideBar-446"
                     >
                       <div class="MuiGrid-container-6 MuiGrid-spacing-xs-16-29">
                         <div class="MuiGrid-item-7 MuiGrid-grid-xs-12-46">
@@ -13872,18 +13872,18 @@ exports[`Homepage > Doing a basic search #1`] = `
                               class="MuiInputBase-root-295 MuiInput-root-282 MuiInput-underline-286 MuiInputBase-fullWidth-304 MuiInput-fullWidth-289 MuiInputBase-formControl-296 MuiInput-formControl-283"
                               aria-label="Select multiple publications types to search on"
                             >
-                              <div class="MuiSelect-root-446">
+                              <div class="MuiSelect-root-454">
                                 <div
-                                  class="MuiSelect-select-447 MuiSelect-selectMenu-450 MuiInputBase-input-305 MuiInput-input-290"
+                                  class="MuiSelect-select-455 MuiSelect-selectMenu-458 MuiInputBase-input-305 MuiInput-input-290"
                                   aria-pressed="false"
-                                  tabindex="0"
                                   role="button"
                                   aria-haspopup="true"
+                                  tabindex="0"
                                 >
                                   <span>​</span>
                                 </div>
                                 <input type="hidden" value="" /><svg
-                                  class="MuiSvgIcon-root-207 MuiSelect-icon-452"
+                                  class="MuiSvgIcon-root-207 MuiSelect-icon-460"
                                   focusable="false"
                                   viewBox="0 0 24 24"
                                   aria-hidden="true"
@@ -13899,7 +13899,7 @@ exports[`Homepage > Doing a basic search #1`] = `
                           <div class="MuiGrid-container-6">
                             <div class="MuiGrid-item-7 MuiGrid-grid-xs-12-46">
                               <label
-                                class="MuiFormLabel-root-400 MuiInputLabel-root-393 MuiInputLabel-animated-397 MuiInputLabel-shrink-396 PublicationYearRangeField-title-517"
+                                class="MuiFormLabel-root-400 MuiInputLabel-root-393 MuiInputLabel-animated-397 MuiInputLabel-shrink-396 PublicationYearRangeField-title-473"
                                 data-shrink="true"
                                 >Published year range</label
                               >
@@ -13993,9 +13993,9 @@ exports[`Homepage > Doing a basic search #1`] = `
                           </div>
                         </div>
                         <div class="MuiGrid-item-7 MuiGrid-grid-xs-12-46">
-                          <label class="MuiFormControlLabel-root-518"
+                          <label class="MuiFormControlLabel-root-474"
                             ><span
-                              class="MuiButtonBase-root-204 MuiIconButton-root-198 MuiSwitchBase-root-528 MuiCheckbox-root-522 MuiCheckbox-colorSecondary-527 MuiSwitchBase-checked-529 MuiCheckbox-checked-523"
+                              class="MuiButtonBase-root-204 MuiIconButton-root-198 MuiSwitchBase-root-484 MuiCheckbox-root-478 MuiCheckbox-colorSecondary-483 MuiSwitchBase-checked-485 MuiCheckbox-checked-479"
                               aria-label="Check to search for publications with are only open access / full text"
                               ><span class="MuiIconButton-label-203"
                                 ><svg
@@ -14009,15 +14009,19 @@ exports[`Homepage > Doing a basic search #1`] = `
                                     d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
                                   ></path></svg
                                 ><input
-                                  class="MuiSwitchBase-input-531"
+                                  class="MuiSwitchBase-input-487"
                                   type="checkbox"
                                   data-indeterminate="false"
                                   value=""/></span
-                              ><span
-                                class="MuiTouchRipple-root-216"
-                              ></span></span
+                              ><span class="MuiTouchRipple-root-216"
+                                ><span
+                                  class="MuiTouchRipple-ripple-217 MuiTouchRipple-rippleVisible-218 MuiTouchRipple-ripplePulsate-219"
+                                  style="width: 49px; height: 49px; top: -0.5px; left: -0.5px;"
+                                  ><span
+                                    class="MuiTouchRipple-child-220 MuiTouchRipple-childLeaving-221 MuiTouchRipple-childPulsate-222"
+                                  ></span></span></span></span
                             ><span
-                              class="MuiTypography-root-116 MuiTypography-body2-124 MuiFormControlLabel-label-521"
+                              class="MuiTypography-root-116 MuiTypography-body2-124 MuiFormControlLabel-label-477"
                               >Open access</span
                             ></label
                           >
@@ -14034,7 +14038,7 @@ exports[`Homepage > Doing a basic search #1`] = `
                     >
                       <button
                         tabindex="-1"
-                        class="MuiButtonBase-root-204 MuiButtonBase-disabled-205 MuiButton-root-407 AdvancedSearchComponent-blueButton-501 MuiButton-contained-418 MuiButton-raised-421 MuiButton-disabled-427 MuiButton-fullWidth-432"
+                        class="MuiButtonBase-root-204 MuiButtonBase-disabled-205 MuiButton-root-407 AdvancedSearchComponent-blueButton-448 MuiButton-contained-418 MuiButton-raised-421 MuiButton-disabled-427 MuiButton-fullWidth-432"
                         type="button"
                         aria-label="Click to add another advanced search field"
                         disabled=""
@@ -14075,7 +14079,7 @@ exports[`Homepage > Doing a basic search #1`] = `
                       style="flex-grow: 1; width: 1px;"
                     ></div>
                     <div
-                      class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 MuiGrid-grid-md-4-66 AdvancedSearchComponent-searchButton-500"
+                      class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 MuiGrid-grid-md-4-66 AdvancedSearchComponent-searchButton-447"
                     >
                       <button
                         tabindex="-1"
@@ -14093,21 +14097,21 @@ exports[`Homepage > Doing a basic search #1`] = `
                     <div class="MuiGrid-item-7" style="padding-top: 24px;">
                       <div class="search-body searchQueryCaption">
                         <span
-                          ><span class="AdvancedSearchCaption-and-532"> </span
-                          ><span class="AdvancedSearchCaption-title-533"
+                          ><span class="AdvancedSearchCaption-and-488"> </span
+                          ><span class="AdvancedSearchCaption-title-489"
                             >Any field </span
-                          ><span class="AdvancedSearchCaption-combiner-534">
+                          ><span class="AdvancedSearchCaption-combiner-490">
                             contains </span
-                          ><span class="AdvancedSearchCaption-value-535">
+                          ><span class="AdvancedSearchCaption-value-491">
                             cats and dogs</span
                           ></span
                         ><span
-                          ><span class="AdvancedSearchCaption-and-532">
+                          ><span class="AdvancedSearchCaption-and-488">
                             AND </span
-                          ><span class="AdvancedSearchCaption-title-533"> </span
-                          ><span class="AdvancedSearchCaption-combiner-534">
+                          ><span class="AdvancedSearchCaption-title-489"> </span
+                          ><span class="AdvancedSearchCaption-combiner-490">
                             is </span
-                          ><span class="AdvancedSearchCaption-value-535">
+                          ><span class="AdvancedSearchCaption-value-491">
                             <span class="value"
                               >open access/full text</span
                             ></span
@@ -14148,9 +14152,9 @@ exports[`Homepage > Doing a basic search #1`] = `
                         <div
                           class="MuiInputBase-root-295 MuiInput-root-282 MuiInput-underline-286 MuiInputBase-formControl-296 MuiInput-formControl-283"
                         >
-                          <div class="MuiSelect-root-446">
+                          <div class="MuiSelect-root-454">
                             <div
-                              class="MuiSelect-select-447 MuiSelect-selectMenu-450 MuiInputBase-input-305 MuiInput-input-290"
+                              class="MuiSelect-select-455 MuiSelect-selectMenu-458 MuiInputBase-input-305 MuiInput-input-290"
                               aria-pressed="false"
                               tabindex="0"
                               role="button"
@@ -14163,7 +14167,7 @@ exports[`Homepage > Doing a basic search #1`] = `
                               id="sortBy"
                               value="score"
                             /><svg
-                              class="MuiSvgIcon-root-207 MuiSelect-icon-452"
+                              class="MuiSvgIcon-root-207 MuiSelect-icon-460"
                               focusable="false"
                               viewBox="0 0 24 24"
                               aria-hidden="true"
@@ -14189,9 +14193,9 @@ exports[`Homepage > Doing a basic search #1`] = `
                         <div
                           class="MuiInputBase-root-295 MuiInput-root-282 MuiInput-underline-286 MuiInputBase-formControl-296 MuiInput-formControl-283"
                         >
-                          <div class="MuiSelect-root-446">
+                          <div class="MuiSelect-root-454">
                             <div
-                              class="MuiSelect-select-447 MuiSelect-selectMenu-450 MuiInputBase-input-305 MuiInput-input-290"
+                              class="MuiSelect-select-455 MuiSelect-selectMenu-458 MuiInputBase-input-305 MuiInput-input-290"
                               aria-pressed="false"
                               tabindex="0"
                               role="button"
@@ -14204,7 +14208,7 @@ exports[`Homepage > Doing a basic search #1`] = `
                               id="sortOrder"
                               value="Desc"
                             /><svg
-                              class="MuiSvgIcon-root-207 MuiSelect-icon-452"
+                              class="MuiSvgIcon-root-207 MuiSelect-icon-460"
                               focusable="false"
                               viewBox="0 0 24 24"
                               aria-hidden="true"
@@ -14230,9 +14234,9 @@ exports[`Homepage > Doing a basic search #1`] = `
                         <div
                           class="MuiInputBase-root-295 MuiInput-root-282 MuiInput-underline-286 MuiInputBase-formControl-296 MuiInput-formControl-283"
                         >
-                          <div class="MuiSelect-root-446">
+                          <div class="MuiSelect-root-454">
                             <div
-                              class="MuiSelect-select-447 MuiSelect-selectMenu-450 MuiInputBase-input-305 MuiInput-input-290"
+                              class="MuiSelect-select-455 MuiSelect-selectMenu-458 MuiInputBase-input-305 MuiInput-input-290"
                               aria-pressed="false"
                               tabindex="0"
                               role="button"
@@ -14241,7 +14245,7 @@ exports[`Homepage > Doing a basic search #1`] = `
                               20
                             </div>
                             <input type="hidden" id="pageSize" value="20" /><svg
-                              class="MuiSvgIcon-root-207 MuiSelect-icon-452"
+                              class="MuiSvgIcon-root-207 MuiSelect-icon-460"
                               focusable="false"
                               viewBox="0 0 24 24"
                               aria-hidden="true"
@@ -14267,9 +14271,9 @@ exports[`Homepage > Doing a basic search #1`] = `
                         <div
                           class="MuiInputBase-root-295 MuiInput-root-282 MuiInput-underline-286 MuiInputBase-formControl-296 MuiInput-formControl-283"
                         >
-                          <div class="MuiSelect-root-446">
+                          <div class="MuiSelect-root-454">
                             <div
-                              class="MuiSelect-select-447 MuiSelect-selectMenu-450 MuiInputBase-input-305 MuiInput-input-290"
+                              class="MuiSelect-select-455 MuiSelect-selectMenu-458 MuiInputBase-input-305 MuiInput-input-290"
                               aria-pressed="false"
                               tabindex="0"
                               role="button"
@@ -14282,7 +14286,7 @@ exports[`Homepage > Doing a basic search #1`] = `
                               id="exportPublicationsFormat"
                               value="-1"
                             /><svg
-                              class="MuiSvgIcon-root-207 MuiSelect-icon-452"
+                              class="MuiSvgIcon-root-207 MuiSelect-icon-460"
                               focusable="false"
                               viewBox="0 0 24 24"
                               aria-hidden="true"
@@ -14309,13 +14313,13 @@ exports[`Homepage > Doing a basic search #1`] = `
                         style="min-width: 1px;"
                       >
                         <h6
-                          class="MuiTypography-root-116 MuiTypography-h6-133 PublicationCitation-citationTitle-456"
+                          class="MuiTypography-root-116 MuiTypography-h6-133 PublicationCitation-citationTitle-493"
                         >
                           <a href="/view/UQ:795469">Early Onset Scoliosis</a>
                         </h6>
                       </div>
                       <div
-                        class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 PublicationCitation-citationText-457"
+                        class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 PublicationCitation-citationText-494"
                       >
                         <div class="citationContent citationBook">
                           <span class="citationAuthors empty"></span
@@ -14334,9 +14338,9 @@ exports[`Homepage > Doing a basic search #1`] = `
                             target="_blank"
                             rel="noopener noreferrer"
                             tabindex="0"
-                            class="citationDoiLink ExternalLink-externalLink-461"
+                            class="citationDoiLink ExternalLink-externalLink-498"
                             ><svg
-                              class="MuiSvgIcon-root-207 ExternalLink-externalLinkIcon-462"
+                              class="MuiSvgIcon-root-207 ExternalLink-externalLinkIcon-499"
                               focusable="false"
                               viewBox="0 0 24 24"
                               aria-hidden="true"
@@ -14351,7 +14355,7 @@ exports[`Homepage > Doing a basic search #1`] = `
                         </div>
                       </div>
                       <div
-                        class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 PublicationCitation-citationCounts-458"
+                        class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 PublicationCitation-citationCounts-495"
                       >
                         <div class="MuiGrid-container-6">
                           <div
@@ -14365,7 +14369,7 @@ exports[`Homepage > Doing a basic search #1`] = `
                               target="_blank"
                               rel="noopener noreferrer"
                               tabindex="0"
-                              class="googleCitationCount CitationCountView-citationCount-464 ExternalLink-externalLink-461"
+                              class="googleCitationCount CitationCountView-citationCount-501 ExternalLink-externalLink-498"
                               ><span class="fez-icon google large"></span></a
                             ><span
                               class="fez-icon openAccess large"
@@ -14384,7 +14388,7 @@ exports[`Homepage > Doing a basic search #1`] = `
                   </div>
                 </div>
                 <hr
-                  class="MuiDivider-root-466 PublicationCitation-divider-455"
+                  class="MuiDivider-root-503 PublicationCitation-divider-492"
                 />
                 <div class="MuiGrid-container-6">
                   <div class="MuiGrid-item-7 MuiGrid-grid-xs-true-34">
@@ -14394,13 +14398,13 @@ exports[`Homepage > Doing a basic search #1`] = `
                         style="min-width: 1px;"
                       >
                         <h6
-                          class="MuiTypography-root-116 MuiTypography-h6-133 PublicationCitation-citationTitle-456"
+                          class="MuiTypography-root-116 MuiTypography-h6-133 PublicationCitation-citationTitle-493"
                         >
                           <a href="/view/UQ:342708">Vaccination day</a>
                         </h6>
                       </div>
                       <div
-                        class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 PublicationCitation-citationText-457"
+                        class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 PublicationCitation-citationText-494"
                       >
                         <div class="citationContent citationJournalArticle">
                           <span class="citationAuthors"
@@ -14427,9 +14431,9 @@ exports[`Homepage > Doing a basic search #1`] = `
                             target="_blank"
                             rel="noopener noreferrer"
                             tabindex="0"
-                            class="citationDoiLink ExternalLink-externalLink-461"
+                            class="citationDoiLink ExternalLink-externalLink-498"
                             ><svg
-                              class="MuiSvgIcon-root-207 ExternalLink-externalLinkIcon-462"
+                              class="MuiSvgIcon-root-207 ExternalLink-externalLinkIcon-499"
                               focusable="false"
                               viewBox="0 0 24 24"
                               aria-hidden="true"
@@ -14444,7 +14448,7 @@ exports[`Homepage > Doing a basic search #1`] = `
                         </div>
                       </div>
                       <div
-                        class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 PublicationCitation-citationCounts-458"
+                        class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 PublicationCitation-citationCounts-495"
                       >
                         <div class="MuiGrid-container-6">
                           <div
@@ -14458,10 +14462,10 @@ exports[`Homepage > Doing a basic search #1`] = `
                               target="_blank"
                               rel="noopener noreferrer"
                               tabindex="0"
-                              class="wosCitationCount CitationCountView-citationCount-464 ExternalLink-externalLink-461"
+                              class="wosCitationCount CitationCountView-citationCount-501 ExternalLink-externalLink-498"
                               ><span class="fez-icon wos large"></span
                               ><span
-                                class="CitationCountView-citationCountNumber-465"
+                                class="CitationCountView-citationCountNumber-502"
                                 >12</span
                               ></a
                             ><a
@@ -14472,10 +14476,10 @@ exports[`Homepage > Doing a basic search #1`] = `
                               target="_blank"
                               rel="noopener noreferrer"
                               tabindex="0"
-                              class="scopusCitationCount CitationCountView-citationCount-464 ExternalLink-externalLink-461"
+                              class="scopusCitationCount CitationCountView-citationCount-501 ExternalLink-externalLink-498"
                               ><span class="fez-icon scopus large"></span
                               ><span
-                                class="CitationCountView-citationCountNumber-465"
+                                class="CitationCountView-citationCountNumber-502"
                                 >0</span
                               ></a
                             ><a
@@ -14486,10 +14490,10 @@ exports[`Homepage > Doing a basic search #1`] = `
                               target="_blank"
                               rel="noopener noreferrer"
                               tabindex="0"
-                              class="altmetricCitationCount CitationCountView-citationCount-464 ExternalLink-externalLink-461"
+                              class="altmetricCitationCount CitationCountView-citationCount-501 ExternalLink-externalLink-498"
                               ><span class="fez-icon altmetric large"></span
                               ><span
-                                class="CitationCountView-citationCountNumber-465"
+                                class="CitationCountView-citationCountNumber-502"
                                 >333</span
                               ></a
                             ><a
@@ -14500,7 +14504,7 @@ exports[`Homepage > Doing a basic search #1`] = `
                               target="_blank"
                               rel="noopener noreferrer"
                               tabindex="0"
-                              class="googleCitationCount CitationCountView-citationCount-464 ExternalLink-externalLink-461"
+                              class="googleCitationCount CitationCountView-citationCount-501 ExternalLink-externalLink-498"
                               ><span class="fez-icon google large"></span></a
                             ><span class="noOaIcon"></span>
                           </div>
@@ -14512,9 +14516,9 @@ exports[`Homepage > Doing a basic search #1`] = `
                               target="_blank"
                               rel="noopener noreferrer"
                               tabindex="0"
-                              class="CitationCounts-statsLink-463 ExternalLink-externalLink-461"
+                              class="CitationCounts-statsLink-500 ExternalLink-externalLink-498"
                               ><svg
-                                class="MuiSvgIcon-root-207 ExternalLink-externalLinkIcon-462"
+                                class="MuiSvgIcon-root-207 ExternalLink-externalLinkIcon-499"
                                 focusable="false"
                                 viewBox="0 0 24 24"
                                 aria-hidden="true"
@@ -14536,7 +14540,7 @@ exports[`Homepage > Doing a basic search #1`] = `
                   </div>
                 </div>
                 <hr
-                  class="MuiDivider-root-466 PublicationCitation-divider-455"
+                  class="MuiDivider-root-503 PublicationCitation-divider-492"
                 />
                 <div class="MuiGrid-container-6">
                   <div class="MuiGrid-item-7 MuiGrid-grid-xs-true-34">
@@ -14546,7 +14550,7 @@ exports[`Homepage > Doing a basic search #1`] = `
                         style="min-width: 1px;"
                       >
                         <h6
-                          class="MuiTypography-root-116 MuiTypography-h6-133 PublicationCitation-citationTitle-456"
+                          class="MuiTypography-root-116 MuiTypography-h6-133 PublicationCitation-citationTitle-493"
                         >
                           <a href="/view/UQ:288545"
                             >Bacterial plaques staining composition
@@ -14556,7 +14560,7 @@ exports[`Homepage > Doing a basic search #1`] = `
                         </h6>
                       </div>
                       <div
-                        class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 PublicationCitation-citationText-457"
+                        class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 PublicationCitation-citationText-494"
                       >
                         <div class="citationContent citationPatent">
                           <span class="citationAuthors"
@@ -14578,7 +14582,7 @@ exports[`Homepage > Doing a basic search #1`] = `
                         </div>
                       </div>
                       <div
-                        class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 PublicationCitation-citationCounts-458"
+                        class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 PublicationCitation-citationCounts-495"
                       >
                         <div class="MuiGrid-container-6">
                           <div
@@ -14592,7 +14596,7 @@ exports[`Homepage > Doing a basic search #1`] = `
                               target="_blank"
                               rel="noopener noreferrer"
                               tabindex="0"
-                              class="googleCitationCount CitationCountView-citationCount-464 ExternalLink-externalLink-461"
+                              class="googleCitationCount CitationCountView-citationCount-501 ExternalLink-externalLink-498"
                               ><span class="fez-icon google large"></span></a
                             ><span class="noOaIcon"></span>
                           </div>
@@ -14606,7 +14610,7 @@ exports[`Homepage > Doing a basic search #1`] = `
                   </div>
                 </div>
                 <hr
-                  class="MuiDivider-root-466 PublicationCitation-divider-455"
+                  class="MuiDivider-root-503 PublicationCitation-divider-492"
                 />
                 <div class="MuiGrid-container-6">
                   <div class="MuiGrid-item-7 MuiGrid-grid-xs-true-34">
@@ -14616,7 +14620,7 @@ exports[`Homepage > Doing a basic search #1`] = `
                         style="min-width: 1px;"
                       >
                         <h6
-                          class="MuiTypography-root-116 MuiTypography-h6-133 PublicationCitation-citationTitle-456"
+                          class="MuiTypography-root-116 MuiTypography-h6-133 PublicationCitation-citationTitle-493"
                         >
                           <a href="/view/UQ:95980"
                             >Lipid-core-peptides for vaccination.</a
@@ -14624,7 +14628,7 @@ exports[`Homepage > Doing a basic search #1`] = `
                         </h6>
                       </div>
                       <div
-                        class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 PublicationCitation-citationText-457"
+                        class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 PublicationCitation-citationText-494"
                       >
                         <div class="citationContent citationConferencePaper">
                           <span class="citationAuthors"
@@ -14652,7 +14656,7 @@ exports[`Homepage > Doing a basic search #1`] = `
                         </div>
                       </div>
                       <div
-                        class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 PublicationCitation-citationCounts-458"
+                        class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 PublicationCitation-citationCounts-495"
                       >
                         <div class="MuiGrid-container-6">
                           <div
@@ -14666,7 +14670,7 @@ exports[`Homepage > Doing a basic search #1`] = `
                               target="_blank"
                               rel="noopener noreferrer"
                               tabindex="0"
-                              class="googleCitationCount CitationCountView-citationCount-464 ExternalLink-externalLink-461"
+                              class="googleCitationCount CitationCountView-citationCount-501 ExternalLink-externalLink-498"
                               ><span class="fez-icon google large"></span></a
                             ><span class="noOaIcon"></span>
                           </div>
@@ -14680,7 +14684,7 @@ exports[`Homepage > Doing a basic search #1`] = `
                   </div>
                 </div>
                 <hr
-                  class="MuiDivider-root-466 PublicationCitation-divider-455"
+                  class="MuiDivider-root-503 PublicationCitation-divider-492"
                 />
                 <div class="MuiGrid-container-6">
                   <div class="MuiGrid-item-7 MuiGrid-grid-xs-true-34">
@@ -14690,7 +14694,7 @@ exports[`Homepage > Doing a basic search #1`] = `
                         style="min-width: 1px;"
                       >
                         <h6
-                          class="MuiTypography-root-116 MuiTypography-h6-133 PublicationCitation-citationTitle-456"
+                          class="MuiTypography-root-116 MuiTypography-h6-133 PublicationCitation-citationTitle-493"
                         >
                           <a href="/view/UQ:433847"
                             >A state-based vaccination register</a
@@ -14698,7 +14702,7 @@ exports[`Homepage > Doing a basic search #1`] = `
                         </h6>
                       </div>
                       <div
-                        class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 PublicationCitation-citationText-457"
+                        class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 PublicationCitation-citationText-494"
                       >
                         <div class="citationContent citationJournalArticle">
                           <span class="citationAuthors"
@@ -14723,7 +14727,7 @@ exports[`Homepage > Doing a basic search #1`] = `
                         </div>
                       </div>
                       <div
-                        class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 PublicationCitation-citationCounts-458"
+                        class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 PublicationCitation-citationCounts-495"
                       >
                         <div class="MuiGrid-container-6">
                           <div
@@ -14737,10 +14741,10 @@ exports[`Homepage > Doing a basic search #1`] = `
                               target="_blank"
                               rel="noopener noreferrer"
                               tabindex="0"
-                              class="wosCitationCount CitationCountView-citationCount-464 ExternalLink-externalLink-461"
+                              class="wosCitationCount CitationCountView-citationCount-501 ExternalLink-externalLink-498"
                               ><span class="fez-icon wos large"></span
                               ><span
-                                class="CitationCountView-citationCountNumber-465"
+                                class="CitationCountView-citationCountNumber-502"
                                 >4</span
                               ></a
                             ><a
@@ -14751,7 +14755,7 @@ exports[`Homepage > Doing a basic search #1`] = `
                               target="_blank"
                               rel="noopener noreferrer"
                               tabindex="0"
-                              class="googleCitationCount CitationCountView-citationCount-464 ExternalLink-externalLink-461"
+                              class="googleCitationCount CitationCountView-citationCount-501 ExternalLink-externalLink-498"
                               ><span class="fez-icon google large"></span></a
                             ><span class="noOaIcon"></span>
                           </div>
@@ -14763,9 +14767,9 @@ exports[`Homepage > Doing a basic search #1`] = `
                               target="_blank"
                               rel="noopener noreferrer"
                               tabindex="0"
-                              class="CitationCounts-statsLink-463 ExternalLink-externalLink-461"
+                              class="CitationCounts-statsLink-500 ExternalLink-externalLink-498"
                               ><svg
-                                class="MuiSvgIcon-root-207 ExternalLink-externalLinkIcon-462"
+                                class="MuiSvgIcon-root-207 ExternalLink-externalLinkIcon-499"
                                 focusable="false"
                                 viewBox="0 0 24 24"
                                 aria-hidden="true"
@@ -14787,7 +14791,7 @@ exports[`Homepage > Doing a basic search #1`] = `
                   </div>
                 </div>
                 <hr
-                  class="MuiDivider-root-466 PublicationCitation-divider-455"
+                  class="MuiDivider-root-503 PublicationCitation-divider-492"
                 />
                 <div class="MuiGrid-container-6">
                   <div class="MuiGrid-item-7 MuiGrid-grid-xs-true-34">
@@ -14797,7 +14801,7 @@ exports[`Homepage > Doing a basic search #1`] = `
                         style="min-width: 1px;"
                       >
                         <h6
-                          class="MuiTypography-root-116 MuiTypography-h6-133 PublicationCitation-citationTitle-456"
+                          class="MuiTypography-root-116 MuiTypography-h6-133 PublicationCitation-citationTitle-493"
                         >
                           <a href="/view/UQ:215681"
                             >Rheumatic complications of influenza vaccination</a
@@ -14805,7 +14809,7 @@ exports[`Homepage > Doing a basic search #1`] = `
                         </h6>
                       </div>
                       <div
-                        class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 PublicationCitation-citationText-457"
+                        class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 PublicationCitation-citationText-494"
                       >
                         <div class="citationContent citationJournalArticle">
                           <span class="citationAuthors"
@@ -14835,9 +14839,9 @@ exports[`Homepage > Doing a basic search #1`] = `
                             target="_blank"
                             rel="noopener noreferrer"
                             tabindex="0"
-                            class="citationDoiLink ExternalLink-externalLink-461"
+                            class="citationDoiLink ExternalLink-externalLink-498"
                             ><svg
-                              class="MuiSvgIcon-root-207 ExternalLink-externalLinkIcon-462"
+                              class="MuiSvgIcon-root-207 ExternalLink-externalLinkIcon-499"
                               focusable="false"
                               viewBox="0 0 24 24"
                               aria-hidden="true"
@@ -14852,7 +14856,7 @@ exports[`Homepage > Doing a basic search #1`] = `
                         </div>
                       </div>
                       <div
-                        class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 PublicationCitation-citationCounts-458"
+                        class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 PublicationCitation-citationCounts-495"
                       >
                         <div class="MuiGrid-container-6">
                           <div
@@ -14866,10 +14870,10 @@ exports[`Homepage > Doing a basic search #1`] = `
                               target="_blank"
                               rel="noopener noreferrer"
                               tabindex="0"
-                              class="wosCitationCount CitationCountView-citationCount-464 ExternalLink-externalLink-461"
+                              class="wosCitationCount CitationCountView-citationCount-501 ExternalLink-externalLink-498"
                               ><span class="fez-icon wos large"></span
                               ><span
-                                class="CitationCountView-citationCountNumber-465"
+                                class="CitationCountView-citationCountNumber-502"
                                 >20</span
                               ></a
                             ><a
@@ -14880,10 +14884,10 @@ exports[`Homepage > Doing a basic search #1`] = `
                               target="_blank"
                               rel="noopener noreferrer"
                               tabindex="0"
-                              class="scopusCitationCount CitationCountView-citationCount-464 ExternalLink-externalLink-461"
+                              class="scopusCitationCount CitationCountView-citationCount-501 ExternalLink-externalLink-498"
                               ><span class="fez-icon scopus large"></span
                               ><span
-                                class="CitationCountView-citationCountNumber-465"
+                                class="CitationCountView-citationCountNumber-502"
                                 >25</span
                               ></a
                             ><a
@@ -14894,10 +14898,10 @@ exports[`Homepage > Doing a basic search #1`] = `
                               target="_blank"
                               rel="noopener noreferrer"
                               tabindex="0"
-                              class="altmetricCitationCount CitationCountView-citationCount-464 ExternalLink-externalLink-461"
+                              class="altmetricCitationCount CitationCountView-citationCount-501 ExternalLink-externalLink-498"
                               ><span class="fez-icon altmetric large"></span
                               ><span
-                                class="CitationCountView-citationCountNumber-465"
+                                class="CitationCountView-citationCountNumber-502"
                                 >4</span
                               ></a
                             ><a
@@ -14908,7 +14912,7 @@ exports[`Homepage > Doing a basic search #1`] = `
                               target="_blank"
                               rel="noopener noreferrer"
                               tabindex="0"
-                              class="googleCitationCount CitationCountView-citationCount-464 ExternalLink-externalLink-461"
+                              class="googleCitationCount CitationCountView-citationCount-501 ExternalLink-externalLink-498"
                               ><span class="fez-icon google large"></span></a
                             ><span class="noOaIcon"></span>
                           </div>
@@ -14920,9 +14924,9 @@ exports[`Homepage > Doing a basic search #1`] = `
                               target="_blank"
                               rel="noopener noreferrer"
                               tabindex="0"
-                              class="CitationCounts-statsLink-463 ExternalLink-externalLink-461"
+                              class="CitationCounts-statsLink-500 ExternalLink-externalLink-498"
                               ><svg
-                                class="MuiSvgIcon-root-207 ExternalLink-externalLinkIcon-462"
+                                class="MuiSvgIcon-root-207 ExternalLink-externalLinkIcon-499"
                                 focusable="false"
                                 viewBox="0 0 24 24"
                                 aria-hidden="true"
@@ -14944,7 +14948,7 @@ exports[`Homepage > Doing a basic search #1`] = `
                   </div>
                 </div>
                 <hr
-                  class="MuiDivider-root-466 PublicationCitation-divider-455"
+                  class="MuiDivider-root-503 PublicationCitation-divider-492"
                 />
                 <div class="MuiGrid-container-6">
                   <div class="MuiGrid-item-7 MuiGrid-grid-xs-true-34">
@@ -14954,7 +14958,7 @@ exports[`Homepage > Doing a basic search #1`] = `
                         style="min-width: 1px;"
                       >
                         <h6
-                          class="MuiTypography-root-116 MuiTypography-h6-133 PublicationCitation-citationTitle-456"
+                          class="MuiTypography-root-116 MuiTypography-h6-133 PublicationCitation-citationTitle-493"
                         >
                           <a href="/view/UQ:175986"
                             >Patient care drives mandatory vaccination</a
@@ -14962,7 +14966,7 @@ exports[`Homepage > Doing a basic search #1`] = `
                         </h6>
                       </div>
                       <div
-                        class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 PublicationCitation-citationText-457"
+                        class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 PublicationCitation-citationText-494"
                       >
                         <div class="citationContent citationJournalArticle">
                           <span class="citationAuthors"
@@ -14990,9 +14994,9 @@ exports[`Homepage > Doing a basic search #1`] = `
                             target="_blank"
                             rel="noopener noreferrer"
                             tabindex="0"
-                            class="citationDoiLink ExternalLink-externalLink-461"
+                            class="citationDoiLink ExternalLink-externalLink-498"
                             ><svg
-                              class="MuiSvgIcon-root-207 ExternalLink-externalLinkIcon-462"
+                              class="MuiSvgIcon-root-207 ExternalLink-externalLinkIcon-499"
                               focusable="false"
                               viewBox="0 0 24 24"
                               aria-hidden="true"
@@ -15007,7 +15011,7 @@ exports[`Homepage > Doing a basic search #1`] = `
                         </div>
                       </div>
                       <div
-                        class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 PublicationCitation-citationCounts-458"
+                        class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 PublicationCitation-citationCounts-495"
                       >
                         <div class="MuiGrid-container-6">
                           <div
@@ -15021,10 +15025,10 @@ exports[`Homepage > Doing a basic search #1`] = `
                               target="_blank"
                               rel="noopener noreferrer"
                               tabindex="0"
-                              class="wosCitationCount CitationCountView-citationCount-464 ExternalLink-externalLink-461"
+                              class="wosCitationCount CitationCountView-citationCount-501 ExternalLink-externalLink-498"
                               ><span class="fez-icon wos large"></span
                               ><span
-                                class="CitationCountView-citationCountNumber-465"
+                                class="CitationCountView-citationCountNumber-502"
                                 >4</span
                               ></a
                             ><a
@@ -15035,10 +15039,10 @@ exports[`Homepage > Doing a basic search #1`] = `
                               target="_blank"
                               rel="noopener noreferrer"
                               tabindex="0"
-                              class="scopusCitationCount CitationCountView-citationCount-464 ExternalLink-externalLink-461"
+                              class="scopusCitationCount CitationCountView-citationCount-501 ExternalLink-externalLink-498"
                               ><span class="fez-icon scopus large"></span
                               ><span
-                                class="CitationCountView-citationCountNumber-465"
+                                class="CitationCountView-citationCountNumber-502"
                                 >1</span
                               ></a
                             ><a
@@ -15049,7 +15053,7 @@ exports[`Homepage > Doing a basic search #1`] = `
                               target="_blank"
                               rel="noopener noreferrer"
                               tabindex="0"
-                              class="googleCitationCount CitationCountView-citationCount-464 ExternalLink-externalLink-461"
+                              class="googleCitationCount CitationCountView-citationCount-501 ExternalLink-externalLink-498"
                               ><span class="fez-icon google large"></span></a
                             ><span class="noOaIcon"></span>
                           </div>
@@ -15061,9 +15065,9 @@ exports[`Homepage > Doing a basic search #1`] = `
                               target="_blank"
                               rel="noopener noreferrer"
                               tabindex="0"
-                              class="CitationCounts-statsLink-463 ExternalLink-externalLink-461"
+                              class="CitationCounts-statsLink-500 ExternalLink-externalLink-498"
                               ><svg
-                                class="MuiSvgIcon-root-207 ExternalLink-externalLinkIcon-462"
+                                class="MuiSvgIcon-root-207 ExternalLink-externalLinkIcon-499"
                                 focusable="false"
                                 viewBox="0 0 24 24"
                                 aria-hidden="true"
@@ -15085,7 +15089,7 @@ exports[`Homepage > Doing a basic search #1`] = `
                   </div>
                 </div>
                 <hr
-                  class="MuiDivider-root-466 PublicationCitation-divider-455"
+                  class="MuiDivider-root-503 PublicationCitation-divider-492"
                 />
               </div>
               <div></div>
@@ -15095,7 +15099,7 @@ exports[`Homepage > Doing a basic search #1`] = `
         <div class="MuiGrid-item-7 MuiGrid-grid-md-3-65">
           <div class="MuiGrid-container-6">
             <div
-              class="MuiGrid-item-7 MuiGrid-grid-xs-true-34 RighthandCard-title-470"
+              class="MuiGrid-item-7 MuiGrid-grid-xs-true-34 RighthandCard-title-507"
             >
               <h6
                 class="MuiTypography-root-116 MuiTypography-h6-133 MuiTypography-colorPrimary-146"
@@ -15104,23 +15108,23 @@ exports[`Homepage > Doing a basic search #1`] = `
               </h6>
             </div>
             <div class="MuiGrid-item-7 MuiGrid-grid-xs-12-46">
-              <hr class="MuiDivider-root-466 RighthandCard-divider-471" />
+              <hr class="MuiDivider-root-503 RighthandCard-divider-508" />
             </div>
             <div class="MuiGrid-item-7 MuiGrid-grid-xs-12-46">
               <div class="facetsFilter">
                 <nav
-                  class="MuiList-root-472 MuiList-dense-474 MuiList-padding-473"
+                  class="MuiList-root-509 MuiList-dense-511 MuiList-padding-510"
                 >
                   <div
                     tabindex="0"
-                    class="MuiButtonBase-root-204 MuiListItem-root-478 MuiListItem-default-481 MuiListItem-dense-482 MuiListItem-gutters-485 FacetsFilterListItem-listItemGutters-476 MuiListItem-button-486"
+                    class="MuiButtonBase-root-204 MuiListItem-root-515 MuiListItem-default-518 MuiListItem-dense-519 MuiListItem-gutters-522 FacetsFilterListItem-listItemGutters-513 MuiListItem-button-523"
                     role="button"
                   >
                     <div
-                      class="MuiListItemText-root-489 MuiListItemText-dense-491"
+                      class="MuiListItemText-root-526 MuiListItemText-dense-528"
                     >
                       <p
-                        class="MuiTypography-root-116 MuiTypography-body2-124 MuiTypography-colorTextPrimary-148 FacetsFilterListItem-listText-477"
+                        class="MuiTypography-root-116 MuiTypography-body2-124 MuiTypography-colorTextPrimary-148 FacetsFilterListItem-listText-514"
                       >
                         Work type
                       </p>
@@ -15140,14 +15144,14 @@ exports[`Homepage > Doing a basic search #1`] = `
                   </div>
                   <div
                     tabindex="0"
-                    class="MuiButtonBase-root-204 MuiListItem-root-478 MuiListItem-default-481 MuiListItem-dense-482 MuiListItem-gutters-485 FacetsFilterListItem-listItemGutters-476 MuiListItem-button-486"
+                    class="MuiButtonBase-root-204 MuiListItem-root-515 MuiListItem-default-518 MuiListItem-dense-519 MuiListItem-gutters-522 FacetsFilterListItem-listItemGutters-513 MuiListItem-button-523"
                     role="button"
                   >
                     <div
-                      class="MuiListItemText-root-489 MuiListItemText-dense-491"
+                      class="MuiListItemText-root-526 MuiListItemText-dense-528"
                     >
                       <p
-                        class="MuiTypography-root-116 MuiTypography-body2-124 MuiTypography-colorTextPrimary-148 FacetsFilterListItem-listText-477"
+                        class="MuiTypography-root-116 MuiTypography-body2-124 MuiTypography-colorTextPrimary-148 FacetsFilterListItem-listText-514"
                       >
                         Keywords
                       </p>
@@ -15167,14 +15171,14 @@ exports[`Homepage > Doing a basic search #1`] = `
                   </div>
                   <div
                     tabindex="0"
-                    class="MuiButtonBase-root-204 MuiListItem-root-478 MuiListItem-default-481 MuiListItem-dense-482 MuiListItem-gutters-485 FacetsFilterListItem-listItemGutters-476 MuiListItem-button-486"
+                    class="MuiButtonBase-root-204 MuiListItem-root-515 MuiListItem-default-518 MuiListItem-dense-519 MuiListItem-gutters-522 FacetsFilterListItem-listItemGutters-513 MuiListItem-button-523"
                     role="button"
                   >
                     <div
-                      class="MuiListItemText-root-489 MuiListItemText-dense-491"
+                      class="MuiListItemText-root-526 MuiListItemText-dense-528"
                     >
                       <p
-                        class="MuiTypography-root-116 MuiTypography-body2-124 MuiTypography-colorTextPrimary-148 FacetsFilterListItem-listText-477"
+                        class="MuiTypography-root-116 MuiTypography-body2-124 MuiTypography-colorTextPrimary-148 FacetsFilterListItem-listText-514"
                       >
                         Subject
                       </p>
@@ -15194,14 +15198,14 @@ exports[`Homepage > Doing a basic search #1`] = `
                   </div>
                   <div
                     tabindex="0"
-                    class="MuiButtonBase-root-204 MuiListItem-root-478 MuiListItem-default-481 MuiListItem-dense-482 MuiListItem-gutters-485 FacetsFilterListItem-listItemGutters-476 MuiListItem-button-486"
+                    class="MuiButtonBase-root-204 MuiListItem-root-515 MuiListItem-default-518 MuiListItem-dense-519 MuiListItem-gutters-522 FacetsFilterListItem-listItemGutters-513 MuiListItem-button-523"
                     role="button"
                   >
                     <div
-                      class="MuiListItemText-root-489 MuiListItemText-dense-491"
+                      class="MuiListItemText-root-526 MuiListItemText-dense-528"
                     >
                       <p
-                        class="MuiTypography-root-116 MuiTypography-body2-124 MuiTypography-colorTextPrimary-148 FacetsFilterListItem-listText-477"
+                        class="MuiTypography-root-116 MuiTypography-body2-124 MuiTypography-colorTextPrimary-148 FacetsFilterListItem-listText-514"
                       >
                         Journal name
                       </p>
@@ -15221,14 +15225,14 @@ exports[`Homepage > Doing a basic search #1`] = `
                   </div>
                   <div
                     tabindex="0"
-                    class="MuiButtonBase-root-204 MuiListItem-root-478 MuiListItem-default-481 MuiListItem-dense-482 MuiListItem-gutters-485 FacetsFilterListItem-listItemGutters-476 MuiListItem-button-486"
+                    class="MuiButtonBase-root-204 MuiListItem-root-515 MuiListItem-default-518 MuiListItem-dense-519 MuiListItem-gutters-522 FacetsFilterListItem-listItemGutters-513 MuiListItem-button-523"
                     role="button"
                   >
                     <div
-                      class="MuiListItemText-root-489 MuiListItemText-dense-491"
+                      class="MuiListItemText-root-526 MuiListItemText-dense-528"
                     >
                       <p
-                        class="MuiTypography-root-116 MuiTypography-body2-124 MuiTypography-colorTextPrimary-148 FacetsFilterListItem-listText-477"
+                        class="MuiTypography-root-116 MuiTypography-body2-124 MuiTypography-colorTextPrimary-148 FacetsFilterListItem-listText-514"
                       >
                         Collection
                       </p>
@@ -15248,14 +15252,14 @@ exports[`Homepage > Doing a basic search #1`] = `
                   </div>
                   <div
                     tabindex="0"
-                    class="MuiButtonBase-root-204 MuiListItem-root-478 MuiListItem-default-481 MuiListItem-dense-482 MuiListItem-gutters-485 FacetsFilterListItem-listItemGutters-476 MuiListItem-button-486"
+                    class="MuiButtonBase-root-204 MuiListItem-root-515 MuiListItem-default-518 MuiListItem-dense-519 MuiListItem-gutters-522 FacetsFilterListItem-listItemGutters-513 MuiListItem-button-523"
                     role="button"
                   >
                     <div
-                      class="MuiListItemText-root-489 MuiListItemText-dense-491"
+                      class="MuiListItemText-root-526 MuiListItemText-dense-528"
                     >
                       <p
-                        class="MuiTypography-root-116 MuiTypography-body2-124 MuiTypography-colorTextPrimary-148 FacetsFilterListItem-listText-477"
+                        class="MuiTypography-root-116 MuiTypography-body2-124 MuiTypography-colorTextPrimary-148 FacetsFilterListItem-listText-514"
                       >
                         Author
                       </p>
@@ -15275,14 +15279,14 @@ exports[`Homepage > Doing a basic search #1`] = `
                   </div>
                   <div
                     tabindex="0"
-                    class="MuiButtonBase-root-204 MuiListItem-root-478 MuiListItem-default-481 MuiListItem-dense-482 MuiListItem-gutters-485 FacetsFilterListItem-listItemGutters-476 MuiListItem-button-486"
+                    class="MuiButtonBase-root-204 MuiListItem-root-515 MuiListItem-default-518 MuiListItem-dense-519 MuiListItem-gutters-522 FacetsFilterListItem-listItemGutters-513 MuiListItem-button-523"
                     role="button"
                   >
                     <div
-                      class="MuiListItemText-root-489 MuiListItemText-dense-491"
+                      class="MuiListItemText-root-526 MuiListItemText-dense-528"
                     >
                       <p
-                        class="MuiTypography-root-116 MuiTypography-body2-124 MuiTypography-colorTextPrimary-148 FacetsFilterListItem-listText-477"
+                        class="MuiTypography-root-116 MuiTypography-body2-124 MuiTypography-colorTextPrimary-148 FacetsFilterListItem-listText-514"
                       >
                         Work subtype
                       </p>
@@ -15302,14 +15306,14 @@ exports[`Homepage > Doing a basic search #1`] = `
                   </div>
                   <div
                     tabindex="0"
-                    class="MuiButtonBase-root-204 MuiListItem-root-478 MuiListItem-default-481 MuiListItem-dense-482 MuiListItem-gutters-485 FacetsFilterListItem-listItemGutters-476 MuiListItem-button-486"
+                    class="MuiButtonBase-root-204 MuiListItem-root-515 MuiListItem-default-518 MuiListItem-dense-519 MuiListItem-gutters-522 FacetsFilterListItem-listItemGutters-513 MuiListItem-button-523"
                     role="button"
                   >
                     <div
-                      class="MuiListItemText-root-489 MuiListItemText-dense-491"
+                      class="MuiListItemText-root-526 MuiListItemText-dense-528"
                     >
                       <p
-                        class="MuiTypography-root-116 MuiTypography-body2-124 MuiTypography-colorTextPrimary-148 FacetsFilterListItem-listText-477"
+                        class="MuiTypography-root-116 MuiTypography-body2-124 MuiTypography-colorTextPrimary-148 FacetsFilterListItem-listText-514"
                       >
                         Open access status
                       </p>
@@ -15398,7 +15402,7 @@ exports[`Homepage > Doing a basic search #2`] = `
                             class="MuiGrid-container-6 MuiGrid-spacing-xs-16-29"
                           >
                             <div
-                              class="MuiGrid-item-7 AdvancedSearchRow-autoWidth-502"
+                              class="MuiGrid-item-7 AdvancedSearchRow-autoWidth-449"
                               style="min-width: 200px;"
                             >
                               <div
@@ -15408,9 +15412,9 @@ exports[`Homepage > Doing a basic search #2`] = `
                                   class="MuiInputBase-root-295 MuiInput-root-282 MuiInput-underline-286 MuiInputBase-formControl-296 MuiInput-formControl-283"
                                   aria-label="Click to select a field to search from the list - Any field currently selected"
                                 >
-                                  <div class="MuiSelect-root-446">
+                                  <div class="MuiSelect-root-454">
                                     <div
-                                      class="MuiSelect-select-447 MuiSelect-selectMenu-450 MuiInputBase-input-305 MuiInput-input-290"
+                                      class="MuiSelect-select-455 MuiSelect-selectMenu-458 MuiInputBase-input-305 MuiInput-input-290"
                                       aria-pressed="false"
                                       tabindex="0"
                                       role="button"
@@ -15419,7 +15423,7 @@ exports[`Homepage > Doing a basic search #2`] = `
                                       Any field
                                     </div>
                                     <input type="hidden" value="all" /><svg
-                                      class="MuiSvgIcon-root-207 MuiSelect-icon-452"
+                                      class="MuiSvgIcon-root-207 MuiSelect-icon-460"
                                       focusable="false"
                                       viewBox="0 0 24 24"
                                       aria-hidden="true"
@@ -15430,13 +15434,13 @@ exports[`Homepage > Doing a basic search #2`] = `
                                   </div>
                                 </div>
                                 <p
-                                  class="MuiFormHelperText-root-507 MuiFormHelperText-filled-513"
+                                  class="MuiFormHelperText-root-463 MuiFormHelperText-filled-469"
                                 ></p>
                               </div>
                             </div>
                             <div class="MuiGrid-item-7 MuiGrid-grid-xs-auto-33">
                               <p
-                                class="MuiTypography-root-116 MuiTypography-body2-124 AdvancedSearchRow-advancedSearchCombiner-504"
+                                class="MuiTypography-root-116 MuiTypography-body2-124 AdvancedSearchRow-advancedSearchCombiner-451"
                               >
                                 contains
                               </p>
@@ -15444,13 +15448,13 @@ exports[`Homepage > Doing a basic search #2`] = `
                           </div>
                         </div>
                         <div
-                          class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 MuiGrid-grid-md-6-68 AdvancedSearchRow-mobileInputRow-506"
+                          class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 MuiGrid-grid-md-6-68 AdvancedSearchRow-mobileInputRow-453"
                         >
                           <div
                             class="MuiGrid-container-6 MuiGrid-spacing-xs-16-29"
                           >
                             <div
-                              class="MuiGrid-item-7 MuiGrid-zeroMinWidth-8 AdvancedSearchRow-autoWidth-502"
+                              class="MuiGrid-item-7 MuiGrid-zeroMinWidth-8 AdvancedSearchRow-autoWidth-449"
                             >
                               <div
                                 class="MuiFormControl-root-278 MuiFormControl-fullWidth-281"
@@ -15484,7 +15488,7 @@ exports[`Homepage > Doing a basic search #2`] = `
                             class="MuiGrid-container-6 MuiGrid-spacing-xs-16-29"
                           >
                             <div
-                              class="MuiGrid-item-7 AdvancedSearchRow-autoWidth-502"
+                              class="MuiGrid-item-7 AdvancedSearchRow-autoWidth-449"
                               style="min-width: 200px;"
                             >
                               <div
@@ -15494,9 +15498,9 @@ exports[`Homepage > Doing a basic search #2`] = `
                                   class="MuiInputBase-root-295 MuiInput-root-282 MuiInput-underline-286 MuiInputBase-formControl-296 MuiInput-formControl-283"
                                   aria-label="Click to select a field to search from the list - Author Name currently selected"
                                 >
-                                  <div class="MuiSelect-root-446">
+                                  <div class="MuiSelect-root-454">
                                     <div
-                                      class="MuiSelect-select-447 MuiSelect-selectMenu-450 MuiInputBase-input-305 MuiInput-input-290"
+                                      class="MuiSelect-select-455 MuiSelect-selectMenu-458 MuiInputBase-input-305 MuiInput-input-290"
                                       aria-pressed="false"
                                       tabindex="0"
                                       role="button"
@@ -15508,7 +15512,7 @@ exports[`Homepage > Doing a basic search #2`] = `
                                       type="hidden"
                                       value="rek_author"
                                     /><svg
-                                      class="MuiSvgIcon-root-207 MuiSelect-icon-452"
+                                      class="MuiSvgIcon-root-207 MuiSelect-icon-460"
                                       focusable="false"
                                       viewBox="0 0 24 24"
                                       aria-hidden="true"
@@ -15519,13 +15523,13 @@ exports[`Homepage > Doing a basic search #2`] = `
                                   </div>
                                 </div>
                                 <p
-                                  class="MuiFormHelperText-root-507 MuiFormHelperText-filled-513"
+                                  class="MuiFormHelperText-root-463 MuiFormHelperText-filled-469"
                                 ></p>
                               </div>
                             </div>
                             <div class="MuiGrid-item-7 MuiGrid-grid-xs-auto-33">
                               <p
-                                class="MuiTypography-root-116 MuiTypography-body2-124 AdvancedSearchRow-advancedSearchCombiner-504"
+                                class="MuiTypography-root-116 MuiTypography-body2-124 AdvancedSearchRow-advancedSearchCombiner-451"
                               >
                                 contains
                               </p>
@@ -15533,13 +15537,13 @@ exports[`Homepage > Doing a basic search #2`] = `
                           </div>
                         </div>
                         <div
-                          class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 MuiGrid-grid-md-6-68 AdvancedSearchRow-mobileInputRow-506"
+                          class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 MuiGrid-grid-md-6-68 AdvancedSearchRow-mobileInputRow-453"
                         >
                           <div
                             class="MuiGrid-container-6 MuiGrid-spacing-xs-16-29"
                           >
                             <div
-                              class="MuiGrid-item-7 MuiGrid-zeroMinWidth-8 AdvancedSearchRow-autoWidth-502"
+                              class="MuiGrid-item-7 MuiGrid-zeroMinWidth-8 AdvancedSearchRow-autoWidth-449"
                             >
                               <div
                                 class="MuiFormControl-root-278 MuiFormControl-fullWidth-281"
@@ -15563,7 +15567,7 @@ exports[`Homepage > Doing a basic search #2`] = `
                               </div>
                             </div>
                             <div
-                              class="MuiGrid-item-7 AdvancedSearchRow-advancedSearchRowDeleteButton-503"
+                              class="MuiGrid-item-7 AdvancedSearchRow-advancedSearchRowDeleteButton-450"
                             >
                               <button
                                 tabindex="0"
@@ -15601,7 +15605,7 @@ exports[`Homepage > Doing a basic search #2`] = `
                             class="MuiGrid-container-6 MuiGrid-spacing-xs-16-29"
                           >
                             <div
-                              class="MuiGrid-item-7 AdvancedSearchRow-autoWidth-502"
+                              class="MuiGrid-item-7 AdvancedSearchRow-autoWidth-449"
                               style="min-width: 200px;"
                             >
                               <div
@@ -15611,9 +15615,9 @@ exports[`Homepage > Doing a basic search #2`] = `
                                   class="MuiInputBase-root-295 MuiInput-root-282 MuiInput-underline-286 MuiInputBase-formControl-296 MuiInput-formControl-283"
                                   aria-label="Click to select a field to search from the list - Collection currently selected"
                                 >
-                                  <div class="MuiSelect-root-446">
+                                  <div class="MuiSelect-root-454">
                                     <div
-                                      class="MuiSelect-select-447 MuiSelect-selectMenu-450 MuiInputBase-input-305 MuiInput-input-290"
+                                      class="MuiSelect-select-455 MuiSelect-selectMenu-458 MuiInputBase-input-305 MuiInput-input-290"
                                       aria-pressed="false"
                                       tabindex="0"
                                       role="button"
@@ -15625,7 +15629,7 @@ exports[`Homepage > Doing a basic search #2`] = `
                                       type="hidden"
                                       value="rek_ismemberof"
                                     /><svg
-                                      class="MuiSvgIcon-root-207 MuiSelect-icon-452"
+                                      class="MuiSvgIcon-root-207 MuiSelect-icon-460"
                                       focusable="false"
                                       viewBox="0 0 24 24"
                                       aria-hidden="true"
@@ -15636,13 +15640,13 @@ exports[`Homepage > Doing a basic search #2`] = `
                                   </div>
                                 </div>
                                 <p
-                                  class="MuiFormHelperText-root-507 MuiFormHelperText-filled-513"
+                                  class="MuiFormHelperText-root-463 MuiFormHelperText-filled-469"
                                 ></p>
                               </div>
                             </div>
                             <div class="MuiGrid-item-7 MuiGrid-grid-xs-auto-33">
                               <p
-                                class="MuiTypography-root-116 MuiTypography-body2-124 AdvancedSearchRow-advancedSearchCombiner-504"
+                                class="MuiTypography-root-116 MuiTypography-body2-124 AdvancedSearchRow-advancedSearchCombiner-451"
                               >
                                 is one of
                               </p>
@@ -15650,13 +15654,13 @@ exports[`Homepage > Doing a basic search #2`] = `
                           </div>
                         </div>
                         <div
-                          class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 MuiGrid-grid-md-6-68 AdvancedSearchRow-mobileInputRow-506"
+                          class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 MuiGrid-grid-md-6-68 AdvancedSearchRow-mobileInputRow-453"
                         >
                           <div
                             class="MuiGrid-container-6 MuiGrid-spacing-xs-16-29"
                           >
                             <div
-                              class="MuiGrid-item-7 MuiGrid-zeroMinWidth-8 AdvancedSearchRow-autoWidth-502"
+                              class="MuiGrid-item-7 MuiGrid-zeroMinWidth-8 AdvancedSearchRow-autoWidth-449"
                             >
                               <div
                                 class="MuiFormControl-root-278 MuiFormControl-fullWidth-281"
@@ -15672,9 +15676,9 @@ exports[`Homepage > Doing a basic search #2`] = `
                                   class="MuiInputBase-root-295 MuiInput-root-282 MuiInput-underline-286 MuiInputBase-focused-297 MuiInput-focused-284 MuiInputBase-formControl-296 MuiInput-formControl-283"
                                   style="margin-top: 0px;"
                                 >
-                                  <div class="MuiSelect-root-446">
+                                  <div class="MuiSelect-root-454">
                                     <div
-                                      class="MuiSelect-select-447 MuiSelect-selectMenu-450 MuiInputBase-input-305 MuiInput-input-290"
+                                      class="MuiSelect-select-455 MuiSelect-selectMenu-458 MuiInputBase-input-305 MuiInput-input-290"
                                       aria-pressed="false"
                                       role="button"
                                       aria-haspopup="true"
@@ -15690,7 +15694,7 @@ exports[`Homepage > Doing a basic search #2`] = `
                                       value="UQ:131735,UQ:131375,UQ:292807"
                                       style="border: 1px solid red;"
                                     /><svg
-                                      class="MuiSvgIcon-root-207 MuiSelect-icon-452"
+                                      class="MuiSvgIcon-root-207 MuiSelect-icon-460"
                                       focusable="false"
                                       viewBox="0 0 24 24"
                                       aria-hidden="true"
@@ -15703,7 +15707,7 @@ exports[`Homepage > Doing a basic search #2`] = `
                               </div>
                             </div>
                             <div
-                              class="MuiGrid-item-7 AdvancedSearchRow-advancedSearchRowDeleteButton-503"
+                              class="MuiGrid-item-7 AdvancedSearchRow-advancedSearchRowDeleteButton-450"
                             >
                               <button
                                 tabindex="0"
@@ -15735,7 +15739,7 @@ exports[`Homepage > Doing a basic search #2`] = `
                       </div>
                     </div>
                     <div
-                      class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 MuiGrid-grid-md-4-66 AdvancedSearchComponent-sideBar-499"
+                      class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 MuiGrid-grid-md-4-66 AdvancedSearchComponent-sideBar-446"
                     >
                       <div class="MuiGrid-container-6 MuiGrid-spacing-xs-16-29">
                         <div class="MuiGrid-item-7 MuiGrid-grid-xs-12-46">
@@ -15751,9 +15755,9 @@ exports[`Homepage > Doing a basic search #2`] = `
                               class="MuiInputBase-root-295 MuiInput-root-282 MuiInput-underline-286 MuiInputBase-fullWidth-304 MuiInput-fullWidth-289 MuiInputBase-formControl-296 MuiInput-formControl-283"
                               aria-label="Select multiple publications types to search on"
                             >
-                              <div class="MuiSelect-root-446">
+                              <div class="MuiSelect-root-454">
                                 <div
-                                  class="MuiSelect-select-447 MuiSelect-selectMenu-450 MuiInputBase-input-305 MuiInput-input-290"
+                                  class="MuiSelect-select-455 MuiSelect-selectMenu-458 MuiInputBase-input-305 MuiInput-input-290"
                                   aria-pressed="false"
                                   role="button"
                                   aria-haspopup="true"
@@ -15762,7 +15766,7 @@ exports[`Homepage > Doing a basic search #2`] = `
                                   <span>​</span>
                                 </div>
                                 <input type="hidden" value="" /><svg
-                                  class="MuiSvgIcon-root-207 MuiSelect-icon-452"
+                                  class="MuiSvgIcon-root-207 MuiSelect-icon-460"
                                   focusable="false"
                                   viewBox="0 0 24 24"
                                   aria-hidden="true"
@@ -15778,7 +15782,7 @@ exports[`Homepage > Doing a basic search #2`] = `
                           <div class="MuiGrid-container-6">
                             <div class="MuiGrid-item-7 MuiGrid-grid-xs-12-46">
                               <label
-                                class="MuiFormLabel-root-400 MuiInputLabel-root-393 MuiInputLabel-animated-397 MuiInputLabel-shrink-396 PublicationYearRangeField-title-517"
+                                class="MuiFormLabel-root-400 MuiInputLabel-root-393 MuiInputLabel-animated-397 MuiInputLabel-shrink-396 PublicationYearRangeField-title-473"
                                 data-shrink="true"
                                 >Published year range</label
                               >
@@ -15872,9 +15876,9 @@ exports[`Homepage > Doing a basic search #2`] = `
                           </div>
                         </div>
                         <div class="MuiGrid-item-7 MuiGrid-grid-xs-12-46">
-                          <label class="MuiFormControlLabel-root-518"
+                          <label class="MuiFormControlLabel-root-474"
                             ><span
-                              class="MuiButtonBase-root-204 MuiIconButton-root-198 MuiSwitchBase-root-528 MuiCheckbox-root-522 MuiCheckbox-colorSecondary-527 MuiSwitchBase-checked-529 MuiCheckbox-checked-523"
+                              class="MuiButtonBase-root-204 MuiIconButton-root-198 MuiSwitchBase-root-484 MuiCheckbox-root-478 MuiCheckbox-colorSecondary-483 MuiSwitchBase-checked-485 MuiCheckbox-checked-479"
                               aria-label="Check to search for publications with are only open access / full text"
                               ><span class="MuiIconButton-label-203"
                                 ><svg
@@ -15888,7 +15892,7 @@ exports[`Homepage > Doing a basic search #2`] = `
                                     d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
                                   ></path></svg
                                 ><input
-                                  class="MuiSwitchBase-input-531"
+                                  class="MuiSwitchBase-input-487"
                                   type="checkbox"
                                   data-indeterminate="false"
                                   value=""/></span
@@ -15896,7 +15900,7 @@ exports[`Homepage > Doing a basic search #2`] = `
                                 class="MuiTouchRipple-root-216"
                               ></span></span
                             ><span
-                              class="MuiTypography-root-116 MuiTypography-body2-124 MuiFormControlLabel-label-521"
+                              class="MuiTypography-root-116 MuiTypography-body2-124 MuiFormControlLabel-label-477"
                               >Open access</span
                             ></label
                           >
@@ -15913,7 +15917,7 @@ exports[`Homepage > Doing a basic search #2`] = `
                     >
                       <button
                         tabindex="0"
-                        class="MuiButtonBase-root-204 MuiButton-root-407 AdvancedSearchComponent-blueButton-501 MuiButton-contained-418 MuiButton-raised-421 MuiButton-fullWidth-432"
+                        class="MuiButtonBase-root-204 MuiButton-root-407 AdvancedSearchComponent-blueButton-448 MuiButton-contained-418 MuiButton-raised-421 MuiButton-fullWidth-432"
                         type="button"
                         aria-label="Click to add another advanced search field"
                       >
@@ -15953,7 +15957,7 @@ exports[`Homepage > Doing a basic search #2`] = `
                       style="flex-grow: 1; width: 1px;"
                     ></div>
                     <div
-                      class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 MuiGrid-grid-md-4-66 AdvancedSearchComponent-searchButton-500"
+                      class="MuiGrid-item-7 MuiGrid-grid-xs-12-46 MuiGrid-grid-md-4-66 AdvancedSearchComponent-searchButton-447"
                     >
                       <button
                         tabindex="0"
@@ -15971,41 +15975,41 @@ exports[`Homepage > Doing a basic search #2`] = `
                     <div class="MuiGrid-item-7" style="padding-top: 24px;">
                       <div class="search-body searchQueryCaption">
                         <span
-                          ><span class="AdvancedSearchCaption-and-532"> </span
-                          ><span class="AdvancedSearchCaption-title-533"
+                          ><span class="AdvancedSearchCaption-and-488"> </span
+                          ><span class="AdvancedSearchCaption-title-489"
                             >Any field </span
-                          ><span class="AdvancedSearchCaption-combiner-534">
+                          ><span class="AdvancedSearchCaption-combiner-490">
                             contains </span
-                          ><span class="AdvancedSearchCaption-value-535">
+                          ><span class="AdvancedSearchCaption-value-491">
                             cats and dogs</span
                           ></span
                         ><span
-                          ><span class="AdvancedSearchCaption-and-532">
+                          ><span class="AdvancedSearchCaption-and-488">
                             AND </span
-                          ><span class="AdvancedSearchCaption-title-533"
+                          ><span class="AdvancedSearchCaption-title-489"
                             >Author Name </span
-                          ><span class="AdvancedSearchCaption-combiner-534">
+                          ><span class="AdvancedSearchCaption-combiner-490">
                             contains </span
-                          ><span class="AdvancedSearchCaption-value-535">
+                          ><span class="AdvancedSearchCaption-value-491">
                             Ky Lane</span
                           ></span
                         ><span
-                          ><span class="AdvancedSearchCaption-and-532">
+                          ><span class="AdvancedSearchCaption-and-488">
                             AND </span
-                          ><span class="AdvancedSearchCaption-title-533"
+                          ><span class="AdvancedSearchCaption-title-489"
                             >Collection </span
-                          ><span class="AdvancedSearchCaption-combiner-534">
+                          ><span class="AdvancedSearchCaption-combiner-490">
                             is one of </span
-                          ><span class="AdvancedSearchCaption-value-535">
+                          ><span class="AdvancedSearchCaption-value-491">
                             UQ:131735, UQ:131375 or UQ:292807</span
                           ></span
                         ><span
-                          ><span class="AdvancedSearchCaption-and-532">
+                          ><span class="AdvancedSearchCaption-and-488">
                             AND </span
-                          ><span class="AdvancedSearchCaption-title-533"> </span
-                          ><span class="AdvancedSearchCaption-combiner-534">
+                          ><span class="AdvancedSearchCaption-title-489"> </span
+                          ><span class="AdvancedSearchCaption-combiner-490">
                             is </span
-                          ><span class="AdvancedSearchCaption-value-535">
+                          ><span class="AdvancedSearchCaption-value-491">
                             <span class="value"
                               >open access/full text</span
                             ></span
@@ -16046,9 +16050,9 @@ exports[`Homepage > Doing a basic search #2`] = `
                         <div
                           class="MuiInputBase-root-295 MuiInput-root-282 MuiInput-underline-286 MuiInputBase-formControl-296 MuiInput-formControl-283"
                         >
-                          <div class="MuiSelect-root-446">
+                          <div class="MuiSelect-root-454">
                             <div
-                              class="MuiSelect-select-447 MuiSelect-selectMenu-450 MuiInputBase-input-305 MuiInput-input-290"
+                              class="MuiSelect-select-455 MuiSelect-selectMenu-458 MuiInputBase-input-305 MuiInput-input-290"
                               aria-pressed="false"
                               role="button"
                               aria-haspopup="true"
@@ -16061,7 +16065,7 @@ exports[`Homepage > Doing a basic search #2`] = `
                               id="sortBy"
                               value="score"
                             /><svg
-                              class="MuiSvgIcon-root-207 MuiSelect-icon-452"
+                              class="MuiSvgIcon-root-207 MuiSelect-icon-460"
                               focusable="false"
                               viewBox="0 0 24 24"
                               aria-hidden="true"
@@ -16087,9 +16091,9 @@ exports[`Homepage > Doing a basic search #2`] = `
                         <div
                           class="MuiInputBase-root-295 MuiInput-root-282 MuiInput-underline-286 MuiInputBase-formControl-296 MuiInput-formControl-283"
                         >
-                          <div class="MuiSelect-root-446">
+                          <div class="MuiSelect-root-454">
                             <div
-                              class="MuiSelect-select-447 MuiSelect-selectMenu-450 MuiInputBase-input-305 MuiInput-input-290"
+                              class="MuiSelect-select-455 MuiSelect-selectMenu-458 MuiInputBase-input-305 MuiInput-input-290"
                               aria-pressed="false"
                               role="button"
                               aria-haspopup="true"
@@ -16102,7 +16106,7 @@ exports[`Homepage > Doing a basic search #2`] = `
                               id="sortOrder"
                               value="Desc"
                             /><svg
-                              class="MuiSvgIcon-root-207 MuiSelect-icon-452"
+                              class="MuiSvgIcon-root-207 MuiSelect-icon-460"
                               focusable="false"
                               viewBox="0 0 24 24"
                               aria-hidden="true"
@@ -16128,9 +16132,9 @@ exports[`Homepage > Doing a basic search #2`] = `
                         <div
                           class="MuiInputBase-root-295 MuiInput-root-282 MuiInput-underline-286 MuiInputBase-formControl-296 MuiInput-formControl-283"
                         >
-                          <div class="MuiSelect-root-446">
+                          <div class="MuiSelect-root-454">
                             <div
-                              class="MuiSelect-select-447 MuiSelect-selectMenu-450 MuiInputBase-input-305 MuiInput-input-290"
+                              class="MuiSelect-select-455 MuiSelect-selectMenu-458 MuiInputBase-input-305 MuiInput-input-290"
                               aria-pressed="false"
                               role="button"
                               aria-haspopup="true"
@@ -16139,7 +16143,7 @@ exports[`Homepage > Doing a basic search #2`] = `
                               20
                             </div>
                             <input type="hidden" id="pageSize" value="20" /><svg
-                              class="MuiSvgIcon-root-207 MuiSelect-icon-452"
+                              class="MuiSvgIcon-root-207 MuiSelect-icon-460"
                               focusable="false"
                               viewBox="0 0 24 24"
                               aria-hidden="true"
@@ -16165,9 +16169,9 @@ exports[`Homepage > Doing a basic search #2`] = `
                         <div
                           class="MuiInputBase-root-295 MuiInput-root-282 MuiInput-underline-286 MuiInputBase-formControl-296 MuiInput-formControl-283"
                         >
-                          <div class="MuiSelect-root-446">
+                          <div class="MuiSelect-root-454">
                             <div
-                              class="MuiSelect-select-447 MuiSelect-selectMenu-450 MuiInputBase-input-305 MuiInput-input-290"
+                              class="MuiSelect-select-455 MuiSelect-selectMenu-458 MuiInputBase-input-305 MuiInput-input-290"
                               aria-pressed="false"
                               role="button"
                               aria-haspopup="true"
@@ -16180,7 +16184,7 @@ exports[`Homepage > Doing a basic search #2`] = `
                               id="exportPublicationsFormat"
                               value="-1"
                             /><svg
-                              class="MuiSvgIcon-root-207 MuiSelect-icon-452"
+                              class="MuiSvgIcon-root-207 MuiSelect-icon-460"
                               focusable="false"
                               viewBox="0 0 24 24"
                               aria-hidden="true"
@@ -16282,7 +16286,7 @@ exports[`Homepage > Doing a basic search #2`] = `
                   </div>
                 </div>
                 <hr
-                  class="MuiDivider-root-466 PublicationCitation-divider-549"
+                  class="MuiDivider-root-503 PublicationCitation-divider-549"
                 />
                 <div class="MuiGrid-container-6">
                   <div class="MuiGrid-item-7 MuiGrid-grid-xs-true-34">
@@ -16434,7 +16438,7 @@ exports[`Homepage > Doing a basic search #2`] = `
                   </div>
                 </div>
                 <hr
-                  class="MuiDivider-root-466 PublicationCitation-divider-549"
+                  class="MuiDivider-root-503 PublicationCitation-divider-549"
                 />
                 <div class="MuiGrid-container-6">
                   <div class="MuiGrid-item-7 MuiGrid-grid-xs-true-34">
@@ -16504,7 +16508,7 @@ exports[`Homepage > Doing a basic search #2`] = `
                   </div>
                 </div>
                 <hr
-                  class="MuiDivider-root-466 PublicationCitation-divider-549"
+                  class="MuiDivider-root-503 PublicationCitation-divider-549"
                 />
                 <div class="MuiGrid-container-6">
                   <div class="MuiGrid-item-7 MuiGrid-grid-xs-true-34">
@@ -16578,7 +16582,7 @@ exports[`Homepage > Doing a basic search #2`] = `
                   </div>
                 </div>
                 <hr
-                  class="MuiDivider-root-466 PublicationCitation-divider-549"
+                  class="MuiDivider-root-503 PublicationCitation-divider-549"
                 />
                 <div class="MuiGrid-container-6">
                   <div class="MuiGrid-item-7 MuiGrid-grid-xs-true-34">
@@ -16685,7 +16689,7 @@ exports[`Homepage > Doing a basic search #2`] = `
                   </div>
                 </div>
                 <hr
-                  class="MuiDivider-root-466 PublicationCitation-divider-549"
+                  class="MuiDivider-root-503 PublicationCitation-divider-549"
                 />
                 <div class="MuiGrid-container-6">
                   <div class="MuiGrid-item-7 MuiGrid-grid-xs-true-34">
@@ -16842,7 +16846,7 @@ exports[`Homepage > Doing a basic search #2`] = `
                   </div>
                 </div>
                 <hr
-                  class="MuiDivider-root-466 PublicationCitation-divider-549"
+                  class="MuiDivider-root-503 PublicationCitation-divider-549"
                 />
                 <div class="MuiGrid-container-6">
                   <div class="MuiGrid-item-7 MuiGrid-grid-xs-true-34">
@@ -16983,7 +16987,7 @@ exports[`Homepage > Doing a basic search #2`] = `
                   </div>
                 </div>
                 <hr
-                  class="MuiDivider-root-466 PublicationCitation-divider-549"
+                  class="MuiDivider-root-503 PublicationCitation-divider-549"
                 />
               </div>
               <div></div>
@@ -16993,7 +16997,7 @@ exports[`Homepage > Doing a basic search #2`] = `
         <div class="MuiGrid-item-7 MuiGrid-grid-md-3-65">
           <div class="MuiGrid-container-6">
             <div
-              class="MuiGrid-item-7 MuiGrid-grid-xs-true-34 RighthandCard-title-470"
+              class="MuiGrid-item-7 MuiGrid-grid-xs-true-34 RighthandCard-title-507"
             >
               <h6
                 class="MuiTypography-root-116 MuiTypography-h6-133 MuiTypography-colorPrimary-146"
@@ -17002,23 +17006,23 @@ exports[`Homepage > Doing a basic search #2`] = `
               </h6>
             </div>
             <div class="MuiGrid-item-7 MuiGrid-grid-xs-12-46">
-              <hr class="MuiDivider-root-466 RighthandCard-divider-471" />
+              <hr class="MuiDivider-root-503 RighthandCard-divider-508" />
             </div>
             <div class="MuiGrid-item-7 MuiGrid-grid-xs-12-46">
               <div class="facetsFilter">
                 <nav
-                  class="MuiList-root-472 MuiList-dense-474 MuiList-padding-473"
+                  class="MuiList-root-509 MuiList-dense-511 MuiList-padding-510"
                 >
                   <div
                     tabindex="0"
-                    class="MuiButtonBase-root-204 MuiListItem-root-478 MuiListItem-default-481 MuiListItem-dense-482 MuiListItem-gutters-485 FacetsFilterListItem-listItemGutters-476 MuiListItem-button-486"
+                    class="MuiButtonBase-root-204 MuiListItem-root-515 MuiListItem-default-518 MuiListItem-dense-519 MuiListItem-gutters-522 FacetsFilterListItem-listItemGutters-513 MuiListItem-button-523"
                     role="button"
                   >
                     <div
-                      class="MuiListItemText-root-489 MuiListItemText-dense-491"
+                      class="MuiListItemText-root-526 MuiListItemText-dense-528"
                     >
                       <p
-                        class="MuiTypography-root-116 MuiTypography-body2-124 MuiTypography-colorTextPrimary-148 FacetsFilterListItem-listText-477"
+                        class="MuiTypography-root-116 MuiTypography-body2-124 MuiTypography-colorTextPrimary-148 FacetsFilterListItem-listText-514"
                       >
                         Work type
                       </p>
@@ -17038,14 +17042,14 @@ exports[`Homepage > Doing a basic search #2`] = `
                   </div>
                   <div
                     tabindex="0"
-                    class="MuiButtonBase-root-204 MuiListItem-root-478 MuiListItem-default-481 MuiListItem-dense-482 MuiListItem-gutters-485 FacetsFilterListItem-listItemGutters-476 MuiListItem-button-486"
+                    class="MuiButtonBase-root-204 MuiListItem-root-515 MuiListItem-default-518 MuiListItem-dense-519 MuiListItem-gutters-522 FacetsFilterListItem-listItemGutters-513 MuiListItem-button-523"
                     role="button"
                   >
                     <div
-                      class="MuiListItemText-root-489 MuiListItemText-dense-491"
+                      class="MuiListItemText-root-526 MuiListItemText-dense-528"
                     >
                       <p
-                        class="MuiTypography-root-116 MuiTypography-body2-124 MuiTypography-colorTextPrimary-148 FacetsFilterListItem-listText-477"
+                        class="MuiTypography-root-116 MuiTypography-body2-124 MuiTypography-colorTextPrimary-148 FacetsFilterListItem-listText-514"
                       >
                         Keywords
                       </p>
@@ -17065,14 +17069,14 @@ exports[`Homepage > Doing a basic search #2`] = `
                   </div>
                   <div
                     tabindex="0"
-                    class="MuiButtonBase-root-204 MuiListItem-root-478 MuiListItem-default-481 MuiListItem-dense-482 MuiListItem-gutters-485 FacetsFilterListItem-listItemGutters-476 MuiListItem-button-486"
+                    class="MuiButtonBase-root-204 MuiListItem-root-515 MuiListItem-default-518 MuiListItem-dense-519 MuiListItem-gutters-522 FacetsFilterListItem-listItemGutters-513 MuiListItem-button-523"
                     role="button"
                   >
                     <div
-                      class="MuiListItemText-root-489 MuiListItemText-dense-491"
+                      class="MuiListItemText-root-526 MuiListItemText-dense-528"
                     >
                       <p
-                        class="MuiTypography-root-116 MuiTypography-body2-124 MuiTypography-colorTextPrimary-148 FacetsFilterListItem-listText-477"
+                        class="MuiTypography-root-116 MuiTypography-body2-124 MuiTypography-colorTextPrimary-148 FacetsFilterListItem-listText-514"
                       >
                         Subject
                       </p>
@@ -17092,14 +17096,14 @@ exports[`Homepage > Doing a basic search #2`] = `
                   </div>
                   <div
                     tabindex="0"
-                    class="MuiButtonBase-root-204 MuiListItem-root-478 MuiListItem-default-481 MuiListItem-dense-482 MuiListItem-gutters-485 FacetsFilterListItem-listItemGutters-476 MuiListItem-button-486"
+                    class="MuiButtonBase-root-204 MuiListItem-root-515 MuiListItem-default-518 MuiListItem-dense-519 MuiListItem-gutters-522 FacetsFilterListItem-listItemGutters-513 MuiListItem-button-523"
                     role="button"
                   >
                     <div
-                      class="MuiListItemText-root-489 MuiListItemText-dense-491"
+                      class="MuiListItemText-root-526 MuiListItemText-dense-528"
                     >
                       <p
-                        class="MuiTypography-root-116 MuiTypography-body2-124 MuiTypography-colorTextPrimary-148 FacetsFilterListItem-listText-477"
+                        class="MuiTypography-root-116 MuiTypography-body2-124 MuiTypography-colorTextPrimary-148 FacetsFilterListItem-listText-514"
                       >
                         Journal name
                       </p>
@@ -17119,14 +17123,14 @@ exports[`Homepage > Doing a basic search #2`] = `
                   </div>
                   <div
                     tabindex="0"
-                    class="MuiButtonBase-root-204 MuiListItem-root-478 MuiListItem-default-481 MuiListItem-dense-482 MuiListItem-gutters-485 FacetsFilterListItem-listItemGutters-476 MuiListItem-button-486"
+                    class="MuiButtonBase-root-204 MuiListItem-root-515 MuiListItem-default-518 MuiListItem-dense-519 MuiListItem-gutters-522 FacetsFilterListItem-listItemGutters-513 MuiListItem-button-523"
                     role="button"
                   >
                     <div
-                      class="MuiListItemText-root-489 MuiListItemText-dense-491"
+                      class="MuiListItemText-root-526 MuiListItemText-dense-528"
                     >
                       <p
-                        class="MuiTypography-root-116 MuiTypography-body2-124 MuiTypography-colorTextPrimary-148 FacetsFilterListItem-listText-477"
+                        class="MuiTypography-root-116 MuiTypography-body2-124 MuiTypography-colorTextPrimary-148 FacetsFilterListItem-listText-514"
                       >
                         Collection
                       </p>
@@ -17146,14 +17150,14 @@ exports[`Homepage > Doing a basic search #2`] = `
                   </div>
                   <div
                     tabindex="0"
-                    class="MuiButtonBase-root-204 MuiListItem-root-478 MuiListItem-default-481 MuiListItem-dense-482 MuiListItem-gutters-485 FacetsFilterListItem-listItemGutters-476 MuiListItem-button-486"
+                    class="MuiButtonBase-root-204 MuiListItem-root-515 MuiListItem-default-518 MuiListItem-dense-519 MuiListItem-gutters-522 FacetsFilterListItem-listItemGutters-513 MuiListItem-button-523"
                     role="button"
                   >
                     <div
-                      class="MuiListItemText-root-489 MuiListItemText-dense-491"
+                      class="MuiListItemText-root-526 MuiListItemText-dense-528"
                     >
                       <p
-                        class="MuiTypography-root-116 MuiTypography-body2-124 MuiTypography-colorTextPrimary-148 FacetsFilterListItem-listText-477"
+                        class="MuiTypography-root-116 MuiTypography-body2-124 MuiTypography-colorTextPrimary-148 FacetsFilterListItem-listText-514"
                       >
                         Work subtype
                       </p>
@@ -17173,14 +17177,14 @@ exports[`Homepage > Doing a basic search #2`] = `
                   </div>
                   <div
                     tabindex="0"
-                    class="MuiButtonBase-root-204 MuiListItem-root-478 MuiListItem-default-481 MuiListItem-dense-482 MuiListItem-gutters-485 FacetsFilterListItem-listItemGutters-476 MuiListItem-button-486"
+                    class="MuiButtonBase-root-204 MuiListItem-root-515 MuiListItem-default-518 MuiListItem-dense-519 MuiListItem-gutters-522 FacetsFilterListItem-listItemGutters-513 MuiListItem-button-523"
                     role="button"
                   >
                     <div
-                      class="MuiListItemText-root-489 MuiListItemText-dense-491"
+                      class="MuiListItemText-root-526 MuiListItemText-dense-528"
                     >
                       <p
-                        class="MuiTypography-root-116 MuiTypography-body2-124 MuiTypography-colorTextPrimary-148 FacetsFilterListItem-listText-477"
+                        class="MuiTypography-root-116 MuiTypography-body2-124 MuiTypography-colorTextPrimary-148 FacetsFilterListItem-listText-514"
                       >
                         Open access status
                       </p>

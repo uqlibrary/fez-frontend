@@ -4,6 +4,7 @@
     "**/__snapshots__/*",
     "**/__image_snapshots__/*"
   ],
+  "waitForAnimations": true,
   "env": {
     "cypress-plugin-snapshots": {
       "autoCleanUp": true,
