@@ -95,12 +95,13 @@ export function createNewRecord(data) {
             .then(() => (hasFilesToUpload ? patch(EXISTING_RECORD_API({
                 pid: newRecord.rek_pid
             }), recordPatch) : newRecord))
-            .then(
-                () => (data.comments ? post(RECORDS_ISSUES_API({
-                    pid: newRecord.rek_pid
-                }), {
-                    issue: 'Notes from creator of the new record: ' + data.comments
-                }) : newRecord))
+            .then(() => (
+                data.comments
+                    ? post(RECORDS_ISSUES_API({ pid: newRecord.rek_pid }), {
+                        issue: 'Notes from creator of the new record: ' + data.comments
+                    })
+                    : newRecord
+            ))
             .then((response) => {
                 dispatch({
                     type: actions.CREATE_RECORD_SUCCESS,
@@ -409,6 +410,9 @@ export const getSecurityUpdateRoute = (pid, recordType) => {
     }
 };
 
+const sanitiseData = (data, replacer) => JSON.parse(JSON.stringify(data, replacer));
+const makeReplacer = (keys) => (key, value) => (keys.indexOf(key) > -1 ? undefined : value);
+
 /**
  * Update work request for admins: patch record
  * If error occurs on any stage failed action is displayed
@@ -417,39 +421,31 @@ export const getSecurityUpdateRoute = (pid, recordType) => {
  */
 export function adminUpdate(data) {
     return dispatch => {
-        const {
-            recordType
-        } = data;
         dispatch({
             type: actions.ADMIN_UPDATE_WORK_PROCESSING
         });
 
-        const replacer = (key, value) => {
-            // delete extra form values from request object
-            const keys = [
-                'pid',
-                'publication',
-                'securitySection',
-                'collection',
-                'subject'
-            ];
-
-            if (keys.indexOf(key) > -1) return undefined;
-            return value;
-        };
+        // delete extra form values from request object
+        const keys = [
+            'pid',
+            'recordType',
+            'publication',
+            'securitySection',
+            'collection',
+            'subject'
+        ];
 
         // if user updated NTRO data - update record
         let patchRecordRequest = null;
         patchRecordRequest = {
-            rek_pid: data.publication.rek_pid,
-            ...JSON.parse(JSON.stringify(data, replacer)),
-            ...transformers.getSecuritySectionSearchKeys(data.securitySection)
+            ...sanitiseData(data, makeReplacer(keys)),
+            ...transformers.getSecuritySectionSearchKeys(sanitiseData(data.securitySection, makeReplacer(['accessLevel'])))
         };
 
         return Promise.resolve([])
             .then(() => (patch(EXISTING_RECORD_API({
                 pid: data.publication.rek_pid
-            }, recordType), patchRecordRequest)))
+            }), patchRecordRequest)))
             .then(responses => {
                 dispatch({
                     type: actions.ADMIN_UPDATE_WORK_SUCCESS,

@@ -22,29 +22,30 @@ exports[`SecurityCard component should not render data stream security selector 
       }
     >
       <WithStyles(Grid)
-        item={true}
-        xs={12}
+        container={true}
+        spacing={16}
       >
-        <Field
-          component={
-            Object {
-              "$$typeof": Symbol(react.memo),
-              "compare": null,
-              "type": [Function],
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
+        >
+          <Field
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "compare": null,
+                "type": [Function],
+              }
             }
-          }
-          label="Override inherited security (detailed below)"
-          name="securitySection.rek_security_inherited"
-          normalize={[Function]}
-        />
+            label="Override inherited security (detailed below)"
+            name="securitySection.rek_security_inherited"
+            normalize={[Function]}
+          />
+        </WithStyles(Grid)>
+        <Memo(InheritedSecurityDetails) />
       </WithStyles(Grid)>
-      <Memo(InheritedSecurityDetails) />
     </StandardCard>
   </WithStyles(Grid)>
-  <WithStyles(Grid)
-    item={true}
-    xs={12}
-  />
 </WithStyles(Grid)>
 `;
 
@@ -69,58 +70,69 @@ exports[`SecurityCard component should render security card correctly for collec
         </span>
       }
     >
-      <Memo(SecuritySelector)
-        disabled={false}
-        fieldName="securitySection.rek_security_policy"
-        recordType="collection"
-        securityPolicy={5}
-        text={
-          Object {
-            "dataStreamFieldLabel": <span>
-              Collection policy to apply to the 
-              <b>
-                datastream
-              </b>
-               of this PID
-            </span>,
-            "dataStreamSelectedTitle": <span>
-              Selected collection 
-              <b>
-                datastream
-              </b>
-               security policy details
-            </span>,
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id aliquam sapien. Aliquam rhoncus congue consectetur. Aenean sed sapien ipsum.",
-            "fieldLabel": "",
-            "prompt": "Select a security policy to apply",
-            "selectedTitle": "Selected collection record security policy details",
-          }
-        }
-      />
-      <Memo(SecuritySelector)
-        disabled={false}
-        fieldName="rek_datastream_policy"
-        recordType="collection"
-        securityPolicy={5}
-        text={
-          Object {
-            "prompt": "Select a security policy to apply",
-            "selectedTitle": <span>
-              Selected collection 
-              <b>
-                datastream
-              </b>
-               security policy details
-            </span>,
-          }
-        }
-      />
+      <WithStyles(Grid)
+        container={true}
+        spacing={16}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
+        >
+          <Memo(SecuritySelector)
+            disabled={false}
+            fieldName="securitySection.rek_security_policy"
+            recordType="collection"
+            securityPolicy={5}
+            text={
+              Object {
+                "dataStreamFieldLabel": <span>
+                  Collection policy to apply to the 
+                  <b>
+                    datastream
+                  </b>
+                   of this PID
+                </span>,
+                "dataStreamSelectedTitle": <span>
+                  Selected collection 
+                  <b>
+                    datastream
+                  </b>
+                   security policy details
+                </span>,
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id aliquam sapien. Aliquam rhoncus congue consectetur. Aenean sed sapien ipsum.",
+                "fieldLabel": "",
+                "prompt": "Select a security policy to apply",
+                "selectedTitle": "Selected collection record security policy details",
+              }
+            }
+          />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
+        >
+          <Memo(SecuritySelector)
+            disabled={false}
+            fieldName="securitySection.rek_datastream_policy"
+            recordType="collection"
+            securityPolicy={5}
+            text={
+              Object {
+                "prompt": "Select a security policy to apply",
+                "selectedTitle": <span>
+                  Selected collection 
+                  <b>
+                    datastream
+                  </b>
+                   security policy details
+                </span>,
+              }
+            }
+          />
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
     </StandardCard>
   </WithStyles(Grid)>
-  <WithStyles(Grid)
-    item={true}
-    xs={12}
-  />
 </WithStyles(Grid)>
 `;
 
@@ -145,26 +157,32 @@ exports[`SecurityCard component should render security card correctly for commun
         </span>
       }
     >
-      <Memo(SecuritySelector)
-        disabled={false}
-        fieldName="securitySection.rek_security_policy"
-        recordType="community"
-        securityPolicy={5}
-        text={
-          Object {
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id aliquam sapien. Aliquam rhoncus congue consectetur. Aenean sed sapien ipsum.",
-            "fieldLabel": "",
-            "prompt": "Select a security policy to apply",
-            "selectedTitle": "Selected community record security policy details",
-          }
-        }
-      />
+      <WithStyles(Grid)
+        container={true}
+        spacing={16}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
+        >
+          <Memo(SecuritySelector)
+            disabled={false}
+            fieldName="securitySection.rek_security_policy"
+            recordType="community"
+            securityPolicy={5}
+            text={
+              Object {
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id aliquam sapien. Aliquam rhoncus congue consectetur. Aenean sed sapien ipsum.",
+                "fieldLabel": "",
+                "prompt": "Select a security policy to apply",
+                "selectedTitle": "Selected community record security policy details",
+              }
+            }
+          />
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
     </StandardCard>
   </WithStyles(Grid)>
-  <WithStyles(Grid)
-    item={true}
-    xs={12}
-  />
 </WithStyles(Grid)>
 `;
 
@@ -190,23 +208,28 @@ exports[`SecurityCard component should render security card correctly for record
       }
     >
       <WithStyles(Grid)
-        item={true}
-        xs={12}
+        container={true}
+        spacing={16}
       >
-        <Field
-          component={
-            Object {
-              "$$typeof": Symbol(react.memo),
-              "compare": null,
-              "type": [Function],
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
+        >
+          <Field
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "compare": null,
+                "type": [Function],
+              }
             }
-          }
-          label="Override inherited security (detailed below)"
-          name="securitySection.rek_security_inherited"
-          normalize={[Function]}
-        />
+            label="Override inherited security (detailed below)"
+            name="securitySection.rek_security_inherited"
+            normalize={[Function]}
+          />
+        </WithStyles(Grid)>
+        <Memo(InheritedSecurityDetails) />
       </WithStyles(Grid)>
-      <Memo(InheritedSecurityDetails) />
     </StandardCard>
   </WithStyles(Grid)>
   <WithStyles(Grid)
@@ -279,42 +302,52 @@ exports[`SecurityCard component should render security card correctly for record
       }
     >
       <WithStyles(Grid)
-        item={true}
-        xs={12}
+        container={true}
+        spacing={16}
       >
-        <Field
-          component={
-            Object {
-              "$$typeof": Symbol(react.memo),
-              "compare": null,
-              "type": [Function],
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
+        >
+          <Field
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "compare": null,
+                "type": [Function],
+              }
             }
-          }
-          label="Override inherited security (detailed below)"
-          name="securitySection.rek_security_inherited"
-          normalize={[Function]}
-        />
+            label="Override inherited security (detailed below)"
+            name="securitySection.rek_security_inherited"
+            normalize={[Function]}
+          />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
+        >
+          <Memo(SecuritySelector)
+            disabled={false}
+            fieldName="securitySection.rek_security_policy"
+            recordType="record"
+            securityPolicy={5}
+            text={
+              Object {
+                "dataStream": Object {
+                  "overridePolicyPrompt": "Security policy for this file to override inheritance",
+                  "overridePrompt": "Override datastream security policy details",
+                },
+                "dataStreamFieldLabel": "",
+                "dataStreamSelectedTitle": "Selected record level datastream security policy details",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id aliquam sapien. Aliquam rhoncus congue consectetur. Aenean sed sapien ipsum.",
+                "fieldLabel": "",
+                "prompt": "Select a security policy to apply",
+                "selectedTitle": "Selected record level security policy details",
+              }
+            }
+          />
+        </WithStyles(Grid)>
       </WithStyles(Grid)>
-      <Memo(SecuritySelector)
-        disabled={false}
-        fieldName="securitySection.rek_security_policy"
-        recordType="record"
-        securityPolicy={5}
-        text={
-          Object {
-            "dataStream": Object {
-              "overridePolicyPrompt": "Security policy for this file to override inheritance",
-              "overridePrompt": "Override datastream security policy details",
-            },
-            "dataStreamFieldLabel": "",
-            "dataStreamSelectedTitle": "Selected record level datastream security policy details",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id aliquam sapien. Aliquam rhoncus congue consectetur. Aenean sed sapien ipsum.",
-            "fieldLabel": "",
-            "prompt": "Select a security policy to apply",
-            "selectedTitle": "Selected record level security policy details",
-          }
-        }
-      />
     </StandardCard>
   </WithStyles(Grid)>
   <WithStyles(Grid)
