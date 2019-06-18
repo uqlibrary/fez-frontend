@@ -6,7 +6,7 @@ import { getFormValues } from 'redux-form/immutable';
 
 import { FORM_NAME } from '../../containers/Admin';
 import { FormValuesContext } from 'context';
-import SecuritySection from './SecuritySection';
+import SecurityCard from './SecurityCard';
 
 const mapStateToProps = (state, ownProps) => {
     const formValues = getFormValues(FORM_NAME)(state) || Immutable.Map({});
@@ -18,8 +18,8 @@ const mapStateToProps = (state, ownProps) => {
 
 const SecuritySectionContainer = ({ disabled, formValues }) => {
     return (
-        <FormValuesContext.Provider value={{formValues: formValues.toJS()}}>
-            <SecuritySection
+        <FormValuesContext.Provider value={{ formValues: formValues.toJS() }}>
+            <SecurityCard
                 disabled={disabled}
             />
         </FormValuesContext.Provider>

@@ -439,7 +439,7 @@ export function adminUpdate(data) {
         let patchRecordRequest = null;
         patchRecordRequest = {
             ...sanitiseData(data, makeReplacer(keys)),
-            ...transformers.getSecuritySectionSearchKeys(sanitiseData(data.securitySection, makeReplacer(['accessLevel'])))
+            ...transformers.getSecuritySectionSearchKeys(data.securitySection)
         };
 
         return Promise.resolve([])

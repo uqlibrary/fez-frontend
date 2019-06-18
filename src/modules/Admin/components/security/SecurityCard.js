@@ -3,20 +3,25 @@ import PropTypes from 'prop-types';
 import { Field } from 'redux-form/immutable';
 
 import Grid from '@material-ui/core/Grid';
-
+import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
-
-import { RECORD_TYPE_COLLECTION, RECORD_TYPE_RECORD, RECORD_TYPE_COMMUNITY } from 'config/general';
-import { useRecordContext, useFormValuesContext } from 'context';
 
 import OverrideSecurity from './OverrideSecurity';
 import InheritedSecurityDetails from './InheritedSecurityDetails';
 import DataStreamSecuritySelector from './DataStreamSecuritySelector';
 import SecuritySelector from './SecuritySelector';
 
-export const SecurityCard = ({ disabled, text, recordType }) => {
+import { useRecordContext, useFormValuesContext } from 'context';
+import { RECORD_TYPE_COLLECTION, RECORD_TYPE_RECORD, RECORD_TYPE_COMMUNITY } from 'config/general';
+import { locale } from 'locale';
+
+export const SecurityCard = ({ disabled }) => {
     const { record } = useRecordContext();
     const { formValues } = useFormValuesContext();
+
+    const recordType = record.rek_object_type_lookup.toLowerCase();
+    const { admin, ...rest } = locale.components.securitySection;
+    const text = rest[recordType];
 
     const dataStreams = !!(formValues.dataStreams || {}).toJS ? formValues.dataStreams.toJS() : formValues.dataStreams;
     const isOverrideSecurityChecked = formValues.rek_security_inherited === 0;
@@ -37,6 +42,13 @@ export const SecurityCard = ({ disabled, text, recordType }) => {
 
     return (
         <Grid container spacing={16}>
+            <Grid item xs={12} sm={12}>
+                <Alert
+                    type="warning"
+                    title={admin.warning.title}
+                    message={admin.warning.message}
+                />
+            </Grid>
             <Grid item xs={12}>
                 <StandardCard title={title} accentHeader>
                     <Grid container spacing={16}>
@@ -119,11 +131,12 @@ export const SecurityCard = ({ disabled, text, recordType }) => {
 };
 
 SecurityCard.propTypes = {
-    disabled: PropTypes.bool,
-    text: PropTypes.object,
-    recordType: PropTypes.string.isRequired,
-    isPolicyInherited: PropTypes.bool
+    disabled: PropTypes.bool
 };
 
-export default React.memo(SecurityCard);
+function isSame(prevProps, nextProps) {
+    return prevProps.disabled === nextProps.disabled;
+}
+
+export default React.memo(SecurityCard, isSame);
 
