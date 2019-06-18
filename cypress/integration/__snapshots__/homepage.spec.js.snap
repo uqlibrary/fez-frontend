@@ -12219,7 +12219,7 @@ exports[`Homepage > Doing a basic search #0`] = `
                         <div class="MuiGrid-item-7 MuiGrid-grid-xs-12-46">
                           <label class="MuiFormControlLabel-root-474"
                             ><span
-                              class="MuiButtonBase-root-204 MuiButtonBase-focusVisible-206 undefined MuiIconButton-root-198 MuiSwitchBase-root-484 MuiCheckbox-root-478 MuiCheckbox-colorSecondary-483 MuiSwitchBase-checked-485 MuiCheckbox-checked-479"
+                              class="MuiButtonBase-root-204 MuiIconButton-root-198 MuiSwitchBase-root-484 MuiCheckbox-root-478 MuiCheckbox-colorSecondary-483 MuiSwitchBase-checked-485 MuiCheckbox-checked-479"
                               aria-label="Check to search for publications with are only open access / full text"
                               ><span class="MuiIconButton-label-203"
                                 ><svg
@@ -12237,13 +12237,9 @@ exports[`Homepage > Doing a basic search #0`] = `
                                   type="checkbox"
                                   data-indeterminate="false"
                                   value=""/></span
-                              ><span class="MuiTouchRipple-root-216"
-                                ><span
-                                  class="MuiTouchRipple-ripple-217 MuiTouchRipple-rippleVisible-218 MuiTouchRipple-ripplePulsate-219"
-                                  style="width: 49px; height: 49px; top: -0.5px; left: -0.5px;"
-                                  ><span
-                                    class="MuiTouchRipple-child-220 MuiTouchRipple-childPulsate-222"
-                                  ></span></span></span></span
+                              ><span
+                                class="MuiTouchRipple-root-216"
+                              ></span></span
                             ><span
                               class="MuiTypography-root-116 MuiTypography-body2-124 MuiFormControlLabel-label-477"
                               >Open access</span

@@ -49,6 +49,7 @@ context('Homepage', () => {
         cy.get(
             '[aria-label="Check to search for publications with are only open access / full text"]',
         ).click();
+        cy.get('body').click();
 
         cy.wait(3000);
         cy.get('.content-container', {
