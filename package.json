@@ -105,6 +105,7 @@
         "sass-loader": "^7.0.0",
         "sinon": "5.0.2",
         "snapshot-diff": "^0.5.1",
+        "start-server-and-test": "^1.9.1",
         "string-to-arraybuffer": "^1.0.0",
         "strip-loader": "^0.1.2",
         "style-loader": "^0.21.0",
@@ -170,7 +171,8 @@
         "redux-form": "7.3.0",
         "redux-immutable": "^4.0.0",
         "redux-thunk": "^2.2.0",
-        "timezones.json": "^1.2.1"
+        "timezones.json": "^1.2.1",
+        "wait-on": "^3.2.0"
     },
     "scripts": {
         "start": "webpack-dev-server",
@@ -189,7 +191,9 @@
         "test-unit": "node $NODE_DEBUG_OPTION ./node_modules/lab/bin/lab ./test/unit --pattern \"^[^_]\"",
         "eslint": "eslint 'src/**/*.js' --quiet",
         "cypress:open": "cypress open",
-        "cypress:run": "cypress run --headed --browser electron"
+        "cypress:watch": "cypress run --headed",
+        "cypress:run": "cypress run",
+        "e2e": "start-server-and-test 'npm run start:mock' http-get://localhost:3000 cypress:run"
     },
     "engines": {
         "npm": "^6.9.0",
