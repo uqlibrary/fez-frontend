@@ -249,8 +249,8 @@ original image snapshot).
 #####Some tricks and tips:
 
 -   When simulating clicks on components with animations (ripples and the
-    like) - be sure to `cy.wait(1000);` after the click before taking a
-    snapshot.
+    like) - be sure to `cy.wait(3000);` to wait 3 seconds after the click before
+    taking a snapshot.
 
 ## Mocking
 

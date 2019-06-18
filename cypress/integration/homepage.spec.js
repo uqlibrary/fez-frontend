@@ -6,7 +6,7 @@ context('Homepage', () => {
             .click({
                 force: true,
             });
-        cy.wait(1000);
+        cy.wait(3000);
     });
 
     it('Clicking between trending panes', () => {
@@ -14,7 +14,7 @@ context('Homepage', () => {
             .get('span')
             .contains('Trending on Scopus')
             .click();
-        cy.wait(1000);
+        cy.wait(3000);
         cy.get('.content-container', {
             timeout: 1000,
             delay: 1000,
@@ -24,7 +24,7 @@ context('Homepage', () => {
             .get('span')
             .contains('Trending on Web of science')
             .click();
-        cy.wait(1000);
+        cy.wait(3000);
         cy.get('.content-container', {
             timeout: 1000,
             delay: 1000,
@@ -34,7 +34,7 @@ context('Homepage', () => {
             .get('span')
             .contains('Trending on Altmetric')
             .click();
-        cy.wait(1000);
+        cy.wait(3000);
         cy.get('.content-container', {
             timeout: 1000,
             delay: 1000,
@@ -50,7 +50,7 @@ context('Homepage', () => {
             '[aria-label="Check to search for publications with are only open access / full text"]',
         ).click();
 
-        cy.wait(1000);
+        cy.wait(3000);
         cy.get('.content-container', {
             timeout: 1000,
             delay: 1000,
@@ -66,7 +66,7 @@ context('Homepage', () => {
 
         cy.get('[data-value="rek_author"]').click();
 
-        cy.wait(1000);
+        cy.wait(3000);
         cy.get('.content-container', {
             timeout: 1000,
             delay: 1000,
@@ -92,7 +92,7 @@ context('Homepage', () => {
             .get('div[aria-hidden="true"]')
             .click({force: true, multiple: true}); // This will close any select field modal popup by force
 
-        cy.wait(1000);
+        cy.wait(3000);
         cy.get('.content-container', {
             timeout: 1000,
             delay: 1000,
