@@ -2,6 +2,7 @@
     "baseUrl": "http://localhost:3000",
     "ignoreTestFiles": ["**/__snapshots__/*", "**/__image_snapshots__/*"],
     "waitForAnimations": true,
+    "pageLoadTimeout": 30000,
     "env": {
         "cypress-plugin-snapshots": {
             "autoCleanUp": true,
