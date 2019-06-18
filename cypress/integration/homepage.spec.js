@@ -14,19 +14,31 @@ context('Homepage', () => {
             .get('span')
             .contains('Trending on Scopus')
             .click();
-        cy.get('.content-container', {timeout: 1000}).toMatchSnapshot();
+        cy.wait(1000);
+        cy.get('.content-container', {
+            timeout: 1000,
+            delay: 1000,
+        }).toMatchSnapshot();
 
         cy.get('button', {timeout: 1000})
             .get('span')
             .contains('Trending on Web of science')
             .click();
-        cy.get('.content-container', {timeout: 1000}).toMatchSnapshot();
+        cy.wait(1000);
+        cy.get('.content-container', {
+            timeout: 1000,
+            delay: 1000,
+        }).toMatchSnapshot();
 
         cy.get('button', {timeout: 1000})
             .get('span')
             .contains('Trending on Altmetric')
             .click();
-        cy.get('.content-container', {timeout: 1000}).toMatchSnapshot();
+        cy.wait(1000);
+        cy.get('.content-container', {
+            timeout: 1000,
+            delay: 1000,
+        }).toMatchSnapshot();
     });
 
     it('Doing a basic search', () => {
@@ -38,7 +50,11 @@ context('Homepage', () => {
             '[aria-label="Check to search for publications with are only open access / full text"]',
         ).click();
 
-        cy.get('.content-container', {timeout: 1000}).toMatchSnapshot();
+        cy.wait(1000);
+        cy.get('.content-container', {
+            timeout: 1000,
+            delay: 1000,
+        }).toMatchSnapshot();
 
         cy.get('[aria-label="Click to add another advanced search field"]', {
             delay: 1000,
@@ -50,7 +66,11 @@ context('Homepage', () => {
 
         cy.get('[data-value="rek_author"]').click();
 
-        cy.get('.content-container', {timeout: 1000}).toMatchSnapshot();
+        cy.wait(1000);
+        cy.get('.content-container', {
+            timeout: 1000,
+            delay: 1000,
+        }).toMatchSnapshot();
         cy.get('[placeholder="Add an author name"]').type('Ky Lane{enter}', {
             delay: 100,
         });
@@ -72,6 +92,10 @@ context('Homepage', () => {
             .get('div[aria-hidden="true"]')
             .click({force: true, multiple: true}); // This will close any select field modal popup by force
 
-        cy.get('.content-container', {timeout: 1000}).toMatchSnapshot();
+        cy.wait(1000);
+        cy.get('.content-container', {
+            timeout: 1000,
+            delay: 1000,
+        }).toMatchSnapshot();
     });
 });

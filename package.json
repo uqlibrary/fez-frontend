@@ -193,7 +193,8 @@
         "cypress:open": "cypress open",
         "cypress:watch": "cypress run --headed",
         "cypress:run": "cypress run",
-        "e2e": "start-server-and-test 'npm run start:mock' http-get://localhost:3000 cypress:run"
+        "e2e": "start-server-and-test 'npm run start:mock' http-get://localhost:3000 cypress:run",
+        "e2e:watch": "start-server-and-test 'npm run start:mock' http-get://localhost:3000 cypress:watch"
     },
     "engines": {
         "npm": "^6.9.0",

@@ -47,14 +47,7 @@ exports[`Homepage > Clicking between trending panes #0`] = `
                               ><span>Trending on Scopus</span></span
                             ></span
                           ></span
-                        ><span class="MuiTouchRipple-root-216"
-                          ><span
-                            class="MuiTouchRipple-ripple-217 MuiTouchRipple-rippleVisible-218"
-                            style="width: 190.158px; height: 190.158px; top: -80.0789px; left: -10.0789px;"
-                            ><span
-                              class="MuiTouchRipple-child-220 MuiTouchRipple-childLeaving-221"
-                            ></span></span
-                        ></span></button
+                        ><span class="MuiTouchRipple-root-216"></span></button
                       ><button
                         tabindex="0"
                         class="MuiButtonBase-root-204 MuiTab-root-362 MuiTab-textColorInherit-364 MuiTab-fullWidth-369 WithTheme-WithWidth-TopCitedPublicationsClass---tab-315"
@@ -4173,14 +4166,7 @@ exports[`Homepage > Clicking between trending panes #1`] = `
                               ><span>Trending on Web of science</span></span
                             ></span
                           ></span
-                        ><span class="MuiTouchRipple-root-216"
-                          ><span
-                            class="MuiTouchRipple-ripple-217 MuiTouchRipple-rippleVisible-218"
-                            style="width: 237.192px; height: 237.192px; top: -103.596px; left: -8.59595px;"
-                            ><span
-                              class="MuiTouchRipple-child-220 MuiTouchRipple-childLeaving-221"
-                            ></span></span
-                        ></span>
+                        ><span class="MuiTouchRipple-root-216"></span>
                       </button>
                     </div>
                     <span
@@ -8271,14 +8257,7 @@ exports[`Homepage > Clicking between trending panes #2`] = `
                               ><span>Trending on Altmetric</span></span
                             ></span
                           ></span
-                        ><span class="MuiTouchRipple-root-216"
-                          ><span
-                            class="MuiTouchRipple-ripple-217 MuiTouchRipple-rippleVisible-218"
-                            style="width: 205.056px; height: 205.056px; top: -87.528px; left: -7.52804px;"
-                            ><span
-                              class="MuiTouchRipple-child-220 MuiTouchRipple-childLeaving-221"
-                            ></span></span
-                        ></span></button
+                        ><span class="MuiTouchRipple-root-216"></span></button
                       ><button
                         tabindex="0"
                         class="MuiButtonBase-root-204 MuiTab-root-362 MuiTab-textColorInherit-364 MuiTab-fullWidth-369 WithTheme-WithWidth-TopCitedPublicationsClass---tab-315"
@@ -12264,12 +12243,6 @@ exports[`Homepage > Doing a basic search #0`] = `
                                   style="width: 49px; height: 49px; top: -0.5px; left: -0.5px;"
                                   ><span
                                     class="MuiTouchRipple-child-220 MuiTouchRipple-childPulsate-222"
-                                  ></span></span
-                                ><span
-                                  class="MuiTouchRipple-ripple-217 MuiTouchRipple-rippleVisible-218"
-                                  style="width: 49px; height: 49px; top: -0.5px; left: -0.5px;"
-                                  ><span
-                                    class="MuiTouchRipple-child-220 MuiTouchRipple-childLeaving-221"
                                   ></span></span></span></span
                             ><span
                               class="MuiTypography-root-116 MuiTypography-body2-124 MuiFormControlLabel-label-477"
@@ -14013,13 +13986,9 @@ exports[`Homepage > Doing a basic search #1`] = `
                                   type="checkbox"
                                   data-indeterminate="false"
                                   value=""/></span
-                              ><span class="MuiTouchRipple-root-216"
-                                ><span
-                                  class="MuiTouchRipple-ripple-217 MuiTouchRipple-rippleVisible-218 MuiTouchRipple-ripplePulsate-219"
-                                  style="width: 49px; height: 49px; top: -0.5px; left: -0.5px;"
-                                  ><span
-                                    class="MuiTouchRipple-child-220 MuiTouchRipple-childLeaving-221 MuiTouchRipple-childPulsate-222"
-                                  ></span></span></span></span
+                              ><span
+                                class="MuiTouchRipple-root-216"
+                              ></span></span
                             ><span
                               class="MuiTypography-root-116 MuiTypography-body2-124 MuiFormControlLabel-label-477"
                               >Open access</span
