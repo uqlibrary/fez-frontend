@@ -9,7 +9,11 @@ context('Homepage', () => {
         cy.wait(3000);
     });
 
-    it('Clicking between trending panes', () => {
+    it('Renders whole page as expected', () => {
+        cy.get('html').toMatchSnapshot();
+    });
+
+    it('Renders the tabbed panes as expected', () => {
         cy.get('button', {timeout: 5000})
             .get('span')
             .contains('Trending on Scopus')

@@ -1,6 +1,6 @@
 context('Homepage', () => {
     beforeEach(() => {
-        cy.visit('http://localhost:3000');
+        cy.visit('http://localhost:3000/records/search');
         cy.get('button')
             .contains('Close this message', {timeout: 5000})
             .click({
