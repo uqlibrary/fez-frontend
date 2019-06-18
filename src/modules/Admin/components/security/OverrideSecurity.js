@@ -7,6 +7,7 @@ export const OverrideSecurity = ({ label, input }) => (
     <FormControlLabel
         control={<Checkbox
             onChange={input.onChange}
+            checked={input.value === 0}
         />}
         {...{ label }}
     />

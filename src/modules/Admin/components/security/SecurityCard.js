@@ -6,7 +6,7 @@ import Grid from '@material-ui/core/Grid';
 
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 
-import { RECORD_TYPE_COLLECTION, RECORD_TYPE_RECORD } from 'config/general';
+import { RECORD_TYPE_COLLECTION, RECORD_TYPE_RECORD, RECORD_TYPE_COMMUNITY } from 'config/general';
 import { useRecordContext, useFormValuesContext } from 'context';
 
 import OverrideSecurity from './OverrideSecurity';
@@ -14,12 +14,12 @@ import InheritedSecurityDetails from './InheritedSecurityDetails';
 import DataStreamSecuritySelector from './DataStreamSecuritySelector';
 import SecuritySelector from './SecuritySelector';
 
-export const SecurityCard = ({ disabled, text, recordType, isPolicyInherited }) => {
+export const SecurityCard = ({ disabled, text, recordType }) => {
     const { record } = useRecordContext();
     const { formValues } = useFormValuesContext();
 
     const dataStreams = !!(formValues.dataStreams || {}).toJS ? formValues.dataStreams.toJS() : formValues.dataStreams;
-    const isOverrideSecurityNotChecked = formValues.rek_security_inherited !== 0;
+    const isOverrideSecurityChecked = formValues.rek_security_inherited === 0;
     const securityPolicy = formValues.rek_security_policy;
     const dataStreamPolicy = formValues.rek_datastream_policy;
 
@@ -42,37 +42,40 @@ export const SecurityCard = ({ disabled, text, recordType, isPolicyInherited }) 
                     <Grid container spacing={16}>
                         {
                             recordType === RECORD_TYPE_RECORD &&
+                            <React.Fragment>
+                                <Grid item xs={12}>
+                                    <InheritedSecurityDetails
+                                        collections={record.fez_record_search_key_ismemberof}
+                                    />
+                                </Grid>
+                                <Grid item xs={12}>
+                                    <Field
+                                        component={OverrideSecurity}
+                                        name="securitySection.rek_security_inherited"
+                                        label="Override inherited security (detailed below)"
+                                        normalize={overrideSecurityValueNormalizer}
+                                    />
+                                </Grid>
+                            </React.Fragment>
+                        }
+                        {
+                            (
+                                recordType === RECORD_TYPE_COMMUNITY ||
+                                recordType === RECORD_TYPE_COLLECTION ||
+                                (recordType === RECORD_TYPE_RECORD && isOverrideSecurityChecked)
+                            ) &&
                             <Grid item xs={12}>
-                                <Field
-                                    component={OverrideSecurity}
-                                    name="securitySection.rek_security_inherited"
-                                    label="Override inherited security (detailed below)"
-                                    normalize={overrideSecurityValueNormalizer}
+                                <SecuritySelector
+                                    disabled={disabled}
+                                    text={text}
+                                    fieldName="securitySection.rek_security_policy"
+                                    recordType={recordType}
+                                    securityPolicy={securityPolicy}
                                 />
                             </Grid>
                         }
                         {
-                            (
-                                isPolicyInherited &&
-                                isOverrideSecurityNotChecked &&
-                                recordType === RECORD_TYPE_RECORD
-                            )
-                                ? <InheritedSecurityDetails
-                                    collections={record.fez_record_search_key_ismemberof}
-                                />
-                                : <Grid item xs={12}>
-                                    <SecuritySelector
-                                        disabled={disabled}
-                                        text={text}
-                                        fieldName="securitySection.rek_security_policy"
-                                        recordType={recordType}
-                                        securityPolicy={securityPolicy}
-                                    />
-                                </Grid>
-                        }
-                        {
                             recordType === RECORD_TYPE_COLLECTION &&
-
                             <Grid item xs={12}>
                                 <SecuritySelector
                                     disabled={disabled}

@@ -97,7 +97,7 @@ describe('SecurityCard component', () => {
         const wrapper = setup({});
 
         expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('Memo(InheritedSecurityDetails)')).toHaveLength(0);
+        expect(wrapper.find('Memo(InheritedSecurityDetails)')).toHaveLength(1);
         expect(wrapper.find('Memo(SecuritySelector)')).toHaveLength(1);
     });
 

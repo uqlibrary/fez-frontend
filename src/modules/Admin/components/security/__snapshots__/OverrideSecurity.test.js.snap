@@ -4,6 +4,7 @@ exports[`OverrideSecurity component should render properly 1`] = `
 <WithStyles(WithFormControlContext(FormControlLabel))
   control={
     <WithStyles(Checkbox)
+      checked={false}
       onChange={[MockFunction]}
     />
   }

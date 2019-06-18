@@ -29,6 +29,12 @@ exports[`SecurityCard component should not render data stream security selector 
           item={true}
           xs={12}
         >
+          <Memo(InheritedSecurityDetails) />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
+        >
           <Field
             component={
               Object {
@@ -42,7 +48,6 @@ exports[`SecurityCard component should not render data stream security selector 
             normalize={[Function]}
           />
         </WithStyles(Grid)>
-        <Memo(InheritedSecurityDetails) />
       </WithStyles(Grid)>
     </StandardCard>
   </WithStyles(Grid)>
@@ -215,6 +220,12 @@ exports[`SecurityCard component should render security card correctly for record
           item={true}
           xs={12}
         >
+          <Memo(InheritedSecurityDetails) />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
+        >
           <Field
             component={
               Object {
@@ -228,7 +239,6 @@ exports[`SecurityCard component should render security card correctly for record
             normalize={[Function]}
           />
         </WithStyles(Grid)>
-        <Memo(InheritedSecurityDetails) />
       </WithStyles(Grid)>
     </StandardCard>
   </WithStyles(Grid)>
@@ -305,6 +315,12 @@ exports[`SecurityCard component should render security card correctly for record
         container={true}
         spacing={16}
       >
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
+        >
+          <Memo(InheritedSecurityDetails) />
+        </WithStyles(Grid)>
         <WithStyles(Grid)
           item={true}
           xs={12}
