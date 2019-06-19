@@ -1530,7 +1530,7 @@ exports[`Component FixRecord should render fix record form 1`] = `
               xs={12}
             >
               <WithStyles(Typography)>
-                You can select multiple (up to 3) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
+                You can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
               </WithStyles(Typography)>
             </WithStyles(Grid)>
             <WithStyles(Grid)
@@ -2710,7 +2710,7 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
               xs={12}
             >
               <WithStyles(Typography)>
-                You can select multiple (up to 3) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
+                You can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
               </WithStyles(Typography)>
             </WithStyles(Grid)>
             <WithStyles(Grid)
@@ -3380,7 +3380,7 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
               xs={12}
             >
               <WithStyles(Typography)>
-                You can select multiple (up to 3) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
+                You can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
               </WithStyles(Typography)>
             </WithStyles(Grid)>
             <WithStyles(Grid)
