@@ -85,5 +85,5 @@ describe('Component Masquerade', () => {
         const wrapper = setup({});
         wrapper.instance()._masqueradeAs({ type: 'Click' });
         expect(wrapper.state('loading')).toBeFalsy();
-    })
+    });
 });
