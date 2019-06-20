@@ -1,27 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Field} from 'redux-form/immutable';
+import { Field } from 'redux-form/immutable';
 
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import MenuItem from '@material-ui/core/MenuItem';
 
-import {TextField as GenericTextField} from 'modules/SharedComponents/Toolbox/TextField';
-import {SelectField} from 'modules/SharedComponents/Toolbox/SelectField';
-import {DownshiftMultiChipSelectField} from 'modules/SharedComponents/Toolbox/DownshiftMultiChipSelectField';
+import { TextField as GenericTextField } from 'modules/SharedComponents/Toolbox/TextField';
+import { SelectField } from 'modules/SharedComponents/Toolbox/SelectField';
+import { DownshiftMultiChipSelectField } from 'modules/SharedComponents/Toolbox/DownshiftMultiChipSelectField';
 
-import {validation} from 'config';
-import {collectionItems, WOSDocTypes, ScopusDocTypes, PubmedDocTypes} from './MockData';
-import {FormValuesContextConsumer} from 'context';
+import { validation } from 'config';
+import { collectionItems, WOSDocTypes, ScopusDocTypes, PubmedDocTypes } from './MockData';
+import { FormValuesContextConsumer } from 'context';
 
-export const IdentifiersSection = ({disabled = false}) => (
+export const IdentifiersSection = ({ disabled = false }) => (
     <Grid container spacing={8}>
         <Grid item xs={12} sm={12}>
             <Typography variant="body2" component="p">Some explanatory text might go here. It may not. Time will tell.</Typography>
         </Grid>
         <Grid item xs={12}>
             <FormValuesContextConsumer>
-                {({formValues}) => (
+                {({ formValues }) => (
                     <Field
                         component={DownshiftMultiChipSelectField}
                         initialValue={formValues.collection}
@@ -81,7 +81,6 @@ export const IdentifiersSection = ({disabled = false}) => (
                 })}
             </Field>
         </Grid>
-
         <Grid item xs={12} sm={6}>
             <Field
                 component={GenericTextField}

@@ -41,6 +41,7 @@ const mapStateToProps = (state) => {
             initialValues: {
                 pid: recordToView.rek_pid,
                 publication: recordToView,
+                rek_date: recordToView.rek_date || recordToView.rek_created_date,
                 collection: [],
                 subject: [],
                 securitySection: {

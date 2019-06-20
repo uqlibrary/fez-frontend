@@ -1,20 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Field} from 'redux-form/immutable';
+import { Field } from 'redux-form/immutable';
 import Immutable from 'immutable';
 
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import MenuItem from '@material-ui/core/MenuItem';
 
-import {SelectField} from 'modules/SharedComponents/Toolbox/SelectField';
-import {RichEditorField} from 'modules/SharedComponents/RichEditor';
-import {TextField as GenericTextField} from 'modules/SharedComponents/Toolbox/TextField';
+import { SelectField } from 'modules/SharedComponents/Toolbox/SelectField';
+import { RichEditorField } from 'modules/SharedComponents/RichEditor';
+import { TextField as GenericTextField } from 'modules/SharedComponents/Toolbox/TextField';
 
-import {refereedsources, openaccess, qindex} from './MockData';
-import {validation} from 'config';
+import { refereedsources, openaccess, qindex } from './MockData';
+import { validation } from 'config';
 
-export const AdminSection = ({disabled}) => (
+export const AdminSection = ({ disabled }) => (
     <Grid container spacing={8}>
         <Grid item xs={12} sm={12}>
             <Typography variant="body2" component="p">Some explanatory text might go here. It may not. Time will tell.</Typography>
@@ -30,7 +30,7 @@ export const AdminSection = ({disabled}) => (
             >
                 <MenuItem value="" disabled>Please select a source</MenuItem>
                 {
-                    refereedsources.map((item, index) =>{
+                    refereedsources.map((item, index) => {
                         return <MenuItem key={index} value={item.value}>{item.label}</MenuItem>;
                     })
                 }
@@ -47,7 +47,7 @@ export const AdminSection = ({disabled}) => (
             >
                 <MenuItem value="" disabled>Please select a status</MenuItem>
                 {
-                    openaccess.map((item, index) =>{
+                    openaccess.map((item, index) => {
                         return <MenuItem key={index} value={item.value}>{item.label}</MenuItem>;
                     })
                 }
@@ -73,7 +73,7 @@ export const AdminSection = ({disabled}) => (
                 placeholder="">
                 <MenuItem value="" disabled>Please select a code</MenuItem>
                 {
-                    qindex.map((item, index) =>{
+                    qindex.map((item, index) => {
                         return <MenuItem key={index} value={item.value}>{item.label}</MenuItem>;
                     })
                 }
@@ -106,24 +106,24 @@ export const AdminSection = ({disabled}) => (
             </Field>
         </Grid>
         <Grid item xs={12}>
-            <Typography variant="caption" component="span" style={{opacity: 0.66}}>Additional notes</Typography>
+            <Typography variant="caption" component="span" style={{ opacity: 0.66 }}>Additional notes</Typography>
             <Field
                 component={RichEditorField}
                 disabled={disabled}
                 name="notes"
                 height={100}
                 format={value => Immutable.Map(value)}
-                validate={[validation.required]}/>
+                validate={[validation.required]} />
         </Grid>
         <Grid item xs={12}>
-            <Typography variant="caption" component="span" style={{opacity: 0.66}}>Internal notes</Typography>
+            <Typography variant="caption" component="span" style={{ opacity: 0.66 }}>Internal notes</Typography>
             <Field
                 component={RichEditorField}
                 disabled={disabled}
                 name="internalnotes"
                 format={value => Immutable.Map(value)}
                 height={100}
-                validate={[validation.required]}/>
+                validate={[validation.required]} />
         </Grid>
     </Grid>
 );
