@@ -253,18 +253,13 @@ export class NtroDetailsClass extends PureComponent {
                     }
                     {/* Quality indicators */}
                     {
-                        publication.fez_record_search_key_quality_indicator && publication.fez_record_search_key_quality_indicator.length > 0 &&
+                        publication.fez_record_search_key_quality_indicator &&
+                        publication.fez_record_search_key_quality_indicator.length > 0 &&
                         <this.ViewNtroRow
                             heading={locale.viewRecord.headings.NTRO.qualityIndicators}
-                            data={publication.fez_record_search_key_quality_indicator.map((item, index) => {
-                                return (
-                                    <span key={index}>
-                                        {item.rek_quality_indicator_lookup || 'Not set'}
-                                        {publication.fez_record_search_key_quality_indicator.length > 1 && index < publication.fez_record_search_key_quality_indicator.length - 1 && ', '}
-                                    </span>
-                                );
-                            })}
-
+                            data={publication.fez_record_search_key_quality_indicator.map(
+                                item => item.rek_quality_indicator_lookup || 'Not set'
+                            ).join(', ')}
                         />
                     }
                 </StandardCard>

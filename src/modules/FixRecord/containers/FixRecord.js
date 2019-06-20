@@ -1,18 +1,18 @@
-import {connect} from 'react-redux';
-import {bindActionCreators} from 'redux';
-import {reduxForm, getFormValues, getFormSyncErrors, SubmissionError, stopSubmit} from 'redux-form/immutable';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { reduxForm, getFormValues, getFormSyncErrors, SubmissionError, stopSubmit } from 'redux-form/immutable';
 import Immutable from 'immutable';
 import FixRecord from '../components/FixRecord';
-import {withRouter} from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import * as actions from 'actions';
-import {confirmDiscardFormChanges} from 'modules/SharedComponents/ConfirmDiscardFormChanges';
+import { confirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
 const FORM_NAME = 'FixRecord';
 
 const onSubmit = (values, dispatch, props) => {
     const data = {
         ...values.toJS(),
-        publication: {...props.recordToFix},
-        author: {...props.author}
+        publication: { ...props.recordToFix },
+        author: { ...props.author }
     };
     return dispatch(data.fixAction === 'unclaim'
         ? actions.unclaimRecord(data)
@@ -26,16 +26,23 @@ const onSubmit = (values, dispatch, props) => {
             //     dispatch(reset(FORM_NAME));
             // }, 100);
         }).catch(error => {
-            throw new SubmissionError({_error: error.message});
+            throw new SubmissionError({ _error: error.message });
         });
 };
 
 const validate = (values) => {
     stopSubmit(FORM_NAME, null);
     const data = values.toJS();
+    const hasAddedContentIndicators = data.contentIndicators.length > data.contentIndicatorsCountOnLoad;
     const hasFiles = data.files && data.files.queue && data.files.queue.length > 0;
     const errors = {};
-    if(data.fixAction === 'fix' && !data.comments && !data.rek_link && !hasFiles) {
+    if (
+        data.fixAction === 'fix' &&
+        !hasAddedContentIndicators &&
+        !data.comments &&
+        !data.rek_link &&
+        !hasFiles
+    ) {
         errors.fixRecordAnyField = true;
     }
     return errors;
@@ -43,19 +50,28 @@ const validate = (values) => {
 
 let FixRecordContainer = reduxForm({
     form: FORM_NAME,
+    enableReinitialize: true,
     validate,
     onSubmit
 })(confirmDiscardFormChanges(FixRecord, FORM_NAME));
 
 const mapStateToProps = (state) => {
     const formErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});
-
+    const recordToFix = state.get('fixRecordReducer') && state.get('fixRecordReducer').recordToFix;
+    const contentIndicators = !!recordToFix &&
+        (recordToFix.fez_record_search_key_content_indicator || []).map(
+            item => item.rek_content_indicator
+        ) || [];
     return {
         ...state.get('fixRecordReducer'),
         ...state.get('accountReducer'),
         formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
         formErrors: formErrors,
-        disableSubmit: formErrors && !(formErrors instanceof Immutable.Map)
+        disableSubmit: formErrors && !(formErrors instanceof Immutable.Map),
+        initialValues: {
+            contentIndicators,
+            contentIndicatorsCountOnLoad: contentIndicators.length,
+        }
     };
 };
 

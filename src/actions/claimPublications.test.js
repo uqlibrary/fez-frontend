@@ -3,6 +3,8 @@ import * as claimActions from './claimPublications';
 import * as actions from './actionTypes';
 import * as repositories from 'repositories';
 import { possibleUnclaimedList } from 'mock/data';
+import * as mockData from 'mock/data/testing/records';
+
 
 describe('Claim publication actions tests ', () => {
     beforeEach(() => {
@@ -13,6 +15,45 @@ describe('Claim publication actions tests ', () => {
     afterEach(() => {
         mockApi.reset();
         mockActionsStore.clearActions();
+    });
+
+    it('dispatches expected actions when loading a record to fix from API successfully', async () => {
+        const testPid = 'UQ: 12345';
+        mockApi
+            .onGet(repositories.routes.EXISTING_RECORD_API({pid: testPid}).apiUrl)
+            .reply(200, {data: {...mockData.mockRecordToFix}});
+
+        const expectedActions = [
+            actions.PUBLICATION_TO_CLAIM_LOADING,
+            actions.PUBLICATION_TO_CLAIM_LOADED
+        ];
+
+        try {
+            await mockActionsStore.dispatch(claimActions.loadFullRecordToClaim(testPid));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        } catch (e) {
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        }
+    });
+
+    it('dispatches expected actions when loading a record to fix from API fails', async () => {
+        const testPid = 'UQ: 12345';
+        mockApi
+            .onGet(repositories.routes.EXISTING_RECORD_API({pid: testPid}).apiUrl)
+            .reply(500);
+
+        const expectedActions = [
+            actions.PUBLICATION_TO_CLAIM_LOADING,
+            actions.APP_ALERT_SHOW,
+            actions.PUBLICATION_TO_CLAIM_FAILED
+        ];
+
+        try {
+            await mockActionsStore.dispatch(claimActions.loadFullRecordToClaim(testPid));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        } catch (e) {
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        }
     });
 
     it('dispatches an action to set publication to claim', async () => {
