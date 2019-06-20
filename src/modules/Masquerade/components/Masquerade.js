@@ -23,7 +23,7 @@ export default class Masquerade extends PureComponent {
     }
 
     _masqueradeAs = (event) => {
-        if (event && event.key && (event.key !== 'Enter' || this.state.userName.length === 0)) return;
+        if (event && event.key && (event.key !== 'Enter') || this.state.userName.length === 0) return;
 
         this.setState({
             loading: true
