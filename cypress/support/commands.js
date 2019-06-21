@@ -23,3 +23,13 @@
 //
 // -- This is will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+
+// Allows the targeting of CKEditors
+// CKeditor dynamically names instances as "editor1", "editor2" etc.
+// USE : cy.type_ckeditor('editor1', '<p>This is some text</p>');
+Cypress.Commands.add('type_ckeditor', (element, content) => {
+    cy.window()
+        .then(win => {
+            win.CKEDITOR.instances[element].setData(content);
+        });
+});
