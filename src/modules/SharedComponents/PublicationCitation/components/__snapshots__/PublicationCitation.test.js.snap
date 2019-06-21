@@ -37,7 +37,9 @@ Object {
 `;
 
 exports[`PublicationCitation  should render component with content indicators 1`] = `
-<Fragment>
+<div
+  className="publicationCitation"
+>
   <WithStyles(Grid)
     container={true}
     spacing={0}
@@ -926,11 +928,13 @@ exports[`PublicationCitation  should render component with content indicators 1`
       a content indicator, another content indicator
     </WithStyles(Typography)>
   </WithStyles(Grid)>
-</Fragment>
+</div>
 `;
 
 exports[`PublicationCitation  should render component with default actions 1`] = `
-<Fragment>
+<div
+  className="publicationCitation"
+>
   <WithStyles(Grid)
     container={true}
     spacing={0}
@@ -1858,11 +1862,13 @@ exports[`PublicationCitation  should render component with default actions 1`] =
       Scholarship of Teaching and Learning, Protocol
     </WithStyles(Typography)>
   </WithStyles(Grid)>
-</Fragment>
+</div>
 `;
 
 exports[`PublicationCitation  should render component with default item 1`] = `
-<Fragment>
+<div
+  className="publicationCitation"
+>
   <WithStyles(Grid)
     container={true}
     spacing={0}
@@ -2751,11 +2757,13 @@ exports[`PublicationCitation  should render component with default item 1`] = `
       Scholarship of Teaching and Learning, Protocol
     </WithStyles(Typography)>
   </WithStyles(Grid)>
-</Fragment>
+</div>
 `;
 
 exports[`PublicationCitation  should render component with default item without links to title and doi 1`] = `
-<Fragment>
+<div
+  className="publicationCitation"
+>
   <WithStyles(Grid)
     container={true}
     spacing={0}
@@ -3639,11 +3647,13 @@ exports[`PublicationCitation  should render component with default item without 
       Scholarship of Teaching and Learning, Protocol
     </WithStyles(Typography)>
   </WithStyles(Grid)>
-</Fragment>
+</div>
 `;
 
 exports[`PublicationCitation  should render component with default list hiding the difference count 1`] = `
-<Fragment>
+<div
+  className="publicationCitation"
+>
   <WithStyles(Grid)
     container={true}
     spacing={0}
@@ -4532,11 +4542,13 @@ exports[`PublicationCitation  should render component with default list hiding t
       Scholarship of Teaching and Learning, Protocol
     </WithStyles(Typography)>
   </WithStyles(Grid)>
-</Fragment>
+</div>
 `;
 
 exports[`PublicationCitation  should render component with default list hiding the total count 1`] = `
-<Fragment>
+<div
+  className="publicationCitation"
+>
   <WithStyles(Grid)
     container={true}
     spacing={0}
@@ -5425,11 +5437,13 @@ exports[`PublicationCitation  should render component with default list hiding t
       Scholarship of Teaching and Learning, Protocol
     </WithStyles(Typography)>
   </WithStyles(Grid)>
-</Fragment>
+</div>
 `;
 
 exports[`PublicationCitation  should render component with publication from multiple sources 1`] = `
-<Fragment>
+<div
+  className="publicationCitation"
+>
   <WithStyles(Grid)
     container={true}
     spacing={0}
@@ -6349,11 +6363,13 @@ exports[`PublicationCitation  should render component with publication from mult
       Scholarship of Teaching and Learning, Protocol
     </WithStyles(Typography)>
   </WithStyles(Grid)>
-</Fragment>
+</div>
 `;
 
 exports[`PublicationCitation  should render component without a title 1`] = `
-<Fragment>
+<div
+  className="publicationCitation"
+>
   <WithStyles(Grid)
     container={true}
     spacing={0}
@@ -7256,7 +7272,7 @@ exports[`PublicationCitation  should render component without a title 1`] = `
       Scholarship of Teaching and Learning, Protocol
     </WithStyles(Typography)>
   </WithStyles(Grid)>
-</Fragment>
+</div>
 `;
 
 exports[`PublicationCitation  should render primary action button 1`] = `
@@ -7327,7 +7343,9 @@ exports[`PublicationCitation  should render publication with citation metric 2`]
 `;
 
 exports[`PublicationCitation  should render publication with unpublished buffer 1`] = `
-<Fragment>
+<div
+  className="publicationCitation"
+>
   <WithStyles(Grid)
     container={true}
     spacing={0}
@@ -8633,7 +8651,7 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
       Scholarship of Teaching and Learning, Protocol
     </WithStyles(Typography)>
   </WithStyles(Grid)>
-</Fragment>
+</div>
 `;
 
 exports[`PublicationCitation  should return message indicating unavailability of citation display 1`] = `
