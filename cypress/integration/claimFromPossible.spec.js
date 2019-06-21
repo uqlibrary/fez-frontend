@@ -2,11 +2,12 @@ import formsLocale from '../../src/locale/forms';
 // import pagesLocale from '../../src/locale/pages';
 
 context('Claim possible work', () => {
+    const baseUrl = Cypress.config('baseUrl');
     const claimFormLocale = formsLocale.forms.claimPublicationForm;
     // const possibleClaimsLocale = pagesLocale.pages.claimPublications;
 
     beforeEach(() => {
-        cy.visit('http://localhost:3000/records/possible');
+        cy.visit('/records/possible');
         cy.get('#unsupportedBrowser.card button')
             .then(($button) => {
                 // Button is only visible if browser is unsupported.
@@ -37,7 +38,7 @@ context('Claim possible work', () => {
             .first()
             .click();
         cy.url()
-            .should('equal', 'http://localhost:3000/records/claim');
+            .should('equal', `${baseUrl}/records/claim`);
         cy.get('h2')
             .should('have.length', 1)
             .should('contain', claimFormLocale.title);
@@ -63,7 +64,7 @@ context('Claim possible work', () => {
             .first()
             .click();
         cy.url()
-            .should('equal', 'http://localhost:3000/records/claim');
+            .should('equal', `${baseUrl}/records/claim`);
         cy.contains(claimFormLocale.authorLinking.title)
             .closest('.StandardCard')
             .find('button')
@@ -88,7 +89,7 @@ context('Claim possible work', () => {
             .contains(claimFormLocale.successWorkflowConfirmation.cancelButtonLabel)
             .click();
         cy.url()
-            .should('equal', 'http://localhost:3000/records/possible');
+            .should('equal', `${baseUrl}/records/possible`);
     });
 
     it('Can choose editor, then submit the claim.', () => {
@@ -98,7 +99,7 @@ context('Claim possible work', () => {
             .first()
             .click();
         cy.url()
-            .should('equal', 'http://localhost:3000/records/claim');
+            .should('equal', `${baseUrl}/records/claim`);
         cy.contains(claimFormLocale.contributorLinking.title)
             .closest('.StandardCard')
             .find('button')
@@ -123,6 +124,6 @@ context('Claim possible work', () => {
             .contains(claimFormLocale.successWorkflowConfirmation.cancelButtonLabel)
             .click();
         cy.url()
-            .should('equal', 'http://localhost:3000/records/possible');
+            .should('equal', `${baseUrl}/records/possible`);
     });
 });
