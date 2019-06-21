@@ -62,7 +62,44 @@ context('Claim possible work', () => {
         cy.get('.StandardCard button.publicationAction')
             .first()
             .click();
+        cy.url()
+            .should('equal', 'http://localhost:3000/records/claim');
         cy.contains(claimFormLocale.authorLinking.title)
+            .closest('.StandardCard')
+            .find('button')
+            .first()
+            .click();
+        cy.contains('I confirm and understand')
+            .click();
+        cy.contains(claimFormLocale.submit)
+            .closest('button')
+            .should('not.be.disabled')
+            .click();
+        cy.get('[class*="Alert-info"] .alert-text')
+            .should('contain', claimFormLocale.progressAlert.title)
+            .should('contain', claimFormLocale.progressAlert.message);
+        cy.get('[class*="Alert-done"] .alert-text')
+            .should('contain', claimFormLocale.successAlert.title)
+            .should('contain', claimFormLocale.successAlert.message);
+        cy.get('h6')
+            .contains(claimFormLocale.successWorkflowConfirmation.confirmationTitle)
+            .should('have.length', 1);
+        cy.get('button')
+            .contains(claimFormLocale.successWorkflowConfirmation.cancelButtonLabel)
+            .click();
+        cy.url()
+            .should('equal', 'http://localhost:3000/records/possible');
+    });
+
+    it('Can choose editor, then submit the claim.', () => {
+        cy.contains('Book with editors')
+            .closest('.publicationCitation')
+            .find('button.publicationAction')
+            .first()
+            .click();
+        cy.url()
+            .should('equal', 'http://localhost:3000/records/claim');
+        cy.contains(claimFormLocale.contributorLinking.title)
             .closest('.StandardCard')
             .find('button')
             .first()
