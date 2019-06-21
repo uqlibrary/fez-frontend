@@ -44,221 +44,109 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                 class=\\"MuiCardContent-root-378\\"
 +               >
 +                 <div
-+                   class=\\"MuiGrid-container-3\\"
++                   class=\\"publicationCitation\\"
 +                 >
 +                   <div
-+                     class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31\\"
++                     class=\\"MuiGrid-container-3\\"
 +                   >
 +                     <div
-+                       class=\\"MuiGrid-container-3\\"
++                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31\\"
 +                     >
 +                       <div
-+                         class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31\\"
-+                         style=\\"min-width: 1px;\\"
-+                       >
-+                         <h6
-+                           class=\\"MuiTypography-root-100 MuiTypography-h6-117 PublicationCitation-citationTitle-380\\"
-+                         >
-+                           <a
-+                             href=\\"/view/UQ:396321\\"
-+                           >
-+                             Long-range regulators of the lncRNA HOTAIR enhance its prognostic potential in breast cancer
-+                           </a>
-+                         </h6>
-+                       </div>
-+                       <div
-+                         class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 PublicationCitation-citationText-381\\"
++                         class=\\"MuiGrid-container-3\\"
 +                       >
 +                         <div
-+                           class=\\"citationContent citationJournalArticle\\"
++                           class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31\\"
++                           style=\\"min-width: 1px;\\"
 +                         >
-+                           <span
-+                             class=\\"citationAuthors\\"
++                           <h6
++                             class=\\"MuiTypography-root-100 MuiTypography-h6-117 PublicationCitation-citationTitle-380\\"
 +                           >
-+                             <span
-+                               class=\\"citationAuthor\\"
++                             <a
++                               href=\\"/view/UQ:396321\\"
 +                             >
-+                               Milevskiy, Michael J. G., 
-+                             </span>
-+                             <span
-+                               class=\\"citationAuthor\\"
-+                             >
-+                               Al-Ejeh, Fares
-+                             </span>
-+                             <span
-+                               class=\\"citationAuthor\\"
-+                             >
-+                                and Saunus, Jodi M.
-+                             </span>
-+                              
-+                           </span>
-+                           <span
-+                             class=\\"citationDate\\"
-+                           >
-+                             (2016).
-+                           </span>
-+                           <span
-+                             class=\\"citationTitle\\"
-+                           >
-+                              Long-range regulators of the lncRNA HOTAIR enhance its prognostic potential in breast cancer.
-+                           </span>
-+                           <span
-+                             class=\\"citationJournalName\\"
-+                           >
-+                              Human Molecular Genetics 
-+                           </span>
-+                           <span
-+                             class=\\"citationVolumeNumber\\"
-+                           >
-+                              25 
-+                           </span>
-+                           <span
-+                             class=\\"citationIssueNumber\\"
-+                           >
-+                             (15) 
-+                           </span>
-+                           <span
-+                             class=\\"citationPageRange\\"
-+                           >
-+                             <span
-+                               class=\\"citationStartPage\\"
-+                             >
-+                               3269
-+                             </span>
-+                             -
-+                             <span
-+                               class=\\"citationEndPage\\"
-+                             >
-+                               3283
-+                             </span>
-+                           </span>
-+                           <span>
-+                             . 
-+                           </span>
-+                           <a
-+                             aria-label=\\"Open this DOI in an new window\\"
-+                             class=\\"citationDoiLink ExternalLink-externalLink-386\\"
-+                             href=\\"https://doi.org/10.1093/hmg/ddw177\\"
-+                             rel=\\"noopener noreferrer\\"
-+                             tabindex=\\"0\\"
-+                             target=\\"_blank\\"
-+                             theme=\\"[object Object]\\"
-+                             title=\\"Open this DOI in an new window\\"
-+                           >
-+                             <svg
-+                               aria-hidden=\\"true\\"
-+                               class=\\"MuiSvgIcon-root-388 ExternalLink-externalLinkIcon-387\\"
-+                               focusable=\\"false\\"
-+                               role=\\"presentation\\"
-+                               viewBox=\\"0 0 24 24\\"
-+                             >
-+                               <path
-+                                 d=\\"M0 0h24v24H0z\\"
-+                                 fill=\\"none\\"
-+                               />
-+                               <path
-+                                 d=\\"M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z\\"
-+                               />
-+                             </svg>
-+                             https://doi.org/10.1093/hmg/ddw177
-+                           </a>
++                               Long-range regulators of the lncRNA HOTAIR enhance its prognostic potential in breast cancer
++                             </a>
++                           </h6>
 +                         </div>
-+                       </div>
-+                       <div
-+                         class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 PublicationCitation-citationCounts-382\\"
-+                       >
 +                         <div
-+                           class=\\"MuiGrid-container-3\\"
++                           class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 PublicationCitation-citationText-381\\"
 +                         >
 +                           <div
-+                             class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-auto-44\\"
++                             class=\\"citationContent citationJournalArticle\\"
 +                           >
-+                             <a
-+                               aria-label=\\"Full citation in Web of science will open in a new window\\"
-+                               class=\\"wosCitationCount CitationCountView-citationCount-398 ExternalLink-externalLink-386\\"
-+                               href=\\"http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=000393077300011&SrcAuth=uqueensland\\"
-+                               rel=\\"noopener noreferrer\\"
-+                               tabindex=\\"0\\"
-+                               target=\\"_blank\\"
-+                               theme=\\"[object Object]\\"
-+                               title=\\"Full citation in Web of science will open in a new window\\"
-+                             >
-+                               <span
-+                                 class=\\"fez-icon wos large\\"
-+                               />
-+                               <span
-+                                 class=\\"CitationCountView-citationCountNumber-399\\"
-+                               >
-+                                 6
-+                               </span>
-+                             </a>
-+                             <a
-+                               aria-label=\\"Full citation in Scopus will open in a new window\\"
-+                               class=\\"scopusCitationCount CitationCountView-citationCount-398 ExternalLink-externalLink-386\\"
-+                               href=\\"http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=2-s2.0-85014391875&origin=inward\\"
-+                               rel=\\"noopener noreferrer\\"
-+                               tabindex=\\"0\\"
-+                               target=\\"_blank\\"
-+                               theme=\\"[object Object]\\"
-+                               title=\\"Full citation in Scopus will open in a new window\\"
-+                             >
-+                               <span
-+                                 class=\\"fez-icon scopus large\\"
-+                               />
-+                               <span
-+                                 class=\\"CitationCountView-citationCountNumber-399\\"
-+                               >
-+                                 7
-+                               </span>
-+                             </a>
-+                             <a
-+                               aria-label=\\"Full citation in Altmetric will open in a new window\\"
-+                               class=\\"altmetricCitationCount CitationCountView-citationCount-398 ExternalLink-externalLink-386\\"
-+                               href=\\"http://www.altmetric.com/details.php?citation_id=9271343\\"
-+                               rel=\\"noopener noreferrer\\"
-+                               tabindex=\\"0\\"
-+                               target=\\"_blank\\"
-+                               theme=\\"[object Object]\\"
-+                               title=\\"Full citation in Altmetric will open in a new window\\"
-+                             >
-+                               <span
-+                                 class=\\"fez-icon altmetric large\\"
-+                               />
-+                               <span
-+                                 class=\\"CitationCountView-citationCountNumber-399\\"
-+                               >
-+                                 2
-+                               </span>
-+                             </a>
-+                             <a
-+                               aria-label=\\"Full citation in Google scholar will open in a new window\\"
-+                               class=\\"googleCitationCount CitationCountView-citationCount-398 ExternalLink-externalLink-386\\"
-+                               href=\\"https://scholar.google.com/scholar?q=intitle:Long-range%20regulators%20of%20the%20lncRNA%20HOTAIR%20enhance%20its%20prognostic%20potential%20in%20breast%20cancer\\"
-+                               rel=\\"noopener noreferrer\\"
-+                               tabindex=\\"0\\"
-+                               target=\\"_blank\\"
-+                               theme=\\"[object Object]\\"
-+                               title=\\"Full citation in Google scholar will open in a new window\\"
-+                             >
-+                               <span
-+                                 class=\\"fez-icon google large\\"
-+                               />
-+                             </a>
 +                             <span
-+                               class=\\"noOaIcon\\"
-+                             />
-+                           </div>
-+                           <div
-+                             class=\\"MuiGrid-item-4\\"
-+                           >
++                               class=\\"citationAuthors\\"
++                             >
++                               <span
++                                 class=\\"citationAuthor\\"
++                               >
++                                 Milevskiy, Michael J. G., 
++                               </span>
++                               <span
++                                 class=\\"citationAuthor\\"
++                               >
++                                 Al-Ejeh, Fares
++                               </span>
++                               <span
++                                 class=\\"citationAuthor\\"
++                               >
++                                  and Saunus, Jodi M.
++                               </span>
++                                
++                             </span>
++                             <span
++                               class=\\"citationDate\\"
++                             >
++                               (2016).
++                             </span>
++                             <span
++                               class=\\"citationTitle\\"
++                             >
++                                Long-range regulators of the lncRNA HOTAIR enhance its prognostic potential in breast cancer.
++                             </span>
++                             <span
++                               class=\\"citationJournalName\\"
++                             >
++                                Human Molecular Genetics 
++                             </span>
++                             <span
++                               class=\\"citationVolumeNumber\\"
++                             >
++                                25 
++                             </span>
++                             <span
++                               class=\\"citationIssueNumber\\"
++                             >
++                               (15) 
++                             </span>
++                             <span
++                               class=\\"citationPageRange\\"
++                             >
++                               <span
++                                 class=\\"citationStartPage\\"
++                               >
++                                 3269
++                               </span>
++                               -
++                               <span
++                                 class=\\"citationEndPage\\"
++                               >
++                                 3283
++                               </span>
++                             </span>
++                             <span>
++                               . 
++                             </span>
 +                             <a
-+                               class=\\"CitationCounts-statsLink-397 ExternalLink-externalLink-386\\"
-+                               href=\\"https://app.library.uq.edu.au/#/authors/view/UQ:396321\\"
++                               aria-label=\\"Open this DOI in an new window\\"
++                               class=\\"citationDoiLink ExternalLink-externalLink-386\\"
++                               href=\\"https://doi.org/10.1093/hmg/ddw177\\"
 +                               rel=\\"noopener noreferrer\\"
 +                               tabindex=\\"0\\"
 +                               target=\\"_blank\\"
 +                               theme=\\"[object Object]\\"
-+                               title=\\"Long-range regulators of the lncRNA HOTAIR enhance its prognostic potential in breast cancer\\"
++                               title=\\"Open this DOI in an new window\\"
 +                             >
 +                               <svg
 +                                 aria-hidden=\\"true\\"
@@ -275,33 +163,149 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                   d=\\"M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z\\"
 +                                 />
 +                               </svg>
-+                               View full statistics
++                               https://doi.org/10.1093/hmg/ddw177
 +                             </a>
 +                           </div>
++                         </div>
++                         <div
++                           class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 PublicationCitation-citationCounts-382\\"
++                         >
 +                           <div
-+                             class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31\\"
-+                           />
++                             class=\\"MuiGrid-container-3\\"
++                           >
++                             <div
++                               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-auto-44\\"
++                             >
++                               <a
++                                 aria-label=\\"Full citation in Web of science will open in a new window\\"
++                                 class=\\"wosCitationCount CitationCountView-citationCount-398 ExternalLink-externalLink-386\\"
++                                 href=\\"http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=000393077300011&SrcAuth=uqueensland\\"
++                                 rel=\\"noopener noreferrer\\"
++                                 tabindex=\\"0\\"
++                                 target=\\"_blank\\"
++                                 theme=\\"[object Object]\\"
++                                 title=\\"Full citation in Web of science will open in a new window\\"
++                               >
++                                 <span
++                                   class=\\"fez-icon wos large\\"
++                                 />
++                                 <span
++                                   class=\\"CitationCountView-citationCountNumber-399\\"
++                                 >
++                                   6
++                                 </span>
++                               </a>
++                               <a
++                                 aria-label=\\"Full citation in Scopus will open in a new window\\"
++                                 class=\\"scopusCitationCount CitationCountView-citationCount-398 ExternalLink-externalLink-386\\"
++                                 href=\\"http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=2-s2.0-85014391875&origin=inward\\"
++                                 rel=\\"noopener noreferrer\\"
++                                 tabindex=\\"0\\"
++                                 target=\\"_blank\\"
++                                 theme=\\"[object Object]\\"
++                                 title=\\"Full citation in Scopus will open in a new window\\"
++                               >
++                                 <span
++                                   class=\\"fez-icon scopus large\\"
++                                 />
++                                 <span
++                                   class=\\"CitationCountView-citationCountNumber-399\\"
++                                 >
++                                   7
++                                 </span>
++                               </a>
++                               <a
++                                 aria-label=\\"Full citation in Altmetric will open in a new window\\"
++                                 class=\\"altmetricCitationCount CitationCountView-citationCount-398 ExternalLink-externalLink-386\\"
++                                 href=\\"http://www.altmetric.com/details.php?citation_id=9271343\\"
++                                 rel=\\"noopener noreferrer\\"
++                                 tabindex=\\"0\\"
++                                 target=\\"_blank\\"
++                                 theme=\\"[object Object]\\"
++                                 title=\\"Full citation in Altmetric will open in a new window\\"
++                               >
++                                 <span
++                                   class=\\"fez-icon altmetric large\\"
++                                 />
++                                 <span
++                                   class=\\"CitationCountView-citationCountNumber-399\\"
++                                 >
++                                   2
++                                 </span>
++                               </a>
++                               <a
++                                 aria-label=\\"Full citation in Google scholar will open in a new window\\"
++                                 class=\\"googleCitationCount CitationCountView-citationCount-398 ExternalLink-externalLink-386\\"
++                                 href=\\"https://scholar.google.com/scholar?q=intitle:Long-range%20regulators%20of%20the%20lncRNA%20HOTAIR%20enhance%20its%20prognostic%20potential%20in%20breast%20cancer\\"
++                                 rel=\\"noopener noreferrer\\"
++                                 tabindex=\\"0\\"
++                                 target=\\"_blank\\"
++                                 theme=\\"[object Object]\\"
++                                 title=\\"Full citation in Google scholar will open in a new window\\"
++                               >
++                                 <span
++                                   class=\\"fez-icon google large\\"
++                                 />
++                               </a>
++                               <span
++                                 class=\\"noOaIcon\\"
++                               />
++                             </div>
++                             <div
++                               class=\\"MuiGrid-item-4\\"
++                             >
++                               <a
++                                 class=\\"CitationCounts-statsLink-397 ExternalLink-externalLink-386\\"
++                                 href=\\"https://app.library.uq.edu.au/#/authors/view/UQ:396321\\"
++                                 rel=\\"noopener noreferrer\\"
++                                 tabindex=\\"0\\"
++                                 target=\\"_blank\\"
++                                 theme=\\"[object Object]\\"
++                                 title=\\"Long-range regulators of the lncRNA HOTAIR enhance its prognostic potential in breast cancer\\"
+                                >
++                                 <svg
++                                   aria-hidden=\\"true\\"
++                                   class=\\"MuiSvgIcon-root-388 ExternalLink-externalLinkIcon-387\\"
++                                   focusable=\\"false\\"
++                                   role=\\"presentation\\"
++                                   viewBox=\\"0 0 24 24\\"
++                                 >
++                                   <path
++                                     d=\\"M0 0h24v24H0z\\"
++                                     fill=\\"none\\"
++                                   />
++                                   <path
++                                     d=\\"M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z\\"
++                                   />
++                                 </svg>
++                                 View full statistics
++                               </a>
++                             </div>
++                             <div
++                               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31\\"
++                             />
++                           </div>
 +                         </div>
 +                       </div>
 +                     </div>
 +                   </div>
-+                 </div>
-+                 <hr
-+                   class=\\"MuiDivider-root-400 PublicationCitation-divider-379\\"
-+                 />
-+                 <div
-+                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
-+                 >
-+                   <span
-+                     class=\\"MuiTypography-root-100 MuiTypography-caption-110 MuiTypography-gutterBottom-127\\"
++                   <hr
++                     class=\\"MuiDivider-root-400 PublicationCitation-divider-379\\"
++                   />
+                    <div
++                     class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
 +                   >
 +                     <span
-+                       class=\\"PublicationCitation-contentIndicatorTitle-384\\"
++                       class=\\"MuiTypography-root-100 MuiTypography-caption-110 MuiTypography-gutterBottom-127\\"
 +                     >
-+                       Content Indicators:
++                       <span
++                         class=\\"PublicationCitation-contentIndicatorTitle-384\\"
++                       >
++                         Content Indicators:
++                       </span>
++                       Scholarship of Teaching and Learning, Protocol
 +                     </span>
-+                     Scholarship of Teaching and Learning, Protocol
-+                   </span>
++                   </div>
 +                 </div>
 +               </div>
 +             </div>
@@ -352,17 +356,17 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                             style=\\"width: 100%; height: 0px;\\"
 +                           />
 +                           <div
-+                             class=\\"MuiGrid-container-3\\"
+                              class=\\"MuiGrid-container-3\\"
 +                           >
 +                             <div
 +                               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-6-51 MuiGrid-grid-md-4-63\\"
-+                             >
-+                               <div
+                              >
+                                <div
 +                                 class=\\"MuiGrid-container-3\\"
-                                >
-                                  <div
-+                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
-+                                 >
++                               >
++                                 <div
+                                    class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
+                                  >
 +                                   <button
 +                                     class=\\"MuiButtonBase-root-437 MuiButtonBase-disabled-438 MuiButton-root-510 MuiButton-text-512 MuiButton-flat-515 MuiButton-disabled-530 MuiButton-fullWidth-535 AuthorItem-buttonBase-537\\"
 +                                     disabled=\\"\\"
@@ -391,7 +395,8 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                     </span>
 +                                   </button>
 +                                 </div>
-+                                 <div
+                                  <div
+-             style=\\"padding: 8px;\\"
 +                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
 +                                 >
 +                                   <span
@@ -406,10 +411,10 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-6-51 MuiGrid-grid-md-4-63\\"
 +                             >
 +                               <div
-                                  class=\\"MuiGrid-container-3\\"
-                                >
-                                  <div
-                                    class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++                                 class=\\"MuiGrid-container-3\\"
++                               >
++                                 <div
++                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
 +                                 >
 +                                   <button
 +                                     class=\\"MuiButtonBase-root-437 MuiButton-root-510 MuiButton-text-512 MuiButton-flat-515 MuiButton-fullWidth-535 AuthorItem-buttonBase-537\\"
@@ -442,9 +447,9 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                   </button>
 +                                 </div>
                                   <div
--             style=\\"padding: 8px;\\"
+-               class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-8-25 MuiGrid-align-items-xs-center-11 MuiGrid-align-content-xs-center-15 MuiGrid-justify-xs-center-20\\"
 +                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
-                                  >
++                                 >
 +                                   <span
 +                                     class=\\"MuiTypography-root-100 MuiTypography-caption-110 AuthorItem-authorOrder-538\\"
 +                                   >
@@ -453,8 +458,7 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                 </div>
 +                               </div>
 +                             </div>
-                              <div
--               class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-8-25 MuiGrid-align-items-xs-center-11 MuiGrid-align-content-xs-center-15 MuiGrid-justify-xs-center-20\\"
++                             <div
 +                               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-6-51 MuiGrid-grid-md-4-63\\"
                               >
                                 <div
@@ -503,7 +507,7 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                       Saunus, Jodi M.
 +                                     </span>
 +                                   </button>
-+                                 </div>
+                                  </div>
 +                                 <div
 +                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
 +                                 >
@@ -513,9 +517,9 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                     Third  listed author
 +                                   </span>
 +                                 </div>
-                                </div>
-                              </div>
-+                           </div>
++                               </div>
++                             </div>
+                            </div>
 +                           <div />
                             <div
 -                 class=\\"MuiGrid-item-4 MuiGrid-grid-xs-auto-30\\"
@@ -589,7 +593,8 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +               </div>
 +               <div
 +                 class=\\"MuiCardContent-root-378\\"
-+               >
+                >
+-                   Loading record to claim
 +                 <div
 +                   class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-24-27\\"
 +                 >
@@ -712,8 +717,7 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                   </div>
 +                   <div
 +                     class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
-                    >
--                   Loading record to claim
++                   >
 +                     <div
 +                       class=\\"MuiFormControl-root-448 MuiFormControl-fullWidth-451\\"
 +                     >
@@ -920,11 +924,11 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
                         </span>
 +                     </div>
 +                   </div>
-+                 </div>
-+               </div>
+                  </div>
+                </div>
               </div>
             </div>
-+         </div>
+          </div>
 +         <div
 +           class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-24-27\\"
 +         >
@@ -948,7 +952,7 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                 class=\\"MuiTouchRipple-root-440\\"
 +               />
 +             </button>
-            </div>
++           </div>
 +           <div
 +             class=\\"MuiGrid-item-4\\"
 +           >
@@ -965,8 +969,8 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                 Claim this work
 +               </span>
 +             </button>
-            </div>
-          </div>
++           </div>
++         </div>
 +       </form>
       </div>
     </div>
@@ -978,7 +982,7 @@ exports[`ClaimRecord form should allow content indicators to be selected 2`] = `
 - First value
 + Second value
 
-@@ -595,11 +595,12 @@
+@@ -599,11 +599,12 @@
                           <div
                             class=\\"MuiSelect-root-466\\"
                           >
@@ -999,8 +1003,8 @@ exports[`ClaimRecord form should allow content indicators to be selected 3`] = `
 - First value
 + Second value
 
-@@ -297,11 +297,11 @@
-                    </span>
+@@ -301,11 +301,11 @@
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1012,7 +1016,7 @@ exports[`ClaimRecord form should allow content indicators to be selected 3`] = `
             >
               <div
                 class=\\"MuiPaper-root-345 MuiPaper-elevation1-348 MuiPaper-rounded-346 MuiCard-root-344 Cards-card-340 StandardCard\\"
-@@ -602,16 +602,16 @@
+@@ -606,16 +606,16 @@
                               class=\\"MuiSelect-select-467 MuiSelect-selectMenu-470 MuiInputBase-input-496 MuiInput-input-481\\"
                               id=\\"content-indicators\\"
                               role=\\"button\\"
@@ -1038,7 +1042,7 @@ exports[`ClaimRecord form should allow content indicators to be selected 4`] = `
 - First value
 + Second value
 
-@@ -602,16 +602,16 @@
+@@ -606,16 +606,16 @@
                               class=\\"MuiSelect-select-467 MuiSelect-selectMenu-470 MuiInputBase-input-496 MuiInput-input-481\\"
                               id=\\"content-indicators\\"
                               role=\\"button\\"
@@ -1064,7 +1068,7 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
 - First value
 + Second value
 
-@@ -412,17 +412,17 @@
+@@ -416,17 +416,17 @@
                                       <span
                                         class=\\"MuiButton-label-1082\\"
                                       >
@@ -1084,7 +1088,7 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                                             d=\\"M0 0h24v24H0z\\"
                                             fill=\\"none\\"
                                           />
-@@ -500,10 +500,52 @@
+@@ -504,10 +504,52 @@
                             />
                           </div>
                         </div>
@@ -1137,7 +1141,7 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
               </div>
             </div>
             <div
-@@ -841,66 +883,11 @@
+@@ -845,66 +887,11 @@
                     </div>
                   </div>
                 </div>
@@ -1204,7 +1208,7 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
           >
             <div
               class=\\"MuiGrid-item-575 MuiGrid-grid-xs-true-602\\"
-@@ -925,21 +912,23 @@
+@@ -929,21 +916,23 @@
             </div>
             <div
               class=\\"MuiGrid-item-575\\"
@@ -1238,7 +1242,7 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
 - First value
 + Second value
 
-@@ -403,12 +403,13 @@
+@@ -407,12 +407,13 @@
                                 >
                                   <div
                                     class=\\"MuiGrid-item-575 MuiGrid-grid-xs-12-614\\"
@@ -1254,7 +1258,7 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                                       <span
                                         class=\\"MuiButton-label-1082\\"
                                       >
-@@ -427,13 +428,10 @@
+@@ -431,13 +432,10 @@
                                             fill=\\"none\\"
                                           />
                                         </svg>
@@ -1268,7 +1272,7 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                                   <div
                                     class=\\"MuiGrid-item-575 MuiGrid-grid-xs-12-614\\"
                                   >
-@@ -501,14 +499,15 @@
+@@ -505,14 +503,15 @@
                           </div>
                         </div>
                       </div>
@@ -1286,7 +1290,7 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                           class=\\"MuiIconButton-label-1007\\"
                         >
                           <svg
-@@ -523,21 +522,19 @@
+@@ -527,21 +526,19 @@
                             />
                           </svg>
                           <input
@@ -1310,7 +1314,7 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                           class=\\"MuiTypography-root-671 WithTheme-WithWidth-AuthorLinking---label-991 MuiTypography-body2-679 MuiTypography-colorSecondary-702\\"
                         >
                           I confirm and understand that I am claiming this work under the above name, and confirm this is me
-@@ -630,23 +627,22 @@
+@@ -634,23 +631,22 @@
                           id=\\"Please select relevant indicator(s).-label\\"
                         >
                           Please select relevant indicator(s).
@@ -1336,7 +1340,7 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                             </div>
                             <input
                               style=\\"border: 1px solid red;\\"
-@@ -702,25 +698,26 @@
+@@ -706,25 +702,26 @@
                     >
                       <div
                         class=\\"MuiFormControl-root-1019 MuiFormControl-fullWidth-1022\\"
@@ -1366,7 +1370,7 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                             name=\\"comments\\"
                             rows=\\"3\\"
                           />
-@@ -732,25 +729,26 @@
+@@ -736,25 +733,26 @@
                     >
                       <div
                         class=\\"MuiFormControl-root-1019 MuiFormControl-fullWidth-1022\\"
@@ -1396,7 +1400,7 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                             name=\\"rek_link\\"
                             type=\\"text\\"
                             value=\\"\\"
-@@ -797,11 +795,11 @@
+@@ -801,11 +799,11 @@
                     >
                       <div
                         tabindex=\\"0\\"
@@ -1409,7 +1413,7 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                         >
                           <div
                             class=\\"MuiGrid-container-574 FileUploadDropzoneStaticContent-dropzone-1077\\"
-@@ -871,10 +869,11 @@
+@@ -875,10 +873,11 @@
                             </div>
                           </div>
                           <input
@@ -1421,7 +1425,7 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                             style=\\"position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; opacity: 0.00001; pointer-events: none;\\"
                             type=\\"file\\"
                           />
-@@ -883,52 +882,100 @@
+@@ -887,52 +886,100 @@
                     </div>
                   </div>
                 </div>
@@ -1539,8 +1543,8 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
 - First value
 + Second value
 
-@@ -297,11 +297,11 @@
-                    </span>
+@@ -301,11 +301,11 @@
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1552,7 +1556,7 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
             >
               <div
                 class=\\"MuiPaper-root-916 MuiPaper-elevation1-919 MuiPaper-rounded-917 MuiCard-root-915 Cards-card-911 StandardCard\\"
-@@ -403,13 +403,12 @@
+@@ -407,13 +407,12 @@
                                 >
                                   <div
                                     class=\\"MuiGrid-item-575 MuiGrid-grid-xs-12-614\\"
@@ -1568,7 +1572,7 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                                       <span
                                         class=\\"MuiButton-label-1082\\"
                                       >
-@@ -428,10 +427,13 @@
+@@ -432,10 +431,13 @@
                                             fill=\\"none\\"
                                           />
                                         </svg>
@@ -1582,7 +1586,7 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                                   <div
                                     class=\\"MuiGrid-item-575 MuiGrid-grid-xs-12-614\\"
                                   >
-@@ -499,15 +501,14 @@
+@@ -503,15 +505,14 @@
                           </div>
                         </div>
                       </div>
@@ -1600,7 +1604,7 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                           class=\\"MuiIconButton-label-1007\\"
                         >
                           <svg
-@@ -522,19 +523,21 @@
+@@ -526,19 +527,21 @@
                             />
                           </svg>
                           <input
@@ -1624,7 +1628,7 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                           class=\\"MuiTypography-root-671 WithTheme-WithWidth-AuthorLinking---label-991 MuiTypography-body2-679 MuiTypography-colorSecondary-702\\"
                         >
                           I confirm and understand that I am claiming this work under the above name, and confirm this is me
-@@ -627,22 +630,23 @@
+@@ -631,22 +634,23 @@
                           id=\\"Please select relevant indicator(s).-label\\"
                         >
                           Please select relevant indicator(s).
@@ -1650,7 +1654,7 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                             </div>
                             <input
                               style=\\"border: 1px solid red;\\"
-@@ -698,26 +702,25 @@
+@@ -702,26 +706,25 @@
                     >
                       <div
                         class=\\"MuiFormControl-root-1019 MuiFormControl-fullWidth-1022\\"
@@ -1680,7 +1684,7 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                             name=\\"comments\\"
                             rows=\\"3\\"
                           />
-@@ -729,26 +732,25 @@
+@@ -733,26 +736,25 @@
                     >
                       <div
                         class=\\"MuiFormControl-root-1019 MuiFormControl-fullWidth-1022\\"
@@ -1710,7 +1714,7 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                             name=\\"rek_link\\"
                             type=\\"text\\"
                             value=\\"\\"
-@@ -795,11 +797,11 @@
+@@ -799,11 +801,11 @@
                     >
                       <div
                         tabindex=\\"0\\"
@@ -1723,7 +1727,7 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                         >
                           <div
                             class=\\"MuiGrid-container-574 FileUploadDropzoneStaticContent-dropzone-1077\\"
-@@ -869,11 +871,10 @@
+@@ -873,11 +875,10 @@
                             </div>
                           </div>
                           <input
@@ -1735,7 +1739,7 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                             style=\\"position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; opacity: 0.00001; pointer-events: none;\\"
                             type=\\"file\\"
                           />
-@@ -890,48 +891,44 @@
+@@ -894,48 +895,44 @@
               <div
                 class=\\"Alert\\"
                 style=\\"padding: 12px;\\"
@@ -1799,7 +1803,7 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                   </div>
                 </div>
               </div>
-@@ -945,37 +942,41 @@
+@@ -949,37 +946,41 @@
             />
             <div
               class=\\"MuiGrid-item-575\\"

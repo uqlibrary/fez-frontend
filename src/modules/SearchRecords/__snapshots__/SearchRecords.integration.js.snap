@@ -1915,7 +1915,7 @@ exports[`SearchRecords Should be able to perform advanced search 10`] = `
                               </div>
                               <input
                                 id=\\"exportPublicationsFormat\\"
-@@ -875,70 +883,533 @@
+@@ -875,70 +883,537 @@
                       </div>
                     </div>
                   </div>
@@ -1927,223 +1927,227 @@ exports[`SearchRecords Should be able to perform advanced search 10`] = `
 +               </div>
 +               <div
 +                 style=\\"margin-top: 16px;\\"
-                >
++               >
 +                 <div
-+                   class=\\"MuiGrid-container-346\\"
-+                 >
++                   class=\\"publicationCitation\\"
+                  >
 +                   <div
-+                     class=\\"MuiGrid-item-347 MuiGrid-grid-xs-true-374\\"
++                     class=\\"MuiGrid-container-346\\"
 +                   >
 +                     <div
-+                       class=\\"MuiGrid-container-346\\"
++                       class=\\"MuiGrid-item-347 MuiGrid-grid-xs-true-374\\"
 +                     >
 +                       <div
-+                         class=\\"MuiGrid-item-347 MuiGrid-grid-xs-true-374\\"
-+                         style=\\"min-width: 1px;\\"
-+                       >
-+                         <h6
-+                           class=\\"MuiTypography-root-577 MuiTypography-h6-594 PublicationCitation-citationTitle-732\\"
-+                         >
-+                           <a
-+                             href=\\"/view/UQ:215681\\"
-+                           >
-+                             Rheumatic complications of influenza vaccination
-+                           </a>
-+                         </h6>
-+                       </div>
-+                       <div
-+                         class=\\"MuiGrid-item-347 MuiGrid-grid-xs-12-386 PublicationCitation-citationText-733\\"
++                         class=\\"MuiGrid-container-346\\"
 +                       >
 +                         <div
-+                           class=\\"citationContent citationJournalArticle\\"
++                           class=\\"MuiGrid-item-347 MuiGrid-grid-xs-true-374\\"
++                           style=\\"min-width: 1px;\\"
 +                         >
-+                           <span
-+                             class=\\"citationAuthors\\"
++                           <h6
++                             class=\\"MuiTypography-root-577 MuiTypography-h6-594 PublicationCitation-citationTitle-732\\"
 +                           >
-+                             <span
-+                               class=\\"citationAuthor\\"
++                             <a
++                               href=\\"/view/UQ:215681\\"
 +                             >
-+                               Brown, M. A.
-+                             </span>
-                              <span
--                     class=\\"publicationsListControls empty\\"
-+                               class=\\"citationAuthor\\"
-+                             >
-+                                and Bertouch, J. V.
-+                             </span>
-+                              
-+                           </span>
-+                           <span
-+                             class=\\"citationDate\\"
-+                           >
-+                             (1994).
-+                           </span>
-+                           <span
-+                             class=\\"citationTitle\\"
-+                           >
-+                              Rheumatic complications of influenza vaccination.
-+                           </span>
-+                           <span
-+                             class=\\"citationJournalName\\"
-+                           >
-+                              Australian and New Zealand Journal of Medicine 
-+                           </span>
-+                           <span
-+                             class=\\"citationVolumeNumber\\"
-+                           >
-+                              24 
-+                           </span>
-+                           <span
-+                             class=\\"citationIssueNumber\\"
-+                           >
-+                             (5) 
-+                           </span>
-+                           <span
-+                             class=\\"citationPageRange\\"
-+                           >
-+                             <span
-+                               class=\\"citationStartPage\\"
-+                             >
-+                               572
-+                             </span>
-+                             -
-+                             <span
-+                               class=\\"citationEndPage\\"
-+                             >
-+                               573
-+                             </span>
-+                           </span>
-+                           <span>
-+                             . 
-+                           </span>
-+                           <a
-+                             aria-label=\\"Open this DOI in an new window\\"
-+                             class=\\"citationDoiLink ExternalLink-externalLink-738\\"
-+                             href=\\"https://doi.org/10.1111/j.1445-5994.1994.tb01760.x\\"
-+                             rel=\\"noopener noreferrer\\"
-+                             tabindex=\\"0\\"
-+                             target=\\"_blank\\"
-+                             theme=\\"[object Object]\\"
-+                             title=\\"Open this DOI in an new window\\"
-+                           >
-+                             <svg
-+                               aria-hidden=\\"true\\"
-+                               class=\\"MuiSvgIcon-root-618 ExternalLink-externalLinkIcon-739\\"
-+                               focusable=\\"false\\"
-+                               role=\\"presentation\\"
-+                               viewBox=\\"0 0 24 24\\"
-+                             >
-+                               <path
-+                                 d=\\"M0 0h24v24H0z\\"
-+                                 fill=\\"none\\"
-                                />
-+                               <path
-+                                 d=\\"M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z\\"
-+                               />
-+                             </svg>
-+                             https://doi.org/10.1111/j.1445-5994.1994.tb01760.x
-+                           </a>
-                          </div>
-                        </div>
-+                       <div
-+                         class=\\"MuiGrid-item-347 MuiGrid-grid-xs-12-386 PublicationCitation-citationCounts-734\\"
-+                       >
-                          <div
--                 class=\\"MuiGrid-container-346 MuiGrid-justify-xs-center-363\\"
-+                           class=\\"MuiGrid-container-346\\"
++                               Rheumatic complications of influenza vaccination
++                             </a>
++                           </h6>
++                         </div>
++                         <div
++                           class=\\"MuiGrid-item-347 MuiGrid-grid-xs-12-386 PublicationCitation-citationText-733\\"
 +                         >
 +                           <div
-+                             class=\\"MuiGrid-item-347 MuiGrid-grid-xs-12-386 MuiGrid-grid-sm-auto-387\\"
++                             class=\\"citationContent citationJournalArticle\\"
 +                           >
-+                             <a
-+                               aria-label=\\"Full citation in Web of science will open in a new window\\"
-+                               class=\\"wosCitationCount CitationCountView-citationCount-741 ExternalLink-externalLink-738\\"
-+                               href=\\"http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=A1994PP66100010&SrcAuth=uqueensland\\"
-+                               rel=\\"noopener noreferrer\\"
-+                               tabindex=\\"0\\"
-+                               target=\\"_blank\\"
-+                               theme=\\"[object Object]\\"
-+                               title=\\"Full citation in Web of science will open in a new window\\"
-+                             >
-+                               <span
-+                                 class=\\"fez-icon wos large\\"
-+                               />
-+                               <span
-+                                 class=\\"CitationCountView-citationCountNumber-742\\"
-+                               >
-+                                 20
-+                               </span>
-+                             </a>
-+                             <a
-+                               aria-label=\\"Full citation in Scopus will open in a new window\\"
-+                               class=\\"scopusCitationCount CitationCountView-citationCount-741 ExternalLink-externalLink-738\\"
-+                               href=\\"http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=2-s2.0-0028527457&origin=inward\\"
-+                               rel=\\"noopener noreferrer\\"
-+                               tabindex=\\"0\\"
-+                               target=\\"_blank\\"
-+                               theme=\\"[object Object]\\"
-+                               title=\\"Full citation in Scopus will open in a new window\\"
-+                             >
-+                               <span
-+                                 class=\\"fez-icon scopus large\\"
-+                               />
-+                               <span
-+                                 class=\\"CitationCountView-citationCountNumber-742\\"
-+                               >
-+                                 25
-+                               </span>
-+                             </a>
-+                             <a
-+                               aria-label=\\"Full citation in Altmetric will open in a new window\\"
-+                               class=\\"altmetricCitationCount CitationCountView-citationCount-741 ExternalLink-externalLink-738\\"
-+                               href=\\"http://www.altmetric.com/details.php?citation_id=11749800\\"
-+                               rel=\\"noopener noreferrer\\"
-+                               tabindex=\\"0\\"
-+                               target=\\"_blank\\"
-+                               theme=\\"[object Object]\\"
-+                               title=\\"Full citation in Altmetric will open in a new window\\"
-+                             >
-+                               <span
-+                                 class=\\"fez-icon altmetric large\\"
-+                               />
-+                               <span
-+                                 class=\\"CitationCountView-citationCountNumber-742\\"
-+                               >
-+                                 4
-+                               </span>
-+                             </a>
-+                             <a
-+                               aria-label=\\"Full citation in Google scholar will open in a new window\\"
-+                               class=\\"googleCitationCount CitationCountView-citationCount-741 ExternalLink-externalLink-738\\"
-+                               href=\\"https://scholar.google.com/scholar?q=intitle:Rheumatic%20complications%20of%20influenza%20vaccination\\"
-+                               rel=\\"noopener noreferrer\\"
-+                               tabindex=\\"0\\"
-+                               target=\\"_blank\\"
-+                               theme=\\"[object Object]\\"
-+                               title=\\"Full citation in Google scholar will open in a new window\\"
-                              >
-+                               <span
-+                                 class=\\"fez-icon google large\\"
-+                               />
-+                             </a>
 +                             <span
-+                               class=\\"noOaIcon\\"
++                               class=\\"citationAuthors\\"
++                             >
+                                <span
+-                     class=\\"publicationsListControls empty\\"
++                                 class=\\"citationAuthor\\"
++                               >
++                                 Brown, M. A.
++                               </span>
++                               <span
++                                 class=\\"citationAuthor\\"
++                               >
++                                  and Bertouch, J. V.
++                               </span>
++                                
++                             </span>
++                             <span
++                               class=\\"citationDate\\"
++                             >
++                               (1994).
++                             </span>
++                             <span
++                               class=\\"citationTitle\\"
++                             >
++                                Rheumatic complications of influenza vaccination.
++                             </span>
++                             <span
++                               class=\\"citationJournalName\\"
++                             >
++                                Australian and New Zealand Journal of Medicine 
++                             </span>
++                             <span
++                               class=\\"citationVolumeNumber\\"
++                             >
++                                24 
++                             </span>
++                             <span
++                               class=\\"citationIssueNumber\\"
++                             >
++                               (5) 
++                             </span>
++                             <span
++                               class=\\"citationPageRange\\"
++                             >
++                               <span
++                                 class=\\"citationStartPage\\"
++                               >
++                                 572
++                               </span>
++                               -
++                               <span
++                                 class=\\"citationEndPage\\"
++                               >
++                                 573
++                               </span>
++                             </span>
++                             <span>
++                               . 
++                             </span>
++                             <a
++                               aria-label=\\"Open this DOI in an new window\\"
++                               class=\\"citationDoiLink ExternalLink-externalLink-738\\"
++                               href=\\"https://doi.org/10.1111/j.1445-5994.1994.tb01760.x\\"
++                               rel=\\"noopener noreferrer\\"
++                               tabindex=\\"0\\"
++                               target=\\"_blank\\"
++                               theme=\\"[object Object]\\"
++                               title=\\"Open this DOI in an new window\\"
++                             >
++                               <svg
++                                 aria-hidden=\\"true\\"
++                                 class=\\"MuiSvgIcon-root-618 ExternalLink-externalLinkIcon-739\\"
++                                 focusable=\\"false\\"
++                                 role=\\"presentation\\"
++                                 viewBox=\\"0 0 24 24\\"
++                               >
++                                 <path
++                                   d=\\"M0 0h24v24H0z\\"
++                                   fill=\\"none\\"
++                                 />
++                                 <path
++                                   d=\\"M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z\\"
+                                  />
++                               </svg>
++                               https://doi.org/10.1111/j.1445-5994.1994.tb01760.x
++                             </a>
+                            </div>
+                          </div>
++                         <div
++                           class=\\"MuiGrid-item-347 MuiGrid-grid-xs-12-386 PublicationCitation-citationCounts-734\\"
++                         >
+                            <div
+-                 class=\\"MuiGrid-container-346 MuiGrid-justify-xs-center-363\\"
++                             class=\\"MuiGrid-container-346\\"
++                           >
++                             <div
++                               class=\\"MuiGrid-item-347 MuiGrid-grid-xs-12-386 MuiGrid-grid-sm-auto-387\\"
++                             >
++                               <a
++                                 aria-label=\\"Full citation in Web of science will open in a new window\\"
++                                 class=\\"wosCitationCount CitationCountView-citationCount-741 ExternalLink-externalLink-738\\"
++                                 href=\\"http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=A1994PP66100010&SrcAuth=uqueensland\\"
++                                 rel=\\"noopener noreferrer\\"
++                                 tabindex=\\"0\\"
++                                 target=\\"_blank\\"
++                                 theme=\\"[object Object]\\"
++                                 title=\\"Full citation in Web of science will open in a new window\\"
++                               >
++                                 <span
++                                   class=\\"fez-icon wos large\\"
++                                 />
++                                 <span
++                                   class=\\"CitationCountView-citationCountNumber-742\\"
++                                 >
++                                   20
++                                 </span>
++                               </a>
++                               <a
++                                 aria-label=\\"Full citation in Scopus will open in a new window\\"
++                                 class=\\"scopusCitationCount CitationCountView-citationCount-741 ExternalLink-externalLink-738\\"
++                                 href=\\"http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=2-s2.0-0028527457&origin=inward\\"
++                                 rel=\\"noopener noreferrer\\"
++                                 tabindex=\\"0\\"
++                                 target=\\"_blank\\"
++                                 theme=\\"[object Object]\\"
++                                 title=\\"Full citation in Scopus will open in a new window\\"
+                                >
++                                 <span
++                                   class=\\"fez-icon scopus large\\"
++                                 />
++                                 <span
++                                   class=\\"CitationCountView-citationCountNumber-742\\"
++                                 >
++                                   25
++                                 </span>
++                               </a>
++                               <a
++                                 aria-label=\\"Full citation in Altmetric will open in a new window\\"
++                                 class=\\"altmetricCitationCount CitationCountView-citationCount-741 ExternalLink-externalLink-738\\"
++                                 href=\\"http://www.altmetric.com/details.php?citation_id=11749800\\"
++                                 rel=\\"noopener noreferrer\\"
++                                 tabindex=\\"0\\"
++                                 target=\\"_blank\\"
++                                 theme=\\"[object Object]\\"
++                                 title=\\"Full citation in Altmetric will open in a new window\\"
++                               >
++                                 <span
++                                   class=\\"fez-icon altmetric large\\"
++                                 />
++                                 <span
++                                   class=\\"CitationCountView-citationCountNumber-742\\"
++                                 >
++                                   4
++                                 </span>
++                               </a>
++                               <a
++                                 aria-label=\\"Full citation in Google scholar will open in a new window\\"
++                                 class=\\"googleCitationCount CitationCountView-citationCount-741 ExternalLink-externalLink-738\\"
++                                 href=\\"https://scholar.google.com/scholar?q=intitle:Rheumatic%20complications%20of%20influenza%20vaccination\\"
++                                 rel=\\"noopener noreferrer\\"
++                                 tabindex=\\"0\\"
++                                 target=\\"_blank\\"
++                                 theme=\\"[object Object]\\"
++                                 title=\\"Full citation in Google scholar will open in a new window\\"
++                               >
++                                 <span
++                                   class=\\"fez-icon google large\\"
++                                 />
++                               </a>
++                               <span
++                                 class=\\"noOaIcon\\"
++                               />
++                             </div>
+                              <div
+                                class=\\"MuiGrid-item-347\\"
++                             />
++                             <div
++                               class=\\"MuiGrid-item-347 MuiGrid-grid-xs-true-374\\"
 +                             />
 +                           </div>
-                            <div
-                              class=\\"MuiGrid-item-347\\"
-+                           />
-+                           <div
-+                             class=\\"MuiGrid-item-347 MuiGrid-grid-xs-true-374\\"
-+                           />
 +                         </div>
 +                       </div>
 +                     </div>
 +                   </div>
++                   <hr
++                     class=\\"MuiDivider-root-743 PublicationCitation-divider-731\\"
++                   />
 +                 </div>
-+                 <hr
-+                   class=\\"MuiDivider-root-743 PublicationCitation-divider-731\\"
-+                 />
 +               </div>
 +               <div />
 +             </div>
@@ -2155,24 +2159,30 @@ exports[`SearchRecords Should be able to perform advanced search 10`] = `
             <div
 -                     style=\\"padding: 8px;\\"
 +             class=\\"MuiGrid-container-346\\"
-+           >
-+             <div
+            >
+              <div
+-                       class=\\"MuiGrid-container-346 MuiGrid-spacing-xs-8-368 MuiGrid-align-items-xs-center-354 MuiGrid-align-content-xs-center-358 MuiGrid-justify-xs-center-363\\"
 +               class=\\"MuiGrid-item-347 MuiGrid-grid-xs-true-374 RighthandCard-title-747\\"
 +             >
 +               <h6
 +                 class=\\"MuiTypography-root-577 MuiTypography-h6-594 MuiTypography-colorPrimary-607\\"
-+               >
+                >
 +                 Refine results
 +               </h6>
 +             </div>
-+             <div
+              <div
+-                         class=\\"MuiGrid-item-347 MuiGrid-grid-xs-auto-373\\"
+-                         style=\\"text-align: center;\\"
 +               class=\\"MuiGrid-item-347 MuiGrid-grid-xs-12-386\\"
-+             >
+              >
 +               <hr
 +                 class=\\"MuiDivider-root-743 RighthandCard-divider-748\\"
 +               />
 +             </div>
-+             <div
+              <div
+-                           class=\\"MuiCircularProgress-root-722 MuiCircularProgress-colorPrimary-725 MuiCircularProgress-indeterminate-724\\"
+-                           role=\\"progressbar\\"
+-                           style=\\"width: 18px; height: 18px;\\"
 +               class=\\"MuiGrid-item-347 MuiGrid-grid-xs-12-386\\"
 +             >
 +               <div
@@ -2185,53 +2195,14 @@ exports[`SearchRecords Should be able to perform advanced search 10`] = `
 +                     class=\\"MuiButtonBase-root-557 MuiListItem-root-755 MuiListItem-default-758 MuiListItem-dense-759 MuiListItem-gutters-762 FacetsFilterListItem-listItemGutters-753 MuiListItem-button-763\\"
 +                     role=\\"button\\"
 +                     tabindex=\\"0\\"
-                    >
-                      <div
--                       class=\\"MuiGrid-container-346 MuiGrid-spacing-xs-8-368 MuiGrid-align-items-xs-center-354 MuiGrid-align-content-xs-center-358 MuiGrid-justify-xs-center-363\\"
-+                       class=\\"MuiListItemText-root-766 MuiListItemText-dense-768\\"
-+                     >
-+                       <p
-+                         class=\\"MuiTypography-root-577 MuiTypography-body2-585 MuiTypography-colorTextPrimary-609 FacetsFilterListItem-listText-754\\"
-+                       >
-+                         Work type
-+                       </p>
-+                     </div>
-+                     <svg
-+                       aria-hidden=\\"true\\"
-+                       class=\\"MuiSvgIcon-root-618\\"
-+                       focusable=\\"false\\"
-+                       role=\\"presentation\\"
-+                       viewBox=\\"0 0 24 24\\"
-                      >
-+                       <path
-+                         d=\\"M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z\\"
-+                       />
-+                       <path
-+                         d=\\"M0 0h24v24H0z\\"
-+                         fill=\\"none\\"
-+                       />
-+                     </svg>
-+                     <span
-+                       class=\\"MuiTouchRipple-root-560\\"
-+                     />
-+                   </div>
-                    <div
--                         class=\\"MuiGrid-item-347 MuiGrid-grid-xs-auto-373\\"
--                         style=\\"text-align: center;\\"
-+                     class=\\"MuiButtonBase-root-557 MuiListItem-root-755 MuiListItem-default-758 MuiListItem-dense-759 MuiListItem-gutters-762 FacetsFilterListItem-listItemGutters-753 MuiListItem-button-763\\"
-+                     role=\\"button\\"
-+                     tabindex=\\"0\\"
-                    >
-                      <div
--                           class=\\"MuiCircularProgress-root-722 MuiCircularProgress-colorPrimary-725 MuiCircularProgress-indeterminate-724\\"
--                           role=\\"progressbar\\"
--                           style=\\"width: 18px; height: 18px;\\"
++                   >
++                     <div
 +                       class=\\"MuiListItemText-root-766 MuiListItemText-dense-768\\"
 +                     >
 +                       <p
 +                         class=\\"MuiTypography-root-577 MuiTypography-body2-585 MuiTypography-colorTextPrimary-609 FacetsFilterListItem-listText-754\\"
                         >
-+                         Keywords
++                         Work type
 +                       </p>
 +                     </div>
                       <svg
@@ -2255,7 +2226,40 @@ exports[`SearchRecords Should be able to perform advanced search 10`] = `
                           fill=\\"none\\"
 -                               r=\\"21\\"
 -                               stroke-width=\\"2\\"
++                       />
++                     </svg>
++                     <span
++                       class=\\"MuiTouchRipple-root-560\\"
++                     />
++                   </div>
++                   <div
++                     class=\\"MuiButtonBase-root-557 MuiListItem-root-755 MuiListItem-default-758 MuiListItem-dense-759 MuiListItem-gutters-762 FacetsFilterListItem-listItemGutters-753 MuiListItem-button-763\\"
++                     role=\\"button\\"
++                     tabindex=\\"0\\"
++                   >
++                     <div
++                       class=\\"MuiListItemText-root-766 MuiListItemText-dense-768\\"
++                     >
++                       <p
++                         class=\\"MuiTypography-root-577 MuiTypography-body2-585 MuiTypography-colorTextPrimary-609 FacetsFilterListItem-listText-754\\"
++                       >
++                         Keywords
++                       </p>
++                     </div>
++                     <svg
++                       aria-hidden=\\"true\\"
++                       class=\\"MuiSvgIcon-root-618\\"
++                       focusable=\\"false\\"
++                       role=\\"presentation\\"
++                       viewBox=\\"0 0 24 24\\"
++                     >
++                       <path
++                         d=\\"M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z\\"
                         />
++                       <path
++                         d=\\"M0 0h24v24H0z\\"
++                         fill=\\"none\\"
++                       />
                       </svg>
 +                     <span
 +                       class=\\"MuiTouchRipple-root-560\\"
@@ -2316,39 +2320,6 @@ exports[`SearchRecords Should be able to perform advanced search 10`] = `
 +                       focusable=\\"false\\"
 +                       role=\\"presentation\\"
 +                       viewBox=\\"0 0 24 24\\"
-+                     >
-+                       <path
-+                         d=\\"M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z\\"
-+                       />
-+                       <path
-+                         d=\\"M0 0h24v24H0z\\"
-+                         fill=\\"none\\"
-+                       />
-+                     </svg>
-+                     <span
-+                       class=\\"MuiTouchRipple-root-560\\"
-+                     />
-+                   </div>
-+                   <div
-+                     class=\\"MuiButtonBase-root-557 MuiListItem-root-755 MuiListItem-default-758 MuiListItem-dense-759 MuiListItem-gutters-762 FacetsFilterListItem-listItemGutters-753 MuiListItem-button-763\\"
-+                     role=\\"button\\"
-+                     tabindex=\\"0\\"
-+                   >
-+                     <div
-+                       class=\\"MuiListItemText-root-766 MuiListItemText-dense-768\\"
-+                     >
-+                       <p
-+                         class=\\"MuiTypography-root-577 MuiTypography-body2-585 MuiTypography-colorTextPrimary-609 FacetsFilterListItem-listText-754\\"
-+                       >
-+                         Collection
-+                       </p>
-+                     </div>
-+                     <svg
-+                       aria-hidden=\\"true\\"
-+                       class=\\"MuiSvgIcon-root-618\\"
-+                       focusable=\\"false\\"
-+                       role=\\"presentation\\"
-+                       viewBox=\\"0 0 24 24\\"
                       >
 +                       <path
 +                         d=\\"M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z\\"
@@ -2368,18 +2339,51 @@ exports[`SearchRecords Should be able to perform advanced search 10`] = `
 +                     class=\\"MuiButtonBase-root-557 MuiListItem-root-755 MuiListItem-default-758 MuiListItem-dense-759 MuiListItem-gutters-762 FacetsFilterListItem-listItemGutters-753 MuiListItem-button-763\\"
 +                     role=\\"button\\"
 +                     tabindex=\\"0\\"
+                    >
+-                           Searching for works
+-                         </span>
++                     <div
++                       class=\\"MuiListItemText-root-766 MuiListItemText-dense-768\\"
++                     >
++                       <p
++                         class=\\"MuiTypography-root-577 MuiTypography-body2-585 MuiTypography-colorTextPrimary-609 FacetsFilterListItem-listText-754\\"
++                       >
++                         Collection
++                       </p>
++                     </div>
++                     <svg
++                       aria-hidden=\\"true\\"
++                       class=\\"MuiSvgIcon-root-618\\"
++                       focusable=\\"false\\"
++                       role=\\"presentation\\"
++                       viewBox=\\"0 0 24 24\\"
++                     >
++                       <path
++                         d=\\"M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z\\"
++                       />
++                       <path
++                         d=\\"M0 0h24v24H0z\\"
++                         fill=\\"none\\"
++                       />
++                     </svg>
++                     <span
++                       class=\\"MuiTouchRipple-root-560\\"
++                     />
+                    </div>
++                   <div
++                     class=\\"MuiButtonBase-root-557 MuiListItem-root-755 MuiListItem-default-758 MuiListItem-dense-759 MuiListItem-gutters-762 FacetsFilterListItem-listItemGutters-753 MuiListItem-button-763\\"
++                     role=\\"button\\"
++                     tabindex=\\"0\\"
 +                   >
 +                     <div
 +                       class=\\"MuiListItemText-root-766 MuiListItemText-dense-768\\"
 +                     >
 +                       <p
 +                         class=\\"MuiTypography-root-577 MuiTypography-body2-585 MuiTypography-colorTextPrimary-609 FacetsFilterListItem-listText-754\\"
-                        >
--                           Searching for works
--                         </span>
++                       >
 +                         Author
 +                       </p>
-                      </div>
++                     </div>
 +                     <svg
 +                       aria-hidden=\\"true\\"
 +                       class=\\"MuiSvgIcon-root-618\\"
@@ -2917,13 +2921,12 @@ exports[`SearchRecords Should be able to perform simple search 3`] = `
                               </div>
                               <input
                                 id=\\"exportPublicationsFormat\\"
-@@ -306,70 +310,723 @@
-                      </div>
+@@ -307,69 +311,730 @@
                     </div>
                   </div>
                   <div
                     class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
-+                 >
+                  >
 +                   <div />
 +                 </div>
 +               </div>
@@ -2931,432 +2934,440 @@ exports[`SearchRecords Should be able to perform simple search 3`] = `
 +                 style=\\"margin-top: 16px;\\"
 +               >
 +                 <div
-+                   class=\\"MuiGrid-container-3\\"
++                   class=\\"publicationCitation\\"
 +                 >
 +                   <div
-+                     class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31\\"
++                     class=\\"MuiGrid-container-3\\"
 +                   >
 +                     <div
-+                       class=\\"MuiGrid-container-3\\"
++                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31\\"
 +                     >
 +                       <div
-+                         class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31\\"
-+                         style=\\"min-width: 1px;\\"
-+                       >
-+                         <h6
-+                           class=\\"MuiTypography-root-244 MuiTypography-h6-261 PublicationCitation-citationTitle-300\\"
-+                         >
-+                           <a
-+                             href=\\"/view/UQ:215681\\"
-+                           >
-+                             Rheumatic complications of influenza vaccination
-+                           </a>
-+                         </h6>
-+                       </div>
-+                       <div
-+                         class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 PublicationCitation-citationText-301\\"
++                         class=\\"MuiGrid-container-3\\"
 +                       >
 +                         <div
-+                           class=\\"citationContent citationJournalArticle\\"
++                           class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31\\"
++                           style=\\"min-width: 1px;\\"
 +                         >
-+                           <span
-+                             class=\\"citationAuthors\\"
-                            >
-                              <span
--                     class=\\"publicationsListControls empty\\"
-+                               class=\\"citationAuthor\\"
++                           <h6
++                             class=\\"MuiTypography-root-244 MuiTypography-h6-261 PublicationCitation-citationTitle-300\\"
++                           >
++                             <a
++                               href=\\"/view/UQ:215681\\"
 +                             >
-+                               Brown, M. A.
-+                             </span>
-+                             <span
-+                               class=\\"citationAuthor\\"
-+                             >
-+                                and Bertouch, J. V.
-+                             </span>
-+                              
-+                           </span>
-+                           <span
-+                             class=\\"citationDate\\"
-+                           >
-+                             (1994).
-+                           </span>
-+                           <span
-+                             class=\\"citationTitle\\"
-+                           >
-+                              Rheumatic complications of influenza vaccination.
-+                           </span>
-+                           <span
-+                             class=\\"citationJournalName\\"
-+                           >
-+                              Australian and New Zealand Journal of Medicine 
-+                           </span>
-+                           <span
-+                             class=\\"citationVolumeNumber\\"
-+                           >
-+                              24 
-+                           </span>
-+                           <span
-+                             class=\\"citationIssueNumber\\"
-+                           >
-+                             (5) 
-+                           </span>
-+                           <span
-+                             class=\\"citationPageRange\\"
-+                           >
-+                             <span
-+                               class=\\"citationStartPage\\"
-+                             >
-+                               572
-+                             </span>
-+                             -
-+                             <span
-+                               class=\\"citationEndPage\\"
-+                             >
-+                               573
-+                             </span>
-+                           </span>
-+                           <span>
-+                             . 
-+                           </span>
-+                           <a
-+                             aria-label=\\"Open this DOI in an new window\\"
-+                             class=\\"citationDoiLink ExternalLink-externalLink-306\\"
-+                             href=\\"https://doi.org/10.1111/j.1445-5994.1994.tb01760.x\\"
-+                             rel=\\"noopener noreferrer\\"
-+                             tabindex=\\"0\\"
-+                             target=\\"_blank\\"
-+                             theme=\\"[object Object]\\"
-+                             title=\\"Open this DOI in an new window\\"
-+                           >
-+                             <svg
-+                               aria-hidden=\\"true\\"
-+                               class=\\"MuiSvgIcon-root-286 ExternalLink-externalLinkIcon-307\\"
-+                               focusable=\\"false\\"
-+                               role=\\"presentation\\"
-+                               viewBox=\\"0 0 24 24\\"
-+                             >
-+                               <path
-+                                 d=\\"M0 0h24v24H0z\\"
-+                                 fill=\\"none\\"
-                                />
-+                               <path
-+                                 d=\\"M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z\\"
-+                               />
-+                             </svg>
-+                             https://doi.org/10.1111/j.1445-5994.1994.tb01760.x
-+                           </a>
-                          </div>
-                        </div>
-                        <div
--                 class=\\"MuiGrid-container-3 MuiGrid-justify-xs-center-20\\"
-+                         class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 PublicationCitation-citationCounts-302\\"
-+                       >
++                               Rheumatic complications of influenza vaccination
++                             </a>
++                           </h6>
++                         </div>
 +                         <div
-+                           class=\\"MuiGrid-container-3\\"
++                           class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 PublicationCitation-citationText-301\\"
 +                         >
 +                           <div
-+                             class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-auto-44\\"
++                             class=\\"citationContent citationJournalArticle\\"
 +                           >
-+                             <a
-+                               aria-label=\\"Full citation in Web of science will open in a new window\\"
-+                               class=\\"wosCitationCount CitationCountView-citationCount-309 ExternalLink-externalLink-306\\"
-+                               href=\\"http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=A1994PP66100010&SrcAuth=uqueensland\\"
-+                               rel=\\"noopener noreferrer\\"
-+                               tabindex=\\"0\\"
-+                               target=\\"_blank\\"
-+                               theme=\\"[object Object]\\"
-+                               title=\\"Full citation in Web of science will open in a new window\\"
-+                             >
-+                               <span
-+                                 class=\\"fez-icon wos large\\"
-+                               />
-+                               <span
-+                                 class=\\"CitationCountView-citationCountNumber-310\\"
-+                               >
-+                                 20
-+                               </span>
-+                             </a>
-+                             <a
-+                               aria-label=\\"Full citation in Scopus will open in a new window\\"
-+                               class=\\"scopusCitationCount CitationCountView-citationCount-309 ExternalLink-externalLink-306\\"
-+                               href=\\"http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=2-s2.0-0028527457&origin=inward\\"
-+                               rel=\\"noopener noreferrer\\"
-+                               tabindex=\\"0\\"
-+                               target=\\"_blank\\"
-+                               theme=\\"[object Object]\\"
-+                               title=\\"Full citation in Scopus will open in a new window\\"
-+                             >
-+                               <span
-+                                 class=\\"fez-icon scopus large\\"
-+                               />
-+                               <span
-+                                 class=\\"CitationCountView-citationCountNumber-310\\"
-+                               >
-+                                 25
-+                               </span>
-+                             </a>
-+                             <a
-+                               aria-label=\\"Full citation in Altmetric will open in a new window\\"
-+                               class=\\"altmetricCitationCount CitationCountView-citationCount-309 ExternalLink-externalLink-306\\"
-+                               href=\\"http://www.altmetric.com/details.php?citation_id=11749800\\"
-+                               rel=\\"noopener noreferrer\\"
-+                               tabindex=\\"0\\"
-+                               target=\\"_blank\\"
-+                               theme=\\"[object Object]\\"
-+                               title=\\"Full citation in Altmetric will open in a new window\\"
-+                             >
-+                               <span
-+                                 class=\\"fez-icon altmetric large\\"
-+                               />
-+                               <span
-+                                 class=\\"CitationCountView-citationCountNumber-310\\"
-+                               >
-+                                 4
-+                               </span>
-+                             </a>
-+                             <a
-+                               aria-label=\\"Full citation in Google scholar will open in a new window\\"
-+                               class=\\"googleCitationCount CitationCountView-citationCount-309 ExternalLink-externalLink-306\\"
-+                               href=\\"https://scholar.google.com/scholar?q=intitle:Rheumatic%20complications%20of%20influenza%20vaccination\\"
-+                               rel=\\"noopener noreferrer\\"
-+                               tabindex=\\"0\\"
-+                               target=\\"_blank\\"
-+                               theme=\\"[object Object]\\"
-+                               title=\\"Full citation in Google scholar will open in a new window\\"
-                              >
-+                               <span
-+                                 class=\\"fez-icon google large\\"
-+                               />
-+                             </a>
 +                             <span
-+                               class=\\"noOaIcon\\"
++                               class=\\"citationAuthors\\"
++                             >
++                               <span
++                                 class=\\"citationAuthor\\"
++                               >
++                                 Brown, M. A.
++                               </span>
+                                <span
+-                     class=\\"publicationsListControls empty\\"
++                                 class=\\"citationAuthor\\"
++                               >
++                                  and Bertouch, J. V.
++                               </span>
++                                
++                             </span>
++                             <span
++                               class=\\"citationDate\\"
++                             >
++                               (1994).
++                             </span>
++                             <span
++                               class=\\"citationTitle\\"
++                             >
++                                Rheumatic complications of influenza vaccination.
++                             </span>
++                             <span
++                               class=\\"citationJournalName\\"
++                             >
++                                Australian and New Zealand Journal of Medicine 
++                             </span>
++                             <span
++                               class=\\"citationVolumeNumber\\"
++                             >
++                                24 
++                             </span>
++                             <span
++                               class=\\"citationIssueNumber\\"
++                             >
++                               (5) 
++                             </span>
++                             <span
++                               class=\\"citationPageRange\\"
++                             >
++                               <span
++                                 class=\\"citationStartPage\\"
++                               >
++                                 572
++                               </span>
++                               -
++                               <span
++                                 class=\\"citationEndPage\\"
++                               >
++                                 573
++                               </span>
++                             </span>
++                             <span>
++                               . 
++                             </span>
++                             <a
++                               aria-label=\\"Open this DOI in an new window\\"
++                               class=\\"citationDoiLink ExternalLink-externalLink-306\\"
++                               href=\\"https://doi.org/10.1111/j.1445-5994.1994.tb01760.x\\"
++                               rel=\\"noopener noreferrer\\"
++                               tabindex=\\"0\\"
++                               target=\\"_blank\\"
++                               theme=\\"[object Object]\\"
++                               title=\\"Open this DOI in an new window\\"
++                             >
++                               <svg
++                                 aria-hidden=\\"true\\"
++                                 class=\\"MuiSvgIcon-root-286 ExternalLink-externalLinkIcon-307\\"
++                                 focusable=\\"false\\"
++                                 role=\\"presentation\\"
++                                 viewBox=\\"0 0 24 24\\"
++                               >
++                                 <path
++                                   d=\\"M0 0h24v24H0z\\"
++                                   fill=\\"none\\"
+                                  />
++                                 <path
++                                   d=\\"M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z\\"
++                                 />
++                               </svg>
++                               https://doi.org/10.1111/j.1445-5994.1994.tb01760.x
++                             </a>
+                            </div>
+                          </div>
+                          <div
+-                 class=\\"MuiGrid-container-3 MuiGrid-justify-xs-center-20\\"
++                           class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 PublicationCitation-citationCounts-302\\"
++                         >
++                           <div
++                             class=\\"MuiGrid-container-3\\"
++                           >
++                             <div
++                               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-auto-44\\"
++                             >
++                               <a
++                                 aria-label=\\"Full citation in Web of science will open in a new window\\"
++                                 class=\\"wosCitationCount CitationCountView-citationCount-309 ExternalLink-externalLink-306\\"
++                                 href=\\"http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=A1994PP66100010&SrcAuth=uqueensland\\"
++                                 rel=\\"noopener noreferrer\\"
++                                 tabindex=\\"0\\"
++                                 target=\\"_blank\\"
++                                 theme=\\"[object Object]\\"
++                                 title=\\"Full citation in Web of science will open in a new window\\"
++                               >
++                                 <span
++                                   class=\\"fez-icon wos large\\"
++                                 />
++                                 <span
++                                   class=\\"CitationCountView-citationCountNumber-310\\"
++                                 >
++                                   20
++                                 </span>
++                               </a>
++                               <a
++                                 aria-label=\\"Full citation in Scopus will open in a new window\\"
++                                 class=\\"scopusCitationCount CitationCountView-citationCount-309 ExternalLink-externalLink-306\\"
++                                 href=\\"http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=2-s2.0-0028527457&origin=inward\\"
++                                 rel=\\"noopener noreferrer\\"
++                                 tabindex=\\"0\\"
++                                 target=\\"_blank\\"
++                                 theme=\\"[object Object]\\"
++                                 title=\\"Full citation in Scopus will open in a new window\\"
++                               >
++                                 <span
++                                   class=\\"fez-icon scopus large\\"
++                                 />
++                                 <span
++                                   class=\\"CitationCountView-citationCountNumber-310\\"
++                                 >
++                                   25
++                                 </span>
++                               </a>
++                               <a
++                                 aria-label=\\"Full citation in Altmetric will open in a new window\\"
++                                 class=\\"altmetricCitationCount CitationCountView-citationCount-309 ExternalLink-externalLink-306\\"
++                                 href=\\"http://www.altmetric.com/details.php?citation_id=11749800\\"
++                                 rel=\\"noopener noreferrer\\"
++                                 tabindex=\\"0\\"
++                                 target=\\"_blank\\"
++                                 theme=\\"[object Object]\\"
++                                 title=\\"Full citation in Altmetric will open in a new window\\"
+                                >
++                                 <span
++                                   class=\\"fez-icon altmetric large\\"
++                                 />
++                                 <span
++                                   class=\\"CitationCountView-citationCountNumber-310\\"
++                                 >
++                                   4
++                                 </span>
++                               </a>
++                               <a
++                                 aria-label=\\"Full citation in Google scholar will open in a new window\\"
++                                 class=\\"googleCitationCount CitationCountView-citationCount-309 ExternalLink-externalLink-306\\"
++                                 href=\\"https://scholar.google.com/scholar?q=intitle:Rheumatic%20complications%20of%20influenza%20vaccination\\"
++                                 rel=\\"noopener noreferrer\\"
++                                 tabindex=\\"0\\"
++                                 target=\\"_blank\\"
++                                 theme=\\"[object Object]\\"
++                                 title=\\"Full citation in Google scholar will open in a new window\\"
++                               >
++                                 <span
++                                   class=\\"fez-icon google large\\"
++                                 />
++                               </a>
++                               <span
++                                 class=\\"noOaIcon\\"
++                               />
++                             </div>
+                              <div
+                                class=\\"MuiGrid-item-4\\"
++                             />
++                             <div
++                               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31\\"
 +                             />
 +                           </div>
-                            <div
-                              class=\\"MuiGrid-item-4\\"
-+                           />
-+                           <div
-+                             class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31\\"
-+                           />
 +                         </div>
 +                       </div>
 +                     </div>
 +                   </div>
++                   <hr
++                     class=\\"MuiDivider-root-311 PublicationCitation-divider-299\\"
++                   />
 +                 </div>
-+                 <hr
-+                   class=\\"MuiDivider-root-311 PublicationCitation-divider-299\\"
-+                 />
 +                 <div
-+                   class=\\"MuiGrid-container-3\\"
++                   class=\\"publicationCitation\\"
                   >
                     <div
 -                     style=\\"padding: 8px;\\"
-+                     class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31\\"
++                     class=\\"MuiGrid-container-3\\"
                     >
                       <div
 -                       class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-8-25 MuiGrid-align-items-xs-center-11 MuiGrid-align-content-xs-center-15 MuiGrid-justify-xs-center-20\\"
-+                       class=\\"MuiGrid-container-3\\"
-                      >
-                        <div
++                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31\\"
++                     >
++                       <div
++                         class=\\"MuiGrid-container-3\\"
+                        >
+                          <div
 -                         class=\\"MuiGrid-item-4 MuiGrid-grid-xs-auto-30\\"
 -                         style=\\"text-align: center;\\"
-+                         class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31\\"
-+                         style=\\"min-width: 1px;\\"
-+                       >
-+                         <h6
-+                           class=\\"MuiTypography-root-244 MuiTypography-h6-261 PublicationCitation-citationTitle-300\\"
-                          >
-+                           <a
-+                             href=\\"/view/UQ:175986\\"
++                           class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31\\"
++                           style=\\"min-width: 1px;\\"
++                         >
++                           <h6
++                             class=\\"MuiTypography-root-244 MuiTypography-h6-261 PublicationCitation-citationTitle-300\\"
 +                           >
-+                             Patient care drives mandatory vaccination
-+                           </a>
-+                         </h6>
-+                       </div>
-+                       <div
-+                         class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 PublicationCitation-citationText-301\\"
-+                       >
++                             <a
++                               href=\\"/view/UQ:175986\\"
+                              >
++                               Patient care drives mandatory vaccination
++                             </a>
++                           </h6>
++                         </div>
                           <div
 -                           class=\\"MuiCircularProgress-root-235 MuiCircularProgress-colorPrimary-238 MuiCircularProgress-indeterminate-237\\"
 -                           role=\\"progressbar\\"
 -                           style=\\"width: 18px; height: 18px;\\"
-+                           class=\\"citationContent citationJournalArticle\\"
++                           class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 PublicationCitation-citationText-301\\"
 +                         >
-+                           <span
-+                             class=\\"citationAuthors\\"
++                           <div
++                             class=\\"citationContent citationJournalArticle\\"
 +                           >
 +                             <span
-+                               class=\\"citationAuthor\\"
++                               class=\\"citationAuthors\\"
 +                             >
-+                               Lambert, Stephen B.
++                               <span
++                                 class=\\"citationAuthor\\"
++                               >
++                                 Lambert, Stephen B.
++                               </span>
++                                
 +                             </span>
-+                              
-+                           </span>
-+                           <span
-+                             class=\\"citationDate\\"
-+                           >
-+                             (2008).
-+                           </span>
-+                           <span
-+                             class=\\"citationTitle\\"
-+                           >
-+                              Patient care drives mandatory vaccination.
-+                           </span>
-+                           <span
-+                             class=\\"citationJournalName\\"
-+                           >
-+                              British Medical Journal 
-+                           </span>
-+                           <span
-+                             class=\\"citationVolumeNumber\\"
-+                           >
-+                              337 
-+                           </span>
-+                           <span
-+                             class=\\"citationIssueNumber\\"
-+                           >
-+                             (7680) 
-+                           </span>
-+                           <span
-+                             class=\\"citationPageRange\\"
-+                           >
 +                             <span
-+                               class=\\"citationStartPage\\"
++                               class=\\"citationDate\\"
 +                             >
-+                               1188
++                               (2008).
 +                             </span>
-+                             -
 +                             <span
-+                               class=\\"citationEndPage\\"
++                               class=\\"citationTitle\\"
 +                             >
-+                               1188
++                                Patient care drives mandatory vaccination.
 +                             </span>
-+                           </span>
-+                           <span>
-+                             . 
-+                           </span>
-+                           <a
-+                             aria-label=\\"Open this DOI in an new window\\"
-+                             class=\\"citationDoiLink ExternalLink-externalLink-306\\"
-+                             href=\\"https://doi.org/10.1136/bmj.a2588\\"
-+                             rel=\\"noopener noreferrer\\"
-+                             tabindex=\\"0\\"
-+                             target=\\"_blank\\"
-+                             theme=\\"[object Object]\\"
-+                             title=\\"Open this DOI in an new window\\"
-                            >
-                              <svg
++                             <span
++                               class=\\"citationJournalName\\"
++                             >
++                                British Medical Journal 
++                             </span>
++                             <span
++                               class=\\"citationVolumeNumber\\"
++                             >
++                                337 
++                             </span>
++                             <span
++                               class=\\"citationIssueNumber\\"
++                             >
++                               (7680) 
++                             </span>
++                             <span
++                               class=\\"citationPageRange\\"
++                             >
++                               <span
++                                 class=\\"citationStartPage\\"
++                               >
++                                 1188
++                               </span>
++                               -
++                               <span
++                                 class=\\"citationEndPage\\"
++                               >
++                                 1188
++                               </span>
++                             </span>
++                             <span>
++                               . 
++                             </span>
++                             <a
++                               aria-label=\\"Open this DOI in an new window\\"
++                               class=\\"citationDoiLink ExternalLink-externalLink-306\\"
++                               href=\\"https://doi.org/10.1136/bmj.a2588\\"
++                               rel=\\"noopener noreferrer\\"
++                               tabindex=\\"0\\"
++                               target=\\"_blank\\"
++                               theme=\\"[object Object]\\"
++                               title=\\"Open this DOI in an new window\\"
+                              >
+                                <svg
 -                             class=\\"MuiCircularProgress-svg-240\\"
 -                             viewBox=\\"22 22 44 44\\"
-+                               aria-hidden=\\"true\\"
-+                               class=\\"MuiSvgIcon-root-286 ExternalLink-externalLinkIcon-307\\"
-+                               focusable=\\"false\\"
-+                               role=\\"presentation\\"
-+                               viewBox=\\"0 0 24 24\\"
-                              >
++                                 aria-hidden=\\"true\\"
++                                 class=\\"MuiSvgIcon-root-286 ExternalLink-externalLinkIcon-307\\"
++                                 focusable=\\"false\\"
++                                 role=\\"presentation\\"
++                                 viewBox=\\"0 0 24 24\\"
+                                >
 -                             <circle
 -                               class=\\"MuiCircularProgress-circle-241 MuiCircularProgress-circleIndeterminate-243\\"
 -                               cx=\\"44\\"
 -                               cy=\\"44\\"
-+                               <path
-+                                 d=\\"M0 0h24v24H0z\\"
-                                  fill=\\"none\\"
++                                 <path
++                                   d=\\"M0 0h24v24H0z\\"
+                                    fill=\\"none\\"
 -                               r=\\"21\\"
 -                               stroke-width=\\"2\\"
-+                               />
-+                               <path
-+                                 d=\\"M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z\\"
-                                />
-                              </svg>
-+                             https://doi.org/10.1136/bmj.a2588
-+                           </a>
++                                 />
++                                 <path
++                                   d=\\"M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z\\"
+                                  />
+                                </svg>
++                               https://doi.org/10.1136/bmj.a2588
++                             </a>
+                            </div>
                           </div>
-                        </div>
-+                       <div
-+                         class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 PublicationCitation-citationCounts-302\\"
-+                       >
                           <div
 -                         class=\\"MuiGrid-item-4 MuiGrid-grid-xs-auto-30\\"
 -                         style=\\"text-align: center;\\"
-+                           class=\\"MuiGrid-container-3\\"
++                           class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 PublicationCitation-citationCounts-302\\"
 +                         >
 +                           <div
-+                             class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-auto-44\\"
++                             class=\\"MuiGrid-container-3\\"
 +                           >
-+                             <a
-+                               aria-label=\\"Full citation in Web of science will open in a new window\\"
-+                               class=\\"wosCitationCount CitationCountView-citationCount-309 ExternalLink-externalLink-306\\"
-+                               href=\\"http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=000262654000015&SrcAuth=uqueensland\\"
-+                               rel=\\"noopener noreferrer\\"
-+                               tabindex=\\"0\\"
-+                               target=\\"_blank\\"
-+                               theme=\\"[object Object]\\"
-+                               title=\\"Full citation in Web of science will open in a new window\\"
-                              >
-                                <span
++                             <div
++                               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-auto-44\\"
++                             >
++                               <a
++                                 aria-label=\\"Full citation in Web of science will open in a new window\\"
++                                 class=\\"wosCitationCount CitationCountView-citationCount-309 ExternalLink-externalLink-306\\"
++                                 href=\\"http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=000262654000015&SrcAuth=uqueensland\\"
++                                 rel=\\"noopener noreferrer\\"
++                                 tabindex=\\"0\\"
++                                 target=\\"_blank\\"
++                                 theme=\\"[object Object]\\"
++                                 title=\\"Full citation in Web of science will open in a new window\\"
++                               >
++                                 <span
++                                   class=\\"fez-icon wos large\\"
++                                 />
++                                 <span
++                                   class=\\"CitationCountView-citationCountNumber-310\\"
++                                 >
++                                   4
++                                 </span>
++                               </a>
++                               <a
++                                 aria-label=\\"Full citation in Scopus will open in a new window\\"
++                                 class=\\"scopusCitationCount CitationCountView-citationCount-309 ExternalLink-externalLink-306\\"
++                                 href=\\"http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=2-s2.0-57349138348&origin=inward\\"
++                                 rel=\\"noopener noreferrer\\"
++                                 tabindex=\\"0\\"
++                                 target=\\"_blank\\"
++                                 theme=\\"[object Object]\\"
++                                 title=\\"Full citation in Scopus will open in a new window\\"
+                                >
+                                  <span
 -                           class=\\"MuiTypography-root-244 MuiTypography-h5-260 MuiTypography-colorPrimary-274\\"
 -                           style=\\"font-size: 1.33rem;\\"
-+                                 class=\\"fez-icon wos large\\"
-+                               />
-+                               <span
-+                                 class=\\"CitationCountView-citationCountNumber-310\\"
-+                               >
-+                                 4
-+                               </span>
-+                             </a>
-+                             <a
-+                               aria-label=\\"Full citation in Scopus will open in a new window\\"
-+                               class=\\"scopusCitationCount CitationCountView-citationCount-309 ExternalLink-externalLink-306\\"
-+                               href=\\"http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=2-s2.0-57349138348&origin=inward\\"
-+                               rel=\\"noopener noreferrer\\"
-+                               tabindex=\\"0\\"
-+                               target=\\"_blank\\"
-+                               theme=\\"[object Object]\\"
-+                               title=\\"Full citation in Scopus will open in a new window\\"
-+                             >
-+                               <span
-+                                 class=\\"fez-icon scopus large\\"
-+                               />
-+                               <span
-+                                 class=\\"CitationCountView-citationCountNumber-310\\"
-                                >
++                                   class=\\"fez-icon scopus large\\"
++                                 />
++                                 <span
++                                   class=\\"CitationCountView-citationCountNumber-310\\"
+                                  >
 -                           Searching for works
-+                                 1
-                                </span>
-+                             </a>
-+                             <a
-+                               aria-label=\\"Full citation in Google scholar will open in a new window\\"
-+                               class=\\"googleCitationCount CitationCountView-citationCount-309 ExternalLink-externalLink-306\\"
-+                               href=\\"https://scholar.google.com/scholar?q=intitle:Patient%20care%20drives%20mandatory%20vaccination\\"
-+                               rel=\\"noopener noreferrer\\"
-+                               tabindex=\\"0\\"
-+                               target=\\"_blank\\"
-+                               theme=\\"[object Object]\\"
-+                               title=\\"Full citation in Google scholar will open in a new window\\"
-+                             >
++                                   1
+                                  </span>
++                               </a>
++                               <a
++                                 aria-label=\\"Full citation in Google scholar will open in a new window\\"
++                                 class=\\"googleCitationCount CitationCountView-citationCount-309 ExternalLink-externalLink-306\\"
++                                 href=\\"https://scholar.google.com/scholar?q=intitle:Patient%20care%20drives%20mandatory%20vaccination\\"
++                                 rel=\\"noopener noreferrer\\"
++                                 tabindex=\\"0\\"
++                                 target=\\"_blank\\"
++                                 theme=\\"[object Object]\\"
++                                 title=\\"Full citation in Google scholar will open in a new window\\"
++                               >
++                                 <span
++                                   class=\\"fez-icon google large\\"
++                                 />
++                               </a>
 +                               <span
-+                                 class=\\"fez-icon google large\\"
++                                 class=\\"noOaIcon\\"
 +                               />
-+                             </a>
-+                             <span
-+                               class=\\"noOaIcon\\"
++                             </div>
++                             <div
++                               class=\\"MuiGrid-item-4\\"
++                             />
++                             <div
++                               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31\\"
 +                             />
 +                           </div>
-+                           <div
-+                             class=\\"MuiGrid-item-4\\"
-+                           />
-+                           <div
-+                             class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31\\"
-+                           />
 +                         </div>
 +                       </div>
 +                     </div>
 +                   </div>
++                   <hr
++                     class=\\"MuiDivider-root-311 PublicationCitation-divider-299\\"
++                   />
 +                 </div>
-+                 <hr
-+                   class=\\"MuiDivider-root-311 PublicationCitation-divider-299\\"
-+                 />
-+               </div>
+                </div>
 +               <div />
 +             </div>
 +           </div>
@@ -3375,7 +3386,7 @@ exports[`SearchRecords Should be able to perform simple search 3`] = `
 +               >
 +                 Refine results
 +               </h6>
-              </div>
++             </div>
 +             <div
 +               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
 +             >
