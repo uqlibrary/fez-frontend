@@ -14,7 +14,7 @@ export default class PublicationsList extends PureComponent {
         showSourceCountIcon: PropTypes.bool,
         showUnpublishedBufferFields: PropTypes.bool,
         hideCountDiff: PropTypes.bool,
-        hideCountTotal: PropTypes.bool
+        hideCountTotal: PropTypes.bool,
     };
 
     static defaultProps = {
@@ -25,7 +25,7 @@ export default class PublicationsList extends PureComponent {
         showSourceCountIcon: false,
         showMetrics: false,
         showUnpublishedBufferFields: false,
-        hideCountDiff: false,
+        hideCountDiff: false
     };
 
     renderPublicationCitation(index, publication) {

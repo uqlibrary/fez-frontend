@@ -1,16 +1,18 @@
 context('Homepage', () => {
     beforeEach(() => {
         cy.visit('http://localhost:3000');
-        cy.get('button')
-            .contains('Close this message', {timeout: 5000})
-            .click({
-                force: true,
+        cy.get('#unsupportedBrowser.card button')
+            .then(($button) => {
+                // Button is only visible if browser is unsupported.
+                if ($button.filter(':visible')) {
+                    $button.click();
+                }
             });
-        cy.wait(3000);
     });
 
     it('Renders the tabbed panes as expected', () => {
-        cy.get('button')
+        cy.wait(2000);
+        cy.get('button', { timeout: 1000 })
             .get('span')
             .contains('Trending on Scopus')
             .click();
@@ -18,7 +20,7 @@ context('Homepage', () => {
         cy.get('h6').should('not.contain', 'Web of Science citation count');
         cy.get('h6').should('not.contain', 'Altmetric score');
 
-        cy.get('button')
+        cy.get('button', { timeout: 1000 })
             .get('span')
             .contains('Trending on Web of science')
             .click();
@@ -26,7 +28,7 @@ context('Homepage', () => {
         cy.get('h6').should('contain', 'Web of Science citation count');
         cy.get('h6').should('not.contain', 'Altmetric score');
 
-        cy.get('button')
+        cy.get('button', { timeout: 1000 })
             .get('span')
             .contains('Trending on Altmetric')
             .click();

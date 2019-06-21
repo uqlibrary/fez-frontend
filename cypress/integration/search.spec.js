@@ -1,13 +1,14 @@
 context('Search', () => {
     beforeEach(() => {
         cy.visit('http://localhost:3000/records/search');
-        cy.get('button')
-            .contains('Close this message', {timeout: 5000})
-            .click({
-                force: true,
+        cy.get('#unsupportedBrowser.card button')
+            .then(($button) => {
+                // Button is only visible if browser is unsupported.
+                if ($button.filter(':visible')) {
+                    $button.click();
+                }
             });
     });
-
     it('Doing a basic search to advanced search', () => {
         // Perform a basic search
         cy.get('#simpleSearchField').type('cats and dogs{enter}', {delay: 20});
@@ -48,7 +49,7 @@ context('Search', () => {
         cy.get('[placeholder="Add an author name"]').type('Ky Lane{enter}', {delay: 100});
         cy.get('button#advancedSearchButton').should('not.to.have.attr', 'disabled');
         // Add a set of collections to search from
-        cy.get('[aria-label="Click to add another advanced search field"]', {delay: 1000}).click();
+        cy.get('[aria-label="Click to add another advanced search field"]').click();
         cy.get(
             '[aria-label="Click to select a field to search from the list - Select a field currently selected"]',
         ).click();

@@ -1,6 +1,6 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
-import {documentTypesLookup} from 'config/general';
+import {DOCUMENT_TYPES_LOOKUP} from 'config/general';
 import {locale} from 'locale';
 import {withStyles} from '@material-ui/core/styles';
 
@@ -93,7 +93,7 @@ export class AdvancedSearchCaption extends PureComponent {
 
     getDocTypeData = (docTypes) => {
         const txt = locale.components.searchComponent.advancedSearch.fieldTypes;
-        const converteddocTypes = docTypes.map((item) => documentTypesLookup[item]);
+        const converteddocTypes = docTypes.map((item) => DOCUMENT_TYPES_LOOKUP[item]);
         const lastItem = converteddocTypes.pop();
         const docsString = converteddocTypes.length > 0 ? `${converteddocTypes.join(', ')} or ${lastItem}` : lastItem;
         return this.getCleanValue({

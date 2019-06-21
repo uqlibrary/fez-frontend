@@ -1,12 +1,22 @@
 import locale from 'locale/global';
 import templates from 'locale/templates';
+import { CONTENT_INDICATORS } from 'config/general';
 
 const moment = require('moment');
 
 const pipe = (...functionsList) => values => functionsList.reduce((attributes, functionItem) => functionItem(attributes), values);
 
-const getIssueValues = (data) => {
+export const getIssueValues = (data) => {
     return {
+        contentIndicators: (
+            data.contentIndicators &&
+            data.contentIndicators.length &&
+            data.contentIndicators.map(
+                id => CONTENT_INDICATORS.find(
+                    item => item.value === id
+                ).text
+            ).join('; ') || null
+        ),
         comments: data.comments || null,
         files: data.files && data.files.queue ? data.files.queue.map(item => item.name).toString().replace(/,/g, ', ') : null,
         link: data.rek_link || null,
@@ -456,6 +466,17 @@ export const getQualityIndicatorSearchKey = (qualityIndicators = []) => {
         fez_record_search_key_quality_indicator: qualityIndicators.map((item, index) => ({
             rek_quality_indicator: item,
             rek_quality_indicator_order: index + 1
+        }))
+    };
+};
+
+export const getContentIndicatorSearchKey = (contentIndicators = []) => {
+    if (!contentIndicators || contentIndicators.length === 0) return {};
+
+    return {
+        fez_record_search_key_content_indicator: contentIndicators.map((item, index) => ({
+            rek_content_indicator: item,
+            rek_content_indicator_order: index + 1
         }))
     };
 };

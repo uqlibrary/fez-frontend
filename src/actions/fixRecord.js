@@ -86,6 +86,14 @@ export function fixRecord(data) {
 
     const hasFilesToUpload = data.files && data.files.queue && data.files.queue.length > 0;
 
+    const hasAddedContentIndicators = (
+        !!data.contentIndicators &&
+        data.contentIndicators.length > (
+            data.publication.fez_record_search_key_content_indicator ||
+            []
+        ).length
+    );
+
     if (!isAuthorLinked && !isContributorLinked) {
         return dispatch => {
             dispatch({
@@ -101,11 +109,12 @@ export function fixRecord(data) {
 
         // if user updated links/added files - update record
         let patchRecordRequest = null;
-        if (hasFilesToUpload || data.rek_link) {
+        if (hasFilesToUpload || data.rek_link || hasAddedContentIndicators) {
             patchRecordRequest = {
                 rek_pid: data.publication.rek_pid,
                 ...transformers.getRecordLinkSearchKey(data),
-                ...transformers.getRecordFileAttachmentSearchKey(data.files ? data.files.queue : [], data.publication)
+                ...transformers.getRecordFileAttachmentSearchKey(data.files ? data.files.queue : [], data.publication),
+                ...transformers.getContentIndicatorSearchKey(data.contentIndicators || null),
             };
         }
 
@@ -114,7 +123,13 @@ export function fixRecord(data) {
 
         return Promise.resolve([])
             .then(()=> (hasFilesToUpload ? putUploadFiles(data.publication.rek_pid, data.files.queue, dispatch) : null))
-            .then(()=> (hasFilesToUpload || data.rek_link ? patch(EXISTING_RECORD_API({pid: data.publication.rek_pid}), patchRecordRequest) : null))
+            .then(()=> (
+                hasFilesToUpload ||
+                data.rek_link ||
+                hasAddedContentIndicators
+                    ? patch(EXISTING_RECORD_API({pid: data.publication.rek_pid}), patchRecordRequest)
+                    : null
+            ))
             .then(()=> (post(RECORDS_ISSUES_API({pid: data.publication.rek_pid}), createIssueRequest)))
             .then(responses => {
                 dispatch({

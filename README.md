@@ -270,6 +270,12 @@ can be found in the `src/mock/data/accounts.js` file.
 -   RHD submission form: <http://localhost:3000/rhdsubmission?>user=s2222222
 -   user with expired token: <http://localhost:3000/?user=uqexpired>
 
+## Reviewing
+
+A Self-review checklist is [here](https://docs.google.com/document/d/1RTW8gdNcgZC4dNiHV3IeMcZkECftFqQ-3RLqyV8ieSw) in the ISRS Collection.
+
+Ask for review from team-mates if you'd like other eyes on your changes.
+
 ## Deployment
 
 Application deployment is 100% automated using Codeship, and is hosted in S3.
