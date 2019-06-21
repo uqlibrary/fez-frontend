@@ -1,16 +1,17 @@
 context('Homepage', () => {
     beforeEach(() => {
         cy.visit('http://localhost:3000/records/search');
-        cy.get('button')
-            .contains('Close this message', {timeout: 5000})
-            .click({
-                force: true,
+        cy.get('#unsupportedBrowser.card button')
+            .then(($button) => {
+                // Button is only visible if browser is unsupported.
+                if ($button.filter(':visible')) {
+                    $button.click();
+                }
             });
-        cy.wait(3000);
     });
 
     it('Doing a basic search', () => {
-        cy.get('#simpleSearchField').type('cats and dogs{enter}', {delay: 20});
+        cy.get('#simpleSearchField').type('cats and dogs{enter}', { delay: 20 });
 
         cy.get('#showAdvancedSearchButton').click();
 
@@ -59,7 +60,7 @@ context('Homepage', () => {
         cy.get('[data-value="UQ:292807"]').click();
         cy.get('div[id="menu-"]')
             .get('div[aria-hidden="true"]')
-            .click({force: true, multiple: true}); // This will close any select field modal popup by force
+            .click({ force: true, multiple: true }); // This will close any select field modal popup by force
 
         cy.wait(3000);
         cy.get('.content-container', {

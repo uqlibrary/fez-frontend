@@ -7,9 +7,13 @@ context('Claim possible work', () => {
 
     beforeEach(() => {
         cy.visit('http://localhost:3000/records/possible');
-        cy.get('button')
-            .contains('Close this message')
-            .click();
+        cy.get('#unsupportedBrowser.card button')
+            .then(($button) => {
+                // Button is only visible if browser is unsupported.
+                if ($button.filter(':visible')) {
+                    $button.click();
+                }
+            });
     });
 
     it('Renders a list of possible works with filters', () => {
