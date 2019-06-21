@@ -9,39 +9,31 @@ context('Homepage', () => {
         cy.wait(3000);
     });
 
-    it('Renders whole page as expected', () => {
-        cy.get('html').toMatchSnapshot();
-    });
-
     it('Renders the tabbed panes as expected', () => {
-        cy.get('button', {timeout: 5000})
+        cy.get('button')
             .get('span')
             .contains('Trending on Scopus')
             .click();
-        cy.wait(3000);
-        cy.get('.content-container', {
-            timeout: 1000,
-            delay: 1000,
-        }).toMatchSnapshot();
+        cy.get('h6').should('contain', 'Scopus citation count');
+        cy.get('h6').should('not.contain', 'Web of Science citation count');
+        cy.get('h6').should('not.contain', 'Altmetric score');
 
-        cy.get('button', {timeout: 1000})
+        cy.get('button')
             .get('span')
             .contains('Trending on Web of science')
             .click();
-        cy.wait(3000);
-        cy.get('.content-container', {
-            timeout: 1000,
-            delay: 1000,
-        }).toMatchSnapshot();
+        cy.get('h6').should('not.contain', 'Scopus citation count');
+        cy.get('h6').should('contain', 'Web of Science citation count');
+        cy.get('h6').should('not.contain', 'Altmetric score');
 
-        cy.get('button', {timeout: 1000})
+        cy.get('button')
             .get('span')
             .contains('Trending on Altmetric')
             .click();
-        cy.wait(3000);
-        cy.get('.content-container', {
-            timeout: 1000,
-            delay: 1000,
-        }).toMatchSnapshot();
+        cy.get('h6').should('not.contain', 'Scopus citation count');
+        cy.get('h6').should('not.contain', 'Web of Science citation count');
+        cy.get('h6').should('contain', 'Altmetric score');
+
+        cy.get('h3').should('contain', 'What is eSpace?');
     });
 });
