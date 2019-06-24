@@ -2,6 +2,7 @@
 
 exports[`ListRow renders  a row with index and item and delete button 1`] = `
 <div
+  className="ListRow-Form-one"
   style={
     Object {
       "flexGrow": 1,
@@ -72,6 +73,7 @@ exports[`ListRow renders  a row with index and item and delete button 1`] = `
 
 exports[`ListRow renders  a row with index and item set, renders reorder buttons, and delete button 1`] = `
 <div
+  className="ListRow-Form-one"
   style={
     Object {
       "flexGrow": 1,
@@ -171,6 +173,7 @@ exports[`ListRow renders  a row with index and item set, renders reorder buttons
 
 exports[`ListRow renders  should delete row on confirmation 1`] = `
 <div
+  className="ListRow-Form-one"
   style={
     Object {
       "flexGrow": 1,
@@ -230,6 +233,7 @@ exports[`ListRow renders  should delete row on confirmation 1`] = `
 
 exports[`ListRow renders  should move row down 1`] = `
 <div
+  className="ListRow-Form-one"
   style={
     Object {
       "flexGrow": 1,
@@ -315,6 +319,7 @@ exports[`ListRow renders  should move row down 1`] = `
 
 exports[`ListRow renders  should move row up 1`] = `
 <div
+  className="ListRow-Form-one"
   style={
     Object {
       "flexGrow": 1,
@@ -406,6 +411,7 @@ exports[`ListRow renders  should render default view with styles 1`] = `
       "row": "ListRow-row-2",
     }
   }
+  form="Form"
   index={0}
   item="one"
   locale={

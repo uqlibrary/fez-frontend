@@ -220,10 +220,7 @@ export default class ThesisSubmission extends Component {
                                             name="rek_genre_type"
                                             disabled={this.props.submitting}
                                             validate={[validation.required]}
-                                            locale={
-                                                txt.information.fieldLabels
-                                                    .thesisType
-                                            }
+                                            {...txt.information.fieldLabels.thesisType}
                                             required
                                         />
                                     </Grid>

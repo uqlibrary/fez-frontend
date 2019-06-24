@@ -33,6 +33,73 @@ context('Thesis', () => {
             .find('ul')
             .children()
             .should('have.length', 6);
-        cy.wait(10000);
+        cy.get('#thesis-subtype').click();
+        cy.get('li[data-value="MPhil Thesis"]').click();
+        cy.get('div[id="menu-"]')
+            .get('div[aria-hidden="true"]')
+            .click({force: true, multiple: true});
+        cy.wait(1000);
+        cy.get('.alert-text')
+            .find('ul')
+            .children()
+            .should('have.length', 5);
+        cy.get('input[label="Enrolling unit"]').type('a');
+        cy.get('li[id="Enrollingunit-item-0"]').click();
+        cy.wait(1000);
+        cy.get('.alert-text')
+            .find('ul')
+            .children()
+            .should('have.length', 4);
+        cy.get('input[id="supervisors-name-as-published-field"]').type('Ky Lane', {delay: 200});
+        cy.get('.alert-text')
+            .find('ul')
+            .children()
+            .should('have.length', 4);
+        cy.get('input[id="supervisors-name-as-published-field"]').type('{enter}', {delay: 200});
+        cy.get('.alert-text')
+            .find('ul')
+            .children()
+            .should('have.length', 3);
+        cy.get('button[aria-label="Remove this item"]').click();
+        cy.get('button').contains('Yes').click();
+
+        cy.get('.alert-text')
+            .find('ul')
+            .children()
+            .should('have.length', 4);
+        cy.get('input[id="supervisors-name-as-published-field"]').type('Vishal Asai{enter}', {delay: 200});
+        cy.get('.alert-text')
+            .find('ul')
+            .children()
+            .should('have.length', 3);
+        cy.get('input[id="supervisors-name-as-published-field"]').type('Ky Lane{enter}', {delay: 200});
+
+        cy.get('ul.ContributorList').children().should('have.length', 2);
+        cy.get('ul.ContributorList').children().first().should('contain', 'Vishal Asai');
+        cy.get('ul.ContributorList').children().last().should('contain', 'Ky Lane');
+        cy.get('button[aria-label="Move item up the order"]').click();
+        cy.get('ul.ContributorList').children().last().should('contain', 'Vishal Asai');
+        cy.get('ul.ContributorList').children().first().should('contain', 'Ky Lane');
+
+        cy.get('input[label="Field of research"]').type('a');
+        cy.get('li[id="Fieldofresearch-item-0"]').click();
+        cy.get('.alert-text')
+            .find('ul')
+            .children()
+            .should('have.length', 2);
+        cy.wait(5000);
+        cy.get('div[class="ListRow-Field of research-0101 Pure Mathematics"]').get('button[title="Remove this item"]').click();
+        cy.get('button').contains('Yes').click();
+        cy.get('.alert-text')
+            .find('ul')
+            .children()
+            .should('have.length', 3);
+        cy.get('input[label="Field of research"]').type('a');
+        cy.get('li[id="Fieldofresearch-item-0"]').click();
+        cy.get('.alert-text')
+            .find('ul')
+            .children()
+            .should('have.length', 2);
+        cy.wait(60000);
     });
 });

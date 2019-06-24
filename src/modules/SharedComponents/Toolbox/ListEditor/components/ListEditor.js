@@ -36,7 +36,14 @@ export default class ListsEditor extends Component {
             [searchKey.value]: item,
             [searchKey.order]: index + 1
         }),
-        inputNormalizer: value => value
+        inputNormalizer: value => value,
+        locale: {
+            form: {
+                locale: {
+                    inputFieldLabel: 'NoLabel'
+                }
+            }
+        }
     };
 
     constructor(props) {
@@ -132,6 +139,7 @@ export default class ListsEditor extends Component {
     render() {
         const renderListsRows = this.state.itemList.map((item, index) => (
             <ListRow
+                form={this.props.locale && this.props.locale.form && this.props.locale.form.locale && this.props.locale.form.locale.inputFieldLabel || 'NoLabel'}
                 key={index}
                 index={index}
                 item={item}
@@ -144,7 +152,6 @@ export default class ListsEditor extends Component {
                 hideReorder={this.props.hideReorder}
                 disabled={this.props.disabled}/>
         ));
-
         return (
             <div className={this.props.className}>
                 <this.props.formComponent

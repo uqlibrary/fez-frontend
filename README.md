@@ -261,6 +261,7 @@ cy.window().then(win => win.onbeforeunload = undefined );
 
 `afterEach(() => {
          // Navigate away to trigger 'Are you sure' dialogue about unsaved changes
+         const baseUrl = Cypress.config('baseUrl');
          cy.get('button[title="Main navigation"]')
              .click();
          cy.get('#mainMenu .menu-item-container')

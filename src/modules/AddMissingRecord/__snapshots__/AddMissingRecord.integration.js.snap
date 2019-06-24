@@ -1940,7 +1940,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                             </li>
 +                           </ul>
 +                           <ul
-+                             class=\\"MuiList-root-343 Connect-ContributorsEditor--list-367  MuiList-padding-344\\"
++                             class=\\"MuiList-root-343 ContributorList Connect-ContributorsEditor--list-367  MuiList-padding-344\\"
 +                           >
 +                             <li
 +                               class=\\"MuiListItem-container-350\\"
@@ -2467,7 +2467,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 -                             </li>
 -                           </ul>
 -                           <ul
--                             class=\\"MuiList-root-343 Connect-ContributorsEditor--list-367  MuiList-padding-344\\"
+-                             class=\\"MuiList-root-343 ContributorList Connect-ContributorsEditor--list-367  MuiList-padding-344\\"
 -                           >
 -                             <li
 -                               class=\\"MuiListItem-container-350\\"
