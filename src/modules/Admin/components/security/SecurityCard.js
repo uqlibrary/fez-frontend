@@ -28,12 +28,6 @@ export const SecurityCard = ({ disabled }) => {
     const securityPolicy = formValues.rek_security_policy;
     const dataStreamPolicy = formValues.rek_datastream_policy;
 
-    const title = (
-        <span>
-            <b>{recordType}</b> level security - {record.rek_pid}
-        </span>
-    );
-
     /* istanbul ignore next */
     /**
      * Redux-form normalize callback
@@ -50,14 +44,16 @@ export const SecurityCard = ({ disabled }) => {
                 />
             </Grid>
             <Grid item xs={12}>
-                <StandardCard title={title} accentHeader>
+                <StandardCard title={text.cardTitle(record.rek_pid)} accentHeader>
                     <Grid container spacing={16}>
                         {
                             recordType === RECORD_TYPE_RECORD &&
                             <React.Fragment>
                                 <Grid item xs={12}>
                                     <InheritedSecurityDetails
+                                        title={text.inheritedPolicy.record.title}
                                         collections={record.fez_record_search_key_ismemberof}
+                                        parentKey="rek_security_policy"
                                     />
                                 </Grid>
                                 <Grid item xs={12}>
@@ -100,6 +96,7 @@ export const SecurityCard = ({ disabled }) => {
                                     securityPolicy={dataStreamPolicy}
                                 />
                             </Grid>
+
                         }
                     </Grid>
                 </StandardCard>
@@ -107,20 +104,31 @@ export const SecurityCard = ({ disabled }) => {
             {
                 !!dataStreams && dataStreams.length > 0 &&
                 <Grid item xs={12}>
-                    <StandardCard title={<span><b>Datastream</b> security - {record.rek_pid}</span>} accentHeader>
+                    <StandardCard title={text.dataStream.cardTitle(record.rek_pid)} accentHeader>
                         <Grid container spacing={8}>
                             {
                                 dataStreams.length &&
-                                <Grid item xs={12}>
-                                    <Field
-                                        component={DataStreamSecuritySelector}
-                                        name="securitySection.dataStreams"
-                                        {...{
-                                            disabled,
-                                            text: text.dataStream,
-                                        }}
-                                    />
-                                </Grid>
+                                <React.Fragment>
+                                    <Grid item xs={12}>
+                                        <InheritedSecurityDetails
+                                            title={text.inheritedPolicy.dataStream.title}
+                                            collections={record.fez_record_search_key_ismemberof}
+                                            parentKey="rek_datastream_policy"
+                                        />
+                                    </Grid>
+                                    <Grid item xs={12}>
+                                        <Field
+                                            component={DataStreamSecuritySelector}
+                                            name="securitySection.dataStreams"
+
+                                            {...{
+                                                disabled,
+                                                text: text.dataStream,
+                                            }}
+                                            collections={record.fez_record_search_key_ismemberof}
+                                        />
+                                    </Grid>
+                                </React.Fragment>
                             }
                         </Grid>
                     </StandardCard>

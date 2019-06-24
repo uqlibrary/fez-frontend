@@ -1,17 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import PropTypes from 'prop-types';
 
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import Link from '@material-ui/core/Link';
 import { withStyles } from '@material-ui/core/styles';
 
-import { PolicyDropdown } from './PolicyDropdown';
+import DataStreamSecurityItem from './DataStreamSecurityItem';
 
 export const styles = () => ({
     dataStreamFileBlock: {
-        padding: 8,
-        marginTop: 8,
         backgroundColor: 'rgba(0,0,0,0.05)',
     },
     dataStreamFileName: {
@@ -23,71 +20,72 @@ export const styles = () => ({
 export const DataStreamSecuritySelector = ({
     text,
     disabled,
+    collections,
     classes,
     meta: {
         initial: dataStreams
     },
     ...props
 }) => {
-    const [dataStreamSecurity, setDataStreamSecurity] = useState([]);
-    useEffect(() => {
-        const initialDataStreamSecurity = dataStreams.toJS();
-        setDataStreamSecurity(initialDataStreamSecurity);
-    }, []); // [] to run this effect only when component is mounted
+    const [initialDataStreams] = useState(() => dataStreams.toJS());
+    const [dataStreamSecurity, setDataStreamSecurity] = useState(() => dataStreams.toJS());
+    const [dataStreamIndexToChange, setDataStreamIndexToChange] = useState(-1);
+    const [dataStreamToChange, setDataStreamToChange] = useState(null);
+    const [mostSecureParentDatastreamSecurity] = useState(() => collections
+        .map(collection => collection.parent)
+        .reduce((value, item) => {
+            if (!value || item.rek_datastream_policy < value) return item.rek_datastream_policy;
+            else return value;
+        }, null)
+    );
 
-    const onSecurityChange = (index) => (value) => {
-        const newDataStreamSecurity = [
-            ...dataStreamSecurity.slice(0, index),
-            {
-                ...dataStreamSecurity[index],
-                dsi_security_policy: value,
-                dsi_security_inherited: 0
-            },
-            ...dataStreamSecurity.slice(index + 1)
-        ];
-        setDataStreamSecurity(newDataStreamSecurity);
-        props.input.onChange(newDataStreamSecurity);
-    };
+    const handleDataStreamSecurityChange = useCallback((index, dataStream) => {
+        setDataStreamIndexToChange(index);
+        setDataStreamToChange(dataStream);
+    });
+
+    useEffect(() => {
+        if (dataStreamIndexToChange >= 0) {
+            const newDataStreamSecurity = [
+                ...dataStreamSecurity.slice(0, dataStreamIndexToChange),
+                { ...dataStreamToChange },
+                ...dataStreamSecurity.slice(dataStreamIndexToChange + 1)
+            ];
+            setDataStreamSecurity(newDataStreamSecurity);
+            props.input.onChange(newDataStreamSecurity);
+        }
+    }, [dataStreamIndexToChange, dataStreamToChange]);
 
     return (
         <React.Fragment>
-            <Typography variant="h6" style={{ marginTop: -8 }}>
+            <Typography variant="h6">
                 {text.overridePrompt}
             </Typography>
-            <Grid
-                container
-                spacing={16}
-                alignContent="flex-end"
-                alignItems="flex-end"
-                className={classes.dataStreamFileBlock}
-            >
-                {
-                    dataStreamSecurity.map((dataStream, index) => (
-                        <React.Fragment key={dataStream.dsi_dsid}>
-                            <Grid item xs={12} sm={6} className={classes.dataStreamFileName}>
-                                <Link title={dataStream.dsi_dsid}>
-                                    {dataStream.dsi_dsid}
-                                </Link>
-                            </Grid>
-                            <Grid item xs={12} sm={6}>
-                                <PolicyDropdown
-                                    fieldName={dataStream.dsi_dsid}
-                                    fieldLabel={text.overridePolicyPrompt}
-                                    disabled={disabled}
-                                    {...{
-                                        input: {
-                                            onChange: onSecurityChange(index),
-                                            onBlur: /* istanbul ignore next */ () => { }
-                                        },
-                                        value: dataStream.dsi_security_policy
-                                    }}
-                                    onChange={onSecurityChange(dataStream.dsi_dsid)}
-                                />
-                            </Grid>
-                        </React.Fragment>
-                    ))
-                }
-            </Grid>
+            <div style={{ marginTop: 8, padding: 16 }}>
+                <Grid
+                    container
+                    spacing={32}
+                    alignContent="flex-end"
+                    alignItems="flex-end"
+                    className={classes.dataStreamFileBlock}
+                >
+                    {
+                        dataStreamSecurity.map((dataStream, index) => (
+                            <DataStreamSecurityItem
+                                key={dataStream.dsi_dsid}
+                                disabled={disabled}
+                                initialDataStream={initialDataStreams[index]}
+                                dataStream={dataStream}
+                                policyDropdownLabel={text.overridePolicyPrompt}
+                                inheritedSecurity={mostSecureParentDatastreamSecurity}
+                                onSecurityChange={handleDataStreamSecurityChange}
+                                classes={classes}
+                                index={index}
+                            />
+                        ))
+                    }
+                </Grid>
+            </div>
         </React.Fragment>
     );
 };
@@ -95,6 +93,7 @@ export const DataStreamSecuritySelector = ({
 DataStreamSecuritySelector.propTypes = {
     disabled: PropTypes.bool,
     text: PropTypes.object,
+    collections: PropTypes.array,
     classes: PropTypes.object,
     input: PropTypes.object,
     meta: PropTypes.shape({
@@ -104,7 +103,8 @@ DataStreamSecuritySelector.propTypes = {
     }).isRequired
 };
 
-function isSame() {
-    return true;
+function isSame(prevProps, nextProps) {
+    return prevProps.disabled === nextProps.disabled;
 }
+
 export default React.memo(withStyles(styles)(DataStreamSecuritySelector), isSame);

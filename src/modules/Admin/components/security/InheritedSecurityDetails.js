@@ -6,13 +6,13 @@ import Typography from '@material-ui/core/Typography';
 
 import PolicyDescription from './PolicyDescription';
 
-export const InheritedSecurityDetails = ({collections}) => (
+export const InheritedSecurityDetails = ({ title, collections, parentKey }) => (
     <Grid item xs={12} style={{
         padding: 24,
         backgroundColor: 'rgba(0,0,0,0.05)'
     }}>
         <Typography variant="h6" style={{ marginTop: -8 }}>
-            Inherited security policy details
+            {title}
         </Typography>
         <Grid container spacing={8} style={{ marginTop: 8 }}>
             {
@@ -32,7 +32,7 @@ export const InheritedSecurityDetails = ({collections}) => (
                         </Grid>
                         <Grid item xs={12} sm={3}>
                             <Typography variant="body2">
-                                <PolicyDescription selectedPolicyKey={item.parent.rek_security_policy} />
+                                <PolicyDescription selectedPolicyKey={item.parent[parentKey]} />
                             </Typography>
                         </Grid>
                     </React.Fragment>
@@ -43,7 +43,9 @@ export const InheritedSecurityDetails = ({collections}) => (
 );
 
 InheritedSecurityDetails.propTypes = {
-    collections: PropTypes.array.isRequired
+    title: PropTypes.string.isRequired,
+    collections: PropTypes.array.isRequired,
+    parentKey: PropTypes.string.isRequired
 };
 
 export default React.memo(InheritedSecurityDetails);

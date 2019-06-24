@@ -5,20 +5,20 @@ exports[`DataStreamSecuritySelector component should change security value for t
 - First value
 + Second value
 
-@@ -48,11 +48,12 @@
-            <div
-              class=\\"MuiSelect-root-375\\"
-            >
+@@ -55,11 +55,12 @@
               <div
-                aria-haspopup=\\"true\\"
--               aria-pressed=\\"false\\"
-+               aria-owns=\\"menu-test.txt\\"
-+               aria-pressed=\\"true\\"
-                class=\\"MuiSelect-select-376 MuiSelect-selectMenu-379 MuiInputBase-input-405 MuiInput-input-390\\"
-                id=\\"select-test.txt\\"
-                role=\\"button\\"
-                tabindex=\\"0\\"
-              >"
+                class=\\"MuiSelect-root-375\\"
+              >
+                <div
+                  aria-haspopup=\\"true\\"
+-                 aria-pressed=\\"false\\"
++                 aria-owns=\\"menu-test.txt\\"
++                 aria-pressed=\\"true\\"
+                  class=\\"MuiSelect-select-376 MuiSelect-selectMenu-379 MuiInputBase-input-405 MuiInput-input-390\\"
+                  id=\\"select-test.txt\\"
+                  role=\\"button\\"
+                  tabindex=\\"0\\"
+                >"
 `;
 
 exports[`DataStreamSecuritySelector component should change security value for the file 2`] = `
@@ -26,116 +26,124 @@ exports[`DataStreamSecuritySelector component should change security value for t
 - First value
 + Second value
 
-@@ -48,25 +48,24 @@
-            <div
-              class=\\"MuiSelect-root-375\\"
-            >
+@@ -55,25 +55,24 @@
               <div
-                aria-haspopup=\\"true\\"
--               aria-owns=\\"menu-test.txt\\"
--               aria-pressed=\\"true\\"
-+               aria-pressed=\\"false\\"
-                class=\\"MuiSelect-select-376 MuiSelect-selectMenu-379 MuiInputBase-input-405 MuiInput-input-390\\"
-                id=\\"select-test.txt\\"
-                role=\\"button\\"
-                tabindex=\\"0\\"
+                class=\\"MuiSelect-root-375\\"
               >
--               Administrators
-+               Public
-              </div>
-              <input
-                aria-labelledby=\\"Record level policy to apply to this PID-label\\"
-                id=\\"Record level policy to apply to this PID\\"
-                name=\\"test.txt\\"
-                type=\\"hidden\\"
--               value=\\"1\\"
-+               value=\\"5\\"
-              />
-              <svg
-                aria-hidden=\\"true\\"
-                class=\\"MuiSvgIcon-root-412 MuiSelect-icon-381\\"
-                focusable=\\"false\\""
+                <div
+                  aria-haspopup=\\"true\\"
+-                 aria-owns=\\"menu-test.txt\\"
+-                 aria-pressed=\\"true\\"
++                 aria-pressed=\\"false\\"
+                  class=\\"MuiSelect-select-376 MuiSelect-selectMenu-379 MuiInputBase-input-405 MuiInput-input-390\\"
+                  id=\\"select-test.txt\\"
+                  role=\\"button\\"
+                  tabindex=\\"0\\"
+                >
+-                 Administrators
++                 Public
+                </div>
+                <input
+                  aria-labelledby=\\"Record level policy to apply to this PID-label\\"
+                  id=\\"Record level policy to apply to this PID\\"
+                  name=\\"test.txt\\"
+                  type=\\"hidden\\"
+-                 value=\\"1\\"
++                 value=\\"5\\"
+                />
+                <svg
+                  aria-hidden=\\"true\\"
+                  class=\\"MuiSvgIcon-root-412 MuiSelect-icon-381\\"
+                  focusable=\\"false\\""
 `;
 
 exports[`DataStreamSecuritySelector component should render default view 1`] = `
 <DocumentFragment>
   <h6
     class="MuiTypography-root-3 MuiTypography-h6-20"
-    style="margin-top: -8px;"
   >
     Override datastream security policy
   </h6>
   <div
-    class="MuiGrid-container-39 MuiGrid-spacing-xs-16-62 MuiGrid-align-items-xs-flex-end-49 MuiGrid-align-content-xs-flex-end-53 DataStreamSecuritySelector-dataStreamFileBlock-1 dataStreamFileBlock"
+    style="margin-top: 8px; padding: 16px;"
   >
     <div
-      class="MuiGrid-item-40 MuiGrid-grid-xs-12-79 MuiGrid-grid-sm-6-87 DataStreamSecuritySelector-dataStreamFileName-2 dataStreamFileName"
-    >
-      <a
-        class="MuiTypography-root-3 MuiTypography-colorPrimary-33 MuiTypography-inline-38 MuiLink-root-136 MuiLink-underlineHover-138"
-        title="test.txt"
-      >
-        test.txt
-      </a>
-    </div>
-    <div
-      class="MuiGrid-item-40 MuiGrid-grid-xs-12-79 MuiGrid-grid-sm-6-87"
+      class="MuiGrid-container-39 MuiGrid-spacing-xs-32-64 MuiGrid-align-items-xs-flex-end-49 MuiGrid-align-content-xs-flex-end-53 DataStreamSecuritySelector-dataStreamFileBlock-1 dataStreamFileBlock"
     >
       <div
-        class="MuiFormControl-root-141"
-        style="width: 100%;"
+        class="MuiGrid-item-40 MuiGrid-grid-xs-12-79 MuiGrid-grid-sm-6-87 DataStreamSecuritySelector-dataStreamFileName-2 dataStreamFileName"
       >
-        <label
-          class="MuiFormLabel-root-156 MuiFormLabel-filled-160 MuiFormLabel-required-161 MuiInputLabel-required-149 MuiInputLabel-root-145 MuiInputLabel-formControl-150 MuiInputLabel-animated-153 MuiInputLabel-shrink-152"
-          data-shrink="true"
-          id="Record level policy to apply to this PID-label"
+        <a
+          class="MuiTypography-root-3 MuiTypography-colorPrimary-33 MuiTypography-inline-38 MuiLink-root-136 MuiLink-underlineHover-138"
+          title="test.txt"
         >
-          Record level policy to apply to this PID
-          <span
-            class="MuiFormLabel-asterisk-162"
-          >
-             *
-          </span>
-        </label>
+          test.txt
+        </a>
+        <span
+          class="MuiTypography-root-3 MuiTypography-caption-13"
+        >
+          Overridden
+        </span>
+      </div>
+      <div
+        class="MuiGrid-item-40 MuiGrid-grid-xs-12-79 MuiGrid-grid-sm-6-87"
+      >
         <div
-          class="MuiInputBase-root-183 MuiInput-root-170 MuiInput-underline-174 MuiInputBase-formControl-184 MuiInput-formControl-171"
-          label="Record level policy to apply to this PID"
-          required=""
-          validation="function required(value) {
+          class="MuiFormControl-root-141"
+          style="width: 100%;"
+        >
+          <label
+            class="MuiFormLabel-root-156 MuiFormLabel-filled-160 MuiFormLabel-required-161 MuiInputLabel-required-149 MuiInputLabel-root-145 MuiInputLabel-formControl-150 MuiInputLabel-animated-153 MuiInputLabel-shrink-152"
+            data-shrink="true"
+            id="Record level policy to apply to this PID-label"
+          >
+            Record level policy to apply to this PID
+            <span
+              class="MuiFormLabel-asterisk-162"
+            >
+               *
+            </span>
+          </label>
+          <div
+            class="MuiInputBase-root-183 MuiInput-root-170 MuiInput-underline-174 MuiInputBase-formControl-184 MuiInput-formControl-171"
+            label="Record level policy to apply to this PID"
+            required=""
+            validation="function required(value) {
   return value ? undefined : _validationErrors[\\"default\\"].validationErrors.required;
 }"
-        >
-          <div
-            class="MuiSelect-root-163"
           >
             <div
-              aria-haspopup="true"
-              aria-pressed="false"
-              class="MuiSelect-select-164 MuiSelect-selectMenu-167 MuiInputBase-input-193 MuiInput-input-178"
-              id="select-test.txt"
-              role="button"
-              tabindex="0"
+              class="MuiSelect-root-163"
             >
-              Administrators
-            </div>
-            <input
-              aria-labelledby="Record level policy to apply to this PID-label"
-              id="Record level policy to apply to this PID"
-              name="test.txt"
-              type="hidden"
-              value="1"
-            />
-            <svg
-              aria-hidden="true"
-              class="MuiSvgIcon-root-200 MuiSelect-icon-169"
-              focusable="false"
-              role="presentation"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M7 10l5 5 5-5z"
+              <div
+                aria-haspopup="true"
+                aria-pressed="false"
+                class="MuiSelect-select-164 MuiSelect-selectMenu-167 MuiInputBase-input-193 MuiInput-input-178"
+                id="select-test.txt"
+                role="button"
+                tabindex="0"
+              >
+                Administrators
+              </div>
+              <input
+                aria-labelledby="Record level policy to apply to this PID-label"
+                id="Record level policy to apply to this PID"
+                name="test.txt"
+                type="hidden"
+                value="1"
               />
-            </svg>
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root-200 MuiSelect-icon-169"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M7 10l5 5 5-5z"
+                />
+              </svg>
+            </div>
           </div>
         </div>
       </div>

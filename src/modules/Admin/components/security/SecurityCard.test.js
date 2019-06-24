@@ -38,14 +38,21 @@ describe('SecurityCard component', () => {
         useRecordContext.mockImplementation(() => ({
             record: {
                 rek_pid: 'UQ:123456',
-                rek_object_type_lookup: 'Record'
+                rek_object_type_lookup: 'Record',
+                fez_record_search_key_ismemberof: [{
+                    rek_ismemberof: 'Test collection',
+                    parent: {
+                        rek_security_policy: 2,
+                        rek_datastream_policy: 1
+                    }
+                }]
             }
         }));
 
         const wrapper = setup();
 
         expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('Memo(InheritedSecurityDetails)')).toHaveLength(1);
+        expect(wrapper.find('Memo(InheritedSecurityDetails)')).toHaveLength(2);
         expect(wrapper.find('Memo(SecuritySelector)')).toHaveLength(0);
     });
 
@@ -62,7 +69,14 @@ describe('SecurityCard component', () => {
         useRecordContext.mockImplementation(() => ({
             record: {
                 rek_pid: 'UQ:123456',
-                rek_object_type_lookup: 'Record'
+                rek_object_type_lookup: 'Record',
+                fez_record_search_key_ismemberof: [{
+                    rek_ismemberof: 'Test collection',
+                    parent: {
+                        rek_security_policy: 2,
+                        rek_datastream_policy: 1
+                    }
+                }]
             }
         }));
 
@@ -89,14 +103,21 @@ describe('SecurityCard component', () => {
         useRecordContext.mockImplementation(() => ({
             record: {
                 rek_pid: 'UQ:123456',
-                rek_object_type_lookup: 'Record'
+                rek_object_type_lookup: 'Record',
+                fez_record_search_key_ismemberof: [{
+                    rek_ismemberof: 'Test collection',
+                    parent: {
+                        rek_security_policy: 2,
+                        rek_datastream_policy: 1
+                    }
+                }]
             }
         }));
 
         const wrapper = setup();
 
         expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('Memo(InheritedSecurityDetails)')).toHaveLength(1);
+        expect(wrapper.find('Memo(InheritedSecurityDetails)')).toHaveLength(2);
         expect(wrapper.find('Memo(SecuritySelector)')).toHaveLength(1);
     });
 
@@ -164,14 +185,21 @@ describe('SecurityCard component', () => {
         useRecordContext.mockImplementation(() => ({
             record: {
                 rek_pid: 'UQ:123456',
-                rek_object_type_lookup: 'Record'
+                rek_object_type_lookup: 'Record',
+                fez_record_search_key_ismemberof: [{
+                    rek_ismemberof: 'Test collection',
+                    parent: {
+                        rek_security_policy: 2,
+                        rek_datastream_policy: 1
+                    }
+                }]
             }
         }));
 
         const wrapper = setup({ disabled: true });
 
         expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('Memo(InheritedSecurityDetails)')).toHaveLength(1);
+        expect(wrapper.find('Memo(InheritedSecurityDetails)')).toHaveLength(2);
         expect(wrapper.find('Memo(SecuritySelector)')).toHaveLength(1);
     });
 });

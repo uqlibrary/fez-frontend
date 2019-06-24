@@ -17,7 +17,7 @@ export default {
                 activeFilter: 'Show only open access records'
             },
             excludeFacetsList: ['Scopus document type', 'Genre', 'Year published'],
-            renameFacetsList: {'Display type': 'Work type', 'Subtype': 'Work subtype'},
+            renameFacetsList: { 'Display type': 'Work type', 'Subtype': 'Work subtype' },
             lookupFacetsList: {
                 'Author': 'Author (lookup)',
                 'Collection': 'Collection (lookup)',
@@ -68,7 +68,7 @@ export default {
                 showLessTitle: 'Show less authors'
             },
             defaultActions: [
-                {key: 'fixRecord', label: 'Request Correction', primary: false},
+                { key: 'fixRecord', label: 'Request Correction', primary: false },
                 // {key: 'shareRecord', primaryText: 'Share'} // TODO: implement shareRecord
             ],
             myTrendingPublications: {
@@ -121,7 +121,7 @@ export default {
                         You can click on the number as a link to see who is citing each publication, or in the
                         case of Altmetric who is referencing the publication in social media and news outlets.
                     </p>
-                    For more information visit :<br/>
+                    For more information visit :<br />
                     <a href="https://www.altmetric.com/about-altmetrics/what-are-altmetrics/" target="_blank" rel="noopener noreferrer">
                         https://www.altmetric.com/about-altmetrics/what-are-altmetrics/
                     </a>
@@ -1061,14 +1061,14 @@ export default {
             sortLabel: 'Sort results by',
             sortDirectionLabel: 'Sort order',
             sortBy: [
-                {value: 'published_date', label: 'Published date'},
-                {value: 'score', label: 'Search relevance'},
-                {value: 'title', label: 'Title'},
-                {value: 'created_date', label: 'Created date'},
-                {value: 'updated_date', label: 'Updated date'},
-                {value: 'altmetric_score', label: 'Altmetric score'},
-                {value: 'scopus_citation_count', label: 'Scopus citation count'},
-                {value: 'thomson_citation_count', label: 'Web of Science citation count'}
+                { value: 'published_date', label: 'Published date' },
+                { value: 'score', label: 'Search relevance' },
+                { value: 'title', label: 'Title' },
+                { value: 'created_date', label: 'Created date' },
+                { value: 'updated_date', label: 'Updated date' },
+                { value: 'altmetric_score', label: 'Altmetric score' },
+                { value: 'scopus_citation_count', label: 'Scopus citation count' },
+                { value: 'thomson_citation_count', label: 'Web of Science citation count' }
             ],
             sortDirection: [
                 'Desc',
@@ -1091,7 +1091,7 @@ export default {
                             <li>At least one evidence file, e.g. a .pdf, .mp4, .tiff or .wav copy, representation or review of the work.</li>
                         </ol>
 
-                        <p>Note:<br/>
+                        <p>Note:<br />
                             A research statement can be updated at any time via the REQUEST CORRECTION button for the work.
                         </p>
                     </React.Fragment>
@@ -1103,7 +1103,7 @@ export default {
                     text: (
                         <React.Fragment>
                             <h3>Quality indicators</h3>
-                            <p>For more information about each quality indicator option, click <b><a style={{fontWeight: 700}} target="_blank" href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836609">here</a></b></p>
+                            <p>For more information about each quality indicator option, click <b><a style={{ fontWeight: 700 }} target="_blank" href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836609">here</a></b></p>
                         </React.Fragment>
                     ),
                     buttonLabel: 'CLOSE'
@@ -1113,8 +1113,8 @@ export default {
         export: {
             label: 'Export results',
             format: [
-                {value: 'excel', label: 'Excel File'},
-                {value: 'endnote', label: 'Endnote File'}
+                { value: 'excel', label: 'Excel File' },
+                { value: 'endnote', label: 'Endnote File' }
             ],
             filename: {
                 prefix: 'espace_export',
@@ -1366,7 +1366,7 @@ export default {
                         ariaLabel: 'Add valid date ranges to search between',
                         isUnpublishedField: true,
                         validation: [],
-                        captionFn: (value) => (value.from && value.to && value.from.isBefore(value.to) && {title: 'Created', combiner: 'between', value: `${value.from.format('Do MMMM, YYYY')} and ${value.to.format('Do MMMM, YYYY')}`} || null)
+                        captionFn: (value) => (value.from && value.to && value.from.isBefore(value.to) && { title: 'Created', combiner: 'between', value: `${value.from.format('Do MMMM, YYYY')} and ${value.to.format('Do MMMM, YYYY')}` } || null)
                     },
                     'rek_updated_date': {
                         order: 23,
@@ -1377,7 +1377,7 @@ export default {
                         ariaLabel: 'Add valid date ranges to search between',
                         isUnpublishedField: true,
                         validation: [],
-                        captionFn: (value) => (value.from && value.to && value.from.isBefore(value.to) && {title: 'Updated', combiner: 'between', value: `${value.from.format('Do MMMM, YYYY')} and ${value.to.format('Do MMMM, YYYY')}`} || null)
+                        captionFn: (value) => (value.from && value.to && value.from.isBefore(value.to) && { title: 'Updated', combiner: 'between', value: `${value.from.format('Do MMMM, YYYY')} and ${value.to.format('Do MMMM, YYYY')}` } || null)
                     }
                 },
                 openAccess: {
@@ -1438,12 +1438,14 @@ export default {
                 }
             },
             community: {
+                cardTitle: (pid) => (<span><strong>Community</strong> level security - {pid}</span>),
                 prompt: 'Select a security policy to apply',
                 fieldLabel: '',
                 selectedTitle: 'Selected community record security policy details',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id aliquam sapien. Aliquam rhoncus congue consectetur. Aenean sed sapien ipsum.',
             },
             collection: {
+                cardTitle: (pid) => (<span><strong>Collection</strong> level security - {pid}</span>),
                 prompt: 'Select a security policy to apply',
                 fieldLabel: '',
                 dataStreamFieldLabel: (<span>
@@ -1456,6 +1458,7 @@ export default {
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id aliquam sapien. Aliquam rhoncus congue consectetur. Aenean sed sapien ipsum.',
             },
             record: {
+                cardTitle: (pid) => (<span><strong>Record</strong> level security - {pid}</span>),
                 prompt: 'Select a security policy to apply',
                 fieldLabel: '',
                 dataStreamFieldLabel: '',
@@ -1463,9 +1466,18 @@ export default {
                 dataStreamSelectedTitle: 'Selected record level datastream security policy details',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id aliquam sapien. Aliquam rhoncus congue consectetur. Aenean sed sapien ipsum.',
                 dataStream: {
+                    cardTitle: (pid) => (<span><strong>Datastream</strong> level security - {pid}</span>),
                     overridePrompt: 'Override datastream security policy details',
                     overridePolicyPrompt: 'Security policy for this file to override inheritance'
                 },
+                inheritedPolicy: {
+                    record: {
+                        title: 'Inherited security policy details'
+                    },
+                    dataStream: {
+                        title: 'Inherited datastream security policy details'
+                    }
+                }
             },
             submit: 'Submit'
         }

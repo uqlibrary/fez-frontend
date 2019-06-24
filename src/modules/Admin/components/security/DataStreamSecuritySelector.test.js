@@ -25,9 +25,22 @@ function setup(testProps = {}) {
         text: {
             overridePrompt: 'Override datastream security policy'
         },
+        collections: [{
+            parent: {
+                rek_datastream_policy: 3
+            }
+        }, {
+            parent: {
+                rek_datastream_policy: 5
+            }
+        }, {
+            parent: {
+                rek_datastream_policy: 1
+            }
+        }],
         ...testProps
     };
-    return rtlRender(<DataStreamSecuritySelector {...props}/>);
+    return rtlRender(<DataStreamSecuritySelector {...props} />);
 }
 
 describe('DataStreamSecuritySelector component', () => {

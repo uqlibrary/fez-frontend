@@ -1,23 +1,23 @@
 import * as transformers from './transformers';
 import * as actions from './actionTypes';
-import {NEW_RECORD_DEFAULT_VALUES} from 'config/general';
+import { NEW_RECORD_DEFAULT_VALUES } from 'config/general';
 
-import {get, post, patch} from 'repositories/generic';
+import { get, post, patch } from 'repositories/generic';
 import * as routes from 'repositories/routes';
-import {putUploadFiles} from 'repositories';
+import { putUploadFiles } from 'repositories';
 
 /**
  * Search publications from eSpace which are matched to currently logged in username
  * @param {object} activeFacets - optional list of facets
  * @returns {action}
  */
-export function searchPossiblyYourPublications({activeFacets = {}, page = 1, pageSize = 20, sortBy = 'score', sortDirection = 'Desc'}) {
+export function searchPossiblyYourPublications({ activeFacets = {}, page = 1, pageSize = 20, sortBy = 'score', sortDirection = 'Desc' }) {
     return dispatch => {
         if (Object.keys(activeFacets).length === 0) {
-            dispatch({type: actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_LOADING});
+            dispatch({ type: actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_LOADING });
         }
 
-        dispatch({type: actions.POSSIBLY_YOUR_PUBLICATIONS_LOADING, payload: activeFacets});
+        dispatch({ type: actions.POSSIBLY_YOUR_PUBLICATIONS_LOADING, payload: activeFacets });
         return get(routes.POSSIBLE_RECORDS_API({
             facets: activeFacets,
             page: page,
@@ -28,7 +28,7 @@ export function searchPossiblyYourPublications({activeFacets = {}, page = 1, pag
             .then(response => {
                 dispatch({
                     type: actions.POSSIBLY_YOUR_PUBLICATIONS_LOADED,
-                    payload: {...response, type: 'possible'},
+                    payload: { ...response, type: 'possible' },
                 });
 
                 dispatch({
@@ -73,9 +73,9 @@ export function countPossiblyYourPublications() {
  * @param author {object} - user user name
  * @returns {action}
  */
-export function hideRecord({record, facets = {}}) {
+export function hideRecord({ record, facets = {} }) {
     return dispatch => {
-        dispatch({type: actions.HIDE_PUBLICATIONS_LOADING});
+        dispatch({ type: actions.HIDE_PUBLICATIONS_LOADING });
 
         // Transform data to api format:
         // POST records/search?rule=possible (with data: ['pid' => 'UQ:1', 'type' => 'H'])
@@ -88,11 +88,11 @@ export function hideRecord({record, facets = {}}) {
             .then(() => {
                 dispatch({
                     type: actions.HIDE_PUBLICATIONS_LOADED,
-                    payload: {pid: record.rek_pid}
+                    payload: { pid: record.rek_pid }
                 });
 
                 // reload current possibly your publications/count after user hides records
-                return dispatch(searchPossiblyYourPublications({facets: facets}));
+                return dispatch(searchPossiblyYourPublications({ facets: facets }));
             })
             .catch(error => {
                 // TODO: display error message to user that this operation failed (in PT)
@@ -110,7 +110,7 @@ export function hideRecord({record, facets = {}}) {
  */
 export function hideRecordErrorReset() {
     return dispatch => {
-        dispatch({type: actions.HIDE_PUBLICATIONS_FAILED_RESET});
+        dispatch({ type: actions.HIDE_PUBLICATIONS_FAILED_RESET });
     };
 }
 
@@ -179,7 +179,7 @@ export function claimPublication(data) {
 
     const hasFilesToUpload = ((data.files || {}).queue || []).length > 0;
     return dispatch => {
-        dispatch({type: actions.CLAIM_PUBLICATION_CREATE_PROCESSING});
+        dispatch({ type: actions.CLAIM_PUBLICATION_CREATE_PROCESSING });
 
         let recordAuthorsIdSearchKeys = {};
         let recordContributorsIdSearchKeys = {};
@@ -229,7 +229,7 @@ export function claimPublication(data) {
         let claimRecordRequestSuccess = false;
 
         return Promise.resolve([])
-        // save a new record if claiming from external source
+            // save a new record if claiming from external source
             .then(() => !data.publication.rek_pid ? post(routes.NEW_RECORD_API(), createRecordRequest) : null)
             // update pid of newly saved record
             .then((newRecord) => {
@@ -239,7 +239,7 @@ export function claimPublication(data) {
                 return null;
             })
             // claim record if claiming from internal source
-            .then(() => !createRecordRequest ? patch(routes.EXISTING_RECORD_API({pid: data.publication.rek_pid}), patchRecordRequest) : null)
+            .then(() => !createRecordRequest ? patch(routes.EXISTING_RECORD_API({ pid: data.publication.rek_pid }), patchRecordRequest) : null)
             // set save/claim record status if either is a success
             .then(() => {
                 claimRecordRequestSuccess = true;
@@ -248,14 +248,14 @@ export function claimPublication(data) {
             // try to upload files
             .then(() => hasFilesToUpload ? putUploadFiles(data.publication.rek_pid, data.files.queue, dispatch) : null)
             // patch record with files if file upload has succeeded
-            .then(() => hasFilesToUpload ? patch(routes.EXISTING_RECORD_API({pid: data.publication.rek_pid}), patchFilesRecordRequest) : null)
+            .then(() => hasFilesToUpload ? patch(routes.EXISTING_RECORD_API({ pid: data.publication.rek_pid }), patchFilesRecordRequest) : null)
             // send comments as an issue request
-            .then(() => (data.comments ? post(routes.RECORDS_ISSUES_API({pid: data.publication.rek_pid}), {issue: 'Notes from creator of a claimed record: ' +  data.comments}) : null))
+            .then(() => (data.comments ? post(routes.RECORDS_ISSUES_API({ pid: data.publication.rek_pid }), { issue: 'Notes from creator of a claimed record: ' + data.comments }) : null))
             // finish claim record action
             .then(() => {
                 dispatch({
                     type: actions.CLAIM_PUBLICATION_CREATE_COMPLETED,
-                    payload: {pid: data.publication.rek_pid},
+                    payload: { pid: data.publication.rek_pid },
                     fileUploadOrIssueFailed: false
                 });
                 return Promise.resolve(data.publication);

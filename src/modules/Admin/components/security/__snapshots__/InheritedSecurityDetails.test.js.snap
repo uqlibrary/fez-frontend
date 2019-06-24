@@ -104,6 +104,110 @@ exports[`InheritedSecurityDetails component should render collections correctly 
 </WithStyles(Grid)>
 `;
 
+exports[`InheritedSecurityDetails component should render collections for datastreams correctly 1`] = `
+<WithStyles(Grid)
+  item={true}
+  style={
+    Object {
+      "backgroundColor": "rgba(0,0,0,0.05)",
+      "padding": 24,
+    }
+  }
+  xs={12}
+>
+  <WithStyles(Typography)
+    style={
+      Object {
+        "marginTop": -8,
+      }
+    }
+    variant="h6"
+  >
+    Inherited datastream security policy details
+  </WithStyles(Typography)>
+  <WithStyles(Grid)
+    container={true}
+    spacing={8}
+    style={
+      Object {
+        "marginTop": 8,
+      }
+    }
+  >
+    <WithStyles(Grid)
+      item={true}
+      sm={2}
+      xs={12}
+    >
+      <WithStyles(Typography)
+        variant="subtitle1"
+      >
+        UQ:11111
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      sm={7}
+      xs={12}
+    >
+      <WithStyles(Typography)
+        variant="subtitle2"
+      >
+        Test collection
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      sm={3}
+      xs={12}
+    >
+      <WithStyles(Typography)
+        variant="body2"
+      >
+        <Memo(PolicyDescription)
+          selectedPolicyKey={2}
+        />
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      sm={2}
+      xs={12}
+    >
+      <WithStyles(Typography)
+        variant="subtitle1"
+      >
+        UQ:22222
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      sm={7}
+      xs={12}
+    >
+      <WithStyles(Typography)
+        variant="subtitle2"
+      >
+        Another test collection
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      sm={3}
+      xs={12}
+    >
+      <WithStyles(Typography)
+        variant="body2"
+      >
+        <Memo(PolicyDescription)
+          selectedPolicyKey={4}
+        />
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
+`;
+
 exports[`InheritedSecurityDetails component should render properly 1`] = `
 <WithStyles(Grid)
   item={true}
