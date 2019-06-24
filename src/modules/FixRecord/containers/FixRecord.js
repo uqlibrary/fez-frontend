@@ -17,15 +17,7 @@ const onSubmit = (values, dispatch, props) => {
     return dispatch(data.fixAction === 'unclaim'
         ? actions.unclaimRecord(data)
         : actions.fixRecord(data))
-        .then(() => {
-            // once this promise is resolved form is submitted successfully and will call parent container
-            // reported bug to redux-form:
-            // reset form after success action was dispatched:
-            // componentWillUnmount cleans up form, but then onSubmit success sets it back to active
-            // setTimeout(()=>{
-            //     dispatch(reset(FORM_NAME));
-            // }, 100);
-        }).catch(error => {
+        .catch(error => {
             throw new SubmissionError({ _error: error.message });
         });
 };
@@ -33,7 +25,20 @@ const onSubmit = (values, dispatch, props) => {
 const validate = (values) => {
     stopSubmit(FORM_NAME, null);
     const data = values.toJS();
-    const hasAddedContentIndicators = data.contentIndicators.length > data.contentIndicatorsCountOnLoad;
+
+    const initialContentIndicators = ((
+        data.publication &&
+        data.publication.fez_record_search_key_content_indicator
+    ) || []).map(
+        item => item.rek_content_indicator
+    );
+    const hasAddedContentIndicators = (
+        data.contentIndicators &&
+        data.contentIndicators.some(
+            indicator => initialContentIndicators.indexOf(indicator) === -1
+        )
+    );
+
     const hasFiles = data.files && data.files.queue && data.files.queue.length > 0;
     const errors = {};
     if (
@@ -69,8 +74,8 @@ const mapStateToProps = (state) => {
         formErrors: formErrors,
         disableSubmit: formErrors && !(formErrors instanceof Immutable.Map),
         initialValues: {
-            contentIndicators,
-            contentIndicatorsCountOnLoad: contentIndicators.length,
+            publication: recordToFix,
+            contentIndicators
         }
     };
 };
