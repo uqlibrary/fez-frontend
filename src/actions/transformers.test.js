@@ -283,24 +283,27 @@ describe('getIssueValues test', () => {
 });
 
 describe('getFixIssueRequest test', () => {
+    const input = {
+        publication: {},
+        author: {}
+    };
+
+    input.publication.rek_pid = 'UQ:1111';
+    input.author.aut_display_name = 'J. Smith';
+    input.author.aut_org_username = 'uqjsmith';
+    input.comments = 'Some comments...';
+    input.rek_link = 'http://www.test.com';
+    input.files = { queue: [{ name: '1.jpg' }, { name: '2.jpg' }] };
+    input.contentIndicators = CONTENT_INDICATORS.map(item => item.value);
 
     it('should create issue request', () => {
-        const input = { publication: {}, author: {} };
-
-        input.publication.rek_pid = 'UQ:1111';
-        input.author.aut_display_name = 'J. Smith';
-        input.author.aut_org_username = 'uqjsmith';
-        input.comments = 'Some comments...';
-        input.rek_link = 'http://www.test.com';
-        input.files = { queue: [{ name: '1.jpg' }, { name: '2.jpg' }] };
-        input.contentIndicators = CONTENT_INDICATORS.map(item => item.value);
-
         const expected = [
             "Added comments: Some comments...",
             "Added link: http://www.test.com",
             "Added files: 1.jpg, 2.jpg",
             `Selected Content Indicator(s): ${CONTENT_INDICATORS.map(item => item.text).join('; ')}`,
         ];
+
         const result = transformers.getFixIssueRequest(input);
         expected.map(item => {
             expect(result.issue).toContain(item);
@@ -308,6 +311,32 @@ describe('getFixIssueRequest test', () => {
 
         const result2 = transformers.getFixIssueRequest({});
         expect(result2.issue).toEqual('');
+    });
+
+    it('should create expected issue request when content indicators exist already', () => {
+        const input2 = {
+            ...input,
+            publication: {
+                fez_record_search_key_content_indicator: [
+                    { rek_content_indicator: CONTENT_INDICATORS[0].value },
+                ],
+            },
+        };
+        const newIndicators = [
+            CONTENT_INDICATORS[1],
+            CONTENT_INDICATORS[2]
+        ];
+        const expected = [
+            "Added comments: Some comments...",
+            "Added link: http://www.test.com",
+            "Added files: 1.jpg, 2.jpg",
+            `Selected Content Indicator(s): ${newIndicators.map(item => item.text).join('; ')}`,
+        ];
+
+        const result = transformers.getFixIssueRequest(input2);
+        expected.map(item => {
+            expect(result.issue).toContain(item);
+        });
     });
 
 });

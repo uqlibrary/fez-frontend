@@ -10,11 +10,22 @@ const pipe = (...functionsList) => values => functionsList.reduce(
 );
 
 export const getIssueValues = (data) => {
+    const initialContentIndicators = ((
+        data.publication &&
+        data.publication.fez_record_search_key_content_indicator
+    ) || []).map(
+        item => item.rek_content_indicator
+    );
+    const newContentIndicators = (
+        !!data.contentIndicators &&
+        data.contentIndicators.filter(
+            item => initialContentIndicators.indexOf(item) === -1
+        )
+    );
     return {
         contentIndicators: (
-            data.contentIndicators &&
-            data.contentIndicators.length &&
-            data.contentIndicators.map(
+            newContentIndicators &&
+            newContentIndicators.map(
                 id => CONTENT_INDICATORS.find(
                     item => item.value === id
                 ).text

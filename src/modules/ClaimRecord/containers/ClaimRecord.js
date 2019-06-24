@@ -41,7 +41,7 @@ const mapStateToProps = (state) => {
         formErrors: formErrors,
         disableSubmit: formErrors && !(formErrors instanceof Immutable.Map),
         initialValues: {
-            publication: reducerOutput.publicationToClaim || null,
+            publication: reducerOutput.fullPublicationToClaim || reducerOutput.publicationToClaim || null,
             author: state && state.get('accountReducer') ? state.get('accountReducer').author : null,
             contentIndicators,
         },
