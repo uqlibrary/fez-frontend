@@ -1,6 +1,6 @@
 context('Homepage', () => {
     beforeEach(() => {
-        cy.visit('http://localhost:3000');
+        cy.visit('/');
         cy.get('#unsupportedBrowser.card button')
             .then(($button) => {
                 // Button is only visible if browser is unsupported.

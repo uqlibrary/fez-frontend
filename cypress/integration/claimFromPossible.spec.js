@@ -2,16 +2,36 @@ import formsLocale from '../../src/locale/forms';
 // import pagesLocale from '../../src/locale/pages';
 
 context('Claim possible work', () => {
+    const baseUrl = Cypress.config('baseUrl');
     const claimFormLocale = formsLocale.forms.claimPublicationForm;
     // const possibleClaimsLocale = pagesLocale.pages.claimPublications;
 
     beforeEach(() => {
-        cy.visit('http://localhost:3000/records/possible');
+        cy.visit('/records/possible');
         cy.get('#unsupportedBrowser.card button')
             .then(($button) => {
                 // Button is only visible if browser is unsupported.
                 if ($button.filter(':visible')) {
                     $button.click();
+                }
+            });
+    });
+
+    afterEach(() => {
+        // Navigate away to trigger 'Are you sure' dialogue about unsaved changes
+        cy.get('button[title="Main navigation"]')
+            .click();
+        cy.get('#mainMenu .menu-item-container')
+            .contains('Home')
+            .click();
+        // Say yes to 'Are you sure' if it does trigger
+        cy.url()
+            .then(($url) => {
+                if ($url !== `${baseUrl}/`) {
+                    cy.contains(claimFormLocale.cancelWorkflowConfirmation.confirmationTitle)
+                        .closest('[role="document"]')
+                        .contains(claimFormLocale.cancelWorkflowConfirmation.confirmButtonLabel)
+                        .click();
                 }
             });
     });
@@ -37,7 +57,7 @@ context('Claim possible work', () => {
             .first()
             .click();
         cy.url()
-            .should('equal', 'http://localhost:3000/records/claim');
+            .should('equal', `${baseUrl}/records/claim`);
         cy.get('h2')
             .should('have.length', 1)
             .should('contain', claimFormLocale.title);
@@ -45,6 +65,7 @@ context('Claim possible work', () => {
             .should('contain', claimFormLocale.claimingInformation.title)
             .should('contain', claimFormLocale.authorLinking.title)
             .should('contain', claimFormLocale.contributorLinking.title)
+            .should('contain', claimFormLocale.contentIndicators.title)
             .should('contain', claimFormLocale.comments.title)
             .should('contain', claimFormLocale.fileUpload.title);
         cy.get('.Alert b')
@@ -58,12 +79,44 @@ context('Claim possible work', () => {
             .should('be.disabled');
     });
 
+    it('Allows selection of unselected content indicators, but does not allow deselection of existing', () => {
+        cy.get('.StandardCard button.publicationAction')
+            .first()
+            .click();
+        cy.url()
+            .should('equal', `${baseUrl}/records/claim`);
+        cy.contains(claimFormLocale.contentIndicators.title)
+            .scrollIntoView();
+        cy.get('#content-indicators')
+            .click();
+        // Click new item in multiselect modal
+        cy.get('#menu-')
+            .contains('Protocol')
+            .click();
+        // Click outside the multiselect
+        cy.get('#menu-')
+            .click(10, 10);
+        cy.get('#content-indicators')
+            .contains('Scholarship of Teaching and Learning, Protocol')
+            .click();
+        // Click preselected item in multiselect modal
+        cy.get('#menu-')
+            .contains('Scholarship of Teaching and Learning')
+            .should('not.be.above'); // Item is marked as disabled
+        // Click outside the multiselect
+        cy.get('#menu-')
+            .click(10, 10);
+        // Selection has not changed
+        cy.get('#content-indicators')
+            .contains('Scholarship of Teaching and Learning, Protocol');
+    });
+
     it('Can choose author, then submit the claim.', () => {
         cy.get('.StandardCard button.publicationAction')
             .first()
             .click();
         cy.url()
-            .should('equal', 'http://localhost:3000/records/claim');
+            .should('equal', `${baseUrl}/records/claim`);
         cy.contains(claimFormLocale.authorLinking.title)
             .closest('.StandardCard')
             .find('button')
@@ -88,7 +141,7 @@ context('Claim possible work', () => {
             .contains(claimFormLocale.successWorkflowConfirmation.cancelButtonLabel)
             .click();
         cy.url()
-            .should('equal', 'http://localhost:3000/records/possible');
+            .should('equal', `${baseUrl}/records/possible`);
     });
 
     it('Can choose editor, then submit the claim.', () => {
@@ -98,7 +151,7 @@ context('Claim possible work', () => {
             .first()
             .click();
         cy.url()
-            .should('equal', 'http://localhost:3000/records/claim');
+            .should('equal', `${baseUrl}/records/claim`);
         cy.contains(claimFormLocale.contributorLinking.title)
             .closest('.StandardCard')
             .find('button')
@@ -123,6 +176,6 @@ context('Claim possible work', () => {
             .contains(claimFormLocale.successWorkflowConfirmation.cancelButtonLabel)
             .click();
         cy.url()
-            .should('equal', 'http://localhost:3000/records/possible');
+            .should('equal', `${baseUrl}/records/possible`);
     });
 });
