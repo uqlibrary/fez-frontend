@@ -274,6 +274,9 @@ export function claimPublication(data) {
         // track success of either save or patch request
         let claimRecordRequestSuccess = false;
 
+        // create request for issue notification
+        const createIssueRequest = transformers.getClaimIssueRequest(data);
+
         return Promise.resolve([])
             // save a new record if claiming from external source
             .then(() => !data.publication.rek_pid ? post(NEW_RECORD_API(), createRecordRequest) : null)
@@ -314,11 +317,11 @@ export function claimPublication(data) {
                 )
                 : null
             )
-            // send comments as an issue request
-            .then(() => data.comments
+            // send comments or content indicator changes as an issue request
+            .then(() => createIssueRequest.issue.length
                 ? post(
                     RECORDS_ISSUES_API({ pid: data.publication.rek_pid }),
-                    { issue: 'Notes from creator of a claimed record: ' + data.comments }
+                    createIssueRequest
                 )
                 : null
             )
