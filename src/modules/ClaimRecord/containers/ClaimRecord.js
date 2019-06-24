@@ -25,44 +25,23 @@ let ClaimPublicationFormContainer = reduxForm({
 
 const mapStateToProps = (state) => {
     const formErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});
+    const reducerOutput = !!state && state.get('claimPublicationReducer') || {};
     const contentIndicators = (
-        state &&
-        state.get('claimPublicationReducer') &&
-        state.get('claimPublicationReducer').fullPublicationToClaim &&
-        (state.get('claimPublicationReducer').fullPublicationToClaim.fez_record_search_key_content_indicator || []).map(
+        reducerOutput.fullPublicationToClaim &&
+        (reducerOutput.fullPublicationToClaim.fez_record_search_key_content_indicator || []).map(
             item => item.rek_content_indicator
         )
     ) || [];
     return {
-        fullPublicationToClaim: (
-            state &&
-            state.get('claimPublicationReducer') &&
-            state.get('claimPublicationReducer').fullPublicationToClaim
-        ) || null,
-        fullPublicationToClaimLoading: (
-            state &&
-            state.get('claimPublicationReducer') &&
-            state.get('claimPublicationReducer').fullPublicationToClaimLoading
-        ) || false,
-        fullPublicationToClaimLoadingFailed: (
-            state &&
-            state.get('claimPublicationReducer') &&
-            state.get('claimPublicationReducer').fullPublicationToClaimLoadingFailed
-        ) || false,
-        publicationToClaimFileUploadingError: (
-            state &&
-            state.get('claimPublicationReducer') &&
-            state.get('claimPublicationReducer').publicationToClaimFileUploadingError
-        ) || null,
+        fullPublicationToClaim: reducerOutput.fullPublicationToClaim || null,
+        fullPublicationToClaimLoading: reducerOutput.fullPublicationToClaimLoading || false,
+        fullPublicationToClaimLoadingFailed: reducerOutput.fullPublicationToClaimLoadingFailed || false,
+        publicationToClaimFileUploadingError: reducerOutput.publicationToClaimFileUploadingError || null,
         formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
         formErrors: formErrors,
         disableSubmit: formErrors && !(formErrors instanceof Immutable.Map),
         initialValues: {
-            publication: (
-                state &&
-                state.get('claimPublicationReducer') &&
-                state.get('claimPublicationReducer').publicationToClaim
-            ) || null,
+            publication: reducerOutput.publicationToClaim || null,
             author: state && state.get('accountReducer') ? state.get('accountReducer').author : null,
             contentIndicators,
         },
