@@ -7,14 +7,15 @@ import {
     rtlRender,
     waitForElement,
     withRedux,
-    withRouter
+    withRouter,
 } from 'test-utils';
 
 import { ClaimRecord } from '.';
 import { publicationDetails } from 'mock/data/testing/records';
 import {
     EXISTING_RECORD_API,
- } from 'repositories/routes';
+    RECORDS_ISSUES_API,
+} from 'repositories/routes';
 
 const initialState = Immutable.Map({
     accountReducer: {
@@ -138,8 +139,7 @@ describe('ClaimRecord form', () => {
     it('should allow content indicators to be selected', async () => {
         mockApi
             .onAny(EXISTING_RECORD_API({ pid: 'UQ:396321' }).apiUrl)
-            .reply(200, { data: publicationDetails })
-        ;
+            .reply(200, { data: publicationDetails });
 
         const path = '/records/:pid(UQ:[a-z0-9]+)/fix';
         const route = '/records/UQ:396321/fix';
@@ -192,7 +192,8 @@ describe('ClaimRecord form', () => {
         mockApi
             .onAny(EXISTING_RECORD_API({ pid: 'UQ:396321' }).apiUrl)
             .reply(200, { data: publicationDetails })
-        ;
+            .onAny(RECORDS_ISSUES_API({ pid: 'UQ:396321' }).apiUrl)
+            .reply(200);
 
         const path = '/records/:pid(UQ:[a-z0-9]+)/fix';
         const route = '/records/UQ:396321/fix';

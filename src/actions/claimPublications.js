@@ -317,8 +317,8 @@ export function claimPublication(data) {
                 )
                 : null
             )
-            // send comments as an issue request
-            .then(() => data.comments
+            // send comments or content indicator changes as an issue request
+            .then(() => createIssueRequest.issue.length
                 ? post(
                     RECORDS_ISSUES_API({ pid: data.publication.rek_pid }),
                     createIssueRequest
