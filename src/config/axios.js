@@ -75,7 +75,7 @@ api.interceptors.request.use(request => {
 const reportToSentry = (error) => {
     let detailedError = '';
     if (error.response) {
-        detailedError = `Data: ${error.response.data}; Status: ${error.response.status}; Headers: ${JSON.stringify(error.response.headers)}`;
+        detailedError = `Data: ${JSON.stringify(error.response.data)}; Status: ${error.response.status}; Headers: ${JSON.stringify(error.response.headers)}`;
     } else {
         detailedError = `Something happened in setting up the request that triggered an Error: ${error.message}`;
     }
