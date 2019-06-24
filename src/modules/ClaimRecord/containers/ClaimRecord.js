@@ -1,19 +1,19 @@
-import {connect} from 'react-redux';
-import {bindActionCreators} from 'redux';
-import {reduxForm, getFormValues, getFormSyncErrors, SubmissionError} from 'redux-form/immutable';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { reduxForm, getFormValues, getFormSyncErrors, SubmissionError } from 'redux-form/immutable';
 import Immutable from 'immutable';
 import ClaimRecord from '../components/ClaimRecord';
-import {withRouter} from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import * as actions from 'actions';
-import {confirmDiscardFormChanges} from 'modules/SharedComponents/ConfirmDiscardFormChanges';
+import { confirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
 
 const FORM_NAME = 'ClaimRecord';
 
 const onSubmit = (values, dispatch) => {
-    const data = {...values.toJS()};
+    const data = { ...values.toJS() };
     return dispatch(actions.claimPublication(data))
         .catch(error => {
-            throw new SubmissionError({_error: error.message});
+            throw new SubmissionError({ _error: error.message });
         });
 };
 
