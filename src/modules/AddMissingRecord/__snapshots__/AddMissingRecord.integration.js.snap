@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AddMissingRecord form BookForm:Textbook should not show submit button when a form is not rendered 1`] = `
+exports[`AddMissingRecord form BookForm:Textbook should  show submit button when a form is rendered 1`] = `
 "Snapshot Diff:
 - First value
 + Second value
@@ -1027,7 +1027,7 @@ exports[`AddMissingRecord form BookForm:Textbook should not show submit button w
       </div>"
 `;
 
-exports[`AddMissingRecord form BookForm:Textbook should only show submit button when a form is rendered 1`] = `
+exports[`AddMissingRecord form BookForm:Textbook should not show submit button when a form is not rendered 1`] = `
 "Snapshot Diff:
 - First value
 + Second value

@@ -86,7 +86,7 @@ describe('AddMissingRecord form', () => {
     afterEach(cleanup);
     describe('BookForm:Textbook', () => {
 
-        it('should only show submit button when a form is rendered', () => {
+        it('should not show submit button when a form is not rendered', () => {
             const route = '/records/add/new';
             const {asFragment, getByText, getByTestId} = rtlRender(withRedux(initialState)(withRouter({route})(<AddMissingRecord addRecordStep={NewRecord} />)));
 
@@ -99,7 +99,7 @@ describe('AddMissingRecord form', () => {
 
         });
 
-        it('should not show submit button when a form is not rendered', () => {
+        it('should  show submit button when a form is rendered', () => {
             const route = '/records/add/new';
             const {asFragment, getByText, getByTestId} = rtlRender(withRedux(initialState)(withRouter({route})(<AddMissingRecord addRecordStep={NewRecord} />)));
 
