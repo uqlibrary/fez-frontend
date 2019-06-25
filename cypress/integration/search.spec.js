@@ -4,8 +4,9 @@ context('Search', () => {
         cy.get('#unsupportedBrowser.card button')
             .then(($button) => {
                 // Button is only visible if browser is unsupported.
-                if ($button.filter(':visible')) {
-                    $button.click();
+                if ($button.filter(':visible').length) {
+                    cy.wrap($button)
+                        .click();
                 }
             });
     });

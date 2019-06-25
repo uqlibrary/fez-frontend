@@ -253,31 +253,36 @@ original image snapshot).
     taking a snapshot.
 - When the form you are writing tests for has a dialog box to prevent navigating away before its complete - make sure to add this to the top of your test:
 
-`afterEach(() => {
-cy.window().then(win => win.onbeforeunload = undefined );
-});` 
+```javascript
+afterEach(() => {
+    cy.window().then(win => (win.onbeforeunload = undefined));
+});
+```
 
-- When using the MUI dialog confirmation - use : 
+- When using the MUI dialog confirmation - use :
 
-`afterEach(() => {
-         // Navigate away to trigger 'Are you sure' dialogue about unsaved changes
-         const baseUrl = Cypress.config('baseUrl');
-         cy.get('button[title="Main navigation"]')
-             .click();
-         cy.get('#mainMenu .menu-item-container')
-             .contains('Home')
-             .click();
-         // Say yes to 'Are you sure' if it does trigger
-         cy.url()
-             .then(($url) => {
-                 if ($url !== '${baseUrl}/') {
-                     cy.contains(locale.conformationTitle)
-                         .closest('[role="document"]')
-                         .contains(locale.confirmButtonLabel)
-                         .click();
-                 }
-             });
-     });`
+```javascript
+const baseUrl = Cypress.config('baseUrl');
+
+afterEach(() => {
+    // Navigate away to trigger 'Are you sure' dialogue about unsaved changes
+    cy.get('button[title="Main navigation"]')
+        .click();
+    cy.get('#mainMenu .menu-item-container')
+        .contains('Home')
+        .click();
+    // Say yes to 'Are you sure' if it does trigger
+    cy.url()
+        .then(($url) => {
+            if ($url !== '${baseUrl}/') {
+                cy.contains(locale.conformationTitle)
+                    .closest('[role="document"]')
+                    .contains(locale.confirmButtonLabel)
+                    .click();
+            }
+        });
+});
+```
 
 ## Mocking
 
