@@ -209,7 +209,7 @@ export class FileUploadDropzone extends PureComponent {
     render() {
         const {maxSize, disabled, locale} = this.props;
         return (
-            <Grid container>
+            <Grid container id="FileUploadDropZone">
                 <Grid item xs={12}>
                     <div tabIndex="0" onKeyPress={this._onKeyPress}>
                         <Dropzone
