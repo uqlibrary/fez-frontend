@@ -1,21 +1,21 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import {propTypes} from 'redux-form/immutable';
-import {Field} from 'redux-form/immutable';
+import { propTypes } from 'redux-form/immutable';
+import { Field } from 'redux-form/immutable';
 import MenuItem from '@material-ui/core/MenuItem';
 import Divider from '@material-ui/core/Divider';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
-import {NtroHeader} from 'modules/SharedComponents/Toolbox/NtroFields';
-import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
-import {SelectField} from 'modules/SharedComponents/Toolbox/SelectField';
-import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
-import {FileUploadField} from 'modules/SharedComponents/Toolbox/FileUploader';
-import {NavigationDialogBox} from 'modules/SharedComponents/Toolbox/NavigationPrompt';
-import {publicationTypes, validation} from 'config';
-import {default as txt} from 'locale/publicationForm';
+import { NtroHeader } from 'modules/SharedComponents/Toolbox/NtroFields';
+import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
+import { SelectField } from 'modules/SharedComponents/Toolbox/SelectField';
+import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
+import { FileUploadField } from 'modules/SharedComponents/Toolbox/FileUploader';
+import { NavigationDialogBox } from 'modules/SharedComponents/Toolbox/NavigationPrompt';
+import { publicationTypes, validation } from 'config';
+import { default as txt } from 'locale/publicationForm';
 import * as recordForms from './Forms';
-import {NEW_DOCTYPES_OPTIONS, DOCTYPE_SUBTYPE_MAPPING} from 'config/general';
+import { NEW_DOCTYPES_OPTIONS, DOCTYPE_SUBTYPE_MAPPING } from 'config/general';
 import Typography from '@material-ui/core/Typography';
 import { ContentIndicatorsField, showContentIndicatorsField } from 'modules/SharedComponents/Toolbox/ContentIndicatorsField';
 
@@ -41,7 +41,7 @@ export default class PublicationForm extends Component {
 
     constructor(props) {
         super(props);
-        this.publicationTypes = publicationTypes({...recordForms});
+        this.publicationTypes = publicationTypes({ ...recordForms });
         this.publicationTypeItems = [
             ...(this.publicationTypes.filter((item) => {
                 return item.isFavourite;
@@ -52,7 +52,7 @@ export default class PublicationForm extends Component {
                     </MenuItem>
                 );
             })),
-            ...[<Divider key="div_0"/>],
+            ...[<Divider key="div_0" />],
             ...this.publicationTypes.filter((item) => {
                 return item.hasFormComponent;
             }).map((item, index) => {
@@ -93,13 +93,11 @@ export default class PublicationForm extends Component {
     };
 
     render() {
-        const alertProps = validation.getErrorAlertProps({...this.props, alertLocale: txt});
-        console.log(this.props.formValues.toJS());
-        console.log(this.props.hasSubtypes);
+        const alertProps = validation.getErrorAlertProps({ ...this.props, alertLocale: txt });
         return (
             <form onSubmit={this._handleDefaultSubmit}>
                 <Grid container spacing={24}>
-                    <NavigationDialogBox when={this.props.dirty && !this.props.submitSucceeded} txt={txt.cancelWorkflowConfirmation}/>
+                    <NavigationDialogBox when={this.props.dirty && !this.props.submitSucceeded} txt={txt.cancelWorkflowConfirmation} />
                     <Grid item xs={12}>
                         <StandardCard title={txt.publicationType.title} help={txt.publicationType.help}>
                             <Grid container spacing={8}>
@@ -168,7 +166,7 @@ export default class PublicationForm extends Component {
                             }
                             {
                                 !!this.props.isNtro &&
-                                <NtroHeader/>
+                                <NtroHeader />
                             }
                             <Grid item xs={12}>
                                 <this.props.formComponent
@@ -201,14 +199,14 @@ export default class PublicationForm extends Component {
                     }
                 </Grid>
                 <Grid container spacing={24}>
-                    <Grid item xs/>
+                    <Grid item xs />
                     <Grid item xs={12} sm="auto">
                         <Button
                             color="secondary"
                             fullWidth
                             children={txt.cancel}
                             disabled={this.props.submitting}
-                            onClick={this.props.onFormCancel}/>
+                            onClick={this.props.onFormCancel} />
                     </Grid>
                     {
                         (this.props.formValues.get('rek_display_type') > 0 &&
@@ -217,14 +215,14 @@ export default class PublicationForm extends Component {
                         &&
                         <Grid item xs={12} sm="auto">
                             <Button
-                                style={{whiteSpace: 'nowrap'}}
+                                style={{ whiteSpace: 'nowrap' }}
                                 id="submit-work"
                                 variant="contained"
                                 color="primary"
                                 fullWidth
                                 children={txt.submit}
                                 onClick={this.props.handleSubmit}
-                                disabled={this.props.submitting || this.props.disableSubmit}/>
+                                disabled={this.props.submitting || this.props.disableSubmit} />
                         </Grid>
                     }
                 </Grid>
