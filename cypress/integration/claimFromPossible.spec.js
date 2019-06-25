@@ -11,8 +11,9 @@ context('Claim possible work', () => {
         cy.get('#unsupportedBrowser.card button')
             .then(($button) => {
                 // Button is only visible if browser is unsupported.
-                if ($button.filter(':visible')) {
-                    $button.click();
+                if ($button.filter(':visible').length) {
+                    cy.wrap($button)
+                        .click();
                 }
             });
     });
@@ -79,6 +80,27 @@ context('Claim possible work', () => {
             .should('be.disabled');
     });
 
+    it('Can cancel a claim after filling the form', () => {
+        cy.get('.StandardCard button.publicationAction')
+            .first()
+            .click();
+        cy.url()
+            .should('equal', `${baseUrl}/records/claim`);
+        cy.contains(claimFormLocale.comments.title)
+            .closest('.StandardCard')
+            .find('textarea')
+            .type('Test comment');
+        cy.contains(claimFormLocale.cancel)
+            .closest('button')
+            .click();
+        cy.contains(claimFormLocale.cancelWorkflowConfirmation.confirmationTitle)
+            .closest('[role="document"]')
+            .contains(claimFormLocale.cancelWorkflowConfirmation.confirmButtonLabel)
+            .click();
+        cy.url()
+            .should('equal', `${baseUrl}/records/possible`);
+    });
+
     it('Allows selection of unselected content indicators, but does not allow deselection of existing', () => {
         cy.get('.StandardCard button.publicationAction')
             .first()
@@ -99,10 +121,10 @@ context('Claim possible work', () => {
         cy.get('#content-indicators')
             .contains('Scholarship of Teaching and Learning, Protocol')
             .click();
-        // Click preselected item in multiselect modal
+        // Preselected item in multiselect modal should be unclickable
         cy.get('#menu-')
             .contains('Scholarship of Teaching and Learning')
-            .should('not.be.above'); // Item is marked as disabled
+            .should('not.be.above');
         // Click outside the multiselect
         cy.get('#menu-')
             .click(10, 10);
