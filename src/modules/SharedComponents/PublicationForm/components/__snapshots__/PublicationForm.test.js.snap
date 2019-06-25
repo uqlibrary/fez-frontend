@@ -4067,26 +4067,6 @@ exports[`Component PublicationForm should render component initialised with two 
         Abandon and search again
       </WithStyles(Button)>
     </WithStyles(Grid)>
-    <WithStyles(Grid)
-      item={true}
-      sm="auto"
-      xs={12}
-    >
-      <WithStyles(Button)
-        color="primary"
-        fullWidth={true}
-        id="submit-work"
-        onClick={[MockFunction]}
-        style={
-          Object {
-            "whiteSpace": "nowrap",
-          }
-        }
-        variant="contained"
-      >
-        Submit for approval
-      </WithStyles(Button)>
-    </WithStyles(Grid)>
   </WithStyles(Grid)>
 </form>
 `;
@@ -4575,26 +4555,6 @@ exports[`Component PublicationForm should render component with BookForm 1`] = `
         Abandon and search again
       </WithStyles(Button)>
     </WithStyles(Grid)>
-    <WithStyles(Grid)
-      item={true}
-      sm="auto"
-      xs={12}
-    >
-      <WithStyles(Button)
-        color="primary"
-        fullWidth={true}
-        id="submit-work"
-        onClick={[MockFunction]}
-        style={
-          Object {
-            "whiteSpace": "nowrap",
-          }
-        }
-        variant="contained"
-      >
-        Submit for approval
-      </WithStyles(Button)>
-    </WithStyles(Grid)>
   </WithStyles(Grid)>
 </form>
 `;
@@ -5078,26 +5038,6 @@ exports[`Component PublicationForm should render component with GenericDocument 
         onClick={[MockFunction]}
       >
         Abandon and search again
-      </WithStyles(Button)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
-      item={true}
-      sm="auto"
-      xs={12}
-    >
-      <WithStyles(Button)
-        color="primary"
-        fullWidth={true}
-        id="submit-work"
-        onClick={[MockFunction]}
-        style={
-          Object {
-            "whiteSpace": "nowrap",
-          }
-        }
-        variant="contained"
-      >
-        Submit for approval
       </WithStyles(Button)>
     </WithStyles(Grid)>
   </WithStyles(Grid)>
@@ -5585,26 +5525,6 @@ exports[`Component PublicationForm should render component with JournalArticleFo
         Abandon and search again
       </WithStyles(Button)>
     </WithStyles(Grid)>
-    <WithStyles(Grid)
-      item={true}
-      sm="auto"
-      xs={12}
-    >
-      <WithStyles(Button)
-        color="primary"
-        fullWidth={true}
-        id="submit-work"
-        onClick={[MockFunction]}
-        style={
-          Object {
-            "whiteSpace": "nowrap",
-          }
-        }
-        variant="contained"
-      >
-        Submit for approval
-      </WithStyles(Button)>
-    </WithStyles(Grid)>
   </WithStyles(Grid)>
 </form>
 `;
@@ -6088,26 +6008,6 @@ exports[`Component PublicationForm should render component with ResearchReportFo
         onClick={[MockFunction]}
       >
         Abandon and search again
-      </WithStyles(Button)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
-      item={true}
-      sm="auto"
-      xs={12}
-    >
-      <WithStyles(Button)
-        color="primary"
-        fullWidth={true}
-        id="submit-work"
-        onClick={[MockFunction]}
-        style={
-          Object {
-            "whiteSpace": "nowrap",
-          }
-        }
-        variant="contained"
-      >
-        Submit for approval
       </WithStyles(Button)>
     </WithStyles(Grid)>
   </WithStyles(Grid)>

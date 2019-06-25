@@ -6,7 +6,6 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Divider from '@material-ui/core/Divider';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
-// import InputLabel from '@material-ui/core/InputLabel';
 import {NtroHeader} from 'modules/SharedComponents/Toolbox/NtroFields';
 import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
 import {SelectField} from 'modules/SharedComponents/Toolbox/SelectField';
@@ -92,12 +91,14 @@ export default class PublicationForm extends Component {
 
     render() {
         const alertProps = validation.getErrorAlertProps({...this.props, alertLocale: txt});
+        console.log(this.props.formValues.toJS());
+        console.log(this.props.hasSubtypes);
         return (
             <form onSubmit={this._handleDefaultSubmit}>
                 <Grid container spacing={24}>
-                    <NavigationDialogBox when={this.props.dirty && !this.props.submitSucceeded} txt={txt.cancelWorkflowConfirmation} />
+                    <NavigationDialogBox when={this.props.dirty && !this.props.submitSucceeded} txt={txt.cancelWorkflowConfirmation}/>
                     <Grid item xs={12}>
-                        <StandardCard title={txt.publicationType.title}  help={txt.publicationType.help}>
+                        <StandardCard title={txt.publicationType.title} help={txt.publicationType.help}>
                             <Grid container spacing={8}>
                                 <Grid item xs={12}>
                                     <Field
@@ -158,7 +159,7 @@ export default class PublicationForm extends Component {
                                 <StandardCard title={txt.fileUpload.title} help={txt.fileUpload.help}>
                                     <Field
                                         name="files"
-                                        component={ FileUploadField }
+                                        component={FileUploadField}
                                         disabled={this.props.submitting}
                                         requireOpenAccessStatus
                                         validate={this.props.isNtro ? [validation.fileUploadRequired, validation.validFileUpload] : [validation.validFileUpload]}
@@ -176,18 +177,20 @@ export default class PublicationForm extends Component {
                     }
                 </Grid>
                 <Grid container spacing={24}>
-                    <Grid item xs />
+                    <Grid item xs/>
                     <Grid item xs={12} sm="auto">
                         <Button
-                            // variant={'text'}
                             color="secondary"
                             fullWidth
                             children={txt.cancel}
                             disabled={this.props.submitting}
-                            onClick={this.props.onFormCancel} />
+                            onClick={this.props.onFormCancel}/>
                     </Grid>
                     {
-                        this.props.formValues.get('rek_display_type') > 0 &&
+                        (this.props.formValues.get('rek_display_type') > 0 &&
+                            !this.props.hasSubtypes || (this.props.hasSubtypes && this.props.formValues.get('rek_subtype') && this.props.formValues.get('rek_subtype').length > 0)
+                        )
+                        &&
                         <Grid item xs={12} sm="auto">
                             <Button
                                 style={{whiteSpace: 'nowrap'}}
