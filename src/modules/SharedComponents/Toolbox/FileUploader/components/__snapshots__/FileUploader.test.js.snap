@@ -2068,6 +2068,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                               className="MuiGrid-item-38 MuiGrid-grid-xs-12-77"
                             >
                               <div
+                                id="FileUploadDropZone"
                                 onKeyPress={[Function]}
                                 tabIndex="0"
                               >
@@ -5750,6 +5751,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                               className="MuiGrid-item-38 MuiGrid-grid-xs-12-77"
                             >
                               <div
+                                id="FileUploadDropZone"
                                 onKeyPress={[Function]}
                                 tabIndex="0"
                               >

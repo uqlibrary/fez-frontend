@@ -619,7 +619,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 +                     </div>
 +                   </div>
 +                   <div
-+                     class=\\"ListRow-Field of research-01 Mathematical Sciences\\"
++                     class=\\"ListRow-Field of research ListRow-Field of research-01 Mathematical Sciences\\"
 +                     style=\\"padding: 8px;\\"
 +                   >
 +                     <div
@@ -1183,7 +1183,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
                     <div
                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
                     >
-@@ -1974,105 +2348,11 @@
+@@ -1975,105 +2349,11 @@
                     </div>
                   </div>
                 </div>
@@ -1289,7 +1289,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
           >
             <div
               class=\\"MuiGrid-item-4 MuiGrid-grid-sm-true-45\\"
-@@ -2099,21 +2379,23 @@
+@@ -2100,21 +2380,23 @@
             <div
               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-auto-44\\"
             >

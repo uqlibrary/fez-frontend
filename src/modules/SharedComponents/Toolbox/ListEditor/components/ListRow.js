@@ -68,7 +68,7 @@ export class ListRow extends PureComponent {
         const {moveDownHint, moveUpHint, deleteHint, deleteRecordConfirmation} = this.props.locale;
 
         return (
-            <div style={{flexGrow: 1, padding: 8}} className={`ListRow-${this.props.form}-${item.value || item}`}>
+            <div style={{flexGrow: 1, padding: 8}} className={`ListRow-${this.props.form} ListRow-${this.props.form}-${item.value || item}`}>
                 <ConfirmDialogBox
                     onRef={ref => (this.confirmationBox = ref)}
                     onAction={this.deleteRecord}

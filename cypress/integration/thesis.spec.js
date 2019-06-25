@@ -136,7 +136,7 @@ context('Thesis', () => {
             .children()
             .should('have.length', 2);
         cy.get('button#submit-thesis').should('to.have.attr', 'disabled');
-        cy.get('div[class="ListRow-Field of research-0101 Pure Mathematics"]')
+        cy.get('div[class="ListRow-Field of research ListRow-Field of research-0101 Pure Mathematics"]')
             .get('button[title="Remove this item"]')
             .click();
         cy.get('button')
@@ -203,7 +203,6 @@ context('Thesis', () => {
         cy.get('button')
             .contains('Yes')
             .click();
-        cy.wait(5000);
         cy.get('.alert-text')
             .find('ul')
             .children()
@@ -211,21 +210,52 @@ context('Thesis', () => {
         cy.get('input#keywords-input').type('Third Keyword{enter}', {
             delay: 100,
         });
+        cy.get('.ListRow-Keywords').should('have.length', 1);
         cy.get('.alert-text')
             .find('ul')
             .children()
             .should('have.length', 1);
+        cy.get('input#keywords-input').type('Fourth Keyword, Fifth Keyword, Sixth Keyword{enter}', {
+            delay: 100,
+        });
+        cy.get('.ListRow-Keywords').should('have.length', 4);
 
 
         // Files?
-        // const fileName = '../Assets/test.jpg';
-        // cy.fixture(fileName).then(fileContent => {
-        //     cy.get('[data-cy="dropzone"]').upload(
-        //         { fileContent, fileName, mimeType: 'image/jpg' },
-        //         { subjectType: 'drag-n-drop' },
-        //     );
-        // });
-
-        cy.wait(60000);
+        const fileName = 'test.jpg';
+        cy.fixture(fileName).then(fileContent => {
+            cy.get('div#FileUploadDropZone').upload(
+                { fileContent, fileName, mimeType: 'image/jpg' },
+                { subjectType: 'drag-n-drop' },
+            );
+        });
+        cy.wait(5000);
+        cy.get('button[title="Remove this file"]').click();
+        cy.get('button').contains('Yes').click();
+        cy.wait(5000);
+        cy.get('.alert-text')
+            .find('ul')
+            .children()
+            .should('have.length', 1);
+        cy.fixture(fileName).then(fileContent => {
+            cy.get('div#FileUploadDropZone').upload(
+                { fileContent, fileName, mimeType: 'image/jpg' },
+                { subjectType: 'drag-n-drop' },
+            );
+        });
+        cy.get('button[title="Remove all files from the upload queue"]').click();
+        cy.get('button').contains('Yes').click();
+        cy.get('.alert-text')
+            .find('ul')
+            .children()
+            .should('have.length', 1);
+        cy.fixture(fileName).then(fileContent => {
+            cy.get('div#FileUploadDropZone').upload(
+                { fileContent, fileName, mimeType: 'image/jpg' },
+                { subjectType: 'drag-n-drop' },
+            );
+        });
+        // Ready to submit
+        cy.get('button#submit-thesis').should('not.have.attr', 'disabled');
     });
 });
