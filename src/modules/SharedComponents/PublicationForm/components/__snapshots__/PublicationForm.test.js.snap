@@ -31,6 +31,7 @@ exports[`Component PublicationForm Shows an alert 1`] = `
               For more information about each type, click 
               <a
                 href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
+                rel="noreferrer"
                 style={
                   Object {
                     "fontWeight": 700,
@@ -463,6 +464,7 @@ exports[`Component PublicationForm Shows an alert 2`] = `
               For more information about each type, click 
               <a
                 href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
+                rel="noreferrer"
                 style={
                   Object {
                     "fontWeight": 700,
@@ -833,6 +835,58 @@ exports[`Component PublicationForm Shows an alert 2`] = `
                 Research Report - Internal or Other
               </WithStyles(MenuItem)>
             </Field>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+      </StandardCard>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <StandardCard
+        help={
+          Object {
+            "buttonLabel": "CLOSE",
+            "text": <p>
+              For more information about content indicators, click 
+              <a
+                href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
+                rel="noreferrer"
+                style={
+                  Object {
+                    "fontWeight": 700,
+                  }
+                }
+                target="_blank"
+              >
+                here
+              </a>
+            </p>,
+            "title": "Content indicators",
+          }
+        }
+        title="Content indicators"
+      >
+        <WithStyles(Grid)
+          container={true}
+          spacing={24}
+        >
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(Typography)>
+              You can select multiple (up to 3) content indicators to add more information about your work.
+            </WithStyles(Typography)>
+            <Field
+              component={[Function]}
+              disabled={false}
+              fullWidth={true}
+              id="content-indicators"
+              label="Please select relevant indicator(s)."
+              multiple={true}
+              name="contentIndicators"
+            />
           </WithStyles(Grid)>
         </WithStyles(Grid)>
       </StandardCard>
@@ -935,6 +989,7 @@ exports[`Component PublicationForm Shows an alert 3`] = `
               For more information about each type, click 
               <a
                 href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
+                rel="noreferrer"
                 style={
                   Object {
                     "fontWeight": 700,
@@ -1313,6 +1368,58 @@ exports[`Component PublicationForm Shows an alert 3`] = `
       item={true}
       xs={12}
     >
+      <StandardCard
+        help={
+          Object {
+            "buttonLabel": "CLOSE",
+            "text": <p>
+              For more information about content indicators, click 
+              <a
+                href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
+                rel="noreferrer"
+                style={
+                  Object {
+                    "fontWeight": 700,
+                  }
+                }
+                target="_blank"
+              >
+                here
+              </a>
+            </p>,
+            "title": "Content indicators",
+          }
+        }
+        title="Content indicators"
+      >
+        <WithStyles(Grid)
+          container={true}
+          spacing={24}
+        >
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(Typography)>
+              You can select multiple (up to 3) content indicators to add more information about your work.
+            </WithStyles(Typography)>
+            <Field
+              component={[Function]}
+              disabled={false}
+              fullWidth={true}
+              id="content-indicators"
+              label="Please select relevant indicator(s)."
+              multiple={true}
+              name="contentIndicators"
+            />
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+      </StandardCard>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
       <formComponent
         formValues={Immutable.Map {}}
         submitting={false}
@@ -1407,6 +1514,7 @@ exports[`Component PublicationForm should call componentWillReceiveProps when pr
               For more information about each type, click 
               <a
                 href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
+                rel="noreferrer"
                 style={
                   Object {
                     "fontWeight": 700,
@@ -1839,6 +1947,7 @@ exports[`Component PublicationForm should call componentWillReceiveProps when pr
               For more information about each type, click 
               <a
                 href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
+                rel="noreferrer"
                 style={
                   Object {
                     "fontWeight": 700,
@@ -2290,6 +2399,7 @@ exports[`Component PublicationForm should call componentWillReceiveProps when pr
               For more information about each type, click 
               <a
                 href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
+                rel="noreferrer"
                 style={
                   Object {
                     "fontWeight": 700,
@@ -2754,6 +2864,7 @@ exports[`Component PublicationForm should call componentWillReceiveProps when pr
               For more information about each type, click 
               <a
                 href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
+                rel="noreferrer"
                 style={
                   Object {
                     "fontWeight": 700,
@@ -3218,6 +3329,7 @@ exports[`Component PublicationForm should render component initialised with just
               For more information about each type, click 
               <a
                 href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
+                rel="noreferrer"
                 style={
                   Object {
                     "fontWeight": 700,
@@ -3650,6 +3762,7 @@ exports[`Component PublicationForm should render component initialised with two 
               For more information about each type, click 
               <a
                 href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
+                rel="noreferrer"
                 style={
                   Object {
                     "fontWeight": 700,
@@ -4103,6 +4216,7 @@ exports[`Component PublicationForm should render component with BookForm 1`] = `
               For more information about each type, click 
               <a
                 href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
+                rel="noreferrer"
                 style={
                   Object {
                     "fontWeight": 700,
@@ -4501,6 +4615,58 @@ exports[`Component PublicationForm should render component with BookForm 1`] = `
       item={true}
       xs={12}
     >
+      <StandardCard
+        help={
+          Object {
+            "buttonLabel": "CLOSE",
+            "text": <p>
+              For more information about content indicators, click 
+              <a
+                href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
+                rel="noreferrer"
+                style={
+                  Object {
+                    "fontWeight": 700,
+                  }
+                }
+                target="_blank"
+              >
+                here
+              </a>
+            </p>,
+            "title": "Content indicators",
+          }
+        }
+        title="Content indicators"
+      >
+        <WithStyles(Grid)
+          container={true}
+          spacing={24}
+        >
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(Typography)>
+              You can select multiple (up to 3) content indicators to add more information about your work.
+            </WithStyles(Typography)>
+            <Field
+              component={[Function]}
+              disabled={false}
+              fullWidth={true}
+              id="content-indicators"
+              label="Please select relevant indicator(s)."
+              multiple={true}
+              name="contentIndicators"
+            />
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+      </StandardCard>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
       <BookForm
         formValues={
           Immutable.Map {
@@ -4591,6 +4757,7 @@ exports[`Component PublicationForm should render component with GenericDocument 
               For more information about each type, click 
               <a
                 href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
+                rel="noreferrer"
                 style={
                   Object {
                     "fontWeight": 700,
@@ -4989,6 +5156,58 @@ exports[`Component PublicationForm should render component with GenericDocument 
       item={true}
       xs={12}
     >
+      <StandardCard
+        help={
+          Object {
+            "buttonLabel": "CLOSE",
+            "text": <p>
+              For more information about content indicators, click 
+              <a
+                href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
+                rel="noreferrer"
+                style={
+                  Object {
+                    "fontWeight": 700,
+                  }
+                }
+                target="_blank"
+              >
+                here
+              </a>
+            </p>,
+            "title": "Content indicators",
+          }
+        }
+        title="Content indicators"
+      >
+        <WithStyles(Grid)
+          container={true}
+          spacing={24}
+        >
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(Typography)>
+              You can select multiple (up to 3) content indicators to add more information about your work.
+            </WithStyles(Typography)>
+            <Field
+              component={[Function]}
+              disabled={false}
+              fullWidth={true}
+              id="content-indicators"
+              label="Please select relevant indicator(s)."
+              multiple={true}
+              name="contentIndicators"
+            />
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+      </StandardCard>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
       <GenericDocumentForm
         formValues={
           Immutable.Map {
@@ -5076,6 +5295,7 @@ exports[`Component PublicationForm should render component with JournalArticleFo
               For more information about each type, click 
               <a
                 href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
+                rel="noreferrer"
                 style={
                   Object {
                     "fontWeight": 700,
@@ -5474,6 +5694,58 @@ exports[`Component PublicationForm should render component with JournalArticleFo
       item={true}
       xs={12}
     >
+      <StandardCard
+        help={
+          Object {
+            "buttonLabel": "CLOSE",
+            "text": <p>
+              For more information about content indicators, click 
+              <a
+                href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
+                rel="noreferrer"
+                style={
+                  Object {
+                    "fontWeight": 700,
+                  }
+                }
+                target="_blank"
+              >
+                here
+              </a>
+            </p>,
+            "title": "Content indicators",
+          }
+        }
+        title="Content indicators"
+      >
+        <WithStyles(Grid)
+          container={true}
+          spacing={24}
+        >
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(Typography)>
+              You can select multiple (up to 3) content indicators to add more information about your work.
+            </WithStyles(Typography)>
+            <Field
+              component={[Function]}
+              disabled={false}
+              fullWidth={true}
+              id="content-indicators"
+              label="Please select relevant indicator(s)."
+              multiple={true}
+              name="contentIndicators"
+            />
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+      </StandardCard>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
       <JournalArticleForm
         formValues={
           Immutable.Map {
@@ -5561,6 +5833,7 @@ exports[`Component PublicationForm should render component with ResearchReportFo
               For more information about each type, click 
               <a
                 href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
+                rel="noreferrer"
                 style={
                   Object {
                     "fontWeight": 700,
@@ -5959,6 +6232,58 @@ exports[`Component PublicationForm should render component with ResearchReportFo
       item={true}
       xs={12}
     >
+      <StandardCard
+        help={
+          Object {
+            "buttonLabel": "CLOSE",
+            "text": <p>
+              For more information about content indicators, click 
+              <a
+                href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
+                rel="noreferrer"
+                style={
+                  Object {
+                    "fontWeight": 700,
+                  }
+                }
+                target="_blank"
+              >
+                here
+              </a>
+            </p>,
+            "title": "Content indicators",
+          }
+        }
+        title="Content indicators"
+      >
+        <WithStyles(Grid)
+          container={true}
+          spacing={24}
+        >
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <WithStyles(Typography)>
+              You can select multiple (up to 3) content indicators to add more information about your work.
+            </WithStyles(Typography)>
+            <Field
+              component={[Function]}
+              disabled={false}
+              fullWidth={true}
+              id="content-indicators"
+              label="Please select relevant indicator(s)."
+              multiple={true}
+              name="contentIndicators"
+            />
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+      </StandardCard>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
       <ResearchReportForm
         formValues={
           Immutable.Map {
@@ -6046,6 +6371,7 @@ exports[`Component PublicationForm should render component with all fields disab
               For more information about each type, click 
               <a
                 href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
+                rel="noreferrer"
                 style={
                   Object {
                     "fontWeight": 700,
@@ -6478,6 +6804,7 @@ exports[`Component PublicationForm should render form after selecting both publi
               For more information about each type, click 
               <a
                 href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
+                rel="noreferrer"
                 style={
                   Object {
                     "fontWeight": 700,

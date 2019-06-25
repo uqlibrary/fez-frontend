@@ -80,7 +80,7 @@ describe('Component FixRecord', () => {
 
     it('should redirect if author not linked', () => {
         const testMethod = jest.fn();
-        const wrapper = setup({author: {aut_id: 1001}, recordToFix: mockRecordToFix, history: {go: testMethod}});
+        setup({author: {aut_id: 1001}, recordToFix: mockRecordToFix, history: {go: testMethod}});
         expect(testMethod).toHaveBeenCalled();
     });
 
@@ -95,7 +95,7 @@ describe('Component FixRecord', () => {
         const wrapper = setup({recordToFix: mockRecordToFix});
         wrapper.setState({selectedRecordAction: 'fix'});
         expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('Field').length).toEqual(4);
+        expect(wrapper.find('Field').length).toEqual(5);
     });
 
     it('should set action for form', () => {
@@ -160,14 +160,12 @@ describe('Component FixRecord', () => {
         const wrapper = setup({recordToFix: mockRecordToFix, publicationToFixFileUploadingError: true});
         wrapper.setState({selectedRecordAction: 'fix'});
         expect(toJson(wrapper)).toMatchSnapshot();
-
     });
 
     it('should render the confirm dialog box without an alert due to a file upload success', () => {
         const wrapper = setup({recordToFix: mockRecordToFix, publicationToFixFileUploadingError: false});
         wrapper.setState({selectedRecordAction: 'fix'});
         expect(toJson(wrapper)).toMatchSnapshot();
-
     });
 
     it('_handleDefaultSubmit()', () => {
@@ -176,14 +174,12 @@ describe('Component FixRecord', () => {
         const event = {preventDefault: testFN};
         wrapper.instance()._handleDefaultSubmit(event);
         expect(testFN).toHaveBeenCalled();
-
     });
 
     it('_handleDefaultSubmit()', () => {
         const wrapper = setup({recordToFix: mockRecordToFix, publicationToFixFileUploadingError: false});
         wrapper.instance()._handleDefaultSubmit();
         expect(toJson(wrapper)).toMatchSnapshot();
-
     });
 
     it('componentWillReceiveProps()', () => {
@@ -191,7 +187,6 @@ describe('Component FixRecord', () => {
         const nextProps = {submitSucceeded: true};
         wrapper.instance().componentWillReceiveProps(nextProps);
         expect(toJson(wrapper)).toMatchSnapshot();
-
     });
 
     it('componentWillUnmount()', () => {
@@ -199,7 +194,6 @@ describe('Component FixRecord', () => {
         const wrapper = setup({actions: {clearFixRecord: testFN}, submitSucceeded: true, recordToFix: mockRecordToFix, publicationToFixFileUploadingError: false});
         wrapper.instance().componentWillUnmount();
         expect(testFN).toHaveBeenCalled();
-
     });
 
 });

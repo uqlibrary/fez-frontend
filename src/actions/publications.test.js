@@ -5,7 +5,7 @@ import * as repositories from 'repositories';
 import * as publicationsActions from './publications';
 import * as mockData from 'mock/data';
 import { exportPublications } from './exportPublications'
-import { exportFormatToExtension } from 'config/general';
+import { EXPORT_FORMAT_TO_EXTENSION } from 'config/general';
 
 beforeEach(() => {
     exportPublications.mockClear();
@@ -407,7 +407,7 @@ describe('Publications actions', () => {
     describe('exportAuthorPublications()', () => {
         it('calls exportPublications with expected params', async () => {
 
-            const exportPublicationsFormat = Object.keys(exportFormatToExtension)[0];
+            const exportPublicationsFormat = Object.keys(EXPORT_FORMAT_TO_EXTENSION)[0];
             const testRequest = {
                 exportPublicationsFormat,
                 page: 1,

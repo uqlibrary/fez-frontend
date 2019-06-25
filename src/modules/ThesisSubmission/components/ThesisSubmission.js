@@ -19,7 +19,7 @@ import {validation} from 'config';
 import locale from 'locale/components';
 import {default as formLocale} from 'locale/publicationForm';
 import {RichEditorField} from 'modules/SharedComponents/RichEditor';
-import {thesisSubmissionSubtypes} from 'config/general';
+import {THESIS_SUBMISSION_SUBTYPES} from 'config/general';
 
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
@@ -173,7 +173,7 @@ export default class ThesisSubmission extends Component {
                                         <Field
                                             component={ThesisSubtypeField}
                                             id="thesis-subtype"
-                                            itemsList={thesisSubmissionSubtypes}
+                                            itemsList={THESIS_SUBMISSION_SUBTYPES}
                                             name="rek_genre_type"
                                             disabled={this.props.submitting}
                                             validate={[validation.required]}

@@ -3,7 +3,7 @@ jest.mock('file-saver', ()=>({saveAs: jest.fn((data, filename) => [data, filenam
 import FileSaver from 'file-saver';
 import {exportSearchToExcel as exportSearchToExcelResponse} from "mock/data/testing/searchRecords";
 import * as transformers from './exportPublicationsDataTransformers';
-import {exportFormatToExtension} from 'config/general';
+import {EXPORT_FORMAT_TO_EXTENSION} from 'config/general';
 
 beforeEach(() => {
     FileSaver.saveAs.mockClear();
@@ -12,8 +12,8 @@ beforeEach(() => {
 describe('Publication data transformers ', () => {
     describe('promptForDownload test', () => {
         it('should trigger a file download', () => {
-            for (const format in exportFormatToExtension) {
-                const expected = ['data', transformers.getFileName(exportFormatToExtension[format])];
+            for (const format in EXPORT_FORMAT_TO_EXTENSION) {
+                const expected = ['data', transformers.getFileName(EXPORT_FORMAT_TO_EXTENSION[format])];
 
                 transformers.promptForDownload(format, 'data');
                 expect(FileSaver.saveAs).toHaveBeenCalledWith(...expected);
