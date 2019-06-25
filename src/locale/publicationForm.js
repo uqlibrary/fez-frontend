@@ -12,7 +12,7 @@ export default {
         help: {
             title: 'Non-traditional research output types',
             text: (
-                <p>For more information about each type, click <a style={{fontWeight: 700}} target="_blank" href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs">here</a>
+                <p>For more information about each type, click <a style={{fontWeight: 700}} target="_blank" rel="noreferrer" href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs">here</a>
                 </p>
             ),
             buttonLabel: 'CLOSE'
@@ -22,6 +22,18 @@ export default {
         title: 'Work subtype',
         inputLabelText: 'Work subtype',
         hintText: 'Select a work subtype from the dropdown list',
+    },
+    contentIndicators: {
+        help: {
+            title: 'Content indicators',
+            text: <p>For more information about content indicators, click <a style={{fontWeight: 700}} target="_blank" rel="noreferrer" href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators">here</a></p>,
+            buttonLabel: 'CLOSE'
+        },
+        title: 'Content indicators',
+        description: 'You can select multiple (up to 3) content indicators to add more information about your work.',
+        fieldLabels: {
+            label: 'Please select relevant indicator(s).'
+        },
     },
     generic: {
         information: {
@@ -1178,7 +1190,6 @@ export default {
             }
         }
     },
-
     fileUpload: {
         title: 'Upload files',
         // help: {
@@ -1193,7 +1204,6 @@ export default {
         cancelButtonLabel: 'No',
         confirmButtonLabel: 'Yes'
     },
-
     validationAlert: {
         type: 'warning',
         title: 'Validation',

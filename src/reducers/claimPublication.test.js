@@ -190,4 +190,67 @@ describe('claimPublication reducer', () => {
         expect(test).toEqual(initialState);
     });
 
+    it('returns the that the publication is loading', () => {
+        const test = claimPublicationReducer(initialState, {type: 'PUBLICATION_TO_CLAIM_LOADING'});
+        expect(test).toEqual({
+            "fullPublicationToClaim": null,
+            "fullPublicationToClaimLoading": true,
+            "fullPublicationToClaimLoadingFailed": false,
+            "hidePublicationFailed": false,
+            "hidePublicationFailedErrorMessage": null,
+            "hidePublicationLoading": true,
+            "loadingPossibleCounts": true,
+            "loadingPossiblePublicationsList": true,
+            "possibleCounts": 0,
+            "possiblePublicationsFacets": {},
+            "possiblePublicationsList": [],
+            "possiblePublicationsPagingData": {},
+            "publicationToClaim": null,
+            "publicationToClaimFileUploadingError": false,
+            "publicationsClaimedInProgress": []
+        });
+    });
+
+    it('returns the full publication when loaded', () => {
+        const test = claimPublicationReducer(initialState, {type: 'PUBLICATION_TO_CLAIM_LOADED', payload: publicationData});
+        expect(test).toEqual({
+            "fullPublicationToClaim": publicationData,
+            "fullPublicationToClaimLoading": false,
+            "fullPublicationToClaimLoadingFailed": false,
+            "hidePublicationFailed": false,
+            "hidePublicationFailedErrorMessage": null,
+            "hidePublicationLoading": true,
+            "loadingPossibleCounts": true,
+            "loadingPossiblePublicationsList": true,
+            "possibleCounts": 0,
+            "possiblePublicationsFacets": {},
+            "possiblePublicationsList": [],
+            "possiblePublicationsPagingData": {},
+            "publicationToClaim": null,
+            "publicationToClaimFileUploadingError": false,
+            "publicationsClaimedInProgress": []
+        });
+    });
+
+    it('returns the expected values when fails', () => {
+        const test = claimPublicationReducer(initialState, {type: 'PUBLICATION_TO_CLAIM_FAILED', payload: 'There was an error'});
+        expect(test).toEqual({
+            "fullPublicationToClaim": null,
+            "fullPublicationToClaimLoading": false,
+            "fullPublicationToClaimLoadingFailed": 'There was an error',
+            "hidePublicationFailed": false,
+            "hidePublicationFailedErrorMessage": null,
+            "hidePublicationLoading": true,
+            "loadingPossibleCounts": true,
+            "loadingPossiblePublicationsList": true,
+            "possibleCounts": 0,
+            "possiblePublicationsFacets": {},
+            "possiblePublicationsList": [],
+            "possiblePublicationsPagingData": {},
+            "publicationToClaim": null,
+            "publicationToClaimFileUploadingError": false,
+            "publicationsClaimedInProgress": []
+        });
+    });
+
 });

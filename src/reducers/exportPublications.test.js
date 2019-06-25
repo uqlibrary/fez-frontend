@@ -1,6 +1,6 @@
 import * as actions from 'actions/actionTypes';
 import exportPublicationsReducer from './exportPublications';
-import {exportFormatToExtension} from 'config/general';
+import {EXPORT_FORMAT_TO_EXTENSION} from 'config/general';
 
 export const initialState = {
     exportPublicationsLoading: false,
@@ -13,7 +13,7 @@ describe('export publications reducer', () => {
     });
 
     it('returns the correct state when publications have been exported', () => {
-        const format = Object.keys(exportFormatToExtension)[0];
+        const format = Object.keys(EXPORT_FORMAT_TO_EXTENSION)[0];
         const test = exportPublicationsReducer(initialState, {
             type: actions.EXPORT_PUBLICATIONS_LOADED,
             payload: format

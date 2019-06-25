@@ -1,7 +1,7 @@
 import FileSaver from 'file-saver';
 import locale from 'locale/components';
 import moment from 'moment';
-import {exportFormatToExtension} from 'config/general';
+import {EXPORT_FORMAT_TO_EXTENSION} from 'config/general';
 
 export const getExceptionMessage = (format) => `Export format ${format} is not supported.`;
 
@@ -21,10 +21,10 @@ export const getFileName = (extension) =>
  * @returns void
  */
 export function promptForDownload(format, response) {
-    if (!(format in exportFormatToExtension)) {
+    if (!(format in EXPORT_FORMAT_TO_EXTENSION)) {
         throw getExceptionMessage(format);
     }
 
-    FileSaver.saveAs(response, getFileName(exportFormatToExtension[format]));
+    FileSaver.saveAs(response, getFileName(EXPORT_FORMAT_TO_EXTENSION[format]));
 }
 

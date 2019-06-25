@@ -1,9 +1,7 @@
 import * as actions from './actionTypes';
 import * as repositories from 'repositories';
-import * as publications from './publications';
 import incompleteNTROrecord from 'mock/data/records/incompleteNTROrecord';
 import { updateIncompleteRecord } from './incompleteRecords';
-import * as incompleteRecordList from 'mock/data/records/incompleteNTROlist';
 import { mockRecordToFix } from 'mock/data/testing/records';
 
 beforeEach(() => {
@@ -59,17 +57,16 @@ describe('incompleteRecords actions', () => {
             .onAny()
             .reply(404);
 
-        const expectedActions = [
-            actions.FIX_RECORD_PROCESSING,
-            actions.FIX_RECORD_FAILED
-        ];
-
         try {
             await mockActionsStore.dispatch(updateIncompleteRecord({}));
-            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         } catch (e) {
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions([
+                actions.FIX_RECORD_FAILED,
+            ]);
             expect(e.message).toBe('Incomplete data for requests');
         }
+
+        mockActionsStore.clearActions();
 
         const data = {
             author: {
@@ -89,22 +86,43 @@ describe('incompleteRecords actions', () => {
             }
         };
 
+
         try {
             await mockActionsStore.dispatch(updateIncompleteRecord(data));
-            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         } catch (e) {
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions([
+                actions.FIX_RECORD_FAILED,
+            ]);
             expect(e.message).toBe('Current author is not linked to this record');
         }
+
+        mockActionsStore.clearActions();
 
         data.publication.fez_record_search_key_author_id[0].rek_author_id = 1;
 
         try {
             await mockActionsStore.dispatch(updateIncompleteRecord(data));
-            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         } catch (e) {
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions([
+                actions.FIX_RECORD_PROCESSING,
+                actions.FIX_RECORD_FAILED,
+            ]);
             expect(e.message).toBe('The requested page could not be found.');
         }
 
+        mockActionsStore.clearActions();
+
+        delete data.publication.fez_record_search_key_author_id;
+        delete data.publication.fez_record_search_key_contributor_id;
+
+        try {
+            await mockActionsStore.dispatch(updateIncompleteRecord(data));
+        } catch (e) {
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions([
+                actions.FIX_RECORD_FAILED
+            ]);
+            expect(e.message).toBe('Current author is not linked to this record');
+        }
     });
 
 });
