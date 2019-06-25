@@ -91,8 +91,6 @@ export default class PublicationForm extends Component {
 
     render() {
         const alertProps = validation.getErrorAlertProps({...this.props, alertLocale: txt});
-        console.log(this.props.formValues.toJS());
-        console.log(this.props.hasSubtypes);
         return (
             <form onSubmit={this._handleDefaultSubmit}>
                 <Grid container spacing={24}>
