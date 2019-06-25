@@ -48,20 +48,24 @@ export const styles = theme => ({
         lineHeight: 1,
         letterSpacing: 0,
         marginBottom: 6,
-        marginRight: 12
+        marginRight: 12,
     },
     citationText: {
         ...theme.typography.caption,
         color: theme.typography.body2.color,
-        marginBottom: 6
+        marginBottom: 6,
     },
     citationCounts: {
-        whiteSpace: 'nowrap'
+        whiteSpace: 'nowrap',
     },
     buttonMargin: {
         [theme.breakpoints.down('sm')]: {
-            marginTop: 12
-        }
+            marginTop: 12,
+        },
+    },
+    contentIndicatorTitle: {
+        fontWeight: 400,
+        marginRight: '0.5ex'
     }
 });
 
@@ -83,6 +87,7 @@ export class PublicationCitation extends PureComponent {
         hideViewFullStatisticsLink: PropTypes.bool,
         hideCitationCounts: PropTypes.bool,
         hideLinks: PropTypes.bool,
+        hideContentIndicators: PropTypes.bool,
         classes: PropTypes.object
     };
 
@@ -97,7 +102,8 @@ export class PublicationCitation extends PureComponent {
         hideCountDiff: false,
         hideCountTotal: false,
         hideViewFullStatisticsLink: false,
-        hideCitationCounts: false
+        hideCitationCounts: false,
+        hideContentIndicators: false
     };
 
     constructor(props) {
@@ -140,7 +146,6 @@ export class PublicationCitation extends PureComponent {
                 break;
             case 'shareRecord':
                 // TODO: display share interface
-                // console.log('share this record');
                 break;
             default:
                 // do nothing
@@ -338,6 +343,23 @@ export class PublicationCitation extends PureComponent {
                     </Grid>
                 }
                 <Divider className={classes.divider} />
+                {
+                    !this.props.hideContentIndicators &&
+                    this.props.publication.fez_record_search_key_content_indicator &&
+                    this.props.publication.fez_record_search_key_content_indicator.length > 0 &&
+                    <Grid item xs={12}>
+                        <Typography gutterBottom variant="caption">
+                            <span className={classes.contentIndicatorTitle}>{locale.components.contentIndicators.label}:</span>
+                            {
+                                this.props.publication.fez_record_search_key_content_indicator
+                                    .map(item => item.rek_content_indicator_lookup)
+                                    .join(
+                                        locale.components.contentIndicators.divider
+                                    )
+                            }
+                        </Typography>
+                    </Grid>
+                }
             </React.Fragment>
         );
     }

@@ -68,7 +68,7 @@ export default {
         contributorLinking: 'You are required to select a contributor from the list, then confirm that it is you',
         authorLinking: 'You are required to select a author from the list, then confirm that it is you',
         comments: 'Comments are required',
-        fixRecordAnyField: 'Please provide either comments, URL link or upload file(s).',
+        fixRecordAnyField: 'Please provide additional information, corrections or upload file(s).',
         contactName: 'Contact name is required',
         contactNameId: 'ID for contact name is required',
         contactEmail: 'Contact email is required',

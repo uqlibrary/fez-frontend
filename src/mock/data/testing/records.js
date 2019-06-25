@@ -7137,6 +7137,21 @@ export const mockRecordToFix = {
     "fez_record_search_key_contact_details_email": [
 
     ],
+    "fez_record_search_key_content_indicator": [
+        {
+            "rek_content_indicator_id": 1,
+            "rek_content_indicator_pid": "UQ:41878",
+            "rek_content_indicator": 454079,
+            "rek_content_indicator_order": 1,
+            "rek_content_indicator_lookup": 'Scholarship of Teaching and Learning',
+        }, {
+            "rek_content_indicator_id": 2,
+            "rek_content_indicator_pid": "UQ:41878",
+            "rek_content_indicator": 454080,
+            "rek_content_indicator_order": 2,
+            "rek_content_indicator_lookup": 'Protocol',
+        }
+    ],
     "fez_record_search_key_contributor": [
 
     ],
@@ -10216,6 +10231,21 @@ export const publicationDetails = {
         }
     ],
     "fez_record_search_key_biosis_id": null,
+    "fez_record_search_key_content_indicator": [
+        {
+            "rek_content_indicator_id": 1,
+            "rek_content_indicator": 454079,
+            "rek_ismemberof": "UQ:152266",
+            "rek_content_indicator_order": 1,
+            "rek_content_indicator_lookup": 'Scholarship of Teaching and Learning',
+        }, {
+            "rek_content_indicator_id": 2,
+            "rek_content_indicator": 454080,
+            "rek_ismemberof": "UQ:152266",
+            "rek_content_indicator_order": 2,
+            "rek_content_indicator_lookup": 'Protocol',
+        }
+    ],
     "fez_record_search_key_contributor": [],
     "fez_record_search_key_contributor_id": [],
     "fez_record_search_key_corresponding_country": [

@@ -191,6 +191,12 @@ mock
         if (config.url.indexOf('UQ:290371') >= 0) {
             return [200, {data: {...mockData.recordWithoutAuthorIds}}];
         }
+        const unClaimedRecord = mockData.possibleUnclaimedList.data.find(
+            record => config.url.indexOf(record.rek_pid) > -1
+        );
+        if(unClaimedRecord) {
+            return [200, { data: { ...unClaimedRecord } } ];
+        }
         return [200, {data: {...mockData.record}}];
     })
     // .reply(401, '')

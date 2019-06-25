@@ -1,19 +1,19 @@
 import {locale} from 'locale';
 import {default as formLocale} from 'locale/publicationForm';
 import param from 'can-param';
-import {defaultQueryParams} from 'config/general';
+import {DEFAULT_QUERY_PARAMS} from 'config/general';
 
 const fullPath = process.env.FULL_PATH && process.env.FULL_PATH || 'https://fez-staging.library.uq.edu.au';
 export const pidRegExp = 'UQ:[a-z0-9]+';
 
 const getSearchUrl = ({searchQuery = {all: ''}, activeFacets = {}}, searchUrl = '/records/search') => {
     const params = {
-        ...defaultQueryParams,
+        ...DEFAULT_QUERY_PARAMS,
         searchQueryParams: {
             ...searchQuery
         },
         activeFacets: {
-            ...defaultQueryParams.activeFacets,
+            ...DEFAULT_QUERY_PARAMS.activeFacets,
             ...activeFacets
         }
     };

@@ -104,7 +104,6 @@ export class MyIncompleteRecordClass extends PureComponent {
         const txtFixForm = formsLocale.forms.fixPublicationForm;
         const authors = txt.fields.authors;
 
-        // console.log(this.props);
         const alertProps = validation.getErrorAlertProps({
             ...this.props,
             alertLocale: {
@@ -128,7 +127,7 @@ export class MyIncompleteRecordClass extends PureComponent {
 
         return (
             <StandardPage title={txt.title} help={txt.help}>
-                <PublicationCitation publication={recordToFix} />
+                <PublicationCitation publication={recordToFix} hideContentIndicators/>
                 <form onSubmit={this._handleDefaultSubmit}>
                     <NavigationDialogBox
                         when={this.props.dirty && !this.props.submitSucceeded}

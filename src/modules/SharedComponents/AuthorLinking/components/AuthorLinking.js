@@ -238,6 +238,7 @@ export class AuthorLinking extends PureComponent {
                                 checked={authorLinkingConfirmed}
                                 onChange={this._acceptAuthorLinkingTermsAndConditions}
                                 classes={{root: this.props.classes.checkboxRoot, checked: this.props.classes.checkboxChecked}}
+                                id="authorAcceptDeclaration"
                             />
                         }
                         label={
