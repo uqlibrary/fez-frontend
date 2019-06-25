@@ -163,39 +163,24 @@ mock
     .reply(200, mockData.lookupToolIncites)
     .onGet(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).apiUrl)))
     .reply(config => {
-        if (config.url.indexOf('UQ:6de77b0') >= 0) {
-            return [200, { data: { ...mockData.incompleteNTROrecordUqrdav10 } }];
-        }
-        if (config.url.indexOf('UQ:56b1652') >= 0) {
-            return [200, { data: { ...mockData.incompleteNTROrecordUqsbutl1 } }];
-        }
-        if (config.url.indexOf('UQ:692945') >= 0) {
-            return [200, { data: { ...mockData.incompleteNTROrecord } }];
-        }
-        if (config.url.indexOf('UQ:678742') >= 0) {
-            return [200, { data: { ...mockData.incompleteNTROlist.data[1] } }];
-        }
-        if (config.url.indexOf('UQ:678743') >= 0) {
-            return [200, { data: { ...mockData.incompleteNTROlist.data[2] } }];
-        }
-        // Data collection
-        if (config.url.indexOf('UQ:407731') >= 0) {
-            return [200, { data: { ...mockTestingData.dataCollection } }];
-        }
-        if (config.url.indexOf('UQ:164935') >= 0) {
-            return [200, { data: { ...mockData.recordWithMap } }];
-        }
-        if (config.url.indexOf('UQ:107683') >= 0) {
-            return [200, { data: { ...mockData.recordWithTiffAndThumbnail } }];
-        }
-        if (config.url.indexOf('UQ:290371') >= 0) {
-            return [200, { data: { ...mockData.recordWithoutAuthorIds } }];
-        }
-        const unClaimedRecord = mockData.possibleUnclaimedList.data.find(
+        const mockRecords = [
+            { ...mockData.incompleteNTROrecordUqrdav10 },
+            { ...mockData.incompleteNTROrecordUqsbutl1 },
+            { ...mockData.incompleteNTROrecord },
+            { ...mockData.incompleteNTROlist.data[1] },
+            { ...mockData.incompleteNTROlist.data[2] },
+            { ...mockTestingData.dataCollection },
+            { ...mockData.recordWithMap },
+            { ...mockData.recordWithTiffAndThumbnail },
+            { ...mockData.recordWithoutAuthorIds },
+            ...mockData.possibleUnclaimedList.data,
+            ...mockData.myRecordsList.data,
+        ];
+        const matchedRecord = mockRecords.find(
             record => config.url.indexOf(record.rek_pid) > -1
         );
-        if (unClaimedRecord) {
-            return [200, { data: { ...unClaimedRecord } }];
+        if (matchedRecord) {
+            return [200, { data: { ...matchedRecord } }];
         }
         return [200, { data: { ...mockData.record } }];
     })
