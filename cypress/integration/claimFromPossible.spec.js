@@ -1,5 +1,6 @@
 import formsLocale from '../../src/locale/forms';
 // import pagesLocale from '../../src/locale/pages';
+import fileUploaderLocale from '../../src/modules/SharedComponents/Toolbox/FileUploader/locale';
 
 context('Claim possible work', () => {
     const baseUrl = Cypress.config('baseUrl');
@@ -126,6 +127,77 @@ context('Claim possible work', () => {
         // Selection has not changed
         cy.get('#content-indicators')
             .contains('Scholarship of Teaching and Learning, Protocol');
+    });
+
+    it('will detect and prevent submission of invalid URLs', () => {
+        cy.get('.StandardCard button.publicationAction')
+            .first()
+            .click();
+        cy.url()
+            .should('equal', `${baseUrl}/records/claim`);
+        // Make form valid otherwise
+        cy.contains('.StandardCard', claimFormLocale.authorLinking.title)
+            .find('button')
+            .first()
+            .click();
+        cy.contains('I confirm and understand')
+            .click();
+        // Confirm form submission is enabled
+        cy.contains('button', claimFormLocale.submit)
+            .should('not.be.disabled');
+        // Enter invalid data triggers validation errors
+        cy.contains('.StandardCard', claimFormLocale.comments.title)
+            .find('input')
+            .type('invalid')
+            .closest('.StandardCard')
+            .contains('URL is not valid');
+        // Confirm form submission is disabled until URL is fixed
+        cy.contains('button', claimFormLocale.submit)
+            .should('be.disabled');
+        cy.contains('.StandardCard', claimFormLocale.comments.title)
+            .find('input')
+            .type('.com');
+        cy.contains('button', claimFormLocale.submit)
+            .should('be.disabled');
+        cy.contains('.StandardCard', claimFormLocale.comments.title)
+            .find('input')
+            .type('{home}{del}{del}https://');
+        cy.contains('button', claimFormLocale.submit)
+            .should('not.be.disabled');
+    });
+
+    it('will allow upload of files', () => {
+        cy.get('.StandardCard button.publicationAction')
+            .first()
+            .click();
+        cy.url()
+            .should('equal', `${baseUrl}/records/claim`);
+        const fileName = 'test.jpg';
+        cy.fixture(fileName)
+            .then(fileContent => {
+                cy.get('div#FileUploadDropZone')
+                    .upload(
+                        { fileContent, fileName, mimeType: 'image/jpg' },
+                        { subjectType: 'drag-n-drop' },
+                    );
+            });
+        cy.contains('.StandardCard', claimFormLocale.fileUpload.title)
+            .should('contain',
+                fileUploaderLocale
+                    .successMessage
+                    .replace('[numberOfFiles]', '1')
+            )
+            .contains(
+                fileUploaderLocale
+                    .fileUploadRow
+                    .fileUploadRowAccessSelector
+                    .initialValue
+            )
+            .click();
+        cy.contains('#menu-accessCondition li', 'Open Access')
+            .click();
+        cy.get('[class*="FileUploadTermsAndConditions-root"]')
+            .click();
     });
 
     it('can choose author, then submit the claim.', () => {
