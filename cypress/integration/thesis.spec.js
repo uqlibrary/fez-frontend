@@ -1,7 +1,7 @@
 context('Thesis', () => {
     beforeEach(() => {
         cy.visit('http://localhost:3000/rhdsubmission?user=s2222222');
-        // cy.visit('http://localhost:3000/rhdsubmission?user=s2222222');
+        cy.viewport(1000,800);
         cy.get('#unsupportedBrowser.card button').then($button => {
             // Button is only visible if browser is unsupported.
             if ($button.filter(':visible')) {
@@ -17,7 +17,6 @@ context('Thesis', () => {
     });
 
     it('Submitting a thesis successfully', () => {
-        cy.viewport(1000,800);
         cy.get('button#submit-thesis').should('to.have.attr', 'disabled');
         cy.get('.alert-text')
             .find('ul')
@@ -177,7 +176,7 @@ context('Thesis', () => {
 
         // Keywords
         cy.get('input#keywords-input').type('First Keyword{enter}', {
-            delay: 100,
+            delay: 30,
         });
         cy.get('.alert-text')
             .find('ul')
@@ -193,7 +192,7 @@ context('Thesis', () => {
             .children()
             .should('have.length', 2);
         cy.get('input#keywords-input').type('Second Keyword{enter}', {
-            delay: 100,
+            delay: 30,
         });
         cy.get('.alert-text')
             .find('ul')
@@ -208,7 +207,7 @@ context('Thesis', () => {
             .children()
             .should('have.length', 2);
         cy.get('input#keywords-input').type('Third Keyword{enter}', {
-            delay: 100,
+            delay: 30,
         });
         cy.get('.ListRow-Keywords').should('have.length', 1);
         cy.get('.alert-text')
@@ -216,7 +215,7 @@ context('Thesis', () => {
             .children()
             .should('have.length', 1);
         cy.get('input#keywords-input').type('Fourth Keyword, Fifth Keyword, Sixth Keyword{enter}', {
-            delay: 100,
+            delay: 30,
         });
         cy.get('.ListRow-Keywords').should('have.length', 4);
 
@@ -225,21 +224,21 @@ context('Thesis', () => {
         const fileName = 'test.jpg';
         cy.fixture(fileName).then(fileContent => {
             cy.get('div#FileUploadDropZone').upload(
-                { fileContent, fileName, mimeType: 'image/jpg' },
+                { fileContent, fileName: fileName, mimeType: 'image/jpg' },
                 { subjectType: 'drag-n-drop' },
             );
         });
-        cy.wait(5000);
         cy.get('button[title="Remove this file"]').click();
         cy.get('button').contains('Yes').click();
-        cy.wait(5000);
         cy.get('.alert-text')
             .find('ul')
             .children()
             .should('have.length', 1);
-        cy.fixture(fileName).then(fileContent => {
+
+        const fileNameTwo = 'test_two.jpg';
+        cy.fixture(fileNameTwo).then(fileContent => {
             cy.get('div#FileUploadDropZone').upload(
-                { fileContent, fileName, mimeType: 'image/jpg' },
+                { fileContent, fileName: fileNameTwo, mimeType: 'image/jpg' },
                 { subjectType: 'drag-n-drop' },
             );
         });
@@ -249,9 +248,24 @@ context('Thesis', () => {
             .find('ul')
             .children()
             .should('have.length', 1);
+
+        const fileNameThree = 'test three.jpg';
+        cy.fixture(fileNameThree).then(fileContent => {
+            cy.get('div#FileUploadDropZone').upload(
+                { fileContent, fileName: fileNameThree, mimeType: 'image/jpg' },
+                { subjectType: 'drag-n-drop' },
+            );
+        });
+        cy.get('div.alert-text').should('have.length', 2);
         cy.fixture(fileName).then(fileContent => {
             cy.get('div#FileUploadDropZone').upload(
                 { fileContent, fileName, mimeType: 'image/jpg' },
+                { subjectType: 'drag-n-drop' },
+            );
+        });
+        cy.fixture(fileNameTwo).then(fileContent => {
+            cy.get('div#FileUploadDropZone').upload(
+                { fileContent, fileName: fileNameTwo, mimeType: 'image/jpg' },
                 { subjectType: 'drag-n-drop' },
             );
         });
