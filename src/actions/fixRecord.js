@@ -1,8 +1,8 @@
 import * as transformers from './transformers';
 import * as actions from './actionTypes';
-import {get, patch, post} from 'repositories/generic';
-import {EXISTING_RECORD_API, RECORDS_ISSUES_API, HIDE_POSSIBLE_RECORD_API} from 'repositories/routes';
-import {putUploadFiles} from 'repositories';
+import { get, patch, post } from 'repositories/generic';
+import { EXISTING_RECORD_API, RECORDS_ISSUES_API, HIDE_POSSIBLE_RECORD_API } from 'repositories/routes';
+import { putUploadFiles } from 'repositories';
 
 /**
  * Load publication
@@ -11,9 +11,9 @@ import {putUploadFiles} from 'repositories';
  */
 export function loadRecordToFix(pid) {
     return dispatch => {
-        dispatch({type: actions.FIX_RECORD_LOADING});
+        dispatch({ type: actions.FIX_RECORD_LOADING });
 
-        return get(EXISTING_RECORD_API({pid: pid}))
+        return get(EXISTING_RECORD_API({ pid: pid }))
             .then(response => {
                 dispatch({
                     type: actions.FIX_RECORD_LOADED,
@@ -78,13 +78,27 @@ export function fixRecord(data) {
         };
     }
 
-    const isAuthorLinked = data.publication.fez_record_search_key_author_id && data.publication.fez_record_search_key_author_id.length > 0 &&
-        data.publication.fez_record_search_key_author_id.filter(authorId => authorId.rek_author_id === data.author.aut_id).length > 0;
+    const isAuthorLinked = data.publication.fez_record_search_key_author_id &&
+        data.publication.fez_record_search_key_author_id.length > 0 &&
+        data.publication.fez_record_search_key_author_id.filter(
+            authorId => authorId.rek_author_id === data.author.aut_id
+        ).length > 0;
 
-    const isContributorLinked = data.publication.fez_record_search_key_contributor_id && data.publication.fez_record_search_key_contributor_id.length > 0 &&
-        data.publication.fez_record_search_key_contributor_id.filter(contributorId => contributorId.rek_contributor_id === data.author.aut_id).length > 0;
+    const isContributorLinked = data.publication.fez_record_search_key_contributor_id &&
+        data.publication.fez_record_search_key_contributor_id.length > 0 &&
+        data.publication.fez_record_search_key_contributor_id.filter(
+            contributorId => contributorId.rek_contributor_id === data.author.aut_id
+        ).length > 0;
 
     const hasFilesToUpload = data.files && data.files.queue && data.files.queue.length > 0;
+
+    const hasAddedContentIndicators = (
+        !!data.contentIndicators &&
+        data.contentIndicators.length > (
+            data.publication.fez_record_search_key_content_indicator ||
+            []
+        ).length
+    );
 
     if (!isAuthorLinked && !isContributorLinked) {
         return dispatch => {
@@ -97,15 +111,16 @@ export function fixRecord(data) {
     }
 
     return dispatch => {
-        dispatch({type: actions.FIX_RECORD_PROCESSING});
+        dispatch({ type: actions.FIX_RECORD_PROCESSING });
 
         // if user updated links/added files - update record
         let patchRecordRequest = null;
-        if (hasFilesToUpload || data.rek_link) {
+        if (hasFilesToUpload || data.rek_link || hasAddedContentIndicators) {
             patchRecordRequest = {
                 rek_pid: data.publication.rek_pid,
                 ...transformers.getRecordLinkSearchKey(data),
-                ...transformers.getRecordFileAttachmentSearchKey(data.files ? data.files.queue : [], data.publication)
+                ...transformers.getRecordFileAttachmentSearchKey(data.files ? data.files.queue : [], data.publication),
+                ...transformers.getContentIndicatorSearchKey(data.contentIndicators || null),
             };
         }
 
@@ -113,9 +128,21 @@ export function fixRecord(data) {
         const createIssueRequest = transformers.getFixIssueRequest(data);
 
         return Promise.resolve([])
-            .then(()=> (hasFilesToUpload ? putUploadFiles(data.publication.rek_pid, data.files.queue, dispatch) : null))
-            .then(()=> (hasFilesToUpload || data.rek_link ? patch(EXISTING_RECORD_API({pid: data.publication.rek_pid}), patchRecordRequest) : null))
-            .then(()=> (post(RECORDS_ISSUES_API({pid: data.publication.rek_pid}), createIssueRequest)))
+            .then(() => (hasFilesToUpload
+                ? putUploadFiles(
+                    data.publication.rek_pid,
+                    data.files.queue, dispatch
+                )
+                : null
+            ))
+            .then(() => (
+                hasFilesToUpload ||
+                    data.rek_link ||
+                    hasAddedContentIndicators
+                    ? patch(EXISTING_RECORD_API({ pid: data.publication.rek_pid }), patchRecordRequest)
+                    : null
+            ))
+            .then(() => (post(RECORDS_ISSUES_API({ pid: data.publication.rek_pid }), createIssueRequest)))
             .then(responses => {
                 dispatch({
                     type: actions.FIX_RECORD_SUCCESS,
@@ -152,11 +179,17 @@ export function unclaimRecord(data) {
         };
     }
 
-    const isAuthorLinked = data.publication.fez_record_search_key_author_id && data.publication.fez_record_search_key_author_id.length > 0 &&
-        data.publication.fez_record_search_key_author_id.filter(authorId => authorId.rek_author_id === data.author.aut_id).length > 0;
+    const isAuthorLinked = data.publication.fez_record_search_key_author_id &&
+        data.publication.fez_record_search_key_author_id.length > 0 &&
+        data.publication.fez_record_search_key_author_id.filter(
+            authorId => authorId.rek_author_id === data.author.aut_id
+        ).length > 0;
 
-    const isContributorLinked = data.publication.fez_record_search_key_contributor_id && data.publication.fez_record_search_key_contributor_id.length > 0 &&
-        data.publication.fez_record_search_key_contributor_id.filter(contributorId => contributorId.rek_contributor_id === data.author.aut_id).length > 0;
+    const isContributorLinked = data.publication.fez_record_search_key_contributor_id &&
+        data.publication.fez_record_search_key_contributor_id.length > 0 &&
+        data.publication.fez_record_search_key_contributor_id.filter(
+            contributorId => contributorId.rek_contributor_id === data.author.aut_id
+        ).length > 0;
 
     if (!isAuthorLinked && !isContributorLinked) {
         return dispatch => {
@@ -169,21 +202,27 @@ export function unclaimRecord(data) {
     }
 
     return dispatch => {
-        dispatch({type: actions.FIX_RECORD_PROCESSING});
+        dispatch({ type: actions.FIX_RECORD_PROCESSING });
 
         // PATCH record (with the rek_author_id set to 0)
         const patchRecordRequest = {
             rek_pid: data.publication.rek_pid,
-            ...transformers.unclaimRecordAuthorsIdSearchKey(data.publication.fez_record_search_key_author_id, data.author.aut_id),
-            ...transformers.unclaimRecordContributorsIdSearchKey(data.publication.fez_record_search_key_contributor_id, data.author.aut_id)
+            ...transformers.unclaimRecordAuthorsIdSearchKey(
+                data.publication.fez_record_search_key_author_id,
+                data.author.aut_id
+            ),
+            ...transformers.unclaimRecordContributorsIdSearchKey(
+                data.publication.fez_record_search_key_contributor_id,
+                data.author.aut_id
+            )
         };
 
-        return patch(EXISTING_RECORD_API({pid: data.publication.rek_pid}), patchRecordRequest)
-            .then(() => (post(HIDE_POSSIBLE_RECORD_API(), {pid: data.publication.rek_pid, type: 'H'})))
+        return patch(EXISTING_RECORD_API({ pid: data.publication.rek_pid }), patchRecordRequest)
+            .then(() => (post(HIDE_POSSIBLE_RECORD_API(), { pid: data.publication.rek_pid, type: 'H' })))
             .then(response => {
                 dispatch({
                     type: actions.FIX_RECORD_UNCLAIM_SUCCESS,
-                    payload: {pid: data.publication.rek_pid}
+                    payload: { pid: data.publication.rek_pid }
                 });
                 return Promise.resolve(response);
             })

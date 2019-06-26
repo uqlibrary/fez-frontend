@@ -7,7 +7,7 @@ import FormControl from '@material-ui/core/FormControl';
 import InputLabel from '@material-ui/core/InputLabel';
 import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
-import {orgAffiliationTypes} from 'config/general';
+import {ORG_AFFILIATION_TYPES} from 'config/general';
 
 export default function NonUqOrgAffiliationFormSection({
     orgAffiliation,
@@ -18,7 +18,7 @@ export default function NonUqOrgAffiliationFormSection({
     disableAffiliationEdit,
     disableOrgTypeEdit,
 }) {
-    const options = orgAffiliationTypes.map(option => {
+    const options = ORG_AFFILIATION_TYPES.map(option => {
         return (option.value !== '454045')
             ? <MenuItem value={option.value} key={option.value}>
                 {option.text}

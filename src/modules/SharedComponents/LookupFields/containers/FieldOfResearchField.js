@@ -1,5 +1,5 @@
 import {AutoCompleteAsyncField} from 'modules/SharedComponents/Toolbox/AutoSuggestField';
-import {FieldOfResearchVocabId} from 'config/general';
+import {FIELD_OF_RESEARCH_VOCAB_ID} from 'config/general';
 import {connect} from 'react-redux';
 import * as actions from 'actions';
 
@@ -9,12 +9,12 @@ export const escapeRegExp = (text) => {
 
 const mapStateToProps = (state, props) => {
     return {
-        category: FieldOfResearchVocabId,
+        category: FIELD_OF_RESEARCH_VOCAB_ID,
         onChange: props.input.onChange,
         errorText: props.meta ? props.meta.error : props.errorText,
         error: props.meta ? !!props.meta.error : !!props.errorText || null,
-        itemsList: state.get('controlledVocabulariesReducer') && state.get('controlledVocabulariesReducer')[FieldOfResearchVocabId]
-            ? state.get('controlledVocabulariesReducer')[FieldOfResearchVocabId].itemsKeyValueList : [],
+        itemsList: state.get('controlledVocabulariesReducer') && state.get('controlledVocabulariesReducer')[FIELD_OF_RESEARCH_VOCAB_ID]
+            ? state.get('controlledVocabulariesReducer')[FIELD_OF_RESEARCH_VOCAB_ID].itemsKeyValueList : [],
         selectedValue: !!props.input && !!props.input.value ? {value: props.input.value} : null,
         maxResults: props.maxResults,
         async: true,
@@ -28,12 +28,12 @@ const mapStateToProps = (state, props) => {
 
 const filterFoRmapStateToProps = (state, props) => {
     return {
-        category: FieldOfResearchVocabId,
+        category: FIELD_OF_RESEARCH_VOCAB_ID,
         onChange: props.input.onChange,
         errorText: props.meta ? props.meta.error : props.errorText,
         error: props.meta ? !!props.meta.error : !!props.errorText || null,
-        itemsList: state.get('controlledVocabulariesReducer') && state.get('controlledVocabulariesReducer')[FieldOfResearchVocabId]
-            ? state.get('controlledVocabulariesReducer')[FieldOfResearchVocabId].itemsKeyValueList : [],
+        itemsList: state.get('controlledVocabulariesReducer') && state.get('controlledVocabulariesReducer')[FIELD_OF_RESEARCH_VOCAB_ID]
+            ? state.get('controlledVocabulariesReducer')[FIELD_OF_RESEARCH_VOCAB_ID].itemsKeyValueList : [],
         selectedValue: !!props.input && !!props.input.value ? {value: props.input.value} : null,
         maxResults: 20,
         async: true,
