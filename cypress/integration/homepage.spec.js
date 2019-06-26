@@ -1,7 +1,5 @@
 context('Homepage', () => {
-
-    it('Renders the tabbed panes as expected', () => {
-        cy.visit('/');
+    const dismissUnsupportedBrowserMessage = () => {
         cy.get('#unsupportedBrowser.card button')
             .then(($button) => {
                 // Button is only visible if browser is unsupported.
@@ -10,6 +8,11 @@ context('Homepage', () => {
                         .click();
                 }
             });
+    };
+
+    it('Renders the tabbed panes as expected', () => {
+        cy.visit('/');
+        dismissUnsupportedBrowserMessage();
         cy.wait(1000);
         cy.get('button', { timeout: 1000 })
             .get('span')
@@ -43,70 +46,35 @@ context('Homepage', () => {
 
     it('Has expected menu items for a public user', () => {
         cy.visit('/?user=uqexpired');
-        cy.get('#unsupportedBrowser.card button')
-            .then(($button) => {
-                // Button is only visible if browser is unsupported.
-                if ($button.filter(':visible').length) {
-                    cy.wrap($button)
-                        .click();
-                }
-            });
+        dismissUnsupportedBrowserMessage();
         cy.get('button[aria-label="Click to open the main navigation"]').click();
         cy.get('nav#mainMenu').get('div[role="button"]').should('have.length', 4);
     });
 
     it('Has expected menu items for a researcher', () => {
         cy.visit('/?user=uqresearcher');
-        cy.get('#unsupportedBrowser.card button')
-            .then(($button) => {
-                // Button is only visible if browser is unsupported.
-                if ($button.filter(':visible').length) {
-                    cy.wrap($button)
-                        .click();
-                }
-            });
+        dismissUnsupportedBrowserMessage();
         cy.get('button[aria-label="Click to open the main navigation"]').click();
         cy.get('nav#mainMenu').get('div[role="button"]').should('have.length', 12);
     });
 
     it('Has expected menu items for an admin', () => {
         cy.visit('/?user=uqstaff');
-        cy.get('#unsupportedBrowser.card button')
-            .then(($button) => {
-                // Button is only visible if browser is unsupported.
-                if ($button.filter(':visible').length) {
-                    cy.wrap($button)
-                        .click();
-                }
-            });
+        dismissUnsupportedBrowserMessage();
         cy.get('button[aria-label="Click to open the main navigation"]').click();
         cy.get('nav#mainMenu').get('div[role="button"]').should('have.length', 16);
     });
 
     it('Has expected menu items for a student', () => {
         cy.visit('/?user=s1111111');
-        cy.get('#unsupportedBrowser.card button')
-            .then(($button) => {
-                // Button is only visible if browser is unsupported.
-                if ($button.filter(':visible').length) {
-                    cy.wrap($button)
-                        .click();
-                }
-            });
+        dismissUnsupportedBrowserMessage();
         cy.get('button[aria-label="Click to open the main navigation"]').click();
         cy.get('nav#mainMenu').get('div[role="button"]').should('have.length', 12);
     });
 
     it('Has expected menu items for a RHD student', () => {
         cy.visit('/?user=s2222222');
-        cy.get('#unsupportedBrowser.card button')
-            .then(($button) => {
-                // Button is only visible if browser is unsupported.
-                if ($button.filter(':visible').length) {
-                    cy.wrap($button)
-                        .click();
-                }
-            });
+        dismissUnsupportedBrowserMessage();
         cy.get('button[aria-label="Click to open the main navigation"]').click();
         cy.get('nav#mainMenu').get('div[role="button"]').should('have.length', 12);
     });
