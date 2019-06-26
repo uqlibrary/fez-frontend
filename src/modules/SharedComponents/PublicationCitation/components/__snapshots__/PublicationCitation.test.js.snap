@@ -1833,6 +1833,12 @@ exports[`PublicationCitation  should render component with default actions 1`] =
     >
       <WithStyles(Button)
         className="publicationAction buttonOrder0"
+        classes={
+          Object {
+            "label": "UQ41878",
+            "root": "UQ41878",
+          }
+        }
         color="primary"
         fullWidth={true}
         onClick={[Function]}
@@ -7268,6 +7274,12 @@ Array [
   >
     <WithStyles(Button)
       className="publicationAction buttonOrder0"
+      classes={
+        Object {
+          "label": "UQ41878",
+          "root": "UQ41878",
+        }
+      }
       color="primary"
       fullWidth={true}
       onClick={[Function]}
