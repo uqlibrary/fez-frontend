@@ -1,7 +1,7 @@
 context('Thesis', () => {
     beforeEach(() => {
         cy.visit('http://localhost:3000/rhdsubmission?user=s2222222');
-        cy.viewport(1000,800);
+        cy.viewport(1000, 800);
         cy.get('#unsupportedBrowser.card button').then($button => {
             // Button is only visible if browser is unsupported.
             if ($button.filter(':visible')) {
@@ -23,7 +23,6 @@ context('Thesis', () => {
             .children()
             .should('have.length', 8);
 
-
         // Title
         cy.type_ckeditor('editor1', '<p>This is a thesis title</p>');
         cy.wait(1000);
@@ -39,7 +38,6 @@ context('Thesis', () => {
             .children()
             .should('have.length', 6);
 
-
         // Thesis subtype
         cy.get('#thesis-subtype').click();
         cy.get('li[data-value="MPhil Thesis"]').click();
@@ -53,7 +51,6 @@ context('Thesis', () => {
             .should('have.length', 5);
         cy.get('button#submit-thesis').should('to.have.attr', 'disabled');
 
-
         // Enrolling unit
         cy.get('input[label="Enrolling unit"]').type('a');
         cy.get('li[id="Enrollingunit-item-0"]').click();
@@ -64,15 +61,14 @@ context('Thesis', () => {
             .should('have.length', 4);
         cy.get('button#submit-thesis').should('to.have.attr', 'disabled');
 
-
         // Supervisors
-        cy.get('input[id="supervisors-name-as-published-field"]').type('Ky Lane', {delay: 200});
+        cy.get('input[id="supervisors-name-as-published-field"]').type('Ky Lane', {delay: 30});
         cy.get('.alert-text')
             .find('ul')
             .children()
             .should('have.length', 4);
         cy.get('button#submit-thesis').should('to.have.attr', 'disabled');
-        cy.get('input[id="supervisors-name-as-published-field"]').type('{enter}', {delay: 200});
+        cy.get('input[id="supervisors-name-as-published-field"]').type('{enter}', {delay: 30});
         cy.get('.alert-text')
             .find('ul')
             .children()
@@ -87,13 +83,13 @@ context('Thesis', () => {
             .children()
             .should('have.length', 4);
         cy.get('button#submit-thesis').should('to.have.attr', 'disabled');
-        cy.get('input[id="supervisors-name-as-published-field"]').type('Vishal Asai{enter}', {delay: 100});
+        cy.get('input[id="supervisors-name-as-published-field"]').type('Vishal Asai{enter}', {delay: 30});
         cy.get('.alert-text')
             .find('ul')
             .children()
             .should('have.length', 3);
         cy.get('button#submit-thesis').should('to.have.attr', 'disabled');
-        cy.get('input[id="supervisors-name-as-published-field"]').type('Ky Lane{enter}', {delay: 100});
+        cy.get('input[id="supervisors-name-as-published-field"]').type('Ky Lane{enter}', {delay: 30});
         cy.get('ul.ContributorList')
             .children()
             .should('have.length', 2);
@@ -115,17 +111,18 @@ context('Thesis', () => {
             .first()
             .should('contain', 'Ky Lane');
         cy.get('button[aria-label="Remove all items').click();
-        cy.get('button').contains('Yes').click();
+        cy.get('button')
+            .contains('Yes')
+            .click();
         cy.get('.alert-text')
             .find('ul')
             .children()
             .should('have.length', 4);
-        cy.get('input[id="supervisors-name-as-published-field"]').type('Ky Lane{enter}', {delay: 100});
+        cy.get('input[id="supervisors-name-as-published-field"]').type('Ky Lane{enter}', {delay: 30});
         cy.get('.alert-text')
             .find('ul')
             .children()
             .should('have.length', 3);
-
 
         // Field of Research
         cy.get('input[label="Field of research"]').type('a');
@@ -155,8 +152,7 @@ context('Thesis', () => {
             .find('ul')
             .children()
             .should('have.length', 2);
-        cy.get('button[title="Remove all items"]')
-            .click();
+        cy.get('button[title="Remove all items"]').click();
         cy.get('button')
             .contains('Yes')
             .click();
@@ -172,7 +168,6 @@ context('Thesis', () => {
             .children()
             .should('have.length', 2);
         cy.get('button#submit-thesis').should('to.have.attr', 'disabled');
-
 
         // Keywords
         cy.get('input#keywords-input').type('First Keyword{enter}', {
@@ -219,17 +214,18 @@ context('Thesis', () => {
         });
         cy.get('.ListRow-Keywords').should('have.length', 4);
 
-
         // Files?
         const fileName = 'test.jpg';
         cy.fixture(fileName).then(fileContent => {
             cy.get('div#FileUploadDropZone').upload(
-                { fileContent, fileName: fileName, mimeType: 'image/jpg' },
-                { subjectType: 'drag-n-drop' },
+                {fileContent, fileName: fileName, mimeType: 'image/jpg'},
+                {subjectType: 'drag-n-drop'},
             );
         });
         cy.get('button[title="Remove this file"]').click();
-        cy.get('button').contains('Yes').click();
+        cy.get('button')
+            .contains('Yes')
+            .click();
         cy.get('.alert-text')
             .find('ul')
             .children()
@@ -238,12 +234,14 @@ context('Thesis', () => {
         const fileNameTwo = 'test_two.jpg';
         cy.fixture(fileNameTwo).then(fileContent => {
             cy.get('div#FileUploadDropZone').upload(
-                { fileContent, fileName: fileNameTwo, mimeType: 'image/jpg' },
-                { subjectType: 'drag-n-drop' },
+                {fileContent, fileName: fileNameTwo, mimeType: 'image/jpg'},
+                {subjectType: 'drag-n-drop'},
             );
         });
         cy.get('button[title="Remove all files from the upload queue"]').click();
-        cy.get('button').contains('Yes').click();
+        cy.get('button')
+            .contains('Yes')
+            .click();
         cy.get('.alert-text')
             .find('ul')
             .children()
@@ -252,21 +250,21 @@ context('Thesis', () => {
         const fileNameThree = 'test three.jpg';
         cy.fixture(fileNameThree).then(fileContent => {
             cy.get('div#FileUploadDropZone').upload(
-                { fileContent, fileName: fileNameThree, mimeType: 'image/jpg' },
-                { subjectType: 'drag-n-drop' },
+                {fileContent, fileName: fileNameThree, mimeType: 'image/jpg'},
+                {subjectType: 'drag-n-drop'},
             );
         });
         cy.get('div.alert-text').should('have.length', 2);
         cy.fixture(fileName).then(fileContent => {
             cy.get('div#FileUploadDropZone').upload(
-                { fileContent, fileName, mimeType: 'image/jpg' },
-                { subjectType: 'drag-n-drop' },
+                {fileContent, fileName, mimeType: 'image/jpg'},
+                {subjectType: 'drag-n-drop'},
             );
         });
         cy.fixture(fileNameTwo).then(fileContent => {
             cy.get('div#FileUploadDropZone').upload(
-                { fileContent, fileName: fileNameTwo, mimeType: 'image/jpg' },
-                { subjectType: 'drag-n-drop' },
+                {fileContent, fileName: fileNameTwo, mimeType: 'image/jpg'},
+                {subjectType: 'drag-n-drop'},
             );
         });
         // Ready to submit
