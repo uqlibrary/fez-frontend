@@ -1,14 +1,15 @@
 context('Dataset', () => {
     beforeEach(() => {
         cy.visit('/data-collections/add');
-        cy.viewport(1000,800);
-        cy.get('#unsupportedBrowser.card button').then($button => {
-            // Button is only visible if browser is unsupported.
-            if ($button.filter(':visible')) {
-                $button.click();
-            }
-        });
-        cy.wait(2000);
+        cy.viewport(1000, 800);
+        cy.get('#unsupportedBrowser.card button')
+            .then($button => {
+                // Button is only visible if browser is unsupported.
+                if ($button.filter(':visible').length) {
+                    cy.wrap($button)
+                        .click();
+                }
+            });
     });
 
     afterEach(() => {
@@ -17,24 +18,45 @@ context('Dataset', () => {
     });
 
     it('Form behaves as expected', () => {
-        cy.get('button#submit-data-collection').should('have.attr', 'disabled');
-        cy.get('div.Alert').get('ul').children().should('have.length', 19);
+        cy.get('button#submit-data-collection')
+            .should('have.attr', 'disabled');
+        cy.get('div.Alert')
+            .get('ul')
+            .children()
+            .should('have.length', 19);
 
         // Accept the agreement
-        cy.get('input#deposit-agreement').click();
-        cy.get('button#submit-data-collection').should('have.attr', 'disabled');
-        cy.get('div.Alert').get('ul').children().should('have.length', 18);
+        cy.get('input#deposit-agreement')
+            .click();
+        cy.get('button#submit-data-collection')
+            .should('have.attr', 'disabled');
+        cy.get('div.Alert')
+            .get('ul')
+            .children()
+            .should('have.length', 18);
 
         // Dataset name
-        cy.get('textarea#Datasetname').type('Name of Dataset', {delay: 100});
-        cy.get('button#submit-data-collection').should('have.attr', 'disabled');
-        cy.get('div.Alert').get('ul').children().should('have.length', 17);
+        cy.get('textarea#Datasetname')
+            .type('Name of Dataset', {
+                delay: 100
+            });
+        cy.get('button#submit-data-collection')
+            .should('have.attr', 'disabled');
+        cy.get('div.Alert')
+            .get('ul')
+            .children()
+            .should('have.length', 17);
 
         // Dataset name
-        cy.get('textarea#Datasetdescription').type('Description of Dataset', {delay: 100});
-        cy.get('button#submit-data-collection').should('have.attr', 'disabled');
-        cy.get('div.Alert').get('ul').children().should('have.length', 16);
-
-        cy.wait(30000);
+        cy.get('textarea#Datasetdescription')
+            .type('Description of Dataset', {
+                delay: 100
+            });
+        cy.get('button#submit-data-collection')
+            .should('have.attr', 'disabled');
+        cy.get('div.Alert')
+            .get('ul')
+            .children()
+            .should('have.length', 16);
     });
 });
