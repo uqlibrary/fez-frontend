@@ -1,15 +1,23 @@
-import React, { useState, useEffect} from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import Cookies from 'js-cookie';
 
 import locale from 'locale/pages';
 
-import {withStyles} from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 import useTheme from '@material-ui/styles/useTheme';
-import {unstable_useMediaQuery as useMediaQuery} from '@material-ui/core/useMediaQuery';
+import { unstable_useMediaQuery as useMediaQuery } from '@material-ui/core/useMediaQuery';
 
-import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
+import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import AdminInterface from './AdminInterface';
+
+import SecuritySection from './security/SecuritySectionContainer';
+import IdentifiersSection from './IdentifiersSection';
+import BibliographicSection from './BibliographicSection';
+import AdminSection from './AdminSection';
+import GrantInformationSection from './GrantInformationSection';
+import FilesSection from './FilesSection';
+import AuthorDetailsSection from './AuthorDetailsSection';
 
 import {
     TabbedContextProvider,
@@ -57,25 +65,28 @@ export const AdminContainer = ({
 
     const isMobileView = useMediaQuery(theme.breakpoints.down('xs')) || false;
 
+    /* istanbul ignore next */
+    /* Enzyme's shallow render doesn't support useEffect hook yet */
     useEffect(() => {
         if (!!match.params.pid && !!actions.loadRecordToView) {
             actions.loadRecordToView(match.params.pid);
         }
     }, []);
 
-    const handleToggle = () => setTabbed(!tabbed);
+    /* istanbul ignore next */
+    const handleToggle = useCallback(() => setTabbed(!tabbed), [setTabbed, tabbed]);
 
     const txt = locale.pages.edit;
 
-    if(loadingRecordToView) {
-        return <InlineLoader message={txt.loadingMessage}/>;
-    } else if(!recordToView) {
-        return <div className="empty"/>;
+    if (loadingRecordToView) {
+        return <InlineLoader message={txt.loadingMessage} />;
+    } else if (!recordToView) {
+        return <div className="empty" />;
     }
 
     return (
-        <TabbedContextProvider value={{tabbed: isMobileView ? false : tabbed, toggleTabbed: handleToggle}}>
-            <RecordContextProvider value={{record: recordToView}}>
+        <TabbedContextProvider value={{ tabbed: isMobileView ? false : tabbed, toggleTabbed: handleToggle }}>
+            <RecordContextProvider value={{ record: recordToView }}>
                 <AdminInterface
                     classes={classes}
                     handleSubmit={handleSubmit}
@@ -83,6 +94,36 @@ export const AdminContainer = ({
                     submitting={submitting}
                     disableSubmit={disableSubmit}
                     location={location}
+                    tabs={{
+                        bibliographic: {
+                            component: BibliographicSection,
+                            activated: false
+                        },
+                        identifiers: {
+                            component: IdentifiersSection,
+                            activated: false
+                        },
+                        admin: {
+                            component: AdminSection,
+                            activated: false
+                        },
+                        grantInformation: {
+                            component: GrantInformationSection,
+                            activated: false
+                        },
+                        authorDetails: {
+                            component: AuthorDetailsSection,
+                            activated: false
+                        },
+                        files: {
+                            component: FilesSection,
+                            activated: true
+                        },
+                        security: {
+                            component: SecuritySection,
+                            activated: true
+                        }
+                    }}
                 />
             </RecordContextProvider>
         </TabbedContextProvider>
@@ -101,10 +142,10 @@ AdminContainer.propTypes = {
     match: PropTypes.object
 };
 
-function isChanged(prevProps, nextProps) {
+export function isChanged(prevProps, nextProps) {
     return prevProps.disableSubmit === nextProps.disableSubmit &&
-        prevProps.recordToView === nextProps.recordToView &&
-        prevProps.loadRecordToView === nextProps.loadRecordToView;
+        (prevProps.recordToView || {}).pid === (nextProps.recordToView || {}).pid &&
+        prevProps.loadingRecordToView === nextProps.loadingRecordToView;
 }
 
-export default withStyles(styles, {withTheme: true})(React.memo(AdminContainer, isChanged));
+export default React.memo(withStyles(styles, { withTheme: true })(AdminContainer), isChanged);

@@ -1,0 +1,267 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AdminInterface component should render default view as a full form view 1`] = `
+<StandardPage>
+  <WithStyles(Grid)
+    alignItems="center"
+    container={true}
+    direction="row"
+    style={
+      Object {
+        "marginTop": -24,
+      }
+    }
+  >
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "marginBottom": 12,
+        }
+      }
+      xs={true}
+    >
+      <WithStyles(Typography)
+        color="primary"
+        style={
+          Object {
+            "fontSize": 24,
+          }
+        }
+        variant="h5"
+      >
+        UQ:123456 This is test record
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={true}
+      xsUp={false}
+    >
+      <WithStyles(Grid)
+        item={true}
+        xs="auto"
+      >
+        <Memo() />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        container={true}
+        direction="row"
+        spacing={0}
+      />
+    </Hidden>
+  </WithStyles(Grid)>
+  <form>
+    <WithStyles(Grid)
+      container={true}
+      spacing={16}
+    >
+      <TabContainer
+        currentTab="security"
+        key="security"
+        tabbed={false}
+        value="security"
+      >
+        <StandardCard
+          primaryHeader={false}
+          squareTop={false}
+          title="Security"
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            name="securitySection"
+          />
+        </StandardCard>
+      </TabContainer>
+      <TabContainer
+        currentTab="security"
+        key="files"
+        tabbed={false}
+        value="files"
+      >
+        <StandardCard
+          primaryHeader={false}
+          squareTop={false}
+          title="Files"
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            name="filesSection"
+          />
+        </StandardCard>
+      </TabContainer>
+      <WithStyles(Grid)
+        item={true}
+        sm={12}
+        xs={12}
+      >
+        <WithStyles(Button)
+          color="primary"
+          fullWidth={true}
+          onClick={[MockFunction]}
+          style={
+            Object {
+              "whiteSpace": "nowrap",
+            }
+          }
+          variant="contained"
+        >
+          Submit
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </form>
+</StandardPage>
+`;
+
+exports[`AdminInterface component should render default view as a tabbed form view 1`] = `
+<StandardPage>
+  <WithStyles(Grid)
+    alignItems="center"
+    container={true}
+    direction="row"
+    style={
+      Object {
+        "marginTop": -24,
+      }
+    }
+  >
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "marginBottom": 12,
+        }
+      }
+      xs={true}
+    >
+      <WithStyles(Typography)
+        color="primary"
+        style={
+          Object {
+            "fontSize": 24,
+          }
+        }
+        variant="h5"
+      >
+        UQ:123456 This is test record
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={true}
+      xsUp={false}
+    >
+      <WithStyles(Grid)
+        item={true}
+        xs="auto"
+      >
+        <Memo() />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        container={true}
+        direction="row"
+        spacing={0}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
+        >
+          <WithStyles(Tabs)
+            classes={
+              Object {
+                "indicator": "tabindicator",
+              }
+            }
+            indicatorColor="primary"
+            onChange={[Function]}
+            scrollButtons="on"
+            style={
+              Object {
+                "marginLeft": -56,
+                "marginRight": -56,
+              }
+            }
+            textColor="primary"
+            value="security"
+            variant="scrollable"
+          >
+            <WithStyles(Tab)
+              key="security"
+              label="Security"
+              value="security"
+            />
+            <WithStyles(Tab)
+              key="files"
+              label="Files"
+              value="files"
+            />
+          </WithStyles(Tabs)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </Hidden>
+  </WithStyles(Grid)>
+  <form>
+    <WithStyles(Grid)
+      container={true}
+      spacing={16}
+    >
+      <TabContainer
+        currentTab="security"
+        key="security"
+        tabbed={true}
+        value="security"
+      >
+        <StandardCard
+          primaryHeader={true}
+          squareTop={true}
+          title="Security"
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            name="securitySection"
+          />
+        </StandardCard>
+      </TabContainer>
+      <WithStyles(Grid)
+        item={true}
+        sm={12}
+        xs={12}
+      >
+        <WithStyles(Button)
+          color="primary"
+          fullWidth={true}
+          onClick={[MockFunction]}
+          style={
+            Object {
+              "whiteSpace": "nowrap",
+            }
+          }
+          variant="contained"
+        >
+          Submit
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </form>
+</StandardPage>
+`;
