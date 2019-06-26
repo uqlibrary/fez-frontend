@@ -1,5 +1,6 @@
 import formsLocale from '../../src/locale/forms';
 // import pagesLocale from '../../src/locale/pages';
+import fileUploaderLocale from '../../src/modules/SharedComponents/Toolbox/FileUploader/locale';
 
 context('Claim possible work', () => {
     const baseUrl = Cypress.config('baseUrl');
@@ -37,7 +38,7 @@ context('Claim possible work', () => {
             });
     });
 
-    it('Renders a list of possible works with filters', () => {
+    it('renders a list of possible works with filters', () => {
         cy.get('h2')
             .should('have.length', 1)
             .should('contain', 'Claim possible works');
@@ -53,7 +54,7 @@ context('Claim possible work', () => {
             .should('have.length', 6);
     });
 
-    it('Can navigate to a claim page with specific elements', () => {
+    it('can navigate to a claim page with specific elements', () => {
         cy.get('.StandardCard button.publicationAction')
             .first()
             .click();
@@ -72,36 +73,31 @@ context('Claim possible work', () => {
         cy.get('.Alert b')
             .scrollIntoView()
             .should('contain', claimFormLocale.validationAlert.title);
-        cy.contains(claimFormLocale.cancel)
-            .closest('button')
+        cy.contains('button', claimFormLocale.cancel)
             .should('not.be.disabled');
-        cy.contains(claimFormLocale.submit)
-            .closest('button')
+        cy.contains('button', claimFormLocale.submit)
             .should('be.disabled');
     });
 
-    it('Can cancel a claim after filling the form', () => {
+    it('can cancel a claim after filling the form', () => {
         cy.get('.StandardCard button.publicationAction')
             .first()
             .click();
         cy.url()
             .should('equal', `${baseUrl}/records/claim`);
-        cy.contains(claimFormLocale.comments.title)
-            .closest('.StandardCard')
+        cy.contains('.StandardCard', claimFormLocale.comments.title)
             .find('textarea')
             .type('Test comment');
-        cy.contains(claimFormLocale.cancel)
-            .closest('button')
+        cy.contains('button', claimFormLocale.cancel)
             .click();
-        cy.contains(claimFormLocale.cancelWorkflowConfirmation.confirmationTitle)
-            .closest('[role="document"]')
+        cy.contains('[role="document"]', claimFormLocale.cancelWorkflowConfirmation.confirmationTitle)
             .contains(claimFormLocale.cancelWorkflowConfirmation.confirmButtonLabel)
             .click();
         cy.url()
             .should('equal', `${baseUrl}/records/possible`);
     });
 
-    it('Allows selection of unselected content indicators, but does not allow deselection of existing', () => {
+    it('allows selection of unselected content indicators, but does not allow deselection of existing', () => {
         cy.get('.StandardCard button.publicationAction')
             .first()
             .click();
@@ -133,21 +129,90 @@ context('Claim possible work', () => {
             .contains('Scholarship of Teaching and Learning, Protocol');
     });
 
-    it('Can choose author, then submit the claim.', () => {
+    it('will detect and prevent submission of invalid URLs', () => {
         cy.get('.StandardCard button.publicationAction')
             .first()
             .click();
         cy.url()
             .should('equal', `${baseUrl}/records/claim`);
-        cy.contains(claimFormLocale.authorLinking.title)
-            .closest('.StandardCard')
+        // Make form valid otherwise
+        cy.contains('.StandardCard', claimFormLocale.authorLinking.title)
             .find('button')
             .first()
             .click();
         cy.contains('I confirm and understand')
             .click();
-        cy.contains(claimFormLocale.submit)
-            .closest('button')
+        // Confirm form submission is enabled
+        cy.contains('button', claimFormLocale.submit)
+            .should('not.be.disabled');
+        // Enter invalid data triggers validation errors
+        cy.contains('.StandardCard', claimFormLocale.comments.title)
+            .find('input')
+            .type('invalid')
+            .closest('.StandardCard')
+            .contains('URL is not valid');
+        // Confirm form submission is disabled until URL is fixed
+        cy.contains('button', claimFormLocale.submit)
+            .should('be.disabled');
+        cy.contains('.StandardCard', claimFormLocale.comments.title)
+            .find('input')
+            .type('.com');
+        cy.contains('button', claimFormLocale.submit)
+            .should('be.disabled');
+        cy.contains('.StandardCard', claimFormLocale.comments.title)
+            .find('input')
+            .type('{home}{del}{del}https://');
+        cy.contains('button', claimFormLocale.submit)
+            .should('not.be.disabled');
+    });
+
+    it('will allow upload of files', () => {
+        cy.get('.StandardCard button.publicationAction')
+            .first()
+            .click();
+        cy.url()
+            .should('equal', `${baseUrl}/records/claim`);
+        const fileName = 'test.jpg';
+        cy.fixture(fileName)
+            .then(fileContent => {
+                cy.get('div#FileUploadDropZone')
+                    .upload(
+                        { fileContent, fileName, mimeType: 'image/jpg' },
+                        { subjectType: 'drag-n-drop' },
+                    );
+            });
+        cy.contains('.StandardCard', claimFormLocale.fileUpload.title)
+            .should('contain',
+                fileUploaderLocale
+                    .successMessage
+                    .replace('[numberOfFiles]', '1')
+            )
+            .contains(
+                fileUploaderLocale
+                    .fileUploadRow
+                    .fileUploadRowAccessSelector
+                    .initialValue
+            )
+            .click();
+        cy.contains('#menu-accessCondition li', 'Open Access')
+            .click();
+        cy.get('[class*="FileUploadTermsAndConditions-root"]')
+            .click();
+    });
+
+    it('can choose author, then submit the claim.', () => {
+        cy.get('.StandardCard button.publicationAction')
+            .first()
+            .click();
+        cy.url()
+            .should('equal', `${baseUrl}/records/claim`);
+        cy.contains('.StandardCard', claimFormLocale.authorLinking.title)
+            .find('button')
+            .first()
+            .click();
+        cy.contains('I confirm and understand')
+            .click();
+        cy.contains('button', claimFormLocale.submit)
             .should('not.be.disabled')
             .click();
         cy.get('[class*="Alert-info"] .alert-text')
@@ -156,33 +221,28 @@ context('Claim possible work', () => {
         cy.get('[class*="Alert-done"] .alert-text')
             .should('contain', claimFormLocale.successAlert.title)
             .should('contain', claimFormLocale.successAlert.message);
-        cy.get('h6')
-            .contains(claimFormLocale.successWorkflowConfirmation.confirmationTitle)
+        cy.contains('h6', claimFormLocale.successWorkflowConfirmation.confirmationTitle)
             .should('have.length', 1);
-        cy.get('button')
-            .contains(claimFormLocale.successWorkflowConfirmation.cancelButtonLabel)
+        cy.contains('button', claimFormLocale.successWorkflowConfirmation.cancelButtonLabel)
             .click();
         cy.url()
             .should('equal', `${baseUrl}/records/possible`);
     });
 
-    it('Can choose editor, then submit the claim.', () => {
-        cy.contains('Book with editors')
-            .closest('.publicationCitation')
+    it('can choose editor, then submit the claim.', () => {
+        cy.contains('.publicationCitation', 'Book with editors')
             .find('button.publicationAction')
             .first()
             .click();
         cy.url()
             .should('equal', `${baseUrl}/records/claim`);
-        cy.contains(claimFormLocale.contributorLinking.title)
-            .closest('.StandardCard')
+        cy.contains('.StandardCard', claimFormLocale.contributorLinking.title)
             .find('button')
             .first()
             .click();
         cy.contains('I confirm and understand')
             .click();
-        cy.contains(claimFormLocale.submit)
-            .closest('button')
+        cy.contains('button', claimFormLocale.submit)
             .should('not.be.disabled')
             .click();
         cy.get('[class*="Alert-info"] .alert-text')
@@ -191,11 +251,9 @@ context('Claim possible work', () => {
         cy.get('[class*="Alert-done"] .alert-text')
             .should('contain', claimFormLocale.successAlert.title)
             .should('contain', claimFormLocale.successAlert.message);
-        cy.get('h6')
-            .contains(claimFormLocale.successWorkflowConfirmation.confirmationTitle)
+        cy.contains('h6', claimFormLocale.successWorkflowConfirmation.confirmationTitle)
             .should('have.length', 1);
-        cy.get('button')
-            .contains(claimFormLocale.successWorkflowConfirmation.cancelButtonLabel)
+        cy.contains('button', claimFormLocale.successWorkflowConfirmation.cancelButtonLabel)
             .click();
         cy.url()
             .should('equal', `${baseUrl}/records/possible`);
