@@ -50,6 +50,8 @@ const authorRecData = [
         autoComplete="off"
     />, <IconButton style={{ float: 'right', marginRight: -24 }}><PersonAdd /></IconButton>]
 ];
+
+/* istanbul ignore next */
 const authorRecOptions = {
     sort: false,
     filter: false,
@@ -62,7 +64,7 @@ const authorRecOptions = {
     customToolbar: () => <div />
 };
 
-
+/* istanbul ignore next */
 export const AuthorDetailsSection = ({ disabled = false }) => (
     <React.Fragment>
         <Grid item xs={12}>

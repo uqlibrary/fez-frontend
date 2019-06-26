@@ -13,6 +13,7 @@ import Close from '@material-ui/icons/Close';
 import Grid from '@material-ui/core/Grid';
 import Tooltip from '@material-ui/core/Tooltip';
 
+/* istanbul ignore next */
 function renderInput(inputProps) {
     const { InputProps, classes, ref, ...other } = inputProps;
     return (
@@ -30,6 +31,7 @@ function renderInput(inputProps) {
     );
 }
 
+/* istanbul ignore next */
 function renderSuggestion({ suggestion, index, itemProps, highlightedIndex, selectedItem }) {
     const isHighlighted = highlightedIndex === index;
     const isSelected = (selectedItem || '').indexOf(suggestion.label) > -1;
@@ -56,6 +58,7 @@ renderSuggestion.propTypes = {
     suggestion: PropTypes.shape({ label: PropTypes.string }).isRequired,
 };
 
+/* istanbul ignore next */
 function getSuggestions(value, suggestions) {
     const inputValue = deburr(value.trim()).toLowerCase();
     const inputLength = inputValue.length;
@@ -75,6 +78,7 @@ function getSuggestions(value, suggestions) {
         });
 }
 
+/* istanbul ignore next */
 class DownshiftMultiple extends React.Component {
     state = {
         inputValue: '',
@@ -128,7 +132,7 @@ class DownshiftMultiple extends React.Component {
     };
 
     sendData = value => {
-        if(value) {
+        if (value) {
             this.props.onChange(value);
         }
     };
@@ -151,56 +155,54 @@ class DownshiftMultiple extends React.Component {
                     inputValue: inputValue2,
                     selectedItem: selectedItem2,
                     highlightedIndex,
-                }) => (
-                    <div className={classes.container}>
-                        <Grid container alignContent={'flex-end'} alignItems={'flex-end'}>
-                            <Grid item xs>
-                                {renderInput({
-                                    fullWidth: true,
-                                    classes,
-                                    InputProps: getInputProps({
-                                        startAdornment: selectedItem.map(item => (
-                                            <Chip
-                                                key={item}
-                                                tabIndex={-1}
-                                                label={item}
-                                                className={classes.chip}
-                                                onDelete={this.handleDelete(item)}
-                                            />
-                                        )),
-                                        onChange: this.handleInputChange,
-                                        onKeyDown: this.handleKeyDown,
-                                        placeholder: placeholder,
-                                    }),
-                                    label: label,
-                                })}
-                            </Grid>
-                            {
-                                this.state.selectedItem.length > 0 &&
-                                <Grid item xs={'auto'}>
-                                    <Tooltip title={'Clear all selections'}>
-                                        <IconButton color="secondary" component="span" className={classes.clearAll} onClick={this.handleClearAll}>
-                                            <Close/>
-                                        </IconButton>
-                                    </Tooltip>
-                                </Grid>
-                            }
-                            {isOpen ? (
-                                <Paper className={classes.paper} square>
-                                    {getSuggestions(inputValue2, optionsList).map((suggestion, index) =>
-                                        renderSuggestion({
-                                            suggestion,
-                                            index,
-                                            itemProps: getItemProps({ item: suggestion.label }),
-                                            highlightedIndex,
-                                            selectedItem: selectedItem2,
-                                        }),
-                                    )}
-                                </Paper>
-                            ) : null}
+                }) => (<div className={classes.container}>
+                    <Grid container alignContent={'flex-end'} alignItems={'flex-end'}>
+                        <Grid item xs>
+                            {renderInput({
+                                fullWidth: true,
+                                classes,
+                                InputProps: getInputProps({
+                                    startAdornment: selectedItem.map(item => (
+                                        <Chip
+                                            key={item}
+                                            tabIndex={-1}
+                                            label={item}
+                                            className={classes.chip}
+                                            onDelete={this.handleDelete(item)}
+                                        />
+                                    )),
+                                    onChange: this.handleInputChange,
+                                    onKeyDown: this.handleKeyDown,
+                                    placeholder: placeholder,
+                                }),
+                                label: label,
+                            })}
                         </Grid>
-                    </div>
-                )}
+                        {
+                            this.state.selectedItem.length > 0 &&
+                            <Grid item xs={'auto'}>
+                                <Tooltip title={'Clear all selections'}>
+                                    <IconButton color="secondary" component="span" className={classes.clearAll} onClick={this.handleClearAll}>
+                                        <Close />
+                                    </IconButton>
+                                </Tooltip>
+                            </Grid>
+                        }
+                        {isOpen ? (
+                            <Paper className={classes.paper} square>
+                                {getSuggestions(inputValue2, optionsList).map((suggestion, index) =>
+                                    renderSuggestion({
+                                        suggestion,
+                                        index,
+                                        itemProps: getItemProps({ item: suggestion.label }),
+                                        highlightedIndex,
+                                        selectedItem: selectedItem2,
+                                    }),
+                                )}
+                            </Paper>
+                        ) : null}
+                    </Grid>
+                </div>)}
             </Downshift>
         );
     }
@@ -216,6 +218,7 @@ DownshiftMultiple.propTypes = {
     initialValue: PropTypes.any
 };
 
+/* istanbul ignore next */
 const styles = theme => ({
     root: {
         flexGrow: 1,

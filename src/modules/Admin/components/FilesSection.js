@@ -8,6 +8,7 @@ import Typography from '@material-ui/core/Typography';
 import { FileUploadField } from 'modules/SharedComponents/Toolbox/FileUploader';
 import { validation } from 'config';
 
+/* istanbul ignore next */
 export const FilesSection = ({ disabled = false }) => (
     <React.Fragment>
         <Grid container spacing={16}>

@@ -14,6 +14,7 @@ import { validation } from 'config';
 import { collectionItems, WOSDocTypes, ScopusDocTypes, PubmedDocTypes } from './MockData';
 import { FormValuesContextConsumer } from 'context';
 
+/* istanbul ignore next */
 export const IdentifiersSection = ({ disabled = false }) => (
     <Grid container spacing={8}>
         <Grid item xs={12} sm={12}>

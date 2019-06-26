@@ -14,6 +14,7 @@ import { TextField as GenericTextField } from 'modules/SharedComponents/Toolbox/
 import { refereedsources, openaccess, qindex } from './MockData';
 import { validation } from 'config';
 
+/* istanbul ignore next */
 export const AdminSection = ({ disabled }) => (
     <Grid container spacing={8}>
         <Grid item xs={12} sm={12}>

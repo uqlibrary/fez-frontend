@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Immutable from 'immutable';
-import {Field} from 'redux-form/immutable';
+import { Field } from 'redux-form/immutable';
 
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
@@ -10,11 +10,11 @@ import IconButton from '@material-ui/core/IconButton';
 import Edit from '@material-ui/icons/Edit';
 import MUIDataTable from 'mui-datatables';
 
-import {RichEditorField} from 'modules/SharedComponents/RichEditor';
-import {TextField as GenericTextField} from 'modules/SharedComponents/Toolbox/TextField';
+import { RichEditorField } from 'modules/SharedComponents/RichEditor';
+import { TextField as GenericTextField } from 'modules/SharedComponents/Toolbox/TextField';
 
-const handleGrantEditButton = () => {};
-const handleGrantEditButtonSubmit = () => {};
+const handleGrantEditButton = () => { };
+const handleGrantEditButtonSubmit = () => { };
 
 const grantColumns = [
     {
@@ -63,17 +63,18 @@ const grantColumns = [
 ];
 
 const grantData = [
-    ['National Breast Cancer Foundation of Australia', 'NBCF: 2007003445', '1234', 'NBCF', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec ligula nec nulla sodales laoreet.', <IconButton onClick={handleGrantEditButton}><Edit/></IconButton>],
-    ['Australian Research Council', 'ARC: DP0985025', '1234', 'NBCF', 'Gravida lectus quis, fermentum dolor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec quis interdum leo.', <IconButton onClick={handleGrantEditButton}><Edit/></IconButton>],
+    ['National Breast Cancer Foundation of Australia', 'NBCF: 2007003445', '1234', 'NBCF', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec ligula nec nulla sodales laoreet.', <IconButton onClick={handleGrantEditButton}><Edit /></IconButton>],
+    ['Australian Research Council', 'ARC: DP0985025', '1234', 'NBCF', 'Gravida lectus quis, fermentum dolor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec quis interdum leo.', <IconButton onClick={handleGrantEditButton}><Edit /></IconButton>],
 ];
 
 const grantOptions = {
     filterType: 'checkbox',
 };
 
-export const GrantInformationSection = ({disabled}) => {
+/* istanbul ignore next */
+export const GrantInformationSection = ({ disabled }) => {
     return (
-        <Grid container spacing={8} style={{marginTop: -12}}>
+        <Grid container spacing={8} style={{ marginTop: -12 }}>
             <Grid item xs={12} sm={6}>
                 <Field
                     component={GenericTextField}
@@ -111,7 +112,7 @@ export const GrantInformationSection = ({disabled}) => {
                     placeholder="" />
             </Grid>
             <Grid item xs={12}>
-                <Typography variant="caption" component="span" style={{opacity: 0.66}}>Grant text</Typography>
+                <Typography variant="caption" component="span" style={{ opacity: 0.66 }}>Grant text</Typography>
                 <Field
                     component={RichEditorField}
                     disabled={disabled}
@@ -119,7 +120,7 @@ export const GrantInformationSection = ({disabled}) => {
                     format={value => Immutable.Map(value)}
                     height={100} />
             </Grid>
-            <Grid item xs={12} style={{padding: 4}}>
+            <Grid item xs={12} style={{ padding: 4 }}>
                 <Grid container spacing={8}>
                     <Grid item xs />
                     <Grid item xs="auto">

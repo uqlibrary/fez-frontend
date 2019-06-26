@@ -1,36 +1,37 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Immutable from 'immutable';
-import {Field} from 'redux-form/immutable';
+import { Field } from 'redux-form/immutable';
 
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import MenuItem from '@material-ui/core/MenuItem';
 
-import {TextField as GenericTextField} from 'modules/SharedComponents/Toolbox/TextField';
-import {SelectField} from 'modules/SharedComponents/Toolbox/SelectField';
-import {DatePickerField} from 'modules/SharedComponents/Toolbox/DatePickerField';
-import {DownshiftMultiChipSelectField} from 'modules/SharedComponents/Toolbox/DownshiftMultiChipSelectField';
-import {RichEditorField} from 'modules/SharedComponents/RichEditor';
-import {ListEditorField} from 'modules/SharedComponents/Toolbox/ListEditor';
-import {FormValuesContextConsumer} from 'context';
+import { TextField as GenericTextField } from 'modules/SharedComponents/Toolbox/TextField';
+import { SelectField } from 'modules/SharedComponents/Toolbox/SelectField';
+import { DatePickerField } from 'modules/SharedComponents/Toolbox/DatePickerField';
+import { DownshiftMultiChipSelectField } from 'modules/SharedComponents/Toolbox/DownshiftMultiChipSelectField';
+import { RichEditorField } from 'modules/SharedComponents/RichEditor';
+import { ListEditorField } from 'modules/SharedComponents/Toolbox/ListEditor';
+import { FormValuesContextConsumer } from 'context';
 
-import {validation} from 'config';
+import { validation } from 'config';
 import {
     subjects, subtypes, languages
 } from './MockData';
 
-export const BibliographicSection = ({disabled = false}) => (
+/* istanbul ignore next */
+export const BibliographicSection = ({ disabled = false }) => (
     <Grid container spacing={8}>
         <Grid item xs={12}>
-            <Typography variant="caption" component="span" style={{opacity: 0.66}}>Formatted title</Typography>
+            <Typography variant="caption" component="span" style={{ opacity: 0.66 }}>Formatted title</Typography>
             <Field
                 component={RichEditorField}
                 disabled={disabled}
                 name="title"
                 height={100}
                 format={value => Immutable.Map(value)}
-                validate={[validation.required]}/>
+                validate={[validation.required]} />
         </Grid>
         <Grid item xs={12}>
             <Field
@@ -53,7 +54,7 @@ export const BibliographicSection = ({disabled = false}) => (
                 placeholder="">
                 <MenuItem value="" disabled>Please select a language</MenuItem>
                 {
-                    languages.map((item, index) =>{
+                    languages.map((item, index) => {
                         return <MenuItem key={index} value={item.value}>{item.label}</MenuItem>;
                     })
                 }
@@ -99,7 +100,7 @@ export const BibliographicSection = ({disabled = false}) => (
                 label="Journal name"
                 placeholder=""
                 required
-                validate={[validation.required]}/>
+                validate={[validation.required]} />
         </Grid>
         <Grid item xs={12} sm={4}>
             <Field
@@ -187,7 +188,7 @@ export const BibliographicSection = ({disabled = false}) => (
                 <MenuItem value="" disabled>Select a document subtype</MenuItem>
                 {
                     subtypes.map((item, index) => {
-                        return  <MenuItem key={index} value={item.value}>{item.label}</MenuItem>;
+                        return <MenuItem key={index} value={item.value}>{item.label}</MenuItem>;
                     })}
             </Field>
         </Grid>
@@ -267,7 +268,7 @@ export const BibliographicSection = ({disabled = false}) => (
         </Grid>
         <Grid item xs={12}>
             <FormValuesContextConsumer>
-                {({formValues}) => (
+                {({ formValues }) => (
                     <Field
                         component={DownshiftMultiChipSelectField}
                         disabled={disabled}
@@ -286,7 +287,7 @@ export const BibliographicSection = ({disabled = false}) => (
                 name="keywords"
                 remindToAdd
                 maxCount={10}
-                searchKey={{value: 'keyword', order: 'order'}}
+                searchKey={{ value: 'keyword', order: 'order' }}
                 locale={{
                     form: {
                         locale: {
@@ -298,14 +299,14 @@ export const BibliographicSection = ({disabled = false}) => (
                 }} />
         </Grid>
         <Grid item xs={12}>
-            <Typography variant="caption" component="span" style={{opacity: 0.66}}>Formatted abstract</Typography>
+            <Typography variant="caption" component="span" style={{ opacity: 0.66 }}>Formatted abstract</Typography>
             <Field
                 component={RichEditorField}
                 disabled={disabled}
                 name="abstract"
                 height={100}
                 format={value => Immutable.Map(value)}
-                validate={[validation.required]}/>
+                validate={[validation.required]} />
         </Grid>
     </Grid>
 );
