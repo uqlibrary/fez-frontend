@@ -1,7 +1,7 @@
 import * as actions from './actionTypes';
 import * as repositories from 'repositories';
 import * as recordActions from './records';
-import {record} from "mock/data";
+import { record } from "mock/data";
 import {
     RECORD_TYPE_COMMUNITY,
     RECORD_TYPE_COLLECTION,
@@ -48,13 +48,13 @@ describe('Record action creators', () => {
                 "rek_date": "2017-01-01",
                 "rek_subtype": "Article (original research)"
             };
-            const pidRequest = {pid: 'UQ:396321'};
+            const pidRequest = { pid: 'UQ:396321' };
 
             mockApi
                 .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
-                .reply(200, {data: {...record}})
+                .reply(200, { data: { ...record } })
                 .onPatch(repositories.routes.EXISTING_RECORD_API(pidRequest).apiUrl)
-                .reply(200, {data: {...record}});
+                .reply(200, { data: { ...record } });
 
 
             const expectedActions = [
@@ -94,13 +94,13 @@ describe('Record action creators', () => {
                 "rek_date": "2017-01-01",
                 "rek_subtype": "Article (original research)"
             };
-            const pidRequest = {pid: 'UQ:396321'};
+            const pidRequest = { pid: 'UQ:396321' };
 
             mockApi
                 .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
-                .reply(200, {data: {data: {...record}}})
+                .reply(200, { data: { data: { ...record } } })
                 .onPatch(repositories.routes.EXISTING_RECORD_API(pidRequest).apiUrl)
-                .reply(200, {data: {data: {...record}}});
+                .reply(200, { data: { data: { ...record } } });
 
 
             const expectedActions = [
@@ -150,16 +150,16 @@ describe('Record action creators', () => {
                 "rek_date": "2017-01-01",
                 "rek_subtype": "Article (original research)"
             };
-            const pidRequest = {pid: 'UQ:396321'};
+            const pidRequest = { pid: 'UQ:396321' };
 
             mockApi
                 .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
-                .reply(200, {data: {...record}})
+                .reply(200, { data: { ...record } })
                 .onPatch(repositories.routes.EXISTING_RECORD_API(pidRequest).apiUrl)
-                .reply(200, {data: {...record}})
-                .onGet(repositories.routes.FILE_UPLOAD_API({pid: pidRequest.pid, fileName: "test.txt"}).apiUrl)
+                .reply(200, { data: { ...record } })
+                .onGet(repositories.routes.FILE_UPLOAD_API({ pid: pidRequest.pid, fileName: "test.txt" }).apiUrl)
                 .reply(200, 's3-ap-southeast-2.amazonaws.com')
-                .onPut('s3-ap-southeast-2.amazonaws.com', {"name": "test.txt"})
+                .onPut('s3-ap-southeast-2.amazonaws.com', { "name": "test.txt" })
                 .reply(200, {});
 
 
@@ -212,16 +212,16 @@ describe('Record action creators', () => {
                 "rek_date": "2017-01-01",
                 "rek_subtype": "Article (original research)"
             };
-            const pidRequest = {pid: 'UQ:396321'};
+            const pidRequest = { pid: 'UQ:396321' };
 
             mockApi
                 .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
-                .reply(200, {data: {...record}})
+                .reply(200, { data: { ...record } })
                 .onPatch(repositories.routes.EXISTING_RECORD_API(pidRequest).apiUrl)
-                .reply(200, {data: {...record}})
-                .onGet(repositories.routes.FILE_UPLOAD_API({pid: pidRequest.pid, fileName: "test.txt"}).apiUrl)
+                .reply(200, { data: { ...record } })
+                .onGet(repositories.routes.FILE_UPLOAD_API({ pid: pidRequest.pid, fileName: "test.txt" }).apiUrl)
                 .reply(500)
-                .onPut('s3-ap-southeast-2.amazonaws.com', {"name": "test.txt"})
+                .onPut('s3-ap-southeast-2.amazonaws.com', { "name": "test.txt" })
                 .reply(200, {});
 
 
@@ -265,7 +265,7 @@ describe('Record action creators', () => {
                 "rek_date": "2017-01-01",
                 "rek_subtype": "Article (original research)"
             };
-            const pidRequest = {pid: 'UQ:396321'};
+            const pidRequest = { pid: 'UQ:396321' };
 
             mockApi
                 .onAny()
@@ -319,17 +319,17 @@ describe('Record action creators', () => {
                 }
             };
             const testPid = 'UQ:396321';
-            const pidRequest = {pid: testPid};
+            const pidRequest = { pid: testPid };
 
             mockApi
                 .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
-                .reply(200, {data: {...record}})
-                .onGet(repositories.routes.FILE_UPLOAD_API({pid: '.*', fileName: '.*'}).apiUrl)
+                .reply(200, { data: { ...record } })
+                .onGet(repositories.routes.FILE_UPLOAD_API({ pid: '.*', fileName: '.*' }).apiUrl)
                 .reply(200, ['s3-ap-southeast-2.amazonaws.com'])
                 .onPut(/(s3-ap-southeast-2.amazonaws.com)/)
-                .reply(200, {data: {}})
-                .onPost(repositories.routes.RECORDS_ISSUES_API({pid: '.*'}).apiUrl)
-                .reply(200, {data: ''})
+                .reply(200, { data: {} })
+                .onPost(repositories.routes.RECORDS_ISSUES_API({ pid: '.*' }).apiUrl)
+                .reply(200, { data: '' })
                 .onPatch(repositories.routes.EXISTING_RECORD_API(pidRequest).apiUrl)
                 .reply(500);
 
@@ -373,19 +373,19 @@ describe('Record action creators', () => {
                 "rek_subtype": "Article (original research)",
                 "comments": 'This is a test'
             };
-            const pidRequest = {pid: 'UQ:396321'};
+            const pidRequest = { pid: 'UQ:396321' };
 
             mockApi
                 .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
-                .reply(200, {data: {...record}})
-                .onGet(repositories.routes.FILE_UPLOAD_API({pid: '.*', fileName: '.*'}).apiUrl)
+                .reply(200, { data: { ...record } })
+                .onGet(repositories.routes.FILE_UPLOAD_API({ pid: '.*', fileName: '.*' }).apiUrl)
                 .reply(200, ['s3-ap-southeast-2.amazonaws.com'])
                 .onPut(/(s3-ap-southeast-2.amazonaws.com)/)
-                .reply(200, {data: {}})
-                .onPost(repositories.routes.RECORDS_ISSUES_API({pid: '.*'}).apiUrl)
-                .reply(200, {data: ''})
+                .reply(200, { data: {} })
+                .onPost(repositories.routes.RECORDS_ISSUES_API({ pid: '.*' }).apiUrl)
+                .reply(200, { data: '' })
                 .onPatch(repositories.routes.RECORDS_ISSUES_API(pidRequest).apiUrl)
-                .reply(200, {data: {}});
+                .reply(200, { data: {} });
 
 
             const expectedActions = [
@@ -426,17 +426,17 @@ describe('Record action creators', () => {
                 "rek_subtype": "Article (original research)",
                 "comments": 'This is a test'
             };
-            const pidRequest = {pid: 'UQ:396321'};
+            const pidRequest = { pid: 'UQ:396321' };
 
             mockApi
                 .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
-                .reply(200, {data: {...record}})
-                .onGet(repositories.routes.FILE_UPLOAD_API({pid: '.*', fileName: '.*'}).apiUrl)
+                .reply(200, { data: { ...record } })
+                .onGet(repositories.routes.FILE_UPLOAD_API({ pid: '.*', fileName: '.*' }).apiUrl)
                 .reply(200, ['s3-ap-southeast-2.amazonaws.com'])
                 .onPut(/(s3-ap-southeast-2.amazonaws.com)/)
-                .reply(200, {data: {}})
-                .onPost(repositories.routes.RECORDS_ISSUES_API({pid: '.*'}).apiUrl)
-                .reply(200, {data: ''})
+                .reply(200, { data: {} })
+                .onPost(repositories.routes.RECORDS_ISSUES_API({ pid: '.*' }).apiUrl)
+                .reply(200, { data: '' })
                 .onPatch(repositories.routes.RECORDS_ISSUES_API(pidRequest).apiUrl)
                 .reply(500);
 
@@ -462,19 +462,19 @@ describe('Record action creators', () => {
                 "rek_date": "2017-01-01",
                 "rek_subtype": "Article (original research)"
             };
-            const pidRequest = {pid: 'UQ:396321'};
+            const pidRequest = { pid: 'UQ:396321' };
 
             mockApi
                 .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
-                .reply(200, {data: {...record}})
-                .onGet(repositories.routes.FILE_UPLOAD_API({pid: '.*', fileName: '.*'}).apiUrl)
+                .reply(200, { data: { ...record } })
+                .onGet(repositories.routes.FILE_UPLOAD_API({ pid: '.*', fileName: '.*' }).apiUrl)
                 .reply(200, ['s3-ap-southeast-2.amazonaws.com'])
                 .onPut(/(s3-ap-southeast-2.amazonaws.com)/)
-                .reply(200, {data: {}})
-                .onPost(repositories.routes.RECORDS_ISSUES_API({pid: '.*'}).apiUrl)
-                .reply(200, {data: ''})
+                .reply(200, { data: {} })
+                .onPost(repositories.routes.RECORDS_ISSUES_API({ pid: '.*' }).apiUrl)
+                .reply(200, { data: '' })
                 .onPatch(repositories.routes.EXISTING_RECORD_API(pidRequest).apiUrl)
-                .reply(200, {data: {...record}});
+                .reply(200, { data: { ...record } });
 
 
             const expectedActions = [
@@ -506,19 +506,19 @@ describe('Record action creators', () => {
                 "rek_date": "2017-01-01",
                 "rek_subtype": "Article (original research)"
             };
-            const pidRequest = {pid: 'UQ:396321'};
+            const pidRequest = { pid: 'UQ:396321' };
 
             mockApi
                 .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
-                .reply(200, {data: {...record}})
-                .onGet(repositories.routes.FILE_UPLOAD_API({pid: '.*', fileName: '.*'}).apiUrl)
+                .reply(200, { data: { ...record } })
+                .onGet(repositories.routes.FILE_UPLOAD_API({ pid: '.*', fileName: '.*' }).apiUrl)
                 .reply(200, ['s3-ap-southeast-2.amazonaws.com'])
                 .onPut(/(s3-ap-southeast-2.amazonaws.com)/)
-                .reply(200, {data: {}})
-                .onPost(repositories.routes.RECORDS_ISSUES_API({pid: '.*'}).apiUrl)
-                .reply(200, {data: ''})
+                .reply(200, { data: {} })
+                .onPost(repositories.routes.RECORDS_ISSUES_API({ pid: '.*' }).apiUrl)
+                .reply(200, { data: '' })
                 .onPatch(repositories.routes.EXISTING_RECORD_API(pidRequest).apiUrl)
-                .reply(200, {data: {...record}});
+                .reply(200, { data: { ...record } });
 
 
             const expectedActions = [
@@ -572,19 +572,19 @@ describe('Record action creators', () => {
                 }]
 
             };
-            const pidRequest = {pid: 'UQ:396321'};
+            const pidRequest = { pid: 'UQ:396321' };
 
             mockApi
                 .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
-                .reply(200, {data: {...record}})
-                .onGet(repositories.routes.FILE_UPLOAD_API({pid: '.*', fileName: '.*'}).apiUrl)
+                .reply(200, { data: { ...record } })
+                .onGet(repositories.routes.FILE_UPLOAD_API({ pid: '.*', fileName: '.*' }).apiUrl)
                 .reply(200, ['s3-ap-southeast-2.amazonaws.com'])
                 .onPut(/(s3-ap-southeast-2.amazonaws.com)/)
-                .reply(200, {data: {}})
-                .onPost(repositories.routes.RECORDS_ISSUES_API({pid: '.*'}).apiUrl)
-                .reply(200, {data: ''})
+                .reply(200, { data: {} })
+                .onPost(repositories.routes.RECORDS_ISSUES_API({ pid: '.*' }).apiUrl)
+                .reply(200, { data: '' })
                 .onPatch(repositories.routes.EXISTING_RECORD_API(pidRequest).apiUrl)
-                .reply(200, {data: {...record}});
+                .reply(200, { data: { ...record } });
 
 
             const expectedActions = [
@@ -648,19 +648,19 @@ describe('Record action creators', () => {
                 }],
 
             };
-            const pidRequest = {pid: 'UQ:396321'};
+            const pidRequest = { pid: 'UQ:396321' };
 
             mockApi
                 .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
-                .reply(200, {data: {...record}})
-                .onGet(repositories.routes.FILE_UPLOAD_API({pid: '.*', fileName: '.*'}).apiUrl)
+                .reply(200, { data: { ...record } })
+                .onGet(repositories.routes.FILE_UPLOAD_API({ pid: '.*', fileName: '.*' }).apiUrl)
                 .reply(200, ['s3-ap-southeast-2.amazonaws.com'])
                 .onPut(/(s3-ap-southeast-2.amazonaws.com)/)
-                .reply(200, {data: {}})
-                .onPost(repositories.routes.RECORDS_ISSUES_API({pid: '.*'}).apiUrl)
-                .reply(200, {data: ''})
+                .reply(200, { data: {} })
+                .onPost(repositories.routes.RECORDS_ISSUES_API({ pid: '.*' }).apiUrl)
+                .reply(200, { data: '' })
                 .onPatch(repositories.routes.EXISTING_RECORD_API(pidRequest).apiUrl)
-                .reply(200, {data: {...record}});
+                .reply(200, { data: { ...record } });
 
 
             const expectedActions = [
@@ -680,8 +680,8 @@ describe('Record action creators', () => {
             const testInput = {
                 authors: {},
                 editors: {},
-                "currentAuthor": [{"nameAsPublished": "HDR Student, N", "authorId": 44444}],
-                "fez_record_search_key_ismemberof": [{"rek_ismemberof": "UQ:152694"}],
+                "currentAuthor": [{ "nameAsPublished": "HDR Student, N", "authorId": 44444 }],
+                "fez_record_search_key_ismemberof": [{ "rek_ismemberof": "UQ:152694" }],
                 "supervisors": [{
                     "nameAsPublished": "Test",
                     "creatorRole": "",
@@ -690,31 +690,31 @@ describe('Record action creators', () => {
                     "orgtype": "",
                     "disabled": false
                 }],
-                "fieldOfResearch": [{"rek_value": {"key": 451800, "value": "0101 Pure Mathematics"}, "rek_order": 1}],
-                "thesisTitle": {"htmlText": "<p>Test</p>", "plainText": "Test"},
-                "thesisAbstract": {"htmlText": "<p>Test</p>", "plainText": "Test"},
-                "fez_record_search_key_org_name": {"rek_org_name": "The University of Queensland"},
+                "fieldOfResearch": [{ "rek_value": { "key": 451800, "value": "0101 Pure Mathematics" }, "rek_order": 1 }],
+                "thesisTitle": { "htmlText": "<p>Test</p>", "plainText": "Test" },
+                "thesisAbstract": { "htmlText": "<p>Test</p>", "plainText": "Test" },
+                "fez_record_search_key_org_name": { "rek_org_name": "The University of Queensland" },
                 "rek_object_type": 3,
                 "rek_date": "2019-3-27",
-                "fez_record_search_key_keywords": [{"rek_keywords": "Test", "rek_keywords_order": 1}],
+                "fez_record_search_key_keywords": [{ "rek_keywords": "Test", "rek_keywords_order": 1 }],
                 "files": {
-                    "queue": [{"fileData": {}, "name": "Test.png", "size": 961311, "access_condition_id": 3}],
+                    "queue": [{ "fileData": {}, "name": "Test.png", "size": 961311, "access_condition_id": 3 }],
                     "isValid": true
                 },
                 "rek_status": 3,
                 "fileAccessId": 3,
                 "rek_genre_type": "MPhil Thesis",
                 "rek_display_type": 187,
-                "fez_record_search_key_org_unit_name": {"rek_org_unit_name": "Test"}
+                "fez_record_search_key_org_unit_name": { "rek_org_unit_name": "Test" }
             }
-            const pidRequest = {pid: 'UQ:396321'};
+            const pidRequest = { pid: 'UQ:396321' };
 
             mockApi
                 .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
-                .reply(500, {rek_pid: pidRequest.pid})
+                .reply(500, { rek_pid: pidRequest.pid })
                 .onPatch(repositories.routes.EXISTING_RECORD_API(pidRequest).apiUrl)
-                .reply(200, {data: {...record}})
-                .onGet(repositories.routes.FILE_UPLOAD_API({pid: pidRequest.pid, fileName: 'Test.png'}).apiUrl)
+                .reply(200, { data: { ...record } })
+                .onGet(repositories.routes.FILE_UPLOAD_API({ pid: pidRequest.pid, fileName: 'Test.png' }).apiUrl)
                 .reply(200, 's3-ap-southeast-2.amazonaws.com')
                 .onPut('s3-ap-southeast-2.amazonaws.com', {})
                 .reply(200, {});
@@ -738,8 +738,8 @@ describe('Record action creators', () => {
                 authors: {},
                 editors: {},
                 comments: 'Test',
-                "currentAuthor": [{"nameAsPublished": "HDR Student, N", "authorId": 44444}],
-                "fez_record_search_key_ismemberof": [{"rek_ismemberof": "UQ:152694"}],
+                "currentAuthor": [{ "nameAsPublished": "HDR Student, N", "authorId": 44444 }],
+                "fez_record_search_key_ismemberof": [{ "rek_ismemberof": "UQ:152694" }],
                 "supervisors": [{
                     "nameAsPublished": "Test",
                     "creatorRole": "",
@@ -748,31 +748,31 @@ describe('Record action creators', () => {
                     "orgtype": "",
                     "disabled": false
                 }],
-                "fieldOfResearch": [{"rek_value": {"key": 451800, "value": "0101 Pure Mathematics"}, "rek_order": 1}],
-                "thesisTitle": {"htmlText": "<p>Test</p>", "plainText": "Test"},
-                "thesisAbstract": {"htmlText": "<p>Test</p>", "plainText": "Test"},
-                "fez_record_search_key_org_name": {"rek_org_name": "The University of Queensland"},
+                "fieldOfResearch": [{ "rek_value": { "key": 451800, "value": "0101 Pure Mathematics" }, "rek_order": 1 }],
+                "thesisTitle": { "htmlText": "<p>Test</p>", "plainText": "Test" },
+                "thesisAbstract": { "htmlText": "<p>Test</p>", "plainText": "Test" },
+                "fez_record_search_key_org_name": { "rek_org_name": "The University of Queensland" },
                 "rek_object_type": 3,
                 "rek_date": "2019-3-27",
-                "fez_record_search_key_keywords": [{"rek_keywords": "Test", "rek_keywords_order": 1}],
+                "fez_record_search_key_keywords": [{ "rek_keywords": "Test", "rek_keywords_order": 1 }],
                 "files": {
-                    "queue": [{"fileData": {}, "name": "Test.png", "size": 961311, "access_condition_id": 3}],
+                    "queue": [{ "fileData": {}, "name": "Test.png", "size": 961311, "access_condition_id": 3 }],
                     "isValid": true
                 },
                 "rek_status": 3,
                 "fileAccessId": 3,
                 "rek_genre_type": "MPhil Thesis",
                 "rek_display_type": 187,
-                "fez_record_search_key_org_unit_name": {"rek_org_unit_name": "Test"}
+                "fez_record_search_key_org_unit_name": { "rek_org_unit_name": "Test" }
             }
-            const pidRequest = {pid: 'UQ:396321'};
+            const pidRequest = { pid: 'UQ:396321' };
 
             mockApi
                 .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
-                .reply(200, {data: {...record}})
+                .reply(200, { data: { ...record } })
                 .onPatch(repositories.routes.EXISTING_RECORD_API(pidRequest).apiUrl)
-                .reply(200, {data: {...record}})
-                .onGet(repositories.routes.FILE_UPLOAD_API({pid: pidRequest.pid, fileName: 'Test.png'}).apiUrl)
+                .reply(200, { data: { ...record } })
+                .onGet(repositories.routes.FILE_UPLOAD_API({ pid: pidRequest.pid, fileName: 'Test.png' }).apiUrl)
                 .reply(0);
 
             const expectedActions = [
@@ -784,15 +784,15 @@ describe('Record action creators', () => {
 
             try {
                 await mockActionsStore.dispatch(recordActions.submitThesis(testInput));
-            } catch(e) {
+            } catch (e) {
                 expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
             }
         });
 
         it('dispatches expected actions on failed RHD Thesis save', async () => {
             const testInput = {
-                "currentAuthor": [{"nameAsPublished": "HDR Student, N", "authorId": 44444}],
-                "fez_record_search_key_ismemberof": [{"rek_ismemberof": "UQ:152694"}],
+                "currentAuthor": [{ "nameAsPublished": "HDR Student, N", "authorId": 44444 }],
+                "fez_record_search_key_ismemberof": [{ "rek_ismemberof": "UQ:152694" }],
                 "supervisors": [{
                     "nameAsPublished": "Test",
                     "creatorRole": "",
@@ -801,32 +801,32 @@ describe('Record action creators', () => {
                     "orgtype": "",
                     "disabled": false
                 }],
-                "fieldOfResearch": [{"rek_value": {"key": 451800, "value": "0101 Pure Mathematics"}, "rek_order": 1}],
-                "thesisTitle": {"htmlText": "<p>Test</p>", "plainText": "Test"},
-                "thesisAbstract": {"htmlText": "<p>Test</p>", "plainText": "Test"},
-                "fez_record_search_key_org_name": {"rek_org_name": "The University of Queensland"},
+                "fieldOfResearch": [{ "rek_value": { "key": 451800, "value": "0101 Pure Mathematics" }, "rek_order": 1 }],
+                "thesisTitle": { "htmlText": "<p>Test</p>", "plainText": "Test" },
+                "thesisAbstract": { "htmlText": "<p>Test</p>", "plainText": "Test" },
+                "fez_record_search_key_org_name": { "rek_org_name": "The University of Queensland" },
                 "rek_object_type": 3,
                 "rek_date": "2019-3-27",
-                "fez_record_search_key_keywords": [{"rek_keywords": "Test", "rek_keywords_order": 1}],
+                "fez_record_search_key_keywords": [{ "rek_keywords": "Test", "rek_keywords_order": 1 }],
                 "files": {
-                    "queue": [{"fileData": {}, "name": "Test.png", "size": 961311, "access_condition_id": 3}],
+                    "queue": [{ "fileData": {}, "name": "Test.png", "size": 961311, "access_condition_id": 3 }],
                     "isValid": true
                 },
                 "rek_status": 3,
                 "fileAccessId": 3,
                 "rek_genre_type": "MPhil Thesis",
                 "rek_display_type": 187,
-                "fez_record_search_key_org_unit_name": {"rek_org_unit_name": "Test"}
+                "fez_record_search_key_org_unit_name": { "rek_org_unit_name": "Test" }
             }
-            const pidRequest = {pid: 'UQ:396321'};
+            const pidRequest = { pid: 'UQ:396321' };
 
 
             mockApi
                 .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
-                .reply(500, {rek_pid: pidRequest.pid})
+                .reply(500, { rek_pid: pidRequest.pid })
                 .onPatch(repositories.routes.EXISTING_RECORD_API(pidRequest).apiUrl)
-                .reply(200, {data: {...record}})
-                .onGet(repositories.routes.FILE_UPLOAD_API({pid: pidRequest.pid, fileName: 'Test.png'}).apiUrl)
+                .reply(200, { data: { ...record } })
+                .onGet(repositories.routes.FILE_UPLOAD_API({ pid: pidRequest.pid, fileName: 'Test.png' }).apiUrl)
                 .reply(200, 's3-ap-southeast-2.amazonaws.com')
                 .onPut('s3-ap-southeast-2.amazonaws.com', {})
                 .reply(200, {});
@@ -847,8 +847,8 @@ describe('Record action creators', () => {
 
         it('dispatches expected actions on failed RHD Thesis file upload', async () => {
             const testInput = {
-                "currentAuthor": [{"nameAsPublished": "HDR Student, N", "authorId": 44444}],
-                "fez_record_search_key_ismemberof": [{"rek_ismemberof": "UQ:152694"}],
+                "currentAuthor": [{ "nameAsPublished": "HDR Student, N", "authorId": 44444 }],
+                "fez_record_search_key_ismemberof": [{ "rek_ismemberof": "UQ:152694" }],
                 "supervisors": [{
                     "nameAsPublished": "Test",
                     "creatorRole": "",
@@ -857,31 +857,31 @@ describe('Record action creators', () => {
                     "orgtype": "",
                     "disabled": false
                 }],
-                "fieldOfResearch": [{"rek_value": {"key": 451800, "value": "0101 Pure Mathematics"}, "rek_order": 1}],
-                "thesisTitle": {"htmlText": "<p>Test</p>", "plainText": "Test"},
-                "thesisAbstract": {"htmlText": "<p>Test</p>", "plainText": "Test"},
-                "fez_record_search_key_org_name": {"rek_org_name": "The University of Queensland"},
+                "fieldOfResearch": [{ "rek_value": { "key": 451800, "value": "0101 Pure Mathematics" }, "rek_order": 1 }],
+                "thesisTitle": { "htmlText": "<p>Test</p>", "plainText": "Test" },
+                "thesisAbstract": { "htmlText": "<p>Test</p>", "plainText": "Test" },
+                "fez_record_search_key_org_name": { "rek_org_name": "The University of Queensland" },
                 "rek_object_type": 3,
                 "rek_date": "2019-3-27",
-                "fez_record_search_key_keywords": [{"rek_keywords": "Test", "rek_keywords_order": 1}],
+                "fez_record_search_key_keywords": [{ "rek_keywords": "Test", "rek_keywords_order": 1 }],
                 "files": {
-                    "queue": [{"fileData": {}, "name": "Test.png", "size": 961311, "access_condition_id": 3}],
+                    "queue": [{ "fileData": {}, "name": "Test.png", "size": 961311, "access_condition_id": 3 }],
                     "isValid": true
                 },
                 "rek_status": 3,
                 "fileAccessId": 3,
                 "rek_genre_type": "MPhil Thesis",
                 "rek_display_type": 187,
-                "fez_record_search_key_org_unit_name": {"rek_org_unit_name": "Test"}
+                "fez_record_search_key_org_unit_name": { "rek_org_unit_name": "Test" }
             }
-            const pidRequest = {pid: 'UQ:396321'};
+            const pidRequest = { pid: 'UQ:396321' };
 
             mockApi
                 .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
-                .reply(200, {data: {...record}})
+                .reply(200, { data: { ...record } })
                 .onPatch(repositories.routes.EXISTING_RECORD_API(pidRequest).apiUrl)
-                .reply(200, {data: {...record}})
-                .onGet(repositories.routes.FILE_UPLOAD_API({pid: pidRequest.pid, fileName: 'Test.png'}).apiUrl)
+                .reply(200, { data: { ...record } })
+                .onGet(repositories.routes.FILE_UPLOAD_API({ pid: pidRequest.pid, fileName: 'Test.png' }).apiUrl)
                 .reply(500)
                 .onPut('s3-ap-southeast-2.amazonaws.com', {})
                 .reply(200, {});
@@ -896,15 +896,15 @@ describe('Record action creators', () => {
 
             try {
                 await mockActionsStore.dispatch(recordActions.submitThesis(testInput));
-            } catch(e) {
+            } catch (e) {
                 expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
             }
         });
 
         it('dispatches expected actions on failed to get a presigned URL file upload', async () => {
             const testInput = {
-                "currentAuthor": [{"nameAsPublished": "HDR Student, N", "authorId": 44444}],
-                "fez_record_search_key_ismemberof": [{"rek_ismemberof": "UQ:152694"}],
+                "currentAuthor": [{ "nameAsPublished": "HDR Student, N", "authorId": 44444 }],
+                "fez_record_search_key_ismemberof": [{ "rek_ismemberof": "UQ:152694" }],
                 "supervisors": [{
                     "nameAsPublished": "Test",
                     "creatorRole": "",
@@ -913,33 +913,33 @@ describe('Record action creators', () => {
                     "orgtype": "",
                     "disabled": false
                 }],
-                "fieldOfResearch": [{"rek_value": {"key": 451800, "value": "0101 Pure Mathematics"}, "rek_order": 1}],
-                "thesisTitle": {"htmlText": "<p>Test</p>", "plainText": "Test"},
-                "thesisAbstract": {"htmlText": "<p>Test</p>", "plainText": "Test"},
-                "fez_record_search_key_org_name": {"rek_org_name": "The University of Queensland"},
+                "fieldOfResearch": [{ "rek_value": { "key": 451800, "value": "0101 Pure Mathematics" }, "rek_order": 1 }],
+                "thesisTitle": { "htmlText": "<p>Test</p>", "plainText": "Test" },
+                "thesisAbstract": { "htmlText": "<p>Test</p>", "plainText": "Test" },
+                "fez_record_search_key_org_name": { "rek_org_name": "The University of Queensland" },
                 "rek_object_type": 3,
                 "rek_date": "2019-3-27",
-                "fez_record_search_key_keywords": [{"rek_keywords": "Test", "rek_keywords_order": 1}],
+                "fez_record_search_key_keywords": [{ "rek_keywords": "Test", "rek_keywords_order": 1 }],
                 "files": {
-                    "queue": [{"fileData": {}, "name": "Test.png", "size": 961311, "access_condition_id": 3}],
+                    "queue": [{ "fileData": {}, "name": "Test.png", "size": 961311, "access_condition_id": 3 }],
                     "isValid": true
                 },
                 "rek_status": 3,
                 "fileAccessId": 3,
                 "rek_genre_type": "MPhil Thesis",
                 "rek_display_type": 187,
-                "fez_record_search_key_org_unit_name": {"rek_org_unit_name": "Test"}
+                "fez_record_search_key_org_unit_name": { "rek_org_unit_name": "Test" }
             }
-            const pidRequest = {pid: 'UQ:396321'};
+            const pidRequest = { pid: 'UQ:396321' };
 
             mockApi
                 .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
-                .reply(200, {data: {...record}})
+                .reply(200, { data: { ...record } })
                 .onPatch(repositories.routes.EXISTING_RECORD_API(pidRequest).apiUrl)
-                .reply(200, {data: {...record}})
-                .onPost(repositories.routes.RECORDS_ISSUES_API({pid: pidRequest.pid}).apiUrl, '.*')
-                .reply(200, {data: {...record}})
-                .onGet(repositories.routes.FILE_UPLOAD_API({pid: pidRequest.pid, fileName: 'Test.png'}).apiUrl)
+                .reply(200, { data: { ...record } })
+                .onPost(repositories.routes.RECORDS_ISSUES_API({ pid: pidRequest.pid }).apiUrl, '.*')
+                .reply(200, { data: { ...record } })
+                .onGet(repositories.routes.FILE_UPLOAD_API({ pid: pidRequest.pid, fileName: 'Test.png' }).apiUrl)
                 .reply(200, '')
                 .onAny()
                 .reply(0);
@@ -953,15 +953,15 @@ describe('Record action creators', () => {
 
             try {
                 await mockActionsStore.dispatch(recordActions.submitThesis(testInput));
-            } catch(e) {
+            } catch (e) {
                 expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
             }
         });
 
         it('dispatches expected actions where are no files to upload', async () => {
             const testInput = {
-                "currentAuthor": [{"nameAsPublished": "HDR Student, N", "authorId": 44444}],
-                "fez_record_search_key_ismemberof": [{"rek_ismemberof": "UQ:152694"}],
+                "currentAuthor": [{ "nameAsPublished": "HDR Student, N", "authorId": 44444 }],
+                "fez_record_search_key_ismemberof": [{ "rek_ismemberof": "UQ:152694" }],
                 "supervisors": [{
                     "nameAsPublished": "Test",
                     "creatorRole": "",
@@ -970,13 +970,13 @@ describe('Record action creators', () => {
                     "orgtype": "",
                     "disabled": false
                 }],
-                "fieldOfResearch": [{"rek_value": {"key": 451800, "value": "0101 Pure Mathematics"}, "rek_order": 1}],
-                "thesisTitle": {"htmlText": "<p>Test</p>", "plainText": "Test"},
-                "thesisAbstract": {"htmlText": "<p>Test</p>", "plainText": "Test"},
-                "fez_record_search_key_org_name": {"rek_org_name": "The University of Queensland"},
+                "fieldOfResearch": [{ "rek_value": { "key": 451800, "value": "0101 Pure Mathematics" }, "rek_order": 1 }],
+                "thesisTitle": { "htmlText": "<p>Test</p>", "plainText": "Test" },
+                "thesisAbstract": { "htmlText": "<p>Test</p>", "plainText": "Test" },
+                "fez_record_search_key_org_name": { "rek_org_name": "The University of Queensland" },
                 "rek_object_type": 3,
                 "rek_date": "2019-3-27",
-                "fez_record_search_key_keywords": [{"rek_keywords": "Test", "rek_keywords_order": 1}],
+                "fez_record_search_key_keywords": [{ "rek_keywords": "Test", "rek_keywords_order": 1 }],
                 "files": {
                     "queue": [],
                     "isValid": true
@@ -985,16 +985,16 @@ describe('Record action creators', () => {
                 "fileAccessId": 3,
                 "rek_genre_type": "MPhil Thesis",
                 "rek_display_type": 187,
-                "fez_record_search_key_org_unit_name": {"rek_org_unit_name": "Test"}
+                "fez_record_search_key_org_unit_name": { "rek_org_unit_name": "Test" }
             }
-            const pidRequest = {pid: 'UQ:396321'};
+            const pidRequest = { pid: 'UQ:396321' };
 
             mockApi
                 .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
-                .reply(200, {data: {...record}})
+                .reply(200, { data: { ...record } })
                 .onPatch(repositories.routes.EXISTING_RECORD_API(pidRequest).apiUrl)
-                .reply(200, {data: {...record}})
-                .onGet(repositories.routes.FILE_UPLOAD_API({pid: pidRequest.pid, fileName: 'Test.png'}).apiUrl)
+                .reply(200, { data: { ...record } })
+                .onGet(repositories.routes.FILE_UPLOAD_API({ pid: pidRequest.pid, fileName: 'Test.png' }).apiUrl)
                 .reply(200, 's3-ap-southeast-2.amazonaws.com')
                 .onPut('s3-ap-southeast-2.amazonaws.com', {})
                 .reply(0);
@@ -1011,8 +1011,8 @@ describe('Record action creators', () => {
 
         it('dispatches expected actions with files and comments', async () => {
             const testInput = {
-                "currentAuthor": [{"nameAsPublished": "HDR Student, N", "authorId": 44444}],
-                "fez_record_search_key_ismemberof": [{"rek_ismemberof": "UQ:152694"}],
+                "currentAuthor": [{ "nameAsPublished": "HDR Student, N", "authorId": 44444 }],
+                "fez_record_search_key_ismemberof": [{ "rek_ismemberof": "UQ:152694" }],
                 "supervisors": [{
                     "nameAsPublished": "Test",
                     "creatorRole": "",
@@ -1021,34 +1021,34 @@ describe('Record action creators', () => {
                     "orgtype": "",
                     "disabled": false
                 }],
-                "fieldOfResearch": [{"rek_value": {"key": 451800, "value": "0101 Pure Mathematics"}, "rek_order": 1}],
-                "thesisTitle": {"htmlText": "<p>Test</p>", "plainText": "Test"},
-                "thesisAbstract": {"htmlText": "<p>Test</p>", "plainText": "Test"},
-                "fez_record_search_key_org_name": {"rek_org_name": "The University of Queensland"},
+                "fieldOfResearch": [{ "rek_value": { "key": 451800, "value": "0101 Pure Mathematics" }, "rek_order": 1 }],
+                "thesisTitle": { "htmlText": "<p>Test</p>", "plainText": "Test" },
+                "thesisAbstract": { "htmlText": "<p>Test</p>", "plainText": "Test" },
+                "fez_record_search_key_org_name": { "rek_org_name": "The University of Queensland" },
                 "rek_object_type": 3,
                 "rek_date": "2019-3-27",
-                "fez_record_search_key_keywords": [{"rek_keywords": "Test", "rek_keywords_order": 1}],
+                "fez_record_search_key_keywords": [{ "rek_keywords": "Test", "rek_keywords_order": 1 }],
                 "files": {
-                    "queue": [{"fileData": {}, "name": "Test.png", "size": 961311, "access_condition_id": 3}],
+                    "queue": [{ "fileData": {}, "name": "Test.png", "size": 961311, "access_condition_id": 3 }],
                     "isValid": true
                 },
                 "rek_status": 3,
                 "fileAccessId": 3,
                 "rek_genre_type": "MPhil Thesis",
                 "rek_display_type": 187,
-                "fez_record_search_key_org_unit_name": {"rek_org_unit_name": "Test"}
+                "fez_record_search_key_org_unit_name": { "rek_org_unit_name": "Test" }
             };
-            const pidRequest = {pid: 'UQ:396321'};
+            const pidRequest = { pid: 'UQ:396321' };
 
             mockApi
                 .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
-                .reply(200, {data: {...record}})
+                .reply(200, { data: { ...record } })
                 .onPatch(repositories.routes.EXISTING_RECORD_API(pidRequest).apiUrl)
-                .reply(200, {data: {...record}})
-                .onGet(repositories.routes.FILE_UPLOAD_API({pid: pidRequest.pid, fileName: 'Test.png'}).apiUrl)
+                .reply(200, { data: { ...record } })
+                .onGet(repositories.routes.FILE_UPLOAD_API({ pid: pidRequest.pid, fileName: 'Test.png' }).apiUrl)
                 .reply(200, 's3-ap-southeast-2.amazonaws.com')
                 .onPut('s3-ap-southeast-2.amazonaws.com', {})
-                .reply(200,  {data: {...record}});
+                .reply(200, { data: { ...record } });
 
             const expectedActions = [
                 actions.CREATE_RECORD_SAVING,
@@ -1074,43 +1074,52 @@ describe('Record action creators', () => {
         });
     });
 
-    describe('updateSecurity()', () => {
+    describe('adminUpdate()', () => {
         const testInput = {
             pid: 'UQ:396321'
         };
         it('dispatches expected actions on successful update', async () => {
-            const url = repositories.routes.COMMUNITIES_SECURITY_POLICY_API(testInput).apiUrl;
+            const url = repositories.routes.EXISTING_RECORD_API(testInput).apiUrl;
 
             mockApi
                 .onPatch(url)
-                .reply(200, {data: record});
+                .reply(200, { data: record });
 
             const expectedActions = [
-                actions.SECURITY_POLICY_SAVING,
-                actions.SECURITY_POLICY_SAVED
+                actions.ADMIN_UPDATE_WORK_PROCESSING,
+                actions.ADMIN_UPDATE_WORK_SUCCESS
             ];
 
-            await mockActionsStore.dispatch(recordActions.updateSecurity(
-                testInput.pid,
-                RECORD_TYPE_COMMUNITY,
-                2,
-            ));
+            await mockActionsStore.dispatch(recordActions.adminUpdate({
+                publication: {
+                    rek_pid: 'UQ:396321'
+                },
+                securitySection: {
+                    rek_security_policy: 2
+                }
+            }));
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
-
         });
 
         it('dispatches expected actions on missing data in response', async () => {
-            const url = repositories.routes.COLLECTIONS_SECURITY_POLICY_API(testInput).apiUrl;
+            const url = repositories.routes.EXISTING_RECORD_API(testInput).apiUrl;
             mockApi
                 .onPatch(url)
                 .reply(200, {});
 
             const expectedActions = [
-                actions.SECURITY_POLICY_SAVING,
-                actions.SECURITY_POLICY_SAVED
+                actions.ADMIN_UPDATE_WORK_PROCESSING,
+                actions.ADMIN_UPDATE_WORK_SUCCESS
             ];
 
-            await mockActionsStore.dispatch(recordActions.updateSecurity(testInput.pid, RECORD_TYPE_COLLECTION, 2));
+            await mockActionsStore.dispatch(recordActions.adminUpdate({
+                publication: {
+                    rek_pid: 'UQ:396321'
+                },
+                securitySection: {
+                    rek_security_policy: 2
+                }
+            }));
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
@@ -1120,15 +1129,22 @@ describe('Record action creators', () => {
                 .reply(500);
 
             const expectedActions = [
-                actions.SECURITY_POLICY_SAVING,
+                actions.ADMIN_UPDATE_WORK_PROCESSING,
                 actions.APP_ALERT_SHOW,
-                actions.SECURITY_POLICY_SAVE_FAILED
+                actions.ADMIN_UPDATE_WORK_FAILED
             ];
 
             let requestFailed = false;
             try {
-                await mockActionsStore.dispatch(recordActions.updateSecurity(testInput.pid, RECORD_TYPE_RECORD));
-            } catch(exception) {
+                await mockActionsStore.dispatch(recordActions.adminUpdate({
+                    publication: {
+                        rek_pid: 'UQ:396321'
+                    },
+                    securitySection: {
+                        rek_security_policy: 2,
+                    }
+                }));
+            } catch (exception) {
                 expect(exception.status).toBe(500);
                 expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
                 requestFailed = true;
@@ -1138,22 +1154,21 @@ describe('Record action creators', () => {
 
     });
     describe('createCollection()', () => {
-
         it('dispatches expected actions on successful save', async () => {
             const testInput = {
-                    rek_title: 'Test',
-                    fez_record_search_key_ismemberof: ['UQ:12345'],
-                    rek_description: 'Test',
-                    fez_record_search_key_keywords: [
-                        {rek_keywords: 'test 1', rek_keywords_order: 1},
-                        {rek_keywords: 'test 3', rek_keywords_order: 2}
-                    ]
+                rek_title: 'Test',
+                fez_record_search_key_ismemberof: ['UQ:12345'],
+                rek_description: 'Test',
+                fez_record_search_key_keywords: [
+                    { rek_keywords: 'test 1', rek_keywords_order: 1 },
+                    { rek_keywords: 'test 3', rek_keywords_order: 2 }
+                ]
             };
-            const pidRequest = {pid: 'UQ:67890'};
+            const pidRequest = { pid: 'UQ:67890' };
 
             mockApi
                 .onPost(repositories.routes.NEW_COLLECTION_API().apiUrl)
-                .reply(200, {data: {...record}})
+                .reply(200, { data: { ...record } })
 
 
             const expectedActions = [
@@ -1167,19 +1182,19 @@ describe('Record action creators', () => {
 
         it('dispatches expected actions on failed save', async () => {
             const testInput = {
-                    rek_title: 'Test',
-                    fez_record_search_key_ismemberof: ['UQ:12345'],
-                    rek_description: 'Test',
-                    fez_record_search_key_keywords: [
-                        {rek_keywords: 'test 1', rek_keywords_order: 1},
-                        {rek_keywords: 'test 3', rek_keywords_order: 2}
-                    ]
+                rek_title: 'Test',
+                fez_record_search_key_ismemberof: ['UQ:12345'],
+                rek_description: 'Test',
+                fez_record_search_key_keywords: [
+                    { rek_keywords: 'test 1', rek_keywords_order: 1 },
+                    { rek_keywords: 'test 3', rek_keywords_order: 2 }
+                ]
             };
-            const pidRequest = {pid: 'UQ:67890'};
+            const pidRequest = { pid: 'UQ:67890' };
 
             mockApi
                 .onPost(repositories.routes.NEW_COLLECTION_API().apiUrl)
-                .reply(500, {error: {message: 'FAILED'}});
+                .reply(500, { error: { message: 'FAILED' } });
 
 
             const expectedActions = [
@@ -1197,16 +1212,16 @@ describe('Record action creators', () => {
 
         it('dispatches expected actions on successful save with no keywords', async () => {
             const testInput = {
-                    rek_title: 'Test',
-                    fez_record_search_key_ismemberof: ['UQ:12345'],
-                    rek_description: 'Test',
-                    fez_record_search_key_keywords: []
+                rek_title: 'Test',
+                fez_record_search_key_ismemberof: ['UQ:12345'],
+                rek_description: 'Test',
+                fez_record_search_key_keywords: []
             };
-            const pidRequest = {pid: 'UQ:67890'};
+            const pidRequest = { pid: 'UQ:67890' };
 
             mockApi
                 .onPost(repositories.routes.NEW_COLLECTION_API().apiUrl)
-                .reply(200, {data: {...record}})
+                .reply(200, { data: { ...record } })
 
 
             const expectedActions = [
@@ -1227,15 +1242,15 @@ describe('Record action creators', () => {
                 rek_title: 'Test',
                 rek_description: 'Test',
                 fez_record_search_key_keywords: [
-                    {rek_keywords: 'test 1', rek_keywords_order: 1},
-                    {rek_keywords: 'test 3', rek_keywords_order: 2}
+                    { rek_keywords: 'test 1', rek_keywords_order: 1 },
+                    { rek_keywords: 'test 3', rek_keywords_order: 2 }
                 ]
             };
-            const pidRequest = {pid: 'UQ:67890'};
+            const pidRequest = { pid: 'UQ:67890' };
 
             mockApi
                 .onPost(repositories.routes.NEW_COMMUNITY_API().apiUrl)
-                .reply(200, {data: {...record}})
+                .reply(200, { data: { ...record } })
 
 
             const expectedActions = [
@@ -1252,15 +1267,15 @@ describe('Record action creators', () => {
                 rek_title: 'Test',
                 rek_description: 'Test',
                 fez_record_search_key_keywords: [
-                    {rek_keywords: 'test 1', rek_keywords_order: 1},
-                    {rek_keywords: 'test 3', rek_keywords_order: 2}
+                    { rek_keywords: 'test 1', rek_keywords_order: 1 },
+                    { rek_keywords: 'test 3', rek_keywords_order: 2 }
                 ]
             };
-            const pidRequest = {pid: 'UQ:67890'};
+            const pidRequest = { pid: 'UQ:67890' };
 
             mockApi
                 .onPost(repositories.routes.NEW_COMMUNITY_API().apiUrl)
-                .reply(500, {error: {message: 'FAILED'}});
+                .reply(500, { error: { message: 'FAILED' } });
 
 
             const expectedActions = [
@@ -1282,11 +1297,11 @@ describe('Record action creators', () => {
                 rek_description: 'Test',
                 fez_record_search_key_keywords: []
             };
-            const pidRequest = {pid: 'UQ:67890'};
+            const pidRequest = { pid: 'UQ:67890' };
 
             mockApi
                 .onPost(repositories.routes.NEW_COMMUNITY_API().apiUrl)
-                .reply(200, {data: {...record}})
+                .reply(200, { data: { ...record } })
 
 
             const expectedActions = [

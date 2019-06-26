@@ -1,5 +1,5 @@
 import React from 'react';
-import DataStreamSecuritySelector from './DataStreamSecuritySelector';
+import DataStreamSecuritySelector, { isSame } from './DataStreamSecuritySelector';
 import {
     rtlRender,
     fireEvent,
@@ -84,5 +84,21 @@ describe('DataStreamSecuritySelector component', () => {
         expect(fragment).toMatchDiffSnapshot(asFragment());
         expect(getByText(/public/i)).toHaveAttribute('id', 'select-test.txt');
         expect(getByText(/public/i)).toHaveAttribute('role', 'button');
+    });
+
+    describe('isSame callback function', () => {
+        it('should return true if current props are same as previous props', () => {
+            expect(isSame(
+                { disabled: true },
+                { disabled: true }
+            )).toBeTruthy();
+        });
+
+        it('should return false if props do not match', () => {
+            expect(isSame(
+                { disabled: true },
+                { disabled: false }
+            )).toBeFalsy();
+        });
     });
 });

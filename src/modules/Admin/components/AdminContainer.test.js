@@ -121,5 +121,12 @@ describe('AdminContainer component', () => {
                 { disableSubmit: false, recordToView: { pid: 1 }, loadRecordToView: false }
             )).toBeTruthy();
         });
+
+        it('should return true if props are not changed', () => {
+            expect(isChanged(
+                { disableSubmit: false, loadRecordToView: false },
+                { disableSubmit: false, loadRecordToView: false }
+            )).toBeTruthy();
+        });
     });
 });

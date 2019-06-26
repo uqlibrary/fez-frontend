@@ -1,5 +1,5 @@
 import React from 'react';
-import SecurityCard from './SecurityCard';
+import SecurityCard, { isSame } from './SecurityCard';
 import { shallow } from 'enzyme';
 import { List } from 'immutable';
 
@@ -148,7 +148,6 @@ describe('SecurityCard component', () => {
     it('should render security card correctly for community', () => {
         useFormValuesContext.mockImplementation(() => ({
             formValues: {
-                dataStreams: new List([]),
                 rek_security_inherited: 0,
                 rek_security_policy: 5,
                 rek_datastream_policy: 5
@@ -201,5 +200,21 @@ describe('SecurityCard component', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('Memo(InheritedSecurityDetails)')).toHaveLength(2);
         expect(wrapper.find('Memo(SecuritySelector)')).toHaveLength(1);
+    });
+
+    describe('isSame callback function', () => {
+        it('should return true if current props are same as previous props', () => {
+            expect(isSame(
+                { disabled: true },
+                { disabled: true }
+            )).toBeTruthy();
+        });
+
+        it('should return false if props do not match', () => {
+            expect(isSame(
+                { disabled: true },
+                { disabled: false }
+            )).toBeFalsy();
+        });
     });
 });

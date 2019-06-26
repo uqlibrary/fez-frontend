@@ -6,17 +6,10 @@ import {
     NEW_RECORD_API,
     EXISTING_RECORD_API,
     RECORDS_ISSUES_API,
-    COMMUNITIES_SECURITY_POLICY_API,
-    COLLECTIONS_SECURITY_POLICY_API,
-    RECORDS_SECURITY_POLICY_API,
     // DATASTREAMS_SECURITY_POLICY_API,
     NEW_COLLECTION_API,
     NEW_COMMUNITY_API
 } from 'repositories/routes';
-import {
-    RECORD_TYPE_COLLECTION,
-    RECORD_TYPE_COMMUNITY
-} from 'config/general';
 import {
     putUploadFiles
 } from 'repositories';
@@ -393,23 +386,6 @@ export function clearNewRecord() {
     };
 }
 
-export const getSecurityUpdateRoute = (pid, recordType) => {
-    switch (recordType) {
-        case RECORD_TYPE_COMMUNITY:
-            return COMMUNITIES_SECURITY_POLICY_API({
-                pid
-            });
-        case RECORD_TYPE_COLLECTION:
-            return COLLECTIONS_SECURITY_POLICY_API({
-                pid
-            });
-        default:
-            return RECORDS_SECURITY_POLICY_API({
-                pid
-            });
-    }
-};
-
 const sanitiseData = (data, replacer) => JSON.parse(JSON.stringify(data, replacer));
 const makeReplacer = (keys) => (key, value) => (keys.indexOf(key) > -1 ? undefined : value);
 
@@ -458,32 +434,6 @@ export function adminUpdate(data) {
             .catch(error => {
                 dispatch({
                     type: actions.ADMIN_UPDATE_WORK_FAILED,
-                    payload: error.message
-                });
-                return Promise.reject(error);
-            });
-    };
-}
-
-export function updateSecurity(pid, recordType, data) {
-    return dispatch => {
-        dispatch({
-            type: actions.SECURITY_POLICY_SAVING,
-            payload: data
-        });
-        return patch(getSecurityUpdateRoute(pid, recordType), data)
-            .then((response) => {
-                dispatch({
-                    type: actions.SECURITY_POLICY_SAVED,
-                    payload: {
-                        policy: response.data ? response.data : {}
-                    }
-                });
-                return Promise.resolve(response.data ? response.data : {});
-            })
-            .catch(error => {
-                dispatch({
-                    type: actions.SECURITY_POLICY_SAVE_FAILED,
                     payload: error.message
                 });
                 return Promise.reject(error);

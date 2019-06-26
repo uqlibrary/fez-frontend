@@ -2050,7 +2050,6 @@ exports[`Index page should render placeholders 1`] = `
                                                         "exportPublications": [Function],
                                                         "fixRecord": [Function],
                                                         "getSearchLookupApi": [Function],
-                                                        "getSecurityUpdateRoute": [Function],
                                                         "getThirdPartyLookupApiUrl": [Function],
                                                         "hidePossiblyYourPublicationsLure": [Function],
                                                         "hideRecord": [Function],
@@ -2084,7 +2083,6 @@ exports[`Index page should render placeholders 1`] = `
                                                         "unclaimRecord": [Function],
                                                         "updateCurrentAuthor": [Function],
                                                         "updateIncompleteRecord": [Function],
-                                                        "updateSecurity": [Function],
                                                       }
                                                     }
                                                     history={
@@ -2161,7 +2159,6 @@ exports[`Index page should render placeholders 1`] = `
                                                           "exportPublications": [Function],
                                                           "fixRecord": [Function],
                                                           "getSearchLookupApi": [Function],
-                                                          "getSecurityUpdateRoute": [Function],
                                                           "getThirdPartyLookupApiUrl": [Function],
                                                           "hidePossiblyYourPublicationsLure": [Function],
                                                           "hideRecord": [Function],
@@ -2195,7 +2192,6 @@ exports[`Index page should render placeholders 1`] = `
                                                           "unclaimRecord": [Function],
                                                           "updateCurrentAuthor": [Function],
                                                           "updateIncompleteRecord": [Function],
-                                                          "updateSecurity": [Function],
                                                         }
                                                       }
                                                       classes={
@@ -2279,7 +2275,6 @@ exports[`Index page should render placeholders 1`] = `
                                                             "exportPublications": [Function],
                                                             "fixRecord": [Function],
                                                             "getSearchLookupApi": [Function],
-                                                            "getSecurityUpdateRoute": [Function],
                                                             "getThirdPartyLookupApiUrl": [Function],
                                                             "hidePossiblyYourPublicationsLure": [Function],
                                                             "hideRecord": [Function],
@@ -2313,7 +2308,6 @@ exports[`Index page should render placeholders 1`] = `
                                                             "unclaimRecord": [Function],
                                                             "updateCurrentAuthor": [Function],
                                                             "updateIncompleteRecord": [Function],
-                                                            "updateSecurity": [Function],
                                                           }
                                                         }
                                                         classes={
@@ -2831,7 +2825,6 @@ exports[`Index page should render placeholders 1`] = `
                                                               "exportPublications": [Function],
                                                               "fixRecord": [Function],
                                                               "getSearchLookupApi": [Function],
-                                                              "getSecurityUpdateRoute": [Function],
                                                               "getThirdPartyLookupApiUrl": [Function],
                                                               "hidePossiblyYourPublicationsLure": [Function],
                                                               "hideRecord": [Function],
@@ -2865,7 +2858,6 @@ exports[`Index page should render placeholders 1`] = `
                                                               "unclaimRecord": [Function],
                                                               "updateCurrentAuthor": [Function],
                                                               "updateIncompleteRecord": [Function],
-                                                              "updateSecurity": [Function],
                                                             }
                                                           }
                                                           classes={
@@ -6292,7 +6284,6 @@ exports[`Index page should render placeholders 1`] = `
                                                                   "exportPublications": [Function],
                                                                   "fixRecord": [Function],
                                                                   "getSearchLookupApi": [Function],
-                                                                  "getSecurityUpdateRoute": [Function],
                                                                   "getThirdPartyLookupApiUrl": [Function],
                                                                   "hidePossiblyYourPublicationsLure": [Function],
                                                                   "hideRecord": [Function],
@@ -6326,7 +6317,6 @@ exports[`Index page should render placeholders 1`] = `
                                                                   "unclaimRecord": [Function],
                                                                   "updateCurrentAuthor": [Function],
                                                                   "updateIncompleteRecord": [Function],
-                                                                  "updateSecurity": [Function],
                                                                 }
                                                               }
                                                             >
@@ -6357,7 +6347,6 @@ exports[`Index page should render placeholders 1`] = `
                                                                     "exportPublications": [Function],
                                                                     "fixRecord": [Function],
                                                                     "getSearchLookupApi": [Function],
-                                                                    "getSecurityUpdateRoute": [Function],
                                                                     "getThirdPartyLookupApiUrl": [Function],
                                                                     "hidePossiblyYourPublicationsLure": [Function],
                                                                     "hideRecord": [Function],
@@ -6391,7 +6380,6 @@ exports[`Index page should render placeholders 1`] = `
                                                                     "unclaimRecord": [Function],
                                                                     "updateCurrentAuthor": [Function],
                                                                     "updateIncompleteRecord": [Function],
-                                                                    "updateSecurity": [Function],
                                                                   }
                                                                 }
                                                                 classes={

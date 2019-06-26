@@ -13,7 +13,9 @@ import MUIDataTable from 'mui-datatables';
 import { RichEditorField } from 'modules/SharedComponents/RichEditor';
 import { TextField as GenericTextField } from 'modules/SharedComponents/Toolbox/TextField';
 
+/* istanbul ignore next */
 const handleGrantEditButton = () => { };
+/* istanbul ignore next */
 const handleGrantEditButtonSubmit = () => { };
 
 const grantColumns = [

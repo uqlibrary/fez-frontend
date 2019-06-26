@@ -142,7 +142,7 @@ SecurityCard.propTypes = {
     disabled: PropTypes.bool
 };
 
-function isSame(prevProps, nextProps) {
+export function isSame(prevProps, nextProps) {
     return prevProps.disabled === nextProps.disabled;
 }
 

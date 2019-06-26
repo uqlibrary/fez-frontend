@@ -72,7 +72,7 @@ DataStreamSecurityItem.propTypes = {
     policyDropdownLabel: PropTypes.string
 };
 
-function isSame(prevProps, nextProps) {
+export function isSame(prevProps, nextProps) {
     return prevProps.disabled === nextProps.disabled &&
         prevProps.dataStream.dsi_security_policy === nextProps.dataStream.dsi_security_policy;
 }
