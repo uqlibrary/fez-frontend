@@ -6,13 +6,10 @@ import {
     NEW_RECORD_API,
     EXISTING_RECORD_API,
     RECORDS_ISSUES_API,
-    // DATASTREAMS_SECURITY_POLICY_API,
     NEW_COLLECTION_API,
     NEW_COMMUNITY_API
 } from 'repositories/routes';
-import {
-    putUploadFiles
-} from 'repositories';
+import { putUploadFiles } from 'repositories';
 import * as transformers from './transformers';
 import {
     NEW_RECORD_DEFAULT_VALUES,
@@ -29,9 +26,7 @@ import * as actions from './actionTypes';
  */
 export function createNewRecord(data) {
     return dispatch => {
-        dispatch({
-            type: actions.CREATE_RECORD_SAVING
-        });
+        dispatch({ type: actions.CREATE_RECORD_SAVING });
         // set default values, links
         const recordRequest = {
             ...NEW_RECORD_DEFAULT_VALUES,
@@ -53,30 +48,37 @@ export function createNewRecord(data) {
             ...transformers.getNtroMetadataSearchKeys(data.isNtro && data || null),
             ...transformers.getLanguageSearchKey(data.isNtro && data.languages || null),
             ...transformers.getQualityIndicatorSearchKey(data.isNtro && data.qualityIndicators || null),
+            ...transformers.getContentIndicatorSearchKey(data.contentIndicators || null),
         };
 
         // delete extra form values from request object
-        if (recordRequest.authors) delete recordRequest.authors;
-        if (recordRequest.editors) delete recordRequest.editors;
-        if (recordRequest.files) delete recordRequest.files;
-        if (recordRequest.currentAuthor) delete recordRequest.currentAuthor;
-        if (recordRequest.supervisors) delete recordRequest.supervisors;
-        if (recordRequest.fieldOfResearch) delete recordRequest.fieldOfResearch;
-        if (recordRequest.comments) delete recordRequest.comments;
-        if (recordRequest.contact) delete recordRequest.contact;
-        if (recordRequest.geographicArea) delete recordRequest.geographicArea;
-        if (recordRequest.ntroAbstract) delete recordRequest.ntroAbstract;
-        if (recordRequest.grants) delete recordRequest.grants;
-        if (recordRequest.significance) delete recordRequest.significance;
-        if (recordRequest.impactStatement) delete recordRequest.impactStatement;
-        if (recordRequest.languages) delete recordRequest.languages;
-        if (recordRequest.qualityIndicators) delete recordRequest.qualityIndicators;
+        const keysToDelete = [
+            'authors',
+            'comments',
+            'contact',
+            'currentAuthor',
+            'editors',
+            'fieldOfResearch',
+            'files',
+            'geographicArea',
+            'grants',
+            'impactStatement',
+            'languages',
+            'ntroAbstract',
+            'qualityIndicators',
+            'significance',
+            'supervisors',
+            'contentIndicators'
+        ];
+        keysToDelete.forEach(key => {
+            delete recordRequest[key];
+        });
 
         let newRecord = null;
         const hasFilesToUpload = data.files && data.files.queue && data.files.queue.length > 0;
-        const recordPatch = hasFilesToUpload ? {
-            ...transformers.getRecordFileAttachmentSearchKey(data.files.queue)
-        } : null;
+        const recordPatch = hasFilesToUpload
+            ? transformers.getRecordFileAttachmentSearchKey(data.files.queue)
+            : null;
 
         return post(NEW_RECORD_API(), recordRequest)
             .then(response => {
@@ -84,16 +86,27 @@ export function createNewRecord(data) {
                 newRecord = response.data;
                 return response;
             })
-            .then(() => (hasFilesToUpload ? putUploadFiles(newRecord.rek_pid, data.files.queue, dispatch) : newRecord))
-            .then(() => (hasFilesToUpload ? patch(EXISTING_RECORD_API({
-                pid: newRecord.rek_pid
-            }), recordPatch) : newRecord))
-            .then(() => (
-                data.comments
-                    ? post(RECORDS_ISSUES_API({ pid: newRecord.rek_pid }), {
-                        issue: 'Notes from creator of the new record: ' + data.comments
-                    })
-                    : newRecord
+            .then(() => (hasFilesToUpload
+                ? putUploadFiles(
+                    newRecord.rek_pid,
+                    data.files.queue,
+                    dispatch
+                )
+                : newRecord
+            ))
+            .then(() => (hasFilesToUpload
+                ? patch(
+                    EXISTING_RECORD_API({ pid: newRecord.rek_pid }),
+                    recordPatch
+                )
+                : newRecord
+            ))
+            .then(() => (data.comments
+                ? post(
+                    RECORDS_ISSUES_API({ pid: newRecord.rek_pid }),
+                    { issue: 'Notes from creator of the new record: ' + data.comments }
+                )
+                : newRecord
             ))
             .then((response) => {
                 dispatch({
@@ -209,9 +222,7 @@ export function createNewRecord(data) {
  */
 export function submitThesis(data) {
     return dispatch => {
-        dispatch({
-            type: actions.CREATE_RECORD_SAVING
-        });
+        dispatch({ type: actions.CREATE_RECORD_SAVING });
         // set default values, links
         const recordRequest = {
             ...JSON.parse(JSON.stringify(data)),
@@ -227,14 +238,19 @@ export function submitThesis(data) {
         };
 
         // delete extra form values from request object
-        recordRequest.authors && (delete recordRequest.authors);
-        recordRequest.editors && (delete recordRequest.editors);
-        recordRequest.currentAuthor && (delete recordRequest.currentAuthor);
-        recordRequest.supervisors && (delete recordRequest.supervisors);
-        recordRequest.fieldOfResearch && (delete recordRequest.fieldOfResearch);
-        recordRequest.files && (delete recordRequest.files);
-        recordRequest.thesisTitle && (delete recordRequest.thesisTitle);
-        recordRequest.thesisAbstract && (delete recordRequest.thesisAbstract);
+        const keysToDelete = [
+            'authors',
+            'editors',
+            'currentAuthor',
+            'supervisors',
+            'fieldOfResearch',
+            'files',
+            'thesisTitle',
+            'thesisAbstract',
+        ];
+        keysToDelete.forEach(key => {
+            delete recordRequest[key];
+        });
 
         let newRecord = null;
         const hasFilesToUpload = data.files && data.files.queue && data.files.queue.length > 0;
@@ -248,10 +264,21 @@ export function submitThesis(data) {
                 newRecord = response.data;
                 return response;
             })
-            .then(() => (hasFilesToUpload ? putUploadFiles(newRecord.rek_pid, data.files.queue, dispatch) : newRecord))
-            .then(() => (hasFilesToUpload ? patch(EXISTING_RECORD_API({
-                pid: newRecord.rek_pid
-            }), recordPatch) : newRecord))
+            .then(() => (hasFilesToUpload
+                ? putUploadFiles(
+                    newRecord.rek_pid,
+                    data.files.queue,
+                    dispatch
+                )
+                : newRecord
+            ))
+            .then(() => (hasFilesToUpload
+                ? patch(
+                    EXISTING_RECORD_API({ pid: newRecord.rek_pid }),
+                    recordPatch
+                )
+                : newRecord
+            ))
             .then((response) => {
                 /* istanbul ignore next */
                 dispatch({
@@ -275,11 +302,9 @@ export function submitThesis(data) {
                         }
                     });
                     return post(
-                        RECORDS_ISSUES_API({
-                            pid: newRecord.rek_pid
-                        }), {
-                            issue: 'The submitter had issues uploading files on this record: ' + newRecord
-                        })
+                        RECORDS_ISSUES_API({ pid: newRecord.rek_pid }),
+                        { issue: `The submitter had issues uploading files on this record: ${newRecord}` }
+                    )
                         .then(
                             /* istanbul ignore next */
                             () => {
@@ -305,9 +330,7 @@ export function submitThesis(data) {
  */
 export function createCollection(data, authorId) {
     return dispatch => {
-        dispatch({
-            type: actions.CREATE_COLLECTION_SAVING
-        });
+        dispatch({ type: actions.CREATE_COLLECTION_SAVING });
         // set default values, links
         const recordRequest = {
             ...NEW_COLLECTION_DEFAULT_VALUES,
@@ -345,9 +368,7 @@ export function createCollection(data, authorId) {
  */
 export function createCommunity(data, authorId) {
     return dispatch => {
-        dispatch({
-            type: actions.CREATE_COMMUNITY_SAVING
-        });
+        dispatch({ type: actions.CREATE_COMMUNITY_SAVING });
         // set default values, links
         const recordRequest = {
             ...NEW_COMMUNITY_DEFAULT_VALUES,

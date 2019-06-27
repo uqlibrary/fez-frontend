@@ -22434,21 +22434,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                               </div>
                                             </Component>
                                             <Component
-                                              data={
-                                                Array [
-                                                  <span>
-                                                    Disseminated via nationally recognised outlet or entity
-                                                    , 
-                                                  </span>,
-                                                  <span>
-                                                    Disseminated via internationally recognised outlet or entity
-                                                    , 
-                                                  </span>,
-                                                  <span>
-                                                    Association with recognised national entities, distinct from co-creation
-                                                  </span>,
-                                                ]
-                                              }
+                                              data="Disseminated via nationally recognised outlet or entity, Disseminated via internationally recognised outlet or entity, Association with recognised national entities, distinct from co-creation"
                                               heading="Quality indicators"
                                             >
                                               <div
@@ -23874,23 +23860,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                                                 <span
                                                                   className="MuiTypography-root-139 MuiTypography-body2-147"
                                                                 >
-                                                                  <span
-                                                                    key="0"
-                                                                  >
-                                                                    Disseminated via nationally recognised outlet or entity
-                                                                    , 
-                                                                  </span>
-                                                                  <span
-                                                                    key="1"
-                                                                  >
-                                                                    Disseminated via internationally recognised outlet or entity
-                                                                    , 
-                                                                  </span>
-                                                                  <span
-                                                                    key="2"
-                                                                  >
-                                                                    Association with recognised national entities, distinct from co-creation
-                                                                  </span>
+                                                                  Disseminated via nationally recognised outlet or entity, Disseminated via internationally recognised outlet or entity, Association with recognised national entities, distinct from co-creation
                                                                 </span>
                                                               </Typography>
                                                             </WithStyles(Typography)>
@@ -24041,21 +24011,7 @@ exports[`NtroDetails  renders ISMN correctly 1`] = `
       heading="Physical description"
     />
     <Component
-      data={
-        Array [
-          <span>
-            Disseminated via nationally recognised outlet or entity
-            , 
-          </span>,
-          <span>
-            Disseminated via internationally recognised outlet or entity
-            , 
-          </span>,
-          <span>
-            Association with recognised national entities, distinct from co-creation
-          </span>,
-        ]
-      }
+      data="Disseminated via nationally recognised outlet or entity, Disseminated via internationally recognised outlet or entity, Association with recognised national entities, distinct from co-creation"
       heading="Quality indicators"
     />
   </StandardCard>
@@ -24187,21 +24143,7 @@ exports[`NtroDetails  renders ISRC correctly 1`] = `
       heading="Physical description"
     />
     <Component
-      data={
-        Array [
-          <span>
-            Disseminated via nationally recognised outlet or entity
-            , 
-          </span>,
-          <span>
-            Disseminated via internationally recognised outlet or entity
-            , 
-          </span>,
-          <span>
-            Association with recognised national entities, distinct from co-creation
-          </span>,
-        ]
-      }
+      data="Disseminated via nationally recognised outlet or entity, Disseminated via internationally recognised outlet or entity, Association with recognised national entities, distinct from co-creation"
       heading="Quality indicators"
     />
   </StandardCard>
@@ -24323,21 +24265,7 @@ exports[`NtroDetails  renders audience size correctly 1`] = `
       heading="Audience size"
     />
     <Component
-      data={
-        Array [
-          <span>
-            Disseminated via nationally recognised outlet or entity
-            , 
-          </span>,
-          <span>
-            Disseminated via internationally recognised outlet or entity
-            , 
-          </span>,
-          <span>
-            Association with recognised national entities, distinct from co-creation
-          </span>,
-        ]
-      }
+      data="Disseminated via nationally recognised outlet or entity, Disseminated via internationally recognised outlet or entity, Association with recognised national entities, distinct from co-creation"
       heading="Quality indicators"
     />
   </StandardCard>
@@ -24459,21 +24387,7 @@ exports[`NtroDetails  renders audience size correctly 2`] = `
       heading="Audience size"
     />
     <Component
-      data={
-        Array [
-          <span>
-            Disseminated via nationally recognised outlet or entity
-            , 
-          </span>,
-          <span>
-            Disseminated via internationally recognised outlet or entity
-            , 
-          </span>,
-          <span>
-            Association with recognised national entities, distinct from co-creation
-          </span>,
-        ]
-      }
+      data="Disseminated via nationally recognised outlet or entity, Disseminated via internationally recognised outlet or entity, Association with recognised national entities, distinct from co-creation"
       heading="Quality indicators"
     />
   </StandardCard>
@@ -24591,21 +24505,7 @@ exports[`NtroDetails  renders component as expected 1`] = `
       heading="Physical description"
     />
     <Component
-      data={
-        Array [
-          <span>
-            Disseminated via nationally recognised outlet or entity
-            , 
-          </span>,
-          <span>
-            Disseminated via internationally recognised outlet or entity
-            , 
-          </span>,
-          <span>
-            Association with recognised national entities, distinct from co-creation
-          </span>,
-        ]
-      }
+      data="Disseminated via nationally recognised outlet or entity, Disseminated via internationally recognised outlet or entity, Association with recognised national entities, distinct from co-creation"
       heading="Quality indicators"
     />
   </StandardCard>
@@ -24717,21 +24617,7 @@ exports[`NtroDetails  renders contribution statement as an admin with a blank st
       heading="Physical description"
     />
     <Component
-      data={
-        Array [
-          <span>
-            Disseminated via nationally recognised outlet or entity
-            , 
-          </span>,
-          <span>
-            Disseminated via internationally recognised outlet or entity
-            , 
-          </span>,
-          <span>
-            Association with recognised national entities, distinct from co-creation
-          </span>,
-        ]
-      }
+      data="Disseminated via nationally recognised outlet or entity, Disseminated via internationally recognised outlet or entity, Association with recognised national entities, distinct from co-creation"
       heading="Quality indicators"
     />
   </StandardCard>
@@ -24837,21 +24723,7 @@ exports[`NtroDetails  renders contribution statement not as an admin 1`] = `
       heading="Physical description"
     />
     <Component
-      data={
-        Array [
-          <span>
-            Disseminated via nationally recognised outlet or entity
-            , 
-          </span>,
-          <span>
-            Disseminated via internationally recognised outlet or entity
-            , 
-          </span>,
-          <span>
-            Association with recognised national entities, distinct from co-creation
-          </span>,
-        ]
-      }
+      data="Disseminated via nationally recognised outlet or entity, Disseminated via internationally recognised outlet or entity, Association with recognised national entities, distinct from co-creation"
       heading="Quality indicators"
     />
   </StandardCard>
@@ -24969,21 +24841,7 @@ exports[`NtroDetails  renders minor significance as an admin 1`] = `
       heading="Physical description"
     />
     <Component
-      data={
-        Array [
-          <span>
-            Disseminated via nationally recognised outlet or entity
-            , 
-          </span>,
-          <span>
-            Disseminated via internationally recognised outlet or entity
-            , 
-          </span>,
-          <span>
-            Association with recognised national entities, distinct from co-creation
-          </span>,
-        ]
-      }
+      data="Disseminated via nationally recognised outlet or entity, Disseminated via internationally recognised outlet or entity, Association with recognised national entities, distinct from co-creation"
       heading="Quality indicators"
     />
   </StandardCard>
@@ -25111,21 +24969,7 @@ exports[`NtroDetails  renders start/end page correctly due to correct doc/sub ty
       heading="Physical description"
     />
     <Component
-      data={
-        Array [
-          <span>
-            Disseminated via nationally recognised outlet or entity
-            , 
-          </span>,
-          <span>
-            Disseminated via internationally recognised outlet or entity
-            , 
-          </span>,
-          <span>
-            Association with recognised national entities, distinct from co-creation
-          </span>,
-        ]
-      }
+      data="Disseminated via nationally recognised outlet or entity, Disseminated via internationally recognised outlet or entity, Association with recognised national entities, distinct from co-creation"
       heading="Quality indicators"
     />
   </StandardCard>
@@ -25239,21 +25083,7 @@ exports[`NtroDetails  renders the abstract according to html or plain 1`] = `
       heading="Physical description"
     />
     <Component
-      data={
-        Array [
-          <span>
-            Disseminated via nationally recognised outlet or entity
-            , 
-          </span>,
-          <span>
-            Disseminated via internationally recognised outlet or entity
-            , 
-          </span>,
-          <span>
-            Association with recognised national entities, distinct from co-creation
-          </span>,
-        ]
-      }
+      data="Disseminated via nationally recognised outlet or entity, Disseminated via internationally recognised outlet or entity, Association with recognised national entities, distinct from co-creation"
       heading="Quality indicators"
     />
   </StandardCard>
@@ -25409,21 +25239,7 @@ exports[`NtroDetails  should render component with record 1`] = `
       heading="Audience size"
     />
     <Component
-      data={
-        Array [
-          <span>
-            Disseminated via nationally recognised outlet or entity
-            , 
-          </span>,
-          <span>
-            Disseminated via internationally recognised outlet or entity
-            , 
-          </span>,
-          <span>
-            Association with recognised national entities, distinct from co-creation
-          </span>,
-        ]
-      }
+      data="Disseminated via nationally recognised outlet or entity, Disseminated via internationally recognised outlet or entity, Association with recognised national entities, distinct from co-creation"
       heading="Quality indicators"
     />
   </StandardCard>
@@ -25485,21 +25301,7 @@ exports[`NtroDetails  should render default fields for record with missing looku
       heading="Audience size"
     />
     <Component
-      data={
-        Array [
-          <span>
-            Reviews, prizes, awards recognition of the output
-            , 
-          </span>,
-          <span>
-            Association with recognised international entities, distinct from co-creation
-            , 
-          </span>,
-          <span>
-            Not set
-          </span>,
-        ]
-      }
+      data="Reviews, prizes, awards recognition of the output, Association with recognised international entities, distinct from co-creation, Not set"
       heading="Quality indicators"
     />
   </StandardCard>
@@ -25653,21 +25455,7 @@ exports[`NtroDetails  should show admin only fields when admin user 1`] = `
       heading="Audience size"
     />
     <Component
-      data={
-        Array [
-          <span>
-            Disseminated via nationally recognised outlet or entity
-            , 
-          </span>,
-          <span>
-            Disseminated via internationally recognised outlet or entity
-            , 
-          </span>,
-          <span>
-            Association with recognised national entities, distinct from co-creation
-          </span>,
-        ]
-      }
+      data="Disseminated via nationally recognised outlet or entity, Disseminated via internationally recognised outlet or entity, Association with recognised national entities, distinct from co-creation"
       heading="Quality indicators"
     />
   </StandardCard>

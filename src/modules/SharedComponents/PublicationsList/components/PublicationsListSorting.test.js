@@ -1,5 +1,5 @@
 import {PublicationsListSorting} from './PublicationsListSorting';
-import {exportFormatToExtension} from 'config/general';
+import {EXPORT_FORMAT_TO_EXTENSION} from 'config/general';
 
 function setup(testProps, isShallow = true) {
     const props = {
@@ -91,7 +91,7 @@ describe('PublicationsListSorting renders ', () => {
     });
 
     it('component with non-empty paging data, onExportPublications called', () => {
-        const expected = Object.keys(exportFormatToExtension)[0];
+        const expected = Object.keys(EXPORT_FORMAT_TO_EXTENSION)[0];
         const testFunction = jest.fn();
         const wrapper = setup({onExportPublications: testFunction});
         wrapper.instance().exportPublicationsFormatChanged(expected);

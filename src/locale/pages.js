@@ -418,7 +418,7 @@ export default {
         },
         fixRecord: {
             loadingMessage: 'Loading work',
-            title: 'Request a correction or upload files',
+            title: 'Request a correction, add more information or upload files',
             subTitle: 'Work to be amended',
             fieldLabels: {
                 action: 'Select an action'
@@ -426,7 +426,7 @@ export default {
             actionsOptions: [
                 {
                     action: 'fix',
-                    title: 'I am the author/editor/contributor of this work - I would like to make a correction, or upload files'
+                    title: 'I am the author/editor/contributor of this work - I would like to add information, make a correction, or upload files'
                 },
                 {
                     action: 'unclaim',

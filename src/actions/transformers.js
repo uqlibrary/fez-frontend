@@ -1,16 +1,41 @@
 import locale from 'locale/global';
 import templates from 'locale/templates';
+import { CONTENT_INDICATORS } from 'config/general';
 
 const moment = require('moment');
 
-// Start helpers
+const pipe = (...functionsList) => values => functionsList.reduce(
+    (attributes, functionItem) => functionItem(attributes),
+    values
+);
 
-const pipe = (...functionsList) => values => functionsList.reduce((attributes, functionItem) => functionItem(attributes), values);
-
-const getIssueValues = (data) => {
+export const getIssueValues = (data) => {
+    const initialContentIndicators = ((
+        data.publication &&
+        data.publication.fez_record_search_key_content_indicator
+    ) || []).map(
+        item => item.rek_content_indicator
+    );
+    const newContentIndicators = (
+        !!data.contentIndicators &&
+        data.contentIndicators.filter(
+            item => initialContentIndicators.indexOf(item) === -1
+        )
+    );
     return {
+        contentIndicators: (
+            newContentIndicators &&
+            newContentIndicators.map(
+                id => CONTENT_INDICATORS.find(
+                    item => item.value === id
+                ).text
+            ).join('; ') || null
+        ),
         comments: data.comments || null,
-        files: data.files && data.files.queue ? data.files.queue.map(item => item.name).toString().replace(/,/g, ', ') : null,
+        files: data.files &&
+            data.files.queue
+            ? data.files.queue.map(item => item.name).toString().replace(/,/g, ', ')
+            : null,
         link: data.rek_link || null,
     };
 };
@@ -24,7 +49,11 @@ const getIssuesRequest = (text) => ({
  */
 export const getFixIssueRequest = pipe(getIssueValues, templates.issues.fixRecord, getIssuesRequest);
 
-// End helpers
+/* getClaimIssueRequest - returns claim record issue request object
+ * @returns {Object} issue request
+ */
+export const getClaimIssueRequest = pipe(getIssueValues, templates.issues.claimRecord, getIssuesRequest);
+
 
 /* getRecordLinkSearchKey - returns link object formatted for record request
  * NOTE: link description is required to save link
@@ -77,9 +106,10 @@ export const getRecordFileAttachmentSearchKey = (files, record) => {
         .map((item, index) => {
             if (!item.hasOwnProperty('access_condition_id')) return null;
             return {
-                rek_file_attachment_access_condition: item.access_condition_id === OPEN_ACCESS_ID && (item.date && moment(item.date).isAfter()) ?
-                    CLOSED_ACCESS_ID :
-                    item.access_condition_id,
+                rek_file_attachment_access_condition: item.access_condition_id === OPEN_ACCESS_ID &&
+                    (item.date && moment(item.date).isAfter())
+                    ? CLOSED_ACCESS_ID
+                    : item.access_condition_id,
                 rek_file_attachment_access_condition_order: initialCount + index + 1
             };
         })
@@ -162,7 +192,9 @@ export const getRecordAuthorsIdSearchKey = (authors, defaultAuthorId) => {
                 item.hasOwnProperty('rek_author_id') && item.hasOwnProperty('rek_author_id_order') ?
                     item :
                     {
-                        rek_author_id: (item.hasOwnProperty('aut_id') && item.aut_id) || (item.hasOwnProperty('authorId') && item.authorId) || 0,
+                        rek_author_id: (item.hasOwnProperty('aut_id') && item.aut_id) ||
+                            (item.hasOwnProperty('authorId') && item.authorId) ||
+                            0,
                         rek_author_id_order: index + 1
                     }
             )
@@ -214,11 +246,15 @@ export const unclaimRecordAuthorsIdSearchKey = (authors, authorId) => {
     return {
         fez_record_search_key_author_id: authors.map(
             (item, index) => (
-                item.hasOwnProperty('rek_author_id') && item.hasOwnProperty('rek_author_id_order') && item.rek_author_id !== authorId ?
-                    item :
-                    {
+                item.hasOwnProperty('rek_author_id') &&
+                    item.hasOwnProperty('rek_author_id_order') &&
+                    item.rek_author_id !== authorId
+                    ? item
+                    : {
                         rek_author_id: 0,
-                        rek_author_id_order: item.hasOwnProperty('rek_author_id_order') ? item.rek_author_id_order : index + 1
+                        rek_author_id_order: item.hasOwnProperty('rek_author_id_order')
+                            ? item.rek_author_id_order
+                            : index + 1
                     }
             )
         )
@@ -240,11 +276,15 @@ export const unclaimRecordContributorsIdSearchKey = (contributors, contributorId
     return {
         fez_record_search_key_contributor_id: contributors.map(
             (item, index) => (
-                item.hasOwnProperty('rek_contributor_id') && item.hasOwnProperty('rek_contributor_id_order') && item.rek_contributor_id !== contributorId ?
-                    item :
-                    {
+                item.hasOwnProperty('rek_contributor_id') &&
+                    item.hasOwnProperty('rek_contributor_id_order') &&
+                    item.rek_contributor_id !== contributorId
+                    ? item
+                    : {
                         rek_contributor_id: 0,
-                        rek_contributor_id_order: item.hasOwnProperty('rek_contributor_id_order') ? item.rek_contributor_id_order : index + 1
+                        rek_contributor_id_order: item.hasOwnProperty('rek_contributor_id_order')
+                            ? item.rek_contributor_id_order
+                            : index + 1
                     }
             )
         )
@@ -292,7 +332,9 @@ export const getRecordContributorsIdSearchKey = (authors, defaultAuthorId) => {
                 item.hasOwnProperty('rek_contributor_id') && item.hasOwnProperty('rek_contributor_id_order') ?
                     item :
                     {
-                        rek_contributor_id: (item.hasOwnProperty('aut_id') && item.aut_id) || (item.hasOwnProperty('authorId') && item.authorId) || null,
+                        rek_contributor_id: (item.hasOwnProperty('aut_id') && item.aut_id) ||
+                            (item.hasOwnProperty('authorId') && item.authorId) ||
+                            null,
                         rek_contributor_id_order: index + 1
                     }
             )
@@ -444,7 +486,9 @@ export const getNtroMetadataSearchKeys = (data) => {
 
     if (!!data.impactStatement) {
         ntroMetadata.fez_record_search_key_creator_contribution_statement = data.authors.map((item, index) => ({
-            rek_creator_contribution_statement: item.selected === true ? data.impactStatement.htmlText : locale.global.defaultAuthorDataPlaceholder,
+            rek_creator_contribution_statement: item.selected === true
+                ? data.impactStatement.htmlText
+                : locale.global.defaultAuthorDataPlaceholder,
             rek_creator_contribution_statement_order: index + 1
         }));
     }
@@ -463,8 +507,21 @@ export const getQualityIndicatorSearchKey = (qualityIndicators = []) => {
     };
 };
 
+export const getContentIndicatorSearchKey = (contentIndicators = []) => {
+    if (!contentIndicators || contentIndicators.length === 0) return {};
+
+    return {
+        fez_record_search_key_content_indicator: contentIndicators.map((item, index) => ({
+            rek_content_indicator: item,
+            rek_content_indicator_order: index + 1
+        }))
+    };
+};
+
 export const getAuthorOrder = (data) => {
-    const author = data.publication.fez_record_search_key_author_id.filter(authorId => authorId.rek_author_id === data.author.aut_id);
+    const author = data.publication.fez_record_search_key_author_id.filter(
+        authorId => authorId.rek_author_id === data.author.aut_id
+    );
 
     // a missing author doesn't actually reach here, but if code is changed and that doesnt catch it anymore, -1 here should force handling, rather than silently introducing bad data
     return (author.length > 0 && author[0].rek_author_id_order) || -1;

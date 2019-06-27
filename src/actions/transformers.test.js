@@ -1,8 +1,9 @@
 import * as transformers from './transformers';
+import { CONTENT_INDICATORS } from 'config/general';
 
 const moment = require('moment');
 
-describe('getRecordLinkSearchKey test ', () => {
+describe('getRecordLinkSearchKey test', () => {
 
     it('should return request object structure with link', () => {
         const data = {
@@ -34,7 +35,7 @@ describe('getRecordLinkSearchKey test ', () => {
     });
 });
 
-describe('getRecordFileAttachmentSearchKey test ', () => {
+describe('getRecordFileAttachmentSearchKey test', () => {
 
     const MockDate = require('mockdate');
     beforeEach(() => {
@@ -260,19 +261,49 @@ describe('getRecordFileAttachmentSearchKey test ', () => {
     });
 });
 
-describe('getFixIssueRequest test ', () => {
+describe('getIssueValues test', () => {
+    const input = {
+        comments: 'test1',
+        rek_link: 'test2',
+        files: {
+            queue: [
+                { name: 'file1.txt' },
+                { name: 'file2.txt' },
+            ],
+        },
+        contentIndicators: CONTENT_INDICATORS.map(item => item.value),
+    };
+    const expected = {
+        comments: 'test1',
+        link: 'test2',
+        files: 'file1.txt, file2.txt',
+        contentIndicators: CONTENT_INDICATORS.map(item => item.text).join('; ')
+    };
+    expect(transformers.getIssueValues(input)).toEqual(expected);
+});
+
+describe('getFixIssueRequest test', () => {
+    const input = {
+        publication: {},
+        author: {}
+    };
+
+    input.publication.rek_pid = 'UQ:1111';
+    input.author.aut_display_name = 'J. Smith';
+    input.author.aut_org_username = 'uqjsmith';
+    input.comments = 'Some comments...';
+    input.rek_link = 'http://www.test.com';
+    input.files = { queue: [{ name: '1.jpg' }, { name: '2.jpg' }] };
+    input.contentIndicators = CONTENT_INDICATORS.map(item => item.value);
 
     it('should create issue request', () => {
-        const input = { publication: {}, author: {} };
+        const expected = [
+            "Added comments: Some comments...",
+            "Added link: http://www.test.com",
+            "Added files: 1.jpg, 2.jpg",
+            `Selected Content Indicator(s): ${CONTENT_INDICATORS.map(item => item.text).join('; ')}`,
+        ];
 
-        input.publication.rek_pid = 'UQ:1111';
-        input.author.aut_display_name = 'J. Smith';
-        input.author.aut_org_username = 'uqjsmith';
-        input.comments = 'Some comments...';
-        input.rek_link = 'http://www.test.com';
-        input.files = { queue: [{ name: '1.jpg' }, { name: '2.jpg' }] };
-
-        const expected = ["Added comments: Some comments...", "Added link: http://www.test.com", "Added files: 1.jpg, 2.jpg"];
         const result = transformers.getFixIssueRequest(input);
         expected.map(item => {
             expect(result.issue).toContain(item);
@@ -282,9 +313,57 @@ describe('getFixIssueRequest test ', () => {
         expect(result2.issue).toEqual('');
     });
 
+    it('should create expected issue request when content indicators exist already', () => {
+        const input2 = {
+            ...input,
+            publication: {
+                fez_record_search_key_content_indicator: [
+                    { rek_content_indicator: CONTENT_INDICATORS[0].value },
+                ],
+            },
+        };
+        const newIndicators = [
+            CONTENT_INDICATORS[1],
+            CONTENT_INDICATORS[2]
+        ];
+        const expected = [
+            "Added comments: Some comments...",
+            "Added link: http://www.test.com",
+            "Added files: 1.jpg, 2.jpg",
+            `Selected Content Indicator(s): ${newIndicators.map(item => item.text).join('; ')}`,
+        ];
+
+        const result = transformers.getFixIssueRequest(input2);
+        expected.map(item => {
+            expect(result.issue).toContain(item);
+        });
+    });
+
 });
 
-describe('unclaimRecord[Author/Contributor]SearchKey test ', () => {
+describe('getClaimIssueRequest test', () => {
+
+    it('should create issue request', () => {
+        const input = { publication: {}, author: {} };
+        input.comments = 'Some comments...';
+        input.contentIndicators = CONTENT_INDICATORS.map(item => item.value);
+
+        const expected = [
+            "Notes from creator of a claimed record: Some comments...",
+            `Selected Content Indicator(s): ${CONTENT_INDICATORS.map(item => item.text).join('; ')}`,
+        ];
+        const result = transformers.getClaimIssueRequest(input);
+        expected.map(item => {
+            expect(result.issue).toContain(item);
+        });
+
+        const result2 = transformers.getClaimIssueRequest({});
+        expect(result2.issue).toEqual('');
+    });
+
+});
+
+describe('unclaimRecord[Author/Contributor]SearchKey test', () => {
 
     it('should return empty author id request object', () => {
         const input = [];
@@ -450,7 +529,7 @@ describe('unclaimRecord[Author/Contributor]SearchKey test ', () => {
     });
 });
 
-describe('getRecordSubjectSearchKey test ', () => {
+describe('getRecordSubjectSearchKey test', () => {
 
     it('should return empty subject object', () => {
         expect(transformers.getRecordSubjectSearchKey()).toEqual({});
@@ -483,7 +562,7 @@ describe('getRecordSubjectSearchKey test ', () => {
     });
 });
 
-describe('getRecordSupervisorsSearchKey test ', () => {
+describe('getRecordSupervisorsSearchKey test', () => {
 
     it('should return empty supervisors object', () => {
         expect(transformers.getRecordSupervisorsSearchKey()).toEqual({});
@@ -517,7 +596,7 @@ describe('getRecordSupervisorsSearchKey test ', () => {
 
 });
 
-describe('getRecordAuthorsSearchKey test ', () => {
+describe('getRecordAuthorsSearchKey test', () => {
 
     it('should return empty request object', () => {
         expect(transformers.getRecordAuthorsSearchKey()).toEqual({});
@@ -550,7 +629,7 @@ describe('getRecordAuthorsSearchKey test ', () => {
     });
 });
 
-describe('getRecordAuthorsIdSearchKey test ', () => {
+describe('getRecordAuthorsIdSearchKey test', () => {
 
     it('should return empty authors object', () => {
         expect(transformers.getRecordAuthorsIdSearchKey()).toEqual({});
@@ -607,7 +686,7 @@ describe('getRecordAuthorsIdSearchKey test ', () => {
     });
 });
 
-describe('getRecordContributorsSearchKey test ', () => {
+describe('getRecordContributorsSearchKey test', () => {
 
     it('should return empty contributors object', () => {
         expect(transformers.getRecordContributorsSearchKey()).toEqual({});
@@ -640,7 +719,7 @@ describe('getRecordContributorsSearchKey test ', () => {
     });
 });
 
-describe('getRecordContributorsIdSearchKey test ', () => {
+describe('getRecordContributorsIdSearchKey test', () => {
 
     it('should return empty contributors request object', () => {
         expect(transformers.getRecordContributorsIdSearchKey()).toEqual({});
@@ -1581,6 +1660,29 @@ describe('getNtroMetadataSearchKeys tests', () => {
                 "rek_significance_order": 3
             }]
         });
+    });
+});
+
+describe('getContentIndicatorSearchKey', () => {
+    it('returns empty object if input is missing or empty', () => {
+        expect(transformers.getContentIndicatorSearchKey()).toEqual({});
+    });
+
+    it('returns content indicator search key for valid input', () => {
+        const input = [200, 300];
+        const expected = {
+            fez_record_search_key_content_indicator: [
+                {
+                    rek_content_indicator: 200,
+                    rek_content_indicator_order: 1,
+                },
+                {
+                    rek_content_indicator: 300,
+                    rek_content_indicator_order: 2,
+                },
+            ],
+        };
+        expect(transformers.getContentIndicatorSearchKey(input)).toEqual(expected);
     });
 });
 

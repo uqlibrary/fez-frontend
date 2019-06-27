@@ -8,7 +8,7 @@ import Button from '@material-ui/core/Button';
 import InputLabel from '@material-ui/core/InputLabel';
 import FormControl from '@material-ui/core/FormControl';
 import FormHelperText from '@material-ui/core/FormHelperText';
-import {orgAffiliationTypes} from 'config/general';
+import {ORG_AFFILIATION_TYPES} from 'config/general';
 import locale from 'locale/validationErrors';
 import {withStyles} from '@material-ui/core';
 
@@ -162,7 +162,7 @@ export class GrantListEditorFormClass extends PureComponent {
                                 >
                                     <MenuItem value={''} disabled>{this.props.locale.grantAgencyTypeHint}</MenuItem>
                                     {
-                                        orgAffiliationTypes.map((item, index) => {
+                                        ORG_AFFILIATION_TYPES.map((item, index) => {
                                             return item.value !== '454045' ?
                                                 <MenuItem value={item.value} key={index}>{item.text}</MenuItem> : null;
                                         })

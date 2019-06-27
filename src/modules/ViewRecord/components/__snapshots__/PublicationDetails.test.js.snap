@@ -660,6 +660,22 @@ exports[`Publication Details Component  Renders full mount 1`] = `
                   },
                 ],
                 "fez_record_search_key_biosis_id": null,
+                "fez_record_search_key_content_indicator": Array [
+                  Object {
+                    "rek_content_indicator": 454079,
+                    "rek_content_indicator_id": 1,
+                    "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
+                    "rek_content_indicator_order": 1,
+                    "rek_ismemberof": "UQ:152266",
+                  },
+                  Object {
+                    "rek_content_indicator": 454080,
+                    "rek_content_indicator_id": 2,
+                    "rek_content_indicator_lookup": "Protocol",
+                    "rek_content_indicator_order": 2,
+                    "rek_ismemberof": "UQ:152266",
+                  },
+                ],
                 "fez_record_search_key_contributor": Array [],
                 "fez_record_search_key_contributor_id": Array [],
                 "fez_record_search_key_corresponding_country": Array [
@@ -1469,6 +1485,22 @@ exports[`Publication Details Component  Renders full mount 1`] = `
                     },
                   ],
                   "fez_record_search_key_biosis_id": null,
+                  "fez_record_search_key_content_indicator": Array [
+                    Object {
+                      "rek_content_indicator": 454079,
+                      "rek_content_indicator_id": 1,
+                      "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
+                      "rek_content_indicator_order": 1,
+                      "rek_ismemberof": "UQ:152266",
+                    },
+                    Object {
+                      "rek_content_indicator": 454080,
+                      "rek_content_indicator_id": 2,
+                      "rek_content_indicator_lookup": "Protocol",
+                      "rek_content_indicator_order": 2,
+                      "rek_ismemberof": "UQ:152266",
+                    },
+                  ],
                   "fez_record_search_key_contributor": Array [],
                   "fez_record_search_key_contributor_id": Array [],
                   "fez_record_search_key_corresponding_country": Array [
@@ -2284,6 +2316,22 @@ exports[`Publication Details Component  Renders full mount 1`] = `
                       },
                     ],
                     "fez_record_search_key_biosis_id": null,
+                    "fez_record_search_key_content_indicator": Array [
+                      Object {
+                        "rek_content_indicator": 454079,
+                        "rek_content_indicator_id": 1,
+                        "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
+                        "rek_content_indicator_order": 1,
+                        "rek_ismemberof": "UQ:152266",
+                      },
+                      Object {
+                        "rek_content_indicator": 454080,
+                        "rek_content_indicator_id": 2,
+                        "rek_content_indicator_lookup": "Protocol",
+                        "rek_content_indicator_order": 2,
+                        "rek_ismemberof": "UQ:152266",
+                      },
+                    ],
                     "fez_record_search_key_contributor": Array [],
                     "fez_record_search_key_contributor_id": Array [],
                     "fez_record_search_key_corresponding_country": Array [
@@ -3434,6 +3482,10 @@ exports[`Publication Details Component  should render component 1`] = `
       heading="Sub-type"
     />
     <Component
+      data="Scholarship of Teaching and Learning, Protocol"
+      heading="Content Indicators"
+    />
+    <Component
       data={
         <ul
           className="ul"
@@ -3479,6 +3531,10 @@ exports[`Publication Details Component  should render with publication without c
       data="Journal Article"
       heading="Type of work"
     />
+    <Component
+      data="Scholarship of Teaching and Learning, Protocol"
+      heading="Content Indicators"
+    />
   </StandardCard>
 </WithStyles(Grid)>
 `;
@@ -3494,6 +3550,10 @@ exports[`Publication Details Component  should render with publication without s
     <Component
       data="Journal Article"
       heading="Type of work"
+    />
+    <Component
+      data="Scholarship of Teaching and Learning, Protocol"
+      heading="Content Indicators"
     />
     <Component
       data={

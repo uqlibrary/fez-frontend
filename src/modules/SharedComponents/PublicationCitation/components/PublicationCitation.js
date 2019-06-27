@@ -48,20 +48,24 @@ export const styles = theme => ({
         lineHeight: 1,
         letterSpacing: 0,
         marginBottom: 6,
-        marginRight: 12
+        marginRight: 12,
     },
     citationText: {
         ...theme.typography.caption,
         color: theme.typography.body2.color,
-        marginBottom: 6
+        marginBottom: 6,
     },
     citationCounts: {
-        whiteSpace: 'nowrap'
+        whiteSpace: 'nowrap',
     },
     buttonMargin: {
         [theme.breakpoints.down('sm')]: {
-            marginTop: 12
-        }
+            marginTop: 12,
+        },
+    },
+    contentIndicatorTitle: {
+        fontWeight: 400,
+        marginRight: '0.5ex'
     }
 });
 
@@ -83,6 +87,7 @@ export class PublicationCitation extends PureComponent {
         hideViewFullStatisticsLink: PropTypes.bool,
         hideCitationCounts: PropTypes.bool,
         hideLinks: PropTypes.bool,
+        hideContentIndicators: PropTypes.bool,
         classes: PropTypes.object
     };
 
@@ -97,7 +102,8 @@ export class PublicationCitation extends PureComponent {
         hideCountDiff: false,
         hideCountTotal: false,
         hideViewFullStatisticsLink: false,
-        hideCitationCounts: false
+        hideCitationCounts: false,
+        hideContentIndicators: false
     };
 
     constructor(props) {
@@ -140,7 +146,6 @@ export class PublicationCitation extends PureComponent {
                 break;
             case 'shareRecord':
                 // TODO: display share interface
-                // console.log('share this record');
                 break;
             default:
                 // do nothing
@@ -156,7 +161,7 @@ export class PublicationCitation extends PureComponent {
                 </Link>
             )
             : (ReactHtmlParser(this.props.publication.rek_title));
-    }
+    };
 
     renderCitation = (publicationTypeId) => {
         const filteredPublicationType = publicationTypeId
@@ -166,8 +171,8 @@ export class PublicationCitation extends PureComponent {
             : null;
 
         return filteredPublicationType &&
-            filteredPublicationType.length > 0 &&
-            filteredPublicationType[0].citationComponent
+        filteredPublicationType.length > 0 &&
+        filteredPublicationType[0].citationComponent
             ? React.createElement(
                 filteredPublicationType[0].citationComponent,
                 {
@@ -180,9 +185,12 @@ export class PublicationCitation extends PureComponent {
                     Citation display not available for {publicationTypeId}
                 </div>
             );
-    }
+    };
 
     renderActions = (actions) => {
+        const pid = this.props.publication
+            && this.props.publication.rek_pid
+            && this.props.publication.rek_pid.replace(':', '');
         return actions && actions.length > 0
             ? actions.map((action, index) => {
                 const buttonProps = {
@@ -200,14 +208,14 @@ export class PublicationCitation extends PureComponent {
                     <Grid item xs={12} sm="auto" key={`action_key_${index}`}>
                         {
                             action.primary
-                                ? (<Button variant="contained" {...buttonProps}/>)
-                                : (<Button variant="text" {...buttonProps}/>)
+                                ? (<Button classes={{label: pid, root: pid}} variant="contained"  {...buttonProps}/>)
+                                : (<Button classes={{label: pid, root: pid}} variant="text" {...buttonProps}/>)
                         }
                     </Grid>
                 );
             })
             : null;
-    }
+    };
 
     renderSources = () => {
         return (
@@ -246,54 +254,55 @@ export class PublicationCitation extends PureComponent {
                             {
                                 !this.props.hideTitle
                                     ? <Grid item xs style={{minWidth: 1}}>
-                                        <Typography variant="h6" component="h6" className={classes.citationTitle}>{this.renderTitle()}</Typography>
+                                        <Typography variant="h6" component="h6"
+                                            className={classes.citationTitle}>{this.renderTitle()}</Typography>
                                     </Grid>
-                                    : <Grid item xs />
+                                    : <Grid item xs/>
                             }
                             {
                                 this.props.showMetrics &&
-                                    <Grid item xs={12} sm="auto" className="citationMetrics">
-                                        <ExternalLink
-                                            href={recordValue.citation_url}
-                                            title={txt.linkWillOpenInNewWindow.replace(
-                                                '[destination]',
-                                                txt.myTrendingPublications.sourceTitles[recordValue.source]
-                                            )}
-                                            aria-label={txt.linkWillOpenInNewWindow.replace(
-                                                '[destination]',
-                                                txt.myTrendingPublications.sourceTitles[recordValue.source]
-                                            )}
-                                            openInNewIcon={false}
-                                        >
-                                            <Grid container>
-                                                {
-                                                    this.props.showSourceCountIcon &&
-                                                    <Grid item>
-                                                        <span className={`fez-icon ${recordValue.source} xxxlarge`} />
-                                                        <Typography variant="h6">{recordValue.count}</Typography>
-                                                    </Grid>
-                                                }
-                                                {
-                                                    !this.props.showSourceCountIcon && !this.props.hideCountTotal &&
-                                                    <Grid item>
-                                                        <Typography variant="h6" color="inherit" className="count">
-                                                            {Math.round(recordValue.count)}
-                                                        </Typography>
-                                                    </Grid>
-                                                }
-                                                {
-                                                    !this.props.hideCountDiff &&
-                                                    <Grid item>
-                                                        <Typography variant="h6" color="inherit" className="difference"
-                                                            title={txt.myTrendingPublications.trendDifferenceShares[recordValue.source]}
-                                                        >
-                                                            +{Math.round(recordValue.difference)}
-                                                        </Typography>
-                                                    </Grid>
-                                                }
-                                            </Grid>
-                                        </ExternalLink>
-                                    </Grid>
+                                <Grid item xs={12} sm="auto" className="citationMetrics">
+                                    <ExternalLink
+                                        href={recordValue.citation_url}
+                                        title={txt.linkWillOpenInNewWindow.replace(
+                                            '[destination]',
+                                            txt.myTrendingPublications.sourceTitles[recordValue.source]
+                                        )}
+                                        aria-label={txt.linkWillOpenInNewWindow.replace(
+                                            '[destination]',
+                                            txt.myTrendingPublications.sourceTitles[recordValue.source]
+                                        )}
+                                        openInNewIcon={false}
+                                    >
+                                        <Grid container>
+                                            {
+                                                this.props.showSourceCountIcon &&
+                                                <Grid item>
+                                                    <span className={`fez-icon ${recordValue.source} xxxlarge`}/>
+                                                    <Typography variant="h6">{recordValue.count}</Typography>
+                                                </Grid>
+                                            }
+                                            {
+                                                !this.props.showSourceCountIcon && !this.props.hideCountTotal &&
+                                                <Grid item>
+                                                    <Typography variant="h6" color="inherit" className="count">
+                                                        {Math.round(recordValue.count)}
+                                                    </Typography>
+                                                </Grid>
+                                            }
+                                            {
+                                                !this.props.hideCountDiff &&
+                                                <Grid item>
+                                                    <Typography variant="h6" color="inherit" className="difference"
+                                                        title={txt.myTrendingPublications.trendDifferenceShares[recordValue.source]}
+                                                    >
+                                                        +{Math.round(recordValue.difference)}
+                                                    </Typography>
+                                                </Grid>
+                                            }
+                                        </Grid>
+                                    </ExternalLink>
+                                </Grid>
                             }
                             <Grid item xs={12} className={classes.citationText}>
                                 {this.renderCitation(this.props.publication.rek_display_type)}
@@ -326,7 +335,7 @@ export class PublicationCitation extends PureComponent {
                     (this.props.showDefaultActions || this.props.customActions) &&
                     <Grid container spacing={8} className={classes.buttonMargin}>
                         <Hidden xsDown>
-                            <Grid item xs />
+                            <Grid item xs/>
                         </Hidden>
                         {
                             this.renderActions(
@@ -337,7 +346,25 @@ export class PublicationCitation extends PureComponent {
                         }
                     </Grid>
                 }
-                <Divider className={classes.divider} />
+                <Divider className={classes.divider}/>
+                {
+                    !this.props.hideContentIndicators &&
+                    this.props.publication.fez_record_search_key_content_indicator &&
+                    this.props.publication.fez_record_search_key_content_indicator.length > 0 &&
+                    <Grid item xs={12}>
+                        <Typography gutterBottom variant="caption">
+                            <span
+                                className={classes.contentIndicatorTitle}>{locale.components.contentIndicators.label}:</span>
+                            {
+                                this.props.publication.fez_record_search_key_content_indicator
+                                    .map(item => item.rek_content_indicator_lookup)
+                                    .join(
+                                        locale.components.contentIndicators.divider
+                                    )
+                            }
+                        </Typography>
+                    </Grid>
+                }
             </React.Fragment>
         );
     }

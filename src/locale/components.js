@@ -1480,6 +1480,10 @@ export default {
                 }
             },
             submit: 'Submit'
+        },
+        contentIndicators: {
+            label: 'Content Indicators',
+            divider: ', '
         }
     }
 };

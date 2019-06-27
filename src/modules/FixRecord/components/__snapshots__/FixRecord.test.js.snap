@@ -2,7 +2,7 @@
 
 exports[`Component FixRecord _handleDefaultSubmit() 1`] = `
 <StandardPage
-  title="Request a correction or upload files"
+  title="Request a correction, add more information or upload files"
 >
   <form
     onSubmit={[Function]}
@@ -123,6 +123,22 @@ exports[`Component FixRecord _handleDefaultSubmit() 1`] = `
                 "fez_record_search_key_conference_name": null,
                 "fez_record_search_key_construction_date": null,
                 "fez_record_search_key_contact_details_email": Array [],
+                "fez_record_search_key_content_indicator": Array [
+                  Object {
+                    "rek_content_indicator": 454079,
+                    "rek_content_indicator_id": 1,
+                    "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
+                    "rek_content_indicator_order": 1,
+                    "rek_content_indicator_pid": "UQ:41878",
+                  },
+                  Object {
+                    "rek_content_indicator": 454080,
+                    "rek_content_indicator_id": 2,
+                    "rek_content_indicator_lookup": "Protocol",
+                    "rek_content_indicator_order": 2,
+                    "rek_content_indicator_pid": "UQ:41878",
+                  },
+                ],
                 "fez_record_search_key_contributor": Array [],
                 "fez_record_search_key_contributor_id": Array [],
                 "fez_record_search_key_convener": null,
@@ -415,6 +431,11 @@ exports[`Component FixRecord _handleDefaultSubmit() 1`] = `
             }
           />
           <Field
+            SelectDisplayProps={
+              Object {
+                "id": "fixAction",
+              }
+            }
             component={[Function]}
             disabled={false}
             label="Select an action"
@@ -431,7 +452,7 @@ exports[`Component FixRecord _handleDefaultSubmit() 1`] = `
               key="fix_record_action_0"
               value="fix"
             >
-              I am the author/editor/contributor of this work - I would like to make a correction, or upload files
+              I am the author/editor/contributor of this work - I would like to add information, make a correction, or upload files
             </WithStyles(MenuItem)>
             <WithStyles(MenuItem)
               key="fix_record_action_1"
@@ -470,7 +491,7 @@ exports[`Component FixRecord _handleDefaultSubmit() 1`] = `
 
 exports[`Component FixRecord componentWillReceiveProps() 1`] = `
 <StandardPage
-  title="Request a correction or upload files"
+  title="Request a correction, add more information or upload files"
 >
   <form
     onSubmit={[Function]}
@@ -591,6 +612,22 @@ exports[`Component FixRecord componentWillReceiveProps() 1`] = `
                 "fez_record_search_key_conference_name": null,
                 "fez_record_search_key_construction_date": null,
                 "fez_record_search_key_contact_details_email": Array [],
+                "fez_record_search_key_content_indicator": Array [
+                  Object {
+                    "rek_content_indicator": 454079,
+                    "rek_content_indicator_id": 1,
+                    "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
+                    "rek_content_indicator_order": 1,
+                    "rek_content_indicator_pid": "UQ:41878",
+                  },
+                  Object {
+                    "rek_content_indicator": 454080,
+                    "rek_content_indicator_id": 2,
+                    "rek_content_indicator_lookup": "Protocol",
+                    "rek_content_indicator_order": 2,
+                    "rek_content_indicator_pid": "UQ:41878",
+                  },
+                ],
                 "fez_record_search_key_contributor": Array [],
                 "fez_record_search_key_contributor_id": Array [],
                 "fez_record_search_key_convener": null,
@@ -883,6 +920,11 @@ exports[`Component FixRecord componentWillReceiveProps() 1`] = `
             }
           />
           <Field
+            SelectDisplayProps={
+              Object {
+                "id": "fixAction",
+              }
+            }
             component={[Function]}
             disabled={false}
             label="Select an action"
@@ -899,7 +941,7 @@ exports[`Component FixRecord componentWillReceiveProps() 1`] = `
               key="fix_record_action_0"
               value="fix"
             >
-              I am the author/editor/contributor of this work - I would like to make a correction, or upload files
+              I am the author/editor/contributor of this work - I would like to add information, make a correction, or upload files
             </WithStyles(MenuItem)>
             <WithStyles(MenuItem)
               key="fix_record_action_1"
@@ -949,7 +991,7 @@ exports[`Component FixRecord componentWillReceiveProps() 1`] = `
 
 exports[`Component FixRecord should render fix record form 1`] = `
 <StandardPage
-  title="Request a correction or upload files"
+  title="Request a correction, add more information or upload files"
 >
   <form
     onSubmit={[Function]}
@@ -1070,6 +1112,22 @@ exports[`Component FixRecord should render fix record form 1`] = `
                 "fez_record_search_key_conference_name": null,
                 "fez_record_search_key_construction_date": null,
                 "fez_record_search_key_contact_details_email": Array [],
+                "fez_record_search_key_content_indicator": Array [
+                  Object {
+                    "rek_content_indicator": 454079,
+                    "rek_content_indicator_id": 1,
+                    "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
+                    "rek_content_indicator_order": 1,
+                    "rek_content_indicator_pid": "UQ:41878",
+                  },
+                  Object {
+                    "rek_content_indicator": 454080,
+                    "rek_content_indicator_id": 2,
+                    "rek_content_indicator_lookup": "Protocol",
+                    "rek_content_indicator_order": 2,
+                    "rek_content_indicator_pid": "UQ:41878",
+                  },
+                ],
                 "fez_record_search_key_contributor": Array [],
                 "fez_record_search_key_contributor_id": Array [],
                 "fez_record_search_key_convener": null,
@@ -1362,6 +1420,11 @@ exports[`Component FixRecord should render fix record form 1`] = `
             }
           />
           <Field
+            SelectDisplayProps={
+              Object {
+                "id": "fixAction",
+              }
+            }
             component={[Function]}
             disabled={false}
             label="Select an action"
@@ -1378,7 +1441,7 @@ exports[`Component FixRecord should render fix record form 1`] = `
               key="fix_record_action_0"
               value="fix"
             >
-              I am the author/editor/contributor of this work - I would like to make a correction, or upload files
+              I am the author/editor/contributor of this work - I would like to add information, make a correction, or upload files
             </WithStyles(MenuItem)>
             <WithStyles(MenuItem)
               key="fix_record_action_1"
@@ -1407,9 +1470,16 @@ exports[`Component FixRecord should render fix record form 1`] = `
             "cancelButtonLabel": "Go to my dashboard",
             "confirmButtonLabel": "Go to my research",
             "confirmationMessage": <React.Fragment>
-              <p>
+              <span
+                style={
+                  Object {
+                    "display": "block",
+                    "margin": "1em 0",
+                  }
+                }
+              >
                 Your request will be referred to a UQ eSpace staff member for review/action.
-              </p>
+              </span>
             </React.Fragment>,
             "confirmationTitle": "Your request has been submitted",
             "fileFailConfirmationAlert": Object {
@@ -1423,6 +1493,63 @@ exports[`Component FixRecord should render fix record form 1`] = `
         onCancelAction={[Function]}
         onRef={[Function]}
       />
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          help={
+            Object {
+              "buttonLabel": "CLOSE",
+              "text": <p>
+                For more information about content indicators, click 
+                <a
+                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
+                  rel="noreferrer"
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                  target="_blank"
+                >
+                  here
+                </a>
+              </p>,
+              "title": "Content indicators",
+            }
+          }
+          title="Content Indicators"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={24}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(Typography)>
+                You can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                id="content-indicators"
+                label="Please select relevant indicator(s)."
+                multiple={true}
+                name="contentIndicators"
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
         xs={12}
@@ -1520,6 +1647,7 @@ exports[`Component FixRecord should render fix record form 1`] = `
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="fixSubmit"
           onClick={[MockFunction]}
           variant="contained"
         >
@@ -1549,7 +1677,7 @@ exports[`Component FixRecord should render loader when record is loading 1`] = `
 
 exports[`Component FixRecord should render record citation, two actions in select field and a cancel button 1`] = `
 <StandardPage
-  title="Request a correction or upload files"
+  title="Request a correction, add more information or upload files"
 >
   <form
     onSubmit={[Function]}
@@ -1670,6 +1798,22 @@ exports[`Component FixRecord should render record citation, two actions in selec
                 "fez_record_search_key_conference_name": null,
                 "fez_record_search_key_construction_date": null,
                 "fez_record_search_key_contact_details_email": Array [],
+                "fez_record_search_key_content_indicator": Array [
+                  Object {
+                    "rek_content_indicator": 454079,
+                    "rek_content_indicator_id": 1,
+                    "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
+                    "rek_content_indicator_order": 1,
+                    "rek_content_indicator_pid": "UQ:41878",
+                  },
+                  Object {
+                    "rek_content_indicator": 454080,
+                    "rek_content_indicator_id": 2,
+                    "rek_content_indicator_lookup": "Protocol",
+                    "rek_content_indicator_order": 2,
+                    "rek_content_indicator_pid": "UQ:41878",
+                  },
+                ],
                 "fez_record_search_key_contributor": Array [],
                 "fez_record_search_key_contributor_id": Array [],
                 "fez_record_search_key_convener": null,
@@ -1962,6 +2106,11 @@ exports[`Component FixRecord should render record citation, two actions in selec
             }
           />
           <Field
+            SelectDisplayProps={
+              Object {
+                "id": "fixAction",
+              }
+            }
             component={[Function]}
             disabled={false}
             label="Select an action"
@@ -1978,7 +2127,7 @@ exports[`Component FixRecord should render record citation, two actions in selec
               key="fix_record_action_0"
               value="fix"
             >
-              I am the author/editor/contributor of this work - I would like to make a correction, or upload files
+              I am the author/editor/contributor of this work - I would like to add information, make a correction, or upload files
             </WithStyles(MenuItem)>
             <WithStyles(MenuItem)
               key="fix_record_action_1"
@@ -2017,7 +2166,7 @@ exports[`Component FixRecord should render record citation, two actions in selec
 
 exports[`Component FixRecord should render the confirm dialog box with an alert due to a file upload failure 1`] = `
 <StandardPage
-  title="Request a correction or upload files"
+  title="Request a correction, add more information or upload files"
 >
   <form
     onSubmit={[Function]}
@@ -2138,6 +2287,22 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
                 "fez_record_search_key_conference_name": null,
                 "fez_record_search_key_construction_date": null,
                 "fez_record_search_key_contact_details_email": Array [],
+                "fez_record_search_key_content_indicator": Array [
+                  Object {
+                    "rek_content_indicator": 454079,
+                    "rek_content_indicator_id": 1,
+                    "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
+                    "rek_content_indicator_order": 1,
+                    "rek_content_indicator_pid": "UQ:41878",
+                  },
+                  Object {
+                    "rek_content_indicator": 454080,
+                    "rek_content_indicator_id": 2,
+                    "rek_content_indicator_lookup": "Protocol",
+                    "rek_content_indicator_order": 2,
+                    "rek_content_indicator_pid": "UQ:41878",
+                  },
+                ],
                 "fez_record_search_key_contributor": Array [],
                 "fez_record_search_key_contributor_id": Array [],
                 "fez_record_search_key_convener": null,
@@ -2430,6 +2595,11 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
             }
           />
           <Field
+            SelectDisplayProps={
+              Object {
+                "id": "fixAction",
+              }
+            }
             component={[Function]}
             disabled={false}
             label="Select an action"
@@ -2446,7 +2616,7 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
               key="fix_record_action_0"
               value="fix"
             >
-              I am the author/editor/contributor of this work - I would like to make a correction, or upload files
+              I am the author/editor/contributor of this work - I would like to add information, make a correction, or upload files
             </WithStyles(MenuItem)>
             <WithStyles(MenuItem)
               key="fix_record_action_1"
@@ -2480,9 +2650,16 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
                 title="File upload failed"
                 type="info"
               />
-              <p>
+              <span
+                style={
+                  Object {
+                    "display": "block",
+                    "margin": "1em 0",
+                  }
+                }
+              >
                 Your request will be referred to a UQ eSpace staff member for review/action.
-              </p>
+              </span>
             </React.Fragment>,
             "confirmationTitle": "Your request has been submitted",
             "fileFailConfirmationAlert": Object {
@@ -2496,6 +2673,63 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
         onCancelAction={[Function]}
         onRef={[Function]}
       />
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          help={
+            Object {
+              "buttonLabel": "CLOSE",
+              "text": <p>
+                For more information about content indicators, click 
+                <a
+                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
+                  rel="noreferrer"
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                  target="_blank"
+                >
+                  here
+                </a>
+              </p>,
+              "title": "Content indicators",
+            }
+          }
+          title="Content Indicators"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={24}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(Typography)>
+                You can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                id="content-indicators"
+                label="Please select relevant indicator(s)."
+                multiple={true}
+                name="contentIndicators"
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
         xs={12}
@@ -2593,6 +2827,7 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="fixSubmit"
           onClick={[MockFunction]}
           variant="contained"
         >
@@ -2606,7 +2841,7 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
 
 exports[`Component FixRecord should render the confirm dialog box without an alert due to a file upload success 1`] = `
 <StandardPage
-  title="Request a correction or upload files"
+  title="Request a correction, add more information or upload files"
 >
   <form
     onSubmit={[Function]}
@@ -2727,6 +2962,22 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
                 "fez_record_search_key_conference_name": null,
                 "fez_record_search_key_construction_date": null,
                 "fez_record_search_key_contact_details_email": Array [],
+                "fez_record_search_key_content_indicator": Array [
+                  Object {
+                    "rek_content_indicator": 454079,
+                    "rek_content_indicator_id": 1,
+                    "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
+                    "rek_content_indicator_order": 1,
+                    "rek_content_indicator_pid": "UQ:41878",
+                  },
+                  Object {
+                    "rek_content_indicator": 454080,
+                    "rek_content_indicator_id": 2,
+                    "rek_content_indicator_lookup": "Protocol",
+                    "rek_content_indicator_order": 2,
+                    "rek_content_indicator_pid": "UQ:41878",
+                  },
+                ],
                 "fez_record_search_key_contributor": Array [],
                 "fez_record_search_key_contributor_id": Array [],
                 "fez_record_search_key_convener": null,
@@ -3019,6 +3270,11 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
             }
           />
           <Field
+            SelectDisplayProps={
+              Object {
+                "id": "fixAction",
+              }
+            }
             component={[Function]}
             disabled={false}
             label="Select an action"
@@ -3035,7 +3291,7 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
               key="fix_record_action_0"
               value="fix"
             >
-              I am the author/editor/contributor of this work - I would like to make a correction, or upload files
+              I am the author/editor/contributor of this work - I would like to add information, make a correction, or upload files
             </WithStyles(MenuItem)>
             <WithStyles(MenuItem)
               key="fix_record_action_1"
@@ -3064,9 +3320,16 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
             "cancelButtonLabel": "Go to my dashboard",
             "confirmButtonLabel": "Go to my research",
             "confirmationMessage": <React.Fragment>
-              <p>
+              <span
+                style={
+                  Object {
+                    "display": "block",
+                    "margin": "1em 0",
+                  }
+                }
+              >
                 Your request will be referred to a UQ eSpace staff member for review/action.
-              </p>
+              </span>
             </React.Fragment>,
             "confirmationTitle": "Your request has been submitted",
             "fileFailConfirmationAlert": Object {
@@ -3080,6 +3343,63 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
         onCancelAction={[Function]}
         onRef={[Function]}
       />
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          help={
+            Object {
+              "buttonLabel": "CLOSE",
+              "text": <p>
+                For more information about content indicators, click 
+                <a
+                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
+                  rel="noreferrer"
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                  target="_blank"
+                >
+                  here
+                </a>
+              </p>,
+              "title": "Content indicators",
+            }
+          }
+          title="Content Indicators"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={24}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(Typography)>
+                You can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                id="content-indicators"
+                label="Please select relevant indicator(s)."
+                multiple={true}
+                name="contentIndicators"
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
         xs={12}
@@ -3177,6 +3497,7 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="fixSubmit"
           onClick={[MockFunction]}
           variant="contained"
         >
@@ -3190,7 +3511,7 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
 
 exports[`Component FixRecord should render unclaim form 1`] = `
 <StandardPage
-  title="Request a correction or upload files"
+  title="Request a correction, add more information or upload files"
 >
   <form
     onSubmit={[Function]}
@@ -3311,6 +3632,22 @@ exports[`Component FixRecord should render unclaim form 1`] = `
                 "fez_record_search_key_conference_name": null,
                 "fez_record_search_key_construction_date": null,
                 "fez_record_search_key_contact_details_email": Array [],
+                "fez_record_search_key_content_indicator": Array [
+                  Object {
+                    "rek_content_indicator": 454079,
+                    "rek_content_indicator_id": 1,
+                    "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
+                    "rek_content_indicator_order": 1,
+                    "rek_content_indicator_pid": "UQ:41878",
+                  },
+                  Object {
+                    "rek_content_indicator": 454080,
+                    "rek_content_indicator_id": 2,
+                    "rek_content_indicator_lookup": "Protocol",
+                    "rek_content_indicator_order": 2,
+                    "rek_content_indicator_pid": "UQ:41878",
+                  },
+                ],
                 "fez_record_search_key_contributor": Array [],
                 "fez_record_search_key_contributor_id": Array [],
                 "fez_record_search_key_convener": null,
@@ -3603,6 +3940,11 @@ exports[`Component FixRecord should render unclaim form 1`] = `
             }
           />
           <Field
+            SelectDisplayProps={
+              Object {
+                "id": "fixAction",
+              }
+            }
             component={[Function]}
             disabled={false}
             label="Select an action"
@@ -3619,7 +3961,7 @@ exports[`Component FixRecord should render unclaim form 1`] = `
               key="fix_record_action_0"
               value="fix"
             >
-              I am the author/editor/contributor of this work - I would like to make a correction, or upload files
+              I am the author/editor/contributor of this work - I would like to add information, make a correction, or upload files
             </WithStyles(MenuItem)>
             <WithStyles(MenuItem)
               key="fix_record_action_1"
@@ -3685,6 +4027,7 @@ exports[`Component FixRecord should render unclaim form 1`] = `
         <WithStyles(Button)
           color="primary"
           fullWidth={true}
+          id="fixSubmit"
           onClick={[MockFunction]}
           variant="contained"
         >

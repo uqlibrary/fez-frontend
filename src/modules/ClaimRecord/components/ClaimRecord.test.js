@@ -52,7 +52,7 @@ function setup(testProps, isShallow = true) {
             author: Immutable.Map({aut_id: 410})
         }),
         handleSubmit: testProps.handleSubmit || jest.fn(),
-        actions: testProps.actions || {},
+        actions: testProps.actions || {loadFullRecordToClaim: jest.fn()},
         history: testProps.history || {
             push: jest.fn(),
             go: jest.fn()
@@ -67,7 +67,7 @@ describe('Component ClaimRecord ', () => {
 
     it('should render claim publication form', () => {
         const wrapper = setup({});
-        expect(wrapper.find('Field').length).toEqual(4);
+        expect(wrapper.find('Field').length).toEqual(5);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -169,7 +169,7 @@ describe('Component ClaimRecord ', () => {
             )
         });
 
-        expect(wrapper.find('Field').length).toEqual(3);
+        expect(wrapper.find('Field').length).toEqual(4);
         // // expect(wrapper.find('Alert').length).toEqual(0);
         // expect(wrapper.find('withRouter(Connect(PublicationCitation))').length).toEqual(1);
 
@@ -186,7 +186,7 @@ describe('Component ClaimRecord ', () => {
             )
         });
 
-        expect(wrapper.find('Field').length).toEqual(4);
+        expect(wrapper.find('Field').length).toEqual(5);
         // // expect(wrapper.find('Alert').length).toEqual(0);
         // expect(wrapper.find('withRouter(Connect(PublicationCitation))').length).toEqual(1);
 
@@ -215,7 +215,7 @@ describe('Component ClaimRecord ', () => {
             )
         });
 
-        expect(wrapper.find('Field').length).toEqual(4);
+        expect(wrapper.find('Field').length).toEqual(5);
         // // expect(wrapper.find('Alert').length).toEqual(0);
         // expect(wrapper.find('withRouter(Connect(PublicationCitation))').length).toEqual(1);
 
@@ -395,7 +395,7 @@ describe('Component ClaimRecord ', () => {
 
     it('should clear record to fix when leaving the form', () => {
         const actionFunction = jest.fn();
-        const wrapper = setup({actions: {clearClaimPublication: actionFunction}});
+        const wrapper = setup({actions: {clearClaimPublication: actionFunction, loadFullRecordToClaim: jest.fn()}});
         wrapper.instance().componentWillUnmount();
         expect(actionFunction).toHaveBeenCalled();
     });
@@ -431,7 +431,8 @@ describe('Component ClaimRecord ', () => {
             history: {push: testMethod, goBack: goBack},
             redirectPath: '/records/add/find',
             actions: {
-                clearRedirectPath: clearRedirectPath
+                clearRedirectPath: clearRedirectPath,
+                loadFullRecordToClaim: jest.fn()
             }
         });
 
@@ -513,7 +514,7 @@ describe('Component ClaimRecord ', () => {
     });
 
     it('should show alert if submit failed and PID not found', () => {
-        const {rek_pid, journalArticleWithoutPid} = journalArticle;
+        const { journalArticleWithoutPid } = journalArticle;
         const props = {
             initialValues: Immutable.Map({
                 author: Immutable.Map({aut_id: 410}),
@@ -522,6 +523,22 @@ describe('Component ClaimRecord ', () => {
                 })
             }),
             submitFailed: true
+        };
+
+        const wrapper = setup(props);
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should show the loader', () => {
+        const props = {
+            fullPublicationToClaimLoading: true,
+            actions: {
+                loadFullRecordToClaim: jest.fn(() => null)
+            },
+            initialValues: Immutable.Map({
+                author: Immutable.Map({aut_id: 410}),
+                publication: null
+            })
         };
 
         const wrapper = setup(props);
