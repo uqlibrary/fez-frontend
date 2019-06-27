@@ -106,6 +106,33 @@ const initialState = Immutable.Map({
 describe('AddMissingRecord form', () => {
     afterEach(cleanup);
     describe('BookForm:Textbook', () => {
+
+        it('should not show submit button when a form is not rendered', () => {
+            const route = '/records/add/new';
+            const {asFragment, getByText, getByTestId} = rtlRender(withRedux(initialState)(withRouter({route})(<AddMissingRecord addRecordStep={NewRecord} />)));
+
+            let fragment = asFragment();
+
+            fireEvent.click(getByTestId('rek-display-type'));
+            waitForElement(() => getByTestId('menu-rek_display_type'));
+            fireEvent.click(getByText(/Journal Article/i));
+            expect(fragment).toMatchDiffSnapshot(fragment = asFragment());
+
+        });
+
+        it('should  show submit button when a form is rendered', () => {
+            const route = '/records/add/new';
+            const {asFragment, getByText, getByTestId} = rtlRender(withRedux(initialState)(withRouter({route})(<AddMissingRecord addRecordStep={NewRecord} />)));
+
+            let fragment = asFragment();
+
+            fireEvent.click(getByTestId('rek-display-type'));
+            waitForElement(() => getByTestId('menu-rek_display_type'));
+            fireEvent.click(getByText(/Department Technical Report/i));
+            expect(fragment).toMatchDiffSnapshot(fragment = asFragment());
+
+        });
+
         it('should validate the form and show validation error message correctly for authors/editors field combination', async () => {
             const route = '/records/add/new';
             const {

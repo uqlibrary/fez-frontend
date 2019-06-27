@@ -73,6 +73,19 @@ describe('Component PublicationForm', () => {
             initialValues: {
                 rek_display_type: 179
             },
+            hasSubtypes: false
+        });
+
+        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(wrapper.find('Field').length).toEqual(1);
+    });
+
+    it('should render form after selecting both publication type and subtype (Journal article/Editorial)', () => {
+        const wrapper = setup({
+            initialValues: {
+                rek_display_type: 179,
+                rek_subtype: 'Editorial'
+            },
             hasSubtypes: true,
             subtypeVocabId: 453573
         });
