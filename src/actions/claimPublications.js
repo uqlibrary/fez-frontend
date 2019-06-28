@@ -164,7 +164,7 @@ export function setClaimPublication(publication) {
     return dispatch => {
         dispatch({
             type: actions.PUBLICATION_TO_CLAIM_SET,
-            payload: publication
+            payload: {rek_pid: publication.rek_pid}
         });
     };
 }

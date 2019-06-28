@@ -28,7 +28,8 @@ const handlers = {
         {
             ...state,
             publicationToClaimFileUploadingError: false,
-            publicationToClaim: action.payload
+            publicationToClaim: {rek_pid: action.payload.rek_pid},
+            fullPublicationToClaim: null
         }
     ),
 
@@ -36,7 +37,8 @@ const handlers = {
         {
             ...state,
             publicationToClaimFileUploadingError: false,
-            publicationToClaim: null
+            publicationToClaim: null,
+            fullPublicationToClaim: null
         }
     ),
 

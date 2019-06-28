@@ -113,8 +113,8 @@ export default class PossiblyMyRecords extends PureComponent {
     };
 
     _claimPublication = (item) => {
-        this.props.history.push(pathConfig.records.claim);
         this.props.actions.setClaimPublication(item);
+        this.props.history.push(pathConfig.records.claim);
     };
 
     _facetsChanged = (activeFacets) => {
