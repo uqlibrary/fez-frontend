@@ -132,7 +132,7 @@ context('Thesis', () => {
             .children()
             .should('have.length', 2);
         cy.get('button#submit-thesis').should('to.have.attr', 'disabled');
-        cy.get('div[class="ListRow-Field of research ListRow-Field of research-0101 Pure Mathematics"]')
+        cy.get('div[class="ListRow-Fieldofresearch ListRow-Fieldofresearch-0101 Pure Mathematics"]')
             .get('button[title="Remove this item"]')
             .click();
         cy.get('button')

@@ -25,6 +25,7 @@ import {routes, validation} from 'config';
 import componentLocale from 'locale/components';
 import {default as formLocale} from 'locale/publicationForm';
 import {locale} from 'locale';
+import {default as publicationForm} from 'locale/publicationForm';
 
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
@@ -83,7 +84,7 @@ export default class AddDataCollection extends Component {
             </Grid>
         );
         return (
-            <StandardPage title={formLocale.pageTitle}>
+            <StandardPage title={publicationForm.addDataset.pageTitle}>
                 <form>
                     <ConfirmDialogBox
                         onRef={this._handleRef}
@@ -91,7 +92,7 @@ export default class AddDataCollection extends Component {
                         onCancelAction={this._restartWorkflow}
                         locale={saveConfirmationLocale}
                     />
-                    <Grid container spacing={24}>
+                    <Grid container spacing={24} className={'DataCollection'}>
                         <Grid item xs={12}>
                             <StandardCard title={txt.information.agreement.title}>
                                 <Grid container spacing={24}>
@@ -219,7 +220,7 @@ export default class AddDataCollection extends Component {
                                     locale={txt.information.fieldOfResearchCodes.field}/>
                             </StandardCard>
                         </Grid>
-                        <Grid item xs={12}>
+                        <Grid item xs={12} className={'Creators'}>
                             <StandardCard title={txt.information.creator.title}>
                                 <Field
                                     component={ContributorsEditorField}
