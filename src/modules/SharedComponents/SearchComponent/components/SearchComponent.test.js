@@ -49,17 +49,17 @@ describe('SearchComponent', () => {
     });
 
     it('should render with a class "header" for use in AppBar', () => {
-        const wrapper = setup({isInHeader: true});
+        const wrapper = setup({ isInHeader: true });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render default view with advanced search', () => {
-        const wrapper = setup({isAdvancedSearch: true});
+        const wrapper = setup({ isAdvancedSearch: true });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render simple search even if it says is advanced, if in header', () => {
-        const wrapper = setup({isAdvancedSearch: true, isInHeader: true});
+        const wrapper = setup({ isAdvancedSearch: true, isInHeader: true });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -113,10 +113,10 @@ describe('SearchComponent', () => {
 
     it('should submit search for given search query params', () => {
         const testMethod = jest.fn();
-        const testHistoryPushMehtod = jest.fn();
+        const testHistoryPushMethod = jest.fn();
         const wrapper = setup({
-            actions: {searchEspacePublications: testMethod},
-            history: {push: testHistoryPushMehtod}
+            actions: { searchEspacePublications: testMethod },
+            history: { push: testHistoryPushMethod }
         });
 
         const searchQuery = {
@@ -137,11 +137,11 @@ describe('SearchComponent', () => {
         wrapper.update();
 
         expect(testMethod).toHaveBeenCalled();
-        expect(testHistoryPushMehtod).toHaveBeenCalledWith({
+        expect(testHistoryPushMethod).toHaveBeenCalledWith({
             pathname: '/records/search',
             search: 'page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=i+feel+lucky',
             state: {
-                activeFacets: {filters: {}, ranges: {}},
+                activeFacets: { filters: {}, ranges: {} },
                 page: 1,
                 pageSize: 20,
                 searchQueryParams: {
@@ -153,14 +153,13 @@ describe('SearchComponent', () => {
         });
     });
 
-
     it('should submit search for given search query params for unpublished buffer', () => {
         const testMethod = jest.fn();
-        const testHistoryPushMehtod = jest.fn();
+        const testHistoryPushMethod = jest.fn();
         const wrapper = setup({
-            actions: {searchEspacePublications: testMethod},
-            history: {push: testHistoryPushMehtod},
-            location: {pathname: '/admin/unpublished'},
+            actions: { searchEspacePublications: testMethod },
+            history: { push: testHistoryPushMethod },
+            location: { pathname: '/admin/unpublished' },
             isAdmin: true,
             isUnpublishedBufferPage: true
         });
@@ -183,11 +182,11 @@ describe('SearchComponent', () => {
         wrapper.update();
 
         expect(testMethod).toHaveBeenCalled();
-        expect(testHistoryPushMehtod).toHaveBeenCalledWith({
+        expect(testHistoryPushMethod).toHaveBeenCalledWith({
             pathname: '/admin/unpublished',
             search: 'page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_status%5D=3',
             state: {
-                activeFacets: {filters: {}, ranges: {}},
+                activeFacets: { filters: {}, ranges: {} },
                 page: 1,
                 pageSize: 20,
                 searchQueryParams: {
@@ -220,10 +219,10 @@ describe('SearchComponent', () => {
 
     it('should handle advanced search', () => {
         const testMethod = jest.fn();
-        const testHistoryPushMehtod = jest.fn();
+        const testHistoryPushMethod = jest.fn();
         const wrapper = setup({
-            actions: {searchEspacePublications: testMethod},
-            history: {push: testHistoryPushMehtod}
+            actions: { searchEspacePublications: testMethod },
+            history: { push: testHistoryPushMethod }
         });
 
         wrapper.state().advancedSearch = {
@@ -253,21 +252,21 @@ describe('SearchComponent', () => {
         wrapper.instance()._handleAdvancedSearch();
 
         expect(testMethod).toHaveBeenCalled();
-        expect(testHistoryPushMehtod).toHaveBeenCalledWith({
-            "pathname": "/records/search",
-            "search": "page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D%5Bvalue%5D=i+feel+lucky&searchQueryParams%5Ball%5D%5Blabel%5D=&searchQueryParams%5Brek_title%5D%5Bvalue%5D=global+warming&searchQueryParams%5Brek_title%5D%5Blabel%5D=&searchMode=advanced",
-            "state": {
-                "activeFacets": {"filters": {}, "ranges": {}},
-                "page": 1,
-                "pageSize": 20,
-                "searchMode": "advanced",
-                "searchQueryParams": {
-                    "all": {"value": "i feel lucky", "label": ""},
-                    "rek_display_type": [],
-                    "rek_title": {"value": "global warming", "label": ""}
+        expect(testHistoryPushMethod).toHaveBeenCalledWith({
+            pathname: '/records/search',
+            search: 'page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D%5Bvalue%5D=i+feel+lucky&searchQueryParams%5Ball%5D%5Blabel%5D=&searchQueryParams%5Brek_title%5D%5Bvalue%5D=global+warming&searchQueryParams%5Brek_title%5D%5Blabel%5D=&searchMode=advanced',
+            state: {
+                activeFacets: { filters: {}, ranges: {} },
+                page: 1,
+                pageSize: 20,
+                searchMode: 'advanced',
+                searchQueryParams: {
+                    all: { value: 'i feel lucky', label: '' },
+                    'rek_display_type': [],
+                    'rek_title': { value: 'global warming', label: '' }
                 },
-                "sortBy": "score",
-                "sortDirection": "Desc"
+                sortBy: 'score',
+                sortDirection: 'Desc'
             }
         });
 
@@ -286,32 +285,31 @@ describe('SearchComponent', () => {
         });
 
         expect(testMethod).toHaveBeenCalled();
-        expect(testHistoryPushMehtod).toHaveBeenCalledWith({
-            "pathname": "/records/search",
-            "search": "page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D%5Bvalue%5D=i+feel+lucky&searchQueryParams%5Ball%5D%5Blabel%5D=&searchQueryParams%5Brek_title%5D%5Bvalue%5D=global+warming&searchQueryParams%5Brek_title%5D%5Blabel%5D=&searchMode=advanced",
-            "state": {
-                "activeFacets": {"filters": {}, "ranges": {}},
-                "page": 1,
-                "pageSize": 20,
-                "searchMode": "advanced",
-                "searchQueryParams": {
-                    "all": {"value": "i feel lucky", "label": ""},
-                    "rek_display_type": [],
-                    "rek_title": {"value": "global warming", "label": ""}
+        expect(testHistoryPushMethod).toHaveBeenCalledWith({
+            pathname: '/records/search',
+            search: 'page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D%5Bvalue%5D=i+feel+lucky&searchQueryParams%5Ball%5D%5Blabel%5D=&searchQueryParams%5Brek_title%5D%5Bvalue%5D=global+warming&searchQueryParams%5Brek_title%5D%5Blabel%5D=&searchMode=advanced',
+            state: {
+                activeFacets: { filters: {}, ranges: {} },
+                page: 1,
+                pageSize: 20,
+                searchMode: 'advanced',
+                searchQueryParams: {
+                    all: { value: 'i feel lucky', label: '' },
+                    'rek_display_type': [],
+                    'rek_title': { value: 'global warming', label: '' }
                 },
-                "sortBy": "score",
-                "sortDirection": "Desc"
+                sortBy: 'score',
+                sortDirection: 'Desc'
             }
         });
     });
 
-
     it('should handle advanced search with year range, rek_status, rek_created_date and rek_updated_date key set for an admin', () => {
         const testMethod = jest.fn();
-        const testHistoryPushMehtod = jest.fn();
+        const testHistoryPushMethod = jest.fn();
         const wrapper = setup({
-            actions: {searchEspacePublications: testMethod},
-            history: {push: testHistoryPushMehtod},
+            actions: { searchEspacePublications: testMethod },
+            history: { push: testHistoryPushMethod },
             isAdmin: true
         });
 
@@ -360,50 +358,56 @@ describe('SearchComponent', () => {
         wrapper.instance()._handleAdvancedSearch();
 
         expect(testMethod).toHaveBeenCalled();
-        expect(testHistoryPushMehtod).toHaveBeenCalledWith({
-            "pathname": "/records/search",
-            "search": "page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Branges%5D%5BCreated+date%5D=%5B1982-10-09T14%3A00%3A00Z+TO+1985-10-10T13%3A59%3A59Z%5D&activeFacets%5Branges%5D%5BUpdated+date%5D=%5B1980-10-09T14%3A00%3A00Z+TO+1982-10-10T13%3A59%3A59Z%5D&activeFacets%5Branges%5D%5BYear+published%5D%5Bfrom%5D=2000&activeFacets%5Branges%5D%5BYear+published%5D%5Bto%5D=2008&searchQueryParams%5Ball%5D%5Bvalue%5D=i+feel+lucky&searchQueryParams%5Ball%5D%5Blabel%5D=&searchQueryParams%5Brek_title%5D%5Bvalue%5D=global+warming&searchQueryParams%5Brek_title%5D%5Blabel%5D=&searchQueryParams%5Brek_status%5D%5Bvalue%5D=7&searchQueryParams%5Brek_created_date%5D%5Bvalue%5D=%5B1982-10-09T14%3A00%3A00Z+TO+1985-10-10T13%3A59%3A59Z%5D&searchQueryParams%5Brek_created_date%5D%5Blabel%5D=%5B09%2F10%2F1982+to+10%2F10%2F1985%5D&searchQueryParams%5Brek_updated_date%5D%5Bvalue%5D=%5B1980-10-09T14%3A00%3A00Z+TO+1982-10-10T13%3A59%3A59Z%5D&searchQueryParams%5Brek_updated_date%5D%5Blabel%5D=%5B09%2F10%2F1980+to+10%2F10%2F1982%5D&searchMode=advanced",
-            "state": {
-                "activeFacets": {
-                    "filters": {},
-                    "ranges": {
-                        "Created date": "[1982-10-09T14:00:00Z TO 1985-10-10T13:59:59Z]",
-                        "Updated date": "[1980-10-09T14:00:00Z TO 1982-10-10T13:59:59Z]",
-                        "Year published": {
-                            "from": 2000,
-                            "to": 2008
+        expect(testHistoryPushMethod).toHaveBeenCalledWith({
+            pathname: '/records/search',
+            search: 'page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Branges%5D%5BCreated+date%5D=%5B1982-10-09T14%3A00%3A00Z+TO+1985-10-10T13%3A59%3A59Z%5D&activeFacets%5Branges%5D%5BUpdated+date%5D=%5B1980-10-09T14%3A00%3A00Z+TO+1982-10-10T13%3A59%3A59Z%5D&activeFacets%5Branges%5D%5BYear+published%5D%5Bfrom%5D=2000&activeFacets%5Branges%5D%5BYear+published%5D%5Bto%5D=2008&searchQueryParams%5Ball%5D%5Bvalue%5D=i+feel+lucky&searchQueryParams%5Ball%5D%5Blabel%5D=&searchQueryParams%5Brek_title%5D%5Bvalue%5D=global+warming&searchQueryParams%5Brek_title%5D%5Blabel%5D=&searchQueryParams%5Brek_status%5D%5Bvalue%5D=7&searchQueryParams%5Brek_created_date%5D%5Bvalue%5D=%5B1982-10-09T14%3A00%3A00Z+TO+1985-10-10T13%3A59%3A59Z%5D&searchQueryParams%5Brek_created_date%5D%5Blabel%5D=%5B09%2F10%2F1982+to+10%2F10%2F1985%5D&searchQueryParams%5Brek_updated_date%5D%5Bvalue%5D=%5B1980-10-09T14%3A00%3A00Z+TO+1982-10-10T13%3A59%3A59Z%5D&searchQueryParams%5Brek_updated_date%5D%5Blabel%5D=%5B09%2F10%2F1980+to+10%2F10%2F1982%5D&searchMode=advanced',
+            state: {
+                activeFacets: {
+                    filters: {},
+                    ranges: {
+                        'Created date': '[1982-10-09T14:00:00Z TO 1985-10-10T13:59:59Z]',
+                        'Updated date': '[1980-10-09T14:00:00Z TO 1982-10-10T13:59:59Z]',
+                        'Year published': {
+                            from: 2000,
+                            to: 2008
                         }
                     }
                 },
-                "page": 1,
-                "pageSize": 20,
-                "searchMode": "advanced",
-                "searchQueryParams": {
-                    "all": {"value": "i feel lucky", "label": ""},
-                    "rek_display_type": [],
-                    "rek_title": {"value": "global warming", "label": ""},
-                    "rek_status": {"value": 7},
-                    "rek_created_date": {
-                        "label": "[09/10/1982 to 10/10/1985]",
-                        "value": "[1982-10-09T14:00:00Z TO 1985-10-10T13:59:59Z]"
+                page: 1,
+                pageSize: 20,
+                searchMode: 'advanced',
+                searchQueryParams: {
+                    all: {
+                        value: 'i feel lucky',
+                        label: ''
                     },
-                    "rek_updated_date": {
-                        "label": "[09/10/1980 to 10/10/1982]",
-                        "value": "[1980-10-09T14:00:00Z TO 1982-10-10T13:59:59Z]"
+                    'rek_display_type': [],
+                    'rek_title': {
+                        value: 'global warming',
+                        label: ''
+                    },
+                    'rek_status': { value: 7 },
+                    'rek_created_date': {
+                        label: '[09/10/1982 to 10/10/1985]',
+                        value: '[1982-10-09T14:00:00Z TO 1985-10-10T13:59:59Z]'
+                    },
+                    'rek_updated_date': {
+                        label: '[09/10/1980 to 10/10/1982]',
+                        value: '[1980-10-09T14:00:00Z TO 1982-10-10T13:59:59Z]'
                     }
                 },
-                "sortBy": "score",
-                "sortDirection": "Desc"
+                sortBy: 'score',
+                sortDirection: 'Desc'
             }
         });
     });
 
     it('should handle simple search', () => {
         const testMethod = jest.fn();
-        const testHistoryPushMehtod = jest.fn();
+        const testHistoryPushMethod = jest.fn();
         const wrapper = setup({
-            actions: {searchEspacePublications: testMethod},
-            history: {push: testHistoryPushMehtod}
+            actions: { searchEspacePublications: testMethod },
+            history: { push: testHistoryPushMethod }
         });
 
         wrapper.state().simpleSearch = {
@@ -415,11 +419,14 @@ describe('SearchComponent', () => {
         wrapper.instance()._handleSimpleSearch();
 
         expect(testMethod).toHaveBeenCalled();
-        expect(testHistoryPushMehtod).toHaveBeenCalledWith({
+        expect(testHistoryPushMethod).toHaveBeenCalledWith({
             pathname: '/records/search',
             search: 'searchQueryParams%5Ball%5D=i+feel+lucky&page=1&pageSize=20&sortBy=score&sortDirection=Desc',
             state: {
-                activeFacets: {filters: {}, ranges: {}},
+                activeFacets: {
+                    filters: {},
+                    ranges: {}
+                },
                 page: 1,
                 pageSize: 20,
                 searchQueryParams: {
@@ -439,7 +446,7 @@ describe('SearchComponent', () => {
     });
 
     it('should toggle advanced search to minimised view', () => {
-        const wrapper = setup({isAdvancedSearch: true});
+        const wrapper = setup({ isAdvancedSearch: true });
 
         expect(wrapper.state().advancedSearch).toEqual({
             docTypes: [],
@@ -474,7 +481,7 @@ describe('SearchComponent', () => {
     });
 
     it('should toggle to advanced search', () => {
-        const wrapper = setup({isAdvancedSearch: false});
+        const wrapper = setup({ isAdvancedSearch: false });
 
         wrapper.instance()._toggleSearchMode();
         wrapper.update();
@@ -484,7 +491,7 @@ describe('SearchComponent', () => {
     });
 
     it('should toggle open access for advanced search', () => {
-        const wrapper = setup({isAdvancedSearch: true});
+        const wrapper = setup({ isAdvancedSearch: true });
 
         expect(wrapper.state().advancedSearch).toEqual({
             docTypes: [],
@@ -520,7 +527,7 @@ describe('SearchComponent', () => {
     });
 
     it('should toggle to simple search', () => {
-        const wrapper = setup({isAdvancedSearch: true});
+        const wrapper = setup({ isAdvancedSearch: true });
 
         wrapper.instance()._toggleSearchMode();
         wrapper.update();
@@ -548,11 +555,11 @@ describe('SearchComponent', () => {
         });
 
         expect(wrapper.state().advancedSearch).toEqual({
-            "docTypes": [],
-            "fieldRows": [{"label": "", "searchField": "all", "value": "i feel lucky"}],
-            "isMinimised": false,
-            "isOpenAccess": false,
-            "yearFilter": {}
+            docTypes: [],
+            fieldRows: [{ label: '', searchField: 'all', value: 'i feel lucky' }],
+            isMinimised: false,
+            isOpenAccess: false,
+            yearFilter: {}
         });
 
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -584,23 +591,23 @@ describe('SearchComponent', () => {
     it('should remove one row from advanced search', () => {
         const wrapper = setup({
             searchQueryParams: {
-                all: {value: 'i feel lucky', label: ''},
-                rek_title: {value: 'remove rek title field', label: ''},
+                all: { value: 'i feel lucky', label: '' },
+                rek_title: { value: 'remove rek title field', label: '' },
                 docTypes: [],
             },
             isAdvancedSearch: true
         });
 
         expect(wrapper.state().advancedSearch).toEqual({
-            "docTypes": [],
-            "fieldRows": [{"label": "", "searchField": "all", "value": "i feel lucky"}, {
-                "label": "",
-                "searchField": "rek_title",
-                "value": "remove rek title field"
-            }, {"label": "", "searchField": "docTypes", "value": []}],
-            "isMinimised": false,
-            "isOpenAccess": false,
-            "yearFilter": {}
+            docTypes: [],
+            fieldRows: [{ label: '', searchField: 'all', value: 'i feel lucky' }, {
+                label: '',
+                searchField: 'rek_title',
+                value: 'remove rek title field'
+            }, { label: '', searchField: 'docTypes', value: [] }],
+            isMinimised: false,
+            isOpenAccess: false,
+            yearFilter: {}
         });
 
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -617,7 +624,7 @@ describe('SearchComponent', () => {
                     label: ''
                 },
                 {
-                    searchField: "docTypes",
+                    searchField: 'docTypes',
                     value: [],
                     label: ''
                 },
@@ -633,17 +640,17 @@ describe('SearchComponent', () => {
     it('should update advanced search row on search text changed', () => {
         const wrapper = setup({
             searchQueryParams: {
-                all: {value: 'i feel lucky', label: ''}
+                all: { value: 'i feel lucky', label: '' }
             },
             isAdvancedSearch: true
         });
 
         expect(wrapper.state().advancedSearch).toEqual({
-            "docTypes": [],
-            "fieldRows": [{"label": "", "searchField": "all", "value": "i feel lucky"}],
-            "isMinimised": false,
-            "isOpenAccess": false,
-            "yearFilter": {}
+            docTypes: [],
+            fieldRows: [{ label: '', searchField: 'all', value: 'i feel lucky' }],
+            isMinimised: false,
+            isOpenAccess: false,
+            yearFilter: {}
         });
 
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -675,10 +682,10 @@ describe('SearchComponent', () => {
     it('should reset advanced search', () => {
         const wrapper = setup({
             searchQueryParams: {
-                all: {value: 'i feel lucky', label: ''},
-                rek_title: {value: 'global warming', label: ''}
+                all: { value: 'i feel lucky', label: '' },
+                rek_title: { value: 'global warming', label: '' }
             },
-            activeFacets: {filters: {}, ranges: {}},
+            activeFacets: { filters: {}, ranges: {} },
             isAdvancedSearch: true,
             isOpenAccessInAdvancedMode: true
         });
@@ -708,17 +715,17 @@ describe('SearchComponent', () => {
         wrapper.update();
 
         expect(wrapper.state().advancedSearch).toEqual({
-            "docTypes": [],
-            "fieldRows": [{"searchField": "0", "value": ""}],
-            "isOpenAccess": false,
-            "yearFilter": {"from": 0, "to": 0}
+            docTypes: [],
+            fieldRows: [{ searchField: '0', value: '' }],
+            isOpenAccess: false,
+            yearFilter: { from: 0, to: 0 }
         });
 
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should update doc type values', () => {
-        const wrapper = setup({isAdvancedSearch: true});
+        const wrapper = setup({ isAdvancedSearch: true });
         const setState = jest.spyOn(wrapper.instance(), 'setState');
 
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -743,7 +750,7 @@ describe('SearchComponent', () => {
     });
 
     it('should update year range filter', () => {
-        const wrapper = setup({isAdvancedSearch: true});
+        const wrapper = setup({ isAdvancedSearch: true });
         const setState = jest.spyOn(wrapper.instance(), 'setState');
 
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -777,7 +784,7 @@ describe('SearchComponent', () => {
 
 
     it('should update date range filter', () => {
-        const wrapper = setup({isAdvancedSearch: true});
+        const wrapper = setup({ isAdvancedSearch: true });
         const setState = jest.spyOn(wrapper.instance(), 'setState');
 
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -834,14 +841,14 @@ describe('SearchComponent', () => {
             const wrapper = setup({});
             const fieldRows = wrapper.instance().getFieldRowsFromSearchQuery(undefined);
 
-            expect(fieldRows).toEqual([{searchField: '0', value: '', label: ''}]);
+            expect(fieldRows).toEqual([{ searchField: '0', value: '', label: '' }]);
         });
 
         it('should get default field if search query params not set (empty object)', () => {
             const wrapper = setup({});
             const fieldRows = wrapper.instance().getFieldRowsFromSearchQuery({});
 
-            expect(fieldRows).toEqual([{searchField: '0', value: '', label: ''}]);
+            expect(fieldRows).toEqual([{ searchField: '0', value: '', label: '' }]);
         });
 
         it('should process empty search query', () => {
@@ -899,9 +906,9 @@ describe('SearchComponent', () => {
 
             const fieldRows = wrapper.instance().getFieldRowsFromSearchQuery({
                 all: 'test',
-                rek_status: {value: 3},
-                rek_created_date: {label: '[31/01/2019 to 12/02/2019]'},
-                rek_updated_date: {label: '[31/01/2019 to 12/02/2019]'}
+                rek_status: { value: 3 },
+                rek_created_date: { label: '[31/01/2019 to 12/02/2019]' },
+                rek_updated_date: { label: '[31/01/2019 to 12/02/2019]' }
             });
 
             expect(fieldRows).toEqual([
@@ -939,8 +946,8 @@ describe('SearchComponent', () => {
         it('should get date range from search query', () => {
             const wrapper = setup({});
             const dateRange = wrapper.instance().getDateRangeFromSearchQuery({
-                rek_created_date: {label: '[31/01/2019 to 12/02/2019]'},
-                rek_updated_date: {label: '[31/01/2019 to 12/02/2019]'}
+                rek_created_date: { label: '[31/01/2019 to 12/02/2019]' },
+                rek_updated_date: { label: '[31/01/2019 to 12/02/2019]' }
             });
             expect(dateRange).toEqual({
                 createdRange: {
