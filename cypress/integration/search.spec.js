@@ -1,5 +1,5 @@
 // import { default as componentsLocale } from '../../src/locale/components';
-import internalTitleSearchList from '../../src/mock/data/records/internalTitleSearchList.js';
+// import internalTitleSearchList from '../../src/mock/data/records/internalTitleSearchList.js';
 
 context('Search', () => {
     // const searchLocale = componentsLocale.components.searchComponent;
@@ -127,94 +127,94 @@ context('Search', () => {
             .contains('Displaying works 1 to 7 of 7 total records.');
     });
 
-    context('API call tests', () => {
-        it('should issue and handle API calls as expected when searching from homepage header', () => {
-            let count = 0;
-            const baseUrl = 'http://dev-espace.library.uq.edu.au:3000';
-            Cypress.config('baseUrl', baseUrl);
-            cy.server();
-            cy.route('https://api.library.uq.edu.au/staging/fez-news', []);
-            cy.route('https://api.library.uq.edu.au/staging/records/trending', []);
-            cy.route({
-                url: 'https://api.library.uq.edu.au/staging/records/search*',
-                response: {
-                    ...internalTitleSearchList,
-                    total: 5,
-                    to: 5,
-                    data: internalTitleSearchList.data.slice(-5),
-                },
-                headers: {
-                    'content-type': 'application/json',
-                },
-                onRequest: () => {
-                    count++;
-                },
-                delay: 500,
-            })
-                .as('searchAPICall');
+    // context('API call tests', () => {
+    //     it('should issue and handle API calls as expected when searching from homepage header', () => {
+    //         let count = 0;
+    //         const baseUrl = 'http://dev-espace.library.uq.edu.au:3000';
+    //         Cypress.config('baseUrl', baseUrl);
+    //         cy.server();
+    //         cy.route('https://api.library.uq.edu.au/staging/fez-news', []);
+    //         cy.route('https://api.library.uq.edu.au/staging/records/trending', []);
+    //         cy.route({
+    //             url: 'https://api.library.uq.edu.au/staging/records/search*',
+    //             response: {
+    //                 ...internalTitleSearchList,
+    //                 total: 5,
+    //                 to: 5,
+    //                 data: internalTitleSearchList.data.slice(-5),
+    //             },
+    //             headers: {
+    //                 'content-type': 'application/json',
+    //             },
+    //             onRequest: () => {
+    //                 count++;
+    //             },
+    //             delay: 500,
+    //         })
+    //             .as('searchAPICall');
 
-            cy.visit('/');
-            dismissUnsupportedBrowserMessage();
+    //         cy.visit('/');
+    //         dismissUnsupportedBrowserMessage();
 
-            cy.get('#simpleSearchField')
-                .type('test1{enter}');
+    //         cy.get('#simpleSearchField')
+    //             .type('test1{enter}');
 
-            cy.get('.StandardPage > div > div > div:nth-of-type(2)')
-                .should('contain', 'Searching for works');
+    //         cy.get('.StandardPage > div > div > div:nth-of-type(2)')
+    //             .should('contain', 'Searching for works');
 
-            cy.url()
-                .should('equal',
-                    `${baseUrl}/#/records/search?searchQueryParams%5Ball%5D=test1&page=1&pageSize=20&sortBy=score&sortDirection=Desc`
-                );
-            cy.wait(['@searchAPICall']);
+    //         cy.url()
+    //             .should('equal',
+    //                 `${baseUrl}/#/records/search?searchQueryParams%5Ball%5D=test1&page=1&pageSize=20&sortBy=score&sortDirection=Desc`
+    //             );
+    //         cy.wait(['@searchAPICall']);
 
-            dismissUnsupportedBrowserMessage();
+    //         dismissUnsupportedBrowserMessage();
 
-            cy.get('.StandardPage > div > div > div:nth-of-type(2)')
-                .contains('Displaying works 1 to 5 of 5 total records.')
-                .then(() => {
-                    expect(count).to.equal(1);
-                });
-        });
+    //         cy.get('.StandardPage > div > div > div:nth-of-type(2)')
+    //             .contains('Displaying works 1 to 5 of 5 total records.')
+    //             .then(() => {
+    //                 expect(count).to.equal(1);
+    //             });
+    //     });
 
-        it('should issue and handle API calls as expected when changing the search query', () => {
-            let count = 0;
-            Cypress.config('baseUrl', 'http://dev-espace.library.uq.edu.au:3000');
-            cy.server();
-            cy.route({
-                url: 'https://api.library.uq.edu.au/staging/records/search*',
-                response: {
-                    ...internalTitleSearchList,
-                    total: 5,
-                    to: 5,
-                    data: internalTitleSearchList.data.slice(-5),
-                },
-                headers: {
-                    'content-type': 'application/json',
-                },
-                onRequest: () => {
-                    count++;
-                },
-                delay: 500,
-            })
-                .as('searchAPICall');
+    //     it('should issue and handle API calls as expected when changing the search query', () => {
+    //         let count = 0;
+    //         Cypress.config('baseUrl', 'http://dev-espace.library.uq.edu.au:3000');
+    //         cy.server();
+    //         cy.route({
+    //             url: 'https://api.library.uq.edu.au/staging/records/search*',
+    //             response: {
+    //                 ...internalTitleSearchList,
+    //                 total: 5,
+    //                 to: 5,
+    //                 data: internalTitleSearchList.data.slice(-5),
+    //             },
+    //             headers: {
+    //                 'content-type': 'application/json',
+    //             },
+    //             onRequest: () => {
+    //                 count++;
+    //             },
+    //             delay: 500,
+    //         })
+    //             .as('searchAPICall');
 
-            cy.visit('/#/records/search');
-            dismissUnsupportedBrowserMessage();
+    //         cy.visit('/#/records/search');
+    //         dismissUnsupportedBrowserMessage();
 
-            cy.get('#simpleSearchField')
-                .type('vaccination{enter}');
+    //         cy.get('#simpleSearchField')
+    //             .type('vaccination{enter}');
 
-            cy.get('.StandardPage > div > div > div:nth-of-type(2)')
-                .should('contain', 'Searching for works');
+    //         cy.get('.StandardPage > div > div > div:nth-of-type(2)')
+    //             .should('contain', 'Searching for works');
 
-            cy.wait(['@searchAPICall']);
+    //         cy.wait(['@searchAPICall']);
 
-            cy.get('.StandardPage > div > div > div:nth-of-type(2)')
-                .contains('Displaying works 1 to 5 of 5 total records.')
-                .then(() => {
-                    expect(count).to.equal(1);
-                });
-        });
-    });
+    //         cy.get('.StandardPage > div > div > div:nth-of-type(2)')
+    //             .contains('Displaying works 1 to 5 of 5 total records.')
+    //             .then(() => {
+    //                 expect(count).to.equal(1);
+    //             });
+    //     });
+    // });
 });
