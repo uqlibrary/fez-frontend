@@ -113,8 +113,8 @@ export default class PossiblyMyRecords extends PureComponent {
     };
 
     _claimPublication = (item) => {
-        this.props.history.push(pathConfig.records.claim);
         this.props.actions.setClaimPublication(item);
+        this.props.history.push(pathConfig.records.claim);
     };
 
     _facetsChanged = (activeFacets) => {
@@ -279,6 +279,7 @@ export default class PossiblyMyRecords extends PureComponent {
                                                 }
                                                 <Grid item xs>
                                                     <PublicationsList
+                                                        publicationsLoading={this.props.loadingPossiblePublicationsList || this.props.loadingPossibleCounts}
                                                         publicationsList={this.props.possiblePublicationsList}
                                                         publicationsListSubset={this.props.publicationsClaimedInProgress}
                                                         subsetCustomActions={inProgress}
