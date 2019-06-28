@@ -128,15 +128,26 @@ context('Search', () => {
     });
 
     // context('API call tests', () => {
-    //     it('should issue and handle API calls as expected when searching from homepage header', () => {
-    //         let count = 0;
-    //         const baseUrl = 'http://dev-espace.library.uq.edu.au:3000';
-    //         Cypress.config('baseUrl', baseUrl);
-    //         cy.server();
-    //         cy.route('https://api.library.uq.edu.au/staging/fez-news', []);
-    //         cy.route('https://api.library.uq.edu.au/staging/records/trending', []);
+    //     // Should be run in exclusion while running with `npm run start:url`
+    //
+    //     let count = 0;
+    //     const baseUrl = 'http://dev-espace.library.uq.edu.au:3000';
+    //     Cypress.config('baseUrl', baseUrl);
+
+    //     beforeEach(() => {
+    //         cy.server({
+    //             response: [],
+    //         });
+    //         cy.route({
+    //             url: 'https://api.library.uq.edu.au/staging/account*',
+    //             status: 403,
+    //         });
+    //         cy.route('https://api.library.uq.edu.au/staging/fez-news');
+    //         cy.route('https://api.library.uq.edu.au/staging/records/trending');
     //         cy.route({
     //             url: 'https://api.library.uq.edu.au/staging/records/search*',
+    //             // For some reasons, returning the full list seems to be
+    //             // resulting in test failure.
     //             response: {
     //                 ...internalTitleSearchList,
     //                 total: 5,
@@ -152,7 +163,16 @@ context('Search', () => {
     //             delay: 500,
     //         })
     //             .as('searchAPICall');
+    //     });
 
+    //     afterEach(() => {
+    //         count = 0;
+    //         cy.server({
+    //             enable: false
+    //         });
+    //     });
+
+    //     it('should issue and handle API calls as expected when searching from homepage header', () => {
     //         cy.visit('/');
     //         dismissUnsupportedBrowserMessage();
 
@@ -178,27 +198,6 @@ context('Search', () => {
     //     });
 
     //     it('should issue and handle API calls as expected when changing the search query', () => {
-    //         let count = 0;
-    //         Cypress.config('baseUrl', 'http://dev-espace.library.uq.edu.au:3000');
-    //         cy.server();
-    //         cy.route({
-    //             url: 'https://api.library.uq.edu.au/staging/records/search*',
-    //             response: {
-    //                 ...internalTitleSearchList,
-    //                 total: 5,
-    //                 to: 5,
-    //                 data: internalTitleSearchList.data.slice(-5),
-    //             },
-    //             headers: {
-    //                 'content-type': 'application/json',
-    //             },
-    //             onRequest: () => {
-    //                 count++;
-    //             },
-    //             delay: 500,
-    //         })
-    //             .as('searchAPICall');
-
     //         cy.visit('/#/records/search');
     //         dismissUnsupportedBrowserMessage();
 
