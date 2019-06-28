@@ -28,7 +28,7 @@ context('Search', () => {
         cy.get('#simpleSearchField')
             .type('cats and dogs{enter}');
         cy.get('.StandardPage > div > div > div:nth-of-type(2) .StandardCard')
-            .should('contain', 'Displaying works 1 to 6 of 6 total records.');
+            .should('contain', 'Displaying works 1 to 7 of 7 total records.');
         cy.get('.StandardPage > div > div > div:nth-of-type(3) h6')
             .should('contain', 'Refine results');
 
@@ -119,6 +119,6 @@ context('Search', () => {
             .click();
         cy.get('.StandardPage > div > div > div:nth-of-type(2)')
             .should('contain', 'Searching for works')
-            .contains('Displaying works 1 to 6 of 6 total records.');
+            .contains('Displaying works 1 to 7 of 7 total records.');
     });
 });
