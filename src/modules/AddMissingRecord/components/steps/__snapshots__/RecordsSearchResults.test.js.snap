@@ -91,6 +91,7 @@ exports[`Search record results should render a single claimable item with no aut
                 customActions={
                   Array [
                     Object {
+                      "disabled": undefined,
                       "handleAction": [Function],
                       "label": "Claim this work",
                       "primary": true,
@@ -571,6 +572,7 @@ exports[`Search record results should render a single unclaimable item with no a
                 customActions={
                   Array [
                     Object {
+                      "disabled": undefined,
                       "handleAction": [Function],
                       "label": "Claim this work",
                       "primary": true,
@@ -3706,6 +3708,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                                                   customActions={
                                                                     Array [
                                                                       Object {
+                                                                        "disabled": undefined,
                                                                         "handleAction": [Function],
                                                                         "label": "Claim this work",
                                                                         "primary": true,
@@ -3791,6 +3794,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                                                       Object {
                                                                         "customActions": Array [
                                                                           Object {
+                                                                            "disabled": undefined,
                                                                             "handleAction": [Function],
                                                                             "label": "Claim this work",
                                                                             "primary": true,
@@ -3855,6 +3859,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                                                         "publicationsListSubset": Array [
                                                                           "UQ:795469",
                                                                         ],
+                                                                        "publicationsLoading": undefined,
                                                                         "showSources": true,
                                                                         "subsetCustomActions": Array [
                                                                           Object {
@@ -7010,6 +7015,7 @@ exports[`Search record results should render publications list with one publicat
                 customActions={
                   Array [
                     Object {
+                      "disabled": undefined,
                       "handleAction": [Function],
                       "label": "Claim this work",
                       "primary": true,

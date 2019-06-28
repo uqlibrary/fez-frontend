@@ -15,6 +15,7 @@ export default class PublicationsList extends PureComponent {
         showUnpublishedBufferFields: PropTypes.bool,
         hideCountDiff: PropTypes.bool,
         hideCountTotal: PropTypes.bool,
+        publicationsLoading: PropTypes.bool,
     };
 
     static defaultProps = {
@@ -31,6 +32,7 @@ export default class PublicationsList extends PureComponent {
     renderPublicationCitation(index, publication) {
         return (
             <PublicationCitation
+                publicationsLoading={this.props.publicationsLoading}
                 key={index + publication.rek_title + publication.rek_date}
                 publication={publication}
                 customActions={!publication.rek_pid || this.props.publicationsListSubset.indexOf(publication.rek_pid) === -1 ? this.props.customActions : this.props.subsetCustomActions}
