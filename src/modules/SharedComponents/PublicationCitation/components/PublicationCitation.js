@@ -270,7 +270,6 @@ export class PublicationCitation extends PureComponent {
         const {classes} = this.props;
         const txt = locale.components.publicationCitation;
         const recordValue = this.props.showMetrics && this.props.publication.metricData;
-        console.log(this.props.publicationsLoading);
         return (
             <React.Fragment>
                 <Grid container spacing={0}>
