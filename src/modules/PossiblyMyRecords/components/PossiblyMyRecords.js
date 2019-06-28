@@ -279,6 +279,7 @@ export default class PossiblyMyRecords extends PureComponent {
                                                 }
                                                 <Grid item xs>
                                                     <PublicationsList
+                                                        publicationsLoading={this.props.loadingPossiblePublicationsList || this.props.loadingPossibleCounts}
                                                         publicationsList={this.props.possiblePublicationsList}
                                                         publicationsListSubset={this.props.publicationsClaimedInProgress}
                                                         subsetCustomActions={inProgress}

@@ -111,7 +111,8 @@ export default class RecordsSearchResults extends PureComponent {
             {
                 label: searchResultsTxt.claim,
                 handleAction: this._claimPublication,
-                primary: true
+                primary: true,
+                disabled: this.props.searchLoading
             }
         ];
 
@@ -154,6 +155,7 @@ export default class RecordsSearchResults extends PureComponent {
                                         </Grid>
                                         <Grid item xs={12}>
                                             <PublicationsList
+                                                publicationsLoading={this.props.searchLoading}
                                                 publicationsList={this.props.publicationsList}
                                                 customActions={actions}
                                                 publicationsListSubset={unclaimablePublicationsList}
