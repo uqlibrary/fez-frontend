@@ -28,7 +28,7 @@ const handlers = {
         {
             ...state,
             publicationToClaimFileUploadingError: false,
-            publicationToClaim: {rek_pid: action.payload.rek_pid},
+            publicationToClaim: action.payload,
             fullPublicationToClaim: null
         }
     ),
