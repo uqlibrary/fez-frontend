@@ -10,33 +10,11 @@ context('Request correction form', () => {
 
     beforeEach(() => {
         cy.visit('/records/UQ:67abc8/fix');
-        cy.get('#unsupportedBrowser.card button')
-            .then(($button) => {
-                // Button is only visible if browser is unsupported.
-                if ($button.filter(':visible').length) {
-                    cy.wrap($button)
-                        .click();
-                }
-            });
+        cy.closeUnsupported();
     });
 
     afterEach(() => {
-        // Navigate away to trigger 'Are you sure' dialogue about unsaved changes
-        cy.get('button[title="Main navigation"]')
-            .click();
-        cy.get('#mainMenu .menu-item-container')
-            .contains('Home')
-            .click();
-        // Say yes to 'Are you sure' if it does trigger
-        cy.url()
-            .then(($url) => {
-                if ($url !== `${baseUrl}/`) {
-                    cy.contains(fixFormLocale.cancelWorkflowConfirmation.confirmationTitle)
-                        .closest('[role="document"]')
-                        .contains(fixFormLocale.cancelWorkflowConfirmation.confirmButtonLabel)
-                        .click();
-                }
-            });
+        cy.navToHomeFromMenu(fixFormLocale.cancelWorkflowConfirmation);
     });
 
     it('should render as expected', () => {
