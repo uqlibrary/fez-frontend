@@ -4,20 +4,10 @@
 context('Search', () => {
     // const searchLocale = componentsLocale.components.searchComponent;
     const cleanExtraSpaces = $string => $string.replace(/\s+/g, ' ').trim();
-    const dismissUnsupportedBrowserMessage = () => {
-        cy.get('#unsupportedBrowser.card button')
-            .then(($button) => {
-                // Button is only visible if browser is unsupported.
-                if ($button.filter(':visible').length) {
-                    cy.wrap($button)
-                        .click();
-                }
-            });
-    };
 
     it('Doing a basic search to advanced search', () => {
         cy.visit('/records/search');
-        dismissUnsupportedBrowserMessage();
+        cy.closeUnsupported();
 
         // Perform a basic search
         cy.get('#simpleSearchField')
@@ -174,7 +164,7 @@ context('Search', () => {
 
     //     it('should issue and handle API calls as expected when searching from homepage header', () => {
     //         cy.visit('/');
-    //         dismissUnsupportedBrowserMessage();
+    //         cy.closeUnsupported();
 
     //         cy.get('#simpleSearchField')
     //             .type('test1{enter}');
@@ -188,7 +178,7 @@ context('Search', () => {
     //             );
     //         cy.wait(['@searchAPICall']);
 
-    //         dismissUnsupportedBrowserMessage();
+    //         cy.closeUnsupported();
 
     //         cy.get('.StandardPage > div > div > div:nth-of-type(2)')
     //             .contains('Displaying works 1 to 5 of 5 total records.')
@@ -199,7 +189,7 @@ context('Search', () => {
 
     //     it('should issue and handle API calls as expected when changing the search query', () => {
     //         cy.visit('/#/records/search');
-    //         dismissUnsupportedBrowserMessage();
+    //         cy.closeUnsupported();
 
     //         cy.get('#simpleSearchField')
     //             .type('vaccination{enter}');
