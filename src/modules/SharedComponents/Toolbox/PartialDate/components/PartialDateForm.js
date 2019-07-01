@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import TextField from '@material-ui/core/TextField';
@@ -9,7 +9,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 // MUI 1
 import Grid from '@material-ui/core/Grid';
 import FormHelperText from '@material-ui/core/FormHelperText';
-import {withStyles} from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 
 const moment = require('moment');
 
@@ -72,11 +72,11 @@ export class PartialDateForm extends Component {
             month: null,
             year: null
         };
-        this.errors = {day: '', month: '', year: ''};
+        this.errors = { day: '', month: '', year: '' };
     }
 
     componentDidMount() {
-        this._setDate({day: '', month: '', year: ''});
+        this._setDate({ day: '', month: '', year: '' });
     }
 
     componentWillUpdate(nextProps, nextState) {
@@ -87,7 +87,7 @@ export class PartialDateForm extends Component {
 
     _validate = (state) => {
         let valid;
-        const {day, month, year} = state;
+        const { day, month, year } = state;
 
         if (this.props.allowPartial) {
             valid = !!year && moment(state).isValid();
@@ -98,8 +98,8 @@ export class PartialDateForm extends Component {
     };
 
     _displayErrors = (state, valid) => {
-        const {day, month, year} = state;
-        const {locale} = this.props;
+        const { day, month, year } = state;
+        const { locale } = this.props;
 
         this.errors.year = this.props.floatingTitleRequired && this.props.allowPartial && !year && 'Year required' ||
             !!year && isNaN(year) && locale.validationMessage.year ||
@@ -137,7 +137,7 @@ export class PartialDateForm extends Component {
     };
 
     render() {
-        const {locale, months} = this.props;
+        const { locale, months } = this.props;
         const renderMonths = months.map((month, index) =>
             <MenuItem key={index} value={index}>{month}</MenuItem>
         );
@@ -145,10 +145,10 @@ export class PartialDateForm extends Component {
         return (
             <Grid container spacing={0}>
                 <Grid item xs={12}>
-                    <InputLabel error={!!isError} shrink required={this.props.required} style={{zoom: '0.75'}}>{this.props.floatingTitle}</InputLabel>
+                    <InputLabel error={!!isError} shrink required={this.props.required} style={{ zoom: '0.75' }}>{this.props.floatingTitle}</InputLabel>
                 </Grid>
                 <Grid item xs={12}>
-                    <Grid container spacing={16} style={{marginTop: -12}}>
+                    <Grid container spacing={16} style={{ marginTop: -12 }}>
                         <Grid item xs={4}>
                             <TextField
                                 name="day"
@@ -161,7 +161,7 @@ export class PartialDateForm extends Component {
                                 onChange={this._onDateChanged('day')}
                                 onBlur={!this.props.allowPartial ? this._onDateChanged('day') : undefined}
                                 placeholder={locale.dayLabel}
-                                inputProps={{label: 'day', maxLength: 2}}
+                                inputProps={{ label: 'day', maxLength: 2 }}
                             />
                             {
                                 isError &&
@@ -170,7 +170,7 @@ export class PartialDateForm extends Component {
                         </Grid>
                         <Grid item xs={4}>
                             <Select
-                                style={{width: '100%'}}
+                                style={{ width: '100%' }}
                                 name="month"
                                 id="month"
                                 error={!!isError}
@@ -178,7 +178,7 @@ export class PartialDateForm extends Component {
                                 value={this.state.month === null ? -1 : this.state.month}
                                 placeholder={locale.monthLabel}
                                 onChange={this._onDateChanged('month')}
-                                inputProps={{label: 'month', maxLength: 2}}
+                                inputProps={{ label: 'month', maxLength: 2 }}
                             >
                                 <MenuItem key={-1} value={-1} disabled>Month</MenuItem>
                                 {renderMonths}
@@ -196,7 +196,7 @@ export class PartialDateForm extends Component {
                                 onKeyPress={this._isNumber}
                                 onChange={this._onDateChanged('year')}
                                 onBlur={this._onDateChanged('year')}
-                                inputProps={{label: 'year', maxLength: 4}}
+                                inputProps={{ label: 'year', maxLength: 4 }}
                             />
                         </Grid>
                     </Grid>

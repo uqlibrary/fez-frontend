@@ -1,4 +1,4 @@
-import {PartialDateForm} from './PartialDateForm';
+import { PartialDateForm } from './PartialDateForm';
 
 function setup(testProps, isShallow = true) {
     const props = {
@@ -16,6 +16,20 @@ describe('PartialDateForm component', () => {
         wrapper.instance()._setDate = jest.fn();
         wrapper.instance().componentWillUpdate();
         expect(wrapper.instance()._setDate).not.toBeCalled();
+    });
+
+    it('should display errors correctly', () => {
+        const wrapper = setup({
+            floatingTitleRequired: true,
+            allowPartial: true,
+        });
+        wrapper.setState({
+            day: '',
+            month: '',
+            year: NaN
+        });
+        wrapper.update();
+        expect(toJson(wrapper)).toMatchSnapshot();
     });
 });
 
