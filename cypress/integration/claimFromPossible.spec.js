@@ -19,6 +19,7 @@ context('Claim possible work', () => {
     it('renders a list of possible works with filters', () => {
         cy.get('h2')
             .should('have.length', 1)
+            // .should('contain', possibleClaimsLocale.title);
             .should('contain', 'Claim possible works');
         cy.get('h2 + div')
             .should('have.length', 1)

@@ -14,9 +14,10 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import 'cypress-plugin-tab';
 import './commands';
-// import 'cypress-plugin-snapshots/commands';
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+
+import 'cypress-file-upload';
+import 'cypress-plugin-tab';
