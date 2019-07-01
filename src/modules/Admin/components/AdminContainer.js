@@ -117,7 +117,7 @@ export const AdminContainer = ({
                         },
                         files: {
                             component: FilesSection,
-                            activated: true
+                            activated: false
                         },
                         security: {
                             component: SecuritySection,
