@@ -9,9 +9,6 @@ function setup(testProps, isShallow = true) {
         actions: testProps.actions || {
             loadRecordToView: jest.fn(),
             clearRecordToView: jest.fn()
-        },
-        account: testProps.account || {
-            canMasquerade: false
         }
     };
     return getElement(ViewRecord, props, isShallow);
