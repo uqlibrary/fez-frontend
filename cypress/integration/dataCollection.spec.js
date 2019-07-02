@@ -1,6 +1,6 @@
 context('Dataset', () => {
     beforeEach(() => {
-        cy.visit('http://dev-espace.library.uq.edu.au:3000/data-collections/add');
+        cy.visit('/data-collections/add');
         cy.viewport(1000, 1400);
         cy.get('#unsupportedBrowser.card button').then($button => {
             // Button is only visible if browser is unsupported.
