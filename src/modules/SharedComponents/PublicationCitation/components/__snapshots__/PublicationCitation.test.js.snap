@@ -37,7 +37,9 @@ Object {
 `;
 
 exports[`PublicationCitation  should render button disabled with spinners on action buttons while loading 1`] = `
-<Fragment>
+<div
+  className="publicationCitation"
+>
   <WithStyles(Grid)
     container={true}
     spacing={0}
@@ -1054,7 +1056,7 @@ exports[`PublicationCitation  should render button disabled with spinners on act
       Scholarship of Teaching and Learning, Protocol
     </WithStyles(Typography)>
   </WithStyles(Grid)>
-</Fragment>
+</div>
 `;
 
 exports[`PublicationCitation  should render component with content indicators 1`] = `
