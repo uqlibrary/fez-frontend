@@ -68,6 +68,7 @@ exports[`SecurityCard component should not render data stream security selector 
                 "type": [Function],
               }
             }
+            disabled={false}
             label="Override inherited security (detailed below)"
             name="securitySection.rek_security_inherited"
             normalize={[Function]}
@@ -308,6 +309,7 @@ exports[`SecurityCard component should render security card correctly for record
                 "type": [Function],
               }
             }
+            disabled={false}
             label="Override inherited security (detailed below)"
             name="securitySection.rek_security_inherited"
             normalize={[Function]}
@@ -464,6 +466,7 @@ exports[`SecurityCard component should render security card correctly for record
                 "type": [Function],
               }
             }
+            disabled={false}
             label="Override inherited security (detailed below)"
             name="securitySection.rek_security_inherited"
             normalize={[Function]}
@@ -655,6 +658,7 @@ exports[`SecurityCard component should render security card with disabled inputs
                 "type": [Function],
               }
             }
+            disabled={true}
             label="Override inherited security (detailed below)"
             name="securitySection.rek_security_inherited"
             normalize={[Function]}

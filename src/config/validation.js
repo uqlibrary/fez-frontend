@@ -227,8 +227,13 @@ export const translateFormErrorsToText = (formErrors) => {
     return errorMessagesList.length > 0 ? errorMessagesList : null;
 };
 
-export const getErrorAlertProps = ({submitting = false,
-    error, formErrors, submitSucceeded = false, alertLocale = {}}) => {
+export const getErrorAlertProps = ({
+    submitting = false,
+    error,
+    formErrors,
+    submitSucceeded = false,
+    alertLocale = {}
+}) => {
     let alertProps = null;
     if (submitting) {
         alertProps = {...alertLocale.progressAlert};

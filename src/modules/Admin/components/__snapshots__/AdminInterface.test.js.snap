@@ -12,6 +12,19 @@ exports[`AdminInterface component should render default view as a full form view
       }
     }
   >
+    <ConfirmDialogBox
+      hideCancelButton={false}
+      locale={
+        Object {
+          "cancelButtonLabel": "Cancel",
+          "confirmButtonLabel": "Edit another work",
+          "confirmationMessage": "Work has been updated",
+          "confirmationTitle": "Work has been updated",
+        }
+      }
+      onAction={[Function]}
+      onRef={[Function]}
+    />
     <WithStyles(Grid)
       item={true}
       style={
@@ -107,6 +120,7 @@ exports[`AdminInterface component should render default view as a full form view
       >
         <WithStyles(Button)
           color="primary"
+          disabled={false}
           fullWidth={true}
           onClick={[MockFunction]}
           style={
@@ -136,6 +150,19 @@ exports[`AdminInterface component should render default view as a tabbed form vi
       }
     }
   >
+    <ConfirmDialogBox
+      hideCancelButton={false}
+      locale={
+        Object {
+          "cancelButtonLabel": "Cancel",
+          "confirmButtonLabel": "Edit another work",
+          "confirmationMessage": "Work has been updated",
+          "confirmationTitle": "Work has been updated",
+        }
+      }
+      onAction={[Function]}
+      onRef={[Function]}
+    />
     <WithStyles(Grid)
       item={true}
       style={
@@ -249,6 +276,7 @@ exports[`AdminInterface component should render default view as a tabbed form vi
       >
         <WithStyles(Button)
           color="primary"
+          disabled={false}
           fullWidth={true}
           onClick={[MockFunction]}
           style={

@@ -53,9 +53,11 @@ export const AdminContainer = ({
     location,
     classes,
     submitting,
+    submitSucceeded,
     disableSubmit,
     handleSubmit,
-    match
+    match,
+    history
 }) => {
     const [tabbed, setTabbed] = useState(
         Cookies.get('adminFormTabbed') &&
@@ -92,8 +94,10 @@ export const AdminContainer = ({
                     handleSubmit={handleSubmit}
                     record={recordToView}
                     submitting={submitting}
+                    submitSucceeded={submitSucceeded}
                     disableSubmit={disableSubmit}
                     location={location}
+                    history={history}
                     tabs={{
                         bibliographic: {
                             component: BibliographicSection,
@@ -137,13 +141,17 @@ AdminContainer.propTypes = {
     location: PropTypes.object,
     classes: PropTypes.object,
     submitting: PropTypes.any,
+    submitSucceeded: PropTypes.bool,
     disableSubmit: PropTypes.any,
     handleSubmit: PropTypes.func,
-    match: PropTypes.object
+    match: PropTypes.object,
+    history: PropTypes.object
 };
 
 export function isChanged(prevProps, nextProps) {
     return prevProps.disableSubmit === nextProps.disableSubmit &&
+        prevProps.submitting === nextProps.submitting &&
+        prevProps.submitSucceeded === nextProps.submitSucceeded &&
         (prevProps.recordToView || {}).pid === (nextProps.recordToView || {}).pid &&
         prevProps.loadingRecordToView === nextProps.loadingRecordToView;
 }

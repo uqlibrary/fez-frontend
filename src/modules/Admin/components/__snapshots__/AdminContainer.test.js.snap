@@ -589,6 +589,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                     "dsi_mimetype": "text/xml",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:252236",
+                    "dsi_security_inherited": 1,
+                    "dsi_security_policy": 1,
                     "dsi_size": 3097,
                     "dsi_state": "A",
                   },
@@ -600,6 +602,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                     "dsi_mimetype": "text/xml",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:252236",
+                    "dsi_security_inherited": 1,
+                    "dsi_security_policy": 1,
                     "dsi_size": 3097,
                     "dsi_state": "A",
                   },
@@ -611,6 +615,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                     "dsi_mimetype": "text/xml",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:252236",
+                    "dsi_security_inherited": 1,
+                    "dsi_security_policy": 1,
                     "dsi_size": 3092,
                     "dsi_state": "A",
                   },
@@ -622,6 +628,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                     "dsi_mimetype": "text/xml",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:252236",
+                    "dsi_security_inherited": 1,
+                    "dsi_security_policy": 1,
                     "dsi_size": 3097,
                     "dsi_state": "A",
                   },
@@ -633,6 +641,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                     "dsi_mimetype": "text/xml",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:252236",
+                    "dsi_security_inherited": 1,
+                    "dsi_security_policy": 1,
                     "dsi_size": 3097,
                     "dsi_state": "A",
                   },
@@ -644,6 +654,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                     "dsi_mimetype": "text/xml",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:252236",
+                    "dsi_security_inherited": 1,
+                    "dsi_security_policy": 1,
                     "dsi_size": 3705,
                     "dsi_state": "A",
                   },
@@ -655,6 +667,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                     "dsi_mimetype": "text/xml",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:252236",
+                    "dsi_security_inherited": 1,
+                    "dsi_security_policy": 1,
                     "dsi_size": 3097,
                     "dsi_state": "A",
                   },
@@ -666,6 +680,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                     "dsi_mimetype": "text/xml",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:252236",
+                    "dsi_security_inherited": 1,
+                    "dsi_security_policy": 1,
                     "dsi_size": 3097,
                     "dsi_state": "A",
                   },
@@ -677,6 +693,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                     "dsi_mimetype": "application/pdf",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:252236",
+                    "dsi_security_inherited": 1,
+                    "dsi_security_policy": 1,
                     "dsi_size": 322698,
                     "dsi_state": "D",
                   },
@@ -688,6 +706,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                     "dsi_mimetype": "application/pdf",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:252236",
+                    "dsi_security_inherited": 1,
+                    "dsi_security_policy": 1,
                     "dsi_size": 499269,
                     "dsi_state": "D",
                   },
@@ -699,6 +719,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                     "dsi_mimetype": "application/pdf",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:252236",
+                    "dsi_security_inherited": 1,
+                    "dsi_security_policy": 1,
                     "dsi_size": 499269,
                     "dsi_state": "A",
                   },
@@ -710,6 +732,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                     "dsi_mimetype": "application/pdf",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:252236",
+                    "dsi_security_inherited": 1,
+                    "dsi_security_policy": 1,
                     "dsi_size": 322698,
                     "dsi_state": "D",
                   },
@@ -721,6 +745,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                     "dsi_mimetype": "application/pdf",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:252236",
+                    "dsi_security_inherited": 1,
+                    "dsi_security_policy": 1,
                     "dsi_size": 1099946,
                     "dsi_state": "A",
                   },
@@ -732,6 +758,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                     "dsi_mimetype": "application/pdf",
                     "dsi_open_access": 1,
                     "dsi_pid": "UQ:252236",
+                    "dsi_security_inherited": 1,
+                    "dsi_security_policy": 1,
                     "dsi_size": 273861,
                     "dsi_state": "A",
                   },
@@ -743,6 +771,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                     "dsi_mimetype": "application/pdf",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:252236",
+                    "dsi_security_inherited": 1,
+                    "dsi_security_policy": 1,
                     "dsi_size": 1082235,
                     "dsi_state": "A",
                   },
@@ -754,6 +784,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                     "dsi_mimetype": "application/pdf",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:252236",
+                    "dsi_security_inherited": 1,
+                    "dsi_security_policy": 1,
                     "dsi_size": 1335981,
                     "dsi_state": "A",
                   },
@@ -765,6 +797,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                     "dsi_mimetype": "application/pdf",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:252236",
+                    "dsi_security_inherited": 1,
+                    "dsi_security_policy": 1,
                     "dsi_size": 587005,
                     "dsi_state": "A",
                   },
@@ -776,6 +810,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                     "dsi_mimetype": "application/xml",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:252236",
+                    "dsi_security_inherited": 1,
+                    "dsi_security_policy": 1,
                     "dsi_size": 1247,
                     "dsi_state": "A",
                   },
@@ -787,6 +823,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                     "dsi_mimetype": "application/xml",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:252236",
+                    "dsi_security_inherited": 1,
+                    "dsi_security_policy": 1,
                     "dsi_size": 1295,
                     "dsi_state": "A",
                   },
@@ -798,6 +836,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                     "dsi_mimetype": "application/xml",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:252236",
+                    "dsi_security_inherited": 1,
+                    "dsi_security_policy": 1,
                     "dsi_size": 1311,
                     "dsi_state": "A",
                   },
@@ -809,6 +849,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                     "dsi_mimetype": "application/xml",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:252236",
+                    "dsi_security_inherited": 1,
+                    "dsi_security_policy": 1,
                     "dsi_size": 1247,
                     "dsi_state": "A",
                   },
@@ -820,6 +862,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                     "dsi_mimetype": "application/xml",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:252236",
+                    "dsi_security_inherited": 1,
+                    "dsi_security_policy": 1,
                     "dsi_size": 124519,
                     "dsi_state": "A",
                   },
@@ -831,6 +875,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                     "dsi_mimetype": "application/xml",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:252236",
+                    "dsi_security_inherited": 1,
+                    "dsi_security_policy": 1,
                     "dsi_size": 68060,
                     "dsi_state": "A",
                   },
@@ -842,6 +888,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                     "dsi_mimetype": "text/xml",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:252236",
+                    "dsi_security_inherited": 1,
+                    "dsi_security_policy": 1,
                     "dsi_size": 786,
                     "dsi_state": "A",
                   },
@@ -853,6 +901,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                     "dsi_mimetype": "application/xml",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:252236",
+                    "dsi_security_inherited": 1,
+                    "dsi_security_policy": 1,
                     "dsi_size": 1296,
                     "dsi_state": "A",
                   },
@@ -864,6 +914,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                     "dsi_mimetype": "application/xml",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:252236",
+                    "dsi_security_inherited": 1,
+                    "dsi_security_policy": 1,
                     "dsi_size": 1285,
                     "dsi_state": "A",
                   },
@@ -875,6 +927,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                     "dsi_mimetype": "application/xml",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:252236",
+                    "dsi_security_inherited": 1,
+                    "dsi_security_policy": 1,
                     "dsi_size": 96466,
                     "dsi_state": "A",
                   },
@@ -886,6 +940,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                     "dsi_mimetype": "application/xml",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:252236",
+                    "dsi_security_inherited": 1,
+                    "dsi_security_policy": 1,
                     "dsi_size": 24362,
                     "dsi_state": "A",
                   },
@@ -897,6 +953,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                     "dsi_mimetype": "application/octet-stream",
                     "dsi_open_access": 1,
                     "dsi_pid": "UQ:252236",
+                    "dsi_security_inherited": 1,
+                    "dsi_security_policy": 1,
                     "dsi_size": 25607,
                     "dsi_state": "D",
                   },
@@ -908,6 +966,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                     "dsi_mimetype": "application/octet-stream",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:252236",
+                    "dsi_security_inherited": 1,
+                    "dsi_security_policy": 1,
                     "dsi_size": 25607,
                     "dsi_state": "D",
                   },
@@ -919,6 +979,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                     "dsi_mimetype": "application/pdf",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:252236",
+                    "dsi_security_inherited": 1,
+                    "dsi_security_policy": 1,
                     "dsi_size": 924170,
                     "dsi_state": "A",
                   },
@@ -930,6 +992,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                     "dsi_mimetype": "application/pdf",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:252236",
+                    "dsi_security_inherited": 1,
+                    "dsi_security_policy": 1,
                     "dsi_size": 86383,
                     "dsi_state": "A",
                   },
@@ -941,6 +1005,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                     "dsi_mimetype": "application/octet-stream",
                     "dsi_open_access": 1,
                     "dsi_pid": "UQ:252236",
+                    "dsi_security_inherited": 1,
+                    "dsi_security_policy": 1,
                     "dsi_size": 1617,
                     "dsi_state": "D",
                   },
@@ -1221,6 +1287,11 @@ exports[`AdminContainer component should full mount the component 1`] = `
                 "fez_record_search_key_isi_loc": null,
                 "fez_record_search_key_ismemberof": Array [
                   Object {
+                    "parent": Object {
+                      "rek_datastream_policy": 1,
+                      "rek_pid": "UQ:3935",
+                      "rek_security_policy": 5,
+                    },
                     "rek_ismemberof": "UQ:3935",
                     "rek_ismemberof_id": 11954548,
                     "rek_ismemberof_lookup": "System Documentation and Instructions",
@@ -1229,6 +1300,11 @@ exports[`AdminContainer component should full mount the component 1`] = `
                     "rek_ismemberof_xsdmf_id": null,
                   },
                   Object {
+                    "parent": Object {
+                      "rek_datastream_policy": 2,
+                      "rek_pid": "UQ:230658",
+                      "rek_security_policy": 3,
+                    },
                     "rek_ismemberof": "UQ:230658",
                     "rek_ismemberof_id": 11954549,
                     "rek_ismemberof_lookup": "UQ Library - Scholarly Communication and Digitisation Services",
@@ -1374,6 +1450,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                       "dsi_mimetype": "text/xml",
                       "dsi_open_access": null,
                       "dsi_pid": "UQ:252236",
+                      "dsi_security_inherited": 1,
+                      "dsi_security_policy": 1,
                       "dsi_size": 3097,
                       "dsi_state": "A",
                     },
@@ -1385,6 +1463,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                       "dsi_mimetype": "text/xml",
                       "dsi_open_access": null,
                       "dsi_pid": "UQ:252236",
+                      "dsi_security_inherited": 1,
+                      "dsi_security_policy": 1,
                       "dsi_size": 3097,
                       "dsi_state": "A",
                     },
@@ -1396,6 +1476,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                       "dsi_mimetype": "text/xml",
                       "dsi_open_access": null,
                       "dsi_pid": "UQ:252236",
+                      "dsi_security_inherited": 1,
+                      "dsi_security_policy": 1,
                       "dsi_size": 3092,
                       "dsi_state": "A",
                     },
@@ -1407,6 +1489,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                       "dsi_mimetype": "text/xml",
                       "dsi_open_access": null,
                       "dsi_pid": "UQ:252236",
+                      "dsi_security_inherited": 1,
+                      "dsi_security_policy": 1,
                       "dsi_size": 3097,
                       "dsi_state": "A",
                     },
@@ -1418,6 +1502,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                       "dsi_mimetype": "text/xml",
                       "dsi_open_access": null,
                       "dsi_pid": "UQ:252236",
+                      "dsi_security_inherited": 1,
+                      "dsi_security_policy": 1,
                       "dsi_size": 3097,
                       "dsi_state": "A",
                     },
@@ -1429,6 +1515,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                       "dsi_mimetype": "text/xml",
                       "dsi_open_access": null,
                       "dsi_pid": "UQ:252236",
+                      "dsi_security_inherited": 1,
+                      "dsi_security_policy": 1,
                       "dsi_size": 3705,
                       "dsi_state": "A",
                     },
@@ -1440,6 +1528,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                       "dsi_mimetype": "text/xml",
                       "dsi_open_access": null,
                       "dsi_pid": "UQ:252236",
+                      "dsi_security_inherited": 1,
+                      "dsi_security_policy": 1,
                       "dsi_size": 3097,
                       "dsi_state": "A",
                     },
@@ -1451,6 +1541,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                       "dsi_mimetype": "text/xml",
                       "dsi_open_access": null,
                       "dsi_pid": "UQ:252236",
+                      "dsi_security_inherited": 1,
+                      "dsi_security_policy": 1,
                       "dsi_size": 3097,
                       "dsi_state": "A",
                     },
@@ -1462,6 +1554,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                       "dsi_mimetype": "application/pdf",
                       "dsi_open_access": null,
                       "dsi_pid": "UQ:252236",
+                      "dsi_security_inherited": 1,
+                      "dsi_security_policy": 1,
                       "dsi_size": 322698,
                       "dsi_state": "D",
                     },
@@ -1473,6 +1567,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                       "dsi_mimetype": "application/pdf",
                       "dsi_open_access": null,
                       "dsi_pid": "UQ:252236",
+                      "dsi_security_inherited": 1,
+                      "dsi_security_policy": 1,
                       "dsi_size": 499269,
                       "dsi_state": "D",
                     },
@@ -1484,6 +1580,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                       "dsi_mimetype": "application/pdf",
                       "dsi_open_access": null,
                       "dsi_pid": "UQ:252236",
+                      "dsi_security_inherited": 1,
+                      "dsi_security_policy": 1,
                       "dsi_size": 499269,
                       "dsi_state": "A",
                     },
@@ -1495,6 +1593,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                       "dsi_mimetype": "application/pdf",
                       "dsi_open_access": null,
                       "dsi_pid": "UQ:252236",
+                      "dsi_security_inherited": 1,
+                      "dsi_security_policy": 1,
                       "dsi_size": 322698,
                       "dsi_state": "D",
                     },
@@ -1506,6 +1606,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                       "dsi_mimetype": "application/pdf",
                       "dsi_open_access": null,
                       "dsi_pid": "UQ:252236",
+                      "dsi_security_inherited": 1,
+                      "dsi_security_policy": 1,
                       "dsi_size": 1099946,
                       "dsi_state": "A",
                     },
@@ -1517,6 +1619,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                       "dsi_mimetype": "application/pdf",
                       "dsi_open_access": 1,
                       "dsi_pid": "UQ:252236",
+                      "dsi_security_inherited": 1,
+                      "dsi_security_policy": 1,
                       "dsi_size": 273861,
                       "dsi_state": "A",
                     },
@@ -1528,6 +1632,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                       "dsi_mimetype": "application/pdf",
                       "dsi_open_access": null,
                       "dsi_pid": "UQ:252236",
+                      "dsi_security_inherited": 1,
+                      "dsi_security_policy": 1,
                       "dsi_size": 1082235,
                       "dsi_state": "A",
                     },
@@ -1539,6 +1645,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                       "dsi_mimetype": "application/pdf",
                       "dsi_open_access": null,
                       "dsi_pid": "UQ:252236",
+                      "dsi_security_inherited": 1,
+                      "dsi_security_policy": 1,
                       "dsi_size": 1335981,
                       "dsi_state": "A",
                     },
@@ -1550,6 +1658,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                       "dsi_mimetype": "application/pdf",
                       "dsi_open_access": null,
                       "dsi_pid": "UQ:252236",
+                      "dsi_security_inherited": 1,
+                      "dsi_security_policy": 1,
                       "dsi_size": 587005,
                       "dsi_state": "A",
                     },
@@ -1561,6 +1671,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                       "dsi_mimetype": "application/xml",
                       "dsi_open_access": null,
                       "dsi_pid": "UQ:252236",
+                      "dsi_security_inherited": 1,
+                      "dsi_security_policy": 1,
                       "dsi_size": 1247,
                       "dsi_state": "A",
                     },
@@ -1572,6 +1684,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                       "dsi_mimetype": "application/xml",
                       "dsi_open_access": null,
                       "dsi_pid": "UQ:252236",
+                      "dsi_security_inherited": 1,
+                      "dsi_security_policy": 1,
                       "dsi_size": 1295,
                       "dsi_state": "A",
                     },
@@ -1583,6 +1697,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                       "dsi_mimetype": "application/xml",
                       "dsi_open_access": null,
                       "dsi_pid": "UQ:252236",
+                      "dsi_security_inherited": 1,
+                      "dsi_security_policy": 1,
                       "dsi_size": 1311,
                       "dsi_state": "A",
                     },
@@ -1594,6 +1710,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                       "dsi_mimetype": "application/xml",
                       "dsi_open_access": null,
                       "dsi_pid": "UQ:252236",
+                      "dsi_security_inherited": 1,
+                      "dsi_security_policy": 1,
                       "dsi_size": 1247,
                       "dsi_state": "A",
                     },
@@ -1605,6 +1723,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                       "dsi_mimetype": "application/xml",
                       "dsi_open_access": null,
                       "dsi_pid": "UQ:252236",
+                      "dsi_security_inherited": 1,
+                      "dsi_security_policy": 1,
                       "dsi_size": 124519,
                       "dsi_state": "A",
                     },
@@ -1616,6 +1736,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                       "dsi_mimetype": "application/xml",
                       "dsi_open_access": null,
                       "dsi_pid": "UQ:252236",
+                      "dsi_security_inherited": 1,
+                      "dsi_security_policy": 1,
                       "dsi_size": 68060,
                       "dsi_state": "A",
                     },
@@ -1627,6 +1749,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                       "dsi_mimetype": "text/xml",
                       "dsi_open_access": null,
                       "dsi_pid": "UQ:252236",
+                      "dsi_security_inherited": 1,
+                      "dsi_security_policy": 1,
                       "dsi_size": 786,
                       "dsi_state": "A",
                     },
@@ -1638,6 +1762,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                       "dsi_mimetype": "application/xml",
                       "dsi_open_access": null,
                       "dsi_pid": "UQ:252236",
+                      "dsi_security_inherited": 1,
+                      "dsi_security_policy": 1,
                       "dsi_size": 1296,
                       "dsi_state": "A",
                     },
@@ -1649,6 +1775,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                       "dsi_mimetype": "application/xml",
                       "dsi_open_access": null,
                       "dsi_pid": "UQ:252236",
+                      "dsi_security_inherited": 1,
+                      "dsi_security_policy": 1,
                       "dsi_size": 1285,
                       "dsi_state": "A",
                     },
@@ -1660,6 +1788,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                       "dsi_mimetype": "application/xml",
                       "dsi_open_access": null,
                       "dsi_pid": "UQ:252236",
+                      "dsi_security_inherited": 1,
+                      "dsi_security_policy": 1,
                       "dsi_size": 96466,
                       "dsi_state": "A",
                     },
@@ -1671,6 +1801,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                       "dsi_mimetype": "application/xml",
                       "dsi_open_access": null,
                       "dsi_pid": "UQ:252236",
+                      "dsi_security_inherited": 1,
+                      "dsi_security_policy": 1,
                       "dsi_size": 24362,
                       "dsi_state": "A",
                     },
@@ -1682,6 +1814,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                       "dsi_mimetype": "application/octet-stream",
                       "dsi_open_access": 1,
                       "dsi_pid": "UQ:252236",
+                      "dsi_security_inherited": 1,
+                      "dsi_security_policy": 1,
                       "dsi_size": 25607,
                       "dsi_state": "D",
                     },
@@ -1693,6 +1827,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                       "dsi_mimetype": "application/octet-stream",
                       "dsi_open_access": null,
                       "dsi_pid": "UQ:252236",
+                      "dsi_security_inherited": 1,
+                      "dsi_security_policy": 1,
                       "dsi_size": 25607,
                       "dsi_state": "D",
                     },
@@ -1704,6 +1840,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                       "dsi_mimetype": "application/pdf",
                       "dsi_open_access": null,
                       "dsi_pid": "UQ:252236",
+                      "dsi_security_inherited": 1,
+                      "dsi_security_policy": 1,
                       "dsi_size": 924170,
                       "dsi_state": "A",
                     },
@@ -1715,6 +1853,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                       "dsi_mimetype": "application/pdf",
                       "dsi_open_access": null,
                       "dsi_pid": "UQ:252236",
+                      "dsi_security_inherited": 1,
+                      "dsi_security_policy": 1,
                       "dsi_size": 86383,
                       "dsi_state": "A",
                     },
@@ -1726,6 +1866,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                       "dsi_mimetype": "application/octet-stream",
                       "dsi_open_access": 1,
                       "dsi_pid": "UQ:252236",
+                      "dsi_security_inherited": 1,
+                      "dsi_security_policy": 1,
                       "dsi_size": 1617,
                       "dsi_state": "D",
                     },
@@ -2006,6 +2148,11 @@ exports[`AdminContainer component should full mount the component 1`] = `
                   "fez_record_search_key_isi_loc": null,
                   "fez_record_search_key_ismemberof": Array [
                     Object {
+                      "parent": Object {
+                        "rek_datastream_policy": 1,
+                        "rek_pid": "UQ:3935",
+                        "rek_security_policy": 5,
+                      },
                       "rek_ismemberof": "UQ:3935",
                       "rek_ismemberof_id": 11954548,
                       "rek_ismemberof_lookup": "System Documentation and Instructions",
@@ -2014,6 +2161,11 @@ exports[`AdminContainer component should full mount the component 1`] = `
                       "rek_ismemberof_xsdmf_id": null,
                     },
                     Object {
+                      "parent": Object {
+                        "rek_datastream_policy": 2,
+                        "rek_pid": "UQ:230658",
+                        "rek_security_policy": 3,
+                      },
                       "rek_ismemberof": "UQ:230658",
                       "rek_ismemberof_id": 11954549,
                       "rek_ismemberof_lookup": "UQ Library - Scholarly Communication and Digitisation Services",
@@ -3038,6 +3190,134 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                         }
                                       }
                                     >
+                                      <ConfirmDialogBox
+                                        hideCancelButton={false}
+                                        locale={
+                                          Object {
+                                            "cancelButtonLabel": "Cancel",
+                                            "confirmButtonLabel": "Edit another work",
+                                            "confirmationMessage": "Work has been updated",
+                                            "confirmationTitle": "Work has been updated",
+                                          }
+                                        }
+                                        onAction={[Function]}
+                                        onRef={[Function]}
+                                      >
+                                        <WithStyles(Dialog)
+                                          open={false}
+                                          style={
+                                            Object {
+                                              "padding": 6,
+                                            }
+                                          }
+                                        >
+                                          <Dialog
+                                            PaperComponent={[Function]}
+                                            TransitionComponent={[Function]}
+                                            classes={
+                                              Object {
+                                                "container": "MuiDialog-container-106",
+                                                "paper": "MuiDialog-paper-107",
+                                                "paperFullScreen": "MuiDialog-paperFullScreen-116",
+                                                "paperFullWidth": "MuiDialog-paperFullWidth-115",
+                                                "paperScrollBody": "MuiDialog-paperScrollBody-109",
+                                                "paperScrollPaper": "MuiDialog-paperScrollPaper-108",
+                                                "paperWidthLg": "MuiDialog-paperWidthLg-113",
+                                                "paperWidthMd": "MuiDialog-paperWidthMd-112",
+                                                "paperWidthSm": "MuiDialog-paperWidthSm-111",
+                                                "paperWidthXl": "MuiDialog-paperWidthXl-114",
+                                                "paperWidthXs": "MuiDialog-paperWidthXs-110",
+                                                "root": "MuiDialog-root-103",
+                                                "scrollBody": "MuiDialog-scrollBody-105",
+                                                "scrollPaper": "MuiDialog-scrollPaper-104",
+                                              }
+                                            }
+                                            disableBackdropClick={false}
+                                            disableEscapeKeyDown={false}
+                                            fullScreen={false}
+                                            fullWidth={false}
+                                            maxWidth="sm"
+                                            open={false}
+                                            scroll="paper"
+                                            style={
+                                              Object {
+                                                "padding": 6,
+                                              }
+                                            }
+                                            transitionDuration={
+                                              Object {
+                                                "enter": 225,
+                                                "exit": 195,
+                                              }
+                                            }
+                                          >
+                                            <WithStyles(Modal)
+                                              BackdropProps={
+                                                Object {
+                                                  "transitionDuration": Object {
+                                                    "enter": 225,
+                                                    "exit": 195,
+                                                  },
+                                                }
+                                              }
+                                              className="MuiDialog-root-103"
+                                              closeAfterTransition={true}
+                                              disableBackdropClick={false}
+                                              disableEscapeKeyDown={false}
+                                              open={false}
+                                              role="dialog"
+                                              style={
+                                                Object {
+                                                  "padding": 6,
+                                                }
+                                              }
+                                            >
+                                              <Modal
+                                                BackdropComponent={[Function]}
+                                                BackdropProps={
+                                                  Object {
+                                                    "transitionDuration": Object {
+                                                      "enter": 225,
+                                                      "exit": 195,
+                                                    },
+                                                  }
+                                                }
+                                                className="MuiDialog-root-103"
+                                                classes={
+                                                  Object {
+                                                    "hidden": "MuiModal-hidden-118",
+                                                    "root": "MuiModal-root-117",
+                                                  }
+                                                }
+                                                closeAfterTransition={true}
+                                                disableAutoFocus={false}
+                                                disableBackdropClick={false}
+                                                disableEnforceFocus={false}
+                                                disableEscapeKeyDown={false}
+                                                disablePortal={false}
+                                                disableRestoreFocus={false}
+                                                hideBackdrop={false}
+                                                keepMounted={false}
+                                                manager={
+                                                  ModalManager {
+                                                    "data": Array [],
+                                                    "handleContainerOverflow": true,
+                                                    "hideSiblingNodes": true,
+                                                    "modals": Array [],
+                                                  }
+                                                }
+                                                open={false}
+                                                role="dialog"
+                                                style={
+                                                  Object {
+                                                    "padding": 6,
+                                                  }
+                                                }
+                                              />
+                                            </WithStyles(Modal)>
+                                          </Dialog>
+                                        </WithStyles(Dialog)>
+                                      </ConfirmDialogBox>
                                       <WithStyles(Grid)
                                         item={true}
                                         style={
@@ -3191,42 +3471,42 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                 align="inherit"
                                                 classes={
                                                   Object {
-                                                    "alignCenter": "MuiTypography-alignCenter-126",
-                                                    "alignJustify": "MuiTypography-alignJustify-128",
-                                                    "alignLeft": "MuiTypography-alignLeft-125",
-                                                    "alignRight": "MuiTypography-alignRight-127",
-                                                    "body1": "MuiTypography-body1-112",
-                                                    "body2": "MuiTypography-body2-111",
-                                                    "button": "MuiTypography-button-114",
-                                                    "caption": "MuiTypography-caption-113",
-                                                    "colorError": "MuiTypography-colorError-137",
-                                                    "colorInherit": "MuiTypography-colorInherit-132",
-                                                    "colorPrimary": "MuiTypography-colorPrimary-133",
-                                                    "colorSecondary": "MuiTypography-colorSecondary-134",
-                                                    "colorTextPrimary": "MuiTypography-colorTextPrimary-135",
-                                                    "colorTextSecondary": "MuiTypography-colorTextSecondary-136",
-                                                    "display1": "MuiTypography-display1-107",
-                                                    "display2": "MuiTypography-display2-106",
-                                                    "display3": "MuiTypography-display3-105",
-                                                    "display4": "MuiTypography-display4-104",
-                                                    "gutterBottom": "MuiTypography-gutterBottom-130",
-                                                    "h1": "MuiTypography-h1-115",
-                                                    "h2": "MuiTypography-h2-116",
-                                                    "h3": "MuiTypography-h3-117",
-                                                    "h4": "MuiTypography-h4-118",
-                                                    "h5": "MuiTypography-h5-119",
-                                                    "h6": "MuiTypography-h6-120",
-                                                    "headline": "MuiTypography-headline-108",
-                                                    "inline": "MuiTypography-inline-138",
-                                                    "noWrap": "MuiTypography-noWrap-129",
-                                                    "overline": "MuiTypography-overline-123",
-                                                    "paragraph": "MuiTypography-paragraph-131",
-                                                    "root": "MuiTypography-root-103",
-                                                    "srOnly": "MuiTypography-srOnly-124",
-                                                    "subheading": "MuiTypography-subheading-110",
-                                                    "subtitle1": "MuiTypography-subtitle1-121",
-                                                    "subtitle2": "MuiTypography-subtitle2-122",
-                                                    "title": "MuiTypography-title-109",
+                                                    "alignCenter": "MuiTypography-alignCenter-142",
+                                                    "alignJustify": "MuiTypography-alignJustify-144",
+                                                    "alignLeft": "MuiTypography-alignLeft-141",
+                                                    "alignRight": "MuiTypography-alignRight-143",
+                                                    "body1": "MuiTypography-body1-128",
+                                                    "body2": "MuiTypography-body2-127",
+                                                    "button": "MuiTypography-button-130",
+                                                    "caption": "MuiTypography-caption-129",
+                                                    "colorError": "MuiTypography-colorError-153",
+                                                    "colorInherit": "MuiTypography-colorInherit-148",
+                                                    "colorPrimary": "MuiTypography-colorPrimary-149",
+                                                    "colorSecondary": "MuiTypography-colorSecondary-150",
+                                                    "colorTextPrimary": "MuiTypography-colorTextPrimary-151",
+                                                    "colorTextSecondary": "MuiTypography-colorTextSecondary-152",
+                                                    "display1": "MuiTypography-display1-123",
+                                                    "display2": "MuiTypography-display2-122",
+                                                    "display3": "MuiTypography-display3-121",
+                                                    "display4": "MuiTypography-display4-120",
+                                                    "gutterBottom": "MuiTypography-gutterBottom-146",
+                                                    "h1": "MuiTypography-h1-131",
+                                                    "h2": "MuiTypography-h2-132",
+                                                    "h3": "MuiTypography-h3-133",
+                                                    "h4": "MuiTypography-h4-134",
+                                                    "h5": "MuiTypography-h5-135",
+                                                    "h6": "MuiTypography-h6-136",
+                                                    "headline": "MuiTypography-headline-124",
+                                                    "inline": "MuiTypography-inline-154",
+                                                    "noWrap": "MuiTypography-noWrap-145",
+                                                    "overline": "MuiTypography-overline-139",
+                                                    "paragraph": "MuiTypography-paragraph-147",
+                                                    "root": "MuiTypography-root-119",
+                                                    "srOnly": "MuiTypography-srOnly-140",
+                                                    "subheading": "MuiTypography-subheading-126",
+                                                    "subtitle1": "MuiTypography-subtitle1-137",
+                                                    "subtitle2": "MuiTypography-subtitle2-138",
+                                                    "title": "MuiTypography-title-125",
                                                   }
                                                 }
                                                 color="primary"
@@ -3697,7 +3977,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                 variant="h5"
                                               >
                                                 <h5
-                                                  className="MuiTypography-root-103 MuiTypography-h5-119 MuiTypography-colorPrimary-133"
+                                                  className="MuiTypography-root-119 MuiTypography-h5-135 MuiTypography-colorPrimary-149"
                                                   style={
                                                     Object {
                                                       "fontSize": 24,
@@ -4579,14 +4859,14 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                       TransitionComponent={[Function]}
                                                                       classes={
                                                                         Object {
-                                                                          "popper": "MuiTooltip-popper-208",
-                                                                          "popperInteractive": "MuiTooltip-popperInteractive-209",
-                                                                          "tooltip": "MuiTooltip-tooltip-210",
-                                                                          "tooltipPlacementBottom": "MuiTooltip-tooltipPlacementBottom-215",
-                                                                          "tooltipPlacementLeft": "MuiTooltip-tooltipPlacementLeft-212",
-                                                                          "tooltipPlacementRight": "MuiTooltip-tooltipPlacementRight-213",
-                                                                          "tooltipPlacementTop": "MuiTooltip-tooltipPlacementTop-214",
-                                                                          "touch": "MuiTooltip-touch-211",
+                                                                          "popper": "MuiTooltip-popper-224",
+                                                                          "popperInteractive": "MuiTooltip-popperInteractive-225",
+                                                                          "tooltip": "MuiTooltip-tooltip-226",
+                                                                          "tooltipPlacementBottom": "MuiTooltip-tooltipPlacementBottom-231",
+                                                                          "tooltipPlacementLeft": "MuiTooltip-tooltipPlacementLeft-228",
+                                                                          "tooltipPlacementRight": "MuiTooltip-tooltipPlacementRight-229",
+                                                                          "tooltipPlacementTop": "MuiTooltip-tooltipPlacementTop-230",
+                                                                          "touch": "MuiTooltip-touch-227",
                                                                         }
                                                                       }
                                                                       disableFocusListener={false}
@@ -5058,15 +5338,15 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                             className=""
                                                                             classes={
                                                                               Object {
-                                                                                "bar": "MuiSwitch-bar-224",
-                                                                                "checked": "MuiSwitch-checked-220",
-                                                                                "colorPrimary": "MuiSwitch-colorPrimary-221",
-                                                                                "colorSecondary": "MuiSwitch-colorSecondary-222",
-                                                                                "disabled": "MuiSwitch-disabled-223",
-                                                                                "icon": "MuiSwitch-icon-217",
-                                                                                "iconChecked": "MuiSwitch-iconChecked-218",
-                                                                                "root": "MuiSwitch-root-216",
-                                                                                "switchBase": "MuiSwitch-switchBase-219",
+                                                                                "bar": "MuiSwitch-bar-240",
+                                                                                "checked": "MuiSwitch-checked-236",
+                                                                                "colorPrimary": "MuiSwitch-colorPrimary-237",
+                                                                                "colorSecondary": "MuiSwitch-colorSecondary-238",
+                                                                                "disabled": "MuiSwitch-disabled-239",
+                                                                                "icon": "MuiSwitch-icon-233",
+                                                                                "iconChecked": "MuiSwitch-iconChecked-234",
+                                                                                "root": "MuiSwitch-root-232",
+                                                                                "switchBase": "MuiSwitch-switchBase-235",
                                                                               }
                                                                             }
                                                                             color="primary"
@@ -5081,26 +5361,26 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                             value="tabbed"
                                                                           >
                                                                             <span
-                                                                              className="MuiSwitch-root-216"
+                                                                              className="MuiSwitch-root-232"
                                                                             >
                                                                               <WithStyles(WithFormControlContext(SwitchBase))
                                                                                 aria-describedby={null}
                                                                                 checked={false}
                                                                                 checkedIcon={
                                                                                   <span
-                                                                                    className="MuiSwitch-icon-217 MuiSwitch-iconChecked-218"
+                                                                                    className="MuiSwitch-icon-233 MuiSwitch-iconChecked-234"
                                                                                   />
                                                                                 }
                                                                                 classes={
                                                                                   Object {
-                                                                                    "checked": "MuiSwitch-checked-220",
-                                                                                    "disabled": "MuiSwitch-disabled-223",
-                                                                                    "root": "MuiSwitch-switchBase-219 MuiSwitch-colorPrimary-221",
+                                                                                    "checked": "MuiSwitch-checked-236",
+                                                                                    "disabled": "MuiSwitch-disabled-239",
+                                                                                    "root": "MuiSwitch-switchBase-235 MuiSwitch-colorPrimary-237",
                                                                                   }
                                                                                 }
                                                                                 icon={
                                                                                   <span
-                                                                                    className="MuiSwitch-icon-217"
+                                                                                    className="MuiSwitch-icon-233"
                                                                                   />
                                                                                 }
                                                                                 onBlur={[Function]}
@@ -5119,20 +5399,20 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                                   checked={false}
                                                                                   checkedIcon={
                                                                                     <span
-                                                                                      className="MuiSwitch-icon-217 MuiSwitch-iconChecked-218"
+                                                                                      className="MuiSwitch-icon-233 MuiSwitch-iconChecked-234"
                                                                                     />
                                                                                   }
                                                                                   classes={
                                                                                     Object {
-                                                                                      "checked": "MuiPrivateSwitchBase-checked-226 MuiSwitch-checked-220",
-                                                                                      "disabled": "MuiPrivateSwitchBase-disabled-227 MuiSwitch-disabled-223",
-                                                                                      "input": "MuiPrivateSwitchBase-input-228",
-                                                                                      "root": "MuiPrivateSwitchBase-root-225 MuiSwitch-switchBase-219 MuiSwitch-colorPrimary-221",
+                                                                                      "checked": "MuiPrivateSwitchBase-checked-242 MuiSwitch-checked-236",
+                                                                                      "disabled": "MuiPrivateSwitchBase-disabled-243 MuiSwitch-disabled-239",
+                                                                                      "input": "MuiPrivateSwitchBase-input-244",
+                                                                                      "root": "MuiPrivateSwitchBase-root-241 MuiSwitch-switchBase-235 MuiSwitch-colorPrimary-237",
                                                                                     }
                                                                                   }
                                                                                   icon={
                                                                                     <span
-                                                                                      className="MuiSwitch-icon-217"
+                                                                                      className="MuiSwitch-icon-233"
                                                                                     />
                                                                                   }
                                                                                   onBlur={[Function]}
@@ -5151,20 +5431,20 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                                     checked={false}
                                                                                     checkedIcon={
                                                                                       <span
-                                                                                        className="MuiSwitch-icon-217 MuiSwitch-iconChecked-218"
+                                                                                        className="MuiSwitch-icon-233 MuiSwitch-iconChecked-234"
                                                                                       />
                                                                                     }
                                                                                     classes={
                                                                                       Object {
-                                                                                        "checked": "MuiPrivateSwitchBase-checked-226 MuiSwitch-checked-220",
-                                                                                        "disabled": "MuiPrivateSwitchBase-disabled-227 MuiSwitch-disabled-223",
-                                                                                        "input": "MuiPrivateSwitchBase-input-228",
-                                                                                        "root": "MuiPrivateSwitchBase-root-225 MuiSwitch-switchBase-219 MuiSwitch-colorPrimary-221",
+                                                                                        "checked": "MuiPrivateSwitchBase-checked-242 MuiSwitch-checked-236",
+                                                                                        "disabled": "MuiPrivateSwitchBase-disabled-243 MuiSwitch-disabled-239",
+                                                                                        "input": "MuiPrivateSwitchBase-input-244",
+                                                                                        "root": "MuiPrivateSwitchBase-root-241 MuiSwitch-switchBase-235 MuiSwitch-colorPrimary-237",
                                                                                       }
                                                                                     }
                                                                                     icon={
                                                                                       <span
-                                                                                        className="MuiSwitch-icon-217"
+                                                                                        className="MuiSwitch-icon-233"
                                                                                       />
                                                                                     }
                                                                                     onBlur={[Function]}
@@ -5180,7 +5460,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                                   >
                                                                                     <WithStyles(IconButton)
                                                                                       aria-describedby={null}
-                                                                                      className="MuiPrivateSwitchBase-root-225 MuiSwitch-switchBase-219 MuiSwitch-colorPrimary-221"
+                                                                                      className="MuiPrivateSwitchBase-root-241 MuiSwitch-switchBase-235 MuiSwitch-colorPrimary-237"
                                                                                       component="span"
                                                                                       onBlur={[Function]}
                                                                                       onFocus={[Function]}
@@ -5193,15 +5473,15 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                                     >
                                                                                       <IconButton
                                                                                         aria-describedby={null}
-                                                                                        className="MuiPrivateSwitchBase-root-225 MuiSwitch-switchBase-219 MuiSwitch-colorPrimary-221"
+                                                                                        className="MuiPrivateSwitchBase-root-241 MuiSwitch-switchBase-235 MuiSwitch-colorPrimary-237"
                                                                                         classes={
                                                                                           Object {
-                                                                                            "colorInherit": "MuiIconButton-colorInherit-230",
-                                                                                            "colorPrimary": "MuiIconButton-colorPrimary-231",
-                                                                                            "colorSecondary": "MuiIconButton-colorSecondary-232",
-                                                                                            "disabled": "MuiIconButton-disabled-233",
-                                                                                            "label": "MuiIconButton-label-234",
-                                                                                            "root": "MuiIconButton-root-229",
+                                                                                            "colorInherit": "MuiIconButton-colorInherit-246",
+                                                                                            "colorPrimary": "MuiIconButton-colorPrimary-247",
+                                                                                            "colorSecondary": "MuiIconButton-colorSecondary-248",
+                                                                                            "disabled": "MuiIconButton-disabled-249",
+                                                                                            "label": "MuiIconButton-label-250",
+                                                                                            "root": "MuiIconButton-root-245",
                                                                                           }
                                                                                         }
                                                                                         color="default"
@@ -5219,7 +5499,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                                         <WithStyles(ButtonBase)
                                                                                           aria-describedby={null}
                                                                                           centerRipple={true}
-                                                                                          className="MuiIconButton-root-229 MuiPrivateSwitchBase-root-225 MuiSwitch-switchBase-219 MuiSwitch-colorPrimary-221"
+                                                                                          className="MuiIconButton-root-245 MuiPrivateSwitchBase-root-241 MuiSwitch-switchBase-235 MuiSwitch-colorPrimary-237"
                                                                                           component="span"
                                                                                           disabled={false}
                                                                                           focusRipple={true}
@@ -5235,12 +5515,12 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                                           <ButtonBase
                                                                                             aria-describedby={null}
                                                                                             centerRipple={true}
-                                                                                            className="MuiIconButton-root-229 MuiPrivateSwitchBase-root-225 MuiSwitch-switchBase-219 MuiSwitch-colorPrimary-221"
+                                                                                            className="MuiIconButton-root-245 MuiPrivateSwitchBase-root-241 MuiSwitch-switchBase-235 MuiSwitch-colorPrimary-237"
                                                                                             classes={
                                                                                               Object {
-                                                                                                "disabled": "MuiButtonBase-disabled-206",
-                                                                                                "focusVisible": "MuiButtonBase-focusVisible-207",
-                                                                                                "root": "MuiButtonBase-root-205",
+                                                                                                "disabled": "MuiButtonBase-disabled-222",
+                                                                                                "focusVisible": "MuiButtonBase-focusVisible-223",
+                                                                                                "root": "MuiButtonBase-root-221",
                                                                                               }
                                                                                             }
                                                                                             component="span"
@@ -5260,7 +5540,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                                           >
                                                                                             <span
                                                                                               aria-describedby={null}
-                                                                                              className="MuiButtonBase-root-205 MuiIconButton-root-229 MuiPrivateSwitchBase-root-225 MuiSwitch-switchBase-219 MuiSwitch-colorPrimary-221"
+                                                                                              className="MuiButtonBase-root-221 MuiIconButton-root-245 MuiPrivateSwitchBase-root-241 MuiSwitch-switchBase-235 MuiSwitch-colorPrimary-237"
                                                                                               onBlur={[Function]}
                                                                                               onContextMenu={[Function]}
                                                                                               onFocus={[Function]}
@@ -5277,14 +5557,14 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                                               title="Switch to tabbed mode"
                                                                                             >
                                                                                               <span
-                                                                                                className="MuiIconButton-label-234"
+                                                                                                className="MuiIconButton-label-250"
                                                                                               >
                                                                                                 <span
-                                                                                                  className="MuiSwitch-icon-217"
+                                                                                                  className="MuiSwitch-icon-233"
                                                                                                 />
                                                                                                 <input
                                                                                                   checked={false}
-                                                                                                  className="MuiPrivateSwitchBase-input-228"
+                                                                                                  className="MuiPrivateSwitchBase-input-244"
                                                                                                   onChange={[Function]}
                                                                                                   type="checkbox"
                                                                                                   value="tabbed"
@@ -5302,25 +5582,25 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                                                     center={true}
                                                                                                     classes={
                                                                                                       Object {
-                                                                                                        "child": "MuiTouchRipple-child-249",
-                                                                                                        "childLeaving": "MuiTouchRipple-childLeaving-250",
-                                                                                                        "childPulsate": "MuiTouchRipple-childPulsate-251",
-                                                                                                        "ripple": "MuiTouchRipple-ripple-246",
-                                                                                                        "ripplePulsate": "MuiTouchRipple-ripplePulsate-248",
-                                                                                                        "rippleVisible": "MuiTouchRipple-rippleVisible-247",
-                                                                                                        "root": "MuiTouchRipple-root-245",
+                                                                                                        "child": "MuiTouchRipple-child-265",
+                                                                                                        "childLeaving": "MuiTouchRipple-childLeaving-266",
+                                                                                                        "childPulsate": "MuiTouchRipple-childPulsate-267",
+                                                                                                        "ripple": "MuiTouchRipple-ripple-262",
+                                                                                                        "ripplePulsate": "MuiTouchRipple-ripplePulsate-264",
+                                                                                                        "rippleVisible": "MuiTouchRipple-rippleVisible-263",
+                                                                                                        "root": "MuiTouchRipple-root-261",
                                                                                                       }
                                                                                                     }
                                                                                                   >
                                                                                                     <TransitionGroup
                                                                                                       childFactory={[Function]}
-                                                                                                      className="MuiTouchRipple-root-245"
+                                                                                                      className="MuiTouchRipple-root-261"
                                                                                                       component="span"
                                                                                                       enter={true}
                                                                                                       exit={true}
                                                                                                     >
                                                                                                       <span
-                                                                                                        className="MuiTouchRipple-root-245"
+                                                                                                        className="MuiTouchRipple-root-261"
                                                                                                       />
                                                                                                     </TransitionGroup>
                                                                                                   </TouchRipple>
@@ -5335,14 +5615,14 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                                 </WithFormControlContext(SwitchBase)>
                                                                               </WithStyles(WithFormControlContext(SwitchBase))>
                                                                               <span
-                                                                                className="MuiSwitch-bar-224"
+                                                                                className="MuiSwitch-bar-240"
                                                                               />
                                                                             </span>
                                                                           </Switch>
                                                                         </WithStyles(Switch)>
                                                                       </RootRef>
                                                                       <Popper
-                                                                        className="MuiTooltip-popper-208"
+                                                                        className="MuiTooltip-popper-224"
                                                                         disablePortal={false}
                                                                         id={null}
                                                                         open={false}
@@ -5536,7 +5816,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                         buttonLabel="Got it"
                                                                         classes={
                                                                           Object {
-                                                                            "helpIcon": "HelpIcon-helpIcon-235",
+                                                                            "helpIcon": "HelpIcon-helpIcon-251",
                                                                           }
                                                                         }
                                                                         onClick={[Function]}
@@ -6006,14 +6286,14 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                             TransitionComponent={[Function]}
                                                                             classes={
                                                                               Object {
-                                                                                "popper": "MuiTooltip-popper-208",
-                                                                                "popperInteractive": "MuiTooltip-popperInteractive-209",
-                                                                                "tooltip": "MuiTooltip-tooltip-210",
-                                                                                "tooltipPlacementBottom": "MuiTooltip-tooltipPlacementBottom-215",
-                                                                                "tooltipPlacementLeft": "MuiTooltip-tooltipPlacementLeft-212",
-                                                                                "tooltipPlacementRight": "MuiTooltip-tooltipPlacementRight-213",
-                                                                                "tooltipPlacementTop": "MuiTooltip-tooltipPlacementTop-214",
-                                                                                "touch": "MuiTooltip-touch-211",
+                                                                                "popper": "MuiTooltip-popper-224",
+                                                                                "popperInteractive": "MuiTooltip-popperInteractive-225",
+                                                                                "tooltip": "MuiTooltip-tooltip-226",
+                                                                                "tooltipPlacementBottom": "MuiTooltip-tooltipPlacementBottom-231",
+                                                                                "tooltipPlacementLeft": "MuiTooltip-tooltipPlacementLeft-228",
+                                                                                "tooltipPlacementRight": "MuiTooltip-tooltipPlacementRight-229",
+                                                                                "tooltipPlacementTop": "MuiTooltip-tooltipPlacementTop-230",
+                                                                                "touch": "MuiTooltip-touch-227",
                                                                               }
                                                                             }
                                                                             disableFocusListener={false}
@@ -6481,12 +6761,12 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                                   className=""
                                                                                   classes={
                                                                                     Object {
-                                                                                      "colorInherit": "MuiIconButton-colorInherit-230",
-                                                                                      "colorPrimary": "MuiIconButton-colorPrimary-231",
-                                                                                      "colorSecondary": "MuiIconButton-colorSecondary-232",
-                                                                                      "disabled": "MuiIconButton-disabled-233",
-                                                                                      "label": "MuiIconButton-label-234",
-                                                                                      "root": "MuiIconButton-root-229",
+                                                                                      "colorInherit": "MuiIconButton-colorInherit-246",
+                                                                                      "colorPrimary": "MuiIconButton-colorPrimary-247",
+                                                                                      "colorSecondary": "MuiIconButton-colorSecondary-248",
+                                                                                      "disabled": "MuiIconButton-disabled-249",
+                                                                                      "label": "MuiIconButton-label-250",
+                                                                                      "root": "MuiIconButton-root-245",
                                                                                     }
                                                                                   }
                                                                                   color="default"
@@ -6503,7 +6783,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                                   <WithStyles(ButtonBase)
                                                                                     aria-describedby={null}
                                                                                     centerRipple={true}
-                                                                                    className="MuiIconButton-root-229"
+                                                                                    className="MuiIconButton-root-245"
                                                                                     disabled={false}
                                                                                     focusRipple={true}
                                                                                     onBlur={[Function]}
@@ -6518,12 +6798,12 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                                     <ButtonBase
                                                                                       aria-describedby={null}
                                                                                       centerRipple={true}
-                                                                                      className="MuiIconButton-root-229"
+                                                                                      className="MuiIconButton-root-245"
                                                                                       classes={
                                                                                         Object {
-                                                                                          "disabled": "MuiButtonBase-disabled-206",
-                                                                                          "focusVisible": "MuiButtonBase-focusVisible-207",
-                                                                                          "root": "MuiButtonBase-root-205",
+                                                                                          "disabled": "MuiButtonBase-disabled-222",
+                                                                                          "focusVisible": "MuiButtonBase-focusVisible-223",
+                                                                                          "root": "MuiButtonBase-root-221",
                                                                                         }
                                                                                       }
                                                                                       component="button"
@@ -6544,7 +6824,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                                     >
                                                                                       <button
                                                                                         aria-describedby={null}
-                                                                                        className="MuiButtonBase-root-205 MuiIconButton-root-229"
+                                                                                        className="MuiButtonBase-root-221 MuiIconButton-root-245"
                                                                                         disabled={false}
                                                                                         onBlur={[Function]}
                                                                                         onClick={[Function]}
@@ -6564,33 +6844,33 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                                         type="button"
                                                                                       >
                                                                                         <span
-                                                                                          className="MuiIconButton-label-234"
+                                                                                          className="MuiIconButton-label-250"
                                                                                         >
                                                                                           <pure(KeyboardIcon)
-                                                                                            className="HelpIcon-helpIcon-235"
+                                                                                            className="HelpIcon-helpIcon-251"
                                                                                             titleAccess="Learn about keyboard shortcuts"
                                                                                           >
                                                                                             <KeyboardIcon
-                                                                                              className="HelpIcon-helpIcon-235"
+                                                                                              className="HelpIcon-helpIcon-251"
                                                                                               titleAccess="Learn about keyboard shortcuts"
                                                                                             >
                                                                                               <WithStyles(SvgIcon)
-                                                                                                className="HelpIcon-helpIcon-235"
+                                                                                                className="HelpIcon-helpIcon-251"
                                                                                                 titleAccess="Learn about keyboard shortcuts"
                                                                                               >
                                                                                                 <SvgIcon
-                                                                                                  className="HelpIcon-helpIcon-235"
+                                                                                                  className="HelpIcon-helpIcon-251"
                                                                                                   classes={
                                                                                                     Object {
-                                                                                                      "colorAction": "MuiSvgIcon-colorAction-239",
-                                                                                                      "colorDisabled": "MuiSvgIcon-colorDisabled-241",
-                                                                                                      "colorError": "MuiSvgIcon-colorError-240",
-                                                                                                      "colorPrimary": "MuiSvgIcon-colorPrimary-237",
-                                                                                                      "colorSecondary": "MuiSvgIcon-colorSecondary-238",
-                                                                                                      "fontSizeInherit": "MuiSvgIcon-fontSizeInherit-242",
-                                                                                                      "fontSizeLarge": "MuiSvgIcon-fontSizeLarge-244",
-                                                                                                      "fontSizeSmall": "MuiSvgIcon-fontSizeSmall-243",
-                                                                                                      "root": "MuiSvgIcon-root-236",
+                                                                                                      "colorAction": "MuiSvgIcon-colorAction-255",
+                                                                                                      "colorDisabled": "MuiSvgIcon-colorDisabled-257",
+                                                                                                      "colorError": "MuiSvgIcon-colorError-256",
+                                                                                                      "colorPrimary": "MuiSvgIcon-colorPrimary-253",
+                                                                                                      "colorSecondary": "MuiSvgIcon-colorSecondary-254",
+                                                                                                      "fontSizeInherit": "MuiSvgIcon-fontSizeInherit-258",
+                                                                                                      "fontSizeLarge": "MuiSvgIcon-fontSizeLarge-260",
+                                                                                                      "fontSizeSmall": "MuiSvgIcon-fontSizeSmall-259",
+                                                                                                      "root": "MuiSvgIcon-root-252",
                                                                                                     }
                                                                                                   }
                                                                                                   color="inherit"
@@ -6601,7 +6881,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                                                 >
                                                                                                   <svg
                                                                                                     aria-hidden="false"
-                                                                                                    className="MuiSvgIcon-root-236 HelpIcon-helpIcon-235"
+                                                                                                    className="MuiSvgIcon-root-252 HelpIcon-helpIcon-251"
                                                                                                     focusable="false"
                                                                                                     role="img"
                                                                                                     viewBox="0 0 24 24"
@@ -6634,25 +6914,25 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                                               center={true}
                                                                                               classes={
                                                                                                 Object {
-                                                                                                  "child": "MuiTouchRipple-child-249",
-                                                                                                  "childLeaving": "MuiTouchRipple-childLeaving-250",
-                                                                                                  "childPulsate": "MuiTouchRipple-childPulsate-251",
-                                                                                                  "ripple": "MuiTouchRipple-ripple-246",
-                                                                                                  "ripplePulsate": "MuiTouchRipple-ripplePulsate-248",
-                                                                                                  "rippleVisible": "MuiTouchRipple-rippleVisible-247",
-                                                                                                  "root": "MuiTouchRipple-root-245",
+                                                                                                  "child": "MuiTouchRipple-child-265",
+                                                                                                  "childLeaving": "MuiTouchRipple-childLeaving-266",
+                                                                                                  "childPulsate": "MuiTouchRipple-childPulsate-267",
+                                                                                                  "ripple": "MuiTouchRipple-ripple-262",
+                                                                                                  "ripplePulsate": "MuiTouchRipple-ripplePulsate-264",
+                                                                                                  "rippleVisible": "MuiTouchRipple-rippleVisible-263",
+                                                                                                  "root": "MuiTouchRipple-root-261",
                                                                                                 }
                                                                                               }
                                                                                             >
                                                                                               <TransitionGroup
                                                                                                 childFactory={[Function]}
-                                                                                                className="MuiTouchRipple-root-245"
+                                                                                                className="MuiTouchRipple-root-261"
                                                                                                 component="span"
                                                                                                 enter={true}
                                                                                                 exit={true}
                                                                                               >
                                                                                                 <span
-                                                                                                  className="MuiTouchRipple-root-245"
+                                                                                                  className="MuiTouchRipple-root-261"
                                                                                                 />
                                                                                               </TransitionGroup>
                                                                                             </TouchRipple>
@@ -6665,7 +6945,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                               </WithStyles(IconButton)>
                                                                             </RootRef>
                                                                             <Popper
-                                                                              className="MuiTooltip-popper-208"
+                                                                              className="MuiTooltip-popper-224"
                                                                               disablePortal={false}
                                                                               id={null}
                                                                               open={false}
@@ -7096,11 +7376,11 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                     <Cards
                                                       classes={
                                                         Object {
-                                                          "card": "Cards-card-139",
-                                                          "cardContentNoPadding": "Cards-cardContentNoPadding-140",
-                                                          "cardHeaderAccent": "Cards-cardHeaderAccent-142",
-                                                          "cardHeaderPrimary": "Cards-cardHeaderPrimary-141",
-                                                          "fullHeight": "Cards-fullHeight-143",
+                                                          "card": "Cards-card-155",
+                                                          "cardContentNoPadding": "Cards-cardContentNoPadding-156",
+                                                          "cardHeaderAccent": "Cards-cardHeaderAccent-158",
+                                                          "cardHeaderPrimary": "Cards-cardHeaderPrimary-157",
+                                                          "fullHeight": "Cards-fullHeight-159",
                                                         }
                                                       }
                                                       primaryHeader={false}
@@ -7542,55 +7822,55 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                       title="Security"
                                                     >
                                                       <WithStyles(Card)
-                                                        className="Cards-card-139 StandardCard"
+                                                        className="Cards-card-155 StandardCard"
                                                         style={Object {}}
                                                       >
                                                         <Card
-                                                          className="Cards-card-139 StandardCard"
+                                                          className="Cards-card-155 StandardCard"
                                                           classes={
                                                             Object {
-                                                              "root": "MuiCard-root-144",
+                                                              "root": "MuiCard-root-160",
                                                             }
                                                           }
                                                           raised={false}
                                                           style={Object {}}
                                                         >
                                                           <WithStyles(Paper)
-                                                            className="MuiCard-root-144 Cards-card-139 StandardCard"
+                                                            className="MuiCard-root-160 Cards-card-155 StandardCard"
                                                             elevation={1}
                                                             style={Object {}}
                                                           >
                                                             <Paper
-                                                              className="MuiCard-root-144 Cards-card-139 StandardCard"
+                                                              className="MuiCard-root-160 Cards-card-155 StandardCard"
                                                               classes={
                                                                 Object {
-                                                                  "elevation0": "MuiPaper-elevation0-147",
-                                                                  "elevation1": "MuiPaper-elevation1-148",
-                                                                  "elevation10": "MuiPaper-elevation10-157",
-                                                                  "elevation11": "MuiPaper-elevation11-158",
-                                                                  "elevation12": "MuiPaper-elevation12-159",
-                                                                  "elevation13": "MuiPaper-elevation13-160",
-                                                                  "elevation14": "MuiPaper-elevation14-161",
-                                                                  "elevation15": "MuiPaper-elevation15-162",
-                                                                  "elevation16": "MuiPaper-elevation16-163",
-                                                                  "elevation17": "MuiPaper-elevation17-164",
-                                                                  "elevation18": "MuiPaper-elevation18-165",
-                                                                  "elevation19": "MuiPaper-elevation19-166",
-                                                                  "elevation2": "MuiPaper-elevation2-149",
-                                                                  "elevation20": "MuiPaper-elevation20-167",
-                                                                  "elevation21": "MuiPaper-elevation21-168",
-                                                                  "elevation22": "MuiPaper-elevation22-169",
-                                                                  "elevation23": "MuiPaper-elevation23-170",
-                                                                  "elevation24": "MuiPaper-elevation24-171",
-                                                                  "elevation3": "MuiPaper-elevation3-150",
-                                                                  "elevation4": "MuiPaper-elevation4-151",
-                                                                  "elevation5": "MuiPaper-elevation5-152",
-                                                                  "elevation6": "MuiPaper-elevation6-153",
-                                                                  "elevation7": "MuiPaper-elevation7-154",
-                                                                  "elevation8": "MuiPaper-elevation8-155",
-                                                                  "elevation9": "MuiPaper-elevation9-156",
-                                                                  "root": "MuiPaper-root-145",
-                                                                  "rounded": "MuiPaper-rounded-146",
+                                                                  "elevation0": "MuiPaper-elevation0-163",
+                                                                  "elevation1": "MuiPaper-elevation1-164",
+                                                                  "elevation10": "MuiPaper-elevation10-173",
+                                                                  "elevation11": "MuiPaper-elevation11-174",
+                                                                  "elevation12": "MuiPaper-elevation12-175",
+                                                                  "elevation13": "MuiPaper-elevation13-176",
+                                                                  "elevation14": "MuiPaper-elevation14-177",
+                                                                  "elevation15": "MuiPaper-elevation15-178",
+                                                                  "elevation16": "MuiPaper-elevation16-179",
+                                                                  "elevation17": "MuiPaper-elevation17-180",
+                                                                  "elevation18": "MuiPaper-elevation18-181",
+                                                                  "elevation19": "MuiPaper-elevation19-182",
+                                                                  "elevation2": "MuiPaper-elevation2-165",
+                                                                  "elevation20": "MuiPaper-elevation20-183",
+                                                                  "elevation21": "MuiPaper-elevation21-184",
+                                                                  "elevation22": "MuiPaper-elevation22-185",
+                                                                  "elevation23": "MuiPaper-elevation23-186",
+                                                                  "elevation24": "MuiPaper-elevation24-187",
+                                                                  "elevation3": "MuiPaper-elevation3-166",
+                                                                  "elevation4": "MuiPaper-elevation4-167",
+                                                                  "elevation5": "MuiPaper-elevation5-168",
+                                                                  "elevation6": "MuiPaper-elevation6-169",
+                                                                  "elevation7": "MuiPaper-elevation7-170",
+                                                                  "elevation8": "MuiPaper-elevation8-171",
+                                                                  "elevation9": "MuiPaper-elevation9-172",
+                                                                  "root": "MuiPaper-root-161",
+                                                                  "rounded": "MuiPaper-rounded-162",
                                                                 }
                                                               }
                                                               component="div"
@@ -7599,7 +7879,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                               style={Object {}}
                                                             >
                                                               <div
-                                                                className="MuiPaper-root-145 MuiPaper-elevation1-148 MuiPaper-rounded-146 MuiCard-root-144 Cards-card-139 StandardCard"
+                                                                className="MuiPaper-root-161 MuiPaper-elevation1-164 MuiPaper-rounded-162 MuiCard-root-160 Cards-card-155 StandardCard"
                                                                 style={Object {}}
                                                               >
                                                                 <WithStyles(CardHeader)
@@ -7623,12 +7903,12 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                     action={false}
                                                                     classes={
                                                                       Object {
-                                                                        "action": "MuiCardHeader-action-174",
-                                                                        "avatar": "MuiCardHeader-avatar-173",
-                                                                        "content": "MuiCardHeader-content-175",
-                                                                        "root": "MuiCardHeader-root-172",
-                                                                        "subheader": "MuiCardHeader-subheader-177",
-                                                                        "title": "MuiCardHeader-title-176",
+                                                                        "action": "MuiCardHeader-action-190",
+                                                                        "avatar": "MuiCardHeader-avatar-189",
+                                                                        "content": "MuiCardHeader-content-191",
+                                                                        "root": "MuiCardHeader-root-188",
+                                                                        "subheader": "MuiCardHeader-subheader-193",
+                                                                        "title": "MuiCardHeader-title-192",
                                                                       }
                                                                     }
                                                                     component="div"
@@ -7644,14 +7924,14 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                     }
                                                                   >
                                                                     <div
-                                                                      className="MuiCardHeader-root-172"
+                                                                      className="MuiCardHeader-root-188"
                                                                       style={Object {}}
                                                                     >
                                                                       <div
-                                                                        className="MuiCardHeader-content-175"
+                                                                        className="MuiCardHeader-content-191"
                                                                       >
                                                                         <WithStyles(Typography)
-                                                                          className="MuiCardHeader-title-176"
+                                                                          className="MuiCardHeader-title-192"
                                                                           color="inherit"
                                                                           component="h3"
                                                                           internalDeprecatedVariant={true}
@@ -7659,45 +7939,45 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                         >
                                                                           <Typography
                                                                             align="inherit"
-                                                                            className="MuiCardHeader-title-176"
+                                                                            className="MuiCardHeader-title-192"
                                                                             classes={
                                                                               Object {
-                                                                                "alignCenter": "MuiTypography-alignCenter-126",
-                                                                                "alignJustify": "MuiTypography-alignJustify-128",
-                                                                                "alignLeft": "MuiTypography-alignLeft-125",
-                                                                                "alignRight": "MuiTypography-alignRight-127",
-                                                                                "body1": "MuiTypography-body1-112",
-                                                                                "body2": "MuiTypography-body2-111",
-                                                                                "button": "MuiTypography-button-114",
-                                                                                "caption": "MuiTypography-caption-113",
-                                                                                "colorError": "MuiTypography-colorError-137",
-                                                                                "colorInherit": "MuiTypography-colorInherit-132",
-                                                                                "colorPrimary": "MuiTypography-colorPrimary-133",
-                                                                                "colorSecondary": "MuiTypography-colorSecondary-134",
-                                                                                "colorTextPrimary": "MuiTypography-colorTextPrimary-135",
-                                                                                "colorTextSecondary": "MuiTypography-colorTextSecondary-136",
-                                                                                "display1": "MuiTypography-display1-107",
-                                                                                "display2": "MuiTypography-display2-106",
-                                                                                "display3": "MuiTypography-display3-105",
-                                                                                "display4": "MuiTypography-display4-104",
-                                                                                "gutterBottom": "MuiTypography-gutterBottom-130",
-                                                                                "h1": "MuiTypography-h1-115",
-                                                                                "h2": "MuiTypography-h2-116",
-                                                                                "h3": "MuiTypography-h3-117",
-                                                                                "h4": "MuiTypography-h4-118",
-                                                                                "h5": "MuiTypography-h5-119",
-                                                                                "h6": "MuiTypography-h6-120",
-                                                                                "headline": "MuiTypography-headline-108",
-                                                                                "inline": "MuiTypography-inline-138",
-                                                                                "noWrap": "MuiTypography-noWrap-129",
-                                                                                "overline": "MuiTypography-overline-123",
-                                                                                "paragraph": "MuiTypography-paragraph-131",
-                                                                                "root": "MuiTypography-root-103",
-                                                                                "srOnly": "MuiTypography-srOnly-124",
-                                                                                "subheading": "MuiTypography-subheading-110",
-                                                                                "subtitle1": "MuiTypography-subtitle1-121",
-                                                                                "subtitle2": "MuiTypography-subtitle2-122",
-                                                                                "title": "MuiTypography-title-109",
+                                                                                "alignCenter": "MuiTypography-alignCenter-142",
+                                                                                "alignJustify": "MuiTypography-alignJustify-144",
+                                                                                "alignLeft": "MuiTypography-alignLeft-141",
+                                                                                "alignRight": "MuiTypography-alignRight-143",
+                                                                                "body1": "MuiTypography-body1-128",
+                                                                                "body2": "MuiTypography-body2-127",
+                                                                                "button": "MuiTypography-button-130",
+                                                                                "caption": "MuiTypography-caption-129",
+                                                                                "colorError": "MuiTypography-colorError-153",
+                                                                                "colorInherit": "MuiTypography-colorInherit-148",
+                                                                                "colorPrimary": "MuiTypography-colorPrimary-149",
+                                                                                "colorSecondary": "MuiTypography-colorSecondary-150",
+                                                                                "colorTextPrimary": "MuiTypography-colorTextPrimary-151",
+                                                                                "colorTextSecondary": "MuiTypography-colorTextSecondary-152",
+                                                                                "display1": "MuiTypography-display1-123",
+                                                                                "display2": "MuiTypography-display2-122",
+                                                                                "display3": "MuiTypography-display3-121",
+                                                                                "display4": "MuiTypography-display4-120",
+                                                                                "gutterBottom": "MuiTypography-gutterBottom-146",
+                                                                                "h1": "MuiTypography-h1-131",
+                                                                                "h2": "MuiTypography-h2-132",
+                                                                                "h3": "MuiTypography-h3-133",
+                                                                                "h4": "MuiTypography-h4-134",
+                                                                                "h5": "MuiTypography-h5-135",
+                                                                                "h6": "MuiTypography-h6-136",
+                                                                                "headline": "MuiTypography-headline-124",
+                                                                                "inline": "MuiTypography-inline-154",
+                                                                                "noWrap": "MuiTypography-noWrap-145",
+                                                                                "overline": "MuiTypography-overline-139",
+                                                                                "paragraph": "MuiTypography-paragraph-147",
+                                                                                "root": "MuiTypography-root-119",
+                                                                                "srOnly": "MuiTypography-srOnly-140",
+                                                                                "subheading": "MuiTypography-subheading-126",
+                                                                                "subtitle1": "MuiTypography-subtitle1-137",
+                                                                                "subtitle2": "MuiTypography-subtitle2-138",
+                                                                                "title": "MuiTypography-title-125",
                                                                               }
                                                                             }
                                                                             color="inherit"
@@ -8165,7 +8445,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                             variant="h5"
                                                                           >
                                                                             <h3
-                                                                              className="MuiTypography-root-103 MuiTypography-h5-119 MuiTypography-colorInherit-132 MuiCardHeader-title-176"
+                                                                              className="MuiTypography-root-119 MuiTypography-h5-135 MuiTypography-colorInherit-148 MuiCardHeader-title-192"
                                                                             >
                                                                               Security
                                                                             </h3>
@@ -8182,13 +8462,13 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                     className=""
                                                                     classes={
                                                                       Object {
-                                                                        "root": "MuiCardContent-root-178",
+                                                                        "root": "MuiCardContent-root-194",
                                                                       }
                                                                     }
                                                                     component="div"
                                                                   >
                                                                     <div
-                                                                      className="MuiCardContent-root-178"
+                                                                      className="MuiCardContent-root-194"
                                                                     >
                                                                       <Field
                                                                         component={
@@ -8360,32 +8640,32 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                 <Button
                                                   classes={
                                                     Object {
-                                                      "colorInherit": "MuiButton-colorInherit-200",
-                                                      "contained": "MuiButton-contained-190",
-                                                      "containedPrimary": "MuiButton-containedPrimary-191",
-                                                      "containedSecondary": "MuiButton-containedSecondary-192",
-                                                      "disabled": "MuiButton-disabled-199",
-                                                      "extendedFab": "MuiButton-extendedFab-197",
-                                                      "fab": "MuiButton-fab-196",
-                                                      "flat": "MuiButton-flat-184",
-                                                      "flatPrimary": "MuiButton-flatPrimary-185",
-                                                      "flatSecondary": "MuiButton-flatSecondary-186",
-                                                      "focusVisible": "MuiButton-focusVisible-198",
-                                                      "fullWidth": "MuiButton-fullWidth-204",
-                                                      "label": "MuiButton-label-180",
-                                                      "mini": "MuiButton-mini-201",
-                                                      "outlined": "MuiButton-outlined-187",
-                                                      "outlinedPrimary": "MuiButton-outlinedPrimary-188",
-                                                      "outlinedSecondary": "MuiButton-outlinedSecondary-189",
-                                                      "raised": "MuiButton-raised-193",
-                                                      "raisedPrimary": "MuiButton-raisedPrimary-194",
-                                                      "raisedSecondary": "MuiButton-raisedSecondary-195",
-                                                      "root": "MuiButton-root-179",
-                                                      "sizeLarge": "MuiButton-sizeLarge-203",
-                                                      "sizeSmall": "MuiButton-sizeSmall-202",
-                                                      "text": "MuiButton-text-181",
-                                                      "textPrimary": "MuiButton-textPrimary-182",
-                                                      "textSecondary": "MuiButton-textSecondary-183",
+                                                      "colorInherit": "MuiButton-colorInherit-216",
+                                                      "contained": "MuiButton-contained-206",
+                                                      "containedPrimary": "MuiButton-containedPrimary-207",
+                                                      "containedSecondary": "MuiButton-containedSecondary-208",
+                                                      "disabled": "MuiButton-disabled-215",
+                                                      "extendedFab": "MuiButton-extendedFab-213",
+                                                      "fab": "MuiButton-fab-212",
+                                                      "flat": "MuiButton-flat-200",
+                                                      "flatPrimary": "MuiButton-flatPrimary-201",
+                                                      "flatSecondary": "MuiButton-flatSecondary-202",
+                                                      "focusVisible": "MuiButton-focusVisible-214",
+                                                      "fullWidth": "MuiButton-fullWidth-220",
+                                                      "label": "MuiButton-label-196",
+                                                      "mini": "MuiButton-mini-217",
+                                                      "outlined": "MuiButton-outlined-203",
+                                                      "outlinedPrimary": "MuiButton-outlinedPrimary-204",
+                                                      "outlinedSecondary": "MuiButton-outlinedSecondary-205",
+                                                      "raised": "MuiButton-raised-209",
+                                                      "raisedPrimary": "MuiButton-raisedPrimary-210",
+                                                      "raisedSecondary": "MuiButton-raisedSecondary-211",
+                                                      "root": "MuiButton-root-195",
+                                                      "sizeLarge": "MuiButton-sizeLarge-219",
+                                                      "sizeSmall": "MuiButton-sizeSmall-218",
+                                                      "text": "MuiButton-text-197",
+                                                      "textPrimary": "MuiButton-textPrimary-198",
+                                                      "textSecondary": "MuiButton-textSecondary-199",
                                                     }
                                                   }
                                                   color="primary"
@@ -8404,11 +8684,11 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                   variant="contained"
                                                 >
                                                   <WithStyles(ButtonBase)
-                                                    className="MuiButton-root-179 MuiButton-contained-190 MuiButton-containedPrimary-191 MuiButton-raised-193 MuiButton-raisedPrimary-194 MuiButton-fullWidth-204"
+                                                    className="MuiButton-root-195 MuiButton-contained-206 MuiButton-containedPrimary-207 MuiButton-raised-209 MuiButton-raisedPrimary-210 MuiButton-fullWidth-220"
                                                     component="button"
                                                     disabled={false}
                                                     focusRipple={true}
-                                                    focusVisibleClassName="MuiButton-focusVisible-198"
+                                                    focusVisibleClassName="MuiButton-focusVisible-214"
                                                     style={
                                                       Object {
                                                         "whiteSpace": "nowrap",
@@ -8418,12 +8698,12 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                   >
                                                     <ButtonBase
                                                       centerRipple={false}
-                                                      className="MuiButton-root-179 MuiButton-contained-190 MuiButton-containedPrimary-191 MuiButton-raised-193 MuiButton-raisedPrimary-194 MuiButton-fullWidth-204"
+                                                      className="MuiButton-root-195 MuiButton-contained-206 MuiButton-containedPrimary-207 MuiButton-raised-209 MuiButton-raisedPrimary-210 MuiButton-fullWidth-220"
                                                       classes={
                                                         Object {
-                                                          "disabled": "MuiButtonBase-disabled-206",
-                                                          "focusVisible": "MuiButtonBase-focusVisible-207",
-                                                          "root": "MuiButtonBase-root-205",
+                                                          "disabled": "MuiButtonBase-disabled-222",
+                                                          "focusVisible": "MuiButtonBase-focusVisible-223",
+                                                          "root": "MuiButtonBase-root-221",
                                                         }
                                                       }
                                                       component="button"
@@ -8431,7 +8711,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                       disableTouchRipple={false}
                                                       disabled={false}
                                                       focusRipple={true}
-                                                      focusVisibleClassName="MuiButton-focusVisible-198"
+                                                      focusVisibleClassName="MuiButton-focusVisible-214"
                                                       style={
                                                         Object {
                                                           "whiteSpace": "nowrap",
@@ -8441,7 +8721,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                       type="button"
                                                     >
                                                       <button
-                                                        className="MuiButtonBase-root-205 MuiButton-root-179 MuiButton-contained-190 MuiButton-containedPrimary-191 MuiButton-raised-193 MuiButton-raisedPrimary-194 MuiButton-fullWidth-204"
+                                                        className="MuiButtonBase-root-221 MuiButton-root-195 MuiButton-contained-206 MuiButton-containedPrimary-207 MuiButton-raised-209 MuiButton-raisedPrimary-210 MuiButton-fullWidth-220"
                                                         disabled={false}
                                                         onBlur={[Function]}
                                                         onContextMenu={[Function]}
@@ -8463,7 +8743,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                         type="button"
                                                       >
                                                         <span
-                                                          className="MuiButton-label-180"
+                                                          className="MuiButton-label-196"
                                                         >
                                                           Submit
                                                         </span>
@@ -8479,25 +8759,25 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                               center={false}
                                                               classes={
                                                                 Object {
-                                                                  "child": "MuiTouchRipple-child-249",
-                                                                  "childLeaving": "MuiTouchRipple-childLeaving-250",
-                                                                  "childPulsate": "MuiTouchRipple-childPulsate-251",
-                                                                  "ripple": "MuiTouchRipple-ripple-246",
-                                                                  "ripplePulsate": "MuiTouchRipple-ripplePulsate-248",
-                                                                  "rippleVisible": "MuiTouchRipple-rippleVisible-247",
-                                                                  "root": "MuiTouchRipple-root-245",
+                                                                  "child": "MuiTouchRipple-child-265",
+                                                                  "childLeaving": "MuiTouchRipple-childLeaving-266",
+                                                                  "childPulsate": "MuiTouchRipple-childPulsate-267",
+                                                                  "ripple": "MuiTouchRipple-ripple-262",
+                                                                  "ripplePulsate": "MuiTouchRipple-ripplePulsate-264",
+                                                                  "rippleVisible": "MuiTouchRipple-rippleVisible-263",
+                                                                  "root": "MuiTouchRipple-root-261",
                                                                 }
                                                               }
                                                             >
                                                               <TransitionGroup
                                                                 childFactory={[Function]}
-                                                                className="MuiTouchRipple-root-245"
+                                                                className="MuiTouchRipple-root-261"
                                                                 component="span"
                                                                 enter={true}
                                                                 exit={true}
                                                               >
                                                                 <span
-                                                                  className="MuiTouchRipple-root-245"
+                                                                  className="MuiTouchRipple-root-261"
                                                                 />
                                                               </TransitionGroup>
                                                             </TouchRipple>
@@ -8561,6 +8841,8 @@ exports[`AdminContainer component should render default view 1`] = `
               "dsi_mimetype": "text/xml",
               "dsi_open_access": null,
               "dsi_pid": "UQ:252236",
+              "dsi_security_inherited": 1,
+              "dsi_security_policy": 1,
               "dsi_size": 3097,
               "dsi_state": "A",
             },
@@ -8572,6 +8854,8 @@ exports[`AdminContainer component should render default view 1`] = `
               "dsi_mimetype": "text/xml",
               "dsi_open_access": null,
               "dsi_pid": "UQ:252236",
+              "dsi_security_inherited": 1,
+              "dsi_security_policy": 1,
               "dsi_size": 3097,
               "dsi_state": "A",
             },
@@ -8583,6 +8867,8 @@ exports[`AdminContainer component should render default view 1`] = `
               "dsi_mimetype": "text/xml",
               "dsi_open_access": null,
               "dsi_pid": "UQ:252236",
+              "dsi_security_inherited": 1,
+              "dsi_security_policy": 1,
               "dsi_size": 3092,
               "dsi_state": "A",
             },
@@ -8594,6 +8880,8 @@ exports[`AdminContainer component should render default view 1`] = `
               "dsi_mimetype": "text/xml",
               "dsi_open_access": null,
               "dsi_pid": "UQ:252236",
+              "dsi_security_inherited": 1,
+              "dsi_security_policy": 1,
               "dsi_size": 3097,
               "dsi_state": "A",
             },
@@ -8605,6 +8893,8 @@ exports[`AdminContainer component should render default view 1`] = `
               "dsi_mimetype": "text/xml",
               "dsi_open_access": null,
               "dsi_pid": "UQ:252236",
+              "dsi_security_inherited": 1,
+              "dsi_security_policy": 1,
               "dsi_size": 3097,
               "dsi_state": "A",
             },
@@ -8616,6 +8906,8 @@ exports[`AdminContainer component should render default view 1`] = `
               "dsi_mimetype": "text/xml",
               "dsi_open_access": null,
               "dsi_pid": "UQ:252236",
+              "dsi_security_inherited": 1,
+              "dsi_security_policy": 1,
               "dsi_size": 3705,
               "dsi_state": "A",
             },
@@ -8627,6 +8919,8 @@ exports[`AdminContainer component should render default view 1`] = `
               "dsi_mimetype": "text/xml",
               "dsi_open_access": null,
               "dsi_pid": "UQ:252236",
+              "dsi_security_inherited": 1,
+              "dsi_security_policy": 1,
               "dsi_size": 3097,
               "dsi_state": "A",
             },
@@ -8638,6 +8932,8 @@ exports[`AdminContainer component should render default view 1`] = `
               "dsi_mimetype": "text/xml",
               "dsi_open_access": null,
               "dsi_pid": "UQ:252236",
+              "dsi_security_inherited": 1,
+              "dsi_security_policy": 1,
               "dsi_size": 3097,
               "dsi_state": "A",
             },
@@ -8649,6 +8945,8 @@ exports[`AdminContainer component should render default view 1`] = `
               "dsi_mimetype": "application/pdf",
               "dsi_open_access": null,
               "dsi_pid": "UQ:252236",
+              "dsi_security_inherited": 1,
+              "dsi_security_policy": 1,
               "dsi_size": 322698,
               "dsi_state": "D",
             },
@@ -8660,6 +8958,8 @@ exports[`AdminContainer component should render default view 1`] = `
               "dsi_mimetype": "application/pdf",
               "dsi_open_access": null,
               "dsi_pid": "UQ:252236",
+              "dsi_security_inherited": 1,
+              "dsi_security_policy": 1,
               "dsi_size": 499269,
               "dsi_state": "D",
             },
@@ -8671,6 +8971,8 @@ exports[`AdminContainer component should render default view 1`] = `
               "dsi_mimetype": "application/pdf",
               "dsi_open_access": null,
               "dsi_pid": "UQ:252236",
+              "dsi_security_inherited": 1,
+              "dsi_security_policy": 1,
               "dsi_size": 499269,
               "dsi_state": "A",
             },
@@ -8682,6 +8984,8 @@ exports[`AdminContainer component should render default view 1`] = `
               "dsi_mimetype": "application/pdf",
               "dsi_open_access": null,
               "dsi_pid": "UQ:252236",
+              "dsi_security_inherited": 1,
+              "dsi_security_policy": 1,
               "dsi_size": 322698,
               "dsi_state": "D",
             },
@@ -8693,6 +8997,8 @@ exports[`AdminContainer component should render default view 1`] = `
               "dsi_mimetype": "application/pdf",
               "dsi_open_access": null,
               "dsi_pid": "UQ:252236",
+              "dsi_security_inherited": 1,
+              "dsi_security_policy": 1,
               "dsi_size": 1099946,
               "dsi_state": "A",
             },
@@ -8704,6 +9010,8 @@ exports[`AdminContainer component should render default view 1`] = `
               "dsi_mimetype": "application/pdf",
               "dsi_open_access": 1,
               "dsi_pid": "UQ:252236",
+              "dsi_security_inherited": 1,
+              "dsi_security_policy": 1,
               "dsi_size": 273861,
               "dsi_state": "A",
             },
@@ -8715,6 +9023,8 @@ exports[`AdminContainer component should render default view 1`] = `
               "dsi_mimetype": "application/pdf",
               "dsi_open_access": null,
               "dsi_pid": "UQ:252236",
+              "dsi_security_inherited": 1,
+              "dsi_security_policy": 1,
               "dsi_size": 1082235,
               "dsi_state": "A",
             },
@@ -8726,6 +9036,8 @@ exports[`AdminContainer component should render default view 1`] = `
               "dsi_mimetype": "application/pdf",
               "dsi_open_access": null,
               "dsi_pid": "UQ:252236",
+              "dsi_security_inherited": 1,
+              "dsi_security_policy": 1,
               "dsi_size": 1335981,
               "dsi_state": "A",
             },
@@ -8737,6 +9049,8 @@ exports[`AdminContainer component should render default view 1`] = `
               "dsi_mimetype": "application/pdf",
               "dsi_open_access": null,
               "dsi_pid": "UQ:252236",
+              "dsi_security_inherited": 1,
+              "dsi_security_policy": 1,
               "dsi_size": 587005,
               "dsi_state": "A",
             },
@@ -8748,6 +9062,8 @@ exports[`AdminContainer component should render default view 1`] = `
               "dsi_mimetype": "application/xml",
               "dsi_open_access": null,
               "dsi_pid": "UQ:252236",
+              "dsi_security_inherited": 1,
+              "dsi_security_policy": 1,
               "dsi_size": 1247,
               "dsi_state": "A",
             },
@@ -8759,6 +9075,8 @@ exports[`AdminContainer component should render default view 1`] = `
               "dsi_mimetype": "application/xml",
               "dsi_open_access": null,
               "dsi_pid": "UQ:252236",
+              "dsi_security_inherited": 1,
+              "dsi_security_policy": 1,
               "dsi_size": 1295,
               "dsi_state": "A",
             },
@@ -8770,6 +9088,8 @@ exports[`AdminContainer component should render default view 1`] = `
               "dsi_mimetype": "application/xml",
               "dsi_open_access": null,
               "dsi_pid": "UQ:252236",
+              "dsi_security_inherited": 1,
+              "dsi_security_policy": 1,
               "dsi_size": 1311,
               "dsi_state": "A",
             },
@@ -8781,6 +9101,8 @@ exports[`AdminContainer component should render default view 1`] = `
               "dsi_mimetype": "application/xml",
               "dsi_open_access": null,
               "dsi_pid": "UQ:252236",
+              "dsi_security_inherited": 1,
+              "dsi_security_policy": 1,
               "dsi_size": 1247,
               "dsi_state": "A",
             },
@@ -8792,6 +9114,8 @@ exports[`AdminContainer component should render default view 1`] = `
               "dsi_mimetype": "application/xml",
               "dsi_open_access": null,
               "dsi_pid": "UQ:252236",
+              "dsi_security_inherited": 1,
+              "dsi_security_policy": 1,
               "dsi_size": 124519,
               "dsi_state": "A",
             },
@@ -8803,6 +9127,8 @@ exports[`AdminContainer component should render default view 1`] = `
               "dsi_mimetype": "application/xml",
               "dsi_open_access": null,
               "dsi_pid": "UQ:252236",
+              "dsi_security_inherited": 1,
+              "dsi_security_policy": 1,
               "dsi_size": 68060,
               "dsi_state": "A",
             },
@@ -8814,6 +9140,8 @@ exports[`AdminContainer component should render default view 1`] = `
               "dsi_mimetype": "text/xml",
               "dsi_open_access": null,
               "dsi_pid": "UQ:252236",
+              "dsi_security_inherited": 1,
+              "dsi_security_policy": 1,
               "dsi_size": 786,
               "dsi_state": "A",
             },
@@ -8825,6 +9153,8 @@ exports[`AdminContainer component should render default view 1`] = `
               "dsi_mimetype": "application/xml",
               "dsi_open_access": null,
               "dsi_pid": "UQ:252236",
+              "dsi_security_inherited": 1,
+              "dsi_security_policy": 1,
               "dsi_size": 1296,
               "dsi_state": "A",
             },
@@ -8836,6 +9166,8 @@ exports[`AdminContainer component should render default view 1`] = `
               "dsi_mimetype": "application/xml",
               "dsi_open_access": null,
               "dsi_pid": "UQ:252236",
+              "dsi_security_inherited": 1,
+              "dsi_security_policy": 1,
               "dsi_size": 1285,
               "dsi_state": "A",
             },
@@ -8847,6 +9179,8 @@ exports[`AdminContainer component should render default view 1`] = `
               "dsi_mimetype": "application/xml",
               "dsi_open_access": null,
               "dsi_pid": "UQ:252236",
+              "dsi_security_inherited": 1,
+              "dsi_security_policy": 1,
               "dsi_size": 96466,
               "dsi_state": "A",
             },
@@ -8858,6 +9192,8 @@ exports[`AdminContainer component should render default view 1`] = `
               "dsi_mimetype": "application/xml",
               "dsi_open_access": null,
               "dsi_pid": "UQ:252236",
+              "dsi_security_inherited": 1,
+              "dsi_security_policy": 1,
               "dsi_size": 24362,
               "dsi_state": "A",
             },
@@ -8869,6 +9205,8 @@ exports[`AdminContainer component should render default view 1`] = `
               "dsi_mimetype": "application/octet-stream",
               "dsi_open_access": 1,
               "dsi_pid": "UQ:252236",
+              "dsi_security_inherited": 1,
+              "dsi_security_policy": 1,
               "dsi_size": 25607,
               "dsi_state": "D",
             },
@@ -8880,6 +9218,8 @@ exports[`AdminContainer component should render default view 1`] = `
               "dsi_mimetype": "application/octet-stream",
               "dsi_open_access": null,
               "dsi_pid": "UQ:252236",
+              "dsi_security_inherited": 1,
+              "dsi_security_policy": 1,
               "dsi_size": 25607,
               "dsi_state": "D",
             },
@@ -8891,6 +9231,8 @@ exports[`AdminContainer component should render default view 1`] = `
               "dsi_mimetype": "application/pdf",
               "dsi_open_access": null,
               "dsi_pid": "UQ:252236",
+              "dsi_security_inherited": 1,
+              "dsi_security_policy": 1,
               "dsi_size": 924170,
               "dsi_state": "A",
             },
@@ -8902,6 +9244,8 @@ exports[`AdminContainer component should render default view 1`] = `
               "dsi_mimetype": "application/pdf",
               "dsi_open_access": null,
               "dsi_pid": "UQ:252236",
+              "dsi_security_inherited": 1,
+              "dsi_security_policy": 1,
               "dsi_size": 86383,
               "dsi_state": "A",
             },
@@ -8913,6 +9257,8 @@ exports[`AdminContainer component should render default view 1`] = `
               "dsi_mimetype": "application/octet-stream",
               "dsi_open_access": 1,
               "dsi_pid": "UQ:252236",
+              "dsi_security_inherited": 1,
+              "dsi_security_policy": 1,
               "dsi_size": 1617,
               "dsi_state": "D",
             },
@@ -9193,6 +9539,11 @@ exports[`AdminContainer component should render default view 1`] = `
           "fez_record_search_key_isi_loc": null,
           "fez_record_search_key_ismemberof": Array [
             Object {
+              "parent": Object {
+                "rek_datastream_policy": 1,
+                "rek_pid": "UQ:3935",
+                "rek_security_policy": 5,
+              },
               "rek_ismemberof": "UQ:3935",
               "rek_ismemberof_id": 11954548,
               "rek_ismemberof_lookup": "System Documentation and Instructions",
@@ -9201,6 +9552,11 @@ exports[`AdminContainer component should render default view 1`] = `
               "rek_ismemberof_xsdmf_id": null,
             },
             Object {
+              "parent": Object {
+                "rek_datastream_policy": 2,
+                "rek_pid": "UQ:230658",
+                "rek_security_policy": 3,
+              },
               "rek_ismemberof": "UQ:230658",
               "rek_ismemberof_id": 11954549,
               "rek_ismemberof_lookup": "UQ Library - Scholarly Communication and Digitisation Services",
@@ -9347,6 +9703,8 @@ exports[`AdminContainer component should render default view 1`] = `
               "dsi_mimetype": "text/xml",
               "dsi_open_access": null,
               "dsi_pid": "UQ:252236",
+              "dsi_security_inherited": 1,
+              "dsi_security_policy": 1,
               "dsi_size": 3097,
               "dsi_state": "A",
             },
@@ -9358,6 +9716,8 @@ exports[`AdminContainer component should render default view 1`] = `
               "dsi_mimetype": "text/xml",
               "dsi_open_access": null,
               "dsi_pid": "UQ:252236",
+              "dsi_security_inherited": 1,
+              "dsi_security_policy": 1,
               "dsi_size": 3097,
               "dsi_state": "A",
             },
@@ -9369,6 +9729,8 @@ exports[`AdminContainer component should render default view 1`] = `
               "dsi_mimetype": "text/xml",
               "dsi_open_access": null,
               "dsi_pid": "UQ:252236",
+              "dsi_security_inherited": 1,
+              "dsi_security_policy": 1,
               "dsi_size": 3092,
               "dsi_state": "A",
             },
@@ -9380,6 +9742,8 @@ exports[`AdminContainer component should render default view 1`] = `
               "dsi_mimetype": "text/xml",
               "dsi_open_access": null,
               "dsi_pid": "UQ:252236",
+              "dsi_security_inherited": 1,
+              "dsi_security_policy": 1,
               "dsi_size": 3097,
               "dsi_state": "A",
             },
@@ -9391,6 +9755,8 @@ exports[`AdminContainer component should render default view 1`] = `
               "dsi_mimetype": "text/xml",
               "dsi_open_access": null,
               "dsi_pid": "UQ:252236",
+              "dsi_security_inherited": 1,
+              "dsi_security_policy": 1,
               "dsi_size": 3097,
               "dsi_state": "A",
             },
@@ -9402,6 +9768,8 @@ exports[`AdminContainer component should render default view 1`] = `
               "dsi_mimetype": "text/xml",
               "dsi_open_access": null,
               "dsi_pid": "UQ:252236",
+              "dsi_security_inherited": 1,
+              "dsi_security_policy": 1,
               "dsi_size": 3705,
               "dsi_state": "A",
             },
@@ -9413,6 +9781,8 @@ exports[`AdminContainer component should render default view 1`] = `
               "dsi_mimetype": "text/xml",
               "dsi_open_access": null,
               "dsi_pid": "UQ:252236",
+              "dsi_security_inherited": 1,
+              "dsi_security_policy": 1,
               "dsi_size": 3097,
               "dsi_state": "A",
             },
@@ -9424,6 +9794,8 @@ exports[`AdminContainer component should render default view 1`] = `
               "dsi_mimetype": "text/xml",
               "dsi_open_access": null,
               "dsi_pid": "UQ:252236",
+              "dsi_security_inherited": 1,
+              "dsi_security_policy": 1,
               "dsi_size": 3097,
               "dsi_state": "A",
             },
@@ -9435,6 +9807,8 @@ exports[`AdminContainer component should render default view 1`] = `
               "dsi_mimetype": "application/pdf",
               "dsi_open_access": null,
               "dsi_pid": "UQ:252236",
+              "dsi_security_inherited": 1,
+              "dsi_security_policy": 1,
               "dsi_size": 322698,
               "dsi_state": "D",
             },
@@ -9446,6 +9820,8 @@ exports[`AdminContainer component should render default view 1`] = `
               "dsi_mimetype": "application/pdf",
               "dsi_open_access": null,
               "dsi_pid": "UQ:252236",
+              "dsi_security_inherited": 1,
+              "dsi_security_policy": 1,
               "dsi_size": 499269,
               "dsi_state": "D",
             },
@@ -9457,6 +9833,8 @@ exports[`AdminContainer component should render default view 1`] = `
               "dsi_mimetype": "application/pdf",
               "dsi_open_access": null,
               "dsi_pid": "UQ:252236",
+              "dsi_security_inherited": 1,
+              "dsi_security_policy": 1,
               "dsi_size": 499269,
               "dsi_state": "A",
             },
@@ -9468,6 +9846,8 @@ exports[`AdminContainer component should render default view 1`] = `
               "dsi_mimetype": "application/pdf",
               "dsi_open_access": null,
               "dsi_pid": "UQ:252236",
+              "dsi_security_inherited": 1,
+              "dsi_security_policy": 1,
               "dsi_size": 322698,
               "dsi_state": "D",
             },
@@ -9479,6 +9859,8 @@ exports[`AdminContainer component should render default view 1`] = `
               "dsi_mimetype": "application/pdf",
               "dsi_open_access": null,
               "dsi_pid": "UQ:252236",
+              "dsi_security_inherited": 1,
+              "dsi_security_policy": 1,
               "dsi_size": 1099946,
               "dsi_state": "A",
             },
@@ -9490,6 +9872,8 @@ exports[`AdminContainer component should render default view 1`] = `
               "dsi_mimetype": "application/pdf",
               "dsi_open_access": 1,
               "dsi_pid": "UQ:252236",
+              "dsi_security_inherited": 1,
+              "dsi_security_policy": 1,
               "dsi_size": 273861,
               "dsi_state": "A",
             },
@@ -9501,6 +9885,8 @@ exports[`AdminContainer component should render default view 1`] = `
               "dsi_mimetype": "application/pdf",
               "dsi_open_access": null,
               "dsi_pid": "UQ:252236",
+              "dsi_security_inherited": 1,
+              "dsi_security_policy": 1,
               "dsi_size": 1082235,
               "dsi_state": "A",
             },
@@ -9512,6 +9898,8 @@ exports[`AdminContainer component should render default view 1`] = `
               "dsi_mimetype": "application/pdf",
               "dsi_open_access": null,
               "dsi_pid": "UQ:252236",
+              "dsi_security_inherited": 1,
+              "dsi_security_policy": 1,
               "dsi_size": 1335981,
               "dsi_state": "A",
             },
@@ -9523,6 +9911,8 @@ exports[`AdminContainer component should render default view 1`] = `
               "dsi_mimetype": "application/pdf",
               "dsi_open_access": null,
               "dsi_pid": "UQ:252236",
+              "dsi_security_inherited": 1,
+              "dsi_security_policy": 1,
               "dsi_size": 587005,
               "dsi_state": "A",
             },
@@ -9534,6 +9924,8 @@ exports[`AdminContainer component should render default view 1`] = `
               "dsi_mimetype": "application/xml",
               "dsi_open_access": null,
               "dsi_pid": "UQ:252236",
+              "dsi_security_inherited": 1,
+              "dsi_security_policy": 1,
               "dsi_size": 1247,
               "dsi_state": "A",
             },
@@ -9545,6 +9937,8 @@ exports[`AdminContainer component should render default view 1`] = `
               "dsi_mimetype": "application/xml",
               "dsi_open_access": null,
               "dsi_pid": "UQ:252236",
+              "dsi_security_inherited": 1,
+              "dsi_security_policy": 1,
               "dsi_size": 1295,
               "dsi_state": "A",
             },
@@ -9556,6 +9950,8 @@ exports[`AdminContainer component should render default view 1`] = `
               "dsi_mimetype": "application/xml",
               "dsi_open_access": null,
               "dsi_pid": "UQ:252236",
+              "dsi_security_inherited": 1,
+              "dsi_security_policy": 1,
               "dsi_size": 1311,
               "dsi_state": "A",
             },
@@ -9567,6 +9963,8 @@ exports[`AdminContainer component should render default view 1`] = `
               "dsi_mimetype": "application/xml",
               "dsi_open_access": null,
               "dsi_pid": "UQ:252236",
+              "dsi_security_inherited": 1,
+              "dsi_security_policy": 1,
               "dsi_size": 1247,
               "dsi_state": "A",
             },
@@ -9578,6 +9976,8 @@ exports[`AdminContainer component should render default view 1`] = `
               "dsi_mimetype": "application/xml",
               "dsi_open_access": null,
               "dsi_pid": "UQ:252236",
+              "dsi_security_inherited": 1,
+              "dsi_security_policy": 1,
               "dsi_size": 124519,
               "dsi_state": "A",
             },
@@ -9589,6 +9989,8 @@ exports[`AdminContainer component should render default view 1`] = `
               "dsi_mimetype": "application/xml",
               "dsi_open_access": null,
               "dsi_pid": "UQ:252236",
+              "dsi_security_inherited": 1,
+              "dsi_security_policy": 1,
               "dsi_size": 68060,
               "dsi_state": "A",
             },
@@ -9600,6 +10002,8 @@ exports[`AdminContainer component should render default view 1`] = `
               "dsi_mimetype": "text/xml",
               "dsi_open_access": null,
               "dsi_pid": "UQ:252236",
+              "dsi_security_inherited": 1,
+              "dsi_security_policy": 1,
               "dsi_size": 786,
               "dsi_state": "A",
             },
@@ -9611,6 +10015,8 @@ exports[`AdminContainer component should render default view 1`] = `
               "dsi_mimetype": "application/xml",
               "dsi_open_access": null,
               "dsi_pid": "UQ:252236",
+              "dsi_security_inherited": 1,
+              "dsi_security_policy": 1,
               "dsi_size": 1296,
               "dsi_state": "A",
             },
@@ -9622,6 +10028,8 @@ exports[`AdminContainer component should render default view 1`] = `
               "dsi_mimetype": "application/xml",
               "dsi_open_access": null,
               "dsi_pid": "UQ:252236",
+              "dsi_security_inherited": 1,
+              "dsi_security_policy": 1,
               "dsi_size": 1285,
               "dsi_state": "A",
             },
@@ -9633,6 +10041,8 @@ exports[`AdminContainer component should render default view 1`] = `
               "dsi_mimetype": "application/xml",
               "dsi_open_access": null,
               "dsi_pid": "UQ:252236",
+              "dsi_security_inherited": 1,
+              "dsi_security_policy": 1,
               "dsi_size": 96466,
               "dsi_state": "A",
             },
@@ -9644,6 +10054,8 @@ exports[`AdminContainer component should render default view 1`] = `
               "dsi_mimetype": "application/xml",
               "dsi_open_access": null,
               "dsi_pid": "UQ:252236",
+              "dsi_security_inherited": 1,
+              "dsi_security_policy": 1,
               "dsi_size": 24362,
               "dsi_state": "A",
             },
@@ -9655,6 +10067,8 @@ exports[`AdminContainer component should render default view 1`] = `
               "dsi_mimetype": "application/octet-stream",
               "dsi_open_access": 1,
               "dsi_pid": "UQ:252236",
+              "dsi_security_inherited": 1,
+              "dsi_security_policy": 1,
               "dsi_size": 25607,
               "dsi_state": "D",
             },
@@ -9666,6 +10080,8 @@ exports[`AdminContainer component should render default view 1`] = `
               "dsi_mimetype": "application/octet-stream",
               "dsi_open_access": null,
               "dsi_pid": "UQ:252236",
+              "dsi_security_inherited": 1,
+              "dsi_security_policy": 1,
               "dsi_size": 25607,
               "dsi_state": "D",
             },
@@ -9677,6 +10093,8 @@ exports[`AdminContainer component should render default view 1`] = `
               "dsi_mimetype": "application/pdf",
               "dsi_open_access": null,
               "dsi_pid": "UQ:252236",
+              "dsi_security_inherited": 1,
+              "dsi_security_policy": 1,
               "dsi_size": 924170,
               "dsi_state": "A",
             },
@@ -9688,6 +10106,8 @@ exports[`AdminContainer component should render default view 1`] = `
               "dsi_mimetype": "application/pdf",
               "dsi_open_access": null,
               "dsi_pid": "UQ:252236",
+              "dsi_security_inherited": 1,
+              "dsi_security_policy": 1,
               "dsi_size": 86383,
               "dsi_state": "A",
             },
@@ -9699,6 +10119,8 @@ exports[`AdminContainer component should render default view 1`] = `
               "dsi_mimetype": "application/octet-stream",
               "dsi_open_access": 1,
               "dsi_pid": "UQ:252236",
+              "dsi_security_inherited": 1,
+              "dsi_security_policy": 1,
               "dsi_size": 1617,
               "dsi_state": "D",
             },
@@ -9979,6 +10401,11 @@ exports[`AdminContainer component should render default view 1`] = `
           "fez_record_search_key_isi_loc": null,
           "fez_record_search_key_ismemberof": Array [
             Object {
+              "parent": Object {
+                "rek_datastream_policy": 1,
+                "rek_pid": "UQ:3935",
+                "rek_security_policy": 5,
+              },
               "rek_ismemberof": "UQ:3935",
               "rek_ismemberof_id": 11954548,
               "rek_ismemberof_lookup": "System Documentation and Instructions",
@@ -9987,6 +10414,11 @@ exports[`AdminContainer component should render default view 1`] = `
               "rek_ismemberof_xsdmf_id": null,
             },
             Object {
+              "parent": Object {
+                "rek_datastream_policy": 2,
+                "rek_pid": "UQ:230658",
+                "rek_security_policy": 3,
+              },
               "rek_ismemberof": "UQ:230658",
               "rek_ismemberof_id": 11954549,
               "rek_ismemberof_lookup": "UQ Library - Scholarly Communication and Digitisation Services",
@@ -10228,6 +10660,8 @@ exports[`AdminContainer component should render memoized component with styles 1
           "dsi_mimetype": "text/xml",
           "dsi_open_access": null,
           "dsi_pid": "UQ:252236",
+          "dsi_security_inherited": 1,
+          "dsi_security_policy": 1,
           "dsi_size": 3097,
           "dsi_state": "A",
         },
@@ -10239,6 +10673,8 @@ exports[`AdminContainer component should render memoized component with styles 1
           "dsi_mimetype": "text/xml",
           "dsi_open_access": null,
           "dsi_pid": "UQ:252236",
+          "dsi_security_inherited": 1,
+          "dsi_security_policy": 1,
           "dsi_size": 3097,
           "dsi_state": "A",
         },
@@ -10250,6 +10686,8 @@ exports[`AdminContainer component should render memoized component with styles 1
           "dsi_mimetype": "text/xml",
           "dsi_open_access": null,
           "dsi_pid": "UQ:252236",
+          "dsi_security_inherited": 1,
+          "dsi_security_policy": 1,
           "dsi_size": 3092,
           "dsi_state": "A",
         },
@@ -10261,6 +10699,8 @@ exports[`AdminContainer component should render memoized component with styles 1
           "dsi_mimetype": "text/xml",
           "dsi_open_access": null,
           "dsi_pid": "UQ:252236",
+          "dsi_security_inherited": 1,
+          "dsi_security_policy": 1,
           "dsi_size": 3097,
           "dsi_state": "A",
         },
@@ -10272,6 +10712,8 @@ exports[`AdminContainer component should render memoized component with styles 1
           "dsi_mimetype": "text/xml",
           "dsi_open_access": null,
           "dsi_pid": "UQ:252236",
+          "dsi_security_inherited": 1,
+          "dsi_security_policy": 1,
           "dsi_size": 3097,
           "dsi_state": "A",
         },
@@ -10283,6 +10725,8 @@ exports[`AdminContainer component should render memoized component with styles 1
           "dsi_mimetype": "text/xml",
           "dsi_open_access": null,
           "dsi_pid": "UQ:252236",
+          "dsi_security_inherited": 1,
+          "dsi_security_policy": 1,
           "dsi_size": 3705,
           "dsi_state": "A",
         },
@@ -10294,6 +10738,8 @@ exports[`AdminContainer component should render memoized component with styles 1
           "dsi_mimetype": "text/xml",
           "dsi_open_access": null,
           "dsi_pid": "UQ:252236",
+          "dsi_security_inherited": 1,
+          "dsi_security_policy": 1,
           "dsi_size": 3097,
           "dsi_state": "A",
         },
@@ -10305,6 +10751,8 @@ exports[`AdminContainer component should render memoized component with styles 1
           "dsi_mimetype": "text/xml",
           "dsi_open_access": null,
           "dsi_pid": "UQ:252236",
+          "dsi_security_inherited": 1,
+          "dsi_security_policy": 1,
           "dsi_size": 3097,
           "dsi_state": "A",
         },
@@ -10316,6 +10764,8 @@ exports[`AdminContainer component should render memoized component with styles 1
           "dsi_mimetype": "application/pdf",
           "dsi_open_access": null,
           "dsi_pid": "UQ:252236",
+          "dsi_security_inherited": 1,
+          "dsi_security_policy": 1,
           "dsi_size": 322698,
           "dsi_state": "D",
         },
@@ -10327,6 +10777,8 @@ exports[`AdminContainer component should render memoized component with styles 1
           "dsi_mimetype": "application/pdf",
           "dsi_open_access": null,
           "dsi_pid": "UQ:252236",
+          "dsi_security_inherited": 1,
+          "dsi_security_policy": 1,
           "dsi_size": 499269,
           "dsi_state": "D",
         },
@@ -10338,6 +10790,8 @@ exports[`AdminContainer component should render memoized component with styles 1
           "dsi_mimetype": "application/pdf",
           "dsi_open_access": null,
           "dsi_pid": "UQ:252236",
+          "dsi_security_inherited": 1,
+          "dsi_security_policy": 1,
           "dsi_size": 499269,
           "dsi_state": "A",
         },
@@ -10349,6 +10803,8 @@ exports[`AdminContainer component should render memoized component with styles 1
           "dsi_mimetype": "application/pdf",
           "dsi_open_access": null,
           "dsi_pid": "UQ:252236",
+          "dsi_security_inherited": 1,
+          "dsi_security_policy": 1,
           "dsi_size": 322698,
           "dsi_state": "D",
         },
@@ -10360,6 +10816,8 @@ exports[`AdminContainer component should render memoized component with styles 1
           "dsi_mimetype": "application/pdf",
           "dsi_open_access": null,
           "dsi_pid": "UQ:252236",
+          "dsi_security_inherited": 1,
+          "dsi_security_policy": 1,
           "dsi_size": 1099946,
           "dsi_state": "A",
         },
@@ -10371,6 +10829,8 @@ exports[`AdminContainer component should render memoized component with styles 1
           "dsi_mimetype": "application/pdf",
           "dsi_open_access": 1,
           "dsi_pid": "UQ:252236",
+          "dsi_security_inherited": 1,
+          "dsi_security_policy": 1,
           "dsi_size": 273861,
           "dsi_state": "A",
         },
@@ -10382,6 +10842,8 @@ exports[`AdminContainer component should render memoized component with styles 1
           "dsi_mimetype": "application/pdf",
           "dsi_open_access": null,
           "dsi_pid": "UQ:252236",
+          "dsi_security_inherited": 1,
+          "dsi_security_policy": 1,
           "dsi_size": 1082235,
           "dsi_state": "A",
         },
@@ -10393,6 +10855,8 @@ exports[`AdminContainer component should render memoized component with styles 1
           "dsi_mimetype": "application/pdf",
           "dsi_open_access": null,
           "dsi_pid": "UQ:252236",
+          "dsi_security_inherited": 1,
+          "dsi_security_policy": 1,
           "dsi_size": 1335981,
           "dsi_state": "A",
         },
@@ -10404,6 +10868,8 @@ exports[`AdminContainer component should render memoized component with styles 1
           "dsi_mimetype": "application/pdf",
           "dsi_open_access": null,
           "dsi_pid": "UQ:252236",
+          "dsi_security_inherited": 1,
+          "dsi_security_policy": 1,
           "dsi_size": 587005,
           "dsi_state": "A",
         },
@@ -10415,6 +10881,8 @@ exports[`AdminContainer component should render memoized component with styles 1
           "dsi_mimetype": "application/xml",
           "dsi_open_access": null,
           "dsi_pid": "UQ:252236",
+          "dsi_security_inherited": 1,
+          "dsi_security_policy": 1,
           "dsi_size": 1247,
           "dsi_state": "A",
         },
@@ -10426,6 +10894,8 @@ exports[`AdminContainer component should render memoized component with styles 1
           "dsi_mimetype": "application/xml",
           "dsi_open_access": null,
           "dsi_pid": "UQ:252236",
+          "dsi_security_inherited": 1,
+          "dsi_security_policy": 1,
           "dsi_size": 1295,
           "dsi_state": "A",
         },
@@ -10437,6 +10907,8 @@ exports[`AdminContainer component should render memoized component with styles 1
           "dsi_mimetype": "application/xml",
           "dsi_open_access": null,
           "dsi_pid": "UQ:252236",
+          "dsi_security_inherited": 1,
+          "dsi_security_policy": 1,
           "dsi_size": 1311,
           "dsi_state": "A",
         },
@@ -10448,6 +10920,8 @@ exports[`AdminContainer component should render memoized component with styles 1
           "dsi_mimetype": "application/xml",
           "dsi_open_access": null,
           "dsi_pid": "UQ:252236",
+          "dsi_security_inherited": 1,
+          "dsi_security_policy": 1,
           "dsi_size": 1247,
           "dsi_state": "A",
         },
@@ -10459,6 +10933,8 @@ exports[`AdminContainer component should render memoized component with styles 1
           "dsi_mimetype": "application/xml",
           "dsi_open_access": null,
           "dsi_pid": "UQ:252236",
+          "dsi_security_inherited": 1,
+          "dsi_security_policy": 1,
           "dsi_size": 124519,
           "dsi_state": "A",
         },
@@ -10470,6 +10946,8 @@ exports[`AdminContainer component should render memoized component with styles 1
           "dsi_mimetype": "application/xml",
           "dsi_open_access": null,
           "dsi_pid": "UQ:252236",
+          "dsi_security_inherited": 1,
+          "dsi_security_policy": 1,
           "dsi_size": 68060,
           "dsi_state": "A",
         },
@@ -10481,6 +10959,8 @@ exports[`AdminContainer component should render memoized component with styles 1
           "dsi_mimetype": "text/xml",
           "dsi_open_access": null,
           "dsi_pid": "UQ:252236",
+          "dsi_security_inherited": 1,
+          "dsi_security_policy": 1,
           "dsi_size": 786,
           "dsi_state": "A",
         },
@@ -10492,6 +10972,8 @@ exports[`AdminContainer component should render memoized component with styles 1
           "dsi_mimetype": "application/xml",
           "dsi_open_access": null,
           "dsi_pid": "UQ:252236",
+          "dsi_security_inherited": 1,
+          "dsi_security_policy": 1,
           "dsi_size": 1296,
           "dsi_state": "A",
         },
@@ -10503,6 +10985,8 @@ exports[`AdminContainer component should render memoized component with styles 1
           "dsi_mimetype": "application/xml",
           "dsi_open_access": null,
           "dsi_pid": "UQ:252236",
+          "dsi_security_inherited": 1,
+          "dsi_security_policy": 1,
           "dsi_size": 1285,
           "dsi_state": "A",
         },
@@ -10514,6 +10998,8 @@ exports[`AdminContainer component should render memoized component with styles 1
           "dsi_mimetype": "application/xml",
           "dsi_open_access": null,
           "dsi_pid": "UQ:252236",
+          "dsi_security_inherited": 1,
+          "dsi_security_policy": 1,
           "dsi_size": 96466,
           "dsi_state": "A",
         },
@@ -10525,6 +11011,8 @@ exports[`AdminContainer component should render memoized component with styles 1
           "dsi_mimetype": "application/xml",
           "dsi_open_access": null,
           "dsi_pid": "UQ:252236",
+          "dsi_security_inherited": 1,
+          "dsi_security_policy": 1,
           "dsi_size": 24362,
           "dsi_state": "A",
         },
@@ -10536,6 +11024,8 @@ exports[`AdminContainer component should render memoized component with styles 1
           "dsi_mimetype": "application/octet-stream",
           "dsi_open_access": 1,
           "dsi_pid": "UQ:252236",
+          "dsi_security_inherited": 1,
+          "dsi_security_policy": 1,
           "dsi_size": 25607,
           "dsi_state": "D",
         },
@@ -10547,6 +11037,8 @@ exports[`AdminContainer component should render memoized component with styles 1
           "dsi_mimetype": "application/octet-stream",
           "dsi_open_access": null,
           "dsi_pid": "UQ:252236",
+          "dsi_security_inherited": 1,
+          "dsi_security_policy": 1,
           "dsi_size": 25607,
           "dsi_state": "D",
         },
@@ -10558,6 +11050,8 @@ exports[`AdminContainer component should render memoized component with styles 1
           "dsi_mimetype": "application/pdf",
           "dsi_open_access": null,
           "dsi_pid": "UQ:252236",
+          "dsi_security_inherited": 1,
+          "dsi_security_policy": 1,
           "dsi_size": 924170,
           "dsi_state": "A",
         },
@@ -10569,6 +11063,8 @@ exports[`AdminContainer component should render memoized component with styles 1
           "dsi_mimetype": "application/pdf",
           "dsi_open_access": null,
           "dsi_pid": "UQ:252236",
+          "dsi_security_inherited": 1,
+          "dsi_security_policy": 1,
           "dsi_size": 86383,
           "dsi_state": "A",
         },
@@ -10580,6 +11076,8 @@ exports[`AdminContainer component should render memoized component with styles 1
           "dsi_mimetype": "application/octet-stream",
           "dsi_open_access": 1,
           "dsi_pid": "UQ:252236",
+          "dsi_security_inherited": 1,
+          "dsi_security_policy": 1,
           "dsi_size": 1617,
           "dsi_state": "D",
         },
@@ -10860,6 +11358,11 @@ exports[`AdminContainer component should render memoized component with styles 1
       "fez_record_search_key_isi_loc": null,
       "fez_record_search_key_ismemberof": Array [
         Object {
+          "parent": Object {
+            "rek_datastream_policy": 1,
+            "rek_pid": "UQ:3935",
+            "rek_security_policy": 5,
+          },
           "rek_ismemberof": "UQ:3935",
           "rek_ismemberof_id": 11954548,
           "rek_ismemberof_lookup": "System Documentation and Instructions",
@@ -10868,6 +11371,11 @@ exports[`AdminContainer component should render memoized component with styles 1
           "rek_ismemberof_xsdmf_id": null,
         },
         Object {
+          "parent": Object {
+            "rek_datastream_policy": 2,
+            "rek_pid": "UQ:230658",
+            "rek_security_policy": 3,
+          },
           "rek_ismemberof": "UQ:230658",
           "rek_ismemberof_id": 11954549,
           "rek_ismemberof_lookup": "UQ Library - Scholarly Communication and Digitisation Services",

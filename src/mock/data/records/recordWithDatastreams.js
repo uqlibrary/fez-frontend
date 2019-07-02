@@ -324,6 +324,11 @@ export default {
     "fez_record_search_key_isi_loc": null,
     "fez_record_search_key_ismemberof": [
         {
+            "parent": {
+                "rek_pid": "UQ:3935",
+                "rek_datastream_policy": 1,
+                "rek_security_policy": 5
+            },
             "rek_ismemberof_id": 11954548,
             "rek_ismemberof_pid": "UQ:252236",
             "rek_ismemberof_xsdmf_id": null,
@@ -332,6 +337,11 @@ export default {
             "rek_ismemberof_lookup": "System Documentation and Instructions"
         },
         {
+            "parent": {
+                "rek_pid": "UQ:230658",
+                "rek_datastream_policy": 2,
+                "rek_security_policy": 3
+            },
             "rek_ismemberof_id": 11954549,
             "rek_ismemberof_pid": "UQ:252236",
             "rek_ismemberof_xsdmf_id": null,
@@ -401,7 +411,9 @@ export default {
             "dsi_mimetype": "text/xml",
             "dsi_copyright": null,
             "dsi_state": "A",
-            "dsi_size": 3097
+            "dsi_size": 3097,
+            "dsi_security_inherited": 1,
+            "dsi_security_policy": 1
         },
         {
             "dsi_pid": "UQ:252236",
@@ -412,7 +424,9 @@ export default {
             "dsi_mimetype": "text/xml",
             "dsi_copyright": null,
             "dsi_state": "A",
-            "dsi_size": 3097
+            "dsi_size": 3097,
+            "dsi_security_inherited": 1,
+            "dsi_security_policy": 1
         },
         {
             "dsi_pid": "UQ:252236",
@@ -423,7 +437,9 @@ export default {
             "dsi_mimetype": "text/xml",
             "dsi_copyright": null,
             "dsi_state": "A",
-            "dsi_size": 3092
+            "dsi_size": 3092,
+            "dsi_security_inherited": 1,
+            "dsi_security_policy": 1
         },
         {
             "dsi_pid": "UQ:252236",
@@ -434,7 +450,9 @@ export default {
             "dsi_mimetype": "text/xml",
             "dsi_copyright": null,
             "dsi_state": "A",
-            "dsi_size": 3097
+            "dsi_size": 3097,
+            "dsi_security_inherited": 1,
+            "dsi_security_policy": 1
         },
         {
             "dsi_pid": "UQ:252236",
@@ -445,7 +463,9 @@ export default {
             "dsi_mimetype": "text/xml",
             "dsi_copyright": null,
             "dsi_state": "A",
-            "dsi_size": 3097
+            "dsi_size": 3097,
+            "dsi_security_inherited": 1,
+            "dsi_security_policy": 1
         },
         {
             "dsi_pid": "UQ:252236",
@@ -456,7 +476,9 @@ export default {
             "dsi_mimetype": "text/xml",
             "dsi_copyright": null,
             "dsi_state": "A",
-            "dsi_size": 3705
+            "dsi_size": 3705,
+            "dsi_security_inherited": 1,
+            "dsi_security_policy": 1
         },
         {
             "dsi_pid": "UQ:252236",
@@ -467,7 +489,9 @@ export default {
             "dsi_mimetype": "text/xml",
             "dsi_copyright": null,
             "dsi_state": "A",
-            "dsi_size": 3097
+            "dsi_size": 3097,
+            "dsi_security_inherited": 1,
+            "dsi_security_policy": 1
         },
         {
             "dsi_pid": "UQ:252236",
@@ -478,7 +502,9 @@ export default {
             "dsi_mimetype": "text/xml",
             "dsi_copyright": null,
             "dsi_state": "A",
-            "dsi_size": 3097
+            "dsi_size": 3097,
+            "dsi_security_inherited": 1,
+            "dsi_security_policy": 1
         },
         {
             "dsi_pid": "UQ:252236",
@@ -489,7 +515,9 @@ export default {
             "dsi_mimetype": "application/pdf",
             "dsi_copyright": null,
             "dsi_state": "D",
-            "dsi_size": 322698
+            "dsi_size": 322698,
+            "dsi_security_inherited": 1,
+            "dsi_security_policy": 1
         },
         {
             "dsi_pid": "UQ:252236",
@@ -500,7 +528,9 @@ export default {
             "dsi_mimetype": "application/pdf",
             "dsi_copyright": null,
             "dsi_state": "D",
-            "dsi_size": 499269
+            "dsi_size": 499269,
+            "dsi_security_inherited": 1,
+            "dsi_security_policy": 1
         },
         {
             "dsi_pid": "UQ:252236",
@@ -511,7 +541,9 @@ export default {
             "dsi_mimetype": "application/pdf",
             "dsi_copyright": null,
             "dsi_state": "A",
-            "dsi_size": 499269
+            "dsi_size": 499269,
+            "dsi_security_inherited": 1,
+            "dsi_security_policy": 1
         },
         {
             "dsi_pid": "UQ:252236",
@@ -522,7 +554,9 @@ export default {
             "dsi_mimetype": "application/pdf",
             "dsi_copyright": null,
             "dsi_state": "D",
-            "dsi_size": 322698
+            "dsi_size": 322698,
+            "dsi_security_inherited": 1,
+            "dsi_security_policy": 1
         },
         {
             "dsi_pid": "UQ:252236",
@@ -533,7 +567,9 @@ export default {
             "dsi_mimetype": "application/pdf",
             "dsi_copyright": null,
             "dsi_state": "A",
-            "dsi_size": 1099946
+            "dsi_size": 1099946,
+            "dsi_security_inherited": 1,
+            "dsi_security_policy": 1
         },
         {
             "dsi_pid": "UQ:252236",
@@ -544,7 +580,9 @@ export default {
             "dsi_mimetype": "application/pdf",
             "dsi_copyright": null,
             "dsi_state": "A",
-            "dsi_size": 273861
+            "dsi_size": 273861,
+            "dsi_security_inherited": 1,
+            "dsi_security_policy": 1
         },
         {
             "dsi_pid": "UQ:252236",
@@ -555,7 +593,9 @@ export default {
             "dsi_mimetype": "application/pdf",
             "dsi_copyright": null,
             "dsi_state": "A",
-            "dsi_size": 1082235
+            "dsi_size": 1082235,
+            "dsi_security_inherited": 1,
+            "dsi_security_policy": 1
         },
         {
             "dsi_pid": "UQ:252236",
@@ -566,7 +606,9 @@ export default {
             "dsi_mimetype": "application/pdf",
             "dsi_copyright": null,
             "dsi_state": "A",
-            "dsi_size": 1335981
+            "dsi_size": 1335981,
+            "dsi_security_inherited": 1,
+            "dsi_security_policy": 1
         },
         {
             "dsi_pid": "UQ:252236",
@@ -577,7 +619,9 @@ export default {
             "dsi_mimetype": "application/pdf",
             "dsi_copyright": null,
             "dsi_state": "A",
-            "dsi_size": 587005
+            "dsi_size": 587005,
+            "dsi_security_inherited": 1,
+            "dsi_security_policy": 1
         },
         {
             "dsi_pid": "UQ:252236",
@@ -588,7 +632,9 @@ export default {
             "dsi_mimetype": "application/xml",
             "dsi_copyright": null,
             "dsi_state": "A",
-            "dsi_size": 1247
+            "dsi_size": 1247,
+            "dsi_security_inherited": 1,
+            "dsi_security_policy": 1
         },
         {
             "dsi_pid": "UQ:252236",
@@ -599,7 +645,9 @@ export default {
             "dsi_mimetype": "application/xml",
             "dsi_copyright": null,
             "dsi_state": "A",
-            "dsi_size": 1295
+            "dsi_size": 1295,
+            "dsi_security_inherited": 1,
+            "dsi_security_policy": 1
         },
         {
             "dsi_pid": "UQ:252236",
@@ -610,7 +658,9 @@ export default {
             "dsi_mimetype": "application/xml",
             "dsi_copyright": null,
             "dsi_state": "A",
-            "dsi_size": 1311
+            "dsi_size": 1311,
+            "dsi_security_inherited": 1,
+            "dsi_security_policy": 1
         },
         {
             "dsi_pid": "UQ:252236",
@@ -621,7 +671,9 @@ export default {
             "dsi_mimetype": "application/xml",
             "dsi_copyright": null,
             "dsi_state": "A",
-            "dsi_size": 1247
+            "dsi_size": 1247,
+            "dsi_security_inherited": 1,
+            "dsi_security_policy": 1
         },
         {
             "dsi_pid": "UQ:252236",
@@ -632,7 +684,9 @@ export default {
             "dsi_mimetype": "application/xml",
             "dsi_copyright": null,
             "dsi_state": "A",
-            "dsi_size": 124519
+            "dsi_size": 124519,
+            "dsi_security_inherited": 1,
+            "dsi_security_policy": 1
         },
         {
             "dsi_pid": "UQ:252236",
@@ -643,7 +697,9 @@ export default {
             "dsi_mimetype": "application/xml",
             "dsi_copyright": null,
             "dsi_state": "A",
-            "dsi_size": 68060
+            "dsi_size": 68060,
+            "dsi_security_inherited": 1,
+            "dsi_security_policy": 1
         },
         {
             "dsi_pid": "UQ:252236",
@@ -654,7 +710,9 @@ export default {
             "dsi_mimetype": "text/xml",
             "dsi_copyright": null,
             "dsi_state": "A",
-            "dsi_size": 786
+            "dsi_size": 786,
+            "dsi_security_inherited": 1,
+            "dsi_security_policy": 1
         },
         {
             "dsi_pid": "UQ:252236",
@@ -665,7 +723,9 @@ export default {
             "dsi_mimetype": "application/xml",
             "dsi_copyright": null,
             "dsi_state": "A",
-            "dsi_size": 1296
+            "dsi_size": 1296,
+            "dsi_security_inherited": 1,
+            "dsi_security_policy": 1
         },
         {
             "dsi_pid": "UQ:252236",
@@ -676,7 +736,9 @@ export default {
             "dsi_mimetype": "application/xml",
             "dsi_copyright": null,
             "dsi_state": "A",
-            "dsi_size": 1285
+            "dsi_size": 1285,
+            "dsi_security_inherited": 1,
+            "dsi_security_policy": 1
         },
         {
             "dsi_pid": "UQ:252236",
@@ -687,7 +749,9 @@ export default {
             "dsi_mimetype": "application/xml",
             "dsi_copyright": null,
             "dsi_state": "A",
-            "dsi_size": 96466
+            "dsi_size": 96466,
+            "dsi_security_inherited": 1,
+            "dsi_security_policy": 1
         },
         {
             "dsi_pid": "UQ:252236",
@@ -698,7 +762,9 @@ export default {
             "dsi_mimetype": "application/xml",
             "dsi_copyright": null,
             "dsi_state": "A",
-            "dsi_size": 24362
+            "dsi_size": 24362,
+            "dsi_security_inherited": 1,
+            "dsi_security_policy": 1
         },
         {
             "dsi_pid": "UQ:252236",
@@ -709,7 +775,9 @@ export default {
             "dsi_mimetype": "application/octet-stream",
             "dsi_copyright": null,
             "dsi_state": "D",
-            "dsi_size": 25607
+            "dsi_size": 25607,
+            "dsi_security_inherited": 1,
+            "dsi_security_policy": 1
         },
         {
             "dsi_pid": "UQ:252236",
@@ -720,7 +788,9 @@ export default {
             "dsi_mimetype": "application/octet-stream",
             "dsi_copyright": null,
             "dsi_state": "D",
-            "dsi_size": 25607
+            "dsi_size": 25607,
+            "dsi_security_inherited": 1,
+            "dsi_security_policy": 1
         },
         {
             "dsi_pid": "UQ:252236",
@@ -731,7 +801,9 @@ export default {
             "dsi_mimetype": "application/pdf",
             "dsi_copyright": null,
             "dsi_state": "A",
-            "dsi_size": 924170
+            "dsi_size": 924170,
+            "dsi_security_inherited": 1,
+            "dsi_security_policy": 1
         },
         {
             "dsi_pid": "UQ:252236",
@@ -742,7 +814,9 @@ export default {
             "dsi_mimetype": "application/pdf",
             "dsi_copyright": null,
             "dsi_state": "A",
-            "dsi_size": 86383
+            "dsi_size": 86383,
+            "dsi_security_inherited": 1,
+            "dsi_security_policy": 1
         },
         {
             "dsi_pid": "UQ:252236",
@@ -753,7 +827,9 @@ export default {
             "dsi_mimetype": "application/octet-stream",
             "dsi_copyright": null,
             "dsi_state": "D",
-            "dsi_size": 1617
+            "dsi_size": 1617,
+            "dsi_security_inherited": 1,
+            "dsi_security_policy": 1
         }
     ],
     "fez_matched_journals": [],

@@ -6434,6 +6434,7 @@ exports[`SecuritySectionContainer should fallback to default form values 1`] = `
                                                                     "type": [Function],
                                                                   }
                                                                 }
+                                                                disabled={false}
                                                                 label="Override inherited security (detailed below)"
                                                                 name="securitySection.rek_security_inherited"
                                                                 normalize={[Function]}
@@ -6446,6 +6447,7 @@ exports[`SecuritySectionContainer should fallback to default form values 1`] = `
                                                                       "type": [Function],
                                                                     }
                                                                   }
+                                                                  disabled={false}
                                                                   label="Override inherited security (detailed below)"
                                                                   name="securitySection.rek_security_inherited"
                                                                   normalize={[Function]}
@@ -17421,6 +17423,7 @@ exports[`SecuritySectionContainer should mount with default props 1`] = `
                                                                     "type": [Function],
                                                                   }
                                                                 }
+                                                                disabled={false}
                                                                 label="Override inherited security (detailed below)"
                                                                 name="securitySection.rek_security_inherited"
                                                                 normalize={[Function]}
@@ -17433,6 +17436,7 @@ exports[`SecuritySectionContainer should mount with default props 1`] = `
                                                                       "type": [Function],
                                                                     }
                                                                   }
+                                                                  disabled={false}
                                                                   label="Override inherited security (detailed below)"
                                                                   name="securitySection.rek_security_inherited"
                                                                   normalize={[Function]}

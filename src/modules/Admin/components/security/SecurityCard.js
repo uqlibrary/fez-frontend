@@ -62,6 +62,7 @@ export const SecurityCard = ({ disabled }) => {
                                         name="securitySection.rek_security_inherited"
                                         label="Override inherited security (detailed below)"
                                         normalize={overrideSecurityValueNormalizer}
+                                        disabled={disabled}
                                     />
                                 </Grid>
                             </React.Fragment>

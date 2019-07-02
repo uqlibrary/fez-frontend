@@ -1,6 +1,6 @@
 import React from 'react';
-import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
-import {pathConfig} from 'config/routes';
+import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
+import { pathConfig } from 'config/routes';
 import locale from 'locale/components';
 
 /*
@@ -32,15 +32,15 @@ export default {
                 <StandardCard>
                     <h3>General Enquiries</h3>
                     <p>
-                        Tel: 07 334 69775 <br/>
-                        Email: <a href="mailto:espace@library.uq.edu.au">espace@library.uq.edu.au</a><br/>
+                        Tel: 07 334 69775 <br />
+                        Email: <a href="mailto:espace@library.uq.edu.au">espace@library.uq.edu.au</a><br />
                     </p>
                     <h3>Staff contact</h3>
                     <p>
-                        Mary-Anne Marrington<br/>
-                        Manager, UQ eSpace<br/>
-                        Tel: 07 334 69981<br/>
-                        Email: <a href="mailto:m.marrington@library.uq.edu.au">m.marrington@library.uq.edu.au</a><br/>
+                        Mary-Anne Marrington<br />
+                        Manager, UQ eSpace<br />
+                        Tel: 07 334 69981<br />
+                        Email: <a href="mailto:m.marrington@library.uq.edu.au">m.marrington@library.uq.edu.au</a><br />
                     </p>
                     <h3>About UQ eSpace</h3>
                     The University of Queensland's institutional repository, UQ eSpace, aims to create global visibility and accessibility of UQ’s scholarly research by:
@@ -230,7 +230,7 @@ export default {
                     </div>
                 ),
             },
-            facetsFilter: {...locale.components.facetsFilter}
+            facetsFilter: { ...locale.components.facetsFilter }
         },
         myDatasets: {
             pageTitle: 'My research data',
@@ -263,7 +263,7 @@ export default {
                 confirmationTitle: 'Your dataset has been submitted',
                 datasetSuccessConfirmationMessage: (
                     <p>
-                        Your dataset has been saved.<br/><br/>
+                        Your dataset has been saved.<br /><br />
                         Your item will be published immediately and an UQ eSpace Research Outputs Officer will review the
                         record.
                     </p>),
@@ -321,14 +321,14 @@ export default {
                 cancelButtonLabel: 'No',
                 confirmButtonLabel: 'Yes'
             },
-            facetsFilter: {...locale.components.facetsFilter}
+            facetsFilter: { ...locale.components.facetsFilter }
         },
         addRecord: {
             title: 'Add a missing work to eSpace',
             stepper: [
-                {label: 'Search for your work'},
-                {label: 'Search results'},
-                {label: 'Add your work'}
+                { label: 'Search for your work' },
+                { label: 'Search results' },
+                { label: 'Add your work' }
             ],
             step1: {
                 title: 'Search for your works',
@@ -404,7 +404,7 @@ export default {
                 confirmationTitle: 'Your work has been submitted',
                 recordSuccessConfirmationMessage: (
                     <p>
-                        Your work has been saved.<br/><br/>
+                        Your work has been saved.<br /><br />
                         Your work will be published immediately and a UQ eSpace Research Outputs Officer will review the record.
                     </p>),
                 fileFailConfirmationAlert: {
@@ -456,7 +456,8 @@ export default {
             },
             facetsFilter: {
                 ...locale.components.facetsFilter,
-                excludeFacetsList: ['Scopus document type', 'Genre', 'Year published', 'Published year range']},
+                excludeFacetsList: ['Scopus document type', 'Genre', 'Year published', 'Published year range']
+            },
             errorAlert: {
                 type: 'error_outline',
                 title: 'Error',
@@ -732,7 +733,7 @@ export default {
                 title: 'Keyboard shortcuts',
                 text: (
                     <div>
-                        <br/>
+                        <br />
                         <h3>Tab navigation</h3>
                         <p>To navigate tabs while in tabbed mode, hold CTRL and SHIFT and use the LEFT and RIGHT arrow keys.</p>
                         <h3>Form style</h3>
@@ -755,6 +756,31 @@ export default {
             record: {
                 title: 'Edit record',
                 loadingMessage: 'Loading record',
+            },
+            successWorkflowConfirmation: {
+                confirmationTitle: 'Work has been updated',
+                confirmationMessage: 'Work has been updated',
+                cancelButtonLabel: 'Cancel',
+                confirmButtonLabel: 'Edit another work'
+            },
+            alerts: {
+                errorAlert: {
+                    type: 'error_outline',
+                    title: 'Error',
+                    message: (message) => (`Error has occurred during request and request cannot be processed. ${message} Please contact eSpace administrators or try again later.`),
+                },
+                successAlert: {
+                    type: 'done',
+                    title: 'Success',
+                    message: 'Work has been saved successfully',
+                    allowDismiss: true
+                },
+                progressAlert: {
+                    type: 'info_outline',
+                    title: 'Saving',
+                    message: 'Request is being processed.',
+                    showLoader: true
+                }
             }
         },
         incompletePublications: {
@@ -798,7 +824,7 @@ export default {
                 authors: {
                     ...locale.components.authors,
                     description: (
-                        <span>For each author marked with a <span style={{color: '#e60000', weight: 'bold'}}>red</span> prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click <b>UPDATE AUTHOR</b>.</span>
+                        <span>For each author marked with a <span style={{ color: '#e60000', weight: 'bold' }}>red</span> prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click <b>UPDATE AUTHOR</b>.</span>
                     ),
                     field: {
                         ...locale.components.authors.field,
@@ -848,7 +874,7 @@ export default {
                         fileUploadRestrictionHeading: 'File upload restrictions',
                         fileUploadRestrictions: (
                             <div>
-                                Maximum file size is 8GB. <br/>
+                                Maximum file size is 8GB. <br />
                                 PDF files must be saved using the following naming structure <b>&lt;student number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf</b>.
                                 Document name could be thesis, abstract, and etc.
                                 For example:

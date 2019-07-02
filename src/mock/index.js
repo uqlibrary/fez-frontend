@@ -1,15 +1,15 @@
 /* eslint-disable */
-import {api, sessionApi} from 'config';
+import { api, sessionApi } from 'config';
 import MockAdapter from 'axios-mock-adapter';
 import Cookies from 'js-cookie';
-import {SESSION_COOKIE_NAME} from 'config';
+import { SESSION_COOKIE_NAME } from 'config';
 import * as routes from 'repositories/routes';
 import * as mockData from './data';
 import * as mockTestingData from './data/testing/records';
 
 const queryString = require('query-string');
-const mock = new MockAdapter(api, {delayResponse: 200});
-const mockSessionApi = new MockAdapter(sessionApi, {delayResponse: 200});
+const mock = new MockAdapter(api, { delayResponse: 200 });
+const mockSessionApi = new MockAdapter(sessionApi, { delayResponse: 200 });
 const escapeRegExp = (input) => (input.replace('.\\*', '.*').replace(/[\-\[\]\{\}\(\)\+\?\\\^\$\|]/g, '\\$&'));
 // const standardQueryString = {page: '.*', pageSize: '.*', sortBy: '.*', sortDirection: '.*', facets: {}};
 // set session cookie in mock mode
@@ -42,7 +42,7 @@ mockSessionApi
 
 mock
     .onGet(routes.CURRENT_ACCOUNT_API().apiUrl).reply(() => {
-    // mock account response
+        // mock account response
         if (user === 'anon') {
             return [403, {}];
         } else if (mockData.accounts[user]) {
@@ -50,8 +50,8 @@ mock
         }
         return [404, {}];
     })
-    .onGet(routes.AUTHOR_DETAILS_API({userId: user}).apiUrl).reply(() => {
-    // mock current author details
+    .onGet(routes.AUTHOR_DETAILS_API({ userId: user }).apiUrl).reply(() => {
+        // mock current author details
         if (user === 'anon') {
             return [403, {}];
         } else if (mockData.authorDetails[user]) {
@@ -69,7 +69,7 @@ mock
         }
         return [404, {}];
     })
-    .onGet(routes.ACADEMIC_STATS_PUBLICATION_HINDEX_API({userId: user}).apiUrl)
+    .onGet(routes.ACADEMIC_STATS_PUBLICATION_HINDEX_API({ userId: user }).apiUrl)
     .reply(200, mockData.hindexResponse)
     .onGet(routes.SEARCH_EXTERNAL_RECORDS_API({}).apiUrl)
     .reply(config => {
@@ -145,7 +145,7 @@ mock
     .reply(200, mockData.trendingPublications)
     .onGet(routes.GET_ACML_QUICK_TEMPLATES_API().apiUrl)
     .reply(200, mockData.quickTemplates)
-    .onGet(routes.AUTHORS_SEARCH_API({query: '.*'}).apiUrl)
+    .onGet(routes.AUTHORS_SEARCH_API({ query: '.*' }).apiUrl)
     .reply(config => {
         if (config.params.rule === 'lookup') {
             return [200, mockData.searchKeyList.author];
@@ -157,108 +157,94 @@ mock
     .reply(200, mockData.recordsTypeList)
     .onGet(routes.GET_NEWS_API().apiUrl)
     .reply(200, mockData.newsFeed)
-    .onGet(new RegExp(escapeRegExp(routes.THIRD_PARTY_LOOKUP_API_1FIELD({type: 'incites', field1: '.*'}).apiUrl)))
+    .onGet(new RegExp(escapeRegExp(routes.THIRD_PARTY_LOOKUP_API_1FIELD({ type: 'incites', field1: '.*' }).apiUrl)))
     .reply(200, mockData.lookupToolIncites)
-    .onGet(new RegExp(escapeRegExp(routes.THIRD_PARTY_LOOKUP_API_2FIELD({type: 'incites', field1: '.*', field2: '.*'}).apiUrl)))
+    .onGet(new RegExp(escapeRegExp(routes.THIRD_PARTY_LOOKUP_API_2FIELD({ type: 'incites', field1: '.*', field2: '.*' }).apiUrl)))
     .reply(200, mockData.lookupToolIncites)
-    .onGet(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({pid: '.*'}).apiUrl)))
+    .onGet(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).apiUrl)))
     .reply(config => {
         if (config.url.indexOf('UQ:6de77b0') >= 0) {
-            return [200, {data: {...mockData.incompleteNTROrecordUqrdav10}}];
+            return [200, { data: { ...mockData.incompleteNTROrecordUqrdav10 } }];
         }
         if (config.url.indexOf('UQ:56b1652') >= 0) {
-            return [200, {data: {...mockData.incompleteNTROrecordUqsbutl1}}];
+            return [200, { data: { ...mockData.incompleteNTROrecordUqsbutl1 } }];
         }
         if (config.url.indexOf('UQ:692945') >= 0) {
-            return [200, {data: {...mockData.incompleteNTROrecord}}];
+            return [200, { data: { ...mockData.incompleteNTROrecord } }];
         }
         if (config.url.indexOf('UQ:678742') >= 0) {
-            return [200, {data: {...mockData.incompleteNTROlist.data[1]}}];
+            return [200, { data: { ...mockData.incompleteNTROlist.data[1] } }];
         }
         if (config.url.indexOf('UQ:678743') >= 0) {
-            return [200, {data: {...mockData.incompleteNTROlist.data[2]}}];
+            return [200, { data: { ...mockData.incompleteNTROlist.data[2] } }];
         }
         // Data collection
         if (config.url.indexOf('UQ:407731') >= 0) {
-            return [200, {data: {...mockTestingData.dataCollection}}];
+            return [200, { data: { ...mockTestingData.dataCollection } }];
         }
         if (config.url.indexOf('UQ:164935') >= 0) {
-            return [200, {data: {...mockData.recordWithMap}}];
+            return [200, { data: { ...mockData.recordWithMap } }];
         }
         if (config.url.indexOf('UQ:107683') >= 0) {
-            return [200, {data: {...mockData.recordWithTiffAndThumbnail}}];
+            return [200, { data: { ...mockData.recordWithTiffAndThumbnail } }];
         }
         if (config.url.indexOf('UQ:290371') >= 0) {
-            return [200, {data: {...mockData.recordWithoutAuthorIds}}];
+            return [200, { data: { ...mockData.recordWithoutAuthorIds } }];
         }
         if (config.url.indexOf('UQ:3883') >= 0) {
-            return [200, {data: {...mockData.communityRecord}}];
+            return [200, { data: { ...mockData.communityRecord } }];
         }
         if (config.url.indexOf('UQ:11398') >= 0) {
-            return [200, {data: {...mockData.collectionRecord}}];
+            return [200, { data: { ...mockData.collectionRecord } }];
         }
         if (config.url.indexOf('UQ:252236') >= 0) {
-            return [200, {data: {...mockData.recordWithDatastreams}}];
+            return [200, { data: { ...mockData.recordWithDatastreams } }];
         }
         const unClaimedRecord = mockData.possibleUnclaimedList.data.find(
             record => config.url.indexOf(record.rek_pid) > -1
         );
         if (unClaimedRecord) {
-            return [200, { data: { ...unClaimedRecord } } ];
+            return [200, { data: { ...unClaimedRecord } }];
         }
-        return [200, {data: {...mockData.record}}];
+        return [200, { data: { ...mockData.record } }];
     })
     // .reply(401, '')
     // .reply(500, ['ERROR in EXISTING_RECORD_API'])
-    .onGet(new RegExp(escapeRegExp(routes.VOCABULARIES_API({id: '.*'}).apiUrl)))
+    .onGet(new RegExp(escapeRegExp(routes.VOCABULARIES_API({ id: '.*' }).apiUrl)))
     .reply((config) => {
         const vocabId = config.url.substring(config.url.indexOf('/') + 1);
         return [200, mockData.vocabulariesList[vocabId]];
     })
-    .onGet(new RegExp(escapeRegExp(routes.AUTHOR_ORCID_DETAILS_API({userId: '.*', params: {code: '.*', redirUri: '.*'}}).apiUrl)))
-    .reply(200, {...mockData.authorOrcidDetails})
+    .onGet(new RegExp(escapeRegExp(routes.AUTHOR_ORCID_DETAILS_API({ userId: '.*', params: { code: '.*', redirUri: '.*' } }).apiUrl)))
+    .reply(200, { ...mockData.authorOrcidDetails })
     // .reply(500, ["Server error: `POST https://sandbox.orcid.org/oauth/token` resulted in a `500 Internal Server Error` response:\n{\"error\":\"server_error\",\"error_description\":\"Redirect URI mismatch.\"}\n"])
-    .onGet(new RegExp(escapeRegExp(routes.FILE_UPLOAD_API({pid: '.*', fileName: '.*'}).apiUrl)))
+    .onGet(new RegExp(escapeRegExp(routes.FILE_UPLOAD_API({ pid: '.*', fileName: '.*' }).apiUrl)))
     .reply(200, ['s3-ap-southeast-2.amazonaws.com']);
 
 mock
     .onPut(/(s3-ap-southeast-2.amazonaws.com)/)
-    .reply(200, {data: {}});
+    .reply(200, { data: {} });
 // .reply(500, {message: 'error - failed PUT FILE_UPLOAD_S3'});
 
 mock
-    .onPost(new RegExp(escapeRegExp(routes.RECORDS_ISSUES_API({pid: '.*'}).apiUrl)))
-    .reply(200, {data: ''})
+    .onPost(new RegExp(escapeRegExp(routes.RECORDS_ISSUES_API({ pid: '.*' }).apiUrl)))
+    .reply(200, { data: '' })
     // .reply(500, {message: 'error - failed POST RECORDS_ISSUES_API'})
     .onPost(new RegExp(escapeRegExp(routes.HIDE_POSSIBLE_RECORD_API().apiUrl)))
-    .reply(200, {data: {}})
+    .reply(200, { data: {} })
     // .reply(500, ['ERROR HIDE_POSSIBLE_RECORD_API'])
     .onPost(new RegExp(escapeRegExp(routes.NEW_RECORD_API().apiUrl)))
-    .reply(200, {data: {rek_pid: 'UQ:1111111'}}); // TODO: add actual record to data return!!!
+    .reply(200, { data: { rek_pid: 'UQ:1111111' } }); // TODO: add actual record to data return!!!
 // .reply(500, {message: 'error - failed NEW_RECORD_API'});
 // .reply(403, {message: 'Session expired'});
 
 mock
-    .onPatch(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({pid: '.*'}).apiUrl)))
-    .reply(200, {data: {...mockData.record}})
+    .onPatch(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).apiUrl)))
+    .reply(200, { data: { ...mockData.record } })
     // .reply(500, ['ERROR IN EXISTING_RECORD_API'])
-    .onPatch(new RegExp(escapeRegExp(routes.AUTHOR_API({authorId: '.*'}).apiUrl)))
-    .reply(200, {...mockData.currentAuthor.uqresearcher});
-    // .reply(500, {message: 'error - failed PATCH AUTHOR_API'})
-
-mock
-    .onPatch(new RegExp(escapeRegExp(routes.COMMUNITIES_SECURITY_POLICY_API({
-        pid: '.*'
-    }).apiUrl)))
-    .reply(200, {data: {...mockData.record}})
-    .onPatch(new RegExp(escapeRegExp(routes.COLLECTIONS_SECURITY_POLICY_API({
-        pid: '.*'
-    }).apiUrl)))
-    .reply(200, {data: {...mockData.record}})
-    .onPatch(new RegExp(escapeRegExp(routes.RECORDS_SECURITY_POLICY_API({
-        pid: '.*'
-    }).apiUrl)))
-    .reply(200, {data: {...mockData.record}});
+    .onPatch(new RegExp(escapeRegExp(routes.AUTHOR_API({ authorId: '.*' }).apiUrl)))
+    .reply(200, { ...mockData.currentAuthor.uqresearcher });
+// .reply(500, {message: 'error - failed PATCH AUTHOR_API'})
 ;
 
 // Default response. Put all mocks above this block.
@@ -266,5 +252,5 @@ mock
     .onAny().reply((config) => {
         console.log('url not found...');
         console.log(config);
-        return [404, {message: `MOCK URL NOT FOUND: ${config.url}`}];
+        return [404, { message: `MOCK URL NOT FOUND: ${config.url}` }];
     });
