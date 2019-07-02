@@ -51,7 +51,6 @@ export const AdminInterface = ({ classes, submitting, handleSubmit, location, ta
 
     /* istanbul ignore next */
     useEffect(() => {
-        console.log('useEffect');
         if (!submitting && submitSucceeded && successConfirmationRef.current) {
             successConfirmationRef.current.showConfirmation();
         }

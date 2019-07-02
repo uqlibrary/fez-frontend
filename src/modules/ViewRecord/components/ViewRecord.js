@@ -70,7 +70,7 @@ export default class ViewRecord extends PureComponent {
                             publication={recordToView}
                             hideTitle
                             hideContentIndicators
-                            showAdminActions={this.props.account.canMasquerade}
+                            showAdminActions={(this.props.account || {}).canMasquerade}
                         />
                     </Grid>
                 </Grid>
