@@ -150,84 +150,93 @@ exports[`FixRecord form should allow content indicators to be selected 1`] = `
 +                         </div>
 +                       </div>
 +                       <div
-+                         class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 PublicationCitation-citationCounts-349\\"
++                         class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
 +                       >
 +                         <div
-+                           class=\\"MuiGrid-container-3\\"
++                           class=\\"MuiGrid-container-3 MuiGrid-align-items-xs-center-11\\"
 +                         >
 +                           <div
-+                             class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-auto-44\\"
++                             class=\\"MuiGrid-item-4 MuiGrid-grid-xs-auto-30 PublicationCitation-citationCounts-349\\"
 +                           >
-+                             <a
-+                               aria-label=\\"Full citation in Web of science will open in a new window\\"
-+                               class=\\"wosCitationCount CitationCountView-citationCount-354 ExternalLink-externalLink-356\\"
-+                               href=\\"http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=000224648802120&SrcAuth=uqueensland\\"
-+                               rel=\\"noopener noreferrer\\"
-+                               tabindex=\\"0\\"
-+                               target=\\"_blank\\"
-+                               theme=\\"[object Object]\\"
-+                               title=\\"Full citation in Web of science will open in a new window\\"
++                             <div
++                               class=\\"MuiGrid-container-3\\"
 +                             >
-+                               <span
-+                                 class=\\"fez-icon wos large\\"
-+                               />
-+                               <span
-+                                 class=\\"CitationCountView-citationCountNumber-355\\"
++                               <div
++                                 class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-auto-44\\"
 +                               >
-+                                 2
-+                               </span>
-+                             </a>
-+                             <a
-+                               aria-label=\\"Full citation in Google scholar will open in a new window\\"
-+                               class=\\"googleCitationCount CitationCountView-citationCount-354 ExternalLink-externalLink-356\\"
-+                               href=\\"https://scholar.google.com/scholar?q=intitle:Roles%20of%20heterogeneous%20nuclear%20ribonucleoproteins%20A/B%20in%20cell%20growth\\"
-+                               rel=\\"noopener noreferrer\\"
-+                               tabindex=\\"0\\"
-+                               target=\\"_blank\\"
-+                               theme=\\"[object Object]\\"
-+                               title=\\"Full citation in Google scholar will open in a new window\\"
-+                             >
-+                               <span
-+                                 class=\\"fez-icon google large\\"
++                                 <a
++                                   aria-label=\\"Full citation in Web of science will open in a new window\\"
++                                   class=\\"wosCitationCount CitationCountView-citationCount-354 ExternalLink-externalLink-356\\"
++                                   href=\\"http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=000224648802120&SrcAuth=uqueensland\\"
++                                   rel=\\"noopener noreferrer\\"
++                                   tabindex=\\"0\\"
++                                   target=\\"_blank\\"
++                                   theme=\\"[object Object]\\"
++                                   title=\\"Full citation in Web of science will open in a new window\\"
++                                 >
++                                   <span
++                                     class=\\"fez-icon wos large\\"
++                                   />
++                                   <span
++                                     class=\\"CitationCountView-citationCountNumber-355\\"
++                                   >
++                                     2
++                                   </span>
++                                 </a>
++                                 <a
++                                   aria-label=\\"Full citation in Google scholar will open in a new window\\"
++                                   class=\\"googleCitationCount CitationCountView-citationCount-354 ExternalLink-externalLink-356\\"
++                                   href=\\"https://scholar.google.com/scholar?q=intitle:Roles%20of%20heterogeneous%20nuclear%20ribonucleoproteins%20A/B%20in%20cell%20growth\\"
++                                   rel=\\"noopener noreferrer\\"
++                                   tabindex=\\"0\\"
++                                   target=\\"_blank\\"
++                                   theme=\\"[object Object]\\"
++                                   title=\\"Full citation in Google scholar will open in a new window\\"
++                                 >
++                                   <span
++                                     class=\\"fez-icon google large\\"
++                                   />
++                                 </a>
++                                 <span
++                                   class=\\"noOaIcon\\"
++                                 />
++                               </div>
++                               <div
++                                 class=\\"MuiGrid-item-4\\"
++                               >
++                                 <a
++                                   class=\\"CitationCounts-statsLink-353 ExternalLink-externalLink-356\\"
++                                   href=\\"https://app.library.uq.edu.au/#/authors/view/UQ:41878\\"
++                                   rel=\\"noopener noreferrer\\"
++                                   tabindex=\\"0\\"
++                                   target=\\"_blank\\"
++                                   theme=\\"[object Object]\\"
++                                   title=\\"Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth\\"
++                                 >
++                                   <svg
++                                     aria-hidden=\\"true\\"
++                                     class=\\"MuiSvgIcon-root-358 ExternalLink-externalLinkIcon-357\\"
++                                     focusable=\\"false\\"
++                                     role=\\"presentation\\"
++                                     viewBox=\\"0 0 24 24\\"
+                                    >
++                                     <path
++                                       d=\\"M0 0h24v24H0z\\"
++                                       fill=\\"none\\"
++                                     />
++                                     <path
++                                       d=\\"M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z\\"
++                                     />
++                                   </svg>
++                                   View full statistics
++                                 </a>
++                               </div>
+                                <div
+-       class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-8-25 MuiGrid-align-items-xs-center-11 MuiGrid-align-content-xs-center-15 MuiGrid-justify-xs-center-20\\"
++                                 class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31\\"
 +                               />
-+                             </a>
-+                             <span
-+                               class=\\"noOaIcon\\"
-+                             />
++                             </div>
 +                           </div>
-+                           <div
-+                             class=\\"MuiGrid-item-4\\"
-+                           >
-+                             <a
-+                               class=\\"CitationCounts-statsLink-353 ExternalLink-externalLink-356\\"
-+                               href=\\"https://app.library.uq.edu.au/#/authors/view/UQ:41878\\"
-+                               rel=\\"noopener noreferrer\\"
-+                               tabindex=\\"0\\"
-+                               target=\\"_blank\\"
-+                               theme=\\"[object Object]\\"
-+                               title=\\"Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth\\"
-+                             >
-+                               <svg
-+                                 aria-hidden=\\"true\\"
-+                                 class=\\"MuiSvgIcon-root-358 ExternalLink-externalLinkIcon-357\\"
-+                                 focusable=\\"false\\"
-+                                 role=\\"presentation\\"
-+                                 viewBox=\\"0 0 24 24\\"
-                                >
-+                                 <path
-+                                   d=\\"M0 0h24v24H0z\\"
-+                                   fill=\\"none\\"
-+                                 />
-+                                 <path
-+                                   d=\\"M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z\\"
-+                                 />
-+                               </svg>
-+                               View full statistics
-+                             </a>
-+                           </div>
-+                           <div
-+                             class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31\\"
-+                           />
 +                         </div>
 +                       </div>
 +                     </div>
@@ -236,8 +245,7 @@ exports[`FixRecord form should allow content indicators to be selected 1`] = `
 +                 <hr
 +                   class=\\"MuiDivider-root-367 PublicationCitation-divider-346\\"
 +                 />
-                  <div
--       class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-8-25 MuiGrid-align-items-xs-center-11 MuiGrid-align-content-xs-center-15 MuiGrid-justify-xs-center-20\\"
++                 <div
 +                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
 +                 >
 +                   <span
@@ -254,7 +262,7 @@ exports[`FixRecord form should allow content indicators to be selected 1`] = `
 +                 <div
 +                   class=\\"MuiFormControl-root-372\\"
 +                   style=\\"width: 100%;\\"
-                  >
++                 >
 +                   <label
 +                     class=\\"MuiFormLabel-root-387 MuiFormLabel-error-390 MuiInputLabel-error-379 MuiFormLabel-required-392 MuiInputLabel-required-380 MuiInputLabel-root-376 MuiInputLabel-formControl-381 MuiInputLabel-animated-384\\"
 +                     data-shrink=\\"false\\"
@@ -263,7 +271,7 @@ exports[`FixRecord form should allow content indicators to be selected 1`] = `
 +                     Select an action
 +                     <span
 +                       class=\\"MuiFormLabel-asterisk-393 MuiFormLabel-error-390 MuiInputLabel-error-379\\"
-+                     >
+                      >
 +                        *
 +                     </span>
 +                   </label>
@@ -273,14 +281,14 @@ exports[`FixRecord form should allow content indicators to be selected 1`] = `
 +                     class=\\"MuiInputBase-root-414 MuiInput-root-401 MuiInput-underline-405 MuiInputBase-error-420 MuiInput-error-406 MuiInputBase-formControl-415 MuiInput-formControl-402\\"
 +                     label=\\"Select an action\\"
 +                     required=\\"\\"
-+                   >
-+                     <div
-+                       class=\\"MuiSelect-root-394\\"
-                      >
-                        <div
+                    >
+                      <div
 -           class=\\"MuiCircularProgress-root-294 MuiCircularProgress-colorPrimary-297 MuiCircularProgress-indeterminate-296\\"
 -           role=\\"progressbar\\"
 -           style=\\"width: 18px; height: 18px;\\"
++                       class=\\"MuiSelect-root-394\\"
++                     >
++                       <div
 +                         aria-haspopup=\\"true\\"
 +                         aria-pressed=\\"false\\"
 +                         class=\\"MuiSelect-select-395 MuiSelect-selectMenu-398 MuiInputBase-input-424 MuiInput-input-409\\"
@@ -307,7 +315,11 @@ exports[`FixRecord form should allow content indicators to be selected 1`] = `
 +                         focusable=\\"false\\"
 +                         role=\\"presentation\\"
 +                         viewBox=\\"0 0 24 24\\"
-+                       >
+                        >
+-             <circle
+-               class=\\"MuiCircularProgress-circle-300 MuiCircularProgress-circleIndeterminate-302\\"
+-               cx=\\"44\\"
+-               cy=\\"44\\"
 +                         <path
 +                           d=\\"M7 10l5 5 5-5z\\"
 +                         />
@@ -316,11 +328,7 @@ exports[`FixRecord form should allow content indicators to be selected 1`] = `
 +                   </div>
 +                   <p
 +                     class=\\"MuiFormHelperText-root-464 MuiFormHelperText-error-465 MuiFormHelperText-required-471\\"
-                    >
--             <circle
--               class=\\"MuiCircularProgress-circle-300 MuiCircularProgress-circleIndeterminate-302\\"
--               cx=\\"44\\"
--               cy=\\"44\\"
++                   >
 +                     This field is required
 +                   </p>
 +                 </div>
@@ -358,12 +366,12 @@ exports[`FixRecord form should allow content indicators to be selected 1`] = `
                             fill=\\"none\\"
 -               r=\\"21\\"
 -               stroke-width=\\"2\\"
-                          />
++                         />
 +                         <path
 +                           d=\\"M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z\\"
-+                         />
+                          />
                         </svg>
-                      </div>
++                     </div>
 +                     <div
 +                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31 Alert-text-481 alert-text\\"
 +                     >
@@ -374,7 +382,7 @@ exports[`FixRecord form should allow content indicators to be selected 1`] = `
 +                         Form cannot be submitted until all fields are valid. Please review all input fields.
 +                         <ul />
 +                       </span>
-+                     </div>
+                      </div>
                     </div>
 +                 </div>
 +               </div>
@@ -422,7 +430,7 @@ exports[`FixRecord form should allow content indicators to be selected 2`] = `
 - First value
 + Second value
 
-@@ -266,11 +266,12 @@
+@@ -274,11 +274,12 @@
                       <div
                         class=\\"MuiSelect-root-394\\"
                       >
@@ -443,7 +451,7 @@ exports[`FixRecord form should allow content indicators to be selected 3`] = `
 - First value
 + Second value
 
-@@ -245,67 +245,399 @@
+@@ -253,67 +253,399 @@
                   <div
                     class=\\"MuiFormControl-root-372\\"
                     style=\\"width: 100%;\\"
@@ -855,7 +863,7 @@ exports[`FixRecord form should allow content indicators to be selected 3`] = `
               </div>
             </div>
             <div
-@@ -349,11 +681,15 @@
+@@ -357,11 +689,15 @@
                         <b>
                           Validation - 
                         </b>
@@ -872,7 +880,7 @@ exports[`FixRecord form should allow content indicators to be selected 3`] = `
                     </div>
                   </div>
                 </div>
-@@ -380,10 +716,27 @@
+@@ -388,10 +724,27 @@
                   Cancel
                 </span>
                 <span
@@ -907,7 +915,7 @@ exports[`FixRecord form should allow content indicators to be selected 4`] = `
 - First value
 + Second value
 
-@@ -390,11 +390,12 @@
+@@ -398,11 +398,12 @@
                           <div
                             class=\\"MuiSelect-root-394\\"
                           >
@@ -928,7 +936,7 @@ exports[`FixRecord form should allow content indicators to be selected 5`] = `
 - First value
 + Second value
 
-@@ -397,16 +397,16 @@
+@@ -405,16 +405,16 @@
                               class=\\"MuiSelect-select-395 MuiSelect-selectMenu-398 MuiInputBase-input-424 MuiInput-input-409\\"
                               id=\\"content-indicators\\"
                               role=\\"button\\"
@@ -947,7 +955,7 @@ exports[`FixRecord form should allow content indicators to be selected 5`] = `
                               aria-hidden=\\"true\\"
                               class=\\"MuiSvgIcon-root-358 MuiSelect-icon-400\\"
                               focusable=\\"false\\"
-@@ -639,67 +639,12 @@
+@@ -647,67 +647,12 @@
                     </div>
                   </div>
                 </div>
@@ -1015,7 +1023,7 @@ exports[`FixRecord form should allow content indicators to be selected 5`] = `
             <div
               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31\\"
             />
-@@ -723,21 +668,23 @@
+@@ -731,21 +676,23 @@
             </div>
             <div
               class=\\"MuiGrid-item-4\\"
@@ -1049,7 +1057,7 @@ exports[`FixRecord form should allow content indicators to be selected 6`] = `
 - First value
 + Second value
 
-@@ -397,16 +397,16 @@
+@@ -405,16 +405,16 @@
                               class=\\"MuiSelect-select-395 MuiSelect-selectMenu-398 MuiInputBase-input-424 MuiInput-input-409\\"
                               id=\\"content-indicators\\"
                               role=\\"button\\"
@@ -1068,7 +1076,7 @@ exports[`FixRecord form should allow content indicators to be selected 6`] = `
                               aria-hidden=\\"true\\"
                               class=\\"MuiSvgIcon-root-358 MuiSelect-icon-400\\"
                               focusable=\\"false\\"
-@@ -639,12 +639,67 @@
+@@ -647,12 +647,67 @@
                     </div>
                   </div>
                 </div>
@@ -1136,7 +1144,7 @@ exports[`FixRecord form should allow content indicators to be selected 6`] = `
             <div
               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31\\"
             />
-@@ -668,23 +723,21 @@
+@@ -676,23 +731,21 @@
             </div>
             <div
               class=\\"MuiGrid-item-4\\"
@@ -1170,7 +1178,7 @@ exports[`FixRecord form should validate the form where applicable and submit cor
 - First value
 + Second value
 
-@@ -257,24 +257,23 @@
+@@ -265,24 +265,23 @@
                       >
                          *
                       </span>
@@ -1197,7 +1205,7 @@ exports[`FixRecord form should validate the form where applicable and submit cor
                         </div>
                         <input
                           aria-labelledby=\\"Select an action-label\\"
-@@ -383,23 +382,22 @@
+@@ -391,23 +390,22 @@
                           id=\\"Please select relevant indicator(s).-label\\"
                         >
                           Please select relevant indicator(s).
@@ -1223,7 +1231,7 @@ exports[`FixRecord form should validate the form where applicable and submit cor
                             </div>
                             <input
                               style=\\"border: 1px solid red;\\"
-@@ -455,25 +453,26 @@
+@@ -463,25 +461,26 @@
                     >
                       <div
                         class=\\"MuiFormControl-root-934 MuiFormControl-fullWidth-937\\"
@@ -1253,7 +1261,7 @@ exports[`FixRecord form should validate the form where applicable and submit cor
                             name=\\"comments\\"
                             rows=\\"3\\"
                           />
-@@ -485,25 +484,26 @@
+@@ -493,25 +492,26 @@
                     >
                       <div
                         class=\\"MuiFormControl-root-934 MuiFormControl-fullWidth-937\\"
@@ -1283,7 +1291,7 @@ exports[`FixRecord form should validate the form where applicable and submit cor
                             name=\\"rek_link\\"
                             type=\\"text\\"
                             value=\\"\\"
-@@ -553,11 +553,11 @@
+@@ -561,11 +561,11 @@
                     >
                       <div
                         tabindex=\\"0\\"
@@ -1296,7 +1304,7 @@ exports[`FixRecord form should validate the form where applicable and submit cor
                         >
                           <div
                             class=\\"MuiGrid-container-565 FileUploadDropzoneStaticContent-dropzone-1107\\"
-@@ -627,10 +627,11 @@
+@@ -635,10 +635,11 @@
                             </div>
                           </div>
                           <input
@@ -1308,7 +1316,7 @@ exports[`FixRecord form should validate the form where applicable and submit cor
                             style=\\"position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; opacity: 0.00001; pointer-events: none;\\"
                             type=\\"file\\"
                           />
-@@ -639,52 +640,100 @@
+@@ -647,52 +648,100 @@
                     </div>
                   </div>
                 </div>
@@ -1426,7 +1434,7 @@ exports[`FixRecord form should validate the form where applicable and submit cor
 - First value
 + Second value
 
-@@ -257,23 +257,24 @@
+@@ -265,23 +265,24 @@
                       >
                          *
                       </span>
@@ -1453,7 +1461,7 @@ exports[`FixRecord form should validate the form where applicable and submit cor
                         </div>
                         <input
                           aria-labelledby=\\"Select an action-label\\"
-@@ -297,11 +298,11 @@
+@@ -305,11 +306,11 @@
                     </div>
                   </div>
                 </div>
@@ -1466,7 +1474,7 @@ exports[`FixRecord form should validate the form where applicable and submit cor
             >
               <div
                 class=\\"MuiPaper-root-874 MuiPaper-elevation1-877 MuiPaper-rounded-875 MuiCard-root-873 Cards-card-868 StandardCard\\"
-@@ -382,22 +383,23 @@
+@@ -390,22 +391,23 @@
                           id=\\"Please select relevant indicator(s).-label\\"
                         >
                           Please select relevant indicator(s).
@@ -1492,7 +1500,7 @@ exports[`FixRecord form should validate the form where applicable and submit cor
                             </div>
                             <input
                               style=\\"border: 1px solid red;\\"
-@@ -453,26 +455,25 @@
+@@ -461,26 +463,25 @@
                     >
                       <div
                         class=\\"MuiFormControl-root-934 MuiFormControl-fullWidth-937\\"
@@ -1522,7 +1530,7 @@ exports[`FixRecord form should validate the form where applicable and submit cor
                             name=\\"comments\\"
                             rows=\\"3\\"
                           />
-@@ -484,26 +485,25 @@
+@@ -492,26 +493,25 @@
                     >
                       <div
                         class=\\"MuiFormControl-root-934 MuiFormControl-fullWidth-937\\"
@@ -1552,7 +1560,7 @@ exports[`FixRecord form should validate the form where applicable and submit cor
                             name=\\"rek_link\\"
                             type=\\"text\\"
                             value=\\"\\"
-@@ -553,11 +553,11 @@
+@@ -561,11 +561,11 @@
                     >
                       <div
                         tabindex=\\"0\\"
@@ -1565,7 +1573,7 @@ exports[`FixRecord form should validate the form where applicable and submit cor
                         >
                           <div
                             class=\\"MuiGrid-container-565 FileUploadDropzoneStaticContent-dropzone-1107\\"
-@@ -627,11 +627,10 @@
+@@ -635,11 +635,10 @@
                             </div>
                           </div>
                           <input
@@ -1577,7 +1585,7 @@ exports[`FixRecord form should validate the form where applicable and submit cor
                             style=\\"position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; opacity: 0.00001; pointer-events: none;\\"
                             type=\\"file\\"
                           />
-@@ -648,48 +647,44 @@
+@@ -656,48 +655,44 @@
               <div
                 class=\\"Alert\\"
                 style=\\"padding: 12px;\\"
@@ -1641,7 +1649,7 @@ exports[`FixRecord form should validate the form where applicable and submit cor
                   </div>
                 </div>
               </div>
-@@ -703,37 +698,41 @@
+@@ -711,37 +706,41 @@
             />
             <div
               class=\\"MuiGrid-item-566\\"

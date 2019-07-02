@@ -1,10 +1,10 @@
-import {PublicationCitation, styles} from './PublicationCitation';
-import {mockRecordToFix} from 'mock/data/testing/records';
+import { PublicationCitation, styles } from './PublicationCitation';
+import { mockRecordToFix } from 'mock/data/testing/records';
 
 const getProps = (testProps = {}) => ({
     classes: {},
     publication: mockRecordToFix,
-    history: {push: jest.fn()},
+    history: { push: jest.fn() },
     actions: {
         setRecordToView: jest.fn()
     },
@@ -12,7 +12,7 @@ const getProps = (testProps = {}) => ({
     ...testProps
 });
 
-function setup(testProps, isShallow = true){
+function setup(testProps, isShallow = true) {
     return getElement(PublicationCitation, getProps(testProps), isShallow);
 }
 
@@ -38,22 +38,22 @@ describe('PublicationCitation ', () => {
     });
 
     it('should render component with default item without links to title and doi', () => {
-        const wrapper = setup({hideLinks: true});
+        const wrapper = setup({ hideLinks: true });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render component with default list hiding the difference count', () => {
-        const wrapper = setup({hideCountDiff: true});
+        const wrapper = setup({ hideCountDiff: true });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render component with default list hiding the total count', () => {
-        const wrapper = setup({hideCountTotal: true});
+        const wrapper = setup({ hideCountTotal: true });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render component with default actions', () => {
-        const wrapper = setup({showDefaultActions: true});
+        const wrapper = setup({ showDefaultActions: true });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -98,14 +98,14 @@ describe('PublicationCitation ', () => {
     });
 
     it('should render component with publication from multiple sources', () => {
-        const publicationWithSources = {...mockRecordToFix, "sources": [{source: "espace", id: "UQ:224457"}]};
-        const wrapper = setup({publication: publicationWithSources, showSources: true});
+        const publicationWithSources = { ...mockRecordToFix, "sources": [{ source: "espace", id: "UQ:224457" }] };
+        const wrapper = setup({ publication: publicationWithSources, showSources: true });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render component without a title', () => {
-        const publicationWithSources = {...mockRecordToFix, "sources": [{source: "espace", id: "UQ:224457"}]};
-        const wrapper = setup({publication: publicationWithSources, showSources: true, hideTitle: true});
+        const publicationWithSources = { ...mockRecordToFix, "sources": [{ source: "espace", id: "UQ:224457" }] };
+        const wrapper = setup({ publication: publicationWithSources, showSources: true, hideTitle: true });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -135,7 +135,7 @@ describe('PublicationCitation ', () => {
                     console.log('Test missing');
                     break;
 
-                    case 'NAN':
+                case 'NAN':
                     // TODO
                     console.log('Test missing');
                     break;
@@ -174,13 +174,18 @@ describe('PublicationCitation ', () => {
     });
 
     it('should render publication with unpublished buffer', () => {
-        const wrapper = setup({publication: mockRecordToFix, showUnpublishedBufferFields: true});
+        const wrapper = setup({ publication: mockRecordToFix, showUnpublishedBufferFields: true });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should return message indicating unavailability of citation display', () => {
         const wrapper = setup({});
         expect(wrapper.instance().renderCitation(null)).toMatchSnapshot();
+    });
+
+    it('should show admin actions on unpublished buffer/search records page for admins', () => {
+        const wrapper = setup({ showAdminActions: true, hideCitationCounts: true });
+        expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render component with content indicators', () => {
@@ -202,7 +207,7 @@ describe('PublicationCitation ', () => {
                 }
             ],
         };
-        const wrapper = setup({publication: publicationWithContentIndicators});
+        const wrapper = setup({ publication: publicationWithContentIndicators });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

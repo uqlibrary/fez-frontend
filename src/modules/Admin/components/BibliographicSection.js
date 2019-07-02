@@ -13,7 +13,7 @@ import { DatePickerField } from 'modules/SharedComponents/Toolbox/DatePickerFiel
 import { DownshiftMultiChipSelectField } from 'modules/SharedComponents/Toolbox/DownshiftMultiChipSelectField';
 import { RichEditorField } from 'modules/SharedComponents/RichEditor';
 import { ListEditorField } from 'modules/SharedComponents/Toolbox/ListEditor';
-import { FormValuesContextConsumer } from 'context';
+import { FormValuesContext } from 'context';
 
 import { validation } from 'config';
 import {
@@ -267,7 +267,7 @@ export const BibliographicSection = ({ disabled = false }) => (
                 placeholder="" />
         </Grid>
         <Grid item xs={12}>
-            <FormValuesContextConsumer>
+            <FormValuesContext.Consumer>
                 {({ formValues }) => (
                     <Field
                         component={DownshiftMultiChipSelectField}
@@ -278,7 +278,7 @@ export const BibliographicSection = ({ disabled = false }) => (
                         optionsList={subjects}
                         name="subject" />
                 )}
-            </FormValuesContextConsumer>
+            </FormValuesContext.Consumer>
         </Grid>
         <Grid item xs={12}>
             <Field

@@ -1046,7 +1046,8 @@ export const UNPUBLISHED_BUFFER_ACTION_URLS = [
     },
     {
         label: 'Edit security for selected record',
-        url: (pid) => `${APP_URL}workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=230&href=%2Fmy_fez_traditional.php`
+        inApp: true,
+        url: (pid) => `${APP_URL}records/${pid}/edit`
     },
     {
         label: 'Delete selected record',

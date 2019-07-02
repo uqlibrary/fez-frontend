@@ -3485,6 +3485,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
       ]
     }
     publicationsListSubset={Array []}
+    showAdminActions={false}
     showDefaultActions={true}
     showMetrics={false}
     showSourceCountIcon={false}

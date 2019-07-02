@@ -20,8 +20,8 @@ import FilesSection from './FilesSection';
 import AuthorDetailsSection from './AuthorDetailsSection';
 
 import {
-    TabbedContextProvider,
-    RecordContextProvider,
+    TabbedContext,
+    RecordContext,
 } from 'context';
 
 const styles = theme => ({
@@ -85,8 +85,8 @@ export const AdminContainer = ({
     }
 
     return (
-        <TabbedContextProvider value={{ tabbed: isMobileView ? false : tabbed, toggleTabbed: handleToggle }}>
-            <RecordContextProvider value={{ record: recordToView }}>
+        <TabbedContext.Provider value={{ tabbed: isMobileView ? false : tabbed, toggleTabbed: handleToggle }}>
+            <RecordContext.Provider value={{ record: recordToView }}>
                 <AdminInterface
                     classes={classes}
                     handleSubmit={handleSubmit}
@@ -125,8 +125,8 @@ export const AdminContainer = ({
                         }
                     }}
                 />
-            </RecordContextProvider>
-        </TabbedContextProvider>
+            </RecordContext.Provider>
+        </TabbedContext.Provider>
     );
 };
 

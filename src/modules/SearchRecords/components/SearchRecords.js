@@ -304,9 +304,9 @@ class SearchRecords extends PureComponent {
                                     <Grid item xs={12}>
                                         {
                                             pagingData &&
-                                            pagingData.to &&
-                                            pagingData.from &&
-                                            pagingData.total
+                                                pagingData.to &&
+                                                pagingData.from &&
+                                                pagingData.total
                                                 ? <span>
                                                     {txt.recordCount
                                                         .replace('[recordsTotal]', pagingData.total)
@@ -357,6 +357,7 @@ class SearchRecords extends PureComponent {
                                     this.props.publicationsList.length > 0 &&
                                     <div style={{ marginTop: 16 }}>
                                         <PublicationsList
+                                            showAdminActions={this.props.isAdmin || this.props.isUnpublishedBufferPage}
                                             showUnpublishedBufferFields={this.props.isUnpublishedBufferPage}
                                             publicationsList={this.props.publicationsList}
                                         />

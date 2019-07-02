@@ -12,7 +12,7 @@ import { DownshiftMultiChipSelectField } from 'modules/SharedComponents/Toolbox/
 
 import { validation } from 'config';
 import { collectionItems, WOSDocTypes, ScopusDocTypes, PubmedDocTypes } from './MockData';
-import { FormValuesContextConsumer } from 'context';
+import { FormValuesContext } from 'context';
 
 /* istanbul ignore next */
 export const IdentifiersSection = ({ disabled = false }) => (
@@ -21,7 +21,7 @@ export const IdentifiersSection = ({ disabled = false }) => (
             <Typography variant="body2" component="p">Some explanatory text might go here. It may not. Time will tell.</Typography>
         </Grid>
         <Grid item xs={12}>
-            <FormValuesContextConsumer>
+            <FormValuesContext.Consumer>
                 {({ formValues }) => (
                     <Field
                         component={DownshiftMultiChipSelectField}
@@ -32,7 +32,7 @@ export const IdentifiersSection = ({ disabled = false }) => (
                         optionsList={collectionItems}
                         name="identifiersSection.collection" />
                 )}
-            </FormValuesContextConsumer>
+            </FormValuesContext.Consumer>
         </Grid>
         <Grid item xs={12} sm={6}>
             <Field
