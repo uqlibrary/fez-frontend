@@ -209,6 +209,7 @@ export class ContributorsEditor extends PureComponent {
                 hideDelete={hideDelete}
                 hideReorder={hideReorder}
                 index={index}
+                className={'ContributorRow'}
                 key={`ContributorRow_${index}`}
                 onSelect={this.props.editMode ? this.selectContributor : this.assignContributor}
                 onDelete={this.deleteContributor}
@@ -305,7 +306,7 @@ export class ContributorsEditor extends PureComponent {
                                 />
                             </List>
                             <List classes={{
-                                root: `${classes.list} ${(contributors.length > 3) ? classes.scroll : ''}`
+                                root: `ContributorList ${classes.list} ${(contributors.length > 3) ? classes.scroll : '' }`
                             }}>
                                 {this.renderContributorRows()}
                             </List>

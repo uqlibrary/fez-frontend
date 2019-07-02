@@ -22,7 +22,8 @@ export class ListRow extends PureComponent {
         locale: PropTypes.object,
         disabled: PropTypes.bool,
         hideReorder: PropTypes.bool,
-        classes: PropTypes.object
+        classes: PropTypes.object,
+        form: PropTypes.string
     };
 
     static defaultProps = {
@@ -36,7 +37,8 @@ export class ListRow extends PureComponent {
                 cancelButtonLabel: 'No',
                 confirmButtonLabel: 'Yes'
             }
-        }
+        },
+        form: 'Form'
     };
 
     showConfirmation = () => {
@@ -64,9 +66,9 @@ export class ListRow extends PureComponent {
     render() {
         const {item, disabled, hideReorder, canMoveUp, canMoveDown, classes} = this.props;
         const {moveDownHint, moveUpHint, deleteHint, deleteRecordConfirmation} = this.props.locale;
-
+        const componentID = this.props.form.replace(/\s+/g, '');
         return (
-            <div style={{flexGrow: 1, padding: 8}}>
+            <div style={{flexGrow: 1, padding: 8}} className={`ListRow-${componentID} ListRow-${componentID}-${item.value || item}`}>
                 <ConfirmDialogBox
                     onRef={ref => (this.confirmationBox = ref)}
                     onAction={this.deleteRecord}
@@ -105,7 +107,7 @@ export class ListRow extends PureComponent {
                     }
                     <Grid item xs={2} sm={1} className={classes.center}>
                         <Tooltip title={deleteHint}>
-                            <IconButton onClick={this.showConfirmation} disabled={disabled}>
+                            <IconButton onClick={this.showConfirmation} disabled={disabled} id={`delete-${this.props.index}`}>
                                 <Delete/>
                             </IconButton>
                         </Tooltip>
