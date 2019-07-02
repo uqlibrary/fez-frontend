@@ -141,7 +141,12 @@ export class SimpleSearchComponent extends PureComponent {
         if (event && event.key && (event.key !== 'Enter')) return;
 
         if (this.props.searchText.trim().length > MAX_PUBLIC_SEARCH_TEXT_LENGTH) {
-            this.props.onInvalidSearch(locale.validationErrors.maxLength.replace('[max]', MAX_PUBLIC_SEARCH_TEXT_LENGTH));
+            this.props.onInvalidSearch(
+                locale.validationErrors.maxLength.replace(
+                    '[max]',
+                    MAX_PUBLIC_SEARCH_TEXT_LENGTH
+                )
+            );
             return;
         }
 
@@ -160,7 +165,6 @@ export class SimpleSearchComponent extends PureComponent {
 
     _handleSubmit = (event) => {
         event.preventDefault();
-        this._handleSearch(event);
     }
 
     render() {

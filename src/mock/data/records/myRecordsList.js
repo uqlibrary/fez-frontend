@@ -285,6 +285,13 @@ export default {
             "rek_author_id_lookup": "Meunier, Frederic A."
         }],
         "fez_record_search_key_biosis_id": null,
+        "fez_record_search_key_content_indicator": [{
+            "rek_content_indicator_id": 1,
+            "rek_content_indicator_pid": "UQ:678728",
+            "rek_content_indicator": 454079,
+            "rek_content_indicator_order": 1,
+            "rek_content_indicator_lookup": "Scholarship of Teaching and Learning"
+        }],
         "fez_record_search_key_contributor": [],
         "fez_record_search_key_contributor_id": [],
         "fez_record_search_key_corresponding_country": [{

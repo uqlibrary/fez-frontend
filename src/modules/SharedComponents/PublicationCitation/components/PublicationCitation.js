@@ -1,16 +1,16 @@
-import React, {PureComponent} from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
-import {Link} from 'react-router-dom';
-import {locale} from 'locale';
-import {routes, publicationTypes} from 'config';
-import {ExternalLink} from 'modules/SharedComponents/ExternalLink';
+import { Link } from 'react-router-dom';
+import { locale } from 'locale';
+import { routes, publicationTypes } from 'config';
+import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import ReactHtmlParser from 'react-html-parser';
-import {withStyles} from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 
 // citations for different publication types
 import CitationCounts from './citations/CitationCounts';
@@ -267,19 +267,20 @@ export class PublicationCitation extends PureComponent {
     };
 
     render() {
-        const {classes} = this.props;
+        const { classes } = this.props;
         const txt = locale.components.publicationCitation;
         const recordValue = this.props.showMetrics && this.props.publication.metricData;
         return (
-            <React.Fragment>
+            <div className="publicationCitation">
                 <Grid container spacing={0}>
                     <Grid item xs>
                         <Grid container spacing={0}>
                             {
                                 !this.props.hideTitle
-                                    ? <Grid item xs style={{minWidth: 1}}>
-                                        <Typography variant="h6" component="h6"
-                                            className={classes.citationTitle}>{this.renderTitle()}</Typography>
+                                    ? <Grid item xs style={{ minWidth: 1 }}>
+                                        <Typography variant="h6" component="h6" className={classes.citationTitle}>
+                                            {this.renderTitle()}
+                                        </Typography>
                                     </Grid>
                                     : <Grid item xs/>
                             }
@@ -302,7 +303,7 @@ export class PublicationCitation extends PureComponent {
                                             {
                                                 this.props.showSourceCountIcon &&
                                                 <Grid item>
-                                                    <span className={`fez-icon ${recordValue.source} xxxlarge`}/>
+                                                    <span className={`fez-icon ${recordValue.source} xxxlarge`} />
                                                     <Typography variant="h6">{recordValue.count}</Typography>
                                                 </Grid>
                                             }
@@ -349,7 +350,7 @@ export class PublicationCitation extends PureComponent {
                             {
                                 this.props.showUnpublishedBufferFields &&
                                 <Grid item xs={12}>
-                                    <UnpublishedBufferCitationView publication={this.props.publication}/>
+                                    <UnpublishedBufferCitationView publication={this.props.publication} />
                                 </Grid>
                             }
                         </Grid>
@@ -389,9 +390,9 @@ export class PublicationCitation extends PureComponent {
                         </Typography>
                     </Grid>
                 }
-            </React.Fragment>
+            </div>
         );
     }
 }
 
-export default withStyles(styles, {withTheme: true})(PublicationCitation);
+export default withStyles(styles, { withTheme: true })(PublicationCitation);

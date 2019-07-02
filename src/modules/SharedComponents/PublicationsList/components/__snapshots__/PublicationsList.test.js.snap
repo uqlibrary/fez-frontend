@@ -310,6 +310,15 @@ exports[`PublicationsList renders component with items 1`] = `
           },
         ],
         "fez_record_search_key_biosis_id": null,
+        "fez_record_search_key_content_indicator": Array [
+          Object {
+            "rek_content_indicator": 454079,
+            "rek_content_indicator_id": 1,
+            "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
+            "rek_content_indicator_order": 1,
+            "rek_content_indicator_pid": "UQ:678728",
+          },
+        ],
         "fez_record_search_key_contributor": Array [],
         "fez_record_search_key_contributor_id": Array [],
         "fez_record_search_key_corresponding_country": Array [

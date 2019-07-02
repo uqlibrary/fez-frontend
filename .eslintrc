@@ -10,7 +10,9 @@
     "expect": true,
     "sinon": true,
     "__DEV__": true,
-    "jest": true
+    "jest": true,
+    "Cypress": true,
+    "cy": true
   },
   "rules": {
     "no-var": 2,                     // http://eslint.org/docs/rules/no-var

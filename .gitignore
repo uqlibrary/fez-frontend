@@ -16,3 +16,5 @@ bundle.js.map
 favicon.ico
 index.html
 stats.json
+cypress/videos
+cypress/screenshots

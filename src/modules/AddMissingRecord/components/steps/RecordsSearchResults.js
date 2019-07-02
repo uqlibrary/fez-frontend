@@ -59,7 +59,6 @@ export default class RecordsSearchResults extends PureComponent {
     };
 
     _claimPublication = (item) => {
-        console.log(item);
         this.props.actions.setClaimPublication(item);
         this.props.actions.setRedirectPath(pathConfig.records.add.find);
         this.props.history.push(pathConfig.records.claim);
