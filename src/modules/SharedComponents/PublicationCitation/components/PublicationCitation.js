@@ -37,7 +37,8 @@ import ConferenceProceedingsCitation from './citations/ConferenceProceedingsCita
 import ThesisCitation from './citations/ThesisCitation';
 import NewspaperArticleCitation from './citations/NewspaperArticleCitation';
 import DataCollectionCitation from './citations/DataCollectionCitation';
-import { UnpublishedBufferCitationView } from './citations/partials/UnpublishedBufferCitationView';
+import {UnpublishedBufferCitationView} from './citations/partials/UnpublishedBufferCitationView';
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 export const styles = theme => ({
     divider: {
@@ -72,6 +73,7 @@ export const styles = theme => ({
 export class PublicationCitation extends PureComponent {
     static propTypes = {
         publication: PropTypes.object.isRequired,
+        publicationsLoading: PropTypes.bool,
         showDefaultActions: PropTypes.bool,
         showSources: PropTypes.bool,
         customActions: PropTypes.array,
@@ -208,8 +210,30 @@ export class PublicationCitation extends PureComponent {
                     <Grid item xs={12} sm="auto" key={`action_key_${index}`}>
                         {
                             action.primary
-                                ? (<Button classes={{label: pid, root: pid}} variant="contained"  {...buttonProps}/>)
-                                : (<Button classes={{label: pid, root: pid}} variant="text" {...buttonProps}/>)
+                                ? (<Button disabled={!!this.props.publicationsLoading} classes={{label: pid, root: pid}} variant="contained"  {...buttonProps}>
+                                    {action.label}
+                                    {!!this.props.publicationsLoading &&
+                                    <CircularProgress
+                                        size={12}
+                                        style={{marginLeft: 12, marginTop: -2}}
+                                        thickness={3}
+                                        color={'secondary'}
+                                        variant={'indeterminate'}
+                                        aria-label="Waiting for records to finish loading"/>
+                                    }
+                                </Button>)
+                                : (<Button disabled={!!this.props.publicationsLoading} classes={{label: pid, root: pid}} variant="text" {...buttonProps}>
+                                    {action.label}
+                                    {!!this.props.publicationsLoading &&
+                                    <CircularProgress
+                                        size={12}
+                                        style={{marginLeft: 12, marginTop: -2}}
+                                        thickness={3}
+                                        color={'secondary'}
+                                        variant={'indeterminate'}
+                                        aria-label="Waiting for records to finish loading"/>
+                                    }
+                                </Button>)
                         }
                     </Grid>
                 );

@@ -59,6 +59,7 @@ export default class RecordsSearchResults extends PureComponent {
     };
 
     _claimPublication = (item) => {
+        console.log(item);
         this.props.actions.setClaimPublication(item);
         this.props.actions.setRedirectPath(pathConfig.records.add.find);
         this.props.history.push(pathConfig.records.claim);
@@ -111,7 +112,8 @@ export default class RecordsSearchResults extends PureComponent {
             {
                 label: searchResultsTxt.claim,
                 handleAction: this._claimPublication,
-                primary: true
+                primary: true,
+                disabled: this.props.searchLoading
             }
         ];
 
@@ -154,6 +156,7 @@ export default class RecordsSearchResults extends PureComponent {
                                         </Grid>
                                         <Grid item xs={12}>
                                             <PublicationsList
+                                                publicationsLoading={this.props.searchLoading}
                                                 publicationsList={this.props.publicationsList}
                                                 customActions={actions}
                                                 publicationsListSubset={unclaimablePublicationsList}
