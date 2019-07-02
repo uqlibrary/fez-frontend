@@ -235,4 +235,22 @@ describe('AdminInterface component', () => {
 
         expect(wrapper.find('TabContainer').props().currentTab).toBe('files');
     });
+
+    it('should disabled button and render alert for form submitting', () => {
+        const wrapper = setup({ submitting: true });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should display successful alert', () => {
+        const wrapper = setup({
+            submitSucceeded: true,
+            history: {
+                go: jest.fn()
+            }
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+
+        wrapper.find('ConfirmDialogBox').props().onAction();
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });
