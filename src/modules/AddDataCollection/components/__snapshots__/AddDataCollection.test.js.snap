@@ -923,6 +923,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                 component={[Function]}
                 disableFuture={true}
                 disabled={false}
+                id="rek_start_date"
                 name="fez_record_search_key_start_date.rek_start_date"
                 validate={
                   Array [
@@ -951,6 +952,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                 component={[Function]}
                 disableFuture={true}
                 disabled={false}
+                id="rek_end_date"
                 name="fez_record_search_key_end_date.rek_end_date"
                 validate={
                   Array [
@@ -2126,6 +2128,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                 component={[Function]}
                 disableFuture={true}
                 disabled={false}
+                id="rek_start_date"
                 name="fez_record_search_key_start_date.rek_start_date"
                 validate={
                   Array [
@@ -2154,6 +2157,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                 component={[Function]}
                 disableFuture={true}
                 disabled={false}
+                id="rek_end_date"
                 name="fez_record_search_key_end_date.rek_end_date"
                 validate={
                   Array [

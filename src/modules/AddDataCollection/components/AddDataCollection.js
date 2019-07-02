@@ -370,6 +370,7 @@ export default class AddDataCollection extends Component {
                                             disableFuture
                                             autoOk
                                             name="fez_record_search_key_start_date.rek_start_date"
+                                            id="rek_start_date"
                                             disabled={this.props.submitting}
                                             validate={[validation.dateRange]}/>
                                     </Grid>
@@ -380,6 +381,7 @@ export default class AddDataCollection extends Component {
                                             disableFuture
                                             autoOk
                                             name="fez_record_search_key_end_date.rek_end_date"
+                                            id="rek_end_date"
                                             disabled={this.props.submitting}
                                             validate={[validation.dateRange]}/>
                                     </Grid>

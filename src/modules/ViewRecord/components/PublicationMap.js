@@ -19,7 +19,7 @@ export const GoogleMapViewComponent = (props) => {
         bounds.extend(new window.google.maps.LatLng(coord.lat, coord.lng));
     });
     return (
-        <div>
+        <div id="googleMap">
             {
                 <GoogleMap
                     defaultZoom={props.zoom}
