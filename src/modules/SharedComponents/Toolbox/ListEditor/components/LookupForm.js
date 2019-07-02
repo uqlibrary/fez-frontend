@@ -36,7 +36,6 @@ export default class LookupForm extends Component {
                         hintText={this.props.locale.inputFieldHint}
                         disabled={this.props.disabled}
                         errorText={this.props.errorText}
-                        className="mui-long-labels-fix"
                     />
                 }
             </React.Fragment>

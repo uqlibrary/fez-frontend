@@ -9,6 +9,8 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Popper from '@material-ui/core/Popper';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Grid from '@material-ui/core/Grid';
+import { throttle } from 'throttle-debounce';
+
 
 export const styles = () => ({
     root: {
@@ -80,6 +82,11 @@ export class AutoCompleteAsyncField extends Component {
         )
     };
 
+    constructor(props) {
+        super(props);
+        this.throttledLoadSuggestions = throttle(1000, this.props.loadSuggestions);
+    }
+
     componentDidMount() {
         if (!this.props.async && this.props.loadSuggestions) {
             this.props.loadSuggestions(this.props.category);
@@ -88,7 +95,7 @@ export class AutoCompleteAsyncField extends Component {
 
     getSuggestions = (event) => {
         if (this.props.async && this.props.loadSuggestions) {
-            this.props.loadSuggestions(this.props.category, event.target.value);
+            this.throttledLoadSuggestions(this.props.category, event.target.value);
         }
     };
 
