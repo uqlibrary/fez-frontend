@@ -57,6 +57,11 @@ exports[`DataStreamSecuritySelector component should change security value for t
                   focusable=\\"false\\""
 `;
 
+exports[`DataStreamSecuritySelector component should not display datastream security selected in dropdown 1`] = `
+"Snapshot Diff:
+Compared values have no visual difference."
+`;
+
 exports[`DataStreamSecuritySelector component should render default view 1`] = `
 <DocumentFragment>
   <h6

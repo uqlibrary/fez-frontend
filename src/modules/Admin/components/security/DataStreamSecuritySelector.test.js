@@ -86,6 +86,29 @@ describe('DataStreamSecuritySelector component', () => {
         expect(getByText(/public/i)).toHaveAttribute('role', 'button');
     });
 
+    it('should not display datastream security selected in dropdown', () => {
+        const { asFragment } = setup({
+            meta: {
+                initial: {
+                    toJS: () => ([{
+                        dsi_dsid: 'test.txt',
+                        dsi_security_policy: 1
+                    }])
+                }
+            },
+            collections: [{
+                parent: {
+                    rek_datastream_policy: 1
+                }
+            }, {
+                rek_pid: 'UQ:111111'
+            }]
+        });
+
+        let fragment = asFragment();
+        expect(fragment).toMatchDiffSnapshot(fragment = asFragment());
+    });
+
     describe('isSame callback function', () => {
         it('should return true if current props are same as previous props', () => {
             expect(isSame(
