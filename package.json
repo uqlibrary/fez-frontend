@@ -71,7 +71,7 @@
         "chromedriver": "^2.38.2",
         "cross-env": "^5.2.0",
         "css-loader": "^2.1.1",
-        "cypress": "^3.3.2",
+        "cypress": "3.3.0",
         "cypress-file-upload": "^3.2.0",
         "cypress-plugin-tab": "^1.0.1",
         "dom-testing-library": "^3.17.1",

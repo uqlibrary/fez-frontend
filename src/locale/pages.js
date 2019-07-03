@@ -150,7 +150,7 @@ export default {
                     researcherIsNotLinked: 'You are not linked to [resource] - Click for more information',
                     orcidUrlPrefix: process.env.ORCID_URL ? `${process.env.ORCID_URL}/` : 'https://orcid.org/',
                     orcidLinkPrefix: ' orcid.org/',
-                    orcidlinkLabel: 'Click to visit your ORCId profile',
+                    orcidlinkLabel: 'Click to visit your ORCID profile',
                     titles: {
                         publons: 'Publons',
                         scopus: 'Scopus',
