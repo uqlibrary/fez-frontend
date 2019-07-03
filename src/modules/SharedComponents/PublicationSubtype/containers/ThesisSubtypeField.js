@@ -4,12 +4,13 @@ import {GenericSelectField} from 'modules/SharedComponents/GenericSelectField';
 import {THESIS_SUBTYPES} from 'config/general';
 
 const mapStateToProps = (state, props) => {
+    console.log(props);
     return {
         selectedValue: props.input ? props.input.value : props.value,
         itemsList: props.itemsList || THESIS_SUBTYPES,
         itemsLoading: false,
         hideLabel: props.hideLabel || false,
-        label: props.label || props.locale.label,
+        label: props.label || props.locale && props.locale.label || '',
         placeholder: props.placeholder,
         required: props.required,
         itemsLoadingHint: props.loadingHint || 'Loading..',

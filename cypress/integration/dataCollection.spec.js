@@ -1,4 +1,4 @@
-context('Dataset', () => {
+context('Data Collection form', () => {
     beforeEach(() => {
         cy.visit('/data-collections/add');
         cy.viewport(1000, 1400);
