@@ -32,7 +32,7 @@ export const InheritedSecurityDetails = ({ title, collections, parentKey }) => (
                         </Grid>
                         <Grid item xs={12} sm={3}>
                             <Typography variant="body2">
-                                <PolicyDescription selectedPolicyKey={item.parent[parentKey]} />
+                                <PolicyDescription selectedPolicyKey={(item.parent || {})[parentKey]} />
                             </Typography>
                         </Grid>
                     </React.Fragment>

@@ -64,4 +64,35 @@ describe('InheritedSecurityDetails component', () => {
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+
+    it('should render collections for record correctly with empty policy description', () => {
+        const wrapper = setup({
+            collections: [{
+                rek_ismemberof: 'UQ:11111',
+                rek_ismemberof_lookup: 'Test collection'
+            }, {
+                rek_ismemberof: 'UQ:22222',
+                rek_ismemberof_lookup: 'Another test collection'
+            }],
+            title: 'Inherited security policy details',
+            parentKey: 'rek_security_policy'
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+
+    it('should render collections for datastreams correctly with empty policy description', () => {
+        const wrapper = setup({
+            collections: [{
+                rek_ismemberof: 'UQ:11111',
+                rek_ismemberof_lookup: 'Test collection'
+            }, {
+                rek_ismemberof: 'UQ:22222',
+                rek_ismemberof_lookup: 'Another test collection'
+            }],
+            title: 'Inherited datastream security policy details',
+            parentKey: 'rek_datastream_policy'
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });
