@@ -4,7 +4,6 @@ import {GenericSelectField} from 'modules/SharedComponents/GenericSelectField';
 import {THESIS_SUBTYPES} from 'config/general';
 
 const mapStateToProps = (state, props) => {
-    console.log(props);
     return {
         selectedValue: props.input ? props.input.value : props.value,
         itemsList: props.itemsList || THESIS_SUBTYPES,
