@@ -191,7 +191,7 @@
         "test:watch": "npm run test -- --watch --onlyChanged",
         "test:update": "npm run test -- --u",
         "test-unit": "node $NODE_DEBUG_OPTION ./node_modules/lab/bin/lab ./test/unit --pattern \"^[^_]\"",
-        "eslint": "eslint 'src/**/*.js' --quiet",
+        "eslint": "eslint 'src/**/*.js' 'cypress/**/*.js' --quiet",
         "cypress:open": "cypress open",
         "cypress:watch": "cypress run --headed",
         "cypress:run": "cypress run",
