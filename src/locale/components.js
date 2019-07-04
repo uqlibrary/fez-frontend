@@ -53,7 +53,7 @@ export default {
                 openAccessLockedLabel: 'Open Access - [oa_status] - Embargoed until [embargo_date]',
                 statsLabel: 'View full statistics',
                 altmetric: {
-                    externalUrl: 'http://www.altmetric.com/details.php?citation_id=[id]',
+                    externalUrl: 'https://queensland.altmetric.com/details/[id]',
                     title: 'Altmetric',
                 },
                 google: {
