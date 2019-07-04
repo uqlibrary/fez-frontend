@@ -1,5 +1,4 @@
 import ConfirmDialogBox from './ConfirmDialogBox';
-import { exportEspacePublications } from 'actions';
 
 function setup(testProps, isShallow = true) {
     const props = {
@@ -31,12 +30,14 @@ describe('ConfirmDialogBox snapshots tests', () => {
         expect(tree).toMatchSnapshot();
     });
     it('renders component with customised locale', () => {
-        const wrapper = setup({ locale: {
-            confirmationTitle: 'ENG: Confirmation',
-            confirmationMessage: 'ENG: Are you sure?',
-            cancelButtonLabel: 'ENG: No',
-            confirmButtonLabel: 'ENG: Yes',
-        } });
+        const wrapper = setup({
+            locale: {
+                confirmationTitle: 'ENG: Confirmation',
+                confirmationMessage: 'ENG: Are you sure?',
+                cancelButtonLabel: 'ENG: No',
+                confirmButtonLabel: 'ENG: Yes',
+            },
+        });
         const tree = toJson(wrapper);
         expect(tree).toMatchSnapshot();
     });
@@ -68,7 +69,10 @@ describe('ConfirmDialogBox snapshots tests', () => {
         const wrapper = setup({
             onAction: onActionFn,
         });
-        wrapper.find('WithStyles(Button)').get(0).props.onClick();
+        wrapper
+            .find('WithStyles(Button)')
+            .get(0)
+            .props.onClick();
 
         expect(wrapper.state().isDialogOpen).toBeFalsy();
         expect(onActionFn).toHaveBeenCalled();
@@ -79,7 +83,10 @@ describe('ConfirmDialogBox snapshots tests', () => {
         const wrapper = setup({
             onCancelAction: onCancelActionFn,
         });
-        wrapper.find('WithStyles(Button)').get(1).props.onClick();
+        wrapper
+            .find('WithStyles(Button)')
+            .get(1)
+            .props.onClick();
 
         expect(wrapper.state().isDialogOpen).toBeFalsy();
         expect(onCancelActionFn).toHaveBeenCalled();

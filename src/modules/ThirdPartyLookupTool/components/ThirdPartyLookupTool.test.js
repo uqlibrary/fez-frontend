@@ -1,6 +1,4 @@
-import { routes } from '../../../../config';
 import { locale } from 'locale';
-import React from 'react';
 
 describe('Component ThirdPartyLookupTool', () => {
     it('have a valid set of live form data in components.js', () => {
@@ -11,7 +9,7 @@ describe('Component ThirdPartyLookupTool', () => {
         expect(locale.components.thirdPartyLookupTools.display.loadingMessage).not.toEqual('');
 
         expect(locale.components.thirdPartyLookupTools.forms.length).toBeGreaterThan(0);
-        locale.components.thirdPartyLookupTools.forms.map((form, index) => {
+        locale.components.thirdPartyLookupTools.forms.map(form => {
             expect(form).toHaveProperty('apiType');
             expect(form).toHaveProperty('lookupLabel');
             expect(form).toHaveProperty('primaryField.heading');

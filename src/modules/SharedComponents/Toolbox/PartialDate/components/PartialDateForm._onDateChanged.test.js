@@ -14,7 +14,7 @@ describe('PartialDateForm unit tests', () => {
     it('should return correct formatted date 1', () => {
         const props = {
             allowPartial: true,
-            onChange: (value) => (expect(value).toBe('2015-01-01')),
+            onChange: value => expect(value).toBe('2015-01-01'),
         };
 
         const form = setup(props);
@@ -22,13 +22,13 @@ describe('PartialDateForm unit tests', () => {
     });
 
     it('should return correct formatted date 2', () => {
-        const expectToBe = (value) => {
+        const expectToBe = value => {
             expect(value).toBe(['', '2015-01-01', '', '2015-01-29', '', '2016-02-29', '2016-02-01'].shift());
             return expectToBe;
         };
         const props = {
             allowPartial: true,
-            onChange: (value) => (expectToBe),
+            onChange: () => expectToBe,
         };
 
         const form = setup(props);
@@ -42,7 +42,7 @@ describe('PartialDateForm unit tests', () => {
     });
 
     it('should return correct formatted date 3', () => {
-        const expectToBe = (value) => {
+        const expectToBe = value => {
             expect(value).toBe(['', '', '', '', '', '20/09/2016'].shift());
             return expectToBe;
         };
@@ -50,7 +50,7 @@ describe('PartialDateForm unit tests', () => {
         const props = {
             allowPartial: false,
             dateFormat: 'DD/MM/YYYY',
-            onChange: (value) => (expectToBe),
+            onChange: () => expectToBe,
         };
 
         const form = setup(props);

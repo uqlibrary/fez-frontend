@@ -9,12 +9,8 @@ function setup(testProps, isShallow = true) {
 }
 
 describe('CommunityForm container', () => {
-    it('should mount', () => {
-        const wrapper = setup({}, false);
-    });
-
-    it('should read the local storage', () => {
-        const wrapper = setup({}, false);
+    it('should mount and read the local storage', () => {
+        setup({}, false);
         expect(localStorage.getItem).toHaveBeenLastCalledWith('form');
     });
 });

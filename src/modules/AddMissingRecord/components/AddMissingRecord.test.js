@@ -1,3 +1,4 @@
+import React from 'react';
 import AddMissingRecord from './AddMissingRecord';
 import * as routes from '../../../config/routes';
 
@@ -12,9 +13,7 @@ function setup(testProps, isShallow = true) {
         },
         match: testProps.match || {},
         author: testProps.author || null,
-        actions: testProps.actions || {
-
-        },
+        actions: testProps.actions || {},
         history: testProps.history || {
             push: jest.fn(),
         },
@@ -64,17 +63,20 @@ describe('Component AddMissingRecord', () => {
         expect(wrapper.instance().getStepperIndex(props.location.pathname)).toEqual(2);
     });
 
-    it('should call back to step [0] (records/add/find) when there is no rawSearchQuery defined when landing on records/add/results', () => {
-        const testReplace = jest.fn();
-        const props = {
-            rawSearchQuery: null,
-            history: { replace: testReplace },
-            location: { pathname: routes.pathConfig.records.add.results },
-            match: { path: routes.pathConfig.records.add.results },
-            addRecordStep: () => <span />,
-        };
-        const wrapper = setup({ ...props });
-        expect(testReplace).toBeCalledWith(routes.pathConfig.records.add.find);
-    });
+    it(
+        'should call back to step [0] (records/add/find) when there is no ' +
+            'rawSearchQuery defined when landing on records/add/results',
+        () => {
+            const testReplace = jest.fn();
+            const props = {
+                rawSearchQuery: null,
+                history: { replace: testReplace },
+                location: { pathname: routes.pathConfig.records.add.results },
+                match: { path: routes.pathConfig.records.add.results },
+                addRecordStep: () => <span />,
+            };
+            setup({ ...props });
+            expect(testReplace).toBeCalledWith(routes.pathConfig.records.add.find);
+        }
+    );
 });
-

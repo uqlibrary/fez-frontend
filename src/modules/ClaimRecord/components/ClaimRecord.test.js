@@ -6,7 +6,7 @@ import locale from 'locale/forms';
 
 function setup(testProps, isShallow = true) {
     const props = {
-        'array': {
+        array: {
             insert: jest.fn(),
             move: jest.fn(),
             pop: jest.fn(),
@@ -22,8 +22,8 @@ function setup(testProps, isShallow = true) {
         blur: jest.fn(),
         change: jest.fn(),
         clearAsyncError: jest.fn(),
-        'anyTouched': true,
-        'asyncValidating': false,
+        anyTouched: true,
+        asyncValidating: false,
         asyncValidate: jest.fn(),
         clearFields: jest.fn(),
         clearSubmitErrors: jest.fn(),
@@ -36,20 +36,22 @@ function setup(testProps, isShallow = true) {
         submit: jest.fn(),
         untouch: jest.fn(),
         clearSubmit: jest.fn(),
-        'dirty': true,
-        'form': 'form',
-        'initialized': false,
-        'invalid': false,
-        'submitFailed': false,
-        'submitSucceeded': false,
-        'valid': true,
+        dirty: true,
+        form: 'form',
+        initialized: false,
+        invalid: false,
+        submitFailed: false,
+        submitSucceeded: false,
+        valid: true,
         pure: true,
         pristine: true,
         submitting: false,
-        initialValues: testProps.initialValues || Immutable.Map({
-            publication: Immutable.Map(journalArticle),
-            author: Immutable.Map({ aut_id: 410 }),
-        }),
+        initialValues:
+            testProps.initialValues ||
+            Immutable.Map({
+                publication: Immutable.Map(journalArticle),
+                author: Immutable.Map({ aut_id: 410 }),
+            }),
         handleSubmit: testProps.handleSubmit || jest.fn(),
         actions: testProps.actions || { loadFullRecordToClaim: jest.fn() },
         history: testProps.history || {
@@ -80,108 +82,110 @@ describe('Component ClaimRecord ', () => {
             },
         });
 
-        expect(
-            wrapper.find('ConfirmDialogBox').props().locale.cancelButtonLabel
-        ).toBe(
+        expect(wrapper.find('ConfirmDialogBox').props().locale.cancelButtonLabel).toBe(
             locale.forms.claimPublicationForm.successWorkflowConfirmation.addRecordButtonLabel
         );
     });
 
-    it('should render publication citation, error message if publication has PID and it was claimed by current author already', () => {
-        const props = {
-            initialValues: Immutable.Map({
-                author: Immutable.Map({ aut_id: 410 }),
-                publication: Immutable.Map({
-                    ...journalArticle,
-                    fez_record_search_key_author_id: [
-                        {
-                            'rek_author_id': 410,
-                            'rek_author_id_order': 1,
-                        },
-                        {
-                            'rek_author_id': 0,
-                            'rek_author_id_order': 2,
-                        },
-                    ],
-                    fez_record_search_key_author: [
-                        {
-                            'rek_author_id': null,
-                            'rek_author_pid': 'UQ:111111',
-                            'rek_author': 'Smith, A',
-                            'rek_author_order': 1,
-                        },
-                        {
-                            'rek_author_id': null,
-                            'rek_author_pid': 'UQ:222222',
-                            'rek_author': 'Smith, J',
-                            'rek_author_order': 2,
-                        },
-                    ],
+    it(
+        'should render publication citation, error message if publication has PID and ' +
+            'it was claimed by current author already',
+        () => {
+            const props = {
+                initialValues: Immutable.Map({
+                    author: Immutable.Map({ aut_id: 410 }),
+                    publication: Immutable.Map({
+                        ...journalArticle,
+                        fez_record_search_key_author_id: [
+                            {
+                                rek_author_id: 410,
+                                rek_author_id_order: 1,
+                            },
+                            {
+                                rek_author_id: 0,
+                                rek_author_id_order: 2,
+                            },
+                        ],
+                        fez_record_search_key_author: [
+                            {
+                                rek_author_id: null,
+                                rek_author_pid: 'UQ:111111',
+                                rek_author: 'Smith, A',
+                                rek_author_order: 1,
+                            },
+                            {
+                                rek_author_id: null,
+                                rek_author_pid: 'UQ:222222',
+                                rek_author: 'Smith, J',
+                                rek_author_order: 2,
+                            },
+                        ],
+                    }),
                 }),
-            }),
-        };
+            };
 
-        const wrapper = setup({ ...props });
-        expect(wrapper.find('Field').length).toEqual(0);
-        // // expect(wrapper.find('Alert').length).toEqual(1);
-        // expect(wrapper.find('withRouter(Connect(PublicationCitation))').length).toEqual(1);
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
+            const wrapper = setup({ ...props });
+            expect(wrapper.find('Field').length).toEqual(0);
+            // // expect(wrapper.find('Alert').length).toEqual(1);
+            // expect(wrapper.find('withRouter(Connect(PublicationCitation))').length).toEqual(1);
+            expect(toJson(wrapper)).toMatchSnapshot();
+        }
+    );
 
-    it('should render claim form if publication doesn\'t have a PID but current author was assigned (author linking component should not be rendered)', () => {
-        const testArticle = {
-            ...journalArticle,
-            rek_pid: null,
-            fez_record_search_key_author_id: [
-                {
-                    'rek_author_id': 410,
-                    'rek_author_id_order': 1,
-                },
-                {
-                    'rek_author_id': 0,
-                    'rek_author_id_order': 2,
-                },
-            ],
-            fez_record_search_key_author: [
-                {
-                    'rek_author_id': null,
-                    'rek_author_pid': 'UQ:111111',
-                    'rek_author': 'Smith, A',
-                    'rek_author_order': 1,
-                },
-                {
-                    'rek_author_id': null,
-                    'rek_author_pid': 'UQ:222222',
-                    'rek_author': 'Smith, J',
-                    'rek_author_order': 2,
-                },
-            ],
-        };
+    it(
+        "should render claim form if publication doesn't have a PID but current author " +
+            'was assigned (author linking component should not be rendered)',
+        () => {
+            const testArticle = {
+                ...journalArticle,
+                rek_pid: null,
+                fez_record_search_key_author_id: [
+                    {
+                        rek_author_id: 410,
+                        rek_author_id_order: 1,
+                    },
+                    {
+                        rek_author_id: 0,
+                        rek_author_id_order: 2,
+                    },
+                ],
+                fez_record_search_key_author: [
+                    {
+                        rek_author_id: null,
+                        rek_author_pid: 'UQ:111111',
+                        rek_author: 'Smith, A',
+                        rek_author_order: 1,
+                    },
+                    {
+                        rek_author_id: null,
+                        rek_author_pid: 'UQ:222222',
+                        rek_author: 'Smith, J',
+                        rek_author_order: 2,
+                    },
+                ],
+            };
 
-        const wrapper = setup({
-            initialValues: Immutable.Map(
-                {
+            const wrapper = setup({
+                initialValues: Immutable.Map({
                     publication: Immutable.Map(testArticle),
                     author: Immutable.Map({ aut_id: 410 }),
-                }
-            ),
-        });
+                }),
+            });
 
-        expect(wrapper.find('Field').length).toEqual(4);
-        // // expect(wrapper.find('Alert').length).toEqual(0);
-        // expect(wrapper.find('withRouter(Connect(PublicationCitation))').length).toEqual(1);
+            expect(wrapper.find('Field').length).toEqual(4);
+            // // expect(wrapper.find('Alert').length).toEqual(0);
+            // expect(wrapper.find('withRouter(Connect(PublicationCitation))').length).toEqual(1);
 
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
+            expect(toJson(wrapper)).toMatchSnapshot();
+        }
+    );
 
     it('should render claim form, contributor linking component should not be rendered for Journal Article', () => {
         const wrapper = setup({
-            initialValues: Immutable.Map(
-                {
-                    publication: Immutable.Map(journalArticle),
-                    author: Immutable.Map({ aut_id: 410 }),
-                }
-            ),
+            initialValues: Immutable.Map({
+                publication: Immutable.Map(journalArticle),
+                author: Immutable.Map({ aut_id: 410 }),
+            }),
         });
 
         expect(wrapper.find('Field').length).toEqual(5);
@@ -191,101 +195,115 @@ describe('Component ClaimRecord ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should render claim form, author linking component should be rendered even if there\'s only one author on a publication', () => {
-        const testArticle = {
-            ...journalArticle,
-            rek_pid: null,
-            fez_record_search_key_author_id: [],
-            fez_record_search_key_author: [{
-                'rek_author_id': null,
-                'rek_author_pid': 'UQ:10000',
-                'rek_author': 'Smith, J',
-                'rek_author_order': 1,
-            }],
-        };
+    it(
+        "should render claim form, author linking component should be rendered even if there's" +
+            ' only one author on a publication',
+        () => {
+            const testArticle = {
+                ...journalArticle,
+                rek_pid: null,
+                fez_record_search_key_author_id: [],
+                fez_record_search_key_author: [
+                    {
+                        rek_author_id: null,
+                        rek_author_pid: 'UQ:10000',
+                        rek_author: 'Smith, J',
+                        rek_author_order: 1,
+                    },
+                ],
+            };
 
-        const wrapper = setup({
-            initialValues: Immutable.Map(
-                {
+            const wrapper = setup({
+                initialValues: Immutable.Map({
                     publication: Immutable.Map(testArticle),
                     author: Immutable.Map({ aut_id: 410 }),
-                }
-            ),
-        });
+                }),
+            });
 
-        expect(wrapper.find('Field').length).toEqual(5);
-        // // expect(wrapper.find('Alert').length).toEqual(0);
-        // expect(wrapper.find('withRouter(Connect(PublicationCitation))').length).toEqual(1);
+            expect(wrapper.find('Field').length).toEqual(5);
+            // // expect(wrapper.find('Alert').length).toEqual(0);
+            // expect(wrapper.find('withRouter(Connect(PublicationCitation))').length).toEqual(1);
 
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
+            expect(toJson(wrapper)).toMatchSnapshot();
+        }
+    );
 
-    it('should render claim form, contributor linking component should be rendered even if there\'s only one contributor on a publication', () => {
-        const testArticle = {
-            ...dataCollection,
-            rek_pid: null,
-            fez_record_search_key_author: [],
-            fez_record_search_key_author_id: [],
-            fez_record_search_key_contributor_id: [],
-            fez_record_search_key_contributor: [{
-                'rek_contributor_id': null,
-                'rek_contributor_pid': 'UQ:10000',
-                'rek_contributor': 'Smith, J',
-                'rek_contributor_order': 1,
-            }],
-        };
+    it(
+        "should render claim form, contributor linking component should be rendered even if there's" +
+            ' only one contributor on a publication',
+        () => {
+            const testArticle = {
+                ...dataCollection,
+                rek_pid: null,
+                fez_record_search_key_author: [],
+                fez_record_search_key_author_id: [],
+                fez_record_search_key_contributor_id: [],
+                fez_record_search_key_contributor: [
+                    {
+                        rek_contributor_id: null,
+                        rek_contributor_pid: 'UQ:10000',
+                        rek_contributor: 'Smith, J',
+                        rek_contributor_order: 1,
+                    },
+                ],
+            };
 
-        const wrapper = setup({
-            initialValues: Immutable.Map(
-                {
+            const wrapper = setup({
+                initialValues: Immutable.Map({
                     publication: Immutable.Map(testArticle),
                     author: Immutable.Map({ aut_id: 410 }),
-                }
-            ),
-        });
+                }),
+            });
 
-        expect(wrapper.find('Field').length).toEqual(4);
-        // // expect(wrapper.find('Alert').length).toEqual(0);
-        // expect(wrapper.find('withRouter(Connect(PublicationCitation))').length).toEqual(1);
+            expect(wrapper.find('Field').length).toEqual(4);
+            // // expect(wrapper.find('Alert').length).toEqual(0);
+            // expect(wrapper.find('withRouter(Connect(PublicationCitation))').length).toEqual(1);
 
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
+            expect(toJson(wrapper)).toMatchSnapshot();
+        }
+    );
 
-    it('should render claim form, author linking component and contributor linking component should be rendered even if there are only one author and one contributor on a publication', () => {
-        const testArticle = {
-            ...dataCollection,
-            rek_pid: null,
-            fez_record_search_key_author_id: [],
-            fez_record_search_key_author: [{
-                'rek_author_id': null,
-                'rek_author_pid': 'UQ:10000',
-                'rek_author': 'Smith, J',
-                'rek_author_order': 1,
-            }],
-            fez_record_search_key_contributor_id: [],
-            fez_record_search_key_contributor: [{
-                'rek_contributor_id': null,
-                'rek_contributor_pid': 'UQ:10000',
-                'rek_contributor': 'Smith, J',
-                'rek_contributor_order': 1,
-            }],
-        };
+    it(
+        'should render claim form, author linking component and contributor linking component should be' +
+            ' rendered even if there are only one author and one contributor on a publication',
+        () => {
+            const testArticle = {
+                ...dataCollection,
+                rek_pid: null,
+                fez_record_search_key_author_id: [],
+                fez_record_search_key_author: [
+                    {
+                        rek_author_id: null,
+                        rek_author_pid: 'UQ:10000',
+                        rek_author: 'Smith, J',
+                        rek_author_order: 1,
+                    },
+                ],
+                fez_record_search_key_contributor_id: [],
+                fez_record_search_key_contributor: [
+                    {
+                        rek_contributor_id: null,
+                        rek_contributor_pid: 'UQ:10000',
+                        rek_contributor: 'Smith, J',
+                        rek_contributor_order: 1,
+                    },
+                ],
+            };
 
-        const wrapper = setup({
-            initialValues: Immutable.Map(
-                {
+            const wrapper = setup({
+                initialValues: Immutable.Map({
                     publication: Immutable.Map(testArticle),
                     author: Immutable.Map({ aut_id: 410 }),
-                }
-            ),
-        });
+                }),
+            });
 
-        expect(wrapper.find('Field').length).toEqual(5);
-        // expect(wrapper.find('Alert').length).toEqual(0);
-        // expect(wrapper.find('withRouter(Connect(PublicationCitation))').length).toEqual(1);
+            expect(wrapper.find('Field').length).toEqual(5);
+            // expect(wrapper.find('Alert').length).toEqual(0);
+            // expect(wrapper.find('withRouter(Connect(PublicationCitation))').length).toEqual(1);
 
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
+            expect(toJson(wrapper)).toMatchSnapshot();
+        }
+    );
 
     it('should return and render alert message depending on form status', () => {
         const testCases = [
@@ -379,7 +397,7 @@ describe('Component ClaimRecord ', () => {
 
     it('should redirect if no author or record set', () => {
         const testMethod = jest.fn();
-        const wrapper = setup({ initialValues: Immutable.Map({ author: null }), history: { go: testMethod } });
+        setup({ initialValues: Immutable.Map({ author: null }), history: { go: testMethod } });
         expect(testMethod).toHaveBeenCalled();
     });
 
@@ -460,7 +478,9 @@ describe('Component ClaimRecord ', () => {
     it('should handle default form submit', () => {
         const preventDefaultFn = jest.fn();
         const wrapper = setup({});
-        wrapper.find('form').props()
+        wrapper
+            .find('form')
+            .props()
             .onSubmit({ preventDefault: preventDefaultFn });
         expect(preventDefaultFn).toHaveBeenCalled();
     });
@@ -496,12 +516,12 @@ describe('Component ClaimRecord ', () => {
                     ...journalArticle,
                     fez_record_search_key_contributor_id: [
                         {
-                            'rek_contributor_id': 410,
-                            'rek_contributor_id_order': 1,
+                            rek_contributor_id: 410,
+                            rek_contributor_id_order: 1,
                         },
                         {
-                            'rek_contributor_id': 0,
-                            'rek_contributor_id_order': 2,
+                            rek_contributor_id: 0,
+                            rek_contributor_id_order: 2,
                         },
                     ],
                 }),

@@ -74,12 +74,10 @@ describe('NavigationPrompt component', () => {
     });
 
     it('should cancel navigation to next location', () => {
-        let onCancelFn = jest.fn();
         const wrapper = setup({
             when: true,
             history: { block: jest.fn() },
             children: jest.fn((setNavigationConfirmation, onConfirm, onCancel) => {
-                onCancelFn = onCancel;
                 return {
                     cancel: onCancel,
                 };
@@ -99,12 +97,12 @@ describe('NavigationPrompt component', () => {
         const wrapper = setup({
             when: true,
             history: {
-                block: jest.fn((unblock) => {
+                block: jest.fn(unblock => {
                     return () => unblock({ pathname: '/test' });
                 }),
                 push: pushFn,
             },
-            children: jest.fn((setNavigationConfirmation, onConfirm, onCancel) => {
+            children: jest.fn((setNavigationConfirmation, onConfirm) => {
                 return {
                     confirm: onConfirm,
                 };

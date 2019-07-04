@@ -16,16 +16,11 @@ describe('Action creators for authors', () => {
 
     it('dispatches expected actions while searching for authors', async() => {
         const testParam = 'abc';
-        const testRequest = { 'query': testParam };
+        const testRequest = { query: testParam };
 
-        mockApi
-            .onGet(repositories.routes.AUTHORS_SEARCH_API(testRequest).apiUrl)
-            .reply(200, mockData.authorsSearch);
+        mockApi.onGet(repositories.routes.AUTHORS_SEARCH_API(testRequest).apiUrl).reply(200, mockData.authorsSearch);
 
-        const expectedActions = [
-            actions.AUTHORS_LOADING,
-            actions.AUTHORS_LOADED,
-        ];
+        const expectedActions = [actions.AUTHORS_LOADING, actions.AUTHORS_LOADED];
 
         await mockActionsStore.dispatch(authorsActions.searchAuthors(testParam));
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
@@ -33,17 +28,14 @@ describe('Action creators for authors', () => {
 
     it('dispatches expected actions while searching for authors with filter', async() => {
         const testParam = 'abc';
-        const testFilterParam = (item) => { return !!item.aut_org_username; };
-        const testRequest = { 'query': testParam };
+        const testFilterParam = item => {
+            return !!item.aut_org_username;
+        };
+        const testRequest = { query: testParam };
 
-        mockApi
-            .onGet(repositories.routes.AUTHORS_SEARCH_API(testRequest).apiUrl)
-            .reply(200, mockData.authorsSearch);
+        mockApi.onGet(repositories.routes.AUTHORS_SEARCH_API(testRequest).apiUrl).reply(200, mockData.authorsSearch);
 
-        const expectedActions = [
-            actions.AUTHORS_LOADING,
-            actions.AUTHORS_LOADED,
-        ];
+        const expectedActions = [actions.AUTHORS_LOADING, actions.AUTHORS_LOADED];
 
         await mockActionsStore.dispatch(authorsActions.searchAuthors(testParam, testFilterParam));
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
@@ -51,11 +43,8 @@ describe('Action creators for authors', () => {
 
     it('dispatches expected actions while searching for authors by anon user', async() => {
         const testParam = 'abc';
-        const testRequest = { 'query': testParam };
 
-        mockApi
-            .onAny()
-            .reply(403, mockData.authorsSearch);
+        mockApi.onAny().reply(403, mockData.authorsSearch);
 
         const expectedActions = [
             actions.AUTHORS_LOADING,
@@ -69,17 +58,10 @@ describe('Action creators for authors', () => {
 
     it('dispatches expected actions while searching for authors with failed API call', async() => {
         const testParam = 'abc';
-        const testRequest = { 'query': testParam };
 
-        mockApi
-            .onAny()
-            .reply(500, mockData.authorsSearch);
+        mockApi.onAny().reply(500, mockData.authorsSearch);
 
-        const expectedActions = [
-            actions.AUTHORS_LOADING,
-            actions.APP_ALERT_SHOW,
-            actions.AUTHORS_LOAD_FAILED,
-        ];
+        const expectedActions = [actions.AUTHORS_LOADING, actions.APP_ALERT_SHOW, actions.AUTHORS_LOAD_FAILED];
 
         await mockActionsStore.dispatch(authorsActions.searchAuthors(testParam));
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
@@ -89,14 +71,9 @@ describe('Action creators for authors', () => {
         const authorId = 1234;
         const patchRequest = { aut_id: authorId, aut_google_scholar_id: '1001' };
 
-        mockApi
-            .onAny()
-            .reply(200, mockData.currentAuthor.uqresearcher);
+        mockApi.onAny().reply(200, mockData.currentAuthor.uqresearcher);
 
-        const expectedActions = [
-            actions.CURRENT_AUTHOR_SAVING,
-            actions.CURRENT_AUTHOR_SAVED,
-        ];
+        const expectedActions = [actions.CURRENT_AUTHOR_SAVING, actions.CURRENT_AUTHOR_SAVED];
 
         await mockActionsStore.dispatch(authorsActions.updateCurrentAuthor(authorId, patchRequest));
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
@@ -106,9 +83,7 @@ describe('Action creators for authors', () => {
         const authorId = 1234;
         const patchRequest = { aut_id: authorId, aut_google_scholar_id: '1001' };
 
-        mockApi
-            .onAny()
-            .reply(500);
+        mockApi.onAny().reply(500);
 
         const expectedActions = [
             actions.CURRENT_AUTHOR_SAVING,
@@ -119,7 +94,7 @@ describe('Action creators for authors', () => {
         try {
             await mockActionsStore.dispatch(authorsActions.updateCurrentAuthor(authorId, patchRequest));
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
-        } catch(e) {
+        } catch (e) {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         }
     });
@@ -128,9 +103,7 @@ describe('Action creators for authors', () => {
         const authorId = 1234;
         const patchRequest = { aut_id: authorId, aut_google_scholar_id: '1001' };
 
-        mockApi
-            .onAny()
-            .reply(403);
+        mockApi.onAny().reply(403);
 
         const expectedActions = [
             actions.CURRENT_AUTHOR_SAVING,
@@ -141,7 +114,7 @@ describe('Action creators for authors', () => {
         try {
             await mockActionsStore.dispatch(authorsActions.updateCurrentAuthor(authorId, patchRequest));
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
-        } catch(e) {
+        } catch (e) {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         }
     });
@@ -165,10 +138,7 @@ describe('Action creators for authors', () => {
             .onPatch(repositories.routes.AUTHOR_API({ authorId: authorId }, patchRequest).apiUrl)
             .reply(200, mockData.currentAuthor.uqresearcher);
 
-        const expectedActions = [
-            actions.CURRENT_AUTHOR_SAVING,
-            actions.CURRENT_AUTHOR_SAVED,
-        ];
+        const expectedActions = [actions.CURRENT_AUTHOR_SAVING, actions.CURRENT_AUTHOR_SAVED];
 
         await mockActionsStore.dispatch(authorsActions.linkAuthorOrcidId(userId, authorId, orcidCode));
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
@@ -179,15 +149,7 @@ describe('Action creators for authors', () => {
         const authorId = 1234;
         const orcidCode = '123ABC';
 
-        // parameters required for AUTHOR_ORCID_DETAILS_API call
-        const params = {
-            code: orcidCode,
-            redirUri: routes.pathConfig.authorIdentifiers.orcid.absoluteLink,
-        };
-
-        mockApi
-            .onAny()
-            .reply(500, {});
+        mockApi.onAny().reply(500, {});
 
         const expectedActions = [
             actions.CURRENT_AUTHOR_SAVING,
@@ -218,10 +180,7 @@ describe('Action creators for authors', () => {
             .onPatch(repositories.routes.CURRENT_AUTHOR_API({ authorId: authorId }, patchRequest).apiUrl)
             .reply(200, mockData.currentAuthor.uqresearcher);
 
-        const expectedActions = [
-            actions.CURRENT_AUTHOR_SAVING,
-            actions.CURRENT_AUTHOR_SAVE_FAILED,
-        ];
+        const expectedActions = [actions.CURRENT_AUTHOR_SAVING, actions.CURRENT_AUTHOR_SAVE_FAILED];
 
         await mockActionsStore.dispatch(authorsActions.linkAuthorOrcidId(userId, authorId, orcidCode));
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
@@ -237,8 +196,6 @@ describe('Action creators for authors', () => {
             code: orcidCode,
             redirUri: routes.pathConfig.authorIdentifiers.orcid.absoluteLink,
         };
-
-        const patchRequest = { aut_id: authorId, authorOrcidDetails: mockData.authorOrcidDetails.orcid };
 
         mockApi
             .onGet(repositories.routes.AUTHOR_ORCID_DETAILS_API({ userId: userId, params: params }).apiUrl)
@@ -257,9 +214,7 @@ describe('Action creators for authors', () => {
     });
 
     it('dispatches expected actions resetting author saving state', async() => {
-        const expectedActions = [
-            actions.CURRENT_AUTHOR_SAVE_RESET,
-        ];
+        const expectedActions = [actions.CURRENT_AUTHOR_SAVE_RESET];
 
         await mockActionsStore.dispatch(authorsActions.resetSavingAuthorState());
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);

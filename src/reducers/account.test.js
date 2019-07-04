@@ -3,7 +3,8 @@ import accountReducer from './account';
 import { initialState, initSavingState } from './account';
 
 describe('account reducer', () => {
-    let emptyState, mockAccount;
+    let emptyState;
+    let mockAccount;
 
     beforeEach(() => {
         mockAccount = {
@@ -92,7 +93,6 @@ describe('account reducer', () => {
             accountAuthorDetailsLoading: false,
         });
     });
-
 
     it('should not modify state if invalid action type', () => {
         const test = accountReducer(emptyState, { type: 'INVALID_ACTION_TYPE' });
