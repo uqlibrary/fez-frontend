@@ -9,7 +9,9 @@ context('Claim possible work', () => {
 
     beforeEach(() => {
         cy.visit('/records/possible');
+        cy.wait(2000);
         cy.closeUnsupported();
+        cy.wait(2000);
     });
 
     afterEach(() => {

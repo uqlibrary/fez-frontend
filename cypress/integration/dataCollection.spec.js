@@ -1,13 +1,8 @@
 context('Data Collection form', () => {
     beforeEach(() => {
         cy.visit('/data-collections/add');
-        cy.viewport(1000, 1400);
-        cy.get('#unsupportedBrowser.card button').then($button => {
-            // Button is only visible if browser is unsupported.
-            if ($button.filter(':visible')) {
-                $button.click();
-            }
-        });
+        cy.wait(2000);
+        cy.closeUnsupported();
         cy.wait(2000);
     });
 

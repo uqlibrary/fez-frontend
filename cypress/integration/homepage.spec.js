@@ -1,19 +1,12 @@
 context('Homepage', () => {
-    const dismissUnsupportedBrowserMessage = () => {
-        cy.get('#unsupportedBrowser.card button')
-            .then(($button) => {
-                // Button is only visible if browser is unsupported.
-                if ($button.filter(':visible').length) {
-                    cy.wrap($button)
-                        .click();
-                }
-            });
-    };
+    beforeEach(() => {
+        cy.visit('/');
+        cy.wait(2000);
+        cy.closeUnsupported();
+        cy.wait(2000);
+    });
 
     it('Renders the tabbed panes as expected', () => {
-        cy.visit('/');
-        dismissUnsupportedBrowserMessage();
-        cy.wait(1000);
         cy.get('button', { timeout: 1000 })
             .get('span')
             .contains('Trending on Scopus')

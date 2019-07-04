@@ -7,7 +7,9 @@ context('Search', () => {
 
     it('Doing a basic search to advanced search', () => {
         cy.visit('/records/search');
+        cy.wait(2000);
         cy.closeUnsupported();
+        cy.wait(2000);
 
         // Perform a basic search
         cy.get('#simpleSearchField')
