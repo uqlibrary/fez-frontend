@@ -127,7 +127,7 @@ export default class RichEditor extends PureComponent {
                         variant="caption"
                         color={this.props.meta && this.props.meta.error && 'error'}
                     >
-                        {inputLength > 0 ? inputLength : 0} characters of {this.props.maxValue}{' '}
+                        {inputLength > 0 ? inputLength : 0} characters of {this.props.maxValue}
                         {this.props.instructions || ''}
                     </Typography>
                 )}

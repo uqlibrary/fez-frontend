@@ -128,7 +128,7 @@ export class TopCitedPublicationsClass extends PureComponent {
                                     >
                                         <Grid item xs>
                                             <Typography key={key} variant={'h6'} color={'primary'}>
-                                                <div key={key} className={`fez-icon ${key} xxlarge`} />{' '}
+                                                <div key={key} className={`fez-icon ${key} xxlarge`} />
                                                 {txt[key].heading}
                                             </Typography>
                                         </Grid>

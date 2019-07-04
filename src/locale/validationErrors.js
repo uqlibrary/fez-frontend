@@ -25,13 +25,13 @@ export default {
         contributorLinking: 'Please select and confirm a contributor',
         authorRequired: (
             <span>
-                Please <b>provide a list of authors/creators</b> of the work and{' '}
+                Please <b>provide a list of authors/creators</b> of the work and
                 <b>select an author/creator or editor/contributor</b> as you
             </span>
         ),
         editorRequired: (
             <span>
-                Please <b>provide a list of editors/contributors</b> of the work and{' '}
+                Please <b>provide a list of editors/contributors</b> of the work and
                 <b>select an editor/contributor or author/creator</b> as you
             </span>
         ),

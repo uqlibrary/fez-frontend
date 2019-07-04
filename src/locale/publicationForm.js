@@ -13,7 +13,7 @@ export default {
             title: 'Non-traditional research output types',
             text: (
                 <p>
-                    For more information about each type, click{' '}
+                    For more information about each type, click
                     <a
                         style={{ fontWeight: 700 }}
                         target="_blank"
@@ -37,7 +37,7 @@ export default {
             title: 'Content indicators',
             text: (
                 <p>
-                    For more information about content indicators, click{' '}
+                    For more information about content indicators, click
                     <a
                         style={{ fontWeight: 700 }}
                         target="_blank"
@@ -371,7 +371,7 @@ export default {
                         </p>
                         <p>
                             <b>Publication date:</b> Provide the date recorded on the work, where available. For online
-                            recordings or broadcasts, provide the date first publicly presented or released.{' '}
+                            recordings or broadcasts, provide the date first publicly presented or released.
                         </p>
                     </React.Fragment>
                 ),
@@ -802,7 +802,7 @@ export default {
                         </p>
                         <p>
                             <b>Publication date:</b> Type the date recorded on the work, where available. For online
-                            recordings or broadcasts, enter the date first publicly presented or released.{' '}
+                            recordings or broadcasts, enter the date first publicly presented or released.
                         </p>
                     </div>
                 ),
@@ -1255,7 +1255,7 @@ export default {
         sbsTitle: 'Professional doctorate deposit',
         text: (
             <span>
-                Required fields are marked with{' '}
+                Required fields are marked with
                 <span className="requiredField">
                     <label>&nbsp;</label>
                 </span>
@@ -1299,7 +1299,7 @@ export default {
                 fileUploadRestrictions: (
                     <div>
                         Maximum file size is 8GB. <br />
-                        PDF files must be saved using the following naming structure{' '}
+                        PDF files must be saved using the following naming structure
                         <b>&lt;student number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf</b>. Document name could
                         be thesis, abstract, and etc. For example:
                         <ul>
@@ -1355,7 +1355,7 @@ export default {
         sbsTitle: 'Professional doctorate deposit',
         text: (
             <span>
-                Required fields are marked with{' '}
+                Required fields are marked with
                 <span className="requiredField">
                     <label>&nbsp;</label>
                 </span>
@@ -1386,7 +1386,7 @@ export default {
                 fileUploadRestrictions: (
                     <div>
                         Maximum file size is 8GB. <br />
-                        PDF files must be saved using the following naming structure{' '}
+                        PDF files must be saved using the following naming structure
                         <b>&lt;student number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf</b>. Document name could
                         be thesis, abstract, and etc. For example:
                         <ul>
@@ -1520,11 +1520,11 @@ export default {
                             </ul>
                             <h3>Licensing and terms of access</h3>
                             <p>
-                                View{' '}
+                                View
                                 <a href="https://creativecommons.org/licenses/" target="_blank">
                                     Creative Commons Licenses
-                                </a>{' '}
-                                and{' '}
+                                </a>
+                                and
                                 <a
                                     href="http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions"
                                     target="_blank"

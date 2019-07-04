@@ -131,7 +131,8 @@ export class ThirdPartyLookupForm extends PureComponent {
                                 {// not all forms will have a second field
                                     !!txt.thisForm.secondaryField && (
                                         <div>
-                                            <h4>{txt.thisForm.secondaryField.heading}</h4>${ /* prettier-ignore */ }
+                                            <h4>{txt.thisForm.secondaryField.heading}</h4>
+                                            { /* prettier-ignore */ }
                                             <p>{
                                                 txt.thisForm.secondaryField.tip
                                                     ? txt.thisForm.secondaryField.tip

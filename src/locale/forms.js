@@ -42,7 +42,7 @@ export default {
                     title: 'Content indicators',
                     text: (
                         <p>
-                            For more information about content indicators, click{' '}
+                            For more information about content indicators, click
                             <a
                                 style={{ fontWeight: 700 }}
                                 target="_blank"
@@ -170,7 +170,7 @@ export default {
                     title: 'Content indicators',
                     text: (
                         <p>
-                            For more information about content indicators, click{' '}
+                            For more information about content indicators, click
                             <a
                                 style={{ fontWeight: 700 }}
                                 target="_blank"

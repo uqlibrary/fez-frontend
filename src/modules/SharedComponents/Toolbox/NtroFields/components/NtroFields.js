@@ -68,7 +68,7 @@ export default class NtroFields extends React.PureComponent {
                     scaleOfWork: {
                         label: (
                             <span>
-                                Scale/Significance of work*{' '}
+                                Scale/Significance of work*
                                 <span style={{ fontWeight: 700 }}>(not for public view)</span>
                             </span>
                         ),
@@ -77,7 +77,7 @@ export default class NtroFields extends React.PureComponent {
                     impactStatement: {
                         label: (
                             <span>
-                                Creator research statement*. Include Background, Contribution and Significance{' '}
+                                Creator research statement*. Include Background, Contribution and Significance
                                 <span style={{ fontWeight: 700 }}>(not for public view)</span>
                             </span>
                         ),
@@ -91,7 +91,7 @@ export default class NtroFields extends React.PureComponent {
                         <React.Fragment>
                             <h3>Creator research statement</h3>
                             <p>
-                                For more information about the research statement, click{' '}
+                                For more information about the research statement, click
                                 <b>
                                     <a
                                         style={{ fontWeight: 700 }}

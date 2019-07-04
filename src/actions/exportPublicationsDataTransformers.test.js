@@ -12,7 +12,7 @@ beforeEach(() => {
 describe('Publication data transformers ', () => {
     describe('promptForDownload test', () => {
         it('should trigger a file download', () => {
-            EXPORT_FORMAT_TO_EXTENSION.map(format => {
+            Object.keys(EXPORT_FORMAT_TO_EXTENSION).map(format => {
                 const expected = ['data', transformers.getFileName(EXPORT_FORMAT_TO_EXTENSION[format])];
 
                 transformers.promptForDownload(format, 'data');
