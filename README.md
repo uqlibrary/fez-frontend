@@ -220,6 +220,8 @@ Before pushing to a branch make sure to run `npm run test:all`.
 Codeship runs `npm run e2e` as it spins up a webpack-dev-server and serves the frontend with mock data to run tests for
 now until we have API integration with docker.
 
+You can watch tests run, and debug with video etc via https://dashboard.cypress.io (use username/pass in passwordstate).
+
 #### Some tricks and tips
 
 -   When simulating clicks on components with animations (ripples and the like) - be sure to `cy.wait(1000);` to wait 1
