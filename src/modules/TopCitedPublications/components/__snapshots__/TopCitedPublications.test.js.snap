@@ -78,7 +78,6 @@ exports[`Component TopCitedPublications should render tabs with xs width properl
             className="fez-icon altmetric xxlarge"
             key="altmetric"
           />
-           
           Altmetric score
         </WithStyles(Typography)>
       </WithStyles(Grid)>
@@ -1019,7 +1018,6 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
             className="fez-icon altmetric xxlarge"
             key="altmetric"
           />
-           
           Altmetric score
         </WithStyles(Typography)>
       </WithStyles(Grid)>

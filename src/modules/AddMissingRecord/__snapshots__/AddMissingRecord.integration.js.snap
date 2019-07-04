@@ -811,7 +811,7 @@ exports[`AddMissingRecord form BookForm:Textbook should  show submit button when
 +                         <b>
 +                           provide a list of authors/creators
 +                         </b>
-+                          of the work and 
++                          of the work and
 +                         <b>
 +                           select an author/creator or editor/contributor
 +                         </b>
@@ -1000,7 +1000,7 @@ exports[`AddMissingRecord form BookForm:Textbook should  show submit button when
 +                                   have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
 +                                 </li>
 +                                 <li>
-+                                   two periods are allowed for multipart zip files.  Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
++                                   two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
 +                                 </li>
 +                                 <li>
 +                                   are uploaded individually and not inside a folder
@@ -2067,7 +2067,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                         <b>
 +                           provide a list of authors/creators
 +                         </b>
-+                          of the work and 
++                          of the work and
 +                         <b>
 +                           select an author/creator or editor/contributor
 +                         </b>
@@ -2174,7 +2174,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                         <b>
 +                           provide a list of editors/contributors
 +                         </b>
-+                          of the work and 
++                          of the work and
 +                         <b>
 +                           select an editor/contributor or author/creator
 +                         </b>
@@ -2527,7 +2527,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                                   have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
 +                                 </li>
 +                                 <li>
-+                                   two periods are allowed for multipart zip files.  Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
++                                   two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
 +                                 </li>
 +                                 <li>
 +                                   are uploaded individually and not inside a folder
@@ -3103,7 +3103,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 -                           provide a list of authors/creators
 +                                 select your name
                                 </b>
--                          of the work and 
+-                          of the work and
 -                         <b>
 -                           select an author/creator or editor/contributor
 -                         </b>
@@ -3358,7 +3358,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 -                         <b>
 -                           provide a list of editors/contributors
 -                         </b>
--                          of the work and 
+-                          of the work and
 -                         <b>
 -                           select an editor/contributor or author/creator
 -                         </b>
@@ -3631,7 +3631,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                           provide a list of authors/creators
                           </b>
 -                                from the list below (if applicable).
-+                          of the work and 
++                          of the work and
 +                         <b>
 +                           select an author/creator or editor/contributor
 +                         </b>
@@ -3885,7 +3885,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                         <b>
 +                           provide a list of editors/contributors
 +                         </b>
-+                          of the work and 
++                          of the work and
 +                         <b>
 +                           select an editor/contributor or author/creator
 +                         </b>
