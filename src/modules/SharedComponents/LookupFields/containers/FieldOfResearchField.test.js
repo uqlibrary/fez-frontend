@@ -1,4 +1,4 @@
-import {escapeRegExp} from './FieldOfResearchField';
+import { escapeRegExp } from './FieldOfResearchField';
 
 const failingRegEx = (searchText) => new RegExp(`(?=^[\\d]{4}\\s.+).*${searchText}.*`, 'gi');
 
@@ -8,13 +8,13 @@ const improvedRegEx = (searchText) => new RegExp(`(?=^[\\d]{4}\\s.+).*${escapeRe
 describe('FieldOfResearchField ', () => {
     it('should correctly throw exception for invalid regex', () => {
         expect(() => {
-            failingRegEx('Science (Bio')
+            failingRegEx('Science (Bio');
         }).toThrow();
     });
 
     it('should correctly escape string for regex', () => {
         expect(() => {
-            improvedRegEx('Science (Bio')
+            improvedRegEx('Science (Bio');
         }).not.toThrow();
     });
 });

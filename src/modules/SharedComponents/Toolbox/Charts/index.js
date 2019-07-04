@@ -1,2 +1,2 @@
-export {default as AuthorsPublicationsPerYearChart} from './components/AuthorsPublicationsPerYearChart';
-export {default as AuthorsPublicationTypesCountChart} from './components/AuthorsPublicationTypesCountChart';
+export { default as AuthorsPublicationsPerYearChart } from './components/AuthorsPublicationsPerYearChart';
+export { default as AuthorsPublicationTypesCountChart } from './components/AuthorsPublicationTypesCountChart';

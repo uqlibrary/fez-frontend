@@ -2,10 +2,10 @@ import PartialDateField from './PartialDateField';
 
 function setup(testProps, isShallow = true) {
     const props = {
-        classes:{
-            fakeTitle: {}
+        classes: {
+            fakeTitle: {},
         },
-        ...testProps};
+        ...testProps };
     return getElement(PartialDateField, props, isShallow);
 }
 
@@ -15,13 +15,13 @@ describe('Redux-form Field PartialDateField snapshots tests', () => {
             name: 'partialDate',
             allowPartial: true,
             input: {
-                onChange: () => {}
-            }
+                onChange: () => {},
+            },
         };
 
         const wrapper = setup(props);
 
-        let tree = toJson(wrapper);
+        const tree = toJson(wrapper);
         expect(tree).toMatchSnapshot();
     });
 
@@ -31,13 +31,13 @@ describe('Redux-form Field PartialDateField snapshots tests', () => {
             allowPartial: true,
             className: 'requiredField',
             input: {
-                onChange: () => {}
-            }
+                onChange: () => {},
+            },
         };
 
         const wrapper = setup(props);
 
-        let tree = toJson(wrapper);
+        const tree = toJson(wrapper);
         expect(tree).toMatchSnapshot();
     });
 
@@ -47,13 +47,13 @@ describe('Redux-form Field PartialDateField snapshots tests', () => {
             allowPartial: false,
             className: 'requiredField',
             input: {
-                onChange: () => {}
-            }
+                onChange: () => {},
+            },
         };
 
         const wrapper = setup(props);
 
-        let tree = toJson(wrapper);
+        const tree = toJson(wrapper);
         expect(tree).toMatchSnapshot();
     });
 });

@@ -9,10 +9,10 @@ function setup(testProps, isShallow = true) {
         classes: {
             listItemGutters: 'listItemGutters',
             inset: 'inset',
-            selectedFacet: 'selectedFacet'
+            selectedFacet: 'selectedFacet',
         },
         onFacetClick: jest.fn(),
-        ...testProps
+        ...testProps,
     };
     return getElement(FacetFilterNestedListItem, props, isShallow);
 }
@@ -43,7 +43,7 @@ describe('Facet filter nested list item ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
         wrapper.setProps({
             inActive: true,
-            disabled: true
+            disabled: true,
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });

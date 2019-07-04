@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {HelpIcon} from '../../HelpDrawer';
+import { HelpIcon } from '../../HelpDrawer';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
-import {withStyles} from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 
 const styles = {
     title: {
@@ -12,8 +12,8 @@ const styles = {
     },
     divider: {
         marginTop: 6,
-        marginBottom: 12
-    }
+        marginBottom: 12,
+    },
 };
 
 export class RighthandCard extends React.Component {
@@ -24,12 +24,12 @@ export class RighthandCard extends React.Component {
         help: PropTypes.shape({
             title: PropTypes.string,
             text: PropTypes.any,
-            buttonLabel: PropTypes.string
-        })
+            buttonLabel: PropTypes.string,
+        }),
     };
 
     render() {
-        const {classes, title, children, help} = this.props;
+        const { classes, title, children, help } = this.props;
         return (
             <Grid container>
                 <Grid item xs className={classes.title}>
@@ -52,6 +52,6 @@ export class RighthandCard extends React.Component {
     }
 }
 
-const StyledCard = withStyles(styles, {withTheme: true})(RighthandCard);
+const StyledCard = withStyles(styles, { withTheme: true })(RighthandCard);
 const StandardRighthandCard = (props) => <StyledCard {...props}/>;
 export default StandardRighthandCard;

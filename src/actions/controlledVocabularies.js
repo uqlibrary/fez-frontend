@@ -1,6 +1,6 @@
 import * as actions from './actionTypes';
-import {get} from 'repositories/generic';
-import {VOCABULARIES_API} from 'repositories/routes';
+import { get } from 'repositories/generic';
+import { VOCABULARIES_API } from 'repositories/routes';
 
 /**
  * Fetches the controlled vocabularies list
@@ -9,19 +9,19 @@ import {VOCABULARIES_API} from 'repositories/routes';
 export function loadVocabulariesList(id) {
     return dispatch => {
         dispatch({
-            type: `${actions.VOCABULARIES_LOADING}@${id}`
+            type: `${actions.VOCABULARIES_LOADING}@${id}`,
         });
-        return get(VOCABULARIES_API({id: id}))
+        return get(VOCABULARIES_API({ id: id }))
             .then(result => {
                 dispatch({
                     type: `${actions.VOCABULARIES_LOADED}@${id}`,
-                    payload: result.data
+                    payload: result.data,
                 });
             })
             .catch(error => {
                 dispatch({
                     type: `${actions.VOCABULARIES_LOAD_FAILED}@${id}`,
-                    payload: error.message
+                    payload: error.message,
                 });
             });
     };

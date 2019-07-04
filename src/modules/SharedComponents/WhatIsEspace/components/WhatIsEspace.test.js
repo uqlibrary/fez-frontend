@@ -1,7 +1,7 @@
 import WhatIsEspace from './WhatIsEspace';
 
-function setup(testProps, isShallow = true){
-    const props = {...testProps};
+function setup(testProps, isShallow = true) {
+    const props = { ...testProps };
     return getElement(WhatIsEspace, props, isShallow);
 }
 

@@ -1,5 +1,5 @@
 import AudioDocumentCitation from './AudioDocumentCitation';
-import {audioDocument} from 'mock/data/testing/records';
+import { audioDocument } from 'mock/data/testing/records';
 
 function setup(testProps, isShallow = false) {
     const props = {
@@ -21,7 +21,7 @@ describe('AudioDocumentCitation renders ', () => {
     });
 
     it('component with an empty doi view ', () => {
-        const wrapper = setup({ publication: {...audioDocument, fez_record_search_key_doi: {}} });
+        const wrapper = setup({ publication: { ...audioDocument, fez_record_search_key_doi: {} } });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

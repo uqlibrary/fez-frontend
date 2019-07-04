@@ -4,10 +4,10 @@ import DatePicker from 'material-ui-pickers/DatePicker';
 import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 import Event from '@material-ui/icons/Event';
-import {GENERIC_DATE_FORMAT} from 'config/general';
+import { GENERIC_DATE_FORMAT } from 'config/general';
 
 export default function DatePickerField(fieldProps) {
-    const {error, errorText, ...props} = fieldProps;
+    const { error, errorText, ...props } = fieldProps;
     return (
         <DatePicker
             value={!!fieldProps.input && fieldProps.input.value || !!fieldProps && fieldProps.value || undefined}
@@ -32,5 +32,5 @@ DatePickerField.propTypes = {
 
 DatePickerField.defaultProps = {
     format: GENERIC_DATE_FORMAT,
-    errorText: ''
+    errorText: '',
 };

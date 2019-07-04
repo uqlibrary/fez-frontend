@@ -3,7 +3,7 @@ import * as actions from 'actions/actionTypes';
 const initState = {
     itemsList: [],
     itemsLoading: false,
-    itemsLoadingError: false
+    itemsLoadingError: false,
 };
 
 const handlers = {
@@ -12,7 +12,7 @@ const handlers = {
             ...state,
             itemsList: [],
             itemsLoading: true,
-            itemsLoadingError: false
+            itemsLoadingError: false,
         }
     ),
     [actions.SEARCH_COLLECTION_LOADED]: (state, action) => (
@@ -20,7 +20,7 @@ const handlers = {
             ...state,
             itemsList: action.payload,
             itemsLoading: false,
-            itemsLoadingError: false
+            itemsLoadingError: false,
         }
     ),
     [actions.SEARCH_COLLECTION_FAILED]: (state) => (
@@ -28,9 +28,9 @@ const handlers = {
             ...state,
             itemsList: [],
             itemsLoading: false,
-            itemsLoadingError: true
+            itemsLoadingError: true,
         }
-    )
+    ),
 };
 
 export default function collectionsReducer(state = initState, action) {

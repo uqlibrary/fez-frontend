@@ -1,11 +1,11 @@
 import React from 'react';
-import {HelpDrawer} from './HelpDrawer';
+import { HelpDrawer } from './HelpDrawer';
 import HelpDrawerWithStyles from './HelpDrawer';
 
 function setup(testProps, isShallow = true) {
     const props = {
         classes: {},
-        theme: {palette:{white:{main: '#FFFFFF'}}},
+        theme: { palette: { white: { main: '#FFFFFF' } } },
         open: true,
         title: 'Test title',
         text: 'Test text',
@@ -19,7 +19,7 @@ function setup(testProps, isShallow = true) {
 describe('HelpDrawer snapshots tests', () => {
     it('renders menu', () => {
         const hdText = 'Integer mattis rutrum velit nec posuere. Quisque rhoncus quam elit.';
-        const wrapper = setup({title: 'HelpDrawer Title', text: hdText, open: true, buttonLabel: 'Close'});
+        const wrapper = setup({ title: 'HelpDrawer Title', text: hdText, open: true, buttonLabel: 'Close' });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -30,7 +30,7 @@ describe('HelpDrawer snapshots tests', () => {
                 <p>
                     <span>Test text</span>
                 </p>
-            )
+            ),
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -38,7 +38,7 @@ describe('HelpDrawer snapshots tests', () => {
     it('renders text as react element', () => {
         const wrapper = setup({
             title: 'HelpDrawer title',
-            text: (<span>Test text</span>)
+            text: (<span>Test text</span>),
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });

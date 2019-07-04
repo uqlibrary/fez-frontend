@@ -1,5 +1,5 @@
-import {DashboardArticleCount} from './DashboardArticleCount';
-import {currentAuthorStats} from 'mock/data';
+import { DashboardArticleCount } from './DashboardArticleCount';
+import { currentAuthorStats } from 'mock/data';
 
 function setup(testProps, isShallow = true) {
     // build full props list required by the component
@@ -18,7 +18,7 @@ describe('Dashboard Article Count test', () => {
         const wrapper = setup({
             articleCount,
             articleFirstYear,
-            articleLastYear
+            articleLastYear,
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -26,7 +26,7 @@ describe('Dashboard Article Count test', () => {
     it('should not render anything if any data is missing', () => {
         const articleCount = currentAuthorStats.total;
         const wrapper = setup({
-            articleCount
+            articleCount,
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });

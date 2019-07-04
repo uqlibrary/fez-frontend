@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import TextField from '@material-ui/core/TextField';
@@ -9,14 +9,14 @@ import MenuItem from '@material-ui/core/MenuItem';
 // MUI 1
 import Grid from '@material-ui/core/Grid';
 import FormHelperText from '@material-ui/core/FormHelperText';
-import {withStyles} from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 
 const moment = require('moment');
 
 const styles = theme => ({
     fakeTitle: {
         color: theme.palette.secondary.main,
-        marginTop: -32
+        marginTop: -32,
     },
     hideLabel: {
         position: 'absolute',
@@ -24,8 +24,8 @@ const styles = theme => ({
         top: 'auto',
         width: 1,
         height: 1,
-        overflow: 'hidden'
-    }
+        overflow: 'hidden',
+    },
 });
 
 export class PartialDateForm extends Component {
@@ -41,7 +41,7 @@ export class PartialDateForm extends Component {
         floatingTitleRequired: PropTypes.bool,
         classes: PropTypes.object,
         required: PropTypes.bool,
-        hasError: PropTypes.string
+        hasError: PropTypes.string,
     };
 
     static defaultProps = {
@@ -52,17 +52,30 @@ export class PartialDateForm extends Component {
             validationMessage: {
                 day: 'Invalid day',
                 month: 'Invalid month',
-                year: 'Invalid year'
+                year: 'Invalid year',
             },
             minNumberCharCode: 48,
-            maxNumberCharCode: 57
+            maxNumberCharCode: 57,
         },
-        months: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+        months: [
+            'January',
+            'February',
+            'March',
+            'April',
+            'May',
+            'June',
+            'July',
+            'August',
+            'September',
+            'October',
+            'November',
+            'December',
+        ],
         dateFormat: 'YYYY-MM-DD',
         allowPartial: false,
         floatingTitle: 'Enter a date',
         floatingTitleRequired: false,
-        className: ''
+        className: '',
     };
 
     constructor(props) {
@@ -70,13 +83,13 @@ export class PartialDateForm extends Component {
         this.state = {
             day: null,
             month: null,
-            year: null
+            year: null,
         };
-        this.errors = {day: '', month: '', year: ''};
+        this.errors = { day: '', month: '', year: '' };
     }
 
     componentDidMount() {
-        this._setDate({day: '', month: '', year: ''});
+        this._setDate({ day: '', month: '', year: '' });
     }
 
     componentWillUpdate(nextProps, nextState) {
@@ -85,36 +98,38 @@ export class PartialDateForm extends Component {
         }
     }
 
-    _validate = (state) => {
+    _validate = state => {
         let valid;
-        const {day, month, year} = state;
+        const { day, month, year } = state;
 
         if (this.props.allowPartial) {
             valid = !!year && moment(state).isValid();
         } else {
-            valid = !!day && (month !== null) && !!year && moment(state).isValid();
+            valid = !!day && month !== null && !!year && moment(state).isValid();
         }
         return valid;
     };
 
     _displayErrors = (state, valid) => {
-        const {day, month, year} = state;
-        const {locale} = this.props;
+        const { day, month, year } = state;
+        const { locale } = this.props;
 
-        this.errors.year = this.props.floatingTitleRequired && this.props.allowPartial && !year && 'Year required' ||
-            !!year && isNaN(year) && locale.validationMessage.year ||
+        this.errors.year =
+            (this.props.floatingTitleRequired && this.props.allowPartial && !year && 'Year required') ||
+            (!!year && isNaN(year) && locale.validationMessage.year) ||
             '';
 
         if (this.props.allowPartial) {
-            this.errors.month = (year && month < 0) ? locale.validationMessage.month : '';
-            this.errors.day = (day && year && month > -1 && !valid) ? locale.validationMessage.day : '';
+            this.errors.month = year && month < 0 ? locale.validationMessage.month : '';
+            this.errors.day = day && year && month > -1 && !valid ? locale.validationMessage.day : '';
         } else {
             this.errors.month = month < 0 ? locale.validationMessage.month : '';
-            this.errors.day = (isNaN(day) || ((month !== null || month > -1) && year && !valid)) ? locale.validationMessage.day : '';
+            this.errors.day =
+                isNaN(day) || ((month !== null || month > -1) && year && !valid) ? locale.validationMessage.day : '';
         }
     };
 
-    _setDate = (date) => {
+    _setDate = date => {
         const valid = this._validate(date);
 
         this._displayErrors(date, valid);
@@ -122,33 +137,40 @@ export class PartialDateForm extends Component {
         return valid ? moment(date).format(this.props.dateFormat) : '';
     };
 
-    _isNumber = (event) => {
-        if (event.charCode < this.props.locale.minNumberCharCode || event.charCode > this.props.locale.maxNumberCharCode) {
+    _isNumber = event => {
+        if (
+            event.charCode < this.props.locale.minNumberCharCode ||
+            event.charCode > this.props.locale.maxNumberCharCode
+        ) {
             event.preventDefault();
         }
     };
 
-    _onDateChanged = (key) => {
+    _onDateChanged = key => {
         return (event, index, value) => {
             this.setState({
-                [key]: parseInt(event.target.value === undefined ? value : event.target.value, 10)
+                [key]: parseInt(event.target.value === undefined ? value : event.target.value, 10),
             });
         };
     };
 
     render() {
-        const {locale, months} = this.props;
-        const renderMonths = months.map((month, index) =>
-            <MenuItem key={index} value={index}>{month}</MenuItem>
-        );
+        const { locale, months } = this.props;
+        const renderMonths = months.map((month, index) => (
+            <MenuItem key={index} value={index}>
+                {month}
+            </MenuItem>
+        ));
         const isError = this.errors.day || this.errors.month || this.errors.year || this.props.hasError || '';
         return (
             <Grid container spacing={0}>
                 <Grid item xs={12}>
-                    <InputLabel error={!!isError} shrink required={this.props.required} style={{zoom: '0.75'}}>{this.props.floatingTitle}</InputLabel>
+                    <InputLabel error={!!isError} shrink required={this.props.required} style={{ zoom: '0.75' }}>
+                        {this.props.floatingTitle}
+                    </InputLabel>
                 </Grid>
                 <Grid item xs={12}>
-                    <Grid container spacing={16} style={{marginTop: -12}}>
+                    <Grid container spacing={16} style={{ marginTop: -12 }}>
                         <Grid item xs={4}>
                             <TextField
                                 name="day"
@@ -161,16 +183,13 @@ export class PartialDateForm extends Component {
                                 onChange={this._onDateChanged('day')}
                                 onBlur={!this.props.allowPartial ? this._onDateChanged('day') : undefined}
                                 placeholder={locale.dayLabel}
-                                inputProps={{label: 'day', maxLength: 2}}
+                                inputProps={{ label: 'day', maxLength: 2 }}
                             />
-                            {
-                                isError &&
-                                <FormHelperText error>{isError}</FormHelperText>
-                            }
+                            {isError && <FormHelperText error>{isError}</FormHelperText>}
                         </Grid>
                         <Grid item xs={4}>
                             <Select
-                                style={{width: '100%'}}
+                                style={{ width: '100%' }}
                                 name="month"
                                 id="month"
                                 error={!!isError}
@@ -178,9 +197,11 @@ export class PartialDateForm extends Component {
                                 value={this.state.month === null ? -1 : this.state.month}
                                 placeholder={locale.monthLabel}
                                 onChange={this._onDateChanged('month')}
-                                inputProps={{label: 'month', maxLength: 2}}
+                                inputProps={{ label: 'month', maxLength: 2 }}
                             >
-                                <MenuItem key={-1} value={-1} disabled>Month</MenuItem>
+                                <MenuItem key={-1} value={-1} disabled>
+                                    Month
+                                </MenuItem>
                                 {renderMonths}
                             </Select>
                         </Grid>
@@ -196,7 +217,7 @@ export class PartialDateForm extends Component {
                                 onKeyPress={this._isNumber}
                                 onChange={this._onDateChanged('year')}
                                 onBlur={this._onDateChanged('year')}
-                                inputProps={{label: 'year', maxLength: 4}}
+                                inputProps={{ label: 'year', maxLength: 4 }}
                             />
                         </Grid>
                     </Grid>
@@ -205,6 +226,5 @@ export class PartialDateForm extends Component {
         );
     }
 }
-
 
 export default withStyles(styles)(PartialDateForm);

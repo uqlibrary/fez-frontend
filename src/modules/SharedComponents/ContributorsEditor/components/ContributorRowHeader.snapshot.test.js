@@ -1,4 +1,4 @@
-import {ContributorRowHeader, styles} from './ContributorRowHeader';
+import { ContributorRowHeader, styles } from './ContributorRowHeader';
 
 function setup(testProps, isShallow = true) {
     const props = {
@@ -13,7 +13,7 @@ function setup(testProps, isShallow = true) {
             text: 'text',
             paddingRight24: 'paddingRight24',
             paddingRight36: 'paddingRight36',
-            paddingRight14: 'paddingRight14'
+            paddingRight14: 'paddingRight14',
         },
         ...testProps,
     };
@@ -21,7 +21,6 @@ function setup(testProps, isShallow = true) {
 }
 
 describe('Component ContributorRowHeader', () => {
-
     it('header for contributor editor control with name and delete all button only', () => {
         const wrapper = setup({ });
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -44,8 +43,8 @@ describe('Component ContributorRowHeader', () => {
 
     it('should call shouldComponentUpdate when something changes', () => {
         const testFunction = jest.fn();
-        const wrapper = setup({showContributorAssignment: false});
-        wrapper.setProps({showContributorAssignment: true});
+        const wrapper = setup({ showContributorAssignment: false });
+        wrapper.setProps({ showContributorAssignment: true });
         wrapper.instance().shouldComponentUpdate = testFunction;
         expect(testFunction).toHaveBeenCalled;
     });
@@ -53,14 +52,15 @@ describe('Component ContributorRowHeader', () => {
     it('triggers the confirmation box', () => {
         const testFunction = jest.fn();
         const wrapper = setup({});
-        wrapper.instance().confirmationBox = {showConfirmation: testFunction};
+        wrapper.instance().confirmationBox = { showConfirmation: testFunction };
         wrapper.instance()._showConfirmation();
         expect(testFunction).toHaveBeenCalled;
     });
 
     it('set confirmation box ref', () => {
         const wrapper = setup({});
-        wrapper.find('ConfirmDialogBox').props().onRef('testRef');
+        wrapper.find('ConfirmDialogBox').props()
+            .onRef('testRef');
         expect(wrapper.instance().confirmationBox).toBe('testRef');
     });
 
@@ -69,8 +69,8 @@ describe('Component ContributorRowHeader', () => {
             isInfinite: true,
             classes: {
                 paddingRight36: 'test-class-1',
-                paddingRight14: 'test-class-2'
-            }
+                paddingRight14: 'test-class-2',
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });

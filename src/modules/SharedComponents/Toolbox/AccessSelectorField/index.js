@@ -1,1 +1,1 @@
-export {default as AccessSelectorField} from './AccessSelectorField';
+export { default as AccessSelectorField } from './AccessSelectorField';

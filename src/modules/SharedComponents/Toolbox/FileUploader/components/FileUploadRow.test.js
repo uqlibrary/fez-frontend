@@ -1,9 +1,9 @@
-import {FileUploadRow} from './FileUploadRow';
+import { FileUploadRow } from './FileUploadRow';
 
 function setup(testProps, isShallow = true) {
     const props = {
         index: 0,
-        uploadedFile: {name: 'a.txt', size: 100},
+        uploadedFile: { name: 'a.txt', size: 100 },
         requireOpenAccessStatus: true,
         onDelete: jest.fn(),
         onAccessConditionChange: jest.fn(),
@@ -23,9 +23,14 @@ describe('FileUploadRow', () => {
 
     it('call prop to update file metadata with closed access', () => {
         const testFunction = jest.fn();
-        const file = new File([""], 'a.txt');
+        const file = new File([''], 'a.txt');
         file.date = '2017-01-01';
-        const wrapper = setup({requireOpenAccessStatus: true, onAccessConditionChange: testFunction, uploadedFile: file, index: 0});
+        const wrapper = setup({
+            requireOpenAccessStatus: true,
+            onAccessConditionChange: testFunction,
+            uploadedFile: file,
+            index: 0,
+        });
 
         wrapper.instance()._updateAccessCondition(8);
         expect(testFunction).toHaveBeenCalledWith(file, 0, 8);
@@ -33,9 +38,14 @@ describe('FileUploadRow', () => {
 
     it('call prop to update file metadata with open access', () => {
         const testFunction = jest.fn();
-        const file = new File([""], 'a.txt');
+        const file = new File([''], 'a.txt');
         file.date = '2017-01-01';
-        const wrapper = setup({requireOpenAccessStatus: true, onAccessConditionChange: testFunction, uploadedFile: file, index: 0});
+        const wrapper = setup({
+            requireOpenAccessStatus: true,
+            onAccessConditionChange: testFunction,
+            uploadedFile: file,
+            index: 0,
+        });
 
         wrapper.instance()._updateAccessCondition(9);
         expect(testFunction).toHaveBeenCalledWith(file, 0, 9);
@@ -43,9 +53,9 @@ describe('FileUploadRow', () => {
 
     it('call prop to update file metadata with open access date', () => {
         const testFunction = jest.fn();
-        const file = new File([""], 'a.txt');
+        const file = new File([''], 'a.txt');
         file.date = '2017-01-01';
-        const wrapper = setup({onEmbargoDateChange: testFunction, uploadedFile: file, index: 0});
+        const wrapper = setup({ onEmbargoDateChange: testFunction, uploadedFile: file, index: 0 });
 
         wrapper.instance()._updateEmbargoDate(new Date(2016));
         expect(testFunction).toHaveBeenCalledWith(file, 0, new Date(2016));
@@ -56,21 +66,33 @@ describe('FileUploadRow', () => {
         const showConfirmationFn = jest.fn();
         const wrapper = setup({
             width: 'xs',
-            onDelete: onDeleteFn
+            onDelete: onDeleteFn,
         });
         expect(toJson(wrapper)).toMatchSnapshot();
 
-        wrapper.find('WithStyles(FileUploadRowMobileView)').props().onDelete();
+        wrapper
+            .find('WithStyles(FileUploadRowMobileView)')
+            .props()
+            .onDelete();
         expect(showConfirmationFn).not.toBeCalled();
 
-        wrapper.find('ConfirmDialogBox').props().onRef({
-            showConfirmation: showConfirmationFn
-        });
+        wrapper
+            .find('ConfirmDialogBox')
+            .props()
+            .onRef({
+                showConfirmation: showConfirmationFn,
+            });
 
-        wrapper.find('WithStyles(FileUploadRowMobileView)').props().onDelete();
+        wrapper
+            .find('WithStyles(FileUploadRowMobileView)')
+            .props()
+            .onDelete();
         expect(showConfirmationFn).toHaveBeenCalled();
 
-        wrapper.find('ConfirmDialogBox').props().onAction();
+        wrapper
+            .find('ConfirmDialogBox')
+            .props()
+            .onAction();
         expect(onDeleteFn).toHaveBeenCalled();
     });
 });

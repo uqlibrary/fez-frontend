@@ -3,7 +3,7 @@ import ContributorLinkingField from './ContributorLinkingField';
 function setup(testProps, isShallow = true) {
     const props = {
         input: {
-            onChange: () => {}
+            onChange: () => {},
         },
         ...testProps,
     };
@@ -11,10 +11,8 @@ function setup(testProps, isShallow = true) {
 }
 
 describe('Component ContributorLinkingField', () => {
-
     it('should render as expected', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
-
 });

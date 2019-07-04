@@ -1,4 +1,4 @@
-import {PartialDateForm} from './PartialDateForm';
+import { PartialDateForm } from './PartialDateForm';
 
 const partialAllowedDateForm = new PartialDateForm({ allowPartial: true });
 const partialNotAllowedDateForm = new PartialDateForm({ allowPartial: false });

@@ -1,5 +1,5 @@
 import DesignCitation from './DesignCitation';
-import {design} from 'mock/data/testing/records';
+import { design } from 'mock/data/testing/records';
 
 function setup(testProps, isShallow = false) {
     const props = {
@@ -24,8 +24,8 @@ describe('DesignCitation renders ', () => {
         const wrapper = setup({
             publication: {
                 ...design,
-                fez_record_search_key_source: {rek_source: null}
-            }
+                fez_record_search_key_source: { rek_source: null },
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });

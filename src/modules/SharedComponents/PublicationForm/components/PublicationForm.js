@@ -17,8 +17,10 @@ import { default as txt } from 'locale/publicationForm';
 import * as recordForms from './Forms';
 import { NEW_DOCTYPES_OPTIONS, DOCTYPE_SUBTYPE_MAPPING } from 'config/general';
 import Typography from '@material-ui/core/Typography';
-import { ContentIndicatorsField, showContentIndicatorsField } from 'modules/SharedComponents/Toolbox/ContentIndicatorsField';
-
+import {
+    ContentIndicatorsField,
+    showContentIndicatorsField,
+} from 'modules/SharedComponents/Toolbox/ContentIndicatorsField';
 
 export default class PublicationForm extends Component {
     static propTypes = {
@@ -36,37 +38,41 @@ export default class PublicationForm extends Component {
         hasDefaultDocTypeSubType: PropTypes.bool,
         docTypeSubTypeCombo: PropTypes.object,
         isAuthorSelected: PropTypes.bool,
-        initialValues: PropTypes.object
+        initialValues: PropTypes.object,
     };
 
     constructor(props) {
         super(props);
         this.publicationTypes = publicationTypes({ ...recordForms });
         this.publicationTypeItems = [
-            ...(this.publicationTypes.filter((item) => {
-                return item.isFavourite;
-            }).map((item, index) => {
-                return (
-                    <MenuItem value={item.id} key={'fav_' + index} disabled={!item.formComponent}>
-                        {item.name}
-                    </MenuItem>
-                );
-            })),
+            ...this.publicationTypes
+                .filter(item => {
+                    return item.isFavourite;
+                })
+                .map((item, index) => {
+                    return (
+                        <MenuItem value={item.id} key={'fav_' + index} disabled={!item.formComponent}>
+                            {item.name}
+                        </MenuItem>
+                    );
+                }),
             ...[<Divider key="div_0" />],
-            ...this.publicationTypes.filter((item) => {
-                return item.hasFormComponent;
-            }).map((item, index) => {
-                return (
-                    <MenuItem value={item.id} key={index} disabled={!item.formComponent}>
-                        {item.name}
-                    </MenuItem>
-                );
-            }),
+            ...this.publicationTypes
+                .filter(item => {
+                    return item.hasFormComponent;
+                })
+                .map((item, index) => {
+                    return (
+                        <MenuItem value={item.id} key={index} disabled={!item.formComponent}>
+                            {item.name}
+                        </MenuItem>
+                    );
+                }),
             ...NEW_DOCTYPES_OPTIONS.map((item, index) => (
                 <MenuItem value={item} key={`ntro-${index}`}>
                     {!!DOCTYPE_SUBTYPE_MAPPING[item] ? DOCTYPE_SUBTYPE_MAPPING[item].name : item}
                 </MenuItem>
-            ))
+            )),
         ];
     }
 
@@ -76,7 +82,9 @@ export default class PublicationForm extends Component {
         } else {
             if (!!nextProps.subtypes && nextProps.subtypes !== this.props.subtypes) {
                 this.publicationSubtypeItems = nextProps.subtypes.map((item, index) => (
-                    <MenuItem value={item} key={index}>{item}</MenuItem>
+                    <MenuItem value={item} key={index}>
+                        {item}
+                    </MenuItem>
                 ));
             }
             if (nextProps.hasDefaultDocTypeSubType) {
@@ -88,16 +96,19 @@ export default class PublicationForm extends Component {
         }
     }
 
-    _handleDefaultSubmit = (event) => {
+    _handleDefaultSubmit = event => {
         !!event && event.preventDefault();
     };
 
     render() {
-        const alertProps = validation.getErrorAlertProps({...this.props, alertLocale: txt});
+        const alertProps = validation.getErrorAlertProps({ ...this.props, alertLocale: txt });
         return (
             <form onSubmit={this._handleDefaultSubmit}>
                 <Grid container spacing={24}>
-                    <NavigationDialogBox when={this.props.dirty && !this.props.submitSucceeded} txt={txt.cancelWorkflowConfirmation} />
+                    <NavigationDialogBox
+                        when={this.props.dirty && !this.props.submitSucceeded}
+                        txt={txt.cancelWorkflowConfirmation}
+                    />
                     <Grid item xs={12}>
                         <StandardCard title={txt.publicationType.title} help={txt.publicationType.help}>
                             <Grid container spacing={8}>
@@ -112,14 +123,13 @@ export default class PublicationForm extends Component {
                                         required
                                         placeholder={txt.publicationType.hintText}
                                         SelectDisplayProps={{
-                                            id: 'rek-display-type'
+                                            id: 'rek-display-type',
                                         }}
                                     >
                                         {this.publicationTypeItems}
                                     </Field>
                                 </Grid>
-                                {
-                                    (this.props.hasSubtypes || this.props.hasDefaultDocTypeSubType) &&
+                                {(this.props.hasSubtypes || this.props.hasDefaultDocTypeSubType) && (
                                     <Grid item xs={12}>
                                         <Field
                                             component={SelectField}
@@ -131,22 +141,21 @@ export default class PublicationForm extends Component {
                                             required
                                             placeholder={txt.publicationSubtype.hintText}
                                             SelectDisplayProps={{
-                                                id: 'rek-subtype'
-                                            }}>
+                                                id: 'rek-subtype',
+                                            }}
+                                        >
                                             {this.publicationSubtypeItems}
                                         </Field>
                                     </Grid>
-                                }
+                                )}
                             </Grid>
                         </StandardCard>
                     </Grid>
-                    {
-                        !!this.props.formComponent &&
+                    {!!this.props.formComponent && (
                         <React.Fragment>
-                            {
-                                showContentIndicatorsField(this.props.formValues && this.props.formValues.toJS()) &&
+                            {showContentIndicatorsField(this.props.formValues && this.props.formValues.toJS()) && (
                                 <Grid item xs={12}>
-                                    <StandardCard title={txt.contentIndicators.title} help={txt.contentIndicators.help} >
+                                    <StandardCard title={txt.contentIndicators.title} help={txt.contentIndicators.help}>
                                         <Grid container spacing={24}>
                                             <Grid item xs={12}>
                                                 <Typography>{txt.contentIndicators.description}</Typography>
@@ -163,11 +172,8 @@ export default class PublicationForm extends Component {
                                         </Grid>
                                     </StandardCard>
                                 </Grid>
-                            }
-                            {
-                                !!this.props.isNtro &&
-                                <NtroHeader />
-                            }
+                            )}
+                            {!!this.props.isNtro && <NtroHeader />}
                             <Grid item xs={12}>
                                 <this.props.formComponent
                                     formValues={this.props.formValues}
@@ -184,19 +190,22 @@ export default class PublicationForm extends Component {
                                         component={FileUploadField}
                                         disabled={this.props.submitting}
                                         requireOpenAccessStatus
-                                        validate={this.props.isNtro ? [validation.fileUploadRequired, validation.validFileUpload] : [validation.validFileUpload]}
+                                        validate={
+                                            this.props.isNtro
+                                                ? [validation.fileUploadRequired, validation.validFileUpload]
+                                                : [validation.validFileUpload]
+                                        }
                                         isNtro={this.props.isNtro}
                                     />
                                 </StandardCard>
                             </Grid>
                         </React.Fragment>
-                    }
-                    {
-                        !!this.props.formComponent && alertProps &&
+                    )}
+                    {!!this.props.formComponent && alertProps && (
                         <Grid item xs={12}>
                             <Alert pushToTop {...alertProps} />
                         </Grid>
-                    }
+                    )}
                 </Grid>
                 <Grid container spacing={24}>
                     <Grid item xs />
@@ -206,13 +215,13 @@ export default class PublicationForm extends Component {
                             fullWidth
                             children={txt.cancel}
                             disabled={this.props.submitting}
-                            onClick={this.props.onFormCancel} />
+                            onClick={this.props.onFormCancel}
+                        />
                     </Grid>
-                    {
-                        (this.props.formValues.get('rek_display_type') > 0 &&
-                            !this.props.hasSubtypes || (this.props.hasSubtypes && this.props.formValues.get('rek_subtype') && this.props.formValues.get('rek_subtype').length > 0)
-                        )
-                        &&
+                    {((this.props.formValues.get('rek_display_type') > 0 && !this.props.hasSubtypes) ||
+                        (this.props.hasSubtypes &&
+                            this.props.formValues.get('rek_subtype') &&
+                            this.props.formValues.get('rek_subtype').length > 0)) && (
                         <Grid item xs={12} sm="auto">
                             <Button
                                 style={{ whiteSpace: 'nowrap' }}
@@ -222,9 +231,10 @@ export default class PublicationForm extends Component {
                                 fullWidth
                                 children={txt.submit}
                                 onClick={this.props.handleSubmit}
-                                disabled={this.props.submitting || this.props.disableSubmit} />
+                                disabled={this.props.submitting || this.props.disableSubmit}
+                            />
                         </Grid>
-                    }
+                    )}
                 </Grid>
             </form>
         );

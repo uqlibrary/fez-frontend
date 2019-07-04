@@ -1,16 +1,16 @@
-import React, {PureComponent} from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import {ExternalLink} from 'modules/SharedComponents/ExternalLink';
-import {withStyles} from '@material-ui/core/styles';
+import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
+import { withStyles } from '@material-ui/core/styles';
 
 const styles = (theme) => ({
     citationCount: {
         ...theme.typography.caption,
-        marginRight: 8
+        marginRight: 8,
     },
     citationCountNumber: {
-        marginLeft: '0.4em'
-    }
+        marginLeft: '0.4em',
+    },
 });
 
 export class CitationCountView extends PureComponent {
@@ -19,7 +19,7 @@ export class CitationCountView extends PureComponent {
         count: PropTypes.any,
         link: PropTypes.string,
         title: PropTypes.string,
-        classes: PropTypes.object
+        classes: PropTypes.object,
     };
 
     constructor(props) {
@@ -27,7 +27,7 @@ export class CitationCountView extends PureComponent {
     }
 
     render() {
-        const {source, count, link, title, classes} = this.props;
+        const { source, count, link, title, classes } = this.props;
         return (
             <React.Fragment>
                 <ExternalLink
@@ -48,5 +48,5 @@ export class CitationCountView extends PureComponent {
     }
 }
 
-export default withStyles(styles, {withTheme: true})(CitationCountView);
+export default withStyles(styles, { withTheme: true })(CitationCountView);
 

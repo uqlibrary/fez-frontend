@@ -11,8 +11,8 @@ export const FORM_NAME = 'MyIncompleteRecord';
 export const onSubmit = (values, dispatch, props) => {
     const data = {
         ...values.toJS(),
-        publication: {...props.recordToFix},
-        author: {...props.author}
+        publication: { ...props.recordToFix },
+        author: { ...props.author },
     };
 
     return dispatch(actions.updateIncompleteRecord(data))
@@ -25,8 +25,9 @@ export const onSubmit = (values, dispatch, props) => {
             // setTimeout(()=>{
             //     dispatch(reset(FORM_NAME));
             // }, 100);
-        }).catch(error => {
-            throw new SubmissionError({_error: error.message});
+        })
+        .catch(error => {
+            throw new SubmissionError({ _error: error.message });
         });
 };
 
@@ -48,5 +49,5 @@ export default confirmDiscardFormChanges(reduxForm({
     form: FORM_NAME,
     enableReinitialize: true,
     validate,
-    onSubmit
+    onSubmit,
 })(MyIncompleteRecord));

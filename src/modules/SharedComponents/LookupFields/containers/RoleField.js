@@ -1,7 +1,7 @@
-import {AutoCompleteAsyncField} from 'modules/SharedComponents/Toolbox/AutoSuggestField';
-import {connect} from 'react-redux';
+import { AutoCompleteAsyncField } from 'modules/SharedComponents/Toolbox/AutoSuggestField';
+import { connect } from 'react-redux';
 import * as actions from 'actions/actionTypes';
-import {DATA_COLLECTION_CREATOR_ROLES} from 'config/general';
+import { DATA_COLLECTION_CREATOR_ROLES } from 'config/general';
 
 const mapStateToProps = (state, props) => {
     const category = 'role';
@@ -14,17 +14,17 @@ const mapStateToProps = (state, props) => {
         errorText: null,
         error: props.error,
         itemToString: (item) => !!item && String(item.value) || '',
-        selectedValue: !!props.value && {value: props.value} || null,
+        selectedValue: !!props.value && { value: props.value } || null,
         openOnFocus: true,
         filter: () => true,
         clearInput: props.clearInput,
-        required: props.required
+        required: props.required,
     };
 };
 
 const mapDispatchToProps = (dispatch) => (
     {
-        loadSuggestions: (searchKey) => dispatch({type: `${actions.SEARCH_KEY_LOOKUP_LOADED}@${searchKey}`, payload: DATA_COLLECTION_CREATOR_ROLES})
+        loadSuggestions: (searchKey) => dispatch({ type: `${actions.SEARCH_KEY_LOOKUP_LOADED}@${searchKey}`, payload: DATA_COLLECTION_CREATOR_ROLES }),
     }
 );
 

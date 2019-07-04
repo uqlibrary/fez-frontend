@@ -1,53 +1,69 @@
 import React from 'react';
-import PublicationMap, {GoogleMapViewComponent, getDefaultCenter} from "./PublicationMap";
+import PublicationMap, { GoogleMapViewComponent, getDefaultCenter } from './PublicationMap';
 
-function setup(testProps, isShallow = false){
+function setup(testProps, isShallow = false) {
     const props = {
         ...testProps,
-        googleMapURL: 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCD6bOdtlpxFXCj3vrhZkdeSS27HZha7U4&v=3.exp&libraries=geometry,drawing,places',
-        loadingElement: (<div/>)
+        googleMapURL:
+            'https://maps.googleapis.com/maps/api/js?key=AIzaSyCD6bOdtlpxFXCj3vrhZkdeSS27HZha7U4&v=3.exp&libraries=geometry,drawing,places',
+        loadingElement: <div />,
     };
     return getElement(PublicationMap, props, isShallow);
 }
 
-describe('Publication\'s map coordinates', () => {
-
+describe("Publication's map coordinates", () => {
     it('should render component with a selected area', () => {
-        const wrapper = setup({coordinates: '153.021781,-27.489337 152.988274,-27.489337 152.988274,-27.509529 153.021781,-27.509529 153.021781,-27.489337'});
+        const wrapper = setup({
+            coordinates:
+                '153.021781,-27.489337 152.988274,-27.489337 152.988274,' +
+                '-27.509529 153.021781,-27.509529 153.021781,-27.489337',
+        });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should mount component', () => {
-        const wrapper = setup({coordinates: '153.021781,-27.489337 152.988274,-27.489337 152.988274,-27.509529 153.021781,-27.509529 153.021781,-27.489337'}, false);
+        const wrapper = setup(
+            {
+                coordinates:
+                    '153.021781,-27.489337 152.988274,-27.489337 152.988274,' +
+                    '-27.509529 153.021781,-27.509529 153.021781,-27.489337',
+            },
+            false
+        );
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should mount component in readonly mode', () => {
-        const wrapper = setup({coordinates: '153.021781,-27.489337 152.988274,-27.489337 152.988274,-27.509529 153.021781,-27.509529 153.021781,-27.489337', readOnly: true}, false);
+        const wrapper = setup(
+            {
+                coordinates:
+                    '153.021781,-27.489337 152.988274,-27.489337 152.988274,' +
+                    '-27.509529 153.021781,-27.509529 153.021781,-27.489337',
+                readOnly: true,
+            },
+            false
+        );
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render component with empty coordinates', () => {
-        const wrapper = setup({coordinates: ''});
+        const wrapper = setup({ coordinates: '' });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render component with a marker', () => {
-        const wrapper = setup({coordinates: '153.021781,-27.489337' });
+        const wrapper = setup({ coordinates: '153.021781,-27.489337' });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should no-op if onChange prop is not defined', () => {
         global.google = {
             maps: {
-                LatLngBounds: () => ({})
-            }
+                LatLngBounds: () => ({}),
+            },
         };
         const wrapper = setup({}, true);
-        const geoCoords = [
-            { lat: 153.021781, lng: -27.489337 },
-            { lat: 153.021781, lng: -27.489337 }
-        ];
+        const geoCoords = [{ lat: 153.021781, lng: -27.489337 }, { lat: 153.021781, lng: -27.489337 }];
         wrapper.setState({ geoCoords });
         expect(wrapper.state().geoCoords).toBe(geoCoords);
     });
@@ -57,36 +73,39 @@ describe('Publication\'s map coordinates', () => {
             maps: {
                 LatLngBounds: () => ({
                     union: jest.fn(),
-                    extend: jest.fn()
+                    extend: jest.fn(),
                 }),
-                LatLng: jest.fn()
-            }
+                LatLng: jest.fn(),
+            },
         };
 
         const onChangeFn = jest.fn();
 
-        const wrapper = setup({
-            coordinates: '153.021781,-27.489337',
-            readOnly: false,
-            onChange: onChangeFn,
-            geoCoords: [
-                {
-                    lat: () => 153.021781,
-                    lng: () => -27.489337
-                },
-                {
-                    lat: () => 153.021781,
-                    lng: () => -27.489337
-                }
-            ]
-        }, true);
+        const wrapper = setup(
+            {
+                coordinates: '153.021781,-27.489337',
+                readOnly: false,
+                onChange: onChangeFn,
+                geoCoords: [
+                    {
+                        lat: () => 153.021781,
+                        lng: () => -27.489337,
+                    },
+                    {
+                        lat: () => 153.021781,
+                        lng: () => -27.489337,
+                    },
+                ],
+            },
+            true
+        );
         expect(toJson(wrapper)).toMatchSnapshot();
 
         wrapper.setState({
             currentOverlay: {
-                setMap: jest.fn()
+                setMap: jest.fn(),
             },
-            geoCoords: []
+            geoCoords: [],
         });
 
         const component = wrapper.find('withScriptjs(withGoogleMap(GoogleMapViewComponent))');
@@ -94,39 +113,39 @@ describe('Publication\'s map coordinates', () => {
         component.props().handleMarkerComplete({
             getPosition: () => ({
                 lat: () => 153.021781,
-                lng: () => -27.489337
+                lng: () => -27.489337,
             }),
-            setMap: jest.fn()
+            setMap: jest.fn(),
         });
 
         component.props().handlePolygonComplete({
             getPath: () => ({
-                getArray: () => ([
+                getArray: () => [
                     {
                         lat: () => 153.021781,
-                        lng: () => -27.489337
+                        lng: () => -27.489337,
                     },
                     {
                         lat: () => 153.021781,
-                        lng: () => -27.489337
-                    }
-                ])
+                        lng: () => -27.489337,
+                    },
+                ],
             }),
-            setMap: jest.fn()
+            setMap: jest.fn(),
         });
 
         component.props().handleRectangleComplete({
             getBounds: () => ({
                 getNorthEast: () => ({
                     lat: () => 153.021781,
-                    lng: () => -27.489337
+                    lng: () => -27.489337,
                 }),
                 getSouthWest: () => ({
                     lat: () => 153.021781,
-                    lng: () => -27.489337
-                })
+                    lng: () => -27.489337,
+                }),
             }),
-            setMap: jest.fn()
+            setMap: jest.fn(),
         });
 
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -134,7 +153,7 @@ describe('Publication\'s map coordinates', () => {
         component.props().onMapMounted(true, '153.021781,-27.489337')({
             fitBounds: jest.fn(),
             getBounds: jest.fn(),
-            getCenter: jest.fn()
+            getCenter: jest.fn(),
         });
         expect(toJson(wrapper)).toMatchSnapshot();
 
@@ -142,26 +161,26 @@ describe('Publication\'s map coordinates', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
 
         component.props().onSearchBoxMounted({
-            getPlaces: () => ([
+            getPlaces: () => [
                 {
                     geometry: {
                         viewport: true,
                         location: {
                             lat: () => 153.021781,
-                            lng: () => -27.489337
-                        }
-                    }
+                            lng: () => -27.489337,
+                        },
+                    },
                 },
                 {
                     geometry: {
                         viewport: false,
                         location: {
                             lat: () => 153.021781,
-                            lng: () => -27.489337
-                        }
-                    }
-                }
-            ])
+                            lng: () => -27.489337,
+                        },
+                    },
+                },
+            ],
         });
         expect(toJson(wrapper)).toMatchSnapshot();
 
@@ -177,11 +196,11 @@ describe('Publication\'s map coordinates', () => {
             { lng: 152.988274, lat: -27.489337 },
             { lng: 152.988274, lat: -27.509529 },
             { lng: 153.021782, lat: -27.509529 },
-            { lng: 153.021781, lat: -27.389337 }
+            { lng: 153.021781, lat: -27.389337 },
         ];
         expect(getDefaultCenter(geoCoords)).toEqual({
-            "lat": -27.449433,
-            "lng": 153.00502799999998
+            lat: -27.449433,
+            lng: 153.00502799999998,
         });
     });
 });
@@ -191,35 +210,35 @@ describe('GoogleMapViewComponent component', () => {
         maps: {
             LatLngBounds: () => ({
                 union: jest.fn(),
-                extend: jest.fn()
+                extend: jest.fn(),
             }),
             LatLng: jest.fn(),
             drawing: {
                 OverlayType: {
                     MARKER: 'marker',
                     POLYGON: 'polygon',
-                    RECTANGLE: 'rectangle'
-                }
+                    RECTANGLE: 'rectangle',
+                },
             },
             ControlPosition: {
                 TOP_CENTER: 1,
-                TOP_RIGHT: 1
-            }
-        }
+                TOP_RIGHT: 1,
+            },
+        },
     };
 
     const props = {
         geoCoords: [
             {
                 lat: () => 153.021781,
-                lng: () => -27.489337
+                lng: () => -27.489337,
             },
             {
                 lat: () => 153.021781,
-                lng: () => -27.489337
-            }
+                lng: () => -27.489337,
+            },
         ],
-        onMapMounted: jest.fn()
+        onMapMounted: jest.fn(),
     };
 
     it('should render component', () => {
@@ -231,15 +250,17 @@ describe('GoogleMapViewComponent component', () => {
     it('should render in read-only mode', () => {
         const wrapper = getElement(GoogleMapViewComponent, {
             ...props,
-            readOnly: true
+            readOnly: true,
         });
         expect(toJson(wrapper)).toMatchSnapshot();
 
         wrapper.setProps({
-            geoCoords: [{
-                lat: () => 153.021781,
-                lng: () => -27.489337
-            }]
+            geoCoords: [
+                {
+                    lat: () => 153.021781,
+                    lng: () => -27.489337,
+                },
+            ],
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });

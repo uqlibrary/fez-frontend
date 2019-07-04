@@ -1,1 +1,1 @@
-export {default as WhatIsEspace} from './components/WhatIsEspace';
+export { default as WhatIsEspace } from './components/WhatIsEspace';

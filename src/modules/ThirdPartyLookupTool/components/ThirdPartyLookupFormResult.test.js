@@ -1,13 +1,10 @@
-import {ThirdPartyLookupFormResult} from './ThirdPartyLookupFormResult';
-import {locale} from 'locale';
-import PropTypes from "prop-types";
-import React from "react";
+import { ThirdPartyLookupFormResult } from './ThirdPartyLookupFormResult';
 
 function setup(testProps, isShallow = true) {
     const props = {
-        lookupResults: testProps.lookupResults || [{"IS_INTERNATIONAL_COLLAB":"0"}],
-        primaryValue: testProps.primaryValue || "dummy UT",
-        secondaryValue: testProps.secondaryValue || "123456789",
+        lookupResults: testProps.lookupResults || [{ IS_INTERNATIONAL_COLLAB: '0' }],
+        primaryValue: testProps.primaryValue || 'dummy UT',
+        secondaryValue: testProps.secondaryValue || '123456789',
         formDisplay: testProps.formDisplay || {
             apiType: 'apiType',
             lookupLabel: 'Test Form',
@@ -20,15 +17,14 @@ function setup(testProps, isShallow = true) {
             loadingMessage: 'Loading test Form',
             tooltip: {
                 show: 'Show test form for',
-                hide: 'Hide test form for'
-
+                hide: 'Hide test form for',
             },
             resultsLabel: 'Test Results',
             noResultsFound: {
-                text: 'No test results found'
+                text: 'No test results found',
             },
-            clearButtonLabel: 'New Test Search'
-        }
+            clearButtonLabel: 'New Test Search',
+        },
     };
     return getElement(ThirdPartyLookupFormResult, props, isShallow);
 }
@@ -44,10 +40,10 @@ describe('Component ThirdPartyLookupFormResult', () => {
 
         const testProps = {
             actions: {
-                clearThirdPartyLookup: mockCallback
-            }
+                clearThirdPartyLookup: mockCallback,
+            },
         };
-        const wrapper = setup({...testProps});
+        const wrapper = setup({ ...testProps });
 
         const button = wrapper.find('WithStyles(Button)');
         expect(button.length).toEqual(1);
@@ -61,9 +57,9 @@ describe('Component ThirdPartyLookupFormResult', () => {
         const mockCallback = jest.fn();
 
         const testProps = {
-            actions: {}
+            actions: {},
         };
-        const wrapper = setup({...testProps});
+        const wrapper = setup({ ...testProps });
 
         const button = wrapper.find('WithStyles(Button)');
         expect(button.length).toEqual(1);
@@ -79,8 +75,8 @@ describe('Component ThirdPartyLookupFormResult', () => {
                 lookupLabel: 'label 10',
                 primaryFieldHeading: 'pf heading 10',
                 secondaryFieldHeading: 'sf heading 10',
-                reportSecondaryFieldInOutput: true,  // <---- value defines point of test
-            }
+                reportSecondaryFieldInOutput: true, // <---- value defines point of test
+            },
         };
         const wrapper = setup(testProps);
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -92,7 +88,7 @@ describe('Component ThirdPartyLookupFormResult', () => {
                 apiType: 'apiType 9',
                 lookupLabel: 'label 9',
                 primaryFieldHeading: 'pf heading 9',
-            }
+            },
         };
         const wrapper = setup(testProps);
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -105,14 +101,14 @@ describe('Component ThirdPartyLookupFormResult', () => {
                 lookupLabel: 'label 8',
                 primaryFieldHeading: 'PF 8',
                 secondaryFieldHeading: 'SF 8',
-            }
+            },
         };
         const wrapper = setup(testProps);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should use defaults when locale values are not provided', () => {
-        const testProps = {locale: {}};
+        const testProps = { locale: {} };
         const wrapper = setup(testProps);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -120,7 +116,7 @@ describe('Component ThirdPartyLookupFormResult', () => {
     it('should display a blank when the response is blank', () => {
         const testProps = {
             lookupResults: [],
-            locale: {}
+            locale: {},
         };
         const wrapper = setup(testProps);
         expect(toJson(wrapper)).toMatchSnapshot();

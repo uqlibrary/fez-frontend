@@ -47,7 +47,7 @@ const deployment = {
         publicPath: '/',
         orcidUrl: 'https://orcid.org',
         orcidClientId: 'APP-UIQ1ZTKAU17ZGZSC',
-    }
+    },
 };
 
 exports.default = deployment;

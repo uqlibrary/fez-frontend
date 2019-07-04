@@ -1,1 +1,1 @@
-export {default as ExportPublications} from './components/ExportPublications';
+export { default as ExportPublications } from './components/ExportPublications';

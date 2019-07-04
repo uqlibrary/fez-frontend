@@ -4,7 +4,7 @@ export const initialState = {
     newRecord: null,
     newCollectionSaving: false,
     newCollectionError: false,
-    newCollectionErrorMessage: null
+    newCollectionErrorMessage: null,
 };
 
 const handlers = {
@@ -14,7 +14,7 @@ const handlers = {
             ...initialState,
             newRecord: action.payload,
             newCollectionSaving: false,
-            newCollectionError: false
+            newCollectionError: false,
         }
     ),
 
@@ -23,7 +23,7 @@ const handlers = {
             ...initialState,
             newCollectionSaving: false,
             newCollectionError: true,
-            newCollectionErrorMessage: action.payload
+            newCollectionErrorMessage: action.payload,
         }
     ),
 
@@ -31,9 +31,9 @@ const handlers = {
         {
             ...initialState,
             newCollectionSaving: true,
-            newCollectionError: false
+            newCollectionError: false,
         }
-    )
+    ),
 };
 
 export default function createCollectionReducer(state = initialState, action) {

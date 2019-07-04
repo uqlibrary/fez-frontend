@@ -2094,7 +2094,6 @@ exports[`Journal Name Component test  should render with journal article 1`] = `
                 (ERA 2010 Journal(s) Listed)
               </span>
               <span>
-                 
                 <WithStyles(ExternalLink)
                   aria-label="View publisher's open access policy in an new window"
                   href="http://www.sherpa.ac.uk/romeo/search.php?issn=1477-9137"
@@ -4601,7 +4600,6 @@ exports[`Journal Name Component test  should render without era journal listed 1
                 </a>
               </Link>
               <span>
-                 
                 <WithStyles(ExternalLink)
                   aria-label="View publisher's open access policy in an new window"
                   href="http://www.sherpa.ac.uk/romeo/search.php?issn=1477-9137"

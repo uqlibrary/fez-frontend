@@ -17,7 +17,7 @@ export function loadRecordToFix(pid) {
             .then(response => {
                 dispatch({
                     type: actions.FIX_RECORD_LOADED,
-                    payload: response.data
+                    payload: response.data,
                 });
 
                 return Promise.resolve(response.data);
@@ -25,7 +25,7 @@ export function loadRecordToFix(pid) {
             .catch(error => {
                 dispatch({
                     type: actions.FIX_RECORD_LOAD_FAILED,
-                    payload: error.message
+                    payload: error.message,
                 });
             });
     };
@@ -40,7 +40,7 @@ export function setFixRecord(record) {
     return dispatch => {
         dispatch({
             type: actions.FIX_RECORD_SET,
-            payload: record
+            payload: record,
         });
     };
 }
@@ -52,7 +52,7 @@ export function setFixRecord(record) {
 export function clearFixRecord() {
     return dispatch => {
         dispatch({
-            type: actions.FIX_RECORD_CLEAR
+            type: actions.FIX_RECORD_CLEAR,
         });
     };
 }
@@ -71,7 +71,7 @@ export function fixRecord(data) {
         return dispatch => {
             dispatch({
                 type: actions.FIX_RECORD_FAILED,
-                payload: 'Incomplete data for requests'
+                payload: 'Incomplete data for requests',
             });
 
             return Promise.reject(new Error('Incomplete data for requests'));
@@ -104,7 +104,7 @@ export function fixRecord(data) {
         return dispatch => {
             dispatch({
                 type: actions.FIX_RECORD_FAILED,
-                payload: 'Current author is not linked to this record'
+                payload: 'Current author is not linked to this record',
             });
             return Promise.reject(new Error('Current author is not linked to this record'));
         };
@@ -147,15 +147,15 @@ export function fixRecord(data) {
                 dispatch({
                     type: actions.FIX_RECORD_SUCCESS,
                     payload: {
-                        pid: data.publication.rek_pid
-                    }
+                        pid: data.publication.rek_pid,
+                    },
                 });
                 return Promise.resolve(responses);
             })
             .catch(error => {
                 dispatch({
                     type: actions.FIX_RECORD_FAILED,
-                    payload: error.message
+                    payload: error.message,
                 });
                 return Promise.reject(error);
             });
@@ -172,7 +172,7 @@ export function unclaimRecord(data) {
         return dispatch => {
             dispatch({
                 type: actions.FIX_RECORD_FAILED,
-                payload: 'Incomplete data for requests.'
+                payload: 'Incomplete data for requests.',
             });
 
             return Promise.reject(new Error('Incomplete data for requests.'));
@@ -195,7 +195,7 @@ export function unclaimRecord(data) {
         return dispatch => {
             dispatch({
                 type: actions.FIX_RECORD_FAILED,
-                payload: 'Current author is not linked to this record.'
+                payload: 'Current author is not linked to this record.',
             });
             return Promise.reject(new Error('Current author is not linked to this record.'));
         };
@@ -214,7 +214,7 @@ export function unclaimRecord(data) {
             ...transformers.unclaimRecordContributorsIdSearchKey(
                 data.publication.fez_record_search_key_contributor_id,
                 data.author.aut_id
-            )
+            ),
         };
 
         return patch(EXISTING_RECORD_API({ pid: data.publication.rek_pid }), patchRecordRequest)
@@ -222,14 +222,14 @@ export function unclaimRecord(data) {
             .then(response => {
                 dispatch({
                     type: actions.FIX_RECORD_UNCLAIM_SUCCESS,
-                    payload: { pid: data.publication.rek_pid }
+                    payload: { pid: data.publication.rek_pid },
                 });
                 return Promise.resolve(response);
             })
             .catch(error => {
                 dispatch({
                     type: actions.FIX_RECORD_FAILED,
-                    payload: error.message
+                    payload: error.message,
                 });
                 return Promise.reject(error);
             });

@@ -3,27 +3,27 @@ import * as actions from 'actions/actionTypes';
 export const initialState = {
     authorsListLoading: false,
     authorsListLoadingError: false,
-    authorsList: []
+    authorsList: [],
 };
 
 const handlers = {
     [actions.AUTHORS_LOAD_FAILED]: () => ({
         authorsList: [],
         authorsListLoading: false,
-        authorsListLoadingError: true
+        authorsListLoadingError: true,
     }),
 
     [actions.AUTHORS_LOADED]: (state, action) => ({
         authorsList: action.payload,
         authorsListLoading: false,
-        authorsListLoadingError: false
+        authorsListLoadingError: false,
     }),
 
     [actions.AUTHORS_LOADING]: () => ({
         authorsList: [],
         authorsListLoading: true,
-        authorsListLoadingError: false
-    })
+        authorsListLoadingError: false,
+    }),
 };
 
 export default function authorsReducer(state = initialState, action) {

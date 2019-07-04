@@ -4,7 +4,7 @@ import Raven from 'raven-js';
 
 class AppErrorBoundary extends React.Component {
     static propTypes = {
-        children: PropTypes.node
+        children: PropTypes.node,
     };
 
     componentDidMount() {
@@ -13,7 +13,7 @@ class AppErrorBoundary extends React.Component {
                 environment: process.env.BRANCH,
                 release: process.env.GIT_SHA,
                 whitelistUrls: [
-                    /library\.uq\.edu\.au/
+                    /library\.uq\.edu\.au/,
                 ],
             }).install();
         }

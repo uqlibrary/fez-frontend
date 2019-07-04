@@ -41,7 +41,7 @@ export const getContentIndicators = props => CONTENT_INDICATORS.map(
             !!props.meta.initial &&
             !!props.meta.initial.toJS &&
             props.meta.initial.toJS().includes(item.value)
-        )
+        ),
     })
 );
 

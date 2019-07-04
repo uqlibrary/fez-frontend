@@ -1,17 +1,17 @@
-import React, {PureComponent} from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import {propTypes} from 'redux-form/immutable';
-import {Field} from 'redux-form/immutable';
+import { propTypes } from 'redux-form/immutable';
+import { Field } from 'redux-form/immutable';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
-import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
-import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
-import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
-import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
+import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
+import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
+import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
+import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 
 import locale from 'locale/pages';
-import {routes, validation} from 'config';
+import { routes, validation } from 'config';
 
 export default class GoogleScholar extends PureComponent {
     static propTypes = {
@@ -19,7 +19,7 @@ export default class GoogleScholar extends PureComponent {
         author: PropTypes.object,
         accountAuthorLoading: PropTypes.bool,
         history: PropTypes.object.isRequired,
-        actions: PropTypes.object.isRequired
+        actions: PropTypes.object.isRequired,
     };
 
     componentWillMount() {
@@ -34,7 +34,7 @@ export default class GoogleScholar extends PureComponent {
             // show app level alert on success
             this.props.actions.showAppAlert({
                 ...locale.pages.googleScholarLink.successAlert,
-                dismissAction: this.props.actions.dismissAppAlert
+                dismissAction: this.props.actions.dismissAppAlert,
             });
             this._navigateToDashboard();
         }
@@ -56,17 +56,17 @@ export default class GoogleScholar extends PureComponent {
         this.props.history.push(routes.pathConfig.dashboard);
     };
 
-    getAlert = ({submitFailed = false, submitting = false, error, alertLocale = {}}) => {
+    getAlert = ({ submitFailed = false, submitting = false, error, alertLocale = {} }) => {
         let alertProps = null;
         if (submitFailed && error) {
             alertProps = {
                 ...alertLocale.errorAlert,
                 message: !!alertLocale.errorAlert && alertLocale.errorAlert.message
                     ? alertLocale.errorAlert.message(error)
-                    : error
+                    : error,
             };
         } else if (submitting) {
-            alertProps = {...alertLocale.progressAlert};
+            alertProps = { ...alertLocale.progressAlert };
         }
         return alertProps ? (<Alert {...alertProps} />) : null;
     };
@@ -106,7 +106,7 @@ export default class GoogleScholar extends PureComponent {
 
                         {
                             <Grid item xs={12}>
-                                {this.getAlert({...this.props, alertLocale: txt})}
+                                {this.getAlert({ ...this.props, alertLocale: txt })}
                             </Grid>
                         }
                     </Grid>

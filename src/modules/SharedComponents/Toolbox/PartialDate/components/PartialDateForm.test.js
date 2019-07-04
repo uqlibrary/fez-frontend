@@ -1,10 +1,10 @@
-import {PartialDateForm} from './PartialDateForm';
+import { PartialDateForm } from './PartialDateForm';
 
 function setup(testProps, isShallow = true) {
     const props = {
         ...testProps,
         classes: testProps.classes || {
-            hideLabel: 'hidden'
+            hideLabel: 'hidden',
         },
     };
     return getElement(PartialDateForm, props, isShallow);
