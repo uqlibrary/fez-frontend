@@ -16,7 +16,7 @@ const trendingPubsPayload = [
                 difference: '0.5',
                 created: '1424093618',
                 last_checked: '1511253466',
-                citation_url: 'http://www.altmetric.com/details.php?citation_id=3445881',
+                citation_url: 'https://queensland.altmetric.com/details/3445881',
                 rek_pid: 'UQ:242578',
                 rek_date: '2011-05-01 00:00:00',
                 title:
@@ -30,7 +30,7 @@ const trendingPubsPayload = [
                 difference: '3.85',
                 created: '1502853372',
                 last_checked: '1510823330',
-                citation_url: 'http://www.altmetric.com/details.php?citation_id=23460021',
+                citation_url: 'https://queensland.altmetric.com/details/23460021',
                 rek_pid: 'UQ:678947',
                 rek_date: '2017-08-03 00:00:00',
                 title:
@@ -44,7 +44,7 @@ const trendingPubsPayload = [
                 difference: '0.25',
                 created: '1372746648',
                 last_checked: '1507654457',
-                citation_url: 'http://www.altmetric.com/details.php?citation_id=888611',
+                citation_url: 'https://queensland.altmetric.com/details/888611',
                 rek_pid: 'UQ:282686',
                 rek_date: '2012-08-01 00:00:00',
                 title:
