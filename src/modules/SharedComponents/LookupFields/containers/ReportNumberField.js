@@ -1,5 +1,5 @@
-import {AutoCompleteAsyncField} from 'modules/SharedComponents/Toolbox/AutoSuggestField';
-import {connect} from 'react-redux';
+import { AutoCompleteAsyncField } from 'modules/SharedComponents/Toolbox/AutoSuggestField';
+import { connect } from 'react-redux';
 import * as actions from 'actions';
 
 const mapStateToProps = (state, props) => {
@@ -12,15 +12,15 @@ const mapStateToProps = (state, props) => {
         onChange: (item) => props.input.onChange(item.value),
         async: true,
         errorText: props.meta ? props.meta.error : null,
-        selectedValue: !!props.input && !!props.input.value && {value: props.input.value} || null,
+        selectedValue: !!props.input && !!props.input.value && { value: props.input.value } || null,
         error: !!props.meta && !!props.meta.error,
-        itemToString: (item) => !!item && String(item.value) || ''
+        itemToString: (item) => !!item && String(item.value) || '',
     };
 };
 
 const mapDispatchToProps = (dispatch) => (
     {
-        loadSuggestions: (searchKey, searchQuery = ' ') => dispatch(actions.loadSearchKeyList(searchKey, searchQuery))
+        loadSuggestions: (searchKey, searchQuery = ' ') => dispatch(actions.loadSearchKeyList(searchKey, searchQuery)),
     }
 );
 

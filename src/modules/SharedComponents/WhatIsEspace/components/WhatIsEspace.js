@@ -1,11 +1,11 @@
-import React, {PureComponent} from 'react';
+import React, { PureComponent } from 'react';
 
-import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
-import {ExternalLink} from 'modules/SharedComponents/ExternalLink';
+import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
+import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import Typography from '@material-ui/core/Typography';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-import {locale} from 'locale';
+import { locale } from 'locale';
 
 export default class WhatIsEspace extends PureComponent {
     render() {

@@ -1,7 +1,7 @@
-import React, {Component, Fragment} from 'react';
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
-import {ExternalLink} from 'modules/SharedComponents/ExternalLink';
-import {default as menuLocale} from 'locale/menu';
+import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
+import { default as menuLocale } from 'locale/menu';
 
 // MUI 1
 import List from '@material-ui/core/List';
@@ -14,7 +14,7 @@ import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import IconButton from '@material-ui/core/IconButton';
 import Button from '@material-ui/core/Button';
 import Drawer from '@material-ui/core/Drawer';
-import {withStyles} from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 
 const styles = theme => {
     return {
@@ -24,11 +24,11 @@ const styles = theme => {
         docked: {
             '& $paper': {
                 '-webkit-box-shadow': '5px 0 5px -2px rgba(0,0,0,0.15)',
-                'box-shadow': '5px 0 5px -2px rgba(0,0,0,0.15)'
-            }
+                'box-shadow': '5px 0 5px -2px rgba(0,0,0,0.15)',
+            },
         },
         paperAnchorDockedLeft: {
-            border: 'none'
+            border: 'none',
         },
         header: {
             backgroundColor: theme.palette.primary.main,
@@ -36,8 +36,8 @@ const styles = theme => {
             boxShadow: '0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12)',
             textAlign: 'center',
             '& img': {
-                maxHeight: '45px'
-            }
+                maxHeight: '45px',
+            },
         },
         skipNav: {
             width: '100%',
@@ -59,18 +59,18 @@ const styles = theme => {
                 width: '160px',
                 whiteSpace: 'normal',
                 overflow: 'visible',
-                zIndex: 999
-            }
+                zIndex: 999,
+            },
         },
         mainMenu: {
             outline: 'none',
             flexGrow: 1,
-            paddingTop: 0
+            paddingTop: 0,
         },
         ListItemTextPrimary: {
             ...theme.typography.body2,
             whiteSpace: 'nowrap',
-            fontWeight: theme.typography.fontWeightMedium
+            fontWeight: theme.typography.fontWeightMedium,
         },
         ListItemTextSecondary: {
             ...theme.typography.caption,
@@ -79,11 +79,11 @@ const styles = theme => {
             paddingLeft: '12px',
             paddingBottom: '12px',
             fontSize: theme.typography.caption.fontSize,
-            color: theme.palette.secondary.main
+            color: theme.palette.secondary.main,
         },
         iconButton: {
-            color: theme.palette.white.main
-        }
+            color: theme.palette.white.main,
+        },
     };
 };
 
@@ -100,19 +100,19 @@ export class MenuDrawer extends Component {
         locale: PropTypes.shape({
             skipNavTitle: PropTypes.string,
             skipNavAriaLabel: PropTypes.string,
-            closeMenuLabel: PropTypes.string
+            closeMenuLabel: PropTypes.string,
         }),
         classes: PropTypes.object,
-        hasIncompleteWorks: PropTypes.bool
+        hasIncompleteWorks: PropTypes.bool,
     };
 
     shouldComponentUpdate(nextProps) {
-        return nextProps.logoImage !== this.props.logoImage
-        || nextProps.logoText !== this.props.logoText
-        || nextProps.drawerOpen !== this.props.drawerOpen
-        || JSON.stringify(nextProps.locale) !== JSON.stringify(this.props.locale)
-        || JSON.stringify(nextProps.menuItems) !== JSON.stringify(this.props.menuItems)
-        || nextProps.docked !== this.props.docked;
+        return nextProps.logoImage !== this.props.logoImage ||
+        nextProps.logoText !== this.props.logoText ||
+        nextProps.drawerOpen !== this.props.drawerOpen ||
+        JSON.stringify(nextProps.locale) !== JSON.stringify(this.props.locale) ||
+        JSON.stringify(nextProps.menuItems) !== JSON.stringify(this.props.menuItems) ||
+        nextProps.docked !== this.props.docked;
     }
 
     focusOnElementId = (elementId) => {
@@ -151,7 +151,7 @@ export class MenuDrawer extends Component {
                         onClick={this.navigateToLink.bind(this, menuItem.linkTo, menuItem.target)} >
                         <ListItemText classes={{
                             primary: this.props.classes.ListItemTextPrimary,
-                            secondary: this.props.classes.ListItemTextSecondary
+                            secondary: this.props.classes.ListItemTextSecondary,
                         }}
                         primary={menuItem.primaryText}
                         secondary={menuItem.secondaryText}/>
@@ -160,9 +160,9 @@ export class MenuDrawer extends Component {
         )));
 
     render() {
-        const {classes} = this.props;
+        const { classes } = this.props;
         const txt = menuLocale.footer;
-        const {menuItems, onToggleDrawer, drawerOpen, docked, logoImage, logoText, logoLink, locale } = this.props;
+        const { menuItems, onToggleDrawer, drawerOpen, docked, logoImage, logoText, logoLink, locale } = this.props;
         if (drawerOpen && !docked) {
             // set focus on menu on mobile view if menu is opened
             setTimeout(this.focusOnElementId.bind(this, 'mainMenu'), 0);
@@ -172,7 +172,7 @@ export class MenuDrawer extends Component {
                 classes={{
                     docked: classes.docked,
                     paper: classes.paper,
-                    paperAnchorDockedLeft: classes.paperAnchorDockedLeft
+                    paperAnchorDockedLeft: classes.paperAnchorDockedLeft,
                 }}
                 variant={docked ? 'permanent' : 'temporary'}
                 open={drawerOpen}
@@ -182,7 +182,7 @@ export class MenuDrawer extends Component {
                     drawerOpen &&
                     <Fragment>
                         <List component="nav" id="mainMenu" className={classes.mainMenu} tabIndex={-1}>
-                            <Grid container spacing={0} wrap={'nowrap'} alignContent={'center'} alignItems={'center'} classes={{container: classes.header}}>
+                            <Grid container spacing={0} wrap={'nowrap'} alignContent={'center'} alignItems={'center'} classes={{ container: classes.header }}>
                                 <Grid item xs={10} sm={12} zeroMinWidth>
                                     {logoImage && logoLink && logoText &&
                                     <ExternalLink
@@ -191,7 +191,7 @@ export class MenuDrawer extends Component {
                                         openInNewIcon={false}
                                         className="noHover"
                                     >
-                                        <div className={logoImage} style={{height: 50, width: 160, margin: '8px auto'}} >
+                                        <div className={logoImage} style={{ height: 50, width: 160, margin: '8px auto' }} >
                                             {logoText}
                                         </div>
                                     </ExternalLink>
@@ -240,4 +240,4 @@ export class MenuDrawer extends Component {
     }
 }
 
-export default withStyles(styles, {withTheme: true})(MenuDrawer);
+export default withStyles(styles, { withTheme: true })(MenuDrawer);

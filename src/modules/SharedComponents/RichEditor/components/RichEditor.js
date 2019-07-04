@@ -1,4 +1,4 @@
-import React, {PureComponent} from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
 import 'ckeditor';
@@ -16,7 +16,7 @@ export default class RichEditor extends PureComponent {
         instructions: PropTypes.any,
         title: PropTypes.any,
         description: PropTypes.any,
-        inputRef: PropTypes.object
+        inputRef: PropTypes.object,
     };
 
     static defaultProps = {
@@ -33,7 +33,7 @@ export default class RichEditor extends PureComponent {
             {
                 removeButtons: 'Cut,Copy,Paste,Undo,Redo,Anchor',
                 height: this.props.height,
-                pasteFilter: 'semantic-content'
+                pasteFilter: 'semantic-content',
             },
             !!this.props.value && this.props.value.get('htmlText') || null
         );
@@ -53,11 +53,13 @@ export default class RichEditor extends PureComponent {
     };
 
     onChange = (evt) => {
-        const textValue = evt.editor.document.getBody().getText().trim();
+        const textValue = evt.editor.document.getBody().getText()
+            .trim();
         this.props.onChange(textValue.length > 0
             ? {
                 htmlText: evt.editor.getData(),
-                plainText: evt.editor.document.getBody().getText().trim()
+                plainText: evt.editor.document.getBody().getText()
+                    .trim(),
             }
             : null);
     };
@@ -69,7 +71,7 @@ export default class RichEditor extends PureComponent {
             error = !!this.props.meta.error.props && React.Children.map(this.props.meta.error.props.children, (child, index) => {
                 if (child.type) {
                     return React.cloneElement(child, {
-                        key: index
+                        key: index,
                     });
                 } else {
                     return child;
@@ -96,7 +98,7 @@ export default class RichEditor extends PureComponent {
                             variant="caption"
                             component={'span'}
                             style={{
-                                display: 'inline-block'
+                                display: 'inline-block',
                             }}
                         >
                             {
@@ -113,7 +115,7 @@ export default class RichEditor extends PureComponent {
                     <Typography
                         component={'span'}
                         style={{
-                            display: 'inline-block'
+                            display: 'inline-block',
                         }}
                         variant="caption"
                         color={

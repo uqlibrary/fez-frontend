@@ -1,1 +1,1 @@
-export {default as SelectField} from './components/SelectField';
+export { default as SelectField } from './components/SelectField';

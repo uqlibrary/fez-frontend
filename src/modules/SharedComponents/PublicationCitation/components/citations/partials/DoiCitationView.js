@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {locale} from 'locale';
-import {ExternalLink} from 'modules/SharedComponents/ExternalLink';
+import { locale } from 'locale';
+import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 
-const DoiCitationView = ({doi, hideDoiLink}) => {
+const DoiCitationView = ({ doi, hideDoiLink }) => {
     if (!doi) return (<span className="citationDOI empty"/>);
     const txt = locale.global.doiCitationLink;
     const doiLink = txt.externalUrl.replace('[id]', doi);
@@ -25,7 +25,7 @@ const DoiCitationView = ({doi, hideDoiLink}) => {
 
 DoiCitationView.propTypes = {
     doi: PropTypes.string,
-    hideDoiLink: PropTypes.bool
+    hideDoiLink: PropTypes.bool,
 };
 
 export default DoiCitationView;

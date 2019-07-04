@@ -1,4 +1,4 @@
-import {accounts, currentAuthor, authorDetails} from 'mock/data/account';
+import { accounts, currentAuthor, authorDetails } from 'mock/data/account';
 
 import * as actions from './actionTypes';
 import * as repositories from 'repositories';
@@ -21,13 +21,13 @@ describe('Account action creators', () => {
         mockSessionApi.reset();
     });
 
-    it('should dispatch expected actions on successful fetch of user details', async () => {
+    it('should dispatch expected actions on successful fetch of user details', async() => {
         mockApi
             .onGet(repositories.routes.CURRENT_ACCOUNT_API().apiUrl)
             .reply(200, accounts.uqresearcher)
             .onGet(repositories.routes.CURRENT_AUTHOR_API().apiUrl)
             .reply(200, currentAuthor.uqresearcher)
-            .onGet(repositories.routes.AUTHOR_DETAILS_API({userId: accounts.uqresearcher.id}).apiUrl)
+            .onGet(repositories.routes.AUTHOR_DETAILS_API({ userId: accounts.uqresearcher.id }).apiUrl)
             .reply(200, authorDetails.uqresearcher);
 
         const expectedActions = [
@@ -36,20 +36,20 @@ describe('Account action creators', () => {
             actions.CURRENT_AUTHOR_LOADING,
             actions.CURRENT_AUTHOR_LOADED,
             actions.CURRENT_AUTHOR_DETAILS_LOADING,
-            actions.CURRENT_AUTHOR_DETAILS_LOADED
+            actions.CURRENT_AUTHOR_DETAILS_LOADED,
         ];
 
         await mockActionsStore.dispatch(accountActions.loadCurrentAccount());
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
-    it('should use student username to get author details when org username not set', async () => {
+    it('should use student username to get author details when org username not set', async() => {
         mockApi
             .onGet(repositories.routes.CURRENT_ACCOUNT_API().apiUrl)
             .reply(200, accounts.uqresearcher)
             .onGet(repositories.routes.CURRENT_AUTHOR_API().apiUrl)
             .reply(200, currentAuthor.s2222222)
-            .onGet(repositories.routes.AUTHOR_DETAILS_API({userId: accounts.s2222222.id}).apiUrl)
+            .onGet(repositories.routes.AUTHOR_DETAILS_API({ userId: accounts.s2222222.id }).apiUrl)
             .reply(200, authorDetails.s2222222);
 
         const expectedActions = [
@@ -58,14 +58,14 @@ describe('Account action creators', () => {
             actions.CURRENT_AUTHOR_LOADING,
             actions.CURRENT_AUTHOR_LOADED,
             actions.CURRENT_AUTHOR_DETAILS_LOADING,
-            actions.CURRENT_AUTHOR_DETAILS_LOADED
+            actions.CURRENT_AUTHOR_DETAILS_LOADED,
         ];
 
         const test = await mockActionsStore.dispatch(accountActions.loadCurrentAccount());
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
-    it('should dispatch expected actions if author returns 404', async () => {
+    it('should dispatch expected actions if author returns 404', async() => {
         mockApi
             .onGet(repositories.routes.CURRENT_ACCOUNT_API().apiUrl)
             .reply(200, accounts.uqstaff)
@@ -77,14 +77,14 @@ describe('Account action creators', () => {
             actions.CURRENT_ACCOUNT_LOADED,
             actions.CURRENT_AUTHOR_LOADING,
             actions.CURRENT_AUTHOR_FAILED,
-            actions.CURRENT_AUTHOR_DETAILS_FAILED
+            actions.CURRENT_AUTHOR_DETAILS_FAILED,
         ];
 
         await mockActionsStore.dispatch(accountActions.loadCurrentAccount());
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
-    it('should dispatch expected actions if author returns 403', async () => {
+    it('should dispatch expected actions if author returns 403', async() => {
         mockApi
             .onGet(repositories.routes.CURRENT_ACCOUNT_API().apiUrl)
             .reply(200, accounts.uqstaff)
@@ -97,14 +97,14 @@ describe('Account action creators', () => {
             actions.CURRENT_AUTHOR_LOADING,
             actions.CURRENT_ACCOUNT_ANONYMOUS,
             actions.CURRENT_AUTHOR_FAILED,
-            actions.CURRENT_AUTHOR_DETAILS_FAILED
+            actions.CURRENT_AUTHOR_DETAILS_FAILED,
         ];
 
         await mockActionsStore.dispatch(accountActions.loadCurrentAccount());
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
-    it('should dispatch expected actions if account session expired', async () => {
+    it('should dispatch expected actions if account session expired', async() => {
         mockApi
             .onGet(repositories.routes.CURRENT_ACCOUNT_API().apiUrl)
             .reply(200, accounts.uqexpired);
@@ -113,16 +113,16 @@ describe('Account action creators', () => {
             actions.CURRENT_ACCOUNT_LOADING,
             actions.CURRENT_ACCOUNT_ANONYMOUS,
             actions.CURRENT_AUTHOR_FAILED,
-            actions.CURRENT_AUTHOR_DETAILS_FAILED
+            actions.CURRENT_AUTHOR_DETAILS_FAILED,
         ];
 
         await mockActionsStore.dispatch(accountActions.loadCurrentAccount());
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
-    it('should dispatch expected actions if account, author loaded, but author details failed via loadCurrentAccount()', async () => {
+    it('should dispatch expected actions if account, author loaded, but author details failed via loadCurrentAccount()', async() => {
         process.env = {
-            ENABLE_LOG: true
+            ENABLE_LOG: true,
         };
 
         mockApi
@@ -139,7 +139,7 @@ describe('Account action creators', () => {
             actions.CURRENT_AUTHOR_LOADING,
             actions.CURRENT_AUTHOR_LOADED,
             actions.CURRENT_AUTHOR_DETAILS_LOADING,
-            actions.CURRENT_AUTHOR_DETAILS_FAILED
+            actions.CURRENT_AUTHOR_DETAILS_FAILED,
         ];
 
         await mockActionsStore.dispatch(accountActions.loadCurrentAccount());
@@ -152,19 +152,19 @@ describe('Account action creators', () => {
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
-    it('should dispatch expected action for google and other bots', async () => {
+    it('should dispatch expected action for google and other bots', async() => {
         global.navigator.__defineGetter__('userAgent', function() {
-            return 'Googlebot' // customized user agent
+            return 'Googlebot'; // customized user agent
         });
 
         const expectedActions = [
-            actions.CURRENT_ACCOUNT_ANONYMOUS
+            actions.CURRENT_ACCOUNT_ANONYMOUS,
         ];
         await mockActionsStore.dispatch(accountActions.loadCurrentAccount());
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
-    it('should check session and dispatch session valid action', async () => {
+    it('should check session and dispatch session valid action', async() => {
         mockSessionApi
             .onGet(repositories.routes.CURRENT_ACCOUNT_API().apiUrl)
             .reply(200, accounts.uqresearcher)
@@ -179,7 +179,7 @@ describe('Account action creators', () => {
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
-    it('should check session and dispatch session expired action', async () => {
+    it('should check session and dispatch session expired action', async() => {
         mockSessionApi
             .onGet(repositories.routes.CURRENT_ACCOUNT_API().apiUrl)
             .reply(403, {});
@@ -192,7 +192,7 @@ describe('Account action creators', () => {
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
-    it('should dispatch clear session expire action', async () => {
+    it('should dispatch clear session expire action', async() => {
         const expectedActions = [
             actions.CLEAR_CURRENT_ACCOUNT_SESSION_FLAG,
         ];

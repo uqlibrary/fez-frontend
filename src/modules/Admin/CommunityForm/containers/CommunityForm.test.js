@@ -2,7 +2,7 @@ import CommunityForm from './CommunityForm';
 
 function setup(testProps, isShallow = true) {
     const props = {
-        ...testProps
+        ...testProps,
     };
 
     return getElement(CommunityForm, props, isShallow);

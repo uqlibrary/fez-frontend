@@ -1,5 +1,5 @@
 import React from 'react';
-import {PropTypes} from 'prop-types';
+import { PropTypes } from 'prop-types';
 import Chart from './Chart';
 
 class AuthorsPublicationsPerYearChart extends React.Component {
@@ -7,13 +7,13 @@ class AuthorsPublicationsPerYearChart extends React.Component {
         yAxisTitle: PropTypes.string,
         series: PropTypes.array,
         categories: PropTypes.array,
-        className: PropTypes.string
+        className: PropTypes.string,
     };
 
     static defaultProps = {
         yAxisTitle: 'Total publications',
         series: [],
-        categories: []
+        categories: [],
     };
 
     constructor(props) {
@@ -21,33 +21,33 @@ class AuthorsPublicationsPerYearChart extends React.Component {
         this.state = {
             options: {
                 title: {
-                    text: null
+                    text: null,
                 },
                 chart: {
                     type: 'column',
                     height: 320,
-                    backgroundColor: 'transparent'
+                    backgroundColor: 'transparent',
                 },
                 plotOptions: {
                     column: {
-                        stacking: 'normal'
-                    }
+                        stacking: 'normal',
+                    },
                 },
                 xAxis: {
                     categories: this.props.categories,
                     labels: {
                         rotation: -45,
-                        y: 18
-                    }
+                        y: 18,
+                    },
                 },
                 yAxis: {
                     min: 0,
                     title: {
-                        text: this.props.yAxisTitle
+                        text: this.props.yAxisTitle,
                     },
                     stackLabels: {
-                        enabled: true
-                    }
+                        enabled: true,
+                    },
                 },
                 legend: {
                     align: 'right',
@@ -66,10 +66,10 @@ class AuthorsPublicationsPerYearChart extends React.Component {
                         return extras.join('').length
                             ? `${name} (${extras.join(', <br />')})`
                             : name;
-                    }
+                    },
                 },
-                series: this.props.series
-            }
+                series: this.props.series,
+            },
         };
     }
 

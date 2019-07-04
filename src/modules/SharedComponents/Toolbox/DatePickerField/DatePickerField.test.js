@@ -15,15 +15,15 @@ describe('DatePickerField snapshots tests', () => {
                 onChange: jest.fn(),
             },
             meta: {
-                error: 'error text'
-            }
+                error: 'error text',
+            },
         });
         const tree = toJson(wrapper);
         expect(tree).toMatchSnapshot();
     });
 
     it('renders onchange when input not supplied', () => {
-        const wrapper = setup({ onChange: jest.fn()});
+        const wrapper = setup({ onChange: jest.fn() });
         const tree = toJson(wrapper);
         expect(tree).toMatchSnapshot();
     });

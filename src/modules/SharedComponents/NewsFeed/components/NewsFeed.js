@@ -1,32 +1,32 @@
-import React, {PureComponent} from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
-import {locale} from 'locale';
+import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
+import { locale } from 'locale';
 const moment = require('moment');
 const dompurify = require('dompurify');
 import ReactHtmlParser from 'react-html-parser';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import {withStyles} from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 
 const styles = theme => ({
     newsItem: {
         color: theme.palette.primary.main,
         '& .day': {
             fontSize: '1.7rem',
-            fontWeight: theme.typography.fontWeightMedium
+            fontWeight: theme.typography.fontWeightMedium,
         },
         '& .month': {
             textTransform: 'uppercase',
             ontWeight: theme.typography.fontWeightMedium,
-            fontSize: '1.1rem'
+            fontSize: '1.1rem',
         },
         '& .year': {
             fontSize: '0.9rem',
-            ontWeight: theme.typography.fontWeightMedium
-        }
-    }
+            ontWeight: theme.typography.fontWeightMedium,
+        },
+    },
 });
 
 export class NewsFeed extends PureComponent {
@@ -35,13 +35,13 @@ export class NewsFeed extends PureComponent {
         loadingNewsFeedList: PropTypes.bool,
         showNewsCount: PropTypes.number,
         actions: PropTypes.object,
-        classes: PropTypes.object
+        classes: PropTypes.object,
     };
 
     static defaultProps = {
         newsFeedList: [],
         loadingNewsFeedList: true,
-        showNewsCount: 3
+        showNewsCount: 3,
     };
 
     componentDidMount() {
@@ -51,7 +51,7 @@ export class NewsFeed extends PureComponent {
     }
 
     render() {
-        const {classes} = this.props;
+        const { classes } = this.props;
         const txt = locale.components.newsFeed;
 
         if (this.props.loadingNewsFeedList || this.props.newsFeedList.length === 0) {
@@ -60,7 +60,7 @@ export class NewsFeed extends PureComponent {
 
         const allowedHtmlConfig = {
             ALLOWED_TAGS: ['p', 'strong', 'i', 'u', 's', 'strike', 'sup', 'sub', 'em', 'br', 'b', 'sup', 'sub'],
-            ALLOWED_ATTR: []
+            ALLOWED_ATTR: [],
         };
         const subNewsFeed = this.props.newsFeedList
             .slice(0,
@@ -73,7 +73,7 @@ export class NewsFeed extends PureComponent {
             <StandardCard title={txt.title} darkHeader>
                 {
                     !this.props.loadingNewsFeedList && subNewsFeed.map((newsItem, index) => (
-                        <div style={{padding: '8px 0px'}} key={index}>
+                        <div style={{ padding: '8px 0px' }} key={index}>
                             <Grid key={`newsItem-${index}`} container spacing={16} className={classes.newsItem}>
                                 <Grid item xs={'auto'}>
                                     <Grid container direction="column" alignItems="center" justify="center" alignContent="center" spacing={0}>
@@ -96,4 +96,4 @@ export class NewsFeed extends PureComponent {
     }
 }
 
-export default withStyles(styles, {withTheme: true})(NewsFeed);
+export default withStyles(styles, { withTheme: true })(NewsFeed);

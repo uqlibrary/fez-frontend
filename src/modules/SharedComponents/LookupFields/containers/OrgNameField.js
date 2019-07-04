@@ -1,5 +1,5 @@
-import {AutoCompleteAsyncField} from 'modules/SharedComponents/Toolbox/AutoSuggestField';
-import {connect} from 'react-redux';
+import { AutoCompleteAsyncField } from 'modules/SharedComponents/Toolbox/AutoSuggestField';
+import { connect } from 'react-redux';
 import * as actions from 'actions';
 
 const mapStateToProps = (state, props) => {
@@ -12,8 +12,8 @@ const mapStateToProps = (state, props) => {
         async: true,
         errorText: !!props.meta && props.meta.error || props.error && !!props.errorText && props.errorText || null,
         error: props.meta ? !!props.meta.error : props.error && !!props.errorText || null,
-        selectedValue: !!props.input && !!props.input.value && {value: props.input.value} || !!props.value && {value: props.value} || '',
-        itemToString: (item) => !!item && String(item.value) || ''
+        selectedValue: !!props.input && !!props.input.value && { value: props.input.value } || !!props.value && { value: props.value } || '',
+        itemToString: (item) => !!item && String(item.value) || '',
     };
 };
 
@@ -24,11 +24,11 @@ const mapDispatchToProps = (dispatch, props) => (
             if (!!props.input) {
                 props.input.onChange(value.value);
             } else if (typeof value === 'string') {
-                props.onChange({value});
+                props.onChange({ value });
             } else {
                 props.onChange(value);
             }
-        }
+        },
     }
 );
 

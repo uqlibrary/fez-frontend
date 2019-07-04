@@ -29,19 +29,19 @@ describe('Component NtroFields', () => {
     });
 
     it('should render contribution statement fields as well', () => {
-        const wrapper = setup({showContributionStatement: true});
+        const wrapper = setup({ showContributionStatement: true });
         const tree = toJson(wrapper);
         expect(tree).toMatchSnapshot();
     });
 
     it('should render all fields as disabled', () => {
-        const wrapper = setup({showContributionStatement: true, submitting: true});
+        const wrapper = setup({ showContributionStatement: true, submitting: true });
         const tree = toJson(wrapper);
         expect(tree).toMatchSnapshot();
     });
 
     it('should render with grants component hidden', () => {
-        const wrapper = setup({showContributionStatement: true, hideGrants: true});
+        const wrapper = setup({ showContributionStatement: true, hideGrants: true });
         const tree = toJson(wrapper);
         expect(tree).toMatchSnapshot();
     });
@@ -52,7 +52,7 @@ describe('Component NtroFields', () => {
         wrapper.setProps({
             hideVolume: true,
             hideStartPage: true,
-            hideAudienceSize: true
+            hideAudienceSize: true,
         });
         expect(componentWillReceiveProps).toHaveBeenCalled();
     });
@@ -67,11 +67,11 @@ describe('Component NtroFields', () => {
         const wrapper = setup({});
         const expected = wrapper.instance().transformIsrc({
             value: 'fez_test',
-            order: 'fez_test_order'
+            order: 'fez_test_order',
         }, 'ISRC TE-EST-23-12343', 1);
         expect(expected).toEqual({
             fez_test: 'TE-EST-23-12343',
-            fez_test_order: 2
+            fez_test_order: 2,
         });
     });
 
@@ -79,11 +79,11 @@ describe('Component NtroFields', () => {
         const wrapper = setup({});
         const expected = wrapper.instance().transformIsmn({
             value: 'fez_test',
-            order: 'fez_test_order'
+            order: 'fez_test_order',
         }, 'ISMN TE-EST-23-12343', 1);
         expect(expected).toEqual({
             fez_test: 'TE-EST-23-12343',
-            fez_test_order: 2
+            fez_test_order: 2,
         });
     });
 
@@ -91,7 +91,7 @@ describe('Component NtroFields', () => {
     it('should show significance field even if contribution field isnt empty', () => {
         const wrapper = setup({
             showContributionStatement: false,
-            showSignificance: true
+            showSignificance: true,
         });
         const tree = toJson(wrapper);
         expect(tree).toMatchSnapshot();
@@ -113,7 +113,7 @@ describe('Component NtroFields', () => {
             hideVolume: true,
             hideSeries: true,
             hideIsrc: true,
-            hideIsmn: true
+            hideIsmn: true,
         });
 
         expect(toJson(wrapper)).toMatchSnapshot();

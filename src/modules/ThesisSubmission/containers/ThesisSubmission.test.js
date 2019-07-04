@@ -2,7 +2,7 @@ import ThesisSubmission from './ThesisSubmission';
 
 function setup(testProps, isShallow = true) {
     const props = {
-        ...testProps
+        ...testProps,
     };
 
     return getElement(ThesisSubmission, props, isShallow);
@@ -11,7 +11,7 @@ function setup(testProps, isShallow = true) {
 describe('ThesisSubmission container', () => {
     it('should mount', () => {
         const wrapper = setup({
-            account: {}
+            account: {},
         }, false);
     });
 

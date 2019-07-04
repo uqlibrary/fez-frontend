@@ -1,6 +1,6 @@
-import React, {PureComponent, Fragment} from 'react';
+import React, { PureComponent, Fragment } from 'react';
 import PropTypes from 'prop-types';
-import {PublicationCitation} from 'modules/SharedComponents/PublicationCitation';
+import { PublicationCitation } from 'modules/SharedComponents/PublicationCitation';
 
 export default class PublicationsList extends PureComponent {
     static propTypes = {
@@ -26,7 +26,7 @@ export default class PublicationsList extends PureComponent {
         showSourceCountIcon: false,
         showMetrics: false,
         showUnpublishedBufferFields: false,
-        hideCountDiff: false
+        hideCountDiff: false,
     };
 
     renderPublicationCitation(index, publication) {

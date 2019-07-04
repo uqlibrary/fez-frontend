@@ -1,19 +1,19 @@
-import {connect} from 'react-redux';
-import {bindActionCreators} from 'redux';
-import {withRouter} from 'react-router-dom';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { withRouter } from 'react-router-dom';
 import * as actions from 'actions';
 
 import Orcid from '../components/Orcid';
 
 const mapStateToProps = (state) => (
     {
-        ...state.get('accountReducer')
+        ...state.get('accountReducer'),
     }
 );
 
 const mapDispatchToProps = (dispatch) => (
     {
-        actions: bindActionCreators(actions, dispatch)
+        actions: bindActionCreators(actions, dispatch),
     }
 );
 

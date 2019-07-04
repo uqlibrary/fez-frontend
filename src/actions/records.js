@@ -4,14 +4,14 @@ import {
     EXISTING_RECORD_API,
     RECORDS_ISSUES_API,
     NEW_COLLECTION_API,
-    NEW_COMMUNITY_API
+    NEW_COMMUNITY_API,
 } from 'repositories/routes';
 import { putUploadFiles } from 'repositories';
 import * as transformers from './transformers';
 import {
     NEW_RECORD_DEFAULT_VALUES,
     NEW_COLLECTION_DEFAULT_VALUES,
-    NEW_COMMUNITY_DEFAULT_VALUES
+    NEW_COMMUNITY_DEFAULT_VALUES,
 } from 'config/general';
 import * as actions from './actionTypes';
 
@@ -65,7 +65,7 @@ export function createNewRecord(data) {
             'qualityIndicators',
             'significance',
             'supervisors',
-            'contentIndicators'
+            'contentIndicators',
         ];
         keysToDelete.forEach(key => {
             delete recordRequest[key];
@@ -110,8 +110,8 @@ export function createNewRecord(data) {
                     type: actions.CREATE_RECORD_SUCCESS,
                     payload: {
                         newRecord: response.data ? response.data : newRecord,
-                        fileUploadOrIssueFailed: false
-                    }
+                        fileUploadOrIssueFailed: false,
+                    },
                 });
                 return Promise.resolve(response.data ? response.data : newRecord);
             })
@@ -122,8 +122,8 @@ export function createNewRecord(data) {
                         type: actions.CREATE_RECORD_SUCCESS,
                         payload: {
                             newRecord: newRecord,
-                            fileUploadOrIssueFailed: true
-                        }
+                            fileUploadOrIssueFailed: true,
+                        },
                     });
 
                     return Promise.resolve(newRecord);
@@ -131,7 +131,7 @@ export function createNewRecord(data) {
 
                 dispatch({
                     type: actions.CREATE_RECORD_FAILED,
-                    payload: error.message
+                    payload: error.message,
                 });
 
                 return Promise.reject(error);
@@ -231,7 +231,7 @@ export function submitThesis(data) {
             rek_title: data.thesisTitle.plainText,
             rek_formatted_title: data.thesisTitle.htmlText,
             rek_description: data.thesisAbstract.plainText,
-            rek_formatted_abstract: data.thesisAbstract.htmlText
+            rek_formatted_abstract: data.thesisAbstract.htmlText,
         };
 
         // delete extra form values from request object
@@ -282,8 +282,8 @@ export function submitThesis(data) {
                     type: actions.CREATE_RECORD_SUCCESS,
                     payload: {
                         newRecord: response.data ? response.data : newRecord,
-                        fileUploadOrIssueFailed: false
-                    }
+                        fileUploadOrIssueFailed: false,
+                    },
                 });
                 /* istanbul ignore next */
                 return Promise.resolve(response.data ? response.data : newRecord);
@@ -295,8 +295,8 @@ export function submitThesis(data) {
                         type: actions.CREATE_RECORD_SUCCESS,
                         payload: {
                             newRecord: newRecord,
-                            fileUploadOrIssueFailed: true
-                        }
+                            fileUploadOrIssueFailed: true,
+                        },
                     });
                     return post(
                         RECORDS_ISSUES_API({ pid: newRecord.rek_pid }),
@@ -312,7 +312,7 @@ export function submitThesis(data) {
 
                 dispatch({
                     type: actions.CREATE_RECORD_FAILED,
-                    payload: error.message
+                    payload: error.message,
                 });
                 return Promise.reject(error);
             });
@@ -336,8 +336,8 @@ export function createCollection(data, authorId) {
             fez_record_search_key_ismemberof: [
                 {
                     rek_ismemberof: data.fez_record_search_key_ismemberof,
-                    rek_ismemberof_order: 1
-                }
+                    rek_ismemberof_order: 1,
+                },
             ],
             rek_depositor: authorId,
         };
@@ -345,14 +345,14 @@ export function createCollection(data, authorId) {
             .then((response) => {
                 dispatch({
                     type: actions.CREATE_COLLECTION_SUCCESS,
-                    payload: response.data
+                    payload: response.data,
                 });
                 return Promise.resolve(response.data);
             })
             .catch(error => {
                 dispatch({
                     type: actions.CREATE_COLLECTION_FAILED,
-                    payload: error.message
+                    payload: error.message,
                 });
 
                 return Promise.reject(error);
@@ -379,14 +379,14 @@ export function createCommunity(data, authorId) {
             .then((response) => {
                 dispatch({
                     type: actions.CREATE_COMMUNITY_SUCCESS,
-                    payload: response.data
+                    payload: response.data,
                 });
                 return Promise.resolve(response.data);
             })
             .catch(error => {
                 dispatch({
                     type: actions.CREATE_COMMUNITY_FAILED,
-                    payload: error.message
+                    payload: error.message,
                 });
 
                 return Promise.reject(error);
@@ -402,7 +402,7 @@ export function createCommunity(data, authorId) {
 export function clearNewRecord() {
     return dispatch => {
         dispatch({
-            type: actions.CREATE_RECORD_RESET
+            type: actions.CREATE_RECORD_RESET,
         });
     };
 }

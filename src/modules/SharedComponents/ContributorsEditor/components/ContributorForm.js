@@ -14,7 +14,7 @@ import * as actions from 'actions/authors';
 import OrgAffiliationTypeSelector from './OrgAffiliationTypeSelector';
 import NonUqOrgAffiliationFormSection from './NonUqOrgAffiliationFormSection';
 
-import {DATA_COLLECTION_CREATOR_ROLES, ORG_TYPE_ID_UNIVERSITY} from 'config/general';
+import { DATA_COLLECTION_CREATOR_ROLES, ORG_TYPE_ID_UNIVERSITY } from 'config/general';
 import locale from 'locale/global';
 
 export class ContributorForm extends PureComponent {
@@ -33,7 +33,7 @@ export class ContributorForm extends PureComponent {
         isContributorAssigned: PropTypes.bool,
         contributor: PropTypes.object,
         disableNameAsPublished: PropTypes.bool,
-        enableUqIdentifierOnAffiliationChange: PropTypes.bool
+        enableUqIdentifierOnAffiliationChange: PropTypes.bool,
     };
 
     static defaultProps = {
@@ -58,11 +58,11 @@ export class ContributorForm extends PureComponent {
                     Please <b>add to a list of contributors below</b>,
                     in the format and order that they are published.
                 </div>
-            )
+            ),
         },
         showIdentifierLookup: false,
         disableNameAsPublished: false,
-        enableUqIdentifierOnAffiliationChange: true
+        enableUqIdentifierOnAffiliationChange: true,
     };
 
     constructor(props) {
@@ -90,7 +90,7 @@ export class ContributorForm extends PureComponent {
             orgaff: '',
             orgtype: '',
             affiliation: '',
-            ...props.contributor
+            ...props.contributor,
         },
         showIdentifierLookup: props.showIdentifierLookup,
     });
@@ -121,7 +121,7 @@ export class ContributorForm extends PureComponent {
         this.props.onSubmit({
             ...contributor,
             orgtype: contributor.affiliation === 'UQ' && ORG_TYPE_ID_UNIVERSITY || contributor.orgtype,
-            orgaff: contributor.affiliation === 'UQ' && locale.global.orgTitle || contributor.orgaff
+            orgaff: contributor.affiliation === 'UQ' && locale.global.orgTitle || contributor.orgaff,
         });
 
         // reset internal state
@@ -134,9 +134,9 @@ export class ContributorForm extends PureComponent {
             ...prevState,
             contributor: {
                 ...prevState.contributor,
-                nameAsPublished
+                nameAsPublished,
             },
-            clearRoleInput: true
+            clearRoleInput: true,
         }));
     };
 
@@ -145,9 +145,9 @@ export class ContributorForm extends PureComponent {
             ...prevState,
             contributor: {
                 ...prevState.contributor,
-                creatorRole: value
+                creatorRole: value,
             },
-            clearRoleInput: DATA_COLLECTION_CREATOR_ROLES.some(role => role.value === value)
+            clearRoleInput: DATA_COLLECTION_CREATOR_ROLES.some(role => role.value === value),
         }), () => {
             this.state.contributor.nameAsPublished.trim().length !== 0 &&
             DATA_COLLECTION_CREATOR_ROLES.some(role => role.value === value) &&
@@ -161,8 +161,8 @@ export class ContributorForm extends PureComponent {
             contributor: {
                 ...prevState.contributor,
                 uqIdentifier: `${selectedItem.aut_id}`,
-                ...selectedItem
-            }
+                ...selectedItem,
+            },
         }), () => {
             this._onSubmit();
         });
@@ -174,8 +174,8 @@ export class ContributorForm extends PureComponent {
             ...prevState,
             contributor: {
                 ...prevState.contributor,
-                affiliation
-            }
+                affiliation,
+            },
         }));
     };
 
@@ -185,8 +185,8 @@ export class ContributorForm extends PureComponent {
             ...prevState,
             contributor: {
                 ...prevState.contributor,
-                orgaff
-            }
+                orgaff,
+            },
         }));
     };
 
@@ -197,7 +197,7 @@ export class ContributorForm extends PureComponent {
             contributor: {
                 ...prevState.contributor,
                 orgtype,
-            }
+            },
         }));
     };
 
@@ -338,13 +338,13 @@ export const mapStateToProps = (state) => {
     return {
         authorsList: state && state.get('authorsReducer')
             ? state.get('authorsReducer').authorsList
-            : []
+            : [],
     };
 };
 
 function mapDispatchToProps(dispatch) {
     return {
-        actions: bindActionCreators(actions, dispatch)
+        actions: bindActionCreators(actions, dispatch),
     };
 }
 

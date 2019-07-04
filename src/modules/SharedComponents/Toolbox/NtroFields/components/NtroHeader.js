@@ -1,6 +1,6 @@
 import React from 'react';
-import {default as componentLocale} from 'locale/components';
-import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
+import { default as componentLocale } from 'locale/components';
+import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import Grid from '@material-ui/core/Grid';
 
 const NtroHeader = ({}) => {

@@ -10,15 +10,15 @@ import { withStyles } from '@material-ui/core/styles';
 
 const styles = (theme) => ({
     statsLink: {
-        ...theme.typography.caption
-    }
+        ...theme.typography.caption,
+    },
 });
 
 export class CitationCounts extends PureComponent {
     static propTypes = {
         publication: PropTypes.object.isRequired,
         hideViewFullStatisticsLink: PropTypes.bool,
-        classes: PropTypes.object
+        classes: PropTypes.object,
     };
 
     getTitle = (title) => (locale.components.publicationCitation.linkWillOpenInNewWindow.replace('[destination]', title));
@@ -29,13 +29,13 @@ export class CitationCounts extends PureComponent {
         const {
             publication,
             hideViewFullStatisticsLink,
-            classes
+            classes,
         } = this.props;
         const counts = {
             wos: publication.hasOwnProperty('rek_thomson_citation_count') ? publication.rek_thomson_citation_count : null,
             scopus: publication.hasOwnProperty('rek_scopus_citation_count') ? publication.rek_scopus_citation_count : null,
             google: publication.hasOwnProperty('rek_gs_citation_count') ? publication.rek_gs_citation_count : null,
-            altmetric: publication.hasOwnProperty('rek_altmetric_score') ? publication.rek_altmetric_score : null
+            altmetric: publication.hasOwnProperty('rek_altmetric_score') ? publication.rek_altmetric_score : null,
         };
 
         return (

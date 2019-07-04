@@ -1,6 +1,6 @@
-import React, {PureComponent, Fragment} from 'react';
+import React, { PureComponent, Fragment } from 'react';
 import PropTypes from 'prop-types';
-import {ConfirmDialogBox} from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
+import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import IconButton from '@material-ui/core/IconButton';
 import Tooltip from '@material-ui/core/Tooltip';
 import Hidden from '@material-ui/core/Hidden';
@@ -10,7 +10,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
 import DeleteForever from '@material-ui/icons/DeleteForever';
 import People from '@material-ui/icons/People';
-import {withStyles} from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 
 export class ContributorRowHeader extends PureComponent {
     static propTypes = {
@@ -35,7 +35,7 @@ export class ContributorRowHeader extends PureComponent {
                 confirmationTitle: 'Delete all',
                 confirmationMessage: 'Are you sure you want to delete all records?',
                 cancelButtonLabel: 'No',
-                confirmButtonLabel: 'Yes'
+                confirmButtonLabel: 'Yes',
             },
             descriptionStep2: 'Step 2 - Select your name from the list below',
             identifierColumn: 'UQ identifier',
@@ -89,39 +89,39 @@ export class ContributorRowHeader extends PureComponent {
                         {descriptionStep2}
                     </Fragment>
                 }
-                <ListItem classes={{root: classes.header}}>
+                <ListItem classes={{ root: classes.header }}>
                     <Hidden xsDown>
                         <ListItemIcon>
                             <People/>
                         </ListItemIcon>
                     </Hidden>
-                    <ListItemText secondary={nameColumn} secondaryTypographyProps={{variant: 'caption'}}/>
+                    <ListItemText secondary={nameColumn} secondaryTypographyProps={{ variant: 'caption' }}/>
                     {
                         showIdentifierLookup &&
                         <Hidden xsDown>
-                            <ListItemText secondary={identifierColumn} secondaryTypographyProps={{variant: 'caption'}}/>
+                            <ListItemText secondary={identifierColumn} secondaryTypographyProps={{ variant: 'caption' }}/>
                         </Hidden>
                     }
                     {
                         showRoleInput &&
                         <Hidden xsDown>
-                            <ListItemText secondary={roleColumn} secondaryTypographyProps={{variant: 'caption'}}/>
+                            <ListItemText secondary={roleColumn} secondaryTypographyProps={{ variant: 'caption' }}/>
                         </Hidden>
                     }
                     <Hidden xsDown>
                         <ListItemText
                             secondary={reorderColumn}
-                            secondaryTypographyProps={{variant: 'caption'}}
+                            secondaryTypographyProps={{ variant: 'caption' }}
                             classes={{
                                 secondary: `${classes.right} ${
                                     isInfinite
                                         ? classes.paddingRight36
                                         : classes.paddingRight24
-                                }`
+                                }`,
                             }}
                         />
                     </Hidden>
-                    <ListItemSecondaryAction classes={{root: isInfinite ? classes.paddingRight14 : ''}}>
+                    <ListItemSecondaryAction classes={{ root: isInfinite ? classes.paddingRight14 : '' }}>
                         <Tooltip title={deleteAll}
                             disableFocusListener={disabled || hideDelete}
                             disableHoverListener={disabled || hideDelete}
@@ -146,21 +146,21 @@ export class ContributorRowHeader extends PureComponent {
 
 export const styles = () => ({
     right: {
-        textAlign: 'right'
+        textAlign: 'right',
     },
     header: {
         borderBottom: '1px solid rgba(0, 0, 0, 0.2)',
-        marginTop: 8
+        marginTop: 8,
     },
     paddingRight24: {
-        paddingRight: 24
+        paddingRight: 24,
     },
     paddingRight36: {
-        paddingRight: 36
+        paddingRight: 36,
     },
     paddingRight14: {
-        paddingRight: 14
-    }
+        paddingRight: 14,
+    },
 });
 
 export default withStyles(styles)(ContributorRowHeader);

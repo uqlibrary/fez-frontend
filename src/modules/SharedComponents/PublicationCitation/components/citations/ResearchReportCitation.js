@@ -1,11 +1,11 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import * as Partials from './partials';
 
 export default class ResearchReportCitation extends Component {
     static propTypes = {
         publication: PropTypes.object.isRequired,
-        hideDoiLink: PropTypes.bool
+        hideDoiLink: PropTypes.bool,
     };
 
     constructor(props) {
@@ -16,14 +16,14 @@ export default class ResearchReportCitation extends Component {
         const record = {
             id: this.props.publication.rek_pid,
             title: this.props.publication.rek_title,
-            publisher: this.props.publication.fez_record_search_key_publisher ?
-                this.props.publication.fez_record_search_key_publisher.rek_publisher : null,
-            placeOfPublication: this.props.publication.fez_record_search_key_place_of_publication ?
-                this.props.publication.fez_record_search_key_place_of_publication.rek_place_of_publication : null,
-            doi: this.props.publication.fez_record_search_key_doi ?
-                this.props.publication.fez_record_search_key_doi.rek_doi : null,
-            series: this.props.publication.fez_record_search_key_series ?
-                this.props.publication.fez_record_search_key_series.rek_series : null
+            publisher: this.props.publication.fez_record_search_key_publisher
+                ? this.props.publication.fez_record_search_key_publisher.rek_publisher : null,
+            placeOfPublication: this.props.publication.fez_record_search_key_place_of_publication
+                ? this.props.publication.fez_record_search_key_place_of_publication.rek_place_of_publication : null,
+            doi: this.props.publication.fez_record_search_key_doi
+                ? this.props.publication.fez_record_search_key_doi.rek_doi : null,
+            series: this.props.publication.fez_record_search_key_series
+                ? this.props.publication.fez_record_search_key_series.rek_series : null,
         };
 
         // eSpace citation view for ResearchReport

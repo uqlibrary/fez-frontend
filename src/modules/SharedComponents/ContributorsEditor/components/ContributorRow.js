@@ -31,15 +31,15 @@ export const styles = (theme) => ({
         borderLeft: '5px solid transparent',
         cursor: 'pointer',
         width: '100%',
-        margin: '0'
+        margin: '0',
     },
     disabledListItem: {
         width: '100%',
         margin: '0',
         outline: 'none !important',
         '&:focus': {
-            outline: 'none !important'
-        }
+            outline: 'none !important',
+        },
     },
     highlighted: {
         borderLeft: '5px solid red',
@@ -83,7 +83,7 @@ export class ContributorRow extends PureComponent {
         onMoveUp: PropTypes.func,
         showContributorAssignment: PropTypes.bool,
         width: PropTypes.string,
-        required: PropTypes.bool
+        required: PropTypes.bool,
     };
 
     static defaultProps = {
@@ -98,13 +98,13 @@ export class ContributorRow extends PureComponent {
                 confirmationTitle: 'Delete record',
                 confirmationMessage: 'Are you sure you want to delete this record?',
                 cancelButtonLabel: 'No',
-                confirmButtonLabel: 'Yes'
+                confirmButtonLabel: 'Yes',
             },
-            deleteButtonId: (index) => `delete-record-${index}`
+            deleteButtonId: (index) => `delete-record-${index}`,
         },
         hideReorder: false,
         hideDelete: false,
-        required: false
+        required: false,
     };
 
     constructor(props) {
@@ -228,7 +228,7 @@ export class ContributorRow extends PureComponent {
             deleteHint,
             selectHint,
             lockedTooltip,
-            deleteButtonId
+            deleteButtonId,
         } = this.props.locale;
 
         const {
@@ -240,7 +240,7 @@ export class ContributorRow extends PureComponent {
             hideReorder,
             hideDelete,
             required,
-            index
+            index,
         } = this.props;
 
         const enableSelect = this.props.showContributorAssignment;
@@ -257,12 +257,11 @@ export class ContributorRow extends PureComponent {
                 return <Person/>;
             } else if (this.props.disabled || !enableSelect) {
                 return  (
-                    lockedTooltip ?
-                        <Tooltip title={lockedTooltip}>
+                    lockedTooltip
+                        ? <Tooltip title={lockedTooltip}>
                             <Lock/>
                         </Tooltip>
-                        :
-                        <Lock/>
+                        :                        <Lock/>
                 );
             } else {
                 return <PersonOutlined/>;

@@ -1,8 +1,8 @@
-import {journalArticle} from 'mock/data/testing/records';
-import {FileName} from './FileName';
+import { journalArticle } from 'mock/data/testing/records';
+import { FileName } from './FileName';
 
-function setup(testProps, isShallow = true){
-    const {previewFileName, ...rest} = testProps;
+function setup(testProps, isShallow = true) {
+    const { previewFileName, ...rest } = testProps;
     const props = {
         classes: {},
         pid: journalArticle.rek_pid,
@@ -12,7 +12,7 @@ function setup(testProps, isShallow = true){
         previewMediaUrl: !!previewFileName && `https://espace.library.uq.edu.au/view/UQ:676287/${previewFileName}` || '',
         onFileSelect: jest.fn(),
         allowDownload: false,
-        ...rest
+        ...rest,
     };
     return getElement(FileName, props, isShallow);
 }
@@ -27,27 +27,27 @@ describe('File Name Component ', () => {
     });
 
     it('should display file name link', () => {
-        const wrapper = setup({allowDownload: true, fileName: 'test.jpg', previewFileName: 'preview_test.jpg'}, false);
+        const wrapper = setup({ allowDownload: true, fileName: 'test.jpg', previewFileName: 'preview_test.jpg' }, false);
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('FileName').length).toEqual(1);
         expect(wrapper.find('FileName a').length).toEqual(1);
     });
 
     it('should render audio player', () => {
-        const wrapper = setup({allowDownload: true, mimeType: 'audio/mp3', fileName: 'test.mp3'}, false);
+        const wrapper = setup({ allowDownload: true, mimeType: 'audio/mp3', fileName: 'test.mp3' }, false);
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('FileName audio').length).toEqual(1);
     });
 
     it('should return canShowPreview as true for image/video files', () => {
-        let wrapper = setup({mimeType: 'image/jpeg'});
+        let wrapper = setup({ mimeType: 'image/jpeg' });
         expect(wrapper.instance().canShowPreview('image/jpeg')).toEqual(true);
         // TODO revert once videos are transcoded to open format #158519502
-        wrapper = setup({mimeType: 'video/mp4'});
+        wrapper = setup({ mimeType: 'video/mp4' });
         expect(wrapper.instance().canShowPreview('video/mp4')).toEqual(true);
-        wrapper = setup({mimeType: 'octet-stream'});
+        wrapper = setup({ mimeType: 'octet-stream' });
         expect(wrapper.instance().canShowPreview('octet-stream')).toEqual(false);
-        wrapper = setup({mimeType: 'some/text'});
+        wrapper = setup({ mimeType: 'some/text' });
         expect(wrapper.instance().canShowPreview('some/text')).toEqual(false);
     });
 
@@ -58,7 +58,7 @@ describe('File Name Component ', () => {
             mimeType: 'image/jpeg',
             fileName: 'test.jpg',
             previewFileName: 'preview_test.jpg',
-            onFileSelect: onFileSelect
+            onFileSelect: onFileSelect,
         }, false);
         const element = wrapper.find('FileName a');
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -73,7 +73,7 @@ describe('File Name Component ', () => {
             fileName: 'test.jpg',
             previewFileName: 'preview_test.jpg',
             mimeType: 'image/jpeg',
-            onFileSelect: onFileSelect
+            onFileSelect: onFileSelect,
         }, false);
         const element = wrapper.find('FileName a');
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -88,5 +88,4 @@ describe('File Name Component ', () => {
         const test2 = wrapper.instance().isVideo('audio/mp3');
         expect(test2).toBe(false);
     });
-
 });

@@ -1,10 +1,10 @@
 import React from 'react';
 import * as validation from './validation';
-import {accounts} from 'mock/data/account';
-import {locale} from 'locale';
-import {APP_URL} from 'config';
+import { accounts } from 'mock/data/account';
+import { locale } from 'locale';
+import { APP_URL } from 'config';
 import Immutable from 'immutable';
-import {MEDIATED_ACCESS_ID} from 'config/general';
+import { MEDIATED_ACCESS_ID } from 'config/general';
 
 describe('Validation method', () => {
     it('should validate required', () => {
@@ -62,7 +62,6 @@ describe('Validation method', () => {
 
         const testFailValue6 = validation.url('http://12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890');
         expect(testFailValue6).toEqual(locale.validationErrors.maxLength.replace('[max]', '2000'));
-
     });
 
     it('should validate Issn', () => {
@@ -111,15 +110,15 @@ describe('Validation method', () => {
 
     it('should validate person selected', () => {
         expect(validation.peopleRequired([], 'Error', true)).toEqual('Error');
-        expect(validation.peopleRequired([{name: 'First person'}], 'Error', true)).toEqual('Error');
-        expect(validation.peopleRequired([{name: 'First person', selected: true}], 'Error', true)).toBeFalsy();
+        expect(validation.peopleRequired([{ name: 'First person' }], 'Error', true)).toEqual('Error');
+        expect(validation.peopleRequired([{ name: 'First person', selected: true }], 'Error', true)).toBeFalsy();
         expect(validation.peopleRequired([], 'Error', false)).toEqual('Error');
-        expect(validation.peopleRequired([{name: 'First person'}], 'Error', false)).toBeFalsy();
+        expect(validation.peopleRequired([{ name: 'First person' }], 'Error', false)).toBeFalsy();
     });
 
     it('should validate author/contributor link', () => {
-        const contributorLinkValid = {"authors":[{"rek_contributor_id_id":null,"rek_contributor_id_pid":"UQ:641272","rek_contributor_id":410,"rek_contributor_id_order":1}],"valid":true};
-        const authorLinkValid = {"authors":[{"rek_contributor_id_id":null,"rek_contributor_id_pid":"UQ:641272","rek_contributor_id":410,"rek_contributor_id_order":1}],"valid":true};
+        const contributorLinkValid = { 'authors': [{ 'rek_contributor_id_id': null, 'rek_contributor_id_pid': 'UQ:641272', 'rek_contributor_id': 410, 'rek_contributor_id_order': 1 }], 'valid': true };
+        const authorLinkValid = { 'authors': [{ 'rek_contributor_id_id': null, 'rek_contributor_id_pid': 'UQ:641272', 'rek_contributor_id': 410, 'rek_contributor_id_order': 1 }], 'valid': true };
 
         expect(validation.isValidAuthorLink(authorLinkValid)).toEqual('');
         expect(validation.isValidAuthorLink('Invalid data')).toEqual(locale.validationErrors.authorLinking);
@@ -138,13 +137,13 @@ describe('Validation method', () => {
 
     it('should validate if the grants form is currently poplated', () => {
         expect(validation.grantFormIsPopulated(true)).toEqual(locale.validationErrors.grants);
-        expect(validation.grantFormIsPopulated({grantAgencyName: '', grantId: '', grantAgencyType: ''})).toEqual(undefined);
+        expect(validation.grantFormIsPopulated({ grantAgencyName: '', grantId: '', grantAgencyType: '' })).toEqual(undefined);
     });
 
     it('should conditionally validate file uploader based on open access value', () => {
         expect(validation.fileUploadNotRequiredForMediated(undefined, Immutable.Map({}))).toEqual(locale.validationErrors.fileUploadRequired);
         expect(validation.fileUploadNotRequiredForMediated(undefined, Immutable.Map({
-            fez_record_search_key_access_conditions: {rek_access_conditions: MEDIATED_ACCESS_ID}
+            fez_record_search_key_access_conditions: { rek_access_conditions: MEDIATED_ACCESS_ID },
         }))).toEqual(undefined);
     });
 });
@@ -154,29 +153,29 @@ describe('getErrorAlertProps ', () => {
         // dirty = false, submitting = false, error, formErrors, submitSucceeded = false, alertLocale = {}
         const testCases = [
             {
-                parameters: {dirty: true, error: 'oops', alertLocale: {errorAlert: {title: 'submitFailed' }}},
-                expected: 'submitFailed'
+                parameters: { dirty: true, error: 'oops', alertLocale: { errorAlert: { title: 'submitFailed' } } },
+                expected: 'submitFailed',
             },
             {
-                parameters: {dirty: true, formErrors: [{'rek_title': 'This field is required'}], alertLocale: {validationAlert: {title: 'validationFailed'}}},
-                expected: 'validationFailed'
+                parameters: { dirty: true, formErrors: [{ 'rek_title': 'This field is required' }], alertLocale: { validationAlert: { title: 'validationFailed' } } },
+                expected: 'validationFailed',
             },
             {
-                parameters: {submitFailed: true, dirty: true, formErrors: [{'rek_title': 'This field is required'}], alertLocale: {validationAlert: {title: 'validationFailed'}}},
-                expected: 'validationFailed'
+                parameters: { submitFailed: true, dirty: true, formErrors: [{ 'rek_title': 'This field is required' }], alertLocale: { validationAlert: { title: 'validationFailed' } } },
+                expected: 'validationFailed',
             },
             {
-                parameters: {submitting: true, alertLocale: {progressAlert: {title: 'submitting' }}},
-                expected: 'submitting'
+                parameters: { submitting: true, alertLocale: { progressAlert: { title: 'submitting' } } },
+                expected: 'submitting',
             },
             {
-                parameters: {submitSucceeded: true, alertLocale: {successAlert: {title: 'submitSucceeded' }}},
-                expected: 'submitSucceeded'
-            }
+                parameters: { submitSucceeded: true, alertLocale: { successAlert: { title: 'submitSucceeded' } } },
+                expected: 'submitSucceeded',
+            },
         ];
 
         testCases.forEach(testCase => {
-            const alertProps = validation.getErrorAlertProps({...testCase.parameters});
+            const alertProps = validation.getErrorAlertProps({ ...testCase.parameters });
             expect(alertProps.title).toEqual(testCase.expected);
         });
     });
@@ -184,13 +183,13 @@ describe('getErrorAlertProps ', () => {
     it('should return correct validation error summary', () => {
         const testCases = [
             {
-                parameters: {'rek_title': 'This field is required'},
-                expected: 'Title is required'
+                parameters: { 'rek_title': 'This field is required' },
+                expected: 'Title is required',
             },
             {
-                parameters: {'fez_record_search_key_journal_name': {'rek_journal_name': 'This field is required'}},
-                expected: 'Journal name is required'
-            }
+                parameters: { 'fez_record_search_key_journal_name': { 'rek_journal_name': 'This field is required' } },
+                expected: 'Journal name is required',
+            },
         ];
 
         testCases.forEach(testCase => {
@@ -199,8 +198,8 @@ describe('getErrorAlertProps ', () => {
         });
 
         const nonExistingFieldTestCase = {
-            parameters: {'some_nonexisting_field': 'This field is required'},
-            expected: null
+            parameters: { 'some_nonexisting_field': 'This field is required' },
+            expected: null,
         };
 
         const testMessage = validation.translateFormErrorsToText(nonExistingFieldTestCase.parameters);

@@ -7,7 +7,7 @@ import {
     POSSIBLE_RECORDS_API,
     HIDE_POSSIBLE_RECORD_API,
     NEW_RECORD_API,
-    RECORDS_ISSUES_API
+    RECORDS_ISSUES_API,
 } from 'repositories/routes';
 import { putUploadFiles } from 'repositories';
 
@@ -24,7 +24,7 @@ export function loadFullRecordToClaim(pid) {
             .then(response => {
                 dispatch({
                     type: actions.PUBLICATION_TO_CLAIM_LOADED,
-                    payload: response.data
+                    payload: response.data,
                 });
 
                 return Promise.resolve(response.data);
@@ -32,7 +32,7 @@ export function loadFullRecordToClaim(pid) {
             .catch(error => {
                 dispatch({
                     type: actions.PUBLICATION_TO_CLAIM_FAILED,
-                    payload: error.message
+                    payload: error.message,
                 });
             });
     };
@@ -48,7 +48,7 @@ export function searchPossiblyYourPublications({
     page = 1,
     pageSize = 20,
     sortBy = 'score',
-    sortDirection = 'Desc'
+    sortDirection = 'Desc',
 }) {
     return dispatch => {
         if (Object.keys(activeFacets).length === 0) {
@@ -57,7 +57,7 @@ export function searchPossiblyYourPublications({
 
         dispatch({
             type: actions.POSSIBLY_YOUR_PUBLICATIONS_LOADING,
-            payload: activeFacets
+            payload: activeFacets,
         });
         return get(POSSIBLE_RECORDS_API({
             facets: activeFacets,
@@ -74,26 +74,26 @@ export function searchPossiblyYourPublications({
 
                 dispatch({
                     type: actions.POSSIBLY_YOUR_PUBLICATIONS_FACETS_LOADED,
-                    payload: (response.filters || {}).facets || {}
+                    payload: (response.filters || {}).facets || {},
                 });
 
                 if (Object.keys(activeFacets).length === 0) {
                     // only update total count if there's no filtering
                     dispatch({
                         type: actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_LOADED,
-                        payload: response
+                        payload: response,
                     });
                 }
             })
             .catch(error => {
                 dispatch({
                     type: actions.POSSIBLY_YOUR_PUBLICATIONS_FAILED,
-                    payload: error.message
+                    payload: error.message,
                 });
 
                 dispatch({
                     type: actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_FAILED,
-                    payload: error.message
+                    payload: error.message,
                 });
             });
     };
@@ -122,14 +122,14 @@ export function hideRecord({ record, facets = {} }) {
         // POST records/search?rule=possible (with data: ['pid' => 'UQ:1', 'type' => 'H'])
         const data = {
             type: 'H',
-            pid: record.rek_pid
+            pid: record.rek_pid,
         };
 
         return post(HIDE_POSSIBLE_RECORD_API(), data)
             .then(() => {
                 dispatch({
                     type: actions.HIDE_PUBLICATIONS_LOADED,
-                    payload: { pid: record.rek_pid }
+                    payload: { pid: record.rek_pid },
                 });
 
                 // reload current possibly your publications/count after user hides records
@@ -139,7 +139,7 @@ export function hideRecord({ record, facets = {} }) {
                 // TODO: display error message to user that this operation failed (in PT)
                 dispatch({
                     type: actions.HIDE_PUBLICATIONS_FAILED,
-                    payload: error.message
+                    payload: error.message,
                 });
             });
     };
@@ -164,7 +164,7 @@ export function setClaimPublication(publication) {
     return dispatch => {
         dispatch({
             type: actions.PUBLICATION_TO_CLAIM_SET,
-            payload: publication
+            payload: publication,
         });
     };
 }
@@ -176,7 +176,7 @@ export function setClaimPublication(publication) {
 export function clearClaimPublication() {
     return dispatch => {
         dispatch({
-            type: actions.PUBLICATION_TO_CLAIM_CLEAR
+            type: actions.PUBLICATION_TO_CLAIM_CLEAR,
         });
     };
 }
@@ -212,7 +212,7 @@ export function claimPublication(data) {
         return dispatch => {
             dispatch({
                 type: actions.CLAIM_PUBLICATION_CREATE_FAILED,
-                payload: 'Current author has already been assigned to this publication.'
+                payload: 'Current author has already been assigned to this publication.',
             });
             return Promise.reject(new Error('Current author has already been assigned to this publication as an author or contributor.'));
         };
@@ -255,7 +255,7 @@ export function claimPublication(data) {
             ...transformers.getExternalSourceIdSearchKeys(data.publication.sources),
             ...transformers.getContentIndicatorSearchKey(data.contentIndicators || null),
             ...recordAuthorsIdSearchKeys,
-            ...recordContributorsIdSearchKeys
+            ...recordContributorsIdSearchKeys,
         } : null;
 
         // update record with author/contributor id, link, content indicators
@@ -263,12 +263,12 @@ export function claimPublication(data) {
             ...transformers.getRecordLinkSearchKey(data),
             ...transformers.getContentIndicatorSearchKey(data.contentIndicators || null),
             ...recordAuthorsIdSearchKeys,
-            ...recordContributorsIdSearchKeys
+            ...recordContributorsIdSearchKeys,
         } : null;
 
         // update record with files
         const patchFilesRecordRequest = hasFilesToUpload ? {
-            ...transformers.getRecordFileAttachmentSearchKey(data.files.queue, data.publication)
+            ...transformers.getRecordFileAttachmentSearchKey(data.files.queue, data.publication),
         } : null;
 
         // track success of either save or patch request
@@ -330,7 +330,7 @@ export function claimPublication(data) {
                 dispatch({
                     type: actions.CLAIM_PUBLICATION_CREATE_COMPLETED,
                     payload: { pid: data.publication.rek_pid },
-                    fileUploadOrIssueFailed: false
+                    fileUploadOrIssueFailed: false,
                 });
                 return Promise.resolve(data.publication);
             })
@@ -341,8 +341,8 @@ export function claimPublication(data) {
                         type: actions.CLAIM_PUBLICATION_CREATE_COMPLETED,
                         payload: {
                             pid: data.publication.rek_pid,
-                            fileUploadOrIssueFailed: true
-                        }
+                            fileUploadOrIssueFailed: true,
+                        },
                     });
 
                     return Promise.resolve(data.publication);
@@ -351,7 +351,7 @@ export function claimPublication(data) {
                 // failed to create a claim/new record request
                 dispatch({
                     type: actions.CLAIM_PUBLICATION_CREATE_FAILED,
-                    payload: error.message
+                    payload: error.message,
                 });
                 return Promise.reject(error);
             });

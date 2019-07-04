@@ -2,10 +2,10 @@ jest.dontMock('./NewspaperArticleForm');
 
 import NewspaperArticleForm from './NewspaperArticleForm';
 
-function setup(testProps, isShallow = true){
+function setup(testProps, isShallow = true) {
     const props = {
         ...testProps,
-        submitting: testProps.submitting || false // : PropTypes.bool,
+        submitting: testProps.submitting || false, // : PropTypes.bool,
     };
     return getElement(NewspaperArticleForm, props, isShallow);
 }
@@ -22,9 +22,9 @@ describe('NewspaperArticleForm renders ', () => {
     });
 
     it('component with all fields disabled', () => {
-        const wrapper = setup({submitting: true});
+        const wrapper = setup({ submitting: true });
         wrapper.find('Field').forEach(field => {
             expect(field.props().disabled).toEqual(true);
-        })
+        });
     });
 });

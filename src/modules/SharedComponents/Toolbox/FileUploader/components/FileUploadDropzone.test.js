@@ -1,6 +1,6 @@
-import {FileUploadDropzone} from './FileUploadDropzone';
+import { FileUploadDropzone } from './FileUploadDropzone';
 import FileUploadDropzoneWithStyles from './FileUploadDropzone';
-import {FILE_NAME_RESTRICTION} from '../config';
+import { FILE_NAME_RESTRICTION } from '../config';
 
 function setup(testProps, isShallow = true) {
     const props = {
@@ -19,7 +19,7 @@ describe('Component FileUploadDropzone', () => {
 
     beforeEach(() => {
         const _File = window.File;
-        const FILE = (data = [''], name) => new _File(data, name, {lastModified: 12345678912});
+        const FILE = (data = [''], name) => new _File(data, name, { lastModified: 12345678912 });
         window.File = jest.fn((data, name) => FILE(data, name));
         getMockFile = (name) => new File([''], name);
     });
@@ -30,7 +30,7 @@ describe('Component FileUploadDropzone', () => {
     });
 
     it('should render disabled component', () => {
-        const wrapper = setup({disabled: true}, false);
+        const wrapper = setup({ disabled: true }, false);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -41,7 +41,8 @@ describe('Component FileUploadDropzone', () => {
         const testFn = jest.fn();
 
         wrapper.find('FileUploadDropzone').instance().dropzoneRef.open = testFn;
-        wrapper.find('FileUploadDropzone').instance()._onKeyPress();
+        wrapper.find('FileUploadDropzone').instance()
+            ._onKeyPress();
 
         wrapper.update();
         expect(testFn).toHaveBeenCalled();
@@ -51,7 +52,7 @@ describe('Component FileUploadDropzone', () => {
         const wrapper = setup({});
 
         const files = [getMockFile('c.txt'), getMockFile('d.txt')];
-        const {uniqueFiles, duplicateFiles} = wrapper.instance().removeDuplicate(files, ['a.txt', 'b.txt', 'c.txt']);
+        const { uniqueFiles, duplicateFiles } = wrapper.instance().removeDuplicate(files, ['a.txt', 'b.txt', 'c.txt']);
 
         expect(uniqueFiles.length).toEqual(1);
         expect(duplicateFiles.length).toEqual(1);
@@ -61,7 +62,7 @@ describe('Component FileUploadDropzone', () => {
         const wrapper = setup({});
 
         const files = [getMockFile('a.txt'), getMockFile('a.doc'), getMockFile('b.txt')];
-        const {uniqueFiles, duplicateFiles, sameFileNameWithDifferentExt} = wrapper.instance().removeDuplicate(files, []);
+        const { uniqueFiles, duplicateFiles, sameFileNameWithDifferentExt } = wrapper.instance().removeDuplicate(files, []);
 
         expect(uniqueFiles.length).toEqual(2);
         expect(duplicateFiles.length).toEqual(0);
@@ -73,7 +74,7 @@ describe('Component FileUploadDropzone', () => {
 
         const queuedFiles = ['c.txt', 'd.txt', 'b.txt'];
         const files = [getMockFile('a.txt'), getMockFile('a.doc'), getMockFile('b.txt')];
-        const {uniqueFiles, duplicateFiles, sameFileNameWithDifferentExt} = wrapper.instance().removeDuplicate(files, queuedFiles);
+        const { uniqueFiles, duplicateFiles, sameFileNameWithDifferentExt } = wrapper.instance().removeDuplicate(files, queuedFiles);
 
         expect(uniqueFiles.length).toEqual(1);
         expect(uniqueFiles).toEqual([getMockFile('a.txt')]);
@@ -90,7 +91,7 @@ describe('Component FileUploadDropzone', () => {
 
         const queuedFiles = ['c.txt', 'd.txt', 'b.txt'];
         const files = [getMockFile('a.doc'), getMockFile('d.txt'), getMockFile('b.txt')];
-        const {uniqueFiles, duplicateFiles, sameFileNameWithDifferentExt} = wrapper.instance().removeDuplicate(files, queuedFiles);
+        const { uniqueFiles, duplicateFiles, sameFileNameWithDifferentExt } = wrapper.instance().removeDuplicate(files, queuedFiles);
 
         expect(uniqueFiles.length).toEqual(1);
         expect(uniqueFiles).toEqual([getMockFile('a.doc')]);
@@ -105,7 +106,7 @@ describe('Component FileUploadDropzone', () => {
         const wrapper = setup({});
 
         const files = [getMockFile('c.txt'), getMockFile('d.txt')];
-        const {uniqueFiles, duplicateFiles} = wrapper.instance().removeDuplicate(files, ['a.txt', 'b.txt']);
+        const { uniqueFiles, duplicateFiles } = wrapper.instance().removeDuplicate(files, ['a.txt', 'b.txt']);
 
         expect(uniqueFiles.length).toEqual(2);
         expect(duplicateFiles.length).toEqual(0);
@@ -115,7 +116,7 @@ describe('Component FileUploadDropzone', () => {
         const wrapper = setup({});
 
         const files = [];
-        const {uniqueFiles, duplicateFiles} = wrapper.instance().removeDuplicate(files, ['a.txt', 'b.txt']);
+        const { uniqueFiles, duplicateFiles } = wrapper.instance().removeDuplicate(files, ['a.txt', 'b.txt']);
 
         expect(uniqueFiles.length).toEqual(0);
         expect(duplicateFiles.length).toEqual(0);
@@ -125,7 +126,7 @@ describe('Component FileUploadDropzone', () => {
         const wrapper = setup({});
 
         const files = [getMockFile('a.001.zip'), getMockFile('a.002.zip')];
-        const {uniqueFiles, duplicateFiles} = wrapper.instance().removeDuplicate(files, []);
+        const { uniqueFiles, duplicateFiles } = wrapper.instance().removeDuplicate(files, []);
 
         expect(uniqueFiles.length).toEqual(2);
         expect(duplicateFiles.length).toEqual(0);
@@ -135,7 +136,7 @@ describe('Component FileUploadDropzone', () => {
         const wrapper = setup({});
 
         const files = [getMockFile('c.txt'), getMockFile('1.txt')];
-        const {validFiles, invalidFileNames} = wrapper.instance().removeInvalidFileNames(files, /^[a-z].+/);
+        const { validFiles, invalidFileNames } = wrapper.instance().removeInvalidFileNames(files, /^[a-z].+/);
 
         expect(validFiles.length).toEqual(1);
         expect(invalidFileNames.length).toEqual(1);
@@ -145,7 +146,7 @@ describe('Component FileUploadDropzone', () => {
         const wrapper = setup({});
 
         const files = [getMockFile('c.txt'), getMockFile('a.txt')];
-        const {validFiles, invalidFileNames} = wrapper.instance().removeInvalidFileNames(files, /^[a-z].+/);
+        const { validFiles, invalidFileNames } = wrapper.instance().removeInvalidFileNames(files, /^[a-z].+/);
 
         expect(validFiles.length).toEqual(2);
         expect(invalidFileNames.length).toEqual(0);
@@ -155,7 +156,7 @@ describe('Component FileUploadDropzone', () => {
         const wrapper = setup({});
 
         const files = [];
-        const {validFiles, invalidFileNames} = wrapper.instance().removeInvalidFileNames(files, /^[a-z].+/);
+        const { validFiles, invalidFileNames } = wrapper.instance().removeInvalidFileNames(files, /^[a-z].+/);
 
         expect(validFiles.length).toEqual(0);
         expect(invalidFileNames.length).toEqual(0);
@@ -165,7 +166,7 @@ describe('Component FileUploadDropzone', () => {
         const wrapper = setup({});
 
         const files = [getMockFile('c.txt'), getMockFile('1.txt'), getMockFile('1a.txt')];
-        const {limitedFiles, tooManyFiles} = wrapper.instance().removeTooManyFiles(files, 2);
+        const { limitedFiles, tooManyFiles } = wrapper.instance().removeTooManyFiles(files, 2);
 
         expect(limitedFiles.length).toEqual(2);
         expect(tooManyFiles.length).toEqual(1);
@@ -175,7 +176,7 @@ describe('Component FileUploadDropzone', () => {
         const wrapper = setup({});
 
         const files = [getMockFile('c.txt'), getMockFile('1.txt'), getMockFile('1a.txt')];
-        const {limitedFiles, tooManyFiles} = wrapper.instance().removeTooManyFiles(files, 4);
+        const { limitedFiles, tooManyFiles } = wrapper.instance().removeTooManyFiles(files, 4);
 
         expect(limitedFiles.length).toEqual(3);
         expect(tooManyFiles.length).toEqual(0);
@@ -185,13 +186,13 @@ describe('Component FileUploadDropzone', () => {
         const wrapper = setup({});
 
         const files = [];
-        const {limitedFiles, tooManyFiles} = wrapper.instance().removeTooManyFiles(files, 3);
+        const { limitedFiles, tooManyFiles } = wrapper.instance().removeTooManyFiles(files, 3);
 
         expect(limitedFiles.length).toEqual(0);
         expect(tooManyFiles.length).toEqual(0);
     });
 
-    it('should filter folders out from the file list in removeDroppedFolders', async () => {
+    it('should filter folders out from the file list in removeDroppedFolders', async() => {
         const wrapper = setup({});
 
         const file_a = getMockFile('a.txt');
@@ -211,7 +212,7 @@ describe('Component FileUploadDropzone', () => {
         await expect(wrapper.instance().removeDroppedFolders(accepted, errors)).resolves.toEqual([file_a, false, file_c]);
     });
 
-    it('should set all error messages', async () => {
+    it('should set all error messages', async() => {
         const file_a = getMockFile('a.txt');
         const file_a_doc = getMockFile('a.doc');
         const file_b = getMockFile('b.txt');
@@ -228,17 +229,17 @@ describe('Component FileUploadDropzone', () => {
             fileUploadLimit: 4,
             filesInQueue: [file_a.name, file_b.name],
             onDrop: onDropTestFn,
-            fileNameRestrictions: FILE_NAME_RESTRICTION
+            fileNameRestrictions: FILE_NAME_RESTRICTION,
         });
 
-        const expectedFiles = [file_c, file_f].map(file => ({fileData: file, name: file.name, size: file.size}));
+        const expectedFiles = [file_c, file_f].map(file => ({ fileData: file, name: file.name, size: file.size }));
         const expectedError = {
             tooBigFiles: ['e.txt'],
             notFiles: [],
             sameFileNameWithDifferentExt: ['g.doc', 'a.doc'],
             invalidFileNames: ['web_d.txt'],
             duplicateFiles: ['b.txt'],
-            tooManyFiles: ['g.txt']
+            tooManyFiles: ['g.txt'],
         };
 
         const accepted = [file_b_dup, file_c, file_d, file_f, file_g, file_a_doc, file_g_doc];
@@ -249,7 +250,7 @@ describe('Component FileUploadDropzone', () => {
         expect(onDropTestFn).toHaveBeenCalledWith(expectedFiles, expectedError);
     });
 
-    it('should set all correct error messages for filenames with comma', async () => {
+    it('should set all correct error messages for filenames with comma', async() => {
         const file_g = getMockFile('g.txt');
         const file_a = getMockFile('i,am.txt');
         const file_h = getMockFile('excel,txt');
@@ -260,17 +261,17 @@ describe('Component FileUploadDropzone', () => {
             fileUploadLimit: 4,
             filesInQueue: [],
             onDrop: onDropTestFn,
-            fileNameRestrictions: FILE_NAME_RESTRICTION
+            fileNameRestrictions: FILE_NAME_RESTRICTION,
         });
 
-        const expectedFiles = [file_g].map(file => ({fileData: file, name: file.name, size: file.size}));
+        const expectedFiles = [file_g].map(file => ({ fileData: file, name: file.name, size: file.size }));
         const expectedError = {
             tooBigFiles: [],
             notFiles: [],
             sameFileNameWithDifferentExt: [],
             invalidFileNames: ['i,am.txt', 'excel,txt', 'excel,xls.txt'],
             duplicateFiles: [],
-            tooManyFiles: []
+            tooManyFiles: [],
         };
 
         const accepted = [file_g, file_a, file_h, file_i];
@@ -286,7 +287,7 @@ describe('Component FileUploadDropzone', () => {
             onDrop: jest.fn(),
             maxSize: 8,
             locale: {},
-            fileNameRestrictions: /.+/
+            fileNameRestrictions: /.+/,
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -295,7 +296,7 @@ describe('Component FileUploadDropzone', () => {
         const wrapper = setup({});
         const readAsDataURLFn = jest.fn((slice) => slice);
         window.FileReader = jest.fn(() => ({
-            readAsDataURL: readAsDataURLFn
+            readAsDataURL: readAsDataURLFn,
         }));
         const result = wrapper.instance().readFile('this is test file', [], Promise.resolve);
         expect(result).toBe('this is te');
@@ -303,16 +304,16 @@ describe('Component FileUploadDropzone', () => {
 
     it('should call onerror if fail on read file', () => {
         const wrapper = setup({});
-        const result = wrapper.instance().onReadFileError({name: 'test'}, [], jest.fn((result) => result))();
+        const result = wrapper.instance().onReadFileError({ name: 'test' }, [], jest.fn((result) => result))();
         expect(result).toBeFalsy();
 
-        const file = wrapper.instance().onReadFileLoad({name: 'test'}, jest.fn())();
+        const file = wrapper.instance().onReadFileLoad({ name: 'test' }, jest.fn())();
         expect(file).toBeUndefined();
     });
 
     it('should allow multipart zip files with valid part format (000 - 999)', () => {
         const wrapper = setup({
-            fileNameRestrictions: FILE_NAME_RESTRICTION
+            fileNameRestrictions: FILE_NAME_RESTRICTION,
         });
 
         const file_a = getMockFile('test.000.zip');
@@ -321,11 +322,11 @@ describe('Component FileUploadDropzone', () => {
         const file_d = getMockFile('test.abc.zip');
         const file_e = getMockFile('test.89.zip');
         const file_f = getMockFile('test.222.zip');
-        const file_g = getMockFile('test.0123.zip')
+        const file_g = getMockFile('test.0123.zip');
 
         const files = [file_a, file_b, file_c, file_d, file_e, file_f, file_g];
 
-        const {validFiles, invalidFileNames} = wrapper.instance().removeInvalidFileNames(files, FILE_NAME_RESTRICTION);
+        const { validFiles, invalidFileNames } = wrapper.instance().removeInvalidFileNames(files, FILE_NAME_RESTRICTION);
 
         expect(validFiles.length).toEqual(4);
         expect(invalidFileNames.length).toEqual(3);
@@ -333,7 +334,7 @@ describe('Component FileUploadDropzone', () => {
 
     it('should allow multipart zip files with valid part format (r01 - r999)', () => {
         const wrapper = setup({
-            fileNameRestrictions: FILE_NAME_RESTRICTION
+            fileNameRestrictions: FILE_NAME_RESTRICTION,
         });
 
         const file_a = getMockFile('test.r00.zip');
@@ -346,7 +347,7 @@ describe('Component FileUploadDropzone', () => {
 
         const files = [file_a, file_b, file_c, file_d, file_e, file_f, file_g];
 
-        const {validFiles, invalidFileNames} = wrapper.instance().removeInvalidFileNames(files, FILE_NAME_RESTRICTION);
+        const { validFiles, invalidFileNames } = wrapper.instance().removeInvalidFileNames(files, FILE_NAME_RESTRICTION);
 
         expect(validFiles.length).toEqual(3);
         expect(invalidFileNames.length).toEqual(4);
@@ -354,7 +355,7 @@ describe('Component FileUploadDropzone', () => {
 
     it('should allow multipart zip files with valid part format (part1 - part999)', () => {
         const wrapper = setup({
-            fileNameRestrictions: FILE_NAME_RESTRICTION
+            fileNameRestrictions: FILE_NAME_RESTRICTION,
         });
 
         const file_a = getMockFile('test.part1.zip');
@@ -365,7 +366,7 @@ describe('Component FileUploadDropzone', () => {
 
         const files = [file_a, file_b, file_c, file_d, file_e];
 
-        const {validFiles, invalidFileNames} = wrapper.instance().removeInvalidFileNames(files, FILE_NAME_RESTRICTION);
+        const { validFiles, invalidFileNames } = wrapper.instance().removeInvalidFileNames(files, FILE_NAME_RESTRICTION);
 
         expect(validFiles.length).toEqual(3);
         expect(invalidFileNames.length).toEqual(2);

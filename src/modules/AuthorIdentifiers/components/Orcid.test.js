@@ -1,5 +1,5 @@
 import Orcid from './Orcid';
-import {accounts, currentAuthor} from 'mock/data/account';
+import { accounts, currentAuthor } from 'mock/data/account';
 
 function setup(testProps, isShallow = true) {
     const props = {
@@ -14,11 +14,11 @@ function setup(testProps, isShallow = true) {
             linkAuthorOrcidId: jest.fn(),
             showAppAlert: jest.fn(),
             dismissAppAlert: jest.fn(),
-            resetSavingAuthorState: jest.fn()
+            resetSavingAuthorState: jest.fn(),
         },
         history: testProps.history || {
-            push: jest.fn()
-        }
+            push: jest.fn(),
+        },
     };
     return getElement(Orcid, props, isShallow);
 }
@@ -31,26 +31,26 @@ describe('Component Orcid ', () => {
     });
 
     it('should render nothing if account/author is not loaded', () => {
-        const wrapper = setup({accountAuthorLoading: true});
+        const wrapper = setup({ accountAuthorLoading: true });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render nothing if account is set, but author is null', () => {
-        const wrapper = setup({account: accounts.uqresearcher});
+        const wrapper = setup({ account: accounts.uqresearcher });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render form uf account/author is set', () => {
         const wrapper = setup({
             account: accounts.uqresearcher,
-            author: currentAuthor.uqresearcher.data
+            author: currentAuthor.uqresearcher.data,
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should redirect to the dashbaord', () => {
         const testMethod = jest.fn();
-        const wrapper = setup({history: {push: testMethod}});
+        const wrapper = setup({ history: { push: testMethod } });
         wrapper.instance()._navigateToDashboard();
         expect(testMethod).toHaveBeenCalledWith('/dashboard');
     });
@@ -58,15 +58,15 @@ describe('Component Orcid ', () => {
     it('should construct ORCID url', () => {
         const wrapper = setup({
             account: accounts.uqresearcher,
-            author: currentAuthor.uqresearcher.data
+            author: currentAuthor.uqresearcher.data,
         });
 
         wrapper.setState({
             orcidRequest: {
                 ...wrapper.state().orcidRequest,
                 redirect_uri: 'http://localhost:3000/#/author-identifiers/orcid/link', // dynamic value constructed from window.location
-                state: '1234_MOCK_STATE' // dynamic value constructed from date/time
-            }
+                state: '1234_MOCK_STATE', // dynamic value constructed from date/time
+            },
         });
 
         const expected = 'http://orcid.org/oauth/authorize?client_id=12345XYZ&response_type=code&scope=%2Fread-limited%20%2Factivities%2Fupdate%20%2Fperson%2Fupdate&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2F%23%2Fauthor-identifiers%2Forcid%2Flink&state=1234_MOCK_STATE&show_login=true';
@@ -77,13 +77,13 @@ describe('Component Orcid ', () => {
     it('should show confirmation box', () => {
         const wrapper = setup({
             account: accounts.uqresearcher,
-            author: currentAuthor.uqresearcher.data
+            author: currentAuthor.uqresearcher.data,
         });
         const showConfirmation = jest.fn();
         const getOrcidUrl = jest.spyOn(wrapper.instance(), 'getOrcidUrl');
 
         wrapper.instance().authoriseConfirmationBox = {
-            showConfirmation: showConfirmation
+            showConfirmation: showConfirmation,
         };
         wrapper.instance()._showAuthoriseConfirmation();
         expect(showConfirmation).toBeCalled();
@@ -92,7 +92,7 @@ describe('Component Orcid ', () => {
         delete global.window.location;
         const assignFn = jest.fn();
         global.window.location = {
-            assign: assignFn
+            assign: assignFn,
         };
 
         wrapper.instance().authoriseConfirmationBox._onAction();
@@ -108,22 +108,22 @@ describe('Component Orcid ', () => {
     it('should display appropriate alert message', () => {
         const wrapper = setup({
             account: accounts.uqresearcher,
-            author: currentAuthor.uqresearcher.data
+            author: currentAuthor.uqresearcher.data,
         });
 
         const testCases = [
             {
-                parameters: {submitFailed: true, error: true, alertLocale: {errorAlert: {title: 'submitFailed' }}},
-                expected: 'submitFailed'
+                parameters: { submitFailed: true, error: true, alertLocale: { errorAlert: { title: 'submitFailed' } } },
+                expected: 'submitFailed',
             },
             {
-                parameters: {submitting: true, alertLocale: {progressAlert: {title: 'submitting' }}},
-                expected: 'submitting'
-            }
+                parameters: { submitting: true, alertLocale: { progressAlert: { title: 'submitting' } } },
+                expected: 'submitting',
+            },
         ];
 
         testCases.forEach(testCase => {
-            const alert = wrapper.instance().getAlert({...testCase.parameters});
+            const alert = wrapper.instance().getAlert({ ...testCase.parameters });
             expect(alert.props.title).toEqual(testCase.expected);
         });
 
@@ -133,7 +133,7 @@ describe('Component Orcid ', () => {
     it('should set ref of confirmation box', () => {
         const wrapper = setup({
             account: accounts.uqresearcher,
-            author: currentAuthor.uqresearcher.data
+            author: currentAuthor.uqresearcher.data,
         });
         wrapper.instance()._setAuthoriseConfirmation('test');
         expect(wrapper.instance().authoriseConfirmationBox).toEqual('test');
@@ -150,7 +150,7 @@ describe('Component Orcid ', () => {
         expect(wrapper.state().existingOrcidRequest).toEqual(expectedBeforeState);
 
         // account has been loaded
-        wrapper.instance().componentWillReceiveProps({account: accounts.uqresearcher});
+        wrapper.instance().componentWillReceiveProps({ account: accounts.uqresearcher });
 
         // orcid state should be updated
         expect(wrapper.state().orcidRequest.state).toBeTruthy();
@@ -166,7 +166,7 @@ describe('Component Orcid ', () => {
         // account/author has been loaded
         wrapper.instance().componentWillReceiveProps({
             account: accounts.uqresearcher,
-            author: currentAuthor.uqresearcher.data
+            author: currentAuthor.uqresearcher.data,
         });
 
         expect(wrapper.instance().props.history.push).toHaveBeenCalledWith('/dashboard');
@@ -175,13 +175,13 @@ describe('Component Orcid ', () => {
     it('should navigate back to dashboard if author\'s orcid id was updated successfully', () => {
         const wrapper = setup({
             account: accounts.uqresearcher,
-            author: currentAuthor.uqnoauthid.data
+            author: currentAuthor.uqnoauthid.data,
         });
 
         // account/author has been loaded
         wrapper.instance().componentWillReceiveProps({
             account: accounts.uqresearcher,
-            author: currentAuthor.uqresearcher.data
+            author: currentAuthor.uqresearcher.data,
         });
 
         expect(wrapper.instance().props.actions.showAppAlert).toHaveBeenCalled();
@@ -191,24 +191,24 @@ describe('Component Orcid ', () => {
     it('should start author update when author is loaded and orcid response received', () => {
         const wrapper = setup({
             account: accounts.uqresearcher,
-            author: null
+            author: null,
         });
 
         // mock orcid response
         wrapper.instance().setState({
             orcidRequest: {
-                state: 'XYZ'
+                state: 'XYZ',
             },
             orcidResponse: {
                 code: '123',
-                state: 'XYZ'
-            }
+                state: 'XYZ',
+            },
         });
 
         // account/author has been loaded
         wrapper.instance().componentWillReceiveProps({
             account: accounts.uqresearcher,
-            author: currentAuthor.uqnoauthid.data
+            author: currentAuthor.uqnoauthid.data,
         });
 
         expect(wrapper.instance().props.actions.linkAuthorOrcidId).toHaveBeenCalled();
@@ -217,24 +217,24 @@ describe('Component Orcid ', () => {
     it('should NOT start author update when author is loaded and orcid response received but doesn\'t match state', () => {
         const wrapper = setup({
             account: accounts.uqresearcher,
-            author: null
+            author: null,
         });
 
         // mock orcid response
         wrapper.instance().setState({
             orcidRequest: {
-                state: 'XYZ'
+                state: 'XYZ',
             },
             orcidResponse: {
                 code: '123',
-                state: 'ABC'
-            }
+                state: 'ABC',
+            },
         });
 
         // account/author has been loaded
         wrapper.instance().componentWillReceiveProps({
             account: accounts.uqresearcher,
-            author: currentAuthor.uqnoauthid.data
+            author: currentAuthor.uqnoauthid.data,
         });
 
         expect(wrapper.instance().props.actions.linkAuthorOrcidId).not.toHaveBeenCalled();
@@ -243,18 +243,18 @@ describe('Component Orcid ', () => {
     it('should display error if ORCID url redirect STATE response is invalid', () => {
         const wrapper = setup({
             account: accounts.uqresearcher,
-            author: currentAuthor.uqnoauthid.data
+            author: currentAuthor.uqnoauthid.data,
         });
 
         // mock orcid response
         wrapper.instance().setState({
             orcidRequest: {
-                state: 'XYZ'
+                state: 'XYZ',
             },
             orcidResponse: {
                 code: '123',
-                state: 'ABC'
-            }
+                state: 'ABC',
+            },
         });
 
         wrapper.update();
@@ -265,7 +265,7 @@ describe('Component Orcid ', () => {
         const wrapper = setup({
             account: accounts.uqresearcher,
             author: currentAuthor.uqnoauthid.data,
-            accountAuthorError: 'API IS NOT AVAILABLE'
+            accountAuthorError: 'API IS NOT AVAILABLE',
         });
 
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -275,18 +275,18 @@ describe('Component Orcid ', () => {
     it('should start author update in componentDidMount() when orcid response received', () => {
         const wrapper = setup({
             account: accounts.uqresearcher,
-            author: currentAuthor.uqnoauthid.data
+            author: currentAuthor.uqnoauthid.data,
         });
 
         // mock orcid response
         wrapper.instance().setState({
             orcidRequest: {
-                state: 'XYZ'
+                state: 'XYZ',
             },
             orcidResponse: {
                 code: '123',
-                state: 'XYZ'
-            }
+                state: 'XYZ',
+            },
         });
 
         wrapper.instance().componentDidMount();
@@ -296,18 +296,18 @@ describe('Component Orcid ', () => {
     it('should NOT start author update in componentDidMount() when orcid invalid response received', () => {
         const wrapper = setup({
             account: accounts.uqresearcher,
-            author: currentAuthor.uqnoauthid.data
+            author: currentAuthor.uqnoauthid.data,
         });
 
         // mock orcid response
         wrapper.instance().setState({
             orcidRequest: {
-                state: 'XYZ'
+                state: 'XYZ',
             },
             orcidResponse: {
                 code: '123',
-                state: 'XYZAAA'
-            }
+                state: 'XYZAAA',
+            },
         });
 
         wrapper.instance().componentDidMount();
@@ -322,30 +322,30 @@ describe('Component Orcid ', () => {
 
     it('should set query params correctly with code and state', () => {
         delete window.location;
-        global.window.location = {hash: 'http://localhost:3000?code=123&state=testing'};
+        global.window.location = { hash: 'http://localhost:3000?code=123&state=testing' };
         const wrapper = setup({});
         expect(wrapper.state().orcidResponse).toMatchObject({
             code: '123',
-            state: 'testing'
+            state: 'testing',
         });
     });
 
     it('should check condition for account id on receiving new props', () => {
         const author = {
-            aut_id: 123
+            aut_id: 123,
         };
         const wrapper = setup({
             account: {
-                id: 123
+                id: 123,
             },
-            author
+            author,
         });
         const componentWillReceiveProps = jest.spyOn(wrapper.instance(), 'componentWillReceiveProps');
         wrapper.setProps({
             account: {
-                id: 2323
+                id: 2323,
             },
-            author
+            author,
         });
         expect(componentWillReceiveProps).toHaveBeenCalled();
     });

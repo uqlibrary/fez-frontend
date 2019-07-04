@@ -1,24 +1,24 @@
-import React, {PureComponent} from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import locale from 'locale/viewRecord';
-import {withStyles} from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
-import {ORG_TYPES_LOOKUP, ORG_TYPE_NOT_SET} from 'config/general';
+import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
+import { ORG_TYPES_LOOKUP, ORG_TYPE_NOT_SET } from 'config/general';
 
 const styles = (theme) => ({
     gridRow: {
         borderBottom: `1px solid ${theme.palette.secondary.light}`,
-    }
+    },
 });
 export class GrantInformationClass extends PureComponent {
     static propTypes = {
         publication: PropTypes.object.isRequired,
-        classes: PropTypes.object
+        classes: PropTypes.object,
     };
 
-    GrantInformationCell = ({grantAgencyName, grantId, className}) => {
+    GrantInformationCell = ({ grantAgencyName, grantId, className }) => {
         return (
             <Grid container display="row" alignItems="center">
                 <Grid item>
@@ -41,7 +41,7 @@ export class GrantInformationClass extends PureComponent {
     renderGrantDetail = (grantAgencyName, grantId, grantText, order, index) => {
         const txt = locale.viewRecord.headings.default.grantInformation;
         return (
-            <div style={{padding: 8}} key={index}>
+            <div style={{ padding: 8 }} key={index}>
                 <Grid container spacing={16} key={order} className={this.props.classes.gridRow} alignItems="flex-start">
                     <Grid item xs={12} sm={3}>
                         <this.GrantInformationCell
@@ -83,8 +83,8 @@ export class GrantInformationClass extends PureComponent {
     }
 
     render() {
-        if(!this.props.publication.fez_record_search_key_grant_agency
-            || this.props.publication.fez_record_search_key_grant_agency.length === 0) {
+        if(!this.props.publication.fez_record_search_key_grant_agency ||
+            this.props.publication.fez_record_search_key_grant_agency.length === 0) {
             return null;
         }
 
@@ -109,6 +109,6 @@ export class GrantInformationClass extends PureComponent {
     }
 }
 
-const StyledGrantInformation = withStyles(styles, {withTheme: true})(GrantInformationClass);
+const StyledGrantInformation = withStyles(styles, { withTheme: true })(GrantInformationClass);
 const GrantInformation = (props) => <StyledGrantInformation {...props}/>;
 export default GrantInformation;

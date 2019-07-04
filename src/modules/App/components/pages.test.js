@@ -1,9 +1,8 @@
 import * as pages from './pages';
 
 describe('Pages component', () => {
-
     it('FixRecord', () => {
-        const expectation = "{\"key\":null,\"ref\":null,\"props\":{\"load\":{}},\"_owner\":null,\"_store\":{}}";
+        const expectation = '{"key":null,"ref":null,"props":{"load":{}},"_owner":null,"_store":{}}';
 
         expect(JSON.stringify(pages.FixRecord())).toEqual(expectation);
         expect(JSON.stringify(pages.ClaimRecord())).toEqual(expectation);
@@ -20,5 +19,4 @@ describe('Pages component', () => {
         expect(JSON.stringify(pages.CollectionForm())).toEqual(expectation);
         expect(JSON.stringify(pages.CommunityForm())).toEqual(expectation);
     });
-
 });

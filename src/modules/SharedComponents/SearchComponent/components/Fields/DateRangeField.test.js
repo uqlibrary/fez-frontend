@@ -1,7 +1,7 @@
 import DateRangeFieldWithStyles from './DateRangeField';
-import {DateRangeField} from './DateRangeField';
+import { DateRangeField } from './DateRangeField';
 import moment from 'moment';
-import {GENERIC_DATE_FORMAT} from 'config/general';
+import { GENERIC_DATE_FORMAT } from 'config/general';
 
 function setup(testProps, isShallow = true) {
     const props = {
@@ -15,15 +15,15 @@ function setup(testProps, isShallow = true) {
         to: '',
         onChange: jest.fn(),
         disableFuture: false,
-        ...testProps
+        ...testProps,
     };
 
     return getElement(DateRangeField, props, isShallow);
-};
+}
 
 describe('DateRangeField component', () => {
     it('should render default view with styles', () => {
-        const wrapper = getElement(DateRangeFieldWithStyles, {onChange: jest.fn()});
+        const wrapper = getElement(DateRangeFieldWithStyles, { onChange: jest.fn() });
 
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -34,13 +34,13 @@ describe('DateRangeField component', () => {
     });
 
     it('should render disabled view', () => {
-        const wrapper = setup({disabled: true});
+        const wrapper = setup({ disabled: true });
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('TextField').props().disabled).toBeTruthy();
     });
 
     it('should render with future disabled', () => {
-        const wrapper = setup({disableFuture: true});
+        const wrapper = setup({ disableFuture: true });
         expect(toJson(wrapper)).toMatchSnapshot();
         wrapper.find('DatePickerField').map(datePickerField => expect(datePickerField.props().disableFuture).toBeTruthy());
     });
@@ -50,7 +50,7 @@ describe('DateRangeField component', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
         wrapper.setState({
             from: '01/01/1970',
-            to: '01/01/1980'
+            to: '01/01/1980',
         });
         wrapper.update();
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -66,7 +66,7 @@ describe('DateRangeField component', () => {
 
     it('should update with error if "from" date is after "to" date', () => {
         const onChangeFn = jest.fn();
-        const wrapper = setup({onChange: onChangeFn});
+        const wrapper = setup({ onChange: onChangeFn });
         const componentWillUpdate = jest.spyOn(wrapper.instance(), 'componentWillUpdate');
         wrapper.find('DatePickerField').get(0).props.onChange(moment('10/10/2010', 'DD/MM/YYYY'));
         wrapper.find('DatePickerField').get(1).props.onChange(moment('09/10/2010', 'DD/MM/YYYY'));

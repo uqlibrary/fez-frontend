@@ -1,9 +1,9 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Downshift from 'downshift';
-import {withStyles} from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
-import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
+import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import MenuItem from '@material-ui/core/MenuItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Popper from '@material-ui/core/Popper';
@@ -24,11 +24,11 @@ export const styles = () => ({
         maxHeight: 250,
         overflowY: 'scroll',
         position: 'absolute',
-        zIndex: 999
+        zIndex: 999,
     },
     inputRoot: {
         flexWrap: 'wrap',
-    }
+    },
 });
 
 export class AutoCompleteAsyncField extends Component {
@@ -39,7 +39,7 @@ export class AutoCompleteAsyncField extends Component {
         itemsListLoading: PropTypes.bool,
         category: PropTypes.oneOfType([
             PropTypes.string,
-            PropTypes.number
+            PropTypes.number,
         ]),
         onChange: PropTypes.func,
         itemToString: PropTypes.func,
@@ -57,7 +57,7 @@ export class AutoCompleteAsyncField extends Component {
         filter: PropTypes.func,
         openOnFocus: PropTypes.bool,
         clearInput: PropTypes.bool,
-        MenuItemComponent: PropTypes.func
+        MenuItemComponent: PropTypes.func,
     };
 
     static defaultProps = {
@@ -65,21 +65,22 @@ export class AutoCompleteAsyncField extends Component {
         required: false,
         filter: (searchText, key) => {
             const anyKey = isNaN(key) ? key : `${key}`;
-            const regex = new RegExp(`(${searchText.split(' ').join('|').replace(/[()]/g, '')})`, 'gi');
+            const regex = new RegExp(`(${searchText.split(' ').join('|')
+                .replace(/[()]/g, '')})`, 'gi');
             return regex.test(anyKey);
         },
-        MenuItemComponent: ({suggestion}) => (
+        MenuItemComponent: ({ suggestion }) => (
             <ListItemText
                 primary={suggestion.value}
                 secondary={suggestion.id}
                 primaryTypographyProps={{
-                    variant: 'body1'
+                    variant: 'body1',
                 }}
                 secondaryTypographyProps={{
-                    variant: 'body2'
+                    variant: 'body2',
                 }}
             />
-        )
+        ),
     };
 
     constructor(props) {
@@ -133,7 +134,7 @@ export class AutoCompleteAsyncField extends Component {
                 style={{
                     fontWeight: isSelected ? 500 : 400,
                     whiteSpace: 'normal',
-                    height: 'auto'
+                    height: 'auto',
                 }}
             >
                 {
@@ -150,7 +151,7 @@ export class AutoCompleteAsyncField extends Component {
                 case Downshift.stateChangeTypes.mouseUp:
                     return {
                         ...changes,
-                        inputValue: state.inputValue
+                        inputValue: state.inputValue,
                     };
                 default:
                     return changes;
@@ -163,7 +164,7 @@ export class AutoCompleteAsyncField extends Component {
                 case Downshift.stateChangeTypes.mouseUp:
                     return {
                         ...changes,
-                        inputValue: ''
+                        inputValue: '',
                     };
                 default:
                     return changes;
@@ -173,15 +174,15 @@ export class AutoCompleteAsyncField extends Component {
 
     handleStateChange = () => (
         this.props.allowFreeText
-            ? ({inputValue}) => {
-                inputValue !== undefined && this.props.onChange({value: inputValue});
+            ? ({ inputValue }) => {
+                inputValue !== undefined && this.props.onChange({ value: inputValue });
             }
             : () => {}
     );
 
     render() {
         const { classes, itemsList, error, errorText, hintText, floatingLabelText, hideLabel, disabled, maxResults, itemToString, required, selectedValue, itemsListLoading } = this.props;
-        const selectedItemProps = this.props.clearInput ? {selectedItem: ''} : {};
+        const selectedItemProps = this.props.clearInput ? { selectedItem: '' } : {};
         const labelText = floatingLabelText || 'autosuggest';
         return (
             <div className={classes.root}>
@@ -206,7 +207,7 @@ export class AutoCompleteAsyncField extends Component {
                                                 fullWidth: true,
                                                 classes,
                                                 inputProps: getInputProps({
-                                                    onChange: this.getSuggestions
+                                                    onChange: this.getSuggestions,
                                                 }),
                                                 error: error,
                                                 errorText: error && errorText || '',
@@ -216,7 +217,7 @@ export class AutoCompleteAsyncField extends Component {
                                                 value: inputValue,
                                                 disabled: disabled,
                                                 required: required,
-                                                openMenu: openMenu
+                                                openMenu: openMenu,
                                             })}
                                         </Grid>
                                         {
@@ -230,7 +231,7 @@ export class AutoCompleteAsyncField extends Component {
                                         <div {...getMenuProps()}>
                                             <Popper disablePortal id="downshift-popper" open anchorEl={this.textInputRef} placement="bottom-start">
                                                 <Paper className={classes.paper} square style={{
-                                                    width: this.textInputRef ? this.textInputRef.clientWidth : null
+                                                    width: this.textInputRef ? this.textInputRef.clientWidth : null,
                                                 }}>
                                                     {
                                                         itemsList
@@ -239,7 +240,8 @@ export class AutoCompleteAsyncField extends Component {
                                                                 isNaN(inputValue) ? suggestion.value : suggestion.id ||
                                                                     suggestion.value.toString()
                                                             ))
-                                                            .slice(0, maxResults).map((suggestion, index) => {
+                                                            .slice(0, maxResults)
+                                                            .map((suggestion, index) => {
                                                                 return !!suggestion && this.renderSuggestion({
                                                                     suggestion,
                                                                     index,

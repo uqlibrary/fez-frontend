@@ -1,5 +1,5 @@
 import ConferencePaperCitation from './ConferencePaperCitation';
-import {conferencePaper} from 'mock/data/testing/records';
+import { conferencePaper } from 'mock/data/testing/records';
 
 function setup(testProps, isShallow = false) {
     const props = {
@@ -16,7 +16,7 @@ describe('ConferencePaperCitation renders ', () => {
     });
 
     it('component with a mock espace record', () => {
-        const wrapper = setup({publication: conferencePaper});
+        const wrapper = setup({ publication: conferencePaper });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

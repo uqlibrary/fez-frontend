@@ -20,7 +20,7 @@ const onSubmit = (values, dispatch) => {
 let ClaimPublicationFormContainer = reduxForm({
     form: FORM_NAME,
     enableReinitialize: true,
-    onSubmit
+    onSubmit,
 })(confirmDiscardFormChanges(ClaimRecord, FORM_NAME));
 
 const mapStateToProps = (state) => {
@@ -45,13 +45,13 @@ const mapStateToProps = (state) => {
             author: state && state.get('accountReducer') ? state.get('accountReducer').author : null,
             contentIndicators,
         },
-        redirectPath: state && state.get('appReducer') ? state.get('appReducer').redirectPath : null
+        redirectPath: state && state.get('appReducer') ? state.get('appReducer').redirectPath : null,
     };
 };
 
 function mapDispatchToProps(dispatch) {
     return {
-        actions: bindActionCreators(actions, dispatch)
+        actions: bindActionCreators(actions, dispatch),
     };
 }
 

@@ -1,4 +1,4 @@
-import React, {PureComponent} from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardRighthandCard } from 'modules/SharedComponents/Toolbox/StandardRighthandCard';
@@ -8,10 +8,10 @@ import {
     PublicationsList,
     PublicationsListPaging,
     PublicationsListSorting,
-    FacetsFilter
+    FacetsFilter,
 } from 'modules/SharedComponents/PublicationsList';
 import locale from 'locale/components';
-import {routes} from 'config';
+import { routes } from 'config';
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
 
@@ -32,7 +32,7 @@ export default class MyRecords extends PureComponent {
 
         location: PropTypes.object.isRequired,
         history: PropTypes.object.isRequired,
-        actions: PropTypes.object
+        actions: PropTypes.object,
     };
 
     constructor(props) {
@@ -46,41 +46,41 @@ export default class MyRecords extends PureComponent {
             activeFacets: {
                 filters: {},
                 ranges: {},
-                ...props.initialFacets
-            }
+                ...props.initialFacets,
+            },
         };
 
         this.state = {
             // check if user has publications, once true always true
             // facets filtering might return no results, but facets should still be visible
             hasPublications: !props.loadingPublicationsList && props.publicationsList.length > 0,
-            ...(!!props.location.state ? props.location.state : this.initState)
+            ...(!!props.location.state ? props.location.state : this.initState),
         };
     }
 
     componentDidMount() {
         if (!this.props.accountLoading) {
-            this.props.actions.loadAuthorPublications({...this.state});
+            this.props.actions.loadAuthorPublications({ ...this.state });
         }
     }
 
     componentWillReceiveProps(newProps) {
         // handle browser back button - set state from location/dispatch action for this state
-        if (this.props.location !== newProps.location
-            && newProps.history.action === 'POP'
-            && newProps.location.pathname === this.props.thisUrl) {
-            this.setState({...(
+        if (this.props.location !== newProps.location &&
+            newProps.history.action === 'POP' &&
+            newProps.location.pathname === this.props.thisUrl) {
+            this.setState({ ...(
                 !!newProps.location.state
                     ? newProps.location.state
                     : this.initState
-            )}, () => {
+            ) }, () => {
                 // only will be called when user clicks back on my records page
-                this.props.actions.loadAuthorPublications({...this.state});
+                this.props.actions.loadAuthorPublications({ ...this.state });
             });
         }
         // set forever-true flag if user has publications
-        if (!this.state.hasPublications && !newProps.loadingPublicationsList
-            && !!newProps.publicationsList && newProps.publicationsList.length > 0) {
+        if (!this.state.hasPublications && !newProps.loadingPublicationsList &&
+            !!newProps.publicationsList && newProps.publicationsList.length > 0) {
             this.setState({ hasPublications: true });
         }
     }
@@ -89,7 +89,7 @@ export default class MyRecords extends PureComponent {
         this.setState(
             {
                 pageSize: pageSize,
-                page: 1
+                page: 1,
             }, this.pushPageHistory
         );
     }
@@ -97,7 +97,7 @@ export default class MyRecords extends PureComponent {
     pageChanged = (page) => {
         this.setState(
             {
-                page: page
+                page: page,
             }, this.pushPageHistory
         );
     }
@@ -106,7 +106,7 @@ export default class MyRecords extends PureComponent {
         this.setState(
             {
                 sortBy: sortBy,
-                sortDirection: sortDirection
+                sortDirection: sortDirection,
             }, this.pushPageHistory
         );
     }
@@ -115,7 +115,7 @@ export default class MyRecords extends PureComponent {
         this.setState(
             {
                 activeFacets: activeFacets,
-                page: 1
+                page: 1,
             }, this.pushPageHistory
         );
     }
@@ -131,13 +131,13 @@ export default class MyRecords extends PureComponent {
         this.props.history.push({
             pathname: `${this.props.thisUrl}`,
             search: `?ts=${Date.now()}`,
-            state: {...this.state}
+            state: { ...this.state },
         });
-        this.props.actions.loadAuthorPublications({...this.state});
+        this.props.actions.loadAuthorPublications({ ...this.state });
     };
 
     handleExportPublications = (exportFormat) => {
-        this.props.actions.exportAuthorPublications({...exportFormat, ...this.state});
+        this.props.actions.exportAuthorPublications({ ...exportFormat, ...this.state });
     }
 
     render() {
@@ -147,12 +147,12 @@ export default class MyRecords extends PureComponent {
         const pagingData = this.props.publicationsListPagingData;
         const isLoadingOrExporting = this.props.loadingPublicationsList || this.props.exportPublicationsLoading;
 
-        const actionProps = (this.props.publicationsListCustomActions || []).length > 0 ?
-            {
-                customActions: this.props.publicationsListCustomActions
-            } :
-            {
-                showDefaultActions: true
+        const actionProps = (this.props.publicationsListCustomActions || []).length > 0
+            ? {
+                customActions: this.props.publicationsListCustomActions,
+            }
+            : {
+                showDefaultActions: true,
             };
 
         return (
@@ -237,10 +237,10 @@ export default class MyRecords extends PureComponent {
                     }
                     {
                         // show available filters or selected filters (even if there are no results)
-                        ((this.props.publicationsListFacets && Object.keys(this.props.publicationsListFacets).length > 0)
-                        || (this.state.activeFacets && this.hasDisplayableFilters(this.state.activeFacets.filters))
-                        || (this.state.activeFacets && this.state.activeFacets.ranges && Object.keys(this.state.activeFacets.ranges).length > 0)
-                        || (this.state.activeFacets && !!this.state.activeFacets.showOpenAccessOnly)) &&
+                        ((this.props.publicationsListFacets && Object.keys(this.props.publicationsListFacets).length > 0) ||
+                        (this.state.activeFacets && this.hasDisplayableFilters(this.state.activeFacets.filters)) ||
+                        (this.state.activeFacets && this.state.activeFacets.ranges && Object.keys(this.state.activeFacets.ranges).length > 0) ||
+                        (this.state.activeFacets && !!this.state.activeFacets.showOpenAccessOnly)) &&
                             <Hidden smDown>
                                 <Grid item md={3}>
                                     <StandardRighthandCard title={txt.facetsFilter.title} help={txt.facetsFilter.help}>

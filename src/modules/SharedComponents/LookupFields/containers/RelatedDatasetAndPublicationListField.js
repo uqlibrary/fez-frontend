@@ -1,6 +1,6 @@
 import React from 'react';
-import {LookupListEditor} from 'modules/SharedComponents/Toolbox/ListEditor';
-import {TitleOrPidField} from './TitleOrPidField';
+import { LookupListEditor } from 'modules/SharedComponents/Toolbox/ListEditor';
+import { TitleOrPidField } from './TitleOrPidField';
 
 export const RelatedDatasetAndPublicationListField = (fieldProps) => {
     return(<LookupListEditor
@@ -10,7 +10,7 @@ export const RelatedDatasetAndPublicationListField = (fieldProps) => {
         transformFunction={
             (searchKey, item, index) => ({
                 [searchKey.value]: item.id,
-                [searchKey.order]: index + 1
+                [searchKey.order]: index + 1,
             })
         }
         {...fieldProps} />);

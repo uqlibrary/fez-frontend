@@ -1,5 +1,5 @@
-import {loadPublicationsListActions, loadPublicationActions} from 'actions/actionTypes';
-import {openAccessConfig, viewRecordsConfig} from 'config';
+import { loadPublicationsListActions, loadPublicationActions } from 'actions/actionTypes';
+import { openAccessConfig, viewRecordsConfig } from 'config';
 import moment from 'moment';
 
 export const calculateOpenAccess = (record) => {
@@ -15,7 +15,8 @@ export const calculateOpenAccess = (record) => {
             0;
         const publishedDate = record.rek_date;
         const currentDate = moment().format();
-        const embargoDate = embargoDays ? moment(publishedDate).add(embargoDays, 'days').format() : null;
+        const embargoDate = embargoDays ? moment(publishedDate).add(embargoDays, 'days')
+            .format() : null;
         const pastEmgargoDate = !embargoDate || embargoDate < currentDate;
         const displayEmbargoDate = (
             !!embargoDate &&
@@ -26,34 +27,34 @@ export const calculateOpenAccess = (record) => {
         return {
             isOpenAccess: pastEmgargoDate,
             embargoDate: displayEmbargoDate,
-            openAccessStatusId: openAccessStatusId
+            openAccessStatusId: openAccessStatusId,
         };
     }
 
-    if (openAccessStatusId === openAccessConfig.OPEN_ACCESS_ID_FILE_PUBLISHER_VERSION
-        || openAccessStatusId === openAccessConfig.OPEN_ACCESS_ID_FILE_AUTHOR_POSTPRINT
-        || openAccessStatusId === openAccessConfig.OPEN_ACCESS_ID_OTHER
+    if (openAccessStatusId === openAccessConfig.OPEN_ACCESS_ID_FILE_PUBLISHER_VERSION ||
+        openAccessStatusId === openAccessConfig.OPEN_ACCESS_ID_FILE_AUTHOR_POSTPRINT ||
+        openAccessStatusId === openAccessConfig.OPEN_ACCESS_ID_OTHER
     ) {
-        const allFiles = (record.fez_datastream_info || []).length > 0 ?
-            record.fez_datastream_info.filter(item => (
-                !item.dsi_dsid.match(viewRecordsConfig.files.blacklist.namePrefixRegex)
-                && (!item.dsi_label || !item.dsi_label.match(
+        const allFiles = (record.fez_datastream_info || []).length > 0
+            ? record.fez_datastream_info.filter(item => (
+                !item.dsi_dsid.match(viewRecordsConfig.files.blacklist.namePrefixRegex) &&
+                (!item.dsi_label || !item.dsi_label.match(
                     new RegExp(viewRecordsConfig.files.blacklist.descriptionKeywordsRegex, 'gi')
-                ))
-                && item.dsi_state === 'A'
+                )) &&
+                item.dsi_state === 'A'
             ))
             : [];
 
         const hasFiles = allFiles.length > 0;
         const allEmbargoFiles = hasFiles
             ? record.fez_datastream_info.filter(item => (
-                !!item.dsi_embargo_date
-                && moment(item.dsi_embargo_date).isAfter(moment())
-                && !item.dsi_dsid.match(viewRecordsConfig.files.blacklist.namePrefixRegex)
-                && (!item.dsi_label || !item.dsi_label.match(
+                !!item.dsi_embargo_date &&
+                moment(item.dsi_embargo_date).isAfter(moment()) &&
+                !item.dsi_dsid.match(viewRecordsConfig.files.blacklist.namePrefixRegex) &&
+                (!item.dsi_label || !item.dsi_label.match(
                     new RegExp(viewRecordsConfig.files.blacklist.descriptionKeywordsRegex, 'gi')
-                ))
-                && item.dsi_state === 'A'
+                )) &&
+                item.dsi_state === 'A'
             )).sort((file1, file2) => (file1.dsi_embargo_date > file2.dsi_embargo_date ? 1 : -1))
             : [];
         // OA with a possible file embargo date
@@ -63,7 +64,7 @@ export const calculateOpenAccess = (record) => {
             embargoDate: hasFiles && allFiles.length > 0 && allFiles.length === allEmbargoFiles.length
                 ? moment(allEmbargoFiles[0].dsi_embargo_date).format('Do MMMM YYYY')
                 : null,
-            openAccessStatusId: openAccessStatusId
+            openAccessStatusId: openAccessStatusId,
         };
     }
 
@@ -75,7 +76,7 @@ export const calculateOpenAccess = (record) => {
     return {
         isOpenAccess: isOpenAccess,
         embargoDate: null,
-        openAccessStatusId: openAccessStatusId
+        openAccessStatusId: openAccessStatusId,
     };
 };
 
@@ -85,9 +86,9 @@ export const enhancePublication = (record) => {
     const noHtmlConfig = { ALLOWED_TAGS: [''] };
     const allowedHtmlConfig = {
         ALLOWED_TAGS: [
-            'p', 'strong', 'i', 'u', 's', 'strike', 'sup', 'sub', 'em', 'br', 'b', 'sup', 'sub'
+            'p', 'strong', 'i', 'u', 's', 'strike', 'sup', 'sub', 'em', 'br', 'b', 'sup', 'sub',
         ],
-        ALLOWED_ATTR: []
+        ALLOWED_ATTR: [],
     };
 
     const cleanHtmlIfValid = (value) => (
@@ -104,30 +105,30 @@ export const enhancePublication = (record) => {
         calculateOpenAccess() {
             if (!!this.rek_pid) return calculateOpenAccess(this);
             return null;
-        }
+        },
     };
 };
 
 const publicationEnhancer = () => next => action => {
     if (loadPublicationsListActions.test(action.type) && !!action.payload.data) {
         const enhancedPublications = action.payload.data.map(publication => ({
-            ...enhancePublication(publication)
+            ...enhancePublication(publication),
         }));
 
         const enhancedAction = {
             type: action.type,
             payload: {
                 ...action.payload,
-                data: enhancedPublications
-            }
+                data: enhancedPublications,
+            },
         };
         return next(enhancedAction);
     } else if (loadPublicationActions.test(action.type)) {
         const enhancedAction = {
             type: action.type,
             payload: {
-                ...enhancePublication(action.payload)
-            }
+                ...enhancePublication(action.payload),
+            },
         };
         return next(enhancedAction);
     }

@@ -1,8 +1,8 @@
-import React, {PureComponent} from 'react';
-import {Helmet} from 'react-helmet';
+import React, { PureComponent } from 'react';
+import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
-import {viewRecordsConfig} from 'config/viewRecord';
-import {locale} from 'locale';
+import { viewRecordsConfig } from 'config/viewRecord';
+import { locale } from 'locale';
 
 const dompurify = require('dompurify');
 const moment = require('moment');
@@ -10,7 +10,7 @@ export default class Meta extends PureComponent {
     static propTypes = {
         publication: PropTypes.object,
         routesConfig: PropTypes.array,
-        location: PropTypes.object.isRequired
+        location: PropTypes.object.isRequired,
     };
 
     sanitiseAndReplaceHtmlChars = (object, key, alternateKey) => {
@@ -20,7 +20,7 @@ export default class Meta extends PureComponent {
             '>': '&gt;',
         };
         const sanitisedFormattedText = !!object[alternateKey] &&
-            dompurify.sanitize(object[alternateKey], {ALLOWED_TAGS: ['']}).replace(/\s/g, '');
+            dompurify.sanitize(object[alternateKey], { ALLOWED_TAGS: [''] }).replace(/\s/g, '');
         const text = !!object[key] && object[key].length > 0 && object[key] || sanitisedFormattedText && object[alternateKey];
         return text.length > 0 &&
             text.replace(/[&<>]/g, (replace) => (replaceHtmlChars[replace] || /* istanbul ignore next */ replace));
@@ -50,11 +50,11 @@ export default class Meta extends PureComponent {
 
     getSingleTagForSingleValue = (name, object, key, url, format) => {
         const content = this.getMetaTagContent(object, key, url, format);
-        return content && {name, content};
+        return content && { name, content };
     };
 
     getMultipleTagsForMultipleValues = (searchKey, subkey, url, tag) => {
-        const {name, format} = tag;
+        const { name, format } = tag;
         return !!searchKey && searchKey.length > 0 && searchKey.map(object => this.getSingleTagForSingleValue(name, object, subkey, url, format));
     };
 
@@ -64,12 +64,12 @@ export default class Meta extends PureComponent {
             content: !!searchKey && searchKey.length > 0 && searchKey.reduce((metaTagContent, fieldValue) => {
                 metaTagContent.push(fieldValue[subkey]);
                 return metaTagContent;
-            }, []).join('; ')
+            }, []).join('; '),
         }];
     };
 
     getMetaTagsForFezRecordSearchKeys = (searchKey, subkey, url, tag) => {
-        const {name, isMultiple, format} = tag;
+        const { name, isMultiple, format } = tag;
         if (!!searchKey && searchKey.length > 0) {
             return isMultiple
                 ? this.getMultipleTagsForMultipleValues(searchKey, subkey, url, tag)  // If multiple tags allowed then get meta tag for each value
@@ -81,7 +81,7 @@ export default class Meta extends PureComponent {
     };
 
     getMetaTagsForOtherFields = (values, subkey, url, tag) => {
-        const {name, isMultiple, format} = tag;
+        const { name, isMultiple, format } = tag;
         if (isMultiple) {
             return this.getMultipleTagsForMultipleValues(values, subkey, url, tag);
         } else {
@@ -92,7 +92,7 @@ export default class Meta extends PureComponent {
     getMetaTags = (publication) => {
         // Loop through each meta tag
         return viewRecordsConfig.metaTags.reduce((metaTags, metaTag) => {
-            const {searchKey, subkey, tags, url} = metaTag;
+            const { searchKey, subkey, tags, url } = metaTag;
             // Push dublin core DC.* and/or citation_* meta tags for each field
             metaTags.push(
                 ...(tags.reduce((tagsContent, tag) => {
@@ -108,7 +108,7 @@ export default class Meta extends PureComponent {
     };
 
     render() {
-        const {publication, routesConfig} = this.props;
+        const { publication, routesConfig } = this.props;
         const metaTags = !!publication && this.getMetaTags(publication);
         const filteredRoutes = !publication && routesConfig.filter(route => !!route.regExPath
             ? (new RegExp(route.regExPath, 'i')).test(this.props.location.pathname)
@@ -126,8 +126,8 @@ export default class Meta extends PureComponent {
                 {
                     metaTags &&
                     metaTags.map((metaTag, index) => {
-                        const {name} = metaTag;
-                        const scheme = name === 'DC.Identifier' ? {scheme: 'URI'} : {};
+                        const { name } = metaTag;
+                        const scheme = name === 'DC.Identifier' ? { scheme: 'URI' } : {};
                         return <meta key={`${name}-${index}`} {...metaTag} {...scheme} />;
                     })
                 }

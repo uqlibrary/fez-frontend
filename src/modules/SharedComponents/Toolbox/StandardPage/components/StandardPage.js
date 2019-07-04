@@ -1,16 +1,16 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import {withStyles} from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import {HelpIcon} from 'modules/SharedComponents/Toolbox/HelpDrawer';
+import { HelpIcon } from 'modules/SharedComponents/Toolbox/HelpDrawer';
 
 const styles = theme => ({
     layoutCard: {
         maxWidth: '1200px',
         margin: '24px auto',
         width: '90%',
-        padding: 0
+        padding: 0,
     },
     layoutTitle: {
         maxWidth: 1200,
@@ -18,9 +18,9 @@ const styles = theme => ({
         margin: '12px auto',
         padding: 0,
         [theme.breakpoints.down('sm')]: {
-            margin: '0 auto 12px auto'
-        }
-    }
+            margin: '0 auto 12px auto',
+        },
+    },
 });
 
 export class Page extends Component {
@@ -28,11 +28,11 @@ export class Page extends Component {
         title: PropTypes.any,
         help: PropTypes.object,
         children: PropTypes.any,
-        classes: PropTypes.object
+        classes: PropTypes.object,
     };
 
     render() {
-        const {classes, title, children, help} = this.props;
+        const { classes, title, children, help } = this.props;
         return (
             <Grid container className="StandardPage">
                 {title &&
@@ -49,6 +49,6 @@ export class Page extends Component {
     }
 }
 
-const StyledPage = withStyles(styles, {withTheme: true})(Page);
+const StyledPage = withStyles(styles, { withTheme: true })(Page);
 const StandardPage = (props) => <StyledPage {...props}/>;
 export default StandardPage;

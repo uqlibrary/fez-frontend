@@ -56,7 +56,7 @@ export const isValidDOIValue = value => {
         /^10.1002\/[^\s]+$/i,
         /^10.\d{4}\/\d+-\d+X?\(\d+\)\d+<[\d\w]+:[\d\w]*>\d+.\d+.\w+;\d$/i,
         /^10.1021\/\w\w\d+$/i,
-        /^10.1207\/[\w\d]+\&\d+_\d+$/i
+        /^10.1207\/[\w\d]+\&\d+_\d+$/i,
     ];
 
     return regexGroup.reduce((isValid, regex) => (regex.test(value.trim()) || isValid), false);
@@ -227,19 +227,19 @@ export const translateFormErrorsToText = (formErrors) => {
     return errorMessagesList.length > 0 ? errorMessagesList : null;
 };
 
-export const getErrorAlertProps = ({submitting = false,
-    error, formErrors, submitSucceeded = false, alertLocale = {}}) => {
+export const getErrorAlertProps = ({ submitting = false,
+    error, formErrors, submitSucceeded = false, alertLocale = {} }) => {
     let alertProps = null;
     if (submitting) {
-        alertProps = {...alertLocale.progressAlert};
+        alertProps = { ...alertLocale.progressAlert };
     } else if (submitSucceeded) {
-        alertProps = {...alertLocale.successAlert};
+        alertProps = { ...alertLocale.successAlert };
     } else {
         if (error) {
             // error is set by submit failed, it's reset once form is re-validated (updated for re-submit)
             alertProps = {
                 ...alertLocale.errorAlert,
-                message: alertLocale.errorAlert.message ? alertLocale.errorAlert.message(error) : error
+                message: alertLocale.errorAlert.message ? alertLocale.errorAlert.message(error) : error,
             };
         } else if (formErrors && formErrors.size === undefined) {
             // formErrors is set by form validation or validate method, it's reset once form is re-validated
@@ -255,7 +255,7 @@ export const getErrorAlertProps = ({submitting = false,
                         }
                     </ul>
                 </span>);
-            alertProps = {...alertLocale.validationAlert, message: message};
+            alertProps = { ...alertLocale.validationAlert, message: message };
         }
     }
     return alertProps;

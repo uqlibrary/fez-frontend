@@ -18,9 +18,9 @@ export const CommunityForm = () => (<Async load={import('modules/Admin/Community
 export const ThirdPartyLookupTool = () => (<Async load={import('modules/ThirdPartyLookupTool/containers/ThirdPartyLookupTool')} />);
 
 // always load components
-export {AddMissingRecord, FindRecords, RecordsSearchResults, NewRecord} from 'modules/AddMissingRecord';
-export {Index} from 'modules/Index';
-export {Masquerade} from 'modules/Masquerade';
-export {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
-export {SearchRecords} from 'modules/SearchRecords';
-export {MyRecords, MyDataCollections, MyIncompleteRecords} from 'modules/MyRecords';
+export { AddMissingRecord, FindRecords, RecordsSearchResults, NewRecord } from 'modules/AddMissingRecord';
+export { Index } from 'modules/Index';
+export { Masquerade } from 'modules/Masquerade';
+export { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
+export { SearchRecords } from 'modules/SearchRecords';
+export { MyRecords, MyDataCollections, MyIncompleteRecords } from 'modules/MyRecords';

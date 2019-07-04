@@ -1,1 +1,1 @@
-export {default as OfflineSnackbar} from './components/OfflineSnackbar';
+export { default as OfflineSnackbar } from './components/OfflineSnackbar';

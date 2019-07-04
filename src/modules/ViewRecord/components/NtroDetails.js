@@ -1,47 +1,47 @@
-import React, {PureComponent} from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import locale from 'locale/viewRecord';
-import {default as global} from 'locale/global';
-import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
-import {withStyles} from '@material-ui/core/styles';
+import { default as global } from 'locale/global';
+import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
+import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import {general} from 'config';
+import { general } from 'config';
 import ReactHtmlParser from 'react-html-parser';
-import {pathConfig} from 'config/routes';
-import {Link} from 'react-router-dom';
+import { pathConfig } from 'config/routes';
+import { Link } from 'react-router-dom';
 import {
     NTRO_SUBTYPE_CW_TEXTUAL_WORK,
     DOCUMENT_TYPE_JOURNAL_ARTICLE,
     DOCUMENT_TYPE_BOOK_CHAPTER,
     DOCUMENT_TYPE_BOOK,
-    DOCUMENT_TYPE_RESEARCH_REPORT
+    DOCUMENT_TYPE_RESEARCH_REPORT,
 } from 'config/general';
 
 const styles = (theme) => ({
     gridRow: {
-        borderBottom: `1px solid ${theme.palette.secondary.light}`
+        borderBottom: `1px solid ${theme.palette.secondary.light}`,
     },
     richTextParagraphFix: {
         '& p:first-of-type': {
-            marginTop: 0
-        }
-    }
+            marginTop: 0,
+        },
+    },
 });
 
 export class NtroDetailsClass extends PureComponent {
     static propTypes = {
         publication: PropTypes.object.isRequired,
         classes: PropTypes.object,
-        account: PropTypes.object
+        account: PropTypes.object,
     };
 
-    ViewNtroRow = ({heading, subheading, className, data}) => (
-        <div style={{padding: 8}}>
+    ViewNtroRow = ({ heading, subheading, className, data }) => (
+        <div style={{ padding: 8 }}>
             <Grid container spacing={16} className={this.props.classes.gridRow} alignItems="flex-start">
                 <Grid item xs={12} sm={3}>
-                    <Typography variant="body2" component={'span'} classes={{root: this.props.classes.header}}>{heading}</Typography>
-                    {!!subheading && <Typography variant="caption" component={'span'} classes={{root: this.props.classes.header}}>{subheading}</Typography>}
+                    <Typography variant="body2" component={'span'} classes={{ root: this.props.classes.header }}>{heading}</Typography>
+                    {!!subheading && <Typography variant="caption" component={'span'} classes={{ root: this.props.classes.header }}>{subheading}</Typography>}
                 </Grid>
                 <Grid item xs={12} sm={9} className={this.props.classes.data}>
                     <Typography variant="body2" component={'span'} className={className}>{data}</Typography></Grid>
@@ -50,7 +50,7 @@ export class NtroDetailsClass extends PureComponent {
     );
 
     render() {
-        const {publication} = this.props;
+        const { publication } = this.props;
         const docType = publication.rek_display_type_lookup;
         const subType = publication.rek_subtype;
         if (!general.NTRO_SUBTYPES.includes(subType)) {
@@ -111,14 +111,13 @@ export class NtroDetailsClass extends PureComponent {
                     }
                     {/* NTRO Abstract */}
                     {
-                        publication.rek_formatted_abstract ?
-                            <this.ViewNtroRow
+                        publication.rek_formatted_abstract
+                            ? <this.ViewNtroRow
                                 className={this.props.classes.richTextParagraphFix}
                                 heading={locale.viewRecord.headings.NTRO.ntroAbstract}
                                 data={ReactHtmlParser(publication.rek_formatted_abstract)}
                             />
-                            :
-                            <this.ViewNtroRow
+                            :                            <this.ViewNtroRow
                                 heading={locale.viewRecord.headings.NTRO.ntroAbstract}
                                 data={publication.rek_description}
                             />
@@ -170,8 +169,8 @@ export class NtroDetailsClass extends PureComponent {
                     }
                     {/* Volume number */}
                     {
-                        docType !== DOCUMENT_TYPE_JOURNAL_ARTICLE && subType !== NTRO_SUBTYPE_CW_TEXTUAL_WORK
-                        && publication.fez_record_search_key_volume_number && publication.fez_record_search_key_volume_number.rek_volume_number &&
+                        docType !== DOCUMENT_TYPE_JOURNAL_ARTICLE && subType !== NTRO_SUBTYPE_CW_TEXTUAL_WORK &&
+                        publication.fez_record_search_key_volume_number && publication.fez_record_search_key_volume_number.rek_volume_number &&
                         <this.ViewNtroRow
                             heading={locale.viewRecord.headings.NTRO.rek_volume_number}
                             data={publication.fez_record_search_key_volume_number.rek_volume_number}
@@ -179,8 +178,8 @@ export class NtroDetailsClass extends PureComponent {
                     }
                     {/* Issue number */}
                     {
-                        docType !== DOCUMENT_TYPE_JOURNAL_ARTICLE && subType !== NTRO_SUBTYPE_CW_TEXTUAL_WORK
-                        && publication.fez_record_search_key_issue_number && publication.fez_record_search_key_issue_number.rek_issue_number &&
+                        docType !== DOCUMENT_TYPE_JOURNAL_ARTICLE && subType !== NTRO_SUBTYPE_CW_TEXTUAL_WORK &&
+                        publication.fez_record_search_key_issue_number && publication.fez_record_search_key_issue_number.rek_issue_number &&
                         <this.ViewNtroRow
                             heading={locale.viewRecord.headings.NTRO.rek_issue_number}
                             data={publication.fez_record_search_key_issue_number.rek_issue_number}
@@ -188,8 +187,8 @@ export class NtroDetailsClass extends PureComponent {
                     }
                     {/* Start page */}
                     {
-                        docType !== DOCUMENT_TYPE_JOURNAL_ARTICLE && subType !== NTRO_SUBTYPE_CW_TEXTUAL_WORK && docType !== DOCUMENT_TYPE_BOOK_CHAPTER
-                        && publication.fez_record_search_key_start_page && publication.fez_record_search_key_start_page.rek_start_page &&
+                        docType !== DOCUMENT_TYPE_JOURNAL_ARTICLE && subType !== NTRO_SUBTYPE_CW_TEXTUAL_WORK && docType !== DOCUMENT_TYPE_BOOK_CHAPTER &&
+                        publication.fez_record_search_key_start_page && publication.fez_record_search_key_start_page.rek_start_page &&
                         <this.ViewNtroRow
                             heading={locale.viewRecord.headings.NTRO.rek_start_page}
                             data={publication.fez_record_search_key_start_page.rek_start_page}
@@ -197,8 +196,8 @@ export class NtroDetailsClass extends PureComponent {
                     }
                     {/* End page */}
                     {
-                        docType !== DOCUMENT_TYPE_JOURNAL_ARTICLE && subType !== NTRO_SUBTYPE_CW_TEXTUAL_WORK
-                        && docType !== DOCUMENT_TYPE_BOOK_CHAPTER && publication.fez_record_search_key_end_page && publication.fez_record_search_key_end_page.rek_end_page &&
+                        docType !== DOCUMENT_TYPE_JOURNAL_ARTICLE && subType !== NTRO_SUBTYPE_CW_TEXTUAL_WORK &&
+                        docType !== DOCUMENT_TYPE_BOOK_CHAPTER && publication.fez_record_search_key_end_page && publication.fez_record_search_key_end_page.rek_end_page &&
                         <this.ViewNtroRow
                             heading={locale.viewRecord.headings.NTRO.rek_end_page}
                             data={publication.fez_record_search_key_end_page.rek_end_page}
@@ -206,10 +205,10 @@ export class NtroDetailsClass extends PureComponent {
                     }
                     {/* Total pages */}
                     {
-                        docType !== DOCUMENT_TYPE_BOOK_CHAPTER
-                        && (docType !== DOCUMENT_TYPE_BOOK && subType !== NTRO_SUBTYPE_CW_TEXTUAL_WORK)
-                        && docType !== DOCUMENT_TYPE_RESEARCH_REPORT
-                        && publication.fez_record_search_key_total_pages && publication.fez_record_search_key_total_pages.rek_total_pages &&
+                        docType !== DOCUMENT_TYPE_BOOK_CHAPTER &&
+                        (docType !== DOCUMENT_TYPE_BOOK && subType !== NTRO_SUBTYPE_CW_TEXTUAL_WORK) &&
+                        docType !== DOCUMENT_TYPE_RESEARCH_REPORT &&
+                        publication.fez_record_search_key_total_pages && publication.fez_record_search_key_total_pages.rek_total_pages &&
                         <this.ViewNtroRow
                             heading={locale.viewRecord.headings.NTRO.rek_total_pages}
                             data={publication.fez_record_search_key_total_pages.rek_total_pages}
@@ -268,6 +267,6 @@ export class NtroDetailsClass extends PureComponent {
     }
 }
 
-const StyledNtroDetailsClass = withStyles(styles, {withTheme: true})(NtroDetailsClass);
+const StyledNtroDetailsClass = withStyles(styles, { withTheme: true })(NtroDetailsClass);
 const NtroDetails = (props) => <StyledNtroDetailsClass {...props}/>;
 export default NtroDetails;

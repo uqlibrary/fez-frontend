@@ -34,14 +34,15 @@ export const getIssueValues = (data) => {
         comments: data.comments || null,
         files: data.files &&
             data.files.queue
-            ? data.files.queue.map(item => item.name).toString().replace(/,/g, ', ')
+            ? data.files.queue.map(item => item.name).toString()
+                .replace(/,/g, ', ')
             : null,
         link: data.rek_link || null,
     };
 };
 
 const getIssuesRequest = (text) => ({
-    issue: text
+    issue: text,
 });
 
 /* getFixIssueRequest - returns fix record issue request object
@@ -66,12 +67,12 @@ export const getRecordLinkSearchKey = (data) => {
     return {
         fez_record_search_key_link: [{
             rek_link: data.rek_link,
-            rek_link_order: 1
+            rek_link_order: 1,
         }],
         fez_record_search_key_link_description: [{
             rek_link_description: locale.global.defaultLinkDescription,
-            rek_link_description_order: 1
-        }]
+            rek_link_description_order: 1,
+        }],
     };
 };
 
@@ -86,19 +87,19 @@ export const getRecordFileAttachmentSearchKey = (files, record) => {
     const CLOSED_ACCESS_ID = 8;
 
     // if record already has files, add new files to the end of the list (for patch)
-    const initialCount = record && record.fez_record_search_key_file_attachment_name ?
-        record.fez_record_search_key_file_attachment_name.length : 0;
+    const initialCount = record && record.fez_record_search_key_file_attachment_name
+        ? record.fez_record_search_key_file_attachment_name.length : 0;
     const attachmentNames = files
         .map((item, index) => ({
             rek_file_attachment_name: item.name,
-            rek_file_attachment_name_order: initialCount + index + 1
+            rek_file_attachment_name_order: initialCount + index + 1,
         }));
     const attachmentEmbargoDates = files
         .map((item, index) => {
             if (!item.hasOwnProperty('date') || !item.date || moment(item.date).isSame(moment(), 'day')) return null;
             return {
                 rek_file_attachment_embargo_date: moment(item.date).format(locale.global.embargoDateFormat),
-                rek_file_attachment_embargo_date_order: initialCount + index + 1
+                rek_file_attachment_embargo_date_order: initialCount + index + 1,
             };
         })
         .filter((file) => (file !== null));
@@ -110,7 +111,7 @@ export const getRecordFileAttachmentSearchKey = (files, record) => {
                     (item.date && moment(item.date).isAfter())
                     ? CLOSED_ACCESS_ID
                     : item.access_condition_id,
-                rek_file_attachment_access_condition_order: initialCount + index + 1
+                rek_file_attachment_access_condition_order: initialCount + index + 1,
             };
         })
         .filter((file) => (file !== null));
@@ -118,16 +119,16 @@ export const getRecordFileAttachmentSearchKey = (files, record) => {
     return {
         fez_record_search_key_file_attachment_name: [
             ...((record && record.fez_record_search_key_file_attachment_name) || []),
-            ...attachmentNames
+            ...attachmentNames,
         ],
         fez_record_search_key_file_attachment_embargo_date: [
             ...((record && record.fez_record_search_key_file_attachment_embargo_date) || []),
-            ...attachmentEmbargoDates
+            ...attachmentEmbargoDates,
         ],
         fez_record_search_key_file_attachment_access_condition: [
             ...((record && record.fez_record_search_key_file_attachment_access_condition) || []),
-            ...attachmentAccessConditions
-        ]
+            ...attachmentAccessConditions,
+        ],
     };
 };
 
@@ -140,8 +141,8 @@ export const getRecordAuthorsSearchKey = (authors) => {
     return {
         fez_record_search_key_author: authors.map((item, index) => ({
             rek_author: item.nameAsPublished,
-            rek_author_order: index + 1
-        }))
+            rek_author_order: index + 1,
+        })),
     };
 };
 
@@ -151,9 +152,9 @@ export const getDatasetCreatorRolesSearchKey = (creators) => {
         fez_record_search_key_author_role: creators.map((item, index) => (
             !!item.creatorRole && {
                 rek_author_role: item.creatorRole,
-                rek_author_role_order: index + 1
+                rek_author_role_order: index + 1,
             } || {}
-        ))
+        )),
     };
 };
 
@@ -162,8 +163,8 @@ export const getRecordSupervisorsSearchKey = (supervisors) => {
     return {
         fez_record_search_key_supervisor: supervisors.map((item, index) => ({
             rek_supervisor: item.nameAsPublished,
-            rek_supervisor_order: index + 1
-        }))
+            rek_supervisor_order: index + 1,
+        })),
     };
 };
 
@@ -181,24 +182,24 @@ export const getRecordAuthorsIdSearchKey = (authors, defaultAuthorId) => {
         return {
             fez_record_search_key_author_id: [{
                 rek_author_id: defaultAuthorId,
-                rek_author_id_order: 1
-            }]
+                rek_author_id_order: 1,
+            }],
         };
     }
 
     return {
         fez_record_search_key_author_id: authors.map(
             (item, index) => (
-                item.hasOwnProperty('rek_author_id') && item.hasOwnProperty('rek_author_id_order') ?
-                    item :
-                    {
+                item.hasOwnProperty('rek_author_id') && item.hasOwnProperty('rek_author_id_order')
+                    ? item
+                    : {
                         rek_author_id: (item.hasOwnProperty('aut_id') && item.aut_id) ||
                             (item.hasOwnProperty('authorId') && item.authorId) ||
                             0,
-                        rek_author_id_order: index + 1
+                        rek_author_id_order: index + 1,
                     }
             )
-        )
+        ),
     };
 };
 
@@ -210,9 +211,9 @@ export const getRecordAuthorAffiliationSearchKey = (authors) => {
             .map(
                 (item, index) => ({
                     rek_author_affiliation_name: !!item.orgaff && item.orgaff.length > 0 ? item.orgaff : 'Missing',
-                    rek_author_affiliation_name_order: index + 1
+                    rek_author_affiliation_name_order: index + 1,
                 })
-            )
+            ),
     };
 };
 
@@ -224,9 +225,9 @@ export const getRecordAuthorAffiliationTypeSearchKey = (authors) => {
             .map(
                 (item, index) => ({
                     rek_author_affiliation_type: (item.orgtype && parseInt(item.orgtype, 10)) || 0,
-                    rek_author_affiliation_type_order: index + 1
+                    rek_author_affiliation_type_order: index + 1,
                 })
-            )
+            ),
     };
 };
 
@@ -239,7 +240,7 @@ export const getRecordAuthorAffiliationTypeSearchKey = (authors) => {
 export const unclaimRecordAuthorsIdSearchKey = (authors, authorId) => {
     if (!authors || authors.length === 0) {
         return {
-            fez_record_search_key_author_id: []
+            fez_record_search_key_author_id: [],
         };
     }
 
@@ -254,10 +255,10 @@ export const unclaimRecordAuthorsIdSearchKey = (authors, authorId) => {
                         rek_author_id: 0,
                         rek_author_id_order: item.hasOwnProperty('rek_author_id_order')
                             ? item.rek_author_id_order
-                            : index + 1
+                            : index + 1,
                     }
             )
-        )
+        ),
     };
 };
 
@@ -269,7 +270,7 @@ export const unclaimRecordAuthorsIdSearchKey = (authors, authorId) => {
 export const unclaimRecordContributorsIdSearchKey = (contributors, contributorId) => {
     if (!contributors || contributors.length === 0) {
         return {
-            fez_record_search_key_contributor_id: []
+            fez_record_search_key_contributor_id: [],
         };
     }
 
@@ -284,10 +285,10 @@ export const unclaimRecordContributorsIdSearchKey = (contributors, contributorId
                         rek_contributor_id: 0,
                         rek_contributor_id_order: item.hasOwnProperty('rek_contributor_id_order')
                             ? item.rek_contributor_id_order
-                            : index + 1
+                            : index + 1,
                     }
             )
-        )
+        ),
     };
 };
 
@@ -301,8 +302,8 @@ export const getRecordContributorsSearchKey = (authors) => {
     return {
         fez_record_search_key_contributor: authors.map((item, index) => ({
             rek_contributor: item.nameAsPublished,
-            rek_contributor_order: index + 1
-        }))
+            rek_contributor_order: index + 1,
+        })),
     };
 };
 
@@ -321,24 +322,24 @@ export const getRecordContributorsIdSearchKey = (authors, defaultAuthorId) => {
         return {
             fez_record_search_key_contributor_id: [{
                 rek_contributor_id: defaultAuthorId,
-                rek_contributor_id_order: 1
-            }]
+                rek_contributor_id_order: 1,
+            }],
         };
     }
 
     return {
         fez_record_search_key_contributor_id: authors.map(
             (item, index) => (
-                item.hasOwnProperty('rek_contributor_id') && item.hasOwnProperty('rek_contributor_id_order') ?
-                    item :
-                    {
+                item.hasOwnProperty('rek_contributor_id') && item.hasOwnProperty('rek_contributor_id_order')
+                    ? item
+                    : {
                         rek_contributor_id: (item.hasOwnProperty('aut_id') && item.aut_id) ||
                             (item.hasOwnProperty('authorId') && item.authorId) ||
                             null,
-                        rek_contributor_id_order: index + 1
+                        rek_contributor_id_order: index + 1,
                     }
             )
-        )
+        ),
     };
 };
 
@@ -352,8 +353,8 @@ export const getRecordSubjectSearchKey = (subject) => {
     return {
         fez_record_search_key_subject: subject.map((item) => ({
             rek_subject: item.rek_value.key,
-            rek_subject_order: item.rek_order
-        }))
+            rek_subject_order: item.rek_order,
+        })),
     };
 };
 
@@ -369,7 +370,7 @@ export const getAuthorIdentifierOrcidPatchRequest = (authorId, orcidId, data = n
 
     const patchRequest = {
         aut_id: authorId,
-        aut_orcid_id: orcidId
+        aut_orcid_id: orcidId,
     };
 
     // additional data is set for ORCID
@@ -391,16 +392,16 @@ export const getDatasetContactDetailSearchKeys = (contact) => {
         fez_record_search_key_contributor: [{
             rek_contributor: contact.contactName,
             rek_contributor_id: null,
-            rek_contributor_order: 1
+            rek_contributor_order: 1,
         }],
         fez_record_search_key_contributor_id: [{
             rek_contributor_id: isNaN(contact.contactNameId.id) ? 0 : parseInt(contact.contactNameId.id, 10),
-            rek_contributor_id_order: 1
+            rek_contributor_id_order: 1,
         }],
         fez_record_search_key_contact_details_email: [{
             rek_contact_details_email: contact.contactEmail,
-            rek_contact_details_email_order: 1
-        }]
+            rek_contact_details_email_order: 1,
+        }],
     };
 };
 
@@ -410,8 +411,8 @@ export const getGeographicAreaSearchKey = (area = null) => {
     return {
         fez_record_search_key_geographic_area: [{
             rek_geographic_area: area,
-            rek_geographic_area_order: 1
-        }]
+            rek_geographic_area_order: 1,
+        }],
     };
 };
 
@@ -420,7 +421,7 @@ export const getRecordAbstractDescriptionSearchKey = (abstract = null) => {
 
     return {
         rek_description: abstract.plainText,
-        rek_formatted_abstract: abstract.htmlText
+        rek_formatted_abstract: abstract.htmlText,
     };
 };
 
@@ -432,23 +433,23 @@ export const getGrantsListSearchKey = (grants) => {
             ...grants
                 .map((item, index) => ({
                     rek_grant_agency: item.grantAgencyName || 'Not set',
-                    rek_grant_agency_order: index + 1
-                }))
+                    rek_grant_agency_order: index + 1,
+                })),
         ],
         fez_record_search_key_grant_id: [
             ...grants
                 .map((item, index) => ({
                     rek_grant_id: item.grantId || 'Not set',
-                    rek_grant_id_order: index + 1
-                }))
+                    rek_grant_id_order: index + 1,
+                })),
         ],
         fez_record_search_key_grant_agency_type: [
             ...grants
                 .map((item, index) => ({
                     rek_grant_agency_type: parseInt(item.grantAgencyType, 10) || 454045, // Vocab value for "Not set"
-                    rek_grant_agency_type_order: index + 1
-                }))
-        ]
+                    rek_grant_agency_type_order: index + 1,
+                })),
+        ],
     };
 };
 
@@ -457,8 +458,8 @@ export const getLanguageSearchKey = (languages) => {
         return {
             fez_record_search_key_language: [{
                 rek_language: 'eng',
-                rek_language_order: 1
-            }]
+                rek_language_order: 1,
+            }],
         };
     }
 
@@ -467,9 +468,9 @@ export const getLanguageSearchKey = (languages) => {
             ...languages
                 .map((item, index) => ({
                     rek_language: item,
-                    rek_language_order: index + 1
-                }))
-        ]
+                    rek_language_order: index + 1,
+                })),
+        ],
     };
 };
 
@@ -480,7 +481,7 @@ export const getNtroMetadataSearchKeys = (data) => {
     if (!!data.significance) {
         ntroMetadata.fez_record_search_key_significance = data.authors.map((item, index) => ({
             rek_significance: item.selected === true ? data.significance : 0,
-            rek_significance_order: index + 1
+            rek_significance_order: index + 1,
         }));
     }
 
@@ -489,7 +490,7 @@ export const getNtroMetadataSearchKeys = (data) => {
             rek_creator_contribution_statement: item.selected === true
                 ? data.impactStatement.htmlText
                 : locale.global.defaultAuthorDataPlaceholder,
-            rek_creator_contribution_statement_order: index + 1
+            rek_creator_contribution_statement_order: index + 1,
         }));
     }
 
@@ -502,8 +503,8 @@ export const getQualityIndicatorSearchKey = (qualityIndicators = []) => {
     return {
         fez_record_search_key_quality_indicator: qualityIndicators.map((item, index) => ({
             rek_quality_indicator: item,
-            rek_quality_indicator_order: index + 1
-        }))
+            rek_quality_indicator_order: index + 1,
+        })),
     };
 };
 
@@ -513,8 +514,8 @@ export const getContentIndicatorSearchKey = (contentIndicators = []) => {
     return {
         fez_record_search_key_content_indicator: contentIndicators.map((item, index) => ({
             rek_content_indicator: item,
-            rek_content_indicator_order: index + 1
-        }))
+            rek_content_indicator_order: index + 1,
+        })),
     };
 };
 
@@ -532,28 +533,28 @@ export const getSearchKey = (searchKey, currentAuthorOrder, initialValues = [], 
 
     const currentAuthorSearchKeyObject = {
         [searchKey.value.subkey]: value,
-        [searchKey.value.orderKey]: currentAuthorOrder
+        [searchKey.value.orderKey]: currentAuthorOrder,
     };
 
     let authorOrderMatched = false;
 
-    const searchKeyValues = initialValues.length > 0 ?
-        initialValues.map(initialValue => {
+    const searchKeyValues = initialValues.length > 0
+        ? initialValues.map(initialValue => {
             if (initialValue[searchKey.value.orderKey] === currentAuthorOrder) {
                 authorOrderMatched = true;
                 return currentAuthorSearchKeyObject;
             } else return initialValue;
-        }) :
-        [currentAuthorSearchKeyObject];
+        })
+        : [currentAuthorSearchKeyObject];
 
     return {
         [searchKey.key]: (
             initialValues.length > 0 &&
             !authorOrderMatched && [
                 ...searchKeyValues,
-                currentAuthorSearchKeyObject
+                currentAuthorSearchKeyObject,
             ] || searchKeyValues
-        )
+        ),
     };
 };
 
@@ -567,21 +568,21 @@ export const getSignificanceAndContributionStatementSearchKeys = (data) => {
             key: 'fez_record_search_key_significance',
             value: {
                 subkey: 'rek_significance',
-                orderKey: 'rek_significance_order'
-            }
+                orderKey: 'rek_significance_order',
+            },
         }, currentAuthorOrder, data.initialSignificance, data.significance),
         ...getSearchKey({
             key: 'fez_record_search_key_creator_contribution_statement',
             value: {
                 subkey: 'rek_creator_contribution_statement',
-                orderKey: 'rek_creator_contribution_statement_order'
-            }
+                orderKey: 'rek_creator_contribution_statement_order',
+            },
         }, currentAuthorOrder, data.initialContributionStatements, (
                 (data.impactStatement || {}).htmlText ||
                 (data.impactStatement || {}).plainText ||
                 null
             )
-        )
+        ),
     };
 };
 

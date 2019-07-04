@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 export default class Async extends React.Component {
     static propTypes = {
         load: PropTypes.instanceOf(Promise).isRequired,
-        componentProps: PropTypes.any
+        componentProps: PropTypes.any,
     };
     componentWillMount = () => {
         this.cancelUpdate = false;
@@ -21,7 +21,7 @@ export default class Async extends React.Component {
     };
 
     render = () => {
-        const {componentProps} = this.props;
+        const { componentProps } = this.props;
         if (this.C) {
             return this.C.default
                 ? <this.C.default {...componentProps} />

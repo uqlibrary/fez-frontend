@@ -1,4 +1,4 @@
-import {FileUploadRowDefaultView} from './FileUploadRowDefaultView';
+import { FileUploadRowDefaultView } from './FileUploadRowDefaultView';
 import FileUploadRowDefaultViewWithStyles from './FileUploadRowDefaultView';
 
 const getProps = (testProps = {}) => ({
@@ -10,12 +10,12 @@ const getProps = (testProps = {}) => ({
     requireOpenAccessStatus: true,
     disabled: false,
     classes: {
-        icon: ''
+        icon: '',
     },
     onDelete: jest.fn(),
     onEmbargoDateChange: jest.fn(),
     onAccessConditionChange: jest.fn(),
-    ...testProps
+    ...testProps,
 });
 
 function setup(testProps, isShallow = true) {
@@ -35,21 +35,21 @@ describe('Component FileUploadRowDefaultView', () => {
 
     it('should not render embargo date picker if access condition is set to closed access', () => {
         const wrapper = setup({
-            accessConditionId: 8
+            accessConditionId: 8,
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render embargo date picker if access condition is set to open access', () => {
         const wrapper = setup({
-            accessConditionId: 9
+            accessConditionId: 9,
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should not render access selector or date picker if access condition is not required to select', () => {
         const wrapper = setup({
-            requireOpenAccessStatus: false
+            requireOpenAccessStatus: false,
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });

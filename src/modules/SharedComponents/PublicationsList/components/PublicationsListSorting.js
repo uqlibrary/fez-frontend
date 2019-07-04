@@ -1,14 +1,14 @@
-import React, {PureComponent} from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import {locale} from 'locale';
+import { locale } from 'locale';
 import Select from '@material-ui/core/Select';
 import FormControl from '@material-ui/core/FormControl';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
-import {ExportPublications} from 'modules/SharedComponents/ExportPublications';
-import {withStyles} from '@material-ui/core/styles';
+import { ExportPublications } from 'modules/SharedComponents/ExportPublications';
+import { withStyles } from '@material-ui/core/styles';
 
 const styles = {};
 
@@ -25,11 +25,11 @@ export class PublicationsListSorting extends PureComponent {
             to: PropTypes.number,
             total: PropTypes.number,
             per_page: PropTypes.number,
-            current_page: PropTypes.number
+            current_page: PropTypes.number,
         }),
         disabled: PropTypes.bool,
         onExportPublications: PropTypes.func,
-        canUseExport: PropTypes.bool
+        canUseExport: PropTypes.bool,
     };
 
     constructor(props) {
@@ -54,7 +54,7 @@ export class PublicationsListSorting extends PureComponent {
     pageSizeChanged = (event) => {
         this.setState({
             pageSize: event.target.value,
-            exportPublicationsFormat: null
+            exportPublicationsFormat: null,
         });
         this.props.onPageSizeChanged(event.target.value);
     }
@@ -62,7 +62,7 @@ export class PublicationsListSorting extends PureComponent {
     orderDirectionsChanged = (event) => {
         this.setState({
             sortDirection: event.target.value,
-            exportPublicationsFormat: null
+            exportPublicationsFormat: null,
         });
         this.props.onSortByChanged(this.state.sortBy, event.target.value);
     }
@@ -70,16 +70,16 @@ export class PublicationsListSorting extends PureComponent {
     sortByChanged = (event) => {
         this.setState({
             sortBy: event.target.value,
-            exportPublicationsFormat: null
+            exportPublicationsFormat: null,
         });
         this.props.onSortByChanged(event.target.value, this.state.sortDirection);
     }
 
     exportPublicationsFormatChanged = (value) => {
         this.setState({
-            exportPublicationsFormat: value
+            exportPublicationsFormat: value,
         });
-        this.props.onExportPublications({exportPublicationsFormat: value});
+        this.props.onExportPublications({ exportPublicationsFormat: value });
     }
 
     render() {
@@ -162,4 +162,4 @@ export class PublicationsListSorting extends PureComponent {
     }
 }
 
-export default withStyles(styles, {withTheme: true})(PublicationsListSorting);
+export default withStyles(styles, { withTheme: true })(PublicationsListSorting);

@@ -1,11 +1,11 @@
-import React, {PureComponent} from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import * as Partials from './partials';
 
 export default class JournalArticleCitation extends PureComponent {
     static propTypes = {
         publication: PropTypes.object.isRequired,
-        hideDoiLink: PropTypes.bool
+        hideDoiLink: PropTypes.bool,
     };
 
     constructor(props) {
@@ -16,14 +16,14 @@ export default class JournalArticleCitation extends PureComponent {
         const record = {
             id: this.props.publication.rek_pid,
             title: this.props.publication.rek_title,
-            journalName: this.props.publication.fez_record_search_key_journal_name ?
-                this.props.publication.fez_record_search_key_journal_name.rek_journal_name : null,
-            volumeNumber: this.props.publication.fez_record_search_key_volume_number ?
-                this.props.publication.fez_record_search_key_volume_number.rek_volume_number : null,
-            issueNumber: this.props.publication.fez_record_search_key_issue_number ?
-                this.props.publication.fez_record_search_key_issue_number.rek_issue_number : null,
-            doi: this.props.publication.fez_record_search_key_doi ?
-                this.props.publication.fez_record_search_key_doi.rek_doi : null
+            journalName: this.props.publication.fez_record_search_key_journal_name
+                ? this.props.publication.fez_record_search_key_journal_name.rek_journal_name : null,
+            volumeNumber: this.props.publication.fez_record_search_key_volume_number
+                ? this.props.publication.fez_record_search_key_volume_number.rek_volume_number : null,
+            issueNumber: this.props.publication.fez_record_search_key_issue_number
+                ? this.props.publication.fez_record_search_key_issue_number.rek_issue_number : null,
+            doi: this.props.publication.fez_record_search_key_doi
+                ? this.props.publication.fez_record_search_key_doi.rek_doi : null,
         };
 
         // eSpace citation view for Journal Article

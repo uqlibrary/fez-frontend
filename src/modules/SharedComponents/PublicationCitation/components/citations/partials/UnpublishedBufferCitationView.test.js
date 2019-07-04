@@ -1,4 +1,4 @@
-import {UnpublishedBufferCitationView} from './UnpublishedBufferCitationView';
+import { UnpublishedBufferCitationView } from './UnpublishedBufferCitationView';
 
 function setup(testProps, isShallow = true) {
     // build full props list required by the component
@@ -16,32 +16,32 @@ describe('UnpublishedBufferCitationView test button click sets value', () => {
     });
 
     it('should handle handleClick to open', () => {
-        const mockEvent = {currentTarget: jest.fn()};
+        const mockEvent = { currentTarget: jest.fn() };
         const wrapper = setup({});
 
-        expect(wrapper.state()).toEqual({anchorEl: null});
+        expect(wrapper.state()).toEqual({ anchorEl: null });
         expect(toJson(wrapper)).toMatchSnapshot();
 
         wrapper.instance().handleClick(mockEvent);
 
-        expect(wrapper.state()).toEqual({anchorEl: mockEvent.currentTarget});
+        expect(wrapper.state()).toEqual({ anchorEl: mockEvent.currentTarget });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should handle handleClose to close', () => {
-        const mockEvent = {currentTarget: jest.fn()};
+        const mockEvent = { currentTarget: jest.fn() };
         const wrapper = setup({});
 
-        expect(wrapper.state()).toEqual({anchorEl: null});
+        expect(wrapper.state()).toEqual({ anchorEl: null });
         expect(toJson(wrapper)).toMatchSnapshot(); // page loaded
 
         wrapper.instance().handleClick(mockEvent);
-        expect(wrapper.state()).toEqual({anchorEl: mockEvent.currentTarget});
+        expect(wrapper.state()).toEqual({ anchorEl: mockEvent.currentTarget });
         expect(toJson(wrapper)).toMatchSnapshot(); // they've opened it
 
         wrapper.instance().handleClose(mockEvent);
 
-        expect(wrapper.state()).toEqual({anchorEl: null});
+        expect(wrapper.state()).toEqual({ anchorEl: null });
         expect(toJson(wrapper)).toMatchSnapshot(); // and they have successfully closed it
     });
 
@@ -49,7 +49,7 @@ describe('UnpublishedBufferCitationView test button click sets value', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
 
-        let menu = wrapper.find('WithStyles(MenuItem)');
+        const menu = wrapper.find('WithStyles(MenuItem)');
         expect(menu.length).toEqual(5);
     });
 

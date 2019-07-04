@@ -1,16 +1,16 @@
-import React, {PureComponent} from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import ExternalLink from 'modules/SharedComponents/ExternalLink/components/ExternalLink';
 import AudioPlayer from './AudioPlayer';
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
 import Typography from '@material-ui/core/Typography';
-import {withStyles} from '@material-ui/core';
+import { withStyles } from '@material-ui/core';
 
 export const styles = (theme) => ({
     filename: {
         ...theme.typography.body2,
-    }
+    },
 });
 
 export class FileName extends PureComponent {
@@ -22,7 +22,7 @@ export class FileName extends PureComponent {
         previewMediaUrl: PropTypes.string.isRequired,
         onFileSelect: PropTypes.func.isRequired,
         allowDownload: PropTypes.bool,
-        classes: PropTypes.object
+        classes: PropTypes.object,
     };
 
     isAudio = (mimeType) => {
@@ -47,7 +47,7 @@ export class FileName extends PureComponent {
     }
 
     render() {
-        const {pid, fileName, allowDownload, mimeType, mediaUrl, previewMediaUrl} = this.props;
+        const { pid, fileName, allowDownload, mimeType, mediaUrl, previewMediaUrl } = this.props;
 
         return (
             <Grid container alignItems="center" wrap="nowrap">
@@ -88,4 +88,4 @@ export class FileName extends PureComponent {
     }
 }
 
-export default withStyles(styles, {withTheme: true})(FileName);
+export default withStyles(styles, { withTheme: true })(FileName);

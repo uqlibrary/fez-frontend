@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ListRowHeader from './ListRowHeader';
 import ListRow from './ListRow';
@@ -171,7 +171,7 @@ export default class ListsEditor extends Component {
                     inputField={this.props.inputField}
                     onAdd={this.addItem}
                     remindToAdd={this.props.remindToAdd}
-                    locale={{...(this.props.locale && this.props.locale.form && this.props.locale.form)}}
+                    locale={{ ...(this.props.locale && this.props.locale.form && this.props.locale.form) }}
                     {...(this.props.locale && this.props.locale.form && this.props.locale.form)}
                     isValid={this.props.isValid}
                     disabled={

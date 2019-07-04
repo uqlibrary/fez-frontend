@@ -1,8 +1,8 @@
-import React, {PureComponent} from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 // import {locale} from 'locale';
 
-import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
+import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
@@ -30,14 +30,14 @@ export class ThirdPartyLookupForm extends PureComponent {
             isMinimised: props.isMinimised,
             primaryValue: '',
             secondaryValue: '',
-            formDisplay: {}
+            formDisplay: {},
         };
     }
 
     // toggle form open or closed
     _toggleMinimise = () => {
         this.setState({
-            isMinimised: !this.state.isMinimised
+            isMinimised: !this.state.isMinimised,
         });
     };
 
@@ -51,7 +51,7 @@ export class ThirdPartyLookupForm extends PureComponent {
             lookupLabel: this.props.localeform.lookupLabel,
             primaryFieldHeading: this.props.localeform.primaryField.heading,
             secondaryFieldHeading: !!this.props.localeform.secondaryField && !!this.props.localeform.secondaryField.heading ? this.props.localeform.secondaryField.heading : 'undefined',
-            reportSecondaryFieldInOutput: !!this.props.localeform.secondaryField && !!this.props.localeform.secondaryField.reportInOutput
+            reportSecondaryFieldInOutput: !!this.props.localeform.secondaryField && !!this.props.localeform.secondaryField.reportInOutput,
         };
 
         if (this.state.primaryValue !== '' && this.props.actions && this.props.actions.loadThirdPartyResults) {
@@ -62,7 +62,7 @@ export class ThirdPartyLookupForm extends PureComponent {
 
     // update state for the form fields on input
     _onChange = (event) => {
-        this.setState({[event.target.name]: event.target.value});
+        this.setState({ [event.target.name]: event.target.value });
     };
 
     render() {
@@ -79,7 +79,7 @@ export class ThirdPartyLookupForm extends PureComponent {
                 <Grid item xs={12}>
                     <StandardCard noHeader>
                         <Grid container spacing={24}>
-                            <Grid item style={{flexGrow: 1, width: 1}}>
+                            <Grid item style={{ flexGrow: 1, width: 1 }}>
                                 <Typography variant={'headline'}>{lookupLabel}</Typography>
                             </Grid>
                             <Grid item>

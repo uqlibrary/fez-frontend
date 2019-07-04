@@ -1,9 +1,9 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import locale from 'locale/viewRecord';
-import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
-import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
-import {withStyles} from '@material-ui/core/styles';
+import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
+import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
+import { withStyles } from '@material-ui/core/styles';
 
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
@@ -15,7 +15,7 @@ import PictureAsPdf from '@material-ui/icons/PictureAsPdf';
 import InsertDriveFile from '@material-ui/icons/InsertDriveFile';
 import Image from '@material-ui/icons/Image';
 import Videocam from '@material-ui/icons/Videocam';
-import {openAccessConfig, viewRecordsConfig, routes} from 'config';
+import { openAccessConfig, viewRecordsConfig, routes } from 'config';
 import MediaPreview from './MediaPreview';
 import FileName from './partials/FileName';
 import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
@@ -27,7 +27,7 @@ const styles = (theme) => ({
     },
     dataWrapper: {
         overflow: 'hidden',
-        textOverflow: 'ellipsis'
+        textOverflow: 'ellipsis',
     },
     fileIcon: {
         opacity: 0.5,
@@ -39,7 +39,7 @@ export class FilesClass extends Component {
         publication: PropTypes.object.isRequired,
         hideCulturalSensitivityStatement: PropTypes.bool,
         setHideCulturalSensitivityStatement: PropTypes.func,
-        classes: PropTypes.object
+        classes: PropTypes.object,
     };
 
     constructor(props) {
@@ -48,8 +48,8 @@ export class FilesClass extends Component {
             preview: {
                 mediaUrl: null,
                 previewMediaUrl: null,
-                mimeType: null
-            }
+                mimeType: null,
+            },
         };
     }
 
@@ -62,7 +62,7 @@ export class FilesClass extends Component {
                 thumbnailMediaUrl: this.getUrl(pid, thumbnailFileName),
                 fileName: downloadableFileName || fileName,
                 thumbnailFileName,
-                onClick: this.showPreview
+                onClick: this.showPreview,
             };
             return (
                 <Thumbnail {...thumbnailProps} />
@@ -85,8 +85,8 @@ export class FilesClass extends Component {
             preview: {
                 mediaUrl: null,
                 previewMediaUrl: null,
-                mimeType: null
-            }
+                mimeType: null,
+            },
         });
     }
 
@@ -95,8 +95,8 @@ export class FilesClass extends Component {
             preview: {
                 mediaUrl: mediaUrl,
                 previewMediaUrl: previewMediaUrl,
-                mimeType: mimeType
-            }
+                mimeType: mimeType,
+            },
         });
     }
 
@@ -112,14 +112,14 @@ export class FilesClass extends Component {
     }
 
     getFileOpenAccessStatus = (publication, embargoDate) => {
-        const openAccessStatusId = (!!publication.fez_record_search_key_oa_status
-            && publication.fez_record_search_key_oa_status.rek_oa_status) || null;
+        const openAccessStatusId = (!!publication.fez_record_search_key_oa_status &&
+            publication.fez_record_search_key_oa_status.rek_oa_status) || null;
         if (openAccessConfig.openAccessFiles.indexOf(openAccessStatusId) < 0) {
-            return {isOpenAccess: false, embargoDate: null, openAccessStatusId: openAccessStatusId};
+            return { isOpenAccess: false, embargoDate: null, openAccessStatusId: openAccessStatusId };
         } else if (embargoDate && moment(embargoDate).isAfter(moment(), 'day')) {
-            return {isOpenAccess: false, embargoDate: moment(embargoDate).format('Do MMMM YYYY'), openAccessStatusId: openAccessStatusId};
+            return { isOpenAccess: false, embargoDate: moment(embargoDate).format('Do MMMM YYYY'), openAccessStatusId: openAccessStatusId };
         }
-        return {isOpenAccess: true, embargoDate: null, openAccessStatusId: openAccessStatusId};
+        return { isOpenAccess: true, embargoDate: null, openAccessStatusId: openAccessStatusId };
     }
 
     getUrl = (pid, fileName) => {
@@ -131,7 +131,7 @@ export class FilesClass extends Component {
     }
 
     isFileValid = (dataStream) => {
-        const {files: {blacklist}} = viewRecordsConfig;
+        const { files: { blacklist } } = viewRecordsConfig;
 
         return !dataStream.dsi_dsid.match(blacklist.namePrefixRegex) &&
             (!dataStream.dsi_label || !dataStream.dsi_label.match(new RegExp(blacklist.descriptionKeywordsRegex, 'gi'))) &&
@@ -140,7 +140,7 @@ export class FilesClass extends Component {
 
     getFileData = (publication) => {
         const dataStreams = publication.fez_datastream_info;
-        const {files} = viewRecordsConfig;
+        const { files } = viewRecordsConfig;
         // check if the publication is a member of the blacklist collections, TODO: remove after security epic is done
         const containBlacklistCollections = publication.fez_record_search_key_ismemberof.some(collection => files.blacklist.collections.includes(collection.rek_ismemberof));
 
@@ -168,14 +168,14 @@ export class FilesClass extends Component {
                     icon: this.renderFileIcon(pid, mimeType, fileName, thumbnailFileName, previewFileName, openAccessStatus.isOpenAccess, downloadableFileName),
                     openAccessStatus: openAccessStatus,
                     previewMediaUrl: this.getUrl(pid, previewFileName || fileName),
-                    mediaUrl: this.getUrl(pid, downloadableFileName || fileName)
+                    mediaUrl: this.getUrl(pid, downloadableFileName || fileName),
                 };
             })
             : [];
     }
 
     render() {
-        const {publication} = this.props;
+        const { publication } = this.props;
         const fileData = this.getFileData(publication);
         const isFireFox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
         if (fileData.length === 0) return null;
@@ -199,7 +199,7 @@ export class FilesClass extends Component {
                             message={locale.viewRecord.fireFoxAlert.message}
                         />
                     }
-                    <div style={{padding: 8}}>
+                    <div style={{ padding: 8 }}>
                         <Grid container direction="row" alignItems="center" spacing={16} className={this.props.classes.header}>
                             <Grid item xs={1}>&nbsp;</Grid>
                             <Grid item sm={4}>
@@ -222,7 +222,7 @@ export class FilesClass extends Component {
                     </div>
                     {
                         fileData.map((item, index) => (
-                            <div style={{padding: 8}} key={index}>
+                            <div style={{ padding: 8 }} key={index}>
                                 <Grid
                                     container
                                     direction="row"
@@ -252,7 +252,7 @@ export class FilesClass extends Component {
                                         </Grid>
                                     </Hidden>
                                     <Hidden xsDown>
-                                        <Grid item sm style={{textAlign: 'right'}}><OpenAccessIcon {...item.openAccessStatus} /></Grid>
+                                        <Grid item sm style={{ textAlign: 'right' }}><OpenAccessIcon {...item.openAccessStatus} /></Grid>
                                     </Hidden>
                                 </Grid>
                             </div>
@@ -272,6 +272,6 @@ export class FilesClass extends Component {
     }
 }
 
-const StyledFilesClass = withStyles(styles, {withTheme: true})(FilesClass);
+const StyledFilesClass = withStyles(styles, { withTheme: true })(FilesClass);
 const Files = (props) => <StyledFilesClass {...props}/>;
 export default Files;

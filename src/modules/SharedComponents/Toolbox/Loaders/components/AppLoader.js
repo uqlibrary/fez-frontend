@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
-import {withStyles} from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 
 export const styles = theme => ({
     appLoader: {
@@ -13,18 +13,18 @@ export const styles = theme => ({
         ...(((theme.palette || {}).primary || {}).gradient || {}).diagonal,
         width: '100%',
         height: '100%',
-        textAlign: 'center !important'
+        textAlign: 'center !important',
     },
     white: {
         color: ((theme.palette || {}).white || {}).main,
-        fontWeight: (theme.typography || {}).fontWeightLight
+        fontWeight: (theme.typography || {}).fontWeightLight,
     },
     spaceBetween: {
-        margin: '16px 0'
+        margin: '16px 0',
     },
     logo: {
-        width: 200
-    }
+        width: 200,
+    },
 });
 
 export class AppLoader extends React.Component {
@@ -32,11 +32,11 @@ export class AppLoader extends React.Component {
         title: PropTypes.string.isRequired,
         logoImage: PropTypes.string,
         logoText: PropTypes.string,
-        classes: PropTypes.object
+        classes: PropTypes.object,
     };
 
     render() {
-        const {classes, title, logoImage, logoText} = this.props;
+        const { classes, title, logoImage, logoText } = this.props;
         return (
             <Grid container spacing={0} direction="column" justify="center" alignItems="center" className={classes.appLoader}>
                 <Grid item  className={classes.spaceBetween}>
@@ -53,5 +53,5 @@ export class AppLoader extends React.Component {
     }
 }
 
-export default withStyles(styles, {withTheme: true})(AppLoader);
+export default withStyles(styles, { withTheme: true })(AppLoader);
 

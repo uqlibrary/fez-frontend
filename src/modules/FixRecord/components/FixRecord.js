@@ -16,7 +16,7 @@ import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import {
     ContentIndicatorsField,
-    showContentIndicatorsField
+    showContentIndicatorsField,
 } from 'modules/SharedComponents/Toolbox/ContentIndicatorsField';
 import { NavigationDialogBox } from 'modules/SharedComponents/Toolbox/NavigationPrompt';
 import { FileUploadField } from 'modules/SharedComponents/Toolbox/FileUploader';
@@ -48,14 +48,14 @@ export default class FixRecord extends PureComponent {
     };
 
     static contextTypes = {
-        selectFieldMobileOverrides: PropTypes.object
+        selectFieldMobileOverrides: PropTypes.object,
     };
 
     constructor(props) {
         super(props);
 
         this.state = {
-            selectedRecordAction: ''
+            selectedRecordAction: '',
         };
     }
 
@@ -79,8 +79,8 @@ export default class FixRecord extends PureComponent {
     }
 
     isLoggedInUserLinked = (author, recordToFix, searchKey, subkey) => {
-        return !!author && !!recordToFix && recordToFix[searchKey] && recordToFix[searchKey].length > 0
-            && recordToFix[searchKey].filter(authorId => authorId[subkey] === author.aut_id).length > 0;
+        return !!author && !!recordToFix && recordToFix[searchKey] && recordToFix[searchKey].length > 0 &&
+            recordToFix[searchKey].filter(authorId => authorId[subkey] === author.aut_id).length > 0;
     };
 
     isAuthorLinked = () => {
@@ -114,7 +114,7 @@ export default class FixRecord extends PureComponent {
 
     _actionSelected = (event, value) => {
         this.setState({
-            selectedRecordAction: value
+            selectedRecordAction: value,
         });
     };
 
@@ -179,7 +179,7 @@ export default class FixRecord extends PureComponent {
                                     onChange={this._actionSelected}
                                     required
                                     SelectDisplayProps={{
-                                        id: 'fixAction'
+                                        id: 'fixAction',
                                     }}
                                 >
                                     {fixOptions}

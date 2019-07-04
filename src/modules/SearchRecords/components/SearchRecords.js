@@ -18,7 +18,7 @@ import {
     PublicationsList,
     PublicationsListPaging,
     PublicationsListSorting,
-    FacetsFilter
+    FacetsFilter,
 } from 'modules/SharedComponents/PublicationsList';
 
 import { locale } from 'locale';
@@ -51,9 +51,9 @@ class SearchRecords extends PureComponent {
             sortDirection: locale.components.sorting.sortDirection[0],
             activeFacets: {
                 filters: {},
-                ranges: {}
+                ranges: {},
             },
-            advancedSearchFields: []
+            advancedSearchFields: [],
         };
 
         if (!!props.location && props.location.search.indexOf('?') >= 0) {
@@ -68,7 +68,7 @@ class SearchRecords extends PureComponent {
             // facets filtering might return no results, but facets should still be visible
             // hasResults: !props.searchLoading && props.publicationsList.length > 0,
             ...this.initState,
-            ...this.props.searchQuery
+            ...this.props.searchQuery,
         };
     }
 
@@ -94,13 +94,13 @@ class SearchRecords extends PureComponent {
             this.setState({
                 ...(
                     (
-                        !!newProps.location.search
-                        && newProps.location.search.length > 1
-                        && this.parseSearchQueryStringFromUrl(
+                        !!newProps.location.search &&
+                        newProps.location.search.length > 1 &&
+                        this.parseSearchQueryStringFromUrl(
                             newProps.location.search.substr(1)
                         )
                     ) || {}
-                )
+                ),
             });
         }
     }
@@ -133,7 +133,7 @@ class SearchRecords extends PureComponent {
         } else {
             providedSearchQuery.activeFacets = {
                 filters: {},
-                ranges: {}
+                ranges: {},
             };
         }
 
@@ -169,7 +169,7 @@ class SearchRecords extends PureComponent {
         this.setState(
             {
                 pageSize: pageSize,
-                page: 1
+                page: 1,
             },
             this.updateHistoryAndSearch
         );
@@ -178,7 +178,7 @@ class SearchRecords extends PureComponent {
     pageChanged = (page) => {
         this.setState(
             {
-                page: page
+                page: page,
             },
             this.updateHistoryAndSearch
         );
@@ -188,7 +188,7 @@ class SearchRecords extends PureComponent {
         this.setState(
             {
                 sortBy: sortBy,
-                sortDirection: sortDirection
+                sortDirection: sortDirection,
             },
             this.updateHistoryAndSearch
         );
@@ -198,7 +198,7 @@ class SearchRecords extends PureComponent {
         this.setState(
             {
                 activeFacets: activeFacets,
-                page: 1
+                page: 1,
             },
             this.updateHistoryAndSearch
         );
@@ -212,7 +212,7 @@ class SearchRecords extends PureComponent {
                     : routes.pathConfig.records.search
             ),
             search: param(this.state),
-            state: { ...this.state }
+            state: { ...this.state },
         });
         this.updateSearch();
     };
@@ -239,7 +239,7 @@ class SearchRecords extends PureComponent {
                 }
             });
             this.setState({
-                advancedSearchFields: excludesFromLocale.concat(importedFacetExcludes)
+                advancedSearchFields: excludesFromLocale.concat(importedFacetExcludes),
             });
         }
     };
@@ -313,8 +313,7 @@ class SearchRecords extends PureComponent {
                                                         .replace('[recordsFrom]', pagingData.from)
                                                         .replace('[recordsTo]', pagingData.to)}
                                                 </span>
-                                                :
-                                                <span>{txt.loadingPagingMessage}</span>
+                                                :                                                <span>{txt.loadingPagingMessage}</span>
                                         }
                                     </Grid>
                                     <Grid item xs={12}>

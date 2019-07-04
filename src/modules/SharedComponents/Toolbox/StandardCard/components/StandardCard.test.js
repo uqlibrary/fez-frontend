@@ -1,18 +1,17 @@
-import {Cards} from './StandardCard';
+import { Cards } from './StandardCard';
 
 function setup(testProps, isShallow = true) {
     const props = {
         title: 'card title',
         classes: {
-            card: 'testClass'
+            card: 'testClass',
         },
-        ...testProps
+        ...testProps,
     };
     return getElement(Cards, props, isShallow);
 }
 
 describe('StandardCard component', () => {
-
     it('renders with title and no help icon', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -23,8 +22,8 @@ describe('StandardCard component', () => {
             help: {
                 title: 'help',
                 text: 'help text',
-                buttonLabel: 'OK'
-            }
+                buttonLabel: 'OK',
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -38,8 +37,8 @@ describe('StandardCard component', () => {
             darkHeader: true,
             classes: {
                 cardHeaderPurple: 'purple',
-                cardContentNoPadding: 'no-padding'
-            }
+                cardContentNoPadding: 'no-padding',
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });

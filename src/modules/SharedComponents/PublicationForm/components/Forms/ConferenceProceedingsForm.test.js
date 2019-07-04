@@ -2,10 +2,10 @@ jest.dontMock('./ConferenceProceedingsForm');
 
 import ConferenceProceedingsForm from './ConferenceProceedingsForm';
 
-function setup(testProps, isShallow = true){
+function setup(testProps, isShallow = true) {
     const props = {
         ...testProps,
-        submitting: testProps.submitting || false // : PropTypes.bool,
+        submitting: testProps.submitting || false, // : PropTypes.bool,
     };
     return getElement(ConferenceProceedingsForm, props, isShallow);
 }
@@ -22,9 +22,9 @@ describe('ConferenceProceedingsForm renders ', () => {
     });
 
     it('component with all fields disabled', () => {
-        const wrapper = setup({submitting: true});
+        const wrapper = setup({ submitting: true });
         wrapper.find('Field').forEach(field => {
             expect(field.props().disabled).toEqual(true);
-        })
+        });
     });
 });

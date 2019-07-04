@@ -1,13 +1,13 @@
-import React, {PureComponent, Fragment} from 'react';
-import {connect} from 'react-redux';
+import React, { PureComponent, Fragment } from 'react';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import {clearFileUpload} from '../actions';
+import { clearFileUpload } from '../actions';
 
 import FileUploadDropzone from './FileUploadDropzone';
 import FileUploadRowHeader from './FileUploadRowHeader';
 import FileUploadRow from './FileUploadRow';
 import FileUploadTermsAndConditions from './FileUploadTermsAndConditions';
-import {Alert} from '../../Alert';
+import { Alert } from '../../Alert';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import * as config from '../config';
@@ -24,19 +24,19 @@ export class FileUploader extends PureComponent {
         clearFileUpload: PropTypes.func,
         disabled: PropTypes.bool,
         defaultQuickTemplateId: PropTypes.number,
-        isNtro: PropTypes.bool
+        isNtro: PropTypes.bool,
     };
 
     static defaultProps = {
-        locale: {...locale},
+        locale: { ...locale },
         fileRestrictionsConfig: {
             fileUploadLimit: config.DEFAULT_FILE_UPLOAD_LIMIT,
             maxFileSize: config.DEFAULT_MAX_FILE_SIZE,
             fileSizeUnit: config.SIZE_UNIT_G,
-            fileNameRestrictions: config.FILE_NAME_RESTRICTION
+            fileNameRestrictions: config.FILE_NAME_RESTRICTION,
         },
         requireOpenAccessStatus: false,
-        isNtro: false
+        isNtro: false,
     };
 
     constructor(props) {
@@ -44,12 +44,12 @@ export class FileUploader extends PureComponent {
         this.state = {
             filesInQueue: [],
             isTermsAndConditionsAccepted: false,
-            errorMessage: ''
+            errorMessage: '',
         };
     }
 
     componentWillUpdate(nextProps, nextState) {
-        if (this.props.onChange) this.props.onChange({queue: nextState.filesInQueue, isValid: this.isFileUploadValid(nextState)});
+        if (this.props.onChange) this.props.onChange({ queue: nextState.filesInQueue, isValid: this.isFileUploadValid(nextState) });
     }
 
     componentWillUnmount() {
@@ -66,13 +66,13 @@ export class FileUploader extends PureComponent {
     _deleteFile = (file, index) => {
         const filesInQueue = [
             ...this.state.filesInQueue.slice(0, index),
-            ...this.state.filesInQueue.slice(index + 1)
+            ...this.state.filesInQueue.slice(index + 1),
         ];
 
         this.setState({
             filesInQueue: filesInQueue,
             errorMessage: '',
-            isTermsAndConditionsAccepted: this.state.isTermsAndConditionsAccepted && this.isAnyOpenAccess(filesInQueue)
+            isTermsAndConditionsAccepted: this.state.isTermsAndConditionsAccepted && this.isAnyOpenAccess(filesInQueue),
         });
     };
 
@@ -85,7 +85,7 @@ export class FileUploader extends PureComponent {
         this.setState({
             filesInQueue: [],
             errorMessage: '',
-            isTermsAndConditionsAccepted: false});
+            isTermsAndConditionsAccepted: false });
     };
 
     /**
@@ -97,7 +97,7 @@ export class FileUploader extends PureComponent {
      * @private
      */
     _updateFileAccessCondition = (fileToUpdate, index, newValue) => {
-        const file = {...fileToUpdate};
+        const file = { ...fileToUpdate };
 
         file[config.FILE_META_KEY_ACCESS_CONDITION] = newValue;
 
@@ -119,7 +119,7 @@ export class FileUploader extends PureComponent {
      * @private
      */
     _updateFileEmbargoDate = (fileToUpdate, index, newValue) => {
-        const file = {...fileToUpdate};
+        const file = { ...fileToUpdate };
 
         file[config.FILE_META_KEY_EMBARGO_DATE] = moment(newValue).format();
 
@@ -134,7 +134,7 @@ export class FileUploader extends PureComponent {
      * @private
      */
     _acceptTermsAndConditions = (value) => {
-        this.setState({isTermsAndConditionsAccepted: value});
+        this.setState({ isTermsAndConditionsAccepted: value });
     };
 
     /**
@@ -144,8 +144,8 @@ export class FileUploader extends PureComponent {
      * @param errorsFromDropzone
      */
     _handleDroppedFiles = (uniqueFilesToQueue, errorsFromDropzone) => {
-        const {defaultQuickTemplateId} = this.props;
-        const {filesInQueue} = this.state;
+        const { defaultQuickTemplateId } = this.props;
+        const { filesInQueue } = this.state;
 
         // Combine unique files and files queued already
         const totalFiles = [...filesInQueue, ...uniqueFilesToQueue];
@@ -153,10 +153,10 @@ export class FileUploader extends PureComponent {
         // Set files to queue
         this.setState({
             filesInQueue: defaultQuickTemplateId
-                ? totalFiles.map(file => ({...file, [config.FILE_META_KEY_ACCESS_CONDITION]: defaultQuickTemplateId}))
+                ? totalFiles.map(file => ({ ...file, [config.FILE_META_KEY_ACCESS_CONDITION]: defaultQuickTemplateId }))
                 : totalFiles,
             focusOnIndex: filesInQueue.length,
-            errorMessage: this.getErrorMessage(errorsFromDropzone)
+            errorMessage: this.getErrorMessage(errorsFromDropzone),
         });
     };
 
@@ -175,13 +175,13 @@ export class FileUploader extends PureComponent {
         const filesInQueue = [
             ...this.state.filesInQueue.slice(0, index),
             file,
-            ...this.state.filesInQueue.slice(index + 1)
+            ...this.state.filesInQueue.slice(index + 1),
         ];
 
         this.setState({
             filesInQueue: filesInQueue,
             errorMessage: '',
-            isTermsAndConditionsAccepted: this.state.isTermsAndConditionsAccepted && this.isAnyOpenAccess(filesInQueue)
+            isTermsAndConditionsAccepted: this.state.isTermsAndConditionsAccepted && this.isAnyOpenAccess(filesInQueue),
         });
     };
 
@@ -191,7 +191,7 @@ export class FileUploader extends PureComponent {
      * @returns {number}
      */
     calculateMaxFileSize = () => {
-        const {maxFileSize, fileSizeUnit} = this.props.fileRestrictionsConfig;
+        const { maxFileSize, fileSizeUnit } = this.props.fileRestrictionsConfig;
         const exponent = config.SIZE_UNITS.indexOf(fileSizeUnit);
         return maxFileSize * Math.pow(config.SIZE_BASE, exponent >= 0 ? exponent : 0);
     };
@@ -204,8 +204,8 @@ export class FileUploader extends PureComponent {
      */
     isAnyOpenAccess = (files) => {
         return files
-            .filter(file => file.hasOwnProperty(config.FILE_META_KEY_ACCESS_CONDITION)
-                && (file[config.FILE_META_KEY_ACCESS_CONDITION] === config.OPEN_ACCESS_ID))
+            .filter(file => file.hasOwnProperty(config.FILE_META_KEY_ACCESS_CONDITION) &&
+                (file[config.FILE_META_KEY_ACCESS_CONDITION] === config.OPEN_ACCESS_ID))
             .length > 0;
     };
 
@@ -216,7 +216,7 @@ export class FileUploader extends PureComponent {
      * @param isTermsAndConditionsAccepted
      * @returns {boolean}
      */
-    isFileUploadValid = ({filesInQueue, isTermsAndConditionsAccepted}) => {
+    isFileUploadValid = ({ filesInQueue, isTermsAndConditionsAccepted }) => {
         return !this.props.requireOpenAccessStatus ||
             (
                 filesInQueue.filter(file => file.hasOwnProperty(config.FILE_META_KEY_ACCESS_CONDITION)).length === filesInQueue.length &&
@@ -230,7 +230,7 @@ export class FileUploader extends PureComponent {
      * @private
      */
     getErrorMessage = (errors) => {
-        const {validation} = this.props.locale;
+        const { validation } = this.props.locale;
         const errorMessages = [];
 
         Object.keys(errors).map(errorCode => {
@@ -249,11 +249,11 @@ export class FileUploader extends PureComponent {
     };
 
     render() {
-        const {instructions, accessTermsAndConditions, ntroSpecificInstructions} = this.props.locale;
-        const {maxFileSize, fileSizeUnit, fileUploadLimit, fileNameRestrictions} = this.props.fileRestrictionsConfig;
-        const {requireOpenAccessStatus, defaultQuickTemplateId, disabled} = this.props;
-        const {filesInQueue, isTermsAndConditionsAccepted, errorMessage} = this.state;
-        const {errorTitle, successTitle, successMessage} = this.props.locale;
+        const { instructions, accessTermsAndConditions, ntroSpecificInstructions } = this.props.locale;
+        const { maxFileSize, fileSizeUnit, fileUploadLimit, fileNameRestrictions } = this.props.fileRestrictionsConfig;
+        const { requireOpenAccessStatus, defaultQuickTemplateId, disabled } = this.props;
+        const { filesInQueue, isTermsAndConditionsAccepted, errorMessage } = this.state;
+        const { errorTitle, successTitle, successMessage } = this.props.locale;
 
         const instructionsDisplay = instructions
             .replace('[fileUploadLimit]', fileUploadLimit)
@@ -306,7 +306,7 @@ export class FileUploader extends PureComponent {
                 }
                 {
                     filesInQueue.length > 0 &&
-                    <div style={{flexGrow: 1, padding: 8}}>
+                    <div style={{ flexGrow: 1, padding: 8 }}>
                         <Grid container display="column" spacing={16}>
                             <Grid item xs={12}>
                                 <FileUploadRowHeader
@@ -343,7 +343,7 @@ const mapStateToProps = () => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        clearFileUpload: () => (dispatch(clearFileUpload()))
+        clearFileUpload: () => (dispatch(clearFileUpload())),
     };
 };
 

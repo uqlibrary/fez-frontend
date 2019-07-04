@@ -2,7 +2,7 @@ import * as actions from 'actions/actionTypes';
 
 export const initialState = {
     trendingPublicationsList: [],
-    loadingTrendingPublications: true
+    loadingTrendingPublications: true,
 };
 
 const handlers = {
@@ -10,7 +10,7 @@ const handlers = {
         return {
             ...state,
             trendingPublicationsList: [],
-            loadingTrendingPublications: true
+            loadingTrendingPublications: true,
         };
     },
 
@@ -21,14 +21,14 @@ const handlers = {
             ...state.trendingPublicationsList,
             {
                 key: source,
-                values: action.payload.data
-            }
+                values: action.payload.data,
+            },
         ];
 
         return {
             ...state,
             trendingPublicationsList,
-            loadingTrendingPublications: false
+            loadingTrendingPublications: false,
         };
     },
 
@@ -36,7 +36,7 @@ const handlers = {
         return {
             ...state,
             trendingPublicationsList: action.payload.data,
-            loadingTrendingPublications: false
+            loadingTrendingPublications: false,
         };
     },
 
@@ -44,9 +44,9 @@ const handlers = {
         return {
             ...state,
             trendingPublicationsList: [],
-            loadingTrendingPublications: false
+            loadingTrendingPublications: false,
         };
-    }
+    },
 };
 
 export default function myTrendingPublicationsReducer(state = initialState, action) {

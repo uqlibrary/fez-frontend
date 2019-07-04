@@ -1,30 +1,30 @@
-import {AuthorLinking} from './AuthorLinking';
+import { AuthorLinking } from './AuthorLinking';
 
 function setup(testProps, isShallow = true) {
     const props = {
         classes: {
-            infiniteContainer: 'infiniteContainer'
+            infiniteContainer: 'infiniteContainer',
         },
-        ...testProps
+        ...testProps,
     };
 
     return getElement(AuthorLinking, props, isShallow);
 }
 
 describe('AuthorLinking', () => {
-    const searchKey = {value: 'rek_author_id', order: 'rek_author_id_order', type: 'author'};
+    const searchKey = { value: 'rek_author_id', order: 'rek_author_id_order', type: 'author' };
 
     it('should call componentDidMount life cycle method', () => {
         const props = {
             searchKey: searchKey,
             authorList: [
-                {rek_author_id: null, rek_author_pid: "UQ:111111", rek_author: "Overgaard, Nana H.", rek_author_order: 1},
-                {rek_author_id: null, rek_author_pid: "UQ:111111", rek_author: "Cruz, Jazmina L.", rek_author_order: 2}
+                { rek_author_id: null, rek_author_pid: 'UQ:111111', rek_author: 'Overgaard, Nana H.', rek_author_order: 1 },
+                { rek_author_id: null, rek_author_pid: 'UQ:111111', rek_author: 'Cruz, Jazmina L.', rek_author_order: 2 },
             ],
             linkedAuthorIdList: [
-                {rek_author_id_id: null, rek_author_id_pid: "UQ:111111", rek_author_id: 0, rek_author_id_order: 1},
-                {rek_author_id_id: null, rek_author_id_pid: "UQ:111111", rek_author_id: 0, rek_author_id_order: 2}
-            ]
+                { rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 0, rek_author_id_order: 1 },
+                { rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 0, rek_author_id_order: 2 },
+            ],
         };
 
         const wrapper = setup(props);
@@ -36,9 +36,9 @@ describe('AuthorLinking', () => {
         const props = {
             searchKey: searchKey,
             authorList: [
-                {rek_author_id: null, rek_author_pid: "UQ:111111", rek_author: "Overgaard, Nana H.", rek_author_order: 1},
-                {rek_author_id: null, rek_author_pid: "UQ:111111", rek_author: "Cruz, Jazmina L.", rek_author_order: 2}
-            ]
+                { rek_author_id: null, rek_author_pid: 'UQ:111111', rek_author: 'Overgaard, Nana H.', rek_author_order: 1 },
+                { rek_author_id: null, rek_author_pid: 'UQ:111111', rek_author: 'Cruz, Jazmina L.', rek_author_order: 2 },
+            ],
         };
 
         const wrapper = setup(props);
@@ -50,16 +50,16 @@ describe('AuthorLinking', () => {
         const onChange = jest.fn();
         const props = {
             searchKey: searchKey,
-            loggedInAuthor: {aut_id: 111},
+            loggedInAuthor: { aut_id: 111 },
             authorList: [
-                {rek_author_id: null, rek_author_pid: "UQ:111111", rek_author: "Overgaard, Nana H.", rek_author_order: 1},
-                {rek_author_id: null, rek_author_pid: "UQ:111111", rek_author: "Cruz, Jazmina L.", rek_author_order: 2}
+                { rek_author_id: null, rek_author_pid: 'UQ:111111', rek_author: 'Overgaard, Nana H.', rek_author_order: 1 },
+                { rek_author_id: null, rek_author_pid: 'UQ:111111', rek_author: 'Cruz, Jazmina L.', rek_author_order: 2 },
             ],
-            onChange: onChange
+            onChange: onChange,
         };
 
         const wrapper = setup(props);
-        wrapper.instance()._selectAuthor({rek_author_id: null, rek_author_pid: "UQ:111111", rek_author: "Overgaard, Nana H.", rek_author_order: 1});
+        wrapper.instance()._selectAuthor({ rek_author_id: null, rek_author_pid: 'UQ:111111', rek_author: 'Overgaard, Nana H.', rek_author_order: 1 });
         expect(onChange).toHaveBeenCalled();
 
         wrapper.instance()._acceptAuthorLinkingTermsAndConditions();
@@ -70,12 +70,12 @@ describe('AuthorLinking', () => {
         const props = {
             searchKey: searchKey,
             authorList: [
-                {rek_author_id: null, rek_author_pid: "UQ:111111", rek_author: "Overgaard, Nana H.", rek_author_order: 1},
-                {rek_author_id: null, rek_author_pid: "UQ:111111", rek_author: "Cruz, Jazmina L.", rek_author_order: 2}
+                { rek_author_id: null, rek_author_pid: 'UQ:111111', rek_author: 'Overgaard, Nana H.', rek_author_order: 1 },
+                { rek_author_id: null, rek_author_pid: 'UQ:111111', rek_author: 'Cruz, Jazmina L.', rek_author_order: 2 },
             ],
             linkedAuthorIdList: [
-                {rek_author_id_id: null, rek_author_id_pid: "UQ:111111", rek_author_id: 0, rek_author_id_order: 1}
-            ]
+                { rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 0, rek_author_id_order: 1 },
+            ],
         };
 
         const wrapper = setup(props);
@@ -86,12 +86,12 @@ describe('AuthorLinking', () => {
     it('should maintain question if onchange prop is missing', () => {
         const props = {
             searchKey: searchKey,
-            loggedInAuthor: {aut_id: 111},
+            loggedInAuthor: { aut_id: 111 },
             authorList: [
-                {rek_author_id: null, rek_author_pid: "UQ:111111", rek_author: "Overgaard, Nana H.", rek_author_order: 1},
-                {rek_author_id: null, rek_author_pid: "UQ:111111", rek_author: "Cruz, Jazmina L.", rek_author_order: 2}
+                { rek_author_id: null, rek_author_pid: 'UQ:111111', rek_author: 'Overgaard, Nana H.', rek_author_order: 1 },
+                { rek_author_id: null, rek_author_pid: 'UQ:111111', rek_author: 'Cruz, Jazmina L.', rek_author_order: 2 },
             ],
-            onChange: null
+            onChange: null,
         };
 
         const wrapper = setup(props);

@@ -1,4 +1,4 @@
-import React, {PureComponent} from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import TextField from '@material-ui/core/TextField';
 import IconButton from '@material-ui/core/IconButton';
@@ -9,32 +9,32 @@ import Tooltip from '@material-ui/core/Tooltip';
 import Search from '@material-ui/icons/Search';
 import ArrowBack from '@material-ui/icons/ArrowBack';
 
-import {MAX_PUBLIC_SEARCH_TEXT_LENGTH} from 'config/general';
-import {locale} from 'locale';
+import { MAX_PUBLIC_SEARCH_TEXT_LENGTH } from 'config/general';
+import { locale } from 'locale';
 
-import {withStyles} from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 import Hidden from '@material-ui/core/Hidden';
 import Fade from '@material-ui/core/Fade';
 
 export const styles = theme => ({
     searchIconPrefix: {
         fill: theme.palette.secondary.main,
-        opacity: 0.66
+        opacity: 0.66,
     },
     inHeader: {
         backgroundColor: theme.palette.white.main,
         '& input[type="search"]::-webkit-search-cancel-button': {
-            display: 'none'
-        }
+            display: 'none',
+        },
     },
     searchIconMobile: {
-        fill: theme.palette.white.main
+        fill: theme.palette.white.main,
     },
     mobileBackArrow: {
         height: 50,
         width: 50,
         fill: theme.palette.secondary.main,
-        opacity: 0.5
+        opacity: 0.5,
     },
     mobileBackArrowButton: {
         height: 70,
@@ -47,7 +47,7 @@ export const styles = theme => ({
         top: 0,
         left: 0,
         width: '100%',
-        height: 70
+        height: 70,
     },
     mobileSearchInput: {
         width: '99%',
@@ -58,9 +58,9 @@ export const styles = theme => ({
             marginTop: 10,
             fontSize: 32,
             lineHeight: 1.2,
-            fontWeight: theme.typography.fontWeightNormal
-        }
-    }
+            fontWeight: theme.typography.fontWeightNormal,
+        },
+    },
 });
 
 export class SimpleSearchComponent extends PureComponent {
@@ -81,7 +81,7 @@ export class SimpleSearchComponent extends PureComponent {
         onToggleSearchMode: PropTypes.func,
         onInvalidSearch: PropTypes.func,
 
-        classes: PropTypes.object
+        classes: PropTypes.object,
     };
     static defaultProps = {
         searchText: '',
@@ -97,13 +97,13 @@ export class SimpleSearchComponent extends PureComponent {
         onToggleSearchMode: () => {
         },
         onInvalidSearch: () => {
-        }
+        },
     };
 
     constructor(props) {
         super(props);
         this.state = {
-            showMobile: false
+            showMobile: false,
         };
     }
 
@@ -118,7 +118,7 @@ export class SimpleSearchComponent extends PureComponent {
     _handleToggleMobile = () => {
         this.setState({
             ...this.state,
-            showMobile: !this.state.showMobile
+            showMobile: !this.state.showMobile,
         }, () => {
             if (this.state.showMobile) {
                 document.getElementById('mobileSearchField') &&
@@ -153,7 +153,7 @@ export class SimpleSearchComponent extends PureComponent {
         // Hide the mobile search bar after performing a search
         this.setState({
             ...this.state,
-            showMobile: false
+            showMobile: false,
         });
 
         // Perform search
@@ -169,14 +169,14 @@ export class SimpleSearchComponent extends PureComponent {
 
     render() {
         const txt = locale.components.searchComponent;
-        const {classes} = this.props;
-        const ariaLabel = {'aria-label': txt.ariaInputLabel};
+        const { classes } = this.props;
+        const ariaLabel = { 'aria-label': txt.ariaInputLabel };
         return (
             <React.Fragment>
-                <form style={{margin: 8}} onSubmit={this._handleSubmit}>
+                <form style={{ margin: 8 }} onSubmit={this._handleSubmit}>
                     {
-                        this.props.isInHeader ?
-                            <React.Fragment>
+                        this.props.isInHeader
+                            ? <React.Fragment>
                                 {/* DESKTOP in header */}
                                 <Hidden xsDown>
                                     <Grid container alignItems={'center'} spacing={8} wrap={'nowrap'} className={classes.inHeader} direction={'row'}>
@@ -199,7 +199,7 @@ export class SimpleSearchComponent extends PureComponent {
                                                 onChange={this._handleSearchTextChange}
                                                 onKeyPress={this._handleSearch}
                                                 value={this.props.searchText}
-                                                InputProps={{disableUnderline: true}}
+                                                InputProps={{ disableUnderline: true }}
                                                 error={this.searchTextValidationMessage(this.props.searchText)}/>
                                         </Grid>
                                     </Grid>
@@ -207,16 +207,15 @@ export class SimpleSearchComponent extends PureComponent {
                                 {/* MOBILE in header */}
                                 <Hidden smUp>
                                     {
-                                        !this.state.showMobile ?
-                                            <Tooltip title={txt.searchBoxPlaceholder} placement="bottom-end" TransitionComponent={Fade} TransitionProps={{ timeout: 300 }}>
+                                        !this.state.showMobile
+                                            ? <Tooltip title={txt.searchBoxPlaceholder} placement="bottom-end" TransitionComponent={Fade} TransitionProps={{ timeout: 300 }}>
                                                 <IconButton
                                                     onClick={this._handleToggleMobile}
                                                     aria-label={txt.mobileSearchButtonAriaLabel}>
                                                     <Search className={classes.searchIconMobile}/>
                                                 </IconButton>
                                             </Tooltip>
-                                            :
-                                            <div className={classes.mobileHeader}>
+                                            :                                            <div className={classes.mobileHeader}>
                                                 <Grid container spacing={0} direction={'row'} wrap={'nowrap'} alignItems={'stretch'} justify={'center'}>
                                                     {
                                                         this.props.showMobileSearchButton &&
@@ -240,7 +239,7 @@ export class SimpleSearchComponent extends PureComponent {
                                                             onChange={this._handleSearchTextChange}
                                                             onKeyPress={this._handleSearch}
                                                             value={this.props.searchText}
-                                                            InputProps={{disableUnderline: true}}
+                                                            InputProps={{ disableUnderline: true }}
                                                             error={this.searchTextValidationMessage(this.props.searchText)}/>
                                                     </Grid>
                                                 </Grid>
@@ -248,8 +247,7 @@ export class SimpleSearchComponent extends PureComponent {
                                     }
                                 </Hidden>
                             </React.Fragment>
-                            :
-                            <React.Fragment>
+                            :                            <React.Fragment>
                                 {/* NOT in header */}
                                 <Grid container spacing={16} alignItems={'center'}>
                                     <Grid item xs>
@@ -298,4 +296,4 @@ export class SimpleSearchComponent extends PureComponent {
     }
 }
 
-export default withStyles(styles, {withTheme: true})(SimpleSearchComponent);
+export default withStyles(styles, { withTheme: true })(SimpleSearchComponent);

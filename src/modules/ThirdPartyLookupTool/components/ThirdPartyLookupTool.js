@@ -1,12 +1,12 @@
-import React, {Fragment, PureComponent} from 'react';
+import React, { Fragment, PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import {locale} from 'locale';
+import { locale } from 'locale';
 
-import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
-import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
+import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
+import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 
-import {ThirdPartyLookupForm} from './ThirdPartyLookupForm';
-import {ThirdPartyLookupFormResult} from './ThirdPartyLookupFormResult';
+import { ThirdPartyLookupForm } from './ThirdPartyLookupForm';
+import { ThirdPartyLookupFormResult } from './ThirdPartyLookupFormResult';
 
 /**
  * This component is intended to replace https://espace.library.uq.edu.au/misc/api_view_info.php

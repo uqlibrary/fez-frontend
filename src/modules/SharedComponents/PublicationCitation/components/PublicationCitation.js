@@ -37,7 +37,7 @@ import ConferenceProceedingsCitation from './citations/ConferenceProceedingsCita
 import ThesisCitation from './citations/ThesisCitation';
 import NewspaperArticleCitation from './citations/NewspaperArticleCitation';
 import DataCollectionCitation from './citations/DataCollectionCitation';
-import {UnpublishedBufferCitationView} from './citations/partials/UnpublishedBufferCitationView';
+import { UnpublishedBufferCitationView } from './citations/partials/UnpublishedBufferCitationView';
 import CircularProgress from '@material-ui/core/CircularProgress';
 
 export const styles = theme => ({
@@ -66,8 +66,8 @@ export const styles = theme => ({
     },
     contentIndicatorTitle: {
         fontWeight: 400,
-        marginRight: '0.5ex'
-    }
+        marginRight: '0.5ex',
+    },
 });
 
 export class PublicationCitation extends PureComponent {
@@ -90,7 +90,7 @@ export class PublicationCitation extends PureComponent {
         hideCitationCounts: PropTypes.bool,
         hideLinks: PropTypes.bool,
         hideContentIndicators: PropTypes.bool,
-        classes: PropTypes.object
+        classes: PropTypes.object,
     };
 
     static defaultProps = {
@@ -105,7 +105,7 @@ export class PublicationCitation extends PureComponent {
         hideCountTotal: false,
         hideViewFullStatisticsLink: false,
         hideCitationCounts: false,
-        hideContentIndicators: false
+        hideContentIndicators: false,
     };
 
     constructor(props) {
@@ -134,7 +134,7 @@ export class PublicationCitation extends PureComponent {
             ThesisCitation,
             NewspaperArticleCitation,
             PatentCitation,
-            DataCollectionCitation
+            DataCollectionCitation,
         };
 
         // get default actions from locale
@@ -179,7 +179,7 @@ export class PublicationCitation extends PureComponent {
                 filteredPublicationType[0].citationComponent,
                 {
                     publication: this.props.publication,
-                    hideDoiLink: this.props.hideLinks
+                    hideDoiLink: this.props.hideLinks,
                 }
             )
             : (
@@ -190,9 +190,9 @@ export class PublicationCitation extends PureComponent {
     };
 
     renderActions = (actions) => {
-        const pid = this.props.publication
-            && this.props.publication.rek_pid
-            && this.props.publication.rek_pid.replace(':', '');
+        const pid = this.props.publication &&
+            this.props.publication.rek_pid &&
+            this.props.publication.rek_pid.replace(':', '');
         return actions && actions.length > 0
             ? actions.map((action, index) => {
                 const buttonProps = {
@@ -204,30 +204,30 @@ export class PublicationCitation extends PureComponent {
                     onClick: () => (this.props.showDefaultActions
                         ? this._handleDefaultActions(action.key)
                         : action.handleAction(this.props.publication)
-                    )
+                    ),
                 };
                 return (
                     <Grid item xs={12} sm="auto" key={`action_key_${index}`}>
                         {
                             action.primary
-                                ? (<Button disabled={!!this.props.publicationsLoading} classes={{label: pid, root: pid}} variant="contained"  {...buttonProps}>
+                                ? (<Button disabled={!!this.props.publicationsLoading} classes={{ label: pid, root: pid }} variant="contained"  {...buttonProps}>
                                     {action.label}
                                     {!!this.props.publicationsLoading &&
                                     <CircularProgress
                                         size={12}
-                                        style={{marginLeft: 12, marginTop: -2}}
+                                        style={{ marginLeft: 12, marginTop: -2 }}
                                         thickness={3}
                                         color={'secondary'}
                                         variant={'indeterminate'}
                                         aria-label="Waiting for records to finish loading"/>
                                     }
                                 </Button>)
-                                : (<Button disabled={!!this.props.publicationsLoading} classes={{label: pid, root: pid}} variant="text" {...buttonProps}>
+                                : (<Button disabled={!!this.props.publicationsLoading} classes={{ label: pid, root: pid }} variant="text" {...buttonProps}>
                                     {action.label}
                                     {!!this.props.publicationsLoading &&
                                     <CircularProgress
                                         size={12}
-                                        style={{marginLeft: 12, marginTop: -2}}
+                                        style={{ marginLeft: 12, marginTop: -2 }}
                                         thickness={3}
                                         color={'secondary'}
                                         variant={'indeterminate'}

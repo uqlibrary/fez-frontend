@@ -22,7 +22,7 @@ export default function OrgAffilicationTypeSelector({
                 required
                 disabled={disabled}
                 SelectDisplayProps={{
-                    id: 'org-affiliation-selector'
+                    id: 'org-affiliation-selector',
                 }}
             >
                 <MenuItem value="" disabled>
@@ -47,7 +47,7 @@ OrgAffilicationTypeSelector.propTypes = {
     required: PropTypes.bool,
     error: PropTypes.bool,
     disabled: PropTypes.bool,
-    helperText: PropTypes.any
+    helperText: PropTypes.any,
 };
 
 OrgAffilicationTypeSelector.defaultProps = {
@@ -55,10 +55,10 @@ OrgAffilicationTypeSelector.defaultProps = {
         inputLabel: 'Org affiliation',
         placeholder: 'Organisational affiliation at time of publication',
         options: [
-            {key: 'UQ', value: 'UQ'},
-            {key: 'NotUQ', value: 'Not UQ'}
-        ]
+            { key: 'UQ', value: 'UQ' },
+            { key: 'NotUQ', value: 'Not UQ' },
+        ],
     },
     error: false,
-    helperText: undefined
+    helperText: undefined,
 };

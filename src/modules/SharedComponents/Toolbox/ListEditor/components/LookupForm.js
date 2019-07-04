@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 export default class LookupForm extends Component {
@@ -7,14 +7,14 @@ export default class LookupForm extends Component {
         locale: PropTypes.object,
         disabled: PropTypes.bool,
         inputField: PropTypes.func,
-        errorText: PropTypes.string
+        errorText: PropTypes.string,
     };
 
     static defaultProps = {
         locale: {
             inputFieldLabel: 'Item name',
             inputFieldHint: 'Please type the item name, then select from the list',
-        }
+        },
     }
 
     constructor(props) {
@@ -31,7 +31,7 @@ export default class LookupForm extends Component {
                 {
                     this.props.inputField &&
                     <this.props.inputField
-                        input={{onChange: this.props.onAdd}}
+                        input={{ onChange: this.props.onAdd }}
                         floatingLabelText={this.props.locale.inputFieldLabel}
                         hintText={this.props.locale.inputFieldHint}
                         disabled={this.props.disabled}

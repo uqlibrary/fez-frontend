@@ -1,10 +1,10 @@
-import React, {PureComponent} from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
 // forms & custom components
-import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
-import {Stepper} from 'modules/SharedComponents/Toolbox/Stepper';
-import {pathConfig} from 'config/routes';
+import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
+import { Stepper } from 'modules/SharedComponents/Toolbox/Stepper';
+import { pathConfig } from 'config/routes';
 import locale from 'locale/pages';
 
 export default class AddMissingRecord extends PureComponent {
@@ -15,7 +15,7 @@ export default class AddMissingRecord extends PureComponent {
         history: PropTypes.object,
         location: PropTypes.object,
         match: PropTypes.object,
-        author: PropTypes.object
+        author: PropTypes.object,
     };
 
     constructor(props) {

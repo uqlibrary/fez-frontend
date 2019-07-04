@@ -1,11 +1,11 @@
 import * as actions from 'actions/actionTypes';
-import {locale} from 'locale';
+import { locale } from 'locale';
 
 const initialSearchSources = {
     loadingPublicationSources: {
         totalSearchedCount: 0,
-        totalSourcesCount: 0
-    }
+        totalSourcesCount: 0,
+    },
 };
 
 const initialState = {
@@ -14,13 +14,13 @@ const initialState = {
     publicationsListFacets: {},
     searchLoading: false,
     searchLoadingError: false,
-    ...initialSearchSources
+    ...initialSearchSources,
 };
 
 const idSearchKeys = [
-    {key: 'fez_record_search_key_doi', value: 'rek_doi'},
-    {key: 'fez_record_search_key_scopus_id', value: 'rek_scopus_id'},
-    {key: 'fez_record_search_key_isi_loc', value: 'rek_isi_loc'}
+    { key: 'fez_record_search_key_doi', value: 'rek_doi' },
+    { key: 'fez_record_search_key_scopus_id', value: 'rek_scopus_id' },
+    { key: 'fez_record_search_key_isi_loc', value: 'rek_isi_loc' },
 ];
 
 export const getIdCountHash = (list, idSearchKey, isOnlyForEspace = false) => {
@@ -90,7 +90,7 @@ export const deduplicateResults = (list) => {
                         if (list.length === 0) {
                             return [item];
                         } else {
-                            const currentItem = {...list[0]}; // the first item
+                            const currentItem = { ...list[0] }; // the first item
                             const currentItemSources = [...currentItem.sources];
                             const currentItemPriority = Math
                                 .min(
@@ -107,12 +107,12 @@ export const deduplicateResults = (list) => {
                             }
 
                             if (itemPriority < currentItemPriority) {
-                                const itemWithNewSources = {...item};
+                                const itemWithNewSources = { ...item };
                                 itemWithNewSources.sources = [...currentItemSources];
                                 return [itemWithNewSources];
                             } else {
                                 currentItem.sources = [...currentItemSources];
-                                return [{...currentItem}];
+                                return [{ ...currentItem }];
                             }
                         }
                     }, [])[0];
@@ -132,13 +132,13 @@ const handlers = {
         const loadingPublicationSources = {
             loadingPublicationSources: {
                 ...state.loadingPublicationSources,
-                totalSourcesCount: action.payload
-            }
+                totalSourcesCount: action.payload,
+            },
         };
 
         return {
             ...state,
-            ...loadingPublicationSources
+            ...loadingPublicationSources,
         };
     },
 
@@ -147,15 +147,15 @@ const handlers = {
             ...state,
             searchLoadingError: false,
             searchQuery: {
-                ...action.payload
-            }
+                ...action.payload,
+            },
         };
     },
 
     [actions.CLEAR_SEARCH_QUERY]: (state) => {
         return {
             ...state,
-            searchQuery: {}
+            searchQuery: {},
         };
     },
 
@@ -168,7 +168,7 @@ const handlers = {
             publicationsListPagingData: {},
             rawSearchQuery: rawSearchQuery,
             searchLoading: true,
-            searchLoadingError: false
+            searchLoadingError: false,
         };
     },
 
@@ -186,7 +186,7 @@ const handlers = {
                 current_page: action.payload.current_page,
                 from: action.payload.from,
                 to: action.payload.to,
-                per_page: action.payload.per_page
+                per_page: action.payload.per_page,
             },
             publicationsListFacets: ( action.payload.filters || {} ).facets || {},
         };
@@ -196,7 +196,7 @@ const handlers = {
         return {
             ...state,
             ...initialState,
-            searchLoadingError: true
+            searchLoadingError: true,
         };
     },
 
@@ -210,13 +210,13 @@ const handlers = {
                 ...state.loadingPublicationSources,
                 totalSearchedCount: state.loadingPublicationSources.totalSearchedCount + 1,
                 [source]: true,
-                [`${source}Count`]: 0
-            }
+                [`${source}Count`]: 0,
+            },
         };
 
         return {
             ...state,
-            ...loadingPublicationSources
+            ...loadingPublicationSources,
         };
     },
 
@@ -229,8 +229,8 @@ const handlers = {
                 ...state.loadingPublicationSources,
                 totalSearchedCount: state.loadingPublicationSources.totalSearchedCount + 1,
                 [source]: true,
-                [`${source}Count`]: action.payload.data.length
-            }
+                [`${source}Count`]: action.payload.data.length,
+            },
         };
 
         return {
@@ -239,12 +239,12 @@ const handlers = {
             publicationsList: action.payload.data && action.payload.data.length > 0 && action.payload.data[0].currentSource
                 ? deduplicateResults([
                     ...state.publicationsList,
-                    ...action.payload.data
+                    ...action.payload.data,
                 ])
                 : state.publicationsList,
-            ...loadingPublicationSources
+            ...loadingPublicationSources,
         };
-    }
+    },
 };
 
 export default function searchRecordsReducer(state = initialState, action) {

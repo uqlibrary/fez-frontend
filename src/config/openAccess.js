@@ -23,5 +23,5 @@ export const labels = {
     [OPEN_ACCESS_ID_OTHER]: 'Other',
     [OPEN_ACCESS_ID_NOT_OPEN_ACCESS]: 'Not Open Access',
     [OPEN_ACCESS_ID_MEDIATED_ACCESS]: 'Mediated Access',
-    [OPEN_ACCESS_ID_PMC]: 'PMC'
+    [OPEN_ACCESS_ID_PMC]: 'PMC',
 };

@@ -1,6 +1,6 @@
-import {routes} from "../../../../config";
-import {locale} from 'locale';
-import React from "react";
+import { routes } from '../../../../config';
+import { locale } from 'locale';
+import React from 'react';
 
 describe('Component ThirdPartyLookupTool', () => {
     it('have a valid set of live form data in components.js', () => {

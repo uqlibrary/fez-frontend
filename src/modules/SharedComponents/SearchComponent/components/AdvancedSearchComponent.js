@@ -1,4 +1,4 @@
-import React, {PureComponent, Fragment} from 'react';
+import React, { PureComponent, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import IconButton from '@material-ui/core/IconButton';
 import Button from '@material-ui/core/Button';
@@ -9,14 +9,14 @@ import KeyboardArrowUp from '@material-ui/icons/KeyboardArrowUp';
 import KeyboardArrowDown from '@material-ui/icons/KeyboardArrowDown';
 import AdvancedSearchRow from './AdvancedSearchRow';
 import Checkbox from '@material-ui/core/Checkbox';
-import {publicationTypes} from 'config';
-import {locale} from 'locale';
+import { publicationTypes } from 'config';
+import { locale } from 'locale';
 import * as recordForms from '../../PublicationForm/components/Forms';
 import DocumentTypeField from './Fields/DocumentTypeField';
 import PublicationYearRangeField from './Fields/PublicationYearRangeField';
 import DateRangeField from './Fields/DateRangeField';
 import AdvancedSearchCaption from './AdvancedSearchCaption';
-import {withStyles} from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 import Hidden from '@material-ui/core/Hidden';
 import * as validationRules from 'config/validation';
 
@@ -24,21 +24,21 @@ export const styles = theme => ({
     sideBar: {
         [theme.breakpoints.up('md')]: {
             paddingLeft: 32,
-            marginTop: -16
-        }
+            marginTop: -16,
+        },
     },
     searchButton: {
         [theme.breakpoints.up('sm')]: {
-            paddingLeft: 32
-        }
+            paddingLeft: 32,
+        },
     },
     blueButton: {
         backgroundColor: ((theme.palette || {}).accent || {}).main,
         color: ((theme.palette || {}).white || {}).main,
         '&:hover': {
             backgroundColor: ((theme.palette || {}).accent || {}).dark,
-        }
-    }
+        },
+    },
 });
 
 export class AdvancedSearchComponent extends PureComponent {
@@ -75,12 +75,12 @@ export class AdvancedSearchComponent extends PureComponent {
         fieldRows: [{
             searchField: '0',
             value: '',
-            label: ''
+            label: '',
         }],
         yearFilter: {
             from: null,
             to: null,
-            invalid: true
+            invalid: true,
         },
         isMinimised: false,
         isOpenAccess: false,
@@ -93,18 +93,18 @@ export class AdvancedSearchComponent extends PureComponent {
         onToggleOpenAccess: () => {},
         onAdvancedSearchRowAdd: () => {},
         onAdvancedSearchRowRemove: () => {},
-        onAdvancedSearchReset: () => {}
+        onAdvancedSearchReset: () => {},
     };
 
     constructor(props) {
         super(props);
-        this.publicationTypes = publicationTypes({...recordForms});
+        this.publicationTypes = publicationTypes({ ...recordForms });
     }
 
     haveAllAdvancedSearchFieldsValidated = (fieldRows) => {
         const fieldTypes = locale.components.searchComponent.advancedSearch.fieldTypes;
-        return !this.props.isLoading && !this.props.yearFilter.invalid
-            && (
+        return !this.props.isLoading && !this.props.yearFilter.invalid &&
+            (
                 fieldRows
                     .reduce((errors, item) => {
                         const newErrors = fieldTypes[item.searchField].validation.map(rule => validationRules[rule](item.value));
@@ -169,23 +169,23 @@ export class AdvancedSearchComponent extends PureComponent {
             fieldRows: this.props.fieldRows,
             docTypes: this.props.docTypes,
             yearFilter: this.props.yearFilter,
-            isOpenAccess: this.props.isOpenAccess
+            isOpenAccess: this.props.isOpenAccess,
         };
     };
 
     render() {
-        const {classes} = this.props;
+        const { classes } = this.props;
         const txt = locale.components.searchComponent;
         const lastFieldAdded = [...this.props.fieldRows].pop();
-        const canAddAnotherField = this.haveAllAdvancedSearchFieldsValidated(this.props.fieldRows)
-            && lastFieldAdded.searchField !== '0';
+        const canAddAnotherField = this.haveAllAdvancedSearchFieldsValidated(this.props.fieldRows) &&
+            lastFieldAdded.searchField !== '0';
         const alreadyAddedFields = this.props.fieldRows.map(item => item.searchField);
 
         return (
-            <form id="advancedSearchForm" onSubmit={this._handleAdvancedSearch} style={{padding: 12}}>
+            <form id="advancedSearchForm" onSubmit={this._handleAdvancedSearch} style={{ padding: 12 }}>
                 <Grid container spacing={24}>
                     <Grid container spacing={40}>
-                        <Grid item style={{flexGrow: 1, width: 1}}>
+                        <Grid item style={{ flexGrow: 1, width: 1 }}>
                             <Typography variant={'headline'}>{txt.advancedSearch.title}</Typography>
                         </Grid>
                         <Grid item>
@@ -281,11 +281,11 @@ export class AdvancedSearchComponent extends PureComponent {
                                         </Grid>
                                     </Grid>
                                 </Grid>
-                                <Grid container spacing={16} style={{marginTop: 24}}>
+                                <Grid container spacing={16} style={{ marginTop: 24 }}>
                                     <Grid item xs={12} sm={'auto'}>
                                         <Button
                                             variant={'contained'}
-                                            classes={{root: classes.blueButton}}
+                                            classes={{ root: classes.blueButton }}
                                             children={txt.advancedSearch.addField.title}
                                             aria-label={txt.advancedSearch.addField.aria}
                                             disabled={!canAddAnotherField}
@@ -311,7 +311,7 @@ export class AdvancedSearchComponent extends PureComponent {
                                         />
                                     </Grid>
                                     <Hidden smDown>
-                                        <Grid item style={{flexGrow: 1, width: 1}}/>
+                                        <Grid item style={{ flexGrow: 1, width: 1 }}/>
                                     </Hidden>
                                     <Grid item  xs={12} md={4} className={classes.searchButton}>
                                         <Button
@@ -330,7 +330,7 @@ export class AdvancedSearchComponent extends PureComponent {
                             </Fragment>
                     }
                     <Grid container>
-                        <Grid item style={{paddingTop: 24}}>
+                        <Grid item style={{ paddingTop: 24 }}>
                             <AdvancedSearchCaption {...this._captionProps()} />
                         </Grid>
                     </Grid>
@@ -340,5 +340,5 @@ export class AdvancedSearchComponent extends PureComponent {
     }
 }
 
-export default withStyles(styles, {withTheme: true})(AdvancedSearchComponent);
+export default withStyles(styles, { withTheme: true })(AdvancedSearchComponent);
 

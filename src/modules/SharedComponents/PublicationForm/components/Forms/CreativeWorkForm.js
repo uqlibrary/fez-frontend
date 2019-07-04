@@ -20,7 +20,7 @@ import {
     NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION,
     NTRO_SUBTYPE_CW_OTHER,
     NTRO_SUBTYPE_CW_TEXTUAL_WORK,
-    NTRO_SUBTYPE_CPEE_EXHIBITION_EVENT
+    NTRO_SUBTYPE_CPEE_EXHIBITION_EVENT,
 } from 'config/general';
 import moment from 'moment';
 
@@ -30,7 +30,7 @@ export default class CreativeWorkForm extends Component {
         subtype: PropTypes.string,
         isNtro: PropTypes.bool,
         isAuthorSelected: PropTypes.bool,
-        formValues: PropTypes.any
+        formValues: PropTypes.any,
     };
 
     constructor(props) {

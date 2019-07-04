@@ -6,7 +6,7 @@ function setup(testProps, isShallow = true) {
         inputField: () => (<span />),
         onAdd: testProps.onAdd || jest.fn(), // : PropTypes.func.isRequired,
         isValid: testProps.isValid || jest.fn(() => ('')), // PropTypes.func,
-        disabled: testProps.disabled
+        disabled: testProps.disabled,
     };
     return getElement(LookupForm, props, isShallow);
 }
@@ -20,7 +20,7 @@ describe('LookupForm tests ', () => {
     it('should add key value item', () => {
         const onAddFn = jest.fn();
         const wrapper = setup({
-            onAdd: onAddFn
+            onAdd: onAddFn,
         });
         wrapper.instance().addKeyValueItem('test');
         expect(onAddFn).toHaveBeenCalledWith('test');

@@ -11,7 +11,7 @@ function setup(testProps, isShallow = true) {
             root: 'root',
             container: 'container',
             paper: 'paper',
-            inputRoot: 'inputRoot'
+            inputRoot: 'inputRoot',
         },
         itemToString: jest.fn(),
         category: null,
@@ -26,13 +26,12 @@ function setup(testProps, isShallow = true) {
         required: false,
         selectedValue: null,
         openOnFocus: false,
-        ...testProps
+        ...testProps,
     };
     return getElement(AutoCompleteAsyncField, props, isShallow);
 }
 
 describe('AutoCompleteAsyncField component', () => {
-
     it('should render', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -54,7 +53,7 @@ describe('AutoCompleteAsyncField component', () => {
     });
 
     it('should render a spinner while loading', () => {
-        const wrapper = setup({itemsListLoading: true }, false);
+        const wrapper = setup({ itemsListLoading: true }, false);
         expect(toJson(wrapper.find('CircularProgress'))).toMatchSnapshot();
     });
 
@@ -75,14 +74,14 @@ describe('AutoCompleteAsyncField component', () => {
             hideLabel: true,
             itemsList: [{
                 id: 1,
-                value: 'test'
+                value: 'test',
             }, {
                 id: 2,
-                value: 'testing'
+                value: 'testing',
             }, {
                 id: 3,
-                value: 'tested'
-            }]
+                value: 'tested',
+            }],
         }, false);
 
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -96,19 +95,19 @@ describe('AutoCompleteAsyncField component', () => {
         const wrapper = setup({
             itemsList: [{
                 id: null,
-                value: ''
+                value: '',
             }],
-            filter: filterFn
+            filter: filterFn,
         });
         wrapper.instance().textInputRef = {
-            clientWidth: 50
+            clientWidth: 50,
         };
         const childrenFn = wrapper.find('Downshift').props().children;
         const renderedChild = childrenFn({
             getInputProps: () => ({ onChange: wrapper.instance().getSuggestions }),
             getMenuProps: jest.fn(),
             isOpen: true,
-            inputValue: 10
+            inputValue: 10,
         });
         const childElement = getElement(renderedChild.type, renderedChild.props);
         expect(childElement.find('WithStyles(Paper)').props().style.width).toBe(50);
@@ -142,7 +141,7 @@ describe('AutoCompleteAsyncField component', () => {
             inputValue: 'Test',
             type: Downshift.stateChangeTypes.blurInput,
             a: 'test',
-            b: 'testing'
+            b: 'testing',
         });
     });
 
@@ -155,7 +154,7 @@ describe('AutoCompleteAsyncField component', () => {
         expect(result).toEqual({
             type: Downshift.stateChangeTypes.itemMouseEnter,
             a: 'test',
-            b: 'testing'
+            b: 'testing',
         });
     });
 
@@ -169,7 +168,7 @@ describe('AutoCompleteAsyncField component', () => {
             inputValue: '',
             type: Downshift.stateChangeTypes.blurInput,
             a: 'test',
-            b: 'testing'
+            b: 'testing',
         });
 
         const result1 = wrapper.instance().stateReducer(
@@ -180,7 +179,7 @@ describe('AutoCompleteAsyncField component', () => {
             inputValue: '',
             type: Downshift.stateChangeTypes.clickItem,
             a: 'test',
-            b: 'testing'
+            b: 'testing',
         });
 
         const result2 = wrapper.instance().stateReducer(
@@ -191,7 +190,7 @@ describe('AutoCompleteAsyncField component', () => {
             inputValue: '',
             type: Downshift.stateChangeTypes.keyDownEnter,
             a: 'test',
-            b: 'testing'
+            b: 'testing',
         });
 
         const result3 = wrapper.instance().stateReducer(
@@ -202,17 +201,17 @@ describe('AutoCompleteAsyncField component', () => {
             inputValue: '',
             type: Downshift.stateChangeTypes.mouseUp,
             a: 'test',
-            b: 'testing'
+            b: 'testing',
         });
 
         const result4 = wrapper.instance().stateReducer(
             { inputValue: 'Test' },
-            { type: Downshift.stateChangeTypes.blurButton, a: 'test', b: 'testing'
-        });
+            { type: Downshift.stateChangeTypes.blurButton, a: 'test', b: 'testing',
+            });
         expect(result4).toEqual({
             type: Downshift.stateChangeTypes.blurButton,
             a: 'test',
-            b: 'testing'
+            b: 'testing',
         });
     });
 
@@ -223,7 +222,7 @@ describe('AutoCompleteAsyncField component', () => {
             index: 0,
             itemProps: {},
             highlightedIndex: 0,
-            selectedItem: { value: 'Testing' }
+            selectedItem: { value: 'Testing' },
         });
         expect(menuItemResult).toMatchSnapshot();
     });
@@ -235,7 +234,7 @@ describe('AutoCompleteAsyncField component', () => {
             allowFreeText: true,
             async: true,
             loadSuggestions: loadSuggestionsFn,
-            category: 'testing'
+            category: 'testing',
         });
 
         wrapper.instance().getSuggestions({ target: { value: 'tes' } });
@@ -243,7 +242,7 @@ describe('AutoCompleteAsyncField component', () => {
 
         // Should not try to load suggestions if async
         wrapper.setProps({
-            async: false
+            async: false,
         });
         loadSuggestionsFn.mockClear();
         wrapper.instance().getSuggestions({ target: { value: 'tes' } });
@@ -253,7 +252,7 @@ describe('AutoCompleteAsyncField component', () => {
     it('should call given filter function on itemsList', () => {
         const itemsList = [
             { value: 'test 1', id: 123 },
-            { value: 'test 2', id: 456 }
+            { value: 'test 2', id: 456 },
         ];
 
         const filterFn = jest.fn((searchText, key) => searchText === key);
@@ -263,7 +262,7 @@ describe('AutoCompleteAsyncField component', () => {
             itemsList: itemsList,
             async: true,
             maxResults: 7,
-            filter: filterFn
+            filter: filterFn,
         });
         expect(toJson(wrapper)).toMatchSnapshot();
         const childrenFn = wrapper.find('Downshift').props().children;
@@ -272,7 +271,7 @@ describe('AutoCompleteAsyncField component', () => {
             isOpen: true,
             getMenuProps: jest.fn(),
             inputValue: 'tes',
-            getItemProps: jest.fn()
+            getItemProps: jest.fn(),
         });
 
         expect(filterFn).toHaveBeenCalled();
@@ -281,7 +280,7 @@ describe('AutoCompleteAsyncField component', () => {
     it('should call filter function on itemsList', () => {
         const itemsList = [
             { value: 'test 1', id: 123 },
-            { value: 'test 2', id: 456 }
+            { value: 'test 2', id: 456 },
         ];
         const wrapper = setup({
             required: true,
@@ -294,7 +293,7 @@ describe('AutoCompleteAsyncField component', () => {
             clearInput: true,
             selectedValue: { value: 'test 1', id: 123 },
             error: true,
-            errorText: 'This field is required'
+            errorText: 'This field is required',
         });
 
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -308,7 +307,7 @@ describe('AutoCompleteAsyncField component', () => {
             isOpen: true,
             getMenuProps: jest.fn(),
             inputValue: 'tes',
-            getItemProps: jest.fn()
+            getItemProps: jest.fn(),
         });
 
         const FirstRenderedChildren = getElement(childrens1.type, childrens1.props);
@@ -320,15 +319,21 @@ describe('AutoCompleteAsyncField component', () => {
             isOpen: true,
             getMenuProps: jest.fn(),
             inputValue: '123',
-            getItemProps: jest.fn()
+            getItemProps: jest.fn(),
         });
         const SecondRenderedChildren = getElement(childrens2.type, childrens2.props);
         expect(toJson(SecondRenderedChildren)).toMatchSnapshot();
         expect(SecondRenderedChildren.find('WithStyles(MenuItem)').length).toEqual(1);
 
         expect(toJson(SecondRenderedChildren.find('WithStyles(MenuItem)').dive())).toMatchSnapshot();
-        expect(toJson(SecondRenderedChildren.find('WithStyles(MenuItem)').dive().find('MenuItemComponent').dive())).toMatchSnapshot();
-        expect(toJson(SecondRenderedChildren.find('WithStyles(TextFieldWrapper)').dive().find('TextFieldWrapper').dive().find('TextField').dive())).toMatchSnapshot();
+        expect(toJson(SecondRenderedChildren.find('WithStyles(MenuItem)').dive()
+            .find('MenuItemComponent')
+            .dive())).toMatchSnapshot();
+        expect(toJson(SecondRenderedChildren.find('WithStyles(TextFieldWrapper)').dive()
+            .find('TextFieldWrapper')
+            .dive()
+            .find('TextField')
+            .dive())).toMatchSnapshot();
 
         const childrens3 = childrenFn({
             getInputProps: jest.fn(),
@@ -337,7 +342,7 @@ describe('AutoCompleteAsyncField component', () => {
             inputValue: '123',
             getItemProps: jest.fn(),
             highlightedIndex: 1,
-            selectedItem: { value: 'test 1', id: 123 }
+            selectedItem: { value: 'test 1', id: 123 },
         });
 
         const ThirdRenderedChildren = getElement(childrens3.type, childrens3.props);

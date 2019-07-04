@@ -1,11 +1,11 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import * as Partials from './partials';
 
 export default class DepartmentTechnicalReportCitation extends Component {
     static propTypes = {
         publication: PropTypes.object.isRequired,
-        hideDoiLink: PropTypes.bool
+        hideDoiLink: PropTypes.bool,
     };
 
     constructor(props) {
@@ -16,16 +16,16 @@ export default class DepartmentTechnicalReportCitation extends Component {
         const record = {
             id: this.props.publication.rek_pid,
             title: this.props.publication.rek_title,
-            series: this.props.publication.fez_record_search_key_series ?
-                this.props.publication.fez_record_search_key_series.rek_series : null,
-            reportNumber: this.props.publication.fez_record_search_key_report_number ?
-                this.props.publication.fez_record_search_key_report_number.rek_report_number : null,
-            orgUnitName: this.props.publication.fez_record_search_key_org_unit_name ?
-                this.props.publication.fez_record_search_key_org_unit_name.rek_org_unit_name : null,
-            orgName: this.props.publication.fez_record_search_key_org_name ?
-                this.props.publication.fez_record_search_key_org_name.rek_org_name : null,
-            doi: this.props.publication.fez_record_search_key_doi ?
-                this.props.publication.fez_record_search_key_doi.rek_doi : null
+            series: this.props.publication.fez_record_search_key_series
+                ? this.props.publication.fez_record_search_key_series.rek_series : null,
+            reportNumber: this.props.publication.fez_record_search_key_report_number
+                ? this.props.publication.fez_record_search_key_report_number.rek_report_number : null,
+            orgUnitName: this.props.publication.fez_record_search_key_org_unit_name
+                ? this.props.publication.fez_record_search_key_org_unit_name.rek_org_unit_name : null,
+            orgName: this.props.publication.fez_record_search_key_org_name
+                ? this.props.publication.fez_record_search_key_org_name.rek_org_name : null,
+            doi: this.props.publication.fez_record_search_key_doi
+                ? this.props.publication.fez_record_search_key_doi.rek_doi : null,
         };
 
         // eSpace citation view for Department Technical Report

@@ -1,1 +1,1 @@
-export {default as LicenseSelectorField} from './LicenseSelectorField';
+export { default as LicenseSelectorField } from './LicenseSelectorField';

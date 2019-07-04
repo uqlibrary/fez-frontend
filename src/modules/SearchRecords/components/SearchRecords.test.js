@@ -1,6 +1,6 @@
 import SearchRecords from './SearchRecords';
-import {routes} from 'config';
-import {locale} from 'locale';
+import { routes } from 'config';
+import { locale } from 'locale';
 
 function setup(testProps, isShallow = true) {
     const props = {
@@ -11,10 +11,10 @@ function setup(testProps, isShallow = true) {
         isUnpublishedBufferPage: false,
         actions: {
             exportEspacePublications: jest.fn(),
-            searchEspacePublications: jest.fn()
+            searchEspacePublications: jest.fn(),
         },
         location: {
-            search: '?searchQueryParams%5Ball%5D=test'
+            search: '?searchQueryParams%5Ball%5D=test',
         },
         history: {},
         ...testProps,
@@ -23,31 +23,30 @@ function setup(testProps, isShallow = true) {
 }
 
 describe('SearchRecords page', () => {
-
     it('should render placeholders', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render advanced search component', () => {
-        const wrapper = setup({isAdvancedSearch: true});
+        const wrapper = setup({ isAdvancedSearch: true });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render loading screen while loading search results', () => {
-        const wrapper = setup({searchLoading: true});
+        const wrapper = setup({ searchLoading: true });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render loading screen while loading publications while filtering', () => {
-        const wrapper = setup({publicationsList: [1, 2, 2]});
-        wrapper.setProps({searchLoading: true});
+        const wrapper = setup({ publicationsList: [1, 2, 2] });
+        wrapper.setProps({ searchLoading: true });
         wrapper.update();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render loading screen while export publications loading', () => {
-        const wrapper = setup({publicationsList: [1, 2, 2], exportPublicationsLoading: true});
+        const wrapper = setup({ publicationsList: [1, 2, 2], exportPublicationsLoading: true });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -55,8 +54,8 @@ describe('SearchRecords page', () => {
         const wrapper = setup({
             publicationsList: [],
             searchQuery: {
-                title: 'this is test'
-            }
+                title: 'this is test',
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -64,20 +63,20 @@ describe('SearchRecords page', () => {
     it('should run constructor without valid search location', () => {
         const wrapper = setup({
             location: {
-                search: 'test'
-            }
+                search: 'test',
+            },
         });
         expect(wrapper.state()).toMatchSnapshot();
     });
 
     it('should render when paging', () => {
         const wrapper = setup({
-            publicationsList: [1,2],
+            publicationsList: [1, 2],
             publicationsListPagingData: {
                 from: 10,
                 to: 20,
-                total: 100
-            }
+                total: 100,
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -88,22 +87,22 @@ describe('SearchRecords page', () => {
         wrapper.instance().parseSearchQueryStringFromUrl = testFn;
         wrapper.setProps({
             location: {
-                search: ''
-            }
+                search: '',
+            },
         });
         expect(testFn).not.toBeCalled();
-    })
+    });
 
     it('should show available filters or selected filters if publicationsListFacets returned (even if there are no results)', () => {
         const wrapper = setup({
             publicationsListFacets: {
                 'Some facet': 1,
-                'Another facet': 2
+                'Another facet': 2,
             },
             searchQuery: {
-                title: 'this is test'
+                title: 'this is test',
             },
-            publicationsList: []
+            publicationsList: [],
         });
 
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -113,16 +112,16 @@ describe('SearchRecords page', () => {
         const wrapper = setup({
             publicationsListFacets: {
                 'Some facet': 1,
-                'Another facet': 2
+                'Another facet': 2,
             },
             searchQuery: {
-                title: 'this is test'
+                title: 'this is test',
             },
-            publicationsList: []
+            publicationsList: [],
         });
 
         wrapper.setState({
-            advancedSearchFields: ['Author']
+            advancedSearchFields: ['Author'],
         });
 
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -133,10 +132,10 @@ describe('SearchRecords page', () => {
             searchQuery: {
                 title: 'this is test',
                 activeFacets: {
-                    showOpenAccessOnly: true
-                }
+                    showOpenAccessOnly: true,
+                },
             },
-            publicationsList: []
+            publicationsList: [],
         });
 
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -148,11 +147,11 @@ describe('SearchRecords page', () => {
                 title: 'this is test',
                 activeFacets: {
                     filters: {
-                        'Display type': 179
-                    }
-                }
+                        'Display type': 179,
+                    },
+                },
             },
-            publicationsList: []
+            publicationsList: [],
         });
 
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -166,12 +165,12 @@ describe('SearchRecords page', () => {
                     ranges: {
                         'Year published': {
                             from: 2015,
-                            to: 2018
-                        }
-                    }
+                            to: 2018,
+                        },
+                    },
                 },
             },
-            publicationsList: []
+            publicationsList: [],
         });
 
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -179,11 +178,11 @@ describe('SearchRecords page', () => {
 
     it('should get publications when user clicks back and state is set', () => {
         const testAction = jest.fn();
-        const wrapper = setup({actions: {searchEspacePublications: testAction}});
+        const wrapper = setup({ actions: { searchEspacePublications: testAction } });
 
         wrapper.instance().componentWillReceiveProps({
-            history: {action: 'POP'},
-            location: {pathname: routes.pathConfig.records.search, state: {page: 2}}
+            history: { action: 'POP' },
+            location: { pathname: routes.pathConfig.records.search, state: { page: 2 } },
         });
         expect(testAction).toHaveBeenCalled();
         expect(wrapper.state().page).toEqual(2);
@@ -191,8 +190,8 @@ describe('SearchRecords page', () => {
 
     it('should get publications when user clicks back and state is not set', () => {
         const testAction = jest.fn();
-        const wrapper = setup({actions: {searchEspacePublications: testAction}});
-        wrapper.instance().componentWillReceiveProps({history: {action: 'POP'}, location: {pathname: routes.pathConfig.records.search, state: null}});
+        const wrapper = setup({ actions: { searchEspacePublications: testAction } });
+        wrapper.instance().componentWillReceiveProps({ history: { action: 'POP' }, location: { pathname: routes.pathConfig.records.search, state: null } });
         expect(testAction).toHaveBeenCalled();
         expect(wrapper.state().page).toEqual(1);
     });
@@ -203,11 +202,11 @@ describe('SearchRecords page', () => {
 
         const wrapper = setup({
             actions: {
-                searchEspacePublications: testAction
+                searchEspacePublications: testAction,
             },
             history: {
-                push: testPushFn
-            }
+                push: testPushFn,
+            },
         });
 
         wrapper.instance().pageSizeChanged(30);
@@ -224,11 +223,11 @@ describe('SearchRecords page', () => {
 
         const wrapper = setup({
             actions: {
-                searchEspacePublications: testAction
+                searchEspacePublications: testAction,
             },
             history: {
-                push: testPushFn
-            }
+                push: testPushFn,
+            },
         });
 
         wrapper.instance().pageChanged(2);
@@ -244,11 +243,11 @@ describe('SearchRecords page', () => {
 
         const wrapper = setup({
             actions: {
-                searchEspacePublications: testAction
+                searchEspacePublications: testAction,
             },
             history: {
-                push: testPushFn
-            }
+                push: testPushFn,
+            },
         });
 
         wrapper.instance().sortByChanged('publication_date', 'Asc');
@@ -265,16 +264,16 @@ describe('SearchRecords page', () => {
 
         const wrapper = setup({
             actions: {
-                searchEspacePublications: testAction
+                searchEspacePublications: testAction,
             },
             history: {
-                push: testPushFn
-            }
+                push: testPushFn,
+            },
         });
 
-        wrapper.instance().facetsChanged({filters: {}, ranges: {'Publication year': {from: 2015, to: 2018}}});
+        wrapper.instance().facetsChanged({ filters: {}, ranges: { 'Publication year': { from: 2015, to: 2018 } } });
         wrapper.update();
-        expect(wrapper.instance().state.activeFacets).toEqual({filters: {}, ranges: {'Publication year': {from: 2015, to: 2018}}});
+        expect(wrapper.instance().state.activeFacets).toEqual({ filters: {}, ranges: { 'Publication year': { from: 2015, to: 2018 } } });
         expect(testAction).toHaveBeenCalled();
         expect(testPushFn).toHaveBeenCalled();
     });
@@ -284,12 +283,12 @@ describe('SearchRecords page', () => {
             history: {
                 push: jest.fn((history) => {
                     expect(history.pathname).toBe(routes.pathConfig.admin.unpublished);
-                })
+                }),
             },
             location: {
                 pathname: routes.pathConfig.admin.unpublished,
-                search: ''
-            }
+                search: '',
+            },
         });
         wrapper.instance().updateHistoryAndSearch();
     });
@@ -298,11 +297,11 @@ describe('SearchRecords page', () => {
         const testAction = jest.fn();
         const wrapper = setup({
             location: {
-                search: '?searchQueryParams=something%2Dinteresting'
+                search: '?searchQueryParams=something%2Dinteresting',
             },
             actions: {
-                searchEspacePublications: testAction
-            }
+                searchEspacePublications: testAction,
+            },
         });
 
         wrapper.instance().componentDidMount();
@@ -320,12 +319,12 @@ describe('SearchRecords page', () => {
             sortBy: 'published_date',
             sortDirection: 'Desc',
             searchQueryParams: {
-                title: 'sometestdata'
+                title: 'sometestdata',
             },
             activeFacets: {
                 filters: {},
-                ranges: {}
-            }
+                ranges: {},
+            },
         });
     });
 
@@ -346,15 +345,15 @@ describe('SearchRecords page', () => {
             sortBy: 'published_date',
             sortDirection: 'Desc',
             searchQueryParams: {
-                title: 'some test data'
+                title: 'some test data',
             },
             activeFacets: {
                 filters: {
-                    'Display type': '130'
+                    'Display type': '130',
                 },
                 ranges: {},
-                showOpenAccessOnly: false
-            }
+                showOpenAccessOnly: false,
+            },
         });
     });
 
@@ -369,15 +368,15 @@ describe('SearchRecords page', () => {
             sortBy: 'published_date',
             sortDirection: 'Desc',
             searchQueryParams: {
-                title: 'some test data'
+                title: 'some test data',
             },
             activeFacets: {
                 filters: {
-                    'Display type': '130'
+                    'Display type': '130',
                 },
                 ranges: {},
-                showOpenAccessOnly: true
-            }
+                showOpenAccessOnly: true,
+            },
         });
     });
 
@@ -392,18 +391,18 @@ describe('SearchRecords page', () => {
             sortBy: 'published_date',
             sortDirection: 'Desc',
             searchQueryParams: {
-                title: 'some test data'
+                title: 'some test data',
             },
             activeFacets: {
                 filters: {},
                 ranges: {
                     'Year published': {
                         from: '2008',
-                        to: '2023'
-                    }
+                        to: '2023',
+                    },
                 },
-                showOpenAccessOnly: false
-            }
+                showOpenAccessOnly: false,
+            },
         });
     });
 
@@ -418,18 +417,18 @@ describe('SearchRecords page', () => {
             sortBy: 'published_date',
             sortDirection: 'Desc',
             searchQueryParams: {
-                title: 'some test data'
+                title: 'some test data',
             },
             activeFacets: {
                 filters: {},
                 ranges: {
                     'Year published': {
                         from: '2008',
-                        to: '2023'
-                    }
+                        to: '2023',
+                    },
                 },
-                showOpenAccessOnly: false
-            }
+                showOpenAccessOnly: false,
+            },
         });
     });
 
@@ -444,18 +443,18 @@ describe('SearchRecords page', () => {
             sortBy: 'published_date',
             sortDirection: 'Desc',
             searchQueryParams: {
-                title: 'some test data'
+                title: 'some test data',
             },
             activeFacets: {
                 filters: {},
                 ranges: {
                     'Year published': {
                         from: '2008',
-                        to: '2023'
-                    }
+                        to: '2023',
+                    },
                 },
-                showOpenAccessOnly: false
-            }
+                showOpenAccessOnly: false,
+            },
         });
     });
 
@@ -470,28 +469,28 @@ describe('SearchRecords page', () => {
             sortBy: 'published_date',
             sortDirection: 'Asc',
             searchQueryParams: {
-                title: 'some test data'
+                title: 'some test data',
             },
             activeFacets: {
                 filters: {},
                 ranges: {
                     'Year published': {
                         from: '2008',
-                        to: '2023'
-                    }
+                        to: '2023',
+                    },
                 },
-                showOpenAccessOnly: false
-            }
+                showOpenAccessOnly: false,
+            },
         });
     });
 
     it('renders loading screen while export publications loading', () => {
-        const wrapper = setup({exportPublicationsLoading: true});
+        const wrapper = setup({ exportPublicationsLoading: true });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('renders error alert if error occurs during search', () => {
-        const wrapper = setup({searchLoadingError: true});
+        const wrapper = setup({ searchLoadingError: true });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -503,53 +502,53 @@ describe('SearchRecords page', () => {
             sortBy: 'score',
             sortDirection: 'Desc',
             searchQueryParams: {
-                title: 'some test data'
+                title: 'some test data',
             },
             activeFacets: {
                 filters: {},
                 ranges: {
                     'Year published': {
                         from: '2008',
-                        to: '2023'
-                    }
+                        to: '2023',
+                    },
                 },
-                showOpenAccessOnly: false
+                showOpenAccessOnly: false,
             },
-            advancedSearchFields: []
+            advancedSearchFields: [],
         };
 
         const wrapper = setup({
             actions: {
                 exportEspacePublications: testExportAction,
-                searchEspacePublications: jest.fn()
+                searchEspacePublications: jest.fn(),
             },
-            searchQuery
+            searchQuery,
         });
 
-        wrapper.instance().handleExportPublications({exportPublicationsFormat: 'excel'});
+        wrapper.instance().handleExportPublications({ exportPublicationsFormat: 'excel' });
         expect(testExportAction).toHaveBeenCalledWith({
             ...searchQuery,
-            exportPublicationsFormat: 'excel'
+            exportPublicationsFormat: 'excel',
         });
     });
 
     it('should handle set excluded facets correctly from searchfields sent from searchComponent', () => {
         const wrapper = setup();
-        const test = [{"searchField":"rek_title","value":"Test","label":""},{"searchField":"rek_author","value":"Ky Lane","label":""}];
-        const result = ["Scopus document type", "Genre", "Year published", "Published year range", "Title", "Author"];
+        const test = [{ 'searchField': 'rek_title', 'value': 'Test', 'label': '' }, { 'searchField': 'rek_author', 'value': 'Ky Lane', 'label': '' }];
+        const result = ['Scopus document type', 'Genre', 'Year published', 'Published year range', 'Title', 'Author'];
         wrapper.instance().handleFacetExcludesFromSearchFields(test);
         expect(wrapper.instance().state.advancedSearchFields).toEqual(result);
 
         // handle null input
         wrapper.setState({
-            advancedSearchFields: []
+            advancedSearchFields: [],
         });
         wrapper.instance().handleFacetExcludesFromSearchFields(null);
         expect(wrapper.instance().state.advancedSearchFields.length).toBe(0);
 
         // handle searchField entry not having the searchField property
         wrapper.instance().handleFacetExcludesFromSearchFields({
-            test: {}
+            test: {},
         });
         expect(
             wrapper.instance().state.advancedSearchFields.length
@@ -560,28 +559,27 @@ describe('SearchRecords page', () => {
         // handle fieldType.map being falsy
         wrapper.instance().handleFacetExcludesFromSearchFields({
             test: {
-                searchField: '0'
-            }
+                searchField: '0',
+            },
         });
         expect(
             wrapper.instance().state.advancedSearchFields.length
         ).toBe(
             locale.pages.searchRecords.facetsFilter.excludeFacetsList.length
         );
-
     });
 
 
     it('should handle empty search query string and should not fail to WSoD', () => {
         const wrapper = setup();
         const expected = {
-            "activeFacets": {
-              "filters": {},
-              "ranges": {},
+            'activeFacets': {
+                'filters': {},
+                'ranges': {},
             },
-            "pageSize": 20,
-            "sortBy": "score",
-            "sortDirection": "Desc",
+            'pageSize': 20,
+            'sortBy': 'score',
+            'sortDirection': 'Desc',
         };
         const result = wrapper.instance().parseSearchQueryStringFromUrl('');
         expect(result).toEqual(expected);
@@ -592,8 +590,8 @@ describe('SearchRecords page', () => {
         const wrapper = setup({
             actions: {
                 clearSearchQuery: clearSearchQueryFn,
-                searchEspacePublications: jest.fn()
-            }
+                searchEspacePublications: jest.fn(),
+            },
         });
         const componentWillUnmount = jest.spyOn(wrapper.instance(), 'componentWillUnmount');
         wrapper.unmount();

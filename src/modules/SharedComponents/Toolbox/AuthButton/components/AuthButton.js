@@ -1,16 +1,16 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import IconButton from '@material-ui/core/IconButton';
 import Tooltip from '@material-ui/core/Tooltip';
 import Person from '@material-ui/icons/Person';
 import PersonOutline from '@material-ui/icons/PersonOutline';
 import Fade from '@material-ui/core/Fade';
-import {withStyles} from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 
 const styles = theme => ({
     iconButton: {
-        color: theme.palette.white.main
-    }
+        color: theme.palette.white.main,
+    },
 });
 
 export class AuthButton extends Component {
@@ -21,11 +21,11 @@ export class AuthButton extends Component {
         signInTooltipText: PropTypes.string,
         hoveredStyle: PropTypes.object,
         onClick: PropTypes.func,
-        classes: PropTypes.object
+        classes: PropTypes.object,
     };
 
     render() {
-        const {classes, isAuthorizedUser, signOutTooltipText, signInTooltipText, ariaLabel, onClick} = this.props;
+        const { classes, isAuthorizedUser, signOutTooltipText, signInTooltipText, ariaLabel, onClick } = this.props;
         return (
             <div className="auth-button-wrapper">
                 <Tooltip title={isAuthorizedUser ? signOutTooltipText : signInTooltipText} placement="bottom-start" TransitionComponent={Fade} TransitionProps={{ timeout: 300 }}>
