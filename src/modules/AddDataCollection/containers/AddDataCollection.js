@@ -15,9 +15,10 @@ const onSubmit = (values, dispatch, state) => {
     // Get the list of redux-form registered fields for the current form
     const formFields = state.registeredFields.toJS();
 
-    // Delete the currentAuthor if there is no author field in the form (potentially editors only like conference proceedings) and its not a thesis (specific field name)
+    // Delete the currentAuthor if there is no author field in the
+    //  form (potentially editors only like conference proceedings) and its not a thesis (specific field name)
     const cleanValues = values.toJS();
-    if((!formFields.authors && !formFields['currentAuthor.0.nameAsPublished'])) {
+    if (!formFields.authors && !formFields['currentAuthor.0.nameAsPublished']) {
         delete cleanValues.currentAuthor;
     }
 
@@ -36,7 +37,7 @@ const AddDataCollectionContainer = reduxForm({
     onSubmit,
 })(confirmDiscardFormChanges(AddDataCollection, FORM_NAME));
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
     const formErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});
 
     const initialValues = {
@@ -57,8 +58,10 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-
-let AddDataCollectionForm = connect(mapStateToProps, mapDispatchToProps)(AddDataCollectionContainer);
+let AddDataCollectionForm = connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(AddDataCollectionContainer);
 AddDataCollectionForm = withRouter(AddDataCollectionForm);
 
 export default AddDataCollectionForm;

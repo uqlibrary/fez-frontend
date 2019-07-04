@@ -18,8 +18,18 @@ describe('AuthorLinking', () => {
         const props = {
             searchKey: searchKey,
             authorList: [
-                { rek_author_id: null, rek_author_pid: 'UQ:111111', rek_author: 'Overgaard, Nana H.', rek_author_order: 1 },
-                { rek_author_id: null, rek_author_pid: 'UQ:111111', rek_author: 'Cruz, Jazmina L.', rek_author_order: 2 },
+                {
+                    rek_author_id: null,
+                    rek_author_pid: 'UQ:111111',
+                    rek_author: 'Overgaard, Nana H.',
+                    rek_author_order: 1,
+                },
+                {
+                    rek_author_id: null,
+                    rek_author_pid: 'UQ:111111',
+                    rek_author: 'Cruz, Jazmina L.',
+                    rek_author_order: 2,
+                },
             ],
             linkedAuthorIdList: [
                 { rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 0, rek_author_id_order: 1 },
@@ -36,8 +46,18 @@ describe('AuthorLinking', () => {
         const props = {
             searchKey: searchKey,
             authorList: [
-                { rek_author_id: null, rek_author_pid: 'UQ:111111', rek_author: 'Overgaard, Nana H.', rek_author_order: 1 },
-                { rek_author_id: null, rek_author_pid: 'UQ:111111', rek_author: 'Cruz, Jazmina L.', rek_author_order: 2 },
+                {
+                    rek_author_id: null,
+                    rek_author_pid: 'UQ:111111',
+                    rek_author: 'Overgaard, Nana H.',
+                    rek_author_order: 1,
+                },
+                {
+                    rek_author_id: null,
+                    rek_author_pid: 'UQ:111111',
+                    rek_author: 'Cruz, Jazmina L.',
+                    rek_author_order: 2,
+                },
             ],
         };
 
@@ -52,14 +72,31 @@ describe('AuthorLinking', () => {
             searchKey: searchKey,
             loggedInAuthor: { aut_id: 111 },
             authorList: [
-                { rek_author_id: null, rek_author_pid: 'UQ:111111', rek_author: 'Overgaard, Nana H.', rek_author_order: 1 },
-                { rek_author_id: null, rek_author_pid: 'UQ:111111', rek_author: 'Cruz, Jazmina L.', rek_author_order: 2 },
+                {
+                    rek_author_id: null,
+                    rek_author_pid: 'UQ:111111',
+                    rek_author: 'Overgaard, Nana H.',
+                    rek_author_order: 1,
+                },
+                {
+                    rek_author_id: null,
+                    rek_author_pid: 'UQ:111111',
+                    rek_author: 'Cruz, Jazmina L.',
+                    rek_author_order: 2,
+                },
             ],
             onChange: onChange,
         };
 
         const wrapper = setup(props);
-        wrapper.instance()._selectAuthor({ rek_author_id: null, rek_author_pid: 'UQ:111111', rek_author: 'Overgaard, Nana H.', rek_author_order: 1 });
+        wrapper
+            .instance()
+            ._selectAuthor({
+                rek_author_id: null,
+                rek_author_pid: 'UQ:111111',
+                rek_author: 'Overgaard, Nana H.',
+                rek_author_order: 1,
+            });
         expect(onChange).toHaveBeenCalled();
 
         wrapper.instance()._acceptAuthorLinkingTermsAndConditions();
@@ -70,8 +107,18 @@ describe('AuthorLinking', () => {
         const props = {
             searchKey: searchKey,
             authorList: [
-                { rek_author_id: null, rek_author_pid: 'UQ:111111', rek_author: 'Overgaard, Nana H.', rek_author_order: 1 },
-                { rek_author_id: null, rek_author_pid: 'UQ:111111', rek_author: 'Cruz, Jazmina L.', rek_author_order: 2 },
+                {
+                    rek_author_id: null,
+                    rek_author_pid: 'UQ:111111',
+                    rek_author: 'Overgaard, Nana H.',
+                    rek_author_order: 1,
+                },
+                {
+                    rek_author_id: null,
+                    rek_author_pid: 'UQ:111111',
+                    rek_author: 'Cruz, Jazmina L.',
+                    rek_author_order: 2,
+                },
             ],
             linkedAuthorIdList: [
                 { rek_author_id_id: null, rek_author_id_pid: 'UQ:111111', rek_author_id: 0, rek_author_id_order: 1 },
@@ -88,8 +135,18 @@ describe('AuthorLinking', () => {
             searchKey: searchKey,
             loggedInAuthor: { aut_id: 111 },
             authorList: [
-                { rek_author_id: null, rek_author_pid: 'UQ:111111', rek_author: 'Overgaard, Nana H.', rek_author_order: 1 },
-                { rek_author_id: null, rek_author_pid: 'UQ:111111', rek_author: 'Cruz, Jazmina L.', rek_author_order: 2 },
+                {
+                    rek_author_id: null,
+                    rek_author_pid: 'UQ:111111',
+                    rek_author: 'Overgaard, Nana H.',
+                    rek_author_order: 1,
+                },
+                {
+                    rek_author_id: null,
+                    rek_author_pid: 'UQ:111111',
+                    rek_author: 'Cruz, Jazmina L.',
+                    rek_author_order: 2,
+                },
             ],
             onChange: null,
         };

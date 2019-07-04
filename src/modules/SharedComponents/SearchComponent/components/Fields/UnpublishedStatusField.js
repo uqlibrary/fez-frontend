@@ -12,8 +12,8 @@ export const mapStateToProps = (state, props) => {
         label: props.label,
         placeholder: props.placeholder,
         required: props.required,
-        errorText: !!props.meta && props.meta.error || props.error && !!props.errorText || '',
-        error: !!props.meta && !!props.meta.error || props.error || false,
+        errorText: (!!props.meta && props.meta.error) || (props.error && !!props.errorText) || '',
+        error: (!!props.meta && !!props.meta.error) || props.error || false,
     };
 };
 
@@ -21,8 +21,18 @@ const mapDispatchToProps = () => {
     return {};
 };
 
-const UnpublishedStatusList = connect(mapStateToProps, mapDispatchToProps)(GenericSelectField);
+const UnpublishedStatusList = connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(GenericSelectField);
 
 export default function UnpublishedStatusField(fieldProps) {
-    return (<UnpublishedStatusList onChange={ !!fieldProps.input && fieldProps.input.onChange || !!fieldProps.onChange && fieldProps.onChange } { ...fieldProps } />);
+    return (
+        <UnpublishedStatusList
+            onChange={
+                (!!fieldProps.input && fieldProps.input.onChange) || (!!fieldProps.onChange && fieldProps.onChange)
+            }
+            {...fieldProps}
+        />
+    );
 }

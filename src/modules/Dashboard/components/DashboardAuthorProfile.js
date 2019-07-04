@@ -37,8 +37,7 @@ class DashboardAuthorProfile extends PureComponent {
             <Card className={classes.wrapper}>
                 <Grid container spacing={24} alignContent={'center'} alignItems={'center'} justify={'center'}>
                     {/* Profile avatar */}
-                    {
-                        authorDetails.image_exists === 1 &&
+                    {authorDetails.image_exists === 1 && (
                         <Grid item xs={'auto'}>
                             <DashboardAuthorAvatar
                                 values={{
@@ -46,9 +45,10 @@ class DashboardAuthorProfile extends PureComponent {
                                     title: author.aut_title || '',
                                     givenName: author.aut_fname || '',
                                     familyName: author.aut_lname || '',
-                                }}/>
+                                }}
+                            />
                         </Grid>
-                    }
+                    )}
                     {/* Author Details/Name/Orgs/ResearcherIDs */}
                     <Grid item xs>
                         <Grid container>
@@ -66,9 +66,15 @@ class DashboardAuthorProfile extends PureComponent {
                             <Grid item xs={12}>
                                 <DashboardResearcherIds
                                     values={{
-                                        publons: parseInt(author.aut_publons_id, 10) === 1 ? author.aut_orcid_id : author.aut_publons_id,
+                                        publons:
+                                            parseInt(author.aut_publons_id, 10) === 1
+                                                ? author.aut_orcid_id
+                                                : author.aut_publons_id,
                                         researcher: author.aut_researcher_id,
-                                        scopus: parseInt(author.aut_is_scopus_id_authenticated, 10) === 1 ? author.aut_scopus_id : '',
+                                        scopus:
+                                            parseInt(author.aut_is_scopus_id_authenticated, 10) === 1
+                                                ? author.aut_scopus_id
+                                                : '',
                                         google_scholar: author.aut_google_scholar_id,
                                         orcid: author.aut_orcid_id,
                                     }}

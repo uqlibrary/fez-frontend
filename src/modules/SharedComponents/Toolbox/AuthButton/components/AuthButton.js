@@ -28,12 +28,22 @@ export class AuthButton extends Component {
         const { classes, isAuthorizedUser, signOutTooltipText, signInTooltipText, ariaLabel, onClick } = this.props;
         return (
             <div className="auth-button-wrapper">
-                <Tooltip title={isAuthorizedUser ? signOutTooltipText : signInTooltipText} placement="bottom-start" TransitionComponent={Fade} TransitionProps={{ timeout: 300 }}>
+                <Tooltip
+                    title={isAuthorizedUser ? signOutTooltipText : signInTooltipText}
+                    placement="bottom-start"
+                    TransitionComponent={Fade}
+                    TransitionProps={{ timeout: 300 }}
+                >
                     <IconButton
                         aria-label={ariaLabel}
                         onClick={onClick}
-                        className={isAuthorizedUser ? 'log-out-button' : 'log-in-button'}>
-                        {isAuthorizedUser ? <Person className={classes.iconButton} /> : <PersonOutline className={classes.iconButton} />}
+                        className={isAuthorizedUser ? 'log-out-button' : 'log-in-button'}
+                    >
+                        {isAuthorizedUser ? (
+                            <Person className={classes.iconButton} />
+                        ) : (
+                            <PersonOutline className={classes.iconButton} />
+                        )}
                     </IconButton>
                 </Tooltip>
             </div>
@@ -42,4 +52,3 @@ export class AuthButton extends Component {
 }
 
 export default withStyles(styles, { withTheme: true })(AuthButton);
-

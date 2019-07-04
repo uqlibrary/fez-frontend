@@ -1,12 +1,5 @@
 import * as routes from './routes';
-import {
-    IN_CREATION,
-    IN_DRAFT,
-    IN_REVIEW,
-    UNPUBLISHED,
-    RETRACTED,
-    SUBMITTED_FOR_APPROVAL,
-} from 'config/general';
+import { IN_CREATION, IN_DRAFT, IN_REVIEW, UNPUBLISHED, RETRACTED, SUBMITTED_FOR_APPROVAL } from 'config/general';
 
 describe('Backend routes method', () => {
     it('should get zer-padded year', () => {
@@ -64,7 +57,7 @@ describe('Backend routes method', () => {
                     from: 2000,
                     to: 2013,
                 },
-                'test': 'testValue',
+                test: 'testValue',
             },
         };
 
@@ -152,7 +145,13 @@ describe('Backend routes method', () => {
                 },
             },
             {
-                values: { page: 2, pageSize: 30, sortBy: 'score', sortDirection: 'asc', facets: { filters: { one: 'one facet' } } },
+                values: {
+                    page: 2,
+                    pageSize: 30,
+                    sortBy: 'score',
+                    sortDirection: 'asc',
+                    facets: { filters: { one: 'one facet' } },
+                },
                 expected: {
                     apiUrl: 'records/search',
                     options: {
@@ -210,7 +209,14 @@ describe('Backend routes method', () => {
                 },
             },
             {
-                values: { searchQuery: 'title search', page: 2, pageSize: 30, sortBy: 'score', sortDirection: 'asc', facets: { filters: { one: 'one facet' } } },
+                values: {
+                    searchQuery: 'title search',
+                    page: 2,
+                    pageSize: 30,
+                    sortBy: 'score',
+                    sortDirection: 'asc',
+                    facets: { filters: { one: 'one facet' } },
+                },
                 expected: {
                     apiUrl: 'records/search',
                     options: {
@@ -274,10 +280,7 @@ describe('Backend routes method', () => {
                     },
                 },
                 expected: {
-                    rek_genre_type: [
-                        '"1"',
-                        '"a"',
-                    ],
+                    rek_genre_type: ['"1"', '"a"'],
                 },
             },
             {
@@ -291,14 +294,7 @@ describe('Backend routes method', () => {
                     },
                 },
                 expected: {
-                    rek_status: [
-                        UNPUBLISHED,
-                        SUBMITTED_FOR_APPROVAL,
-                        IN_CREATION,
-                        IN_REVIEW,
-                        IN_DRAFT,
-                        RETRACTED,
-                    ],
+                    rek_status: [UNPUBLISHED, SUBMITTED_FOR_APPROVAL, IN_CREATION, IN_REVIEW, IN_DRAFT, RETRACTED],
                 },
             },
             {
@@ -449,13 +445,25 @@ describe('Backend routes method', () => {
     it('should return parameters for search query string from getOpenAccessSearchParams method', () => {
         const testCases = [
             {
-                values: { page: 2, pageSize: 30, sortBy: 'score', sortDirection: 'asc', facets: { filters: { one: 'one facet' } } },
+                values: {
+                    page: 2,
+                    pageSize: 30,
+                    sortBy: 'score',
+                    sortDirection: 'asc',
+                    facets: { filters: { one: 'one facet' } },
+                },
                 expected: {},
             },
             {
-                values: { page: 2, pageSize: 30, sortBy: 'score', sortDirection: 'asc', facets: { showOpenAccessOnly: true, filters: { one: 'one facet' } } },
+                values: {
+                    page: 2,
+                    pageSize: 30,
+                    sortBy: 'score',
+                    sortDirection: 'asc',
+                    facets: { showOpenAccessOnly: true, filters: { one: 'one facet' } },
+                },
                 expected: {
-                    'rek_oa_status': [453693, 453694, 453695, 453696, 453697, 453954],
+                    rek_oa_status: [453693, 453694, 453695, 453696, 453697, 453954],
                 },
             },
         ];
@@ -508,7 +516,6 @@ describe('Backend routes method', () => {
             {
                 values: { facets: { filters: { one: 'one facet', two: 'two facets' } } },
                 expected: {
-
                     apiUrl: 'records/search',
                     options: {
                         params: {
@@ -548,7 +555,10 @@ describe('Backend routes method', () => {
     });
 
     it('should construct url for AUTHORS_SEARCH_API', () => {
-        expect(routes.AUTHORS_SEARCH_API({ query: 'jane' })).toEqual({ apiUrl: 'fez-authors/search', options: { params: { query: 'jane', rule: 'lookup' } } });
+        expect(routes.AUTHORS_SEARCH_API({ query: 'jane' })).toEqual({
+            apiUrl: 'fez-authors/search',
+            options: { params: { query: 'jane', rule: 'lookup' } },
+        });
     });
 
     it('should construct url for AUTHOR_DETAILS_API', () => {
@@ -581,13 +591,13 @@ describe('Backend routes method', () => {
             apiUrl: 'records/search',
             options: {
                 params: {
-                    'export_to': '',
+                    export_to: '',
                     'filters[stats_only]': true,
-                    'order_by': 'desc',
-                    'page': 1,
-                    'per_page': 20,
-                    'rule': 'mine',
-                    'sort': 'score',
+                    order_by: 'desc',
+                    page: 1,
+                    per_page: 20,
+                    rule: 'mine',
+                    sort: 'score',
                 },
             },
         });
@@ -598,7 +608,10 @@ describe('Backend routes method', () => {
     });
 
     it('should construct url for HIDE_POSSIBLE_RECORD_API', () => {
-        expect(routes.HIDE_POSSIBLE_RECORD_API({})).toEqual({ apiUrl: 'records/search', options: { params: { rule: 'possible' } } });
+        expect(routes.HIDE_POSSIBLE_RECORD_API({})).toEqual({
+            apiUrl: 'records/search',
+            options: { params: { rule: 'possible' } },
+        });
     });
 
     it('should construct url for NEW_RECORD_API', () => {
@@ -606,7 +619,9 @@ describe('Backend routes method', () => {
     });
 
     it('should construct url for FILE_UPLOAD_API', () => {
-        expect(routes.FILE_UPLOAD_API({ pid: '12345', fileName: 'test.jpg' })).toEqual({ 'apiUrl': 'file/upload/presigned/12345/test.jpg' });
+        expect(routes.FILE_UPLOAD_API({ pid: '12345', fileName: 'test.jpg' })).toEqual({
+            apiUrl: 'file/upload/presigned/12345/test.jpg',
+        });
     });
 
     it('should construct url for GET_NEWS_API', () => {
@@ -622,15 +637,20 @@ describe('Backend routes method', () => {
     });
 
     it('should construct url for ACADEMIC_STATS_PUBLICATION_HINDEX_API', () => {
-        expect(routes.ACADEMIC_STATS_PUBLICATION_HINDEX_API({ userId: '12345' })).toEqual({ apiUrl: 'academic/12345/hindex' });
+        expect(routes.ACADEMIC_STATS_PUBLICATION_HINDEX_API({ userId: '12345' })).toEqual({
+            apiUrl: 'academic/12345/hindex',
+        });
     });
 
     it('should construct url for AUTHOR_ORCID_DETAILS_API', () => {
-        expect(routes.AUTHOR_ORCID_DETAILS_API({ userId: '12345', params: { someParam: 'test' } })).toEqual({ 'apiUrl': 'orcid/12345/request', 'options': { 'params': { 'someParam': 'test' } } });
+        expect(routes.AUTHOR_ORCID_DETAILS_API({ userId: '12345', params: { someParam: 'test' } })).toEqual({
+            apiUrl: 'orcid/12345/request',
+            options: { params: { someParam: 'test' } },
+        });
     });
 
     it('should construct url for AUTHOR_API', () => {
-        expect(routes.AUTHOR_API({ authorId: '12345' })).toEqual({ 'apiUrl': 'fez-authors/12345' });
+        expect(routes.AUTHOR_API({ authorId: '12345' })).toEqual({ apiUrl: 'fez-authors/12345' });
     });
 
     it('should construct url for CURRENT_AUTHOR_API', () => {
@@ -640,61 +660,70 @@ describe('Backend routes method', () => {
     it('should construct url for CURRENT_ACCOUNT_API', () => {
         const MockDate = require('mockdate');
         MockDate.set('2020-01-01T00:00:00.000Z', 10);
-        expect(routes.CURRENT_ACCOUNT_API()).toEqual({ 'apiUrl': 'account', 'options': { 'params': { 'ts': '1577836800000' } } });
+        expect(routes.CURRENT_ACCOUNT_API()).toEqual({
+            apiUrl: 'account',
+            options: { params: { ts: '1577836800000' } },
+        });
         MockDate.reset();
     });
 
-    it('should correctly construct url for SEARCH_INTERNAL_RECORDS_API when rek_status key value is less than 0', () => {
-        const testCases = [
-            {
-                values: { searchMode: 'advanced', searchQueryParams: { rek_status: { value: -4 } } },
-                expected: {
-                    apiUrl: 'records/search',
-                    options: {
-                        params: {
-                            export_to: '',
-                            order_by: 'desc',
-                            page: 1,
-                            per_page: 20,
-                            sort: 'score',
-                            mode: 'advanced',
-                            key: {
-                                rek_status: [1, 3, 4, 5, 6, 7],
+    it(
+        'should correctly construct url for SEARCH_INTERNAL_RECORDS_API ' +
+            'when the rek_status key value is less than 0',
+        () => {
+            const testCases = [
+                {
+                    values: { searchMode: 'advanced', searchQueryParams: { rek_status: { value: -4 } } },
+                    expected: {
+                        apiUrl: 'records/search',
+                        options: {
+                            params: {
+                                export_to: '',
+                                order_by: 'desc',
+                                page: 1,
+                                per_page: 20,
+                                sort: 'score',
+                                mode: 'advanced',
+                                key: {
+                                    rek_status: [1, 3, 4, 5, 6, 7],
+                                },
                             },
                         },
                     },
                 },
-            },
-            {
-                values: { searchMode: 'advanced', searchQueryParams: { rek_status: { value: 4 } } },
-                expected: {
-                    apiUrl: 'records/search',
-                    options: {
-                        params: {
-                            export_to: '',
-                            order_by: 'desc',
-                            page: 1,
-                            per_page: 20,
-                            sort: 'score',
-                            mode: 'advanced',
-                            key: {
-                                rek_status: 4,
+                {
+                    values: { searchMode: 'advanced', searchQueryParams: { rek_status: { value: 4 } } },
+                    expected: {
+                        apiUrl: 'records/search',
+                        options: {
+                            params: {
+                                export_to: '',
+                                order_by: 'desc',
+                                page: 1,
+                                per_page: 20,
+                                sort: 'score',
+                                mode: 'advanced',
+                                key: {
+                                    rek_status: 4,
+                                },
                             },
                         },
                     },
                 },
-            },
-        ];
+            ];
 
-        testCases.map(item => {
-            expect(routes.SEARCH_INTERNAL_RECORDS_API({ ...item.values })).toEqual(item.expected);
-        });
-    });
+            testCases.map(item => {
+                expect(routes.SEARCH_INTERNAL_RECORDS_API({ ...item.values })).toEqual(item.expected);
+            });
+        }
+    );
 
     it('should construct url for SEARCH_AUTHOR_LOOKUP_API', () => {
-        expect(routes.SEARCH_AUTHOR_LOOKUP_API({
-            searchQuery: 'a,b',
-        })).toEqual({
+        expect(
+            routes.SEARCH_AUTHOR_LOOKUP_API({
+                searchQuery: 'a,b',
+            })
+        ).toEqual({
             apiUrl: 'fez-authors/search',
             options: {
                 params: {
@@ -706,20 +735,24 @@ describe('Backend routes method', () => {
     });
 
     it('should construct url for THIRD_PARTY_LOOKUP_API_1FIELD', () => {
-        expect(routes.THIRD_PARTY_LOOKUP_API_1FIELD({
-            type: 'test1',
-            field1: 'test2',
-        })).toEqual({
+        expect(
+            routes.THIRD_PARTY_LOOKUP_API_1FIELD({
+                type: 'test1',
+                field1: 'test2',
+            })
+        ).toEqual({
             apiUrl: 'tool/lookup/test1/test2',
         });
     });
 
     it('should construct url for THIRD_PARTY_LOOKUP_API_2FIELD', () => {
-        expect(routes.THIRD_PARTY_LOOKUP_API_2FIELD({
-            type: 'test1',
-            field1: 'test2',
-            field2: 'test3',
-        })).toEqual({
+        expect(
+            routes.THIRD_PARTY_LOOKUP_API_2FIELD({
+                type: 'test1',
+                field1: 'test2',
+                field2: 'test3',
+            })
+        ).toEqual({
             apiUrl: 'tool/lookup/test1/test2/test3',
         });
     });

@@ -15,11 +15,14 @@ export function loadAuthorPublicationsStats(userName) {
                 let years = [];
 
                 if (((response || {}).filters || {}).facets) {
-                    data = response.filters.facets.hasOwnProperty('Year published') && response.filters.facets['Year published'].buckets;
+                    data =
+                        response.filters.facets.hasOwnProperty('Year published') &&
+                        response.filters.facets['Year published'].buckets;
                     topPublicationTypes = transformer.getPublicationsPerType(data, 4);
                     years = transformer.getPublicationsPerYearCategories(data);
                     statsData = response !== null && transformer.getPublicationsStats(years, response.filters.facets);
-                    publicationTotalCount = response !== null && transformer.getAuthorArticleCount(response.total, response.filters.facets);
+                    publicationTotalCount =
+                        response !== null && transformer.getAuthorArticleCount(response.total, response.filters.facets);
                 }
 
                 dispatch({

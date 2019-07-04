@@ -85,7 +85,7 @@ describe('AuthorLinking', () => {
                     rek_author_id_order: 6,
                 },
             },
-            authorList.map((author) => component.instance().transformToAuthorOrderId(0, author, searchKey))
+            authorList.map(author => component.instance().transformToAuthorOrderId(0, author, searchKey))
         );
 
         expect(preparedOutput).toEqual([
@@ -104,57 +104,196 @@ describe('AuthorLinking', () => {
 
 // Contributors
 const linkedContributorIdList = [
-    { rek_contributor_id_id: null, rek_contributor_id_pid: 'UQ:111111', rek_contributor_id: 0, rek_contributor_id_order: 1 },
-    { rek_contributor_id_id: null, rek_contributor_id_pid: 'UQ:111111', rek_contributor_id: 0, rek_contributor_id_order: 2 },
-    { rek_contributor_id_id: null, rek_contributor_id_pid: 'UQ:111111', rek_contributor_id: 0, rek_contributor_id_order: 3 },
-    { rek_contributor_id_id: null, rek_contributor_id_pid: 'UQ:111111', rek_contributor_id: 0, rek_contributor_id_order: 4 },
-    { rek_contributor_id_id: null, rek_contributor_id_pid: 'UQ:111111', rek_contributor_id: 0, rek_contributor_id_order: 5 },
-    { rek_contributor_id_id: null, rek_contributor_id_pid: 'UQ:111111', rek_contributor_id: 0, rek_contributor_id_order: 6 },
-    { rek_contributor_id_id: null, rek_contributor_id_pid: 'UQ:111111', rek_contributor_id: 0, rek_contributor_id_order: 7 },
-    { rek_contributor_id_id: null, rek_contributor_id_pid: 'UQ:111111', rek_contributor_id: 123, rek_contributor_id_order: 8 },
-    { rek_contributor_id_id: null, rek_contributor_id_pid: 'UQ:111111', rek_contributor_id: 0, rek_contributor_id_order: 9 },
+    {
+        rek_contributor_id_id: null,
+        rek_contributor_id_pid: 'UQ:111111',
+        rek_contributor_id: 0,
+        rek_contributor_id_order: 1,
+    },
+    {
+        rek_contributor_id_id: null,
+        rek_contributor_id_pid: 'UQ:111111',
+        rek_contributor_id: 0,
+        rek_contributor_id_order: 2,
+    },
+    {
+        rek_contributor_id_id: null,
+        rek_contributor_id_pid: 'UQ:111111',
+        rek_contributor_id: 0,
+        rek_contributor_id_order: 3,
+    },
+    {
+        rek_contributor_id_id: null,
+        rek_contributor_id_pid: 'UQ:111111',
+        rek_contributor_id: 0,
+        rek_contributor_id_order: 4,
+    },
+    {
+        rek_contributor_id_id: null,
+        rek_contributor_id_pid: 'UQ:111111',
+        rek_contributor_id: 0,
+        rek_contributor_id_order: 5,
+    },
+    {
+        rek_contributor_id_id: null,
+        rek_contributor_id_pid: 'UQ:111111',
+        rek_contributor_id: 0,
+        rek_contributor_id_order: 6,
+    },
+    {
+        rek_contributor_id_id: null,
+        rek_contributor_id_pid: 'UQ:111111',
+        rek_contributor_id: 0,
+        rek_contributor_id_order: 7,
+    },
+    {
+        rek_contributor_id_id: null,
+        rek_contributor_id_pid: 'UQ:111111',
+        rek_contributor_id: 123,
+        rek_contributor_id_order: 8,
+    },
+    {
+        rek_contributor_id_id: null,
+        rek_contributor_id_pid: 'UQ:111111',
+        rek_contributor_id: 0,
+        rek_contributor_id_order: 9,
+    },
 ];
 const contributorList = [
-    { rek_contributor_id: null, rek_contributor_pid: 'UQ:111111', rek_author: 'Overgaard, Nana H.', rek_contributor_order: 1 },
-    { rek_contributor_id: null, rek_contributor_pid: 'UQ:111111', rek_author: 'Cruz, Jazmina L.', rek_contributor_order: 2 },
-    { rek_contributor_id: null, rek_contributor_pid: 'UQ:111111', rek_author: 'Bridge, Jennifer A.', rek_contributor_order: 3 },
-    { rek_contributor_id: null, rek_contributor_pid: 'UQ:111111', rek_author: 'Nel, Hendrik J.', rek_contributor_order: 4 },
-    { rek_contributor_id: null, rek_contributor_pid: 'UQ:111111', rek_author: 'Frazer, Ian H.', rek_contributor_order: 5 },
-    { rek_contributor_id: null, rek_contributor_pid: 'UQ:111111', rek_author: 'La Gruta, Nicole L.', rek_contributor_order: 6 },
-    { rek_contributor_id: null, rek_contributor_pid: 'UQ:111111', rek_author: 'Blumenthal, Antje', rek_contributor_order: 7 },
-    { rek_contributor_id: null, rek_contributor_pid: 'UQ:111111', rek_author: 'Steptoe, Raymond J.', rek_contributor_order: 8 },
-    { rek_contributor_id: null, rek_contributor_pid: 'UQ:111111', rek_author: 'Wells, James W.', rek_contributor_order: 9 },
+    {
+        rek_contributor_id: null,
+        rek_contributor_pid: 'UQ:111111',
+        rek_author: 'Overgaard, Nana H.',
+        rek_contributor_order: 1,
+    },
+    {
+        rek_contributor_id: null,
+        rek_contributor_pid: 'UQ:111111',
+        rek_author: 'Cruz, Jazmina L.',
+        rek_contributor_order: 2,
+    },
+    {
+        rek_contributor_id: null,
+        rek_contributor_pid: 'UQ:111111',
+        rek_author: 'Bridge, Jennifer A.',
+        rek_contributor_order: 3,
+    },
+    {
+        rek_contributor_id: null,
+        rek_contributor_pid: 'UQ:111111',
+        rek_author: 'Nel, Hendrik J.',
+        rek_contributor_order: 4,
+    },
+    {
+        rek_contributor_id: null,
+        rek_contributor_pid: 'UQ:111111',
+        rek_author: 'Frazer, Ian H.',
+        rek_contributor_order: 5,
+    },
+    {
+        rek_contributor_id: null,
+        rek_contributor_pid: 'UQ:111111',
+        rek_author: 'La Gruta, Nicole L.',
+        rek_contributor_order: 6,
+    },
+    {
+        rek_contributor_id: null,
+        rek_contributor_pid: 'UQ:111111',
+        rek_author: 'Blumenthal, Antje',
+        rek_contributor_order: 7,
+    },
+    {
+        rek_contributor_id: null,
+        rek_contributor_pid: 'UQ:111111',
+        rek_author: 'Steptoe, Raymond J.',
+        rek_contributor_order: 8,
+    },
+    {
+        rek_contributor_id: null,
+        rek_contributor_pid: 'UQ:111111',
+        rek_author: 'Wells, James W.',
+        rek_contributor_order: 9,
+    },
 ];
 const contributorSearchKey = { value: 'rek_contributor_id', order: 'rek_contributor_id_order', type: 'contributor' };
 
 describe('ContributorLinking', () => {
-    it('should prepare output correctly with linked contributor ids provided where logged in author id not present', () => {
-        const component = setup({});
-        const preparedOutput = component.instance().prepareOutput(
-            { searchKey: contributorSearchKey },
-            {
-                selectedAuthor: {
+    it(
+        'should prepare output correctly with linked contributor ' +
+            'ids provided where logged in author id not present',
+        () => {
+            const component = setup({});
+            const preparedOutput = component.instance().prepareOutput(
+                { searchKey: contributorSearchKey },
+                {
+                    selectedAuthor: {
+                        rek_contributor_id_id: null,
+                        rek_contributor_id_pid: 'UQ:111111',
+                        rek_contributor_id: 410,
+                        rek_contributor_id_order: 6,
+                    },
+                },
+                linkedContributorIdList
+            );
+
+            expect(preparedOutput).toEqual([
+                {
+                    rek_contributor_id_id: null,
+                    rek_contributor_id_pid: 'UQ:111111',
+                    rek_contributor_id: 0,
+                    rek_contributor_id_order: 1,
+                },
+                {
+                    rek_contributor_id_id: null,
+                    rek_contributor_id_pid: 'UQ:111111',
+                    rek_contributor_id: 0,
+                    rek_contributor_id_order: 2,
+                },
+                {
+                    rek_contributor_id_id: null,
+                    rek_contributor_id_pid: 'UQ:111111',
+                    rek_contributor_id: 0,
+                    rek_contributor_id_order: 3,
+                },
+                {
+                    rek_contributor_id_id: null,
+                    rek_contributor_id_pid: 'UQ:111111',
+                    rek_contributor_id: 0,
+                    rek_contributor_id_order: 4,
+                },
+                {
+                    rek_contributor_id_id: null,
+                    rek_contributor_id_pid: 'UQ:111111',
+                    rek_contributor_id: 0,
+                    rek_contributor_id_order: 5,
+                },
+                {
                     rek_contributor_id_id: null,
                     rek_contributor_id_pid: 'UQ:111111',
                     rek_contributor_id: 410,
                     rek_contributor_id_order: 6,
                 },
-            },
-            linkedContributorIdList
-        );
-
-        expect(preparedOutput).toEqual([
-            { rek_contributor_id_id: null, rek_contributor_id_pid: 'UQ:111111', rek_contributor_id: 0, rek_contributor_id_order: 1 },
-            { rek_contributor_id_id: null, rek_contributor_id_pid: 'UQ:111111', rek_contributor_id: 0, rek_contributor_id_order: 2 },
-            { rek_contributor_id_id: null, rek_contributor_id_pid: 'UQ:111111', rek_contributor_id: 0, rek_contributor_id_order: 3 },
-            { rek_contributor_id_id: null, rek_contributor_id_pid: 'UQ:111111', rek_contributor_id: 0, rek_contributor_id_order: 4 },
-            { rek_contributor_id_id: null, rek_contributor_id_pid: 'UQ:111111', rek_contributor_id: 0, rek_contributor_id_order: 5 },
-            { rek_contributor_id_id: null, rek_contributor_id_pid: 'UQ:111111', rek_contributor_id: 410, rek_contributor_id_order: 6 },
-            { rek_contributor_id_id: null, rek_contributor_id_pid: 'UQ:111111', rek_contributor_id: 0, rek_contributor_id_order: 7 },
-            { rek_contributor_id_id: null, rek_contributor_id_pid: 'UQ:111111', rek_contributor_id: 123, rek_contributor_id_order: 8 },
-            { rek_contributor_id_id: null, rek_contributor_id_pid: 'UQ:111111', rek_contributor_id: 0, rek_contributor_id_order: 9 },
-        ]);
-    });
+                {
+                    rek_contributor_id_id: null,
+                    rek_contributor_id_pid: 'UQ:111111',
+                    rek_contributor_id: 0,
+                    rek_contributor_id_order: 7,
+                },
+                {
+                    rek_contributor_id_id: null,
+                    rek_contributor_id_pid: 'UQ:111111',
+                    rek_contributor_id: 123,
+                    rek_contributor_id_order: 8,
+                },
+                {
+                    rek_contributor_id_id: null,
+                    rek_contributor_id_pid: 'UQ:111111',
+                    rek_contributor_id: 0,
+                    rek_contributor_id_order: 9,
+                },
+            ]);
+        }
+    );
 
     it('should prepare output correctly with empty linked author id list', () => {
         const component = setup({});
@@ -168,19 +307,66 @@ describe('ContributorLinking', () => {
                     rek_contributor_id_order: 6,
                 },
             },
-            contributorList.map((author) => component.instance().transformToAuthorOrderId(0, author, contributorSearchKey))
+            contributorList.map(author =>
+                component.instance().transformToAuthorOrderId(0, author, contributorSearchKey)
+            )
         );
 
         expect(preparedOutput).toEqual([
-            { rek_contributor_id_id: null, rek_contributor_id_pid: 'UQ:111111', rek_contributor_id: 0, rek_contributor_id_order: 1 },
-            { rek_contributor_id_id: null, rek_contributor_id_pid: 'UQ:111111', rek_contributor_id: 0, rek_contributor_id_order: 2 },
-            { rek_contributor_id_id: null, rek_contributor_id_pid: 'UQ:111111', rek_contributor_id: 0, rek_contributor_id_order: 3 },
-            { rek_contributor_id_id: null, rek_contributor_id_pid: 'UQ:111111', rek_contributor_id: 0, rek_contributor_id_order: 4 },
-            { rek_contributor_id_id: null, rek_contributor_id_pid: 'UQ:111111', rek_contributor_id: 0, rek_contributor_id_order: 5 },
-            { rek_contributor_id_id: null, rek_contributor_id_pid: 'UQ:111111', rek_contributor_id: 410, rek_contributor_id_order: 6 },
-            { rek_contributor_id_id: null, rek_contributor_id_pid: 'UQ:111111', rek_contributor_id: 0, rek_contributor_id_order: 7 },
-            { rek_contributor_id_id: null, rek_contributor_id_pid: 'UQ:111111', rek_contributor_id: 0, rek_contributor_id_order: 8 },
-            { rek_contributor_id_id: null, rek_contributor_id_pid: 'UQ:111111', rek_contributor_id: 0, rek_contributor_id_order: 9 },
+            {
+                rek_contributor_id_id: null,
+                rek_contributor_id_pid: 'UQ:111111',
+                rek_contributor_id: 0,
+                rek_contributor_id_order: 1,
+            },
+            {
+                rek_contributor_id_id: null,
+                rek_contributor_id_pid: 'UQ:111111',
+                rek_contributor_id: 0,
+                rek_contributor_id_order: 2,
+            },
+            {
+                rek_contributor_id_id: null,
+                rek_contributor_id_pid: 'UQ:111111',
+                rek_contributor_id: 0,
+                rek_contributor_id_order: 3,
+            },
+            {
+                rek_contributor_id_id: null,
+                rek_contributor_id_pid: 'UQ:111111',
+                rek_contributor_id: 0,
+                rek_contributor_id_order: 4,
+            },
+            {
+                rek_contributor_id_id: null,
+                rek_contributor_id_pid: 'UQ:111111',
+                rek_contributor_id: 0,
+                rek_contributor_id_order: 5,
+            },
+            {
+                rek_contributor_id_id: null,
+                rek_contributor_id_pid: 'UQ:111111',
+                rek_contributor_id: 410,
+                rek_contributor_id_order: 6,
+            },
+            {
+                rek_contributor_id_id: null,
+                rek_contributor_id_pid: 'UQ:111111',
+                rek_contributor_id: 0,
+                rek_contributor_id_order: 7,
+            },
+            {
+                rek_contributor_id_id: null,
+                rek_contributor_id_pid: 'UQ:111111',
+                rek_contributor_id: 0,
+                rek_contributor_id_order: 8,
+            },
+            {
+                rek_contributor_id_id: null,
+                rek_contributor_id_pid: 'UQ:111111',
+                rek_contributor_id: 0,
+                rek_contributor_id_order: 9,
+            },
         ]);
     });
 });

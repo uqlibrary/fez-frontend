@@ -22,10 +22,7 @@ describe('View record actions', () => {
                 .onGet(repositories.routes.EXISTING_RECORD_API({ pid: testPid }).apiUrl)
                 .reply(200, { data: { ...mockData.record } });
 
-            const expectedActions = [
-                actions.VIEW_RECORD_LOADING,
-                actions.VIEW_RECORD_LOADED,
-            ];
+            const expectedActions = [actions.VIEW_RECORD_LOADING, actions.VIEW_RECORD_LOADED];
 
             try {
                 await mockActionsStore.dispatch(viewRecordActions.loadRecordToView(testPid));
@@ -36,9 +33,7 @@ describe('View record actions', () => {
         });
 
         it('dispatches expected actions when loading a record to view from API failed', async() => {
-            mockApi
-                .onAny()
-                .reply(500);
+            mockApi.onAny().reply(500);
 
             const expectedActions = [
                 actions.VIEW_RECORD_LOADING,
@@ -48,13 +43,14 @@ describe('View record actions', () => {
 
             await mockActionsStore.dispatch(viewRecordActions.loadRecordToView(testPid));
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
-            expect(mockActionsStore.getActions()).toContainEqual({ type: actions.VIEW_RECORD_LOAD_FAILED, payload: locale.global.errorMessages[500].message });
+            expect(mockActionsStore.getActions()).toContainEqual({
+                type: actions.VIEW_RECORD_LOAD_FAILED,
+                payload: locale.global.errorMessages[500].message,
+            });
         });
 
         it('dispatches expected actions when loading a record to view from API for anon user', async() => {
-            mockApi
-                .onAny()
-                .reply(403);
+            mockApi.onAny().reply(403);
 
             const expectedActions = [
                 actions.VIEW_RECORD_LOADING,
@@ -64,35 +60,36 @@ describe('View record actions', () => {
 
             await mockActionsStore.dispatch(viewRecordActions.loadRecordToView(testPid));
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
-            expect(mockActionsStore.getActions()).toContainEqual({ type: actions.VIEW_RECORD_LOAD_FAILED, payload: locale.global.errorMessages[403].message });
+            expect(mockActionsStore.getActions()).toContainEqual({
+                type: actions.VIEW_RECORD_LOAD_FAILED,
+                payload: locale.global.errorMessages[403].message,
+            });
         });
 
         it('dispatches expected actions when loading a non-exist record to view from API', async() => {
-            mockApi
-                .onAny()
-                .reply(404);
+            mockApi.onAny().reply(404);
 
-            const expectedActions = [
-                actions.VIEW_RECORD_LOADING,
-                actions.VIEW_RECORD_LOAD_FAILED,
-            ];
+            const expectedActions = [actions.VIEW_RECORD_LOADING, actions.VIEW_RECORD_LOAD_FAILED];
 
             await mockActionsStore.dispatch(viewRecordActions.loadRecordToView(testPid));
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
-            expect(mockActionsStore.getActions()).toContainEqual({ type: actions.VIEW_RECORD_LOAD_FAILED, payload: locale.global.errorMessages[404].message });
+            expect(mockActionsStore.getActions()).toContainEqual({
+                type: actions.VIEW_RECORD_LOAD_FAILED,
+                payload: locale.global.errorMessages[404].message,
+            });
         });
 
         it('dispatch expected actions on hiding cultural sensitivity statement', () => {
             mockActionsStore.dispatch(viewRecordActions.setHideCulturalSensitivityStatement());
-            expect(mockActionsStore.getActions()).toContainEqual({ type: actions.VIEW_RECORD_CULTURAL_SENSITIVITY_STATEMENT_HIDE });
+            expect(mockActionsStore.getActions()).toContainEqual({
+                type: actions.VIEW_RECORD_CULTURAL_SENSITIVITY_STATEMENT_HIDE,
+            });
         });
     });
 
     describe('setting/clearing record to view action', () => {
         it('dispatches expected actions when clearing a loaded record to view', async() => {
-            const expectedActions = [
-                actions.VIEW_RECORD_CLEAR,
-            ];
+            const expectedActions = [actions.VIEW_RECORD_CLEAR];
 
             try {
                 await mockActionsStore.dispatch(viewRecordActions.clearRecordToView());

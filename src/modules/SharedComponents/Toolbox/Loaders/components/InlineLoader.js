@@ -19,15 +19,24 @@ export class InlineLoader extends React.Component {
     render() {
         return (
             <div style={{ padding: 8 }}>
-                <Grid container direction={'row'} spacing={8} justify="center" alignItems="center" alignContent={'center'}>
+                <Grid
+                    container
+                    direction={'row'}
+                    spacing={8}
+                    justify="center"
+                    alignItems="center"
+                    alignContent={'center'}
+                >
                     <Hidden smUp>
                         <Grid item xs />
                     </Hidden>
                     <Grid item xs={'auto'} style={{ textAlign: 'center' }}>
-                        <CircularProgress size={18} thickness={2} color="primary"/>
+                        <CircularProgress size={18} thickness={2} color="primary" />
                     </Grid>
                     <Grid item xs={'auto'} style={{ textAlign: 'center' }}>
-                        <Typography color={'primary'} variant={'h5'} component={'span'} style={{ fontSize: '1.33rem' }}>{this.props.message}</Typography>
+                        <Typography color={'primary'} variant={'h5'} component={'span'} style={{ fontSize: '1.33rem' }}>
+                            {this.props.message}
+                        </Typography>
                     </Grid>
                     <Hidden smUp>
                         <Grid item xs />

@@ -127,28 +127,34 @@ describe('Component ContributorForm', () => {
         expect(onAddFn).not.toBeCalled();
     });
 
-    it('should not add contributor if key is Enter, affiliation is not UQ, and orgaff and orgtype props are empty strings', () => {
-        const onAddFn = jest.fn();
-        const wrapper = setup({
-            onAdd: onAddFn,
-        });
-        wrapper.setState({
-            contributor: {
-                nameAsPublished: 'test',
-                affiliation: 'NotUQ',
-                orgaff: '',
-                orgtype: '',
-            },
-        });
-        wrapper.instance()._onSubmit({ key: 'Enter' });
-        expect(onAddFn).not.toBeCalled();
-    });
+    it(
+        'should not add contributor if key is Enter, affiliation is not UQ, ' +
+            'and orgaff and orgtype props are empty strings',
+        () => {
+            const onAddFn = jest.fn();
+            const wrapper = setup({
+                onAdd: onAddFn,
+            });
+            wrapper.setState({
+                contributor: {
+                    nameAsPublished: 'test',
+                    affiliation: 'NotUQ',
+                    orgaff: '',
+                    orgtype: '',
+                },
+            });
+            wrapper.instance()._onSubmit({ key: 'Enter' });
+            expect(onAddFn).not.toBeCalled();
+        }
+    );
 
     it('should set creator role', () => {
         const wrapper = setup({
             showRoleInput: true,
         });
-        wrapper.find('Connect(WithStyles(AutoCompleteAsyncField))').props()
+        wrapper
+            .find('Connect(WithStyles(AutoCompleteAsyncField))')
+            .props()
             .onChange('test');
         expect(wrapper.state().contributor.creatorRole).toEqual('test');
     });
@@ -159,11 +165,15 @@ describe('Component ContributorForm', () => {
         });
         expect(toJson(wrapper)).toMatchSnapshot();
 
-        wrapper.find('OrgAffilicationTypeSelector').props()
+        wrapper
+            .find('OrgAffilicationTypeSelector')
+            .props()
             .onAffiliationChange({ target: { value: 'UQ' } });
         expect(wrapper.state().contributor.affiliation).toEqual('UQ');
 
-        wrapper.find('OrgAffilicationTypeSelector').props()
+        wrapper
+            .find('OrgAffilicationTypeSelector')
+            .props()
             .onAffiliationChange({ target: { value: 'Non-UQ' } });
         expect(wrapper.state().contributor.affiliation).toEqual('Non-UQ');
     });
@@ -197,11 +207,15 @@ describe('Component ContributorForm', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('NonUqOrgAffiliationFormSection').length).toBe(1);
 
-        wrapper.find('NonUqOrgAffiliationFormSection').props()
+        wrapper
+            .find('NonUqOrgAffiliationFormSection')
+            .props()
             .onOrgAffiliationChange({ target: { value: 'test' } });
         expect(wrapper.state().contributor.orgaff).toEqual('test');
 
-        wrapper.find('NonUqOrgAffiliationFormSection').props()
+        wrapper
+            .find('NonUqOrgAffiliationFormSection')
+            .props()
             .onOrgTypeChange({ target: { value: 'testing' } });
         expect(wrapper.state().contributor.orgtype).toEqual('testing');
     });
@@ -250,28 +264,36 @@ describe('Component ContributorForm', () => {
     });
 
     it('should map state to props as expected', () => {
-        const authorsList = [
-            'test1',
-            'test2',
-        ];
+        const authorsList = ['test1', 'test2'];
         const testFunction = () => ({ authorsList });
-        expect(mapStateToProps({
-            get: testFunction,
-        })).toEqual({ authorsList });
-        expect(mapStateToProps({
-            get: () => false,
-        })).toEqual({
+        expect(
+            mapStateToProps({
+                get: testFunction,
+            })
+        ).toEqual({ authorsList });
+        expect(
+            mapStateToProps({
+                get: () => false,
+            })
+        ).toEqual({
             authorsList: [],
         });
     });
 
     it('should render narrower grid at md breakpoint if showIdentifierLookup is true', () => {
-        const wrapper = setup({
-            showRoleInput: true,
-            showIdentifierLookup: true,
-        }, true);
-        expect(wrapper.find('#creatorRoleField').parent()
-            .prop('md')).toBe(3);
+        const wrapper = setup(
+            {
+                showRoleInput: true,
+                showIdentifierLookup: true,
+            },
+            true
+        );
+        expect(
+            wrapper
+                .find('#creatorRoleField')
+                .parent()
+                .prop('md')
+        ).toBe(3);
     });
 
     it('should process prop updates', () => {

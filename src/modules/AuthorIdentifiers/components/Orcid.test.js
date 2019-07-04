@@ -69,7 +69,8 @@ describe('Component Orcid ', () => {
             },
         });
 
-        const expected = 'http://orcid.org/oauth/authorize?client_id=12345XYZ&response_type=code&scope=%2Fread-limited%20%2Factivities%2Fupdate%20%2Fperson%2Fupdate&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2F%23%2Fauthor-identifiers%2Forcid%2Flink&state=1234_MOCK_STATE&show_login=true';
+        const expected =
+            'http://orcid.org/oauth/authorize?client_id=12345XYZ&response_type=code&scope=%2Fread-limited%20%2Factivities%2Fupdate%20%2Fperson%2Fupdate&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2F%23%2Fauthor-identifiers%2Forcid%2Flink&state=1234_MOCK_STATE&show_login=true';
         const output = wrapper.instance().getOrcidUrl();
         expect(output).toEqual(expected);
     });
@@ -96,13 +97,17 @@ describe('Component Orcid ', () => {
         };
 
         wrapper.instance().authoriseConfirmationBox._onAction();
-        expect(assignFn).toHaveBeenCalledWith('http://orcid.org/oauth/authorize?client_id=12345XYZ&response_type=code&scope=%2Fread-limited%20%2Factivities%2Fupdate%20%2Fperson%2Fupdate&redirect_uri=http%3A%2F%2Ffez-staging.library.uq.edu.au%2Fauthor-identifiers%2Forcid%2Flink&state=249b6a5213ce5461cf558037a47e5df5&show_login=true');
+        expect(assignFn).toHaveBeenCalledWith(
+            'http://orcid.org/oauth/authorize?client_id=12345XYZ&response_type=code&scope=%2Fread-limited%20%2Factivities%2Fupdate%20%2Fperson%2Fupdate&redirect_uri=http%3A%2F%2Ffez-staging.library.uq.edu.au%2Fauthor-identifiers%2Forcid%2Flink&state=249b6a5213ce5461cf558037a47e5df5&show_login=true'
+        );
 
         wrapper.instance()._showAuthoriseConfirmation(false);
         wrapper.instance().authoriseConfirmationBox._onAction();
 
         expect(getOrcidUrl).toHaveBeenCalledWith(false);
-        expect(assignFn).toHaveBeenCalledWith('http://orcid.org/oauth/authorize?client_id=12345XYZ&response_type=code&scope=%2Fread-limited%20%2Factivities%2Fupdate%20%2Fperson%2Fupdate&redirect_uri=http%3A%2F%2Ffez-staging.library.uq.edu.au%2Fauthor-identifiers%2Forcid%2Flink&state=249b6a5213ce5461cf558037a47e5df5&show_login=false&family_names=Researcher&given_names=J');
+        expect(assignFn).toHaveBeenCalledWith(
+            'http://orcid.org/oauth/authorize?client_id=12345XYZ&response_type=code&scope=%2Fread-limited%20%2Factivities%2Fupdate%20%2Fperson%2Fupdate&redirect_uri=http%3A%2F%2Ffez-staging.library.uq.edu.au%2Fauthor-identifiers%2Forcid%2Flink&state=249b6a5213ce5461cf558037a47e5df5&show_login=false&family_names=Researcher&given_names=J'
+        );
     });
 
     it('should display appropriate alert message', () => {
@@ -172,7 +177,7 @@ describe('Component Orcid ', () => {
         expect(wrapper.instance().props.history.push).toHaveBeenCalledWith('/dashboard');
     });
 
-    it('should navigate back to dashboard if author\'s orcid id was updated successfully', () => {
+    it("should navigate back to dashboard if author's orcid id was updated successfully", () => {
         const wrapper = setup({
             account: accounts.uqresearcher,
             author: currentAuthor.uqnoauthid.data,
@@ -214,31 +219,35 @@ describe('Component Orcid ', () => {
         expect(wrapper.instance().props.actions.linkAuthorOrcidId).toHaveBeenCalled();
     });
 
-    it('should NOT start author update when author is loaded and orcid response received but doesn\'t match state', () => {
-        const wrapper = setup({
-            account: accounts.uqresearcher,
-            author: null,
-        });
+    it(
+        'should NOT start author update when author is loaded and ' +
+            "orcid response received but doesn't match the state",
+        () => {
+            const wrapper = setup({
+                account: accounts.uqresearcher,
+                author: null,
+            });
 
-        // mock orcid response
-        wrapper.instance().setState({
-            orcidRequest: {
-                state: 'XYZ',
-            },
-            orcidResponse: {
-                code: '123',
-                state: 'ABC',
-            },
-        });
+            // mock orcid response
+            wrapper.instance().setState({
+                orcidRequest: {
+                    state: 'XYZ',
+                },
+                orcidResponse: {
+                    code: '123',
+                    state: 'ABC',
+                },
+            });
 
-        // account/author has been loaded
-        wrapper.instance().componentWillReceiveProps({
-            account: accounts.uqresearcher,
-            author: currentAuthor.uqnoauthid.data,
-        });
+            // account/author has been loaded
+            wrapper.instance().componentWillReceiveProps({
+                account: accounts.uqresearcher,
+                author: currentAuthor.uqnoauthid.data,
+            });
 
-        expect(wrapper.instance().props.actions.linkAuthorOrcidId).not.toHaveBeenCalled();
-    });
+            expect(wrapper.instance().props.actions.linkAuthorOrcidId).not.toHaveBeenCalled();
+        }
+    );
 
     it('should display error if ORCID url redirect STATE response is invalid', () => {
         const wrapper = setup({
@@ -270,7 +279,6 @@ describe('Component Orcid ', () => {
 
         expect(toJson(wrapper)).toMatchSnapshot();
     });
-
 
     it('should start author update in componentDidMount() when orcid response received', () => {
         const wrapper = setup({

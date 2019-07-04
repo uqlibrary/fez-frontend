@@ -42,13 +42,14 @@ export class Cards extends Component {
     };
     render() {
         const { classes, title, help, children, darkHeader } = this.props;
-        const customBG = !!this.props.customBackgroundColor ? { backgroundColor: this.props.customBackgroundColor } : null;
+        const customBG = !!this.props.customBackgroundColor
+            ? { backgroundColor: this.props.customBackgroundColor }
+            : null;
         const customTitle = !!this.props.customTitleColor ? { color: this.props.customTitleColor } : null;
         const fullHeight = !!this.props.fullHeight ? { height: '100%' } : null;
         return (
             <Card className={`${classes.card} StandardCard`} style={{ ...customBG, ...customTitle, ...fullHeight }}>
-                {
-                    !this.props.noHeader &&
+                {!this.props.noHeader && (
                     <CardHeader
                         title={title}
                         titleTypographyProps={{
@@ -56,16 +57,13 @@ export class Cards extends Component {
                             component: 'h3',
                             color: 'inherit',
                         }}
-                        action={
-                            !!help && !!help.text &&
-                            <HelpIcon {...help} />
-                        }
+                        action={!!help && !!help.text && <HelpIcon {...help} />}
                         classes={{
-                            root: darkHeader && classes.cardHeaderPurple || '',
+                            root: (darkHeader && classes.cardHeaderPurple) || '',
                         }}
                     />
-                }
-                <CardContent className={this.props.noPadding && classes.cardContentNoPadding || ''}>
+                )}
+                <CardContent className={(this.props.noPadding && classes.cardContentNoPadding) || ''}>
                     {children}
                 </CardContent>
             </Card>
@@ -74,5 +72,5 @@ export class Cards extends Component {
 }
 
 const StyledCard = withStyles(styles, { withTheme: true })(Cards);
-const StandardCard = (props) => <StyledCard {...props}/>;
+const StandardCard = props => <StyledCard {...props} />;
 export default StandardCard;

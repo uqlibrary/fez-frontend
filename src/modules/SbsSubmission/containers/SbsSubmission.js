@@ -37,12 +37,19 @@ let SbsSubmissionContainer = reduxForm({
 
 const mapStateToProps = (state, props) => {
     const currentAuthor = state && state.get('accountReducer') ? state.get('accountReducer').author : null;
-    const isSessionValid = state && state.get('accountReducer') ? state.get('accountReducer').isSessionExpired === false : null;
-    const newRecordFileUploadingOrIssueError = state && state.get('createRecordReducer') ? state.get('createRecordReducer').newRecordFileUploadingOrIssueError : false;
+    const isSessionValid =
+        state && state.get('accountReducer') ? state.get('accountReducer').isSessionExpired === false : null;
+    const newRecordFileUploadingOrIssueError =
+        state && state.get('createRecordReducer')
+            ? state.get('createRecordReducer').newRecordFileUploadingOrIssueError
+            : false;
     const newRecord = state && state.get('createRecordReducer') ? state.get('createRecordReducer').newRecord : null;
 
     // eslint-disable-next-line no-unused-vars
-    const { files, ...locallyStoredValues } = !!props.locallyStoredReducer && !!props.locallyStoredReducer.get(FORM_NAME) && props.locallyStoredReducer.get(FORM_NAME).values;
+    const { files, ...locallyStoredValues } =
+        !!props.locallyStoredReducer &&
+        !!props.locallyStoredReducer.get(FORM_NAME) &&
+        props.locallyStoredReducer.get(FORM_NAME).values;
 
     const today = new Date();
     const initialValues = {
@@ -54,7 +61,7 @@ const mapStateToProps = (state, props) => {
                 authorId: currentAuthor ? currentAuthor.aut_id : '',
             },
         ],
-        ...props.isHdrThesis ? general.HDR_THESIS_DEFAULT_VALUES : general.SBS_THESIS_DEFAULT_VALUES,
+        ...(props.isHdrThesis ? general.HDR_THESIS_DEFAULT_VALUES : general.SBS_THESIS_DEFAULT_VALUES),
     };
 
     const formErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});
@@ -63,20 +70,25 @@ const mapStateToProps = (state, props) => {
         formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
         formErrors: formErrors,
         disableSubmit: formErrors && !(formErrors instanceof Immutable.Map),
-        initialValues: Object.keys(locallyStoredValues).length > 0 && locallyStoredValues || initialValues,
+        initialValues: (Object.keys(locallyStoredValues).length > 0 && locallyStoredValues) || initialValues,
         author: currentAuthor,
         isHdrThesis: props.isHdrThesis,
-        fileAccessId: props.isHdrThesis ? general.HDR_THESIS_DEFAULT_VALUES.fileAccessId : general.SBS_THESIS_DEFAULT_VALUES.fileAccessId,
+        fileAccessId: props.isHdrThesis
+            ? general.HDR_THESIS_DEFAULT_VALUES.fileAccessId
+            : general.SBS_THESIS_DEFAULT_VALUES.fileAccessId,
         isSessionValid,
         newRecordFileUploadingOrIssueError,
         newRecord,
     };
 };
 
-const mapDispatchToProps = (dispatch) => ({
+const mapDispatchToProps = dispatch => ({
     actions: bindActionCreators({ checkSession, clearSessionExpiredFlag, ...actions }, dispatch),
 });
 
-SbsSubmissionContainer = connect(mapStateToProps, mapDispatchToProps)(SbsSubmissionContainer);
+SbsSubmissionContainer = connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(SbsSubmissionContainer);
 SbsSubmissionContainer = withRouter(SbsSubmissionContainer);
 export default reloadReducerFromLocalStorage()(SbsSubmissionContainer);

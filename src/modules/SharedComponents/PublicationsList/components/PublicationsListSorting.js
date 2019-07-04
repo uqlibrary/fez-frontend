@@ -38,7 +38,8 @@ export class PublicationsListSorting extends PureComponent {
         this.state = {
             sortBy: props.sortBy || locale.components.sorting.sortBy[0].value || 'published_date',
             sortDirection: props.sortDirection || locale.components.sorting.sortDirection[0] || 'Desc',
-            pageSize: props.pageSize || props.pagingData && props.pagingData.per_page ? props.pagingData.per_page : 20,
+            pageSize:
+                props.pageSize || (props.pagingData && props.pagingData.per_page) ? props.pagingData.per_page : 20,
         };
     }
 
@@ -51,48 +52,50 @@ export class PublicationsListSorting extends PureComponent {
         });
     }
 
-    pageSizeChanged = (event) => {
+    pageSizeChanged = event => {
         this.setState({
             pageSize: event.target.value,
             exportPublicationsFormat: null,
         });
         this.props.onPageSizeChanged(event.target.value);
-    }
+    };
 
-    orderDirectionsChanged = (event) => {
+    orderDirectionsChanged = event => {
         this.setState({
             sortDirection: event.target.value,
             exportPublicationsFormat: null,
         });
         this.props.onSortByChanged(this.state.sortBy, event.target.value);
-    }
+    };
 
-    sortByChanged = (event) => {
+    sortByChanged = event => {
         this.setState({
             sortBy: event.target.value,
             exportPublicationsFormat: null,
         });
         this.props.onSortByChanged(event.target.value, this.state.sortDirection);
-    }
+    };
 
-    exportPublicationsFormatChanged = (value) => {
+    exportPublicationsFormatChanged = value => {
         this.setState({
             exportPublicationsFormat: value,
         });
         this.props.onExportPublications({ exportPublicationsFormat: value });
-    }
+    };
 
     render() {
-        if (!this.props.pagingData || this.props.pagingData.total === 0 || !this.state.sortBy || !this.state.sortDirection || !this.state.pageSize) {
-            return (
-                <span className="publicationsListSorting empty"/>
-            );
+        if (
+            !this.props.pagingData ||
+            this.props.pagingData.total === 0 ||
+            !this.state.sortBy ||
+            !this.state.sortDirection ||
+            !this.state.pageSize
+        ) {
+            return <span className="publicationsListSorting empty" />;
         }
         const txt = locale.components.sorting;
         const pageLength = txt.recordsPerPage;
-        if(this.props.initPageLength &&
-            (pageLength.indexOf(this.props.initPageLength) === -1)
-        ) {
+        if (this.props.initPageLength && pageLength.indexOf(this.props.initPageLength) === -1) {
             pageLength.push(this.props.initPageLength);
             pageLength.sort((a, b) => a - b);
         }
@@ -105,12 +108,15 @@ export class PublicationsListSorting extends PureComponent {
                             id="sortBy"
                             onChange={this.sortByChanged}
                             value={this.state.sortBy}
-                            disabled={this.props.disabled}>
-                            {
-                                txt.sortBy.map((item, index) => {
-                                    return <MenuItem key={index} value={item.value}>{item.label}</MenuItem>;
-                                })
-                            }
+                            disabled={this.props.disabled}
+                        >
+                            {txt.sortBy.map((item, index) => {
+                                return (
+                                    <MenuItem key={index} value={item.value}>
+                                        {item.label}
+                                    </MenuItem>
+                                );
+                            })}
                         </Select>
                     </FormControl>
                 </Grid>
@@ -121,12 +127,15 @@ export class PublicationsListSorting extends PureComponent {
                             id="sortOrder"
                             onChange={this.orderDirectionsChanged}
                             value={this.state.sortDirection}
-                            disabled={this.props.disabled}>
-                            {
-                                txt.sortDirection.map((item, index) => {
-                                    return <MenuItem key={index} value={item}>{item}</MenuItem>;
-                                })
-                            }
+                            disabled={this.props.disabled}
+                        >
+                            {txt.sortDirection.map((item, index) => {
+                                return (
+                                    <MenuItem key={index} value={item}>
+                                        {item}
+                                    </MenuItem>
+                                );
+                            })}
                         </Select>
                     </FormControl>
                 </Grid>
@@ -137,26 +146,29 @@ export class PublicationsListSorting extends PureComponent {
                             id="pageSize"
                             value={this.state.pageSize}
                             disabled={this.props.disabled}
-                            onChange={this.pageSizeChanged}>
-                            {
-                                pageLength.map(number => {
-                                    return <MenuItem key={`records-per-page-${number}`} value={number}>{number}</MenuItem>;
-                                })
-                            }
+                            onChange={this.pageSizeChanged}
+                        >
+                            {pageLength.map(number => {
+                                return (
+                                    <MenuItem key={`records-per-page-${number}`} value={number}>
+                                        {number}
+                                    </MenuItem>
+                                );
+                            })}
                         </Select>
                     </FormControl>
                 </Grid>
-                {
-                    this.props.canUseExport &&
-                        <Hidden xsDown>
-                            <Grid item sm={6} md={3}>
-                                <ExportPublications
-                                    format={this.state.exportPublicationsFormat}
-                                    onChange={this.exportPublicationsFormatChanged}
-                                    disabled={this.props.disabled}/>
-                            </Grid>
-                        </Hidden>
-                }
+                {this.props.canUseExport && (
+                    <Hidden xsDown>
+                        <Grid item sm={6} md={3}>
+                            <ExportPublications
+                                format={this.state.exportPublicationsFormat}
+                                onChange={this.exportPublicationsFormatChanged}
+                                disabled={this.props.disabled}
+                            />
+                        </Grid>
+                    </Hidden>
+                )}
             </Grid>
         );
     }

@@ -36,9 +36,10 @@ export default class Orcid extends Component {
         // or in dev environment
         // http://development/espace/branch/?code=bOQpKB&state=5ea13ef0dad88453242fcc8f65a0f90a#path/to/page/
         const orcidStateId = this.createOrcidStateId(props.account);
-        const queryString = window.location.hash.indexOf('?') >= 0
-            ? window.location.hash.substr(window.location.hash.indexOf('?') + 1)
-            : window.location.search.substr(1);
+        const queryString =
+            window.location.hash.indexOf('?') >= 0
+                ? window.location.hash.substr(window.location.hash.indexOf('?') + 1)
+                : window.location.search.substr(1);
         const queryParams = parse(queryString);
 
         this.state = {
@@ -73,9 +74,16 @@ export default class Orcid extends Component {
     }
 
     componentDidMount() {
-        // link author to orcid when orcid authorisation response is received from orcid website (url contains required parameters)
-        if(this.props.account && this.props.author && !this.props.author.aut_orcid_id && this.state.orcidResponse.code && this.state.orcidResponse.state &&
-            this.isValidOrcidState(this.props.account, this.state.orcidRequest.state, this.state.orcidResponse.state)) {
+        // link author to orcid when orcid authorisation response is received from orcid website
+        // (url contains required parameters)
+        if (
+            this.props.account &&
+            this.props.author &&
+            !this.props.author.aut_orcid_id &&
+            this.state.orcidResponse.code &&
+            this.state.orcidResponse.state &&
+            this.isValidOrcidState(this.props.account, this.state.orcidRequest.state, this.state.orcidResponse.state)
+        ) {
             this.props.actions.linkAuthorOrcidId(
                 this.props.account.id,
                 this.props.author.aut_id,
@@ -86,10 +94,13 @@ export default class Orcid extends Component {
 
     componentWillReceiveProps(nextProps) {
         // wait for user account to get loaded and set state if props were not available in constructor
-        if (nextProps.account !== this.props.account && (!this.props.account || nextProps.account.id !== this.props.account.id)) {
+        if (
+            nextProps.account !== this.props.account &&
+            (!this.props.account || nextProps.account.id !== this.props.account.id)
+        ) {
             const orcidStateId = this.createOrcidStateId(nextProps.account);
 
-            this.setState((prevState) => ({
+            this.setState(prevState => ({
                 orcidRequest: {
                     ...prevState.orcidRequest,
                     state: orcidStateId,
@@ -97,14 +108,18 @@ export default class Orcid extends Component {
                 existingOrcidRequest: {
                     ...prevState.existingOrcidRequest,
                     family_names: !!nextProps.account && !!nextProps.account.lastName ? nextProps.account.lastName : '',
-                    given_names: !!nextProps.account && !!nextProps.account.firstName ? nextProps.account.firstName : '',
+                    given_names:
+                        !!nextProps.account && !!nextProps.account.firstName ? nextProps.account.firstName : '',
                 },
             }));
         }
 
         // user should have a fez-author record to proceed
         // user should not be able to re-link to orcid if they already have an orcid id
-        if (nextProps.author !== this.props.author && (!nextProps.accountAuthorLoading && !nextProps.author || nextProps.author.aut_orcid_id)) {
+        if (
+            nextProps.author !== this.props.author &&
+            ((!nextProps.accountAuthorLoading && !nextProps.author) || nextProps.author.aut_orcid_id)
+        ) {
             this._navigateToDashboard();
         }
 
@@ -117,11 +132,18 @@ export default class Orcid extends Component {
             this._navigateToDashboard();
         }
 
-        // link author to orcid when orcid authorisation response is received from orcid website (if props.author were not available in componentDidMount)
-        if (this.props.account && !nextProps.accountAuthorLoading &&
-            (nextProps.author !== this.props.author || (nextProps.author && this.props.author.aut_id !== nextProps.author.aut_id)) &&
-            !nextProps.author.aut_orcid_id && this.state.orcidResponse.code && this.state.orcidResponse.state &&
-            this.isValidOrcidState(this.props.account, this.state.orcidRequest.state, this.state.orcidResponse.state)) {
+        // link author to orcid when orcid authorisation response is received from orcid website
+        // (if props.author were not available in componentDidMount)
+        if (
+            this.props.account &&
+            !nextProps.accountAuthorLoading &&
+            (nextProps.author !== this.props.author ||
+                (nextProps.author && this.props.author.aut_id !== nextProps.author.aut_id)) &&
+            !nextProps.author.aut_orcid_id &&
+            this.state.orcidResponse.code &&
+            this.state.orcidResponse.state &&
+            this.isValidOrcidState(this.props.account, this.state.orcidRequest.state, this.state.orcidResponse.state)
+        ) {
             this.props.actions.linkAuthorOrcidId(
                 nextProps.account.id,
                 nextProps.author.aut_id,
@@ -139,32 +161,35 @@ export default class Orcid extends Component {
         this.props.history.push(routes.pathConfig.dashboard);
     };
 
-    _setAuthoriseConfirmation = (ref) => {
+    _setAuthoriseConfirmation = ref => {
         this.authoriseConfirmationBox = ref;
     };
 
     getOrcidUrl = (isNew = true) => {
         const params = {
             ...this.state.orcidRequest,
-            ...(isNew ? this.state.createOrcidRequest : this.state.existingOrcidRequest ),
+            ...(isNew ? this.state.createOrcidRequest : this.state.existingOrcidRequest),
         };
-        const stringifiedParams = Object.keys(params).map(key => `${encodeURIComponent(key)}=${encodeURIComponent(params[key])}`)
+        const stringifiedParams = Object.keys(params)
+            .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(params[key])}`)
             .join('&');
         return `${ORCID_AUTHORIZATION_URL}?${stringifiedParams}`;
     };
 
-    createOrcidStateId = (account) => {
-        return account ? createHash('md5').update(`${account.id}/${account.mail}/${(new Date()).setHours(0, 0, 0, 0)}`)
-            .digest('hex') : '';
+    createOrcidStateId = account => {
+        return account
+            ? createHash('md5')
+                .update(`${account.id}/${account.mail}/${new Date().setHours(0, 0, 0, 0)}`)
+                .digest('hex')
+            : '';
     };
 
-    isValidOrcidState = (account, sessionId, receivedSessionId) => (
-        !account || !receivedSessionId || receivedSessionId === sessionId
-    );
+    isValidOrcidState = (account, sessionId, receivedSessionId) =>
+        !account || !receivedSessionId || receivedSessionId === sessionId;
 
     _showAuthoriseConfirmation = (isNew = true) => {
         const url = this.getOrcidUrl(isNew);
-        this.authoriseConfirmationBox._onAction = () => (window.location.assign(url));
+        this.authoriseConfirmationBox._onAction = () => window.location.assign(url);
         this.authoriseConfirmationBox.showConfirmation();
     };
 
@@ -173,44 +198,46 @@ export default class Orcid extends Component {
         if (submitFailed && error) {
             alertProps = {
                 ...alertLocale.errorAlert,
-                message: alertLocale.errorAlert.message
-                    ? alertLocale.errorAlert.message(error)
-                    : error,
+                message: alertLocale.errorAlert.message ? alertLocale.errorAlert.message(error) : error,
             };
         } else if (submitting) {
             alertProps = { ...alertLocale.progressAlert };
         }
-        return alertProps ? (<Alert {...alertProps} />) : null;
+        return alertProps ? <Alert {...alertProps} /> : null;
     };
 
     render() {
         // wait for author and account to be loaded
-        if(!this.props.author || !this.props.account) {
-            return (<div />);
+        if (!this.props.author || !this.props.account) {
+            return <div />;
         }
 
         const txt = locale.pages.orcidLink;
-        const isValidOrcidState = this.isValidOrcidState(this.props.account, this.state.orcidRequest.state, this.state.orcidResponse.state);
+        const isValidOrcidState = this.isValidOrcidState(
+            this.props.account,
+            this.state.orcidRequest.state,
+            this.state.orcidResponse.state
+        );
 
         return (
             <StandardPage title={txt.title}>
-                <ConfirmDialogBox
-                    onRef={this._setAuthoriseConfirmation}
-                    locale={txt.grantAccessConfirmation} />
+                <ConfirmDialogBox onRef={this._setAuthoriseConfirmation} locale={txt.grantAccessConfirmation} />
                 <Grid container spacing={24}>
                     <Grid item xs={12}>
-                        {
-                            this.getAlert({
-                                submitFailed: !!this.props.accountAuthorError || !isValidOrcidState,
-                                error: !isValidOrcidState ? locale.pages.orcidLink.errorAlert.orcidStateError : this.props.accountAuthorError,
-                                submitting: this.props.accountAuthorSaving,
-                                alertLocale: txt,
-                            })
-                        }
+                        {this.getAlert({
+                            submitFailed: !!this.props.accountAuthorError || !isValidOrcidState,
+                            error: !isValidOrcidState
+                                ? locale.pages.orcidLink.errorAlert.orcidStateError
+                                : this.props.accountAuthorError,
+                            submitting: this.props.accountAuthorSaving,
+                            alertLocale: txt,
+                        })}
                     </Grid>
                     <Grid item xs={12}>
                         <StandardCard title={txt.linkOrcid.title}>
-                            <Typography component={'span'} gutterBottom>{txt.linkOrcid.description}</Typography>
+                            <Typography component={'span'} gutterBottom>
+                                {txt.linkOrcid.description}
+                            </Typography>
                             <Grid container spacing={16}>
                                 <Hidden xsDown>
                                     <Grid item xs />
@@ -230,7 +257,9 @@ export default class Orcid extends Component {
                     </Grid>
                     <Grid item xs={12}>
                         <StandardCard title={txt.createOrcid.title}>
-                            <Typography component={'span'} gutterBottom>{txt.createOrcid.description}</Typography>
+                            <Typography component={'span'} gutterBottom>
+                                {txt.createOrcid.description}
+                            </Typography>
                             <Grid container spacing={16}>
                                 <Hidden xsDown>
                                     <Grid item xs />

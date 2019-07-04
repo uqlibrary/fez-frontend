@@ -30,33 +30,42 @@ export class PublicationListLoadingProgressClass extends PureComponent {
                     {txt.repositories.map((item, index) => (
                         <Grid container spacing={8} key={index}>
                             <Grid item xs>
-                                <Typography variant={'body1'} className={classes.copy}>{item.title}</Typography>
+                                <Typography variant={'body1'} className={classes.copy}>
+                                    {item.title}
+                                </Typography>
                             </Grid>
-                            {
-                                loadingPublicationSources && loadingPublicationSources[item.id]
-                                    ? (
-                                        <Grid item>
-                                            <Typography className={classes.copy} noWrap>{loadingPublicationSources[`${item.id}Count`]} {txt.recordSuffix}</Typography>
-                                        </Grid>
-                                    )
-                                    : (
-                                        <Grid item>
-                                            <CircularProgress
-                                                size={12}
-                                                thickness={4}
-                                                variant={'indeterminate'}
-                                                aria-label={`${item.title} ${txt.ariaCircularProgressLabelSuffix}`}/>
-                                        </Grid>
-                                    )
-                            }
+                            {loadingPublicationSources && loadingPublicationSources[item.id] ? (
+                                <Grid item>
+                                    <Typography className={classes.copy} noWrap>
+                                        {loadingPublicationSources[`${item.id}Count`]} {txt.recordSuffix}
+                                    </Typography>
+                                </Grid>
+                            ) : (
+                                <Grid item>
+                                    <CircularProgress
+                                        size={12}
+                                        thickness={4}
+                                        variant={'indeterminate'}
+                                        aria-label={`${item.title} ${txt.ariaCircularProgressLabelSuffix}`}
+                                    />
+                                </Grid>
+                            )}
                         </Grid>
                     ))}
                 </Hidden>
                 <Hidden smUp>
                     <LinearProgress
                         variant="determinate"
-                        value={loadingPublicationSources.totalSearchedCount / loadingPublicationSources.totalSourcesCount * 100}
-                        aria-valuenow={loadingPublicationSources.totalSearchedCount / loadingPublicationSources.totalSourcesCount * 100}
+                        value={
+                            (loadingPublicationSources.totalSearchedCount /
+                                loadingPublicationSources.totalSourcesCount) *
+                            100
+                        }
+                        aria-valuenow={
+                            (loadingPublicationSources.totalSearchedCount /
+                                loadingPublicationSources.totalSourcesCount) *
+                            100
+                        }
                         aria-valuemin="0"
                         aria-valuemax="100"
                     />
@@ -66,6 +75,8 @@ export class PublicationListLoadingProgressClass extends PureComponent {
     }
 }
 
-const StyledPublicationListLoadingProgressClass = withStyles(styles, { withTheme: true })(PublicationListLoadingProgressClass);
-const PublicationListLoadingProgress = (props) => <StyledPublicationListLoadingProgressClass {...props}/>;
+const StyledPublicationListLoadingProgressClass = withStyles(styles, { withTheme: true })(
+    PublicationListLoadingProgressClass
+);
+const PublicationListLoadingProgress = props => <StyledPublicationListLoadingProgressClass {...props} />;
 export default PublicationListLoadingProgress;

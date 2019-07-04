@@ -66,66 +66,73 @@ export default class MyRecords extends PureComponent {
 
     componentWillReceiveProps(newProps) {
         // handle browser back button - set state from location/dispatch action for this state
-        if (this.props.location !== newProps.location &&
+        if (
+            this.props.location !== newProps.location &&
             newProps.history.action === 'POP' &&
-            newProps.location.pathname === this.props.thisUrl) {
-            this.setState({ ...(
-                !!newProps.location.state
-                    ? newProps.location.state
-                    : this.initState
-            ) }, () => {
+            newProps.location.pathname === this.props.thisUrl
+        ) {
+            this.setState({ ...(!!newProps.location.state ? newProps.location.state : this.initState) }, () => {
                 // only will be called when user clicks back on my records page
                 this.props.actions.loadAuthorPublications({ ...this.state });
             });
         }
         // set forever-true flag if user has publications
-        if (!this.state.hasPublications && !newProps.loadingPublicationsList &&
-            !!newProps.publicationsList && newProps.publicationsList.length > 0) {
+        if (
+            !this.state.hasPublications &&
+            !newProps.loadingPublicationsList &&
+            !!newProps.publicationsList &&
+            newProps.publicationsList.length > 0
+        ) {
             this.setState({ hasPublications: true });
         }
     }
 
-    pageSizeChanged = (pageSize) => {
+    pageSizeChanged = pageSize => {
         this.setState(
             {
                 pageSize: pageSize,
                 page: 1,
-            }, this.pushPageHistory
+            },
+            this.pushPageHistory
         );
-    }
+    };
 
-    pageChanged = (page) => {
+    pageChanged = page => {
         this.setState(
             {
                 page: page,
-            }, this.pushPageHistory
+            },
+            this.pushPageHistory
         );
-    }
+    };
 
     sortByChanged = (sortBy, sortDirection) => {
         this.setState(
             {
                 sortBy: sortBy,
                 sortDirection: sortDirection,
-            }, this.pushPageHistory
+            },
+            this.pushPageHistory
         );
-    }
+    };
 
-    facetsChanged = (activeFacets) => {
+    facetsChanged = activeFacets => {
         this.setState(
             {
                 activeFacets: activeFacets,
                 page: 1,
-            }, this.pushPageHistory
+            },
+            this.pushPageHistory
         );
-    }
+    };
 
-    hasDisplayableFilters = (activeFilters) => {
-        return Object.keys(activeFilters)
-            .filter(
+    hasDisplayableFilters = activeFilters => {
+        return (
+            Object.keys(activeFilters).filter(
                 filter => !this.props.localePages.facetsFilter.excludeFacetsList.includes(filter)
-            ).length > 0;
-    }
+            ).length > 0
+        );
+    };
 
     pushPageHistory = () => {
         this.props.history.push({
@@ -136,9 +143,9 @@ export default class MyRecords extends PureComponent {
         this.props.actions.loadAuthorPublications({ ...this.state });
     };
 
-    handleExportPublications = (exportFormat) => {
+    handleExportPublications = exportFormat => {
         this.props.actions.exportAuthorPublications({ ...exportFormat, ...this.state });
-    }
+    };
 
     render() {
         if (this.props.accountLoading) return null;
@@ -147,100 +154,117 @@ export default class MyRecords extends PureComponent {
         const pagingData = this.props.publicationsListPagingData;
         const isLoadingOrExporting = this.props.loadingPublicationsList || this.props.exportPublicationsLoading;
 
-        const actionProps = (this.props.publicationsListCustomActions || []).length > 0
-            ? {
-                customActions: this.props.publicationsListCustomActions,
-            }
-            : {
-                showDefaultActions: true,
-            };
+        const actionProps =
+            (this.props.publicationsListCustomActions || []).length > 0
+                ? {
+                    customActions: this.props.publicationsListCustomActions,
+                }
+                : {
+                    showDefaultActions: true,
+                };
 
         return (
             <StandardPage title={txt.pageTitle}>
                 <Grid container spacing={16}>
-                    {
-                        // first time loading my publications - account hasn't been loaded or any my publications haven't been loaded
-                        !this.state.hasPublications && this.props.loadingPublicationsList &&
-                        <Grid item xs={12}>
-                            <InlineLoader message={txt.loadingMessage}/>
-                        </Grid>
-                    }
-                    {
-                        // no results to display
-                        !this.props.loadingPublicationsList && this.props.publicationsList && this.props.publicationsList.length === 0 &&
-                        <Grid item xs={12}>
-                            <StandardCard {...txt.noResultsFound}>
-                                {txt.noResultsFound.text}
-                            </StandardCard>
-                        </Grid>
-                    }
-                    {
-                        // results to display or loading if user is filtering/paging
-                        this.state.hasPublications && (this.props.loadingPublicationsList || this.props.publicationsList.length > 0) &&
-                        <Grid item xs={12} md={9}>
-                            <StandardCard noHeader>
-                                {
-                                    pagingData && pagingData.to && pagingData.from && pagingData.total &&
+                    {// first time loading my publications - account hasn't been
+                    // loaded or any my publications haven't been loaded
+                        !this.state.hasPublications && this.props.loadingPublicationsList && (
+                            <Grid item xs={12}>
+                                <InlineLoader message={txt.loadingMessage} />
+                            </Grid>
+                        )}
+                    {// no results to display
+                        !this.props.loadingPublicationsList &&
+                        this.props.publicationsList &&
+                        this.props.publicationsList.length === 0 && (
+                            <Grid item xs={12}>
+                                <StandardCard {...txt.noResultsFound}>{txt.noResultsFound.text}</StandardCard>
+                            </Grid>
+                        )}
+                    {// results to display or loading if user is filtering/paging
+                        this.state.hasPublications &&
+                        (this.props.loadingPublicationsList || this.props.publicationsList.length > 0) && (
+                            <Grid item xs={12} md={9}>
+                                <StandardCard noHeader>
+                                    {pagingData && pagingData.to && pagingData.from && pagingData.total && (
                                         <span>
                                             {txt.recordCount
                                                 .replace('[recordsTotal]', pagingData.total)
                                                 .replace('[recordsFrom]', pagingData.from)
                                                 .replace('[recordsTo]', pagingData.to)}
                                         </span>
-                                }
-                                <Grid container spacing={16}>
-                                    <Grid item xs={12}>
-                                        {txt.text}
+                                    )}
+                                    <Grid container spacing={16}>
+                                        <Grid item xs={12}>
+                                            {txt.text}
+                                        </Grid>
+                                        <Grid item xs={12}>
+                                            <PublicationsListSorting
+                                                initPageLength={this.initState.pageSize}
+                                                sortBy={this.state.sortBy}
+                                                sortDirection={this.state.sortDirection}
+                                                pageSize={this.state.pageSize}
+                                                pagingData={pagingData}
+                                                onSortByChanged={this.sortByChanged}
+                                                onPageSizeChanged={this.pageSizeChanged}
+                                                onExportPublications={this.handleExportPublications}
+                                                canUseExport={this.props.canUseExport}
+                                                disabled={isLoadingOrExporting}
+                                            />
+                                        </Grid>
+                                        <Grid item xs={12}>
+                                            <PublicationsListPaging
+                                                loading={isLoadingOrExporting}
+                                                pagingData={pagingData}
+                                                onPageChanged={this.pageChanged}
+                                                disabled={isLoadingOrExporting}
+                                            />
+                                        </Grid>
+                                        <Grid item xs={12}>
+                                            {isLoadingOrExporting && (
+                                                <div className="is-centered">
+                                                    <InlineLoader
+                                                        message={
+                                                            this.props.loadingPublicationsList
+                                                                ? txt.loadingPagingMessage
+                                                                : txt.exportPublicationsLoadingMessage
+                                                        }
+                                                    />
+                                                </div>
+                                            )}
+                                            {!this.props.exportPublicationsLoading &&
+                                                !this.props.loadingPublicationsList &&
+                                                this.props.publicationsList &&
+                                                this.props.publicationsList.length > 0 && (
+                                                <PublicationsList
+                                                    publicationsList={this.props.publicationsList}
+                                                    {...actionProps}
+                                                />
+                                            )}
+                                        </Grid>
+                                        <Grid item xs={12}>
+                                            <PublicationsListPaging
+                                                loading={isLoadingOrExporting}
+                                                pagingData={pagingData}
+                                                onPageChanged={this.pageChanged}
+                                                disabled={isLoadingOrExporting}
+                                            />
+                                        </Grid>
                                     </Grid>
-                                    <Grid item xs={12}>
-                                        <PublicationsListSorting
-                                            initPageLength={this.initState.pageSize}
-                                            sortBy={this.state.sortBy}
-                                            sortDirection={this.state.sortDirection}
-                                            pageSize={this.state.pageSize}
-                                            pagingData={pagingData}
-                                            onSortByChanged={this.sortByChanged}
-                                            onPageSizeChanged={this.pageSizeChanged}
-                                            onExportPublications={this.handleExportPublications}
-                                            canUseExport={this.props.canUseExport}
-                                            disabled={isLoadingOrExporting}/>
-                                    </Grid>
-                                    <Grid item xs={12}>
-                                        <PublicationsListPaging
-                                            loading={isLoadingOrExporting}
-                                            pagingData={pagingData}
-                                            onPageChanged={this.pageChanged}
-                                            disabled={isLoadingOrExporting} />
-                                    </Grid>
-                                    <Grid item xs={12}>
-                                        {
-                                            isLoadingOrExporting &&
-                                            <div className="is-centered"><InlineLoader message={this.props.loadingPublicationsList ? txt.loadingPagingMessage : txt.exportPublicationsLoadingMessage}/></div>
-                                        }
-                                        {
-                                            !this.props.exportPublicationsLoading && !this.props.loadingPublicationsList && this.props.publicationsList && this.props.publicationsList.length > 0 &&
-                                            <PublicationsList
-                                                publicationsList={this.props.publicationsList}
-                                                { ...actionProps} />
-                                        }
-                                    </Grid>
-                                    <Grid item xs={12}>
-                                        <PublicationsListPaging
-                                            loading={isLoadingOrExporting}
-                                            pagingData={pagingData}
-                                            onPageChanged={this.pageChanged}
-                                            disabled={isLoadingOrExporting} />
-                                    </Grid>
-                                </Grid>
-                            </StandardCard>
-                        </Grid>
-                    }
-                    {
-                        // show available filters or selected filters (even if there are no results)
-                        ((this.props.publicationsListFacets && Object.keys(this.props.publicationsListFacets).length > 0) ||
+                                </StandardCard>
+                            </Grid>
+                        )}
+                    {// show available filters or selected filters (even if there are no results)
+                    /* prettier-ignore */
+                        ((
+                            this.props.publicationsListFacets &&
+                            Object.keys(this.props.publicationsListFacets).length > 0
+                        ) ||
                         (this.state.activeFacets && this.hasDisplayableFilters(this.state.activeFacets.filters)) ||
-                        (this.state.activeFacets && this.state.activeFacets.ranges && Object.keys(this.state.activeFacets.ranges).length > 0) ||
-                        (this.state.activeFacets && !!this.state.activeFacets.showOpenAccessOnly)) &&
+                        (this.state.activeFacets &&
+                            this.state.activeFacets.ranges &&
+                            Object.keys(this.state.activeFacets.ranges).length > 0) ||
+                        (this.state.activeFacets && !!this.state.activeFacets.showOpenAccessOnly)) && (
                             <Hidden smDown>
                                 <Grid item md={3}>
                                     <StandardRighthandCard title={txt.facetsFilter.title} help={txt.facetsFilter.help}>
@@ -251,14 +275,17 @@ export default class MyRecords extends PureComponent {
                                             initialFacets={this.props.initialFacets}
                                             disabled={isLoadingOrExporting}
                                             excludeFacetsList={txt.facetsFilter.excludeFacetsList}
-                                            isMyDataSetPage={this.props.location.pathname === routes.pathConfig.dataset.mine}
+                                            isMyDataSetPage={
+                                                this.props.location.pathname === routes.pathConfig.dataset.mine
+                                            }
                                             renameFacetsList={txt.facetsFilter.renameFacetsList}
                                             lookupFacetsList={txt.facetsFilter.lookupFacetsList}
-                                            showOpenAccessFilter/>
+                                            showOpenAccessFilter
+                                        />
                                     </StandardRighthandCard>
                                 </Grid>
                             </Hidden>
-                    }
+                        )}
                 </Grid>
             </StandardPage>
         );

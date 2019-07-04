@@ -31,7 +31,12 @@ describe('DocumentTypeField component', () => {
             docTypes: defaultDocTypes,
         });
         expect(toJson(wrapper)).toMatchSnapshot();
-        wrapper.find('WithStyles(MenuItem)').map(menuItem => defaultDocTypes.indexOf(menuItem.props.value) > -1 && expect(menuItem.props.checked).toBeTruthy());
+        wrapper
+            .find('WithStyles(MenuItem)')
+            .map(
+                menuItem =>
+                    defaultDocTypes.indexOf(menuItem.props.value) > -1 && expect(menuItem.props.checked).toBeTruthy()
+            );
     });
 
     it('should handle doc type change event', () => {
@@ -39,7 +44,9 @@ describe('DocumentTypeField component', () => {
         const wrapper = setup({
             updateDocTypeValues: updateDocTypeValuesFn,
         });
-        wrapper.find('WithStyles(Select)').props()
+        wrapper
+            .find('WithStyles(Select)')
+            .props()
             .onChange({ target: { value: 316 } });
         expect(updateDocTypeValuesFn).toHaveBeenCalledWith(316);
     });

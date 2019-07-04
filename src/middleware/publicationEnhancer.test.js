@@ -21,17 +21,19 @@ describe('publication enhancer', () => {
         const next = jest.fn();
         publicationEnhancer()(next)({ type: 'FIX_RECORD_LOADED', payload: publication });
 
-        expect(next).toBeCalledWith(expect.objectContaining({
-            payload: {
-                calculateOpenAccess: expect.any(Function),
-                rek_pid: 'UQ:1234',
-                rek_title: 'Title',
-                rek_description: 'Description',
-                rek_formatted_abstract: 'Abstract',
-                rek_formatted_title: null,
-            },
-            type: 'FIX_RECORD_LOADED',
-        }));
+        expect(next).toBeCalledWith(
+            expect.objectContaining({
+                payload: {
+                    calculateOpenAccess: expect.any(Function),
+                    rek_pid: 'UQ:1234',
+                    rek_title: 'Title',
+                    rek_description: 'Description',
+                    rek_formatted_abstract: 'Abstract',
+                    rek_formatted_title: null,
+                },
+                type: 'FIX_RECORD_LOADED',
+            })
+        );
     });
 
     it('should calculate open access', () => {
@@ -42,7 +44,7 @@ describe('publication enhancer', () => {
             rek_formatted_title: null,
             rek_formatted_abstract: 'Abstract',
         };
-        const next = jest.fn((action) => {
+        const next = jest.fn(action => {
             const result = action.payload.calculateOpenAccess();
             expect(result).toEqual({
                 isOpenAccess: false,
@@ -60,7 +62,7 @@ describe('publication enhancer', () => {
             rek_formatted_title: null,
             rek_formatted_abstract: 'Abstract',
         };
-        const next = jest.fn((action) => {
+        const next = jest.fn(action => {
             const result = action.payload.calculateOpenAccess();
             expect(result).toBeNull();
         });
@@ -109,10 +111,12 @@ describe('publication enhancer', () => {
         };
         publicationEnhancer()(next)({ type: 'LATEST_PUBLICATIONS_LOADED', payload: payload });
 
-        expect(next).toBeCalledWith(expect.objectContaining({
-            payload: expectedPayload,
-            type: 'LATEST_PUBLICATIONS_LOADED',
-        }));
+        expect(next).toBeCalledWith(
+            expect.objectContaining({
+                payload: expectedPayload,
+                type: 'LATEST_PUBLICATIONS_LOADED',
+            })
+        );
     });
 
     it('should add a method to a list of publication to calculate open access for trending publications', () => {
@@ -156,10 +160,12 @@ describe('publication enhancer', () => {
         };
         publicationEnhancer()(next)({ type: 'TRENDING_PUBLICATIONS_LOADED@altmetric', payload: payload });
 
-        expect(next).toBeCalledWith(expect.objectContaining({
-            payload: expectedPayload,
-            type: 'TRENDING_PUBLICATIONS_LOADED@altmetric',
-        }));
+        expect(next).toBeCalledWith(
+            expect.objectContaining({
+                payload: expectedPayload,
+                type: 'TRENDING_PUBLICATIONS_LOADED@altmetric',
+            })
+        );
     });
 
     it('should not add anything to data if action is not on the list', () => {
@@ -170,23 +176,27 @@ describe('publication enhancer', () => {
             payload: publication,
         });
 
-        expect(next).toBeCalledWith(expect.objectContaining({
-            type: 'FIX_RECORD_LOAD_FAILED',
-            payload: publication,
-        }));
+        expect(next).toBeCalledWith(
+            expect.objectContaining({
+                type: 'FIX_RECORD_LOAD_FAILED',
+                payload: publication,
+            })
+        );
     });
 
-    it('should not add anything to data if there\'s no data', () => {
+    it("should not add anything to data if there's no data", () => {
         const next = jest.fn();
         publicationEnhancer()(next)({
             type: 'SEARCH_LOADED',
             payload: { nothing: 'here' },
         });
 
-        expect(next).toBeCalledWith(expect.objectContaining({
-            type: 'SEARCH_LOADED',
-            payload: { nothing: 'here' },
-        }));
+        expect(next).toBeCalledWith(
+            expect.objectContaining({
+                type: 'SEARCH_LOADED',
+                payload: { nothing: 'here' },
+            })
+        );
     });
 
     it('should calculate OA status', () => {
@@ -237,7 +247,7 @@ describe('publication enhancer', () => {
                     dsi_embargo_date: null,
                     dsi_open_access: null,
                     dsi_label: 'FezACML security for datastream - UQ357538_OA.pdf',
-                    dsi_mimetype: 'text\/xml',
+                    dsi_mimetype: 'text/xml',
                     dsi_copyright: null,
                     dsi_state: 'A',
                     dsi_size: 62,
@@ -248,7 +258,7 @@ describe('publication enhancer', () => {
                     dsi_embargo_date: null,
                     dsi_open_access: null,
                     dsi_label: '',
-                    dsi_mimetype: 'application\/xml',
+                    dsi_mimetype: 'application/xml',
                     dsi_copyright: null,
                     dsi_state: 'A',
                     dsi_size: 275290,
@@ -259,7 +269,7 @@ describe('publication enhancer', () => {
                     dsi_embargo_date: '2021-12-01',
                     dsi_open_access: null,
                     dsi_label: 'Full text (open access)',
-                    dsi_mimetype: 'application\/pdf',
+                    dsi_mimetype: 'application/pdf',
                     dsi_copyright: null,
                     dsi_state: 'A',
                     dsi_size: 1526884,
@@ -270,11 +280,12 @@ describe('publication enhancer', () => {
                     dsi_embargo_date: '2021-11-01',
                     dsi_open_access: null,
                     dsi_label: 'Full text (open access)',
-                    dsi_mimetype: 'application\/pdf',
+                    dsi_mimetype: 'application/pdf',
                     dsi_copyright: null,
                     dsi_state: 'A',
                     dsi_size: 1526884,
-                }],
+                },
+            ],
         };
         const publicationEmbargoMaturedOAFile = {
             rek_created_date: '2019-12-25T00:00:00Z',
@@ -289,7 +300,7 @@ describe('publication enhancer', () => {
                     dsi_embargo_date: null,
                     dsi_open_access: null,
                     dsi_label: 'FezACML security for datastream - UQ357538_OA.pdf',
-                    dsi_mimetype: 'text\/xml',
+                    dsi_mimetype: 'text/xml',
                     dsi_copyright: null,
                     dsi_state: 'A',
                     dsi_size: 62,
@@ -300,7 +311,7 @@ describe('publication enhancer', () => {
                     dsi_embargo_date: null,
                     dsi_open_access: null,
                     dsi_label: '',
-                    dsi_mimetype: 'application\/xml',
+                    dsi_mimetype: 'application/xml',
                     dsi_copyright: null,
                     dsi_state: 'A',
                     dsi_size: 275290,
@@ -311,11 +322,12 @@ describe('publication enhancer', () => {
                     dsi_embargo_date: '2019-12-01',
                     dsi_open_access: null,
                     dsi_label: 'Full text (open access)',
-                    dsi_mimetype: 'application\/pdf',
+                    dsi_mimetype: 'application/pdf',
                     dsi_copyright: null,
                     dsi_state: 'A',
                     dsi_size: 1526884,
-                }],
+                },
+            ],
         };
         const publicationMultipleOAFiles = {
             rek_created_date: '2019-12-25T00:00:00Z',
@@ -330,7 +342,7 @@ describe('publication enhancer', () => {
                     dsi_embargo_date: null,
                     dsi_open_access: null,
                     dsi_label: 'FezACML security for datastream - UQ357538_OA.pdf',
-                    dsi_mimetype: 'text\/xml',
+                    dsi_mimetype: 'text/xml',
                     dsi_copyright: null,
                     dsi_state: 'A',
                     dsi_size: 62,
@@ -341,7 +353,7 @@ describe('publication enhancer', () => {
                     dsi_embargo_date: null,
                     dsi_open_access: null,
                     dsi_label: '',
-                    dsi_mimetype: 'application\/xml',
+                    dsi_mimetype: 'application/xml',
                     dsi_copyright: null,
                     dsi_state: 'A',
                     dsi_size: 275290,
@@ -352,7 +364,7 @@ describe('publication enhancer', () => {
                     dsi_embargo_date: '2019-12-01',
                     dsi_open_access: null,
                     dsi_label: 'Full text (open access)',
-                    dsi_mimetype: 'application\/pdf',
+                    dsi_mimetype: 'application/pdf',
                     dsi_copyright: null,
                     dsi_state: 'A',
                     dsi_size: 1526884,
@@ -363,7 +375,7 @@ describe('publication enhancer', () => {
                     dsi_embargo_date: '2021-12-01',
                     dsi_open_access: null,
                     dsi_label: 'Full text (open access)',
-                    dsi_mimetype: 'application\/pdf',
+                    dsi_mimetype: 'application/pdf',
                     dsi_copyright: null,
                     dsi_state: 'A',
                     dsi_size: 1526884,
@@ -383,7 +395,7 @@ describe('publication enhancer', () => {
                     dsi_embargo_date: null,
                     dsi_open_access: null,
                     dsi_label: 'FezACML security for datastream - UQ357538_OA.pdf',
-                    dsi_mimetype: 'text\/xml',
+                    dsi_mimetype: 'text/xml',
                     dsi_copyright: null,
                     dsi_state: 'A',
                     dsi_size: 62,
@@ -394,7 +406,7 @@ describe('publication enhancer', () => {
                     dsi_embargo_date: null,
                     dsi_open_access: null,
                     dsi_label: '',
-                    dsi_mimetype: 'application\/xml',
+                    dsi_mimetype: 'application/xml',
                     dsi_copyright: null,
                     dsi_state: 'A',
                     dsi_size: 275290,
@@ -405,7 +417,7 @@ describe('publication enhancer', () => {
                     dsi_embargo_date: '2022-12-01',
                     dsi_open_access: null,
                     dsi_label: 'Full text (open access)',
-                    dsi_mimetype: 'application\/pdf',
+                    dsi_mimetype: 'application/pdf',
                     dsi_copyright: null,
                     dsi_state: 'A',
                     dsi_size: 1526884,
@@ -416,7 +428,7 @@ describe('publication enhancer', () => {
                     dsi_embargo_date: '2023-12-01',
                     dsi_open_access: null,
                     dsi_label: 'Full text (open access)',
-                    dsi_mimetype: 'application\/pdf',
+                    dsi_mimetype: 'application/pdf',
                     dsi_copyright: null,
                     dsi_state: 'A',
                     dsi_size: 1526884,
@@ -436,7 +448,7 @@ describe('publication enhancer', () => {
                     dsi_embargo_date: null,
                     dsi_open_access: null,
                     dsi_label: 'FezACML security for datastream - UQ357538_OA.pdf',
-                    dsi_mimetype: 'text\/xml',
+                    dsi_mimetype: 'text/xml',
                     dsi_copyright: null,
                     dsi_state: 'A',
                     dsi_size: 62,
@@ -447,7 +459,7 @@ describe('publication enhancer', () => {
                     dsi_embargo_date: null,
                     dsi_open_access: null,
                     dsi_label: '',
-                    dsi_mimetype: 'application\/xml',
+                    dsi_mimetype: 'application/xml',
                     dsi_copyright: null,
                     dsi_state: 'A',
                     dsi_size: 275290,
@@ -458,11 +470,12 @@ describe('publication enhancer', () => {
                     dsi_embargo_date: null,
                     dsi_open_access: null,
                     dsi_label: 'Full text (open access)',
-                    dsi_mimetype: 'application\/pdf',
+                    dsi_mimetype: 'application/pdf',
                     dsi_copyright: null,
                     dsi_state: 'A',
                     dsi_size: 1526884,
-                }],
+                },
+            ],
         };
         const publicationOtherNoFiles = {
             rek_created_date: '2019-12-25T00:00:00Z',
@@ -477,11 +490,12 @@ describe('publication enhancer', () => {
                     dsi_embargo_date: null,
                     dsi_open_access: null,
                     dsi_label: 'FezACML security for datastream - UQ357538_OA.pdf',
-                    dsi_mimetype: 'text\/xml',
+                    dsi_mimetype: 'text/xml',
                     dsi_copyright: null,
                     dsi_state: 'A',
                     dsi_size: 62,
-                }],
+                },
+            ],
         };
         const publicationNoDataStream = {
             rek_created_date: '2019-12-25T00:00:00Z',
@@ -503,7 +517,7 @@ describe('publication enhancer', () => {
                     dsi_embargo_date: null,
                     dsi_open_access: null,
                     dsi_label: 'FezACML security for datastream - UQ357538_OA.pdf',
-                    dsi_mimetype: 'text\/xml',
+                    dsi_mimetype: 'text/xml',
                     dsi_copyright: null,
                     dsi_state: 'A',
                     dsi_size: 62,
@@ -514,7 +528,7 @@ describe('publication enhancer', () => {
                     dsi_embargo_date: null,
                     dsi_open_access: null,
                     dsi_label: '',
-                    dsi_mimetype: 'application\/xml',
+                    dsi_mimetype: 'application/xml',
                     dsi_copyright: null,
                     dsi_state: 'A',
                     dsi_size: 275290,
@@ -525,7 +539,7 @@ describe('publication enhancer', () => {
                     dsi_embargo_date: null,
                     dsi_open_access: null,
                     dsi_label: 'Full text (open access)',
-                    dsi_mimetype: 'application\/pdf',
+                    dsi_mimetype: 'application/pdf',
                     dsi_copyright: null,
                     dsi_state: 'A',
                     dsi_size: 1526884,
@@ -536,7 +550,7 @@ describe('publication enhancer', () => {
                     dsi_embargo_date: '2050-01-01',
                     dsi_open_access: null,
                     dsi_label: 'ERA restricted admins only',
-                    dsi_mimetype: 'application\/pdf',
+                    dsi_mimetype: 'application/pdf',
                     dsi_copyright: null,
                     dsi_state: 'A',
                     dsi_size: 1526884,
@@ -587,31 +601,35 @@ describe('publication enhancer', () => {
         };
         const next = jest.fn();
         publicationEnhancer()(next)({ type: 'SEARCH_LOADED@wos', payload: { data: [publication] } });
-        expect(next).toBeCalledWith(expect.objectContaining(
-            {
+        expect(next).toBeCalledWith(
+            expect.objectContaining({
                 type: 'SEARCH_LOADED@wos',
                 payload: {
-                    data: [{
-                        rek_pid: 'UQ:1234',
-                        rek_title: 'This is a title with <sup>sup</sup> and <sub>sub</sub>',
-                        rek_formatted_abstract: null,
-                        rek_formatted_title: null,
-                        calculateOpenAccess: expect.any(Function),
-                    }],
+                    data: [
+                        {
+                            rek_pid: 'UQ:1234',
+                            rek_title: 'This is a title with <sup>sup</sup> and <sub>sub</sub>',
+                            rek_formatted_abstract: null,
+                            rek_formatted_title: null,
+                            calculateOpenAccess: expect.any(Function),
+                        },
+                    ],
                 },
-            }));
+            })
+        );
     });
 
     it('should clean up invalid HTML in rek_title from a publication list', () => {
         const publication = {
             rek_pid: 'UQ:1234',
             rek_title: '<br/>This is a <u>title</u> with <sup>sup</sup> and <sub>sub</sub>',
-            rek_formatted_abstract: '<ul><li>one</li><li>tow</li></ul><span>hello</span><p class="some-css">good bye</p>',
+            rek_formatted_abstract:
+                '<ul><li>one</li><li>tow</li></ul><span>hello</span><p class="some-css">good bye</p>',
         };
         const next = jest.fn();
         publicationEnhancer()(next)({ type: 'LATEST_PUBLICATIONS_LOADED', payload: { data: [publication] } });
-        expect(next).toBeCalledWith(expect.objectContaining(
-            {
+        expect(next).toBeCalledWith(
+            expect.objectContaining({
                 type: 'LATEST_PUBLICATIONS_LOADED',
                 payload: {
                     data: [
@@ -624,7 +642,8 @@ describe('publication enhancer', () => {
                         },
                     ],
                 },
-            }));
+            })
+        );
     });
 
     it('should set rek_formatted_abstract and rek_formatted_title to null due to invalid html', () => {
@@ -637,8 +656,8 @@ describe('publication enhancer', () => {
         const next = jest.fn();
         publicationEnhancer()(next)({ type: 'VIEW_RECORD_LOADED', payload: publication });
 
-        expect(next).toBeCalledWith(expect.objectContaining(
-            {
+        expect(next).toBeCalledWith(
+            expect.objectContaining({
                 type: 'VIEW_RECORD_LOADED',
                 payload: {
                     rek_pid: 'UQ:1234',
@@ -647,6 +666,7 @@ describe('publication enhancer', () => {
                     rek_formatted_abstract: null,
                     calculateOpenAccess: expect.any(Function),
                 },
-            }));
+            })
+        );
     });
 });

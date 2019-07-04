@@ -42,7 +42,9 @@ describe('DateRangeField component', () => {
     it('should render with future disabled', () => {
         const wrapper = setup({ disableFuture: true });
         expect(toJson(wrapper)).toMatchSnapshot();
-        wrapper.find('DatePickerField').map(datePickerField => expect(datePickerField.props().disableFuture).toBeTruthy());
+        wrapper
+            .find('DatePickerField')
+            .map(datePickerField => expect(datePickerField.props().disableFuture).toBeTruthy());
     });
 
     it('should update on receiving new state', () => {
@@ -59,7 +61,10 @@ describe('DateRangeField component', () => {
     it('should update date range value', () => {
         const wrapper = setup({});
         const componentWillUpdate = jest.spyOn(wrapper.instance(), 'componentWillUpdate');
-        wrapper.find('DatePickerField').get(0).props.onChange('10/10/2010');
+        wrapper
+            .find('DatePickerField')
+            .get(0)
+            .props.onChange('10/10/2010');
         wrapper.update();
         expect(componentWillUpdate).toHaveBeenCalled();
     });
@@ -68,8 +73,14 @@ describe('DateRangeField component', () => {
         const onChangeFn = jest.fn();
         const wrapper = setup({ onChange: onChangeFn });
         const componentWillUpdate = jest.spyOn(wrapper.instance(), 'componentWillUpdate');
-        wrapper.find('DatePickerField').get(0).props.onChange(moment('10/10/2010', 'DD/MM/YYYY'));
-        wrapper.find('DatePickerField').get(1).props.onChange(moment('09/10/2010', 'DD/MM/YYYY'));
+        wrapper
+            .find('DatePickerField')
+            .get(0)
+            .props.onChange(moment('10/10/2010', 'DD/MM/YYYY'));
+        wrapper
+            .find('DatePickerField')
+            .get(1)
+            .props.onChange(moment('09/10/2010', 'DD/MM/YYYY'));
         wrapper.update();
         expect(componentWillUpdate).toHaveBeenCalled();
         expect(onChangeFn).toHaveBeenCalled();

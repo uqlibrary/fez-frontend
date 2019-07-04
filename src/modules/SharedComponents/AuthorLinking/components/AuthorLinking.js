@@ -9,7 +9,7 @@ import Checkbox from '@material-ui/core/Checkbox';
 import withWidth from '@material-ui/core/withWidth';
 import { withStyles } from '@material-ui/core/styles';
 
-const styles = (theme) => ({
+const styles = theme => ({
     infiniteContainer: {
         border: '1px solid',
         borderColor: theme.palette.secondary.light,
@@ -57,7 +57,8 @@ export class AuthorLinking extends PureComponent {
     static defaultProps = {
         disabled: false,
         locale: {
-            confirmation: 'I confirm and understand that I am claiming this work under the above name, and confirm this is me',
+            confirmation:
+                'I confirm and understand that I am claiming this work under the above name, and confirm this is me',
         },
         authorList: [],
         linkedAuthorIdList: [],
@@ -93,7 +94,9 @@ export class AuthorLinking extends PureComponent {
 
         // Transform and cache list to output so component doesn't have to go through transform step every time
         if (linkedAuthorIdList.length === 0) {
-            this.listToOutput = authorList.map((author) => this.transformToAuthorOrderId(0, author, this.props.searchKey));
+            this.listToOutput = authorList.map(author =>
+                this.transformToAuthorOrderId(0, author, this.props.searchKey)
+            );
         } else {
             this.listToOutput = linkedAuthorIdList;
         }
@@ -101,7 +104,10 @@ export class AuthorLinking extends PureComponent {
 
     componentWillUpdate(nextProps, nextState) {
         if (this.props.onChange !== null && nextState.selectedAuthor !== null) {
-            this.props.onChange({ authors: this.prepareOutput(nextProps, nextState, this.listToOutput), valid: nextState.authorLinkingConfirmed });
+            this.props.onChange({
+                authors: this.prepareOutput(nextProps, nextState, this.listToOutput),
+                valid: nextState.authorLinkingConfirmed,
+            });
             this.authorsToRender = this.getAuthorsToRender({ ...nextProps }, nextState);
         }
     }
@@ -109,15 +115,20 @@ export class AuthorLinking extends PureComponent {
     /**
      * Build authors list
      */
-    getAuthorsToRender = ({ authorList = [], linkedAuthorIdList = [], disabled = false } = {}, { selectedAuthor = {} } = {}) => {
+    getAuthorsToRender = (
+        { authorList = [], linkedAuthorIdList = [], disabled = false } = {},
+        { selectedAuthor = {} } = {}
+    ) => {
         const authors = authorList.map((author, index) => {
-            const linked = (
+            const linked =
                 linkedAuthorIdList.length > 0 &&
                 !!linkedAuthorIdList[index] &&
                 linkedAuthorIdList[index][this.props.searchKey.value] !== null &&
-                linkedAuthorIdList[index][this.props.searchKey.value] !== 0
-            );
-            const selected = (selectedAuthor && (author[`rek_${this.props.searchKey.type}_order`] === selectedAuthor[`rek_${this.props.searchKey.type}_id_order`]));
+                linkedAuthorIdList[index][this.props.searchKey.value] !== 0;
+            const selected =
+                selectedAuthor &&
+                author[`rek_${this.props.searchKey.type}_order`] ===
+                    selectedAuthor[`rek_${this.props.searchKey.type}_id_order`];
             return (
                 <AuthorItem
                     type={this.props.searchKey.type}
@@ -148,11 +159,11 @@ export class AuthorLinking extends PureComponent {
 
         if (authors.length > 0) {
             for (let i = 0; i < authors.length; i += itemsPerRow) {
-                rows.push(<Grid container key={i}>
-                    {
-                        authors.slice(i, i + itemsPerRow)
-                    }
-                </Grid>);
+                rows.push(
+                    <Grid container key={i}>
+                        {authors.slice(i, i + itemsPerRow)}
+                    </Grid>
+                );
             }
         }
         return rows;
@@ -166,11 +177,7 @@ export class AuthorLinking extends PureComponent {
     prepareOutput = ({ searchKey: { order } }, { selectedAuthor }, list) => {
         const index = selectedAuthor[order] - 1;
 
-        return [
-            ...list.slice(0, index),
-            selectedAuthor,
-            ...list.slice(index + 1),
-        ];
+        return [...list.slice(0, index), selectedAuthor, ...list.slice(index + 1)];
     };
 
     /**
@@ -184,17 +191,21 @@ export class AuthorLinking extends PureComponent {
         const { value, order, type } = searchKey;
         return {
             [`rek_${type}_id_id`]: null,
-            [`rek_${type}_id_pid`]: author !== null && author[`rek_${type}_pid`] || null,
+            [`rek_${type}_id_pid`]: (author !== null && author[`rek_${type}_pid`]) || null,
             [value]: authorId,
-            [order]: author !== null && author[`rek_${type}_order`] || null,
+            [order]: (author !== null && author[`rek_${type}_order`]) || null,
         };
     };
 
     /**
      * Select and transform author to be linked
      */
-    _selectAuthor = (author) => {
-        const selectedAuthor = this.transformToAuthorOrderId(this.props.loggedInAuthor.aut_id, author, this.props.searchKey);
+    _selectAuthor = author => {
+        const selectedAuthor = this.transformToAuthorOrderId(
+            this.props.loggedInAuthor.aut_id,
+            author,
+            this.props.searchKey
+        );
         this.setState({
             selectedAuthor: selectedAuthor,
             authorLinkingConfirmed: false,
@@ -217,17 +228,12 @@ export class AuthorLinking extends PureComponent {
             <div className={this.props.className}>
                 <Grid container>
                     <Grid item className={this.props.classes.infiniteContainer}>
-                        <Infinite
-                            containerHeight={200}
-                            elementHeight={73}
-                            infiniteLoadBeginEdgeOffset={50}
-                        >
+                        <Infinite containerHeight={200} elementHeight={73} infiniteLoadBeginEdgeOffset={50}>
                             {this.authorsToRender}
                         </Infinite>
                     </Grid>
                 </Grid>
-                {
-                    selectedAuthor !== null &&
+                {selectedAuthor !== null && (
                     <FormControlLabel
                         classes={{
                             root: this.props.classes.root,
@@ -237,7 +243,10 @@ export class AuthorLinking extends PureComponent {
                             <Checkbox
                                 checked={authorLinkingConfirmed}
                                 onChange={this._acceptAuthorLinkingTermsAndConditions}
-                                classes={{ root: this.props.classes.checkboxRoot, checked: this.props.classes.checkboxChecked }}
+                                classes={{
+                                    root: this.props.classes.checkboxRoot,
+                                    checked: this.props.classes.checkboxChecked,
+                                }}
                                 id="authorAcceptDeclaration"
                             />
                         }
@@ -252,7 +261,7 @@ export class AuthorLinking extends PureComponent {
                             </Typography>
                         }
                     />
-                }
+                )}
             </div>
         );
     }

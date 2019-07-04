@@ -11,11 +11,15 @@ export const mui1theme = createMuiTheme({
             gradient: {
                 horizontal: {
                     background: 'linear-gradient(to right, rgb(81,36,122) 55%,rgb(150,42,139) 100%)',
-                    filter: 'progid:DXImageTransform.Microsoft.gradient( startColorstr="#51247a", endColorstr="#962a8b",GradientType=1 )',
+                    filter:
+                        'progid:DXImageTransform.Microsoft.gradient( startColorstr="#51247a", ' +
+                        'endColorstr="#962a8b",GradientType=1 )',
                 },
                 diagonal: {
                     background: 'linear-gradient(135deg, rgb(81,36,122) 55%,rgb(150,42,139) 100%)',
-                    filter: 'progid:DXImageTransform.Microsoft.gradient( startColorstr="#51247a", endColorstr="#962a8b",GradientType=1 )',
+                    filter:
+                        'progid:DXImageTransform.Microsoft.gradient( startColorstr="#51247a", ' +
+                        'endColorstr="#962a8b",GradientType=1 )',
                 },
             },
         },

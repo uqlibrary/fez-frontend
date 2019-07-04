@@ -37,7 +37,17 @@ export class FileUploadRowDefaultView extends PureComponent {
 
     render() {
         const { embargoDateClosedAccess } = this.props.locale;
-        const { disabled, index, requireOpenAccessStatus, accessConditionId, embargoDate, name, size, classes, focusOnIndex } = this.props;
+        const {
+            disabled,
+            index,
+            requireOpenAccessStatus,
+            accessConditionId,
+            embargoDate,
+            name,
+            size,
+            classes,
+            focusOnIndex,
+        } = this.props;
 
         return (
             <div style={{ flexGrow: 1, padding: 4 }}>
@@ -47,8 +57,7 @@ export class FileUploadRowDefaultView extends PureComponent {
                             {name} ({size})
                         </Typography>
                     </Grid>
-                    {
-                        requireOpenAccessStatus &&
+                    {requireOpenAccessStatus && (
                         <Fragment>
                             <Grid item md={3} sm={4}>
                                 <FileUploadAccessSelector
@@ -61,21 +70,21 @@ export class FileUploadRowDefaultView extends PureComponent {
                                 />
                             </Grid>
                             <Grid item md={2} sm={2}>
-                                {
-                                    accessConditionId !== config.OPEN_ACCESS_ID &&
-                                    <Typography variant="body2" gutterBottom>{embargoDateClosedAccess}</Typography>
-                                }
-                                {
-                                    accessConditionId === config.OPEN_ACCESS_ID &&
+                                {accessConditionId !== config.OPEN_ACCESS_ID && (
+                                    <Typography variant="body2" gutterBottom>
+                                        {embargoDateClosedAccess}
+                                    </Typography>
+                                )}
+                                {accessConditionId === config.OPEN_ACCESS_ID && (
                                     <FileUploadEmbargoDate
                                         value={new Date(embargoDate)}
                                         onChange={this.props.onEmbargoDateChange}
                                         disabled={disabled}
                                     />
-                                }
+                                )}
                             </Grid>
                         </Fragment>
-                    }
+                    )}
                     <Grid item xs={1} className={classes.icon}>
                         <FileUploadRowStatus disabled={disabled} onDelete={this.props.onDelete} name={name} />
                     </Grid>

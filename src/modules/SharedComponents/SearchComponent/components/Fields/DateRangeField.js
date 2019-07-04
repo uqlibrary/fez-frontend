@@ -21,16 +21,8 @@ export class DateRangeField extends PureComponent {
         classes: PropTypes.object,
         locale: PropTypes.object,
         format: PropTypes.string,
-        from: PropTypes.oneOfType([
-            PropTypes.string,
-            PropTypes.number,
-            PropTypes.object,
-        ]),
-        to: PropTypes.oneOfType([
-            PropTypes.string,
-            PropTypes.number,
-            PropTypes.object,
-        ]),
+        from: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.object]),
+        to: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.object]),
         onChange: PropTypes.func.isRequired,
         disableFuture: PropTypes.bool,
     };
@@ -54,26 +46,31 @@ export class DateRangeField extends PureComponent {
     componentWillUpdate(nextProps, nextState) {
         if (
             !!this.props.onChange &&
-            (this.state.from !== nextState.from || this.state.to !== nextState.to || this.state.error !== nextState.error) &&
+            (this.state.from !== nextState.from ||
+                this.state.to !== nextState.to ||
+                this.state.error !== nextState.error) &&
             !nextState.error
-        ) this.props.onChange(nextState);
+        ) { this.props.onChange(nextState); }
     }
 
-    updateDateRangeValue = (key) => (value) => {
-        this.setState({
-            [key]: value,
-        }, () => {
-            const { from, to } = this.state;
-            if (!!from && !!to && from.isAfter(to)) {
-                this.setState({
-                    error: 'Please provide valid date range',
-                });
-            } else {
-                this.setState({
-                    error: undefined,
-                });
+    updateDateRangeValue = key => value => {
+        this.setState(
+            {
+                [key]: value,
+            },
+            () => {
+                const { from, to } = this.state;
+                if (!!from && !!to && from.isAfter(to)) {
+                    this.setState({
+                        error: 'Please provide valid date range',
+                    });
+                } else {
+                    this.setState({
+                        error: undefined,
+                    });
+                }
             }
-        });
+        );
     };
 
     render() {
@@ -82,7 +79,9 @@ export class DateRangeField extends PureComponent {
             <React.Fragment>
                 <Grid container>
                     <Grid item xs={12}>
-                        <InputLabel shrink className={classes.title}>{locale.title}</InputLabel>
+                        <InputLabel shrink className={classes.title}>
+                            {locale.title}
+                        </InputLabel>
                     </Grid>
                 </Grid>
                 <Grid container>
@@ -120,4 +119,3 @@ export class DateRangeField extends PureComponent {
 }
 
 export default withStyles(styles, { withTheme: true })(DateRangeField);
-

@@ -35,12 +35,12 @@ export class Page extends Component {
         const { classes, title, children, help } = this.props;
         return (
             <Grid container className="StandardPage">
-                {title &&
-                <Typography variant={'h4'} component={'h2'} color={'primary'} className={classes.layoutTitle}>{title}</Typography>
-                }
-                {help &&
-                    <HelpIcon {...help} />
-                }
+                {title && (
+                    <Typography variant={'h4'} component={'h2'} color={'primary'} className={classes.layoutTitle}>
+                        {title}
+                    </Typography>
+                )}
+                {help && <HelpIcon {...help} />}
                 <Grid item className={classes.layoutCard}>
                     {children}
                 </Grid>
@@ -50,5 +50,5 @@ export class Page extends Component {
 }
 
 const StyledPage = withStyles(styles, { withTheme: true })(Page);
-const StandardPage = (props) => <StyledPage {...props}/>;
+const StandardPage = props => <StyledPage {...props} />;
 export default StandardPage;

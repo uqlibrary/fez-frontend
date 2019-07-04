@@ -36,82 +36,67 @@ export class RelatedPublicationsClass extends PureComponent {
     };
 
     renderList = (publication, parentSearchKey, childrenSearchKey, showPublicationTitle) => {
-        const parents = parentSearchKey && publication[parentSearchKey.key] || [];
+        const parents = (parentSearchKey && publication[parentSearchKey.key]) || [];
         const children = publication[childrenSearchKey.key];
 
-        return(
+        return (
             <ul className={`${this.props.classes.list} publicationList`}>
-                {
-                    this.renderSubList(parents, parentSearchKey)
-                }
-                {
-                    showPublicationTitle &&
+                {this.renderSubList(parents, parentSearchKey)}
+                {showPublicationTitle && (
                     <li key={'current'}>
                         <Typography variant="body2">
-                            {publication.rek_title}<b>{' (' + locale.viewRecord.sections.relatedPublications.currentRecord + ')'}</b>
+                            {publication.rek_title}
+                            <b>{' (' + locale.viewRecord.sections.relatedPublications.currentRecord + ')'}</b>
                         </Typography>
                     </li>
-                }
-                {
-                    this.renderSubList(children, childrenSearchKey)
-                }
+                )}
+                {this.renderSubList(children, childrenSearchKey)}
             </ul>
         );
-    }
+    };
 
     renderSubList = (subList, searchKey) => {
-        if(subList && searchKey) {
-            return (
-                subList.filter(item => (
-                    item[searchKey.title] && item[searchKey.title].trim().length > 0
-                )).sort((item1, item2) => (
-                    item1[searchKey.order] - item2[searchKey.order]
-                ))
-                    .map((item, index) => {
-                        return (
-                            <li key={`${searchKey.key}-${index}`}>
-                                <Typography variant="body2">
-                                    {
-                                        this.renderTitle(item, searchKey)
-                                    }
-                                </Typography>
-                            </li>
-                        );
-                    })
-            );
+        if (subList && searchKey) {
+            return subList
+                .filter(item => item[searchKey.title] && item[searchKey.title].trim().length > 0)
+                .sort((item1, item2) => item1[searchKey.order] - item2[searchKey.order])
+                .map((item, index) => {
+                    return (
+                        <li key={`${searchKey.key}-${index}`}>
+                            <Typography variant="body2">{this.renderTitle(item, searchKey)}</Typography>
+                        </li>
+                    );
+                });
         } else {
             return null;
         }
-    }
+    };
 
     renderTitle = (item, searchKey) => {
         const pid = item[searchKey.pid];
-        return (
-            <Link to={pathConfig.records.view(pid)}>{item[searchKey.title]}</Link>
-        );
-    }
+        return <Link to={pathConfig.records.view(pid)}>{item[searchKey.title]}</Link>;
+    };
 
     render() {
         const { publication, parentSearchKey, childrenSearchKey, title, showPublicationTitle } = this.props;
 
-        if ((!parentSearchKey || !publication[parentSearchKey.key] || publication[parentSearchKey.key].length === 0) &&
-            (!publication[childrenSearchKey.key] || publication[childrenSearchKey.key].length === 0)) {
+        if (
+            (!parentSearchKey || !publication[parentSearchKey.key] || publication[parentSearchKey.key].length === 0) &&
+            (!publication[childrenSearchKey.key] || publication[childrenSearchKey.key].length === 0)
+        ) {
             return null;
         }
 
         return (
             <Grid item xs={12}>
                 <StandardCard title={title} className="relatedPublications">
-                    {
-                        this.renderList(publication, parentSearchKey, childrenSearchKey, showPublicationTitle)
-                    }
+                    {this.renderList(publication, parentSearchKey, childrenSearchKey, showPublicationTitle)}
                 </StandardCard>
             </Grid>
         );
     }
 }
 
-
 const StyledRelatedPublicationsClass = withStyles(styles, { withTheme: true })(RelatedPublicationsClass);
-const RelatedPublications = (props) => <StyledRelatedPublicationsClass {...props}/>;
+const RelatedPublications = props => <StyledRelatedPublicationsClass {...props} />;
 export default RelatedPublications;

@@ -10,7 +10,11 @@ import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { ThesisSubtypeField } from 'modules/SharedComponents/PublicationSubtype';
-import { OrgUnitNameField, FilteredFieldOfResearchListField, OrgNameField } from 'modules/SharedComponents/LookupFields';
+import {
+    OrgUnitNameField,
+    FilteredFieldOfResearchListField,
+    OrgNameField,
+} from 'modules/SharedComponents/LookupFields';
 import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
 import { ListEditorField } from 'modules/SharedComponents/Toolbox/ListEditor';
 import { FileUploadField } from 'modules/SharedComponents/Toolbox/FileUploader';
@@ -45,39 +49,36 @@ export default class SbsSubmission extends Component {
     };
 
     componentWillReceiveProps(nextProps) {
-        if (
-            nextProps.isSessionValid &&
-            !nextProps.submitting
-        ) {
+        if (nextProps.isSessionValid && !nextProps.submitting) {
             this.openDepositConfirmation();
         }
     }
 
     deposit = () => {
         this.props.actions.checkSession();
-    }
+    };
 
     cancelSubmit = () => {
         window.location.reload();
-    }
+    };
 
     afterSubmit = () => {
         window.location.assign(formLocale.thesisSubmission.afterSubmitLink);
-    }
+    };
 
     openDepositConfirmation = () => {
         this.depositConfirmationBox.showConfirmation();
         this.props.actions.clearSessionExpiredFlag();
     };
 
-    setDepositConfirmation = (ref) => {
+    setDepositConfirmation = ref => {
         this.depositConfirmationBox = ref;
     };
 
     afterFailedSubmit = () => {
         // Clears the current state completely and reloads the form
         window.location.reload();
-    }
+    };
 
     render() {
         const txt = formLocale.thesis;
@@ -88,20 +89,20 @@ export default class SbsSubmission extends Component {
             return (
                 <StandardPage title={formLocale.sbsSubmission.sbsTitle}>
                     <Grid container spacing={24}>
-                        {
-                            this.props.newRecordFileUploadingOrIssueError
-                                ? <Grid item xs={12}>
-                                    <Alert
-                                        {...formLocale.thesisSubmission.fileUpload.failedAlertLocale}
-                                        action={this.afterFailedSubmit}
-                                    />
-                                </Grid>
-                                :                                <Grid item xs={12}>
-                                    <StandardCard title={formLocale.sbsSubmission.afterSubmitTitle}>
-                                        <Typography>{formLocale.sbsSubmission.afterSubmitText}</Typography>
-                                    </StandardCard>
-                                </Grid>
-                        }
+                        {this.props.newRecordFileUploadingOrIssueError ? (
+                            <Grid item xs={12}>
+                                <Alert
+                                    {...formLocale.thesisSubmission.fileUpload.failedAlertLocale}
+                                    action={this.afterFailedSubmit}
+                                />
+                            </Grid>
+                        ) : (
+                            <Grid item xs={12}>
+                                <StandardCard title={formLocale.sbsSubmission.afterSubmitTitle}>
+                                    <Typography>{formLocale.sbsSubmission.afterSubmitText}</Typography>
+                                </StandardCard>
+                            </Grid>
+                        )}
                     </Grid>
                 </StandardPage>
             );
@@ -117,13 +118,15 @@ export default class SbsSubmission extends Component {
                     ...formLocale.errorAlert,
                     message: formLocale.thesisSubmission.depositFailedMessage,
                 },
-            } });
+            },
+        });
         return (
             <StandardPage title={formLocale.sbsSubmission.sbsTitle}>
                 <form>
                     <NavigationDialogBox
                         when={this.props.dirty && !this.props.submitSucceeded}
-                        txt={formLocale.cancelWorkflowConfirmation}/>
+                        txt={formLocale.cancelWorkflowConfirmation}
+                    />
 
                     <ConfirmDialogBox
                         onRef={this.setDepositConfirmation}
@@ -141,7 +144,8 @@ export default class SbsSubmission extends Component {
                                             disabled={this.props.submitting}
                                             height={50}
                                             title={txt.information.fieldLabels.documentTitle.placeholder}
-                                            validate={[validation.required]}/>
+                                            validate={[validation.required]}
+                                        />
                                     </Grid>
                                     <Grid item xs={12} sm={6}>
                                         <Field
@@ -153,7 +157,8 @@ export default class SbsSubmission extends Component {
                                             rows={1}
                                             {...txt.information.fieldLabels.author}
                                             required
-                                            validate={[validation.required]}/>
+                                            validate={[validation.required]}
+                                        />
                                     </Grid>
                                     <Grid item xs={12} sm={6}>
                                         <Field
@@ -205,7 +210,8 @@ export default class SbsSubmission extends Component {
                                             disabled={this.props.submitting}
                                             name="thesisAbstract"
                                             title={txt.optional.fieldLabels.abstract.label}
-                                            validate={[validation.required]}/>
+                                            validate={[validation.required]}
+                                        />
                                     </Grid>
                                 </Grid>
                             </StandardCard>
@@ -234,7 +240,8 @@ export default class SbsSubmission extends Component {
                                     distinctOnly
                                     maxCount={3}
                                     disabled={this.props.submitting}
-                                    locale={txtFoR.field}/>
+                                    locale={txtFoR.field}
+                                />
                             </StandardCard>
                         </Grid>
                         <Grid item xs={12}>
@@ -246,7 +253,8 @@ export default class SbsSubmission extends Component {
                                     maxCount={10}
                                     searchKey={{ value: 'rek_keywords', order: 'rek_keywords_order' }}
                                     locale={locale.components.keywordsForm.field}
-                                    disabled={this.props.submitting}/>
+                                    disabled={this.props.submitting}
+                                />
                             </StandardCard>
                         </Grid>
 
@@ -265,23 +273,26 @@ export default class SbsSubmission extends Component {
                             </StandardCard>
                         </Grid>
                         <Grid item xs={12}>
-                            <StandardCard title={formLocale.sbsSubmission.fileUpload.title} help={formLocale.sbsSubmission.fileUpload.help}>
+                            <StandardCard
+                                title={formLocale.sbsSubmission.fileUpload.title}
+                                help={formLocale.sbsSubmission.fileUpload.help}
+                            >
                                 <Field
                                     name="files"
                                     component={FileUploadField}
                                     disabled={this.props.submitting}
                                     locale={formLocale.sbsSubmission.fileUpload.locale}
                                     defaultQuickTemplateId={this.props.fileAccessId}
-                                    validate={[validation.fileUploadRequired]}/>
+                                    validate={[validation.fileUploadRequired]}
+                                />
                             </StandardCard>
                         </Grid>
 
-                        {
-                            alertProps &&
+                        {alertProps && (
                             <Grid item xs={12}>
                                 <Alert {...alertProps} />
                             </Grid>
-                        }
+                        )}
                     </Grid>
                     <Grid container spacing={16}>
                         <Grid item xs={false} sm />
@@ -291,7 +302,8 @@ export default class SbsSubmission extends Component {
                                 fullWidth
                                 children={formLocale.thesisSubmission.cancel}
                                 disabled={this.props.submitting}
-                                onClick={this.cancelSubmit}/>
+                                onClick={this.cancelSubmit}
+                            />
                         </Grid>
                         <Grid item xs={12} sm={'auto'}>
                             <Button
@@ -300,7 +312,8 @@ export default class SbsSubmission extends Component {
                                 fullWidth
                                 children={formLocale.thesisSubmission.submit}
                                 onClick={this.deposit}
-                                disabled={this.props.submitting || this.props.disableSubmit}/>
+                                disabled={this.props.submitting || this.props.disableSubmit}
+                            />
                         </Grid>
                     </Grid>
                 </form>

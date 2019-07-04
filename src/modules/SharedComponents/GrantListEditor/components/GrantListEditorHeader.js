@@ -47,10 +47,17 @@ export class GrantListEditorHeader extends PureComponent {
         this.confirmationBox.showConfirmation();
     };
 
-    handleConfirmationBoxRef = (ref) => (this.confirmationBox = ref);
+    handleConfirmationBoxRef = ref => (this.confirmationBox = ref);
 
     render() {
-        const { GrantAgencyName, GrantID, GrantAgencyType, deleteAll, deleteAllConfirmation, reorderColumn } = this.props.locale;
+        const {
+            GrantAgencyName,
+            GrantID,
+            GrantAgencyType,
+            deleteAll,
+            deleteAllConfirmation,
+            reorderColumn,
+        } = this.props.locale;
         const { classes } = this.props;
         return (
             <Fragment>
@@ -64,18 +71,29 @@ export class GrantListEditorHeader extends PureComponent {
                         <Grid item xs={this.props.width === 'xs' ? 11 : 9}>
                             <Grid container spacing={0} alignItems={'center'} alignContent={'center'}>
                                 <Grid item xs={this.props.width === 'xs' ? 12 : 5}>
-                                    <ListItemText secondary={GrantAgencyName} secondaryTypographyProps={{ variant: 'caption' }} style={{ padding: 0 }}/>
+                                    <ListItemText
+                                        secondary={GrantAgencyName}
+                                        secondaryTypographyProps={{ variant: 'caption' }}
+                                        style={{ padding: 0 }}
+                                    />
                                 </Grid>
                                 <Hidden xsDown>
                                     <Grid item xs={this.props.width === 'xs' ? 5 : 4}>
-                                        <ListItemText secondary={GrantID} secondaryTypographyProps={{ variant: 'caption' }}  style={{ padding: 0 }}/>
+                                        <ListItemText
+                                            secondary={GrantID}
+                                            secondaryTypographyProps={{ variant: 'caption' }}
+                                            style={{ padding: 0 }}
+                                        />
                                     </Grid>
-                                    {
-                                        !this.props.hideType &&
+                                    {!this.props.hideType && (
                                         <Grid item xs={this.props.width === 'xs' ? 4 : 3}>
-                                            <ListItemText secondary={GrantAgencyType} secondaryTypographyProps={{ variant: 'caption' }} style={{ padding: 0 }}/>
+                                            <ListItemText
+                                                secondary={GrantAgencyType}
+                                                secondaryTypographyProps={{ variant: 'caption' }}
+                                                style={{ padding: 0 }}
+                                            />
                                         </Grid>
-                                    }
+                                    )}
                                 </Hidden>
                             </Grid>
                         </Grid>
@@ -91,7 +109,11 @@ export class GrantListEditorHeader extends PureComponent {
                                         />
                                     </Grid>
                                 </Hidden>
-                                <Grid item xs={this.props.width === 'xs' || this.props.width === 'sm' ? 12 : 4} style={{ textAlign: 'right' }}>
+                                <Grid
+                                    item
+                                    xs={this.props.width === 'xs' || this.props.width === 'sm' ? 12 : 4}
+                                    style={{ textAlign: 'right' }}
+                                >
                                     <ListItemSecondaryAction style={{ smarginTop: -4 }}>
                                         <Tooltip
                                             title={deleteAll}

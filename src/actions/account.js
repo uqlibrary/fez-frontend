@@ -55,7 +55,11 @@ export function loadCurrentAccount() {
 
                     // load repository author details
                     dispatch({ type: actions.CURRENT_AUTHOR_DETAILS_LOADING });
-                    return get(AUTHOR_DETAILS_API({ userId: currentAuthor.aut_org_username || currentAuthor.aut_student_username }));
+                    return get(
+                        AUTHOR_DETAILS_API({
+                            userId: currentAuthor.aut_org_username || currentAuthor.aut_student_username,
+                        })
+                    );
                 })
                 .then(authorDetailsResponse => {
                     dispatch({
@@ -89,8 +93,9 @@ export function logout() {
  * @param string reducerToSave
  */
 export function checkSession(reducerToSave = 'form') {
-    return (dispatch) => {
-        return sessionApi.get(CURRENT_ACCOUNT_API().apiUrl)
+    return dispatch => {
+        return sessionApi
+            .get(CURRENT_ACCOUNT_API().apiUrl)
             .then(() => {
                 dispatch({ type: actions.CURRENT_ACCOUNT_SESSION_VALID });
             })

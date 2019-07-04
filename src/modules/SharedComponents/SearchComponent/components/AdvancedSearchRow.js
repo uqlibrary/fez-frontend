@@ -15,7 +15,7 @@ import { withStyles } from '@material-ui/core/styles';
 import FormControl from '@material-ui/core/FormControl';
 import FormHelperText from '@material-ui/core/FormHelperText';
 
-const styles = (theme) => ({
+const styles = theme => ({
     autoWidth: {
         flexGrow: 1,
         width: 1,
@@ -44,11 +44,7 @@ export class AdvancedSearchRow extends PureComponent {
     static propTypes = {
         rowIndex: PropTypes.number,
         searchField: PropTypes.string,
-        value: PropTypes.oneOfType([
-            PropTypes.string,
-            PropTypes.array,
-            PropTypes.number,
-        ]),
+        value: PropTypes.oneOfType([PropTypes.string, PropTypes.array, PropTypes.number]),
         label: PropTypes.any,
         disabledFields: PropTypes.array,
         showUnpublishedFields: PropTypes.bool,
@@ -61,7 +57,7 @@ export class AdvancedSearchRow extends PureComponent {
         this.props.onSearchRowChange(this.props.rowIndex, { searchField: this.props.searchField, value, label });
     };
 
-    _handleSearchFieldChange = (event) => {
+    _handleSearchFieldChange = event => {
         const searchField = event.target.value;
         this.props.onSearchRowChange(this.props.rowIndex, { searchField, value: '', label: '' });
     };
@@ -78,15 +74,17 @@ export class AdvancedSearchRow extends PureComponent {
         return null;
     };
 
-    renderInputComponentAndProps = () => (InputComponent, inputProps) => (<InputComponent
-        type="search"
-        name={`searchField${this.props.rowIndex}`}
-        id="searchField"
-        fullWidth
-        value={this.props.value}
-        disabled={this.props.searchField === '0'}
-        {...inputProps}
-    />);
+    renderInputComponentAndProps = () => (InputComponent, inputProps) => (
+        <InputComponent
+            type="search"
+            name={`searchField${this.props.rowIndex}`}
+            id="searchField"
+            fullWidth
+            value={this.props.value}
+            disabled={this.props.searchField === '0'}
+            {...inputProps}
+        />
+    );
 
     render() {
         const txt = locale.components.searchComponent.advancedSearch;
@@ -103,34 +101,48 @@ export class AdvancedSearchRow extends PureComponent {
                                         value={this.props.searchField}
                                         onChange={this._handleSearchFieldChange}
                                         error={!!this.selectFieldValidation()}
-                                        aria-label={txt.selectAria.replace('[current_selection]', txt.fieldTypes[this.props.searchField].title)}
+                                        aria-label={txt.selectAria.replace(
+                                            '[current_selection]',
+                                            txt.fieldTypes[this.props.searchField].title
+                                        )}
                                     >
-                                        {
-                                            Object.keys(txt.fieldTypes)
-                                                .filter(item => txt.fieldTypes[item].type !== null)
-                                                .filter(item => !txt.fieldTypes[item].isUnpublishedField || this.props.showUnpublishedFields)
-                                                .sort((item1, item2) => txt.fieldTypes[item1].order - txt.fieldTypes[item2].order)
-                                                .map((item, index) => {
-                                                    if(txt.fieldTypes[item].type === 'divider') {
-                                                        return <Divider key={index} />;
-                                                    }
-                                                    return  (
-                                                        <MenuItem
-                                                            style={{ display: 'block' }}
-                                                            key={item}
-                                                            value={item}
-                                                            children={txt.fieldTypes[item].title}
-                                                            disabled={index === 0 || this.props.disabledFields.indexOf(item) > -1}
-                                                        />
-                                                    );
-                                                })
-                                        }
+                                        {Object.keys(txt.fieldTypes)
+                                            .filter(item => txt.fieldTypes[item].type !== null)
+                                            .filter(
+                                                item =>
+                                                    !txt.fieldTypes[item].isUnpublishedField ||
+                                                    this.props.showUnpublishedFields
+                                            )
+                                            .sort(
+                                                (item1, item2) =>
+                                                    txt.fieldTypes[item1].order - txt.fieldTypes[item2].order
+                                            )
+                                            .map((item, index) => {
+                                                if (txt.fieldTypes[item].type === 'divider') {
+                                                    return <Divider key={index} />;
+                                                }
+                                                return (
+                                                    <MenuItem
+                                                        style={{ display: 'block' }}
+                                                        key={item}
+                                                        value={item}
+                                                        children={txt.fieldTypes[item].title}
+                                                        disabled={
+                                                            index === 0 || this.props.disabledFields.indexOf(item) > -1
+                                                        }
+                                                    />
+                                                );
+                                            })}
                                     </Select>
-                                    <FormHelperText error={!!this.selectFieldValidation()}>{this.selectFieldValidation()}</FormHelperText>
+                                    <FormHelperText error={!!this.selectFieldValidation()}>
+                                        {this.selectFieldValidation()}
+                                    </FormHelperText>
                                 </FormControl>
                             </Grid>
                             <Grid item xs={'auto'}>
-                                <Typography className={classes.advancedSearchCombiner}>{txt.fieldTypes[this.props.searchField].combiner}</Typography>
+                                <Typography className={classes.advancedSearchCombiner}>
+                                    {txt.fieldTypes[this.props.searchField].combiner}
+                                </Typography>
                             </Grid>
                         </Grid>
                         {/* Select and combiner */}
@@ -143,13 +155,10 @@ export class AdvancedSearchRow extends PureComponent {
                                     onChange={this._handleTextChange}
                                     inputField={txt.fieldTypes[this.props.searchField]}
                                 >
-                                    {
-                                        this.renderInputComponentAndProps()
-                                    }
+                                    {this.renderInputComponentAndProps()}
                                 </AdvancedSearchRowInput>
                             </Grid>
-                            {
-                                this.props.rowIndex !== 0 &&
+                            {this.props.rowIndex !== 0 && (
                                 <Grid item className={classes.advancedSearchRowDeleteButton}>
                                     <IconButton
                                         style={{ float: 'right' }}
@@ -157,12 +166,14 @@ export class AdvancedSearchRow extends PureComponent {
                                         className="deleteFieldButton"
                                         onClick={this._deleteRow}
                                     >
-                                        <Close/>
+                                        <Close />
                                     </IconButton>
                                 </Grid>
-                            }
+                            )}
                             <Hidden mdUp>
-                                <Grid item xs={12}><Divider className={classes.mobileRowSpacer}/></Grid>
+                                <Grid item xs={12}>
+                                    <Divider className={classes.mobileRowSpacer} />
+                                </Grid>
                             </Hidden>
                         </Grid>
                     </Grid>
@@ -172,4 +183,3 @@ export class AdvancedSearchRow extends PureComponent {
     }
 }
 export default withStyles(styles, { withTheme: true })(AdvancedSearchRow);
-

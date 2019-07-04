@@ -23,23 +23,16 @@ describe('Publications actions', () => {
 
     describe('searchLatestPublications()', () => {
         it('dispatches expected actions on successful load', async() => {
-            mockApi
-                .onGet(repositories.routes.CURRENT_USER_RECORDS_API({ pageSize: 5 }).apiUrl)
-                .reply(200, {});
+            mockApi.onGet(repositories.routes.CURRENT_USER_RECORDS_API({ pageSize: 5 }).apiUrl).reply(200, {});
 
-            const expectedActions = [
-                actions.LATEST_PUBLICATIONS_LOADING,
-                actions.LATEST_PUBLICATIONS_LOADED,
-            ];
+            const expectedActions = [actions.LATEST_PUBLICATIONS_LOADING, actions.LATEST_PUBLICATIONS_LOADED];
 
             await mockActionsStore.dispatch(publicationsActions.searchLatestPublications());
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
         it('dispatches expected actions for anon user', async() => {
-            mockApi
-                .onAny()
-                .reply(403, {});
+            mockApi.onAny().reply(403, {});
 
             const expectedActions = [
                 actions.LATEST_PUBLICATIONS_LOADING,
@@ -52,9 +45,7 @@ describe('Publications actions', () => {
         });
 
         it('dispatches expected actions if API fails', async() => {
-            mockApi
-                .onAny()
-                .reply(500, {});
+            mockApi.onAny().reply(500, {});
 
             const expectedActions = [
                 actions.LATEST_PUBLICATIONS_LOADING,
@@ -79,9 +70,7 @@ describe('Publications actions', () => {
                     facets: {},
                 };
 
-                mockApi
-                    .onGet(repositories.routes.CURRENT_USER_RECORDS_API(testRequest).apiUrl)
-                    .reply(200, {});
+                mockApi.onGet(repositories.routes.CURRENT_USER_RECORDS_API(testRequest).apiUrl).reply(200, {});
 
                 const expectedActions = [
                     `${actions.AUTHOR_PUBLICATIONS_LOADING}@mine`,
@@ -102,9 +91,7 @@ describe('Publications actions', () => {
                     facets: {},
                 };
 
-                mockApi
-                    .onAny()
-                    .reply(403, {});
+                mockApi.onAny().reply(403, {});
 
                 const expectedActions = [
                     `${actions.AUTHOR_PUBLICATIONS_LOADING}@mine`,
@@ -126,9 +113,7 @@ describe('Publications actions', () => {
                     facets: {},
                 };
 
-                mockApi
-                    .onAny()
-                    .reply(500, {});
+                mockApi.onAny().reply(500, {});
 
                 const expectedActions = [
                     `${actions.AUTHOR_PUBLICATIONS_LOADING}@mine`,
@@ -141,9 +126,7 @@ describe('Publications actions', () => {
             });
 
             it('handles defaults', async() => {
-                mockApi
-                    .onAny()
-                    .reply(200, {});
+                mockApi.onAny().reply(200, {});
 
                 const expectedActions = [
                     `${actions.AUTHOR_PUBLICATIONS_LOADING}@mine`,
@@ -165,16 +148,16 @@ describe('Publications actions', () => {
                     facets: {},
                 };
 
-                mockApi
-                    .onGet(repositories.routes.INCOMPLETE_RECORDS_API(testRequest).apiUrl)
-                    .reply(200, {});
+                mockApi.onGet(repositories.routes.INCOMPLETE_RECORDS_API(testRequest).apiUrl).reply(200, {});
 
                 const expectedActions = [
                     `${actions.AUTHOR_PUBLICATIONS_LOADING}@incomplete`,
                     `${actions.AUTHOR_PUBLICATIONS_LOADED}@incomplete`,
                 ];
 
-                await mockActionsStore.dispatch(publicationsActions.searchAuthorPublications(testRequest, 'incomplete'));
+                await mockActionsStore.dispatch(
+                    publicationsActions.searchAuthorPublications(testRequest, 'incomplete')
+                );
                 expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
             });
 
@@ -188,9 +171,7 @@ describe('Publications actions', () => {
                     facets: {},
                 };
 
-                mockApi
-                    .onAny()
-                    .reply(403, {});
+                mockApi.onAny().reply(403, {});
 
                 const expectedActions = [
                     `${actions.AUTHOR_PUBLICATIONS_LOADING}@incomplete`,
@@ -198,7 +179,9 @@ describe('Publications actions', () => {
                     `${actions.AUTHOR_PUBLICATIONS_FAILED}@incomplete`,
                 ];
 
-                await mockActionsStore.dispatch(publicationsActions.searchAuthorPublications(testRequest, 'incomplete'));
+                await mockActionsStore.dispatch(
+                    publicationsActions.searchAuthorPublications(testRequest, 'incomplete')
+                );
                 expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
             });
 
@@ -212,9 +195,7 @@ describe('Publications actions', () => {
                     facets: {},
                 };
 
-                mockApi
-                    .onAny()
-                    .reply(500, {});
+                mockApi.onAny().reply(500, {});
 
                 const expectedActions = [
                     `${actions.AUTHOR_PUBLICATIONS_LOADING}@incomplete`,
@@ -222,14 +203,14 @@ describe('Publications actions', () => {
                     `${actions.AUTHOR_PUBLICATIONS_FAILED}@incomplete`,
                 ];
 
-                await mockActionsStore.dispatch(publicationsActions.searchAuthorPublications(testRequest, 'incomplete'));
+                await mockActionsStore.dispatch(
+                    publicationsActions.searchAuthorPublications(testRequest, 'incomplete')
+                );
                 expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
             });
 
             it('handles defaults', async() => {
-                mockApi
-                    .onAny()
-                    .reply(200, {});
+                mockApi.onAny().reply(200, {});
 
                 const expectedActions = [
                     `${actions.AUTHOR_PUBLICATIONS_LOADING}@incomplete`,
@@ -251,13 +232,9 @@ describe('Publications actions', () => {
                     facets: {},
                 };
 
-                mockApi
-                    .onGet(repositories.routes.INCOMPLETE_RECORDS_API(testRequest).apiUrl)
-                    .reply(200, {});
+                mockApi.onGet(repositories.routes.INCOMPLETE_RECORDS_API(testRequest).apiUrl).reply(200, {});
 
-                const expectedActions = [
-                    `${actions.AUTHOR_PUBLICATIONS_LOADING}@test`,
-                ];
+                const expectedActions = [`${actions.AUTHOR_PUBLICATIONS_LOADING}@test`];
 
                 try {
                     await mockActionsStore.dispatch(publicationsActions.searchAuthorPublications(testRequest, 'test'));
@@ -279,9 +256,7 @@ describe('Publications actions', () => {
                     facets: {},
                 };
 
-                mockApi
-                    .onGet(repositories.routes.CURRENT_USER_RECORDS_API(testRequest).apiUrl)
-                    .reply(200, {});
+                mockApi.onGet(repositories.routes.CURRENT_USER_RECORDS_API(testRequest).apiUrl).reply(200, {});
 
                 const expectedActions = [
                     `${actions.AUTHOR_PUBLICATIONS_LOADING}@mine`,
@@ -312,9 +287,7 @@ describe('Publications actions', () => {
         });
 
         it('dispatches expected actions for anon user', async() => {
-            mockApi
-                .onAny()
-                .reply(403, {});
+            mockApi.onAny().reply(403, {});
 
             const expectedActions = [
                 actions.TRENDING_PUBLICATIONS_LOADING,
@@ -327,9 +300,7 @@ describe('Publications actions', () => {
         });
 
         it('dispatches expected actions if api fails', async() => {
-            mockApi
-                .onAny()
-                .reply(500, {});
+            mockApi.onAny().reply(500, {});
 
             const expectedActions = [
                 actions.TRENDING_PUBLICATIONS_LOADING,
@@ -342,14 +313,9 @@ describe('Publications actions', () => {
         });
 
         it('dispatches expected actions if api return 0 publications', async() => {
-            mockApi
-                .onAny()
-                .reply(200, { total: 0, data: [], filters: [] });
+            mockApi.onAny().reply(200, { total: 0, data: [], filters: [] });
 
-            const expectedActions = [
-                actions.TRENDING_PUBLICATIONS_LOADING,
-                actions.TRENDING_PUBLICATIONS_LOADED,
-            ];
+            const expectedActions = [actions.TRENDING_PUBLICATIONS_LOADING, actions.TRENDING_PUBLICATIONS_LOADED];
 
             await mockActionsStore.dispatch(publicationsActions.searchTrendingPublications());
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
@@ -374,9 +340,7 @@ describe('Publications actions', () => {
         });
 
         it('dispatches expected actions if api fails', async() => {
-            mockApi
-                .onAny()
-                .reply(500, {});
+            mockApi.onAny().reply(500, {});
 
             const expectedActions = [
                 actions.TOP_CITED_PUBLICATIONS_LOADING,
@@ -389,14 +353,9 @@ describe('Publications actions', () => {
         });
 
         it('dispatches expected actions if api return 0 publications', async() => {
-            mockApi
-                .onAny()
-                .reply(200, { total: 0, data: [], filters: [] });
+            mockApi.onAny().reply(200, { total: 0, data: [], filters: [] });
 
-            const expectedActions = [
-                actions.TOP_CITED_PUBLICATIONS_LOADING,
-                actions.TOP_CITED_PUBLICATIONS_LOADED,
-            ];
+            const expectedActions = [actions.TOP_CITED_PUBLICATIONS_LOADING, actions.TOP_CITED_PUBLICATIONS_LOADED];
 
             await mockActionsStore.dispatch(publicationsActions.searchTopCitedPublications());
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
@@ -416,7 +375,9 @@ describe('Publications actions', () => {
             };
 
             publicationsActions.exportAuthorPublications(testRequest);
-            expect(exportPublications).toHaveBeenCalledWith(repositories.routes.CURRENT_USER_RECORDS_API(testRequest, 'export'));
+            expect(exportPublications).toHaveBeenCalledWith(
+                repositories.routes.CURRENT_USER_RECORDS_API(testRequest, 'export')
+            );
         });
 
         it('handles defaults', () => {

@@ -47,12 +47,24 @@ export class FileUploadRowMobileView extends PureComponent {
 
     render() {
         const { filenameColumn, fileAccessColumn, embargoDateColumn, embargoDateClosedAccess } = this.props.locale;
-        const { index, requireOpenAccessStatus, disabled, accessConditionId, embargoDate, name, size, focusOnIndex, classes } = this.props;
+        const {
+            index,
+            requireOpenAccessStatus,
+            disabled,
+            accessConditionId,
+            embargoDate,
+            name,
+            size,
+            focusOnIndex,
+            classes,
+        } = this.props;
 
         return (
             <List classes={{ root: classes.root }}>
                 <ListItem classes={{ root: classes.listItem }}>
-                    <ListItemIcon><Attachment/></ListItemIcon>
+                    <ListItemIcon>
+                        <Attachment />
+                    </ListItemIcon>
                     <ListItemText
                         primary={`${name} (${size})`}
                         secondary={filenameColumn}
@@ -60,12 +72,16 @@ export class FileUploadRowMobileView extends PureComponent {
                         secondaryTypographyProps={{ variant: 'caption' }}
                     />
                 </ListItem>
-                {
-                    requireOpenAccessStatus &&
+                {requireOpenAccessStatus && (
                     <Fragment>
                         <ListItem classes={{ root: classes.listItem }}>
-                            <ListItemIcon><LockOutlined/></ListItemIcon>
-                            <ListItemText secondary={fileAccessColumn} secondaryTypographyProps={{ variant: 'caption' }}>
+                            <ListItemIcon>
+                                <LockOutlined />
+                            </ListItemIcon>
+                            <ListItemText
+                                secondary={fileAccessColumn}
+                                secondaryTypographyProps={{ variant: 'caption' }}
+                            >
                                 <FileUploadAccessSelector
                                     value={accessConditionId}
                                     onChange={this.props.onAccessConditionChange}
@@ -77,37 +93,43 @@ export class FileUploadRowMobileView extends PureComponent {
                             </ListItemText>
                         </ListItem>
                         <ListItem classes={{ root: classes.listItem }}>
-                            <ListItemIcon><CalendarTodayOutlined/></ListItemIcon>
+                            <ListItemIcon>
+                                <CalendarTodayOutlined />
+                            </ListItemIcon>
                             <ListItemText
                                 secondary={embargoDateColumn}
                                 primaryTypographyProps={{ variant: 'body1' }}
                                 secondaryTypographyProps={{ variant: 'caption' }}
                             >
-                                {
-                                    requireOpenAccessStatus && accessConditionId !== config.OPEN_ACCESS_ID &&
-                                    <Typography variant="body2" gutterBottom>{embargoDateClosedAccess}</Typography>
-                                }
-                                {
-                                    requireOpenAccessStatus && accessConditionId === config.OPEN_ACCESS_ID &&
+                                {requireOpenAccessStatus && accessConditionId !== config.OPEN_ACCESS_ID && (
+                                    <Typography variant="body2" gutterBottom>
+                                        {embargoDateClosedAccess}
+                                    </Typography>
+                                )}
+                                {requireOpenAccessStatus && accessConditionId === config.OPEN_ACCESS_ID && (
                                     <FileUploadEmbargoDate
                                         value={new Date(embargoDate)}
                                         onChange={this.props.onEmbargoDateChange}
                                         disabled={disabled}
                                     />
-                                }
+                                )}
                             </ListItemText>
                             <ListItemSecondaryAction classes={{ root: classes.secondaryAction }}>
-                                <FileUploadRowStatus disabled={this.props.disabled} onDelete={this.props.onDelete} name={name}/>
+                                <FileUploadRowStatus
+                                    disabled={this.props.disabled}
+                                    onDelete={this.props.onDelete}
+                                    name={name}
+                                />
                             </ListItemSecondaryAction>
                         </ListItem>
                     </Fragment>
-                }
+                )}
             </List>
         );
     }
 }
 
-const styles = (theme) => ({
+const styles = theme => ({
     root: {
         borderBottom: `1px solid ${theme.palette.secondary.light}`,
     },

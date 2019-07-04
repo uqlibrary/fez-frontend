@@ -11,7 +11,6 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import Grid from '@material-ui/core/Grid';
 import { throttle } from 'throttle-debounce';
 
-
 export const styles = () => ({
     root: {
         flexGrow: 1,
@@ -37,10 +36,7 @@ export class AutoCompleteAsyncField extends Component {
         loadSuggestions: PropTypes.func,
         itemsList: PropTypes.array,
         itemsListLoading: PropTypes.bool,
-        category: PropTypes.oneOfType([
-            PropTypes.string,
-            PropTypes.number,
-        ]),
+        category: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
         onChange: PropTypes.func,
         itemToString: PropTypes.func,
         floatingLabelText: PropTypes.string,
@@ -65,8 +61,13 @@ export class AutoCompleteAsyncField extends Component {
         required: false,
         filter: (searchText, key) => {
             const anyKey = isNaN(key) ? key : `${key}`;
-            const regex = new RegExp(`(${searchText.split(' ').join('|')
-                .replace(/[()]/g, '')})`, 'gi');
+            const regex = new RegExp(
+                `(${searchText
+                    .split(' ')
+                    .join('|')
+                    .replace(/[()]/g, '')})`,
+                'gi'
+            );
             return regex.test(anyKey);
         },
         MenuItemComponent: ({ suggestion }) => (
@@ -94,7 +95,7 @@ export class AutoCompleteAsyncField extends Component {
         }
     }
 
-    getSuggestions = (event) => {
+    getSuggestions = event => {
         if (this.props.async && this.props.loadSuggestions) {
             this.throttledLoadSuggestions(this.props.category, event.target.value);
         }
@@ -120,11 +121,11 @@ export class AutoCompleteAsyncField extends Component {
         );
     };
 
-    renderMenuItemComponent = (suggestion) => (<this.props.MenuItemComponent suggestion={suggestion} />);
+    renderMenuItemComponent = suggestion => <this.props.MenuItemComponent suggestion={suggestion} />;
 
     renderSuggestion = ({ suggestion, index, itemProps, highlightedIndex, selectedItem }) => {
         const isHighlighted = highlightedIndex === index;
-        const isSelected = (selectedItem && selectedItem.value || '').indexOf(suggestion.value) > -1;
+        const isSelected = ((selectedItem && selectedItem.value) || '').indexOf(suggestion.value) > -1;
         return (
             <MenuItem
                 button
@@ -137,9 +138,7 @@ export class AutoCompleteAsyncField extends Component {
                     height: 'auto',
                 }}
             >
-                {
-                    this.renderMenuItemComponent(suggestion)
-                }
+                {this.renderMenuItemComponent(suggestion)}
             </MenuItem>
         );
     };
@@ -172,24 +171,39 @@ export class AutoCompleteAsyncField extends Component {
         }
     };
 
-    handleStateChange = () => (
+    handleStateChange = () =>
         this.props.allowFreeText
             ? ({ inputValue }) => {
                 inputValue !== undefined && this.props.onChange({ value: inputValue });
             }
-            : () => {}
-    );
+            : () => {};
 
     render() {
-        const { classes, itemsList, error, errorText, hintText, floatingLabelText, hideLabel, disabled, maxResults, itemToString, required, selectedValue, itemsListLoading } = this.props;
+        const {
+            classes,
+            itemsList,
+            error,
+            errorText,
+            hintText,
+            floatingLabelText,
+            hideLabel,
+            disabled,
+            maxResults,
+            itemToString,
+            required,
+            selectedValue,
+            itemsListLoading,
+        } = this.props;
         const selectedItemProps = this.props.clearInput ? { selectedItem: '' } : {};
         const labelText = floatingLabelText || 'autosuggest';
         return (
             <div className={classes.root}>
-                <label id={`${labelText.replace(/[^\w]/g, '')}-label`} hidden>{floatingLabelText || ''}</label>
+                <label id={`${labelText.replace(/[^\w]/g, '')}-label`} hidden>
+                    {floatingLabelText || ''}
+                </label>
                 <Downshift
                     {...selectedItemProps}
-                    defaultInputValue={!!selectedValue && selectedValue.value || ''}
+                    defaultInputValue={(!!selectedValue && selectedValue.value) || ''}
                     stateReducer={this.stateReducer}
                     onChange={this.props.onChange}
                     itemToString={itemToString}
@@ -197,68 +211,88 @@ export class AutoCompleteAsyncField extends Component {
                     aria-label={labelText}
                     onStateChange={this.handleStateChange()}
                 >
-                    {
-                        ({ getInputProps, getMenuProps, isOpen, inputValue, getItemProps, selectedItem, highlightedIndex, openMenu }) => {
-                            return (
-                                <div className={classes.container}>
-                                    <Grid container spacing={16} alignItems={'flex-end'} alignContent={'flex-end'}>
-                                        <Grid item xs>
-                                            {this.renderInput({
-                                                fullWidth: true,
-                                                classes,
-                                                inputProps: getInputProps({
-                                                    onChange: this.getSuggestions,
-                                                }),
-                                                error: error,
-                                                errorText: error && errorText || '',
-                                                placeholder: hintText,
-                                                label: !hideLabel ? labelText : undefined,
-                                                id: `${labelText.replace(/[^\w]/g, '')}-input`,
-                                                value: inputValue,
-                                                disabled: disabled,
-                                                required: required,
-                                                openMenu: openMenu,
-                                            })}
-                                        </Grid>
-                                        {
-                                            itemsListLoading &&
-                                                <Grid item xs={'auto'}>
-                                                    <CircularProgress size={16} color="primary" />
-                                                </Grid>
-                                        }
+                    {({
+                        getInputProps,
+                        getMenuProps,
+                        isOpen,
+                        inputValue,
+                        getItemProps,
+                        selectedItem,
+                        highlightedIndex,
+                        openMenu,
+                    }) => {
+                        return (
+                            <div className={classes.container}>
+                                <Grid container spacing={16} alignItems={'flex-end'} alignContent={'flex-end'}>
+                                    <Grid item xs>
+                                        {this.renderInput({
+                                            fullWidth: true,
+                                            classes,
+                                            inputProps: getInputProps({
+                                                onChange: this.getSuggestions,
+                                            }),
+                                            error: error,
+                                            errorText: (error && errorText) || '',
+                                            placeholder: hintText,
+                                            label: !hideLabel ? labelText : undefined,
+                                            id: `${labelText.replace(/[^\w]/g, '')}-input`,
+                                            value: inputValue,
+                                            disabled: disabled,
+                                            required: required,
+                                            openMenu: openMenu,
+                                        })}
                                     </Grid>
-                                    {isOpen && itemsList.length > 0 ? (
-                                        <div {...getMenuProps()}>
-                                            <Popper disablePortal id="downshift-popper" open anchorEl={this.textInputRef} placement="bottom-start">
-                                                <Paper className={classes.paper} square style={{
+                                    {itemsListLoading && (
+                                        <Grid item xs={'auto'}>
+                                            <CircularProgress size={16} color="primary" />
+                                        </Grid>
+                                    )}
+                                </Grid>
+                                {isOpen && itemsList.length > 0 ? (
+                                    <div {...getMenuProps()}>
+                                        <Popper
+                                            disablePortal
+                                            id="downshift-popper"
+                                            open
+                                            anchorEl={this.textInputRef}
+                                            placement="bottom-start"
+                                        >
+                                            <Paper
+                                                className={classes.paper}
+                                                square
+                                                style={{
                                                     width: this.textInputRef ? this.textInputRef.clientWidth : null,
-                                                }}>
-                                                    {
-                                                        itemsList
-                                                            .filter(suggestion => this.props.filter(
-                                                                inputValue,
-                                                                isNaN(inputValue) ? suggestion.value : suggestion.id ||
-                                                                    suggestion.value.toString()
-                                                            ))
-                                                            .slice(0, maxResults)
-                                                            .map((suggestion, index) => {
-                                                                return !!suggestion && this.renderSuggestion({
-                                                                    suggestion,
-                                                                    index,
-                                                                    itemProps: getItemProps({ item: suggestion }),
-                                                                    highlightedIndex,
-                                                                    selectedItem,
-                                                                });
+                                                }}
+                                            >
+                                                {itemsList
+                                                    .filter(suggestion =>
+                                                        this.props.filter(
+                                                            inputValue,
+                                                            isNaN(inputValue)
+                                                                ? suggestion.value
+                                                                : suggestion.id || suggestion.value.toString()
+                                                        )
+                                                    )
+                                                    .slice(0, maxResults)
+                                                    .map((suggestion, index) => {
+                                                        return (
+                                                            !!suggestion &&
+                                                            this.renderSuggestion({
+                                                                suggestion,
+                                                                index,
+                                                                itemProps: getItemProps({ item: suggestion }),
+                                                                highlightedIndex,
+                                                                selectedItem,
                                                             })
-                                                    }
-                                                </Paper>
-                                            </Popper>
-                                        </div>
-                                    ) : null}
-                                </div>
-                            );
-                        }
-                    }
+                                                        );
+                                                    })}
+                                            </Paper>
+                                        </Popper>
+                                    </div>
+                                ) : null}
+                            </div>
+                        );
+                    }}
                 </Downshift>
             </div>
         );

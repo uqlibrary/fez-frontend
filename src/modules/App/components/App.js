@@ -106,11 +106,13 @@ export class AppClass extends PureComponent {
                 style: !this.state.isMobile ? { width: '100%' } : {},
                 autoWidth: !this.state.isMobile,
                 fullWidth: this.state.isMobile,
-                menuItemStyle: this.state.isMobile ? {
-                    whiteSpace: 'normal',
-                    lineHeight: '18px',
-                    paddingBottom: '8px',
-                } : {},
+                menuItemStyle: this.state.isMobile
+                    ? {
+                        whiteSpace: 'normal',
+                        lineHeight: '18px',
+                        paddingBottom: '8px',
+                    }
+                    : {},
             },
         };
     }
@@ -125,7 +127,7 @@ export class AppClass extends PureComponent {
         if (nextProps.isSessionExpired) {
             this.sessionExpiredConfirmationBox.showConfirmation();
         }
-        if(nextProps.account && this.props.account !== nextProps.account && !nextProps.accountLoading) {
+        if (nextProps.account && this.props.account !== nextProps.account && !nextProps.accountLoading) {
             this.props.actions.searchAuthorPublications({}, 'incomplete');
         }
     }
@@ -134,7 +136,7 @@ export class AppClass extends PureComponent {
         this.state.mediaQuery.removeListener(this.handleResize);
     }
 
-    handleResize = (mediaQuery) => {
+    handleResize = mediaQuery => {
         this.setState({
             docked: mediaQuery.matches,
         });
@@ -161,14 +163,15 @@ export class AppClass extends PureComponent {
         }
     };
 
-    isPublicPage = (menuItems) => {
-        return menuItems
-            .filter(menuItem => this.props.location.pathname === menuItem.linkTo && menuItem.public)
-            .length > 0 ||
-            (new RegExp(routes.pathConfig.records.view(`(${routes.pidRegExp})`)).test(this.props.location.pathname));
+    isPublicPage = menuItems => {
+        return (
+            menuItems.filter(menuItem => this.props.location.pathname === menuItem.linkTo && menuItem.public).length >
+                0 ||
+            new RegExp(routes.pathConfig.records.view(`(${routes.pidRegExp})`)).test(this.props.location.pathname)
+        );
     };
 
-    setSessionExpiredConfirmation = (ref) => {
+    setSessionExpiredConfirmation = ref => {
         this.sessionExpiredConfirmationBox = ref;
     };
 
@@ -181,7 +184,8 @@ export class AppClass extends PureComponent {
                         <AppLoader
                             title={locale.global.title}
                             logoImage="largeLogo"
-                            logoText={locale.global.logo.label}/>
+                            logoText={locale.global.logo.label}
+                        />
                     </Grid>
                 </Grid>
             );
@@ -189,9 +193,14 @@ export class AppClass extends PureComponent {
 
         const isAuthorizedUser = !this.props.accountLoading && this.props.account !== null;
         const isAuthorLoading = this.props.accountLoading || this.props.accountAuthorLoading;
-        const isOrcidRequired = this.props.author && !this.props.author.aut_orcid_id &&
+        const isOrcidRequired =
+            this.props.author &&
+            !this.props.author.aut_orcid_id &&
             this.props.location.pathname !== routes.pathConfig.authorIdentifiers.orcid.link;
-        const isHdrStudent = !isAuthorLoading && !!this.props.account && !!this.props.author &&
+        const isHdrStudent =
+            !isAuthorLoading &&
+            !!this.props.account &&
+            !!this.props.author &&
             this.props.account.class.indexOf('IS_CURRENT') >= 0 &&
             this.props.account.class.indexOf('IS_UQ_STUDENT_PLACEMENT') >= 0;
         const hasIncompleteWorks = !!(
@@ -201,16 +210,18 @@ export class AppClass extends PureComponent {
         );
         const menuItems = routes.getMenuConfig(this.props.account, isOrcidRequired && isHdrStudent, hasIncompleteWorks);
         const isPublicPage = this.isPublicPage(menuItems);
-        const isThesisSubmissionPage = this.props.location.pathname === routes.pathConfig.hdrSubmission ||
+        const isThesisSubmissionPage =
+            this.props.location.pathname === routes.pathConfig.hdrSubmission ||
             this.props.location.pathname === routes.pathConfig.sbsSubmission;
-        const isSearchPage = this.props.location.pathname === routes.pathConfig.records.search ||
+        const isSearchPage =
+            this.props.location.pathname === routes.pathConfig.records.search ||
             this.props.location.pathname === routes.pathConfig.records.search;
         const showMenu = !isThesisSubmissionPage;
 
         const containerStyle = this.state.docked && !isThesisSubmissionPage ? { paddingLeft: 260 } : {};
         if (!isAuthorizedUser && isThesisSubmissionPage) {
             this.redirectUserToLogin()();
-            return (<div/>);
+            return <div />;
         }
 
         let userStatusAlert = null;
@@ -247,44 +258,45 @@ export class AppClass extends PureComponent {
         const isIndex = this.props.history.location.pathname === '/';
         return (
             <Grid container className={classes.layoutFill}>
-                <Meta routesConfig={routesConfig}/>
-                <AppBar
-                    className="AppBar"
-                    color="primary"
-                    position="fixed">
+                <Meta routesConfig={routesConfig} />
+                <AppBar className="AppBar" color="primary" position="fixed">
                     <Toolbar style={{ height: '70px' }}>
-                        <Grid container spacing={8}
+                        <Grid
+                            container
+                            spacing={8}
                             alignItems="center"
                             direction="row"
                             wrap="nowrap"
-                            justify="flex-start">
-                            {
-                                !this.state.docked && !this.state.menuDrawerOpen && !isThesisSubmissionPage &&
+                            justify="flex-start"
+                        >
+                            {!this.state.docked && !this.state.menuDrawerOpen && !isThesisSubmissionPage && (
                                 <Grid item>
-                                    <Tooltip title={locale.global.mainNavButton.tooltip}
+                                    <Tooltip
+                                        title={locale.global.mainNavButton.tooltip}
                                         placement="bottom-end"
-                                        TransitionComponent={Fade}>
+                                        TransitionComponent={Fade}
+                                    >
                                         <IconButton
                                             aria-label={locale.global.mainNavButton.aria}
                                             style={{ marginLeft: '-12px', marginRight: '12px' }}
-                                            onClick={this.toggleDrawer}>
-                                            <Menu style={{ color: 'white' }}/>
+                                            onClick={this.toggleDrawer}
+                                        >
+                                            <Menu style={{ color: 'white' }} />
                                         </IconButton>
                                     </Tooltip>
                                 </Grid>
-                            }
+                            )}
                             <Grid item xs style={titleStyle} className={classes.nowrap}>
                                 <Grid container spacing={16} alignItems="center" justify="flex-start" wrap={'nowrap'}>
-                                    {
-                                        !this.state.docked && !this.state.menuDrawerOpen &&
-                                            <Hidden xsDown>
-                                                <Grid item>
-                                                    <div id="logo" className="smallLogo" style={{ height: 66, width: 60 }}>
-                                                        {locale.global.logo.label}
-                                                    </div>
-                                                </Grid>
-                                            </Hidden>
-                                    }
+                                    {!this.state.docked && !this.state.menuDrawerOpen && (
+                                        <Hidden xsDown>
+                                            <Grid item>
+                                                <div id="logo" className="smallLogo" style={{ height: 66, width: 60 }}>
+                                                    {locale.global.logo.label}
+                                                </div>
+                                            </Grid>
+                                        </Hidden>
+                                    )}
                                     <Grid item xs={'auto'} style={{ overflow: 'hidden', textOverflow: 'ellipsis' }}>
                                         <Typography variant="h5" component={'h1'} noWrap className={classes.titleLink}>
                                             {locale.global.appTitle}
@@ -293,24 +305,40 @@ export class AppClass extends PureComponent {
                                 </Grid>
                             </Grid>
                             {/* Search */}
-                            {!isThesisSubmissionPage && !isSearchPage &&
+                            {!isThesisSubmissionPage && !isSearchPage && (
                                 <Grid item xs={2} sm={4}>
-                                    <SearchComponent autoFocus={isIndex} isInHeader showPrefixIcon showMobileSearchButton/>
+                                    <SearchComponent
+                                        autoFocus={isIndex}
+                                        isInHeader
+                                        showPrefixIcon
+                                        showMobileSearchButton
+                                    />
                                 </Grid>
-                            }
+                            )}
                             <Grid item>
                                 <AuthButton
                                     isAuthorizedUser={isAuthorizedUser}
-                                    onClick={this.redirectUserToLogin(isAuthorizedUser, isAuthorizedUser && !isHdrStudent && isThesisSubmissionPage)}
+                                    onClick={this.redirectUserToLogin(
+                                        isAuthorizedUser,
+                                        isAuthorizedUser && !isHdrStudent && isThesisSubmissionPage
+                                    )}
                                     signInTooltipText={locale.global.authentication.signInText}
-                                    signOutTooltipText={isAuthorizedUser ? (`${locale.global.authentication.signOutText} - ${this.props.account.name}`) : ''}
-                                    ariaLabel={isAuthorizedUser ? locale.global.authentication.ariaOut : locale.global.authentication.ariaIn} />
+                                    signOutTooltipText={
+                                        isAuthorizedUser
+                                            ? `${locale.global.authentication.signOutText} - ${this.props.account.name}`
+                                            : ''
+                                    }
+                                    ariaLabel={
+                                        isAuthorizedUser
+                                            ? locale.global.authentication.ariaOut
+                                            : locale.global.authentication.ariaIn
+                                    }
+                                />
                             </Grid>
                         </Grid>
                     </Toolbar>
                 </AppBar>
-                {
-                    showMenu &&
+                {showMenu && (
                     <MenuDrawer
                         hasIncompleteWorks={hasIncompleteWorks || false}
                         menuItems={menuItems}
@@ -326,8 +354,9 @@ export class AppClass extends PureComponent {
                             skipNavAriaLabel: locale.global.skipNav.ariaLabel,
                             skipNavTitle: locale.global.skipNav.title,
                             closeMenuLabel: locale.global.mainNavButton.closeMenuLabel,
-                        }}/>
-                }
+                        }}
+                    />
+                )}
                 <div className="content-container" style={containerStyle}>
                     <ConfirmDialogBox
                         hideCancelButton
@@ -335,38 +364,37 @@ export class AppClass extends PureComponent {
                         onAction={this.props.actions.logout}
                         locale={locale.global.sessionExpiredConfirmation}
                     />
-                    {
-                        userStatusAlert &&
-                        <Grid container alignContent="center" justify="center" alignItems="center" style={{ marginBottom: 12 }}>
+                    {userStatusAlert && (
+                        <Grid
+                            container
+                            alignContent="center"
+                            justify="center"
+                            alignItems="center"
+                            style={{ marginBottom: 12 }}
+                        >
                             <Grid item className={classes.layoutCard} style={{ marginTop: 0, marginBottom: 0 }}>
                                 <Alert {...userStatusAlert} />
                             </Grid>
                         </Grid>
-                    }
-                    <AppAlertContainer/>
-                    {
-                        isAuthorLoading &&
-                        <InlineLoader message={locale.global.loadingUserAccount}/>
-                    }
+                    )}
+                    <AppAlertContainer />
+                    {isAuthorLoading && <InlineLoader message={locale.global.loadingUserAccount} />}
 
-                    {
-                        !isAuthorLoading &&
+                    {!isAuthorLoading && (
                         <Switch>
-                            {
-                                routesConfig.map((route, index) => (
-                                    <Route key={`route_${index}`} {...route} />
-                                ))
-                            }
+                            {routesConfig.map((route, index) => (
+                                <Route key={`route_${index}`} {...route} />
+                            ))}
                         </Switch>
-                    }
+                    )}
                 </div>
-                <HelpDrawer/>
-                <OfflineSnackbar/>
+                <HelpDrawer />
+                <OfflineSnackbar />
             </Grid>
         );
     }
 }
 
 const StyledApp = withStyles(styles, { withTheme: true })(AppClass);
-const App = (props) => <StyledApp {...props}/>;
+const App = props => <StyledApp {...props} />;
 export default App;

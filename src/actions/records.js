@@ -8,11 +8,7 @@ import {
 } from 'repositories/routes';
 import { putUploadFiles } from 'repositories';
 import * as transformers from './transformers';
-import {
-    NEW_RECORD_DEFAULT_VALUES,
-    NEW_COLLECTION_DEFAULT_VALUES,
-    NEW_COMMUNITY_DEFAULT_VALUES,
-} from 'config/general';
+import { NEW_RECORD_DEFAULT_VALUES, NEW_COLLECTION_DEFAULT_VALUES, NEW_COMMUNITY_DEFAULT_VALUES } from 'config/general';
 import * as actions from './actionTypes';
 
 /**
@@ -29,8 +25,12 @@ export function createNewRecord(data) {
             ...NEW_RECORD_DEFAULT_VALUES,
             ...JSON.parse(JSON.stringify(data)),
             ...transformers.getRecordLinkSearchKey(data),
-            ...transformers.getRecordAuthorsSearchKey(data.authors || data.currentAuthor && [data.currentAuthor[0]] || null),
-            ...transformers.getRecordAuthorsIdSearchKey(data.authors || data.currentAuthor && [data.currentAuthor[0]] || null),
+            ...transformers.getRecordAuthorsSearchKey(
+                data.authors || (data.currentAuthor && [data.currentAuthor[0]]) || null
+            ),
+            ...transformers.getRecordAuthorsIdSearchKey(
+                data.authors || (data.currentAuthor && [data.currentAuthor[0]]) || null
+            ),
             ...transformers.getRecordContributorsSearchKey(data.editors),
             ...transformers.getRecordContributorsIdSearchKey(data.editors),
             ...transformers.getRecordSupervisorsSearchKey(data.supervisors),
@@ -38,13 +38,13 @@ export function createNewRecord(data) {
             ...transformers.getDatasetContactDetailSearchKeys(data.contact || null),
             ...transformers.getGeographicAreaSearchKey(data.geographicArea || null),
             ...transformers.getDatasetCreatorRolesSearchKey(data.authors || null),
-            ...transformers.getRecordAuthorAffiliationSearchKey(data.isNtro && data.authors || null),
-            ...transformers.getRecordAuthorAffiliationTypeSearchKey(data.isNtro && data.authors || null),
-            ...transformers.getRecordAbstractDescriptionSearchKey(data.isNtro && data.ntroAbstract || null),
-            ...transformers.getGrantsListSearchKey(data.isNtro && data.grants || null),
-            ...transformers.getNtroMetadataSearchKeys(data.isNtro && data || null),
-            ...transformers.getLanguageSearchKey(data.isNtro && data.languages || null),
-            ...transformers.getQualityIndicatorSearchKey(data.isNtro && data.qualityIndicators || null),
+            ...transformers.getRecordAuthorAffiliationSearchKey((data.isNtro && data.authors) || null),
+            ...transformers.getRecordAuthorAffiliationTypeSearchKey((data.isNtro && data.authors) || null),
+            ...transformers.getRecordAbstractDescriptionSearchKey((data.isNtro && data.ntroAbstract) || null),
+            ...transformers.getGrantsListSearchKey((data.isNtro && data.grants) || null),
+            ...transformers.getNtroMetadataSearchKeys((data.isNtro && data) || null),
+            ...transformers.getLanguageSearchKey((data.isNtro && data.languages) || null),
+            ...transformers.getQualityIndicatorSearchKey((data.isNtro && data.qualityIndicators) || null),
             ...transformers.getContentIndicatorSearchKey(data.contentIndicators || null),
         };
 
@@ -73,9 +73,7 @@ export function createNewRecord(data) {
 
         let newRecord = null;
         const hasFilesToUpload = data.files && data.files.queue && data.files.queue.length > 0;
-        const recordPatch = hasFilesToUpload
-            ? transformers.getRecordFileAttachmentSearchKey(data.files.queue)
-            : null;
+        const recordPatch = hasFilesToUpload ? transformers.getRecordFileAttachmentSearchKey(data.files.queue) : null;
 
         return post(NEW_RECORD_API(), recordRequest)
             .then(response => {
@@ -83,29 +81,18 @@ export function createNewRecord(data) {
                 newRecord = response.data;
                 return response;
             })
-            .then(() => (hasFilesToUpload
-                ? putUploadFiles(
-                    newRecord.rek_pid,
-                    data.files.queue,
-                    dispatch
-                )
-                : newRecord
-            ))
-            .then(() => (hasFilesToUpload
-                ? patch(
-                    EXISTING_RECORD_API({ pid: newRecord.rek_pid }),
-                    recordPatch
-                )
-                : newRecord
-            ))
-            .then(() => (data.comments
-                ? post(
-                    RECORDS_ISSUES_API({ pid: newRecord.rek_pid }),
-                    { issue: 'Notes from creator of the new record: ' + data.comments }
-                )
-                : newRecord
-            ))
-            .then((response) => {
+            .then(() => (hasFilesToUpload ? putUploadFiles(newRecord.rek_pid, data.files.queue, dispatch) : newRecord))
+            .then(() =>
+                hasFilesToUpload ? patch(EXISTING_RECORD_API({ pid: newRecord.rek_pid }), recordPatch) : newRecord
+            )
+            .then(() =>
+                data.comments
+                    ? post(RECORDS_ISSUES_API({ pid: newRecord.rek_pid }), {
+                        issue: 'Notes from creator of the new record: ' + data.comments,
+                    })
+                    : newRecord
+            )
+            .then(response => {
                 dispatch({
                     type: actions.CREATE_RECORD_SUCCESS,
                     payload: {
@@ -138,7 +125,6 @@ export function createNewRecord(data) {
             });
     };
 }
-
 
 /**
  * Submit thesis involves two steps: upload files, create record with uploaded files.
@@ -185,7 +171,9 @@ export function createNewRecord(data) {
 //                 return post(NEW_RECORD_API(), recordRequest);
 //             })
 //             .then(response => {
-//                 // if(process.env.ENABLE_LOG) Raven.captureException('THESIS CREATED', {message: 'Thesis created successfully'});
+//                 // if(process.env.ENABLE_LOG) {
+//                 //     Raven.captureException('THESIS CREATED', {message: 'Thesis created successfully'});
+//                 // }
 //                 dispatch({
 //                     type: actions.CREATE_RECORD_SUCCESS,
 //                     payload: {
@@ -251,9 +239,7 @@ export function submitThesis(data) {
 
         let newRecord = null;
         const hasFilesToUpload = data.files && data.files.queue && data.files.queue.length > 0;
-        const recordPatch = hasFilesToUpload
-            ? transformers.getRecordFileAttachmentSearchKey(data.files.queue)
-            : null;
+        const recordPatch = hasFilesToUpload ? transformers.getRecordFileAttachmentSearchKey(data.files.queue) : null;
 
         return post(NEW_RECORD_API(), recordRequest)
             .then(response => {
@@ -261,22 +247,11 @@ export function submitThesis(data) {
                 newRecord = response.data;
                 return response;
             })
-            .then(() => (hasFilesToUpload
-                ? putUploadFiles(
-                    newRecord.rek_pid,
-                    data.files.queue,
-                    dispatch
-                )
-                : newRecord
-            ))
-            .then(() => (hasFilesToUpload
-                ? patch(
-                    EXISTING_RECORD_API({ pid: newRecord.rek_pid }),
-                    recordPatch
-                )
-                : newRecord
-            ))
-            .then((response) => {
+            .then(() => (hasFilesToUpload ? putUploadFiles(newRecord.rek_pid, data.files.queue, dispatch) : newRecord))
+            .then(() =>
+                hasFilesToUpload ? patch(EXISTING_RECORD_API({ pid: newRecord.rek_pid }), recordPatch) : newRecord
+            )
+            .then(response => {
                 /* istanbul ignore next */
                 dispatch({
                     type: actions.CREATE_RECORD_SUCCESS,
@@ -298,16 +273,14 @@ export function submitThesis(data) {
                             fileUploadOrIssueFailed: true,
                         },
                     });
-                    return post(
-                        RECORDS_ISSUES_API({ pid: newRecord.rek_pid }),
-                        { issue: `The submitter had issues uploading files on this record: ${newRecord}` }
-                    )
-                        .then(
-                            /* istanbul ignore next */
-                            () => {
-                                return Promise.resolve(newRecord);
-                            }
-                        );
+                    return post(RECORDS_ISSUES_API({ pid: newRecord.rek_pid }), {
+                        issue: `The submitter had issues uploading files on this record: ${newRecord}`,
+                    }).then(
+                        /* istanbul ignore next */
+                        () => {
+                            return Promise.resolve(newRecord);
+                        }
+                    );
                 }
 
                 dispatch({
@@ -318,7 +291,6 @@ export function submitThesis(data) {
             });
     };
 }
-
 
 /**
  * Save a new collection involves a single request.
@@ -342,7 +314,7 @@ export function createCollection(data, authorId) {
             rek_depositor: authorId,
         };
         return post(NEW_COLLECTION_API(), recordRequest)
-            .then((response) => {
+            .then(response => {
                 dispatch({
                     type: actions.CREATE_COLLECTION_SUCCESS,
                     payload: response.data,
@@ -376,7 +348,7 @@ export function createCommunity(data, authorId) {
             rek_depositor: authorId,
         };
         return post(NEW_COMMUNITY_API(), recordRequest)
-            .then((response) => {
+            .then(response => {
                 dispatch({
                     type: actions.CREATE_COMMUNITY_SUCCESS,
                     payload: response.data,
@@ -393,7 +365,6 @@ export function createCommunity(data, authorId) {
             });
     };
 }
-
 
 /**
  * Clear new record

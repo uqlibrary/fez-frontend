@@ -109,7 +109,7 @@ describe('Component ContributorRow', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('a row with index and contributor with author details set, contributor author details, and delete button', () => {
+    it('a row with index and contributor with author details set, contributor author details & delete button', () => {
         const contributor = {
             nameAsPublished: 'J. Smith',
             ...authorsSearch.data[0],
@@ -122,7 +122,7 @@ describe('Component ContributorRow', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('a row with index and contributor set, renders reorder buttons, contributor assignment, and delete button', () => {
+    it('a row with index and contributor set, renders reorder buttons, contributor assignment & delete button', () => {
         const contributor = {
             nameAsPublished: 'J. Smith',
             ...authorsSearch.data[0],
@@ -143,12 +143,15 @@ describe('Component ContributorRow', () => {
             nameAsPublished: 'J. Smith',
             ...authorsSearch.data[0],
         };
-        const wrapper = setup({
-            contributor,
-            index: 0,
-            canMoveUp: true,
-            onMoveUp: testFunction,
-        }, false);
+        const wrapper = setup(
+            {
+                contributor,
+                index: 0,
+                canMoveUp: true,
+                onMoveUp: testFunction,
+            },
+            false
+        );
 
         const button = wrapper.find('pure(KeyboardArrowUpIcon)');
         expect(button.length).toBe(1);
@@ -162,11 +165,14 @@ describe('Component ContributorRow', () => {
 
     it('a row with index and contributor set calls move down function', () => {
         const testFunction = jest.fn();
-        const wrapper = setup({
-            index: 0,
-            canMoveDown: true,
-            onMoveDown: testFunction,
-        }, false);
+        const wrapper = setup(
+            {
+                index: 0,
+                canMoveDown: true,
+                onMoveDown: testFunction,
+            },
+            false
+        );
 
         const button = wrapper.find('pure(KeyboardArrowDownIcon)');
         expect(button.length).toBe(1);
@@ -181,21 +187,27 @@ describe('Component ContributorRow', () => {
 
     it('a row with index and contributor set calls assignment function', () => {
         const testFunction = jest.fn();
-        const wrapper = setup({
-            index: 0,
-            showContributorAssignment: true,
-            onSelect: testFunction,
-        }, false);
+        const wrapper = setup(
+            {
+                index: 0,
+                showContributorAssignment: true,
+                onSelect: testFunction,
+            },
+            false
+        );
         wrapper.find('ListItem').simulate('click');
         expect(testFunction).toBeCalled;
     });
 
     it('a row with index and contributor set calls delete function', () => {
         const testFunction = jest.fn();
-        const wrapper = setup({
-            index: 0,
-            onDelete: testFunction,
-        }, false);
+        const wrapper = setup(
+            {
+                index: 0,
+                onDelete: testFunction,
+            },
+            false
+        );
         const button = wrapper.find('pure(DeleteIcon)');
         expect(button.length).toBe(1);
         wrapper.find('pure(DeleteIcon)').simulate('click');
@@ -240,7 +252,6 @@ describe('Component ContributorRow', () => {
         wrapper.instance()._select();
         expect(testFunction).toBeCalledWith(testObj.index);
     });
-
 
     it('should call the lifecycle method of the component if props change', () => {
         const testFunction = jest.fn();
@@ -290,7 +301,8 @@ describe('Component ContributorRow', () => {
         };
         const wrapper = setup({
             showContributorAssignment: false,
-            contributor, index: 0,
+            contributor,
+            index: 0,
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -348,7 +360,9 @@ describe('Component ContributorRow', () => {
         });
 
         const blurFn = jest.fn();
-        wrapper.find('WithStyles(ListItem)').props()
+        wrapper
+            .find('WithStyles(ListItem)')
+            .props()
             .onClick({
                 currentTarget: {
                     blur: blurFn,
@@ -379,9 +393,13 @@ describe('Component ContributorRow', () => {
             },
         });
 
-        wrapper.find('WithStyles(ListItem)').props()
+        wrapper
+            .find('WithStyles(ListItem)')
+            .props()
             .onClick();
-        wrapper.find('WithStyles(ListItem)').props()
+        wrapper
+            .find('WithStyles(ListItem)')
+            .props()
             .onKeyDown();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -419,9 +437,7 @@ describe('Component ContributorRow', () => {
                 affiliation: 'NotUQ',
             },
         });
-        expect(
-            wrapper.instance().getContributorRowText()
-        ).toMatchSnapshot();
+        expect(wrapper.instance().getContributorRowText()).toMatchSnapshot();
     });
 
     it('should render row with UQ affiiliation and missing author title', () => {
@@ -436,9 +452,7 @@ describe('Component ContributorRow', () => {
                 identifierSubtitle: 'test2',
             },
         });
-        expect(
-            wrapper.instance().getContributorRowText()
-        ).toMatchSnapshot();
+        expect(wrapper.instance().getContributorRowText()).toMatchSnapshot();
     });
 
     it('should render row with UQ affiiliation and missing author title in non-xs width', () => {
@@ -451,9 +465,7 @@ describe('Component ContributorRow', () => {
                 primary: 'test',
             },
         });
-        expect(
-            wrapper.instance().getContributorRowText()
-        ).toMatchSnapshot();
+        expect(wrapper.instance().getContributorRowText()).toMatchSnapshot();
     });
 
     it('should render row with student author title in xs width', () => {
@@ -470,9 +482,7 @@ describe('Component ContributorRow', () => {
             },
             width: 'xs',
         });
-        expect(
-            wrapper.instance().getContributorRowText()
-        ).toMatchSnapshot();
+        expect(wrapper.instance().getContributorRowText()).toMatchSnapshot();
     });
 
     it('should render row as required', () => {

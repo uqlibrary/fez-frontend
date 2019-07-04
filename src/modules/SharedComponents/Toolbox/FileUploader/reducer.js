@@ -42,7 +42,10 @@ const handlers = {
 };
 
 const fileUploadReducer = (state = { isUploadInProgress: false }, action) => {
-    const handler = [FILE_UPLOAD_STARTED, FILE_UPLOAD_CLEARED].indexOf(action.type) > -1 ? handlers[action.type] : handlers[action.type.substring(0, action.type.indexOf('@') + 1)];
+    const handler =
+        [FILE_UPLOAD_STARTED, FILE_UPLOAD_CLEARED].indexOf(action.type) > -1
+            ? handlers[action.type]
+            : handlers[action.type.substring(0, action.type.indexOf('@') + 1)];
 
     if (!handler) {
         return state;

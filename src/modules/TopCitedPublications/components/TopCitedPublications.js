@@ -76,18 +76,20 @@ export class TopCitedPublicationsClass extends PureComponent {
                 <Grid container>
                     <Grid item xs />
                     <Grid item>
-                        <InlineLoader message={txt.loading}/>
+                        <InlineLoader message={txt.loading} />
                     </Grid>
                     <Grid item xs />
                 </Grid>
             );
         }
 
-        const reorderedItems = this.props.topCitedPublicationsList.sort((source1, source2) => (txt[source1.key].order - txt[source2.key].order));
+        const reorderedItems = this.props.topCitedPublicationsList.sort(
+            (source1, source2) => txt[source1.key].order - txt[source2.key].order
+        );
         return (
             <React.Fragment>
-                {!this.props.loadingTopCitedPublications && this.props.topCitedPublicationsList.length > 0
-                    ? <StandardCard noHeader>
+                {!this.props.loadingTopCitedPublications && this.props.topCitedPublicationsList.length > 0 ? (
+                    <StandardCard noHeader>
                         <Tabs
                             className={classes.tabs}
                             classes={{ indicator: classes.tabIndicator }}
@@ -97,34 +99,57 @@ export class TopCitedPublicationsClass extends PureComponent {
                             centered
                         >
                             {/* Tabs */}
-                            {reorderedItems.map(({ key, values }) => (
-                                values && values.length >= 1 &&
-                                <Tab className={classes.tab} key={key} label={this.props.width === 'xs' ? txt[key].mobileTitle : txt[key].title} value={key}/>
-                            ))}
+                            {reorderedItems.map(
+                                ({ key, values }) =>
+                                    values &&
+                                    values.length >= 1 && (
+                                        <Tab
+                                            className={classes.tab}
+                                            key={key}
+                                            label={this.props.width === 'xs' ? txt[key].mobileTitle : txt[key].title}
+                                            value={key}
+                                        />
+                                    )
+                            )}
                         </Tabs>
 
                         {/* Content */}
-                        {reorderedItems.map(({ key, values }) => (
-                            values && values.length >= 1 && (this.state.topCitedTab === key) &&
-                            <Grid container alignItems={'flex-start'} alignContent={'flex-start'} key={key} style={{ marginTop: 24 }}>
-                                <Grid item xs>
-                                    <Typography key={key} variant={'h6'} color={'primary'}><div key={key} className={`fez-icon ${key} xxlarge`}/> {txt[key].heading}</Typography>
-                                </Grid>
-                                <Grid item xs={'auto'} style={{ marginTop: -12 }}>
-                                    <HelpIcon {...locale.components.trendingPublicationHelp}/>
-                                </Grid>
-                                <Grid item xs={12} style={{ paddingTop: 24 }} id={'topCitedPublications'}>
-                                    <PublicationsList
+                        {reorderedItems.map(
+                            ({ key, values }) =>
+                                values &&
+                                values.length >= 1 &&
+                                this.state.topCitedTab === key && (
+                                    <Grid
+                                        container
+                                        alignItems={'flex-start'}
+                                        alignContent={'flex-start'}
                                         key={key}
-                                        publicationsList={values}
-                                        showMetrics
-                                        hideCountTotal/>
-                                </Grid>
-                            </Grid>
-                        ))}
+                                        style={{ marginTop: 24 }}
+                                    >
+                                        <Grid item xs>
+                                            <Typography key={key} variant={'h6'} color={'primary'}>
+                                                <div key={key} className={`fez-icon ${key} xxlarge`} />{' '}
+                                                {txt[key].heading}
+                                            </Typography>
+                                        </Grid>
+                                        <Grid item xs={'auto'} style={{ marginTop: -12 }}>
+                                            <HelpIcon {...locale.components.trendingPublicationHelp} />
+                                        </Grid>
+                                        <Grid item xs={12} style={{ paddingTop: 24 }} id={'topCitedPublications'}>
+                                            <PublicationsList
+                                                key={key}
+                                                publicationsList={values}
+                                                showMetrics
+                                                hideCountTotal
+                                            />
+                                        </Grid>
+                                    </Grid>
+                                )
+                        )}
                     </StandardCard>
-                    :                    <Alert {...txt.notAvailableAlert} />
-                }
+                ) : (
+                    <Alert {...txt.notAvailableAlert} />
+                )}
             </React.Fragment>
         );
     }

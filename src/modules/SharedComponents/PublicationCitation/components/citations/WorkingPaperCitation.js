@@ -17,20 +17,23 @@ export default class WorkingPaperCitation extends Component {
             id: this.props.publication.rek_pid,
             title: this.props.publication.rek_title,
             series: this.props.publication.fez_record_search_key_series
-                ? this.props.publication.fez_record_search_key_series.rek_series : null,
+                ? this.props.publication.fez_record_search_key_series.rek_series
+                : null,
             reportNumber: this.props.publication.fez_record_search_key_report_number
-                ? this.props.publication.fez_record_search_key_report_number.rek_report_number : null,
+                ? this.props.publication.fez_record_search_key_report_number.rek_report_number
+                : null,
             orgUnit: this.props.publication.fez_record_search_key_org_unit_name
-                ? this.props.publication.fez_record_search_key_org_unit_name.rek_org_unit_name : null,
+                ? this.props.publication.fez_record_search_key_org_unit_name.rek_org_unit_name
+                : null,
             orgName: this.props.publication.fez_record_search_key_org_name
-                ? this.props.publication.fez_record_search_key_org_name.rek_org_name : null,
+                ? this.props.publication.fez_record_search_key_org_name.rek_org_name
+                : null,
             doi: this.props.publication.fez_record_search_key_doi
-                ? this.props.publication.fez_record_search_key_doi.rek_doi : null,
+                ? this.props.publication.fez_record_search_key_doi.rek_doi
+                : null,
         };
 
         // eSpace citation view for Working Paper
-        // {Author}{Publication Year| (|).}<i>{Title| |.}</i>{Series| |.} {Report Number| |.}{School, Department or Centre| |,}{Institution| |.}{doi| doi:|}
-
         return (
             <div className="citationContent citationWorkingPaper">
                 {/* {Creator} */}
@@ -55,7 +58,7 @@ export default class WorkingPaperCitation extends Component {
                 <Partials.CitationView className="citationOrgName" value={record.orgName} />
 
                 {/* {doi| doi:|} */}
-                <Partials.DoiCitationView doi={record.doi} hideDoiLink={this.props.hideDoiLink}/>
+                <Partials.DoiCitationView doi={record.doi} hideDoiLink={this.props.hideDoiLink} />
             </div>
         );
     }

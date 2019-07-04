@@ -10,7 +10,11 @@ const mapStateToProps = (state, props) => ({
     ...state.get('exportPublicationsReducer'),
     canUseExport: true,
     isUnpublishedBufferPage: props.location.pathname === routes.pathConfig.admin.unpublished,
-    isAdmin: !!state && !!state.get('accountReducer') && !!state.get('accountReducer').account && state.get('accountReducer').account.canMasquerade,
+    isAdmin:
+        !!state &&
+        !!state.get('accountReducer') &&
+        !!state.get('accountReducer').account &&
+        state.get('accountReducer').account.canMasquerade,
 });
 
 function mapDispatchToProps(dispatch) {
@@ -19,7 +23,10 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-let SearchRecordsContainer = connect(mapStateToProps, mapDispatchToProps)(SearchRecords);
+let SearchRecordsContainer = connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(SearchRecords);
 SearchRecordsContainer = withRouter(SearchRecordsContainer);
 
 export default SearchRecordsContainer;

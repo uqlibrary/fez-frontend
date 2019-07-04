@@ -45,9 +45,7 @@ export class NewsFeed extends PureComponent {
     };
 
     componentDidMount() {
-        this.props.actions &&
-        this.props.actions.loadNewsFeed &&
-        this.props.actions.loadNewsFeed();
+        this.props.actions && this.props.actions.loadNewsFeed && this.props.actions.loadNewsFeed();
     }
 
     render() {
@@ -62,35 +60,48 @@ export class NewsFeed extends PureComponent {
             ALLOWED_TAGS: ['p', 'strong', 'i', 'u', 's', 'strike', 'sup', 'sub', 'em', 'br', 'b', 'sup', 'sub'],
             ALLOWED_ATTR: [],
         };
-        const subNewsFeed = this.props.newsFeedList
-            .slice(0,
-                this.props.newsFeedList.length > this.props.showNewsCount
-                    ? this.props.showNewsCount
-                    : this.props.newsFeedList.length
-            );
+        const subNewsFeed = this.props.newsFeedList.slice(
+            0,
+            this.props.newsFeedList.length > this.props.showNewsCount
+                ? this.props.showNewsCount
+                : this.props.newsFeedList.length
+        );
 
         return (
             <StandardCard title={txt.title} darkHeader>
-                {
-                    !this.props.loadingNewsFeedList && subNewsFeed.map((newsItem, index) => (
+                {!this.props.loadingNewsFeedList &&
+                    subNewsFeed.map((newsItem, index) => (
                         <div style={{ padding: '8px 0px' }} key={index}>
                             <Grid key={`newsItem-${index}`} container spacing={16} className={classes.newsItem}>
                                 <Grid item xs={'auto'}>
-                                    <Grid container direction="column" alignItems="center" justify="center" alignContent="center" spacing={0}>
-                                        <Grid item className="day">{moment(newsItem.nws_updated_date).format('D')}</Grid>
-                                        <Grid item className="month">{moment(newsItem.nws_updated_date).format('MMM')}</Grid>
-                                        <Grid item className="year">{moment(newsItem.nws_updated_date).format('YYYY')}</Grid>
+                                    <Grid
+                                        container
+                                        direction="column"
+                                        alignItems="center"
+                                        justify="center"
+                                        alignContent="center"
+                                        spacing={0}
+                                    >
+                                        <Grid item className="day">
+                                            {moment(newsItem.nws_updated_date).format('D')}
+                                        </Grid>
+                                        <Grid item className="month">
+                                            {moment(newsItem.nws_updated_date).format('MMM')}
+                                        </Grid>
+                                        <Grid item className="year">
+                                            {moment(newsItem.nws_updated_date).format('YYYY')}
+                                        </Grid>
                                     </Grid>
                                 </Grid>
                                 <Grid item xs>
                                     <Typography variant={'body2'}>
-                                        <b>{newsItem.nws_title}</b> {ReactHtmlParser(dompurify.sanitize(newsItem.nws_message, allowedHtmlConfig))}
+                                        <b>{newsItem.nws_title}</b>{' '}
+                                        {ReactHtmlParser(dompurify.sanitize(newsItem.nws_message, allowedHtmlConfig))}
                                     </Typography>
                                 </Grid>
                             </Grid>
                         </div>
-                    ))
-                }
+                    ))}
             </StandardCard>
         );
     }

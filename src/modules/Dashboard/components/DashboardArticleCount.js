@@ -48,18 +48,24 @@ export class DashboardArticleCount extends PureComponent {
         const txt = locale.pages.dashboard.header.dashboardArticleCount;
         return (
             <Grid container direction={'column'}>
-                {
-                    this.props.articleCount && this.props.articleFirstYear && this.props.articleLastYear &&
+                {this.props.articleCount && this.props.articleFirstYear && this.props.articleLastYear && (
                     <React.Fragment>
-                        <Grid item className={classes.noOfArticles}>{this.props.articleCount}</Grid>
-                        <Grid item className={classes.articlesFrom}>{txt.countTitle}</Grid>
-                        <Grid item className={classes.dateRange}>{this.props.articleFirstYear}<span>{txt.yearSeparator}</span>{this.props.articleLastYear}</Grid>
+                        <Grid item className={classes.noOfArticles}>
+                            {this.props.articleCount}
+                        </Grid>
+                        <Grid item className={classes.articlesFrom}>
+                            {txt.countTitle}
+                        </Grid>
+                        <Grid item className={classes.dateRange}>
+                            {this.props.articleFirstYear}
+                            <span>{txt.yearSeparator}</span>
+                            {this.props.articleLastYear}
+                        </Grid>
                     </React.Fragment>
-                }
+                )}
             </Grid>
         );
     }
 }
 
 export default withStyles(styles, { withTheme: true })(DashboardArticleCount);
-

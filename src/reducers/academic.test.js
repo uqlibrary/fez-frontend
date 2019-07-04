@@ -21,7 +21,10 @@ describe('academicStatsReducer', () => {
         it('current author publications by year loaded', () => {
             const oldState = { ...initialState, loadingPublicationsByYear: true };
             const payload = [1, 2, 3, 4, 5];
-            const state = academicStatsReducer(oldState, { type: actions.AUTHOR_PUBLICATIONS_BY_YEAR_LOADED, payload: payload });
+            const state = academicStatsReducer(oldState, {
+                type: actions.AUTHOR_PUBLICATIONS_BY_YEAR_LOADED,
+                payload: payload,
+            });
             expect(state.loadingPublicationsByYear).toBeFalsy();
             expect(state.publicationsByYear.length).toBe(5);
             expect(state).toEqual(expect.objectContaining({ publicationsByYear: payload }));
@@ -38,14 +41,20 @@ describe('academicStatsReducer', () => {
 
         it('current author publication types count loaded', () => {
             const oldState = { ...initialState };
-            const state = academicStatsReducer(oldState, { type: actions.AUTHOR_PUBLICATIONS_COUNT_PER_TYPE_LOADED, payload: { popular: 10, mostViewed: 5 } });
+            const state = academicStatsReducer(oldState, {
+                type: actions.AUTHOR_PUBLICATIONS_COUNT_PER_TYPE_LOADED,
+                payload: { popular: 10, mostViewed: 5 },
+            });
             expect(state).toEqual(expect.objectContaining({ publicationTypesCount: { popular: 10, mostViewed: 5 } }));
         });
 
         it('current author stats loaded', () => {
             const oldState = { ...initialState, loadingPublicationsStats: true };
             const payload = [1, 2, 3, 4, 5];
-            const state = academicStatsReducer(oldState, { type: actions.AUTHOR_PUBLICATIONS_STATS_LOADED, payload: payload });
+            const state = academicStatsReducer(oldState, {
+                type: actions.AUTHOR_PUBLICATIONS_STATS_LOADED,
+                payload: payload,
+            });
             expect(state.loadingPublicationsStats).toBeFalsy();
             expect(state.publicationsStats.length).toBe(5);
             expect(state).toEqual(expect.objectContaining({ publicationsStats: payload }));
@@ -58,7 +67,10 @@ describe('academicStatsReducer', () => {
                 articleFirstYear: '1998',
                 articleLastYear: '2019',
             };
-            const state = academicStatsReducer(oldState, { type: actions.AUTHOR_PUBLICATIONS_COUNT_TOTAL_LOADED, payload: payload });
+            const state = academicStatsReducer(oldState, {
+                type: actions.AUTHOR_PUBLICATIONS_COUNT_TOTAL_LOADED,
+                payload: payload,
+            });
             expect(state.publicationTotalCount).toEqual({
                 articleCount: 100,
                 articleFirstYear: '1998',

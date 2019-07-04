@@ -5,13 +5,16 @@ import { initialState } from './thirdPartyLookupTool';
 describe('thirdPartyLookupTool ', () => {
     it('current lookup loading', () => {
         const state = thirdPartyLookupToolReducer(initialState, { type: actions.THIRD_PARTY_LOOKUP_TOOL_LOADING });
-        expect(state).toEqual({ 'loadingResults': true, 'lookupResults': [] });
+        expect(state).toEqual({ loadingResults: true, lookupResults: [] });
     });
 
     it('current lookup loaded', () => {
         const oldState = { ...initialState, loadingResults: true };
-        const payload = [{ 'IS_INTERNATIONAL_COLLAB': '0' }, { 'IS_INTERNATIONAL_COLLAB': 'B' }];
-        const state = thirdPartyLookupToolReducer(oldState, { type: actions.THIRD_PARTY_LOOKUP_TOOL_SUCCESS, payload: payload });
+        const payload = [{ IS_INTERNATIONAL_COLLAB: '0' }, { IS_INTERNATIONAL_COLLAB: 'B' }];
+        const state = thirdPartyLookupToolReducer(oldState, {
+            type: actions.THIRD_PARTY_LOOKUP_TOOL_SUCCESS,
+            payload: payload,
+        });
         expect(state.loadingResults).toBeFalsy();
         expect(state.lookupResults.length).toBe(2);
         expect(state).toEqual(expect.objectContaining({ lookupResults: payload }));

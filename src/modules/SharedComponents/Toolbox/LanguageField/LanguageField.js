@@ -10,11 +10,15 @@ export default function LanguageField(fieldProps) {
             itemsList={LANGUAGE}
             hideLabel={false}
             locale={{ label: fieldProps.label }}
-            selectedValue={input instanceof Immutable.List ? input.toJS() : (!!fieldProps.defaultValue && [fieldProps.defaultValue]) || input || []}
-            onChange={!!fieldProps.input && fieldProps.input.onChange || undefined}
-            errorText={!!fieldProps.meta && fieldProps.meta.error || ''}
-            error={!!fieldProps.meta && !!fieldProps.meta.error || false}
-            { ...fieldProps }
+            selectedValue={
+                input instanceof Immutable.List
+                    ? input.toJS()
+                    : (!!fieldProps.defaultValue && [fieldProps.defaultValue]) || input || []
+            }
+            onChange={(!!fieldProps.input && fieldProps.input.onChange) || undefined}
+            errorText={(!!fieldProps.meta && fieldProps.meta.error) || ''}
+            error={(!!fieldProps.meta && !!fieldProps.meta.error) || false}
+            {...fieldProps}
         />
     );
 }

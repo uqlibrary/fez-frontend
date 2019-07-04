@@ -15,7 +15,10 @@ function setup(testProps, isShallow = true) {
 
 describe('Component MyLatestPublications', () => {
     it('should render latest publications', () => {
-        const wrapper = setup({ latestPublicationsList: latestPubsPayload.data, totalPublicationsCount: latestPubsPayload.total });
+        const wrapper = setup({
+            latestPublicationsList: latestPubsPayload.data,
+            totalPublicationsCount: latestPubsPayload.total,
+        });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

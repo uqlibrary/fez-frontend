@@ -4,11 +4,8 @@ import { Map } from 'immutable';
 import { SubmissionError } from 'redux-form';
 
 jest.mock('actions', () => ({
-    updateIncompleteRecord: (data) => (
-        data.author.aut_id === 410
-            ? Promise.resolve()
-            : Promise.reject(Error('Some error'))
-    ),
+    updateIncompleteRecord: data =>
+        data.author.aut_id === 410 ? Promise.resolve() : Promise.reject(Error('Some error')),
 }));
 
 function setup(testProps, isShallow = true) {
@@ -83,7 +80,9 @@ describe('MyIncompleteRecordForm', () => {
             },
         };
 
-        await expect(onSubmit(testValue, dispatch, props)).rejects.toThrow(new SubmissionError('Submit Validation Failed'));
+        await expect(onSubmit(testValue, dispatch, props)).rejects.toThrow(
+            new SubmissionError('Submit Validation Failed')
+        );
     });
 
     it('should validate() and return empty object', () => {
@@ -93,16 +92,18 @@ describe('MyIncompleteRecordForm', () => {
 
     it('should validate() and return author affiliation error', () => {
         const values = new Map({
-            authorsAffiliation: [{
-                'affiliation': 'NotUQ',
-                'creatorRole': '',
-                'disabled': false,
-                'nameAsPublished': 'Test',
-                'orgaff': '',
-                'orgtype': '',
-                'required': true,
-                'uqIdentifier': '0',
-            }],
+            authorsAffiliation: [
+                {
+                    affiliation: 'NotUQ',
+                    creatorRole: '',
+                    disabled: false,
+                    nameAsPublished: 'Test',
+                    orgaff: '',
+                    orgtype: '',
+                    required: true,
+                    uqIdentifier: '0',
+                },
+            ],
         });
 
         const errors = validate(values, { author: { aut_id: 410 } });

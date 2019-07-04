@@ -7,8 +7,10 @@ import locale from 'locale/components';
 
 NOTE:
 - text can be either plain text, eg text: 'Some text to display' or
-- text can be formatted HTML text, eg text: (<div>Click here to search google: <a href='google.com'>search google</a></div>)
-IMPORTANT: if currently text contains placeholders, eg any characters in square brackets, eg [noOfResults] it cannot be formatted with HTML tags’
+- text can be formatted HTML text, eg
+    text: (<div>Click here to search google: <a href='google.com'>search google</a></div>)
+IMPORTANT: if currently text contains placeholders, eg any characters in square brackets,
+eg [noOfResults] it cannot be formatted with HTML tags’
 
 - help objects have the following shape:
 help: {
@@ -20,7 +22,7 @@ help: {
 - if help is not required, delete help: {} fully (including closing '},')
 
 */
-
+/* eslint-disable max-len */
 export default {
     pages: {
         index: {

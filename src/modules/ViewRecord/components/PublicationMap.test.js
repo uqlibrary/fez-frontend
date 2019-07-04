@@ -4,25 +4,45 @@ import PublicationMap, { GoogleMapViewComponent, getDefaultCenter } from './Publ
 function setup(testProps, isShallow = false) {
     const props = {
         ...testProps,
-        googleMapURL: 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCD6bOdtlpxFXCj3vrhZkdeSS27HZha7U4&v=3.exp&libraries=geometry,drawing,places',
-        loadingElement: (<div/>),
+        googleMapURL:
+            'https://maps.googleapis.com/maps/api/js?key=AIzaSyCD6bOdtlpxFXCj3vrhZkdeSS27HZha7U4&v=3.exp&libraries=geometry,drawing,places',
+        loadingElement: <div />,
     };
     return getElement(PublicationMap, props, isShallow);
 }
 
-describe('Publication\'s map coordinates', () => {
+describe("Publication's map coordinates", () => {
     it('should render component with a selected area', () => {
-        const wrapper = setup({ coordinates: '153.021781,-27.489337 152.988274,-27.489337 152.988274,-27.509529 153.021781,-27.509529 153.021781,-27.489337' });
+        const wrapper = setup({
+            coordinates:
+                '153.021781,-27.489337 152.988274,-27.489337 152.988274,' +
+                '-27.509529 153.021781,-27.509529 153.021781,-27.489337',
+        });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should mount component', () => {
-        const wrapper = setup({ coordinates: '153.021781,-27.489337 152.988274,-27.489337 152.988274,-27.509529 153.021781,-27.509529 153.021781,-27.489337' }, false);
+        const wrapper = setup(
+            {
+                coordinates:
+                    '153.021781,-27.489337 152.988274,-27.489337 152.988274,' +
+                    '-27.509529 153.021781,-27.509529 153.021781,-27.489337',
+            },
+            false
+        );
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should mount component in readonly mode', () => {
-        const wrapper = setup({ coordinates: '153.021781,-27.489337 152.988274,-27.489337 152.988274,-27.509529 153.021781,-27.509529 153.021781,-27.489337', readOnly: true }, false);
+        const wrapper = setup(
+            {
+                coordinates:
+                    '153.021781,-27.489337 152.988274,-27.489337 152.988274,' +
+                    '-27.509529 153.021781,-27.509529 153.021781,-27.489337',
+                readOnly: true,
+            },
+            false
+        );
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -43,10 +63,7 @@ describe('Publication\'s map coordinates', () => {
             },
         };
         const wrapper = setup({}, true);
-        const geoCoords = [
-            { lat: 153.021781, lng: -27.489337 },
-            { lat: 153.021781, lng: -27.489337 },
-        ];
+        const geoCoords = [{ lat: 153.021781, lng: -27.489337 }, { lat: 153.021781, lng: -27.489337 }];
         wrapper.setState({ geoCoords });
         expect(wrapper.state().geoCoords).toBe(geoCoords);
     });
@@ -64,21 +81,24 @@ describe('Publication\'s map coordinates', () => {
 
         const onChangeFn = jest.fn();
 
-        const wrapper = setup({
-            coordinates: '153.021781,-27.489337',
-            readOnly: false,
-            onChange: onChangeFn,
-            geoCoords: [
-                {
-                    lat: () => 153.021781,
-                    lng: () => -27.489337,
-                },
-                {
-                    lat: () => 153.021781,
-                    lng: () => -27.489337,
-                },
-            ],
-        }, true);
+        const wrapper = setup(
+            {
+                coordinates: '153.021781,-27.489337',
+                readOnly: false,
+                onChange: onChangeFn,
+                geoCoords: [
+                    {
+                        lat: () => 153.021781,
+                        lng: () => -27.489337,
+                    },
+                    {
+                        lat: () => 153.021781,
+                        lng: () => -27.489337,
+                    },
+                ],
+            },
+            true
+        );
         expect(toJson(wrapper)).toMatchSnapshot();
 
         wrapper.setState({
@@ -100,7 +120,7 @@ describe('Publication\'s map coordinates', () => {
 
         component.props().handlePolygonComplete({
             getPath: () => ({
-                getArray: () => ([
+                getArray: () => [
                     {
                         lat: () => 153.021781,
                         lng: () => -27.489337,
@@ -109,7 +129,7 @@ describe('Publication\'s map coordinates', () => {
                         lat: () => 153.021781,
                         lng: () => -27.489337,
                     },
-                ]),
+                ],
             }),
             setMap: jest.fn(),
         });
@@ -141,7 +161,7 @@ describe('Publication\'s map coordinates', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
 
         component.props().onSearchBoxMounted({
-            getPlaces: () => ([
+            getPlaces: () => [
                 {
                     geometry: {
                         viewport: true,
@@ -160,7 +180,7 @@ describe('Publication\'s map coordinates', () => {
                         },
                     },
                 },
-            ]),
+            ],
         });
         expect(toJson(wrapper)).toMatchSnapshot();
 
@@ -179,8 +199,8 @@ describe('Publication\'s map coordinates', () => {
             { lng: 153.021781, lat: -27.389337 },
         ];
         expect(getDefaultCenter(geoCoords)).toEqual({
-            'lat': -27.449433,
-            'lng': 153.00502799999998,
+            lat: -27.449433,
+            lng: 153.00502799999998,
         });
     });
 });
@@ -235,10 +255,12 @@ describe('GoogleMapViewComponent component', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
 
         wrapper.setProps({
-            geoCoords: [{
-                lat: () => 153.021781,
-                lng: () => -27.489337,
-            }],
+            geoCoords: [
+                {
+                    lat: () => 153.021781,
+                    lng: () => -27.489337,
+                },
+            ],
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });

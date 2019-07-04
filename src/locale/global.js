@@ -6,8 +6,11 @@ import { pathConfig } from 'config/routes';
 
 NOTE:
 - text can be either plain text, eg text: 'Some text to display' or
-- text can be formatted HTML text, eg text: (<div>Click here to search google: <a href='google.com'>search google</a></div>)
-IMPORTANT: if currently text contains placeholders, eg any characters in square brackets, eg [noOfResults] it cannot be formatted with HTML tags’
+- text can be formatted HTML text, eg text: (
+    <div>Click here to search google: <a href='google.com'>search google</a></div>
+)
+IMPORTANT: if currently text contains placeholders, eg any characters in square brackets,
+eg [noOfResults] it cannot be formatted with HTML tags’
 
 - help objects have the following shape:
 help: {
@@ -24,7 +27,8 @@ export default {
     global: {
         title: `UQ eSpace ${process.env.TITLE_SUFFIX || ''}`,
         appTitle: (
-            <a href={`${pathConfig.index}`}
+            <a
+                href={`${pathConfig.index}`}
                 className="appTitle"
                 title="Click to return to the eSpace home page"
                 style={{ color: '#FFFFFF' }}
@@ -63,7 +67,9 @@ export default {
         },
         errorMessages: {
             401: {
-                message: 'You are not authorised to access the requested information. Please contact eSpace administrators or try again later.',
+                message:
+                    'You are not authorised to access the requested information. Please contact eSpace ' +
+                    'administrators or try again later.',
                 status: 401,
             },
             403: {
@@ -75,15 +81,23 @@ export default {
                 status: 404,
             },
             422: {
-                message: 'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',
+                message:
+                    'Error has occurred during request and request cannot be processed. Please contact ' +
+                    'eSpace administrators or try again later.',
                 status: 500,
             },
             500: {
-                message: 'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',
+                message:
+                    'Error has occurred during request and request cannot be processed. Please contact ' +
+                    'eSpace administrators or try again later.',
                 status: 500,
             },
-            generic: 'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',
-            genericAlternate: 'Error has occurred during request and request cant be processed. Please contact eSpace administrators or try again later.',
+            generic:
+                'Error has occurred during request and request cannot be processed. Please contact eSpace ' +
+                'administrators or try again later.',
+            genericAlternate:
+                'Error has occurred during request and request cant be processed. Please contact eSpace ' +
+                'administrators or try again later.',
         },
         notRegisteredAuthorAlert: {
             title: 'You are not registered in UQ eSpace as an author',
@@ -120,14 +134,16 @@ export default {
                 id: 'wos',
                 title: 'Web of science',
                 priority: 1,
-                externalUrl: 'http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=[id]&SrcAuth=uqueensland',
+                externalUrl:
+                    'http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=[id]&SrcAuth=uqueensland',
                 idKey: 'fez_record_search_key_isi_loc.rek_isi_loc',
             },
             scopus: {
                 id: 'scopus',
                 title: 'Scopus',
                 priority: 2,
-                externalUrl: 'http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=[id]&origin=inward',
+                externalUrl:
+                    'http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=[id]&origin=inward',
                 idKey: 'fez_record_search_key_scopus_id.rek_scopus_id',
             },
             pubmed: {
@@ -156,7 +172,7 @@ export default {
             externalUrl: 'https://www.ncbi.nlm.nih.gov/pmc/articles/[id]',
         },
         sherpaRomeoLink: {
-            ariaLabel: 'View publisher\'s open access policy in an new window',
+            ariaLabel: "View publisher's open access policy in an new window",
             prefix: 'http://www.sherpa.ac.uk/romeo/',
             externalUrl: 'http://www.sherpa.ac.uk/romeo/search.php?issn=[issn]',
         },
@@ -180,7 +196,10 @@ export default {
         },
         sessionExpiredConfirmation: {
             confirmationTitle: 'Session Expired',
-            confirmationMessage: 'Your session has expired. Follow the login prompt to return to your submission form. You must upload your files again to successfully deposit your thesis, even if you have already uploaded your files.',
+            confirmationMessage:
+                'Your session has expired. Follow the login prompt to return to your submission form. ' +
+                'You must upload your files again to successfully deposit your thesis, even if you have ' +
+                'already uploaded your files.',
             cancelButtonLabel: 'Cancel',
             confirmButtonLabel: 'Redirect to login',
         },

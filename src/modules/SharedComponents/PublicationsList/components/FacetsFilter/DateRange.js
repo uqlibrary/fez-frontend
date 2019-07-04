@@ -24,8 +24,8 @@ export default class DateRange extends React.Component {
             to: null,
         },
         defaultValue: {
-            from: (new Date()).getFullYear() - 10,
-            to: (new Date()).getFullYear() + 5,
+            from: new Date().getFullYear() - 10,
+            to: new Date().getFullYear() + 5,
         },
         locale: {
             fromFieldLabel: 'From',
@@ -53,7 +53,7 @@ export default class DateRange extends React.Component {
         });
     }
 
-    setValue = (key) => (event) => {
+    setValue = key => event => {
         const intValue = parseInt(event.target.value, 10);
         this.setState({
             [key]: isNaN(intValue) || intValue < 0 || intValue > 9999 ? undefined : intValue,
@@ -78,7 +78,8 @@ export default class DateRange extends React.Component {
                         value={this.state.from}
                         onChange={this.setValue('from')}
                         disabled={this.props.disabled}
-                        fullWidth/>
+                        fullWidth
+                    />
                 </Grid>
                 <Grid item xs={4}>
                     <TextField
@@ -87,15 +88,20 @@ export default class DateRange extends React.Component {
                         value={this.state.to}
                         onChange={this.setValue('to')}
                         disabled={this.props.disabled}
-                        fullWidth/>
+                        fullWidth
+                    />
                 </Grid>
                 <Grid item>
                     <Button
                         variant={'text'}
                         children={this.props.locale.rangeSubmitButtonLabel}
                         onClick={this.setDateRange}
-                        disabled={this.props.disabled || (!isNaN(this.state.to - this.state.from) && (this.state.to - this.state.from) < 0)}
-                        fullWidth/>
+                        disabled={
+                            this.props.disabled ||
+                            (!isNaN(this.state.to - this.state.from) && this.state.to - this.state.from < 0)
+                        }
+                        fullWidth
+                    />
                 </Grid>
             </Grid>
         </div>
@@ -106,7 +112,7 @@ export default class DateRange extends React.Component {
             this.setState({ isActive: false });
             this.props.onChange({ from: null, to: null });
         }
-    }
+    };
 
     render() {
         const txt = this.props.locale;
@@ -119,16 +125,16 @@ export default class DateRange extends React.Component {
                 onToggle={this.props.onToggle}
                 open={this.props.open}
             >
-                {
-                    !isActive
-                        ? this.renderDateRangeForm()
-                        : <FacetFilterNestedListItem
-                            onFacetClick={this.removeDateRange}
-                            isActive={isActive}
-                            primaryText={`${this.state.from || '*'} - ${this.state.to || '*'}`}
-                            disabled={this.props.disabled}
-                        />
-                }
+                {!isActive ? (
+                    this.renderDateRangeForm()
+                ) : (
+                    <FacetFilterNestedListItem
+                        onFacetClick={this.removeDateRange}
+                        isActive={isActive}
+                        primaryText={`${this.state.from || '*'} - ${this.state.to || '*'}`}
+                        disabled={this.props.disabled}
+                    />
+                )}
             </FacetFilterListItem>
         );
     }

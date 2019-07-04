@@ -51,33 +51,41 @@ export class AuthorsCitationView extends PureComponent {
     constructor(props) {
         super(props);
 
-        const { publication, searchKey: { key, order, subkey }, initialNumberOfAuthors, thresholdNumberOfAuthors } = props;
+        const {
+            publication,
+            searchKey: { key, order, subkey },
+            initialNumberOfAuthors,
+            thresholdNumberOfAuthors,
+        } = props;
 
-        const publicationAuthors = publication && publication[key] && [...publication[key]];    // copy authors to separate variable so sorting doesn't change original record
+        // copy authors to separate variable so sorting doesn't change original record
+        const publicationAuthors = publication && publication[key] && [...publication[key]];
 
-        const authorsCount = publicationAuthors && Array.isArray(publicationAuthors)
-            ? publicationAuthors.length : 0;
+        const authorsCount = publicationAuthors && Array.isArray(publicationAuthors) ? publicationAuthors.length : 0;
 
         this.state = {
-            hasMoreAuthors: authorsCount > (initialNumberOfAuthors + thresholdNumberOfAuthors),
-            toggleShowMoreLink: authorsCount > (initialNumberOfAuthors + thresholdNumberOfAuthors),
-            authors: publicationAuthors && Array.isArray(publicationAuthors)
-                ? publicationAuthors.sort((author1, author2) => (
-                    author1[order] - author2[order])
-                ).map(author => (
-                    {
-                        id: this.getAuthorId(author[order]),
-                        value: author[subkey],
-                        order: author[order],
-                    }
-                ))
-                : [],
+            hasMoreAuthors: authorsCount > initialNumberOfAuthors + thresholdNumberOfAuthors,
+            toggleShowMoreLink: authorsCount > initialNumberOfAuthors + thresholdNumberOfAuthors,
+            authors:
+                publicationAuthors && Array.isArray(publicationAuthors)
+                    ? publicationAuthors
+                        .sort((author1, author2) => author1[order] - author2[order])
+                        .map(author => ({
+                            id: this.getAuthorId(author[order]),
+                            value: author[subkey],
+                            order: author[order],
+                        }))
+                    : [],
         };
     }
 
-    getAuthorId = (order) => {
+    getAuthorId = order => {
         let id = 0;
-        const { publication, idSearchKey: { idKey, idOrder, idSubkey }, showLink } = this.props;
+        const {
+            publication,
+            idSearchKey: { idKey, idOrder, idSubkey },
+            showLink,
+        } = this.props;
 
         if (showLink) {
             const authorIds = publication && publication[idKey] && [...publication[idKey]];
@@ -92,7 +100,7 @@ export class AuthorsCitationView extends PureComponent {
         }
 
         return id;
-    }
+    };
 
     renderAuthors = (authors, separator, showLink, getLink) => {
         return authors.map((author, index) => {
@@ -109,20 +117,25 @@ export class AuthorsCitationView extends PureComponent {
                     key={key}
                     value={author.value}
                     prefix={prefix}
-                    suffix={suffix} />
+                    suffix={suffix}
+                />
             );
 
             if (showLink) {
                 const href = getLink(author.value, author.id);
                 const className = author.id ? this.props.classes.authorIdLink : 'authorNameLink';
-                return <Link className={className} to={href} key={key}>{element}</Link>;
+                return (
+                    <Link className={className} to={href} key={key}>
+                        {element}
+                    </Link>
+                );
             } else {
                 return element;
             }
         });
     };
 
-    _toggleShowMore = (e) => {
+    _toggleShowMore = e => {
         e.preventDefault();
         this.setState({
             toggleShowMoreLink: !this.state.toggleShowMoreLink,
@@ -130,39 +143,49 @@ export class AuthorsCitationView extends PureComponent {
     };
 
     render() {
-        const { showMoreLabel, showMoreTitle, showLessTitle, showLessLabel } = locale.components.publicationCitation.citationAuthors;
+        const {
+            showMoreLabel,
+            showMoreTitle,
+            showLessTitle,
+            showLessLabel,
+        } = locale.components.publicationCitation.citationAuthors;
         const { className, prefix, suffix, separator, initialNumberOfAuthors, showLink, getLink } = this.props;
         const { authors, hasMoreAuthors, toggleShowMoreLink } = this.state;
 
-        if (authors.length === 0) return (<span className={`${className || ''} empty`} />);
+        if (authors.length === 0) return <span className={`${className || ''} empty`} />;
 
         return (
             <span className={className || ''}>
                 {prefix}
-                {
-                    this.renderAuthors(authors, separator, showLink, getLink)
-                        .slice(0, hasMoreAuthors && toggleShowMoreLink
-                            ? initialNumberOfAuthors
-                            : authors.length)
-                }
-                {
-                    hasMoreAuthors &&
-                    <span>&nbsp;
-                        <a className="citationShowMoreAuthors"
+                {this.renderAuthors(authors, separator, showLink, getLink).slice(
+                    0,
+                    hasMoreAuthors && toggleShowMoreLink ? initialNumberOfAuthors : authors.length
+                )}
+                {hasMoreAuthors && (
+                    <span>
+                        &nbsp;
+                        <a
+                            className="citationShowMoreAuthors"
                             onClick={this._toggleShowMore}
                             onKeyPress={this._toggleShowMore}
-                            title={toggleShowMoreLink
-                                ? showMoreTitle.replace('[numberOfAuthors]', `${authors.length - initialNumberOfAuthors}`)
-                                : showLessTitle}
-                        >
-                            {
+                            title={
                                 toggleShowMoreLink
-                                    ? showMoreLabel.replace('[numberOfAuthors]', `${authors.length - initialNumberOfAuthors}`)
-                                    : showLessLabel
+                                    ? showMoreTitle.replace(
+                                        '[numberOfAuthors]',
+                                        `${authors.length - initialNumberOfAuthors}`
+                                    )
+                                    : showLessTitle
                             }
+                        >
+                            {toggleShowMoreLink
+                                ? showMoreLabel.replace(
+                                    '[numberOfAuthors]',
+                                    `${authors.length - initialNumberOfAuthors}`
+                                )
+                                : showLessLabel}
                         </a>
                     </span>
-                }
+                )}
                 {suffix}
             </span>
         );
