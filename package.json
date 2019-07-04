@@ -195,8 +195,8 @@
         "cypress:open": "cypress open",
         "cypress:watch": "cypress run --headed",
         "cypress:run": "cypress run",
-        "e2e": "start-server-and-test 'npm run start:mock' http-get://localhost:3000 'cypress run --record --key 23de9624-0e50-4e6e-9adb-8dd4e7efb0a5 --parallel'",
-        "e2e:watch": "start-server-and-test 'npm run start:mock' http-get://localhost:3000 'cypress run --headed --record --key 23de9624-0e50-4e6e-9adb-8dd4e7efb0a5 --parallel'",
+        "e2e": "start-server-and-test 'npm run start:mock' http-get://localhost:3000 'cypress run'",
+        "e2e:watch": "start-server-and-test 'npm run start:mock' http-get://localhost:3000 'cypress run'",
         "test:all": "npm run test && npm run cypress:run"
     },
     "engines": {
