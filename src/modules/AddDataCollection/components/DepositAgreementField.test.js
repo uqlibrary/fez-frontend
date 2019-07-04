@@ -11,9 +11,9 @@ function setup(testProps, isShallow = true) {
         classes: {
             label: '',
             error: '',
-            accepted: ''
+            accepted: '',
         },
-        ...testProps
+        ...testProps,
     };
 
     return getElement(DepositAgreementField, props, isShallow);

@@ -1,25 +1,25 @@
-import React, {PureComponent} from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-import {locale} from 'locale';
-import {PublicationsList} from 'modules/SharedComponents/PublicationsList';
-import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
-import {HelpIcon} from 'modules/SharedComponents/Toolbox/HelpDrawer';
+import { locale } from 'locale';
+import { PublicationsList } from 'modules/SharedComponents/PublicationsList';
+import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
+import { HelpIcon } from 'modules/SharedComponents/Toolbox/HelpDrawer';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import {withStyles} from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 
 const styles = {
     pubCounts: {
         '& .citationMetrics': {
             '& .count': {
-                fontSize: '1.75rem'
+                fontSize: '1.75rem',
             },
             '& .difference': {
                 fontSize: '1rem',
-            }
-        }
-    }
+            },
+        },
+    },
 };
 
 export class MyTrendingPublications extends PureComponent {
@@ -28,12 +28,12 @@ export class MyTrendingPublications extends PureComponent {
         loadingTrendingPublications: PropTypes.bool,
         actions: PropTypes.object,
         accountAuthorDetailsLoading: PropTypes.bool,
-        classes: PropTypes.object
+        classes: PropTypes.object,
     };
 
     static defaultProps = {
         trendingPublicationsList: [],
-        loadingTrendingPublications: false
+        loadingTrendingPublications: false,
     };
 
     componentDidMount() {
@@ -60,7 +60,7 @@ export class MyTrendingPublications extends PureComponent {
             <Grid container spacing={24} id={'myTrendingPublications'}>
                 <Grid item xs={12}>
                     {
-                        this.props.trendingPublicationsList.map(({key, values}, metricIndex) => {
+                        this.props.trendingPublicationsList.map(({ key, values }, metricIndex) => {
                             return (
                                 <Grid container key={metricIndex} spacing={24}>
                                     <Grid item xs>
@@ -89,5 +89,5 @@ export class MyTrendingPublications extends PureComponent {
     }
 }
 
-export default withStyles(styles, {withTheme: true})(MyTrendingPublications);
+export default withStyles(styles, { withTheme: true })(MyTrendingPublications);
 

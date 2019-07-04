@@ -5,7 +5,7 @@ import locale from 'locale/pages';
 
 const profileFallbackImage = require('../../../../public/images/avatar.svg');
 
-const DashboardAuthorAvatar = ({values}) => {
+const DashboardAuthorAvatar = ({ values }) => {
     const txt =  locale.pages.dashboard.header.dashboardAuthorAvatar;
     return (
         <Avatar
@@ -15,7 +15,7 @@ const DashboardAuthorAvatar = ({values}) => {
                 backgroundColor: 'transparent',
                 width: 125,
                 height: 125,
-                margin: 8
+                margin: 8,
             }}
             aria-label={`${txt.ariaPrefix} ${values.title} ${values.givenName} ${values.familyName}`}
             title={`${values.title} ${values.givenName} ${values.familyName}`} />
@@ -27,8 +27,8 @@ DashboardAuthorAvatar.propTypes = {
         uqr_id: PropTypes.any,
         title: PropTypes.string,
         familyName: PropTypes.string,
-        givenName: PropTypes.string
-    })
+        givenName: PropTypes.string,
+    }),
 };
 
 export default DashboardAuthorAvatar;

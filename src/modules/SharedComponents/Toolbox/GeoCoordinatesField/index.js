@@ -1,1 +1,1 @@
-export {default as GeoCoordinatesField} from './GeoCoordinatesField';
+export { default as GeoCoordinatesField } from './GeoCoordinatesField';

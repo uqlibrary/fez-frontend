@@ -1,4 +1,4 @@
-import {styles} from './FileName';
+import { styles } from './FileName';
 
 describe('FileName component', () => {
     it('should have a proper style generator', () => {
@@ -6,9 +6,9 @@ describe('FileName component', () => {
             typography: {
                 body2: {
                     test1: 'test1',
-                    test2: 'test2'
-                }
-            }
+                    test2: 'test2',
+                },
+            },
         };
         expect(styles(theme)).toMatchSnapshot();
     });

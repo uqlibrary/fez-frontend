@@ -1,5 +1,5 @@
 import WorkingPaperCitation from './WorkingPaperCitation';
-import {workingPaper} from 'mock/data/testing/records';
+import { workingPaper } from 'mock/data/testing/records';
 
 function setup(testProps, isShallow = false) {
     const props = {
@@ -24,8 +24,8 @@ describe('WorkingPaperCitation renders ', () => {
         const wrapper = setup({
             publication: {
                 ...workingPaper,
-                fez_record_search_key_doi: {rek_doi: null}
-            }
+                fez_record_search_key_doi: { rek_doi: null },
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });

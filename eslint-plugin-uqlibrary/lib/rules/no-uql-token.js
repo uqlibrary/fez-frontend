@@ -6,7 +6,8 @@ const isLeftNodeApiToken = node => {
     if (
         node.left.hasOwnProperty('object') &&
         node.left.object.hasOwnProperty('object') &&
-        node.left.object.object.hasOwnProperty('object')
+        node.left.object.object.hasOwnProperty('object') &&
+        node.left.object.object.object.hasOwnProperty('property')
     ) {
         return (
             node.left.object.object.object.property.name === 'defaults' &&
@@ -27,13 +28,12 @@ module.exports = context => ({
         if (isLeftNodeApiToken(node)) {
             if (
                 node.right.type === 'LogicalExpression' &&
-                (node.right.left.type === 'Literal' ||
-                    node.right.right.type === 'Literal')
+                (node.right.left.type === 'Literal' || node.right.right.type === 'Literal')
             ) {
                 context.report(node, ERROR_MESSAGE_CONDITIONAL);
             } else if (node.right.type === 'Literal' && !isMockToken(node)) {
                 context.report(node, ERROR_MESSAGE_DIRECT_ASSIGNMENT);
             }
         }
-    }
+    },
 });

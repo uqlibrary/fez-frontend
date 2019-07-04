@@ -3,7 +3,7 @@ import * as actions from 'actions/actionTypes';
 export const initialState = {
     latestPublicationsList: [],
     loadingLatestPublications: true,
-    totalPublicationsCount: null
+    totalPublicationsCount: null,
 };
 
 const handlers = {
@@ -12,7 +12,7 @@ const handlers = {
             ...state,
             latestPublicationsList: [],
             totalPublicationsCount: null,
-            loadingLatestPublications: true
+            loadingLatestPublications: true,
         };
     },
 
@@ -21,7 +21,7 @@ const handlers = {
             ...state,
             latestPublicationsList: action.payload.data,
             totalPublicationsCount: action.payload.total,
-            loadingLatestPublications: false
+            loadingLatestPublications: false,
         };
     },
 
@@ -30,9 +30,9 @@ const handlers = {
             ...state,
             latestPublicationsList: [],
             totalPublicationsCount: null,
-            loadingLatestPublications: false
+            loadingLatestPublications: false,
         };
-    }
+    },
 };
 
 export default function myLatestPublicationsReducer(state = initialState, action) {

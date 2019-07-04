@@ -1,13 +1,13 @@
-import {connect} from 'react-redux';
-import {bindActionCreators} from 'redux';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import Dashboard from '../components/Dashboard';
 import * as actions from 'actions';
-import {withRouter} from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 const mapStateToProps = (state) => {
-    const {loadingLatestPublications, latestPublicationsList} = state.get('myLatestPublicationsReducer');
-    const {loadingTrendingPublications, trendingPublicationsList} = state.get('myTrendingPublicationsReducer');
-    const {possibleCounts, loadingPossibleCounts} = state.get('claimPublicationReducer');
+    const { loadingLatestPublications, latestPublicationsList } = state.get('myLatestPublicationsReducer');
+    const { loadingTrendingPublications, trendingPublicationsList } = state.get('myTrendingPublicationsReducer');
+    const { possibleCounts, loadingPossibleCounts } = state.get('claimPublicationReducer');
 
     return {
         ...state.get('accountReducer'),
@@ -23,7 +23,7 @@ const mapStateToProps = (state) => {
 
 function mapDispatchToProps(dispatch) {
     return {
-        actions: bindActionCreators(actions, dispatch)
+        actions: bindActionCreators(actions, dispatch),
     };
 }
 

@@ -1,10 +1,10 @@
 import AddDataCollection from './AddDataCollection';
 import Immutable from 'immutable';
-import {default as formLocale} from 'locale/publicationForm';
+import { default as formLocale } from 'locale/publicationForm';
 
 function setup(testProps, isShallow = true) {
     const props = {
-        "array": {
+        'array': {
             insert: jest.fn(),
             move: jest.fn(),
             pop: jest.fn(),
@@ -20,8 +20,8 @@ function setup(testProps, isShallow = true) {
         blur: jest.fn(),
         change: jest.fn(),
         clearAsyncError: jest.fn(),
-        "anyTouched": true,
-        "asyncValidating": false,
+        'anyTouched': true,
+        'asyncValidating': false,
         asyncValidate: jest.fn(),
         clearFields: jest.fn(),
         clearSubmitErrors: jest.fn(),
@@ -35,11 +35,11 @@ function setup(testProps, isShallow = true) {
         submit: jest.fn(),
         untouch: jest.fn(),
         clearSubmit: jest.fn(),
-        "dirty": true,
-        "form": "form",
-        "initialized": false,
-        "submitFailed": false,
-        "valid": true,
+        'dirty': true,
+        'form': 'form',
+        'initialized': false,
+        'submitFailed': false,
+        'valid': true,
         pure: true,
         // common immutable props above
         formValues: testProps.initialValues ? Immutable.Map(testProps.initialValues) : Immutable.Map({}),
@@ -66,37 +66,38 @@ describe('AddDataCollection test', () => {
     });
 
     it('should render component with all fields disabled', () => {
-        const wrapper = setup({submitting: true});
+        const wrapper = setup({ submitting: true });
         wrapper.find('Field').forEach(field => {
             expect(field.props().disabled).toEqual(true);
-        })
+        });
     });
 
     it('should disable submit button if invalid form data before submit', () => {
-        const wrapper = setup({disableSubmit: true});
+        const wrapper = setup({ disableSubmit: true });
         expect(wrapper.find('WithStyles(Button)').length).toEqual(2);
 
         wrapper.find('WithStyles(Button)').forEach(field => {
             if (field.props().label === formLocale.addDataset.submit) {
                 expect(field.props().disabled).toEqual(true);
             }
-        })
+        });
     });
 
     it('should not disable submit button if form submit has failed', () => {
-        const wrapper = setup({submitFailed: true});
+        const wrapper = setup({ submitFailed: true });
         expect(wrapper.find('WithStyles(Button)').length).toEqual(2);
 
         wrapper.find('WithStyles(Button)').forEach(field => {
             if (field.props().label === formLocale.addDataset.submit) {
                 expect(field.props().disabled).toEqual(false);
             }
-        })
+        });
     });
 
     it('should redirect to cancel page', () => {
         window.location.reload = jest.fn();
-        setup({}).instance()._restartWorkflow();
+        setup({}).instance()
+            ._restartWorkflow();
         expect(window.location.reload).toHaveBeenCalled();
     });
 
@@ -105,11 +106,11 @@ describe('AddDataCollection test', () => {
         const pushFn = jest.fn();
         const wrapper = setup({
             actions: {
-                clearNewRecord: clearNewRecordFn
+                clearNewRecord: clearNewRecordFn,
             },
             history: {
-                push: pushFn
-            }
+                push: pushFn,
+            },
         });
 
         wrapper.instance()._navigateToMyDatasets();
@@ -121,28 +122,28 @@ describe('AddDataCollection test', () => {
     it('should show confirmation on form submitted', () => {
         const showConfirmationFn = jest.fn();
         const wrapper = setup({});
-        wrapper.instance().confirmationBox = {showConfirmation: showConfirmationFn};
+        wrapper.instance().confirmationBox = { showConfirmation: showConfirmationFn };
         wrapper.setProps({
-            submitSucceeded: true
+            submitSucceeded: true,
         });
         expect(showConfirmationFn).toHaveBeenCalled();
 
         showConfirmationFn.mockClear();
         wrapper.setProps({
-            submitSucceeded: true
+            submitSucceeded: true,
         });
         expect(showConfirmationFn).not.toBeCalled();
     });
 
     it('should set confirmation box ref', () => {
         const wrapper = setup({});
-        wrapper.instance()._handleRef({ref: 'test'});
-        expect(wrapper.instance().confirmationBox).toEqual({ref: 'test'});
+        wrapper.instance()._handleRef({ ref: 'test' });
+        expect(wrapper.instance().confirmationBox).toEqual({ ref: 'test' });
     });
 
     it('should get save confirmation locale correctly', () => {
         const wrapper = setup({
-            newRecordFileUploadingOrIssueError: true
+            newRecordFileUploadingOrIssueError: true,
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });

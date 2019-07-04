@@ -2,7 +2,7 @@ import Immutable from 'immutable';
 
 import {
     HIDE,
-    SHOW
+    SHOW,
 } from './actions';
 
 const initialState = Immutable.fromJS({
@@ -10,13 +10,13 @@ const initialState = Immutable.fromJS({
     title: '',
     text: '',
     buttonLabel: 'OK',
-    tooltip: 'Click for more information'
+    tooltip: 'Click for more information',
 });
 
 const helpDrawerReducer = (state = initialState, action) => {
     switch (action.type) {
         case SHOW:
-            return Immutable.fromJS({...action.payload, open: true});
+            return Immutable.fromJS({ ...action.payload, open: true });
         case HIDE:
             return initialState;
         default:

@@ -1,1 +1,1 @@
-export {default as NavigationDialogBox} from './components/NavigationDialogBox';
+export { default as NavigationDialogBox } from './components/NavigationDialogBox';

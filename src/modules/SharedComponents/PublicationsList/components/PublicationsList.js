@@ -1,6 +1,6 @@
-import React, {PureComponent, Fragment} from 'react';
+import React, { PureComponent, Fragment } from 'react';
 import PropTypes from 'prop-types';
-import {PublicationCitation} from 'modules/SharedComponents/PublicationCitation';
+import { PublicationCitation } from 'modules/SharedComponents/PublicationCitation';
 
 export default class PublicationsList extends PureComponent {
     static propTypes = {
@@ -26,7 +26,7 @@ export default class PublicationsList extends PureComponent {
         showSourceCountIcon: false,
         showMetrics: false,
         showUnpublishedBufferFields: false,
-        hideCountDiff: false
+        hideCountDiff: false,
     };
 
     renderPublicationCitation(index, publication) {
@@ -35,7 +35,11 @@ export default class PublicationsList extends PureComponent {
                 publicationsLoading={this.props.publicationsLoading}
                 key={index + publication.rek_title + publication.rek_date}
                 publication={publication}
-                customActions={!publication.rek_pid || this.props.publicationsListSubset.indexOf(publication.rek_pid) === -1 ? this.props.customActions : this.props.subsetCustomActions}
+                customActions={
+                    !publication.rek_pid || this.props.publicationsListSubset.indexOf(publication.rek_pid) === -1
+                        ? this.props.customActions
+                        : this.props.subsetCustomActions
+                }
                 showSources={this.props.showSources}
                 showDefaultActions={this.props.showDefaultActions}
                 showMetrics={this.props.showMetrics}
@@ -52,10 +56,6 @@ export default class PublicationsList extends PureComponent {
             return this.renderPublicationCitation(index, publication);
         });
 
-        return (
-            <Fragment>
-                {publications}
-            </Fragment>
-        );
+        return <Fragment>{publications}</Fragment>;
     }
 }

@@ -1,6 +1,6 @@
 import * as actions from './actionTypes';
-import {get} from 'repositories/generic';
-import {EXISTING_RECORD_API} from 'repositories/routes';
+import { get } from 'repositories/generic';
+import { EXISTING_RECORD_API } from 'repositories/routes';
 
 /**
  * Load publication
@@ -9,13 +9,13 @@ import {EXISTING_RECORD_API} from 'repositories/routes';
  */
 export function loadRecordToView(pid) {
     return dispatch => {
-        dispatch({type: actions.VIEW_RECORD_LOADING});
+        dispatch({ type: actions.VIEW_RECORD_LOADING });
 
-        return get(EXISTING_RECORD_API({pid: pid}))
+        return get(EXISTING_RECORD_API({ pid: pid }))
             .then(response => {
                 dispatch({
                     type: actions.VIEW_RECORD_LOADED,
-                    payload: response.data
+                    payload: response.data,
                 });
 
                 return Promise.resolve(response.data);
@@ -23,7 +23,7 @@ export function loadRecordToView(pid) {
             .catch(error => {
                 dispatch({
                     type: actions.VIEW_RECORD_LOAD_FAILED,
-                    payload: error.message
+                    payload: error.message,
                 });
             });
     };
@@ -36,7 +36,7 @@ export function loadRecordToView(pid) {
 export function clearRecordToView() {
     return dispatch => {
         dispatch({
-            type: actions.VIEW_RECORD_CLEAR
+            type: actions.VIEW_RECORD_CLEAR,
         });
     };
 }
@@ -47,6 +47,6 @@ export function clearRecordToView() {
  */
 export function setHideCulturalSensitivityStatement() {
     return {
-        type: actions.VIEW_RECORD_CULTURAL_SENSITIVITY_STATEMENT_HIDE
+        type: actions.VIEW_RECORD_CULTURAL_SENSITIVITY_STATEMENT_HIDE,
     };
 }

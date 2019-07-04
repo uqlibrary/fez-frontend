@@ -1,8 +1,8 @@
-import {connect} from 'react-redux';
-import {bindActionCreators} from 'redux';
-import {reduxForm, getFormValues, SubmissionError} from 'redux-form/immutable';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { reduxForm, getFormValues, SubmissionError } from 'redux-form/immutable';
 import Immutable from 'immutable';
-import {withRouter} from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import * as actions from 'actions';
 
 import GoogleScholar from '../components/GoogleScholar';
@@ -18,8 +18,9 @@ const onSubmit = (values, dispatch, props) => {
             // setTimeout(()=>{
             //     dispatch(reset(FORM_NAME));
             // }, 100);
-        }).catch(error => {
-            throw new SubmissionError({_error: error.message});
+        })
+        .catch(error => {
+            throw new SubmissionError({ _error: error.message });
         });
 };
 
@@ -33,20 +34,20 @@ const mapStateToProps = (state) => (
                 : '',
             aut_google_scholar_id: state.get('accountReducer') && state.get('accountReducer').author
                 ? state.get('accountReducer').author.aut_google_scholar_id
-                : ''
-        }
+                : '',
+        },
     }
 );
 
 const mapDispatchToProps = (dispatch) => (
     {
-        actions: bindActionCreators(actions, dispatch)
+        actions: bindActionCreators(actions, dispatch),
     }
 );
 
 let GoogleScholarContainer = reduxForm({
     form: FORM_NAME,
-    onSubmit
+    onSubmit,
 })(GoogleScholar);
 
 GoogleScholarContainer = connect(mapStateToProps, mapDispatchToProps)(GoogleScholarContainer);

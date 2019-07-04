@@ -13,32 +13,31 @@ describe('NewsFeed actions', () => {
         mockApi.reset();
     });
 
-    it('should call loading/loaded actions on successful load', async () => {
+    it('should call loading/loaded actions on successful load', async() => {
         mockApi
             .onGet(repositories.routes.GET_NEWS_API().apiUrl)
             .reply(200, newsFeedData);
 
         const expectedActions = [
             actions.NEWS_LOADING,
-            actions.NEWS_LOADED
+            actions.NEWS_LOADED,
         ];
 
         await mockActionsStore.dispatch(newsFeedActions.loadNewsFeed());
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
-    it('should call loading/load failed actions on failed load', async () => {
+    it('should call loading/load failed actions on failed load', async() => {
         mockApi
             .onAny()
             .reply(404);
 
         const expectedActions = [
             actions.NEWS_LOADING,
-            actions.NEWS_LOAD_FAILED
+            actions.NEWS_LOAD_FAILED,
         ];
 
         await mockActionsStore.dispatch(newsFeedActions.loadNewsFeed());
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
-
 });

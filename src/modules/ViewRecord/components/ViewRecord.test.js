@@ -1,15 +1,15 @@
 import ViewRecord from './ViewRecord';
-import {mockRecordToFix, ntro} from 'mock/data/testing/records';
+import { mockRecordToFix, ntro } from 'mock/data/testing/records';
 import * as records from 'mock/data/testing/records';
 
-function setup(testProps, isShallow = true){
+function setup(testProps, isShallow = true) {
     const props = {
         ...testProps,
-        match: testProps.match || { params: {pid: 'UQ:12344'}},
+        match: testProps.match || { params: { pid: 'UQ:12344' } },
         actions: testProps.actions || {
             loadRecordToView: jest.fn(),
-            clearRecordToView: jest.fn()
-        }
+            clearRecordToView: jest.fn(),
+        },
     };
     return getElement(ViewRecord, props, isShallow);
 }
@@ -21,35 +21,35 @@ describe('Component ViewRecord ', () => {
     });
 
     it('should render loader', () => {
-        const wrapper = setup({loadingRecordToView: true});
+        const wrapper = setup({ loadingRecordToView: true });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render error', () => {
-        const wrapper = setup({recordToViewError: 'PID not found'});
+        const wrapper = setup({ recordToViewError: 'PID not found' });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render record view', () => {
-        const wrapper = setup({recordToView: mockRecordToFix});
+        const wrapper = setup({ recordToView: mockRecordToFix });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should not render components for empty record', () => {
-        const wrapper = setup({recordToView: {}});
+        const wrapper = setup({ recordToView: {} });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render record view without a title', () => {
-        const wrapper = setup({recordToView: mockRecordToFix, hideTitle: true});
+        const wrapper = setup({ recordToView: mockRecordToFix, hideTitle: true });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should load record to view', () => {
         const testMethod = jest.fn();
-        const wrapper = setup({
-            actions: {loadRecordToView: testMethod},
-            match: { params: {pid: 'UQ:111'}}
+        setup({
+            actions: { loadRecordToView: testMethod },
+            match: { params: { pid: 'UQ:111' } },
         });
         expect(testMethod).toHaveBeenCalledWith('UQ:111');
     });
@@ -66,9 +66,9 @@ describe('Component ViewRecord ', () => {
         const newProps = {
             match: {
                 params: {
-                    pid: 'UQ:12345'
-                }
-            }
+                    pid: 'UQ:12345',
+                },
+            },
         };
         wrapper.instance().componentWillReceiveProps(newProps);
         expect(test).toBeCalledWith(newProps.match.params.pid);
@@ -93,8 +93,8 @@ describe('Component ViewRecord ', () => {
             loadingRecordToView: false,
             recordToViewError: '',
             account: {
-                canMasquerade: true
-            }
+                canMasquerade: true,
+            },
         });
         expect(wrapper.find('NtroDetails').length).toBe(1);
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -102,114 +102,140 @@ describe('Component ViewRecord ', () => {
 });
 
 describe('Document type snapshots of ViewRecord ', () => {
-
     const recordInfo = [
         {
             recordType: 'Data collection',
-            record: 'dataCollection'
-        },{
+            record: 'dataCollection',
+        },
+        {
             recordType: 'Data collection with FoR codes',
-            record: 'dataCollectionWithFoRCodes'
-        },{
+            record: 'dataCollectionWithFoRCodes',
+        },
+        {
             recordType: 'Newspaper article',
-            record: 'newspaperArticle'
-        },{
+            record: 'newspaperArticle',
+        },
+        {
             recordType: 'Thesis',
-            record: 'thesis'
-        },{
+            record: 'thesis',
+        },
+        {
             recordType: 'Conference proceedings',
-            record: 'conferenceProceedings'
-        },{
+            record: 'conferenceProceedings',
+        },
+        {
             recordType: 'Conference paper with proceedings',
-            record: 'conferencePaperWithProceedingsTitle'
-        },{
+            record: 'conferencePaperWithProceedingsTitle',
+        },
+        {
             recordType: 'Digilib image',
-            record: 'digilibImage'
-        },{
+            record: 'digilibImage',
+        },
+        {
             recordType: 'Working paper',
-            record: 'workingPaper'
-        },{
+            record: 'workingPaper',
+        },
+        {
             recordType: 'Design',
-            record: 'design'
-        },{
+            record: 'design',
+        },
+        {
             recordType: 'Creative work',
-            record: 'creativeWork'
-        },{
+            record: 'creativeWork',
+        },
+        {
             recordType: 'Department technical report',
-            record: 'departmentTechnicalReport'
-        },{
+            record: 'departmentTechnicalReport',
+        },
+        {
             recordType: 'Journal article',
-            record: 'journalArticle'
-        },{
+            record: 'journalArticle',
+        },
+        {
             recordType: 'Book chapter',
-            record: 'bookChapter'
-        },{
+            record: 'bookChapter',
+        },
+        {
             recordType: 'Book',
-            record: 'book'
-        },{
+            record: 'book',
+        },
+        {
             recordType: 'Edited book',
-            record: 'editedBook'
-        },{
+            record: 'editedBook',
+        },
+        {
             recordType: 'Conference paper',
-            record: 'conferencePaper'
-        },{
+            record: 'conferencePaper',
+        },
+        {
             recordType: 'Generic',
-            record: 'generic'
-        },{
+            record: 'generic',
+        },
+        {
             recordType: 'Audio document',
-            record: 'audioDocument'
-        },{
+            record: 'audioDocument',
+        },
+        {
             recordType: 'Preprint',
-            record: 'preprint'
-        },{
+            record: 'preprint',
+        },
+        {
             recordType: 'Research report',
-            record: 'researchReport'
-        },{
+            record: 'researchReport',
+        },
+        {
             recordType: 'Seminar paper',
-            record: 'seminarPaper'
-        },{
+            record: 'seminarPaper',
+        },
+        {
             recordType: 'Manuscript',
-            record: 'manuscript'
-        },{
+            record: 'manuscript',
+        },
+        {
             recordType: 'Image',
-            record: 'imageDocument'
-        },{
+            record: 'imageDocument',
+        },
+        {
             recordType: 'Video',
-            record: 'videoDocument'
-        },{
+            record: 'videoDocument',
+        },
+        {
             recordType: 'Journal',
-            record: 'journal'
-        },{
+            record: 'journal',
+        },
+        {
             recordType: 'Patent',
-            record: 'patent'
-        },{
+            record: 'patent',
+        },
+        {
             recordType: 'NTRO 1',
-            record: 'ntro'
-        },{
+            record: 'ntro',
+        },
+        {
             recordType: 'NTRO 2',
-            record: 'ntro2'
-        },{
+            record: 'ntro2',
+        },
+        {
             recordType: 'NTRO minimal',
-            record: 'ntroMinimal'
+            record: 'ntroMinimal',
         },
     ];
 
-    recordInfo.forEach((record) => {
+    recordInfo.forEach(record => {
         it(`should render ${record.recordType}`, () => {
             const wrapper = setup({
                 recordToView: records[record.record],
                 loadingRecordToView: false,
                 recordToViewError: null,
-                match: {params: {pid: records[record.record.rek_pid]}},
+                match: { params: { pid: records[record.record.rek_pid] } },
                 actions: {
                     loadRecordToView: jest.fn(),
-                    clearRecordToView: jest.fn()
+                    clearRecordToView: jest.fn(),
                 },
                 hideCulturalSensitivityStatement: true,
-                account: {}
+                account: {},
             });
             expect(toJson(wrapper)).toMatchSnapshot();
         });
     });
-
 });

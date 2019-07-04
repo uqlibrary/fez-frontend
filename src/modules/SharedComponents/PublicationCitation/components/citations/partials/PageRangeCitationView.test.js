@@ -5,7 +5,7 @@ function setup(testProps, isShallow = true) {
     const props = {
         classes: {},
         ...testProps,
-        publication: testProps.publication || {}
+        publication: testProps.publication || {},
     };
     return getElement(PageRangeCitationView, props, isShallow);
 }
@@ -20,9 +20,9 @@ describe('PageRangeCitationView test ', () => {
         const wrapper = setup({
             publication: {
                 fez_record_search_key_start_page: {
-                    rek_start_page: 11
-                }
-            }
+                    rek_start_page: 11,
+                },
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -31,9 +31,9 @@ describe('PageRangeCitationView test ', () => {
         const wrapper = setup({
             publication: {
                 fez_record_search_key_end_page: {
-                    rek_end_page: 11
-                }
-            }
+                    rek_end_page: 11,
+                },
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -42,12 +42,12 @@ describe('PageRangeCitationView test ', () => {
         const wrapper = setup({
             publication: {
                 fez_record_search_key_start_page: {
-                    rek_start_page: 13
+                    rek_start_page: 13,
                 },
                 fez_record_search_key_end_page: {
-                    rek_end_page: 17
-                }
-            }
+                    rek_end_page: 17,
+                },
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -56,10 +56,10 @@ describe('PageRangeCitationView test ', () => {
         const wrapper = setup({
             publication: {
                 fez_record_search_key_start_page: {
-                    rek_start_page: 13
+                    rek_start_page: 13,
                 },
-                fez_record_search_key_end_page: {}
-            }
+                fez_record_search_key_end_page: {},
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });

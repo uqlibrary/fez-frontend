@@ -48,34 +48,39 @@ context('Homepage', () => {
         cy.visit('/?user=uqexpired');
         dismissUnsupportedBrowserMessage();
         cy.get('button[aria-label="Click to open the main navigation"]').click();
-        cy.get('nav#mainMenu').get('div[role="button"]').should('have.length', 4);
+        cy.get('nav#mainMenu').get('div[role="button"]')
+            .should('have.length', 4);
     });
 
     it('Has expected menu items for a researcher', () => {
         cy.visit('/?user=uqresearcher');
         dismissUnsupportedBrowserMessage();
         cy.get('button[aria-label="Click to open the main navigation"]').click();
-        cy.get('nav#mainMenu').get('div[role="button"]').should('have.length', 12);
+        cy.get('nav#mainMenu').get('div[role="button"]')
+            .should('have.length', 12);
     });
 
     it('Has expected menu items for an admin', () => {
         cy.visit('/?user=uqstaff');
         dismissUnsupportedBrowserMessage();
         cy.get('button[aria-label="Click to open the main navigation"]').click();
-        cy.get('nav#mainMenu').get('div[role="button"]').should('have.length', 16);
+        cy.get('nav#mainMenu').get('div[role="button"]')
+            .should('have.length', 16);
     });
 
     it('Has expected menu items for a student', () => {
         cy.visit('/?user=s1111111');
         dismissUnsupportedBrowserMessage();
         cy.get('button[aria-label="Click to open the main navigation"]').click();
-        cy.get('nav#mainMenu').get('div[role="button"]').should('have.length', 12);
+        cy.get('nav#mainMenu').get('div[role="button"]')
+            .should('have.length', 12);
     });
 
     it('Has expected menu items for a RHD student', () => {
         cy.visit('/?user=s2222222');
         dismissUnsupportedBrowserMessage();
         cy.get('button[aria-label="Click to open the main navigation"]').click();
-        cy.get('nav#mainMenu').get('div[role="button"]').should('have.length', 12);
+        cy.get('nav#mainMenu').get('div[role="button"]')
+            .should('have.length', 12);
     });
 });

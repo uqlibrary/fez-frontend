@@ -1,18 +1,18 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import {Field} from 'redux-form/immutable';
+import { Field } from 'redux-form/immutable';
 
-import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
-import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
-import {PartialDateField} from 'modules/SharedComponents/Toolbox/PartialDate';
-import {ListEditorField} from 'modules/SharedComponents/Toolbox/ListEditor';
-import {NtroFields} from 'modules/SharedComponents/Toolbox/NtroFields';
+import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
+import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
+import { PartialDateField } from 'modules/SharedComponents/Toolbox/PartialDate';
+import { ListEditorField } from 'modules/SharedComponents/Toolbox/ListEditor';
+import { NtroFields } from 'modules/SharedComponents/Toolbox/NtroFields';
 
-import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
-import {validation} from 'config';
-import {locale} from 'locale';
-import {NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION, SUBTYPE_EDITED_BOOK} from 'config/general';
-import {default as formLocale} from 'locale/publicationForm';
+import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
+import { validation } from 'config';
+import { locale } from 'locale';
+import { NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION, SUBTYPE_EDITED_BOOK } from 'config/general';
+import { default as formLocale } from 'locale/publicationForm';
 
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
@@ -23,13 +23,13 @@ export default class BookForm extends Component {
         formValues: PropTypes.object,
         subtype: PropTypes.string,
         isNtro: PropTypes.bool,
-        isAuthorSelected: PropTypes.bool
+        isAuthorSelected: PropTypes.bool,
     };
 
     static defaultProps = {
         isNtro: false,
         subtype: null,
-        isAuthorSelected: false
+        isAuthorSelected: false,
     };
 
     constructor(props) {
@@ -182,7 +182,7 @@ export default class BookForm extends Component {
                             name="fez_record_search_key_isbn"
                             isValid={validation.isValidIsbn}
                             maxCount={5}
-                            searchKey={{value: 'rek_isbn', order: 'rek_isbn_order'}}
+                            searchKey={{ value: 'rek_isbn', order: 'rek_isbn_order' }}
                             locale={locale.components.isbnForm.field}
                             disabled={this.props.submitting} />
                     </StandardCard>
@@ -197,7 +197,7 @@ export default class BookForm extends Component {
                             name="fez_record_search_key_issn"
                             maxCount={5}
                             locale={locale.components.issnForm.field}
-                            searchKey={{value: 'rek_issn', order: 'rek_issn_order'}}
+                            searchKey={{ value: 'rek_issn', order: 'rek_issn_order' }}
                             disabled={this.props.submitting} />
                     </StandardCard>
                 </Grid>

@@ -1,7 +1,7 @@
-import React, {Fragment, PureComponent} from 'react';
+import React, { Fragment, PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
+import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 
 import Grid from '@material-ui/core/Grid/Grid';
 import Button from '@material-ui/core/Button/Button';
@@ -14,7 +14,7 @@ export class ThirdPartyLookupFormResult extends PureComponent {
         secondaryValue: PropTypes.string,
         formDisplay: PropTypes.object,
         // localeform: PropTypes.object.isRequired,
-        locale: PropTypes.object.isRequired
+        locale: PropTypes.object.isRequired,
     };
 
     static defaultProps = {
@@ -35,36 +35,43 @@ export class ThirdPartyLookupFormResult extends PureComponent {
             <Grid container spacing={24}>
                 <Grid item xs={12}>
                     <StandardCard title={txt.thisForm.lookupLabel}>
-                        <p>{txt.thisForm.primaryFieldHeading} - {this.props.primaryValue}</p>
-                        {
-                            // not all forms will have a second field; some of them shouldn't be reported
-                            !!txt.thisForm.secondaryFieldHeading && !!txt.thisForm.reportSecondaryFieldInOutput && this.props.secondaryValue &&
-                            <p>{txt.thisForm.secondaryFieldHeading} - {this.props.secondaryValue}</p>
-                        }
-                        <StandardCard title={this.props.locale.resultsLabel ? this.props.locale.resultsLabel : 'Results'}>
-                            {
-                                this.props.lookupResults.length > 0 &&
+                        <p>
+                            {txt.thisForm.primaryFieldHeading} - {this.props.primaryValue}
+                        </p>
+                        {// not all forms will have a second field; some of them shouldn't be reported
+                            !!txt.thisForm.secondaryFieldHeading &&
+                            !!txt.thisForm.reportSecondaryFieldInOutput &&
+                            this.props.secondaryValue && (
+                                <p>
+                                    {txt.thisForm.secondaryFieldHeading} - {this.props.secondaryValue}
+                                </p>
+                            )}
+                        <StandardCard
+                            title={this.props.locale.resultsLabel ? this.props.locale.resultsLabel : 'Results'}
+                        >
+                            {this.props.lookupResults.length > 0 && (
                                 <Fragment>
-                                    <pre>
-                                        {JSON.stringify(this.props.lookupResults, null, 2)}
-                                    </pre>
+                                    <pre>{JSON.stringify(this.props.lookupResults, null, 2)}</pre>
                                 </Fragment>
-                            }
-                            {
-                                this.props.lookupResults.length === 0 &&
+                            )}
+                            {this.props.lookupResults.length === 0 && (
                                 <Grid item xs={12}>
                                     <StandardCard>
-                                        {this.props.locale.noResultsFound && this.props.locale.noResultsFound.text ? this.props.locale.noResultsFound.text : 'No results found'}
+                                        {this.props.locale.noResultsFound && this.props.locale.noResultsFound.text
+                                            ? this.props.locale.noResultsFound.text
+                                            : 'No results found'}
                                     </StandardCard>
                                 </Grid>
-                            }
+                            )}
                         </StandardCard>
                         <Button
-                            children= {this.props.locale.clearButtonLabel ? this.props.locale.clearButtonLabel : 'New Search'}
+                            children={
+                                this.props.locale.clearButtonLabel ? this.props.locale.clearButtonLabel : 'New Search'
+                            }
                             variant="contained"
                             color={'primary'}
                             onClick={() => this._handleClear()}
-                            style={{marginTop: 20}}
+                            style={{ marginTop: 20 }}
                         />
                     </StandardCard>
                 </Grid>

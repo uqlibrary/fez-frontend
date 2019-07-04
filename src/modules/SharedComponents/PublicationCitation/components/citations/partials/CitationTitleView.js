@@ -1,4 +1,4 @@
-import React, {PureComponent} from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import ReactHtmlParser from 'react-html-parser';
 
@@ -7,12 +7,12 @@ export default class CitationTitleView extends PureComponent {
         prefix: PropTypes.string,
         suffix: PropTypes.string,
         className: PropTypes.string,
-        value: PropTypes.string
+        value: PropTypes.string,
     };
 
     static defaultProps = {
         prefix: ' ',
-        suffix: '.'
+        suffix: '.',
     };
 
     constructor(props) {
@@ -20,7 +20,7 @@ export default class CitationTitleView extends PureComponent {
     }
 
     render()  {
-        const {value, className, prefix, suffix} = this.props;
+        const { value, className, prefix, suffix } = this.props;
         if (!value) {
             return (<span className={`${className || ''} empty`} />);
         }

@@ -2,19 +2,15 @@ import CommunityForm from './CommunityForm';
 
 function setup(testProps, isShallow = true) {
     const props = {
-        ...testProps
+        ...testProps,
     };
 
     return getElement(CommunityForm, props, isShallow);
 }
 
 describe('CommunityForm container', () => {
-    it('should mount', () => {
-        const wrapper = setup({}, false);
-    });
-
-    it('should read the local storage', () => {
-        const wrapper = setup({}, false);
+    it('should mount and read the local storage', () => {
+        setup({}, false);
         expect(localStorage.getItem).toHaveBeenLastCalledWith('form');
     });
 });

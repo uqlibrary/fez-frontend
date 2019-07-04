@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import IconButton from '@material-ui/core/IconButton';
 import Menu from '@material-ui/core/Menu';
@@ -10,23 +10,23 @@ import Grid from '@material-ui/core/Grid';
 import CitationView from './CitationView';
 import DateCitationView from './DateCitationView';
 
-import {UNPUBLISHED_BUFFER_ACTION_URLS as options, GENERIC_DATE_FORMAT} from 'config/general';
+import { UNPUBLISHED_BUFFER_ACTION_URLS as options, GENERIC_DATE_FORMAT } from 'config/general';
 
 export class UnpublishedBufferCitationView extends Component {
     static propTypes = {
-        publication: PropTypes.object
+        publication: PropTypes.object,
     };
 
     state = {
         anchorEl: null,
     };
 
-    handleClick = (event) => {
-        this.setState({anchorEl: event.currentTarget});
+    handleClick = event => {
+        this.setState({ anchorEl: event.currentTarget });
     };
 
     handleClose = () => {
-        this.setState({anchorEl: null});
+        this.setState({ anchorEl: null });
     };
 
     navigateToUrl = (url, target = '_blank') => () => {
@@ -34,32 +34,37 @@ export class UnpublishedBufferCitationView extends Component {
     };
 
     render() {
-        const {anchorEl} = this.state;
+        const { anchorEl } = this.state;
         const open = Boolean(anchorEl);
 
         return (
             <Grid container alignItems="center">
-                <Grid item xs="auto" style={{flexGrow: 1}}>
+                <Grid item xs="auto" style={{ flexGrow: 1 }}>
                     <Typography variant="caption">
-                        <i><CitationView suffix=", " value={this.props.publication.rek_status_lookup}/></i>
-                        <DateCitationView isLocalised format={GENERIC_DATE_FORMAT} prefix="Created " suffix=", " date={this.props.publication.rek_created_date}/>
-                        <DateCitationView isLocalised format={GENERIC_DATE_FORMAT} prefix="Updated " suffix="." date={this.props.publication.rek_updated_date}/>
+                        <i>
+                            <CitationView suffix=", " value={this.props.publication.rek_status_lookup} />
+                        </i>
+                        <DateCitationView
+                            isLocalised
+                            format={GENERIC_DATE_FORMAT}
+                            prefix="Created "
+                            suffix=", "
+                            date={this.props.publication.rek_created_date}
+                        />
+                        <DateCitationView
+                            isLocalised
+                            format={GENERIC_DATE_FORMAT}
+                            prefix="Updated "
+                            suffix="."
+                            date={this.props.publication.rek_updated_date}
+                        />
                     </Typography>
                 </Grid>
                 <Grid item>
-                    <IconButton
-                        aria-label="More"
-                        aria-haspopup="true"
-                        onClick={this.handleClick}
-                    >
-                        <MoreVertIcon fontSize="small"/>
+                    <IconButton aria-label="More" aria-haspopup="true" onClick={this.handleClick}>
+                        <MoreVertIcon fontSize="small" />
                     </IconButton>
-                    <Menu
-                        id="long-menu"
-                        anchorEl={anchorEl}
-                        open={open}
-                        onClose={this.handleClose}
-                    >
+                    <Menu id="long-menu" anchorEl={anchorEl} open={open} onClose={this.handleClose}>
                         {options.map((option, index) => (
                             <MenuItem
                                 key={index}

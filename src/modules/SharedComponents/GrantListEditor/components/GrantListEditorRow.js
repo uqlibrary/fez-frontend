@@ -1,6 +1,6 @@
-import React, {PureComponent, Fragment} from 'react';
+import React, { PureComponent, Fragment } from 'react';
 import PropTypes from 'prop-types';
-import {withStyles} from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 import withWidth from '@material-ui/core/withWidth';
 import Grid from '@material-ui/core/Grid';
 import ListItem from '@material-ui/core/ListItem';
@@ -12,20 +12,20 @@ import IconButton from '@material-ui/core/IconButton';
 import Delete from '@material-ui/icons/Delete';
 import KeyboardArrowDown from '@material-ui/icons/KeyboardArrowDown';
 import KeyboardArrowUp from '@material-ui/icons/KeyboardArrowUp';
-import {ConfirmDialogBox} from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
+import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import Hidden from '@material-ui/core/Hidden';
-import {ORG_TYPES_LOOKUP} from 'config/general';
+import { ORG_TYPES_LOOKUP } from 'config/general';
 
-export const styles = (theme) => ({
+export const styles = theme => ({
     rowSelected: {
-        backgroundColor: ((theme.palette || {}).accent || {}).light
+        backgroundColor: ((theme.palette || {}).accent || {}).light,
     },
     selected: {
         color: 'white !important',
-        fontWeight: theme.typography.fontWeightMedium
+        fontWeight: theme.typography.fontWeightMedium,
     },
     hideIcon: {
-        display: 'none'
+        display: 'none',
     },
     primary: {
         fontSize: theme.typography.body2.fontSize,
@@ -34,15 +34,15 @@ export const styles = (theme) => ({
         fontSize: theme.typography.caption.fontSize,
         marginTop: 8,
         '&:before': {
-            content: '"UQ Id: "'
-        }
+            content: '"UQ Id: "',
+        },
     },
     identifierSubtitle: {
         fontSize: theme.typography.caption.fontSize,
         '&:before': {
-            content: '"UQ Username: "'
-        }
-    }
+            content: '"UQ Username: "',
+        },
+    },
 });
 
 export class GrantListEditorRow extends PureComponent {
@@ -70,16 +70,16 @@ export class GrantListEditorRow extends PureComponent {
                 confirmationTitle: 'Delete entry',
                 confirmationMessage: 'Are you sure you want to delete this entry?',
                 cancelButtonLabel: 'No',
-                confirmButtonLabel: 'Yes'
-            }
-        }
+                confirmButtonLabel: 'Yes',
+            },
+        },
     };
 
     constructor(props) {
         super(props);
     }
 
-    handleConfirmationBoxRef = (ref) => (this.confirmationBox = ref);
+    handleConfirmationBoxRef = ref => (this.confirmationBox = ref);
 
     _showConfirmation = () => {
         this.confirmationBox.showConfirmation();
@@ -105,7 +105,7 @@ export class GrantListEditorRow extends PureComponent {
 
     getListItemTypoGraphy = (primaryText, secondaryText, primaryClass, secondaryClass) => (
         <ListItemText
-            style={{padding: 0}}
+            style={{ padding: 0 }}
             disableTypography
             primary={
                 <Typography noWrap variant="body2" classes={{ root: primaryClass }}>
@@ -115,21 +115,17 @@ export class GrantListEditorRow extends PureComponent {
             secondary={
                 <Typography noWrap variant="caption" classes={{ root: secondaryClass }}>
                     {secondaryText}
-                </Typography>}
+                </Typography>
+            }
         />
     );
 
-    getGrantRowText = (selectedClass) => {
-        const {grant, classes, width} = this.props;
+    getGrantRowText = selectedClass => {
+        const { grant, classes, width } = this.props;
         return (
             <Grid container spacing={0} alignContent={'center'} alignItems={'stretch'}>
                 <Grid item xs={this.props.width === 'xs' ? 12 : 5}>
-                    {this.getListItemTypoGraphy(
-                        grant.grantAgencyName,
-                        '',
-                        `${classes.primary} ${selectedClass}`,
-                        ''
-                    )}
+                    {this.getListItemTypoGraphy(grant.grantAgencyName, '', `${classes.primary} ${selectedClass}`, '')}
                 </Grid>
                 <Hidden xsDown>
                     <Grid item xs={this.props.width === 'xs' ? 5 : 4}>
@@ -154,9 +150,12 @@ export class GrantListEditorRow extends PureComponent {
     };
 
     render() {
-        const {deleteRecordConfirmation, moveUpHint, moveDownHint, deleteHint, selectHint} = this.props.locale;
-        const {grant, canMoveDown, canMoveUp, disabled, classes} = this.props;
-        const ariaLabel = selectHint && selectHint.indexOf('[name]') > -1 ? selectHint.replace('[name]', grant.nameAsPublished) : null;
+        const { deleteRecordConfirmation, moveUpHint, moveDownHint, deleteHint, selectHint } = this.props.locale;
+        const { grant, canMoveDown, canMoveUp, disabled, classes } = this.props;
+        const ariaLabel =
+            selectHint && selectHint.indexOf('[name]') > -1
+                ? selectHint.replace('[name]', grant.nameAsPublished)
+                : null;
         const selectedClass = grant.selected ? classes.selected : '';
         return (
             <Fragment>
@@ -165,35 +164,31 @@ export class GrantListEditorRow extends PureComponent {
                     onAction={this._deleteRecord}
                     locale={deleteRecordConfirmation}
                 />
-                <ListItem
-                    divider
-                    style={{padding: '8px 0 8px 0'}}
-                    aria-label={ariaLabel}
-                >
+                <ListItem divider style={{ padding: '8px 0 8px 0' }} aria-label={ariaLabel}>
                     <Grid container spacing={0}>
                         <Grid item xs={this.props.width === 'xs' ? 10 : 9}>
-                            {
-                                this.getGrantRowText(selectedClass)
-                            }
+                            {this.getGrantRowText(selectedClass)}
                         </Grid>
                         <Grid item xs={this.props.width === 'xs' ? 2 : 3}>
-                            <ListItemSecondaryAction style={{position: 'relative', width: '100%', margin: '0 0 -32px 0'}}>
+                            <ListItemSecondaryAction
+                                style={{ position: 'relative', width: '100%', margin: '0 0 -32px 0' }}
+                            >
                                 <Grid container spacing={0}>
                                     <Hidden smDown>
-                                        <Grid item xs={8} style={{textAlign: 'right'}}>
+                                        <Grid item xs={8} style={{ textAlign: 'right' }}>
                                             <Tooltip
                                                 title={moveUpHint}
                                                 disableFocusListener={disabled || !canMoveUp}
                                                 disableHoverListener={disabled || !canMoveUp}
                                                 disableTouchListener={disabled || !canMoveUp}
                                             >
-                                                <div style={{display: 'inline'}}>
+                                                <div style={{ display: 'inline' }}>
                                                     <IconButton
                                                         onClick={this._onMoveUp}
                                                         disabled={disabled || !canMoveUp}
                                                         aria-label={moveUpHint}
                                                     >
-                                                        <KeyboardArrowUp classes={{ root: `${selectedClass}` }}/>
+                                                        <KeyboardArrowUp classes={{ root: `${selectedClass}` }} />
                                                     </IconButton>
                                                 </div>
                                             </Tooltip>
@@ -203,32 +198,36 @@ export class GrantListEditorRow extends PureComponent {
                                                 disableHoverListener={disabled || !canMoveDown}
                                                 disableTouchListener={disabled || !canMoveDown}
                                             >
-                                                <div style={{display: 'inline'}}>
+                                                <div style={{ display: 'inline' }}>
                                                     <IconButton
                                                         onClick={this._onMoveDown}
                                                         disabled={disabled || !canMoveDown}
                                                         aria-label={moveDownHint}
                                                     >
-                                                        <KeyboardArrowDown classes={{ root: `${selectedClass}` }}/>
+                                                        <KeyboardArrowDown classes={{ root: `${selectedClass}` }} />
                                                     </IconButton>
                                                 </div>
                                             </Tooltip>
                                         </Grid>
                                     </Hidden>
-                                    <Grid item xs={this.props.width === 'sm' || this.props.width === 'xs' ? 12 : 4} style={{textAlign: 'right'}}>
+                                    <Grid
+                                        item
+                                        xs={this.props.width === 'sm' || this.props.width === 'xs' ? 12 : 4}
+                                        style={{ textAlign: 'right' }}
+                                    >
                                         <Tooltip
                                             title={deleteHint}
                                             disableFocusListener={disabled}
                                             disableHoverListener={disabled}
                                             disableTouchListener={disabled}
                                         >
-                                            <div style={{display: 'inline'}}>
+                                            <div style={{ display: 'inline' }}>
                                                 <IconButton
                                                     aria-label={deleteHint}
                                                     onClick={this._showConfirmation}
                                                     disabled={disabled}
                                                 >
-                                                    <Delete/>
+                                                    <Delete />
                                                 </IconButton>
                                             </div>
                                         </Tooltip>

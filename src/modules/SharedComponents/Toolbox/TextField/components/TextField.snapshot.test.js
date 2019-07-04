@@ -1,19 +1,18 @@
-import {TextFieldWrapper} from './TextField';
+import { TextFieldWrapper } from './TextField';
 import filterProps from '../../helpers/_filterProps';
 
 function setup(testProps, isShallow = true) {
-    const props = {...testProps};
+    const props = { ...testProps };
     const consolidatedProps = filterProps(props, TextFieldWrapper.propTypes);
     return getElement(TextFieldWrapper, consolidatedProps, isShallow);
 }
 
 describe('TextFieldWrapper snapshots tests', () => {
-
     const testProps = {
         name: 'testField',
         type: 'text',
         fullWidth: true,
-        floatingLabelText: 'This is a test textfield component'
+        floatingLabelText: 'This is a test textfield component',
     };
 
     it('renders TextField component', () => {
@@ -24,7 +23,7 @@ describe('TextFieldWrapper snapshots tests', () => {
     it('renders TextField component appending a class', () => {
         const wrapper = setup({
             ...testProps,
-            className: 'requiredField'
+            className: 'requiredField',
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -32,7 +31,7 @@ describe('TextFieldWrapper snapshots tests', () => {
     it('renders TextField component with shrink:true', () => {
         const wrapper = setup({
             ...testProps,
-            floatinglabelfixed: true
+            floatinglabelfixed: true,
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });

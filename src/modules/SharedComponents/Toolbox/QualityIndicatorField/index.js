@@ -1,1 +1,1 @@
-export {default as QualityIndicatorField} from './QualityIndicatorField';
+export { default as QualityIndicatorField } from './QualityIndicatorField';

@@ -8,10 +8,10 @@ function setup(testProps, isShallow = true) {
         type: 'text',
         fullWidth: true,
         floatingLabelText: 'test selectfield component',
-        ...testProps
+        ...testProps,
     };
     const consolidatedProps = filterProps(props, SelectField.propTypes);
-    return getElement(SelectField, {...consolidatedProps, ...props}, isShallow);
+    return getElement(SelectField, { ...consolidatedProps, ...props }, isShallow);
 }
 
 describe('SelectfieldWrapper snapshots tests', () => {
@@ -21,7 +21,7 @@ describe('SelectfieldWrapper snapshots tests', () => {
                 name: 'selectfield',
                 type: 'text',
                 fullWidth: true,
-                floatingLabelText: 'This is a test selectfield component'
+                floatingLabelText: 'This is a test selectfield component',
             };
 
         const wrapper = setup(props);
@@ -49,14 +49,16 @@ describe('SelectfieldWrapper snapshots tests', () => {
             input: {
                 onChange: onChangeFn,
                 onBlur: onBlurFn,
-                value: 'testing'
-            }
+                value: 'testing',
+            },
         });
 
-        wrapper.find('WithStyles(Select)').props().onChange({target: {value: 'test'}});
+        wrapper.find('WithStyles(Select)').props()
+            .onChange({ target: { value: 'test' } });
         expect(onChangeFn).toHaveBeenCalledWith('test');
 
-        wrapper.find('WithStyles(Select)').props().onBlur();
+        wrapper.find('WithStyles(Select)').props()
+            .onBlur();
         expect(onBlurFn).toHaveBeenCalledWith('testing');
     });
 });

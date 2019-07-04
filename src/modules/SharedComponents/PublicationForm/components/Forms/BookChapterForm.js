@@ -1,17 +1,17 @@
-import React, {Component} from 'react';
-import {Field} from 'redux-form/immutable';
+import React, { Component } from 'react';
+import { Field } from 'redux-form/immutable';
 
-import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
-import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
-import {PartialDateField} from 'modules/SharedComponents/Toolbox/PartialDate';
-import {ListEditorField} from 'modules/SharedComponents/Toolbox/ListEditor';
-import {NtroFields} from 'modules/SharedComponents/Toolbox/NtroFields';
+import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
+import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
+import { PartialDateField } from 'modules/SharedComponents/Toolbox/PartialDate';
+import { ListEditorField } from 'modules/SharedComponents/Toolbox/ListEditor';
+import { NtroFields } from 'modules/SharedComponents/Toolbox/NtroFields';
 
-import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
-import {validation} from 'config';
-import {locale} from 'locale';
-import {NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION} from 'config/general';
-import {default as formLocale} from 'locale/publicationForm';
+import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
+import { validation } from 'config';
+import { locale } from 'locale';
+import { NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION } from 'config/general';
+import { default as formLocale } from 'locale/publicationForm';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 
@@ -23,7 +23,7 @@ export default class BookChapterForm extends Component {
         subtype: PropTypes.string,
         isNtro: PropTypes.bool,
         isAuthorSelected: PropTypes.bool,
-        formValues: PropTypes.any
+        formValues: PropTypes.any,
     };
 
     constructor(props) {
@@ -33,9 +33,16 @@ export default class BookChapterForm extends Component {
     render() {
         const txt = formLocale.bookChapter;
         const formValues = this.props.formValues && this.props.formValues.toJS();
-        const startPage = formValues && formValues.fez_record_search_key_start_page && formValues.fez_record_search_key_start_page.rek_start_page;
-        const endPage = formValues && formValues.fez_record_search_key_end_page && formValues.fez_record_search_key_end_page.rek_end_page;
-        const pageError = !!startPage && !!endPage && parseInt(startPage, 10) > parseInt(endPage, 10) ? 'Page range invalid' : '';
+        const startPage =
+            formValues &&
+            formValues.fez_record_search_key_start_page &&
+            formValues.fez_record_search_key_start_page.rek_start_page;
+        const endPage =
+            formValues &&
+            formValues.fez_record_search_key_end_page &&
+            formValues.fez_record_search_key_end_page.rek_end_page;
+        const pageError =
+            !!startPage && !!endPage && parseInt(startPage, 10) > parseInt(endPage, 10) ? 'Page range invalid' : '';
         return (
             <Grid container spacing={24}>
                 <Grid item xs={12}>
@@ -53,7 +60,8 @@ export default class BookChapterForm extends Component {
                                     multiline
                                     rows={1}
                                     label={txt.information.fieldLabels.bookChapterTitle}
-                                    validate={[validation.required]} />
+                                    validate={[validation.required]}
+                                />
                             </Grid>
                             <Grid item xs={12}>
                                 <Field
@@ -66,7 +74,8 @@ export default class BookChapterForm extends Component {
                                     multiline
                                     rows={1}
                                     label={txt.information.fieldLabels.bookTitle}
-                                    validate={[validation.required]}/>
+                                    validate={[validation.required]}
+                                />
                             </Grid>
                             <Grid item xs={12} sm={6}>
                                 <Field
@@ -77,7 +86,8 @@ export default class BookChapterForm extends Component {
                                     required
                                     fullWidth
                                     label={txt.information.fieldLabels.publicationPlace}
-                                    validate={[validation.required]} />
+                                    validate={[validation.required]}
+                                />
                             </Grid>
                             <Grid item xs={12} sm={6}>
                                 <Field
@@ -88,14 +98,16 @@ export default class BookChapterForm extends Component {
                                     fullWidth
                                     required
                                     validate={[validation.required]}
-                                    label={txt.information.fieldLabels.publisher} />
+                                    label={txt.information.fieldLabels.publisher}
+                                />
                             </Grid>
                             <Grid item xs={12}>
                                 <Field
                                     component={PartialDateField}
                                     disabled={this.props.submitting}
                                     name="rek_date"
-                                    allowPartial required
+                                    allowPartial
+                                    required
                                     className="requiredHintField"
                                     validate={[validation.required]}
                                     floatingTitle={txt.information.fieldLabels.date.title}
@@ -125,11 +137,11 @@ export default class BookChapterForm extends Component {
                             component={ContributorsEditorField}
                             name="editors"
                             locale={txt.editors.field}
-                            disabled={this.props.submitting} />
+                            disabled={this.props.submitting}
+                        />
                     </StandardCard>
                 </Grid>
-                {
-                    this.props.isNtro &&
+                {this.props.isNtro && (
                     <NtroFields
                         submitting={this.props.submitting}
                         showContributionStatement={this.props.isAuthorSelected}
@@ -143,7 +155,7 @@ export default class BookChapterForm extends Component {
                         hideOriginalFormat
                         hideAudienceSize
                     />
-                }
+                )}
                 <Grid item xs={12}>
                     <StandardCard title={locale.components.isbnForm.title} help={locale.components.isbnForm.title.help}>
                         <Typography>{locale.components.isbnForm.text}</Typography>
@@ -153,9 +165,10 @@ export default class BookChapterForm extends Component {
                             name="fez_record_search_key_isbn"
                             isValid={validation.isValidIsbn}
                             maxCount={5}
-                            searchKey={{value: 'rek_isbn', order: 'rek_isbn_order'}}
+                            searchKey={{ value: 'rek_isbn', order: 'rek_isbn_order' }}
                             locale={locale.components.isbnForm.field}
-                            disabled={this.props.submitting} />
+                            disabled={this.props.submitting}
+                        />
                     </StandardCard>
                 </Grid>
                 <Grid item xs={12}>
@@ -168,8 +181,9 @@ export default class BookChapterForm extends Component {
                             name="fez_record_search_key_issn"
                             maxCount={5}
                             locale={locale.components.issnForm.field}
-                            searchKey={{value: 'rek_issn', order: 'rek_issn_order'}}
-                            disabled={this.props.submitting} />
+                            searchKey={{ value: 'rek_issn', order: 'rek_issn_order' }}
+                            disabled={this.props.submitting}
+                        />
                     </StandardCard>
                 </Grid>
                 <Grid item xs={12}>
@@ -182,7 +196,8 @@ export default class BookChapterForm extends Component {
                                     type="text"
                                     fullWidth
                                     disabled={this.props.submitting}
-                                    label={txt.other.fieldLabels.edition}/>
+                                    label={txt.other.fieldLabels.edition}
+                                />
                             </Grid>
                             <Grid item xs={12} sm={6}>
                                 <Field
@@ -222,7 +237,8 @@ export default class BookChapterForm extends Component {
                                     disabled={this.props.submitting}
                                     fullWidth
                                     multiline
-                                    label={txt.other.fieldLabels.notes}/>
+                                    label={txt.other.fieldLabels.notes}
+                                />
                             </Grid>
                             <Grid item xs={12}>
                                 <Field

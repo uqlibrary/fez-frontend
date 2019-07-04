@@ -1,1 +1,1 @@
-export {default as TopCitedPublications} from './containers/TopCitedPublications';
+export { default as TopCitedPublications } from './containers/TopCitedPublications';

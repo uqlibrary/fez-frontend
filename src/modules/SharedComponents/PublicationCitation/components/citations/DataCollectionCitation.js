@@ -1,11 +1,11 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import * as Partials from './partials';
 
 export default class DataCollectionCitation extends Component {
     static propTypes = {
         publication: PropTypes.object.isRequired,
-        hideDoiLink: PropTypes.bool
+        hideDoiLink: PropTypes.bool,
     };
 
     constructor(props) {
@@ -16,11 +16,11 @@ export default class DataCollectionCitation extends Component {
         const record = {
             id: this.props.publication.rek_pid,
             title: this.props.publication.rek_title,
-            publisher: this.props.publication.fez_record_search_key_publisher ?
-                this.props.publication.fez_record_search_key_publisher.rek_publisher : null,
+            publisher: this.props.publication.fez_record_search_key_publisher
+                ? this.props.publication.fez_record_search_key_publisher.rek_publisher : null,
             collectionType: this.props.publication.rek_display_type_lookup || null,
-            doi: this.props.publication.fez_record_search_key_doi ?
-                this.props.publication.fez_record_search_key_doi.rek_doi : null
+            doi: this.props.publication.fez_record_search_key_doi
+                ? this.props.publication.fez_record_search_key_doi.rek_doi : null,
         };
 
         // eSpace citation view for DataCollection

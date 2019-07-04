@@ -11,26 +11,30 @@ export const mui1theme = createMuiTheme({
             gradient: {
                 horizontal: {
                     background: 'linear-gradient(to right, rgb(81,36,122) 55%,rgb(150,42,139) 100%)',
-                    filter: 'progid:DXImageTransform.Microsoft.gradient( startColorstr="#51247a", endColorstr="#962a8b",GradientType=1 )'
+                    filter:
+                        'progid:DXImageTransform.Microsoft.gradient( startColorstr="#51247a", ' +
+                        'endColorstr="#962a8b",GradientType=1 )',
                 },
                 diagonal: {
                     background: 'linear-gradient(135deg, rgb(81,36,122) 55%,rgb(150,42,139) 100%)',
-                    filter: 'progid:DXImageTransform.Microsoft.gradient( startColorstr="#51247a", endColorstr="#962a8b",GradientType=1 )'
-                }
-            }
+                    filter:
+                        'progid:DXImageTransform.Microsoft.gradient( startColorstr="#51247a", ' +
+                        'endColorstr="#962a8b",GradientType=1 )',
+                },
+            },
         },
         secondary: {
             light: '#f2f2f2',
             main: '#595959',
-            dark: '#333333'
+            dark: '#333333',
         },
         accent: {
             light: '#54acff',
             main: '#316799',
-            dark: '#2a557d'
+            dark: '#2a557d',
         },
         white: {
-            main: '#FFFFFF'
+            main: '#FFFFFF',
         },
         warning: {
             light: '#ff9a57',
@@ -40,24 +44,24 @@ export const mui1theme = createMuiTheme({
         success: {
             light: '#00a700',
             main: '#007200',
-            dark: '#005000'
+            dark: '#005000',
         },
         error: {
             light: '#ff0000',
             main: '#c80000',
-            dark: '#790000'
-        }
+            dark: '#790000',
+        },
     },
     status: {
         danger: red[500],
-        warning: orange[500]
+        warning: orange[500],
     },
     typography: {
         fontWeightLight: 200,
         fontWeightRegular: 300,
         fontWeightMedium: 400,
         useNextVariants: true,
-        suppressDeprecationWarnings: true
+        suppressDeprecationWarnings: true,
     },
     overrides: {
         MuiFormLabel: {
@@ -65,9 +69,9 @@ export const mui1theme = createMuiTheme({
                 whiteSpace: 'nowrap',
                 overflow: 'hidden',
                 width: '100%',
-                textOverflow: 'ellipsis'
-            }
-        }
+                textOverflow: 'ellipsis',
+            },
+        },
     },
     graphs: {
         color1: '#d72865',
@@ -76,7 +80,7 @@ export const mui1theme = createMuiTheme({
         color4: '#468fcc',
         color5: '#f28620',
         color6: '#333333',
-        color7: '#595959'
+        color7: '#595959',
     },
     // Converts a color hex code to RGBA when referenced from a component
     hexToRGBA: (hex, alpha) => {
@@ -89,5 +93,5 @@ export const mui1theme = createMuiTheme({
         } else {
             return 'rgb(' + r + ', ' + g + ', ' + b + ')';
         }
-    }
+    },
 });

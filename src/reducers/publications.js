@@ -4,13 +4,13 @@ export const initialState = {
     publicationsList: [],
     publicationsListPagingData: {},
     publicationsListFacets: {},
-    loadingPublicationsList: true
+    loadingPublicationsList: true,
 };
 
 export const getInitialState = () => ({
-    'mine': initialState,
-    'incomplete': initialState,
-    'datasets': initialState
+    mine: initialState,
+    incomplete: initialState,
+    datasets: initialState,
 });
 
 const handlers = {
@@ -20,8 +20,8 @@ const handlers = {
             [type]: {
                 ...state[type],
                 publicationsListPagingData: {},
-                loadingPublicationsList: true
-            }
+                loadingPublicationsList: true,
+            },
         };
     },
 
@@ -37,12 +37,16 @@ const handlers = {
                     current_page: action.payload.current_page,
                     from: action.payload.from,
                     to: action.payload.to,
-                    per_page: action.payload.per_page
+                    per_page: action.payload.per_page,
                 },
-                publicationsListFacets: action.payload.hasOwnProperty('filters') && action.payload.filters.hasOwnProperty('facets')
-                    && action.payload.filters.facets ? action.payload.filters.facets : {},
-                loadingPublicationsList: false
-            }
+                publicationsListFacets:
+                    action.payload.hasOwnProperty('filters') &&
+                    action.payload.filters.hasOwnProperty('facets') &&
+                    action.payload.filters.facets
+                        ? action.payload.filters.facets
+                        : {},
+                loadingPublicationsList: false,
+            },
         };
     },
 
@@ -55,8 +59,8 @@ const handlers = {
 
                 publicationsListPagingData: {},
                 publicationsListFacets: {},
-                loadingPublicationsList: false
-            }
+                loadingPublicationsList: false,
+            },
         };
     },
 };

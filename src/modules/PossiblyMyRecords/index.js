@@ -1,1 +1,1 @@
-export {default as PossiblyMyRecords} from './containers/PossiblyMyRecords';
+export { default as PossiblyMyRecords } from './containers/PossiblyMyRecords';

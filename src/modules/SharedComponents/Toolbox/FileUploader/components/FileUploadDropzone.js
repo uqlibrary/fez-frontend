@@ -1,10 +1,10 @@
-import React, {PureComponent} from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import Dropzone from 'react-dropzone';
 import Grid from '@material-ui/core/Grid';
-import {withStyles} from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 import FileUploadDropzoneStaticContent from './FileUploadDropzoneStaticContent';
-import {FILE_NAME_RESTRICTION} from '../config';
+import { FILE_NAME_RESTRICTION } from '../config';
 
 const styles = () => ({
     hideLabel: {
@@ -13,8 +13,8 @@ const styles = () => ({
         top: 'auto',
         width: 1,
         height: 1,
-        overflow: 'hidden'
-    }
+        overflow: 'hidden',
+    },
 });
 
 export class FileUploadDropzone extends PureComponent {
@@ -26,13 +26,13 @@ export class FileUploadDropzone extends PureComponent {
         filesInQueue: PropTypes.array,
         fileUploadLimit: PropTypes.number,
         disabled: PropTypes.bool,
-        classes: PropTypes.object
+        classes: PropTypes.object,
     };
 
     static defaultProps = {
         fileUploadLimit: 10,
         filesInQueue: [],
-        fileNameRestrictions: FILE_NAME_RESTRICTION
+        fileNameRestrictions: FILE_NAME_RESTRICTION,
     };
 
     constructor(props) {
@@ -73,16 +73,19 @@ export class FileUploadDropzone extends PureComponent {
      */
     removeDuplicate = (incomingFiles, filesInQueue) => {
         // Ignore files from incomingFiles which have same name with different extension
-        const incomingFilesWithoutDuplicateFileName = incomingFiles.reduce((unique, file) => {
-            const fileNameWithoutExt = file.name.slice(0, file.name.lastIndexOf('.'));
-            unique.fileNames.indexOf(fileNameWithoutExt) === -1
-                ? (unique.fileNames.push(fileNameWithoutExt) && unique.incomingFiles.push(file))
-                : unique.filesWithSameNameDifferentExt.push(file.name);
-            return unique;
-        }, {fileNames: [], incomingFiles: [], filesWithSameNameDifferentExt: []});
+        const incomingFilesWithoutDuplicateFileName = incomingFiles.reduce(
+            (unique, file) => {
+                const fileNameWithoutExt = file.name.slice(0, file.name.lastIndexOf('.'));
+                unique.fileNames.indexOf(fileNameWithoutExt) === -1
+                    ? unique.fileNames.push(fileNameWithoutExt) && unique.incomingFiles.push(file)
+                    : unique.filesWithSameNameDifferentExt.push(file.name);
+                return unique;
+            },
+            { fileNames: [], incomingFiles: [], filesWithSameNameDifferentExt: [] }
+        );
 
-        const incomingFilesWithoutDuplicate = incomingFilesWithoutDuplicateFileName.incomingFiles
-            .reduce((unique, file) => {
+        const incomingFilesWithoutDuplicate = incomingFilesWithoutDuplicateFileName.incomingFiles.reduce(
+            (unique, file) => {
                 if (unique.fileNames.indexOf(file.name) === -1) {
                     const fileNameWithoutExt = file.name.slice(0, file.name.lastIndexOf('.'));
 
@@ -96,21 +99,30 @@ export class FileUploadDropzone extends PureComponent {
                 }
 
                 return unique;
-            }, {
+            },
+            {
                 fileNames: filesInQueue,
                 incomingFiles: [],
-                filesWithSameNameDifferentExt: []
-            });
+                filesWithSameNameDifferentExt: [],
+            }
+        );
 
         // Ignore files from incomingFiles which are already in files queue
-        const uniqueFiles = incomingFilesWithoutDuplicate.incomingFiles.filter(file => filesInQueue.indexOf(file.name) === -1);
-        const duplicateFiles = incomingFilesWithoutDuplicate.incomingFiles.filter(file => filesInQueue.indexOf(file.name) >= 0).map(file => file.name);
+        const uniqueFiles = incomingFilesWithoutDuplicate.incomingFiles.filter(
+            file => filesInQueue.indexOf(file.name) === -1
+        );
+        const duplicateFiles = incomingFilesWithoutDuplicate.incomingFiles
+            .filter(file => filesInQueue.indexOf(file.name) >= 0)
+            .map(file => file.name);
 
         // Return unique files and errors with duplicate file names
         return {
             uniqueFiles: uniqueFiles,
             duplicateFiles: duplicateFiles,
-            sameFileNameWithDifferentExt: [...incomingFilesWithoutDuplicateFileName.filesWithSameNameDifferentExt, ...incomingFilesWithoutDuplicate.filesWithSameNameDifferentExt]
+            sameFileNameWithDifferentExt: [
+                ...incomingFilesWithoutDuplicateFileName.filesWithSameNameDifferentExt,
+                ...incomingFilesWithoutDuplicate.filesWithSameNameDifferentExt,
+            ],
         };
     };
 
@@ -139,13 +151,12 @@ export class FileUploadDropzone extends PureComponent {
      * @returns Object
      */
     removeInvalidFileNames = (incomingFiles, fileNameRestrictions) => {
-        const validFiles = incomingFiles
-            .filter(file => (file && new RegExp(fileNameRestrictions, 'gi').test(file.name)));
+        const validFiles = incomingFiles.filter(file => file && new RegExp(fileNameRestrictions, 'gi').test(file.name));
         const invalidFileNames = incomingFiles
-            .filter(file => (file && !(new RegExp(fileNameRestrictions, 'gi').test(file.name))))
+            .filter(file => file && !new RegExp(fileNameRestrictions, 'gi').test(file.name))
             .map(file => file.name);
 
-        return {validFiles: validFiles, invalidFileNames: invalidFileNames};
+        return { validFiles: validFiles, invalidFileNames: invalidFileNames };
     };
 
     /**
@@ -159,7 +170,7 @@ export class FileUploadDropzone extends PureComponent {
         const tooManyFiles = incomingFiles.slice(maxAllowed).map(file => file.name);
         const limitedFiles = incomingFiles.slice(0, maxAllowed);
 
-        return {limitedFiles: limitedFiles, tooManyFiles: tooManyFiles};
+        return { limitedFiles: limitedFiles, tooManyFiles: tooManyFiles };
     };
 
     /**
@@ -170,33 +181,35 @@ export class FileUploadDropzone extends PureComponent {
      * @private
      */
     _onDrop = (incomingFiles, rejectedFiles) => {
-        const {fileNameRestrictions, filesInQueue, fileUploadLimit} = this.props;
+        const { fileNameRestrictions, filesInQueue, fileUploadLimit } = this.props;
         const notFiles = [];
 
         // Remove folders from accepted files (async)
-        this.removeDroppedFolders([...incomingFiles], notFiles)
-            .then(onlyFiles => {
-                // Remove invalid file names
-                const {validFiles, invalidFileNames} = this.removeInvalidFileNames(onlyFiles, fileNameRestrictions);
+        this.removeDroppedFolders([...incomingFiles], notFiles).then(onlyFiles => {
+            // Remove invalid file names
+            const { validFiles, invalidFileNames } = this.removeInvalidFileNames(onlyFiles, fileNameRestrictions);
 
-                // Remove duplicate files from accepted files
-                const {uniqueFiles, duplicateFiles, sameFileNameWithDifferentExt} = this.removeDuplicate(validFiles, filesInQueue);
+            // Remove duplicate files from accepted files
+            const { uniqueFiles, duplicateFiles, sameFileNameWithDifferentExt } = this.removeDuplicate(
+                validFiles,
+                filesInQueue
+            );
 
-                // Remove files exceeding the max number of files allowed
-                const {limitedFiles, tooManyFiles} = this.removeTooManyFiles(uniqueFiles, fileUploadLimit - filesInQueue.length);
+            // Remove files exceeding the max number of files allowed
+            const { limitedFiles, tooManyFiles } = this.removeTooManyFiles(
+                uniqueFiles,
+                fileUploadLimit - filesInQueue.length
+            );
 
-                this.props.onDrop(
-                    limitedFiles.map(file => ({fileData: file, name: file.name, size: file.size})),
-                    {
-                        tooBigFiles: rejectedFiles.map(file => file.name),
-                        notFiles: notFiles,
-                        invalidFileNames: invalidFileNames,
-                        duplicateFiles: duplicateFiles,
-                        tooManyFiles: tooManyFiles,
-                        sameFileNameWithDifferentExt: sameFileNameWithDifferentExt
-                    }
-                );
+            this.props.onDrop(limitedFiles.map(file => ({ fileData: file, name: file.name, size: file.size })), {
+                tooBigFiles: rejectedFiles.map(file => file.name),
+                notFiles: notFiles,
+                invalidFileNames: invalidFileNames,
+                duplicateFiles: duplicateFiles,
+                tooManyFiles: tooManyFiles,
+                sameFileNameWithDifferentExt: sameFileNameWithDifferentExt,
             });
+        });
     };
 
     /**
@@ -207,22 +220,24 @@ export class FileUploadDropzone extends PureComponent {
     };
 
     render() {
-        const {maxSize, disabled, locale} = this.props;
+        const { maxSize, disabled, locale } = this.props;
         return (
             <Grid container>
                 <Grid item xs={12}>
                     <div tabIndex="0" onKeyPress={this._onKeyPress} id="FileUploadDropZone">
                         <Dropzone
-                            inputProps={{id: 'Uploader', 'aria-label': 'Upload files'}}
-                            ref={(ref) => {this.dropzoneRef = ref;}}
+                            inputProps={{ id: 'Uploader', 'aria-label': 'Upload files' }}
+                            ref={ref => {
+                                this.dropzoneRef = ref;
+                            }}
                             maxSize={maxSize}
                             onDrop={this._onDrop}
-                            style={{padding: '0px'}}
+                            style={{ padding: '0px' }}
                             disabled={disabled}
                             disableClick={disabled}
                             disablePreview
                         >
-                            <FileUploadDropzoneStaticContent locale={locale}/>
+                            <FileUploadDropzoneStaticContent locale={locale} />
                         </Dropzone>
                     </div>
                 </Grid>
