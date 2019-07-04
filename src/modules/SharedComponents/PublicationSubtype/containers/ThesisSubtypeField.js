@@ -9,7 +9,7 @@ const mapStateToProps = (state, props) => {
         itemsList: props.itemsList || THESIS_SUBTYPES,
         itemsLoading: false,
         hideLabel: props.hideLabel || false,
-        label: props.label,
+        label: props.label || props.locale && props.locale.label || '',
         placeholder: props.placeholder,
         required: props.required,
         itemsLoadingHint: props.loadingHint || 'Loading..',

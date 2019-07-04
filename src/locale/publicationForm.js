@@ -500,7 +500,7 @@ export default {
             // },
             fieldLabels: {
                 documentTitle: {
-                    placeholderlabel: 'Title',
+                    label: 'Title',
                     placeholder: 'Thesis title'
                 },
                 orgName: {

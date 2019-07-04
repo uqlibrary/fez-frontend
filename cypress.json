@@ -3,5 +3,6 @@
     "waitForAnimations": true,
     "pageLoadTimeout": 30000,
     "video": false,
-    "chromeWebSecurity": false
+    "chromeWebSecurity": false,
+    "defaultCommandTimeout": 10000
 }
