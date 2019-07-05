@@ -11,7 +11,7 @@ context('Homepage', () => {
             .should('not.contain', 'Web of Science citation count')
             .should('not.contain', 'Altmetric score');
 
-        cy.get('button', {timeout: 30000})
+        cy.get('button', { timeout: 30000 })
             .contains('Trending on Web of science')
             .click();
         cy.get('h6')
@@ -19,7 +19,7 @@ context('Homepage', () => {
             .should('contain', 'Web of Science citation count')
             .should('not.contain', 'Altmetric score');
 
-        cy.get('button', {timeout: 30000})
+        cy.get('button', { timeout: 30000 })
             .contains('Trending on Altmetric')
             .click();
         cy.get('h6')

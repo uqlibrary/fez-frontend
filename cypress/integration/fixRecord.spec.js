@@ -1,6 +1,6 @@
 import formsLocale from '../../src/locale/forms';
 // import { default as pagesLocale } from '../../src/locale/pages';
-import {myRecordsList} from '../../src/mock/data/records';
+import { myRecordsList } from '../../src/mock/data/records';
 
 context('Request correction form', () => {
     const baseUrl = Cypress.config('baseUrl');
