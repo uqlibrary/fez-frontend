@@ -1,5 +1,5 @@
 import NewspaperArticleCitation from './NewspaperArticleCitation';
-import {newspaperArticle} from 'mock/data/testing/records';
+import { newspaperArticle } from 'mock/data/testing/records';
 
 function setup(testProps, isShallow = false) {
     const props = {
@@ -24,8 +24,8 @@ describe('NewspaperArticleCitation renders ', () => {
         const wrapper = setup({
             publication: {
                 ...newspaperArticle,
-                fez_record_search_key_end_page: {rek_end_page: null}
-            }
+                fez_record_search_key_end_page: { rek_end_page: null },
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });

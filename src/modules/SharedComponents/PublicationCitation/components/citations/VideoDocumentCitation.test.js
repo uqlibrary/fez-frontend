@@ -1,5 +1,5 @@
 import VideoDocumentCitation from './VideoDocumentCitation';
-import {videoDocument} from 'mock/data/testing/records';
+import { videoDocument } from 'mock/data/testing/records';
 
 function setup(testProps, isShallow = false) {
     const props = {

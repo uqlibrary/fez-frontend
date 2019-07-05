@@ -1,5 +1,5 @@
 import React, { PureComponent, Fragment } from 'react';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Tooltip from '@material-ui/core/Tooltip';
 import CircularProgress from '@material-ui/core/CircularProgress';
@@ -16,20 +16,20 @@ export class FileUploadRowStatus extends PureComponent {
         disabled: PropTypes.bool,
         onDelete: PropTypes.func.isRequired,
         locale: PropTypes.object,
-        name: PropTypes.string
+        name: PropTypes.string,
     };
 
     static defaultProps = {
         locale: {
             deleteHint: 'Remove this file',
-            uploadInProgressText: 'Uploading...'
-        }
+            uploadInProgressText: 'Uploading...',
+        },
     };
 
     render() {
-        const {isUploadInProgress, disabled, progress} = this.props;
-        const {deleteHint, uploadInProgressText} = this.props.locale;
-        const progressProps = progress > 0 ? {variant: 'determinate', value: progress} : {};
+        const { isUploadInProgress, disabled, progress } = this.props;
+        const { deleteHint, uploadInProgressText } = this.props.locale;
+        const progressProps = progress > 0 ? { variant: 'determinate', value: progress } : {};
 
         return (
             <Fragment>
@@ -67,7 +67,7 @@ export class FileUploadRowStatus extends PureComponent {
 export const mapStateToProps = (state, ownProps) => {
     return {
         progress: !!state.get('fileUpload') && state.get('fileUpload')[ownProps.name] || 0,
-        isUploadInProgress: !!state.get('fileUpload') && state.get('fileUpload').isUploadInProgress
+        isUploadInProgress: !!state.get('fileUpload') && state.get('fileUpload').isUploadInProgress,
     };
 };
 

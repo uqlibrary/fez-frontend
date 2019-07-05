@@ -1,1 +1,1 @@
-export {default as LanguageField} from './LanguageField';
+export { default as LanguageField } from './LanguageField';

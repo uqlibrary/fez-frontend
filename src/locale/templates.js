@@ -4,7 +4,7 @@ export default {
             contentIndicators = '',
             comments = '',
             link = '',
-            files = ''
+            files = '',
         }) => `\
         ${comments ? (`Added comments: ${comments} \n`) : ''}\
         ${link ? (`Added link: ${link} \n`) : ''}\

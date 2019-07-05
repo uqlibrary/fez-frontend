@@ -1,2 +1,2 @@
-export {default as ContributorsEditorField} from './ContributorsEditorField';
+export { default as ContributorsEditorField } from './ContributorsEditorField';
 

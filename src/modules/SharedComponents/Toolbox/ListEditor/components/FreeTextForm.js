@@ -1,17 +1,17 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import {withStyles} from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 
 const styles = theme => ({
     MUITextLabel: theme.overrides.MuiFormLabel,
     remindToAdd: {
         marginTop: 8,
-        color: '#f06f0d'
-    }
+        color: '#f06f0d',
+    },
 });
 
 export class FreeTextFormClass extends Component {
@@ -24,7 +24,7 @@ export class FreeTextFormClass extends Component {
         remindToAdd: PropTypes.bool,
         classes: PropTypes.object,
         maxInputLength: PropTypes.number,
-        normalize: PropTypes.func
+        normalize: PropTypes.func,
     };
 
     static defaultProps = {
@@ -34,24 +34,24 @@ export class FreeTextFormClass extends Component {
         locale: {
             inputFieldLabel: 'Item name',
             inputFieldHint: 'Please type the item name',
-            addButtonLabel: 'Add'
-        }
+            addButtonLabel: 'Add',
+        },
     };
 
     constructor(props) {
         super(props);
         this.state = {
-            itemName: ''
+            itemName: '',
         };
         this.textField = null;
     }
 
     addItem = (event) => {
         // add item if user hits 'enter' key on input field
-        if (this.props.disabled
-            || this.props.isValid(this.state.itemName) !== ''
-            || (event && event.key && event.key !== 'Enter')
-            || this.state.itemName.length === 0
+        if (this.props.disabled ||
+            this.props.isValid(this.state.itemName) !== '' ||
+            (event && event.key && event.key !== 'Enter') ||
+            this.state.itemName.length === 0
         ) {
             return;
         }
@@ -61,7 +61,7 @@ export class FreeTextFormClass extends Component {
 
         // reset internal state
         this.setState({
-            itemName: ''
+            itemName: '',
         });
 
         // move focus to name as published text field after item was added
@@ -73,21 +73,21 @@ export class FreeTextFormClass extends Component {
 
     onNameChanged = (event) => {
         this.setState({
-            itemName: this.props.normalize(event.target.value)
+            itemName: this.props.normalize(event.target.value),
         });
     };
 
     render() {
-        const {classes, locale, errorText, disabled} = this.props;
-        const{inputFieldLabel, inputFieldHint, remindToAdd, addButtonLabel, id} = locale;
+        const { classes, locale, errorText, disabled } = this.props;
+        const{ inputFieldLabel, inputFieldHint, remindToAdd, addButtonLabel, id } = locale;
         const inputLength = this.state.itemName && this.state.itemName.length > this.props.maxInputLength && `Limited to ${this.props.maxInputLength} characters`;
         return (
             <Grid container spacing={16} display="row" alignItems="center">
-                <Grid item style={{flexGrow: 1}}>
+                <Grid item style={{ flexGrow: 1 }}>
                     <TextField
                         fullWidth
                         id={!!id && id || ''}
-                        inputRef={(node) => {this.textField = node;}}
+                        inputRef={(node) => { this.textField = node; }}
                         label={inputFieldLabel}
                         placeholder={inputFieldHint}
                         value={this.state.itemName}
@@ -130,6 +130,6 @@ export class FreeTextFormClass extends Component {
     }
 }
 
-const StyledFreeTextFormClass = withStyles(styles, {withTheme: true})(FreeTextFormClass);
+const StyledFreeTextFormClass = withStyles(styles, { withTheme: true })(FreeTextFormClass);
 const FreeTextForm = (props) => <StyledFreeTextFormClass {...props}/>;
 export default FreeTextForm;

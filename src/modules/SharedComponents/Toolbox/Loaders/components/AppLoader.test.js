@@ -1,4 +1,4 @@
-import {styles} from './AppLoader';
+import { styles } from './AppLoader';
 
 describe('AppLoader component', () => {
     it('should have a proper style generator', () => {
@@ -10,16 +10,16 @@ describe('AppLoader component', () => {
                             test1: 'test1',
                             test2: 'test2',
                             test3: 'test3',
-                        }
-                    }
+                        },
+                    },
                 },
                 white: {
-                    main: 'test4'
-                }
+                    main: 'test4',
+                },
             },
             typography: {
-                fontWeightLight: 'test5'
-            }
+                fontWeightLight: 'test5',
+            },
         };
         expect(styles(theme)).toMatchSnapshot();
 

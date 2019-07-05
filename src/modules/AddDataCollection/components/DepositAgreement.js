@@ -1,6 +1,6 @@
-import React, {PureComponent} from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import {withStyles} from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
@@ -11,7 +11,7 @@ export class DepositAgreement extends PureComponent {
         onChange: PropTypes.func,
         classes: PropTypes.object,
         depositAgreement: PropTypes.node,
-        disabled: PropTypes.bool
+        disabled: PropTypes.bool,
     };
 
     _handleChange = (event) => {
@@ -19,12 +19,12 @@ export class DepositAgreement extends PureComponent {
     };
 
     render() {
-        const {isDepositAgreementAccepted, classes, depositAgreement, disabled} = this.props;
+        const { isDepositAgreementAccepted, classes, depositAgreement, disabled } = this.props;
 
         return (
             <FormControlLabel
                 classes={{
-                    root: classes.root
+                    root: classes.root,
                 }}
                 disabled={disabled}
                 control={
@@ -32,13 +32,13 @@ export class DepositAgreement extends PureComponent {
                         id="deposit-agreement"
                         checked={isDepositAgreementAccepted}
                         onChange={this._handleChange}
-                        classes={{root: classes.checkboxRoot, checked: classes.checkboxChecked}}
+                        classes={{ root: classes.checkboxRoot, checked: classes.checkboxChecked }}
                     />
                 }
                 label={
                     <Typography
                         classes={{
-                            root: classes.label
+                            root: classes.label,
                         }}
                         color={!isDepositAgreementAccepted ? 'error' : 'secondary'}
                         component="div"
@@ -54,20 +54,20 @@ export class DepositAgreement extends PureComponent {
 export const styles = (theme) => ({
     root: {
         alignItems: 'flex-start',
-        margin: 0
+        margin: 0,
     },
     label: {
         textAlign: 'justify',
         fontSize: 16,
         fontWeight: 300,
-        lineHeight: '24px'
+        lineHeight: '24px',
     },
     checkboxRoot: {
         color: (theme.status || {}).danger || '',
     },
     checkboxChecked: {
-        color: !!theme.palette && `${theme.palette.primary.main} !important` || ''
-    }
+        color: !!theme.palette && `${theme.palette.primary.main} !important` || '',
+    },
 });
 
-export default withStyles(styles, {withTheme: true})(DepositAgreement);
+export default withStyles(styles, { withTheme: true })(DepositAgreement);

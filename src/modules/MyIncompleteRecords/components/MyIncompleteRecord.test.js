@@ -50,11 +50,11 @@ function setup(testProps, isShallow = true) {
         isNtro: true,
         ntroFieldProps: {},
         hasAnyFiles: true,
-        author: {aut_id: 410},
+        author: { aut_id: 410 },
 
         handleSubmit: jest.fn(),
         actions: {},
-        history: {go: jest.fn(), push: jest.fn()},
+        history: { go: jest.fn(), push: jest.fn() },
         match: {},
         classes: {},
 
@@ -71,13 +71,13 @@ describe('Component MyIncompleteRecord', () => {
             recordToFix: mockRecordToFix,
             isAuthorLinked: false,
             history: {
-                go: testMethod
-            }});
+                go: testMethod,
+            } });
         expect(testMethod).toHaveBeenCalled();
     });
 
     it('should render record citation, two actions in select field and a cancel button', () => {
-        const wrapper = setup({recordToFix: mockRecordToFix});
+        const wrapper = setup({ recordToFix: mockRecordToFix });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -86,8 +86,8 @@ describe('Component MyIncompleteRecord', () => {
         const wrapper = setup({
             recordToFix: mockRecordToFix,
             history: {
-                push: testMethod
-            }
+                push: testMethod,
+            },
         });
         wrapper.instance()._cancelFix();
         expect(testMethod).toHaveBeenCalledWith('/records/incomplete');
@@ -95,37 +95,37 @@ describe('Component MyIncompleteRecord', () => {
 
     it('should display confirmation box after successful submission', () => {
         const testMethod = jest.fn();
-        const wrapper = setup({recordToFix: mockRecordToFix});
-        wrapper.instance().successConfirmationBox = {showConfirmation: testMethod};
-        wrapper.instance().componentWillReceiveProps({submitSucceeded: true});
+        const wrapper = setup({ recordToFix: mockRecordToFix });
+        wrapper.instance().successConfirmationBox = { showConfirmation: testMethod };
+        wrapper.instance().componentWillReceiveProps({ submitSucceeded: true });
         expect(testMethod).toHaveBeenCalled();
     });
 
     it('should render the confirm dialog box with an alert due to a file upload failure', () => {
         const wrapper = setup({
             recordToFix: mockRecordToFix,
-            publicationToFixFileUploadingError: true
+            publicationToFixFileUploadingError: true,
         });
-        wrapper.setState({selectedRecordAction: 'fix'});
+        wrapper.setState({ selectedRecordAction: 'fix' });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render the confirm dialog box without an alert due to a file upload success', () => {
         const wrapper = setup({
             recordToFix: mockRecordToFix,
-            publicationToFixFileUploadingError: false
+            publicationToFixFileUploadingError: false,
         });
-        wrapper.setState({selectedRecordAction: 'fix'});
+        wrapper.setState({ selectedRecordAction: 'fix' });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('_handleDefaultSubmit()', () => {
         const wrapper = setup({
             recordToFix: mockRecordToFix,
-            publicationToFixFileUploadingError: false
+            publicationToFixFileUploadingError: false,
         });
         const testFN = jest.fn();
-        const event = {preventDefault: testFN};
+        const event = { preventDefault: testFN };
         wrapper.instance()._handleDefaultSubmit(event);
         expect(testFN).toHaveBeenCalled();
     });
@@ -133,7 +133,7 @@ describe('Component MyIncompleteRecord', () => {
     it('_handleDefaultSubmit()', () => {
         const wrapper = setup({
             recordToFix: mockRecordToFix,
-            publicationToFixFileUploadingError: false
+            publicationToFixFileUploadingError: false,
         });
         wrapper.instance()._handleDefaultSubmit();
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -156,11 +156,11 @@ describe('Component MyIncompleteRecord', () => {
         const wrapper = setup({
             submitSucceeded: true,
             recordToFix: mockRecordToFix,
-            publicationToFixFileUploadingError: false
+            publicationToFixFileUploadingError: false,
         });
 
 
-        const nextProps = {submitSucceeded: true};
+        const nextProps = { submitSucceeded: true };
         wrapper.setProps(nextProps);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -176,8 +176,8 @@ describe('Component MyIncompleteRecord', () => {
                 hideExtent: true,
                 hideAudienceSize: true,
                 showSignificance: false,
-                showContributionStatement: false
-            }
+                showContributionStatement: false,
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -193,8 +193,8 @@ describe('Component MyIncompleteRecord', () => {
                 hideExtent: true,
                 hideAudienceSize: true,
                 showSignificance: false,
-                showContributionStatement: false
-            }
+                showContributionStatement: false,
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -210,9 +210,9 @@ describe('Component MyIncompleteRecord', () => {
                 hideExtent: true,
                 hideAudienceSize: true,
                 showSignificance: false,
-                showContributionStatement: false
+                showContributionStatement: false,
             },
-            hasAnyFiles: false
+            hasAnyFiles: false,
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -228,8 +228,8 @@ describe('Component MyIncompleteRecord', () => {
                 hideExtent: true,
                 hideAudienceSize: true,
                 showSignificance: true,
-                showContributionStatement: true
-            }
+                showContributionStatement: true,
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -239,17 +239,17 @@ describe('Component MyIncompleteRecord', () => {
         const testFN = jest.fn();
         const wrapper = setup({
             author: {
-                aut_id: 1
+                aut_id: 1,
             },
             recordToFix: {
                 fez_datastream_info: [],
                 fez_record_search_key_author_id: [
-                    {rek_author_id: 1}
-                ]
+                    { rek_author_id: 1 },
+                ],
             },
-            history: {push: testFN},
+            history: { push: testFN },
             accountAuthorLoading: false,
-            loadingRecordToFix: false
+            loadingRecordToFix: false,
         });
         wrapper.instance()._navigateToMyIncomplete();
         expect(testFN).toHaveBeenCalledWith('/records/incomplete');
@@ -259,17 +259,17 @@ describe('Component MyIncompleteRecord', () => {
         const testFN = jest.fn();
         const wrapper = setup({
             author: {
-                aut_id: 1
+                aut_id: 1,
             },
             recordToFix: {
                 fez_datastream_info: [],
                 fez_record_search_key_author_id: [
-                    {rek_author_id: 1}
-                ]
+                    { rek_author_id: 1 },
+                ],
             },
-            history: {push: testFN},
+            history: { push: testFN },
             accountAuthorLoading: false,
-            loadingRecordToFix: false
+            loadingRecordToFix: false,
         });
         wrapper.instance()._navigateToDashboard();
         expect(testFN).toHaveBeenCalledWith('/dashboard');
@@ -279,9 +279,9 @@ describe('Component MyIncompleteRecord', () => {
         const theme = {
             palette: {
                 secondary: {
-                    light: 'test1'
-                }
-            }
+                    light: 'test1',
+                },
+            },
         };
         expect(styles(theme)).toMatchSnapshot();
     });

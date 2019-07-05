@@ -7,7 +7,7 @@ export default function ContributorLinkingField(fieldProps) {
         searchKey={{
             value: 'rek_contributor_id',
             order: 'rek_contributor_id_order',
-            type: 'contributor'
+            type: 'contributor',
         }}
         {...fieldProps} />);
 }

@@ -3,7 +3,7 @@ import Immutable from 'immutable';
 
 function setup(testProps, isShallow = true) {
     const props = {
-        ...testProps
+        ...testProps,
     };
 
     return getElement(LanguageField, props, isShallow);
@@ -21,11 +21,11 @@ describe('LanguageField component', () => {
             placeholder: 'Test placeholder',
             input: {
                 value: ['One', 'Two'],
-                onChange: jest.fn()
+                onChange: jest.fn(),
             },
             meta: {
-                error: 'Test error'
-            }
+                error: 'Test error',
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -36,11 +36,11 @@ describe('LanguageField component', () => {
             placeholder: 'Test placeholder',
             input: {
                 value: Immutable.List(['One', 'Two']),
-                onChange: jest.fn()
+                onChange: jest.fn(),
             },
             meta: {
-                error: 'Test error'
-            }
+                error: 'Test error',
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -49,7 +49,7 @@ describe('LanguageField component', () => {
         const wrapper = setup({
             label: 'Test label',
             placeholder: 'Test placeholder',
-            defaultValue: "afr"
+            defaultValue: 'afr',
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });

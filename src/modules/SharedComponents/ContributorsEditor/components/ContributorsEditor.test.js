@@ -8,7 +8,7 @@ function setup(testProps, isShallow = true) {
         author: { aut_id: 1 },
         classes: {
             list: 'list',
-            scroll: 'scroll'
+            scroll: 'scroll',
         },
         ...testProps,
     };
@@ -42,19 +42,19 @@ describe('ContributorsEditor', () => {
             locale: {
                 form: {
                     locale: {
-                        addButton: 'test'
-                    }
-                }
+                        addButton: 'test',
+                    },
+                },
             },
             meta: {
                 initial: {
-                    toJS: () => ([{}])
-                }
-            }
+                    toJS: () => ([{}]),
+                },
+            },
         });
         wrapper.setState({
             contributors: [{
-                selected: true
+                selected: true,
             }],
         }, () => {
             expect(wrapper.instance().render()).toMatchSnapshot();
@@ -73,7 +73,7 @@ describe('ContributorsEditor', () => {
         expect(wrapper.state().contributors.length).toEqual(0);
         wrapper.instance().addContributor({
             displayName: 'J.Smith',
-            ...authorsSearch.data[0]
+            ...authorsSearch.data[0],
         });
         expect(wrapper.state().contributors.length).toEqual(1);
         expect(wrapper.state().isCurrentAuthorSelected).toEqual(false);
@@ -84,13 +84,13 @@ describe('ContributorsEditor', () => {
         expect(wrapper.state().contributors.length).toEqual(0);
         wrapper.instance().addContributor({
             displayName: 'J.Smith',
-            ...authorsSearch.data[0]
+            ...authorsSearch.data[0],
         });
         expect(wrapper.state().contributors.length).toEqual(1);
         expect(wrapper.state().isCurrentAuthorSelected).toEqual(false);
         wrapper.instance().addContributor({
             displayName: 'J.Smith II',
-            ...authorsSearch.data[0]
+            ...authorsSearch.data[0],
         });
         expect(wrapper.state().contributors.length).toEqual(1);
     });
@@ -100,7 +100,7 @@ describe('ContributorsEditor', () => {
         expect(wrapper.state().contributors.length).toEqual(0);
         wrapper.instance().addContributor({
             nameAsPublished: 'J.Smith',
-            uqIdentifier: `${authorsSearch.data[0].aut_id}`
+            uqIdentifier: `${authorsSearch.data[0].aut_id}`,
         });
         expect(wrapper.state().contributors.length).toEqual(1);
         expect(wrapper.state().isCurrentAuthorSelected).toEqual(true);
@@ -110,18 +110,18 @@ describe('ContributorsEditor', () => {
         const wrapper = setup({});
         wrapper.setState({
             contributors: [{
-                test: 'value1'
+                test: 'value1',
             }, {
-                test: 'value2'
+                test: 'value2',
             }, {
-                test: 'value3'
-            }]
+                test: 'value3',
+            }],
         });
         wrapper.instance().updateContributor({ test: 'value4' }, 1);
         expect(wrapper.state().contributors[1].test).toBe('value4');
     });
 
-    it('assigns a contributor to current author', async () => {
+    it('assigns a contributor to current author', async() => {
         const wrapper = setup({
             author: {
                 aut_id: 101,
@@ -144,19 +144,19 @@ describe('ContributorsEditor', () => {
 
     it('chooses a contributor to edit', () => {
         const wrapper = setup({
-            editMode: true
+            editMode: true,
         });
         wrapper.setState({
             contributors: [{
                 nameAsPublished: 'test1',
-                selected: false
+                selected: false,
             }, {
                 nameAsPublished: 'test2',
-                selected: false
+                selected: false,
             }, {
                 nameAsPublished: 'test3',
-                selected: false
-            }]
+                selected: false,
+            }],
         });
         expect(toJson(wrapper)).toMatchSnapshot();
 
@@ -164,14 +164,14 @@ describe('ContributorsEditor', () => {
         expect(wrapper.state().contributors).toEqual([
             {
                 nameAsPublished: 'test1',
-                selected: false
+                selected: false,
             }, {
                 nameAsPublished: 'test2',
-                selected: true
+                selected: true,
             }, {
                 nameAsPublished: 'test3',
-                selected: false
-            }
+                selected: false,
+            },
         ]);
         wrapper.update();
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -181,7 +181,7 @@ describe('ContributorsEditor', () => {
         const wrapper = setup({});
         wrapper.setState({
             contributors: [{}, {}, {}],
-            isCurrentAuthorSelected: true
+            isCurrentAuthorSelected: true,
         });
         expect(wrapper.state().contributors.length).toEqual(3);
         wrapper.instance().deleteContributor({}, 0);
@@ -194,8 +194,8 @@ describe('ContributorsEditor', () => {
             contributors: [
                 { 'nameAsPublished': 'One', 'disabled': false },
                 { 'nameAsPublished': 'Two', 'disabled': false },
-                { 'nameAsPublished': 'Three', 'disabled': false }
-            ], isCurrentAuthorSelected: true
+                { 'nameAsPublished': 'Three', 'disabled': false },
+            ], isCurrentAuthorSelected: true,
         });
         expect(wrapper.state().contributors.length).toEqual(3);
         wrapper.instance().deleteAllContributors();
@@ -209,8 +209,8 @@ describe('ContributorsEditor', () => {
             contributors: [
                 { displayName: 1 },
                 { displayName: 2 },
-                { displayName: 3 }
-            ]
+                { displayName: 3 },
+            ],
         });
         expect(wrapper.state().contributors.length).toEqual(3);
         expect(wrapper.state().contributors[1].displayName).toEqual(2);
@@ -225,8 +225,8 @@ describe('ContributorsEditor', () => {
             contributors: [
                 { displayName: 1 },
                 { displayName: 2 },
-                { displayName: 3 }
-            ]
+                { displayName: 3 },
+            ],
         });
         expect(wrapper.state().contributors.length).toEqual(3);
         expect(wrapper.state().contributors[1].displayName).toEqual(2);
@@ -237,7 +237,7 @@ describe('ContributorsEditor', () => {
 
     it('passes showContributorAssignment prop to ContributorRow as expected', () => {
         const wrapper = setup({
-            showContributorAssignment: true
+            showContributorAssignment: true,
         });
         wrapper.setState({
             isCurrentAuthorSelected: false,
@@ -248,23 +248,23 @@ describe('ContributorsEditor', () => {
 
     it('returns array of contributor rows in edit mode with selectContributor select handler', () => {
         const wrapper = setup({
-            editMode: true
+            editMode: true,
         });
         const testFn = jest.fn();
         wrapper.instance().selectContributor = testFn;
         wrapper.setState({
             contributors: [{
-                nameAsPublished: 1
-            }]
-        })
+                nameAsPublished: 1,
+            }],
+        });
         expect(wrapper.instance().renderContributorRows()[0].props.onSelect).toBe(testFn);
     });
 
     it('returns contributor form with expected props', () => {
         const wrapper = setup({
             contributors: [
-                { nameAsPublished: 1 }
-            ]
+                { nameAsPublished: 1 },
+            ],
         });
         const testFn = jest.fn();
         expect(wrapper.instance().renderContributorForm(testFn, 0)).toMatchSnapshot();
@@ -274,25 +274,24 @@ describe('ContributorsEditor', () => {
             locale: {
                 form: {
                     locale: {
-                        addButton: 'test'
-                    }
-                }
+                        addButton: 'test',
+                    },
+                },
             },
             meta: {
                 initial: {
-                    toJS: () => ([{}])
-                }
-            }
+                    toJS: () => ([{}]),
+                },
+            },
         });
         const contributorForm = wrapper.instance().renderContributorForm(testFn, 0);
         expect(contributorForm).toMatchSnapshot();
 
         const testObj = {
-            nameAsPublished: 2
+            nameAsPublished: 2,
         };
         contributorForm.props.onSubmit(testObj);
         expect(testFn).toBeCalledWith(testObj, 0);
-
     });
 
     // Tests for infinite scroll appear or not
@@ -310,8 +309,8 @@ describe('ContributorsEditor', () => {
             contributors: [
                 { nameAsPublished: 1 },
                 { nameAsPublished: 2 },
-                { nameAsPublished: 3 }
-            ]
+                { nameAsPublished: 3 },
+            ],
         });
         wrapper.update();
         expect(wrapper.find('WithStyles(WithTheme(WithWidth(ContributorRow)))').length).toEqual(3);
@@ -326,8 +325,8 @@ describe('ContributorsEditor', () => {
                 { displayName: 1 },
                 { displayName: 2 },
                 { displayName: 3 },
-                { displayName: 4 }
-            ]
+                { displayName: 4 },
+            ],
         });
         expect(wrapper.find('WithStyles(WithTheme(WithWidth(ContributorRow)))').length).toEqual(4);
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -336,7 +335,7 @@ describe('ContributorsEditor', () => {
     it('should show validation error', () => {
         const wrapper = setup({
             contributors: [],
-            meta: { error: 'This is a test error' }
+            meta: { error: 'This is a test error' },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('WithStyles(Typography)').length).toEqual(1);
@@ -345,13 +344,13 @@ describe('ContributorsEditor', () => {
     it('should update component', () => {
         const onChangeFn = jest.fn();
         const wrapper = setup({
-            onChange: onChangeFn
+            onChange: onChangeFn,
         });
         wrapper.setState({
             contributors: [
                 { displayName: 'test 1' },
                 { displayName: 'test 2' },
-            ]
+            ],
         });
 
         expect(onChangeFn).toHaveBeenCalledWith([
@@ -367,8 +366,8 @@ describe('ContributorsEditor', () => {
                 value: [
                     { displayName: 'test 1' },
                     { displayName: 'test 2' },
-                ]
-            }
+                ],
+            },
         });
 
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -381,8 +380,8 @@ describe('ContributorsEditor', () => {
                 value: Immutable.List([
                     { displayName: 'test 1' },
                     { displayName: 'test 2' },
-                ])
-            }
+                ]),
+            },
         });
 
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -395,8 +394,8 @@ describe('ContributorsEditor', () => {
                     <p>
                         <span>test</span>
                     </p>
-                )
-            }
+                ),
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -404,8 +403,8 @@ describe('ContributorsEditor', () => {
     it('should render error as one child', () => {
         const wrapper = setup({
             meta: {
-                error: (<span>test</span>)
-            }
+                error: (<span>test</span>),
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -424,34 +423,32 @@ describe('ContributorsEditor', () => {
             locale: {
                 form: 'test',
                 header: 'test header',
-                row: 'test row'
-            }
+                row: 'test row',
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
         wrapper.setState({
             contributors: [
                 'test1',
-                'test2'
-            ]
+                'test2',
+            ],
         });
         expect(wrapper.instance().moveDownContributor('test2', 1)).toBeUndefined();
     });
 
     it('should map state to props as expected', () => {
         const testFunction = () => ({
-            author: 'test'
+            author: 'test',
         });
         expect(mapStateToProps({
-            get: testFunction
+            get: testFunction,
         })).toEqual({
-            author: 'test'
+            author: 'test',
         });
         expect(mapStateToProps({
-            get: () => false
+            get: () => false,
         })).toEqual({
-            author: null
+            author: null,
         });
     });
-
-
 });

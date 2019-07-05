@@ -1,4 +1,4 @@
-import React, {PureComponent} from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import DashboardAuthorDetails from './DashboardAuthorDetails';
 import DashboardArticleCount from '../containers/DashboardArticleCount';
@@ -7,7 +7,7 @@ import DashboardAuthorAvatar from './DashboardAuthorAvatar';
 import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
 import Hidden from '@material-ui/core/Hidden';
-import {withStyles} from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 
 const background = require('../../../../public/images/dashboard_cover.jpg');
 
@@ -15,8 +15,8 @@ const styles = {
     wrapper: {
         backgroundImage: 'url(' + background + ')',
         backgroundSize: 'cover',
-        padding: 16
-    }
+        padding: 16,
+    },
 };
 
 class DashboardAuthorProfile extends PureComponent {
@@ -24,11 +24,11 @@ class DashboardAuthorProfile extends PureComponent {
         author: PropTypes.object,
         authorDetails: PropTypes.object,
         history: PropTypes.object.isRequired,
-        classes: PropTypes.object
+        classes: PropTypes.object,
     };
 
     render() {
-        const {author, authorDetails, history, classes} = this.props;
+        const { author, authorDetails, history, classes } = this.props;
         if (!authorDetails) {
             return <div className="AuthorProfile empty" />;
         }
@@ -37,18 +37,18 @@ class DashboardAuthorProfile extends PureComponent {
             <Card className={classes.wrapper}>
                 <Grid container spacing={24} alignContent={'center'} alignItems={'center'} justify={'center'}>
                     {/* Profile avatar */}
-                    {
-                        authorDetails.image_exists === 1 &&
+                    {authorDetails.image_exists === 1 && (
                         <Grid item xs={'auto'}>
                             <DashboardAuthorAvatar
                                 values={{
                                     uqr_id: authorDetails.uqr_id || author.aut_id || '',
                                     title: author.aut_title || '',
                                     givenName: author.aut_fname || '',
-                                    familyName: author.aut_lname || ''
-                                }}/>
+                                    familyName: author.aut_lname || '',
+                                }}
+                            />
                         </Grid>
-                    }
+                    )}
                     {/* Author Details/Name/Orgs/ResearcherIDs */}
                     <Grid item xs>
                         <Grid container>
@@ -59,25 +59,31 @@ class DashboardAuthorProfile extends PureComponent {
                                         givenName: author.aut_fname || '',
                                         familyName: author.aut_lname || '',
                                         orgUnits: authorDetails.org_units,
-                                        positions: authorDetails.positions
+                                        positions: authorDetails.positions,
                                     }}
                                 />
                             </Grid>
                             <Grid item xs={12}>
                                 <DashboardResearcherIds
                                     values={{
-                                        publons: parseInt(author.aut_publons_id, 10) === 1 ? author.aut_orcid_id : author.aut_publons_id,
+                                        publons:
+                                            parseInt(author.aut_publons_id, 10) === 1
+                                                ? author.aut_orcid_id
+                                                : author.aut_publons_id,
                                         researcher: author.aut_researcher_id,
-                                        scopus: parseInt(author.aut_is_scopus_id_authenticated, 10) === 1 ? author.aut_scopus_id : '',
+                                        scopus:
+                                            parseInt(author.aut_is_scopus_id_authenticated, 10) === 1
+                                                ? author.aut_scopus_id
+                                                : '',
                                         google_scholar: author.aut_google_scholar_id,
-                                        orcid: author.aut_orcid_id
+                                        orcid: author.aut_orcid_id,
                                     }}
                                     authenticated={{
                                         publons: Boolean(author.aut_publons_id),
                                         researcher: Boolean(author.aut_researcher_id),
                                         scopus: Boolean(author.aut_is_scopus_id_authenticated),
                                         google_scholar: Boolean(author.aut_google_scholar_id),
-                                        orcid: Boolean(author.aut_orcid_id)
+                                        orcid: Boolean(author.aut_orcid_id),
                                     }}
                                     history={history}
                                 />

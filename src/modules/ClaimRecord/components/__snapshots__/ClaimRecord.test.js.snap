@@ -1058,7 +1058,7 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
             Object {
               "buttonLabel": "CLOSE",
               "text": <p>
-                For more information about content indicators, click 
+                For more information about content indicators, click
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
                   rel="noreferrer"
@@ -3234,7 +3234,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
             Object {
               "buttonLabel": "CLOSE",
               "text": <p>
-                For more information about content indicators, click 
+                For more information about content indicators, click
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
                   rel="noreferrer"
@@ -5568,7 +5568,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
             Object {
               "buttonLabel": "CLOSE",
               "text": <p>
-                For more information about content indicators, click 
+                For more information about content indicators, click
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
                   rel="noreferrer"
@@ -7016,7 +7016,7 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
             Object {
               "buttonLabel": "CLOSE",
               "text": <p>
-                For more information about content indicators, click 
+                For more information about content indicators, click
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
                   rel="noreferrer"
@@ -8464,7 +8464,7 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
             Object {
               "buttonLabel": "CLOSE",
               "text": <p>
-                For more information about content indicators, click 
+                For more information about content indicators, click
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
                   rel="noreferrer"
@@ -9912,7 +9912,7 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
             Object {
               "buttonLabel": "CLOSE",
               "text": <p>
-                For more information about content indicators, click 
+                For more information about content indicators, click
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
                   rel="noreferrer"
@@ -11070,7 +11070,7 @@ exports[`Component ClaimRecord  should render publication citation, error messag
         <WithStyles(Alert)
           message={
             <span>
-              This record has been assigned to you already.  If you feel this is incorrect, please notify the eSpace admin team at 
+              This record has been assigned to you already. If you feel this is incorrect, please notify the eSpace admin team at 
               <a
                 href="mailto:espace@library.uq.edu.au"
               >
@@ -12418,7 +12418,7 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
             Object {
               "buttonLabel": "CLOSE",
               "text": <p>
-                For more information about content indicators, click 
+                For more information about content indicators, click
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
                   rel="noreferrer"
@@ -13866,7 +13866,7 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
             Object {
               "buttonLabel": "CLOSE",
               "text": <p>
-                For more information about content indicators, click 
+                For more information about content indicators, click
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
                   rel="noreferrer"
@@ -15314,7 +15314,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
             Object {
               "buttonLabel": "CLOSE",
               "text": <p>
-                For more information about content indicators, click 
+                For more information about content indicators, click
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
                   rel="noreferrer"
@@ -16775,7 +16775,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
             Object {
               "buttonLabel": "CLOSE",
               "text": <p>
-                For more information about content indicators, click 
+                For more information about content indicators, click
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
                   rel="noreferrer"
@@ -18234,7 +18234,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
             Object {
               "buttonLabel": "CLOSE",
               "text": <p>
-                For more information about content indicators, click 
+                For more information about content indicators, click
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
                   rel="noreferrer"
@@ -18355,7 +18355,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
       >
         <WithStyles(Alert)
           incompleteData="The selected source has incomplete data. You will need to ADD A MISSING RECORD and enter the information manually."
-          message="Error has occurred during request and request cannot be processed. This is an error Please contact eSpace administrators or try again later."
+          message="Error has occurred during request and request cannot be processed. This is an errorPlease contact eSpace administrators or try again later."
           pushToTop={true}
           title="Error"
           type="error_outline"
@@ -19694,7 +19694,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
             Object {
               "buttonLabel": "CLOSE",
               "text": <p>
-                For more information about content indicators, click 
+                For more information about content indicators, click
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
                   rel="noreferrer"
@@ -19959,7 +19959,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
             Object {
               "buttonLabel": "CLOSE",
               "text": <p>
-                For more information about content indicators, click 
+                For more information about content indicators, click
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
                   rel="noreferrer"
@@ -20080,7 +20080,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
       >
         <WithStyles(Alert)
           incompleteData="The selected source has incomplete data. You will need to ADD A MISSING RECORD and enter the information manually."
-          message="Error has occurred during request and request cannot be processed. The given data was invalid. Please contact eSpace administrators or try again later."
+          message="Error has occurred during request and request cannot be processed. The given data was invalid.Please contact eSpace administrators or try again later."
           pushToTop={true}
           title="Error"
           type="error_outline"
@@ -20209,7 +20209,7 @@ exports[`Component ClaimRecord  should show alert if submit failed and PID not f
             Object {
               "buttonLabel": "CLOSE",
               "text": <p>
-                For more information about content indicators, click 
+                For more information about content indicators, click
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
                   rel="noreferrer"
@@ -20330,7 +20330,7 @@ exports[`Component ClaimRecord  should show alert if submit failed and PID not f
       >
         <WithStyles(Alert)
           incompleteData="The selected source has incomplete data. You will need to ADD A MISSING RECORD and enter the information manually."
-          message="Error has occurred during request and request cannot be processed. The selected source has incomplete data. You will need to ADD A MISSING RECORD and enter the information manually. Please contact eSpace administrators or try again later."
+          message="Error has occurred during request and request cannot be processed. The selected source has incomplete data. You will need to ADD A MISSING RECORD and enter the information manually.Please contact eSpace administrators or try again later."
           pushToTop={true}
           title="Error"
           type="error_outline"
@@ -21463,7 +21463,7 @@ exports[`Component ClaimRecord  should show contributor as linked 1`] = `
         <WithStyles(Alert)
           message={
             <span>
-              This record has been assigned to you already.  If you feel this is incorrect, please notify the eSpace admin team at 
+              This record has been assigned to you already. If you feel this is incorrect, please notify the eSpace admin team at 
               <a
                 href="mailto:espace@library.uq.edu.au"
               >

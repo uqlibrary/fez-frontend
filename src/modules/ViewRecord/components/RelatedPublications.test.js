@@ -1,13 +1,13 @@
-import {dataCollection, recordWithRelatedItems} from 'mock/data/testing/records';
-import {RelatedPublicationsClass} from "./RelatedPublications";
-import RelatedPublications from "./RelatedPublications";
+import { dataCollection, recordWithRelatedItems } from 'mock/data/testing/records';
+import { RelatedPublicationsClass } from './RelatedPublications';
+import RelatedPublications from './RelatedPublications';
 
-function setup(testProps, isShallow = true){
+function setup(testProps, isShallow = true) {
     const props = {
-        classes: {list: 'list', data: 'data'},
+        classes: { list: 'list', data: 'data' },
         publication: testProps.publication || dataCollection,
         title: testProps.title || '',
-        ...testProps
+        ...testProps,
     };
     return getElement(RelatedPublicationsClass, props, isShallow);
 }
@@ -22,7 +22,7 @@ describe('Related publications Component ', () => {
     it('should render component', () => {
         const wrapper = getElement(RelatedPublications, {
             publication: dataCollection,
-            title: 'Title'
+            title: 'Title',
         }, false);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -31,7 +31,7 @@ describe('Related publications Component ', () => {
     it('should not render component with empty data', () => {
         const publication = Object.assign({}, dataCollection);
         publication.fez_record_search_key_has_related_datasets = null;
-        const wrapper = setup({publication: publication});
+        const wrapper = setup({ publication: publication });
         expect(toJson(wrapper)).toEqual('');
     });
 
@@ -39,12 +39,12 @@ describe('Related publications Component ', () => {
         const publication = Object.assign({}, dataCollection);
         publication.fez_record_search_key_has_related_datasets.push({
             rek_has_related_datasets_lookup: null,
-            rek_has_related_datasets_order: 3
+            rek_has_related_datasets_order: 3,
         }, {
-            rek_has_related_datasets_lookup: " ",
-            rek_has_related_datasets_order: 4
+            rek_has_related_datasets_lookup: ' ',
+            rek_has_related_datasets_order: 4,
         });
-        const wrapper = setup({publication: publication});
+        const wrapper = setup({ publication: publication });
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('.relatedPublications li').length).toEqual(2);
     });
@@ -53,7 +53,7 @@ describe('Related publications Component ', () => {
         const wrapper = getElement(RelatedPublications, {
             publication: dataCollection,
             title: 'A test Title',
-            showPublicationTitle: true
+            showPublicationTitle: true,
         }, false);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -66,8 +66,8 @@ describe('Related publications Component ', () => {
                 key: 'fez_record_search_key_isderivationof',
                 pid: 'rek_isderivationof',
                 title: 'rek_isderivationof_lookup',
-                order: 'rek_isderivationof_order'
-            }
+                order: 'rek_isderivationof_order',
+            },
         }, false);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -80,8 +80,8 @@ describe('Related publications Component ', () => {
                 key: 'fez_record_search_key_isderivationof',
                 pid: 'rek_isderivationof',
                 title: 'rek_isderivationof_lookup',
-                order: 'rek_isderivationof_order'
-            }
+                order: 'rek_isderivationof_order',
+            },
         }, false);
         expect(toJson(wrapper)).toMatchSnapshot();
     });

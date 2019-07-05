@@ -1,11 +1,11 @@
-import {ScrollToTop} from './ScrollToTop';
+import { ScrollToTop } from './ScrollToTop';
 jest.mock('react-router-dom');
 
 function setup(testProps, isShallow = true) {
     const props = {
         children: 'Children',
         location: {},
-        ...testProps
+        ...testProps,
     };
 
     return getElement(ScrollToTop, props, isShallow);
@@ -24,14 +24,14 @@ describe('ScrollToTop component', () => {
 
         // test if changed
         wrapper.setProps({
-            location: testLocation
+            location: testLocation,
         });
         expect(scrollToFn).toHaveBeenCalledWith(0, 0);
 
         // test else
         scrollToFn.mockClear();
         wrapper.setProps({
-            location: testLocation
+            location: testLocation,
         });
         expect(scrollToFn).not.toBeCalled();
     });

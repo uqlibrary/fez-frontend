@@ -1,17 +1,17 @@
-import {connect} from 'react-redux';
-import {bindActionCreators} from 'redux';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import NewsFeed from '../components/NewsFeed';
 import * as actions from 'actions';
 
 const mapStateToProps = (state) => {
     return {
-        ...state.get('newsFeedReducer')
+        ...state.get('newsFeedReducer'),
     };
 };
 
 function mapDispatchToProps(dispatch) {
     return {
-        actions: bindActionCreators(actions, dispatch)
+        actions: bindActionCreators(actions, dispatch),
     };
 }
 

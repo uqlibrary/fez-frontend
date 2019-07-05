@@ -4,7 +4,7 @@ function setup(testProps, isShallow = true) {
     // build full props list required by the component
     const props = {
         classes: {},
-        ...testProps
+        ...testProps,
     };
     return getElement(DateCitationView, props, isShallow);
 }
@@ -36,17 +36,22 @@ describe('DateCitationView test', () => {
     });
 
     it('should render component with date : On the 1st day of June in 2017', () => {
-        const wrapper = setup({ date: '2017-07-01T00:00:00Z', format: '[On the ]Do[ day of ]MMMM[ in ]YYYY', prefix: '', suffix: '' });
+        const wrapper = setup({
+            date: '2017-07-01T00:00:00Z',
+            format: '[On the ]Do[ day of ]MMMM[ in ]YYYY',
+            prefix: '',
+            suffix: '',
+        });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render component with just the year in brackets : (2017).', () => {
-        const wrapper = setup({ date: '2017-07-01T00:00:00Z', format: 'YYYY', prefix: '(', suffix: ').'});
+        const wrapper = setup({ date: '2017-07-01T00:00:00Z', format: 'YYYY', prefix: '(', suffix: ').' });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should render component with date in user\'s timezone', () => {
-        const wrapper = setup({ date: '2017-06-30T22:00:00Z', format: 'YYYY-MM-DD', isLocalised: true});
+    it("should render component with date in user's timezone", () => {
+        const wrapper = setup({ date: '2017-06-30T22:00:00Z', format: 'YYYY-MM-DD', isLocalised: true });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

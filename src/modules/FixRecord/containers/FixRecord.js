@@ -12,7 +12,7 @@ const onSubmit = (values, dispatch, props) => {
     const data = {
         ...values.toJS(),
         publication: { ...props.recordToFix },
-        author: { ...props.author }
+        author: { ...props.author },
     };
     return dispatch(data.fixAction === 'unclaim'
         ? actions.unclaimRecord(data)
@@ -57,7 +57,7 @@ let FixRecordContainer = reduxForm({
     form: FORM_NAME,
     enableReinitialize: true,
     validate,
-    onSubmit
+    onSubmit,
 })(confirmDiscardFormChanges(FixRecord, FORM_NAME));
 
 const mapStateToProps = (state) => {
@@ -75,14 +75,14 @@ const mapStateToProps = (state) => {
         disableSubmit: formErrors && !(formErrors instanceof Immutable.Map),
         initialValues: {
             publication: recordToFix,
-            contentIndicators
-        }
+            contentIndicators,
+        },
     };
 };
 
 function mapDispatchToProps(dispatch) {
     return {
-        actions: bindActionCreators(actions, dispatch)
+        actions: bindActionCreators(actions, dispatch),
     };
 }
 

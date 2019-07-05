@@ -1,5 +1,5 @@
 import JournalArticleCitation from './JournalArticleCitation';
-import {journalArticle} from 'mock/data/testing/records';
+import { journalArticle } from 'mock/data/testing/records';
 
 function setup(testProps, isShallow = false) {
     const props = {

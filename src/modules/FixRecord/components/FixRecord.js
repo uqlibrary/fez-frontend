@@ -16,7 +16,7 @@ import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import {
     ContentIndicatorsField,
-    showContentIndicatorsField
+    showContentIndicatorsField,
 } from 'modules/SharedComponents/Toolbox/ContentIndicatorsField';
 import { NavigationDialogBox } from 'modules/SharedComponents/Toolbox/NavigationPrompt';
 import { FileUploadField } from 'modules/SharedComponents/Toolbox/FileUploader';
@@ -48,21 +48,19 @@ export default class FixRecord extends PureComponent {
     };
 
     static contextTypes = {
-        selectFieldMobileOverrides: PropTypes.object
+        selectFieldMobileOverrides: PropTypes.object,
     };
 
     constructor(props) {
         super(props);
 
         this.state = {
-            selectedRecordAction: ''
+            selectedRecordAction: '',
         };
     }
 
     componentDidMount() {
-        if (this.props.actions &&
-            this.props.match.params &&
-            this.props.match.params.pid) {
+        if (this.props.actions && this.props.match.params && this.props.match.params.pid) {
             this.props.actions.loadRecordToFix(this.props.match.params.pid);
         }
     }
@@ -79,8 +77,13 @@ export default class FixRecord extends PureComponent {
     }
 
     isLoggedInUserLinked = (author, recordToFix, searchKey, subkey) => {
-        return !!author && !!recordToFix && recordToFix[searchKey] && recordToFix[searchKey].length > 0
-            && recordToFix[searchKey].filter(authorId => authorId[subkey] === author.aut_id).length > 0;
+        return (
+            !!author &&
+            !!recordToFix &&
+            recordToFix[searchKey] &&
+            recordToFix[searchKey].length > 0 &&
+            recordToFix[searchKey].filter(authorId => authorId[subkey] === author.aut_id).length > 0
+        );
     };
 
     isAuthorLinked = () => {
@@ -114,17 +117,16 @@ export default class FixRecord extends PureComponent {
 
     _actionSelected = (event, value) => {
         this.setState({
-            selectedRecordAction: value
+            selectedRecordAction: value,
         });
     };
 
-    _setSuccessConfirmation = (ref) => {
+    _setSuccessConfirmation = ref => {
         this.successConfirmationBox = ref;
     };
 
-    _handleDefaultSubmit = (event) => {
-        event &&
-        event.preventDefault();
+    _handleDefaultSubmit = event => {
+        event && event.preventDefault();
     };
 
     render() {
@@ -147,18 +149,16 @@ export default class FixRecord extends PureComponent {
         }
 
         const fixOptions = txt.actionsOptions.map((item, index) => (
-            <MenuItem
-                value={item.action}
-                children={item.title}
-                key={`fix_record_action_${index}`}
-            />
+            <MenuItem value={item.action} children={item.title} key={`fix_record_action_${index}`} />
         ));
 
         // set confirmation message depending on file upload status
         const saveConfirmationLocale = { ...txtFixForm.successWorkflowConfirmation };
         saveConfirmationLocale.confirmationMessage = (
             <React.Fragment>
-                {this.props.publicationToFixFileUploadingError && <Alert {...saveConfirmationLocale.fileFailConfirmationAlert} />}
+                {this.props.publicationToFixFileUploadingError && (
+                    <Alert {...saveConfirmationLocale.fileFailConfirmationAlert} />
+                )}
                 {saveConfirmationLocale.confirmationMessage}
             </React.Fragment>
         );
@@ -179,15 +179,14 @@ export default class FixRecord extends PureComponent {
                                     onChange={this._actionSelected}
                                     required
                                     SelectDisplayProps={{
-                                        id: 'fixAction'
+                                        id: 'fixAction',
                                     }}
                                 >
                                     {fixOptions}
                                 </Field>
                             </StandardCard>
                         </Grid>
-                        {
-                            this.state.selectedRecordAction === 'fix' &&
+                        {this.state.selectedRecordAction === 'fix' && (
                             <React.Fragment>
                                 <NavigationDialogBox
                                     when={this.props.dirty && !this.props.submitSucceeded}
@@ -199,10 +198,12 @@ export default class FixRecord extends PureComponent {
                                     onCancelAction={this._navigateToDashboard}
                                     locale={saveConfirmationLocale}
                                 />
-                                {
-                                    showContentIndicatorsField(this.props.recordToFix) &&
+                                {showContentIndicatorsField(this.props.recordToFix) && (
                                     <Grid item xs={12}>
-                                        <StandardCard title={txtFixForm.contentIndicators.title}  help={txtFixForm.contentIndicators.help} >
+                                        <StandardCard
+                                            title={txtFixForm.contentIndicators.title}
+                                            help={txtFixForm.contentIndicators.help}
+                                        >
                                             <Grid container spacing={24}>
                                                 <Grid item xs={12}>
                                                     <Typography>{txtFixForm.contentIndicators.description}</Typography>
@@ -221,7 +222,7 @@ export default class FixRecord extends PureComponent {
                                             </Grid>
                                         </StandardCard>
                                     </Grid>
-                                }
+                                )}
                                 <Grid item xs={12}>
                                     <StandardCard title={txtFixForm.comments.title} help={txtFixForm.comments.help}>
                                         <Grid container spacing={16}>
@@ -264,9 +265,8 @@ export default class FixRecord extends PureComponent {
                                     </StandardCard>
                                 </Grid>
                             </React.Fragment>
-                        }
-                        {
-                            this.state.selectedRecordAction === 'unclaim' &&
+                        )}
+                        {this.state.selectedRecordAction === 'unclaim' && (
                             <Grid item xs={12}>
                                 <StandardCard title={txtUnclaimForm.title} help={txtUnclaimForm.help}>
                                     <Alert {...txtUnclaimForm.alert} />
@@ -279,14 +279,13 @@ export default class FixRecord extends PureComponent {
                                     />
                                 </StandardCard>
                             </Grid>
-                        }
+                        )}
 
-                        {
-                            alertProps &&
+                        {alertProps && (
                             <Grid item xs={12}>
                                 <Alert pushToTop {...alertProps} />
                             </Grid>
-                        }
+                        )}
                     </Grid>
                     <Grid container spacing={24}>
                         <Grid item xs />
@@ -299,8 +298,7 @@ export default class FixRecord extends PureComponent {
                                 onClick={this._cancelFix}
                             />
                         </Grid>
-                        {
-                            this.state.selectedRecordAction &&
+                        {this.state.selectedRecordAction && (
                             <Grid item>
                                 <Button
                                     variant={'contained'}
@@ -312,7 +310,7 @@ export default class FixRecord extends PureComponent {
                                     id="fixSubmit"
                                 />
                             </Grid>
-                        }
+                        )}
                     </Grid>
                 </form>
             </StandardPage>

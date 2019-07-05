@@ -1,1 +1,1 @@
-export {default as StandardCard} from './components/StandardCard';
+export { default as StandardCard } from './components/StandardCard';

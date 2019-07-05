@@ -146,7 +146,8 @@ context('Search', () => {
 
     //         cy.url()
     //             .should('equal',
-    //                 `${baseUrl}/#/records/search?searchQueryParams%5Ball%5D=test1&page=1&pageSize=20&sortBy=score&sortDirection=Desc`
+    //                 `${baseUrl}/#/records/search?searchQueryParams%5Ball%5D=test1&page=
+    //                 1&pageSize=20&sortBy=score&sortDirection=Desc`
     //             );
     //         cy.wait(['@searchAPICall']);
 

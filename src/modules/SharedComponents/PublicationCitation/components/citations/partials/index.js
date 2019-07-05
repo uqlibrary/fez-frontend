@@ -1,9 +1,9 @@
-export {default as AuthorsCitationView} from './AuthorsCitationView';
-export {default as EditorsCitationView} from './EditorsCitationView';
-export {default as CitationView} from './CitationView';
-export {default as DoiCitationView} from './DoiCitationView';
-export {default as PageCitationView} from './PageCitationView';
-export {default as PageRangeCitationView} from './PageRangeCitationView';
-export {default as DateCitationView} from './DateCitationView';
-export {default as CitationCountView} from './CitationCountView';
-export {default as CitationTitleView} from './CitationTitleView';
+export { default as AuthorsCitationView } from './AuthorsCitationView';
+export { default as EditorsCitationView } from './EditorsCitationView';
+export { default as CitationView } from './CitationView';
+export { default as DoiCitationView } from './DoiCitationView';
+export { default as PageCitationView } from './PageCitationView';
+export { default as PageRangeCitationView } from './PageRangeCitationView';
+export { default as DateCitationView } from './DateCitationView';
+export { default as CitationCountView } from './CitationCountView';
+export { default as CitationTitleView } from './CitationTitleView';

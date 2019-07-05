@@ -20,7 +20,7 @@ import {
     NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION,
     NTRO_SUBTYPE_CW_OTHER,
     NTRO_SUBTYPE_CW_TEXTUAL_WORK,
-    NTRO_SUBTYPE_CPEE_EXHIBITION_EVENT
+    NTRO_SUBTYPE_CPEE_EXHIBITION_EVENT,
 } from 'config/general';
 import moment from 'moment';
 
@@ -30,7 +30,7 @@ export default class CreativeWorkForm extends Component {
         subtype: PropTypes.string,
         isNtro: PropTypes.bool,
         isAuthorSelected: PropTypes.bool,
-        formValues: PropTypes.any
+        formValues: PropTypes.any,
     };
 
     constructor(props) {
@@ -41,8 +41,14 @@ export default class CreativeWorkForm extends Component {
         const txt = formLocale.creativeWork;
         const formValues = this.props.formValues && this.props.formValues.toJS();
         const startDate = formValues && formValues.rek_date;
-        const endDate = formValues && formValues.fez_record_search_key_end_date && formValues.fez_record_search_key_end_date.rek_end_date;
-        const dateError = !!startDate && !!endDate && moment(startDate).format() > moment(endDate).format() ? 'Date range is not valid' : '';
+        const endDate =
+            formValues &&
+            formValues.fez_record_search_key_end_date &&
+            formValues.fez_record_search_key_end_date.rek_end_date;
+        const dateError =
+            !!startDate && !!endDate && moment(startDate).format() > moment(endDate).format()
+                ? 'Date range is not valid'
+                : '';
         return (
             <Grid container spacing={24}>
                 <Grid item xs={12}>
@@ -85,8 +91,7 @@ export default class CreativeWorkForm extends Component {
                                     {...txt.information.fieldLabels.publisher}
                                 />
                             </Grid>
-                            {
-                                this.props.subtype !== NTRO_SUBTYPE_CPEE_EXHIBITION_EVENT &&
+                            {this.props.subtype !== NTRO_SUBTYPE_CPEE_EXHIBITION_EVENT && (
                                 <Grid item xs={12} sm={4}>
                                     <Field
                                         component={TextField}
@@ -98,13 +103,14 @@ export default class CreativeWorkForm extends Component {
                                         {...txt.information.fieldLabels.doi}
                                     />
                                 </Grid>
-                            }
+                            )}
                             <Grid item xs={12} sm={6}>
                                 <Field
                                     component={PartialDateField}
                                     disabled={this.props.submitting}
                                     name="rek_date"
-                                    allowPartial required
+                                    allowPartial
+                                    required
                                     className="requiredHintField"
                                     validate={[validation.required]}
                                     floatingTitle={txt.information.fieldLabels.date.title}
@@ -140,8 +146,7 @@ export default class CreativeWorkForm extends Component {
                         />
                     </StandardCard>
                 </Grid>
-                {
-                    this.props.isNtro &&
+                {this.props.isNtro && (
                     <NtroFields
                         submitting={this.props.submitting}
                         showContributionStatement={this.props.isAuthorSelected}
@@ -152,7 +157,7 @@ export default class CreativeWorkForm extends Component {
                         hideIssue={![NTRO_SUBTYPE_CW_OTHER, NTRO_SUBTYPE_CW_TEXTUAL_WORK].includes(this.props.subtype)}
                         hideOriginalFormat={CPEE_NTRO_SUBTYPES.includes(this.props.subtype)}
                     />
-                }
+                )}
                 <Grid item xs={12}>
                     <StandardCard title={txt.optional.title} help={txt.optional.help}>
                         <Grid container spacing={16}>

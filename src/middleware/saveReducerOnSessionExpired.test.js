@@ -1,15 +1,15 @@
 import saveReducerOnSessionExpired from './saveReducerOnSessionExpired';
 import {
-    CURRENT_ACCOUNT_SESSION_EXPIRED
+    CURRENT_ACCOUNT_SESSION_EXPIRED,
 } from 'actions/actionTypes';
 import Immutable from 'immutable';
-import {thesisFormData} from 'mock/data/testing/localStorageData';
+import { thesisFormData } from 'mock/data/testing/localStorageData';
 
 describe('middleware saveReducerOnSessionExpired', () => {
     it('should save given reducer (form) in action payload to a local storage', () => {
         const action = {
             type: CURRENT_ACCOUNT_SESSION_EXPIRED,
-            payload: 'form'
+            payload: 'form',
         };
 
         const next = jest.fn();
@@ -18,8 +18,8 @@ describe('middleware saveReducerOnSessionExpired', () => {
 
         const store = {
             getState: () => ({
-                get: () => formData
-            })
+                get: () => formData,
+            }),
         };
 
         const expectedValueInLocalStorage = JSON.stringify(Array.from(formData));
@@ -35,7 +35,7 @@ describe('middleware saveReducerOnSessionExpired', () => {
     it('should save give reducer in action payload to a local storage', () => {
         const action = {
             type: CURRENT_ACCOUNT_SESSION_EXPIRED,
-            payload: 'someReducer'
+            payload: 'someReducer',
         };
 
         const next = jest.fn();
@@ -45,14 +45,14 @@ describe('middleware saveReducerOnSessionExpired', () => {
                 'test',
                 'session',
                 'expired',
-                'middleware'
-            ]
+                'middleware',
+            ],
         });
 
         const store = {
             getState: () => ({
-                get: () => someReducerData
-            })
+                get: () => someReducerData,
+            }),
         };
 
         const expectedValueInLocalStorage = JSON.stringify(Array.from(someReducerData));

@@ -7,14 +7,14 @@ jest.mock('locale', () => ({
                 readMoreTitle: 'mouse over and see me',
                 readMoreLabel: 'click me to learn more',
                 title: 'what is espace title',
-                text: 'what is espace intro'
-            }
-        }
-    }
+                text: 'what is espace intro',
+            },
+        },
+    },
 }));
 
-function setup(testProps, isShallow = true){
-    const props = {...testProps};
+function setup(testProps, isShallow = true) {
+    const props = { ...testProps };
     return getElement(WhatIsEspace, props, isShallow);
 }
 

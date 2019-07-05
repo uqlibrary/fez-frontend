@@ -1,4 +1,4 @@
-import {departmentTechnicalReport} from "../../../../../mock/data/testing/records";
+import { departmentTechnicalReport } from '../../../../../mock/data/testing/records';
 import DepartmentTechnicalReportCitation from './DepartmentTechnicalReportCitation';
 
 function setup(testProps, isShallow = false) {
@@ -24,9 +24,9 @@ describe('DepartmentTechnicalReportCitation renders ', () => {
         const wrapper = setup({
             publication: {
                 ...departmentTechnicalReport,
-                fez_record_search_key_doi: {rek_doi: null},
-                fez_record_search_key_report_number: {rek_report_number: null}
-            }
+                fez_record_search_key_doi: { rek_doi: null },
+                fez_record_search_key_report_number: { rek_report_number: null },
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });

@@ -1,1 +1,1 @@
-export {default as reloadReducerFromLocalStorage} from './components/ReloadReducerFromLocalStorage';
+export { default as reloadReducerFromLocalStorage } from './components/ReloadReducerFromLocalStorage';

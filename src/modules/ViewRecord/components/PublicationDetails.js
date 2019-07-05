@@ -11,20 +11,20 @@ import Typography from '@material-ui/core/Typography';
 
 const styles = (theme) => ({
     gridRow: {
-        borderBottom: `1px solid ${theme.palette.secondary.light}`
+        borderBottom: `1px solid ${theme.palette.secondary.light}`,
     },
     ul: {
         ...theme.typography.body2,
         listStyleType: 'none',
         padding: 0,
-        margin: 0
-    }
+        margin: 0,
+    },
 });
 
 export class PublicationDetailsClass extends PureComponent {
     static propTypes = {
         publication: PropTypes.object.isRequired,
-        classes: PropTypes.object
+        classes: PropTypes.object,
     };
 
     ViewRecordRow = ({ heading, data }) => (

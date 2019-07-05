@@ -24,7 +24,7 @@ exports[`VideoDocumentForm renders  component 1`] = `
               <b>
                 Publication date:
               </b>
-               Type the date recorded on the work, where available. For online recordings or broadcasts, enter the date first publicly presented or released. 
+               Type the date recorded on the work, where available. For online recordings or broadcasts, enter the date first publicly presented or released.
             </p>
           </div>,
           "title": "Video information",
@@ -400,7 +400,7 @@ exports[`VideoDocumentForm renders  component should render contributor assignme
               <b>
                 Publication date:
               </b>
-               Type the date recorded on the work, where available. For online recordings or broadcasts, enter the date first publicly presented or released. 
+               Type the date recorded on the work, where available. For online recordings or broadcasts, enter the date first publicly presented or released.
             </p>
           </div>,
           "title": "Video information",

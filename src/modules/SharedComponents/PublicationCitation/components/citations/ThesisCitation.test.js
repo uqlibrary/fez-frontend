@@ -1,5 +1,5 @@
 import ThesisCitation from './ThesisCitation';
-import {thesis} from 'mock/data/testing/records';
+import { thesis } from 'mock/data/testing/records';
 
 function setup(testProps, isShallow = false) {
     const props = {
@@ -24,8 +24,8 @@ describe('ThesisCitation renders ', () => {
         const wrapper = setup({
             publication: {
                 ...thesis,
-                fez_record_search_key_doi: {rek_doi: null}
-            }
+                fez_record_search_key_doi: { rek_doi: null },
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });

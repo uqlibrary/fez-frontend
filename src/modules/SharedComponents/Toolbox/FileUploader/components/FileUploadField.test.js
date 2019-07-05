@@ -4,8 +4,8 @@ describe('FileUploadField method', () => {
     it('should return <FileUploader>', () => {
         const element = FileUploadField({
             input: {
-                onChange: jest.fn()
-            }
+                onChange: jest.fn(),
+            },
         });
         expect(element).toMatchSnapshot();
     });

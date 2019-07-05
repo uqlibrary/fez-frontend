@@ -1,6 +1,6 @@
-import React, {PureComponent} from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import {withRouter} from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 /**
  * A replacement component for the react-router `Prompt`.
@@ -12,12 +12,12 @@ export class NavigationPrompt extends PureComponent {
     static propTypes = {
         when: PropTypes.bool.isRequired,
         children: PropTypes.func.isRequired,
-        history: PropTypes.object
+        history: PropTypes.object,
     };
 
     constructor(props) {
         super(props);
-        this.state = {nextLocation: null};
+        this.state = { nextLocation: null };
         this.confirmationBox = null;
     }
 
@@ -32,7 +32,7 @@ export class NavigationPrompt extends PureComponent {
     blockNavigation = (nextLocation) => {
         if (this.props.when) {
             this.setState({
-                nextLocation: nextLocation
+                nextLocation: nextLocation,
             });
             this.confirmationBox.showConfirmation();
             return !this.props.when;
@@ -46,7 +46,7 @@ export class NavigationPrompt extends PureComponent {
     };
 
     _onCancel = () => {
-        this.setState({nextLocation: null});
+        this.setState({ nextLocation: null });
     };
 
     _onConfirm = () => {

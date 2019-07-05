@@ -3,15 +3,15 @@ import searchRecordsReducer, {
     deduplicateResults,
     getEspaceDuplicatePublicationsByIdExceptLastItem,
     getIdCountHash,
-    getDuplicateList
+    getDuplicateList,
 } from './searchRecords';
 import * as records from 'mock/data/testing/searchRecords';
 
 const initialSearchSources = {
     loadingPublicationSources: {
         totalSearchedCount: 0,
-        totalSourcesCount: 0
-    }
+        totalSourcesCount: 0,
+    },
 };
 
 const initialState = {
@@ -19,13 +19,14 @@ const initialState = {
     publicationsList: [],
     searchLoading: false,
     searchLoadingError: false,
-    ...initialSearchSources
+    ...initialSearchSources,
 };
 
 describe('searchRecords reducer', () => {
-
     // We need to offer clean data for each test, as the de-duplication method mutates the array
-    let espaceList, scopusList, wosList;
+    let espaceList;
+    let scopusList;
+    let wosList;
 
     beforeEach(() => {
         espaceList = records.espaceList;
@@ -34,17 +35,18 @@ describe('searchRecords reducer', () => {
     });
 
     it('should return de-duplicated list of publications', () => {
-
         const result = deduplicateResults([...espaceList, ...scopusList, ...wosList]);
 
         expect(result.length).toEqual(6);
 
-        result.map((item, index) => {
-            if (item.fez_record_search_key_doi &&
-                (item.fez_record_search_key_doi.rek_doi === '10.1186/s12985-017-0854-x'
-                    || item.fez_record_search_key_doi.rek_doi === '10.1099/jgv.0.000580'
-                    || item.fez_record_search_key_doi.rek_doi === '10.1146/annurev-ento-112408-085457'
-                    || item.fez_record_search_key_doi.rek_doi === '10.1128/JVI.00737-15')) {
+        result.map(item => {
+            if (
+                item.fez_record_search_key_doi &&
+                (item.fez_record_search_key_doi.rek_doi === '10.1186/s12985-017-0854-x' ||
+                    item.fez_record_search_key_doi.rek_doi === '10.1099/jgv.0.000580' ||
+                    item.fez_record_search_key_doi.rek_doi === '10.1146/annurev-ento-112408-085457' ||
+                    item.fez_record_search_key_doi.rek_doi === '10.1128/JVI.00737-15')
+            ) {
                 expect(item.sources.map(item => item.source)).toEqual(['scopus', 'wos']);
             }
         });
@@ -52,19 +54,18 @@ describe('searchRecords reducer', () => {
         expect(result[1].sources.map(item => item.source)).toEqual(['espace', 'wos']);
         expect(result[0].currentSource).toEqual('espace');
         expect(result[1].currentSource).toEqual('espace');
-
     });
 
     it('updates correctly when it is loading from API', () => {
-        const loadingState = searchRecordsReducer(initialState, {type: actions.SEARCH_LOADING});
+        const loadingState = searchRecordsReducer(initialState, { type: actions.SEARCH_LOADING });
         expect(loadingState.searchLoading).toBeTruthy();
         expect(loadingState.publicationsList).toEqual([]);
     });
 
     it('sets publication list to empty array if the payload array "data" is empty in SEARCH_LOADED', () => {
         const test = searchRecordsReducer(initialState, {
-            payload: {data: []},
-            type: actions.SEARCH_LOADED
+            payload: { data: [] },
+            type: actions.SEARCH_LOADED,
         });
         expect(test.publicationsList).toBeInstanceOf(Array);
         expect(test.publicationsList.length).toBe(0);
@@ -72,20 +73,19 @@ describe('searchRecords reducer', () => {
 
     it('sets publication list to empty array if the payload array "data" is empty in SEARCH_LOADED@', () => {
         const test = searchRecordsReducer(initialState, {
-            payload: {data: []},
-            type: `${actions.SEARCH_LOADED}@`
+            payload: { data: [] },
+            type: `${actions.SEARCH_LOADED}@`,
         });
         expect(test.publicationsList).toBeInstanceOf(Array);
         expect(test.publicationsList.length).toBe(0);
     });
 
     it('updates correctly once general API data loaded', () => {
-
         const postReducerPublicationsList = records.postReducerPublicationsList;
 
         const loadedState = searchRecordsReducer(initialState, {
-            payload: {data: [...espaceList, ...scopusList, ...wosList]},
-            type: actions.SEARCH_LOADED
+            payload: { data: [...espaceList, ...scopusList, ...wosList] },
+            type: actions.SEARCH_LOADED,
         });
         expect(loadedState.searchLoading).toBeFalsy();
         expect(loadedState.publicationsList).toEqual(postReducerPublicationsList);
@@ -94,29 +94,27 @@ describe('searchRecords reducer', () => {
     });
 
     it('updates correctly once WOS API data loaded', () => {
-
         const postReducerWOSPublicationsList = records.wosList;
 
         const wosState = searchRecordsReducer(initialState, {
-            payload: {data: wosList},
-            type: `${actions.SEARCH_LOADED}@wos`
+            payload: { data: wosList },
+            type: `${actions.SEARCH_LOADED}@wos`,
         });
         expect(wosState.searchLoading).toBeTruthy();
         expect(wosState.publicationsList).toEqual(postReducerWOSPublicationsList);
         expect(wosState.publicationsList.length).toEqual(5);
         expect(wosState.rawSearchQuery).toEqual(initialState.rawSearchQuery);
-
     });
 
     it('updates correctly when the Scopus data is already available, and we are processing WOS data', () => {
         const aSourceLoadedState = {
             ...initialState,
             publicationsList: deduplicateResults(scopusList),
-            loadingPublicationSources: {"scopus": true, "scopusCount": 5, "totalSearchedCount": 1}
+            loadingPublicationSources: { scopus: true, scopusCount: 5, totalSearchedCount: 1 },
         };
         const wosState2 = searchRecordsReducer(aSourceLoadedState, {
-            payload: {data: [...wosList]},
-            type: `${actions.SEARCH_LOADED}@wos`
+            payload: { data: [...wosList] },
+            type: `${actions.SEARCH_LOADED}@wos`,
         });
         expect(wosState2.searchLoading).toBeTruthy();
         expect(wosState2.publicationsList.length).toEqual(6); // adds 1 new publication after de-duplication
@@ -129,7 +127,7 @@ describe('searchRecords reducer', () => {
     });
 
     it('updates correctly on general API failure', () => {
-        const failedState = searchRecordsReducer(initialState, {type: actions.SEARCH_FAILED});
+        const failedState = searchRecordsReducer(initialState, { type: actions.SEARCH_FAILED });
         expect(failedState.searchLoading).toBeFalsy();
         expect(failedState.publicationsList).toEqual([]);
         expect(failedState.loadingPublicationSources).toEqual(initialState.loadingPublicationSources);
@@ -137,16 +135,15 @@ describe('searchRecords reducer', () => {
 
     it('updates correctly on scopus API failure', () => {
         const postReducerScopusPublicationsCount = {
-            "scopus": true,
-            "scopusCount": 0,
-            "totalSearchedCount": 1,
-            "totalSourcesCount": 0
+            scopus: true,
+            scopusCount: 0,
+            totalSearchedCount: 1,
+            totalSourcesCount: 0,
         };
-        const failedScopusState = searchRecordsReducer(
-            initialState, {
-                payload: [],
-                type: `${actions.SEARCH_FAILED}@scopus`
-            });
+        const failedScopusState = searchRecordsReducer(initialState, {
+            payload: [],
+            type: `${actions.SEARCH_FAILED}@scopus`,
+        });
         expect(failedScopusState.searchLoading).toBeFalsy();
         expect(failedScopusState.publicationsList).toEqual([]);
         expect(failedScopusState.rawSearchQuery).toEqual(initialState.rawSearchQuery);
@@ -154,13 +151,13 @@ describe('searchRecords reducer', () => {
     });
 
     it('updates the totalSourcesCount', () => {
-        const countState = searchRecordsReducer(initialState, {payload: 5, type: actions.SEARCH_SOURCE_COUNT});
+        const countState = searchRecordsReducer(initialState, { payload: 5, type: actions.SEARCH_SOURCE_COUNT });
         expect(countState.loadingPublicationSources.totalSourcesCount).toEqual(5);
         expect(countState.searchLoading).toBeFalsy();
     });
 
     it('returns the initial state when specifying an invalid handler type', () => {
-        const countState = searchRecordsReducer(initialState, {type: 'INVALID_ACTION_TYPE'});
+        const countState = searchRecordsReducer(initialState, { type: 'INVALID_ACTION_TYPE' });
         expect(countState).toEqual(initialState);
     });
 
@@ -196,27 +193,53 @@ describe('searchRecords reducer', () => {
 
     it('should get duplicate espace records with same id except the last duplicate', () => {
         const list = [
-            { rek_pid: 1, currentSource: 'espace', fez_record_search_key_doi: {rek_doi: '10.1.111111'}},
-            { rek_pid: 2, currentSource: 'espace', fez_record_search_key_doi: {rek_doi: '10.1.1122211'}},
-            { rek_pid: 3, currentSource: 'espace', fez_record_search_key_doi: {rek_doi: '10.1.111111'}, fez_record_search_key_scopus_id: {rek_scopus_id: '2.s2.1111111111'}},
-            { rek_pid: 4, currentSource: 'espace', fez_record_search_key_doi: {rek_doi: '10.1.111111'}},
-            { rek_pid: 10, currentSource: 'espace', fez_record_search_key_doi: {rek_doi: '10.1.111111'}},
-            { rek_pid: 5, currentSource: 'espace', fez_record_search_key_scopus_id: {rek_scopus_id: '2.s2.1111111111'}},
-            { rek_pid: 6, currentSource: 'espace', fez_record_search_key_scopus_id: {rek_scopus_id: '2.s2.1111111111'}},
-            { rek_pid: 7, currentSource: 'espace', fez_record_search_key_scopus_id: {rek_scopus_id: '2.s2.1111122222'}},
-            { rek_pid: 8, currentSource: 'espace', fez_record_search_key_isi_loc: {rek_isi_loc: '1232423532'}},
-            { rek_pid: 9, currentSource: 'espace', fez_record_search_key_isi_loc: {rek_isi_loc: '1232423532'}}
+            { rek_pid: 1, currentSource: 'espace', fez_record_search_key_doi: { rek_doi: '10.1.111111' } },
+            { rek_pid: 2, currentSource: 'espace', fez_record_search_key_doi: { rek_doi: '10.1.1122211' } },
+            {
+                rek_pid: 3,
+                currentSource: 'espace',
+                fez_record_search_key_doi: { rek_doi: '10.1.111111' },
+                fez_record_search_key_scopus_id: { rek_scopus_id: '2.s2.1111111111' },
+            },
+            { rek_pid: 4, currentSource: 'espace', fez_record_search_key_doi: { rek_doi: '10.1.111111' } },
+            { rek_pid: 10, currentSource: 'espace', fez_record_search_key_doi: { rek_doi: '10.1.111111' } },
+            {
+                rek_pid: 5,
+                currentSource: 'espace',
+                fez_record_search_key_scopus_id: { rek_scopus_id: '2.s2.1111111111' },
+            },
+            {
+                rek_pid: 6,
+                currentSource: 'espace',
+                fez_record_search_key_scopus_id: { rek_scopus_id: '2.s2.1111111111' },
+            },
+            {
+                rek_pid: 7,
+                currentSource: 'espace',
+                fez_record_search_key_scopus_id: { rek_scopus_id: '2.s2.1111122222' },
+            },
+            { rek_pid: 8, currentSource: 'espace', fez_record_search_key_isi_loc: { rek_isi_loc: '1232423532' } },
+            { rek_pid: 9, currentSource: 'espace', fez_record_search_key_isi_loc: { rek_isi_loc: '1232423532' } },
         ];
 
-        const espaceDuplicatesByDoi = getEspaceDuplicatePublicationsByIdExceptLastItem(list, {key: 'fez_record_search_key_doi', value: 'rek_doi'});
+        const espaceDuplicatesByDoi = getEspaceDuplicatePublicationsByIdExceptLastItem(list, {
+            key: 'fez_record_search_key_doi',
+            value: 'rek_doi',
+        });
         expect(espaceDuplicatesByDoi.length).toEqual(3);
         expect(espaceDuplicatesByDoi.map(item => item.rek_pid)).toEqual([1, 3, 4]);
 
-        const espaceDuplicatesByScopusId = getEspaceDuplicatePublicationsByIdExceptLastItem(list, {key: 'fez_record_search_key_scopus_id', value: 'rek_scopus_id'});
+        const espaceDuplicatesByScopusId = getEspaceDuplicatePublicationsByIdExceptLastItem(list, {
+            key: 'fez_record_search_key_scopus_id',
+            value: 'rek_scopus_id',
+        });
         expect(espaceDuplicatesByScopusId.length).toEqual(2);
         expect(espaceDuplicatesByScopusId.map(item => item.rek_pid)).toEqual([3, 5]);
 
-        const espaceDuplicatesByWOS = getEspaceDuplicatePublicationsByIdExceptLastItem(list, {key: 'fez_record_search_key_isi_loc', value: 'rek_isi_loc'});
+        const espaceDuplicatesByWOS = getEspaceDuplicatePublicationsByIdExceptLastItem(list, {
+            key: 'fez_record_search_key_isi_loc',
+            value: 'rek_isi_loc',
+        });
         expect(espaceDuplicatesByWOS.length).toEqual(1);
         expect(espaceDuplicatesByWOS.map(item => item.rek_pid)).toEqual([8]);
     });
@@ -260,25 +283,25 @@ describe('searchRecords reducer', () => {
         const testCases = [
             {
                 inputList: [...espaceList],
-                idSearchKey: {key: 'fez_record_search_key_doi', value: 'rek_doi'},
+                idSearchKey: { key: 'fez_record_search_key_doi', value: 'rek_doi' },
                 isOnlyForEspace: false,
-                expectedIdCountHash: {}
+                expectedIdCountHash: {},
             },
             {
                 inputList: [...espaceList, ...scopusList],
-                idSearchKey: {key: 'fez_record_search_key_doi', value: 'rek_doi'},
+                idSearchKey: { key: 'fez_record_search_key_doi', value: 'rek_doi' },
                 isOnlyForEspace: false,
                 expectedIdCountHash: {
                     '10.1186/s12985-017-0854-x': 1,
                     '10.1016/b978-0-12-801573-5.00033-4': 1,
                     '10.1099/jgv.0.000580': 1,
                     '10.1128/jvi.00737-15': 1,
-                    '10.1146/annurev-ento-112408-085457': 1
-                }
+                    '10.1146/annurev-ento-112408-085457': 1,
+                },
             },
             {
                 inputList: [...records.espaceListCrafted, ...records.scopusListCrafted, ...records.wosListCrafted],
-                idSearchKey: {key: 'fez_record_search_key_doi', value: 'rek_doi'},
+                idSearchKey: { key: 'fez_record_search_key_doi', value: 'rek_doi' },
                 isOnlyForEspace: false,
                 expectedIdCountHash: {
                     '10.1.111111': 3,
@@ -288,49 +311,49 @@ describe('searchRecords reducer', () => {
                     '10.1.254745': 2,
                     '10.1.989598': 2,
                     '10.1.99999': 1,
-                }
+                },
             },
             {
                 inputList: [...records.espaceListCrafted, ...records.scopusListCrafted, ...records.wosListCrafted],
-                idSearchKey: {key: 'fez_record_search_key_scopus_id', value: 'rek_scopus_id'},
+                idSearchKey: { key: 'fez_record_search_key_scopus_id', value: 'rek_scopus_id' },
                 isOnlyForEspace: false,
                 expectedIdCountHash: {
                     '2.s2.222222222': 2,
                     '2.s2.1111111111': 1,
                     '2.s2.1111111133': 1,
                     '2.s2.2323232323': 1,
-                }
+                },
             },
             {
                 inputList: [...records.espaceListCrafted, ...records.scopusListCrafted, ...records.wosListCrafted],
-                idSearchKey: {key: 'fez_record_search_key_doi', value: 'rek_doi'},
+                idSearchKey: { key: 'fez_record_search_key_doi', value: 'rek_doi' },
                 isOnlyForEspace: true,
                 expectedIdCountHash: {
                     '10.1.111111': 1,
-                    '10.1.1122211': 1
-                }
+                    '10.1.1122211': 1,
+                },
             },
             {
                 inputList: [...records.espaceListCrafted, ...records.scopusListCrafted, ...records.wosListCrafted],
-                idSearchKey: {key: 'fez_record_search_key_scopus_id', value: 'rek_scopus_id'},
+                idSearchKey: { key: 'fez_record_search_key_scopus_id', value: 'rek_scopus_id' },
                 isOnlyForEspace: true,
                 expectedIdCountHash: {
-                    '2.s2.222222222': 1
-                }
+                    '2.s2.222222222': 1,
+                },
             },
             {
                 inputList: [...records.espaceListCrafted, ...records.scopusListCrafted, ...records.wosListCrafted],
-                idSearchKey: {key: 'fez_record_search_key_isi_loc', value: 'rek_isi_loc'},
+                idSearchKey: { key: 'fez_record_search_key_isi_loc', value: 'rek_isi_loc' },
                 isOnlyForEspace: true,
                 expectedIdCountHash: {
                     '1233423532': 2,
                     '454545545': 1,
-                    '98989898989': 1
-                }
+                    '98989898989': 1,
+                },
             },
             {
                 inputList: [...records.espaceListCrafted, ...records.scopusListCrafted, ...records.wosListCrafted],
-                idSearchKey: {key: 'fez_record_search_key_isi_loc', value: 'rek_isi_loc'},
+                idSearchKey: { key: 'fez_record_search_key_isi_loc', value: 'rek_isi_loc' },
                 isOnlyForEspace: false,
                 expectedIdCountHash: {
                     '1233423532': 3,
@@ -340,12 +363,12 @@ describe('searchRecords reducer', () => {
                     '222423532': 1,
                     '1232423543': 1,
                     '1232423512': 1,
-                }
+                },
             },
         ];
 
         testCases.map(testCase => {
-            const {inputList, idSearchKey, isOnlyForEspace, expectedIdCountHash} = testCase;
+            const { inputList, idSearchKey, isOnlyForEspace, expectedIdCountHash } = testCase;
             expect(getIdCountHash(inputList, idSearchKey, isOnlyForEspace)).toEqual(expectedIdCountHash);
         });
     });
@@ -354,73 +377,93 @@ describe('searchRecords reducer', () => {
         const testCases = [
             {
                 inputList: [...espaceList, ...scopusList, ...wosList],
-                idSearchKey: {key: 'fez_record_search_key_doi', value: 'rek_doi'},
+                idSearchKey: { key: 'fez_record_search_key_doi', value: 'rek_doi' },
                 isOnlyForEspace: false,
                 espaceDuplicates: [],
-                expectedDuplicates: records.expectedDuplicateListByDoiFromEsapceScopusWOS
+                expectedDuplicates: records.expectedDuplicateListByDoiFromEsapceScopusWOS,
             },
             {
                 inputList: [...espaceList, ...scopusList, ...wosList],
-                idSearchKey: {key: 'fez_record_search_key_isi_loc', value: 'rek_isi_loc'},
+                idSearchKey: { key: 'fez_record_search_key_isi_loc', value: 'rek_isi_loc' },
                 isOnlyForEspace: false,
                 espaceDuplicates: [],
-                expectedDuplicates: records.expectedDuplicateListByWOSIdFromEspaceScopusWOS
+                expectedDuplicates: records.expectedDuplicateListByWOSIdFromEspaceScopusWOS,
             },
             {
                 inputList: [...espaceList, ...scopusList, ...wosList],
-                idSearchKey: {key: 'fez_record_search_key_isi_loc', value: 'rek_isi_loc'},
+                idSearchKey: { key: 'fez_record_search_key_isi_loc', value: 'rek_isi_loc' },
                 isOnlyForEspace: undefined,
                 espaceDuplicates: [espaceList[0]],
-                expectedDuplicates: records.expectedDuplicateListByWOSIdFromEspaceScopusWOSWithEsapceDuplicatesProvided
+                expectedDuplicates: records.expectedDuplicateListByWOSIdFromEspaceScopusWOSWithEsapceDuplicatesProvided,
             },
             {
                 inputList: [...espaceList, ...scopusList, ...wosList],
-                idSearchKey: {key: 'fez_record_search_key_isi_loc', value: 'rek_isi_loc'},
+                idSearchKey: { key: 'fez_record_search_key_isi_loc', value: 'rek_isi_loc' },
                 isOnlyForEspace: true,
                 espaceDuplicates: [],
-                expectedDuplicates: records.expectedDuplicateListByWOSIdFromEspaceScopusWOSOnlyForEspace
-            }
+                expectedDuplicates: records.expectedDuplicateListByWOSIdFromEspaceScopusWOSOnlyForEspace,
+            },
         ];
 
         testCases.map(testCase => {
-            const {inputList, idSearchKey, isOnlyForEspace, expectedDuplicates, espaceDuplicates} = testCase;
-            expect(getDuplicateList(inputList, idSearchKey, isOnlyForEspace, espaceDuplicates)).toEqual(expectedDuplicates);
+            const { inputList, idSearchKey, isOnlyForEspace, expectedDuplicates, espaceDuplicates } = testCase;
+            expect(getDuplicateList(inputList, idSearchKey, isOnlyForEspace, espaceDuplicates)).toEqual(
+                expectedDuplicates
+            );
         });
     });
 
-    it('getEspaceDuplicatePublicationsByIdExceptLastItem should correctly get espace records with duplicate id except last', () => {
-        const testCases = [
-            {
-                inputList: [...espaceList, ...scopusList, ...wosList],
-                idSearchKey: {key: 'fez_record_search_key_isi_loc', value: 'rek_isi_loc'},
-                expectedDuplicates: records.expectedDuplicateListByWOSIdFromEspaceScopusWOSOnlyForEspace.slice(0, -1)
-            }
-        ];
+    it(
+        'getEspaceDuplicatePublicationsByIdExceptLastItem should correctly ' +
+            'get espace records with duplicate id except last',
+        () => {
+            const testCases = [
+                {
+                    inputList: [...espaceList, ...scopusList, ...wosList],
+                    idSearchKey: { key: 'fez_record_search_key_isi_loc', value: 'rek_isi_loc' },
+                    expectedDuplicates: records.expectedDuplicateListByWOSIdFromEspaceScopusWOSOnlyForEspace.slice(
+                        0,
+                        -1
+                    ),
+                },
+            ];
 
-        testCases.map(testCase => {
-            const {inputList, idSearchKey, expectedDuplicates} = testCase;
-            expect(getEspaceDuplicatePublicationsByIdExceptLastItem(inputList, idSearchKey)).toEqual(expectedDuplicates);
-        });
-    });
+            testCases.map(testCase => {
+                const { inputList, idSearchKey, expectedDuplicates } = testCase;
+                expect(getEspaceDuplicatePublicationsByIdExceptLastItem(inputList, idSearchKey)).toEqual(
+                    expectedDuplicates
+                );
+            });
+        }
+    );
 
     it('should set search query in state', () => {
         const testValue = 'i feel lucky';
-        const countState = searchRecordsReducer(initialState, {payload: {title: testValue}, type: actions.SET_SEARCH_QUERY});
-        expect(countState.searchQuery).toEqual({title: testValue});
+        const countState = searchRecordsReducer(initialState, {
+            payload: { title: testValue },
+            type: actions.SET_SEARCH_QUERY,
+        });
+        expect(countState.searchQuery).toEqual({ title: testValue });
     });
 
     it('should reset search query in state', () => {
-        const countState = searchRecordsReducer({...initialState, searchQuery: {all: 'i feel lucky'}}, {type: actions.CLEAR_SEARCH_QUERY});
+        const countState = searchRecordsReducer(
+            { ...initialState, searchQuery: { all: 'i feel lucky' } },
+            { type: actions.CLEAR_SEARCH_QUERY }
+        );
         expect(countState.searchQuery).toEqual({});
     });
 
     it('should set search loading error in state', () => {
-        const searchState = searchRecordsReducer(initialState, {type: actions.SEARCH_FAILED});
+        const searchState = searchRecordsReducer(initialState, { type: actions.SEARCH_FAILED });
         expect(searchState.searchLoadingError).toBeTruthy();
     });
 
     it('should reset search loading error in state', () => {
-        const searchState = searchRecordsReducer({...initialState, searchLoadingError: true}, {payload: {title: 'test search reset error'}, type: actions.SET_SEARCH_QUERY});
+        const searchState = searchRecordsReducer(
+            { ...initialState, searchLoadingError: true },
+            { payload: { title: 'test search reset error' }, type: actions.SET_SEARCH_QUERY }
+        );
         expect(searchState.searchLoadingError).toBeFalsy();
     });
 });

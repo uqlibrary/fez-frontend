@@ -1,5 +1,5 @@
 import CreativeWorkCitation from './CreativeWorkCitation';
-import {creativeWork} from 'mock/data/testing/records';
+import { creativeWork } from 'mock/data/testing/records';
 
 function setup(testProps, isShallow = false) {
     const props = {

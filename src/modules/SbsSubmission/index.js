@@ -1,1 +1,1 @@
-export {default as SbsSubmission} from './containers/SbsSubmission';
+export { default as SbsSubmission } from './containers/SbsSubmission';

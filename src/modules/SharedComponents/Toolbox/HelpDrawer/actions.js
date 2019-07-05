@@ -6,12 +6,12 @@ export const HIDE = 'HELP_DRAWER_HIDE';
 export function show(title, text, buttonLabel) {
     return {
         type: SHOW,
-        payload: {title, text, buttonLabel}
+        payload: { title, text, buttonLabel },
     };
 }
 
 export function hide() {
     return {
-        type: HIDE
+        type: HIDE,
     };
 }
