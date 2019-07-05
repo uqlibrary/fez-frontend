@@ -188,7 +188,7 @@
     "test:watch": "npm run test -- --watch --onlyChanged",
     "test:update": "npm run test -- --updateSnapshot",
     "test-unit": "node $NODE_DEBUG_OPTION ./node_modules/lab/bin/lab ./test/unit --pattern \"^[^_]\"",
-    "eslint": "eslint 'src/**/*.js' --quiet"
+    "eslint": "eslint '**/*.js' --quiet"
   },
   "engines": {
     "npm": "^6.9.0",
