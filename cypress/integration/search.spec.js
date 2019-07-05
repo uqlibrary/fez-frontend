@@ -15,7 +15,7 @@ context('Search', () => {
                 'have.attr',
                 'aria-label',
                 // searchLocale.ariaInputLabel
-                'Enter your search query to search eSpace and then press Enter'
+                'Enter your search query to search eSpace and then press Enter',
             )
             .closest('[class*="MuiFormControl-root"]')
             // .contains('label', searchLocale.searchBoxPlaceholder);
@@ -23,7 +23,7 @@ context('Search', () => {
         cy.get('#simpleSearchField').type('cats and dogs{enter}');
         cy.get('.StandardPage > div > div > div:nth-of-type(2) .StandardCard').should(
             'contain',
-            'Displaying works 1 to 7 of 7 total records.'
+            'Displaying works 1 to 7 of 7 total records.',
         );
         cy.get('.StandardPage > div > div > div:nth-of-type(3) h6').should('contain', 'Refine results');
 
@@ -41,7 +41,7 @@ context('Search', () => {
             .should(
                 'have.attr',
                 'aria-label',
-                'Check to search for publications with are only open access / full text'
+                'Check to search for publications with are only open access / full text',
             );
         cy.contains('label', 'Open access').click();
         cy.contains('button', 'Add another field')
@@ -53,7 +53,7 @@ context('Search', () => {
             .should(
                 'have.attr',
                 'aria-label',
-                'Click to select a field to search from the list - Select a field currently selected'
+                'Click to select a field to search from the list - Select a field currently selected',
             )
             .siblings('p')
             .contains('Please select a field to search');
@@ -78,7 +78,7 @@ context('Search', () => {
         cy.get('#advancedSearchForm .searchQueryCaption').should($caption => {
             expect(cleanExtraSpaces($caption.text())).to.equal(
                 "Any field contains it's raining cats and dogs AND Author Name contains Ky Lane AND Collection" +
-                    ' is one of UQ:131735, UQ:131375 or UQ:292807 AND is open access/full text'
+                    ' is one of UQ:131735, UQ:131375 or UQ:292807 AND is open access/full text',
             );
         });
         cy.get('button#advancedSearchButton')
@@ -146,8 +146,8 @@ context('Search', () => {
 
     //         cy.url()
     //             .should('equal',
-    //                `${baseUrl}/#/records/search?searchQueryParams%5Ball%5D=test1&page=1&pageSize=20` +
-    //                '&sortBy=score&sortDirection=Desc'
+    //                 `${baseUrl}/#/records/search?searchQueryParams%5Ball%5D=test1&page=
+    //                 1&pageSize=20&sortBy=score&sortDirection=Desc`
     //             );
     //         cy.wait(['@searchAPICall']);
 

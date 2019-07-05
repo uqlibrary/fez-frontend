@@ -1,14 +1,8 @@
 context('Thesis', () => {
     beforeEach(() => {
         cy.visit('http://localhost:3000/rhdsubmission?user=s2222222');
-        cy.viewport(1000, 800);
-        cy.get('#unsupportedBrowser.card button').then($button => {
-            // Button is only visible if browser is unsupported.
-            if ($button.filter(':visible')) {
-                $button.click();
-            }
-        });
-        cy.wait(2000);
+        cy.closeUnsupported();
+        cy.wait(3000);
     });
 
     afterEach(() => {

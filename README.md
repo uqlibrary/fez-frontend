@@ -21,7 +21,7 @@ UQ's branding for Fez is UQ eSpace.
 - Design: `Google Material Design` - [Material UI](https://v0.material-ui.com/#/components/app-bar)
 - Build and dev tools: `Webpack`
 - Unit tests: `Jest`
-- E2E tests: TBA
+- E2E tests: `Cypress`
 
 ## Development
 
@@ -213,12 +213,15 @@ Before committing changes, locally run tests and update stapshots (if required).
 We are using [Cypress](https://docs.cypress.io/guides/getting-started/writing-your-first-test.html#Add-a-test-file) for
 our e2e UI testing.
 
-To run tests, use `npm run cypress:run` or to open the Cypress UI use `npm cypress:open`
+To run tests, use `npm run cypress:run` or to open the Cypress UI use `npm cypress:open` or to watch the tests `npm run cypress:watch`.
 
-Before pushing to a branch make sure to run `npm run test:all`.
+Before pushing to a branch make sure to run `npm run test:all`. This runs the unit, integration and cypress tests.
 
-Codeship runs `npm run e2e` as it spins up a webpack-dev-server and serves the frontend with mock data to run tests for
-now until we have API integration with docker.
+Codeship runs `start-server-and-test 'npm run start:mock' http-get://localhost:3000 'cypress run --record --key ###-###-####-#### --parallel` as it spins up a webpack-dev-server and serves the frontend with mock data to run tests for
+now until we have API integration with docker, but only in #master.
+
+You can watch tests run, and debug with video etc via <https://dashboard.cypress.io> (use username/pass in passwordstate
+under "GitHub Cypress.io Admin User").
 
 #### Some tricks and tips
 

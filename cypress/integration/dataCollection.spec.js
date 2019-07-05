@@ -1,14 +1,7 @@
 context('Data Collection form', () => {
     beforeEach(() => {
         cy.visit('/data-collections/add');
-        cy.viewport(1000, 1400);
-        cy.get('#unsupportedBrowser.card button').then($button => {
-            // Button is only visible if browser is unsupported.
-            if ($button.filter(':visible')) {
-                $button.click();
-            }
-        });
-        cy.wait(2000);
+        cy.closeUnsupported();
     });
 
     afterEach(() => {
@@ -230,7 +223,7 @@ context('Data Collection form', () => {
         // Project description
         cy.get('textarea#Projectdescription').type(
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dictum non purus id aliquet. ',
-            { delay: 1 }
+            { delay: 1 },
         );
         cy.get('button#submit-data-collection').should('have.attr', 'disabled');
         cy.get('div.Alert')
