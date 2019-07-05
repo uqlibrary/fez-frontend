@@ -1,13 +1,6 @@
 dist
 node_modules
 coverage
-webpack.*.js
-*server.js
-conf
-gulp_tasks
-/yarn.lock
-*.config.js
 **/mock/data/**/*.js
 cypress/examples
 custom_modules
-eslint-plugin-uqlibrary

@@ -1,6 +1,6 @@
 'use strict';
 
-const {resolve} = require('path');
+const { resolve } = require('path');
 const webpack = require('webpack');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
@@ -16,25 +16,25 @@ const RobotstxtPlugin = require('robotstxt-webpack-plugin');
 const options = {
     policy: [
         {
-            userAgent: "*",
+            userAgent: '*',
             allow: [
-                "/$",
-                "/index.html$",
-                "/contact$",
-                "/view/*",
-                "/data/*?*Signature=*&Key-Pair-Id=*",
-                "/assets/*.svg",
-                "/sitemap/*.xml",
-                "/list-by-year/*.html",
-                "/*.js",
-                "/*.css"
+                '/$',
+                '/index.html$',
+                '/contact$',
+                '/view/*',
+                '/data/*?*Signature=*&Key-Pair-Id=*',
+                '/assets/*.svg',
+                '/sitemap/*.xml',
+                '/list-by-year/*.html',
+                '/*.js',
+                '/*.css',
             ],
             disallow: [
-                "/"
-            ]
-        }
+                '/',
+            ],
+        },
     ],
-    sitemap: "https://espace.library.uq.edu.au/sitemap/sitemap-index.xml"
+    sitemap: 'https://espace.library.uq.edu.au/sitemap/sitemap-index.xml',
 };
 
 // get branch name for current build, if running build locally CI_BRANCH is not set (it's set in codeship)
@@ -47,7 +47,7 @@ const config = require('./config').default[branch] || require('./config').defaul
 const port = 9000;
 
 // use mock data if required
-let useMock = (process && process.env && !!process.env.USE_MOCK) || false;
+const useMock = (process && process.env && !!process.env.USE_MOCK) || false;
 
 // config for development deployment
 if(config.environment === 'development') {
@@ -60,7 +60,7 @@ const webpackConfig = {
     // The entry file. All your app roots from here.
     entry: {
         main: resolve(__dirname, './src/index.js'),
-        vendor: ['react', 'react-dom', 'react-router-dom', 'redux', 'react-redux', 'moment', 'redux-form']
+        vendor: ['react', 'react-dom', 'react-router-dom', 'redux', 'react-redux', 'moment', 'redux-form'],
     },
     // Where you want the output to go
     output: {
@@ -72,7 +72,7 @@ const webpackConfig = {
         contentBase: resolve(__dirname, './dist/', config.basePath),
         compress: true,
         port: port,
-        host: '0.0.0.0'
+        host: '0.0.0.0',
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -96,10 +96,10 @@ const webpackConfig = {
                     src: resolve(__dirname, './public/images', 'logo.png'),
                     sizes: [96, 128, 192, 256, 384, 512],
                     destination: 'icons',
-                    ios: true
-                }
+                    ios: true,
+                },
             ],
-            fingerprints: false
+            fingerprints: false,
         }),
         new ProgressBarPlugin({
             format: `  building webpack... [:bar] ${chalk.green.bold(':percent')} (It took :elapsed seconds to build)\n`,
@@ -107,7 +107,7 @@ const webpackConfig = {
         }),
         // new ExtractTextPlugin('[name]-[hash].min.css'),
         new MiniCssExtractPlugin({
-            filename: '[name]-[hash].min.css'
+            filename: '[name]-[hash].min.css',
         }),
 
         // plugin for passing in data to the js, like what NODE_ENV we are in.
@@ -145,7 +145,7 @@ const webpackConfig = {
         new InjectPreloader(),
         new BundleAnalyzerPlugin({
             analyzerMode: config.environment === 'production' ? 'disabled' : 'static',
-            openAnalyzer: !process.env.CI_BRANCH
+            openAnalyzer: !process.env.CI_BRANCH,
         }),
         new RobotstxtPlugin(options),
     ],
@@ -154,16 +154,16 @@ const webpackConfig = {
             automaticNameDelimiter: '-',
             cacheGroups: {
                 commons: {
-                    chunks: 'all'
-                }
-            }
+                    chunks: 'all',
+                },
+            },
         },
         minimizer: [
             new UglifyJsPlugin({
                 sourceMap: true,
-                parallel: true
-            })
-        ]
+                parallel: true,
+            }),
+        ],
     },
     module: {
         rules: [
@@ -171,16 +171,16 @@ const webpackConfig = {
                 test: /\.js$/,
                 exclude: [
                     /node_modules/,
-                    /custom_modules/
+                    /custom_modules/,
                 ],
                 enforce: 'pre',
-                use: 'eslint-loader'
+                use: 'eslint-loader',
             },
             {
                 test: /\.js?$/,
                 include: [
                     resolve(__dirname, 'src'),
-                    resolve(__dirname, 'node_modules/uqlibrary-react-toolbox/src')
+                    resolve(__dirname, 'node_modules/uqlibrary-react-toolbox/src'),
                 ],
                 exclude: [
                     /node_modules/,
@@ -195,18 +195,18 @@ const webpackConfig = {
                             '@babel/plugin-proposal-export-default-from',
                             '@babel/plugin-proposal-class-properties',
                             '@babel/plugin-syntax-dynamic-import',
-                            ["@babel/plugin-transform-spread", { "loose": true }]
-                        ]
-                    }
-                }
+                            ['@babel/plugin-transform-spread', { 'loose': true }],
+                        ],
+                    },
+                },
             },
             {
                 test: /\.scss/,
                 use: [
                     MiniCssExtractPlugin.loader,
-                    "css-loader",
-                    "sass-loader"
-                ]
+                    'css-loader',
+                    'sass-loader',
+                ],
             },
             {
                 test: /\.(jpe?g|png|gif|svg)$/i,
@@ -215,16 +215,16 @@ const webpackConfig = {
                         loader: 'file-loader',
                         options: {
                             outputPath: 'assets/',
-                            publicPath: 'assets/'
-                        }
-                    }
-                ]
+                            publicPath: 'assets/',
+                        },
+                    },
+                ],
             },
             {
                 test: /\.js$/,
-                loader: WebpackStrip.loader('console.log')
-            }
-        ]
+                loader: WebpackStrip.loader('console.log'),
+            },
+        ],
     },
     resolve: {
         descriptionFiles: [
@@ -239,13 +239,13 @@ const webpackConfig = {
         modules: [
             'src',
             'node_modules',
-            'custom_modules'
-        ]
+            'custom_modules',
+        ],
     },
     performance: {
         maxAssetSize: 1000000,
         maxEntrypointSize: 1000000,
-        hints: 'warning'
+        hints: 'warning',
     },
 };
 
@@ -257,10 +257,10 @@ if (!!process.env.SENTRY_AUTH_TOKEN) {
     // per https://docs.sentry.io/learn/cli/configuration/#configuration-file
     // and comment out the if around this section
     webpackConfig.plugins.push(new SentryCliPlugin({
-            release: process.env.CI_COMMIT_ID,
-            include: './dist',
-            ignore: ['node_modules', 'webpack-dist.config.js', 'custom_modules']
-        })
+        release: process.env.CI_COMMIT_ID,
+        include: './dist',
+        ignore: ['node_modules', 'webpack-dist.config.js', 'custom_modules'],
+    })
     );
 }
 
